@@ -58,8 +58,8 @@ const builtAt = new Date(
         story.articles.map((article) => (
           <li class="py-4">
             <ArticleRow article={article} outlet={byId.get(article.outletId)} />
-            {/* Until stories group articles (issue #5), the headline repeats
-                the title; showing it twice adds nothing. */}
+            {/* The Story title can repeat an Article's headline (split Stories
+                take the founding headline); showing it twice adds nothing. */}
             {article.headline !== story.title && (
               <p class="mt-1.5 text-[14px] text-muted">{article.headline}</p>
             )}
