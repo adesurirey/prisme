@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import ArticleRow from '../../components/ArticleRow';
 import CoverageBar, { coverageCounts } from '../../components/CoverageBar';
+import StoryImage, { pickStoryImage } from '../../components/StoryImage';
 import { loadOutlets, loadStories, withBase } from '../../data';
 import type { Story } from '@prisme/domain';
 
@@ -15,6 +16,8 @@ const outlets = await loadOutlets();
 const leaningOf = new Map(outlets.map((o) => [o.id, o.leaning]));
 const byId = new Map(outlets.map((o) => [o.id, o]));
 const counts = coverageCounts(story.articles, (id) => leaningOf.get(id));
+const image = pickStoryImage(story, (id) => leaningOf.get(id));
+const imageOutlet = image && byId.get(image.outletId);
 
 const builtAt = new Date(
   story.articles[0]?.publishedAt ?? Date.now(),
@@ -35,6 +38,16 @@ const builtAt = new Date(
       <CoverageBar counts={counts} width={120} />
       <p class="text-[13px] text-muted">Publié le {builtAt}</p>
     </div>
+
+    <figure class="mt-6">
+      <StoryImage
+        article={image}
+        outlet={imageOutlet}
+        className="aspect-[16/9] w-full max-w-[36rem] rounded-lg"
+        sizes="(max-width: 896px) 100vw, 576px"
+      />
+      {imageOutlet && <figcaption class="mt-2 text-[13px] text-faint">Photo : {imageOutlet.name}</figcaption>}
+    </figure>
 
     <ul class="mt-8 flex flex-col divide-y divide-line border-y border-line">
       {
