@@ -124,21 +124,25 @@ export const outlets: Outlet[] = [
     name: 'Courrier international',
     leaning: 'centre',
     paywall: 'partial',
-    feeds: { latest: 'https://www.courrierinternational.com/feed' },
+    // /feed serves an HTML page (checked 2026-10-06); the real feed is:
+    feeds: { latest: 'https://www.courrierinternational.com/feed/all/rss.xml' },
   },
   {
     id: 'lexpress',
     name: "L'Express",
     leaning: 'centre',
     paywall: 'partial',
-    feeds: { latest: 'https://www.lexpress.fr/rss' },
+    // /rss serves an HTML page (checked 2026-10-06); the à-la-une feed has
+    // ~100 items, so it counts as a latest feed (10 most recent):
+    feeds: { latest: 'https://www.lexpress.fr/rss/alaune.xml' },
   },
   {
     id: 'la-croix',
     name: 'La Croix',
     leaning: 'centre',
     paywall: 'partial',
-    feeds: { latest: 'https://www.la-croix.com/RSS' },
+    // /rss/france is the national-news feed (checked 2026-10-06):
+    feeds: { latest: 'https://www.la-croix.com/rss/france' },
   },
   // ——— Droite ———
   {
@@ -170,7 +174,7 @@ export const outlets: Outlet[] = [
     name: 'Le JDD',
     leaning: 'droite',
     paywall: 'partial',
-    feeds: { latest: 'https://www.lejdd.fr/rss.xml' },
+    feeds: { une: 'https://www.lejdd.fr/rss/a-la-une.xml' },
   },
   {
     id: 'valeurs-actuelles',
