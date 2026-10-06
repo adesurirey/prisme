@@ -79,7 +79,7 @@ How a Story's reporting is distributed across Leanings and Outlets: the number o
 _Avoid_: Distribution, reach, share
 
 **Blindspot**:
-A Leaning with no reporting Outlet on a Story reported by three or more Outlets (reporting Outlets only, Opinion pieces excluded). Shown as a badge; one badge per absent Leaning.
+A Leaning with no reporting Outlet on a Story that the two other Leanings both report (reporting Outlets only, Opinion pieces excluded) — the Story everyone covers except them. Shown as a badge; one badge per absent Leaning.
 _Avoid_: Gap, missing coverage
 
 **Summary**:

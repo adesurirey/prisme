@@ -37,15 +37,17 @@ export function coverageCounts(
   return counts;
 }
 
-/** A Leaning counts as a Blindspot from this many reporting Outlets on. */
-export const BLINDSPOT_MIN_OUTLETS = 3;
-
-/** Every Leaning with no reporting Outlet on a Story reported by ≥ 3 Outlets.
- * The threshold counts configured Outlets only — the same basis as the counts. */
+/** A Leaning counts as a Blindspot only while both other Leanings report the Story. */
 export function blindspots(counts: Record<Leaning, number>): Leaning[] {
-  const total = leaningOrder.reduce((sum, leaning) => sum + counts[leaning], 0);
-  if (total < BLINDSPOT_MIN_OUTLETS) return [];
-  return leaningOrder.filter((leaning) => counts[leaning] === 0);
+  // No threshold on Outlets: what carries the signal is the two other
+  // Leanings both being present — "tout le monde en parle sauf X". An
+  // all-Centre Story gets no badges; Gauche and Droite being absent is not
+  // news.
+  return leaningOrder.filter(
+    (leaning) =>
+      counts[leaning] === 0 &&
+      leaningOrder.every((other) => other === leaning || counts[other] > 0),
+  );
 }
 
 /** The Article count shown as secondary detail: every Article but Opinion. */

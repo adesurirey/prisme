@@ -117,22 +117,38 @@ const description =
             </h2>
           )}
           <ul class="flex flex-col divide-y divide-line border-y border-line">
-            {articles.map((article) => (
-              <li class="flex gap-4 py-4">
-                <StoryImage
-                  article={article}
-                  outlet={byId.get(article.outletId)}
-                  className="h-14 w-24 shrink-0 rounded-md"
-                  sizes="96px"
-                />
-                <div class="min-w-0 flex-1">
-                  <ArticleRow article={article} outlet={byId.get(article.outletId)} />
-                  {article.headline !== story.title && (
-                    <p class="mt-1.5 text-[14px] text-muted">{article.headline}</p>
-                  )}
-                </div>
-              </li>
-            ))}
+            {
+              articles.map((article) => {
+                const outlet = byId.get(article.outletId);
+                return (
+                  <li class="flex gap-4 py-4">
+                    <StoryImage
+                      article={article}
+                      outlet={outlet}
+                      className="h-14 w-24 shrink-0 rounded-md"
+                      sizes="96px"
+                    />
+                    <div class="min-w-0 flex-1">
+                      <ArticleRow article={article} outlet={outlet} />
+                      <a
+                        href={article.url}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        class="group/link mt-1.5 block text-[14px] text-muted transition-colors hover:text-ink"
+                      >
+                        {article.headline}{'　'}
+                        <span
+                          aria-hidden="true"
+                          class="inline-block text-[12px] text-faint transition-colors group-hover/link:text-ink"
+                        >
+                          ↗
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                );
+              })
+            }
           </ul>
         </section>
       ))

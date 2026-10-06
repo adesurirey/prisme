@@ -98,22 +98,20 @@ describe('coverageCounts', () => {
 });
 
 describe('blindspots', () => {
-  it('is empty below three reporting Outlets', () => {
-    expect(blindspots({ gauche: 1, centre: 1, droite: 0 })).toEqual([]);
+  it('flags a Leaning absent while both others report the Story', () => {
+    expect(blindspots({ gauche: 0, centre: 2, droite: 1 })).toEqual(['gauche']);
   });
 
-  it('flags every Leaning with no reporting Outlet once the Story reaches three', () => {
-    expect(blindspots({ gauche: 0, centre: 3, droite: 0 })).toEqual(['gauche', 'droite']);
+  it('stays quiet when two Leanings are absent — an all-Centre Story is not news', () => {
+    expect(blindspots({ gauche: 0, centre: 4, droite: 0 })).toEqual([]);
   });
 
   it('is empty when all three Leanings report the Story', () => {
     expect(blindspots({ gauche: 1, centre: 1, droite: 1 })).toEqual([]);
   });
 
-  it('counts only configured Outlets — the same basis as the counts', () => {
-    // Two configured Outlets plus one unknown: no Blindspot, the threshold
-    // counts Outlets that have a Leaning, like the counts do.
-    expect(blindspots({ gauche: 0, centre: 2, droite: 0 })).toEqual([]);
+  it('is empty with no reporting Outlet at all', () => {
+    expect(blindspots({ gauche: 0, centre: 0, droite: 0 })).toEqual([]);
   });
 });
 
