@@ -7,6 +7,7 @@
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck",
     "verify": "pnpm --filter @prisme/pipeline verify",
-    "benchmark:export": "pnpm --filter @prisme/pipeline benchmark:export"
+    "benchmark:export": "pnpm --filter @prisme/pipeline benchmark:export",
+    "benchmark:grade": "pnpm --filter @prisme/pipeline benchmark:grade"
   }
 }

@@ -28,8 +28,8 @@
       "outletId": "20-minutes",
       "feed": "https://www.20minutes.fr/feeds/rss-une.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "b67ad4d96cf7",
@@ -37,7 +37,7 @@
       "outletId": "bfmtv",
       "feed": "https://www.bfmtv.com/rss/news-24-7/",
       "suspect": false,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -46,8 +46,8 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "b6c0355d5394",
@@ -55,8 +55,8 @@
       "outletId": "courrier-international",
       "feed": "https://www.courrierinternational.com/feed/all/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "ae40413a9358",
@@ -64,8 +64,8 @@
       "outletId": "europe-1",
       "feed": "https://www.europe1.fr/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "6a4c9898ebf3",
@@ -73,8 +73,8 @@
       "outletId": "france-24",
       "feed": "https://www.france24.com/fr/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "d9fad073dfa7",
@@ -82,8 +82,8 @@
       "outletId": "franceinfo",
       "feed": "https://www.francetvinfo.fr/titres.rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "e91f2452b711",
@@ -91,8 +91,8 @@
       "outletId": "huffpost",
       "feed": "https://www.huffingtonpost.fr/rss/all_headline.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "d6aa2cb930d7",
@@ -100,8 +100,8 @@
       "outletId": "humanite",
       "feed": "https://www.humanite.fr/feed",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "6beb5ee656a3",
@@ -109,8 +109,8 @@
       "outletId": "la-croix",
       "feed": "https://www.la-croix.com/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "opinion",
+      "section": "culture"
     },
     {
       "id": "440902740bd7",
@@ -118,8 +118,8 @@
       "outletId": "le-figaro",
       "feed": "https://www.lefigaro.fr/rss/figaro_flash-actu.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "09e9d4a78550",
@@ -127,8 +127,8 @@
       "outletId": "le-jdd",
       "feed": "https://www.lejdd.fr/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "culture"
     },
     {
       "id": "52692f2207a9",
@@ -136,8 +136,8 @@
       "outletId": "le-monde",
       "feed": "https://www.lemonde.fr/rss/une.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "economy"
     },
     {
       "id": "aa8219dec63b",
@@ -145,8 +145,8 @@
       "outletId": "le-parisien",
       "feed": "https://feeds.leparisien.fr/leparisien/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "ffe09f37aa3f",
@@ -154,8 +154,8 @@
       "outletId": "lexpress",
       "feed": "https://www.lexpress.fr/rss/alaune.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "science"
     },
     {
       "id": "623335f59da8",
@@ -163,8 +163,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "85d16364986a",
@@ -172,8 +172,8 @@
       "outletId": "mediapart",
       "feed": "https://www.mediapart.fr/articles/feed",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "economy"
     },
     {
       "id": "545db925071e",
@@ -181,8 +181,8 @@
       "outletId": "ouest-france",
       "feed": "https://www.ouest-france.fr/rss/une",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "b018947d2d18",
@@ -190,8 +190,8 @@
       "outletId": "rfi",
       "feed": "https://www.rfi.fr/fr/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "e26c84951842",
@@ -199,7 +199,7 @@
       "outletId": "tf1-info",
       "feed": "https://www.tf1info.fr/feeds/rss-une.xml",
       "suspect": false,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -208,8 +208,8 @@
       "outletId": "valeurs-actuelles",
       "feed": "https://www.valeursactuelles.com/feed",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "849be3df6b5b",
@@ -217,8 +217,8 @@
       "outletId": "20-minutes",
       "feed": "https://www.20minutes.fr/feeds/rss-une.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "a92c314f5cc6",
@@ -226,8 +226,8 @@
       "outletId": "bfmtv",
       "feed": "https://www.bfmtv.com/rss/news-24-7/",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "f973d7af75aa",
@@ -235,8 +235,8 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "274fdaf4cc6a",
@@ -244,8 +244,8 @@
       "outletId": "courrier-international",
       "feed": "https://www.courrierinternational.com/feed/all/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "economy"
     },
     {
       "id": "93736e25ac51",
@@ -253,8 +253,8 @@
       "outletId": "europe-1",
       "feed": "https://www.europe1.fr/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "0f3e0e4c31a0",
@@ -262,8 +262,8 @@
       "outletId": "france-24",
       "feed": "https://www.france24.com/fr/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "36af30a49fbf",
@@ -271,8 +271,8 @@
       "outletId": "franceinfo",
       "feed": "https://www.francetvinfo.fr/titres.rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "63123dddeeae",
@@ -280,8 +280,8 @@
       "outletId": "huffpost",
       "feed": "https://www.huffingtonpost.fr/rss/all_headline.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "75b100f52974",
@@ -289,8 +289,8 @@
       "outletId": "humanite",
       "feed": "https://www.humanite.fr/feed",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "e7a130d66c7e",
@@ -298,8 +298,8 @@
       "outletId": "la-croix",
       "feed": "https://www.la-croix.com/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "74867109c5a0",
@@ -307,8 +307,8 @@
       "outletId": "le-figaro",
       "feed": "https://www.lefigaro.fr/rss/figaro_flash-actu.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "sport"
     },
     {
       "id": "9992db6648c1",
@@ -316,8 +316,8 @@
       "outletId": "le-jdd",
       "feed": "https://www.lejdd.fr/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "ac3566541bc1",
@@ -325,8 +325,8 @@
       "outletId": "le-monde",
       "feed": "https://www.lemonde.fr/rss/en_continu.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "c3b3ace13036",
@@ -334,8 +334,8 @@
       "outletId": "le-parisien",
       "feed": "https://feeds.leparisien.fr/leparisien/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "culture"
     },
     {
       "id": "f648e241f68a",
@@ -343,8 +343,8 @@
       "outletId": "lexpress",
       "feed": "https://www.lexpress.fr/rss/alaune.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "science"
     },
     {
       "id": "5cf8c41bd448",
@@ -352,8 +352,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "387fe662d070",
@@ -361,8 +361,8 @@
       "outletId": "mediapart",
       "feed": "https://www.mediapart.fr/articles/feed",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "57d82fa9aabc",
@@ -370,8 +370,8 @@
       "outletId": "ouest-france",
       "feed": "https://www.ouest-france.fr/rss/une",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "8c7d6d2cd4d8",
@@ -379,8 +379,8 @@
       "outletId": "rfi",
       "feed": "https://www.rfi.fr/fr/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "211802c913ad",
@@ -388,8 +388,8 @@
       "outletId": "tf1-info",
       "feed": "https://www.tf1info.fr/feeds/rss-une.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "89ea591cb9d7",
@@ -397,8 +397,8 @@
       "outletId": "valeurs-actuelles",
       "feed": "https://www.valeursactuelles.com/feed",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "303c32ca6b50",
@@ -406,8 +406,8 @@
       "outletId": "20-minutes",
       "feed": "https://www.20minutes.fr/feeds/rss-une.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "d8d0bd7defe8",
@@ -415,8 +415,8 @@
       "outletId": "bfmtv",
       "feed": "https://www.bfmtv.com/rss/news-24-7/",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "1de1ad33f97b",
@@ -424,8 +424,8 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "5f45c5f907fc",
@@ -433,8 +433,8 @@
       "outletId": "courrier-international",
       "feed": "https://www.courrierinternational.com/feed/all/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "52234b57c92d",
@@ -442,8 +442,8 @@
       "outletId": "europe-1",
       "feed": "https://www.europe1.fr/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "5faf2d7041fa",
@@ -451,8 +451,8 @@
       "outletId": "france-24",
       "feed": "https://www.france24.com/fr/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "48e256523224",
@@ -460,8 +460,8 @@
       "outletId": "franceinfo",
       "feed": "https://www.francetvinfo.fr/titres.rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "2b2b6603147a",
@@ -469,8 +469,8 @@
       "outletId": "huffpost",
       "feed": "https://www.huffingtonpost.fr/rss/all_headline.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "opinion",
+      "section": "politics"
     },
     {
       "id": "f6e06fc3753e",
@@ -478,8 +478,8 @@
       "outletId": "humanite",
       "feed": "https://www.humanite.fr/feed",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "b77ecf47eeea",
@@ -487,8 +487,8 @@
       "outletId": "la-croix",
       "feed": "https://www.la-croix.com/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "economy"
     },
     {
       "id": "f36f5e78b6c1",
@@ -496,8 +496,8 @@
       "outletId": "le-figaro",
       "feed": "https://www.lefigaro.fr/rss/figaro_actualites.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "14c1742a0b20",
@@ -505,8 +505,8 @@
       "outletId": "le-jdd",
       "feed": "https://www.lejdd.fr/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "2cb65b987c12",
@@ -514,8 +514,8 @@
       "outletId": "le-monde",
       "feed": "https://www.lemonde.fr/rss/une.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "2a0d9409af86",
@@ -523,8 +523,8 @@
       "outletId": "le-parisien",
       "feed": "https://feeds.leparisien.fr/leparisien/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "e3da3aa0e221",
@@ -532,8 +532,8 @@
       "outletId": "lexpress",
       "feed": "https://www.lexpress.fr/rss/alaune.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "opinion",
+      "section": "society"
     },
     {
       "id": "222b03a2417b",
@@ -541,8 +541,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "culture"
     },
     {
       "id": "bd459f13c20a",
@@ -550,8 +550,8 @@
       "outletId": "mediapart",
       "feed": "https://www.mediapart.fr/articles/feed",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "6b8ad81c9feb",
@@ -559,7 +559,7 @@
       "outletId": "ouest-france",
       "feed": "https://www.ouest-france.fr/rss/une",
       "suspect": false,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -568,8 +568,8 @@
       "outletId": "rfi",
       "feed": "https://www.rfi.fr/fr/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "c19f7bb4826b",
@@ -577,8 +577,8 @@
       "outletId": "tf1-info",
       "feed": "https://www.tf1info.fr/feeds/rss-une.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "7e89da768e46",
@@ -586,8 +586,8 @@
       "outletId": "valeurs-actuelles",
       "feed": "https://www.valeursactuelles.com/feed",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "1c37bd24803a",
@@ -595,8 +595,8 @@
       "outletId": "20-minutes",
       "feed": "https://www.20minutes.fr/feeds/rss-une.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "97c23c609dd2",
@@ -604,7 +604,7 @@
       "outletId": "bfmtv",
       "feed": "https://www.bfmtv.com/rss/news-24-7/",
       "suspect": false,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -613,8 +613,8 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "8e564fe27869",
@@ -622,8 +622,8 @@
       "outletId": "courrier-international",
       "feed": "https://www.courrierinternational.com/feed/all/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "science"
     },
     {
       "id": "4e4b438e6f68",
@@ -631,8 +631,8 @@
       "outletId": "europe-1",
       "feed": "https://www.europe1.fr/rss.xml",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "f6dd6ac6861e",
@@ -640,8 +640,8 @@
       "outletId": "france-24",
       "feed": "https://www.france24.com/fr/rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "science"
     },
     {
       "id": "54d82044019e",
@@ -649,8 +649,8 @@
       "outletId": "franceinfo",
       "feed": "https://www.francetvinfo.fr/titres.rss",
       "suspect": false,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "8d9bf72cd85d",
@@ -658,7 +658,7 @@
       "outletId": "franceinfo",
       "feed": "https://www.francetvinfo.fr/titres.rss",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -667,8 +667,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "opinion",
+      "section": "society"
     },
     {
       "id": "18b44c742539",
@@ -676,8 +676,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "science"
     },
     {
       "id": "82c5a7342f8e",
@@ -685,8 +685,8 @@
       "outletId": "le-monde",
       "feed": "https://www.lemonde.fr/rss/une.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "live",
+      "section": "society"
     },
     {
       "id": "fec17e22d6cc",
@@ -694,7 +694,7 @@
       "outletId": "tf1-info",
       "feed": "https://www.tf1info.fr/feeds/rss-une.xml",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -703,7 +703,7 @@
       "outletId": "franceinfo",
       "feed": "https://www.francetvinfo.fr/titres.rss",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -712,8 +712,8 @@
       "outletId": "la-croix",
       "feed": "https://www.la-croix.com/rss",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "f05d620f4998",
@@ -721,8 +721,8 @@
       "outletId": "europe-1",
       "feed": "https://www.europe1.fr/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "f6d3409724c4",
@@ -730,7 +730,7 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -739,8 +739,8 @@
       "outletId": "lexpress",
       "feed": "https://www.lexpress.fr/rss/alaune.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "61efc420b06a",
@@ -748,7 +748,7 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -757,8 +757,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "opinion",
+      "section": "society"
     },
     {
       "id": "dac03bb946fe",
@@ -766,8 +766,8 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "sport"
     },
     {
       "id": "73c5dda44297",
@@ -775,8 +775,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "opinion",
+      "section": "culture"
     },
     {
       "id": "7257aededdc6",
@@ -784,8 +784,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "opinion",
+      "section": "culture"
     },
     {
       "id": "9df738503215",
@@ -793,8 +793,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "opinion",
+      "section": "science"
     },
     {
       "id": "95b2ef382a83",
@@ -802,8 +802,8 @@
       "outletId": "le-monde",
       "feed": "https://www.lemonde.fr/rss/en_continu.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "live",
+      "section": "sport"
     },
     {
       "id": "8bc54ea00efd",
@@ -811,8 +811,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "opinion",
+      "section": "politics"
     },
     {
       "id": "cc025852ffd9",
@@ -820,8 +820,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "opinion",
+      "section": "society"
     },
     {
       "id": "bfac7afaf339",
@@ -829,8 +829,8 @@
       "outletId": "le-monde",
       "feed": "https://www.lemonde.fr/rss/en_continu.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "cf54ed8511c4",
@@ -838,8 +838,8 @@
       "outletId": "europe-1",
       "feed": "https://www.europe1.fr/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "2ed751c9e1f8",
@@ -847,8 +847,8 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "culture"
     },
     {
       "id": "da54e47e0143",
@@ -856,7 +856,7 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -865,7 +865,7 @@
       "outletId": "la-croix",
       "feed": "https://www.la-croix.com/rss",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -874,8 +874,8 @@
       "outletId": "la-croix",
       "feed": "https://www.la-croix.com/rss",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "41ee2605968e",
@@ -883,8 +883,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "ce95e3218f51",
@@ -892,8 +892,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "opinion",
+      "section": "politics"
     },
     {
       "id": "091464b04247",
@@ -901,7 +901,7 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -910,7 +910,7 @@
       "outletId": "tf1-info",
       "feed": "https://www.tf1info.fr/feeds/rss-une.xml",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -919,7 +919,7 @@
       "outletId": "le-parisien",
       "feed": "https://feeds.leparisien.fr/leparisien/rss",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -928,8 +928,8 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "a7084d775019",
@@ -937,8 +937,8 @@
       "outletId": "lobs",
       "feed": "https://www.nouvelobs.com/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "10555e335fbf",
@@ -946,7 +946,7 @@
       "outletId": "le-monde",
       "feed": "https://www.lemonde.fr/rss/en_continu.xml",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -955,7 +955,7 @@
       "outletId": "le-monde",
       "feed": "https://www.lemonde.fr/rss/une.xml",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -964,8 +964,8 @@
       "outletId": "tf1-info",
       "feed": "https://www.tf1info.fr/feeds/rss-une.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "live",
+      "section": "society"
     },
     {
       "id": "53da94632c5a",
@@ -973,8 +973,8 @@
       "outletId": "france-24",
       "feed": "https://www.france24.com/fr/rss",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "8eef86b9c22b",
@@ -982,7 +982,7 @@
       "outletId": "20-minutes",
       "feed": "https://www.20minutes.fr/feeds/rss-une.xml",
       "suspect": true,
-      "kind": null,
+      "kind": "not_news",
       "section": null
     },
     {
@@ -991,8 +991,8 @@
       "outletId": "europe-1",
       "feed": "https://www.europe1.fr/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "science"
     },
     {
       "id": "bcb2a07f9a72",
@@ -1000,8 +1000,8 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "bf9ccd8f90cd",
@@ -1009,8 +1009,8 @@
       "outletId": "cnews",
       "feed": "https://www.cnews.fr/rss.xml",
       "suspect": true,
-      "kind": null,
-      "section": null
+      "kind": "news",
+      "section": "sport"
     }
   ]
 }

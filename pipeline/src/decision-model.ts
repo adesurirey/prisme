@@ -1,0 +1,215 @@
+/**
+ * Decision-model client (issue #4): classifies an Article's Kind and Section
+ * from its headline + teaser only — never the article page (ADR-0003).
+ *
+ * Jev (jevmodel.net) and Cloudflare Clef-flash share the same typed-questions
+ * API shape: POST a state + questions schema, get per-option probabilities.
+ * One request carries both questions (settled in the #4 grilling). An
+ * out-of-list answer or malformed response → one retry → else null, treated
+ * like a failed feed (kept, not dropped).
+ *
+ * NOTE: ArticleKind and Section are defined here for the benchmark; they move
+ * to @prisme/domain when the winner is integrated into the pipeline.
+ */
+
+export type ArticleKind = 'news' | 'opinion' | 'live' | 'not_news';
+export type Section =
+  | 'politics'
+  | 'world'
+  | 'economy'
+  | 'society'
+  | 'sport'
+  | 'culture'
+  | 'science'
+  | 'misc'
+  | 'other';
+
+export const ARTICLE_KINDS: ArticleKind[] = ['news', 'opinion', 'live', 'not_news'];
+export const SECTIONS: Section[] = [
+  'politics',
+  'world',
+  'economy',
+  'society',
+  'sport',
+  'culture',
+  'science',
+  'misc',
+  'other',
+];
+
+const KIND_CRITERIA: Record<ArticleKind, string> = {
+  news: 'Factual reporting of an event or development',
+  opinion: 'Argues a position: editorial, column, op-ed, tribune, pointed commentary',
+  live: 'Rolling live coverage (en direct / live blog) of an unfolding event',
+  not_news: 'No news event: horoscope, games/quiz, shopping tips, TV listings, weather, recipe, promotion',
+};
+
+const SECTION_CRITERIA: Record<Section, string> = {
+  politics: 'Politics: French politics, institutions, elections, laws',
+  world: 'Foreign and international news',
+  economy: 'Economy: companies, markets, work, consumer economics',
+  society: 'Society: education, health, justice, immigration, family, religion, society debates',
+  sport: 'Sport',
+  culture: 'Culture: cinema, music, books, arts, celebrities, media',
+  science: 'Science and tech: science, technology, AI, space, environment',
+  misc: 'Faits divers: crime, accidents, police courts',
+  other: 'Genuine news that fits none of the above',
+};
+
+/** The two typed questions sent in every request; keys reused in the answers. */
+export const QUESTIONS = {
+  kind: {
+    type: 'choice',
+    instructions: 'What kind of piece is this? Judge only from the headline and teaser given.',
+    criteria: KIND_CRITERIA,
+  },
+  section: {
+    type: 'choice',
+    instructions:
+      'Which part of the news does this belong to? Answer even if the piece is not_news; the answer is ignored in that case.',
+    criteria: SECTION_CRITERIA,
+  },
+} as const;
+
+export interface Classification {
+  kind: ArticleKind;
+  section: Section;
+  kindProbabilities?: Record<string, number>;
+  sectionProbabilities?: Record<string, number>;
+  inputTokens: number;
+  elapsedMs: number;
+}
+
+export interface DecisionModel {
+  label: string;
+  classify(state: { headline: string; teaser: string }): Promise<Classification | null>;
+}
+
+/** Raw per-question answer as returned by both providers. */
+interface ChoiceAnswer {
+  type: string;
+  choice: string;
+  probabilities?: Record<string, number>;
+  confidence?: number;
+}
+
+/**
+ * Extract and validate the two answers. Returns null when an answer is
+ * missing or out-of-list — the caller retries once, then gives up.
+ */
+export function parseAnswers(
+  answers: unknown,
+): { kind: ArticleKind; section: Section; kindProbabilities?: Record<string, number>; sectionProbabilities?: Record<string, number> } | null {
+  if (answers == null || typeof answers !== 'object') return null;
+  const { kind, section } = answers as Record<string, unknown>;
+  const kindAnswer = choiceOf(kind);
+  const sectionAnswer = choiceOf(section);
+  if (!kindAnswer || !ARTICLE_KINDS.includes(kindAnswer.choice as ArticleKind)) return null;
+  if (!sectionAnswer || !SECTIONS.includes(sectionAnswer.choice as Section)) return null;
+  return {
+    kind: kindAnswer.choice as ArticleKind,
+    section: sectionAnswer.choice as Section,
+    kindProbabilities: kindAnswer.probabilities,
+    sectionProbabilities: sectionAnswer.probabilities,
+  };
+}
+
+function choiceOf(answer: unknown): ChoiceAnswer | null {
+  if (answer == null || typeof answer !== 'object') return null;
+  const a = answer as Record<string, unknown>;
+  if (typeof a.choice !== 'string') return null;
+  return a as unknown as ChoiceAnswer;
+}
+
+const RETRYABLE = new Set([429, 500, 502, 503, 504, 529]);
+
+/**
+ * Shared call logic: build the request, one retry on retryable errors or
+ * invalid output, then null (degraded: keep the Article without a kind).
+ * Latency is measured across attempts, as the consumer experiences it.
+ */
+async function callModel(
+  label: string,
+  url: string,
+  apiKey: string,
+  body: Record<string, unknown>,
+  state: { headline: string; teaser: string },
+): Promise<Classification | null> {
+  const stateText = state.teaser ? `${state.headline}\n${state.teaser}` : state.headline;
+  const started = Date.now();
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...body, state: stateText }),
+        signal: AbortSignal.timeout(30_000),
+      });
+      if (!response.ok) {
+        const text = await response.text();
+        if (RETRYABLE.has(response.status) && attempt === 1) {
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+          continue;
+        }
+        // 401/422 and the like are config errors: fail fast, no retry.
+        const error = new Error(`${label} HTTP ${response.status}: ${text.slice(0, 200)}`);
+        (error as Error & { fatal?: boolean }).fatal = true;
+        throw error;
+      }
+      const data = (await response.json()) as {
+        answers?: unknown;
+        usage?: { input_tokens?: number };
+      };
+      const parsed = parseAnswers(data.answers);
+      if (!parsed) {
+        if (attempt === 1) continue;
+        return null;
+      }
+      return {
+        ...parsed,
+        inputTokens: data.usage?.input_tokens ?? 0,
+        elapsedMs: Date.now() - started,
+      };
+    } catch (error) {
+      const e = error as Error & { fatal?: boolean };
+      if (attempt === 2 || e.fatal) {
+        if (e instanceof Error && !e.message.startsWith(label)) {
+          throw new Error(`${label} ${e.message}`);
+        }
+        throw error;
+      }
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+    }
+  }
+  return null;
+}
+
+export function jevModel(apiKey: string): DecisionModel {
+  return {
+    label: 'Jev',
+    classify(state) {
+      return callModel(
+        'Jev',
+        'https://jevmodel.net/v1/systemone',
+        apiKey,
+        { model: 'jev-latest', questions: QUESTIONS },
+        state,
+      );
+    },
+  };
+}
+
+export function clefFlashModel(apiKey: string, accountId: string): DecisionModel {
+  return {
+    label: 'Clef-flash',
+    classify(state) {
+      return callModel(
+        'Clef-flash',
+        `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/@cf/cloudflare/clef-flash`,
+        apiKey,
+        { model: 'clef-flash', questions: QUESTIONS },
+        state,
+      );
+    },
+  };
+}
