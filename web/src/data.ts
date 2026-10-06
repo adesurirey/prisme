@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import type { Edition, Outlet, Story } from '@prisme/domain';
 import { publicOutlets } from '@prisme/domain';
@@ -24,9 +24,42 @@ export async function loadEdition(): Promise<Edition> {
   return JSON.parse(await readDataFile('edition.json'));
 }
 
-export async function loadStories(): Promise<Story[]> {
-  const edition = await loadEdition();
-  return edition.stories;
+/**
+ * Every Story file on disk — live, below the Edition cut, and frozen (issue
+ * #6 / ADR-0005): the files are the record (ADR-0002), and every one of them
+ * has a page. A malformed or unreadable file is skipped with a warning, never
+ * fatal: the rest of the archive stays usable.
+ */
+export async function loadAllStoryFiles(): Promise<Story[]> {
+  for (const candidate of ['data', path.join('..', 'data')]) {
+    const dir = path.resolve(process.cwd(), candidate, 'stories');
+    let names: string[];
+    try {
+      names = (await readdir(dir)).filter((name) => name.endsWith('.json'));
+    } catch {
+      continue;
+    }
+    const stories: Story[] = [];
+    for (const name of names) {
+      try {
+        const raw = JSON.parse(await readFile(path.join(dir, name), 'utf8')) as Partial<Story>;
+        if (
+          typeof raw.id === 'string' &&
+          typeof raw.slug === 'string' &&
+          typeof raw.title === 'string' &&
+          Array.isArray(raw.articles)
+        ) {
+          stories.push(raw as Story);
+        } else {
+          console.warn(`Skipping malformed story file: ${name}`);
+        }
+      } catch {
+        console.warn(`Skipping unreadable story file: ${name}`);
+      }
+    }
+    return stories;
+  }
+  return [];
 }
 
 /**

@@ -16,6 +16,7 @@
  */
 import { readFile, readdir } from 'node:fs/promises';
 import type { Article, Section, Story } from '@prisme/domain';
+import { newestFirst } from '@prisme/domain';
 import type { GroupingModel, GroupingProposal } from './gemini.ts';
 import { storySection, slugify } from './edition.ts';
 import type { MembershipChecker } from './decision-model.ts';
@@ -127,7 +128,7 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
   }
 
   const merge = (story: Story, article: Article): void => {
-    story.articles = [...story.articles, article].sort(byPublished);
+    story.articles = [...story.articles, article].sort(newestFirst);
     changedStories.add(story);
   };
 
@@ -306,11 +307,6 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
     changed: new Set([...changedStories].map((s) => s.slug)),
     live: liveSorted(),
   };
-}
-
-/** Articles sorted by publication time descending, ties by id. */
-function byPublished(a: Article, b: Article): number {
-  return published(b.publishedAt) - published(a.publishedAt) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 }
 
 /**

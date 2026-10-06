@@ -1,31 +1,70 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ArticleRow from '../../components/ArticleRow';
-import CoverageBar, { coverageCounts } from '../../components/CoverageBar';
-import StoryImage, { pickStoryImage } from '../../components/StoryImage';
-import { loadOutlets, loadStories, withBase } from '../../data';
-import type { Story } from '@prisme/domain';
+import BlindspotBadge from '../../components/BlindspotBadge';
+import CoverageBar from '../../components/CoverageBar';
+import LeaningBadge from '../../components/LeaningBadge';
+import StoryImage from '../../components/StoryImage';
+import { loadAllStoryFiles, loadOutlets, withBase } from '../../data';
+import type { Article, Leaning, Story } from '@prisme/domain';
+import {
+  blindspots,
+  countedArticles,
+  coverageCounts,
+  frontPageOutlets,
+  leaningOrder,
+  newestFirst,
+  pickStoryImage,
+  reportingOutletIds,
+} from '@prisme/domain';
 import { SECTION_LABELS } from '@prisme/domain';
 
 export async function getStaticPaths() {
-  const stories = await loadStories();
+  // Every Story file gets its page: live Stories in the Edition, live Stories
+  // below the top-20 cut, and frozen Stories (issue #6, ADR-0005).
+  const stories = await loadAllStoryFiles();
   return stories.map((story) => ({ params: { slug: story.slug }, props: { story } }));
 }
 
 const { story } = Astro.props as { story: Story };
 const outlets = loadOutlets();
-const leaningOf = new Map(outlets.map((o) => [o.id, o.leaning]));
 const byId = new Map(outlets.map((o) => [o.id, o]));
-const counts = coverageCounts(story.articles, (id) => leaningOf.get(id));
-const image = pickStoryImage(story, (id) => leaningOf.get(id));
+
+const counts = coverageCounts(story.articles, byId);
+const reporting = reportingOutletIds(story.articles).size;
+const spots = blindspots(counts);
+const une = frontPageOutlets(story.articles, outlets);
+const counted = countedArticles(story.articles);
+const image = pickStoryImage(story, byId);
 const imageOutlet = image && byId.get(image.outletId);
+
+/** Articles of one Leaning, newest first, ties by id; unknown Outlets last. */
+function group(leaning: Leaning | undefined): Article[] {
+  return story.articles
+    .filter((a) => byId.get(a.outletId)?.leaning === leaning)
+    .sort(newestFirst);
+}
+const groups: { leaning?: Leaning; articles: Article[] }[] = [
+  ...leaningOrder.map((leaning) => ({ leaning, articles: group(leaning) })),
+  { articles: group(undefined) },
+];
+const visible = groups.filter((g) => g.articles.length > 0);
 
 const builtAt = new Date(
   story.articles[0]?.publishedAt ?? Date.now(),
 ).toLocaleString('fr-FR', { dateStyle: 'long', timeStyle: 'short' });
+
+// SEO (issue #6): Prisme's own description, derived only from the Coverage
+// counters — never Outlet text (ADR-0003).
+const description =
+  reporting > 0
+    ? `Comment la presse française couvre « ${story.title} » : ${reporting} média${
+        reporting > 1 ? 's' : ''
+      } sur ${outlets.length}, ${counts.gauche} gauche, ${counts.centre} centre, ${counts.droite} droite.`
+    : undefined;
 ---
 
-<Base title={story.title} description={`Le sujet « ${story.title} » dans l'édition du jour de Prisme.`}>
+<Base title={story.title} description={description} ogImage={image?.imageUrl} ogType="article">
   <article class="pt-10">
     <p class="mb-6">
       <a href={withBase('/')} class="text-[13px] text-muted transition-colors hover:text-ink">
@@ -35,13 +74,26 @@ const builtAt = new Date(
     <h1 class="max-w-[36rem] text-[24px] font-semibold leading-snug tracking-[-0.02em]">
       {story.title}
     </h1>
-    <div class="mt-4 flex items-center gap-5">
-      <CoverageBar counts={counts} width={120} />
+    <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
+      <CoverageBar counts={counts} reporting={reporting} totalOutlets={outlets.length} width={120} />
       {story.section && (
         <p class="text-[13px] text-muted">{SECTION_LABELS[story.section]}</p>
       )}
+      <p class="text-[13px] text-muted">{counted} article{counted > 1 ? 's' : ''}</p>
       <p class="text-[13px] text-muted">Publié le {builtAt}</p>
     </div>
+    {spots.length > 0 && (
+      <div class="mt-3 flex flex-wrap gap-2">
+        {spots.map((leaning) => <BlindspotBadge leaning={leaning} />)}
+      </div>
+    )}
+    {
+      une.length > 0 && (
+        <p class="mt-4 text-[13px] text-muted">
+          À la une chez {une.map((o) => o.name).join(', ')}
+        </p>
+      )
+    }
 
     <figure class="mt-6">
       <StoryImage
@@ -53,19 +105,45 @@ const builtAt = new Date(
       {imageOutlet && <figcaption class="mt-2 text-[13px] text-faint">Photo : {imageOutlet.name}</figcaption>}
     </figure>
 
-    <ul class="mt-8 flex flex-col divide-y divide-line border-y border-line">
-      {
-        story.articles.map((article) => (
-          <li class="py-4">
-            <ArticleRow article={article} outlet={byId.get(article.outletId)} />
-            {/* The Story title can repeat an Article's headline (split Stories
-                take the founding headline); showing it twice adds nothing. */}
-            {article.headline !== story.title && (
-              <p class="mt-1.5 text-[14px] text-muted">{article.headline}</p>
-            )}
-          </li>
-        ))
-      }
-    </ul>
+    {
+      visible.map(({ leaning, articles }) => (
+        <section class="mt-10">
+          {leaning && (
+            <h2 class="mb-1 flex items-center gap-2.5">
+              <LeaningBadge leaning={leaning} />
+              <span class="text-[12px] text-faint">
+                {counts[leaning]} média{counts[leaning] > 1 ? 's' : ''}
+              </span>
+            </h2>
+          )}
+          <ul class="flex flex-col divide-y divide-line border-y border-line">
+            {
+              articles.map((article) => {
+                const outlet = byId.get(article.outletId);
+                return (
+                  <li class="flex gap-4 py-4">
+                    <StoryImage
+                      article={article}
+                      outlet={outlet}
+                      className="h-14 w-24 shrink-0 rounded-md"
+                      sizes="96px"
+                    />
+                    <div class="min-w-0 flex-1">
+                      <ArticleRow article={article} outlet={outlet} />
+                      {/* The Story title can repeat an Article's headline (split
+                          Stories take the founding headline); showing it twice
+                          adds nothing — the "Lire sur" link stays clickable. */}
+                      {article.headline !== story.title && (
+                        <p class="mt-1.5 text-[14px] text-muted">{article.headline}</p>
+                      )}
+                    </div>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </section>
+      ))
+    }
   </article>
 </Base>
