@@ -907,7 +907,7 @@ export const outlets: OutletConfig[] = [
     leaning: 'centre',
     paywall: 'partial',
     site: 'https://www.la-croix.com',
-    feeds: { latest: 'https://www.la-croix.com/rss/france' },
+    feeds: { latest: 'https://www.la-croix.com/rss' },
     leaningSources: [
       {
         title: "FrIdéo : où se situe La Croix ? (échelle d'idéologie de 30 médias français)",
@@ -944,13 +944,13 @@ export const outlets: OutletConfig[] = [
     feedChecks: [
       {
         kind: 'latest',
-        url: 'https://www.la-croix.com/rss/france',
+        url: 'https://www.la-croix.com/rss',
         checkedAt: CHECKED,
         status: 200,
         items: 50,
-        covers: '~7 jours',
+        covers: '~25 h',
         images: 'all',
-        note: "Flux « France » (actualité nationale) : les rubriques religion et culture en sont exclues.",
+        note: "Flux général, toutes rubriques (religion et culture comprises) : les rubriques sont tranchées par la classification (#4), pas par le choix du flux. Le flux /rss/france (actualité nationale) existe si un périmètre restreint devenait souhaitable.",
       },
     ],
     tdm: { reserved: false, checkedAt: CHECKED, note: 'Pas de tdmrep.json (404).' },
@@ -1155,7 +1155,7 @@ export const outlets: OutletConfig[] = [
     site: 'https://www.lejdd.fr',
     feeds: {
       une: 'https://www.lejdd.fr/rss/a-la-une.xml',
-      latest: 'https://www.lejdd.fr/rss/politique.xml',
+      latest: 'https://www.lejdd.fr/rss.xml',
     },
     leaningSources: [
       {
@@ -1202,13 +1202,13 @@ export const outlets: OutletConfig[] = [
       },
       {
         kind: 'latest',
-        url: 'https://www.lejdd.fr/rss/politique.xml',
+        url: 'https://www.lejdd.fr/rss.xml',
         checkedAt: CHECKED,
         status: 200,
         items: 50,
-        covers: '~7 jours',
+        covers: '~1,5 jour',
         images: 'all',
-        note: "Flux actualité (politique/société) retenu plutôt que le flux « tous les articles » rss.xml (200, 50 articles, ~1,5 jour) : celui-ci mélange actualité, séries et ciné, et fait entrer du hors-nuit dans l'Édition (comme les recettes de TF1, filtrées par #4).",
+        note: "Flux le plus complet, toutes rubriques (séries et ciné compris) : le hors-nuit est retiré par la classification (#4), jamais par le choix du flux. Le flux rss/politique.xml (50 articles, ~7 jours) reste l'alternative si un filtrage amont devenait nécessaire.",
       },
     ],
     tdm: { reserved: false, checkedAt: CHECKED, note: 'Pas de tdmrep.json (404).' },

@@ -49,6 +49,21 @@ Cette règle est symétrique et répétible : elle ne dépend pas de l'actualit�
 goûts de l'équipe. Deux médias hors du panel FrIdéo (**Courrier international**,
 **Europe 1**) sont placés à partir des autres sources, avec le raisonnement écrit.
 
+### Choix des flux
+
+Une seule règle, appliquée à tous les médias :
+
+1. **`une`** quand le média publie un vrai flux de une (sélection éditoriale, quelques
+   dizaines d'articles au plus).
+2. **`latest`** = le flux le plus complet disponible (le flux « tous les articles » quand il
+   existe), jamais un flux de rubrique choisi pour écarter du contenu.
+3. **Le hors-nuit (météo, recettes, séries, jeux…) se filtre à la classification** (issue #4 :
+   `news` / `opinion` / `live` / `not_news`), jamais en amont par le choix des flux : même
+   traitement pour tous les médias, et les rubriques se décident côté Story (label), pas côté
+   collecte.
+4. Quand un flux est mort, vide ou sans dates, il est documenté dans le dossier du média
+   plutôt que supprimé silencieusement.
+
 ### Ce que nous ne faisons pas
 
 - Nous ne jugeons ni la qualité ni la fiabilité d'un média : le positionnement n'est pas
@@ -474,9 +489,11 @@ Centre, avec la nuance « centre droit » documentée.
 **Audience.** ACPM quotidien nationaux 2025/2026 : 6e rang, 73 595 exemplaires France
 payée ; La-croix.com : 86e rang des sites, 3,5 M de visites (août 2026).
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.la-croix.com/rss/france> — 200, 50
-articles, ~7 jours, images partout. Flux « France » (actualité nationale) : les rubriques
-religion et culture en sont exclues.
+**Flux vérifiés (2026-10-06).** `latest` <https://www.la-croix.com/rss> — 200, 50
+articles, ~25 h, images partout. Flux général, toutes rubriques (religion et culture
+comprises) : les rubriques sont tranchées par la classification (#4), pas par le choix du
+flux. Le flux `/rss/france` (actualité nationale) existe si un périmètre restreint devenait
+souhaitable.
 
 **Paywall / TDM.** Partiellement payant ; pas de `tdmrep.json` (404).
 
@@ -579,12 +596,11 @@ changement est daté et mesuré, et nous ne l'appliquons pas rétroactivement.
 payée ; LeJDD.fr : 88e rang des sites, 3,4 M de visites (août 2026).
 
 **Flux vérifiés (2026-10-06).** `une` <https://www.lejdd.fr/rss/a-la-une.xml> — 200, 9
-articles, ~11 h, **sans image** ; `latest` <https://www.lejdd.fr/rss/politique.xml> — 200,
-50 articles, ~7 jours, images partout. Flux actualité (politique/société) retenu plutôt
-que le flux « tous les articles » `rss.xml` (200, 50 articles, ~1,5 jour) : celui-ci mélange
-actualité, séries et ciné et fait entrer du hors-nuit dans l'Édition — comme les recettes de
-TF1, il sera filtré quand la classification (#4) distinguerait news / opinion / live /
-not news.
+articles, ~11 h, **sans image** ; `latest` <https://www.lejdd.fr/rss.xml> — 200, 50
+articles, ~1,5 jour, images partout. Flux le plus complet, toutes rubriques (séries et ciné
+compris) : le hors-nuit est retiré par la classification (#4), jamais par le choix du flux.
+Le flux `rss/politique.xml` (50 articles, ~7 jours) reste l'alternative si un filtrage amont
+devenait nécessaire.
 
 **Paywall / TDM.** Partiellement payant ; pas de `tdmrep.json` (404).
 
@@ -647,8 +663,8 @@ orientation n'est pas recherchée tant qu'ils ne sont pas dans l'Édition.
    vérifications de flux (`pnpm --filter @prisme/pipeline verify`).
 6. **Les réservations TDM sont informatives** (ADR-0003) : Prisme ne lit que les titres et
    chapeaux publiés dans les flux RSS, qu'il ne stocke jamais.
-7. **Le hors-nuit passe par les flux eux-mêmes** quand c'est possible : flux de rubrique
-   plutôt que flux mixtes (La Croix `/rss/france`, Le JDD `/rss/politique.xml`), car
-   certains éditeurs ne proposent qu'un feu complet (TF1 Info, Le HuffPost). Ce qui
-   traverse encore (météo, recettes, séries) sera retiré de la Couverture par la
-   classification de l'issue #4 (news / opinion / live / not news).
+7. **Le hors-nuit n'est jamais filtré par le choix du flux** : on collecte le flux le plus
+   complet de chaque média (météo, recettes, séries compris), et la classification de
+   l'issue #4 retire le `not_news` avant l'Édition. En attendant #4, ce contenu reste
+   visible dans l'Édition : état transitoire assumé, à ne pas publier avant que #4 ne
+   tourne (les pages de sujets sont figées définitivement une fois publiées).
