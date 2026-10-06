@@ -5,6 +5,7 @@ import CoverageBar, { coverageCounts } from '../../components/CoverageBar';
 import StoryImage, { pickStoryImage } from '../../components/StoryImage';
 import { loadOutlets, loadStories, withBase } from '../../data';
 import type { Story } from '@prisme/domain';
+import { SECTION_LABELS } from '@prisme/domain';
 
 export async function getStaticPaths() {
   const stories = await loadStories();
@@ -36,6 +37,9 @@ const builtAt = new Date(
     </h1>
     <div class="mt-4 flex items-center gap-5">
       <CoverageBar counts={counts} width={120} />
+      {story.section && (
+        <p class="text-[13px] text-muted">{SECTION_LABELS[story.section]}</p>
+      )}
       <p class="text-[13px] text-muted">Publié le {builtAt}</p>
     </div>
 
