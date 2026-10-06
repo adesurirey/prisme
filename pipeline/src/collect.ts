@@ -12,6 +12,11 @@ export type Fetcher = (url: string) => Promise<string>;
 
 export interface CollectedArticles {
   articles: Article[];
+  /**
+   * article id → teaser, in memory only (ADR-0003): the Decision model reads
+   * the teaser at classification time; it is never serialized or written.
+   */
+  teasers: Map<string, string>;
   /** Outlets whose feeds could not be fetched or parsed. */
   failures: { outletId: string; feed: string; reason: string }[];
 }
@@ -30,8 +35,16 @@ export async function collect(
   const results = await Promise.all(
     outlets.map((outlet) => collectOutlet(outlet, fetcher, now, failures)),
   );
+  const teasers = new Map<string, string>();
+  for (const { articles, teasers: outletTeasers } of results) {
+    for (const article of articles) {
+      const teaser = outletTeasers.get(article.id);
+      if (teaser != null && !teasers.has(article.id)) teasers.set(article.id, teaser);
+    }
+  }
   return {
-    articles: results.flat().sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)),
+    articles: results.flatMap((r) => r.articles).sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)),
+    teasers,
     failures,
   };
 }
@@ -41,18 +54,27 @@ async function collectOutlet(
   fetcher: Fetcher,
   now: Date,
   failures: CollectedArticles['failures'],
-): Promise<Article[]> {
+): Promise<{ articles: Article[]; teasers: Map<string, string> }> {
+  const teasers = new Map<string, string>();
   const articles: Article[] = [];
   if (outlet.feeds.une) {
     const parsed = await fetchAndParse(outlet, outlet.feeds.une, fetcher, failures);
-    articles.push(...parsed.map((item) => toArticle(item, outlet, true)));
+    for (const item of parsed) {
+      const article = toArticle(item, outlet, true);
+      articles.push(article);
+      teasers.set(article.id, item.teaser);
+    }
   }
   if (outlet.feeds.latest) {
     const parsed = await fetchAndParse(outlet, outlet.feeds.latest, fetcher, failures);
     const recent = [...parsed]
       .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
       .slice(0, FRONT_PAGE_FALLBACK);
-    articles.push(...recent.map((item) => toArticle(item, outlet, outlet.feeds.une == null)));
+    for (const item of recent) {
+      const article = toArticle(item, outlet, outlet.feeds.une == null);
+      articles.push(article);
+      teasers.set(article.id, item.teaser);
+    }
   }
   // An Article can appear in both feeds: keep one, preferring Front-page.
   const byId = new Map<string, Article>();
@@ -60,10 +82,13 @@ async function collectOutlet(
     const kept = byId.get(article.id);
     if (!kept || (!kept.frontPage && article.frontPage)) byId.set(article.id, article);
   }
-  return [...byId.values()].filter((article) => {
+  const keptArticles = [...byId.values()].filter((article) => {
     if (article.publishedAt === '') return false;
     return now.getTime() - Date.parse(article.publishedAt) <= WINDOW_MS;
   });
+  const keptIds = new Set(keptArticles.map((a) => a.id));
+  const keptTeasers = new Map([...teasers].filter(([id]) => keptIds.has(id)));
+  return { articles: keptArticles, teasers: keptTeasers };
 }
 
 async function fetchAndParse(

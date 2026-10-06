@@ -10,3 +10,7 @@ dist/
 
 # Note: data/ is intentionally committed — the git repo is the database
 # (ADR-0002). It must contain no teaser or outlet text (ADR-0003).
+
+# Benchmark pairs (headline+teaser) stay local for the same reason (issue #4):
+# only the labels file, docs/research/decision-model-labels.json, is committed.
+.benchmark/

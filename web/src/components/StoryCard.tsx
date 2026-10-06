@@ -1,4 +1,5 @@
 import type { Outlet, Story } from '@prisme/domain';
+import { SECTION_LABELS } from '@prisme/domain';
 import ArticleRow from './ArticleRow';
 import CoverageBar, { coverageCounts } from './CoverageBar';
 import StoryImage, { pickStoryImage } from './StoryImage';
@@ -16,6 +17,11 @@ export default function StoryCard({ story, outlets }: { story: Story; outlets: O
     <article className="-mx-5 rounded-lg px-5 py-5 transition-colors hover:bg-hover">
       <div className="flex items-start gap-6">
         <div className="min-w-0 flex-1">
+          {story.section && (
+            <p className="mb-1 text-[11px] uppercase tracking-[0.08em] text-faint">
+              {SECTION_LABELS[story.section]}
+            </p>
+          )}
           <h2 className="text-[15px] font-medium leading-snug tracking-[-0.01em]">
             <a href={withBase(`/sujet/${story.slug}/`)}>{story.title}</a>
           </h2>

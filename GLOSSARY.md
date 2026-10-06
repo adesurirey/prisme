@@ -28,9 +28,21 @@ _Avoid_: Post, item, link
 An Article that argues a position (editorial, column, op-ed) rather than reporting news. It informs Summaries but does not count toward Coverage.
 _Avoid_: Editorial, tribune (as a generic term)
 
+**Kind**:
+The classification of an Article: news, opinion, live or not_news. The Decision model assigns it from the headline and teaser. A not_news Article never reaches the Edition; an Opinion piece never counts toward Coverage.
+_Avoid_: Type, category, tag
+
+**Decision model**:
+The cheap language model Prisme uses to assign each Article its Kind and Section.
+_Avoid_: Classifier, judge, AI (alone)
+
 **Story**:
 A news event or topic, made up of the Articles that report on it. National and international news are both in scope.
 _Avoid_: Topic, cluster, event, subject
+
+**Section**:
+The part of the news a Story belongs to: Politique, International, Économie, Société, Sport, Culture, Sciences/Tech, Faits divers. A Story's Section comes from the Sections of its Articles. Shown as a label, never a filter.
+_Avoid_: Category, rubric, topic
 
 **Edition**:
 The current selection of top Stories that Prisme publishes, updated throughout the day.

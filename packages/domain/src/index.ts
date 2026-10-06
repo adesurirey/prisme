@@ -47,7 +47,55 @@ export interface Article {
   imageUrl?: string;
   /** True when the Article is on the Outlet's Front page (une feed, or one of the 10 most recent). */
   frontPage: boolean;
+  /**
+   * Assigned by the Decision model from the headline and teaser (issue #4).
+   * Absent when classification failed: the Article is kept, unclassified.
+   * A not_news Article never reaches the Edition.
+   */
+  kind?: ArticleKind;
 }
+
+/** The classification of an Article: news, opinion, live or not_news. */
+export type ArticleKind = 'news' | 'opinion' | 'live' | 'not_news';
+
+export const ARTICLE_KINDS: ArticleKind[] = ['news', 'opinion', 'live', 'not_news'];
+
+/** The part of the news a Story belongs to (issue #4). */
+export type Section =
+  | 'politics'
+  | 'world'
+  | 'economy'
+  | 'society'
+  | 'sport'
+  | 'culture'
+  | 'science'
+  | 'misc'
+  | 'other';
+
+export const SECTIONS: Section[] = [
+  'politics',
+  'world',
+  'economy',
+  'society',
+  'sport',
+  'culture',
+  'science',
+  'misc',
+  'other',
+];
+
+/** French UI labels for Sections; keys are the English data values. */
+export const SECTION_LABELS: Record<Section, string> = {
+  politics: 'Politique',
+  world: 'International',
+  economy: 'Économie',
+  society: 'Société',
+  sport: 'Sport',
+  culture: 'Culture',
+  science: 'Sciences/Tech',
+  misc: 'Faits divers',
+  other: 'Autre',
+};
 
 /**
  * A news event or topic made up of the Articles that report on it.
@@ -60,6 +108,8 @@ export interface Story {
   /** The Story's headline (for now, the Article's headline). */
   title: string;
   articles: Article[];
+  /** From the majority of its Articles' Sections; absent when none is classified. */
+  section?: Section;
 }
 
 /** The current selection of top Stories Prisme publishes. */

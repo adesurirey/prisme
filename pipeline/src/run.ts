@@ -1,8 +1,11 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import type { Edition } from '@prisme/domain';
 import { outlets, publicOutlets } from '@prisme/domain';
+import { classifyNewArticles, dropNotNews, loadCache, saveCache, type ClassificationCache } from './classify.ts';
 import { collect } from './collect.ts';
 import { buildEdition } from './edition.ts';
+import { fetchFeed } from './http.ts';
+import { winnerModelFromEnv } from './decision-model.ts';
 
 /**
  * data/ lives at the repo root: resolving `../../data/` from this file
@@ -10,27 +13,34 @@ import { buildEdition } from './edition.ts';
  * anywhere (root, CI, editor).
  */
 const DATA_DIR = new URL('../../data/', import.meta.url);
-
-const USER_AGENT =
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
-
-async function fetchFeed(url: string): Promise<string> {
-  const response = await fetch(url, {
-    headers: { 'User-Agent': USER_AGENT },
-    signal: AbortSignal.timeout(15_000),
-  });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  return response.text();
-}
+const CLASSIFICATIONS_PATH = new URL('classifications.json', DATA_DIR);
 
 export async function runEdition(): Promise<Edition> {
   const now = new Date();
-  const { articles, failures } = await collect(outlets, fetchFeed, now);
-  const edition = buildEdition(articles, now);
+  const { articles, teasers, failures } = await collect(outlets, fetchFeed, now);
+
+  // Incremental classification (issue #4): only new ids hit the model; the
+  // winner (Clef-flash via OpenRouter) comes from OPENROUTER_API_KEY. Without
+  // the key, Articles stay unclassified — the build must not fail on it.
+  const model = winnerModelFromEnv();
+  if (model == null) {
+    console.warn('OPENROUTER_API_KEY not set — Articles are kept unclassified (no kind).');
+  }
+  const cache: ClassificationCache = await loadCache(CLASSIFICATIONS_PATH);
+  const before = Object.keys(cache.entries).length;
+  await classifyNewArticles(articles, teasers, cache, model);
+  await saveCache(cache, CLASSIFICATIONS_PATH);
+  const classified = Object.keys(cache.entries).length;
+
+  const kept = dropNotNews(articles, cache)
+    .map((article) => ({ ...article, kind: cache.entries[article.id]?.kind }));
+  const sectionOf = (id: string) => cache.entries[id]?.section ?? undefined;
+  const edition = buildEdition(kept, now, sectionOf);
 
   console.log(
-    `Edition: ${edition.stories.length} stories from ${articles.length} articles ` +
-      `(${failures.length} feed failures).`,
+    `Edition: ${edition.stories.length} stories from ${kept.length} articles ` +
+      `(${articles.length - kept.length} not_news dropped, ${classified - before} newly classified, ` +
+      `${failures.length} feed failures).`,
   );
 
   await mkdir(new URL('stories/', DATA_DIR), { recursive: true });
