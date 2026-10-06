@@ -78,6 +78,8 @@ export interface Classification {
   sectionProbabilities?: Record<string, number>;
   inputTokens: number;
   elapsedMs: number;
+  /** USD, when the provider reports it (OpenRouter usage.cost). */
+  costUsd?: number;
 }
 
 export interface DecisionModel {
@@ -158,7 +160,7 @@ async function callModel(
       }
       const data = (await response.json()) as {
         answers?: unknown;
-        usage?: { input_tokens?: number };
+        usage?: { input_tokens?: number; cost?: number };
       };
       const parsed = parseAnswers(data.answers);
       if (!parsed) {
@@ -168,6 +170,7 @@ async function callModel(
       return {
         ...parsed,
         inputTokens: data.usage?.input_tokens ?? 0,
+        costUsd: typeof data.usage?.cost === 'number' ? data.usage.cost : undefined,
         elapsedMs: Date.now() - started,
       };
     } catch (error) {
@@ -208,6 +211,32 @@ export function clefFlashModel(apiKey: string, accountId: string): DecisionModel
         `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/@cf/cloudflare/clef-flash`,
         apiKey,
         { model: 'clef-flash', questions: QUESTIONS },
+        state,
+      );
+    },
+  };
+}
+
+/**
+ * Both models through OpenRouter's System One gateway, which preserves the
+ * same typed-questions body (https://openrouter.ai/api/alpha/decisions).
+ * Routing both models through one gateway keeps the benchmark fair: same
+ * serving path, same request shape, one key. Pinned ids for reproducibility.
+ */
+export const OPENROUTER_MODELS = {
+  jev: 'typesafe/jev-1.13',
+  clefFlash: 'cloudflare/clef-flash',
+} as const;
+
+export function openRouterModel(apiKey: string, id: string, label: string): DecisionModel {
+  return {
+    label,
+    classify(state) {
+      return callModel(
+        label,
+        'https://openrouter.ai/api/alpha/decisions',
+        apiKey,
+        { model: id, questions: QUESTIONS },
         state,
       );
     },

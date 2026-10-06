@@ -2,6 +2,8 @@ import { readFile, writeFile } from 'node:fs/promises';
 import {
   clefFlashModel,
   jevModel,
+  OPENROUTER_MODELS,
+  openRouterModel,
   type ArticleKind,
   type Classification,
   type DecisionModel,
@@ -71,6 +73,15 @@ interface Summary {
 }
 
 function modelsFromEnv(): DecisionModel[] {
+  // One OpenRouter key covers both models via the same System One gateway
+  // (preferred: same serving path for both, fair benchmark).
+  if (process.env.OPENROUTER_API_KEY) {
+    const key = process.env.OPENROUTER_API_KEY;
+    return [
+      openRouterModel(key, OPENROUTER_MODELS.jev, 'Jev'),
+      openRouterModel(key, OPENROUTER_MODELS.clefFlash, 'Clef-flash'),
+    ];
+  }
   const models: DecisionModel[] = [];
   if (process.env.JEV_API_KEY) models.push(jevModel(process.env.JEV_API_KEY));
   else console.warn('JEV_API_KEY not set — skipping Jev.');
@@ -148,6 +159,7 @@ function summarize(items: LabeledItem[], attempts: Attempt[]): Summary {
   let invalid = 0;
   const latencies: number[] = [];
   let inputTokens = 0;
+  let costUsd = 0;
   // not_news confusion: TP = label not_news & predicted not_news,
   // FP = label not not_news & predicted not_news, FN = the reverse.
   let tp = 0;
@@ -178,6 +190,8 @@ function summarize(items: LabeledItem[], attempts: Attempt[]): Summary {
     const classification = attempts[i]!.classification;
     latencies.push(classification?.elapsedMs ?? 0);
     inputTokens += classification?.inputTokens ?? 0;
+    const rate = COST_PER_INPUT_TOKEN[model as keyof typeof COST_PER_INPUT_TOKEN] ?? 0;
+    costUsd += classification?.costUsd ?? (classification?.inputTokens ?? 0) * rate;
   });
 
   const model = attempts[0]?.model ?? 'unknown';
@@ -194,7 +208,7 @@ function summarize(items: LabeledItem[], attempts: Attempt[]): Summary {
     avgLatencyMs: latencies.length > 0 ? Math.round(latencies.reduce((a, b) => a + b, 0) / latencies.length) : 0,
     p95LatencyMs: latencies.length > 0 ? (latencies[Math.min(latencies.length - 1, Math.floor(latencies.length * 0.95))] ?? 0) : 0,
     inputTokens,
-    costUsd: inputTokens * (COST_PER_INPUT_TOKEN[model as keyof typeof COST_PER_INPUT_TOKEN] ?? 0),
+    costUsd,
   };
 }
 
@@ -247,7 +261,7 @@ function render(total: number, summaries: Summary[], samples: { seed: number; sa
     '',
     '```sh',
     'pnpm benchmark:export   # refresh the sample (seeded)',
-    'pnpm benchmark:grade    # needs JEV_API_KEY and/or CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID in env',
+    'pnpm benchmark:grade    # needs OPENROUTER_API_KEY in env (or direct JEV_API_KEY / CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID)',
     '```',
     '',
     'Keys live in the local env or GitHub Actions secrets only — never in the repo.',
