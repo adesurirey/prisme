@@ -105,6 +105,13 @@ export const SECTION_LABELS: Record<Section, string> = {
   other: 'Autre',
 };
 
+/** French UI labels for Leanings; keys are the English data values. */
+export const LEANING_LABELS: Record<Leaning, string> = {
+  gauche: 'Gauche',
+  centre: 'Centre',
+  droite: 'Droite',
+};
+
 /**
  * A news event or topic made up of the Articles that report on it (issue #5).
  * Created once, then extended incrementally: its id and slug never change.

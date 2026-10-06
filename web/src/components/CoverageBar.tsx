@@ -1,11 +1,5 @@
 import type { Leaning } from '@prisme/domain';
-import { leaningOrder } from '@prisme/domain';
-
-const labels: Record<Leaning, string> = {
-  gauche: 'Gauche',
-  centre: 'Centre',
-  droite: 'Droite',
-};
+import { LEANING_LABELS, leaningOrder } from '@prisme/domain';
 
 /**
  * The Coverage of a Story: one quiet tri-color strip, segments proportional
@@ -33,7 +27,7 @@ export default function CoverageBar({
   if (total === 0) return null;
   const tooltip = `${reporting} média${reporting > 1 ? 's' : ''} sur ${totalOutlets}`;
   const breakdown = leaningOrder
-    .map((l) => `${counts[l]} ${labels[l].toLowerCase()}`)
+    .map((l) => `${counts[l]} ${LEANING_LABELS[l].toLowerCase()}`)
     .join(' · ');
   return (
     <span className="group relative inline-flex" title={`${tooltip} (${breakdown})`}>
@@ -41,7 +35,7 @@ export default function CoverageBar({
         className="inline-flex h-1 overflow-hidden rounded-full bg-line"
         style={{ width }}
         role="img"
-        aria-label={`Coverage : ${tooltip} — ${breakdown}`}
+        aria-label={`Couverture : ${tooltip} — ${breakdown}`}
       >
         {leaningOrder.map(
           (l) =>
@@ -65,4 +59,4 @@ export default function CoverageBar({
   );
 }
 
-export { leaningOrder, labels as leaningLabels };
+export { leaningOrder };

@@ -6,6 +6,7 @@ import {
   countedArticles,
   frontPageOutlets,
   isReporting,
+  newestFirst,
   pickStoryImage,
   reportingOutletIds,
 } from './coverage.ts';
@@ -98,15 +99,21 @@ describe('coverageCounts', () => {
 
 describe('blindspots', () => {
   it('is empty below three reporting Outlets', () => {
-    expect(blindspots({ gauche: 1, centre: 1, droite: 0 }, 2)).toEqual([]);
+    expect(blindspots({ gauche: 1, centre: 1, droite: 0 })).toEqual([]);
   });
 
   it('flags every Leaning with no reporting Outlet once the Story reaches three', () => {
-    expect(blindspots({ gauche: 0, centre: 2, droite: 0 }, 3)).toEqual(['gauche', 'droite']);
+    expect(blindspots({ gauche: 0, centre: 3, droite: 0 })).toEqual(['gauche', 'droite']);
   });
 
   it('is empty when all three Leanings report the Story', () => {
-    expect(blindspots({ gauche: 1, centre: 1, droite: 1 }, 3)).toEqual([]);
+    expect(blindspots({ gauche: 1, centre: 1, droite: 1 })).toEqual([]);
+  });
+
+  it('counts only configured Outlets — the same basis as the counts', () => {
+    // Two configured Outlets plus one unknown: no Blindspot, the threshold
+    // counts Outlets that have a Leaning, like the counts do.
+    expect(blindspots({ gauche: 0, centre: 2, droite: 0 })).toEqual([]);
   });
 });
 
@@ -214,5 +221,20 @@ describe('pickStoryImage', () => {
       article('a', { outletId: 'centre-2', kind: 'news', publishedAt: at(12), imageUrl: 'a.jpg' }),
     ];
     expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('a.jpg');
+  });
+
+  it('orders Articles by publication time descending, ties by id', () => {
+    const articles = [
+      article('old', { publishedAt: '2026-10-06T09:00:00Z' }),
+      article('new', { publishedAt: '2026-10-06T11:00:00Z' }),
+      article('mid', { publishedAt: '2026-10-06T10:00:00Z' }),
+      article('mid-tie', { publishedAt: '2026-10-06T10:00:00Z' }),
+    ];
+    expect([...articles].sort(newestFirst).map((a) => a.id)).toEqual([
+      'new',
+      'mid',
+      'mid-tie',
+      'old',
+    ]);
   });
 });

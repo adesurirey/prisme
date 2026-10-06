@@ -5,8 +5,7 @@ import {
   coverageCounts,
   pickStoryImage,
   reportingOutletIds,
-} from '@prisme/domain';
-import { SECTION_LABELS } from '@prisme/domain';
+} from '@prisme/domain';import { SECTION_LABELS } from '@prisme/domain';
 import BlindspotBadge from './BlindspotBadge';
 import CoverageBar from './CoverageBar';
 import StoryImage from './StoryImage';
@@ -23,7 +22,7 @@ export default function StoryCard({ story, outlets }: { story: Story; outlets: O
   const byId = new Map(outlets.map((o) => [o.id, o]));
   const counts = coverageCounts(story.articles, byId);
   const reporting = reportingOutletIds(story.articles).size;
-  const spots = blindspots(counts, reporting);
+  const spots = blindspots(counts);
   const image = pickStoryImage(story, byId);
   const articles = countedArticles(story.articles);
   return (
@@ -50,7 +49,7 @@ export default function StoryCard({ story, outlets }: { story: Story; outlets: O
           )}
         </div>
         <div className="flex shrink-0 items-center gap-5 self-center">
-          <div className="hidden sm:block">
+          <div>
             <StoryImage
               article={image}
               outlet={image && byId.get(image.outletId)}

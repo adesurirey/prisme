@@ -10,7 +10,6 @@ import type { Article, Leaning, Outlet, Story } from './index.ts';
 
 /** Leanings in their fixed display order (Gauche, Centre, Droite). */
 export const leaningOrder: Leaning[] = ['gauche', 'centre', 'droite'];
-
 /** A Story is reported by Articles of these Kinds; Opinion pieces never count. */
 export function isReporting(article: Article): boolean {
   return article.kind === 'news' || article.kind === 'live';
@@ -41,9 +40,11 @@ export function coverageCounts(
 /** A Leaning counts as a Blindspot from this many reporting Outlets on. */
 export const BLINDSPOT_MIN_OUTLETS = 3;
 
-/** Every Leaning with no reporting Outlet on a Story reported by ≥ 3 Outlets. */
-export function blindspots(counts: Record<Leaning, number>, reporting: number): Leaning[] {
-  if (reporting < BLINDSPOT_MIN_OUTLETS) return [];
+/** Every Leaning with no reporting Outlet on a Story reported by ≥ 3 Outlets.
+ * The threshold counts configured Outlets only — the same basis as the counts. */
+export function blindspots(counts: Record<Leaning, number>): Leaning[] {
+  const total = leaningOrder.reduce((sum, leaning) => sum + counts[leaning], 0);
+  if (total < BLINDSPOT_MIN_OUTLETS) return [];
   return leaningOrder.filter((leaning) => counts[leaning] === 0);
 }
 
@@ -65,10 +66,18 @@ export function frontPageOutlets(articles: Article[], outlets: Outlet[]): Outlet
     );
 }
 
-function newestFirst(a: Article, b: Article): number {
+function newestFirstTie(a: Article, b: Article): number {
+  return a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+}
+
+/**
+ * Articles sorted by publication time descending, ties by id — the shared
+ * recency order for display and image picking.
+ */
+export function newestFirst(a: Article, b: Article): number {
   const ta = Date.parse(a.publishedAt) || 0;
   const tb = Date.parse(b.publishedAt) || 0;
-  return tb - ta || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
+  return tb - ta || newestFirstTie(a, b);
 }
 
 /**

@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import StoryCard from '../components/StoryCard';
 import LeaningBadge from '../components/LeaningBadge';
 import { loadEdition, loadOutlets } from '../data';
-import type { Leaning } from '@prisme/domain';
+import { leaningOrder, type Leaning } from '@prisme/domain';
 
 const edition = await loadEdition();
 const outlets = loadOutlets();
@@ -28,7 +28,7 @@ const perLeaning = (leaning: Leaning) => outlets.filter((o) => o.leaning === lea
     </p>
     <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2">
       {
-        (['gauche', 'centre', 'droite'] as Leaning[]).map((leaning) => (
+        leaningOrder.map((leaning) => (
           <span class="flex items-center gap-1.5 text-[13px] text-muted">
             <LeaningBadge leaning={leaning} />
             <span class="text-faint">{perLeaning(leaning)} médias</span>

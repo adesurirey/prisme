@@ -13,6 +13,7 @@ import {
   coverageCounts,
   frontPageOutlets,
   leaningOrder,
+  newestFirst,
   pickStoryImage,
   reportingOutletIds,
 } from '@prisme/domain';
@@ -31,7 +32,7 @@ const byId = new Map(outlets.map((o) => [o.id, o]));
 
 const counts = coverageCounts(story.articles, byId);
 const reporting = reportingOutletIds(story.articles).size;
-const spots = blindspots(counts, reporting);
+const spots = blindspots(counts);
 const une = frontPageOutlets(story.articles, outlets);
 const counted = countedArticles(story.articles);
 const image = pickStoryImage(story, byId);
@@ -41,7 +42,7 @@ const imageOutlet = image && byId.get(image.outletId);
 function group(leaning: Leaning | undefined): Article[] {
   return story.articles
     .filter((a) => byId.get(a.outletId)?.leaning === leaning)
-    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || (a.id < b.id ? -1 : 1));
+    .sort(newestFirst);
 }
 const groups: { leaning?: Leaning; articles: Article[] }[] = [
   ...leaningOrder.map((leaning) => ({ leaning, articles: group(leaning) })),

@@ -1,5 +1,5 @@
 import type { Leaning } from '@prisme/domain';
-import { leaningLabels } from './CoverageBar';
+import { LEANING_LABELS } from '@prisme/domain';
 
 /**
  * A Leaning as information: a colored dot (the only colored element besides
@@ -13,7 +13,7 @@ export default function LeaningBadge({ leaning }: { leaning: Leaning }) {
         className="inline-block size-2 rounded-full"
         style={{ background: `var(--${leaning})` }}
       />
-      {leaningLabels[leaning]}
+      {LEANING_LABELS[leaning]}
     </span>
   );
 }
