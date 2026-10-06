@@ -44,7 +44,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No data changes"
           else
-            git commit -m "edition: update data ($(date -u +%FT%TZ))"
+            git commit -m "data: update edition ($(date -u +%FT%TZ))"
             git push
           fi
 
@@ -52,7 +52,7 @@ jobs:
       # deployed HTML and the committed JSON never disagree.
       - run: pnpm --filter @prisme/web build
 
-      - uses: actions/setup-pages@v5
+      - uses: actions/configure-pages@v5
         with:
           enablement: true
 
