@@ -95,7 +95,7 @@ describe('groupStories', () => {
     expect(outcome.live.map((s) => s.id)).toEqual(['000000000001']);
   });
 
-  it('a confident assignment merges the Article into the live Story', async () => {
+  it('an assignment merges the Article into the live Story when the Membership check says yes', async () => {
     const existing = [story({ articles: [article('a0', { publishedAt: '2026-10-06T11:00:00Z' })] })];
     const outcome = await groupStories(
       input({
@@ -107,7 +107,7 @@ describe('groupStories', () => {
             assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.9 }],
             titleUpdates: [],
           }),
-          membership: null,
+          membership: fakeMembership(true),
         },
       }),
     );
@@ -183,7 +183,7 @@ describe('groupStories', () => {
     }
   });
 
-  it('a confident match never calls the Membership check', async () => {
+  it('even a confident match goes through the Membership check', async () => {
     const existing = [story({ articles: [article('a0')] })];
     const checkCalls: { story?: string; article?: string }[] = [];
     await groupStories(
@@ -200,7 +200,7 @@ describe('groupStories', () => {
         },
       }),
     );
-    expect(checkCalls).toEqual([]);
+    expect(checkCalls).toEqual([{ story: 'Story un', article: 'Titre a1' }]);
   });
 
   it('caps Membership checks at 20 per build; the rest split', async () => {
@@ -460,7 +460,7 @@ describe('groupStories', () => {
             assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.9 }],
             titleUpdates: [{ storyId: 's1', title: 'Meilleur titre' }],
           }),
-          membership: null,
+          membership: fakeMembership(true),
         },
       }),
     );
