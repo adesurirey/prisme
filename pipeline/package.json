@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "edition": "tsx src/run.ts",
+    "benchmark:export": "tsx src/benchmark/export.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "verify": "tsx src/verify-outlets.ts"

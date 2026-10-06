@@ -1,0 +1,1016 @@
+{
+  "instructions": "Hand labels for the decision-model benchmark (issue #4). Fill kind and section for every item; kind null/section null means not yet labeled. Label blind: read each pair in .benchmark/worksheet.md (gitignored, ADR-0003 — no teaser text is committed here).",
+  "enums": {
+    "kind": [
+      "news",
+      "opinion",
+      "live",
+      "not_news"
+    ],
+    "section": [
+      "politics",
+      "world",
+      "economy",
+      "society",
+      "sport",
+      "culture",
+      "science",
+      "misc",
+      "other"
+    ]
+  },
+  "sampledAt": "2026-10-06T20:37:28.330Z",
+  "seed": 4,
+  "items": [
+    {
+      "id": "5af73c906584",
+      "url": "https://www.20minutes.fr/monde/4251905-20261006-espagne-mandat-arret-independantisme-catalan-carles-puigdemont-annule-peut-rentrer-exil?at_medium=display&at_campaign=149",
+      "outletId": "20-minutes",
+      "feed": "https://www.20minutes.fr/feeds/rss-une.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "b67ad4d96cf7",
+      "url": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-le-tech-flash-mistral-annnonce-large-4-sa-nouvelle-ia-surpuissante-par-lea-benaim-06-10_VN-202610060907.html",
+      "outletId": "bfmtv",
+      "feed": "https://www.bfmtv.com/rss/news-24-7/",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "96cac15e8b71",
+      "url": "https://www.cnews.fr/france/2026-10-06/blocus-des-lycees-que-proposent-les-principaux-candidats-la-presidentielle-en",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "b6c0355d5394",
+      "url": "https://www.courrierinternational.com/article/sante-dans-les-villages-de-l-est-de-la-rdc-la-reponse-a-ebola-arrive-trop-tard_276396",
+      "outletId": "courrier-international",
+      "feed": "https://www.courrierinternational.com/feed/all/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "ae40413a9358",
+      "url": "https://www.europe1.fr/police-justice/blocus-de-lycees-un-morceau-glorifiant-mohamed-merah-et-salah-abdeslam-scande-par-des-adolescents-une-enquete-ouverte-1127234?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "outletId": "europe-1",
+      "feed": "https://www.europe1.fr/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "6a4c9898ebf3",
+      "url": "https://www.france24.com/fr/france/20261006-france-avenir-de-parcoursup-une-question-au-c%C5%93ur-des-revendications-lyceennes",
+      "outletId": "france-24",
+      "feed": "https://www.france24.com/fr/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "d9fad073dfa7",
+      "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/reportage-on-aimerait-juste-un-bel-avenir-de-saint-denis-a-paris-lyceens-parents-et-enseignants-convergent-pour-faire-entendre-leur-voix_8225338.html#xtor=RSS-3-[lestitres]",
+      "outletId": "franceinfo",
+      "feed": "https://www.francetvinfo.fr/titres.rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "e91f2452b711",
+      "url": "https://www.huffingtonpost.fr/politique/article/elwan-le-lyceen-viral-adoube-tribun-du-peuple-par-jean-luc-melenchon_335907.html",
+      "outletId": "huffpost",
+      "feed": "https://www.huffingtonpost.fr/rss/all_headline.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "d6aa2cb930d7",
+      "url": "https://www.humanite.fr/-/-/universites-pres-dune-sur-deux-touchees-par-la-mobilisation-ce-mardi",
+      "outletId": "humanite",
+      "feed": "https://www.humanite.fr/feed",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "6beb5ee656a3",
+      "url": "https://www.la-croix.com/culture/fausse-note-avec-benoit-poelvoorde-et-kad-merad-le-retour-d-un-passe-douloureux-20261006",
+      "outletId": "la-croix",
+      "feed": "https://www.la-croix.com/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "440902740bd7",
+      "url": "https://www.lefigaro.fr/flash-actu/des-voltigeurs-ukrainiens-braqueurs-de-camions-tombent-dans-les-filets-de-la-police-20261006",
+      "outletId": "le-figaro",
+      "feed": "https://www.lefigaro.fr/rss/figaro_flash-actu.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "09e9d4a78550",
+      "url": "https://www.lejdd.fr/culture/theatre-a-la-television-comment-les-captations-se-reinventent-185277",
+      "outletId": "le-jdd",
+      "feed": "https://www.lejdd.fr/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "52692f2207a9",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/06/dans-un-contexte-de-guerre-commerciale-avec-la-chine-l-arsenal-de-l-europe-se-renforce_6789029_3234.html",
+      "outletId": "le-monde",
+      "feed": "https://www.lemonde.fr/rss/une.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "aa8219dec63b",
+      "url": "https://www.leparisien.fr/seine-et-marne-77/un-homme-paraplegique-meurt-dans-lincendie-de-son-fauteuil-roulant-en-seine-et-marne-la-piste-dun-megot-privilegiee-06-10-2026-CVURGAT44REYNEOKMZBCNB3WIQ.php",
+      "outletId": "le-parisien",
+      "feed": "https://feeds.leparisien.fr/leparisien/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "ffe09f37aa3f",
+      "url": "https://www.lexpress.fr/monde/europe/europol-a-lheure-de-lia-le-grand-dilemme-entre-securite-et-vie-privee-YN5NFJQNY5EXVKPW5NK4KR6AXY/",
+      "outletId": "lexpress",
+      "feed": "https://www.lexpress.fr/rss/alaune.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "623335f59da8",
+      "url": "https://www.nouvelobs.com/societe/20261006.OBS118945/aucun-enfant-n-imagine-se-retrouver-un-jour-a-laver-celle-qui-l-a-fait-naitre-guillaume-de-tonquedec-raconte-sa-vie-d-aidant.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "85d16364986a",
+      "url": "https://www.mediapart.fr/journal/international/061026/les-syndicats-allemands-redecouvrent-la-confrontation",
+      "outletId": "mediapart",
+      "feed": "https://www.mediapart.fr/articles/feed",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "545db925071e",
+      "url": "https://www.ouest-france.fr/monde/egypte/les-autorites-egyptiennes-dementent-avoir-torture-des-journalistes-en-detention-ba4b9f80-c1c0-11f1-97ef-829bf84bf59f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "outletId": "ouest-france",
+      "feed": "https://www.ouest-france.fr/rss/une",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "b018947d2d18",
+      "url": "https://www.rfi.fr/fr/podcasts/invit%C3%A9-politique/20261006-il-est-essentiel-de-s%C3%A9curiser-les-lyc%C3%A9ens-mart%C3%A8le-la-d%C3%A9put%C3%A9e-renaissance-agn%C3%A8s-pannier-runacher",
+      "outletId": "rfi",
+      "feed": "https://www.rfi.fr/fr/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "e26c84951842",
+      "url": "https://www.tf1info.fr/international/aujourd-hui-dans-24h-pujadas-bulgarie-attaque-de-drones-russes-sur-2-cargos-2468376.html",
+      "outletId": "tf1-info",
+      "feed": "https://www.tf1info.fr/feeds/rss-une.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "c98b21020105",
+      "url": "https://www.valeursactuelles.com/societe/des-entites-de-criminalite-organisee-issues-du-narcotrafic-un-reseau-de-trafic-de-medicaments-demantele-sur-le-dark-web",
+      "outletId": "valeurs-actuelles",
+      "feed": "https://www.valeursactuelles.com/feed",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "849be3df6b5b",
+      "url": "https://www.20minutes.fr/societe/4251904-20261006-colere-lyceens-bouffe-ch-avenir-pourquoi-ados-choisissent-slogans-aussi-trash?at_medium=display&at_campaign=149",
+      "outletId": "20-minutes",
+      "feed": "https://www.20minutes.fr/feeds/rss-une.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "a92c314f5cc6",
+      "url": "https://www.bfmtv.com/societe/manifestations/video-blocage-mobilisation-lyceenne-les-policiers-ne-sont-pas-les-ennemis-des-lyceens-rappelle-jean-christophe-couvy-secretaire-national-du-syndicat-de-police-un1te_VN-202610060946.html",
+      "outletId": "bfmtv",
+      "feed": "https://www.bfmtv.com/rss/news-24-7/",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "f973d7af75aa",
+      "url": "https://www.cnews.fr/france/2026-10-06/ca-nest-jamais-arrive-edouard-geffray-denonce-des-violences-contre-des-dizaines",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "274fdaf4cc6a",
+      "url": "https://www.courrierinternational.com/article/commerce-la-france-et-l-allemagne-degainent-un-bouton-rouge-pour-defendre-le-marche-europeen-contre-la-chine_276392",
+      "outletId": "courrier-international",
+      "feed": "https://www.courrierinternational.com/feed/all/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "93736e25ac51",
+      "url": "https://www.europe1.fr/international/moyen-orient-les-negociations-entre-liran-et-les-etats-unis-se-poursuivent-affirme-le-qatar-1126775?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "outletId": "europe-1",
+      "feed": "https://www.europe1.fr/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "0f3e0e4c31a0",
+      "url": "https://www.france24.com/fr/%C3%A9missions/le-d%C3%A9bat/20261006-trump-fragilise-t-il-son-camp",
+      "outletId": "france-24",
+      "feed": "https://www.france24.com/fr/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "36af30a49fbf",
+      "url": "https://www.franceinfo.fr/culture/patrimoine/archeologie/la-grece-conditionne-un-rapprochement-entre-l-union-europeenne-et-la-grande-bretagne-au-retour-des-marbres-du-parthenon_8225290.html#xtor=RSS-3-[lestitres]",
+      "outletId": "franceinfo",
+      "feed": "https://www.francetvinfo.fr/titres.rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "63123dddeeae",
+      "url": "https://www.huffingtonpost.fr/politique/video/mensonge-ultraviolence-la-crise-lyceenne-a-enflamme-l-assemblee_335901.html",
+      "outletId": "huffpost",
+      "feed": "https://www.huffingtonpost.fr/rss/all_headline.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "75b100f52974",
+      "url": "https://www.humanite.fr/-/-/jeune-grievement-blesse-a-la-machoire-le-policier-auteur-du-tir-mis-en-examen-pour-violences",
+      "outletId": "humanite",
+      "feed": "https://www.humanite.fr/feed",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "e7a130d66c7e",
+      "url": "https://www.la-croix.com/international/espagne-levee-du-mandat-d-arret-visant-lindependantiste-catalan-carles-puigdemont-20261006",
+      "outletId": "la-croix",
+      "feed": "https://www.la-croix.com/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "74867109c5a0",
+      "url": "https://www.lefigaro.fr/sports/autres-sports/50-000-km-29-pays-l-aventurier-karl-bushby-est-arrive-en-angleterre-apres-28-ans-de-marche-autour-du-monde-20261006",
+      "outletId": "le-figaro",
+      "feed": "https://www.lefigaro.fr/rss/figaro_flash-actu.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "9992db6648c1",
+      "url": "https://www.lejdd.fr/International/presidentielle-au-bresil-flavio-bolsonaro-devance-lula-au-premier-tour-185250",
+      "outletId": "le-jdd",
+      "feed": "https://www.lejdd.fr/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "ac3566541bc1",
+      "url": "https://www.lemonde.fr/religions/article/2026/10/05/un-journal-inedit-du-pape-francois-paraitra-a-la-fin-de-novembre-avec-des-notes-personnelles-du-pontife-argentin-mort-le-21-avril-2025_6788571_1653130.html",
+      "outletId": "le-monde",
+      "feed": "https://www.lemonde.fr/rss/en_continu.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "c3b3ace13036",
+      "url": "https://www.leparisien.fr/societe/je-comprends-votre-colere-accusee-dinstrumentaliser-les-manifestations-en-pleine-la-fashion-week-linfluenceuse-clara-berry-sexplique-06-10-2026-GIRH26OLU5HMJNOM6KPWV2AIJU.php",
+      "outletId": "le-parisien",
+      "feed": "https://feeds.leparisien.fr/leparisien/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "f648e241f68a",
+      "url": "https://www.lexpress.fr/environnement/un-pari-opportuniste-la-chine-sinspire-dune-vieille-idee-nazie-pour-reduire-sa-dependance-au-petrole-C6ME2YEDOVG67MB6TB3C7SSK64/",
+      "outletId": "lexpress",
+      "feed": "https://www.lexpress.fr/rss/alaune.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "5cf8c41bd448",
+      "url": "https://www.nouvelobs.com/politique/20261005.OBS118896/primaire-de-la-gauche-trois-debats-pres-de-dix-heures-d-echanges-mais-aucun-reel-gagnant.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "387fe662d070",
+      "url": "https://www.mediapart.fr/journal/international/061026/la-guerre-au-yemen-entre-dans-une-nouvelle-phase",
+      "outletId": "mediapart",
+      "feed": "https://www.mediapart.fr/articles/feed",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "57d82fa9aabc",
+      "url": "https://www.ouest-france.fr/societe/justice/un-delire-complotiste-sept-ans-de-prison-requis-contre-remy-daillet-un-a-cinq-ans-contre-ses-14-coprevenus-6d2c4186-c1ad-11f1-97ef-829bf84bf59f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "outletId": "ouest-france",
+      "feed": "https://www.ouest-france.fr/rss/une",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "8c7d6d2cd4d8",
+      "url": "https://www.rfi.fr/fr/en-bref/20261006-le-kenya-annonce-un-premier-mort-d-ebola-sur-son-sol",
+      "outletId": "rfi",
+      "feed": "https://www.rfi.fr/fr/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "211802c913ad",
+      "url": "https://www.tf1info.fr/international/allemagne-l-extreme-droite-afd-accede-a-la-presidence-d-un-parlement-regional-une-premiere-2468312.html",
+      "outletId": "tf1-info",
+      "feed": "https://www.tf1info.fr/feeds/rss-une.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "89ea591cb9d7",
+      "url": "https://www.valeursactuelles.com/societe/a-la-mohamed-merah-du-blocus-lyceen-jusqua-leglise-un-rap-sur-le-bataclan-devient-le-refrain-des-mineurs",
+      "outletId": "valeurs-actuelles",
+      "feed": "https://www.valeursactuelles.com/feed",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "303c32ca6b50",
+      "url": "https://www.20minutes.fr/societe/4251955-20261006-blocus-lycees-sebastien-lecornu-engage-corriger-tous-dysfonctionnements-parcoursup?at_medium=display&at_campaign=149",
+      "outletId": "20-minutes",
+      "feed": "https://www.20minutes.fr/feeds/rss-une.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "d8d0bd7defe8",
+      "url": "https://www.bfmtv.com/politique/video-pour-plus-de-moyens-dans-l-education-marine-tondelier-candidate-les-ecologistes-a-la-presidentielle-propose-de-taxer-les-heritages-les-plus-eleves_VN-202610060892.html",
+      "outletId": "bfmtv",
+      "feed": "https://www.bfmtv.com/rss/news-24-7/",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "1de1ad33f97b",
+      "url": "https://www.cnews.fr/monde/2026-10-05/blocus-des-lycees-des-manifestations-deleves-degenerent-dans-plusieurs-villes-de",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "5f45c5f907fc",
+      "url": "https://www.courrierinternational.com/article/vu-de-l-etranger-face-au-mouvement-des-lyceens-la-main-de-fer-de-la-police-francaise-interpelle_276398",
+      "outletId": "courrier-international",
+      "feed": "https://www.courrierinternational.com/feed/all/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "52234b57c92d",
+      "url": "https://www.europe1.fr/societe/info-europe-1-manifestations-lyceennes-laurent-nunez-demande-aux-forces-de-lordre-detre-moins-visibles-1126397?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "outletId": "europe-1",
+      "feed": "https://www.europe1.fr/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "5faf2d7041fa",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261006-saddam-alaya-le-jordanien-qui-marche-pour-la-paix-est-arriv%C3%A9-au-rwanda",
+      "outletId": "france-24",
+      "feed": "https://www.france24.com/fr/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "48e256523224",
+      "url": "https://www.franceinfo.fr/politique/jordan-bardella/j-imagine-que-vous-auriez-adore-me-voir-poser-le-genou-a-terre-jordan-bardella-accuse-de-messages-antisemites-conteste-a-nouveau-formellement-les-elements-d-authentification-de-mediapart_8225323.html#xtor=RSS-3-[lestitres]",
+      "outletId": "franceinfo",
+      "feed": "https://www.francetvinfo.fr/titres.rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "2b2b6603147a",
+      "url": "https://www.huffingtonpost.fr/politique/article/le-rn-s-emballe-completement-sur-cet-effet-suppose-de-son-contre-budget_335887.html",
+      "outletId": "huffpost",
+      "feed": "https://www.huffingtonpost.fr/rss/all_headline.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "f6e06fc3753e",
+      "url": "https://www.humanite.fr/monde/armee-israelienne/cisjordanie-un-photographe-palestinien-de-lafp-roue-de-coups-par-des-colons-sous-les-yeux-de-larmee-israelienne",
+      "outletId": "humanite",
+      "feed": "https://www.humanite.fr/feed",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "b77ecf47eeea",
+      "url": "https://www.la-croix.com/economie/whatsapp-teams-e-mails-quand-les-echanges-entre-collegues-derapent-aussi-en-numerique-20261005",
+      "outletId": "la-croix",
+      "feed": "https://www.la-croix.com/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "f36f5e78b6c1",
+      "url": "https://www.lefigaro.fr/politique/une-indignite-francois-xavier-bellamy-accuse-rima-hassan-d-avoir-renverse-un-drapeau-israelien-expose-en-hommage-aux-victimes-du-7-octobre-20261005",
+      "outletId": "le-figaro",
+      "feed": "https://www.lefigaro.fr/rss/figaro_actualites.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "14c1742a0b20",
+      "url": "https://www.lejdd.fr/Societe/yvelines-un-nourrisson-hospitalise-apres-un-tir-de-mortier-dartifice-185364",
+      "outletId": "le-jdd",
+      "feed": "https://www.lejdd.fr/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "2cb65b987c12",
+      "url": "https://www.lemonde.fr/international/article/2026/10/06/emmanuel-macron-assiste-de-facon-inattendue-au-lancement-d-un-missile-m-51-depuis-la-mer_6789041_3210.html",
+      "outletId": "le-monde",
+      "feed": "https://www.lemonde.fr/rss/une.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "2a0d9409af86",
+      "url": "https://www.leparisien.fr/hauts-de-seine-92/ils-savent-nous-parler-a-nanterre-comment-les-agents-de-la-ville-apaisent-la-colere-des-lyceens-06-10-2026-RXV6KPWM6NENTBA4A6DU3HDX5M.php",
+      "outletId": "le-parisien",
+      "feed": "https://feeds.leparisien.fr/leparisien/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "e3da3aa0e221",
+      "url": "https://www.lexpress.fr/idees-et-debats/florian-louis-historien-de-nombreux-francais-ont-un-lien-avec-notre-ancien-empire-cela-influe-sur-JHWGBQY5K5FY5OBZXGZDSROWEM/",
+      "outletId": "lexpress",
+      "feed": "https://www.lexpress.fr/rss/alaune.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "222b03a2417b",
+      "url": "https://www.nouvelobs.com/teleobs/20261001.OBS118796/costa-gavras-cineaste-politique-et-secret.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "bd459f13c20a",
+      "url": "https://www.mediapart.fr/journal/france/061026/lycees-mobilisation-historique-repression-historique",
+      "outletId": "mediapart",
+      "feed": "https://www.mediapart.fr/articles/feed",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "6b8ad81c9feb",
+      "url": "https://programmetv.ouest-france.fr/divers/telerealite/l-amour-est-dans-le-pre-m96227566/il-va-avoir-rencard-lucien-lagriculteur-breton-a-la-recherche-de-lamour-a-recu-du-courrier-1a63dfe6-c18e-11f1-97ef-829bf84bf59f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "outletId": "ouest-france",
+      "feed": "https://www.ouest-france.fr/rss/une",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "241414b665f9",
+      "url": "https://www.rfi.fr/fr/europe/20261006-allemagne-le-parti-d-extr%C3%AAme-droite-afd-acc%C3%A8de-%C3%A0-la-pr%C3%A9sidence-du-parlement-r%C3%A9gional-de-saxe-anhalt",
+      "outletId": "rfi",
+      "feed": "https://www.rfi.fr/fr/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "c19f7bb4826b",
+      "url": "https://www.tf1info.fr/societe/reportage-video-on-continuera-jusqu-a-ce-qu-on-ait-des-vraies-reponses-les-lyceens-poursuivent-leur-mouvement-de-contestation-2468315.html",
+      "outletId": "tf1-info",
+      "feed": "https://www.tf1info.fr/feeds/rss-une.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "7e89da768e46",
+      "url": "https://www.valeursactuelles.com/clubvaleurs/politique/un-effort-radical-marine-le-pen-devoile-son-remede-pour-les-finances-publiques",
+      "outletId": "valeurs-actuelles",
+      "feed": "https://www.valeursactuelles.com/feed",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "1c37bd24803a",
+      "url": "https://www.20minutes.fr/sante/4250496-20261006-mal-mettre-torse-nu-pourquoi-certains-hommes-gynecomastie-poitrine-plus-developpee?at_medium=display&at_campaign=149",
+      "outletId": "20-minutes",
+      "feed": "https://www.20minutes.fr/feeds/rss-une.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "97c23c609dd2",
+      "url": "https://www.bfmtv.com/economie/replay-emissions/tech-and-co/video-tech-co-la-quotidienne-mardi-6-octobre_VN-202610060929.html",
+      "outletId": "bfmtv",
+      "feed": "https://www.bfmtv.com/rss/news-24-7/",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "bd1fc5a66cf1",
+      "url": "https://www.cnews.fr/faits-divers/2026-10-06/vendee-une-eglise-profanee-par-des-adolescents-des-chants-faisant-lapologie",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "8e564fe27869",
+      "url": "https://www.courrierinternational.com/article/animaux-en-colombie-des-enfants-croisent-un-hippopotame-d-escobar-sur-le-chemin-de-l-ecole_276213",
+      "outletId": "courrier-international",
+      "feed": "https://www.courrierinternational.com/feed/all/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "4e4b438e6f68",
+      "url": "https://www.europe1.fr/societe/on-se-met-tous-en-rond-et-on-protege-lentree-ces-lyceens-qui-ne-veulent-pas-laisser-leur-etablissement-a-la-merci-des-casseurs-1125986?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "outletId": "europe-1",
+      "feed": "https://www.europe1.fr/rss.xml",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "f6dd6ac6861e",
+      "url": "https://www.france24.com/fr/%C3%A9missions/%C3%A9l%C3%A9ment-terre-la-quotidienne/20261006-sant%C3%A9-les-diverses-pollutions-de-l-alimentation-en-france",
+      "outletId": "france-24",
+      "feed": "https://www.france24.com/fr/rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "54d82044019e",
+      "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/il-n-y-a-pas-assez-de-professeurs-ni-de-materiel-a-marseille-et-lyon-les-lyceens-soutenus-par-leurs-parents-denoncent-leurs-conditions-d-etudes_8225572.html#xtor=RSS-3-[lestitres]",
+      "outletId": "franceinfo",
+      "feed": "https://www.francetvinfo.fr/titres.rss",
+      "suspect": false,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "8d9bf72cd85d",
+      "url": "https://www.franceinfo.fr/environnement/meteo/le-gard-et-l-herault-places-en-vigilance-orange-pluie-inondation-et-orages-a-partir-de-22-heures_8224387.html#xtor=RSS-3-[lestitres]",
+      "outletId": "franceinfo",
+      "feed": "https://www.francetvinfo.fr/titres.rss",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "c3582089eeb4",
+      "url": "https://www.nouvelobs.com/opinions/20261004.OBS118885/pourquoi-le-cap-des-40-ans-signe-la-fin-de-l-insouciance-medicale.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "18b44c742539",
+      "url": "https://www.nouvelobs.com/ecologie/20261004.OBS118875/83-000-francais-sans-eau-saint-malo-sous-la-menace-la-seine-au-plus-bas-les-chiffres-chocs-de-la-secheresse-qui-frappe-la-france.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "82c5a7342f8e",
+      "url": "https://www.lemonde.fr/societe/live/2026/10/06/en-direct-blocage-des-lycees-450-000-personnes-ont-defile-dans-toute-la-france-selon-les-organisateurs-256-000-selon-le-ministere-de-l-interieur_6788487_3224.html",
+      "outletId": "le-monde",
+      "feed": "https://www.lemonde.fr/rss/une.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "fec17e22d6cc",
+      "url": "https://www.tf1info.fr/replay-tf1/videos/video-meteo-du-6-octobre-2026-previsions-meteo-a-21h01-2468413.html",
+      "outletId": "tf1-info",
+      "feed": "https://www.tf1info.fr/feeds/rss-une.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "19280fd7c243",
+      "url": "https://www.franceinfo.fr/environnement/meteo/un-changement-de-masse-d-air-va-balayer-le-pays-pourquoi-les-temperatures-vont-degringoler-partout-dans-l-hexagone-des-mercredi_8225029.html#xtor=RSS-3-[lestitres]",
+      "outletId": "franceinfo",
+      "feed": "https://www.francetvinfo.fr/titres.rss",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "6fe6093bbd37",
+      "url": "https://www.la-croix.com/a-vif/cancer-aider-les-femmes-a-vivre-avec-un-corps-transforme-n-est-pas-un-luxe-20261006",
+      "outletId": "la-croix",
+      "feed": "https://www.la-croix.com/rss",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "f05d620f4998",
+      "url": "https://www.europe1.fr/politique/accusations-contre-jordan-bardella-la-manipulation-de-mediapart-ne-prend-pas-personne-ny-a-jamais-cru-martele-sebastien-chenu-1126169?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "outletId": "europe-1",
+      "feed": "https://www.europe1.fr/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "f6d3409724c4",
+      "url": "https://www.cnews.fr/shopping-maison/2026-10-05/meilleur-oreiller-2026-12-modeles-compares-sommeil-sans-douleurs",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "bedd76f77820",
+      "url": "https://www.lexpress.fr/secret-defense/comment-la-hongrie-de-viktor-orban-est-devenue-le-nouveau-terrain-de-jeu-du-mossad-KHLY7OMBEREOPH5RCC2EFIP4LU/",
+      "outletId": "lexpress",
+      "feed": "https://www.lexpress.fr/rss/alaune.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "61efc420b06a",
+      "url": "https://www.cnews.fr/france/2026-10-06/orages-voici-les-65-departements-places-en-vigilance-jaune-ce-mercredi-1930298",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "d21df6e9715e",
+      "url": "https://www.nouvelobs.com/opinions/20261006.OBS118932/agathe-charnet-jeune-aidante-aupres-de-sa-mere-mon-existence-de-femme-venait-d-etre-tranchee-en-deux-par-la-maladie.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "dac03bb946fe",
+      "url": "https://www.cnews.fr/sport/2026-10-06/jo-2036-allemagne-inde-qatar-voici-les-sept-pays-candidats-lorganisation-1930397",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "73c5dda44297",
+      "url": "https://www.nouvelobs.com/teleobs/20261001.OBS118795/war-sienna-miller-et-dominic-west-divorcent-tous-les-coups-sont-permis.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "7257aededdc6",
+      "url": "https://www.nouvelobs.com/opinions/20261003.OBS118853/les-ultrariches-revent-ils-vraiment-de-se-bunkeriser.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "9df738503215",
+      "url": "https://www.nouvelobs.com/opinions/20261006.OBS118934/les-ia-peuvent-elles-vouloir-quelque-chose.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "95b2ef382a83",
+      "url": "https://www.lemonde.fr/sport/live/2026/10/05/en-direct-france-belgique-suivez-la-quatrieme-journee-de-la-ligue-des-nations-de-football_6788561_3242.html",
+      "outletId": "le-monde",
+      "feed": "https://www.lemonde.fr/rss/en_continu.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "8bc54ea00efd",
+      "url": "https://www.nouvelobs.com/opinions/20261006.OBS118927/dans-l-affaire-bardella-la-justice-peut-et-doit-aller-vite.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "cc025852ffd9",
+      "url": "https://www.nouvelobs.com/opinions/20261002.OBS118821/violences-sexuelles-entre-enfants-l-angle-mort-de-la-protection-de-l-enfance.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "bfac7afaf339",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/05/a-lyon-jean-bernard-plessy-l-ancien-directeur-des-chartreux-en-garde-a-vue-dans-une-enquete-pour-viol-aggrave_6788563_3224.html",
+      "outletId": "le-monde",
+      "feed": "https://www.lemonde.fr/rss/en_continu.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "cf54ed8511c4",
+      "url": "https://www.europe1.fr/international/suede-la-police-tire-sur-un-homme-arme-pres-du-palais-royal-1127576?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "outletId": "europe-1",
+      "feed": "https://www.europe1.fr/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "2ed751c9e1f8",
+      "url": "https://www.cnews.fr/culture/2026-10-06/lex-miss-france-sylvie-tellier-va-faire-ses-premiers-pas-au-theatre-1930226",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "da54e47e0143",
+      "url": "https://www.cnews.fr/shopping-maison/2026-10-06/meilleure-banque-pour-votre-compte-2026",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "93593a42e7a9",
+      "url": "https://www.la-croix.com/societe/meteo-le-gard-et-l-herault-en-vigilance-orange-pluie-et-inondation-mardi-soir-20261006",
+      "outletId": "la-croix",
+      "feed": "https://www.la-croix.com/rss",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "46fdc0ce33d3",
+      "url": "https://www.la-croix.com/societe/blocus-des-lycees-on-observe-ca-de-loin-racontent-des-eleves-finalistes-d-un-concours-deloquence-20261006",
+      "outletId": "la-croix",
+      "feed": "https://www.la-croix.com/rss",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "41ee2605968e",
+      "url": "https://www.nouvelobs.com/justice/20261004.OBS118868/blocage-des-lycees-nous-ne-pouvons-supporter-que-nos-jeunes-soient-meurtris-enfermes-et-reduits-au-silence.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "ce95e3218f51",
+      "url": "https://www.nouvelobs.com/opinions/20261005.OBS118923/seule-la-proportionnelle-peut-sortir-la-gauche-de-l-impasse.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "091464b04247",
+      "url": "https://www.cnews.fr/france/2026-10-06/orages-voici-les-deux-departements-places-en-vigilance-orange-ce-mardi-1929881",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "1d54ecac4a9d",
+      "url": "https://www.tf1info.fr/replay-lci/videos/video-lci-direct-du-mardi-6-octobre-2026-2468427.html",
+      "outletId": "tf1-info",
+      "feed": "https://www.tf1info.fr/feeds/rss-une.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "79edbfcd4bba",
+      "url": "https://www.leparisien.fr/meteo/pluie-inondation-les-bouches-du-rhone-et-le-var-basculent-en-vigilance-orange-quatre-departements-concernes-au-total-06-10-2026-Q7OQ32E7NJHVRCRFTJCDF3UVE4.php",
+      "outletId": "le-parisien",
+      "feed": "https://feeds.leparisien.fr/leparisien/rss",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "3a2cb300b56d",
+      "url": "https://www.cnews.fr/insolite/2026-10-06/il-chute-de-20-metres-en-montagne-son-labrador-lui-sauve-la-vie-en-amenant-les",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "a7084d775019",
+      "url": "https://www.nouvelobs.com/societe/20261001.OBS118779/cancer-du-sein-chez-les-femmes-de-moins-de-40-ans-un-tsunami-qui-mobilise-chercheurs-et-medecins.html",
+      "outletId": "lobs",
+      "feed": "https://www.nouvelobs.com/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "10555e335fbf",
+      "url": "https://www.lemonde.fr/planete/article/2026/10/06/orages-pluie-et-inondations-le-gard-et-l-herault-seront-en-vigilance-orange-mardi-soir_6788902_3244.html",
+      "outletId": "le-monde",
+      "feed": "https://www.lemonde.fr/rss/en_continu.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "fe1f28dd8823",
+      "url": "https://www.lemonde.fr/planete/article/2026/10/06/orages-pluie-et-inondations-le-gard-et-l-herault-seront-places-en-vigilance-orange-mardi-soir-les-bouches-du-rhone-et-le-var-mercredi_6789129_3244.html",
+      "outletId": "le-monde",
+      "feed": "https://www.lemonde.fr/rss/une.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "9b7894fd7a2c",
+      "url": "https://www.tf1info.fr/societe/direct-blocus-des-lycees-acte-3-mobilisation-manifestation-mardi-6-octobre-2026-etablissements-fermes-les-dernieres-informations-aujourd-hui-2468224.html",
+      "outletId": "tf1-info",
+      "feed": "https://www.tf1info.fr/feeds/rss-une.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "53da94632c5a",
+      "url": "https://www.france24.com/fr/%C3%A9missions/on-va-plus-loin/20261006-br%C3%A9sil-bolsonaro-vire-en-t%C3%AAte",
+      "outletId": "france-24",
+      "feed": "https://www.france24.com/fr/rss",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "8eef86b9c22b",
+      "url": "https://www.20minutes.fr/societe/4251848-20261006-meteo-chute-10-15-temperatures-pluie-prochains-jours?at_medium=display&at_campaign=149",
+      "outletId": "20-minutes",
+      "feed": "https://www.20minutes.fr/feeds/rss-une.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "7a07cdd046b2",
+      "url": "https://www.europe1.fr/sciences/le-prix-nobel-de-physique-decerne-au-belge-francis-halzen-1126583?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "outletId": "europe-1",
+      "feed": "https://www.europe1.fr/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "bcb2a07f9a72",
+      "url": "https://www.cnews.fr/france/2026-10-06/mur-des-cons-conference-de-presse-avec-lfi-ces-5-polemiques-suscitees-par-le",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    },
+    {
+      "id": "bf9ccd8f90cd",
+      "url": "https://www.cnews.fr/sport/2026-10-06/jetais-content-de-le-voir-les-emouvantes-retrouvailles-entre-zinedine-zidane-et",
+      "outletId": "cnews",
+      "feed": "https://www.cnews.fr/rss.xml",
+      "suspect": true,
+      "kind": null,
+      "section": null
+    }
+  ]
+}
