@@ -17,8 +17,8 @@ import { RETRYABLE_STATUS } from './http.ts';
 export type { ArticleKind, Section };
 
 const KIND_CRITERIA: Record<ArticleKind, string> = {
-  news: "Un fait d'actualité est rapporté : événement, déclaration, chiffre, résultat, enquête, reportage",
-  opinion: "Prise de position : éditorial, tribune, chronique, analyse argumentée par un auteur",
+  news: "Un fait d'actualité est rapporté : événement, déclaration, chiffre, résultat, enquête, reportage. Sont aussi de l'info les expliquations journalistiques (« pourquoi », « qu'est-ce que », un article de type « analyse » signé par la rédaction), les reportages photo et diaporamas « en images », même sans événement daté du jour",
+  opinion: "Prise de position d'auteur : un genre d'opinion explicite — éditorial, tribune, chronique, billet d'humeur, op-ed — où l'auteur défend sa propre thèse. Une analyse ou explication produite par la rédaction ou un journaliste reste de l'info tant qu'aucun genre d'opinion n'est identifiable",
   live: "Couverture en direct d'un événement en cours (live blog, « en direct »)",
   not_news:
     "Aucun fait d'actualité : horoscope, astro, météo, jeux/quiz/mots croisés/sudoku, recette de cuisine, programme TV, bons plans/shopping/concours, guide ou tutoriel, sommaire ou récapitulatif d'émissions (invités, débats à venir, rediffusion)",
@@ -37,7 +37,7 @@ const SECTION_CRITERIA: Record<Section, string> = {
 };
 
 /** Prompt version, for benchmark traceability. */
-export const PROMPT_VERSION = 2;
+export const PROMPT_VERSION = 3;
 
 /** The two typed questions sent in every request; keys reused in the answers. */
 export const QUESTIONS = {
@@ -268,11 +268,17 @@ export const COST_PER_INPUT_TOKEN: Record<string, number> = {
   [OPENROUTER_MODELS.clefFlash]: 0.09e-6,
 };
 
-/** The benchmark winner, served via OpenRouter with a pinned model id. */
+/**
+ * The production model, served via OpenRouter with a pinned model id: Jev
+ * since prompt v3 — the only model with zero news→opinion misses on the
+ * benchmark (issue #17), the misclassification that empties a Story's
+ * Coverage and article count. Clef-flash keeps higher not_news precision but
+ * still misreads 7/85 news as opinion on v3.
+ */
 export const WINNER = {
   gateway: 'openrouter',
-  model: OPENROUTER_MODELS.clefFlash,
-  label: 'Clef-flash',
+  model: OPENROUTER_MODELS.jev,
+  label: 'Jev',
 } as const;
 
 export function openRouterModel(apiKey: string, id: string, label: string): DecisionModel {
