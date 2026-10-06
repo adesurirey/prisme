@@ -1,0 +1,73 @@
+name: Edition
+
+# A build about every 2 hours, 06:00–23:00 Paris time. GitHub cron is UTC:
+# Paris is UTC+1 in winter (CET) and UTC+2 in summer (CEST), so UTC hours
+# 4,6,…,20 cover 06:00–22:00 Paris in winter and 06:00–22:00 in summer —
+# within the 06:00–23:00 window in both seasons. Also triggerable by hand.
+on:
+  schedule:
+    - cron: '0 4,6,8,10,12,14,16,18,20 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  edition:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # The pipeline tolerates failing feeds; a total failure aborts the build.
+      - run: pnpm edition
+
+      - name: Commit data
+        run: |
+          git config user.name "prisme-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "edition: update data ($(date -u +%FT%TZ))"
+            git push
+          fi
+
+      # Build the site from the same data that was just committed, so the
+      # deployed HTML and the committed JSON never disagree.
+      - run: pnpm --filter @prisme/web build
+
+      - uses: actions/setup-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+  deploy:
+    needs: edition
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
