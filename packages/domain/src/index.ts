@@ -53,6 +53,8 @@ export interface Article {
    * A not_news Article never reaches the Edition.
    */
   kind?: ArticleKind;
+  /** The Article's Section, from the same Decision model answer (issue #5). */
+  section?: Section;
 }
 
 /** The classification of an Article: news, opinion, live or not_news. */
@@ -98,15 +100,18 @@ export const SECTION_LABELS: Record<Section, string> = {
 };
 
 /**
- * A news event or topic made up of the Articles that report on it.
- * Temporary state (issue #3): each Article is its own Story.
+ * A news event or topic made up of the Articles that report on it (issue #5).
+ * Created once, then extended incrementally: its id and slug never change.
  */
 export interface Story {
+  /** 12 hex chars, assigned once at creation — never the Article's id. */
   id: string;
-  /** Stable slug used in /sujet/<slug>. */
+  /** Stable slug used in /sujet/<slug>, fixed at creation, never changes. */
   slug: string;
-  /** The Story's headline (for now, the Article's headline). */
+  /** Neutral French title written by the Grouping model; may change over time. */
   title: string;
+  /** ISO 8601 creation time, fixed at creation. */
+  createdAt: string;
   articles: Article[];
   /** From the majority of its Articles' Sections; absent when none is classified. */
   section?: Section;

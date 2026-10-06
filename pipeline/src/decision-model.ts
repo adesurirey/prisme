@@ -11,7 +11,8 @@
  * The benchmark (docs/research/decision-model-benchmark.md) picked
  * Clef-flash; see winnerModelFromEnv().
  */
-import { ARTICLE_KINDS, SECTIONS, type ArticleKind, type Section } from '@prisme/domain';
+import { ARTICLE_KINDS, SECTION_LABELS, SECTIONS, type ArticleKind, type Section } from '@prisme/domain';
+import { RETRYABLE_STATUS } from './http.ts';
 
 export type { ArticleKind, Section };
 
@@ -82,6 +83,34 @@ interface ChoiceAnswer {
 }
 
 /**
+ * The Membership check (issue #5): a single yes/no question asking whether an
+ * Article the Grouping model matched with low confidence really belongs to
+ * that Story. Asked to Jev through the same OpenRouter System One gateway as
+ * the benchmark — no extra key beyond OPENROUTER_API_KEY.
+ */
+export const MEMBERSHIP_QUESTION = {
+  belongs: {
+    type: 'choice',
+    instructions:
+      "Cet article rapporte-t-il le même événement ou le même sujet que cette story ? Juge uniquement à partir du titre de la story et du titre et chapô de l'article fournis.",
+    criteria: {
+      yes: "C'est le même événement ou le même sujet : l'article peut rejoindre la story",
+      no: "Événement ou sujet différent : l'article ne doit pas rejoindre la story",
+    },
+  },
+} as const;
+
+/** true = belongs; false = does not; null = invalid answer (treated as “no”). */
+export function parseMembershipAnswer(answers: unknown): boolean | null {
+  if (answers == null || typeof answers !== 'object') return null;
+  const answer = choiceOf((answers as Record<string, unknown>).belongs);
+  if (!answer) return null;
+  if (answer.choice === 'yes') return true;
+  if (answer.choice === 'no') return false;
+  return null;
+}
+
+/**
  * Extract and validate the two answers. Returns null when an answer is
  * missing or out-of-list — the caller retries once, then gives up.
  */
@@ -121,20 +150,23 @@ function choiceOf(answer: unknown): ChoiceAnswer | null {
   return a as unknown as ChoiceAnswer;
 }
 
-const RETRYABLE = new Set([429, 500, 502, 503, 504, 529]);
+const RETRYABLE = RETRYABLE_STATUS;
 
 /**
  * Shared call logic: build the request, one retry on retryable errors or
- * invalid output, then null (degraded: keep the Article without a kind).
- * Latency is measured across attempts, as the consumer experiences it.
+ * invalid output, then null (degraded). `parse` extracts the typed answers;
+ * classification uses parseAnswers, the Membership check uses
+ * parseMembershipAnswer. Latency is measured across attempts, as the
+ * consumer experiences it.
  */
-async function callModel(
+async function callTyped<T>(
   label: string,
   url: string,
   apiKey: string,
   body: Record<string, unknown>,
   state: { headline: string; teaser: string },
-): Promise<Classification | null> {
+  parse: (answers: unknown) => T | null,
+): Promise<(T & { inputTokens: number; elapsedMs: number; costUsd?: number }) | null> {
   const stateText = state.teaser ? `${state.headline}\n${state.teaser}` : state.headline;
   const started = Date.now();
   for (let attempt = 1; attempt <= 2; attempt++) {
@@ -160,7 +192,7 @@ async function callModel(
         answers?: unknown;
         usage?: { input_tokens?: number; cost?: number };
       };
-      const parsed = parseAnswers(data.answers);
+      const parsed = parse(data.answers);
       if (!parsed) {
         if (attempt === 1) continue;
         return null;
@@ -190,12 +222,13 @@ export function jevModel(apiKey: string): DecisionModel {
     label: 'Jev',
     costPerInputToken: COST_PER_INPUT_TOKEN[OPENROUTER_MODELS.jev],
     classify(state) {
-      return callModel(
+      return callTyped(
         'Jev',
         'https://jevmodel.net/v1/systemone',
         apiKey,
         { model: 'jev-latest', questions: QUESTIONS },
         state,
+        parseAnswers,
       );
     },
   };
@@ -206,12 +239,13 @@ export function clefFlashModel(apiKey: string, accountId: string): DecisionModel
     label: 'Clef-flash',
     costPerInputToken: COST_PER_INPUT_TOKEN[OPENROUTER_MODELS.clefFlash],
     classify(state) {
-      return callModel(
+      return callTyped(
         'Clef-flash',
         `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/@cf/cloudflare/clef-flash`,
         apiKey,
         { model: 'clef-flash', questions: QUESTIONS },
         state,
+        parseAnswers,
       );
     },
   };
@@ -246,12 +280,13 @@ export function openRouterModel(apiKey: string, id: string, label: string): Deci
     label,
     costPerInputToken: COST_PER_INPUT_TOKEN[id] ?? 0,
     classify(state) {
-      return callModel(
+      return callTyped(
         label,
         'https://openrouter.ai/api/alpha/decisions',
         apiKey,
         { model: id, questions: QUESTIONS },
         state,
+        parseAnswers,
       );
     },
   };
@@ -265,4 +300,42 @@ export function openRouterModel(apiKey: string, id: string, label: string): Deci
 export function winnerModelFromEnv(): DecisionModel | null {
   if (!process.env.OPENROUTER_API_KEY) return null;
   return openRouterModel(process.env.OPENROUTER_API_KEY, WINNER.model, WINNER.label);
+}
+
+/** The Membership check (issue #5): Jev answers yes/no about one (Article, Story) pair. */
+export interface MembershipChecker {
+  label: string;
+  /** true = belongs; false = does not; null = failed (treated as “no”). */
+  belongs(story: { title: string; section?: Section }, article: { headline: string; teaser: string }): Promise<boolean | null>;
+}
+
+function membershipModel(apiKey: string): MembershipChecker {
+  return {
+    label: 'Jev',
+    async belongs(story, article) {
+      const section = story.section ? ` (${SECTION_LABELS[story.section]})` : '';
+      const headline = `Article : ${article.headline}`;
+      const teaser = article.teaser ? `\n${article.teaser}` : '';
+      return callTyped(
+        'Jev',
+        'https://openrouter.ai/api/alpha/decisions',
+        apiKey,
+        { model: OPENROUTER_MODELS.jev, questions: MEMBERSHIP_QUESTION },
+        { headline: `Story : ${story.title}${section}\n${headline}`, teaser },
+        (answers) => {
+          const belongs = parseMembershipAnswer(answers);
+          return belongs == null ? null : { belongs };
+        },
+      ).then((r) => r?.belongs ?? null);
+    },
+  };
+}
+
+/**
+ * The production Membership checker: Jev via OPENROUTER_API_KEY (ADR-0005).
+ * Null when the key is absent — low-confidence matches then split.
+ */
+export function membershipModelFromEnv(): MembershipChecker | null {
+  if (!process.env.OPENROUTER_API_KEY) return null;
+  return membershipModel(process.env.OPENROUTER_API_KEY);
 }

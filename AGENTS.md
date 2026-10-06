@@ -48,4 +48,4 @@ Packages: `packages/domain` (shared types and the sourced Outlet config), `pipel
 - **Never write teaser or outlet text to disk.** Teasers exist only in memory inside the collector (ADR-0003). Nothing in `data/` may contain feed description text; if a diff shows teaser-like content in `data/`, stop and fix before committing.
 - **Leaning belongs to Outlets, set by hand** in config, backed by sources (ADR-0001). Never classify Articles by Leaning.
 - **The UI is French; code, data keys and domain names are English** (GLOSSARY.md).
-- **Story pages stay up permanently**: slugs are stable and never reused; a slug collision must be resolved deterministically (by Article id), never by ordering.
+- **Story pages stay up permanently**: Story files are never edited once frozen and slugs are stable and never reused; a slug collision must be resolved deterministically from Story ids, never by ordering — across builds the existing file keeps its slug, within a build the smallest Story id keeps the bare slug, and other claimants get a Story-id suffix.

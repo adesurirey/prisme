@@ -1,40 +1,4 @@
-import type { Article, Edition, Section, Story } from '@prisme/domain';
-
-/**
- * Temporary story logic for the tracer bullet (issue #3): each Article is its
- * own Story. Real grouping arrives in a later issue.
- *
- * `sectionOf` supplies each Article's Section (from the classification cache);
- * the Story's Section is the majority of its Articles' Sections, ties broken
- * deterministically by Article id — never by article order.
- */
-export function buildEdition(
-  articles: Article[],
-  builtAt: Date,
-  sectionOf?: (articleId: string) => Section | undefined,
-): Edition {
-  // Slugs must be stable across editions: never depend on article order.
-  // Any base slug claimed by more than one article is suffixed (with the
-  // article's stable id) for ALL of them, so a rerun cannot reshuffle which
-  // article keeps the bare slug.
-  const count = new Map<string, number>();
-  for (const article of articles) {
-    const base = slugify(article.headline) || 'sujet';
-    count.set(base, (count.get(base) ?? 0) + 1);
-  }
-  const stories: Story[] = articles.map((article) => {
-    const base = slugify(article.headline) || 'sujet';
-    const slug = (count.get(base) ?? 0) > 1 ? `${base}-${article.id.slice(0, 6)}` : base;
-    return {
-      id: article.id,
-      slug,
-      title: article.headline,
-      articles: [article],
-      ...(sectionOf ? { section: storySection([article], sectionOf) } : {}),
-    };
-  });
-  return { builtAt: builtAt.toISOString(), stories };
-}
+import type { Article, Section } from '@prisme/domain';
 
 /**
  * The majority Section of a Story's Articles. Ties (equal counts) are broken
@@ -72,10 +36,10 @@ export function storySection(
 
 /**
  * Stable, readable slug for /sujet/<slug>: ASCII, lowercase, dashed.
- * Collision fallback appends a short, stable Article id.
+ * Collision fallback appends a short, stable Story id (see grouping.ts).
  */
-export function slugify(headline: string): string {
-  return headline
+export function slugify(title: string): string {
+  return title
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
