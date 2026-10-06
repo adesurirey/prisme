@@ -38,35 +38,40 @@ export const SECTIONS: Section[] = [
 ];
 
 const KIND_CRITERIA: Record<ArticleKind, string> = {
-  news: 'Factual reporting of an event or development',
-  opinion: 'Argues a position: editorial, column, op-ed, tribune, pointed commentary',
-  live: 'Rolling live coverage (en direct / live blog) of an unfolding event',
-  not_news: 'No news event: horoscope, games/quiz, shopping tips, TV listings, weather, recipe, promotion',
+  news: "Un fait d'actualité est rapporté : événement, déclaration, chiffre, résultat, enquête, reportage",
+  opinion: "Prise de position : éditorial, tribune, chronique, analyse argumentée par un auteur",
+  live: "Couverture en direct d'un événement en cours (live blog, « en direct »)",
+  not_news:
+    "Aucun fait d'actualité : horoscope, astro, météo, jeux/quiz/mots croisés/sudoku, recette de cuisine, programme TV, bons plans/shopping/concours, guide ou tutoriel, sommaire ou récapitulatif d'émissions (invités, débats à venir, rediffusion)",
 };
 
 const SECTION_CRITERIA: Record<Section, string> = {
-  politics: 'Politics: French politics, institutions, elections, laws',
-  world: 'Foreign and international news',
-  economy: 'Economy: companies, markets, work, consumer economics',
-  society: 'Society: education, health, justice, immigration, family, religion, society debates',
+  politics: 'Politique française, institutions, élections, lois',
+  world: 'International : actualité étrangère, diplomatie, conflits',
+  economy: 'Économie : entreprises, marchés, emploi, consommation',
+  society: 'Société : éducation, santé, justice, immigration, famille, religion, débats de société',
   sport: 'Sport',
-  culture: 'Culture: cinema, music, books, arts, celebrities, media',
-  science: 'Science and tech: science, technology, AI, space, environment',
-  misc: 'Faits divers: crime, accidents, police courts',
-  other: 'Genuine news that fits none of the above',
+  culture: 'Culture : cinéma, musique, livres, arts, people, médias',
+  science: 'Sciences et tech : science, technologie, IA, espace, environnement',
+  misc: 'Faits divers : crimes, accidents, affaires judiciaires',
+  other: "Actualité qui n'entre dans aucune rubrique ci-dessus",
 };
+
+/** Prompt version, for benchmark traceability. */
+export const PROMPT_VERSION = 2;
 
 /** The two typed questions sent in every request; keys reused in the answers. */
 export const QUESTIONS = {
   kind: {
     type: 'choice',
-    instructions: 'What kind of piece is this? Judge only from the headline and teaser given.',
+    instructions:
+      'Quel est le type de cet article ? Juge uniquement à partir du titre et du chapô fournis.',
     criteria: KIND_CRITERIA,
   },
   section: {
     type: 'choice',
     instructions:
-      'Which part of the news does this belong to? Answer even if the piece is not_news; the answer is ignored in that case.',
+      "À quelle rubrique cette information appartient-elle ? Réponds même si la pièce n'est pas de l'actualité ; la réponse sera ignorée dans ce cas.",
     criteria: SECTION_CRITERIA,
   },
 } as const;
