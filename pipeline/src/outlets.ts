@@ -100,7 +100,10 @@ export const outlets: Outlet[] = [
     name: 'TF1 Info',
     leaning: 'centre',
     paywall: 'none',
-    feeds: { une: 'https://www.tf1info.fr/feeds/rss-une.xml' },
+    // Its only RSS ("rss-une.xml") is actually a full-site firehose (JT
+    // segments, recipes, météo — 54 items/10h, checked 2026-10-06), so it is
+    // treated as a latest feed: only the 10 most recent count as Front page.
+    feeds: { latest: 'https://www.tf1info.fr/feeds/rss-une.xml' },
   },
   {
     id: 'rfi',
