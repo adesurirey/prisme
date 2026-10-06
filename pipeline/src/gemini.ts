@@ -183,7 +183,8 @@ export function groupingPrompt(input: {
     'Consignes :',
     '- Pour chaque nouvel article, ajoute une entrée dans « assignments » : soit « storyId » (une story existante), soit « newStoryKey » (une story à créer), avec « confidence » entre 0 et 1.',
     '- Un article qui ne va avec rien obtient sa propre nouvelle story.',
-    '- Ne regroupe que ce qui rapporte le même événement ou le même sujet.',
+    '- Une story correspond à un événement ou une affaire précise, jamais à un thème. N\'utilise jamais de titre générique (« perspectives économiques… », « actualité politique… ») : un thème n\'est pas une story.',
+    '- Ne regroupe que ce qui rapporte le même événement ou la même affaire précise : un thème commun ou un protagoniste commun ne suffit pas.',
     '- Chaque nouvelle story a une « key » courte unique (lettres et chiffres) et un « title » : un titre neutre en français décrivant l\'événement, sans copier le titre d\'un outlet ni reprendre sa formulation.',
     '- « titleUpdates » (optionnel) : uniquement pour des stories qui reçoivent de nouveaux articles, et uniquement si un meilleur titre neutre existe ; sinon laisse une story inchangée.',
   ].join('\n');

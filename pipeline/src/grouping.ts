@@ -11,8 +11,9 @@
  *
  * Failure policy (ADR-0005): a failed Grouping call — or a missing key —
  * degrades to one-Article Stories, which self-heal on the next build (they
- * are live Stories the model can merge into). A low-confidence merge gets a
- * Jev Membership check; a refused, capped-out or failed check splits.
+ * are live Stories the model can merge into). A merge into an existing
+ * Story is only allowed when a Jev Membership check says yes (up to 20
+ * checks per build); a refused, capped-out or failed check splits.
  */
 import { readFile, readdir } from 'node:fs/promises';
 import type { Article, Section, Story } from '@prisme/domain';
@@ -21,8 +22,6 @@ import type { GroupingModel, GroupingProposal } from './gemini.ts';
 import { storySection, slugify } from './edition.ts';
 import type { MembershipChecker } from './decision-model.ts';
 
-/** Merges at or above this confidence skip the Membership check (ADR-0005). */
-export const CONFIDENCE_THRESHOLD = 0.75;
 /** At most this many Membership checks per build; the rest split (ADR-0005). */
 export const MAX_MEMBERSHIP_CHECKS = 20;
 /** An Article younger than this keeps its Story live (ADR-0005). */
@@ -185,10 +184,12 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
       if (!assignmentOf.has(a.articleId)) assignmentOf.set(a.articleId, a);
     }
 
-    // Membership checks are bounded and deterministic: low-confidence merges
-    // into existing Stories, sorted by (articleId, storyId), first 20 only.
-    const lowPairs = proposal.assignments
-      .filter((a) => a.storyId != null && a.confidence < CONFIDENCE_THRESHOLD)
+    // Membership checks are bounded and deterministic: every merge into an
+    // existing Story is checked — the model's own confidence never bypasses
+    // the check (a generic Story title makes it easy to be confidently
+    // wrong) — sorted by (articleId, storyId), first 20 only, the rest split.
+    const mergePairs = proposal.assignments
+      .filter((a) => a.storyId != null)
       .map((a) => ({ articleId: a.articleId, storyId: a.storyId! }))
       .sort(
         (x, y) =>
@@ -197,7 +198,7 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
       )
       .slice(0, MAX_MEMBERSHIP_CHECKS);
     const verdicts = new Map<string, boolean | null>();
-    for (const pair of lowPairs) {
+    for (const pair of mergePairs) {
       const story = byId.get(pair.storyId);
       const article = fresh.find((a) => a.id === pair.articleId);
       let verdict: boolean | null = null;
@@ -230,10 +231,6 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
         // Unknown or frozen target: the model only sees live Stories.
         if (story == null || !isLive(story, now)) {
           split(article);
-          continue;
-        }
-        if (assignment.confidence >= CONFIDENCE_THRESHOLD) {
-          merge(story, article);
           continue;
         }
         if (verdicts.get(`${article.id}|${assignment.storyId}`) === true) {
