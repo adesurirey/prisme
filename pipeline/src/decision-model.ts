@@ -8,34 +8,12 @@
  * out-of-list answer or malformed response → one retry → else null, treated
  * like a failed feed (kept, not dropped).
  *
- * NOTE: ArticleKind and Section are defined here for the benchmark; they move
- * to @prisme/domain when the winner is integrated into the pipeline.
+ * The benchmark (docs/research/decision-model-benchmark.md) picked
+ * Clef-flash; see winnerModelFromEnv().
  */
+import { ARTICLE_KINDS, SECTIONS, type ArticleKind, type Section } from '@prisme/domain';
 
-export type ArticleKind = 'news' | 'opinion' | 'live' | 'not_news';
-export type Section =
-  | 'politics'
-  | 'world'
-  | 'economy'
-  | 'society'
-  | 'sport'
-  | 'culture'
-  | 'science'
-  | 'misc'
-  | 'other';
-
-export const ARTICLE_KINDS: ArticleKind[] = ['news', 'opinion', 'live', 'not_news'];
-export const SECTIONS: Section[] = [
-  'politics',
-  'world',
-  'economy',
-  'society',
-  'sport',
-  'culture',
-  'science',
-  'misc',
-  'other',
-];
+export type { ArticleKind, Section };
 
 const KIND_CRITERIA: Record<ArticleKind, string> = {
   news: "Un fait d'actualité est rapporté : événement, déclaration, chiffre, résultat, enquête, reportage",
@@ -233,6 +211,13 @@ export const OPENROUTER_MODELS = {
   clefFlash: 'cloudflare/clef-flash',
 } as const;
 
+/** The benchmark winner, served via OpenRouter with a pinned model id. */
+export const WINNER = {
+  gateway: 'openrouter',
+  model: OPENROUTER_MODELS.clefFlash,
+  label: 'Clef-flash',
+} as const;
+
 export function openRouterModel(apiKey: string, id: string, label: string): DecisionModel {
   return {
     label,
@@ -246,4 +231,14 @@ export function openRouterModel(apiKey: string, id: string, label: string): Deci
       );
     },
   };
+}
+
+/**
+ * The production decision model: the benchmark winner via OPENROUTER_API_KEY.
+ * Null when the key is absent — the caller degrades gracefully (Articles kept
+ * unclassified, never dropped).
+ */
+export function winnerModelFromEnv(): DecisionModel | null {
+  if (!process.env.OPENROUTER_API_KEY) return null;
+  return openRouterModel(process.env.OPENROUTER_API_KEY, WINNER.model, WINNER.label);
 }

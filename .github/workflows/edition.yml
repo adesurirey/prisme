@@ -34,7 +34,11 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       # The pipeline tolerates failing feeds; a total failure aborts the build.
+      # OPENROUTER_API_KEY drives Article classification (issue #4); without
+      # it the build still succeeds, with Articles left unclassified.
       - run: pnpm edition
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
 
       - name: Commit data
         run: |
