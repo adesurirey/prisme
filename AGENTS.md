@@ -10,6 +10,8 @@ single-context. See `docs/agents/domain.md`.
 
 Outlet Leanings and their sources: `docs/research/outlet-leanings.md` (the research behind the typed config in `packages/domain/src/outlets.ts`). Read it before changing an Outlet's Leaning, adding or removing an Outlet, or answering "why is this media classed there?".
 
+Article classification (Kind and Section): `docs/research/decision-model-benchmark.md` (the benchmark behind the Decision model in `pipeline/src/decision-model.ts`). Read it before changing the classification prompt or criteria, swapping the model, or re-grading. The labeled pairs live only in the gitignored `.benchmark/` cache; the committed labels file carries ids and URLs — feed text never enters the repo (ADR-0003).
+
 ## Conventions
 
 ### Commits — Conventional Commits
@@ -37,6 +39,7 @@ pnpm monorepo. Run everything from the repo root:
 - `pnpm test` — all packages (vitest, pipeline).
 - `pnpm typecheck` — all packages (tsc + astro check).
 - `pnpm --filter @prisme/web build` — build the static site (needs `data/` to exist; run `pnpm edition` first).
+- `pnpm benchmark:export` / `pnpm benchmark:grade` — sample headline+teaser pairs for hand labeling, then grade the decision models against the labels (grade needs `OPENROUTER_API_KEY` in env).
 
 Packages: `packages/domain` (shared types and the sourced Outlet config), `pipeline` (collector, `tsx`), `web` (Astro + React).
 
