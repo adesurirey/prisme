@@ -2,3 +2,11 @@ node_modules/
 dist/
 .astro/
 *.tsbuildinfo
+
+# OS / local env
+.DS_Store
+.env
+.env.*
+
+# Note: data/ is intentionally committed — the git repo is the database
+# (ADR-0002). It must contain no teaser or outlet text (ADR-0003).
