@@ -31,7 +31,7 @@ const perLeaning = (leaning: Leaning) => outlets.filter((o) => o.leaning === lea
         (['gauche', 'centre', 'droite'] as Leaning[]).map((leaning) => (
           <span class="flex items-center gap-1.5 text-[13px] text-muted">
             <LeaningBadge leaning={leaning} />
-            <span class="text-faint">{perLeaning(leaning)} outlets</span>
+            <span class="text-faint">{perLeaning(leaning)} médias</span>
           </span>
         ))
       }
