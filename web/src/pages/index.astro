@@ -6,7 +6,7 @@ import { loadEdition, loadOutlets } from '../data';
 import type { Leaning } from '@prisme/domain';
 
 const edition = await loadEdition();
-const outlets = await loadOutlets();
+const outlets = loadOutlets();
 
 const builtAt = new Date(edition.builtAt).toLocaleString('fr-FR', {
   weekday: 'long',

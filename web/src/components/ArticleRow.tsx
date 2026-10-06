@@ -4,8 +4,9 @@ import PaywallBadge from './PaywallBadge';
 
 /**
  * One Article row: Outlet name, Leaning, paywall, link out.
- * When the Outlet is unknown (missing from outlets.json) nothing is inferred:
- * the raw outlet id is shown without a Leaning rather than a guessed one.
+ * When the Outlet is unknown (missing from the Outlet config) nothing is
+ * inferred: the raw outlet id is shown without a Leaning rather than a guessed
+ * one.
  */
 export default function ArticleRow({ article, outlet }: { article: Article; outlet?: Outlet }) {
   const name = outlet?.name ?? article.outletId;

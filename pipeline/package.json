@@ -6,7 +6,8 @@
   "scripts": {
     "edition": "tsx src/run.ts",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "verify": "tsx src/verify-outlets.ts"
   },
   "dependencies": {
     "@prisme/domain": "workspace:*",

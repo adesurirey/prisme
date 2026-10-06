@@ -22,6 +22,8 @@ export interface Outlet {
   /** Fixed by hand in config, backed by sources (ADR-0001). */
   leaning: Leaning;
   paywall: Paywall;
+  /** The Outlet's website (not "homepage": GLOSSARY reserves Front page). */
+  site: string;
   /** At least one feed: the "une" (front page) feed and/or a latest/all feed. */
   feeds: {
     une?: string;
@@ -66,3 +68,7 @@ export interface Edition {
   builtAt: string;
   stories: Story[];
 }
+
+// The sourced Outlet config (issue #2): Leanings with citations, readership,
+// verified feeds and TDM reservations. See docs/research/outlet-leanings.md.
+export * from './outlets.ts';

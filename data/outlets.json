@@ -1,18 +1,10 @@
 [
   {
-    "id": "liberation",
-    "name": "Libération",
-    "leaning": "gauche",
-    "paywall": "partial",
-    "feeds": {
-      "une": "https://www.liberation.fr/rss/1-la-une/"
-    }
-  },
-  {
     "id": "lobs",
     "name": "L'Obs",
     "leaning": "gauche",
     "paywall": "partial",
+    "site": "https://www.nouvelobs.com",
     "feeds": {
       "latest": "https://www.nouvelobs.com/rss.xml"
     }
@@ -22,8 +14,9 @@
     "name": "Le HuffPost",
     "leaning": "gauche",
     "paywall": "none",
+    "site": "https://www.huffingtonpost.fr",
     "feeds": {
-      "une": "https://www.huffingtonpost.fr/rss/all_headline.xml"
+      "latest": "https://www.huffingtonpost.fr/rss/all_headline.xml"
     }
   },
   {
@@ -31,6 +24,7 @@
     "name": "Mediapart",
     "leaning": "gauche",
     "paywall": "full",
+    "site": "https://www.mediapart.fr",
     "feeds": {
       "latest": "https://www.mediapart.fr/articles/feed"
     }
@@ -40,6 +34,7 @@
     "name": "L'Humanité",
     "leaning": "gauche",
     "paywall": "none",
+    "site": "https://www.humanite.fr",
     "feeds": {
       "latest": "https://www.humanite.fr/feed"
     }
@@ -49,6 +44,7 @@
     "name": "Le Monde",
     "leaning": "centre",
     "paywall": "partial",
+    "site": "https://www.lemonde.fr",
     "feeds": {
       "une": "https://www.lemonde.fr/rss/une.xml",
       "latest": "https://www.lemonde.fr/rss/en_continu.xml"
@@ -59,6 +55,7 @@
     "name": "franceinfo",
     "leaning": "centre",
     "paywall": "none",
+    "site": "https://www.francetvinfo.fr",
     "feeds": {
       "latest": "https://www.francetvinfo.fr/titres.rss"
     }
@@ -68,6 +65,7 @@
     "name": "Ouest-France",
     "leaning": "centre",
     "paywall": "partial",
+    "site": "https://www.ouest-france.fr",
     "feeds": {
       "une": "https://www.ouest-france.fr/rss/une",
       "latest": "https://www.ouest-france.fr/rss-en-continu.xml"
@@ -78,6 +76,7 @@
     "name": "BFMTV",
     "leaning": "centre",
     "paywall": "none",
+    "site": "https://www.bfmtv.com",
     "feeds": {
       "latest": "https://www.bfmtv.com/rss/news-24-7/"
     }
@@ -87,6 +86,7 @@
     "name": "20 Minutes",
     "leaning": "centre",
     "paywall": "none",
+    "site": "https://www.20minutes.fr",
     "feeds": {
       "une": "https://www.20minutes.fr/feeds/rss-une.xml"
     }
@@ -96,9 +96,9 @@
     "name": "Le Parisien",
     "leaning": "centre",
     "paywall": "partial",
+    "site": "https://www.leparisien.fr",
     "feeds": {
-      "une": "https://feeds.leparisien.fr/leparisien/rss",
-      "latest": "https://feeds.leparisien.fr/leparisien/rss/en-continu"
+      "latest": "https://feeds.leparisien.fr/leparisien/rss"
     }
   },
   {
@@ -106,6 +106,7 @@
     "name": "TF1 Info",
     "leaning": "centre",
     "paywall": "none",
+    "site": "https://www.tf1info.fr",
     "feeds": {
       "latest": "https://www.tf1info.fr/feeds/rss-une.xml"
     }
@@ -115,6 +116,7 @@
     "name": "RFI",
     "leaning": "centre",
     "paywall": "none",
+    "site": "https://www.rfi.fr",
     "feeds": {
       "latest": "https://www.rfi.fr/fr/rss"
     }
@@ -124,6 +126,7 @@
     "name": "France 24",
     "leaning": "centre",
     "paywall": "none",
+    "site": "https://www.france24.com",
     "feeds": {
       "latest": "https://www.france24.com/fr/rss"
     }
@@ -133,6 +136,7 @@
     "name": "Courrier international",
     "leaning": "centre",
     "paywall": "partial",
+    "site": "https://www.courrierinternational.com",
     "feeds": {
       "latest": "https://www.courrierinternational.com/feed/all/rss.xml"
     }
@@ -142,6 +146,7 @@
     "name": "L'Express",
     "leaning": "centre",
     "paywall": "partial",
+    "site": "https://www.lexpress.fr",
     "feeds": {
       "latest": "https://www.lexpress.fr/rss/alaune.xml"
     }
@@ -151,8 +156,9 @@
     "name": "La Croix",
     "leaning": "centre",
     "paywall": "partial",
+    "site": "https://www.la-croix.com",
     "feeds": {
-      "latest": "https://www.la-croix.com/rss/france"
+      "latest": "https://www.la-croix.com/rss"
     }
   },
   {
@@ -160,6 +166,7 @@
     "name": "Le Figaro",
     "leaning": "droite",
     "paywall": "partial",
+    "site": "https://www.lefigaro.fr",
     "feeds": {
       "une": "https://www.lefigaro.fr/rss/figaro_actualites.xml",
       "latest": "https://www.lefigaro.fr/rss/figaro_flash-actu.xml"
@@ -170,6 +177,7 @@
     "name": "CNews",
     "leaning": "droite",
     "paywall": "none",
+    "site": "https://www.cnews.fr",
     "feeds": {
       "latest": "https://www.cnews.fr/rss.xml"
     }
@@ -179,6 +187,7 @@
     "name": "Europe 1",
     "leaning": "droite",
     "paywall": "none",
+    "site": "https://www.europe1.fr",
     "feeds": {
       "latest": "https://www.europe1.fr/rss.xml"
     }
@@ -188,8 +197,10 @@
     "name": "Le JDD",
     "leaning": "droite",
     "paywall": "partial",
+    "site": "https://www.lejdd.fr",
     "feeds": {
-      "une": "https://www.lejdd.fr/rss/a-la-une.xml"
+      "une": "https://www.lejdd.fr/rss/a-la-une.xml",
+      "latest": "https://www.lejdd.fr/rss.xml"
     }
   },
   {
@@ -197,8 +208,9 @@
     "name": "Valeurs actuelles",
     "leaning": "droite",
     "paywall": "partial",
+    "site": "https://www.valeursactuelles.com",
     "feeds": {
-      "latest": "https://www.valeursactuelles.com/rss"
+      "latest": "https://www.valeursactuelles.com/feed"
     }
   }
 ]

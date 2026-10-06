@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { story } = Astro.props as { story: Story };
-const outlets = await loadOutlets();
+const outlets = loadOutlets();
 const leaningOf = new Map(outlets.map((o) => [o.id, o.leaning]));
 const byId = new Map(outlets.map((o) => [o.id, o]));
 const counts = coverageCounts(story.articles, (id) => leaningOf.get(id));
