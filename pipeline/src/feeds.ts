@@ -31,23 +31,47 @@ function parseAtomEntry(entry: any): ParsedItem {
   const links = entry.link ? toArray(entry.link) : [];
   const alternate = links.find((l) => l.rel !== 'self' && l.href) ?? links[0];
   return {
-    headline: text(entry.title),
-    url: text(alternate?.href),
+    headline: decodeEntities(text(entry.title)),
+    url: decodeEntities(text(alternate?.href)),
     publishedAt: entry.published
       ? new Date(entry.published).toISOString()
       : entry.updated
         ? new Date(entry.updated).toISOString()
         : '',
-    teaser: text(entry.summary) || text(entry.content),
+    teaser: decodeEntities(text(entry.summary) || text(entry.content)),
   };
+}
+
+const namedEntities: Record<string, string> = {
+  amp: '&',
+  lt: '<',
+  gt: '>',
+  quot: '"',
+  apos: "'",
+  nbsp: ' ',
+};
+
+/**
+ * Decode HTML entities left in place by the XML parser (it deliberately does
+ * not touch CDATA content). Handles named, decimal and hex numeric refs.
+ */
+function decodeEntities(value: string): string {
+  return value.replace(
+    /&(?:(amp|lt|gt|quot|apos|nbsp)|#x([0-9a-fA-F]+)|#(\d+));/g,
+    (_, named, hex, decimal) => {
+      if (named) return namedEntities[named] ?? _;
+      if (hex) return String.fromCodePoint(parseInt(hex, 16));
+      return String.fromCodePoint(Number(decimal));
+    },
+  );
 }
 
 function parseRssItem(item: any): ParsedItem {
   return {
-    headline: text(item.title),
-    url: text(item.link),
+    headline: decodeEntities(text(item.title)),
+    url: decodeEntities(text(item.link)),
     publishedAt: item.pubDate ? new Date(item.pubDate).toISOString() : '',
-    teaser: text(item.description),
+    teaser: decodeEntities(text(item.description)),
     imageUrl: rssImageUrl(item),
   };
 }

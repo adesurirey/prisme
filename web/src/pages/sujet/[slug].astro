@@ -1,7 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import LeaningBadge from '../../components/LeaningBadge';
-import PaywallBadge from '../../components/PaywallBadge';
+import ArticleRow from '../../components/ArticleRow';
 import { loadOutlets, loadStories, withBase } from '../../data';
 import type { Story } from '@prisme/domain';
 
@@ -27,27 +26,12 @@ const builtAt = new Date(
   <p class="mb-6 text-sm text-zinc-500">Publié le {builtAt}</p>
   <ul class="flex flex-col gap-3">
     {
-      story.articles.map((article) => {
-        const outlet = byId.get(article.outletId);
-        return (
-          <li class="rounded-lg border border-zinc-200 bg-white p-4 shadow-sm">
-            <div class="flex flex-wrap items-center gap-2 text-sm">
-              <LeaningBadge leaning={outlet?.leaning ?? 'centre'} />
-              <span class="font-medium">{outlet?.name ?? article.outletId}</span>
-              <PaywallBadge paywall={outlet?.paywall ?? 'none'} />
-              <a
-                href={article.url}
-                rel="noopener noreferrer"
-                target="_blank"
-                class="ml-auto text-blue-700 underline-offset-2 hover:underline"
-              >
-                Lire sur {outlet?.name ?? article.outletId}
-              </a>
-            </div>
-            <p class="mt-2 text-xs text-zinc-500">{article.headline}</p>
-          </li>
-        );
-      })
+      story.articles.map((article) => (
+        <li class="rounded-lg border border-zinc-200 bg-white p-4 shadow-sm">
+          <ArticleRow article={article} outlet={byId.get(article.outletId)} />
+          <p class="mt-2 text-xs text-zinc-500">{article.headline}</p>
+        </li>
+      ))
     }
   </ul>
 </Base>
