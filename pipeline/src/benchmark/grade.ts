@@ -152,6 +152,7 @@ async function main(): Promise<void> {
 }
 
 function summarize(items: LabeledItem[], attempts: Attempt[]): Summary {
+  const model = attempts[0]?.model ?? 'unknown';
   const confusion: Record<string, Record<string, number>> = {};
   let correct = 0;
   let sectionScored = 0;
@@ -194,7 +195,6 @@ function summarize(items: LabeledItem[], attempts: Attempt[]): Summary {
     costUsd += classification?.costUsd ?? (classification?.inputTokens ?? 0) * rate;
   });
 
-  const model = attempts[0]?.model ?? 'unknown';
   latencies.sort((a, b) => a - b);
   return {
     model,
