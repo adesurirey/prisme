@@ -8,6 +8,8 @@ Issues are tracked in this repository’s GitHub Issues via `gh`. See `docs/agen
 
 single-context. See `docs/agents/domain.md`.
 
+Outlet Leanings and their sources: `docs/research/outlet-leanings.md` (the research behind the typed config in `packages/domain/src/outlets.ts`). Read it before changing an Outlet's Leaning, adding or removing an Outlet, or answering "why is this media classed there?".
+
 ## Conventions
 
 ### Commits — Conventional Commits
@@ -31,11 +33,12 @@ Every commit message uses the [Conventional Commits](https://www.conventionalcom
 pnpm monorepo. Run everything from the repo root:
 
 - `pnpm edition` — run the pipeline: fetch all Outlet feeds, write `data/edition.json`, `data/outlets.json`, `data/stories/<slug>.json`. Same command locally and in CI.
+- `pnpm verify` — re-check the Outlet config evidence: feed status, item count, time covered, image presence, TDM reservations (feeds and TDM probes only; prints stats).
 - `pnpm test` — all packages (vitest, pipeline).
 - `pnpm typecheck` — all packages (tsc + astro check).
 - `pnpm --filter @prisme/web build` — build the static site (needs `data/` to exist; run `pnpm edition` first).
 
-Packages: `packages/domain` (shared types), `pipeline` (collector, `tsx`), `web` (Astro + React).
+Packages: `packages/domain` (shared types and the sourced Outlet config), `pipeline` (collector, `tsx`), `web` (Astro + React).
 
 ### Hard rules from the ADRs
 

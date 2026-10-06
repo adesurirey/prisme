@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import type { Edition, Outlet, Story } from '@prisme/domain';
+import { publicOutlets } from '@prisme/domain';
 
 /**
  * data/ lives at the repo root (ADR-0002: the git repo is the database).
@@ -28,8 +29,12 @@ export async function loadStories(): Promise<Story[]> {
   return edition.stories;
 }
 
-export async function loadOutlets(): Promise<Outlet[]> {
-  return JSON.parse(await readDataFile('outlets.json'));
+/**
+ * The Outlet config is a typed module both the pipeline and the site import
+ * (issue #2), so the site does not depend on the data/ snapshot for it.
+ */
+export function loadOutlets(): Outlet[] {
+  return publicOutlets();
 }
 
 export async function loadStory(slug: string): Promise<Story | undefined> {

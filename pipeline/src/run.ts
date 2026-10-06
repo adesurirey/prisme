@@ -1,8 +1,8 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import type { Edition } from '@prisme/domain';
+import { outlets, publicOutlets } from '@prisme/domain';
 import { collect } from './collect.ts';
 import { buildEdition } from './edition.ts';
-import { outlets } from './outlets.ts';
 
 /**
  * data/ lives at the repo root: resolving `../../data/` from this file
@@ -34,8 +34,9 @@ export async function runEdition(): Promise<Edition> {
   );
 
   await mkdir(new URL('stories/', DATA_DIR), { recursive: true });
-  // Outlet config snapshot: the site reads it instead of importing pipeline code.
-  await writeFile(new URL('outlets.json', DATA_DIR), JSON.stringify(outlets, null, 2) + '\n');
+  // Outlet config snapshot (identity and feeds only): the sourced config lives
+  // in @prisme/domain and is imported by the pipeline and the site.
+  await writeFile(new URL('outlets.json', DATA_DIR), JSON.stringify(publicOutlets(), null, 2) + '\n');
   await writeFile(new URL('edition.json', DATA_DIR), JSON.stringify(edition, null, 2) + '\n');
   for (const story of edition.stories) {
     await writeFile(
