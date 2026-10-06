@@ -4,9 +4,11 @@ import type { Edition } from '@prisme/domain';
 import { outlets, publicOutlets } from '@prisme/domain';
 import { classifyNewArticles, dropNotNews, loadCache, saveCache, type ClassificationCache } from './classify.ts';
 import { collect } from './collect.ts';
+import { updateFrontPageHistory } from './frontpage.ts';
 import { groupingModelFromEnv } from './gemini.ts';
 import { groupStories, loadStories } from './grouping.ts';
 import { fetchFeed } from './http.ts';
+import { EDITION_SIZE, rankStories } from './ranking.ts';
 import { membershipModelFromEnv } from './decision-model.ts';
 import { winnerModelFromEnv } from './decision-model.ts';
 
@@ -59,11 +61,31 @@ export async function runEdition(): Promise<Edition> {
     makeId: () => randomBytes(6).toString('hex'),
     clients: { grouping, membership: membershipModelFromEnv() },
   });
-  const edition: Edition = { builtAt: now.toISOString(), stories: outcome.live };
 
-  const filesToWrite = outcome.changed.size;
+  // Front-page history (issue #6): reconcile the flags of every live Story
+  // with today's collection — `frontPage` is the current snapshot,
+  // `everFrontPage` sticky. Frozen Stories are untouched (ADR-0005). Stories
+  // whose flags changed join the changed set, so their files are rewritten.
+  const liveIds = new Set(outcome.live.map((s) => s.id));
+  const frontpage = updateFrontPageHistory(outcome.stories, kept, (s) => liveIds.has(s.id));
+  const changed = new Set([...outcome.changed, ...frontpage.changed]);
+
+  // The Edition is the ranked top EDITION_SIZE (issue #6): Stories order by
+  // the Outlets currently on their Front page, then Coverage, then recency —
+  // deterministically. Live Stories below the cut keep updating outside it and
+  // may return on a later build; only a Story with no live Articles freezes.
+  const outletById = new Map(outlets.map((o) => [o.id, o]));
+  const edition: Edition = {
+    builtAt: now.toISOString(),
+    stories: rankStories(
+      frontpage.stories.filter((s) => liveIds.has(s.id)),
+      outletById,
+    ).slice(0, EDITION_SIZE),
+  };
+
+  const filesToWrite = changed.size;
   console.log(
-    `Edition: ${edition.stories.length} live stories from ${kept.length} articles ` +
+    `Edition: ${edition.stories.length} ranked stories (of ${liveIds.size} live) from ${kept.length} articles ` +
       `(${existing.length} on disk, ${filesToWrite} files to write, ` +
       `${articles.length - kept.length} not_news dropped, ${classified - before} newly classified, ` +
       `${failures.length} feed failures).`,
@@ -74,8 +96,8 @@ export async function runEdition(): Promise<Edition> {
   // in @prisme/domain and is imported by the pipeline and the site.
   await writeFile(new URL('outlets.json', DATA_DIR), JSON.stringify(publicOutlets(), null, 2) + '\n');
   await writeFile(new URL('edition.json', DATA_DIR), JSON.stringify(edition, null, 2) + '\n');
-  for (const story of outcome.stories) {
-    if (!outcome.changed.has(story.slug)) continue;
+  for (const story of frontpage.stories) {
+    if (!changed.has(story.slug)) continue;
     await writeFile(new URL(`${story.slug}.json`, STORIES_DIR), JSON.stringify(story, null, 2) + '\n');
   }
   console.log(`Wrote ${DATA_DIR.pathname}`);

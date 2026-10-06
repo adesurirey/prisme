@@ -48,6 +48,12 @@ export interface Article {
   /** True when the Article is on the Outlet's Front page (une feed, or one of the 10 most recent). */
   frontPage: boolean;
   /**
+   * True once the Article has been seen on its Outlet's Front page during its
+   * lifetime (issue #6): sticky across builds, never reset while the Article
+   * lives. Absent means never seen there. Frozen Stories keep the final state.
+   */
+  everFrontPage?: boolean;
+  /**
    * Assigned by the Decision model from the headline and teaser (issue #4).
    * Absent when classification failed: the Article is kept, unclassified.
    * A not_news Article never reaches the Edition.
@@ -127,3 +133,4 @@ export interface Edition {
 // The sourced Outlet config (issue #2): Leanings with citations, readership,
 // verified feeds and TDM reservations. See docs/research/outlet-leanings.md.
 export * from './outlets.ts';
+export * from './coverage.ts';

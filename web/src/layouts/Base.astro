@@ -6,9 +6,12 @@ import { withBase } from '../data';
 interface Props {
   title: string;
   description?: string;
+  /** Absolute URL for og:image — the Story image, hotlinked (ADR-0003). */
+  ogImage?: string;
+  ogType?: 'website' | 'article';
 }
 
-const { title, description = "La même actualité, vue par tous les bords politiques." } = Astro.props;
+const { title, description = "La même actualité, vue par tous les bords politiques.", ogImage, ogType = 'website' } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,6 +20,10 @@ const { title, description = "La même actualité, vue par tous les bords politi
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcfcfc" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e0e10" />
     <link

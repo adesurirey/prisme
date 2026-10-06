@@ -75,11 +75,11 @@ A Story seen through every Leaning at once: its Coverage, its Articles grouped b
 _Avoid_: Analysis, breakdown
 
 **Coverage**:
-How a Story's reporting is distributed across Leanings and Outlets.
+How a Story's reporting is distributed across Leanings and Outlets: the number of Outlets reporting the Story (each with at least one reporting Article), counted per Leaning. Opinion pieces never count toward Coverage.
 _Avoid_: Distribution, reach, share
 
 **Blindspot**:
-A Story that one Leaning covers little or not at all.
+A Leaning with no reporting Outlet on a Story reported by three or more Outlets (reporting Outlets only, Opinion pieces excluded). Shown as a badge; one badge per absent Leaning.
 _Avoid_: Gap, missing coverage
 
 **Summary**:

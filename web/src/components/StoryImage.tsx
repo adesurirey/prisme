@@ -1,23 +1,9 @@
-import type { Article, Leaning, Outlet, Story } from '@prisme/domain';
-import { leaningOrder } from './CoverageBar';
-
-const leaningRank: Record<Leaning, number> = { centre: 0, gauche: 1, droite: 2 };
+import type { Article, Outlet } from '@prisme/domain';
 
 /**
- * The image shown for a Story: prefer a Centre Outlet's Article, otherwise
- * the Leaning with the most Coverage (PRD). Ties keep the earliest Article.
- * The image is hotlinked from the Outlet — never stored (ADR-0003).
+ * The Story image: hotlinked from the Outlet's feed — never stored (ADR-0003).
+ * Which Article supplies it is decided by pickStoryImage (@prisme/domain).
  */
-export function pickStoryImage(story: Story, leaningOf: (outletId: string) => Leaning | undefined) {
-  const withImage = story.articles.filter((a) => a.imageUrl);
-  if (withImage.length === 0) return undefined;
-  const score = (a: Article) => {
-    const leaning = leaningOf(a.outletId);
-    return leaning ? leaningRank[leaning] : 3;
-  };
-  return withImage.reduce((best, a) => (score(a) < score(best) ? a : best), withImage[0]);
-}
-
 export default function StoryImage({
   article,
   outlet,
@@ -40,14 +26,23 @@ export default function StoryImage({
       </span>
     );
   }
+  const caption = outlet ? `Photo : ${outlet.name}` : undefined;
   return (
     <img
       src={article.imageUrl}
-      alt=""
-      loading="lazy"
-      decoding="async"
+      alt={caption ?? ''}
+      title={caption}
       sizes={sizes}
-      className={`bg-line object-cover ${frame}`}
+      className={`object-cover ${frame}`}
+      loading="lazy"
+      onError={(event) => {
+        // A dead hotlink falls back cleanly to the placeholder shape.
+        const img = event.currentTarget;
+        const placeholder = document.createElement('span');
+        placeholder.className = `flex items-center justify-center bg-line ${frame}`;
+        placeholder.setAttribute('aria-hidden', 'true');
+        img.replaceWith(placeholder);
+      }}
     />
   );
 }
