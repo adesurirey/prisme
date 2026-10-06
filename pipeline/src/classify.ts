@@ -1,7 +1,8 @@
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import type { Article, ArticleKind, Section } from '@prisme/domain';
-import { WINNER, PROMPT_VERSION, type DecisionModel } from './decision-model.ts';
+import { WINNER, PROMPT_VERSION, type Classification, type DecisionModel } from './decision-model.ts';
+import { runPool } from './pool.ts';
 
 /**
  * Incremental classification (issue #4): only new Articles — ids absent from
@@ -25,7 +26,16 @@ export function emptyCache(): ClassificationCache {
 export async function loadCache(path: URL): Promise<ClassificationCache> {
   try {
     const cache = JSON.parse(await readFile(path, 'utf8')) as ClassificationCache;
-    return cache.entries ? cache : emptyCache();
+    if (!cache.entries) return emptyCache();
+    // Entries classified by another model or prompt are stale: reclassify.
+    if (cache.winner?.model !== WINNER.model || cache.winner?.promptVersion !== PROMPT_VERSION) {
+      console.warn(
+        `Classification cache was built with ${cache.winner?.model ?? 'an unknown model'} ` +
+          `(prompt ${cache.winner?.promptVersion ?? '?'}) — discarding it for re-classification.`,
+      );
+      return emptyCache();
+    }
+    return cache;
   } catch {
     return emptyCache();
   }
@@ -42,7 +52,9 @@ const CONCURRENCY = 4;
  * Classify Articles whose id is not yet in the cache, merging results into it.
  * A failed or invalid classification leaves the Article out of the cache —
  * it is kept, unclassified, and retried on the next build (like a failed
- * feed: never dropped because the model hiccupped).
+ * feed: never dropped because the model hiccupped). A thrown error is
+ * handled exactly like an invalid answer: logged, article unclassified,
+ * build continues.
  */
 export async function classifyNewArticles(
   articles: Article[],
@@ -53,27 +65,28 @@ export async function classifyNewArticles(
   const fresh = articles.filter((article) => cache.entries[article.id] == null);
   if (fresh.length === 0 || model == null) return cache;
 
-  let index = 0;
-  await Promise.all(
-    Array.from({ length: CONCURRENCY }, async () => {
-      while (index < fresh.length) {
-        const article = fresh[index++]!;
-        const classification = await model.classify({
-          headline: article.headline,
-          teaser: teasers.get(article.id) ?? '',
-        });
-        if (classification) {
-          cache.entries[article.id] = {
-            kind: classification.kind,
-            // The Section answer is ignored for not_news (settled in #4).
-            section: classification.kind === 'not_news' ? null : classification.section,
-          };
-        } else {
-          console.warn(`Classification failed: ${article.id} — kept without kind.`);
-        }
-      }
-    }),
-  );
+  await runPool(fresh, CONCURRENCY, async (article) => {
+    let classification: Classification | null = null;
+    try {
+      classification = await model.classify({
+        headline: article.headline,
+        teaser: teasers.get(article.id) ?? '',
+      });
+    } catch (reason) {
+      console.warn(
+        `Classification failed: ${article.id} — ${reason instanceof Error ? reason.message : reason}`,
+      );
+    }
+    if (classification) {
+      cache.entries[article.id] = {
+        kind: classification.kind,
+        // The Section answer is ignored for not_news (settled in #4).
+        section: classification.kind === 'not_news' ? null : classification.section,
+      };
+    } else {
+      console.warn(`Classification failed: ${article.id} — kept without kind.`);
+    }
+  });
   return cache;
 }
 

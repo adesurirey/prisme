@@ -1,4 +1,5 @@
 import { readFile, writeFile } from 'node:fs/promises';
+import { runPool } from '../pool.ts';
 import {
   clefFlashModel,
   jevModel,
@@ -29,9 +30,6 @@ const BENCHMARK_DIR = new URL('../../../.benchmark/', import.meta.url);
 const LABELS_PATH = new URL('../../../docs/research/decision-model-labels.json', import.meta.url);
 const DOC_PATH = new URL('../../../docs/research/decision-model-benchmark.md', import.meta.url);
 
-/** USD per input token; output is free for both models. */
-const COST_PER_INPUT_TOKEN = { Jev: 0.042e-6, 'Clef-flash': 0.09e-6 } as const;
-
 const CONCURRENCY = 4;
 const KINDS: ArticleKind[] = ['news', 'opinion', 'live', 'not_news'];
 const INVALID = '(invalid)';
@@ -56,6 +54,8 @@ interface Attempt {
   model: string;
   id: string;
   classification: Classification | null;
+  /** USD per input token, from the model — the fallback when no cost is reported. */
+  costPerInputToken: number;
 }
 
 interface Summary {
@@ -124,25 +124,18 @@ async function main(): Promise<void> {
   for (const model of models) {
     console.log(`Grading ${model.label} over ${items.length} labeled pairs…`);
     const attempts: Attempt[] = new Array(items.length);
-    let index = 0;
-    await Promise.all(
-      Array.from({ length: CONCURRENCY }, async () => {
-        while (index < items.length) {
-          const i = index++;
-          const item = items[i]!;
-          const pair = pairs.get(item.id)!;
-          let classification: Classification | null = null;
-          try {
-            classification = await model.classify({ headline: pair.headline, teaser: pair.teaser });
-          } catch (reason) {
-            console.warn(
-              `${model.label} failed on ${item.id}: ${reason instanceof Error ? reason.message : reason}`,
-            );
-          }
-          attempts[i] = { model: model.label, id: item.id, classification };
-        }
-      }),
-    );
+    await runPool(items, CONCURRENCY, async (item, i) => {
+      const pair = pairs.get(item.id)!;
+      let classification: Classification | null = null;
+      try {
+        classification = await model.classify({ headline: pair.headline, teaser: pair.teaser });
+      } catch (reason) {
+        console.warn(
+          `${model.label} failed on ${item.id}: ${reason instanceof Error ? reason.message : reason}`,
+        );
+      }
+      attempts[i] = { model: model.label, id: item.id, classification, costPerInputToken: model.costPerInputToken };
+    });
     results.push({ model: model.label, attempts });
   }
 
@@ -192,8 +185,8 @@ function summarize(items: LabeledItem[], attempts: Attempt[]): Summary {
     const classification = attempts[i]!.classification;
     latencies.push(classification?.elapsedMs ?? 0);
     inputTokens += classification?.inputTokens ?? 0;
-    const rate = COST_PER_INPUT_TOKEN[model as keyof typeof COST_PER_INPUT_TOKEN] ?? 0;
-    costUsd += classification?.costUsd ?? (classification?.inputTokens ?? 0) * rate;
+    costUsd +=
+      classification?.costUsd ?? (classification?.inputTokens ?? 0) * attempts[i]!.costPerInputToken;
   });
 
   latencies.sort((a, b) => a - b);
@@ -279,7 +272,8 @@ function pickWinner(summaries: Summary[]): Summary {
     if (p(b) !== p(a)) return p(b) - p(a);
     if (b.kindAccuracy !== a.kindAccuracy) return b.kindAccuracy - a.kindAccuracy;
     if (b.sectionAccuracy !== a.sectionAccuracy) return b.sectionAccuracy - a.sectionAccuracy;
-    return a.costUsd - b.costUsd;
+    if (a.costUsd !== b.costUsd) return a.costUsd - b.costUsd;
+    return a.avgLatencyMs - b.avgLatencyMs;
   })[0]!;
 }
 

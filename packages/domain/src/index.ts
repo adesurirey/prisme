@@ -92,7 +92,7 @@ export const SECTION_LABELS: Record<Section, string> = {
   society: 'Société',
   sport: 'Sport',
   culture: 'Culture',
-  science: 'Sciences & tech',
+  science: 'Sciences/Tech',
   misc: 'Faits divers',
   other: 'Autre',
 };

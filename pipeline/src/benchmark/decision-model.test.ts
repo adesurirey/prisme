@@ -20,6 +20,12 @@ describe('parseAnswers', () => {
     expect(parseAnswers({ kind: { choice: 'news' }, section: { choice: 'economie' } })).toBeNull();
   });
 
+  it('ignores an invalid section answer for not_news', () => {
+    const parsed = parseAnswers({ kind: { choice: 'not_news' }, section: { choice: 'economie' } });
+    expect(parsed).toMatchObject({ kind: 'not_news', section: null });
+    expect(parseAnswers({ kind: { choice: 'not_news' } })).toMatchObject({ kind: 'not_news', section: null });
+  });
+
   it('returns null when an answer is missing or malformed', () => {
     expect(parseAnswers({ kind: { choice: 'news' } })).toBeNull();
     expect(parseAnswers({})).toBeNull();

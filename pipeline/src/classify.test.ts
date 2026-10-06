@@ -27,6 +27,7 @@ function fakeModel(
   return {
     calls,
     label: 'Fake',
+    costPerInputToken: 0,
     async classify({ headline }: { headline: string }) {
       calls.push(headline);
       const answer = answers(headline.split(' ').pop()!);
@@ -56,6 +57,16 @@ describe('classifyNewArticles', () => {
     const cache = emptyCache();
     const model = fakeModel(() => null);
     await classifyNewArticles([article('a1')], new Map(), cache, model);
+    expect(cache.entries).toEqual({});
+  });
+
+  it('survives a model that throws, like a failed feed', async () => {
+    const cache = emptyCache();
+    const model = fakeModel(() => null);
+    model.classify = async () => {
+      throw new Error('HTTP 401: bad key');
+    };
+    await expect(classifyNewArticles([article('a1')], new Map(), cache, model)).resolves.toBe(cache);
     expect(cache.entries).toEqual({});
   });
 

@@ -56,7 +56,8 @@ export const QUESTIONS = {
 
 export interface Classification {
   kind: ArticleKind;
-  section: Section;
+  /** Null when the kind is not_news (the section answer is ignored) or invalid. */
+  section: Section | null;
   kindProbabilities?: Record<string, number>;
   sectionProbabilities?: Record<string, number>;
   inputTokens: number;
@@ -67,6 +68,8 @@ export interface Classification {
 
 export interface DecisionModel {
   label: string;
+  /** USD per input token — used when the API reports no cost of its own. */
+  costPerInputToken: number;
   classify(state: { headline: string; teaser: string }): Promise<Classification | null>;
 }
 
@@ -84,18 +87,30 @@ interface ChoiceAnswer {
  */
 export function parseAnswers(
   answers: unknown,
-): { kind: ArticleKind; section: Section; kindProbabilities?: Record<string, number>; sectionProbabilities?: Record<string, number> } | null {
+): {
+  kind: ArticleKind;
+  section: Section | null;
+  kindProbabilities?: Record<string, number>;
+  sectionProbabilities?: Record<string, number>;
+} | null {
   if (answers == null || typeof answers !== 'object') return null;
-  const { kind, section } = answers as Record<string, unknown>;
-  const kindAnswer = choiceOf(kind);
-  const sectionAnswer = choiceOf(section);
+  const { kind: kindField, section: sectionField } = answers as Record<string, unknown>;
+  const kindAnswer = choiceOf(kindField);
   if (!kindAnswer || !ARTICLE_KINDS.includes(kindAnswer.choice as ArticleKind)) return null;
-  if (!sectionAnswer || !SECTIONS.includes(sectionAnswer.choice as Section)) return null;
+  const kind = kindAnswer.choice as ArticleKind;
+  const sectionAnswer = choiceOf(sectionField);
+  const validSection =
+    sectionAnswer && SECTIONS.includes(sectionAnswer.choice as Section)
+      ? (sectionAnswer.choice as Section)
+      : null;
+  // The section answer is ignored for not_news (settled in the #4 grilling):
+  // an invalid section only fails the answer when the kind is a news kind.
+  if (kind !== 'not_news' && validSection == null) return null;
   return {
-    kind: kindAnswer.choice as ArticleKind,
-    section: sectionAnswer.choice as Section,
+    kind,
+    section: kind === 'not_news' ? null : validSection,
     kindProbabilities: kindAnswer.probabilities,
-    sectionProbabilities: sectionAnswer.probabilities,
+    sectionProbabilities: sectionAnswer?.probabilities,
   };
 }
 
@@ -173,6 +188,7 @@ async function callModel(
 export function jevModel(apiKey: string): DecisionModel {
   return {
     label: 'Jev',
+    costPerInputToken: COST_PER_INPUT_TOKEN[OPENROUTER_MODELS.jev],
     classify(state) {
       return callModel(
         'Jev',
@@ -188,6 +204,7 @@ export function jevModel(apiKey: string): DecisionModel {
 export function clefFlashModel(apiKey: string, accountId: string): DecisionModel {
   return {
     label: 'Clef-flash',
+    costPerInputToken: COST_PER_INPUT_TOKEN[OPENROUTER_MODELS.clefFlash],
     classify(state) {
       return callModel(
         'Clef-flash',
@@ -211,6 +228,12 @@ export const OPENROUTER_MODELS = {
   clefFlash: 'cloudflare/clef-flash',
 } as const;
 
+/** USD per input token, keyed by model id (output is free for both models). */
+export const COST_PER_INPUT_TOKEN: Record<string, number> = {
+  [OPENROUTER_MODELS.jev]: 0.042e-6,
+  [OPENROUTER_MODELS.clefFlash]: 0.09e-6,
+};
+
 /** The benchmark winner, served via OpenRouter with a pinned model id. */
 export const WINNER = {
   gateway: 'openrouter',
@@ -221,6 +244,7 @@ export const WINNER = {
 export function openRouterModel(apiKey: string, id: string, label: string): DecisionModel {
   return {
     label,
+    costPerInputToken: COST_PER_INPUT_TOKEN[id] ?? 0,
     classify(state) {
       return callModel(
         label,
