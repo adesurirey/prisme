@@ -10,8 +10,9 @@ const labels: Record<Leaning, string> = {
 
 /**
  * The Coverage of a Story: one quiet tri-color strip, segments proportional
- * to how many Outlets of each Leaning report it. Scales as Story grouping
- * arrives (issue #5).
+ * to how many Outlets of each Leaning report it. Segments stay flush — only
+ * the container rounds (per-segment rounding left a dark notch at every
+ * seam), and flex-grow distributes the width exactly, with no rounding gaps.
  */
 export default function CoverageBar({
   counts,
@@ -37,8 +38,8 @@ export default function CoverageBar({
           counts[l] > 0 && (
             <span
               key={l}
-              className="h-full rounded-full"
-              style={{ width: `${(counts[l] / total) * 100}%`, background: `var(--${l})` }}
+              className="h-full"
+              style={{ flexGrow: counts[l], flexBasis: 0, background: `var(--${l})` }}
             />
           ),
       )}

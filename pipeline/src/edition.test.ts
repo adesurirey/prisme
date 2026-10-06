@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Article, Section } from '@prisme/domain';
-import { buildEdition, storySection } from './edition.ts';
+import { storySection } from './edition.ts';
 
 function article(id: string): Article {
   return {
@@ -28,20 +28,5 @@ describe('storySection', () => {
 
   it('is undefined when no Article has a Section', () => {
     expect(storySection([article('x')], sectionOf)).toBeUndefined();
-  });
-});
-
-describe('buildEdition with sections', () => {
-  it('stamps the Story Section from its Articles', () => {
-    const edition = buildEdition([article('a')], new Date('2026-10-06T10:00:00Z'), (id) =>
-      id === 'a' ? 'politics' : undefined,
-    );
-    expect(edition.stories[0]?.section).toBe('politics');
-  });
-
-  it('omits the Section when nothing is classified', () => {
-    const edition = buildEdition([article('a')], new Date('2026-10-06T10:00:00Z'));
-    expect(edition.stories[0]?.section).toBeUndefined();
-    expect('section' in edition.stories[0]!).toBe(false);
   });
 });

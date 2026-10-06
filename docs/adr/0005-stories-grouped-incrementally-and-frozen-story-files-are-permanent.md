@@ -1,0 +1,18 @@
+# Stories are grouped incrementally, and frozen Story files are permanent
+
+Editions rebuild every ~2 hours (ADR-0002) with no database, and a Story page's URL must live forever. Each build therefore starts from the existing Story files and only assigns Articles that aren't in a Story yet; membership never changes once assigned. An Article less than 24 hours old keeps its Story live; a Story with no live Articles left leaves the Edition, and its file and page stay published, frozen — never modified, never reopened. A later Article about the same event starts a new Story. New Articles are grouped by the Grouping model (Gemini Flash-Lite, current generation, direct from Google's free tier: one structured-output call per build); low-confidence matches get a Jev yes/no Membership check, and a failed call degrades to one-Article Stories rather than failing the build.
+
+## Considered Options
+
+- Regenerate all groupings from scratch each build: would reshuffle ids and slugs, which must be permanent.
+- Reopen frozen Stories when a fresh Article matches: editing a "permanent" file defeats permanence; a new Story across a gap keeps the rule simple.
+- Keep an assignments cache alongside the Story files: redundant — the files are the record (ADR-0002).
+- Retro-merge the tracer bullet's one-Article Story files: rewriting "permanent" files. They were deleted once instead, before this shipped.
+- Route Gemini through OpenRouter like the Decision model: paid per token, while the free tier (~1,000 requests/day) dwarfs the ~12 calls a day the build cadence needs.
+
+## Consequences
+
+- A wrong merge or wrong split is permanent. The Membership check (confidence < 0.75, ≤ 20 per build, refuse or fail → split) and the degrade-to-split bias limit the damage. There is no offline benchmark for grouping; each PR gets a spot-check on a real day (issue #5).
+- Titles may be re-proposed whenever a Story gains Articles, but slugs are fixed at creation: across builds the existing file keeps its slug, within a build the smallest Story id keeps the bare slug, and other collisions get a Story-id suffix — resolved deterministically from ids, never by ordering.
+- A Story that splits keeps its founding Article's headline as its title until the model re-titles it in a later build; one that freezes before that keeps the headline. The degrade path has no model to write a neutral title, and re-titled Stories that gained no Articles would churn files for nothing.
+- Google's free tier may train on prompts: only public RSS headlines and teasers are ever sent (same posture as ADR-0003).

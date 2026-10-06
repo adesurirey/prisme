@@ -37,8 +37,28 @@ The cheap language model Prisme uses to assign each Article its Kind and Section
 _Avoid_: Classifier, judge, AI (alone)
 
 **Story**:
-A news event or topic, made up of the Articles that report on it. National and international news are both in scope.
+A news event or topic, made up of the Articles that report on it. National and international news are both in scope. A Story's id and slug are fixed when it is created and never change.
 _Avoid_: Topic, cluster, event, subject
+
+**Story title**:
+The neutral French name of a Story, written by the Grouping model. Distinct from any Outlet's headline, and can change over time.
+_Avoid_: Story headline
+
+**Live Story**:
+A Story with at least one Article less than 24 hours old. Live Stories can gain Articles and make up the Edition.
+_Avoid_: Active story, open story
+
+**Frozen Story**:
+A Story with no live Articles left. It has left the Edition; its page stays published and is never modified again.
+_Avoid_: Archived story, closed story, expired story
+
+**Grouping model**:
+The cheap language model Prisme uses each build to assign new Articles to live Stories or start new ones.
+_Avoid_: Clustering, matcher, AI (alone)
+
+**Membership check**:
+A yes/no check that decides whether an Article the Grouping model matched with low confidence joins that Story.
+_Avoid_: Verification, noul check
 
 **Section**:
 The part of the news a Story belongs to: Politique, International, Économie, Société, Sport, Culture, Sciences/Tech, Faits divers. A Story's Section comes from the Sections of its Articles. Shown as a label, never a filter.
