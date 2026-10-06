@@ -130,20 +130,12 @@ const description =
                     />
                     <div class="min-w-0 flex-1">
                       <ArticleRow article={article} outlet={outlet} />
-                      <a
-                        href={article.url}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        class="group/link mt-1.5 block text-[14px] text-muted transition-colors hover:text-ink"
-                      >
-                        {article.headline}{'　'}
-                        <span
-                          aria-hidden="true"
-                          class="inline-block text-[12px] text-faint transition-colors group-hover/link:text-ink"
-                        >
-                          ↗
-                        </span>
-                      </a>
+                      {/* The Story title can repeat an Article's headline (split
+                          Stories take the founding headline); showing it twice
+                          adds nothing — the "Lire sur" link stays clickable. */}
+                      {article.headline !== story.title && (
+                        <p class="mt-1.5 text-[14px] text-muted">{article.headline}</p>
+                      )}
                     </div>
                   </li>
                 );
