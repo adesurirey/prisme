@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import StoryCard from '../components/StoryCard';
+import { loadEdition, loadOutlets } from '../data';
+
+const edition = await loadEdition();
+const outlets = await loadOutlets();
+
+const builtAt = new Date(edition.builtAt).toLocaleString('fr-FR', {
+  weekday: 'long',
+  hour: '2-digit',
+  minute: '2-digit',
+});
+---
+
+<Base title="L'édition du jour">
+  <h1 class="mb-1 text-2xl font-bold">L'édition du jour</h1>
+  <p class="mb-6 text-sm text-zinc-500">
+    {edition.stories.length} sujets · mis à jour le {builtAt}
+  </p>
+  <div class="flex flex-col gap-4">
+    {edition.stories.map((story) => <StoryCard story={story} outlets={outlets} />)}
+  </div>
+</Base>

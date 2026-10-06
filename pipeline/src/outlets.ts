@@ -1,0 +1,179 @@
+import type { Outlet } from '@prisme/domain';
+
+/**
+ * Draft Outlet config (issue #3, from the PRD). Issue #2 replaces this with a
+ * properly sourced config; feed URLs verified working on 2026-10-06 with a
+ * normal browser User-Agent. Outlets whose feeds return 403 stay in the list:
+ * the collector logs and skips failures, they come back when #2 lands.
+ */
+export const outlets: Outlet[] = [
+  // ——— Gauche ———
+  {
+    id: 'liberation',
+    name: 'Libération',
+    leaning: 'gauche',
+    paywall: 'partial',
+    feeds: { une: 'https://www.liberation.fr/rss/1-la-une/' },
+  },
+  {
+    id: 'lobs',
+    name: "L'Obs",
+    leaning: 'gauche',
+    paywall: 'partial',
+    feeds: { latest: 'https://www.nouvelobs.com/rss.xml' },
+  },
+  {
+    id: 'huffpost',
+    name: 'Le HuffPost',
+    leaning: 'gauche',
+    paywall: 'none',
+    feeds: { une: 'https://www.huffingtonpost.fr/rss/all_headline.xml' },
+  },
+  {
+    id: 'mediapart',
+    name: 'Mediapart',
+    leaning: 'gauche',
+    paywall: 'full',
+    feeds: { latest: 'https://www.mediapart.fr/articles/feed' },
+  },
+  {
+    id: 'humanite',
+    name: "L'Humanité",
+    leaning: 'gauche',
+    paywall: 'none',
+    feeds: { latest: 'https://www.humanite.fr/feed' },
+  },
+  // ——— Centre ———
+  {
+    id: 'le-monde',
+    name: 'Le Monde',
+    leaning: 'centre',
+    paywall: 'partial',
+    feeds: {
+      une: 'https://www.lemonde.fr/rss/une.xml',
+      latest: 'https://www.lemonde.fr/rss/en_continu.xml',
+    },
+  },
+  {
+    id: 'franceinfo',
+    name: 'franceinfo',
+    leaning: 'centre',
+    paywall: 'none',
+    feeds: { latest: 'https://www.francetvinfo.fr/titres.rss' },
+  },
+  {
+    id: 'ouest-france',
+    name: 'Ouest-France',
+    leaning: 'centre',
+    paywall: 'partial',
+    feeds: {
+      une: 'https://www.ouest-france.fr/rss/une',
+      latest: 'https://www.ouest-france.fr/rss-en-continu.xml',
+    },
+  },
+  {
+    id: 'bfmtv',
+    name: 'BFMTV',
+    leaning: 'centre',
+    paywall: 'none',
+    feeds: { latest: 'https://www.bfmtv.com/rss/news-24-7/' },
+  },
+  {
+    id: '20-minutes',
+    name: '20 Minutes',
+    leaning: 'centre',
+    paywall: 'none',
+    feeds: { une: 'https://www.20minutes.fr/feeds/rss-une.xml' },
+  },
+  {
+    id: 'le-parisien',
+    name: 'Le Parisien',
+    leaning: 'centre',
+    paywall: 'partial',
+    feeds: {
+      une: 'https://feeds.leparisien.fr/leparisien/rss',
+      latest: 'https://feeds.leparisien.fr/leparisien/rss/en-continu',
+    },
+  },
+  {
+    id: 'tf1-info',
+    name: 'TF1 Info',
+    leaning: 'centre',
+    paywall: 'none',
+    feeds: { une: 'https://www.tf1info.fr/feeds/rss-une.xml' },
+  },
+  {
+    id: 'rfi',
+    name: 'RFI',
+    leaning: 'centre',
+    paywall: 'none',
+    feeds: { latest: 'https://www.rfi.fr/fr/rss' },
+  },
+  {
+    id: 'france-24',
+    name: 'France 24',
+    leaning: 'centre',
+    paywall: 'none',
+    feeds: { latest: 'https://www.france24.com/fr/rss' },
+  },
+  {
+    id: 'courrier-international',
+    name: 'Courrier international',
+    leaning: 'centre',
+    paywall: 'partial',
+    feeds: { latest: 'https://www.courrierinternational.com/feed' },
+  },
+  {
+    id: 'lexpress',
+    name: "L'Express",
+    leaning: 'centre',
+    paywall: 'partial',
+    feeds: { latest: 'https://www.lexpress.fr/rss' },
+  },
+  {
+    id: 'la-croix',
+    name: 'La Croix',
+    leaning: 'centre',
+    paywall: 'partial',
+    feeds: { latest: 'https://www.la-croix.com/RSS' },
+  },
+  // ——— Droite ———
+  {
+    id: 'le-figaro',
+    name: 'Le Figaro',
+    leaning: 'droite',
+    paywall: 'partial',
+    feeds: {
+      une: 'https://www.lefigaro.fr/rss/figaro_actualites.xml',
+      latest: 'https://www.lefigaro.fr/rss/figaro_flash-actu.xml',
+    },
+  },
+  {
+    id: 'cnews',
+    name: 'CNews',
+    leaning: 'droite',
+    paywall: 'none',
+    feeds: { latest: 'https://www.cnews.fr/rss.xml' },
+  },
+  {
+    id: 'europe-1',
+    name: 'Europe 1',
+    leaning: 'droite',
+    paywall: 'none',
+    feeds: { latest: 'https://www.europe1.fr/rss.xml' },
+  },
+  {
+    id: 'le-jdd',
+    name: 'Le JDD',
+    leaning: 'droite',
+    paywall: 'partial',
+    feeds: { latest: 'https://www.lejdd.fr/rss.xml' },
+  },
+  {
+    id: 'valeurs-actuelles',
+    name: 'Valeurs actuelles',
+    leaning: 'droite',
+    paywall: 'partial',
+    feeds: { latest: 'https://www.valeursactuelles.com/rss' },
+  },
+];
