@@ -579,9 +579,12 @@ changement est daté et mesuré, et nous ne l'appliquons pas rétroactivement.
 payée ; LeJDD.fr : 88e rang des sites, 3,4 M de visites (août 2026).
 
 **Flux vérifiés (2026-10-06).** `une` <https://www.lejdd.fr/rss/a-la-une.xml> — 200, 9
-articles, ~11 h, **sans image** ; `latest` <https://www.lejdd.fr/rss.xml> — 200, 50
-articles, ~1,5 jour, images partout. Flux complet un peu bruyant (séries, sport) : il ne
-compte qu'en couverture, jamais en front page.
+articles, ~11 h, **sans image** ; `latest` <https://www.lejdd.fr/rss/politique.xml> — 200,
+50 articles, ~7 jours, images partout. Flux actualité (politique/société) retenu plutôt
+que le flux « tous les articles » `rss.xml` (200, 50 articles, ~1,5 jour) : celui-ci mélange
+actualité, séries et ciné et fait entrer du hors-nuit dans l'Édition — comme les recettes de
+TF1, il sera filtré quand la classification (#4) distinguerait news / opinion / live /
+not news.
 
 **Paywall / TDM.** Partiellement payant ; pas de `tdmrep.json` (404).
 
@@ -644,3 +647,8 @@ orientation n'est pas recherchée tant qu'ils ne sont pas dans l'Édition.
    vérifications de flux (`pnpm --filter @prisme/pipeline verify`).
 6. **Les réservations TDM sont informatives** (ADR-0003) : Prisme ne lit que les titres et
    chapeaux publiés dans les flux RSS, qu'il ne stocke jamais.
+7. **Le hors-nuit passe par les flux eux-mêmes** quand c'est possible : flux de rubrique
+   plutôt que flux mixtes (La Croix `/rss/france`, Le JDD `/rss/politique.xml`), car
+   certains éditeurs ne proposent qu'un feu complet (TF1 Info, Le HuffPost). Ce qui
+   traverse encore (météo, recettes, séries) sera retiré de la Couverture par la
+   classification de l'issue #4 (news / opinion / live / not news).

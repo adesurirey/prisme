@@ -1155,7 +1155,7 @@ export const outlets: OutletConfig[] = [
     site: 'https://www.lejdd.fr',
     feeds: {
       une: 'https://www.lejdd.fr/rss/a-la-une.xml',
-      latest: 'https://www.lejdd.fr/rss.xml',
+      latest: 'https://www.lejdd.fr/rss/politique.xml',
     },
     leaningSources: [
       {
@@ -1202,13 +1202,13 @@ export const outlets: OutletConfig[] = [
       },
       {
         kind: 'latest',
-        url: 'https://www.lejdd.fr/rss.xml',
+        url: 'https://www.lejdd.fr/rss/politique.xml',
         checkedAt: CHECKED,
         status: 200,
         items: 50,
-        covers: '~1,5 jour',
+        covers: '~7 jours',
         images: 'all',
-        note: "Flux complet, un peu bruyant (séries, sport) : il ne compte qu'en couverture, jamais en front page.",
+        note: "Flux actualité (politique/société) retenu plutôt que le flux « tous les articles » rss.xml (200, 50 articles, ~1,5 jour) : celui-ci mélange actualité, séries et ciné, et fait entrer du hors-nuit dans l'Édition (comme les recettes de TF1, filtrées par #4).",
       },
     ],
     tdm: { reserved: false, checkedAt: CHECKED, note: 'Pas de tdmrep.json (404).' },
