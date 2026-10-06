@@ -31,9 +31,9 @@ export default function ArticleRow({ article, outlet }: { article: Article; outl
         href={article.url}
         rel="noopener noreferrer"
         target="_blank"
-        className="ml-auto text-[13px] text-muted underline decoration-line decoration-1 underline-offset-4 transition-colors hover:text-ink hover:decoration-faint"
+        className="ml-auto text-[13px] text-muted transition-colors hover:text-ink"
       >
-        Lire sur {name}
+        Lire
         <span aria-hidden="true" className="text-[11px]">
           {'\u00a0'}↗
         </span>
