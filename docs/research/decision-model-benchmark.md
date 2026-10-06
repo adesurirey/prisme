@@ -4,7 +4,7 @@ Sample: 110 hand-labeled headline+teaser pairs, sampled 2026-10-06T20:37:28.330Z
 
 State sent to the models: headline + teaser only, one request carrying two `choice` questions (kind, section) — the same input and shape the pipeline will use in production.
 
-Prompt v2: criteria and instructions in French, with explicit French triggers for not_news (horoscope, jeux/quiz, météo, recette, programme TV, bons plans, sommaires d'émissions…). Round 1 used terse English criteria; its numbers are recorded at the end.
+Prompt v3: criteria and instructions in French, with explicit French triggers for not_news (horoscope, jeux/quiz, météo, recette, programme TV, bons plans, sommaires d'émissions…). Round 1 used terse English criteria; its numbers are recorded at the end.
 
 Winner rule: `not_news` precision first (a false not_news silently drops a real Article), then kind accuracy, then section accuracy; cost and latency only as tie-breaks.
 
@@ -12,8 +12,8 @@ Winner rule: `not_news` precision first (a false not_news silently drops a real 
 
 | Model | Kind acc | not_news P | not_news R | Section acc | Invalid | Avg latency | p95 latency | Input tokens | Cost |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Jev | 82.7% | 72.7% | 47.1% | 84.9% | 0.0% | 439 ms | 515 ms | 100006 | $0.0042 |
-| Clef-flash | 84.5% | 80.0% | 70.6% | 81.7% | 0.0% | 462 ms | 752 ms | 79435 | $0.0071 |
+| Jev | 83.6% | 88.9% | 47.1% | 84.9% | 0.0% | 284 ms | 393 ms | 112766 | $0.0047 |
+| Clef-flash | 84.5% | 91.7% | 64.7% | 81.7% | 0.0% | 356 ms | 745 ms | 91425 | $0.0082 |
 
 ## Jev — kind confusion matrix
 
@@ -21,10 +21,10 @@ Rows = hand label, columns = model prediction.
 
 | | news | opinion | live | not_news |
 | --- | --- | --- | --- | --- |
-| **news** | 74 | 3 | 0 | 2 |
-| **opinion** | 4 | 6 | 0 | 1 |
+| **news** | 79 | 0 | 0 | 0 |
+| **opinion** | 8 | 2 | 0 | 1 |
 | **live** | 0 | 0 | 3 | 0 |
-| **not_news** | 8 | 0 | 1 | 8 |
+| **not_news** | 9 | 0 | 0 | 8 |
 
 ## Clef-flash — kind confusion matrix
 
@@ -32,14 +32,14 @@ Rows = hand label, columns = model prediction.
 
 | | news | opinion | live | not_news |
 | --- | --- | --- | --- | --- |
-| **news** | 71 | 6 | 0 | 2 |
-| **opinion** | 3 | 7 | 0 | 1 |
+| **news** | 71 | 7 | 0 | 1 |
+| **opinion** | 3 | 8 | 0 | 0 |
 | **live** | 0 | 0 | 3 | 0 |
-| **not_news** | 3 | 1 | 1 | 12 |
+| **not_news** | 4 | 1 | 1 | 11 |
 
 ## Decision
 
-Winner: **Clef-flash** — not_news precision 80.0%, kind accuracy 84.5%, section accuracy 81.7%.
+Winner on not_news precision: **Clef-flash** (91.7% vs 88.9%). Production nevertheless switched to **Jev** (issue #17): prompt v3 leaves Clef-flash with 7/85 news misread as opinion — the misclassification that empties a Story's article count and Coverage — while Jev has zero. Kind accuracy and section accuracy are within a point; the not_news precision cost is 3 points.
 
 ## Reproduce
 
@@ -49,15 +49,3 @@ pnpm benchmark:grade    # needs OPENROUTER_API_KEY in env (or direct JEV_API_KEY
 ```
 
 Keys live in the local env or GitHub Actions secrets only — never in the repo.
-## Round 1 (English criteria) — history
-
-Same sample and grading, prompt v1 (terse English criteria, English instructions):
-
-| Model | Kind acc | not_news P | not_news R | Section acc | Avg latency | Cost |
-| --- | --- | --- | --- | --- | --- | --- |
-| Jev | 80.0% | 71.4% | 29.4% | 87.1% | 412 ms | $0.0036 |
-| Clef-flash | 76.4% | 100.0% | 17.6% | 78.5% | 477 ms | $0.0063 |
-
-The French v2 criteria lifted not_news recall from 17.6%→70.6% (Clef-flash) and
-29.4%→47.1% (Jev), and kind accuracy for both, at a small precision cost for
-Clef-flash (100%→80%).
