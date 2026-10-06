@@ -1,24 +1,44 @@
 ---
 import Base from '../layouts/Base.astro';
 import StoryCard from '../components/StoryCard';
+import LeaningBadge from '../components/LeaningBadge';
 import { loadEdition, loadOutlets } from '../data';
+import type { Leaning } from '@prisme/domain';
 
 const edition = await loadEdition();
 const outlets = await loadOutlets();
 
 const builtAt = new Date(edition.builtAt).toLocaleString('fr-FR', {
   weekday: 'long',
+  day: 'numeric',
+  month: 'long',
   hour: '2-digit',
   minute: '2-digit',
 });
+
+const perLeaning = (leaning: Leaning) => outlets.filter((o) => o.leaning === leaning).length;
 ---
 
 <Base title="L'édition du jour">
-  <h1 class="mb-1 text-2xl font-bold">L'édition du jour</h1>
-  <p class="mb-6 text-sm text-zinc-500">
-    {edition.stories.length} sujets · mis à jour le {builtAt}
-  </p>
-  <div class="flex flex-col gap-4">
+  <section class="pt-10 pb-8">
+    <h1 class="text-[22px] font-semibold tracking-[-0.02em]">L'édition du jour</h1>
+    <p class="mt-1.5 text-[13px] text-muted">
+      {edition.stories.length} sujets, mise à jour le {builtAt}. Refaite automatiquement toutes
+      les deux heures.
+    </p>
+    <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+      {
+        (['gauche', 'centre', 'droite'] as Leaning[]).map((leaning) => (
+          <span class="flex items-center gap-1.5 text-[13px] text-muted">
+            <LeaningBadge leaning={leaning} />
+            <span class="text-faint">{perLeaning(leaning)} outlets</span>
+          </span>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="border-t border-line" aria-label="Sujets de l'édition">
     {edition.stories.map((story) => <StoryCard story={story} outlets={outlets} />)}
-  </div>
+  </section>
 </Base>

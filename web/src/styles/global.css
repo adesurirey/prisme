@@ -1,1 +1,78 @@
 @import 'tailwindcss';
+
+/*
+ * Prisme design tokens — Linear-like: monochrome chrome, hairlines,
+ * and color reserved for what it means (the three Leanings).
+ * Light and dark follow the system via prefers-color-scheme.
+ */
+:root {
+  color-scheme: light dark;
+
+  --canvas: #fcfcfc;
+  --surface: #ffffff;
+  --line: rgba(17, 17, 20, 0.08);
+  --line-strong: rgba(17, 17, 20, 0.18);
+  --ink: #1b1b1f;
+  --muted: #6f6f76;
+  --faint: #a1a1aa;
+
+  --gauche: #d64562;
+  --centre: #b98a1b;
+  --droite: #2f7fd1;
+
+  --hover: rgba(17, 17, 20, 0.035);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #0e0e10;
+    --surface: #151517;
+    --line: rgba(255, 255, 255, 0.09);
+    --line-strong: rgba(255, 255, 255, 0.22);
+    --ink: #ededf0;
+    --muted: #9b9ba3;
+    --faint: #6c6c75;
+
+    --gauche: #f07c8f;
+    --centre: #d9a23f;
+    --droite: #5fa5e3;
+
+    --hover: rgba(255, 255, 255, 0.045);
+  }
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-gauche: var(--gauche);
+  --color-centre: var(--centre);
+  --color-droite: var(--droite);
+  --color-hover: var(--hover);
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-feature-settings: 'cv05' 1; /* friendlier Inter lowercase l */
+}
+
+/* Visible keyboard focus, both schemes */
+:focus-visible {
+  outline: 2px solid var(--line-strong);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

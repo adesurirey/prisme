@@ -1,23 +1,19 @@
 import type { Leaning } from '@prisme/domain';
+import { leaningLabels } from './CoverageBar';
 
-const styles: Record<Leaning, string> = {
-  gauche: 'bg-rose-100 text-rose-800 border-rose-200',
-  centre: 'bg-amber-100 text-amber-800 border-amber-200',
-  droite: 'bg-sky-100 text-sky-800 border-sky-200',
-};
-
-const labels: Record<Leaning, string> = {
-  gauche: 'Gauche',
-  centre: 'Centre',
-  droite: 'Droite',
-};
-
+/**
+ * A Leaning as information: a colored dot (the only colored element besides
+ * the Coverage bar) followed by the neutral label.
+ */
 export default function LeaningBadge({ leaning }: { leaning: Leaning }) {
   return (
-    <span
-      className={`inline-block rounded border px-1.5 py-0.5 text-xs font-medium ${styles[leaning]}`}
-    >
-      {labels[leaning]}
+    <span className="inline-flex items-center gap-1.5 text-[13px] text-muted">
+      <span
+        aria-hidden="true"
+        className="inline-block size-2 rounded-full"
+        style={{ background: `var(--${leaning})` }}
+      />
+      {leaningLabels[leaning]}
     </span>
   );
 }

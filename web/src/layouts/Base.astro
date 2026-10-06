@@ -1,4 +1,5 @@
 ---
+import '@fontsource-variable/inter';
 import '../styles/global.css';
 import { withBase } from '../data';
 
@@ -7,7 +8,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'La même actualité, vue par tous les bords politiques.' } = Astro.props;
+const { title, description = "La même actualité, vue par tous les bords politiques." } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,20 +17,37 @@ const { title, description = 'La même actualité, vue par tous les bords politi
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcfcfc" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e0e10" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3 22 21H2Z' fill='%23b98a1b' opacity='.9'/%3E%3Cpath d='M12 3 2 21h8Z' fill='%23d64562' opacity='.9'/%3E%3Cpath d='M12 3l10 18h-8Z' fill='%232f7fd1' opacity='.9'/%3E%3C/svg%3E"
+    />
     <title>{title} · Prisme</title>
   </head>
-  <body class="min-h-screen bg-zinc-50 text-zinc-900">
-    <header class="border-b border-zinc-200 bg-white">
-      <div class="mx-auto flex max-w-3xl items-baseline gap-4 px-4 py-4">
-        <a href={withBase('/')} class="text-xl font-bold tracking-tight">Prisme</a>
-        <p class="hidden text-sm text-zinc-500 sm:block">La même actualité, vue par tous les bords.</p>
+  <body class="min-h-screen bg-canvas font-sans text-ink antialiased">
+    <header class="sticky top-0 z-10 border-b border-line bg-canvas/90 backdrop-blur">
+      <div class="mx-auto flex h-14 max-w-4xl items-center gap-3 px-5">
+        <a href={withBase('/')} class="flex items-center gap-2.5" aria-label="Prisme — accueil">
+          <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3 22 21H2Z" fill="var(--centre)" opacity=".85" />
+            <path d="M12 3 2 21h8Z" fill="var(--gauche)" opacity=".85" />
+            <path d="M12 3l10 18h-8Z" fill="var(--droite)" opacity=".85" />
+          </svg>
+          <span class="text-[15px] font-semibold tracking-tight">Prisme</span>
+        </a>
+        <p class="ml-auto hidden text-[13px] text-muted sm:block">
+          La même actualité, vue par tous les bords
+        </p>
       </div>
     </header>
-    <main class="mx-auto max-w-3xl px-4 py-6">
+    <main class="mx-auto max-w-4xl px-5 pb-16">
       <slot />
     </main>
-    <footer class="border-t border-zinc-200 py-6 text-center text-xs text-zinc-500">
-      Prisme — prototype. Les liens renvoient vers les articles des outlets.
+    <footer class="border-t border-line py-8">
+      <p class="mx-auto max-w-4xl px-5 text-[13px] text-faint">
+        Prototype — les liens renvoient vers les articles des outlets.
+      </p>
     </footer>
   </body>
 </html>
