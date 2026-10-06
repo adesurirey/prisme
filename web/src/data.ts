@@ -40,13 +40,6 @@ export async function loadStory(slug: string): Promise<Story | undefined> {
   }
 }
 
-/** French display labels for Leanings. */
-export const leaningLabels: Record<Outlet['leaning'], string> = {
-  gauche: 'Gauche',
-  centre: 'Centre',
-  droite: 'Droite',
-};
-
 /** Link helper for the GitHub Pages base path. */
 export function withBase(p: string): string {
   return `${import.meta.env.BASE_URL.replace(/\/$/, '')}${p}`;

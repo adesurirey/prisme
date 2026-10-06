@@ -98,4 +98,21 @@ describe('parseFeed', () => {
 
     expect(parseFeed(xml)[0].teaser).toContain('Un paragraphe.');
   });
+
+  it('decodes HTML entities in headline, url and teaser', () => {
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+      <rss version="2.0"><channel>
+        <item>
+          <title><![CDATA[Novak Djokovic d&#xE9;croche &#xE0; P&#xE9;kin]]></title>
+          <link>https://exemple.fr/a?x=1&amp;y=2</link>
+          <description><![CDATA[&lt;p&gt;Un &amp; deux&lt;/p&gt;]]></description>
+        </item>
+      </channel></rss>`;
+
+    const items = parseFeed(xml);
+
+    expect(items[0].headline).toBe('Novak Djokovic décroche à Pékin');
+    expect(items[0].url).toBe('https://exemple.fr/a?x=1&y=2');
+    expect(items[0].teaser).toBe('<p>Un & deux</p>');
+  });
 });

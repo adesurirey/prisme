@@ -1,6 +1,5 @@
 import type { Outlet, Story } from '@prisme/domain';
-import LeaningBadge from './LeaningBadge';
-import PaywallBadge from './PaywallBadge';
+import ArticleRow from './ArticleRow';
 import { withBase } from '../data';
 
 /**
@@ -17,24 +16,11 @@ export default function StoryCard({ story, outlets }: { story: Story; outlets: O
         </a>
       </h2>
       <ul className="mt-3 flex flex-col gap-2">
-        {story.articles.map((article) => {
-          const outlet = byId.get(article.outletId);
-          return (
-            <li key={article.id} className="flex flex-wrap items-center gap-2 text-sm">
-              <LeaningBadge leaning={outlet?.leaning ?? 'centre'} />
-              <span className="font-medium">{outlet?.name ?? article.outletId}</span>
-              <PaywallBadge paywall={outlet?.paywall ?? 'none'} />
-              <a
-                href={article.url}
-                rel="noopener noreferrer"
-                target="_blank"
-                className="ml-auto text-blue-700 underline-offset-2 hover:underline"
-              >
-                Lire sur {outlet?.name ?? article.outletId}
-              </a>
-            </li>
-          );
-        })}
+        {story.articles.map((article) => (
+          <li key={article.id}>
+            <ArticleRow article={article} outlet={byId.get(article.outletId)} />
+          </li>
+        ))}
       </ul>
     </article>
   );
