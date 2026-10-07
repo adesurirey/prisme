@@ -25,14 +25,6 @@ flowchart LR
     I --> D
 ```
 
-- **Incremental builds** — only new ids hit the models; the cache and Story
-  files are reused otherwise, and only changed files are rewritten and
-  committed.
-- **Never stored** — feeds give headline + teaser only; nothing about a teaser
-  reaches disk.
-- **Graceful degradation** — no model keys? Builds still succeed: Articles stay
-  unclassified and ungrouped.
-
 Three cheap models run the show; each pinned for traceability.
 
 | Step | Model | Provider |
@@ -42,5 +34,4 @@ Three cheap models run the show; each pinned for traceability.
 | Summarize | Flash-Lite (`gemini-3.5-flash-lite`) | Gemini free tier |
 
 Leanings are set by hand, one per Outlet, backed by sources — never classified
-by a model. Builds without model keys still succeed: Articles stay unclassified
-and ungrouped rather than the build failing.
+by a model.
