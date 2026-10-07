@@ -13,11 +13,14 @@ export default function StoryImage({
   outlet,
   className,
   sizes,
+  eager,
 }: {
   article?: Article;
   outlet?: Outlet;
   className?: string;
   sizes?: string;
+  /** Hero usage: load without lazy-loading (above the fold). */
+  eager?: boolean;
 }) {
   const frame = className ?? '';
   if (!article?.imageUrl) {
@@ -42,7 +45,8 @@ export default function StoryImage({
         title={caption}
         sizes={sizes}
         className="relative h-full w-full object-cover"
-        loading="lazy"
+        loading={eager ? 'eager' : 'lazy'}
+        {...(eager ? { fetchpriority: 'high' } : {})}
       />
     </span>
   );
