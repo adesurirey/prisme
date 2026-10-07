@@ -157,7 +157,7 @@ const description =
       visible.map(({ leaning, head, followUps }) => (
         <section class="mt-10">
           {leaning && (
-            <h2 class="mb-1 flex items-center gap-2.5">
+            <h2 class="mb-1 flex items-center gap-2.5 border-b border-line pb-2">
               <LeaningBadge leaning={leaning} />
               <span class="text-[12px] text-faint">
                 {counts[leaning]} média{counts[leaning] > 1 ? 's' : ''}

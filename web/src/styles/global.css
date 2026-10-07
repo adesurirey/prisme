@@ -68,6 +68,23 @@ body {
   border-radius: 2px;
 }
 
+/*
+ * Disclosure reveal (ArticleList follow-ups): the list is prerendered
+ * with the `hidden` attribute; when it becomes visible, @starting-style
+ * provides the pre-transition state so it fades and slides in. Pure CSS,
+ * no JS timing; browsers without @starting-style just show it instantly.
+ */
+.reveal {
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
