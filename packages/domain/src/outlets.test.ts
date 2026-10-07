@@ -83,6 +83,15 @@ describe('outlet config', () => {
     }
   });
 
+  it('adds Marianne to the Edition, with a Centre Leaning and out of exclusions (issue #10)', () => {
+    const marianne = outlets.find((outlet) => outlet.id === 'marianne');
+    expect(marianne, 'marianne enters the Edition').toBeDefined();
+    expect(marianne!.leaning).toBe('centre');
+    expect(excludedOutlets.map((excluded) => excluded.id)).not.toContain(
+      'marianne',
+    );
+  });
+
   it('publishes only the public Outlet shape in data/outlets.json', () => {
     for (const outlet of publicOutlets()) {
       expect(Object.keys(outlet).sort()).toEqual([
