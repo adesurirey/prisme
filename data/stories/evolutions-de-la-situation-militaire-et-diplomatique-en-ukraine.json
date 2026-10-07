@@ -5,6 +5,42 @@
   "createdAt": "2026-10-06T22:04:02.659Z",
   "articles": [
     {
+      "id": "12023f3b031b",
+      "outletId": "france-24",
+      "headline": "Une nouvelle attaque de missiles russes contre l'Ukraine fait au moins 11 morts",
+      "url": "https://www.france24.com/fr/europe/20261007-ukraine-attaque-missiles-russie-kiev-deux-morts-frappes-infrastructures-%C3%A9nergie",
+      "publishedAt": "2026-10-07T06:01:01.000Z",
+      "imageUrl": "https://s.france24.com/media/display/8bc7294e-c211-11f1-8aec-ff8cff4603f0/w:1024/p:16x9/2026-10-07T053758Z-164245437-RC22YNA4P69K-RTRMADP-3-UKRAINE-CRISIS-ATTACK-KYIV.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "1dd84789cf96",
+      "outletId": "rfi",
+      "headline": "«Le professeur a dit qu’il y avait le feu»: à Kiev, l'école se vit au rythme des frappes russes",
+      "url": "https://www.rfi.fr/fr/europe/20261007-le-professeur-a-dit-qu-il-y-avait-le-feu-%C3%A0-kiev-l-%C3%A9cole-se-vit-au-rythme-des-frappes-russes",
+      "publishedAt": "2026-10-07T05:44:17.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/54bfec68-c20e-11f1-8076-73f176a2394c/w:1024/p:16x9/AP26244422935627.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "0c72b5230094",
+      "outletId": "20-minutes",
+      "headline": "EN DIRECT Guerre en Ukraine : Au moins sept morts dans des frappes russes, à Kiev et dans le nord du pays...",
+      "url": "https://www.20minutes.fr/monde/ukraine/4252020-20261007-direct-guerre-ukraine-attaque-missiles-fait-deux-morts-kiev?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-07T04:31:36.000Z",
+      "imageUrl": "https://img.20mn.fr/UB9Y4vUNTmW3Yie0g68-DCk/1200x768_le-president-ukrainien-volodymyr-zelenskyy-s-adresse-a-des-journalistes-apres-une-rencontre-avec-le-chancelier-federal-allemand-friedrich-merz-qui-s-est-rendu-dans-la-capitale-kiev-en-ukraine-le-4-octobre-2026-photo-de-volodymyr-tarasov-ukrinform-ukr-inform-agency-ukr-inform0153-credit-volodymyr-tarasov-sipa-2610061707",
+      "frontPage": true,
+      "kind": "live",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "559e1fe2a5aa",
       "outletId": "le-figaro",
       "headline": "Russie : immense incendie sur un pétrolier au large de Sotchi, après une attaque de drones ukrainiens",
@@ -22,7 +58,7 @@
       "url": "https://www.lemonde.fr/international/live/2026/10/06/en-direct-guerre-en-ukraine-des-relations-fortes-entre-kiev-et-israel-pourraient-certainement-contribuer-a-une-securite-commune-estime-volodymyr-zelensky_6787996_3210.html",
       "publishedAt": "2026-10-06T21:36:26.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/06/1123/0/7893/3946/644/322/60/0/ada672c_ftp-1-atjj15vytmlw-5282328-01-06.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -45,7 +81,7 @@
       "url": "https://www.la-croix.com/international/ukraine-russie-jour-1682-point-conflit-ukrainien-poutine-aujourdhui-20261006",
       "publishedAt": "2026-10-06T19:18:24.000Z",
       "imageUrl": "https://i.la-croix.com/x/2026/10/06/2553910-des-secouristes-interviennent-sur-un-immeuble-resi.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -63,5 +99,19 @@
       "everFrontPage": true
     }
   ],
-  "section": "world"
+  "section": "world",
+  "summaries": {
+    "centre": [
+      "De nouvelles frappes de missiles russes ont touché plusieurs régions ukrainiennes, faisant de nombreuses victimes civiles et endommageant des infrastructures énergétiques ainsi que des établissements scolaires.",
+      "Le dirigeant ukrainien a évoqué des liens renforcés potentiels avec Israël pour améliorer la sécurité commune tout en prévenant d'une menace imminente d'offensive russe de grande ampleur.",
+      "Des ripostes ukrainiennes par drones ont ciblé le territoire russe, tandis que Kiev continue d'étendre ses dispositifs de défense aérienne et de condamner le positionnement de certains États."
+    ],
+    "droite": [
+      "Les autorités ukrainiennes alertent sur la préparation d'une offensive russe d'envergure contre le pays.",
+      "Un important incendie s'est déclaré sur un navire pétrolier près de Sotchi à la suite d'une frappe de drone attribuée à l'Ukraine."
+    ]
+  },
+  "differences": "La tendance centriste se focalise essentiellement sur le bilan humain et matériel des bombardements russes massifs en territoire ukrainien ainsi que sur les initiatives diplomatiques et les ripostes de Kiev. De son côté, la tendance de droite met particulièrement en avant la riposte ukrainienne en territoire russe à travers l'attaque de drones contre un pétrolier près de Sotchi, tout en rapportant également les craintes ukrainiennes d'une future offensive.",
+  "promptVersion": "sum-1",
+  "summarizedArticleCount": 8
 }

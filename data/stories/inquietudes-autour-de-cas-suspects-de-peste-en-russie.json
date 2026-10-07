@@ -5,6 +5,18 @@
   "createdAt": "2026-10-06T22:04:02.659Z",
   "articles": [
     {
+      "id": "0656df73d1b9",
+      "outletId": "lexpress",
+      "headline": "Soupçon de peste en Russie : pourquoi il faut raison garder, par le Pr Antoine Flahault",
+      "url": "https://www.lexpress.fr/sciences-sante/soupcon-de-peste-en-russie-pourquoi-il-faut-raison-garder-par-le-pr-antoine-flahault-U66A7PGQHVDGNK2K5OCGHNB52Q/",
+      "publishedAt": "2026-10-07T04:45:00.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/JW7GIRHW4VDYVKQ2GNQLEYHVLU.JPG?auth=51bf6e51cb569c00325ba80f04d8b22b4be0d49db531cdf47732cfef74b711ad&smart=true&width=1850&height=1184",
+      "frontPage": true,
+      "kind": "opinion",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
       "id": "50859628c509",
       "outletId": "le-figaro",
       "headline": "Soupçon de peste en Russie : le chef de l'OMS réclame de la «transparence»",
@@ -44,11 +56,25 @@
       "url": "https://www.20minutes.fr/monde/4251867-20261006-pays-encore-cas-peste?at_medium=display&at_campaign=149",
       "publishedAt": "2026-10-06T19:05:17.000Z",
       "imageUrl": "https://img.20mn.fr/Urf7pHzSQ16yes0RggJtwCk/1200x768_sur-cette-photo-prise-le-dimanche-5-avril-2020-la-technicienne-de-laboratoire-irene-ooko-s-occupe-d-un-patient-qui-cherche-un-test-pour-le-nouveau-coronavirus-responsable-de-la-covid-19-au-laboratoire-pathologists-lancet-kenya-a-nairobi-au-kenya-l-entreprise-qui-propose-des-tests-aux-patients-sur-recommandation-d-un-medecin-devait-auparavant-envoyer-des-echantillons-en-afrique-du-sud-pour-y-etre-testes-mais-elle-effectue-actuellement-les-tests-en-interne-au-kenya-photo-ap-brian-inganga-nai104-20097272579299-2004060941",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
     }
   ],
-  "section": "world"
+  "section": "world",
+  "summaries": {
+    "centre": [
+      "Un expert appelle à la modération face aux craintes sanitaires et invite à ne pas céder à l'alarmisme.",
+      "Des analyses cartographient la persistance historique et géographique de la maladie à travers le monde."
+    ],
+    "droite": [
+      "L'Organisation mondiale de la santé exige des autorités russes une transparence totale sur l'incident.",
+      "La mort d'une technicienne de laboratoire en Sibérie accentue le climat de suspicion et les critiques sur la gestion officielle.",
+      "Une intervention diplomatique de haut niveau est envisagée entre la Maison-Blanche et le Kremlin pour aborder la situation."
+    ]
+  },
+  "differences": "Le centre privilégie une approche pédagogique et rassurante en contextualisant la maladie à l'échelle mondiale, notamment par la voix d'experts qui invitent à la mesure. À l'inverse, la droite met l'accent sur les tensions géopolitiques et diplomatiques, en soulignant les exigences de transparence de l'Organisation mondiale de la santé et les réactions des dirigeants internationaux face aux manquements perçus dans la communication russe.",
+  "promptVersion": "sum-1",
+  "summarizedArticleCount": 5
 }
