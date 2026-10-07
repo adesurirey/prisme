@@ -1,4 +1,4 @@
-import { readFile, readdir } from 'node:fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import type { Edition, Outlet, Story } from '@prisme/domain';
 import { publicOutlets } from '@prisme/domain';
@@ -12,12 +12,17 @@ async function readDataFile(relative: string): Promise<string> {
   const candidates = ['data', path.join('..', 'data')];
   for (const candidate of candidates) {
     try {
-      return await readFile(path.resolve(process.cwd(), candidate, relative), 'utf8');
+      return await readFile(
+        path.resolve(process.cwd(), candidate, relative),
+        'utf8',
+      );
     } catch {
       // Try the next candidate.
     }
   }
-  throw new Error(`data file not found: ${relative} (looked in ${candidates.join(', ')})`);
+  throw new Error(
+    `data file not found: ${relative} (looked in ${candidates.join(', ')})`,
+  );
 }
 
 export async function loadEdition(): Promise<Edition> {
@@ -42,7 +47,9 @@ export async function loadAllStoryFiles(): Promise<Story[]> {
     const stories: Story[] = [];
     for (const name of names) {
       try {
-        const raw = JSON.parse(await readFile(path.join(dir, name), 'utf8')) as Partial<Story>;
+        const raw = JSON.parse(
+          await readFile(path.join(dir, name), 'utf8'),
+        ) as Partial<Story>;
         if (
           typeof raw.id === 'string' &&
           typeof raw.slug === 'string' &&

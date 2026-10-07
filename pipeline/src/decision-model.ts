@@ -11,14 +11,21 @@
  * The benchmark (docs/research/decision-model-benchmark.md) picked
  * Clef-flash; see winnerModelFromEnv().
  */
-import { ARTICLE_KINDS, SECTION_LABELS, SECTIONS, type ArticleKind, type Section } from '@prisme/domain';
+import {
+  ARTICLE_KINDS,
+  type ArticleKind,
+  SECTION_LABELS,
+  SECTIONS,
+  type Section,
+} from '@prisme/domain';
 import { RETRYABLE_STATUS } from './http.ts';
 
 export type { ArticleKind, Section };
 
 const KIND_CRITERIA: Record<ArticleKind, string> = {
   news: "Un fait d'actualité est rapporté : événement, déclaration, chiffre, résultat, enquête, reportage. Sont aussi de l'info les expliquations journalistiques (« pourquoi », « qu'est-ce que », un article de type « analyse » signé par la rédaction), les reportages photo et diaporamas « en images », même sans événement daté du jour",
-  opinion: "Prise de position d'auteur : un genre d'opinion explicite — éditorial, tribune, chronique, billet d'humeur, op-ed — où l'auteur défend sa propre thèse. Une analyse ou explication produite par la rédaction ou un journaliste reste de l'info tant qu'aucun genre d'opinion n'est identifiable",
+  opinion:
+    "Prise de position d'auteur : un genre d'opinion explicite — éditorial, tribune, chronique, billet d'humeur, op-ed — où l'auteur défend sa propre thèse. Une analyse ou explication produite par la rédaction ou un journaliste reste de l'info tant qu'aucun genre d'opinion n'est identifiable",
   live: "Couverture en direct d'un événement en cours (live blog, « en direct »)",
   not_news:
     "Aucun fait d'actualité : horoscope, astro, météo, jeux/quiz/mots croisés/sudoku, recette de cuisine, programme TV, bons plans/shopping/concours, guide ou tutoriel, sommaire ou récapitulatif d'émissions (invités, débats à venir, rediffusion)",
@@ -28,7 +35,8 @@ const SECTION_CRITERIA: Record<Section, string> = {
   politics: 'Politique française, institutions, élections, lois',
   world: 'International : actualité étrangère, diplomatie, conflits',
   economy: 'Économie : entreprises, marchés, emploi, consommation',
-  society: 'Société : éducation, santé, justice, immigration, famille, religion, débats de société',
+  society:
+    'Société : éducation, santé, justice, immigration, famille, religion, débats de société',
   sport: 'Sport',
   culture: 'Culture : cinéma, musique, livres, arts, people, médias',
   science: 'Sciences et tech : science, technologie, IA, espace, environnement',
@@ -71,7 +79,10 @@ export interface DecisionModel {
   label: string;
   /** USD per input token — used when the API reports no cost of its own. */
   costPerInputToken: number;
-  classify(state: { headline: string; teaser: string }): Promise<Classification | null>;
+  classify(state: {
+    headline: string;
+    teaser: string;
+  }): Promise<Classification | null>;
 }
 
 /** Raw per-question answer as returned by both providers. */
@@ -114,18 +125,20 @@ export function parseMembershipAnswer(answers: unknown): boolean | null {
  * Extract and validate the two answers. Returns null when an answer is
  * missing or out-of-list — the caller retries once, then gives up.
  */
-export function parseAnswers(
-  answers: unknown,
-): {
+export function parseAnswers(answers: unknown): {
   kind: ArticleKind;
   section: Section | null;
   kindProbabilities?: Record<string, number>;
   sectionProbabilities?: Record<string, number>;
 } | null {
   if (answers == null || typeof answers !== 'object') return null;
-  const { kind: kindField, section: sectionField } = answers as Record<string, unknown>;
+  const { kind: kindField, section: sectionField } = answers as Record<
+    string,
+    unknown
+  >;
   const kindAnswer = choiceOf(kindField);
-  if (!kindAnswer || !ARTICLE_KINDS.includes(kindAnswer.choice as ArticleKind)) return null;
+  if (!kindAnswer || !ARTICLE_KINDS.includes(kindAnswer.choice as ArticleKind))
+    return null;
   const kind = kindAnswer.choice as ArticleKind;
   const sectionAnswer = choiceOf(sectionField);
   const validSection =
@@ -166,14 +179,21 @@ async function callTyped<T>(
   body: Record<string, unknown>,
   state: { headline: string; teaser: string },
   parse: (answers: unknown) => T | null,
-): Promise<(T & { inputTokens: number; elapsedMs: number; costUsd?: number }) | null> {
-  const stateText = state.teaser ? `${state.headline}\n${state.teaser}` : state.headline;
+): Promise<
+  (T & { inputTokens: number; elapsedMs: number; costUsd?: number }) | null
+> {
+  const stateText = state.teaser
+    ? `${state.headline}\n${state.teaser}`
+    : state.headline;
   const started = Date.now();
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
       const response = await fetch(url, {
         method: 'POST',
-        headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({ ...body, state: stateText }),
         signal: AbortSignal.timeout(30_000),
       });
@@ -184,7 +204,9 @@ async function callTyped<T>(
           continue;
         }
         // 401/422 and the like are config errors: fail fast, no retry.
-        const error = new Error(`${label} HTTP ${response.status}: ${text.slice(0, 200)}`);
+        const error = new Error(
+          `${label} HTTP ${response.status}: ${text.slice(0, 200)}`,
+        );
         (error as Error & { fatal?: boolean }).fatal = true;
         throw error;
       }
@@ -200,7 +222,8 @@ async function callTyped<T>(
       return {
         ...parsed,
         inputTokens: data.usage?.input_tokens ?? 0,
-        costUsd: typeof data.usage?.cost === 'number' ? data.usage.cost : undefined,
+        costUsd:
+          typeof data.usage?.cost === 'number' ? data.usage.cost : undefined,
         elapsedMs: Date.now() - started,
       };
     } catch (error) {
@@ -234,7 +257,10 @@ export function jevModel(apiKey: string): DecisionModel {
   };
 }
 
-export function clefFlashModel(apiKey: string, accountId: string): DecisionModel {
+export function clefFlashModel(
+  apiKey: string,
+  accountId: string,
+): DecisionModel {
   return {
     label: 'Clef-flash',
     costPerInputToken: COST_PER_INPUT_TOKEN[OPENROUTER_MODELS.clefFlash],
@@ -281,7 +307,11 @@ export const WINNER = {
   label: 'Jev',
 } as const;
 
-export function openRouterModel(apiKey: string, id: string, label: string): DecisionModel {
+export function openRouterModel(
+  apiKey: string,
+  id: string,
+  label: string,
+): DecisionModel {
   return {
     label,
     costPerInputToken: COST_PER_INPUT_TOKEN[id] ?? 0,
@@ -305,21 +335,30 @@ export function openRouterModel(apiKey: string, id: string, label: string): Deci
  */
 export function winnerModelFromEnv(): DecisionModel | null {
   if (!process.env.OPENROUTER_API_KEY) return null;
-  return openRouterModel(process.env.OPENROUTER_API_KEY, WINNER.model, WINNER.label);
+  return openRouterModel(
+    process.env.OPENROUTER_API_KEY,
+    WINNER.model,
+    WINNER.label,
+  );
 }
 
 /** The Membership check (issue #5): Jev answers yes/no about one (Article, Story) pair. */
 export interface MembershipChecker {
   label: string;
   /** true = belongs; false = does not; null = failed (treated as “no”). */
-  belongs(story: { title: string; section?: Section }, article: { headline: string; teaser: string }): Promise<boolean | null>;
+  belongs(
+    story: { title: string; section?: Section },
+    article: { headline: string; teaser: string },
+  ): Promise<boolean | null>;
 }
 
 function membershipModel(apiKey: string): MembershipChecker {
   return {
     label: 'Jev',
     async belongs(story, article) {
-      const section = story.section ? ` (${SECTION_LABELS[story.section]})` : '';
+      const section = story.section
+        ? ` (${SECTION_LABELS[story.section]})`
+        : '';
       const headline = `Article : ${article.headline}`;
       const teaser = article.teaser ? `\n${article.teaser}` : '';
       return callTyped(

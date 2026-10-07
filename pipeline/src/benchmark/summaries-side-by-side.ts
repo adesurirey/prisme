@@ -4,10 +4,10 @@ import { outlets } from '@prisme/domain';
 import { collect } from '../collect.ts';
 import { fetchFeed } from '../http.ts';
 import {
-  SUMMARIES_PROMPT_VERSION,
   geminiSummariesModel,
-  updateSummaries,
+  SUMMARIES_PROMPT_VERSION,
   type SummaryModel,
+  updateSummaries,
 } from '../summarize.ts';
 
 /**
@@ -37,7 +37,9 @@ async function main(): Promise<void> {
   // The corpus is the real, classified Edition written by the last build —
   // re-grouping here would run without the Decision model, and unclassified
   // Articles have no Kind, hence no Coverage, hence no Summaries.
-  const edition: Edition = JSON.parse(await readFile(new URL('edition.json', DATA_DIR), 'utf8'));
+  const edition: Edition = JSON.parse(
+    await readFile(new URL('edition.json', DATA_DIR), 'utf8'),
+  );
   const { teasers } = await collect(outlets, fetchFeed, now);
   const outletById = new Map(outlets.map((o) => [o.id, o]));
   const corpus = edition.stories.slice(0, storyCount);
@@ -58,7 +60,12 @@ async function main(): Promise<void> {
       { label: 'Flash', model: FLASH },
     ]) {
       const client: SummaryModel = geminiSummariesModel(apiKey, model, label);
-      const working: typeof story = { ...story, summaries: undefined, differences: undefined, summarizedArticleCount: 0 };
+      const working: typeof story = {
+        ...story,
+        summaries: undefined,
+        differences: undefined,
+        summarizedArticleCount: 0,
+      };
       const started = Date.now();
       const outcome = await updateSummaries({
         stories: [working],
@@ -67,12 +74,21 @@ async function main(): Promise<void> {
         model: client,
         promptVersion: SUMMARIES_PROMPT_VERSION,
       });
-      results.push({ label, model, ms: Date.now() - started, outcome, story: working });
+      results.push({
+        label,
+        model,
+        ms: Date.now() - started,
+        outcome,
+        story: working,
+      });
     }
 
     lines.push(`## ${story.title} (${story.articles.length} Articles)`, '');
     for (const r of results) {
-      lines.push(`### ${r.label} (\`${r.model}\`) — ${r.ms} ms, ${r.outcome.calls} call(s)`, '');
+      lines.push(
+        `### ${r.label} (\`${r.model}\`) — ${r.ms} ms, ${r.outcome.calls} call(s)`,
+        '',
+      );
       for (const leaning of ['gauche', 'centre', 'droite'] as const) {
         const bullets = r.story.summaries?.[leaning];
         if (!bullets?.length) continue;

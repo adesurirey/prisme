@@ -1,15 +1,15 @@
 import { describe, expect, it } from 'vitest';
-import type { Article, Outlet, Story } from './index.ts';
 import {
   blindspots,
-  coverageCounts,
   countedArticles,
+  coverageCounts,
   frontPageOutlets,
   isReporting,
   newestFirst,
   pickStoryImage,
   reportingOutletIds,
 } from './coverage.ts';
+import type { Article, Outlet, Story } from './index.ts';
 
 /**
  * The Coverage and Blindspot rules (issue #6): Coverage counts distinct
@@ -71,7 +71,11 @@ describe('coverageCounts', () => {
       article('c', { outletId: 'centre-2', kind: 'live' }),
       article('d', { outletId: 'droite-1', kind: 'news' }),
     ];
-    expect(coverageCounts(articles, byId)).toEqual({ gauche: 0, centre: 2, droite: 1 });
+    expect(coverageCounts(articles, byId)).toEqual({
+      gauche: 0,
+      centre: 2,
+      droite: 1,
+    });
   });
 
   it('excludes Opinion pieces from the counts', () => {
@@ -79,12 +83,20 @@ describe('coverageCounts', () => {
       article('a', { outletId: 'gauche-1', kind: 'opinion' }),
       article('b', { outletId: 'centre-1', kind: 'news' }),
     ];
-    expect(coverageCounts(articles, byId)).toEqual({ gauche: 0, centre: 1, droite: 0 });
+    expect(coverageCounts(articles, byId)).toEqual({
+      gauche: 0,
+      centre: 1,
+      droite: 0,
+    });
   });
 
   it('ignores Outlets missing from the config rather than guessing a Leaning', () => {
     const articles = [article('a', { outletId: 'inconnu', kind: 'news' })];
-    expect(coverageCounts(articles, byId)).toEqual({ gauche: 0, centre: 0, droite: 0 });
+    expect(coverageCounts(articles, byId)).toEqual({
+      gauche: 0,
+      centre: 0,
+      droite: 0,
+    });
   });
 
   it('reports the distinct Outlet ids, whatever their Leaning', () => {
@@ -93,7 +105,9 @@ describe('coverageCounts', () => {
       article('b', { outletId: 'centre-1', kind: 'opinion' }),
       article('c', { outletId: 'droite-1', kind: 'news' }),
     ];
-    expect(reportingOutletIds(articles)).toEqual(new Set(['centre-1', 'droite-1']));
+    expect(reportingOutletIds(articles)).toEqual(
+      new Set(['centre-1', 'droite-1']),
+    );
   });
 });
 
@@ -147,7 +161,9 @@ describe('frontPageOutlets', () => {
       article('a', { outletId: 'centre-1', everFrontPage: true }),
       article('b', { outletId: 'centre-1', everFrontPage: true }),
     ];
-    expect(frontPageOutlets(articles, outlets).map((o) => o.id)).toEqual(['centre-1']);
+    expect(frontPageOutlets(articles, outlets).map((o) => o.id)).toEqual([
+      'centre-1',
+    ]);
   });
 });
 
@@ -162,22 +178,53 @@ describe('pickStoryImage', () => {
     };
   }
 
-  const at = (hour: number) => `2026-10-06T${String(hour).padStart(2, '0')}:00:00Z`;
+  const at = (hour: number) =>
+    `2026-10-06T${String(hour).padStart(2, '0')}:00:00Z`;
 
   it('prefers the newest Centre Article with an image', () => {
     const articles = [
-      article('gauche', { outletId: 'gauche-1', kind: 'news', publishedAt: at(12), imageUrl: 'g.jpg' }),
-      article('centre-vieux', { outletId: 'centre-1', kind: 'news', publishedAt: at(9), imageUrl: 'cv.jpg' }),
-      article('centre-rec', { outletId: 'centre-2', kind: 'news', publishedAt: at(14), imageUrl: 'cr.jpg' }),
+      article('gauche', {
+        outletId: 'gauche-1',
+        kind: 'news',
+        publishedAt: at(12),
+        imageUrl: 'g.jpg',
+      }),
+      article('centre-vieux', {
+        outletId: 'centre-1',
+        kind: 'news',
+        publishedAt: at(9),
+        imageUrl: 'cv.jpg',
+      }),
+      article('centre-rec', {
+        outletId: 'centre-2',
+        kind: 'news',
+        publishedAt: at(14),
+        imageUrl: 'cr.jpg',
+      }),
     ];
     expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('cr.jpg');
   });
 
   it('without Centre, picks the Leaning with the most Coverage', () => {
     const articles = [
-      article('gauche', { outletId: 'gauche-1', kind: 'news', publishedAt: at(12), imageUrl: 'g.jpg' }),
-      article('droite', { outletId: 'droite-1', kind: 'news', publishedAt: at(14), imageUrl: 'd.jpg' }),
-      article('centre', { outletId: 'centre-1', kind: 'news', publishedAt: at(15), imageUrl: 'c.jpg' }),
+      article('gauche', {
+        outletId: 'gauche-1',
+        kind: 'news',
+        publishedAt: at(12),
+        imageUrl: 'g.jpg',
+      }),
+      article('droite', {
+        outletId: 'droite-1',
+        kind: 'news',
+        publishedAt: at(14),
+        imageUrl: 'd.jpg',
+      }),
+      article('centre', {
+        outletId: 'centre-1',
+        kind: 'news',
+        publishedAt: at(15),
+        imageUrl: 'c.jpg',
+      }),
     ];
     // Droite has 1 reporting Outlet, Gauche 1, Centre 1 — recency breaks it.
     expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('c.jpg');
@@ -185,17 +232,40 @@ describe('pickStoryImage', () => {
 
   it('on a Gauche/Droite tie, recency wins regardless of Leaning', () => {
     const articles = [
-      article('gauche', { outletId: 'gauche-1', kind: 'news', publishedAt: at(9), imageUrl: 'g.jpg' }),
-      article('droite', { outletId: 'droite-1', kind: 'news', publishedAt: at(14), imageUrl: 'd.jpg' }),
+      article('gauche', {
+        outletId: 'gauche-1',
+        kind: 'news',
+        publishedAt: at(9),
+        imageUrl: 'g.jpg',
+      }),
+      article('droite', {
+        outletId: 'droite-1',
+        kind: 'news',
+        publishedAt: at(14),
+        imageUrl: 'd.jpg',
+      }),
     ];
     expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('d.jpg');
   });
 
   it('follows Coverage order when the top Leaning has no image', () => {
     const articles = [
-      article('centre-sans', { outletId: 'centre-1', kind: 'news', publishedAt: at(15) }),
-      article('centre-2', { outletId: 'centre-2', kind: 'news', publishedAt: at(16) }),
-      article('gauche', { outletId: 'gauche-1', kind: 'news', publishedAt: at(12), imageUrl: 'g.jpg' }),
+      article('centre-sans', {
+        outletId: 'centre-1',
+        kind: 'news',
+        publishedAt: at(15),
+      }),
+      article('centre-2', {
+        outletId: 'centre-2',
+        kind: 'news',
+        publishedAt: at(16),
+      }),
+      article('gauche', {
+        outletId: 'gauche-1',
+        kind: 'news',
+        publishedAt: at(12),
+        imageUrl: 'g.jpg',
+      }),
     ];
     // Centre has the most Coverage (2 Outlets) but no image; Gauche follows.
     expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('g.jpg');
@@ -203,20 +273,42 @@ describe('pickStoryImage', () => {
 
   it('within a Leaning, takes the newest Article with an image', () => {
     const articles = [
-      article('g-rec', { outletId: 'gauche-1', kind: 'news', publishedAt: at(12), imageUrl: 'g2.jpg' }),
-      article('g-vieux', { outletId: 'gauche-1', kind: 'news', publishedAt: at(9), imageUrl: 'g1.jpg' }),
+      article('g-rec', {
+        outletId: 'gauche-1',
+        kind: 'news',
+        publishedAt: at(12),
+        imageUrl: 'g2.jpg',
+      }),
+      article('g-vieux', {
+        outletId: 'gauche-1',
+        kind: 'news',
+        publishedAt: at(9),
+        imageUrl: 'g1.jpg',
+      }),
     ];
     expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('g2.jpg');
   });
 
   it('returns undefined when no Article has an image', () => {
-    expect(pickStoryImage(story([article('a', { kind: 'news' })]), byId)).toBeUndefined();
+    expect(
+      pickStoryImage(story([article('a', { kind: 'news' })]), byId),
+    ).toBeUndefined();
   });
 
   it('ties are broken by id for determinism', () => {
     const articles = [
-      article('b', { outletId: 'centre-1', kind: 'news', publishedAt: at(12), imageUrl: 'b.jpg' }),
-      article('a', { outletId: 'centre-2', kind: 'news', publishedAt: at(12), imageUrl: 'a.jpg' }),
+      article('b', {
+        outletId: 'centre-1',
+        kind: 'news',
+        publishedAt: at(12),
+        imageUrl: 'b.jpg',
+      }),
+      article('a', {
+        outletId: 'centre-2',
+        kind: 'news',
+        publishedAt: at(12),
+        imageUrl: 'a.jpg',
+      }),
     ];
     expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('a.jpg');
   });

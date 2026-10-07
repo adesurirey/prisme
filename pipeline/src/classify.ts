@@ -1,7 +1,12 @@
-import { writeFile, readFile, mkdir } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import type { Article, ArticleKind, Section } from '@prisme/domain';
-import { WINNER, PROMPT_VERSION, type Classification, type DecisionModel } from './decision-model.ts';
+import {
+  type Classification,
+  type DecisionModel,
+  PROMPT_VERSION,
+  WINNER,
+} from './decision-model.ts';
 import { runPool } from './pool.ts';
 
 /**
@@ -20,15 +25,27 @@ export interface ClassificationCache {
 }
 
 export function emptyCache(): ClassificationCache {
-  return { winner: { gateway: WINNER.gateway, model: WINNER.model, promptVersion: PROMPT_VERSION }, entries: {} };
+  return {
+    winner: {
+      gateway: WINNER.gateway,
+      model: WINNER.model,
+      promptVersion: PROMPT_VERSION,
+    },
+    entries: {},
+  };
 }
 
 export async function loadCache(path: URL): Promise<ClassificationCache> {
   try {
-    const cache = JSON.parse(await readFile(path, 'utf8')) as ClassificationCache;
+    const cache = JSON.parse(
+      await readFile(path, 'utf8'),
+    ) as ClassificationCache;
     if (!cache.entries) return emptyCache();
     // Entries classified by another model or prompt are stale: reclassify.
-    if (cache.winner?.model !== WINNER.model || cache.winner?.promptVersion !== PROMPT_VERSION) {
+    if (
+      cache.winner?.model !== WINNER.model ||
+      cache.winner?.promptVersion !== PROMPT_VERSION
+    ) {
       console.warn(
         `Classification cache was built with ${cache.winner?.model ?? 'an unknown model'} ` +
           `(prompt ${cache.winner?.promptVersion ?? '?'}) — discarding it for re-classification.`,
@@ -41,7 +58,10 @@ export async function loadCache(path: URL): Promise<ClassificationCache> {
   }
 }
 
-export async function saveCache(cache: ClassificationCache, path: URL): Promise<void> {
+export async function saveCache(
+  cache: ClassificationCache,
+  path: URL,
+): Promise<void> {
   await mkdir(dirname(path.pathname), { recursive: true });
   await writeFile(path, JSON.stringify(cache, null, 2) + '\n');
 }
@@ -81,7 +101,8 @@ export async function classifyNewArticles(
       cache.entries[article.id] = {
         kind: classification.kind,
         // The Section answer is ignored for not_news (settled in #4).
-        section: classification.kind === 'not_news' ? null : classification.section,
+        section:
+          classification.kind === 'not_news' ? null : classification.section,
       };
     } else {
       console.warn(`Classification failed: ${article.id} — kept without kind.`);
@@ -91,7 +112,10 @@ export async function classifyNewArticles(
 }
 
 /** The kind recorded for an Article, or undefined when unclassified. */
-export function kindOf(article: Article, cache: ClassificationCache): ArticleKind | undefined {
+export function kindOf(
+  article: Article,
+  cache: ClassificationCache,
+): ArticleKind | undefined {
   return cache.entries[article.id]?.kind;
 }
 
@@ -100,6 +124,9 @@ export function kindOf(article: Article, cache: ClassificationCache): ArticleKin
  * Articles are kept: dropping them is reserved for a successful
  * classification.
  */
-export function dropNotNews(articles: Article[], cache: ClassificationCache): Article[] {
+export function dropNotNews(
+  articles: Article[],
+  cache: ClassificationCache,
+): Article[] {
   return articles.filter((article) => kindOf(article, cache) !== 'not_news');
 }

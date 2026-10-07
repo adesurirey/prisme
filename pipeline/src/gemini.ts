@@ -23,7 +23,10 @@ export interface GroupingModel {
   label: string;
   model: string;
   /** One call per build; null after retry means degraded (ADR-0005). */
-  group(input: { stories: GroupingInputStory[]; articles: GroupingInputArticle[] }): Promise<GroupingProposal | null>;
+  group(input: {
+    stories: GroupingInputStory[];
+    articles: GroupingInputArticle[];
+  }): Promise<GroupingProposal | null>;
 }
 
 /** One live Story as fed to the Grouping model: title and Section only. */
@@ -104,7 +107,10 @@ export function parseGroupingResponse(text: string): GroupingProposal | null {
     return null;
   }
   if (data == null || typeof data !== 'object') return null;
-  const { newStories, assignments, titleUpdates } = data as Record<string, unknown>;
+  const { newStories, assignments, titleUpdates } = data as Record<
+    string,
+    unknown
+  >;
   if (!Array.isArray(newStories) || !Array.isArray(assignments)) return null;
 
   const stories = newStories
@@ -121,14 +127,22 @@ export function parseGroupingResponse(text: string): GroupingProposal | null {
 
   const parsedAssignments = assignments.flatMap((a) => {
     if (a == null || typeof a !== 'object') return [];
-    const { articleId, storyId, newStoryKey, confidence } = a as Record<string, unknown>;
+    const { articleId, storyId, newStoryKey, confidence } = a as Record<
+      string,
+      unknown
+    >;
     if (typeof articleId !== 'string' || articleId === '') return [];
-    const c = typeof confidence === 'number' && Number.isFinite(confidence) ? confidence : 0;
+    const c =
+      typeof confidence === 'number' && Number.isFinite(confidence)
+        ? confidence
+        : 0;
     return [
       {
         articleId,
         ...(typeof storyId === 'string' && storyId !== '' ? { storyId } : {}),
-        ...(typeof newStoryKey === 'string' && newStoryKey !== '' ? { newStoryKey } : {}),
+        ...(typeof newStoryKey === 'string' && newStoryKey !== ''
+          ? { newStoryKey }
+          : {}),
         confidence: Math.min(1, Math.max(0, c)),
       },
     ];
@@ -144,7 +158,11 @@ export function parseGroupingResponse(text: string): GroupingProposal | null {
       })
     : [];
 
-  return { newStories: stories, assignments: parsedAssignments, titleUpdates: updates };
+  return {
+    newStories: stories,
+    assignments: parsedAssignments,
+    titleUpdates: updates,
+  };
 }
 
 const SECTION_LABELS_FR: Record<Section, string> = {
@@ -165,7 +183,8 @@ export function groupingPrompt(input: {
   articles: GroupingInputArticle[];
 }): string {
   const storyLines = input.stories.map(
-    (s) => `- [${s.id}] ${s.title}${s.section ? ` (${SECTION_LABELS_FR[s.section]})` : ''}`,
+    (s) =>
+      `- [${s.id}] ${s.title}${s.section ? ` (${SECTION_LABELS_FR[s.section]})` : ''}`,
   );
   const articleLines = input.articles.map((a) => {
     const teaser = a.teaser ? ` — ${a.teaser}` : '';
@@ -183,9 +202,9 @@ export function groupingPrompt(input: {
     'Consignes :',
     '- Pour chaque nouvel article, ajoute une entrée dans « assignments » : soit « storyId » (une story existante), soit « newStoryKey » (une story à créer), avec « confidence » entre 0 et 1.',
     '- Un article qui ne va avec rien obtient sa propre nouvelle story.',
-    '- Une story correspond à un événement ou une affaire précise, jamais à un thème. N\'utilise jamais de titre générique (« perspectives économiques… », « actualité politique… ») : un thème n\'est pas une story.',
+    "- Une story correspond à un événement ou une affaire précise, jamais à un thème. N'utilise jamais de titre générique (« perspectives économiques… », « actualité politique… ») : un thème n'est pas une story.",
     '- Ne regroupe que ce qui rapporte le même événement ou la même affaire précise : un thème commun ou un protagoniste commun ne suffit pas.',
-    '- Chaque nouvelle story a une « key » courte unique (lettres et chiffres) et un « title » : un titre neutre en français décrivant l\'événement, sans copier le titre d\'un outlet ni reprendre sa formulation.',
+    "- Chaque nouvelle story a une « key » courte unique (lettres et chiffres) et un « title » : un titre neutre en français décrivant l'événement, sans copier le titre d'un outlet ni reprendre sa formulation.",
     '- « titleUpdates » (optionnel) : uniquement pour des stories qui reçoivent de nouveaux articles, et uniquement si un meilleur titre neutre existe ; sinon laisse une story inchangée.',
   ].join('\n');
 }
@@ -215,7 +234,10 @@ function geminiModel(apiKey: string): GroupingModel {
         try {
           const response = await fetch(url, {
             method: 'POST',
-            headers: { 'x-goog-api-key': apiKey, 'Content-Type': 'application/json' },
+            headers: {
+              'x-goog-api-key': apiKey,
+              'Content-Type': 'application/json',
+            },
             body: JSON.stringify(body),
             signal: AbortSignal.timeout(60_000),
           });
@@ -226,7 +248,9 @@ function geminiModel(apiKey: string): GroupingModel {
               continue;
             }
             // 401/403 and the like are config errors: fail fast, no retry.
-            const error = new Error(`${GROUPING.label} HTTP ${response.status}: ${text.slice(0, 200)}`);
+            const error = new Error(
+              `${GROUPING.label} HTTP ${response.status}: ${text.slice(0, 200)}`,
+            );
             (error as Error & { fatal?: boolean }).fatal = true;
             throw error;
           }

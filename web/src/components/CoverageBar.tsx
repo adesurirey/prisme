@@ -30,7 +30,10 @@ export default function CoverageBar({
     .map((l) => `${counts[l]} ${LEANING_LABELS[l].toLowerCase()}`)
     .join(' · ');
   return (
-    <span className="group relative inline-flex" title={`${tooltip} (${breakdown})`}>
+    <span
+      className="group relative inline-flex"
+      title={`${tooltip} (${breakdown})`}
+    >
       <span
         className="inline-flex h-1 overflow-hidden rounded-full bg-line"
         style={{ width }}
@@ -43,7 +46,11 @@ export default function CoverageBar({
               <span
                 key={l}
                 className="h-full"
-                style={{ flexGrow: counts[l], flexBasis: 0, background: `var(--${l})` }}
+                style={{
+                  flexGrow: counts[l],
+                  flexBasis: 0,
+                  background: `var(--${l})`,
+                }}
               />
             ),
         )}

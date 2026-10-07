@@ -3,7 +3,12 @@ import { outlets } from '@prisme/domain';
 import { articleId } from '../collect.ts';
 import { parseFeed } from '../feeds.ts';
 import { fetchFeed } from '../http.ts';
-import { isSuspect, sampleForBenchmark, type BenchmarkCandidate, type SampledItem } from './sample.ts';
+import {
+  type BenchmarkCandidate,
+  isSuspect,
+  type SampledItem,
+  sampleForBenchmark,
+} from './sample.ts';
 
 /**
  * Benchmark export (issue #4): samples real headline+teaser pairs from every
@@ -54,7 +59,9 @@ async function main(): Promise<void> {
 
   await Promise.all(
     outlets.map(async (outlet) => {
-      const feeds = [outlet.feeds.une, outlet.feeds.latest].filter((f): f is string => f != null);
+      const feeds = [outlet.feeds.une, outlet.feeds.latest].filter(
+        (f): f is string => f != null,
+      );
       await Promise.all(
         feeds.map(async (feed) => {
           try {
@@ -73,7 +80,8 @@ async function main(): Promise<void> {
               });
             }
           } catch (reason) {
-            const message = reason instanceof Error ? reason.message : String(reason);
+            const message =
+              reason instanceof Error ? reason.message : String(reason);
             console.warn(`Feed failed: ${outlet.id} ${feed} — ${message}`);
             failures.push({ outletId: outlet.id, feed, reason: message });
           }
@@ -94,12 +102,21 @@ async function main(): Promise<void> {
   await writeFile(
     new URL('samples.json', BENCHMARK_DIR),
     JSON.stringify(
-      { sampledAt, seed: SEED, generalCount: GENERAL_COUNT, suspectCount: SUSPECT_COUNT, items: sample },
+      {
+        sampledAt,
+        seed: SEED,
+        generalCount: GENERAL_COUNT,
+        suspectCount: SUSPECT_COUNT,
+        items: sample,
+      },
       null,
       2,
     ) + '\n',
   );
-  await writeFile(new URL('worksheet.md', BENCHMARK_DIR), worksheet(sample, sampledAt));
+  await writeFile(
+    new URL('worksheet.md', BENCHMARK_DIR),
+    worksheet(sample, sampledAt),
+  );
   await writeFile(
     LABELS_PATH,
     JSON.stringify(
@@ -128,13 +145,16 @@ async function main(): Promise<void> {
   );
 
   const perOutlet = new Map<string, number>();
-  for (const item of sample) perOutlet.set(item.outletId, (perOutlet.get(item.outletId) ?? 0) + 1);
+  for (const item of sample)
+    perOutlet.set(item.outletId, (perOutlet.get(item.outletId) ?? 0) + 1);
   console.log(
     `Benchmark sample: ${sample.length} pairs ` +
       `(${sample.filter((s) => s.suspect).length} suspects) from ${perOutlet.size} Outlets ` +
       `of ${outlets.length}; ${candidates.length} candidates, ${failures.length} feed failures.`,
   );
-  console.log(`Pairs to label: .benchmark/worksheet.md — labels: docs/research/decision-model-labels.json`);
+  console.log(
+    `Pairs to label: .benchmark/worksheet.md — labels: docs/research/decision-model-labels.json`,
+  );
 }
 
 function worksheet(items: SampledItem[], sampledAt: string): string {

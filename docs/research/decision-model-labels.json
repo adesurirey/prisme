@@ -1,12 +1,7 @@
 {
   "instructions": "Hand labels for the decision-model benchmark (issue #4). Fill kind and section for every item; kind null/section null means not yet labeled. Label blind: read each pair in .benchmark/worksheet.md (gitignored, ADR-0003 — no teaser text is committed here).",
   "enums": {
-    "kind": [
-      "news",
-      "opinion",
-      "live",
-      "not_news"
-    ],
+    "kind": ["news", "opinion", "live", "not_news"],
     "section": [
       "politics",
       "world",

@@ -98,11 +98,18 @@ export function sampleForBenchmark(
   const general: SampledItem[] = [];
   const pools = [...generalByOutlet.keys()]
     .sort()
-    .map((outletId) => ({ outletId, items: shuffle(generalByOutlet.get(outletId)!, rng) }));
-  while (general.length < options.generalCount && pools.some((p) => p.items.length > 0)) {
+    .map((outletId) => ({
+      outletId,
+      items: shuffle(generalByOutlet.get(outletId)!, rng),
+    }));
+  while (
+    general.length < options.generalCount &&
+    pools.some((p) => p.items.length > 0)
+  ) {
     for (const pool of pools) {
       const item = pool.items.shift();
-      if (item && general.length < options.generalCount) general.push({ ...item, suspect: false });
+      if (item && general.length < options.generalCount)
+        general.push({ ...item, suspect: false });
     }
   }
 

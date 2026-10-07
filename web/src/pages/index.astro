@@ -1,9 +1,9 @@
 ---
-import Base from '../layouts/Base.astro';
-import StoryCard from '../components/StoryCard';
+import { type Leaning, leaningOrder } from '@prisme/domain';
 import LeaningBadge from '../components/LeaningBadge';
+import StoryCard from '../components/StoryCard';
 import { loadEdition, loadOutlets } from '../data';
-import { leaningOrder, type Leaning } from '@prisme/domain';
+import Base from '../layouts/Base.astro';
 
 const edition = await loadEdition();
 const outlets = loadOutlets();
@@ -16,7 +16,8 @@ const builtAt = new Date(edition.builtAt).toLocaleString('fr-FR', {
   minute: '2-digit',
 });
 
-const perLeaning = (leaning: Leaning) => outlets.filter((o) => o.leaning === leaning).length;
+const perLeaning = (leaning: Leaning) =>
+  outlets.filter((o) => o.leaning === leaning).length;
 ---
 
 <Base title="L'édition du jour">

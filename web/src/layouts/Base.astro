@@ -11,7 +11,12 @@ interface Props {
   ogType?: 'website' | 'article';
 }
 
-const { title, description = "La même actualité, vue par tous les bords politiques.", ogImage, ogType = 'website' } = Astro.props;
+const {
+  title,
+  description = 'La même actualité, vue par tous les bords politiques.',
+  ogImage,
+  ogType = 'website',
+} = Astro.props;
 ---
 
 <!doctype html>

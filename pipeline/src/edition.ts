@@ -23,11 +23,7 @@ export function storySection(
   }
   let best: { section: Section; n: number; minId: string } | null = null;
   for (const [section, { n, minId }] of counts) {
-    if (
-      best == null ||
-      n > best.n ||
-      (n === best.n && minId < best.minId)
-    ) {
+    if (best == null || n > best.n || (n === best.n && minId < best.minId)) {
       best = { section, n, minId };
     }
   }

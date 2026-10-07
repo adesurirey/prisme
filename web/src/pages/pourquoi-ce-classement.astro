@@ -1,16 +1,16 @@
 ---
-import Base from '../layouts/Base.astro';
-import LeaningBadge from '../components/LeaningBadge';
-import PaywallBadge from '../components/PaywallBadge';
-import { withBase } from '../data';
 import {
   excludedOutlets,
   LEANING_LABELS,
-  leaningOrder,
-  outlets,
   type Leaning,
+  leaningOrder,
   type OutletConfig,
+  outlets,
 } from '@prisme/domain';
+import LeaningBadge from '../components/LeaningBadge';
+import PaywallBadge from '../components/PaywallBadge';
+import { withBase } from '../data';
+import Base from '../layouts/Base.astro';
 
 const perLeaning = (leaning: Leaning): OutletConfig[] =>
   outlets.filter((o) => o.leaning === leaning);

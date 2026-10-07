@@ -39,11 +39,14 @@ export async function collect(
   for (const { articles, teasers: outletTeasers } of results) {
     for (const article of articles) {
       const teaser = outletTeasers.get(article.id);
-      if (teaser != null && !teasers.has(article.id)) teasers.set(article.id, teaser);
+      if (teaser != null && !teasers.has(article.id))
+        teasers.set(article.id, teaser);
     }
   }
   return {
-    articles: results.flatMap((r) => r.articles).sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)),
+    articles: results
+      .flatMap((r) => r.articles)
+      .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)),
     teasers,
     failures,
   };
@@ -58,7 +61,12 @@ async function collectOutlet(
   const teasers = new Map<string, string>();
   const articles: Article[] = [];
   if (outlet.feeds.une) {
-    const parsed = await fetchAndParse(outlet, outlet.feeds.une, fetcher, failures);
+    const parsed = await fetchAndParse(
+      outlet,
+      outlet.feeds.une,
+      fetcher,
+      failures,
+    );
     for (const item of parsed) {
       const article = toArticle(item, outlet, true);
       articles.push(article);
@@ -66,7 +74,12 @@ async function collectOutlet(
     }
   }
   if (outlet.feeds.latest) {
-    const parsed = await fetchAndParse(outlet, outlet.feeds.latest, fetcher, failures);
+    const parsed = await fetchAndParse(
+      outlet,
+      outlet.feeds.latest,
+      fetcher,
+      failures,
+    );
     const recent = [...parsed]
       .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
       .slice(0, FRONT_PAGE_FALLBACK);
@@ -80,7 +93,8 @@ async function collectOutlet(
   const byId = new Map<string, Article>();
   for (const article of articles) {
     const kept = byId.get(article.id);
-    if (!kept || (!kept.frontPage && article.frontPage)) byId.set(article.id, article);
+    if (!kept || (!kept.frontPage && article.frontPage))
+      byId.set(article.id, article);
   }
   const keptArticles = [...byId.values()].filter((article) => {
     if (article.publishedAt === '') return false;
@@ -108,7 +122,12 @@ async function fetchAndParse(
 }
 
 function toArticle(
-  item: { headline: string; url: string; publishedAt: string; imageUrl?: string },
+  item: {
+    headline: string;
+    url: string;
+    publishedAt: string;
+    imageUrl?: string;
+  },
   outlet: Outlet,
   frontPage: boolean,
 ): Article {

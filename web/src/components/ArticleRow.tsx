@@ -12,7 +12,13 @@ import PaywallBadge from './PaywallBadge';
  * inferred: the raw outlet id is shown without a dot rather than a guessed
  * Leaning.
  */
-export default function ArticleRow({ article, outlet }: { article: Article; outlet?: Outlet }) {
+export default function ArticleRow({
+  article,
+  outlet,
+}: {
+  article: Article;
+  outlet?: Outlet;
+}) {
   const name = outlet?.name ?? article.outletId;
   return (
     <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">

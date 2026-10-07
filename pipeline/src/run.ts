@@ -2,16 +2,28 @@ import { randomBytes } from 'node:crypto';
 import { mkdir, writeFile } from 'node:fs/promises';
 import type { Edition } from '@prisme/domain';
 import { outlets, publicOutlets } from '@prisme/domain';
-import { classifyNewArticles, dropNotNews, loadCache, saveCache, type ClassificationCache } from './classify.ts';
+import {
+  type ClassificationCache,
+  classifyNewArticles,
+  dropNotNews,
+  loadCache,
+  saveCache,
+} from './classify.ts';
 import { collect } from './collect.ts';
+import {
+  membershipModelFromEnv,
+  winnerModelFromEnv,
+} from './decision-model.ts';
 import { updateFrontPageHistory } from './frontpage.ts';
 import { groupingModelFromEnv } from './gemini.ts';
 import { groupStories, loadStories } from './grouping.ts';
 import { fetchFeed } from './http.ts';
 import { EDITION_SIZE, rankStories } from './ranking.ts';
-import { membershipModelFromEnv } from './decision-model.ts';
-import { winnerModelFromEnv } from './decision-model.ts';
-import { SUMMARIES_PROMPT_VERSION, summariesModelFromEnv, updateSummaries } from './summarize.ts';
+import {
+  SUMMARIES_PROMPT_VERSION,
+  summariesModelFromEnv,
+  updateSummaries,
+} from './summarize.ts';
 
 /**
  * data/ lives at the repo root: resolving `../../data/` from this file
@@ -24,14 +36,20 @@ const STORIES_DIR = new URL('stories/', DATA_DIR);
 
 export async function runEdition(): Promise<Edition> {
   const now = new Date();
-  const { articles, teasers, failures } = await collect(outlets, fetchFeed, now);
+  const { articles, teasers, failures } = await collect(
+    outlets,
+    fetchFeed,
+    now,
+  );
 
   // Incremental classification (issue #4): only new ids hit the model; the
   // winner (Clef-flash via OpenRouter) comes from OPENROUTER_API_KEY. Without
   // the key, Articles stay unclassified — the build must not fail on it.
   const model = winnerModelFromEnv();
   if (model == null) {
-    console.warn('OPENROUTER_API_KEY not set — Articles are kept unclassified (no kind).');
+    console.warn(
+      'OPENROUTER_API_KEY not set — Articles are kept unclassified (no kind).',
+    );
   }
   const cache: ClassificationCache = await loadCache(CLASSIFICATIONS_PATH);
   const before = Object.keys(cache.entries).length;
@@ -39,19 +57,20 @@ export async function runEdition(): Promise<Edition> {
   await saveCache(cache, CLASSIFICATIONS_PATH);
   const classified = Object.keys(cache.entries).length;
 
-  const kept = dropNotNews(articles, cache)
-    .map((article) => ({
-      ...article,
-      kind: cache.entries[article.id]?.kind,
-      section: cache.entries[article.id]?.section ?? undefined,
-    }));
+  const kept = dropNotNews(articles, cache).map((article) => ({
+    ...article,
+    kind: cache.entries[article.id]?.kind,
+    section: cache.entries[article.id]?.section ?? undefined,
+  }));
 
   // Incremental grouping (issue #5): the Story files on disk are the record;
   // only fresh Articles are assigned. Without GEMINI_API_KEY the build still
   // succeeds — each new Article becomes its own Story (ADR-0005).
   const grouping = groupingModelFromEnv();
   if (grouping == null) {
-    console.warn('GEMINI_API_KEY not set — Articles are not grouped; each new Article becomes its own Story.');
+    console.warn(
+      'GEMINI_API_KEY not set — Articles are not grouped; each new Article becomes its own Story.',
+    );
   }
   const existing = await loadStories(STORIES_DIR);
   const outcome = await groupStories({
@@ -68,7 +87,9 @@ export async function runEdition(): Promise<Edition> {
   // `everFrontPage` sticky. Frozen Stories are untouched (ADR-0005). Stories
   // whose flags changed join the changed set, so their files are rewritten.
   const liveIds = new Set(outcome.live.map((s) => s.id));
-  const frontpage = updateFrontPageHistory(outcome.stories, kept, (s) => liveIds.has(s.id));
+  const frontpage = updateFrontPageHistory(outcome.stories, kept, (s) =>
+    liveIds.has(s.id),
+  );
   const changed = new Set([...outcome.changed, ...frontpage.changed]);
 
   // The Edition is the ranked top EDITION_SIZE (issue #6): Stories order by
@@ -113,11 +134,20 @@ export async function runEdition(): Promise<Edition> {
   await mkdir(STORIES_DIR, { recursive: true });
   // Outlet config snapshot (identity and feeds only): the sourced config lives
   // in @prisme/domain and is imported by the pipeline and the site.
-  await writeFile(new URL('outlets.json', DATA_DIR), JSON.stringify(publicOutlets(), null, 2) + '\n');
-  await writeFile(new URL('edition.json', DATA_DIR), JSON.stringify(edition, null, 2) + '\n');
+  await writeFile(
+    new URL('outlets.json', DATA_DIR),
+    JSON.stringify(publicOutlets(), null, 2) + '\n',
+  );
+  await writeFile(
+    new URL('edition.json', DATA_DIR),
+    JSON.stringify(edition, null, 2) + '\n',
+  );
   for (const story of frontpage.stories) {
     if (!changed.has(story.slug)) continue;
-    await writeFile(new URL(`${story.slug}.json`, STORIES_DIR), JSON.stringify(story, null, 2) + '\n');
+    await writeFile(
+      new URL(`${story.slug}.json`, STORIES_DIR),
+      JSON.stringify(story, null, 2) + '\n',
+    );
   }
   console.log(`Wrote ${DATA_DIR.pathname}`);
   return edition;
