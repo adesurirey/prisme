@@ -1,12 +1,12 @@
 name: Edition
 
-# A build about every 2 hours, 06:00–23:00 Paris time. GitHub cron is UTC:
-# Paris is UTC+1 in winter (CET) and UTC+2 in summer (CEST), so UTC hours
-# 4,6,…,20 cover 06:00–22:00 Paris in winter and 06:00–22:00 in summer —
-# within the 06:00–23:00 window in both seasons. Also triggerable by hand.
+# Four builds a day, every 5 hours. GitHub cron is UTC: Paris is UTC+1 in
+# winter (CET) and UTC+2 in summer (CEST), so UTC hours 5,10,15,20 cover
+# 06:00–21:00 Paris in winter and 07:00–22:00 in summer — never before
+# 06:00 Paris time in either season. Also triggerable by hand.
 on:
   schedule:
-    - cron: '0 4,6,8,10,12,14,16,18,20 * * *'
+    - cron: '0 5,10,15,20 * * *'
   workflow_dispatch:
 
 permissions:
