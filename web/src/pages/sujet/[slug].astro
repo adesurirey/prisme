@@ -55,9 +55,18 @@ const groups: { leaning?: Leaning; articles: Article[] }[] = [
 ];
 const visible = groups.filter((g) => g.articles.length > 0);
 
-const builtAt = new Date(
-  story.articles[0]?.publishedAt ?? Date.now(),
-).toLocaleString('fr-FR', { dateStyle: 'long', timeStyle: 'short' });
+// "Publié le": the newest Article's date. An Undated Article (ADR-0007)
+// carries only its Publication day — shown without an invented clock time.
+const builtAt = story.articles[0]?.dayPrecision
+  ? new Date(story.articles[0].publishedAt).toLocaleDateString('fr-FR', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    })
+  : new Date(story.articles[0]?.publishedAt ?? Date.now()).toLocaleString(
+      'fr-FR',
+      { dateStyle: 'long', timeStyle: 'short' },
+    );
 
 // "Signaler une erreur" (issue #8): a prefilled GitHub issue carrying this
 // Story's page URL, placed next to the Story it concerns.
