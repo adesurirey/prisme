@@ -8,8 +8,14 @@
  * Summaries are written into the Story file only while the Story is Live
  * (ADR-0005: frozen files are never edited); unchanged Stories make no call.
  */
-import type { Leaning, Outlet, Section, Story, StorySummaries } from '@prisme/domain';
-import { SECTION_LABELS, coverageCounts } from '@prisme/domain';
+import type {
+  Leaning,
+  Outlet,
+  Section,
+  Story,
+  StorySummaries,
+} from '@prisme/domain';
+import { coverageCounts, SECTION_LABELS } from '@prisme/domain';
 import { RETRYABLE_STATUS } from './http.ts';
 
 /** Prompt version, for traceability in Story files (ADR-0006). Bump on any prompt/schema change. */
@@ -73,7 +79,12 @@ export function parseSummaryResponse(text: string): ParsedSummaries | null {
   }
   if (data == null || typeof data !== 'object') return null;
   const { summaries, differences } = data as Record<string, unknown>;
-  if (summaries == null || typeof summaries !== 'object' || typeof differences !== 'string') return null;
+  if (
+    summaries == null ||
+    typeof summaries !== 'object' ||
+    typeof differences !== 'string'
+  )
+    return null;
   const trimmed = differences.trim();
   if (trimmed === '') return null;
 
@@ -82,7 +93,9 @@ export function parseSummaryResponse(text: string): ParsedSummaries | null {
     const bullets = (summaries as Record<string, unknown>)[leaning];
     if (bullets === undefined) continue;
     if (!Array.isArray(bullets)) return null;
-    const kept = bullets.filter((b): b is string => typeof b === 'string' && b.trim() !== '');
+    const kept = bullets.filter(
+      (b): b is string => typeof b === 'string' && b.trim() !== '',
+    );
     result[leaning] = kept;
   }
   return { summaries: result, differences: trimmed };
@@ -117,7 +130,13 @@ const LEANING_LABELS_FR: Record<Leaning, string> = {
  * prompt change without a version bump cannot pass review unnoticed.
  */
 export function summariesPrompt(input: SummaryInput): string {
-  const { story, previousSummaries, previousDifferences, newArticles, coveredLeanings } = input;
+  const {
+    story,
+    previousSummaries,
+    previousDifferences,
+    newArticles,
+    coveredLeanings,
+  } = input;
   const section = story.section ? ` (${SECTION_LABELS[story.section]})` : '';
   const lines: string[] = [
     `Version du prompt : ${SUMMARIES_PROMPT_VERSION}.`,
@@ -127,16 +146,21 @@ export function summariesPrompt(input: SummaryInput): string {
   ];
 
   if (previousSummaries || previousDifferences) {
-    lines.push('Résumés et différences déjà publiés (le sujet évolue, tu les mets à jour) :');
+    lines.push(
+      'Résumés et différences déjà publiés (le sujet évolue, tu les mets à jour) :',
+    );
     if (previousSummaries) {
       for (const leaning of LEANINGS) {
         const bullets = previousSummaries[leaning];
         if (bullets?.length) {
-          lines.push(`- ${LEANING_LABELS_FR[leaning]} : ${bullets.join(' | ')}`);
+          lines.push(
+            `- ${LEANING_LABELS_FR[leaning]} : ${bullets.join(' | ')}`,
+          );
         }
       }
     }
-    if (previousDifferences) lines.push(`- Différences : ${previousDifferences}`);
+    if (previousDifferences)
+      lines.push(`- Différences : ${previousDifferences}`);
     lines.push('');
   }
 
@@ -158,10 +182,10 @@ export function summariesPrompt(input: SummaryInput): string {
     `Tu couvres uniquement : ${coveredLeanings.map((l) => LEANING_LABELS_FR[l]).join(', ')}.`,
     '',
     'Consignes :',
-    '- Pour chaque tendance couverte, écris « summaries.<tendance> » : un tableau de 2 à 5 puces courtes en français, factuelles, qui résument ce que les médias de cette tendance rapportent du sujet. Reformule : ne recopie jamais la formulation d\'un titre ou d\'un teaser. Ne nomme aucun média dans les résumés.',
+    "- Pour chaque tendance couverte, écris « summaries.<tendance> » : un tableau de 2 à 5 puces courtes en français, factuelles, qui résument ce que les médias de cette tendance rapportent du sujet. Reformule : ne recopie jamais la formulation d'un titre ou d'un teaser. Ne nomme aucun média dans les résumés.",
     '- Les tribunes éclairent le positionnement de leur tendance mais restent des prises de position, pas des faits établis.',
-    '- Écris « differences » : un seul paragraphe court en français qui compare comment les tendances cadrent, accentuent ou laissent de côté des parties du sujet. Tu peux citer un média à l\'appui d\'un contraste concret. Décris sans trancher : dis qui met l\'accent sur quoi, jamais qui a raison.',
-    '- Si une seule tendance couvre le sujet : son résumé la présente, et « differences » décrit sa lecture et dit sans détour qu\'il n\'y a rien à comparer — ne rien inventer.',
+    "- Écris « differences » : un seul paragraphe court en français qui compare comment les tendances cadrent, accentuent ou laissent de côté des parties du sujet. Tu peux citer un média à l'appui d'un contraste concret. Décris sans trancher : dis qui met l'accent sur quoi, jamais qui a raison.",
+    "- Si une seule tendance couvre le sujet : son résumé la présente, et « differences » décrit sa lecture et dit sans détour qu'il n'y a rien à comparer — ne rien inventer.",
   );
   return lines.join('\n');
 }
@@ -249,7 +273,11 @@ export function summariesModelFromEnv(): SummaryModel | undefined {
 }
 
 /** The Summaries client against one pinned model id (the side-by-side passes Flash). */
-export function geminiSummariesModel(apiKey: string, model: string, label: string): SummaryModel {
+export function geminiSummariesModel(
+  apiKey: string,
+  model: string,
+  label: string,
+): SummaryModel {
   return {
     label,
     model,
@@ -267,7 +295,10 @@ export function geminiSummariesModel(apiKey: string, model: string, label: strin
         try {
           const response = await fetch(url, {
             method: 'POST',
-            headers: { 'x-goog-api-key': apiKey, 'Content-Type': 'application/json' },
+            headers: {
+              'x-goog-api-key': apiKey,
+              'Content-Type': 'application/json',
+            },
             body: JSON.stringify(body),
             signal: AbortSignal.timeout(60_000),
           });
@@ -278,7 +309,9 @@ export function geminiSummariesModel(apiKey: string, model: string, label: strin
               continue;
             }
             // 401/403 and the like are config errors: fail fast, no retry.
-            const error = new Error(`${label} HTTP ${response.status}: ${text.slice(0, 200)}`);
+            const error = new Error(
+              `${label} HTTP ${response.status}: ${text.slice(0, 200)}`,
+            );
             (error as Error & { fatal?: boolean }).fatal = true;
             throw error;
           }

@@ -15,12 +15,12 @@
  * Story is only allowed when a Jev Membership check says yes (up to 20
  * checks per build); a refused, capped-out or failed check splits.
  */
-import { readFile, readdir } from 'node:fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 import type { Article, Section, Story } from '@prisme/domain';
 import { newestFirst } from '@prisme/domain';
-import type { GroupingModel, GroupingProposal } from './gemini.ts';
-import { storySection, slugify } from './edition.ts';
 import type { MembershipChecker } from './decision-model.ts';
+import { slugify, storySection } from './edition.ts';
+import type { GroupingModel, GroupingProposal } from './gemini.ts';
 
 /** At most this many Membership checks per build; the rest split (ADR-0005). */
 export const MAX_MEMBERSHIP_CHECKS = 20;
@@ -67,15 +67,22 @@ export function isLive(story: Story, now: Date): boolean {
 
 /** Deterministic Story order: newest Article first, ties by id. */
 function byNewestArticle(a: Story, b: Story): number {
-  const latest = (s: Story) => Math.max(0, ...s.articles.map((a) => published(a.publishedAt)));
+  const latest = (s: Story) =>
+    Math.max(0, ...s.articles.map((a) => published(a.publishedAt)));
   return latest(b) - latest(a) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 }
 
 /** Articles inside the 24h window that no Story on disk claims yet. */
-function freshArticles(articles: Article[], existing: Story[], now: Date): Article[] {
+function freshArticles(
+  articles: Article[],
+  existing: Story[],
+  now: Date,
+): Article[] {
   const cutoff = now.getTime() - LIVE_WINDOW_MS;
   const known = new Set(existing.flatMap((s) => s.articles.map((a) => a.id)));
-  return articles.filter((a) => !known.has(a.id) && published(a.publishedAt) > cutoff);
+  return articles.filter(
+    (a) => !known.has(a.id) && published(a.publishedAt) > cutoff,
+  );
 }
 
 /**
@@ -99,7 +106,9 @@ function suffixSlug(base: string, id: string, taken: Set<string>): string {
   return `${base}-${id}`;
 }
 
-export async function groupStories(input: GroupingInput): Promise<GroupingOutcome> {
+export async function groupStories(
+  input: GroupingInput,
+): Promise<GroupingOutcome> {
   const { articles, teasers, existing, now, makeId, clients } = input;
   const fresh = freshArticles(articles, existing, now);
   /** Stories to write back, tracked as objects so slug reassignment is safe. */
@@ -119,7 +128,8 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
   for (const a of articles) sectionById.set(a.id, a.section);
   const sectionOf = (id: string): Section | undefined => sectionById.get(id);
 
-  const liveSorted = () => stories.filter((s) => isLive(s, now)).sort(byNewestArticle);
+  const liveSorted = () =>
+    stories.filter((s) => isLive(s, now)).sort(byNewestArticle);
 
   if (fresh.length === 0) {
     // Nothing new: nothing changes (issue #5 acceptance criterion).
@@ -135,7 +145,13 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
     const id = makeId();
     const slug = slugFor(title, id, taken);
     taken.add(slug);
-    const story: Story = { id, slug, title, createdAt: now.toISOString(), articles: [] };
+    const story: Story = {
+      id,
+      slug,
+      title,
+      createdAt: now.toISOString(),
+      articles: [],
+    };
     stories.push(story);
     byId.set(id, story);
     created.push(story);
@@ -151,7 +167,11 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
 
   const groupingInput = {
     // Only live Stories are visible to the model; frozen ones are closed (ADR-0005).
-    stories: liveSorted().map((s) => ({ id: s.id, title: s.title, section: s.section })),
+    stories: liveSorted().map((s) => ({
+      id: s.id,
+      title: s.title,
+      section: s.section,
+    })),
     articles: fresh.map((a) => ({
       id: a.id,
       headline: a.headline,
@@ -161,7 +181,9 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
   };
   let proposal: GroupingProposal | null = null;
   try {
-    proposal = clients.grouping ? await clients.grouping.group(groupingInput) : null;
+    proposal = clients.grouping
+      ? await clients.grouping.group(groupingInput)
+      : null;
   } catch (reason) {
     // A thrown error (config 4xx, network) degrades exactly like a null
     // proposal (ADR-0005): the build never fails on the free tier.
@@ -176,10 +198,14 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
     for (const article of fresh) split(article);
   } else {
     const keyStories = new Map<string, Story>();
-    for (const ns of proposal.newStories) keyStories.set(ns.key, newStory(ns.title));
+    for (const ns of proposal.newStories)
+      keyStories.set(ns.key, newStory(ns.title));
 
     // First assignment wins per Article (the model must not double-assign).
-    const assignmentOf = new Map<string, GroupingProposal['assignments'][number]>();
+    const assignmentOf = new Map<
+      string,
+      GroupingProposal['assignments'][number]
+    >();
     for (const a of proposal.assignments) {
       if (!assignmentOf.has(a.articleId)) assignmentOf.set(a.articleId, a);
     }
@@ -193,7 +219,11 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
       .map((a) => ({ articleId: a.articleId, storyId: a.storyId! }))
       .sort(
         (x, y) =>
-          (x.articleId < y.articleId ? -1 : x.articleId > y.articleId ? 1 : 0) ||
+          (x.articleId < y.articleId
+            ? -1
+            : x.articleId > y.articleId
+              ? 1
+              : 0) ||
           (x.storyId < y.storyId ? -1 : x.storyId > y.storyId ? 1 : 0),
       )
       .slice(0, MAX_MEMBERSHIP_CHECKS);
@@ -206,7 +236,10 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
         try {
           verdict = await clients.membership.belongs(
             { title: story.title, section: story.section },
-            { headline: article.headline, teaser: teasers.get(article.id) ?? '' },
+            {
+              headline: article.headline,
+              teaser: teasers.get(article.id) ?? '',
+            },
           );
         } catch (reason) {
           // A thrown check is a failed check: refuse the merge (ADR-0005).
@@ -240,7 +273,10 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
         }
         continue;
       }
-      const story = assignment.newStoryKey != null ? keyStories.get(assignment.newStoryKey) : undefined;
+      const story =
+        assignment.newStoryKey != null
+          ? keyStories.get(assignment.newStoryKey)
+          : undefined;
       // The model created this Story for the Article — no Membership check.
       if (story != null) merge(story, article);
       else split(article);
@@ -261,7 +297,8 @@ export async function groupStories(input: GroupingInput): Promise<GroupingOutcom
     // the slug is fixed at creation and never changes.
     for (const update of proposal.titleUpdates) {
       const story = byId.get(update.storyId);
-      if (story != null && changedStories.has(story)) story.title = update.title;
+      if (story != null && changedStories.has(story))
+        story.title = update.title;
     }
   }
 
@@ -321,7 +358,9 @@ export async function loadStories(dir: URL): Promise<Story[]> {
   const stories: Story[] = [];
   for (const name of files) {
     try {
-      const raw = JSON.parse(await readFile(new URL(name, dir), 'utf8')) as Partial<Story>;
+      const raw = JSON.parse(
+        await readFile(new URL(name, dir), 'utf8'),
+      ) as Partial<Story>;
       if (
         typeof raw.id === 'string' &&
         typeof raw.slug === 'string' &&

@@ -14,9 +14,13 @@ describe('parseGroupingResponse', () => {
       }),
     );
     expect(proposal).not.toBeNull();
-    expect(proposal!.newStories).toEqual([{ key: 'budget', title: 'Le Sénat adopte le budget' }]);
+    expect(proposal!.newStories).toEqual([
+      { key: 'budget', title: 'Le Sénat adopte le budget' },
+    ]);
     expect(proposal!.assignments).toHaveLength(2);
-    expect(proposal!.titleUpdates).toEqual([{ storyId: 's1', title: 'Nouveau titre' }]);
+    expect(proposal!.titleUpdates).toEqual([
+      { storyId: 's1', title: 'Nouveau titre' },
+    ]);
   });
 
   it('returns null for non-JSON text', () => {
@@ -24,7 +28,9 @@ describe('parseGroupingResponse', () => {
   });
 
   it('returns null when assignments is missing', () => {
-    expect(parseGroupingResponse(JSON.stringify({ newStories: [] }))).toBeNull();
+    expect(
+      parseGroupingResponse(JSON.stringify({ newStories: [] })),
+    ).toBeNull();
   });
 
   it('treats a wrong-typed confidence like an absent one (0)', () => {
@@ -39,7 +45,11 @@ describe('parseGroupingResponse', () => {
         ],
       }),
     );
-    expect(proposal!.assignments.map((a) => a.articleId)).toEqual(['a1', 'a2', 'a3']);
+    expect(proposal!.assignments.map((a) => a.articleId)).toEqual([
+      'a1',
+      'a2',
+      'a3',
+    ]);
     expect(proposal!.assignments[1]!.confidence).toBe(0);
   });
 
@@ -59,7 +69,10 @@ describe('parseGroupingResponse', () => {
 
   it('treats confidence as 0 when absent', () => {
     const proposal = parseGroupingResponse(
-      JSON.stringify({ newStories: [], assignments: [{ articleId: 'a1', storyId: 's1' }] }),
+      JSON.stringify({
+        newStories: [],
+        assignments: [{ articleId: 'a1', storyId: 's1' }],
+      }),
     );
     expect(proposal!.assignments[0]!.confidence).toBe(0);
   });
@@ -91,6 +104,8 @@ describe('parseGroupingResponse', () => {
         ],
       }),
     );
-    expect(proposal!.titleUpdates).toEqual([{ storyId: 's1', title: 'Bon titre' }]);
+    expect(proposal!.titleUpdates).toEqual([
+      { storyId: 's1', title: 'Bon titre' },
+    ]);
   });
 });

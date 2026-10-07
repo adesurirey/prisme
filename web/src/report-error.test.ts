@@ -14,9 +14,13 @@ describe('reportIssueUrl', () => {
     expect(url.origin + url.pathname).toBe(
       'https://github.com/adesurirey/prisme/issues/new',
     );
-    expect(url.searchParams.get('title')).toBe('Erreur sur « Réforme des retraites »');
+    expect(url.searchParams.get('title')).toBe(
+      'Erreur sur « Réforme des retraites »',
+    );
     const body = url.searchParams.get('body')!;
-    expect(body).toContain('https://adesurirey.github.io/prisme/sujet/reforme-retraites/');
+    expect(body).toContain(
+      'https://adesurirey.github.io/prisme/sujet/reforme-retraites/',
+    );
     expect(body).toContain(story.title);
   });
 

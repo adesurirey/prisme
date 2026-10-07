@@ -56,8 +56,13 @@ export function countedArticles(articles: Article[]): number {
 }
 
 /** Outlets ever on the Front page for a Story: once per Outlet, Leaning then config order. */
-export function frontPageOutlets(articles: Article[], outlets: Outlet[]): Outlet[] {
-  const ever = new Set(articles.filter((a) => a.everFrontPage).map((a) => a.outletId));
+export function frontPageOutlets(
+  articles: Article[],
+  outlets: Outlet[],
+): Outlet[] {
+  const ever = new Set(
+    articles.filter((a) => a.everFrontPage).map((a) => a.outletId),
+  );
   const configOrder = new Map(outlets.map((o, i) => [o.id, i]));
   return outlets
     .filter((o) => ever.has(o.id))
@@ -96,12 +101,16 @@ export function pickStoryImage(
   const candidates = story.articles.filter((a) => a.imageUrl).sort(newestFirst);
   if (candidates.length === 0) return undefined;
 
-  const centre = candidates.find((a) => outletById.get(a.outletId)?.leaning === 'centre');
+  const centre = candidates.find(
+    (a) => outletById.get(a.outletId)?.leaning === 'centre',
+  );
   if (centre) return centre;
 
   // Coverage tiers, highest first; the first tier with an image candidate wins.
   const counts = coverageCounts(story.articles, outletById);
-  const tiers = [...new Set(leaningOrder.map((l) => counts[l]))].sort((a, b) => b - a);
+  const tiers = [...new Set(leaningOrder.map((l) => counts[l]))].sort(
+    (a, b) => b - a,
+  );
   for (const tier of tiers) {
     const leanings = leaningOrder.filter((l) => counts[l] === tier);
     const inTier = candidates.filter((a) => {

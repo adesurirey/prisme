@@ -22,7 +22,9 @@ export function updateFrontPageHistory(
   isLive: (story: Story) => boolean,
 ): FrontPageResult {
   // Today's Front-page snapshot, by Article id; absent means not on it.
-  const current = new Map(collected.filter((a) => a.frontPage).map((a) => [a.id, a]));
+  const current = new Map(
+    collected.filter((a) => a.frontPage).map((a) => [a.id, a]),
+  );
   const changed = new Set<string>();
   const reconciled = stories.map((story) => {
     if (!isLive(story)) return story;
@@ -30,7 +32,10 @@ export function updateFrontPageHistory(
     const articles = story.articles.map((article) => {
       const nowOnFrontPage = current.has(article.id);
       const ever = article.everFrontPage === true || nowOnFrontPage;
-      if (article.frontPage === nowOnFrontPage && ever === (article.everFrontPage === true)) {
+      if (
+        article.frontPage === nowOnFrontPage &&
+        ever === (article.everFrontPage === true)
+      ) {
         return article;
       }
       touched = true;

@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import type { Leaning, StorySummaries } from '@prisme/domain';
 import { LEANING_LABELS, leaningOrder } from '@prisme/domain';
+import { useState } from 'react';
 
 /**
  * The Prism tabs (issue #7): one Leaning per tab, then Differences. Every
@@ -19,7 +19,10 @@ export default function PrismTabs(props: {
   const [active, setActive] = useState<Leaning | 'differences'>(firstCovered);
 
   const tabs: { key: Leaning | 'differences'; label: string }[] = [
-    ...leaningOrder.map((leaning) => ({ key: leaning, label: LEANING_LABELS[leaning] })),
+    ...leaningOrder.map((leaning) => ({
+      key: leaning,
+      label: LEANING_LABELS[leaning],
+    })),
     { key: 'differences', label: 'Différences' },
   ];
 
@@ -37,7 +40,11 @@ export default function PrismTabs(props: {
 
   return (
     <div>
-      <div role="tablist" aria-label="Le sujet par tendance" className="flex gap-1 border-b border-line">
+      <div
+        role="tablist"
+        aria-label="Le sujet par tendance"
+        className="flex gap-1 border-b border-line"
+      >
         {tabs.map(({ key, label }) => {
           const selected = active === key;
           return (
@@ -64,12 +71,18 @@ export default function PrismTabs(props: {
           <div key={key} role="tabpanel" hidden={!selected} className="pt-4">
             {key === 'differences' ? (
               differences ? (
-                <p className="max-w-[36rem] text-[14px] leading-relaxed text-ink">{differences}</p>
+                <p className="max-w-[36rem] text-[14px] leading-relaxed text-ink">
+                  {differences}
+                </p>
               ) : (
-                <p className="text-[13px] text-muted">Différences indisponibles.</p>
+                <p className="text-[13px] text-muted">
+                  Différences indisponibles.
+                </p>
               )
             ) : counts[key] === 0 ? (
-              <p className="text-[13px] text-muted">Non couvert par {LEANING_ARTICLES[key]}</p>
+              <p className="text-[13px] text-muted">
+                Non couvert par {LEANING_ARTICLES[key]}
+              </p>
             ) : bullets(key) ? (
               <ul className="flex max-w-[36rem] list-disc flex-col gap-1.5 pl-5 text-[14px] leading-relaxed text-ink">
                 {bullets(key)!.map((bullet) => (

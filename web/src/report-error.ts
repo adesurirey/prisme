@@ -18,11 +18,10 @@ export function reportIssueUrl(input: {
     '',
     'Quelle est l’erreur ?',
   ].join('\n');
-  const params = new URLSearchParams({
-    title: `Erreur sur « ${input.title} »`,
-    body,
-  });
-  return `https://github.com/${REPO}/issues/new?${params.toString()}`;
+  const params =
+    `title=${encodeURIComponent(`Erreur sur « ${input.title} »`)}` +
+    `&body=${encodeURIComponent(body)}`;
+  return `https://github.com/${REPO}/issues/new?${params}`;
 }
 
 /** Convenience for Story pages: builds the page URL from the Story slug. */

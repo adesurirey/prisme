@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import type { Article, Story } from '@prisme/domain';
+import { describe, expect, it } from 'vitest';
 import { groupStories } from './grouping.ts';
 
 /** Deterministic 12-hex ids, so slug suffixes are predictable. */
@@ -36,7 +36,9 @@ const NO_CLIENTS = { grouping: null, membership: null };
 
 function fakeGrouping(
   proposal: import('./gemini.ts').GroupingProposal | null,
-  calls: { input?: Parameters<import('./gemini.ts').GroupingModel['group']>[0] }[] = [],
+  calls: {
+    input?: Parameters<import('./gemini.ts').GroupingModel['group']>[0];
+  }[] = [],
 ): import('./gemini.ts').GroupingModel {
   return {
     label: 'Fake',
@@ -96,10 +98,17 @@ describe('groupStories', () => {
   });
 
   it('an assignment merges the Article into the live Story when the Membership check says yes', async () => {
-    const existing = [story({ articles: [article('a0', { publishedAt: '2026-10-06T11:00:00Z' })] })];
+    const existing = [
+      story({
+        articles: [article('a0', { publishedAt: '2026-10-06T11:00:00Z' })],
+      }),
+    ];
     const outcome = await groupStories(
       input({
-        articles: [article('a0', { publishedAt: '2026-10-06T11:00:00Z' }), article('a1')],
+        articles: [
+          article('a0', { publishedAt: '2026-10-06T11:00:00Z' }),
+          article('a1'),
+        ],
         existing,
         clients: {
           grouping: fakeGrouping({
@@ -134,7 +143,9 @@ describe('groupStories', () => {
         },
       }),
     );
-    expect(outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id)).toEqual(['a0', 'a1']);
+    expect(
+      outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
+    ).toEqual(['a0', 'a1']);
     expect(checkCalls).toEqual([{ story: 'Story un', article: 'Titre a1' }]);
   });
 
@@ -154,7 +165,9 @@ describe('groupStories', () => {
         },
       }),
     );
-    expect(outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id)).toEqual(['a0']);
+    expect(
+      outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
+    ).toEqual(['a0']);
     const solo = outcome.stories.find((s) => s.id !== 's1')!;
     expect(solo.articles.map((a) => a.id)).toEqual(['a1']);
     // Equal publication times tie-break by Story id.
@@ -171,15 +184,21 @@ describe('groupStories', () => {
           clients: {
             grouping: fakeGrouping({
               newStories: [],
-              assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.5 }],
+              assignments: [
+                { articleId: 'a1', storyId: 's1', confidence: 0.5 },
+              ],
               titleUpdates: [],
             }),
             membership,
           },
         }),
       );
-      expect(outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id)).toEqual(['a0']);
-      expect(outcome.stories.find((s) => s.id !== 's1')!.articles.map((a) => a.id)).toEqual(['a1']);
+      expect(
+        outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
+      ).toEqual(['a0']);
+      expect(
+        outcome.stories.find((s) => s.id !== 's1')!.articles.map((a) => a.id),
+      ).toEqual(['a1']);
     }
   });
 
@@ -214,7 +233,11 @@ describe('groupStories', () => {
         clients: {
           grouping: fakeGrouping({
             newStories: [],
-            assignments: fresh.map((a) => ({ articleId: a.id, storyId: 's1', confidence: 0.5 })),
+            assignments: fresh.map((a) => ({
+              articleId: a.id,
+              storyId: 's1',
+              confidence: 0.5,
+            })),
             titleUpdates: [],
           }),
           membership: fakeMembership(true, checkCalls),
@@ -229,9 +252,15 @@ describe('groupStories', () => {
 
   it('a failed Grouping call degrades to one-Article Stories', async () => {
     const outcome = await groupStories(
-      input({ articles: [article('a1'), article('a2')], clients: { grouping: fakeGrouping(null), membership: null } }),
+      input({
+        articles: [article('a1'), article('a2')],
+        clients: { grouping: fakeGrouping(null), membership: null },
+      }),
     );
-    expect(outcome.stories.map((s) => s.title).sort()).toEqual(['Titre a1', 'Titre a2']);
+    expect(outcome.stories.map((s) => s.title).sort()).toEqual([
+      'Titre a1',
+      'Titre a2',
+    ]);
   });
 
   it('a Grouping model that throws degrades instead of failing the build', async () => {
@@ -275,8 +304,12 @@ describe('groupStories', () => {
         },
       }),
     );
-    expect(outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id)).toEqual(['a0']);
-    expect(outcome.stories.find((s) => s.id !== 's1')!.articles.map((a) => a.id)).toEqual(['a1']);
+    expect(
+      outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
+    ).toEqual(['a0']);
+    expect(
+      outcome.stories.find((s) => s.id !== 's1')!.articles.map((a) => a.id),
+    ).toEqual(['a1']);
   });
 
   it('an Article assigned to an unknown Story splits', async () => {
@@ -286,7 +319,9 @@ describe('groupStories', () => {
         clients: {
           grouping: fakeGrouping({
             newStories: [],
-            assignments: [{ articleId: 'a1', storyId: 'nope', confidence: 0.9 }],
+            assignments: [
+              { articleId: 'a1', storyId: 'nope', confidence: 0.9 },
+            ],
             titleUpdates: [],
           }),
           membership: null,
@@ -302,7 +337,11 @@ describe('groupStories', () => {
       input({
         articles: [article('a1')],
         clients: {
-          grouping: fakeGrouping({ newStories: [], assignments: [], titleUpdates: [] }),
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [],
+            titleUpdates: [],
+          }),
           membership: null,
         },
       }),
@@ -318,7 +357,9 @@ describe('groupStories', () => {
         clients: {
           grouping: fakeGrouping({
             newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
-            assignments: [{ articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
+            ],
             titleUpdates: [],
           }),
           membership: null,
@@ -342,7 +383,9 @@ describe('groupStories', () => {
               { key: 'k1', title: 'Vide' },
               { key: 'k2', title: 'Pleine' },
             ],
-            assignments: [{ articleId: 'a1', newStoryKey: 'k2', confidence: 0.3 }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k2', confidence: 0.3 },
+            ],
             titleUpdates: [],
           }),
           membership: null,
@@ -362,7 +405,9 @@ describe('groupStories', () => {
         clients: {
           grouping: fakeGrouping({
             newStories: [{ key: 'k1', title: 'Collision' }],
-            assignments: [{ articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
+            ],
             titleUpdates: [],
           }),
           membership: null,
@@ -424,12 +469,19 @@ describe('groupStories', () => {
         },
       }),
     );
-    expect(outcome.stories.find((s) => s.id === '000000000001')!.slug).toBe('meme-sujet');
-    expect(outcome.stories.find((s) => s.id === 'ffffffffffff')!.slug).toBe('meme-sujet-ffffff');
+    expect(outcome.stories.find((s) => s.id === '000000000001')!.slug).toBe(
+      'meme-sujet',
+    );
+    expect(outcome.stories.find((s) => s.id === 'ffffffffffff')!.slug).toBe(
+      'meme-sujet-ffffff',
+    );
   });
 
   it('extends the id slice when even the 6-hex suffix is taken', async () => {
-    const existing = [story({ slug: 'collision' }), story({ id: 's2', slug: 'collision-000000' })];
+    const existing = [
+      story({ slug: 'collision' }),
+      story({ id: 's2', slug: 'collision-000000' }),
+    ];
     const outcome = await groupStories(
       input({
         articles: [article('a1')],
@@ -437,7 +489,9 @@ describe('groupStories', () => {
         clients: {
           grouping: fakeGrouping({
             newStories: [{ key: 'k1', title: 'Collision' }],
-            assignments: [{ articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
+            ],
             titleUpdates: [],
           }),
           membership: null,
@@ -470,7 +524,10 @@ describe('groupStories', () => {
   });
 
   it('never re-titles a Story that gained no Articles', async () => {
-    const existing = [story({ articles: [article('a0')] }), story({ id: 's2', slug: 'story-deux', title: 'Story deux' })];
+    const existing = [
+      story({ articles: [article('a0')] }),
+      story({ id: 's2', slug: 'story-deux', title: 'Story deux' }),
+    ];
     const outcome = await groupStories(
       input({
         articles: [article('a0'), article('a1')],
@@ -485,7 +542,9 @@ describe('groupStories', () => {
         },
       }),
     );
-    expect(outcome.stories.find((s) => s.id === 's2')!.title).toBe('Story deux');
+    expect(outcome.stories.find((s) => s.id === 's2')!.title).toBe(
+      'Story deux',
+    );
     expect(outcome.changed.has('story-deux')).toBe(false);
   });
 
@@ -500,7 +559,9 @@ describe('groupStories', () => {
         articles: [article('a-old', { publishedAt: '2026-10-05T00:00:00Z' })],
       }),
     ];
-    const calls: { input?: Parameters<import('./gemini.ts').GroupingModel['group']>[0] }[] = [];
+    const calls: {
+      input?: Parameters<import('./gemini.ts').GroupingModel['group']>[0];
+    }[] = [];
     await groupStories(
       input({
         articles: [article('a0'), article('a1')],
@@ -508,7 +569,13 @@ describe('groupStories', () => {
         existing,
         clients: {
           grouping: fakeGrouping(
-            { newStories: [], assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.9 }], titleUpdates: [] },
+            {
+              newStories: [],
+              assignments: [
+                { articleId: 'a1', storyId: 's1', confidence: 0.9 },
+              ],
+              titleUpdates: [],
+            },
             calls,
           ),
           membership: null,
@@ -518,14 +585,23 @@ describe('groupStories', () => {
     const modelInput = calls[0]!.input!;
     expect(modelInput.stories.map((s) => s.id)).toEqual(['s1']); // the frozen Story is invisible
     expect(modelInput.articles).toEqual([
-      { id: 'a1', headline: 'Titre a1', teaser: 'Chapô de a1', section: undefined },
+      {
+        id: 'a1',
+        headline: 'Titre a1',
+        teaser: 'Chapô de a1',
+        section: undefined,
+      },
     ]);
   });
 
   it('re-running with no new Articles changes nothing', async () => {
     const existing = [story({ articles: [article('a0')] })];
     const outcome = await groupStories(
-      input({ articles: [article('a0')], existing, clients: { grouping: fakeGrouping(null), membership: null } }),
+      input({
+        articles: [article('a0')],
+        existing,
+        clients: { grouping: fakeGrouping(null), membership: null },
+      }),
     );
     expect(outcome.changed.size).toBe(0);
     expect(outcome.stories).toHaveLength(1);
@@ -535,7 +611,9 @@ describe('groupStories', () => {
 
   it('Articles older than 24h are never grouped, even when no Story claims them', async () => {
     const outcome = await groupStories(
-      input({ articles: [article('a-old', { publishedAt: '2026-10-05T00:00:00Z' })] }),
+      input({
+        articles: [article('a-old', { publishedAt: '2026-10-05T00:00:00Z' })],
+      }),
     );
     expect(outcome.stories).toHaveLength(0);
     expect(outcome.changed.size).toBe(0);
@@ -545,13 +623,20 @@ describe('groupStories', () => {
   it('recomputes the Story Section after merges, from the Articles', async () => {
     const existing = [
       story({
-        articles: [article('a0', { section: 'politics' }), article('a1', { section: 'politics' })],
+        articles: [
+          article('a0', { section: 'politics' }),
+          article('a1', { section: 'politics' }),
+        ],
         section: 'politics',
       }),
     ];
     const outcome = await groupStories(
       input({
-        articles: [article('a0', { section: 'politics' }), article('a1', { section: 'politics' }), article('a2', { section: 'world' })],
+        articles: [
+          article('a0', { section: 'politics' }),
+          article('a1', { section: 'politics' }),
+          article('a2', { section: 'world' }),
+        ],
         existing,
         clients: {
           grouping: fakeGrouping({

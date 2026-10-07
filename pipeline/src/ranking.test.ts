@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import type { Article, Outlet, Story } from '@prisme/domain';
+import { describe, expect, it } from 'vitest';
 import { EDITION_SIZE, rankStories } from './ranking.ts';
 
 /**
@@ -20,7 +20,11 @@ function outlet(id: string, leaning: Outlet['leaning']): Outlet {
   };
 }
 
-const outlets = [outlet('a', 'gauche'), outlet('b', 'centre'), outlet('c', 'droite')];
+const outlets = [
+  outlet('a', 'gauche'),
+  outlet('b', 'centre'),
+  outlet('c', 'droite'),
+];
 const byId = new Map(outlets.map((o) => [o.id, o]));
 
 function article(id: string, overrides: Partial<Article> = {}): Article {
@@ -36,11 +40,16 @@ function article(id: string, overrides: Partial<Article> = {}): Article {
   };
 }
 
-function story(id: string, articles: Article[], createdAt = '2026-10-06T10:00:00Z'): Story {
+function story(
+  id: string,
+  articles: Article[],
+  createdAt = '2026-10-06T10:00:00Z',
+): Story {
   return { id, slug: id, title: 'Sujet', createdAt, articles };
 }
 
-const ranked = (stories: Story[]) => rankStories(stories, byId).map((s) => s.id);
+const ranked = (stories: Story[]) =>
+  rankStories(stories, byId).map((s) => s.id);
 
 describe('rankStories', () => {
   it('orders by the number of Outlets currently on the Front page', () => {
@@ -79,8 +88,12 @@ describe('rankStories', () => {
   });
 
   it('breaks Coverage ties by the newest Article', () => {
-    const older = story('older', [article('1', { publishedAt: '2026-10-06T09:00:00Z' })]);
-    const newer = story('newer', [article('2', { publishedAt: '2026-10-06T11:00:00Z' })]);
+    const older = story('older', [
+      article('1', { publishedAt: '2026-10-06T09:00:00Z' }),
+    ]);
+    const newer = story('newer', [
+      article('2', { publishedAt: '2026-10-06T11:00:00Z' }),
+    ]);
     expect(ranked([newer, older])).toEqual(['newer', 'older']);
   });
 
@@ -88,7 +101,9 @@ describe('rankStories', () => {
     const early = story('early', [article('1')], '2026-10-06T08:00:00Z');
     const late = story('late', [article('2')], '2026-10-06T09:00:00Z');
     expect(ranked([late, early])).toEqual(['early', 'late']);
-    expect(ranked([story('b', [article('1')]), story('a', [article('2')])])).toEqual(['a', 'b']);
+    expect(
+      ranked([story('b', [article('1')]), story('a', [article('2')])]),
+    ).toEqual(['a', 'b']);
   });
 
   it('keeps the top EDITION_SIZE in the Edition', () => {

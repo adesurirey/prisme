@@ -1,16 +1,16 @@
 import { readFile, writeFile } from 'node:fs/promises';
-import { runPool } from '../pool.ts';
 import {
+  type ArticleKind,
+  type Classification,
   clefFlashModel,
+  type DecisionModel,
   jevModel,
   OPENROUTER_MODELS,
   openRouterModel,
   PROMPT_VERSION,
-  type ArticleKind,
-  type Classification,
-  type DecisionModel,
   type Section,
 } from '../decision-model.ts';
+import { runPool } from '../pool.ts';
 
 /**
  * Benchmark grader (issue #4): runs each configured decision model over the
@@ -27,8 +27,14 @@ import {
  */
 
 const BENCHMARK_DIR = new URL('../../../.benchmark/', import.meta.url);
-const LABELS_PATH = new URL('../../../docs/research/decision-model-labels.json', import.meta.url);
-const DOC_PATH = new URL('../../../docs/research/decision-model-benchmark.md', import.meta.url);
+const LABELS_PATH = new URL(
+  '../../../docs/research/decision-model-labels.json',
+  import.meta.url,
+);
+const DOC_PATH = new URL(
+  '../../../docs/research/decision-model-benchmark.md',
+  import.meta.url,
+);
 
 const CONCURRENCY = 4;
 const KINDS: ArticleKind[] = ['news', 'opinion', 'live', 'not_news'];
@@ -88,17 +94,26 @@ function modelsFromEnv(): DecisionModel[] {
   else console.warn('JEV_API_KEY not set — skipping Jev.');
   if (process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID) {
     models.push(
-      clefFlashModel(process.env.CLOUDFLARE_API_TOKEN, process.env.CLOUDFLARE_ACCOUNT_ID),
+      clefFlashModel(
+        process.env.CLOUDFLARE_API_TOKEN,
+        process.env.CLOUDFLARE_ACCOUNT_ID,
+      ),
     );
   } else {
-    console.warn('CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID not set — skipping Clef-flash.');
+    console.warn(
+      'CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID not set — skipping Clef-flash.',
+    );
   }
   return models;
 }
 
 async function main(): Promise<void> {
-  const labels = JSON.parse(await readFile(LABELS_PATH, 'utf8')) as { items: LabeledItem[] };
-  const samples = JSON.parse(await readFile(new URL('samples.json', BENCHMARK_DIR), 'utf8')) as {
+  const labels = JSON.parse(await readFile(LABELS_PATH, 'utf8')) as {
+    items: LabeledItem[];
+  };
+  const samples = JSON.parse(
+    await readFile(new URL('samples.json', BENCHMARK_DIR), 'utf8'),
+  ) as {
     seed: number;
     sampledAt: string;
     items: SampleItem[];
@@ -128,21 +143,34 @@ async function main(): Promise<void> {
       const pair = pairs.get(item.id)!;
       let classification: Classification | null = null;
       try {
-        classification = await model.classify({ headline: pair.headline, teaser: pair.teaser });
+        classification = await model.classify({
+          headline: pair.headline,
+          teaser: pair.teaser,
+        });
       } catch (reason) {
         console.warn(
           `${model.label} failed on ${item.id}: ${reason instanceof Error ? reason.message : reason}`,
         );
       }
-      attempts[i] = { model: model.label, id: item.id, classification, costPerInputToken: model.costPerInputToken };
+      attempts[i] = {
+        model: model.label,
+        id: item.id,
+        classification,
+        costPerInputToken: model.costPerInputToken,
+      };
     });
     results.push({ model: model.label, attempts });
   }
 
   const summaries = results.map((r) => summarize(items, r.attempts));
-  await writeFile(new URL('results.json', BENCHMARK_DIR), JSON.stringify({ results }, null, 2) + '\n');
+  await writeFile(
+    new URL('results.json', BENCHMARK_DIR),
+    JSON.stringify({ results }, null, 2) + '\n',
+  );
   await writeFile(DOC_PATH, render(items.length, summaries, samples));
-  console.log('Wrote docs/research/decision-model-benchmark.md and .benchmark/results.json');
+  console.log(
+    'Wrote docs/research/decision-model-benchmark.md and .benchmark/results.json',
+  );
 }
 
 function summarize(items: LabeledItem[], attempts: Attempt[]): Summary {
@@ -180,13 +208,15 @@ function summarize(items: LabeledItem[], attempts: Attempt[]): Summary {
     }
     if (item.section != null && label !== 'not_news') {
       sectionScored++;
-      if (attempts[i]!.classification?.section === item.section) sectionCorrect++;
+      if (attempts[i]!.classification?.section === item.section)
+        sectionCorrect++;
     }
     const classification = attempts[i]!.classification;
     latencies.push(classification?.elapsedMs ?? 0);
     inputTokens += classification?.inputTokens ?? 0;
     costUsd +=
-      classification?.costUsd ?? (classification?.inputTokens ?? 0) * attempts[i]!.costPerInputToken;
+      classification?.costUsd ??
+      (classification?.inputTokens ?? 0) * attempts[i]!.costPerInputToken;
   });
 
   latencies.sort((a, b) => a - b);
@@ -199,14 +229,26 @@ function summarize(items: LabeledItem[], attempts: Attempt[]): Summary {
     notNewsRecall: tp + fn > 0 ? tp / (tp + fn) : null,
     sectionAccuracy: sectionScored > 0 ? sectionCorrect / sectionScored : 0,
     invalidRate: invalid / items.length,
-    avgLatencyMs: latencies.length > 0 ? Math.round(latencies.reduce((a, b) => a + b, 0) / latencies.length) : 0,
-    p95LatencyMs: latencies.length > 0 ? (latencies[Math.min(latencies.length - 1, Math.floor(latencies.length * 0.95))] ?? 0) : 0,
+    avgLatencyMs:
+      latencies.length > 0
+        ? Math.round(latencies.reduce((a, b) => a + b, 0) / latencies.length)
+        : 0,
+    p95LatencyMs:
+      latencies.length > 0
+        ? (latencies[
+            Math.min(latencies.length - 1, Math.floor(latencies.length * 0.95))
+          ] ?? 0)
+        : 0,
     inputTokens,
     costUsd,
   };
 }
 
-function render(total: number, summaries: Summary[], samples: { seed: number; sampledAt: string }): string {
+function render(
+  total: number,
+  summaries: Summary[],
+  samples: { seed: number; sampledAt: string },
+): string {
   const lines: string[] = [
     '# Decision-model benchmark (issue #4)',
     '',
@@ -230,7 +272,12 @@ function render(total: number, summaries: Summary[], samples: { seed: number; sa
   }
 
   for (const s of summaries) {
-    const columns = [...KINDS, ...(Object.values(s.confusion).some((row) => row[INVALID]) ? [INVALID] : [])];
+    const columns = [
+      ...KINDS,
+      ...(Object.values(s.confusion).some((row) => row[INVALID])
+        ? [INVALID]
+        : []),
+    ];
     lines.push(
       '',
       `## ${s.model} — kind confusion matrix`,
@@ -242,7 +289,9 @@ function render(total: number, summaries: Summary[], samples: { seed: number; sa
     );
     for (const label of KINDS) {
       if (s.confusion[label] == null) continue;
-      lines.push(`| **${label}** | ${columns.map((c) => String(s.confusion[label][c] ?? 0)).join(' | ')} |`);
+      lines.push(
+        `| **${label}** | ${columns.map((c) => String(s.confusion[label][c] ?? 0)).join(' | ')} |`,
+      );
     }
   }
 
@@ -270,8 +319,10 @@ function pickWinner(summaries: Summary[]): Summary {
   return [...summaries].sort((a, b) => {
     const p = (s: Summary) => s.notNewsPrecision ?? 0;
     if (p(b) !== p(a)) return p(b) - p(a);
-    if (b.kindAccuracy !== a.kindAccuracy) return b.kindAccuracy - a.kindAccuracy;
-    if (b.sectionAccuracy !== a.sectionAccuracy) return b.sectionAccuracy - a.sectionAccuracy;
+    if (b.kindAccuracy !== a.kindAccuracy)
+      return b.kindAccuracy - a.kindAccuracy;
+    if (b.sectionAccuracy !== a.sectionAccuracy)
+      return b.sectionAccuracy - a.sectionAccuracy;
     if (a.costUsd !== b.costUsd) return a.costUsd - b.costUsd;
     return a.avgLatencyMs - b.avgLatencyMs;
   })[0]!;

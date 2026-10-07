@@ -1,13 +1,4 @@
 ---
-import Base from '../../layouts/Base.astro';
-import ArticleRow from '../../components/ArticleRow';
-import PrismTabs from '../../components/PrismTabs';
-import BlindspotBadge from '../../components/BlindspotBadge';
-import CoverageBar from '../../components/CoverageBar';
-import LeaningBadge from '../../components/LeaningBadge';
-import StoryImage from '../../components/StoryImage';
-import { loadAllStoryFiles, loadOutlets, withBase } from '../../data';
-import { reportIssueUrl, storyPageUrl } from '../../report-error';
 import type { Article, Leaning, Story } from '@prisme/domain';
 import {
   blindspots,
@@ -18,14 +9,26 @@ import {
   newestFirst,
   pickStoryImage,
   reportingOutletIds,
+  SECTION_LABELS,
 } from '@prisme/domain';
-import { SECTION_LABELS } from '@prisme/domain';
+import ArticleRow from '../../components/ArticleRow';
+import BlindspotBadge from '../../components/BlindspotBadge';
+import CoverageBar from '../../components/CoverageBar';
+import LeaningBadge from '../../components/LeaningBadge';
+import PrismTabs from '../../components/PrismTabs';
+import StoryImage from '../../components/StoryImage';
+import { loadAllStoryFiles, loadOutlets, withBase } from '../../data';
+import Base from '../../layouts/Base.astro';
+import { reportIssueUrl, storyPageUrl } from '../../report-error';
 
 export async function getStaticPaths() {
   // Every Story file gets its page: live Stories in the Edition, live Stories
   // below the top-20 cut, and frozen Stories (issue #6, ADR-0005).
   const stories = await loadAllStoryFiles();
-  return stories.map((story) => ({ params: { slug: story.slug }, props: { story } }));
+  return stories.map((story) => ({
+    params: { slug: story.slug },
+    props: { story },
+  }));
 }
 
 const { story } = Astro.props as { story: Story };
@@ -60,7 +63,10 @@ const builtAt = new Date(
 // Story's page URL, placed next to the Story it concerns.
 const reportUrl = reportIssueUrl({
   title: story.title,
-  pageUrl: new URL(storyPageUrl(story, import.meta.env.BASE_URL), Astro.site).toString(),
+  pageUrl: new URL(
+    storyPageUrl(story, import.meta.env.BASE_URL),
+    Astro.site,
+  ).toString(),
 });
 
 // SEO (issue #6): Prisme's own description, derived only from the Coverage

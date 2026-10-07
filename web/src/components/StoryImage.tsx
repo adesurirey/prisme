@@ -30,7 +30,10 @@ export default function StoryImage({
   const caption = outlet ? `Photo : ${outlet.name}` : undefined;
   return (
     <span className={`relative block overflow-hidden bg-line ${frame}`}>
-      <span aria-hidden="true" className="absolute inset-0 flex items-center justify-center">
+      <span
+        aria-hidden="true"
+        className="absolute inset-0 flex items-center justify-center"
+      >
         <PlaceholderMark />
       </span>
       <img

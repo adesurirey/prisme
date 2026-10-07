@@ -77,9 +77,12 @@ function parseRssItem(item: any): ParsedItem {
 }
 
 function rssImageUrl(item: any): string | undefined {
-  const enclosure = item.enclosure && (item.enclosure.type == null || String(item.enclosure.type).startsWith('image/'))
-    ? item.enclosure
-    : undefined;
+  const enclosure =
+    item.enclosure &&
+    (item.enclosure.type == null ||
+      String(item.enclosure.type).startsWith('image/'))
+      ? item.enclosure
+      : undefined;
   const media = item['media:content'] ?? item['media:thumbnail'];
   const url = enclosure?.url ?? media?.url;
   return url ? String(url) : undefined;

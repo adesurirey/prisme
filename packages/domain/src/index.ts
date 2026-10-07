@@ -66,7 +66,12 @@ export interface Article {
 /** The classification of an Article: news, opinion, live or not_news. */
 export type ArticleKind = 'news' | 'opinion' | 'live' | 'not_news';
 
-export const ARTICLE_KINDS: ArticleKind[] = ['news', 'opinion', 'live', 'not_news'];
+export const ARTICLE_KINDS: ArticleKind[] = [
+  'news',
+  'opinion',
+  'live',
+  'not_news',
+];
 
 /** The part of the news a Story belongs to (issue #4). */
 export type Section =
@@ -152,7 +157,7 @@ export interface Edition {
   stories: Story[];
 }
 
+export * from './coverage.ts';
 // The sourced Outlet config (issue #2): Leanings with citations, readership,
 // verified feeds and TDM reservations. See docs/research/outlet-leanings.md.
 export * from './outlets.ts';
-export * from './coverage.ts';

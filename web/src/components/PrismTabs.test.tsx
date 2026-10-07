@@ -41,8 +41,12 @@ describe('PrismTabs', () => {
   it('switches the visible panel on tab click and only that panel', () => {
     render(<PrismTabs {...COVERED} />);
     const droiteTab = screen.getByRole('tab', { name: 'Droite' });
-    const gauchePanel = screen.getByText('Lu à gauche').closest('[role="tabpanel"]')!;
-    const droitePanel = screen.getByText('Lu à droite').closest('[role="tabpanel"]')!;
+    const gauchePanel = screen
+      .getByText('Lu à gauche')
+      .closest('[role="tabpanel"]')!;
+    const droitePanel = screen
+      .getByText('Lu à droite')
+      .closest('[role="tabpanel"]')!;
 
     expect(gauchePanel.hasAttribute('hidden')).toBe(false);
     expect(droitePanel.hasAttribute('hidden')).toBe(true);

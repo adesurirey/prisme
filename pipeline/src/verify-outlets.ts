@@ -87,13 +87,21 @@ export async function reportTdm(outlet: OutletConfig): Promise<TdmReport> {
       headers: { 'User-Agent': USER_AGENT },
       signal: AbortSignal.timeout(20_000),
     });
-    if (!response.ok) return { outletId: outlet.id, url, status: response.status, reserved: null };
+    if (!response.ok)
+      return {
+        outletId: outlet.id,
+        url,
+        status: response.status,
+        reserved: null,
+      };
     const body = await response.text();
     return {
       outletId: outlet.id,
       url,
       status: response.status,
-      reserved: body.includes('"tdm-reservation":1') || body.includes('"tdm-reservation": 1'),
+      reserved:
+        body.includes('"tdm-reservation":1') ||
+        body.includes('"tdm-reservation": 1'),
     };
   } catch (error) {
     return {
@@ -111,23 +119,52 @@ function errorMessage(error: unknown): string {
 }
 
 /** A feed that could not be read: zero items, the status says why. */
-function unreadReport(outletId: string, kind: FeedKind, url: string, status: number): FeedReport {
-  return { outletId, kind, url, status, items: 0, withImage: 0, oldest: '', newest: '', spanHours: null };
+function unreadReport(
+  outletId: string,
+  kind: FeedKind,
+  url: string,
+  status: number,
+): FeedReport {
+  return {
+    outletId,
+    kind,
+    url,
+    status,
+    items: 0,
+    withImage: 0,
+    oldest: '',
+    newest: '',
+    spanHours: null,
+  };
 }
 
-export async function reportOutlets(): Promise<{ feeds: FeedReport[]; tdm: TdmReport[] }> {
+export async function reportOutlets(): Promise<{
+  feeds: FeedReport[];
+  tdm: TdmReport[];
+}> {
   const checks: { outletId: string; kind: FeedKind; url: string }[] = [];
   for (const outlet of outlets) {
-    if (outlet.feeds.une) checks.push({ outletId: outlet.id, kind: 'une', url: outlet.feeds.une });
-    if (outlet.feeds.latest) checks.push({ outletId: outlet.id, kind: 'latest', url: outlet.feeds.latest });
+    if (outlet.feeds.une)
+      checks.push({ outletId: outlet.id, kind: 'une', url: outlet.feeds.une });
+    if (outlet.feeds.latest)
+      checks.push({
+        outletId: outlet.id,
+        kind: 'latest',
+        url: outlet.feeds.latest,
+      });
   }
   const [feeds, tdm] = await Promise.all([
-    Promise.all(checks.map((check) => reportFeed(check.outletId, check.kind, check.url))),
+    Promise.all(
+      checks.map((check) => reportFeed(check.outletId, check.kind, check.url)),
+    ),
     Promise.all(outlets.map((outlet) => reportTdm(outlet))),
   ]);
   return { feeds, tdm };
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (
+  process.argv[1] &&
+  import.meta.url === pathToFileURL(process.argv[1]).href
+) {
   console.log(JSON.stringify(await reportOutlets(), null, 2));
 }

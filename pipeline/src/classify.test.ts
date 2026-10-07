@@ -1,11 +1,11 @@
-import { describe, expect, it } from 'vitest';
 import type { Article } from '@prisme/domain';
+import { describe, expect, it } from 'vitest';
 import {
+  type ClassificationCache,
   classifyNewArticles,
   dropNotNews,
   emptyCache,
   kindOf,
-  type ClassificationCache,
 } from './classify.ts';
 import type { DecisionModel } from './decision-model.ts';
 
@@ -21,7 +21,9 @@ function article(id: string): Article {
 }
 
 function fakeModel(
-  answers: (id: string) => { kind: 'news' | 'not_news'; section: string | null } | null,
+  answers: (
+    id: string,
+  ) => { kind: 'news' | 'not_news'; section: string | null } | null,
 ): DecisionModel & { calls: string[] } {
   const calls: string[] = [];
   return {
@@ -46,8 +48,15 @@ describe('classifyNewArticles', () => {
   it('classifies only ids missing from the cache', async () => {
     const cache = emptyCache();
     cache.entries['a1'] = { kind: 'news', section: 'politics' };
-    const model = fakeModel((id) => (id === 'a2' ? { kind: 'not_news', section: null } : null));
-    await classifyNewArticles([article('a1'), article('a2')], new Map(), cache, model);
+    const model = fakeModel((id) =>
+      id === 'a2' ? { kind: 'not_news', section: null } : null,
+    );
+    await classifyNewArticles(
+      [article('a1'), article('a2')],
+      new Map(),
+      cache,
+      model,
+    );
     expect(model.calls).toEqual(['Titre a2']);
     expect(cache.entries['a1']).toEqual({ kind: 'news', section: 'politics' });
     expect(cache.entries['a2']).toEqual({ kind: 'not_news', section: null });
@@ -66,13 +75,20 @@ describe('classifyNewArticles', () => {
     model.classify = async () => {
       throw new Error('HTTP 401: bad key');
     };
-    await expect(classifyNewArticles([article('a1')], new Map(), cache, model)).resolves.toBe(cache);
+    await expect(
+      classifyNewArticles([article('a1')], new Map(), cache, model),
+    ).resolves.toBe(cache);
     expect(cache.entries).toEqual({});
   });
 
   it('returns the cache untouched without a model', async () => {
     const cache = emptyCache();
-    const result = await classifyNewArticles([article('a1')], new Map(), cache, null);
+    const result = await classifyNewArticles(
+      [article('a1')],
+      new Map(),
+      cache,
+      null,
+    );
     expect(result).toBe(cache);
     expect(cache.entries).toEqual({});
   });
@@ -87,7 +103,10 @@ describe('dropNotNews', () => {
   };
 
   it('drops only successfully classified not_news Articles', () => {
-    const kept = dropNotNews([article('n1'), article('n2'), article('n3')], cache());
+    const kept = dropNotNews(
+      [article('n1'), article('n2'), article('n3')],
+      cache(),
+    );
     expect(kept.map((a) => a.id)).toEqual(['n2', 'n3']);
   });
 

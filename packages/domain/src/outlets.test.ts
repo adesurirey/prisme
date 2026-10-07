@@ -11,7 +11,8 @@ describe('outlet config', () => {
     const ids = outlets.map((outlet) => outlet.id);
     expect(new Set(ids).size).toBe(ids.length);
     for (const id of ids) expect(id).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/);
-    for (const excluded of excludedOutlets) expect(ids).not.toContain(excluded.id);
+    for (const excluded of excludedOutlets)
+      expect(ids).not.toContain(excluded.id);
   });
 
   it('gives every Outlet a Leaning backed by at least 2 cited sources', () => {
@@ -41,12 +42,16 @@ describe('outlet config', () => {
 
   it('verifies every declared feed (status, item count, time covered, images)', () => {
     for (const outlet of outlets) {
-      const checked = new Set(outlet.feedChecks.map((check) => `${check.kind} ${check.url}`));
+      const checked = new Set(
+        outlet.feedChecks.map((check) => `${check.kind} ${check.url}`),
+      );
       if (outlet.feeds.une) {
         expect(checked.has(`une ${outlet.feeds.une}`), outlet.id).toBe(true);
       }
       if (outlet.feeds.latest) {
-        expect(checked.has(`latest ${outlet.feeds.latest}`), outlet.id).toBe(true);
+        expect(checked.has(`latest ${outlet.feeds.latest}`), outlet.id).toBe(
+          true,
+        );
       }
       expect(outlet.feeds.une ?? outlet.feeds.latest, outlet.id).toBeDefined();
       for (const check of outlet.feedChecks) {
@@ -54,7 +59,10 @@ describe('outlet config', () => {
         expect(check.items, outlet.id).toBeGreaterThanOrEqual(0);
         expect(check.images, outlet.id).toMatch(/^(none|some|all)$/);
         // Time covered, or why the feed cannot be dated (missing pubDates).
-        expect(check.covers !== '' || (check.note ?? '') !== '', outlet.id).toBe(true);
+        expect(
+          check.covers !== '' || (check.note ?? '') !== '',
+          outlet.id,
+        ).toBe(true);
       }
     }
   });
@@ -77,7 +85,14 @@ describe('outlet config', () => {
 
   it('publishes only the public Outlet shape in data/outlets.json', () => {
     for (const outlet of publicOutlets()) {
-      expect(Object.keys(outlet).sort()).toEqual(['feeds', 'id', 'leaning', 'name', 'paywall', 'site']);
+      expect(Object.keys(outlet).sort()).toEqual([
+        'feeds',
+        'id',
+        'leaning',
+        'name',
+        'paywall',
+        'site',
+      ]);
     }
   });
 });

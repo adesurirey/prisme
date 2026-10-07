@@ -5,11 +5,12 @@ import {
   coverageCounts,
   pickStoryImage,
   reportingOutletIds,
-} from '@prisme/domain';import { SECTION_LABELS } from '@prisme/domain';
+  SECTION_LABELS,
+} from '@prisme/domain';
+import { withBase } from '../data';
 import BlindspotBadge from './BlindspotBadge';
 import CoverageBar from './CoverageBar';
 import StoryImage from './StoryImage';
-import { withBase } from '../data';
 
 /**
  * One Story in the Edition index, in ranking order (issue #6: the Edition
@@ -18,7 +19,13 @@ import { withBase } from '../data';
  * and the counted Article detail — a link to the Story page, where the
  * Articles live.
  */
-export default function StoryCard({ story, outlets }: { story: Story; outlets: Outlet[] }) {
+export default function StoryCard({
+  story,
+  outlets,
+}: {
+  story: Story;
+  outlets: Outlet[];
+}) {
   const byId = new Map(outlets.map((o) => [o.id, o]));
   const counts = coverageCounts(story.articles, byId);
   const reporting = reportingOutletIds(story.articles).size;
@@ -57,7 +64,11 @@ export default function StoryCard({ story, outlets }: { story: Story; outlets: O
               sizes="96px"
             />
           </div>
-          <CoverageBar counts={counts} reporting={reporting} totalOutlets={outlets.length} />
+          <CoverageBar
+            counts={counts}
+            reporting={reporting}
+            totalOutlets={outlets.length}
+          />
         </div>
       </div>
     </article>
