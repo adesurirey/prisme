@@ -5,6 +5,29 @@
   "createdAt": "2026-10-07T08:19:44.536Z",
   "articles": [
     {
+      "id": "326cf6034033",
+      "outletId": "la-croix",
+      "headline": "Soupçon de peste, inquiétude américaine… Ce que l’on sait du décès d’une laborantine en Russie",
+      "url": "https://www.la-croix.com/sante/soupcon-de-peste-inquietude-americaine-ce-que-l-on-sait-du-deces-dune-laborantine-en-russie-20261007",
+      "publishedAt": "2026-10-07T10:44:59.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/07/2554920-photo-d-illustration-dans-un-laboratoire-de-linsti.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "1788ffffd734",
+      "outletId": "le-jdd",
+      "headline": "Russie : les autorités démentent toute épidémie de peste après un deuxième décès mystérieux en Sibérie",
+      "url": "https://www.lejdd.fr/International/russie-les-autorites-dementent-toute-epidemie-de-peste-apres-un-deuxieme-deces-mysterieux-en-siberie-185436",
+      "publishedAt": "2026-10-07T09:53:53.000Z",
+      "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/07/11/000_d29x8kg.jpg?VersionId=U5REPJ48rXb2IkL5UffxSCDDxgJbVCE7",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "aba1fc65a979",
       "outletId": "le-monde",
       "headline": "Soupçon de peste en Russie : les Etats-Unis réclament « plus d’informations » à Moscou, après la mort d’une laborantine",
@@ -17,5 +40,20 @@
       "everFrontPage": true
     }
   ],
-  "section": "world"
+  "section": "world",
+  "summaries": {
+    "centre": [
+      "Une technicienne de vingt-huit ans employée dans un établissement spécialisé en Sibérie est décédée dans des circonstances troublantes au début du mois d'octobre.",
+      "Le gouvernement américain a officiellement demandé des explications supplémentaires aux autorités russes suite à cet événement.",
+      "L'événement suscite de vives interrogations tant sur le plan sanitaire que géopolitique."
+    ],
+    "droite": [
+      "Un second décès inexpliqué survenu dans la même région sibérienne a ravivé les craintes d'une contamination en lien avec un centre de recherche.",
+      "Le pouvoir russe a formellement rejeté l'hypothèse d'une propagation épidémique sur son territoire.",
+      "L'organisation sanitaire internationale surveille attentivement l'évolution de cette affaire."
+    ]
+  },
+  "differences": "Le centre met principalement l'accent sur la dimension diplomatique et la demande d'informations formulée par Washington, tandis que la droite insiste davantage sur le contexte local en mentionnant un second décès et le démenti officiel des autorités russes.",
+  "promptVersion": "sum-1",
+  "summarizedArticleCount": 3
 }
