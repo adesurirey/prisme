@@ -45,7 +45,7 @@ const imageOutlet = image && byId.get(image.outletId);
 
 /** Articles of one Leaning — the Outlet order and the head/follow-ups split
     are splitPerOutlet's business (@prisme/domain); unknown Outlets last. */
-function group(leaning: Leaning | undefined): Article[] {
+function articlesForLeaning(leaning: Leaning | undefined): Article[] {
   return story.articles.filter(
     (a) => byId.get(a.outletId)?.leaning === leaning,
   );
@@ -57,9 +57,9 @@ const groups: {
 }[] = [
   ...leaningOrder.map((leaning) => ({
     leaning,
-    ...splitPerOutlet(group(leaning)),
+    ...splitPerOutlet(articlesForLeaning(leaning)),
   })),
-  { ...splitPerOutlet(group(undefined)) },
+  { ...splitPerOutlet(articlesForLeaning(undefined)) },
 ];
 const visible = groups.filter((g) => g.head.length > 0);
 
