@@ -34,21 +34,19 @@ export default function ArticleList({
             type="button"
             aria-expanded={open}
             onClick={() => setOpen(!open)}
-            className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-line px-2.5 py-1 text-[13px] text-muted transition-colors hover:bg-hover hover:text-ink"
+            className="mt-3 text-[13px] text-muted transition-colors hover:text-ink"
           >
             {open
               ? 'Réduire'
               : followUps.length === 1
                 ? "Voir l'autre article de ces médias"
                 : `Voir les ${followUps.length} autres articles de ces médias`}
-            <Chevron open={open} />
           </button>
           <List
             articles={followUps}
             byId={byId}
             storyTitle={storyTitle}
             hidden={!open}
-            className="mt-2.5"
           />
         </>
       )}
@@ -61,18 +59,16 @@ function List({
   byId,
   storyTitle,
   hidden = false,
-  className,
 }: {
   articles: Article[];
   byId: Map<string, Outlet>;
   storyTitle: string;
   hidden?: boolean;
-  className?: string;
 }) {
   return (
     <ul
       hidden={hidden}
-      className={`flex flex-col divide-y divide-line border-y border-line ${className ?? ''}`}
+      className="flex flex-col divide-y divide-line border-y border-line"
     >
       {articles.map((article) => {
         const outlet = byId.get(article.outletId);
@@ -96,27 +92,5 @@ function List({
         );
       })}
     </ul>
-  );
-}
-
-/** The toggle's state, as motion that answers the click: it turns over when
-    the list opens. Reduced-motion users get the state change without the
-    rotation (global CSS kills transitions). */
-function Chevron({ open }: { open: boolean }) {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 16 16"
-      className={`size-3 shrink-0 transition-transform ${open ? 'rotate-180' : ''}`}
-    >
-      <path
-        d="M4 6l4 4 4-4"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
   );
 }
