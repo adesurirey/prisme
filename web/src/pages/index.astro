@@ -4,6 +4,7 @@ import LeaningBadge from '../components/LeaningBadge';
 import StoryCard from '../components/StoryCard';
 import { loadEdition, loadOutlets } from '../data';
 import Base from '../layouts/Base.astro';
+import { formatParisDate } from '../paris-date';
 
 const edition = await loadEdition();
 const outlets = loadOutlets();
@@ -11,15 +12,16 @@ const outlets = loadOutlets();
 // "Mercredi 7 octobre" — the date is the title; time in French style, thin
 // no-break spaces around the h (docs/brand.md, French typographic craft).
 const updatedAt = new Date(edition.builtAt);
-const iso = updatedAt.toLocaleDateString('fr-FR', {
+const iso = formatParisDate(updatedAt, {
   weekday: 'long',
   day: 'numeric',
   month: 'long',
 });
 const updatedDate = iso.charAt(0).toUpperCase() + iso.slice(1);
-const updatedTime = updatedAt
-  .toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
-  .replace(':', '\u202Fh\u202F');
+const updatedTime = formatParisDate(updatedAt, {
+  hour: '2-digit',
+  minute: '2-digit',
+}).replace(':', '\u202Fh\u202F');
 
 const perLeaning = (leaning: Leaning) =>
   outlets.filter((o) => o.leaning === leaning).length;

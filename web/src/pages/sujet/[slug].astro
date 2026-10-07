@@ -19,6 +19,7 @@ import PrismTabs from '../../components/PrismTabs';
 import StoryImage from '../../components/StoryImage';
 import { loadAllStoryFiles, loadOutlets, withBase } from '../../data';
 import Base from '../../layouts/Base.astro';
+import { formatParisDate } from '../../paris-date';
 
 export async function getStaticPaths() {
   // Every Story file gets its page: live Stories in the Edition, live Stories
@@ -65,15 +66,15 @@ const visible = groups.filter((g) => g.head.length > 0);
 // "Publié le": the newest Article’s date. An Undated Article (ADR-0007)
 // carries only its Publication day — shown without an invented clock time.
 const builtAt = story.articles[0]?.dayPrecision
-  ? new Date(story.articles[0].publishedAt).toLocaleDateString('fr-FR', {
+  ? formatParisDate(new Date(story.articles[0].publishedAt), {
       day: 'numeric',
       month: 'long',
       year: 'numeric',
     })
-  : new Date(story.articles[0]?.publishedAt ?? Date.now()).toLocaleString(
-      'fr-FR',
-      { dateStyle: 'long', timeStyle: 'short' },
-    );
+  : formatParisDate(new Date(story.articles[0]?.publishedAt ?? Date.now()), {
+      dateStyle: 'long',
+      timeStyle: 'short',
+    });
 
 // SEO (issue #6): Prisme’s own description, derived only from the Coverage
 // counters — never Outlet text (ADR-0003).

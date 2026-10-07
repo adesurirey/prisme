@@ -11,6 +11,7 @@ import LeaningBadge from '../components/LeaningBadge';
 import PaywallBadge from '../components/PaywallBadge';
 import { withBase } from '../data';
 import Base from '../layouts/Base.astro';
+import { formatParisDate } from '../paris-date';
 
 const perLeaning = (leaning: Leaning): OutletConfig[] =>
   outlets.filter((o) => o.leaning === leaning);
@@ -123,7 +124,7 @@ const description =
               <p class="text-[15px] font-medium text-ink">{excluded.name}</p>
               <p class="mt-1 text-[14px] leading-relaxed text-muted">{excluded.reason}</p>
               <p class="mt-1 text-[13px] text-muted">
-                Vérifié le {new Date(excluded.checkedAt).toLocaleDateString('fr-FR', {
+                Vérifié le {formatParisDate(new Date(excluded.checkedAt), {
                   day: 'numeric',
                   month: 'long',
                   year: 'numeric',
