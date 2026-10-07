@@ -16,12 +16,12 @@ import { LEANING_LABELS } from '@prisme/domain';
  * accusation.
  */
 export default function BlindspotBadge({ leaning }: { leaning: Leaning }) {
-  const hint = `Aucun média ${LEANING_LABELS[leaning].toLowerCase()} ne couvre ce sujet à sa une`;
+  const hint = `Aucun média ${LEANING_LABELS[leaning].toLowerCase()} ne semble couvrir ce sujet`;
   return (
     <span className="group relative inline-flex cursor-help items-center gap-1.5 rounded-full border border-line px-2.5 py-0.5 text-[12px] text-muted">
       <span
         aria-hidden="true"
-        className="inline-block size-2 rounded-full opacity-40"
+        className="inline-block size-2 rounded-full"
         style={{ background: `var(--${leaning})` }}
       />
       Angle mort
