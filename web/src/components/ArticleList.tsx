@@ -105,7 +105,10 @@ function List({
       {articles.map((article) => {
         const outlet = byId.get(article.outletId);
         return (
-          <li key={article.id} className="flex gap-4 py-4">
+          <li
+            key={article.id}
+            className="-mx-2 flex gap-4 rounded-md px-2 py-4 transition-colors hover:bg-hover"
+          >
             <StoryImage
               article={article}
               outlet={outlet}
