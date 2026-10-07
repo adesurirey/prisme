@@ -5,6 +5,18 @@
   "createdAt": "2026-10-06T22:04:02.659Z",
   "articles": [
     {
+      "id": "11239eb11a11",
+      "outletId": "le-figaro",
+      "headline": "États-Unis : l’impopularité de Donald Trump pèse sur les élections de mi-mandat",
+      "url": "https://www.lefigaro.fr/international/etats-unis-l-impopularite-de-donald-trump-pese-sur-les-elections-de-mi-mandat-20261007",
+      "publishedAt": "2026-10-07T18:53:45.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/2949x1659_crop/2026/10/07/a2250ce194a1f6cc0fd15c847582b03afc116b283a1e73b8b0320154469f01f1.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "959ba54b6cfe",
       "outletId": "franceinfo",
       "headline": "\"Son côté imprévisible me rend nerveux\" : ces républicains qui, pris à la gorge par l'inflation, envisagent de donner une leçon à Donald Trump aux Midterms",
@@ -47,13 +59,13 @@
       "url": "https://www.nouvelobs.com/monde/20261006.OBS118973/trump-et-les-republicains-pourront-ils-dejouer-la-malediction-des-midterms-les-statistiques-electorales-sont-impitoyables.html",
       "publishedAt": "2026-10-06T18:45:04.000Z",
       "imageUrl": "https://focus.nouvelobs.com/2026/09/30/1732/1969/3323/2215/0/0/60/0/b5b674d_upload-1-q4t0ae9lzru1-000-98ur339-copie.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "opinion",
       "section": "politics",
       "everFrontPage": true
     }
   ],
-  "section": "politics",
+  "section": "world",
   "summaries": {
     "gauche": [
       "La Maison-Blanche a dû justifier des déclarations controversées tenues par l'ancien président concernant Los Angeles.",
@@ -63,9 +75,13 @@
     "centre": [
       "Certains électeurs et cadres républicains, inquiets de la hausse des prix, envisagent d'exprimer leur mécontentement envers l'ancien président.",
       "Les interrogations grandissent quant à la capacité de Donald Trump à peser négativement sur les chances de son propre camp lors de ces élections."
+    ],
+    "droite": [
+      "À l'approche du scrutin, l'ancien président s'impose au cœur de la campagne électorale.",
+      "Cette centralité politique fait peser un risque d'affaiblissement pour sa propre formation politique dans un contexte traditionnellement défavorable."
     ]
   },
-  "differences": "La presse de gauche met en avant les polémiques directes touchant l'exécutif et analyse les probabilités statistiques d'échec du parti présidentiel ainsi que ses tentatives de modification des règles. À l'inverse, la presse du centre se focalise sur les divisions internes au parti républicain, illustrées par la nervosité d'électeurs confrontés à l'inflation qui pourraient sanctionner Donald Trump.",
+  "differences": "La presse de gauche analyse la situation sous l'angle des difficultés statistiques du parti présidentiel et des controverses liées à l'exécutif. La presse du centre se concentre sur les inquiétudes économiques et les tensions internes aux républicains face à l'inflation. Enfin, la presse de droite, à l'instar du Figaro, met en lumière la centralité de Donald Trump dans la campagne tout en reconnaissant le risque qu'il représente pour son propre camp à l'approche du vote.",
   "promptVersion": "sum-1",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 5
 }

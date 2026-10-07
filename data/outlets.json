@@ -20,6 +20,16 @@
     }
   },
   {
+    "id": "liberation",
+    "name": "Libération",
+    "leaning": "gauche",
+    "paywall": "partial",
+    "site": "https://www.liberation.fr",
+    "feeds": {
+      "latest": "https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml"
+    }
+  },
+  {
     "id": "mediapart",
     "name": "Mediapart",
     "leaning": "gauche",
@@ -48,6 +58,16 @@
     "feeds": {
       "une": "https://www.lemonde.fr/rss/une.xml",
       "latest": "https://www.lemonde.fr/rss/en_continu.xml"
+    }
+  },
+  {
+    "id": "marianne",
+    "name": "Marianne",
+    "leaning": "centre",
+    "paywall": "partial",
+    "site": "https://www.marianne.net",
+    "feeds": {
+      "latest": "https://www.marianne.net/rss.xml"
     }
   },
   {
@@ -159,6 +179,16 @@
     "site": "https://www.la-croix.com",
     "feeds": {
       "latest": "https://www.la-croix.com/rss"
+    }
+  },
+  {
+    "id": "le-point",
+    "name": "Le Point",
+    "leaning": "centre",
+    "paywall": "partial",
+    "site": "https://www.lepoint.fr",
+    "feeds": {
+      "latest": "https://www.lepoint.fr/arc/outboundfeeds/rss/?outputType=xml"
     }
   },
   {
