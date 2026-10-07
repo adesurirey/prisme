@@ -1,0 +1,160 @@
+---
+import Base from '../layouts/Base.astro';
+import LeaningBadge from '../components/LeaningBadge';
+import PaywallBadge from '../components/PaywallBadge';
+import { withBase } from '../data';
+import {
+  excludedOutlets,
+  LEANING_LABELS,
+  leaningOrder,
+  outlets,
+  type Leaning,
+  type OutletConfig,
+} from '@prisme/domain';
+
+const perLeaning = (leaning: Leaning): OutletConfig[] =>
+  outlets.filter((o) => o.leaning === leaning);
+
+const description =
+  "Pourquoi chaque média est classé à gauche, au centre ou à droite : les sources, la méthode, ce que montre une une déséquilibrée, et ce que génère l'IA.";
+---
+
+<Base title="Pourquoi ce classement" description={description}>
+  <article class="pt-10">
+    <p class="mb-6">
+      <a href={withBase('/')} class="text-[13px] text-muted transition-colors hover:text-ink">
+        ← L'édition du jour
+      </a>
+    </p>
+    <h1 class="max-w-[36rem] text-[24px] font-semibold leading-snug tracking-[-0.02em]">
+      Pourquoi ce classement
+    </h1>
+    <p class="mt-4 max-w-[36rem] text-[15px] leading-relaxed text-muted">
+      Prisme regroupe les unes de {outlets.length} médias français et les range en trois
+      bords — {LEANING_LABELS.gauche.toLowerCase()}, {LEANING_LABELS.centre.toLowerCase()} et
+      {LEANING_LABELS.droite.toLowerCase()}. Cette page dit d'où vient chaque classement,
+      avec les sources citées, et ce que le site ne fait pas.
+    </p>
+
+    <section class="mt-10 max-w-[36rem] space-y-4 text-[15px] leading-relaxed text-muted">
+      <h2 class="text-[17px] font-semibold text-ink">Le bord appartient au média, pas à l'article</h2>
+      <p>
+        Un article du <em>Figaro</em> peut très bien défendre une position de gauche ; ça
+        n'en fait pas un article « de droite ». C'est le média, dans sa durée, qui a une
+        position : sa ligne éditoriale, ce qu'il choisit de mettre en avant, ce qu'il
+        laisse de côté. On classe donc le média une fois pour toutes, à la main, et on ne
+        touche jamais au classement des articles eux-mêmes.
+      </p>
+      <p>
+        Chaque classement s'appuie sur au moins deux sources publiques indépendantes — une
+        échelle idéologique construite à partir de données, et des travaux de référence.
+        Elles sont citées pour chaque média plus bas, et quand elles se contredisent, ça
+        s'écrit noir sur blanc.
+      </p>
+    </section>
+
+    <section class="mt-10 max-w-[36rem] space-y-4 text-[15px] leading-relaxed text-muted">
+      <h2 class="text-[17px] font-semibold text-ink">La sélection n'est pas équilibrée — et c'est voulu</h2>
+      <p>
+        Les {outlets.length} médias sont choisis pour leur audience et leur poids
+        éditorial, jamais pour équilibrer les bords. Il en résulte une répartition
+        inégale —
+        {perLeaning('gauche').length} à gauche, {perLeaning('centre').length} au centre,
+        {perLeaning('droite').length} à droite — qui ressemble à celle de la presse
+        nationale française. À quoi ça sert ? À voir ce qui se passe quand un sujet n'est
+        repris que d'un côté : sur une page de sujet, la barre de couverture et les
+        mentions « angle mort » le montrent directement.
+      </p>
+    </section>
+
+    <section class="mt-10 max-w-[36rem] space-y-4 text-[15px] leading-relaxed text-muted">
+      <h2 class="text-[17px] font-semibold text-ink">Couverture et angles morts</h2>
+      <p>
+        Pour chaque sujet, Prisme compte combien de médias de chaque bord publient un
+        article d'actualité dessus. Un éditorial ou une tribune ne compte pas : il
+        commente, il ne couvre pas. Un bord devient un « angle mort » quand les deux
+        autres parlent du sujet et lui pas. Le comptage vient des titres et chapôs des
+        articles collectés, pas d'un jugement sur leur contenu.
+      </p>
+    </section>
+
+    <section class="mt-10 max-w-[36rem] space-y-4 text-[15px] leading-relaxed text-muted">
+      <h2 class="text-[17px] font-semibold text-ink">Ce que fait l'IA — et ce qu'elle ne lit pas</h2>
+      <p>
+        Les synthèses « lu à gauche / au centre / à droite » sont écrites par un modèle
+        de langage, à partir des seuls titres et chapôs publiés par les médias. Il ne lit
+        jamais les articles eux-mêmes : Prisme ne les stocke pas et ne les reproduit pas.
+        Une synthèse ne peut donc résumer que ce que les titres et chapôs donnent à voir —
+        la manière dont chaque bord présente le sujet, pas le fond des articles.
+      </p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-[17px] font-semibold text-ink">Les médias exclus</h2>
+      <p class="mt-2 max-w-[36rem] text-[15px] leading-relaxed text-muted">
+        Certains médias manquent à l'appel. En voici la liste et la raison, telles que
+        vérifiées à la date indiquée.
+      </p>
+      <ul class="mt-4 flex max-w-3xl flex-col divide-y divide-line border-y border-line">
+        {
+          excludedOutlets.map((excluded) => (
+            <li class="py-4">
+              <p class="text-[15px] font-medium text-ink">{excluded.name}</p>
+              <p class="mt-1 text-[14px] leading-relaxed text-muted">{excluded.reason}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-[17px] font-semibold text-ink">Média par média</h2>
+      {
+        leaningOrder.map((leaning) => (
+          <div class="mt-8">
+            <h3 class="flex items-center gap-2.5">
+              <LeaningBadge leaning={leaning} />
+              <span class="text-[12px] text-faint">{perLeaning(leaning).length} médias</span>
+            </h3>
+            <ul class="mt-3 flex max-w-3xl flex-col gap-8">
+              {perLeaning(leaning).map((outlet) => (
+                <li class="border-l-2 border-line pl-4">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <a
+                      href={outlet.site}
+                      class="text-[15px] font-medium text-ink underline-offset-2 hover:underline"
+                      rel="noopener"
+                    >
+                      {outlet.name}
+                    </a>
+                    <PaywallBadge paywall={outlet.paywall} />
+                  </div>
+                  <p class="mt-1.5 text-[14px] leading-relaxed text-muted">{outlet.leaningNote}</p>
+                  <p class="mt-1.5 text-[13px] text-faint">Audience : {outlet.readership.evidence}</p>
+                  <ul class="mt-3 flex flex-col gap-2">
+                    {outlet.leaningSources.map((source) => (
+                      <li class="text-[13px] leading-relaxed">
+                        <a
+                          href={source.url}
+                          class="text-ink underline-offset-2 hover:underline"
+                          rel="noopener"
+                        >
+                          {source.title}
+                        </a>
+                        <span class="text-faint">
+                          {' '}— {source.author}
+                          {source.date ? `, ${source.date}` : ''}
+                        </span>
+                        <p class="text-muted">{source.takeaway}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </section>
+  </article>
+</Base>

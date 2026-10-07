@@ -52,9 +52,17 @@ const { title, description = "La même actualité, vue par tous les bords politi
       <slot />
     </main>
     <footer class="border-t border-line py-8">
-      <p class="mx-auto max-w-4xl px-5 text-[13px] text-faint">
-        Prototype — les liens renvoient vers les articles des médias.
-      </p>
+      <div class="mx-auto flex max-w-4xl flex-wrap gap-x-5 gap-y-2 px-5 text-[13px] text-faint">
+        <p>Prototype — les liens renvoient vers les articles des médias.</p>
+        <p class="ml-auto flex gap-5">
+          <a href={withBase('/pourquoi-ce-classement/')} class="transition-colors hover:text-muted"
+            >Pourquoi ce classement</a
+          >
+          <a href={withBase('/mentions-legales/')} class="transition-colors hover:text-muted"
+            >Mentions légales</a
+          >
+        </p>
+      </div>
     </footer>
   </body>
 </html>

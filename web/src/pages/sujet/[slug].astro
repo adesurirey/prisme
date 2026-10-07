@@ -7,6 +7,7 @@ import CoverageBar from '../../components/CoverageBar';
 import LeaningBadge from '../../components/LeaningBadge';
 import StoryImage from '../../components/StoryImage';
 import { loadAllStoryFiles, loadOutlets, withBase } from '../../data';
+import { reportIssueUrl, storyPageUrl } from '../../report-error';
 import type { Article, Leaning, Story } from '@prisme/domain';
 import {
   blindspots,
@@ -54,6 +55,14 @@ const visible = groups.filter((g) => g.articles.length > 0);
 const builtAt = new Date(
   story.articles[0]?.publishedAt ?? Date.now(),
 ).toLocaleString('fr-FR', { dateStyle: 'long', timeStyle: 'short' });
+
+// "Signaler une erreur" (issue #8): a prefilled GitHub issue carrying this
+// Story's page URL, placed next to the Story it concerns.
+const reportUrl = reportIssueUrl({
+  slug: story.slug,
+  title: story.title,
+  pageUrl: new URL(storyPageUrl(story, import.meta.env.BASE_URL), Astro.site).toString(),
+});
 
 // SEO (issue #6): Prisme's own description, derived only from the Coverage
 // counters — never Outlet text (ADR-0003).
@@ -162,5 +171,15 @@ const description =
         </section>
       ))
     }
+
+    <p class="mt-10 text-[13px] text-faint">
+      <a
+        href={reportUrl}
+        class="underline-offset-2 transition-colors hover:text-muted hover:underline"
+        rel="noopener"
+      >
+        Signaler une erreur sur ce sujet ↗
+      </a>
+    </p>
   </article>
 </Base>
