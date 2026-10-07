@@ -21,6 +21,9 @@
   --droite: #2f7fd1;
 
   --hover: rgba(17, 17, 20, 0.035);
+
+  --tooltip: #1b1b1f;
+  --tooltip-ink: #fcfcfc;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,6 +41,9 @@
     --droite: #5fa5e3;
 
     --hover: rgba(255, 255, 255, 0.045);
+
+    --tooltip: #26262b;
+    --tooltip-ink: #ededf0;
   }
 }
 
@@ -53,6 +59,8 @@
   --color-centre: var(--centre);
   --color-droite: var(--droite);
   --color-hover: var(--hover);
+  --color-tooltip: var(--tooltip);
+  --color-tooltip-ink: var(--tooltip-ink);
 
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
 }
