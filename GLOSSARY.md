@@ -15,7 +15,7 @@ The political position assigned to an Outlet: Gauche (left), Centre or Droite (r
 _Avoid_: Bias, prism, side, orientation
 
 **Front page**:
-The Articles an Outlet puts forward as "à la une" at a given moment. For some Outlets this is approximated by their most recent Articles.
+The Articles an Outlet puts forward as "à la une" at a given moment. Prisme marks Front-page Articles only when the Outlet declares them as such; it never infers the Front page from recency.
 _Avoid_: Homepage, headlines, top news
 
 ### Articles and stories
@@ -35,6 +35,14 @@ _Avoid_: Type, category, tag
 **Decision model**:
 The cheap language model Prisme uses to assign each Article its Kind and Section.
 _Avoid_: Classifier, judge, AI (alone)
+
+**Undated Article**:
+An Article whose Outlet's feed carries no publication time. Prisme dates it to the end of its Publication day — read from the Article's own web address — or, when even the day is unknown, to the moment it collected it; such Articles are shown without a time of day.
+_Avoid_: Dateless, missing date, guess
+
+**Publication day**:
+The day an Article was published, when that is all Prisme knows about when it appeared.
+_Avoid_: Timestamp, exact date
 
 **Story**:
 A news event or topic, made up of the Articles that report on it. National and international news are both in scope. A Story's id and slug are fixed when it is created and never change.
