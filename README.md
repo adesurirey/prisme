@@ -1,5 +1,11 @@
 # prisme
 
+> L’actualité sous toutes ses couleurs.
+
+Prisme shows each day’s front-page news from the major French outlets, and how
+each political leaning covers it — same story, every leaning, side by side.
+Brand reference: [docs/brand.md](docs/brand.md) · Glossary: [GLOSSARY.md](GLOSSARY.md).
+
 ## Licence
 
 The code in this repository is licensed under the
