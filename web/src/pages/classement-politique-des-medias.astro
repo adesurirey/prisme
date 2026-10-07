@@ -29,17 +29,17 @@ const description =
         ← L'édition du jour
       </a>
     </p>
-    <h1 class="max-w-[36rem] text-[24px] font-semibold leading-snug tracking-[-0.02em]">
+    <h1 class="text-[24px] font-semibold leading-snug tracking-[-0.02em]">
       Pourquoi ce classement politique des médias
     </h1>
-    <p class="mt-4 max-w-[36rem] text-[15px] leading-relaxed text-muted">
+    <p class="mt-4 text-[15px] leading-relaxed text-muted">
       Prisme regroupe les unes de {outlets.length} médias français et les range en trois
       bords — {LEANING_LABELS.gauche.toLowerCase()}, {LEANING_LABELS.centre.toLowerCase()} et
       {LEANING_LABELS.droite.toLowerCase()}. Cette page dit d'où vient chaque classement,
       avec les sources citées, et ce que le site ne fait pas.
     </p>
 
-    <section class="mt-10 max-w-[36rem] space-y-4 text-[15px] leading-relaxed text-muted">
+    <section class="mt-10 space-y-4 text-[15px] leading-relaxed text-muted">
       <h2 class="text-[17px] font-semibold text-ink">Le bord appartient au média, pas à l'article</h2>
       <p>
         Un article du <em>Figaro</em> peut très bien défendre une position de gauche ; ça
@@ -56,7 +56,7 @@ const description =
       </p>
     </section>
 
-    <section class="mt-10 max-w-[36rem] space-y-4 text-[15px] leading-relaxed text-muted">
+    <section class="mt-10 space-y-4 text-[15px] leading-relaxed text-muted">
       <h2 class="text-[17px] font-semibold text-ink">La sélection n'est pas équilibrée — et c'est voulu</h2>
       <p>
         Les {outlets.length} médias sont choisis pour leur audience et leur poids
@@ -70,7 +70,7 @@ const description =
       </p>
     </section>
 
-    <section class="mt-10 max-w-[36rem] space-y-4 text-[15px] leading-relaxed text-muted">
+    <section class="mt-10 space-y-4 text-[15px] leading-relaxed text-muted">
       <h2 class="text-[17px] font-semibold text-ink">Couverture et angles morts</h2>
       <p>
         Pour chaque sujet, Prisme compte combien de médias de chaque bord publient un
@@ -81,7 +81,7 @@ const description =
       </p>
     </section>
 
-    <section class="mt-10 max-w-[36rem] space-y-4 text-[15px] leading-relaxed text-muted">
+    <section class="mt-10 space-y-4 text-[15px] leading-relaxed text-muted">
       <h2 class="text-[17px] font-semibold text-ink">Ce que fait l'IA — et ce qu'elle ne lit pas</h2>
       <p>
         Les synthèses « lu à gauche / au centre / à droite » sont écrites par un modèle
@@ -94,7 +94,7 @@ const description =
 
     <section class="mt-10">
       <h2 class="text-[17px] font-semibold text-ink">Les médias exclus</h2>
-      <p class="mt-2 max-w-[36rem] text-[15px] leading-relaxed text-muted">
+      <p class="mt-2 text-[15px] leading-relaxed text-muted">
         Certains médias manquent à l'appel. En voici la liste et la raison, telles que
         vérifiées à la date indiquée.
       </p>
@@ -121,15 +121,18 @@ const description =
       <h2 class="text-[17px] font-semibold text-ink">Média par média</h2>
       {
         leaningOrder.map((leaning) => (
-          <div class="mt-8">
-            <h3 class="flex items-center gap-2.5">
+          <div
+            class="mt-6 border-l-2 pl-5"
+            style={`border-color: var(--${leaning})`}
+          >
+            <h3 class="sticky top-14 z-10 -my-2 flex items-center gap-2.5 bg-canvas py-2">
               <LeaningBadge leaning={leaning} />
               <span class="text-[12px] text-faint">{perLeaning(leaning).length} médias</span>
             </h3>
-            <ul class="mt-3 flex max-w-3xl flex-col gap-8">
+            <ul class="flex flex-col gap-10 pt-2">
               {perLeaning(leaning).map((outlet) => (
-                <li class="border-l-2 border-line pl-4">
-                  <h4 class="flex flex-wrap items-baseline gap-x-2 text-[15px] font-medium">
+                <li>
+                  <h4 class="flex flex-wrap items-baseline gap-x-3 text-[15px] font-medium">
                     <a
                       href={outlet.site}
                       class="text-ink underline-offset-2 hover:underline"
@@ -137,28 +140,33 @@ const description =
                     >
                       {outlet.name}
                     </a>
-                    <span class="font-normal text-faint">
-                      classé au {LEANING_LABELS[leaning].toLowerCase()}
-                    </span>
                     <PaywallBadge paywall={outlet.paywall} />
                   </h4>
-                  <p class="mt-1.5 text-[14px] leading-relaxed text-muted">{outlet.leaningNote}</p>
-                  <p class="mt-1.5 text-[13px] text-faint">Audience : {outlet.readership.evidence}</p>
-                  <ul class="mt-3 flex flex-col gap-2">
+                  <p class="mt-1.5 max-w-[48rem] text-[14px] leading-relaxed text-muted">
+                    {outlet.leaningNote}
+                  </p>
+                  <p class="mt-1.5 text-[13px] leading-relaxed text-faint">
+                    Audience : {outlet.readership.evidence}
+                  </p>
+                  <ul class="mt-4 flex flex-col gap-3 border-t border-line pt-4">
                     {outlet.leaningSources.map((source) => (
-                      <li class="text-[13px] leading-relaxed">
-                        <a
-                          href={source.url}
-                          class="text-ink underline-offset-2 hover:underline"
-                          rel="noopener"
-                        >
-                          {source.title}
-                        </a>
-                        <span class="text-faint">
-                          {' '}— {source.author}
-                          {source.date ? `, ${source.date}` : ''}
-                        </span>
-                        <p class="text-muted">{source.takeaway}</p>
+                      <li>
+                        <p class="text-[13px] leading-relaxed">
+                          <a
+                            href={source.url}
+                            class="font-medium text-ink underline-offset-2 hover:underline"
+                            rel="noopener"
+                          >
+                            {source.title}
+                          </a>
+                          <span class="text-faint">
+                            {' '}— {source.author}
+                            {source.date ? `, ${source.date}` : ''}
+                          </span>
+                        </p>
+                        <p class="mt-0.5 max-w-[48rem] text-[14px] leading-relaxed text-muted">
+                          {source.takeaway}
+                        </p>
                       </li>
                     ))}
                   </ul>
