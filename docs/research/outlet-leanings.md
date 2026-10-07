@@ -104,6 +104,7 @@ Une seule règle, appliquée à tous les médias :
 | Courrier international | Centre | hors panel | 39e magazine, 162 073 ex. | Partiellement payant | non |
 | L'Express | Centre | +0,18 (centre) | 54e magazine, 118 937 ex. | Partiellement payant | non |
 | La Croix | Centre | +0,13 (centre) | 6e PQN, 73 595 ex. | Partiellement payant | non |
+| Le Point | Centre | +0,56 (centre droit) | 20e magazine, 263 528 ex. | Partiellement payant | indéterminé (403) |
 | Le Figaro | Droite | +1,02 (droite) | 2e PQN, 397 194 ex. | Partiellement payant | **oui** |
 | CNews | Droite | +0,96 (droite) | 22e site, 30,2 M visites | Gratuit | non |
 | Europe 1 | Droite | hors panel | 75e site, 4,7 M visites | Gratuit | non |
@@ -576,6 +577,42 @@ souhaitable.
 
 **Paywall / TDM.** Partiellement payant ; pas de `tdmrep.json` (404).
 
+### Le Point — Centre
+
+**Placement.** Bande `centre droit` de FrIdéo → Centre (règle de placement).
+
+**Désaccords entre sources.** L'intervalle de confiance de FrIdéo (−0,09…+1,22)
+contient zéro : les données seules ne départagent pas le centre, et la bande
+« centre droit » est lue comme une indication (15 des 30 médias de FrIdéo sont dans
+ce cas ; voir Limites connues, point 3). Les notations tierces concordent néanmoins
+sur l'ancrage centre-droit : Media Bias/Fact Check note « Right-Center » et Lucide
+« Centre-droit ». Aucune source consultée ne place Le Point à gauche ; l'héritage
+libéral-conservateur du titre (fondé en 1972 par des journalistes de L'Express) borne
+le placement sans le pousser à Droite, FrIdéo le séparant nettement de Le Figaro
+(+0,56 contre +1,02).
+
+**Sources**
+
+1. **FrIdéo : où se situe Le Point ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 — <https://frenchnewslab.org/fr/medias/le-point> — « Score +0,56 dans la bande "centre droit" (intervalle −0,09…+1,22) : l'intervalle contient zéro, la bande doit être lue comme une indication, non comme un verdict ; 5 familles de preuves sur 9 ; propriétaire final François Pinault (Artémis). »
+2. **Le Point – Bias and Credibility** — Media Bias/Fact Check, 2024 — <https://mediabiasfactcheck.com/le-point-bias/> — « Noté "Right-Center" sur la base de la sélection de sujets et de positions éditoriales favorisant modérément la droite, tout en présentant des points de vue divers ; fiabilité factuelle notée "High". »
+3. **Le Point : orientation politique, propriétaire et fiabilité** — Lucide, 2026 — <https://lucideinfo.fr/medias/le-point> — « Repère éditorial "Centre-droit" ; ligne libérale-conservatrice ; propriété : François-Henri Pinault (Kering, luxe). »
+
+**Audience.** ACPM presse magazine 2025/2026 : 20e rang, 263 528 exemplaires France
+payée (hebdomadaire, DSH).
+
+**Flux vérifiés (2026-10-07).** `latest`
+<https://www.lepoint.fr/arc/outboundfeeds/rss/?outputType=xml> — 200, 100 articles,
+~2 j, toutes les entrées avec image. Endpoint de syndication Arc XP, non documenté
+publiquement par Le Point — le même mécanisme qui a débloqué Libération (issue #11).
+Les flux historiques (`/feeds/rss.xml`, `/feed`, `/actualites.rss`) restent bloqués
+(403, vérifié le 2026-10-06 et le 2026-10-07), ainsi que les pages du site, servies
+ derrière un anti-bot ; seul l'endpoint de syndication y échappe. 100 articles au
+plus par fenêtre d'environ 2 j ; il pourrait être restreint ou supprimé sans préavis
+(voir Limites connues).
+
+**Paywall / TDM.** Partiellement payant ; réservation TDM indéterminée : la sonde
+`tdmrep.json` est bloquée par l'anti-bot (403) comme le reste du site.
+
 ### Le Figaro — Droite
 
 **Placement.** Bande `right` de FrIdéo → **Droite**.
@@ -713,15 +750,18 @@ payée.
 
 | Média | Raison (vérifiée le 2026-10-06) |
 |---|---|
-| Le Point | **Flux bloqués.** `lepoint.fr/feeds/rss.xml`, `/feed` et `/actualites.rss` répondent **403**. |
-| Les Échos | **Flux bloqués.** `lesechos.fr/rss/*` répond **403** (une, actualités, rubriques). |
+| Les Échos | **Flux bloqués.** `lesechos.fr/rss/*` répond **403** (une, actualités, rubriques) ; le site tout entier est servi derrière Akamai, qui bloque aussi la page d'accueil (vérifié le 2026-10-07). |
 
-Les deux sont cités ici pour que le lecteur puisse vérifier qu'il s'agit de raisons
-techniques, jamais de jugements sur leur ligne éditoriale. Leur orientation est
-recherchée comme celle des autres, et leur dossier sera ajouté le jour où leurs flux
-redeviennent accessibles. (Libération en est sortie le 2026-10-07 : le flux de
-syndication Arc XP, vérifié en même temps que le blocage DataDome persistait sur les
-`/rss/` historiques, a permis son inclusion — issue #11.)
+Le Point est cité ici pour mémoire : il était exclu pour la même raison technique
+(flux 403, vérifié le 2026-10-06) et est entré dans l'Édition le 2026-10-07, quand un
+endpoint de syndication Arc XP, non couvert par l'anti-bot, a été trouvé — le même
+mécanisme que Libération (issue #11). Les Échos est cité ici pour que le lecteur
+puisse vérifier qu'il s'agit d'une raison technique, jamais d'un jugement sur sa
+ligne éditoriale. Son orientation est recherchée comme celle des autres, et son
+dossier sera ajouté le jour où ses flux redeviennent accessibles. (Libération en est
+sortie le 2026-10-07 : le flux de syndication Arc XP, vérifié en même temps que le
+blocage DataDome persistait sur les `/rss/` historiques, a permis son inclusion —
+issue #11.)
 
 ---
 
@@ -738,12 +778,13 @@ syndication Arc XP, vérifié en même temps que le blocage DataDome persistait 
 4. **La perception diffère de la mesure** : TF1 Info est perçu à droite par les enquêtes
    d'audience sans que les autres familles de preuves le confirment ; BFMTV et Le Monde
    font l'objet de descriptions contradictoires. Tout est publié, rien n'est lissé.
-5. **Le flux de Libération est un endpoint de syndication Arc XP**, non documenté
-   publiquement par le journal : 50 articles au plus (~9 h de couverture), aucune image,
-   et il pourrait être restreint ou supprimé sans préavis. Repli étudié (issue #11) :
-   Google News RSS `site:liberation.fr` (articles frais, mais liens redirecteurs
-   `news.google.com`, sans vrais teasers ni images) — inférieur, à n'utiliser que si
-   l'endpoint Arc disparaît.
+5. **Les flux de Libération et du Point sont des endpoints de syndication Arc XP**,
+   non documentés publiquement par les journaux : 50 articles au plus (~9 h de
+   couverture), aucune image pour Libération ; 100 articles au plus (~2 j), images
+   incluses pour Le Point. Ils pourraient être restreints ou supprimés sans préavis.
+   Repli étudié (issue #11) : Google News RSS `site:liberation.fr` (articles frais,
+   mais liens redirecteurs `news.google.com`, sans vrais teasers ni images) —
+   inférieur, à n'utiliser que si l'endpoint Arc disparaît.
 6. **Les chiffres d'audience vieillissent** : ils sont datés (ACPM 2025/2026, août 2026)
    et doivent être revus à chaque campagne de mise à jour de la configuration, comme les
    vérifications de flux (`pnpm --filter @prisme/pipeline verify`).

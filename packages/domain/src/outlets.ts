@@ -101,6 +101,9 @@ const CHECKED = '2026-10-06';
 /** Issue #11: Libération's Arc XP outbound feed verified a day after the rest. */
 const CHECKED_11 = '2026-10-07';
 
+/** Le Point's Arc XP outbound feed, found the same way as Libération's. */
+const CHECKED_LE_POINT = '2026-10-07';
+
 /** The Outlets of the Edition, grouped by Leaning. The perimeter is open (issue #10). */
 export const outlets: OutletConfig[] = [
   // ——— Gauche ———
@@ -1143,6 +1146,67 @@ export const outlets: OutletConfig[] = [
       note: 'Pas de tdmrep.json (404).',
     },
   },
+  {
+    id: 'le-point',
+    name: 'Le Point',
+    leaning: 'centre',
+    paywall: 'partial',
+    site: 'https://www.lepoint.fr',
+    feeds: {
+      latest: 'https://www.lepoint.fr/arc/outboundfeeds/rss/?outputType=xml',
+    },
+    leaningSources: [
+      {
+        title:
+          "FrIdéo : où se situe Le Point ? (échelle d'idéologie de 30 médias français)",
+        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
+        date: '2026',
+        url: 'https://frenchnewslab.org/fr/medias/le-point',
+        takeaway:
+          'Score +0,56, bande « centre droit » (intervalle −0,09…+1,22) qui contient zéro : placement non résolu par les données seules ; 5 familles de preuves sur 9, propriétaire final François Pinault (Artémis).',
+      },
+      {
+        title: 'Le Point – Bias and Credibility',
+        author: 'Media Bias/Fact Check',
+        date: '2024-11-09',
+        url: 'https://mediabiasfactcheck.com/le-point-bias/',
+        takeaway:
+          'Noté "Right-Center" sur la base de la sélection de sujets et de positions éditoriales favorisant modérément la droite, tout en présentant des points de vue divers ; fiabilité factuelle notée "High".',
+      },
+      {
+        title: 'Le Point : orientation politique, propriétaire et fiabilité',
+        author: 'Lucide (observatoire de médias)',
+        date: '2026-08-13',
+        url: 'https://lucideinfo.fr/medias/le-point',
+        takeaway:
+          'Repère éditorial « Centre-droit » ; ligne libérale-conservatrice ; propriété : François-Henri Pinault (Kering, luxe).',
+      },
+    ],
+    leaningNote:
+      "Placé à Centre, en cohérence avec la bande « centre droit » de FrIdéo. Désaccord à noter : l'intervalle de FrIdéo contient zéro, donc les données seules ne départagent pas le centre — le placement suit la convention décrite dans les limites connues. Les notations tierces concordent sur l'ancrage centre-droit (Media Bias/Fact Check « Right-Center », Lucide « Centre-droit ») et aucune source consultée ne le place à gauche ; l'héritage libéral-conservateur du titre (fondé en 1972 par des journalistes de L'Express) borne le placement sans le pousser à Droite, où FrIdéo le distingue nettement de Le Figaro (+0,56 contre +1,02).",
+    readership: {
+      evidence:
+        'ACPM presse magazine 2025/2026 : 20e rang, 263 528 exemplaires France payée (hebdomadaire, DSH).',
+      url: 'https://www.acpm.fr/classements/pmag',
+    },
+    feedChecks: [
+      {
+        kind: 'latest',
+        url: 'https://www.lepoint.fr/arc/outboundfeeds/rss/?outputType=xml',
+        checkedAt: CHECKED_LE_POINT,
+        status: 200,
+        items: 100,
+        covers: '~2 j',
+        images: 'all',
+        note: 'Endpoint de syndication Arc XP, non documenté publiquement par Le Point (même mécanisme que Libération, issue #11) : 100 articles au plus (~2 j de couverture), tous avec image. Les pages du site restent bloquées par un anti-bot (403) mais pas cet endpoint ; il pourrait être restreint ou supprimé sans préavis.',
+      },
+    ],
+    tdm: {
+      reserved: null,
+      checkedAt: CHECKED_LE_POINT,
+      note: 'Indéterminé : la sonde sur lepoint.fr est bloquée par un anti-bot (403), le flux de syndication seul répond.',
+    },
+  },
 
   // ——— Droite ———
   {
@@ -1482,13 +1546,6 @@ export const outlets: OutletConfig[] = [
 
 /** Outlets kept out of the Edition, with the reason and the date checked. */
 export const excludedOutlets: ExcludedOutlet[] = [
-  {
-    id: 'le-point',
-    name: 'Le Point',
-    reason:
-      'Flux RSS bloqués : lepoint.fr/feeds/rss.xml, /feed et /actualites.rss répondent 403, vérifié le 2026-10-06.',
-    checkedAt: CHECKED,
-  },
   {
     id: 'lesechos',
     name: 'Les Échos',
