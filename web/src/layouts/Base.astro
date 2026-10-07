@@ -41,10 +41,15 @@ const {
   <body class="min-h-screen bg-canvas font-sans text-ink antialiased">
     <header class="sticky top-0 z-10 border-b border-line bg-canvas/90 backdrop-blur">
       <div class="mx-auto flex h-14 max-w-4xl items-center gap-3 px-5">
-        <a href={withBase('/')} class="flex items-center" aria-label="Prisme — accueil">
+        <a href={withBase('/')} class="flex items-start" aria-label="Prisme — accueil">
           <span
             class="font-serif text-[17px] font-black uppercase leading-none tracking-[0.01em]"
             >Prisme</span
+          >
+          <span
+            class="ml-1 translate-y-[3px] text-[11px] font-medium leading-none text-faint"
+            aria-hidden="true"
+            >bêta</span
           >
         </a>
         <p class="ml-auto hidden text-[13px] text-muted sm:block">
