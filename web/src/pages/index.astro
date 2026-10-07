@@ -47,6 +47,8 @@ const perLeaning = (leaning: Leaning) =>
   </section>
 
   <section aria-label="Sujets de l'édition">
-    {edition.stories.map((story) => <StoryCard story={story} outlets={outlets} />)}
+    {edition.stories.map((story, i) => (
+      <StoryCard story={story} outlets={outlets} featured={i === 0} />
+    ))}
   </section>
 </Base>
