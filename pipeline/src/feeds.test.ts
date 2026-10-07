@@ -14,7 +14,7 @@ describe('parseFeed', () => {
         </item>
       </channel></rss>`;
 
-    const items = parseFeed(xml);
+    const { items } = parseFeed(xml);
 
     expect(items).toHaveLength(1);
     expect(items[0].headline).toBe('Une info importante');
@@ -35,7 +35,7 @@ describe('parseFeed', () => {
         </entry>
       </feed>`;
 
-    const items = parseFeed(xml);
+    const { items } = parseFeed(xml);
 
     expect(items).toHaveLength(1);
     expect(items[0].headline).toBe('Grève dans les transports');
@@ -69,7 +69,7 @@ describe('parseFeed', () => {
         </item>
       </channel></rss>`;
 
-    const items = parseFeed(xml);
+    const { items } = parseFeed(xml);
 
     expect(items[0].imageUrl).toBe('https://exemple.fr/photo.jpg');
     expect(items[1].imageUrl).toBe('https://exemple.fr/med.jpg');
@@ -77,13 +77,16 @@ describe('parseFeed', () => {
     expect(items[3].imageUrl).toBeUndefined();
   });
 
-  it('gives an empty publishedAt when the feed has no date', () => {
+  it('gives an empty publishedAt when neither the item nor its URL carries a date', () => {
     const xml = `<?xml version="1.0"?>
       <rss version="2.0"><channel>
         <item><title>Sans date</title><link>https://exemple.fr/x</link></item>
       </channel></rss>`;
 
-    expect(parseFeed(xml)[0].publishedAt).toBe('');
+    const { items } = parseFeed(xml);
+
+    expect(items[0].publishedAt).toBe('');
+    expect(items[0].dayPrecision).toBeUndefined();
   });
 
   it('falls back to atom content when there is no summary', () => {
@@ -96,7 +99,7 @@ describe('parseFeed', () => {
         </entry>
       </feed>`;
 
-    expect(parseFeed(xml)[0].teaser).toContain('Un paragraphe.');
+    expect(parseFeed(xml).items[0].teaser).toContain('Un paragraphe.');
   });
 
   it('decodes HTML entities in headline, url and teaser', () => {
@@ -109,10 +112,114 @@ describe('parseFeed', () => {
         </item>
       </channel></rss>`;
 
-    const items = parseFeed(xml);
+    const { items } = parseFeed(xml);
 
     expect(items[0].headline).toBe('Novak Djokovic décroche à Pékin');
     expect(items[0].url).toBe('https://exemple.fr/a?x=1&y=2');
     expect(items[0].teaser).toBe('<p>Un & deux</p>');
+  });
+
+  it('exposes the channel lastBuildDate as updatedAt', () => {
+    const xml = `<?xml version="1.0"?>
+      <rss version="2.0"><channel>
+        <lastBuildDate>Tue, 07 Oct 2026 14:06:16 +0200</lastBuildDate>
+        <item><title>X</title><link>https://exemple.fr/x</link></item>
+      </channel></rss>`;
+
+    expect(parseFeed(xml).updatedAt).toBe('2026-10-07T12:06:16.000Z');
+  });
+
+  it('gives an empty updatedAt when the channel has no build date', () => {
+    const xml = `<?xml version="1.0"?>
+      <rss version="2.0"><channel>
+        <item><title>X</title><link>https://exemple.fr/x</link></item>
+      </channel></rss>`;
+
+    expect(parseFeed(xml).updatedAt).toBe('');
+  });
+});
+
+describe('parseFeed — Undated Articles (ADR-0007)', () => {
+  it('dates an undated item to the end of its Publication day, read from the URL (summer, +02:00)', () => {
+    const xml = `<?xml version="1.0"?>
+      <rss version="2.0"><channel>
+        <item><title>Le Parisien</title><link>https://www.leparisien.fr/international/les-inepties-de-la-france-07-10-2026-NBXYDQGVGJACZD47XKSIMXKNGM.php</link></item>
+      </channel></rss>`;
+
+    const { items } = parseFeed(xml);
+
+    // 7 October 2026, 23:59:59 Paris (UTC+2) = 21:59:59 UTC.
+    expect(items[0].publishedAt).toBe('2026-10-07T21:59:59.000Z');
+    expect(items[0].dayPrecision).toBe(true);
+  });
+
+  it('handles the winter offset (+01:00) and the /archives/ slug shape', () => {
+    const xml = `<?xml version="1.0"?>
+      <rss version="2.0"><channel>
+        <item><title>Archives</title><link>https://www.leparisien.fr/archives/5-decembre-on-vend-25-de-velos-en-plus-28-11-2019-8204574.php</link></item>
+      </channel></rss>`;
+
+    const { items } = parseFeed(xml);
+
+    // 28 November 2019, 23:59:59 Paris (UTC+1) = 22:59:59 UTC.
+    expect(items[0].publishedAt).toBe('2019-11-28T22:59:59.000Z');
+    expect(items[0].dayPrecision).toBe(true);
+  });
+
+  it('dates an undated Atom entry from its URL too', () => {
+    const xml = `<?xml version="1.0"?>
+      <feed xmlns="http://www.w3.org/2005/Atom">
+        <entry>
+          <title>Titre</title>
+          <link href="https://www.leparisien.fr/sports/une-histoire-03-10-2026-ABC123.php"/>
+        </entry>
+      </feed>`;
+
+    const { items } = parseFeed(xml);
+
+    expect(items[0].publishedAt).toBe('2026-10-03T21:59:59.000Z');
+    expect(items[0].dayPrecision).toBe(true);
+  });
+
+  it('keeps the feed date as exact time when both a date and a dated URL exist', () => {
+    const xml = `<?xml version="1.0"?>
+      <rss version="2.0"><channel>
+        <item>
+          <title>Daté</title>
+          <link>https://www.leparisien.fr/sports/histoire-07-10-2026-ABC123.php</link>
+          <pubDate>Wed, 07 Oct 2026 08:30:00 +0200</pubDate>
+        </item>
+      </channel></rss>`;
+
+    const { items } = parseFeed(xml);
+
+    expect(items[0].publishedAt).toBe('2026-10-07T06:30:00.000Z');
+    expect(items[0].dayPrecision).toBeUndefined();
+  });
+
+  it('ignores date-like URL segments that are not a DD-MM-YYYY publication day', () => {
+    const xml = `<?xml version="1.0"?>
+      <rss version="2.0"><channel>
+        <item><title>Faux</title><link>https://exemple.fr/99-99-2026-abc</link></item>
+        <item><title>Page</title><link>https://exemple.fr/page/2</link></item>
+      </channel></rss>`;
+
+    const { items } = parseFeed(xml);
+
+    expect(items[0].publishedAt).toBe('');
+    expect(items[0].dayPrecision).toBeUndefined();
+    expect(items[1].publishedAt).toBe('');
+  });
+
+  it('rejects impossible calendar dates in the URL', () => {
+    const xml = `<?xml version="1.0"?>
+      <rss version="2.0"><channel>
+        <item><title>Février 30</title><link>https://www.leparisien.fr/x/histoire-30-02-2026-ABC123.php</link></item>
+      </channel></rss>`;
+
+    const { items } = parseFeed(xml);
+
+    expect(items[0].publishedAt).toBe('');
+    expect(items[0].dayPrecision).toBeUndefined();
   });
 });

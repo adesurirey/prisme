@@ -41,12 +41,24 @@ export interface Article {
   outletId: string;
   headline: string;
   url: string;
-  /** ISO 8601 publication date, empty string when the feed has none. */
+  /**
+   * ISO 8601 publication date. For an Undated Article (dayPrecision), the end
+   * of its Publication day (ADR-0007) — the feed carries no clock time.
+   */
   publishedAt: string;
   /** Image URL from the feed, hotlinked — never stored (ADR-0003). */
   imageUrl?: string;
-  /** True when the Article is on the Outlet's Front page (une feed, or one of the 10 most recent). */
+  /**
+   * True when the Article is on the Outlet's Front page — declared by the
+   * Outlet via its une feed, never inferred (ADR-0008).
+   */
   frontPage: boolean;
+  /**
+   * True for an Undated Article (ADR-0007): only its Publication day is
+   * known, so the UI shows the date without a time of day. Absent means an
+   * exact publication time.
+   */
+  dayPrecision?: true;
   /**
    * True once the Article has been seen on its Outlet's Front page during its
    * lifetime (issue #6): sticky across builds, never reset while the Article

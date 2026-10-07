@@ -1,12 +1,15 @@
 import { createHash } from 'node:crypto';
 import type { Article, Outlet } from '@prisme/domain';
-import { parseFeed } from './feeds.ts';
+import { type ParsedFeed, type ParsedItem, parseFeed } from './feeds.ts';
 
 /** The 24h window of Articles an Edition keeps. */
 export const WINDOW_MS = 24 * 60 * 60 * 1000;
 
-/** How many Articles from a latest feed count as the Front page. */
-const FRONT_PAGE_FALLBACK = 10;
+/**
+ * How many of the most recent Articles a latest feed may contribute — a cost
+ * knob on classification and grouping, not a Front-page claim (ADR-0008).
+ */
+export const MAX_LATEST_ARTICLES = 20;
 
 export type Fetcher = (url: string) => Promise<string>;
 
@@ -23,8 +26,8 @@ export interface CollectedArticles {
 
 /**
  * Fetch every Outlet's feeds and collect the last-24h Articles, marking the
- * Front page (une feed, otherwise the 10 most recent). One failing feed is
- * logged and skipped — it must not fail the collection (issue #3).
+ * Front page — only from a une feed, never inferred (ADR-0008). One failing
+ * feed is logged and skipped — it must not fail the collection (issue #3).
  */
 export async function collect(
   outlets: Outlet[],
@@ -61,30 +64,46 @@ async function collectOutlet(
   const teasers = new Map<string, string>();
   const articles: Article[] = [];
   if (outlet.feeds.une) {
-    const parsed = await fetchAndParse(
+    const { items, updatedAt } = await fetchAndParse(
       outlet,
       outlet.feeds.une,
       fetcher,
       failures,
     );
-    for (const item of parsed) {
+    const dated = dateUndatedItems(
+      outlet,
+      outlet.feeds.une,
+      items,
+      updatedAt,
+      now,
+      failures,
+    );
+    for (const item of dated) {
       const article = toArticle(item, outlet, true);
       articles.push(article);
       teasers.set(article.id, item.teaser);
     }
   }
   if (outlet.feeds.latest) {
-    const parsed = await fetchAndParse(
+    const { items, updatedAt } = await fetchAndParse(
       outlet,
       outlet.feeds.latest,
       fetcher,
       failures,
     );
-    const recent = [...parsed]
+    const dated = dateUndatedItems(
+      outlet,
+      outlet.feeds.latest,
+      items,
+      updatedAt,
+      now,
+      failures,
+    );
+    const recent = [...dated]
       .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
-      .slice(0, FRONT_PAGE_FALLBACK);
+      .slice(0, MAX_LATEST_ARTICLES);
     for (const item of recent) {
-      const article = toArticle(item, outlet, outlet.feeds.une == null);
+      const article = toArticle(item, outlet, false);
       articles.push(article);
       teasers.set(article.id, item.teaser);
     }
@@ -96,10 +115,9 @@ async function collectOutlet(
     if (!kept || (!kept.frontPage && article.frontPage))
       byId.set(article.id, article);
   }
-  const keptArticles = [...byId.values()].filter((article) => {
-    if (article.publishedAt === '') return false;
-    return now.getTime() - Date.parse(article.publishedAt) <= WINDOW_MS;
-  });
+  const keptArticles = [...byId.values()].filter(
+    (article) => now.getTime() - Date.parse(article.publishedAt) <= WINDOW_MS,
+  );
   const keptIds = new Set(keptArticles.map((a) => a.id));
   const keptTeasers = new Map([...teasers].filter(([id]) => keptIds.has(id)));
   return { articles: keptArticles, teasers: keptTeasers };
@@ -110,24 +128,55 @@ async function fetchAndParse(
   feed: string,
   fetcher: Fetcher,
   failures: CollectedArticles['failures'],
-) {
+): Promise<ParsedFeed> {
   try {
     return parseFeed(await fetcher(feed));
   } catch (reason) {
     const message = reason instanceof Error ? reason.message : String(reason);
     console.warn(`Feed failed: ${outlet.id} ${feed} — ${message}`);
     failures.push({ outletId: outlet.id, feed, reason: message });
-    return [];
+    return { items: [], updatedAt: '' };
   }
 }
 
+/**
+ * Undated Articles the parser could not even day-date (ADR-0007): date them
+ * at collection time while the feed itself is fresh; once the feed is stale,
+ * that guess would freeze old headlines into the Edition, so drop them.
+ */
+function dateUndatedItems(
+  outlet: Outlet,
+  feed: string,
+  items: ParsedItem[],
+  updatedAt: string,
+  now: Date,
+  failures: CollectedArticles['failures'],
+): ParsedItem[] {
+  const fresh =
+    updatedAt !== '' && now.getTime() - Date.parse(updatedAt) <= WINDOW_MS;
+  const undated = items.filter((item) => item.publishedAt === '').length;
+  if (undated === 0) return items;
+  if (!fresh) {
+    failures.push({
+      outletId: outlet.id,
+      feed,
+      reason: `Stale feed (${updatedAt || 'no build date'}): ${undated} undated article(s) dropped`,
+    });
+    return items.filter((item) => item.publishedAt !== '');
+  }
+  return items.map((item) =>
+    item.publishedAt !== ''
+      ? item
+      : {
+          ...item,
+          publishedAt: now.toISOString(),
+          dayPrecision: true as const,
+        },
+  );
+}
+
 function toArticle(
-  item: {
-    headline: string;
-    url: string;
-    publishedAt: string;
-    imageUrl?: string;
-  },
+  item: ParsedItem,
   outlet: Outlet,
   frontPage: boolean,
 ): Article {
@@ -139,6 +188,7 @@ function toArticle(
     publishedAt: item.publishedAt,
     imageUrl: item.imageUrl,
     frontPage,
+    ...(item.dayPrecision ? { dayPrecision: true as const } : {}),
   };
 }
 
