@@ -16,9 +16,12 @@
   --muted: #6f6f76;
   --faint: #a1a1aa;
 
-  --gauche: #d64562;
-  --centre: #b98a1b;
-  --droite: #2f7fd1;
+  /* Lightness architecture: the centre gold is clearly lighter than the
+   * two darker ends, so adjacent segments separate at any bar height
+   * (docs/brand.md, Visual identity). */
+  --gauche: #e0415e;
+  --centre: #dfa414;
+  --droite: #2e7ce4;
 
   --hover: rgba(17, 17, 20, 0.035);
 
@@ -36,9 +39,9 @@
     --muted: #9b9ba3;
     --faint: #6c6c75;
 
-    --gauche: #f07c8f;
-    --centre: #d9a23f;
-    --droite: #5fa5e3;
+    --gauche: #f28498;
+    --centre: #e3b341;
+    --droite: #63a8ea;
 
     --hover: rgba(255, 255, 255, 0.045);
 
@@ -63,6 +66,10 @@
   --color-tooltip-ink: var(--tooltip-ink);
 
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  /* Editorial voice: Story titles and page H1s only (docs/brand.md,
+   * Visual identity). Fraunces with the opsz axis — the display cut is
+   * picked automatically at title sizes. */
+  --font-serif: "Fraunces Variable", Georgia, serif;
 }
 
 body {

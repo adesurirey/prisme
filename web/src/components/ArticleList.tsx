@@ -4,11 +4,11 @@ import ArticleRow from './ArticleRow';
 import StoryImage from './StoryImage';
 
 /**
- * One Leaning group's Article list (issue #27): the head — each Outlet's
- * freshest Article — is always visible; the Outlet's follow-ups are
+ * One Leaning group’s Article list (issue #27): the head — each Outlet’s
+ * freshest Article — is always visible; the Outlet’s follow-ups are
  * prerendered into the HTML but hidden until the disclosure row reveals them
  * (same pattern as PrismTabs: indexable without JavaScript). Both rows keep
- * the page's layout: image, meta line, headline — unless the headline repeats
+ * the page’s layout: image, meta line, headline — unless the headline repeats
  * the Story title (split Stories take the founding headline; showing it
  * twice adds nothing).
  *
@@ -66,7 +66,7 @@ export default function ArticleList({
               {open
                 ? 'Réduire'
                 : followUps.length === 1
-                  ? "Voir l'autre article de ces médias"
+                  ? 'Voir l’autre article de ces médias'
                   : `Voir les ${followUps.length} autres articles de ces médias`}
             </span>
           </button>

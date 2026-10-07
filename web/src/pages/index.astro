@@ -8,37 +8,43 @@ import Base from '../layouts/Base.astro';
 const edition = await loadEdition();
 const outlets = loadOutlets();
 
-const builtAt = new Date(edition.builtAt).toLocaleString('fr-FR', {
+// "Mercredi 7 octobre" — the date is the title; time in French style, thin
+// no-break spaces around the h (docs/brand.md, French typographic craft).
+const updatedAt = new Date(edition.builtAt);
+const iso = updatedAt.toLocaleDateString('fr-FR', {
   weekday: 'long',
   day: 'numeric',
   month: 'long',
-  hour: '2-digit',
-  minute: '2-digit',
 });
+const updatedDate = iso.charAt(0).toUpperCase() + iso.slice(1);
+const updatedTime = updatedAt
+  .toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
+  .replace(':', '\u202Fh\u202F');
 
 const perLeaning = (leaning: Leaning) =>
   outlets.filter((o) => o.leaning === leaning).length;
 ---
 
-<Base title="L'édition du jour">
+<Base title="Prisme">
   <section class="pt-10 pb-8">
-    <h1 class="text-[22px] font-semibold tracking-[-0.02em]">L'édition du jour</h1>
+    <h1 class="text-[22px] font-semibold tracking-[-0.02em]">{updatedDate}</h1>
     <p class="mt-1.5 text-[13px] text-muted">
-      {edition.stories.length} sujets, mise à jour le {builtAt}.
+      {edition.stories.length} sujets · mise à jour en continu — dernier point
+      à {updatedTime}
     </p>
     <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
       {
         leaningOrder.map((leaning) => (
           <span class="flex items-center gap-1.5 text-[13px] text-muted">
             <LeaningBadge leaning={leaning} />
-            <span class="text-faint">{perLeaning(leaning)} médias</span>
+            <span class="text-muted">{perLeaning(leaning)} médias</span>
           </span>
         ))
       }
     </div>
   </section>
 
-  <section class="border-t border-line" aria-label="Sujets de l'édition">
+  <section aria-label="Sujets de l'édition">
     {edition.stories.map((story) => <StoryCard story={story} outlets={outlets} />)}
   </section>
 </Base>

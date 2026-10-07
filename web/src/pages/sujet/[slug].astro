@@ -44,7 +44,7 @@ const image = pickStoryImage(story, byId);
 const imageOutlet = image && byId.get(image.outletId);
 
 /** Articles of one Leaning — the Outlet order and the head/follow-ups split
-    are splitPerOutlet's business (@prisme/domain); unknown Outlets last. */
+    are splitPerOutlet’s business (@prisme/domain); unknown Outlets last. */
 function articlesForLeaning(leaning: Leaning | undefined): Article[] {
   return story.articles.filter(
     (a) => byId.get(a.outletId)?.leaning === leaning,
@@ -63,7 +63,7 @@ const groups: {
 ];
 const visible = groups.filter((g) => g.head.length > 0);
 
-// "Publié le": the newest Article's date. An Undated Article (ADR-0007)
+// "Publié le": the newest Article’s date. An Undated Article (ADR-0007)
 // carries only its Publication day — shown without an invented clock time.
 const builtAt = story.articles[0]?.dayPrecision
   ? new Date(story.articles[0].publishedAt).toLocaleDateString('fr-FR', {
@@ -77,7 +77,7 @@ const builtAt = story.articles[0]?.dayPrecision
     );
 
 // "Signaler une erreur" (issue #8): a prefilled GitHub issue carrying this
-// Story's page URL, placed next to the Story it concerns.
+// Story’s page URL, placed next to the Story it concerns.
 const reportUrl = reportIssueUrl({
   title: story.title,
   pageUrl: new URL(
@@ -86,11 +86,11 @@ const reportUrl = reportIssueUrl({
   ).toString(),
 });
 
-// SEO (issue #6): Prisme's own description, derived only from the Coverage
+// SEO (issue #6): Prisme’s own description, derived only from the Coverage
 // counters — never Outlet text (ADR-0003).
 const description =
   reporting > 0
-    ? `Comment la presse française couvre « ${story.title} » : ${reporting} média${
+    ? `Comment la presse française couvre « ${story.title} » : ${reporting} média${
         reporting > 1 ? 's' : ''
       } sur ${outlets.length}, ${counts.gauche} gauche, ${counts.centre} centre, ${counts.droite} droite.`
     : undefined;
@@ -99,8 +99,26 @@ const description =
 <Base title={story.title} description={description} ogImage={image?.imageUrl} ogType="article">
   <article class="pt-10">
     <p class="mb-6">
-      <a href={withBase('/')} class="text-[13px] text-muted transition-colors hover:text-ink">
-        ← L'édition du jour
+      <a
+        href={withBase('/')}
+        class="inline-flex items-center gap-1.5 text-[13px] text-muted transition-colors hover:text-ink"
+      >
+        <svg
+          width="13"
+          height="13"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+          class="shrink-0"
+        >
+          <path
+            d="M13 8H3m0 0 4-4M3 8l4 4"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+        Aujourd’hui
       </a>
     </p>
     <h1 class="max-w-[36rem] text-[24px] font-semibold leading-snug tracking-[-0.02em]">
@@ -134,7 +152,7 @@ const description =
         className="aspect-[16/9] w-full max-w-[36rem] rounded-lg"
         sizes="(max-width: 896px) 100vw, 576px"
       />
-      {imageOutlet && <figcaption class="mt-2 text-[13px] text-faint">Photo : {imageOutlet.name}</figcaption>}
+      {imageOutlet && <figcaption class="mt-2 text-[13px] text-muted">Photo : {imageOutlet.name}</figcaption>}
     </figure>
 
     {
@@ -159,7 +177,7 @@ const description =
           {leaning && (
             <h2 class="mb-1 flex items-center gap-2.5 border-b border-line pb-2">
               <LeaningBadge leaning={leaning} />
-              <span class="text-[12px] text-faint">
+              <span class="text-[12px] text-muted">
                 {counts[leaning]} média{counts[leaning] > 1 ? 's' : ''}
               </span>
             </h2>
@@ -180,7 +198,7 @@ const description =
       ))
     }
 
-    <p class="mt-10 text-[13px] text-faint">
+    <p class="mt-10 text-[13px] text-muted">
       <a
         href={reportUrl}
         class="underline-offset-2 transition-colors hover:text-muted hover:underline"
