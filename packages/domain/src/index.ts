@@ -116,6 +116,13 @@ export const LEANING_LABELS: Record<Leaning, string> = {
  * A news event or topic made up of the Articles that report on it (issue #5).
  * Created once, then extended incrementally: its id and slug never change.
  */
+/** Per-Leaning bullet-point account of a Story, written by the Summaries model (ADR-0006). */
+export interface StorySummaries {
+  gauche?: string[];
+  centre?: string[];
+  droite?: string[];
+}
+
 export interface Story {
   /** 12 hex chars, assigned once at creation — never the Article's id. */
   id: string;
@@ -128,6 +135,14 @@ export interface Story {
   articles: Article[];
   /** From the majority of its Articles' Sections; absent when none is classified. */
   section?: Section;
+  /** Per-Leaning Summaries, only for Leanings that cover the Story (issue #7, ADR-0006). */
+  summaries?: StorySummaries;
+  /** The model's comparison of how the Leanings frame the Story. */
+  differences?: string;
+  /** Version of the Summaries prompt that wrote these fields (ADR-0006). */
+  promptVersion?: string;
+  /** Number of Articles the last Summaries run saw; Articles are append-only. */
+  summarizedArticleCount?: number;
 }
 
 /** The current selection of top Stories Prisme publishes. */

@@ -11,6 +11,7 @@ import { fetchFeed } from './http.ts';
 import { EDITION_SIZE, rankStories } from './ranking.ts';
 import { membershipModelFromEnv } from './decision-model.ts';
 import { winnerModelFromEnv } from './decision-model.ts';
+import { SUMMARIES_PROMPT_VERSION, summariesModelFromEnv, updateSummaries } from './summarize.ts';
 
 /**
  * data/ lives at the repo root: resolving `../../data/` from this file
@@ -83,12 +84,30 @@ export async function runEdition(): Promise<Edition> {
     ).slice(0, EDITION_SIZE),
   };
 
+  // Summaries & Differences (issue #7, ADR-0006): one Flash-Lite call per
+  // live Edition Story that gained Articles since its last Summaries run —
+  // unchanged Stories make zero calls. Only Edition Stories are summarized;
+  // a Story below the cut picks its Summaries up when it returns. Without
+  // GEMINI_API_KEY the build still succeeds — Story pages just lack tabs.
+  const summaries = summariesModelFromEnv();
+  if (summaries == null) {
+    console.warn('GEMINI_API_KEY not set — no Summaries this build.');
+  }
+  const summaryOutcome = await updateSummaries({
+    stories: edition.stories,
+    teasers,
+    outletById,
+    model: summaries,
+    promptVersion: SUMMARIES_PROMPT_VERSION,
+  });
+  for (const slug of summaryOutcome.changed) changed.add(slug);
+
   const filesToWrite = changed.size;
   console.log(
     `Edition: ${edition.stories.length} ranked stories (of ${liveIds.size} live) from ${kept.length} articles ` +
       `(${existing.length} on disk, ${filesToWrite} files to write, ` +
       `${articles.length - kept.length} not_news dropped, ${classified - before} newly classified, ` +
-      `${failures.length} feed failures).`,
+      `${summaryOutcome.calls} summaries calls, ${failures.length} feed failures).`,
   );
 
   await mkdir(STORIES_DIR, { recursive: true });
