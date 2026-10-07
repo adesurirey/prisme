@@ -373,6 +373,90 @@ describe('groupStories', () => {
     expect(s.articles.map((a) => a.id)).toEqual(['a1']);
   });
 
+  it('a new Story carries its seed unconditionally; every further member is checked against the seed', async () => {
+    const membershipCalls: { story?: string; article?: string }[] = [];
+    const outcome = await groupStories(
+      input({
+        articles: [article('a1'), article('a2'), article('a3')],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
+            assignments: [
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a3', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+            titleUpdates: [],
+          }),
+          membership: fakeMembership(true, membershipCalls),
+        },
+      }),
+    );
+    // a1 is the seed (fresh order): joins without a check. a2 and a3 are
+    // checked — against the seed headline, not the proposed title.
+    expect(outcome.stories).toHaveLength(1);
+    expect(outcome.stories[0]!.articles.map((a) => a.id)).toEqual([
+      'a1',
+      'a2',
+      'a3',
+    ]);
+    expect(membershipCalls).toEqual([
+      { story: 'Titre a1', article: 'Titre a2' },
+      { story: 'Titre a1', article: 'Titre a3' },
+    ]);
+  });
+
+  it('a member that fails the seed check splits out of the new Story', async () => {
+    const membershipCalls: { story?: string; article?: string }[] = [];
+    const outcome = await groupStories(
+      input({
+        articles: [article('a1'), article('a2')],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+            titleUpdates: [],
+          }),
+          membership: fakeMembership(false, membershipCalls),
+        },
+      }),
+    );
+    expect(outcome.stories.map((s) => s.title)).toEqual([
+      'Le Sénat adopte le budget',
+      'Titre a2',
+    ]);
+    const kept = outcome.stories[0]!;
+    expect(kept.articles.map((a) => a.id)).toEqual(['a1']);
+  });
+
+  it('a member of a new Story splits when the checker is missing or fails', async () => {
+    for (const membership of [null, fakeMembership(null)]) {
+      const outcome = await groupStories(
+        input({
+          articles: [article('a1'), article('a2')],
+          clients: {
+            grouping: fakeGrouping({
+              newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
+              assignments: [
+                { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+                { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+              ],
+              titleUpdates: [],
+            }),
+            membership,
+          },
+        }),
+      );
+      expect(outcome.stories.map((s) => s.title)).toEqual([
+        'Le Sénat adopte le budget',
+        'Titre a2',
+      ]);
+    }
+  });
+
   it('a key Story no Article claimed never publishes', async () => {
     const outcome = await groupStories(
       input({
