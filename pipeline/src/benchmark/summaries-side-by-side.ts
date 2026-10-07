@@ -1,8 +1,8 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import type { Edition } from '@prisme/domain';
 import { outlets } from '@prisme/domain';
 import { collect } from '../collect.ts';
 import { fetchFeed } from '../http.ts';
-import { groupStories, loadStories } from '../grouping.ts';
 import {
   SUMMARIES_PROMPT_VERSION,
   geminiSummariesModel,
@@ -20,8 +20,8 @@ import {
  */
 
 const BENCHMARK_DIR = new URL('../../../.benchmark/', import.meta.url);
-const DATA_DIR = new URL('../../data/', import.meta.url);
-const STORIES_DIR = new URL('stories/', DATA_DIR);
+// One level deeper than run.ts: this script lives in pipeline/src/benchmark/.
+const DATA_DIR = new URL('../../../data/', import.meta.url);
 /** The comparison model, pinned for traceability. */
 const FLASH = 'gemini-3.5-flash';
 
@@ -34,25 +34,13 @@ async function main(): Promise<void> {
   const storyCount = Number(process.argv[2] ?? '5');
   const now = new Date();
 
-  // A real day: collect today's feeds, group exactly like a build, rank the
-  // Edition — then take the top StoryCount live Stories as the corpus.
-  const { articles, teasers } = await collect(outlets, fetchFeed, now);
-  const existing = await loadStories(STORIES_DIR);
-  const outcome = await groupStories({
-    articles,
-    teasers,
-    existing,
-    now,
-    makeId: () => Math.random().toString(16).slice(2, 14),
-    clients: { grouping: null, membership: null },
-  });
+  // The corpus is the real, classified Edition written by the last build —
+  // re-grouping here would run without the Decision model, and unclassified
+  // Articles have no Kind, hence no Coverage, hence no Summaries.
+  const edition: Edition = JSON.parse(await readFile(new URL('edition.json', DATA_DIR), 'utf8'));
+  const { teasers } = await collect(outlets, fetchFeed, now);
   const outletById = new Map(outlets.map((o) => [o.id, o]));
-  const live = outcome.stories.filter((s) =>
-    s.articles.some((a) => Date.now() - Date.parse(a.publishedAt) < 24 * 3600_000),
-  );
-  const corpus = live
-    .sort((a, b) => b.articles.length - a.articles.length)
-    .slice(0, storyCount);
+  const corpus = edition.stories.slice(0, storyCount);
 
   const lines: string[] = [
     `# Summaries side-by-side — ${now.toISOString()}`,
@@ -63,24 +51,24 @@ async function main(): Promise<void> {
   ];
 
   for (const story of corpus) {
-    const results = await Promise.all(
-      [
-        { label: 'Flash-Lite', model: 'gemini-3.5-flash-lite' },
-        { label: 'Flash', model: FLASH },
-      ].map(async ({ label, model }) => {
-        const client: SummaryModel = geminiSummariesModel(apiKey, model, label);
-        const working: typeof story = { ...story, summaries: undefined, differences: undefined, summarizedArticleCount: 0 };
-        const started = Date.now();
-        const outcome = await updateSummaries({
-          stories: [working],
-          teasers,
-          outletById,
-          model: client,
-          promptVersion: SUMMARIES_PROMPT_VERSION,
-        });
-        return { label, model, ms: Date.now() - started, outcome, story: working };
-      }),
-    );
+    // Sequential per model: parallel calls trip the free tier's rate limits.
+    const results = [];
+    for (const { label, model } of [
+      { label: 'Flash-Lite', model: 'gemini-3.5-flash-lite' },
+      { label: 'Flash', model: FLASH },
+    ]) {
+      const client: SummaryModel = geminiSummariesModel(apiKey, model, label);
+      const working: typeof story = { ...story, summaries: undefined, differences: undefined, summarizedArticleCount: 0 };
+      const started = Date.now();
+      const outcome = await updateSummaries({
+        stories: [working],
+        teasers,
+        outletById,
+        model: client,
+        promptVersion: SUMMARIES_PROMPT_VERSION,
+      });
+      results.push({ label, model, ms: Date.now() - started, outcome, story: working });
+    }
 
     lines.push(`## ${story.title} (${story.articles.length} Articles)`, '');
     for (const r of results) {

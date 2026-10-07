@@ -13,11 +13,9 @@ extra quality is worth the extra budget.
 - **Read**: per Story, both models' Summaries (Gauche/Centre/Droite) and Differences; latency and call count per model.
 - **Grading** (manual, like the Decision model benchmark): bullet accuracy against the headlines, French quality, Differences honesty (describes framing, never adjudicates; no invented contrasts on single-Leaning Stories), teaser paraphrasing (never copied).
 
-## Result (pending — filled from the keyed run in the PR)
+## Result (2026-10-07)
 
-Not yet run: the side-by-side needs `GEMINI_API_KEY`, which build environments hold as a secret. The PR for issue #7 must include the run (script above) and this section filled before merge.
-
-- Corpus: _n live Stories, date_
-- **Flash-Lite**: _accuracy, Differences honesty, latency_
-- **Flash**: _same, and request cost_
-- **Decision**: _keep Flash-Lite or switch, and why_
+- Corpus: the top 5 live Edition Stories of the day (78, 8, 7, 6 and 4 Articles; one single-Leaning Story included), full outputs in `.benchmark/summaries-side-by-side.md` (gitignored, ADR-0003).
+- **Flash-Lite**: succeeded 5/5, ~2–7 s per call. Bullets accurate against the headlines, always reformulated (no teaser copying); Differences stayed descriptive — named Outlets only as evidence of framing (Le Figaro, L'Humanité, Europe 1, Le JDD) — and the single-Leaning Story's Differences said plainly there was nothing to compare.
+- **Flash**: succeeded 2/5 (the other 3 hit free-tier 429s / 503 "high demand" even when run sequentially — Flash-Lite kept succeeding in the same window), and 3–6× slower when it did (30 s on the 8-Article Story vs 5 s). On its 2 successes the quality was marginally more fluent, with no factual gain over Flash-Lite.
+- **Decision**: keep Flash-Lite — same usable quality, a fraction of the latency, and it holds up under the free tier where Flash gets rate-limited. Re-run this protocol if Differences quality regresses on real days.
