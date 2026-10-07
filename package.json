@@ -11,7 +11,8 @@
     "benchmark:grade": "pnpm --filter @prisme/pipeline benchmark:grade",
     "lint": "biome check .",
     "format": "biome check --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "repair": "pnpm --filter @prisme/pipeline repair"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.15",
