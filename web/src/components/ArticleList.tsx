@@ -27,7 +27,12 @@ export default function ArticleList({
   const byId = new Map(outlets.map((o) => [o.id, o]));
   return (
     <div>
-      <List articles={head} byId={byId} storyTitle={storyTitle} />
+      <List
+        articles={head}
+        byId={byId}
+        storyTitle={storyTitle}
+        className="border-y"
+      />
       {followUps.length > 0 && (
         <>
           <button
@@ -48,7 +53,7 @@ export default function ArticleList({
             byId={byId}
             storyTitle={storyTitle}
             hidden={!open}
-            className="mt-2.5"
+            className="mt-2.5 border-b"
           />
         </>
       )}
@@ -67,12 +72,15 @@ function List({
   byId: Map<string, Outlet>;
   storyTitle: string;
   hidden?: boolean;
+  /** Borders are the caller's: the head list closes above the toggle, the
+      follow-up list only needs its bottom rule — two rules sandwiching the
+      toggle read as a box, not a list. */
   className?: string;
 }) {
   return (
     <ul
       hidden={hidden}
-      className={`flex flex-col divide-y divide-line border-y border-line ${className ?? ''}`}
+      className={`flex flex-col divide-y divide-line ${className ?? ''}`}
     >
       {articles.map((article) => {
         const outlet = byId.get(article.outletId);
