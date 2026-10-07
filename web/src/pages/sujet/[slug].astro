@@ -6,12 +6,12 @@ import {
   coverageCounts,
   frontPageOutlets,
   leaningOrder,
-  newestFirst,
   pickStoryImage,
   reportingOutletIds,
   SECTION_LABELS,
+  splitPerOutlet,
 } from '@prisme/domain';
-import ArticleRow from '../../components/ArticleRow';
+import ArticleList from '../../components/ArticleList';
 import BlindspotBadge from '../../components/BlindspotBadge';
 import CoverageBar from '../../components/CoverageBar';
 import LeaningBadge from '../../components/LeaningBadge';
@@ -43,17 +43,25 @@ const counted = countedArticles(story.articles);
 const image = pickStoryImage(story, byId);
 const imageOutlet = image && byId.get(image.outletId);
 
-/** Articles of one Leaning, newest first, ties by id; unknown Outlets last. */
-function group(leaning: Leaning | undefined): Article[] {
-  return story.articles
-    .filter((a) => byId.get(a.outletId)?.leaning === leaning)
-    .sort(newestFirst);
+/** Articles of one Leaning — the Outlet order and the head/follow-ups split
+    are splitPerOutlet's business (@prisme/domain); unknown Outlets last. */
+function articlesForLeaning(leaning: Leaning | undefined): Article[] {
+  return story.articles.filter(
+    (a) => byId.get(a.outletId)?.leaning === leaning,
+  );
 }
-const groups: { leaning?: Leaning; articles: Article[] }[] = [
-  ...leaningOrder.map((leaning) => ({ leaning, articles: group(leaning) })),
-  { articles: group(undefined) },
+const groups: {
+  leaning?: Leaning;
+  head: Article[];
+  followUps: Article[];
+}[] = [
+  ...leaningOrder.map((leaning) => ({
+    leaning,
+    ...splitPerOutlet(articlesForLeaning(leaning)),
+  })),
+  { ...splitPerOutlet(articlesForLeaning(undefined)) },
 ];
-const visible = groups.filter((g) => g.articles.length > 0);
+const visible = groups.filter((g) => g.head.length > 0);
 
 // "Publié le": the newest Article's date. An Undated Article (ADR-0007)
 // carries only its Publication day — shown without an invented clock time.
@@ -146,42 +154,28 @@ const description =
     }
 
     {
-      visible.map(({ leaning, articles }) => (
+      visible.map(({ leaning, head, followUps }) => (
         <section class="mt-10">
           {leaning && (
-            <h2 class="mb-1 flex items-center gap-2.5">
+            <h2 class="mb-1 flex items-center gap-2.5 border-b border-line pb-2">
               <LeaningBadge leaning={leaning} />
               <span class="text-[12px] text-faint">
                 {counts[leaning]} média{counts[leaning] > 1 ? 's' : ''}
               </span>
             </h2>
           )}
-          <ul class="flex flex-col divide-y divide-line border-y border-line">
-            {
-              articles.map((article) => {
-                const outlet = byId.get(article.outletId);
-                return (
-                  <li class="flex gap-4 py-4">
-                    <StoryImage
-                      article={article}
-                      outlet={outlet}
-                      className="h-14 w-24 shrink-0 rounded-md"
-                      sizes="96px"
-                    />
-                    <div class="min-w-0 flex-1">
-                      <ArticleRow article={article} outlet={outlet} />
-                      {/* The Story title can repeat an Article's headline (split
-                          Stories take the founding headline); showing it twice
-                          adds nothing — the "Lire sur" link stays clickable. */}
-                      {article.headline !== story.title && (
-                        <p class="mt-1.5 text-[14px] text-muted">{article.headline}</p>
-                      )}
-                    </div>
-                  </li>
-                );
-              })
-            }
-          </ul>
+          {
+            // One island per Leaning group (issue #27): the head rows and the
+            // follow-ups behind "Voir les N autres articles" are all in the
+            // HTML at build time — the island only toggles visibility.
+          }
+          <ArticleList
+            client:visible
+            head={head}
+            followUps={followUps}
+            outlets={outlets}
+            storyTitle={story.title}
+          />
         </section>
       ))
     }

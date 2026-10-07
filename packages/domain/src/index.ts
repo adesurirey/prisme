@@ -173,3 +173,4 @@ export * from './coverage.ts';
 // The sourced Outlet config (issue #2): Leanings with citations, readership,
 // verified feeds and TDM reservations. See docs/research/outlet-leanings.md.
 export * from './outlets.ts';
+export * from './split-per-outlet.ts';
