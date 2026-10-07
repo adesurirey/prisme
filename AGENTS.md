@@ -8,6 +8,8 @@ Issues are tracked in this repository’s GitHub Issues via `gh`. See `docs/agen
 
 single-context. See `docs/agents/domain.md`.
 
+Brand (name, catch line, mission, voice): `docs/brand.md`. Read it before writing or changing any user-facing copy — taglines, page titles, meta descriptions, badges, legal pages.
+
 Outlet Leanings and their sources: `docs/research/outlet-leanings.md` (the research behind the typed config in `packages/domain/src/outlets.ts`). Read it before changing an Outlet's Leaning, adding or removing an Outlet, or answering "why is this media classed there?".
 
 Article classification (Kind and Section): `docs/research/decision-model-benchmark.md` (the benchmark behind the Decision model in `pipeline/src/decision-model.ts`). Read it before changing the classification prompt or criteria, swapping the model, or re-grading. The labeled pairs live only in the gitignored `.benchmark/` cache; the committed labels file carries ids and URLs — feed text never enters the repo (ADR-0003).
