@@ -122,16 +122,20 @@ const description =
       {
         leaningOrder.map((leaning) => (
           <div
-            class="mt-6 border-l-2 pl-5"
-            style={`border-color: var(--${leaning})`}
+            class="mt-6 border-l-2 border-line pl-5"
           >
-            <h3 class="sticky top-14 z-10 -my-2 flex items-center gap-2.5 bg-canvas py-2">
+            <h3 class="sticky top-[55px] z-0 flex items-center gap-2.5 bg-canvas py-2">
               <LeaningBadge leaning={leaning} />
               <span class="text-[12px] text-faint">{perLeaning(leaning).length} médias</span>
             </h3>
             <ul class="flex flex-col gap-10 pt-2">
               {perLeaning(leaning).map((outlet) => (
-                <li>
+                <li class="relative">
+                  <span
+                    aria-hidden="true"
+                    class="absolute -left-[26px] top-1.5 size-2.5 rounded-full"
+                    style={`background: var(--${leaning})`}
+                  />
                   <h4 class="flex flex-wrap items-baseline gap-x-3 text-[15px] font-medium">
                     <a
                       href={outlet.site}
