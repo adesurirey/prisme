@@ -53,7 +53,7 @@ export default function CoverageMeta({
       {covered && (
         <span
           aria-hidden="true"
-          className="inline-flex h-1.5 shrink-0 overflow-hidden rounded-full bg-line"
+          className="inline-flex h-1.5 shrink-0 gap-px overflow-hidden rounded-full bg-line"
           style={{ width: barWidth }}
         >
           {leaningOrder.map(

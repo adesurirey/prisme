@@ -39,8 +39,11 @@
     --muted: #9b9ba3;
     --faint: #6c6c75;
 
+    /* Same lightness architecture as light mode (centre clearly the
+     * lightest) — on the dark canvas the three hues must also differ in
+     * lightness so adjacent segments of a micro-bar stay separable. */
     --gauche: #f28498;
-    --centre: #e3b341;
+    --centre: #f6c65b;
     --droite: #63a8ea;
 
     --hover: rgba(255, 255, 255, 0.045);
