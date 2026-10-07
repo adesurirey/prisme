@@ -35,7 +35,7 @@ export default function ArticleRow({
         />
       )}
       <span className="text-[14px] font-medium">{name}</span>
-      {date && <span className="text-[13px] text-faint">{date}</span>}
+      {date && <span className="text-[13px] text-muted">{date}</span>}
       <span className="ml-auto flex items-baseline gap-3">
         {outlet && <PaywallBadge paywall={outlet.paywall} />}
         <a

@@ -37,7 +37,7 @@ export default function StoryCard({
       <div className="flex items-start gap-6">
         <div className="min-w-0 flex-1">
           {story.section && (
-            <p className="mb-1 text-[11px] uppercase tracking-[0.08em] text-faint">
+            <p className="mb-1 text-[11px] uppercase tracking-[0.08em] text-muted">
               {SECTION_LABELS[story.section]}
             </p>
           )}

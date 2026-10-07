@@ -16,17 +16,35 @@ const perLeaning = (leaning: Leaning): OutletConfig[] =>
   outlets.filter((o) => o.leaning === leaning);
 
 const description =
-  'Comment chaque média français est classé à gauche, au centre ou à droite : les sources citées, la méthode, et les médias exclus. Les classements du Figaro, de Libération, du Monde… média par média.';
+  'Comment chaque média français est classé à gauche, au centre ou à droite : les sources citées, la méthode, et les médias exclus. Les classements du Figaro, de Libération, du Monde… média par média.';
 ---
 
 <Base
-  title="Classement politique des médias français : gauche, centre, droite"
+  title="Classement politique des médias français : gauche, centre, droite"
   description={description}
 >
   <article class="pt-10">
     <p class="mb-6">
-      <a href={withBase('/')} class="text-[13px] text-muted transition-colors hover:text-ink">
-        ← L'édition du jour
+      <a
+        href={withBase('/')}
+        class="inline-flex items-center gap-1.5 text-[13px] text-muted transition-colors hover:text-ink"
+      >
+        <svg
+          width="13"
+          height="13"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+          class="shrink-0"
+        >
+          <path
+            d="M13 8H3m0 0 4-4M3 8l4 4"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+        Aujourd’hui
       </a>
     </p>
     <h1 class="text-[24px] font-semibold leading-snug tracking-[-0.02em]">
@@ -35,21 +53,21 @@ const description =
     <p class="mt-4 text-[15px] leading-relaxed text-muted">
       Prisme regroupe les articles de {outlets.length} médias français et les range en trois
       bords — {LEANING_LABELS.gauche.toLowerCase()}, {LEANING_LABELS.centre.toLowerCase()} et
-      {LEANING_LABELS.droite.toLowerCase()}. Cette page dit d'où vient chaque classement,
+      {LEANING_LABELS.droite.toLowerCase()}. Cette page dit d’où vient chaque classement,
       avec les sources citées, et ce que le site ne fait pas.
     </p>
 
     <section class="mt-10 space-y-4 text-[15px] leading-relaxed text-muted">
-      <h2 class="text-[17px] font-semibold text-ink">Le bord appartient au média, pas à l'article</h2>
+      <h2 class="text-[17px] font-semibold text-ink">Le bord appartient au média, pas à l’article</h2>
       <p>
-        Un article du <em>Figaro</em> peut très bien défendre une position de gauche ; ça
-        n'en fait pas un article « de droite ». C'est le média, dans sa durée, qui a une
-        position : sa ligne éditoriale, ce qu'il choisit de mettre en avant, ce qu'il
+        Un article du <em>Figaro</em> peut très bien défendre une position de gauche ; ça
+        n’en fait pas un article « de droite ». C’est le média, dans sa durée, qui a une
+        position : sa ligne éditoriale, ce qu’il choisit de mettre en avant, ce qu’il
         laisse de côté. On classe donc le média une fois pour toutes, à la main, et on ne
         touche jamais au classement des articles eux-mêmes.
       </p>
       <p>
-        Chaque classement s'appuie sur au moins deux sources publiques indépendantes — une
+        Chaque classement s’appuie sur au moins deux sources publiques indépendantes — une
         échelle idéologique construite à partir de données, et des travaux de référence.
         Elles sont citées pour chaque média plus bas, et quand elles se contredisent, ça
         s'écrit noir sur blanc.
@@ -57,16 +75,16 @@ const description =
     </section>
 
     <section class="mt-10 space-y-4 text-[15px] leading-relaxed text-muted">
-      <h2 class="text-[17px] font-semibold text-ink">La sélection n'est pas équilibrée — et c'est voulu</h2>
+      <h2 class="text-[17px] font-semibold text-ink">La sélection n’est pas équilibrée — et c’est voulu</h2>
       <p>
         Les {outlets.length} médias sont choisis pour leur audience et leur poids
         éditorial, jamais pour équilibrer les bords. Il en résulte une répartition
         inégale —
         {perLeaning('gauche').length} à gauche, {perLeaning('centre').length} au centre,
         {perLeaning('droite').length} à droite — qui ressemble à celle de la presse
-        nationale française. À quoi ça sert ? À voir ce qui se passe quand un sujet n'est
-        repris que d'un côté : sur une page de sujet, la barre de couverture et les
-        mentions « angle mort » le montrent directement.
+        nationale française. À quoi ça sert ? À voir ce qui se passe quand un sujet n’est
+        repris que d’un côté : sur une page de sujet, la barre de couverture et les
+        mentions « angle mort » le montrent directement.
       </p>
     </section>
 
@@ -74,19 +92,19 @@ const description =
       <h2 class="text-[17px] font-semibold text-ink">Couverture et angles morts</h2>
       <p>
         Pour chaque sujet, Prisme compte combien de médias de chaque bord publient un
-        article d'actualité dessus. Un éditorial ou une tribune ne compte pas : il
-        commente, il ne couvre pas. Un bord devient un « angle mort » quand les deux
+        article d’actualité dessus. Un éditorial ou une tribune ne compte pas : il
+        commente, il ne couvre pas. Un bord devient un « angle mort » quand les deux
         autres parlent du sujet et lui pas. Le comptage vient des titres et chapôs des
-        articles collectés, pas d'un jugement sur leur contenu.
+        articles collectés, pas d’un jugement sur leur contenu.
       </p>
     </section>
 
     <section class="mt-10 space-y-4 text-[15px] leading-relaxed text-muted">
-      <h2 class="text-[17px] font-semibold text-ink">Ce que fait l'IA — et ce qu'elle ne lit pas</h2>
+      <h2 class="text-[17px] font-semibold text-ink">Ce que fait l’IA — et ce qu’elle ne lit pas</h2>
       <p>
-        Les synthèses « lu à gauche / au centre / à droite » sont écrites par un modèle
+        Les synthèses « lu à gauche / au centre / à droite » sont écrites par un modèle
         de langage, à partir des seuls titres et chapôs publiés par les médias. Il ne lit
-        jamais les articles eux-mêmes : Prisme ne les stocke pas et ne les reproduit pas.
+        jamais les articles eux-mêmes : Prisme ne les stocke pas et ne les reproduit pas.
         Une synthèse ne peut donc résumer que ce que les titres et chapôs donnent à voir —
         la manière dont chaque bord présente le sujet, pas le fond des articles.
       </p>
@@ -95,7 +113,7 @@ const description =
     <section class="mt-10">
       <h2 class="text-[17px] font-semibold text-ink">Les médias exclus</h2>
       <p class="mt-2 text-[15px] leading-relaxed text-muted">
-        Certains médias manquent à l'appel. En voici la liste et la raison, telles que
+        Certains médias manquent à l’appel. En voici la liste et la raison, telles que
         vérifiées à la date indiquée.
       </p>
       <ul class="mt-4 flex max-w-3xl flex-col divide-y divide-line border-y border-line">
@@ -104,7 +122,7 @@ const description =
             <li class="py-4">
               <p class="text-[15px] font-medium text-ink">{excluded.name}</p>
               <p class="mt-1 text-[14px] leading-relaxed text-muted">{excluded.reason}</p>
-              <p class="mt-1 text-[13px] text-faint">
+              <p class="mt-1 text-[13px] text-muted">
                 Vérifié le {new Date(excluded.checkedAt).toLocaleDateString('fr-FR', {
                   day: 'numeric',
                   month: 'long',
@@ -124,7 +142,7 @@ const description =
           <div class="mt-8 first:mt-6">
             <h3 class="flex items-center gap-2.5">
               <LeaningBadge leaning={leaning} />
-              <span class="text-[12px] text-faint">{perLeaning(leaning).length} médias</span>
+              <span class="text-[12px] text-muted">{perLeaning(leaning).length} médias</span>
             </h3>
             <ul class="mt-1 divide-y divide-line">
               {perLeaning(leaning).map((outlet) => (
@@ -143,7 +161,7 @@ const description =
                     {outlet.leaningNote}
                   </p>
                   <details class="group mt-1.5">
-                    <summary class="inline-flex cursor-pointer list-none items-center gap-1.5 text-[13px] text-faint transition-colors hover:text-muted [&::-webkit-details-marker]:hidden">
+                    <summary class="inline-flex cursor-pointer list-none items-center gap-1.5 text-[13px] text-muted transition-colors hover:text-muted [&::-webkit-details-marker]:hidden">
                       <svg
                         aria-hidden="true"
                         viewBox="0 0 8 8"
@@ -165,7 +183,7 @@ const description =
                               >
                                 {source.title}
                               </a>
-                              <span class="text-faint">
+                              <span class="text-muted">
                                 {' '}— {source.author}
                                 {source.date ? `, ${source.date}` : ''}
                               </span>
@@ -176,8 +194,8 @@ const description =
                           </li>
                         ))}
                       </ul>
-                      <p class="text-[13px] leading-relaxed text-faint">
-                        Audience :{' '}
+                      <p class="text-[13px] leading-relaxed text-muted">
+                        Audience :{' '}
                         <a
                           href={outlet.readership.url}
                           class="underline decoration-line-strong underline-offset-2 transition-colors hover:text-muted"

@@ -3,14 +3,32 @@ import { withBase } from '../data';
 import Base from '../layouts/Base.astro';
 
 const description =
-  'Mentions légales du site Prisme : éditeur, hébergeur, contact.';
+  'Mentions légales du site Prisme : éditeur, hébergeur, contact.';
 ---
 
 <Base title="Mentions légales" description={description}>
   <article class="pt-10">
     <p class="mb-6">
-      <a href={withBase('/')} class="text-[13px] text-muted transition-colors hover:text-ink">
-        ← L'édition du jour
+      <a
+        href={withBase('/')}
+        class="inline-flex items-center gap-1.5 text-[13px] text-muted transition-colors hover:text-ink"
+      >
+        <svg
+          width="13"
+          height="13"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+          class="shrink-0"
+        >
+          <path
+            d="M13 8H3m0 0 4-4M3 8l4 4"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+        Aujourd’hui
       </a>
     </p>
     <h1 class="text-[24px] font-semibold leading-snug tracking-[-0.02em]">
@@ -23,7 +41,7 @@ const description =
         <p class="mt-1.5">
           Arnaud de Surirey, directeur de la publication.
           <br />
-          Contact : <a
+          Contact : <a
             href="mailto:salves.panache.8i@icloud.com"
             class="text-ink underline-offset-2 hover:underline"
             >salves.panache.8i@icloud.com</a
@@ -48,12 +66,12 @@ const description =
         <h2 class="text-[15px] font-semibold text-ink">Nature du site</h2>
         <p class="mt-1.5">
           Prisme est un prototype personnel, sans but commercial. Il ne publie aucun
-          contenu de presse : il renvoie vers les articles des médias, dont il n'affiche
+          contenu de presse : il renvoie vers les articles des médias, dont il n’affiche
           que les titres, chapôs et images déjà publics. Les sources des classements sont
           détaillées sur la page
           <a
             href={withBase('/classement-politique-des-medias/')}
-            class="text-ink underline-offset-2 hover:underline">« Classement politique des médias »</a
+            class="text-ink underline-offset-2 hover:underline">« Classement politique des médias »</a
           >.
         </p>
       </div>
@@ -61,8 +79,8 @@ const description =
       <div>
         <h2 class="text-[15px] font-semibold text-ink">Données personnelles</h2>
         <p class="mt-1.5">
-          Le site ne dépose aucun cookie et ne mesure pas l'audience. Il ne collecte
-          aucune donnée personnelle : les erreurs signalées via GitHub transitent par le
+          Le site ne dépose aucun cookie et ne mesure pas l’audience. Il ne collecte
+          aucune donnée personnelle : les erreurs signalées via GitHub transitent par le
           dépôt public du projet.
         </p>
       </div>

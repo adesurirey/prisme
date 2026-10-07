@@ -90,7 +90,7 @@ describe('ArticleList', () => {
     );
     expect(
       screen.getByRole('button', {
-        name: "Voir l'autre article de ces médias",
+        name: 'Voir l’autre article de ces médias',
       }),
     ).toBeTruthy();
   });

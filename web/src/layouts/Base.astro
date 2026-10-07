@@ -1,5 +1,6 @@
 ---
 import '@fontsource-variable/inter';
+import '@fontsource-variable/fraunces/opsz.css';
 import '../styles/global.css';
 import { withBase } from '../data';
 
@@ -33,20 +34,18 @@ const {
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e0e10" />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3 22 21H2Z' fill='%23b98a1b' opacity='.9'/%3E%3Cpath d='M12 3 2 21h8Z' fill='%23d64562' opacity='.9'/%3E%3Cpath d='M12 3l10 18h-8Z' fill='%232f7fd1' opacity='.9'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cstyle%3E@media (prefers-color-scheme:dark){.g{stop-color:%23f28498}.c{stop-color:%23e3b341}.d{stop-color:%2363a8ea}}%3C/style%3E%3ClinearGradient id='p' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop class='g' offset='0' stop-color='%23e0415e'/%3E%3Cstop class='g' offset='.32' stop-color='%23e0415e'/%3E%3Cstop class='c' offset='.45' stop-color='%23dfa414'/%3E%3Cstop class='c' offset='.58' stop-color='%23dfa414'/%3E%3Cstop class='d' offset='.7' stop-color='%232e7ce4'/%3E%3Cstop class='d' offset='1' stop-color='%232e7ce4'/%3E%3C/linearGradient%3E%3Ccircle cx='16' cy='16' r='15' fill='url(%23p)'/%3E%3C/svg%3E"
     />
-    <title>{title} · Prisme</title>
+    <title>{title === 'Prisme' ? title : `${title} · Prisme`}</title>
   </head>
   <body class="min-h-screen bg-canvas font-sans text-ink antialiased">
     <header class="sticky top-0 z-10 border-b border-line bg-canvas/90 backdrop-blur">
       <div class="mx-auto flex h-14 max-w-4xl items-center gap-3 px-5">
-        <a href={withBase('/')} class="flex items-center gap-2.5" aria-label="Prisme — accueil">
-          <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3 22 21H2Z" fill="var(--centre)" opacity=".85" />
-            <path d="M12 3 2 21h8Z" fill="var(--gauche)" opacity=".85" />
-            <path d="M12 3l10 18h-8Z" fill="var(--droite)" opacity=".85" />
-          </svg>
-          <span class="text-[15px] font-semibold tracking-tight">Prisme</span>
+        <a href={withBase('/')} class="flex items-center" aria-label="Prisme — accueil">
+          <span
+            class="font-serif text-[17px] font-black uppercase leading-none tracking-[0.01em]"
+            >Prisme</span
+          >
         </a>
         <p class="ml-auto hidden text-[13px] text-muted sm:block">
           L’actualité sous toutes ses couleurs
@@ -57,7 +56,7 @@ const {
       <slot />
     </main>
     <footer class="border-t border-line py-8">
-      <div class="mx-auto flex max-w-4xl flex-wrap gap-x-5 gap-y-2 px-5 text-[13px] text-faint">
+      <div class="mx-auto flex max-w-4xl flex-wrap gap-x-5 gap-y-2 px-5 text-[13px] text-muted">
         <p>© {new Date().getFullYear()} Prisme</p>
         <p class="ml-auto flex gap-5">
           <a href={withBase('/classement-politique-des-medias/')} class="transition-colors hover:text-muted"

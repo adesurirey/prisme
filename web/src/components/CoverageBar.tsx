@@ -38,7 +38,7 @@ export default function CoverageBar({
         className="inline-flex h-1 overflow-hidden rounded-full bg-line"
         style={{ width }}
         role="img"
-        aria-label={`Couverture : ${tooltip} — ${breakdown}`}
+        aria-label={`Couverture : ${tooltip} — ${breakdown}`}
       >
         {leaningOrder.map(
           (l) =>
@@ -60,7 +60,7 @@ export default function CoverageBar({
         className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 hidden -translate-x-1/2 whitespace-nowrap rounded-md border border-line bg-canvas px-3 py-2 text-[12px] leading-snug text-muted shadow-sm group-hover:block"
       >
         {tooltip}
-        <span className="block text-faint">{breakdown}</span>
+        <span className="block text-muted">{breakdown}</span>
       </span>
     </span>
   );

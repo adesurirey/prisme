@@ -9,5 +9,5 @@ const labels: Record<Paywall, string | null> = {
 export default function PaywallBadge({ paywall }: { paywall: Paywall }) {
   const label = labels[paywall];
   if (!label) return null;
-  return <span className="text-[13px] text-faint">{label}</span>;
+  return <span className="text-[13px] text-muted">{label}</span>;
 }
