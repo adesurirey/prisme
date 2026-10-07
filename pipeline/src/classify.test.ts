@@ -47,7 +47,7 @@ function fakeModel(
 describe('classifyNewArticles', () => {
   it('classifies only ids missing from the cache', async () => {
     const cache = emptyCache();
-    cache.entries['a1'] = { kind: 'news', section: 'politics' };
+    cache.entries.a1 = { kind: 'news', section: 'politics' };
     const model = fakeModel((id) =>
       id === 'a2' ? { kind: 'not_news', section: null } : null,
     );
@@ -58,8 +58,8 @@ describe('classifyNewArticles', () => {
       model,
     );
     expect(model.calls).toEqual(['Titre a2']);
-    expect(cache.entries['a1']).toEqual({ kind: 'news', section: 'politics' });
-    expect(cache.entries['a2']).toEqual({ kind: 'not_news', section: null });
+    expect(cache.entries.a1).toEqual({ kind: 'news', section: 'politics' });
+    expect(cache.entries.a2).toEqual({ kind: 'not_news', section: null });
   });
 
   it('keeps failed classifications out of the cache for retry next build', async () => {
@@ -97,8 +97,8 @@ describe('classifyNewArticles', () => {
 describe('dropNotNews', () => {
   const cache = (): ClassificationCache => {
     const c = emptyCache();
-    c.entries['n1'] = { kind: 'not_news', section: null };
-    c.entries['n2'] = { kind: 'news', section: 'politics' };
+    c.entries.n1 = { kind: 'not_news', section: null };
+    c.entries.n2 = { kind: 'news', section: 'politics' };
     return c;
   };
 

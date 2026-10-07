@@ -1,0 +1,2 @@
+# Lint + format only the staged files. Tests/typecheck run in CI, not here.
+pnpm exec lint-staged

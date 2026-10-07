@@ -96,12 +96,10 @@ export function sampleForBenchmark(
   // Round-robin across Outlets (sorted keys for determinism) so each Outlet
   // contributes to the general pool before any Outlet is drained twice over.
   const general: SampledItem[] = [];
-  const pools = [...generalByOutlet.keys()]
-    .sort()
-    .map((outletId) => ({
-      outletId,
-      items: shuffle(generalByOutlet.get(outletId)!, rng),
-    }));
+  const pools = [...generalByOutlet.keys()].sort().map((outletId) => ({
+    outletId,
+    items: shuffle(generalByOutlet.get(outletId)!, rng),
+  }));
   while (
     general.length < options.generalCount &&
     pools.some((p) => p.items.length > 0)

@@ -5,7 +5,6 @@ import { parseFeed } from '../feeds.ts';
 import { fetchFeed } from '../http.ts';
 import {
   type BenchmarkCandidate,
-  isSuspect,
   type SampledItem,
   sampleForBenchmark,
 } from './sample.ts';
@@ -101,7 +100,7 @@ async function main(): Promise<void> {
   await mkdir(BENCHMARK_DIR, { recursive: true });
   await writeFile(
     new URL('samples.json', BENCHMARK_DIR),
-    JSON.stringify(
+    `${JSON.stringify(
       {
         sampledAt,
         seed: SEED,
@@ -111,7 +110,7 @@ async function main(): Promise<void> {
       },
       null,
       2,
-    ) + '\n',
+    )}\n`,
   );
   await writeFile(
     new URL('worksheet.md', BENCHMARK_DIR),
@@ -119,7 +118,7 @@ async function main(): Promise<void> {
   );
   await writeFile(
     LABELS_PATH,
-    JSON.stringify(
+    `${JSON.stringify(
       {
         instructions:
           'Hand labels for the decision-model benchmark (issue #4). Fill kind and ' +
@@ -141,7 +140,7 @@ async function main(): Promise<void> {
       },
       null,
       2,
-    ) + '\n',
+    )}\n`,
   );
 
   const perOutlet = new Map<string, number>();

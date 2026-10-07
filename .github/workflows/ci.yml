@@ -1,0 +1,48 @@
+# Quality gate for PRs and pushes to main: lint, typecheck, tests, and a full
+# site build. No secrets here: `pnpm edition` runs without model keys, which
+# keeps Articles unclassified and Stories ungrouped (ADR-0005) and — critically
+# — makes zero calls to the AI providers.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm lint
+
+      - run: pnpm typecheck
+
+      - run: pnpm test
+
+      # The web build needs data/ to exist. Run the pipeline without model
+      # keys first: feeds are fetched, classification/grouping/summaries are
+      # skipped by design, and no provider is contacted.
+      - run: pnpm edition
+        env:
+          OPENROUTER_API_KEY: ''
+          GEMINI_API_KEY: ''
+
+      - run: pnpm --filter @prisme/web build
