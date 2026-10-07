@@ -9,15 +9,15 @@ import {
 } from '@prisme/domain';
 import { withBase } from '../data';
 import BlindspotBadge from './BlindspotBadge';
-import CoverageBar from './CoverageBar';
+import CoverageMeta from './CoverageMeta';
 import StoryImage from './StoryImage';
 
 /**
  * One Story in the Edition index, in ranking order (issue #6: the Edition
  * orders by Outlets currently on the Front page, then Coverage): Section,
- * title, Blindspot badges, Coverage strip with its "x médias sur y" tooltip
- * and the counted Article detail — a link to the Story page, where the
- * Articles live.
+ * title, Blindspot badges, the Coverage meta line (compact strip + counted
+ * Articles + share of the config — see CoverageMeta) — a link to the Story
+ * page, where the Articles live.
  */
 export default function StoryCard({
   story,
@@ -44,9 +44,13 @@ export default function StoryCard({
           <h2 className="text-[15px] font-medium leading-snug tracking-[-0.01em]">
             <a href={withBase(`/sujet/${story.slug}/`)}>{story.title}</a>
           </h2>
-          <p className="mt-2 text-[13px] text-muted">
-            {articles} article{articles > 1 ? 's' : ''}
-          </p>
+          <CoverageMeta
+            counts={counts}
+            reporting={reporting}
+            totalOutlets={outlets.length}
+            articles={articles}
+            className="mt-2 text-[13px] text-muted"
+          />
           {spots.length > 0 && (
             <div className="mt-2.5 flex flex-wrap gap-2">
               {spots.map((leaning) => (
@@ -55,19 +59,12 @@ export default function StoryCard({
             </div>
           )}
         </div>
-        <div className="flex shrink-0 items-center gap-5 self-center">
-          <div>
-            <StoryImage
-              article={image}
-              outlet={image && byId.get(image.outletId)}
-              className="h-14 w-24 rounded-md"
-              sizes="96px"
-            />
-          </div>
-          <CoverageBar
-            counts={counts}
-            reporting={reporting}
-            totalOutlets={outlets.length}
+        <div className="shrink-0 self-center">
+          <StoryImage
+            article={image}
+            outlet={image && byId.get(image.outletId)}
+            className="h-14 w-24 rounded-md"
+            sizes="96px"
           />
         </div>
       </div>

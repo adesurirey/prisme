@@ -13,7 +13,7 @@ import {
 } from '@prisme/domain';
 import ArticleList from '../../components/ArticleList';
 import BlindspotBadge from '../../components/BlindspotBadge';
-import CoverageBar from '../../components/CoverageBar';
+import CoverageMeta from '../../components/CoverageMeta';
 import LeaningBadge from '../../components/LeaningBadge';
 import PrismTabs from '../../components/PrismTabs';
 import StoryImage from '../../components/StoryImage';
@@ -111,17 +111,24 @@ const description =
         Aujourd’hui
       </a>
     </p>
-    <h1 class="max-w-[36rem] text-[24px] font-semibold leading-snug tracking-[-0.02em]">
+    {story.section && (
+      <p class="mb-1 text-[11px] uppercase tracking-[0.08em] text-muted">
+        {SECTION_LABELS[story.section]}
+      </p>
+    )}
+    <h1 class="text-[24px] font-semibold leading-snug tracking-[-0.02em]">
       {story.title}
     </h1>
-    <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
-      <CoverageBar counts={counts} reporting={reporting} totalOutlets={outlets.length} width={120} />
-      {story.section && (
-        <p class="text-[13px] text-muted">{SECTION_LABELS[story.section]}</p>
-      )}
-      <p class="text-[13px] text-muted">{counted} article{counted > 1 ? 's' : ''}</p>
-      <p class="text-[13px] text-muted">Publié le {builtAt}</p>
-    </div>
+    <p class="mt-4 text-[13px] text-muted">
+      <CoverageMeta
+        counts={counts}
+        reporting={reporting}
+        totalOutlets={outlets.length}
+        articles={counted}
+        barWidth={96}
+      />
+      <span> · Publié le {builtAt}</span>
+    </p>
     {spots.length > 0 && (
       <div class="mt-3 flex flex-wrap gap-2">
         {spots.map((leaning) => <BlindspotBadge leaning={leaning} />)}
