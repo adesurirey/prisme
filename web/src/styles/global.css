@@ -72,6 +72,13 @@
   --font-serif: "Fraunces Variable", Georgia, serif;
 }
 
+/* Reserve scrollbar space on every page so the centered layout
+ * (navbar included) doesn't shift horizontally when navigating
+ * between pages with and without a vertical scrollbar. */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   font-feature-settings: "cv05" 1; /* friendlier Inter lowercase l */
 }
