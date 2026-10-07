@@ -1,13 +1,13 @@
 # Orientations politiques des médias de Prisme
 
-Recherche sourcée derrière le classement Gauche / Centre / Droite des **21 médias** de
+Recherche sourcée derrière le classement Gauche / Centre / Droite des **22 médias** de
 Prisme (issue #2). La version typée de ce document est
 `packages/domain/src/outlets.ts`, importée par le pipeline et le site ; les deux doivent
 rester identiques (les tests du module font respecter les règles de preuve).
 
 - **Méthode et règle de placement** ci-dessous, puis un dossier par média.
 - **Vérifications** (flux RSS, réservations TDM) effectuées le **2026-10-06** avec un
-  User-Agent de navigateur normal. Chiffres ACPM : millésime **2025/2026** pour la presse
+  User-Agent de navigateur normal, et le **2026-10-07** pour Libération (issue #11). Chiffres ACPM : millésime **2025/2026** pour la presse
   (diffusion France payée certifiée), **août 2026** pour les sites (visites mensuelles).
 - Conformément à l'ADR-0001, le Leaning appartient au média, jamais à un article. Les
   notes et citations de ce document sont écrites pour être **publiables telles quelles**
@@ -80,6 +80,7 @@ Une seule règle, appliquée à tous les médias :
 |---|---|---|---|---|---|
 | L'Obs | Gauche | −0,89 (gauche) | 38e magazine, 162 242 ex. | Partiellement payant | non |
 | Le HuffPost | Gauche | −1,00 (gauche) | 33e site, 17,9 M visites | Gratuit | non |
+| Libération | Gauche | −1,08 (gauche) | 5e PQN, 119 943 ex. | Partiellement payant | non |
 | Mediapart | Gauche | −1,63 (extrême gauche) | 257 383 abonnés (fin 2025) | Abonnement | non |
 | L'Humanité | Gauche | −2,41 (extrême gauche) | 7e PQN, 40 996 ex. | Gratuit | non |
 | Le Monde | Centre | −0,71 (centre gauche) | 1er PQN, 564 586 ex. | Partiellement payant | indéterminé (402) |
@@ -106,7 +107,7 @@ hebdomadaires du dimanche, magazine = presse magazine (classements ACPM 2025/202
 
 ---
 
-## Les 21 médias
+## Les 22 médias
 
 ### L'Obs — Gauche
 
@@ -150,6 +151,40 @@ Wikipédia porte sur l'édition américaine du HuffPost.
 titres en continu, sans sélection « à la une ».
 
 **Paywall / TDM.** Gratuit ; pas de `tdmrep.json` (404).
+
+### Libération — Gauche
+
+**Placement.** Bande `left` de FrIdéo → Gauche.
+
+**Désaccords entre sources.** Media Bias/Fact Check note « Left-Center » et Lucide
+« Centre-gauche » ; FrIdéo, dont la fusion de neuf familles de preuves intègre ces
+notations, place Libération en bande « gauche » avec un intervalle (−1,60…−0,56) qui
+exclut zéro. La règle de placement suit FrIdéo ; les deux notations divergentes sont
+publiées. À noter aussi : Acrimed critique le journal depuis la gauche (« quotidien de
+Rothschild », célébration du néolibéralisme) — une contestation qui suppose précisément
+un ancrage à gauche.
+
+**Sources**
+
+1. **FrIdéo : où se situe Libération ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 — <https://frenchnewslab.org/fr/medias/liberation> — « Score −1,08 dans la bande "gauche" (intervalle −1,60…−0,56) : le classement à gauche est soutenu par les données, 7 familles de preuves sur 9, rang 4 sur 30. »
+2. **Libération, journal (article encyclopédique)** — Wikipédia (avec les ouvrages et articles cités en notes), 2026 — <https://fr.wikipedia.org/wiki/Lib%C3%A9ration_(journal)> — « On est le journal de toutes les gauches. Avec un clivage au sein de la rédaction : les plus jeunes sont plutôt LFI, les anciens sont sociaux-démocrates » (Alexandra Schwartzbrod, directrice adjointe de la rédaction, 2023) ; Serge July (2019) : « Sa sensibilité est de gauche ».
+3. **Libération (Paris) – Bias and Credibility** — Media Bias/Fact Check, 2026 — <https://mediabiasfactcheck.com/liberation-paris-bias/> — « Noté "Left-Center" sur la base de la sélection de sujets et de positions éditoriales favorisant modérément la gauche ; fiabilité factuelle notée "High". »
+4. **Libération : orientation politique, propriétaire et fiabilité** — Lucide, 2026 — <https://lucideinfo.fr/medias/liberation> — « Repère éditorial "Centre-gauche", à partir de la ligne éditoriale observée » : le seul désaccord de placement du dossier.
+
+**Audience.** ACPM presse quotidienne nationale 2025/2026 : 5e rang, 119 943 exemplaires
+France payée ; Liberation.fr : 35e rang des sites, 15,9 M de visites (août 2026).
+
+**Flux vérifiés (2026-10-07).** `latest`
+<https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml> — 200, 50 articles,
+~9 h, aucune image. Flux officiel de syndication de la plateforme Arc XP (Washington
+Post), servi sur le domaine de Libération. Les flux `/rss/` historiques restent bloqués
+par DataDome (403, vérifié le 2026-10-06 et le 2026-10-07, issue #11) : c'est ce flux qui
+a débloqué l'entrée de Libération dans l'Édition. 50 articles au plus par fenêtre
+d'environ 9 h ; l'endpoint n'est pas documenté publiquement par Libération et pourrait
+être restreint (voir Limites connues).
+
+**Paywall / TDM.** Partiellement payant ; pas de `tdmrep.json` (404 ; la page répond
+depuis le serveur de Libération malgré DataDome).
 
 ### Mediapart — Gauche
 
@@ -634,14 +669,16 @@ payée.
 
 | Média | Raison (vérifiée le 2026-10-06) |
 |---|---|
-| Libération | **Flux bloqués.** Toutes les URL `liberation.fr/rss/` répondent **403** (protection DataDome), avec un User-Agent de navigateur comme sans, avec et sans en-têtes complètes. Aucun article n'a jamais été collecté par le pipeline. Repli à étudier : flux alternatif officiel ou miroir (issue #11). |
 | Marianne | **Hors périmètre** (les 22 médias de la PRD). Ses flux RSS fonctionnent pourtant (`marianne.net/rss` et `/feed` répondent 200 avec du RSS valide, vérifié trois fois le 2026-10-06) : l'exclusion est un choix de périmètre, pas une exclusion technique (issue #10). |
 | Le Point | **Flux bloqués.** `lepoint.fr/feeds/rss.xml`, `/feed` et `/actualites.rss` répondent **403**. |
 | Les Échos | **Flux bloqués.** `lesechos.fr/rss/*` répond **403** (une, actualités, rubriques). |
 
-Les quatre sont cités ici pour que le lecteur puisse vérifier qu'il s'agit de raisons
+Les trois sont cités ici pour que le lecteur puisse vérifier qu'il s'agit de raisons
 techniques ou de périmètre, jamais de jugements sur leur ligne éditoriale. Leur
-orientation n'est pas recherchée tant qu'ils ne sont pas dans l'Édition.
+orientation n'est pas recherchée tant qu'ils ne sont pas dans l'Édition. (Libération en
+est sortie le 2026-10-07 : le flux de syndication Arc XP, vérifié en même temps que le
+blocage DataDome persistait sur les `/rss/` historiques, a permis son inclusion —
+issue #11.)
 
 ---
 
@@ -658,12 +695,18 @@ orientation n'est pas recherchée tant qu'ils ne sont pas dans l'Édition.
 4. **La perception diffère de la mesure** : TF1 Info est perçu à droite par les enquêtes
    d'audience sans que les autres familles de preuves le confirment ; BFMTV et Le Monde
    font l'objet de descriptions contradictoires. Tout est publié, rien n'est lissé.
-5. **Les chiffres d'audience vieillissent** : ils sont datés (ACPM 2025/2026, août 2026)
+5. **Le flux de Libération est un endpoint de syndication Arc XP**, non documenté
+   publiquement par le journal : 50 articles au plus (~9 h de couverture), aucune image,
+   et il pourrait être restreint ou supprimé sans préavis. Repli étudié (issue #11) :
+   Google News RSS `site:liberation.fr` (articles frais, mais liens redirecteurs
+   `news.google.com`, sans vrais teasers ni images) — inférieur, à n'utiliser que si
+   l'endpoint Arc disparaît.
+6. **Les chiffres d'audience vieillissent** : ils sont datés (ACPM 2025/2026, août 2026)
    et doivent être revus à chaque campagne de mise à jour de la configuration, comme les
    vérifications de flux (`pnpm --filter @prisme/pipeline verify`).
-6. **Les réservations TDM sont informatives** (ADR-0003) : Prisme ne lit que les titres et
+7. **Les réservations TDM sont informatives** (ADR-0003) : Prisme ne lit que les titres et
    chapeaux publiés dans les flux RSS, qu'il ne stocke jamais.
-7. **Le hors-nuit n'est jamais filtré par le choix du flux** : on collecte le flux le plus
+8. **Le hors-nuit n'est jamais filtré par le choix du flux** : on collecte le flux le plus
    complet de chaque média (météo, recettes, séries compris), et la classification de
    l'issue #4 retire le `not_news` avant l'Édition. En attendant #4, ce contenu reste
    visible dans l'Édition : état transitoire assumé, à ne pas publier avant que #4 ne
