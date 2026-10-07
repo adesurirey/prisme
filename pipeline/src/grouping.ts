@@ -13,7 +13,11 @@
  * degrades to one-Article Stories, which self-heal on the next build (they
  * are live Stories the model can merge into). A merge into an existing
  * Story is only allowed when a Jev Membership check says yes (up to 20
- * checks per build); a refused, capped-out or failed check splits.
+ * checks per build); a refused, capped-out or failed check splits. A new
+ * Story proposed by the Grouping model gets the same guard: only its seed
+ * Article joins unconditionally, every further member is checked against
+ * the seed (a thematic mega-Story must not form unchecked) and demoted
+ * Articles split into singletons the next build can re-group.
  */
 import { readdir, readFile } from 'node:fs/promises';
 import type { Article, Section, Story } from '@prisme/domain';
@@ -210,47 +214,78 @@ export async function groupStories(
       if (!assignmentOf.has(a.articleId)) assignmentOf.set(a.articleId, a);
     }
 
+    // Fresh Articles claimed for each new Story, in fresh order: the first
+    // is the seed and joins unconditionally, the rest are checked against it.
+    const keyMembers = new Map<string, Article[]>();
+    for (const article of fresh) {
+      const a = assignmentOf.get(article.id);
+      if (a == null || a.storyId != null) continue;
+      if (a.newStoryKey != null && keyStories.has(a.newStoryKey)) {
+        const list = keyMembers.get(a.newStoryKey) ?? [];
+        list.push(article);
+        keyMembers.set(a.newStoryKey, list);
+      }
+    }
+
     // Membership checks are bounded and deterministic: every merge into an
-    // existing Story is checked — the model's own confidence never bypasses
-    // the check (a generic Story title makes it easy to be confidently
-    // wrong) — sorted by (articleId, storyId), first 20 only, the rest split.
-    const mergePairs = proposal.assignments
-      .filter((a) => a.storyId != null)
-      .map((a) => ({ articleId: a.articleId, storyId: a.storyId! }))
+    // existing Story is checked, and so is every non-seed member of a new
+    // Story — the model's own confidence never bypasses the check (a generic
+    // Story title makes it easy to be confidently wrong). Targets are Story
+    // ids, or `key:<newStoryKey>` for new Stories (checked against the seed
+    // Article, not the proposed title, which may itself be thematic). Sorted
+    // by (articleId, target), first 20 only, the rest split.
+    const mergePairs = [
+      ...proposal.assignments
+        .filter((a) => a.storyId != null)
+        .map((a) => ({ articleId: a.articleId, target: a.storyId! })),
+      ...[...keyMembers.entries()].flatMap(([key, members]) =>
+        members
+          .slice(1)
+          .map((a) => ({ articleId: a.id, target: `key:${key}` })),
+      ),
+    ]
       .sort(
         (x, y) =>
           (x.articleId < y.articleId
             ? -1
             : x.articleId > y.articleId
               ? 1
-              : 0) ||
-          (x.storyId < y.storyId ? -1 : x.storyId > y.storyId ? 1 : 0),
+              : 0) || (x.target < y.target ? -1 : x.target > y.target ? 1 : 0),
       )
       .slice(0, MAX_MEMBERSHIP_CHECKS);
     const verdicts = new Map<string, boolean | null>();
     for (const pair of mergePairs) {
-      const story = byId.get(pair.storyId);
       const article = fresh.find((a) => a.id === pair.articleId);
       let verdict: boolean | null = null;
-      if (story && article && clients.membership) {
-        try {
-          verdict = await clients.membership.belongs(
-            { title: story.title, section: story.section },
-            {
-              headline: article.headline,
-              teaser: teasers.get(article.id) ?? '',
-            },
-          );
-        } catch (reason) {
-          // A thrown check is a failed check: refuse the merge (ADR-0005).
-          console.warn(
-            `Membership check failed: ${pair.articleId} → ${pair.storyId} — ${
-              reason instanceof Error ? reason.message : reason
-            }`,
-          );
+      if (article && clients.membership) {
+        // New-Story checks are anchored on the seed Article: the proposed
+        // title may be generic, the seed headline is the concrete event.
+        const story = pair.target.startsWith('key:')
+          ? {
+              title: keyMembers.get(pair.target.slice(4))![0].headline,
+              section: undefined,
+            }
+          : byId.get(pair.target);
+        if (story) {
+          try {
+            verdict = await clients.membership.belongs(
+              { title: story.title, section: story.section },
+              {
+                headline: article.headline,
+                teaser: teasers.get(article.id) ?? '',
+              },
+            );
+          } catch (reason) {
+            // A thrown check is a failed check: refuse the merge (ADR-0005).
+            console.warn(
+              `Membership check failed: ${pair.articleId} → ${pair.target} — ${
+                reason instanceof Error ? reason.message : reason
+              }`,
+            );
+          }
         }
       }
-      verdicts.set(`${pair.articleId}|${pair.storyId}`, verdict);
+      verdicts.set(`${pair.articleId}|${pair.target}`, verdict);
     }
 
     for (const article of fresh) {
@@ -277,9 +312,22 @@ export async function groupStories(
         assignment.newStoryKey != null
           ? keyStories.get(assignment.newStoryKey)
           : undefined;
-      // The model created this Story for the Article — no Membership check.
-      if (story != null) merge(story, article);
-      else split(article);
+      const newStoryKey = assignment.newStoryKey;
+      if (story == null || newStoryKey == null) {
+        split(article);
+        continue;
+      }
+      // The seed joins its model-proposed Story unconditionally; every
+      // further member must pass the Membership check against the seed.
+      const members = keyMembers.get(newStoryKey)!;
+      if (
+        members[0].id === article.id ||
+        verdicts.get(`${article.id}|key:${newStoryKey}`) === true
+      ) {
+        merge(story, article);
+      } else {
+        split(article);
+      }
     }
 
     // Key Stories no Article claimed are dropped before they ever publish.
