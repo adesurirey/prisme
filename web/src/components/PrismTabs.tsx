@@ -24,13 +24,13 @@ export default function PrismTabs(props: {
   ];
 
   /** French articles for the "Non couvert par …" line (issue #7 wording). */
-const LEANING_ARTICLES: Record<Leaning, string> = {
-  gauche: 'la gauche',
-  centre: 'le centre',
-  droite: 'la droite',
-};
+  const LEANING_ARTICLES: Record<Leaning, string> = {
+    gauche: 'la gauche',
+    centre: 'le centre',
+    droite: 'la droite',
+  };
 
-const bullets = (leaning: Leaning): string[] | undefined => {
+  const bullets = (leaning: Leaning): string[] | undefined => {
     const stored = summaries?.[leaning];
     return stored && stored.length > 0 ? stored : undefined;
   };

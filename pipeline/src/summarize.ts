@@ -9,7 +9,7 @@
  * (ADR-0005: frozen files are never edited); unchanged Stories make no call.
  */
 import type { Leaning, Outlet, Section, Story, StorySummaries } from '@prisme/domain';
-import { coverageCounts } from '@prisme/domain';
+import { SECTION_LABELS, coverageCounts } from '@prisme/domain';
 import { RETRYABLE_STATUS } from './http.ts';
 
 /** Prompt version, for traceability in Story files (ADR-0006). Bump on any prompt/schema change. */
@@ -105,18 +105,6 @@ const SUMMARIES_SCHEMA = {
   required: ['summaries', 'differences'],
 } as const;
 
-const SECTION_LABELS_FR: Record<Section, string> = {
-  politics: 'Politique',
-  world: 'International',
-  economy: 'Économie',
-  society: 'Société',
-  sport: 'Sport',
-  culture: 'Culture',
-  science: 'Sciences/Tech',
-  misc: 'Faits divers',
-  other: 'Autre',
-};
-
 const LEANING_LABELS_FR: Record<Leaning, string> = {
   gauche: 'gauche',
   centre: 'centre',
@@ -130,7 +118,7 @@ const LEANING_LABELS_FR: Record<Leaning, string> = {
  */
 export function summariesPrompt(input: SummaryInput): string {
   const { story, previousSummaries, previousDifferences, newArticles, coveredLeanings } = input;
-  const section = story.section ? ` (${SECTION_LABELS_FR[story.section]})` : '';
+  const section = story.section ? ` (${SECTION_LABELS[story.section]})` : '';
   const lines: string[] = [
     `Version du prompt : ${SUMMARIES_PROMPT_VERSION}.`,
     '',
@@ -158,6 +146,7 @@ export function summariesPrompt(input: SummaryInput): string {
       const teaser = a.teaser ? ` — ${a.teaser}` : '';
       const tags = [
         a.outletName,
+        LEANING_LABELS_FR[a.outletLeaning],
         a.opinion ? 'tribune' : null,
         a.frontPage ? 'à la une' : null,
       ]

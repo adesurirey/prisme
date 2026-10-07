@@ -244,4 +244,15 @@ describe('summariesPrompt', () => {
     });
     expect(prompt).toContain('ne rien inventer');
   });
+
+  it('tags each Article with its Outlet and Leaning, so per-Leaning Summaries are attributable', () => {
+    const prompt = summariesPrompt({
+      story: { id: 's1', title: 'Sujet', section: undefined },
+      previousSummaries: undefined,
+      previousDifferences: undefined,
+      newArticles: [{ headline: 'T', teaser: 'Tea', outletName: 'Le Monde', outletLeaning: 'centre', opinion: false, frontPage: true }],
+      coveredLeanings: ['centre'],
+    });
+    expect(prompt).toContain('[Le Monde, centre, à la une] T — Tea');
+  });
 });
