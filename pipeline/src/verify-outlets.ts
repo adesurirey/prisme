@@ -50,7 +50,7 @@ export async function reportFeed(
       signal: AbortSignal.timeout(20_000),
     });
     if (!response.ok) return unreadReport(outletId, kind, url, response.status);
-    const items = parseFeed(await response.text());
+    const { items } = parseFeed(await response.text());
     const times = items
       .map((item) => Date.parse(item.publishedAt))
       .filter((time) => Number.isFinite(time) && time > 0)

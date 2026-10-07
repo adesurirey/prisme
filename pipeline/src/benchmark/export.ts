@@ -64,7 +64,7 @@ async function main(): Promise<void> {
       await Promise.all(
         feeds.map(async (feed) => {
           try {
-            for (const item of parseFeed(await fetchFeed(feed))) {
+            for (const item of parseFeed(await fetchFeed(feed)).items) {
               if (!item.headline || !item.url) continue;
               const id = articleId(item.url);
               if (seen.has(id)) continue;
