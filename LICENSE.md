@@ -6,7 +6,7 @@ FSL-1.1-MIT
 
 ## Notice
 
-Copyright 2026 Adesurirey
+Copyright 2026 Arnaud de Surirey
 
 ## Terms and Conditions
 
