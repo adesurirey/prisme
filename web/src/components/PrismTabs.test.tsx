@@ -38,21 +38,43 @@ describe('PrismTabs', () => {
     expect(screen.queryByText('Lu à droite')).toBeNull();
   });
 
+  it('defaults to Centre when it has a summary, else the first covered Leaning', () => {
+    const { unmount: unmountA } = render(<PrismTabs {...COVERED} />);
+    const centrePanelA = screen
+      .getByText('Lu au centre')
+      .closest('[role="tabpanel"]')!;
+    expect(centrePanelA.hasAttribute('hidden')).toBe(false);
+    unmountA();
+
+    // Centre covered but without a summary: falls back to first covered.
+    render(
+      <PrismTabs
+        counts={{ gauche: 2, centre: 1, droite: 3 }}
+        summaries={{ gauche: ['Lu à gauche'], droite: ['Lu à droite'] }}
+        differences="X."
+      />,
+    );
+    const gauchePanel = screen
+      .getByText('Lu à gauche')
+      .closest('[role="tabpanel"]')!;
+    expect(gauchePanel.hasAttribute('hidden')).toBe(false);
+  });
+
   it('switches the visible panel on tab click and only that panel', () => {
     render(<PrismTabs {...COVERED} />);
     const droiteTab = screen.getByRole('tab', { name: 'Droite' });
-    const gauchePanel = screen
-      .getByText('Lu à gauche')
+    const centrePanel = screen
+      .getByText('Lu au centre')
       .closest('[role="tabpanel"]')!;
     const droitePanel = screen
       .getByText('Lu à droite')
       .closest('[role="tabpanel"]')!;
 
-    expect(gauchePanel.hasAttribute('hidden')).toBe(false);
+    expect(centrePanel.hasAttribute('hidden')).toBe(false);
     expect(droitePanel.hasAttribute('hidden')).toBe(true);
 
     fireEvent.click(droiteTab);
-    expect(gauchePanel.hasAttribute('hidden')).toBe(true);
+    expect(centrePanel.hasAttribute('hidden')).toBe(true);
     expect(droitePanel.hasAttribute('hidden')).toBe(false);
     expect(droiteTab.getAttribute('aria-selected')).toBe('true');
   });

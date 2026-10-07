@@ -14,9 +14,13 @@ export default function PrismTabs(props: {
   differences: string | undefined;
 }) {
   const { counts, summaries, differences } = props;
-  // Default tab: the first Leaning that covers the Story, else Gauche.
-  const firstCovered = leaningOrder.find((l) => counts[l] > 0) ?? 'gauche';
-  const [active, setActive] = useState<Leaning | 'differences'>(firstCovered);
+  // Default tab: Centre when it has a summary, else the first Leaning that
+  // covers the Story, else Gauche.
+  const hasSummary = (l: Leaning): boolean => (summaries?.[l]?.length ?? 0) > 0;
+  const defaultTab = hasSummary('centre')
+    ? 'centre'
+    : (leaningOrder.find((l) => counts[l] > 0) ?? 'gauche');
+  const [active, setActive] = useState<Leaning | 'differences'>(defaultTab);
 
   const tabs: { key: Leaning | 'differences'; label: string }[] = [
     ...leaningOrder.map((leaning) => ({
@@ -71,7 +75,7 @@ export default function PrismTabs(props: {
           <div key={key} role="tabpanel" hidden={!selected} className="pt-4">
             {key === 'differences' ? (
               differences ? (
-                <p className="max-w-[36rem] text-[14px] leading-relaxed text-ink">
+                <p className="text-[14px] leading-relaxed text-ink">
                   {differences}
                 </p>
               ) : (
@@ -84,7 +88,7 @@ export default function PrismTabs(props: {
                 Non couvert par {LEANING_ARTICLES[key]}
               </p>
             ) : bullets(key) ? (
-              <ul className="flex max-w-[36rem] list-disc flex-col gap-1.5 pl-5 text-[14px] leading-relaxed text-ink">
+              <ul className="flex list-disc flex-col gap-1.5 pl-5 text-[14px] leading-relaxed text-ink">
                 {bullets(key)!.map((bullet) => (
                   <li key={bullet}>{bullet}</li>
                 ))}
