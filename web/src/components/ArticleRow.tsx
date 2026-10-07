@@ -1,12 +1,14 @@
 import type { Article, Outlet } from '@prisme/domain';
 import { LEANING_LABELS } from '@prisme/domain';
+import { formatArticleDate } from '../article-date';
 import PaywallBadge from './PaywallBadge';
 
 /**
  * One Article's meta line: the Leaning as a bare colored dot (the group
  * heading already names the Leaning — the dot only keeps the color coding),
- * the Outlet name, the paywall badge and the "Lire sur" link — muted, with a
- * hairline underline and a small ↗ that brighten on hover.
+ * the Outlet name, the paywall badge, the build-time Paris date (issue #27) and
+ * the "Lire sur" link — muted, with a hairline underline and a small ↗ that
+ * brighten on hover.
  *
  * When the Outlet is unknown (missing from the Outlet config) nothing is
  * inferred: the raw outlet id is shown without a dot rather than a guessed
@@ -20,6 +22,7 @@ export default function ArticleRow({
   outlet?: Outlet;
 }) {
   const name = outlet?.name ?? article.outletId;
+  const date = formatArticleDate(article.publishedAt);
   return (
     <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
       {outlet && (
@@ -33,6 +36,7 @@ export default function ArticleRow({
       )}
       <span className="text-[14px] font-medium">{name}</span>
       {outlet && <PaywallBadge paywall={outlet.paywall} />}
+      {date && <span className="text-[13px] text-faint">{date}</span>}
       <a
         href={article.url}
         rel="noopener noreferrer"
