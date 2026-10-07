@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ArticleRow from '../../components/ArticleRow';
+import PrismTabs from '../../components/PrismTabs';
 import BlindspotBadge from '../../components/BlindspotBadge';
 import CoverageBar from '../../components/CoverageBar';
 import LeaningBadge from '../../components/LeaningBadge';
@@ -104,6 +105,22 @@ const description =
       />
       {imageOutlet && <figcaption class="mt-2 text-[13px] text-faint">Photo : {imageOutlet.name}</figcaption>}
     </figure>
+
+    {
+      // The Prism tabs (issue #7): one island, all four panels prerendered so
+      // they can be indexed. Rendered only when Summaries exist — Stories that
+      // froze before issue #7 (or lost their last call) keep their page as is.
+      (story.summaries || story.differences) && (
+        <section class="mt-10">
+          <PrismTabs
+            client:visible
+            counts={counts}
+            summaries={story.summaries}
+            differences={story.differences}
+          />
+        </section>
+      )
+    }
 
     {
       visible.map(({ leaning, articles }) => (
