@@ -9,7 +9,8 @@
     "benchmark:grade": "tsx src/benchmark/grade.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "verify": "tsx src/verify-outlets.ts"
+    "verify": "tsx src/verify-outlets.ts",
+    "repair": "tsx src/repair.ts"
   },
   "dependencies": {
     "@prisme/domain": "workspace:*",
