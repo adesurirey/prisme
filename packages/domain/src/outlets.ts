@@ -101,7 +101,7 @@ const CHECKED = '2026-10-06';
 /** Issue #11: Libération's Arc XP outbound feed verified a day after the rest. */
 const CHECKED_11 = '2026-10-07';
 
-/** The 22 Outlets of the Edition, grouped by Leaning. */
+/** The Outlets of the Edition, grouped by Leaning. The perimeter is open (issue #10). */
 export const outlets: OutletConfig[] = [
   // ——— Gauche ———
   {
@@ -455,6 +455,68 @@ export const outlets: OutletConfig[] = [
       reserved: null,
       checkedAt: CHECKED,
       note: "Indéterminé : lemonde.fr/.well-known/tdmrep.json répond 402 « Accès restreint » ; aucune réservation n'a pu être lue.",
+    },
+  },
+  {
+    id: 'marianne',
+    name: 'Marianne',
+    leaning: 'centre',
+    paywall: 'partial',
+    site: 'https://www.marianne.net',
+    feeds: {
+      latest: 'https://www.marianne.net/rss.xml',
+    },
+    leaningSources: [
+      {
+        title:
+          "FrIdéo : où se situe Marianne ? (échelle d'idéologie de 30 médias français)",
+        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
+        date: '2026',
+        url: 'https://frenchnewslab.org/fr/medias/marianne',
+        takeaway:
+          "Score −0,65 dans la bande « centre gauche » (intervalle −1,24…−0,06), 6 familles de preuves : l'un des désaccords les plus nets du panel, la propriété le plaçant à droite du centre quand les familles réseau et contenu le placent à gauche.",
+      },
+      {
+        title:
+          'La saga de « Marianne », hebdomadaire « anti-pensée unique », ses convulsions et son lent glissement conservateur',
+        author: 'Le Monde',
+        date: '2024-06-21',
+        url: 'https://www.lemonde.fr/economie/article/2024/06/21/la-saga-de-marianne-hebdo-anti-pensee-unique-ses-convulsions-et-son-lent-glissement-conservateur_6242147_3234.html',
+        takeaway:
+          "Décrit comme un « lent glissement conservateur » : la ligne du magazine a dérivé à droite au fil des changements d'actionnariat et de direction, sans se résoudre à un ancrage net.",
+      },
+      {
+        title: 'Marianne (article encyclopédique)',
+        author: 'Wikipédia',
+        date: '2026',
+        url: 'https://fr.wikipedia.org/wiki/Marianne_(magazine)',
+        takeaway:
+          "Perçu comme de gauche à sa création (1997), le magazine s'engage au cours des années 2010 vers une ligne éditoriale souverainiste ; diffusion 127 872 exemplaires (2024).",
+      },
+    ],
+    leaningNote:
+      "Placé à Centre, avec désaccord documenté : FrIdéo le range dans « centre gauche » (intervalle excluant zéro), mais la propriété (Křetínský) et la période récente sont décrites comme un glissement à droite — Le Monde parle d'un « lent glissement conservateur », Wikipédia d'un engagement souverainiste depuis les années 2010. La mesure agrégée (réseau de liens, contenu lexical 2024-2025) reste à gauche du centre : notre règle place la bande dans Centre, et ce glissement restera à suivre à chaque campagne de mise à jour de la configuration.",
+    readership: {
+      evidence:
+        'ACPM magazines 2025/2026 : 100 527 exemplaires France payée ; marianne.net : 4,8 M de visites par mois.',
+      url: 'https://www.acpm.fr/les-membres/support/4028424417-1-1/marianne-1',
+    },
+    feedChecks: [
+      {
+        kind: 'latest',
+        url: 'https://www.marianne.net/rss.xml',
+        checkedAt: '2026-10-07',
+        status: 200,
+        items: 20,
+        covers: '~32 h',
+        images: 'all',
+        note: 'Flux général, toutes rubriques : les rubriques sont tranchées par la classification (#4), pas par le choix du flux. Fragile aux robots : `marianne.net/rss` répond 403 (page HTML de blocage) sans en-têtes de navigateur complets, puis 301 vers rss.xml — à surveiller à chaque vérification.',
+      },
+    ],
+    tdm: {
+      reserved: true,
+      checkedAt: '2026-10-07',
+      note: 'Réservation publiée (`tdm-reservation: 1` pour /) avec une politique `https://www.marianne.net/tdm-policy.json`.',
     },
   },
   {
@@ -1420,13 +1482,6 @@ export const outlets: OutletConfig[] = [
 
 /** Outlets kept out of the Edition, with the reason and the date checked. */
 export const excludedOutlets: ExcludedOutlet[] = [
-  {
-    id: 'marianne',
-    name: 'Marianne',
-    reason:
-      "Hors périmètre du prototype (les 22 médias de la PRD). Ses flux RSS fonctionnent pourtant (https://www.marianne.net/rss et /feed répondent 200 avec du RSS valide, vérifié le 2026-10-06) : l'exclusion est un choix de périmètre, pas une exclusion technique (issue #10).",
-    checkedAt: CHECKED,
-  },
   {
     id: 'le-point',
     name: 'Le Point',

@@ -1,13 +1,21 @@
 # Orientations politiques des médias de Prisme
 
-Recherche sourcée derrière le classement Gauche / Centre / Droite des **22 médias** de
-Prisme (issue #2). La version typée de ce document est
+Recherche sourcée derrière le classement Gauche / Centre / Droite des médias de
+Prisme (issue #2). Le périmètre est **ouvert** (issue #10) : un média entre dans
+l'Édition quand les trois critères sont réunis —
+
+1. une diffusion ou audience significative (ACPM ou équivalent certifié) ;
+2. un flux RSS fonctionnel, vérifié avec un User-Agent de navigateur normal ;
+3. un Leaning sourcé selon la méthode ci-dessous (≥ 2 sources citées, désaccords écrits).
+
+À ce jour, **23 médias** y répondent. La version typée de ce document est
 `packages/domain/src/outlets.ts`, importée par le pipeline et le site ; les deux doivent
 rester identiques (les tests du module font respecter les règles de preuve).
 
 - **Méthode et règle de placement** ci-dessous, puis un dossier par média.
 - **Vérifications** (flux RSS, réservations TDM) effectuées le **2026-10-06** avec un
-  User-Agent de navigateur normal, et le **2026-10-07** pour Libération (issue #11). Chiffres ACPM : millésime **2025/2026** pour la presse
+  User-Agent de navigateur normal, et le **2026-10-07** pour Libération (issue #11) et
+  Marianne (issue #10). Chiffres ACPM : millésime **2025/2026** pour la presse
   (diffusion France payée certifiée), **août 2026** pour les sites (visites mensuelles).
 - Conformément à l'ADR-0001, le Leaning appartient au média, jamais à un article. Les
   notes et citations de ce document sont écrites pour être **publiables telles quelles**
@@ -84,6 +92,7 @@ Une seule règle, appliquée à tous les médias :
 | Mediapart | Gauche | −1,63 (extrême gauche) | 257 383 abonnés (fin 2025) | Abonnement | non |
 | L'Humanité | Gauche | −2,41 (extrême gauche) | 7e PQN, 40 996 ex. | Gratuit | non |
 | Le Monde | Centre | −0,71 (centre gauche) | 1er PQN, 564 586 ex. | Partiellement payant | indéterminé (402) |
+| Marianne | Centre | −0,65 (centre gauche) | magazine, 100 527 ex. | Partiellement payant | **oui** |
 | franceinfo | Centre | −0,41 (centre gauche) | 3e site, 136,5 M visites | Gratuit | **oui** |
 | Ouest-France | Centre | −0,16 (centre) | 1er PQR, 580 981 ex. | Partiellement payant | **oui** |
 | BFMTV | Centre | +0,07 (centre) | 5e site, 118,7 M visites | Gratuit | indéterminé (403) |
@@ -107,7 +116,7 @@ hebdomadaires du dimanche, magazine = presse magazine (classements ACPM 2025/202
 
 ---
 
-## Les 22 médias
+## Les 23 médias
 
 ### L'Obs — Gauche
 
@@ -259,6 +268,38 @@ articles, ~15 h, images partout ; `latest` <https://www.lemonde.fr/rss/en_contin
 
 **Paywall / TDM.** Partiellement payant ; réservation TDM **indéterminée** :
 `lemonde.fr/.well-known/tdmrep.json` répond 402 « Accès restreint ».
+
+### Marianne — Centre
+
+**Placement.** Bande `center-left` de FrIdéo → **Centre**.
+
+**Désaccords entre sources.** L'un des désaccords les plus nets du panel FrIdéo : la
+famille « propriété » (Daniel Křetínský) place Marianne à droite du centre, quand les
+familles « réseau de liens » et
+« contenu » la placent à gauche. Les sources descriptives vont dans le même sens : Le
+Monde décrit un « lent glissement conservateur », Wikipédia un engagement souverainiste
+depuis les années 2010. La mesure agrégée (intervalle excluant zéro) reste pourtant à
+gauche du centre ; notre règle de placement range la bande `center-left` dans Centre. Ce
+glissement restera à suivre à chaque campagne de mise à jour de la configuration — c'est
+le miroir du cas du JDD : là, la mesure rattrapait le récit ; ici, elle ne l'a pas encore
+rattrapé.
+
+**Sources**
+
+1. **FrIdéo : où se situe Marianne ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 — <https://frenchnewslab.org/fr/medias/marianne> — « Score −0,65 dans la bande "centre gauche" (intervalle −1,24…−0,06), 6 familles de preuves ; la propriété le place à droite du centre, les familles réseau et contenu à gauche. »
+2. **La saga de « Marianne », hebdomadaire « anti-pensée unique », ses convulsions et son lent glissement conservateur** — Le Monde, 2024-06-21 — <https://www.lemonde.fr/economie/article/2024/06/21/la-saga-de-marianne-hebdo-anti-pensee-unique-ses-convulsions-et-son-lent-glissement-conservateur_6242147_3234.html> — La ligne du magazine a dérivé à droite au fil des changements d'actionnariat et de direction, sans s'ancrer nettement.
+3. **Marianne (article encyclopédique)** — Wikipédia, 2026 — <https://fr.wikipedia.org/wiki/Marianne_(magazine)> — Perçu comme de gauche à sa création (1997), le magazine s'engage au cours des années 2010 vers une ligne souverainiste ; diffusion 127 872 exemplaires (2024).
+
+**Audience.** ACPM magazines 2025/2026 : 100 527 exemplaires France payée ; marianne.net :
+4,8 M de visites par mois.
+
+**Flux vérifiés (2026-10-07).** `latest` <https://www.marianne.net/rss.xml> — 200, 20
+articles, ~32 h, images partout (enclosures). Fragile aux robots : `marianne.net/rss`
+répond 403 (page HTML de blocage) sans en-têtes de navigateur complets, puis 301 vers
+`rss.xml` — à surveiller à chaque vérification.
+
+**Paywall / TDM.** Partiellement payant ; **réservation TDM publiée** (`tdm-reservation:
+1` pour `/`, avec une politique `tdm-policy.json`).
 
 ### franceinfo — Centre
 
@@ -672,16 +713,15 @@ payée.
 
 | Média | Raison (vérifiée le 2026-10-06) |
 |---|---|
-| Marianne | **Hors périmètre** (les 22 médias de la PRD). Ses flux RSS fonctionnent pourtant (`marianne.net/rss` et `/feed` répondent 200 avec du RSS valide, vérifié trois fois le 2026-10-06) : l'exclusion est un choix de périmètre, pas une exclusion technique (issue #10). |
 | Le Point | **Flux bloqués.** `lepoint.fr/feeds/rss.xml`, `/feed` et `/actualites.rss` répondent **403**. |
 | Les Échos | **Flux bloqués.** `lesechos.fr/rss/*` répond **403** (une, actualités, rubriques). |
 
-Les trois sont cités ici pour que le lecteur puisse vérifier qu'il s'agit de raisons
-techniques ou de périmètre, jamais de jugements sur leur ligne éditoriale. Leur
-orientation n'est pas recherchée tant qu'ils ne sont pas dans l'Édition. (Libération en
-est sortie le 2026-10-07 : le flux de syndication Arc XP, vérifié en même temps que le
-blocage DataDome persistait sur les `/rss/` historiques, a permis son inclusion —
-issue #11.)
+Les deux sont cités ici pour que le lecteur puisse vérifier qu'il s'agit de raisons
+techniques, jamais de jugements sur leur ligne éditoriale. Leur orientation est
+recherchée comme celle des autres, et leur dossier sera ajouté le jour où leurs flux
+redeviennent accessibles. (Libération en est sortie le 2026-10-07 : le flux de
+syndication Arc XP, vérifié en même temps que le blocage DataDome persistait sur les
+`/rss/` historiques, a permis son inclusion — issue #11.)
 
 ---
 
