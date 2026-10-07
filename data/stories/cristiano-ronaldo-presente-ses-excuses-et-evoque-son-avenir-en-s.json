@@ -23,7 +23,7 @@
       "url": "https://www.tf1info.fr/sport/football-je-presente-mes-excuses-cristiano-ronaldo-fait-son-mea-culpa-et-ouvre-la-porte-a-son-retour-en-selection-2468437.html",
       "publishedAt": "2026-10-06T21:41:05.000Z",
       "imageUrl": "https://photos.tf1info.fr/images/1024/683/cristiano-ronaldo-portugal-24-septembre-2026-f58316-0@1x.jpeg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -35,7 +35,7 @@
       "url": "https://www.cnews.fr/sport/2026-10-06/football-apres-avoir-claque-la-porte-de-la-selection-cristiano-ronaldo-presente",
       "publishedAt": "2026-10-06T21:29:05.000Z",
       "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-09-27t192602z_716918661_rc2urnatcob4_rtrmadp_3_soccer-uefanations-nor-por-taille1200_6ac55a7f7fd99.jpg?h=f692311e&itok=ZHxuf3d6",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -47,7 +47,7 @@
       "url": "https://www.franceinfo.fr/sports/foot/la-responsabilite-est-exclusivement-la-mienne-cristiano-ronaldo-s-excuse-pour-son-comportement-et-ouvre-la-porte-a-un-retour-en-selection-du-portugal_8225812.html#xtor=RSS-3-[lestitres]",
       "publishedAt": "2026-10-06T20:50:24.000Z",
       "imageUrl": "https://www.franceinfo.fr/pictures/kU2n9Atdp_3ZKw1zFreJK7loodg/0x53:1024x629/432x243/filters:format(jpg)/2026/10/06/6ac55e862cbc0291512339.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -59,7 +59,7 @@
       "url": "https://www.france24.com/fr/sports/20261006-cristiano-ronaldo-s-excuse-et-ouvre-la-porte-%C3%A0-un-retour-en-s%C3%A9lection-portugaise",
       "publishedAt": "2026-10-06T20:32:59.000Z",
       "imageUrl": "https://s.france24.com/media/display/48ecc248-bd3c-11f1-95ef-ddce071186a9/w:1024/p:16x9/cr7-1.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -82,7 +82,7 @@
       "url": "https://www.europe1.fr/sport/croyez-moi-cest-la-pure-verite-cristiano-ronaldo-sort-du-silence-et-revele-les-raisons-de-son-clash-avec-le-selectionneur-portugais-1127609?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
       "publishedAt": "2026-10-06T19:58:00.000Z",
       "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/06/21/068_aa_25092026_2965972_1_6ac552ce45b5d.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -99,5 +99,20 @@
       "section": "sport"
     }
   ],
-  "section": "sport"
+  "section": "sport",
+  "summaries": {
+    "centre": [
+      "Le footballeur portugais a exprimé des regrets suite à son départ conflictuel du rassemblement national.",
+      "Il assume l'entièreté de la responsabilité de cet incident survenu avec l'encadrement technique.",
+      "L'attaquant se montre disposé à reporter le maillot de l'équipe nationale à l'avenir."
+    ],
+    "droite": [
+      "Le joueur a formulé des regrets publics concernant son départ précipité du groupe portugais.",
+      "Il a tenu à justifier son geste en pointant un manque de parole de la part du sélectionneur.",
+      "Ses déclarations détaillent les motifs profonds de la discorde avec l'encadrement."
+    ]
+  },
+  "differences": "Les médias centristes insistent principalement sur la démarche de contrition du joueur et sa volonté affichée de réintégrer l'équipe nationale, en adoptant un angle consensuel. En revanche, les journaux de droite accordent davantage d'espace à la défense de Cristiano Ronaldo et à ses accusations directes contre le sélectionneur, à l'instar du Figaro qui met en avant le reproche d'un engagement non tenu.",
+  "promptVersion": "sum-1",
+  "summarizedArticleCount": 8
 }

@@ -11,7 +11,7 @@
       "url": "https://www.lefigaro.fr/culture/eva-marie-saint-star-de-la-mort-aux-trousses-est-morte-a-102-ans-20261007",
       "publishedAt": "2026-10-06T23:15:23.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/2000x3000_crop/2026/10/07/56c53ca50e4cceb471ccff0cb5cc671574b39b3a12b4abba4b13587f56ccd6ad.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "culture",
       "everFrontPage": true
@@ -29,5 +29,19 @@
       "everFrontPage": true
     }
   ],
-  "section": "culture"
+  "section": "culture",
+  "summaries": {
+    "centre": [
+      "La diffusion du septième épisode de l'émission télévisée de survie animée par Denis Brogniart s'est déroulée mardi soir.",
+      "La phase cruciale de la réunification a introduit des règles exceptionnelles pour les candidats en lice.",
+      "Un participant a dû abandonner l'aventure pour des raisons strictement médicales au cours de cet épisode."
+    ],
+    "droite": [
+      "La célèbre comédienne américaine connue pour son rôle dans un grand classique du cinéma est décédée.",
+      "La disparition de l'artiste survient à l'âge vénérable de cent deux ans."
+    ]
+  },
+  "differences": "Le traitement des tendances met en évidence une divergence totale de sujets : la droite se consacre à l'actualité culturelle et nécrologique internationale avec la disparition d'une actrice centenaire, tandis que le centre traite d'un divertissement télévisuel national de première partie de soirée.",
+  "promptVersion": "sum-1",
+  "summarizedArticleCount": 2
 }

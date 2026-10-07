@@ -5,13 +5,25 @@
   "createdAt": "2026-10-06T23:47:47.083Z",
   "articles": [
     {
+      "id": "1fd8d8ace9d3",
+      "outletId": "lobs",
+      "headline": "« Le système va tout faire… » La sale semaine de Marine Le Pen pour sauver le soldat Bardella",
+      "url": "https://www.nouvelobs.com/politique/20261004.OBS118876/le-systeme-va-tout-faire-la-sale-semaine-de-marine-le-pen-pour-sauver-le-soldat-bardella.html",
+      "publishedAt": "2026-10-07T08:07:46.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/10/04/0/0/5184/3456/0/0/60/0/963968d_upload-1-w7skxuuf6s3m-080-hl-bohier-3311222.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "d681490f9fdf",
       "outletId": "le-monde",
       "headline": "Ecrits antisémites : l’affaire Jordan Bardella plombe la séquence budgétaire du RN",
       "url": "https://www.lemonde.fr/politique/article/2026/10/06/ecrits-antisemites-l-affaire-jordan-bardella-plombe-la-sequence-budgetaire-du-rn_6789091_823448.html",
       "publishedAt": "2026-10-06T18:16:26.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/06/1000/0/6000/3000/644/322/60/0/e84f176_upload-1-kjuyqmsrsfqt-cbi1340019.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -35,7 +47,7 @@
       "url": "https://www.lefigaro.fr/actualite-france/pourquoi-l-affaire-bardella-ne-bouleverse-pas-les-clivages-chez-les-francais-juifs-20261006",
       "publishedAt": "2026-10-06T16:38:47.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1998_crop/2026/10/06/6730661c937ebbae259cf6a855bc2c1bf426c5a53e88c3c09aee8ebee3921c88.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -59,11 +71,29 @@
       "url": "https://www.lefigaro.fr/actualite-france/yonathan-arfi-president-du-crif-denoncer-un-antisemitisme-ne-servira-jamais-a-en-exonerer-un-autre-20261006",
       "publishedAt": "2026-10-06T13:48:58.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/06/9c89328cca5aaa834ba0bbca5c03b99035fcf5e7163c48257687b845c195e45a.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
     }
   ],
-  "section": "politics"
+  "section": "politics",
+  "summaries": {
+    "gauche": [
+      "Le dirigeant du Rassemblement national fait face à des révélations le mettant en cause pour la publication passée de propos antisémites.",
+      "La direction du parti apporte un soutien indéfectible au président mis en cause, fragilisant la stratégie de normalisation politique.",
+      "Une défense fondée sur la mise en cause d'un témoin extérieur est qualifiée de manipulée par les journalistes enquêteurs.",
+      "La séquence éclipsée est poursuivie par une communication axée sur les questions économiques malgré les accusations."
+    ],
+    "centre": [
+      "Les révélations concernant les écrits passés perturbent la stratégie parlementaire et budgétaire de la formation politique."
+    ],
+    "droite": [
+      "L'impact de la polémique sur la communauté concernée reste mesuré selon l'analyse de l'actualité.",
+      "Les autorités représentatives rappellent que la dénonciation de l'antisémitisme ne doit souffrir d'aucune instrumentalisation comparative."
+    ]
+  },
+  "differences": "La gauche met l'accent sur la gravité des accusations et la stratégie de défense jugée mensongère du président du parti, à l'image de Mediapart. Le centre souligne surtout l'impact tactique de l'affaire sur le calendrier politique du mouvement, tandis que la droite, par la voix du Figaro, recentre le débat sur la perception au sein de la communauté juive et l'avis du Crif.",
+  "promptVersion": "sum-1",
+  "summarizedArticleCount": 6
 }

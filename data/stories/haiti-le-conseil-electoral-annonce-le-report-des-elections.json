@@ -5,6 +5,18 @@
   "createdAt": "2026-10-06T22:04:02.659Z",
   "articles": [
     {
+      "id": "0dca39595f9b",
+      "outletId": "20-minutes",
+      "headline": "Rongé par la violence des gangs, Haïti reporte encore sa présidentielle",
+      "url": "https://www.20minutes.fr/monde/4252009-20261007-ronge-violence-gangs-haiti-reporte-encore-presidentielle?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-07T01:41:59.000Z",
+      "imageUrl": "https://img.20mn.fr/f9pmoO71TJCcOqr59f949Ck/1200x768_19-fevrier-2026-port-au-prince-haiti-des-membres-du-gang-vivre-ensemble-montrent-leurs-fusils-automatiques-dans-les-quartiers-de-port-au-prince-a-la-saline-et-bel-air-territoires-controles-par-le-gang-ou-les-familles-continuent-de-vivre-les-affrontements-reguliers-avec-les-forces-de-l-ordre-causent-des-degats-et-des-victimes-importants-en-2025-6-000-personnes-auraient-perdu-la-vie-dans-la-guerre-civile-qui-fait-rage-dans-ce-pays-des-caraibes-image-de-credit-david-allignon-zuma-press-wire-20260219-035-a252-017-ruaridh-stewart-2604091917",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "d4410eda63a2",
       "outletId": "rfi",
       "headline": "Haïti: le Conseil électoral annonce le report des élections",
@@ -16,5 +28,16 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "summaries": {
+    "centre": [
+      "Le Conseil électoral haïtien a officialisé un nouveau report du scrutin présidentiel.",
+      "Le pays subit une situation chaotique marquée par l'omniprésence de la violence criminelle.",
+      "L'absence de consultations démocratiques durables perdure depuis l'année 2016.",
+      "L'assassinat du chef de l'État survenu en 2021 n'a toujours pas connu de succession institutionnelle."
+    ]
+  },
+  "differences": "La couverture de l'actualité haïtienne est assurée exclusivement par la tendance centriste, ce qui ne permet pas d'établir de comparaison entre différents points de vue sur le report du scrutin.",
+  "promptVersion": "sum-1",
+  "summarizedArticleCount": 2
 }
