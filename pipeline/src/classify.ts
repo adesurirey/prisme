@@ -63,7 +63,7 @@ export async function saveCache(
   path: URL,
 ): Promise<void> {
   await mkdir(dirname(path.pathname), { recursive: true });
-  await writeFile(path, JSON.stringify(cache, null, 2) + '\n');
+  await writeFile(path, `${JSON.stringify(cache, null, 2)}\n`);
 }
 
 const CONCURRENCY = 4;

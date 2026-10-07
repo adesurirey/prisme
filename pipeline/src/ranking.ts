@@ -19,7 +19,7 @@ function latestPublished(story: Story): number {
 
 export function rankStories(
   stories: Story[],
-  outletById: Map<string, Outlet>,
+  _outletById: Map<string, Outlet>,
 ): Story[] {
   const frontPageOutlets = new Map<Story, number>();
   const reporting = new Map<Story, number>();

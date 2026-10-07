@@ -165,7 +165,7 @@ async function main(): Promise<void> {
   const summaries = results.map((r) => summarize(items, r.attempts));
   await writeFile(
     new URL('results.json', BENCHMARK_DIR),
-    JSON.stringify({ results }, null, 2) + '\n',
+    `${JSON.stringify({ results }, null, 2)}\n`,
   );
   await writeFile(DOC_PATH, render(items.length, summaries, samples));
   console.log(

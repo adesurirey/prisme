@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /*
  * Prisme design tokens — Linear-like: monochrome chrome, hairlines,
@@ -54,11 +54,11 @@
   --color-droite: var(--droite);
   --color-hover: var(--hover);
 
-  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  font-feature-settings: 'cv05' 1; /* friendlier Inter lowercase l */
+  font-feature-settings: "cv05" 1; /* friendlier Inter lowercase l */
 }
 
 /* Visible keyboard focus, both schemes */
@@ -72,7 +72,7 @@ body {
   *,
   *::before,
   *::after {
-    transition: none !important;
-    animation: none !important;
+    transition: none;
+    animation: none;
   }
 }

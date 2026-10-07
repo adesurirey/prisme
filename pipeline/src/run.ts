@@ -136,17 +136,17 @@ export async function runEdition(): Promise<Edition> {
   // in @prisme/domain and is imported by the pipeline and the site.
   await writeFile(
     new URL('outlets.json', DATA_DIR),
-    JSON.stringify(publicOutlets(), null, 2) + '\n',
+    `${JSON.stringify(publicOutlets(), null, 2)}\n`,
   );
   await writeFile(
     new URL('edition.json', DATA_DIR),
-    JSON.stringify(edition, null, 2) + '\n',
+    `${JSON.stringify(edition, null, 2)}\n`,
   );
   for (const story of frontpage.stories) {
     if (!changed.has(story.slug)) continue;
     await writeFile(
       new URL(`${story.slug}.json`, STORIES_DIR),
-      JSON.stringify(story, null, 2) + '\n',
+      `${JSON.stringify(story, null, 2)}\n`,
     );
   }
   console.log(`Wrote ${DATA_DIR.pathname}`);

@@ -13,8 +13,8 @@ export function reportIssueUrl(input: {
   pageUrl: string;
 }): string {
   const body = [
-    'Page concernée : ' + input.pageUrl,
-    'Sujet : ' + input.title,
+    `Page concernée : ${input.pageUrl}`,
+    `Sujet : ${input.title}`,
     '',
     'Quelle est l’erreur ?',
   ].join('\n');
