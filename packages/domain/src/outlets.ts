@@ -98,7 +98,10 @@ export interface ExcludedOutlet {
 
 const CHECKED = '2026-10-06';
 
-/** The 21 Outlets of the Edition, grouped by Leaning. */
+/** Issue #11: Libération's Arc XP outbound feed verified a day after the rest. */
+const CHECKED_11 = '2026-10-07';
+
+/** The 22 Outlets of the Edition, grouped by Leaning. */
 export const outlets: OutletConfig[] = [
   // ——— Gauche ———
   {
@@ -201,6 +204,75 @@ export const outlets: OutletConfig[] = [
       reserved: false,
       checkedAt: CHECKED,
       note: 'Pas de tdmrep.json (404).',
+    },
+  },
+  {
+    id: 'liberation',
+    name: 'Libération',
+    leaning: 'gauche',
+    paywall: 'partial',
+    site: 'https://www.liberation.fr',
+    feeds: {
+      latest: 'https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml',
+    },
+    leaningSources: [
+      {
+        title:
+          "FrIdéo : où se situe Libération ? (échelle d'idéologie de 30 médias français)",
+        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
+        date: '2026',
+        url: 'https://frenchnewslab.org/fr/medias/liberation',
+        takeaway:
+          'Score −1,08 dans la bande « gauche » (intervalle −1,60…−0,56) : le classement à gauche est soutenu par les données, 7 familles de preuves sur 9, rang 4 sur 30.',
+      },
+      {
+        title: 'Libération, journal (article encyclopédique)',
+        author: 'Wikipédia (avec les ouvrages et articles cités en notes)',
+        date: '2026',
+        url: 'https://fr.wikipedia.org/wiki/Lib%C3%A9ration_(journal)',
+        takeaway:
+          '« On est le journal de toutes les gauches. Avec un clivage au sein de la rédaction : les plus jeunes sont plutôt LFI, les anciens sont sociaux-démocrates » (Alexandra Schwartzbrod, directrice adjointe de la rédaction, 2023) ; Serge July : « Sa sensibilité est de gauche » (2019).',
+      },
+      {
+        title: 'Libération (Paris) – Bias and Credibility',
+        author: 'Media Bias/Fact Check',
+        date: '2026',
+        url: 'https://mediabiasfactcheck.com/liberation-paris-bias/',
+        takeaway:
+          'Noté « Left-Center » sur la base de la sélection de sujets et de positions éditoriales favorisant modérément la gauche ; fiabilité factuelle notée « High ».',
+      },
+      {
+        title: 'Libération : orientation politique, propriétaire et fiabilité',
+        author: 'Lucide',
+        date: '2026',
+        url: 'https://lucideinfo.fr/medias/liberation',
+        takeaway:
+          'Repère éditorial « Centre-gauche », à partir de la ligne éditoriale observée : le seul désaccord de placement de notre dossier.',
+      },
+    ],
+    leaningNote:
+      "Placé à gauche : la bande « gauche » de FrIdéo correspond à notre case Gauche, et la rédaction se définit elle-même comme « le journal de toutes les gauches ». Désaccord documenté : Media Bias/Fact Check le note « Left-Center » et Lucide « Centre-gauche » ; FrIdéo, qui fusionne neuf familles de preuves dont ces notations, le place en bande « gauche » avec un intervalle qui exclut zéro. Les critiques d'Acrimed (« quotidien de Rothschild », célébration du néolibéralisme) contestent la ligne depuis la gauche, ce qui conforte le placement et non l'inverse.",
+    readership: {
+      evidence:
+        'ACPM presse quotidienne nationale 2025/2026 : 5e rang, 119 943 exemplaires France payée ; Liberation.fr : 35e rang des sites, 15,9 M de visites (août 2026).',
+      url: 'https://www.acpm.fr/classements/pqn',
+    },
+    feedChecks: [
+      {
+        kind: 'latest',
+        url: 'https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml',
+        checkedAt: CHECKED_11,
+        status: 200,
+        items: 50,
+        covers: '~9 h',
+        images: 'none',
+        note: "Flux officiel de syndication de la plateforme Arc XP, servi sur le domaine de Libération : les flux /rss/ historiques restent bloqués par DataDome (403, vérifié le 2026-10-06, issue #11). 50 articles au plus, fenêtre d'environ 9 h, aucune image.",
+      },
+    ],
+    tdm: {
+      reserved: false,
+      checkedAt: CHECKED_11,
+      note: 'Pas de tdmrep.json (404, la page répond depuis le serveur de Libération malgré DataDome).',
     },
   },
   {
@@ -1348,13 +1420,6 @@ export const outlets: OutletConfig[] = [
 
 /** Outlets kept out of the Edition, with the reason and the date checked. */
 export const excludedOutlets: ExcludedOutlet[] = [
-  {
-    id: 'liberation',
-    name: 'Libération',
-    reason:
-      "Flux RSS bloqués : toutes les URL liberation.fr/rss/ répondent 403 (protection DataDome), avec un User-Agent de navigateur comme sans, vérifié le 2026-10-06. Aucun article n'a jamais été collecté. Repli envisageable : retrouver un flux accessible ou un miroir officiel (issue #11).",
-    checkedAt: CHECKED,
-  },
   {
     id: 'marianne',
     name: 'Marianne',
