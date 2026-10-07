@@ -59,7 +59,6 @@ const builtAt = new Date(
 // "Signaler une erreur" (issue #8): a prefilled GitHub issue carrying this
 // Story's page URL, placed next to the Story it concerns.
 const reportUrl = reportIssueUrl({
-  slug: story.slug,
   title: story.title,
   pageUrl: new URL(storyPageUrl(story, import.meta.env.BASE_URL), Astro.site).toString(),
 });

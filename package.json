@@ -9,5 +9,8 @@
     "verify": "pnpm --filter @prisme/pipeline verify",
     "benchmark:export": "pnpm --filter @prisme/pipeline benchmark:export",
     "benchmark:grade": "pnpm --filter @prisme/pipeline benchmark:grade"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15"
   }
 }
