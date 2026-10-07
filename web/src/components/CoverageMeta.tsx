@@ -3,12 +3,11 @@ import { LEANING_LABELS, leaningOrder } from '@prisme/domain';
 
 /**
  * Coverage as a meta line: one compact tri-color micro-bar followed by the
- * counted Articles and the share of the config reporting ("x articles ·
- * y % des médias"). The same element on the Edition index cards and the
- * Story page header. Numbers stay visible — no tooltip needed for the
- * basics; the per-Leaning breakdown survives as title + aria-label.
- * Renders static HTML: no hydration, React islands stay reserved for the
- * tabs.
+ * counted Articles and the share of the config reporting ("x articles  y %").
+ * The same element on the Edition index cards and the Story page header. The
+ * per-Leaning breakdown lives in a CSS tooltip — hover on desktop,
+ * press/tap-to-focus on mobile — and in the aria-label. Renders static
+ * HTML: no hydration, React islands stay reserved for the tabs.
  */
 export default function CoverageMeta({
   counts,
@@ -34,15 +33,26 @@ export default function CoverageMeta({
   const breakdown = leaningOrder
     .map((l) => `${counts[l]} ${LEANING_LABELS[l].toLowerCase()}`)
     .join(' · ');
+  const tooltip = `${reporting} média${reporting > 1 ? 's' : ''} sur ${totalOutlets}`;
   return (
     <span
-      className={`inline-flex items-center gap-2 align-middle -translate-y-px ${className}`}
+      className={`group relative inline-flex flex-wrap items-center gap-x-[1em] gap-y-0.5 align-middle -translate-y-px ${className}`}
+      // biome-ignore lint/a11y/noNoninteractiveTabindex: focusability is the tap-to-show-tooltip affordance for touch; SR users get the info from the aria-label
+      tabIndex={0}
+      role="img"
+      aria-label={`Couverture : ${tooltip} — ${breakdown}`}
     >
+      {/* Tooltip: hover on desktop, press/tap-to-focus on mobile (pure CSS). */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-full left-0 z-10 mb-2 hidden whitespace-nowrap rounded-md border border-line bg-canvas px-3 py-2 text-[12px] leading-snug text-ink shadow-sm group-hover:block group-focus:block group-active:block"
+      >
+        {tooltip}
+        <span className="block text-muted">{breakdown}</span>
+      </span>
       {covered && (
         <span
-          role="img"
-          aria-label={`Couverture : ${breakdown}`}
-          title={breakdown}
+          aria-hidden="true"
           className="inline-flex h-1.5 shrink-0 overflow-hidden rounded-full bg-line"
           style={{ width: barWidth }}
         >
@@ -62,11 +72,14 @@ export default function CoverageMeta({
           )}
         </span>
       )}
-      <span>
+      {covered && (
+        <span className="whitespace-nowrap">
+          {Math.round((reporting / totalOutlets) * 100)}
+          {'\u202F%'}
+        </span>
+      )}
+      <span className="whitespace-nowrap">
         {articles} article{articles > 1 ? 's' : ''}
-        {covered
-          ? ` · ${Math.round((reporting / totalOutlets) * 100)}\u202F% des médias`
-          : ''}
       </span>
     </span>
   );
