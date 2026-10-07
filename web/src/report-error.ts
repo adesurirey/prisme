@@ -9,7 +9,6 @@ export const REPO = 'adesurirey/prisme';
  * is built from the site base path.
  */
 export function reportIssueUrl(input: {
-  slug: string;
   title: string;
   pageUrl: string;
 }): string {

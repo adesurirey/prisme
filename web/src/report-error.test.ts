@@ -7,7 +7,6 @@ describe('reportIssueUrl', () => {
   it('opens a prefilled GitHub issue with the Story URL and title', () => {
     const url = new URL(
       reportIssueUrl({
-        slug: story.slug,
         title: story.title,
         pageUrl: 'https://adesurirey.github.io/prisme/sujet/reforme-retraites/',
       }),
@@ -21,13 +20,12 @@ describe('reportIssueUrl', () => {
     expect(body).toContain(story.title);
   });
 
-  it('escapes quotes and newlines through URL encoding', () => {
+  it('URL-encodes quotes and every reserved character in title and body', () => {
     const url = reportIssueUrl({
-      slug: 'a',
       title: 'Guillemets « et " doubles',
       pageUrl: 'https://example.com/sujet/a/',
     });
-    expect(url).toContain('title=');
-    expect(url).not.toContain('« et " doubles');
+    expect(url).toContain(encodeURIComponent('Guillemets « et " doubles'));
+    expect(url).not.toContain('"');
   });
 });

@@ -101,6 +101,13 @@ const description =
             <li class="py-4">
               <p class="text-[15px] font-medium text-ink">{excluded.name}</p>
               <p class="mt-1 text-[14px] leading-relaxed text-muted">{excluded.reason}</p>
+              <p class="mt-1 text-[13px] text-faint">
+                Vérifié le {new Date(excluded.checkedAt).toLocaleDateString('fr-FR', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                })}
+              </p>
             </li>
           ))
         }
