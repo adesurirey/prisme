@@ -1,4 +1,4 @@
-# prisme
+# Prisme
 
 > L’actualité sous toutes ses couleurs.
 
