@@ -11,18 +11,11 @@ static site.
 
 ```mermaid
 flowchart LR
-    A["**Collect**\nevery Outlet’s RSS feed"] --> B["**Classify**\nDecision model — Kind + Section"]
-    B --> C["**Group**\nGrouping model — new Articles into Stories"]
-    C --> D["**Rank**\nfront pages, Coverage, recency → Edition"]
-    D --> E["**Summarize**\nFlash-Lite — Summaries + Differences"]
-
-    classDef io fill:#f6f8fa,stroke:#d0d7de,stroke-width:1px
-    classDef model fill:#fff,stroke:#57606a,stroke-width:1.5px,stroke-dasharray:4 3
-    class A,D io
-    class B,C,E model
+    A[Collect<br>every Outlet’s RSS feed] --> B[Classify<br>Decision model — Kind + Section]
+    B --> C[Group<br>Grouping model — new Articles into Stories]
+    C --> D[Rank<br>front pages, Coverage, recency → Edition]
+    D --> E[Summarize<br>Flash-Lite — Summaries + Differences]
 ```
-
-Dashed: a model decides. Plain: deterministic.
 
 Three cheap models run the show; each pinned for traceability.
 
