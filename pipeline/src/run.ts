@@ -73,12 +73,22 @@ export async function runEdition(): Promise<Edition> {
     );
   }
   const existing = await loadStories(STORIES_DIR);
+  // Experiment lever: PRISME_MAX_CHECKS=all lifts the per-build Membership
+  // budget; a number overrides the default (ADR-0005's 20).
+  const maxChecksEnv = process.env.PRISME_MAX_CHECKS;
+  const maxChecks =
+    maxChecksEnv == null
+      ? undefined
+      : maxChecksEnv === 'all'
+        ? Infinity
+        : Number.parseInt(maxChecksEnv, 10) || undefined;
   const outcome = await groupStories({
     articles: kept,
     teasers,
     existing,
     now,
     makeId: () => randomBytes(6).toString('hex'),
+    maxChecks,
     clients: { grouping, membership: membershipModelFromEnv() },
   });
 

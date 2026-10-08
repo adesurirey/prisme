@@ -262,7 +262,17 @@ function geminiModel(apiKey: string): GroupingModel {
             .join('');
           const parsed = parseGroupingResponse(text);
           if (!parsed) {
-            if (attempt === 1) continue;
+            if (attempt === 1) {
+              console.warn(
+                `${GROUPING.label}: unparseable response (chars=${text.length}), retrying once`,
+              );
+              continue;
+            }
+            // Silent null = the caller's degraded path with no log line: say
+            // why here, or a full-singleton build is undiagnosable.
+            console.warn(
+              `${GROUPING.label}: unparseable response after retry (chars=${text.length}) — degrading to one-Article Stories`,
+            );
             return null;
           }
           return parsed;
