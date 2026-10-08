@@ -15,3 +15,4 @@ For Outlets without a `une` feed, `collect()` marked the 10 most recent Articles
 - The ranking tier's semantics change without a code change: sparser but true; ties fall through to Coverage, which gains real input from the larger slice.
 - The `'à la une'` marker in Summary prompts likewise appears only for declared Front-page Articles.
 - `everFrontPage` flags recorded during the guessed era stay frozen in their Story files (ADR-0005); new Stories get them only from declared Front pages.
+- Superseded in part by [ADR-0009](0009-coverage-rules-the-edition-ranking.md): the front-page ranking tier is gone (issue #37); front-page flags remain display metadata only.
