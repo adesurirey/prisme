@@ -35,7 +35,7 @@ export default function ArticleRow({
         }`}
       >
         <span>{name}</span>
-        {date && <span>{date}</span>}
+        {date && <span className="text-faint">{date}</span>}
       </p>
     </div>
   );

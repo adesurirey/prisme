@@ -13,13 +13,12 @@ import StoryImage from './StoryImage';
  * slight scale, image zoom): headline as title, muted meta line, image on
  * the right.
  *
- * The toggle is a full-width disclosure row in the list chrome (Linear-style):
- * a chevron that rotates when open, a rounded hover surface that bleeds
- * slightly past the text gutter, and the follow-up count spelled out in the
- * row itself. The list carries no hairlines at all — rows separate by
- * whitespace, the only line of a Leaning group sits under its heading in
- * the page. Revealing the follow-ups fades and slides them in
- * (@starting-style, no JS timing).
+ * The toggle is a plain disclosure row in the skills.sh style: muted text —
+ * the follow-up count plus the Outlet it comes from, or "ces médias" when
+ * several Outlets share the group — with a chevron after the label that
+ * flips when open, and no hover surface at all.
+ * Revealing the follow-ups fades and slides them in (@starting-style, no
+ * JS timing).
  */
 export default function ArticleList({
   head,
@@ -35,6 +34,10 @@ export default function ArticleList({
   const [open, setOpen] = useState(false);
   const byId = new Map(outlets.map((o) => [o.id, o]));
   const followUpsId = useId();
+  const followUpFrom = [
+    ...new Set(followUps.map((a) => byId.get(a.outletId)?.name ?? a.outletId)),
+  ];
+  const from = followUpFrom.length === 1 ? followUpFrom[0] : 'ces médias';
   return (
     <div>
       <List articles={head} byId={byId} storyTitle={storyTitle} />
@@ -45,31 +48,29 @@ export default function ArticleList({
             aria-expanded={open}
             aria-controls={followUpsId}
             onClick={() => setOpen(!open)}
-            className="-mx-5 flex w-[calc(100%+2.5rem)] cursor-pointer items-center gap-2 rounded-md px-5 py-2.5 text-left text-[13px] text-muted transition-colors hover:bg-hover hover:text-ink"
+            className="-mx-5 flex w-[calc(100%+2.5rem)] cursor-pointer items-center gap-1.5 px-5 py-2.5 text-left text-[13px] text-muted"
           >
+            <span>
+              {open
+                ? 'Réduire'
+                : `+${followUps.length} autre${followUps.length > 1 ? 's' : ''} de ${from}`}
+            </span>
             <svg
               viewBox="0 0 16 16"
               fill="none"
               aria-hidden="true"
               className={`size-3 shrink-0 transition-transform duration-150 ${
-                open ? 'rotate-90' : ''
+                open ? 'rotate-180' : ''
               }`}
             >
               <path
-                d="M6 3.5 10.5 8 6 12.5"
+                d="M3.5 6 8 10.5 12.5 6"
                 stroke="currentColor"
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
             </svg>
-            <span>
-              {open
-                ? 'Réduire'
-                : followUps.length === 1
-                  ? 'Voir l’autre article de ces médias'
-                  : `Voir les ${followUps.length} autres articles de ces médias`}
-            </span>
           </button>
           <List
             articles={followUps}

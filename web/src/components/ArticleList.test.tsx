@@ -59,7 +59,7 @@ describe('ArticleList', () => {
       />,
     );
     const button = screen.getByRole('button', {
-      name: 'Voir les 2 autres articles de ces médias',
+      name: '+2 autres de Libération',
     });
     const followUps = screen
       .getByText('Titre a2')
@@ -74,7 +74,7 @@ describe('ArticleList', () => {
     expect(followUps.hidden).toBe(true);
     expect(
       screen.getByRole('button', {
-        name: 'Voir les 2 autres articles de ces médias',
+        name: '+2 autres de Libération',
       }),
     ).toBeTruthy();
   });
@@ -90,7 +90,7 @@ describe('ArticleList', () => {
     );
     expect(
       screen.getByRole('button', {
-        name: 'Voir l’autre article de ces médias',
+        name: '+1 autre de Libération',
       }),
     ).toBeTruthy();
   });
