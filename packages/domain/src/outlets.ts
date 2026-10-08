@@ -513,7 +513,7 @@ export const outlets: OutletConfig[] = [
         items: 20,
         covers: '~32 h',
         images: 'all',
-        note: 'Flux général, toutes rubriques : les rubriques sont tranchées par la classification (#4), pas par le choix du flux. Fragile aux robots : `marianne.net/rss` répond 403 (page HTML de blocage) sans en-têtes de navigateur complets, puis 301 vers rss.xml — à surveiller à chaque vérification.',
+        note: "Flux général, toutes rubriques : les rubriques sont tranchées par la classification (#4), pas par le choix du flux. Fragile aux robots : `marianne.net/rss` répond 403 (page HTML de blocage) sans en-têtes de navigateur complets, puis 301 vers rss.xml — à surveiller à chaque vérification. Depuis le 2026-10-08 (issue #35) : l'arête AWS WAF de marianne.net répond 405 (`x-amzn-waf-action: captcha`) aux adresses IP des runners GitHub, quel que soit le User-Agent ou les en-têtes — le flux contribue zéro article aux éditions construites en CI, alors qu'il répond 200 localement. Vérifié depuis un runner (probe curl + Node fetch, run 37777088410).",
       },
     ],
     tdm: {

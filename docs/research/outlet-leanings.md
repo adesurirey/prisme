@@ -299,6 +299,18 @@ articles, ~32 h, images partout (enclosures). Fragile aux robots : `marianne.net
 répond 403 (page HTML de blocage) sans en-têtes de navigateur complets, puis 301 vers
 `rss.xml` — à surveiller à chaque vérification.
 
+**Exclusion de facto en CI (2026-10-08, issue #35).** Depuis son ajout, Marianne a
+contribué zéro article aux éditions construites en CI : l'arête AWS WAF de
+marianne.net (devant CloudFront) répond **405** avec `x-amzn-waf-action: captcha` aux
+adresses IP des runners GitHub, quel que soit le User-Agent ou les en-têtes — vérifié
+depuis un runner avec curl et Node fetch, sur toutes les URL du domaine (run
+37777088410). Le flux répond 200 localement, d'où l'invisibilité : `pnpm verify` tourne
+en local. Aucune URL alternative n'existe (les sous-domaines `feeds.`/`static.`/
+`backend.` ne résolvent pas). Le JDD, média du même groupe, échoue de la même façon
+(403) dans les mêmes builds. Le remède systémique — relayer les requêtes de flux CI
+par un petit proxy — reste à décider ; en attendant, la ligne « Contribution » du
+journal de build rend toute contribution nulle visible (issue #35).
+
 **Paywall / TDM.** Partiellement payant ; **réservation TDM publiée** (`tdm-reservation:
 1` pour `/`, avec une politique `tdm-policy.json`).
 
