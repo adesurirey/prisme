@@ -22,6 +22,7 @@ describe('PrismTabs', () => {
     expect(screen.getByText('Lu au centre')).toBeTruthy();
     expect(screen.getByText('Lu à droite')).toBeTruthy();
     expect(screen.getByText('La droite insiste sur X.')).toBeTruthy();
+    expect(screen.getByRole('tab', { name: /Comparaison/ })).toBeTruthy();
   });
 
   it('derives "Non couvert par …" from zero Coverage — never invented', () => {
@@ -88,6 +89,6 @@ describe('PrismTabs', () => {
       />,
     );
     expect(screen.getByText('Résumé indisponible.')).toBeTruthy();
-    expect(screen.getByText('Différences indisponibles.')).toBeTruthy();
+    expect(screen.getByText('Comparaison indisponible.')).toBeTruthy();
   });
 });

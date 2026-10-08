@@ -25,6 +25,12 @@
 
   --hover: rgba(17, 17, 20, 0.02);
 
+  /* The aurora ball (AuroraBall component, favicon): centre gold → gauche
+   * red → droite blue, light-theme values. */
+  --aurora-centre: #dfa414;
+  --aurora-gauche: #e0415e;
+  --aurora-droite: #2e7ce4;
+
   --tooltip: #1b1b1f;
   --tooltip-ink: #fcfcfc;
 }
@@ -47,6 +53,11 @@
     --droite: #63a8ea;
 
     --hover: rgba(255, 255, 255, 0.025);
+
+    /* Aurora ball, dark-theme values (brightened, per the Leaning tokens). */
+    --aurora-centre: #f6c65b;
+    --aurora-gauche: #f28498;
+    --aurora-droite: #63a8ea;
 
     --tooltip: #26262b;
     --tooltip-ink: #ededf0;
