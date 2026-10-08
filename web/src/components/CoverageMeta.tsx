@@ -32,7 +32,7 @@ export default function CoverageMeta({
   const covered = total > 0;
   const breakdown = leaningOrder
     .map((l) => `${counts[l]} ${LEANING_LABELS[l].toLowerCase()}`)
-    .join(' · ');
+    .join(' | ');
   const tooltip = `${reporting} média${reporting > 1 ? 's' : ''} sur ${totalOutlets}`;
   return (
     <span

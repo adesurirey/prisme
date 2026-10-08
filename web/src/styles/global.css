@@ -68,11 +68,12 @@
   --color-tooltip: var(--tooltip);
   --color-tooltip-ink: var(--tooltip-ink);
 
-  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
-  /* Editorial voice: Story titles and page H1s only (docs/brand.md,
-   * Visual identity). Fraunces with the opsz axis — the display cut is
-   * picked automatically at title sizes. */
-  --font-serif: "Fraunces Variable", Georgia, serif;
+  /* System stacks: no webfont downloads, native look per platform. */
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  /* Editorial voice: header wordmark only (docs/brand.md, Visual identity). */
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
 }
 
 /* Reserve scrollbar space on every page so the centered layout
@@ -80,10 +81,6 @@
  * between pages with and without a vertical scrollbar. */
 html {
   scrollbar-gutter: stable;
-}
-
-body {
-  font-feature-settings: "cv05" 1; /* friendlier Inter lowercase l */
 }
 
 /* Visible keyboard focus, both schemes */
