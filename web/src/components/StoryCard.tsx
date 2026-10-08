@@ -33,7 +33,7 @@ export default function StoryCard({
   const image = pickStoryImage(story, byId);
   const articles = countedArticles(story.articles);
   return (
-    <article className="-mx-5 rounded-lg px-5 py-5 transition-colors hover:bg-hover">
+    <article className="group/card -mx-5 rounded-xl border border-transparent px-5 py-5 transition-all duration-200 ease-out hover:scale-[1.01] hover:border-line hover:bg-hover">
       <div className="flex items-start gap-6">
         <div className="min-w-0 flex-1">
           {story.section && (
@@ -63,7 +63,7 @@ export default function StoryCard({
           <StoryImage
             article={image}
             outlet={image && byId.get(image.outletId)}
-            className="h-14 w-24 rounded-md"
+            className="h-14 w-24 rounded-md transition-transform duration-300 ease-out group-hover/card:scale-[1.04]"
             sizes="96px"
           />
         </div>
