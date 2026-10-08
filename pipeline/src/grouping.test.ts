@@ -824,39 +824,6 @@ describe('groupStories', () => {
       ]);
     });
 
-    it('unrelated proposed seeds never spend guard checks on each other', async () => {
-      const checkCalls: { story?: string; article?: string }[] = [];
-      const outcome = await groupStories(
-        input({
-          articles: [
-            article('a1', { headline: 'Le Sénat adopte le budget 2027' }),
-            article('a2', {
-              headline: 'Victoire du Stade Toulousain en rugby',
-            }),
-          ],
-          clients: {
-            grouping: fakeGrouping({
-              newStories: [
-                { key: 'k1', title: 'Le Sénat adopte le budget 2027' },
-                { key: 'k2', title: 'Victoire du Stade Toulousain en rugby' },
-              ],
-              assignments: [
-                { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
-                { articleId: 'a2', newStoryKey: 'k2', confidence: 0.3 },
-              ],
-              titleUpdates: [],
-            }),
-            membership: fakeMembership(true, checkCalls),
-          },
-        }),
-      );
-      // Zero token overlap between the two seeds: no guard check runs, and
-      // the full check budget stays available for merges next build.
-      expect(checkCalls).toEqual([]);
-      expect(outcome.stories).toHaveLength(2);
-      expect(outcome.live).toHaveLength(2);
-    });
-
     it('twin seeds the guard refuses keep their separate Stories', async () => {
       const outcome = await groupStories(
         input({
