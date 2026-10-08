@@ -9,7 +9,7 @@ import {
   loadCache,
   saveCache,
 } from './classify.ts';
-import { collect } from './collect.ts';
+import { collect, contributionSummary } from './collect.ts';
 import {
   membershipModelFromEnv,
   winnerModelFromEnv,
@@ -130,6 +130,16 @@ export async function runEdition(): Promise<Edition> {
       `${articles.length - kept.length} not_news dropped, ${classified - before} newly classified, ` +
       `${summaryOutcome.calls} summaries calls, ${failures.length} feed failures).`,
   );
+
+  // Per-outlet contribution line (issue #35): an Outlet contributing zero
+  // Articles — typically a feed blocked from CI egress — must be visible in
+  // the build log, not only in `pnpm verify` which runs locally.
+  const contribution = contributionSummary(outlets, kept);
+  console.log(`Contribution: ${contribution.line}`);
+  if (contribution.zero.length > 0)
+    console.warn(
+      `Zero contribution: ${contribution.zero.join(', ')} — check the feed failures above.`,
+    );
 
   await mkdir(STORIES_DIR, { recursive: true });
   // Outlet config snapshot (identity and feeds only): the sourced config lives

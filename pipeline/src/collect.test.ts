@@ -1,6 +1,6 @@
 import type { Outlet } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
-import { collect, type Fetcher } from './collect.ts';
+import { collect, contributionSummary, type Fetcher } from './collect.ts';
 
 const NOW = new Date('2026-10-07T14:00:00Z');
 
@@ -43,6 +43,32 @@ const UNE = 'https://feeds.leparisien.fr/leparisien/rss/une';
 
 const parisienUrl = (day: string, n: number) =>
   `https://www.leparisien.fr/section/histoire-${day}-ABC${String(n).padStart(3, '0')}.php`;
+
+describe('contributionSummary — per-outlet build-log guard (issue #35)', () => {
+  it('counts articles per outlet and flags outlets contributing zero', () => {
+    const a = outlet({ latest: LATEST });
+    const b = {
+      ...outlet({ latest: LATEST }),
+      id: 'marianne',
+      name: 'Marianne',
+    };
+    const article = (o: Outlet) => ({
+      id: 'x',
+      outletId: o.id,
+      headline: 'h',
+      url: 'https://example.com/a',
+      publishedAt: '2026-10-07T00:00:00Z',
+      frontPage: false,
+    });
+
+    const { line, zero } = contributionSummary(
+      [a, b],
+      [article(a), article(a)],
+    );
+    expect(line).toBe('le-parisien=2 marianne=0');
+    expect(zero).toEqual(['marianne']);
+  });
+});
 
 describe('collect — Undated Articles (ADR-0007)', () => {
   it('collects undated articles dated to their Publication day from the URL', async () => {
