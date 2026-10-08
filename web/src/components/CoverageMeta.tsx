@@ -36,7 +36,7 @@ export default function CoverageMeta({
   const tooltip = `${reporting} média${reporting > 1 ? 's' : ''} sur ${totalOutlets}`;
   return (
     <span
-      className={`group relative inline-flex flex-wrap items-center gap-x-[1em] gap-y-0.5 align-middle -translate-y-px ${className}`}
+      className={`group relative z-30 inline-flex flex-wrap items-center gap-x-[1em] gap-y-0.5 align-middle -translate-y-px ${className}`}
       // biome-ignore lint/a11y/noNoninteractiveTabindex: focusability is the tap-to-show-tooltip affordance for touch; SR users get the info from the aria-label
       tabIndex={0}
       role="img"
@@ -45,7 +45,7 @@ export default function CoverageMeta({
       {/* Tooltip: hover on desktop, press/tap-to-focus on mobile (pure CSS). */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-full left-0 z-10 mb-2 hidden whitespace-nowrap rounded-md border border-line bg-canvas px-3 py-2 text-[12px] leading-snug text-ink shadow-sm group-hover:block group-focus:block group-active:block"
+        className="pointer-events-none absolute top-full left-0 z-30 mt-2 hidden whitespace-nowrap rounded-md border border-line bg-canvas px-3 py-2 text-[12px] leading-snug text-ink shadow-sm group-hover:block group-focus:block group-active:block"
       >
         {tooltip}
         <span className="block text-muted">{breakdown}</span>

@@ -18,7 +18,7 @@ import { LEANING_LABELS } from '@prisme/domain';
 export default function BlindspotBadge({ leaning }: { leaning: Leaning }) {
   const hint = `Aucun média ${LEANING_LABELS[leaning].toLowerCase()} ne semble couvrir ce sujet`;
   return (
-    <span className="group relative inline-flex cursor-help items-center gap-1.5 rounded-full border border-line px-2.5 py-0.5 text-[12px] text-muted">
+    <span className="group relative inline-flex items-center gap-1.5 rounded-full border border-line px-2.5 py-0.5 text-[12px] text-muted">
       <span
         aria-hidden="true"
         className="inline-block size-2 rounded-full"
@@ -28,7 +28,7 @@ export default function BlindspotBadge({ leaning }: { leaning: Leaning }) {
       <span className="sr-only">{hint}</span>
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute left-0 top-full z-20 mt-1.5 w-max max-w-72 translate-y-1 rounded-md bg-tooltip px-2.5 py-1.5 text-[12px] font-normal leading-snug text-tooltip-ink opacity-0 shadow-md shadow-black/25 ring-1 ring-white/10 transition-[opacity,transform] duration-150 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-hover:delay-300"
+        className="pointer-events-none absolute left-0 top-full z-20 mt-2 w-max max-w-72 rounded-md border border-line bg-canvas px-3 py-2 text-[12px] leading-snug text-ink shadow-sm opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-100 group-hover:delay-300"
       >
         {hint}
       </span>
