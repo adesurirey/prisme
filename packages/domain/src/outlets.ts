@@ -1472,6 +1472,7 @@ export const outlets: OutletConfig[] = [
         items: 9,
         covers: '~11 h',
         images: 'none',
+        note: 'HTTP 403 depuis 2026-10-08 (challenge Cloudflare, cf-mitigated: challenge) : le signal Une est perdu, rss.xml reste OK. On garde le flux pour une reprise automatique ; si le 403 persiste ~1 semaine, retirer feeds.une (issue #39).',
       },
       {
         kind: 'latest',
