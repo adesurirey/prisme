@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { parseGroupingResponse } from './gemini.ts';
+import {
+  geminiModel,
+  parseGroupingResponse,
+  RATE_LIMIT_BACKOFF_MS,
+} from './gemini.ts';
 
 describe('parseGroupingResponse', () => {
   it('parses a well-formed proposal', () => {
@@ -107,5 +111,103 @@ describe('parseGroupingResponse', () => {
     expect(proposal!.titleUpdates).toEqual([
       { storyId: 's1', title: 'Bon titre' },
     ]);
+  });
+});
+
+describe('geminiModel failure policy (issue #40)', () => {
+  const OK_BODY = {
+    candidates: [
+      {
+        content: {
+          parts: [
+            {
+              text: JSON.stringify({
+                newStories: [{ key: 'k1', title: 'Titre' }],
+                assignments: [],
+              }),
+            },
+          ],
+        },
+      },
+    ],
+  };
+
+  function stubFetch(
+    responses: {
+      status: number;
+      body: unknown;
+    }[],
+  ): { calls: number } {
+    let calls = 0;
+    globalThis.fetch = (async () => {
+      const r = responses[Math.min(calls, responses.length - 1)]!;
+      calls++;
+      return {
+        ok: r.status === 200,
+        status: r.status,
+        text: async () => JSON.stringify(r.body),
+        json: async () => r.body,
+      } as unknown as Response;
+    }) as typeof fetch;
+    return {
+      get calls() {
+        return calls;
+      },
+    };
+  }
+
+  const sleeps: number[] = [];
+  const noSleep = async (ms: number): Promise<void> => {
+    sleeps.push(ms);
+  };
+  const model = () => {
+    sleeps.length = 0;
+    return geminiModel('test-key', noSleep);
+  };
+
+  it('a 429 waits the ~45 s quota backoff once, then succeeds', async () => {
+    const fetchCalls = stubFetch([
+      { status: 429, body: {} },
+      { status: 200, body: OK_BODY },
+    ]);
+    const proposal = await model().group({ stories: [], articles: [] });
+    expect(proposal.newStories).toHaveLength(1);
+    expect(fetchCalls.calls).toBe(2);
+    expect(sleeps).toEqual([RATE_LIMIT_BACKOFF_MS]);
+  });
+
+  it('a 429 still failing after the backoff throws — the build fails', async () => {
+    const fetchCalls = stubFetch([{ status: 429, body: {} }]);
+    await expect(model().group({ stories: [], articles: [] })).rejects.toThrow(
+      'HTTP 429',
+    );
+    expect(fetchCalls.calls).toBe(2);
+  });
+
+  it('a non-retryable 4xx throws immediately, with no sleep', async () => {
+    const fetchCalls = stubFetch([{ status: 401, body: 'bad key' }]);
+    await expect(model().group({ stories: [], articles: [] })).rejects.toThrow(
+      'HTTP 401',
+    );
+    expect(fetchCalls.calls).toBe(1);
+    expect(sleeps).toEqual([]);
+  });
+
+  it('an unparseable response after the retry throws', async () => {
+    stubFetch([
+      {
+        status: 200,
+        body: { candidates: [{ content: { parts: [{ text: 'not json' }] } }] },
+      },
+      {
+        status: 200,
+        body: {
+          candidates: [{ content: { parts: [{ text: 'still not json' }] } }],
+        },
+      },
+    ]);
+    await expect(model().group({ stories: [], articles: [] })).rejects.toThrow(
+      'unparseable',
+    );
   });
 });

@@ -62,14 +62,58 @@ describe('classifyNewArticles', () => {
     expect(cache.entries.a2).toEqual({ kind: 'not_news', section: null });
   });
 
-  it('keeps failed classifications out of the cache for retry next build', async () => {
+  it('keeps isolated failed classifications out of the cache for retry next build', async () => {
+    const cache = emptyCache();
+    // One answer comes back, one fails: some checks answered, the build
+    // proceeds and the failed Article is retried next build.
+    const model = fakeModel((id) =>
+      id === 'a2' ? null : { kind: 'news', section: 'politics' },
+    );
+    await classifyNewArticles(
+      [article('a1'), article('a2')],
+      new Map(),
+      cache,
+      model,
+    );
+    expect(cache.entries.a1).toEqual({ kind: 'news', section: 'politics' });
+    expect(cache.entries.a2).toBeUndefined();
+  });
+
+  it('a build where every fresh classification fails fails the build (issue #40)', async () => {
     const cache = emptyCache();
     const model = fakeModel(() => null);
-    await classifyNewArticles([article('a1')], new Map(), cache, model);
+    await expect(
+      classifyNewArticles([article('a1')], new Map(), cache, model),
+    ).rejects.toThrow(/all 1 fresh Articles failed/);
     expect(cache.entries).toEqual({});
   });
 
-  it('survives a model that throws, like a failed feed', async () => {
+  it('survives an isolated model throw, like a failed feed', async () => {
+    const cache = emptyCache();
+    const model = fakeModel((id) =>
+      id === 'a2' ? { kind: 'news', section: 'politics' } : null,
+    );
+    model.classify = async ({ headline }) => {
+      if (headline.includes('a1')) throw new Error('HTTP 401: bad key');
+      return {
+        kind: 'news',
+        section: 'politics',
+        inputTokens: 10,
+        elapsedMs: 5,
+      };
+    };
+    await expect(
+      classifyNewArticles(
+        [article('a1'), article('a2')],
+        new Map(),
+        cache,
+        model,
+      ),
+    ).resolves.toBe(cache);
+    expect(cache.entries.a2).toEqual({ kind: 'news', section: 'politics' });
+  });
+
+  it('a model that throws for every fresh Article fails the build (issue #40)', async () => {
     const cache = emptyCache();
     const model = fakeModel(() => null);
     model.classify = async () => {
@@ -77,8 +121,7 @@ describe('classifyNewArticles', () => {
     };
     await expect(
       classifyNewArticles([article('a1')], new Map(), cache, model),
-    ).resolves.toBe(cache);
-    expect(cache.entries).toEqual({});
+    ).rejects.toThrow(/all 1 fresh Articles failed/);
   });
 
   it('returns the cache untouched without a model', async () => {
