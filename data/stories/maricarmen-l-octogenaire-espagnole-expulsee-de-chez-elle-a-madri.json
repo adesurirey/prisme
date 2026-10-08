@@ -5,6 +5,17 @@
   "createdAt": "2026-10-08T11:38:55.363Z",
   "articles": [
     {
+      "id": "0561d08aad20",
+      "outletId": "mediapart",
+      "headline": "«C’est un assassinat»: colère et indignation en Espagne après la mort de Maricarmen",
+      "url": "https://www.mediapart.fr/journal/international/081026/c-est-un-assassinat-colere-et-indignation-en-espagne-apres-la-mort-de-maricarmen",
+      "publishedAt": "2026-10-08T13:25:43.000Z",
+      "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/10/08/261008-img-ce-n-est-pas-un-deces-c-est-un-assassinat-colere-et-indignation-apres-la-mort-en-espagne-de-maricarmen.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "122adbf4f418",
       "outletId": "huffpost",
       "headline": "Maricarmen, l’octogénaire espagnole expulsée de chez elle à Madrid, est morte",
@@ -16,5 +27,15 @@
       "section": "society"
     }
   ],
-  "section": "society"
+  "section": "world",
+  "summaries": {
+    "gauche": [
+      "Une femme de 87 ans est décédée à l'hôpital, deux semaines après avoir été contrainte de quitter son habitation dans la capitale espagnole.",
+      "Son éviction forcée avait généré une onde de choc politique et sociale majeure, conduisant jusqu'à la convocation d'un scrutin législatif anticipé.",
+      "De nombreux citoyens se sont rassemblés spontanément en soirée dans les rues madrilènes pour honorer sa mémoire et protester contre la crise du logement."
+    ]
+  },
+  "differences": "La couverture de cet événement est assurée exclusivement par la tendance de gauche, qui met l'accent sur l'indignation collective suscitée par le drame, la portée politique de l'affaire et les manifestations populaires en faveur du droit au logement. Il n'y a pas d'autre tendance à comparer.",
+  "promptVersion": "sum-1",
+  "summarizedArticleCount": 2
 }

@@ -60,5 +60,20 @@
       "section": "science"
     }
   ],
-  "section": "science"
+  "section": "science",
+  "summaries": {
+    "gauche": [
+      "La mortalité des arbres en France a connu une hausse importante sur une période de vingt ans.",
+      "Le réchauffement global est directement responsable de la dégradation rapide des écosystèmes boisés."
+    ],
+    "centre": [
+      "Les surfaces arborées continuent de progresser globalement sur le territoire national.",
+      "Le dépérissement des peuplements forestiers s'accélère nettement sous l'effet des tensions climatiques.",
+      "L'accélération du réchauffement perturbe l'adaptation naturelle des écosystèmes, qu'ils soient forestiers ou glaciaires.",
+      "La déforestation et la surexploitation des zones boisées menacent les grands écosystèmes tropicaux."
+    ]
+  },
+  "differences": "La tendance de gauche se focalise particulièrement sur l'aggravation rapide de la mortalité des arbres à cause du climat, tandis que la tendance du centre adopte une perspective plus large incluant à la fois l'extension globale de la surface des forêts, la vulnérabilité des écosystèmes face au réchauffement et la situation critique d'autres milieux naturels comme les glaciers alpins ou les forêts tropicales.",
+  "promptVersion": "sum-1",
+  "summarizedArticleCount": 5
 }
