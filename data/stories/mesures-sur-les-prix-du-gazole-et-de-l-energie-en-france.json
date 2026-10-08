@@ -5,6 +5,29 @@
   "createdAt": "2026-10-07T20:14:00.807Z",
   "articles": [
     {
+      "id": "0c17ed0d8f92",
+      "outletId": "tf1-info",
+      "headline": "Stocks stratégiques : quelle quantité de carburant la France garde-t-elle en réserve ?",
+      "url": "https://www.tf1info.fr/economie/reportage-video-annonces-de-sebastien-lecornu-sur-le-prix-du-gazole-stocks-strategiques-quelle-quantite-de-carburant-la-france-garde-t-elle-en-reserve-2468714.html",
+      "publishedAt": "2026-10-08T09:47:40.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/540/barils-petrole-965c83-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "0b33967ac197",
+      "outletId": "le-figaro",
+      "headline": "Prix de l’électricité : pourquoi le coup de pression de Sébastien Lecornu sur EDF ne changera rien",
+      "url": "https://www.lefigaro.fr/societes/prix-de-l-electricite-pourquoi-le-coup-de-pression-de-sebastien-lecornu-sur-edf-ne-changera-rien-20261008",
+      "publishedAt": "2026-10-08T09:35:34.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/08/a42f3e4cbd4323779fa61180b71ba963da4fe93148a4444785f44f36a74c8aca.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "cf5eb7012354",
       "outletId": "le-parisien",
       "headline": "Du gazole en baisse, pas de hausse de l’électricité cet hiver : les promesses de Lecornu sur l’énergie sont-elles réalistes ?",
@@ -43,7 +66,7 @@
       "url": "https://www.lemonde.fr/economie/article/2026/10/07/carburants-sebastien-lecornu-annonce-que-dix-millions-de-barils-de-gazole-seront-mis-a-la-disposition-des-distributeurs-et-espere-une-baisse-des-prix-comprise-entre-12-a-18-centimes-le-litre-a-la-pompe_6789646_3234.html",
       "publishedAt": "2026-10-07T18:08:28.000Z",
       "imageUrl": "https://img.lemde.fr/2026/09/22/404/0/2500/1250/644/322/60/0/08d1c5e_upload-1-sfr2hpsutj0q-lewisjoly-lemonde-22-09-26-012.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -85,21 +108,21 @@
   "section": "economy",
   "summaries": {
     "gauche": [
-      "Le Premier ministre s'est exprimé pour désamorcer les tensions sociales, abordant notamment la grogne lycéenne et la situation des agriculteurs.",
-      "Une initiative gouvernementale vise à réduire le coût du carburant d'une quinzaine de centimes par litre pour soulager le pouvoir d'achat."
+      "Le gouvernement tente d'apaiser le climat social marqué par la grogne des lycéens et des agriculteurs.",
+      "Une baisse du prix du carburant d'environ quinze centimes par litre est envisagée pour soutenir le pouvoir d'achat."
     ],
     "centre": [
-      "Le gouvernement prévoit de déstocker dix millions de barils de carburant sur une période de trois mois pour peser sur les tarifs.",
-      "Les autorités prévoient une diminution estimée entre douze et dix-huit centimes par litre dans les stations-service.",
-      "Une concertation est prévue entre l'exécutif et les distributeurs afin de concrétiser cette baisse rapidement.",
-      "L'Agence internationale de l'énergie se montre disposée à mobiliser davantage de réserves stratégiques si nécessaire."
+      "Dix millions de barils issus des réserves stratégiques seront libérés sur trois mois pour influencer les prix à la pompe.",
+      "Les estimations prévoient une réduction allant de douze à dix-huit centimes par litre pour les automobilistes.",
+      "L'exécutif discute avec les distributeurs pour appliquer rapidement cette diminution tarifaire.",
+      "L'Agence internationale de l'énergie se dit prête à libérer d'autres réserves en cas de besoin."
     ],
     "droite": [
-      "Le plan de l'exécutif repose sur la cession de barils acquis avant la hausse récente des marchés à un tarif préférentiel.",
-      "Le calendrier du versement du chèque énergie sera avancé au mois de janvier pour soutenir les foyers modestes."
+      "Le mécanisme gouvernemental implique de céder des barils achetés avant la flambée des cours à un tarif avantageux.",
+      "Le versement du chèque énergie sera avancé au mois de janvier afin d'aider les ménages aux revenus modestes."
     ]
   },
-  "differences": "La presse de gauche contextualise l'annonce économique dans un climat social tendu marqué par les mobilisations lycéennes et agricoles, tandis que les médias du centre se concentrent sur les aspects techniques du déstockage pétrolier et la réaction de l'Agence internationale de l'énergie. De son côté, la droite met en avant les détails pratiques de la mesure, comme l'origine des barils à prix coûtant et l'anticipation du versement du chèque énergie.",
+  "differences": "La presse de gauche replace l'actualité économique dans le contexte des tensions sociales et des mouvements de contestation, alors que les médias du centre, à l'instar de TF1 Info, insistent sur les détails techniques et logistiques du déstockage pétrolier ainsi que sur le rôle des instances internationales. Pour sa part, la droite privilégie l'analyse des mécanismes financiers et l'accélération des aides directes aux foyers modestes.",
   "promptVersion": "sum-1",
-  "summarizedArticleCount": 8
+  "summarizedArticleCount": 9
 }
