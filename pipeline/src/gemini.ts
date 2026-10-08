@@ -57,8 +57,9 @@ export interface GroupingProposal {
   titleUpdates: { storyId: string; title: string }[];
 }
 
-/** JSON Schema for the structured output (generationConfig.responseFormat). */
-const GROUPING_SCHEMA = {
+/** JSON Schema for the structured output (generationConfig.responseFormat).
+ * Exported for the grouping benchmark (issue #41). */
+export const GROUPING_SCHEMA = {
   type: 'object',
   properties: {
     newStories: {
@@ -177,7 +178,8 @@ const SECTION_LABELS_FR: Record<Section, string> = {
   other: 'Autre',
 };
 
-/** The prompt: Story titles + Sections, Article headlines + teasers, nothing else (ADR-0003). */
+/** The prompt: Story titles + Sections, Article headlines + teasers, nothing else (ADR-0003).
+ * Exported for the grouping benchmark (issue #41). */
 export function groupingPrompt(input: {
   stories: GroupingInputStory[];
   articles: GroupingInputArticle[];
@@ -211,10 +213,19 @@ export function groupingPrompt(input: {
 
 const RETRYABLE = RETRYABLE_STATUS;
 
-function geminiModel(apiKey: string): GroupingModel {
+/** USD per 1M input tokens, OpenRouter's paid price for the pinned model —
+ * the free tier costs nothing, the figure prices a build for the decision
+ * rule (< $0.50/build, issue #41). */
+export const GROUPING_PAID_PRICE_PER_MTOK = 0.3;
+
+function geminiGroupingModel(
+  apiKey: string,
+  model: string = GROUPING.model,
+  label: string = GROUPING.label,
+): GroupingModel {
   return {
-    label: GROUPING.label,
-    model: GROUPING.model,
+    label,
+    model,
     async group(input) {
       const body = {
         contents: [{ parts: [{ text: groupingPrompt(input) }] }],
@@ -229,7 +240,7 @@ function geminiModel(apiKey: string): GroupingModel {
           maxOutputTokens: 65_536,
         },
       };
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/${GROUPING.model}:generateContent`;
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
       for (let attempt = 1; attempt <= 2; attempt++) {
         try {
           const response = await fetch(url, {
@@ -249,7 +260,7 @@ function geminiModel(apiKey: string): GroupingModel {
             }
             // 401/403 and the like are config errors: fail fast, no retry.
             const error = new Error(
-              `${GROUPING.label} HTTP ${response.status}: ${text.slice(0, 200)}`,
+              `${label} HTTP ${response.status}: ${text.slice(0, 200)}`,
             );
             (error as Error & { fatal?: boolean }).fatal = true;
             throw error;
@@ -264,14 +275,14 @@ function geminiModel(apiKey: string): GroupingModel {
           if (!parsed) {
             if (attempt === 1) {
               console.warn(
-                `${GROUPING.label}: unparseable response (chars=${text.length}), retrying once`,
+                `${label}: unparseable response (chars=${text.length}), retrying once`,
               );
               continue;
             }
             // Silent null = the caller's degraded path with no log line: say
             // why here, or a full-singleton build is undiagnosable.
             console.warn(
-              `${GROUPING.label}: unparseable response after retry (chars=${text.length}) — degrading to one-Article Stories`,
+              `${label}: unparseable response after retry (chars=${text.length}) — degrading to one-Article Stories`,
             );
             return null;
           }
@@ -279,8 +290,8 @@ function geminiModel(apiKey: string): GroupingModel {
         } catch (error) {
           const e = error as Error & { fatal?: boolean };
           if (attempt === 2 || e.fatal) {
-            if (e instanceof Error && !e.message.startsWith(GROUPING.label)) {
-              throw new Error(`${GROUPING.label} ${e.message}`);
+            if (e instanceof Error && !e.message.startsWith(label)) {
+              throw new Error(`${label} ${e.message}`);
             }
             throw error;
           }
@@ -298,5 +309,5 @@ function geminiModel(apiKey: string): GroupingModel {
  */
 export function groupingModelFromEnv(): GroupingModel | null {
   if (!process.env.GEMINI_API_KEY) return null;
-  return geminiModel(process.env.GEMINI_API_KEY);
+  return geminiGroupingModel(process.env.GEMINI_API_KEY);
 }

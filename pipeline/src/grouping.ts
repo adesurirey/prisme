@@ -208,8 +208,9 @@ const STOPWORDS = new Set([
   'y',
 ]);
 
-/** Lowercase, accent-stripped content tokens of a headline. */
-function tokens(text: string): Set<string> {
+/** Lowercase, accent-stripped content tokens of a headline.
+ * Exported for the grouping benchmark's dup-seed detector (issue #41). */
+export function tokens(text: string): Set<string> {
   const out = new Set<string>();
   for (const raw of text.toLowerCase().split(/[^\p{L}\p{N}]+/u)) {
     // Strip accents before the stopword check: the list is written
@@ -222,8 +223,9 @@ function tokens(text: string): Set<string> {
   return out;
 }
 
-/** Jaccard overlap of two token sets: shared / total. */
-function overlap(a: Set<string>, b: Set<string>): number {
+/** Jaccard overlap of two token sets: shared / total. Exported for the
+ * grouping benchmark (issue #41). */
+export function overlap(a: Set<string>, b: Set<string>): number {
   if (a.size === 0 || b.size === 0) return 0;
   let shared = 0;
   for (const token of a) if (b.has(token)) shared++;

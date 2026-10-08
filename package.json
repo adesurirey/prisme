@@ -9,6 +9,7 @@
     "verify": "pnpm --filter @prisme/pipeline verify",
     "benchmark:export": "pnpm --filter @prisme/pipeline benchmark:export",
     "benchmark:grade": "pnpm --filter @prisme/pipeline benchmark:grade",
+    "benchmark:grouping": "pnpm --filter @prisme/pipeline benchmark:grouping",
     "lint": "biome check .",
     "format": "biome check --write .",
     "prepare": "husky",
