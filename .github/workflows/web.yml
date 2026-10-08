@@ -2,13 +2,9 @@ name: Web
 
 # Rebuild the static site from the committed data/ and redeploy Pages,
 # without running the pipeline: no feed fetching, no model calls, no cost.
-# For publishing UI changes between scheduled editions. Also runs on every
-push to main (merges), skipping the pipeline's own "data: update edition"
-commits — those already deploy via the Edition workflow.
+# For publishing UI changes between scheduled editions. Triggerable by hand.
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
 
 permissions:
   pages: write
@@ -20,7 +16,6 @@ concurrency:
 
 jobs:
   web:
-    if: github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message, 'data:')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
