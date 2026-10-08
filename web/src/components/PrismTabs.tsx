@@ -135,7 +135,7 @@ export default function PrismTabs(props: {
           <path d="M8 7.2v3.4" strokeLinecap="round" strokeWidth="1.4" />
           <circle cx="8" cy="4.9" r="0.8" fill="currentColor" stroke="none" />
         </svg>
-        Synthèse générée par Prisme IA
+        Synthèse générée par Prisme
       </p>
     </div>
   );
