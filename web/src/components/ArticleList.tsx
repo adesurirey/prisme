@@ -7,10 +7,10 @@ import StoryImage from './StoryImage';
  * One Leaning group’s Article list (issue #27): the head — each Outlet’s
  * freshest Article — is always visible; the Outlet’s follow-ups are
  * prerendered into the HTML but hidden until the disclosure row reveals them
- * (same pattern as PrismTabs: indexable without JavaScript). Both rows keep
- * the page’s layout: image, meta line, headline — unless the headline repeats
- * the Story title (split Stories take the founding headline; showing it
- * twice adds nothing).
+ * (same pattern as PrismTabs: indexable without JavaScript). Each row is a
+ * whole-card link, styled like the Edition’s Story cards (hover surface,
+ * slight scale, image zoom): headline as title, muted meta line, image on
+ * the right.
  *
  * The toggle is a full-width disclosure row in the list chrome (Linear-style):
  * a chevron that rotates when open, a rounded hover surface that bleeds
@@ -44,7 +44,7 @@ export default function ArticleList({
             aria-expanded={open}
             aria-controls={followUpsId}
             onClick={() => setOpen(!open)}
-            className="-mx-2 flex w-[calc(100%+1rem)] cursor-pointer items-center gap-2 rounded-md px-2 py-2.5 text-left text-[13px] text-muted transition-colors hover:bg-hover hover:text-ink"
+            className="-mx-5 flex w-[calc(100%+2.5rem)] cursor-pointer items-center gap-2 rounded-md px-5 py-2.5 text-left text-[13px] text-muted transition-colors hover:bg-hover hover:text-ink"
           >
             <svg
               viewBox="0 0 16 16"
@@ -104,25 +104,30 @@ function List({
     <ul id={id} hidden={hidden} className={reveal ? 'reveal' : undefined}>
       {articles.map((article) => {
         const outlet = byId.get(article.outletId);
+        const headline =
+          article.headline !== storyTitle ? article.headline : undefined;
         return (
-          <li
-            key={article.id}
-            className="-mx-2 flex gap-4 rounded-md px-2 py-4 transition-colors hover:bg-hover"
-          >
-            <StoryImage
-              article={article}
-              outlet={outlet}
-              className="h-14 w-24 shrink-0 rounded-md"
-              sizes="96px"
-            />
-            <div className="min-w-0 flex-1">
-              <ArticleRow article={article} outlet={outlet} />
-              {article.headline !== storyTitle && (
-                <p className="mt-1.5 text-[14px] text-muted">
-                  {article.headline}
-                </p>
-              )}
-            </div>
+          <li key={article.id} className="-mx-5">
+            <a
+              href={article.url}
+              rel="noopener noreferrer"
+              target="_blank"
+              className="group/article flex items-center gap-4 rounded-xl border border-transparent px-5 py-5 transition-all duration-200 ease-out hover:scale-[1.01] hover:border-line hover:bg-hover"
+            >
+              <ArticleRow
+                article={article}
+                headline={headline}
+                outlet={outlet}
+              />
+              <div className="shrink-0 self-center">
+                <StoryImage
+                  article={article}
+                  outlet={outlet}
+                  className="h-14 w-24 rounded-md transition-transform duration-300 ease-out group-hover/article:scale-[1.04]"
+                  sizes="96px"
+                />
+              </div>
+            </a>
           </li>
         );
       })}
