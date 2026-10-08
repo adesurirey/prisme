@@ -60,8 +60,9 @@ export interface GroupingProposal {
   titleUpdates: { storyId: string; title: string }[];
 }
 
-/** JSON Schema for the structured output (generationConfig.responseFormat). */
-const GROUPING_SCHEMA = {
+/** JSON Schema for the structured output (generationConfig.responseFormat).
+ * Exported for the grouping benchmark (issue #41). */
+export const GROUPING_SCHEMA = {
   type: 'object',
   properties: {
     newStories: {
@@ -180,7 +181,8 @@ const SECTION_LABELS_FR: Record<Section, string> = {
   other: 'Autre',
 };
 
-/** The prompt: Story titles + Sections, Article headlines + teasers, nothing else (ADR-0003). */
+/** The prompt: Story titles + Sections, Article headlines + teasers, nothing else (ADR-0003).
+ * Exported for the grouping benchmark (issue #41). */
 export function groupingPrompt(input: {
   stories: GroupingInputStory[];
   articles: GroupingInputArticle[];
@@ -228,13 +230,20 @@ export type Sleep = (ms: number) => Promise<void>;
 const defaultSleep: Sleep = (ms) =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
-export function geminiModel(
+/** USD per 1M input tokens, OpenRouter's paid price for the pinned model —
+ * the free tier costs nothing, the figure prices a build for the decision
+ * rule (< $0.50/build, issue #41). */
+export const GROUPING_PAID_PRICE_PER_MTOK = 0.3;
+
+export function geminiGroupingModel(
   apiKey: string,
   sleep: Sleep = defaultSleep,
+  model: string = GROUPING.model,
+  label: string = GROUPING.label,
 ): GroupingModel {
   return {
-    label: GROUPING.label,
-    model: GROUPING.model,
+    label,
+    model,
     async group(input) {
       const body = {
         contents: [{ parts: [{ text: groupingPrompt(input) }] }],
@@ -249,7 +258,7 @@ export function geminiModel(
           maxOutputTokens: 65_536,
         },
       };
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/${GROUPING.model}:generateContent`;
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
       for (let attempt = 1; attempt <= 2; attempt++) {
         try {
           const response = await fetch(url, {
@@ -275,7 +284,7 @@ export function geminiModel(
             // Anything still failing after the retry throws: a failed
             // Grouping call fails the build (ADR-0005, as amended).
             const error = new Error(
-              `${GROUPING.label} HTTP ${response.status}: ${text.slice(0, 200)}`,
+              `${label} HTTP ${response.status}: ${text.slice(0, 200)}`,
             );
             (error as Error & { fatal?: boolean }).fatal = true;
             throw error;
@@ -290,7 +299,7 @@ export function geminiModel(
           if (!parsed) {
             if (attempt === 1) {
               console.warn(
-                `${GROUPING.label}: unparseable response (chars=${text.length}), retrying once`,
+                `${label}: unparseable response (chars=${text.length}), retrying once`,
               );
               continue;
             }
@@ -298,29 +307,24 @@ export function geminiModel(
             // amended): a silent degrade once corrupted the archive with
             // singletons that never re-merge.
             throw new Error(
-              `${GROUPING.label}: unparseable response after retry (chars=${text.length})`,
+              `${label}: unparseable response after retry (chars=${text.length})`,
             );
           }
           return parsed;
         } catch (error) {
           const e = error as Error & { fatal?: boolean };
-          if (e.fatal) throw error;
-          if (attempt === 1) {
-            // A network hiccup gets the same one retry as a 5xx.
-            await sleep(PLAIN_RETRY_MS);
-            continue;
+          if (attempt === 2 || e.fatal) {
+            if (e instanceof Error && !e.message.startsWith(label)) {
+              throw new Error(`${label} ${e.message}`);
+            }
+            throw error;
           }
-          if (
-            error instanceof Error &&
-            !error.message.startsWith(GROUPING.label)
-          ) {
-            throw new Error(`${GROUPING.label} ${error.message}`);
-          }
-          throw error;
+          // A network hiccup gets the same one retry as a 5xx.
+          await sleep(PLAIN_RETRY_MS);
         }
       }
       // Unreachable: both attempts either return or throw.
-      throw new Error(`${GROUPING.label}: exhausted retries`);
+      throw new Error(`${label}: exhausted retries`);
     },
   };
 }
@@ -332,5 +336,5 @@ export function geminiModel(
  */
 export function groupingModelFromEnv(): GroupingModel | null {
   if (!process.env.GEMINI_API_KEY) return null;
-  return geminiModel(process.env.GEMINI_API_KEY);
+  return geminiGroupingModel(process.env.GEMINI_API_KEY);
 }

@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
-  geminiModel,
+  geminiGroupingModel,
   parseGroupingResponse,
   RATE_LIMIT_BACKOFF_MS,
 } from './gemini.ts';
@@ -165,7 +165,7 @@ describe('geminiModel failure policy (issue #40)', () => {
   const noSleep = async (ms: number): Promise<void> => {
     sleeps.push(ms);
   };
-  const model = () => geminiModel('test-key', noSleep);
+  const model = () => geminiGroupingModel('test-key', noSleep);
 
   it('a 429 waits the ~45 s quota backoff once, then succeeds', async () => {
     const fetchCalls = stubFetch([
