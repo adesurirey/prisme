@@ -114,7 +114,7 @@ function List({
               href={article.url}
               rel="noopener noreferrer"
               target="_blank"
-              className="group/article flex items-center gap-4 rounded-xl border border-transparent px-5 py-5 transition-all duration-200 ease-out hover:scale-[1.01] hover:border-line hover:bg-hover"
+              className="group/article flex items-center gap-4 rounded-xl border border-transparent px-5 py-5 transition-colors duration-200 ease-out hover:border-line hover:bg-hover"
             >
               <ArticleRow
                 article={article}
@@ -125,7 +125,7 @@ function List({
                 <StoryImage
                   article={article}
                   outlet={outlet}
-                  className="h-14 w-24 rounded-md transition-transform duration-300 ease-out group-hover/article:scale-[1.04]"
+                  className="h-14 w-24 rounded-md"
                   sizes="96px"
                 />
                 {outlet && (

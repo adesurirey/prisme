@@ -16,8 +16,9 @@ import StoryImage from './StoryImage';
  * One Story in the Edition index, in ranking order (issue #6: the Edition
  * orders by Outlets currently on the Front page, then Coverage): Section,
  * title, Blindspot badges, the Coverage meta line (compact strip + counted
- * Articles + share of the config — see CoverageMeta) — a link to the Story
- * page, where the Articles live.
+ * Articles + share of the config — see CoverageMeta) — one whole-card link
+ * to the Story page, where the Articles live, styled like the Story page's
+ * Article cards (hover surface, no animation).
  */
 export default function StoryCard({
   story,
@@ -33,8 +34,11 @@ export default function StoryCard({
   const image = pickStoryImage(story, byId);
   const articles = countedArticles(story.articles);
   return (
-    <article className="group/card -mx-5 rounded-xl border border-transparent px-5 py-5 transition-all duration-200 ease-out hover:scale-[1.01] hover:border-line hover:bg-hover">
-      <div className="flex items-start gap-6">
+    <article className="-mx-5">
+      <a
+        href={withBase(`/sujet/${story.slug}/`)}
+        className="group/card flex items-start gap-6 rounded-xl border border-transparent px-5 py-5 transition-colors duration-200 ease-out hover:border-line hover:bg-hover"
+      >
         <div className="min-w-0 flex-1">
           {story.section && (
             <p className="mb-1 text-[11px] uppercase tracking-[0.08em] text-muted">
@@ -42,7 +46,7 @@ export default function StoryCard({
             </p>
           )}
           <h2 className="text-[15px] font-medium leading-snug tracking-[-0.01em]">
-            <a href={withBase(`/sujet/${story.slug}/`)}>{story.title}</a>
+            {story.title}
           </h2>
           <CoverageMeta
             counts={counts}
@@ -63,11 +67,11 @@ export default function StoryCard({
           <StoryImage
             article={image}
             outlet={image && byId.get(image.outletId)}
-            className="h-14 w-24 rounded-md transition-transform duration-300 ease-out group-hover/card:scale-[1.04]"
+            className="h-14 w-24 rounded-md"
             sizes="96px"
           />
         </div>
-      </div>
+      </a>
     </article>
   );
 }
