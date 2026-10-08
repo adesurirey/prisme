@@ -35,11 +35,11 @@ jobs:
 
       # The pipeline tolerates failing feeds; a total failure aborts the build.
       # OPENROUTER_API_KEY drives Article classification (issue #4) and the
-      # Membership check (issue #5); without it Articles stay unclassified and
-      # low-confidence merges split. GEMINI_API_KEY drives Story grouping
-      # (issue #5); without it each new Article becomes its own Story. Both
-      # degradations are by design (ADR-0005): the build never fails on a
-      # missing model key.
+      # Membership check (issue #5); without it classification degrades to
+      # unclassified Articles, retried next build. GEMINI_API_KEY drives Story
+      # grouping (issue #5); per the amended ADR-0005 a missing key — like a
+      # failed Grouping call — fails the build, since degraded grouping
+      # corrupts the archive permanently.
       - run: pnpm edition
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}

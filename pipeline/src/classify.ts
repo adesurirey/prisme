@@ -70,11 +70,13 @@ const CONCURRENCY = 4;
 
 /**
  * Classify Articles whose id is not yet in the cache, merging results into it.
- * A failed or invalid classification leaves the Article out of the cache —
- * it is kept, unclassified, and retried on the next build (like a failed
- * feed: never dropped because the model hiccupped). A thrown error is
- * handled exactly like an invalid answer: logged, article unclassified,
- * build continues.
+ * An isolated failed or invalid classification leaves the Article out of the
+ * cache — it is kept, unclassified, and retried on the next build (like a
+ * failed feed: never dropped because the model hiccupped). A thrown error is
+ * handled exactly like an invalid answer: logged, article unclassified. But
+ * when every fresh classification fails — the model is down, not one answer
+ * came back — the build fails (ADR-0005, as amended in issue #40): a silent
+ * total failure looks exactly like a slow day and is never retried.
  */
 export async function classifyNewArticles(
   articles: Article[],
@@ -85,7 +87,10 @@ export async function classifyNewArticles(
   const fresh = articles.filter((article) => cache.entries[article.id] == null);
   if (fresh.length === 0 || model == null) return cache;
 
+  let attempts = 0;
+  let failures = 0;
   await runPool(fresh, CONCURRENCY, async (article) => {
+    attempts++;
     let classification: Classification | null = null;
     try {
       classification = await model.classify({
@@ -105,9 +110,16 @@ export async function classifyNewArticles(
           classification.kind === 'not_news' ? null : classification.section,
       };
     } else {
+      failures++;
       console.warn(`Classification failed: ${article.id} — kept without kind.`);
     }
   });
+  // Total failure (ADR-0005, as amended): not one fresh Article got an
+  // answer. Isolated failures (some succeeded) never reach this path.
+  if (attempts > 0 && failures === attempts)
+    throw new Error(
+      `Classification failed: all ${attempts} fresh Articles failed — the model is down; the build writes no Story files.`,
+    );
   return cache;
 }
 
