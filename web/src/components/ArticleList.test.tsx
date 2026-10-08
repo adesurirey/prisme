@@ -16,6 +16,14 @@ const OUTLETS: Outlet[] = [
     site: 'https://www.liberation.fr',
     feeds: {},
   },
+  {
+    id: 'monde',
+    name: 'Le Monde',
+    leaning: 'centre',
+    paywall: 'full',
+    site: 'https://www.lemonde.fr',
+    feeds: {},
+  },
 ];
 
 function article(id: string, outletId: string, publishedAt: string): Article {
@@ -30,12 +38,11 @@ function article(id: string, outletId: string, publishedAt: string): Article {
 }
 
 describe('ArticleList', () => {
-  it('shows each head row with its Paris date and no toggle without follow-ups', () => {
+  it('shows each row with its Paris date and no toggle without follow-ups', () => {
     // 12:00 UTC = 14:00 in Paris.
     render(
       <ArticleList
-        head={[article('a1', 'libe', '2026-10-07T12:00:00Z')]}
-        followUps={[]}
+        articles={[article('a1', 'libe', '2026-10-07T12:00:00Z')]}
         outlets={OUTLETS}
         storyTitle="Le sujet"
       />,
@@ -46,11 +53,35 @@ describe('ArticleList', () => {
     expect(screen.queryByRole('button')).toBeNull();
   });
 
-  it('prerenders follow-ups hidden, reveals them under the count toggle, and collapses back', () => {
+  it('sorts the flat list newest first across outlets', () => {
     render(
       <ArticleList
-        head={[article('a1', 'libe', '2026-10-07T14:00:00Z')]}
-        followUps={[
+        articles={[
+          article('a1', 'libe', '2026-10-07T08:00:00Z'),
+          article('b1', 'monde', '2026-10-07T14:00:00Z'),
+          article('b2', 'monde', '2026-10-07T09:00:00Z'),
+          article('a2', 'libe', '2026-10-07T10:00:00Z'),
+        ]}
+        outlets={OUTLETS}
+        storyTitle="Le sujet"
+      />,
+    );
+    const headlines = screen
+      .getAllByText(/^Titre /)
+      .map((el) => el.textContent);
+    // Every row is present, in recency order; the follow-ups (a2, b2) are
+    // hidden in the DOM but still rendered.
+    expect(headlines).toEqual(['Titre b1', 'Titre b2', 'Titre a2', 'Titre a1']);
+    expect(
+      (screen.getByText('Titre b2').closest('li') as HTMLLIElement).hidden,
+    ).toBe(true);
+  });
+
+  it('prerenders follow-ups hidden behind their own row’s toggle, reveals, and collapses back', () => {
+    render(
+      <ArticleList
+        articles={[
+          article('a1', 'libe', '2026-10-07T14:00:00Z'),
           article('a2', 'libe', '2026-10-07T09:00:00Z'),
           article('a3', 'libe', '2026-10-07T08:00:00Z'),
         ]}
@@ -61,17 +92,17 @@ describe('ArticleList', () => {
     const button = screen.getByRole('button', {
       name: '+2 autres de Libération',
     });
-    const followUps = screen
-      .getByText('Titre a2')
-      .closest('ul')! as HTMLUListElement;
-    expect(followUps.hidden).toBe(true);
+    const followUps = screen.getByText('Titre a2').closest('li')!;
+    expect((followUps as HTMLLIElement).hidden).toBe(true);
 
     fireEvent.click(button);
-    expect(followUps.hidden).toBe(false);
-    expect(screen.getByRole('button', { name: 'Réduire' })).toBeTruthy();
+    expect((followUps as HTMLLIElement).hidden).toBe(false);
+    expect(
+      screen.getByRole('button', { name: 'Replier Libération' }),
+    ).toBeTruthy();
 
-    fireEvent.click(screen.getByRole('button', { name: 'Réduire' }));
-    expect(followUps.hidden).toBe(true);
+    fireEvent.click(screen.getByRole('button', { name: 'Replier Libération' }));
+    expect((followUps as HTMLLIElement).hidden).toBe(true);
     expect(
       screen.getByRole('button', {
         name: '+2 autres de Libération',
@@ -82,8 +113,10 @@ describe('ArticleList', () => {
   it('uses the singular for a single follow-up', () => {
     render(
       <ArticleList
-        head={[article('a1', 'libe', '2026-10-07T14:00:00Z')]}
-        followUps={[article('a2', 'libe', '2026-10-07T09:00:00Z')]}
+        articles={[
+          article('a1', 'libe', '2026-10-07T14:00:00Z'),
+          article('a2', 'libe', '2026-10-07T09:00:00Z'),
+        ]}
         outlets={OUTLETS}
         storyTitle="Le sujet"
       />,
@@ -95,16 +128,15 @@ describe('ArticleList', () => {
     ).toBeTruthy();
   });
 
-  it('hides a head headline that repeats the Story title, like the page did', () => {
+  it('hides a headline that repeats the Story title, like the page did', () => {
     render(
       <ArticleList
-        head={[
+        articles={[
           {
             ...article('a1', 'libe', '2026-10-07T12:00:00Z'),
             headline: 'Le sujet',
           },
         ]}
-        followUps={[]}
         outlets={OUTLETS}
         storyTitle="Le sujet"
       />,

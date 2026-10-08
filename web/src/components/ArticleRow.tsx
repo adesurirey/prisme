@@ -34,6 +34,13 @@ export default function ArticleRow({
           headline ? 'mt-1' : ''
         }`}
       >
+        {outlet?.leaning && (
+          <span
+            aria-hidden="true"
+            className="inline-block size-2 shrink-0 self-center rounded-full"
+            style={{ background: `var(--${outlet.leaning})` }}
+          />
+        )}
         <span>{name}</span>
         {date && <span className="text-faint">{date}</span>}
       </p>

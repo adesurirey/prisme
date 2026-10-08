@@ -1,20 +1,17 @@
 ---
-import type { Article, Leaning, Story } from '@prisme/domain';
+import type { Story } from '@prisme/domain';
 import {
   blindspots,
   countedArticles,
   coverageCounts,
   frontPageOutlets,
-  leaningOrder,
   pickStoryImage,
   reportingOutletIds,
   SECTION_LABELS,
-  splitPerOutlet,
 } from '@prisme/domain';
 import ArticleList from '../../components/ArticleList';
 import BlindspotBadge from '../../components/BlindspotBadge';
 import CoverageMeta from '../../components/CoverageMeta';
-import LeaningBadge from '../../components/LeaningBadge';
 import PrismTabs from '../../components/PrismTabs';
 import StoryImage from '../../components/StoryImage';
 import { loadAllStoryFiles, loadOutlets, withBase } from '../../data';
@@ -43,25 +40,9 @@ const counted = countedArticles(story.articles);
 const image = pickStoryImage(story, byId);
 const imageOutlet = image && byId.get(image.outletId);
 
-/** Articles of one Leaning — the Outlet order and the head/follow-ups split
-    are splitPerOutlet’s business (@prisme/domain); unknown Outlets last. */
-function articlesForLeaning(leaning: Leaning | undefined): Article[] {
-  return story.articles.filter(
-    (a) => byId.get(a.outletId)?.leaning === leaning,
-  );
-}
-const groups: {
-  leaning?: Leaning;
-  head: Article[];
-  followUps: Article[];
-}[] = [
-  ...leaningOrder.map((leaning) => ({
-    leaning,
-    ...splitPerOutlet(articlesForLeaning(leaning)),
-  })),
-  { ...splitPerOutlet(articlesForLeaning(undefined)) },
-];
-const visible = groups.filter((g) => g.head.length > 0);
+// One mixed list, all Leanings together, newest first (ArticleList sorts): // each Outlet's extra Articles collapse behind their own "+N autres" row.
+const articleCount = countedArticles(story.articles);
+const mediaCount = reportingOutletIds(story.articles).size;
 
 // "Publié le": the newest Article’s date. An Undated Article (ADR-0007)
 // carries only its Publication day — shown without an invented clock time.
@@ -215,32 +196,29 @@ const description =
       )
     }
 
-    {
-      visible.map(({ leaning, head, followUps }) => (
-        <section class="mt-10">
-          {leaning && (
-            <h2 class="mb-1 flex items-center gap-2.5 border-b border-line pb-2 text-[16px]">
-              <LeaningBadge leaning={leaning} sizeClass="text-[16px]" />
-              <span class="text-[16px] text-muted">
-                {counts[leaning]} média{counts[leaning] > 1 ? 's' : ''}
-              </span>
-            </h2>
-          )}
-          {
-            // One island per Leaning group (issue #27): the head rows and the
-            // follow-ups behind "Voir les N autres articles" are all in the
-            // HTML at build time — the island only toggles visibility.
-          }
-          <ArticleList
-            client:visible
-            head={head}
-            followUps={followUps}
-            outlets={outlets}
-            storyTitle={story.title}
-          />
-        </section>
-      ))
-    }
+    <section class="mt-10">
+      {
+        // No rule under the title: the first row's hover surface would
+        // otherwise stack a third line right beneath it.
+      }
+      <h2 class="mb-3 text-[16px] text-muted">
+        <span class="font-semibold text-ink">
+          {articleCount} article{articleCount > 1 ? 's' : ''}
+        </span>{' '}
+        de {mediaCount} média{mediaCount > 1 ? 's' : ''}
+      </h2>
+      {
+        // One island for the whole list (issue #27): the head rows and the
+        // follow-ups behind "Voir les N autres articles" are all in the
+        // HTML at build time — the island only toggles visibility.
+      }
+      <ArticleList
+        client:visible
+        articles={story.articles}
+        outlets={outlets}
+        storyTitle={story.title}
+      />
+    </section>
 
   </article>
 </Base>
