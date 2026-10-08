@@ -14,16 +14,10 @@
  * are live Stories the model can merge into). A merge into an existing
  * Story is only allowed when a Jev Membership check says yes (up to 20
  * checks per build); a refused, capped-out or failed check splits. A new
- * Story proposed by the Grouping model gets the same guard (issue #36):
- * its seed is checked before the Story is created — across builds against
- * the most headline-similar live Stories (a proposed singleton must not
- * duplicate a live Story the model failed to merge into), and within the
- * build against the other surviving seeds (same-event Articles proposed as
- * separate new Stories must not each become one) — so no path creates a
- * Story without a Membership check. Only the seed of a Story that survived
- * both guards joins unconditionally; every further member is checked
- * against the seed (a thematic mega-Story must not form unchecked) and
- * demoted Articles split into singletons the next build can re-group.
+ * Story proposed by the Grouping model gets the same guard: only its seed
+ * Article joins unconditionally, every further member is checked against
+ * the seed (a thematic mega-Story must not form unchecked) and demoted
+ * Articles split into singletons the next build can re-group.
  */
 import { readdir, readFile } from 'node:fs/promises';
 import type { Article, Section, Story } from '@prisme/domain';
@@ -105,152 +99,6 @@ function slugFor(title: string, id: string, taken: Set<string>): string {
   const base = slugify(title) || 'sujet';
   if (!taken.has(base)) return base;
   return suffixSlug(base, id, taken);
-}
-
-/**
- * Seed guard (issue #36): the proposed new-Story seeds are the only
- * Articles that would reach a Story without a Membership check. Before a
- * proposed Story keeps its seed, the seed is checked against this many
- * live Stories — the most headline-similar ones. The token-overlap score
- * below only bounds which Stories are worth a check; the Membership model
- * still decides.
- */
-const MAX_SEED_CANDIDATES = 2;
-
-/** Function words the overlap score ignores (French + English). */
-const STOPWORDS = new Set([
-  'a',
-  'an',
-  'and',
-  'apres',
-  'are',
-  'au',
-  'aux',
-  'avec',
-  'by',
-  'ce',
-  'cela',
-  'ces',
-  'cet',
-  'cette',
-  'chez',
-  'comme',
-  'dans',
-  'de',
-  'des',
-  'du',
-  'elle',
-  'elles',
-  'en',
-  'est',
-  'et',
-  'etait',
-  'ete',
-  'for',
-  'from',
-  'il',
-  'ils',
-  'in',
-  'is',
-  'je',
-  'la',
-  'le',
-  'les',
-  'leur',
-  'lui',
-  'ma',
-  'mais',
-  'me',
-  'mes',
-  'moi',
-  'mon',
-  'ne',
-  'ni',
-  'nos',
-  'notre',
-  'nous',
-  'of',
-  'on',
-  'ou',
-  'par',
-  'pas',
-  'pendant',
-  'plus',
-  'pour',
-  'qu',
-  'que',
-  'qui',
-  'quoi',
-  'sa',
-  'sans',
-  'se',
-  'ses',
-  'son',
-  'sous',
-  'sur',
-  'ta',
-  'te',
-  'tes',
-  'the',
-  'toi',
-  'ton',
-  'tu',
-  'un',
-  'une',
-  'vers',
-  'votre',
-  'vous',
-  'was',
-  'were',
-  'with',
-  'y',
-]);
-
-/** Lowercase, accent-stripped content tokens of a headline. */
-function tokens(text: string): Set<string> {
-  const out = new Set<string>();
-  for (const raw of text.toLowerCase().split(/[^\p{L}\p{N}]+/u)) {
-    if (raw.length < 2 || STOPWORDS.has(raw)) continue;
-    out.add(raw.normalize('NFD').replace(/\p{M}/gu, ''));
-  }
-  return out;
-}
-
-/** Jaccard overlap of two token sets: shared / total. */
-function overlap(a: Set<string>, b: Set<string>): number {
-  if (a.size === 0 || b.size === 0) return 0;
-  let shared = 0;
-  for (const token of a) if (b.has(token)) shared++;
-  return shared / (a.size + b.size - shared);
-}
-
-/**
- * The live Stories a proposed new-Story seed is Membership-checked against
- * before its Story is created (issue #36): the most headline-similar live
- * Stories, scored by the best overlap with the Story's title or any of its
- * Articles' headlines — a lone generic title hides a concrete event, the
- * recent Articles carry it. The score only bounds which Stories are worth
- * a check; the Membership model still decides.
- */
-function seedCandidates(seed: Article, live: Story[]): Story[] {
-  const seedTokens = tokens(seed.headline);
-  if (seedTokens.size === 0) return [];
-  return live
-    .map((story) => ({
-      story,
-      score: Math.max(
-        overlap(seedTokens, tokens(story.title)),
-        ...story.articles.map((a) => overlap(seedTokens, tokens(a.headline))),
-      ),
-    }))
-    .filter((c) => c.score > 0)
-    .sort(
-      (x, y) =>
-        y.score - x.score ||
-        (x.story.id < y.story.id ? -1 : x.story.id > y.story.id ? 1 : 0),
-    )
-    .slice(0, MAX_SEED_CANDIDATES)
-    .map((c) => c.story);
 }
 
 /** The id-suffix fallback chain for one base slug, from the Story's own id. */
@@ -379,86 +227,13 @@ export async function groupStories(
       }
     }
 
-    // Seed guard (issue #36). The seed was the one Article that bypassed
-    // every Membership check, so three same-event Articles proposed as
-    // separate new Stories in one build never had their headlines compared
-    // (the Nobel triple-split), and a proposed singleton could duplicate a
-    // live Story the model failed to merge into (the lycéens singletons).
-    // Before a proposed new Story keeps its seed, the seed gets the same
-    // Jev Membership question a merge gets — cross-build candidates first
-    // (an existing Story beats a new twin), then the surviving earlier
-    // seeds of this build, both in deterministic order. A yes redirects the
-    // seed into that Story: the proposed Story receives no seed and is
-    // dropped before it can publish, and its further members are
-    // re-targeted to the absorbing Story. Guard checks spend the shared
-    // check budget first: starving a merge splits, which self-heals on the
-    // next build, while an unguarded seed creates a duplicate Story.
-    const absorbedInto = new Map<string, string>();
-    const verdicts = new Map<string, boolean | null>();
-    let checksUsed = 0;
-    if (clients.membership) {
-      const live = liveSorted();
-      const keyOrder = proposal.newStories.map((ns) => ns.key);
-      for (const key of keyOrder) {
-        const members = keyMembers.get(key);
-        if (members == null || members.length === 0) continue;
-        const seed = members[0]!;
-        const ask: { target: string; title: string; section?: Section }[] = [];
-        for (const candidate of seedCandidates(seed, live))
-          ask.push({
-            target: candidate.id,
-            title: candidate.title,
-            section: candidate.section,
-          });
-        for (const earlier of keyOrder) {
-          if (earlier === key) break;
-          // An absorbed key's seed already lives in its absorber; the
-          // absorber's own story is among the cross-build candidates.
-          if (absorbedInto.has(earlier)) continue;
-          const earlierMembers = keyMembers.get(earlier);
-          if (earlierMembers?.length)
-            ask.push({
-              target: `key:${earlier}`,
-              title: earlierMembers[0]!.headline,
-            });
-        }
-        for (const candidate of ask) {
-          if (checksUsed >= MAX_MEMBERSHIP_CHECKS) break;
-          checksUsed++;
-          try {
-            const yes = await clients.membership.belongs(
-              { title: candidate.title, section: candidate.section },
-              { headline: seed.headline, teaser: teasers.get(seed.id) ?? '' },
-            );
-            if (yes) {
-              absorbedInto.set(key, candidate.target);
-              verdicts.set(`${seed.id}|${candidate.target}`, true);
-              break;
-            }
-          } catch (reason) {
-            // A thrown check is a failed check: the Story stands as
-            // proposed (ADR-0005).
-            console.warn(
-              `Seed check failed: ${seed.id} → ${candidate.target} — ${
-                reason instanceof Error ? reason.message : reason
-              }`,
-            );
-          }
-        }
-      }
-    }
-
     // Membership checks are bounded and deterministic: every merge into an
     // existing Story is checked, and so is every non-seed member of a new
     // Story — the model's own confidence never bypasses the check (a generic
     // Story title makes it easy to be confidently wrong). Targets are Story
     // ids, or `key:<newStoryKey>` for new Stories (checked against the seed
-    // Article, not the proposed title, which may itself be thematic) — or,
-    // for a seed-guard-absorbed key, the absorbing Story. Guard checks ran
-    // first; the rest of the 20-check budget goes to these. Sorted by
-    // (articleId, target), the rest split.
-    const targetOfKey = (key: string): string =>
-      absorbedInto.get(key) ?? `key:${key}`;
+    // Article, not the proposed title, which may itself be thematic). Sorted
+    // by (articleId, target), first 20 only, the rest split.
     const mergePairs = [
       ...proposal.assignments
         .filter((a) => a.storyId != null)
@@ -466,7 +241,7 @@ export async function groupStories(
       ...[...keyMembers.entries()].flatMap(([key, members]) =>
         members
           .slice(1)
-          .map((a) => ({ articleId: a.id, target: targetOfKey(key) })),
+          .map((a) => ({ articleId: a.id, target: `key:${key}` })),
       ),
     ]
       .sort(
@@ -477,10 +252,9 @@ export async function groupStories(
               ? 1
               : 0) || (x.target < y.target ? -1 : x.target > y.target ? 1 : 0),
       )
-      .slice(0, Math.max(0, MAX_MEMBERSHIP_CHECKS - checksUsed));
+      .slice(0, MAX_MEMBERSHIP_CHECKS);
+    const verdicts = new Map<string, boolean | null>();
     for (const pair of mergePairs) {
-      // A guard-absorbed seed already has its yes verdict recorded.
-      if (verdicts.has(`${pair.articleId}|${pair.target}`)) continue;
       const article = fresh.find((a) => a.id === pair.articleId);
       let verdict: boolean | null = null;
       if (article && clients.membership) {
@@ -534,37 +308,25 @@ export async function groupStories(
         }
         continue;
       }
+      const story =
+        assignment.newStoryKey != null
+          ? keyStories.get(assignment.newStoryKey)
+          : undefined;
       const newStoryKey = assignment.newStoryKey;
-      if (newStoryKey == null || !keyMembers.has(newStoryKey)) {
+      if (story == null || newStoryKey == null) {
         split(article);
         continue;
       }
-      // A guard absorption retargets the whole key: either an existing
-      // Story id, or the surviving new Story the key was folded into.
-      const target = absorbedInto.get(newStoryKey) ?? `key:${newStoryKey}`;
-      if (target.startsWith('key:')) {
-        // The seed joins its surviving model-proposed Story unconditionally;
-        // every further member must pass the Membership check against the
-        // seed (an absorbed seed's guard verdict is already recorded).
-        const story = keyStories.get(target.slice(4))!;
-        const members = keyMembers.get(target.slice(4))!;
-        if (
-          members[0].id === article.id ||
-          verdicts.get(`${article.id}|${target}`) === true
-        ) {
-          merge(story, article);
-        } else {
-          split(article);
-        }
+      // The seed joins its model-proposed Story unconditionally; every
+      // further member must pass the Membership check against the seed.
+      const members = keyMembers.get(newStoryKey)!;
+      if (
+        members[0].id === article.id ||
+        verdicts.get(`${article.id}|key:${newStoryKey}`) === true
+      ) {
+        merge(story, article);
       } else {
-        // Absorbed into an existing Story: the seed's guard verdict and
-        // every further member's checked verdict were recorded up front.
-        const story = byId.get(target);
-        if (story != null && verdicts.get(`${article.id}|${target}`) === true) {
-          merge(story, article);
-        } else {
-          split(article);
-        }
+        split(article);
       }
     }
 
