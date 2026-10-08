@@ -25,14 +25,18 @@ export default function StoryImage({
   const frame = className ?? '';
   if (!article?.imageUrl) {
     return (
-      <span className={`flex items-center justify-center bg-line ${frame}`}>
+      <span
+        className={`@container flex items-center justify-center bg-line ${frame}`}
+      >
         <PlaceholderMark />
       </span>
     );
   }
   const caption = outlet ? `Photo : ${outlet.name}` : undefined;
   return (
-    <span className={`relative block overflow-hidden bg-line ${frame}`}>
+    <span
+      className={`@container relative block overflow-hidden bg-line ${frame}`}
+    >
       <span
         aria-hidden="true"
         className="absolute inset-0 flex items-center justify-center"
@@ -52,10 +56,22 @@ export default function StoryImage({
   );
 }
 
+/**
+ * The static mark shown while (or after) the hotlinked image fails: the
+ * serif P from the wordmark (docs/brand.md) — bold, like the wordmark, and
+ * small enough to read as a mark rather than a letter — in the faint token
+ * at the triangle's former opacity. Sized in container-query units so the
+ * same component reads right from the 96px card thumbnails to the
+ * full-width Story hero.
+ */
 function PlaceholderMark() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 3 22 21H2Z" fill="var(--faint)" opacity=".45" />
-    </svg>
+    <span
+      aria-hidden="true"
+      className="font-serif font-bold text-[var(--faint)] opacity-45"
+      style={{ fontSize: '17cqw' }}
+    >
+      P
+    </span>
   );
 }
