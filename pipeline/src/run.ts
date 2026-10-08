@@ -92,16 +92,15 @@ export async function runEdition(): Promise<Edition> {
   );
   const changed = new Set([...outcome.changed, ...frontpage.changed]);
 
-  // The Edition is the ranked top EDITION_SIZE (issue #6): Stories order by
-  // the Outlets currently on their Front page, then Coverage, then recency —
-  // deterministically. Live Stories below the cut keep updating outside it and
-  // may return on a later build; only a Story with no live Articles freezes.
+  // The Edition is the ranked top EDITION_SIZE (issue #37, ADR-0009): Stories
+  // order by Coverage, then recency — deterministically. Live Stories below
+  // the cut keep updating outside it and may return on a later build; only a
+  // Story with no live Articles freezes.
   const outletById = new Map(outlets.map((o) => [o.id, o]));
   const edition: Edition = {
     builtAt: now.toISOString(),
     stories: rankStories(
       frontpage.stories.filter((s) => liveIds.has(s.id)),
-      outletById,
     ).slice(0, EDITION_SIZE),
   };
 

@@ -1,31 +1,12 @@
-import type { Article, Outlet, Story } from '@prisme/domain';
+import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
 import { EDITION_SIZE, rankStories } from './ranking.ts';
 
 /**
- * The Edition ranking (issue #6): Stories order by the number of Outlets
- * currently on their Front page, then by Coverage (reporting Outlets),
- * then by the newest Article, then deterministically. The Edition keeps the
- * top EDITION_SIZE.
+ * The Edition ranking (issue #37, ADR-0009): Stories order by Coverage
+ * (reporting Outlets, Opinion excluded), then by the newest Article, then
+ * deterministically. The Edition keeps the top EDITION_SIZE.
  */
-
-function outlet(id: string, leaning: Outlet['leaning']): Outlet {
-  return {
-    id,
-    name: id,
-    leaning,
-    paywall: 'none',
-    site: `https://${id}.fr`,
-    feeds: { latest: `https://${id}.fr/rss` },
-  };
-}
-
-const outlets = [
-  outlet('a', 'gauche'),
-  outlet('b', 'centre'),
-  outlet('c', 'droite'),
-];
-const byId = new Map(outlets.map((o) => [o.id, o]));
 
 function article(id: string, overrides: Partial<Article> = {}): Article {
   return {
@@ -48,30 +29,38 @@ function story(
   return { id, slug: id, title: 'Sujet', createdAt, articles };
 }
 
-const ranked = (stories: Story[]) =>
-  rankStories(stories, byId).map((s) => s.id);
+const ranked = (stories: Story[]) => rankStories(stories).map((s) => s.id);
 
 describe('rankStories', () => {
-  it('orders by the number of Outlets currently on the Front page', () => {
-    const few = story('few', [article('1', { frontPage: true })]);
-    const many = story('many', [
-      article('2', { frontPage: true }),
-      article('3', { frontPage: true, outletId: 'b' }),
-      article('4', { frontPage: false, outletId: 'b' }),
+  it('orders by Coverage — reporting Outlets — regardless of Front-page flags', () => {
+    const wide = story('wide', [
+      article('1'),
+      article('2', { outletId: 'b' }),
+      article('3', { outletId: 'c' }),
     ]);
-    expect(ranked([few, many])).toEqual(['many', 'few']);
+    const flagged = story('flagged', [
+      article('4', { frontPage: true }),
+      article('5', { frontPage: true }),
+    ]);
+    expect(ranked([flagged, wide])).toEqual(['wide', 'flagged']);
   });
 
-  it('counts an Outlet once however many of its Articles are on the Front page', () => {
-    const one = story('one', [article('1', { frontPage: true })]);
-    const same = story('same', [
-      article('2', { frontPage: true }),
-      article('3', { frontPage: true }),
+  it('puts a wide Story with no Front-page Articles above fresh une-feed singletons (issue #37)', () => {
+    const wide = story('wide', [
+      article('1'),
+      ...Array.from({ length: 14 }, (_, i) =>
+        article(`w${i}`, { outletId: `o${i}` }),
+      ),
     ]);
-    expect(ranked([same, one])).toEqual(['one', 'same']);
+    const singletons = Array.from({ length: 19 }, (_, i) =>
+      story(`s${i}`, [article(`a${i}`, { frontPage: true })]),
+    );
+    const rankedIds = ranked([wide, ...singletons]);
+    expect(rankedIds[0]).toBe('wide');
+    expect(rankedIds.slice(1)).toEqual(singletons.map((s) => s.id).sort());
   });
 
-  it('uses Coverage — reporting Outlets — as the second key', () => {
+  it('uses Coverage — reporting Outlets', () => {
     const one = story('one', [article('1')]);
     const two = story('two', [article('2'), article('3', { outletId: 'b' })]);
     expect(ranked([one, two])).toEqual(['two', 'one']);

@@ -1,12 +1,12 @@
-import type { Outlet, Story } from '@prisme/domain';
+import type { Story } from '@prisme/domain';
 import { reportingOutletIds } from '@prisme/domain';
 
 /**
- * The Edition ranking (issue #6): Stories order by the number of Outlets
- * currently on their Front page, then by Coverage (distinct reporting
- * Outlets, Opinion pieces excluded), then by the newest Article, then by
- * creation time and id — fully deterministic across builds. The Edition keeps
- * the top EDITION_SIZE Stories.
+ * The Edition ranking (issue #37, ADR-0009): Stories order by Coverage
+ * (distinct reporting Outlets, Opinion pieces excluded), then by the newest
+ * Article, then by creation time and id — fully deterministic across builds.
+ * The Edition keeps the top EDITION_SIZE Stories. Front-page flags no longer
+ * participate in ranking; ADR-0008 keeps them as display metadata only.
  */
 export const EDITION_SIZE = 20;
 
@@ -17,23 +17,13 @@ function latestPublished(story: Story): number {
   );
 }
 
-export function rankStories(
-  stories: Story[],
-  _outletById: Map<string, Outlet>,
-): Story[] {
-  const frontPageOutlets = new Map<Story, number>();
+export function rankStories(stories: Story[]): Story[] {
   const reporting = new Map<Story, number>();
   for (const story of stories) {
-    frontPageOutlets.set(
-      story,
-      new Set(story.articles.filter((a) => a.frontPage).map((a) => a.outletId))
-        .size,
-    );
     reporting.set(story, reportingOutletIds(story.articles).size);
   }
   return [...stories].sort(
     (a, b) =>
-      frontPageOutlets.get(b)! - frontPageOutlets.get(a)! ||
       reporting.get(b)! - reporting.get(a)! ||
       latestPublished(b) - latestPublished(a) ||
       a.createdAt.localeCompare(b.createdAt) ||
