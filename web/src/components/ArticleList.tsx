@@ -20,11 +20,9 @@ import StoryImage from './StoryImage';
 export default function ArticleList({
   articles,
   outlets,
-  storyTitle,
 }: {
   articles: Article[];
   outlets: Outlet[];
-  storyTitle: string;
 }) {
   const byId = new Map(outlets.map((o) => [o.id, o]));
   const sorted = [...articles].sort(newestFirst);
@@ -48,13 +46,9 @@ export default function ArticleList({
     <ul>
       {rows.map(({ article, followUps }) => (
         <Fragment key={article.id}>
-          <Row article={article} byId={byId} storyTitle={storyTitle} />
+          <Row article={article} byId={byId} />
           {followUps.length > 0 && (
-            <OutletGroup
-              followUps={followUps}
-              byId={byId}
-              storyTitle={storyTitle}
-            />
+            <OutletGroup followUps={followUps} byId={byId} />
           )}
         </Fragment>
       ))}
@@ -66,11 +60,9 @@ export default function ArticleList({
 function OutletGroup({
   followUps,
   byId,
-  storyTitle,
 }: {
   followUps: Article[];
   byId: Map<string, Outlet>;
-  storyTitle: string;
 }) {
   const [open, setOpen] = useState(false);
   const group = useId();
@@ -115,7 +107,6 @@ function OutletGroup({
           key={article.id}
           article={article}
           byId={byId}
-          storyTitle={storyTitle}
           rowId={rowIds[i]}
           hidden={!open}
           reveal
@@ -128,14 +119,12 @@ function OutletGroup({
 function Row({
   article,
   byId,
-  storyTitle,
   hidden = false,
   reveal = false,
   rowId,
 }: {
   article: Article;
   byId: Map<string, Outlet>;
-  storyTitle: string;
   hidden?: boolean;
   /** Opt the row into the reveal animation (follow-ups only). */
   reveal?: boolean;
@@ -143,8 +132,7 @@ function Row({
   rowId?: string;
 }) {
   const outlet = byId.get(article.outletId);
-  const headline =
-    article.headline !== storyTitle ? article.headline : undefined;
+  const headline = article.headline;
   return (
     <li
       id={rowId}

@@ -44,7 +44,6 @@ describe('ArticleList', () => {
       <ArticleList
         articles={[article('a1', 'libe', '2026-10-07T12:00:00Z')]}
         outlets={OUTLETS}
-        storyTitle="Le sujet"
       />,
     );
     expect(screen.getByText('Libération')).toBeTruthy();
@@ -63,7 +62,6 @@ describe('ArticleList', () => {
           article('a2', 'libe', '2026-10-07T10:00:00Z'),
         ]}
         outlets={OUTLETS}
-        storyTitle="Le sujet"
       />,
     );
     const headlines = screen
@@ -86,7 +84,6 @@ describe('ArticleList', () => {
           article('a3', 'libe', '2026-10-07T08:00:00Z'),
         ]}
         outlets={OUTLETS}
-        storyTitle="Le sujet"
       />,
     );
     const button = screen.getByRole('button', {
@@ -118,7 +115,6 @@ describe('ArticleList', () => {
           article('a2', 'libe', '2026-10-07T09:00:00Z'),
         ]}
         outlets={OUTLETS}
-        storyTitle="Le sujet"
       />,
     );
     expect(
@@ -128,7 +124,7 @@ describe('ArticleList', () => {
     ).toBeTruthy();
   });
 
-  it('hides a headline that repeats the Story title, like the page did', () => {
+  it('shows the headline even when it repeats the Story title', () => {
     render(
       <ArticleList
         articles={[
@@ -138,11 +134,8 @@ describe('ArticleList', () => {
           },
         ]}
         outlets={OUTLETS}
-        storyTitle="Le sujet"
       />,
     );
-    // The row itself (outlet, date, link) stays; only the repeated headline goes.
-    expect(screen.getByText('Libération')).toBeTruthy();
-    expect(screen.queryByText('Le sujet')).toBeNull();
+    expect(screen.getByText('Le sujet')).toBeTruthy();
   });
 });
