@@ -150,7 +150,7 @@ function Row({
           <StoryImage
             article={article}
             outlet={outlet}
-            className="h-14 w-24 rounded-md"
+            className="h-14 w-24 rounded-md transition-transform duration-300 ease-out group-hover/article:scale-[1.03]"
             sizes="96px"
           />
           {outlet && <PaywallBadge paywall={outlet.paywall} variant="chip" />}

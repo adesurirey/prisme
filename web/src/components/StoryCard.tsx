@@ -18,7 +18,7 @@ import StoryImage from './StoryImage';
  * title, Blindspot badges, the Coverage meta line (compact strip + counted
  * Articles + share of the config — see CoverageMeta) — one whole-card link
  * to the Story page, where the Articles live, styled like the Story page's
- * Article cards (ghost hover tint, no animation).
+ * Article cards (ghost hover tint, gentle image scale).
  */
 export default function StoryCard({
   story,
@@ -67,7 +67,7 @@ export default function StoryCard({
           <StoryImage
             article={image}
             outlet={image && byId.get(image.outletId)}
-            className="h-14 w-24 rounded-md"
+            className="h-14 w-24 rounded-md transition-transform duration-300 ease-out group-hover/card:scale-[1.03]"
             sizes="96px"
           />
         </div>
