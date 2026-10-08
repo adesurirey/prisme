@@ -118,7 +118,7 @@ const description =
     {image && imageOutlet ? (
       // Hero header (idea 1): the image is the backdrop of the header block,
       // fading into the canvas — no cut rectangle between header and tabs.
-      <figure class="relative mt-6 overflow-hidden rounded-lg">
+      <figure class="relative mt-6 overflow-hidden rounded-xl">
         <div class="absolute inset-0">
           <StoryImage
             article={image}
@@ -161,7 +161,7 @@ const description =
               À la une chez {une.map((o) => o.name).join(', ')}
             </p>
           )}
-          <p class="mt-2 text-right text-[11px] text-muted">
+          <p class="mt-2 text-right text-[10px] text-faint">
             Photo : {imageOutlet.name}
           </p>
         </div>
