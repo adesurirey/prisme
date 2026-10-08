@@ -25,7 +25,7 @@ export default function ArticleRow({
   return (
     <div className="min-w-0 flex-1">
       {headline && (
-        <p className="text-[16px] font-medium leading-snug tracking-[-0.01em]">
+        <p className="text-[16px] font-semibold leading-snug tracking-[-0.01em]">
           {headline}
         </p>
       )}
