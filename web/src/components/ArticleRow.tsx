@@ -6,7 +6,7 @@ import { formatArticleDate } from '../article-date';
  * the headline is the card's title — it must read as the main element, ahead
  * of the Outlet name, which sits in the muted meta line below with the
  * build-time Paris date. Every row shows its headline, even when it repeats
- * the Story title. The link, hover surface and image live on the card itself —
+ * the Story title. The link, hover surface (ghost tint) and image live on the card itself —
  * see ArticleList; the paywall notice is a hover chip on the image.
  */
 export default function ArticleRow({
