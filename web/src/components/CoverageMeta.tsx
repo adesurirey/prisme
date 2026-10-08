@@ -37,8 +37,6 @@ export default function CoverageMeta({
   return (
     <span
       className={`group relative z-30 inline-flex flex-wrap items-center gap-x-[1em] gap-y-0.5 align-middle -translate-y-px ${className}`}
-      // biome-ignore lint/a11y/noNoninteractiveTabindex: focusability is the tap-to-show-tooltip affordance for touch; SR users get the info from the aria-label
-      tabIndex={0}
       role="img"
       aria-label={`Couverture : ${tooltip} — ${breakdown}`}
     >
