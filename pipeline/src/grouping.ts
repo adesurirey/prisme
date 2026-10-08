@@ -212,8 +212,12 @@ const STOPWORDS = new Set([
 function tokens(text: string): Set<string> {
   const out = new Set<string>();
   for (const raw of text.toLowerCase().split(/[^\p{L}\p{N}]+/u)) {
-    if (raw.length < 2 || STOPWORDS.has(raw)) continue;
-    out.add(raw.normalize('NFD').replace(/\p{M}/gu, ''));
+    // Strip accents before the stopword check: the list is written
+    // unaccented (ete, apres, …), so checking the raw form first lets
+    // accented French function words through as content tokens.
+    const word = raw.normalize('NFD').replace(/\p{M}/gu, '');
+    if (word.length < 2 || STOPWORDS.has(word)) continue;
+    out.add(word);
   }
   return out;
 }
