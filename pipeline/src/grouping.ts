@@ -53,6 +53,8 @@ export interface GroupingInput {
   /** Random 12-hex Story id source; injectable for tests. */
   makeId: () => string;
   clients: GroupingClients;
+  /** Membership-check budget for this build; default MAX_MEMBERSHIP_CHECKS. */
+  maxChecks?: number;
 }
 
 export interface GroupingOutcome {
@@ -292,6 +294,8 @@ export async function groupStories(
     return { stories, changed: new Set<string>(), live: liveSorted() };
   }
 
+  const maxChecks = input.maxChecks ?? MAX_MEMBERSHIP_CHECKS;
+
   const merge = (story: Story, article: Article): void => {
     story.articles = [...story.articles, article].sort(newestFirst);
     changedStories.add(story);
@@ -432,7 +436,7 @@ export async function groupStories(
             ask.push({ target: `key:${earlier}`, title: earlierHeadline });
         }
         for (const candidate of ask) {
-          if (checksUsed >= MAX_MEMBERSHIP_CHECKS) break;
+          if (checksUsed >= maxChecks) break;
           checksUsed++;
           try {
             const yes = await clients.membership.belongs(
@@ -464,10 +468,34 @@ export async function groupStories(
     // ids, or `key:<newStoryKey>` for new Stories (checked against the seed
     // Article, not the proposed title, which may itself be thematic) — or,
     // for a seed-guard-absorbed key, the absorbing Story. Guard checks ran
-    // first; the rest of the 20-check budget goes to these. Sorted by
-    // (articleId, target), the rest split.
+    // first; the rest of the budget goes to these. Pairs are prioritized by
+    // headline overlap with their target — the most obvious duplicates get
+    // the remaining budget before borderline pairs do — ties by (articleId,
+    // target); the rest split.
     const targetOfKey = (key: string): string =>
       absorbedInto.get(key) ?? `key:${key}`;
+    const pairScores = new Map<string, number>();
+    const pairScore = (pair: { articleId: string; target: string }): number => {
+      const cached = pairScores.get(`${pair.articleId}|${pair.target}`);
+      if (cached != null) return cached;
+      const article = fresh.find((a) => a.id === pair.articleId);
+      const articleTokens = article
+        ? tokens(article.headline)
+        : new Set<string>();
+      let best = 0;
+      if (articleTokens.size > 0) {
+        const headlines = pair.target.startsWith('key:')
+          ? [keyMembers.get(pair.target.slice(4))![0].headline]
+          : [byId.get(pair.target)!].flatMap((s) => [
+              s.title,
+              ...s.articles.slice(0, 8).map((a) => a.headline),
+            ]);
+        for (const headline of headlines)
+          best = Math.max(best, overlap(articleTokens, tokens(headline)));
+      }
+      pairScores.set(`${pair.articleId}|${pair.target}`, best);
+      return best;
+    };
     const mergePairs = [
       ...proposal.assignments
         .filter((a) => a.storyId != null)
@@ -480,13 +508,15 @@ export async function groupStories(
     ]
       .sort(
         (x, y) =>
+          pairScore(y) - pairScore(x) ||
           (x.articleId < y.articleId
             ? -1
             : x.articleId > y.articleId
               ? 1
-              : 0) || (x.target < y.target ? -1 : x.target > y.target ? 1 : 0),
+              : 0) ||
+          (x.target < y.target ? -1 : x.target > y.target ? 1 : 0),
       )
-      .slice(0, Math.max(0, MAX_MEMBERSHIP_CHECKS - checksUsed));
+      .slice(0, Math.max(0, maxChecks - checksUsed));
     for (const pair of mergePairs) {
       // A guard-absorbed seed already has its yes verdict recorded.
       if (verdicts.has(`${pair.articleId}|${pair.target}`)) continue;
@@ -576,6 +606,10 @@ export async function groupStories(
         }
       }
     }
+
+    console.log(
+      `Membership: ${checksUsed} checks this build (budget ${maxChecks === Infinity ? 'none' : maxChecks}).`,
+    );
 
     // Key Stories no Article claimed are dropped before they ever publish.
     for (const story of keyStories.values()) {
