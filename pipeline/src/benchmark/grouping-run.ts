@@ -41,6 +41,10 @@ export interface FixtureRun {
   costUsd: number | null;
   /** Null proposal = unparseable or failed call (the silent-failure mode). */
   valid: boolean;
+  /** Head of the raw response when it failed to parse — forensics. */
+  rawSnippet?: string;
+  /** Why generation stopped — 'length' means a truncated, unparseable JSON. */
+  finishReason?: string | null;
   evaluation: {
     coverage: Evaluation['coverage'];
     dupSeeds: Evaluation['dupSeeds'];
@@ -73,7 +77,17 @@ async function runFixture(
 ): Promise<FixtureResult> {
   const runs: FixtureRun[] = [];
   const evals: (Evaluation | null)[] = [];
+  let callFailed = false;
   for (const run of [1, 2] as const) {
+    // Fail-fast: when run 1 failed at the call level (timeout, HTTP error),
+    // run 2 will burn the same minutes for the same answer. One failed call
+    // is already the benchmark datapoint.
+    if (run === 2 && callFailed) {
+      console.error(
+        `${model.spec} ${fixture.name}: run 1 failed at the call level — skipping run 2`,
+      );
+      break;
+    }
     const t0 = Date.now();
     let call: GroupingCall;
     try {
@@ -82,6 +96,7 @@ async function runFixture(
         articles: fixture.freshArticles,
       });
     } catch (error) {
+      callFailed = true;
       console.error(
         `${model.spec} ${fixture.name} run ${run}: call failed — ${(error as Error).message}`,
       );
@@ -117,7 +132,7 @@ async function runFixture(
         : evaluateProposal(fixture, call.proposal);
     if (call.proposal == null) {
       console.error(
-        `${model.spec} ${fixture.name} run ${run}: unparseable response (${call.outputTokens} output tokens)`,
+        `${model.spec} ${fixture.name} run ${run}: unparseable response (${call.outputTokens} output tokens, finish ${call.finishReason ?? '?'}) — head: ${(call.rawSnippet ?? '').slice(0, 150).replaceAll(/\s+/gu, ' ')}`,
       );
     }
     runs.push({
@@ -127,6 +142,10 @@ async function runFixture(
       outputTokens: call.outputTokens,
       costUsd: call.costUsd,
       valid: call.proposal != null && !empty,
+      ...(call.proposal == null && call.rawSnippet != null
+        ? { rawSnippet: call.rawSnippet }
+        : {}),
+      ...(call.finishReason != null ? { finishReason: call.finishReason } : {}),
       evaluation:
         evaluation == null
           ? null

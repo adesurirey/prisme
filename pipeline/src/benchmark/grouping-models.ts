@@ -26,7 +26,6 @@ import {
   groupingPrompt,
   parseGroupingResponse,
 } from '../gemini.ts';
-import { RETRYABLE_STATUS } from '../http.ts';
 
 /** One grouping call with its usage. Null proposal = invalid/unparseable. */
 export interface GroupingCall {
@@ -35,6 +34,10 @@ export interface GroupingCall {
   outputTokens: number;
   /** USD; null when the gateway reports no cost (e.g. Google free tier). */
   costUsd: number | null;
+  /** Why generation stopped — 'stop' when the JSON is complete. */
+  finishReason?: string | null;
+  /** First 400 chars of the raw response when it failed to parse. */
+  rawSnippet?: string;
 }
 
 export interface BenchmarkGroupingModel {
@@ -47,9 +50,11 @@ export interface BenchmarkGroupingModel {
   }): Promise<GroupingCall>;
 }
 
-// The from-empty fixture needs tens of thousands of output tokens; slow
-// providers under load need several minutes (DeepSeek ran 200–300 s).
-const TIMEOUT_MS = 600_000;
+// Latency is part of the decision rule, and production aborts the grouping
+// call at 60 s: a candidate that cannot answer one build call in 5 minutes
+// is disqualified by that fact alone, so cap every call at 300 s — with the
+// fail-fast below the worst case per candidate is 3 × 5 min, not 40.
+const TIMEOUT_MS = 300_000;
 
 function googleGroupingModel(
   model: string,
@@ -112,6 +117,63 @@ function openRouterGroupingModel(
   apiKey: string,
 ): BenchmarkGroupingModel {
   const label = id;
+  const call = async (
+    body: Record<string, unknown>,
+  ): Promise<{
+    proposal: GroupingProposal | null;
+    inputTokens: number;
+    outputTokens: number;
+    costUsd: number | null;
+    finishReason?: string | null;
+    rawSnippet?: string;
+  }> => {
+    const response = await fetch(
+      'https://openrouter.ai/api/v1/chat/completions',
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+        signal: AbortSignal.timeout(TIMEOUT_MS),
+      },
+    );
+    if (!response.ok) {
+      const text = await response.text();
+      throw Object.assign(
+        new Error(`${label} HTTP ${response.status}: ${text.slice(0, 200)}`),
+        { status: response.status, text },
+      );
+    }
+    const data = (await response.json()) as {
+      choices?: { message?: { content?: string }; finish_reason?: string }[];
+      usage?: {
+        prompt_tokens?: number;
+        completion_tokens?: number;
+        cost?: number;
+      };
+    };
+    const choice = data.choices?.[0];
+    const raw = choice?.message?.content ?? '';
+    // Some models wrap the JSON in channel markers or prose (seen from
+    // gpt-6-luna: `{} \nassistant to=final {"newStories": …}`): keep only
+    // the outermost object, the parser takes raw JSON only.
+    const start = raw.indexOf('{');
+    const end = raw.lastIndexOf('}');
+    const text = start >= 0 && end > start ? raw.slice(start, end + 1) : raw;
+    const proposal = parseGroupingResponse(text);
+    return {
+      proposal,
+      finishReason: choice?.finish_reason ?? null,
+      inputTokens: data.usage?.prompt_tokens ?? 0,
+      outputTokens: data.usage?.completion_tokens ?? 0,
+      costUsd: typeof data.usage?.cost === 'number' ? data.usage.cost : null,
+      // Forensics for the unparseable-failure mode (issue #41): keep the
+      // head of what the model actually sent.
+      ...(proposal == null ? { rawSnippet: raw.slice(0, 400) } : {}),
+    };
+  };
   return {
     spec: `openrouter/${id}`,
     label,
@@ -137,51 +199,20 @@ function openRouterGroupingModel(
         // budget — a reasoning model burns latency and output tokens on it.
         reasoning: { enabled: false },
       };
-      const response = await fetch(
-        'https://openrouter.ai/api/v1/chat/completions',
-        {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(body),
-          signal: AbortSignal.timeout(TIMEOUT_MS),
-        },
-      );
-      if (!response.ok) {
-        const text = await response.text();
-        if (RETRYABLE_STATUS.has(response.status)) {
-          throw Object.assign(
-            new Error(
-              `${label} HTTP ${response.status}: ${text.slice(0, 200)}`,
-            ),
-            { retryable: true },
-          );
+      try {
+        return await call(body);
+      } catch (error) {
+        // Some endpoints (e.g. z-ai/glm-5.3-flash) mandate reasoning and
+        // reject `reasoning: { enabled: false }` with HTTP 400: retry once
+        // without the field, so any OpenRouter model runs without
+        // per-model config.
+        const e = error as Error & { status?: number; text?: string };
+        if (e.status === 400 && e.text != null && /reasoning/i.test(e.text)) {
+          const { reasoning: _omitted, ...withoutReasoning } = body;
+          return call(withoutReasoning);
         }
-        throw new Error(
-          `${label} HTTP ${response.status}: ${text.slice(0, 200)}`,
-        );
+        throw error;
       }
-      const data = (await response.json()) as {
-        choices?: { message?: { content?: string } }[];
-        usage?: {
-          prompt_tokens?: number;
-          completion_tokens?: number;
-          cost?: number;
-        };
-      };
-      const text = (data.choices?.[0]?.message?.content ?? '')
-        // Some models wrap JSON in code fences even under a response_format:
-        // strip them, the parser takes raw JSON only.
-        .replace(/^```(?:json)?\s*/u, '')
-        .replace(/\s*```$/u, '');
-      return {
-        proposal: parseGroupingResponse(text),
-        inputTokens: data.usage?.prompt_tokens ?? 0,
-        outputTokens: data.usage?.completion_tokens ?? 0,
-        costUsd: typeof data.usage?.cost === 'number' ? data.usage.cost : null,
-      };
     },
   };
 }
