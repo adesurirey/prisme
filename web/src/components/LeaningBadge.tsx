@@ -8,15 +8,19 @@ import { LEANING_LABELS } from '@prisme/domain';
 export default function LeaningBadge({
   leaning,
   labelClass = 'text-muted',
+  sizeClass = 'text-[13px]',
 }: {
   leaning: Leaning;
   /** Override for the label color, e.g. `text-ink` where the legend
    *  must distinguish the leaning (meaning) from the count (metadata). */
   labelClass?: string;
+  /** Override for the size, e.g. `text-[16px]` where the badge titles
+   *  a list and must match that list's body text. */
+  sizeClass?: string;
 }) {
   return (
     <span
-      className={`inline-flex items-center gap-1.5 text-[13px] ${labelClass}`}
+      className={`inline-flex items-center gap-1.5 ${sizeClass} ${labelClass}`}
     >
       <span
         aria-hidden="true"

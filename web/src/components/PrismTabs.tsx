@@ -58,7 +58,7 @@ export default function PrismTabs(props: {
               role="tab"
               aria-selected={selected}
               onClick={() => setActive(key)}
-              className={`px-3 py-1.5 text-[13px] transition-colors ${
+              className={`px-3 py-1.5 text-[16px] transition-colors ${
                 selected
                   ? 'border-b border-ink font-medium text-ink'
                   : 'border-b border-transparent text-muted hover:text-ink'
@@ -75,7 +75,7 @@ export default function PrismTabs(props: {
           <div key={key} role="tabpanel" hidden={!selected} className="pt-4">
             {key === 'differences' ? (
               differences ? (
-                <p className="text-[14px] leading-relaxed text-ink">
+                <p className="text-[16px] leading-relaxed text-ink">
                   {differences}
                 </p>
               ) : (
@@ -88,7 +88,7 @@ export default function PrismTabs(props: {
                 Non couvert par {LEANING_ARTICLES[key]}
               </p>
             ) : bullets(key) ? (
-              <ul className="flex list-disc flex-col gap-1.5 pl-5 text-[14px] leading-relaxed text-ink">
+              <ul className="flex list-disc flex-col gap-1.5 pl-5 text-[16px] leading-relaxed text-ink">
                 {bullets(key)!.map((bullet) => (
                   <li key={bullet}>{bullet}</li>
                 ))}

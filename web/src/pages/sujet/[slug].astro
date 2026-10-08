@@ -138,7 +138,7 @@ const description =
               {SECTION_LABELS[story.section]}
             </p>
           )}
-          <h1 class="text-[24px] font-semibold leading-snug tracking-[-0.02em]">
+          <h1 class="text-[28px] font-semibold leading-snug tracking-[-0.02em]">
             {story.title}
           </h1>
           <p class="mt-4 text-[13px] text-muted">
@@ -173,7 +173,7 @@ const description =
             {SECTION_LABELS[story.section]}
           </p>
         )}
-        <h1 class="text-[24px] font-semibold leading-snug tracking-[-0.02em]">
+        <h1 class="text-[28px] font-semibold leading-snug tracking-[-0.02em]">
           {story.title}
         </h1>
         <p class="mt-4 text-[13px] text-muted">
@@ -219,9 +219,9 @@ const description =
       visible.map(({ leaning, head, followUps }) => (
         <section class="mt-10">
           {leaning && (
-            <h2 class="mb-1 flex items-center gap-2.5 border-b border-line pb-2">
-              <LeaningBadge leaning={leaning} />
-              <span class="text-[12px] text-muted">
+            <h2 class="mb-1 flex items-center gap-2.5 border-b border-line pb-2 text-[16px]">
+              <LeaningBadge leaning={leaning} sizeClass="text-[16px]" />
+              <span class="text-[16px] text-muted">
                 {counts[leaning]} média{counts[leaning] > 1 ? 's' : ''}
               </span>
             </h2>

@@ -45,7 +45,7 @@ export default function StoryCard({
               {SECTION_LABELS[story.section]}
             </p>
           )}
-          <h2 className="text-[15px] font-medium leading-snug tracking-[-0.01em]">
+          <h2 className="text-[16px] font-medium leading-snug tracking-[-0.01em]">
             {story.title}
           </h2>
           <CoverageMeta
