@@ -387,8 +387,10 @@ export async function groupStories(
     // Before a proposed new Story keeps its seed, the seed gets the same
     // Jev Membership question a merge gets — cross-build candidates first
     // (an existing Story beats a new twin), then the surviving earlier
-    // seeds of this build, both in deterministic order. A yes redirects the
-    // seed into that Story: the proposed Story receives no seed and is
+    // seeds of this build — each candidate filtered to a token overlap with
+    // the seed first, so unrelated proposals never spend the check budget
+    // (a fresh build can propose hundreds of new Stories). A yes redirects
+    // the seed into that Story: the proposed Story receives no seed and is
     // dropped before it can publish, and its further members are
     // re-targeted to the absorbing Story. Guard checks spend the shared
     // check budget first: starving a merge splits, which self-heals on the
@@ -399,10 +401,15 @@ export async function groupStories(
     if (clients.membership) {
       const live = liveSorted();
       const keyOrder = proposal.newStories.map((ns) => ns.key);
+      const seedTokensOf = new Map<string, Set<string>>();
+      const seedHeadlineOf = new Map<string, string>();
       for (const key of keyOrder) {
         const members = keyMembers.get(key);
         if (members == null || members.length === 0) continue;
         const seed = members[0]!;
+        const seedTokens = tokens(seed.headline);
+        seedTokensOf.set(key, seedTokens);
+        seedHeadlineOf.set(key, seed.headline);
         const ask: { target: string; title: string; section?: Section }[] = [];
         for (const candidate of seedCandidates(seed, live))
           ask.push({
@@ -415,12 +422,14 @@ export async function groupStories(
           // An absorbed key's seed already lives in its absorber; the
           // absorber's own story is among the cross-build candidates.
           if (absorbedInto.has(earlier)) continue;
-          const earlierMembers = keyMembers.get(earlier);
-          if (earlierMembers?.length)
-            ask.push({
-              target: `key:${earlier}`,
-              title: earlierMembers[0]!.headline,
-            });
+          const earlierHeadline = seedHeadlineOf.get(earlier);
+          const earlierTokens = seedTokensOf.get(earlier);
+          if (
+            earlierHeadline != null &&
+            earlierTokens != null &&
+            overlap(seedTokens, earlierTokens) > 0
+          )
+            ask.push({ target: `key:${earlier}`, title: earlierHeadline });
         }
         for (const candidate of ask) {
           if (checksUsed >= MAX_MEMBERSHIP_CHECKS) break;
