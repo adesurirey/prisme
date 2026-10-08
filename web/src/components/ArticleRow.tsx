@@ -1,15 +1,14 @@
 import type { Article, Outlet } from '@prisme/domain';
 import { formatArticleDate } from '../article-date';
-import PaywallBadge from './PaywallBadge';
 
 /**
  * One Article's text column inside the clickable Article card (issue #27):
  * the headline is the card's title — it must read as the main element, ahead
  * of the Outlet name, which sits in the muted meta line below with the
- * build-time Paris date and, next to them, the paywall badge. The headline
- * is omitted when it repeats the Story title (split Stories take the
- * founding headline; showing it twice adds nothing). The link, hover
- * surface and image live on the card itself — see ArticleList.
+ * build-time Paris date. The headline is omitted when it repeats the Story
+ * title (split Stories take the founding headline; showing it twice adds
+ * nothing). The link, hover surface and image live on the card itself —
+ * see ArticleList; the paywall notice is a hover chip on the image.
  */
 export default function ArticleRow({
   article,
@@ -37,7 +36,6 @@ export default function ArticleRow({
       >
         <span>{name}</span>
         {date && <span>{date}</span>}
-        {outlet && <PaywallBadge paywall={outlet.paywall} />}
       </p>
     </div>
   );

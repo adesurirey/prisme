@@ -1,6 +1,7 @@
 import type { Article, Outlet } from '@prisme/domain';
 import { useId, useState } from 'react';
 import ArticleRow from './ArticleRow';
+import PaywallBadge from './PaywallBadge';
 import StoryImage from './StoryImage';
 
 /**
@@ -119,13 +120,16 @@ function List({
                 headline={headline}
                 outlet={outlet}
               />
-              <div className="shrink-0 self-center">
+              <div className="relative shrink-0 self-center">
                 <StoryImage
                   article={article}
                   outlet={outlet}
                   className="h-14 w-24 rounded-md transition-transform duration-300 ease-out group-hover/article:scale-[1.04]"
                   sizes="96px"
                 />
+                {outlet && (
+                  <PaywallBadge paywall={outlet.paywall} variant="chip" />
+                )}
               </div>
             </a>
           </li>
