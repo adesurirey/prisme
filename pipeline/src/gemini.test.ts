@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
   geminiModel,
   parseGroupingResponse,
@@ -156,14 +156,16 @@ describe('geminiModel failure policy (issue #40)', () => {
     };
   }
 
+  afterEach(() => {
+    vi.unstubAllGlobals();
+    sleeps.length = 0;
+  });
+
   const sleeps: number[] = [];
   const noSleep = async (ms: number): Promise<void> => {
     sleeps.push(ms);
   };
-  const model = () => {
-    sleeps.length = 0;
-    return geminiModel('test-key', noSleep);
-  };
+  const model = () => geminiModel('test-key', noSleep);
 
   it('a 429 waits the ~45 s quota backoff once, then succeeds', async () => {
     const fetchCalls = stubFetch([
