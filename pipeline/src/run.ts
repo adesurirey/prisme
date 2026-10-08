@@ -35,6 +35,16 @@ const CLASSIFICATIONS_PATH = new URL('classifications.json', DATA_DIR);
 const STORIES_DIR = new URL('stories/', DATA_DIR);
 
 export async function runEdition(): Promise<Edition> {
+  // Grouping failure policy (ADR-0005, as amended in issue #40): a missing
+  // GEMINI_API_KEY fails the build up front, before anything is collected or
+  // written — the old degrade-to-singletons path corrupted the archive
+  // permanently (membership is sticky, singletons never re-merge).
+  const grouping = groupingModelFromEnv();
+  if (grouping == null)
+    throw new Error(
+      'GEMINI_API_KEY is not set — Grouping would degrade to one-Article Stories; failing the build (ADR-0005, as amended).',
+    );
+
   const now = new Date();
   const { articles, teasers, failures } = await collect(
     outlets,
@@ -43,8 +53,9 @@ export async function runEdition(): Promise<Edition> {
   );
 
   // Incremental classification (issue #4): only new ids hit the model; the
-  // winner (Clef-flash via OpenRouter) comes from OPENROUTER_API_KEY. Without
-  // the key, Articles stay unclassified — the build must not fail on it.
+  // winner comes from OPENROUTER_API_KEY. Without the key, Articles stay
+  // unclassified — a safe, retried degrade. With the key, a build where
+  // every fresh classification fails throws (ADR-0005, as amended).
   const model = winnerModelFromEnv();
   if (model == null) {
     console.warn(
@@ -64,14 +75,9 @@ export async function runEdition(): Promise<Edition> {
   }));
 
   // Incremental grouping (issue #5): the Story files on disk are the record;
-  // only fresh Articles are assigned. Without GEMINI_API_KEY the build still
-  // succeeds — each new Article becomes its own Story (ADR-0005).
-  const grouping = groupingModelFromEnv();
-  if (grouping == null) {
-    console.warn(
-      'GEMINI_API_KEY not set — Articles are not grouped; each new Article becomes its own Story.',
-    );
-  }
+  // only fresh Articles are assigned. A failed Grouping call throws inside
+  // groupStories — nothing is written, and the build fails (ADR-0005, as
+  // amended in issue #40).
   const existing = await loadStories(STORIES_DIR);
   // Experiment lever: PRISME_MAX_CHECKS=all lifts the per-build Membership
   // budget; a number overrides the default (ADR-0005's 20).
@@ -118,7 +124,8 @@ export async function runEdition(): Promise<Edition> {
   // live Edition Story that gained Articles since its last Summaries run —
   // unchanged Stories make zero calls. Only Edition Stories are summarized;
   // a Story below the cut picks its Summaries up when it returns. Without
-  // GEMINI_API_KEY the build still succeeds — Story pages just lack tabs.
+  // GEMINI_API_KEY Summaries degrade (cosmetic; a later build picks the Story
+  // up) — the build still succeeds.
   const summaries = summariesModelFromEnv();
   if (summaries == null) {
     console.warn('GEMINI_API_KEY not set — no Summaries this build.');

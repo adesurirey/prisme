@@ -45,7 +45,9 @@ function fakeGrouping(
     model: 'fake',
     async group(input) {
       calls.push({ input });
-      return proposal;
+      // A null cast: only the throw-path tests use it (issue #40 made a
+      // failed Grouping call fail the build).
+      return proposal as import('./gemini.ts').GroupingProposal;
     },
   };
 }
@@ -84,17 +86,10 @@ function input(overrides: {
 }
 
 describe('groupStories', () => {
-  it('an Article no Story claims, with no Grouping model, becomes its own Story', async () => {
-    const outcome = await groupStories(input({ articles: [article('a1')] }));
-    expect(outcome.stories).toHaveLength(1);
-    const s = outcome.stories[0]!;
-    expect(s.id).toBe('000000000001');
-    expect(s.title).toBe('Titre a1');
-    expect(s.slug).toBe('titre-a1');
-    expect(s.createdAt).toBe(NOW.toISOString());
-    expect(s.articles.map((a) => a.id)).toEqual(['a1']);
-    expect(outcome.changed.has('titre-a1')).toBe(true);
-    expect(outcome.live.map((s) => s.id)).toEqual(['000000000001']);
+  it('a missing Grouping model fails the build; no Story files are written (issue #40)', async () => {
+    await expect(
+      groupStories(input({ articles: [article('a1')] })),
+    ).rejects.toThrow(/GEMINI_API_KEY/);
   });
 
   it('an assignment merges the Article into the live Story when the Membership check says yes', async () => {
@@ -174,32 +169,62 @@ describe('groupStories', () => {
     expect(outcome.live.map((s) => s.id)).toEqual([solo.id, 's1']);
   });
 
-  it('a low-confidence match splits when the check fails or is missing', async () => {
+  it('a build where every Membership check fails (a null answer, or a missing checker) fails (issue #40)', async () => {
     const existing = [story({ articles: [article('a0')] })];
     for (const membership of [fakeMembership(null), null]) {
-      const outcome = await groupStories(
-        input({
-          articles: [article('a0'), article('a1')],
-          existing,
-          clients: {
-            grouping: fakeGrouping({
-              newStories: [],
-              assignments: [
-                { articleId: 'a1', storyId: 's1', confidence: 0.5 },
-              ],
-              titleUpdates: [],
-            }),
-            membership,
-          },
-        }),
-      );
-      expect(
-        outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
-      ).toEqual(['a0']);
-      expect(
-        outcome.stories.find((s) => s.id !== 's1')!.articles.map((a) => a.id),
-      ).toEqual(['a1']);
+      await expect(
+        groupStories(
+          input({
+            articles: [article('a0'), article('a1')],
+            existing,
+            clients: {
+              grouping: fakeGrouping({
+                newStories: [],
+                assignments: [
+                  { articleId: 'a1', storyId: 's1', confidence: 0.5 },
+                ],
+                titleUpdates: [],
+              }),
+              membership,
+            },
+          }),
+        ),
+      ).rejects.toThrow(/all \d+ checks failed/);
     }
+  });
+
+  it('an isolated failed Membership check keeps splitting instead of failing the build', async () => {
+    const existing = [story({ articles: [article('a0')] })];
+    const outcome = await groupStories(
+      input({
+        articles: [article('a0'), article('a1'), article('a2')],
+        existing,
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [
+              { articleId: 'a1', storyId: 's1', confidence: 0.5 },
+              { articleId: 'a2', storyId: 's1', confidence: 0.5 },
+            ],
+            titleUpdates: [],
+          }),
+          // One check throws, the other answers no: some checks answered,
+          // so the build proceeds and both Articles split.
+          membership: {
+            label: 'FakeJev',
+            belongs: async (_story, art) => {
+              if (art.headline.includes('a1'))
+                throw new Error('FakeJev HTTP 503: down');
+              return false;
+            },
+          },
+        },
+      }),
+    );
+    expect(
+      outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
+    ).toEqual(['a0']);
+    expect(outcome.stories.filter((s) => s.id !== 's1')).toHaveLength(2);
   });
 
   it('even a confident match goes through the Membership check', async () => {
@@ -250,66 +275,62 @@ describe('groupStories', () => {
     expect(outcome.stories).toHaveLength(1 + 5); // s1 + 5 splits
   });
 
-  it('a failed Grouping call degrades to one-Article Stories', async () => {
-    const outcome = await groupStories(
-      input({
-        articles: [article('a1'), article('a2')],
-        clients: { grouping: fakeGrouping(null), membership: null },
-      }),
-    );
-    expect(outcome.stories.map((s) => s.title).sort()).toEqual([
-      'Titre a1',
-      'Titre a2',
-    ]);
+  it('a failed Grouping call (a null proposal) fails the build; no Story files are written (issue #40)', async () => {
+    await expect(
+      groupStories(
+        input({
+          articles: [article('a1'), article('a2')],
+          clients: { grouping: fakeGrouping(null), membership: null },
+        }),
+      ),
+    ).rejects.toThrow(/no proposal/);
   });
 
-  it('a Grouping model that throws degrades instead of failing the build', async () => {
-    const outcome = await groupStories(
-      input({
-        articles: [article('a1')],
-        clients: {
-          grouping: {
-            label: 'Fake',
-            model: 'fake',
-            group: async () => {
-              throw new Error('Fake HTTP 400: config error');
+  it('a Grouping model that throws fails the build (issue #40)', async () => {
+    await expect(
+      groupStories(
+        input({
+          articles: [article('a1')],
+          clients: {
+            grouping: {
+              label: 'Fake',
+              model: 'fake',
+              group: async () => {
+                throw new Error('Fake HTTP 400: config error');
+              },
             },
+            membership: null,
           },
-          membership: null,
-        },
-      }),
-    );
-    expect(outcome.stories).toHaveLength(1);
-    expect(outcome.stories[0]!.articles.map((a) => a.id)).toEqual(['a1']);
+        }),
+      ),
+    ).rejects.toThrow('Fake HTTP 400: config error');
   });
 
-  it('a Membership check that throws refuses the merge instead of failing the build', async () => {
+  it('a build where the only Membership check throws fails (issue #40)', async () => {
     const existing = [story({ articles: [article('a0')] })];
-    const outcome = await groupStories(
-      input({
-        articles: [article('a0'), article('a1')],
-        existing,
-        clients: {
-          grouping: fakeGrouping({
-            newStories: [],
-            assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.5 }],
-            titleUpdates: [],
-          }),
-          membership: {
-            label: 'FakeJev',
-            belongs: async () => {
-              throw new Error('FakeJev HTTP 401: bad key');
+    await expect(
+      groupStories(
+        input({
+          articles: [article('a0'), article('a1')],
+          existing,
+          clients: {
+            grouping: fakeGrouping({
+              newStories: [],
+              assignments: [
+                { articleId: 'a1', storyId: 's1', confidence: 0.5 },
+              ],
+              titleUpdates: [],
+            }),
+            membership: {
+              label: 'FakeJev',
+              belongs: async () => {
+                throw new Error('FakeJev HTTP 401: bad key');
+              },
             },
           },
-        },
-      }),
-    );
-    expect(
-      outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
-    ).toEqual(['a0']);
-    expect(
-      outcome.stories.find((s) => s.id !== 's1')!.articles.map((a) => a.id),
-    ).toEqual(['a1']);
+        }),
+      ),
+    ).rejects.toThrow('all 1 checks failed');
   });
 
   it('an Article assigned to an unknown Story splits', async () => {
@@ -432,28 +453,26 @@ describe('groupStories', () => {
     expect(kept.articles.map((a) => a.id)).toEqual(['a1']);
   });
 
-  it('a member of a new Story splits when the checker is missing or fails', async () => {
+  it('a member of a new Story: a failed check fails the build when every check fails (issue #40)', async () => {
     for (const membership of [null, fakeMembership(null)]) {
-      const outcome = await groupStories(
-        input({
-          articles: [article('a1'), article('a2')],
-          clients: {
-            grouping: fakeGrouping({
-              newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
-              assignments: [
-                { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
-                { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
-              ],
-              titleUpdates: [],
-            }),
-            membership,
-          },
-        }),
-      );
-      expect(outcome.stories.map((s) => s.title)).toEqual([
-        'Le Sénat adopte le budget',
-        'Titre a2',
-      ]);
+      await expect(
+        groupStories(
+          input({
+            articles: [article('a1'), article('a2')],
+            clients: {
+              grouping: fakeGrouping({
+                newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
+                assignments: [
+                  { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+                  { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+                ],
+                titleUpdates: [],
+              }),
+              membership,
+            },
+          }),
+        ),
+      ).rejects.toThrow(/all \d+ checks failed/);
     }
   });
 
@@ -494,7 +513,7 @@ describe('groupStories', () => {
             ],
             titleUpdates: [],
           }),
-          membership: null,
+          membership: fakeMembership(false),
         },
       }),
     );
@@ -518,7 +537,7 @@ describe('groupStories', () => {
             ],
             titleUpdates: [],
           }),
-          membership: null,
+          membership: fakeMembership(false),
         },
       }),
     );
@@ -549,7 +568,7 @@ describe('groupStories', () => {
             ],
             titleUpdates: [],
           }),
-          membership: null,
+          membership: fakeMembership(false),
         },
       }),
     );
@@ -578,7 +597,7 @@ describe('groupStories', () => {
             ],
             titleUpdates: [],
           }),
-          membership: null,
+          membership: fakeMembership(false),
         },
       }),
     );
@@ -622,7 +641,7 @@ describe('groupStories', () => {
             assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.9 }],
             titleUpdates: [{ storyId: 's2', title: 'Titre changé' }],
           }),
-          membership: null,
+          membership: fakeMembership(false),
         },
       }),
     );
@@ -662,7 +681,7 @@ describe('groupStories', () => {
             },
             calls,
           ),
-          membership: null,
+          membership: fakeMembership(false),
         },
       }),
     );
@@ -728,7 +747,7 @@ describe('groupStories', () => {
             assignments: [{ articleId: 'a2', storyId: 's1', confidence: 0.9 }],
             titleUpdates: [],
           }),
-          membership: null,
+          membership: fakeMembership(false),
         },
       }),
     );
@@ -755,7 +774,7 @@ describe('groupStories', () => {
             assignments: [{ articleId: 'a1', storyId: 'sf', confidence: 0.9 }], // model must not see it
             titleUpdates: [],
           }),
-          membership: null,
+          membership: fakeMembership(false),
         },
       }),
     );

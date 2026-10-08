@@ -1,7 +1,8 @@
 # Quality gate for PRs and pushes to main: lint, typecheck, tests, and a full
-# site build. No secrets here: `pnpm edition` runs without model keys, which
-# keeps Articles unclassified and Stories ungrouped (ADR-0005) and — critically
-# — makes zero calls to the AI providers.
+# site build. No secrets here and no pipeline run: since the amended ADR-0005
+# a missing GEMINI_API_KEY fails the build, so CI exercises `pnpm edition` in
+# no workflow. The web build runs against the committed data/ (ADR-0002), the
+# same live dataset the site serves.
 name: CI
 
 on:
@@ -37,12 +38,7 @@ jobs:
 
       - run: pnpm test
 
-      # The web build needs data/ to exist. Run the pipeline without model
-      # keys first: feeds are fetched, classification/grouping/summaries are
-      # skipped by design, and no provider is contacted.
-      - run: pnpm edition
-        env:
-          OPENROUTER_API_KEY: ''
-          GEMINI_API_KEY: ''
-
+      # The web build needs data/ to exist; it uses the committed edition
+      # (ADR-0002). The pipeline itself is only exercised by the scheduled
+      # edition.yml workflow, which holds the model keys.
       - run: pnpm --filter @prisme/web build

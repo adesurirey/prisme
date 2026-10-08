@@ -9,11 +9,18 @@
  * passed through untouched and never shown to the model; a later Article
  * about the same event starts a new Story.
  *
- * Failure policy (ADR-0005): a failed Grouping call — or a missing key —
- * degrades to one-Article Stories, which self-heal on the next build (they
- * are live Stories the model can merge into). A merge into an existing
+ * Failure policy (ADR-0005, as amended in issue #40): a failed Grouping
+ * call — HTTP, unparseable after retries, or a missing key — fails the
+ * build: nothing is written, the last committed Edition stays live, and a
+ * degraded build no longer writes one-Article Story files (the 2026-10-08
+ * builds showed one 429 corrupting the archive with 456 singletons that
+ * membership is sticky and never re-merge). A merge into an existing
  * Story is only allowed when a Jev Membership check says yes (up to 20
- * checks per build); a refused, capped-out or failed check splits. A new
+ * checks per build); a refused, capped-out or isolated failed check
+ * splits — but if every Membership check fails (the checker down, or a
+ * missing key with checks pending), the build fails too: checks are the
+ * only guard against permanent wrong merges, and a run where none of
+ * them answered is not a run that can be trusted to write files. A new
  * Story proposed by the Grouping model gets the same guard (issue #36):
  * its seed is checked before the Story is created — across builds against
  * the most headline-similar live Stories (a proposed singleton must not
@@ -329,6 +336,14 @@ export async function groupStories(
     merge(story, article);
   };
 
+  // Failure policy (ADR-0005, as amended): without a Grouping model the
+  // build fails instead of degrading — the degrade path wrote one-Article
+  // Story files that membership stickiness makes permanent.
+  if (clients.grouping == null)
+    throw new Error(
+      'Grouping failed: GEMINI_API_KEY is not set — the build writes no Story files (ADR-0005, as amended).',
+    );
+
   const groupingInput = {
     // Only live Stories are visible to the model; frozen ones are closed (ADR-0005).
     stories: liveSorted().map((s) => ({
@@ -343,24 +358,18 @@ export async function groupStories(
       section: a.section,
     })),
   };
-  let proposal: GroupingProposal | null = null;
-  try {
-    proposal = clients.grouping
-      ? await clients.grouping.group(groupingInput)
-      : null;
-  } catch (reason) {
-    // A thrown error (config 4xx, network) degrades exactly like a null
-    // proposal (ADR-0005): the build never fails on the free tier.
-    console.warn(
-      `Grouping failed: ${reason instanceof Error ? reason.message : reason} — degrading to one-Article Stories.`,
-    );
-  }
+  // A failed Grouping call propagates and fails the build (ADR-0005, as
+  // amended): the client has already retried — a 429 with a ~45 s backoff —
+  // and nothing has been written yet, so the last committed Edition stays
+  // live and CI goes red instead of the archive silently rotting.
+  const proposal = await clients.grouping.group(groupingInput);
 
   if (proposal == null) {
-    // Degraded path (ADR-0005): no model or failed call. Each new Article
-    // starts its own Story — a live Story the model can merge into next build.
-    for (const article of fresh) split(article);
-  } else {
+    // The client contract is to throw on failure; a null proposal from a
+    // misbehaving model is treated like one (issue #40).
+    throw new Error('Grouping failed: the model returned no proposal.');
+  }
+  {
     const keyStories = new Map<string, Story>();
     for (const ns of proposal.newStories)
       keyStories.set(ns.key, newStory(ns.title));
@@ -406,7 +415,46 @@ export async function groupStories(
     const absorbedInto = new Map<string, string>();
     const verdicts = new Map<string, boolean | null>();
     let checksUsed = 0;
-    if (clients.membership) {
+    // Every issued check is an attempt; a thrown one is also a failure. When
+    // every attempt fails — the checker is down, or missing while checks were
+    // pending — the build fails (ADR-0005, as amended): checks are the only
+    // guard against permanent wrong merges, and a run where none of them
+    // answered cannot be trusted to write files. Isolated failures keep the
+    // per-check bias: a failed check refuses the merge, which splits and
+    // self-heals on the next build.
+    let checkAttempts = 0;
+    let checkFailures = 0;
+    const belongs = async (
+      label: string,
+      story: { title: string; section?: Section },
+      article: { id: string; headline: string },
+    ): Promise<boolean | null> => {
+      if (clients.membership == null) {
+        checkAttempts++;
+        checkFailures++;
+        return null;
+      }
+      checkAttempts++;
+      try {
+        const yes = await clients.membership.belongs(
+          { title: story.title, section: story.section },
+          { headline: article.headline, teaser: teasers.get(article.id) ?? '' },
+        );
+        // An unparseable answer is a failed check too: the model answered
+        // nothing usable.
+        if (yes == null) checkFailures++;
+        return yes;
+      } catch (reason) {
+        checkFailures++;
+        console.warn(
+          `${label}: ${article.id} — ${
+            reason instanceof Error ? reason.message : reason
+          }`,
+        );
+        return null;
+      }
+    };
+    {
       const live = liveSorted();
       const keyOrder = proposal.newStories.map((ns) => ns.key);
       const seedTokensOf = new Map<string, Set<string>>();
@@ -442,24 +490,15 @@ export async function groupStories(
         for (const candidate of ask) {
           if (checksUsed >= maxChecks) break;
           checksUsed++;
-          try {
-            const yes = await clients.membership.belongs(
-              { title: candidate.title, section: candidate.section },
-              { headline: seed.headline, teaser: teasers.get(seed.id) ?? '' },
-            );
-            if (yes) {
-              absorbedInto.set(key, candidate.target);
-              verdicts.set(`${seed.id}|${candidate.target}`, true);
-              break;
-            }
-          } catch (reason) {
-            // A thrown check is a failed check: the Story stands as
-            // proposed (ADR-0005).
-            console.warn(
-              `Seed check failed: ${seed.id} → ${candidate.target} — ${
-                reason instanceof Error ? reason.message : reason
-              }`,
-            );
+          const yes = await belongs(
+            `Seed check failed: ${seed.id} → ${candidate.target}`,
+            { title: candidate.title, section: candidate.section },
+            seed,
+          );
+          if (yes) {
+            absorbedInto.set(key, candidate.target);
+            verdicts.set(`${seed.id}|${candidate.target}`, true);
+            break;
           }
         }
       }
@@ -526,7 +565,7 @@ export async function groupStories(
       if (verdicts.has(`${pair.articleId}|${pair.target}`)) continue;
       const article = fresh.find((a) => a.id === pair.articleId);
       let verdict: boolean | null = null;
-      if (article && clients.membership) {
+      if (article) {
         // New-Story checks are anchored on the seed Article: the proposed
         // title may be generic, the seed headline is the concrete event.
         const story = pair.target.startsWith('key:')
@@ -535,27 +574,24 @@ export async function groupStories(
               section: undefined,
             }
           : byId.get(pair.target);
-        if (story) {
-          try {
-            verdict = await clients.membership.belongs(
-              { title: story.title, section: story.section },
-              {
-                headline: article.headline,
-                teaser: teasers.get(article.id) ?? '',
-              },
-            );
-          } catch (reason) {
-            // A thrown check is a failed check: refuse the merge (ADR-0005).
-            console.warn(
-              `Membership check failed: ${pair.articleId} → ${pair.target} — ${
-                reason instanceof Error ? reason.message : reason
-              }`,
-            );
-          }
-        }
+        if (story)
+          verdict = await belongs(
+            `Membership check failed: ${pair.articleId} → ${pair.target}`,
+            story,
+            article,
+          );
       }
       verdicts.set(`${pair.articleId}|${pair.target}`, verdict);
     }
+
+    // Total failure (ADR-0005, as amended): when not a single Membership
+    // check answered — the checker down, or missing with checks pending —
+    // the build fails. Nothing has been written yet, and isolated failures
+    // (some checks answered) never reach this path.
+    if (checkAttempts > 0 && checkFailures === checkAttempts)
+      throw new Error(
+        `Membership failed: all ${checkAttempts} checks failed — the build writes no Story files.`,
+      );
 
     for (const article of fresh) {
       const assignment = assignmentOf.get(article.id);
@@ -638,7 +674,7 @@ export async function groupStories(
   // Within-build slug collisions are re-resolved by the settled rule (Q9):
   // across builds the existing file wins, within a build the smallest Story
   // id keeps the bare slug — deterministic from ids, never by proposal order
-  // (the degrade path splits in feed order, so it needs this too). Only the
+  // (the split path orders by feed order, so it needs this too). Only the
   // bare slug is contested; suffixes are id-specific. Story titles are
   // already final here, so the base is recomputed from them.
   const byBase = new Map<string, Story[]>();

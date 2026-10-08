@@ -6,8 +6,11 @@
  *
  * 2.5 Flash-Lite is legacy-restricted for new projects (Google docs), so the
  * pinned model is the current Flash-Lite generation. A malformed response or
- * a retryable failure is retried once, then null: the caller degrades to
- * one-Article Stories (ADR-0005 — the build never fails on the free tier).
+ * a retryable failure is retried once — a 429 waits ~45 s first, because
+ * per-minute free-tier quotas reset on that timescale (issue #40) — and then
+ * throws: a failed Grouping call fails the build (ADR-0005, as amended),
+ * because the old degrade-to-singletons path corrupted the archive
+ * permanently (456 singletons from one 429 on 2026-10-08).
  */
 import type { Section } from '@prisme/domain';
 import { RETRYABLE_STATUS } from './http.ts';
@@ -22,11 +25,11 @@ export const GROUPING = {
 export interface GroupingModel {
   label: string;
   model: string;
-  /** One call per build; null after retry means degraded (ADR-0005). */
+  /** One call per build; throws on failure — the caller fails the build. */
   group(input: {
     stories: GroupingInputStory[];
     articles: GroupingInputArticle[];
-  }): Promise<GroupingProposal | null>;
+  }): Promise<GroupingProposal>;
 }
 
 /** One live Story as fed to the Grouping model: title and Section only. */
@@ -97,7 +100,7 @@ const GROUPING_SCHEMA = {
 /**
  * Extract and validate the proposal. Invalid items are dropped (the caller
  * splits their Articles); a structurally broken response returns null —
- * the caller retries once, then degrades.
+ * the caller retries once, then throws (the build fails).
  */
 export function parseGroupingResponse(text: string): GroupingProposal | null {
   let data: unknown;
@@ -211,7 +214,24 @@ export function groupingPrompt(input: {
 
 const RETRYABLE = RETRYABLE_STATUS;
 
-function geminiModel(apiKey: string): GroupingModel {
+/**
+ * Per-minute free-tier quotas (429) reset on a 30–60 s timescale, so the
+ * single retry waits long enough to absorb one before giving up (issue #40).
+ * Grouping makes one call per build — the wait is affordable.
+ */
+export const RATE_LIMIT_BACKOFF_MS = 45_000;
+/** Other retryable hiccups (5xx, network) keep the short retry pause. */
+const PLAIN_RETRY_MS = 1_000;
+
+/** Injectable for tests; production sleeps for real. */
+export type Sleep = (ms: number) => Promise<void>;
+const defaultSleep: Sleep = (ms) =>
+  new Promise((resolve) => setTimeout(resolve, ms));
+
+export function geminiModel(
+  apiKey: string,
+  sleep: Sleep = defaultSleep,
+): GroupingModel {
   return {
     label: GROUPING.label,
     model: GROUPING.model,
@@ -244,10 +264,16 @@ function geminiModel(apiKey: string): GroupingModel {
           if (!response.ok) {
             const text = await response.text();
             if (RETRYABLE.has(response.status) && attempt === 1) {
-              await new Promise((resolve) => setTimeout(resolve, 1000));
+              await sleep(
+                response.status === 429
+                  ? RATE_LIMIT_BACKOFF_MS
+                  : PLAIN_RETRY_MS,
+              );
               continue;
             }
             // 401/403 and the like are config errors: fail fast, no retry.
+            // Anything still failing after the retry throws: a failed
+            // Grouping call fails the build (ADR-0005, as amended).
             const error = new Error(
               `${GROUPING.label} HTTP ${response.status}: ${text.slice(0, 200)}`,
             );
@@ -268,33 +294,41 @@ function geminiModel(apiKey: string): GroupingModel {
               );
               continue;
             }
-            // Silent null = the caller's degraded path with no log line: say
-            // why here, or a full-singleton build is undiagnosable.
-            console.warn(
-              `${GROUPING.label}: unparseable response after retry (chars=${text.length}) — degrading to one-Article Stories`,
+            // Unparseable after the retry fails the build (ADR-0005, as
+            // amended): a silent degrade once corrupted the archive with
+            // singletons that never re-merge.
+            throw new Error(
+              `${GROUPING.label}: unparseable response after retry (chars=${text.length})`,
             );
-            return null;
           }
           return parsed;
         } catch (error) {
           const e = error as Error & { fatal?: boolean };
-          if (attempt === 2 || e.fatal) {
-            if (e instanceof Error && !e.message.startsWith(GROUPING.label)) {
-              throw new Error(`${GROUPING.label} ${e.message}`);
-            }
-            throw error;
+          if (e.fatal) throw error;
+          if (attempt === 1) {
+            // A network hiccup gets the same one retry as a 5xx.
+            await sleep(PLAIN_RETRY_MS);
+            continue;
           }
-          await new Promise((resolve) => setTimeout(resolve, 1000));
+          if (
+            error instanceof Error &&
+            !error.message.startsWith(GROUPING.label)
+          ) {
+            throw new Error(`${GROUPING.label} ${error.message}`);
+          }
+          throw error;
         }
       }
-      return null;
+      // Unreachable: both attempts either return or throw.
+      throw new Error(`${GROUPING.label}: exhausted retries`);
     },
   };
 }
 
 /**
  * The production grouping model, from GEMINI_API_KEY. Null when the key is
- * absent — the caller degrades to one-Article Stories (never fails the build).
+ * absent — the caller fails the build (ADR-0005, as amended: a degraded
+ * grouping corrupts the archive with singletons that never re-merge).
  */
 export function groupingModelFromEnv(): GroupingModel | null {
   if (!process.env.GEMINI_API_KEY) return null;
