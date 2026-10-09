@@ -18,21 +18,13 @@ import { updateFrontPageHistory } from './frontpage.ts';
 import { groupingModelFromEnv } from './gemini.ts';
 import { groupStories, loadStories } from './grouping.ts';
 import { fetchFeed } from './http.ts';
+import { CLASSIFICATIONS_PATH, DATA_DIR, STORIES_DIR } from './paths.ts';
 import { EDITION_SIZE, rankStories } from './ranking.ts';
 import {
   SUMMARIES_PROMPT_VERSION,
   summariesModelFromEnv,
   updateSummaries,
 } from './summarize.ts';
-
-/**
- * data/ lives at the repo root: resolving `../../data/` from this file
- * (pipeline/src/) points at the repo root, so the pipeline runs the same from
- * anywhere (root, CI, editor).
- */
-const DATA_DIR = new URL('../../data/', import.meta.url);
-const CLASSIFICATIONS_PATH = new URL('classifications.json', DATA_DIR);
-const STORIES_DIR = new URL('stories/', DATA_DIR);
 
 export async function runEdition(): Promise<Edition> {
   // Grouping failure policy (ADR-0005, as amended in issue #40): a missing
