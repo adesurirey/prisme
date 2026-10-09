@@ -43,17 +43,6 @@ export function isTotalFailure(attempts: number, failures: number): boolean {
   return attempts > 0 && failures === attempts;
 }
 
-/**
- * The per-build Membership budget: PRISME_MAX_CHECKS=all lifts it (an
- * experiment lever), a number overrides the default (MAX_MEMBERSHIP_CHECKS),
- * junk is ignored.
- */
-function maxChecksFromEnv(raw: string | undefined): number | undefined {
-  if (raw == null) return undefined;
-  if (raw === 'all') return Infinity;
-  return Number.parseInt(raw, 10) || undefined;
-}
-
 export interface ModelPolicy {
   /** Live: a missing key already failed the build in resolveModels. */
   grouping: GroupingModel;
@@ -67,7 +56,6 @@ export interface ModelPolicy {
   decision: { model: DecisionModel | null; note?: string };
   /** Live: shares GEMINI_API_KEY with Grouping, which already failed the build. */
   summaries: SummaryModel;
-  maxChecks: number | undefined;
 }
 
 /**
@@ -98,6 +86,5 @@ export function resolveModels(): ModelPolicy {
     membership,
     decision,
     summaries,
-    maxChecks: maxChecksFromEnv(process.env.PRISME_MAX_CHECKS),
   };
 }

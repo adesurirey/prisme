@@ -253,7 +253,7 @@ describe('groupStories', () => {
     expect(checkCalls).toEqual([{ story: 'Story un', article: 'Titre a1' }]);
   });
 
-  it('caps Membership checks at 20 per build; the rest split', async () => {
+  it('every candidate pair is checked exactly once — no per-build budget (ADR-0012)', async () => {
     const existing = [story({ articles: [article('a0')] })];
     const fresh = Array.from({ length: 25 }, (_, i) => article(`a${i + 1}`));
     const checkCalls: { story?: string; article?: string }[] = [];
@@ -275,10 +275,11 @@ describe('groupStories', () => {
         },
       }),
     );
-    expect(checkCalls).toHaveLength(20);
+    expect(checkCalls).toHaveLength(25);
+    expect(new Set(checkCalls.map((c) => c.article)).size).toBe(25);
     const s1 = outcome.stories.find((s) => s.id === 's1')!;
-    expect(s1.articles).toHaveLength(21); // a0 + 20 checked merges
-    expect(outcome.stories).toHaveLength(1 + 5); // s1 + 5 splits
+    expect(s1.articles).toHaveLength(26); // a0 + all 25 checked merges
+    expect(outcome.stories).toHaveLength(1); // no splits: nothing starved
   });
 
   it('a failed Grouping call (a null proposal) fails the build; no Story files are written (issue #40)', async () => {
@@ -1111,7 +1112,7 @@ describe('groupStories', () => {
       ]);
     });
 
-    it('seed guard checks spend the shared 20-check budget first; merges get the rest', async () => {
+    it('every merge pair is checked — no per-build budget (ADR-0012)', async () => {
       const checkCalls: { story?: string; article?: string }[] = [];
       const existing = [
         story({
@@ -1148,11 +1149,11 @@ describe('groupStories', () => {
           },
         }),
       );
-      // 1 seed-guard check + 19 of the 21 merge checks = the 20-check cap.
-      expect(checkCalls).toHaveLength(20);
+      // 1 seed-guard check + all 21 merge checks — nothing is starved.
+      expect(checkCalls).toHaveLength(22);
       const s1 = outcome.stories.find((s) => s.id === 's1')!;
-      expect(s1.articles).toHaveLength(21); // a0 + 19 checked merges + the absorbed seed
-      expect(outcome.stories).toHaveLength(3); // s1 + 2 splits; the proposed Story was absorbed
+      expect(s1.articles).toHaveLength(23); // a0 + 21 checked merges + the absorbed seed
+      expect(outcome.stories).toHaveLength(1); // no splits: nothing starved
     });
   });
 });

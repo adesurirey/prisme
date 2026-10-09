@@ -58,17 +58,12 @@ export async function runEdition(): Promise<Edition> {
   // groupStories — nothing is written, and the build fails (ADR-0005, as
   // amended in issue #40).
   const existing = await loadStories(STORIES_DIR);
-  // Experiment lever: PRISME_MAX_CHECKS=all lifts the per-build Membership
-  // budget; a number overrides the default (ADR-0005's 20). The Membership
-  // checker is either live or the declared fail-when-pending adapter.
-  const maxChecks = models.maxChecks;
   const outcome = await groupStories({
     articles: kept,
     teasers,
     existing,
     now,
     makeId: () => randomBytes(6).toString('hex'),
-    maxChecks,
     clients: { grouping: models.grouping, membership: models.membership },
   });
 

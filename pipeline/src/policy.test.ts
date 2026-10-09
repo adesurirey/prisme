@@ -27,7 +27,6 @@ describe('resolveModels', () => {
     expect(models.decision.model).toBeTruthy();
     expect(models.decision.note).toBeUndefined();
     expect(models.summaries).toBeTruthy();
-    expect(models.maxChecks).toBeUndefined();
   });
 
   it('without OPENROUTER_API_KEY the Decision model degrades and the Membership check is the declared fail-when-pending adapter', () => {
@@ -39,17 +38,6 @@ describe('resolveModels', () => {
     expect(models.membership.label).toBe(missingMembershipChecker().label);
     expect(models.grouping).toBeTruthy();
     expect(models.summaries).toBeTruthy();
-  });
-
-  it('PRISME_MAX_CHECKS=all lifts the budget; a number overrides the default; junk is ignored', () => {
-    vi.stubEnv('GEMINI_API_KEY', 'g');
-    vi.stubEnv('OPENROUTER_API_KEY', 'o');
-    vi.stubEnv('PRISME_MAX_CHECKS', 'all');
-    expect(resolveModels().maxChecks).toBe(Infinity);
-    vi.stubEnv('PRISME_MAX_CHECKS', '5');
-    expect(resolveModels().maxChecks).toBe(5);
-    vi.stubEnv('PRISME_MAX_CHECKS', 'bogus');
-    expect(resolveModels().maxChecks).toBeUndefined();
   });
 });
 
