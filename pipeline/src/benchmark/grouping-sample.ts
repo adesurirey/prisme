@@ -199,6 +199,25 @@ export function stratify(
 }
 
 async function main() {
+  // Resampling wipes verdicts: refuse to overwrite an already-labeled
+  // pairs.json unless --force. The committed labels file survives either
+  // way, but the working copy is the only place the verdicts map to
+  // headlines, so losing it means re-labeling.
+  const force = process.argv.includes('--force');
+  try {
+    const existing = JSON.parse(
+      await readFile(new URL('pairs.json', LABELS_DIR), 'utf8'),
+    ) as { pairs?: { verdict: string | null }[] };
+    if (!force && existing.pairs?.some((p) => p.verdict != null)) {
+      console.error(
+        '.benchmark/grouping/labels/pairs.json is already labeled — resampling would wipe the verdicts. Pass --force to resample anyway.',
+      );
+      process.exitCode = 1;
+      return;
+    }
+  } catch {
+    // No existing labels — proceed.
+  }
   const files = (await readdir(RESULTS_DIR)).filter((f) => f.endsWith('.json'));
   const records = await Promise.all(
     files.map(
