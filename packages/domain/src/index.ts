@@ -195,3 +195,4 @@ export * from './coverage.ts';
 // verified feeds and TDM reservations. See docs/research/outlet-leanings.md.
 export * from './outlets.ts';
 export * from './split-per-outlet.ts';
+export * from './story-file.ts';

@@ -29,18 +29,3 @@ export function storySection(
   }
   return best?.section;
 }
-
-/**
- * Stable, readable slug for /sujet/<slug>: ASCII, lowercase, dashed.
- * Collision fallback appends a short, stable Story id (see grouping.ts).
- */
-export function slugify(title: string): string {
-  return title
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 64)
-    .replace(/-+$/g, '');
-}

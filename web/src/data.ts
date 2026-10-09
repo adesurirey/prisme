@@ -1,7 +1,7 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import type { Edition, Outlet, Story } from '@prisme/domain';
-import { publicOutlets } from '@prisme/domain';
+import { parseStoryFile, publicOutlets } from '@prisme/domain';
 
 /**
  * data/ lives at the repo root (ADR-0002: the git repo is the database).
@@ -47,19 +47,9 @@ export async function loadAllStoryFiles(): Promise<Story[]> {
     const stories: Story[] = [];
     for (const name of names) {
       try {
-        const raw = JSON.parse(
-          await readFile(path.join(dir, name), 'utf8'),
-        ) as Partial<Story>;
-        if (
-          typeof raw.id === 'string' &&
-          typeof raw.slug === 'string' &&
-          typeof raw.title === 'string' &&
-          Array.isArray(raw.articles)
-        ) {
-          stories.push(raw as Story);
-        } else {
-          console.warn(`Skipping malformed story file: ${name}`);
-        }
+        const raw = JSON.parse(await readFile(path.join(dir, name), 'utf8'));
+        const story = parseStoryFile(raw, name);
+        if (story != null) stories.push(story);
       } catch {
         console.warn(`Skipping unreadable story file: ${name}`);
       }
@@ -79,7 +69,12 @@ export function loadOutlets(): Outlet[] {
 
 export async function loadStory(slug: string): Promise<Story | undefined> {
   try {
-    return JSON.parse(await readDataFile(`stories/${slug}.json`));
+    return (
+      parseStoryFile(
+        JSON.parse(await readDataFile(`stories/${slug}.json`)),
+        `${slug}.json`,
+      ) ?? undefined
+    );
   } catch {
     return undefined;
   }

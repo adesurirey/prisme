@@ -12,8 +12,7 @@
     "benchmark:grouping-grade": "tsx src/benchmark/grouping-grade.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "verify": "tsx src/verify-outlets.ts",
-    "repair": "tsx src/repair.ts"
+    "verify": "tsx src/verify-outlets.ts"
   },
   "dependencies": {
     "@prisme/domain": "workspace:*",

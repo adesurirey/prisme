@@ -14,8 +14,7 @@
     "benchmark:grouping-grade": "pnpm --filter @prisme/pipeline benchmark:grouping-grade",
     "lint": "biome check .",
     "format": "biome check --write .",
-    "prepare": "husky",
-    "repair": "pnpm --filter @prisme/pipeline repair"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.15",

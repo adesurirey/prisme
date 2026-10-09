@@ -34,9 +34,14 @@
  */
 import { readdir, readFile } from 'node:fs/promises';
 import type { Article, Section, Story } from '@prisme/domain';
-import { newestFirst } from '@prisme/domain';
+import {
+  newestFirst,
+  parseStoryFile,
+  reconcileSlugs,
+  slugFor,
+} from '@prisme/domain';
 import type { MembershipChecker } from './decision-model.ts';
-import { slugify, storySection } from './edition.ts';
+import { storySection } from './edition.ts';
 import type { GroupingModel, GroupingProposal } from './gemini.ts';
 import { MembershipGate } from './membership-gate.ts';
 
@@ -103,18 +108,6 @@ function freshArticles(
   return articles.filter(
     (a) => !known.has(a.id) && published(a.publishedAt) > cutoff,
   );
-}
-
-/**
- * Pick a slug for a new Story: the bare slugified title when free, else a
- * Story-id suffix, extending the slice when even that is taken. This claim is
- * provisional — the reconciliation below re-resolves within-build collisions
- * by the settled rule (smallest Story id keeps the bare slug).
- */
-function slugFor(title: string, id: string, taken: Set<string>): string {
-  const base = slugify(title) || 'sujet';
-  if (!taken.has(base)) return base;
-  return suffixSlug(base, id, taken);
 }
 
 /**
@@ -267,15 +260,6 @@ function seedCandidates(seed: Article, live: Story[]): Story[] {
     )
     .slice(0, MAX_SEED_CANDIDATES)
     .map((c) => c.story);
-}
-
-/** The id-suffix fallback chain for one base slug, from the Story's own id. */
-function suffixSlug(base: string, id: string, taken: Set<string>): string {
-  for (const size of [6, 8, 12]) {
-    const candidate = `${base}-${id.slice(0, size)}`;
-    if (!taken.has(candidate)) return candidate;
-  }
-  return `${base}-${id}`;
 }
 
 export async function groupStories(
@@ -651,28 +635,10 @@ export async function groupStories(
   // Within-build slug collisions are re-resolved by the settled rule (Q9):
   // across builds the existing file wins, within a build the smallest Story
   // id keeps the bare slug — deterministic from ids, never by proposal order
-  // (the split path orders by feed order, so it needs this too). Only the
-  // bare slug is contested; suffixes are id-specific. Story titles are
-  // already final here, so the base is recomputed from them.
-  const byBase = new Map<string, Story[]>();
-  for (const story of created) {
-    const base = slugify(story.title) || 'sujet';
-    const group = byBase.get(base);
-    if (group) group.push(story);
-    else byBase.set(base, [story]);
-  }
-  for (const [base, group] of byBase) {
-    if (group.length < 2) continue;
-    const holder = group.find((s) => s.slug === base);
-    if (holder == null) continue; // an existing file owns the bare slug
-    const smallest = group.reduce((a, b) => (a.id < b.id ? a : b));
-    if (smallest === holder) continue;
-    // The smallest id takes the bare slug; the previous holder falls back to
-    // a suffix from its own id. Both stay in changedStories, so both files
-    // are written under their final names.
-    smallest.slug = base;
-    holder.slug = suffixSlug(base, holder.id, taken);
-  }
+  // (the split path orders by feed order, so it needs this too). Story
+  // titles are already final here. Both Stories stay in changedStories, so
+  // both files are written under their final names.
+  reconcileSlugs(created, taken);
 
   // The Story Section is the majority of its Articles' Sections — recomputed
   // once, after all merges.
@@ -704,19 +670,9 @@ export async function loadStories(dir: URL): Promise<Story[]> {
   const stories: Story[] = [];
   for (const name of files) {
     try {
-      const raw = JSON.parse(
-        await readFile(new URL(name, dir), 'utf8'),
-      ) as Partial<Story>;
-      if (
-        typeof raw.id === 'string' &&
-        typeof raw.slug === 'string' &&
-        typeof raw.title === 'string' &&
-        Array.isArray(raw.articles)
-      ) {
-        stories.push(raw as Story);
-      } else {
-        console.warn(`Skipping malformed story file: ${name}`);
-      }
+      const raw = JSON.parse(await readFile(new URL(name, dir), 'utf8'));
+      const story = parseStoryFile(raw, name);
+      if (story != null) stories.push(story);
     } catch {
       console.warn(`Skipping unreadable story file: ${name}`);
     }
