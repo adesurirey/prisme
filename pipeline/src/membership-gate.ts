@@ -1,5 +1,6 @@
 import type { Section } from '@prisme/domain';
 import type { MembershipChecker } from './decision-model.ts';
+import { isTotalFailure } from './policy.ts';
 
 /**
  * The Membership gate: one module owning everything around the Membership
@@ -45,7 +46,7 @@ export class MembershipGate {
    * what to do with it (grouping fails the build); the gate only reports.
    */
   get allAttemptsFailed(): boolean {
-    return this.#attempts > 0 && this.#failures === this.#attempts;
+    return isTotalFailure(this.#attempts, this.#failures);
   }
 
   /** The recorded verdict for a pair, or undefined when never asked. */

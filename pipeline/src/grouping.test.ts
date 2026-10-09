@@ -1,6 +1,7 @@
 import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
 import { groupStories } from './grouping.ts';
+import { missingMembershipChecker } from './policy.ts';
 
 /** Deterministic 12-hex ids, so slug suffixes are predictable. */
 function counter(): () => string {
@@ -32,7 +33,18 @@ function story(overrides: Partial<Story> = {}): Story {
 }
 
 const NOW = new Date('2026-10-06T12:00:00Z');
-const NO_CLIENTS = { grouping: null, membership: null };
+// Clients the tested paths never reach. If a test accidentally does, the
+// fakes fail loudly instead of silently returning null.
+const NO_CLIENTS = {
+  grouping: {
+    label: 'Fake',
+    model: 'fake',
+    group: async () => {
+      throw new Error('no Grouping model in this test');
+    },
+  },
+  membership: missingMembershipChecker(),
+};
 
 function fakeGrouping(
   proposal: import('./gemini.ts').GroupingProposal | null,
@@ -69,10 +81,7 @@ function input(overrides: {
   articles?: Article[];
   existing?: Story[];
   teasers?: Map<string, string>;
-  clients?: {
-    grouping: import('./gemini.ts').GroupingModel | null;
-    membership: import('./decision-model.ts').MembershipChecker | null;
-  };
+  clients?: import('./grouping.ts').GroupingClients;
   makeId?: () => string;
 }) {
   return {
@@ -86,12 +95,6 @@ function input(overrides: {
 }
 
 describe('groupStories', () => {
-  it('a missing Grouping model fails the build; no Story files are written (issue #40)', async () => {
-    await expect(
-      groupStories(input({ articles: [article('a1')] })),
-    ).rejects.toThrow(/GEMINI_API_KEY/);
-  });
-
   it('an assignment merges the Article into the live Story when the Membership check says yes', async () => {
     const existing = [
       story({
@@ -171,7 +174,10 @@ describe('groupStories', () => {
 
   it('a build where every Membership check fails (a null answer, or a missing checker) fails (issue #40)', async () => {
     const existing = [story({ articles: [article('a0')] })];
-    for (const membership of [fakeMembership(null), null]) {
+    for (const membership of [
+      fakeMembership(null),
+      missingMembershipChecker(),
+    ]) {
       await expect(
         groupStories(
           input({
@@ -280,7 +286,10 @@ describe('groupStories', () => {
       groupStories(
         input({
           articles: [article('a1'), article('a2')],
-          clients: { grouping: fakeGrouping(null), membership: null },
+          clients: {
+            grouping: fakeGrouping(null),
+            membership: missingMembershipChecker(),
+          },
         }),
       ),
     ).rejects.toThrow(/no proposal/);
@@ -299,7 +308,7 @@ describe('groupStories', () => {
                 throw new Error('Fake HTTP 400: config error');
               },
             },
-            membership: null,
+            membership: missingMembershipChecker(),
           },
         }),
       ),
@@ -345,7 +354,7 @@ describe('groupStories', () => {
             ],
             titleUpdates: [],
           }),
-          membership: null,
+          membership: missingMembershipChecker(),
         },
       }),
     );
@@ -389,7 +398,7 @@ describe('groupStories', () => {
             assignments: [],
             titleUpdates: [],
           }),
-          membership: null,
+          membership: missingMembershipChecker(),
         },
       }),
     );
@@ -409,7 +418,7 @@ describe('groupStories', () => {
             ],
             titleUpdates: [],
           }),
-          membership: null,
+          membership: missingMembershipChecker(),
         },
       }),
     );
@@ -480,7 +489,10 @@ describe('groupStories', () => {
   });
 
   it('a member of a new Story: a failed check fails the build when every check fails (issue #40)', async () => {
-    for (const membership of [null, fakeMembership(null)]) {
+    for (const membership of [
+      missingMembershipChecker(),
+      fakeMembership(null),
+    ]) {
       await expect(
         groupStories(
           input({
@@ -517,7 +529,7 @@ describe('groupStories', () => {
             ],
             titleUpdates: [],
           }),
-          membership: null,
+          membership: missingMembershipChecker(),
         },
       }),
     );
@@ -729,7 +741,10 @@ describe('groupStories', () => {
       input({
         articles: [article('a0')],
         existing,
-        clients: { grouping: fakeGrouping(null), membership: null },
+        clients: {
+          grouping: fakeGrouping(null),
+          membership: missingMembershipChecker(),
+        },
       }),
     );
     expect(outcome.changed.size).toBe(0);

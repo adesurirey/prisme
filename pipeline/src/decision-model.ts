@@ -382,7 +382,9 @@ function membershipModel(apiKey: string): MembershipChecker {
 
 /**
  * The production Membership checker: Jev via OPENROUTER_API_KEY (ADR-0005).
- * Null when the key is absent — low-confidence matches then split.
+ * Null when the key is absent — resolveModels (policy.ts) then substitutes
+ * the declared fail-when-pending adapter, so a build with pending checks
+ * fails instead of splitting (ADR-0005, as amended).
  */
 export function membershipModelFromEnv(): MembershipChecker | null {
   if (!process.env.OPENROUTER_API_KEY) return null;
