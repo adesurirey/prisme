@@ -5,6 +5,18 @@
   "createdAt": "2026-10-09T22:31:52.374Z",
   "articles": [
     {
+      "id": "75541126f6df",
+      "outletId": "20-minutes",
+      "headline": "Main d’un lycéen arrachée à Lens : Le tir de grenade était « conforme », estime le parquet",
+      "url": "https://www.20minutes.fr/societe/4253013-20261010-main-lyceen-arrachee-lens-tir-grenade-conforme-estime-parquet?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-09T22:55:15.000Z",
+      "imageUrl": "https://img.20mn.fr/Ly4YP-a8TmGudjfKzDQlKCk/1200x768_la-police-anti-emeute-deploie-des-grenades-lacrymogenes-alors-que-des-eleves-se-rassemblent-devant-plusieurs-ecoles-de-liege-lors-d-une-manifestation-contre-les-reformes-de-l-enseignement-et-les-coupes-budgetaires-le-mardi-6-octobre-2026-hier-la-police-a-arrete-16-personnes-apres-que-les-manifestations-aient-tourne-a-la-violence-les-manifestations-en-belgique-francophone-se-poursuivent-depuis-des-mois-a-la-suite-d-une-serie-de-reformes-et-de-coupes-budgetaires-introduites-par-le-gouvernement-de-la-communaute-francaise-belga-photo-jonas-roosens-188939128-credit-jonas-roosens-belga-sipa-2610061733",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "5ed4e7cc79cc",
       "outletId": "le-figaro",
       "headline": "Lycéen amputé d’une main à Lens : le parquet juge le tir de grenade «conforme»",
@@ -17,5 +29,20 @@
       "everFrontPage": true
     }
   ],
-  "section": "misc"
+  "section": "misc",
+  "summaries": {
+    "gauche": [
+      "Le parquet de Béthune valide la légitimité de l'intervention des forces de l'ordre.",
+      "La famille de la victime dépose plainte suite à la blessure grave subie par l'adolescent.",
+      "L'incident a entraîné l'amputation de la main gauche du jeune lycéen."
+    ],
+    "droite": [
+      "Le ministère public qualifie l'usage de la grenade de régulier au regard des procédures en vigueur.",
+      "La mère de l'élève âgé de quinze ans engage une action judiciaire.",
+      "L'inspection générale de la police nationale poursuit ses investigations pour déterminer le déroulement exact des faits, en particulier l'hypothèse d'une manipulation de l'explosif par la victime."
+    ]
+  },
+  "differences": "Le camp de gauche met en avant la démarche judiciaire initiée par la famille et la gravité de la mutilation subie par l'adolescent, tandis que le camp de droite insiste davantage sur la régularité juridique des actes de la force publique tout en précisant que les investigations de l'IGPN devront clarifier si le jeune homme a saisi l'objet.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 2
 }

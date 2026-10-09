@@ -5,6 +5,18 @@
   "createdAt": "2026-10-09T22:31:52.374Z",
   "articles": [
     {
+      "id": "461442abd85f",
+      "outletId": "ouest-france",
+      "headline": "Un séisme de magnitude 7,7 touche le Panama, l’alerte au tsunami émise à l’est du Pacifique levée",
+      "url": "https://www.ouest-france.fr/monde/catastrophes/seisme/un-seisme-de-magnitude-7-6-touche-le-panama-une-alerte-au-tsunami-emise-a-lest-du-pacifique-4e2dacfc-c40f-11f1-bba2-d026901fbfe4?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-09T23:10:23.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMGU5MWQxNmIwODA1Mjg1NGFlYzAxNzZhNzE0YTgyNjU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=29dacac7952ae931759fbbbd22dddb34666f4b7ee334bf72595919f1aac2de76",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "158003832478",
       "outletId": "franceinfo",
       "headline": "Un séisme de magnitude 7,7 a secoué le Panama, une alerte au tsunami déclenchée",
@@ -98,22 +110,22 @@
   "section": "world",
   "summaries": {
     "gauche": [
-      "Un tremblement de terre d'une magnitude évaluée entre 7,6 et 7,7 a frappé le Panama, entraînant une alerte au tsunami.",
-      "La secousse a été largement ressentie à travers le territoire, provoquant un mouvement de panique dans la capitale.",
-      "Les autorités ont immédiatement lancé des appels au calme et recensent les premiers impacts matériels."
+      "Un séisme majeur d'une magnitude évaluée entre 7,6 et 7,7 a secoué l'ensemble du territoire panaméen.",
+      "La secousse principale a généré des scènes d'affolement généralisé au sein de la capitale.",
+      "Les services étatiques procèdent aux premiers relevés des dégâts matériels tout en exhortant la population à garder son sang-froid."
     ],
     "centre": [
-      "Un séisme de magnitude 7,7 a touché le Panama, semant la panique à l'échelle nationale et dans la capitale.",
-      "Une alerte au tsunami a été déclenchée par les services spécialisés américains pour la zone est du Pacifique.",
-      "Aucune victime n'est signalée à ce stade des vérifications, tandis que des images de l'événement sont diffusées."
+      "Une violente secousse de magnitude 7,7 a ébranlé le Panama, provoquant un vent de panique général.",
+      "L'alerte au tsunami initialement proclamée pour le Pacifique oriental a rapidement été levée par les experts.",
+      "Les premiers contrôles officiels n'établissent aucun bilan humain dramatique à ce stade."
     ],
     "droite": [
-      "Le séisme, mesuré à une magnitude de 7,7, a provoqué des dégâts matériels ainsi que l'effondrement de certains bâtiments.",
-      "L'Autorité du canal de Panama a confirmé que la voie maritime poursuit ses activités de manière normale après des inspections.",
-      "Aucune victime n'est à déplorer malgré la violence de la secousse et les difficultés de communication pour certaines familles."
+      "Le tremblement de terre de magnitude 7,7 a entraîné des dégradations matérielles ainsi que des chutes de structures.",
+      "Les inspections menées par la gestion du canal de Panama attestent d'une continuité opérationnelle du trafic maritime.",
+      "Malgré la forte intensité du choc et des perturbations de réseau, le bilan humain s'établit sans aucune victime recensée."
     ]
   },
-  "differences": "Les différents camps s'accordent sur la description factuelle du séisme et l'absence initiale de victimes. Le camp de droite se distingue toutefois par un suivi plus précis des conséquences économiques et logistiques, en insistant sur le maintien du trafic du canal de Panama, tandis que les autres sensibilités se concentrent davantage sur l'alerte au tsunami, les mouvements de panique et la diffusion d'images de l'événement.",
+  "differences": "Les différentes sensibilités concordent sur la survenue d'un séisme puissant et l'absence initiale de pertes humaines. La droite se singularise par une focalisation sur les indicateurs économiques et la résilience logistique, illustrée par la confirmation du bon fonctionnement du canal de Panama. À l'inverse, le centre et la gauche insistent davantage sur la dimension émotionnelle de l'événement, les mouvements de foule dans la capitale ainsi que sur l'évolution de la menace tsunami.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 8
+  "summarizedArticleCount": 9
 }

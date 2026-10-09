@@ -5,6 +5,18 @@
   "createdAt": "2026-10-09T22:31:52.374Z",
   "articles": [
     {
+      "id": "bc228b166d40",
+      "outletId": "le-monde",
+      "headline": "Katie Zacharia, « membre dévouée du mouvement MAGA » et nouvelle porte-parole de la Maison Blanche",
+      "url": "https://www.lemonde.fr/international/article/2026/10/10/donald-trump-nomme-katie-zacharia-membre-devouee-du-mouvement-maga-nouvelle-porte-parole-de-la-maison-blanche_6790670_3210.html",
+      "publishedAt": "2026-10-09T22:55:10.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/09/633/0/1857/928/644/322/60/0/0c37b23_upload-1-6pgu0vnd8vd9-063-2298850605.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "c1cd6be0153f",
       "outletId": "franceinfo",
       "headline": "Donald Trump choisit la commentatrice conservatrice Katie Zacharia comme porte-parole",
@@ -27,18 +39,19 @@
       "section": "politics"
     }
   ],
-  "section": "politics",
+  "section": "world",
   "summaries": {
     "gauche": [
       "Donald Trump a désigné la figure médiatique conservatrice Katie Zacharia pour occuper les fonctions de porte-parole.",
-      "La nouvelle attachée de presse avait brièvement exercé au sein du département de la Sécurité intérieure au début de l'année 2026."
+      "La nouvelle attachée de presse avait brièvement exercé au sein du département de la Sécurité intérieure au début de l'année 2026.",
+      "La Californienne a exprimé sa gratitude pour cette nomination, qualifiant sa mission d'honneur historique pour le pays."
     ],
     "droite": [
       "La commentatrice et avocate conservatrice Katie Zacharia a été nommée par Donald Trump au poste de porte-parole.",
       "Elle prend la succession de Karoline Leavitt, laquelle avait quitté ses fonctions fin août afin de se consacrer à sa vie de famille après la naissance de son second enfant."
     ]
   },
-  "differences": "Le camp de droite, illustré par Le Figaro, contextualise cette nomination en expliquant qu'elle remplace Karoline Leavitt, partie pour des raisons familiales, et mentionne le profil juridique de la nouvelle porte-parole. À l'inverse, le centre gauche s'attache à rappeler son parcours politique récent et éphémère au sein du ministère de la Sécurité intérieure au printemps 2026.",
+  "differences": "Le camp de droite contextualise cette nomination en expliquant qu'elle remplace Karoline Leavitt, partie pour des raisons familiales, et mentionne le profil juridique de la nouvelle porte-parole. À l'inverse, la gauche s'attache à rappeler son parcours politique récent et éphémère au sein du ministère de la Sécurité intérieure tout en soulignant son appartenance revendiquée au mouvement MAGA.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }
