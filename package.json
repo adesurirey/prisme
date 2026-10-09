@@ -4,6 +4,7 @@
   "packageManager": "pnpm@11.5.1",
   "scripts": {
     "edition": "pnpm --filter @prisme/pipeline edition",
+    "edition:wipe": "bash scripts/wipe-edition.sh",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck",
     "verify": "pnpm --filter @prisme/pipeline verify",
