@@ -52,11 +52,15 @@ const description =
       Classement politique des médias
     </h1>
     <p class="mt-4 text-[15px] leading-relaxed text-muted">
-      Prisme regroupe les articles de {outlets.length} médias français et les range sur
-      cinq tendances — {LEANING_LABELS.gauche.toLowerCase()}, {LEANING_LABELS['centre-gauche'].toLowerCase()},
-      {LEANING_LABELS.centre.toLowerCase()}, {LEANING_LABELS['centre-droite'].toLowerCase()} et
-      {LEANING_LABELS.droite.toLowerCase()}. Cette page dit d’où vient chaque classement,
-      avec les sources citées, et ce que le site ne fait pas.
+      Prisme regroupe les articles de {outlets.length} médias français. Chaque média est
+      classé à la main sur cinq tendances — {LEANING_LABELS.gauche.toLowerCase()},
+      {LEANING_LABELS['centre-gauche'].toLowerCase()}, {LEANING_LABELS.centre.toLowerCase()},
+      {LEANING_LABELS['centre-droite'].toLowerCase()} et {LEANING_LABELS.droite.toLowerCase()}.
+      Le site lui-même ne parle qu’en trois camps — gauche, centre, droite : le centre
+      gauche compte avec la gauche, le centre droit avec la droite. C’est la lecture des
+      légendes, des barres de couverture et des synthèses. Cette page est le seul endroit
+      qui détaille les cinq tendances : elle dit d’où vient chaque classement, avec les
+      sources citées, et ce que le site ne fait pas.
     </p>
 
     <section class="mt-10 space-y-4 text-[15px] leading-relaxed text-muted">
@@ -147,6 +151,12 @@ const description =
             <h3 class="flex items-center gap-2.5">
               <LeaningBadge leaning={leaning} />
               <span class="text-[12px] text-muted">{perLeaning(leaning).length} médias</span>
+              {leaning === 'centre-gauche' && (
+                <span class="text-[12px] text-muted">· compte avec la gauche</span>
+              )}
+              {leaning === 'centre-droite' && (
+                <span class="text-[12px] text-muted">· compte avec la droite</span>
+              )}
             </h3>
             <ul class="mt-1 divide-y divide-line">
               {perLeaning(leaning).map((outlet) => (
