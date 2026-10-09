@@ -67,8 +67,8 @@ export default function StoryCard({
           <StoryImage
             article={image}
             outlet={image && byId.get(image.outletId)}
-            className="h-14 w-24 rounded-md"
-            sizes="96px"
+            className="h-16 w-28 rounded-md"
+            sizes="112px"
           />
         </div>
       </a>
