@@ -59,22 +59,33 @@ is disqualified by that fact.
 | Flash-Lite (baseline, free tier) | long-context | 92.3% | 11 | 0 | 2/15 groups | 37 pairs | 58.0% | 15 s | $0 | 2/2 |
 | DeepSeek V4 Flash 0731 ($0.006/MTok in — cheapest paid on OpenRouter) | from-empty | 43.7% | 250 | 0 | 3/15 groups | 140 pairs | 64.1% | 365 s | $0.0089 | 1/2 |
 | DeepSeek V4 Flash 0731 | long-context | 94.4% | 8 | 0 | 1/15 groups | 7 pairs | 71.4% | 121 s | $0.0027 | 2/2 |
-| GPT-6 Luna ($0.10/MTok in) | from-empty | 97.5% | 9 | 0 | 6/15 groups | 4 pairs | — | 108 s | $0.0107 | 1/2 |
-| GPT-6 Luna | long-context | 100.0% | 0 | 0 | 3/15 groups | 8 pairs | — | 35 s | $0.0050 | 1/2 |
+| GPT-6 Luna ($0.10/MTok in) | from-empty | 95.0% | 19 | 0 | 8/15 groups | 4 pairs | 66.4% | 141 s | $0.0110 | 2/2 |
+| GPT-6 Luna | long-context | 100.0% | 0 | 0 | 3/15 groups | 10 pairs | 87.0% | 71 s | $0.0055 | 2/2 |
 | GLM-5.3-flash ($0.15/MTok in; reasoning mandatory) | from-empty | — | — | — | — | — | — | timed out | — | 0/2 |
 | GLM-5.3-flash | long-context | 92.3% | 11 | 0 | 3/15 groups | 15 pairs | — | 233 s | $0.0151 | 1/2 |
 
 Observations from the recorded runs (variance is high — reruns matter):
 
-- **GPT-6 Luna is the strongest candidate on quality, blocked on output
-  completeness.** When its JSON parses, it is near-perfect: 100% coverage
-  and 0 bad targets on long-context, dup-seeds 0, and the lowest over-merge
-  count of all candidates (4 pairs on from-empty vs Flash-Lite's 105 —
-  far fewer thematic mega-Stories). But only 1 of 2 runs completed per
-  fixture: on the large from-empty output the model repeatedly stops early
-  mid-JSON (`finish_reason: stop`, incomplete array), and one response
-  carried a junk prefix before the JSON. Stability is therefore unmeasured.
-  Latency (35–108 s) straddles production's 60 s grouping timeout.
+- **GPT-6 Luna is the strongest candidate, and now fully measured** (2/2
+  valid runs on both fixtures, after two harness fixes — see below). Its
+  long-context record passes most of the rule: coverage 100%, 0 bad
+  targets, dup-seeds 0, splits 3/15 (baseline's 2/15, within one),
+  over-merge 10 pairs vs the baseline's 37, stability 87.0% (baseline
+  58.0%). On from-empty it fails coverage (95.0% — 19 invented ids) and
+  splits (8/15 vs the baseline's 3/15), but its over-merge count (4 pairs
+  vs the baseline's 105) shows far fewer thematic mega-Stories, and it is
+  more stable than the baseline (66.4% vs 45.2%). Latency is the other
+  blocker: 141 s on from-empty and 71 s on long-context, both over
+  production's 60 s grouping timeout.
+  Two harness bugs had masked this picture: a naive first-{ … last-} JSON
+  extraction returned `{}`-junk-prefixed responses unparseable (three
+  "failures" were complete payloads — fixed with a balanced-object scan,
+  `firstJsonObject`), and an earlier recording caught only 1/2 valid runs.
+  `strict: true` (OpenAI structured outputs) did NOT prevent the model
+  from giving up mid-task: on the 444-Article from-empty pass it once
+  emitted visible in-stream reasoning prose — "300+; impossible token …
+  no time" — followed by an empty proposal. That self-reported capacity
+  limit is the strongest argument for chunking the large pass.
 - **GLM-5.3-flash is disqualified on speed.** Its endpoint mandates
   reasoning (rejects `reasoning: {enabled: false}` with HTTP 400 — the
   harness retries without the field), and the reasoning plus ~35k output
@@ -98,27 +109,29 @@ Observations from the recorded runs (variance is high — reruns matter):
 
 **Keep Flash-Lite + the scaffolding for now.** No candidate met the rule
 (dup-seed rate 0, coverage 100%, split rate ≤ baseline, both fixtures, <
-$0.50/build, two valid runs for stability). **GPT-6 Luna is the one to
-re-test**: its quality metrics beat the baseline when a call completes, and
-its only blocker — truncated JSON on the big from-empty output — is an
-engineering problem, not a model-intelligence one (see follow-ups).
+$0.50/build, two valid runs for stability). GPT-6 Luna is now fully
+measured: its long-context record is within one split of the rule and
+better than the baseline on over-merge and stability, but from-empty fails
+coverage (95.0%) and splits (8/15 vs 3/15), and both fixtures exceed the
+60 s production grouping timeout (141 s / 71 s). Its blockers are
+demonstrably engineering problems, not model intelligence (see
+observations).
 
 Follow-ups, in order:
 
-1. **Chunk the from-empty call for Luna** (or retry-with-continuation when
-   the JSON is cut): split the fresh batch into ~150-Article pages so one
-   call stays well under the output budget where Luna already completes.
-   Same lever would help production's 60 s timeout.
-2. **Re-run Luna until 2/2 valid runs on both fixtures** to measure
-   stability, then re-check the decision rule.
-3. **Try `strict: true`** on OpenAI models (structured outputs strict mode)
-   — may force complete JSON where `strict: false` lets the model stop
-   early.
-4. **Hand-labeled sanity sample** (~30 pairs, as in the decision-model
+1. **Chunk the from-empty call** (~150-Article pages): Luna's own
+   give-up prose ("300+ impossible") marks the single-pass capacity limit,
+   and smaller passes would also help both the latency budget and the
+   from-empty coverage/splits. Same lever serves production's 60 s
+   timeout.
+2. **Try `strict: true`** — done, recorded above: it did not prevent
+   give-ups or junk prefixes; the wins came from the harness-side JSON
+   extraction fix. Keep the schema-strict path for OpenAI-family specs.
+3. **Hand-labeled sanity sample** (~30 pairs, as in the decision-model
    benchmark): the pseudo-ground-truth is the last real build's own
    clustering, so a wrongly merged folder there punishes a correct split.
    The human sample checks the answer key before any replacement decision.
-5. Consider a **prompt-side output-compaction** (shorter keys, no
+4. Consider a **prompt-side output-compaction** (shorter keys, no
    titleUpdates) to halve the output tokens on large builds.
 
 ## Reproduce

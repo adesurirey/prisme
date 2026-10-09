@@ -151,18 +151,25 @@ function openRouterGroupingModel(
       usage?: {
         prompt_tokens?: number;
         completion_tokens?: number;
+        completion_tokens_details?: { reasoning_tokens?: number };
         cost?: number;
       };
     };
     const choice = data.choices?.[0];
     const raw = choice?.message?.content ?? '';
-    // Some models wrap the JSON in channel markers or prose (seen from
-    // gpt-6-luna: `{} \nassistant to=final {"newStories": …}`): keep only
-    // the outermost object, the parser takes raw JSON only.
-    const start = raw.indexOf('{');
-    const end = raw.lastIndexOf('}');
-    const text = start >= 0 && end > start ? raw.slice(start, end + 1) : raw;
+    // Some models wrap the JSON in junk — a bare `{}` prefix, channel
+    // markers, or reasoning prose (all seen from gpt-6-luna): take the
+    // first object that parses as a grouping proposal.
+    const text =
+      firstJsonObject(raw, (s) => parseGroupingResponse(s) != null) ?? raw;
     const proposal = parseGroupingResponse(text);
+    const reasoningTokens =
+      data.usage?.completion_tokens_details?.reasoning_tokens;
+    if (reasoningTokens != null && reasoningTokens > 0) {
+      console.warn(
+        `${id}: ${reasoningTokens} hidden reasoning tokens (of ${data.usage?.completion_tokens ?? '?'} output)`,
+      );
+    }
     return {
       proposal,
       finishReason: choice?.finish_reason ?? null,
@@ -170,8 +177,13 @@ function openRouterGroupingModel(
       outputTokens: data.usage?.completion_tokens ?? 0,
       costUsd: typeof data.usage?.cost === 'number' ? data.usage.cost : null,
       // Forensics for the unparseable-failure mode (issue #41): keep the
-      // head of what the model actually sent.
-      ...(proposal == null ? { rawSnippet: raw.slice(0, 400) } : {}),
+      // head AND tail of what the model actually sent — the head shows a
+      // junk prefix, the tail shows whether the JSON was cut or complete.
+      ...(proposal == null
+        ? {
+            rawSnippet: `${raw.slice(0, 200)} …[TAIL]… ${raw.slice(-300)}`,
+          }
+        : {}),
     };
   };
   return {
@@ -185,8 +197,11 @@ function openRouterGroupingModel(
           type: 'json_schema',
           json_schema: {
             name: 'grouping',
-            strict: false,
-            schema: GROUPING_SCHEMA,
+            // OpenAI-family structured outputs: strict mode forces the
+            // generation to satisfy the schema until complete — the fix for
+            // models that stop mid-JSON on long outputs (gpt-6-luna).
+            strict: true,
+            schema: strictGroupingSchema(),
           },
         },
         // Same headroom as production: without it the provider's default
@@ -216,6 +231,103 @@ function openRouterGroupingModel(
     },
   };
 }
+
+/**
+ * First JSON object in the text that the validator accepts. Some models
+ * wrap the payload in junk — a bare `{}` prefix or channel prose
+ * (gpt-6-luna) — so the naive first-{ … last-} slice returns two
+ * concatenated objects and fails. Scan each '{' for a balanced object and
+ * try it (strings-aware brace counting); a bare `{}` parses, so the
+ * caller validates the shape, not just the syntax.
+ */
+export function firstJsonObject(
+  text: string,
+  accept: (candidate: string) => boolean = (s) => {
+    try {
+      JSON.parse(s);
+      return true;
+    } catch {
+      return false;
+    }
+  },
+): string | null {
+  for (let start = text.indexOf('{'); start >= 0; ) {
+    let depth = 0;
+    let inString = false;
+    let escaped = false;
+    for (let i = start; i < text.length; i++) {
+      const c = text[i];
+      if (inString) {
+        if (escaped) escaped = false;
+        else if (c === '\\') escaped = true;
+        else if (c === '"') inString = false;
+      } else if (c === '"') {
+        inString = true;
+      } else if (c === '{') {
+        depth++;
+      } else if (c === '}' && --depth === 0) {
+        const candidate = text.slice(start, i + 1);
+        if (accept(candidate)) return candidate;
+        break; // not acceptable here — try the next '{'
+      }
+    }
+    start = text.indexOf('{', start + 1);
+  }
+  return null;
+}
+
+/**
+ * Strict-mode variant of GROUPING_SCHEMA: OpenAI structured outputs
+ * (strict: true) demand additionalProperties: false on every object and
+ * every property in required — effectively-optional fields become
+ * nullable instead. Emits the same data, so parseGroupingResponse reads
+ * both variants unchanged.
+ */
+const strictGroupingSchema = (): Record<string, unknown> => {
+  const nullable = (type: string) => ({ type: [type, 'null'] });
+  return {
+    type: 'object',
+    properties: {
+      newStories: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: { key: { type: 'string' }, title: { type: 'string' } },
+          required: ['key', 'title'],
+          additionalProperties: false,
+        },
+      },
+      assignments: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: {
+            articleId: { type: 'string' },
+            storyId: nullable('string'),
+            newStoryKey: nullable('string'),
+            confidence: nullable('number'),
+          },
+          required: ['articleId', 'storyId', 'newStoryKey', 'confidence'],
+          additionalProperties: false,
+        },
+      },
+      titleUpdates: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: {
+            storyId: { type: 'string' },
+            title: { type: 'string' },
+          },
+          required: ['storyId', 'title'],
+          additionalProperties: false,
+        },
+      },
+    },
+    required: ['newStories', 'assignments', 'titleUpdates'],
+    additionalProperties: false,
+  };
+};
 
 /**
  * Build the benchmark model for a spec (`gemini/<model>` or
