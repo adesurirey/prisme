@@ -140,7 +140,7 @@ describe('parseFeed', () => {
 });
 
 describe('parseFeed — Undated Articles (ADR-0007)', () => {
-  it('dates an undated item to the end of its Publication day, read from the URL (summer, +02:00)', () => {
+  it('dates an undated item to the start of its Publication day, read from the URL (summer, +02:00)', () => {
     const xml = `<?xml version="1.0"?>
       <rss version="2.0"><channel>
         <item><title>Le Parisien</title><link>https://www.leparisien.fr/international/les-inepties-de-la-france-07-10-2026-NBXYDQGVGJACZD47XKSIMXKNGM.php</link></item>
@@ -148,8 +148,8 @@ describe('parseFeed — Undated Articles (ADR-0007)', () => {
 
     const { items } = parseFeed(xml);
 
-    // 7 October 2026, 23:59:59 Paris (UTC+2) = 21:59:59 UTC.
-    expect(items[0].publishedAt).toBe('2026-10-07T21:59:59.000Z');
+    // 7 October 2026, 00:00:00 Paris (UTC+2) = 6 October 22:00 UTC.
+    expect(items[0].publishedAt).toBe('2026-10-06T22:00:00.000Z');
     expect(items[0].dayPrecision).toBe(true);
   });
 
@@ -161,8 +161,8 @@ describe('parseFeed — Undated Articles (ADR-0007)', () => {
 
     const { items } = parseFeed(xml);
 
-    // 28 November 2019, 23:59:59 Paris (UTC+1) = 22:59:59 UTC.
-    expect(items[0].publishedAt).toBe('2019-11-28T22:59:59.000Z');
+    // 28 November 2019, 00:00:00 Paris (UTC+1) = 27 November 23:00 UTC.
+    expect(items[0].publishedAt).toBe('2019-11-27T23:00:00.000Z');
     expect(items[0].dayPrecision).toBe(true);
   });
 
@@ -177,7 +177,7 @@ describe('parseFeed — Undated Articles (ADR-0007)', () => {
 
     const { items } = parseFeed(xml);
 
-    expect(items[0].publishedAt).toBe('2026-10-03T21:59:59.000Z');
+    expect(items[0].publishedAt).toBe('2026-10-02T22:00:00.000Z');
     expect(items[0].dayPrecision).toBe(true);
   });
 
