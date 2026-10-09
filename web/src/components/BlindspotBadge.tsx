@@ -1,4 +1,4 @@
-import type { Leaning } from '@prisme/domain';
+import type { CoverageGroup } from '@prisme/domain';
 import { LEANING_LABELS } from '@prisme/domain';
 
 /**
@@ -15,7 +15,11 @@ import { LEANING_LABELS } from '@prisme/domain';
  * "The both-sides answer"): a description of declared Front pages, not an
  * accusation.
  */
-export default function BlindspotBadge({ leaning }: { leaning: Leaning }) {
+export default function BlindspotBadge({
+  leaning,
+}: {
+  leaning: CoverageGroup;
+}) {
   const hint = `Aucun média ${LEANING_LABELS[leaning].toLowerCase()} ne semble couvrir ce sujet`;
   return (
     <span className="group relative inline-flex items-center gap-1.5 rounded-full border border-line px-2.5 py-0.5 text-[12px] text-muted">

@@ -1,5 +1,5 @@
-import type { Leaning } from '@prisme/domain';
-import { LEANING_LABELS, leaningOrder } from '@prisme/domain';
+import type { CoverageGroup } from '@prisme/domain';
+import { coverageOrder, LEANING_LABELS } from '@prisme/domain';
 
 /**
  * Coverage as a meta line: one compact tri-color micro-bar followed by the
@@ -18,7 +18,7 @@ export default function CoverageMeta({
   /** Bar width in px — 48 on the cards, wider where the header has room. */
   barWidth = 48,
 }: {
-  counts: Record<Leaning, number>;
+  counts: Record<CoverageGroup, number>;
   /** Distinct reporting Outlets — the numerator of the share. */
   reporting: number;
   /** Outlets in the config — the denominator. */
@@ -28,9 +28,9 @@ export default function CoverageMeta({
   className?: string;
   barWidth?: number;
 }) {
-  const total = leaningOrder.reduce((sum, l) => sum + counts[l], 0);
+  const total = coverageOrder.reduce((sum, l) => sum + counts[l], 0);
   const covered = total > 0;
-  const breakdown = leaningOrder
+  const breakdown = coverageOrder
     .map((l) => `${counts[l]} ${LEANING_LABELS[l].toLowerCase()}`)
     .join(' | ');
   const tooltip = `${reporting} média${reporting > 1 ? 's' : ''} sur ${totalOutlets}`;
@@ -54,7 +54,7 @@ export default function CoverageMeta({
           className="inline-flex h-1.5 shrink-0 gap-px overflow-hidden rounded-full bg-line"
           style={{ width: barWidth }}
         >
-          {leaningOrder.map(
+          {coverageOrder.map(
             (l) =>
               counts[l] > 0 && (
                 <span

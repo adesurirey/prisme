@@ -7,8 +7,18 @@
  * collector keeps teasers in memory only and these types never carry them.
  */
 
-/** The political position assigned to an Outlet, never to an Article (ADR-0001). */
-export type Leaning = 'gauche' | 'centre' | 'droite';
+/**
+ * The political position assigned to an Outlet, never to an Article (ADR-0001):
+ * five bands, hand-set from the cited sources (docs/research/outlet-leanings.md,
+ * issue #46). Coverage and Summaries group them into three buckets — see
+ * `CoverageGroup` in coverage.ts.
+ */
+export type Leaning =
+  | 'gauche'
+  | 'centre-gauche'
+  | 'centre'
+  | 'centre-droite'
+  | 'droite';
 
 /** Per-Outlet paywall badge shown in the UI. */
 export type Paywall = 'none' | 'partial' | 'full';
@@ -122,12 +132,23 @@ export const SECTION_LABELS: Record<Section, string> = {
   other: 'Autre',
 };
 
-/** French UI labels for Leanings; keys are the English data values. */
+/** French UI labels for Leanings; keys are the data values. */
 export const LEANING_LABELS: Record<Leaning, string> = {
   gauche: 'Gauche',
+  'centre-gauche': 'Centre gauche',
   centre: 'Centre',
+  'centre-droite': 'Centre droit',
   droite: 'Droite',
 };
+
+/** All five Leanings in their fixed display order (Gauche → Droite). */
+export const leaningOrder: Leaning[] = [
+  'gauche',
+  'centre-gauche',
+  'centre',
+  'centre-droite',
+  'droite',
+];
 
 /**
  * A news event or topic made up of the Articles that report on it (issue #5).

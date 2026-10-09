@@ -9,6 +9,7 @@
  * (ADR-0005: frozen files are never edited); unchanged Stories make no call.
  */
 import type {
+  CoverageGroup,
   Leaning,
   Outlet,
   Section,
@@ -46,7 +47,7 @@ export interface SummaryInput {
   /** Only the Articles beyond summarizedArticleCount — the new headlines. */
   newArticles: SummaryInputArticle[];
   /** Leanings with Coverage: the model summarizes these, and only these. */
-  coveredLeanings: Leaning[];
+  coveredLeanings: CoverageGroup[];
 }
 
 export interface SummaryModel {
@@ -118,9 +119,23 @@ const SUMMARIES_SCHEMA = {
   required: ['summaries', 'differences'],
 } as const;
 
-const LEANING_LABELS_FR: Record<Leaning, string> = {
+const LEANING_LABELS_FR: Record<CoverageGroup, string> = {
   gauche: 'gauche',
   centre: 'centre',
+  droite: 'droite',
+};
+
+/**
+ * Interim fold from the five Leaning bands to the three Coverage buckets
+ * (option B, mirrored from @prisme/domain coverage.ts): Articles are tagged
+ * with their bucket so the per-bucket Summaries stay attributable. A
+ * follow-up change feeds the granular band instead (issue #46).
+ */
+const BUCKET_OF: Record<Leaning, CoverageGroup> = {
+  gauche: 'gauche',
+  'centre-gauche': 'gauche',
+  centre: 'centre',
+  'centre-droite': 'droite',
   droite: 'droite',
 };
 
@@ -170,7 +185,7 @@ export function summariesPrompt(input: SummaryInput): string {
       const teaser = a.teaser ? ` — ${a.teaser}` : '';
       const tags = [
         a.outletName,
-        LEANING_LABELS_FR[a.outletLeaning],
+        LEANING_LABELS_FR[BUCKET_OF[a.outletLeaning]],
         a.opinion ? 'tribune' : null,
         a.frontPage ? 'à la une' : null,
       ]

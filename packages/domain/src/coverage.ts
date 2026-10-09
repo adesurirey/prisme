@@ -1,15 +1,33 @@
 import type { Article, Leaning, Outlet, Story } from './index.ts';
+import { leaningOrder } from './index.ts';
 
 /**
  * The Coverage and Blindspot rules (issue #6, glossary): Coverage counts
- * distinct reporting Outlets per Leaning — never Articles, never Opinion
- * pieces — and a Blindspot is a Leaning with no reporting Outlet on a Story
- * reported by three or more Outlets. Code and data keys are English; French
- * UI labels live with the UI.
+ * distinct reporting Outlets per Coverage group — never Articles, never
+ * Opinion pieces — and a Blindspot is a group with no reporting Outlet on a
+ * Story reported by three or more Outlets. Code and data keys are English;
+ * French UI labels live with the UI.
  */
 
-/** Leanings in their fixed display order (Gauche, Centre, Droite). */
-export const leaningOrder: Leaning[] = ['gauche', 'centre', 'droite'];
+/**
+ * The three buckets Coverage and Summaries work in, into which the five
+ * Leaning bands are folded (issue #46, option B): centre-gauche counts as
+ * gauche and centre-droite as droite. Interim encoding — a follow-up change
+ * promotes it to an exported, tested `coverageGroup()`.
+ */
+export type CoverageGroup = 'gauche' | 'centre' | 'droite';
+
+/** Coverage groups in their fixed display order (Gauche, Centre, Droite). */
+export const coverageOrder: CoverageGroup[] = ['gauche', 'centre', 'droite'];
+
+/** The interim fold from the five Leaning bands to the three buckets. */
+const GROUP_OF: Record<Leaning, CoverageGroup> = {
+  gauche: 'gauche',
+  'centre-gauche': 'gauche',
+  centre: 'centre',
+  'centre-droite': 'droite',
+  droite: 'droite',
+};
 /** A Story is reported by Articles of these Kinds; Opinion pieces never count. */
 export function isReporting(article: Article): boolean {
   return article.kind === 'news' || article.kind === 'live';
@@ -24,29 +42,35 @@ export function reportingOutletIds(articles: Article[]): Set<string> {
   return ids;
 }
 
-/** Coverage per Leaning: distinct reporting Outlets, unknown Outlets ignored. */
+/** Coverage per group: distinct reporting Outlets, unknown Outlets ignored. */
 export function coverageCounts(
   articles: Article[],
   outletById: Map<string, Outlet>,
-): Record<Leaning, number> {
-  const counts: Record<Leaning, number> = { gauche: 0, centre: 0, droite: 0 };
+): Record<CoverageGroup, number> {
+  const counts: Record<CoverageGroup, number> = {
+    gauche: 0,
+    centre: 0,
+    droite: 0,
+  };
   for (const id of reportingOutletIds(articles)) {
     const leaning = outletById.get(id)?.leaning;
-    if (leaning) counts[leaning] += 1;
+    if (leaning) counts[GROUP_OF[leaning]] += 1;
   }
   return counts;
 }
 
-/** A Leaning counts as a Blindspot only while both other Leanings report the Story. */
-export function blindspots(counts: Record<Leaning, number>): Leaning[] {
+/** A group counts as a Blindspot only while both other groups report the Story. */
+export function blindspots(
+  counts: Record<CoverageGroup, number>,
+): CoverageGroup[] {
   // No threshold on Outlets: what carries the signal is the two other
-  // Leanings both being present — "tout le monde en parle sauf X". An
+  // groups both being present — "tout le monde en parle sauf X". An
   // all-Centre Story gets no badges; Gauche and Droite being absent is not
   // news.
-  return leaningOrder.filter(
+  return coverageOrder.filter(
     (leaning) =>
       counts[leaning] === 0 &&
-      leaningOrder.every((other) => other === leaning || counts[other] > 0),
+      coverageOrder.every((other) => other === leaning || counts[other] > 0),
   );
 }
 
@@ -55,7 +79,7 @@ export function countedArticles(articles: Article[]): number {
   return articles.filter((article) => article.kind !== 'opinion').length;
 }
 
-/** Outlets ever on the Front page for a Story: once per Outlet, Leaning then config order. */
+/** Outlets ever on the Front page for a Story: once per Outlet, Leaning band then config order. */
 export function frontPageOutlets(
   articles: Article[],
   outlets: Outlet[],
@@ -89,7 +113,7 @@ export function newestFirst(a: Article, b: Article): number {
 
 /**
  * The image shown for a Story: prefer a Centre Outlet's Article, otherwise the
- * Leaning with the most Coverage, walking Coverage tiers in order; a
+ * Coverage group with the most Coverage, walking Coverage tiers in order; a
  * Gauche/Droite tie is left to recency, whatever the Leaning. Within a
  * Leaning, the newest Article with an image wins; ties break by id. The image
  * is hotlinked from the Outlet — never stored (ADR-0003).
@@ -108,16 +132,16 @@ export function pickStoryImage(
 
   // Coverage tiers, highest first; the first tier with an image candidate wins.
   const counts = coverageCounts(story.articles, outletById);
-  const tiers = [...new Set(leaningOrder.map((l) => counts[l]))].sort(
+  const tiers = [...new Set(coverageOrder.map((l) => counts[l]))].sort(
     (a, b) => b - a,
   );
   for (const tier of tiers) {
-    const leanings = leaningOrder.filter((l) => counts[l] === tier);
+    const groups = coverageOrder.filter((l) => counts[l] === tier);
     const inTier = candidates.filter((a) => {
       const leaning = outletById.get(a.outletId)?.leaning;
-      return leaning != null && leanings.includes(leaning);
+      return leaning != null && groups.includes(GROUP_OF[leaning]);
     });
-    // A tie between Leanings is left to recency: the newest candidate wins.
+    // A tie between groups is left to recency: the newest candidate wins.
     if (inTier.length > 0) return inTier[0];
   }
   // No configured Leaning carries an image (only unknown Outlets do).

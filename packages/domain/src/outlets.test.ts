@@ -1,5 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { excludedOutlets, outlets, publicOutlets } from './outlets.ts';
+import {
+  excludedOutlets,
+  type OutletConfig,
+  outlets,
+  publicOutlets,
+} from './outlets.ts';
 
 /**
  * The Outlet config is the source of truth for the pipeline and for
@@ -83,13 +88,33 @@ describe('outlet config', () => {
     }
   });
 
-  it('adds Marianne to the Edition, with a Centre Leaning and out of exclusions (issue #10)', () => {
+  it('adds Marianne to the Edition, with a Centre-gauche Leaning and out of exclusions (issue #10)', () => {
     const marianne = outlets.find((outlet) => outlet.id === 'marianne');
     expect(marianne, 'marianne enters the Edition').toBeDefined();
-    expect(marianne!.leaning).toBe('centre');
+    expect(marianne!.leaning).toBe('centre-gauche');
     expect(excludedOutlets.map((excluded) => excluded.id)).not.toContain(
       'marianne',
     );
+  });
+
+  it('splits the former Centre fold onto the five-band scale (issue #46)', () => {
+    // Mechanical FrIdéo mapping: center-left → centre-gauche, center-right →
+    // centre-droite; pure-centre and hors-panel Outlets stay put.
+    const placements: Record<string, OutletConfig['leaning']> = {
+      'le-monde': 'centre-gauche',
+      marianne: 'centre-gauche',
+      franceinfo: 'centre-gauche',
+      '20-minutes': 'centre-gauche',
+      'tf1-info': 'centre-droite',
+      'le-point': 'centre-droite',
+      'courrier-international': 'centre',
+      'europe-1': 'droite',
+    };
+    for (const [id, leaning] of Object.entries(placements)) {
+      const outlet = outlets.find((o) => o.id === id);
+      expect(outlet, `${id} stays in the Edition`).toBeDefined();
+      expect(outlet!.leaning, id).toBe(leaning);
+    }
   });
 
   it('publishes only the public Outlet shape in data/outlets.json', () => {
