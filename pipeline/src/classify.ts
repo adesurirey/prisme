@@ -7,6 +7,7 @@ import {
   PROMPT_VERSION,
   WINNER,
 } from './decision-model.ts';
+import { isTotalFailure } from './policy.ts';
 import { runPool } from './pool.ts';
 
 /**
@@ -116,7 +117,7 @@ export async function classifyNewArticles(
   });
   // Total failure (ADR-0005, as amended): not one fresh Article got an
   // answer. Isolated failures (some succeeded) never reach this path.
-  if (attempts > 0 && failures === attempts)
+  if (isTotalFailure(attempts, failures))
     throw new Error(
       `Classification failed: all ${attempts} fresh Articles failed — the model is down; the build writes no Story files.`,
     );

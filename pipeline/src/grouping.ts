@@ -51,8 +51,10 @@ export const MAX_MEMBERSHIP_CHECKS = 20;
 const LIVE_WINDOW_MS = 24 * 60 * 60 * 1000;
 
 export interface GroupingClients {
-  grouping: GroupingModel | null;
-  membership: MembershipChecker | null;
+  /** Live: resolveModels (policy.ts) fails the build before this point. */
+  grouping: GroupingModel;
+  /** Live or the declared fail-when-pending adapter (policy.ts). */
+  membership: MembershipChecker;
 }
 
 export interface GroupingInput {
@@ -323,14 +325,6 @@ export async function groupStories(
     merge(story, article);
   };
 
-  // Failure policy (ADR-0005, as amended): without a Grouping model the
-  // build fails instead of degrading — the degrade path wrote one-Article
-  // Story files that membership stickiness makes permanent.
-  if (clients.grouping == null)
-    throw new Error(
-      'Grouping failed: GEMINI_API_KEY is not set — the build writes no Story files (ADR-0005, as amended).',
-    );
-
   const groupingInput = {
     // Only live Stories are visible to the model; frozen ones are closed (ADR-0005).
     stories: liveSorted().map((s) => ({
@@ -403,15 +397,11 @@ export async function groupStories(
     // The Membership gate owns the check budget, the verdict ledger and the
     // attempt/failure counters (ADR-0005, as amended). Which pairs to ask
     // stays here — guard seeds first, then merge pairs by headline overlap.
-    // A missing checker becomes an always-throwing adapter: every attempt
-    // fails, so the total-failure rule fires whenever checks were pending.
+    // A missing OPENROUTER_API_KEY arrives as the declared fail-when-pending
+    // adapter (policy.ts): every attempt fails, so the total-failure rule
+    // fires exactly when checks were pending.
     const gate = new MembershipGate({
-      checker: clients.membership ?? {
-        label: 'none',
-        async belongs() {
-          throw new Error('Membership checker unavailable');
-        },
-      },
+      checker: clients.membership,
       budget: maxChecks,
     });
     {

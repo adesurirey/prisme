@@ -10,32 +10,21 @@ import {
   saveCache,
 } from './classify.ts';
 import { collect, contributionSummary } from './collect.ts';
-import {
-  membershipModelFromEnv,
-  winnerModelFromEnv,
-} from './decision-model.ts';
 import { updateFrontPageHistory } from './frontpage.ts';
-import { groupingModelFromEnv } from './gemini.ts';
 import { groupStories, loadStories } from './grouping.ts';
 import { fetchFeed } from './http.ts';
 import { CLASSIFICATIONS_PATH, DATA_DIR, STORIES_DIR } from './paths.ts';
+import { resolveModels } from './policy.ts';
 import { EDITION_SIZE, rankStories } from './ranking.ts';
-import {
-  SUMMARIES_PROMPT_VERSION,
-  summariesModelFromEnv,
-  updateSummaries,
-} from './summarize.ts';
+import { SUMMARIES_PROMPT_VERSION, updateSummaries } from './summarize.ts';
 
 export async function runEdition(): Promise<Edition> {
-  // Grouping failure policy (ADR-0005, as amended in issue #40): a missing
-  // GEMINI_API_KEY fails the build up front, before anything is collected or
-  // written — the old degrade-to-singletons path corrupted the archive
-  // permanently (membership is sticky, singletons never re-merge).
-  const grouping = groupingModelFromEnv();
-  if (grouping == null)
-    throw new Error(
-      'GEMINI_API_KEY is not set — Grouping would degrade to one-Article Stories; failing the build (ADR-0005, as amended).',
-    );
+  // Model policy (ADR-0005, as amended in issue #40): resolveModels decides
+  // what is live, what degrades, and what fails — see policy.ts. Failing the
+  // build up front happens here, before anything is collected or written —
+  // the old degrade-to-singletons path corrupted the archive permanently
+  // (membership is sticky, singletons never re-merge).
+  const models = resolveModels();
 
   const now = new Date();
   const { articles, teasers, failures } = await collect(
@@ -48,11 +37,9 @@ export async function runEdition(): Promise<Edition> {
   // winner comes from OPENROUTER_API_KEY. Without the key, Articles stay
   // unclassified — a safe, retried degrade. With the key, a build where
   // every fresh classification fails throws (ADR-0005, as amended).
-  const model = winnerModelFromEnv();
+  const model = models.decision.model;
   if (model == null) {
-    console.warn(
-      'OPENROUTER_API_KEY not set — Articles are kept unclassified (no kind).',
-    );
+    console.warn(models.decision.note);
   }
   const cache: ClassificationCache = await loadCache(CLASSIFICATIONS_PATH);
   const before = Object.keys(cache.entries).length;
@@ -72,14 +59,9 @@ export async function runEdition(): Promise<Edition> {
   // amended in issue #40).
   const existing = await loadStories(STORIES_DIR);
   // Experiment lever: PRISME_MAX_CHECKS=all lifts the per-build Membership
-  // budget; a number overrides the default (ADR-0005's 20).
-  const maxChecksEnv = process.env.PRISME_MAX_CHECKS;
-  const maxChecks =
-    maxChecksEnv == null
-      ? undefined
-      : maxChecksEnv === 'all'
-        ? Infinity
-        : Number.parseInt(maxChecksEnv, 10) || undefined;
+  // budget; a number overrides the default (ADR-0005's 20). The Membership
+  // checker is either live or the declared fail-when-pending adapter.
+  const maxChecks = models.maxChecks;
   const outcome = await groupStories({
     articles: kept,
     teasers,
@@ -87,7 +69,7 @@ export async function runEdition(): Promise<Edition> {
     now,
     makeId: () => randomBytes(6).toString('hex'),
     maxChecks,
-    clients: { grouping, membership: membershipModelFromEnv() },
+    clients: { grouping: models.grouping, membership: models.membership },
   });
 
   // Front-page history (issue #6): reconcile the flags of every live Story
@@ -116,12 +98,9 @@ export async function runEdition(): Promise<Edition> {
   // live Edition Story that gained Articles since its last Summaries run —
   // unchanged Stories make zero calls. Only Edition Stories are summarized;
   // a Story below the cut picks its Summaries up when it returns. Without
-  // GEMINI_API_KEY Summaries degrade (cosmetic; a later build picks the Story
-  // up) — the build still succeeds.
-  const summaries = summariesModelFromEnv();
-  if (summaries == null) {
-    console.warn('GEMINI_API_KEY not set — no Summaries this build.');
-  }
+  // Summaries are always live (resolveModels); unchanged Stories make zero
+  // calls.
+  const summaries = models.summaries;
   const summaryOutcome = await updateSummaries({
     stories: edition.stories,
     teasers,

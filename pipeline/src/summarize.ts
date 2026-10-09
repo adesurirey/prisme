@@ -276,10 +276,13 @@ export async function updateSummaries(input: {
   return { changed, calls };
 }
 
-/** JSON-schema client against Google's free tier, same posture as the Grouping model. */
-export function summariesModelFromEnv(): SummaryModel | undefined {
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) return undefined;
+/**
+ * JSON-schema client against Google's free tier, same posture as the Grouping
+ * model. resolveModels only calls it when the key is set (a missing key
+ * already failed the build) — the non-null assertion carries that guarantee.
+ */
+export function summariesModelFromEnv(): SummaryModel {
+  const apiKey = process.env.GEMINI_API_KEY!;
   return geminiSummariesModel(apiKey, SUMMARIES.model, SUMMARIES.label);
 }
 
