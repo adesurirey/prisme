@@ -18,9 +18,15 @@
 
   /* Lightness architecture: the centre gold is clearly lighter than the
    * two darker ends, so adjacent segments separate at any bar height
-   * (docs/brand.md, Visual identity). */
+   * (docs/brand.md, Visual identity). The two intermediate bands — only
+   * used by the per-Outlet dots, never by the tri-color Coverage bar —
+   * sit between their neighbours: centre gauche is the orange between
+   * gauche red and centre gold, centre droit the teal between centre gold
+   * and droite blue. */
   --gauche: #e0415e;
+  --centre-gauche: #e0773f;
   --centre: #dfa414;
+  --centre-droite: #2aa39b;
   --droite: #2e7ce4;
 
   --hover: rgba(17, 17, 20, 0.02);
@@ -46,10 +52,12 @@
     --faint: #6c6c75;
 
     /* Same lightness architecture as light mode (centre clearly the
-     * lightest) — on the dark canvas the three hues must also differ in
+     * lightest) — on the dark canvas the hues must also differ in
      * lightness so adjacent segments of a micro-bar stay separable. */
     --gauche: #f28498;
+    --centre-gauche: #f29d68;
     --centre: #f6c65b;
+    --centre-droite: #66c3ba;
     --droite: #63a8ea;
 
     --hover: rgba(255, 255, 255, 0.025);
@@ -73,7 +81,9 @@
   --color-muted: var(--muted);
   --color-faint: var(--faint);
   --color-gauche: var(--gauche);
+  --color-centre-gauche: var(--centre-gauche);
   --color-centre: var(--centre);
+  --color-centre-droite: var(--centre-droite);
   --color-droite: var(--droite);
   --color-hover: var(--hover);
   --color-tooltip: var(--tooltip);

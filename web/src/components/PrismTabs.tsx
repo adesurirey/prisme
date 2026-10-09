@@ -1,11 +1,11 @@
-import type { Leaning, StorySummaries } from '@prisme/domain';
-import { LEANING_LABELS, leaningOrder } from '@prisme/domain';
+import type { CoverageGroup, StorySummaries } from '@prisme/domain';
+import { coverageOrder, LEANING_LABELS } from '@prisme/domain';
 import { useState } from 'react';
 import AuroraBall from './AuroraBall';
 
 /**
- * The Prism tabs (issue #7), restyled as a segmented control: one Leaning
- * per segment — the active one filled with the Leaning's color, the only
+ * The Prism tabs (issue #7), restyled as a segmented control: one Coverage
+ * group per segment — the active one filled with the Leaning's color, the only
  * place color is used besides the dots — and Comparaison as a separate
  * outlined button, because it is Prisme's cross-Leaning synthesis, not one
  * Leaning's coverage. Both toggle the same panel. Every panel is rendered
@@ -14,27 +14,30 @@ import AuroraBall from './AuroraBall';
  * from zero Coverage (ADR-0006: never stored, never invented).
  */
 export default function PrismTabs(props: {
-  counts: Record<Leaning, number>;
+  counts: Record<CoverageGroup, number>;
   summaries: StorySummaries | undefined;
   differences: string | undefined;
 }) {
   const { counts, summaries, differences } = props;
   // Default tab: Centre when it has a summary, else the first Leaning that
   // covers the Story, else Gauche.
-  const hasSummary = (l: Leaning): boolean => (summaries?.[l]?.length ?? 0) > 0;
+  const hasSummary = (l: CoverageGroup): boolean =>
+    (summaries?.[l]?.length ?? 0) > 0;
   const defaultTab = hasSummary('centre')
     ? 'centre'
-    : (leaningOrder.find((l) => counts[l] > 0) ?? 'gauche');
-  const [active, setActive] = useState<Leaning | 'comparaison'>(defaultTab);
+    : (coverageOrder.find((l) => counts[l] > 0) ?? 'gauche');
+  const [active, setActive] = useState<CoverageGroup | 'comparaison'>(
+    defaultTab,
+  );
 
   /** French articles for the "Non couvert par …" line (issue #7 wording). */
-  const LEANING_ARTICLES: Record<Leaning, string> = {
+  const LEANING_ARTICLES: Record<CoverageGroup, string> = {
     gauche: 'la gauche',
     centre: 'le centre',
     droite: 'la droite',
   };
 
-  const bullets = (leaning: Leaning): string[] | undefined => {
+  const bullets = (leaning: CoverageGroup): string[] | undefined => {
     const stored = summaries?.[leaning];
     return stored && stored.length > 0 ? stored : undefined;
   };
@@ -46,10 +49,10 @@ export default function PrismTabs(props: {
         aria-label="Le sujet par tendance"
         className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-2.5"
       >
-        {/* Segmented control: one Leaning per segment. Full-width rows on
+        {/* Segmented control: one Coverage group per segment. Full-width rows on
             mobile (equal segments), inline from sm up. */}
         <div className="flex rounded-lg bg-hover p-0.5 sm:self-start">
-          {leaningOrder.map((leaning) => {
+          {coverageOrder.map((leaning) => {
             const selected = active === leaning;
             return (
               <button

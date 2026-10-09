@@ -17,11 +17,11 @@ const perLeaning = (leaning: Leaning): OutletConfig[] =>
   outlets.filter((o) => o.leaning === leaning);
 
 const description =
-  'Comment chaque média français est classé à gauche, au centre ou à droite : les sources citées, la méthode, et les médias exclus. Les classements du Figaro, de Libération, du Monde… média par média.';
+  'Comment chaque média français est classé sur cinq tendances, de la gauche à la droite : les sources citées, la méthode, et les médias exclus. Les classements du Figaro, de Libération, du Monde… média par média.';
 ---
 
 <Base
-  title="Classement politique des médias français : gauche, centre, droite"
+  title="Classement politique des médias français : de la gauche à la droite"
   description={description}
 >
   <article class="pt-10">
@@ -52,8 +52,9 @@ const description =
       Classement politique des médias
     </h1>
     <p class="mt-4 text-[15px] leading-relaxed text-muted">
-      Prisme regroupe les articles de {outlets.length} médias français et les range en trois
-      bords — {LEANING_LABELS.gauche.toLowerCase()}, {LEANING_LABELS.centre.toLowerCase()} et
+      Prisme regroupe les articles de {outlets.length} médias français et les range sur
+      cinq tendances — {LEANING_LABELS.gauche.toLowerCase()}, {LEANING_LABELS['centre-gauche'].toLowerCase()},
+      {LEANING_LABELS.centre.toLowerCase()}, {LEANING_LABELS['centre-droite'].toLowerCase()} et
       {LEANING_LABELS.droite.toLowerCase()}. Cette page dit d’où vient chaque classement,
       avec les sources citées, et ce que le site ne fait pas.
     </p>
@@ -81,9 +82,10 @@ const description =
         Les {outlets.length} médias sont choisis pour leur audience et leur poids
         éditorial, jamais pour équilibrer les bords. Il en résulte une répartition
         inégale —
-        {perLeaning('gauche').length} à gauche, {perLeaning('centre').length} au centre,
-        {perLeaning('droite').length} à droite — qui ressemble à celle de la presse
-        nationale française. À quoi ça sert ? À voir ce qui se passe quand un sujet n’est
+        {perLeaning('gauche').length} à gauche, {perLeaning('centre-gauche').length} au centre
+        gauche, {perLeaning('centre').length} au centre, {perLeaning('centre-droite').length} au
+        centre droit et {perLeaning('droite').length} à droite — qui ressemble à celle de la
+        presse nationale française. À quoi ça sert ? À voir ce qui se passe quand un sujet n’est
         repris que d’un côté : sur une page de sujet, la barre de couverture et les
         mentions « angle mort » le montrent directement.
       </p>
@@ -93,10 +95,11 @@ const description =
       <h2 class="text-[17px] font-semibold text-ink">Couverture et angles morts</h2>
       <p>
         Pour chaque sujet, Prisme compte combien de médias de chaque bord publient un
-        article d’actualité dessus. Un éditorial ou une tribune ne compte pas : il
-        commente, il ne couvre pas. Un bord devient un « angle mort » quand les deux
-        autres parlent du sujet et lui pas. Le comptage vient des titres et chapôs des
-        articles collectés, pas d’un jugement sur leur contenu.
+        article d’actualité dessus, les cinq tendances regroupées en trois camps :
+        centre gauche compte avec la gauche, centre droit avec la droite. Un éditorial ou une
+        tribune ne compte pas : il commente, il ne couvre pas. Un bord devient un « angle
+        mort » quand les deux autres parlent du sujet et lui pas. Le comptage vient des titres
+        et chapôs des articles collectés, pas d’un jugement sur leur contenu.
       </p>
     </section>
 

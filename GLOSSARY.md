@@ -11,7 +11,7 @@ A widely read French general-news publisher whose Front page and Articles Prisme
 _Avoid_: Source, newspaper, media, publisher
 
 **Leaning**:
-The political position assigned to an Outlet: Gauche (left), Centre or Droite (right). It belongs to the Outlet, never to an individual Article.
+The political position assigned to an Outlet: Gauche, Centre gauche, Centre, Centre droit or Droite. It belongs to the Outlet, never to an individual Article.
 _Avoid_: Bias, prism, side, orientation
 
 **Front page**:

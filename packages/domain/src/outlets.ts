@@ -11,10 +11,13 @@ import type { Outlet } from './index.ts';
  * French, as shown on the site. Quotes from sources stay citation-length:
  * the site never republishes Outlet text (ADR-0003).
  *
- * Placement rule: FrIdéo's seven bands are folded into Prisme's three Leanings
- * — `far-left`/`left` → gauche, `center-left`/`center`/`center-right` → centre,
- * `right`/`far-right` → droite. Outlets not covered by FrIdéo are placed from
- * the other sources, with the disagreement written down.
+ * Placement rule (issue #46): FrIdéo's seven bands map onto Prisme's five
+ * Leaning bands — `far-left`/`left` → gauche, `center-left` → centre-gauche,
+ * `center` → centre, `center-right` → centre-droite, `right`/`far-right` →
+ * droite. Outlets not covered by FrIdéo are placed from the other sources,
+ * with the disagreement written down. Coverage and Summaries group the five
+ * bands into three buckets (centre-gauche → gauche, centre-droite → droite)
+ * — see `CoverageGroup` in coverage.ts.
  */
 
 /** One cited public source behind an Outlet's Leaning. */
@@ -107,6 +110,7 @@ const CHECKED_LE_POINT = '2026-10-07';
 /** The Outlets of the Edition, grouped by Leaning. The perimeter is open (issue #10). */
 export const outlets: OutletConfig[] = [
   // ——— Gauche ———
+
   {
     id: 'lobs',
     name: "L'Obs",
@@ -158,6 +162,7 @@ export const outlets: OutletConfig[] = [
       note: 'Pas de tdmrep.json (404).',
     },
   },
+
   {
     id: 'huffpost',
     name: 'Le HuffPost',
@@ -209,6 +214,7 @@ export const outlets: OutletConfig[] = [
       note: 'Pas de tdmrep.json (404).',
     },
   },
+
   {
     id: 'liberation',
     name: 'Libération',
@@ -278,6 +284,7 @@ export const outlets: OutletConfig[] = [
       note: 'Pas de tdmrep.json (404, la page répond depuis le serveur de Libération malgré DataDome).',
     },
   },
+
   {
     id: 'mediapart',
     name: 'Mediapart',
@@ -328,6 +335,7 @@ export const outlets: OutletConfig[] = [
       note: 'Pas de tdmrep.json (404).',
     },
   },
+
   {
     id: 'humanite',
     name: "L'Humanité",
@@ -380,11 +388,12 @@ export const outlets: OutletConfig[] = [
     },
   },
 
-  // ——— Centre ———
+  // ——— Centre gauche ———
+
   {
     id: 'le-monde',
     name: 'Le Monde',
-    leaning: 'centre',
+    leaning: 'centre-gauche',
     paywall: 'partial',
     site: 'https://www.lemonde.fr',
     feeds: {
@@ -428,7 +437,7 @@ export const outlets: OutletConfig[] = [
       },
     ],
     leaningNote:
-      "Placé à Centre, avec désaccord documenté : FrIdéo le range dans « centre gauche » (intervalle excluant zéro) et Media Bias/Fact Check le note « LEFT-CENTER », tandis que le journal se définit comme indépendant et que plusieurs descriptions le tiennent pour centriste. Notre échelle à trois cases (Gauche / Centre / Droite) range la bande « centre gauche » dans Centre : c'est la règle annoncée, pas un jugement sur le journal.",
+      'Placé à Centre gauche : FrIdéo le range dans « centre gauche » (intervalle excluant zéro) et Media Bias/Fact Check le note « LEFT-CENTER », tandis que le journal se définit comme indépendant et que plusieurs descriptions le tiennent pour centriste.',
     readership: {
       evidence:
         '1er quotidien national : ACPM 2025/2026, 564 586 exemplaires France payée ; LeMonde.fr : 7e rang des sites, 95,5 M de visites (août 2026).',
@@ -460,10 +469,11 @@ export const outlets: OutletConfig[] = [
       note: "Indéterminé : lemonde.fr/.well-known/tdmrep.json répond 402 « Accès restreint » ; aucune réservation n'a pu être lue.",
     },
   },
+
   {
     id: 'marianne',
     name: 'Marianne',
-    leaning: 'centre',
+    leaning: 'centre-gauche',
     paywall: 'partial',
     site: 'https://www.marianne.net',
     feeds: {
@@ -498,7 +508,7 @@ export const outlets: OutletConfig[] = [
       },
     ],
     leaningNote:
-      "Placé à Centre, avec désaccord documenté : FrIdéo le range dans « centre gauche » (intervalle excluant zéro), mais la propriété (Křetínský) et la période récente sont décrites comme un glissement à droite — Le Monde parle d'un « lent glissement conservateur », Wikipédia d'un engagement souverainiste depuis les années 2010. La mesure agrégée (réseau de liens, contenu lexical 2024-2025) reste à gauche du centre : notre règle place la bande dans Centre, et ce glissement restera à suivre à chaque campagne de mise à jour de la configuration.",
+      "Placé à Centre gauche : FrIdéo le range dans « centre gauche » (intervalle excluant zéro), mais la propriété (Křetínský) et la période récente sont décrites comme un glissement à droite — Le Monde parle d'un « lent glissement conservateur », Wikipédia d'un engagement souverainiste depuis les années 2010. La mesure agrégée reste à gauche du centre ; ce glissement restera à suivre à chaque campagne de mise à jour de la configuration.",
     readership: {
       evidence:
         'ACPM magazines 2025/2026 : 100 527 exemplaires France payée ; marianne.net : 4,8 M de visites par mois.',
@@ -522,10 +532,11 @@ export const outlets: OutletConfig[] = [
       note: 'Réservation publiée (`tdm-reservation: 1` pour /) avec une politique `https://www.marianne.net/tdm-policy.json`.',
     },
   },
+
   {
     id: 'franceinfo',
     name: 'franceinfo',
-    leaning: 'centre',
+    leaning: 'centre-gauche',
     paywall: 'none',
     site: 'https://www.francetvinfo.fr',
     feeds: { latest: 'https://www.francetvinfo.fr/titres.rss' },
@@ -549,7 +560,7 @@ export const outlets: OutletConfig[] = [
       },
     ],
     leaningNote:
-      "Placé à Centre : média de service public, dont la mission est l'information pluraliste ; FrIdéo le situe dans « centre gauche » mais sans départage (l'intervalle contient zéro). Nous retenons Centre, conformément à la règle de placement.",
+      "Placé à Centre gauche : média de service public, dont la mission est l'information pluraliste ; FrIdéo le situe dans « centre gauche » (l'intervalle contient zéro), bande retenue conformément à la règle de placement.",
     readership: {
       evidence:
         '3e rang des sites web ACPM (grand public), 136,5 M de visites en août 2026 (Franceinfo.fr).',
@@ -572,6 +583,69 @@ export const outlets: OutletConfig[] = [
       note: 'Réservation publiée (tdm-reservation: 1, tdm-policy sur franceinfo.fr).',
     },
   },
+
+  {
+    id: '20-minutes',
+    name: '20 Minutes',
+    leaning: 'centre-gauche',
+    paywall: 'none',
+    site: 'https://www.20minutes.fr',
+    feeds: { une: 'https://www.20minutes.fr/feeds/rss-une.xml' },
+    leaningSources: [
+      {
+        title:
+          "FrIdéo : où se situe 20 Minutes ? (échelle d'idéologie de 30 médias français)",
+        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
+        date: '2026',
+        url: 'https://frenchnewslab.org/fr/medias/20-minutes',
+        takeaway:
+          'Score −0,31, bande « centre gauche » mais intervalle −0,82…+0,19 contenant zéro : non résolu.',
+      },
+      {
+        title: 'La charte de « 20 Minutes »',
+        author: '20 Minutes',
+        date: '2026',
+        url: 'https://www.20minutes.fr/charte-20minutes',
+        takeaway:
+          "« L'indépendance et la neutralité politiques et religieuses sont dans les fondements même de la pratique éditoriale de 20 Minutes » (charte du média, actionnaires Sipa Ouest-France et Groupe Rossel).",
+      },
+      {
+        title: '20 Minutes – Bias and Credibility',
+        author: 'Media Bias/Fact Check',
+        date: '2026',
+        url: 'https://mediabiasfactcheck.com/20-minutes/',
+        takeaway:
+          'Noté « LEFT-CENTER BIAS » (centre gauche) par Media Bias/Fact Check.',
+      },
+    ],
+    leaningNote:
+      'Placé à Centre gauche : la charte revendique la neutralité, Media Bias/Fact Check note « LEFT-CENTER », FrIdéo « centre gauche » sans départage (intervalle contenant zéro). La bande est retenue conformément à la règle de placement.',
+    readership: {
+      evidence:
+        '8e rang des sites web ACPM (grand public), 90,3 M de visites en août 2026 (20minutes.fr). Presse gratuite : pas de diffusion payée certifiée ACPM.',
+      url: 'https://www.acpm.fr/classements/united-web-sites-gp',
+    },
+    feedChecks: [
+      {
+        kind: 'une',
+        url: 'https://www.20minutes.fr/feeds/rss-une.xml',
+        checkedAt: CHECKED,
+        status: 200,
+        items: 30,
+        covers: '~6 jours',
+        images: 'all',
+        note: 'Le flux « une » accumule les choix de la journée sur plusieurs jours : il sert de front page par défaut. Pas de flux « latest » : les autres URL /feeds/* répondent 403 (vérifié le 2026-10-06).',
+      },
+    ],
+    tdm: {
+      reserved: false,
+      checkedAt: CHECKED,
+      note: 'Pas de tdmrep.json (404).',
+    },
+  },
+
+  // ——— Centre ———
+
   {
     id: 'ouest-france',
     name: 'Ouest-France',
@@ -635,6 +709,7 @@ export const outlets: OutletConfig[] = [
       note: 'Réservation publiée pour « / » (tdm-reservation: 1) ; « /shopping/ » et « /tourisme/ » ne sont pas réservés.',
     },
   },
+
   {
     id: 'bfmtv',
     name: 'BFMTV',
@@ -693,65 +768,7 @@ export const outlets: OutletConfig[] = [
       note: 'Indéterminé : la sonde sur bfmtv.com est bloquée par un pare-feu (403).',
     },
   },
-  {
-    id: '20-minutes',
-    name: '20 Minutes',
-    leaning: 'centre',
-    paywall: 'none',
-    site: 'https://www.20minutes.fr',
-    feeds: { une: 'https://www.20minutes.fr/feeds/rss-une.xml' },
-    leaningSources: [
-      {
-        title:
-          "FrIdéo : où se situe 20 Minutes ? (échelle d'idéologie de 30 médias français)",
-        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
-        date: '2026',
-        url: 'https://frenchnewslab.org/fr/medias/20-minutes',
-        takeaway:
-          'Score −0,31, bande « centre gauche » mais intervalle −0,82…+0,19 contenant zéro : non résolu.',
-      },
-      {
-        title: 'La charte de « 20 Minutes »',
-        author: '20 Minutes',
-        date: '2026',
-        url: 'https://www.20minutes.fr/charte-20minutes',
-        takeaway:
-          "« L'indépendance et la neutralité politiques et religieuses sont dans les fondements même de la pratique éditoriale de 20 Minutes » (charte du média, actionnaires Sipa Ouest-France et Groupe Rossel).",
-      },
-      {
-        title: '20 Minutes – Bias and Credibility',
-        author: 'Media Bias/Fact Check',
-        date: '2026',
-        url: 'https://mediabiasfactcheck.com/20-minutes/',
-        takeaway:
-          'Noté « LEFT-CENTER BIAS » (centre gauche) par Media Bias/Fact Check.',
-      },
-    ],
-    leaningNote:
-      'Placé à Centre, avec désaccord documenté : la charte revendique la neutralité, Media Bias/Fact Check note « LEFT-CENTER », FrIdéo « centre gauche » sans départage. La bande « centre gauche » étant rattachée à Centre dans notre échelle, nous retenons Centre.',
-    readership: {
-      evidence:
-        '8e rang des sites web ACPM (grand public), 90,3 M de visites en août 2026 (20minutes.fr). Presse gratuite : pas de diffusion payée certifiée ACPM.',
-      url: 'https://www.acpm.fr/classements/united-web-sites-gp',
-    },
-    feedChecks: [
-      {
-        kind: 'une',
-        url: 'https://www.20minutes.fr/feeds/rss-une.xml',
-        checkedAt: CHECKED,
-        status: 200,
-        items: 30,
-        covers: '~6 jours',
-        images: 'all',
-        note: 'Le flux « une » accumule les choix de la journée sur plusieurs jours : il sert de front page par défaut. Pas de flux « latest » : les autres URL /feeds/* répondent 403 (vérifié le 2026-10-06).',
-      },
-    ],
-    tdm: {
-      reserved: false,
-      checkedAt: CHECKED,
-      note: 'Pas de tdmrep.json (404).',
-    },
-  },
+
   {
     id: 'le-parisien',
     name: 'Le Parisien',
@@ -811,56 +828,7 @@ export const outlets: OutletConfig[] = [
       note: 'Réservation publiée (tdm-reservation: 1) avec une politique par agent (GPTBot, ClaudeBot…).',
     },
   },
-  {
-    id: 'tf1-info',
-    name: 'TF1 Info',
-    leaning: 'centre',
-    paywall: 'none',
-    site: 'https://www.tf1info.fr',
-    feeds: { latest: 'https://www.tf1info.fr/feeds/rss-une.xml' },
-    leaningSources: [
-      {
-        title:
-          "FrIdéo : où se situe TF1 INFO ? (échelle d'idéologie de 30 médias français)",
-        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
-        date: '2026',
-        url: 'https://frenchnewslab.org/fr/medias/tf1-info',
-        takeaway:
-          'Score +0,36, bande « centre droit » mais intervalle −0,31…+1,03 contenant zéro : non résolu, alors que la famille « orientation perçue en enquêtes » le place nettement à droite (+1,30).',
-      },
-      {
-        title: 'LCI / TF1 Info (article encyclopédique)',
-        author: 'Wikipédia',
-        date: '2026',
-        url: 'https://fr.wikipedia.org/wiki/LCI',
-        takeaway:
-          "Chaîne d'information du Groupe TF1 (privé, groupe Bouygues), devenue la marque d'information « TF1 Info » ; aucune ligne partisane n'y est revendiquée.",
-      },
-    ],
-    leaningNote:
-      "Placé à Centre, avec désaccord documenté : les enquêtes d'audience perçoivent TF1 Info à droite (+1,30 sur cette famille FrIdéo), mais les autres familles de preuves le placent au centre et l'intervalle global contient zéro. Nous retenons Centre, faute de départage.",
-    readership: {
-      evidence:
-        "Absente du classement ACPM des sites ; retenue comme marque d'information de la première chaîne de télévision privée française (Groupe TF1), audience mesurée par Médiamétrie plutôt que par l'ACPM.",
-    },
-    feedChecks: [
-      {
-        kind: 'latest',
-        url: 'https://www.tf1info.fr/feeds/rss-une.xml',
-        checkedAt: CHECKED,
-        status: 200,
-        items: 100,
-        covers: '~3 jours',
-        images: 'all',
-        note: 'Malgré son nom, ce flux est un feu complet (JT, émissions, recettes, météo) : traité en flux « latest », 10 articles récents pour la front page.',
-      },
-    ],
-    tdm: {
-      reserved: true,
-      checkedAt: CHECKED,
-      note: 'Réservation publiée (tdm-reservation: 1, tdm-policy sur tf1info.fr).',
-    },
-  },
+
   {
     id: 'rfi',
     name: 'RFI',
@@ -919,6 +887,7 @@ export const outlets: OutletConfig[] = [
       note: 'Réservation publiée (tdm-reservation: 1) ; une sonde de contrôle peut être filtrée par le pare-feu du site (403 observé une fois).',
     },
   },
+
   {
     id: 'france-24',
     name: 'France 24',
@@ -977,6 +946,7 @@ export const outlets: OutletConfig[] = [
       note: 'Réservation publiée (tdm-reservation: 1) ; une sonde de contrôle peut être filtrée par le pare-feu du site (403 observé une fois).',
     },
   },
+
   {
     id: 'courrier-international',
     name: 'Courrier international',
@@ -1035,6 +1005,7 @@ export const outlets: OutletConfig[] = [
       note: 'Pas de tdmrep.json (404).',
     },
   },
+
   {
     id: 'lexpress',
     name: "L'Express",
@@ -1087,6 +1058,7 @@ export const outlets: OutletConfig[] = [
       note: 'Pas de tdmrep.json (404).',
     },
   },
+
   {
     id: 'la-croix',
     name: 'La Croix',
@@ -1146,10 +1118,64 @@ export const outlets: OutletConfig[] = [
       note: 'Pas de tdmrep.json (404).',
     },
   },
+
+  // ——— Centre droit ———
+
+  {
+    id: 'tf1-info',
+    name: 'TF1 Info',
+    leaning: 'centre-droite',
+    paywall: 'none',
+    site: 'https://www.tf1info.fr',
+    feeds: { latest: 'https://www.tf1info.fr/feeds/rss-une.xml' },
+    leaningSources: [
+      {
+        title:
+          "FrIdéo : où se situe TF1 INFO ? (échelle d'idéologie de 30 médias français)",
+        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
+        date: '2026',
+        url: 'https://frenchnewslab.org/fr/medias/tf1-info',
+        takeaway:
+          'Score +0,36, bande « centre droit » mais intervalle −0,31…+1,03 contenant zéro : non résolu, alors que la famille « orientation perçue en enquêtes » le place nettement à droite (+1,30).',
+      },
+      {
+        title: 'LCI / TF1 Info (article encyclopédique)',
+        author: 'Wikipédia',
+        date: '2026',
+        url: 'https://fr.wikipedia.org/wiki/LCI',
+        takeaway:
+          "Chaîne d'information du Groupe TF1 (privé, groupe Bouygues), devenue la marque d'information « TF1 Info » ; aucune ligne partisane n'y est revendiquée.",
+      },
+    ],
+    leaningNote:
+      "Placé à Centre droit : les enquêtes d'audience perçoivent TF1 Info à droite (+1,30 sur cette famille FrIdéo), les autres familles de preuves le placent au centre, et la bande agrégée est « centre droit » (intervalle contenant zéro) ; la bande est retenue conformément à la règle de placement.",
+    readership: {
+      evidence:
+        "Absente du classement ACPM des sites ; retenue comme marque d'information de la première chaîne de télévision privée française (Groupe TF1), audience mesurée par Médiamétrie plutôt que par l'ACPM.",
+    },
+    feedChecks: [
+      {
+        kind: 'latest',
+        url: 'https://www.tf1info.fr/feeds/rss-une.xml',
+        checkedAt: CHECKED,
+        status: 200,
+        items: 100,
+        covers: '~3 jours',
+        images: 'all',
+        note: 'Malgré son nom, ce flux est un feu complet (JT, émissions, recettes, météo) : traité en flux « latest », 10 articles récents pour la front page.',
+      },
+    ],
+    tdm: {
+      reserved: true,
+      checkedAt: CHECKED,
+      note: 'Réservation publiée (tdm-reservation: 1, tdm-policy sur tf1info.fr).',
+    },
+  },
+
   {
     id: 'le-point',
     name: 'Le Point',
-    leaning: 'centre',
+    leaning: 'centre-droite',
     paywall: 'partial',
     site: 'https://www.lepoint.fr',
     feeds: {
@@ -1183,7 +1209,7 @@ export const outlets: OutletConfig[] = [
       },
     ],
     leaningNote:
-      "Placé à Centre, en cohérence avec la bande « centre droit » de FrIdéo. Désaccord à noter : l'intervalle de FrIdéo contient zéro, donc les données seules ne départagent pas le centre — le placement suit la convention décrite dans les limites connues. Les notations tierces concordent sur l'ancrage centre-droit (Media Bias/Fact Check « Right-Center », Lucide « Centre-droit ») et aucune source consultée ne le place à gauche ; l'héritage libéral-conservateur du titre (fondé en 1972 par des journalistes de L'Express) borne le placement sans le pousser à Droite, où FrIdéo le distingue nettement de Le Figaro (+0,56 contre +1,02).",
+      "Placé à Centre droit, en cohérence avec la bande « centre droit » de FrIdéo, dont l'intervalle contient zéro. Les notations tierces concordent sur l'ancrage centre-droit (Media Bias/Fact Check « Right-Center », Lucide « Centre-droit ») et aucune source consultée ne le place à gauche ; l'héritage libéral-conservateur du titre (fondé en 1972 par des journalistes de L'Express) borne le placement sans le pousser à Droite, où FrIdéo le distingue nettement de Le Figaro (+0,56 contre +1,02).",
     readership: {
       evidence:
         'ACPM presse magazine 2025/2026 : 20e rang, 263 528 exemplaires France payée (hebdomadaire, DSH).',
@@ -1209,6 +1235,7 @@ export const outlets: OutletConfig[] = [
   },
 
   // ——— Droite ———
+
   {
     id: 'le-figaro',
     name: 'Le Figaro',
@@ -1289,6 +1316,7 @@ export const outlets: OutletConfig[] = [
       note: 'Réservation publiée (tdm-reservation: 1).',
     },
   },
+
   {
     id: 'cnews',
     name: 'CNews',
@@ -1349,6 +1377,7 @@ export const outlets: OutletConfig[] = [
       note: 'Pas de tdmrep.json (404).',
     },
   },
+
   {
     id: 'europe-1',
     name: 'Europe 1',
@@ -1417,6 +1446,7 @@ export const outlets: OutletConfig[] = [
       note: 'Pas de tdmrep.json (404).',
     },
   },
+
   {
     id: 'le-jdd',
     name: 'Le JDD',
@@ -1491,6 +1521,7 @@ export const outlets: OutletConfig[] = [
       note: 'Pas de tdmrep.json (404).',
     },
   },
+
   {
     id: 'valeurs-actuelles',
     name: 'Valeurs actuelles',

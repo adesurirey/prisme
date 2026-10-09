@@ -27,7 +27,8 @@ rester identiques (les tests du module font respecter les règles de preuve).
 
 ### Ce que nous cherchons
 
-Pour chaque média : une place sur trois cases (**Gauche / Centre / Droite**), justifiée
+Pour chaque média : une place sur cinq cases (**Gauche / Centre gauche / Centre / Centre
+droit / Droite**), justifiée
 par **au moins deux sources publiques indépendantes et citables** (études académiques,
 analyses d'observatoires, rapports de régulateurs ou de défense de la liberté de la
 presse, ouvrages de référence, chartes éditoriales, notations tierces, encyclopédies avec
@@ -44,14 +45,21 @@ réseau de liens, enquêtes d'audience, chartes, profilage encyclopédique, invi
 l'antenne, notations Media Bias/Fact Check et Ad Fontes, mesure lexicale sur 568 906
 articles de 2024-2025), avec un intervalle de confiance par média.
 
-FrIdéo décrit sept bandes ; Prisme n'en a que trois (la PRD exclut de distinguer
-l'extrême gauche et l'extrême droite). La règle, appliquée à tous les médias couverts :
+FrIdéo décrit sept bandes ; Prisme en retient cinq (la PRD exclut toujours de distinguer
+l'extrême gauche et l'extrême droite — issue #46). La règle, appliquée à tous les médias
+couverts :
 
 | Bande FrIdéo | Leaning Prisme |
 |---|---|
 | `far-left`, `left` | **Gauche** |
-| `center-left`, `center`, `center-right` | **Centre** |
+| `center-left` | **Centre gauche** |
+| `center` | **Centre** |
+| `center-right` | **Centre droit** |
 | `right`, `far-right` | **Droite** |
+
+La couverture et les synthèses regroupent ensuite ces cinq bandes en trois camps :
+centre gauche compte avec la gauche, centre droit avec la droite (voir la section
+« Couverture et angles morts » du site et ADR-0010).
 
 Cette règle est symétrique et répétible : elle ne dépend pas de l'actualité ni des
 goûts de l'équipe. Deux médias hors du panel FrIdéo (**Courrier international**,
@@ -241,17 +249,16 @@ articles, ~2 h, images sur tous les articles. Flux très fréquent.
 
 **Paywall / TDM.** Gratuit ; pas de `tdmrep.json` (404).
 
-### Le Monde — Centre
+### Le Monde — Centre gauche
 
-**Placement.** Bande `center-left` de FrIdéo → **Centre**.
+**Placement.** Bande `center-left` de FrIdéo → **Centre gauche**.
 
 **Désaccords entre sources.** Cas le plus discuté du panel. FrIdéo range Le Monde dans
 « centre gauche » (intervalle −1,23…−0,18, excluant zéro) et Media Bias/Fact Check le note
 « LEFT-CENTER » ; le journal se définit comme indépendant des partis et plusieurs
-descriptions le tiennent pour centriste (Lucide le dit « centre-gauche »). Notre règle de
-placement range la bande `center-left` dans Centre : c'est une conséquence annoncée de la
-règle, pas un jugement sur le journal. Ceux qui placent Le Monde à gauche ne sont pas
-« contredits » ici : la divergence est documentée et la règle est publique.
+descriptions le tiennent pour centriste (Lucide le dit « centre-gauche »). Le placement
+suit la bande : ceux qui placent Le Monde à gauche ne sont pas « contredits » ici — la
+divergence est documentée et la règle est publique.
 
 **Sources**
 
@@ -270,9 +277,9 @@ articles, ~15 h, images partout ; `latest` <https://www.lemonde.fr/rss/en_contin
 **Paywall / TDM.** Partiellement payant ; réservation TDM **indéterminée** :
 `lemonde.fr/.well-known/tdmrep.json` répond 402 « Accès restreint ».
 
-### Marianne — Centre
+### Marianne — Centre gauche
 
-**Placement.** Bande `center-left` de FrIdéo → **Centre**.
+**Placement.** Bande `center-left` de FrIdéo → **Centre gauche**.
 
 **Désaccords entre sources.** L'un des désaccords les plus nets du panel FrIdéo : la
 famille « propriété » (Daniel Křetínský) place Marianne à droite du centre, quand les
@@ -280,7 +287,7 @@ familles « réseau de liens » et
 « contenu » la placent à gauche. Les sources descriptives vont dans le même sens : Le
 Monde décrit un « lent glissement conservateur », Wikipédia un engagement souverainiste
 depuis les années 2010. La mesure agrégée (intervalle excluant zéro) reste pourtant à
-gauche du centre ; notre règle de placement range la bande `center-left` dans Centre. Ce
+gauche du centre ; la bande `center-left` est retenue telle quelle (**Centre gauche**). Ce
 glissement restera à suivre à chaque campagne de mise à jour de la configuration — c'est
 le miroir du cas du JDD : là, la mesure rattrapait le récit ; ici, elle ne l'a pas encore
 rattrapé.
@@ -314,9 +321,10 @@ journal de build rend toute contribution nulle visible (issue #35).
 **Paywall / TDM.** Partiellement payant ; **réservation TDM publiée** (`tdm-reservation:
 1` pour `/`, avec une politique `tdm-policy.json`).
 
-### franceinfo — Centre
+### franceinfo — Centre gauche
 
-**Placement.** Bande `center-left` de FrIdéo, mais intervalle contenant zéro → **Centre**.
+**Placement.** Bande `center-left` de FrIdéo, intervalle contenant zéro → **Centre gauche**
+(la bande est retenue même sans départage).
 
 **Désaccords entre sources.** Aucun départage : FrIdéo (le média le mieux couvert du
 panel, 8 familles) place franceinfo dans « centre gauche » sans que l'intervalle exclue
@@ -387,13 +395,14 @@ la position la plus souvent attribuée au média.
 **Paywall / TDM.** Gratuit ; réservation TDM **indéterminée** (la sonde est bloquée par un
 pare-feu, 403).
 
-### 20 Minutes — Centre
+### 20 Minutes — Centre gauche
 
-**Placement.** Bande `center-left` de FrIdéo, intervalle contenant zéro → **Centre**.
+**Placement.** Bande `center-left` de FrIdéo, intervalle contenant zéro → **Centre gauche**
+(la bande est retenue même sans départage).
 
 **Désaccords entre sources.** La charte revendique la neutralité, Media Bias/Fact Check
-note « LEFT-CENTER », FrIdéo « centre gauche » sans départage. La bande `center-left` étant
-rattachée à Centre dans notre échelle, nous retenons Centre.
+note « LEFT-CENTER », FrIdéo « centre gauche » sans départage. La bande `center-left`
+est retenue telle quelle.
 
 **Sources**
 
@@ -443,14 +452,15 @@ archives de 2019 (vérifié le 2026-10-06).
 **Paywall / TDM.** Partiellement payant ; **réservation TDM publiée**
 (`tdm-reservation: 1`), avec une politique par agent (GPTBot, ClaudeBot…).
 
-### TF1 Info — Centre
+### TF1 Info — Centre droit
 
-**Placement.** Bande `center-right` de FrIdéo, intervalle contenant zéro → **Centre**.
+**Placement.** Bande `center-right` de FrIdéo, intervalle contenant zéro → **Centre droit**
+(la bande est retenue même sans départage).
 
 **Désaccords entre sources.** Les enquêtes d'audience perçoivent TF1 Info à droite
 (+1,30 sur cette famille FrIdéo, le signal le plus à droite du panel) ; les autres
-familles le placent au centre et l'intervalle global contient zéro. Nous retenons Centre,
-faute de départage, et notons la perception.
+familles le placent au centre et l'intervalle global contient zéro. La bande
+`center-right` est retenue telle quelle (**Centre droit**), et la perception est notée.
 
 **Sources**
 
@@ -515,7 +525,8 @@ sonde de contrôle peut être filtrée par le pare-feu du site (403 observé une
 ### Courrier international — Centre
 
 **Placement.** Hors panel FrIdéo. Trois sources convergentes mais pas identiques ;
-aucune ne le place dans la moitié gauche de notre échelle à trois cases → **Centre**.
+aucune ne le place à gauche de notre échelle à cinq cases → **Centre**, la nuance
+« centre gauche » restant documentée ci-dessous.
 
 **Désaccords entre sources.** « Social-démocrate » (Wikipédia), « libéral »
 (eurotopics/Bertelsmann), « centre-gauche » (Lucide). Le titre se définit par son ouverture
@@ -589,9 +600,9 @@ souhaitable.
 
 **Paywall / TDM.** Partiellement payant ; pas de `tdmrep.json` (404).
 
-### Le Point — Centre
+### Le Point — Centre droit
 
-**Placement.** Bande `centre droit` de FrIdéo → Centre (règle de placement).
+**Placement.** Bande `center-right` de FrIdéo → **Centre droit**.
 
 **Désaccords entre sources.** L'intervalle de confiance de FrIdéo (−0,09…+1,22)
 contient zéro : les données seules ne départagent pas le centre, et la bande
@@ -784,9 +795,11 @@ issue #11.)
    — et restent sans image ni chapô (ADR-0007 ; traité côté pipeline, issue #12).
 2. **FrIdéo ne couvre ni Europe 1 ni Courrier international** ; leur placement repose sur
    d'autres sources, explicitées dans leurs dossiers.
-3. **Le « centre » est une case large** : elle accueille `center-left`, `center` et
-   `center-right`. Les médias dont l'intervalle de confiance contient zéro (15 des 30 de
-   FrIdéo) sont classés par convention, pas par preuve ; leurs dossiers le disent.
+3. **La bande suit la mesure, pas la preuve** : quand l'intervalle de confiance contient
+   zéro (15 des 30 de FrIdéo), la bande est retenue par convention, pas par preuve ; les
+   dossiers le disent. Depuis le découpage en cinq bandes (issue #46), cela ne fusionne
+   plus des médias de part et d'autre du centre dans une même case — mais la bande
+   « centre gauche » ou « centre droit » d'un média sans départage reste une convention.
 4. **La perception diffère de la mesure** : TF1 Info est perçu à droite par les enquêtes
    d'audience sans que les autres familles de preuves le confirment ; BFMTV et Le Monde
    font l'objet de descriptions contradictoires. Tout est publié, rien n'est lissé.

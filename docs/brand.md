@@ -84,8 +84,11 @@ The UI already embodies the brand; these rules keep it that way.
 
 - **Prisme has no brand color.** Prisme is the white light; the spectrum
   belongs to the press. Never introduce a decorative accent color — the only
-  colors in the UI are the three Leaning colors (Gauche, Centre, Droite),
-  used by the dots, the Coverage bar, the Blindspot dot and the favicon.
+  colors in the UI are the Leaning colors, used by the Outlet dots: five
+  bands (Gauche, Centre gauche, Centre, Centre droit, Droite), the two
+  intermediate bands sitting between their neighbours. The three Coverage
+  group colors (Gauche, Centre, Droite) remain the colors of the Coverage
+  bar, the Blindspot dot and the favicon.
 - **Color means something.** If a pixel is colored, it encodes a Leaning.
   Monochrome chrome, hairlines, generous whitespace (Linear-like).
 
