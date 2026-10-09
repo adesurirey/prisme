@@ -36,6 +36,30 @@ Three cheap models run the show; each pinned for traceability.
 Leanings are set by hand, one per Outlet, backed by sources — never classified
 by a model.
 
+## Benchmarking the Decision model (Kind + Section)
+
+Same pattern as the grouping benchmark (issue #4): hand labels check the
+models, `docs/research/decision-model-benchmark.md` carries the graded
+results and the winner rule (not_news precision first — never wrongly
+drop a real Article — then kind accuracy, then section accuracy).
+
+1. **Sample** — `pnpm benchmark:export` fetches every Outlet's feeds and
+   samples ~110 real headline+teaser pairs (seed 4; 70 general, 40
+   “suspects” oversampled by a rare-kind heuristic — horoscopes, live
+   blogs, tribunes…). Writes the gitignored `.benchmark/samples.json`
+   (grader input) and `.benchmark/worksheet.md` (what you read), plus the
+   committed `docs/research/decision-model-labels.json` — ids and URLs
+   only, teaser text never enters git (ADR-0003).
+2. **Label** — fill `kind` and `section` for every item in
+   `decision-model-labels.json` (kinds: news, opinion, live, not_news).
+3. **Grade** — `pnpm benchmark:grade` replays every configured model over
+   the labeled sample and rewrites
+   `docs/research/decision-model-benchmark.md`. Keys from `.env`:
+   `OPENROUTER_API_KEY` (OpenRouter models), `JEV_API_KEY` (Jev direct),
+   `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` (Clef-flash) — a
+   missing key just skips that model. Needs network (samples are taken
+   from live feeds; grade replays the gitignored teaser text).
+
 ## Benchmarking a new Grouping model
 
 The pinned Grouping model can be challenged anytime — issue #41 settled the
