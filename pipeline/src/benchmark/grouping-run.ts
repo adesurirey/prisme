@@ -18,6 +18,7 @@
  * rerun with a new model extends the comparison.
  */
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
+import { pathToFileURL } from 'node:url';
 import type { GroupingProposal } from '../gemini.ts';
 import { type FixtureSet, fixturesFromData } from './grouping-fixtures.ts';
 import {
@@ -352,7 +353,12 @@ async function main(): Promise<void> {
   console.log(`report → ${new URL('report.md', OUT_DIR).pathname}`);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+if (
+  process.argv[1] != null &&
+  import.meta.url === pathToFileURL(process.argv[1]).href
+) {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}

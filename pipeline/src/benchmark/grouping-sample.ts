@@ -18,6 +18,7 @@
  * seeded PRNG (mulberry32, seed 41) makes the sample reproducible.
  */
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
+import { pathToFileURL } from 'node:url';
 import type { GroupingProposal } from '../gemini.ts';
 import {
   type FixtureSet,
@@ -309,4 +310,11 @@ async function main() {
   );
 }
 
-await main();
+// CLI entrypoint only: importing this module (e.g. for the pure sampler
+// functions in a test) must not touch .benchmark/ — gitignored, absent in CI.
+if (
+  process.argv[1] != null &&
+  import.meta.url === pathToFileURL(process.argv[1]).href
+) {
+  await main();
+}

@@ -19,6 +19,7 @@
  * pairs.json carry everything.
  */
 import { readFile, writeFile } from 'node:fs/promises';
+import { pathToFileURL } from 'node:url';
 import { LABELS_DIR } from './grouping-paths.ts';
 
 const LABELS_DOC_PATH = new URL(
@@ -128,4 +129,10 @@ async function main() {
   console.log(`\nlabels → docs/research/grouping-labels.json`);
 }
 
-await main();
+// CLI entrypoint only: importing this module must not read .benchmark/.
+if (
+  process.argv[1] != null &&
+  import.meta.url === pathToFileURL(process.argv[1]).href
+) {
+  await main();
+}
