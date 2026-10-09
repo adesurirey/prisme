@@ -353,6 +353,32 @@ describe('groupStories', () => {
     expect(outcome.stories[0]!.articles.map((a) => a.id)).toEqual(['a1']);
   });
 
+  it('survives two invented target Story ids: the pair-score sort ran the comparator', async () => {
+    // One unknown target never reaches pairScore (a 1-element sort skips the
+    // comparator); two force it — the pre-fix build crashed here when the
+    // Grouping model proposed a Story id that is not in the live set.
+    const outcome = await groupStories(
+      input({
+        articles: [article('a1'), article('a2')],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [
+              { articleId: 'a1', storyId: 'nope-1', confidence: 0.9 },
+              { articleId: 'a2', storyId: 'nope-2', confidence: 0.9 },
+            ],
+            titleUpdates: [],
+          }),
+          membership: fakeMembership(false),
+        },
+      }),
+    );
+    expect(outcome.stories.map((s) => s.articles[0]!.id).sort()).toEqual([
+      'a1',
+      'a2',
+    ]);
+  });
+
   it('an Article with no assignment splits', async () => {
     const outcome = await groupStories(
       input({

@@ -530,11 +530,12 @@ export async function groupStories(
       let best = 0;
       if (articleTokens.size > 0) {
         const headlines = pair.target.startsWith('key:')
-          ? [keyMembers.get(pair.target.slice(4))![0].headline]
-          : [byId.get(pair.target)!].flatMap((s) => [
-              s.title,
-              ...s.articles.slice(0, 8).map((a) => a.headline),
-            ]);
+          ? [keyMembers.get(pair.target.slice(4))?.[0]?.headline ?? '']
+          : [byId.get(pair.target)].flatMap((s) =>
+              s
+                ? [s.title, ...s.articles.slice(0, 8).map((a) => a.headline)]
+                : [],
+            );
         for (const headline of headlines)
           best = Math.max(best, overlap(articleTokens, tokens(headline)));
       }
