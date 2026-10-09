@@ -71,7 +71,7 @@ export interface Evaluation {
  * unresolvable target still gets one ("bad:" prefix — the model did cluster
  * them together) but shows up in coverage.unknownTarget.
  */
-function finalClusters(
+export function finalClusters(
   fixture: GroupingFixture,
   proposal: GroupingProposal,
 ): { finalCluster: Map<string, string>; coverage: CoverageMetrics } {

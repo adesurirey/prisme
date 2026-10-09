@@ -143,6 +143,11 @@ pnpm benchmark:grouping -- gemini/gemini-3.5-flash-lite \
 # Add a new candidate anytime; the report regenerates from all recorded
 # results in .benchmark/grouping/results/:
 pnpm benchmark:grouping -- openrouter/<vendor>/<model>
+# Sanity sample (issue #41, no model calls): 30 blind pairs from the
+# recorded models' clashes with the snapshot key — the human labels
+# verdicts in .benchmark/grouping/labels/, the grader prints agreement
+# per bucket and writes the committed ids+verdicts labels file:
+pnpm benchmark:grouping-sample && pnpm benchmark:grouping-grade
 ```
 
 Keys live in the local env only (`GEMINI_API_KEY`, `OPENROUTER_API_KEY`) —
