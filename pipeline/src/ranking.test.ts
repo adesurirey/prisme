@@ -3,9 +3,10 @@ import { describe, expect, it } from 'vitest';
 import { EDITION_SIZE, rankStories } from './ranking.ts';
 
 /**
- * The Edition ranking (issue #37, ADR-0009): Stories order by Coverage
- * (reporting Outlets, Opinion excluded), then by the newest Article, then
- * deterministically. The Edition keeps the top EDITION_SIZE.
+ * The Edition ranking (issue #37, ADR-0009 as amended by ADR-0011): Stories
+ * order by Coverage — distinct Outlets with any Article on the Story, Opinion
+ * pieces included — then by the newest Article, then deterministically. The
+ * Edition keeps the top EDITION_SIZE.
  */
 
 function article(id: string, overrides: Partial<Article> = {}): Article {
@@ -66,14 +67,23 @@ describe('rankStories', () => {
     expect(ranked([one, two])).toEqual(['two', 'one']);
   });
 
-  it('never lets Opinion pieces count toward Coverage', () => {
+  it('counts Opinion pieces toward Coverage (ADR-0011)', () => {
     const news = story('news', [article('1')]);
     const opinion = story('op', [
       article('2'),
       article('3', { outletId: 'b', kind: 'opinion' }),
       article('4', { kind: 'opinion' }),
     ]);
-    expect(ranked([opinion, news])).toEqual(['news', 'op']);
+    expect(ranked([opinion, news])).toEqual(['op', 'news']);
+  });
+
+  it('still never counts not_news or unclassified Articles toward Coverage', () => {
+    const news = story('news', [article('1')]);
+    const junk = story('junk', [
+      article('2', { kind: 'not_news' }),
+      article('3', { outletId: 'b', kind: undefined }),
+    ]);
+    expect(ranked([junk, news])).toEqual(['news', 'junk']);
   });
 
   it('breaks Coverage ties by the newest Article', () => {

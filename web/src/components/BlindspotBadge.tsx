@@ -2,7 +2,7 @@ import type { CoverageGroup } from '@prisme/domain';
 import { LEANING_LABELS } from '@prisme/domain';
 
 /**
- * A Blindspot (issue #6): a Leaning with no reporting Outlet on a Story
+ * A Blindspot (issue #6, ADR-0011): a Leaning with no Outlet at all on a Story
  * reported by three or more Outlets. One badge per absent Leaning, in the
  * missing Leaning's color, on the card and the Story page.
  *

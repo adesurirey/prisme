@@ -50,7 +50,7 @@ accusation.
 ## Voice and tone
 
 - **Precise.** Only what the product can prove: Front pages are declared,
-  never inferred; Coverage counts reporting Outlets; Undated Articles show
+  never inferred; Coverage counts Outlets on a story, editorials included; Undated Articles show
   without a time of day. Say "we show", not "we know".
 - **Calm and concrete.** Short declarative sentences. Verbs over adjectives.
   No exclamation marks, no hype, no outrage.

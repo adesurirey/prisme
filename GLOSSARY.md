@@ -25,11 +25,11 @@ A single piece published by one Outlet. Prisme links to it on the Outlet's websi
 _Avoid_: Post, item, link
 
 **Opinion piece**:
-An Article that argues a position (editorial, column, op-ed) rather than reporting news. It informs Summaries but does not count toward Coverage.
+An Article that argues a position (editorial, column, op-ed) rather than reporting news. It counts toward Coverage and informs Summaries (ADR-0011); it never supplies a Story's image.
 _Avoid_: Editorial, tribune (as a generic term)
 
 **Kind**:
-The classification of an Article: news, opinion, live or not_news. The Decision model assigns it from the headline and teaser. A not_news Article never reaches the Edition; an Opinion piece never counts toward Coverage.
+The classification of an Article: news, opinion, live or not_news. The Decision model assigns it from the headline and teaser. A not_news Article never reaches the Edition; an Opinion piece counts toward Coverage like any other Article (ADR-0011).
 _Avoid_: Type, category, tag
 
 **Decision model**:
@@ -87,11 +87,11 @@ The three-camp grouping of Leanings that Coverage, Blindspots and Summaries work
 _Avoid_: Bucket, camp, bloc
 
 **Coverage**:
-How a Story's reporting is distributed across Coverage groups and Outlets: the number of Outlets reporting the Story (each with at least one reporting Article), counted per Coverage group. Opinion pieces never count toward Coverage.
+How a Story's reporting is distributed across Coverage groups and Outlets: the number of Outlets reporting the Story (each with at least one Article — news, live or Opinion, ADR-0011), counted per Coverage group.
 _Avoid_: Distribution, reach, share
 
 **Blindspot**:
-A Coverage group with no reporting Outlet on a Story that the two other groups both report (reporting Outlets only, Opinion pieces excluded) — the Story everyone covers except them. Shown as a badge; one badge per absent group.
+A Coverage group with no Outlet at all on a Story that the two other groups both report — not even an editorial (ADR-0011). The Story everyone covers except them. Shown as a badge; one badge per absent group.
 _Avoid_: Gap, missing coverage
 
 **Summary**:

@@ -221,8 +221,8 @@ export async function updateSummaries(input: {
     const newCount = story.articles.length - seen;
     if (newCount <= 0) continue;
 
-    // Only Leanings with Coverage are summarized; an all-Opinion Story has
-    // none (Opinion pieces never count toward Coverage) and is skipped.
+    // Only Leanings with Coverage are summarized (ADR-0011: an all-Opinion
+    // Story now has Coverage, so it is summarized like any other).
     const counts = coverageCounts(story.articles, outletById);
     const coveredLeanings = LEANINGS.filter((l) => counts[l] > 0);
     if (coveredLeanings.length === 0) continue;
