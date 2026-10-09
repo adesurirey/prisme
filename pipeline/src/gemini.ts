@@ -20,6 +20,11 @@ export const GROUPING = {
   gateway: 'google',
   model: 'gemini-3.5-flash-lite',
   label: 'Flash-Lite',
+  /** USD per 1M input tokens, OpenRouter's paid price for this model —
+   * the free tier costs nothing, the figure prices a build for the
+   * decision rule (< $0.50/build, issue #41). Travels with the pin: a new
+   * pinned model brings its own price. */
+  paidPricePerMTok: 0.3,
 } as const;
 
 export interface GroupingModel {
@@ -229,11 +234,6 @@ const PLAIN_RETRY_MS = 1_000;
 export type Sleep = (ms: number) => Promise<void>;
 const defaultSleep: Sleep = (ms) =>
   new Promise((resolve) => setTimeout(resolve, ms));
-
-/** USD per 1M input tokens, OpenRouter's paid price for the pinned model —
- * the free tier costs nothing, the figure prices a build for the decision
- * rule (< $0.50/build, issue #41). */
-export const GROUPING_PAID_PRICE_PER_MTOK = 0.3;
 
 export function geminiGroupingModel(
   apiKey: string,
