@@ -77,9 +77,7 @@ export async function runEdition(): Promise<Edition> {
   // `everFrontPage` sticky. Frozen Stories are untouched (ADR-0005). Stories
   // whose flags changed join the changed set, so their files are rewritten.
   const liveIds = new Set(outcome.live.map((s) => s.id));
-  const frontpage = updateFrontPageHistory(outcome.stories, kept, (s) =>
-    liveIds.has(s.id),
-  );
+  const frontpage = updateFrontPageHistory(outcome.stories, kept, now);
   const changed = new Set([...outcome.changed, ...frontpage.changed]);
 
   // The Edition is the ranked top EDITION_SIZE (issue #37, ADR-0009): Stories

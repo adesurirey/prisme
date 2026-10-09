@@ -43,12 +43,11 @@ import {
 import type { MembershipChecker } from './decision-model.ts';
 import { storySection } from './edition.ts';
 import type { GroupingModel, GroupingProposal } from './gemini.ts';
+import { isLive, LIVE_WINDOW_MS } from './liveness.ts';
 import { MembershipGate } from './membership-gate.ts';
 
 /** At most this many Membership checks per build; the rest split (ADR-0005). */
 export const MAX_MEMBERSHIP_CHECKS = 20;
-/** An Article younger than this keeps its Story live (ADR-0005). */
-const LIVE_WINDOW_MS = 24 * 60 * 60 * 1000;
 
 export interface GroupingClients {
   /** Live: resolveModels (policy.ts) fails the build before this point. */
@@ -87,10 +86,7 @@ function published(date: string): number {
 }
 
 /** True when the Story still has an Article inside the 24h window. */
-export function isLive(story: Story, now: Date): boolean {
-  const cutoff = now.getTime() - LIVE_WINDOW_MS;
-  return story.articles.some((a) => published(a.publishedAt) > cutoff);
-}
+export { isLive };
 
 /** Deterministic Story order: newest Article first, ties by id. */
 function byNewestArticle(a: Story, b: Story): number {

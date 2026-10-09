@@ -1,4 +1,5 @@
 import type { Article, Story } from '@prisme/domain';
+import { isLive } from './liveness.ts';
 
 /**
  * The Front-page history (issue #6): each build reconciles the Story files'
@@ -19,7 +20,7 @@ export interface FrontPageResult {
 export function updateFrontPageHistory(
   stories: Story[],
   collected: Article[],
-  isLive: (story: Story) => boolean,
+  now: Date,
 ): FrontPageResult {
   // Today's Front-page snapshot, by Article id; absent means not on it.
   const current = new Map(
@@ -27,7 +28,7 @@ export function updateFrontPageHistory(
   );
   const changed = new Set<string>();
   const reconciled = stories.map((story) => {
-    if (!isLive(story)) return story;
+    if (!isLive(story, now)) return story;
     let touched = false;
     const articles = story.articles.map((article) => {
       const nowOnFrontPage = current.has(article.id);
