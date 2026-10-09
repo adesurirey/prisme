@@ -84,7 +84,7 @@ describe('collect — Undated Articles (ADR-0007)', () => {
     );
 
     expect(articles).toHaveLength(2);
-    expect(articles[0].publishedAt).toBe('2026-10-07T21:59:59.000Z');
+    expect(articles[0].publishedAt).toBe('2026-10-06T22:00:00.000Z');
     expect(articles[0].dayPrecision).toBe(true);
   });
 

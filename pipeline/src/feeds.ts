@@ -12,7 +12,7 @@ export interface ParsedItem {
   teaser: string;
   imageUrl?: string;
   /**
-   * True for an Undated Article (ADR-0007): publishedAt is the end of its
+   * True for an Undated Article (ADR-0007): publishedAt is the start of its
    * Publication day (read from the URL), not an exact feed timestamp.
    */
   dayPrecision?: true;
@@ -72,9 +72,11 @@ const SLUG_DATE = /-(\d{2})-(\d{2})-(\d{4})-[^/]*$/;
 
 /**
  * An Undated Article (ADR-0007): the feed gives no time, the URL gives the
- * Publication day. Date it to the end of that Paris day — generous so a
- * yesterday-evening Article stays within the 24h window — and mark it
- * day-precision so the UI never shows the invented hour.
+ * Publication day. Date it to the start of that Paris day — the URL gives
+ * the day with certainty, and the earliest instant of that day is the only
+ * invented time that is never in the future at collection time (an
+ * end-of-day stamp could be) — and mark it day-precision so the UI never
+ * shows the invented hour.
  */
 function withPublicationDay(item: ParsedItem): ParsedItem {
   if (item.publishedAt !== '') return item;
@@ -86,7 +88,7 @@ function withPublicationDay(item: ParsedItem): ParsedItem {
   if (month < 1 || month > 12 || day > daysInMonth(year, month)) return item;
   return {
     ...item,
-    publishedAt: endOfParisDay(year, month, day),
+    publishedAt: startOfParisDay(year, month, day),
     dayPrecision: true,
   };
 }
@@ -120,11 +122,11 @@ function parisOffsetMinutes(utcMs: number): number {
   return (asUtc - utcMs) / 60_000;
 }
 
-function endOfParisDay(year: number, month: number, day: number): string {
+function startOfParisDay(year: number, month: number, day: number): string {
   // Probe at noon UTC (same Paris civil date in both DST regimes).
   const offsetMinutes = parisOffsetMinutes(Date.UTC(year, month - 1, day, 12));
   return new Date(
-    Date.UTC(year, month - 1, day, 23, 59, 59) - offsetMinutes * 60_000,
+    Date.UTC(year, month - 1, day) - offsetMinutes * 60_000,
   ).toISOString();
 }
 
