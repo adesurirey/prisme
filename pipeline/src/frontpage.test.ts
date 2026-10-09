@@ -2,6 +2,8 @@ import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
 import { updateFrontPageHistory } from './frontpage.ts';
 
+const NOW = new Date('2026-10-06T11:00:00Z');
+
 /**
  * The Front-page history (issue #6): `frontPage` is the current snapshot,
  * recomputed each build from today's collection; `everFrontPage` is sticky —
@@ -39,7 +41,7 @@ describe('updateFrontPageHistory', () => {
     const result = updateFrontPageHistory(
       [s],
       [article('a', { frontPage: true })],
-      () => true,
+      NOW,
     );
     const updated = result.stories[0].articles[0];
     expect(updated.frontPage).toBe(true);
@@ -54,7 +56,7 @@ describe('updateFrontPageHistory', () => {
     const result = updateFrontPageHistory(
       [s],
       [article('a', { frontPage: false })],
-      () => true,
+      NOW,
     );
     const updated = result.stories[0].articles[0];
     expect(updated.frontPage).toBe(false);
@@ -63,7 +65,7 @@ describe('updateFrontPageHistory', () => {
 
   it('marks an Article absent from today as not currently on the Front page', () => {
     const s = story('s1', 's1', [article('a', { frontPage: true })]);
-    const result = updateFrontPageHistory([s], [], () => true);
+    const result = updateFrontPageHistory([s], [], NOW);
     const updated = result.stories[0].articles[0];
     expect(updated.frontPage).toBe(false);
     expect(updated.everFrontPage).toBeUndefined();
@@ -75,7 +77,7 @@ describe('updateFrontPageHistory', () => {
     const result = updateFrontPageHistory(
       [s],
       [article('a', { frontPage: false })],
-      () => true,
+      NOW,
     );
     expect(result.changed.size).toBe(0);
   });
@@ -85,7 +87,7 @@ describe('updateFrontPageHistory', () => {
     const result = updateFrontPageHistory(
       [s],
       [article('a', { frontPage: true })],
-      () => false,
+      new Date(NOW.getTime() + 25 * 60 * 60 * 1000),
     );
     expect(result.stories[0]).toEqual(s);
     expect(result.changed.size).toBe(0);
@@ -94,11 +96,7 @@ describe('updateFrontPageHistory', () => {
   it('does not mutate the input Stories', () => {
     const s = story('s1', 's1', [article('a', { frontPage: true })]);
     const original = structuredClone(s);
-    updateFrontPageHistory(
-      [s],
-      [article('a', { frontPage: true })],
-      () => true,
-    );
+    updateFrontPageHistory([s], [article('a', { frontPage: true })], NOW);
     expect(s).toEqual(original);
   });
 });

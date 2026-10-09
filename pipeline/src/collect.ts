@@ -1,9 +1,7 @@
 import { createHash } from 'node:crypto';
 import type { Article, Outlet } from '@prisme/domain';
 import { type ParsedFeed, type ParsedItem, parseFeed } from './feeds.ts';
-
-/** The 24h window of Articles an Edition keeps. */
-export const WINDOW_MS = 24 * 60 * 60 * 1000;
+import { LIVE_WINDOW_MS } from './liveness.ts';
 
 /**
  * How many of the most recent Articles a latest feed may contribute — a cost
@@ -116,7 +114,8 @@ async function collectOutlet(
       byId.set(article.id, article);
   }
   const keptArticles = [...byId.values()].filter(
-    (article) => now.getTime() - Date.parse(article.publishedAt) <= WINDOW_MS,
+    (article) =>
+      now.getTime() - Date.parse(article.publishedAt) <= LIVE_WINDOW_MS,
   );
   const keptIds = new Set(keptArticles.map((a) => a.id));
   const keptTeasers = new Map([...teasers].filter(([id]) => keptIds.has(id)));
@@ -153,7 +152,7 @@ function dateUndatedItems(
   failures: CollectedArticles['failures'],
 ): ParsedItem[] {
   const fresh =
-    updatedAt !== '' && now.getTime() - Date.parse(updatedAt) <= WINDOW_MS;
+    updatedAt !== '' && now.getTime() - Date.parse(updatedAt) <= LIVE_WINDOW_MS;
   const undated = items.filter((item) => item.publishedAt === '').length;
   if (undated === 0) return items;
   if (!fresh) {
