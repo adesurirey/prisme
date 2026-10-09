@@ -5,6 +5,17 @@
   "createdAt": "2026-10-08T16:17:29.723Z",
   "articles": [
     {
+      "id": "281b594d1f50",
+      "outletId": "le-parisien",
+      "headline": "Apologie du terrorisme : le rappeur BORO700 jugé le 21 octobre à Paris pour sa chanson sur Merah et Abdeslam",
+      "url": "https://www.leparisien.fr/paris-75/apologie-du-terrorisme-le-rappeur-boro700-juge-le-21-octobre-a-paris-pour-sa-chanson-sur-merah-et-abdeslam-09-10-2026-46YVR6GGLZE7JN4Z3UVRD6UJ4Y.php",
+      "publishedAt": "2026-10-09T21:59:59.000Z",
+      "frontPage": false,
+      "dayPrecision": true,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "f6b38efa494d",
       "outletId": "le-jdd",
       "headline": "Adolescents scandant une chanson à la gloire de Mohamed Merah : enquête ouverte pour apologie du terrorisme",
@@ -29,5 +40,18 @@
       "everFrontPage": true
     }
   ],
-  "section": "misc"
+  "section": "misc",
+  "summaries": {
+    "centre": [
+      "Un artiste de rap comparaîtra devant la justice parisienne en octobre pour des propos dans un morceau.",
+      "Le texte mis en cause évoque des figures du terrorisme islamiste."
+    ],
+    "droite": [
+      "Une procédure judiciaire vise un interprète de rap suite à la diffusion d'un titre aux références terroristes.",
+      "Une enquête distincte cible des mineurs ayant entonné un morceau polémique glorifiant des attentats et des figures historiques sombres lors d'une action contestataire."
+    ]
+  },
+  "differences": "Le camp de droite met particulièrement en avant la résonance de ces affaires auprès de la jeunesse, notamment à l'occasion de rassemblements lycéens, et élargit le spectre de l'actualité judiciaire aux adolescents impliqués en plus du rappeur poursuivi. Le centre, quant à lui, se focalise plus strictement sur la citation à comparaître de l'artiste visé par la justice. Les deux camps s'accordent néanmoins sur la gravité des faits liés à la glorification d'actes terroristes.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 3
 }
