@@ -38,5 +38,20 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "summaries": {
+    "gauche": [
+      "L'ouest de la Sicile a subi de plein fouet une double trombe marine d'une violence extrême.",
+      "Le phénomène a ravagé un port sicilien, laissant derrière lui un paysage assimilable a une zone de conflit.",
+      "Le passage de ces puissants tourbillons a provoqué des destructions massives et fait plusieurs blessés."
+    ],
+    "droite": [
+      "Une violente tornade a frappé la ville de Marsala, située dans la partie occidentale de la Sicile.",
+      "Le phénomène météo trouve son origine dans le choc thermique entre une masse d'air froid et la température élevée de la mer.",
+      "Les violentes rafales ont endommagé des bâtiments, notamment une école, et fait au moins quinze blessés dont deux graves."
+    ]
+  },
+  "differences": "Le camp de gauche, représenté ici par Le HuffPost, insiste sur l'aspect spectaculaire et chaotique des destructions en qualifiant la situation de scène de guerre. De son côté, le centre droit apporte des précisions factuelles et scientifiques plus poussées, en expliquant l'origine thermique du phénomène et en dressant un bilan chiffré précis des victimes et des dégâts matériels.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 3
 }
