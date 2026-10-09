@@ -85,15 +85,10 @@ export interface Article {
   section?: Section;
 }
 
-/** The classification of an Article: news, opinion, live or not_news. */
-export type ArticleKind = 'news' | 'opinion' | 'live' | 'not_news';
+/** The classification of an Article: news, opinion or not_news. */
+export type ArticleKind = 'news' | 'opinion' | 'not_news';
 
-export const ARTICLE_KINDS: ArticleKind[] = [
-  'news',
-  'opinion',
-  'live',
-  'not_news',
-];
+export const ARTICLE_KINDS: ArticleKind[] = ['news', 'opinion', 'not_news'];
 
 /** The part of the news a Story belongs to (issue #4). */
 export type Section =

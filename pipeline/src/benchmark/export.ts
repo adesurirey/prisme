@@ -32,7 +32,7 @@ const SEED = 4;
 const GENERAL_COUNT = 70;
 const SUSPECT_COUNT = 40;
 
-const KINDS = ['news', 'opinion', 'live', 'not_news'] as const;
+const KINDS = ['news', 'opinion', 'not_news'] as const;
 const SECTIONS = [
   'politics',
   'world',

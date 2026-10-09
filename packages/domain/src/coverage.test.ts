@@ -88,9 +88,8 @@ describe('coverageGroup', () => {
 });
 
 describe('isReporting', () => {
-  it('counts news and live Articles as reporting', () => {
+  it('counts news Articles as reporting', () => {
     expect(isReporting(article('a', { kind: 'news' }))).toBe(true);
-    expect(isReporting(article('a', { kind: 'live' }))).toBe(true);
   });
 
   it('never counts Opinion pieces, not_news or unclassified Articles', () => {
@@ -105,7 +104,7 @@ describe('coverageCounts', () => {
     const articles = [
       article('a', { outletId: 'centre-1', kind: 'news' }),
       article('b', { outletId: 'centre-1', kind: 'news' }),
-      article('c', { outletId: 'centre-2', kind: 'live' }),
+      article('c', { outletId: 'centre-2', kind: 'news' }),
       article('d', { outletId: 'droite-1', kind: 'news' }),
     ];
     expect(coverageCounts(articles, byId)).toEqual({
@@ -171,7 +170,7 @@ describe('countedArticles', () => {
     const articles = [
       article('a', { kind: 'news' }),
       article('b', { kind: 'opinion' }),
-      article('c', { kind: 'live' }),
+      article('c', { kind: 'not_news' }),
       article('d'),
     ];
     expect(countedArticles(articles)).toBe(3);

@@ -29,8 +29,12 @@ An Article that argues a position (editorial, column, op-ed) rather than reporti
 _Avoid_: Editorial, tribune (as a generic term)
 
 **Kind**:
-The classification of an Article: news, opinion, live or not_news. The Decision model assigns it from the headline and teaser. A not_news Article never reaches the Edition; an Opinion piece never counts toward Coverage.
+The classification of an Article: news, opinion or not_news. The Decision model assigns it from the headline and teaser. A not_news Article never reaches the Edition; an Opinion piece never counts toward Coverage.
 _Avoid_: Type, category, tag
+
+**Live recap thread**:
+A direct-live ("en direct") page whose teaser is a table of contents — links to other Articles, "à suivre", "à lire aussi" — rather than reporting prose. It is classified not_news: it cannot be grouped into a Story and never counts toward Coverage. A live page whose teaser carries substantive reporting is an ordinary news Article.
+_Avoid_: Live article (ambiguous), LIVE, direct
 
 **Decision model**:
 The cheap language model Prisme uses to assign each Article its Kind and Section.

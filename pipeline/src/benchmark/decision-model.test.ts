@@ -61,7 +61,6 @@ describe('parseAnswers', () => {
   it('sends one request with both questions', () => {
     expect(Object.keys(QUESTIONS).sort()).toEqual(['kind', 'section']);
     expect(Object.keys(QUESTIONS.kind.criteria).sort()).toEqual([
-      'live',
       'news',
       'not_news',
       'opinion',

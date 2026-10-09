@@ -34,9 +34,9 @@ export function coverageGroup(leaning: Leaning): CoverageGroup {
       return 'droite';
   }
 }
-/** A Story is reported by Articles of these Kinds; Opinion pieces never count. */
+/** A Story is reported by news Articles; Opinion pieces and not_news never count (ADR-0011). */
 export function isReporting(article: Article): boolean {
-  return article.kind === 'news' || article.kind === 'live';
+  return article.kind === 'news';
 }
 
 /** The distinct Outlets reporting the Story, as ids — the Coverage basis. */

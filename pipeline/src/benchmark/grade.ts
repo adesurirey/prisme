@@ -37,7 +37,7 @@ const DOC_PATH = new URL(
 );
 
 const CONCURRENCY = 4;
-const KINDS: ArticleKind[] = ['news', 'opinion', 'live', 'not_news'];
+const KINDS: ArticleKind[] = ['news', 'opinion', 'not_news'];
 const INVALID = '(invalid)';
 
 interface LabeledItem {

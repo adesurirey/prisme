@@ -26,9 +26,11 @@ const KIND_CRITERIA: Record<ArticleKind, string> = {
   news: "Un fait d'actualité est rapporté : événement, déclaration, chiffre, résultat, enquête, reportage. Sont aussi de l'info les expliquations journalistiques (« pourquoi », « qu'est-ce que », un article de type « analyse » signé par la rédaction), les reportages photo et diaporamas « en images », même sans événement daté du jour",
   opinion:
     "Prise de position d'auteur : un genre d'opinion explicite — éditorial, tribune, chronique, billet d'humeur, op-ed — où l'auteur défend sa propre thèse. Une analyse ou explication produite par la rédaction ou un journaliste reste de l'info tant qu'aucun genre d'opinion n'est identifiable",
-  live: "Couverture en direct d'un événement en cours (live blog, « en direct »)",
+  // Live recap threads are not_news (issue #49, ADR-0011): there is no
+  // `live` Kind any more. A direct-live page whose teaser is a table of
+  // contents is dropped; a live page with substantive teaser prose is news.
   not_news:
-    "Aucun fait d'actualité : horoscope, astro, météo, jeux/quiz/mots croisés/sudoku, recette de cuisine, programme TV, bons plans/shopping/concours, guide ou tutoriel, sommaire ou récapitulatif d'émissions (invités, débats à venir, rediffusion)",
+    "Aucun fait d'actualité : horoscope, astro, météo, jeux/quiz/mots croisés/sudoku, recette de cuisine, programme TV, bons plans/shopping/concours, guide ou tutoriel, sommaire ou récapitulatif d'émissions (invités, débats à venir, rediffusion). Sont aussi exclus les fils en direct (« en direct », live blog) dont le chapô est un sommaire de liens vers d'autres articles (« à suivre », « à lire aussi », « notre suivi ») plutôt qu'un récit journalistique ; en revanche, un direct dont le chapô porte un véritable contenu rédactionnel reste de l'info",
 };
 
 const SECTION_CRITERIA: Record<Section, string> = {
@@ -45,7 +47,7 @@ const SECTION_CRITERIA: Record<Section, string> = {
 };
 
 /** Prompt version, for benchmark traceability. */
-export const PROMPT_VERSION = 3;
+export const PROMPT_VERSION = 4;
 
 /** The two typed questions sent in every request; keys reused in the answers. */
 export const QUESTIONS = {

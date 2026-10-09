@@ -8,6 +8,8 @@ Prompt v3: criteria and instructions in French, with explicit French triggers fo
 
 Winner rule: `not_news` precision first (a false not_news silently drops a real Article), then kind accuracy, then section accuracy; cost and latency only as tie-breaks.
 
+**Prompt v4 (issue #49, ADR-0011): the `live` Kind is removed.** Live recap threads — "en direct" pages whose teaser is a table of contents rather than reporting prose — are now `not_news`; substantive live blogs stay `news`. Before re-grading, sample real production live threads from Outlet feeds and hand-label ~4–6 pairs spanning that boundary (the v3 sample had only 3 `live` pairs). Results below are v3, kept for traceability.
+
 ## Results
 
 | Model | Kind acc | not_news P | not_news R | Section acc | Invalid | Avg latency | p95 latency | Input tokens | Cost |
