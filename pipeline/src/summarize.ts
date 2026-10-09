@@ -1,7 +1,10 @@
 /**
- * Summaries model (issue #7, ADR-0006): per-Leaning bullet-point Summaries and
- * a Differences paragraph for each live Edition Story that gained Articles,
- * from headlines + teasers only — never the article page (ADR-0003). One
+ * Summaries model (issue #7, ADR-0006): per-Coverage-group bullet-point
+ * Summaries and a Differences paragraph for each live Edition Story that
+ * gained Articles, from headlines + teasers only — never the article page
+ * (ADR-0003). Articles carry their granular Leaning band (issue #46), so the
+ * model can account for the composition of a group and note within-group
+ * nuance; the output stays keyed on the three Coverage groups. One
  * structured-output call per changed Story against Google's Generative
  * Language API (free tier, shared with the Grouping model).
  *
@@ -20,7 +23,7 @@ import { coverageCounts, SECTION_LABELS } from '@prisme/domain';
 import { RETRYABLE_STATUS } from './http.ts';
 
 /** Prompt version, for traceability in Story files (ADR-0006). Bump on any prompt/schema change. */
-export const SUMMARIES_PROMPT_VERSION = 'sum-1';
+export const SUMMARIES_PROMPT_VERSION = 'sum-2';
 
 /** The production Summaries model, pinned for traceability. */
 export const SUMMARIES = {
@@ -119,23 +122,16 @@ const SUMMARIES_SCHEMA = {
   required: ['summaries', 'differences'],
 } as const;
 
-const LEANING_LABELS_FR: Record<CoverageGroup, string> = {
-  gauche: 'gauche',
-  centre: 'centre',
-  droite: 'droite',
-};
-
 /**
- * Interim fold from the five Leaning bands to the three Coverage buckets
- * (option B, mirrored from @prisme/domain coverage.ts): Articles are tagged
- * with their bucket so the per-bucket Summaries stay attributable. A
- * follow-up change feeds the granular band instead (issue #46).
+ * French Leaning-band labels for the prompt, lowercase: Articles carry their
+ * granular band (issue #46), Summaries stay keyed on the three Coverage
+ * groups, whose fold the instructions spell out.
  */
-const BUCKET_OF: Record<Leaning, CoverageGroup> = {
+const LEANING_LABELS_FR: Record<Leaning, string> = {
   gauche: 'gauche',
-  'centre-gauche': 'gauche',
+  'centre-gauche': 'centre gauche',
   centre: 'centre',
-  'centre-droite': 'droite',
+  'centre-droite': 'centre droit',
   droite: 'droite',
 };
 
@@ -185,7 +181,7 @@ export function summariesPrompt(input: SummaryInput): string {
       const teaser = a.teaser ? ` — ${a.teaser}` : '';
       const tags = [
         a.outletName,
-        LEANING_LABELS_FR[BUCKET_OF[a.outletLeaning]],
+        LEANING_LABELS_FR[a.outletLeaning],
         a.opinion ? 'tribune' : null,
         a.frontPage ? 'à la une' : null,
       ]
@@ -197,10 +193,10 @@ export function summariesPrompt(input: SummaryInput): string {
     `Tu couvres uniquement : ${coveredLeanings.map((l) => LEANING_LABELS_FR[l]).join(', ')}.`,
     '',
     'Consignes :',
-    "- Pour chaque tendance couverte, écris « summaries.<tendance> » : un tableau de 2 à 5 puces courtes en français, factuelles, qui résument ce que les médias de cette tendance rapportent du sujet. Reformule : ne recopie jamais la formulation d'un titre ou d'un teaser. Ne nomme aucun média dans les résumés.",
-    '- Les tribunes éclairent le positionnement de leur tendance mais restent des prises de position, pas des faits établis.',
-    "- Écris « differences » : un seul paragraphe court en français qui compare comment les tendances cadrent, accentuent ou laissent de côté des parties du sujet. Tu peux citer un média à l'appui d'un contraste concret. Décris sans trancher : dis qui met l'accent sur quoi, jamais qui a raison.",
-    "- Si une seule tendance couvre le sujet : son résumé la présente, et « differences » décrit sa lecture et dit sans détour qu'il n'y a rien à comparer — ne rien inventer.",
+    "- Pour chaque camp couvert, écris « summaries.<camp> » : un tableau de 2 à 5 puces courtes en français, factuelles, qui résument ce que les médias de ce camp rapportent du sujet. Les camps regroupent les bandes : le camp gauche comprend les médias classés « centre gauche », le camp droite comprend les médias classés « centre droit ». Reformule : ne recopie jamais la formulation d'un titre ou d'un teaser. Ne nomme aucun média dans les résumés ; tu peux en revanche signaler une nuance interne au camp (par exemple entre « gauche » et « centre gauche ») sans désigner de titre.",
+    '- Les tribunes éclairent le positionnement de leur camp mais restent des prises de position, pas des faits établis.',
+    "- Écris « differences » : un seul paragraphe court en français qui compare comment les camps cadrent, accentuent ou laissent de côté des parties du sujet — y compris les divergences à l'intérieur d'un même camp (par exemple entre « droite » et « centre droit »). Tu peux citer un média à l'appui d'un contraste concret. Décris sans trancher : dis qui met l'accent sur quoi, jamais qui a raison.",
+    "- Si un seul camp couvre le sujet : son résumé le présente, et « differences » décrit sa lecture et dit sans détour qu'il n'y a rien à comparer — ne rien inventer.",
   );
   return lines.join('\n');
 }

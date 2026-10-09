@@ -12,22 +12,28 @@ import { leaningOrder } from './index.ts';
 /**
  * The three buckets Coverage and Summaries work in, into which the five
  * Leaning bands are folded (issue #46, option B): centre-gauche counts as
- * gauche and centre-droite as droite. Interim encoding — a follow-up change
- * promotes it to an exported, tested `coverageGroup()`.
+ * gauche and centre-droite as droite. This fold is the grouping policy —
+ * changing how Leanings regroup for Coverage and Summaries means changing
+ * this one function and nothing else.
  */
 export type CoverageGroup = 'gauche' | 'centre' | 'droite';
 
 /** Coverage groups in their fixed display order (Gauche, Centre, Droite). */
 export const coverageOrder: CoverageGroup[] = ['gauche', 'centre', 'droite'];
 
-/** The interim fold from the five Leaning bands to the three buckets. */
-const GROUP_OF: Record<Leaning, CoverageGroup> = {
-  gauche: 'gauche',
-  'centre-gauche': 'gauche',
-  centre: 'centre',
-  'centre-droite': 'droite',
-  droite: 'droite',
-};
+/** The fold from the five Leaning bands to the three Coverage groups. */
+export function coverageGroup(leaning: Leaning): CoverageGroup {
+  switch (leaning) {
+    case 'gauche':
+    case 'centre-gauche':
+      return 'gauche';
+    case 'centre':
+      return 'centre';
+    case 'centre-droite':
+    case 'droite':
+      return 'droite';
+  }
+}
 /** A Story is reported by Articles of these Kinds; Opinion pieces never count. */
 export function isReporting(article: Article): boolean {
   return article.kind === 'news' || article.kind === 'live';
@@ -54,7 +60,7 @@ export function coverageCounts(
   };
   for (const id of reportingOutletIds(articles)) {
     const leaning = outletById.get(id)?.leaning;
-    if (leaning) counts[GROUP_OF[leaning]] += 1;
+    if (leaning) counts[coverageGroup(leaning)] += 1;
   }
   return counts;
 }
@@ -139,7 +145,7 @@ export function pickStoryImage(
     const groups = coverageOrder.filter((l) => counts[l] === tier);
     const inTier = candidates.filter((a) => {
       const leaning = outletById.get(a.outletId)?.leaning;
-      return leaning != null && groups.includes(GROUP_OF[leaning]);
+      return leaning != null && groups.includes(coverageGroup(leaning));
     });
     // A tie between groups is left to recency: the newest candidate wins.
     if (inTier.length > 0) return inTier[0];

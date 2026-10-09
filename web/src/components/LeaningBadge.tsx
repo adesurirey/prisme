@@ -1,9 +1,11 @@
 import type { Leaning } from '@prisme/domain';
-import { LEANING_LABELS } from '@prisme/domain';
+import { coverageGroup, LEANING_LABELS } from '@prisme/domain';
 
 /**
- * A Leaning as information: a colored dot (the only colored element besides
- * the Coverage bar) followed by the neutral label.
+ * A Leaning as information: a colored dot followed by the neutral label.
+ * The dot carries the Leaning's Coverage group color — the UI only ever
+ * uses the three group colors (docs/brand.md) — while the label keeps the
+ * granular band (Centre gauche, Centre droit).
  */
 export default function LeaningBadge({
   leaning,
@@ -25,7 +27,7 @@ export default function LeaningBadge({
       <span
         aria-hidden="true"
         className="inline-block size-2 rounded-full"
-        style={{ background: `var(--${leaning})` }}
+        style={{ background: `var(--${coverageGroup(leaning)})` }}
       />
       <span className={labelClass}>{LEANING_LABELS[leaning]}</span>
     </span>
