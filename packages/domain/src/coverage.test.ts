@@ -13,13 +13,15 @@ import {
 import type { Article, Leaning, Outlet, Story } from './index.ts';
 
 /**
- * The Coverage and Blindspot rules (issue #6): Coverage counts distinct
- * reporting Outlets per Coverage group — never Articles, never Opinion
- * pieces — and a Blindspot is a group with no reporting Outlet on a Story
- * reported by three or more Outlets. The five Leaning bands fold into the
- * three groups (issue #46): centre-gauche → gauche, centre-droite → droite.
- * The image rule prefers Centre, then the group with the most Coverage, ties
- * left to recency.
+ * The Coverage and Blindspot rules (issue #6, revised — see ADR-0011):
+ * Coverage counts distinct Outlets per Coverage group from any Article they
+ * published on the Story — news, live or Opinion — because an Opinion piece
+ * shapes the Outlet's readers just as much as a straight report. A Blindspot
+ * is a group with no Outlet at all on a Story reported by three or more
+ * Outlets. The five Leaning bands fold into the three groups (issue #46):
+ * centre-gauche → gauche, centre-droite → droite. The image rule still
+ * draws only from news/live Articles and prefers Centre, then the group
+ * with the most Coverage, ties left to recency.
  */
 
 function outlet(id: string, leaning: Outlet['leaning']): Outlet {
@@ -88,13 +90,13 @@ describe('coverageGroup', () => {
 });
 
 describe('isReporting', () => {
-  it('counts news and live Articles as reporting', () => {
+  it('counts news, live and Opinion Articles as reporting (ADR-0011)', () => {
     expect(isReporting(article('a', { kind: 'news' }))).toBe(true);
     expect(isReporting(article('a', { kind: 'live' }))).toBe(true);
+    expect(isReporting(article('a', { kind: 'opinion' }))).toBe(true);
   });
 
-  it('never counts Opinion pieces, not_news or unclassified Articles', () => {
-    expect(isReporting(article('a', { kind: 'opinion' }))).toBe(false);
+  it('never counts not_news or unclassified Articles', () => {
     expect(isReporting(article('a', { kind: 'not_news' }))).toBe(false);
     expect(isReporting(article('a'))).toBe(false);
   });
@@ -115,15 +117,36 @@ describe('coverageCounts', () => {
     });
   });
 
-  it('excludes Opinion pieces from the counts', () => {
+  it('counts an Outlet present only through an Opinion piece (ADR-0011)', () => {
     const articles = [
       article('a', { outletId: 'gauche-1', kind: 'opinion' }),
       article('b', { outletId: 'centre-1', kind: 'news' }),
     ];
     expect(coverageCounts(articles, byId)).toEqual({
-      gauche: 0,
+      gauche: 1,
       centre: 1,
       droite: 0,
+    });
+  });
+
+  it('an Opinion-only Outlet erases its group Blindspot while the others report', () => {
+    const articles = [
+      article('a', { outletId: 'gauche-1', kind: 'opinion' }),
+      article('b', { outletId: 'centre-1', kind: 'news' }),
+      article('c', { outletId: 'droite-1', kind: 'news' }),
+    ];
+    expect(blindspots(coverageCounts(articles, byId))).toEqual([]);
+  });
+
+  it('a Story covered solely by Opinion pieces has non-zero Coverage', () => {
+    const articles = [
+      article('a', { outletId: 'gauche-1', kind: 'opinion' }),
+      article('b', { outletId: 'droite-1', kind: 'opinion' }),
+    ];
+    expect(coverageCounts(articles, byId)).toEqual({
+      gauche: 1,
+      centre: 0,
+      droite: 1,
     });
   });
 
@@ -144,6 +167,16 @@ describe('coverageCounts', () => {
     ];
     expect(reportingOutletIds(articles)).toEqual(
       new Set(['centre-1', 'droite-1']),
+    );
+  });
+
+  it('reports an Outlet whose only Article is an Opinion piece', () => {
+    const articles = [
+      article('a', { outletId: 'gauche-1', kind: 'opinion' }),
+      article('b', { outletId: 'centre-1', kind: 'news' }),
+    ];
+    expect(reportingOutletIds(articles)).toEqual(
+      new Set(['gauche-1', 'centre-1']),
     );
   });
 });
@@ -167,14 +200,14 @@ describe('blindspots', () => {
 });
 
 describe('countedArticles', () => {
-  it('counts every Article except Opinion pieces', () => {
+  it('counts every Article, Opinion pieces included (ADR-0011)', () => {
     const articles = [
       article('a', { kind: 'news' }),
       article('b', { kind: 'opinion' }),
       article('c', { kind: 'live' }),
-      article('d'),
+      article('d', { kind: 'not_news' }),
     ];
-    expect(countedArticles(articles)).toBe(3);
+    expect(countedArticles(articles)).toBe(4);
   });
 });
 
@@ -324,6 +357,43 @@ describe('pickStoryImage', () => {
       }),
     ];
     expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('g2.jpg');
+  });
+
+  it('a not_news Article never supplies the image either', () => {
+    const articles = [
+      article('not-news-img', {
+        kind: 'not_news',
+        publishedAt: at(16),
+        imageUrl: 'junk.jpg',
+      }),
+      article('centre', {
+        outletId: 'centre-1',
+        kind: 'news',
+        publishedAt: at(10),
+        imageUrl: 'c.jpg',
+      }),
+    ];
+    expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('c.jpg');
+  });
+
+  it('an Opinion-only Outlet never shifts the image tier (ADR-0011)', () => {
+    const articles = [
+      article('gauche-op', {
+        outletId: 'gauche-1',
+        kind: 'opinion',
+        publishedAt: at(16),
+        imageUrl: 'op.jpg',
+      }),
+      article('centre', {
+        outletId: 'centre-1',
+        kind: 'news',
+        publishedAt: at(10),
+        imageUrl: 'c.jpg',
+      }),
+    ];
+    // With Opinion counted toward Coverage, Gauche and Centre tie at 1 — but
+    // the image still comes from the news Article, never the editorial.
+    expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('c.jpg');
   });
 
   it('returns undefined when no Article has an image', () => {

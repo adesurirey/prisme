@@ -19,7 +19,7 @@ export default function CoverageMeta({
   barWidth = 48,
 }: {
   counts: Record<CoverageGroup, number>;
-  /** Distinct reporting Outlets — the numerator of the share. */
+  /** Distinct Outlets on the Story, editorials included — the numerator. */
   reporting: number;
   /** Outlets in the config — the denominator. */
   totalOutlets: number;

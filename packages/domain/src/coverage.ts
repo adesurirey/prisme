@@ -2,11 +2,14 @@ import type { Article, Leaning, Outlet, Story } from './index.ts';
 import { leaningOrder } from './index.ts';
 
 /**
- * The Coverage and Blindspot rules (issue #6, glossary): Coverage counts
- * distinct reporting Outlets per Coverage group — never Articles, never
- * Opinion pieces — and a Blindspot is a group with no reporting Outlet on a
- * Story reported by three or more Outlets. Code and data keys are English;
- * French UI labels live with the UI.
+ * The Coverage and Blindspot rules (issue #6, revised by ADR-0011): Coverage
+ * counts distinct Outlets per Coverage group from any Article they published
+ * on the Story — news, live or Opinion. An Opinion piece shapes the Outlet's
+ * readers just as much as a straight report, so it counts toward the
+ * influence footprint; only not_news and unclassified Articles never count.
+ * A Blindspot is a group with no Outlet at all on a Story reported by three
+ * or more Outlets. Code and data keys are English; French UI labels live
+ * with the UI.
  */
 
 /**
@@ -34,9 +37,16 @@ export function coverageGroup(leaning: Leaning): CoverageGroup {
       return 'droite';
   }
 }
-/** A Story is reported by Articles of these Kinds; Opinion pieces never count. */
+/**
+ * A Story is reported by Articles of these Kinds: news, live and Opinion
+ * (ADR-0011). Only not_news and unclassified Articles never count.
+ */
 export function isReporting(article: Article): boolean {
-  return article.kind === 'news' || article.kind === 'live';
+  return (
+    article.kind === 'news' ||
+    article.kind === 'live' ||
+    article.kind === 'opinion'
+  );
 }
 
 /** The distinct Outlets reporting the Story, as ids — the Coverage basis. */
@@ -80,9 +90,9 @@ export function blindspots(
   );
 }
 
-/** The Article count shown as secondary detail: every Article but Opinion. */
+/** The Article count shown as secondary detail: every Article (ADR-0011). */
 export function countedArticles(articles: Article[]): number {
-  return articles.filter((article) => article.kind !== 'opinion').length;
+  return articles.length;
 }
 
 /** Outlets ever on the Front page for a Story: once per Outlet, Leaning band then config order. */
@@ -121,14 +131,20 @@ export function newestFirst(a: Article, b: Article): number {
  * The image shown for a Story: prefer a Centre Outlet's Article, otherwise the
  * Coverage group with the most Coverage, walking Coverage tiers in order; a
  * Gauche/Droite tie is left to recency, whatever the Leaning. Within a
- * Leaning, the newest Article with an image wins; ties break by id. The image
+ * Leaning, the newest Article with an image wins; ties break by id. Despite
+ * Opinion counting toward Coverage (ADR-0011), the image still draws only
+ * from news/live Articles — an editorial never changes the visual. The image
  * is hotlinked from the Outlet — never stored (ADR-0003).
  */
 export function pickStoryImage(
   story: Story,
   outletById: Map<string, Outlet>,
 ): Article | undefined {
-  const candidates = story.articles.filter((a) => a.imageUrl).sort(newestFirst);
+  // News/live Articles only: an editorial never supplies the image nor
+  // shifts its Coverage tier, and neither do not_news or unclassified
+  // Articles (ADR-0011).
+  const imageSources = story.articles.filter(isReporting);
+  const candidates = imageSources.filter((a) => a.imageUrl).sort(newestFirst);
   if (candidates.length === 0) return undefined;
 
   const centre = candidates.find(
@@ -137,7 +153,7 @@ export function pickStoryImage(
   if (centre) return centre;
 
   // Coverage tiers, highest first; the first tier with an image candidate wins.
-  const counts = coverageCounts(story.articles, outletById);
+  const counts = coverageCounts(imageSources, outletById);
   const tiers = [...new Set(coverageOrder.map((l) => counts[l]))].sort(
     (a, b) => b - a,
   );
