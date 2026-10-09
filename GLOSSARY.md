@@ -79,19 +79,23 @@ _Avoid_: Issue, digest, daily, run
 ### Reading a story
 
 **Prism**:
-A Story seen through every Leaning at once: its Coverage, its Articles grouped by Leaning, its Summaries and its Differences.
+A Story seen through every Leaning at once: its Coverage, its Articles grouped by Coverage group, its Summaries and its Differences.
 _Avoid_: Analysis, breakdown
 
+**Coverage group**:
+The three-camp grouping of Leanings that Coverage, Blindspots and Summaries work in: Centre gauche counts with Gauche and Centre droit with Droite. The granular Leaning is what the UI shows per Outlet; the group is what the counters and tabs speak in.
+_Avoid_: Bucket, camp, bloc
+
 **Coverage**:
-How a Story's reporting is distributed across Leanings and Outlets: the number of Outlets reporting the Story (each with at least one reporting Article), counted per Leaning. Opinion pieces never count toward Coverage.
+How a Story's reporting is distributed across Coverage groups and Outlets: the number of Outlets reporting the Story (each with at least one reporting Article), counted per Coverage group. Opinion pieces never count toward Coverage.
 _Avoid_: Distribution, reach, share
 
 **Blindspot**:
-A Leaning with no reporting Outlet on a Story that the two other Leanings both report (reporting Outlets only, Opinion pieces excluded) — the Story everyone covers except them. Shown as a badge; one badge per absent Leaning.
+A Coverage group with no reporting Outlet on a Story that the two other groups both report (reporting Outlets only, Opinion pieces excluded) — the Story everyone covers except them. Shown as a badge; one badge per absent group.
 _Avoid_: Gap, missing coverage
 
 **Summary**:
-A short, bullet-point account of a Story as told by the Outlets of one Leaning.
+A short, bullet-point account of a Story as told by the Outlets of one Coverage group.
 _Avoid_: Digest, recap, abstract
 
 **Differences**:

@@ -19,6 +19,14 @@ const outlets: Outlet[] = [
     feeds: { latest: 'x' },
   },
   {
+    id: 'franceinfo',
+    name: 'franceinfo',
+    leaning: 'centre-gauche',
+    paywall: 'none',
+    site: 'https://francetvinfo.fr',
+    feeds: { latest: 'x' },
+  },
+  {
     id: 'figaro',
     name: 'Le Figaro',
     leaning: 'droite',
@@ -378,6 +386,21 @@ describe('summariesPrompt', () => {
     expect(prompt).toContain('ne rien inventer');
   });
 
+  it('folds centre-gauche Articles into the gauche group (issue #46)', async () => {
+    const s = story('s1', 'sujet-1', [article('a1', 'franceinfo')]);
+    const calls: { input: SummaryInput }[] = [];
+    await updateSummaries({
+      stories: [s],
+      teasers: new Map(),
+      outletById,
+      model: fakeModel(GOOD_RESPONSE, calls),
+      promptVersion: SUMMARIES_PROMPT_VERSION,
+    });
+    expect(calls).toHaveLength(1);
+    expect(calls[0].input.coveredLeanings).toEqual(['gauche']);
+    expect(s.summaries).toEqual({ gauche: ['Lu à gauche'] });
+  });
+
   it('tags each Article with its Outlet and Leaning, so per-Leaning Summaries are attributable', () => {
     const prompt = summariesPrompt({
       story: { id: 's1', title: 'Sujet', section: undefined },
@@ -396,5 +419,33 @@ describe('summariesPrompt', () => {
       coveredLeanings: ['centre'],
     });
     expect(prompt).toContain('[Le Monde, centre, à la une] T — Tea');
+  });
+
+  it('tags Articles with their granular band and spells out the group fold (issue #46)', () => {
+    const prompt = summariesPrompt({
+      story: { id: 's1', title: 'Sujet', section: undefined },
+      previousSummaries: undefined,
+      previousDifferences: undefined,
+      newArticles: [
+        {
+          headline: 'T',
+          teaser: '',
+          outletName: 'franceinfo',
+          outletLeaning: 'centre-gauche',
+          opinion: false,
+          frontPage: false,
+        },
+      ],
+      coveredLeanings: ['gauche'],
+    });
+    // Granular band in the tag…
+    expect(prompt).toContain('[franceinfo, centre gauche] T');
+    // …and the fold into the three camps spelled out in the instructions.
+    expect(prompt).toContain(
+      'le camp gauche comprend les médias classés « centre gauche »',
+    );
+    expect(prompt).toContain(
+      'le camp droite comprend les médias classés « centre droit »',
+    );
   });
 });

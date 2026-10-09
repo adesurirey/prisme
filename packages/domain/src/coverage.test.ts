@@ -3,20 +3,23 @@ import {
   blindspots,
   countedArticles,
   coverageCounts,
+  coverageGroup,
   frontPageOutlets,
   isReporting,
   newestFirst,
   pickStoryImage,
   reportingOutletIds,
 } from './coverage.ts';
-import type { Article, Outlet, Story } from './index.ts';
+import type { Article, Leaning, Outlet, Story } from './index.ts';
 
 /**
  * The Coverage and Blindspot rules (issue #6): Coverage counts distinct
- * reporting Outlets per Leaning — never Articles, never Opinion pieces — and
- * a Blindspot is a Leaning with no reporting Outlet on a Story reported by
- * three or more Outlets. The image rule prefers Centre, then the Leaning with
- * the most Coverage, ties left to recency.
+ * reporting Outlets per Coverage group — never Articles, never Opinion
+ * pieces — and a Blindspot is a group with no reporting Outlet on a Story
+ * reported by three or more Outlets. The five Leaning bands fold into the
+ * three groups (issue #46): centre-gauche → gauche, centre-droite → droite.
+ * The image rule prefers Centre, then the group with the most Coverage, ties
+ * left to recency.
  */
 
 function outlet(id: string, leaning: Outlet['leaning']): Outlet {
@@ -49,6 +52,40 @@ const outlets: Outlet[] = [
   outlet('droite-1', 'droite'),
 ];
 const byId = new Map(outlets.map((o) => [o.id, o]));
+
+describe('coverageGroup', () => {
+  it('folds centre-gauche into gauche and centre-droite into droite (issue #46)', () => {
+    const bands: Record<Leaning, string> = {
+      gauche: 'gauche',
+      'centre-gauche': 'gauche',
+      centre: 'centre',
+      'centre-droite': 'droite',
+      droite: 'droite',
+    };
+    for (const [leaning, group] of Object.entries(bands)) {
+      expect(coverageGroup(leaning as Leaning)).toBe(group);
+    }
+  });
+
+  it('counts a centre-gauche Outlet under gauche and a centre-droite one under droite', () => {
+    const five: Outlet[] = [
+      outlet('cg-1', 'centre-gauche'),
+      outlet('centre-1', 'centre'),
+      outlet('cd-1', 'centre-droite'),
+    ];
+    const byId = new Map(five.map((o) => [o.id, o]));
+    const articles = [
+      article('a', { outletId: 'cg-1', kind: 'news' }),
+      article('b', { outletId: 'centre-1', kind: 'news' }),
+      article('c', { outletId: 'cd-1', kind: 'news' }),
+    ];
+    expect(coverageCounts(articles, byId)).toEqual({
+      gauche: 1,
+      centre: 1,
+      droite: 1,
+    });
+  });
+});
 
 describe('isReporting', () => {
   it('counts news and live Articles as reporting', () => {

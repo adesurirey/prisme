@@ -1,4 +1,5 @@
 import type { Article, Outlet } from '@prisme/domain';
+import { coverageGroup } from '@prisme/domain';
 import { formatArticleDate } from '../article-date';
 
 /**
@@ -37,7 +38,7 @@ export default function ArticleRow({
           <span
             aria-hidden="true"
             className="inline-block size-2 shrink-0 self-center rounded-full"
-            style={{ background: `var(--${outlet.leaning})` }}
+            style={{ background: `var(--${coverageGroup(outlet.leaning)})` }}
           />
         )}
         <span>{name}</span>

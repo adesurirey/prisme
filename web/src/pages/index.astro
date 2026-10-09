@@ -1,5 +1,9 @@
 ---
-import { type Leaning, leaningOrder } from '@prisme/domain';
+import {
+  type CoverageGroup,
+  coverageGroup,
+  coverageOrder,
+} from '@prisme/domain';
 import LeaningBadge from '../components/LeaningBadge';
 import StoryCard from '../components/StoryCard';
 import { loadEdition, loadOutlets } from '../data';
@@ -23,8 +27,8 @@ const updatedTime = formatParisDate(updatedAt, {
   minute: '2-digit',
 }).replace(':', '\u202Fh\u202F');
 
-const perLeaning = (leaning: Leaning) =>
-  outlets.filter((o) => o.leaning === leaning).length;
+const perGroup = (group: CoverageGroup) =>
+  outlets.filter((o) => coverageGroup(o.leaning) === group).length;
 ---
 
 <Base title="Prisme">
@@ -36,10 +40,13 @@ const perLeaning = (leaning: Leaning) =>
     </p>
     <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
       {
-        leaningOrder.map((leaning) => (
+        // The legend speaks in Coverage groups — the same three camps the
+        // Coverage bar and tabs use (docs/brand.md: three colors, three
+        // words); the granular bands live on the classement page.
+        coverageOrder.map((group) => (
           <span class="flex items-center gap-1.5 text-[13px]">
-            <LeaningBadge leaning={leaning} labelClass="text-ink" />
-            <span class="text-muted">{perLeaning(leaning)} médias</span>
+            <LeaningBadge leaning={group} labelClass="text-ink" />
+            <span class="text-muted">{perGroup(group)} médias</span>
           </span>
         ))
       }
