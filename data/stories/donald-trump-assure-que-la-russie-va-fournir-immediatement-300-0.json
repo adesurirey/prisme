@@ -5,6 +5,17 @@
   "createdAt": "2026-10-09T19:51:49.030Z",
   "articles": [
     {
+      "id": "20b63dfe3c18",
+      "outletId": "bfmtv",
+      "headline": "Donald Trump assure que la Russie va fournir immédiatement 300.000 tonnes de gazole aux marchés américain et mondial",
+      "url": "https://www.bfmtv.com/economie/entreprises/energie/donald-trump-assure-que-la-russie-va-fournir-immediatement-300-000-tonnes-de-gazole-aux-marches-americain-et-mondial_AD-202610090859.html",
+      "publishedAt": "2026-10-09T19:48:44.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/F_bnrnSmbjxsW_4-zAlCcrtII4A=/14x196:2046x1339/800x0/images/Donald-Trump-2358025.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "4adc15753507",
       "outletId": "le-figaro",
       "headline": "Donald Trump assure que la Russie va fournir immédiatement 300.000 tonnes de gazole aux marchés américain et mondial",
@@ -16,5 +27,19 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "economy",
+  "summaries": {
+    "centre": [
+      "Le chef de l'État américain annonce l'arrivée prochaine de trois cent mille tonnes de carburant russe sur les marchés intérieurs et internationaux.",
+      "Cette décision intervient alors que le secteur énergétique russe subit des embargos stricts.",
+      "L'enjeu électoral des élections de mi-mandat du trois novembre motive cette démarche face à la cherté des carburants."
+    ],
+    "droite": [
+      "Le président des États-Unis officialise la livraison urgente de volumes importants de gazole en provenance de Russie.",
+      "Cette initiative fait suite à un entretien qualifié de particulièrement productif avec Vladimir Poutine."
+    ]
+  },
+  "differences": "Le média centriste insiste sur le contexte politique et géopolitique tendu, rappelant les sanctions en vigueur et l'approche des élections législatives cruciales pour l'exécutif. De son côté, le quotidien classé à droite se focalise davantage sur la dimension diplomatique de l'annonce, soulignant le dialogue direct et fructueux entre les dirigeants américain et russe.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 2
 }

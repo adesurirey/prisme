@@ -5,6 +5,18 @@
   "createdAt": "2026-10-09T13:01:56.520Z",
   "articles": [
     {
+      "id": "5a3c77304852",
+      "outletId": "ouest-france",
+      "headline": "L’ouragan Isaias commence à se faire ressentir dans le sud des États-Unis",
+      "url": "https://www.ouest-france.fr/monde/etats-unis/louragan-isaias-commence-a-se-faire-ressentir-dans-le-sud-des-etats-unis-dceb3146-c421-11f1-92e9-819eb738846b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-09T20:55:21.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwN2MxOTlhMzJjOWY3ZDNhYzQ2NmJhM2E2NTQwODIyYmE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=4d648e21294da414938982b3dc8a1733f7145a773f33ed7161cae891aa0eb353",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "cea386897c3a",
       "outletId": "bfmtv",
       "headline": "Des vents à près de 200km/h: l'ouragan Isaias, qui se dirige vers le sud des États-Unis, se renforce en catégorie 3",
@@ -16,5 +28,15 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "summaries": {
+    "centre": [
+      "L'ouragan Isaias a atteint la catégorie 3 avec des vents soufflant près de 200 km/h en direction du sud des États-Unis.",
+      "Les impacts de la tempête commencent à toucher les côtes méridionales américaines dès vendredi soir.",
+      "Les autorités redoutent des inondations potentiellement mortelles, des coupures massives d'électricité ainsi que la formation de tornades."
+    ]
+  },
+  "differences": "Seul le camp centriste traite de cette actualité internationale, en décrivant l'intensité de l'ouragan Isaias et les menaces immédiates qu'il fait peser sur les côtes du sud des États-Unis. Il n'y a donc pas de divergence inter-camps à comparer sur ce sujet.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 2
 }

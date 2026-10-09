@@ -5,6 +5,17 @@
   "createdAt": "2026-10-09T10:20:58.697Z",
   "articles": [
     {
+      "id": "fea5d29640e2",
+      "outletId": "le-figaro",
+      "headline": "États-Unis : JD Vance assure qu'il ne regardera pas l’exécution de l’auteur d’une tuerie sur une base militaire si elle est diffusée en direct",
+      "url": "https://www.lefigaro.fr/flash-actu/etats-unis-jd-vance-assure-qu-il-ne-regardera-pas-l-execution-de-l-auteur-d-une-tuerie-sur-une-base-militaire-si-elle-est-diffusee-en-direct-20261009",
+      "publishedAt": "2026-10-09T19:59:09.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/09/5bdbea0123af7598957cee9d048188135f702dba453fb1e21f92bc5170679cd0.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "5c5c858f35ed",
       "outletId": "rfi",
       "headline": "L'armée américaine veut diffuser en direct l'exécution de l'auteur d'une tuerie sur une base militaire",
@@ -16,5 +27,17 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "summaries": {
+    "centre": [
+      "Le Pentagone a officialisé la retransmission en direct de la mise à mort par peloton d'exécution d'un condamné pour une tuerie de masse commise en 2009 dans une installation militaire texane.",
+      "L'organisation onusienne en charge des droits fondamentaux a vivement condamné cette initiative, qualifiant une telle exposition publique de pratique assimilable à de la torture."
+    ],
+    "droite": [
+      "Interrogé sur le sujet lors d'un déplacement de campagne électorale dans l'Ohio, un responsable politique de premier plan a indiqué qu'il refuserait de visionner la retransmission en direct de cette sentence."
+    ]
+  },
+  "differences": "Le centre relate principalement l'annonce officielle du ministère de la Défense et la réaction outrée de l'ONU qui qualifie le projet de torture, tandis que la droite se focalise sur la réaction personnelle d'une personnalité politique s'abstenant de regarder cette retransmission, illustrant une couverture médiatique oscillant entre l'information institutionnelle assortie de condamnations internationales et la petite phrase de campagne.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 2
 }
