@@ -53,7 +53,7 @@ The neutral French name of a Story, written by the Grouping model. Distinct from
 _Avoid_: Story headline
 
 **Live Story**:
-A Story with at least one Article less than 24 hours old (ADR-0009). Live Stories can gain Articles and make up the Edition; implemented by `pipeline/src/liveness.ts` (`isLive`, `LIVE_WINDOW_MS`).
+A Story with at least one Article less than 24 hours old. Live Stories can gain Articles and make up the Edition.
 _Avoid_: Active story, open story
 
 **Frozen Story**:
