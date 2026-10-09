@@ -28,6 +28,7 @@ import {
 import {
   type BenchmarkGroupingModel,
   benchmarkGroupingModel,
+  chunkedGroupingModel,
   type GroupingCall,
 } from './grouping-models.ts';
 
@@ -173,7 +174,15 @@ async function runCandidate(
   spec: string,
   set: FixtureSet,
 ): Promise<CandidateRecord> {
-  const model = benchmarkGroupingModel(spec);
+  // `<spec>:chunked<size>` answers the fresh batch in fixed-size pages
+  // (the large-pass lever, issue #41) — the file name keeps the suffix so
+  // chunked and single-call records coexist in the report.
+  const chunk = /:chunked(\d+)$/.exec(spec);
+  const inner = benchmarkGroupingModel(
+    chunk != null ? spec.slice(0, chunk.index) : spec,
+  );
+  const model =
+    chunk != null ? chunkedGroupingModel(inner, Number(chunk[1])) : inner;
   console.log(
     `${model.spec}: ${set.fixtures.length} fixtures × 2 runs (builtAt ${set.builtAt})`,
   );

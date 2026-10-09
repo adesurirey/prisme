@@ -105,6 +105,33 @@ Observations from the recorded runs (variance is high — reruns matter):
   expensive candidate is ~$0.015/build against the < $0.50/build rule.
   Latency and output completeness are what disqualify.
 
+## Chunked Luna (2026-10-09): the give-up mode is gone
+
+Spec `openrouter/openai/gpt-6-luna:chunked150` — the fresh batch answered
+in 150-Article pages (one call per page against the same live Stories,
+proposals merged, page keys namespaced, a page that fails or gives up
+fails the whole call). This is the lever Luna's own give-up prose called
+for. Full record, 2/2 valid runs on both fixtures:
+
+| Fixture | Coverage | Bad targets | Dup-seeds | Splits | Over-merged | Stability | Latency | Cost/run |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| from-empty | 99.8% | 1 | 0 | 6/15 | 4–15 | 51.1% | 143–165 s | $0.012 |
+| long-context | 99.3% | 1 | 0 | 4/15 | 4 | 87.2% | 92–102 s | $0.009 |
+
+Against the single-call record (95.0% coverage, 8/15 splits, one
+give-up per recording) this fixes the big pass: **no give-ups, no
+truncated JSON, and coverage misses shrink from 21 Articles to one per
+fixture**. What chunking cannot fix: splits (6/15 vs the baseline's 3/15
+— validated as real errors by the sanity sample) and latency (pages run
+sequentially here; parallel pages would put the wall time near a single
+page's ~50–60 s, but that is a production architecture change). The
+corrected-key reading still favors it on over-merging: most penalized
+over-merges were correct merges the snapshot key missed.
+
+Still short of the rule: coverage misses by one Article per fixture,
+split rate above baseline on both fixtures, latency over the 60 s
+production timeout. Decision unchanged.
+
 ## Sanity sample: is the answer key straight? (2026-10-09)
 
 30 pairs sampled from the recorded disagreements of the two models that

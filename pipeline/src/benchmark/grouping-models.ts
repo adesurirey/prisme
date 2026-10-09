@@ -330,6 +330,99 @@ const strictGroupingSchema = (): Record<string, unknown> => {
 };
 
 /**
+ * Wrap a model so the fresh batch is answered in fixed-size pages: one
+ * call per page against the same live Stories, proposals merged. This is
+ * the chunking lever the large from-empty pass needs (gpt-6-luna gave up
+ * mid-task at 444 Articles — "300+ impossible"); smaller pages also fit
+ * the latency budget. Cross-page merges cannot happen — an inherent
+ * trade-off the benchmark measures, not hides. A page that fails or gives
+ * up (no assignments for its Articles) fails the whole call — a silently
+ * dropped page would corrupt the merged proposal.
+ */
+export function chunkedGroupingModel(
+  inner: BenchmarkGroupingModel,
+  pageSize: number,
+): BenchmarkGroupingModel {
+  const spec = `${inner.spec}:chunked${pageSize}`;
+  return {
+    spec,
+    label: `${inner.label} chunked@${pageSize}`,
+    async group(input) {
+      const pages: GroupingInputArticle[][] = [];
+      for (let i = 0; i < input.articles.length; i += pageSize) {
+        pages.push(input.articles.slice(i, i + pageSize));
+      }
+      const newStories: { key: string; title: string }[] = [];
+      const assignments: GroupingProposal['assignments'] = [];
+      const titleUpdates: GroupingProposal['titleUpdates'] = [];
+      let inputTokens = 0;
+      let outputTokens = 0;
+      let costUsd: number | null = 0;
+      for (const [page, articles] of pages.entries()) {
+        const call = await inner.group({ stories: input.stories, articles });
+        inputTokens += call.inputTokens;
+        outputTokens += call.outputTokens;
+        costUsd =
+          costUsd == null || call.costUsd == null
+            ? null
+            : costUsd + call.costUsd;
+        // Page keys are namespaced: two pages proposing the same key must
+        // not collide in the merged proposal (finalCluster keys on it).
+        const prefix = `page${page + 1}_`;
+        const pageKeys = new Set(
+          (call.proposal?.newStories ?? []).map((s) => s.key),
+        );
+        for (const story of call.proposal?.newStories ?? []) {
+          newStories.push({ key: `${prefix}${story.key}`, title: story.title });
+        }
+        for (const a of call.proposal?.assignments ?? []) {
+          // Same recovery as the grader, but per page: a storyId naming
+          // the page's own new Story is a field slip, resolve first —
+          // then rename, or the prefix breaks the reference.
+          const newStoryKey =
+            a.newStoryKey ??
+            (a.storyId != null && pageKeys.has(a.storyId)
+              ? a.storyId
+              : undefined);
+          assignments.push({
+            articleId: a.articleId,
+            ...(a.storyId != null && !pageKeys.has(a.storyId)
+              ? { storyId: a.storyId }
+              : {}),
+            ...(newStoryKey != null
+              ? { newStoryKey: `${prefix}${newStoryKey}` }
+              : {}),
+            confidence: a.confidence,
+          });
+        }
+        for (const t of call.proposal?.titleUpdates ?? []) {
+          titleUpdates.push(t);
+        }
+        const gaveUp =
+          call.proposal == null ||
+          (call.proposal.assignments.length === 0 && articles.length > 0);
+        if (gaveUp) {
+          return {
+            proposal: null,
+            inputTokens,
+            outputTokens,
+            costUsd,
+            finishReason: call.finishReason,
+            ...(call.rawSnippet != null ? { rawSnippet: call.rawSnippet } : {}),
+          };
+        }
+      }
+      return {
+        proposal: { newStories, assignments, titleUpdates },
+        inputTokens,
+        outputTokens,
+        costUsd,
+      };
+    },
+  };
+}
+
+/**
  * Build the benchmark model for a spec (`gemini/<model>` or
  * `openrouter/<model>`). Throws on an unknown gateway or a missing key —
  * keys come from the env only, never the repo.
