@@ -4,11 +4,12 @@ import { isTotalFailure } from './policy.ts';
 
 /**
  * The Membership gate: one module owning everything around the Membership
- * check (GLOSSARY) — the shared per-build budget, the dedup ledger of
- * (Article, Story) pairs, and the attempt/failure counters behind the
- * total-failure rule (ADR-0005, as amended). Which pairs to check stays with
- * the caller (grouping prioritizes guard seeds first, then merge pairs);
- * the gate only enforces budget and records truthfully.
+ * check (GLOSSARY) — the dedup ledger of (Article, Story) pairs and the
+ * attempt/failure counters behind the total-failure rule (ADR-0005, as
+ * amended). Which pairs to check stays with the caller (grouping prioritizes
+ * guard seeds first, then merge pairs); the gate only records truthfully.
+ * There is no per-build budget (ADR-0012): the ledger bounds every pair to
+ * one check, so the number of checks is finite by construction.
  *
  * Verdicts are a tri-state. `failed` covers both a thrown check and an
  * unparseable model answer: either way the model answered nothing usable,
@@ -19,20 +20,13 @@ export type MembershipVerdict = 'yes' | 'no' | 'failed';
 
 export class MembershipGate {
   readonly #checker: MembershipChecker;
-  readonly #budget: number;
   #checksUsed = 0;
   #attempts = 0;
   #failures = 0;
   readonly #verdicts = new Map<string, MembershipVerdict>();
 
-  constructor(input: { checker: MembershipChecker; budget: number }) {
+  constructor(input: { checker: MembershipChecker }) {
     this.#checker = input.checker;
-    this.#budget = input.budget;
-  }
-
-  /** Checks still available this build. */
-  get budgetLeft(): number {
-    return this.#budget - this.#checksUsed;
   }
 
   /** Checks issued this build (spends included failures and refusals). */
@@ -57,8 +51,7 @@ export class MembershipGate {
   /**
    * Ask the checker about one (Article, Story) pair and record the verdict.
    * Asking for an already-asked pair returns the cached verdict and issues
-   * no new check. Throws when the budget is exhausted — callers slice their
-   * pair lists with {@link budgetLeft} first.
+   * no new check.
    */
   async ask(input: {
     target: string;
@@ -70,10 +63,6 @@ export class MembershipGate {
     const key = `${input.article.id}|${input.target}`;
     const cached = this.#verdicts.get(key);
     if (cached != null) return cached;
-    if (this.budgetLeft <= 0)
-      throw new Error(
-        `Membership check budget exhausted (${this.#budget} spent) — ${input.label}`,
-      );
 
     this.#checksUsed++;
     this.#attempts++;

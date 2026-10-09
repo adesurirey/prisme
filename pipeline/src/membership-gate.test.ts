@@ -24,11 +24,10 @@ const story = { title: 'Story', section: undefined };
 const article = { id: 'a1', headline: 'Headline' };
 
 describe('MembershipGate', () => {
-  it('returns the checker verdict and spends budget', async () => {
+  it('returns the checker verdict and counts the check', async () => {
     const calls: { story: string; article: string }[] = [];
     const gate = new MembershipGate({
       checker: checker(['yes', 'no'], calls),
-      budget: 5,
     });
     expect(
       await gate.ask({ target: 's1', story, article, teaser: '', label: 'x' }),
@@ -37,7 +36,6 @@ describe('MembershipGate', () => {
       await gate.ask({ target: 's2', story, article, teaser: '', label: 'x' }),
     ).toBe('no');
     expect(calls).toHaveLength(2);
-    expect(gate.budgetLeft).toBe(3);
     expect(gate.checksUsed).toBe(2);
   });
 
@@ -45,7 +43,6 @@ describe('MembershipGate', () => {
     const calls: { story: string; article: string }[] = [];
     const gate = new MembershipGate({
       checker: checker(['yes'], calls),
-      budget: 5,
     });
     const first = await gate.ask({
       target: 's1',
@@ -67,19 +64,9 @@ describe('MembershipGate', () => {
     expect(gate.checksUsed).toBe(1);
   });
 
-  it('throws when asked with no budget left', async () => {
-    const gate = new MembershipGate({ checker: checker(['yes']), budget: 1 });
-    await gate.ask({ target: 's1', story, article, teaser: '', label: 'x' });
-    expect(gate.budgetLeft).toBe(0);
-    await expect(
-      gate.ask({ target: 's2', story, article, teaser: '', label: 'x' }),
-    ).rejects.toThrow('budget');
-  });
-
-  it('a thrown check is a failed verdict and a failure — but still spends budget', async () => {
+  it('a thrown check is a failed verdict and a failure — but still counts', async () => {
     const gate = new MembershipGate({
       checker: checker(new Error('HTTP 503: down')),
-      budget: 5,
     });
     const verdict = await gate.ask({
       target: 's1',
@@ -90,14 +77,12 @@ describe('MembershipGate', () => {
     });
     expect(verdict).toBe('failed');
     expect(gate.checksUsed).toBe(1);
-    expect(gate.budgetLeft).toBe(4);
     expect(gate.allAttemptsFailed).toBe(true);
   });
 
   it('a failed verdict from the checker is a failure, not a no', async () => {
     const gate = new MembershipGate({
       checker: checker(['failed']),
-      budget: 5,
     });
     expect(
       await gate.ask({ target: 's1', story, article, teaser: '', label: 'x' }),
@@ -108,7 +93,6 @@ describe('MembershipGate', () => {
   it('allAttemptsFailed is false when some checks answered', async () => {
     const gate = new MembershipGate({
       checker: checker(['yes', 'failed']),
-      budget: 5,
     });
     await gate.ask({ target: 's1', story, article, teaser: '', label: 'x' });
     await gate.ask({ target: 's2', story, article, teaser: '', label: 'x' });
@@ -116,7 +100,7 @@ describe('MembershipGate', () => {
   });
 
   it('allAttemptsFailed is false before any check was attempted', () => {
-    const gate = new MembershipGate({ checker: checker([]), budget: 5 });
+    const gate = new MembershipGate({ checker: checker([]) });
     expect(gate.allAttemptsFailed).toBe(false);
   });
 
@@ -124,7 +108,6 @@ describe('MembershipGate', () => {
     const calls: { story: string; article: string }[] = [];
     const gate = new MembershipGate({
       checker: checker(['yes'], calls),
-      budget: 5,
     });
     await gate.ask({ target: 's1', story, article, teaser: '', label: 'x' });
     expect(gate.verdict('a1', 's1')).toBe('yes');
@@ -136,7 +119,6 @@ describe('MembershipGate', () => {
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
     const gate = new MembershipGate({
       checker: checker(new Error('HTTP 503: down')),
-      budget: 5,
     });
     await gate.ask({
       target: 's1',
@@ -151,12 +133,11 @@ describe('MembershipGate', () => {
     warn.mockRestore();
   });
 
-  it('an infinite budget never exhausts', async () => {
+  it('any number of distinct pairs is checked — no per-build budget (ADR-0012)', async () => {
     const gate = new MembershipGate({
-      checker: checker(['yes', 'yes', 'yes']),
-      budget: Infinity,
+      checker: checker(Array.from({ length: 50 }, () => 'yes')),
     });
-    for (let i = 0; i < 3; i++)
+    for (let i = 0; i < 50; i++)
       expect(
         await gate.ask({
           target: `s${i}`,
@@ -166,6 +147,6 @@ describe('MembershipGate', () => {
           label: 'x',
         }),
       ).toBe('yes');
-    expect(gate.budgetLeft).toBe(Infinity);
+    expect(gate.checksUsed).toBe(50);
   });
 });

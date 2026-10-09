@@ -15,12 +15,13 @@
  * degraded build no longer writes one-Article Story files (the 2026-10-08
  * builds showed one 429 corrupting the archive with 456 singletons that
  * membership is sticky and never re-merge). A merge into an existing
- * Story is only allowed when a Jev Membership check says yes (up to 20
- * checks per build); a refused, capped-out or isolated failed check
- * splits — but if every Membership check fails (the checker down, or a
+ * Story is only allowed when a Jev Membership check says yes; a refused or
+ * isolated failed check splits — but if every Membership check fails (the checker down, or a
  * missing key with checks pending), the build fails too: checks are the
  * only guard against permanent wrong merges, and a run where none of
- * them answered is not a run that can be trusted to write files. A new
+ * them answered is not a run that can be trusted to write files. Checks
+ * are unbudgeted: the gate's dedup ledger bounds every (Article, Story)
+ * pair to one check, so the count is finite by construction (ADR-0012). A new
  * Story proposed by the Grouping model gets the same guard (issue #36):
  * its seed is checked before the Story is created — across builds against
  * the most headline-similar live Stories (a proposed singleton must not
@@ -46,8 +47,8 @@ import type { GroupingModel, GroupingProposal } from './gemini.ts';
 import { isLive, LIVE_WINDOW_MS } from './liveness.ts';
 import { MembershipGate } from './membership-gate.ts';
 
-/** At most this many Membership checks per build; the rest split (ADR-0005). */
-export const MAX_MEMBERSHIP_CHECKS = 20;
+/** Above this many checks in one build, the run log warns (ADR-0012). */
+export const MEMBERSHIP_CHECKS_WARN = 2000;
 
 export interface GroupingClients {
   /** Live: resolveModels (policy.ts) fails the build before this point. */
@@ -67,8 +68,6 @@ export interface GroupingInput {
   /** Random 12-hex Story id source; injectable for tests. */
   makeId: () => string;
   clients: GroupingClients;
-  /** Membership-check budget for this build; default MAX_MEMBERSHIP_CHECKS. */
-  maxChecks?: number;
 }
 
 export interface GroupingOutcome {
@@ -290,8 +289,6 @@ export async function groupStories(
     return { stories, changed: new Set<string>(), live: liveSorted() };
   }
 
-  const maxChecks = input.maxChecks ?? MAX_MEMBERSHIP_CHECKS;
-
   const merge = (story: Story, article: Article): void => {
     story.articles = [...story.articles, article].sort(newestFirst);
     changedStories.add(story);
@@ -382,24 +379,22 @@ export async function groupStories(
     // Jev Membership question a merge gets — cross-build candidates first
     // (an existing Story beats a new twin), then the surviving earlier
     // seeds of this build — each candidate filtered to a token overlap with
-    // the seed first, so unrelated proposals never spend the check budget
-    // (a fresh build can propose hundreds of new Stories). A yes redirects
+    // the seed first, so unrelated proposals never run a check (a fresh
+    // build can propose hundreds of new Stories). A yes redirects
     // the seed into that Story: the proposed Story receives no seed and is
     // dropped before it can publish, and its further members are
-    // re-targeted to the absorbing Story. Guard checks spend the shared
-    // check budget first: starving a merge splits, which self-heals on the
-    // next build, while an unguarded seed creates a duplicate Story.
+    // re-targeted to the absorbing Story. Guard checks run first: an
+    // unguarded seed creates a duplicate Story, which is worse than the
+    // splits a starving merge would leave (ADR-0012 removed the budget).
     const absorbedInto = new Map<string, string>();
-    // The Membership gate owns the check budget, the verdict ledger and the
-    // attempt/failure counters (ADR-0005, as amended). Which pairs to ask
+    // The Membership gate owns the verdict ledger and the
+    // attempt/failure counters (ADR-0005, as amended; the budget is gone,
+    // ADR-0012). Which pairs to ask
     // stays here — guard seeds first, then merge pairs by headline overlap.
     // A missing OPENROUTER_API_KEY arrives as the declared fail-when-pending
     // adapter (policy.ts): every attempt fails, so the total-failure rule
     // fires exactly when checks were pending.
-    const gate = new MembershipGate({
-      checker: clients.membership,
-      budget: maxChecks,
-    });
+    const gate = new MembershipGate({ checker: clients.membership });
     {
       const live = liveSorted();
       const keyOrder = proposal.newStories.map((ns) => ns.key);
@@ -434,7 +429,6 @@ export async function groupStories(
             ask.push({ target: `key:${earlier}`, title: earlierHeadline });
         }
         for (const candidate of ask) {
-          if (gate.budgetLeft <= 0) break;
           const yes =
             (await gate.ask({
               target: candidate.target,
@@ -458,10 +452,9 @@ export async function groupStories(
     // ids, or `key:<newStoryKey>` for new Stories (checked against the seed
     // Article, not the proposed title, which may itself be thematic) — or,
     // for a seed-guard-absorbed key, the absorbing Story. Guard checks ran
-    // first; the rest of the budget goes to these. Pairs are prioritized by
-    // headline overlap with their target — the most obvious duplicates get
-    // the remaining budget before borderline pairs do — ties by (articleId,
-    // target); the rest split.
+    // first; every merge pair is checked — no budget caps the list (ADR-0012).
+    // Pairs are prioritized by headline overlap with their target — a tiebreak
+    // only, since every pair is asked — ties by (articleId, target).
     const targetOfKey = (key: string): string =>
       absorbedInto.get(key) ?? `key:${key}`;
     const pairScores = new Map<string, number>();
@@ -496,18 +489,12 @@ export async function groupStories(
           .slice(1)
           .map((a) => ({ articleId: a.id, target: targetOfKey(key) })),
       ),
-    ]
-      .sort(
-        (x, y) =>
-          pairScore(y) - pairScore(x) ||
-          (x.articleId < y.articleId
-            ? -1
-            : x.articleId > y.articleId
-              ? 1
-              : 0) ||
-          (x.target < y.target ? -1 : x.target > y.target ? 1 : 0),
-      )
-      .slice(0, Math.max(0, gate.budgetLeft));
+    ].sort(
+      (x, y) =>
+        pairScore(y) - pairScore(x) ||
+        (x.articleId < y.articleId ? -1 : x.articleId > y.articleId ? 1 : 0) ||
+        (x.target < y.target ? -1 : x.target > y.target ? 1 : 0),
+    );
     for (const pair of mergePairs) {
       const article = fresh.find((a) => a.id === pair.articleId);
       if (article == null) continue;
@@ -592,11 +579,11 @@ export async function groupStories(
       }
     }
 
-    console.log(
-      `Membership: ${gate.checksUsed} checks this build (budget ${
-        maxChecks === Infinity ? 'none' : maxChecks
-      }).`,
-    );
+    console.log(`Membership: ${gate.checksUsed} checks this build.`);
+    if (gate.checksUsed > MEMBERSHIP_CHECKS_WARN)
+      console.warn(
+        `Membership: ${gate.checksUsed} checks in one build is unusual — inspect the Grouping proposal for a combinatorial blowup (ADR-0012).`,
+      );
 
     // Key Stories no Article claimed are dropped before they ever publish.
     for (const story of keyStories.values()) {
