@@ -60,7 +60,7 @@ function fakeMembership(
     label: 'FakeJev',
     async belongs(story, article) {
       calls.push({ story: story.title, article: article.headline });
-      return answer;
+      return answer == null ? 'failed' : answer ? 'yes' : 'no';
     },
   };
 }
@@ -215,7 +215,7 @@ describe('groupStories', () => {
             belongs: async (_story, art) => {
               if (art.headline.includes('a1'))
                 throw new Error('FakeJev HTTP 503: down');
-              return false;
+              return 'no';
             },
           },
         },
