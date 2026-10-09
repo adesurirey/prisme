@@ -22,11 +22,24 @@
       "url": "https://www.lefigaro.fr/international/nicolas-maduro-et-son-epouse-poursuivis-pour-torture-par-la-justice-americaine-20261008",
       "publishedAt": "2026-10-08T15:55:51.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/2849x1602_crop/2026/10/08/952737da10bb166e6cef388da3f74824f84c7a487b81aa14a84aaee31ce65fba.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
     }
   ],
-  "section": "world"
+  "section": "world",
+  "summaries": {
+    "centre": [
+      "La justice fédérale américaine engage des charges formelles visant le dirigeant vénézuélien et sa conjointe.",
+      "Les chefs d'accusation retenus contre le couple présidentiel concernent des actes qualifiés de torture."
+    ],
+    "droite": [
+      "Les autorités judiciaires aux États-Unis ciblent le président du Venezuela ainsi que son épouse.",
+      "Des poursuites pénales sont officiellement lancées pour des faits de sévices et de torture."
+    ]
+  },
+  "differences": "Le centre et la droite adoptent une approche strictement similaire et convergente en relayant l'information factuelle des poursuites engagées par la justice américaine contre Nicolas Maduro et son épouse pour torture, sans qu'aucune divergence notable n'apparaisse entre ces deux sensibilités.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 2
 }
