@@ -81,6 +81,16 @@
     }
   },
   {
+    "id": "20-minutes",
+    "name": "20 Minutes",
+    "leaning": "centre-gauche",
+    "paywall": "none",
+    "site": "https://www.20minutes.fr",
+    "feeds": {
+      "une": "https://www.20minutes.fr/feeds/rss-une.xml"
+    }
+  },
+  {
     "id": "ouest-france",
     "name": "Ouest-France",
     "leaning": "centre",
@@ -102,16 +112,6 @@
     }
   },
   {
-    "id": "20-minutes",
-    "name": "20 Minutes",
-    "leaning": "centre-gauche",
-    "paywall": "none",
-    "site": "https://www.20minutes.fr",
-    "feeds": {
-      "une": "https://www.20minutes.fr/feeds/rss-une.xml"
-    }
-  },
-  {
     "id": "le-parisien",
     "name": "Le Parisien",
     "leaning": "centre",
@@ -119,16 +119,6 @@
     "site": "https://www.leparisien.fr",
     "feeds": {
       "latest": "https://feeds.leparisien.fr/leparisien/rss"
-    }
-  },
-  {
-    "id": "tf1-info",
-    "name": "TF1 Info",
-    "leaning": "centre-droite",
-    "paywall": "none",
-    "site": "https://www.tf1info.fr",
-    "feeds": {
-      "latest": "https://www.tf1info.fr/feeds/rss-une.xml"
     }
   },
   {
@@ -179,6 +169,16 @@
     "site": "https://www.la-croix.com",
     "feeds": {
       "latest": "https://www.la-croix.com/rss"
+    }
+  },
+  {
+    "id": "tf1-info",
+    "name": "TF1 Info",
+    "leaning": "centre-droite",
+    "paywall": "none",
+    "site": "https://www.tf1info.fr",
+    "feeds": {
+      "latest": "https://www.tf1info.fr/feeds/rss-une.xml"
     }
   },
   {
