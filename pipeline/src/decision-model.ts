@@ -342,14 +342,16 @@ export function winnerModelFromEnv(): DecisionModel | null {
   );
 }
 
+/** yes = belongs; no = does not; failed = the model answered nothing usable (or the check threw). */
+export type MembershipAnswer = 'yes' | 'no' | 'failed';
+
 /** The Membership check (issue #5): Jev answers yes/no about one (Article, Story) pair. */
 export interface MembershipChecker {
   label: string;
-  /** true = belongs; false = does not; null = failed (treated as “no”). */
   belongs(
     story: { title: string; section?: Section },
     article: { headline: string; teaser: string },
-  ): Promise<boolean | null>;
+  ): Promise<MembershipAnswer>;
 }
 
 function membershipModel(apiKey: string): MembershipChecker {
@@ -371,7 +373,9 @@ function membershipModel(apiKey: string): MembershipChecker {
           const belongs = parseMembershipAnswer(answers);
           return belongs == null ? null : { belongs };
         },
-      ).then((r) => r?.belongs ?? null);
+      ).then((r) =>
+        r == null ? 'failed' : r.belongs ? ('yes' as const) : ('no' as const),
+      );
     },
   };
 }

@@ -38,6 +38,7 @@ import { newestFirst } from '@prisme/domain';
 import type { MembershipChecker } from './decision-model.ts';
 import { slugify, storySection } from './edition.ts';
 import type { GroupingModel, GroupingProposal } from './gemini.ts';
+import { MembershipGate } from './membership-gate.ts';
 
 /** At most this many Membership checks per build; the rest split (ADR-0005). */
 export const MAX_MEMBERSHIP_CHECKS = 20;
@@ -415,47 +416,20 @@ export async function groupStories(
     // check budget first: starving a merge splits, which self-heals on the
     // next build, while an unguarded seed creates a duplicate Story.
     const absorbedInto = new Map<string, string>();
-    const verdicts = new Map<string, boolean | null>();
-    let checksUsed = 0;
-    // Every issued check is an attempt; a thrown one is also a failure. When
-    // every attempt fails — the checker is down, or missing while checks were
-    // pending — the build fails (ADR-0005, as amended): checks are the only
-    // guard against permanent wrong merges, and a run where none of them
-    // answered cannot be trusted to write files. Isolated failures keep the
-    // per-check bias: a failed check refuses the merge, which splits and
-    // self-heals on the next build.
-    let checkAttempts = 0;
-    let checkFailures = 0;
-    const belongs = async (
-      label: string,
-      story: { title: string; section?: Section },
-      article: { id: string; headline: string },
-    ): Promise<boolean | null> => {
-      if (clients.membership == null) {
-        checkAttempts++;
-        checkFailures++;
-        return null;
-      }
-      checkAttempts++;
-      try {
-        const yes = await clients.membership.belongs(
-          { title: story.title, section: story.section },
-          { headline: article.headline, teaser: teasers.get(article.id) ?? '' },
-        );
-        // An unparseable answer is a failed check too: the model answered
-        // nothing usable.
-        if (yes == null) checkFailures++;
-        return yes;
-      } catch (reason) {
-        checkFailures++;
-        console.warn(
-          `${label}: ${article.id} — ${
-            reason instanceof Error ? reason.message : reason
-          }`,
-        );
-        return null;
-      }
-    };
+    // The Membership gate owns the check budget, the verdict ledger and the
+    // attempt/failure counters (ADR-0005, as amended). Which pairs to ask
+    // stays here — guard seeds first, then merge pairs by headline overlap.
+    // A missing checker becomes an always-throwing adapter: every attempt
+    // fails, so the total-failure rule fires whenever checks were pending.
+    const gate = new MembershipGate({
+      checker: clients.membership ?? {
+        label: 'none',
+        async belongs() {
+          throw new Error('Membership checker unavailable');
+        },
+      },
+      budget: maxChecks,
+    });
     {
       const live = liveSorted();
       const keyOrder = proposal.newStories.map((ns) => ns.key);
@@ -490,16 +464,17 @@ export async function groupStories(
             ask.push({ target: `key:${earlier}`, title: earlierHeadline });
         }
         for (const candidate of ask) {
-          if (checksUsed >= maxChecks) break;
-          checksUsed++;
-          const yes = await belongs(
-            `Seed check failed: ${seed.id} → ${candidate.target}`,
-            { title: candidate.title, section: candidate.section },
-            seed,
-          );
+          if (gate.budgetLeft <= 0) break;
+          const yes =
+            (await gate.ask({
+              target: candidate.target,
+              story: { title: candidate.title, section: candidate.section },
+              article: seed,
+              teaser: teasers.get(seed.id) ?? '',
+              label: `Seed check failed: ${seed.id} → ${candidate.target}`,
+            })) === 'yes';
           if (yes) {
             absorbedInto.set(key, candidate.target);
-            verdicts.set(`${seed.id}|${candidate.target}`, true);
             break;
           }
         }
@@ -562,38 +537,35 @@ export async function groupStories(
               : 0) ||
           (x.target < y.target ? -1 : x.target > y.target ? 1 : 0),
       )
-      .slice(0, Math.max(0, maxChecks - checksUsed));
+      .slice(0, Math.max(0, gate.budgetLeft));
     for (const pair of mergePairs) {
-      // A guard-absorbed seed already has its yes verdict recorded.
-      if (verdicts.has(`${pair.articleId}|${pair.target}`)) continue;
       const article = fresh.find((a) => a.id === pair.articleId);
-      let verdict: boolean | null = null;
-      if (article) {
-        // New-Story checks are anchored on the seed Article: the proposed
-        // title may be generic, the seed headline is the concrete event.
-        const story = pair.target.startsWith('key:')
-          ? {
-              title: keyMembers.get(pair.target.slice(4))![0].headline,
-              section: undefined,
-            }
-          : byId.get(pair.target);
-        if (story)
-          verdict = await belongs(
-            `Membership check failed: ${pair.articleId} → ${pair.target}`,
-            story,
-            article,
-          );
-      }
-      verdicts.set(`${pair.articleId}|${pair.target}`, verdict);
+      if (article == null) continue;
+      // New-Story checks are anchored on the seed Article: the proposed
+      // title may be generic, the seed headline is the concrete event.
+      const story = pair.target.startsWith('key:')
+        ? {
+            title: keyMembers.get(pair.target.slice(4))![0].headline,
+            section: undefined,
+          }
+        : byId.get(pair.target);
+      if (story == null) continue;
+      await gate.ask({
+        target: pair.target,
+        story,
+        article,
+        teaser: teasers.get(article.id) ?? '',
+        label: `Membership check failed: ${pair.articleId} → ${pair.target}`,
+      });
     }
 
     // Total failure (ADR-0005, as amended): when not a single Membership
     // check answered — the checker down, or missing with checks pending —
     // the build fails. Nothing has been written yet, and isolated failures
     // (some checks answered) never reach this path.
-    if (checkAttempts > 0 && checkFailures === checkAttempts)
+    if (gate.allAttemptsFailed)
       throw new Error(
-        `Membership failed: all ${checkAttempts} checks failed — the build writes no Story files.`,
+        `Membership failed: all ${gate.checksUsed} checks failed — the build writes no Story files.`,
       );
 
     for (const article of fresh) {
@@ -609,7 +581,7 @@ export async function groupStories(
           split(article);
           continue;
         }
-        if (verdicts.get(`${article.id}|${assignment.storyId}`) === true) {
+        if (gate.verdict(article.id, assignment.storyId) === 'yes') {
           merge(story, article);
         } else {
           split(article);
@@ -632,7 +604,7 @@ export async function groupStories(
         const members = keyMembers.get(target.slice(4))!;
         if (
           members[0].id === article.id ||
-          verdicts.get(`${article.id}|${target}`) === true
+          gate.verdict(article.id, target) === 'yes'
         ) {
           merge(story, article);
         } else {
@@ -642,7 +614,7 @@ export async function groupStories(
         // Absorbed into an existing Story: the seed's guard verdict and
         // every further member's checked verdict were recorded up front.
         const story = byId.get(target);
-        if (story != null && verdicts.get(`${article.id}|${target}`) === true) {
+        if (story != null && gate.verdict(article.id, target) === 'yes') {
           merge(story, article);
         } else {
           split(article);
@@ -651,7 +623,9 @@ export async function groupStories(
     }
 
     console.log(
-      `Membership: ${checksUsed} checks this build (budget ${maxChecks === Infinity ? 'none' : maxChecks}).`,
+      `Membership: ${gate.checksUsed} checks this build (budget ${
+        maxChecks === Infinity ? 'none' : maxChecks
+      }).`,
     );
 
     // Key Stories no Article claimed are dropped before they ever publish.

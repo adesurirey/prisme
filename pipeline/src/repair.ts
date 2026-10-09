@@ -26,6 +26,7 @@
 import { randomBytes } from 'node:crypto';
 import { mkdir, writeFile } from 'node:fs/promises';
 import type { Article } from '@prisme/domain';
+import type { MembershipAnswer } from './decision-model.ts';
 import { membershipModelFromEnv } from './decision-model.ts';
 import { slugify, storySection } from './edition.ts';
 import { loadStories } from './grouping.ts';
@@ -96,7 +97,7 @@ async function main(): Promise<void> {
     const before = demoted.length;
     const kept: typeof story.articles = [];
     for (const article of story.articles) {
-      let belongs: boolean | null = null;
+      let belongs: MembershipAnswer | null = null;
       try {
         belongs = await membership.belongs(
           { title: story.title, section: story.section },
@@ -111,7 +112,7 @@ async function main(): Promise<void> {
         kept.push(article);
         continue;
       }
-      if (belongs) kept.push(article);
+      if (belongs === 'yes') kept.push(article);
       else demote(article, story.slug);
     }
     // Nothing matches the title: fall back to seed-anchored checks (oldest
@@ -133,7 +134,7 @@ async function main(): Promise<void> {
       kept.push(seed!);
       for (const article of story.articles) {
         if (article.id === seed!.id) continue;
-        let belongs: boolean | null = null;
+        let belongs: MembershipAnswer | null = null;
         try {
           belongs = await membership.belongs(
             { title: seed!.headline, section: seed!.section },
@@ -148,7 +149,7 @@ async function main(): Promise<void> {
           kept.push(article);
           continue;
         }
-        if (belongs) kept.push(article);
+        if (belongs === 'yes') kept.push(article);
         else demote(article, story.slug);
       }
     }
