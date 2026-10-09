@@ -35,3 +35,34 @@ Three cheap models run the show; each pinned for traceability.
 
 Leanings are set by hand, one per Outlet, backed by sources — never classified
 by a model.
+
+## Benchmarking a new Grouping model
+
+The pinned Grouping model can be challenged anytime — issue #41 settled the
+method, `docs/research/grouping-benchmark.md` carries the full methodology,
+recorded results and the decision rule. The short recipe:
+
+1. **Pick a candidate** on OpenRouter: paid (skip `:free` listings and $0
+   prices — free-tier variance is what this escapes), structured outputs,
+   1M context. Sort by input price.
+2. **Run it from a checkout whose `data/` matches the recorded edition**
+   (every results file carries its `fixtureBuiltAt` — the fixtures rebuild
+   from `data/`, so new pipeline runs move the reference; re-run the
+   baseline alongside when the edition moved):
+
+   ```sh
+   pnpm benchmark:grouping -- gemini/gemini-3.5-flash-lite \
+                            openrouter/<vendor>/<model>
+   # large-batch give-ups? try the chunked variant:
+   pnpm benchmark:grouping -- openrouter/<vendor>/<model>:chunked150
+   ```
+
+3. **Read** `.benchmark/grouping/report.md` — it aggregates every recorded
+   results file, so reruns extend the comparison.
+4. **Apply the decision rule**: dup-seeds 0, coverage 100%, split rate ≤
+   baseline on both fixtures, < $0.50/build, two valid runs for stability.
+
+Keys come from the local `.env` (`GEMINI_API_KEY`, `OPENROUTER_API_KEY`) —
+never the repo. Results land in gitignored `.benchmark/grouping/`; a
+candidate that cannot answer one build call in 5 minutes is disqualified
+by that fact (production aborts grouping at 60 s).
