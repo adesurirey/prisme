@@ -105,17 +105,61 @@ Observations from the recorded runs (variance is high — reruns matter):
   expensive candidate is ~$0.015/build against the < $0.50/build rule.
   Latency and output completeness are what disqualify.
 
+## Sanity sample: is the answer key straight? (2026-10-09)
+
+30 pairs sampled from the recorded disagreements of the two models that
+drive the decision (Flash-Lite baseline + GPT-6 Luna; 12 splits, 12
+over-merges, 6 agreement controls; cross-model-deduped, blind — the
+worksheet shows two headlines only), labeled by hand. Verdicts:
+docs/research/grouping-labels.json (ids only; the gitignored sample lives
+in `.benchmark/grouping/labels/`).
+
+| model | bucket | snapshot claims | human agrees | n |
+| --- | --- | --- | --- | --- |
+| Flash-Lite | split | same | 100% | 6 |
+| Flash-Lite | over-merge | different | 29% | 7 |
+| Flash-Lite | control-different | different | 100% | 4 |
+| GPT-6 Luna | split | same | 100% | 6 |
+| GPT-6 Luna | over-merge | different | 0% | 5 |
+| GPT-6 Luna | control-different | different | 100% | 2 |
+
+Reading:
+
+- **The key's same-claims are straight: every sampled split is a real
+  error** (100% agreement, both models). The split metric needs no
+  correction — Luna's 8/15 splits on from-empty are genuine, not
+  answer-key noise.
+- **The key's different-claims are crooked where candidates merged: the
+  human sided with the model on most sampled over-merges** (Flash-Lite
+  29%, Luna 0% key agreement). The snapshot under-merged the from-empty-
+  era folders — lycée-mobilisation, Budget 2027 and phone-hygiene pairs
+  the models correctly merged were held apart by the key. The over-merge
+  metric therefore over-penalizes, and the candidate-vs-baseline gap on
+  over-merging (4–10 pairs vs 105) shrinks once corrected — though the
+  direction survives (a ~70–100% correction still leaves Flash-Lite
+  worse).
+- Caveats: small n (5–7 per model per bucket) and pairs sampled uniform
+  over co-clustered pairs, so each model's biggest merged cluster
+  dominates its sample; treat the rates as direction, not precision. A
+  replacement decision that hinges on over-merge numbers needs a larger,
+  per-fixture rebalanced sample.
+- The "messy answer-key folder" worry from the #41 discussion was right,
+  and now it is *typed*: the snapshot is over-split (under-merged), not
+  over-merged — the key punishes correct consolidation, not correct
+  splitting.
+
 ## Decision status
 
 **Keep Flash-Lite + the scaffolding for now.** No candidate met the rule
 (dup-seed rate 0, coverage 100%, split rate ≤ baseline, both fixtures, <
 $0.50/build, two valid runs for stability). GPT-6 Luna is now fully
-measured: its long-context record is within one split of the rule and
-better than the baseline on over-merge and stability, but from-empty fails
-coverage (95.0%) and splits (8/15 vs 3/15), and both fixtures exceed the
-60 s production grouping timeout (141 s / 71 s). Its blockers are
-demonstrably engineering problems, not model intelligence (see
-observations).
+measured, and the sanity sample settles the answer-key question: the key
+is straight on same-claims (splits are real errors — Luna's 8/15 from-empty
+splits stand) and over-split on different-claims (most penalized
+over-merges were correct merges the snapshot missed). The corrected
+picture is *more* favorable to Luna than the raw table, not less — but the
+hard blockers stay: from-empty coverage 95.0%, splits above the baseline,
+and latency (141 s / 71 s) over the 60 s production grouping timeout.
 
 Follow-ups, in order:
 
@@ -124,14 +168,11 @@ Follow-ups, in order:
    and smaller passes would also help both the latency budget and the
    from-empty coverage/splits. Same lever serves production's 60 s
    timeout.
-2. **Try `strict: true`** — done, recorded above: it did not prevent
-   give-ups or junk prefixes; the wins came from the harness-side JSON
-   extraction fix. Keep the schema-strict path for OpenAI-family specs.
-3. **Hand-labeled sanity sample** (~30 pairs, as in the decision-model
-   benchmark): the pseudo-ground-truth is the last real build's own
-   clustering, so a wrongly merged folder there punishes a correct split.
-   The human sample checks the answer key before any replacement decision.
-4. Consider a **prompt-side output-compaction** (shorter keys, no
+2. **Re-grade against a corrected key if a replacement ever hinges on
+   over-merge numbers**: a larger, per-fixture-rebalanced sanity sample
+   (the current one is 30 pairs, direction-only — see caveats above), then
+   recompute the table with unjustified over-merges only.
+3. Consider a **prompt-side output-compaction** (shorter keys, no
    titleUpdates) to halve the output tokens on large builds.
 
 ## Reproduce
