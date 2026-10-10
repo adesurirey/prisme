@@ -181,6 +181,8 @@ export interface Story {
   promptVersion?: string;
   /** Number of Articles the last Summaries run saw; Articles are append-only. */
   summarizedArticleCount?: number;
+  /** Sticky: true once the Story ranked into the Edition (issue #75). */
+  everInEdition?: boolean;
 }
 
 /** The current selection of top Stories Prisme publishes. */

@@ -67,6 +67,25 @@ export async function saveCache(
   await writeFile(path, `${JSON.stringify(cache, null, 2)}\n`);
 }
 
+/**
+ * End-of-run cache prune (issue #75): drop every entry whose Article id was
+ * not collected in the current build — an entry for an Article outside the
+ * feed window can never be read again; if the id ever reappears in a feed it
+ * simply costs one re-classification. The `winner` block is preserved so
+ * model/prompt traceability is not lost. Pure: a new cache is returned, the
+ * input is not mutated.
+ */
+export function pruneCache(
+  cache: ClassificationCache,
+  collectedIds: Set<string>,
+): ClassificationCache {
+  const entries: ClassificationCache['entries'] = {};
+  for (const id of Object.keys(cache.entries)) {
+    if (collectedIds.has(id)) entries[id] = cache.entries[id];
+  }
+  return { winner: cache.winner, entries };
+}
+
 const CONCURRENCY = 4;
 
 /**
