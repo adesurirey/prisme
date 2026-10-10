@@ -5,6 +5,17 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "1dd55b57541a",
+      "outletId": "tf1-info",
+      "headline": "Sophie Adenot : l'émotion du retour",
+      "url": "https://www.tf1info.fr/sciences-et-innovation/videos/video-sophie-adenot-l-emotion-du-retour-3295-2469217.html",
+      "publishedAt": "2026-10-10T18:45:21.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/sophie-adenot-l-emotion-du-retour-5dc7a0-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "616dfbcfabe1",
       "outletId": "france-24",
       "headline": "L'astronaute française Sophie Adenot fait son grand retour sur Terre",
@@ -197,7 +208,7 @@
       "url": "https://www.20minutes.fr/diaporama/diaporama-4252902-images-decollage-amerrissage-retour-mission-spatiale-sophie-adenot?at_medium=display&at_campaign=149",
       "publishedAt": "2026-10-09T15:30:51.000Z",
       "imageUrl": "https://img.20mn.fr/Uyc7KSk8SJW44qvxpWh09Sk/1200x768_sophie-adenot-en-pleine-sortie-dans-l-espace-le-25-aout-un-moment-fort",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -218,10 +229,12 @@
     "droite": [
       "L'astronaute est revenue sur sa mission de nombreux jours au sein de l'ISS lors d'une allocution publique sur le tarmac de Cologne.",
       "Elle a évoqué la complexité de son retour physique à la gravité tout en saluant la beauté fragile de la Terre vue de là-haut.",
-      "Certains médias ont mis en relief le contraste entre la simplicité de la vie en microgravité et la rudesse du retour terrestre."
+      "Certains médias ont mis en relief le contraste entre la simplicité de la vie en microgravité et la rudesse du retour terrestre.",
+      "L'accent a également été placé par le centre droit sur la durée record de son séjour en apesanteur et la nécessité d'un protocole strict de réapprentissage corporel."
     ]
   },
-  "differences": "Les différents bords politiques relatent globalement les mêmes faits concernant le retour de Sophie Adenot et ses déclarations à Cologne. La gauche met particulièrement l'accent sur la dimension humaniste et universelle de son discours concernant la protection de la planète et l'absence de frontières. Le centre insiste à la fois sur l'aspect émotionnel de ses propos et sur la réalité concrète de sa réadaptation physique. La droite, quant à elle, s'attarde davantage sur la rudesse de la transition entre la vie en apesanteur et la difficulté de retrouver la pesanteur terrestre.",
+  "differences": "Les différents bords politiques relatent globalement les mêmes faits concernant le retour de Sophie Adenot. La gauche met particulièrement l'accent sur la dimension humaniste et universelle de son discours et la protection de la planète. Le centre insiste sur l'aspect émotionnel et la réalité concrète de la réadaptation physique. La droite et le centre droit s'attardent quant à eux sur la rudesse de la transition vers la gravité terrestre, le centre droit soulignant en outre le caractère inédit de la durée du vol pour un Européen et la nécessité pour l'astronaute d'un apprentissage progressif semblable à celui d'un bébé.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 18
+  "summarizedArticleCount": 19,
+  "everInEdition": true
 }

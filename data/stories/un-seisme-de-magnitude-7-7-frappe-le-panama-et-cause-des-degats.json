@@ -5,6 +5,28 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "98d0a0271864",
+      "outletId": "tf1-info",
+      "headline": "Magnitude 7,7 : moment de frayeur au Panama",
+      "url": "https://www.tf1info.fr/international/videos/video-magnitude-7-7-moment-de-frayeur-au-panama-96633-2469224.html",
+      "publishedAt": "2026-10-10T19:05:14.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/magnitude-7-7-moment-de-frayeur-au-panama-0f9d98-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "8e8069c6cc85",
+      "outletId": "franceinfo",
+      "headline": "Tremblement de terre, ouragan, coulée de boue : le continent américain touché par plusieurs catastrophes naturelles",
+      "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/tremblement-de-terre-ouragan-coulee-de-boue-le-continent-americain-touche-par-plusieurs-catastrophes-naturelles_8231896.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-10T18:50:27.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/kSflO6INmOpm3zrWLHa6uE3HXLc/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/10/6aca860deabdb421356828.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "c6462a02366e",
       "outletId": "france-24",
       "headline": "Panama : un puissant séisme provoque d'importants dégâts, des blessés",
@@ -133,7 +155,8 @@
     "gauche": [
       "Un séisme majeur de magnitude 7,7 a touché le Panama vendredi, générant des dizaines de répliques à travers le territoire.",
       "Le bilan provisoire communiqué fait état d'au moins 27 personnes blessées.",
-      "Les secousses ont entraîné la suspension des cours scolaires et la fermeture temporaire de l'infrastructure aéroportuaire internationale."
+      "Les secousses ont entraîné la suspension des cours scolaires et la fermeture temporaire de l'infrastructure aéroportuaire internationale.",
+      "Le centre gauche replace le séisme dans une séquence plus large de catastrophes naturelles affectant le continent américain."
     ],
     "centre": [
       "Le président panaméen a qualifié l'événement de désastre majeur suite à l'effondrement de routes et de bâtiments.",
@@ -143,10 +166,12 @@
     "droite": [
       "Un tremblement de terre de magnitude 7,7 a frappé le Panama, provoquant un mouvement de panique dans la capitale.",
       "Des routes et des bâtiments se sont effondrés principalement dans le centre du pays, faisant au moins 27 blessés selon le bilan officiel.",
-      "L'autorité compétente a confirmé que le canal de Panama continuait de fonctionner normalement après des inspections."
+      "L'autorité compétente a confirmé que le canal de Panama continuait de fonctionner normalement après des inspections.",
+      "Le centre droit rapporte que malgré des infrastructures routières endommagées, aucun décès n'est enregistré et la situation est maîtrisée."
     ]
   },
-  "differences": "Tous les camps s'accordent sur la magnitude du séisme et le bilan humain provisoire, mais la droite choisit de rassurer immédiatement en insistant sur le fonctionnement normal du canal de Panama. La gauche et le centre insistent davantage sur la gravité de la situation en reprenant les déclarations présidentielles évoquant un grand désastre et en soulignant les perturbations concrètes comme la fermeture de l'aéroport.",
+  "differences": "Tous les camps s'accordent sur la magnitude du séisme et le bilan provisoire des blessés, mais la droite et le centre droit choisissent de rassurer en soulignant le fonctionnement normal des voies stratégiques et l'absence de décès. La gauche et le centre insistent davantage sur la gravité de la situation en reprenant les déclarations présidentielles sur le désastre et les perturbations concrètes, tandis que le centre gauche élargit l'analyse aux catastrophes simultanées sur le continent.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 11
+  "summarizedArticleCount": 13,
+  "everInEdition": true
 }

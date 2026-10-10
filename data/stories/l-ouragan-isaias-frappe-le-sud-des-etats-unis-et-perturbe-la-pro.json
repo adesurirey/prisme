@@ -5,6 +5,18 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "d16f2506f2df",
+      "outletId": "ouest-france",
+      "headline": "Tempête Isaias : déjà trois morts aux États-Unis, des crues et tornades encore possibles ce week-end",
+      "url": "https://www.ouest-france.fr/meteo/tempete/tempete-isaias-deja-trois-morts-aux-etats-unis-des-crues-et-tornades-encore-possibles-ce-week-end-7ed66ba2-c4da-11f1-bba2-d026901fbfe4?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-10T19:50:48.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjVhZjMwZDEwYWE5MWEyZWE2ZGUwNzNiYTBiNzQzMDI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=cfdef56c2079feb970606c1674016656a6078bb886e47eb7409817555c1bea77",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "2bd807a6c438",
       "outletId": "bfmtv",
       "headline": "États-Unis: l'ouragan Isaias touche terre en Floride, plusieurs états en état d'urgence",
@@ -60,5 +72,21 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "L'ouragan Isaias a progressé dans le sud-est du territoire américain en provoquant un décès de plus.",
+      "Plusieurs États ont dû déclarer l'état d'urgence face aux menaces persistantes de crues et de tornades.",
+      "Le phénomène météorologique a perdu de son intensité après avoir atteint les côtes de la Floride."
+    ],
+    "droite": [
+      "Les premières intempéries ont provoqué des dégâts importants marqués par des vents violents et des arbres arrachés.",
+      "L'arrivée de la tempête a été caractérisée par des inondations majeures et des rafales atteignant des vitesses très élevées.",
+      "Des séquences vidéo spectaculaires illustrent la violence des intempéries et la projection de débris dans les zones touchées."
+    ]
+  },
+  "differences": "Le camp du centre privilégie une approche institutionnelle et évolutive en suivant le parcours de la tempête, l'état d'urgence et son affaiblissement progressif, comme le rapporte France 24. À l'inverse, le camp de la droite, illustré par Le Figaro et CNews, adopte un cadrage plus visuel et spectaculaire en insistant sur la puissance immédiate des éléments, les images impressionnantes et les dégâts matériels en Floride.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 6
 }

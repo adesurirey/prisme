@@ -43,7 +43,7 @@
       "url": "https://www.lefigaro.fr/conjoncture/diesel-russe-les-prix-vont-ils-baisser-a-la-pompe-en-france-la-reponse-de-l-economiste-philippe-chalmin-20261010",
       "publishedAt": "2026-10-10T13:16:38.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/10/10/11508252e2a12e174d27901e00ea315db4ab85cb3dda0db7a4be4cdd5257332c.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -66,7 +66,7 @@
       "url": "https://www.lemonde.fr/international/live/2026/10/10/en-direct-guerre-en-ukraine-emmanuel-macron-exprime-sa-solidarite-a-volodymyr-zelensky-face-aux-attaques-en-cours_6787996_3210.html",
       "publishedAt": "2026-10-10T12:30:33.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/08/631/0/7567/3783/644/322/60/0/1531b9d_ftp-1-dxk4bmk55u56-acdb6293f00341deafbf59d9929f08b2-0-b1e064ec60df4580a47ebf5276eec24c.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "live",
       "section": "world",
       "everFrontPage": true
@@ -221,7 +221,7 @@
       "url": "https://www.lefigaro.fr/conjoncture/donald-trump-assure-que-la-russie-va-fournir-immediatement-300-000-tonnes-de-gazole-aux-marches-americain-et-mondial-20261009",
       "publishedAt": "2026-10-10T05:28:22.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/09/65f8f9c96e730d8e5d789838c4053fd1796ad8a24d73f136d76ca026006ee707.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -266,7 +266,7 @@
       "url": "https://www.20minutes.fr/monde/ukraine/4253027-20261010-guerre-ukraine-trump-scelle-accord-poutine-diesel-zelensky-furieux?at_medium=display&at_campaign=149",
       "publishedAt": "2026-10-10T00:13:16.000Z",
       "imageUrl": "https://img.20mn.fr/7lUyEKWYS6iVUAwc1Db7VCk/1200x768_le-president-russe-vladimir-poutine-et-le-president-donald-trump-se-serrent-la-main-apres-une-conference-de-presse-conjointe-a-la-base-interarmees-elmendorf-richardson-a-anchorage-en-alaska-le-vendredi-15-aout-2025-trump-et-poutine-ont-discute-d-un-accord-de-cessez-le-feu-visant-a-mettre-fin-au-conflit-de-deux-ans-entre-la-russie-et-l-ukraine-photo-de-bob-strong-upi-photo-via-news-com-upi-photos-three113868-upi-newscom-sipa-2512050959",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -314,5 +314,6 @@
   },
   "differences": "La gauche polarise son attention sur l'indignation ukrainienne et la critique acerbe d'un accord jugé complice du financement de la guerre, tout en soulignant la consternation européenne. La droite et le centre droit s'attachent davantage au pragmatisme de la transaction et à ses retombées potentielles sur les prix des carburants pour les consommateurs, tout en intégrant les réserves exprimées par Bruxelles face au desserrement des sanctions.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 26
+  "summarizedArticleCount": 26,
+  "everInEdition": true
 }
