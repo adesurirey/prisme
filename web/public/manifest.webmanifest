@@ -1,0 +1,36 @@
+{
+  "name": "Prisme",
+  "short_name": "Prisme",
+  "description": "La même actualité, vue par tous les bords politiques.",
+  "lang": "fr",
+  "start_url": "/prisme/",
+  "scope": "/prisme/",
+  "display": "standalone",
+  "theme_color": "#fcfcfc",
+  "background_color": "#fcfcfc",
+  "icons": [
+    {
+      "src": "/prisme/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/prisme/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/prisme/icons/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/prisme/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "_comment": "start_url, scope and icon srcs hardcode the /prisme base defined in astro.config.mjs — update both together."
+}
