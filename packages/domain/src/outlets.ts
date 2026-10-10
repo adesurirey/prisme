@@ -1803,6 +1803,127 @@ export const outlets: OutletConfig[] = [
       note: 'Pas de tdmrep.json (404).',
     },
   },
+
+  {
+    id: 'atlantico',
+    name: 'Atlantico',
+    leaning: 'droite',
+    paywall: 'partial',
+    site: 'https://www.atlantico.fr',
+    feeds: { latest: 'https://rss.atlantico.fr' },
+    leaningSources: [
+      {
+        title:
+          "FrIdéo : où se situe Atlantico ? (échelle d'idéologie de 30 médias français)",
+        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
+        date: '2026',
+        url: 'https://frenchnewslab.org/fr/medias/atlantico',
+        takeaway:
+          "Score +1,08 dans la bande « droite », rang 27 sur 30 (intervalle +0,29…+1,87) ; 4 des 9 familles de preuves le couvrent directement, ce qui est peu : une part appréciable du score provient de l'a priori de tradition fondatrice.",
+      },
+      {
+        title: 'Atlantico (article encyclopédique, section « Positionnement »)',
+        author: 'Wikipédia (avec les articles cités en notes)',
+        date: '2026',
+        url: 'https://fr.wikipedia.org/wiki/Atlantico',
+        takeaway:
+          '« Classé à droite ou droite dure et parfois catégorisé comme néo-conservateur » ; selon Le Monde (avril 2017), « il tente une voie hybride : libéral et classé à droite ».',
+      },
+      {
+        title:
+          'Le site Atlantico, « une sensibilité de droite, mais pas militant »',
+        author: 'Rue89 (Nolwenn Le Blevennec)',
+        date: '2011-02-28',
+        url: 'https://www.nouvelobs.com/rue89/rue89-medias/20110228.RUE1103/le-site-atlantico-une-sensibilite-de-droite-mais-pas-militant.html',
+        takeaway:
+          "« Une sensibilité de droite, mais pas militant », là où le site se défend d'être « de droite ».",
+      },
+    ],
+    leaningNote:
+      "Placé à Droite d'après la bande « droite » de FrIdéo (intervalle excluant zéro), cohérente avec Wikipédia (« à droite ou droite dure »), Le Monde (« libéral et classé à droite ») et Rue89 (« sensibilité de droite, mais pas militant »). L'écart entre « droite » et « droite dure » est écrit dans le dossier plutôt que lissé.",
+    readership: {
+      evidence:
+        'Aucune certification ACPM « sites » ; ~360 000 visites/mois estimées par Semrush (août 2026), du même ordre que Blast. Réserve écrite : estimation non certifiée.',
+      url: 'https://fr.semrush.com/website/atlantico.fr/overview/',
+    },
+    feedChecks: [
+      {
+        kind: 'latest',
+        url: 'https://rss.atlantico.fr',
+        checkedAt: CHECKED,
+        status: 200,
+        items: 15,
+        covers: '~1,1 j',
+        images: 'all',
+        note: 'Le flux général « Actualités » est servi sur le sous-domaine rss.atlantico.fr (déclaré dans le HTML du site) : les URLs usuelles /rss et /feed répondent 404. Chapôs partout, images sur tous les items ; contribution 24 h : ~13 articles.',
+      },
+    ],
+    tdm: {
+      reserved: false,
+      checkedAt: CHECKED,
+      note: 'Pas de tdmrep.json (404, redirections suivies).',
+    },
+  },
+
+  {
+    id: 'causeur',
+    name: 'Causeur',
+    leaning: 'droite',
+    paywall: 'partial',
+    site: 'https://www.causeur.fr',
+    feeds: { latest: 'https://www.causeur.fr/feed' },
+    leaningSources: [
+      {
+        title:
+          "FrIdéo : où se situe Causeur ? (échelle d'idéologie de 30 médias français)",
+        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
+        date: '2026',
+        url: 'https://frenchnewslab.org/fr/medias/causeur',
+        takeaway:
+          'Score +1,53 dans la bande « extrême droite », rang 28 sur 30 (intervalle +0,87…+2,19) ; 5 des 9 familles de preuves le couvrent directement ; propriétaire final « founder-controlled » (contrôle documenté par sa fondatrice).',
+      },
+      {
+        title: 'Causeur (article encyclopédique, section « Ligne éditoriale »)',
+        author: 'Wikipédia (avec les articles cités en notes)',
+        date: '2026',
+        url: 'https://fr.wikipedia.org/wiki/Causeur',
+        takeaway:
+          "« À ses débuts, le magazine est généralement classé parmi la droite réactionnaire, avant d'être à partir de 2019, le plus souvent, classé à l'extrême droite » ; selon Le Monde (2013), « une revue vendue à 10 000 exemplaires volontiers réactionnaire ».",
+      },
+      {
+        title: 'Causeur (Talker) - Bias and Credibility',
+        author: 'Media Bias/Fact Check',
+        date: '',
+        url: 'https://mediabiasfactcheck.com/causeur-talker-bias/',
+        takeaway:
+          "Noté « Far-Right Biased and questionable » : notation tierce cohérente avec la bande FrIdéo (la fiabilité factuelle n'est pas notre objet).",
+      },
+    ],
+    leaningNote:
+      "Placé à Droite : la bande « extrême droite » de FrIdéo est rattachée à Droite comme pour Valeurs actuelles (notre échelle n'a pas de case extrême droite, hors périmètre de la PRD). Le glissement « droite réactionnaire » → « extrême droite » depuis 2019 est écrit dans le dossier, pas lissé.",
+    readership: {
+      evidence:
+        'Aucune certification ACPM ; ~242 000 visites/mois estimées par Semrush (février 2026) ; côté papier, chiffres déclarés (2018) : 7 800 abonnés, 6 500–9 000 exemplaires en kiosque. Réserve écrite : aucune donnée certifiée.',
+      url: 'https://fr.semrush.com/website/causeur.fr/overview/',
+    },
+    feedChecks: [
+      {
+        kind: 'latest',
+        url: 'https://www.causeur.fr/feed',
+        checkedAt: CHECKED,
+        status: 200,
+        items: 10,
+        covers: '~1,7 j',
+        images: 'none',
+        note: "Chapôs partout (médiane ~360 caractères), aucune image dans le flux, texte complet embarqué en content:encoded (le collector n'en garde que titre et chapô, ADR-0003). Contribution 24 h : ~6 articles.",
+      },
+    ],
+    tdm: {
+      reserved: false,
+      checkedAt: CHECKED,
+      note: 'Pas de tdmrep.json (404).',
+    },
+  },
 ];
 
 /** Outlets kept out of the Edition, with the reason and the date checked. */
@@ -1812,6 +1933,13 @@ export const excludedOutlets: ExcludedOutlet[] = [
     name: 'Les Échos',
     reason:
       'Flux RSS bloqués : lesechos.fr/rss/* répond 403 (une, actualités, rubriques), vérifié le 2026-10-10.',
+    checkedAt: CHECKED,
+  },
+  {
+    id: 'fdesouche',
+    name: 'Fdesouche',
+    reason:
+      "Agrégateur de liens, pas un média de source primaire : agréger ses articles compterait deux fois la couverture des médias déjà présents (examen préalable de l'issue #80, flux vérifié le 2026-10-10).",
     checkedAt: CHECKED,
   },
 ];
