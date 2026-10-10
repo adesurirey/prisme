@@ -1,12 +1,24 @@
 name: Edition
 
-# Four builds a day, every 5 hours. GitHub cron is UTC: Paris is UTC+1 in
-# winter (CET) and UTC+2 in summer (CEST), so UTC hours 5,10,15,20 cover
-# 06:00–21:00 Paris in winter and 07:00–22:00 in summer — never before
-# 06:00 Paris time in either season. Also triggerable by hand.
+# Hourly, all 24 hours — feeds roll continuously and every build gives fresh
+# Articles another chance to be grouped while still inside the 24h live window
+# (ADR-0009), with only ~1 h of tail lost on a failed build (ADR-0005).
+#
+# The minute is offset to :23 on purpose, not top of the hour: GitHub Actions
+# runs cron slots on 00/15/30/45 past the hour and almost every repo fires
+# there, so the shared scheduler queue is crush-congested at those minutes and
+# scheduled runs can slip tens of minutes. :23 hits a quiet minute and starts
+# within a few minutes of the scheduled time. Paris is UTC+1 in winter (CET)
+# and UTC+2 in summer (CEST), so :23 lands at a different real time each hour
+# in either season.
+#
+# Every build commits, even when no Story changed — edition.json's builtAt is
+# set unconditionally each run, so the commit is never empty and the home
+# page's « dernier point à hh h » always reflects the real verification time
+# (ADR-0002). Also triggerable by hand.
 on:
   schedule:
-    - cron: '0 5,10,15,20 * * *'
+    - cron: '23 * * * *'
   workflow_dispatch:
 
 permissions:
