@@ -84,12 +84,9 @@ export async function runEdition(): Promise<Edition> {
   // the cut keep updating outside it and may return on a later build; only a
   // Story with no live Articles freezes.
   const outletById = new Map(outlets.map((o) => [o.id, o]));
-  const edition: Edition = {
-    builtAt: now.toISOString(),
-    stories: rankStories(
-      frontpage.stories.filter((s) => liveIds.has(s.id)),
-    ).slice(0, EDITION_SIZE),
-  };
+  const ranked = rankStories(
+    frontpage.stories.filter((s) => liveIds.has(s.id)),
+  ).slice(0, EDITION_SIZE);
 
   // Edition history (issue #75): `everInEdition` is sticky — set the moment
   // a Story ranks into the Edition, so the flag survives its freezing. Like
@@ -97,9 +94,18 @@ export async function runEdition(): Promise<Edition> {
   // rewritten.
   const editionHistory = updateEditionHistory(
     frontpage.stories,
-    new Set(edition.stories.map((s) => s.id)),
+    new Set(ranked.map((s) => s.id)),
     now,
   );
+  // Re-map the ranked Edition onto the reconciled Stories by id: the flags
+  // above may replace flag-changed Stories with new objects, and the Summaries
+  // step below mutates the Edition Stories in place — they must be the same
+  // objects that get written to disk, or fresh Summaries would be lost.
+  const reconciledById = new Map(editionHistory.stories.map((s) => [s.id, s]));
+  const edition: Edition = {
+    builtAt: now.toISOString(),
+    stories: ranked.map((s) => reconciledById.get(s.id) ?? s),
+  };
   const changed = new Set([
     ...outcome.changed,
     ...frontpage.changed,
