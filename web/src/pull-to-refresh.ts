@@ -1,16 +1,15 @@
 /**
  * Pull-to-refresh (issue #66): pull down past an arming threshold on any page
- * to reload it and get the newest Edition; release below the threshold and the
- * indicator springs back. Uniform on every page, including frozen Story pages.
+ * to reload it and get the newest Edition. Releasing below the threshold does
+ * nothing. No visual indicator — the reload itself is the feedback. Uniform on
+ * every page, including frozen Story pages.
  *
  * The gesture logic lives in pure functions below (unit-tested); `install`
  * wires them to touch events on `document`.
  */
 
 /** Pull distance, in px, past which release reloads the page. */
-const ARM_THRESHOLD_PX = 80;
-/** Pull distance at which damping caps the indicator, in px. */
-const MAX_INDICATOR_PX = 120;
+export const ARM_THRESHOLD_PX = 80;
 /** Horizontal travel beyond which the gesture is abandoned. */
 const SLOP_PX = 24;
 
@@ -35,9 +34,8 @@ export type DragEventInput = {
 };
 
 /**
- * Reduce one touchmove sample into the next drag state. The indicator is
- * damped: each further px moves it less, and it stops at MAX_INDICATOR_PX.
- * Returns the updated state; callers read `.armed` on touchend.
+ * Reduce one touchmove sample into the next drag state. Returns the updated
+ * state; callers read `.armed` on touchend.
  */
 export function reduceMove(
   state: DragState,
@@ -60,18 +58,9 @@ export function reduceMove(
   return { ...state, armed };
 }
 
-/** Damped indicator offset for a pull of `dy` px. */
-export function indicatorOffset(dy: number): number {
-  if (dy <= 0) return 0;
-  if (dy >= MAX_INDICATOR_PX) return MAX_INDICATOR_PX;
-  // Quadratic damping: fast feedback at the top of the pull, resistive tail.
-  return Math.round(MAX_INDICATOR_PX * (1 - (1 - dy / MAX_INDICATOR_PX) ** 2));
-}
-
 /**
- * Decide what a touchend means for an armed-or-not drag.
- * `reload` wins: past the threshold the page reloads; otherwise the
- * indicator just springs back.
+ * Decide what a touchend means for an armed-or-not drag: past the threshold
+ * the page reloads, otherwise nothing happens.
  */
 export function resolveRelease(state: DragState): 'reload' | 'reset' {
   return state.armed && !state.abandoned ? 'reload' : 'reset';
@@ -105,13 +94,11 @@ export function startsInInnerScroller(target: Element | null): boolean {
 
 export type PullToRefreshOptions = {
   armThresholdPx?: number;
-  maxIndicatorPx?: number;
 };
 
 /**
  * Wire the gesture to touch events. Idempotent per document: the second and
- * later calls return without adding listeners. The indicator element doubles
- * as the installed marker.
+ * later calls return without adding listeners.
  */
 export function installPullToRefresh(
   doc: Document,
@@ -119,43 +106,8 @@ export function installPullToRefresh(
   options: PullToRefreshOptions = {},
 ): void {
   const armThresholdPx = options.armThresholdPx ?? ARM_THRESHOLD_PX;
-  const maxIndicatorPx = options.maxIndicatorPx ?? MAX_INDICATOR_PX;
-  if (doc.getElementById('pull-to-refresh-indicator')) return;
-
-  const reducedMotion = win.matchMedia('(prefers-reduced-motion: reduce)');
-
-  const indicator = doc.createElement('div');
-  indicator.id = 'pull-to-refresh-indicator';
-  indicator.setAttribute('aria-hidden', 'true');
-  indicator.style.cssText = [
-    'position:fixed',
-    'top:10px',
-    'left:50%',
-    'width:34px',
-    'height:34px',
-    'margin-left:-17px',
-    'border-radius:9999px',
-    'border:2.5px solid currentColor',
-    'border-top-color:transparent',
-    'opacity:0',
-    'pointer-events:none',
-    'z-index:100',
-    'color:var(--color-ink, #0e0e10)',
-    'transform:translateY(-60px)',
-  ].join(';');
-  doc.body.appendChild(indicator);
-
-  const setIndicator = (offsetY: number, opacity: number, spin: boolean) => {
-    // Reduced motion: no bouncy damping or spin — a static, fading indicator.
-    const motion = !reducedMotion.matches;
-    indicator.style.transform = `translateY(${offsetY - 60}px) rotate(${
-      motion && spin ? `${offsetY * 4}deg` : '0deg'
-    })`;
-    indicator.style.opacity = String(opacity);
-    indicator.style.transition = motion
-      ? 'transform 60ms linear, opacity 120ms ease'
-      : 'opacity 120ms ease';
-  };
+  if (doc.body.dataset.pullToRefreshInstalled) return;
+  doc.body.dataset.pullToRefreshInstalled = 'true';
 
   const freshState = (): DragState => ({
     startY: null,
@@ -192,7 +144,7 @@ export function installPullToRefresh(
       if (!touch) return;
       const dy = touch.clientY - state.startY;
       const dx = touch.clientX - state.startX;
-      const next = reduceMove(
+      state = reduceMove(
         state,
         {
           dy,
@@ -202,15 +154,6 @@ export function installPullToRefresh(
         },
         armThresholdPx,
       );
-      state = next;
-      // A pull while scrolled down is the page moving under the finger, not
-      // a refresh gesture — no indicator.
-      if (next.abandoned || dy <= 0 || win.scrollY > 0) {
-        setIndicator(0, 0, false);
-        return;
-      }
-      const offset = Math.min(indicatorOffset(dy), maxIndicatorPx);
-      setIndicator(offset, Math.min(1, offset / 20), true);
     },
     { passive: true },
   );
@@ -225,16 +168,12 @@ export function installPullToRefresh(
         // Fresh HTML from the network or the service worker; full reload, no
         // history entry, so Back still leaves the page.
         win.location.reload();
-        return;
       }
-      // Spring back — suppressed under reduced motion, which only fades out.
-      setIndicator(0, 0, false);
     },
     { passive: true },
   );
 
   doc.addEventListener('touchcancel', () => {
     state = freshState();
-    setIndicator(0, 0, false);
   });
 }

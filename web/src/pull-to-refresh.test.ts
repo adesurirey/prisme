@@ -1,7 +1,6 @@
 // @vitest-environment jsdom
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
-  indicatorOffset,
   installPullToRefresh,
   reduceMove,
   resolveRelease,
@@ -91,25 +90,6 @@ describe('reduceMove', () => {
   });
 });
 
-describe('indicatorOffset', () => {
-  it('is zero for zero and upward pulls', () => {
-    expect(indicatorOffset(0)).toBe(0);
-    expect(indicatorOffset(-30)).toBe(0);
-  });
-
-  it('is damped: early pull moves faster than late pull', () => {
-    // 0→20 px of finger travel moves the indicator ~37px; 100→120 moves it
-    // only ~3px — the resistive tail of the quadratic damping.
-    expect(indicatorOffset(20) - indicatorOffset(0)).toBeGreaterThan(
-      indicatorOffset(120) - indicatorOffset(100),
-    );
-  });
-
-  it('caps at the max indicator distance', () => {
-    expect(indicatorOffset(500)).toBe(120);
-  });
-});
-
 describe('resolveRelease', () => {
   it('reloads an armed drag', () => {
     expect(resolveRelease({ ...armedState, armed: true })).toBe('reload');
@@ -149,11 +129,11 @@ describe('installPullToRefresh', () => {
   const startAt = (y: number, target: EventTarget = base) =>
     touch(target, 'touchstart', [{ clientY: y, clientX: 200 }]);
 
-  const indicator = () =>
-    document.getElementById('pull-to-refresh-indicator') as HTMLElement;
-
   beforeEach(() => {
     document.body.innerHTML = '';
+    // jsdom reuses this document across tests; clear the install marker so
+    // each test exercises a fresh install.
+    delete document.body.dataset.pullToRefreshInstalled;
     reload = vi.fn();
     win = {
       scrollY: 0,
@@ -182,12 +162,14 @@ describe('installPullToRefresh', () => {
     vi.restoreAllMocks();
   });
 
-  it('creates exactly one indicator across repeated installs', () => {
+  it('installs exactly once across repeated calls', () => {
     installPullToRefresh(document, win);
     installPullToRefresh(document, win);
-    expect(
-      document.querySelectorAll('#pull-to-refresh-indicator'),
-    ).toHaveLength(1);
+    // No duplicate listeners: one reload per qualifying gesture.
+    startAt(100);
+    touch(document, 'touchmove', [{ clientY: 300, clientX: 200 }]);
+    touch(document, 'touchend', []);
+    expect(reload).toHaveBeenCalledOnce();
   });
 
   it('reloads after a pull past the threshold from the top', () => {
@@ -197,7 +179,7 @@ describe('installPullToRefresh', () => {
     expect(reload).toHaveBeenCalledOnce();
   });
 
-  it('springs back (no reload) below the threshold', () => {
+  it('does nothing below the threshold', () => {
     startAt(100);
     touch(document, 'touchmove', [{ clientY: 150, clientX: 200 }]);
     touch(document, 'touchend', []);
@@ -221,19 +203,12 @@ describe('installPullToRefresh', () => {
     expect(reload).not.toHaveBeenCalled();
   });
 
-  it('does not reload when the page is scrolled down, and shows no indicator', () => {
+  it('does not reload when the page is scrolled down', () => {
     (win as unknown as { scrollY: number }).scrollY = 60;
     startAt(100);
     touch(document, 'touchmove', [{ clientY: 300, clientX: 200 }]);
-    expect(indicator().style.opacity).toBe('0');
     touch(document, 'touchend', []);
     expect(reload).not.toHaveBeenCalled();
-  });
-
-  it('shows a damped indicator mid-pull at the top of the page', () => {
-    startAt(100);
-    touch(document, 'touchmove', [{ clientY: 150, clientX: 200 }]);
-    expect(indicator().style.opacity).not.toBe('0');
   });
 
   it('does not reload on a horizontal drag', () => {
@@ -258,29 +233,7 @@ describe('installPullToRefresh', () => {
     expect(reload).not.toHaveBeenCalled();
   });
 
-  it('keeps the fetch but drops the bouncy animation under prefers-reduced-motion', async () => {
-    const { JSDOM } = await import('jsdom');
-    const dom = new JSDOM('<body></body>');
-    const reducedWin = {
-      scrollY: 0,
-      location: { reload: vi.fn() },
-      matchMedia: () => ({ matches: true }) as unknown as MediaQueryList,
-    } as unknown as Window;
-    installPullToRefresh(dom.window.document, reducedWin);
-    const el = dom.window.document.getElementById(
-      'pull-to-refresh-indicator',
-    ) as HTMLElement;
-
-    startAt(100, dom.window.document);
-    touch(dom.window.document, 'touchmove', [{ clientY: 300, clientX: 200 }]);
-    // The indicator still appears (the gesture works)…
-    expect(el.style.opacity).not.toBe('0');
-    // …but its transition only fades opacity: no damped transform, no spin.
-    expect(el.style.transition).toContain('opacity');
-    expect(el.style.transition).not.toContain('transform');
-    expect(el.style.transform).not.toMatch(/rotate\((?!0deg\))/);
-
-    touch(dom.window.document, 'touchend', []);
-    expect(reducedWin.location.reload).toHaveBeenCalledOnce();
+  it('never adds any visual element to the page', () => {
+    expect(document.body.children).toHaveLength(1); // only the test's `base`
   });
 });
