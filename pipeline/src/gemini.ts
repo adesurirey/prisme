@@ -187,6 +187,8 @@ const SECTION_LABELS_FR: Record<Section, string> = {
 };
 
 /** The prompt: Story titles + Sections, Article headlines + teasers, nothing else (ADR-0003).
+ * Title style rules are sourced in ADR-0013 — named actor + concrete fact,
+ * systematic `titleUpdates`; don't loosen them without revisiting that decision.
  * Exported for the grouping benchmark (issue #41). */
 export function groupingPrompt(input: {
   stories: GroupingInputStory[];
