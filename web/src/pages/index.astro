@@ -67,3 +67,11 @@ const perGroup = (group: CoverageGroup) =>
     {edition.stories.map((story) => <StoryCard story={story} outlets={outlets} />)}
   </section>
 </Base>
+<!-- "En hausse" (per-visitor trending): the cards ship data-story-id/
+     data-coverage; this module script compares them to the reader's last
+     visit (localStorage) and reveals badges. Runs on this page only. -->
+<script>
+  import { installTrending } from '../trending';
+
+  installTrending();
+</script>
