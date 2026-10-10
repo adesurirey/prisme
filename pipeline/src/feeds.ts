@@ -184,7 +184,13 @@ function rssImageUrl(item: any): string | undefined {
       String(item.enclosure.type).startsWith('image/'))
       ? item.enclosure
       : undefined;
-  const media = item['media:content'] ?? item['media:thumbnail'];
+  // Blast (and others) wrap media:content inside media:group.
+  const group = item['media:group'];
+  const media =
+    item['media:content'] ??
+    item['media:thumbnail'] ??
+    group?.['media:content'] ??
+    group?.['media:thumbnail'];
   const url = enclosure?.url ?? media?.url;
   return url ? String(url) : undefined;
 }
