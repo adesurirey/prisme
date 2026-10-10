@@ -99,16 +99,8 @@ export interface ExcludedOutlet {
   checkedAt: string;
 }
 
-const CHECKED = '2026-10-06';
-
-/** Issue #11: Libération's Arc XP outbound feed verified a day after the rest. */
-const CHECKED_11 = '2026-10-07';
-
-/** Le Point's Arc XP outbound feed, found the same way as Libération's. */
-const CHECKED_LE_POINT = '2026-10-07';
-
-/** Issue #72: Challenges and L'Opinion (FrIdéo-backed dossiers). */
-const CHECKED_72 = '2026-10-10';
+/** Everything re-verified the same day (feed checks and TDM probes). */
+const CHECKED = '2026-10-10';
 
 /** The Outlets of the Edition, grouped by Leaning. The perimeter is open (issue #10). */
 export const outlets: OutletConfig[] = [
@@ -273,17 +265,17 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml',
-        checkedAt: CHECKED_11,
+        checkedAt: CHECKED,
         status: 200,
         items: 50,
         covers: '~9 h',
         images: 'none',
-        note: "Flux officiel de syndication de la plateforme Arc XP, servi sur le domaine de Libération : les flux /rss/ historiques restent bloqués par DataDome (403, vérifié le 2026-10-06, issue #11). 50 articles au plus, fenêtre d'environ 9 h, aucune image.",
+        note: "Flux officiel de syndication de la plateforme Arc XP, servi sur le domaine de Libération : les flux /rss/ historiques restent bloqués par DataDome (403, vérifié le 2026-10-10, issue #11). 50 articles au plus, fenêtre d'environ 9 h, aucune image.",
       },
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED_11,
+      checkedAt: CHECKED,
       note: 'Pas de tdmrep.json (404, la page répond depuis le serveur de Libération malgré DataDome).',
     },
   },
@@ -521,7 +513,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.marianne.net/rss.xml',
-        checkedAt: '2026-10-07',
+        checkedAt: CHECKED,
         status: 200,
         items: 20,
         covers: '~32 h',
@@ -531,7 +523,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: true,
-      checkedAt: '2026-10-07',
+      checkedAt: CHECKED,
       note: 'Réservation publiée (`tdm-reservation: 1` pour /) avec une politique `https://www.marianne.net/tdm-policy.json`.',
     },
   },
@@ -637,7 +629,7 @@ export const outlets: OutletConfig[] = [
         items: 30,
         covers: '~6 jours',
         images: 'all',
-        note: 'Le flux « une » accumule les choix de la journée sur plusieurs jours : il sert de front page par défaut. Pas de flux « latest » : les autres URL /feeds/* répondent 403 (vérifié le 2026-10-06).',
+        note: 'Le flux « une » accumule les choix de la journée sur plusieurs jours : il sert de front page par défaut. Pas de flux « latest » : les autres URL /feeds/* répondent 403 (vérifié le 2026-10-10).',
       },
     ],
     tdm: {
@@ -703,7 +695,7 @@ export const outlets: OutletConfig[] = [
         items: 10,
         covers: '~30 min',
         images: 'all',
-        note: 'Sert exactement les mêmes 10 articles que le flux « une » (vérifié le 2026-10-06).',
+        note: 'Sert exactement les mêmes 10 articles que le flux « une » (vérifié le 2026-10-10).',
       },
     ],
     tdm: {
@@ -1168,7 +1160,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.challenges.fr/rss.xml',
-        checkedAt: CHECKED_72,
+        checkedAt: CHECKED,
         status: 200,
         items: 50,
         covers: '~3 j',
@@ -1178,7 +1170,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: true,
-      checkedAt: CHECKED_72,
+      checkedAt: CHECKED,
       note: 'Réservation publiée : /.well-known/tdmrep.json redirige vers /tdmrep.json, qui publie tdm-reservation: 1 pour tout le site. Le site bloque par ailleurs GPTBot, CCBot et PerplexityBot (vérifié le 2026-10-10) : un blocage anti-IA, distinct de la réservation TDM.',
     },
   },
@@ -1283,7 +1275,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.lepoint.fr/arc/outboundfeeds/rss/?outputType=xml',
-        checkedAt: CHECKED_LE_POINT,
+        checkedAt: CHECKED,
         status: 200,
         items: 100,
         covers: '~2 j',
@@ -1293,7 +1285,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: null,
-      checkedAt: CHECKED_LE_POINT,
+      checkedAt: CHECKED,
       note: 'Indéterminé : la sonde sur lepoint.fr est bloquée par un anti-bot (403), le flux de syndication seul répond.',
     },
   },
@@ -1344,7 +1336,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.lopinion.fr/index.rss',
-        checkedAt: CHECKED_72,
+        checkedAt: CHECKED,
         status: 200,
         items: 250,
         covers: '~9 j',
@@ -1354,7 +1346,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED_72,
+      checkedAt: CHECKED,
       note: 'Pas de tdmrep.json (404). Le site bloque GPTBot, CCBot et PerplexityBot (vérifié le 2026-10-10) : un blocage anti-IA, pas une réservation TDM.',
     },
   },
@@ -1707,7 +1699,7 @@ export const excludedOutlets: ExcludedOutlet[] = [
     id: 'lesechos',
     name: 'Les Échos',
     reason:
-      'Flux RSS bloqués : lesechos.fr/rss/* répond 403 (une, actualités, rubriques), vérifié le 2026-10-06.',
+      'Flux RSS bloqués : lesechos.fr/rss/* répond 403 (une, actualités, rubriques), vérifié le 2026-10-10.',
     checkedAt: CHECKED,
   },
 ];
