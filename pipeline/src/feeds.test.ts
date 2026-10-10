@@ -64,6 +64,13 @@ describe('parseFeed', () => {
           <media:thumbnail url="https://exemple.fr/thumb.jpg"/>
         </item>
         <item>
+          <title>Image media:content dans media:group (Blast)</title>
+          <link>https://exemple.fr/e</link>
+          <media:group>
+            <media:content url="https://exemple.fr/group.jpg" height="152" width="270"/>
+          </media:group>
+        </item>
+        <item>
           <title>Sans image</title>
           <link>https://exemple.fr/d</link>
         </item>
@@ -74,7 +81,8 @@ describe('parseFeed', () => {
     expect(items[0].imageUrl).toBe('https://exemple.fr/photo.jpg');
     expect(items[1].imageUrl).toBe('https://exemple.fr/med.jpg');
     expect(items[2].imageUrl).toBe('https://exemple.fr/thumb.jpg');
-    expect(items[3].imageUrl).toBeUndefined();
+    expect(items[3].imageUrl).toBe('https://exemple.fr/group.jpg');
+    expect(items[4].imageUrl).toBeUndefined();
   });
 
   it('gives an empty publishedAt when neither the item nor its URL carries a date', () => {
