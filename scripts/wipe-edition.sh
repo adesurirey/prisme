@@ -72,4 +72,4 @@ pnpm edition
 
 echo
 echo "Edition rebuilt from scratch. Commit the result yourself, e.g.:"
-echo "  git add data && git commit -m 'data: from-scratch edition (\$(date -u +%%Y-%%m-%%dT%%H:%%M:%%SZ))'"
+echo '  git add data && git commit -m "data: from-scratch edition ($(date -u +%Y-%m-%dT%H:%M:%SZ))"'
