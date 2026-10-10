@@ -7,7 +7,9 @@
  * global.css, one color set per theme.
  */
 export function auroraBallSvg(stops: [string, string, string]): string {
-  const [from, mid, to] = stops.map(encodeURIComponent);
+  // Raw '#' here: the SVG is rasterized as-is (icons) and only gets
+  // percent-encoded when wrapped into a data URI below.
+  const [from, mid, to] = stops;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><linearGradient id="s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${from}"/><stop offset=".5" stop-color="${mid}"/><stop offset="1" stop-color="${to}"/></linearGradient><radialGradient id="h" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient><radialGradient id="d" cx=".5" cy=".5" r=".5"><stop offset=".7" stop-color="#000000" stop-opacity="0"/><stop offset="1" stop-color="#000000" stop-opacity=".25"/></radialGradient></defs><circle cx="16" cy="16" r="15" fill="url(#s)"/><circle cx="16" cy="16" r="15" fill="url(#d)"/><ellipse cx="11" cy="9.5" rx="6.5" ry="5" fill="url(#h)"/></svg>`;
 }
 
