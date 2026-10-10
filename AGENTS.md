@@ -8,6 +8,8 @@ Issues are tracked in this repository’s GitHub Issues via `gh`. See `docs/agen
 
 single-context. See `docs/agents/domain.md`.
 
+Adding an Outlet to the Edition (élargissement issue, `prd` + `ready-for-agent`): follow the `add-outlet` skill (`.agents/skills/add-outlet/SKILL.md`) — dossier, typed config, tests, verification and PR in one pass.
+
 Brand (name, catch line, mission, voice): `docs/brand.md`. Read it before writing or changing any user-facing copy — taglines, page titles, meta descriptions, badges, legal pages.
 
 Outlet Leanings and their sources: `docs/research/outlet-leanings.md` (the research behind the typed config in `packages/domain/src/outlets.ts`). Read it before changing an Outlet's Leaning, adding or removing an Outlet, or answering "why is this media classed there?".
@@ -48,6 +50,7 @@ Packages: `packages/domain` (shared types and the sourced Outlet config), `pipel
 ### Hard rules from the ADRs
 
 - **Never write teaser or outlet text to disk.** Teasers exist only in memory inside the collector (ADR-0003). Nothing in `data/` may contain feed description text; if a diff shows teaser-like content in `data/`, stop and fix before committing.
+- **Never run `pnpm edition` without the user's explicit consent.** It calls paid classification and summary APIs (Gemini) and costs real money. `pnpm verify` (feeds and TDM probes only) is free and needs no consent.
 - **Leaning belongs to Outlets, set by hand** in config, backed by sources (ADR-0001). Never classify Articles by Leaning.
 - **The UI is French; code, data keys and domain names are English** (GLOSSARY.md).
 - **Story pages stay up permanently**: Story files are never edited once frozen and slugs are stable and never reused; a slug collision must be resolved deterministically from Story ids, never by ordering — across builds the existing file keeps its slug, within a build the smallest Story id keeps the bare slug, and other claimants get a Story-id suffix.
