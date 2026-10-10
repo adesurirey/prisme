@@ -31,6 +31,14 @@ const {
     {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcfcfc" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e0e10" />
+    <!-- PWA (issue #64): installable site — manifest, iOS home-screen icon
+         and standalone display. The PNG icons are generated from the aurora
+         dot's single source by web/scripts/generate-icons.ts. -->
+    <link rel="manifest" href={withBase('/manifest.webmanifest')} />
+    <link rel="apple-touch-icon" href={withBase('/icons/apple-touch-icon.png')} />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Prisme" />
     <!-- Favicon: the aurora dot, one explicit version per theme (global.css
          tokens), from its single source. The media attribute makes the
          browser pick — and live-swap — the right one, instead of relying on
