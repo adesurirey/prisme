@@ -57,7 +57,7 @@ A Story with at least one Article less than 24 hours old. Live Stories can gain 
 _Avoid_: Active story, open story
 
 **Frozen Story**:
-A Story with no live Articles left. It has left the Edition; its page stays published and is never modified again.
+A Story with no live Articles left. It has left the Edition; once it has entered the Edition its page stays published and is never modified again. A Frozen Story that never entered the Edition is deleted at the end of each run (issue #75).
 _Avoid_: Archived story, closed story, expired story
 
 **Grouping model**:
