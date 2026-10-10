@@ -138,7 +138,6 @@ describe('installPullToRefresh', () => {
     win = {
       scrollY: 0,
       location: { reload },
-      matchMedia: () => ({ matches: false }) as unknown as MediaQueryList,
     } as unknown as Window;
 
     base = document.createElement('div');

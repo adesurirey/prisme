@@ -4,12 +4,12 @@
  * nothing. No visual indicator — the reload itself is the feedback. Uniform on
  * every page, including frozen Story pages.
  *
- * The gesture logic lives in pure functions below (unit-tested); `install`
- * wires them to touch events on `document`.
+ * The gesture logic lives in pure functions below (unit-tested);
+ * installPullToRefresh wires them to touch events on `document`.
  */
 
 /** Pull distance, in px, past which release reloads the page. */
-export const ARM_THRESHOLD_PX = 80;
+const ARM_THRESHOLD_PX = 80;
 /** Horizontal travel beyond which the gesture is abandoned. */
 const SLOP_PX = 24;
 
