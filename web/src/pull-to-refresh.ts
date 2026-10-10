@@ -40,7 +40,6 @@ export type DragEventInput = {
 export function reduceMove(
   state: DragState,
   { dy, dx, scrollY, touches }: DragEventInput,
-  armThresholdPx: number = ARM_THRESHOLD_PX,
 ): DragState {
   if (state.abandoned) return state;
   // Multi-touch is never a pull: a pinch or a stray second finger vetoes.
@@ -54,7 +53,7 @@ export function reduceMove(
   if (state.startY === null || scrollY > 0 || dy <= 0) {
     return state;
   }
-  const armed = dy >= armThresholdPx;
+  const armed = dy >= ARM_THRESHOLD_PX;
   return { ...state, armed };
 }
 
@@ -92,20 +91,11 @@ export function startsInInnerScroller(target: Element | null): boolean {
   return false;
 }
 
-export type PullToRefreshOptions = {
-  armThresholdPx?: number;
-};
-
 /**
  * Wire the gesture to touch events. Idempotent per document: the second and
  * later calls return without adding listeners.
  */
-export function installPullToRefresh(
-  doc: Document,
-  win: Window,
-  options: PullToRefreshOptions = {},
-): void {
-  const armThresholdPx = options.armThresholdPx ?? ARM_THRESHOLD_PX;
+export function installPullToRefresh(doc: Document, win: Window): void {
   if (doc.body.dataset.pullToRefreshInstalled) return;
   doc.body.dataset.pullToRefreshInstalled = 'true';
 
@@ -126,12 +116,7 @@ export function installPullToRefresh(
       if (startsInInnerScroller(target)) return;
       const touch = event.touches[0];
       if (!touch) return;
-      state = {
-        startY: touch.clientY,
-        startX: touch.clientX,
-        armed: false,
-        abandoned: false,
-      };
+      state = { ...freshState(), startY: touch.clientY, startX: touch.clientX };
     },
     { passive: true },
   );
@@ -144,16 +129,12 @@ export function installPullToRefresh(
       if (!touch) return;
       const dy = touch.clientY - state.startY;
       const dx = touch.clientX - state.startX;
-      state = reduceMove(
-        state,
-        {
-          dy,
-          dx,
-          scrollY: win.scrollY,
-          touches: event.touches.length,
-        },
-        armThresholdPx,
-      );
+      state = reduceMove(state, {
+        dy,
+        dx,
+        scrollY: win.scrollY,
+        touches: event.touches.length,
+      });
     },
     { passive: true },
   );
