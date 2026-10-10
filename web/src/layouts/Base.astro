@@ -17,15 +17,10 @@ const {
   ogImage,
   ogType = 'website',
 } = Astro.props;
-
-// Service-worker paths live on <html> as data attributes: an inline script
-// below reads them, and withBase here is the single /prisme-base source.
-const swPath = withBase('/sw.js');
-const scope = `${withBase('/')}`;
 ---
 
 <!doctype html>
-<html lang="fr" data-sw-path={swPath} data-scope={scope}>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -53,19 +48,6 @@ const scope = `${withBase('/')}`;
     <title>{title === 'Prisme' ? title : `${title} · Prisme`}</title>
     <!-- GoatCounter analytics: async, cookie-free, no personal data. -->
     <script is:inline data-goatcounter="https://prisme.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    <!-- PWA (issue #65): hand-rolled SW registration — the plugin's auto
-         injection never reaches prerendered Astro HTML. on-load, under
-         the /prisme base; the SW delivers precache + runtime caching. -->
-    <script is:inline>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register(
-            document.documentElement.dataset.swPath,
-            { scope: document.documentElement.dataset.scope },
-          );
-        });
-      }
-    </script>
   </head>
   <body class="min-h-screen bg-canvas font-sans text-ink antialiased">
     <header class="sticky top-0 z-50 border-b border-line bg-canvas/90 backdrop-blur">
