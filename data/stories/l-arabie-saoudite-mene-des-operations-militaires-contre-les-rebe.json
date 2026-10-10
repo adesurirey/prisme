@@ -5,6 +5,29 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "37ee9dac7306",
+      "outletId": "ouest-france",
+      "headline": "L’aéroport de Ryad en Arabie saoudite évacué, une frappe aurait fait plusieurs blessés sur place",
+      "url": "https://www.ouest-france.fr/monde/arabie-saoudite/laeroport-de-ryad-en-arabie-saoudite-evacue-une-frappe-aurait-fait-plusieurs-blesses-sur-place-8c1b9b42-c4b8-11f1-bba2-d026901fbfe4?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-10T15:17:29.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNTY3NWY1OGNiNzYzOWY5OGRiNzFmZGNmNWUwMzVjZGY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d000c0b6041dc89eb9748690bc114a16d588e775bc3d609d65f34ac10b11ae98",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "72fce0cd7f68",
+      "outletId": "rfi",
+      "headline": "Arabie saoudite: attaque au missile des Houthis du Yémen contre l'aéroport de Riyad",
+      "url": "https://www.rfi.fr/fr/moyen-orient/20261010-arabie-saoudite-attaque-au-missile-des-houthis-du-y%C3%A9men-contre-l-a%C3%A9roport-de-riyad",
+      "publishedAt": "2026-10-10T15:13:23.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/d40c1f0a-c4bb-11f1-b67a-77317c09f325/w:1024/p:16x9/2026-09-19T114802Z-1980126111-RC28MNAXZ2HR-RTRMADP-3-IRAN-CRISIS-SAUDI-YEMEN.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "47c3cbca33ce",
       "outletId": "liberation",
       "headline": "L’Arabie saoudite engage une «opération à grande échelle» contre les Houthis",
@@ -37,5 +60,21 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "summaries": {
+    "gauche": [
+      "L'Arabie saoudite a lancé une offensive d'envergure en réponse aux rebelles.",
+      "Des mouvements de foule et des évacuations ont perturbé l'activité de la plateforme aéroportuaire de la capitale.",
+      "La situation reste tendue sur place après des explosions dont l'origine exacte et les responsabilités directes font l'objet de vérifications.",
+      "Les hostilités dans la région s'inscrivent dans un contexte d'affrontements réguliers entre forces pro-iraniennes et autorités locales."
+    ],
+    "centre": [
+      "Une frappe aérienne ou un tir de missile a touché l'aéroport de Riyad, provoquant des blessés et l'évacuation des lieux.",
+      "L'attaque est attribuée par plusieurs sources diplomatiques aux combattants houthis venus du Yémen.",
+      "La coalition militaire dirigée par l'Arabie saoudite a simultanément annoncé le lancement d'une vaste opération de représailles."
+    ]
+  },
+  "differences": "Le camp du centre met l'accent sur l'attaque directe subie par l'aéroport de Riyad et sur la riposte militaire immédiate de la coalition menée par l'Arabie saoudite, en désignant clairement les Houthis comme responsables. De son côté, la gauche insiste davantage sur la notion d'opération à grande échelle et replace les événements dans un contexte géopolitique plus large impliquant des forces pro-iraniennes, tout en restant prudente sur l'origine exacte des explosions survenues à l'aéroport.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 5
 }

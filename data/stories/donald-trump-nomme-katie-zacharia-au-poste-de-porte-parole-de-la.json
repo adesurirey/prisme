@@ -5,6 +5,28 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "bb3940f3aac6",
+      "outletId": "cnews",
+      "headline": "Qui est Katie Zacharia, la nouvelle porte-parole de la Maison Blanche choisie par Donald Trump ?",
+      "url": "https://www.cnews.fr/monde/2026-10-10/qui-est-katie-zacharia-la-nouvelle-porte-parole-de-la-maison-blanche-choisie-par",
+      "publishedAt": "2026-10-10T14:59:38.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/fotojet_2_6aca3850406c8.jpg?itok=hg_su_vj",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "96769a81c67c",
+      "outletId": "le-point",
+      "headline": "Qui est Katie Zacharia, la nouvelle voix (très) loyale de Donald Trump ?",
+      "url": "https://www.lepoint.fr/monde/qui-est-katie-zacharia-la-nouvelle-voix-tres-loyale-de-donald-trump-LOZQNKUONNGKHIAAJTPIKEXD2A/",
+      "publishedAt": "2026-10-10T14:30:00.000Z",
+      "imageUrl": "https://www.lepoint.fr/resizer/v2/ZR3H6TIPVBBKNPG3346UNNEDGY.jpg?auth=10a944a1add38dfed659dbbf4d3459fbcdcd11d4312f99eb3a22280de1b6860d&smart=true&width=1200&height=900",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "4866b76ec9e2",
       "outletId": "liberation",
       "headline": "Employée du groupe Trump, habituée de Fox News : Katie Zacharia, nouvelle porte-parole comme chez elle à la Maison Blanche",
@@ -38,5 +60,20 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "summaries": {
+    "gauche": [
+      "Donald Trump a officialisé vendredi la nomination de Katie Zacharia en tant que porte-parole de la Maison-Blanche.",
+      "Elle succède à Karoline Leavitt et s'inscrit pleinement dans la ligne du mouvement MAGA.",
+      "Son parcours est marqué par des collaborations passées avec des structures liées à l'exécutif américain et des interventions médiatiques conservatrices."
+    ],
+    "droite": [
+      "La nomination de Katie Zacharia au poste de porte-parole de la Maison-Blanche a été annoncée par le président américain.",
+      "Agée de 42 ans, elle prendra ses fonctions dès le début de la semaine prochaine en remplacement de Karoline Leavitt.",
+      "Le chef de l'Etat a salué la fidélité et l'engagement de sa nouvelle collaboratrice au sein de la sphère républicaine."
+    ]
+  },
+  "differences": "Les deux camps s'accordent sur les faits essentiels concernant la nomination de Katie Zacharia et son ancrage politique, mais les médias de gauche insistent davantage sur son profil d'activiste issue de la galaxie trumpiste et de ses entreprises, tandis que la droite met en avant sa loyauté ancienne envers le président et l'officialisation rapide de sa prise de fonction.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 5
 }

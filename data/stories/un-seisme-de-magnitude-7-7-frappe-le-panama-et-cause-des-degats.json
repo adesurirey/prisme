@@ -5,6 +5,17 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "c6462a02366e",
+      "outletId": "france-24",
+      "headline": "Panama : un puissant séisme provoque d'importants dégâts, des blessés",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261010-panama-un-puissant-s%C3%A9isme-provoque-d-importants-d%C3%A9g%C3%A2ts-des-bless%C3%A9s",
+      "publishedAt": "2026-10-10T13:17:08.000Z",
+      "imageUrl": "https://s.france24.com/media/display/7b6615d2-c4ab-11f1-9e4d-29a2e29ae696/w:1024/p:16x9/FR-20261010-143617-143749-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "5fc15cf8a498",
       "outletId": "le-figaro",
       "headline": "Panama : un puissant séisme provoque d'importants dégâts et fait au moins 27 blessés",
@@ -55,7 +66,7 @@
       "url": "https://www.lemonde.fr/planete/article/2026/10/10/au-panama-un-premier-bilan-fait-etat-de-plusieurs-blesses-et-d-importants-degats-apres-le-seisme_6790968_3244.html",
       "publishedAt": "2026-10-10T07:02:48.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/10/292/0/3504/1752/644/322/60/0/65c9360_ftp-1-b12fgk6rxgmz-995ba5a29a5146b9b54cead43bed45da-1-39eb7740b99a461bb839c1b30fe7735a.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -111,7 +122,7 @@
       "url": "https://www.20minutes.fr/monde/4252994-20261009-panama-seisme-magnitude-7-6-provoque-panique-capitale?at_medium=display&at_campaign=149",
       "publishedAt": "2026-10-09T18:40:02.000Z",
       "imageUrl": "https://img.20mn.fr/QJFCZ3SaTeO6fMnWLbZkGik/1200x768_cette-vue-aerienne-montre-la-cathedrale-effondree-l-et-le-batiment-du-bureau-du-gouverneur-de-penonome-qui-s-est-effondre-apres-qu-un-tremblement-de-terre-de-magnitude-7-6-a-frappe-le-pays-a-penonome-au-panama-le-9-octobre-2026-selon-l-us-geological-survey-usgs-un-tremblement-de-terre-de-magnitude-7-6-a-secoue-le-panama-semant-la-panique-dans-la-capitale-bien-qu-aucune-victime-ni-aucun-dommage-n-aient-ete-signales-jusqu-a-present-photo-de-martin-bernetti-afp",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -126,7 +137,7 @@
     ],
     "centre": [
       "Le président panaméen a qualifié l'événement de désastre majeur suite à l'effondrement de routes et de bâtiments.",
-      "Les autorités ont recensé 27 blessés et noté de nombreux dégâts matériels importants.",
+      "Les autorités ont recensé 27 blessés et noté de nombreux dégâts matériels importants, notamment dans le centre du pays selon les dernières remontées.",
       "Plus d'une centaine de répliques ont succédé au tremblement de terre initial sans toutefois compromettre les infrastructures stratégiques du pays."
     ],
     "droite": [
@@ -135,7 +146,7 @@
       "L'autorité compétente a confirmé que le canal de Panama continuait de fonctionner normalement après des inspections."
     ]
   },
-  "differences": "Tous les camps s'accordent sur la magnitude du séisme et le bilan humain provisoire, mais la droite, à travers des titres comme Europe 1, choisit de rassurer immédiatement en insistant sur le fonctionnement normal du canal de Panama. La gauche et le centre insistent davantage sur la gravité de la situation en reprenant les déclarations présidentielles évoquant un grand désastre et en soulignant les perturbations concrètes comme la fermeture de l'aéroport.",
+  "differences": "Tous les camps s'accordent sur la magnitude du séisme et le bilan humain provisoire, mais la droite choisit de rassurer immédiatement en insistant sur le fonctionnement normal du canal de Panama. La gauche et le centre insistent davantage sur la gravité de la situation en reprenant les déclarations présidentielles évoquant un grand désastre et en soulignant les perturbations concrètes comme la fermeture de l'aéroport.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 10
+  "summarizedArticleCount": 11
 }

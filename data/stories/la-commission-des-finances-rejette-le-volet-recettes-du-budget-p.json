@@ -5,6 +5,40 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "bd3c7973428f",
+      "outletId": "ouest-france",
+      "headline": "ENTRETIEN. « On ne construit ni le budget ni le compromis avec le Rassemblement national », assure le ministre Panifous",
+      "url": "https://www.ouest-france.fr/politique/entretien-on-ne-construit-ni-le-budget-ni-le-compromis-avec-le-rassemblement-national-assure-le-ministre-panifous-1b0ca46c-c4b0-11f1-92e9-819eb738846b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-10T14:55:25.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYThkMDQ3ZjU5NTFmYzA2N2YzYzBkMzYxZWIxYjU0NWQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=8e30fdc1b0d9d68d1b8e0310acb02b0ebdddc2875cbc8a50c7f3e508ed0f3632",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "85cde3784097",
+      "outletId": "lobs",
+      "headline": "Le budget 2027 retoqué en commission à quelques jours du débat à l’Assemblée",
+      "url": "https://www.nouvelobs.com/politique/20261010.OBS119092/le-budget-2027-retoque-en-commission-a-quelques-jours-du-debat-a-l-assemblee.html",
+      "publishedAt": "2026-10-10T12:22:30.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/07/15/0/0/8524/5682/0/0/60/0/9e742e5_upload-1-17tnsn3spsrw-080-hl-xbouzas-3223309.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "1884ce9d1982",
+      "outletId": "humanite",
+      "headline": "Budget 2027 : le volet recette rejeté en commission, la gauche dénonce l’injustice fiscale",
+      "url": "https://www.humanite.fr/politique/budget-2027/budget-2027-le-volet-recette-rejete-en-commission-la-gauche-denonce-linjustice-fiscale",
+      "publishedAt": "2026-10-10T10:00:00.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/iStock-2178206498.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "814c739254fd",
       "outletId": "franceinfo",
       "headline": "Livret A, retraites, géants du numérique... Comment les députés ont modifié en commission le volet \"recettes\" du projet de budget pour 2027, avant de le rejeter",
@@ -62,10 +96,14 @@
   "section": "politics",
   "summaries": {
     "gauche": [
-      "La commission des finances a rejeté à la quasi-unanimité le volet des recettes du projet de budget pour 2027.",
-      "Les débats ont mis en lumière le rejet de la copie gouvernementale par les oppositions ainsi que par une partie de l'ancienne majorité.",
-      "Des mesures spécifiques ont été adoptées, telles qu'un amendement sur les stablecoins rapportant 1,5 milliard d'euros et une baisse de la TVA sur l'électricité.",
-      "La contribution demandée aux retraités et aux collectivités territoriales a fortement cristallisé les tensions lors des discussions."
+      "Le rejet du volet recettes en commission précède l'ouverture des débats dans l'hémicycle pour le projet de loi de finances.",
+      "L'opposition de gauche critique l'injustice fiscale du texte et dénonce les choix du bloc central lors des votes.",
+      "La période à venir s'annonce marquée par des tractations intenses à l'approche de l'échéance présidentielle."
+    ],
+    "centre": [
+      "Le gouvernement écarte toute négociation budgétaire avec les extrêmes, qu'il s'agisse du Rassemblement national ou de La France insoumis.",
+      "Un ministre clé mise sur le socle de stabilité regroupant centristes, sociodémocrates et Républicains pour bâtir un compromis.",
+      "L'objectif affiché reste de doter le pays d'un texte budgétaire avant la fin de l'année."
     ],
     "droite": [
       "Le projet de budget de l'État pour 2027 a subi un premier revers notable avec le rejet massif du volet recettes en commission.",
@@ -74,7 +112,7 @@
       "Les discussions ont mis en évidence des divisions internes au sein de la majorité concernant notamment la fiscalité pesant sur les retraités et les collectivités."
     ]
   },
-  "differences": "La gauche et la droite s'accordent sur le constat factuel du rejet massif du volet recettes du budget 2027 en commission et sur la difficulté des débats qui s'annoncent dans l'hémicycle. Toutefois, la gauche insiste particulièrement sur les modifications concrètes apportées au texte et sur les mesures sociales ou fiscales adoptées, telles que la taxation des stablecoins et la baisse de la TVA sur l'électricité, tout en pointant la fragilité de la position du gouvernement. De son côté, la droite, à l'instar d'Europe 1, met l'accent sur le revers politique pour l'exécutif, insistant sur le fait que le texte rejeté résulte d'amendements portés par les oppositions qui ont provoqué le désaccord du camp gouvernemental.",
+  "differences": "La gauche et la droite se concentrent sur le revers subi par l'exécutif en commission et l'affrontement fiscal imminent à l'Assemblée, la gauche insistant particulièrement sur l'injustice des mesures et les alliances contestées du bloc central. De son côté, le centre déplace l'attention vers la stratégie politique de l'exécutif, privilégiant un accord strict avec le socle de stabilité modéré et excluant explicitement toute discussion avec les extrêmes, qu'il s'agisse de la gauche radicale ou de la droite nationaliste.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 5
+  "summarizedArticleCount": 8
 }
