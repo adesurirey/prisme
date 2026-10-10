@@ -114,7 +114,7 @@ Une seule règle, appliquée à tous les médias :
 | La Croix | Centre | +0,13 (centre) | 6e PQN, 73 595 ex. | Partiellement payant | non |
 | Challenges | Centre | −0,10 (centre) | magazine, 232 050 ex. (DSH) | Partiellement payant | **oui** |
 | Le Point | Centre | +0,56 (centre droit) | 20e magazine, 263 528 ex. | Partiellement payant | indéterminé (403) |
-| L'Opinion | Centre droit | +0,60 (centre droit) | membre ACPM, 633 k (S1 2026) | Partiellement payant | non |
+| L'Opinion | Centre droit | +0,60 (centre droit) | membre ACPM, 633 k (S1 2026) | En grande partie payant | non |
 | Le Figaro | Droite | +1,02 (droite) | 2e PQN, 397 194 ex. | Partiellement payant | **oui** |
 | CNews | Droite | +0,96 (droite) | 22e site, 30,2 M visites | Gratuit | non |
 | Europe 1 | Droite | hors panel | 75e site, 4,7 M visites | Gratuit | non |
@@ -619,7 +619,7 @@ retient Claude Perdriel comme propriétaire final, alors que LVMH détient le ti
 
 **Sources**
 
-1. **FrIdéo : où se situe Challenges ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 — <https://frenchnewslab.org/fr/medias/challenges> — « Score −0,10 dans la bande "centre" (intervalle −0,84…+0,63) : l'intervalle contient zéro, 4 familles de preuves sur 9 seulement ; l'étiquette est une indication, pas un verdict. »
+1. **FrIdéo : où se situe Challenges ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 (échelle FrIdéo version 1.0, 2026-08-10, relative au panel de 30 médias) — <https://frenchnewslab.org/fr/medias/challenges> — « Score −0,10 dans la bande "centre" (intervalle −0,84…+0,63) : l'intervalle contient zéro, 4 familles de preuves sur 9 seulement ; l'étiquette est une indication, pas un verdict. »
 2. **Challenges (article encyclopédique)** — Wikipédia (avec les articles de presse cités en notes), 2026 — <https://fr.wikipedia.org/wiki/Challenges> — « Magazine économique fondé en 1982, devenu newsmag généraliste en 2021 ; détenu à 100 % par LVMH depuis décembre 2025 ; en 2017, des journalistes déploraient que leur journal "roule pour Macron", et en 2022 une "une" anti-Mélenchon imposée par Claude Perdriel a créé des remous au sein de la rédaction. »
 3. **La présidentielle à Challenges : les « observations » de la société des journalistes (SDJ)** — Acrimed, 2017-03-31 — <https://www.acrimed.org/La-presidentielle-a-Challenges-les-observations> — « La SDJ dénonce le parti-pris du site en faveur d'Emmanuel Macron et les interventions du directeur de la publication auprès de l'équipe web après un article critique à l'égard de Macron. »
 
@@ -691,7 +691,7 @@ voisinage FrIdéo du titre (entre Le Point et le JDD).
 
 **Sources**
 
-1. **FrIdéo : où se situe L'Opinion ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 — <https://frenchnewslab.org/fr/medias/l-opinion> — « Score +0,60 dans la bande "centre droit" (intervalle −0,05…+1,25) : l'intervalle contient zéro, 5 familles de preuves sur 9 ; propriétaire final Bettencourt / Nicolas Beytout / Ken Fisher. »
+1. **FrIdéo : où se situe L'Opinion ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 (échelle FrIdéo version 1.0, 2026-08-10, relative au panel de 30 médias) — <https://frenchnewslab.org/fr/medias/l-opinion> — « Score +0,60 dans la bande "centre droit" (intervalle −0,05…+1,25) : l'intervalle contient zéro, 5 familles de preuves sur 9 ; propriétaire final Bettencourt / Nicolas Beytout / Ken Fisher. »
 2. **L'Opinion (quotidien français) (article encyclopédique)** — Wikipédia (avec les articles de presse cités en notes), 2026 — <https://fr.wikipedia.org/wiki/L%27Opinion_(quotidien_fran%C3%A7ais)> — « Le journal revendique être pro-business » ; sa ligne est définie « libérale, pro-européenne, pro-business » par son fondateur ; « il suit une ligne qui s'affirme "néolibérale" selon Marianne » ; « la majorité des articles du site internet sont réservés aux abonnés ».
 3. **« La ligne éditoriale de mon journal sera libérale, probusiness et proeuropéenne »** — Xavier Ternisien, Le Monde, 2013-04-05 — <https://www.lemonde.fr/actualite-medias/article/2013/04/08/nicolas-beytout-la-ligne-editoriale-de-mon-journal-sera-liberale-probusiness-et-proeuropeenne_3155791_3236.html> — « Avoir une ligne "pro-business", c'est défendre l'idée que l'entreprise est le meilleur lieu pour produire la richesse » (Nicolas Beytout, déclaration fondatrice du quotidien).
 
