@@ -214,8 +214,8 @@ export function groupingPrompt(input: {
     '- Un article qui ne va avec rien obtient sa propre nouvelle story.',
     "- Une story correspond à un événement ou une affaire précise, jamais à un thème. N'utilise jamais de titre générique (« perspectives économiques… », « actualité politique… ») : un thème n'est pas une story.",
     '- Ne regroupe que ce qui rapporte le même événement ou la même affaire précise : un thème commun ou un protagoniste commun ne suffit pas.',
-    "- Chaque nouvelle story a une « key » courte unique (lettres et chiffres) et un « title » : un titre neutre en français décrivant l'événement, sans copier le titre d'un outlet ni reprendre sa formulation.",
-    '- « titleUpdates » (optionnel) : uniquement pour des stories qui reçoivent de nouveaux articles, et uniquement si un meilleur titre neutre existe ; sinon laisse une story inchangée.',
+    "- Chaque nouvelle story a une « key » courte unique (lettres et chiffres) et un « title » : un titre neutre en français décrivant l'événement, sans copier le titre d'un outlet ni reprendre sa formulation. Style du titre : un acteur nommé, un verbe d'action, un complément concret (chiffre, lieu, enjeu) — jamais le style nominal sans verbe (« Condamnation de… », « Attribution du… », « Préparatifs face à… »). Interdits : commencer par une citation entre guillemets, le format « citation » : … repris des outlets, les préfixes de type « À la une ». Aucun mot rhétorique ou jugement de valeur : la neutralité porte sur la position, pas sur la forme. Une phrase de 40 à 110 caractères qui conserve les noms propres (personnes, lieux, sigles).",
+    "- « titleUpdates » : pour chaque story existante qui reçoit de nouveaux articles, propose un titre respectant le même style, formulé d'après l'ensemble des titres des articles du groupe : retiens le fait le plus précis et le plus récent que le groupe établit, pas seulement celui du premier article. Laisse le titre inchangé uniquement s'il suit déjà ce style.",
   ].join('\n');
 }
 
