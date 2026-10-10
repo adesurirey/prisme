@@ -190,6 +190,9 @@ export interface Edition {
   stories: Story[];
 }
 
+// The Story cover rule: which Article's image represents the Story, scored
+// on URL quality and freshness — no Leaning involved.
+export * from './cover.ts';
 export * from './coverage.ts';
 // The sourced Outlet config (issue #2): Leanings with citations, readership,
 // verified feeds and TDM reservations. See docs/research/outlet-leanings.md.

@@ -7,7 +7,6 @@ import {
   frontPageOutlets,
   isReporting,
   newestFirst,
-  pickStoryImage,
   reportingOutletIds,
 } from './coverage.ts';
 import type { Article, Leaning, Outlet, Story } from './index.ts';
@@ -19,9 +18,8 @@ import type { Article, Leaning, Outlet, Story } from './index.ts';
  * shapes the Outlet's readers just as much as a straight report. A Blindspot
  * is a group with no Outlet at all on a Story reported by three or more
  * Outlets. The five Leaning bands fold into the three groups (issue #46):
- * centre-gauche → gauche, centre-droite → droite. The image rule still
- * draws only from news/live Articles and prefers Centre, then the group
- * with the most Coverage, ties left to recency.
+ * centre-gauche → gauche, centre-droite → droite. The image rule lives in
+ * cover.ts: URL quality and freshness, no Leaning involved.
  */
 
 function outlet(id: string, leaning: Outlet['leaning']): Outlet {
@@ -233,205 +231,6 @@ describe('frontPageOutlets', () => {
     ];
     expect(frontPageOutlets(articles, outlets).map((o) => o.id)).toEqual([
       'centre-1',
-    ]);
-  });
-});
-
-describe('pickStoryImage', () => {
-  function story(articles: Article[]): Story {
-    return {
-      id: 'story1',
-      slug: 'sujet',
-      title: 'Sujet',
-      createdAt: '2026-10-06T10:00:00Z',
-      articles,
-    };
-  }
-
-  const at = (hour: number) =>
-    `2026-10-06T${String(hour).padStart(2, '0')}:00:00Z`;
-
-  it('prefers the newest Centre Article with an image', () => {
-    const articles = [
-      article('gauche', {
-        outletId: 'gauche-1',
-        kind: 'news',
-        publishedAt: at(12),
-        imageUrl: 'g.jpg',
-      }),
-      article('centre-vieux', {
-        outletId: 'centre-1',
-        kind: 'news',
-        publishedAt: at(9),
-        imageUrl: 'cv.jpg',
-      }),
-      article('centre-rec', {
-        outletId: 'centre-2',
-        kind: 'news',
-        publishedAt: at(14),
-        imageUrl: 'cr.jpg',
-      }),
-    ];
-    expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('cr.jpg');
-  });
-
-  it('without Centre, picks the Leaning with the most Coverage', () => {
-    const articles = [
-      article('gauche', {
-        outletId: 'gauche-1',
-        kind: 'news',
-        publishedAt: at(12),
-        imageUrl: 'g.jpg',
-      }),
-      article('droite', {
-        outletId: 'droite-1',
-        kind: 'news',
-        publishedAt: at(14),
-        imageUrl: 'd.jpg',
-      }),
-      article('centre', {
-        outletId: 'centre-1',
-        kind: 'news',
-        publishedAt: at(15),
-        imageUrl: 'c.jpg',
-      }),
-    ];
-    // Droite has 1 reporting Outlet, Gauche 1, Centre 1 — recency breaks it.
-    expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('c.jpg');
-  });
-
-  it('on a Gauche/Droite tie, recency wins regardless of Leaning', () => {
-    const articles = [
-      article('gauche', {
-        outletId: 'gauche-1',
-        kind: 'news',
-        publishedAt: at(9),
-        imageUrl: 'g.jpg',
-      }),
-      article('droite', {
-        outletId: 'droite-1',
-        kind: 'news',
-        publishedAt: at(14),
-        imageUrl: 'd.jpg',
-      }),
-    ];
-    expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('d.jpg');
-  });
-
-  it('follows Coverage order when the top Leaning has no image', () => {
-    const articles = [
-      article('centre-sans', {
-        outletId: 'centre-1',
-        kind: 'news',
-        publishedAt: at(15),
-      }),
-      article('centre-2', {
-        outletId: 'centre-2',
-        kind: 'news',
-        publishedAt: at(16),
-      }),
-      article('gauche', {
-        outletId: 'gauche-1',
-        kind: 'news',
-        publishedAt: at(12),
-        imageUrl: 'g.jpg',
-      }),
-    ];
-    // Centre has the most Coverage (2 Outlets) but no image; Gauche follows.
-    expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('g.jpg');
-  });
-
-  it('within a Leaning, takes the newest Article with an image', () => {
-    const articles = [
-      article('g-rec', {
-        outletId: 'gauche-1',
-        kind: 'news',
-        publishedAt: at(12),
-        imageUrl: 'g2.jpg',
-      }),
-      article('g-vieux', {
-        outletId: 'gauche-1',
-        kind: 'news',
-        publishedAt: at(9),
-        imageUrl: 'g1.jpg',
-      }),
-    ];
-    expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('g2.jpg');
-  });
-
-  it('a not_news Article never supplies the image either', () => {
-    const articles = [
-      article('not-news-img', {
-        kind: 'not_news',
-        publishedAt: at(16),
-        imageUrl: 'junk.jpg',
-      }),
-      article('centre', {
-        outletId: 'centre-1',
-        kind: 'news',
-        publishedAt: at(10),
-        imageUrl: 'c.jpg',
-      }),
-    ];
-    expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('c.jpg');
-  });
-
-  it('an Opinion-only Outlet never shifts the image tier (ADR-0011)', () => {
-    const articles = [
-      article('gauche-op', {
-        outletId: 'gauche-1',
-        kind: 'opinion',
-        publishedAt: at(16),
-        imageUrl: 'op.jpg',
-      }),
-      article('centre', {
-        outletId: 'centre-1',
-        kind: 'news',
-        publishedAt: at(10),
-        imageUrl: 'c.jpg',
-      }),
-    ];
-    // With Opinion counted toward Coverage, Gauche and Centre tie at 1 — but
-    // the image still comes from the news Article, never the editorial.
-    expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('c.jpg');
-  });
-
-  it('returns undefined when no Article has an image', () => {
-    expect(
-      pickStoryImage(story([article('a', { kind: 'news' })]), byId),
-    ).toBeUndefined();
-  });
-
-  it('ties are broken by id for determinism', () => {
-    const articles = [
-      article('b', {
-        outletId: 'centre-1',
-        kind: 'news',
-        publishedAt: at(12),
-        imageUrl: 'b.jpg',
-      }),
-      article('a', {
-        outletId: 'centre-2',
-        kind: 'news',
-        publishedAt: at(12),
-        imageUrl: 'a.jpg',
-      }),
-    ];
-    expect(pickStoryImage(story(articles), byId)?.imageUrl).toBe('a.jpg');
-  });
-
-  it('orders Articles by publication time descending, ties by id', () => {
-    const articles = [
-      article('old', { publishedAt: '2026-10-06T09:00:00Z' }),
-      article('new', { publishedAt: '2026-10-06T11:00:00Z' }),
-      article('mid', { publishedAt: '2026-10-06T10:00:00Z' }),
-      article('mid-tie', { publishedAt: '2026-10-06T10:00:00Z' }),
-    ];
-    expect([...articles].sort(newestFirst).map((a) => a.id)).toEqual([
-      'new',
-      'mid',
-      'mid-tie',
-      'old',
     ]);
   });
 });
