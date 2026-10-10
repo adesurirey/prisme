@@ -8,13 +8,13 @@ l'Édition quand les trois critères sont réunis —
 2. un flux RSS fonctionnel, vérifié avec un User-Agent de navigateur normal ;
 3. un Leaning sourcé selon la méthode ci-dessous (≥ 2 sources citées, désaccords écrits).
 
-À ce jour, **28 médias** y répondent. La version typée de ce document est
+À ce jour, **30 médias** y répondent. La version typée de ce document est
 `packages/domain/src/outlets.ts`, importée par le pipeline et le site ; les deux doivent
 rester identiques (les tests du module font respecter les règles de preuve).
 
 - **Méthode et règle de placement** ci-dessous, puis un dossier par média.
 - **Vérifications** (flux RSS, réservations TDM) effectuées le **2026-10-10** avec un
-  User-Agent de navigateur normal (tous les médias, issues #10, #11, #72 et #73). Chiffres ACPM : millésime **2025/2026** pour la presse
+  User-Agent de navigateur normal (tous les médias, issues #10, #11, #72, #73 et #80). Chiffres ACPM : millésime **2025/2026** pour la presse
   (diffusion France payée certifiée), **août 2026** pour les sites (visites mensuelles).
 - Conformément à l'ADR-0001, le Leaning appartient au média, jamais à un article. Les
   notes et citations de ce document sont écrites pour être **publiables telles quelles**
@@ -121,6 +121,8 @@ Une seule règle, appliquée à tous les médias :
 | Europe 1 | Droite | hors panel | 75e site, 4,7 M visites | Gratuit | non |
 | Le JDD | Droite | +0,95 (droite) | 9e 7e jour, 118 153 ex. | Partiellement payant | non |
 | Valeurs actuelles | Droite | +1,87 (extrême droite) | 89e magazine, 61 124 ex. | Partiellement payant | non |
+| Atlantico | Droite | +1,08 (droite) | ~360 k visites/mois (Semrush, estimé) | Partiellement payant | non |
+| Causeur | Droite | +1,53 (extrême droite) | ~242 k visites/mois (Semrush, estimé) | Partiellement payant | non |
 
 PQN = presse quotidienne nationale, PQR = presse quotidienne régionale, 7e jour =
 hebdomadaires du dimanche, magazine = presse magazine (classements ACPM 2025/2026).
@@ -128,7 +130,7 @@ hebdomadaires du dimanche, magazine = presse magazine (classements ACPM 2025/202
 
 ---
 
-## Les 28 médias
+## Les 30 médias
 
 ### L'Obs — Gauche
 
@@ -921,6 +923,80 @@ payée.
 
 **Paywall / TDM.** Partiellement payant ; pas de `tdmrep.json` (404).
 
+### Atlantico — Droite
+
+**Placement.** Bande `right` de FrIdéo → **Droite**. L'intervalle de confiance
+(+0,29…+1,87) exclut zéro, mais le média n'est couvert directement que par 4 familles de
+preuves sur 9 : une part appréciable du score provient de l'« a priori de tradition
+fondatrice », et FrIdéo le dit explicitement. Le voisin immédiat à gauche est Le Figaro,
+à droite Causeur, avec des intervalles qui se recouvrent.
+
+**Désaccords entre sources.** Le site lui-même récuse l'étiquette (« ni de droite ni de
+gauche », dir. Jean-Sébastien Ferjou, dès 2011) ; Wikipédia écrit « classé à droite ou
+droite dure et parfois catégorisé comme néo-conservateur » ; Le Monde (avril 2017) le
+décrit comme « libéral et classé à droite », « moins engagé et tranché qu'un média comme
+Valeurs actuelles » ; Rue89 (2011) résume « une sensibilité de droite, mais pas
+militant ». Nous suivons la bande mesurée par FrIdéo, cohérente avec ces descriptions ;
+l'écart entre « droite » et « droite dure » est écrit ici plutôt que lissé.
+
+**Sources**
+
+1. **FrIdéo : où se situe Atlantico ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 (échelle FrIdéo version 1.0, 2026-08-10, relative au panel de 30 médias) — <https://frenchnewslab.org/fr/medias/atlantico> — « Score +1,08 dans la bande "droite", rang 27 sur 30 (intervalle +0,29…+1,87) ; 4 des 9 familles de preuves le couvrent directement, ce qui est peu : une part appréciable du score provient de l'a priori de tradition fondatrice. »
+2. **Atlantico (article encyclopédique, section « Positionnement »)** — Wikipédia (avec les articles cités en notes), 2026 — <https://fr.wikipedia.org/wiki/Atlantico> — « Classé à droite ou droite dure et parfois catégorisé comme néo-conservateur » ; selon Le Monde (avril 2017), « il tente une voie hybride : libéral et classé à droite » ; en 2014, le politologue Julien Giry qualifie le site de « très droitier ».
+3. **Le site Atlantico, « une sensibilité de droite, mais pas militant »** — Rue89 (Nolwenn Le Blevennec), 2011 — <https://www.nouvelobs.com/rue89/rue89-medias/20110228.RUE1103/le-site-atlantico-une-sensibilite-de-droite-mais-pas-militant.html> — Le titre du papier : une « sensibilité de droite, mais pas militant », là où le site se défend d'être « de droite ».
+
+**Audience.** Aucune certification ACPM « sites » n'a été trouvée pour atlantico.fr
+(absent du classement des sites grand public). ~360 000 visites/mois estimées par Semrush
+(août 2026) — l'estimation déjà consignée dans le dossier Blast (issue #71), du même
+ordre que celui-ci. Réserve écrite : estimation non certifiée par un tiers éditeur,
+l'ordre de grandeur reste très en dessous des sites certifiés de l'Édition.
+
+**Flux vérifiés (2026-10-10).** `latest` <https://rss.atlantico.fr> — 200, 15 articles,
+~1,1 j couverts, images sur les 15. Chapôs partout (médiane ~280 caractères). Les URLs
+usuelles `/rss` et `/feed` répondent 404 : le flux est servi sur le sous-domaine
+`rss.atlantico.fr` et déclaré dans le HTML du site (`<link rel="alternate">`), c'est lui
+le flux général « Actualités ». Contribution 24 h : ~13 articles/jour.
+
+**Paywall / TDM.** Partiellement payant (abonnement lancé en 2014, des contenus restent
+en libre accès) ; pas de `tdmrep.json` (404), `robots.txt` ne bloque pas les robots d'IA.
+
+### Causeur — Droite
+
+**Placement.** Bande `far-right` de FrIdéo → rattachée à **Droite** (pas de case extrême
+droite dans notre échelle, voir la PRD). L'intervalle de confiance (+0,87…+2,19) exclut
+zéro, sur 5 familles de preuves sur 9.
+
+**Désaccords entre sources.** Le glissement est écrit chez Wikipédia : « À ses débuts,
+le magazine est généralement classé parmi la droite réactionnaire, avant d'être à partir
+de 2019, le plus souvent, classé à l'extrême droite » ; le site se revendique
+« pluraliste, anticonformiste, voire parfois réactionnaire ». Media Bias/Fact Check note
+« Far-Right » et « questionable » en fiabilité factuelle — nous consignons la notation
+sans la reprendre à notre compte : notre méthode ne juge ni la qualité ni la fiabilité
+d'un média, seulement son positionnement. La bande `far-right` est rattachée à Droite
+comme pour Valeurs actuelles (rang 28 sur 30, juste avant Fdesouche, lui aussi écarté du
+périmètre à l'issue #80 pour cause de nature d'agrégateur).
+
+**Sources**
+
+1. **FrIdéo : où se situe Causeur ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 (échelle FrIdéo version 1.0, 2026-08-10, relative au panel de 30 médias) — <https://frenchnewslab.org/fr/medias/causeur> — « Score +1,53 dans la bande "extrême droite", rang 28 sur 30 (intervalle +0,87…+2,19) ; 5 des 9 familles de preuves le couvrent directement ; propriétaire final "founder-controlled" (contrôle documenté par sa fondatrice). »
+2. **Causeur (article encyclopédique, section « Ligne éditoriale »)** — Wikipédia (avec les articles cités en notes), 2026 — <https://fr.wikipedia.org/wiki/Causeur> — « À ses débuts, le magazine est généralement classé parmi la droite réactionnaire, avant d'être à partir de 2019, le plus souvent, classé à l'extrême droite » ; selon Le Monde (2013), « une revue vendue à 10 000 exemplaires volontiers réactionnaire ».
+3. **Causeur (Talker) — Bias and Credibility** — Media Bias/Fact Check, s. d. — <https://mediabiasfactcheck.com/causeur-talker-bias/> — « Overall, we rate Causeur Far-Right Biased and questionable » : notation tierce cohérente avec la bande FrIdéo, publiée ici avec la réserve de méthode ci-dessus.
+
+**Audience.** Aucune certification ACPM (ni presse magazine, ni sites). ~242 000
+visites/mois estimées par Semrush (février 2026, mois de −50 % par rapport à janvier) ;
+côté papier, chiffres déclarés par la fondatrice (2018) : 7 800 abonnés revendiqués,
+6 500–9 000 exemplaires en kiosque « pour les bons numéros ». Réserve écrite : aucune
+donnée certifiée par un tiers ; le trafic site estimé reste très en dessous des sites
+certifiés de l'Édition.
+
+**Flux vérifiés (2026-10-10).** `latest` <https://www.causeur.fr/feed> — 200, 10
+articles, ~1,7 j couverts, **sans image**. Chapôs partout (médiane ~360 caractères), et
+le flux embarque le texte complet (`content:encoded`) — le collector n'en garde que
+titre et chapô (ADR-0003). Contribution 24 h : ~6 articles/jour.
+
+**Paywall / TDM.** Partiellement payant (édition abonné en ligne, magazine en kiosque) ;
+pas de `tdmrep.json` (404), `robots.txt` ne bloque pas les robots d'IA.
+
 ---
 
 ## Médias exclus
@@ -928,6 +1004,7 @@ payée.
 | Média | Raison (vérifiée le 2026-10-10) |
 |---|---|
 | Les Échos | **Flux bloqués.** `lesechos.fr/rss/*` répond **403** (une, actualités, rubriques) ; le site tout entier est servi derrière Akamai, qui bloque aussi la page d'accueil (vérifié le 2026-10-10). |
+| Fdesouche | **Agrégateur de liens, pas un média de source primaire** : ses articles renvoient vers des faits divers d'autres rédactions — l'agréger compterait deux fois la couverture des médias déjà présents (examen préalable de l'issue #80, flux vérifié le 2026-10-10). |
 
 Le Point est cité ici pour mémoire : il était exclu pour la même raison technique
 (flux 403, vérifié le 2026-10-10) et est entré dans l'Édition le 2026-10-10, quand un

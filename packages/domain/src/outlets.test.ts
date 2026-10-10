@@ -208,4 +208,42 @@ describe('outlet config', () => {
       ]);
     }
   });
+
+  it('adds Atlantico and Causeur (Droite) to the Edition (issue #80)', () => {
+    const atlantico = outlets.find((outlet) => outlet.id === 'atlantico');
+    expect(atlantico, 'atlantico enters the Edition').toBeDefined();
+    expect(atlantico!.name).toBe('Atlantico');
+    expect(atlantico!.leaning).toBe('droite');
+    expect(atlantico!.paywall).toBe('partial');
+    // The general news feed lives on the rss. subdomain (declared in the site
+    // HTML); the usual /rss and /feed paths 404.
+    expect(atlantico!.feeds.latest).toBe('https://rss.atlantico.fr');
+    expect(atlantico!.feedChecks[0]!.checkedAt).toBe('2026-10-10');
+    expect(atlantico!.feedChecks[0]!.status).toBe(200);
+    expect(atlantico!.feedChecks[0]!.images).toBe('all');
+    expect(atlantico!.tdm.reserved).toBe(false);
+    // Audience argument consigné sur #80 : no ACPM certification — Semrush
+    // estimate only (~360k visits/month, same calibre as Blast). Réserve
+    // écrite: non-certified estimate.
+    expect(atlantico!.readership.evidence).toMatch(/Semrush/);
+    const causeur = outlets.find((outlet) => outlet.id === 'causeur');
+    expect(causeur, 'causeur enters the Edition').toBeDefined();
+    expect(causeur!.name).toBe('Causeur');
+    // FrIdéo bands Causeur « extrême droite »: the five-band rule maps it to
+    // Droite, as for Valeurs actuelles.
+    expect(causeur!.leaning).toBe('droite');
+    expect(causeur!.paywall).toBe('partial');
+    expect(causeur!.feeds.latest).toBe('https://www.causeur.fr/feed');
+    expect(causeur!.feedChecks[0]!.checkedAt).toBe('2026-10-10');
+    expect(causeur!.feedChecks[0]!.status).toBe(200);
+    expect(causeur!.feedChecks[0]!.images).toBe('none');
+    expect(causeur!.tdm.reserved).toBe(false);
+    expect(causeur!.readership.evidence).toMatch(/Semrush/);
+    for (const outlet of [atlantico!, causeur!]) {
+      expect(outlet.feedChecks[0]!.checkedAt).toBe('2026-10-10');
+      expect(excludedOutlets.map((excluded) => excluded.id)).not.toContain(
+        outlet.id,
+      );
+    }
+  });
 });
