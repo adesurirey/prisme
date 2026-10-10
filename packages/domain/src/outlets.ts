@@ -332,6 +332,58 @@ export const outlets: OutletConfig[] = [
   },
 
   {
+    id: 'blast',
+    name: 'Blast',
+    leaning: 'gauche',
+    paywall: 'none',
+    site: 'https://www.blast-info.fr',
+    feeds: { latest: 'https://api.blast-info.fr/rss_articles.xml' },
+    leaningSources: [
+      {
+        title:
+          "FrIdéo : où se situe Blast ? (échelle d'idéologie de 30 médias français)",
+        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
+        date: '2026',
+        url: 'https://frenchnewslab.org/fr/medias/blast',
+        takeaway:
+          'Score −1,65 dans la bande « extrême gauche », au rang 2 sur 30 (intervalle −2,39…−0,91) ; 4 des 9 familles de preuves le couvrent directement, ce qui est peu : une part appréciable du score provient de l’a priori de tradition fondatrice.',
+      },
+      {
+        title: 'Blast (média) (article encyclopédique)',
+        author: 'Wikipédia (avec les articles de presse cités en notes)',
+        date: '2026',
+        url: 'https://fr.wikipedia.org/wiki/Blast_(m%C3%A9dia)',
+        takeaway:
+          '« Classé à gauche, il combine une plateforme d’information généraliste et une web TV » ; « une ligne éditoriale qui se veut orientée à gauche » — en juin 2024, le média appelle à faire « front commun » contre l’extrême droite.',
+      },
+    ],
+    leaningNote:
+      'Placé à gauche : notre échelle n’a pas de case « extrême gauche » (hors périmètre, voir la PRD), la bande « far-left » de FrIdéo est donc rattachée à Gauche. Réserves écrites : FrIdéo ne couvre Blast qu’avec 4 familles de preuves sur 9 — le voisin immédiat est Mediapart, avec des intervalles qui se recouvrent — et Wikipédia le classe simplement « à gauche ».',
+    readership: {
+      evidence:
+        'Pas de certification ACPM : 33 625 abonnés payants, plus de 7 000 sociétaires, ~4 M€ de chiffre d’affaires et plus de 40 ETP, déclarés sous serment par Denis Robert devant le Sénat (14 avril 2026) ; ~360 000 visites/mois (Semrush, août 2026). Chiffres auto-déclarés, quoiqu’assermentés — aucune donnée certifiée par un tiers.',
+      url: 'https://www.senat.fr/compte-rendu-commissions/20260413/cult.html',
+    },
+    feedChecks: [
+      {
+        kind: 'latest',
+        url: 'https://api.blast-info.fr/rss_articles.xml',
+        checkedAt: CHECKED,
+        status: 200,
+        items: 100,
+        covers: '~3 mois',
+        images: 'all',
+        note: 'Le site est une SPA sans flux référencé dans son HTML : les flux sont servis sur le sous-domaine api.blast-info.fr. Flux « émissions » distinct, non retenu. Contribution 24 h : ~2 articles.',
+      },
+    ],
+    tdm: {
+      reserved: false,
+      checkedAt: CHECKED,
+      note: 'Robots.txt entièrement ouvert, pas de tdmrep.json, aucun en-tête tdm-reservation.',
+    },
+  },
+
+  {
     id: 'humanite',
     name: "L'Humanité",
     leaning: 'gauche',
@@ -1206,7 +1258,7 @@ export const outlets: OutletConfig[] = [
         date: '2017-03-31',
         url: 'https://www.acrimed.org/La-presidentielle-a-Challenges-les-observations',
         takeaway:
-          'La SDJ dénonce le parti-pris du site en faveur d\u2019Emmanuel Macron et les interventions du directeur de la publication auprès de l\u2019équipe web après un article critique à l\u2019égard de Macron.',
+          'La SDJ dénonce le parti-pris du site en faveur d’Emmanuel Macron et les interventions du directeur de la publication auprès de l’équipe web après un article critique à l’égard de Macron.',
       },
     ],
     leaningNote:
@@ -1373,7 +1425,7 @@ export const outlets: OutletConfig[] = [
         date: '2026',
         url: 'https://fr.wikipedia.org/wiki/L%27Opinion_(quotidien_fran%C3%A7ais)',
         takeaway:
-          '« Le journal revendique être pro-business » ; sa ligne est définie « libérale, pro-européenne, pro-business » par son fondateur ; « il suit une ligne qui s\u2019affirme "néolibérale" selon Marianne » ; « la majorité des articles du site internet sont réservés aux abonnés ».',
+          '« Le journal revendique être pro-business » ; sa ligne est définie « libérale, pro-européenne, pro-business » par son fondateur ; « il suit une ligne qui s’affirme "néolibérale" selon Marianne » ; « la majorité des articles du site internet sont réservés aux abonnés ».',
       },
       {
         title:
@@ -1382,7 +1434,7 @@ export const outlets: OutletConfig[] = [
         date: '2013-04-05',
         url: 'https://www.lemonde.fr/actualite-medias/article/2013/04/08/nicolas-beytout-la-ligne-editoriale-de-mon-journal-sera-liberale-probusiness-et-proeuropeenne_3155791_3236.html',
         takeaway:
-          '« Avoir une ligne "pro-business", c\u2019est défendre l\u2019idée que l\u2019entreprise est le meilleur lieu pour produire la richesse » : la déclaration fondatrice de Nicolas Beytout.',
+          '« Avoir une ligne "pro-business", c’est défendre l’idée que l’entreprise est le meilleur lieu pour produire la richesse » : la déclaration fondatrice de Nicolas Beytout.',
       },
     ],
     leaningNote:

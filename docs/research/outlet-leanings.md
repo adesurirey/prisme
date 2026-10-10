@@ -8,7 +8,7 @@ l'Édition quand les trois critères sont réunis —
 2. un flux RSS fonctionnel, vérifié avec un User-Agent de navigateur normal ;
 3. un Leaning sourcé selon la méthode ci-dessous (≥ 2 sources citées, désaccords écrits).
 
-À ce jour, **27 médias** y répondent. La version typée de ce document est
+À ce jour, **28 médias** y répondent. La version typée de ce document est
 `packages/domain/src/outlets.ts`, importée par le pipeline et le site ; les deux doivent
 rester identiques (les tests du module font respecter les règles de preuve).
 
@@ -97,6 +97,7 @@ Une seule règle, appliquée à tous les médias :
 | Le HuffPost | Gauche | −1,00 (gauche) | 33e site, 17,9 M visites | Gratuit | non |
 | Libération | Gauche | −1,08 (gauche) | 5e PQN, 119 943 ex. | Partiellement payant | non |
 | Mediapart | Gauche | −1,63 (extrême gauche) | 257 383 abonnés (fin 2025) | Abonnement | non |
+| Blast | Gauche | −1,65 (extrême gauche) | 33 625 abonnés payants (assermenté) | Gratuit | non |
 | L'Humanité | Gauche | −2,41 (extrême gauche) | 7e PQN, 40 996 ex. | Gratuit | non |
 | Le Monde | Centre | −0,71 (centre gauche) | 1er PQN, 564 586 ex. | Partiellement payant | indéterminé (402) |
 | Marianne | Centre | −0,65 (centre gauche) | magazine, 100 527 ex. | Partiellement payant | **oui** |
@@ -127,7 +128,7 @@ hebdomadaires du dimanche, magazine = presse magazine (classements ACPM 2025/202
 
 ---
 
-## Les 27 médias
+## Les 28 médias
 
 ### L'Obs — Gauche
 
@@ -229,6 +230,48 @@ abonné. Source : Mediapart, *Mediapart 2025 en chiffres*,
 10 articles, ~12 h, images sur tous les articles.
 
 **Paywall / TDM.** Abonnement (intégral) ; pas de `tdmrep.json` (404).
+
+### Blast — Gauche
+
+**Placement.** Bande `far-left` de FrIdéo → rattachée à **Gauche** (notre échelle n'a pas
+de case extrême gauche, voir la PRD).
+
+**Désaccords entre sources.** FrIdéo place Blast en bande « extrême gauche » (rang 2 sur
+30, intervalle −2,39…−0,91 qui exclut zéro) mais ne le couvre qu'avec 4 familles de
+preuves sur 9 : une part du score provient de l'« a priori de tradition fondatrice »,
+et le média est voisin immédiat de Mediapart, avec des intervalles qui se recouvrent
+(l'ordre entre deux voisins n'est pas tranchable par l'échelle). Wikipédia le classe
+simplement « à gauche ». La règle de placement suit la bande FrIdéo ; l'écart entre
+« extrême gauche » et « gauche » est écrit ici plutôt que lissé.
+
+**Sources**
+
+1. **FrIdéo : où se situe Blast ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 — <https://frenchnewslab.org/fr/medias/blast> — « Score −1,65 dans la bande "extrême gauche", au rang 2 sur 30 (intervalle −2,39…−0,91) ; 4 des 9 familles de preuves le couvrent directement, ce qui est peu : une part appréciable du score provient de l'a priori de tradition fondatrice. »
+2. **Blast (média) (article encyclopédique)** — Wikipédia (avec les articles de presse cités en notes), 2026 — <https://fr.wikipedia.org/wiki/Blast_(m%C3%A9dia)> — « Classé à gauche, il combine une plateforme d'information généraliste et une web TV » ; « une ligne éditoriale qui se veut orientée à gauche » — en juin 2024, le média appelle à faire « front commun » contre l'extrême droite et à soutenir le Nouveau Front populaire.
+
+**Audience.** Pas de certification ACPM (absent du classement des sites grand public de
+septembre 2026, ni membre recensé). 33 625 abonnés payants, plus de 7 000 sociétaires,
+~4 M€ de chiffre d'affaires et plus de 40 équivalents temps plein — chiffres **déclarés
+sous serment** par Denis Robert devant la commission de la culture du Sénat (14 avril
+2026) ; ~360 000 visites/mois estimées par Semrush (août 2026), du même ordre
+qu'Atlantico. Réserve écrite : chiffres auto-déclarés, quoiqu'assermentés — aucune
+donnée certifiée par un tiers ; le trafic site estimé reste très en dessous de tous les
+sites certifiés de l'Édition. Détail et recoupements :
+<https://github.com/adesurirey/prisme/blob/main/docs/research/blast-audience.md>.
+Source primaire : Sénat, compte rendu de la commission de la culture, 14/04/2026,
+<https://www.senat.fr/compte-rendu-commissions/20260413/cult.html>.
+
+**Flux vérifiés (2026-10-10).** `latest` <https://api.blast-info.fr/rss_articles.xml> —
+200, 100 articles, ~3 mois couverts, images sur les 100 articles. Le site est une SPA
+qui ne référence aucun flux dans son HTML : les flux sont servis sur le sous-domaine
+`api.blast-info.fr` — un premier audit (issue #71) les avait donc cherchés en vain sur
+`www.blast-info.fr`. Un flux distinct couvre les émissions (`rss_emissions.xml`) : non
+retenu, l'Édition agrège les articles. Contribution 24 h : ~2 articles — le rythme de
+publication est faible, la fenêtre n'en capte pas toujours.
+
+**Paywall / TDM.** Gratuit (sans publicité, financé par ses lecteurs) ; pas de
+réservation TDM (`robots.txt` entièrement ouvert, pas de `tdmrep.json`, aucun en-tête
+`tdm-reservation`).
 
 ### L'Humanité — Gauche
 

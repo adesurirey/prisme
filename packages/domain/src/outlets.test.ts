@@ -138,6 +138,30 @@ describe('outlet config', () => {
     );
   });
 
+  it('adds Blast (Gauche) to the Edition (issue #71)', () => {
+    const blast = outlets.find((outlet) => outlet.id === 'blast');
+    expect(blast, 'blast enters the Edition').toBeDefined();
+    expect(blast!.name).toBe('Blast');
+    expect(blast!.leaning).toBe('gauche');
+    expect(blast!.paywall).toBe('none');
+    // The SPA references no feed in its HTML: feeds live on the api. subdomain
+    // (initial audit of #71 probed www.blast-info.fr in vain). Articles feed
+    // only — the emissions feed is out of scope.
+    expect(blast!.feeds.latest).toBe(
+      'https://api.blast-info.fr/rss_articles.xml',
+    );
+    expect(blast!.feedChecks[0]!.checkedAt).toBe('2026-10-10');
+    expect(blast!.feedChecks[0]!.status).toBe(200);
+    expect(blast!.tdm.reserved).toBe(false);
+    // Audience argument consigné sur #71 : no ACPM certification — sworn
+    // Senate testimony (33 625 paying subscribers) plus Semrush estimates,
+    // same calibre as Atlantico. Réserve écrite : auto-déclared figures.
+    expect(blast!.readership.evidence).toMatch(/serment/);
+    expect(excludedOutlets.map((excluded) => excluded.id)).not.toContain(
+      'blast',
+    );
+  });
+
   it('keeps the research doc in sync with the config count and ids', () => {
     // The « À ce jour, N médias » line of the research doc is the published
     // perimeter count: it must track the typed config, not drift from it.
