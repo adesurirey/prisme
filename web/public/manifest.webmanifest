@@ -31,5 +31,6 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ]
+  ],
+  "_comment": "start_url, scope and icon srcs hardcode the /prisme base defined in astro.config.mjs — update both together."
 }

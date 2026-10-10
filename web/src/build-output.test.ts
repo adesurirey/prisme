@@ -65,9 +65,7 @@ describe('PWA manifest', () => {
       'icons/apple-touch-icon.png',
       'icons/maskable-192.png',
     ]) {
-      await expect(stat(path.join(dist, name))).resolves.toMatchObject({
-        isFile: expect.any(Function),
-      });
+      expect((await stat(path.join(dist, name))).isFile()).toBe(true);
     }
   });
 });
