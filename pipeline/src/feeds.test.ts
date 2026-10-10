@@ -119,6 +119,32 @@ describe('parseFeed', () => {
     expect(items[0].teaser).toBe('<p>Un & deux</p>');
   });
 
+  it('strips emojis from headlines, including ZWJ and variation selectors', () => {
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+      <rss version="2.0"><channel>
+        <item>
+          <title>🔴 Cyclisme : à 20 ans, le Français Paul Seixas s'impose</title>
+          <link>https://exemple.fr/a</link>
+        </item>
+        <item>
+          <title>⚽️ Foot : une victoire ⚽ de ⁉️ peu 👨‍👩‍👧‍👦 en famille</title>
+          <link>https://exemple.fr/b</link>
+        </item>
+        <item>
+          <title>▶️ Replay : le résumé vidéo</title>
+          <link>https://exemple.fr/c</link>
+        </item>
+      </channel></rss>`;
+
+    const { items } = parseFeed(xml);
+
+    expect(items[0].headline).toBe(
+      "Cyclisme : à 20 ans, le Français Paul Seixas s'impose",
+    );
+    expect(items[1].headline).toBe('Foot : une victoire de peu en famille');
+    expect(items[2].headline).toBe('Replay : le résumé vidéo');
+  });
+
   it('parses a CDATA-wrapped pubDate and survives an unparseable one (Challenges)', () => {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
       <rss version="2.0"><channel>

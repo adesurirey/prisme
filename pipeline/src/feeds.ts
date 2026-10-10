@@ -54,7 +54,7 @@ function parseAtomEntry(entry: any): ParsedItem {
   const links = entry.link ? toArray(entry.link) : [];
   const alternate = links.find((l) => l.rel !== 'self' && l.href) ?? links[0];
   return withPublicationDay({
-    headline: decodeEntities(text(entry.title)),
+    headline: stripEmojis(decodeEntities(text(entry.title))),
     url: decodeEntities(text(alternate?.href)),
     publishedAt: entry.published
       ? new Date(entry.published).toISOString()
@@ -154,12 +154,27 @@ function decodeEntities(value: string): string {
 
 function parseRssItem(item: any): ParsedItem {
   return withPublicationDay({
-    headline: decodeEntities(text(item.title)),
+    headline: stripEmojis(decodeEntities(text(item.title))),
     url: decodeEntities(text(item.link)),
     publishedAt: isoDate(item.pubDate),
     teaser: decodeEntities(text(item.description)),
     imageUrl: rssImageUrl(item),
   });
+}
+
+/**
+ * Some outlets prefix their headlines with emojis (🔴, ⚽, …). They add noise
+ * to the UI and the prompts, so strip them — including the variation-selector
+ * and ZWJ sequences they can be part of.
+ */
+function stripEmojis(value: string): string {
+  return value
+    .replace(
+      /\p{Extended_Pictographic}(\uFE0F|\u200D\p{Extended_Pictographic})*/gu,
+      '',
+    )
+    .replace(/ {2,}/g, ' ')
+    .trim();
 }
 
 function rssImageUrl(item: any): string | undefined {
