@@ -19,10 +19,12 @@ The fix is in the grouping prompt (`pipeline/src/gemini.ts`):
   `« citation » : …` format; prefixes like `À la une`.
 - **Neutrality is about stance, not form.** No rhetorical or judgment
   words — but informative and concrete is expected.
-- **`titleUpdates` is systematic**, not optional: every existing Story that
-  gains Articles gets a title pass framed from *all* member headlines,
-  keeping the most precise and most recent fact the group establishes —
-  not just the first Article's headline.
+- **`titleUpdates` follows the same style when it fires**, framed from all
+  member headlines, not just the first Article's. It stays optional at
+  first: the systematic pass was deferred — it adds output load to the
+  single grouping call, and the two changes were split so a grouping
+  regression can be attributed. Activating it later can catch up live
+  Stories, since titles are mutable while a Story is live.
 - **Proper nouns must survive** (people, places, acronyms): `seedCandidates`
   in `pipeline/src/grouping.ts` matches new-Story seeds against
   `tokens(story.title)`, so a title that drops entity tokens weakens the
@@ -32,9 +34,12 @@ The fix is in the grouping prompt (`pipeline/src/gemini.ts`):
 
 - Titles are mutable while a Story is live; slugs are frozen once assigned
   (ADR-0005), so retitling never breaks Story URLs.
-- Titles for single-Article Stories follow the same rules when they gain
-  Articles later; a fresh single-Article Story starts from the model's
-  title, not the raw headline.
+- Titles for single-Article Stories follow the same rules; a fresh
+  single-Article Story starts from the model's title, not the raw headline.
+- Watch the grouping behavior over the next Editions (false merges, duplicate
+  Stories). If drift appears, suspect the added title load first; the remedy
+  is a dedicated title pass in a separate call, then the systematic
+  `titleUpdates` pass.
 - The rules are prompt-only: there is no style linter in CI yet. A
   regression is visible in `data:` commits, not caught by tests. Adding a
   title sample to the grouping benchmark is the follow-up if drift appears.
