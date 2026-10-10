@@ -5,28 +5,6 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
-      "id": "bb3940f3aac6",
-      "outletId": "cnews",
-      "headline": "Qui est Katie Zacharia, la nouvelle porte-parole de la Maison Blanche choisie par Donald Trump ?",
-      "url": "https://www.cnews.fr/monde/2026-10-10/qui-est-katie-zacharia-la-nouvelle-porte-parole-de-la-maison-blanche-choisie-par",
-      "publishedAt": "2026-10-10T14:59:38.000Z",
-      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/fotojet_2_6aca3850406c8.jpg?itok=hg_su_vj",
-      "frontPage": false,
-      "kind": "news",
-      "section": "world"
-    },
-    {
-      "id": "96769a81c67c",
-      "outletId": "le-point",
-      "headline": "Qui est Katie Zacharia, la nouvelle voix (très) loyale de Donald Trump ?",
-      "url": "https://www.lepoint.fr/monde/qui-est-katie-zacharia-la-nouvelle-voix-tres-loyale-de-donald-trump-LOZQNKUONNGKHIAAJTPIKEXD2A/",
-      "publishedAt": "2026-10-10T14:30:00.000Z",
-      "imageUrl": "https://www.lepoint.fr/resizer/v2/ZR3H6TIPVBBKNPG3346UNNEDGY.jpg?auth=10a944a1add38dfed659dbbf4d3459fbcdcd11d4312f99eb3a22280de1b6860d&smart=true&width=1200&height=900",
-      "frontPage": false,
-      "kind": "news",
-      "section": "politics"
-    },
-    {
       "id": "4866b76ec9e2",
       "outletId": "liberation",
       "headline": "Employée du groupe Trump, habituée de Fox News : Katie Zacharia, nouvelle porte-parole comme chez elle à la Maison Blanche",
@@ -43,7 +21,7 @@
       "url": "https://www.20minutes.fr/monde/etats-unis/4253028-20261010-etats-unis-commentatrice-maga-katie-zacharia-designee-porte-parole-trump?at_medium=display&at_campaign=149",
       "publishedAt": "2026-10-10T00:48:26.000Z",
       "imageUrl": "https://img.20mn.fr/P6QTIdfoRaa0IjQWdXeywyk/1200x768_katie-zacharia-proche-du-mouvement-maga-est-une-habituee-des-plateaux-de-fox-news-et-newsmax",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -60,19 +38,5 @@
       "section": "world"
     }
   ],
-  "section": "world",
-  "summaries": {
-    "gauche": [
-      "Donald Trump a désigné Katie Zacharia pour occuper les fonctions de porte-parole de la présidence.",
-      "La nouvelle promue possède un parcours marqué par son engagement au sein du mouvement pro-Trump et ses liens avec les médias conservateurs."
-    ],
-    "droite": [
-      "Katie Zacharia succède à Karoline Leavitt à la tête de la communication de la présidence américaine.",
-      "Le chef de l'État a salué la loyauté et l'implication de sa nouvelle collaboratrice, ancienne commentatrice et figure du mouvement républicain.",
-      "La nomination intervient alors que l'ancienne porte-parole rejoint un groupe audiovisuel conservateur."
-    ]
-  },
-  "differences": "La droite met en avant la transition avec la précédente occupante du poste et insiste sur les éloges appuyés du président concernant la loyauté de sa nouvelle collaboratrice. Le camp de gauche adopte un ton plus neutre ou analytique, soulignant l'appartenance de la nouvelle porte-parole aux cercles d'influence pro-Trump et son profil médiatique sans reprendre les louanges présidentielles.",
-  "promptVersion": "sum-2",
-  "summarizedArticleCount": 5
+  "section": "world"
 }

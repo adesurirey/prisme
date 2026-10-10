@@ -5,17 +5,6 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
-      "id": "9aa602a30667",
-      "outletId": "bfmtv",
-      "headline": "Cyberattaque contre le site de la primaire sociale-démocrate: le parquet de Paris ouvre une enquête",
-      "url": "https://www.bfmtv.com/politique/elections/presidentielle/cyberattaque-contre-le-site-de-la-primaire-sociale-democrate-le-parquet-de-paris-ouvre-une-enquete_AN-202610100317.html",
-      "publishedAt": "2026-10-10T16:44:21.000Z",
-      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/ASHl_uRI0rgmRU3XpGIJLNEur1M=/0x40:768x472/800x0/images/Une-personne-vote-en-ligne-pour-la-primaire-de-la-gauche-sociale-democrate-a-Paris-le-9-octobre-2026-2362619.jpg",
-      "frontPage": false,
-      "kind": "news",
-      "section": "politics"
-    },
-    {
       "id": "725d8e5961b8",
       "outletId": "huffpost",
       "headline": "Après un faux départ, la primaire PS observe « un retour à la normale »",
@@ -120,7 +109,7 @@
       "url": "https://www.lemonde.fr/politique/article/2026/10/09/primaire-a-gauche-le-vote-prolonge-jusqu-a-dimanche-18-heures-en-raison-de-la-cyberattaque-qui-a-vise-la-plateforme_6790554_823449.html",
       "publishedAt": "2026-10-09T17:49:57.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/04/458/0/5500/2750/644/322/60/0/81a90af_upload-1-iy2cf9wybici-ad033-debat-primairegauche-dsc08818.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -140,25 +129,22 @@
   "section": "politics",
   "summaries": {
     "gauche": [
-      "Le scrutin numérique socialiste a connu un ralentissement initial en raison d'une perturbation technique.",
-      "La consultation a été prolongée jusqu'à dimanche soir pour compenser la gêne occasionnée.",
-      "Le nombre de votants a rapidement augmenté pour dépasser les 70000 participants dès samedi.",
-      "Une procédure judiciaire a été lancée par les autorités parisiennes pour identifier l'origine des perturbations."
+      "Le scrutin en ligne de la primaire socialiste a subi des perturbations informatiques dès son lancement vendredi.",
+      "Une cyberattaque a ralenti la consultation, incitant les organisateurs à étendre le vote jusqu'à dimanche soir.",
+      "La participation a fortement rebondi pour atteindre plus de 70000 électeurs dès le samedi matin."
     ],
     "centre": [
-      "Le vote en ligne organisé par les socialistes se poursuit tout le week-end après une intrusion informatique.",
-      "Les autorités judiciaires ont saisi l'Office anti-cybercriminalité pour mener des investigations sur l'attaque.",
-      "Près de 140000 inscrits doivent départager les cinq prétendants en lice, dont plusieurs figures majeures.",
-      "Certains commentateurs doutent de l'aptitude de ce scrutin à unifier durablement la famille politique."
+      "Le premier tour de la primaire de la gauche se poursuit tout le week-end après une attaque informatique.",
+      "Environ 140000 inscrits doivent départager cinq candidats, dont les figures de premier plan Raphaël Glucksmann et Olivier Faure.",
+      "Certains observateurs s'interrogent toutefois sur la capacité de ce type de scrutin à créer de l'unité au sein de la gauche."
     ],
     "droite": [
-      "La plateforme de vote socialiste a subi une saturation artificielle le premier jour du scrutin.",
-      "Les organisateurs ont repoussé la clôture du vote à dimanche soir pour garantir la participation.",
-      "Plus de 70000 bulletins ont été enregistrés dès samedi matin sur un total de 140000 potentiels.",
-      "Une investigation a été ouverte par le parquet pour élucider l'origine de l'attaque informatique."
+      "La plateforme du scrutin socialiste a été la cible d'une cyberattaque le premier jour, saturant le site de connexions factices.",
+      "La consultation a dû être prolongée jusqu'à dimanche soir afin de permettre aux électeurs de voter.",
+      "Plus de 70000 personnes avaient déjà pris part au vote samedi matin sur les 140000 inscrits potentiels."
     ]
   },
-  "differences": "Tous les courants s'accordent sur les faits factuels concernant la perturbation informatique, l'extension du délai de vote, le rebond de la participation et l'ouverture d'une enquête judiciaire. Le centre et la droite intègrent la dimension institutionnelle et les interrogations sur la capacité du scrutin à fédérer l'opposition, tandis que la gauche se concentre sur la résilience technique et la mobilisation rapide des électeurs après le faux départ.",
+  "differences": "Tous les camps s'accordent sur les faits factuels concernant la cyberattaque et la prolongation du scrutin, mais les médias de centre et de droite insistent davantage sur le nombre total d'inscrits et sur les divisions potentielles que ce type de primaire pourrait raviver, à l'instar des tribunes s'interrogeant sur une « machine à perdre ». La gauche se focalise quant à elle sur la reprise normale de la participation après le faux départ initial.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 12
+  "summarizedArticleCount": 11
 }
