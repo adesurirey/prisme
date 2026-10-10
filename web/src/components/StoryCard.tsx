@@ -19,6 +19,10 @@ import StoryImage from './StoryImage';
  * Articles + share of the config — see CoverageMeta) — one whole-card link
  * to the Story page, where the Articles live, styled like the Story page's
  * Article cards (hover surface, no animation).
+ *
+ * The root carries data-story-id/data-coverage for the client-side "En
+ * hausse" badge (trending.ts): the prerendered HTML has no idea who is
+ * reading, so the per-visitor signal is decided in the browser.
  */
 export default function StoryCard({
   story,
@@ -34,7 +38,11 @@ export default function StoryCard({
   const image = pickStoryImage(story, byId);
   const articles = countedArticles(story.articles);
   return (
-    <article className="-mx-5">
+    <article
+      className="-mx-5"
+      data-story-id={story.id}
+      data-coverage={reporting}
+    >
       <a
         href={withBase(`/sujet/${story.slug}/`)}
         className="group/card flex items-start gap-6 rounded-xl border border-transparent px-5 py-5 transition-colors duration-200 ease-out hover:border-line hover:bg-hover"
