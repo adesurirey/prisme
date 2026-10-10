@@ -157,12 +157,14 @@ export function installPullToRefresh(
       : 'opacity 120ms ease';
   };
 
-  let state: DragState = {
+  const freshState = (): DragState => ({
     startY: null,
     startX: 0,
     armed: false,
     abandoned: false,
-  };
+  });
+
+  let state: DragState = freshState();
 
   doc.addEventListener(
     'touchstart',
@@ -201,7 +203,9 @@ export function installPullToRefresh(
         armThresholdPx,
       );
       state = next;
-      if (next.abandoned || dy <= 0) {
+      // A pull while scrolled down is the page moving under the finger, not
+      // a refresh gesture — no indicator.
+      if (next.abandoned || dy <= 0 || win.scrollY > 0) {
         setIndicator(0, 0, false);
         return;
       }
@@ -216,7 +220,7 @@ export function installPullToRefresh(
     () => {
       if (state.startY === null) return;
       const outcome = resolveRelease(state);
-      state = { startY: null, startX: 0, armed: false, abandoned: false };
+      state = freshState();
       if (outcome === 'reload') {
         // Fresh HTML from the network or the service worker; full reload, no
         // history entry, so Back still leaves the page.
@@ -230,7 +234,7 @@ export function installPullToRefresh(
   );
 
   doc.addEventListener('touchcancel', () => {
-    state = { startY: null, startX: 0, armed: false, abandoned: false };
+    state = freshState();
     setIndicator(0, 0, false);
   });
 }
