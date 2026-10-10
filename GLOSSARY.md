@@ -77,7 +77,7 @@ The current selection of top Stories that Prisme publishes, updated throughout t
 _Avoid_: Issue, digest, daily, run
 
 **Trending Story**:
-A Story in the Edition that the returning reader is shown as "En hausse" because it has gained ground since that reader last looked: its Coverage has grown since their last visit, or it has newly entered the Edition. The signal is the reader's own previous visit, not a global ranking movement; a reader seen too long ago gets no Trending Stories at all.
+A Story in the Edition that the returning reader is shown as "En hausse" because it has gained ground since that reader last looked: its Coverage has grown by at least two Outlets since their last visit, or it has newly entered the Edition. The signal is the reader's own previous visit, not a global ranking movement; a reader seen too long ago gets no Trending Stories at all.
 _Avoid_: Rising story, hot story, viral
 
 ### Reading a story

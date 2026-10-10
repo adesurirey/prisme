@@ -142,13 +142,20 @@ describe('readSeen / writeSeen', () => {
 });
 
 describe('installTrending', () => {
+  // Mirrors the real StoryCard markup: article > a > div > h2 — the h2 is
+  // not a direct child of the card, which is the bug this fixture guards
+  // against (insertBefore against the card root would throw).
   const card = (id: string, coverage: number) => {
     const el = document.createElement('article');
     el.dataset.storyId = id;
     el.dataset.coverage = String(coverage);
+    const a = document.createElement('a');
+    const div = document.createElement('div');
     const h2 = document.createElement('h2');
     h2.textContent = 'Titre';
-    el.append(h2);
+    div.append(h2);
+    a.append(div);
+    el.append(a);
     document.body.append(el);
   };
 
@@ -187,5 +194,10 @@ describe('installTrending', () => {
       coverage: 5,
       seenAt: NOW,
     });
+  });
+
+  it('records the snapshot even when the Edition renders no cards', () => {
+    installTrending(document, localStorage, new Date(NOW));
+    expect(readSeen(localStorage)).toEqual({ version: 1, stories: {} });
   });
 });

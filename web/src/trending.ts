@@ -18,6 +18,8 @@
 
 export const SEEN_KEY = 'prisme.seenStories';
 
+const SEEN_VERSION = 1;
+
 /** Coverage gain, in distinct Outlets, past which a Story trends. */
 export const TRENDING_COVERAGE_DELTA = 2;
 
@@ -56,7 +58,7 @@ export function markTrending(
   seen: SeenBlob | null,
 ): TrendingResult {
   const next: SeenBlob = {
-    version: 1,
+    version: SEEN_VERSION,
     stories: Object.fromEntries(
       current.map((s) => [s.id, { coverage: s.coverage, seenAt: now }]),
     ),
@@ -105,7 +107,7 @@ function trendingBadge(): HTMLElement {
   const span = document.createElement('span');
   span.dataset.trendingBadge = '';
   span.className =
-    'inline-flex items-center rounded-full border border-line bg-hover px-2 py-0.5 font-medium normal-case text-ink';
+    'inline-flex items-center rounded-full border border-line px-2 py-0.5 text-[12px] normal-case text-muted';
   span.textContent = 'En hausse';
   return span;
 }
@@ -121,7 +123,6 @@ export function installTrending(
   now: Date = new Date(),
 ): void {
   const cards = doc.querySelectorAll<HTMLElement>('[data-story-id]');
-  if (cards.length === 0) return;
   const current: TrendingStory[] = [...cards].map((el) => ({
     id: el.dataset.storyId!,
     coverage: Number(el.dataset.coverage ?? 0),
@@ -135,9 +136,12 @@ export function installTrending(
   const trending = new Set(trendingIds);
   for (const el of cards) {
     if (!trending.has(el.dataset.storyId!)) continue;
+    // The h2 sits inside the card's link wrapper (article > a > div > h2),
+    // so the badge joins it as a sibling inside that wrapper — inserting
+    // against the card root itself would throw (reference node's parent).
     const h2 = el.querySelector('h2');
     const badge = trendingBadge();
-    if (h2) el.insertBefore(badge, h2);
+    if (h2?.parentElement) h2.parentElement.insertBefore(badge, h2);
     else el.append(badge);
   }
   writeSeen(storage, next);
