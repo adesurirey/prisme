@@ -56,13 +56,18 @@ export default function StoryCard({
           <h2 className="text-[16px] font-semibold leading-snug tracking-[-0.01em]">
             {story.title}
           </h2>
-          <CoverageMeta
-            counts={counts}
-            reporting={reporting}
-            totalOutlets={outlets.length}
-            articles={articles}
-            className="mt-2 text-[13px] text-muted"
-          />
+          {/* The meta line doubles as the "En hausse" row: the slot sits
+              empty and invisible (empty:hidden) until trending.ts appends
+              the client-side badge. */}
+          <p className="mt-2 flex flex-wrap items-center gap-x-3 text-[13px] text-muted">
+            <CoverageMeta
+              counts={counts}
+              reporting={reporting}
+              totalOutlets={outlets.length}
+              articles={articles}
+            />
+            <span data-trending-slot className="empty:hidden" />
+          </p>
           {spots.length > 0 && (
             <div className="mt-2.5 flex flex-wrap gap-2">
               {spots.map((leaning) => (

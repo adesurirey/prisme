@@ -106,9 +106,12 @@ export function writeSeen(storage: Storage, blob: SeenBlob): void {
 function trendingBadge(): HTMLElement {
   const span = document.createElement('span');
   span.dataset.trendingBadge = '';
-  span.className =
-    'inline-flex items-center rounded-full border border-line px-2 py-0.5 text-[12px] normal-case text-muted';
-  span.textContent = 'En hausse';
+  // Preview-settled design: ink (white in dark theme) so the signal stands
+  // out of the muted meta line without breaking the monochrome chrome,
+  // and a hover tooltip for the "since when" (docs/brand.md voice).
+  span.className = 'inline-flex items-center text-ink';
+  span.title = 'Gagné en couverture depuis votre dernière visite';
+  span.textContent = '\u2197\u2009en hausse';
   return span;
 }
 
@@ -136,13 +139,10 @@ export function installTrending(
   const trending = new Set(trendingIds);
   for (const el of cards) {
     if (!trending.has(el.dataset.storyId!)) continue;
-    // The h2 sits inside the card's link wrapper (article > a > div > h2),
-    // so the badge joins it as a sibling inside that wrapper — inserting
-    // against the card root itself would throw (reference node's parent).
-    const h2 = el.querySelector('h2');
+    // The badge lands in the slot at the end of the Coverage meta line
+    // (StoryCard's data-trending-slot); fall back to the card root.
     const badge = trendingBadge();
-    if (h2?.parentElement) h2.parentElement.insertBefore(badge, h2);
-    else el.append(badge);
+    (el.querySelector('[data-trending-slot]') ?? el).append(badge);
   }
   writeSeen(storage, next);
 }

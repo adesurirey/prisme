@@ -142,9 +142,10 @@ describe('readSeen / writeSeen', () => {
 });
 
 describe('installTrending', () => {
-  // Mirrors the real StoryCard markup: article > a > div > h2 — the h2 is
-  // not a direct child of the card, which is the bug this fixture guards
-  // against (insertBefore against the card root would throw).
+  // Mirrors the real StoryCard markup: article > a > div > h2 with a
+  // data-trending-slot at the end of the Coverage meta line — the shape
+  // this fixture guards against (insertBefore against the card root would
+  // throw; the badge must land in the slot).
   const card = (id: string, coverage: number) => {
     const el = document.createElement('article');
     el.dataset.storyId = id;
@@ -153,7 +154,11 @@ describe('installTrending', () => {
     const div = document.createElement('div');
     const h2 = document.createElement('h2');
     h2.textContent = 'Titre';
-    div.append(h2);
+    const meta = document.createElement('p');
+    const slot = document.createElement('span');
+    slot.dataset.trendingSlot = '';
+    meta.append(slot);
+    div.append(h2, meta);
     a.append(div);
     el.append(a);
     document.body.append(el);
@@ -162,6 +167,13 @@ describe('installTrending', () => {
   const expectBadge = (id: string, present: boolean) => {
     const el = document.querySelector(`[data-story-id="${id}"]`)!;
     expect(el.querySelector('[data-trending-badge]') !== null).toBe(present);
+    if (present) {
+      // The badge lands inside the slot, next to the meta line — not loose
+      // on the card, and not on a separate floating row.
+      expect(
+        el.querySelector('[data-trending-slot] [data-trending-badge]') !== null,
+      ).toBe(true);
+    }
   };
 
   it('reveals the badge on trending cards and records the visit', () => {
