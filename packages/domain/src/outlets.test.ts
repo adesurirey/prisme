@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import {
   excludedOutlets,
@@ -95,6 +96,42 @@ describe('outlet config', () => {
     expect(excludedOutlets.map((excluded) => excluded.id)).not.toContain(
       'marianne',
     );
+  });
+
+  it('adds Challenges (Centre) and L\u2019Opinion (Centre droit) to the Edition (issue #72)', () => {
+    const challenges = outlets.find((outlet) => outlet.id === 'challenges');
+    expect(challenges, 'challenges enters the Edition').toBeDefined();
+    expect(challenges!.leaning).toBe('centre');
+    expect(challenges!.paywall).toBe('partial');
+    expect(challenges!.feeds.latest).toBe('https://www.challenges.fr/rss.xml');
+    const lopinion = outlets.find((outlet) => outlet.id === 'lopinion');
+    expect(lopinion, 'lopinion enters the Edition').toBeDefined();
+    expect(lopinion!.leaning).toBe('centre-droite');
+    expect(lopinion!.feeds.latest).toBe('https://www.lopinion.fr/index.rss');
+    for (const outlet of [challenges!, lopinion!]) {
+      expect(outlet.feedChecks[0]!.checkedAt).toBe('2026-10-10');
+      expect(excludedOutlets.map((excluded) => excluded.id)).not.toContain(
+        outlet.id,
+      );
+    }
+    // Challenges publishes a TDM reservation (tdmrep.json redirects to
+    // /tdmrep.json, tdm-reservation: 1); L'Opinion publishes none.
+    expect(challenges!.tdm.reserved).toBe(true);
+    expect(lopinion!.tdm.reserved).toBe(false);
+  });
+
+  it('keeps the research doc in sync with the config count and ids', () => {
+    // The « À ce jour, N médias » line of the research doc is the published
+    // perimeter count: it must track the typed config, not drift from it.
+    const doc = readFileSync(
+      new URL('../../../docs/research/outlet-leanings.md', import.meta.url),
+      'utf8',
+    );
+    const count = doc.match(/À ce jour, \*\*(\d+) médias\*\*/);
+    expect(count, 'the doc states the perimeter count').not.toBeNull();
+    expect(Number(count![1])).toBe(outlets.length);
+    for (const outlet of outlets)
+      expect(doc, outlet.id).toContain(`### ${outlet.name} `);
   });
 
   it('splits the former Centre fold onto the five-band scale (issue #46)', () => {

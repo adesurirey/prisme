@@ -8,14 +8,13 @@ l'Édition quand les trois critères sont réunis —
 2. un flux RSS fonctionnel, vérifié avec un User-Agent de navigateur normal ;
 3. un Leaning sourcé selon la méthode ci-dessous (≥ 2 sources citées, désaccords écrits).
 
-À ce jour, **23 médias** y répondent. La version typée de ce document est
+À ce jour, **26 médias** y répondent. La version typée de ce document est
 `packages/domain/src/outlets.ts`, importée par le pipeline et le site ; les deux doivent
 rester identiques (les tests du module font respecter les règles de preuve).
 
 - **Méthode et règle de placement** ci-dessous, puis un dossier par média.
-- **Vérifications** (flux RSS, réservations TDM) effectuées le **2026-10-06** avec un
-  User-Agent de navigateur normal, et le **2026-10-07** pour Libération (issue #11) et
-  Marianne (issue #10). Chiffres ACPM : millésime **2025/2026** pour la presse
+- **Vérifications** (flux RSS, réservations TDM) effectuées le **2026-10-10** avec un
+  User-Agent de navigateur normal (tous les médias, issues #10, #11 et #72). Chiffres ACPM : millésime **2025/2026** pour la presse
   (diffusion France payée certifiée), **août 2026** pour les sites (visites mensuelles).
 - Conformément à l'ADR-0001, le Leaning appartient au média, jamais à un article. Les
   notes et citations de ce document sont écrites pour être **publiables telles quelles**
@@ -112,7 +111,9 @@ Une seule règle, appliquée à tous les médias :
 | Courrier international | Centre | hors panel | 39e magazine, 162 073 ex. | Partiellement payant | non |
 | L'Express | Centre | +0,18 (centre) | 54e magazine, 118 937 ex. | Partiellement payant | non |
 | La Croix | Centre | +0,13 (centre) | 6e PQN, 73 595 ex. | Partiellement payant | non |
+| Challenges | Centre | −0,10 (centre) | magazine, 232 050 ex. (DSH) | Partiellement payant | **oui** |
 | Le Point | Centre | +0,56 (centre droit) | 20e magazine, 263 528 ex. | Partiellement payant | indéterminé (403) |
+| L'Opinion | Centre droit | +0,60 (centre droit) | membre ACPM, 633 k (S1 2026) | En grande partie payant | non |
 | Le Figaro | Droite | +1,02 (droite) | 2e PQN, 397 194 ex. | Partiellement payant | **oui** |
 | CNews | Droite | +0,96 (droite) | 22e site, 30,2 M visites | Gratuit | non |
 | Europe 1 | Droite | hors panel | 75e site, 4,7 M visites | Gratuit | non |
@@ -125,7 +126,7 @@ hebdomadaires du dimanche, magazine = presse magazine (classements ACPM 2025/202
 
 ---
 
-## Les 23 médias
+## Les 25 médias
 
 ### L'Obs — Gauche
 
@@ -142,7 +143,7 @@ gauche.
 **Audience.** ACPM presse magazine 2025/2026 : 38e rang, 162 242 exemplaires France
 payée ; Nouvelobs.com : 46e rang des sites, 10,5 M de visites (août 2026).
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.nouvelobs.com/rss.xml> — 200,
+**Flux vérifiés (2026-10-10).** `latest` <https://www.nouvelobs.com/rss.xml> — 200,
 200 articles, ~6 jours couverts, images sur 80 articles. Flux volumineux : seul un
 extrait de la journée arrive à la fenêtre des 24 h.
 
@@ -164,7 +165,7 @@ Wikipédia porte sur l'édition américaine du HuffPost.
 **Audience.** ACPM sites web grand public : 33e rang, 17,9 M de visites en août 2026
 (Huffingtonpost.fr).
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.huffingtonpost.fr/rss/all_headline.xml>
+**Flux vérifiés (2026-10-10).** `latest` <https://www.huffingtonpost.fr/rss/all_headline.xml>
 — 200, 20 articles, ~6 h, images sur tous les articles. Unique flux RSS : tous les
 titres en continu, sans sélection « à la une ».
 
@@ -192,11 +193,11 @@ un ancrage à gauche.
 **Audience.** ACPM presse quotidienne nationale 2025/2026 : 5e rang, 119 943 exemplaires
 France payée ; Liberation.fr : 35e rang des sites, 15,9 M de visites (août 2026).
 
-**Flux vérifiés (2026-10-07).** `latest`
+**Flux vérifiés (2026-10-10).** `latest`
 <https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml> — 200, 50 articles,
 ~9 h, aucune image. Flux officiel de syndication de la plateforme Arc XP (Washington
 Post), servi sur le domaine de Libération. Les flux `/rss/` historiques restent bloqués
-par DataDome (403, vérifié le 2026-10-06 et le 2026-10-07, issue #11) : c'est ce flux qui
+par DataDome (403, vérifié le 2026-10-10 et le 2026-10-10, issue #11) : c'est ce flux qui
 a débloqué l'entrée de Libération dans l'Édition. 50 articles au plus par fenêtre
 d'environ 9 h ; l'endpoint n'est pas documenté publiquement par Libération et pourrait
 être restreint (voir Limites connues).
@@ -223,7 +224,7 @@ abonné. Source : Mediapart, *Mediapart 2025 en chiffres*,
 <https://infographics.mediapart.fr/custom-pages/assets/documents/rapport-activite-2025/Mediapart_2025_en_chiffres.pdf>
 (chiffre recoupé par Stratégies, 17/03/2026).
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.mediapart.fr/articles/feed> — 200,
+**Flux vérifiés (2026-10-10).** `latest` <https://www.mediapart.fr/articles/feed> — 200,
 10 articles, ~12 h, images sur tous les articles.
 
 **Paywall / TDM.** Abonnement (intégral) ; pas de `tdmrep.json` (404).
@@ -244,7 +245,7 @@ payée ; Humanite.fr : 91e rang des sites, 3,3 M de visites (août 2026). Retenu
 signification éditoriale (quotidien historique de la gauche communiste) plus que pour son
 audience.
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.humanite.fr/feed> — 200, 20
+**Flux vérifiés (2026-10-10).** `latest` <https://www.humanite.fr/feed> — 200, 20
 articles, ~2 h, images sur tous les articles. Flux très fréquent.
 
 **Paywall / TDM.** Gratuit ; pas de `tdmrep.json` (404).
@@ -270,7 +271,7 @@ divergence est documentée et la règle est publique.
 **Audience.** 1er quotidien national : ACPM 2025/2026, 564 586 exemplaires France payée ;
 LeMonde.fr : 7e rang des sites, 95,5 M de visites (août 2026).
 
-**Flux vérifiés (2026-10-06).** `une` <https://www.lemonde.fr/rss/une.xml> — 200, 16
+**Flux vérifiés (2026-10-10).** `une` <https://www.lemonde.fr/rss/une.xml> — 200, 16
 articles, ~15 h, images partout ; `latest` <https://www.lemonde.fr/rss/en_continu.xml> —
 200, 60 articles, ~27 h, images partout.
 
@@ -301,7 +302,7 @@ rattrapé.
 **Audience.** ACPM magazines 2025/2026 : 100 527 exemplaires France payée ; marianne.net :
 4,8 M de visites par mois.
 
-**Flux vérifiés (2026-10-07).** `latest` <https://www.marianne.net/rss.xml> — 200, 20
+**Flux vérifiés (2026-10-10).** `latest` <https://www.marianne.net/rss.xml> — 200, 20
 articles, ~32 h, images partout (enclosures). Fragile aux robots : `marianne.net/rss`
 répond 403 (page HTML de blocage) sans en-têtes de navigateur complets, puis 301 vers
 `rss.xml` — à surveiller à chaque vérification.
@@ -339,7 +340,7 @@ même résultat.
 **Audience.** 3e rang des sites web ACPM (grand public), 136,5 M de visites en août 2026
 (Franceinfo.fr).
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.francetvinfo.fr/titres.rss> — 200,
+**Flux vérifiés (2026-10-10).** `latest` <https://www.francetvinfo.fr/titres.rss> — 200,
 33 articles, ~24 h, images partout.
 
 **Paywall / TDM.** Gratuit ; **réservation TDM publiée** (`tdm-reservation: 1`, avec une
@@ -362,10 +363,10 @@ deux côtés du centre ; nous retenons Centre et signalons la nuance « centre d
 2025/2026, 580 981 exemplaires France payée (rang 1) ; ouest-france.fr : 1er rang des
 sites, 185,5 M de visites (août 2026).
 
-**Flux vérifiés (2026-10-06).** `une` <https://www.ouest-france.fr/rss/une> — 200, 10
+**Flux vérifiés (2026-10-10).** `une` <https://www.ouest-france.fr/rss/une> — 200, 10
 articles, ~30 min, images partout ; `latest` <https://www.ouest-france.fr/rss-en-continu.xml>
 — 200, 10 articles, ~30 min, images partout. **Les deux flux servent les mêmes 10
-articles** (vérifié le 2026-10-06) : le flux « en continu » n'apporte rien de plus.
+articles** (vérifié le 2026-10-10) : le flux « en continu » n'apporte rien de plus.
 
 **Paywall / TDM.** Partiellement payant ; **réservation TDM publiée** pour « / »
 (`tdm-reservation: 1`) ; « /shopping/ » et « /tourisme/ » ne sont pas réservés.
@@ -389,7 +390,7 @@ la position la plus souvent attribuée au média.
 **Audience.** 5e rang des sites web ACPM (grand public), 118,7 M de visites en août 2026
 (Bfmtv.com) ; première chaîne d'information en continu française par son audience web.
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.bfmtv.com/rss/news-24-7/> — 200,
+**Flux vérifiés (2026-10-10).** `latest` <https://www.bfmtv.com/rss/news-24-7/> — 200,
 30 articles, ~13 h, images partout.
 
 **Paywall / TDM.** Gratuit ; réservation TDM **indéterminée** (la sonde est bloquée par un
@@ -413,10 +414,10 @@ est retenue telle quelle.
 **Audience.** 8e rang des sites web ACPM (grand public), 90,3 M de visites en août 2026
 (20minutes.fr). Presse gratuite : pas de diffusion payée certifiée ACPM.
 
-**Flux vérifiés (2026-10-06).** `une` <https://www.20minutes.fr/feeds/rss-une.xml> — 200,
+**Flux vérifiés (2026-10-10).** `une` <https://www.20minutes.fr/feeds/rss-une.xml> — 200,
 30 articles, ~6 jours, images partout. Le flux « une » accumule les choix de la journée
 sur plusieurs jours : il sert de front page par défaut. Pas de flux « latest » : les
-autres URL `/feeds/*` répondent 403 (vérifié le 2026-10-06).
+autres URL `/feeds/*` répondent 403 (vérifié le 2026-10-10).
 
 **Paywall / TDM.** Gratuit ; pas de `tdmrep.json` (404).
 
@@ -440,14 +441,14 @@ du titre.
 quotidienne régionale ; 261 437 avec le couplage « Le Parisien + Aujourd'hui en France ») ;
 LeParisien.fr : 12e rang des sites, 61,9 M de visites (août 2026).
 
-**Flux vérifiés (2026-10-06).** `latest` <https://feeds.leparisien.fr/leparisien/rss> —
+**Flux vérifiés (2026-10-10).** `latest` <https://feeds.leparisien.fr/leparisien/rss> —
 200, 100 articles, **aucune date ni image** (titre et lien uniquement), temps couvert :
 non mesurable. Les articles sont datés par le collecteur depuis le slug de leur URL
 (JJ-MM-AAAA, ~96 % des items ; datés à la collecte pour le reste — ADR-0007, issue #12) :
 ils entrent dans la fenêtre des 24 h sans heure affichée. Ils restent sans image ni
 chapô : pas de photo quand Le Parisien est seul sur un sujet, classification sur le titre
 seul. L'ancien flux « en-continu » répond 200 avec 0 article, et « rss/une » sert des
-archives de 2019 (vérifié le 2026-10-06).
+archives de 2019 (vérifié le 2026-10-10).
 
 **Paywall / TDM.** Partiellement payant ; **réservation TDM publiée**
 (`tdm-reservation: 1`), avec une politique par agent (GPTBot, ClaudeBot…).
@@ -471,7 +472,7 @@ familles le placent au centre et l'intervalle global contient zéro. La bande
 la première chaîne de télévision privée française (Groupe TF1), audience mesurée par
 Médiamétrie plutôt que par l'ACPM.
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.tf1info.fr/feeds/rss-une.xml> — 200,
+**Flux vérifiés (2026-10-10).** `latest` <https://www.tf1info.fr/feeds/rss-une.xml> — 200,
 100 articles, ~3 jours, images partout. Malgré son nom, ce flux est un feu complet (JT,
 émissions, recettes, météo) : traité en flux « latest », 10 articles récents pour la
 front page.
@@ -494,7 +495,7 @@ contraignante, position médiane sur l'échelle.
 **Audience.** 38e rang des sites web ACPM, 13,6 M de visites en août 2026 (Rfi.fr) ;
 audience mondiale (132 relais FM/DAB+, 1 950 radios partenaires selon France Médias Monde).
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.rfi.fr/fr/rss> — 200, 23 articles,
+**Flux vérifiés (2026-10-10).** `latest` <https://www.rfi.fr/fr/rss> — 200, 23 articles,
 ~14 h, images partout.
 
 **Paywall / TDM.** Gratuit ; **réservation TDM publiée** (`tdm-reservation: 1`) ; une
@@ -516,7 +517,7 @@ panel).
 **Audience.** 48e rang des sites web ACPM, 9,5 M de visites en août 2026 (France24.com) ;
 diffusion mondiale dans 577 millions de foyers (France Médias Monde).
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.france24.com/fr/rss> — 200, 24
+**Flux vérifiés (2026-10-10).** `latest` <https://www.france24.com/fr/rss> — 200, 24
 articles, ~4 h, images sur 22 articles.
 
 **Paywall / TDM.** Gratuit ; **réservation TDM publiée** (`tdm-reservation: 1`) ; une
@@ -543,7 +544,7 @@ ici et dans le module de configuration.
 **Audience.** ACPM presse magazine 2025/2026 : 39e rang, 162 073 exemplaires France
 payée ; CourrierInternational.com : 56e rang des sites, 7,9 M de visites (août 2026).
 
-**Flux vérifiés (2026-10-06).** `latest`
+**Flux vérifiés (2026-10-10).** `latest`
 <https://www.courrierinternational.com/feed/all/rss.xml> — 200, 20 articles, ~6 h, images
 partout. (Les URL `courrierinternational.com/feed` et `/rss` servent une page HTML.)
 
@@ -568,7 +569,7 @@ plus fragile du panel.
 **Audience.** ACPM presse magazine 2025/2026 : 54e rang, 118 937 exemplaires France
 payée ; Lexpress.fr : 62e rang des sites, 6,7 M de visites (août 2026).
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.lexpress.fr/rss/alaune.xml> — 200,
+**Flux vérifiés (2026-10-10).** `latest` <https://www.lexpress.fr/rss/alaune.xml> — 200,
 100 articles, ~5,5 jours, images partout. Flux « à la une » volumineux : traité en flux
 « latest », 10 articles récents pour la front page.
 
@@ -592,13 +593,51 @@ Centre, avec la nuance « centre droit » documentée.
 **Audience.** ACPM quotidien nationaux 2025/2026 : 6e rang, 73 595 exemplaires France
 payée ; La-croix.com : 86e rang des sites, 3,5 M de visites (août 2026).
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.la-croix.com/rss> — 200, 50
+**Flux vérifiés (2026-10-10).** `latest` <https://www.la-croix.com/rss> — 200, 50
 articles, ~25 h, images partout. Flux général, toutes rubriques (religion et culture
 comprises) : les rubriques sont tranchées par la classification (#4), pas par le choix du
 flux. Le flux `/rss/france` (actualité nationale) existe si un périmètre restreint devenait
 souhaitable.
 
 **Paywall / TDM.** Partiellement payant ; pas de `tdmrep.json` (404).
+
+### Challenges — Centre
+
+**Placement.** Bande `center` de FrIdéo → **Centre**.
+
+**Désaccords entre sources.** L'intervalle de confiance de FrIdéo (−0,84…+0,63)
+contient zéro et seules 4 familles de preuves sur 9 couvrent directement le média : la
+bande « centre » est lue comme une indication, pas comme un verdict (voir Limites
+connues, point 3). Les épisodes éditoriaux documentés vont dans les deux sens — une
+« une » anti-Le Pen dans l'entre-deux-tours de 2022, une « une » anti-Mélenchon la
+même année imposée par le propriétaire, un « parti-pris Macron » contesté par la
+Société des journalistes en 2017 — et aucune source consultée ne place le magazine
+hors du centre. Le changement de propriété est trop récent pour la mesure : FrIdéo
+retient Claude Perdriel comme propriétaire final, alors que LVMH détient le titre à
+100 % depuis décembre 2025 (Wikipédia, avec Le Figaro du 30 décembre 2025).
+
+**Sources**
+
+1. **FrIdéo : où se situe Challenges ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 (échelle FrIdéo version 1.0, 2026-08-10, relative au panel de 30 médias) — <https://frenchnewslab.org/fr/medias/challenges> — « Score −0,10 dans la bande "centre" (intervalle −0,84…+0,63) : l'intervalle contient zéro, 4 familles de preuves sur 9 seulement ; l'étiquette est une indication, pas un verdict. »
+2. **Challenges (article encyclopédique)** — Wikipédia (avec les articles de presse cités en notes), 2026 — <https://fr.wikipedia.org/wiki/Challenges> — « Magazine économique fondé en 1982, devenu newsmag généraliste en 2021 ; détenu à 100 % par LVMH depuis décembre 2025 ; en 2017, des journalistes déploraient que leur journal "roule pour Macron", et en 2022 une "une" anti-Mélenchon imposée par Claude Perdriel a créé des remous au sein de la rédaction. »
+3. **La présidentielle à Challenges : les « observations » de la société des journalistes (SDJ)** — Acrimed, 2017-03-31 — <https://www.acrimed.org/La-presidentielle-a-Challenges-les-observations> — « La SDJ dénonce le parti-pris du site en faveur d'Emmanuel Macron et les interventions du directeur de la publication auprès de l'équipe web après un article critique à l'égard de Macron. »
+
+**Audience.** ACPM presse magazine 2025/2026 : DSH 232 050 exemplaires ; le site
+Challenges.fr suit le classement unifié des sites web ACPM.
+
+**Flux vérifiés (2026-10-10, issue #72).** `latest` <https://www.challenges.fr/rss.xml>
+— 200, 50 articles, ~3 j, images sur tous les articles. Flux unique du média, toutes
+rubriques confondues (le hors-nuit se filtre à la classification, issue #4) ; titres et
+dates en CDATA (corrigé côté parseur, voir le dépôt). Chaque article porte un marqueur
+`rssplus:free` (0/1) : un indicateur de paywall du média lui-même.
+
+**Paywall / TDM.** Partiellement payant ; **réservation TDM publiée** :
+`/.well-known/tdmrep.json` redirige vers `/tdmrep.json`, qui publie `tdm-reservation: 1`
+pour tout le site (vérifié le 2026-10-10). Le site bloque par ailleurs GPTBot, CCBot et
+PerplexityBot (vérifié le 2026-10-10) : un blocage anti-IA, distinct de la réservation
+TDM. La PRD prévoyait « aucune réservation détectée » le 2026-10-10 : une sonde sans
+suivi de redirection la manquait ; c'est la sonde de `pnpm verify` (fetch, redirections
+suivies) qui fait foi.
 
 ### Le Point — Centre droit
 
@@ -623,18 +662,51 @@ le placement sans le pousser à Droite, FrIdéo le séparant nettement de Le Fig
 **Audience.** ACPM presse magazine 2025/2026 : 20e rang, 263 528 exemplaires France
 payée (hebdomadaire, DSH).
 
-**Flux vérifiés (2026-10-07).** `latest`
+**Flux vérifiés (2026-10-10).** `latest`
 <https://www.lepoint.fr/arc/outboundfeeds/rss/?outputType=xml> — 200, 100 articles,
 ~2 j, toutes les entrées avec image. Endpoint de syndication Arc XP, non documenté
 publiquement par Le Point — le même mécanisme qui a débloqué Libération (issue #11).
 Les flux historiques (`/feeds/rss.xml`, `/feed`, `/actualites.rss`) restent bloqués
-(403, vérifié le 2026-10-06 et le 2026-10-07), ainsi que les pages du site, servies
+(403, vérifié le 2026-10-10 et le 2026-10-10), ainsi que les pages du site, servies
  derrière un anti-bot ; seul l'endpoint de syndication y échappe. 100 articles au
 plus par fenêtre d'environ 2 j ; il pourrait être restreint ou supprimé sans préavis
 (voir Limites connues).
 
 **Paywall / TDM.** Partiellement payant ; réservation TDM indéterminée : la sonde
 `tdmrep.json` est bloquée par l'anti-bot (403) comme le reste du site.
+
+### L'Opinion — Centre droit
+
+**Placement.** Bande `center-right` de FrIdéo → **Centre droit**.
+
+**Désaccords entre sources.** Le désaccord fondateur est écrit : Nicolas Beytout
+revendique un journal « libéral, mais pas de droite », quand Marianne décrit une ligne
+« néolibérale ». L'intervalle de confiance de FrIdéo (−0,05…+1,25) contient zéro :
+les données seules ne départagent pas le centre, et la bande « centre droit » est
+retenue par convention (voir Limites connues, point 3) — toutes les familles de
+preuves couvertes pointent à droite du centre (propriété +0,42, charte +0,77,
+profilage encyclopédique +0,54, lexical +0,64), et la bande est cohérente avec le
+voisinage FrIdéo du titre (entre Le Point et le JDD).
+
+**Sources**
+
+1. **FrIdéo : où se situe L'Opinion ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 (échelle FrIdéo version 1.0, 2026-08-10, relative au panel de 30 médias) — <https://frenchnewslab.org/fr/medias/l-opinion> — « Score +0,60 dans la bande "centre droit" (intervalle −0,05…+1,25) : l'intervalle contient zéro, 5 familles de preuves sur 9 ; propriétaire final Bettencourt / Nicolas Beytout / Ken Fisher. »
+2. **L'Opinion (quotidien français) (article encyclopédique)** — Wikipédia (avec les articles de presse cités en notes), 2026 — <https://fr.wikipedia.org/wiki/L%27Opinion_(quotidien_fran%C3%A7ais)> — « Le journal revendique être pro-business » ; sa ligne est définie « libérale, pro-européenne, pro-business » par son fondateur ; « il suit une ligne qui s'affirme "néolibérale" selon Marianne » ; « la majorité des articles du site internet sont réservés aux abonnés ».
+3. **« La ligne éditoriale de mon journal sera libérale, probusiness et proeuropéenne »** — Xavier Ternisien, Le Monde, 2013-04-05 — <https://www.lemonde.fr/actualite-medias/article/2013/04/08/nicolas-beytout-la-ligne-editoriale-de-mon-journal-sera-liberale-probusiness-et-proeuropeenne_3155791_3236.html> — « Avoir une ligne "pro-business", c'est défendre l'idée que l'entreprise est le meilleur lieu pour produire la richesse » (Nicolas Beytout, déclaration fondatrice du quotidien).
+
+**Audience.** L'Opinion est membre ACPM ; audience LDP de 633 000 au premier
+semestre 2026 (S1 2026). Pas de diffusion France payée certifiée dans les classements
+utilisés ici.
+
+**Flux vérifiés (2026-10-10, issue #72).** `latest`
+<https://www.lopinion.fr/index.rss> — 200, 250 articles, ~9 j, images sur tous les
+articles. Flux index « temps réel » du média, le plus complet disponible : seul un
+extrait de la journée (~17 articles sur 24 h) traverse la fenêtre de collecte.
+
+**Paywall / TDM.** En grande partie payant (la majorité des articles du site sont
+réservés aux abonnés, vidéos, blogs et tribunes restent en libre accès — Wikipédia) ;
+pas de `tdmrep.json` (404). Le site bloque GPTBot, CCBot et PerplexityBot (vérifié le
+2026-10-10) : un blocage anti-IA, pas une réservation TDM.
 
 ### Le Figaro — Droite
 
@@ -657,7 +729,7 @@ Droite, la position que le journal revendique lui-même.
 **Audience.** ACPM quotidien nationaux 2025/2026 : 2e rang, 397 194 exemplaires France
 payée ; LeFigaro.fr : 4e rang des sites, 125,9 M de visites (août 2026).
 
-**Flux vérifiés (2026-10-06).** `une` <https://www.lefigaro.fr/rss/figaro_actualites.xml>
+**Flux vérifiés (2026-10-10).** `une` <https://www.lefigaro.fr/rss/figaro_actualites.xml>
 — 200, 19 articles, ~9 h, images sur 18 articles ; `latest`
 <https://www.lefigaro.fr/rss/figaro_flash-actu.xml> — 200, 20 articles, ~3 h, images sur
 19 articles.
@@ -685,7 +757,7 @@ retenons Droite, en publiant le désaccord.
 **Audience.** 22e rang des sites web ACPM, 30,2 M de visites en août 2026 (Cnews.fr) ;
 chaîne d'information en continu du groupe Canal+ (Vincent Bolloré).
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.cnews.fr/rss.xml> — 200, 100
+**Flux vérifiés (2026-10-10).** `latest` <https://www.cnews.fr/rss.xml> — 200, 100
 articles, ~28 h, images partout.
 
 **Paywall / TDM.** Gratuit ; pas de `tdmrep.json` (404).
@@ -711,7 +783,7 @@ classement vaut pour la ligne actuelle, il n'est pas un jugement rétroactif.
 radio généraliste écoutée par 2,65 millions d'auditeurs par jour (vague Médiamétrie citée
 par Puremédias).
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.europe1.fr/rss.xml> — 200, 50
+**Flux vérifiés (2026-10-10).** `latest` <https://www.europe1.fr/rss.xml> — 200, 50
 articles, ~21 h, images partout.
 
 **Paywall / TDM.** Gratuit ; pas de `tdmrep.json` (404).
@@ -734,7 +806,7 @@ changement est daté et mesuré, et nous ne l'appliquons pas rétroactivement.
 **Audience.** ACPM presse du 7e jour 2025/2026 : 9e rang, 118 153 exemplaires France
 payée ; LeJDD.fr : 88e rang des sites, 3,4 M de visites (août 2026).
 
-**Flux vérifiés (2026-10-06).** `une` <https://www.lejdd.fr/rss/a-la-une.xml> — 200, 9
+**Flux vérifiés (2026-10-10).** `une` <https://www.lejdd.fr/rss/a-la-une.xml> — 200, 9
 articles, ~11 h, **sans image** ; `latest` <https://www.lejdd.fr/rss.xml> — 200, 50
 articles, ~1,5 jour, images partout. Flux le plus complet, toutes rubriques (séries et ciné
 compris) : le hors-nuit est retiré par la classification (#4), jamais par le choix du flux.
@@ -761,7 +833,7 @@ désaccord et retenons Droite, la bande `far-right` ne pouvant être représent�
 **Audience.** ACPM presse magazine 2025/2026 : 89e rang, 61 124 exemplaires France
 payée.
 
-**Flux vérifiés (2026-10-06).** `latest` <https://www.valeursactuelles.com/feed> — 200,
+**Flux vérifiés (2026-10-10).** `latest` <https://www.valeursactuelles.com/feed> — 200,
 10 articles, ~5 h, **sans image**. Le flux historique « /rss » ne contient aucune date ;
 « /feed » sert les mêmes articles avec dates.
 
@@ -771,18 +843,18 @@ payée.
 
 ## Médias exclus
 
-| Média | Raison (vérifiée le 2026-10-06) |
+| Média | Raison (vérifiée le 2026-10-10) |
 |---|---|
-| Les Échos | **Flux bloqués.** `lesechos.fr/rss/*` répond **403** (une, actualités, rubriques) ; le site tout entier est servi derrière Akamai, qui bloque aussi la page d'accueil (vérifié le 2026-10-07). |
+| Les Échos | **Flux bloqués.** `lesechos.fr/rss/*` répond **403** (une, actualités, rubriques) ; le site tout entier est servi derrière Akamai, qui bloque aussi la page d'accueil (vérifié le 2026-10-10). |
 
 Le Point est cité ici pour mémoire : il était exclu pour la même raison technique
-(flux 403, vérifié le 2026-10-06) et est entré dans l'Édition le 2026-10-07, quand un
+(flux 403, vérifié le 2026-10-10) et est entré dans l'Édition le 2026-10-10, quand un
 endpoint de syndication Arc XP, non couvert par l'anti-bot, a été trouvé — le même
 mécanisme que Libération (issue #11). Les Échos est cité ici pour que le lecteur
 puisse vérifier qu'il s'agit d'une raison technique, jamais d'un jugement sur sa
 ligne éditoriale. Son orientation est recherchée comme celle des autres, et son
 dossier sera ajouté le jour où ses flux redeviennent accessibles. (Libération en est
-sortie le 2026-10-07 : le flux de syndication Arc XP, vérifié en même temps que le
+sortie le 2026-10-10 : le flux de syndication Arc XP, vérifié en même temps que le
 blocage DataDome persistait sur les `/rss/` historiques, a permis son inclusion —
 issue #11.)
 

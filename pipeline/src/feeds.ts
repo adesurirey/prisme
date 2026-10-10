@@ -47,9 +47,7 @@ export function parseFeed(xml: string): ParsedFeed {
 }
 
 function channelDate(value: unknown): string {
-  const text = typeof value === 'string' ? value.trim() : '';
-  if (text === '' || Number.isNaN(Date.parse(text))) return '';
-  return new Date(text).toISOString();
+  return isoDate(value);
 }
 
 function parseAtomEntry(entry: any): ParsedItem {
@@ -158,7 +156,7 @@ function parseRssItem(item: any): ParsedItem {
   return withPublicationDay({
     headline: decodeEntities(text(item.title)),
     url: decodeEntities(text(item.link)),
-    publishedAt: item.pubDate ? new Date(item.pubDate).toISOString() : '',
+    publishedAt: isoDate(item.pubDate),
     teaser: decodeEntities(text(item.description)),
     imageUrl: rssImageUrl(item),
   });
@@ -174,6 +172,16 @@ function rssImageUrl(item: any): string | undefined {
   const media = item['media:content'] ?? item['media:thumbnail'];
   const url = enclosure?.url ?? media?.url;
   return url ? String(url) : undefined;
+}
+
+/**
+ * CDATA-safe, invalid-date-safe ISO 8601 conversion: some feeds (Challenges)
+ * wrap pubDate in CDATA and date parsing must never throw on a bad value.
+ */
+function isoDate(value: unknown): string {
+  const raw = text(value);
+  if (raw === '' || Number.isNaN(Date.parse(raw))) return '';
+  return new Date(raw).toISOString();
 }
 
 /** fast-xml-parser collapses single-element arrays to a bare value; normalise. */
