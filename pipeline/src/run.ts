@@ -1,5 +1,5 @@
 import { randomBytes } from 'node:crypto';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, unlink, writeFile } from 'node:fs/promises';
 import type { Edition } from '@prisme/domain';
 import { outlets, publicOutlets } from '@prisme/domain';
 import {
@@ -7,9 +7,12 @@ import {
   classifyNewArticles,
   dropNotNews,
   loadCache,
+  pruneCache,
   saveCache,
 } from './classify.ts';
+import { slugsToDelete } from './cleanup.ts';
 import { collect, contributionSummary } from './collect.ts';
+import { updateEditionHistory } from './edition-history.ts';
 import { updateFrontPageHistory } from './frontpage.ts';
 import { groupStories, loadStories } from './grouping.ts';
 import { fetchFeed } from './http.ts';
@@ -44,8 +47,10 @@ export async function runEdition(): Promise<Edition> {
   const cache: ClassificationCache = await loadCache(CLASSIFICATIONS_PATH);
   const before = Object.keys(cache.entries).length;
   await classifyNewArticles(articles, teasers, cache, model);
-  await saveCache(cache, CLASSIFICATIONS_PATH);
   const classified = Object.keys(cache.entries).length;
+  const pruned = pruneCache(cache, new Set(articles.map((a) => a.id)));
+  const prunedCount = classified - Object.keys(pruned.entries).length;
+  await saveCache(pruned, CLASSIFICATIONS_PATH);
 
   const kept = dropNotNews(articles, cache).map((article) => ({
     ...article,
@@ -73,7 +78,6 @@ export async function runEdition(): Promise<Edition> {
   // whose flags changed join the changed set, so their files are rewritten.
   const liveIds = new Set(outcome.live.map((s) => s.id));
   const frontpage = updateFrontPageHistory(outcome.stories, kept, now);
-  const changed = new Set([...outcome.changed, ...frontpage.changed]);
 
   // The Edition is the ranked top EDITION_SIZE (issue #37, ADR-0009): Stories
   // order by Coverage, then recency — deterministically. Live Stories below
@@ -86,6 +90,21 @@ export async function runEdition(): Promise<Edition> {
       frontpage.stories.filter((s) => liveIds.has(s.id)),
     ).slice(0, EDITION_SIZE),
   };
+
+  // Edition history (issue #75): `everInEdition` is sticky — set the moment
+  // a Story ranks into the Edition, so the flag survives its freezing. Like
+  // the front-page flags, only live Stories are touched; changed files are
+  // rewritten.
+  const editionHistory = updateEditionHistory(
+    frontpage.stories,
+    new Set(edition.stories.map((s) => s.id)),
+    now,
+  );
+  const changed = new Set([
+    ...outcome.changed,
+    ...frontpage.changed,
+    ...editionHistory.changed,
+  ]);
 
   // Summaries & Differences (issue #7, ADR-0006): one Flash-Lite call per
   // live Edition Story that gained Articles since its last Summaries run —
@@ -132,7 +151,7 @@ export async function runEdition(): Promise<Edition> {
     new URL('edition.json', DATA_DIR),
     `${JSON.stringify(edition, null, 2)}\n`,
   );
-  for (const story of frontpage.stories) {
+  for (const story of editionHistory.stories) {
     if (!changed.has(story.slug)) continue;
     await writeFile(
       new URL(`${story.slug}.json`, STORIES_DIR),
@@ -140,6 +159,29 @@ export async function runEdition(): Promise<Edition> {
     );
   }
   console.log(`Wrote ${DATA_DIR.pathname}`);
+
+  // End-of-run cleanup (issue #75): after all writes succeeded, delete the
+  // Story files that are frozen and never entered the Edition — they were
+  // never linked, so no published URL breaks. A live Story below the cut is
+  // never deleted (it may return on a later build); a Story that once
+  // entered the Edition keeps its file and page forever. Deletion I/O errors
+  // fail the build.
+  const toDelete = slugsToDelete(editionHistory.stories, now);
+  for (const slug of toDelete) {
+    await unlink(new URL(`${slug}.json`, STORIES_DIR));
+  }
+  if (toDelete.size > 0) {
+    console.log(
+      `Cleanup: deleted ${toDelete.size} never-in-Edition frozen Story files ` +
+        `(${editionHistory.stories.length - toDelete.size} remain).`,
+    );
+  }
+  if (prunedCount > 0) {
+    console.log(
+      `Cleanup: pruned ${prunedCount} classification-cache entries ` +
+        `(${Object.keys(pruned.entries).length} remain).`,
+    );
+  }
   return edition;
 }
 

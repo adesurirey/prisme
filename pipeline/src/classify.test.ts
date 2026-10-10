@@ -6,6 +6,7 @@ import {
   dropNotNews,
   emptyCache,
   kindOf,
+  pruneCache,
 } from './classify.ts';
 import type { DecisionModel } from './decision-model.ts';
 
@@ -134,6 +135,36 @@ describe('classifyNewArticles', () => {
     );
     expect(result).toBe(cache);
     expect(cache.entries).toEqual({});
+  });
+});
+
+describe('pruneCache', () => {
+  const cache = (): ClassificationCache => {
+    const c = emptyCache();
+    c.entries.a1 = { kind: 'news', section: 'politics' };
+    c.entries.a2 = { kind: 'news', section: 'economy' };
+    return c;
+  };
+
+  it('drops entries for Articles not collected this build', () => {
+    const c = pruneCache(cache(), new Set(['a1']));
+    expect(Object.keys(c.entries)).toEqual(['a1']);
+  });
+
+  it('keeps the winner block across pruning', () => {
+    const c = pruneCache(cache(), new Set(['a1']));
+    expect(c.winner).toEqual(cache().winner);
+  });
+
+  it('keeps everything when every cached id is collected', () => {
+    const c = pruneCache(cache(), new Set(['a1', 'a2']));
+    expect(c.entries).toEqual(cache().entries);
+  });
+
+  it('prunes everything but the winner for an empty collection', () => {
+    const c = pruneCache(cache(), new Set());
+    expect(c.entries).toEqual({});
+    expect(c.winner).toBeDefined();
   });
 });
 
