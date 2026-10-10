@@ -40,6 +40,16 @@
     }
   },
   {
+    "id": "blast",
+    "name": "Blast",
+    "leaning": "gauche",
+    "paywall": "none",
+    "site": "https://www.blast-info.fr",
+    "feeds": {
+      "latest": "https://api.blast-info.fr/rss_articles.xml"
+    }
+  },
+  {
     "id": "humanite",
     "name": "L'Humanité",
     "leaning": "gauche",
@@ -68,6 +78,16 @@
     "site": "https://www.marianne.net",
     "feeds": {
       "latest": "https://www.marianne.net/rss.xml"
+    }
+  },
+  {
+    "id": "slate-fr",
+    "name": "Slate.fr",
+    "leaning": "centre-gauche",
+    "paywall": "none",
+    "site": "https://www.slate.fr",
+    "feeds": {
+      "latest": "https://slate.fr/rss.xml"
     }
   },
   {
@@ -261,6 +281,26 @@
     "site": "https://www.valeursactuelles.com",
     "feeds": {
       "latest": "https://www.valeursactuelles.com/feed"
+    }
+  },
+  {
+    "id": "atlantico",
+    "name": "Atlantico",
+    "leaning": "droite",
+    "paywall": "partial",
+    "site": "https://www.atlantico.fr",
+    "feeds": {
+      "latest": "https://rss.atlantico.fr"
+    }
+  },
+  {
+    "id": "causeur",
+    "name": "Causeur",
+    "leaning": "droite",
+    "paywall": "partial",
+    "site": "https://www.causeur.fr",
+    "feeds": {
+      "latest": "https://www.causeur.fr/feed"
     }
   }
 ]

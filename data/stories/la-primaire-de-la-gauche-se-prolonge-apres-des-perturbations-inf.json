@@ -5,13 +5,47 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "47c2c30f3cea",
+      "outletId": "le-monde",
+      "headline": "Primaire à gauche : dans les sections locales, les militants mobilisés pour offrir un cadre rassurant",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/11/primaire-a-gauche-dans-les-sections-locales-les-militants-mobilises-pour-offrir-un-cadre-rassurant_6791094_823448.html",
+      "publishedAt": "2026-10-10T22:15:33.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/10/393/0/4724/2362/644/322/60/0/bae3858_upload-1-dbp0qucx0sb4-mmagnin-vote-primaire-gauche-19.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "185ee0b28ad7",
+      "outletId": "le-monde",
+      "headline": "Primaire de la gauche sociale-démocrate : plus de 100 000 personnes ont déjà voté, selon la commission d’organisation",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/10/primaire-de-la-gauche-sociale-democrate-plus-de-100-000-personnes-ont-deja-vote-selon-la-commission-d-organisation_6790987_823449.html",
+      "publishedAt": "2026-10-10T21:34:46.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/04/458/0/5500/2750/644/322/60/0/f4ff8e6_upload-1-hvfdj9er9kfr-ad037-debat-primairegauche-dsc08839.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "4ac4f104dc6a",
+      "outletId": "bfmtv",
+      "headline": "Primaire sociale-démocrate: \"Raphaël Glucksmann fait partie de ceux qui me donnent espoir\", déclare Bernard Henri-Lévy, écrivain et philosophe",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/video-primaire-sociale-democrate-raphael-glucksmann-fait-partie-de-ceux-qui-me-donnent-espoir-declare-bernard-henri-levy-ecrivain-et-philosophe_VN-202610100394.html",
+      "publishedAt": "2026-10-10T20:21:24.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/1-DKTQnn2-kORwC181d45OcxT74=/0x0:1280x720/800x0/images/Primaire-sociale-democrate-Raphael-Glucksmann-fait-partie-de-ceux-qui-me-donnent-espoir-declare-Bernard-Henri-Levy-ecrivain-et-philosophe-2363010.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "e9d6615f8154",
       "outletId": "le-monde",
       "headline": "Primaire à gauche : plus de 91 000 personnes ont déjà voté, selon la commission d’organisation",
       "url": "https://www.lemonde.fr/politique/article/2026/10/10/primaire-a-gauche-plus-de-71-000-personnes-ont-deja-vote-selon-la-commission-d-organisation_6790987_823448.html",
       "publishedAt": "2026-10-10T10:26:54.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/04/458/0/5500/2750/644/322/60/0/f4ff8e6_upload-1-hvfdj9er9kfr-ad037-debat-primairegauche-dsc08839.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -152,14 +186,14 @@
   "section": "politics",
   "summaries": {
     "gauche": [
-      "Le scrutin en ligne a connu des perturbations informatiques dès son ouverture.",
-      "La consultation a été prolongée jusqu'à dimanche soir pour compenser ces ralentissements.",
-      "Le nombre de votants a nettement progressé pour dépasser les 91000 participants."
+      "La mobilisation sur le terrain a permis de sécuriser le processus après l'incident initial.",
+      "Le nombre de participants a franchi le cap des 105000 votants samedi soir.",
+      "La participation s'établit désormais à plus des trois quarts du total des inscrits."
     ],
     "centre": [
-      "Le premier tour de la primaire se poursuit tout le week-end malgré un incident informatique initial.",
-      "La commission d'organisation fait état de plus de 91000 suffrages exprimés, représentant plus de la moitié des inscrits.",
-      "L'attention demeure portée sur la capacité de cette démarche à rassembler durablement les forces progressistes."
+      "Le parquet de Paris a ouvert une enquête judiciaire suite à l'attaque informatique contre le portail de vote.",
+      "L'investigation sur la cyberattaque a été confiée aux services spécialisés de l'Office anti-cybercriminalité.",
+      "Le scrutin se poursuit avec un niveau de participation en forte hausse et des soutiens affichés pour certains candidats."
     ],
     "droite": [
       "La plateforme de vote socialiste a fait l'objet d'une cyberattaque saturant le site par des connexions factices.",
@@ -167,8 +201,8 @@
       "La participation dépasse désormais les 91000 bulletins enregistrés sur un total de 140000 inscrits."
     ]
   },
-  "differences": "L'ensemble des camps s'accorde sur la chronologie des faits, de la cyberattaque initiale à la prolongation du scrutin. La gauche se focalise principalement sur la reprise positive de la participation, tandis que le centre et la droite mettent davantage en lumière les volumes précis de votants et persistent à s'interroger sur les fractures politiques potentielles que ce type de consultation pourrait engendrer.",
+  "differences": "La gauche et le centre soulignent la forte accélération de la participation avec plus de 105000 suffrages exprimés, tandis que le centre aborde également l'ouverture d'une enquête judiciaire par le parquet de Paris suite à la cyberattaque. La droite maintient son focus initial sur la perturbation technique et un volume de votants actualisé à 91000 participants.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 13,
+  "summarizedArticleCount": 16,
   "everInEdition": true
 }

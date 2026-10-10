@@ -5,6 +5,51 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "59e9713cd4c6",
+      "outletId": "le-jdd",
+      "headline": "Mobilisation lycéenne : des élus LFI impliqués dans la préparation des blocus",
+      "url": "https://www.lejdd.fr/politique/mobilisation-lyceenne-des-elus-lfi-impliques-dans-la-preparation-des-blocus-185739",
+      "publishedAt": "2026-10-10T21:30:05.000Z",
+      "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/10/21/tract-lfi-c-dr_master.jpg?VersionId=41aIvYjH0cl2VZBXy10nPD4pcNZiXQ8B",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "c720f14bfe02",
+      "outletId": "bfmtv",
+      "headline": "LIGNE ROUGE - Colère lycéenne: au cœur de la crise",
+      "url": "https://www.bfmtv.com/societe/video-ligne-rouge-colere-lyceenne-au-c-ur-de-la-crise_VN-202610100406.html",
+      "publishedAt": "2026-10-10T20:51:13.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/GUdUE2gklFUcI60Iga_4B1dt28M=/0x0:1280x720/800x0/images/LIGNE-ROUGE-Colere-lyceenne-au-coeur-de-la-crise-2363025.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "f97062a8fa95",
+      "outletId": "le-figaro",
+      "headline": "Blocus des lycées : le mouvement approuvé par 54% des Français, selon un sondage",
+      "url": "https://www.lefigaro.fr/actualite-france/blocus-des-lycees-le-mouvement-approuve-par-54-des-francais-selon-un-sondage-20261010",
+      "publishedAt": "2026-10-10T20:13:15.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/10/98afe6ca4609e5a39309409acd61bca65d45b5582fdc0a257abf7e2a99e7e895.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
+      "id": "f2b203ee24c6",
+      "outletId": "le-jdd",
+      "headline": "Blocus lycéens : les policiers en colère contre le pouvoir politique",
+      "url": "https://www.lejdd.fr/Societe/blocus-lyceens-les-policiers-en-colere-contre-le-pouvoir-politique-185742",
+      "publishedAt": "2026-10-10T20:05:05.000Z",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
       "id": "cc1307302500",
       "outletId": "bfmtv",
       "headline": "Emploi du temps, manque de professeurs, Parcoursup ... Les premières remontées de la plateforme des lycéens",
@@ -143,7 +188,7 @@
       "url": "https://www.lefigaro.fr/vox/societe/jerome-fourquet-massification-abandon-pulsion-radiographie-psychique-du-mouvement-lyceen-20261010",
       "publishedAt": "2026-10-10T15:01:23.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/10/21774491b244938d25937a35c3007138d524368829cc8deed81c0e902a7ad25a.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "opinion",
       "section": "society",
       "everFrontPage": true
@@ -202,6 +247,16 @@
       "frontPage": false,
       "kind": "news",
       "section": "society"
+    },
+    {
+      "id": "1e316551c21a",
+      "outletId": "causeur",
+      "headline": "Elwan prétend",
+      "url": "https://www.causeur.fr/elwan-pretend-lyceens-blocages-335247",
+      "publishedAt": "2026-10-10T11:59:00.000Z",
+      "frontPage": false,
+      "kind": "opinion",
+      "section": "politics"
     },
     {
       "id": "647954daf21b",
@@ -308,6 +363,17 @@
       "headline": "«Laissez les lycéens lycéer», par Mathieu Lindon",
       "url": "https://www.liberation.fr/idees-et-debats/opinions/laissez-les-lyceens-lyceer-par-mathieu-lindon-20261010_M6J3NSKIPJBCBAKDAK6I6WVYSE/",
       "publishedAt": "2026-10-10T07:08:00.000Z",
+      "frontPage": false,
+      "kind": "opinion",
+      "section": "society"
+    },
+    {
+      "id": "2b075ea8ad48",
+      "outletId": "atlantico",
+      "headline": "Edouard Garcimore-Geffray, sort 3000 profs de son chapeau",
+      "url": "https://atlantico.fr/article/rdv/edouard-garcimore-geffray-sort-3000-profs-de-son-chapeau",
+      "publishedAt": "2026-10-10T05:35:00.000Z",
+      "imageUrl": "https://atlantico.codexcdn.net/assets/as2yhwRrQtRaiwdaC.png",
       "frontPage": false,
       "kind": "opinion",
       "section": "society"
@@ -429,22 +495,19 @@
   "summaries": {
     "gauche": [
       "La contestation s'accompagne d'un nombre élevé d'interpellations et de blessés parmi les élèves, provoquant l'ouverture de multiples enquêtes sur les agissements policiers.",
-      "Des publications satiriques raquent l'échec de tentatives d'infiltration des forces de l'ordre au sein des groupes d'organisation lycéens sur les réseaux sociaux.",
       "Les discussions publiques soulignent la légitimité des revendications portées par la jeunesse face aux difficultés de l'institution éducative."
     ],
     "centre": [
-      "Les comparutions immédiates se succèdent pour les manifestants arrêtés, tandis que la plateforme lycéenne fait remonter des doléances sur les conditions d'études et le manque d'enseignants.",
-      "Des personnalités analysent la structure de la révolte et l'efficacité des politiques éducatives, oscillant entre critique du mouvement et condamnation des dégradations commises.",
-      "Les questions relatives au maintien de l'ordre, à l'usage d'armes intermédiaires et aux interventions de l'IGPN continuent d'alimenter les débats et l'attention des instances internationales."
+      "Les comparutions immédiates se succèdent pour les manifestants arrêtés, tandis que la plateforme lycéenne fait remonter des doléances sur le manque d'enseignants et les conditions d'études.",
+      "Des reportages de terrain documentent l'ampleur de la crise, l'explosion des violences lors des blocages et la persistance des appels à la mobilisation malgré les annonces gouvernementales."
     ],
     "droite": [
-      "Les commentaires s'attachent à dénoncer la diffusion de fausses informations par des élus de gauche visant à incriminer injustement les forces de l'ordre.",
-      "La doctrine d'emploi des armes intermédiaires fait l'objet de rappels réglementaires pour justifier la légitimité des interventions face aux heurts.",
-      "Les analyses sociologiques et les tribunes s'interrogent sur les mutations profondes et psychologiques de la jeunesse au travers de cette fronde."
+      "La fronde étudiante est mise en perspective par un sondage montrant une approbation majoritaire de l'opinion sur certains points des revendications, tout en soulignant le rejet de la suppression de Parcoursup.",
+      "La tension monte entre les forces de l'ordre et l'exécutif après la suspension de certaines armes de défense et la mise en cause de cadres politiques dans l'organisation des blocus."
     ]
   },
-  "differences": "Les différents camps adoptent des grilles de lecture très hétérogènes face aux mobilisations lycéennes. La droite et le centre droit, à l'instar des tribunes publiées au Figaro ou des analyses du Point, ciblent la récupération politique de la gauche radicale et la diffusion de fausses informations, tout en légitimant l'action des forces de l'ordre et l'usage d'armes intermédiaires. Le centre et le centre gauche documentent plus frontalement la dureté du maintien de l'ordre, relayant les chiffres élevés d'interpellations et de blessés ainsi que les critiques internationales, tout en ouvrant le débat sur les revendications matérielles des élèves.",
+  "differences": "Les différents camps adoptent des grilles de lecture distinctes face aux mobilisations lycéennes. La droite insiste sur l'exaspération des forces de l'ordre face au pouvoir politique et pointe l'implication de responsables politiques dans les affrontements, tout en concédant un soutien mitigé de l'opinion mesuré par sondage. Le centre se focalise sur la description concrétisée de la crise par des reportages de terrain, les comparutions en justice et les remontées matérielles de la plateforme étudiante. La gauche, quant à elle, met l'accent sur la judiciarisation des interpellations, les blessures des élèves et la légitimité des revendications face au manque de moyens.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 38,
+  "summarizedArticleCount": 44,
   "everInEdition": true
 }

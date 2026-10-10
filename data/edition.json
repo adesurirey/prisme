@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-10T19:59:03.807Z",
+  "builtAt": "2026-10-10T23:37:01.267Z",
   "stories": [
     {
       "id": "10d54d95583c",
@@ -7,6 +7,51 @@
       "title": "Des incidents émaillent les manifestations lycéennes et les blocus en France",
       "createdAt": "2026-10-10T09:54:25.891Z",
       "articles": [
+        {
+          "id": "59e9713cd4c6",
+          "outletId": "le-jdd",
+          "headline": "Mobilisation lycéenne : des élus LFI impliqués dans la préparation des blocus",
+          "url": "https://www.lejdd.fr/politique/mobilisation-lyceenne-des-elus-lfi-impliques-dans-la-preparation-des-blocus-185739",
+          "publishedAt": "2026-10-10T21:30:05.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/10/21/tract-lfi-c-dr_master.jpg?VersionId=41aIvYjH0cl2VZBXy10nPD4pcNZiXQ8B",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c720f14bfe02",
+          "outletId": "bfmtv",
+          "headline": "LIGNE ROUGE - Colère lycéenne: au cœur de la crise",
+          "url": "https://www.bfmtv.com/societe/video-ligne-rouge-colere-lyceenne-au-c-ur-de-la-crise_VN-202610100406.html",
+          "publishedAt": "2026-10-10T20:51:13.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/GUdUE2gklFUcI60Iga_4B1dt28M=/0x0:1280x720/800x0/images/LIGNE-ROUGE-Colere-lyceenne-au-coeur-de-la-crise-2363025.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "f97062a8fa95",
+          "outletId": "le-figaro",
+          "headline": "Blocus des lycées : le mouvement approuvé par 54% des Français, selon un sondage",
+          "url": "https://www.lefigaro.fr/actualite-france/blocus-des-lycees-le-mouvement-approuve-par-54-des-francais-selon-un-sondage-20261010",
+          "publishedAt": "2026-10-10T20:13:15.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/10/98afe6ca4609e5a39309409acd61bca65d45b5582fdc0a257abf7e2a99e7e895.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "f2b203ee24c6",
+          "outletId": "le-jdd",
+          "headline": "Blocus lycéens : les policiers en colère contre le pouvoir politique",
+          "url": "https://www.lejdd.fr/Societe/blocus-lyceens-les-policiers-en-colere-contre-le-pouvoir-politique-185742",
+          "publishedAt": "2026-10-10T20:05:05.000Z",
+          "frontPage": true,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
         {
           "id": "cc1307302500",
           "outletId": "bfmtv",
@@ -146,7 +191,7 @@
           "url": "https://www.lefigaro.fr/vox/societe/jerome-fourquet-massification-abandon-pulsion-radiographie-psychique-du-mouvement-lyceen-20261010",
           "publishedAt": "2026-10-10T15:01:23.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/10/21774491b244938d25937a35c3007138d524368829cc8deed81c0e902a7ad25a.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "opinion",
           "section": "society",
           "everFrontPage": true
@@ -205,6 +250,16 @@
           "frontPage": false,
           "kind": "news",
           "section": "society"
+        },
+        {
+          "id": "1e316551c21a",
+          "outletId": "causeur",
+          "headline": "Elwan prétend",
+          "url": "https://www.causeur.fr/elwan-pretend-lyceens-blocages-335247",
+          "publishedAt": "2026-10-10T11:59:00.000Z",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "politics"
         },
         {
           "id": "647954daf21b",
@@ -311,6 +366,17 @@
           "headline": "«Laissez les lycéens lycéer», par Mathieu Lindon",
           "url": "https://www.liberation.fr/idees-et-debats/opinions/laissez-les-lyceens-lyceer-par-mathieu-lindon-20261010_M6J3NSKIPJBCBAKDAK6I6WVYSE/",
           "publishedAt": "2026-10-10T07:08:00.000Z",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "society"
+        },
+        {
+          "id": "2b075ea8ad48",
+          "outletId": "atlantico",
+          "headline": "Edouard Garcimore-Geffray, sort 3000 profs de son chapeau",
+          "url": "https://atlantico.fr/article/rdv/edouard-garcimore-geffray-sort-3000-profs-de-son-chapeau",
+          "publishedAt": "2026-10-10T05:35:00.000Z",
+          "imageUrl": "https://atlantico.codexcdn.net/assets/as2yhwRrQtRaiwdaC.png",
           "frontPage": false,
           "kind": "opinion",
           "section": "society"
@@ -432,23 +498,20 @@
       "summaries": {
         "gauche": [
           "La contestation s'accompagne d'un nombre élevé d'interpellations et de blessés parmi les élèves, provoquant l'ouverture de multiples enquêtes sur les agissements policiers.",
-          "Des publications satiriques raquent l'échec de tentatives d'infiltration des forces de l'ordre au sein des groupes d'organisation lycéens sur les réseaux sociaux.",
           "Les discussions publiques soulignent la légitimité des revendications portées par la jeunesse face aux difficultés de l'institution éducative."
         ],
         "centre": [
-          "Les comparutions immédiates se succèdent pour les manifestants arrêtés, tandis que la plateforme lycéenne fait remonter des doléances sur les conditions d'études et le manque d'enseignants.",
-          "Des personnalités analysent la structure de la révolte et l'efficacité des politiques éducatives, oscillant entre critique du mouvement et condamnation des dégradations commises.",
-          "Les questions relatives au maintien de l'ordre, à l'usage d'armes intermédiaires et aux interventions de l'IGPN continuent d'alimenter les débats et l'attention des instances internationales."
+          "Les comparutions immédiates se succèdent pour les manifestants arrêtés, tandis que la plateforme lycéenne fait remonter des doléances sur le manque d'enseignants et les conditions d'études.",
+          "Des reportages de terrain documentent l'ampleur de la crise, l'explosion des violences lors des blocages et la persistance des appels à la mobilisation malgré les annonces gouvernementales."
         ],
         "droite": [
-          "Les commentaires s'attachent à dénoncer la diffusion de fausses informations par des élus de gauche visant à incriminer injustement les forces de l'ordre.",
-          "La doctrine d'emploi des armes intermédiaires fait l'objet de rappels réglementaires pour justifier la légitimité des interventions face aux heurts.",
-          "Les analyses sociologiques et les tribunes s'interrogent sur les mutations profondes et psychologiques de la jeunesse au travers de cette fronde."
+          "La fronde étudiante est mise en perspective par un sondage montrant une approbation majoritaire de l'opinion sur certains points des revendications, tout en soulignant le rejet de la suppression de Parcoursup.",
+          "La tension monte entre les forces de l'ordre et l'exécutif après la suspension de certaines armes de défense et la mise en cause de cadres politiques dans l'organisation des blocus."
         ]
       },
-      "differences": "Les différents camps adoptent des grilles de lecture très hétérogènes face aux mobilisations lycéennes. La droite et le centre droit, à l'instar des tribunes publiées au Figaro ou des analyses du Point, ciblent la récupération politique de la gauche radicale et la diffusion de fausses informations, tout en légitimant l'action des forces de l'ordre et l'usage d'armes intermédiaires. Le centre et le centre gauche documentent plus frontalement la dureté du maintien de l'ordre, relayant les chiffres élevés d'interpellations et de blessés ainsi que les critiques internationales, tout en ouvrant le débat sur les revendications matérielles des élèves.",
+      "differences": "Les différents camps adoptent des grilles de lecture distinctes face aux mobilisations lycéennes. La droite insiste sur l'exaspération des forces de l'ordre face au pouvoir politique et pointe l'implication de responsables politiques dans les affrontements, tout en concédant un soutien mitigé de l'opinion mesuré par sondage. Le centre se focalise sur la description concrétisée de la crise par des reportages de terrain, les comparutions en justice et les remontées matérielles de la plateforme étudiante. La gauche, quant à elle, met l'accent sur la judiciarisation des interpellations, les blessures des élèves et la légitimité des revendications face au manque de moyens.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 38,
+      "summarizedArticleCount": 44,
       "everInEdition": true
     },
     {
@@ -777,6 +840,17 @@
       "createdAt": "2026-10-10T15:25:41.670Z",
       "articles": [
         {
+          "id": "2dab6e74bdd5",
+          "outletId": "franceinfo",
+          "headline": "La victoire de Paul Seixas au Tour de Lombardie est \"une grande joie pour le sport français\", selon le président de la Fédération française de cyclisme",
+          "url": "https://www.franceinfo.fr/sports/cyclisme/la-victoire-de-paul-seixas-au-tour-de-lombardie-est-une-grande-joie-pour-le-sport-francais-selon-le-president-de-la-federation-francaise-de-cyclisme_8231953.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-10T20:01:04.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/AVtVu71dRqkt2YA8hDDttPVybFo/0x0:7082x3983/432x243/filters:format(jpg)/2021/04/28/608985b030aba_603a75834fe10_080_hl_rhoussin_992581.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
           "id": "e9f3f2ac2588",
           "outletId": "le-jdd",
           "headline": "Cyclisme : un Paul Seixas monumental remporte le Tour de Lombardie",
@@ -861,7 +935,7 @@
           "url": "https://www.lemonde.fr/sport/article/2026/10/10/paul-seixas-remporte-le-tour-de-lombardie-premier-monument-de-sa-carriere_6791014_3242.html",
           "publishedAt": "2026-10-10T15:41:15.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/10/37/0/8256/4128/644/322/60/0/345e1f5_ftp-1-2484biojt70i-5316537-01-06.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -1036,12 +1110,14 @@
         "gauche": [
           "Le jeune coureur français Paul Seixas a survolé le Tour de Lombardie pour s'adjuger sa première grande classique en solitaire.",
           "Cette victoire vient parachever une saison exceptionnelle marquée par de multiples records de précocité à seulement vingt ans.",
-          "Plusieurs analyses rappellent que ce triomphe intervient après les déceptions des championnats du monde et profite d'un plateau ouvert."
+          "Plusieurs analyses rappellent que ce triomphe intervient après les déceptions des championnats du monde et profite d'un plateau ouvert.",
+          "La Fédération française de cyclisme salue une immense satisfaction pour la discipline tricolore suite à ce succès historique."
         ],
         "centre": [
           "À tout juste vingt ans, Paul Seixas s'est imposé en solitaire sur le Tour de Lombardie en Italie.",
           "Il décroche ainsi le premier Monument de sa carrière après une attaque décisive dans le final à Côme.",
-          "Cette performance historique confirme son statut de grand espoir du cyclisme mondial."
+          "Cette performance historique confirme son statut de grand espoir du cyclisme mondial.",
+          "L'instance dirigeante du cyclisme national qualifie cette réussite d'immense fierté pour le sport français."
         ],
         "droite": [
           "Le coureur français Paul Seixas a triomphé sur le Tour de Lombardie au terme d'un numéro en solitaire dans le Civiglio.",
@@ -1049,9 +1125,9 @@
           "Il empoche la prime promise au vainqueur et devance ses rivaux au terme d'une course mémorable."
         ]
       },
-      "differences": "Tous les camps s'accordent à saluer l'exploit historique de Paul Seixas, vainqueur du Tour de Lombardie à vingt ans pour son premier Monument. La droite, à travers des titres comme Le Figaro ou CNews, insiste fortement sur les records statistiques, l'âge exact du coureur et le détail de ses attaques dans le Civiglio face à des rivaux comme Remco Evenepoel. De son côté, la gauche met en avant la revanche du Français après ses récents déboires et replace sa saison 2026 dans une perspective plus globale de précocité. Le centre adopte un ton factuel et synthétique, se focalisant sur la construction tactique de sa victoire en solitaire à Côme.",
+      "differences": "Tous les camps s'accordent à saluer l'exploit historique de Paul Seixas, vainqueur du Tour de Lombardie à vingt ans pour son premier Monument. La droite insiste fortement sur les records statistiques, l'âge exact du coureur et le détail de ses attaques dans le Civiglio face à des rivaux comme Remco Evenepoel. De son côté, la gauche met en avant la revanche du Français après ses récents déboires tout en intégrant, à travers sa frange modérée, la dimension de fierté nationale relayée par la Fédération française de cyclisme. Le centre adopte un ton factuel et synthétique, se focalisant sur la construction tactique de sa victoire en solitaire à Côme tout en saluant l'impact de ce succès pour le sport tricolore.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 23,
+      "summarizedArticleCount": 24,
       "everInEdition": true
     },
     {
@@ -1292,6 +1368,214 @@
       "differences": "Les différents bords politiques relatent globalement les mêmes faits concernant le retour de Sophie Adenot. La gauche met particulièrement l'accent sur la dimension humaniste et universelle de son discours et la protection de la planète. Le centre insiste sur l'aspect émotionnel et la réalité concrète de la réadaptation physique. La droite et le centre droit s'attardent quant à eux sur la rudesse de la transition vers la gravité terrestre, le centre droit soulignant en outre le caractère inédit de la durée du vol pour un Européen et la nécessité pour l'astronaute d'un apprentissage progressif semblable à celui d'un bébé.",
       "promptVersion": "sum-2",
       "summarizedArticleCount": 19,
+      "everInEdition": true
+    },
+    {
+      "id": "f63bdb821d7f",
+      "slug": "la-primaire-de-la-gauche-se-prolonge-apres-des-perturbations-inf",
+      "title": "La primaire de la gauche se prolonge après des perturbations informatiques",
+      "createdAt": "2026-10-10T09:54:25.891Z",
+      "articles": [
+        {
+          "id": "47c2c30f3cea",
+          "outletId": "le-monde",
+          "headline": "Primaire à gauche : dans les sections locales, les militants mobilisés pour offrir un cadre rassurant",
+          "url": "https://www.lemonde.fr/politique/article/2026/10/11/primaire-a-gauche-dans-les-sections-locales-les-militants-mobilises-pour-offrir-un-cadre-rassurant_6791094_823448.html",
+          "publishedAt": "2026-10-10T22:15:33.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/10/393/0/4724/2362/644/322/60/0/bae3858_upload-1-dbp0qucx0sb4-mmagnin-vote-primaire-gauche-19.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "185ee0b28ad7",
+          "outletId": "le-monde",
+          "headline": "Primaire de la gauche sociale-démocrate : plus de 100 000 personnes ont déjà voté, selon la commission d’organisation",
+          "url": "https://www.lemonde.fr/politique/article/2026/10/10/primaire-de-la-gauche-sociale-democrate-plus-de-100-000-personnes-ont-deja-vote-selon-la-commission-d-organisation_6790987_823449.html",
+          "publishedAt": "2026-10-10T21:34:46.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/04/458/0/5500/2750/644/322/60/0/f4ff8e6_upload-1-hvfdj9er9kfr-ad037-debat-primairegauche-dsc08839.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "4ac4f104dc6a",
+          "outletId": "bfmtv",
+          "headline": "Primaire sociale-démocrate: \"Raphaël Glucksmann fait partie de ceux qui me donnent espoir\", déclare Bernard Henri-Lévy, écrivain et philosophe",
+          "url": "https://www.bfmtv.com/politique/parti-socialiste/video-primaire-sociale-democrate-raphael-glucksmann-fait-partie-de-ceux-qui-me-donnent-espoir-declare-bernard-henri-levy-ecrivain-et-philosophe_VN-202610100394.html",
+          "publishedAt": "2026-10-10T20:21:24.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/1-DKTQnn2-kORwC181d45OcxT74=/0x0:1280x720/800x0/images/Primaire-sociale-democrate-Raphael-Glucksmann-fait-partie-de-ceux-qui-me-donnent-espoir-declare-Bernard-Henri-Levy-ecrivain-et-philosophe-2363010.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "e9d6615f8154",
+          "outletId": "le-monde",
+          "headline": "Primaire à gauche : plus de 91 000 personnes ont déjà voté, selon la commission d’organisation",
+          "url": "https://www.lemonde.fr/politique/article/2026/10/10/primaire-a-gauche-plus-de-71-000-personnes-ont-deja-vote-selon-la-commission-d-organisation_6790987_823448.html",
+          "publishedAt": "2026-10-10T10:26:54.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/04/458/0/5500/2750/644/322/60/0/f4ff8e6_upload-1-hvfdj9er9kfr-ad037-debat-primairegauche-dsc08839.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "be03f08c1e93",
+          "outletId": "france-24",
+          "headline": "Primaire sociale-démocrate : le vote prolongé jusqu'à dimanche soir",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261010-primaire-sociale-d%C3%A9mocrate-le-vote-prolong%C3%A9-jusqu-%C3%A0-dimanche-soir",
+          "publishedAt": "2026-10-10T09:56:38.000Z",
+          "imageUrl": "https://s.france24.com/media/display/bb485fbe-c48f-11f1-8683-53993c5f1f18/w:1024/p:16x9/FR-20261010-110652-110821-CS.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "725d8e5961b8",
+          "outletId": "huffpost",
+          "headline": "Après un faux départ, la primaire PS observe « un retour à la normale »",
+          "url": "https://www.huffingtonpost.fr/politique/article/apres-un-faux-depart-la-primaire-ps-observe-un-retour-a-la-normale_337229.html",
+          "publishedAt": "2026-10-10T08:45:52.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/10/128/0/5869/3301/0/0/60/0/31e6f19_upload-1-duid7ugrwh42-afp-20261009-hl-jmbarrere-3330947-v1-highres-franceprimairesocialiste.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "1e806cfaf473",
+          "outletId": "le-figaro",
+          "headline": "Plus de 70.000 personnes ont déjà voté pour la primaire de la gauche, qui se prolonge jusqu’à dimanche soir",
+          "url": "https://www.lefigaro.fr/politique/plus-de-70-000-personnes-ont-deja-vote-pour-la-primaire-de-la-gauche-qui-se-prolonge-jusqu-a-dimanche-soir-20261010",
+          "publishedAt": "2026-10-10T08:38:09.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/d52769087aa533b147916fef0cd43f53755382d8d66231951db9e4e83e14b014.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "5ed9af8f7539",
+          "outletId": "liberation",
+          "headline": "Primaire à gauche : plus de 70 000 votants ce samedi matin, selon les organisateurs",
+          "url": "https://www.liberation.fr/politique/primaire-a-gauche-plus-de-70-000-votants-ce-samedi-matin-selon-les-organisateurs-20261010_WCBPKKMIRZGBZEJ32SVNZQVXUM/",
+          "publishedAt": "2026-10-10T07:58:09.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "f69b1ee9be7c",
+          "outletId": "bfmtv",
+          "headline": "Primaire du Parti socialiste et de Place publique: plus de 70.000 votants comptabilisés ce samedi à 8h",
+          "url": "https://www.bfmtv.com/politique/parti-socialiste/primaire-du-parti-socialiste-et-de-place-publique-plus-de-70-000-votants-comptabilises-ce-samedi-a-8h_AN-202610100141.html",
+          "publishedAt": "2026-10-10T07:44:09.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/YDEo9hOoL9ts5eEIYzrX57hX3mI=/0x0:1920x1080/800x0/images/Olivier-Faure-Emmanuel-Maurel-Segolene-Royal-Jerome-Guedj-et-Raphael-Glucksmann-les-cinq-candidats-a-la-primaire-socialiste-image-d-illustration-2348932.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "57e0d1402619",
+          "outletId": "rfi",
+          "headline": "La primaire, une machine à perdre?",
+          "url": "https://www.rfi.fr/fr/podcasts/politique-le-choix-de-la-semaine/20261010-la-primaire-une-machine-%C3%A0-perdre",
+          "publishedAt": "2026-10-10T07:32:56.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/da761dae-c47b-11f1-9f3b-e362370cce2e/w:1024/p:16x9/AP26278288173107.jpg",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "politics"
+        },
+        {
+          "id": "df2ac83aa65b",
+          "outletId": "europe-1",
+          "headline": "Primaire sociale-démocrate : plus de 70.000 votants samedi à 08h00, selon les organisateurs",
+          "url": "https://www.europe1.fr/politique/primaire-sociale-democrate-plus-de-70000-votants-samedi-a-08h00-selon-les-organisateurs-1135964?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-10T07:16:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/10/10/080_hl_jmbarrere_3330948_1_6ac9f15e8efe1.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "10bee54bbed0",
+          "outletId": "huffpost",
+          "headline": "Le vote de la primaire socialiste prolongé d’une journée après la cyberattaque qui a touché sa plateforme",
+          "url": "https://www.huffingtonpost.fr/politique/article/le-vote-de-la-primaire-socialiste-prolonge-d-une-journee-apres-la-cyberattaque-qui-a-touche-sa-plateforme_337064.html",
+          "publishedAt": "2026-10-09T21:00:43.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/09/0/0/6000/4000/0/0/60/0/775689f_upload-1-j2x1bscds2kw-afp-20261009-d2t44g3-v1-highres-france2027policitselectionprimary.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "792005e082db",
+          "outletId": "la-croix",
+          "headline": "Primaire sociale-démocrate : le vote prolongé jusqu’à dimanche soir",
+          "url": "https://www.la-croix.com/politique/primaire-sociale-democrate-le-vote-prolonge-jusqu-a-dimanche-soir-20261009",
+          "publishedAt": "2026-10-09T18:22:18.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/09/2557862-en-raison-d-une-cyberattaque-vendredi-9-octobre-20.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "bc475b0d03b8",
+          "outletId": "lobs",
+          "headline": "Primaire de la gauche sociale-démocrate : la plateforme victime d’une cyberattaque, le vote de prolongé jusqu’à dimanche 18h",
+          "url": "https://www.nouvelobs.com/politique/20261009.OBS119050/primaire-sociale-democrate-la-plateforme-de-vote-victime-d-une-cyberattaque.html",
+          "publishedAt": "2026-10-09T18:01:54.000Z",
+          "imageUrl": "https://focus.nouvelobs.com/2026/10/09/0/439/5619/3746/0/0/60/0/697892f_upload-1-39w6p5irlabm-000-c97e896.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "bb33cb9041c4",
+          "outletId": "le-monde",
+          "headline": "Primaire à gauche : le vote est prolongé jusqu’à dimanche 18 heures, en raison de la cyberattaque qui a visé la plateforme",
+          "url": "https://www.lemonde.fr/politique/article/2026/10/09/primaire-a-gauche-le-vote-prolonge-jusqu-a-dimanche-18-heures-en-raison-de-la-cyberattaque-qui-a-vise-la-plateforme_6790554_823449.html",
+          "publishedAt": "2026-10-09T17:49:57.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/04/458/0/5500/2750/644/322/60/0/81a90af_upload-1-iy2cf9wybici-ad033-debat-primairegauche-dsc08818.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "46292347b6c7",
+          "outletId": "le-jdd",
+          "headline": "Primaire de la gauche : la plateforme de vote victime d’une cyberattaque à son ouverture",
+          "url": "https://www.lejdd.fr/politique/primaire-de-la-gauche-la-plateforme-de-vote-victime-dune-cyberattaque-a-son-ouverture-185595",
+          "publishedAt": "2026-10-09T10:24:15.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/09/11/000_a2rq68d.jpg?VersionId=IwqXJpkdJCuDHLVuU1uJPigMH1jZJvtJ",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "section": "politics",
+      "summaries": {
+        "gauche": [
+          "La mobilisation sur le terrain a permis de sécuriser le processus après l'incident initial.",
+          "Le nombre de participants a franchi le cap des 105000 votants samedi soir.",
+          "La participation s'établit désormais à plus des trois quarts du total des inscrits."
+        ],
+        "centre": [
+          "Le parquet de Paris a ouvert une enquête judiciaire suite à l'attaque informatique contre le portail de vote.",
+          "L'investigation sur la cyberattaque a été confiée aux services spécialisés de l'Office anti-cybercriminalité.",
+          "Le scrutin se poursuit avec un niveau de participation en forte hausse et des soutiens affichés pour certains candidats."
+        ],
+        "droite": [
+          "La plateforme de vote socialiste a fait l'objet d'une cyberattaque saturant le site par des connexions factices.",
+          "Les organisateurs ont repoussé la clôture du scrutin à dimanche soir afin de garantir l'accès aux électeurs.",
+          "La participation dépasse désormais les 91000 bulletins enregistrés sur un total de 140000 inscrits."
+        ]
+      },
+      "differences": "La gauche et le centre soulignent la forte accélération de la participation avec plus de 105000 suffrages exprimés, tandis que le centre aborde également l'ouverture d'une enquête judiciaire par le parquet de Paris suite à la cyberattaque. La droite maintient son focus initial sur la perturbation technique et un volume de votants actualisé à 91000 participants.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 16,
       "everInEdition": true
     },
     {
@@ -1618,180 +1902,6 @@
         ]
       },
       "differences": "Le camp de droite insiste fortement sur la récurrence des assauts et qualifie l'opération de frappe délibérée contre des cibles civiles, en y ajoutant le contexte des récents décès de la semaine. Le centre se focalise principalement sur l'urgence sanitaire et la confirmation de l'origine du tir par des sources diplomatiques. De son côté, la gauche met l'accent sur les consignes de sécurité des ambassades et resitue l'événement dans le cadre plus large du conflit yéménite et des rivalités régionales avec l'Iran.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 13,
-      "everInEdition": true
-    },
-    {
-      "id": "f63bdb821d7f",
-      "slug": "la-primaire-de-la-gauche-se-prolonge-apres-des-perturbations-inf",
-      "title": "La primaire de la gauche se prolonge après des perturbations informatiques",
-      "createdAt": "2026-10-10T09:54:25.891Z",
-      "articles": [
-        {
-          "id": "e9d6615f8154",
-          "outletId": "le-monde",
-          "headline": "Primaire à gauche : plus de 91 000 personnes ont déjà voté, selon la commission d’organisation",
-          "url": "https://www.lemonde.fr/politique/article/2026/10/10/primaire-a-gauche-plus-de-71-000-personnes-ont-deja-vote-selon-la-commission-d-organisation_6790987_823448.html",
-          "publishedAt": "2026-10-10T10:26:54.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/04/458/0/5500/2750/644/322/60/0/f4ff8e6_upload-1-hvfdj9er9kfr-ad037-debat-primairegauche-dsc08839.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "be03f08c1e93",
-          "outletId": "france-24",
-          "headline": "Primaire sociale-démocrate : le vote prolongé jusqu'à dimanche soir",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261010-primaire-sociale-d%C3%A9mocrate-le-vote-prolong%C3%A9-jusqu-%C3%A0-dimanche-soir",
-          "publishedAt": "2026-10-10T09:56:38.000Z",
-          "imageUrl": "https://s.france24.com/media/display/bb485fbe-c48f-11f1-8683-53993c5f1f18/w:1024/p:16x9/FR-20261010-110652-110821-CS.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "725d8e5961b8",
-          "outletId": "huffpost",
-          "headline": "Après un faux départ, la primaire PS observe « un retour à la normale »",
-          "url": "https://www.huffingtonpost.fr/politique/article/apres-un-faux-depart-la-primaire-ps-observe-un-retour-a-la-normale_337229.html",
-          "publishedAt": "2026-10-10T08:45:52.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/10/128/0/5869/3301/0/0/60/0/31e6f19_upload-1-duid7ugrwh42-afp-20261009-hl-jmbarrere-3330947-v1-highres-franceprimairesocialiste.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "1e806cfaf473",
-          "outletId": "le-figaro",
-          "headline": "Plus de 70.000 personnes ont déjà voté pour la primaire de la gauche, qui se prolonge jusqu’à dimanche soir",
-          "url": "https://www.lefigaro.fr/politique/plus-de-70-000-personnes-ont-deja-vote-pour-la-primaire-de-la-gauche-qui-se-prolonge-jusqu-a-dimanche-soir-20261010",
-          "publishedAt": "2026-10-10T08:38:09.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/d52769087aa533b147916fef0cd43f53755382d8d66231951db9e4e83e14b014.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "5ed9af8f7539",
-          "outletId": "liberation",
-          "headline": "Primaire à gauche : plus de 70 000 votants ce samedi matin, selon les organisateurs",
-          "url": "https://www.liberation.fr/politique/primaire-a-gauche-plus-de-70-000-votants-ce-samedi-matin-selon-les-organisateurs-20261010_WCBPKKMIRZGBZEJ32SVNZQVXUM/",
-          "publishedAt": "2026-10-10T07:58:09.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "f69b1ee9be7c",
-          "outletId": "bfmtv",
-          "headline": "Primaire du Parti socialiste et de Place publique: plus de 70.000 votants comptabilisés ce samedi à 8h",
-          "url": "https://www.bfmtv.com/politique/parti-socialiste/primaire-du-parti-socialiste-et-de-place-publique-plus-de-70-000-votants-comptabilises-ce-samedi-a-8h_AN-202610100141.html",
-          "publishedAt": "2026-10-10T07:44:09.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/YDEo9hOoL9ts5eEIYzrX57hX3mI=/0x0:1920x1080/800x0/images/Olivier-Faure-Emmanuel-Maurel-Segolene-Royal-Jerome-Guedj-et-Raphael-Glucksmann-les-cinq-candidats-a-la-primaire-socialiste-image-d-illustration-2348932.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "57e0d1402619",
-          "outletId": "rfi",
-          "headline": "La primaire, une machine à perdre?",
-          "url": "https://www.rfi.fr/fr/podcasts/politique-le-choix-de-la-semaine/20261010-la-primaire-une-machine-%C3%A0-perdre",
-          "publishedAt": "2026-10-10T07:32:56.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/da761dae-c47b-11f1-9f3b-e362370cce2e/w:1024/p:16x9/AP26278288173107.jpg",
-          "frontPage": false,
-          "kind": "opinion",
-          "section": "politics"
-        },
-        {
-          "id": "df2ac83aa65b",
-          "outletId": "europe-1",
-          "headline": "Primaire sociale-démocrate : plus de 70.000 votants samedi à 08h00, selon les organisateurs",
-          "url": "https://www.europe1.fr/politique/primaire-sociale-democrate-plus-de-70000-votants-samedi-a-08h00-selon-les-organisateurs-1135964?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-10T07:16:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/10/10/080_hl_jmbarrere_3330948_1_6ac9f15e8efe1.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "10bee54bbed0",
-          "outletId": "huffpost",
-          "headline": "Le vote de la primaire socialiste prolongé d’une journée après la cyberattaque qui a touché sa plateforme",
-          "url": "https://www.huffingtonpost.fr/politique/article/le-vote-de-la-primaire-socialiste-prolonge-d-une-journee-apres-la-cyberattaque-qui-a-touche-sa-plateforme_337064.html",
-          "publishedAt": "2026-10-09T21:00:43.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/09/0/0/6000/4000/0/0/60/0/775689f_upload-1-j2x1bscds2kw-afp-20261009-d2t44g3-v1-highres-france2027policitselectionprimary.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "792005e082db",
-          "outletId": "la-croix",
-          "headline": "Primaire sociale-démocrate : le vote prolongé jusqu’à dimanche soir",
-          "url": "https://www.la-croix.com/politique/primaire-sociale-democrate-le-vote-prolonge-jusqu-a-dimanche-soir-20261009",
-          "publishedAt": "2026-10-09T18:22:18.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/09/2557862-en-raison-d-une-cyberattaque-vendredi-9-octobre-20.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "bc475b0d03b8",
-          "outletId": "lobs",
-          "headline": "Primaire de la gauche sociale-démocrate : la plateforme victime d’une cyberattaque, le vote de prolongé jusqu’à dimanche 18h",
-          "url": "https://www.nouvelobs.com/politique/20261009.OBS119050/primaire-sociale-democrate-la-plateforme-de-vote-victime-d-une-cyberattaque.html",
-          "publishedAt": "2026-10-09T18:01:54.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/10/09/0/439/5619/3746/0/0/60/0/697892f_upload-1-39w6p5irlabm-000-c97e896.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "bb33cb9041c4",
-          "outletId": "le-monde",
-          "headline": "Primaire à gauche : le vote est prolongé jusqu’à dimanche 18 heures, en raison de la cyberattaque qui a visé la plateforme",
-          "url": "https://www.lemonde.fr/politique/article/2026/10/09/primaire-a-gauche-le-vote-prolonge-jusqu-a-dimanche-18-heures-en-raison-de-la-cyberattaque-qui-a-vise-la-plateforme_6790554_823449.html",
-          "publishedAt": "2026-10-09T17:49:57.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/04/458/0/5500/2750/644/322/60/0/81a90af_upload-1-iy2cf9wybici-ad033-debat-primairegauche-dsc08818.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "46292347b6c7",
-          "outletId": "le-jdd",
-          "headline": "Primaire de la gauche : la plateforme de vote victime d’une cyberattaque à son ouverture",
-          "url": "https://www.lejdd.fr/politique/primaire-de-la-gauche-la-plateforme-de-vote-victime-dune-cyberattaque-a-son-ouverture-185595",
-          "publishedAt": "2026-10-09T10:24:15.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/09/11/000_a2rq68d.jpg?VersionId=IwqXJpkdJCuDHLVuU1uJPigMH1jZJvtJ",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "section": "politics",
-      "summaries": {
-        "gauche": [
-          "Le scrutin en ligne a connu des perturbations informatiques dès son ouverture.",
-          "La consultation a été prolongée jusqu'à dimanche soir pour compenser ces ralentissements.",
-          "Le nombre de votants a nettement progressé pour dépasser les 91000 participants."
-        ],
-        "centre": [
-          "Le premier tour de la primaire se poursuit tout le week-end malgré un incident informatique initial.",
-          "La commission d'organisation fait état de plus de 91000 suffrages exprimés, représentant plus de la moitié des inscrits.",
-          "L'attention demeure portée sur la capacité de cette démarche à rassembler durablement les forces progressistes."
-        ],
-        "droite": [
-          "La plateforme de vote socialiste a fait l'objet d'une cyberattaque saturant le site par des connexions factices.",
-          "Les organisateurs ont repoussé la clôture du scrutin à dimanche soir afin de garantir l'accès aux électeurs.",
-          "La participation dépasse désormais les 91000 bulletins enregistrés sur un total de 140000 inscrits."
-        ]
-      },
-      "differences": "L'ensemble des camps s'accorde sur la chronologie des faits, de la cyberattaque initiale à la prolongation du scrutin. La gauche se focalise principalement sur la reprise positive de la participation, tandis que le centre et la droite mettent davantage en lumière les volumes précis de votants et persistent à s'interroger sur les fractures politiques potentielles que ce type de consultation pourrait engendrer.",
       "promptVersion": "sum-2",
       "summarizedArticleCount": 13,
       "everInEdition": true
@@ -2233,6 +2343,223 @@
       "everInEdition": true
     },
     {
+      "id": "cfc5db14ad09",
+      "slug": "mathilde-panot-refuse-de-porter-le-ruban-rose-d-octobre-rose",
+      "title": "Mathilde Panot refuse de porter le ruban rose d'Octobre rose",
+      "createdAt": "2026-10-10T15:25:41.670Z",
+      "articles": [
+        {
+          "id": "24f566c64533",
+          "outletId": "le-jdd",
+          "headline": "«Le cancer est une maladie politique» : Mathilde Panot refuse de porter le ruban d’Octobre Rose et suscite un tollé",
+          "url": "https://www.lejdd.fr/politique/le-cancer-est-une-maladie-politique-mathilde-panot-refuse-de-porter-le-ruban-doctobre-rose-et-suscite-un-tolle-185682",
+          "publishedAt": "2026-10-10T21:06:24.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/10/17/080_hl_vhaffner_3321511.jpg?VersionId=.QS0sjkoC3Dk6QxRkX8SROzyv8ivEElk",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "11f37128f4c5",
+          "outletId": "bfmtv",
+          "headline": "\"Je ne porterai pas le ruban rose\": Mathilde Panot critique la campagne contre le cancer du sein et fait polémique",
+          "url": "https://www.bfmtv.com/politique/la-france-insoumise/je-ne-porterai-pas-le-ruban-rose-mathilde-panot-critique-la-campagne-contre-le-cancer-du-sein-et-fait-polemique_AN-202610100397.html",
+          "publishedAt": "2026-10-10T20:30:53.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/ENSwVfYs-LQzx3MbFkMaYaOP1cQ=/0x212:2048x1364/800x0/images/Mathilde-Panot-cheffe-des-deputes-de-La-France-insoumise-a-l-Assemblee-nationale-le-30-juin-2026-2345670.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "90fbadc0db87",
+          "outletId": "le-monde",
+          "headline": "Octobre rose : Mathilde Panot refuse de porter le ruban, tollé au gouvernement et au RN",
+          "url": "https://www.lemonde.fr/politique/article/2026/10/10/octobre-rose-mathilde-panot-refuse-de-porter-le-ruban-tolle-au-gouvernement-et-au-rn_6791027_823448.html",
+          "publishedAt": "2026-10-10T20:15:40.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/08/5/0/3914/1957/644/322/60/0/85a35ed_ftp-1-dr4ypjsq3t95-5297365-01-06.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "2a7527568873",
+          "outletId": "franceinfo",
+          "headline": "\"Pour que la lutte contre le cancer ne soit pas du vernis rose\" : la député LFI Mathilde Panot crée la polémique en attaquant la campagne Octobre rose",
+          "url": "https://www.franceinfo.fr/politique/la-france-insoumise/pour-que-la-lutte-contre-le-cancer-ne-soit-pas-du-vernis-rose-la-depute-lfi-mathilde-panot-cree-la-polemique-en-attaquant-la-campagne-octobre-rose_8231695.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-10T17:45:19.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/D6Az37XEUzRDYfovA9Qf6Tst93U/0x0:1024x576/432x243/filters:format(jpg)/2026/10/10/6aca5dae9b47f231251904.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "6577a4026d83",
+          "outletId": "huffpost",
+          "headline": "La députée Mathilde Panot sous le feu des critiques après avoir assimilé le ruban d’Octobre rose à Israël",
+          "url": "https://www.huffingtonpost.fr/politique/article/la-deputee-mathilde-panot-sous-le-feu-des-critiques-apres-avoir-assimile-le-ruban-d-octobre-rose-a-israel_337394.html",
+          "publishedAt": "2026-10-10T15:46:09.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/10/0/0/1414/795/0/0/60/0/b0d7b61_upload-1-rkd23uolg04d-screenshot-2026-10-10-14-34-47.png",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "993c7387eb34",
+          "outletId": "le-figaro",
+          "headline": "«Le cancer est une maladie politique» :  Mathilde Panot crée la polémique en refusant de porter le ruban d’Octobre rose",
+          "url": "https://www.lefigaro.fr/politique/le-cancer-est-une-maladie-politique-mathilde-panot-cree-la-polemique-en-refusant-de-porter-le-ruban-d-octobre-rose-20261010",
+          "publishedAt": "2026-10-10T14:48:38.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/1a6c8b1d3d5752432019714a0572ed24366d67579d577b08a5b43fe7e18abc5e.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "a420a182ef9b",
+          "outletId": "cnews",
+          "headline": "Octobre Rose : la nouvelle provocation de la députée LFI Mathilde Panot, qui refuse de porter le ruban rose, suscite de vives critiques",
+          "url": "https://www.cnews.fr/france/2026-10-10/octobre-rose-la-nouvelle-provocation-de-la-deputee-lfi-mathilde-panot-qui-refuse",
+          "publishedAt": "2026-10-10T14:40:38.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/075_farzat-notitle260617_npmey-taille1200_6aca4df8d0b50.jpg?itok=frSYJSGR",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "La cheffe des députés insoumis a annoncé qu'elle ne porterait pas le ruban rose pour marquer son opposition à la campagne de sensibilisation.",
+          "Elle motive son refus en liant la campagne à des intérêts industriels contestés et à des critiques géopolitiques.",
+          "Ses déclarations ont provoqué une vive réprobation de la part du gouvernement et des partis d'opposition."
+        ],
+        "centre": [
+          "Mathilde Panot a déclenché une forte polémique en refusant d'arborer le symbole de la lutte contre le cancer du sein.",
+          "Ses attaques contre la campagne ont été qualifiées de cyniques par ses détracteurs et jugées approximatives par la santé publique.",
+          "Le positionnement de l'élue a suscité des accusations d'antisémitisme de la part de personnalités politiques."
+        ],
+        "droite": [
+          "La décision de l'élue insoumise de rejeter le ruban rose a provoqué un tollé général dans la classe politique.",
+          "Les médias conservateurs qualifient cette position de provocation politique sur un enjeu de santé publique majeur.",
+          "Les commentateurs soulignent le décalage des arguments invoqués par rapport aux véritables enjeux de la prévention du cancer du sein."
+        ]
+      },
+      "differences": "La droite et le centre qualifient unanimement la prise de position de provocation et soulignent le tollé général qu'elle suscite, en insistant sur le caractère inapproprié du refus face à un enjeu de santé publique. À gauche, les médias mettent plutôt l'accent sur les justifications avancées par la députée concernant ses critiques envers l'industrie et la gestion de la campagne, tout en rapportant les vives condamnations de ses opposants.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 7
+    },
+    {
+      "id": "eef01f90ac6d",
+      "slug": "la-sud-africaine-navi-pillay-recoit-le-prix-nobel-de-la-paix-202",
+      "title": "La sud-africaine Navi Pillay reçoit le prix Nobel de la paix 2026",
+      "createdAt": "2026-10-10T09:54:25.891Z",
+      "articles": [
+        {
+          "id": "6d1070afa4a4",
+          "outletId": "causeur",
+          "headline": "Le Nobel de la bonne conscience ?",
+          "url": "https://www.causeur.fr/navi-pillay-le-nobel-de-la-bonne-conscience-335265",
+          "publishedAt": "2026-10-10T20:00:00.000Z",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "world"
+        },
+        {
+          "id": "46c1bccd4210",
+          "outletId": "france-24",
+          "headline": "Nobel de la paix 2026 : la sud-africaine Navi Pillay récompensée",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261010-nobel-de-la-paix-2026-la-sud-africaine-navi-pillay-r%C3%A9compens%C3%A9e",
+          "publishedAt": "2026-10-10T09:10:50.000Z",
+          "imageUrl": "https://s.france24.com/media/display/8de5b158-c40c-11f1-8abc-77317c09f325/w:1024/p:16x9/2026-10-09T091256Z-2108488287-RC2LZNANWBG4-RTRMADP-3-NOBEL-PRIZE-PEACE.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "c0ab350efff9",
+          "outletId": "tf1-info",
+          "headline": "Donald Trump s'indigne à nouveau de ne pas avoir reçu le prix Nobel de la paix",
+          "url": "https://www.tf1info.fr/international/videos/video-donald-trump-s-indigne-a-nouveau-de-ne-pas-avoir-recu-le-prix-nobel-de-la-paix-1423-2469152.html",
+          "publishedAt": "2026-10-10T08:35:11.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/576/donald-trump-s-indigne-a-nouveau-de-ne-pas-avoir-recu-le-prix-nobel-de-la-paix-4bc372-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "b401272bbafd",
+          "outletId": "huffpost",
+          "headline": "Prix Nobel de la paix : mauvais joueur, Trump fulmine et dénigre la récompense (une fois de plus)",
+          "url": "https://www.huffingtonpost.fr/international/article/prix-nobel-de-la-paix-mauvais-joueur-trump-fulmine-et-denigre-la-recompense-une-fois-de-plus_337163.html",
+          "publishedAt": "2026-10-10T06:48:37.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/09/09/169/0/6129/3447/0/0/60/0/8310982_upload-1-gthdigt913fp-afp-20260907-c7lg3u6-v1-highres-uspresidentdonaldtrumpreturnstothewhitehouseaft.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "082e8c1c59a6",
+          "outletId": "le-figaro",
+          "headline": "«Le prix a été discrédité à jamais» : Trump s'indigne à nouveau de ne pas avoir reçu le Nobel de la paix",
+          "url": "https://www.lefigaro.fr/international/le-prix-a-ete-discredite-a-jamais-trump-s-indigne-a-nouveau-de-ne-pas-avoir-recu-le-nobel-de-la-paix-20261010",
+          "publishedAt": "2026-10-10T06:29:40.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/c8d199c9932b762f0f2fbbe575237ee9f2f65fe416ee937cf2edf49d03294436.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "c5640c8f6b81",
+          "outletId": "cnews",
+          "headline": "Une «décision honteuse et embarrassante» : Donald Trump s'indigne à nouveau de ne pas avoir été choisi pour le prix Nobel de la Paix",
+          "url": "https://www.cnews.fr/monde/2026-10-10/une-decision-honteuse-et-embarrassante-donald-trump-sindigne-nouveau-de-ne-pas",
+          "publishedAt": "2026-10-10T04:58:33.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-09t213346z_505781840_rc2xznacvz1q_rtrmadp_3_usa-trump-taille1200_6ac9bfa54acc1.jpg?itok=IoLt52UB",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "537007276b55",
+          "outletId": "rfi",
+          "headline": "Agnès Callamard: avec Navi Pillay, «le comité Nobel n'aurait pas pu choisir quelqu'un de plus important»",
+          "url": "https://www.rfi.fr/fr/podcasts/le-grand-invit%C3%A9-afrique/20261010-agn%C3%A8s-callamard-avec-navy-pillay-le-comit%C3%A9-nobel-n-aurait-pas-pu-choisir-quelqu-un-de-plus-important",
+          "publishedAt": "2026-10-10T04:39:47.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/6a56d076-15d2-11f0-896b-005056bfb2b6/w:1024/p:16x9/capture-47407622667f760afb65d48.04762055.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "section": "world",
+      "summaries": {
+        "gauche": [
+          "Le prix Nobel de la paix a été attribué à la juriste sud-africaine Navi Pillay pour son engagement en faveur des droits humains et de la justice internationale.",
+          "Le président américain Donald Trump a vivement critiqué cette attribution, affirmant qu'il méritait la distinction à la place.",
+          "Les médias de ce bord qualifient la réaction du dirigeant américain de comportement de mauvais joueur et soulignent son mépris pour la lauréate."
+        ],
+        "centre": [
+          "La juriste et ancienne Haute-Commissaire aux droits de l'homme de l'ONU, Navi Pillay, a obtenu le prix Nobel de la paix 2026.",
+          "Le comité Nobel salue son parcours consacré à la poursuite des crimes de guerre et des crimes contre l'humanité.",
+          "Amnesty International salue un choix fort en faveur de la justice internationale dans un contexte de contestation mondiale.",
+          "En parallèle, Donald Trump a exprimé son indignation publique de ne pas avoir reçu la récompense, déclarant ne pas connaître la lauréate."
+        ],
+        "droite": [
+          "Navi Pillay, avocate et ancienne juge sud-africaine, a reçu le prix Nobel de la paix pour son action juridique internationale.",
+          "Donald Trump s'est indigné de cette décision lors d'un meeting, estimant qu'il aurait dû obtenir la distinction pour avoir résolu de nombreux conflits.",
+          "Le président américain a qualifié le choix du comité norvégien de honteux et embarrassant, affirmant que le prix est désormais discrédité.",
+          "Certaines analyses de ce bord qualifient le choix du Nobel de décision de bonne conscience, remettant en question la portée réelle de la récompense."
+        ]
+      },
+      "differences": "Les médias de gauche, du centre et de droite s'accordent sur l'attribution du Nobel à Navi Pillay et rapportent la réaction indignée de Donald Trump, tout en adoptant des grilles de lecture distinctes. La gauche insiste particulièrement sur le comportement perçu comme immature du président américain, qualifiant ses déclarations de dénigrement. Le centre se focalise davantage sur la portée institutionnelle de la récompense et sur l'importance de la justice internationale, reléguant la réaction de Trump au second plan. La droite et le centre droit, enrichis par de nouvelles tribunes critiques, contextualisent l'événement en qualifiant le choix du comité d'attribution de bonne conscience, remettant ainsi en cause la crédibilité même de la distinction.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 7,
+      "everInEdition": true
+    },
+    {
       "id": "914cb337c047",
       "slug": "des-opposants-mobilises-contre-l-autoroute-a69-avant-sa-mise-en",
       "title": "Des opposants mobilisés contre l'autoroute A69 avant sa mise en service",
@@ -2608,102 +2935,113 @@
       "everInEdition": true
     },
     {
-      "id": "e9194d16acaa",
-      "slug": "lyceen-ampute-d-une-main-a-lens-le-tir-de-grenade-etait-conforme",
-      "title": "Lycéen amputé d’une main à Lens : le tir de grenade était « conforme » selon le parquet",
+      "id": "6f4cb03ef3eb",
+      "slug": "l-ouragan-isaias-frappe-le-sud-des-etats-unis-et-perturbe-la-pro",
+      "title": "L'ouragan Isaias frappe le sud des États-Unis et perturbe la production",
       "createdAt": "2026-10-10T09:54:25.891Z",
       "articles": [
         {
-          "id": "4e63d3429e8a",
-          "outletId": "tf1-info",
-          "headline": "Le lycéen amputé d'une main à Lens \"conteste formellement\" avoir ramassé la grenade assourdissante",
-          "url": "https://www.tf1info.fr/societe/mouvement-lyceen-evan-le-lyceen-ampute-d-une-main-a-lens-dement-avoir-ramasse-la-grenade-assourdissante-comme-l-affirme-le-procureur-2469229.html",
-          "publishedAt": "2026-10-10T19:50:22.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/lyceens-mobilisation-paris-2026-10-08-d46948-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "6e93df5fff5a",
-          "outletId": "le-figaro",
-          "headline": "Le lycéen amputé d'une main à Lens dément avoir ramassé la grenade, selon son avocate",
-          "url": "https://www.lefigaro.fr/actualite-france/le-lyceen-ampute-d-une-main-a-lens-dement-avoir-ramasse-la-grenade-selon-son-avocate-20261010",
-          "publishedAt": "2026-10-10T19:03:03.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/020f12500feda42a3a514355c160e4eb3a8e52a8384ca9e5591b90692f333662.JPG",
-          "frontPage": true,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "0d4a5beba6eb",
+          "id": "c32bc73ffdc1",
           "outletId": "le-monde",
-          "headline": "Le lycéen amputé d’une main à Lens « dément avoir ramassé la grenade » et « nie toute participation à des violences », affirme son avocate",
-          "url": "https://www.lemonde.fr/societe/article/2026/10/10/le-lyceen-ampute-d-une-main-a-lens-dement-avoir-ramasse-la-grenade-et-nie-toute-participation-a-des-violences-affirme-son-avocate_6791026_3224.html",
-          "publishedAt": "2026-10-10T18:48:21.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/09/24/0/7389/3694/644/322/60/0/e1f4d19_ftp-1-3joq00dwca8q-5305622-01-06.jpg",
+          "headline": "La tempête Isaias a balayé le sud des Etats-Unis, faisant trois morts et provoquant de vastes pannes de courant",
+          "url": "https://www.lemonde.fr/international/article/2026/10/11/la-tempete-isaias-a-balaye-le-sud-des-etats-unis-faisant-trois-morts-et-provoquant-de-vastes-pannes-de-courant_6791060_3210.html",
+          "publishedAt": "2026-10-10T22:11:52.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/10/458/0/6000/3000/644/322/60/0/aecd7c8_ftp-1-28c53kgzzdpg-5318762-01-06.jpg",
           "frontPage": true,
           "kind": "news",
-          "section": "misc",
+          "section": "world",
           "everFrontPage": true
         },
         {
-          "id": "47b9b3254327",
-          "outletId": "franceinfo",
-          "headline": "L'adolescent à la main arrachée \"conteste formellement\" avoir ramassé la grenade en marge du blocage de son lycée, selon son avocate",
-          "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/l-adolescent-a-la-main-arrachee-conteste-formellement-avoir-ramasse-la-grenade-en-marge-du-blocage-de-son-lycee-selon-son-avocate_8231887.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-10T18:33:24.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/3E4EQ--8TTrxRmr8HOISMPiScZY/0x29:5469x3105/432x243/filters:format(jpg)/2026/10/06/6ac499ba5d7ce558565779.jpg",
+          "id": "d16f2506f2df",
+          "outletId": "ouest-france",
+          "headline": "Tempête Isaias : déjà trois morts aux États-Unis, des crues et tornades encore possibles ce week-end",
+          "url": "https://www.ouest-france.fr/meteo/tempete/tempete-isaias-deja-trois-morts-aux-etats-unis-des-crues-et-tornades-encore-possibles-ce-week-end-7ed66ba2-c4da-11f1-bba2-d026901fbfe4?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-10T19:50:48.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjVhZjMwZDEwYWE5MWEyZWE2ZGUwNzNiYTBiNzQzMDI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=cfdef56c2079feb970606c1674016656a6078bb886e47eb7409817555c1bea77",
           "frontPage": false,
           "kind": "news",
-          "section": "misc"
+          "section": "world",
+          "everFrontPage": true
         },
         {
-          "id": "1706040994c6",
-          "outletId": "la-croix",
-          "headline": "Lycéen amputé d’une main à Lens : le tir de grenade était « conforme » selon le parquet",
-          "url": "https://www.la-croix.com/societe/lyceen-ampute-d-une-main-a-lens-le-tir-de-grenade-etait-conforme-selon-le-parquet-20261010",
-          "publishedAt": "2026-10-10T09:22:07.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/10/2558151-un-adolescent-de-15-ans-a-eu-la-main-arrachee-lors.jpg",
+          "id": "2bd807a6c438",
+          "outletId": "bfmtv",
+          "headline": "États-Unis: l'ouragan Isaias touche terre en Floride, plusieurs états en état d'urgence",
+          "url": "https://www.bfmtv.com/international/amerique-nord/etats-unis/video-etats-unis-l-ouragan-isaias-touche-terre-en-floride-plusieurs-etats-en-etat-d-urgence_VN-202610100275.html",
+          "publishedAt": "2026-10-10T15:02:26.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/EFIeZ2cxSOWhR7RRWj99WlTNAyQ=/0x0:1280x720/800x0/images/Etats-Unis-l-ouragan-Isaias-touche-terre-en-Floride-plusieurs-etats-en-etat-d-urgence-2362908.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "misc"
+          "section": "world"
         },
         {
-          "id": "c4a8180b64c9",
-          "outletId": "le-parisien",
-          "headline": "Le lycéen amputé d’une main à Lens dément avoir ramassé la grenade, affirme son avocate",
-          "url": "https://www.leparisien.fr/faits-divers/le-lyceen-ampute-dune-main-a-lens-dement-avoir-ramasse-la-grenade-affirme-son-avocate-10-10-2026-76IH5TTIR5H5JP6522Z63344QU.php",
-          "publishedAt": "2026-10-09T22:00:00.000Z",
+          "id": "32864426b28f",
+          "outletId": "le-figaro",
+          "headline": "Trombes d’eau, vents violents, arbres arrachés… Les premières images de l’ouragan Isaias en Floride",
+          "url": "https://www.lefigaro.fr/international/trombes-d-eau-vents-violents-arbres-arraches-les-premieres-images-de-l-ouragan-isaias-en-floride-20261010",
+          "publishedAt": "2026-10-10T10:42:57.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/f60a564db5da6fd7aba21881f6d0396bd55ad9cf7eb8ec8abd46d24900fc1d91.jpg",
           "frontPage": false,
-          "dayPrecision": true,
           "kind": "news",
-          "section": "misc"
+          "section": "world"
+        },
+        {
+          "id": "3ed31cf51a49",
+          "outletId": "le-figaro",
+          "headline": "Inondations et vents à 165 km/h : l'ouragan Isaias arrive aux États-Unis par la Floride",
+          "url": "https://www.lefigaro.fr/international/inondations-et-vents-a-165-km-h-l-ouragan-isaias-arrive-aux-etats-unis-par-la-floride-20261010",
+          "publishedAt": "2026-10-10T09:25:51.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/25b992098f1228a4fb65dcf06682ccc1288e7533750287977b72c9a1b7dba25c.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "883eb574069f",
+          "outletId": "cnews",
+          "headline": "«Des choses volent à toute vitesse» : les images impressionnantes de l'ouragan Isaias qui touche le sud des Etats-Unis (vidéo)",
+          "url": "https://www.cnews.fr/monde/2026-10-10/des-choses-volent-toute-vitesse-les-images-impressionnantes-de-louragan-isaias-qui",
+          "publishedAt": "2026-10-10T06:42:50.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-10t044727z_1880955772_rc240oan3w3n_rtrmadp_3_storm-isaias_1_6ac9d0e5a9080.jpg?itok=v4NhYoIb",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "7b5003f1cb47",
+          "outletId": "france-24",
+          "headline": "Aux États-Unis, l'ouragan Isaias s'affaiblit après avoir touché terre en Floride",
+          "url": "https://www.france24.com/fr/am%C3%A9riques/20261010-%C3%A9tats-unis-l-ouragan-isaias-s-affaiblit-apr%C3%A8s-avoir-touch%C3%A9-terre-en-floride",
+          "publishedAt": "2026-10-10T05:22:13.000Z",
+          "imageUrl": "https://s.france24.com/media/display/1d54634a-c46a-11f1-8131-53993c5f1f18/w:1024/p:16x9/AP26282510466419.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
         }
       ],
-      "section": "misc",
+      "section": "world",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "L'avocate de l'adolescent rejette catégoriquement la version officielle et affirme qu'il n'a pas saisi l'explosif.",
-          "La défense insiste sur le fait que le jeune homme nie toute implication dans les actes de violence.",
-          "Le conseil de la victime rappelle le statut de la victime et critique l'usage de la force lors de ces opérations policières."
+          "Le passage de la tempête Isaias dans le sud du pays a entraîné la mort de trois personnes.",
+          "Des pannes de courant massives ont touché des centaines de milliers d'abonnés.",
+          "La Floride concentre la majorité des foyers et des commerces actuellement privés d'électricité."
         ],
         "centre": [
-          "Le parquet de Béthune maintient que le tir de la grenade assourdissante respectait les procédures en vigueur.",
-          "L'enquête initiale suggère que le lycéen aurait manipulé l'objet après son arrivée au sol, ce qui suscite de vives controverses.",
-          "L'affaire relance les interrogations avec l'ouverture de multiples enquêtes par l'IGPN concernant les interventions auprès des lycéens."
+          "La trajectoire de la perturbation météorologique a continué de provoquer des victimes et des alertes dans le sud-est américain.",
+          "Plusieurs gouvernements locaux ont activé l'état d'urgence pour faire face aux risques de crues et de tornades.",
+          "Le système dépressionnaire a vu sa force diminuer après son impact initial sur les littoraux de la Floride."
         ],
         "droite": [
-          "La défense de l'élève conteste publiquement l'idée qu'il se soit emparé du projectile pyrotechnique.",
-          "Le parquet valide la régularité de l'intervention des forces de l'ordre face au lycéen grièvement blessé à la main.",
-          "Les investigations préliminaires s'appuient sur des témoignages concordants indiquant que la grenade reposait déjà par terre."
+          "Les premières rafales ont engendré des ravages considérables, caractérisés par des chutes d'arbres et des vents destructeurs.",
+          "La confrontation avec les intempéries s'est traduite par des inondations généralisées et des vitesses de vent extrêmes.",
+          "Des documents visuels marquants mettent en relief la force destructrice des éléments et l'envol de débris."
         ]
       },
-      "differences": "La gauche met principalement en avant la défense de l'adolescent et ses dénégations totales face aux accusations du parquet, en insistant sur son statut de victime et la disproportionnalité supposée de la riposte policière. À l'inverse, le centre et la droite se font l'écho des conclusions du parquet de Béthune qualifiant le tir de conforme, tout en rapportant les versions divergentes sur la manipulation ou non de la grenade par le lycéen.",
+      "differences": "Le camp de gauche met en avant le bilan humain lourd et les conséquences matérielles directes comme les pannes de courant géantes en Floride, d'après Le Monde. De son côté, le camp du centre retient l'évolution institutionnelle de la crise avec la déclaration de l'état d'urgence et le suivi de la trajectoire de la tempête. Enfin, le camp de la droite, relayé par Le Figaro et CNews, privilégie un traitement visuel et spectaculaire axé sur la violence immédiate des intempéries et les dégâts en Floride.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 6
+      "summarizedArticleCount": 7
     },
     {
       "id": "6df5d8e8a7d0",
@@ -2711,6 +3049,17 @@
       "title": "Les forces de l'ordre évacuent un bâtiment de l'université de Nantes occupé",
       "createdAt": "2026-10-10T09:54:25.891Z",
       "articles": [
+        {
+          "id": "de7ce81b8f04",
+          "outletId": "bfmtv",
+          "headline": "Faculté de Nantes saccagée: \"Les gens qui dégradent du matériel public doivent être poursuivis par la justice\", déclare Jad Zahab, porte-parole de la campagne de Gabriel Attal",
+          "url": "https://www.bfmtv.com/politique/video-faculte-de-nantes-saccagee-les-gens-qui-degradent-du-materiel-public-doivent-etre-poursuivis-par-la-justice-declare-jad-zahab-porte-parole-de-la-campagne-de-gabriel-attal_VN-202610100410.html",
+          "publishedAt": "2026-10-10T21:01:54.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/_0t25BkRmQtc29DRo0UKZmG3t_8=/0x0:1280x720/800x0/images/Faculte-de-Nantes-saccagee-Les-gens-qui-degradent-du-materiel-public-doivent-etre-poursuivis-par-la-justice-declare-Jad-Zahab-porte-parole-de-la-campagne-de-Gabriel-Attal-2363031.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
         {
           "id": "92c769280d70",
           "outletId": "tf1-info",
@@ -2839,7 +3188,7 @@
           "url": "https://www.lefigaro.fr/nantes/nantes-les-incroyables-images-des-degradations-sur-le-campus-occupe-20261010",
           "publishedAt": "2026-10-10T08:18:24.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/a3d2301182c1f4ca54a943961faffac4fc97544640f46b06313936ee253a5ce2.JPG",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
           "section": "society",
           "everFrontPage": true
@@ -2864,9 +3213,9 @@
           "La présidente de l'université a exprimé son vif mécontentement face à l'ampleur des dégâts constatés à l'intérieur du bâtiment."
         ],
         "centre": [
-          "La police est intervenue pour libérer un bâtiment universitaire occupé depuis quatre jours à Nantes pour soutenir les mouvements lycéens.",
+          "La police est intervenue pour libérer un bâtiment universitaire occupé depuis quatre jours à Nantes en soutien aux lycéens.",
           "L'opération s'est soldée par quatre interpellations d'occupants, selon les informations de la préfecture.",
-          "Des figures politiques ont vivement condamné les dégradations constatées sur place, tandis que la direction de l'établissement exprime son indignation."
+          "Des responsables politiques exigent des poursuites judiciaires contre les auteurs de dégradations du matériel public."
         ],
         "droite": [
           "Un bâtiment de la faculté de lettres a été évacué par la police après plusieurs jours d'occupation illégale par des étudiants solidaires des lycéens.",
@@ -2874,10 +3223,108 @@
           "La couverture met l'accent sur le bilan matériel très lourd, décrivant des murs tagués, des ordinateurs cassés, des déchets et la présence de pavés dans les salles."
         ]
       },
-      "differences": "Le camp de gauche se focalise principalement sur le déroulement factuel de l'évacuation policière et la réaction consternée de la présidente de l'université, tandis que le centre et la droite insistent lourdement sur le bilan matériel des dégradations. La droite se distingue par une description minutieuse et indignée du saccage des locaux, en mentionnant des équipements informatiques détruits et des stocks de projectiles, ancrant sa couverture dans une condamnation politique ferme des actions menées par les occupants.",
+      "differences": "Le camp de gauche se focalise principalement sur le déroulement factuel de l'évacuation policière et la réaction consternée de la présidente de l'université, tandis que le centre et la droite insistent lourdement sur le bilan matériel des dégradations et appellent à des sanctions judiciaires. La droite se distingue par une description minutieuse et indignée du saccage des locaux, en mentionnant des équipements informatiques détruits et des stocks de projectiles, ancrant sa couverture dans une condamnation politique ferme des actions menées par les occupants.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 13,
+      "summarizedArticleCount": 14,
       "everInEdition": true
+    },
+    {
+      "id": "e9194d16acaa",
+      "slug": "lyceen-ampute-d-une-main-a-lens-le-tir-de-grenade-etait-conforme",
+      "title": "Lycéen amputé d’une main à Lens : le tir de grenade était « conforme » selon le parquet",
+      "createdAt": "2026-10-10T09:54:25.891Z",
+      "articles": [
+        {
+          "id": "4e63d3429e8a",
+          "outletId": "tf1-info",
+          "headline": "Le lycéen amputé d'une main à Lens \"conteste formellement\" avoir ramassé la grenade assourdissante",
+          "url": "https://www.tf1info.fr/societe/mouvement-lyceen-evan-le-lyceen-ampute-d-une-main-a-lens-dement-avoir-ramasse-la-grenade-assourdissante-comme-l-affirme-le-procureur-2469229.html",
+          "publishedAt": "2026-10-10T19:50:22.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/lyceens-mobilisation-paris-2026-10-08-d46948-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "6e93df5fff5a",
+          "outletId": "le-figaro",
+          "headline": "Le lycéen amputé d'une main à Lens dément avoir ramassé la grenade, selon son avocate",
+          "url": "https://www.lefigaro.fr/actualite-france/le-lyceen-ampute-d-une-main-a-lens-dement-avoir-ramasse-la-grenade-selon-son-avocate-20261010",
+          "publishedAt": "2026-10-10T19:03:03.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/020f12500feda42a3a514355c160e4eb3a8e52a8384ca9e5591b90692f333662.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "0d4a5beba6eb",
+          "outletId": "le-monde",
+          "headline": "Le lycéen amputé d’une main à Lens « dément avoir ramassé la grenade » et « nie toute participation à des violences », affirme son avocate",
+          "url": "https://www.lemonde.fr/societe/article/2026/10/10/le-lyceen-ampute-d-une-main-a-lens-dement-avoir-ramasse-la-grenade-et-nie-toute-participation-a-des-violences-affirme-son-avocate_6791026_3224.html",
+          "publishedAt": "2026-10-10T18:48:21.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/09/24/0/7389/3694/644/322/60/0/e1f4d19_ftp-1-3joq00dwca8q-5305622-01-06.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "47b9b3254327",
+          "outletId": "franceinfo",
+          "headline": "L'adolescent à la main arrachée \"conteste formellement\" avoir ramassé la grenade en marge du blocage de son lycée, selon son avocate",
+          "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/l-adolescent-a-la-main-arrachee-conteste-formellement-avoir-ramasse-la-grenade-en-marge-du-blocage-de-son-lycee-selon-son-avocate_8231887.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-10T18:33:24.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/3E4EQ--8TTrxRmr8HOISMPiScZY/0x29:5469x3105/432x243/filters:format(jpg)/2026/10/06/6ac499ba5d7ce558565779.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "1706040994c6",
+          "outletId": "la-croix",
+          "headline": "Lycéen amputé d’une main à Lens : le tir de grenade était « conforme » selon le parquet",
+          "url": "https://www.la-croix.com/societe/lyceen-ampute-d-une-main-a-lens-le-tir-de-grenade-etait-conforme-selon-le-parquet-20261010",
+          "publishedAt": "2026-10-10T09:22:07.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/10/2558151-un-adolescent-de-15-ans-a-eu-la-main-arrachee-lors.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "c4a8180b64c9",
+          "outletId": "le-parisien",
+          "headline": "Le lycéen amputé d’une main à Lens dément avoir ramassé la grenade, affirme son avocate",
+          "url": "https://www.leparisien.fr/faits-divers/le-lyceen-ampute-dune-main-a-lens-dement-avoir-ramasse-la-grenade-affirme-son-avocate-10-10-2026-76IH5TTIR5H5JP6522Z63344QU.php",
+          "publishedAt": "2026-10-09T22:00:00.000Z",
+          "frontPage": false,
+          "dayPrecision": true,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "L'avocate de l'adolescent rejette catégoriquement la version officielle et affirme qu'il n'a pas saisi l'explosif.",
+          "La défense insiste sur le fait que le jeune homme nie toute implication dans les actes de violence.",
+          "Le conseil de la victime rappelle le statut de la victime et critique l'usage de la force lors de ces opérations policières."
+        ],
+        "centre": [
+          "Le parquet de Béthune maintient que le tir de la grenade assourdissante respectait les procédures en vigueur.",
+          "L'enquête initiale suggère que le lycéen aurait manipulé l'objet après son arrivée au sol, ce qui suscite de vives controverses.",
+          "L'affaire relance les interrogations avec l'ouverture de multiples enquêtes par l'IGPN concernant les interventions auprès des lycéens."
+        ],
+        "droite": [
+          "La défense de l'élève conteste publiquement l'idée qu'il se soit emparé du projectile pyrotechnique.",
+          "Le parquet valide la régularité de l'intervention des forces de l'ordre face au lycéen grièvement blessé à la main.",
+          "Les investigations préliminaires s'appuient sur des témoignages concordants indiquant que la grenade reposait déjà par terre."
+        ]
+      },
+      "differences": "La gauche met principalement en avant la défense de l'adolescent et ses dénégations totales face aux accusations du parquet, en insistant sur son statut de victime et la disproportionnalité supposée de la riposte policière. À l'inverse, le centre et la droite se font l'écho des conclusions du parquet de Béthune qualifiant le tir de conforme, tout en rapportant les versions divergentes sur la manipulation ou non de la grenade par le lycéen.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 6
     },
     {
       "id": "dc48475b1404",
@@ -3064,277 +3511,6 @@
       "promptVersion": "sum-2",
       "summarizedArticleCount": 6,
       "everInEdition": true
-    },
-    {
-      "id": "eef01f90ac6d",
-      "slug": "la-sud-africaine-navi-pillay-recoit-le-prix-nobel-de-la-paix-202",
-      "title": "La sud-africaine Navi Pillay reçoit le prix Nobel de la paix 2026",
-      "createdAt": "2026-10-10T09:54:25.891Z",
-      "articles": [
-        {
-          "id": "46c1bccd4210",
-          "outletId": "france-24",
-          "headline": "Nobel de la paix 2026 : la sud-africaine Navi Pillay récompensée",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261010-nobel-de-la-paix-2026-la-sud-africaine-navi-pillay-r%C3%A9compens%C3%A9e",
-          "publishedAt": "2026-10-10T09:10:50.000Z",
-          "imageUrl": "https://s.france24.com/media/display/8de5b158-c40c-11f1-8abc-77317c09f325/w:1024/p:16x9/2026-10-09T091256Z-2108488287-RC2LZNANWBG4-RTRMADP-3-NOBEL-PRIZE-PEACE.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "c0ab350efff9",
-          "outletId": "tf1-info",
-          "headline": "Donald Trump s'indigne à nouveau de ne pas avoir reçu le prix Nobel de la paix",
-          "url": "https://www.tf1info.fr/international/videos/video-donald-trump-s-indigne-a-nouveau-de-ne-pas-avoir-recu-le-prix-nobel-de-la-paix-1423-2469152.html",
-          "publishedAt": "2026-10-10T08:35:11.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/donald-trump-s-indigne-a-nouveau-de-ne-pas-avoir-recu-le-prix-nobel-de-la-paix-4bc372-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "b401272bbafd",
-          "outletId": "huffpost",
-          "headline": "Prix Nobel de la paix : mauvais joueur, Trump fulmine et dénigre la récompense (une fois de plus)",
-          "url": "https://www.huffingtonpost.fr/international/article/prix-nobel-de-la-paix-mauvais-joueur-trump-fulmine-et-denigre-la-recompense-une-fois-de-plus_337163.html",
-          "publishedAt": "2026-10-10T06:48:37.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/09/09/169/0/6129/3447/0/0/60/0/8310982_upload-1-gthdigt913fp-afp-20260907-c7lg3u6-v1-highres-uspresidentdonaldtrumpreturnstothewhitehouseaft.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "082e8c1c59a6",
-          "outletId": "le-figaro",
-          "headline": "«Le prix a été discrédité à jamais» : Trump s'indigne à nouveau de ne pas avoir reçu le Nobel de la paix",
-          "url": "https://www.lefigaro.fr/international/le-prix-a-ete-discredite-a-jamais-trump-s-indigne-a-nouveau-de-ne-pas-avoir-recu-le-nobel-de-la-paix-20261010",
-          "publishedAt": "2026-10-10T06:29:40.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/c8d199c9932b762f0f2fbbe575237ee9f2f65fe416ee937cf2edf49d03294436.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "c5640c8f6b81",
-          "outletId": "cnews",
-          "headline": "Une «décision honteuse et embarrassante» : Donald Trump s'indigne à nouveau de ne pas avoir été choisi pour le prix Nobel de la Paix",
-          "url": "https://www.cnews.fr/monde/2026-10-10/une-decision-honteuse-et-embarrassante-donald-trump-sindigne-nouveau-de-ne-pas",
-          "publishedAt": "2026-10-10T04:58:33.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-09t213346z_505781840_rc2xznacvz1q_rtrmadp_3_usa-trump-taille1200_6ac9bfa54acc1.jpg?itok=IoLt52UB",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "537007276b55",
-          "outletId": "rfi",
-          "headline": "Agnès Callamard: avec Navi Pillay, «le comité Nobel n'aurait pas pu choisir quelqu'un de plus important»",
-          "url": "https://www.rfi.fr/fr/podcasts/le-grand-invit%C3%A9-afrique/20261010-agn%C3%A8s-callamard-avec-navy-pillay-le-comit%C3%A9-nobel-n-aurait-pas-pu-choisir-quelqu-un-de-plus-important",
-          "publishedAt": "2026-10-10T04:39:47.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/6a56d076-15d2-11f0-896b-005056bfb2b6/w:1024/p:16x9/capture-47407622667f760afb65d48.04762055.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "section": "world",
-      "summaries": {
-        "gauche": [
-          "Le prix Nobel de la paix a été attribué à la juriste sud-africaine Navi Pillay pour son engagement en faveur des droits humains et de la justice internationale.",
-          "Le président américain Donald Trump a vivement critiqué cette attribution, affirmant qu'il méritait la distinction à la place.",
-          "Les médias de ce bord qualifient la réaction du dirigeant américain de comportement de mauvais joueur et soulignent son mépris pour la lauréate."
-        ],
-        "centre": [
-          "La juriste et ancienne Haute-Commissaire aux droits de l'homme de l'ONU, Navi Pillay, a obtenu le prix Nobel de la paix 2026.",
-          "Le comité Nobel salue son parcours consacré à la poursuite des crimes de guerre et des crimes contre l'humanité.",
-          "Amnesty International salue un choix fort en faveur de la justice internationale dans un contexte de contestation mondiale.",
-          "En parallèle, Donald Trump a exprimé son indignation publique de ne pas avoir reçu la récompense, déclarant ne pas connaître la lauréate."
-        ],
-        "droite": [
-          "Navi Pillay, avocate et ancienne juge sud-africaine, a reçu le prix Nobel de la paix pour son action juridique internationale.",
-          "Donald Trump s'est indigné de cette décision lors d'un meeting, estimant qu'il aurait dû obtenir la distinction pour avoir résolu de nombreux conflits.",
-          "Le président américain a qualifié le choix du comité norvégien de honteux et embarrassant, affirmant que le prix est désormais discrédité."
-        ]
-      },
-      "differences": "Les médias de gauche et de droite s'accordent sur l'attribution du Nobel à Navi Pillay et rapportent la violente diatribe de Donald Trump, mais avec des nuances de ton notables. La gauche insiste particulièrement sur le caractère immature et mauvais joueur du président américain, qualifiant ses déclarations de fulminations et de dénigrement. La droite et le centre droit reprennent également les propos indignés du dirigeant américain qui affirme ne pas connaître la lauréate, tout en contextualisant ses griefs par rapport à son action géopolitique et à ses attentes personnelles. Les médias centristes, quant à euX, se focalisent davantage sur la portée institutionnelle de la récompense et sur l'importance de la justice internationale mise en avant par des ONG comme Amnesty International, reléguant la réaction de Trump au second plan par rapport au profil de la lauréate.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 6,
-      "everInEdition": true
-    },
-    {
-      "id": "6f4cb03ef3eb",
-      "slug": "l-ouragan-isaias-frappe-le-sud-des-etats-unis-et-perturbe-la-pro",
-      "title": "L'ouragan Isaias frappe le sud des États-Unis et perturbe la production",
-      "createdAt": "2026-10-10T09:54:25.891Z",
-      "articles": [
-        {
-          "id": "d16f2506f2df",
-          "outletId": "ouest-france",
-          "headline": "Tempête Isaias : déjà trois morts aux États-Unis, des crues et tornades encore possibles ce week-end",
-          "url": "https://www.ouest-france.fr/meteo/tempete/tempete-isaias-deja-trois-morts-aux-etats-unis-des-crues-et-tornades-encore-possibles-ce-week-end-7ed66ba2-c4da-11f1-bba2-d026901fbfe4?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-10T19:50:48.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjVhZjMwZDEwYWE5MWEyZWE2ZGUwNzNiYTBiNzQzMDI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=cfdef56c2079feb970606c1674016656a6078bb886e47eb7409817555c1bea77",
-          "frontPage": true,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "2bd807a6c438",
-          "outletId": "bfmtv",
-          "headline": "États-Unis: l'ouragan Isaias touche terre en Floride, plusieurs états en état d'urgence",
-          "url": "https://www.bfmtv.com/international/amerique-nord/etats-unis/video-etats-unis-l-ouragan-isaias-touche-terre-en-floride-plusieurs-etats-en-etat-d-urgence_VN-202610100275.html",
-          "publishedAt": "2026-10-10T15:02:26.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/EFIeZ2cxSOWhR7RRWj99WlTNAyQ=/0x0:1280x720/800x0/images/Etats-Unis-l-ouragan-Isaias-touche-terre-en-Floride-plusieurs-etats-en-etat-d-urgence-2362908.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "32864426b28f",
-          "outletId": "le-figaro",
-          "headline": "Trombes d’eau, vents violents, arbres arrachés… Les premières images de l’ouragan Isaias en Floride",
-          "url": "https://www.lefigaro.fr/international/trombes-d-eau-vents-violents-arbres-arraches-les-premieres-images-de-l-ouragan-isaias-en-floride-20261010",
-          "publishedAt": "2026-10-10T10:42:57.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/f60a564db5da6fd7aba21881f6d0396bd55ad9cf7eb8ec8abd46d24900fc1d91.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "3ed31cf51a49",
-          "outletId": "le-figaro",
-          "headline": "Inondations et vents à 165 km/h : l'ouragan Isaias arrive aux États-Unis par la Floride",
-          "url": "https://www.lefigaro.fr/international/inondations-et-vents-a-165-km-h-l-ouragan-isaias-arrive-aux-etats-unis-par-la-floride-20261010",
-          "publishedAt": "2026-10-10T09:25:51.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/25b992098f1228a4fb65dcf06682ccc1288e7533750287977b72c9a1b7dba25c.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "883eb574069f",
-          "outletId": "cnews",
-          "headline": "«Des choses volent à toute vitesse» : les images impressionnantes de l'ouragan Isaias qui touche le sud des Etats-Unis (vidéo)",
-          "url": "https://www.cnews.fr/monde/2026-10-10/des-choses-volent-toute-vitesse-les-images-impressionnantes-de-louragan-isaias-qui",
-          "publishedAt": "2026-10-10T06:42:50.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-10t044727z_1880955772_rc240oan3w3n_rtrmadp_3_storm-isaias_1_6ac9d0e5a9080.jpg?itok=v4NhYoIb",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "7b5003f1cb47",
-          "outletId": "france-24",
-          "headline": "Aux États-Unis, l'ouragan Isaias s'affaiblit après avoir touché terre en Floride",
-          "url": "https://www.france24.com/fr/am%C3%A9riques/20261010-%C3%A9tats-unis-l-ouragan-isaias-s-affaiblit-apr%C3%A8s-avoir-touch%C3%A9-terre-en-floride",
-          "publishedAt": "2026-10-10T05:22:13.000Z",
-          "imageUrl": "https://s.france24.com/media/display/1d54634a-c46a-11f1-8131-53993c5f1f18/w:1024/p:16x9/AP26282510466419.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "centre": [
-          "L'ouragan Isaias a progressé dans le sud-est du territoire américain en provoquant un décès de plus.",
-          "Plusieurs États ont dû déclarer l'état d'urgence face aux menaces persistantes de crues et de tornades.",
-          "Le phénomène météorologique a perdu de son intensité après avoir atteint les côtes de la Floride."
-        ],
-        "droite": [
-          "Les premières intempéries ont provoqué des dégâts importants marqués par des vents violents et des arbres arrachés.",
-          "L'arrivée de la tempête a été caractérisée par des inondations majeures et des rafales atteignant des vitesses très élevées.",
-          "Des séquences vidéo spectaculaires illustrent la violence des intempéries et la projection de débris dans les zones touchées."
-        ]
-      },
-      "differences": "Le camp du centre privilégie une approche institutionnelle et évolutive en suivant le parcours de la tempête, l'état d'urgence et son affaiblissement progressif, comme le rapporte France 24. À l'inverse, le camp de la droite, illustré par Le Figaro et CNews, adopte un cadrage plus visuel et spectaculaire en insistant sur la puissance immédiate des éléments, les images impressionnantes et les dégâts matériels en Floride.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 6
-    },
-    {
-      "id": "6f36b0b14c36",
-      "slug": "un-homme-est-tue-par-un-tigre-apres-s-etre-introduit-dans-un-enc",
-      "title": "Un homme est tué par un tigre après s'être introduit dans un enclos au Royaume-Uni",
-      "createdAt": "2026-10-10T19:59:03.807Z",
-      "articles": [
-        {
-          "id": "022a2bfe454c",
-          "outletId": "cnews",
-          "headline": "Angleterre : un homme perd la vie après l’attaque d’un tigre dans un zoo",
-          "url": "https://www.cnews.fr/monde/2026-10-10/angleterre-un-homme-perd-la-vie-apres-lattaque-dun-tigre-dans-un-zoo-1932880",
-          "publishedAt": "2026-10-10T19:25:37.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/adobe_6aca8e8490275.jpg?itok=AE5vuO-M",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "0418d82f5717",
-          "outletId": "le-figaro",
-          "headline": "Royaume-Uni: un homme mortellement blessé par un tigre dans un zoo",
-          "url": "https://www.lefigaro.fr/flash-actu/royaume-uni-un-homme-grievement-blesse-par-un-tigre-dans-un-zoo-20261010",
-          "publishedAt": "2026-10-10T19:17:16.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/256ddaa0c5b9ba350271019ff5ce1e364e4f70f72fe8dc198dad787a7176a13b.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "e6e7822a2221",
-          "outletId": "bfmtv",
-          "headline": "Un homme meurt après avoir été attaqué par un tigre dans un zoo britannique",
-          "url": "https://www.bfmtv.com/international/europe/angleterre/un-homme-meurt-apres-avoir-ete-attaque-par-un-tigre-dans-un-zoo-britannique_AD-202610100369.html",
-          "publishedAt": "2026-10-10T19:10:12.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/toR7pJUiEZYN85PItCJQTeLzVc4=/0x106:2048x1258/800x0/images/Tigre-Inde-Asie-Cambodge-1808654.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "f8ce20b69d6f",
-          "outletId": "tf1-info",
-          "headline": "Attaqué par un tigre dans un zoo, un homme meurt au Royaume-Uni",
-          "url": "https://www.tf1info.fr/justice-faits-divers/attaque-par-un-tigre-dans-un-zoo-un-homme-meurt-au-royaume-uni-2469215.html",
-          "publishedAt": "2026-10-10T18:43:56.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/ambulance-royaume-uni-bf06fe-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "c0fc6199c124",
-          "outletId": "franceinfo",
-          "headline": "Un homme meurt après l'attaque d'un tigre dans un zoo britannique",
-          "url": "https://www.franceinfo.fr/faits-divers/un-homme-grievement-blesse-apres-l-attaque-d-un-tigre-dans-un-zoo-britannique_8231878.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-10T18:39:25.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/K8-Tt2O0O3z63LG9Dt6hKnabWGk/0x290:5568x3422/432x243/filters:format(jpg)/2026/10/10/6aca7df246817236777748.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "section": "misc",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Un visiteur a perdu la vie à la suite d'une agression par un félin dans un parc zoologique britannique.",
-          "Le site animalier concerné a dû être totalement vidé de ses visiteurs et restera fermé durant tout le week-end."
-        ],
-        "centre": [
-          "Un drame mortel s'est produit dans un parc animalier du nord de l'Angleterre après qu'un fauve a attaqué un individu.",
-          "Les forces de l'ordre et les services compétents se sont massivement déployés sur les lieux pour procéder aux vérifications nécessaires."
-        ],
-        "droite": [
-          "La victime a pénétré délibérément à l'intérieur de la zone réservée aux grands félins dans une réserve faunistique du Yorkshire.",
-          "Les autorités locales et les secours sont rapidement intervenus sur place, constatant le décès de l'intrus malgré leurs tentatives de réanimation."
-        ]
-      },
-      "differences": "Les médias de droite, à l'instar de CNews et du Figaro, insistent particulièrement sur le comportement de la victime en précisant qu'elle s'est introduite d'elle-même dans l'enclos, soulignant la responsabilité individuelle dans le drame. Les titres centristes et de gauche adoptent quant à eux un angle plus neutre, en se focalisant sur les conséquences immédiates de l'incident pour le parc animalier, notamment son évacuation et sa fermeture prolongée pour le week-end.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 5
     }
   ]
 }

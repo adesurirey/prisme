@@ -5,13 +5,25 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "c32bc73ffdc1",
+      "outletId": "le-monde",
+      "headline": "La tempête Isaias a balayé le sud des Etats-Unis, faisant trois morts et provoquant de vastes pannes de courant",
+      "url": "https://www.lemonde.fr/international/article/2026/10/11/la-tempete-isaias-a-balaye-le-sud-des-etats-unis-faisant-trois-morts-et-provoquant-de-vastes-pannes-de-courant_6791060_3210.html",
+      "publishedAt": "2026-10-10T22:11:52.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/10/458/0/6000/3000/644/322/60/0/aecd7c8_ftp-1-28c53kgzzdpg-5318762-01-06.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "d16f2506f2df",
       "outletId": "ouest-france",
       "headline": "Tempête Isaias : déjà trois morts aux États-Unis, des crues et tornades encore possibles ce week-end",
       "url": "https://www.ouest-france.fr/meteo/tempete/tempete-isaias-deja-trois-morts-aux-etats-unis-des-crues-et-tornades-encore-possibles-ce-week-end-7ed66ba2-c4da-11f1-bba2-d026901fbfe4?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-10T19:50:48.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjVhZjMwZDEwYWE5MWEyZWE2ZGUwNzNiYTBiNzQzMDI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=cfdef56c2079feb970606c1674016656a6078bb886e47eb7409817555c1bea77",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -75,18 +87,23 @@
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le passage de la tempête Isaias dans le sud du pays a entraîné la mort de trois personnes.",
+      "Des pannes de courant massives ont touché des centaines de milliers d'abonnés.",
+      "La Floride concentre la majorité des foyers et des commerces actuellement privés d'électricité."
+    ],
     "centre": [
-      "L'ouragan Isaias a progressé dans le sud-est du territoire américain en provoquant un décès de plus.",
-      "Plusieurs États ont dû déclarer l'état d'urgence face aux menaces persistantes de crues et de tornades.",
-      "Le phénomène météorologique a perdu de son intensité après avoir atteint les côtes de la Floride."
+      "La trajectoire de la perturbation météorologique a continué de provoquer des victimes et des alertes dans le sud-est américain.",
+      "Plusieurs gouvernements locaux ont activé l'état d'urgence pour faire face aux risques de crues et de tornades.",
+      "Le système dépressionnaire a vu sa force diminuer après son impact initial sur les littoraux de la Floride."
     ],
     "droite": [
-      "Les premières intempéries ont provoqué des dégâts importants marqués par des vents violents et des arbres arrachés.",
-      "L'arrivée de la tempête a été caractérisée par des inondations majeures et des rafales atteignant des vitesses très élevées.",
-      "Des séquences vidéo spectaculaires illustrent la violence des intempéries et la projection de débris dans les zones touchées."
+      "Les premières rafales ont engendré des ravages considérables, caractérisés par des chutes d'arbres et des vents destructeurs.",
+      "La confrontation avec les intempéries s'est traduite par des inondations généralisées et des vitesses de vent extrêmes.",
+      "Des documents visuels marquants mettent en relief la force destructrice des éléments et l'envol de débris."
     ]
   },
-  "differences": "Le camp du centre privilégie une approche institutionnelle et évolutive en suivant le parcours de la tempête, l'état d'urgence et son affaiblissement progressif, comme le rapporte France 24. À l'inverse, le camp de la droite, illustré par Le Figaro et CNews, adopte un cadrage plus visuel et spectaculaire en insistant sur la puissance immédiate des éléments, les images impressionnantes et les dégâts matériels en Floride.",
+  "differences": "Le camp de gauche met en avant le bilan humain lourd et les conséquences matérielles directes comme les pannes de courant géantes en Floride, d'après Le Monde. De son côté, le camp du centre retient l'évolution institutionnelle de la crise avec la déclaration de l'état d'urgence et le suivi de la trajectoire de la tempête. Enfin, le camp de la droite, relayé par Le Figaro et CNews, privilégie un traitement visuel et spectaculaire axé sur la violence immédiate des intempéries et les dégâts en Floride.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 7
 }

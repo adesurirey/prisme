@@ -5,6 +5,40 @@
   "createdAt": "2026-10-10T15:25:41.670Z",
   "articles": [
     {
+      "id": "24f566c64533",
+      "outletId": "le-jdd",
+      "headline": "«Le cancer est une maladie politique» : Mathilde Panot refuse de porter le ruban d’Octobre Rose et suscite un tollé",
+      "url": "https://www.lejdd.fr/politique/le-cancer-est-une-maladie-politique-mathilde-panot-refuse-de-porter-le-ruban-doctobre-rose-et-suscite-un-tolle-185682",
+      "publishedAt": "2026-10-10T21:06:24.000Z",
+      "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/10/17/080_hl_vhaffner_3321511.jpg?VersionId=.QS0sjkoC3Dk6QxRkX8SROzyv8ivEElk",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "11f37128f4c5",
+      "outletId": "bfmtv",
+      "headline": "\"Je ne porterai pas le ruban rose\": Mathilde Panot critique la campagne contre le cancer du sein et fait polémique",
+      "url": "https://www.bfmtv.com/politique/la-france-insoumise/je-ne-porterai-pas-le-ruban-rose-mathilde-panot-critique-la-campagne-contre-le-cancer-du-sein-et-fait-polemique_AN-202610100397.html",
+      "publishedAt": "2026-10-10T20:30:53.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/ENSwVfYs-LQzx3MbFkMaYaOP1cQ=/0x212:2048x1364/800x0/images/Mathilde-Panot-cheffe-des-deputes-de-La-France-insoumise-a-l-Assemblee-nationale-le-30-juin-2026-2345670.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "90fbadc0db87",
+      "outletId": "le-monde",
+      "headline": "Octobre rose : Mathilde Panot refuse de porter le ruban, tollé au gouvernement et au RN",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/10/octobre-rose-mathilde-panot-refuse-de-porter-le-ruban-tolle-au-gouvernement-et-au-rn_6791027_823448.html",
+      "publishedAt": "2026-10-10T20:15:40.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/08/5/0/3914/1957/644/322/60/0/85a35ed_ftp-1-dr4ypjsq3t95-5297365-01-06.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "2a7527568873",
       "outletId": "franceinfo",
       "headline": "\"Pour que la lutte contre le cancer ne soit pas du vernis rose\" : la député LFI Mathilde Panot crée la polémique en attaquant la campagne Octobre rose",
@@ -33,7 +67,7 @@
       "url": "https://www.lefigaro.fr/politique/le-cancer-est-une-maladie-politique-mathilde-panot-cree-la-polemique-en-refusant-de-porter-le-ruban-d-octobre-rose-20261010",
       "publishedAt": "2026-10-10T14:48:38.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/1a6c8b1d3d5752432019714a0572ed24366d67579d577b08a5b43fe7e18abc5e.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -50,5 +84,26 @@
       "section": "politics"
     }
   ],
-  "section": "politics"
+  "section": "politics",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "La cheffe des députés insoumis a annoncé qu'elle ne porterait pas le ruban rose pour marquer son opposition à la campagne de sensibilisation.",
+      "Elle motive son refus en liant la campagne à des intérêts industriels contestés et à des critiques géopolitiques.",
+      "Ses déclarations ont provoqué une vive réprobation de la part du gouvernement et des partis d'opposition."
+    ],
+    "centre": [
+      "Mathilde Panot a déclenché une forte polémique en refusant d'arborer le symbole de la lutte contre le cancer du sein.",
+      "Ses attaques contre la campagne ont été qualifiées de cyniques par ses détracteurs et jugées approximatives par la santé publique.",
+      "Le positionnement de l'élue a suscité des accusations d'antisémitisme de la part de personnalités politiques."
+    ],
+    "droite": [
+      "La décision de l'élue insoumise de rejeter le ruban rose a provoqué un tollé général dans la classe politique.",
+      "Les médias conservateurs qualifient cette position de provocation politique sur un enjeu de santé publique majeur.",
+      "Les commentateurs soulignent le décalage des arguments invoqués par rapport aux véritables enjeux de la prévention du cancer du sein."
+    ]
+  },
+  "differences": "La droite et le centre qualifient unanimement la prise de position de provocation et soulignent le tollé général qu'elle suscite, en insistant sur le caractère inapproprié du refus face à un enjeu de santé publique. À gauche, les médias mettent plutôt l'accent sur les justifications avancées par la députée concernant ses critiques envers l'industrie et la gestion de la campagne, tout en rapportant les vives condamnations de ses opposants.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 7
 }
