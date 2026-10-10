@@ -543,7 +543,7 @@ export const outlets: OutletConfig[] = [
         date: '2026',
         url: 'https://frenchnewslab.org/fr/medias/slate-fr',
         takeaway:
-          "Score −0,53 dans la bande « centre gauche » (intervalle −1,27…+0,21) : l'intervalle contient zéro et 4 familles de preuves seulement couvrent le média ; le score lexical sensible à la distanciation vaut −1,02.",
+          "Score −0,53 dans la bande « centre gauche » (intervalle −1,27…+0,21), sur l'échelle FrIdéo version 1.0, 2026-08-10, relative au panel de 30 médias : l'intervalle contient zéro et 4 familles de preuves seulement couvrent le média ; le score lexical sensible à la distanciation vaut −1,02.",
       },
       {
         title: 'Slate (article encyclopédique, édition française)',
@@ -576,7 +576,7 @@ export const outlets: OutletConfig[] = [
         checkedAt: CHECKED,
         status: 200,
         items: 22,
-        covers: '~127 jours',
+        covers: '~126 jours',
         images: 'all',
         note: 'Flux court mais pas rare : ~9 articles dans les dernières 24 h ; les anciens items restent dans le flux ~4 mois (126 jours couverts au total). Tous les champs sont entre CDATA. `slate.fr` redirige 301 vers `www.slate.fr` : même ressource.',
       },

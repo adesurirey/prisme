@@ -342,7 +342,7 @@ militante. Nous retenons la bande mesurée, avec ce désaccord écrit.
 
 **Sources**
 
-1. **FrIdéo : où se situe Slate.fr ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 — <https://frenchnewslab.org/fr/medias/slate-fr> — « Score −0,53 dans la bande "centre gauche" (intervalle −1,27…+0,21) : l'intervalle contient zéro et 4 familles de preuves seulement couvrent le média ; le score lexical sensible à la distanciation vaut −1,02. »
+1. **FrIdéo : où se situe Slate.fr ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 (échelle FrIdéo version 1.0, 2026-08-10, relative au panel de 30 médias) — <https://frenchnewslab.org/fr/medias/slate-fr> — « Score −0,53 dans la bande "centre gauche" (intervalle −1,27…+0,21) : l'intervalle contient zéro et 4 familles de preuves seulement couvrent le média ; le score lexical sensible à la distanciation vaut −1,02. »
 2. **Slate (article encyclopédique, édition française)** — Wikipédia (avec les articles cités en notes), 2026 — <https://fr.wikipedia.org/wiki/Slate.fr> — « Le magazine, de centre-gauche » ; Slate.fr, lancé en 2009 par Colombani, Leser, Hufnagel, Le Boucher et Attali, reprend le concept, la gratuité et l'habillage de la version américaine.
 3. **Slate.fr : jeune site, vieilles rengaines** — Acrimed (Matthieu Vincent), 2026 — <https://www.acrimed.org/Slate-fr-jeune-site-vieilles-rengaines> — « Il se présente comme un site non partisan d'information. Or il est parfaitement partisan » : pour l'observatoire, le commentaire prime sur l'enquête, l'opinion sur le fait.
 
