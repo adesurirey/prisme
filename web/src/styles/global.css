@@ -25,6 +25,12 @@
   --centre: #dfa414;
   --droite: #2e7ce4;
 
+  /* The one color outside the Leaning palette: the Trending Story badge
+   * ("En hausse", ADR-0014). Emerald carries growth — the signal the badge
+   * exists for — and is deliberately unlike rouge, or and droite. Light
+   * theme darkens it for readability on the near-white canvas. */
+  --trending: #059669;
+
   --hover: rgba(17, 17, 20, 0.02);
 
   /* The aurora ball (AuroraBall component, favicon): centre gold → gauche
@@ -54,6 +60,9 @@
     --centre: #f6c65b;
     --droite: #63a8ea;
 
+    /* Trending Story badge (ADR-0014), vivid on the dark canvas. */
+    --trending: #34d399;
+
     --hover: rgba(255, 255, 255, 0.025);
 
     /* Aurora ball, dark-theme values (brightened, per the Leaning tokens). */
@@ -77,6 +86,7 @@
   --color-gauche: var(--gauche);
   --color-centre: var(--centre);
   --color-droite: var(--droite);
+  --color-trending: var(--trending);
   --color-hover: var(--hover);
   --color-tooltip: var(--tooltip);
   --color-tooltip-ink: var(--tooltip-ink);
