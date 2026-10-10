@@ -107,9 +107,11 @@ function trendingBadge(): HTMLElement {
   const span = document.createElement('span');
   span.dataset.trendingBadge = '';
   // Preview-settled design: ink (white in dark theme) so the signal stands
-  // out of the muted meta line without breaking the monochrome chrome,
-  // and a hover tooltip for the "since when" (docs/brand.md voice).
-  span.className = 'inline-flex items-center text-ink';
+  // out of the muted meta line without breaking the monochrome chrome, and
+  // a hover tooltip for the "since when" (docs/brand.md voice). The meta
+  // line's own span carries a -1px optical nudge (CoverageMeta) — the badge
+  // takes the same one, or it reads a pixel low next to "x articles".
+  span.className = 'inline-flex -translate-y-px items-center text-ink';
   span.title = 'Gagné en couverture depuis votre dernière visite';
   span.textContent = '\u2197\u2009en hausse';
   return span;
