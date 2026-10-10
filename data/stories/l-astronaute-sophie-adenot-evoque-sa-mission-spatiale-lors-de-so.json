@@ -5,6 +5,17 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "616dfbcfabe1",
+      "outletId": "france-24",
+      "headline": "L'astronaute française Sophie Adenot fait son grand retour sur Terre",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261010-l-astronaute-fran%C3%A7aise-sophie-adenot-fait-son-grand-retour-sur-terre",
+      "publishedAt": "2026-10-10T13:49:41.000Z",
+      "imageUrl": "https://s.france24.com/media/display/f4cd2cd0-c4b0-11f1-a240-77317c09f325/w:1024/p:16x9/FR-20261010-150605-150819-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "1eadbbd23ecf",
       "outletId": "rfi",
       "headline": "Espace: je suis passée par «toutes les émotions humaines», dit Sophie Adenot, de retour en Europe",
@@ -121,7 +132,7 @@
       "url": "https://www.lefigaro.fr/sciences/c-etait-beaucoup-plus-facile-la-haut-decouvrez-les-premiers-mots-de-l-astronaute-francaise-sophie-adenot-a-son-retour-sur-terre-20261010",
       "publishedAt": "2026-10-10T07:24:54.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/a5a479166c0b6e185f3ccbb637e014bf0aee17ba3b40f723d3f2212056364b48.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -186,7 +197,7 @@
       "url": "https://www.20minutes.fr/diaporama/diaporama-4252902-images-decollage-amerrissage-retour-mission-spatiale-sophie-adenot?at_medium=display&at_campaign=149",
       "publishedAt": "2026-10-09T15:30:51.000Z",
       "imageUrl": "https://img.20mn.fr/Uyc7KSk8SJW44qvxpWh09Sk/1200x768_sophie-adenot-en-pleine-sortie-dans-l-espace-le-25-aout-un-moment-fort",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -195,22 +206,22 @@
   "section": "science",
   "summaries": {
     "gauche": [
-      "L'astronaute française a partagé ses premières impressions à son arrivée sur le sol européen, évoquant une transition physique difficile.",
-      "Elle a livré un plaidoyer humaniste en soulignant l'absence de frontières vues de l'espace et la nécessité de protéger notre planète.",
-      "Ses propos ont mis en avant la force de son expérience vécue durant ces huit mois en orbite."
+      "Sophie Adenot a partagé ses impressions de voyage et la difficulté de retrouver une condition physique normale.",
+      "Elle a prononcé un message humaniste insistant sur l'absence de frontières depuis l'orbite et la sauvegarde environnementale.",
+      "La force de son vécu durant sa longue période spatiale a été particulièrement soulignée."
     ],
     "centre": [
-      "Sophie Adenot a effectué sa première conférence de presse publique depuis l'Allemagne après son amerrissage au large de la Californie.",
-      "Elle est revenue sur la palette d'émotions traversées au cours de sa mission de plus de sept mois à bord de la station internationale.",
-      "L'accent a également été mis sur les défis physiologiques importants liés à la réadaptation à la pesanteur terrestre."
+      "Sophie Adenot a réalisé sa première prise de parole publique en Allemagne après son retour en Californie.",
+      "Elle a détaillé la diversité des émotions ressenties durant plus de sept mois passés à bord de la station orbitale.",
+      "La question des difficultés physiologiques inhérentes au retour sous l'effet de la pesanteur a été largement abordée."
     ],
     "droite": [
-      "L'astronaute est revenue sur sa mission de 235 jours au sein de l'ISS lors d'une allocution publique sur le tarmac de Cologne.",
-      "Elle a évoqué la complexité de son retour physique à la gravité tout en saluant la beauté fragile de la Terre vue de là-haut.",
-      "Certains médias ont mis en relief le contraste entre la simplicité de la vie en microgravité et la rudesse du retour terrestre."
+      "L'astronaute a dressé le bilan de sa mission de plus de sept mois à l'occasion d'une intervention à Cologne.",
+      "Elle a témoigné de l'épreuve que représente le retour à la gravité tout en décrivant la beauté de la Terre vue du ciel.",
+      "Le contraste entre l'aisance de la vie en microgravité et la dureté du retour terrestre a été mis en avant."
     ]
   },
-  "differences": "Les différents bords politiques relatent globalement les mêmes faits concernant le retour de Sophie Adenot et ses déclarations à Cologne. La gauche met particulièrement l'accent sur la dimension humaniste et universelle de son discours concernant la protection de la planète et l'absence de frontières. Le centre insiste à la fois sur l'aspect émotionnel de ses propos et sur la réalité concrète de sa réadaptation physique. La droite, quant à elle, s'attarde davantage sur la rudesse de la transition entre la vie en apesanteur et la difficulté de retrouver la pesanteur terrestre.",
+  "differences": "Les traitements médiatiques concordent sur les principaux éléments de l'événement, bien que des nuances d'angle apparaissent. La gauche met l'accent sur la portée universelle et humaniste du discours écologique de l'astronaute. Le centre conjugue l'analyse de son vécu émotionnel et les aspects techniques de sa réadaptation biologique. La droite, à l'instar des angles observés dans France 24, s'attarde plus particulièrement sur la rudesse de la transition entre la quiétude de l'apesanteur et la violence de la pesanteur terrestre.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 17
+  "summarizedArticleCount": 18
 }

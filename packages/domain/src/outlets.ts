@@ -107,6 +107,9 @@ const CHECKED_11 = '2026-10-07';
 /** Le Point's Arc XP outbound feed, found the same way as Libération's. */
 const CHECKED_LE_POINT = '2026-10-07';
 
+/** Issue #72: Challenges and L'Opinion (FrIdéo-backed dossiers). */
+const CHECKED_72 = '2026-10-10';
+
 /** The Outlets of the Edition, grouped by Leaning. The perimeter is open (issue #10). */
 export const outlets: OutletConfig[] = [
   // ——— Gauche ———
@@ -1119,6 +1122,67 @@ export const outlets: OutletConfig[] = [
     },
   },
 
+  {
+    id: 'challenges',
+    name: 'Challenges',
+    leaning: 'centre',
+    paywall: 'partial',
+    site: 'https://www.challenges.fr',
+    feeds: { latest: 'https://www.challenges.fr/rss.xml' },
+    leaningSources: [
+      {
+        title:
+          "FrIdéo : où se situe Challenges ? (échelle d'idéologie de 30 médias français)",
+        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
+        date: '2026',
+        url: 'https://frenchnewslab.org/fr/medias/challenges',
+        takeaway:
+          "Score −0,10 dans la bande « centre » (intervalle −0,84…+0,63) : l'intervalle contient zéro, 4 familles de preuves sur 9 seulement ; l'étiquette est une indication, pas un verdict.",
+      },
+      {
+        title: 'Challenges (article encyclopédique)',
+        author: 'Wikipédia',
+        date: '2026',
+        url: 'https://fr.wikipedia.org/wiki/Challenges',
+        takeaway:
+          'Magazine économique fondé en 1982, devenu newsmag généraliste en 2021 ; détenu à 100 % par LVMH depuis décembre 2025 ; en 2017, des journalistes déploraient que leur journal « roule pour Macron », et en 2022 une une anti-Mélenchon imposée par Claude Perdriel a créé des remous au sein de la rédaction.',
+      },
+      {
+        title:
+          'La présidentielle à Challenges : les « observations » de la société des journalistes (SDJ)',
+        author: 'Acrimed',
+        date: '2017-03-31',
+        url: 'https://www.acrimed.org/La-presidentielle-a-Challenges-les-observations',
+        takeaway:
+          'La SDJ dénonce le parti-pris du site en faveur d\u2019Emmanuel Macron et les interventions du directeur de la publication auprès de l\u2019équipe web après un article critique à l\u2019égard de Macron.',
+      },
+    ],
+    leaningNote:
+      'Placé à Centre : FrIdéo le situe en bande « centre » mais son intervalle contient zéro et seules 4 familles de preuves le couvrent directement. Les épisodes éditoriaux documentés vont dans les deux sens (une anti-Le Pen et une anti-Mélenchon imposées en 2022, « parti-pris Macron » contesté par la SDJ en 2017) : aucune source ne le place hors du centre. La bande est retenue conformément à la règle de placement.',
+    readership: {
+      evidence:
+        'ACPM presse magazine 2025/2026 : DSH 232 050 exemplaires ; le site Challenges.fr suit le classement unifié des sites web ACPM.',
+      url: 'https://www.acpm.fr/Support/challenges',
+    },
+    feedChecks: [
+      {
+        kind: 'latest',
+        url: 'https://www.challenges.fr/rss.xml',
+        checkedAt: CHECKED_72,
+        status: 200,
+        items: 50,
+        covers: '~3 j',
+        images: 'all',
+        note: 'Flux unique du média, toutes rubriques confondues (le hors-nuit se filtre à la classification, issue #4) ; titres et dates en CDATA (corrigé côté parseur). Chaque article porte un marqueur rssplus:free (0/1) : un indicateur de paywall du média lui-même.',
+      },
+    ],
+    tdm: {
+      reserved: true,
+      checkedAt: CHECKED_72,
+      note: 'Réservation publiée : /.well-known/tdmrep.json redirige vers /tdmrep.json, qui publie tdm-reservation: 1 pour tout le site. Le site bloque par ailleurs GPTBot, CCBot et PerplexityBot (vérifié le 2026-10-10) : un blocage anti-IA, distinct de la réservation TDM.',
+    },
+  },
+
   // ——— Centre droit ———
 
   {
@@ -1231,6 +1295,67 @@ export const outlets: OutletConfig[] = [
       reserved: null,
       checkedAt: CHECKED_LE_POINT,
       note: 'Indéterminé : la sonde sur lepoint.fr est bloquée par un anti-bot (403), le flux de syndication seul répond.',
+    },
+  },
+
+  {
+    id: 'lopinion',
+    name: "L'Opinion",
+    leaning: 'centre-droite',
+    paywall: 'partial',
+    site: 'https://www.lopinion.fr',
+    feeds: { latest: 'https://www.lopinion.fr/index.rss' },
+    leaningSources: [
+      {
+        title:
+          "FrIdéo : où se situe L'Opinion ? (échelle d'idéologie de 30 médias français)",
+        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
+        date: '2026',
+        url: 'https://frenchnewslab.org/fr/medias/l-opinion',
+        takeaway:
+          "Score +0,60 dans la bande « centre droit » (intervalle −0,05…+1,25) : l'intervalle contient zéro, 5 familles de preuves sur 9 ; toutes les familles couvertes pointent à droite du centre (propriété +0,42, charte +0,77, lexical +0,64).",
+      },
+      {
+        title: "L'Opinion (quotidien français) (article encyclopédique)",
+        author: 'Wikipédia',
+        date: '2026',
+        url: 'https://fr.wikipedia.org/wiki/L%27Opinion_(quotidien_fran%C3%A7ais)',
+        takeaway:
+          '« Le journal revendique être pro-business » ; sa ligne est définie « libérale, pro-européenne, pro-business » par son fondateur ; « il suit une ligne qui s\u2019affirme "néolibérale" selon Marianne » ; « la majorité des articles du site internet sont réservés aux abonnés ».',
+      },
+      {
+        title:
+          '« La ligne éditoriale de mon journal sera libérale, probusiness et proeuropéenne »',
+        author: 'Xavier Ternisien, Le Monde',
+        date: '2013-04-05',
+        url: 'https://www.lemonde.fr/actualite-medias/article/2013/04/08/nicolas-beytout-la-ligne-editoriale-de-mon-journal-sera-liberale-probusiness-et-proeuropeenne_3155791_3236.html',
+        takeaway:
+          '« Avoir une ligne "pro-business", c\u2019est défendre l\u2019idée que l\u2019entreprise est le meilleur lieu pour produire la richesse » : la déclaration fondatrice de Nicolas Beytout.',
+      },
+    ],
+    leaningNote:
+      'Placé à Centre droit : le journal revendique un libéralisme « pas de droite » (Beytout) quand Marianne décrit une ligne « néolibérale » ; FrIdéo le place en bande « centre droit » (+0,60) avec un intervalle contenant zéro, toutes les familles couvertes pointant à droite du centre, et le voisinage FrIdéo (entre Le Point et le JDD) conforte la bande. La bande est retenue conformément à la règle de placement, le désaccord fondateur étant publié.',
+    readership: {
+      evidence:
+        'Membre ACPM ; audience LDP de 633 000 au premier semestre 2026 (S1 2026). Pas de diffusion France payée certifiée dans les classements utilisés ici.',
+      url: 'https://www.acpm.fr',
+    },
+    feedChecks: [
+      {
+        kind: 'latest',
+        url: 'https://www.lopinion.fr/index.rss',
+        checkedAt: CHECKED_72,
+        status: 200,
+        items: 250,
+        covers: '~9 j',
+        images: 'all',
+        note: 'Flux index « temps réel » du média, le plus complet disponible : 250 articles (~9 jours), ~17 articles seulement dans la fenêtre des 24 h.',
+      },
+    ],
+    tdm: {
+      reserved: false,
+      checkedAt: CHECKED_72,
+      note: 'Pas de tdmrep.json (404). Le site bloque GPTBot, CCBot et PerplexityBot (vérifié le 2026-10-10) : un blocage anti-IA, pas une réservation TDM.',
     },
   },
 

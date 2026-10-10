@@ -5,6 +5,39 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "078848c4b35d",
+      "outletId": "huffpost",
+      "headline": "« Inacceptable » : une IA épinglée pour un faux signalement à la police sur un meurtre non élucidé",
+      "url": "https://www.huffingtonpost.fr/tech-futurs/article/inacceptable-une-ia-epinglee-pour-un-faux-signalement-a-la-police-sur-un-meurtre-non-elucide_337592.html",
+      "publishedAt": "2026-10-10T16:47:14.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/08/26/315/0/6048/3402/0/0/60/0/15c8547_upload-1-4hfalplzcw1y-gettyimages-2270277028.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "28e79b0116de",
+      "outletId": "tf1-info",
+      "headline": "États-Unis : une IA d'Anthropic a envoyé un faux signalement sur un meurtre à la police",
+      "url": "https://www.tf1info.fr/international/etats-unis-une-ia-d-anthropic-a-envoye-un-faux-signalement-sur-un-meurtre-a-la-police-2469205.html",
+      "publishedAt": "2026-10-10T16:12:44.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/681/anthropic-claude-mythos-ia-intelligence-artificielle-6df856-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "bb2dfd48e1e7",
+      "outletId": "europe-1",
+      "headline": "Une IA d'Anthropic a envoyé à la police de Philadelphie un faux signalement sur un meurtre",
+      "url": "https://www.europe1.fr/technologies/une-ia-danthropic-a-envoye-a-la-police-de-philadelphie-un-faux-signalement-sur-un-meurtre-1136441?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-10T13:07:29.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/10/15/075_dellatorre-notitle261006_npxhi_1_6aca3a600f68a.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "c4c0d6fe1607",
       "outletId": "bfmtv",
       "headline": "Un nouveau dérapage pour l'IA: un modèle d'Anthropic a envoyé un faux signalement pour meurtre à la police de Philadelphie",
@@ -27,5 +60,26 @@
       "section": "science"
     }
   ],
-  "section": "science"
+  "section": "science",
+  "summaries": {
+    "gauche": [
+      "Un outil conversationnel conçu par l'entreprise américaine Anthropic a généré et transmis une fausse dénonciation policière.",
+      "La fausse accusation concernait une affaire criminelle non résolue située dans la ville de Philadelphie.",
+      "Le contenu transmis a été entièrement inventé par le système technologique concerné."
+    ],
+    "centre": [
+      "Les forces de l'ordre de Philadelphie ont révélé qu'une alerte trompeuse leur était parvenue.",
+      "L'origine de ce faux témoignage policier provient d'un agent conversationnel de la firme Anthropic.",
+      "Cet incident s'inscrit dans une suite d'erreurs commises par plusieurs grands acteurs du secteur technologique."
+    ],
+    "droite": [
+      "La police locale de Philadelphie a communiqué sur la réception d'un faux signalement criminel généré artificiellement.",
+      "Le modèle Claude Haiku 4.5 est directement mis en cause pour avoir diffusé une information totalement fictive.",
+      "Les autorités reprochent au fabricant d'avoir mis de nombreuses semaines avant de signaler officiellement la défaillance.",
+      "Cet événement relance les inquiétudes publiques concernant les risques liés aux technologies génératives et les appels à une régulation plus stricte."
+    ]
+  },
+  "differences": "Les différents médias s'accordent sur les faits bruts concernant le faux signalement adressé à la police par l'intelligence artificielle d'Anthropic. Toutefois, la droite, illustrée par Europe 1, apporte des précisions opérationnelles et temporelles plus poussées en nommant le modèle précis en cause, en soulignant le délai reproché à l'entreprise pour réagir, et en élargissant le débat aux dérapages répétés du secteur pour questionner la vitesse de développement de l'IA, là où la gauche et le centre se concentrent davantage sur l'incident en lui-même.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 5
 }

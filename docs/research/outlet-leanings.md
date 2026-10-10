@@ -8,14 +8,14 @@ l'Édition quand les trois critères sont réunis —
 2. un flux RSS fonctionnel, vérifié avec un User-Agent de navigateur normal ;
 3. un Leaning sourcé selon la méthode ci-dessous (≥ 2 sources citées, désaccords écrits).
 
-À ce jour, **23 médias** y répondent. La version typée de ce document est
+À ce jour, **26 médias** y répondent. La version typée de ce document est
 `packages/domain/src/outlets.ts`, importée par le pipeline et le site ; les deux doivent
 rester identiques (les tests du module font respecter les règles de preuve).
 
 - **Méthode et règle de placement** ci-dessous, puis un dossier par média.
 - **Vérifications** (flux RSS, réservations TDM) effectuées le **2026-10-06** avec un
-  User-Agent de navigateur normal, et le **2026-10-07** pour Libération (issue #11) et
-  Marianne (issue #10). Chiffres ACPM : millésime **2025/2026** pour la presse
+  User-Agent de navigateur normal, le **2026-10-07** pour Libération (issue #11) et
+  Marianne (issue #10), et le **2026-10-10** pour Challenges et L'Opinion (issue #72). Chiffres ACPM : millésime **2025/2026** pour la presse
   (diffusion France payée certifiée), **août 2026** pour les sites (visites mensuelles).
 - Conformément à l'ADR-0001, le Leaning appartient au média, jamais à un article. Les
   notes et citations de ce document sont écrites pour être **publiables telles quelles**
@@ -112,7 +112,9 @@ Une seule règle, appliquée à tous les médias :
 | Courrier international | Centre | hors panel | 39e magazine, 162 073 ex. | Partiellement payant | non |
 | L'Express | Centre | +0,18 (centre) | 54e magazine, 118 937 ex. | Partiellement payant | non |
 | La Croix | Centre | +0,13 (centre) | 6e PQN, 73 595 ex. | Partiellement payant | non |
+| Challenges | Centre | −0,10 (centre) | magazine, 232 050 ex. (DSH) | Partiellement payant | **oui** |
 | Le Point | Centre | +0,56 (centre droit) | 20e magazine, 263 528 ex. | Partiellement payant | indéterminé (403) |
+| L'Opinion | Centre droit | +0,60 (centre droit) | membre ACPM, 633 k (S1 2026) | Partiellement payant | non |
 | Le Figaro | Droite | +1,02 (droite) | 2e PQN, 397 194 ex. | Partiellement payant | **oui** |
 | CNews | Droite | +0,96 (droite) | 22e site, 30,2 M visites | Gratuit | non |
 | Europe 1 | Droite | hors panel | 75e site, 4,7 M visites | Gratuit | non |
@@ -125,7 +127,7 @@ hebdomadaires du dimanche, magazine = presse magazine (classements ACPM 2025/202
 
 ---
 
-## Les 23 médias
+## Les 25 médias
 
 ### L'Obs — Gauche
 
@@ -600,6 +602,44 @@ souhaitable.
 
 **Paywall / TDM.** Partiellement payant ; pas de `tdmrep.json` (404).
 
+### Challenges — Centre
+
+**Placement.** Bande `center` de FrIdéo → **Centre**.
+
+**Désaccords entre sources.** L'intervalle de confiance de FrIdéo (−0,84…+0,63)
+contient zéro et seules 4 familles de preuves sur 9 couvrent directement le média : la
+bande « centre » est lue comme une indication, pas comme un verdict (voir Limites
+connues, point 3). Les épisodes éditoriaux documentés vont dans les deux sens — une
+« une » anti-Le Pen dans l'entre-deux-tours de 2022, une « une » anti-Mélenchon la
+même année imposée par le propriétaire, un « parti-pris Macron » contesté par la
+Société des journalistes en 2017 — et aucune source consultée ne place le magazine
+hors du centre. Le changement de propriété est trop récent pour la mesure : FrIdéo
+retient Claude Perdriel comme propriétaire final, alors que LVMH détient le titre à
+100 % depuis décembre 2025 (Wikipédia, avec Le Figaro du 30 décembre 2025).
+
+**Sources**
+
+1. **FrIdéo : où se situe Challenges ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 — <https://frenchnewslab.org/fr/medias/challenges> — « Score −0,10 dans la bande "centre" (intervalle −0,84…+0,63) : l'intervalle contient zéro, 4 familles de preuves sur 9 seulement ; l'étiquette est une indication, pas un verdict. »
+2. **Challenges (article encyclopédique)** — Wikipédia (avec les articles de presse cités en notes), 2026 — <https://fr.wikipedia.org/wiki/Challenges> — « Magazine économique fondé en 1982, devenu newsmag généraliste en 2021 ; détenu à 100 % par LVMH depuis décembre 2025 ; en 2017, des journalistes déploraient que leur journal "roule pour Macron", et en 2022 une "une" anti-Mélenchon imposée par Claude Perdriel a créé des remous au sein de la rédaction. »
+3. **La présidentielle à Challenges : les « observations » de la société des journalistes (SDJ)** — Acrimed, 2017-03-31 — <https://www.acrimed.org/La-presidentielle-a-Challenges-les-observations> — « La SDJ dénonce le parti-pris du site en faveur d'Emmanuel Macron et les interventions du directeur de la publication auprès de l'équipe web après un article critique à l'égard de Macron. »
+
+**Audience.** ACPM presse magazine 2025/2026 : DSH 232 050 exemplaires ; le site
+Challenges.fr suit le classement unifié des sites web ACPM.
+
+**Flux vérifiés (2026-10-10, issue #72).** `latest` <https://www.challenges.fr/rss.xml>
+— 200, 50 articles, ~3 j, images sur tous les articles. Flux unique du média, toutes
+rubriques confondues (le hors-nuit se filtre à la classification, issue #4) ; titres et
+dates en CDATA (corrigé côté parseur, voir le dépôt). Chaque article porte un marqueur
+`rssplus:free` (0/1) : un indicateur de paywall du média lui-même.
+
+**Paywall / TDM.** Partiellement payant ; **réservation TDM publiée** :
+`/.well-known/tdmrep.json` redirige vers `/tdmrep.json`, qui publie `tdm-reservation: 1`
+pour tout le site (vérifié le 2026-10-10). Le site bloque par ailleurs GPTBot, CCBot et
+PerplexityBot (vérifié le 2026-10-10) : un blocage anti-IA, distinct de la réservation
+TDM. La PRD prévoyait « aucune réservation détectée » le 2026-10-10 : une sonde sans
+suivi de redirection la manquait ; c'est la sonde de `pnpm verify` (fetch, redirections
+suivies) qui fait foi.
+
 ### Le Point — Centre droit
 
 **Placement.** Bande `center-right` de FrIdéo → **Centre droit**.
@@ -635,6 +675,39 @@ plus par fenêtre d'environ 2 j ; il pourrait être restreint ou supprimé sans 
 
 **Paywall / TDM.** Partiellement payant ; réservation TDM indéterminée : la sonde
 `tdmrep.json` est bloquée par l'anti-bot (403) comme le reste du site.
+
+### L'Opinion — Centre droit
+
+**Placement.** Bande `center-right` de FrIdéo → **Centre droit**.
+
+**Désaccords entre sources.** Le désaccord fondateur est écrit : Nicolas Beytout
+revendique un journal « libéral, mais pas de droite », quand Marianne décrit une ligne
+« néolibérale ». L'intervalle de confiance de FrIdéo (−0,05…+1,25) contient zéro :
+les données seules ne départagent pas le centre, et la bande « centre droit » est
+retenue par convention (voir Limites connues, point 3) — toutes les familles de
+preuves couvertes pointent à droite du centre (propriété +0,42, charte +0,77,
+profilage encyclopédique +0,54, lexical +0,64), et la bande est cohérente avec le
+voisinage FrIdéo du titre (entre Le Point et le JDD).
+
+**Sources**
+
+1. **FrIdéo : où se situe L'Opinion ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 — <https://frenchnewslab.org/fr/medias/l-opinion> — « Score +0,60 dans la bande "centre droit" (intervalle −0,05…+1,25) : l'intervalle contient zéro, 5 familles de preuves sur 9 ; propriétaire final Bettencourt / Nicolas Beytout / Ken Fisher. »
+2. **L'Opinion (quotidien français) (article encyclopédique)** — Wikipédia (avec les articles de presse cités en notes), 2026 — <https://fr.wikipedia.org/wiki/L%27Opinion_(quotidien_fran%C3%A7ais)> — « Le journal revendique être pro-business » ; sa ligne est définie « libérale, pro-européenne, pro-business » par son fondateur ; « il suit une ligne qui s'affirme "néolibérale" selon Marianne » ; « la majorité des articles du site internet sont réservés aux abonnés ».
+3. **« La ligne éditoriale de mon journal sera libérale, probusiness et proeuropéenne »** — Xavier Ternisien, Le Monde, 2013-04-05 — <https://www.lemonde.fr/actualite-medias/article/2013/04/08/nicolas-beytout-la-ligne-editoriale-de-mon-journal-sera-liberale-probusiness-et-proeuropeenne_3155791_3236.html> — « Avoir une ligne "pro-business", c'est défendre l'idée que l'entreprise est le meilleur lieu pour produire la richesse » (Nicolas Beytout, déclaration fondatrice du quotidien).
+
+**Audience.** L'Opinion est membre ACPM ; audience LDP de 633 000 au premier
+semestre 2026 (S1 2026). Pas de diffusion France payée certifiée dans les classements
+utilisés ici.
+
+**Flux vérifiés (2026-10-10, issue #72).** `latest`
+<https://www.lopinion.fr/index.rss> — 200, 250 articles, ~9 j, images sur tous les
+articles. Flux index « temps réel » du média, le plus complet disponible : seul un
+extrait de la journée (~17 articles sur 24 h) traverse la fenêtre de collecte.
+
+**Paywall / TDM.** En grande partie payant (la majorité des articles du site sont
+réservés aux abonnés, vidéos, blogs et tribunes restent en libre accès — Wikipédia) ;
+pas de `tdmrep.json` (404). Le site bloque GPTBot, CCBot et PerplexityBot (vérifié le
+2026-10-10) : un blocage anti-IA, pas une réservation TDM.
 
 ### Le Figaro — Droite
 
