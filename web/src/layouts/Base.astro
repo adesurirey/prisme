@@ -82,4 +82,16 @@ const {
       </div>
     </footer>
   </body>
+  <!-- Pull-to-refresh (issue #66): uniform on every page, including frozen
+       Story pages. Astro bundles this module script; it installs itself. -->
+  <script>
+    import { installPullToRefresh } from '../pull-to-refresh';
+
+    const install = () => installPullToRefresh(document, window);
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', install);
+    } else {
+      install();
+    }
+  </script>
 </html>

@@ -96,6 +96,13 @@ html {
   scrollbar-gutter: stable;
 }
 
+/* The page's pull-to-refresh is Prisme's own (web/src/pull-to-refresh.ts,
+ * issue #66); disabling the browser's native overscroll pull-to-refresh
+ * here keeps the two gestures from fighting on Chrome Android. */
+body {
+  overscroll-behavior-y: none;
+}
+
 /* Visible keyboard focus, both schemes */
 :focus-visible {
   outline: 2px solid var(--line-strong);
