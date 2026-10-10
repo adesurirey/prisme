@@ -26,10 +26,10 @@
   --droite: #2e7ce4;
 
   /* The one color outside the Leaning palette: the Trending Story badge
-   * ("En hausse", ADR-0014). Emerald carries growth — the signal the badge
-   * exists for — and is deliberately unlike rouge, or and droite. Light
-   * theme darkens it for readability on the near-white canvas. */
-  --trending: #059669;
+   * ("En hausse", ADR-0014). Sarcelle is calm but unmistakably set apart
+   * from rouge, or and droite. Light theme darkens it for readability on
+   * the near-white canvas. */
+  --trending: #0d9488;
 
   --hover: rgba(17, 17, 20, 0.02);
 
@@ -61,7 +61,7 @@
     --droite: #63a8ea;
 
     /* Trending Story badge (ADR-0014), vivid on the dark canvas. */
-    --trending: #34d399;
+    --trending: #2dd4bf;
 
     --hover: rgba(255, 255, 255, 0.025);
 
