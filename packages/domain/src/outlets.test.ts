@@ -120,6 +120,24 @@ describe('outlet config', () => {
     expect(lopinion!.tdm.reserved).toBe(false);
   });
 
+  it('adds Slate.fr (Centre gauche) to the Edition (issue #73)', () => {
+    const slate = outlets.find((outlet) => outlet.id === 'slate-fr');
+    expect(slate, 'slate-fr enters the Edition').toBeDefined();
+    expect(slate!.name).toBe('Slate.fr');
+    expect(slate!.leaning).toBe('centre-gauche');
+    expect(slate!.paywall).toBe('none');
+    expect(slate!.feeds.latest).toBe('https://slate.fr/rss.xml');
+    expect(slate!.feedChecks[0]!.checkedAt).toBe('2026-10-10');
+    expect(slate!.feedChecks[0]!.status).toBe(200);
+    expect(slate!.tdm.reserved).toBe(false);
+    // Audience argument consigné sur #73 : podcasts certifiés ACPM (1er
+    // groupe), aucune certification site — inclusion retenue malgré tout.
+    expect(slate!.readership.evidence).toMatch(/podcasts/);
+    expect(excludedOutlets.map((excluded) => excluded.id)).not.toContain(
+      'slate-fr',
+    );
+  });
+
   it('keeps the research doc in sync with the config count and ids', () => {
     // The « À ce jour, N médias » line of the research doc is the published
     // perimeter count: it must track the typed config, not drift from it.

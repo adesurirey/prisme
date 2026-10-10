@@ -8,13 +8,13 @@ l'Édition quand les trois critères sont réunis —
 2. un flux RSS fonctionnel, vérifié avec un User-Agent de navigateur normal ;
 3. un Leaning sourcé selon la méthode ci-dessous (≥ 2 sources citées, désaccords écrits).
 
-À ce jour, **26 médias** y répondent. La version typée de ce document est
+À ce jour, **27 médias** y répondent. La version typée de ce document est
 `packages/domain/src/outlets.ts`, importée par le pipeline et le site ; les deux doivent
 rester identiques (les tests du module font respecter les règles de preuve).
 
 - **Méthode et règle de placement** ci-dessous, puis un dossier par média.
 - **Vérifications** (flux RSS, réservations TDM) effectuées le **2026-10-10** avec un
-  User-Agent de navigateur normal (tous les médias, issues #10, #11 et #72). Chiffres ACPM : millésime **2025/2026** pour la presse
+  User-Agent de navigateur normal (tous les médias, issues #10, #11, #72 et #73). Chiffres ACPM : millésime **2025/2026** pour la presse
   (diffusion France payée certifiée), **août 2026** pour les sites (visites mensuelles).
 - Conformément à l'ADR-0001, le Leaning appartient au média, jamais à un article. Les
   notes et citations de ce document sont écrites pour être **publiables telles quelles**
@@ -100,6 +100,7 @@ Une seule règle, appliquée à tous les médias :
 | L'Humanité | Gauche | −2,41 (extrême gauche) | 7e PQN, 40 996 ex. | Gratuit | non |
 | Le Monde | Centre | −0,71 (centre gauche) | 1er PQN, 564 586 ex. | Partiellement payant | indéterminé (402) |
 | Marianne | Centre | −0,65 (centre gauche) | magazine, 100 527 ex. | Partiellement payant | **oui** |
+| Slate.fr | Centre gauche | −0,53 (centre gauche) | 1er groupe podcasts ACPM, 2,4 M téléch. France (sept. 2026) | Gratuit | non |
 | franceinfo | Centre | −0,41 (centre gauche) | 3e site, 136,5 M visites | Gratuit | **oui** |
 | Ouest-France | Centre | −0,16 (centre) | 1er PQR, 580 981 ex. | Partiellement payant | **oui** |
 | BFMTV | Centre | +0,07 (centre) | 5e site, 118,7 M visites | Gratuit | indéterminé (403) |
@@ -126,7 +127,7 @@ hebdomadaires du dimanche, magazine = presse magazine (classements ACPM 2025/202
 
 ---
 
-## Les 25 médias
+## Les 27 médias
 
 ### L'Obs — Gauche
 
@@ -321,6 +322,44 @@ journal de build rend toute contribution nulle visible (issue #35).
 
 **Paywall / TDM.** Partiellement payant ; **réservation TDM publiée** (`tdm-reservation:
 1` pour `/`, avec une politique `tdm-policy.json`).
+
+### Slate.fr — Centre gauche
+
+**Placement.** Bande `center-left` de FrIdéo → **Centre gauche**. L'intervalle de confiance
+(−1,27…+0,21) contient zéro : la bande est une convention de lecture, pas un départage
+(Limites connues, point 3). Slate.fr est aussi l'un des médias les moins couverts du panel
+(4 familles de preuves sur 9) : une part notable du score vient de l'a priori de tradition
+fondatrice — celle de Slate US, dont Slate.fr reprend le concept — et FrIdéo le dit
+explicitement.
+
+**Désaccords entre sources.** Wikipédia décrit un magazine « de centre-gauche »
+(l'édition française reprenant le concept, la gratuité et l'habillage de la version
+américaine) ; Acrimed tient au contraire Slate.fr pour « parfaitement partisan » malgré
+sa revendication de non-partisanat, « plus proche du blog que du site d'information ».
+La famille de preuve la plus directement informative ici, le score lexical « sensible à
+la distanciation » de FrIdéo (−1,02), va dans le sens d'une écriture positionnée mais pas
+militante. Nous retenons la bande mesurée, avec ce désaccord écrit.
+
+**Sources**
+
+1. **FrIdéo : où se situe Slate.fr ?** — Amr Sobhy, Le French News Lab (ICNLSP 2026), 2026 (échelle FrIdéo version 1.0, 2026-08-10, relative au panel de 30 médias) — <https://frenchnewslab.org/fr/medias/slate-fr> — « Score −0,53 dans la bande "centre gauche" (intervalle −1,27…+0,21) : l'intervalle contient zéro et 4 familles de preuves seulement couvrent le média ; le score lexical sensible à la distanciation vaut −1,02. »
+2. **Slate (article encyclopédique, édition française)** — Wikipédia (avec les articles cités en notes), 2026 — <https://fr.wikipedia.org/wiki/Slate.fr> — « Le magazine, de centre-gauche » ; Slate.fr, lancé en 2009 par Colombani, Leser, Hufnagel, Le Boucher et Attali, reprend le concept, la gratuité et l'habillage de la version américaine.
+3. **Slate.fr : jeune site, vieilles rengaines** — Acrimed (Matthieu Vincent), 2026 — <https://www.acrimed.org/Slate-fr-jeune-site-vieilles-rengaines> — « Il se présente comme un site non partisan d'information. Or il est parfaitement partisan » : pour l'observatoire, le commentaire prime sur l'enquête, l'opinion sur le fait.
+
+**Audience.** Aucune certification ACPM « sites » n'a été trouvée pour slate.fr ; l'audience
+certifiée est celle des podcasts : Groupe Slate est 1er rang des groupes podcasts ACPM
+(septembre 2026, 2 395 428 téléchargements France). La décision d'inclusion (commentaire
+de l'issue #73) retient ce signal d'audience certifié côté podcasts en l'absence de
+certification site.
+
+**Flux vérifiés (2026-10-10).** `latest` <https://slate.fr/rss.xml> — 200, 22 articles,
+images partout, champs entre CDATA. Flux court : ~9 articles dans les dernières 24 h,
+mais les anciens items restent dans le flux ~4 mois (126 jours couverts au total).
+`slate.fr` redirige 301 vers `www.slate.fr` : c'est la même ressource.
+
+**Paywall / TDM.** Gratuit : l'offre « Slate+ » (lancée en octobre 2016) vend des services
+et des contenus additionnels (podcasts, Transfert Club), les articles restent en accès
+libre. Pas de `tdmrep.json` (404).
 
 ### franceinfo — Centre gauche
 

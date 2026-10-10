@@ -529,6 +529,66 @@ export const outlets: OutletConfig[] = [
   },
 
   {
+    id: 'slate-fr',
+    name: 'Slate.fr',
+    leaning: 'centre-gauche',
+    paywall: 'none',
+    site: 'https://www.slate.fr',
+    feeds: { latest: 'https://slate.fr/rss.xml' },
+    leaningSources: [
+      {
+        title:
+          "FrIdéo : où se situe Slate.fr ? (échelle d'idéologie de 30 médias français)",
+        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
+        date: '2026',
+        url: 'https://frenchnewslab.org/fr/medias/slate-fr',
+        takeaway:
+          "Score −0,53 dans la bande « centre gauche » (intervalle −1,27…+0,21), sur l'échelle FrIdéo version 1.0, 2026-08-10, relative au panel de 30 médias : l'intervalle contient zéro et 4 familles de preuves seulement couvrent le média ; le score lexical sensible à la distanciation vaut −1,02.",
+      },
+      {
+        title: 'Slate (article encyclopédique, édition française)',
+        author: 'Wikipédia (avec les articles cités en notes)',
+        date: '2026',
+        url: 'https://fr.wikipedia.org/wiki/Slate.fr',
+        takeaway:
+          "« Le magazine, de centre-gauche » : Slate.fr, lancé en 2009 par Colombani, Leser, Hufnagel, Le Boucher et Attali, reprend le concept, la gratuité et l'habillage de la version américaine.",
+      },
+      {
+        title: 'Slate.fr : jeune site, vieilles rengaines',
+        author: 'Acrimed (Matthieu Vincent)',
+        date: '2026',
+        url: 'https://www.acrimed.org/Slate-fr-jeune-site-vieilles-rengaines',
+        takeaway:
+          "« Il se présente comme un site non partisan d'information. Or il est parfaitement partisan » : pour l'observatoire, le commentaire prime sur l'enquête, l'opinion sur le fait.",
+      },
+    ],
+    leaningNote:
+      "Placé à Centre gauche d'après la bande FrIdéo, intervalle contenant zéro et couverture de preuves faible (4 familles sur 9) : la bande est une convention de lecture, pas un départage. Désaccord écrit : Wikipédia décrit un magazine « de centre-gauche », quand Acrimed tient Slate.fr pour « parfaitement partisan » malgré sa revendication de non-partisanat ; le score lexical « sensible à la distanciation » de FrIdéo (−1,02), famille la plus directe ici, va dans le sens d'une écriture positionnée mais pas militante.",
+    readership: {
+      evidence:
+        "Pas de certification ACPM « sites » trouvée pour slate.fr ; l'audience certifiée est celle des podcasts : Groupe Slate, 1er rang des groupes podcasts ACPM (2 395 428 téléchargements France, septembre 2026). La décision d'inclusion (issue #73) retient ce signal d'audience en l'absence de certification site.",
+      url: 'https://www.acpm.fr/classements/podcast-groups',
+    },
+    feedChecks: [
+      {
+        kind: 'latest',
+        url: 'https://slate.fr/rss.xml',
+        checkedAt: CHECKED,
+        status: 200,
+        items: 22,
+        covers: '~126 jours',
+        images: 'all',
+        note: 'Flux court mais pas rare : ~9 articles dans les dernières 24 h ; les anciens items restent dans le flux ~4 mois (126 jours couverts au total). Tous les champs sont entre CDATA. `slate.fr` redirige 301 vers `www.slate.fr` : même ressource.',
+      },
+    ],
+    tdm: {
+      reserved: false,
+      checkedAt: CHECKED,
+      note: 'Pas de tdmrep.json (404).',
+    },
+  },
+
+  {
     id: 'franceinfo',
     name: 'franceinfo',
     leaning: 'centre-gauche',
