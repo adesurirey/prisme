@@ -170,9 +170,14 @@ describe('installTrending', () => {
     if (present) {
       // The badge lands inside the slot, next to the meta line — not loose
       // on the card, and not on a separate floating row.
-      expect(
-        el.querySelector('[data-trending-slot] [data-trending-badge]') !== null,
-      ).toBe(true);
+      const badge = el.querySelector(
+        '[data-trending-slot] [data-trending-badge]',
+      )!;
+      expect(badge != null).toBe(true);
+      expect(badge.textContent).toBe('\u2197\u2009en hausse');
+      expect((badge as HTMLElement).title).toBe(
+        'Nouveau ou gagné en couverture depuis votre dernière visite',
+      );
     }
   };
 

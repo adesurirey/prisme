@@ -88,7 +88,8 @@ export function readSeen(storage: Storage): SeenBlob | null {
   if (raw == null) return null;
   try {
     const blob = JSON.parse(raw) as SeenBlob;
-    if (blob?.version !== 1 || typeof blob.stories !== 'object') return null;
+    if (blob?.version !== SEEN_VERSION || typeof blob.stories !== 'object')
+      return null;
     return blob;
   } catch {
     return null;
@@ -106,14 +107,14 @@ export function writeSeen(storage: Storage, blob: SeenBlob): void {
 function trendingBadge(): HTMLElement {
   const span = document.createElement('span');
   span.dataset.trendingBadge = '';
-  // Preview-settled design: emerald (--trending, ADR-0014) so the signal
+  // Preview-settled design: sarcelle (--trending, ADR-0014) so the signal
   // catches the eye while staying outside the three Leaning colors, and a
   // hover tooltip for the "since when" (docs/brand.md voice). The meta
   // line's own span carries a -1px optical nudge (CoverageMeta) — the badge
   // takes the same one, or it reads a pixel low next to "x articles".
   span.className =
     'inline-flex -translate-y-px items-center font-medium text-trending';
-  span.title = 'Gagné en couverture depuis votre dernière visite';
+  span.title = 'Nouveau ou gagné en couverture depuis votre dernière visite';
   span.textContent = '\u2197\u2009en hausse';
   return span;
 }

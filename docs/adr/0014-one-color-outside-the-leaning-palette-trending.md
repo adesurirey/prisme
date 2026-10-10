@@ -1,4 +1,4 @@
-# One color outside the Leaning palette: trending emerald
+# One color outside the Leaning palette: trending sarcelle
 
 The design tokens reserve color for what it means — the three Coverage groups (rouge, or, bleu). The per-visitor "En hausse" badge (issue-less design session) needed to catch the eye, which monochrome ink did not do well enough and a flash green did garishly. We add exactly one color outside the Leaning palette, sarcelle (`--trending`: #0d9488 light, #2dd4bf dark), and give it a single meaning: the Trending Story badge on the Edition index. Sarcelle is calm yet unmistakably set apart from all three Leaning hues; violet and emerald were the runners-up, flash green and outlined/filled chips were rejected in preview rounds as too loud.
 
