@@ -119,6 +119,27 @@ describe('parseFeed', () => {
     expect(items[0].teaser).toBe('<p>Un & deux</p>');
   });
 
+  it('parses a CDATA-wrapped pubDate and survives an unparseable one (Challenges)', () => {
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+      <rss version="2.0"><channel>
+        <item>
+          <title><![CDATA[ Titre ]]></title>
+          <link><![CDATA[ https://exemple.fr/a ]]></link>
+          <pubDate><![CDATA[ Sat, 10 Oct 2026 16:05:00 +0000 ]]></pubDate>
+        </item>
+        <item>
+          <title><![CDATA[ Autre ]]></title>
+          <link><![CDATA[ https://exemple.fr/b ]]></link>
+          <pubDate><![CDATA[ pas une date ]]></pubDate>
+        </item>
+      </channel></rss>`;
+
+    const { items } = parseFeed(xml);
+
+    expect(items[0].publishedAt).toBe('2026-10-10T16:05:00.000Z');
+    expect(items[1].publishedAt).toBe('');
+  });
+
   it('exposes the channel lastBuildDate as updatedAt', () => {
     const xml = `<?xml version="1.0"?>
       <rss version="2.0"><channel>
