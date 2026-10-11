@@ -8,6 +8,14 @@
  * site is rebuilt hourly (ADR-0002), so a relative label self-corrects on
  * the next build — it can never go more than an hour stale. An empty or
  * unparseable date renders as nothing.
+ *
+ * formatStoryDate is the Story-level variant (the index cards' "maj. …"):
+ * today stays a bare clock ("maj. 22:35"), yesterday keeps its marker
+ * ("maj. hier à 23:11" — the day boundary is worth naming once the page
+ * has been live overnight) and the full date returns for an older Story
+ * ("maj. 7 oct., 14:32"). An Undated Article (ADR-0007) — whose
+ * publishedAt is the end of its Publication day — yields the day alone,
+ * never an invented clock time: "aujourd'hui", "hier", "7 oct.".
  */
 const clock = new Intl.DateTimeFormat('fr-FR', {
   hour: '2-digit',
@@ -21,13 +29,45 @@ const day = new Intl.DateTimeFormat('fr-FR', {
 });
 
 export function formatArticleDate(publishedAt: string): string {
+  const { date, today, yesterday } = parse(publishedAt);
+  if (!date) return '';
+  if (today) return clock.format(date);
+  if (yesterday) return `hier à ${clock.format(date)}`;
+  return `${day.format(date)}, ${clock.format(date)}`;
+}
+
+/** The Story date shown on an index card: the newest Article's date, day
+ * alone when that Article is Undated (ADR-0007). */
+export function formatStoryDate(article: {
+  publishedAt: string;
+  dayPrecision?: true;
+}): string {
+  const { date, today, yesterday } = parse(article.publishedAt);
+  if (!date) return '';
+  if (article.dayPrecision === true) {
+    // Undated Article (ADR-0007): the day alone, never a clock time.
+    if (today) return "aujourd'hui";
+    if (yesterday) return 'hier';
+    return day.format(date);
+  }
+  if (today) return clock.format(date);
+  if (yesterday) return `hier à ${clock.format(date)}`;
+  return `${day.format(date)}, ${clock.format(date)}`;
+}
+
+function parse(
+  publishedAt: string,
+):
+  | { date: Date; today: boolean; yesterday: boolean }
+  | { date: null; today: false; yesterday: false } {
   const date = new Date(publishedAt);
-  if (Number.isNaN(date.getTime())) return '';
+  if (Number.isNaN(date.getTime()))
+    return { date: null, today: false, yesterday: false };
   const now = new Date();
   const key = (d: Date) => day.format(d);
-  if (key(date) === key(now)) return clock.format(date);
-  if (key(date) === key(new Date(now.getTime() - 24 * 60 * 60 * 1000))) {
-    return `hier à ${clock.format(date)}`;
-  }
-  return `${key(date)}, ${clock.format(date)}`;
+  return {
+    date,
+    today: key(date) === key(now),
+    yesterday: key(date) === key(new Date(now.getTime() - 24 * 60 * 60 * 1000)),
+  };
 }

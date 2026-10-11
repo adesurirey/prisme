@@ -8,6 +8,7 @@ import {
   reportingOutletIds,
   SECTION_LABELS,
 } from '@prisme/domain';
+import { formatStoryDate } from '../article-date';
 import { withBase } from '../data';
 import BlindspotBadge from './BlindspotBadge';
 import CoverageMeta from './CoverageMeta';
@@ -39,6 +40,9 @@ export default function StoryCard({
   const spots = blindspots(counts);
   const image = pickStoryImage(story, byId);
   const articles = countedArticles(story.articles);
+  // Newest Article first (grouping sorts Story Articles that way — the
+  // same articles[0] the Story page header reads).
+  const last = story.articles[0];
   return (
     <article
       className="-mx-5"
@@ -60,7 +64,10 @@ export default function StoryCard({
           </h2>
           {/* The meta line doubles as the "En hausse" row: the slot sits
               empty and invisible (empty:hidden) until trending.ts appends
-              the client-side badge. */}
+              the client-side badge. The "maj." date is the Story's newest
+              Article — the same articles[0] the Story page header reads;
+              "maj." anchors the clock, since unlike the Article row there
+              is no Outlet name to give it context. */}
           <p className="mt-2 flex flex-wrap items-center gap-x-3 text-[13px] text-muted">
             <CoverageMeta
               counts={counts}
@@ -69,6 +76,9 @@ export default function StoryCard({
               totalOutlets={outlets.length}
               articles={articles}
             />
+            {last && (
+              <span className="text-faint">maj. {formatStoryDate(last)}</span>
+            )}
             <span data-trending-slot className="empty:hidden" />
           </p>
           {spots.length > 0 && (

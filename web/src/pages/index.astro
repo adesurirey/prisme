@@ -13,16 +13,10 @@ import { formatParisDate } from '../paris-date';
 const edition = await loadEdition();
 const outlets = loadOutlets();
 
-// "Mercredi 7 octobre" — the date is the title; time in French style, thin
-// no-break spaces around the h (docs/brand.md, French typographic craft).
-const updatedAt = new Date(edition.builtAt);
-const iso = formatParisDate(updatedAt, {
-  weekday: 'long',
-  day: 'numeric',
-  month: 'long',
-});
-const updatedDate = iso.charAt(0).toUpperCase() + iso.slice(1);
-const updatedTime = formatParisDate(updatedAt, {
+// The edition's last update, Paris clock — "22 h 01", thin no-break
+// spaces around the h (docs/brand.md, French typographic craft) — shown
+// in the page's footer line.
+const updatedTime = formatParisDate(new Date(edition.builtAt), {
   hour: '2-digit',
   minute: '2-digit',
 }).replace(':', '\u202Fh\u202F');
@@ -33,10 +27,9 @@ const perGroup = (group: CoverageGroup) =>
 
 <Base title="Prisme">
   <section class="pt-10 pb-8">
-    <h1 class="text-[22px] font-semibold tracking-[-0.02em]">{updatedDate}</h1>
-    <p class="mt-1.5 text-[13px] text-muted">
-      L'actualité vue de tous les bords — dernier point à {updatedTime}
-    </p>
+    <h1 class="text-[22px] font-semibold tracking-[-0.02em]">
+      L'actualité vue de tous les bords
+    </h1>
     <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
       {
         // The legend speaks in Coverage groups — the same three camps the

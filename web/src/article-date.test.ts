@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-import { formatArticleDate } from './article-date';
+import { formatArticleDate, formatStoryDate } from './article-date';
 
 describe('formatArticleDate', () => {
   afterEach(() => vi.useRealTimers());
@@ -40,5 +40,56 @@ describe('formatArticleDate', () => {
 
   it('tolerates an unparseable date by showing nothing', () => {
     expect(formatArticleDate('not a date')).toBe('');
+  });
+});
+
+describe('formatStoryDate', () => {
+  afterEach(() => vi.useRealTimers());
+
+  it('keeps the Article scales, with today as a bare clock', () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-10-07T12:00:00Z')); // 14:00 in Paris
+    expect(formatStoryDate({ publishedAt: '2026-10-07T12:32:00Z' })).toBe(
+      '14:32',
+    );
+    expect(formatStoryDate({ publishedAt: '2026-10-06T21:11:00Z' })).toBe(
+      'hier à 23:11',
+    );
+  });
+
+  it('keeps the full date for an older Story, where it must stand out', () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-10-11T12:00:00Z'));
+    expect(formatStoryDate({ publishedAt: '2026-10-07T12:32:00Z' })).toBe(
+      '7 oct., 14:32',
+    );
+  });
+
+  it('never invents a clock time for an Undated Article (ADR-0007)', () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-10-07T12:00:00Z')); // 14:00 in Paris
+    // publishedAt is the end of the Publication day, not a real clock time.
+    expect(
+      formatStoryDate({
+        publishedAt: '2026-10-07T21:59:00Z',
+        dayPrecision: true,
+      }),
+    ).toBe("aujourd'hui");
+    expect(
+      formatStoryDate({
+        publishedAt: '2026-10-06T21:59:00Z',
+        dayPrecision: true,
+      }),
+    ).toBe('hier');
+    expect(
+      formatStoryDate({
+        publishedAt: '2026-10-01T21:59:00Z',
+        dayPrecision: true,
+      }),
+    ).toBe('1 oct.');
+  });
+
+  it('tolerates an unparseable date by showing nothing', () => {
+    expect(formatStoryDate({ publishedAt: 'not a date' })).toBe('');
   });
 });
