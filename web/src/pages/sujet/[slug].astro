@@ -8,7 +8,6 @@ import {
   frontPageOutlets,
   pickStoryImage,
   reportingOutletIds,
-  SECTION_LABELS,
 } from '@prisme/domain';
 import ArticleList from '../../components/ArticleList';
 import BlindspotBadge from '../../components/BlindspotBadge';
@@ -131,11 +130,6 @@ const description =
           />
         </div>
         <div class="relative px-5 pt-[190px] pb-5 sm:pt-[240px]">
-          {story.section && (
-            <p class="mb-1 text-[11px] uppercase tracking-[0.08em] text-muted">
-              {SECTION_LABELS[story.section]}
-            </p>
-          )}
           <h1 class="text-[28px] font-bold leading-snug tracking-[-0.02em]">
             {story.title}
           </h1>
@@ -167,11 +161,6 @@ const description =
       </figure>
     ) : (
       <>
-        {story.section && (
-          <p class="mb-1 text-[11px] uppercase tracking-[0.08em] text-muted">
-            {SECTION_LABELS[story.section]}
-          </p>
-        )}
         <h1 class="text-[28px] font-bold leading-snug tracking-[-0.02em]">
           {story.title}
         </h1>

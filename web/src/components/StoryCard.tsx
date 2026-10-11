@@ -6,7 +6,6 @@ import {
   exposureShares,
   pickStoryImage,
   reportingOutletIds,
-  SECTION_LABELS,
 } from '@prisme/domain';
 import { formatStoryDate } from '../article-date';
 import { withBase } from '../data';
@@ -54,21 +53,19 @@ export default function StoryCard({
         className="group/card flex items-start gap-6 rounded-xl border border-transparent px-5 py-5 transition-colors duration-200 ease-out hover:border-line hover:bg-hover"
       >
         <div className="min-w-0 flex-1">
-          {story.section && (
-            <p className="mb-1 text-[11px] uppercase tracking-[0.08em] text-muted">
-              {SECTION_LABELS[story.section]}
-            </p>
-          )}
+          {/* The "En hausse" slot sits above the title — a per-visitor
+              highlight deserves the first read, not the bottom of the meta
+              pile. Invisible (empty:hidden) until trending.ts appends the
+              client-side badge. */}
+          <p data-trending-slot className="empty:hidden mb-1 text-[13px]" />
           <h2 className="text-[16px] font-semibold leading-snug tracking-[-0.01em]">
             {story.title}
           </h2>
-          {/* The meta line doubles as the "En hausse" row: the slot sits
-              empty and invisible (empty:hidden) until trending.ts appends
-              the client-side badge. The "maj." date is the Story's newest
-              Article — the same articles[0] the Story page header reads;
-              "maj." anchors the clock, since unlike the Article row there
-              is no Outlet name to give it context. */}
-          <p className="mt-2 flex flex-wrap items-center gap-x-3 text-[13px] text-muted">
+          {/* The "maj." date is the Story's newest Article — the same
+              articles[0] the Story page header reads. */}
+          {/* Meta on one row, both tiers inline. Mobile wording drops
+              "maj." and the "à" join; sm: restores the full label. */}
+          <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-muted sm:gap-x-3">
             <CoverageMeta
               counts={counts}
               shares={shares}
@@ -77,9 +74,15 @@ export default function StoryCard({
               articles={articles}
             />
             {last && (
-              <span className="text-faint">maj. {formatStoryDate(last)}</span>
+              <span className="whitespace-nowrap text-faint">
+                <span className="sm:hidden">
+                  {formatStoryDate(last).replace(' à ', ' ')}
+                </span>
+                <span className="hidden sm:inline">
+                  maj. {formatStoryDate(last)}
+                </span>
+              </span>
             )}
-            <span data-trending-slot className="empty:hidden" />
           </p>
           {spots.length > 0 && (
             <div className="mt-2.5 flex flex-wrap gap-2">
