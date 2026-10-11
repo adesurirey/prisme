@@ -11,6 +11,7 @@ const outlet = (feeds: Outlet['feeds']): Outlet => ({
   paywall: 'partial',
   site: 'https://www.leparisien.fr',
   feeds,
+  reach: { value: 1000000, unit: 'visits', source: 'test', asOf: '2026-08' },
 });
 
 const fetcher =

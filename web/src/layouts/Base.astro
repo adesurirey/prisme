@@ -46,6 +46,15 @@ const {
     <link rel="icon" media="(prefers-color-scheme: light)" href={AURORA_BALL_LIGHT} />
     <link rel="icon" media="(prefers-color-scheme: dark)" href={AURORA_BALL_DARK} />
     <title>{title === 'Prisme' ? title : `${title} · Prisme`}</title>
+    <!-- Reading toggle (issue #89): restore the persisted mode before first
+         paint so a stored Exposition never flashes Couverture widths.
+         Absent or unreadable = Couverture (the default, no attribute). -->
+    <script is:inline>
+      try {
+        if (localStorage.getItem('prisme:mode') === 'exposure')
+          document.documentElement.dataset.mode = 'exposure';
+      } catch {}
+    </script>
     <!-- GoatCounter analytics: async, cookie-free, no personal data. -->
     <script is:inline data-goatcounter="https://prisme.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </head>
@@ -63,6 +72,34 @@ const {
             >bêta</span
           >
         </a>
+        <!-- Reading toggle (issue #89, ADR-0016): Couverture (default) or
+             Exposition for every coverage bar on the site, at once. Radio
+             semantics with arrow-key navigation (roving tabindex); the live
+             region announces the switch. Styling follows aria-checked. -->
+        <div class="ml-auto shrink-0">
+          <div
+            class="mode-toggle"
+            role="radiogroup"
+            aria-label="Lecture des barres : couverture (médias) ou exposition (lecteurs)"
+            data-mode-toggle
+          >
+            <button
+              type="button"
+              role="radio"
+              aria-checked="true"
+              tabindex="0"
+              data-mode-value="coverage"
+            >Couverture</button>
+            <button
+              type="button"
+              role="radio"
+              aria-checked="false"
+              tabindex="-1"
+              data-mode-value="exposure"
+            >Exposition</button>
+          </div>
+          <p class="sr-only" role="status" data-mode-live></p>
+        </div>
       </div>
     </header>
     <main class="mx-auto max-w-4xl px-5 pb-16">
@@ -88,6 +125,19 @@ const {
     import { installPullToRefresh } from '../pull-to-refresh';
 
     const install = () => installPullToRefresh(document, window);
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', install);
+    } else {
+      install();
+    }
+  </script>
+  <!-- Reading toggle (issue #89, ADR-0016): the logic lives in
+       web/src/mode-toggle.ts (unit-tested); Astro bundles this module
+       script. The pre-paint restore stays is:inline in the head above. -->
+  <script>
+    import { installModeToggle } from '../mode-toggle';
+
+    const install = () => installModeToggle(document, window);
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', install);
     } else {

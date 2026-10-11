@@ -1,16 +1,25 @@
 import type { CoverageGroup } from '@prisme/domain';
 import { coverageOrder, LEANING_LABELS } from '@prisme/domain';
+import type { CSSProperties } from 'react';
 
 /**
  * Coverage as a meta line: one compact tri-color micro-bar followed by the
- * counted Articles and the share of the config reporting ("x articles  y %").
- * The same element on the Edition index cards and the Story page header. The
- * per-Leaning breakdown lives in a CSS tooltip — hover on desktop,
- * press/tap-to-focus on mobile — and in the aria-label. Renders static
- * HTML: no hydration, React islands stay reserved for the tabs.
+ * counted Articles ("x articles"). The same element on the Edition index
+ * cards and the Story page header.
+ *
+ * The bar is ONE element with TWO readings (issue #89, ADR-0016): segment
+ * widths default to Couverture (distinct Outlets per group, `--cov`) and
+ * also carry the Reach-weighted Exposition share (`--exp` custom property
+ * plus a `data-exposure` attribute — issue #88's `exposureShares()`). The
+ * navbar toggle (Base.astro) flips the site-wide mode, and pure CSS picks
+ * which scale drives `flex-grow` — no hydration, no per-card script. The
+ * static aria-label keeps describing the Couverture: the default meaning
+ * never silently changes. No tooltips (they never worked on mobile) and no
+ * « x % » — the meta line shows only what it can honestly count.
  */
 export default function CoverageMeta({
   counts,
+  shares,
   reporting,
   totalOutlets,
   articles,
@@ -19,9 +28,11 @@ export default function CoverageMeta({
   barWidth = 48,
 }: {
   counts: Record<CoverageGroup, number>;
-  /** Distinct Outlets on the Story, editorials included — the numerator. */
+  /** Exposition shares per group (issue #88) — the toggle's other scale. */
+  shares: Record<CoverageGroup, number>;
+  /** Distinct Outlets on the Story, editorials included. */
   reporting: number;
-  /** Outlets in the config — the denominator. */
+  /** Outlets in the config. */
   totalOutlets: number;
   /** Counted Articles — the "x articles" of the line. */
   articles: number;
@@ -33,25 +44,16 @@ export default function CoverageMeta({
   const breakdown = coverageOrder
     .map((l) => `${counts[l]} ${LEANING_LABELS[l].toLowerCase()}`)
     .join(' | ');
-  const tooltip = `${reporting} média${reporting > 1 ? 's' : ''} sur ${totalOutlets}`;
   return (
     <span
-      className={`group relative z-30 inline-flex flex-wrap items-center gap-x-[1em] gap-y-0.5 align-middle -translate-y-px ${className}`}
+      className={`inline-flex flex-wrap items-center gap-x-[1em] gap-y-0.5 align-middle -translate-y-px ${className}`}
       role="img"
-      aria-label={`Couverture : ${tooltip} — ${breakdown}`}
+      aria-label={`Couverture : ${reporting} média${reporting > 1 ? 's' : ''} sur ${totalOutlets} — ${breakdown}`}
     >
-      {/* Tooltip: hover on desktop, press/tap-to-focus on mobile (pure CSS). */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute top-full left-0 z-30 mt-2 hidden whitespace-nowrap rounded-md border border-line bg-canvas px-3 py-2 text-[12px] leading-snug text-ink shadow-sm group-hover:block group-focus:block group-active:block"
-      >
-        {tooltip}
-        <span className="block text-muted">{breakdown}</span>
-      </span>
       {covered && (
         <span
           aria-hidden="true"
-          className="inline-flex h-1.5 shrink-0 gap-px overflow-hidden rounded-full bg-line"
+          className="coverage-bar inline-flex h-1.5 shrink-0 gap-px overflow-hidden rounded-full bg-line"
           style={{ width: barWidth }}
         >
           {coverageOrder.map(
@@ -59,21 +61,20 @@ export default function CoverageMeta({
               counts[l] > 0 && (
                 <span
                   key={l}
-                  className="h-full"
-                  style={{
-                    flexGrow: counts[l],
-                    flexBasis: 0,
-                    background: `var(--${l})`,
-                  }}
+                  data-group={l}
+                  data-exposure={shares[l]}
+                  className="coverage-seg h-full"
+                  style={
+                    {
+                      '--cov': counts[l],
+                      '--exp': shares[l],
+                      flexBasis: 0,
+                      background: `var(--${l})`,
+                    } as CSSProperties
+                  }
                 />
               ),
           )}
-        </span>
-      )}
-      {covered && (
-        <span className="whitespace-nowrap">
-          {Math.round((reporting / totalOutlets) * 100)}
-          {'\u202F%'}
         </span>
       )}
       <span className="whitespace-nowrap">

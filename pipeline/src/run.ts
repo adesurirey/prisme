@@ -178,8 +178,9 @@ export async function runEdition(): Promise<Edition> {
     );
 
   await mkdir(STORIES_DIR, { recursive: true });
-  // Outlet config snapshot (identity and feeds only): the sourced config lives
-  // in @prisme/domain and is imported by the pipeline and the site.
+  // Outlet config snapshot (identity, feeds and the Reach figure — issue #89):
+  // the sourced config lives in @prisme/domain and is imported by the
+  // pipeline and the site.
   await writeFile(
     new URL('outlets.json', DATA_DIR),
     `${JSON.stringify(publicOutlets(), null, 2)}\n`,

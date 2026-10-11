@@ -63,7 +63,7 @@ export default function PrismTabs(props: {
                 onClick={() => setActive(leaning)}
                 className={`flex-1 rounded-md px-3.5 py-[5px] text-center text-[14px] transition-colors cursor-pointer sm:flex-none ${
                   selected
-                    ? 'font-medium text-white'
+                    ? 'font-medium text-on-leaning'
                     : 'text-muted hover:text-ink'
                 }`}
                 style={

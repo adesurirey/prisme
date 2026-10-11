@@ -30,6 +30,12 @@ function outlet(id: string, leaning: Outlet['leaning']): Outlet {
     paywall: 'none',
     site: `https://${id}.fr`,
     feeds: { latest: `https://${id}.fr/rss` },
+    reach: {
+      value: 1000000,
+      unit: 'visits',
+      source: 'test',
+      asOf: '2026-08',
+    },
   };
 }
 

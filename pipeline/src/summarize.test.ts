@@ -17,6 +17,12 @@ const outlets: Outlet[] = [
     paywall: 'partial',
     site: 'https://lemonde.fr',
     feeds: { latest: 'x' },
+    reach: {
+      value: 1000000,
+      unit: 'visits',
+      source: 'test',
+      asOf: '2026-08',
+    },
   },
   {
     id: 'franceinfo',
@@ -25,6 +31,12 @@ const outlets: Outlet[] = [
     paywall: 'none',
     site: 'https://francetvinfo.fr',
     feeds: { latest: 'x' },
+    reach: {
+      value: 1000000,
+      unit: 'visits',
+      source: 'test',
+      asOf: '2026-08',
+    },
   },
   {
     id: 'figaro',
@@ -33,6 +45,12 @@ const outlets: Outlet[] = [
     paywall: 'none',
     site: 'https://lefigaro.fr',
     feeds: { latest: 'x' },
+    reach: {
+      value: 1000000,
+      unit: 'visits',
+      source: 'test',
+      asOf: '2026-08',
+    },
   },
   {
     id: 'liberation',
@@ -41,6 +59,12 @@ const outlets: Outlet[] = [
     paywall: 'partial',
     site: 'https://liberation.fr',
     feeds: { latest: 'x' },
+    reach: {
+      value: 1000000,
+      unit: 'visits',
+      source: 'test',
+      asOf: '2026-08',
+    },
   },
 ];
 const outletById = new Map(outlets.map((o) => [o.id, o]));

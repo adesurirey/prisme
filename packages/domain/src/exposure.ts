@@ -1,6 +1,7 @@
 import {
   type CoverageGroup,
   coverageGroup,
+  coverageOrder,
   reportingOutletIds,
 } from './coverage.ts';
 import type { Article, Outlet, Reach } from './index.ts';
@@ -15,9 +16,9 @@ import type { Article, Outlet, Reach } from './index.ts';
  *
  * A Story with no reporting Outlet gets all-zero shares: upstream, that
  * reuses the existing "not covered" bar state — no special branch here.
- * The raw figures are deliberately heterogeneous (ACPM visits, print
- * circulation, podcast downloads — issue #87); the sqrt compression bounds
- * the gap a single mega-Outlet can open. Candidates for the final exponent
+ * Every figure is monthly web visits — ACPM-certified where the Outlet is
+ * certified, otherwise a flagged estimate; the sqrt compression bounds the
+ * gap a single mega-Outlet can open. Candidates for the final exponent
  * (brut / sqrt / log) will be graded against real Stories and recorded in
  * the ADR — the constant is the single place to change.
  */
@@ -56,7 +57,7 @@ export function exposureShares(
     total += weight;
   }
   if (total === 0) return sums;
-  for (const group of Object.keys(sums) as CoverageGroup[]) {
+  for (const group of coverageOrder) {
     sums[group] /= total;
   }
   return sums;
