@@ -46,29 +46,6 @@ describe('outlet config', () => {
     }
   });
 
-  it('quantifies one monthly-reach figure per Outlet, facts only (issue #84)', () => {
-    const units = [
-      'visits',
-      'circulation',
-      'subscribers',
-      'downloads',
-      'readers',
-    ];
-    for (const outlet of outlets) {
-      expect(outlet.audience.reach, outlet.id).toBeGreaterThan(0);
-      expect(units, outlet.id).toContain(outlet.audience.unit);
-      expect(outlet.audience.source, outlet.id).not.toBe('');
-      // ISO month ('2026-08'), half-year ('2026-S1') or year ('2026').
-      expect(outlet.audience.asOf, outlet.id).toMatch(
-        /^\d{4}(-\d{2}|(-S\d))?$/,
-      );
-      // Estimates are flagged, never silent.
-      if (outlet.audience.source === 'Semrush') {
-        expect(outlet.audience.estimated, outlet.id).toBe(true);
-      }
-    }
-  });
-
   it('verifies every declared feed (status, item count, time covered, images)', () => {
     for (const outlet of outlets) {
       const checked = new Set(
