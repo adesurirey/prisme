@@ -5,6 +5,37 @@
   "createdAt": "2026-10-11T15:01:24.472Z",
   "articles": [
     {
+      "id": "7509e49a222c",
+      "outletId": "mediapart",
+      "headline": "«Vous voyez d’autres candidats qui tiennent la mer?»: à Clermont, Jean-Luc Mélenchon fait encore le plein",
+      "url": "https://www.mediapart.fr/journal/politique/111026/vous-voyez-d-autres-candidats-qui-tiennent-la-mer-clermont-jean-luc-melenchon-fait-encore-le-plein",
+      "publishedAt": "2026-10-11T19:34:02.000Z",
+      "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/10/11/img-mediapart-melenchon-clermont.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "baa3d684ab05",
+      "outletId": "liberation",
+      "headline": "Pendant ce temps-là, à Clermont-Ferrand, Mélenchon ignore le PS et attaque d’abord Philippe et Attal",
+      "url": "https://www.liberation.fr/politique/pendant-ce-temps-la-a-clermont-ferrand-melenchon-ignore-le-ps-et-attaque-dabord-philippe-et-attal-20261011_4VN57SIFK5CFNCWQVHEHBCHKPI/",
+      "publishedAt": "2026-10-11T19:12:33.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "ec8ada651ed5",
+      "outletId": "valeurs-actuelles",
+      "headline": "« Nous ne préparerons pas nos enfants à mourir » : en meeting à Clermont-Ferrand, Jean-Luc Mélenchon vise l’OTAN",
+      "url": "https://www.valeursactuelles.com/politique/nous-ne-preparerons-pas-nos-enfants-a-mourir-en-meeting-a-clermont-ferrand-jean-luc-melenchon-vise-lotan",
+      "publishedAt": "2026-10-11T18:45:57.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "337708538f27",
       "outletId": "humanite",
       "headline": "En meeting à Clermont-Ferrand, Jean-Luc Mélenchon installe la jeunesse comme moteur de sa campagne",
@@ -14,6 +45,17 @@
       "frontPage": false,
       "kind": "news",
       "section": "politics"
+    },
+    {
+      "id": "22e80b60002b",
+      "outletId": "le-jdd",
+      "headline": "Présidentielle : Jean-Luc Mélenchon souhaite abaisser le droit de vote à 16 ans",
+      "url": "https://www.lejdd.fr/politique/presidentielle-jean-luc-melenchon-souhaite-abaisser-le-droit-de-vote-a-16-ans-185808",
+      "publishedAt": "2026-10-11T16:36:25.000Z",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
     },
     {
       "id": "7ae86033d7c6",
@@ -163,10 +205,9 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le dirigeant de La France insoumise s'est exprimé lors d'un rassemblement politique à Clermont-Ferrand.",
-      "Il a notamment suggéré d'abaisser l'âge électoral pour inclure les plus jeunes.",
-      "Cette proposition intervient en résonance directe avec les récentes mobilisations des lycéens.",
-      "Le tribun cherche à remobiliser ses partisans en faisant de la jeunesse le moteur d'une dynamique de victoire."
+      "Le dirigeant de La France insoumise a réuni un large public au Zénith de Clermont-Ferrand, démontrant sa capacité de mobilisation.",
+      "Il a axé son intervention sur la défense des services publics et a choisi d'ignorer la primaire socialiste pour cibler ses principaux rivaux.",
+      "La jeunesse et la proposition d'abaisser l'âge du droit de vote restent au cœur de sa stratégie pour inverser des sondages défavorables."
     ],
     "centre": [
       "Le candidat à l'élection présidentielle a tenu une réunion publique dominicale dans le Puy-de-Dôme.",
@@ -175,12 +216,12 @@
       "Il a développé des propositions concernant le retour de la retraite à soixante ans et critiqué d'autres candidats."
     ],
     "droite": [
-      "Le candidat insoumis a axé une partie de son intervention sur la critique ouverte de la sélection universitaire.",
-      "Il a réitéré son soutien aux revendications portées par les mouvements lycéens.",
-      "Le dirigeant a également abordé les tensions géopolitiques internationales en réclamant la paix en Ukraine et à Gaza."
+      "Le candidat insoumis a consacré une partie significative de son discours à une critique virulente de l'OTAN et des alliances militaires.",
+      "Il a également abordé la sélection universitaire et réitéré son appui aux mouvements de contestation des lycéens.",
+      "Les interventions de ce bord politique insistent sur ses prises de position géopolitiques jugées radicales."
     ]
   },
-  "differences": "La gauche accentue la volonté du candidat de transformer la mobilisation de la jeunesse en dynamique de victoire face aux sondages défavorables, prolongeant ainsi son angle initial centré sur le lien entre ses propositions et la colère des lycéens. De son côté, le centre développe une approche plus large abordant divers thèmes sociaux et économiques comme les retraites, tandis que le centre-droit met l'accent sur les critiques émises contre le système d'orientation post-bac et sur les positions géopolitiques du candidat.",
+  "differences": "La gauche met en avant la démonstration de force populaire et la stratégie électorale du candidat, qui snobe ses alliés de gauche pour se concentrer sur ses futurs rivaux tout en capitalisant sur la jeunesse. Le centre maintient une lecture axée sur les propositions programmatiques et sociales de la réunion publique. De son côté, la droite centre son attention sur la dimension géopolitique du discours, en particulier les attaques frontales contre l'OTAN, illustrant une volonté de pointer les aspects les plus clivants de sa politique internationale.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 14
+  "summarizedArticleCount": 18
 }
