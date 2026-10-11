@@ -27,7 +27,9 @@ const perGroup = (group: CoverageGroup) =>
 
 <Base title="Prisme">
   <section class="pt-10 pb-8">
-    <h1 class="text-[22px] font-semibold tracking-[-0.02em]">
+    <!-- Page title just above the card titles (16px): the colored legend
+         below is the star, the title must not compete with it. -->
+    <h1 class="text-[18px] font-semibold tracking-[-0.02em]">
       L'actualité vue de tous les bords
     </h1>
     <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
@@ -48,7 +50,7 @@ const perGroup = (group: CoverageGroup) =>
       }
       <a
         href={withBase("/classement-politique-des-medias")}
-        class="text-[13px] text-faint transition-colors hover:text-ink"
+        class="text-[13px] text-muted transition-colors hover:text-ink"
       >
         D’où vient ce classement ?
       </a>
