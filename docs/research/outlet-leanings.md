@@ -1,7 +1,8 @@
 # Orientations politiques des médias de Prisme
 
 Recherche sourcée derrière le classement Gauche / Centre / Droite des médias de
-Prisme (issue #2). Le périmètre est **ouvert** (issue #10) : un média entre dans
+Prisme (issue #2). Les chiffres d'audience y sont agrégés par groupe de couverture
+dans `docs/research/audience-weighted-coverage.md` (issue #84). Le périmètre est **ouvert** (issue #10) : un média entre dans
 l'Édition quand les trois critères sont réunis —
 
 1. une diffusion ou audience significative (ACPM ou équivalent certifié) ;
