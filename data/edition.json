@@ -1,12 +1,23 @@
 {
-  "builtAt": "2026-10-11T08:54:03.864Z",
+  "builtAt": "2026-10-11T09:07:20.230Z",
   "stories": [
     {
-      "id": "60a5bbf508ad",
-      "slug": "un-attentat-contre-l-aeroport-de-riyad-fait-douze-morts",
-      "title": "Un attentat contre l'aéroport de Riyad fait douze morts",
-      "createdAt": "2026-10-11T08:54:03.864Z",
+      "id": "8179a53abece",
+      "slug": "une-attaque-contre-l-aeroport-de-riyad-fait-douze-morts",
+      "title": "Une attaque contre l'aéroport de Riyad fait douze morts",
+      "createdAt": "2026-10-11T09:07:20.230Z",
       "articles": [
+        {
+          "id": "5b3238b2ab1c",
+          "outletId": "huffpost",
+          "headline": "Ce que l’on sait du tir de missile sur l’aéroport de Ryad qui a fait au moins 12 morts",
+          "url": "https://www.huffingtonpost.fr/international/article/ce-que-l-on-sait-du-tir-de-missile-sur-l-aeroport-de-ryad-qui-a-fait-au-moins-cinq-blesses-graves_337625.html",
+          "publishedAt": "2026-10-11T08:46:13.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/10/225/0/2152/1210/0/0/60/0/e3f3004_upload-1-duyy14zadvst-afp-20260402-a6jf8wh-v1-highres-saudiiranusisraeltransport.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
         {
           "id": "56888ddf5841",
           "outletId": "france-24",
@@ -91,6 +102,16 @@
           "url": "https://www.nouvelobs.com/monde/20261011.OBS119103/douze-morts-dans-une-attaque-contre-l-aeroport-de-ryad.html",
           "publishedAt": "2026-10-11T06:16:29.000Z",
           "imageUrl": "https://focus.nouvelobs.com/2026/10/11/0/0/1023/682/0/0/60/0/ee89d07_upload-1-jjeqsc2jri6y-000-a6jf9kf.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "4ce6dd875760",
+          "outletId": "liberation",
+          "headline": "Arabie saoudite : 12 morts et 309 blessés dans une attaque imputée aux Houthis contre l’aéroport de Riyad",
+          "url": "https://www.liberation.fr/international/moyen-orient/plusieurs-blesses-apres-le-tir-dun-missile-par-les-houthis-sur-laeroport-de-riyad-le-trafic-aerien-bloque-20261010_4KRVB4KK4BA65CAZAKG2XPY2K4/",
+          "publishedAt": "2026-10-11T06:05:22.000Z",
           "frontPage": false,
           "kind": "news",
           "section": "world"
@@ -196,248 +217,49 @@
           "kind": "news",
           "section": "world",
           "everFrontPage": true
-        },
-        {
-          "id": "8a30dcd63bcf",
-          "outletId": "europe-1",
-          "headline": "Arabie saoudite : des blessés à l'aéroport de Riyad après un tir de missile",
-          "url": "https://www.europe1.fr/international/arabie-saoudite-des-blesses-a-laeroport-de-riyad-apres-un-tir-de-missile-1136639?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-10T15:49:46.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/10/17/000_a2na4wf_1_6aca5a8e0cc6b.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
         }
       ],
       "section": "world",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Une frappe contre la plateforme aéroportuaire de la capitale saoudite a provoqué la mort de douze personnes.",
-          "La coalition militaire dirigée par Riyad attribue l'offensive aux rebelles yéménites pro-iraniens."
+          "Un tir de missile sur l'infrastructure aéroportuaire de la capitale saoudienne a entraîné la mort de douze personnes et un nombre important de blessés.",
+          "L'attaque est attribuée par les autorités et la coalition militaire aux rebelles yéménites pro-iraniens, qui profèrent de nouvelles menaces de frappes.",
+          "Face à cette situation, les vols sont perturbés, les établissements scolaires basculent en enseignement à distance et plusieurs chancelleries invitent à la prudence."
         ],
         "centre": [
-          "L'infrastructure aéroportuaire internationale a subi une frappe meurtrière faisant douze victimes et plus de trois cents blessés.",
-          "Les autorités locales qualifient l'événement de crime de guerre tandis que l'ONU déplore une escalade majeure du conflit.",
-          "Les assaillants lancent de nouvelles mises en garde visant le trafic aérien du pays."
+          "L'aéroport international de Riyad a été touché par une frappe meurtrière ayant fait douze victimes fatales et plus de trois cents blessés.",
+          "Les autorités locales qualifient cet événement d'attaque sans précédent par son intensité depuis plus d'une décennie dans le royaume.",
+          "L'ONU qualifie l'événement de grave escalade tandis que les assaillants avertissent qu'ils pourraient cibler d'autres plateformes aéroportuaires saoudiennes."
         ],
         "droite": [
-          "Le trafic aérien demeure interrompu au lendemain de l'offensive par missile ayant touché l'aéroport de Riyad.",
-          "Le bilan officiel fait état de douze tués, incluant plusieurs ressortissants étrangers, ainsi que de nombreux blessés.",
-          "Washington qualifie l'acte d'inacceptable et annonce des échanges avec le dirigeant saoudien."
+          "Le bombardement de l'aéroport a causé la mort de quatre citoyens saoudiens et de huit ressortissants étrangers de diverses nationalités.",
+          "L'exécutif américain qualifie le bilan et l'incident d'inacceptables, envisageant des représailles contre les insurgés du Yémen.",
+          "Le contexte immédiat est marqué par la perspective de la grande conférence annuelle sur l'investissement prévue dans le pays."
         ]
       },
-      "differences": "Les différents bords politiques s'accordent sur la matérialisation d'une frappe meurtrière imputée aux rebelles houthis contre l'aéroport de Riyad, tout en soulignant la gravité du bilan humain et la suspension du trafic. La droite se distingue toutefois par une mise en avant plus prononcée des réactions diplomatiques internationales, notamment celle des États-Unis, ainsi que par des rappels historiques sur le niveau de violence inédit de l'attaque depuis plusieurs années dans le royaume.",
+      "differences": "L'ensemble de la presse relate de manière homogène l'attaque contre l'aéroport de Riyad, son lourd bilan humain et son attribution aux rebelles houthis. Toutefois, la droite et le centre droit insistent davantage sur la nationalité des victimes étrangères, les réactions directes de Donald Trump évoquant de potentielles représailles et la coïncidence avec le calendrier économique du royaume, comme la conférence sur l'investissement relevée par CNews. Les médias de gauche et du centre se focalisent plus nettement sur la suspension du trafic aérien, les mesures de sécurité locales comme le passage des écoles en distanciel, et la menace persistante d'une escalade régionale soulignée par l'ONU.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 18
+      "summarizedArticleCount": 19
     },
     {
-      "id": "0ad64834f4cc",
-      "slug": "la-gauche-organise-le-premier-tour-de-sa-primaire-presidentielle",
-      "title": "La gauche organise le premier tour de sa primaire présidentielle",
-      "createdAt": "2026-10-11T08:54:03.864Z",
+      "id": "e691a504f4df",
+      "slug": "donald-trump-demande-un-nouveau-president-en-ukraine",
+      "title": "Donald Trump demande un nouveau président en Ukraine",
+      "createdAt": "2026-10-11T09:07:20.230Z",
       "articles": [
         {
-          "id": "c3012fdea66f",
-          "outletId": "ouest-france",
-          "headline": "Présidentielle 2027 : tout savoir sur la primaire de la gauche dont le premier tour du scrutin s’achève ce dimanche",
-          "url": "https://www.ouest-france.fr/elections/presidentielle/presidentielle-2027-tout-savoir-sur-la-primaire-de-la-gauche-dont-le-scrutin-souvre-ce-vendredi-be46a46a-be67-11f1-b7db-555e86a524f6?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-11T08:22:46.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwOWE1MzRlYWFmZGE3Y2U0YzZlYTkyODE4N2IwYTc4ZTU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=dd5fd6261aa79b0630effc0636b1324cb8f1f67271c9222d8f70ad1b2e68d2d7",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "bc03717781e9",
-          "outletId": "le-monde",
-          "headline": "Primaire de la gauche sociale-démocrate : plus de 110 000 personnes ont déjà voté, selon la commission d’organisation",
-          "url": "https://www.lemonde.fr/politique/article/2026/10/11/primaire-de-la-gauche-sociale-democrate-plus-de-110-000-personnes-ont-deja-vote-selon-la-commission-d-organisation_6790987_823449.html",
-          "publishedAt": "2026-10-11T08:12:53.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/04/458/0/5500/2750/644/322/60/0/f4ff8e6_upload-1-hvfdj9er9kfr-ad037-debat-primairegauche-dsc08839.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "8cb5992456a3",
-          "outletId": "bfmtv",
-          "headline": "Qui sont les votants de la primaire sociale-démocrate?",
-          "url": "https://www.bfmtv.com/politique/parti-socialiste/video-qui-sont-les-votants-de-la-primaire-sociale-democrate_VN-202610110134.html",
-          "publishedAt": "2026-10-11T08:09:43.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/4q-0QdwLHU_NftOnkiCcKiVqJeQ=/0x0:1280x720/800x0/images/Qui-sont-les-votants-de-la-primaire-sociale-democrate-2363112.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "7aee23c69323",
-          "outletId": "cnews",
-          "headline": "Primaire de la gauche sociale-démocrate : jusqu’à quand les participants peuvent-ils voter ?",
-          "url": "https://www.cnews.fr/france/2026-10-11/primaire-de-la-gauche-sociale-democrate-jusqua-quand-les-participants-peuvent-ils",
-          "publishedAt": "2026-10-11T07:30:42.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_jmbarrere_3330982-taille1200_6acb2f68cc144.jpg?itok=gSxf_dwi",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "7054c60bd1ca",
-          "outletId": "lobs",
-          "headline": "Primaire sociale-démocrate : Raphaël Glucksmann espère l’emporter au premier tour, les résultats connus ce soir",
-          "url": "https://www.nouvelobs.com/politique/20261011.OBS119108/primaire-sociale-democrate-raphael-glucksmann-espere-l-emporter-au-premier-tour-les-resultats-connus-ce-soir.html",
-          "publishedAt": "2026-10-11T07:19:50.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/10/09/0/0/6499/4333/0/0/60/0/130fac1_upload-1-0mygicxevq7a-080-hl-dperron-3319229.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "0324cff78551",
-          "outletId": "europe-1",
-          "headline": "Primaire socialiste : «On a très largement dépassé la barre des 100.000 votants», se félicite Patrick Kanner",
-          "url": "https://www.europe1.fr/politique/primaire-socialiste-on-a-tres-largement-depasse-la-barre-des-100000-votants-se-felicite-patrick-kanner-1138175?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-11T06:29:20.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/11/08/000_a7nr8cm_2_6acb313ddebe9.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "f9072c5896aa",
+          "id": "6503cdc080a5",
           "outletId": "le-figaro",
-          "headline": "Primaire de la gauche : Glucksmann compte gagner dès le premier tour mais le suspense reste entier",
-          "url": "https://www.lefigaro.fr/flash-actu/primaire-de-la-gauche-glucksmann-compte-gagner-des-le-premier-tour-mais-le-suspens-reste-entier-20261011",
-          "publishedAt": "2026-10-11T06:14:48.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/11/0e33c9ff745b4b6a388cf3e41ad85e9c38cd106dcae3d5b791fccec688ae057d.JPG",
+          "headline": "Sous la pression des midterms, Donald Trump acte une rupture sans précédent avec l’Ukraine",
+          "url": "https://www.lefigaro.fr/international/sous-la-pression-des-midterms-donald-trump-acte-une-rupture-sans-precedent-avec-l-ukraine-20261011",
+          "publishedAt": "2026-10-11T08:36:27.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/10/11/a06020f2291c03db3ed313bd4fad01cdb72b77b085ae87176b81f6a7cb0cb366.jpg",
           "frontPage": true,
           "kind": "news",
-          "section": "politics",
+          "section": "world",
           "everFrontPage": true
         },
-        {
-          "id": "a28f0c7838c2",
-          "outletId": "le-figaro",
-          "headline": "Retour de l’ISF, taxe Zucman, Sécu «intégrale» : ce que comporte le programme économique des candidats à la primaire sociale-démocrate",
-          "url": "https://www.lefigaro.fr/conjoncture/retour-de-l-isf-taxe-zucman-secu-integrale-ce-que-comporte-le-programme-economique-des-candidats-a-la-primaire-sociale-democrate-20261009",
-          "publishedAt": "2026-10-11T06:00:47.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/1200x800_crop/2026/10/11/5ab2690ca8ae186a3f60a89ff8ae4a6c6f2267d4b75c43f8fd6a52a55aa1d991.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "8fd80db45fa3",
-          "outletId": "tf1-info",
-          "headline": "EN DIRECT - Présidentielle 2027 : qui finira en tête du premier tour de la primaire de la gauche ?",
-          "url": "https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-qui-finira-en-tete-du-premier-tour-de-la-primaire-de-la-gauche-2469249.html",
-          "publishedAt": "2026-10-11T05:00:00.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/primaire-ps-place-publique-2026-d5f77d-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "politics"
-        },
-        {
-          "id": "7a2977b54424",
-          "outletId": "europe-1",
-          "headline": "1er tour de la primaire du PS : dernière ligne droite pour les électeurs socialistes",
-          "url": "https://www.europe1.fr/politique/1er-tour-de-la-primaire-du-ps-derniere-ligne-droite-pour-les-electeurs-socialistes-1137098?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-11T04:54:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/10/21/000_62d62h4_1_6aca975b2cca1.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "3e915387005e",
-          "outletId": "france-24",
-          "headline": "Primaire sociale-démocrate : qui arrivera en tête à l'issue du premier tour ?",
-          "url": "https://www.france24.com/fr/france/20261011-primaire-sociale-d%C3%A9mocrate-qui-arrivera-en-t%C3%AAte-%C3%A0-l-issue-du-premier-tour",
-          "publishedAt": "2026-10-11T04:41:45.000Z",
-          "imageUrl": "https://s.france24.com/media/display/cd8b7d34-c546-11f1-b702-29a2e29ae696/w:1024/p:16x9/000-D2T44G3.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "47c2c30f3cea",
-          "outletId": "le-monde",
-          "headline": "Primaire à gauche : dans les sections locales, les militants mobilisés pour rassurer les votants après la cyberattaque",
-          "url": "https://www.lemonde.fr/politique/article/2026/10/11/primaire-a-gauche-dans-les-sections-locales-les-militants-mobilises-pour-offrir-un-cadre-rassurant_6791094_823448.html",
-          "publishedAt": "2026-10-10T22:15:33.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/10/393/0/4724/2362/644/322/60/0/bae3858_upload-1-dbp0qucx0sb4-mmagnin-vote-primaire-gauche-19.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "d3fc0da77bdd",
-          "outletId": "le-parisien",
-          "headline": "Primaire sociale-démocrate pour la présidentielle 2027 : Glucksmann espère l’emporter dès le premier tour, le résultat connu ce soir",
-          "url": "https://www.leparisien.fr/elections/presidentielle/primaire-sociale-democrate-pour-la-presidentielle-2027-glucksmann-espere-lemporter-des-le-premier-tour-le-resultat-connu-ce-soir-11-10-2026-ARX6NI6M6JFFFKU6DN7HFASEQ4.php",
-          "publishedAt": "2026-10-10T22:00:00.000Z",
-          "frontPage": false,
-          "dayPrecision": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "e2f01cbe424a",
-          "outletId": "franceinfo",
-          "headline": "Présidentielle 2027 : la primaire de la gauche franchit la barre des 100 000 votants à la veille de la fin du vote",
-          "url": "https://www.franceinfo.fr/elections/presidentielle/direct-presidentielle-2027-gabriel-attal-jean-luc-melenchon-la-mobilisation-lyceenne-et-la-jeunesse-au-programme-des-grands-meetings-politiques-du-week-end_8231161.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-10T20:58:47.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/ERnYgwseo_hzwe_VRnCHw50hZQo/0x386:7429x4565/432x243/filters:format(jpg)/2026/10/10/6aca69487e67a479596433.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "5ed9af8f7539",
-          "outletId": "liberation",
-          "headline": "Primaire à gauche : plus de 100 000 votants ce samedi à 18 heures, selon les organisateurs",
-          "url": "https://www.liberation.fr/politique/primaire-a-gauche-plus-de-70-000-votants-ce-samedi-matin-selon-les-organisateurs-20261010_WCBPKKMIRZGBZEJ32SVNZQVXUM/",
-          "publishedAt": "2026-10-10T16:59:20.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le premier tour de la primaire de la gauche sociale-démocrate s'achève ce dimanche après une prolongation rendue nécessaire par une cyberattaque.",
-          "Le scrutin rassemble environ 140 000 inscrits, avec une participation dépassant les 100 000 votants selon les bilans communiqués.",
-          "Cinq personnalités politiques briguent l'investiture, Raphaël Glucksmann et Olivier Faure apparaissant comme les figures centrales de cette consultation.",
-          "Les résultats sont attendus dans la soirée, le favori espérant une victoire dès le premier tour malgré les perturbations informatiques initiales."
-        ],
-        "centre": [
-          "La plateforme de vote en ligne de la primaire de la gauche a été la cible d'une cyberattaque le premier jour, contraignant les organisateurs à prolonger le scrutin.",
-          "Le corps électoral, estimé à près de 140 000 personnes, doit départager cinq prétendants dont Ségolène Royal, Olivier Faure et Raphaël Glucksmann.",
-          "La mobilisation a finalement dépassé les 100 000 suffrages exprimés à l'approche de la clôture des votes fixée à dimanche dix-huit heures.",
-          "Les militants locaux se sont mobilisés pour rassurer les électeurs et surmonter les difficultés techniques survenues au lancement de l'élection."
-        ],
-        "droite": [
-          "Le vote électronique de la primaire sociale-démocrate se termine ce dimanche soir après un report d'vingt-quatre heures provoqué par un piratage informatique.",
-          "Les responsables du mouvement se félicitent du franchissement de la barre des 100 000 participants malgré les obstacles techniques rencontrés.",
-          "Certains cadres soulignent la nécessité pour la social-démocratie de s'affranchir de toute alliance avec La France insoumise pour espérer l'emporter en 2027.",
-          "Les propositions économiques des candidats, allant du retour de l'ISF à des taxes ciblées, font l'objet de débats programmatiques nourris."
-        ]
-      },
-      "differences": "Les différents camps s'accordent sur le déroulement factuel du scrutin, marqué par une cyberattaque et une prolongation du vote, mais la droite insiste davantage sur les lignes de fracture programmatiques et politiques, notamment en affirmant par la voix d'Europe 1 la nécessité de rompre avec Jean-Luc Mélenchon. À l'inverse, la gauche et le centre se focalisent principalement sur la mobilisation des électeurs, la gestion de la crise technique et le suspense autour du résultat du premier tour.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 15
-    },
-    {
-      "id": "06275213dd06",
-      "slug": "donald-trump-demande-un-nouveau-president-a-la-tete-de-l-ukraine",
-      "title": "Donald Trump demande un nouveau président à la tête de l'Ukraine",
-      "createdAt": "2026-10-11T08:54:03.864Z",
-      "articles": [
         {
           "id": "3c42728b40d4",
           "outletId": "le-jdd",
@@ -466,6 +288,17 @@
           "headline": "Trump s’en prend à Zelensky et demande un nouveau président en Ukraine, la Russie acclame des propos «historiques»",
           "url": "https://www.liberation.fr/international/amerique/trump-sen-prend-a-zelensky-et-demande-un-nouveau-president-en-ukraine-la-russie-acclame-des-propos-historiques-20261011_HBVJOD4C6JHENDTWQNH343Q4T4/",
           "publishedAt": "2026-10-11T06:45:02.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "35abda14196a",
+          "outletId": "la-croix",
+          "headline": "Guerre en Ukraine : Trump s’en prend à Zelensky et affirme qu’il faut « un nouveau président »",
+          "url": "https://www.la-croix.com/international/ukraine-russie-jour-1691-point-conflit-ukrainien-poutine-aujourdhui-20261011",
+          "publishedAt": "2026-10-11T06:41:08.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/11/2558611-des-secouristes-ukrainiens-degagent-une-femme-coin.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "world"
@@ -551,23 +384,23 @@
           "everFrontPage": true
         },
         {
-          "id": "9faff5f45068",
-          "outletId": "huffpost",
-          "headline": "Trump lâche Zelensky et rejette la faute de la guerre sur l’Ukraine",
-          "url": "https://www.huffingtonpost.fr/international/article/trump-lache-zelensky-et-rejette-la-faute-de-la-guerre-sur-l-ukraine_337658.html",
-          "publishedAt": "2026-10-10T21:14:12.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/08/169/0/4581/2576/0/0/60/0/98faa13_upload-1-isf092wczuv4-afp-20261008-d2ka6fb-v1-highres-uspresidentdonaldtrumpspeaksatcampaignrallyinte.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
           "id": "e1a802caa1c9",
           "outletId": "franceinfo",
           "headline": "Donald Trump affirme \"qu'il est temps pour l'Ukraine d'avoir un nouveau président\" pour parvenir \"à un accord\" avec la Russie",
           "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/donald-trump-affirme-qu-il-est-temps-pour-l-ukraine-d-avoir-un-nouveau-president-pour-parvenir-a-un-accord-avec-la-russie_8231842.html#xtor=RSS-3-[lestitres]",
           "publishedAt": "2026-10-10T20:51:33.000Z",
           "imageUrl": "https://www.franceinfo.fr/pictures/QU9J0IvYZrES8VhCQ28VFptHHMU/0x0:4475x2517/432x243/filters:format(jpg)/2026/10/10/6aca6ff52bf68987260490.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "112b4d8ed2df",
+          "outletId": "france-24",
+          "headline": "Ukraine : une attaque russe fait 20 morts à Zaporijjia, passe d'armes entre Trump et Zelensky",
+          "url": "https://www.france24.com/fr/europe/20261010-ukraine-une-attaque-russe-fait-20-morts-%C3%A0-zaporijjia-passe-d-armes-entre-trump-et-zelensky",
+          "publishedAt": "2026-10-10T20:29:04.000Z",
+          "imageUrl": "https://s.france24.com/media/display/26ff454a-c4e7-11f1-aefb-53993c5f1f18/w:1024/p:16x9/2026-10-10T133052Z-429571011-RC2A0OAJ7LMI-RTRMADP-3-UKRAINE-CRISIS-ATTACK-ZAPORIZHZHIA.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "world"
@@ -595,166 +428,222 @@
           "kind": "news",
           "section": "world",
           "everFrontPage": true
+        },
+        {
+          "id": "a4c968e3f116",
+          "outletId": "europe-1",
+          "headline": "Donald Trump affirme qu'«il est temps pour l'Ukraine d'avoir un nouveau président»",
+          "url": "https://www.europe1.fr/international/donald-trump-affirme-quil-est-temps-pour-lukraine-davoir-un-nouveau-president-1136816?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-10T17:13:47.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Trump/trumps_credits_aaron_schwartz_getty_images_north_america_getty_images_via_afp_6aca722aea3f4.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "c71fc5bba254",
+          "outletId": "huffpost",
+          "headline": "Après l’accord Trump-Poutine, Zelensky ironise sur la « gratitude » du président russe",
+          "url": "https://www.huffingtonpost.fr/international/article/apres-l-accord-trump-poutine-zelensky-ironise-sur-la-gratitude-du-president-russe_337460.html",
+          "publishedAt": "2026-10-10T14:48:10.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/02/05/15/0/1200/675/0/0/60/0/c91e0c8_upload-1-gdgoj1ssfcq0-afp-20260103-89je4nt-v1-midres-ukrainerussiaconflictwar-1.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
         }
       ],
       "section": "world",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Donald Trump a publiquement mis en cause le chef de l'État ukrainien, estimant qu'un changement de dirigeant à Kiev faciliterait la paix.",
-          "Les critiques américaines surviennent dans un contexte de tensions autour d'un accord sur les livraisons de carburant entre Washington et Moscou.",
-          "Plusieurs voix européennes ont réaffirmé leur soutien à Volodymyr Zelensky face aux pressions exercées par l'administration américaine."
+          "Donald Trump a publiquement critiqué Volodymyr Zelensky et réclamé son remplacement à la tête de l'État ukrainien.",
+          "Ces déclarations interviennent au lendemain d'un accord controversé entre Washington et Moscou concernant le commerce du diesel russe.",
+          "Les alliés européens, notamment le Royaume-Uni, ont immédiatement exprimé leur solidarité envers le dirigeant ukrainien face aux pressions américaines."
         ],
         "centre": [
-          "Le président américain a affirmé que son homologue russe souhaite réellement mettre un terme au conflit en cours.",
-          "Volodymyr Zelensky est accusé par Washington de bloquer les négociations et d'empêcher l'aboutissement d'un compromis.",
-          "La Russie a salué les déclarations de Donald Trump, tandis que les alliés de Kiev expriment leur solidarité avec le dirigeant ukrainien."
+          "Le président américain a affirmé qu'il était temps pour Kiev de changer de dirigeant afin de faciliter un accord de paix avec la Russie.",
+          "Donald Trump reproche à Volodymyr Zelensky de bloquer les négociations et de perpétuer le conflit par ses frappes sur les infrastructures pétrolières russes.",
+          "Des frappes meurtrières russes ont simultanément touché Zaporijjia, tandis que Moscou a salué la prise de position de Washington."
         ],
         "droite": [
-          "Donald Trump soutient que Vladimir Poutine est disposé à négocier un règlement pour cesser les hostilités en Ukraine.",
-          "Le président américain a suggéré un renouvellement de la classe politique ukrainienne pour débloquer les pourparlers de paix.",
-          "Les positions de Washington s'accompagnent de reproches adressés à Kiev concernant la poursuite des frappes sur les infrastructures énergétiques."
+          "Donald Trump a acté un tournant diplomatique en demandant la fin des frappes ukrainiennes contre les raffineries russes.",
+          "Le président américain estime que Vladimir Poutine souhaite véritablement un règlement pacifique du conflit.",
+          "Selon Washington, le refus du pouvoir ukrainien de faire des compromis justifie un changement de direction politique à Kiev."
         ]
       },
-      "differences": "Les différents camps s'accordent sur les faits principaux concernant les déclarations de Donald Trump à l'encontre de Volodymyr Zelensky, mais les nuancent selon leur sensibilité politique. La droite met particulièrement en avant la volonté supposée de Moscou de négocier et relaie les critiques américaines imputant à Kiev la responsabilité de l'enlisement. Le centre insiste sur la fragilité de la position ukrainienne face à un lâchage diplomatique manifeste de Washington. La gauche, quant à elle, met l'accent sur les réactions de solidarité européenne et replace ces attaques dans le contexte d'un accord controversé sur le diesel entre les États-Unis et la Russie.",
+      "differences": "La droite met fortement l'accent sur la justification géopolitique de Donald Trump, en insistant sur la volonté supposée de paix de Vladimir Poutine et sur la nécessité pour Kiev de cesser ses attaques contre le secteur énergétique russe. Le centre et la gauche insistent davantage sur la rupture diplomatique brutale que représente le lâchage de Volodymyr Zelensky, en replaçant ces attaques verbales dans le contexte immédiat de l'accord sur le diesel conclu entre les États-Unis et la Russie.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 14
+      "summarizedArticleCount": 18
     },
     {
-      "id": "b03b2d6ec23a",
-      "slug": "paul-seixas-remporte-le-tour-de-lombardie-en-cyclisme",
-      "title": "Paul Seixas remporte le Tour de Lombardie en cyclisme",
-      "createdAt": "2026-10-11T08:54:03.864Z",
+      "id": "6e9ff65a1d5f",
+      "slug": "la-gauche-sociale-democrate-organise-son-premier-tour",
+      "title": "La gauche sociale-démocrate organise son premier tour",
+      "createdAt": "2026-10-11T09:07:20.230Z",
       "articles": [
         {
-          "id": "0dd700ffd738",
-          "outletId": "le-figaro",
-          "headline": "Tour de Lombardie : Seixas vu du ciel, une envolée spectaculaire",
-          "url": "https://www.lefigaro.fr/sports/cyclisme/tour-de-lombardie-seixas-vu-du-ciel-une-envolee-saisissante-20261011",
-          "publishedAt": "2026-10-11T08:31:25.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/11/4bc49c648cd247e15e167dd746f11dc5889d91df5e9fa27fce8108a54bc1fb94.JPG",
-          "frontPage": true,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "52df3ebcd49d",
-          "outletId": "ouest-france",
-          "headline": "« Star affirmée », « l’élu »… Paul Seixas encensé par la presse après son succès fou sur le Tour de Lombardie",
-          "url": "https://www.ouest-france.fr/sport/cyclisme/paul-seixas/star-affirmee-lelu-paul-seixas-encense-par-la-presse-apres-son-succes-fou-sur-le-tour-de-lombardie-49f382ea-c53d-11f1-bba2-d026901fbfe4?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-11T08:10:19.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwOWY2OGMwMGIxNzcxYTk2ZDU1YjgxZWVhMjAxYTc3ZWE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=3c2c519353466c7d656a5e3825ef15eae13f409040915ebd38b15ad6b72ddbbf",
-          "frontPage": true,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "e66c1011e621",
-          "outletId": "la-croix",
-          "headline": "Paul Seixas s’offre son premier « Monument » à vingt ans seulement",
-          "url": "https://www.la-croix.com/sport/paul-seixas-s-offre-son-premier-monument-a-vingt-ans-seulement-20261011",
-          "publishedAt": "2026-10-11T05:25:04.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/10/2558433-en-triomphant-seul-sur-le-tour-de-lombardie-ce-sam.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "39cd313b129b",
-          "outletId": "courrier-international",
-          "headline": "La “pépite française” Paul Seixas “entre dans l’histoire du cyclisme” en remportant le Tour de Lombardie",
-          "url": "https://www.courrierinternational.com/article/sport-la-pepite-francaise-paul-seixas-entre-dans-l-histoire-du-cyclisme-en-remportant-le-tour-de-lombardie_277698",
-          "publishedAt": "2026-10-11T03:00:05.000Z",
-          "imageUrl": "https://focus.courrierinternational.com/2026/10/10/0/0/8256/5504/644/0/60/0/6efdd81_ftp-1-5bbwly7p6iax-afp-d2v4492.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "4f48ea78e87a",
-          "outletId": "20-minutes",
-          "headline": "Tour de Lombardie : Prends garde Tadej, Paul Seixas vient définitivement d’entrer dans la cour des grands",
-          "url": "https://www.20minutes.fr/sport/cyclisme/4253129-20261010-tour-lombardie-prends-garde-tadej-paul-seixas-vient-definitivement-entrer-cour-grands?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-10T16:51:16.000Z",
-          "imageUrl": "https://img.20mn.fr/1Hw5VuziSieVraSGOigrvik/1200x768_credit-obligatoire-photo-de-marco-alpozzi-la-presse-shutterstock-17208754z-le-francais-paul-seixas-du-decathlon-cma-cgm-team-a-remporte-la-course-lors-de-la-120e-edition-de-la-course-cycliste-il-lombardia-tour-de-lombardie-une-course-de-239-km-d-une-journee-reliant-bergame-a-come-le-10-octobre-2026-en-italie-cyclisme-lombardie-2026-italie-come-10-octobre-2026-shutterstock-editorial-cycling-lombardy-2026-italy-co-17208754z-2610101807",
-          "frontPage": true,
-          "kind": "opinion",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "17e77110d856",
-          "outletId": "huffpost",
-          "headline": "À 20 ans, Paul Seixas remporte le Tour de Lombardie 2026, premier « Monument » de sa carrière",
-          "url": "https://www.huffingtonpost.fr/sport/article/a-20-ans-paul-seixas-remporte-le-tour-de-lombardie-2026-premier-monument-de-sa-carriere_337559.html",
-          "publishedAt": "2026-10-10T15:53:51.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/10/0/364/4348/2446/0/0/60/0/8c36eba_upload-1-9nw0chfddfea-afp-20261009-colombo-notitle261009-npmrm-v1-highres-teampresentationillombardia.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "c41908c3edaa",
-          "outletId": "humanite",
-          "headline": "Cyclisme : débarrassé de Pogacar, Paul Seixas s’offre le Tour de Lombardie",
-          "url": "https://www.humanite.fr/sports/cyclisme/cyclisme-debarrasse-de-pogacar-paul-seixas-soffre-le-tour-de-lombardie",
-          "publishedAt": "2026-10-10T15:46:09.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/imago1084312492h.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "8187ff5a241a",
-          "outletId": "le-monde",
-          "headline": "Paul Seixas remporte le Tour de Lombardie, premier Monument de sa carrière",
-          "url": "https://www.lemonde.fr/sport/article/2026/10/10/paul-seixas-remporte-le-tour-de-lombardie-premier-monument-de-sa-carriere_6791014_3242.html",
-          "publishedAt": "2026-10-10T15:41:15.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/10/37/0/8256/4128/644/322/60/0/345e1f5_ftp-1-2484biojt70i-5316537-01-06.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "71f606b30b46",
+          "id": "7054c60bd1ca",
           "outletId": "lobs",
-          "headline": "Paul Seixas remporte le Tour de Lombardie : 10 choses à savoir sur le cycliste français qui bat des records de précocité",
-          "url": "https://www.nouvelobs.com/sport/20261010.OBS119100/paul-seixas-remporte-le-tour-de-lombardie-10-choses-a-savoir-sur-le-cycliste-francais-qui-bat-des-records-de-precocite.html",
-          "publishedAt": "2026-10-10T15:36:33.000Z",
+          "headline": "Primaire sociale-démocrate : Raphaël Glucksmann espère l’emporter au premier tour, les résultats connus ce soir",
+          "url": "https://www.nouvelobs.com/politique/20261011.OBS119108/primaire-sociale-democrate-raphael-glucksmann-espere-l-emporter-au-premier-tour-les-resultats-connus-ce-soir.html",
+          "publishedAt": "2026-10-11T08:52:58.000Z",
+          "imageUrl": "https://focus.nouvelobs.com/2026/10/09/0/0/6499/4333/0/0/60/0/130fac1_upload-1-0mygicxevq7a-080-hl-dperron-3319229.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "sport"
+          "section": "politics"
+        },
+        {
+          "id": "296629a3940b",
+          "outletId": "20-minutes",
+          "headline": "Primaire du PS : Les résultats attendus vers 18 heures, Glucksmann désigné dès le premier tour ?",
+          "url": "https://www.20minutes.fr/politique/4253217-20261011-primaire-ps-resultats-attendus-vers-18-heures-glucksmann-designe-premier-tour?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-11T08:51:22.000Z",
+          "imageUrl": "https://img.20mn.fr/SJYxmRC-TLWoElItMIca-Sk/1200x768_credit-obligatoire-photo-d-alfonso-jimenez-shutterstock-17182810q-raphael-glucksmann-candidat-a-la-primaire-socialiste-pour-les-elections-presidentielles-france-2027-prononce-un-discours-dans-sa-ville-natale-boulogne-billancourt-en-france-le-2-octobre-2026-raphael-glucksmann-candidat-a-la-primaire-socialiste-aux-elections-presidentielles-france-2027-billancourt-france-02-octobre-2026-shutterstock-editorial-raphael-glucksmann-socialist-p-17182810q-2610030139",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "bc03717781e9",
+          "outletId": "le-monde",
+          "headline": "Primaire de la gauche sociale-démocrate : plus de 110 000 personnes ont déjà voté, selon la commission d’organisation",
+          "url": "https://www.lemonde.fr/politique/article/2026/10/11/primaire-de-la-gauche-sociale-democrate-plus-de-110-000-personnes-ont-deja-vote-selon-la-commission-d-organisation_6790987_823449.html",
+          "publishedAt": "2026-10-11T08:12:53.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/04/458/0/5500/2750/644/322/60/0/f4ff8e6_upload-1-hvfdj9er9kfr-ad037-debat-primairegauche-dsc08839.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "8cb5992456a3",
+          "outletId": "bfmtv",
+          "headline": "Qui sont les votants de la primaire sociale-démocrate?",
+          "url": "https://www.bfmtv.com/politique/parti-socialiste/video-qui-sont-les-votants-de-la-primaire-sociale-democrate_VN-202610110134.html",
+          "publishedAt": "2026-10-11T08:09:43.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/4q-0QdwLHU_NftOnkiCcKiVqJeQ=/0x0:1280x720/800x0/images/Qui-sont-les-votants-de-la-primaire-sociale-democrate-2363112.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "7aee23c69323",
+          "outletId": "cnews",
+          "headline": "Primaire de la gauche sociale-démocrate : jusqu’à quand les participants peuvent-ils voter ?",
+          "url": "https://www.cnews.fr/france/2026-10-11/primaire-de-la-gauche-sociale-democrate-jusqua-quand-les-participants-peuvent-ils",
+          "publishedAt": "2026-10-11T07:30:42.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_jmbarrere_3330982-taille1200_6acb2f68cc144.jpg?itok=gSxf_dwi",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "0324cff78551",
+          "outletId": "europe-1",
+          "headline": "Primaire socialiste : «On a très largement dépassé la barre des 100.000 votants», se félicite Patrick Kanner",
+          "url": "https://www.europe1.fr/politique/primaire-socialiste-on-a-tres-largement-depasse-la-barre-des-100000-votants-se-felicite-patrick-kanner-1138175?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-11T06:29:20.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/11/08/000_a7nr8cm_2_6acb313ddebe9.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "f9072c5896aa",
+          "outletId": "le-figaro",
+          "headline": "Primaire de la gauche : Glucksmann compte gagner dès le premier tour mais le suspense reste entier",
+          "url": "https://www.lefigaro.fr/flash-actu/primaire-de-la-gauche-glucksmann-compte-gagner-des-le-premier-tour-mais-le-suspens-reste-entier-20261011",
+          "publishedAt": "2026-10-11T06:14:48.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/11/0e33c9ff745b4b6a388cf3e41ad85e9c38cd106dcae3d5b791fccec688ae057d.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "8fd80db45fa3",
+          "outletId": "tf1-info",
+          "headline": "EN DIRECT - Présidentielle 2027 : qui finira en tête du premier tour de la primaire de la gauche ?",
+          "url": "https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-qui-finira-en-tete-du-premier-tour-de-la-primaire-de-la-gauche-2469249.html",
+          "publishedAt": "2026-10-11T05:00:00.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/682/primaire-ps-place-publique-2026-d5f77d-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "live",
+          "section": "politics"
+        },
+        {
+          "id": "7a2977b54424",
+          "outletId": "europe-1",
+          "headline": "1er tour de la primaire du PS : dernière ligne droite pour les électeurs socialistes",
+          "url": "https://www.europe1.fr/politique/1er-tour-de-la-primaire-du-ps-derniere-ligne-droite-pour-les-electeurs-socialistes-1137098?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-11T04:54:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/10/21/000_62d62h4_1_6aca975b2cca1.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "3e915387005e",
+          "outletId": "france-24",
+          "headline": "Primaire sociale-démocrate : qui arrivera en tête à l'issue du premier tour ?",
+          "url": "https://www.france24.com/fr/france/20261011-primaire-sociale-d%C3%A9mocrate-qui-arrivera-en-t%C3%AAte-%C3%A0-l-issue-du-premier-tour",
+          "publishedAt": "2026-10-11T04:41:45.000Z",
+          "imageUrl": "https://s.france24.com/media/display/cd8b7d34-c546-11f1-b702-29a2e29ae696/w:1024/p:16x9/000-D2T44G3.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "47c2c30f3cea",
+          "outletId": "le-monde",
+          "headline": "Primaire à gauche : dans les sections locales, les militants mobilisés pour rassurer les votants après la cyberattaque",
+          "url": "https://www.lemonde.fr/politique/article/2026/10/11/primaire-a-gauche-dans-les-sections-locales-les-militants-mobilises-pour-offrir-un-cadre-rassurant_6791094_823448.html",
+          "publishedAt": "2026-10-10T22:15:33.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/10/393/0/4724/2362/644/322/60/0/bae3858_upload-1-dbp0qucx0sb4-mmagnin-vote-primaire-gauche-19.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "5ed9af8f7539",
+          "outletId": "liberation",
+          "headline": "Primaire à gauche : plus de 100 000 votants ce samedi à 18 heures, selon les organisateurs",
+          "url": "https://www.liberation.fr/politique/primaire-a-gauche-plus-de-70-000-votants-ce-samedi-matin-selon-les-organisateurs-20261010_WCBPKKMIRZGBZEJ32SVNZQVXUM/",
+          "publishedAt": "2026-10-10T16:59:20.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
         }
       ],
-      "section": "sport",
+      "section": "politics",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Le jeune coureur français a triomphé en solitaire sur la classique italienne.",
-          "Il devient à vingt ans le plus jeune vainqueur de cette épreuve majeure.",
-          "Certains commentaires notent que la course était ouverte suite à l'absence du favori habituel."
+          "Le premier tour du scrutin organisé par le Parti socialiste et Place publique s'achève ce dimanche après une prolongation rendue nécessaire par une cyberattaque.",
+          "Plus de 100 000 électeurs ont déjà pris part au vote parmi les 140 000 inscrits, démontrant une forte mobilisation malgré les perturbations techniques initiales.",
+          "L'eurodéputé Raphaël Glucksmann fait figure de grand favori pour remporter la mise dès le premier tour face à quatre autres prétendants, dont le premier secrétaire Olivier Faure."
         ],
         "centre": [
-          "Paul Seixas a remporté le Tour de Lombardie au terme d'une échappée en solitaire.",
-          "À vingt ans et quelques jours, il surpasse les records de précocité d'Eddy Merckx.",
-          "La presse internationale salue la performance et qualifie le Français de prodige du cyclisme."
+          "La plateforme de vote en ligne, qui a subi une attaque informatique par déni de service dès son ouverture vendredi, a vu ses délais étendus jusqu'à ce dimanche à 18 heures.",
+          "Les organisateurs affirment que l'intégrité du processus électoral demeure intacte et s'attendent à publier les résultats dans la foulée de la clôture.",
+          "Cinq candidats se disputent la désignation pour représenter la social-démocratie en vue de l'élection présidentielle."
         ],
         "droite": [
-          "Le cycliste français s'est imposé en solitaire jusqu'à l'arrivée à Côme.",
-          "Sa performance a été marquée par une mise en scène spectaculaire et médiatique."
+          "Les responsables du parti socialiste se félicitent d'avoir franchi la barre des 100 000 votants en dépit des difficultés logistiques et des polémiques ayant entaché le début du scrutin.",
+          "Certaines voix au sein de la formation politique soulignent déjà la nécessité pour la social-démocratie de s'affranchir de toute alliance avec La France insoumise pour espérer l'emporter à l'avenir.",
+          "Le suspense demeure entier quant à la possibilité pour Raphaël Glucksmann de l'emporter dès ce premier tour face à ses rivaux."
         ]
       },
-      "differences": "Les différents bords politiques saluent unanimement l'exploit historique de Paul Seixas, tout en variant légèrement les angles d'approche. La presse de gauche mentionne l'absence du grand favori Tadej Pogačar pour nuancer l'ouverture du palmarès, tandis que la droite s'attarde davantage sur la dimension esthétique et la mise en scène télévisuelle de son échappée. Le centre met surtout en avant les comparaisons statistiques de précocité avec les légendes historiques de la discipline comme Eddy Merckx, soulignant le retentissement international de la victoire.",
+      "differences": "La gauche et le centre insistent principalement sur le bon déroulement de la mobilisation et le dépassement du cap des 100 000 votants malgré l'entrave informatique, mettant en avant la résilience du scrutin. De son côté, la droite accorde une visibilité plus marquée aux déclarations stratégiques des cadres socialistes, comme le rejet explicite d'une alliance avec Jean-Luc Mélenchon, tout en rappelant les polémiques connexes et l'impact de la cyberattaque qualifiée d'attaque contre la démocratie.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 9
+      "summarizedArticleCount": 12
     },
     {
-      "id": "365977da7b97",
+      "id": "a0d95acaa05d",
       "slug": "la-police-indienne-reprime-une-manifestation-a-new-delhi",
       "title": "La police indienne réprime une manifestation à New Delhi",
-      "createdAt": "2026-10-11T08:54:03.864Z",
+      "createdAt": "2026-10-11T09:07:20.230Z",
       "articles": [
         {
           "id": "f060ca5c7374",
@@ -773,6 +662,28 @@
           "url": "https://www.lefigaro.fr/international/l-inde-reprime-durement-le-mouvement-des-cafards-qui-s-opposent-a-une-revision-des-listes-electorales-20261011",
           "publishedAt": "2026-10-11T08:12:27.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/11/b843942f1d934c2c2d632dc40fc0c466270ded6ba0fa105274b8f682d320cbd7.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "fe6cb532bbdc",
+          "outletId": "le-monde",
+          "headline": "En Inde, les chefs du Parti du peuple cafard remis en liberté, tandis que des appels à de nouvelles manifestations se multiplient",
+          "url": "https://www.lemonde.fr/international/article/2026/10/11/en-inde-les-chefs-du-parti-du-peuple-cafard-remis-en-liberte-tandis-que-des-appels-a-de-nouvelles-manifestations-se-multiplient_6791443_3210.html",
+          "publishedAt": "2026-10-11T06:09:17.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/11/632/0/7580/3790/644/322/60/0/ac4e6a8_ftp-1-3idw47u6dlhe-5322377-01-06.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "6cab9b43ec29",
+          "outletId": "france-24",
+          "headline": "Inde : les leaders des \"cafards\" remis en liberté, appels à de nouvelles manifestations",
+          "url": "https://www.france24.com/fr/asie-pacifique/20261011-inde-les-leaders-des-cafards-remis-en-libert%C3%A9-appels-%C3%A0-de-nouvelles-manifestations",
+          "publishedAt": "2026-10-11T06:07:45.000Z",
+          "imageUrl": "https://s.france24.com/media/display/d80c366e-c536-11f1-8938-29a2e29ae696/w:1024/p:16x9/000-D22W7VJ.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "world"
@@ -838,30 +749,136 @@
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Le gouvernement nationaliste a transformé la capitale en zone bouclée pour contrer la mobilisation de la jeunesse.",
-          "Des milliers de interpellations arbitraires ont visé les contestataires s'opposant au pouvoir en place.",
-          "L'ONU est intervenue pour exiger la remise en liberté immédiate de toutes les personnes incarcérées."
+          "Le gouvernement de Narendra Modi a totalement verrouillé la capitale pour empêcher une manifestation d'ampleur contre une révision électorale jugée discriminatoire.",
+          "Près de 5 000 personnes ont été arrêtées arbitrairement lors de cette journée de contestation, provoquant une intervention du Haut-Commissariat de l'ONU qui exige leur libération.",
+          "Les chefs du mouvement contestataire, un temps incarcérés, ont obtenu leur remise en liberté par la justice tandis que la jeunesse promet de maintenir la mobilisation."
         ],
         "centre": [
-          "Une vaste opération policière a visé à bloquer une manifestation interdite contestant une révision électorale controversée.",
-          "Les autorités ont procédé à de nombreuses interpellations, touchant notamment les figures de proue de la contestation étudiante.",
-          "La justice a ordonné la libération de dirigeants du mouvement tandis que la jeunesse maintient sa mobilisation."
+          "Les autorités indiennes ont procédé à des milliers d'arrestations pour stopper un rassemblement non autorisé organisé par les opposants à la commission électorale.",
+          "Un tribunal a ordonné dimanche la libération des principaux dirigeants du mouvement après un week-end marqué par un véritable climat d'état de siège à New Delhi.",
+          "L'ONU s'est publiquement saisie de la situation en réclamant la libération immédiate des manifestants détenus par les forces de l'ordre."
         ],
         "droite": [
-          "Les forces de l'ordre ont mené une action ferme à New Delhi pour contrer une marche non autorisée.",
-          "La contestation s'organise en opposition à une mise à jour des listes électorales jugée discriminatoire envers les minorités.",
-          "Plusieurs figures dirigeantes de la contestation ont fait l'objet d'une brève privation de liberté."
+          "La police de New Delhi a mené de vastes opérations d'arrestation pour faire respecter l'interdiction d'une manifestation contestant la révision des listes électorales.",
+          "Le mouvement contestataire s'oppose à des choix politiques accusés par ses partisans de pénaliser les minorités du pays.",
+          "Les principaux responsables de la fronde ont été brièvement interpellés avant d'être relâchés par les autorités judiciaires."
         ]
       },
-      "differences": "La gauche met particulièrement l'accent sur l'ampleur de la répression en relayant le chiffre de cinq mille prisonniers et l'intervention de l'ONU, qualifiant les interpellations d'arbitraires et insistant sur la brutalité du gouvernement nationaliste. Le centre adopte une perspective plus globale sur le bras de fer institutionnel, soulignant à la fois le blocus de la capitale, la contestation des listes électorales et la décision de la justice ordonnant des libérations. Enfin, la droite cadre l'événement à travers l'opposition à une révision électorale perçue comme discriminatoire et qualifie les interpellations de brèves, traduisant une tonalité plus mesurée face à l'action des autorités.",
+      "differences": "La gauche et le centre insistent particulièrement sur l'ampleur de la répression en mentionnant le chiffre de plusieurs milliers d'interpellations et la réaction ferme de l'ONU, qualifiant les détentions d'arbitraires. À l'inverse, la droite adopte un ton plus neutre et factuel en focalisant son récit sur l'interdiction légale de la manifestation et la contestation de la révision électorale, tout en minimisant la portée dramatique des arrestations.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 9
+    },
+    {
+      "id": "cf00ba11a7af",
+      "slug": "paul-seixas-remporte-le-tour-de-lombardie",
+      "title": "Paul Seixas remporte le Tour de Lombardie",
+      "createdAt": "2026-10-11T09:07:20.230Z",
+      "articles": [
+        {
+          "id": "0dd700ffd738",
+          "outletId": "le-figaro",
+          "headline": "Tour de Lombardie : Seixas vu du ciel, une envolée spectaculaire",
+          "url": "https://www.lefigaro.fr/sports/cyclisme/tour-de-lombardie-seixas-vu-du-ciel-une-envolee-saisissante-20261011",
+          "publishedAt": "2026-10-11T08:31:25.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/11/4bc49c648cd247e15e167dd746f11dc5889d91df5e9fa27fce8108a54bc1fb94.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "e66c1011e621",
+          "outletId": "la-croix",
+          "headline": "Paul Seixas s’offre son premier « Monument » à vingt ans seulement",
+          "url": "https://www.la-croix.com/sport/paul-seixas-s-offre-son-premier-monument-a-vingt-ans-seulement-20261011",
+          "publishedAt": "2026-10-11T05:25:04.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/10/2558433-en-triomphant-seul-sur-le-tour-de-lombardie-ce-sam.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "39cd313b129b",
+          "outletId": "courrier-international",
+          "headline": "La “pépite française” Paul Seixas “entre dans l’histoire du cyclisme” en remportant le Tour de Lombardie",
+          "url": "https://www.courrierinternational.com/article/sport-la-pepite-francaise-paul-seixas-entre-dans-l-histoire-du-cyclisme-en-remportant-le-tour-de-lombardie_277698",
+          "publishedAt": "2026-10-11T03:00:05.000Z",
+          "imageUrl": "https://focus.courrierinternational.com/2026/10/10/0/0/8256/5504/644/0/60/0/6efdd81_ftp-1-5bbwly7p6iax-afp-d2v4492.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "17e77110d856",
+          "outletId": "huffpost",
+          "headline": "À 20 ans, Paul Seixas remporte le Tour de Lombardie 2026, premier « Monument » de sa carrière",
+          "url": "https://www.huffingtonpost.fr/sport/article/a-20-ans-paul-seixas-remporte-le-tour-de-lombardie-2026-premier-monument-de-sa-carriere_337559.html",
+          "publishedAt": "2026-10-10T15:53:51.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/10/0/364/4348/2446/0/0/60/0/8c36eba_upload-1-9nw0chfddfea-afp-20261009-colombo-notitle261009-npmrm-v1-highres-teampresentationillombardia.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "c41908c3edaa",
+          "outletId": "humanite",
+          "headline": "Cyclisme : débarrassé de Pogacar, Paul Seixas s’offre le Tour de Lombardie",
+          "url": "https://www.humanite.fr/sports/cyclisme/cyclisme-debarrasse-de-pogacar-paul-seixas-soffre-le-tour-de-lombardie",
+          "publishedAt": "2026-10-10T15:46:09.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/imago1084312492h.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "8187ff5a241a",
+          "outletId": "le-monde",
+          "headline": "Paul Seixas remporte le Tour de Lombardie, premier Monument de sa carrière",
+          "url": "https://www.lemonde.fr/sport/article/2026/10/10/paul-seixas-remporte-le-tour-de-lombardie-premier-monument-de-sa-carriere_6791014_3242.html",
+          "publishedAt": "2026-10-10T15:41:15.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/10/37/0/8256/4128/644/322/60/0/345e1f5_ftp-1-2484biojt70i-5316537-01-06.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "71f606b30b46",
+          "outletId": "lobs",
+          "headline": "Paul Seixas remporte le Tour de Lombardie : 10 choses à savoir sur le cycliste français qui bat des records de précocité",
+          "url": "https://www.nouvelobs.com/sport/20261010.OBS119100/paul-seixas-remporte-le-tour-de-lombardie-10-choses-a-savoir-sur-le-cycliste-francais-qui-bat-des-records-de-precocite.html",
+          "publishedAt": "2026-10-10T15:36:33.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        }
+      ],
+      "section": "sport",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le coureur français Paul Seixas a triomphé en solitaire sur le Tour de Lombardie, décrochant ainsi le premier Monument de sa carrière.",
+          "À tout juste vingt ans, il bat des records de précocité en devenant le plus jeune vainqueur de cette classique historique.",
+          "Certaines analyses de ce bord politique soulignent que cette victoire a été facilitée par l'absence du grand favori, Tadej Pogacar."
+        ],
+        "centre": [
+          "Paul Seixas a remporté la prestigieuse course italienne après une longue échappée solitaire menée jusqu'à Côme.",
+          "Il s'affirme comme une pépite du cyclisme international en effaçant des tablettes le record d'Eddy Merckx pour s'imposer sur un Monument à cet âge.",
+          "La presse étrangère salue également la performance mémorable du jeune Français et sa confirmation au plus haut niveau."
+        ],
+        "droite": [
+          "Le Français a réalisé une performance spectaculaire marquée par un raid en solitaire vers la ligne d'arrivée.",
+          "La couverture de ce camp met particulièrement en valeur l'esthétique et la mise en scène aérienne de son échappée victorieuse."
+        ]
+      },
+      "differences": "Tous les camps saluent unanimement l'exploit historique du jeune Paul Seixas, mais des nuances apparaissent dans l'angle adopté. La gauche et le centre insistent fortement sur la précocité du coureur et le symbole de son premier grand Monument, l'Humanité n'hésitant pas à rappeler l'absence de Tadej Pogacar pour contextualiser l'ouverture de la course. De son côté, la droite se focalise davantage sur la dimension visuelle et spectaculaire de sa performance en solitaire, illustrant une approche plus esthétique de l'événement.",
       "promptVersion": "sum-2",
       "summarizedArticleCount": 7
     },
     {
-      "id": "cda3d4c0d147",
-      "slug": "mathilde-panot-refuse-de-porter-le-ruban-rose-et-cree-la-polemiq",
-      "title": "Mathilde Panot refuse de porter le ruban rose et crée la polémique",
-      "createdAt": "2026-10-11T08:54:03.864Z",
+      "id": "da6654c533ea",
+      "slug": "mathilde-panot-refuse-de-porter-le-ruban-rose",
+      "title": "Mathilde Panot refuse de porter le ruban rose",
+      "createdAt": "2026-10-11T09:07:20.230Z",
       "articles": [
         {
           "id": "2a7527568873",
@@ -897,6 +914,18 @@
           "section": "politics"
         },
         {
+          "id": "4156c09100c5",
+          "outletId": "20-minutes",
+          "headline": "Dépistage du cancer du sein : Mathilde Panot refuse de porter le ruban d’Octobre rose, colère de ministres et du RN",
+          "url": "https://www.20minutes.fr/politique/4253186-20261011-depistage-cancer-sein-mathilde-panot-refuse-porter-ruban-octobre-rose-colere-ministres-rn?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-11T04:16:57.000Z",
+          "imageUrl": "https://img.20mn.fr/q4gj1MQGR8CKkhd_FBWzLCk/1200x768_mathilde-panot-la-deputee-la-france-insoumise-lfi-mathilde-panot-et-la-deputee-cyrielle-chatelain-lors-des-conferences-d-ete-du-parti-universites-d-ete-du-parti-de-gauche-francais-la-france-insoumise-lfi-a-chateauneuf-sur-isere-dans-le-sud-est-de-la-france-le-21-aout-2025-a-chateauneuf-sur-isere-le-vendredi-21-aout-2026-alain-robert-1y8a6539-credit-alain-robert-sipa-2608220948",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
           "id": "24f566c64533",
           "outletId": "le-jdd",
           "headline": "«Le cancer est une maladie politique» : Mathilde Panot refuse de porter le ruban d’Octobre Rose et suscite un tollé",
@@ -924,61 +953,19 @@
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "La cheffe des députés insoumis a choisi de ne pas arborer le symbole de la campagne annuelle de sensibilisation au dépistage du cancer du sein.",
-          "Elle justifie son choix en mettant en cause des liens supposés entre l'opération de communication, un fabricant de pesticides et des activités en Israël.",
-          "Cette prise de position a provoqué une vive réprobation de la part de ses adversaires politiques, qui l'accusent d'éloigner le débat des enjeux de santé publique."
+          "La dirigeante des députés insoumis a annoncé dans une vidéo ne pas arborer le symbole d'Octobre rose pour protester contre les liens supposés de la campagne avec un fabricant de pesticides et ses activités en Israël.",
+          "Cette prise de position a immédiatement provoqué une série de réactions indignées au sein du gouvernement et parmi les autres formations politiques.",
+          "Plusieurs commentateurs soulignent que les motivations de l'élue s'écartent nettement des missions sanitaires et de sensibilisation au dépistage du cancer du sein portées par l'association."
         ],
         "droite": [
-          "La députée insoumis a suscité un tollé général en qualifiant la maladie de sujet politique et en rejetant le ruban symbolique.",
-          "Ses détracteurs politiques, issus du gouvernement et de l'opposition, ont condamné des arguments jugés déplacés et approximatifs.",
-          "Certaines figures politiques vont jusqu'à dénoncer des propos déplacés comportant des relents antisémites suite aux accusations visant Israël."
+          "L'élue insoumise a justifié son refus de porter le ruban de sensibilisation en qualifiant le cancer de maladie liée à des orientations politiques et industrielles, suscitant une vive polémique.",
+          "Le gouvernement ainsi que des figures de l'opposition de droite et d'extrême droite ont vigoureusement condamné ces déclarations.",
+          "Certaines réactions politiques estiment que les propos tenus par la députée dépassent la simple critique sanitaire pour toucher à des amalgames contestés."
         ]
       },
-      "differences": "La gauche met l'accent sur la justification politique de la députée en insistant sur sa critique des partenariats industriels, tout en reconnaissant que ses arguments s'éloignent des préoccupations sanitaires de l'association. La droite, en revanche, durcit le ton face à ce refus, qualifiant la polémique de tollé général et allant jusqu'à pointer des insinuations antisémites dans le discours de l'élue.",
+      "differences": "Le camp de gauche met l'accent sur la contestation menée par la députée contre les partenariats industriels et la dimension politique qu'elle attribue à la santé publique, tout en notant le décalage avec les objectifs de dépistage. Le camp de droite accentue le tollé provoqué par ces déclarations, en insistant sur la gravité des accusations portées contre la campagne et sur la condamnation unanime des ministres et des oppositions face à ce qu'ils qualifient de provocations déplacées.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 5
-    },
-    {
-      "id": "8fa4737b1aa9",
-      "slug": "plusieurs-familles-portent-plainte-contre-la-ville-de-paris",
-      "title": "Plusieurs familles portent plainte contre la Ville de Paris",
-      "createdAt": "2026-10-11T08:54:03.864Z",
-      "articles": [
-        {
-          "id": "048d192aea22",
-          "outletId": "europe-1",
-          "headline": "Périscolaire à Paris : nouvelle plainte d'une vingtaine de familles visant la mairie et ses responsables",
-          "url": "https://www.europe1.fr/societe/periscolaire-a-paris-nouvelle-plainte-dune-vingtaine-de-familles-visant-la-mairie-et-ses-responsables-1137197?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-10T20:57:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Justice/080_hl_smarty_1920219_1_69a02f9dec69b.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "7c6ab1368a1f",
-          "outletId": "cnews",
-          "headline": "Violences sexuelles dans le périscolaire : plusieurs familles portent plainte contre la Ville de Paris",
-          "url": "https://www.cnews.fr/france/2026-10-10/violences-sexuelles-dans-le-periscolaire-plusieurs-familles-portent-plainte",
-          "publishedAt": "2026-10-10T20:19:31.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/dimitar_dilkoff_afp_6aca9879c8a93.jpg?itok=6uwwxSmv",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "section": "misc",
-      "everInEdition": true,
-      "summaries": {
-        "droite": [
-          "Une vingtaine de familles d'élèves s'associent pour déposer une nouvelle plainte collective contre la municipalité parisienne.",
-          "La démarche vise à alimenter l'instruction judiciaire en cours concernant les dysfonctionnements et responsabilités dans les affaires de violences sexuelles.",
-          "Les plaignants sont des parents d'enfants scolarisés en école maternelle dans le septième et le quinzième arrondissement entre 2025 et 2026."
-        ]
-      },
-      "differences": "Le sujet est exclusivement couvert par la droite à travers les articles d'Europe 1 et CNews, qui rapportent de manière similaire les détails factuels de la nouvelle plainte collective visant la gestion municipale du périscolaire, sans qu'il y ait d'autres camps à comparer.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 2
+      "summarizedArticleCount": 6
     }
   ]
 }
