@@ -22,7 +22,7 @@ function outlet(id: string, leaning: Leaning, reach: number): OutletConfig {
     leaningSources: [],
     leaningNote: '',
     readership: { evidence: '' },
-    audience: { reach, unit: 'visits', source: 'test', asOf: '2026-08' },
+    reach: { value: reach, unit: 'visits', source: 'test', asOf: '2026-08' },
     feedChecks: [],
     tdm: { reserved: false, checkedAt: '2026-08-01' },
   };

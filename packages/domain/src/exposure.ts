@@ -3,7 +3,7 @@ import {
   coverageGroup,
   reportingOutletIds,
 } from './coverage.ts';
-import type { Article, Audience, Outlet } from './index.ts';
+import type { Article, Outlet, Reach } from './index.ts';
 
 /**
  * The Exposure rules (issue #88, spec #86): a second reading of the same
@@ -31,7 +31,7 @@ export const EXPOSURE_COMPRESSION_EXPONENT = 0.5;
 
 /** The minimal shape exposureShares reads off an Outlet: Leaning + Reach. */
 export type ExposureOutlet = Pick<Outlet, 'leaning'> & {
-  audience: Audience;
+  reach: Reach;
 };
 
 /**
@@ -51,7 +51,7 @@ export function exposureShares(
   for (const id of reportingOutletIds(articles)) {
     const outlet = outletById.get(id);
     if (!outlet) continue;
-    const weight = outlet.audience.reach ** EXPOSURE_COMPRESSION_EXPONENT;
+    const weight = outlet.reach.value ** EXPOSURE_COMPRESSION_EXPONENT;
     sums[coverageGroup(outlet.leaning)] += weight;
     total += weight;
   }
