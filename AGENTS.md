@@ -42,7 +42,7 @@ Every commit message uses the [Conventional Commits](https://www.conventionalcom
 
 pnpm monorepo. Run everything from the repo root:
 
-- `pnpm edition` — run the pipeline: fetch all Outlet feeds and write the archive under `data/` (see ADR-0002). Same command locally and in CI.
+- `pnpm edition` — run the pipeline: fetch all Outlet feeds and write the archive under `data/` (see ADR-0002). Same command locally and in CI. In CI, the hourly trigger is an external cron-job.org job POSTing to the `workflow_dispatch` API (`.github/workflows/edition.yml`, `schedule:` kept commented out as fallback — GitHub's scheduler dropped most hourly slots).
 - `pnpm verify` — re-check the Outlet config evidence: feed status, item count, time covered, image presence, TDM reservations (feeds and TDM probes only; prints stats).
 - `pnpm test` — all packages (vitest, pipeline).
 - `pnpm typecheck` — all packages (tsc + astro check).

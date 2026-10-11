@@ -5,7 +5,9 @@ each political leaning covers it — same story, every leaning, side by side.
 
 ## How it works
 
-Every build (once an hour, all 24 hours, via GitHub Actions) runs the pipeline,
+Every build (once an hour, all 24 hours, triggered by an external cron-job.org
+job that calls the workflow's `workflow_dispatch` API — GitHub's own scheduler
+dropped most hourly slots) runs the pipeline,
 then commits the result to `data/` — the git repo is the database, and CI publishes it as a
 static site. Purple-stroked nodes run a language model; dashed nodes are stores
 on disk — only what changed is written or re-read.
