@@ -48,20 +48,20 @@ describe('outlet config', () => {
 
   it('carries one sourced, positive reach figure per Outlet (issue #87)', () => {
     for (const outlet of outlets) {
-      const audience = outlet.audience;
+      const reach = outlet.reach;
       // One comparable unit for the whole Edition: certified or estimated web
       // visits. No circulation/readers/downloads series to weight against.
-      expect(audience.unit, outlet.id).toBe('visits');
-      expect(audience.reach, outlet.id).toBeGreaterThan(0);
-      expect(audience.source, outlet.id).not.toBe('');
+      expect(reach.unit, outlet.id).toBe('visits');
+      expect(reach.value, outlet.id).toBeGreaterThan(0);
+      expect(reach.source, outlet.id).not.toBe('');
       // ISO month ('2026-08'), half-year ('2026-S1') or year ('2026').
-      expect(audience.asOf, outlet.id).toMatch(/^\d{4}(-\d{2}|(-S\d))?$/);
+      expect(reach.asOf, outlet.id).toMatch(/^\d{4}(-\d{2}|(-S\d))?$/);
       // ACPM figures are certified; anything else is an estimate and must be
       // flagged, never silent.
-      if (audience.source === 'ACPM') {
-        expect(audience.estimated, outlet.id).toBeUndefined();
+      if (reach.source === 'ACPM') {
+        expect(reach.estimated, outlet.id).toBeUndefined();
       } else {
-        expect(audience.estimated, outlet.id).toBe(true);
+        expect(reach.estimated, outlet.id).toBe(true);
       }
     }
   });
@@ -81,9 +81,9 @@ describe('outlet config', () => {
     for (const outlet of outlets) {
       const expected = estimates[outlet.id];
       if (expected !== undefined) {
-        expect(outlet.audience.reach, outlet.id).toBe(expected);
-        expect(outlet.audience.estimated, outlet.id).toBe(true);
-        expect(outlet.audience.unit, outlet.id).toBe('visits');
+        expect(outlet.reach.value, outlet.id).toBe(expected);
+        expect(outlet.reach.estimated, outlet.id).toBe(true);
+        expect(outlet.reach.unit, outlet.id).toBe('visits');
       }
     }
   });
