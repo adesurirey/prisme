@@ -1,8 +1,12 @@
-## Agent skills
+## Start here
+
+New to the repo? Read in order: `GLOSSARY.md` (terminology), `docs/adr/` (why the rules below exist), then the domain doc matching your task. The rest of this file tells you how to work.
+
+## Workflows
 
 ### Issue tracker
 
-Issues are tracked in this repository’s GitHub Issues via `gh`. See `docs/agents/issue-tracker.md`.
+Issues are tracked in this repository's GitHub Issues via `gh`. See `docs/agents/issue-tracker.md`.
 
 ### Domain docs
 
@@ -38,7 +42,7 @@ Every commit message uses the [Conventional Commits](https://www.conventionalcom
 
 pnpm monorepo. Run everything from the repo root:
 
-- `pnpm edition` — run the pipeline: fetch all Outlet feeds, write `data/edition.json`, `data/outlets.json`, `data/stories/<slug>.json`. Same command locally and in CI.
+- `pnpm edition` — run the pipeline: fetch all Outlet feeds and write the archive under `data/` (see ADR-0002). Same command locally and in CI.
 - `pnpm verify` — re-check the Outlet config evidence: feed status, item count, time covered, image presence, TDM reservations (feeds and TDM probes only; prints stats).
 - `pnpm test` — all packages (vitest, pipeline).
 - `pnpm typecheck` — all packages (tsc + astro check).
@@ -47,10 +51,14 @@ pnpm monorepo. Run everything from the repo root:
 
 Packages: `packages/domain` (shared types and the sourced Outlet config), `pipeline` (collector, `tsx`), `web` (Astro + React).
 
+### Tests
+
+Add tests for changes to `packages/domain` (typed config, domain types) and `pipeline` (collector logic) — vitest, colocated. UI copy tweaks in `web` don't need tests; layout or component logic does. Run `pnpm test` before committing.
+
 ### Hard rules from the ADRs
 
 - **Never write teaser or outlet text to disk.** Teasers exist only in memory inside the collector (ADR-0003). Nothing in `data/` may contain feed description text; if a diff shows teaser-like content in `data/`, stop and fix before committing.
-- **Never run `pnpm edition` without the user's explicit consent.** It calls paid classification and summary APIs (Gemini) and costs real money. `pnpm verify` (feeds and TDM probes only) is free and needs no consent.
+- **Never run paid commands without the user's explicit consent.** Paid: `pnpm edition`, `pnpm edition:wipe` (classification and summary APIs, real money), `pnpm benchmark:grade` (OpenRouter). Free, no consent needed: `pnpm verify` (feeds and TDM probes only), `pnpm test`, `pnpm typecheck`.
 - **Leaning belongs to Outlets, set by hand** in config, backed by sources (ADR-0001). Never classify Articles by Leaning.
 - **The UI is French; code, data keys and domain names are English** (GLOSSARY.md).
 
@@ -74,4 +82,3 @@ The archive (`data/`) is disposable, not a contract — this is a POC.
   cite it to justify keeping old data formats around.
 - When reviewing, treat any fallback/optional handling for a `data/` shape that no
   current pipeline run can produce as dead compat code — prefer deleting it.
-- **Story pages stay up permanently — once in the Edition**: a Story that has entered the Edition (`everInEdition`) is never edited once frozen and its slug is never reused; a slug collision must be resolved deterministically from Story ids, never by ordering — across builds the existing file keeps its slug, within a build the smallest Story id keeps the bare slug, and other claimants get a Story-id suffix. A frozen Story that never entered the Edition is deleted at the end of each run (issue #75).
