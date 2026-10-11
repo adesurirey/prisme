@@ -15,6 +15,12 @@ const OUTLETS: Outlet[] = [
     paywall: 'partial',
     site: 'https://www.liberation.fr',
     feeds: {},
+    reach: {
+      value: 1000000,
+      unit: 'visits',
+      source: 'test',
+      asOf: '2026-08',
+    },
   },
   {
     id: 'monde',
@@ -23,6 +29,12 @@ const OUTLETS: Outlet[] = [
     paywall: 'full',
     site: 'https://www.lemonde.fr',
     feeds: {},
+    reach: {
+      value: 1000000,
+      unit: 'visits',
+      source: 'test',
+      asOf: '2026-08',
+    },
   },
 ];
 

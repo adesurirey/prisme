@@ -42,12 +42,11 @@ export interface Readership {
 }
 
 /**
- * One raw, sourced reach figure per Outlet (issue #87): the input the Exposure
- * indicator will weight. The units are deliberately heterogeneous — certified
- * ACPM web visits, print circulation, podcast downloads, LDP readers — and are
- * never normalised here; only the Exposure computation may compare them
- * (ticket 4 records the method). Figures come exclusively from the research
- * docs: `docs/research/outlet-leanings.md` (ACPM rows) and
+ * The Reach of one Outlet (GLOSSARY): the raw, sourced figure the Exposure
+ * indicator weights. Every figure is monthly web visits — ACPM-certified where
+ * the Outlet is certified, otherwise a flagged estimate; the unit is declared
+ * so the comparability rule stays checkable. Figures come exclusively from
+ * the research docs: `docs/research/outlet-leanings.md` (ACPM rows) and
  * `docs/research/reach-figures-issue85.md` (the five estimates, flagged).
  */
 export interface Reach {
@@ -105,7 +104,8 @@ export interface OutletConfig extends Outlet {
   /** Why this Leaning, including where sources disagree. Publishable French. */
   leaningNote: string;
   readership: Readership;
-  /** One raw, sourced reach figure (issue #87); units may differ between Outlets. */
+  /** One raw, sourced reach figure (issue #87): the unit is declared so the
+   * comparability rule stays checkable. */
   reach: Reach;
   /** Verification evidence for each declared feed. */
   feedChecks: FeedCheck[];
@@ -2156,16 +2156,19 @@ export const excludedOutlets: ExcludedOutlet[] = [
 ];
 
 /**
- * The public Outlet shape written to `data/outlets.json`: identity and feeds
- * only. Sources, notes and checks stay in this module and on the site.
+ * The public Outlet shape written to `data/outlets.json`: identity, feeds and
+ * the sourced Reach figure (issue #89 — the site build computes the Exposition
+ * shares from it). Sources, notes and checks stay in this module and on the
+ * site.
  */
 export function publicOutlets(): Outlet[] {
-  return outlets.map(({ id, name, leaning, paywall, site, feeds }) => ({
+  return outlets.map(({ id, name, leaning, paywall, site, feeds, reach }) => ({
     id,
     name,
     leaning,
     paywall,
     site,
     feeds,
+    reach,
   }));
 }

@@ -3,6 +3,7 @@ import {
   blindspots,
   countedArticles,
   coverageCounts,
+  exposureShares,
   pickStoryImage,
   reportingOutletIds,
   SECTION_LABELS,
@@ -16,7 +17,7 @@ import StoryImage from './StoryImage';
  * One Story in the Edition index, in ranking order (issue #6: the Edition
  * orders by Outlets currently on the Front page, then Coverage): Section,
  * title, Blindspot badges, the Coverage meta line (compact strip + counted
- * Articles + share of the config — see CoverageMeta) — one whole-card link
+ * Articles — see CoverageMeta) — one whole-card link
  * to the Story page, where the Articles live, styled like the Story page's
  * Article cards (hover surface, no animation).
  *
@@ -33,6 +34,7 @@ export default function StoryCard({
 }) {
   const byId = new Map(outlets.map((o) => [o.id, o]));
   const counts = coverageCounts(story.articles, byId);
+  const shares = exposureShares(story.articles, byId);
   const reporting = reportingOutletIds(story.articles).size;
   const spots = blindspots(counts);
   const image = pickStoryImage(story, byId);
@@ -62,6 +64,7 @@ export default function StoryCard({
           <p className="mt-2 flex flex-wrap items-center gap-x-3 text-[13px] text-muted">
             <CoverageMeta
               counts={counts}
+              shares={shares}
               reporting={reporting}
               totalOutlets={outlets.length}
               articles={articles}

@@ -7,6 +7,8 @@
  * collector keeps teasers in memory only and these types never carry them.
  */
 
+import type { Reach } from './outlets.ts';
+
 /**
  * The political position assigned to an Outlet, never to an Article (ADR-0001):
  * five bands, hand-set from the cited sources (docs/research/outlet-leanings.md,
@@ -39,6 +41,9 @@ export interface Outlet {
     une?: string;
     latest?: string;
   };
+  /** One raw, sourced Reach figure (issue #87): the Exposition weight the
+   * site build computes the shares from (issue #89). */
+  reach: Reach;
 }
 
 /**

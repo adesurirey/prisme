@@ -246,8 +246,18 @@ describe('outlet config', () => {
         'leaning',
         'name',
         'paywall',
+        'reach',
         'site',
       ]);
+    }
+  });
+
+  it('gives every public Outlet a positive Reach with unit and source (issue #89)', () => {
+    for (const outlet of publicOutlets()) {
+      expect(outlet.reach.value, outlet.id).toBeGreaterThan(0);
+      expect(outlet.reach.unit, outlet.id).toBe('visits');
+      expect(outlet.reach.source, outlet.id).not.toBe('');
+      expect(outlet.reach.asOf, outlet.id).not.toBe('');
     }
   });
 

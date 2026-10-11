@@ -25,6 +25,13 @@
   --centre: #dfa414;
   --droite: #2e7ce4;
 
+  /* Active tab label on the saturated Leaning pills (light theme). */
+  --on-leaning: #ffffff;
+
+  /* The reading toggle's track (issue #89, Primer SegmentedControl): a
+   * flat, solid gray — quiet, but enough for the knob to read against. */
+  --toggle-track: #f0f0f2;
+
   /* The one color outside the Leaning palette: the Trending Story badge
    * ("En hausse", ADR-0014). Sarcelle is calm but unmistakably set apart
    * from rouge, or and droite. Light theme darkens it for readability on
@@ -38,9 +45,6 @@
   --aurora-centre: #dfa414;
   --aurora-gauche: #e0415e;
   --aurora-droite: #2e7ce4;
-
-  --tooltip: #1b1b1f;
-  --tooltip-ink: #fcfcfc;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,6 +64,13 @@
     --centre: #f6c65b;
     --droite: #63a8ea;
 
+    /* Active tab label on the pastel Leaning pills: dark text for contrast
+     * (white on these pastels fails WCAG 4.5:1 badly). */
+    --on-leaning: #1b1b1f;
+
+    /* Reading toggle track, dark-theme value. */
+    --toggle-track: #26262b;
+
     /* Trending Story badge (ADR-0014), vivid on the dark canvas. */
     --trending: #2dd4bf;
 
@@ -69,9 +80,6 @@
     --aurora-centre: #f6c65b;
     --aurora-gauche: #f28498;
     --aurora-droite: #63a8ea;
-
-    --tooltip: #26262b;
-    --tooltip-ink: #ededf0;
   }
 }
 
@@ -88,8 +96,7 @@
   --color-droite: var(--droite);
   --color-trending: var(--trending);
   --color-hover: var(--hover);
-  --color-tooltip: var(--tooltip);
-  --color-tooltip-ink: var(--tooltip-ink);
+  --color-on-leaning: var(--on-leaning);
 
   /* System stacks: no webfont downloads, native look per platform. */
   --font-sans:
@@ -144,4 +151,89 @@ body {
     transition: none;
     animation: none;
   }
+}
+
+/*
+ * The two readings of the coverage bar (issue #89, ADR-0016): one element,
+ * two width scales. Couverture (default) widths = distinct Outlets per
+ * group; Exposition widths = Reach-weighted shares. Both scales ship in
+ * the markup (--cov / --exp custom properties); the mode lives on
+ * <html data-mode> (Base.astro toggle, persisted in localStorage), so
+ * switching every bar on the site is one attribute write. flex-grow
+ * interpolates, hence the animation; the global prefers-reduced-motion
+ * kill-switch above turns it off.
+ */
+.coverage-seg {
+  flex-grow: var(--cov);
+}
+
+.coverage-bar .coverage-seg {
+  transition: flex-grow 300ms ease-out;
+}
+
+html[data-mode="exposure"] .coverage-seg {
+  flex-grow: var(--exp);
+}
+
+/*
+ * The reading toggle (navbar, Base.astro), copied from shadcn.io's
+ * "Navbar Segmented Control" block: a solid bg-muted track at rounded-md
+ * and a white card that slides under the checked label (shadcn's framer
+ * layoutId, as a pure-CSS transform — equal columns, the two labels are
+ * near-equal words). The card is the surface color with a soft shadow, no
+ * border; the checked label turns primary, the unchecked one muted. The
+ * Leaning colors stay reserved for the Coverage groups. The click flips,
+ * the keyboard keeps radio steps (mode-toggle.ts); the card follows
+ * <html data-mode>.
+ */
+.mode-toggle {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 28px; /* touch target (issue #89) */
+  padding: 2px;
+  border-radius: var(--radius-md);
+  background: var(--toggle-track);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.mode-toggle::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  width: calc(50% - 2px);
+  border-radius: calc(var(--radius-md) - 2px);
+  background: var(--surface);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: transform 200ms ease-out;
+}
+
+html[data-mode="exposure"] .mode-toggle::before {
+  transform: translateX(100%);
+}
+
+.mode-toggle [role="radio"] {
+  position: relative;
+  z-index: 1;
+  padding: 0 12px;
+  border-radius: calc(var(--radius-md) - 2px);
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  /* Constant weight — shadcn differentiates the checked label by color
+   * only; a weight change would resize the labels' track and shift the
+   * navbar on every toggle. */
+  font-weight: 500;
+}
+
+.mode-toggle [role="radio"]:hover {
+  color: var(--ink);
+}
+
+.mode-toggle [role="radio"][aria-checked="true"] {
+  color: var(--ink);
 }
