@@ -91,6 +91,8 @@ const description =
     <p class="mb-6">
       <a
         href={withBase('/')}
+        data-back-to-index
+        data-index-url={withBase('/')}
         class="inline-flex items-center gap-1.5 text-[13px] text-muted transition-colors hover:text-ink"
       >
         <svg
@@ -238,3 +240,13 @@ const description =
 
   </article>
 </Base>
+<!-- Back to the index with the browser's own scroll memory: when the
+     reader arrived from the index, the "Aujourd'hui" click becomes
+     history.back() instead of a full page load — the index scroll
+     position is restored natively (bfcache). Arrivals from elsewhere
+     (search, shared link) follow the plain href. -->
+<script>
+  import { installBackLink } from '../../back-link';
+
+  installBackLink(document, window);
+</script>
