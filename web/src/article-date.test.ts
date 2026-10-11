@@ -1,10 +1,37 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+
 import { formatArticleDate } from './article-date';
 
 describe('formatArticleDate', () => {
-  it('renders day, short month and 24h time in Paris time, whatever the build machine runs on', () => {
+  afterEach(() => vi.useRealTimers());
+
+  it('renders the bare clock for an Article published today, Paris time', () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-10-07T12:00:00Z')); // 14:00 in Paris
+    expect(formatArticleDate('2026-10-07T12:32:00Z')).toBe('14:32');
+  });
+
+  it('says "hier à" for an Article published the day before, Paris time', () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-10-08T09:00:00Z')); // 8 October in Paris
+    expect(formatArticleDate('2026-10-07T21:11:00Z')).toBe('hier à 23:11');
+  });
+
+  it('renders day, short month and 24h time for anything older', () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-10-11T12:00:00Z'));
     expect(formatArticleDate('2026-10-07T12:32:00Z')).toBe('7 oct., 14:32');
     expect(formatArticleDate('2026-01-05T09:05:00Z')).toBe('5 janv., 10:05');
+  });
+
+  it("compares Paris days, not the build host's days", () => {
+    vi.useFakeTimers();
+    // 2026-10-07 22:30 UTC is already 8 October in Paris; a UTC host would
+    // still call it the 7th. "Yesterday" is a Paris day or it is nothing.
+    vi.setSystemTime(new Date('2026-10-07T22:30:00Z')); // 8 oct. 00:30 in Paris
+    // A UTC host would call "now" the 7th and label this today; Paris says
+    // yesterday. "Yesterday" is a Paris day or it is nothing.
+    expect(formatArticleDate('2026-10-07T14:00:00Z')).toBe('hier à 16:00');
   });
 
   it('crosses a Paris day boundary with the date, never silently', () => {
