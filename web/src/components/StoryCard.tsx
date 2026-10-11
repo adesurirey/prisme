@@ -50,7 +50,7 @@ export default function StoryCard({
     >
       <a
         href={withBase(`/sujet/${story.slug}/`)}
-        className="group/card flex items-start gap-6 rounded-xl border border-transparent px-5 py-5 transition-colors duration-200 ease-out hover:border-line hover:bg-hover"
+        className="group/card flex items-start gap-4 rounded-xl border border-transparent px-5 py-5 transition-colors duration-200 ease-out hover:border-line hover:bg-hover"
       >
         <div className="min-w-0 flex-1">
           {/* The "En hausse" slot sits above the title — a per-visitor
@@ -96,8 +96,8 @@ export default function StoryCard({
           <StoryImage
             article={image}
             outlet={image && byId.get(image.outletId)}
-            className="h-16 w-28 rounded-md"
-            sizes="112px"
+            className="h-[72px] w-32 rounded-md"
+            sizes="128px"
           />
         </div>
       </a>
