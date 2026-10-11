@@ -68,6 +68,9 @@ const perGroup = (group: CoverageGroup) =>
         <StoryCard story={story} outlets={outlets} />
       ))
     }
+    <p class="mt-10 pb-8 text-center text-[12px] text-faint">
+      {edition.stories.length} sujets — dernier point à {updatedTime}
+    </p>
   </section>
 </Base>
 <!-- "En hausse" (per-visitor trending): the cards ship data-story-id/
