@@ -46,6 +46,48 @@ describe('outlet config', () => {
     }
   });
 
+  it('carries one sourced, positive reach figure per Outlet (issue #87)', () => {
+    for (const outlet of outlets) {
+      const audience = outlet.audience;
+      // One comparable unit for the whole Edition: certified or estimated web
+      // visits. No circulation/readers/downloads series to weight against.
+      expect(audience.unit, outlet.id).toBe('visits');
+      expect(audience.reach, outlet.id).toBeGreaterThan(0);
+      expect(audience.source, outlet.id).not.toBe('');
+      // ISO month ('2026-08'), half-year ('2026-S1') or year ('2026').
+      expect(audience.asOf, outlet.id).toMatch(/^\d{4}(-\d{2}|(-S\d))?$/);
+      // ACPM figures are certified; anything else is an estimate and must be
+      // flagged, never silent.
+      if (audience.source === 'ACPM') {
+        expect(audience.estimated, outlet.id).toBeUndefined();
+      } else {
+        expect(audience.estimated, outlet.id).toBe(true);
+      }
+    }
+  });
+
+  it('uses exactly the five estimates verified in the reach research (issue #87)', () => {
+    // docs/research/reach-figures-issue85.md — nothing invented: these five
+    // rows are pinned to the research values. (Blast's Semrush estimate comes
+    // from docs/research/outlet-leanings.md and is covered by the flag test
+    // above.)
+    const estimates: Record<string, number> = {
+      'tf1-info': 11_960_000,
+      mediapart: 5_500_000,
+      'slate-fr': 6_026_098,
+      atlantico: 374_450,
+      causeur: 315_089,
+    };
+    for (const outlet of outlets) {
+      const expected = estimates[outlet.id];
+      if (expected !== undefined) {
+        expect(outlet.audience.reach, outlet.id).toBe(expected);
+        expect(outlet.audience.estimated, outlet.id).toBe(true);
+        expect(outlet.audience.unit, outlet.id).toBe('visits');
+      }
+    }
+  });
+
   it('verifies every declared feed (status, item count, time covered, images)', () => {
     for (const outlet of outlets) {
       const checked = new Set(
