@@ -586,10 +586,12 @@ export async function groupStories(
       }
     }
 
-    console.log(`Membership: ${gate.checksUsed} checks this build.`);
+    console.log(
+      `Membership: ${gate.checksUsed} check(s) this build (Stories born: ${created.length}, Stories live: ${stories.length}).`,
+    );
     if (gate.checksUsed > MEMBERSHIP_CHECKS_WARN)
       console.warn(
-        `Membership: ${gate.checksUsed} checks in one build is unusual — inspect the Grouping proposal for a combinatorial blowup (ADR-0012).`,
+        `⚠ Membership: ${gate.checksUsed} checks in one build is unusual — inspect the Grouping proposal for a combinatorial blowup (ADR-0012).`,
       );
 
     // Stories below the two-Article birth minimum are dropped before they
@@ -613,7 +615,7 @@ export async function groupStories(
     // Articles — every unassigned Article retries next build (ADR-0015).
     if (orphans.length > 0)
       console.log(
-        `Grouping: ${orphans.length} Article(s) left unassigned this build — no Story is born from fewer than two Articles (ADR-0015); they retry next build.`,
+        `Grouping: ${orphans.length} article(s) left unassigned — no Story is born from fewer than two Articles (ADR-0015); they retry next build.`,
       );
 
     // Invariant tripwire (ADR-0015): a Story born this build always has at

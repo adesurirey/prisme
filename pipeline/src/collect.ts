@@ -204,19 +204,17 @@ export function articleId(url: string): string {
 export function contributionSummary(
   outlets: Outlet[],
   articles: Article[],
-): { line: string; zero: string[] } {
-  const counts = new Map(outlets.map((o) => [o.id, 0]));
+): { counts: Array<[string, number]>; zero: string[] } {
+  const totals = new Map(outlets.map((o) => [o.id, 0]));
   for (const article of articles) {
-    const count = counts.get(article.outletId);
-    if (count != null) counts.set(article.outletId, count + 1);
+    const count = totals.get(article.outletId);
+    if (count != null) totals.set(article.outletId, count + 1);
   }
   const zero: string[] = [];
-  const line = outlets
-    .map((o) => {
-      const count = counts.get(o.id) ?? 0;
-      if (count === 0) zero.push(o.id);
-      return `${o.id}=${count}`;
-    })
-    .join(' ');
-  return { line, zero };
+  const counts: Array<[string, number]> = outlets.map((o) => {
+    const count = totals.get(o.id) ?? 0;
+    if (count === 0) zero.push(o.id);
+    return [o.id, count];
+  });
+  return { counts, zero };
 }

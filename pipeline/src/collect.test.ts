@@ -61,11 +61,14 @@ describe('contributionSummary — per-outlet build-log guard (issue #35)', () =>
       frontPage: false,
     });
 
-    const { line, zero } = contributionSummary(
+    const { counts, zero } = contributionSummary(
       [a, b],
       [article(a), article(a)],
     );
-    expect(line).toBe('le-parisien=2 marianne=0');
+    expect(counts).toEqual([
+      ['le-parisien', 2],
+      ['marianne', 0],
+    ]);
     expect(zero).toEqual(['marianne']);
   });
 });
