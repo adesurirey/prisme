@@ -46,7 +46,7 @@ export default function CoverageMeta({
     .join(' | ');
   return (
     <span
-      className={`inline-flex flex-wrap items-center gap-x-[1em] gap-y-0.5 align-middle -translate-y-px ${className}`}
+      className={`inline-flex flex-wrap items-center gap-x-[1em] gap-y-0.5 ${className}`}
       role="img"
       aria-label={`Couverture : ${reporting} média${reporting > 1 ? 's' : ''} sur ${totalOutlets} — ${breakdown}`}
     >
