@@ -196,6 +196,8 @@ export interface Edition {
 // on URL quality and freshness — no Leaning involved.
 export * from './cover.ts';
 export * from './coverage.ts';
+// The Exposure rule: Reach-weighted shares per Coverage group (issue #88).
+export * from './exposure.ts';
 // The sourced Outlet config (issue #2): Leanings with citations, readership,
 // verified feeds and TDM reservations. See docs/research/outlet-leanings.md.
 export * from './outlets.ts';
