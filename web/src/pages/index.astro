@@ -35,8 +35,7 @@ const perGroup = (group: CoverageGroup) =>
   <section class="pt-10 pb-8">
     <h1 class="text-[22px] font-semibold tracking-[-0.02em]">{updatedDate}</h1>
     <p class="mt-1.5 text-[13px] text-muted">
-      {edition.stories.length} sujets mis à jour en continu — dernier point
-      à {updatedTime}
+      L'actualité vue de tous les bords — dernier point à {updatedTime}
     </p>
     <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
       {
@@ -55,7 +54,7 @@ const perGroup = (group: CoverageGroup) =>
         // counts — is answered by the classement page (issue #8).
       }
       <a
-        href={withBase('/classement-politique-des-medias')}
+        href={withBase("/classement-politique-des-medias")}
         class="text-[13px] text-faint transition-colors hover:text-ink"
       >
         D’où vient ce classement ?
@@ -64,14 +63,18 @@ const perGroup = (group: CoverageGroup) =>
   </section>
 
   <section aria-label="Sujets de l'édition">
-    {edition.stories.map((story) => <StoryCard story={story} outlets={outlets} />)}
+    {
+      edition.stories.map((story) => (
+        <StoryCard story={story} outlets={outlets} />
+      ))
+    }
   </section>
 </Base>
 <!-- "En hausse" (per-visitor trending): the cards ship data-story-id/
      data-coverage; this module script compares them to the reader's last
      visit (localStorage) and reveals badges. Runs on this page only. -->
 <script>
-  import { installTrending } from '../trending';
+  import { installTrending } from "../trending";
 
   installTrending();
 </script>
