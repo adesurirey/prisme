@@ -98,6 +98,14 @@ _Avoid_: Bucket, camp, bloc
 How a Story's reporting is distributed across Coverage groups and Outlets: the number of Outlets reporting the Story (each with at least one Article — news, live or Opinion, ADR-0011), counted per Coverage group.
 _Avoid_: Distribution, reach, share
 
+**Reach**:
+The raw monthly audience figure recorded for an Outlet in its config, with its unit, source and date. A sourced fact, not a judgement: web visits, print circulation or podcast downloads, whichever the Outlet's best evidence is. Estimated figures are flagged as such.
+_Avoid_: Audience (alone), traffic, popularity
+
+**Exposition**:
+A Story's Reach-weighted share per Coverage group: each reporting Outlet weighs the square root of its Reach, and a group's Exposition is its sum over the Story's total. A second reading of the same coverage bar, chosen by the reader; never a replacement for Coverage, which stays the default. Computed only when every reporting Outlet has a Reach.
+_Avoid_: Weighted coverage, audience share, influence
+
 **Blindspot**:
 A Coverage group with no Outlet at all on a Story that the two other groups both report — not even an editorial (ADR-0011). The Story everyone covers except them. Shown as a badge; one badge per absent group.
 _Avoid_: Gap, missing coverage
