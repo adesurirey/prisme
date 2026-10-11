@@ -5,6 +5,18 @@
   "createdAt": "2026-10-11T09:07:20.230Z",
   "articles": [
     {
+      "id": "e7b2f76609d9",
+      "outletId": "le-figaro",
+      "headline": "Arabie saoudite : l’aéroport de Ryad touché par un incendie après une nouvelle attaque",
+      "url": "https://www.lefigaro.fr/international/arabie-saoudite-une-nouvelle-explosion-entendue-a-ryad-20261011",
+      "publishedAt": "2026-10-11T14:59:39.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/11/e63ab996ba52cdf842ef097cdea25e3f165caaff884b8c5d08e553c0a6821d3b.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "8ab51d195338",
       "outletId": "challenges",
       "headline": "12 morts et plus de 300 blessés : pourquoi l’attaque houthie sur l’aéroport de Ryad est un coup très dur porté aux ambitions de Mohammed ben Salmane",
@@ -210,7 +222,7 @@
       "url": "https://www.lefigaro.fr/international/une-situation-d-urgence-grave-en-arabie-saoudite-des-dizaines-de-blesses-a-l-aeroport-de-ryad-dans-une-attaque-imputee-aux-houthis-20261010",
       "publishedAt": "2026-10-11T07:58:11.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/10/0ab2e5207970b52a129365b97e5f7c9949d5661f6eea4bdf34dff414d7bf2bca.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -410,10 +422,11 @@
     "droite": [
       "Le Quai d'Orsay a exprimé sa totale solidarité avec Riyad et s'engage à soutenir la défense du territoire saoudien.",
       "L'attaque est qualifiée par Paris d'odieuse et représente l'incident le plus meurtrier survenu dans le pays depuis dix ans.",
+      "Une nouvelle déflagration est survenue sous forme d'incendie au lendemain du bombardement meurtrier selon les précisions de la presse conservatrice.",
       "Les assaillants maintiennent la pression en proférant de nouvelles menaces à l'encontre du secteur aérien et des voyageurs."
     ]
   },
-  "differences": "Tous les camps s'accordent sur les données chiffrées de l'attaque attribuée aux Houthis et sur la condamnation de la part de la France. La gauche et le centre gauche insistent sur l'impact géopolitique et l'atteinte directe aux ambitions du pouvoir saoudien ainsi que sur la perturbation du trafic. Le centre et la droite mettent plus spécifiquement en avant la réaction diplomatique ferme du Quai d'Orsay, la qualification des faits et l'engagement de Paris aux côtés du royaume, l'ensemble des médias soulignant la présence d'une ressortissante française parmi les blessés.",
+  "differences": "Tous les camps s'accordent sur les données chiffrées de l'attaque attribuée aux Houthis et sur la condamnation de la part de la France. La gauche et le centre gauche insistent sur l'impact géopolitique et l'atteinte directe aux ambitions du pouvoir saoudien ainsi que sur la perturbation du trafic. Le centre et la droite mettent plus spécifiquement en avant la réaction diplomatique ferme du Quai d'Orsay, la qualification des faits et l'engagement de Paris aux côtés du royaume. À droite, Le Figaro apporte un éclairage supplémentaire en signalant qu'un incendie a touché l'aéroport à la suite d'une nouvelle attaque au lendemain du drame initial, l'ensemble des médias soulignant par ailleurs la présence d'une ressortissante française parmi les victimes.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 35
+  "summarizedArticleCount": 36
 }
