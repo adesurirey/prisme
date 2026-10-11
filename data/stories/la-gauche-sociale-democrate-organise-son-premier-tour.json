@@ -5,6 +5,17 @@
   "createdAt": "2026-10-11T09:07:20.230Z",
   "articles": [
     {
+      "id": "24bac293864f",
+      "outletId": "humanite",
+      "headline": "Faure, le chef du PS, Royal, l’ancienne gloire ou Glucksmann, le stagiaire en burn-out… Qui sera le grand vainqueur de la primaire des sociaux-démocrates ?",
+      "url": "https://www.humanite.fr/politique/emmanuel-maurel/faure-le-chef-du-ps-royal-lancienne-gloire-ou-glucksmann-le-stagiaire-en-burn-out-qui-sera-le-grand-vainqueur-de-la-primaire-des-sociaux-democrates",
+      "publishedAt": "2026-10-11T13:11:05.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/P11-Primaires-PS_LUN.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "7054c60bd1ca",
       "outletId": "lobs",
       "headline": "Primaire sociale-démocrate : Raphaël Glucksmann espère l’emporter au premier tour, les résultats connus ce soir",
@@ -78,7 +89,7 @@
       "url": "https://www.lefigaro.fr/flash-actu/primaire-de-la-gauche-glucksmann-compte-gagner-des-le-premier-tour-mais-le-suspens-reste-entier-20261011",
       "publishedAt": "2026-10-11T06:14:48.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/11/0e33c9ff745b4b6a388cf3e41ad85e9c38cd106dcae3d5b791fccec688ae057d.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -123,7 +134,7 @@
       "url": "https://www.lemonde.fr/politique/article/2026/10/11/primaire-a-gauche-dans-les-sections-locales-les-militants-mobilises-pour-offrir-un-cadre-rassurant_6791094_823448.html",
       "publishedAt": "2026-10-10T22:15:33.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/10/393/0/4724/2362/644/322/60/0/bae3858_upload-1-dbp0qucx0sb4-mmagnin-vote-primaire-gauche-19.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -143,22 +154,22 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le premier tour du scrutin organisé par le Parti socialiste et Place publique s'achève ce dimanche après une prolongation rendue nécessaire par une cyberattaque.",
-      "Plus de 100 000 électeurs ont déjà pris part au vote parmi les 140 000 inscrits, démontrant une forte mobilisation malgré les perturbations techniques initiales.",
-      "L'eurodéputé Raphaël Glucksmann fait figure de grand favori pour remporter la mise dès le premier tour face à quatre autres prétendants, dont le premier secrétaire Olivier Faure."
+      "Le vote de la primaire des sociaux-démocrates s'achève ce dimanche après un démarrage marqué par des perturbations informatiques.",
+      "L'eurodéputé Raphaël Glucksmann est perçu comme le principal favori de ce scrutin interne.",
+      "Plusieurs personnalités, dont le dirigeant du parti et une ancienne figure ministérielle, se mesurent pour remporter la désignation."
     ],
     "centre": [
-      "La plateforme de vote en ligne, qui a subi une attaque informatique par déni de service dès son ouverture vendredi, a vu ses délais étendus jusqu'à ce dimanche à 18 heures.",
-      "Les organisateurs affirment que l'intégrité du processus électoral demeure intacte et s'attendent à publier les résultats dans la foulée de la clôture.",
-      "Cinq candidats se disputent la désignation pour représenter la social-démocratie en vue de l'élection présidentielle."
+      "Les délais du scrutin en ligne ont dû être prolongés à la suite d'une attaque informatique survenue lors de l'ouverture vendredi.",
+      "Les organisateurs confirment la fiabilité du dispositif de vote et prévoient de communiquer les résultats rapidement après la fermeture.",
+      "Cinq prétendants s'affrontent pour porter les couleurs de la social-démocratie lors du prochain scrutin présidentiel."
     ],
     "droite": [
-      "Les responsables du parti socialiste se félicitent d'avoir franchi la barre des 100 000 votants en dépit des difficultés logistiques et des polémiques ayant entaché le début du scrutin.",
-      "Certaines voix au sein de la formation politique soulignent déjà la nécessité pour la social-démocratie de s'affranchir de toute alliance avec La France insoumise pour espérer l'emporter à l'avenir.",
-      "Le suspense demeure entier quant à la possibilité pour Raphaël Glucksmann de l'emporter dès ce premier tour face à ses rivaux."
+      "La direction du mouvement se réjouit d'avoir atteint une participation supérieure à 100 000 votants malgré les obstacles techniques.",
+      "Certains cadres du parti estiment indispensable de prendre leurs distances avec le mouvement de Jean-Luc Mélenchon pour espérer s'imposer durablement.",
+      "L'incertitude subsiste quant à la capacité de Raphaël Glucksmann à l'emporter dès le premier tour face à ses concurrents."
     ]
   },
-  "differences": "La gauche et le centre insistent principalement sur le bon déroulement de la mobilisation et le dépassement du cap des 100 000 votants malgré l'entrave informatique, mettant en avant la résilience du scrutin. De son côté, la droite accorde une visibilité plus marquée aux déclarations stratégiques des cadres socialistes, comme le rejet explicite d'une alliance avec Jean-Luc Mélenchon, tout en rappelant les polémiques connexes et l'impact de la cyberattaque qualifiée d'attaque contre la démocratie.",
+  "differences": "La gauche et le centre se concentrent principalement sur le bon déroulement de la participation et sur la résolution rapide des incidents techniques pour légitimer le scrutin. À l'inverse, la droite élargit le débat aux considérations stratégiques pour l'avenir de la formation politique, notamment sur la question des alliances futures, tout en soulignant les difficultés logistiques initiales.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 12
+  "summarizedArticleCount": 13
 }
