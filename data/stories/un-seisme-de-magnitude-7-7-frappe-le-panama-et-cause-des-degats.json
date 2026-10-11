@@ -5,6 +5,18 @@
   "createdAt": "2026-10-10T09:54:25.891Z",
   "articles": [
     {
+      "id": "986fb38930b9",
+      "outletId": "le-monde",
+      "headline": "Après le séisme de magnitude 7,7 au Panama, l’heure du déblaiement et la crainte de nouvelles secousses",
+      "url": "https://www.lemonde.fr/planete/article/2026/10/11/apres-le-seisme-de-magnitude-7-7-au-panama-l-heure-du-deblaiement-et-la-crainte-de-nouvelles-repliques_6791129_3244.html",
+      "publishedAt": "2026-10-11T00:10:32.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/10/283/0/2560/1280/644/322/60/0/49358d0_ftp-1-zuh2kr7lcif2-5319841-01-06.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "98d0a0271864",
       "outletId": "tf1-info",
       "headline": "Magnitude 7,7 : moment de frayeur au Panama",
@@ -153,25 +165,26 @@
   "section": "world",
   "summaries": {
     "gauche": [
-      "Un séisme majeur de magnitude 7,7 a touché le Panama vendredi, générant des dizaines de répliques à travers le territoire.",
-      "Le bilan provisoire communiqué fait état d'au moins 27 personnes blessées.",
-      "Les secousses ont entraîné la suspension des cours scolaires et la fermeture temporaire de l'infrastructure aéroportuaire internationale.",
-      "Le centre gauche replace le séisme dans une séquence plus large de catastrophes naturelles affectant le continent américain."
+      "Le nettoyage des débris s'organise au Panama après le séisme de magnitude 7,7 survenu vendredi.",
+      "Plus d'une centaine de répliques secouent régulièrement le pays, contraignant une partie de la population à passer la nuit en extérieur par peur.",
+      "Le bilan provisoire fait état d'une trentaine de blessés légers, sans déplorer de décès pour l'instant.",
+      "Les services publics poursuivent le recensement exhaustif des dommages matériels occasionnés."
     ],
     "centre": [
-      "Le président panaméen a qualifié l'événement de désastre majeur suite à l'effondrement de routes et de bâtiments.",
-      "Les autorités ont recensé 27 blessés et noté de nombreux dégâts matériels importants, notamment dans le centre du pays selon les dernières remontées.",
-      "Plus d'une centaine de répliques ont succédé au tremblement de terre initial sans toutefois compromettre les infrastructures stratégiques du pays."
+      "Le séisme majeur de magnitude 7,7 a entraîné des dégâts matériels importants et des effondrements de routes.",
+      "Le président panaméen a qualifié la situation de désastre majeur suite aux premiers constats sur place.",
+      "Les équipes de secours recensent 27 blessés et font face à une centaine de répliques successives.",
+      "Les infrastructures stratégiques continuent d'assurer leurs fonctions malgré les secousses."
     ],
     "droite": [
-      "Un tremblement de terre de magnitude 7,7 a frappé le Panama, provoquant un mouvement de panique dans la capitale.",
-      "Des routes et des bâtiments se sont effondrés principalement dans le centre du pays, faisant au moins 27 blessés selon le bilan officiel.",
-      "L'autorité compétente a confirmé que le canal de Panama continuait de fonctionner normalement après des inspections.",
-      "Le centre droit rapporte que malgré des infrastructures routières endommagées, aucun décès n'est enregistré et la situation est maîtrisée."
+      "La secousse principale de magnitude 7,7 a semé l'inquiétude dans la capitale sans causer de pertes en vies humaines.",
+      "Des effondrements d'édifices et de voies de circulation affectent principalement le centre du territoire.",
+      "Les contrôles techniques confirment que le canal de Panama maintient ses activités habituelles.",
+      "La situation reste sous contrôle et les autorités privilégient une communication rassurante."
     ]
   },
-  "differences": "Tous les camps s'accordent sur la magnitude du séisme et le bilan provisoire des blessés, mais la droite et le centre droit choisissent de rassurer en soulignant le fonctionnement normal des voies stratégiques et l'absence de décès. La gauche et le centre insistent davantage sur la gravité de la situation en reprenant les déclarations présidentielles sur le désastre et les perturbations concrètes, tandis que le centre gauche élargit l'analyse aux catastrophes simultanées sur le continent.",
+  "differences": "Tous les courants partagent le constat de la magnitude 7,7 du séisme et l'absence de décès, mais la droite et le centre droit mettent en avant le retour au calme ainsi que le fonctionnement normal du canal. À l'inverse, la gauche et le centre insistent sur la persistance de l'angoisse liée aux répliques continues, mentionnant le choix de certains habitants de dormir dehors, et reprennent le qualificatif présidentiel de désastre majeur.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 13,
+  "summarizedArticleCount": 14,
   "everInEdition": true
 }
