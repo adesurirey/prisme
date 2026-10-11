@@ -5,6 +5,18 @@
   "createdAt": "2026-10-11T14:01:19.073Z",
   "articles": [
     {
+      "id": "3dad1cfbc0b8",
+      "outletId": "20-minutes",
+      "headline": "Népal : Cinq personnes portées disparues après une nouvelle crue spectaculaire",
+      "url": "https://www.20minutes.fr/monde/4253258-20261011-nepal-cinq-personnes-portees-disparues-apres-nouvelle-crue-spectaculaire?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-11T14:22:56.000Z",
+      "imageUrl": "https://img.20mn.fr/tHjkFftQSMKeoXq2a0APiSk/1200x768_des-personnes-observent-les-dommages-causes-a-un-complexe-hydroelectrique-en-construction-le-long-de-la-riviere-budhi-gandaki-a-la-suite-d-une-crue-soudaine-provoquee-par-un-glissement-de-terrain-sec-a-sallari-chumnubri-dans-le-district-de-gorkha-au-nepal-le-11-octobre-2026-des-crues-soudaines-se-produisent-le-long-de-la-riviere-budhi-gandaki-au-nepal-detruisant-des-batiments-et-projetant-des-eaux-boueuses-dans-les-environs-plus-de-1-400-personnes-sont-mortes-et-plus-de-5-000-sont-toujours-portees-disparues-apres-les-inondations-catastrophiques-qui-ont-frappe-le-nepal-le-26-aout-a-la-suite-de-l-effondrement-d-une-montagne-et-d-un-glacier-a-la-frontiere-sino-nepalaise-photo-de-sovit-shrestha-afp",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "f36961ce0827",
       "outletId": "le-figaro",
       "headline": "Des habitations détruites, au moins cinq disparus : les images impressionnantes d’une nouvelle crue éclair au Népal",
@@ -41,6 +53,10 @@
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Une crue subite survenue ce dimanche dans le centre du pays a entraîné la disparition d'au moins cinq personnes.",
+      "Ce nouvel épisode dramatique intervient environ six semaines après une inondation d'une ampleur destructrice ayant touché la région."
+    ],
     "centre": [
       "Un nouveau phénomène de crue brutale a entraîné l'évacuation de plusieurs localités situées dans la zone touchée.",
       "Cinq personnes au moins sont actuellement portées disparues après la montée rapide des eaux.",
@@ -52,7 +68,7 @@
       "Ces nouveaux dégâts accentuent les inquiétudes face aux menaces climatiques récurrentes, dans un pays déjà endeuillé par une catastrophe glaciaire majeure en août."
     ]
   },
-  "differences": "Le camp de droite fournit des détails plus précis et convergents sur les dégâts matériels et l'ampleur des bilans humains en citant le district de Gorkha et les autorités locales, tout en insistant sur la récurrence des menaces climatiques. Le centre adopte une approche plus synthétique en rappelant le contexte des récentes catastrophes dans la région himalayenne, tandis que la gauche ne couvre pas le sujet.",
+  "differences": "Le camp de gauche fait son entrée dans l'actualité en se focalisant sur le bilan provisoire et la chronologie par rapport aux inondations passées. Le centre adopte une approche synthétique axée sur les évacuations et le précédent tragique d'août, tandis que la droite conserve son niveau de précision élevé en nommant le district de Gorkha, en détaillant les destructions matérielles et en soulignant la récurrence des menaces climatiques.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }
