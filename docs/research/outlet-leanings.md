@@ -113,8 +113,8 @@ Une seule règle, appliquée à tous les médias :
 | Courrier international | Centre | hors panel | 39e magazine, 162 073 ex. | Partiellement payant | non |
 | L'Express | Centre | +0,18 (centre) | 54e magazine, 118 937 ex. | Partiellement payant | non |
 | La Croix | Centre | +0,13 (centre) | 6e PQN, 73 595 ex. | Partiellement payant | non |
-| Challenges | Centre | −0,10 (centre) | magazine, 232 050 ex. (DSH) | Partiellement payant | **oui** |
-| Le Point | Centre | +0,56 (centre droit) | 20e magazine, 263 528 ex. | Partiellement payant | indéterminé (403) |
+| Challenges | Centre | −0,10 (centre) | 77e site, 4 186 317 visites ; 232 050 ex. (DSH) | Partiellement payant | **oui** |
+| Le Point | Centre | +0,56 (centre droit) | 51e site, 8 589 980 visites ; 263 528 ex. | Partiellement payant | indéterminé (403) |
 | L'Opinion | Centre droit | +0,60 (centre droit) | membre ACPM, 633 k (S1 2026) | En grande partie payant | non |
 | Le Figaro | Droite | +1,02 (droite) | 2e PQN, 397 194 ex. | Partiellement payant | **oui** |
 | CNews | Droite | +0,96 (droite) | 22e site, 30,2 M visites | Gratuit | non |
@@ -706,8 +706,11 @@ retient Claude Perdriel comme propriétaire final, alors que LVMH détient le ti
 2. **Challenges (article encyclopédique)** — Wikipédia (avec les articles de presse cités en notes), 2026 — <https://fr.wikipedia.org/wiki/Challenges> — « Magazine économique fondé en 1982, devenu newsmag généraliste en 2021 ; détenu à 100 % par LVMH depuis décembre 2025 ; en 2017, des journalistes déploraient que leur journal "roule pour Macron", et en 2022 une "une" anti-Mélenchon imposée par Claude Perdriel a créé des remous au sein de la rédaction. »
 3. **La présidentielle à Challenges : les « observations » de la société des journalistes (SDJ)** — Acrimed, 2017-03-31 — <https://www.acrimed.org/La-presidentielle-a-Challenges-les-observations> — « La SDJ dénonce le parti-pris du site en faveur d'Emmanuel Macron et les interventions du directeur de la publication auprès de l'équipe web après un article critique à l'égard de Macron. »
 
-**Audience.** ACPM presse magazine 2025/2026 : DSH 232 050 exemplaires ; le site
-Challenges.fr suit le classement unifié des sites web ACPM.
+**Audience.** ACPM presse magazine 2025/2026 : DSH 232 050 exemplaires ;
+Challenges.fr : 77e rang des sites web ACPM (grand public), 4 186 317 visites en
+septembre 2026 (classement unifié, <https://www.acpm.fr/classements/united-web-sites-gp>,
+consulté le 2026-10-12 pour l'issue #87). La figure d'audience retenue dans la config
+est la visite web certifiée, pas la diffusion papier, pour rester comparable entre médias.
 
 **Flux vérifiés (2026-10-10, issue #72).** `latest` <https://www.challenges.fr/rss.xml>
 — 200, 50 articles, ~3 j, images sur tous les articles. Flux unique du média, toutes
@@ -744,7 +747,11 @@ le placement sans le pousser à Droite, FrIdéo le séparant nettement de Le Fig
 3. **Le Point : orientation politique, propriétaire et fiabilité** — Lucide, 2026 — <https://lucideinfo.fr/medias/le-point> — « Repère éditorial "Centre-droit" ; ligne libérale-conservatrice ; propriété : François-Henri Pinault (Kering, luxe). »
 
 **Audience.** ACPM presse magazine 2025/2026 : 20e rang, 263 528 exemplaires France
-payée (hebdomadaire, DSH).
+payée (hebdomadaire, DSH) ; LePoint.fr : 51e rang des sites web ACPM (grand public),
+8 589 980 visites en septembre 2026 (classement unifié,
+<https://www.acpm.fr/classements/united-web-sites-gp>, consulté le 2026-10-12 pour
+l'issue #87). La figure d'audience retenue dans la config est la visite web certifiée,
+la diffusion papier seule la sous-pondérait face aux médias mesurés en visites.
 
 **Flux vérifiés (2026-10-10).** `latest`
 <https://www.lepoint.fr/arc/outboundfeeds/rss/?outputType=xml> — 200, 100 articles,
@@ -915,7 +922,8 @@ désaccord et retenons Droite, la bande `far-right` ne pouvant être représent�
 2. **Valeurs actuelles (article encyclopédique, section « Positionnement politique »)** — Wikipédia (avec les articles cités en notes), 2026 — <https://fr.wikipedia.org/wiki/Valeurs_actuelles> — Selon Le Monde (2012), Valeurs actuelles a une ligne « conservatrice, plus à droite que celle du Figaro » ; selon Le Figaro lui-même, il est « tantôt décrit comme classé à l'extrême droite », « réputé clairement à droite ».
 
 **Audience.** ACPM presse magazine 2025/2026 : 89e rang, 61 124 exemplaires France
-payée.
+payée. Absente du classement unifié des sites web ACPM (vérifié le 2026-10-12 pour
+l'issue #87) : la diffusion papier reste la seule figure certifiée disponible.
 
 **Flux vérifiés (2026-10-10).** `latest` <https://www.valeursactuelles.com/feed> — 200,
 10 articles, ~5 h, **sans image**. Le flux historique « /rss » ne contient aucune date ;

@@ -1406,13 +1406,13 @@ export const outlets: OutletConfig[] = [
       'Placé à Centre : FrIdéo le situe en bande « centre » mais son intervalle contient zéro et seules 4 familles de preuves le couvrent directement. Les épisodes éditoriaux documentés vont dans les deux sens (une anti-Le Pen et une anti-Mélenchon imposées en 2022, « parti-pris Macron » contesté par la SDJ en 2017) : aucune source ne le place hors du centre. La bande est retenue conformément à la règle de placement.',
     readership: {
       evidence:
-        'ACPM presse magazine 2025/2026 : DSH 232 050 exemplaires ; le site Challenges.fr suit le classement unifié des sites web ACPM.',
-      url: 'https://www.acpm.fr/Support/challenges',
+        'ACPM presse magazine 2025/2026 : DSH 232 050 exemplaires ; Challenges.fr : 77e rang des sites web ACPM (grand public), 4 186 317 visites en septembre 2026.',
+      url: 'https://www.acpm.fr/classements/united-web-sites-gp',
     },
     audience: {
-      reach: 232050,
-      unit: 'circulation',
-      asOf: '2026',
+      reach: 4186317,
+      unit: 'visits',
+      asOf: '2026-09',
       source: 'ACPM',
     },
     feedChecks: [
@@ -1534,13 +1534,13 @@ export const outlets: OutletConfig[] = [
       "Placé à Centre droit, en cohérence avec la bande « centre droit » de FrIdéo, dont l'intervalle contient zéro. Les notations tierces concordent sur l'ancrage centre-droit (Media Bias/Fact Check « Right-Center », Lucide « Centre-droit ») et aucune source consultée ne le place à gauche ; l'héritage libéral-conservateur du titre (fondé en 1972 par des journalistes de L'Express) borne le placement sans le pousser à Droite, où FrIdéo le distingue nettement de Le Figaro (+0,56 contre +1,02).",
     readership: {
       evidence:
-        'ACPM presse magazine 2025/2026 : 20e rang, 263 528 exemplaires France payée (hebdomadaire, DSH).',
-      url: 'https://www.acpm.fr/classements/pmag',
+        'ACPM presse magazine 2025/2026 : 20e rang, 263 528 exemplaires France payée (hebdomadaire, DSH) ; LePoint.fr : 51e rang des sites web ACPM (grand public), 8 589 980 visites en septembre 2026.',
+      url: 'https://www.acpm.fr/classements/united-web-sites-gp',
     },
     audience: {
-      reach: 263528,
-      unit: 'circulation',
-      asOf: '2026',
+      reach: 8589980,
+      unit: 'visits',
+      asOf: '2026-09',
       source: 'ACPM',
     },
     feedChecks: [
