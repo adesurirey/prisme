@@ -3,17 +3,23 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   announcement,
   installModeToggle,
+  modeDescription,
   persistMode,
+  persistWhisperCount,
   radioStep,
   storedMode,
+  WHISPER_LIMIT,
+  whisperCount,
 } from './mode-toggle';
 
 /**
  * The reading toggle's rules (issue #89, ADR-0016): persistence (absent =
  * Couverture, broken storage never fatal), radio-keyboard navigation
  * (arrows step and select, Home/End jump), announcements that carry the
- * Exposition shares only where there is exactly one bar (Story pages), and
- * an initial restore that never announces.
+ * Exposition shares only where there is exactly one bar (Story pages),
+ * an initial restore that never announces, and the discoverability
+ * whisper: a fading caption on the first four switches, then silence
+ * for good (the count persists in localStorage).
  */
 
 function coverageBarHtml(): string {
@@ -30,7 +36,8 @@ function toggleHtml(): string {
       <button type="button" role="radio" aria-checked="true" tabindex="0" data-mode-value="coverage">Couverture</button>
       <button type="button" role="radio" aria-checked="false" tabindex="-1" data-mode-value="exposure">Exposition</button>
     </div>
-    <p role="status" data-mode-live></p>`;
+    <p role="status" data-mode-live></p>
+    <p data-mode-whisper aria-hidden="true"></p>`;
 }
 
 /** A fake storage whose access throws, simulating a blocked localStorage. */
@@ -74,6 +81,50 @@ describe('persistMode', () => {
   });
 });
 
+describe('modeDescription', () => {
+  it('describes each reading in one line', () => {
+    expect(modeDescription('coverage')).toBe(
+      'Les barres affichent combien de médias rapportent chaque sujet',
+    );
+    expect(modeDescription('exposure')).toBe(
+      'Les barres affichent la part de lecteurs touchés par chaque média pour un sujet',
+    );
+  });
+});
+
+describe('whisperCount', () => {
+  it('defaults to zero when nothing is stored', () => {
+    expect(whisperCount(localStorage)).toBe(0);
+  });
+
+  it('reads a stored count', () => {
+    localStorage.setItem('prisme:mode-whisper', '1');
+    expect(whisperCount(localStorage)).toBe(1);
+  });
+
+  it('clamps past the limit and treats junk as zero', () => {
+    localStorage.setItem('prisme:mode-whisper', '9');
+    expect(whisperCount(localStorage)).toBe(WHISPER_LIMIT);
+    localStorage.setItem('prisme:mode-whisper', 'yolo');
+    expect(whisperCount(localStorage)).toBe(0);
+  });
+
+  it('falls back to zero when storage is broken', () => {
+    expect(whisperCount(brokenStorage)).toBe(0);
+  });
+});
+
+describe('persistWhisperCount', () => {
+  it('stores the count', () => {
+    persistWhisperCount(localStorage, 2);
+    expect(localStorage.getItem('prisme:mode-whisper')).toBe('2');
+  });
+
+  it('ignores a broken storage', () => {
+    expect(() => persistWhisperCount(brokenStorage, 2)).not.toThrow();
+  });
+});
+
 describe('radioStep', () => {
   const count = 2;
   it('steps forward and clamps at the last option', () => {
@@ -106,13 +157,13 @@ describe('announcement', () => {
 
   it('describes the Couverture reading', () => {
     expect(announcement('coverage', document)).toBe(
-      'Couverture : nombre de médias rapportant chaque sujet',
+      'Les barres affichent combien de médias rapportent chaque sujet',
     );
   });
 
   it('carries the bar’s Exposition shares when there is exactly one bar', () => {
     expect(announcement('exposure', document)).toBe(
-      'Exposition : barres pondérées par la portée de chaque média' +
+      'Les barres affichent la part de lecteurs touchés par chaque média pour un sujet' +
         ' — Gauche 68\u202F%, Droite 32\u202F%',
     );
   });
@@ -120,7 +171,7 @@ describe('announcement', () => {
   it('stays on the mode alone when there are many bars (the index)', () => {
     document.body.insertAdjacentHTML('beforeend', coverageBarHtml());
     expect(announcement('exposure', document)).toBe(
-      'Exposition : barres pondérées par la portée de chaque média',
+      'Les barres affichent la part de lecteurs touchés par chaque média pour un sujet',
     );
   });
 });
@@ -169,7 +220,7 @@ describe('installModeToggle', () => {
     expect(document.documentElement.dataset.mode).toBe('exposure');
     expect(localStorage.getItem('prisme:mode')).toBe('exposure');
     expect(live.textContent).toBe(
-      'Exposition : barres pondérées par la portée de chaque média' +
+      'Les barres affichent la part de lecteurs touchés par chaque média pour un sujet' +
         ' — Gauche 68\u202F%, Droite 32\u202F%',
     );
   });
@@ -198,6 +249,67 @@ describe('installModeToggle', () => {
     expect(document.documentElement.dataset.mode).toBe('exposure');
     expect(exposure.getAttribute('aria-checked')).toBe('true');
     expect(document.activeElement).toBe(exposure);
+  });
+
+  it('whispers on the first four switches, describing the destination', () => {
+    const { exposure, coverage } = installed();
+    const whisper = document.querySelector('[data-mode-whisper]')!;
+    exposure.click();
+    expect(whisper.textContent).toBe(
+      'Les barres affichent la part de lecteurs touchés par chaque média pour un sujet',
+    );
+    expect(whisper.classList.contains('is-shown')).toBe(true);
+    coverage.click();
+    expect(whisper.textContent).toBe(
+      'Les barres affichent combien de médias rapportent chaque sujet',
+    );
+    expect(whisper.classList.contains('is-shown')).toBe(true);
+    exposure.click();
+    coverage.click();
+    expect(whisper.classList.contains('is-shown')).toBe(true);
+    expect(localStorage.getItem('prisme:mode-whisper')).toBe('4');
+  });
+
+  it('stops whispering after four switches, for good', () => {
+    const { exposure, coverage } = installed();
+    const whisper = document.querySelector('[data-mode-whisper]')!;
+    exposure.click();
+    coverage.click();
+    exposure.click();
+    coverage.click();
+    // The fade-out would remove the class after ~6s; simulate it so the
+    // fifth switch can't hide behind a lingering .is-shown.
+    whisper.classList.remove('is-shown');
+    exposure.click();
+    expect(whisper.classList.contains('is-shown')).toBe(false);
+    expect(whisper.textContent).toBe(
+      'Les barres affichent combien de médias rapportent chaque sujet',
+    );
+    expect(localStorage.getItem('prisme:mode-whisper')).toBe('4');
+  });
+
+  it('carries the whisper count across installs (visits)', () => {
+    localStorage.setItem('prisme:mode-whisper', String(WHISPER_LIMIT));
+    const { exposure } = installed();
+    const whisper = document.querySelector('[data-mode-whisper]')!;
+    exposure.click();
+    expect(whisper.textContent).toBe('');
+    expect(whisper.classList.contains('is-shown')).toBe(false);
+  });
+
+  it('never whispers on the initial restore', () => {
+    localStorage.setItem('prisme:mode', 'exposure');
+    installed();
+    const whisper = document.querySelector('[data-mode-whisper]')!;
+    expect(whisper.textContent).toBe('');
+    expect(whisper.classList.contains('is-shown')).toBe(false);
+  });
+
+  it('whispers the mode alone, never the Story-page shares', () => {
+    const { exposure } = installed();
+    const whisper = document.querySelector('[data-mode-whisper]')!;
+    exposure.click();
+    expect(whisper.textContent).not.toContain('Gauche');
   });
 
   it('ignores keys that are not radio navigation', () => {

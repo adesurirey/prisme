@@ -14,6 +14,11 @@
  * The logic lives in pure functions below (unit-tested, like
  * pull-to-refresh); installModeToggle wires them to the navbar's radio
  * group. No hydration: plain DOM, Astro bundles the module.
+ *
+ * The whisper (discoverability): sighted readers never hear the live
+ * region, so the first four switches also show a small fading caption
+ * under the toggle saying what the destination reading does. The count
+ * persists (prisme:mode-whisper) — after two, never again.
  */
 import { type CoverageGroup, LEANING_LABELS } from '@prisme/domain';
 
@@ -21,6 +26,12 @@ export type ReadingMode = 'coverage' | 'exposure';
 
 /** localStorage key; absent or unreadable = Couverture. */
 const KEY = 'prisme:mode';
+
+/** localStorage key counting whispers shown; capped at WHISPER_LIMIT. */
+const WHISPER_KEY = 'prisme:mode-whisper';
+
+/** The whisper shows on the first four switches, then stops for good. */
+export const WHISPER_LIMIT = 4;
 
 /** Read the persisted mode. A broken localStorage never breaks the page. */
 export function storedMode(storage: Pick<Storage, 'getItem'>): ReadingMode {
@@ -38,6 +49,30 @@ export function persistMode(
 ): void {
   try {
     storage.setItem(KEY, mode);
+  } catch {}
+}
+
+/**
+ * How many whispers have been shown, clamped to the limit; an absent,
+ * unreadable or malformed counter counts as zero — a broken localStorage
+ * never breaks the page (the whisper would just reappear each visit).
+ */
+export function whisperCount(storage: Pick<Storage, 'getItem'>): number {
+  try {
+    const n = Number(storage.getItem(WHISPER_KEY));
+    return Number.isFinite(n) ? Math.max(0, Math.min(WHISPER_LIMIT, n)) : 0;
+  } catch {
+    return 0;
+  }
+}
+
+/** Persist the whisper count; a broken storage is ignored, not fatal. */
+export function persistWhisperCount(
+  storage: Pick<Storage, 'setItem'>,
+  count: number,
+): void {
+  try {
+    storage.setItem(WHISPER_KEY, String(count));
   } catch {}
 }
 
@@ -62,18 +97,28 @@ export function radioStep(
 }
 
 /**
+ * What a reading does, as a one-line sentence. The whisper shows it to
+ * sighted readers; the live-region announcement below builds on it. No
+ * trailing period: on Story pages the announcement appends the Exposition
+ * shares ("— Gauche 68 %…") straight after this text.
+ */
+export function modeDescription(mode: ReadingMode): string {
+  return mode === 'coverage'
+    ? 'Les barres affichent combien de médias rapportent chaque sujet'
+    : 'Les barres affichent la part de lecteurs touchés par chaque média pour un sujet';
+}
+
+/**
  * The announcement for a mode switch. On pages with exactly one coverage
  * bar (the Story pages) it carries that Story's Exposition shares, read
  * back off the prerendered segments; the Edition index carries many bars —
  * one Story's shares would say nothing about the others, so just the mode.
  */
 export function announcement(mode: ReadingMode, doc: Document): string {
-  if (mode === 'coverage')
-    return 'Couverture : nombre de médias rapportant chaque sujet';
+  if (mode === 'coverage') return modeDescription(mode);
   const bars = doc.querySelectorAll('.coverage-bar');
-  if (bars.length !== 1) {
-    return 'Exposition : barres pondérées par la portée de chaque média';
-  }
+  const base = modeDescription(mode);
+  if (bars.length !== 1) return base;
   const parts = Array.from(
     bars[0].querySelectorAll<HTMLElement>('.coverage-seg'),
   ).map((seg) => {
@@ -83,7 +128,7 @@ export function announcement(mode: ReadingMode, doc: Document): string {
     return `${label} ${share}\u202F%`;
   });
   const shares = parts.length ? ` — ${parts.join(', ')}` : '';
-  return `Exposition : barres pondérées par la portée de chaque média${shares}`;
+  return `${base}${shares}`;
 }
 
 /** The other reading — a click anywhere on the control flips to it. */
@@ -108,11 +153,35 @@ export function installModeToggle(
 ): void {
   const group = doc.querySelector('[data-mode-toggle]');
   if (!group) return;
+
   const buttons = Array.from(
     group.querySelectorAll<HTMLButtonElement>('[role="radio"]'),
   );
   const live = doc.querySelector('[data-mode-live]');
+  const whisper = doc.querySelector('[data-mode-whisper]');
   const root = doc.documentElement;
+  let whispersShown = whisperCount(win.localStorage);
+  let fadeTimer: ReturnType<typeof setTimeout> | undefined;
+
+  /** Fade the whisper out; a fresh show always restarts the clock. */
+  const fadeOut = () => {
+    whisper?.classList.remove('is-shown');
+  };
+
+  /**
+   * Show the fading caption for the first WHISPER_LIMIT switches, then
+   * never again. The live region already carries the text to screen
+   * readers; the whisper is the sighted echo, so no extra announcement.
+   */
+  const showWhisper = (mode: ReadingMode) => {
+    if (!whisper || whispersShown >= WHISPER_LIMIT) return;
+    whispersShown += 1;
+    persistWhisperCount(win.localStorage, whispersShown);
+    whisper.textContent = modeDescription(mode);
+    whisper.classList.add('is-shown');
+    clearTimeout(fadeTimer);
+    fadeTimer = setTimeout(fadeOut, 6000);
+  };
 
   const apply = (mode: ReadingMode, focus: boolean, announce = true) => {
     setRootMode(root, mode);
@@ -122,7 +191,10 @@ export function installModeToggle(
       button.setAttribute('aria-checked', String(active));
       button.tabIndex = active ? 0 : -1;
     }
-    if (live && announce) live.textContent = announcement(mode, doc);
+    if (live && announce) {
+      live.textContent = announcement(mode, doc);
+      showWhisper(mode);
+    }
     if (focus) buttons.find((b) => b.dataset.modeValue === mode)?.focus();
   };
 

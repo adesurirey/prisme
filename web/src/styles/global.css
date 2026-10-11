@@ -237,3 +237,47 @@ html[data-mode="exposure"] .mode-toggle::before {
 .mode-toggle [role="radio"][aria-checked="true"] {
   color: var(--ink);
 }
+
+/*
+ * Whisper caption: the fading hint shown under the toggle for the first
+ * four switches (mode-toggle.ts counts them). Mobile-first: anchored to
+ * the toggle's right edge (which already sits at the header's 20px
+ * padding) and capped to the viewport minus that padding, so it wraps
+ * instead of overflowing on narrow screens. Hidden by default; the
+ * .is-shown class fades it in, removed after ~6s. aria-hidden — the
+ * live region already speaks the same text.
+ */
+.mode-whisper {
+  position: absolute;
+  top: calc(100% + 20px); /* clears the header's border-b with air to spare */
+  right: 0;
+  z-index: 50;
+  max-width: min(24rem, calc(100vw - 2.5rem));
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  /* Soft elevation: the bubble must read as floating above the page,
+   * not as another line stitched onto the navbar's border. */
+  box-shadow:
+    0 1px 2px 0 rgb(0 0 0 / 0.05),
+    0 6px 16px 0 rgb(0 0 0 / 0.25);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+  /* Balance the line lengths so no lone word strands on the last line
+   * (supported everywhere modern; older browsers just wrap raggedly). */
+  text-wrap: balance;
+  opacity: 0;
+  transform: translateY(-2px);
+  pointer-events: none;
+  transition:
+    opacity 300ms ease-out,
+    transform 300ms ease-out;
+}
+
+.mode-whisper.is-shown {
+  opacity: 1;
+  transform: translateY(0);
+}

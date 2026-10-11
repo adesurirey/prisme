@@ -76,7 +76,7 @@ const {
              Exposition for every coverage bar on the site, at once. Radio
              semantics with arrow-key navigation (roving tabindex); the live
              region announces the switch. Styling follows aria-checked. -->
-        <div class="ml-auto shrink-0">
+        <div class="relative ml-auto shrink-0">
           <div
             class="mode-toggle"
             role="radiogroup"
@@ -99,6 +99,11 @@ const {
             >Exposition</button>
           </div>
           <p class="sr-only" role="status" data-mode-live></p>
+          <!-- Whisper (discoverability): the first four switches show a
+               fading caption saying what the destination reading does
+               (mode-toggle.ts counts them in localStorage); aria-hidden
+               because the live region already announces the same text. -->
+          <p class="mode-whisper" data-mode-whisper aria-hidden="true"></p>
         </div>
       </div>
     </header>
