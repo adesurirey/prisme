@@ -41,6 +41,26 @@ export interface Readership {
   url?: string;
 }
 
+/**
+ * One quantified monthly-reach figure per Outlet (issue #84): the raw input
+ * to the Exposure indicator. Facts only — value, unit and source are kept
+ * as declared; any compression (sqrt, log) happens at compute time, never
+ * here. Units are not comparable between themselves; the Exposure
+ * computation is the only place allowed to weight them.
+ */
+export interface Audience {
+  /** Monthly reach as declared by the source (visits, copies, subscribers…). */
+  reach: number;
+  /** What is counted: ACPM web visits, print circulation, subscribers, downloads… */
+  unit: 'visits' | 'circulation' | 'subscribers' | 'downloads' | 'readers';
+  /** Source name, e.g. 'ACPM' or 'Semrush' (estimates). */
+  source: string;
+  /** Period the figure covers: ISO month ('2026-08') or half-year ('2026-S1'). */
+  asOf: string;
+  /** True when the figure is an estimate (Semrush) rather than certified. */
+  estimated?: boolean;
+}
+
 /** Which role a feed plays for the Front page (see GLOSSARY.md). */
 export type FeedKind = 'une' | 'latest';
 
@@ -83,6 +103,8 @@ export interface OutletConfig extends Outlet {
   /** Why this Leaning, including where sources disagree. Publishable French. */
   leaningNote: string;
   readership: Readership;
+  /** One quantified monthly-reach figure (issue #84), facts only. */
+  audience: Audience;
   /** Verification evidence for each declared feed. */
   feedChecks: FeedCheck[];
   /** Informational only — the collector reads RSS headlines and teasers (ADR-0003). */
@@ -139,6 +161,12 @@ export const outlets: OutletConfig[] = [
         'ACPM presse magazine 2025/2026 : 38e rang, 162 242 exemplaires France payée ; Nouvelobs.com : 46e rang des sites, 10,5 M de visites (août 2026).',
       url: 'https://www.acpm.fr/classements/pmag',
     },
+    audience: {
+      reach: 10500000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -190,6 +218,12 @@ export const outlets: OutletConfig[] = [
       evidence:
         'ACPM sites web grand public : 33e rang, 17,9 M de visites en août 2026 (Huffingtonpost.fr).',
       url: 'https://www.acpm.fr/classements/united-web-sites-gp',
+    },
+    audience: {
+      reach: 17900000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
     },
     feedChecks: [
       {
@@ -261,6 +295,12 @@ export const outlets: OutletConfig[] = [
         'ACPM presse quotidienne nationale 2025/2026 : 5e rang, 119 943 exemplaires France payée ; Liberation.fr : 35e rang des sites, 15,9 M de visites (août 2026).',
       url: 'https://www.acpm.fr/classements/pqn',
     },
+    audience: {
+      reach: 15900000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -313,6 +353,13 @@ export const outlets: OutletConfig[] = [
         "257 383 abonnés individuels et collectifs au 31 décembre 2025 (+10 % en un an) — pas de diffusion papier certifiée ACPM : l'audience est celle d'un pure player abonné.",
       url: 'https://infographics.mediapart.fr/custom-pages/assets/documents/rapport-activite-2025/Mediapart_2025_en_chiffres.pdf',
     },
+    audience: {
+      reach: 5500000,
+      unit: 'visits',
+      source: 'Semrush',
+      asOf: '2026-08',
+      estimated: true,
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -363,6 +410,13 @@ export const outlets: OutletConfig[] = [
       evidence:
         'Pas de certification ACPM : 33 625 abonnés payants, plus de 7 000 sociétaires, ~4 M€ de chiffre d’affaires et plus de 40 ETP, déclarés sous serment par Denis Robert devant le Sénat (14 avril 2026) ; ~360 000 visites/mois (Semrush, août 2026). Chiffres auto-déclarés, quoiqu’assermentés — aucune donnée certifiée par un tiers.',
       url: 'https://www.senat.fr/compte-rendu-commissions/20260413/cult.html',
+    },
+    audience: {
+      reach: 360000,
+      unit: 'visits',
+      source: 'Semrush',
+      asOf: '2026-08',
+      estimated: true,
     },
     feedChecks: [
       {
@@ -415,6 +469,12 @@ export const outlets: OutletConfig[] = [
       evidence:
         'ACPM quotidien nationaux 2025/2026 : 7e rang, 40 996 exemplaires France payée ; Humanite.fr : 91e rang des sites, 3,3 M de visites (août 2026). Retenu pour sa signification éditoriale (quotidien historique de la gauche communiste) plus que pour son audience.',
       url: 'https://www.acpm.fr/classements/pqn',
+    },
+    audience: {
+      reach: 3300000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
     },
     feedChecks: [
       {
@@ -490,6 +550,12 @@ export const outlets: OutletConfig[] = [
         '1er quotidien national : ACPM 2025/2026, 564 586 exemplaires France payée ; LeMonde.fr : 7e rang des sites, 95,5 M de visites (août 2026).',
       url: 'https://www.acpm.fr/classements/pqn',
     },
+    audience: {
+      reach: 95500000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
+    },
     feedChecks: [
       {
         kind: 'une',
@@ -561,6 +627,12 @@ export const outlets: OutletConfig[] = [
         'ACPM magazines 2025/2026 : 100 527 exemplaires France payée ; marianne.net : 4,8 M de visites par mois.',
       url: 'https://www.acpm.fr/les-membres/support/4028424417-1-1/marianne-1',
     },
+    audience: {
+      reach: 4800000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -621,6 +693,12 @@ export const outlets: OutletConfig[] = [
         "Pas de certification ACPM « sites » trouvée pour slate.fr ; l'audience certifiée est celle des podcasts : Groupe Slate, 1er rang des groupes podcasts ACPM (2 395 428 téléchargements France, septembre 2026). La décision d'inclusion (issue #73) retient ce signal d'audience en l'absence de certification site.",
       url: 'https://www.acpm.fr/classements/podcast-groups',
     },
+    audience: {
+      reach: 2395428,
+      unit: 'downloads',
+      source: 'ACPM',
+      asOf: '2026-09',
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -672,6 +750,12 @@ export const outlets: OutletConfig[] = [
       evidence:
         '3e rang des sites web ACPM (grand public), 136,5 M de visites en août 2026 (Franceinfo.fr).',
       url: 'https://www.acpm.fr/classements/united-web-sites-gp',
+    },
+    audience: {
+      reach: 136500000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
     },
     feedChecks: [
       {
@@ -732,6 +816,12 @@ export const outlets: OutletConfig[] = [
         '8e rang des sites web ACPM (grand public), 90,3 M de visites en août 2026 (20minutes.fr). Presse gratuite : pas de diffusion payée certifiée ACPM.',
       url: 'https://www.acpm.fr/classements/united-web-sites-gp',
     },
+    audience: {
+      reach: 90300000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
+    },
     feedChecks: [
       {
         kind: 'une',
@@ -788,6 +878,12 @@ export const outlets: OutletConfig[] = [
       evidence:
         '1er quotidien français toute catégorie : ACPM presse quotidienne régionale 2025/2026, 580 981 exemplaires France payée (rang 1) ; ouest-france.fr : 1er rang des sites, 185,5 M de visites (août 2026).',
       url: 'https://www.acpm.fr/classements/pqr',
+    },
+    audience: {
+      reach: 185500000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
     },
     feedChecks: [
       {
@@ -858,6 +954,12 @@ export const outlets: OutletConfig[] = [
         "5e rang des sites web ACPM (grand public), 118,7 M de visites en août 2026 (Bfmtv.com) ; première chaîne d'information en continu française par son audience web.",
       url: 'https://www.acpm.fr/classements/united-web-sites-gp',
     },
+    audience: {
+      reach: 118700000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -916,6 +1018,12 @@ export const outlets: OutletConfig[] = [
       evidence:
         "ACPM 2025/2026 : 196 365 exemplaires France payée (2e rang presse quotidienne régionale ; 261 437 avec le couplage « Le Parisien + Aujourd'hui en France ») ; LeParisien.fr : 12e rang des sites, 61,9 M de visites (août 2026).",
       url: 'https://www.acpm.fr/classements/pqr',
+    },
+    audience: {
+      reach: 61900000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
     },
     feedChecks: [
       {
@@ -977,6 +1085,12 @@ export const outlets: OutletConfig[] = [
         '38e rang des sites web ACPM, 13,6 M de visites en août 2026 (Rfi.fr) ; audience mondiale (132 relais FM/DAB+, 1 950 radios partenaires selon France Médias Monde).',
       url: 'https://www.acpm.fr/classements/united-web-sites-gp',
     },
+    audience: {
+      reach: 13600000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -1035,6 +1149,12 @@ export const outlets: OutletConfig[] = [
       evidence:
         '48e rang des sites web ACPM, 9,5 M de visites en août 2026 (France24.com) ; diffusion mondiale dans 577 millions de foyers (France Médias Monde).',
       url: 'https://www.acpm.fr/classements/united-web-sites-gp',
+    },
+    audience: {
+      reach: 9500000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
     },
     feedChecks: [
       {
@@ -1095,6 +1215,12 @@ export const outlets: OutletConfig[] = [
         'ACPM presse magazine 2025/2026 : 39e rang, 162 073 exemplaires France payée ; CourrierInternational.com : 56e rang des sites, 7,9 M de visites (août 2026).',
       url: 'https://www.acpm.fr/classements/pmag',
     },
+    audience: {
+      reach: 7900000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -1146,6 +1272,12 @@ export const outlets: OutletConfig[] = [
       evidence:
         'ACPM presse magazine 2025/2026 : 54e rang, 118 937 exemplaires France payée ; Lexpress.fr : 62e rang des sites, 6,7 M de visites (août 2026).',
       url: 'https://www.acpm.fr/classements/pmag',
+    },
+    audience: {
+      reach: 6700000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
     },
     feedChecks: [
       {
@@ -1206,6 +1338,12 @@ export const outlets: OutletConfig[] = [
       evidence:
         'ACPM quotidien nationaux 2025/2026 : 6e rang, 73 595 exemplaires France payée ; La-croix.com : 86e rang des sites, 3,5 M de visites (août 2026).',
       url: 'https://www.acpm.fr/classements/pqn',
+    },
+    audience: {
+      reach: 3500000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
     },
     feedChecks: [
       {
@@ -1268,6 +1406,12 @@ export const outlets: OutletConfig[] = [
         'ACPM presse magazine 2025/2026 : DSH 232 050 exemplaires ; le site Challenges.fr suit le classement unifié des sites web ACPM.',
       url: 'https://www.acpm.fr/Support/challenges',
     },
+    audience: {
+      reach: 232050,
+      unit: 'circulation',
+      source: 'ACPM',
+      asOf: '2026',
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -1320,6 +1464,13 @@ export const outlets: OutletConfig[] = [
     readership: {
       evidence:
         "Absente du classement ACPM des sites ; retenue comme marque d'information de la première chaîne de télévision privée française (Groupe TF1), audience mesurée par Médiamétrie plutôt que par l'ACPM.",
+    },
+    audience: {
+      reach: 11960000,
+      unit: 'visits',
+      source: 'Semrush',
+      asOf: '2026-08',
+      estimated: true,
     },
     feedChecks: [
       {
@@ -1383,6 +1534,12 @@ export const outlets: OutletConfig[] = [
         'ACPM presse magazine 2025/2026 : 20e rang, 263 528 exemplaires France payée (hebdomadaire, DSH).',
       url: 'https://www.acpm.fr/classements/pmag',
     },
+    audience: {
+      reach: 263528,
+      unit: 'circulation',
+      source: 'ACPM',
+      asOf: '2026',
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -1443,6 +1600,12 @@ export const outlets: OutletConfig[] = [
       evidence:
         'Membre ACPM ; audience LDP de 633 000 au premier semestre 2026 (S1 2026). Pas de diffusion France payée certifiée dans les classements utilisés ici.',
       url: 'https://www.acpm.fr',
+    },
+    audience: {
+      reach: 633000,
+      unit: 'readers',
+      source: 'ACPM',
+      asOf: '2026-S1',
     },
     feedChecks: [
       {
@@ -1519,6 +1682,12 @@ export const outlets: OutletConfig[] = [
         'ACPM quotidien nationaux 2025/2026 : 2e rang, 397 194 exemplaires France payée ; LeFigaro.fr : 4e rang des sites, 125,9 M de visites (août 2026).',
       url: 'https://www.acpm.fr/classements/pqn',
     },
+    audience: {
+      reach: 125900000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
+    },
     feedChecks: [
       {
         kind: 'une',
@@ -1589,6 +1758,12 @@ export const outlets: OutletConfig[] = [
         "22e rang des sites web ACPM, 30,2 M de visites en août 2026 (Cnews.fr) ; chaîne d'information en continu du groupe Canal+ (Vincent Bolloré).",
       url: 'https://www.acpm.fr/classements/united-web-sites-gp',
     },
+    audience: {
+      reach: 30200000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -1658,6 +1833,12 @@ export const outlets: OutletConfig[] = [
         "75e rang des sites web ACPM, 4,7 M de visites en août 2026 (Europe1.fr) ; radio généraliste écoutée par 2,65 millions d'auditeurs par jour (vague Médiamétrie citée par Puremédias).",
       url: 'https://www.acpm.fr/classements/united-web-sites-gp',
     },
+    audience: {
+      reach: 4700000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -1722,6 +1903,12 @@ export const outlets: OutletConfig[] = [
         'ACPM presse du 7e jour 2025/2026 : 9e rang, 118 153 exemplaires France payée ; LeJDD.fr : 88e rang des sites, 3,4 M de visites (août 2026).',
       url: 'https://www.acpm.fr/classements/p7j',
     },
+    audience: {
+      reach: 3400000,
+      unit: 'visits',
+      source: 'ACPM',
+      asOf: '2026-08',
+    },
     feedChecks: [
       {
         kind: 'une',
@@ -1785,6 +1972,12 @@ export const outlets: OutletConfig[] = [
         'ACPM presse magazine 2025/2026 : 89e rang, 61 124 exemplaires France payée.',
       url: 'https://www.acpm.fr/classements/pmag',
     },
+    audience: {
+      reach: 61124,
+      unit: 'circulation',
+      source: 'ACPM',
+      asOf: '2026',
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -1846,6 +2039,13 @@ export const outlets: OutletConfig[] = [
         'Aucune certification ACPM « sites » ; ~360 000 visites/mois estimées par Semrush (août 2026), du même ordre que Blast. Réserve écrite : estimation non certifiée.',
       url: 'https://fr.semrush.com/website/atlantico.fr/overview/',
     },
+    audience: {
+      reach: 360000,
+      unit: 'visits',
+      source: 'Semrush',
+      asOf: '2026-08',
+      estimated: true,
+    },
     feedChecks: [
       {
         kind: 'latest',
@@ -1905,6 +2105,13 @@ export const outlets: OutletConfig[] = [
       evidence:
         'Aucune certification ACPM ; ~242 000 visites/mois estimées par Semrush (février 2026) ; côté papier, chiffres déclarés (2018) : 7 800 abonnés, 6 500–9 000 exemplaires en kiosque. Réserve écrite : aucune donnée certifiée.',
       url: 'https://fr.semrush.com/website/causeur.fr/overview/',
+    },
+    audience: {
+      reach: 242000,
+      unit: 'visits',
+      source: 'Semrush',
+      asOf: '2026-02',
+      estimated: true,
     },
     feedChecks: [
       {
