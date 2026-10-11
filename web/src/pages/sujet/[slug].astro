@@ -115,7 +115,13 @@ const description =
     {image && imageOutlet ? (
       // Hero header (idea 1): the image is the backdrop of the header block,
       // fading into the canvas — no cut rectangle between header and tabs.
-      <figure class="relative mt-6 overflow-hidden rounded-xl">
+      // Credit: no visible caption, but the attribution must exist — a
+      // title for pointer hover and a visually-hidden figcaption so it
+      // stays in the DOM (screen readers, view-source) on all devices.
+      <figure
+        class="relative mt-6 overflow-hidden rounded-xl"
+        title={`Photo : ${imageOutlet.name}`}
+      >
         <div class="absolute inset-0">
           <StoryImage
             article={image}
@@ -155,6 +161,7 @@ const description =
             </p>
           )}
         </div>
+        <figcaption class="sr-only">Photo : {imageOutlet.name}</figcaption>
       </figure>
     ) : (
       <>
