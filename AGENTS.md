@@ -53,4 +53,25 @@ Packages: `packages/domain` (shared types and the sourced Outlet config), `pipel
 - **Never run `pnpm edition` without the user's explicit consent.** It calls paid classification and summary APIs (Gemini) and costs real money. `pnpm verify` (feeds and TDM probes only) is free and needs no consent.
 - **Leaning belongs to Outlets, set by hand** in config, backed by sources (ADR-0001). Never classify Articles by Leaning.
 - **The UI is French; code, data keys and domain names are English** (GLOSSARY.md).
+
+### No backward compatibility (POC)
+
+The archive (`data/`) is disposable, not a contract — this is a POC.
+
+- **Never add migration, versioning, or compat shims** for `data/` shapes — no schema
+  versions, no "handle legacy field", no tolerant readers of old files, no code paths
+  that exist only to keep past runs readable.
+- **When the pipeline algorithm or a domain type changes, wipe and rebuild instead of
+  translating**: `pnpm edition:wipe` deletes `data/stories/` + `data/edition.json` and
+  reruns from scratch. Prefer that over writing compatibility code. It runs `pnpm
+  edition`, so it costs API money — get the user's explicit consent first, same rule
+  as above.
+- One deliberate exception: `data/classifications.json` survives a wipe. Article ids
+  are content-based, so the classification cache stays valid across algorithm changes
+  **unless the id scheme itself changed** — then delete it too and say so.
+- Frozen-Story permanence (ADR-0005) is a product guarantee, not a compat concern: it
+  governs what the edition promises readers, not how `data/` evolves internally. Don't
+  cite it to justify keeping old data formats around.
+- When reviewing, treat any fallback/optional handling for a `data/` shape that no
+  current pipeline run can produce as dead compat code — prefer deleting it.
 - **Story pages stay up permanently — once in the Edition**: a Story that has entered the Edition (`everInEdition`) is never edited once frozen and its slug is never reused; a slug collision must be resolved deterministically from Story ids, never by ordering — across builds the existing file keeps its slug, within a build the smallest Story id keeps the bare slug, and other claimants get a Story-id suffix. A frozen Story that never entered the Edition is deleted at the end of each run (issue #75).
