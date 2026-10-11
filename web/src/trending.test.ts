@@ -5,9 +5,12 @@ import {
   installTrending,
   markTrending,
   readSeen,
+  readSession,
   SEEN_KEY,
+  SESSION_KEY,
   type SeenBlob,
   writeSeen,
+  writeSession,
 } from './trending';
 
 const HOUR = 3_600_000;
@@ -15,6 +18,7 @@ const NOW = 1_800_000_000_000;
 
 afterEach(() => {
   localStorage.clear();
+  sessionStorage.clear();
   document.body.innerHTML = '';
 });
 
@@ -216,5 +220,63 @@ describe('installTrending', () => {
   it('records the snapshot even when the Edition renders no cards', () => {
     installTrending(document, localStorage, new Date(NOW));
     expect(readSeen(localStorage)).toEqual({ version: 1, stories: {} });
+  });
+
+  it('keeps the badges visible on a re-render within the same session', () => {
+    card('a', 5);
+    writeSeen(localStorage, {
+      version: 1,
+      stories: { a: { coverage: 3, seenAt: NOW - 24 * HOUR } },
+    });
+    installTrending(document, localStorage, new Date(NOW));
+    expectBadge('a', true);
+
+    // The reader clicks the story and comes back: the snapshot erased the
+    // delta, but the session keeps the badge scannable.
+    document.body.innerHTML = '';
+    card('a', 5);
+    installTrending(document, localStorage, new Date(NOW));
+    expectBadge('a', true);
+  });
+
+  it('prunes session badge ids to the current Edition on re-render', () => {
+    card('a', 5);
+    writeSession(sessionStorage, ['a', 'gone']);
+
+    installTrending(document, localStorage, new Date(NOW));
+
+    expect(readSession(sessionStorage)).toEqual(['a']);
+  });
+
+  it('clears badges in a new session (empty sessionStorage)', () => {
+    card('a', 5);
+    writeSeen(localStorage, {
+      version: 1,
+      stories: { a: { coverage: 5, seenAt: NOW - 24 * HOUR } },
+    });
+
+    installTrending(document, localStorage, new Date(NOW));
+
+    expectBadge('a', false);
+  });
+});
+
+describe('readSession / writeSession', () => {
+  it('round-trips ids through sessionStorage', () => {
+    writeSession(sessionStorage, ['a', 'b']);
+    expect(readSession(sessionStorage)).toEqual(['a', 'b']);
+  });
+
+  it('reads [] from nothing stored, malformed JSON, or a non-array', () => {
+    expect(readSession(sessionStorage)).toEqual([]);
+    sessionStorage.setItem(SESSION_KEY, '{not json');
+    expect(readSession(sessionStorage)).toEqual([]);
+    sessionStorage.setItem(SESSION_KEY, '{"a":1}');
+    expect(readSession(sessionStorage)).toEqual([]);
+  });
+
+  it('drops non-string entries', () => {
+    sessionStorage.setItem(SESSION_KEY, '["a",1,null]');
+    expect(readSession(sessionStorage)).toEqual(['a']);
   });
 });

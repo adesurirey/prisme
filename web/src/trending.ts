@@ -13,10 +13,16 @@
  *   the Edition now and was absent from the reader's last visit.
  * - A baseline older than BASELINE_TTL_MS (48h) never generates a badge — a
  *   long-absent reader sees "everything changed", not a wall of badges.
- * - A badge fires once: this visit's snapshot erases it on the next render.
+ * - A badge fires once per browser session: this visit's snapshot erases it
+ *   on the next render, but the badge ids are kept in sessionStorage so the
+ *   reader can click through stories and come back without the badges
+ *   vanishing mid-scan. A new session (or tab) recomputes from the snapshot.
  */
 
 export const SEEN_KEY = 'prisme.seenStories';
+
+/** sessionStorage key holding this session's badge ids (JSON array). */
+export const SESSION_KEY = 'prisme.trendingSession';
 
 const SEEN_VERSION = 1;
 
@@ -96,6 +102,27 @@ export function readSeen(storage: Storage): SeenBlob | null {
   }
 }
 
+export function readSession(storage: Storage): string[] {
+  try {
+    const raw = storage.getItem(SESSION_KEY);
+    if (raw == null) return [];
+    const parsed: unknown = JSON.parse(raw);
+    return Array.isArray(parsed)
+      ? parsed.filter((id): id is string => typeof id === 'string')
+      : [];
+  } catch {
+    return [];
+  }
+}
+
+export function writeSession(storage: Storage, ids: string[]): void {
+  try {
+    storage.setItem(SESSION_KEY, JSON.stringify(ids));
+  } catch {
+    // Private mode or full quota: badges just fall back to per-render.
+  }
+}
+
 export function writeSeen(storage: Storage, blob: SeenBlob): void {
   try {
     storage.setItem(SEEN_KEY, JSON.stringify(blob));
@@ -123,11 +150,17 @@ function trendingBadge(): HTMLElement {
  * Wire the Edition index: read each card's data attributes, decide trending
  * from the stored snapshot, reveal badges, write the new snapshot. Runs on
  * any page; only cards on the Edition index are affected.
+ *
+ * Badges survive within the browser session: the ids computed this render
+ * are merged with the ones already recorded in sessionStorage (pruned to
+ * the current Edition), so clicking a story and coming back — or reloading
+ * — keeps the whole list scannable. Only a new session clears them.
  */
 export function installTrending(
   doc: Document = document,
   storage: Storage = localStorage,
   now: Date = new Date(),
+  session: Storage = sessionStorage,
 ): void {
   const cards = doc.querySelectorAll<HTMLElement>('[data-story-id]');
   const current: TrendingStory[] = [...cards].map((el) => ({
@@ -140,7 +173,17 @@ export function installTrending(
     now.getTime(),
     readSeen(storage),
   );
-  const trending = new Set(trendingIds);
+  // The snapshot erases each badge on the next render; the session set
+  // keeps them visible for the whole session so the reader can scan every
+  // trending story (click through, come back, reload).
+  const sessionIds = readSession(session).filter((id) =>
+    current.some(({ id: currentId }) => currentId === id),
+  );
+  const badgeIds = current
+    .map(({ id }) => id)
+    .filter((id) => trendingIds.includes(id) || sessionIds.includes(id));
+  const trending = new Set(badgeIds);
+  writeSession(session, badgeIds);
   for (const el of cards) {
     if (!trending.has(el.dataset.storyId!)) continue;
     // The badge lands in the slot at the end of the Coverage meta line
