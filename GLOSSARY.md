@@ -99,7 +99,7 @@ How a Story's reporting is distributed across Coverage groups and Outlets: the n
 _Avoid_: Distribution, reach, share
 
 **Reach**:
-The raw monthly audience figure recorded for an Outlet in its config, with its unit, source and date. A sourced fact, not a judgement: web visits, print circulation or podcast downloads, whichever the Outlet's best evidence is. Estimated figures are flagged as such.
+The raw monthly audience figure recorded for an Outlet in its config, with its source and date. A sourced fact, not a judgement: monthly web visits for every Outlet, ACPM-certified where the Outlet is certified, otherwise a flagged estimate (Semrush via Hypestat). The unit is declared so the comparability rule stays checkable.
 _Avoid_: Audience (alone), traffic, popularity
 
 **Exposition**:

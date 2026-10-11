@@ -53,8 +53,8 @@ export interface Readership {
 export interface Audience {
   /** The figure as the source publishes it, always > 0. */
   reach: number;
-  /** What is counted: web visits, print circulation, podcast downloads, LDP readers. */
-  unit: 'visits' | 'circulation' | 'downloads' | 'readers';
+  /** What is counted — the Edition's Outlets are all measured in web visits. */
+  unit: 'visits';
   /** Who measured it: 'ACPM' when certified, otherwise the estimator. */
   source: string;
   /** Period covered: ISO month ('2026-08'), half-year ('2026-S1') or year ('2026'). */
@@ -1601,13 +1601,13 @@ export const outlets: OutletConfig[] = [
       'Placé à Centre droit : le journal revendique un libéralisme « pas de droite » (Beytout) quand Marianne décrit une ligne « néolibérale » ; FrIdéo le place en bande « centre droit » (+0,60) avec un intervalle contenant zéro, toutes les familles couvertes pointant à droite du centre, et le voisinage FrIdéo (entre Le Point et le JDD) conforte la bande. La bande est retenue conformément à la règle de placement, le désaccord fondateur étant publié.',
     readership: {
       evidence:
-        'Membre ACPM ; audience LDP de 633 000 au premier semestre 2026 (S1 2026). Pas de diffusion France payée certifiée dans les classements utilisés ici.',
-      url: 'https://www.acpm.fr',
+        'Membre ACPM ; audience LDP de 633 000 au premier semestre 2026 (S1 2026) ; Lopinion.fr : 125e rang des sites web ACPM (grand public), 1 251 374 visites en septembre 2026. Pas de diffusion France payée certifiée dans les classements utilisés ici.',
+      url: 'https://www.acpm.fr/classements/united-web-sites-gp',
     },
     audience: {
-      reach: 633000,
-      unit: 'readers',
-      asOf: '2026-S1',
+      reach: 1251374,
+      unit: 'visits',
+      asOf: '2026-09',
       source: 'ACPM',
     },
     feedChecks: [
@@ -1972,14 +1972,15 @@ export const outlets: OutletConfig[] = [
       "Placé à Droite, avec désaccord documenté sur la nuance : les sources parlent d'« extrême droite » (Le Figaro, en citation) ou de « clairement à droite ». Notre échelle n'a pas de case extrême droite (hors périmètre, voir la PRD) ; la bande « far-right » de FrIdéo est donc rattachée à Droite, ce qui correspond aussi à la description « conservatrice » du Monde.",
     readership: {
       evidence:
-        'ACPM presse magazine 2025/2026 : 89e rang, 61 124 exemplaires France payée.',
-      url: 'https://www.acpm.fr/classements/pmag',
+        'ACPM presse magazine 2025/2026 : 89e rang, 61 124 exemplaires France payée ; absente du classement unifié des sites web ACPM (vérifié le 2026-10-12) — visites web estimées par Semrush (miroir Hypestat, snapshot ~janvier 2026, stale). Réserve écrite : estimation non certifiée et ancienne.',
+      url: 'https://hypestat.com/info/valeursactuelles.com',
     },
     audience: {
-      reach: 61124,
-      unit: 'circulation',
-      asOf: '2026',
-      source: 'ACPM',
+      reach: 1053388,
+      unit: 'visits',
+      asOf: '2026-01',
+      source: 'Hypestat (miroir Semrush)',
+      estimated: true,
     },
     feedChecks: [
       {

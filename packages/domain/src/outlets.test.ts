@@ -47,11 +47,12 @@ describe('outlet config', () => {
   });
 
   it('carries one sourced, positive reach figure per Outlet (issue #87)', () => {
-    const units = ['visits', 'circulation', 'downloads', 'readers'];
     for (const outlet of outlets) {
       const audience = outlet.audience;
+      // One comparable unit for the whole Edition: certified or estimated web
+      // visits. No circulation/readers/downloads series to weight against.
+      expect(audience.unit, outlet.id).toBe('visits');
       expect(audience.reach, outlet.id).toBeGreaterThan(0);
-      expect(units, outlet.id).toContain(audience.unit);
       expect(audience.source, outlet.id).not.toBe('');
       // ISO month ('2026-08'), half-year ('2026-S1') or year ('2026').
       expect(audience.asOf, outlet.id).toMatch(/^\d{4}(-\d{2}|(-S\d))?$/);
