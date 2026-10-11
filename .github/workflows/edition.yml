@@ -16,9 +16,15 @@ name: Edition
 # set unconditionally each run, so the commit is never empty and the home
 # page's « dernier point à hh h » always reflects the real verification time
 # (ADR-0002). Also triggerable by hand.
+#
+# MIGRATED TO cron-job.org (2025): GitHub's scheduler was dropping most hourly
+# slots (only ~2 fired per day), so the hourly trigger now comes from an
+# external cron-job.org job POSTing to the workflow_dispatch API every hour at
+# :23. The schedule block is kept, commented out, as a documented fallback —
+# uncomment it if the external trigger is ever lost.
 on:
-  schedule:
-    - cron: '23 * * * *'
+  # schedule:
+  #   - cron: '23 * * * *'
   workflow_dispatch:
 
 permissions:
