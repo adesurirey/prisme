@@ -25,8 +25,8 @@ export async function runEdition(): Promise<Edition> {
   // Model policy (ADR-0005, as amended in issue #40): resolveModels decides
   // what is live, what degrades, and what fails — see policy.ts. Failing the
   // build up front happens here, before anything is collected or written —
-  // the old degrade-to-singletons path corrupted the archive permanently
-  // (membership is sticky, singletons never re-merge).
+  // the old degrade-to-singletons path corrupted the archive permanently;
+  // since ADR-0015 a Story is never born from fewer than two Articles.
   const models = resolveModels();
 
   const now = new Date();

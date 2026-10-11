@@ -147,7 +147,7 @@ describe('groupStories', () => {
     expect(checkCalls).toEqual([{ story: 'Story un', article: 'Titre a1' }]);
   });
 
-  it('a low-confidence match splits when the Membership check says no', async () => {
+  it('a refused Article stays unassigned (orphan) instead of splitting (ADR-0015)', async () => {
     const existing = [story({ articles: [article('a0')] })];
     const outcome = await groupStories(
       input({
@@ -166,10 +166,11 @@ describe('groupStories', () => {
     expect(
       outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
     ).toEqual(['a0']);
-    const solo = outcome.stories.find((s) => s.id !== 's1')!;
-    expect(solo.articles.map((a) => a.id)).toEqual(['a1']);
-    // Equal publication times tie-break by Story id.
-    expect(outcome.live.map((s) => s.id)).toEqual([solo.id, 's1']);
+    // No singleton birth: a1 is written to no Story file, so the next
+    // build re-presents it as fresh (membership exists only in Story files).
+    expect(outcome.stories).toHaveLength(1);
+    expect(outcome.changed.has('story-un')).toBe(false);
+    expect(outcome.live.map((s) => s.id)).toEqual(['s1']);
   });
 
   it('a build where every Membership check fails (a null answer, or a missing checker) fails (issue #40)', async () => {
@@ -199,7 +200,7 @@ describe('groupStories', () => {
     }
   });
 
-  it('an isolated failed Membership check keeps splitting instead of failing the build', async () => {
+  it('an isolated failed Membership check orphans instead of failing the build', async () => {
     const existing = [story({ articles: [article('a0')] })];
     const outcome = await groupStories(
       input({
@@ -215,7 +216,7 @@ describe('groupStories', () => {
             titleUpdates: [],
           }),
           // One check throws, the other answers no: some checks answered,
-          // so the build proceeds and both Articles split.
+          // so the build proceeds and both Articles are orphaned.
           membership: {
             label: 'FakeJev',
             belongs: async (_story, art) => {
@@ -230,7 +231,7 @@ describe('groupStories', () => {
     expect(
       outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
     ).toEqual(['a0']);
-    expect(outcome.stories.filter((s) => s.id !== 's1')).toHaveLength(2);
+    expect(outcome.stories.filter((s) => s.id !== 's1')).toHaveLength(0);
   });
 
   it('even a confident match goes through the Membership check', async () => {
@@ -343,7 +344,7 @@ describe('groupStories', () => {
     ).rejects.toThrow('all 1 checks failed');
   });
 
-  it('an Article assigned to an unknown Story splits', async () => {
+  it('an Article assigned to an unknown Story stays unassigned (orphan)', async () => {
     const outcome = await groupStories(
       input({
         articles: [article('a1')],
@@ -359,8 +360,7 @@ describe('groupStories', () => {
         },
       }),
     );
-    expect(outcome.stories).toHaveLength(1);
-    expect(outcome.stories[0]!.articles.map((a) => a.id)).toEqual(['a1']);
+    expect(outcome.stories).toHaveLength(0); // orphan, no singleton birth
   });
 
   it('survives two invented target Story ids: the pair-score sort ran the comparator', async () => {
@@ -383,13 +383,10 @@ describe('groupStories', () => {
         },
       }),
     );
-    expect(outcome.stories.map((s) => s.articles[0]!.id).sort()).toEqual([
-      'a1',
-      'a2',
-    ]);
+    expect(outcome.stories).toHaveLength(0); // both orphaned
   });
 
-  it('an Article with no assignment splits', async () => {
+  it('an Article with no assignment stays unassigned (orphan)', async () => {
     const outcome = await groupStories(
       input({
         articles: [article('a1')],
@@ -403,23 +400,26 @@ describe('groupStories', () => {
         },
       }),
     );
-    expect(outcome.stories).toHaveLength(1);
-    expect(outcome.stories[0]!.articles.map((a) => a.id)).toEqual(['a1']);
+    expect(outcome.stories).toHaveLength(0); // orphan, no singleton birth
   });
 
   it('a new Story from the model carries the neutral title and a fresh id', async () => {
     const outcome = await groupStories(
       input({
-        articles: [article('a1')],
+        articles: [
+          article('a1', { publishedAt: '2026-10-06T09:00:00Z' }),
+          article('a2', { publishedAt: '2026-10-06T10:00:00Z' }),
+        ],
         clients: {
           grouping: fakeGrouping({
             newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
             assignments: [
-              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
             ],
             titleUpdates: [],
           }),
-          membership: missingMembershipChecker(),
+          membership: fakeMembership(true),
         },
       }),
     );
@@ -427,7 +427,28 @@ describe('groupStories', () => {
     expect(s.id).toBe('000000000001');
     expect(s.title).toBe('Le Sénat adopte le budget');
     expect(s.slug).toBe('le-senat-adopte-le-budget');
-    expect(s.articles.map((a) => a.id)).toEqual(['a1']);
+    // Two members: a Story is never born alone (ADR-0015).
+    expect(s.articles.map((a) => a.id)).toEqual(['a2', 'a1']);
+  });
+
+  it('a proposed new Story reduced to its seed alone is dropped and its members orphaned (ADR-0015)', async () => {
+    const outcome = await groupStories(
+      input({
+        articles: [article('a1'), article('a2')],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+            titleUpdates: [],
+          }),
+          membership: fakeMembership(false),
+        },
+      }),
+    );
+    expect(outcome.stories).toHaveLength(0);
   });
 
   it('a new Story carries its seed unconditionally; every further member is checked against the seed', async () => {
@@ -463,7 +484,7 @@ describe('groupStories', () => {
     ]);
   });
 
-  it('a member that fails the seed check splits out of the new Story', async () => {
+  it('a member that fails the seed check leaves the new Story seed alone — dropped, members orphaned (ADR-0015)', async () => {
     const membershipCalls: { story?: string; article?: string }[] = [];
     const outcome = await groupStories(
       input({
@@ -481,12 +502,9 @@ describe('groupStories', () => {
         },
       }),
     );
-    expect(outcome.stories.map((s) => s.title)).toEqual([
-      'Le Sénat adopte le budget',
-      'Titre a2',
-    ]);
-    const kept = outcome.stories[0]!;
-    expect(kept.articles.map((a) => a.id)).toEqual(['a1']);
+    // The refused member a2 orphans; the Story keeps only its seed a1,
+    // which is below the two-Article birth minimum — dropped (ADR-0015).
+    expect(outcome.stories).toHaveLength(0);
   });
 
   it('a member of a new Story: a failed check fails the build when every check fails (issue #40)', async () => {
@@ -518,7 +536,7 @@ describe('groupStories', () => {
   it('a key Story no Article claimed never publishes', async () => {
     const outcome = await groupStories(
       input({
-        articles: [article('a1')],
+        articles: [article('a1'), article('a2')],
         clients: {
           grouping: fakeGrouping({
             newStories: [
@@ -527,10 +545,11 @@ describe('groupStories', () => {
             ],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k2', confidence: 0.3 },
+              { articleId: 'a2', newStoryKey: 'k2', confidence: 0.3 },
             ],
             titleUpdates: [],
           }),
-          membership: missingMembershipChecker(),
+          membership: fakeMembership(true),
         },
       }),
     );
@@ -542,17 +561,18 @@ describe('groupStories', () => {
     const existing = [story({ slug: 'collision' })];
     const outcome = await groupStories(
       input({
-        articles: [article('a1')],
+        articles: [article('a1'), article('a2')],
         existing,
         clients: {
           grouping: fakeGrouping({
             newStories: [{ key: 'k1', title: 'Collision' }],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.3 },
             ],
             titleUpdates: [],
           }),
-          membership: fakeMembership(false),
+          membership: fakeMembership(true),
         },
       }),
     );
@@ -563,7 +583,14 @@ describe('groupStories', () => {
   it('two new Stories claiming one slug: the smallest Story id keeps the bare slug', async () => {
     const outcome = await groupStories(
       input({
-        articles: [article('a1'), article('a2')],
+        articles: [
+          article('a1', { headline: 'Le Sénat adopte le budget 2027' }),
+          article('a2', { headline: 'Le budget 2027 adopté par le Sénat' }),
+          article('a3', { headline: 'Victoire du Stade Toulousain en rugby' }),
+          article('a4', {
+            headline: 'Le Stade Toulousain remporte le match de rugby',
+          }),
+        ],
         clients: {
           grouping: fakeGrouping({
             newStories: [
@@ -572,11 +599,13 @@ describe('groupStories', () => {
             ],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k2', confidence: 0.3 },
-              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.3 },
+              { articleId: 'a2', newStoryKey: 'k2', confidence: 0.3 },
+              { articleId: 'a3', newStoryKey: 'k1', confidence: 0.3 },
+              { articleId: 'a4', newStoryKey: 'k1', confidence: 0.3 },
             ],
             titleUpdates: [],
           }),
-          membership: fakeMembership(false),
+          membership: fakeMembership(true),
         },
       }),
     );
@@ -593,7 +622,14 @@ describe('groupStories', () => {
     let n = 0;
     const outcome = await groupStories(
       input({
-        articles: [article('a1'), article('a2')],
+        articles: [
+          article('a1', { headline: 'Le Sénat adopte le budget 2027' }),
+          article('a2', { headline: 'Le budget 2027 adopté par le Sénat' }),
+          article('a3', { headline: 'Victoire du Stade Toulousain en rugby' }),
+          article('a4', {
+            headline: 'Le Stade Toulousain remporte le match de rugby',
+          }),
+        ],
         makeId: () => ids[n++],
         clients: {
           grouping: fakeGrouping({
@@ -603,11 +639,13 @@ describe('groupStories', () => {
             ],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
-              { articleId: 'a2', newStoryKey: 'k2', confidence: 0.3 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.3 },
+              { articleId: 'a3', newStoryKey: 'k2', confidence: 0.3 },
+              { articleId: 'a4', newStoryKey: 'k2', confidence: 0.3 },
             ],
             titleUpdates: [],
           }),
-          membership: fakeMembership(false),
+          membership: fakeMembership(true),
         },
       }),
     );
@@ -626,17 +664,18 @@ describe('groupStories', () => {
     ];
     const outcome = await groupStories(
       input({
-        articles: [article('a1')],
+        articles: [article('a1'), article('a2')],
         existing,
         clients: {
           grouping: fakeGrouping({
             newStories: [{ key: 'k1', title: 'Collision' }],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.3 },
             ],
             titleUpdates: [],
           }),
-          membership: fakeMembership(false),
+          membership: fakeMembership(true),
         },
       }),
     );
@@ -824,8 +863,8 @@ describe('groupStories', () => {
     expect(sf.articles).toHaveLength(1); // untouched, full history kept
     expect(outcome.live.map((s) => s.id)).not.toContain('sf');
     expect(outcome.changed.has('frozen')).toBe(false);
-    const solo = outcome.stories.find((s) => s.id !== 'sf')!;
-    expect(solo.articles.map((a) => a.id)).toEqual(['a1']); // split, not merged into the frozen Story
+    // a1 is not merged into the frozen Story: it stays unassigned (ADR-0015).
+    expect(outcome.stories).toHaveLength(1);
   });
 
   describe('seed guard (issue #36)', () => {
@@ -892,7 +931,13 @@ describe('groupStories', () => {
           articles: [
             article('a1', { headline: 'Le Sénat adopte le budget 2027' }),
             article('a2', {
+              headline: 'Le budget 2027 adopté par le Sénat',
+            }),
+            article('a3', {
               headline: 'Victoire du Stade Toulousain en rugby',
+            }),
+            article('a4', {
+              headline: 'Le Stade Toulousain remporte le match de rugby',
             }),
           ],
           clients: {
@@ -903,7 +948,9 @@ describe('groupStories', () => {
               ],
               assignments: [
                 { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
-                { articleId: 'a2', newStoryKey: 'k2', confidence: 0.3 },
+                { articleId: 'a2', newStoryKey: 'k1', confidence: 0.3 },
+                { articleId: 'a3', newStoryKey: 'k2', confidence: 0.3 },
+                { articleId: 'a4', newStoryKey: 'k2', confidence: 0.3 },
               ],
               titleUpdates: [],
             }),
@@ -911,14 +958,24 @@ describe('groupStories', () => {
           },
         }),
       );
-      // Zero token overlap between the two seeds: no guard check runs, and
-      // the full check budget stays available for merges next build.
-      expect(checkCalls).toEqual([]);
+      // Zero token overlap between the two seeds: no guard check runs
+      // across keys — the only belongs calls are each key's non-seed member
+      // against its own seed. No per-build budget caps them (ADR-0012).
+      expect(checkCalls).toEqual([
+        {
+          story: 'Le Sénat adopte le budget 2027',
+          article: 'Le budget 2027 adopté par le Sénat',
+        },
+        {
+          story: 'Victoire du Stade Toulousain en rugby',
+          article: 'Le Stade Toulousain remporte le match de rugby',
+        },
+      ]);
       expect(outcome.stories).toHaveLength(2);
       expect(outcome.live).toHaveLength(2);
     });
 
-    it('twin seeds the guard refuses keep their separate Stories', async () => {
+    it('twin seeds the guard refuses are all dropped — Articles orphaned (ADR-0015)', async () => {
       const outcome = await groupStories(
         input({
           articles: nobelArticles(),
@@ -928,12 +985,9 @@ describe('groupStories', () => {
           },
         }),
       );
-      expect(outcome.stories.map((s) => s.title)).toEqual([
-        nobel.a1,
-        nobel.a2,
-        nobel.a3,
-      ]);
-      expect(outcome.live).toHaveLength(3);
+      // Each proposed key kept only its seed: below the two-Article birth
+      // minimum, every key is dropped and the Articles retry next build.
+      expect(outcome.stories).toHaveLength(0);
     });
 
     it('a proposed singleton duplicating a live Story merges into it; the proposed Story is dropped', async () => {
@@ -983,7 +1037,7 @@ describe('groupStories', () => {
       ]);
     });
 
-    it('a proposed singleton the guard refuses stays its own Story', async () => {
+    it('a proposed singleton the guard refuses is dropped; the Article is orphaned (ADR-0015)', async () => {
       const existing = [
         story({
           title: 'Mouvement de contestation lycéen',
@@ -1015,10 +1069,8 @@ describe('groupStories', () => {
           },
         }),
       );
-      expect(outcome.stories).toHaveLength(2);
-      expect(
-        outcome.stories.find((s) => s.id !== 's1')!.articles.map((a) => a.id),
-      ).toEqual(['a1']);
+      expect(outcome.stories).toHaveLength(1); // only the live Story s1
+      expect(outcome.stories[0]!.articles.map((a) => a.id)).toEqual(['a0']);
     });
 
     it('an absorbed key keeps the absorber: its seed and members re-target', async () => {

@@ -105,8 +105,8 @@ export const GROUPING_SCHEMA = {
 
 /**
  * Extract and validate the proposal. Invalid items are dropped (the caller
- * splits their Articles); a structurally broken response returns null —
- * the caller retries once, then throws (the build fails).
+ * leaves their Articles unassigned); a structurally broken response returns
+ * null — the caller retries once, then throws (the build fails).
  */
 export function parseGroupingResponse(text: string): GroupingProposal | null {
   let data: unknown;
@@ -213,7 +213,7 @@ export function groupingPrompt(input: {
     '',
     'Consignes :',
     '- Pour chaque nouvel article, ajoute une entrée dans « assignments » : soit « storyId » (une story existante), soit « newStoryKey » (une story à créer), avec « confidence » entre 0 et 1.',
-    '- Un article qui ne va avec rien obtient sa propre nouvelle story.',
+    "- Une story naît toujours d'au moins deux articles (ADR-0015) : si un article ne va avec rien, laisse-le sans entrée dans « assignments » — ne crée jamais une story pour un seul article ; il sera représenté au prochain build.",
     "- Une story correspond à un événement ou une affaire précise, jamais à un thème. N'utilise jamais de titre générique (« perspectives économiques… », « actualité politique… ») : un thème n'est pas une story.",
     '- Ne regroupe que ce qui rapporte le même événement ou la même affaire précise : un thème commun ou un protagoniste commun ne suffit pas.',
     "- Chaque nouvelle story a une « key » courte unique (lettres et chiffres) et un « title » : un titre neutre en français décrivant l'événement, sans copier le titre d'un outlet ni reprendre sa formulation. Style du titre : un acteur nommé, un verbe d'action, un complément concret (chiffre, lieu, enjeu) — jamais le style nominal sans verbe (« Condamnation de… », « Attribution du… », « Préparatifs face à… »). Interdits : commencer par une citation entre guillemets, le format « citation » : … repris des outlets, les préfixes de type « À la une ». Aucun mot rhétorique ou jugement de valeur : la neutralité porte sur la position, pas sur la forme. Une phrase de 40 à 110 caractères qui conserve les noms propres (personnes, lieux, sigles).",

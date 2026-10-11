@@ -68,6 +68,10 @@ _Avoid_: Clustering, matcher, AI (alone)
 A yes/no check that decides whether an Article the Grouping model matched with low confidence joins that Story.
 _Avoid_: Verification, noul check
 
+**Unassigned Article**:
+An Article this build matched with no Story: refused by a Membership check, mis-targeted, or left unmatched by the Grouping model. It is written to no Story file, so the next build presents it again as fresh. No Story is ever born from fewer than two Articles (ADR-0015).
+_Avoid_: Orphan (use unassigned), rejected article, floating article
+
 **Section**:
 The part of the news a Story belongs to: Politique, International, Économie, Société, Sport, Culture, Sciences/Tech, Faits divers. A Story's Section comes from the Sections of its Articles. Shown as a label, never a filter.
 _Avoid_: Category, rubric, topic

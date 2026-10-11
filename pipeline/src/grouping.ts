@@ -11,27 +11,28 @@
  *
  * Failure policy (ADR-0005, as amended in issue #40): a failed Grouping
  * call — HTTP, unparseable after retries, or a missing key — fails the
- * build: nothing is written, the last committed Edition stays live, and a
- * degraded build no longer writes one-Article Story files (the 2026-10-08
- * builds showed one 429 corrupting the archive with 456 singletons that
- * membership is sticky and never re-merge). A merge into an existing
- * Story is only allowed when a Jev Membership check says yes; a refused or
- * isolated failed check splits — but if every Membership check fails (the checker down, or a
- * missing key with checks pending), the build fails too: checks are the
- * only guard against permanent wrong merges, and a run where none of
- * them answered is not a run that can be trusted to write files. Checks
- * are unbudgeted: the gate's dedup ledger bounds every (Article, Story)
- * pair to one check, so the count is finite by construction (ADR-0012). A new
- * Story proposed by the Grouping model gets the same guard (issue #36):
- * its seed is checked before the Story is created — across builds against
- * the most headline-similar live Stories (a proposed singleton must not
- * duplicate a live Story the model failed to merge into), and within the
- * build against the other surviving seeds (same-event Articles proposed as
- * separate new Stories must not each become one) — so no path creates a
- * Story without a Membership check. Only the seed of a Story that survived
- * both guards joins unconditionally; every further member is checked
- * against the seed (a thematic mega-Story must not form unchecked) and
- * demoted Articles split into singletons the next build can re-group.
+ * build: nothing is written, the last committed Edition stays live. A merge
+ * into an existing Story is only allowed when a Jev Membership check says
+ * yes; but if every Membership check fails (the checker down, or a missing
+ * key with checks pending), the build fails too: checks are the only guard
+ * against permanent wrong merges, and a run where none of them answered is
+ * not a run that can be trusted to write files. Checks are unbudgeted: the
+ * gate's dedup ledger bounds every (Article, Story) pair to one check, so
+ * the count is finite by construction (ADR-0012).
+ *
+ * Birth policy (ADR-0015): a Story is created only with at least two
+ * Articles. An Article that matches nothing, whose Membership check is
+ * refused or isolated-failed, or whose target is unknown or frozen stays
+ * unassigned — written to no Story file, so the next build re-presents it
+ * as fresh (the retry-ability the old split path destroyed: membership was
+ * sticky, singletons never re-merge). A proposed Story reduced to its seed
+ * alone is dropped before it can publish. A new Story proposed by the
+ * Grouping model gets the seed guard (issue #36) first: across builds
+ * against the most headline-similar live Stories, and within the build
+ * against the other surviving seeds — so two same-event Articles proposed
+ * as separate one-member Stories fold into one two-member Story instead of
+ * both being dropped. A build-failing invariant (any created Story under
+ * two Articles throws) keeps the policy true by construction.
  */
 import { readdir, readFile } from 'node:fs/promises';
 import type { Article, Section, Story } from '@prisme/domain';
@@ -294,6 +295,9 @@ export async function groupStories(
     changedStories.add(story);
   };
 
+  // Note: a Story is never born from a single Article (ADR-0015) — newStory
+  // is only called for model-proposed keys, and the two-Article minimum is
+  // enforced by the drop pass and invariant below.
   const newStory = (title: string): Story => {
     const id = makeId();
     const slug = slugFor(title, id, taken);
@@ -312,10 +316,13 @@ export async function groupStories(
     return story;
   };
 
-  /** A split: the Article found no acceptable Story, so it starts one. */
-  const split = (article: Article): void => {
-    const story = newStory(article.headline);
-    merge(story, article);
+  /** Articles left unassigned this build (ADR-0015): written to no Story
+   * file, so the next build re-presents them as fresh. Logged below. */
+  const orphans: string[] = [];
+  /** A refused, mis-targeted, or unmatched Article stays unassigned — it
+   * never births a one-Article Story (ADR-0015). */
+  const orphan = (article: Article): void => {
+    orphans.push(article.id);
   };
 
   const groupingInput = {
@@ -528,26 +535,26 @@ export async function groupStories(
     for (const article of fresh) {
       const assignment = assignmentOf.get(article.id);
       if (assignment == null) {
-        split(article);
+        orphan(article);
         continue;
       }
       if (assignment.storyId != null) {
         const story = byId.get(assignment.storyId);
         // Unknown or frozen target: the model only sees live Stories.
         if (story == null || !isLive(story, now)) {
-          split(article);
+          orphan(article);
           continue;
         }
         if (gate.verdict(article.id, assignment.storyId) === 'yes') {
           merge(story, article);
         } else {
-          split(article);
+          orphan(article);
         }
         continue;
       }
       const newStoryKey = assignment.newStoryKey;
       if (newStoryKey == null || !keyMembers.has(newStoryKey)) {
-        split(article);
+        orphan(article);
         continue;
       }
       // A guard absorption retargets the whole key: either an existing
@@ -565,7 +572,7 @@ export async function groupStories(
         ) {
           merge(story, article);
         } else {
-          split(article);
+          orphan(article);
         }
       } else {
         // Absorbed into an existing Story: the seed's guard verdict and
@@ -574,7 +581,7 @@ export async function groupStories(
         if (story != null && gate.verdict(article.id, target) === 'yes') {
           merge(story, article);
         } else {
-          split(article);
+          orphan(article);
         }
       }
     }
@@ -585,15 +592,39 @@ export async function groupStories(
         `Membership: ${gate.checksUsed} checks in one build is unusual — inspect the Grouping proposal for a combinatorial blowup (ADR-0012).`,
       );
 
-    // Key Stories no Article claimed are dropped before they ever publish.
+    // Stories below the two-Article birth minimum are dropped before they
+    // ever publish (ADR-0015): no Article claimed (never proposed), or only
+    // the seed joined (its members were refused). Their Articles are
+    // orphaned — written to no Story file, they retry next build. An
+    // existing Story may still grow from one Article to two: the minimum
+    // governs births, not merges.
     for (const story of keyStories.values()) {
-      if (story.articles.length === 0) {
+      if (story.articles.length < 2) {
+        for (const a of story.articles)
+          if (!orphans.includes(a.id)) orphans.push(a.id);
         stories.splice(stories.indexOf(story), 1);
         byId.delete(story.id);
         created.splice(created.indexOf(story), 1);
         changedStories.delete(story);
         taken.delete(story.slug);
       }
+    }
+    // After the drop pass, so the count includes the dropped Stories' own
+    // Articles — every unassigned Article retries next build (ADR-0015).
+    if (orphans.length > 0)
+      console.log(
+        `Grouping: ${orphans.length} Article(s) left unassigned this build — no Story is born from fewer than two Articles (ADR-0015); they retry next build.`,
+      );
+
+    // Invariant tripwire (ADR-0015): a Story born this build always has at
+    // least two Articles. Unreachable while the drop pass above holds — its
+    // job is to fail loudly if a future refactor reintroduces singleton
+    // births, the corruption class no check caught in 2026-10.
+    for (const story of created) {
+      if (story.articles.length < 2)
+        throw new Error(
+          `No-singleton policy violated (ADR-0015): Story ${story.id} was created with ${story.articles.length} Article(s).`,
+        );
     }
 
     // Titles may be re-proposed for Stories that gained Articles (ADR-0005);
@@ -607,10 +638,9 @@ export async function groupStories(
 
   // Within-build slug collisions are re-resolved by the settled rule (Q9):
   // across builds the existing file wins, within a build the smallest Story
-  // id keeps the bare slug — deterministic from ids, never by proposal order
-  // (the split path orders by feed order, so it needs this too). Story
-  // titles are already final here. Both Stories stay in changedStories, so
-  // both files are written under their final names.
+  // id keeps the bare slug — deterministic from ids, never by proposal order.
+  // Story titles are already final here. Both Stories stay in changedStories,
+  // so both files are written under their final names.
   reconcileSlugs(created, taken);
 
   // The Story Section is the majority of its Articles' Sections — recomputed

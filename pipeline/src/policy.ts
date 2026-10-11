@@ -15,12 +15,13 @@ import { summariesModelFromEnv } from './summarize.ts';
  *
  * - GEMINI_API_KEY missing → the build fails up front, before anything is
  *   collected or written: the old degrade-to-singletons path corrupted the
- *   archive permanently (membership is sticky, singletons never re-merge).
+ *   archive permanently; since ADR-0015 a Story is never born from fewer
+ *   than two Articles.
  *   Summaries share the key, so they are moot in this case.
  * - OPENROUTER_API_KEY missing → the Decision model degrades (Articles stay
  *   unclassified and are retried next build — a safe, retried degrade),
- *   while the Membership check fails when checks are pending: splitting a
- *   pending check would create the same one-Article Stories. That is why
+ *   while the Membership check fails when checks are pending: writing
+ *   pending checks would create the wrong permanent merges. That is why
  *   the fail is conditional, enforced by {@link missingMembershipChecker}
  *   at the gate rather than thrown here.
  * - Mid-build, when not a single call of a consumer answered, the build
