@@ -12,7 +12,8 @@ const labels: Record<Paywall, string | null> = {
  * the Article card's image, invisible until the card is hovered or focused —
  * and only for full paywalls: on a card the user is about to click through,
  * "partiellement payant" is noise; only "Abonnement" justifies the chip.
- * On touch devices there is no hover, so it simply never shows.
+ * On touch devices there is no hover, so on mobile screens the chip stays
+ * always visible; from the md breakpoint up it reverts to hover/focus-only.
  */
 export default function PaywallBadge({
   paywall,
@@ -27,7 +28,7 @@ export default function PaywallBadge({
     if (paywall !== 'full') return null;
     return (
       <span
-        className="pointer-events-none absolute inset-x-0 bottom-0 rounded-b-md bg-canvas/85 px-1.5 py-1 text-center text-[10px] leading-tight text-ink opacity-0 backdrop-blur-sm transition-opacity duration-150 ease-out group-hover/article:opacity-100 group-focus-within/article:opacity-100"
+        className="pointer-events-none absolute inset-x-0 bottom-0 rounded-b-md bg-canvas/85 px-1.5 py-1 text-center text-[10px] leading-tight text-ink opacity-100 backdrop-blur-sm transition-opacity duration-150 ease-out md:opacity-0 md:group-hover/article:opacity-100 md:group-focus-within/article:opacity-100"
         role="note"
       >
         {label}
