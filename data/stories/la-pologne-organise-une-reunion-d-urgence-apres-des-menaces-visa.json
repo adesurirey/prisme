@@ -5,6 +5,18 @@
   "createdAt": "2026-10-11T13:13:27.229Z",
   "articles": [
     {
+      "id": "0f7cf4cf34da",
+      "outletId": "ouest-france",
+      "headline": "Un suspect arrêté en Pologne, en lien avec une tentative d’assassinat contre le Premier ministre Donald Tusk",
+      "url": "https://www.ouest-france.fr/europe/pologne/un-suspect-arrete-en-pologne-en-lien-avec-une-tentative-dassassinat-contre-le-premier-ministre-donald-tusk-20da6620-c589-11f1-92e9-819eb738846b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-11T15:59:45.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZTY1NjY5YWE1NTM3MDk1OTI1YTY0Y2YzZDZjMzkyYjg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=b8b6ca4e5bb4ea19328b936896a1b92bd7ecbb7bf0aade73b2ce80e188a2cf16",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "cb09ab109863",
       "outletId": "ouest-france",
       "headline": "Une réunion d’urgence en Pologne, après des « possibles tentatives d’assassinat » contre le Premier ministre Donald Tusk",
@@ -86,20 +98,19 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le ministère de l'Intérieur polonais a convoqué une réunion de crise suite à des informations policières faisant état d'un complot menaçant Donald Tusk.",
-      "Le chef du gouvernement ainsi que le ministre de la Défense sont directement ciblés par ces menaces d'attentat selon les autorités.",
-      "Aucun élément précis n'a pour l'instant été divulgué par la police concernant la nature exacte du danger."
+      "Le gouvernement polonais confirme l'arrestation d'un individu dans le cadre du complot visant le Premier ministre.",
+      "L'enquête se poursuit pour déterminer l'implication éventuelle de complices dans cette tentative d'attentat."
     ],
     "centre": [
-      "Une cellule de crise a été activée à Varsovie suite à des alertes signalant un possible complot meurtrier contre l'exécutif.",
-      "Le Premier ministre et le responsable de la Défense font l'objet de mesures de sécurité renforcées après ces menaces d'assassinat."
+      "Un suspect a été interpellé suite aux menaces d'assassinat ciblant Donald Tusk et son ministre de la Défense.",
+      "L'annonce de cette arrestation marque une avancée significative dans l'enquête menée par les autorités de Varsovie."
     ],
     "droite": [
-      "Le Centre antiterroriste de Varsovie accueille une réunion d'urgence de l'exécutif après des alertes visant la vie du chef du gouvernement.",
-      "Les services de sécurité, la police et le renseignement intérieur se coordonnent face au risque d'attentat visant les plus hauts dirigeants."
+      "Les services de police ont procédé à l'arrestation d'un suspect impliqué dans le projet d'attentat contre le chef du gouvernement.",
+      "Cette interpellation intervient alors que le dispositif de sécurité avait été renforcé autour des principaux dirigeants polonais."
     ]
   },
-  "differences": "Les différents camps partagent les faits essentiels concernant la réunion d'urgence à Varsovie et la menace pesant sur Donald Tusk, mais la droite, par l'intermédiaire de CNews, apporte davantage de détails opérationnels sur la réunion au centre antiterroriste et l'implication des différents services de sécurité. La gauche et le centre se montrent plus concis, insistant principalement sur le flou maintenu par les autorités quant à la nature précise de la menace.",
+  "differences": "Tous les camps s'accordent désormais sur l'arrestation d'un suspect en lien avec la tentative d'assassinat visant Donald Tusk et son ministre. La gauche insiste sur la poursuite des investigations pour identifier d'éventuels complices, tandis que le centre et la droite mettent en avant l'avancée concrète de l'enquête menée à Varsovie et le renforcement préalable de la sécurité.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 8
 }
