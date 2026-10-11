@@ -46,7 +46,8 @@ const imageOutlet = image && byId.get(image.outletId);
 const articleCount = countedArticles(story.articles);
 const mediaCount = reportingOutletIds(story.articles).size;
 
-// "Mis à jour …": bare clock for today ("Mis à jour 20\u202Fh\u202F23",
+// "Mis à jour …": bare clock for today ("Mis à jour à 20\u202Fh\u202F23",
+// Article rows drop "à": just the clock),
 // same as Article rows), "hier à …" for yesterday, absolute date otherwise
 // ("le 11 oct. 2026 à …"). Date and clock joined by "à" (French convention),
 // narrow no-break spaces around "h" — same pattern as index.astro. Paris days
@@ -70,7 +71,7 @@ const now = new Date();
 const builtAt = undated
   ? `le ${day}`
   : day === dayKey(now)
-    ? timeOnly(updated)
+    ? `à ${timeOnly(updated)}`
     : day === dayKey(new Date(now.getTime() - 24 * 60 * 60 * 1000))
       ? `hier à ${timeOnly(updated)}`
       : `le ${day} à ${timeOnly(updated)}`;
