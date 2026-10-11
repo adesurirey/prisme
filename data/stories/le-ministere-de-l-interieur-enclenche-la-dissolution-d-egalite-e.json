@@ -5,6 +5,17 @@
   "createdAt": "2026-10-11T14:01:19.073Z",
   "articles": [
     {
+      "id": "10bfb378cec9",
+      "outletId": "huffpost",
+      "headline": "Remis dans la lumière par l’affaire Bardella, Alain Soral va voir son association dissoute",
+      "url": "https://www.huffingtonpost.fr/politique/article/remis-dans-la-lumiere-par-l-affaire-bardella-alain-soral-va-voir-son-association-dissoute_338417.html",
+      "publishedAt": "2026-10-11T19:55:21.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/11/0/0/5000/2812/0/0/60/0/f2f73c1_upload-1-moir1ldxi82f-afp-20230927-33wt9ft-v1-highres-switzerlandfrancetrialappeallgbtqmedia.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "06f5466bab0a",
       "outletId": "franceinfo",
       "headline": "Trois questions sur la procédure de dissolution visant Egalité et Réconciliation, l'association de l'essayiste d'extrême droite Alain Soral",
@@ -22,7 +33,7 @@
       "url": "https://www.lemonde.fr/politique/article/2026/10/11/egalite-et-reconciliation-l-association-d-extreme-droite-fondee-par-alain-soral-visee-par-une-procedure-de-dissolution_6792072_823448.html",
       "publishedAt": "2026-10-11T16:12:14.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/11/416/0/5000/2500/644/322/60/0/af9707f_upload-1-ghtarfy5apq3-000-33wt9ft.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -109,9 +120,8 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le ministère de l'Intérieur a formalisé sa démarche pour dissoudre le groupement mené par le polémiste nationaliste.",
-      "Les services de l'État motivent cette mesure par l'instigation de violences ciblées contre plusieurs minorités et communautés.",
-      "L'administration met en lumière une stratégie de détournement des objectifs associatifs pour propager des dogmes d'inspiration nazie."
+      "Le ministre de l'Intérieur a enclenché la procédure administrative visant à dissoudre l'association dirigée par le polémiste nationaliste.",
+      "Cette mesure étatique fait suite à la mise en lumière médiatique récente du fondateur du groupement et cible directement la diffusion de thèses antisémites."
     ],
     "centre": [
       "Le ministère de l'Intérieur a officialisé le lancement d'une démarche visant à supprimer la structure associative.",
@@ -124,7 +134,7 @@
       "La décision gouvernementale est justifiée par la promotion d'une idéologie s'inspirant du national-socialisme."
     ]
   },
-  "differences": "La gauche s'enrichit de détails juridiques précis sur les accusations d'incitation à la haine et le détournement des statuts associatifs révélés récemment, accentuant la dimension idéologique et les cibles de la structure, tandis que le centre et la droite conservent leurs angles initiaux axés respectivement sur le rappel de la procédure institutionnelle et sur l'annonce de la mesure rapportée par la direction de l'association.",
+  "differences": "La gauche intègre la récente actualité médiatique autour de l'affaire Bardella pour contextualiser la décision ministérielle et insiste sur la nature antisémite de l'association dissoute, tandis que le centre et la droite maintiennent leurs angles factuels initiaux axés respectivement sur le respect des procédures réglementaires et sur l'annonce de la mesure rapportée par la direction elle-même.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 9
+  "summarizedArticleCount": 10
 }
