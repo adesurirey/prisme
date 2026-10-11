@@ -1,7 +1,7 @@
 /**
  * Every build-time date shown in the UI is a Paris clock date/time, never
  * the build host's timezone (CI builds in UTC, which shifted the edition
- * title and "Publié le" by two hours). All formatters go through here so
+ * title and "Mis à jour le" by two hours). All formatters go through here so
  * `timeZone: 'Europe/Paris'` is pinned in one place — same rule as
  * article-date.ts.
  */
