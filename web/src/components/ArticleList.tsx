@@ -143,15 +143,15 @@ function Row({
         href={article.url}
         rel="noopener noreferrer"
         target="_blank"
-        className="group/article flex items-center gap-4 rounded-xl border border-transparent px-5 py-5 transition-colors duration-200 ease-out hover:border-line hover:bg-hover"
+        className="group/article flex items-center gap-3 rounded-xl border border-transparent px-5 py-5 transition-colors duration-200 ease-out hover:border-line hover:bg-hover"
       >
         <ArticleRow article={article} headline={headline} outlet={outlet} />
         <div className="relative shrink-0 self-center">
           <StoryImage
             article={article}
             outlet={outlet}
-            className="h-14 w-24 rounded-md"
-            sizes="96px"
+            className="h-18 w-32 rounded-md"
+            sizes="128px"
           />
           {outlet && <PaywallBadge paywall={outlet.paywall} variant="chip" />}
         </div>
