@@ -129,11 +129,11 @@ const description =
             class="absolute inset-0 bg-gradient-to-b from-canvas/20 via-canvas/75 to-canvas"
           />
         </div>
-        <div class="relative px-5 pt-[190px] pb-5 sm:pt-[240px]">
-          <h1 class="text-[28px] font-bold leading-snug tracking-[-0.02em]">
+        <div class="relative px-5 pt-36 pb-4 sm:pt-[240px] sm:pb-5">
+          <h1 class="text-[24px] font-bold leading-tight tracking-[-0.02em] sm:text-[28px] sm:leading-snug">
             {story.title}
           </h1>
-          <p class="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-muted">
+          <p class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-muted">
             <CoverageMeta
               counts={counts}
               shares={shares}
@@ -150,13 +150,10 @@ const description =
             </div>
           )}
           {une.length > 0 && (
-            <p class="mt-4 text-[13px] text-muted">
+            <p class="mt-3 text-[13px] text-muted">
               À la une chez {une.map((o) => o.name).join(', ')}
             </p>
           )}
-          <p class="mt-2 text-right text-[10px] text-faint">
-            Photo : {imageOutlet.name}
-          </p>
         </div>
       </figure>
     ) : (
