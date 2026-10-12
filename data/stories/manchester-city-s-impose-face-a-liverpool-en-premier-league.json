@@ -5,6 +5,18 @@
   "createdAt": "2026-10-11T19:01:23.026Z",
   "articles": [
     {
+      "id": "4a6f59e12d41",
+      "outletId": "ouest-france",
+      "headline": "« Si vous pouvez me dispenser de leurs matches… »: Gary Neville ne veut plus commenter Manchester City après le scandale",
+      "url": "https://www.ouest-france.fr/sport/football/angleterre/manchester-city/si-vous-pouvez-me-dispenser-de-leurs-matches-gary-neville-ne-veut-plus-commenter-manchester-city-apres-le-scandale-a892cc2a-c600-11f1-bba2-d026901fbfe4?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-12T06:31:08.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNDJlZjk5YTFhODFiMTFhZmUwMDg2NjMwNTQ4NTdkODg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2970a390e27ca28ea7af66a3d510fd52ad01e1c2418514310683c65a64290168",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
       "id": "5ba7cf8e2a45",
       "outletId": "cnews",
       "headline": "Football : pourquoi les supporters de Manchester City ont-ils brandi des bananes gonflables contre Liverpool ?",
@@ -80,7 +92,7 @@
       "url": "https://www.20minutes.fr/sport/football/premier_league/4252875-20261011-direct-liverpool-manchester-city-cherki-cityzens-vraiment-perturbes-avenir-ultra-incertain-suivez-match-17-heures?at_medium=display&at_campaign=149",
       "publishedAt": "2026-10-11T13:02:36.000Z",
       "imageUrl": "https://img.20mn.fr/5rqFVc-sSouv5sxN8G62yCk/1200x768_rayan-cherki-de-manchester-city-celebre-apres-avoir-marque-le-troisieme-but-de-son-equipe-lors-du-match-de-football-de-premier-league-anglaise-entre-liverpool-et-manchester-city-a-liverpool-en-angleterre-le-dimanche-11-octobre-2026-photo-ap-jon-super-xsg167-26284620244351-2610111915",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "live",
       "section": "sport",
       "everFrontPage": true
@@ -112,25 +124,22 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Manchester City s'est imposé nettement à l'extérieur face à Liverpool sur le score de trois buts à zéro.",
-      "Ce succès permet aux Mancuniens de conforter leur première place au classement du championnat.",
-      "La rencontre s'est jouée dans un climat tendu, marqué par les critiques visant le club suite à ses récents démêlés judiciaires.",
-      "Les performances de plusieurs joueurs clés, dont Rayan Cherki auteur d'un but remarquable, ont contribué à cette large victoire avant un match de Ligue des champions."
+      "Manchester City s'est imposé trois buts à zéro sur la pelouse de Liverpool.",
+      "Ce succès permet aux Mancuniens de conforter leur place de leader en championnat.",
+      "Le match s'est déroulé dans une atmosphère pesante en raison des récents démêlés judiciaires du club."
     ],
     "centre": [
-      "Les Citizens se sont nettement imposés sur la pelouse de Liverpool au terme d'un match sous haute tension.",
-      "Le public d'Anfield a accueilli les visiteurs avec une forte hostilité sur fond d'affaires financières récentes.",
-      "Malgré un contexte difficile et des provocations en tribunes, l'équipe a su dominer son adversaire pour conserver la tête du classement.",
-      "Cette prestation réussie sert de répétition générale idéale avant d'affronter le Paris Saint-Germain."
+      "Les Citizens ont surclassé Liverpool à l'extérieur au terme d'une rencontre nette et sans bavure.",
+      "L'accueil hostile des supporters d'Anfield a mis en lumière le contexte extrasportif lourd qui entoure l'équipe.",
+      "Le consultant Gary Neville a publiquement exprimé son souhait de ne plus commenter les rencontres de Manchester City suite aux condamnations financières du club."
     ],
     "droite": [
-      "Manchester City a largement dominé Liverpool en s'imposant trois buts à zéro lors de la sixième journée.",
-      "L'analyse du match met en lumière les prestations remarquables de certains joueurs à l'instar de Jérémy Doku et Rayan Cherki.",
-      "Le déroulement de la rencontre a également été animé par l'expulsion de Ryan Gravenberch côté adverse.",
-      "Les supporters mancuniens ont répondu aux provocations locales et aux critiques financières en brandissant des bananes gonflables, réactivant un folklore des années 1980."
+      "Manchester City a largement dominé son adversaire de Liverpool lors de cette journée de Premier League.",
+      "Plusieurs joueurs ont brillé par leurs performances individuelles au cours de la partie.",
+      "Les supporters ont répondu aux provocations extérieures par des animations singulières en tribunes."
     ]
   },
-  "differences": "Les trois camps s'accordent sur le résultat sportif et la performance collective de Manchester City face à Liverpool. La droite, incarnée notamment par CNews et Le Figaro, enrichit sa couverture en détaillant les faits de jeu, les individualités remarquées, l'expulsion de Gravenberch et l'utilisation insolite de bananes gonflables par les supporters pour répondre aux moqueries sur les sanctions financières. En revanche, la gauche et le centre, à travers Le Parisien ou 20 Minutes, insistent davantage sur la dimension hostile de l'accueil en tribunes et sur le contexte extrasportif pesant autour du club mancunien.",
+  "differences": "La gauche et le centre continuent de focaliser leur attention sur la victoire sportive tout en soulignant le climat extrasportif pesant et l'hostilité du public, le centre intégrant désormais les réticences de certains observateurs face à la situation judiciaire du club. De son côté, la droite maintient un traitement centré principalement sur les aspects athlétiques et l'animation du match, en s'écartant des polémiques institutionnelles.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 9
+  "summarizedArticleCount": 10
 }

@@ -5,15 +5,49 @@
   "createdAt": "2026-10-12T02:01:22.827Z",
   "articles": [
     {
+      "id": "3efc2586b954",
+      "outletId": "franceinfo",
+      "headline": "La Corée du Nord a tiré plusieurs missiles balistiques dans la mer du Japon",
+      "url": "https://www.franceinfo.fr/monde/coree-du-nord/la-coree-du-nord-a-tire-plusieurs-missiles-balistiques-dans-la-mer-du-japon_8233210.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-12T06:18:52.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/vK02UFfPT6Wv-4Cp17BnuVBLYpk/0x0:6963x3916/432x243/filters:format(jpg)/2026/10/12/6acc6c13c1337039024115.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "e28314d43b81",
+      "outletId": "france-24",
+      "headline": "La Corée du Nord a tiré plusieurs missiles balistiques vers la mer du Japon, selon Séoul",
+      "url": "https://www.france24.com/fr/asie-pacifique/20261012-la-cor%C3%A9e-du-nord-a-tir%C3%A9-plusieurs-missiles-balistiques-vers-la-mer-du-japon-selon-s%C3%A9oul",
+      "publishedAt": "2026-10-12T03:57:46.000Z",
+      "imageUrl": "https://s.france24.com/media/display/14e316ce-c5f1-11f1-92da-e362370cce2e/w:1024/p:16x9/71678890dc252f2b1c089eca7b2d562fadbe1ce4.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "25ae7870b62c",
+      "outletId": "la-croix",
+      "headline": "Corée du Nord : plusieurs tirs de missiles balistiques vers la mer du Japon",
+      "url": "https://www.la-croix.com/la-coree-du-nord-tire-plusieurs-missiles-balistiques-vers-mer-du-japon-20261012",
+      "publishedAt": "2026-10-12T03:56:36.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/12/2559241-une-television-diffuse-des-images-d-archive-d-un-l.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "b957312353fd",
       "outletId": "le-monde",
       "headline": "La Corée du Nord a tiré « plusieurs missiles balistiques » vers la mer du Japon, affirme Séoul",
       "url": "https://www.lemonde.fr/international/article/2026/10/12/la-coree-du-nord-a-tire-plusieurs-missiles-balistiques-vers-la-mer-du-japon-affirme-seoul_6792308_3210.html",
       "publishedAt": "2026-10-12T02:59:11.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/12/0/0/4242/2121/644/322/60/0/dd3d2cc_ftp-1-0ycmsi0lc5x8-5330545-01-06.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "world"
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "ad97a1e4bd17",
@@ -51,5 +85,25 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "L'armée sud-coréenne signale le lancement de plusieurs missiles balistiques par Pyongyang vers la mer du Japon.",
+      "Les forces armées du Sud intensifient leur surveillance pour parer à d'éventuelles actions similaires.",
+      "Ces lancements interviennent peu de temps après l'expérimentation d'un armement hypersonique par Séoul."
+    ],
+    "centre": [
+      "Pyongyang a procédé au lancement de plusieurs missiles balistiques en direction de la mer du Japon selon les autorités de Séoul.",
+      "Ces tirs font suite à un récent essai d'arme hypersonique mené par la Corée du Sud.",
+      "La situation ravive les tensions dans la région malgré les efforts diplomatiques récents pour les apaiser."
+    ],
+    "droite": [
+      "La Corée du Nord a expédié un engin non identifié dans les eaux de la mer du Japon.",
+      "Cet événement se produit quelques jours après qu'un système de missile hypersonique a été testé par le voisin sud-coréen."
+    ]
+  },
+  "differences": "Les différents bords politiques relatent globalement les mêmes faits émanant des autorités de Séoul, tout en optant pour des formulations nuancées. La gauche et le centre s'accordent pour qualifier précisément les tirs de « missiles balistiques » en insistant sur le contexte d'escalade après l'essai hypersonique sud-coréen. À droite, les articles privilégient la formule prudente de « projectile non-identifié » tout en soulignant la même chronologie d'événements.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 7
 }
