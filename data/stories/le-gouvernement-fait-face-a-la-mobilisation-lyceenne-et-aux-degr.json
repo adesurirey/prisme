@@ -5,6 +5,29 @@
   "createdAt": "2026-10-11T16:01:21.039Z",
   "articles": [
     {
+      "id": "d6a335e0e8aa",
+      "outletId": "ouest-france",
+      "headline": "Mobilisation lycéenne : les enseignants appelés à rejoindre les lycéens et les étudiants, une manifestation prévue mardi",
+      "url": "https://www.ouest-france.fr/education/obilisation-lyceenne-les-enseignants-appeles-a-rejoindre-les-lyceens-et-les-etudiants-une-manifestation-prevue-mardi-71b7439e-c613-11f1-92e9-819eb738846b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-12T13:37:06.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZWUxZWE5YTE5N2I5MDgxMGYxNWQyMzA3N2UzZTliNGI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1764dacd752f45dd223fbaea7fcd7e448163485cc48a91a536b513e8025a9e4c",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
+      "id": "0f3ff63dbb0e",
+      "outletId": "bfmtv",
+      "headline": "INFO RMC. Une proviseure projetée au sol et victime de jets d’œufs devant un lycée à Paris",
+      "url": "https://rmc.bfmtv.com/actualites/societe/education/info-rmc-une-proviseure-projetee-au-sol-et-victime-de-jets-d-ufs-devant-un-lycee-a-paris_AN-202610120546.html",
+      "publishedAt": "2026-10-12T13:06:02.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/4Os_Fegx7gFwiLru10AvdniuzNo=/0x106:2048x1258/800x0/images/Blocage-lycee-2357305.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "9eee2d1db8d3",
       "outletId": "bfmtv",
       "headline": "Carburants: Patrick Pouyanné, PDG de TotalEnergies, s'engage à baisser de \"20 centimes\" le prix du litre de gazole non routier",
@@ -516,6 +539,17 @@
       "section": "politics"
     },
     {
+      "id": "fca46968a5e7",
+      "outletId": "le-parisien",
+      "headline": "Paris : le parcours des manifestations lycéennes et étudiantes du mardi 13 octobre",
+      "url": "https://www.leparisien.fr/paris-75/paris-le-parcours-des-manifestations-lyceennes-et-etudiantes-du-mardi-13-octobre-12-10-2026-AGC4ZU53DJEBTLB5KGDVET3HAE.php",
+      "publishedAt": "2026-10-11T22:00:00.000Z",
+      "frontPage": false,
+      "dayPrecision": true,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "b987dcb67d8c",
       "outletId": "bfmtv",
       "headline": "Colère des lycéens: les emplois du temps en tête des problèmes soulevés sur la plateforme de concertation du gouvernement",
@@ -950,10 +984,10 @@
       "Le ministère de l'Éducation nationale fait état d'un léger recul des blocages mais souligne une persistance des perturbations dans certains établissements."
     ],
     "centre": [
-      "Le Premier ministre reçoit le dirigeant de TotalEnergies à Matignon pour évoquer la libération des stocks stratégiques et les répercussions sur les tarifs à la pompe.",
-      "Le groupe énergétique annonce un effort tarifaire significatif sur le gazole non routier afin d'atténuer la pression sur les coûts.",
-      "Les autorités signalent une intensification des violences en marge des manifestations, incluant des blessés parmi le personnel éducatif et les forces de l'ordre.",
-      "Le bilan des interpellations s'alourdit à Paris avec près de trois cents gardes à vue enregistrées depuis le début de la contestation."
+      "L'intersyndicale appelle les personnels de l'Éducation à rejoindre le mouvement et à se mettre en grève pour une manifestation prévue ce mardi.",
+      "Une cheffe d'établissement a été violemment prise à partie et projetée au sol lors d'un blocus devant un établissement parisien.",
+      "Le Premier ministre s'est entretenu à Matignon avec le dirigeant de TotalEnergies, qui s'est engagé sur une baisse tarifaire de vingt centimes pour le gazole non routier.",
+      "Les autorités signalent une intensification des violences en marge des manifestations, accompagnées par une hausse continue des gardes à vue dans la capitale."
     ],
     "droite": [
       "La droite met en avant l'escalade des violences et des agressions visant les forces de l'ordre et les équipes pédagogiques, illustrée par des blessures par tirs de mortier.",
@@ -962,7 +996,7 @@
       "La gestion sécuritaire des manifestations reste au premier plan avec l'interpellation de suspects suite à des agressions de représentants des forces de l'ordre."
     ]
   },
-  "differences": "La gauche se concentre sur les revendications sociales des lycéens et la contestation des choix budgétaires, tandis que la droite polarise sa couverture sur la sécurité, les violences urbaines et la crainte d'une convergence des luttes. Le centre, quant à lui, adopte une perspective institutionnelle élargie en combinant le suivi des tensions sécuritaires lycéennes avec les discussions économiques menées à Matignon sur l'énergie et les prix du carburant, comme l'illustre la réunion entre l'exécutif et la direction de TotalEnergies.",
+  "differences": "La gauche se concentre sur les revendications sociales des lycéens et la contestation des choix budgétaires, tandis que la droite polarise sa couverture sur la sécurité, les violences urbaines et la crainte d'une convergence des luttes. Le centre adopte une perspective institutionnelle élargie en combinant le suivi des tensions sécuritaires lycéennes, marquées par l'agression de personnels, et les discussions économiques menées à Matignon sur l'énergie, tout en intégrant les appels à l'élargissement de la grève par les syndicats enseignants.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 84
+  "summarizedArticleCount": 87
 }
