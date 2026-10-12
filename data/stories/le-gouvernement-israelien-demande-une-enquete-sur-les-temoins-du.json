@@ -5,6 +5,39 @@
   "createdAt": "2026-10-11T23:01:17.177Z",
   "articles": [
     {
+      "id": "ea02f17f9a71",
+      "outletId": "bfmtv",
+      "headline": "\"Un récit mensonger\": Benjamin Netanyahu demande une enquête sur les participants du film \"NAZA\"",
+      "url": "https://www.bfmtv.com/culture/cinema-series/un-recit-mensonger-benjamin-netanyahu-demande-une-enquete-sur-les-participants-du-film-naza_AD-202610120273.html",
+      "publishedAt": "2026-10-12T07:38:40.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/NYz0Oy9tsXwK6WrMBpoB0F4J3BU=/0x0:2048x1152/800x0/images/NAZA-2356991.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "3fb6dae10e0b",
+      "outletId": "le-monde",
+      "headline": "« Naza » : un documentaire vertigineux sur la guerre automatisée et déshumanisée d’Israël à Gaza",
+      "url": "https://www.lemonde.fr/culture/article/2026/10/12/naza-un-documentaire-vertigineux-sur-la-guerre-automatisee-et-deshumanisee-d-israel-a-gaza_6792562_3246.html",
+      "publishedAt": "2026-10-12T07:10:34.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/08/53/0/3830/1915/644/322/60/0/fe92c4a_upload-1-g5ryywkf0qee-naza-still2-c-the-guardian.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "culture",
+      "everFrontPage": true
+    },
+    {
+      "id": "8b08afb75f95",
+      "outletId": "liberation",
+      "headline": "Le documentaire «Naza» fait parler les agents de l’ombre du massacre des Gazaouis",
+      "url": "https://www.liberation.fr/culture/cinema/le-documentaire-naza-fait-parler-les-agents-de-lombre-du-massacre-des-gazaouis-20261010_P2QOOQHVIRCGHL6PJXKRCTXECE/",
+      "publishedAt": "2026-10-12T05:14:06.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
       "id": "9075569abf73",
       "outletId": "humanite",
       "headline": "« Ils ont essayé d’ouvrir les yeux des Israéliens » : comment le documentaire « Naza » secoue la société israélienne",
@@ -77,18 +110,18 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le documentaire choc réalisé par Yuval Abraham et Rachel Szor sonde la mécanique des exactions commises à Gaza.",
-      "Le film donne la parole à des dizaines de militaires et agents des services de renseignement témoignant de manière anonyme.",
-      "Le gouvernement israélien exige l'ouverture d'une enquête et envisage des poursuites contre ces témoins.",
-      "Ces productions cinématographiques font l'objet d'une forte contestation politique et génèrent de graves menaces pour leurs auteurs."
+      "Le documentaire met en lumière les mécanismes de la guerre automatisée à Gaza à travers le témoignage de vingt-quatre militaires.",
+      "Les intervenants décrivent l'utilisation de technologies militaires ayant conduit à la mort de nombreux civils palestiniens.",
+      "Le film fait l'objet d'une sortie en salles limitée pour deux jours en octobre.",
+      "Le gouvernement israélien exige des poursuites judiciaires à l'encontre des participants anonymes."
     ],
     "centre": [
-      "Le film polémique consacré aux actions de l'armée israélienne bénéficie d'une diffusion en France via un visa exceptionnel.",
-      "Les réalisateurs et les intervenants font face à une vague importante de menaces physiques et de pressions.",
-      "Le chef du gouvernement israélien demande des investigations officielles visant à identifier et poursuivre en justice les participants."
+      "Le premier ministre israélien réclame l'ouverture d'une enquête officielle sur les intervenants du film qu'il qualifie de récit trompeur.",
+      "Le documentaire expose les propos de militaires dénonçant la normalisation des pertes civiles dans les opérations militaires.",
+      "La production fait face à de fortes tensions autour de sa diffusion publique prévue mi-octobre."
     ]
   },
-  "differences": "La gauche met principalement l'accent sur le contenu du documentaire et sur la dénonciation des violences subies par les civils à Gaza, en qualifiant le film d'œuvre courageuse qui braque le projecteur sur la responsabilité des exécutants. Le centre insiste davantage sur la polémique entourant la sortie du film en France, sur les menaces de mort reçues par l'équipe et sur la réaction judiciaire immédiate exigée par le pouvoir israélien.",
+  "differences": "La gauche met l'accent sur la portée révélatrice du documentaire quant aux responsabilités dans les massacres de civils à Gaza, qualifiant l'œuvre de film de vérité nécessaire. Le centre insiste davantage sur la polémique politique et la réaction officielle de Benjamin Netanyahu qui réclame des investigations contre les militaires s'étant exprimés de manière anonyme.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 9
 }

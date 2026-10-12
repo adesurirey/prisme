@@ -5,6 +5,17 @@
   "createdAt": "2026-10-12T02:01:22.827Z",
   "articles": [
     {
+      "id": "4f935572f251",
+      "outletId": "cnews",
+      "headline": "Corée du Nord : Séoul renforce sa vigilance après des tirs de plusieurs missiles balistiques de Pyongyang",
+      "url": "https://www.cnews.fr/monde/2026-10-12/coree-du-nord-seoul-renforce-sa-vigilance-apres-des-tirs-de-plusieurs-missiles",
+      "publishedAt": "2026-10-12T07:15:21.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_d2xk9dy_6acc7c0f29434.jpg?h=d93ad0b4&itok=iKffc9DX",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "3efc2586b954",
       "outletId": "franceinfo",
       "headline": "La Corée du Nord a tiré plusieurs missiles balistiques dans la mer du Japon",
@@ -44,7 +55,7 @@
       "url": "https://www.lemonde.fr/international/article/2026/10/12/la-coree-du-nord-a-tire-plusieurs-missiles-balistiques-vers-la-mer-du-japon-affirme-seoul_6792308_3210.html",
       "publishedAt": "2026-10-12T02:59:11.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/12/0/0/4242/2121/644/322/60/0/dd3d2cc_ftp-1-0ycmsi0lc5x8-5330545-01-06.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -89,21 +100,22 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "L'armée sud-coréenne signale le lancement de plusieurs missiles balistiques par Pyongyang vers la mer du Japon.",
-      "Les forces armées du Sud intensifient leur surveillance pour parer à d'éventuelles actions similaires.",
-      "Ces lancements interviennent peu de temps après l'expérimentation d'un armement hypersonique par Séoul."
+      "L'état-major sud-coréen confirme le tir de plusieurs engins balistiques par le régime nord-coréen en direction maritime orientale.",
+      "Les forces de défense locales rehaussent leur niveau d'alerte afin de parer à toute récidive imminente.",
+      "Cette opération militaire survient dans la foulée d'une démonstration d'armement hypersonique réalisée par Séoul."
     ],
     "centre": [
-      "Pyongyang a procédé au lancement de plusieurs missiles balistiques en direction de la mer du Japon selon les autorités de Séoul.",
-      "Ces tirs font suite à un récent essai d'arme hypersonique mené par la Corée du Sud.",
-      "La situation ravive les tensions dans la région malgré les efforts diplomatiques récents pour les apaiser."
+      "Pyongyang a expédié des vecteurs balistiques vers la mer du Japon selon les relevés communiqués par le voisin du Sud.",
+      "Ces actions militaires coïncident temporellement avec les récents tests technologiques menés par les autorités sud-coréennes.",
+      "Les observateurs constatent un regain de crispation géopolitique malgré les tentatives de décrispation diplomatique."
     ],
     "droite": [
-      "La Corée du Nord a expédié un engin non identifié dans les eaux de la mer du Japon.",
-      "Cet événement se produit quelques jours après qu'un système de missile hypersonique a été testé par le voisin sud-coréen."
+      "Les observateurs militaires font état de tirs groupés de vecteurs balistiques nord-coréens vers les eaux nippones après une première hésitation sur la nature des engins.",
+      "Le commandement de Séoul accentue sa vigilance opérationnelle pour parer à d'éventuels nouveaux lancements.",
+      "Le contexte régional demeure marqué par une vive instabilité suite aux récents essais d'armements hypersoniques sud-coréens."
     ]
   },
-  "differences": "Les différents bords politiques relatent globalement les mêmes faits émanant des autorités de Séoul, tout en optant pour des formulations nuancées. La gauche et le centre s'accordent pour qualifier précisément les tirs de « missiles balistiques » en insistant sur le contexte d'escalade après l'essai hypersonique sud-coréen. À droite, les articles privilégient la formule prudente de « projectile non-identifié » tout en soulignant la même chronologie d'événements.",
+  "differences": "L'analyse des différents quotidiens montre une convergence globale sur l'origine et la chronologie des tirs nord-coréens, tout en révélant une homogénéisation des points de vue. Alors que les articles de droite opéraient initialement une distinction prudente en évoquant un simple projectile non identifié, ils s'alignent désormais sur le centre et la gauche en qualifiant explicitement les objets de missiles balistiques. L'ensemble de la presse relie désormais ces événements au contexte d'émulation militaire provoqué par les récents essais hypersoniques sud-coréens, en insistant unanimement sur la nécessité pour Séoul de renforcer sa vigilance.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 8
 }
