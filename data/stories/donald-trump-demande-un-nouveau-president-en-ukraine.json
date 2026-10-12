@@ -5,6 +5,28 @@
   "createdAt": "2026-10-11T09:07:20.230Z",
   "articles": [
     {
+      "id": "4718dac5fc19",
+      "outletId": "france-24",
+      "headline": "Élections de mi-mandat : le gazole russe, faux joker politique pour Donald Trump",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261012-%C3%A9lections-midterms-poutine-gazole-russie-faux-joker-politique-pour-donald-trump-%C3%A9tats-unis",
+      "publishedAt": "2026-10-12T15:32:54.000Z",
+      "imageUrl": "https://s.france24.com/media/display/146a531a-c646-11f1-822e-77317c09f325/w:1024/p:16x9/TrumpPutinDiesel.png",
+      "frontPage": false,
+      "kind": "opinion",
+      "section": "world"
+    },
+    {
+      "id": "dab45c0c360a",
+      "outletId": "tf1-info",
+      "headline": "\"Il a besoin d'un grand méchant dans l'histoire\" : pourquoi Trump lâche-t-il l'Ukraine en faveur de Poutine ? L'analyse de Romuald Sciora sur LCI",
+      "url": "https://www.tf1info.fr/international/video-il-a-besoin-d-un-grand-mechant-dans-l-histoire-pourquoi-trump-lache-l-ukraine-en-faveur-de-poutine-la-reponse-de-romuald-sciora-sur-lci-2469505.html",
+      "publishedAt": "2026-10-12T14:10:32.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/il-a-besoin-d-un-grand-mechant-dans-l-histoire-pourquoi-trump-lache-l-ukraine-en-faveur-de-poutine-la-reponse-de-romuald-sciora-sur-lci-9fa425-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "df1ec49ba7c7",
       "outletId": "le-figaro",
       "headline": "EN DIRECT - Guerre en Ukraine : Zelensky accuse la Russie d’avoir frappé six installations énergétiques ce lundi",
@@ -1325,14 +1347,15 @@
     ],
     "centre": [
       "Le chef de l'État ukrainien met en doute l'efficacité économique réelle d'un pacte portant sur des volumes d'exportation jugés minimes.",
-      "Le président ukrainien rappelle que la cessation des hostilités sectorielles exige une stricte réciprocité sur le terrain."
+      "L'annonce surprise d'un cessez-le-feu sectoriel viserait d'abord à influencer les prix des carburants en vue des élections de mi-mandat américaines.",
+      "Le rapprochement entre Washington et Moscou met en lumière le risque d'un affaiblissement durable de la position ukrainienne."
     ],
     "droite": [
       "Le dirigeant ukrainien dénombre plusieurs frappes massives contre des infrastructures stratégiques au lendemain de la proclamation américaine.",
       "La promesse d'une trêve formulée par Washington se heurte immédiatement à la réalité des bombardements menés ce lundi."
     ]
   },
-  "differences": "La gauche et le centre gauche insistent sur la réponse militaire immédiate de Moscou et sur les conditions posées par Kiev pour cesser les frappes ciblées. Le centre se focalise sur les critiques techniques et économiques formulées par Volodymyr Zelensky concernant la portée réelle de l'accord. La droite, à l'instar du Figaro, met en avant l'échec immédiat de la proclamation américaine face aux frappes enregistrées sur les installations ukrainiennes.",
+  "differences": "La gauche insiste sur la réponse militaire immédiate de Moscou et sur les conditions posées par Kiev pour cesser les frappes ciblées. Le centre s'attarde à la fois sur les réserves économiques formulées par Kiev et sur les motivations électorales internes à l'administration américaine, tout en soulignant le risque géopolitique d'un lâchage de l'Ukraine. La droite, à l'instar du Figaro, met en avant l'échec immédiat de la proclamation américaine face aux frappes enregistrées sur les installations ukrainiennes.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 117
+  "summarizedArticleCount": 119
 }
