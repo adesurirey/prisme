@@ -69,6 +69,77 @@ describe('markTrending', () => {
     expect(trendingIds).toEqual(['a']);
   });
 
+  it('scales the delta with baseline Coverage, with a floor of two', () => {
+    const blob: SeenBlob = {
+      version: 1,
+      stories: {
+        // Baseline 2: floor governs — +2 wins, +1 does not.
+        small: { coverage: 2, seenAt: NOW - 24 * HOUR },
+        // Baseline 25: 25 × 0.25 → 7 — +6 misses, +7 clears.
+        large: { coverage: 25, seenAt: NOW - 24 * HOUR },
+      },
+    };
+    const { trendingIds } = markTrending(
+      [
+        { id: 'small', coverage: 4 },
+        { id: 'large', coverage: 32 },
+      ],
+      NOW,
+      blob,
+    );
+    expect(trendingIds).toEqual(['small', 'large']);
+  });
+
+  it('does not mark sub-threshold gains on large-baseline stories', () => {
+    const blob: SeenBlob = {
+      version: 1,
+      stories: {
+        // 25 → 26 was the old flat-delta badge; now far below the +7 bar.
+        large: { coverage: 25, seenAt: NOW - 24 * HOUR },
+        // ceil(13 × 0.25) = 4: 13 → 16 misses the bar.
+        boundary: { coverage: 13, seenAt: NOW - 24 * HOUR },
+      },
+    };
+    const { trendingIds } = markTrending(
+      [
+        { id: 'large', coverage: 26 },
+        { id: 'boundary', coverage: 16 },
+      ],
+      NOW,
+      blob,
+    );
+    expect(trendingIds).toEqual([]);
+  });
+
+  it('marks a gain that exactly clears the scaled threshold', () => {
+    const blob: SeenBlob = {
+      version: 1,
+      stories: {
+        // ceil(13 × 0.25) = 4: 13 → 17 crosses.
+        boundary: { coverage: 13, seenAt: NOW - 24 * HOUR },
+      },
+    };
+    const { trendingIds } = markTrending(
+      [{ id: 'boundary', coverage: 17 }],
+      NOW,
+      blob,
+    );
+    expect(trendingIds).toEqual(['boundary']);
+  });
+
+  it('marks a newly entered story whatever its Coverage', () => {
+    const blob: SeenBlob = {
+      version: 1,
+      stories: { b: { coverage: 1, seenAt: NOW - 24 * HOUR } },
+    };
+    const { trendingIds } = markTrending(
+      [{ id: 'c', coverage: 30 }],
+      NOW,
+      blob,
+    );
+    expect(trendingIds).toEqual(['c']);
+  });
+
   it('does not mark a Coverage gain of one outlet', () => {
     const blob: SeenBlob = {
       version: 1,

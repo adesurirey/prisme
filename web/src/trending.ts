@@ -6,11 +6,14 @@
  * the prerendered HTML carries each card's story id and Coverage as data
  * attributes and the script below decides.
  *
- * Rules settled in the design session:
+ * Rules settled in the design session (delta scaled per TBS decision):
  * - Baseline: a snapshot of every Edition story's Coverage, written on every
  *   Edition-page visit, pruned to that visit's ids.
- * - Coverage delta ≥ 2 outlets (one more outlet is noise), or the story is in
- *   the Edition now and was absent from the reader's last visit.
+ * - Coverage gain ≥ threshold, where the threshold scales with the baseline
+ *   Coverage: max(DELTA_MIN, ceil(baseline × RATIO)). +2 outlets is a real
+ *   move for a story covered by two, noise for one already covered by 25.
+ * - Or the story is in the Edition now and was absent from the reader's last
+ *   visit (always badges, whatever its Coverage).
  * - A baseline older than BASELINE_TTL_MS (48h) never generates a badge — a
  *   long-absent reader sees "everything changed", not a wall of badges.
  * - A badge fires once per browser session: this visit's snapshot erases it
@@ -26,8 +29,11 @@ export const SESSION_KEY = 'prisme.trendingSession';
 
 const SEEN_VERSION = 1;
 
-/** Coverage gain, in distinct Outlets, past which a Story trends. */
-export const TRENDING_COVERAGE_DELTA = 2;
+/** Minimum Coverage gain, in distinct Outlets, past which a Story trends. */
+export const TRENDING_COVERAGE_DELTA_MIN = 2;
+
+/** Relative gain (fraction of baseline Coverage) past which a Story trends. */
+export const TRENDING_COVERAGE_RATIO = 0.25;
 
 /** A stored baseline older than this never generates a badge. */
 export const BASELINE_TTL_MS = 48 * 3_600_000;
@@ -82,7 +88,11 @@ export function markTrending(
       if (entry == null) return true; // newly entered the Edition
       return (
         fresh(entry, now) &&
-        coverage - entry.coverage >= TRENDING_COVERAGE_DELTA
+        coverage - entry.coverage >=
+          Math.max(
+            TRENDING_COVERAGE_DELTA_MIN,
+            Math.ceil(entry.coverage * TRENDING_COVERAGE_RATIO),
+          )
       );
     })
     .map(({ id }) => id);
