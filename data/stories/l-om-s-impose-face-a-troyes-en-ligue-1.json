@@ -5,6 +5,18 @@
   "createdAt": "2026-10-11T21:01:21.196Z",
   "articles": [
     {
+      "id": "31ebe6dbca1d",
+      "outletId": "le-monde",
+      "headline": "L’OM sort de la zone de relégation de Ligue 1, Rennes monte sur le podium",
+      "url": "https://www.lemonde.fr/sport/article/2026/10/12/l-om-sort-de-la-zone-de-relegation-de-ligue-1-rennes-monte-sur-le-podium_6792275_3242.html",
+      "publishedAt": "2026-10-12T01:26:11.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/11/390/0/5448/2724/644/322/60/0/b9b4e1a_ftp-1-e1nxkqzr8sur-5328287-01-06.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
       "id": "4d4d813a0d79",
       "outletId": "le-figaro",
       "headline": "Troyes-Marseille : Harit et Abdelli sauvent les meubles, l’OM peut compter sur ses «minots», Paixão sidérant… Les tops et flops",
@@ -90,20 +102,19 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "L'Olympique de Marseille a mis fin à une série de cinq défaites consécutives en s'imposant à Troyes sur le score de deux à zéro.",
-      "Le club phocéen quitte la zone rouge et se classe provisoirement treizième de Ligue 1 malgré une prestation jugée peu convaincante dans le jeu."
+      "Le club marseillais met un terme à sa série de revers successifs en dominant Troyes sur sa pelouse par deux buts à zéro.",
+      "Ce succès en déplacement permet à l'équipe de s'extraire provisoirement de la zone rouge au classement du championnat."
     ],
     "centre": [
-      "L'entraîneur Bruno Génésio a souligné la nécessité de renouer avec le succès après une période difficile tout en relativisant la performance globale.",
-      "La rencontre a été marquée par la titularisation de jeunes joueurs issus du centre de formation qui ont su saisir leur chance.",
-      "Un incident a opposé l'entraîneur à son attaquant lors d'un remplacement, un geste de frustration rapidement désamorcé par le technicien en conférence de presse."
+      "Les Marseillais renouent enfin avec la victoire lors de cette sixième journée après une entame d'exercice délicate.",
+      "Le parcours des autres formations est également marqué par la progression du Stade Rennais vers le podium de Ligue 1."
     ],
     "droite": [
-      "La formation marseillaise s'est rassurée à l'extérieur face au promu troyen en clôture de la sixième journée du championnat.",
-      "Les analyses des journalistes mettent en avant l'apport décisif des jeunes talents du club ainsi que les prestations individuelles remarquées de certains joueurs."
+      "La formation phocéenne se relance hors de ses bases face au promu troyen en s'imposant sans encaisser de but.",
+      "Cette performance permet au club de respirer au classement général après une période de résultats négatifs."
     ]
   },
-  "differences": "Les différents bords politiques partagent un constat factuel identique sur le résultat sportif et la fin de la mauvaise passe marseillaise, mais divergent dans le traitement de l'événement. Le centre insiste particulièrement sur la gestion humaine du vestiaire, notamment les déclarations de l'entraîneur et les tensions lors des remplacements. La droite privilégie une approche tactique et technique en décortiquant les tops et flops de la rencontre et la performance des jeunes recrues, tandis que la gauche met l'accent sur la difficulté globale de la victoire et la situation précaire du club au classement.",
+  "differences": "Le camp de gauche met en avant la sortie de la zone de relégation et la fin d'une série noire, tandis que le centre et la droite élargissent leur perspective aux dynamiques d'autres équipes du championnat comme le Stade Rennais, tout en saluant la relance comptable des Marseillais.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 8
 }
