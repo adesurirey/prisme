@@ -5,6 +5,16 @@
   "createdAt": "2026-10-12T08:01:23.945Z",
   "articles": [
     {
+      "id": "3df1f6ecd340",
+      "outletId": "liberation",
+      "headline": "«Un bout de l’histoire qui s’envole» : après l’incendie du marché parisien des Enfants-Rouges, les commerçants et riverains face aux décombres",
+      "url": "https://www.liberation.fr/societe/un-bout-de-lhistoire-qui-senvole-apres-lincendie-du-marche-parisien-des-enfants-rouges-les-commercants-et-riverains-face-aux-decombres-20261012_QDW76P3U7RDZBPPXCIU4QI42JM/",
+      "publishedAt": "2026-10-12T16:22:20.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "023243053377",
       "outletId": "courrier-international",
       "headline": "Paris : le marché des Enfants-Rouges était un “symbole de la passion française pour la nourriture”",
@@ -35,6 +45,17 @@
       "frontPage": false,
       "kind": "news",
       "section": "misc"
+    },
+    {
+      "id": "aad3b98cdf77",
+      "outletId": "le-point",
+      "headline": "Ravagé par un incendie, le marché des Enfants-Rouges avait déjà échappé à la démolition",
+      "url": "https://www.lepoint.fr/histoire/incendie-du-marche-des-enfants-rouges-a-paris-quatre-siecles-dhistoire-A2EE6BPDMVF73ELEVKXKP6FXGA/",
+      "publishedAt": "2026-10-12T12:30:00.000Z",
+      "imageUrl": "https://www.lepoint.fr/resizer/v2/RFF5D6FKVNGAPNMPWBP3RNLPG4?auth=ba0f0bc868bb53e9f480768b2ddfbf8cbd7349352840f47cd2a4f214f612bf5f&smart=true&width=1200&height=900",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
     },
     {
       "id": "4c3f901537c7",
@@ -224,7 +245,7 @@
       "url": "https://www.lemonde.fr/societe/article/2026/10/12/le-marche-des-enfants-rouges-a-paris-ravage-par-les-flammes-annonce-le-maire-d-arrondissement_6792525_3224.html",
       "publishedAt": "2026-10-12T05:22:42.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/12/1376/0/8256/4128/644/322/60/0/4216281_ftp-1-uyb5kpe4c0jc-5331361-01-06.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -256,15 +277,13 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Dix-sept commerces ont été détruits dans les flammes du plus ancien marché couvert de la capitale au cours d'un sinistre nocturne.",
-      "L'intervention des sapeurs-pompiers s'est achevée par la maîtrise du feu après deux heures de lutte acharnée au petit matin.",
-      "Les autorités municipales confirment l'absence de victimes tout en soulignant l'ampleur des destructions matérielles sur ce site patrimonial."
+      "Un incendie nocturne a ravagé le marché couvert du troisième arrondissement parisien durant la nuit de dimanche à lundi.",
+      "Le sinistre n'a causé aucune victime mais a provoqué des dégâts matériels très importants sur ce monument historique.",
+      "Les commerçants et les riverains se retrouvent face aux décombres de ce lieu emblématique de la capitale."
     ],
     "centre": [
-      "Le marché historique du troisième arrondissement, fondé au début du dix-septième siècle, a été entièrement détruit par un violent incendie nocturne.",
-      "L'infrastructure est totalement sinistrée malgré une intervention rapide des secours qui ont circonscrit le feu.",
-      "La municipalité parisienne déplore la perte de ce lieu patrimonial tandis que la zone environnante fait l'objet de consignes d'évitement sans qu'aucun bilan humain ne soit établi.",
-      "La presse internationale souligne la portée de cette disparition en évoquant un symbole majeur de la culture gastronomique locale."
+      "Le marché historique du Marais a été réduit en cendres par un violent feu nocturne dans la nuit du onze au douze octobre.",
+      "La presse étrangère et locale déplore la disparition de ce haut lieu considéré comme un symbole de la culture gastronomique française."
     ],
     "droite": [
       "La destruction totale du marché couvert classé monument historique a nécessité l'intervention rapide des sapeurs-pompiers pour éviter toute propagation aux immeubles voisins.",
@@ -272,7 +291,7 @@
       "L'émotion domine parmi les riverains, les commerçants et les restaurateurs face à la disparition de ce lieu de vie très attaché au quartier."
     ]
   },
-  "differences": "Tous les bords politiques soulignent la destruction totale du marché des Enfants-Rouges et saluent l'action des secours pour éviter un bilan humain. La droite et le centre droit mettent l'accent sur les aspects techniques de l'intervention, la sécurisation des bâtiments mitoyens et la mobilisation des enquêteurs aux côtés des riverains et des commerçants touchés. De leur côté, la gauche et le centre privilégient un angle institutionnel et culturel, le centre intégrant en outre un regard international sur la perte de ce patrimoine gastronomique.",
+  "differences": "Tous les bords politiques soulignent la destruction totale du marché des Enfants-Rouges et saluent l'action des secours pour éviter un bilan humain. La droite met l'accent sur les aspects techniques de l'intervention, la sécurisation des bâtiments mitoyens et la mobilisation des enquêteurs aux côtés des riverains et des commerçants touchés. De leur côté, la gauche et le centre privilégient un angle patrimonial et humain, le centre mettant particulièrement en avant la résonance internationale et gastronomique de la perte de ce site à travers la presse étrangère, tandis que la gauche insiste davantage sur la détresse locale des riverains face aux décombres.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 22
+  "summarizedArticleCount": 24
 }

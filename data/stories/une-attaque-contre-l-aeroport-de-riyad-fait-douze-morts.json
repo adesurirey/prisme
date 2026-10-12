@@ -5,6 +5,39 @@
   "createdAt": "2026-10-11T09:07:20.230Z",
   "articles": [
     {
+      "id": "c5077303d667",
+      "outletId": "ouest-france",
+      "headline": "Des ressortissants américains arrêtés en Arabie saoudite pour avoir pris des photos liées aux attaques de l’aéroport",
+      "url": "https://www.ouest-france.fr/monde/etats-unis/des-ressortissants-americains-arretes-en-arabie-saoudite-pour-avoir-pris-des-photos-liees-aux-attaques-de-laeroport-57a09038-c662-11f1-92e9-819eb738846b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-12T17:57:49.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZTM5NzgwMWRkODlmNDc5Njk5MzU0MDY4ZjM5MTVjYmM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=19025525cae16bd05307b1fb922022180d42ed800e37a851cf3b32a54a22a6f4",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "f46bc10d973a",
+      "outletId": "liberation",
+      "headline": "Arabie Saoudite : les ambitions du prince Mohammed ben Salmane mises à mal par les frappes des Houthis",
+      "url": "https://www.liberation.fr/international/moyen-orient/arabie-saoudite-les-ambitions-du-prince-mohammed-ben-salmane-mises-a-mal-par-les-frappes-des-houthis-20261012_76JLCMNKFZAKTISUTFSDKUORMM/",
+      "publishedAt": "2026-10-12T17:32:43.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "49a6484cd34b",
+      "outletId": "le-point",
+      "headline": "Comment l’Arabie saoudite est tombée dans le piège houthiste",
+      "url": "https://www.lepoint.fr/monde/arabie-saoudite-pourquoi-les-attaques-des-houthistes-destabilisent-riyad-BWPP6KQXOBBKVCHSPTQRZCXUXU/",
+      "publishedAt": "2026-10-12T17:00:00.000Z",
+      "imageUrl": "https://www.lepoint.fr/resizer/v2/RIPY5E7MSRLFFEOVUWA4V2XS6A.jpg?auth=c76c75a4820f49814c1aaaa4621e7c5a1edcdc23be1f0f85b86f9c8a82812156&smart=true&width=1200&height=900",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "4d5edf440ec8",
       "outletId": "franceinfo",
       "headline": "L'Arabie saoudite reconnaît être \"mise à l'épreuve\" par les frappes des houthis",
@@ -835,20 +868,23 @@
     "gauche": [
       "Le pouvoir saoudien admet traverser une période de forte vulnérabilité suite à la multiplication des offensives aériennes.",
       "L'activité de la plateforme aéroportuaire principale demeure totalement paralisée au début de la semaine.",
-      "Les autorités étudient des mesures de rétorsion d'envergure contre les insurgés yéménites."
+      "Les autorités étudient des mesures de rétorsion d'envergure contre les insurgés yéménites.",
+      "Les frappes menées par les rebelles mettent directement à mal les ambitions économiques et l'ouverture du royaume portées par le prince héritier."
     ],
     "centre": [
       "Les rebelles houthis multiplient les actions armées visant les infrastructures stratégiques et aéroportuaires du royaume.",
       "Les répercussions économiques commencent à se faire sentir, à l'image d'une compagnie aérienne américaine reportant l'ouverture de sa liaison directe.",
-      "Les régulateurs aéronautiques internationaux appellent les équipages à la vigilance lors du survol de la zone."
+      "Les régulateurs aéronautiques internationaux appellent les équipages à la vigilance lors du survol de la zone.",
+      "Plusieurs ressortissants américains ont été interpellés après avoir immortalisé en images les récents incidents survenus sur le site."
     ],
     "droite": [
       "Une nouvelle offensive aérienne enregistrée en fin de semaine a alourdi le bilan humain et matériel de la capitale.",
       "Les autorités confirment la présence de ressortissants étrangers parmi les personnes touchées par ces frappes.",
-      "Les images diffusées par les caméras de sécurité traduisent la panique des passagers au cœur des infrastructures."
+      "Les images diffusées par les caméras de sécurité traduisent la panique des passagers au cœur des infrastructures.",
+      "L'analyse des événements met en évidence le piège tendu par la stratégie asymétrique des rebelles dans lequel Riyad se trouve piégée."
     ]
   },
-  "differences": "L'ensemble des médias traite des offensives menées par les rebelles houthis contre l'Arabie saoudite, tout en soulignant la persistance de la menace sur la capitale. La gauche met l'accent sur la vulnérabilité politique du royaume et la paralysie durable de sa principale plateforme. Le centre privilégie les répercussions économiques et logistiques, en signalant les reports de vols commerciaux et les consignes de prudence émises par l'aviation civile américaine. Enfin, la droite et le centre droit maintiennent un focus prononcé sur les aspects humains et la chronologie précise des frappes successives.",
+  "differences": "L'ensemble des médias traite des offensives menées par les rebelles houthis contre l'Arabie saoudite, tout en soulignant la persistance de la menace sur la capitale. La gauche relie ces frappes aux répercussions sur les ambitions économiques et politiques du prince héritier ainsi qu'à la paralysie aéroportuaire. Le centre élargit sa couverture aux conséquences logistiques, aux consignes de prudence pour les vols et à l'interpellation de ressortissants américains. Enfin, la droite et le centre droit maintiennent un focus prononcé sur les aspects humains, la panique des passagers et proposent une analyse géopolitique sur l'engrenage militaire dans lequel le royaume est pris.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 74
+  "summarizedArticleCount": 77
 }

@@ -5,15 +5,27 @@
   "createdAt": "2026-10-12T14:01:23.508Z",
   "articles": [
     {
+      "id": "ca43dc78ed54",
+      "outletId": "bfmtv",
+      "headline": "Baisse du gazole de 12 à 18 centimes à la pompe: \"C'est une vraie avancée\", estime Thierry Cottillard, président du groupement Les Mousquetaires",
+      "url": "https://www.bfmtv.com/economie/video-baisse-du-gazole-de-12-a-18-centimes-a-la-pompe-c-est-une-vraie-avancee-estime-thierry-cottillard-president-du-groupement-les-mousquetaires_VN-202610120808.html",
+      "publishedAt": "2026-10-12T17:53:08.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/u5Kk-zuKRrMD_sh-EGl3wG_pPzc=/0x0:1280x720/800x0/images/Baisse-du-gazole-de-12-a-18-centimes-a-la-pompe-C-est-une-vraie-avancee-estime-Thierry-Cottillard-president-du-groupement-Les-Mousquetaires-2363954.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "5ba520d968a6",
       "outletId": "le-monde",
       "headline": "Carburants : le prix du gazole devrait baisser d’une dizaine de centimes chez TotalEnergies grâce au déstockage",
       "url": "https://www.lemonde.fr/economie/article/2026/10/12/carburants-le-prix-du-gazole-devrait-baisser-d-une-dizaine-de-centimes-chez-totalenergies-grace-au-destockage_6792695_3234.html",
       "publishedAt": "2026-10-12T16:52:56.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/12/0/0/7664/3832/644/322/60/0/059373b_ftp-1-da163sgakraf-5333015-01-06.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "economy"
+      "section": "economy",
+      "everFrontPage": true
     },
     {
       "id": "190a3b69562a",
@@ -22,7 +34,7 @@
       "url": "https://www.lefigaro.fr/societes/comment-les-distributeurs-vont-ils-se-repartir-les-stocks-strategiques-pour-faire-baisser-les-prix-du-gazole-20261012",
       "publishedAt": "2026-10-12T16:50:00.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2024_crop/2026/10/12/f1cc9c8e9f55b1a1bfe3d1f44894a8dcf1a4f968e6d8189239bb7e0cf6c943b2.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -45,6 +57,17 @@
       "url": "https://www.tf1info.fr/economie/prix-des-carburants-comment-les-distributeurs-vont-repercuter-a-la-pompe-la-liberation-des-stocks-strategiques-2469531.html",
       "publishedAt": "2026-10-12T16:28:22.000Z",
       "imageUrl": "https://photos.tf1info.fr/images/847/480/prix-gazole-3-euros-grand-est-cap-jta-86a89f-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "ddaa1740a9c6",
+      "outletId": "le-figaro",
+      "headline": "Carburants : le prix moyen du gazole en léger recul en France pour la troisième semaine consécutive",
+      "url": "https://www.lefigaro.fr/conso/carburants-le-prix-moyen-du-gazole-en-leger-recul-en-france-pour-la-troisieme-semaine-consecutive-20261012",
+      "publishedAt": "2026-10-12T15:49:10.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/12/ffa8d34f3e7b02f5faecc54dc57618c8a1d32df4e3b7e08ac964c84cbdaa9c18.JPG",
       "frontPage": false,
       "kind": "news",
       "section": "economy"
@@ -110,13 +133,14 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "TotalEnergies annonce une réduction des tarifs du gazole pour les automobilistes et le secteur agricole à la suite d'un déstockage publicitaire.",
-      "Certains commentateurs estiment que ces baisses tarifaires masquent une opération financière très avantageuse pour le groupe pétrolier."
+      "Le centre gauche souligne que la baisse des tarifs du gazole annoncée par le groupe pétrolier atteint environ une dizaine de centimes.",
+      "L'effort consenti par l'entreprise demeure inférieur aux prévisions initiales communiquées par les services gouvernementaux.",
+      "Une réduction ciblée est confirmée pour les professionnels du bâtiment et de l'agriculture concernant le gazole non routier."
     ],
     "centre": [
-      "Le groupe énergétique consent à une baisse des tarifs du gazole comprise entre huit et douze centimes pour le grand public.",
-      "Une diminution tarifaire de vingt centimes est également actée pour le carburant professionnel destiné aux agriculteurs et aux chantiers.",
-      "Cette évolution tarifaire fait suite à une décision gouvernementale d'utiliser les réserves stratégiques de produits pétroliers."
+      "Les autorités ministérielles confirment une répercussion rapide sur les prix à la pompe suite à la libération de dix millions de barils.",
+      "Les représentants du secteur de la grande distribution saluent cette initiative tarifaire comme un progrès notable pour le pouvoir d'achat.",
+      "La baisse effective du gazole s'établit dans une fourchette allant de douze à dix-huit centimes selon les enseignes."
     ],
     "droite": [
       "La direction de TotalEnergies confirme une diminution des tarifs du gazole à la pompe dès le mois prochain pour les consommateurs.",
@@ -124,7 +148,7 @@
       "La répartition des volumes issus des réserves nationales s'effectuera en tenant compte des volumes de vente réalisés par chaque opérateur."
     ]
   },
-  "differences": "La gauche met l'accent sur la critique de la stratégie du groupe pétrolier, qualifiant l'opération commerciale d'opportuniste et de largement compensée par leurs profits, tandis que le centre détaille les aspects techniques et les modalités pratiques de la libération des stocks. La droite, incluant les nuances du centre droit, insiste davantage sur le coût financier supporté par l'entreprise suite aux mesures de plafonnement et sur la répartition des volumes entre les différents distributeurs.",
+  "differences": "La gauche met l'accent sur les limites et les nuances de l'effort consenti par le groupe pétrolier par rapport aux attentes initiales de l'exécutif, tandis que le centre valorise l'impact concret de la mesure sur le pouvoir d'achat ainsi que le calendrier de sa mise en œuvre. De son côté, la droite insiste principalement sur le poids financier supporté par l'entreprise et sur les modalités techniques de répartition des volumes stratégiques entre les opérateurs.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 9
+  "summarizedArticleCount": 11
 }
