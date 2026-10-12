@@ -5,6 +5,17 @@
   "createdAt": "2026-10-12T19:01:21.637Z",
   "articles": [
     {
+      "id": "b943fa563fa6",
+      "outletId": "cnews",
+      "headline": "Emmanuel Macron annonce qu’un navire a été arraisonné au sud de La Réunion pour «transport de carburants» illicite",
+      "url": "https://www.cnews.fr/france/2026-10-12/emmanuel-macron-annonce-quun-navire-ete-arraisonne-au-sud-de-la-reunion-pour",
+      "publishedAt": "2026-10-12T20:45:18.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_d2mt8zv-taille1200_6acd443198202.jpg?h=6729db37&itok=jHf4qYGD",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "e168dbbce5d3",
       "outletId": "huffpost",
       "headline": "La marine française a arraisonné un pétrolier suspecté d’appartenir à la flotte fantôme russe",
@@ -44,7 +55,7 @@
       "url": "https://www.lefigaro.fr/flash-eco/la-reunion-emmanuel-macron-annonce-l-arraisonnement-d-un-navire-de-la-flotte-fantome-pour-transport-de-carburants-illicite-20261012",
       "publishedAt": "2026-10-12T18:53:23.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1996_crop/2026/10/12/67bc3ea19decd6782cb3cf22272d18c578c95d6254529e1d0c453aa31a6b4a4b.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -67,7 +78,7 @@
       "url": "https://www.ouest-france.fr/region-la-reunion/flotte-fantome-un-navire-arraisonne-pres-de-la-reunion-pour-transport-de-carburants-illicite-annonce-emmanuel-macron-3d16a070-c669-11f1-92e9-819eb738846b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-12T18:42:16.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwOTY2YmVhM2FiNDNiMDA0MjViMWIxODczYzAwYzQ3YmE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=46d30b71501b5152e84cfc63a32ecba73464645d8abd168469f1c21230b8553f",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -84,5 +95,5 @@
       "section": "politics"
     }
   ],
-  "section": "world"
+  "section": "politics"
 }

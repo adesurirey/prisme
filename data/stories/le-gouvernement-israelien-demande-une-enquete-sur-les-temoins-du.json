@@ -5,6 +5,17 @@
   "createdAt": "2026-10-11T23:01:17.177Z",
   "articles": [
     {
+      "id": "57e6f7ac8012",
+      "outletId": "franceinfo",
+      "headline": "\"Naza\", le documentaire qui secoue Israël",
+      "url": "https://www.franceinfo.fr/monde/israel/naza-le-documentaire-qui-secoue-israel_8234548.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-12T21:18:03.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/qQOC2ob_t5Nm7ATm68MaYPgS_lc/0x2:1270x716/432x243/filters:format(jpg)/2026/10/12/6acd4c559144c966441226.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
       "id": "22039fa20828",
       "outletId": "liberation",
       "headline": "«Naza» : Benyamin Nétanyahou demande l’ouverture d’une enquête contre les soldats israéliens qui témoignent dans le documentaire",
@@ -161,14 +172,15 @@
       "section": "culture"
     }
   ],
-  "section": "world",
+  "section": "culture",
   "everInEdition": true,
   "summaries": {
     "gauche": [
       "Le chef du gouvernement ordonne aux services secrets d'identifier les militaires participant au documentaire pour les traîner en justice.",
       "Cette décision intervient juste avant la projection publique du long-métrage consacré aux tactiques de l'armée à Gaza.",
       "L'initiative gouvernementale vise à museler les critiques internes concernant la conduite des opérations militaires.",
-      "Le film expose en détail les méthodes de guerre automatisée employées par Tel-Aviv."
+      "Le film expose en détail les méthodes de guerre automatisée employées par Tel-Aviv.",
+      "Le documentaire primé à Venise suscite une vive émotion chez les spectateurs en suivant le témoignage de soldats face aux dégâts collatéraux."
     ],
     "centre": [
       "Le premier ministre israélien réclame l'ouverture d'une enquête officielle sur les intervenants du film qu'il qualifie de récit trompeur.",
@@ -183,7 +195,7 @@
       "Les réalisateurs font face à des accusations de trahison et encourent de lourdes sanctions institutionnelles."
     ]
   },
-  "differences": "La gauche met l'accent sur l'offensive répressive du gouvernement et l'ordre donné aux services de renseignement pour identifier et poursuivre les soldats, qualifiant cette démarche d'entrave aux révélations sur Gaza. Le centre insiste davantage sur la polémique politique, le contexte électoral et la réaction officielle de Benjamin Netanyahu face à ce qu'il juge être un récit trompeur. De son côté, la droite centre son attention sur la sanction institutionnelle visant les réalisateurs, accusés de trahison, et sur la menace directe pesant sur leur nationalité en raison de la diffusion de ces témoignages anonymes.",
+  "differences": "La gauche met l'accent sur l'offensive répressive du gouvernement et l'ordre donné aux services de renseignement pour identifier et poursuivre les soldats, tout en soulignant l'impact émotionnel du film auprès des spectateurs. Le centre insiste davantage sur la polémique politique, le contexte électoral et la réaction officielle face à ce qu'il juge être un récit trompeur. De son côté, la droite centre son attention sur la sanction institutionnelle visant les réalisateurs, accusés de trahison, et sur la menace directe pesant sur leur nationalité en raison de la diffusion de ces témoignages anonymes.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 14
+  "summarizedArticleCount": 15
 }
