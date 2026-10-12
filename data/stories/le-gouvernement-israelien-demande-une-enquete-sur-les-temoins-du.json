@@ -5,6 +5,28 @@
   "createdAt": "2026-10-11T23:01:17.177Z",
   "articles": [
     {
+      "id": "9075569abf73",
+      "outletId": "humanite",
+      "headline": "« Ils ont essayé d’ouvrir les yeux des Israéliens » : comment le documentaire « Naza » secoue la société israélienne",
+      "url": "https://www.humanite.fr/culture-et-savoir/armee-israelienne/ils-ont-essaye-douvrir-les-yeux-des-israeliens-comment-le-documentaire-naza-secoue-la-societe-israelienne",
+      "publishedAt": "2026-10-12T04:30:00.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/p3-Lead-Naza_LUN.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
+      "id": "6ba3b0b00d16",
+      "outletId": "humanite",
+      "headline": "« Naza » de Yuval Abraham et Rachel Szor : le documentaire israélien qui sonde les exécutants du génocide à Gaza",
+      "url": "https://www.humanite.fr/culture-et-savoir/armee-israelienne/naza-de-yuval-abraham-et-rachel-szor-le-documentaire-israelien-qui-sonde-les-executants-du-genocide-a-gaza",
+      "publishedAt": "2026-10-12T04:25:00.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/09/web-Naza.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
       "id": "1f0a214f79d0",
       "outletId": "le-monde",
       "headline": "Benyamin Nétanyahou réclame une enquête sur les témoins du documentaire « Naza » accusant l’armée israélienne de crimes à Gaza",
@@ -17,6 +39,17 @@
       "everFrontPage": true
     },
     {
+      "id": "a58bfe256c07",
+      "outletId": "le-parisien",
+      "headline": "« Nous faisons face à des milliers de menaces de mort » : « Naza », documentaire polémique sur l’armée israélienne, sort en France",
+      "url": "https://www.leparisien.fr/culture-loisirs/cinema/nous-faisons-face-a-des-milliers-de-menaces-de-mort-naza-documentaire-polemique-sur-larmee-israelienne-sort-en-france-12-10-2026-BOF37QN4A5DGNOJZCQF265C2XQ.php",
+      "publishedAt": "2026-10-11T22:00:00.000Z",
+      "frontPage": false,
+      "dayPrecision": true,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
       "id": "d93770e7c82c",
       "outletId": "20-minutes",
       "headline": "Benjamin Netanyahu réclame l’ouverture d’une enquête sur des témoignages anonymes du film « NAZA »",
@@ -27,7 +60,35 @@
       "kind": "news",
       "section": "world",
       "everFrontPage": true
+    },
+    {
+      "id": "7f64265ece0c",
+      "outletId": "huffpost",
+      "headline": "Si « NAZA » ne sort que deux jours au cinéma, c’est paradoxalement pour être vu par un maximum de gens",
+      "url": "https://www.huffingtonpost.fr/culture/article/si-naza-ne-sort-que-deux-jours-au-cinema-c-est-paradoxalement-pour-etre-vu-par-un-maximum-de-gens_336636.html",
+      "publishedAt": "2026-10-11T19:18:43.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/08/0/33/1612/907/0/0/60/0/6a1c92f_upload-1-5plgvaiwqz0j-capture-d-ecran-2026-10-08-144328.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
     }
   ],
-  "section": "world"
+  "section": "culture",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le documentaire choc réalisé par Yuval Abraham et Rachel Szor sonde la mécanique des exactions commises à Gaza.",
+      "Le film donne la parole à des dizaines de militaires et agents des services de renseignement témoignant de manière anonyme.",
+      "Le gouvernement israélien exige l'ouverture d'une enquête et envisage des poursuites contre ces témoins.",
+      "Ces productions cinématographiques font l'objet d'une forte contestation politique et génèrent de graves menaces pour leurs auteurs."
+    ],
+    "centre": [
+      "Le film polémique consacré aux actions de l'armée israélienne bénéficie d'une diffusion en France via un visa exceptionnel.",
+      "Les réalisateurs et les intervenants font face à une vague importante de menaces physiques et de pressions.",
+      "Le chef du gouvernement israélien demande des investigations officielles visant à identifier et poursuivre en justice les participants."
+    ]
+  },
+  "differences": "La gauche met principalement l'accent sur le contenu du documentaire et sur la dénonciation des violences subies par les civils à Gaza, en qualifiant le film d'œuvre courageuse qui braque le projecteur sur la responsabilité des exécutants. Le centre insiste davantage sur la polémique entourant la sortie du film en France, sur les menaces de mort reçues par l'équipe et sur la réaction judiciaire immédiate exigée par le pouvoir israélien.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 6
 }
