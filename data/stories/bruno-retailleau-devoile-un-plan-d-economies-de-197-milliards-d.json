@@ -5,6 +5,59 @@
   "createdAt": "2026-10-12T16:01:29.655Z",
   "articles": [
     {
+      "id": "6fe246a7d1d1",
+      "outletId": "humanite",
+      "headline": "Budget 2027 : le PS montre les muscles et défendra bien une motion de rejet",
+      "url": "https://www.humanite.fr/politique/assemblee-nationale/budget-2027-le-ps-montre-les-muscles-et-defendra-bien-une-motion-de-rejet",
+      "publishedAt": "2026-10-12T16:55:40.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/Rejet-Budget-PS.jpg.crdownload.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "246dc7d11c6d",
+      "outletId": "liberation",
+      "headline": "Budget 2027 : Retailleau évoque une «France quasiment en faillite» et griffe Philippe et Attal",
+      "url": "https://www.liberation.fr/politique/budget-2027-retailleau-evoque-une-france-quasiment-en-faillite-et-griffe-philippe-et-attal-20261012_FFPR6VNG2FDTPCA3SGLTGHL5YA/",
+      "publishedAt": "2026-10-12T16:38:47.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "05a5c5dd2b25",
+      "outletId": "le-point",
+      "headline": "« C’est ça ou la Grèce » : Bruno Retailleau veut passer le « bulldozer » sur la dette française",
+      "url": "https://www.lepoint.fr/politique/cest-ca-ou-la-grece-bruno-retailleau-veut-passer-le-bulldozer-sur-la-dette-francaise-P4FBNHAAIVBOVDNZVRDI7FUYLM/",
+      "publishedAt": "2026-10-12T16:34:34.000Z",
+      "imageUrl": "https://www.lepoint.fr/resizer/v2/YIQHBY767RIZNOUW5Y6OW53YRY.jpg?auth=5ccdc9390c7d2e68d5fc8108b40dd86390ef32b89ac42c69c9c78c1ee7769238&smart=true&width=1200&height=900",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "76b5fa05fe16",
+      "outletId": "le-jdd",
+      "headline": "Présidentielle : le plan de Bruno Retailleau pour faire 200 milliards d'euros d'économies d'ici 2032",
+      "url": "https://www.lejdd.fr/politique/presidentielle-le-plan-de-bruno-retailleau-pour-faire-200-milliards-deconomies-dici-2032-185877",
+      "publishedAt": "2026-10-12T16:21:26.000Z",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "32c7b56252e4",
+      "outletId": "valeurs-actuelles",
+      "headline": "42 milliards sur les retraites contre 29 sur l’immigration : le budget Retailleau face au budget Le Pen",
+      "url": "https://www.valeursactuelles.com/clubvaleurs/politique/42-milliards-sur-les-retraites-contre-29-sur-limmigration-le-budget-retailleau-face-au-budget-le-pen",
+      "publishedAt": "2026-10-12T15:55:30.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "736bd000a8da",
       "outletId": "le-figaro",
       "headline": "« Je sors des 35 heures » : Bruno Retailleau défend une thérapie de choc de 197 milliards d’euros pour redresser les comptes publics",
@@ -15,6 +68,17 @@
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
+    },
+    {
+      "id": "a568b8ebea3c",
+      "outletId": "lopinion",
+      "headline": "Déficit : Retailleau veut économiser 200 milliards d’euros en cinq ans",
+      "url": "https://www.lopinion.fr/politique/deficit-retailleau-veut-economiser-200-milliards-deuros-en-cinq-ans",
+      "publishedAt": "2026-10-12T12:16:32.000Z",
+      "imageUrl": "https://beymedias.brightspotcdn.com/80/b0/e1e756894beebb363d7c5ccbc83e/sipa-01301877-000009.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "5369951ea4f0",
@@ -28,5 +92,21 @@
       "section": "politics"
     }
   ],
-  "section": "politics"
+  "section": "politics",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le plan de rigueur est qualifié de politique de coupe franche touchant massivement la protection sociale et les services publics.",
+      "La gauche dénonce une vision alarmiste de la situation économique brandie pour justifier des mesures d'austérité drastiques.",
+      "Face à cette trajectoire budgétaire jugée inacceptable, les partis s'apprêtent à rejeter fermement les textes associés au gouvernement."
+    ],
+    "droite": [
+      "Le candidat Les Républicains présente une stratégie de redressement des comptes publics fondée sur près de deux cents milliards d'euros d'économies.",
+      "Le projet cible prioritairement les dépenses de l'État, la sphère sociale et les retraites pour restaurer l'orthodoxie financière.",
+      "Cette thérapie de choc budgétaire est conçue pour ramener le déficit sous les seuils européens d'ici la prochaine décennie sans alourdir la fiscalité."
+    ]
+  },
+  "differences": "La droite met en avant la nécessité d'une thérapie de choc budgétaire pour redresser les comptes publics et restaurer la crédibilité financière du pays, en insistant sur le volume des économies réalisées sans hausse d'impôts. En face, la gauche cadre ce projet comme une politique d'austérité injuste qui fragilise la protection sociale et les services publics, tout en préparant une opposition parlementaire frontale contre le gouvernement.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 8
 }

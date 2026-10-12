@@ -5,6 +5,51 @@
   "createdAt": "2026-10-12T14:01:23.508Z",
   "articles": [
     {
+      "id": "5ba520d968a6",
+      "outletId": "le-monde",
+      "headline": "Carburants : le prix du gazole devrait baisser d’une dizaine de centimes chez TotalEnergies grâce au déstockage",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/12/carburants-le-prix-du-gazole-devrait-baisser-d-une-dizaine-de-centimes-chez-totalenergies-grace-au-destockage_6792695_3234.html",
+      "publishedAt": "2026-10-12T16:52:56.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/12/0/0/7664/3832/644/322/60/0/059373b_ftp-1-da163sgakraf-5333015-01-06.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "190a3b69562a",
+      "outletId": "le-figaro",
+      "headline": "Comment les distributeurs vont-ils se répartir les stocks stratégiques pour faire baisser les prix du gazole ?",
+      "url": "https://www.lefigaro.fr/societes/comment-les-distributeurs-vont-ils-se-repartir-les-stocks-strategiques-pour-faire-baisser-les-prix-du-gazole-20261012",
+      "publishedAt": "2026-10-12T16:50:00.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2024_crop/2026/10/12/f1cc9c8e9f55b1a1bfe3d1f44894a8dcf1a4f968e6d8189239bb7e0cf6c943b2.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
+      "id": "6d5db1298e40",
+      "outletId": "humanite",
+      "headline": "TotalEnergies s’engage à baisser les prix de 8 à 12 centimes pour les automobilistes : pourquoi la firme gagne à tous les coups",
+      "url": "https://www.humanite.fr/social-et-economie/energie/totalenergies-sengage-a-baisser-les-prix-de-8-a-12-centimes-pour-les-automobilistes-pourquoi-la-firme-gagne-a-tous-les-coups",
+      "publishedAt": "2026-10-12T16:43:17.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/Total-baisse-prix.jpg?w=1200",
+      "frontPage": false,
+      "kind": "opinion",
+      "section": "economy"
+    },
+    {
+      "id": "21d05b14b3da",
+      "outletId": "tf1-info",
+      "headline": "Prix des carburants : comment les distributeurs vont répercuter à la pompe la libération des stocks stratégiques",
+      "url": "https://www.tf1info.fr/economie/prix-des-carburants-comment-les-distributeurs-vont-repercuter-a-la-pompe-la-liberation-des-stocks-strategiques-2469531.html",
+      "publishedAt": "2026-10-12T16:28:22.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/847/480/prix-gazole-3-euros-grand-est-cap-jta-86a89f-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "2b4225ecba61",
       "outletId": "tf1-info",
       "headline": "TotalEnergies s'engage à baisser les prix du gazole de 8 à 12 centimes pour les particuliers",
@@ -61,5 +106,25 @@
       "section": "economy"
     }
   ],
-  "section": "economy"
+  "section": "economy",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "TotalEnergies annonce une réduction des tarifs du gazole pour les automobilistes et le secteur agricole à la suite d'un déstockage publicitaire.",
+      "Certains commentateurs estiment que ces baisses tarifaires masquent une opération financière très avantageuse pour le groupe pétrolier."
+    ],
+    "centre": [
+      "Le groupe énergétique consent à une baisse des tarifs du gazole comprise entre huit et douze centimes pour le grand public.",
+      "Une diminution tarifaire de vingt centimes est également actée pour le carburant professionnel destiné aux agriculteurs et aux chantiers.",
+      "Cette évolution tarifaire fait suite à une décision gouvernementale d'utiliser les réserves stratégiques de produits pétroliers."
+    ],
+    "droite": [
+      "La direction de TotalEnergies confirme une diminution des tarifs du gazole à la pompe dès le mois prochain pour les consommateurs.",
+      "Le PDG du groupe souligne que les mesures de régulation des prix ont représenté un coût financier lourd pour l'entreprise.",
+      "La répartition des volumes issus des réserves nationales s'effectuera en tenant compte des volumes de vente réalisés par chaque opérateur."
+    ]
+  },
+  "differences": "La gauche met l'accent sur la critique de la stratégie du groupe pétrolier, qualifiant l'opération commerciale d'opportuniste et de largement compensée par leurs profits, tandis que le centre détaille les aspects techniques et les modalités pratiques de la libération des stocks. La droite, incluant les nuances du centre droit, insiste davantage sur le coût financier supporté par l'entreprise suite aux mesures de plafonnement et sur la répartition des volumes entre les différents distributeurs.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 9
 }
