@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-12T22:01:20.289Z",
+  "builtAt": "2026-10-12T23:01:21.316Z",
   "stories": [
     {
       "id": "3479d76877fa",
@@ -6860,6 +6860,18 @@
       "createdAt": "2026-10-12T11:01:35.950Z",
       "articles": [
         {
+          "id": "e7e35ff3d391",
+          "outletId": "20-minutes",
+          "headline": "Produits à jeter, dégivrage à distance… Ce que l’on sait sur la cyberattaque inédite des frigos des supermarchés",
+          "url": "https://www.20minutes.fr/societe/4253761-20261013-produits-jeter-degivrage-distance-sait-cyberattaque-inedite-frigos-supermarches?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-12T22:57:45.000Z",
+          "imageUrl": "https://img.20mn.fr/4IUgOd4ESXGb27MND8CohSk/1200x768_des-consommateurs-font-leurs-achats-dans-le-supermarche-leclerc-d-alencon-siccolipatrick-sic1365-credit-siccoli-patrick-sipa-2608080747",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
           "id": "8390daa83a4b",
           "outletId": "tf1-info",
           "headline": "Les installations frigorifiques de plusieurs supermarchés victimes d'une cyberattaque : quel est le logiciel piraté ?",
@@ -7313,7 +7325,7 @@
           "url": "https://www.20minutes.fr/societe/4253570-20261012-intermarche-u-leclerc-installations-frigorifiques-supermarches-touchees-cyberattaque-gros-degats?at_medium=display&at_campaign=149",
           "publishedAt": "2026-10-12T10:34:35.000Z",
           "imageUrl": "https://img.20mn.fr/5B9v8JHUT9iF9f0t_tG6-yk/1200x768_photo-d-illustration",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -7344,23 +7356,24 @@
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Plusieurs centaines de points de vente ont subi un sabotage informatique nocturne de leurs infrastructures de froid connectées.",
-          "Des tonnes de denrées périssables et surgelées ont dû être jetees, provoquant le désarroi des gérants locaux face à l'ampleur du gâchis.",
-          "Une enquête a été ouverte par l'office spécialisé pour faire la lumière sur cette faille logicielle d'origine danoise."
+          "Un sabotage informatique nocturne a touché des centaines d'établissements de vente au détail, paralysant leurs installations de réfrigération connectées.",
+          "Des quantités considérables de marchandises fraîches ont été perdus, plongeant les commerçants dans une grande détresse.",
+          "Une investigation a été lancée par un service spécialisé pour analyser la vulnérabilité logicielle mise en cause."
         ],
         "centre": [
-          "Une cyberattaque d'ampleur inédite a ciblé les équipements de régulation thermique de grandes surfaces, provoquant une hausse anormale des températures.",
-          "Les enseignes estiment les pertes matérielles à des dizaines de millions d'euros en raison de la destruction massive des stocks frais.",
-          "Les dirigeants évoquent un acte d'une extrême gravité touchant la chaîne alimentaire, tandis que les investigations se poursuivent sur les origines du piratage."
+          "Une intrusion numérique d'une ampleur inédite a affecté les dispositifs thermiques de grandes surfaces, provoquant des élévations de température.",
+          "Le préjudice matériel est estimé à plusieurs dizaines de millions d'euros suite à la destruction des denrées.",
+          "Les enseignes soulignent la gravité de cette atteinte à la chaîne d'approvisionnement alors que les recherches sur l'origine du piratage avancent.",
+          "De nombreux supermarchés ont été impactés au début de la semaine par cette opération visant les infrastructures frigorifiques."
         ],
         "droite": [
-          "Un piratage informatique d'envergure a compromis les installations frigorifiques de nombreux distributeurs français, en exploitant des vulnérabilités logicielles sur les boîtiers du fabricant Danfoss.",
-          "Cet événement met en lumière la vulnérabilité croissante de nos équipements du quotidien face à la convergence des technologies industrielles et informatiques."
+          "Une attaque informatique majeure a perturbé les systèmes de froid de distributeurs en exploitant des failles chez le fabricant Danfoss.",
+          "Cet incident souligne la fragilité des dispositifs connectés face à l'imbrication des technologies numériques et industrielles."
         ]
       },
-      "differences": "Les trois camps s'accordent sur la réalité du sabotage informatique ayant frappé les installations frigorifiques de la grande distribution. La gauche insiste particulièrement sur le volet humain et la détresse des commerçants contraints de jeter des tonnes de marchandises. Le centre se focalise sur les lourdes conséquences financières et sur les déclarations des dirigeants qualifiant l'acte de catastrophe inédite. Enfin, la droite et le centre droit adoptent une perspective plus technique, soulignant le rôle du fournisseur danois Danfoss et l'urgence de renforcer la sécurité des infrastructures connectées face aux cybermenaces.",
+      "differences": "Les trois camps s'accordent sur le constat d'une cyberattaque d'envergure ayant visé les équipements frigorifiques des supermarchés. La gauche, incluant les nuances de centre gauche, insiste sur l'impact humain et le désarroi des commerçants face aux denrées jetées. Le centre se focalise principalement sur l'ampleur financière des dégâts matériels et la gravité de la menace pour la chaîne alimentaire. Enfin, la droite adopte un angle davantage structurel en insistant sur la défaillance des boîtiers Danfoss et sur les risques liés à la convergence des technologies informatiques.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 43
+      "summarizedArticleCount": 44
     },
     {
       "id": "3f9331a2d68a",
