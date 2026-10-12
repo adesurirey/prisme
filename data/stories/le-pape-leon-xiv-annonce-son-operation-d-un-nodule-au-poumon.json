@@ -5,6 +5,38 @@
   "createdAt": "2026-10-11T13:13:27.229Z",
   "articles": [
     {
+      "id": "9a8539b1638a",
+      "outletId": "le-figaro",
+      "headline": "Le pape Léon XIV va être hospitalisé mardi à Rome pour son opération d'un nodule au poumon",
+      "url": "https://www.lefigaro.fr/international/le-pape-leon-xiv-va-etre-hospitalise-mardi-a-rome-pour-son-operation-d-un-nodule-au-poumon-20261012",
+      "publishedAt": "2026-10-12T12:57:48.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/12/448add3906342977c4c424088ec26d1992e650939da2a1cbc0f3efe4e8b24003.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "9eaddc441edc",
+      "outletId": "liberation",
+      "headline": "Léon XIV hospitalisé mardi, qu’est-ce qu’un nodule pulmonaire, qui doit lui être enlevé ?",
+      "url": "https://www.liberation.fr/societe/religions/leon-xiv-hospitalise-mardi-quest-ce-quun-nodule-pulmonaire-qui-doit-lui-etre-enleve-20261012_EM23LZFD4BGF5MOVIPMNYDEUAY/",
+      "publishedAt": "2026-10-12T12:40:39.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "0b0f943f1e84",
+      "outletId": "la-croix",
+      "headline": "Léon XIV : le pape sera hospitalisé ce mardi en fin de matinée",
+      "url": "https://www.la-croix.com/religion/leon-xiv-le-pape-sera-hospitalise-ce-mardi-en-fin-de-matinee-20261012",
+      "publishedAt": "2026-10-12T12:07:19.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/12/2559635-le-pape-sera-hospitalise-mardi-13-octobre-pour-sub.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "3907605c0d59",
       "outletId": "tf1-info",
       "headline": "Le pape va être opéré : qu'est-ce que le nodule pulmonaire, cette petite masse à l'origine de l'intervention chirurgicale ?",
@@ -221,22 +253,19 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le souverain pontife âgé de 71 ans a déclaré publiquement qu'il subirait une intervention chirurgicale imminente.",
-      "La petite masse pulmonaire a été repérée très tôt et se trouve bien localisée selon les précisions apportées."
+      "Le souverain pontife de 71 ans s'apprête à faire son entrée à l'établissement romain pour y subir son ablation programmée.",
+      "Des publications à tendance progressiste fournissent des explications médicales détaillées sur la nature de cette affection pulmonaire."
     ],
     "centre": [
-      "Le chef de l'Église catholique a profité de la prière dominicale pour officialiser son prochain passage sur la table d'opération, avec une hospitalisation prévue d'une semaine.",
-      "L'ablation de la lésion détectée au cours de bilans récents doit intervenir sous peu au Vatican pour retirer un nodule circonscrit repéré à un stade très précoce.",
-      "Une correspondante sur place décrypte la situation institutionnelle et médicale découlant de cette annonce papale."
+      "Le Saint-Siège a officialisé l'admission du dirigeant religieux prévue ce mardi en fin de matinée à l'hôpital Gemelli.",
+      "L'intervention chirurgicale vise l'extraction d'une petite masse détectée de manière précoce."
     ],
     "droite": [
-      "Le pape a tenu un discours rassurant devant les fidèles massés sur la place Saint-Pierre à Rome en officialisant son intervention imminente.",
-      "Les examens médicaux ont permis d'identifier une anomalie circonscrite dès son apparition, incitant le corps médical à agir rapidement pour une ablation.",
-      "Des explications détaillées sont apportées sur la nature des nodules pulmonaires et les causes fréquentes de cette affection.",
-      "Le pape de 71 ans sera opéré de sa lésion de trois centimètres à la polyclinique Gemelli de Rome dès le début de la semaine prochaine, tandis que le Vatican observe une certaine discrétion."
+      "Le chef de l'Église catholique entrera en clinique dès mardi afin de procéder au retrait de sa lésion.",
+      "Les annonces initiales faites par le pontife confirment que la découverte a eu lieu à un stade très précoce."
     ]
   },
-  "differences": "L'ensemble de la classe médiatique continue de relayer l'annonce papale sur un ton rassurant et factuel. La droite accentue la pédagogie médicale en expliquant les causes potentielles et la nature des nodules, notamment avec le centre droit qui apporte des précisions logistiques en évoquant la polyclinique Gemelli de Rome et la taille de la lésion. Le centre complète ces informations par des décryptages en direct depuis Rome, alors que la gauche maintient un suivi plus concis axé strictement sur les déclarations officielles du souverain pontife.",
+  "differences": "Les trois sensibilités convergent pour relayer l'hospitalisation imminente du pape à l'hôpital Gemelli de Rome dès le mardi 13 octobre en vue d'extraire son nodule pulmonaire précoce. La droite insiste principalement sur l'aspect factuel des annonces pontificales et le calendrier précis, tandis que le centre met en avant les communiqués officiels du Vatican confirmant l'horaire de l'admission. De son côté, la gauche se distingue en associant l'événement institutionnel à une démarche pédagogique visant à définir médicalement ce qu'est un nodule pulmonaire.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 19
+  "summarizedArticleCount": 22
 }
