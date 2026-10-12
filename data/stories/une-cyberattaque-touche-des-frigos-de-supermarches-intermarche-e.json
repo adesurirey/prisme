@@ -5,6 +5,52 @@
   "createdAt": "2026-10-12T11:01:35.950Z",
   "articles": [
     {
+      "id": "199e114be3f8",
+      "outletId": "la-croix",
+      "headline": "Coopérative U et Intermarché : des installations frigorifiques ciblées par une cyberattaque",
+      "url": "https://www.la-croix.com/economie/cooperative-u-et-intermarche-des-installations-frigorifiques-ciblees-par-une-cyberattaque-20261012",
+      "publishedAt": "2026-10-12T11:37:03.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/12/2559565-plusieurs-grandes-surfaces-notamment-d-enseignes-i.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "8e3e051dce14",
+      "outletId": "ouest-france",
+      "headline": "Cyberattaque dans les supermarchés : en Côtes-d’Armor, jusqu’à 200 000 € de pertes dans certaines enseignes",
+      "url": "https://www.ouest-france.fr/societe/cyberattaque/cyberattaque-dans-les-supermarches-en-cotes-darmor-jusqua-200-000-euros-de-pertes-dans-certaines-enseignes-d0ab4c46-c628-11f1-92e9-819eb738846b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-12T11:21:09.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwY2FlZjkwY2U3MDNmNGRkNTZiMTRmMTlkODFmODdiNDM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=86a1dca5cafbb87034cae7ab378036fc99732b46b8abf6be4c5f58e5f5ba1a83",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
+      "id": "13e1273bb264",
+      "outletId": "lopinion",
+      "headline": "« Une extrême gravité » : ce que l'on sait de la cyberattaque qui a touché les systèmes frigorifiques de centaines de supermarchés",
+      "url": "https://www.lopinion.fr/economie/une-extreme-gravite-ce-que-lon-sait-de-la-cyberattaque-qui-a-touche-les-systemes-frigorifiques-de-centaines-de-supermarches",
+      "publishedAt": "2026-10-12T11:08:30.000Z",
+      "imageUrl": "https://beymedias.brightspotcdn.com/ac/5f/baf3bc1c440a8ef725fc0b16ff9f/sipa-00952982-000013.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "2042114995aa",
+      "outletId": "le-monde",
+      "headline": "Plusieurs centaines de supermarchés Intermarché et Coopérative U victimes d’une cyberattaque visant leurs installations frigorifiques",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/12/plusieurs-centaines-de-supermarches-intermarche-et-cooperative-u-victimes-d-une-cyberattaque-visant-leurs-installations-frigorifiques_6792621_3234.html",
+      "publishedAt": "2026-10-12T11:03:04.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/12/785/0/5752/2876/644/322/60/0/1a11177_upload-1-pr4odndefbcp-000-c996397.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "5600879cfb00",
       "outletId": "le-figaro",
       "headline": "Une cyberattaque a touché les infrastructures frigorifiques de centaines de supermarchés Coopérative U et Intermarché",
@@ -61,5 +107,26 @@
       "section": "economy"
     }
   ],
-  "section": "economy"
+  "section": "economy",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Une cyberattaque majeure a compromis les systèmes de réfrigération de plus de deux cents grandes surfaces, provoquant des températures anormalement élevées dans les frigos.",
+      "Le piratage des dispositifs de régulation thermique a entraîné la perte de stocks alimentaires considérables nécessitant des destructions massives.",
+      "Une enquête judiciaire a été ouverte pour déterminer l'origine de cette intrusion informatique inédite."
+    ],
+    "centre": [
+      "Plusieurs enseignes de la grande distribution ont subi une intrusion informatique ciblant leurs équipements de production de froid.",
+      "Les enseignes Intermarché et Coopérative U sont les principales touchées, aux côtés de certains magasins Leclerc.",
+      "Les impacts financiers s'annoncent lourds pour les commerçants concernés en raison de la destruction des produits frais et surgelés."
+    ],
+    "droite": [
+      "Les pirates informatiques ont exploité à distance le logiciel de l'équipementier Danfoss pour perturber la chaîne du froid dans les supermarchés.",
+      "Le Groupement Mousquetaires évalue les préjudices économiques à plusieurs millions d'euros suite à cette attaque ciblée.",
+      "L'incident met en lumière la vulnérabilité des infrastructures technologiques de la grande distribution face aux actions malveillantes."
+    ]
+  },
+  "differences": "Les différents bords politiques partagent un constat similaire sur les faits techniques et l'ampleur des dégâts matériels, tout en insistant sur des aspects légèrement distincts. La gauche met l'accent sur le caractère spectaculaire et inédit du sabotage et la destruction massive de denrées. Le centre se focalise sur la description factuelle des enseignes touchées et la coordination des signalements. Enfin, la droite et le centre droit insistent davantage sur la faille logicielle de l'équipementier Danfoss et chiffrent plus précisément les pertes financières estimées à plusieurs millions d'euros par les groupements.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 9
 }

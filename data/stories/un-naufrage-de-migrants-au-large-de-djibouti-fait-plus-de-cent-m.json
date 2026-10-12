@@ -5,6 +5,17 @@
   "createdAt": "2026-10-11T13:13:27.229Z",
   "articles": [
     {
+      "id": "b6da4ef4c766",
+      "outletId": "france-24",
+      "headline": "Djibouti : au moins 139 migrants morts dans un naufrage vers le Yémen",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261012-djibouti-au-moins-139-migrants-morts-dans-un-naufrage-vers-le-y%C3%A9men",
+      "publishedAt": "2026-10-12T09:34:30.000Z",
+      "imageUrl": "https://s.france24.com/media/display/cc0413ca-c61a-11f1-ad3e-77317c09f325/w:1024/p:16x9/FR-20261012-091423-091558-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "61a3cc0b813e",
       "outletId": "humanite",
       "headline": "Le naufrage d’un bateau au large de Djibouti qui transportait des migrants a fait 139 morts, dont 15 enfants",
@@ -119,23 +130,22 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le bilan définitif s'établit à cent trente-neuf décès, incluant une quinzaine d'enfants, selon les actualisations des agences onusiennes.",
-      "L'analyse des profils met en évidence la présence majoritaire de ressortissants éthiopiens fuyant la reprise des hostilités dans leur pays.",
-      "Les recherches se poursuivent en mer pour tenter de retrouver les personnes portées disparues depuis la nuit du drame."
+      "Le nombre total de victimes s'élève à cent trente-neuf décès, un chiffre qui englobe quinze mineurs selon les derniers pointages.",
+      "Les opérations de repêchage continuent afin de retrouver les nombreux passagers encore introuvables en mer.",
+      "Le profil des personnes à bord révèle une majorité d'Éthiopiens fuyant les conflits armés dans leur État d'origine pour rejoindre la péninsule arabique."
     ],
     "centre": [
-      "Le décompte macabre atteint au moins cent trente-neuf décès après la catastrophe survenue au large des côtes djiboutiennes.",
-      "Quatre-vingt-quatrième personne portée manquante s'ajoutent au lourd bilan diffusé par l'ONU.",
-      "Le chavirage de l'embarcation s'est produit dans la nuit du huit au neuf octobre."
+      "Le dernier bilan officiel fait état d'au moins cent trente-neuf décès et de quatre-vingt-quatrième portés disparus à la suite du drame.",
+      "L'embarcation surchargée transportait plus de trois cents passagers qui tentaient de rallier le Yémen depuis les côtes djiboutiennes.",
+      "L'Organisation internationale pour les migrations réclame une action accrue pour sécuriser les parcours migratoires et protéger les exilés."
     ],
     "droite": [
-      "Une embarcation transportant des exilés a fait naufrage dans la nuit du huit au neuf octobre.",
-      "Plus de quatre-vingts ressortissants éthiopiens ont réchappé au drame maritime.",
-      "Le bilan officiel fait état de plus d'une centaine de morts et d'un nombre équivalent de portés disparus.",
-      "L'événement met en lumière la dangerosité des routes maritimes empruntées vers la péninsule arabique."
+      "Une embarcation transportant des exilés a chaviré au cours de la nuit du huit au neuf octobre au large de Djibouti.",
+      "Plus de quatre-vingts ressortissants éthiopiens ont pu être sauvés des eaux après cette catastrophe maritime.",
+      "Le drame met en relief l'extrême péril des voies maritimes empruntées par les candidats à l'exil vers la péninsule arabique."
     ]
   },
-  "differences": "Les différents camps actualisent le bilan tragique de la catastrophe maritime en s'appuyant sur les données des agences onusiennes, tout en maintenant leurs angles d'approche. La gauche, enrichie par des nuances internes allant jusqu'au centre-gauche, intègre les dernières données chiffrées faisant état de cent trente-neuf victimes tout en insistant sur la présence d'enfants et sur le contexte de guerre en Éthiopie. Le centre affine la comptabilité précise des décès en mentionnant au moins cent trente-neuf victimes et un grand nombre de disparus. La droite conserve sa focalisation initiale sur la nationalité des rescapés et la dureté globale des routes maritimes empruntées.",
+  "differences": "Les différents camps actualisent le bilan tragique de la catastrophe maritime en s'appuyant sur les données des agences onusiennes, tout en maintenant leurs angles d'approche. La gauche intègre les dernières données chiffrées faisant état de cent trente-neuf victimes tout en insistant sur la présence d'enfants et sur le contexte de guerre en Éthiopie. Le centre, à l'instar de France 24, affine la comptabilité précise des décès en mentionnant au moins cent trente-neuf victimes, quatre-vingt-quatrième disparus et l'appel de l'OIM pour des voies légales. La droite conserve sa focalisation initiale sur le nombre de rescapés éthiopiens et la dureté globale des routes maritimes empruntées vers la péninsule arabique.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 10
+  "summarizedArticleCount": 11
 }

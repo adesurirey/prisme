@@ -5,12 +5,67 @@
   "createdAt": "2026-10-11T09:07:20.230Z",
   "articles": [
     {
+      "id": "2d6a3d47eb64",
+      "outletId": "rfi",
+      "headline": "DIRECT - Trêve énergétique: le Kremlin ne cessera ses frappes que « le jour des élections » en Ukraine",
+      "url": "https://www.rfi.fr/fr/europe/20261012-direct-tr%C3%AAve-%C3%A9nerg%C3%A9tique-les-contacts-se-poursuivent-dit-le-kremlin-sans-rien-confirmer",
+      "publishedAt": "2026-10-12T11:09:46.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/da08423c-c62b-11f1-b2c8-77317c09f325/w:1024/p:16x9/AP26285325551039.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "9237b48b5a74",
+      "outletId": "france-24",
+      "headline": "Ukraine-Russie : que comprendre de la trêve surprise annoncée par Donald Trump ?",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261012-ukraine-russie-que-comprendre-de-la-tr%C3%AAve-surprise-annonc%C3%A9e-par-donald-trump",
+      "publishedAt": "2026-10-12T10:47:03.000Z",
+      "imageUrl": "https://s.france24.com/media/display/c4d9528e-c342-11f1-b42c-27c2853ad5a5/w:1024/p:16x9/2026-10-08T155502Z-91069183-RC2XYNAVY1S2-RTRMADP-3-UKRAINE-CRISIS-ATTACK-KYIV-REGION.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "66c7443f18dd",
+      "outletId": "le-point",
+      "headline": "« Un coup de poing en pleine figure » : comment Donald Trump a poignardé l’Ukraine dans le dos",
+      "url": "https://www.lepoint.fr/monde/un-coup-de-poing-en-pleine-figure-comment-donald-trump-a-poignarde-lukraine-dans-le-dos-6TI2YSELHJHFTFDWW7YSSO2CV4/",
+      "publishedAt": "2026-10-12T10:00:00.000Z",
+      "imageUrl": "https://www.lepoint.fr/resizer/v2/BJ4KIXRG2JA4NBGLPGGEB2T434.jpg?auth=84df92fcbf161577ff4390c69501ea84a46ea67749bab1dbbb0fc7c0df429b92&smart=true&width=1200&height=900",
+      "frontPage": false,
+      "kind": "opinion",
+      "section": "world"
+    },
+    {
       "id": "86f8dee2fb93",
       "outletId": "bfmtv",
       "headline": "Volodymyr Zelensky assure que l'Ukraine \"répondra\" si la Russie ne respecte pas une trêve énergétique",
       "url": "https://www.bfmtv.com/international/europe/ukraine/volodymyr-zelensky-assure-que-l-ukraine-repondra-si-la-russie-ne-respecte-pas-une-treve-energetique_AD-202610120406.html",
       "publishedAt": "2026-10-12T09:53:24.000Z",
       "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/OpBVaPTu5PrIoNfvnonIdhPsvek=/0x0:2048x1152/800x0/images/Volodymyr-Zelensky-2348726.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "cadedaed8629",
+      "outletId": "lobs",
+      "headline": "Ce que l’on sait du « cessez-le-feu énergétique » entre l’Ukraine et la Russie annoncé par Trump",
+      "url": "https://www.nouvelobs.com/monde/20261012.OBS119138/ce-que-l-on-sait-du-cessez-le-feu-energetique-entre-l-ukraine-et-la-russie-annonce-par-trump.html",
+      "publishedAt": "2026-10-12T09:44:36.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/10/12/0/0/8256/5504/0/0/60/0/62e5388_upload-1-oz2ayjfncmv0-000-d2vt6v2.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "adf1c851edbb",
+      "outletId": "lexpress",
+      "headline": "Accord sur le diesel russe : Donald Trump critiqué jusque dans son propre camp",
+      "url": "https://www.lexpress.fr/monde/amerique/accord-sur-le-diesel-russe-donald-trump-critique-jusque-dans-son-propre-camp-JJ6W5TX5E5HKBALZHVICQDSPZA/",
+      "publishedAt": "2026-10-12T09:35:34.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/WMOYIQLEYFCDPHY5O32WFAHQNY.JPG?auth=34eddbd52eb6f04b503fd71919d8ad1ce9dd92a08559399d365953f68286bff7&smart=true&width=2654&height=1769",
       "frontPage": false,
       "kind": "news",
       "section": "world"
@@ -33,9 +88,10 @@
       "url": "https://www.lefigaro.fr/international/l-ukraine-repondra-si-la-russie-ne-respecte-pas-la-treve-energetique-cet-hiver-soutient-volodymyr-zelensky-20261012",
       "publishedAt": "2026-10-12T09:19:25.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/12/a2bde8669c00b57905744b13d8d8f751c9667918fb8c0f5df2b4115acf66b793.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "world"
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "b2af3b58aa9b",
@@ -77,9 +133,10 @@
       "url": "https://www.lemonde.fr/international/live/2026/10/12/en-direct-guerre-en-ukraine-kiev-repondra-si-la-russie-ne-respecte-pas-une-treve-energetique-affirme-volodymyr-zelensky_6791198_3210.html",
       "publishedAt": "2026-10-12T08:43:37.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/12/50/0/5500/2750/644/322/60/0/19fbb2e_ftp-1-3rh7uhiy7grp-2026-10-12t081733z-21236251-rc2k1oasjajj-rtrmadp-3-ukraine-crisis-poland-security-forum.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "live",
-      "section": "world"
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "31c93891815e",
@@ -88,6 +145,17 @@
       "url": "https://atlantico.fr/article/video/trump-annonce-un-cessez-le-feu-energetique-entre-la-russie-et-lukraine-aucune-confirmation-des-concernees",
       "publishedAt": "2026-10-12T08:41:00.000Z",
       "imageUrl": "https://atlantico.codexcdn.net/assets/asbywa0U6z00adnzR.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "08929c4d4d70",
+      "outletId": "huffpost",
+      "headline": "Donald Trump suscite des remous jusque dans les rangs républicains avec son projet d’importer du diesel russe",
+      "url": "https://www.huffingtonpost.fr/international/article/donald-trump-suscite-des-remous-jusque-dans-les-rangs-republicains-avec-son-projet-d-importer-du-diesel-russe_338681.html",
+      "publishedAt": "2026-10-12T08:20:43.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/08/29/100/0/1200/675/0/0/60/0/f4dcb66_upload-1-4brlphmbfdxz-afp-20260827-c6nn3md-v5-midres-776552802.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "world"
@@ -352,6 +420,28 @@
       "section": "world"
     },
     {
+      "id": "c3c816791f9f",
+      "outletId": "le-parisien",
+      "headline": "Zelensky ne « mérite pas » de trêve pour des élections en Ukraine, lance la Russie, le « cessez-le-feu énergétique » plus hypothétique",
+      "url": "https://www.leparisien.fr/international/ukraine/zelensky-ne-merite-pas-de-treve-pour-des-elections-en-ukraine-lance-la-russie-le-cessez-le-feu-energetique-plus-hypothetique-12-10-2026-T34LCJBM5FFXPGYJ7BP5M7G65I.php",
+      "publishedAt": "2026-10-11T22:00:00.000Z",
+      "frontPage": false,
+      "dayPrecision": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "fc814bfce9b5",
+      "outletId": "le-parisien",
+      "headline": "Guerre en Ukraine : il ne faut pas « céder » à la « menace russe », réagit Macron après les annonces de Trump",
+      "url": "https://www.leparisien.fr/international/ukraine/guerre-en-ukraine-il-ne-faut-pas-ceder-a-la-menace-russe-reagit-macron-apres-les-annonces-de-trump-12-10-2026-RZMWOMH6MNEVXI6LJRT4GT2ARU.php",
+      "publishedAt": "2026-10-11T22:00:00.000Z",
+      "frontPage": false,
+      "dayPrecision": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "82179db87972",
       "outletId": "bfmtv",
       "headline": "Des élus américains estiment que l'accord entre Washington et Moscou sur la livraison de diesel russe est illégal",
@@ -402,7 +492,7 @@
       "url": "https://www.lefigaro.fr/vox/monde/l-editorial-de-philippe-gelie-la-volte-face-de-l-amerique-20261011",
       "publishedAt": "2026-10-11T17:57:37.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/10/11/2432ef9ae816a7db10172109750d5c1e083864aa1a640e5301f64a3bcf8a82cf.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "opinion",
       "section": "world",
       "everFrontPage": true
@@ -1184,21 +1274,19 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le décalage est souligné entre la trêve sectorielle proclamée par la Maison-Blanche et la poursuite effective des bombardements russes sur les centrales électriques.",
-      "La confusion diplomatique domine après soixante-douze heures de déclarations unilatérales et de démentis implicites émanant des belligérants."
+      "La confusion totale persiste après l'annonce par Washington d'une trêve sectorielle que Kiev a découverte dans la presse et que le Kremlin ignore.",
+      "Le décalage est souligné entre la proclamation américaine et la poursuite effective des bombardements sur les infrastructures."
     ],
     "centre": [
-      "Le président ukrainien prévient que son pays ripostera si Moscou ne se conforme pas à la trêve, tout en constatant des violations dès son annonce.",
-      "La décision américaine est motivée par la volonté de faire baisser les prix du carburant pour calmer le mécontentement populaire intérieur.",
-      "Le chef de l'État français exhorte les alliés à ne pas plier face à la menace de Moscou, en marge de contacts prévus avec Washington."
+      "Le chef de l'État ukrainien prévient que son pays ripostera si Moscou ne respecte pas cette cessation des frappes énergétiques.",
+      "Les analystes s'interrogent sur les motivations de cette initiative unilatérale américaine menée sans coordination avec les alliés européens."
     ],
     "droite": [
-      "L'exécutif français met en garde contre toute capitulation face au Kremlin, rappelant que les frappes se poursuivent sans motif factuel d'alléger la pression.",
-      "La trêve proclamée par Washington suscite un scepticisme manifeste en l'absence de toute validation officielle par Kiev et Moscou.",
-      "Les critiques américaines formulées à l'encontre de la direction ukrainienne s'accompagnent d'un projet d'accord pétrolier controversé."
+      "Le scepticisme domine face à une mesure unilatérale dépourvue de validation officielle par les deux belligérants.",
+      "Les commentateurs s'inquiètent de l'impact de cet accord impromptu sur la position de Kiev et l'unité des soutiens occidentaux."
     ]
   },
-  "differences": "La gauche et le centre gauche accentuent la confusion diplomatique et l'absence d'effets réels sur le terrain, illustrée par la persistance des frappes malgré les annonces. Le centre met en avant les réactions directes de Kiev et de Paris, soulignant l'appel de Volodymyr Zelensky à riposter et l'avertissement d'Emmanuel Macron face aux pressions américaines. La droite adopte une posture prudente, insistant sur l'absence de confirmation des belligérants et sur la nécessité pour les Européens de maintenir leur fermeté face à Moscou malgré les initiatives unilatérales de Washington.",
+  "differences": "La gauche et le centre gauche accentuent la confusion diplomatique et l'inefficacité immédiate de cette annonce face à la réalité des bombardements. Le centre met en avant les réactions directes de Volodymyr Zelensky tout en interrogeant les motivations politiques de la Maison-Blanche. La droite adopte une posture plus critique, soulignant le danger géopolitique de cette initiative unilatérale pour la résistance ukrainienne et la fermeté européenne.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 105
+  "summarizedArticleCount": 113
 }
