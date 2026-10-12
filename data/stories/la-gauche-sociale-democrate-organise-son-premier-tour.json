@@ -5,6 +5,28 @@
   "createdAt": "2026-10-11T09:07:20.230Z",
   "articles": [
     {
+      "id": "629e4c5aaca6",
+      "outletId": "bfmtv",
+      "headline": "Raphaël Glucksmann demande à Jean-Luc Mélenchon de \"désavouer\" la violence de \"ses supporters\"",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/raphael-glucksmann-demande-a-jean-luc-melenchon-de-desavouer-la-violence-de-ses-supporters_AD-202610120389.html",
+      "publishedAt": "2026-10-12T09:40:46.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/kRDHXH9EuuUCrvQEn9hMR_VesbM=/0x212:2048x1364/800x0/images/Le-chef-de-file-de-Place-publique-et-candidat-a-la-presidentielle-Raphael-Glucksmann-le-11-octobre-2026-apres-sa-victoire-lors-de-la-primaire-socialiste-2363547.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "ee0e493f064a",
+      "outletId": "bfmtv",
+      "headline": "\"Faire 14% c'est un lourd désaveu\": Philippe Brun appelle Olivier Faure à \"tirer les conséquences\" de sa défaite à la primaire socialiste",
+      "url": "https://www.bfmtv.com/politique/parti-socialiste/faire-14-c-est-un-lourd-desaveu-philippe-brun-appelle-olivier-faure-a-tirer-les-consequences-de-sa-defaite-a-la-primaire-socialiste_AN-202610120380.html",
+      "publishedAt": "2026-10-12T09:32:29.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/4kPrwLCn-RlTNTakud5LXio4bxk=/0x106:2048x1258/800x0/images/Le-depute-PS-Philippe-Brun-le-27-juin-2026-2348944.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "fec59bc69235",
       "outletId": "bfmtv",
       "headline": "\"Le choix du repli\": de François Ruffin à Marine Tondelier, la gauche unitaire accueille froidement la victoire de Raphaël Glucksmann",
@@ -158,9 +180,10 @@
       "url": "https://www.lemonde.fr/election-presidentielle-2027/live/2026/10/12/en-direct-primaire-a-gauche-les-socialistes-ont-dit-qu-ils-souhaitaient-mettre-fin-a-la-politique-de-zig-zag-d-olivier-faure-estime-philippe-brun-au-lendemain-de-la-victoire-de-raphael-glucksmann_6791926_6205049.html",
       "publishedAt": "2026-10-12T05:49:00.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/12/596/0/4724/2362/644/322/60/0/5b52471_upload-1-ihbgbsntikxv-mmagnin-primaire-gauche-resultats-55.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "politics"
+      "section": "politics",
+      "everFrontPage": true
     },
     {
       "id": "db98238593b5",
@@ -224,7 +247,7 @@
       "url": "https://www.lefigaro.fr/elections/presidentielles/primaires-gauche/raphael-glucksmann-enfarine-a-paris-apres-sa-victoire-a-la-primaire-de-la-gauche-20261012",
       "publishedAt": "2026-10-12T04:32:31.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/12/3962f66c0a093ccc9b29d98b488c21cdf3ae1af18330c3155b4edd4e2e208a7d.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -301,7 +324,7 @@
       "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/10/12/presidentielle-2027-raphael-glucksmann-vainqueur-de-la-primaire-a-gauche-au-defi-de-mettre-la-famille-sociale-democrate-en-ordre-de-bataille_6792381_6205049.html",
       "publishedAt": "2026-10-12T03:33:09.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/11/555/0/4072/2036/644/322/60/0/2de6177_upload-1-bgihibmazxcf-l1063277.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -711,7 +734,7 @@
       "url": "https://www.lefigaro.fr/elections/presidentielles/primaire-a-gauche-apres-sa-victoire-hollande-felicite-glucksmann-qui-lui-tend-la-main-en-vue-de-la-presidentielle-20261011",
       "publishedAt": "2026-10-11T18:52:54.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/11/22c2faa01b9becd54ffb37f14a5d4d8f8eeccdb42ed9e48278c8010efc2de563.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -1695,12 +1718,14 @@
     "gauche": [
       "Le vainqueur savoure le réveil d'une force sociale-démocrate qu'il juge enfin capable de l'emporter en 2027.",
       "Plusieurs figures de la gauche unitaire expriment leur méfiance face à une ligne qui refuse toute alliance avec La France Insoumise.",
-      "Les partisans locaux saluent massivement un résultat net qui ins insuffle une nouvelle fierté militante."
+      "Les partisans locaux saluent massivement un résultat net qui insuffle une nouvelle fierté militante.",
+      "La lourde défaite d'Olivier Faure avec quatorze pour cent des voix provoque des appels internes à tirer les conséquences de ce score."
     ],
     "centre": [
       "Le nouveau champion désigné entame la phase de confirmation pour endosser pleinement le costume présidentiel.",
       "Le score incontestable obtenu lors du scrutin interne stimule l'ensemble des réseaux de soutien territoriaux.",
-      "Les commentateurs soulignent le défi qui consiste à donner corps à cette dynamique sur le long terme."
+      "Les commentateurs soulignent le défi qui consiste à donner corps à cette dynamique sur le long terme.",
+      "L'épisode de l'agression subie lors de la soirée électorale pousse le candidat à interpeller vertement les responsables Insoumis."
     ],
     "droite": [
       "Les analyses stratégiques soulignent l'obligation pour le candidat de séduire au-delà de son camp tout en retenant son aile gauche.",
@@ -1708,7 +1733,7 @@
       "L'enjeu de la construction d'une crédibilité présidentielle demeure la principale interrogation des observateurs."
     ]
   },
-  "differences": "La gauche se focalise sur la fracture stratégique interne, entre l'enthousiasme du centre gauche face au renouveau social-démocrate et la froideur des alliés hostiles au refus de rapprochement avec LFI. Le centre met en avant l'incarnation présidentielle et la nécessité de confirmer l'essai à l'échelle du pays. La droite, par la voix de ses observateurs, insiste davantage sur la délicate équation programmatique et électorale qui attend le vainqueur, tiraillé entre la modération et sa frange la plus à gauche.",
+  "differences": "La gauche se focalise à la fois sur la fracture stratégique concernant les alliances et sur les règlements de compte internes suite au score décevant de la direction sortante. Le centre met en avant l'incarnation présidentielle, la dynamique territoriale et l'incident violent de la soirée électorale pour pointer du doigt les tensions avec LFI. La droite, par la voix de ses observateurs, insiste davantage sur la délicate équation programmatique et électorale qui attend le vainqueur, tiraillé entre modération et frange contestataire.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 152
+  "summarizedArticleCount": 154
 }
