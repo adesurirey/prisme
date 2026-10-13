@@ -28,12 +28,8 @@
 </style>
 </head>
 <body>
-<h1>PRISME — favicon · 100% typographique, noir & blanc</h1>
+<h1>PRISME — le mark P incliné · 100% typographique, noir & blanc</h1>
 <div class="controls">
-  <label>Angle (P skewé & mini-éventail)
-    <input type="range" id="angle" min="0" max="20" step="1" value="12">
-    <span class="val" id="angleVal">12°</span>
-  </label>
   <label>Graisse
     <input type="range" id="weight" min="600" max="900" step="1" value="800">
     <span class="val" id="weightVal">800</span>
@@ -42,57 +38,71 @@
 
 <div id="prototypes"></div>
 
-<p class="hint">Rendu à 180px (apple-touch), 48px, 32px (favicon) et 16px — la taille la plus petite est le vrai
-test : seuls 2–3 traits épais y survivent. Le skew du candidat 2 penche à droite (opposé du P du wordmark, qui penche
-à gauche) pour éviter toute lecture politique d'une lettre isolée.</p>
+<p class="hint">Rendu à 180px (apple-touch), 48px, 32px (favicon) et 16px. Convention d'angle du projet :
+<strong>positif = le haut penche à gauche</strong> (le P du wordmark est à +20°). Centrage optique : chaque P est
+posé sur la hauteur de capitales (0.727em) et compensé du décalage d'encre induit par le skew — le glyphe reste
+au centre de la tuile quelle que soit l'inclinaison.</p>
 
 <script>
-const angle  = document.getElementById("angle"),
-      weight = document.getElementById("weight");
+const weight = document.getElementById("weight");
+
+// Inter Extra Bold : hauteur de capitales 0.727em ; avec line-height:1, la
+// baseline siège à 80% de la boîte (métriques hhea 1984+494 / 2478).
+const CAP = 0.727, BASELINE = 0.8;
+
+function renderP(px, deg, w) {
+  const fs = px * 0.62;                    // le glyphe occupe ~62% de la tuile
+  const k = Math.tan(deg * Math.PI / 180);
+  // compensation d'encre : le skew autour de la baseline-centre déplace le
+  // centre optique (à mi-hauteur des capitales) de 0.36em × tan(angle)
+  const tx = 0.36 * fs * k;
+  // centrage vertical : centre des capitales à (BASELINE − CAP/2) − 0.5 de la boîte
+  const ty = (BASELINE - CAP / 2 - 0.5) * fs;
+  return `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+    <div class="glyph" style="font-size:${fs}px;font-weight:${w};transform:translate(${tx.toFixed(2)}px,${ty.toFixed(2)}px) skewX(${deg}deg);transform-origin:50% ${BASELINE * 100}%;">P</div>
+  </div>`;
+}
 
 const PROTOS = [
   {
-    id: "p-droit",
-    title: "1 · P droit",
-    desc: "La capitale seule, sans aucun skew. Le candidat le plus robuste : fût massif + boucle pleine, deux traits qui survivent à 16px. L'inclinaison reste le geste du wordmark ; l'icône est posée.",
-    render: (px, deg, w) =>
-      `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
-        <div class="glyph" style="font-size:${px * 0.6}px;font-weight:${w};line-height:1;">P</div>
-      </div>`,
+    id: "wordmark",
+    title: "1 · Angle du wordmark (+20°)",
+    desc: "La première lettre du logo, à l'angle exact du P du wordmark. Cohérence totale marque/mot : ce que tu vois dans la navbar, tu le retrouves dans l'onglet. Penche à gauche — la question politique se pose, mais l'icône vit dans un contexte de marque, pas seule.",
+    render: (px, deg, w) => renderP(px, 20, w),
   },
   {
-    id: "p-skewe",
-    title: "2 · P légèrement skewé",
-    desc: "L'ADN du logotype, dosée pour survivre en petit : 12° par défaut (au lieu de 20°). Le skew penche à droite — l'opposé du P du wordmark, pour éviter toute lecture politique.",
-    render: (px, deg, w) =>
-      `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
-        <div class="glyph" style="font-size:${px * 0.6}px;font-weight:${w};line-height:1;transform:skewX(${deg}deg);transform-origin:50% 100%;">P</div>
-      </div>`,
+    id: "modere",
+    title: "2 · Modéré (+12°)",
+    desc: "L'inclinaison du wordmark, dosée pour la petite taille : à 16px le skew lit plus fort qu'à 180px (l'œil amplifie les écarts quand les traits sont grossiers), donc 12° pourrait suffire à porter l'ADN sans l'exagérer.",
+    render: (px, deg, w) => renderP(px, 12, w),
+  },
+  {
+    id: "droite",
+    title: "3 · Penche à droite (−20°)",
+    desc: "L'anti-lecture-politique : l'angle du E du wordmark appliqué au P. Symétrique au wordmark (le mot commence à +20° et finit à −20°, l'icône prend l'autre extrême). Un P penché à droite lit « italique », plus dynamique — mais il dit l'inverse du début du mot.",
+    render: (px, deg, w) => renderP(px, -20, w),
   },
 ];
-
 
 const SIZES = [180, 48, 32, 16];
 
 function render() {
-  const deg = +angle.value, w = +weight.value;
-  document.getElementById("angleVal").textContent = deg + "°";
+  const w = +weight.value;
   document.getElementById("weightVal").textContent = w;
-
   document.getElementById("prototypes").innerHTML = PROTOS.map(p => `
     <h2>${p.title}</h2>
     <p class="desc">${p.desc}</p>
     <div class="sizes">${SIZES.map(px => `
       <div class="tile">
         <div class="box r${px >= 180 ? 180 : px}" style="width:${px}px;height:${px}px;">
-          ${p.render(px, deg, w)}
+          ${p.render(px, 0, w)}
         </div>
         <div class="px">${px}px</div>
       </div>`).join("")}
     </div>`).join("");
 }
 
-for (const el of [angle, weight]) el.oninput = render;
+weight.oninput = render;
 render();
 </script>
 </body>

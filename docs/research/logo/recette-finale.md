@@ -69,8 +69,16 @@ Figma ne sait pas cisailer via l'interface — utiliser le plugin **Skew** ou
 
 ## Favicon & icônes d'app
 
-Retenu : **le P droit** — la capitale seule, Inter Extra Bold, sans skew
+Retenu : **le P à l'angle du wordmark** (+20°, le haut penche à gauche) — Inter
+Extra Bold, même matrice de skew que la première lettre du logotype
 (prototypes dans `favicon-prototypes.html`).
+
+Révision : la version droite a d'abord été retenue, puis abandonnée au rendu réel.
+L'argument décisif : pour Prisme, **l'absence d'inclinaison n'est pas neutre, c'est le
+centre** — un P droit nous positionnerait politiquement au centre, exactement ce que
+l'icône ne doit pas dire. Le P incliné à l'angle exact du wordmark apporte en plus la
+personnalité et la reconnaissance d'une majuscule signée, et garantit la cohérence
+totale marque/mot : la première lettre de la navbar EST l'icône.
 
 Décisions d'exploration notées :
 
@@ -78,14 +86,15 @@ Décisions d'exploration notées :
   icon mais coûte de la netteté à 16px — écarté au profit de la simplicité
 - le **mini-éventail P·R·I** (P à l'angle du logo, R droit, I à l'angle du E) est une
   impasse : à 16px le dégradé d'angle devient du bruit, la forme ne se lit plus
-- le P du favicon penche à **droite** quand il penche (l'opposé du P du wordmark) :
-  isolée de son contexte, une lettre penchée à gauche risquerait une lecture
-  politique — raisonnement qui a aussi motivé l'abandon du skew pour l'icône
+- la question politique avait d'abord mené à un P penchant à droite ou droit ;
+  le raisonnement a été inversé au rendu réel : droit = centre = positionnement
+  politique, penché à l'angle du wordmark = la marque, pas un manifeste
 - **pas de couleur** dans l'icône : noir et blanc, 100% typographique
 - tailles à produire : 16, 32, 48 px (favicon), 180 px (apple-touch), avec les
   marges de safe-area pour les icônes masquables Android
 - la version définitive se découpe sur mesure à partir des courbes d'Inter Extra
-  Bold (contour unique, pas un texte rendu)
+  Bold (contour unique, pas un texte rendu) — fait : `generate-brand-svg.py` produit
+  le mark avec la matrice de skew du wordmark
 
 ## Implémentation web
 

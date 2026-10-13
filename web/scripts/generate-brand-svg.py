@@ -4,7 +4,7 @@
 Outputs (web/src/assets/brand/):
   prisme-wordmark-nav.svg      wordmark, tracking 0.08em, opsz 14  (small contexts)
   prisme-wordmark-display.svg  wordmark, tracking 0.04em, opsz 32  (large contexts)
-  prisme-mark.svg              upright P, opsz 14                  (favicon, app icons)
+  prisme-mark.svg              skewed P (+20°, the wordmark angle), opsz 14 (favicon, app icons)
 
 Every letterform is the exact Inter glyph outline (quadratic-free, the source
 curves), transformed by exact affine matrices — no hand tracing, no rounding
@@ -91,7 +91,8 @@ def main():
     assets = {
                 "prisme-wordmark-nav.svg": build(LETTERS, 0.08, 14),
         "prisme-wordmark-display.svg": build(LETTERS, 0.04, 32),
-        "prisme-mark.svg": build("P", 0, 14, angles={}),
+        # l'angle du P du wordmark, adopté au rendu réel
+        "prisme-mark.svg": build("P", 0, 14),
     }
     for name, svg in assets.items():
         with open(os.path.join(OUT_DIR, name), "w") as f:
