@@ -5,6 +5,18 @@
   "createdAt": "2026-10-11T13:13:27.229Z",
   "articles": [
     {
+      "id": "c4a04c4c579f",
+      "outletId": "le-monde",
+      "headline": "Opération du pape : le nodule retiré au poumon était cancéreux, annonce le Vatican",
+      "url": "https://www.lemonde.fr/international/article/2026/10/13/operation-du-pape-le-nodule-retire-au-poumon-etait-cancereux-annonce-le-vatican_6793171_3211.html",
+      "publishedAt": "2026-10-13T20:28:18.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/13/754/0/7087/3543/644/322/60/0/ab7dbc7_ftp-1-xo1dg7u3od0t-5343378-01-06.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
       "id": "1bc5f980511e",
       "outletId": "ouest-france",
       "headline": "Le Vatican annonce que l’opération au poumon du pape Léon XIV « s’est bien déroulée »",
@@ -44,7 +56,7 @@
       "url": "https://www.lemonde.fr/international/article/2026/10/13/l-operation-du-pape-au-poumon-s-est-bien-deroulee-annonce-le-vatican_6793171_3210.html",
       "publishedAt": "2026-10-13T19:04:33.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/13/754/0/7087/3543/644/322/60/0/ab7dbc7_ftp-1-xo1dg7u3od0t-5343378-01-06.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -56,7 +68,7 @@
       "url": "https://www.lefigaro.fr/international/l-operation-du-pape-leon-xiv-pour-un-nodule-au-poumon-s-est-bien-deroulee-annonce-le-vatican-20261013",
       "publishedAt": "2026-10-13T18:53:36.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/13/ecf5e72875f59c715114b3b12288d79fcdcc4e5c54d9617b94b067c2b3803c3a.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -68,7 +80,7 @@
       "url": "https://www.lefigaro.fr/actualite-france/a-rome-l-operation-du-pape-leon-xiv-suscite-emoi-et-speculations-20261013",
       "publishedAt": "2026-10-13T18:53:35.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/13/56ba9bb010a663be8087f94a19cceb53ed46d3dbb3db20adb70c5b4bd09f3356.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -391,7 +403,7 @@
       "url": "https://sante.lefigaro.fr/medecine/un-nodule-localise-dans-mon-poumon-faut-il-s-inquieter-de-l-operation-que-va-subir-le-pape-leon-xiv-20261011",
       "publishedAt": "2026-10-11T15:04:17.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/2848x1602_crop/2026/10/11/f0d568d1574afef78cb76d03a2d0a567874ec9a3344b2bade40db8cd1e848e48.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -546,22 +558,19 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le chef de l'Église a subi l'ablation programmée de son nodule pulmonaire à l'hôpital romain.",
-      "Le Saint-Siège a officialisé le bon déroulement de l'intervention chirurgicale selon le calendrier prévu.",
-      "Cette première alerte médicale survient après plus d'une année d'exercice aux cadences intenses."
+      "Le Saint-Siège a révélé que la masse pulmonaire extraite du souverain pontife présentait un caractère cancéreux.",
+      "Cette intervention fait suite à la découverte précoce d'une lésion après plus d'une année et demie d'un mandat particulièrement exigeant."
     ],
     "centre": [
-      "La polyclinique Gemelli a accueilli le dirigeant catholique pour son retrait de lésion pulmonaire.",
-      "Le Vatican a confirmé la réussite de l'acte médical et le retour du patient dans ses appartements.",
-      "Les calendriers officiels restent suspendus afin d'assurer la convalescence du souverain pontife."
+      "Les autorités vaticanes ont officialisé la nature maligne du nodule retiré lors de l'intervention chirurgicale.",
+      "Le chef de l'Église avait lui-même prévenu les fidèles de cette opération concernant une anomalie détectée à un stade initial."
     ],
     "droite": [
-      "Le service de communication du Vatican a validé le succès de la chirurgie pulmonaire du pape.",
-      "Le souverain pontife a regagné sa chambre suite à cette extraction de masse réalisée précocement.",
-      "Plusieurs observateurs soulignent la charge émotionnelle liée à cette première épreuve de santé."
+      "Le diagnostic post-opératoire communiqué par Rome confirme la malignité du tissu pulmonaire retiré au pape.",
+      "Cette épreuve médicale survient après une période d'activité soutenue caractérisant les premiers mois de ce pontificat."
     ]
   },
-  "differences": "Les trois sensibilités convergent sur le succès de l'opération chirurgicale du pape à l'hôpital Gemelli et sur son retour en chambre, confirmés par les communiqués du Vatican. La droite insiste davantage sur l'émotion et les spéculations entourant cette première alerte de santé d'ampleur pour ce pontificat. Le centre adopte une couverture institutionnelle stricte alignée sur les messages officiels du Saint-Siège. La gauche et le centre gauche se focalisent quant à eux sur le bon déroulement technique de l'ablation et rappellent le rythme intense qui caractérisait l'exercice de ses fonctions jusqu'à présent.",
+  "differences": "Les trois sensibilités rapportent uniformément la révélation par le Vatican de la nature cancéreuse du nodule pulmonaire retiré au souverain pontife, tout en rappelant le contexte d'un pontificat marqué par un rythme intense. Le centre et la droite maintiennent une approche institutionnelle sobre reprenant les déclarations officielles, tandis que la gauche intègre davantage le calendrier personnel du pape qui avait lui-même anticipé l'annonce de son intervention dès le week-end précédent.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 48
+  "summarizedArticleCount": 49
 }
