@@ -51,7 +51,7 @@ export default function StoryCard({
     >
       <a
         href={withBase(storyUrl(story))}
-        className="group/card flex items-start gap-4 rounded-xl border border-transparent px-5 py-5 transition-colors duration-200 ease-out hover:border-line hover:bg-hover"
+        className="group/card flex items-start gap-4 rounded-xl px-5 py-5 transition-colors duration-200 ease-out hover:bg-hover"
       >
         <div className="min-w-0 flex-1">
           {/* The "En hausse" slot sits above the title — a per-visitor
