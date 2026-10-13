@@ -5,6 +5,17 @@
   "createdAt": "2026-10-13T05:01:28.002Z",
   "articles": [
     {
+      "id": "23a63961b92b",
+      "outletId": "europe-1",
+      "headline": "Vaccination contre la grippe et le Covid-19 : voici les nouveautés mises en place cette année",
+      "url": "https://www.europe1.fr/sante/vaccination-contre-la-grippe-et-le-covid-19-voici-les-nouveautes-mises-en-place-cette-annee-1139072?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-13T07:00:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/11/16/000_36tt6xv_1_6acb98f6f37b6.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "24b7acc97ff8",
       "outletId": "bfmtv",
       "headline": "Grippe et COVID-19 : la vaccination démarre",
@@ -22,7 +33,7 @@
       "url": "https://www.ouest-france.fr/sante/vaccin/quoi-de-neuf-dans-la-campagne-de-vaccination-grippe-covid-6cf7b552-c2f1-11f1-a107-88e926908e5f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-13T06:22:03.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZWViMDdjNGEwOTcxMjRmNDI2OTRlOGRmOTA5ZTVjNWY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=60db07846bfd03e2da0d50a7326339d97d3da13afed3af8d655c76849348d509",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -115,5 +126,24 @@
       "section": "society"
     }
   ],
-  "section": "society"
+  "section": "society",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le lancement de la campagne de vaccination conjointe contre la grippe et le Covid-19 s'adresse en priorité aux personnes vulnérables.",
+      "Les autorités sanitaires rappellent l'importance de se protéger face aux risques de formes graves, même pour les individus ne présentant pas de profil à risque."
+    ],
+    "centre": [
+      "La campagne de vaccination hivernale contre le Covid-19 et la grippe saisonnière débute ce mardi pour cibler plus de vingt millions de personnes fragiles.",
+      "L'enjeu principal réside dans l'amélioration du taux de couverture vaccinale après une saison précédente particulièrement difficile et meurtrière.",
+      "Les articles rappellent les modalités pratiques, incluant le calendrier, le remboursement et les publics concernés par ces injections."
+    ],
+    "droite": [
+      "Le début de la campagne de vaccination intervient après un bilan lourd recensant des milliers de décès et de nombreux passages aux urgences l'hiver dernier.",
+      "Plusieurs nouveautés sont introduites pour simplifier l'accès aux doses et encourager la population ciblée à accomplir la démarche."
+    ]
+  },
+  "differences": "Les trois camps soulignent uniformément le lancement de la campagne conjointe de vaccination et l'impératif de protéger les populations vulnérables après une saison épidémique rude. La droite insiste particulièrement sur les bilans chiffrés de mortalité et sur les nouveautés administratives destinées à relancer la couverture vaccinale. Le centre adopte une approche informative globale axée sur les aspects pratiques et logistiques, tandis que la gauche donne davantage la parole à la recherche pour rappeler la légitimité médicale de la vaccination face aux formes graves.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 11
 }

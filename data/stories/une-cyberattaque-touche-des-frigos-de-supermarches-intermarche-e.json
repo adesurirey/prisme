@@ -5,6 +5,40 @@
   "createdAt": "2026-10-12T11:01:35.950Z",
   "articles": [
     {
+      "id": "96a28e0b9d46",
+      "outletId": "franceinfo",
+      "headline": "Après la cyberattaque visant des frigos, le PDG de Coopérative U tempère l'ampleur des dégâts dans ses supermarchés",
+      "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/apres-la-cyberattaque-dans-les-supermarches-le-pdg-de-cooperative-u-tempere-l-ampleur-des-degats-dans-ses-magasins_8235124.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-13T07:52:09.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/IRCvRTg7JfVxEr6ExORviLGrFMQ/0x0:5000x2812/432x243/filters:format(jpg)/2026/10/13/6acddb907c4d3951319091.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "00cd69618594",
+      "outletId": "tf1-info",
+      "headline": "\"Voici combien ça représente\" : un patron de supermarché fait ses comptes après la cyberattaque contre des systèmes frigorifiques",
+      "url": "https://www.tf1info.fr/societe/reportage-video-ca-represente-16-000-euros-un-patron-de-supermarche-intermarche-de-parempuyre-en-gironde-fait-ses-comptes-apres-la-cyberattaque-contre-des-systemes-frigorifiques-2469557.html",
+      "publishedAt": "2026-10-13T07:50:43.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/960/540/cap-patron-suop-843c1b-1@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "dfdd4a032173",
+      "outletId": "le-figaro",
+      "headline": "Piratage des systèmes frigorifiques de supermarchés : le patron de Coopérative U dénonce une attaque «gravissime»",
+      "url": "https://www.lefigaro.fr/societes/piratage-des-systemes-frigorifiques-de-supermarches-le-patron-de-cooperative-u-denonce-une-attaque-gravissime-20261013",
+      "publishedAt": "2026-10-13T07:33:46.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/13/35e9c4900e891800120f7cb534a320cf860deadb24fc2f5616ec6d0af3578771.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "7e8d7868f6f3",
       "outletId": "atlantico",
       "headline": "Mega piratage de la chaîne du froid française : sommes-nous prêts aux guerres numériques qui sont déjà là ?",
@@ -13,6 +47,17 @@
       "imageUrl": "https://atlantico.codexcdn.net/assets/as7cglkKJx5z5pMeq.jpg",
       "frontPage": false,
       "kind": "opinion",
+      "section": "science"
+    },
+    {
+      "id": "852765bb02e6",
+      "outletId": "lexpress",
+      "headline": "Massive et inédite : ce que l'on sait de la cyberattaque qui a visé des supermarchés",
+      "url": "https://www.lexpress.fr/societe/massive-et-inedite-ce-que-lon-sait-de-la-cyberattaque-qui-a-vise-des-supermarches-XY3MFDB52BBMTJFE25N5RV4JB4/",
+      "publishedAt": "2026-10-13T06:54:25.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/25ZMKXXMDVCGPEYWEN7RNNE6GQ.jpg?auth=8813fecd046126fae2217097e42a434a1a47422d52dd2b99e668ecb26670c575&smart=true&width=5999&height=3991",
+      "frontPage": false,
+      "kind": "news",
       "section": "science"
     },
     {
@@ -59,6 +104,17 @@
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
+    },
+    {
+      "id": "1a8c1d83c3f5",
+      "outletId": "le-parisien",
+      "headline": "Cyberattaque contre les réfrigérateurs : « des milliers d’euros » perdus et de la « stupeur », le patron des magasins U fait un premier bilan",
+      "url": "https://www.leparisien.fr/economie/cyberattaque-contre-les-refrigerateurs-des-milliers-deuros-perdus-et-de-la-stupeur-le-patron-des-magasins-u-fait-un-premier-bilan-13-10-2026-PSA4JJ5OFVD2FA6ANIUZ6MPN4M.php",
+      "publishedAt": "2026-10-12T22:00:00.000Z",
+      "frontPage": false,
+      "dayPrecision": true,
+      "kind": "news",
+      "section": "economy"
     },
     {
       "id": "8390daa83a4b",
@@ -547,20 +603,23 @@
     "gauche": [
       "Un sabotage informatique nocturne a touché des centaines d'établissements de vente au détail, paralysant leurs installations de réfrigération connectées.",
       "Des quantités considérables de marchandises fraîches ont été perdus, plongeant les commerçants dans une grande détresse.",
-      "Une investigation a été lancée par un service spécialisé pour analyser la vulnérabilité logicielle mise en cause."
+      "Une investigation a été lancée par un service spécialisé pour analyser la vulnérabilité logicielle mise en cause.",
+      "Une partie de ce camp nuance l'ampleur totale du sinistre, estimant que la destruction de denrées concerne une minorité d'établissements au sein d'une enseigne majeure."
     ],
     "centre": [
       "Une intrusion numérique d'une ampleur inédite a affecté les dispositifs thermiques de grandes surfaces, provoquant des destructions massives de denrées fraîches.",
       "Le préjudice matériel s'élève à plusieurs millions d'euros pour plusieurs grandes enseignes de la distribution.",
-      "Environ quatre cents magasins ont été touchés par cette opération visant les infrastructures frigorifiques du fabricant Danfoss."
+      "Environ quatre cents magasins ont été touchés par cette opération visant les infrastructures frigorifiques du fabricant Danfoss.",
+      "Les rédactions continuent de documenter le bilan global de cette panne géante et ses conséquences économiques directes."
     ],
     "droite": [
       "Une attaque informatique majeure a perturbé les systèmes de froid de distributeurs en exploitant des failles chez un fournisseur.",
-      "Cet incident met en lumière la vulnérabilité des infrastructures essentielles face aux conflits numériques contemporains.",
-      "Le parquet de Paris a ouvert une enquête pour identifier les auteurs de cette prise de contrôle à distance."
+      "Cet incident met en lumière la vulnérabilité des infrastructures essentielles face aux conflits numériques contemporains et aux risques de guerre hybride.",
+      "Le parquet de Paris a ouvert une enquête pour identifier les auteurs de cette prise de contrôle à distance.",
+      "Les estimations financières varient selon les types de points de vente, allant de quelques dizaines de milliers d'euros à près de 200 000 euros pour les plus grands."
     ]
   },
-  "differences": "Les trois camps s'accordent sur le constat d'une cyberattaque d'envergure ayant visé les équipements frigorifiques de la grande distribution. La gauche insiste principalement sur l'impact humain et le désarroi des commerçants face aux pertes. Le centre détaille l'ampleur financière des dégâts matériels ainsi que les enseignes touchées, s'appuyant sur les derniers faits recensés. Enfin, la droite adopte un angle géopolitique et stratégique, s'interrogeant sur la préparation du pays face aux guerres numériques, tout en intégrant l'enquête judiciaire en cours.",
+  "differences": "Les trois camps s'accordent sur le constat d'une cyberattaque d'envergure ayant visé les équipements frigorifiques de la grande distribution. La gauche met en avant la détresse des commerçants tout en intégrant des propos rassurants sur une partie des magasins épargnés. Le centre détaille l'ampleur financière des dégâts matériels ainsi que les bilans chiffrés des enseignes touchées. Enfin, la droite et son aile modérée adoptent un angle à la fois stratégique sur la vulnérabilité des infrastructures logistiques face aux guerres numériques et précis sur l'évaluation monétaire des pertes subies par les supermarchés.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 48
+  "summarizedArticleCount": 53
 }
