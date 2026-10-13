@@ -5,6 +5,29 @@
   "createdAt": "2026-10-12T22:01:20.289Z",
   "articles": [
     {
+      "id": "ad9dce4ac0c7",
+      "outletId": "europe-1",
+      "headline": "L'acteur RJ Mitte, de la série «Breaking Bad», est mort",
+      "url": "https://www.europe1.fr/international/lacteur-rj-mitte-de-la-serie-breaking-bad-est-mort-1143917?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-13T04:39:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/13/06/063_2219088499_1_6acdb5a1e0f88.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
+      "id": "0418de38eb9f",
+      "outletId": "ouest-france",
+      "headline": "L’acteur RJ Mitte, de la série « Breaking Bad », est mort",
+      "url": "https://www.ouest-france.fr/necrologie/lacteur-rj-mitte-de-la-serie-breaking-bad-est-mort-c2afdf64-c6bc-11f1-9522-1f9ae0711c0a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-13T04:36:58.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNDRjOGI1MGFhNjYzYmRkYmQ5OWFiZWIxN2FiOGI5ZmY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=0c8378af04c869da1f14e299c5b450e64196dc9a36e36f5c540d12f590b947e3",
+      "frontPage": true,
+      "kind": "news",
+      "section": "culture",
+      "everFrontPage": true
+    },
+    {
       "id": "9d029ecf4c6d",
       "outletId": "france-24",
       "headline": "L'acteur RJ Mitte, qui jouait le fils de Walter White dans la série \"Breaking Bad\", est mort",
@@ -95,5 +118,26 @@
       "section": "culture"
     }
   ],
-  "section": "culture"
+  "section": "culture",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le comédien américain RJ Mitte, mondialement connu pour son interprétation du fils de Walter White dans Breaking Bad, est décédé à 34 ans.",
+      "Atteint de paralysie cérébrale comme son personnage, il s'était fortement engagé dans la défense des droits et de l'inclusion des personnes en situation de handicap.",
+      "Les articles rappellent son parcours artistique tout en saluant son militantisme pour sensibiliser le public aux questions de handicap."
+    ],
+    "centre": [
+      "L'acteur RJ Mitte, qui campait Flynn dans la série à succès Breaking Bad, est mort à l'âge de 34 ans selon une annonce de son agent.",
+      "Les publications rappellent son engagement public en faveur de l'accessibilité et des droits des personnes handicapées.",
+      "Certains articles précisent qu'il s'apprêtait à tourner dans de nouveaux projets cinématographiques."
+    ],
+    "droite": [
+      "L'acteur américain RJ Mitte, célèbre pour son rôle de Walter White Jr. dans la série culte Breaking Bad, est mort à 34 ans.",
+      "Certains médias évoquent un décès survenu au Texas et mentionnent l'ouverture d'une enquête ainsi que l'hypothèse d'un suicide.",
+      "Les communiqués de son représentant n'avaient initialement pas précisé la cause exacte de sa disparition."
+    ]
+  },
+  "differences": "La gauche et le centre choisissent de mettre principalement en avant la dimension militante de l'acteur et son engagement de longue date pour l'inclusion des personnes atteintes de paralysie cérébrale, soulignant sa démarche d'activiste. À l'inverse, la droite accorde une attention plus directe aux circonstances factuelles de sa mort, en mentionnant l'ouverture d'une enquête policière et l'hypothèse d'un suicide, tout en rappelant son rôle iconique à la télévision.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 10
 }

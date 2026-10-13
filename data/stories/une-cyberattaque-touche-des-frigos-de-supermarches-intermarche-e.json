@@ -5,6 +5,28 @@
   "createdAt": "2026-10-12T11:01:35.950Z",
   "articles": [
     {
+      "id": "78956dc70d92",
+      "outletId": "europe-1",
+      "headline": "«On a jeté 50.000 euros de marchandises» : après la cyberattaque, les grandes surfaces comptent leurs pertes",
+      "url": "https://www.europe1.fr/societe/on-a-jete-50000-euros-de-marchandises-apres-la-cyberattaque-les-grandes-surfaces-comptent-leurs-pertes-1142930?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-13T04:43:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/12/21/080_hl_nguyonnet_3282256_1_6acd36e2dd3f3.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "ce1b718fd75b",
+      "outletId": "bfmtv",
+      "headline": "\"C'est quasiment 50.000 euros de marchandises à la poubelle\": la facture salée des dégâts après une cyberattaque visant les systèmes de refroidissement des frigos d'une centaine d'enseignes",
+      "url": "https://www.bfmtv.com/societe/video-c-est-quasiment-50-000-euros-de-marchandises-a-la-poubelle-la-facture-salee-des-degats-apres-une-cyberattaque-visant-les-systemes-de-refroidissement-des-frigos-d-une-centaine-d-enseignes_VN-202610130077.html",
+      "publishedAt": "2026-10-13T04:21:21.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/u1ToPVLwOtqxvrruBwufUBwn-Hk=/0x0:1280x720/800x0/images/C-est-quasiment-50-000-euros-de-marchandises-a-la-poubelle-la-facture-salee-des-degats-apres-une-cyberattaque-visant-les-systemes-de-refroidissement-des-frigos-d-une-centaine-d-enseignes-2364131.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "e7e35ff3d391",
       "outletId": "20-minutes",
       "headline": "Produits à jeter, dégivrage à distance… Ce que l’on sait sur la cyberattaque inédite des frigos des supermarchés",
@@ -158,7 +180,7 @@
       "url": "https://www.lemonde.fr/economie/article/2026/10/12/journee-noire-dans-les-supermarches-francais-apres-une-cyberattaque-massive_6792763_3234.html",
       "publishedAt": "2026-10-12T17:29:45.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/12/836/0/5847/2923/644/322/60/0/05f2880_upload-1-qsvdivkvupcg-maxnewsspecialtwo756943.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -509,14 +531,15 @@
       "Une intrusion numérique d'une ampleur inédite a affecté les dispositifs thermiques de grandes surfaces, provoquant des élévations de température.",
       "Le préjudice matériel est estimé à plusieurs dizaines de millions d'euros suite à la destruction des denrées.",
       "Les enseignes soulignent la gravité de cette atteinte à la chaîne d'approvisionnement alors que les recherches sur l'origine du piratage avancent.",
-      "De nombreux supermarchés ont été impactés au début de la semaine par cette opération visant les infrastructures frigorifiques."
+      "Environ quatre cents magasins de la grande distribution ont été touchés par cette opération visant les infrastructures frigorifiques du fabricant danois Danfoss."
     ],
     "droite": [
       "Une attaque informatique majeure a perturbé les systèmes de froid de distributeurs en exploitant des failles chez le fabricant Danfoss.",
-      "Cet incident souligne la fragilité des dispositifs connectés face à l'imbrication des technologies numériques et industrielles."
+      "Cet incident souligne la fragilité des dispositifs connectés face à l'imbrication des technologies numériques et industrielles.",
+      "Le parquet de Paris a ouvert une enquête pour identifier les auteurs de cette prise de contrôle à distance des congélateurs."
     ]
   },
-  "differences": "Les trois camps s'accordent sur le constat d'une cyberattaque d'envergure ayant visé les équipements frigorifiques des supermarchés. La gauche, incluant les nuances de centre gauche, insiste sur l'impact humain et le désarroi des commerçants face aux denrées jetées. Le centre se focalise principalement sur l'ampleur financière des dégâts matériels et la gravité de la menace pour la chaîne alimentaire. Enfin, la droite adopte un angle davantage structurel en insistant sur la défaillance des boîtiers Danfoss et sur les risques liés à la convergence des technologies informatiques.",
+  "differences": "Les trois camps s'accordent sur le constat d'une cyberattaque d'envergure ayant visé les équipements frigorifiques des supermarchés. La gauche insiste sur l'impact humain et le désarroi des commerçants face aux denrées jetées. Le centre se focalise sur l'ampleur financière des dégâts matériels, précisant le nombre de magasins touchés et la piste du fabricant Danfoss. Enfin, la droite adopte un angle structurel tout en intégrant désormais les détails chiffrés des pertes individuelles et l'ouverture d'une enquête judiciaire.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 44
+  "summarizedArticleCount": 46
 }
