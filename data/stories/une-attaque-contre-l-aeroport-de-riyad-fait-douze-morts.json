@@ -5,6 +5,17 @@
   "createdAt": "2026-10-11T09:07:20.230Z",
   "articles": [
     {
+      "id": "e42c23ab0707",
+      "outletId": "mediapart",
+      "headline": "Frappée par les houthistes, l’Arabie saoudite en quête d’alliés introuvables",
+      "url": "https://www.mediapart.fr/journal/international/131026/frappee-par-les-houthistes-l-arabie-saoudite-en-quete-d-allies-introuvables",
+      "publishedAt": "2026-10-13T05:57:50.000Z",
+      "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/10/13/261013-img-arabie-saoudite.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "a550ee988645",
       "outletId": "20-minutes",
       "headline": "Guerre au Moyen-Orient : Les Houthis attaquent encore l’aéroport de Riyad et mettent en garde les Etats-Unis",
@@ -936,11 +947,9 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le pouvoir saoudien admet traverser une période de forte vulnérabilité suite à la multiplication des offensives aériennes.",
-      "L'activité de la plateforme aéroportuaire principale demeure totalement paralisée au début de la semaine.",
-      "Les autorités étudient des mesures de rétorsion d'envergure contre les insurgés yéménites.",
-      "Les frappes menées par les rebelles mettent directement à mal les ambitions économiques et l'ouverture du royaume portées par le prince héritier.",
-      "Les rebelles yéménites, soutenus par l'Iran, profèrent des menaces de représailles sévères contre Washington en cas d'implication militaire directe."
+      "L'aéroport de Riyad subit de nouveaux tirs de missiles en provenance du Yémen, intensifiant le conflit.",
+      "Cette escalade militaire accentue l'isolement diplomatique de Riyad et complique sa recherche d'appuis régionaux.",
+      "La persistance des hostilités fait craindre une déstabilisation durable de l'ensemble de la zone."
     ],
     "centre": [
       "Les rebelles houthis multiplient les actions armées visant les infrastructures stratégiques et aéroportuaires du royaume.",
@@ -957,7 +966,7 @@
       "Les bombardements persistants continuent de semer la destruction et de provoquer de nouvelles détonations au sein de la métropole."
     ]
   },
-  "differences": "L'ensemble des médias rend compte des attaques attribuées aux rebelles houthis contre l'Arabie saoudite et de la menace persistante pesant sur la capitale. La gauche intègre désormais explicitement le soutien de l'Iran et la menace d'une riposte contre Washington, rejoignant ainsi la posture géopolitique du centre. Ce dernier continue par ailleurs d'élargir sa couverture aux tensions régionales dans le détroit d'Ormuz ainsi qu'aux répercussions logistiques et sportives. Enfin, la droite et sa frange centriste maintiennent un ancrage prononcé sur le bilan humain, les dégâts matériels et la détresse des passagers sur place.",
+  "differences": "La gauche met l'accent sur l'isolement géopolitique croissant de l'Arabie saoudite et l'impasse de sa diplomatie face aux houthistes, tout en intégrant les répercussions régionales du conflit. Le centre élargit la focale vers les perturbations logistiques, les consignes internationales pour l'aviation et les tensions dans le détroit d'Ormuz. De son côté, la droite centre principalement son analyse sur le bilan humain, les dégâts matériels sur place et la détresse des passagers filmée lors des attaques.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 83
+  "summarizedArticleCount": 84
 }
