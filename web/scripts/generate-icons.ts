@@ -1,8 +1,8 @@
 /**
  * One-off generator for the PWA icon PNGs (issue #64), committed to
  * web/public/icons/ and served at /prisme/icons/*.png. It rasterizes the
- * Prisme mark's single source — prismeMarkSvg() in web/src/favicon.ts, the
- * upright P — with sharp. Run manually whenever the mark ever changes:
+ * Prisme mark's single source — src/assets/brand/prisme-mark.svg, the P at
+ * the wordmark's angle — with sharp. Run manually whenever the mark ever changes:
  *
  *   pnpm --filter @prisme/web generate:icons
  *
@@ -12,10 +12,33 @@
  * alpha-cropped icon: apple-touch-icon.png is the maskable treatment at
  * 180px, with less padding.
  */
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
-import { prismeMarkSvg } from '../src/favicon';
+
+/** The generated mark asset is the single source of the geometry; this
+ * script runs under tsx (no Vite ?raw loader), so it reads the file and
+ * re-applies the same pad + color transform as favicon.ts. */
+const ASSET = path.resolve(
+  import.meta.dirname,
+  '../src/assets/brand/prisme-mark.svg',
+);
+
+async function prismeMarkSvg(color: string, pad = 0): Promise<string> {
+  const svg = await readFile(ASSET, 'utf8');
+  const [, , w, h] = svg
+    .match(/viewBox="([^"]+)"/)![1]
+    .split(' ')
+    .map(Number);
+  const p = pad * h;
+  return svg
+    .replace(
+      /viewBox="[^"]+"/,
+      `viewBox="${parseFloat(svg.match(/viewBox="([^"]+)"/)![1].split(' ')[0]) - p} ${parseFloat(svg.match(/viewBox="([^"]+)"/)![1].split(' ')[1]) - p} ${w + 2 * p} ${h + 2 * p}"`,
+    )
+    .replace(/ role="img" aria-label="Prisme"/, '')
+    .replaceAll('currentColor', color);
+}
 
 const OUT_DIR = path.resolve(import.meta.dirname, '../public/icons');
 
@@ -40,7 +63,7 @@ async function png(svg: string, height: number, pad: number): Promise<Buffer> {
  * (no baked pad — the scale does the padding for maskable/apple). */
 async function onBackground(size: number, scale: number): Promise<Buffer> {
   const inner = Math.round(size * scale);
-  const mark = await png(prismeMarkSvg(INK), inner, 0);
+  const mark = await png(await prismeMarkSvg(INK), inner, 0);
   return sharp({
     create: { width: size, height: size, channels: 4, background: BACKGROUND },
   })
@@ -61,8 +84,14 @@ const PAD = 0.12;
 const anyHeight = (size: number) => Math.round(size * 0.88 * (1 + 2 * PAD));
 
 const icons: Array<[string, Buffer]> = [
-  ['icon-192.png', await png(prismeMarkSvg(INK, PAD), anyHeight(192), PAD)],
-  ['icon-512.png', await png(prismeMarkSvg(INK, PAD), anyHeight(512), PAD)],
+  [
+    'icon-192.png',
+    await png(await prismeMarkSvg(INK, PAD), anyHeight(192), PAD),
+  ],
+  [
+    'icon-512.png',
+    await png(await prismeMarkSvg(INK, PAD), anyHeight(512), PAD),
+  ],
   // Maskable safe zone: content must fit a circle of 80% diameter. The mark
   // is a tall narrow glyph — height is the binding dimension.
   ['maskable-192.png', await onBackground(192, 0.63)],
