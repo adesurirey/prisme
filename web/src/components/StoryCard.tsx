@@ -7,6 +7,7 @@ import {
   pickStoryImage,
   reportingOutletIds,
 } from '@prisme/domain';
+import { storyUrl } from '../archives';
 import { formatStoryDate } from '../article-date';
 import { withBase } from '../data';
 import BlindspotBadge from './BlindspotBadge';
@@ -49,7 +50,7 @@ export default function StoryCard({
       data-coverage={reporting}
     >
       <a
-        href={withBase(`/sujet/${story.slug}/`)}
+        href={withBase(storyUrl(story))}
         className="group/card flex items-start gap-4 rounded-xl border border-transparent px-5 py-5 transition-colors duration-200 ease-out hover:border-line hover:bg-hover"
       >
         <div className="min-w-0 flex-1">

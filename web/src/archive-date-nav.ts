@@ -19,7 +19,7 @@ export function resolveArchiveTarget(
 ): string | null {
   if (!day || !isStoryDayKey(day) || !days.length || !base) return null;
   const withRecord = days.find((d) => d <= day) ?? days[days.length - 1];
-  return `${base}/archives/${withRecord}/`;
+  return `${base}/${withRecord}/`;
 }
 
 export function installArchiveDateNav(

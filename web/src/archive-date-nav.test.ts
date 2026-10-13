@@ -10,13 +10,13 @@ import { resolveArchiveTarget } from './archive-date-nav';
 describe('resolveArchiveTarget', () => {
   it('opens the archive of the chosen day', () => {
     expect(resolveArchiveTarget('2026-10-13', ['2026-10-13'], '/prisme')).toBe(
-      '/prisme/archives/2026-10-13/',
+      '/prisme/2026-10-13/',
     );
   });
 
   it('snaps a day without a record to the nearest day with one (newer)', () => {
     expect(resolveArchiveTarget('2026-10-14', ['2026-10-13'], '/prisme')).toBe(
-      '/prisme/archives/2026-10-13/',
+      '/prisme/2026-10-13/',
     );
   });
 
@@ -30,7 +30,7 @@ describe('resolveArchiveTarget', () => {
         ['2026-10-13', '2026-10-12'],
         '/prisme',
       ),
-    ).toBe('/prisme/archives/2026-10-12/');
+    ).toBe('/prisme/2026-10-12/');
   });
 
   it('refuses anything that is not a day key, an empty list or no base', () => {

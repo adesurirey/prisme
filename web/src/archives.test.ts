@@ -1,6 +1,12 @@
 import { isStoryDayKey, type Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
-import { archiveDays, archiveUrl, frenchArchiveDate } from './archives';
+import {
+  archiveDays,
+  archiveDaysForRoutes,
+  archiveUrl,
+  frenchArchiveDate,
+  storyUrl,
+} from './archives';
 
 /**
  * The archive selection (issue #99, ADR-0017): one day per storyDay among
@@ -97,13 +103,41 @@ describe('frenchArchiveDate', () => {
 });
 
 describe('archiveUrl and isStoryDayKey', () => {
-  it('builds the /archives/<day>/ URL', () => {
-    expect(archiveUrl('2026-10-13')).toBe('/archives/2026-10-13/');
+  it('builds the root /<day>/ URL', () => {
+    expect(archiveUrl('2026-10-13')).toBe('/2026-10-13/');
   });
 
   it('accepts only ISO YYYY-MM-DD keys', () => {
     expect(isStoryDayKey('2026-10-13')).toBe(true);
     expect(isStoryDayKey('13/10/2026')).toBe(false);
     expect(isStoryDayKey('')).toBe(false);
+  });
+});
+
+describe('storyUrl', () => {
+  it('builds the canonical /<storyDay>/<slug>/ URL', () => {
+    expect(storyUrl({ storyDay: '2026-10-12', slug: 'un-sujet' })).toBe(
+      '/2026-10-12/un-sujet/',
+    );
+  });
+});
+
+describe('archiveDaysForRoutes', () => {
+  it('keeps every well-formed day', () => {
+    expect(
+      archiveDaysForRoutes([
+        story({ id: 'a', storyDay: '2026-10-13', everInEdition: true }),
+        story({ id: 'b', storyDay: '2026-10-12', everInEdition: true }),
+      ]).map((d) => d.day),
+    ).toEqual(['2026-10-13', '2026-10-12']);
+  });
+
+  it('drops non-ISO days so the root date namespace cannot collide with other routes', () => {
+    expect(
+      archiveDaysForRoutes([
+        story({ id: 'a', storyDay: '13/10/2026', everInEdition: true }),
+        story({ id: 'b', storyDay: '2026-10-13', everInEdition: true }),
+      ]).map((d) => d.day),
+    ).toEqual(['2026-10-13']);
   });
 });

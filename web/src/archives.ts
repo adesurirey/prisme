@@ -1,5 +1,5 @@
 import type { Story } from '@prisme/domain';
-import { rankStories } from '@prisme/domain';
+import { isStoryDayKey, rankStories } from '@prisme/domain';
 import { formatParisDate } from './paris-date';
 
 /**
@@ -53,7 +53,26 @@ export function frenchArchiveDate(day: string): string {
   return label.charAt(0).toUpperCase() + label.slice(1);
 }
 
-/** The archive URL for a day key. */
+/** The archive URL for a day key — at the site root (spec #96 follow-up). */
 export function archiveUrl(day: string): string {
-  return `/archives/${day}/`;
+  return `/${day}/`;
+}
+
+/**
+ * The canonical URL of a Story page: the Story's own storyDay (fixed at
+ * creation, ADR-0017) followed by the slug — never the day the reader is
+ * browsing. A backfill Story shown on the home today links under its own
+ * day.
+ */
+export function storyUrl(story: Pick<Story, 'storyDay' | 'slug'>): string {
+  return `/${story.storyDay}/${story.slug}/`;
+}
+
+/**
+ * The days eligible for a root /<date>/ URL: strictly ISO day keys
+ * (isStoryDayKey), so the date namespace can never collide with the other
+ * root routes. The [date] page's getStaticPaths routes only these.
+ */
+export function archiveDaysForRoutes(stories: Story[]): ArchiveDay[] {
+  return archiveDays(stories).filter((d) => isStoryDayKey(d.day));
 }

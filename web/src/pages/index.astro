@@ -4,7 +4,7 @@ import {
   coverageGroup,
   coverageOrder,
 } from '@prisme/domain';
-import { archiveDays, frenchArchiveDate } from '../archives';
+import { archiveDays, archiveUrl, frenchArchiveDate } from '../archives';
 import LeaningBadge from '../components/LeaningBadge';
 import StoryCard from '../components/StoryCard';
 import { loadAllStoryFiles, loadEdition, loadOutlets, withBase } from '../data';
@@ -95,7 +95,7 @@ const archiveNext = archive[0]?.day;
       {
         archivePrevious && archiveLatest ? (
           <a
-            href={withBase(`/archives/${archivePrevious}/`)}
+            href={withBase(archiveUrl(archivePrevious))}
             class="transition-colors hover:text-ink"
             rel="prev"
           >
@@ -125,7 +125,7 @@ const archiveNext = archive[0]?.day;
       {
         archiveNext && archiveLatest ? (
           <a
-            href={withBase(`/archives/${archiveNext}/`)}
+            href={withBase(archiveUrl(archiveNext))}
             class="transition-colors hover:text-ink"
             rel="next"
           >
