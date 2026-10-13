@@ -22,20 +22,25 @@ const OUT_DIR = path.resolve(import.meta.dirname, '../public/icons');
 const INK = '#1b1b1f';
 const BACKGROUND = '#fcfcfc';
 
-/** The mark's aspect: viewBox 1153.3 wide × 1490 tall. */
-const RATIO = 1153.3 / 1490;
+/** The mark's glyph: 1153.3 wide × 1490 tall (font units). */
+const GLYPH_W = 1153.3,
+  GLYPH_H = 1490;
 
-async function png(svg: string, height: number): Promise<Buffer> {
+/** Rasterize the mark at `height` px for a viewBox with `pad` (fraction of
+ * the glyph height per side — must match the pad baked into `svg`). */
+async function png(svg: string, height: number, pad: number): Promise<Buffer> {
+  const ratio = (GLYPH_W + 2 * pad * GLYPH_H) / (GLYPH_H + 2 * pad * GLYPH_H);
   return sharp(Buffer.from(svg))
-    .resize(Math.round(height * RATIO), height)
+    .resize(Math.round(height * ratio), height)
     .png()
     .toBuffer();
 }
 
-/** Mark centered on an opaque square, at `scale` of the full canvas height. */
+/** Mark centered on an opaque square, at `scale` of the full canvas height
+ * (no baked pad — the scale does the padding for maskable/apple). */
 async function onBackground(size: number, scale: number): Promise<Buffer> {
   const inner = Math.round(size * scale);
-  const mark = await png(prismeMarkSvg(INK), inner);
+  const mark = await png(prismeMarkSvg(INK), inner, 0);
   return sharp({
     create: { width: size, height: size, channels: 4, background: BACKGROUND },
   })
@@ -43,16 +48,21 @@ async function onBackground(size: number, scale: number): Promise<Buffer> {
       {
         input: mark,
         top: Math.round((size - inner) / 2),
-        left: Math.round((size - Math.round(inner * RATIO)) / 2),
+        left: Math.round((size - Math.round(inner * (GLYPH_W / GLYPH_H))) / 2),
       },
     ])
     .png()
     .toBuffer();
 }
 
+// Plain "any" icons: transparent background, glyph at ~88% height with
+// 0.12 pad baked into the viewBox — the mark shouldn't hit the edges.
+const PAD = 0.12;
+const anyHeight = (size: number) => Math.round(size * 0.88 * (1 + 2 * PAD));
+
 const icons: Array<[string, Buffer]> = [
-  ['icon-192.png', await png(prismeMarkSvg(INK), 192)],
-  ['icon-512.png', await png(prismeMarkSvg(INK), 512)],
+  ['icon-192.png', await png(prismeMarkSvg(INK, PAD), anyHeight(192), PAD)],
+  ['icon-512.png', await png(prismeMarkSvg(INK, PAD), anyHeight(512), PAD)],
   // Maskable safe zone: content must fit a circle of 80% diameter. The mark
   // is a tall narrow glyph — height is the binding dimension.
   ['maskable-192.png', await onBackground(192, 0.63)],

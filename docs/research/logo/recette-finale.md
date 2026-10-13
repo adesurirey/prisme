@@ -33,7 +33,8 @@ Pourquoi ces choix :
 - **Courbe linéaire** : la réfraction est continue — chaque lettre suit le même arc
   plutôt qu'un noyau rigide au centre.
 - **Tracking adaptatif** : à petite taille l'air compense le désalignement des lettres
-  penchées (0.08em) ; en display les gros corps demandent moins d'interlettrage
+  penchées — 0.05em en navbar (ajusté au rendu réel ; la valeur explorée de 0.08em
+  paraissait trop lâche) ; en display les gros corps demandent moins d'interlettrage
   (0.04em), sinon le mot se désolidarise.
 - **PRISME en capitales** : plus carré, plus solide — le
   mot tient comme un bloc et le skew lit comme un geste, pas comme du jitter.

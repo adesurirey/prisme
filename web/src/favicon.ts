@@ -8,9 +8,14 @@
  */
 
 /** The mark as an SVG string in `color` (hex) — favicons and PNG icons
- * rasterize as-is, with no CSS, so the color is baked in. */
-export function prismeMarkSvg(color: string): string {
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="116.2 -1490 1153.3 1490"><path fill="${color}" d="M116.2 0V-1490H726.5Q894.4 -1490 1016 -1425Q1137.6 -1360 1203.5 -1243.8Q1269.4 -1127.7 1269.4 -975Q1269.4 -821.4 1202.4 -707Q1135.4 -592.5 1011.2 -528.9Q887 -465.3 716.1 -465.3H337.6V-744H651.6Q734.6 -744 790.7 -773.1Q846.7 -802.2 875 -854.1Q903.4 -906 903.4 -975Q903.4 -1045.5 875 -1096.7Q846.7 -1148 790.6 -1175.8Q734.4 -1203.7 651.1 -1203.7H468.8V0Z"/></svg>`;
+ * rasterize as-is, with no CSS, so the color is baked in. `pad` adds
+ * breathing room around the glyph, as a fraction of the glyph height per
+ * side (0 = the glyph fills the viewBox; favicons sit at ~0.18, matching
+ * how other sites' icons breathe in a browser tab). */
+export function prismeMarkSvg(color: string, pad = 0): string {
+  const p = pad * 1490;
+  const vb = `${116.2 - p} ${-1490 - p} ${1153.3 + 2 * p} ${1490 + 2 * p}`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}"><path fill="${color}" d="M116.2 0V-1490H726.5Q894.4 -1490 1016 -1425Q1137.6 -1360 1203.5 -1243.8Q1269.4 -1127.7 1269.4 -975Q1269.4 -821.4 1202.4 -707Q1135.4 -592.5 1011.2 -528.9Q887 -465.3 716.1 -465.3H337.6V-744H651.6Q734.6 -744 790.7 -773.1Q846.7 -802.2 875 -854.1Q903.4 -906 903.4 -975Q903.4 -1045.5 875 -1096.7Q846.7 -1148 790.6 -1175.8Q734.4 -1203.7 651.1 -1203.7H468.8V0Z"/></svg>`;
 }
 
 /** Favicon data URIs, one per theme (the media attribute on <link> makes the
@@ -20,5 +25,5 @@ export function prismeMarkSvg(color: string): string {
 const URI = (svg: string): string =>
   `data:image/svg+xml,${encodeURIComponent(svg)}`;
 
-export const PRISME_MARK_LIGHT = URI(prismeMarkSvg('#1b1b1f'));
-export const PRISME_MARK_DARK = URI(prismeMarkSvg('#ededf0'));
+export const PRISME_MARK_LIGHT = URI(prismeMarkSvg('#1b1b1f', 0.18));
+export const PRISME_MARK_DARK = URI(prismeMarkSvg('#ededf0', 0.18));
