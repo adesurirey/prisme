@@ -1,45 +1,49 @@
 /**
  * One-off generator for the PWA icon PNGs (issue #64), committed to
  * web/public/icons/ and served at /prisme/icons/*.png. It rasterizes the
- * aurora dot's single source — auroraBallSvg() in web/src/favicon.ts, the
- * same string the favicons come from — with sharp. Run manually whenever
- * the dot ever changes:
+ * Prisme mark's single source — prismeMarkSvg() in web/src/favicon.ts, the
+ * upright P — with sharp. Run manually whenever the mark ever changes:
  *
  *   pnpm --filter @prisme/web generate:icons
  *
  * Two variants per size: plain (transparent background, for the manifest
- * "any" icons) and maskable (the dot shrunk inside a #fcfcfc square so it
+ * "any" icons) and maskable (the mark shrunk inside a #fcfcfc square so it
  * stays inside every platform's safe zone). Apple needs an opaque, non-
  * alpha-cropped icon: apple-touch-icon.png is the maskable treatment at
- * 180px, without extra padding.
+ * 180px, with less padding.
  */
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
-import { auroraBallSvg } from '../src/favicon';
+import { prismeMarkSvg } from '../src/favicon';
 
 const OUT_DIR = path.resolve(import.meta.dirname, '../public/icons');
 
-/** Light-theme gradient stops — same tokens as the favicon's light variant. */
-const BALL = auroraBallSvg(['#dfa414', '#e0415e', '#2e7ce4']);
+const INK = '#1b1b1f';
 const BACKGROUND = '#fcfcfc';
 
-async function png(svg: string, size: number): Promise<Buffer> {
-  return sharp(Buffer.from(svg)).resize(size, size).png().toBuffer();
+/** The mark's aspect: viewBox 1153.3 wide × 1490 tall. */
+const RATIO = 1153.3 / 1490;
+
+async function png(svg: string, height: number): Promise<Buffer> {
+  return sharp(Buffer.from(svg))
+    .resize(Math.round(height * RATIO), height)
+    .png()
+    .toBuffer();
 }
 
-/** Dot centered on an opaque square, at `scale` of the full canvas. */
+/** Mark centered on an opaque square, at `scale` of the full canvas height. */
 async function onBackground(size: number, scale: number): Promise<Buffer> {
   const inner = Math.round(size * scale);
-  const dot = await png(BALL, inner);
+  const mark = await png(prismeMarkSvg(INK), inner);
   return sharp({
     create: { width: size, height: size, channels: 4, background: BACKGROUND },
   })
     .composite([
       {
-        input: dot,
+        input: mark,
         top: Math.round((size - inner) / 2),
-        left: Math.round((size - inner) / 2),
+        left: Math.round((size - Math.round(inner * RATIO)) / 2),
       },
     ])
     .png()
@@ -47,11 +51,13 @@ async function onBackground(size: number, scale: number): Promise<Buffer> {
 }
 
 const icons: Array<[string, Buffer]> = [
-  ['icon-192.png', await png(BALL, 192)],
-  ['icon-512.png', await png(BALL, 512)],
-  ['maskable-192.png', await onBackground(192, 0.7)],
-  ['maskable-512.png', await onBackground(512, 0.7)],
-  ['apple-touch-icon.png', await onBackground(180, 0.83)],
+  ['icon-192.png', await png(prismeMarkSvg(INK), 192)],
+  ['icon-512.png', await png(prismeMarkSvg(INK), 512)],
+  // Maskable safe zone: content must fit a circle of 80% diameter. The mark
+  // is a tall narrow glyph — height is the binding dimension.
+  ['maskable-192.png', await onBackground(192, 0.63)],
+  ['maskable-512.png', await onBackground(512, 0.63)],
+  ['apple-touch-icon.png', await onBackground(180, 0.7)],
 ];
 
 await mkdir(OUT_DIR, { recursive: true });

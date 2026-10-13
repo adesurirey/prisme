@@ -1,7 +1,7 @@
 import type { CoverageGroup, StorySummaries } from '@prisme/domain';
 import { coverageOrder, LEANING_LABELS } from '@prisme/domain';
 import { useState } from 'react';
-import AuroraBall from './AuroraBall';
+import PrismeMark from './PrismeMark';
 
 /**
  * The Prism tabs (issue #7), restyled as a segmented control: one Coverage
@@ -76,7 +76,7 @@ export default function PrismTabs(props: {
           })}
         </div>
         {/* Comparaison: Prisme's own synthesis, styled apart with the
-            favicon's aurora dot as its mark. */}
+            Prisme mark (the upright P) as its icon. */}
         <button
           type="button"
           role="tab"
@@ -88,8 +88,8 @@ export default function PrismTabs(props: {
               : 'border-line text-muted hover:border-line-strong hover:text-ink'
           }`}
         >
-          {/* The aurora ball — Prisme's mark. */}
-          <AuroraBall className="size-3" />
+          {/* The Prisme mark — the upright P, monochrome by design. */}
+          <PrismeMark className="h-3.5 w-auto" />
           Comparaison
         </button>
       </div>
