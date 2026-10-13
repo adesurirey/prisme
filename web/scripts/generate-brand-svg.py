@@ -4,7 +4,7 @@
 Outputs (web/src/assets/brand/):
   prisme-wordmark-nav.svg      wordmark, tracking 0.08em, opsz 14  (small contexts)
   prisme-wordmark-display.svg  wordmark, tracking 0.04em, opsz 32  (large contexts)
-  prisme-mark.svg              skewed P (+20°, the wordmark angle), opsz 14 (favicon, app icons)
+  prisme-mark.svg              skewed P (+12°, the wordmark angle), opsz 14 (favicon, app icons)
 
 Every letterform is the exact Inter glyph outline (quadratic-free, the source
 curves), transformed by exact affine matrices — no hand tracing, no rounding
@@ -23,23 +23,31 @@ import math
 import os
 import urllib.request
 
-FONT_URL = "https://github.com/google/fonts/raw/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf"
-FONT_PATH = os.path.join(os.environ.get("TMPDIR", "/tmp"), "Inter-var.ttf")
+FONT_URL = "https://github.com/google/fonts/raw/main/ofl/fraunces/Fraunces%5BSOFT%2CWONK%2Copsz%2Cwght%5D.ttf"
+FONT_PATH = os.path.join(os.environ.get("TMPDIR", "/tmp"), "Fraunces-var.ttf")
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "src", "assets", "brand")
 
-WEIGHT = 800
-# Uppercase PRISME, adopted after live UI comparison (the mixed heights of
-# 'Prisme' read as jitter under skew; the all-caps block holds).
+WEIGHT = 700  # Bold
+# Uppercase PRISME; fan linéaire (courbe 1) de +max° à -max° sur les 6 lettres.
+MAX_ANGLE = 8.0  # degrees, + = top leans left
+ANGLES = {
+    c: MAX_ANGLE * (1 - 2 * i / (len("PRISME") - 1))
+    for i, c in enumerate("PRISME")
+}
+UPM = 2000  # Fraunces
+
 LETTERS = "PRISME"
-ANGLES = {c: a for c, a in zip("PRISME", (20, 12, 4, -4, -12, -20))}  # degrees, + = top leans left
-UPM = 2048
 
 
 def load_font(opsz):
     if not os.path.exists(FONT_PATH):
         urllib.request.urlretrieve(FONT_URL, FONT_PATH)
     font = TTFont(FONT_PATH)
-    instantiateVariableFont(font, {"wght": WEIGHT, "opsz": opsz}, inplace=True)
+    # WONK 0 : vérifié sans effet sur les glyphes PRISME (alternates de
+    # Fraunces vivent dans d'autres lettres) — on fige pour l'exactitude.
+    instantiateVariableFont(
+        font, {"wght": WEIGHT, "opsz": opsz, "SOFT": 0, "WONK": 0}, inplace=True
+    )
     return font
 
 
@@ -89,8 +97,8 @@ def build(letters, tracking_em, opsz, angles=None):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     assets = {
-                "prisme-wordmark-nav.svg": build(LETTERS, 0.08, 14),
-        "prisme-wordmark-display.svg": build(LETTERS, 0.04, 32),
+        "prisme-wordmark-nav.svg": build(LETTERS, 0.0, 14),
+        "prisme-wordmark-display.svg": build(LETTERS, 0.0, 32),
         # l'angle du P du wordmark, adopté au rendu réel
         "prisme-mark.svg": build("P", 0, 14),
     }

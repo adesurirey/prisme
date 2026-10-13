@@ -63,16 +63,24 @@ async function markPng(svg: string, height: number): Promise<Buffer> {
     .toBuffer();
 }
 
-/** The mark centered on a `size`×`size` square — `markHeight` is the
- * height of the (pad-expanded) viewBox box, so the glyph fraction of the
- * canvas is markHeight / (1 + 2·pad) × … exactly as caller intends. */
+/** The mark centered on a `size`×`size` square. `markHeight` is the max
+ * height of the (pad-expanded) viewBox box — for glyphs wider than tall
+ * (Fraunces' P) the box is scaled down so its WIDTH fits instead, keeping
+ * the mark fully inside the canvas. */
 async function markSquare(
   size: number,
   svg: string,
   markHeight: number,
   background: string | { r: number; g: number; b: number; alpha: number },
 ): Promise<Buffer> {
-  const mark = await markPng(svg, markHeight);
+  const [, , w, h] = svg
+    .match(/viewBox="([^"]+)"/)![1]
+    .split(' ')
+    .map(Number);
+  const mark = await markPng(
+    svg,
+    Math.round(Math.min(markHeight, (size * h) / w)),
+  );
   return sharp({
     create: { width: size, height: size, channels: 4, background },
   })
