@@ -1,4 +1,4 @@
-import type { Article, Leaning, Outlet, Story } from './index.ts';
+import type { Article, Leaning, Outlet } from './index.ts';
 import { leaningOrder } from './index.ts';
 
 /**
