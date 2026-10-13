@@ -17,9 +17,10 @@ import { updateEditionHistory } from './edition-history.ts';
 import { updateFrontPageHistory } from './frontpage.ts';
 import { groupStories, loadStories } from './grouping.ts';
 import { fetchFeed } from './http.ts';
+import { parisDayKey } from './paris-day.ts';
 import { CLASSIFICATIONS_PATH, DATA_DIR, STORIES_DIR } from './paths.ts';
 import { resolveModels } from './policy.ts';
-import { EDITION_SIZE, rankStories } from './ranking.ts';
+import { assembleEdition } from './ranking.ts';
 import { SUMMARIES_PROMPT_VERSION, updateSummaries } from './summarize.ts';
 
 // Build-log section headers: one emoji-prefixed line per pipeline step, so a
@@ -99,14 +100,17 @@ export async function runEdition(): Promise<Edition> {
   const liveIds = new Set(outcome.live.map((s) => s.id));
   const frontpage = updateFrontPageHistory(outcome.stories, kept, now);
 
-  // The Edition is the ranked top EDITION_SIZE (issue #37, ADR-0009): Stories
-  // order by Coverage, then recency — deterministically. Live Stories below
-  // the cut keep updating outside it and may return on a later build; only a
-  // Story with no live Articles freezes.
+  // The Edition (issue #98, ADR-0017): current-day Stories ranked by the
+  // ADR-0009 key first, then backfill — previous days' everInEdition Stories
+  // (frozen included), newest day first, each day ranked the same way —
+  // capped at EDITION_SIZE. Live Stories below the cut keep updating outside
+  // it and may return on a later build; only a Story with no live Articles
+  // freezes.
   const outletById = new Map(outlets.map((o) => [o.id, o]));
-  const ranked = rankStories(
-    frontpage.stories.filter((s) => liveIds.has(s.id)),
-  ).slice(0, EDITION_SIZE);
+  const ranked = assembleEdition(
+    frontpage.stories,
+    parisDayKey(now.toISOString()),
+  );
 
   // Edition history (issue #75): `everInEdition` is sticky — set the moment
   // a Story ranks into the Edition, so the flag survives its freezing. Like

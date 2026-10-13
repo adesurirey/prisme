@@ -1,6 +1,6 @@
 import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
-import { EDITION_SIZE, rankStories } from './ranking.ts';
+import { assembleEdition, EDITION_SIZE, rankStories } from './ranking.ts';
 
 /**
  * The Edition ranking (issue #37, ADR-0009 as amended by ADR-0011): Stories
@@ -108,5 +108,125 @@ describe('rankStories', () => {
 
   it('keeps the top EDITION_SIZE in the Edition', () => {
     expect(EDITION_SIZE).toBe(20);
+  });
+});
+
+/**
+ * The dated Edition assembly (issue #98, ADR-0017): current-day Stories
+ * ranked by ADR-0009 first, then backfill — previous days' everInEdition
+ * Stories, newest day first, each day ranked by the same key — capped at
+ * EDITION_SIZE.
+ */
+describe('assembleEdition', () => {
+  const today = '2026-10-06';
+
+  it('puts current-day Stories above backfill days, J-1 before J-2', () => {
+    const j2 = story('j2', [article('1')], undefined, '2026-10-04');
+    const j1 = story('j1', [article('2')], undefined, '2026-10-05');
+    const current = story('cur', [article('3')], undefined, today);
+    expect(
+      assembleEdition(
+        [j2, j1, current].map((s) => ({ ...s, everInEdition: true })),
+        today,
+      ).map((s) => s.id),
+    ).toEqual(['cur', 'j1', 'j2']);
+  });
+
+  it('ranks each backfill day by Coverage, independently', () => {
+    const j1 = [
+      story(
+        'j1-wide',
+        [article('1'), article('2', { outletId: 'b' })],
+        undefined,
+        '2026-10-05',
+      ),
+      story('j1-narrow', [article('3')], undefined, '2026-10-05'),
+    ];
+    const j2 = [
+      story(
+        'j2-wide',
+        [article('4'), article('5', { outletId: 'b' })],
+        undefined,
+        '2026-10-04',
+      ),
+      story('j2-narrow', [article('6')], undefined, '2026-10-04'),
+    ];
+    expect(
+      assembleEdition(
+        [...j1, ...j2].map((s) => ({ ...s, everInEdition: true })),
+        today,
+      ).map((s) => s.id),
+    ).toEqual(['j1-wide', 'j1-narrow', 'j2-wide', 'j2-narrow']);
+  });
+
+  it('draws backfill only from everInEdition Stories', () => {
+    const flagged = story('flagged', [article('1')], undefined, '2026-10-05');
+    const never = story('never', [article('2')], undefined, '2026-10-05');
+    expect(
+      assembleEdition(
+        [
+          { ...flagged, everInEdition: true },
+          { ...never, everInEdition: false },
+        ],
+        today,
+      ).map((s) => s.id),
+    ).toEqual(['flagged']);
+  });
+
+  it('caps the Edition at EDITION_SIZE, current-day first', () => {
+    const stories = [
+      story('cur', [article('0')], undefined, today),
+      ...Array.from({ length: EDITION_SIZE }, (_, i) =>
+        story(
+          `j1-${String(i).padStart(2, '0')}`,
+          [article(`a${i}`)],
+          undefined,
+          '2026-10-05',
+        ),
+      ),
+    ].map((s) => ({ ...s, everInEdition: true }));
+    const edition = assembleEdition(stories, today);
+    expect(edition).toHaveLength(EDITION_SIZE);
+    expect(edition[0]!.id).toBe('cur');
+    expect(edition.map((s) => s.id)).not.toContain('j1-19');
+  });
+
+  it('erodes: new current-day Stories displace backfill downward', () => {
+    const backfill = Array.from({ length: EDITION_SIZE }, (_, i) =>
+      story(
+        `j1-${String(i).padStart(2, '0')}`,
+        [article(`a${i}`)],
+        undefined,
+        '2026-10-05',
+      ),
+    ).map((s) => ({ ...s, everInEdition: true }));
+    const before = assembleEdition(backfill, today);
+    expect(before[0]!.storyDay).toBe('2026-10-05');
+    // One current-day Story enters: the last backfill Story falls off.
+    const after = assembleEdition(
+      [...backfill, story('cur', [article('z')], undefined, today)],
+      today,
+    );
+    expect(after).toHaveLength(EDITION_SIZE);
+    expect(after[0]!.id).toBe('cur');
+    expect(after.map((s) => s.id)).not.toContain('j1-19');
+    expect(after[1]!.id).toBe(before[0]!.id);
+  });
+
+  it('is smooth at midnight: a Story of day D ranks as backfill at 00:30 of D+1', () => {
+    // Yesterday's Story (day D), already in the Edition during D.
+    const yesterday = {
+      ...story('d', [article('1')], undefined, '2026-10-05'),
+      everInEdition: true,
+    };
+    // The day has rolled over: the same pool seen from D+1 early morning.
+    expect(assembleEdition([yesterday], '2026-10-06').map((s) => s.id)).toEqual(
+      ['d'],
+    );
+  });
+
+  it('drops Stories from a future day (defensive, should not happen)', () => {
+    const future = story('future', [article('1')], undefined, '2026-10-07');
+    expect(assembleEdition([future], today)).toEqual([]);
   });
 });
