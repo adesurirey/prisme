@@ -9,11 +9,11 @@
  *
  * Every output is a size×size square (the mark is composited onto a square
  * canvas, never resized alone — an SVG rasterized alone keeps its glyph
- * aspect and lands non-square). Two variants per size: plain (transparent
- * background, for the manifest "any" icons) and maskable (the mark shrunk
- * inside a #fcfcfc square so it stays inside every platform's safe zone).
- * Apple needs an opaque, non-alpha-cropped icon: apple-touch-icon.png is
- * the maskable treatment at 180px, with less padding.
+ * aspect and lands non-square). Two families: manifest "any" icons on a
+ * transparent square, maskable on a #ededf0 square (mark shrunk inside the
+ * safe zone). Apple needs an opaque, non-alpha-cropped icon: apple-touch-
+ * icon.png is the maskable treatment at 180px with less padding, on the
+ * INVERTED palette (dark field, light glyph — see the comment below).
  */
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -46,7 +46,7 @@ async function prismeMarkSvg(color: string, pad = 0): Promise<string> {
 const OUT_DIR = path.resolve(import.meta.dirname, '../public/icons');
 
 const INK = '#1b1b1f';
-const BACKGROUND = '#fcfcfc';
+const PAPER = '#ededf0';
 
 /** Rasterize the mark at `height` px. The width comes from the SVG's own
  * viewBox (no duplicated ratio constant), and fit:'fill' replaces sharp's
@@ -122,7 +122,7 @@ const icons: Array<[string, Buffer]> = [
       192,
       await prismeMarkSvg(INK),
       Math.round(192 * 0.63),
-      BACKGROUND,
+      PAPER,
     ),
   ],
   [
@@ -131,16 +131,20 @@ const icons: Array<[string, Buffer]> = [
       512,
       await prismeMarkSvg(INK),
       Math.round(512 * 0.63),
-      BACKGROUND,
+      PAPER,
     ),
   ],
+  // Apple re-composites the icon with its own white→transparent overlay on
+  // the top third (undisableable); on a light background it reads as a dirty
+  // band, on the dark background as a plausible sheen. Hence the inverted
+  // palette: dark field, light glyph.
   [
     'apple-touch-icon.png',
     await markSquare(
       180,
-      await prismeMarkSvg(INK),
+      await prismeMarkSvg(PAPER),
       Math.round(180 * 0.7),
-      BACKGROUND,
+      INK,
     ),
   ],
 ];
