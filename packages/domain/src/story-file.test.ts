@@ -13,6 +13,7 @@ describe('parseStoryFile', () => {
     slug: 'un-titre',
     title: 'Un titre',
     createdAt: '2026-10-09T10:00:00Z',
+    storyDay: '2026-10-09',
     articles: [{ id: 'a1', headline: 'A' }],
   };
 
@@ -26,11 +27,12 @@ describe('parseStoryFile', () => {
     expect(parseStoryFile([valid], 'x.json')).toBeNull();
   });
 
-  it('rejects when id, slug or title is not a string, or articles not an array', () => {
+  it('rejects when id, slug, title or storyDay is not a string, or articles not an array', () => {
     for (const broken of [
       { ...valid, id: 1 },
       { ...valid, slug: undefined },
       { ...valid, title: null },
+      { ...valid, storyDay: undefined },
       { ...valid, articles: 'nope' },
     ]) {
       expect(parseStoryFile(broken, 'x.json')).toBeNull();
@@ -75,6 +77,7 @@ describe('reconcileSlugs', () => {
       slug: 'sujet',
       title: 'Sujet',
       createdAt: '',
+      storyDay: '2026-10-09',
       articles: [],
     };
     const b: Story = {
@@ -82,6 +85,7 @@ describe('reconcileSlugs', () => {
       slug: 'sujet-a',
       title: 'Sujet',
       createdAt: '',
+      storyDay: '2026-10-09',
       articles: [],
     };
     const taken = new Set(['sujet', 'sujet-a']);
@@ -96,6 +100,7 @@ describe('reconcileSlugs', () => {
       slug: 'sujet-a',
       title: 'Sujet',
       createdAt: '',
+      storyDay: '2026-10-09',
       articles: [],
     };
     const b: Story = {
@@ -103,6 +108,7 @@ describe('reconcileSlugs', () => {
       slug: 'sujet-b',
       title: 'Sujet',
       createdAt: '',
+      storyDay: '2026-10-09',
       articles: [],
     };
     const taken = new Set(['sujet-a', 'sujet-b']);
@@ -117,6 +123,7 @@ describe('reconcileSlugs', () => {
       slug: 'sujet',
       title: 'Sujet',
       createdAt: '',
+      storyDay: '2026-10-09',
       articles: [],
     };
     const b: Story = {
@@ -124,6 +131,7 @@ describe('reconcileSlugs', () => {
       slug: 'sujet-b',
       title: 'Sujet',
       createdAt: '',
+      storyDay: '2026-10-09',
       articles: [],
     };
     const taken = new Set(['sujet', 'sujet-b']);

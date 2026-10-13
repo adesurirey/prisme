@@ -84,6 +84,7 @@ export function parseStoryFile(raw: unknown, name: string): Story | null {
     typeof candidate.id === 'string' &&
     typeof candidate.slug === 'string' &&
     typeof candidate.title === 'string' &&
+    typeof candidate.storyDay === 'string' &&
     Array.isArray(candidate.articles)
   ) {
     return candidate as Story;

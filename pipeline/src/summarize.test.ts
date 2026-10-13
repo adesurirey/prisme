@@ -97,6 +97,7 @@ function story(
     slug,
     title: `Sujet ${id}`,
     createdAt: '2026-10-06T08:00:00Z',
+    storyDay: '2026-10-06',
     articles,
     ...extra,
   };

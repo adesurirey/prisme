@@ -175,6 +175,10 @@ export interface Story {
   title: string;
   /** ISO 8601 creation time, fixed at creation. */
   createdAt: string;
+  /** Publication day 'YYYY-MM-DD' (Europe/Paris) of the founding Article,
+   * fixed at creation — an Article may only join a Story of its own day
+   * (ADR-0017). */
+  storyDay: string;
   articles: Article[];
   /** From the majority of its Articles' Sections; absent when none is classified. */
   section?: Section;

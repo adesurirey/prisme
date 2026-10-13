@@ -47,6 +47,7 @@ import { storySection } from './edition.ts';
 import type { GroupingModel, GroupingProposal } from './gemini.ts';
 import { isLive, LIVE_WINDOW_MS } from './liveness.ts';
 import { MembershipGate } from './membership-gate.ts';
+import { ingestionIsOpen, parisDayKey } from './paris-day.ts';
 
 /** Above this many checks in one build, the run log warns (ADR-0012). */
 export const MEMBERSHIP_CHECKS_WARN = 2000;
@@ -95,7 +96,10 @@ function byNewestArticle(a: Story, b: Story): number {
   return latest(b) - latest(a) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 }
 
-/** Articles inside the 24h window that no Story on disk claims yet. */
+/** Articles inside the 24h window that no Story on disk claims yet, and
+ * whose Publication day is still ingesting (ADR-0017): today's Articles,
+ * plus yesterday's until 06:00 Paris — a 23h50 Article collected at 00:10
+ * still finds its Story; past the window it stays out (Unassigned). */
 function freshArticles(
   articles: Article[],
   existing: Story[],
@@ -104,7 +108,10 @@ function freshArticles(
   const cutoff = now.getTime() - LIVE_WINDOW_MS;
   const known = new Set(existing.flatMap((s) => s.articles.map((a) => a.id)));
   return articles.filter(
-    (a) => !known.has(a.id) && published(a.publishedAt) > cutoff,
+    (a) =>
+      !known.has(a.id) &&
+      published(a.publishedAt) > cutoff &&
+      ingestionIsOpen(parisDayKey(a.publishedAt), now),
   );
 }
 
@@ -285,6 +292,22 @@ export async function groupStories(
   const liveSorted = () =>
     stories.filter((s) => isLive(s, now)).sort(byNewestArticle);
 
+  /** The Stories the Grouping model sees and may receive Articles (ADR-0017):
+   * only Stories whose ingestion window is still open — 06:00 Paris the day
+   * after their day. Past it a Story is frozen (ADR-0005): invisible to the
+   * model, unmergeable, whatever its 24h liveness. */
+  const openSorted = () =>
+    stories
+      .filter((s) => ingestionIsOpen(s.storyDay, now))
+      .sort(byNewestArticle);
+
+  /** The belonging rule (ADR-0017): an Article may only join a Story of its
+   * own Publication day (Europe/Paris, ADR-0007 supplies the day). */
+  const canJoin = (article: Article, story: Story): boolean =>
+    parisDayKey(article.publishedAt) === story.storyDay;
+
+  const articleDay = (a: Article): string => parisDayKey(a.publishedAt);
+
   if (fresh.length === 0) {
     // Nothing new: nothing changes (issue #5 acceptance criterion).
     return { stories, changed: new Set<string>(), live: liveSorted() };
@@ -298,7 +321,7 @@ export async function groupStories(
   // Note: a Story is never born from a single Article (ADR-0015) — newStory
   // is only called for model-proposed keys, and the two-Article minimum is
   // enforced by the drop pass and invariant below.
-  const newStory = (title: string): Story => {
+  const newStory = (title: string, storyDay: string): Story => {
     const id = makeId();
     const slug = slugFor(title, id, taken);
     taken.add(slug);
@@ -307,6 +330,7 @@ export async function groupStories(
       slug,
       title,
       createdAt: now.toISOString(),
+      storyDay,
       articles: [],
     };
     stories.push(story);
@@ -326,8 +350,10 @@ export async function groupStories(
   };
 
   const groupingInput = {
-    // Only live Stories are visible to the model; frozen ones are closed (ADR-0005).
-    stories: liveSorted().map((s) => ({
+    // Only open Stories (ADR-0017 ingestion window) are visible to the model;
+    // frozen ones are closed (ADR-0005). Prompt text is unchanged — the pool
+    // is what shrank to the current day.
+    stories: openSorted().map((s) => ({
       id: s.id,
       title: s.title,
       section: s.section,
@@ -351,10 +377,6 @@ export async function groupStories(
     throw new Error('Grouping failed: the model returned no proposal.');
   }
   {
-    const keyStories = new Map<string, Story>();
-    for (const ns of proposal.newStories)
-      keyStories.set(ns.key, newStory(ns.title));
-
     // First assignment wins per Article (the model must not double-assign).
     const assignmentOf = new Map<
       string,
@@ -370,11 +392,42 @@ export async function groupStories(
     for (const article of fresh) {
       const a = assignmentOf.get(article.id);
       if (a == null || a.storyId != null) continue;
-      if (a.newStoryKey != null && keyStories.has(a.newStoryKey)) {
+      if (
+        a.newStoryKey != null &&
+        proposal.newStories.some((ns) => ns.key === a.newStoryKey)
+      ) {
         const list = keyMembers.get(a.newStoryKey) ?? [];
         list.push(article);
         keyMembers.set(a.newStoryKey, list);
       }
+    }
+
+    // A Story is born on the Publication day of its founding Article — the
+    // seed — fixed at creation (ADR-0017). An Article collected at 00:10 that
+    // was published 23:50 the day before founds a Story of the day before.
+    // A key no Article claimed still gets a Story object (dropped below); it
+    // takes the current day, which nothing ever joins.
+    const keyStories = new Map<string, Story>();
+    for (const ns of proposal.newStories) {
+      const founding = keyMembers.get(ns.key)?.[0];
+      keyStories.set(
+        ns.key,
+        newStory(
+          ns.title,
+          founding ? articleDay(founding) : parisDayKey(now.toISOString()),
+        ),
+      );
+    }
+
+    // The belonging rule (ADR-0017) filters each key's members to the
+    // founding day at claim time: a same-event Article published the next
+    // day orphans instead of joining — and never spends a Membership check.
+    for (const [key, members] of keyMembers) {
+      const story = keyStories.get(key)!;
+      keyMembers.set(
+        key,
+        members.filter((m) => articleDay(m) === story.storyDay),
+      );
     }
 
     // Seed guard (issue #36). The seed was the one Article that bypassed
@@ -403,7 +456,12 @@ export async function groupStories(
     // fires exactly when checks were pending.
     const gate = new MembershipGate({ checker: clients.membership });
     {
-      const live = liveSorted();
+      // Guard candidates: existing Stories only (never the proposed keys),
+      // open per the ingestion window (ADR-0017); a closed Story can never
+      // absorb a seed. Other-day Stories are filtered per seed below.
+      const live = stories
+        .filter((s) => !created.includes(s) && ingestionIsOpen(s.storyDay, now))
+        .sort(byNewestArticle);
       const keyOrder = proposal.newStories.map((ns) => ns.key);
       const seedTokensOf = new Map<string, Set<string>>();
       const seedHeadlineOf = new Map<string, string>();
@@ -415,7 +473,10 @@ export async function groupStories(
         seedTokensOf.set(key, seedTokens);
         seedHeadlineOf.set(key, seed.headline);
         const ask: { target: string; title: string; section?: Section }[] = [];
-        for (const candidate of seedCandidates(seed, live))
+        for (const candidate of seedCandidates(
+          seed,
+          live.filter((s) => s.storyDay === articleDay(seed)),
+        ))
           ask.push({
             target: candidate.id,
             title: candidate.title,
@@ -540,8 +601,13 @@ export async function groupStories(
       }
       if (assignment.storyId != null) {
         const story = byId.get(assignment.storyId);
-        // Unknown or frozen target: the model only sees live Stories.
-        if (story == null || !isLive(story, now)) {
+        // Unknown, frozen (window closed), or other-day target: the model
+        // only sees open Stories of matching days (ADR-0017).
+        if (
+          story == null ||
+          !ingestionIsOpen(story.storyDay, now) ||
+          !canJoin(article, story)
+        ) {
           orphan(article);
           continue;
         }
@@ -567,8 +633,9 @@ export async function groupStories(
         const story = keyStories.get(target.slice(4))!;
         const members = keyMembers.get(target.slice(4))!;
         if (
-          members[0].id === article.id ||
-          gate.verdict(article.id, target) === 'yes'
+          canJoin(article, story) &&
+          (members[0].id === article.id ||
+            gate.verdict(article.id, target) === 'yes')
         ) {
           merge(story, article);
         } else {
@@ -578,7 +645,11 @@ export async function groupStories(
         // Absorbed into an existing Story: the seed's guard verdict and
         // every further member's checked verdict were recorded up front.
         const story = byId.get(target);
-        if (story != null && gate.verdict(article.id, target) === 'yes') {
+        if (
+          story != null &&
+          canJoin(article, story) &&
+          gate.verdict(article.id, target) === 'yes'
+        ) {
           merge(story, article);
         } else {
           orphan(article);

@@ -26,8 +26,9 @@ function story(
   id: string,
   articles: Article[],
   createdAt = '2026-10-06T10:00:00Z',
+  storyDay = '2026-10-06',
 ): Story {
-  return { id, slug: id, title: 'Sujet', createdAt, articles };
+  return { id, slug: id, title: 'Sujet', createdAt, storyDay, articles };
 }
 
 const ranked = (stories: Story[]) => rankStories(stories).map((s) => s.id);

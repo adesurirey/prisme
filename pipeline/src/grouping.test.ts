@@ -27,6 +27,7 @@ function story(overrides: Partial<Story> = {}): Story {
     slug: 'story-un',
     title: 'Story un',
     createdAt: '2026-10-06T09:00:00Z',
+    storyDay: '2026-10-06',
     articles: [],
     ...overrides,
   };
@@ -83,12 +84,13 @@ function input(overrides: {
   teasers?: Map<string, string>;
   clients?: import('./grouping.ts').GroupingClients;
   makeId?: () => string;
+  now?: Date;
 }) {
   return {
     articles: overrides.articles ?? [],
     teasers: overrides.teasers ?? new Map<string, string>(),
     existing: overrides.existing ?? [],
-    now: NOW,
+    now: overrides.now ?? NOW,
     makeId: overrides.makeId ?? counter(),
     clients: overrides.clients ?? NO_CLIENTS,
   };
@@ -737,6 +739,7 @@ describe('groupStories', () => {
         slug: 'frozen',
         title: 'Frozen',
         createdAt: '2026-10-05T00:00:00Z',
+        storyDay: '2026-10-05',
         articles: [article('a-old', { publishedAt: '2026-10-05T00:00:00Z' })],
       }),
     ];
@@ -802,6 +805,176 @@ describe('groupStories', () => {
     expect(outcome.stories).toHaveLength(0);
     expect(outcome.changed.size).toBe(0);
     expect(outcome.live).toHaveLength(0);
+  });
+
+  it("an Article published 23:50 and collected at 00:10 joins yesterday's Story (ADR-0017 window)", async () => {
+    // 2026-10-06T21:50Z = 23:50 Paris on Oct 6; NOW = 00:10 Paris on Oct 7.
+    const outcome = await groupStories(
+      input({
+        now: new Date('2026-10-06T22:10:00Z'),
+        articles: [article('a-y', { publishedAt: '2026-10-06T21:50:00Z' })],
+        existing: [
+          story({
+            storyDay: '2026-10-06',
+            articles: [article('a0', { publishedAt: '2026-10-06T20:00:00Z' })],
+          }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [{ articleId: 'a-y', storyId: 's1', confidence: 0.9 }],
+            titleUpdates: [],
+          }),
+          membership: fakeMembership(true),
+        },
+      }),
+    );
+    const s = outcome.stories.find((s) => s.id === 's1')!;
+    expect(s.articles.map((a) => a.id)).toEqual(['a-y', 'a0']);
+    expect(outcome.changed.has('story-un')).toBe(true);
+  });
+
+  it("an Article published 00:01 the next day never joins yesterday's Story (day split, ADR-0017)", async () => {
+    // 2026-10-06T22:01Z = 00:01 Paris on Oct 7: a new day, new Stories.
+    const outcome = await groupStories(
+      input({
+        now: new Date('2026-10-06T22:10:00Z'),
+        articles: [article('a-next', { publishedAt: '2026-10-06T22:01:00Z' })],
+        existing: [
+          story({
+            storyDay: '2026-10-06',
+            articles: [article('a0', { publishedAt: '2026-10-06T20:00:00Z' })],
+          }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [
+              { articleId: 'a-next', storyId: 's1', confidence: 0.9 },
+            ],
+            titleUpdates: [],
+          }),
+          membership: fakeMembership(true),
+        },
+      }),
+    );
+    const s = outcome.stories.find((s) => s.id === 's1')!;
+    expect(s.articles.map((a) => a.id)).toEqual(['a0']); // not merged: other day
+    expect(outcome.changed.size).toBe(0);
+  });
+
+  it('a late-collected old Article (window closed) is never grouped: Unassigned, retried next build', async () => {
+    // Published Oct 4 (23:50 Paris), collected Oct 7 00:10 Paris: its day's
+    // window closed at 06:00 on Oct 5. The Grouping model is never called.
+    const outcome = await groupStories(
+      input({
+        now: new Date('2026-10-06T22:10:00Z'),
+        articles: [article('a-old', { publishedAt: '2026-10-04T21:50:00Z' })],
+        existing: [
+          story({
+            storyDay: '2026-10-04',
+            articles: [article('a0', { publishedAt: '2026-10-04T20:00:00Z' })],
+          }),
+        ],
+        clients: NO_CLIENTS,
+      }),
+    );
+    expect(outcome.stories).toHaveLength(1); // passed through untouched
+    expect(outcome.changed.size).toBe(0);
+  });
+
+  it("a new Story carries the founding Article's Publication day, fixed at creation (ADR-0017)", async () => {
+    // Seed published 23:50 Paris on Oct 6, collected 00:10 Paris on Oct 7:
+    // the Story is born on Oct 6, not on the collection day.
+    const outcome = await groupStories(
+      input({
+        now: new Date('2026-10-06T22:10:00Z'),
+        articles: [
+          article('a-seed', { publishedAt: '2026-10-06T21:50:00Z' }),
+          article('a-mate', { publishedAt: '2026-10-06T21:55:00Z' }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1', title: 'Nouvel événement' }],
+            assignments: [
+              { articleId: 'a-seed', newStoryKey: 'k1', confidence: 0.3 },
+              { articleId: 'a-mate', newStoryKey: 'k1', confidence: 0.3 },
+            ],
+            titleUpdates: [],
+          }),
+          membership: fakeMembership(true),
+        },
+      }),
+    );
+    expect(outcome.stories).toHaveLength(1);
+    expect(outcome.stories[0]!.storyDay).toBe('2026-10-06');
+  });
+
+  it("a member of another day than its Story's founding day is refused and orphaned (ADR-0017)", async () => {
+    // The model proposes a new Story from a 23:50 seed and a 00:01 next-day
+    // Article: only the seed's day matches, the other member never joins.
+    const outcome = await groupStories(
+      input({
+        now: new Date('2026-10-06T22:10:00Z'),
+        articles: [
+          article('a-seed', { publishedAt: '2026-10-06T21:50:00Z' }),
+          article('a-next', { publishedAt: '2026-10-06T22:01:00Z' }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1', title: 'Nouvel événement' }],
+            assignments: [
+              { articleId: 'a-seed', newStoryKey: 'k1', confidence: 0.3 },
+              { articleId: 'a-next', newStoryKey: 'k1', confidence: 0.3 },
+            ],
+            titleUpdates: [],
+          }),
+          membership: fakeMembership(true),
+        },
+      }),
+    );
+    // The proposed Story is reduced to its seed alone: dropped (ADR-0015),
+    // both Articles orphaned — the next-day one also for the day rule.
+    expect(outcome.stories).toHaveLength(0);
+  });
+
+  it('the model only sees Stories whose ingestion window is open (ADR-0017)', async () => {
+    // NOW = Oct 6 12:00Z (14:00 Paris): the Oct 5 Story's window closed at
+    // 06:00 Paris on Oct 6 — invisible to the model even though prompt
+    // text is unchanged.
+    const calls: {
+      input?: Parameters<import('./gemini.ts').GroupingModel['group']>[0];
+    }[] = [];
+    await groupStories(
+      input({
+        articles: [article('a0'), article('a1')],
+        existing: [
+          story({ articles: [article('a0')] }),
+          story({
+            id: 's-closed',
+            slug: 'hier',
+            title: 'Hier',
+            storyDay: '2026-10-05',
+            articles: [article('a-h', { publishedAt: '2026-10-05T10:00:00Z' })],
+          }),
+        ],
+        clients: {
+          grouping: fakeGrouping(
+            {
+              newStories: [],
+              assignments: [
+                { articleId: 'a1', storyId: 's1', confidence: 0.9 },
+              ],
+              titleUpdates: [],
+            },
+            calls,
+          ),
+          membership: fakeMembership(false),
+        },
+      }),
+    );
+    const modelInput = calls[0]!.input!;
+    expect(modelInput.stories.map((s) => s.id)).toEqual(['s1']);
   });
 
   it('recomputes the Story Section after merges, from the Articles', async () => {
