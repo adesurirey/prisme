@@ -77,7 +77,7 @@ The part of the news a Story belongs to: Politique, International, Économie, So
 _Avoid_: Category, rubric, topic
 
 **Edition**:
-The current selection of top Stories that Prisme publishes, updated throughout the day: current-day Stories ranked by Coverage first, then Backfill up to the Edition size (ADR-0017).
+The current selection of top Stories that Prisme publishes, updated throughout the day: window-open Stories (today's, and yesterday's until 06:00 — the Edition's live pool) ranked by Coverage first, then Backfill up to the Edition size (ADR-0017, amended for the midnight gap).
 _Avoid_: Issue, digest, daily, run
 
 **Story day**:
@@ -89,7 +89,7 @@ The period after a Story's day during which the Story still accepts Articles —
 _Avoid_: Grace period, closing time
 
 **Backfill**:
-Previous days' Stories shown in the Edition after the current day's, newest day first, each day ranked by Coverage. Backfill erodes through the day and carries no visual marking.
+Previous days' closed Stories shown in the Edition after the live pool, newest day first, each day ranked by Coverage. Backfill erodes through the day and carries no visual marking.
 _Avoid_: Archive (in the Edition sense), old stories
 
 **Archive**:

@@ -17,7 +17,6 @@ import { updateEditionHistory } from './edition-history.ts';
 import { updateFrontPageHistory } from './frontpage.ts';
 import { groupStories, loadStories } from './grouping.ts';
 import { fetchFeed } from './http.ts';
-import { parisDayKey } from './paris-day.ts';
 import { CLASSIFICATIONS_PATH, DATA_DIR, STORIES_DIR } from './paths.ts';
 import { resolveModels } from './policy.ts';
 import { assembleEdition } from './ranking.ts';
@@ -100,17 +99,17 @@ export async function runEdition(): Promise<Edition> {
   const liveIds = new Set(outcome.live.map((s) => s.id));
   const frontpage = updateFrontPageHistory(outcome.stories, kept, now);
 
-  // The Edition (issue #98, ADR-0017): current-day Stories ranked by the
-  // ADR-0009 key first, then backfill — previous days' everInEdition Stories
-  // (frozen included), newest day first, each day ranked the same way —
-  // capped at EDITION_SIZE. Live Stories below the cut keep updating outside
-  // it and may return on a later build; only a Story with no live Articles
-  // freezes.
+  // The Edition (issue #98, ADR-0017, midnight-gap fix): the live pool —
+  // every Story whose ingestion window is still open (today's Stories, and
+  // yesterday's until 06:00 Paris) ranked by the ADR-0009 key first, then
+  // backfill — previous days' everInEdition Stories (frozen), newest day
+  // first, each day ranked the same way — capped at EDITION_SIZE. A Story
+  // born right after midnight ranks in and gets everInEdition instead of
+  // being deleted unfrozen (issue #75). Live Stories below the cut keep
+  // updating outside it and may return on a later build; only a Story with
+  // no live Articles freezes.
   const outletById = new Map(outlets.map((o) => [o.id, o]));
-  const ranked = assembleEdition(
-    frontpage.stories,
-    parisDayKey(now.toISOString()),
-  );
+  const ranked = assembleEdition(frontpage.stories, now);
 
   // Edition history (issue #75): `everInEdition` is sticky — set the moment
   // a Story ranks into the Edition, so the flag survives its freezing. Like

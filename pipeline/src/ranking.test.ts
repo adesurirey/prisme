@@ -31,6 +31,15 @@ function story(
   return { id, slug: id, title: 'Sujet', createdAt, storyDay, articles };
 }
 
+// Noon Paris on day D (10:00 UTC, CEST): D's window is open, D-1's and
+// earlier are closed — the ordinary in-day view of the Edition.
+const DAY_NOON = new Date('2026-10-06T10:00:00Z');
+// 00:30 Paris of day D+1 (22:30 UTC of D): D's window is still open until
+// 06:00 Paris — the post-midnight view where the midnight gap appeared.
+const NEXT_DAY_EARLY = new Date('2026-10-05T22:30:00Z');
+// 06:30 Paris of day D+1 (04:30 UTC): D's window has just closed.
+const NEXT_DAY_AFTER_WINDOW = new Date('2026-10-06T04:30:00Z');
+
 const ranked = (stories: Story[]) => rankStories(stories).map((s) => s.id);
 
 describe('rankStories', () => {
@@ -112,10 +121,10 @@ describe('rankStories', () => {
 });
 
 /**
- * The dated Edition assembly (issue #98, ADR-0017): current-day Stories
- * ranked by ADR-0009 first, then backfill — previous days' everInEdition
- * Stories, newest day first, each day ranked by the same key — capped at
- * EDITION_SIZE.
+ * The dated Edition assembly (issue #98, ADR-0017, midnight-gap fix): the
+ * live pool — window-open Stories — ranked by ADR-0009 first, then backfill
+ * — closed previous days' everInEdition Stories, newest day first, each day
+ * ranked by the same key — capped at EDITION_SIZE.
  */
 describe('assembleEdition', () => {
   const today = '2026-10-06';
@@ -127,7 +136,7 @@ describe('assembleEdition', () => {
     expect(
       assembleEdition(
         [j2, j1, current].map((s) => ({ ...s, everInEdition: true })),
-        today,
+        DAY_NOON,
       ).map((s) => s.id),
     ).toEqual(['cur', 'j1', 'j2']);
   });
@@ -154,7 +163,7 @@ describe('assembleEdition', () => {
     expect(
       assembleEdition(
         [...j1, ...j2].map((s) => ({ ...s, everInEdition: true })),
-        today,
+        DAY_NOON,
       ).map((s) => s.id),
     ).toEqual(['j1-wide', 'j1-narrow', 'j2-wide', 'j2-narrow']);
   });
@@ -168,7 +177,7 @@ describe('assembleEdition', () => {
           { ...flagged, everInEdition: true },
           { ...never, everInEdition: false },
         ],
-        today,
+        DAY_NOON,
       ).map((s) => s.id),
     ).toEqual(['flagged']);
   });
@@ -185,7 +194,7 @@ describe('assembleEdition', () => {
         ),
       ),
     ].map((s) => ({ ...s, everInEdition: true }));
-    const edition = assembleEdition(stories, today);
+    const edition = assembleEdition(stories, DAY_NOON);
     expect(edition).toHaveLength(EDITION_SIZE);
     expect(edition[0]!.id).toBe('cur');
     expect(edition.map((s) => s.id)).not.toContain('j1-19');
@@ -200,12 +209,12 @@ describe('assembleEdition', () => {
         '2026-10-05',
       ),
     ).map((s) => ({ ...s, everInEdition: true }));
-    const before = assembleEdition(backfill, today);
+    const before = assembleEdition(backfill, DAY_NOON);
     expect(before[0]!.storyDay).toBe('2026-10-05');
     // One current-day Story enters: the last backfill Story falls off.
     const after = assembleEdition(
       [...backfill, story('cur', [article('z')], undefined, today)],
-      today,
+      DAY_NOON,
     );
     expect(after).toHaveLength(EDITION_SIZE);
     expect(after[0]!.id).toBe('cur');
@@ -213,20 +222,77 @@ describe('assembleEdition', () => {
     expect(after[1]!.id).toBe(before[0]!.id);
   });
 
-  it('is smooth at midnight: a Story of day D ranks as backfill at 00:30 of D+1', () => {
+  it('is smooth at midnight: a day-D Story still ranks at 00:30 of D+1 (window open)', () => {
     // Yesterday's Story (day D), already in the Edition during D.
     const yesterday = {
       ...story('d', [article('1')], undefined, '2026-10-05'),
       everInEdition: true,
     };
-    // The day has rolled over: the same pool seen from D+1 early morning.
-    expect(assembleEdition([yesterday], '2026-10-06').map((s) => s.id)).toEqual(
-      ['d'],
-    );
+    // The day has rolled over but D's ingestion window stays open until
+    // 06:00: the Story ranks in the live pool, not as backfill.
+    expect(
+      assembleEdition([yesterday], NEXT_DAY_EARLY).map((s) => s.id),
+    ).toEqual(['d']);
+  });
+
+  it('midnight gap fix: a day-D Story never in the Edition still ranks at 00:30 of D+1', () => {
+    // Born right after midnight (the 2026-10-13 22:01 UTC build): day D,
+    // never shown, structurally invisible to the old current-day tier —
+    // born doomed to the never-in-Edition deletion rule (issue #75).
+    const lateBorn = {
+      ...story(
+        'late-born',
+        [article('1', { publishedAt: '2026-10-05T23:50:00Z' })],
+        '2026-10-05T22:10:00Z',
+        '2026-10-05',
+      ),
+      everInEdition: false,
+    };
+    expect(
+      assembleEdition([lateBorn], NEXT_DAY_EARLY).map((s) => s.id),
+    ).toEqual(['late-born']);
+  });
+
+  it('after the window closes: everInEdition becomes backfill, never-in-Edition drops', () => {
+    const shown = {
+      ...story('shown', [article('1')], '2026-10-05T20:00:00Z', '2026-10-05'),
+      everInEdition: true,
+    };
+    const never = {
+      ...story(
+        'never',
+        [article('2', { publishedAt: '2026-10-05T23:50:00Z' })],
+        '2026-10-05T22:10:00Z',
+        '2026-10-05',
+      ),
+      everInEdition: false,
+    };
+    expect(
+      assembleEdition([shown, never], NEXT_DAY_AFTER_WINDOW).map((s) => s.id),
+    ).toEqual(['shown']);
+  });
+
+  it('ranks window-open Stories of two days together by the ADR-0009 key', () => {
+    // At 00:30 of D+1 both days' windows are open: one ranked live pool.
+    const wideYesterday = {
+      ...story(
+        'wide-d',
+        [article('1'), article('2', { outletId: 'b' })],
+        '2026-10-05T21:00:00Z',
+        '2026-10-05',
+      ),
+      everInEdition: false,
+    };
+    const narrowToday = story('narrow-d1', [article('3')], undefined, today);
+    expect(
+      assembleEdition([narrowToday, wideYesterday], NEXT_DAY_EARLY).map(
+        (s) => s.id,
+      ),
+    ).toEqual(['wide-d', 'narrow-d1']);
   });
 
   it('drops Stories from a future day (defensive, should not happen)', () => {
     const future = story('future', [article('1')], undefined, '2026-10-07');
-    expect(assembleEdition([future], today)).toEqual([]);
+    expect(assembleEdition([future], DAY_NOON)).toEqual([]);
   });
 });
