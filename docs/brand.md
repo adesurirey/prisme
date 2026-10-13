@@ -8,6 +8,19 @@ The UI is French; this brief and all code/data names are English (see
 GLOSSARY.md). Official catchlines are quoted verbatim in French — copy them
 exactly, do not paraphrase.
 
+## Catchline
+
+> L'actualité, décomposée
+
+The home h1. The prism's action, without the word — "Prisme" already sits
+in the navbar right above it, so the title performs the mechanism instead
+of repeating the name (a prism decomposes light; the fanned wordmark is
+that gesture, drawn: every letter leans off the P's stem the way every
+Coverage leans off the same Story). The meta description keeps the mission
+wording (*La même actualité, vue par tous les bords politiques.*) — it
+answers a different question, *what*, when the brand is quoted away from
+the logo.
+
 ## Mission
 
 Prisme shows each day's front-page news from the major French outlets, and
