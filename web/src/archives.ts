@@ -57,8 +57,3 @@ export function frenchArchiveDate(day: string): string {
 export function archiveUrl(day: string): string {
   return `/archives/${day}/`;
 }
-
-/** A Story-day key is exactly ISO YYYY-MM-DD — the date picker's shape. */
-export function isStoryDayKey(value: string): boolean {
-  return /^\d{4}-\d{2}-\d{2}$/.test(value);
-}

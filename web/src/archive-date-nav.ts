@@ -7,7 +7,7 @@
  * Like mode-toggle and back-link, the decision lives in pure functions
  * (unit-tested); installArchiveDateNav wires it. Astro bundles the module.
  */
-import { isStoryDayKey } from './archives';
+import { isStoryDayKey } from '@prisme/domain';
 
 /** Pure test: the archive URL to open for a chosen date, or nothing when
  * the date is not a day key. A day without a record snaps to the nearest

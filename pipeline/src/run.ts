@@ -145,6 +145,7 @@ export async function runEdition(): Promise<Edition> {
   const summaries = models.summaries;
   const summaryOutcome = await updateSummaries({
     stories: edition.stories,
+    now,
     teasers,
     outletById,
     model: summaries,

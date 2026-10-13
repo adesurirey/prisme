@@ -405,18 +405,15 @@ export async function groupStories(
     // A Story is born on the Publication day of its founding Article — the
     // seed — fixed at creation (ADR-0017). An Article collected at 00:10 that
     // was published 23:50 the day before founds a Story of the day before.
-    // A key no Article claimed still gets a Story object (dropped below); it
-    // takes the current day, which nothing ever joins.
+    // A key no Article claimed never births a Story at all: the day can only
+    // come from a founding Article, so there is nothing to create and nothing
+    // to drop later (ADR-0015). Nothing downstream references a founderless
+    // key — every lookup is gated on keyMembers having claimed it.
     const keyStories = new Map<string, Story>();
     for (const ns of proposal.newStories) {
       const founding = keyMembers.get(ns.key)?.[0];
-      keyStories.set(
-        ns.key,
-        newStory(
-          ns.title,
-          founding ? articleDay(founding) : parisDayKey(now.toISOString()),
-        ),
-      );
+      if (!founding) continue;
+      keyStories.set(ns.key, newStory(ns.title, articleDay(founding)));
     }
 
     // The belonging rule (ADR-0017) filters each key's members to the

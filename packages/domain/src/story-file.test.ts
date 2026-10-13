@@ -27,6 +27,16 @@ describe('parseStoryFile', () => {
     expect(parseStoryFile([valid], 'x.json')).toBeNull();
   });
 
+  it('rejects a storyDay that is not an ISO YYYY-MM-DD key (ADR-0017)', () => {
+    for (const broken of [
+      { ...valid, storyDay: '13/10/2026' },
+      { ...valid, storyDay: '2026-10' },
+      { ...valid, storyDay: '' },
+    ]) {
+      expect(parseStoryFile(broken, 'x.json')).toBeNull();
+    }
+  });
+
   it('rejects when id, slug, title or storyDay is not a string, or articles not an array', () => {
     for (const broken of [
       { ...valid, id: 1 },

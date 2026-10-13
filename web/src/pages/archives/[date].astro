@@ -9,21 +9,25 @@ export async function getStaticPaths() {
   // One page per Story day with a record (ADR-0017): the permanent Story
   // files are the record; the archive is derived and disposable on a wipe.
   const allDays = archiveDays(await loadAllStoryFiles());
-  return allDays.map((day) => ({
+  // The previous (older) and next (newer) days within the archive are
+  // resolved here, from the day list this function already built — the page
+  // component never re-loads the Story files.
+  return allDays.map((day, index) => ({
     params: { date: day.day },
-    props: { day },
+    props: {
+      day,
+      next: index > 0 ? allDays[index - 1] : undefined,
+      previous: index < allDays.length - 1 ? allDays[index + 1] : undefined,
+    },
   }));
 }
 
-const { day } = Astro.props as { day: { day: string; stories: Story[] } };
+const { day, next, previous } = Astro.props as {
+  day: { day: string; stories: Story[] };
+  next?: { day: string; stories: Story[] };
+  previous?: { day: string; stories: Story[] };
+};
 const outlets = loadOutlets();
-
-// The previous (older) and next (newer) days within the archive — navigation
-// walks the days that have a record, nothing in between.
-const allDays = archiveDays(await loadAllStoryFiles());
-const index = allDays.findIndex((d) => d.day === day.day);
-const next = index > 0 ? allDays[index - 1] : undefined;
-const previous = index < allDays.length - 1 ? allDays[index + 1] : undefined;
 const count = day.stories.length;
 ---
 

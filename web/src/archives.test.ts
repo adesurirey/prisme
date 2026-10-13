@@ -1,11 +1,6 @@
-import type { Story } from '@prisme/domain';
+import { isStoryDayKey, type Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
-import {
-  archiveDays,
-  archiveUrl,
-  frenchArchiveDate,
-  isStoryDayKey,
-} from './archives';
+import { archiveDays, archiveUrl, frenchArchiveDate } from './archives';
 
 /**
  * The archive selection (issue #99, ADR-0017): one day per storyDay among
