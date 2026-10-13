@@ -6,13 +6,25 @@
   "storyDay": "2026-10-13",
   "articles": [
     {
+      "id": "f1bbe8e43d09",
+      "outletId": "le-figaro",
+      "headline": "Arsenal-Lille : les canonniers d’élite missionnés, Giroud ovationné, André naufragé… Les tops et flops",
+      "url": "https://www.lefigaro.fr/sports/football/ligue-des-champions/arsenal-lille-les-canonniers-d-elite-decisifs-giroud-ovationne-gyoekeres-atone-les-tops-et-flops-20261013",
+      "publishedAt": "2026-10-13T21:59:57.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/10/13/cc800ecfbb4141dea2fcda0cf1a5f90bc441801cfca1740cc6be4165703abd7c.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
       "id": "2712254e7d76",
       "outletId": "le-figaro",
       "headline": "Arsenal-Lille : le Losc a résisté… puis s’est effondré à Londres",
       "url": "https://www.lefigaro.fr/sports/football/live/ligue-des-champions/2026/2685390/arsenal-lille",
       "publishedAt": "2026-10-13T21:20:03.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1868_crop/2026/10/13/c4edc191423bd9e38dbb253503eaa5b27661e4f00e22b94bc7367fb613492299.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "live",
       "section": "sport",
       "everFrontPage": true
@@ -35,7 +47,7 @@
       "url": "https://www.lefigaro.fr/sports/football/ligue-des-champions/ligue-des-champions-arsenal-etait-bien-trop-fort-pour-un-losc-en-plein-naufrage-a-londres-20261013",
       "publishedAt": "2026-10-13T21:08:24.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/2604x1772_crop/2026/10/13/773531abb5af356a373c60c16f29fd71a9779c9420ec480f7d066acb888d4d42.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -101,11 +113,11 @@
     ],
     "droite": [
       "La défaite concédée à l'extérieur face aux Gunners est qualifiée de logique au vu des forces en présence.",
-      "La formation française a sombré après la pause face à un adversaire nettement supérieur.",
+      "La formation française a sombré après la pause face à un adversaire nettement supérieur, illustré par des performances individuelles contrastées.",
       "Le club enregistre un second échec consécutif et devra réagir lors de la prochaine journée européenne."
     ]
   },
-  "differences": "Les différents camps s'accordent sur le constat factuel d'une défaite logique de Lille trois buts à zéro après une première période résistante suivie d'un effondrement en seconde mi-temps. Le camp de gauche met particulièrement en avant l'impact des changements tactiques de l'adversaire et la bascule rapide du match, tandis que la droite insiste davantage sur la supériorité globale des Gunners et qualifie la prestation lilloise de naufrage après la pause.",
+  "differences": "Les différents camps s'accordent sur le constat factuel d'une défaite logique de Lille face à Arsenal après une première période de résistance suivie d'un effondrement. Le camp de gauche met en avant l'impact des changements tactiques adverses et la bascule rapide du match. Le camp de droite, illustré notamment par Le Figaro, accentue la supériorité globale des Gunners tout en détaillant individuellement les réussites et les faillites des acteurs de la rencontre.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 8
 }
