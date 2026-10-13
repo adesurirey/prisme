@@ -5,6 +5,17 @@
   "createdAt": "2026-10-12T19:01:21.637Z",
   "articles": [
     {
+      "id": "ddcfa3019ebf",
+      "outletId": "le-monde",
+      "headline": "La marine française arraisonne un pétrolier au sud de La Réunion, soupçonné d’appartenir à la flotte fantôme russe",
+      "url": "https://www.lemonde.fr/international/article/2026/10/13/la-marine-francaise-arraisonne-un-petrolier-au-sud-de-la-reunion-soupconne-d-appartenir-a-la-flotte-fantome-russe_6792875_3210.html",
+      "publishedAt": "2026-10-12T23:15:32.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/12/256/0/841/420/644/322/60/0/e25f522_upload-1-nx3nrqbf3u7g-macron-navire-2.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "b943fa563fa6",
       "outletId": "cnews",
       "headline": "Emmanuel Macron annonce qu’un navire a été arraisonné au sud de La Réunion pour «transport de carburants» illicite",
@@ -95,5 +106,26 @@
       "section": "politics"
     }
   ],
-  "section": "politics"
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "La marine nationale a intercepte le petrolier DF Peak au large de La Reunion pour des activites suspectes.",
+      "Le navire intercepte possede un pavillon du Benin et est indexe par l'Union europeenne sur les sanctions.",
+      "Les elements recueillis designent le bateau comme un element potentiel de la flotte secrete russe sous l'appellation Kaliningrad."
+    ],
+    "centre": [
+      "Le chef de l'Etat a communique personnellement sur le reseau social X concernant cette operation en haute mer.",
+      "Le petrolier cible est accuse de se livrer a des transports de carburant illegaux et de mentir sur son pavillon.",
+      "L'embarcation arraisonnee a ete detournee vers un port sous surveillance et escorte militaire."
+    ],
+    "droite": [
+      "L'intervention militaire menee a plus de quatre cent cinquante nautiques au sud de l'ile illustre la fermete francaise contre les contournements d'embargo.",
+      "Le batiment arraisonne est identifie sous le nom de DF Peak naviguant sous banniere beninoise tout en figurant sur les listes de sanctions.",
+      "La mediatisation directe de cette mission par l'executif met en valeur le succes operationnel des forces navales."
+    ]
+  },
+  "differences": "Les differents courants politiques s'accordent sur les faits bruts rapportes par l'executif, mais la droite met particulierement en avant la mise en scene et la communication volontee par Emmanuel Macron pour valoriser l'action de la France. La gauche et le centre insistent davantage sur la dimension geopolitique et l'implication presumee du navire dans la flotte fantome russe sanctionnee par l'Union europeenne.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 9
 }
