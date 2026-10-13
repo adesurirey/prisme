@@ -89,8 +89,7 @@ def build(letters, tracking_em, opsz, angles=None):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     assets = {
-        # 0.05em: live-tested tighter than the recipe's initial 0.08em
-        "prisme-wordmark-nav.svg": build(LETTERS, 0.05, 14),
+                "prisme-wordmark-nav.svg": build(LETTERS, 0.08, 14),
         "prisme-wordmark-display.svg": build(LETTERS, 0.04, 32),
         "prisme-mark.svg": build("P", 0, 14, angles={}),
     }
