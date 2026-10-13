@@ -1,4 +1,5 @@
 import type { Article, Outlet } from '@prisme/domain';
+import PrismeMark from './PrismeMark';
 
 /**
  * The Story image: hotlinked from the Outlet's feed — never stored (ADR-0003).
@@ -58,20 +59,13 @@ export default function StoryImage({
 
 /**
  * The static mark shown while (or after) the hotlinked image fails: the
- * serif P from the wordmark (docs/brand.md) — bold, like the wordmark, and
- * small enough to read as a mark rather than a letter — in the faint token
+ * brand P mark (docs/research/logo/recette-finale.md) in the faint token
  * at the triangle's former opacity. Sized in container-query units so the
  * same component reads right from the 96px card thumbnails to the
  * full-width Story hero.
  */
 function PlaceholderMark() {
   return (
-    <span
-      aria-hidden="true"
-      className="font-serif font-bold text-[var(--faint)] opacity-45"
-      style={{ fontSize: '17cqw' }}
-    >
-      P
-    </span>
+    <PrismeMark className="h-[14cqw] w-auto text-[var(--faint)] opacity-45" />
   );
 }
