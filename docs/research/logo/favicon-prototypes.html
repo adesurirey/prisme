@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Prisme — prototypes favicon & icônes d'app</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet">
+<style>
+  body { font-family: system-ui, sans-serif; background:#f5f5f2; color:#111; margin:0; padding:48px 24px; }
+  h1 { font-size: 15px; font-weight: 500; color:#666; margin:0 0 6px; }
+  h2 { font-size: 13px; font-weight: 600; color:#333; margin: 36px 0 2px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .desc { font-size: 13px; color:#777; margin: 0 0 14px; max-width: 680px; }
+  .controls { display:flex; gap:28px; align-items:center; margin:20px 0 8px; flex-wrap:wrap; }
+  .controls label { font-size:14px; color:#444; display:flex; gap:10px; align-items:center; }
+  input[type=range] { width:160px; }
+  .val { font-variant-numeric: tabular-nums; min-width:4ch; font-weight:600; }
+  .sizes { display:flex; gap:28px; align-items:flex-end; flex-wrap:wrap; margin: 12px 0 8px; }
+  .tile { text-align:center; }
+  .tile .box { background:#fff; border:1px solid #e2e2de; border-radius:16px; display:flex; align-items:center; justify-content:center; overflow:hidden; margin: 0 auto 6px; }
+  .tile .px { font-size:11px; color:#999; font-variant-numeric: tabular-nums; }
+  .r16 { border-radius: 4px !important; }
+  .r32 { border-radius: 8px !important; }
+  .r48 { border-radius: 12px !important; }
+  .r180 { border-radius: 40px !important; }
+  .glyph { font-family:'Inter', sans-serif; font-weight:800; color:#111; line-height:1; }
+  .hint { font-size:13px; color:#777; margin: 32px 0 0; max-width: 680px; }
+</style>
+</head>
+<body>
+<h1>PRISME — favicon · 100% typographique, noir & blanc</h1>
+<div class="controls">
+  <label>Angle (P skewé & mini-éventail)
+    <input type="range" id="angle" min="0" max="20" step="1" value="12">
+    <span class="val" id="angleVal">12°</span>
+  </label>
+  <label>Graisse
+    <input type="range" id="weight" min="600" max="900" step="1" value="800">
+    <span class="val" id="weightVal">800</span>
+  </label>
+</div>
+
+<div id="prototypes"></div>
+
+<p class="hint">Rendu à 180px (apple-touch), 48px, 32px (favicon) et 16px — la taille la plus petite est le vrai
+test : seuls 2–3 traits épais y survivent. Le skew du candidat 2 penche à droite (opposé du P du wordmark, qui penche
+à gauche) pour éviter toute lecture politique d'une lettre isolée.</p>
+
+<script>
+const angle  = document.getElementById("angle"),
+      weight = document.getElementById("weight");
+
+const PROTOS = [
+  {
+    id: "p-droit",
+    title: "1 · P droit",
+    desc: "La capitale seule, sans aucun skew. Le candidat le plus robuste : fût massif + boucle pleine, deux traits qui survivent à 16px. L'inclinaison reste le geste du wordmark ; l'icône est posée.",
+    render: (px, deg, w) =>
+      `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+        <div class="glyph" style="font-size:${px * 0.6}px;font-weight:${w};line-height:1;">P</div>
+      </div>`,
+  },
+  {
+    id: "p-skewe",
+    title: "2 · P légèrement skewé",
+    desc: "L'ADN du logotype, dosée pour survivre en petit : 12° par défaut (au lieu de 20°). Le skew penche à droite — l'opposé du P du wordmark, pour éviter toute lecture politique.",
+    render: (px, deg, w) =>
+      `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+        <div class="glyph" style="font-size:${px * 0.6}px;font-weight:${w};line-height:1;transform:skewX(${deg}deg);transform-origin:50% 100%;">P</div>
+      </div>`,
+  },
+];
+
+
+const SIZES = [180, 48, 32, 16];
+
+function render() {
+  const deg = +angle.value, w = +weight.value;
+  document.getElementById("angleVal").textContent = deg + "°";
+  document.getElementById("weightVal").textContent = w;
+
+  document.getElementById("prototypes").innerHTML = PROTOS.map(p => `
+    <h2>${p.title}</h2>
+    <p class="desc">${p.desc}</p>
+    <div class="sizes">${SIZES.map(px => `
+      <div class="tile">
+        <div class="box r${px >= 180 ? 180 : px}" style="width:${px}px;height:${px}px;">
+          ${p.render(px, deg, w)}
+        </div>
+        <div class="px">${px}px</div>
+      </div>`).join("")}
+    </div>`).join("");
+}
+
+for (const el of [angle, weight]) el.oninput = render;
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Prisme — logo dégradé d'inclinaison par lettre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&family=Libre+Franklin:wght@400..900&family=Fraunces:opsz,wght@9..144,100..900&display=swap" rel="stylesheet">
+<style>
+  body { font-family: system-ui, sans-serif; background:#f5f5f2; color:#111; margin:0; padding:48px 24px; }
+  h1 { font-size: 15px; font-weight: 500; color:#666; margin:0 0 6px; }
+  .controls { display:flex; gap:28px; align-items:center; margin:24px 0 40px; flex-wrap:wrap; }
+  .controls label { font-size:14px; color:#444; display:flex; gap:10px; align-items:center; }
+  input[type=range] { width:180px; }
+  .val { font-variant-numeric: tabular-nums; min-width: 5ch; display:inline-block; font-weight:600; }
+  .row { display:flex; align-items:baseline; gap:20px; margin: 14px 0; }
+  .row .label { width: 240px; font-size:12px; color:#888; font-family: system-ui; flex:none; }
+  .logo { font-size: 72px; line-height: 1; letter-spacing: -0.02em; white-space: nowrap; }
+  .logo span { display:inline-block; transform-origin: 0 100%; }
+  .meter { margin: 6px 0 26px; }
+  .meterbar { display:flex; gap:8px; align-items:center; font-size:11px; color:#999; }
+  .meterbar b { color:#333; font-variant-numeric: tabular-nums; }
+  .hint { font-size:13px; color:#777; margin: 32px 0 8px; max-width: 680px; }
+  .fine { display:flex; gap:16px; flex-wrap:wrap; margin:10px 0; }
+  .fine label { font-size:12px; color:#444; display:flex; gap:6px; align-items:center; }
+  .fine input[type=range] { width:110px; }
+  .fine b { font-variant-numeric: tabular-nums; min-width:3.5ch; font-size:11px; color:#666; }
+  table { border-collapse: collapse; margin-top:8px; font-size:13px; }
+  td, th { border:1px solid #ddd; padding:4px 10px; text-align:left; }
+  th { background:#eee; }
+</style>
+</head>
+<body>
+<h1>PRISME — inclinaison individuelle par lettre · P penche fort à droite → E penche fort à gauche</h1>
+<div class="controls">
+  <label>Angle max (P et E)
+    <input type="range" id="angle" min="-20" max="20" step="0.5" value="20">
+    <span class="val" id="angleVal">20°</span>
+  </label>
+  <label>Courbe (2 = centre très plat)
+    <input type="range" id="curve" min="1" max="3" step="0.1" value="1">
+    <span class="val" id="curveVal">1.0</span>
+  </label>
+  <label>Taille
+    <input type="range" id="size" min="16" max="160" step="1" value="72">
+    <span class="val" id="sizeVal">72px</span>
+  </label>
+  <label>Casse
+    <select id="casing" style="font-size:14px;padding:4px 8px;">
+      <option value="PRISME" selected>PRISME</option>
+      <option value="prisme">prisme</option>
+      <option value="Prisme">Prisme</option>
+    </select>
+  </label>
+  <label>Graisse
+    <select id="weight" style="font-size:14px;padding:4px 8px;">
+      <option value="400">Regular</option>
+      <option value="500">Medium</option>
+      <option value="600">Semi Bold</option>
+      <option value="700">Bold</option>
+      <option value="800">Extra Bold</option>
+      <option value="900">Black</option>
+      <option value="800" selected>Extra Bold</option>
+    </select>
+  </label>
+  <label>Tracking
+    <input type="range" id="gap" min="-0.06" max="0.3" step="0.01" value="0.08">
+    <span class="val" id="gapVal">0.08em</span>
+  </label>
+</div>
+
+<div id="specimen"></div>
+
+<p class="hint">Chaque lettre reçoit son propre angle : <b>t = (2.5 − i) / 2.5</b> pour la lettre i (0..5), pondéré par la courbe
+<b>t^p</b> — une courbe &gt; 1 garde les extrêmes à fond tout en aplatieant le centre. À reproduire dans Figma lettre par lettre
+avec le plugin Skew.</p>
+
+<div class="meter"><div class="meterbar" id="readout"></div></div>
+<div class="fine" id="fine"></div>
+<div style="margin:8px 0 20px;">
+  <button id="preset" style="font-size:13px;padding:5px 12px;cursor:pointer;">Prisme équilibré (compensation optique)</button>
+  <button id="reset" style="font-size:13px;padding:5px 12px;cursor:pointer;">Réinitialiser</button>
+</div>
+<table id="table"></table>
+
+<script>
+const fonts = [
+  ["Inter", 900],
+  ["Libre Franklin", 900],
+  ["Fraunces", 900],
+  ["SF Pro (système Mac)", 900, "-apple-system, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif"],
+];
+const casing = document.getElementById("casing");
+const LETTERS = () => casing.value.split("");
+let offsets = [0,0,0,0,0,0];
+// Compensation optique « Prisme équilibré » : les minuscules de moindre hauteur
+// reçoivent un surcroît d'angle pour paraître aussi penchées que les capitales.
+const PRESETS = {
+  "PRISME": [0,0,0,0,0,0],
+  "prisme": [0, 4, 2, -2, -4, -6],  // r,i ascendants sur-leur pente ; s,m,e x-height creusent vers l'extérieur
+  "Prisme": [0, 4, 2, -2, -4, -6],
+};
+
+const angle = document.getElementById("angle"),
+      curve = document.getElementById("curve"),
+      size  = document.getElementById("size"),
+      weight = document.getElementById("weight"),
+      gap   = document.getElementById("gap");
+
+function letterAngles() {
+  const A = parseFloat(angle.value), p = parseFloat(curve.value);
+  return LETTERS().map((ch, i) => {
+    const t = (2.5 - i) / 2.5;        // +1 (P) … −1 (E), parfaitement symétrique
+    const sign = Math.sign(t), mag = Math.pow(Math.abs(t), p);
+    return { ch, deg: +(A * sign * mag + offsets[i]).toFixed(2) }; // P et E = ±A exactement
+  });
+}
+
+function render() {
+  const angles = letterAngles();
+  const A = parseFloat(angle.value), p = parseFloat(curve.value);
+  document.getElementById("angleVal").textContent = A + "°";
+  document.getElementById("curveVal").textContent = p.toFixed(1);
+  document.getElementById("sizeVal").textContent = size.value + "px";
+  document.querySelectorAll(".logo").forEach(l => l.style.fontSize = size.value + "px");
+  document.querySelectorAll(".logo").forEach(l => l.style.fontWeight = weight.value);
+  document.querySelectorAll(".row .label").forEach(l => l.textContent = l.dataset.fam + " " + weight.selectedOptions[0].text);
+  document.getElementById("gapVal").textContent = parseFloat(gap.value).toFixed(2) + "em";
+
+  const spans = angles.map(({ch, deg}) =>
+    `<span style="transform: skewX(${deg}deg); margin-right:${gap.value}em;">${ch}</span>`).join("");
+  document.querySelectorAll(".logo").forEach(l => l.innerHTML = spans);
+
+  document.getElementById("readout").innerHTML =
+    "Angles&nbsp;: " + angles.map(({ch, deg}) => `<b>${ch}&nbsp;${deg > 0 ? "+" : ""}${deg}°</b>`).join(" · ");
+  document.querySelectorAll(".fine input").forEach((inp, i) => {
+    inp.nextElementSibling.textContent = (offsets[i] > 0 ? "+" : "") + offsets[i] + "°";
+  });
+  document.getElementById("table").innerHTML =
+    "<tr><th>Lettre</th>" + angles.map(({ch}) => `<th>${ch}</th>`).join("") + "</tr>" +
+    "<tr><th>Angle (°)</th>" + angles.map(({deg}) => `<td>${deg > 0 ? "+" : ""}${deg}</td>`).join("") + "</tr>";
+}
+
+const spec = document.getElementById("specimen");
+spec.innerHTML = fonts.map(([fam, w, stack]) => `
+  <div class="row">
+    <span class="label" data-fam="${fam}">${fam} 900</span>
+    <span class="logo" style="font-family:${stack || `'${fam}'`};font-weight:${w};"></span>
+  </div>`).join("");
+
+// Réglages fins par lettre (offsets sur la formule)
+const fine = document.getElementById("fine");
+fine.innerHTML = LETTERS().map((ch, i) => `
+  <label>${ch} <input type="range" min="-12" max="12" step="1" value="0" data-i="${i}"><b>0°</b></label>`).join("");
+fine.querySelectorAll("input").forEach(inp => inp.oninput = e => {
+  offsets[+e.target.dataset.i] = +e.target.value;
+  render();
+});
+document.getElementById("preset").onclick = () => {
+  offsets = [...PRESETS[casing.value]];
+  fine.querySelectorAll("input").forEach((inp, i) => inp.value = offsets[i]);
+  render();
+};
+document.getElementById("reset").onclick = () => {
+  offsets = [0,0,0,0,0,0];
+  fine.querySelectorAll("input").forEach(inp => inp.value = 0);
+  render();
+};
+casing.onchange2 = null;
+casing.addEventListener("change", () => {
+  offsets = [...PRESETS[casing.value]];
+  fine.innerHTML = LETTERS().map((ch, i) => `
+    <label>${ch} <input type="range" min="-12" max="12" step="1" value="${offsets[i]}" data-i="${i}"><b>${offsets[i]}°</b></label>`).join("");
+  fine.querySelectorAll("input").forEach(inp => inp.oninput = e => {
+    offsets[+e.target.dataset.i] = +e.target.value;
+    render();
+  });
+  render();
+});
+
+for (const el of [angle, curve, size, weight, gap, casing]) {
+  el.oninput = render;
+  el.onchange = render;
+}
+render();
+</script>
+</body>
+</html>
