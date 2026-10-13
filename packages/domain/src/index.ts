@@ -210,5 +210,8 @@ export * from './exposure.ts';
 // The sourced Outlet config (issue #2): Leanings with citations, readership,
 // verified feeds and TDM reservations. See docs/research/outlet-leanings.md.
 export * from './outlets.ts';
+// The Edition ranking key (issue #37, ADR-0009): shared by the Edition cut
+// and the archive pages (issue #99, ADR-0017).
+export * from './ranking.ts';
 export * from './split-per-outlet.ts';
 export * from './story-file.ts';
