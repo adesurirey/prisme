@@ -5,12 +5,46 @@
   "createdAt": "2026-10-11T09:07:20.230Z",
   "articles": [
     {
+      "id": "2b93cd0e5d6d",
+      "outletId": "le-figaro",
+      "headline": "L’Arabie saoudite dans l’implacable piège des houthistes",
+      "url": "https://www.lefigaro.fr/international/l-arabie-saoudite-dans-l-implacable-piege-des-houthistes-20261013",
+      "publishedAt": "2026-10-13T18:20:00.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/13/ecf68da8226b8b323580a26b8d097abd775edf5fe9e4975a9ae7b4622dae8c25.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "58016b091dee",
+      "outletId": "rfi",
+      "headline": "La coalition menée par l'Arabie saoudite frappe un site pétrolier yéménite près de Sanaa, les Houthis ripostent",
+      "url": "https://www.rfi.fr/fr/moyen-orient/20261013-l-arabie-saoudite-frappe-un-site-p%C3%A9trolier-y%C3%A9m%C3%A9nite-pr%C3%A8s-de-sanaa-apr%C3%A8s-un-appel-%C3%A0-%C3%A9vacuer",
+      "publishedAt": "2026-10-13T16:21:24.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/5dd6e3ca-c357-11f1-bfb6-f50f6d982dc3/w:1024/p:16x9/Cette-photo-offre-une-vue-d-ensemble-de-Sanaa-la-capitale-du-Y%C3%A9men-le-2-octobre-2026.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "847e5d080006",
       "outletId": "france-24",
       "headline": "Des compagnies aériennes suspendent les vols vers l'Arabie saoudite",
       "url": "https://www.france24.com/fr/vid%C3%A9o/20261013-des-compagnies-a%C3%A9riennes-suspendent-les-vols-vers-l-arabie-saoudite",
       "publishedAt": "2026-10-13T16:19:23.000Z",
       "imageUrl": "https://s.france24.com/media/display/964b1198-c6ec-11f1-9d79-53993c5f1f18/w:1024/p:16x9/FR-20261013-110825-111008-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "08a8e0868872",
+      "outletId": "france-24",
+      "headline": "Arabie Saoudite : les frappes houthis alimentent les mauvaises images",
+      "url": "https://www.france24.com/fr/%C3%A9missions/info-ou-intox/20261013-arabie-saoudite-les-frappes-houthis-alimentent-les-mauvaises-images",
+      "publishedAt": "2026-10-13T15:23:04.000Z",
+      "imageUrl": "https://s.france24.com/media/display/834c6c38-c717-11f1-986d-53993c5f1f18/w:1024/p:16x9/FRAN261012-2220-Live-CS2220.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "world"
@@ -976,7 +1010,7 @@
     ],
     "centre": [
       "Les rebelles houthis multiplient les actions armées visant les infrastructures stratégiques et aéroportuaires du royaume.",
-      "De nouvelles explosions ont retenti dans la capitale tandis que la situation sécuritaire se dégrade également dans le détroit d'Ormuz.",
+      "La coalition saoudienne et les insurgés procèdent à des bombardements croisés ciblant notamment des sites pétroliers.",
       "Plusieurs compagnies aériennes suspendent leurs liaisons vers le royaume face aux perturbations régionales et aux risques accrus.",
       "Washington condamne fermement ces assauts, estimant qu'ils visent à influencer les marchés pétroliers à l'approche du scrutin américain."
     ],
@@ -984,10 +1018,10 @@
       "Une nouvelle offensive aérienne enregistrée en fin de semaine a alourdi le bilan humain et matériel de la capitale.",
       "Les autorités confirment la présence de ressortissants étrangers parmi les personnes touchées par ces frappes.",
       "Les images diffusées par les caméras de sécurité traduisent la panique des passagers au cœur des infrastructures.",
-      "L'analyse des événements met en évidence le piège tendu par la stratégie asymétrique des rebelles dans lequel Riyad se trouve piégée."
+      "L'analyse des événements met en évidence le piège tendu par la stratégie asymétrique des rebelles dans lequel Riyad se trouve piégée, manquant de soutiens extérieurs."
     ]
   },
-  "differences": "La gauche intègre la dimension géopolitique des réactions américaines et la symétrie des ripostes avec les frappes de la coalition près de Sanaa. Le centre élargit sa couverture aux décisions des compagnies aériennes suspendant leurs vols et aux déclarations de Donald Trump sur les enjeux pétroliers. La droite, quant à elle, maintient son focus sur le bilan humain, la détresse des passagers et l'impasse tactique de la métropole face à la stratégie asymétrique des insurgés.",
+  "differences": "La gauche intègre la dimension géopolitique des réactions américaines et la symétrie des ripostes avec les frappes de la coalition près de Sanaa. Le centre élargit sa couverture aux décisions des compagnies aériennes suspendant leurs vols et aux frappes réciproques visant les infrastructures pétrolières. La droite, quant à elle, maintient son focus sur le bilan humain, la détresse des passagers et l'impasse tactique de la métropole, soulignée par Le Figaro face aux faiblesses des défenses et des soutiens américains.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 86
+  "summarizedArticleCount": 89
 }

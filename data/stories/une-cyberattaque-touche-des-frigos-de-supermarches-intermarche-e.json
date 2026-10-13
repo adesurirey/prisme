@@ -5,6 +5,40 @@
   "createdAt": "2026-10-12T11:01:35.950Z",
   "articles": [
     {
+      "id": "27d55e4582c5",
+      "outletId": "france-24",
+      "headline": "Une cyberattaque \"sans précédent\" vise les réfrigérateurs des supermarchés",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261013-une-cyberattaque-sans-pr%C3%A9c%C3%A9dent-vise-les-r%C3%A9frig%C3%A9rateurs-des-supermarch%C3%A9s",
+      "publishedAt": "2026-10-13T17:19:50.000Z",
+      "imageUrl": "https://s.france24.com/media/display/3d0f48ce-c728-11f1-9ced-53993c5f1f18/w:1024/p:16x9/Miniature-2-1.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "c4b43e792da1",
+      "outletId": "20-minutes",
+      "headline": "Cyberattaque : Ascenseurs ou alarmes… Après les frigos de supermarchés, quels équipements peuvent être vulnérables ?",
+      "url": "https://www.20minutes.fr/high-tech/4253899-20261013-cyberattaque-ascenseurs-alarmes-apres-frigos-supermarches-equipements-peuvent-etre-vulnerables?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-13T16:27:33.000Z",
+      "imageUrl": "https://img.20mn.fr/ISlC2teMSJ-eH4it_y_95Ck/1200x768_concept-de-cybercriminalite-de-piratage-et-de-technologie-gros-plan-d-un-hacker-masculin-dans-une-chambre-noire-ecrivant-du-code-ou-utilisant-un-programme-antivirus-pour-une-cyberattaque",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
+    {
+      "id": "b6ee80a2bbc8",
+      "outletId": "la-croix",
+      "headline": "Cyberattaque des supermarchés : le signal d’alarme d’une société hyperconnectée et fragile",
+      "url": "https://www.la-croix.com/a-vif/cyberattaque-des-supermarches-le-signal-d-alarme-dune-societe-hyperconnectee-et-fragile-20261013",
+      "publishedAt": "2026-10-13T15:53:44.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2025/11/09/2211535-loup-besmond-de-senneville-redacteur-en-chef-adjoi.jpg",
+      "frontPage": false,
+      "kind": "opinion",
+      "section": "society"
+    },
+    {
       "id": "c32d42b09de5",
       "outletId": "tf1-info",
       "headline": "Cyberattaque dans des centaines de supermarchés : \"Nous allons tirer toutes les leçons\", assure Dominique Schelcher, PDG de Coopérative U",
@@ -126,6 +160,17 @@
       "dayPrecision": true,
       "kind": "news",
       "section": "economy"
+    },
+    {
+      "id": "71baffc4c902",
+      "outletId": "le-parisien",
+      "headline": "Cyberattaque des installations frigorifiques de supermarchés : des systèmes américains également touchés",
+      "url": "https://www.leparisien.fr/faits-divers/cyberattaque-des-installations-frigorifiques-de-supermarches-des-systemes-americains-egalement-touches-13-10-2026-SSNGOBCYKVGBVNTJL7FDLPK4BI.php",
+      "publishedAt": "2026-10-12T22:00:00.000Z",
+      "frontPage": false,
+      "dayPrecision": true,
+      "kind": "news",
+      "section": "science"
     },
     {
       "id": "8390daa83a4b",
@@ -613,15 +658,17 @@
   "summaries": {
     "gauche": [
       "Un sabotage informatique nocturne a touché des centaines d'établissements de vente au détail, paralysant leurs installations de réfrigération connectées.",
-      "Des quantités considérables de marchandises fraîches ont été perdus, plongeant les commerçants dans une grande détresse.",
+      "Des quantités considérables de marchandises fraîches ont été perdues, plongeant les commerçants dans une grande détresse.",
       "Une investigation a été lancée par un service spécialisé pour analyser la vulnérabilité logicielle mise en cause.",
-      "Une partie de ce camp nuance l'ampleur totale du sinistre, estimant que la destruction de denrées concerne une minorité d'établissements au sein d'une enseigne majeure."
+      "Une partie de ce camp nuance l'ampleur totale du sinistre, estimant que la destruction de denrées concerne une minorité d'établissements au sein d'une enseigne majeure.",
+      "Certains commentateurs de ce camp élargissent le débat aux risques pesant sur l'ensemble des équipements connectés du quotidien, tels que les ascenseurs ou les alarmes."
     ],
     "centre": [
       "Une intrusion numérique d'une ampleur inédite a affecté les dispositifs thermiques de grandes surfaces, provoquant des destructions massives de denrées fraîches.",
       "Le préjudice matériel s'élève à plusieurs millions d'euros pour plusieurs grandes enseignes de la distribution.",
       "Environ quatre cents magasins ont été touchés par cette opération visant les infrastructures frigorifiques du fabricant Danfoss.",
-      "Les rédactions continuent de documenter le bilan global de cette panne géante et ses conséquences économiques directes."
+      "Des élévations de température forcées ont en outre provoqué localement des débuts d'incendie dans les supermarchés ciblés.",
+      "Plusieurs analyses soulignent que cet incident agit comme un signal d'alarme quant à la fragilité de notre société hyperconnectée."
     ],
     "droite": [
       "Une attaque informatique majeure a perturbé les systèmes de froid de distributeurs en exploitant des failles chez un fournisseur, touchant notamment quatre-vingt supermarchés d'une grande coopérative selon des déclarations récentes.",
@@ -630,7 +677,7 @@
       "Les estimations financières varient selon les types de points de vente, allant de quelques dizaines de milliers d'euros à près de 200 000 euros pour les plus grands, tandis que la direction d'une enseigne majeure annonce vouloir tirer les leçons de l'événement."
     ]
   },
-  "differences": "Les trois camps s'accordent sur le constat d'une cyberattaque d'envergure ayant visé les équipements frigorifiques de la grande distribution. La gauche met en avant la détresse des commerçants tout en intégrant des propos rassurants sur une partie des magasins épargnés. Le centre détaille l'ampleur financière des dégâts matériels ainsi que les bilans chiffrés des enseignes touchées. Enfin, la droite et le centre droit adoptent un angle à la fois stratégique sur la vulnérabilité des infrastructures logistiques face aux guerres numériques, précis sur l'évaluation monétaire des pertes, et enrichi par les déclarations des dirigeants d'enseignes comme l'illustre TF1 Info.",
+  "differences": "Les trois camps s'accordent sur le constat d'une cyberattaque d'envergure ayant visé les équipements frigorifiques de la grande distribution. La gauche met en avant la détresse des commerçants tout en intégrant des perspectives plus larges sur la vulnérabilité d'autres objets connectés du quotidien. Le centre détaille l'ampleur financière des dégâts matériels, documente les risques d'incendie et insiste sur la dimension de signal d'alarme pour une société hyperconnectée. Enfin, la droite adopte un angle stratégique sur la vulnérabilité des infrastructures face aux guerres numériques, tout en s'appuyant sur des bilans chiffrés précis et les déclarations des dirigeants d'enseignes comme l'illustre TF1 Info.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 54
+  "summarizedArticleCount": 58
 }

@@ -5,6 +5,27 @@
   "createdAt": "2026-10-12T21:01:24.952Z",
   "articles": [
     {
+      "id": "9b0242272752",
+      "outletId": "rfi",
+      "headline": "RDC: Joseph Kabila revient dans le jeu, mais la voie armée peut-elle le sortir de l’impasse?",
+      "url": "https://www.rfi.fr/fr/afrique/20261013-rdc-joseph-kabila-revient-dans-le-jeu-mais-la-voie-arm%C3%A9e-peut-elle-le-sortir-de-l-impasse",
+      "publishedAt": "2026-10-13T19:53:08.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/8d8f0016-c73f-11f1-a7be-29a2e29ae696/w:1024/p:16x9/000-D32R7KR.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "a03d5166cdc8",
+      "outletId": "liberation",
+      "headline": "En RDC, l’ancien président Joseph Kabila prend officiellement la tête de la rébellion",
+      "url": "https://www.liberation.fr/international/afrique/en-rdc-lancien-president-joseph-kabila-prend-officiellement-la-tete-de-la-rebellion-20261013_O6KLNFNJGZFHFK5TGDNHEJY6LU/",
+      "publishedAt": "2026-10-13T18:04:17.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "9bf07f8b4ab0",
       "outletId": "france-24",
       "headline": "RDC : Joseph Kabila prend la tête de la rébellion",
@@ -117,5 +138,28 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "L'ancien chef de l'État s'allie officiellement avec les forces rebelles actives dans l'est du pays.",
+      "Cette prise de direction intervient alors que les pourparlers de paix soutenus par les États-Unis sont bloqués.",
+      "Cette alliance armée fait redouter une escalade majeure et le déclenchement d'un conflit généralisé.",
+      "Le regroupement rebelle intègre désormais l'ex-président et des mouvements armés comme le M23."
+    ],
+    "centre": [
+      "Joseph Kabila fonde le Front pour la refondation de la nation, un mouvement politico-militaire unissant la rébellion.",
+      "Cette coalition intègre l'Alliance Fleuve Congo et le M23, qui occupe la ville de Goma depuis le début de l'année 2025.",
+      "Cette initiative constitue un retour inattendu sur la scène politique pour l'ancien dirigeant, visé par de lourdes sanctions et une condamnation capitale.",
+      "Le projet affiché de cette nouvelle structure est de contester et de renverser l'administration en place dirigée par Félix Tshisekedi.",
+      "Si ce positionnement musclé lui permet de revenir au premier plan de l'opposition, il fragilise ses appuis diplomatiques et accentue les tensions."
+    ],
+    "droite": [
+      "L'ancien président congolais officialise son union avec la rébellion du M23 au sein d'une même structure politico-militaire.",
+      "Cette démarche survient alors que l'intéressé est sous le coup d'une condamnation à mort pour trahison prononcée par les autorités de son pays."
+    ]
+  },
+  "differences": "La presse de centre et de droite insiste principalement sur l'aspect politique et juridique de l'événement, soulignant le coup de poker de Joseph Kabila, sa condamnation à mort et la création du Front pour la refondation de la nation face à Félix Tshisekedi. De son côté, la gauche met davantage l'accent sur les répercussions sécuritaires immédiates, redoutant une guerre totale dans l'est du pays et l'enlisement des négociations de paix parrainées par Washington.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 12
 }
