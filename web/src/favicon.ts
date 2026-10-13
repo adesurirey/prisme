@@ -1,27 +1,41 @@
+import prismeMarkAsset from './assets/brand/prisme-mark.svg?raw';
+
 /**
- * The aurora ball as an SVG markup string — the single source for every
- * rasterization of the mark: the favicon data URIs below, and the PNG icons
- * the one-off script (web/scripts/generate-icons.ts) generates for the PWA
- * manifest and apple-touch-icon. Same gradients, same geometry as the
- * AuroraBall component; the hex values match the --aurora-* tokens in
- * global.css, one color set per theme.
+ * The Prisme mark — the P at the wordmark's angle (+20°, top leans left),
+ * Prisme's brand icon (docs/research/logo/recette-finale.md, "Favicon &
+ * icônes d'app"). Derived from the generated asset
+ * src/assets/brand/prisme-mark.svg (the single source; regenerating it via
+ * web/scripts/generate-brand-svg.py updates everything that reads this).
+ * The favicon data URIs below and the PNG icons from generate-icons.ts
+ * rasterize from it as-is, with no CSS, so the color is baked in.
  */
-export function auroraBallSvg(stops: [string, string, string]): string {
-  // Raw '#' here: the SVG is rasterized as-is (icons) and only gets
-  // percent-encoded when wrapped into a data URI below.
-  const [from, mid, to] = stops;
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><linearGradient id="s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${from}"/><stop offset=".5" stop-color="${mid}"/><stop offset="1" stop-color="${to}"/></linearGradient><radialGradient id="h" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient><radialGradient id="d" cx=".5" cy=".5" r=".5"><stop offset=".7" stop-color="#000000" stop-opacity="0"/><stop offset="1" stop-color="#000000" stop-opacity=".25"/></radialGradient></defs><circle cx="16" cy="16" r="15" fill="url(#s)"/><circle cx="16" cy="16" r="15" fill="url(#d)"/><ellipse cx="11" cy="9.5" rx="6.5" ry="5" fill="url(#h)"/></svg>`;
+
+/** The mark's viewBox, re-padded around the glyph by `pad` (a fraction of
+ * the glyph height per side; 0 = the glyph fills the viewBox — favicons
+ * sit at ~0.18, matching how other sites' icons breathe in a browser tab). */
+function paddedViewBox(pad: number): string {
+  const [x, y, w, h] = prismeMarkAsset
+    .match(/viewBox="([^"]+)"/)![1]
+    .split(' ')
+    .map(Number);
+  const p = pad * h;
+  return `${x - p} ${y - p} ${w + 2 * p} ${h + 2 * p}`;
 }
 
-/** The aurora ball as favicon data URIs, one per theme (the media attribute
- * on <link> makes the browser pick, and live-swap, the right one). Favicons
- * must be self-contained URLs, hence the data-URI wrapping. */
-const BALL = (svg: string): string =>
+/** The mark as an SVG string in `color` (hex). */
+export function prismeMarkSvg(color: string, pad = 0): string {
+  return prismeMarkAsset
+    .replace(/viewBox="[^"]+"/, `viewBox="${paddedViewBox(pad)}"`)
+    .replace(/ role="img" aria-label="Prisme"/, '')
+    .replaceAll('currentColor', color);
+}
+
+/** Favicon data URIs, one per theme (the media attribute on <link> makes the
+ * browser pick — and live-swap — the right one). Colors match the --ink
+ * tokens in global.css. Favicons must be self-contained URLs, hence the
+ * data-URI wrapping. */
+const URI = (svg: string): string =>
   `data:image/svg+xml,${encodeURIComponent(svg)}`;
 
-export const AURORA_BALL_LIGHT = BALL(
-  auroraBallSvg(['#dfa414', '#e0415e', '#2e7ce4']),
-);
-export const AURORA_BALL_DARK = BALL(
-  auroraBallSvg(['#f6c65b', '#f28498', '#63a8ea']),
-);
+export const PRISME_MARK_LIGHT = URI(prismeMarkSvg('#1b1b1f', 0.18));
+export const PRISME_MARK_DARK = URI(prismeMarkSvg('#ededf0', 0.18));

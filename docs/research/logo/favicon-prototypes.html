@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Prisme — prototypes favicon & icônes d'app</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet">
+<style>
+  body { font-family: system-ui, sans-serif; background:#f5f5f2; color:#111; margin:0; padding:48px 24px; }
+  h1 { font-size: 15px; font-weight: 500; color:#666; margin:0 0 6px; }
+  h2 { font-size: 13px; font-weight: 600; color:#333; margin: 36px 0 2px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .desc { font-size: 13px; color:#777; margin: 0 0 14px; max-width: 680px; }
+  .controls { display:flex; gap:28px; align-items:center; margin:20px 0 8px; flex-wrap:wrap; }
+  .controls label { font-size:14px; color:#444; display:flex; gap:10px; align-items:center; }
+  input[type=range] { width:160px; }
+  .val { font-variant-numeric: tabular-nums; min-width:4ch; font-weight:600; }
+  .sizes { display:flex; gap:28px; align-items:flex-end; flex-wrap:wrap; margin: 12px 0 8px; }
+  .tile { text-align:center; }
+  .tile .box { background:#fff; border:1px solid #e2e2de; border-radius:16px; display:flex; align-items:center; justify-content:center; overflow:hidden; margin: 0 auto 6px; }
+  .tile .px { font-size:11px; color:#999; font-variant-numeric: tabular-nums; }
+  .r16 { border-radius: 4px !important; }
+  .r32 { border-radius: 8px !important; }
+  .r48 { border-radius: 12px !important; }
+  .r180 { border-radius: 40px !important; }
+  .glyph { font-family:'Inter', sans-serif; font-weight:800; color:#111; line-height:1; }
+  .hint { font-size:13px; color:#777; margin: 32px 0 0; max-width: 680px; }
+</style>
+</head>
+<body>
+<h1>PRISME — le mark P incliné · 100% typographique, noir & blanc</h1>
+<div class="controls">
+  <label>Graisse
+    <input type="range" id="weight" min="600" max="900" step="1" value="800">
+    <span class="val" id="weightVal">800</span>
+  </label>
+</div>
+
+<div id="prototypes"></div>
+
+<p class="hint">Rendu à 180px (apple-touch), 48px, 32px (favicon) et 16px. Convention d'angle du projet :
+<strong>positif = le haut penche à gauche</strong> (le P du wordmark est à +20°). Centrage optique : chaque P est
+posé sur la hauteur de capitales (0.727em) et compensé du décalage d'encre induit par le skew — le glyphe reste
+au centre de la tuile quelle que soit l'inclinaison.</p>
+
+<script>
+const weight = document.getElementById("weight");
+
+// Inter Extra Bold : hauteur de capitales 0.727em ; avec line-height:1, la
+// baseline siège à 80% de la boîte (métriques hhea 1984+494 / 2478).
+const CAP = 0.727, BASELINE = 0.8;
+
+function renderP(px, deg, w) {
+  const fs = px * 0.62;                    // le glyphe occupe ~62% de la tuile
+  const k = Math.tan(deg * Math.PI / 180);
+  // compensation d'encre : le skew autour de la baseline-centre déplace le
+  // centre optique (à mi-hauteur des capitales) de 0.36em × tan(angle)
+  const tx = 0.36 * fs * k;
+  // centrage vertical : centre des capitales à (BASELINE − CAP/2) − 0.5 de la boîte
+  const ty = (BASELINE - CAP / 2 - 0.5) * fs;
+  return `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+    <div class="glyph" style="font-size:${fs}px;font-weight:${w};transform:translate(${tx.toFixed(2)}px,${ty.toFixed(2)}px) skewX(${deg}deg);transform-origin:50% ${BASELINE * 100}%;">P</div>
+  </div>`;
+}
+
+const PROTOS = [
+  {
+    id: "wordmark",
+    title: "1 · Angle du wordmark (+20°)",
+    desc: "La première lettre du logo, à l'angle exact du P du wordmark. Cohérence totale marque/mot : ce que tu vois dans la navbar, tu le retrouves dans l'onglet. Penche à gauche — la question politique se pose, mais l'icône vit dans un contexte de marque, pas seule.",
+    render: (px, deg, w) => renderP(px, 20, w),
+  },
+  {
+    id: "modere",
+    title: "2 · Modéré (+12°)",
+    desc: "L'inclinaison du wordmark, dosée pour la petite taille : à 16px le skew lit plus fort qu'à 180px (l'œil amplifie les écarts quand les traits sont grossiers), donc 12° pourrait suffire à porter l'ADN sans l'exagérer.",
+    render: (px, deg, w) => renderP(px, 12, w),
+  },
+  {
+    id: "droite",
+    title: "3 · Penche à droite (−20°)",
+    desc: "L'anti-lecture-politique : l'angle du E du wordmark appliqué au P. Symétrique au wordmark (le mot commence à +20° et finit à −20°, l'icône prend l'autre extrême). Un P penché à droite lit « italique », plus dynamique — mais il dit l'inverse du début du mot.",
+    render: (px, deg, w) => renderP(px, -20, w),
+  },
+];
+
+const SIZES = [180, 48, 32, 16];
+
+function render() {
+  const w = +weight.value;
+  document.getElementById("weightVal").textContent = w;
+  document.getElementById("prototypes").innerHTML = PROTOS.map(p => `
+    <h2>${p.title}</h2>
+    <p class="desc">${p.desc}</p>
+    <div class="sizes">${SIZES.map(px => `
+      <div class="tile">
+        <div class="box r${px >= 180 ? 180 : px}" style="width:${px}px;height:${px}px;">
+          ${p.render(px, 0, w)}
+        </div>
+        <div class="px">${px}px</div>
+      </div>`).join("")}
+    </div>`).join("");
+}
+
+weight.oninput = render;
+render();
+</script>
+</body>
+</html>

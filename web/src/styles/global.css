@@ -39,12 +39,6 @@
   --trending: #0d9488;
 
   --hover: rgba(17, 17, 20, 0.02);
-
-  /* The aurora ball (AuroraBall component, favicon): centre gold → gauche
-   * red → droite blue, light-theme values. */
-  --aurora-centre: #dfa414;
-  --aurora-gauche: #e0415e;
-  --aurora-droite: #2e7ce4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,9 +51,6 @@
     --muted: #9b9ba3;
     --faint: #6c6c75;
 
-    /* Same lightness architecture as light mode (centre clearly the
-     * lightest) — on the dark canvas the three hues must also differ in
-     * lightness so adjacent segments of a micro-bar stay separable. */
     --gauche: #f28498;
     --centre: #f6c65b;
     --droite: #63a8ea;
@@ -75,11 +66,6 @@
     --trending: #2dd4bf;
 
     --hover: rgba(255, 255, 255, 0.025);
-
-    /* Aurora ball, dark-theme values (brightened, per the Leaning tokens). */
-    --aurora-centre: #f6c65b;
-    --aurora-gauche: #f28498;
-    --aurora-droite: #63a8ea;
   }
 }
 

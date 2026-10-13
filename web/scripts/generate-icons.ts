@@ -1,57 +1,140 @@
 /**
  * One-off generator for the PWA icon PNGs (issue #64), committed to
  * web/public/icons/ and served at /prisme/icons/*.png. It rasterizes the
- * aurora dot's single source — auroraBallSvg() in web/src/favicon.ts, the
- * same string the favicons come from — with sharp. Run manually whenever
- * the dot ever changes:
+ * Prisme mark's single source — src/assets/brand/prisme-mark.svg, the P at
+ * the wordmark's angle — with sharp. Run manually whenever the mark ever
+ * changes:
  *
  *   pnpm --filter @prisme/web generate:icons
  *
- * Two variants per size: plain (transparent background, for the manifest
- * "any" icons) and maskable (the dot shrunk inside a #fcfcfc square so it
- * stays inside every platform's safe zone). Apple needs an opaque, non-
- * alpha-cropped icon: apple-touch-icon.png is the maskable treatment at
- * 180px, without extra padding.
+ * Every output is a size×size square (the mark is composited onto a square
+ * canvas, never resized alone — an SVG rasterized alone keeps its glyph
+ * aspect and lands non-square). Two variants per size: plain (transparent
+ * background, for the manifest "any" icons) and maskable (the mark shrunk
+ * inside a #fcfcfc square so it stays inside every platform's safe zone).
+ * Apple needs an opaque, non-alpha-cropped icon: apple-touch-icon.png is
+ * the maskable treatment at 180px, with less padding.
  */
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
-import { auroraBallSvg } from '../src/favicon';
+
+/** The generated mark asset is the single source of the geometry; this
+ * script runs under tsx (no Vite ?raw loader), so it reads the file and
+ * re-applies the same pad + color transform as favicon.ts. */
+const ASSET = path.resolve(
+  import.meta.dirname,
+  '../src/assets/brand/prisme-mark.svg',
+);
+
+async function prismeMarkSvg(color: string, pad = 0): Promise<string> {
+  const svg = await readFile(ASSET, 'utf8');
+  const [x, y, w, h] = svg
+    .match(/viewBox="([^"]+)"/)![1]
+    .split(' ')
+    .map(Number);
+  const p = pad * h;
+  return svg
+    .replace(
+      /viewBox="[^"]+"/,
+      `viewBox="${x - p} ${y - p} ${w + 2 * p} ${h + 2 * p}"`,
+    )
+    .replace(/ role="img" aria-label="Prisme"/, '')
+    .replaceAll('currentColor', color);
+}
 
 const OUT_DIR = path.resolve(import.meta.dirname, '../public/icons');
 
-/** Light-theme gradient stops — same tokens as the favicon's light variant. */
-const BALL = auroraBallSvg(['#dfa414', '#e0415e', '#2e7ce4']);
+const INK = '#1b1b1f';
 const BACKGROUND = '#fcfcfc';
 
-async function png(svg: string, size: number): Promise<Buffer> {
-  return sharp(Buffer.from(svg)).resize(size, size).png().toBuffer();
-}
-
-/** Dot centered on an opaque square, at `scale` of the full canvas. */
-async function onBackground(size: number, scale: number): Promise<Buffer> {
-  const inner = Math.round(size * scale);
-  const dot = await png(BALL, inner);
-  return sharp({
-    create: { width: size, height: size, channels: 4, background: BACKGROUND },
-  })
-    .composite([
-      {
-        input: dot,
-        top: Math.round((size - inner) / 2),
-        left: Math.round((size - inner) / 2),
-      },
-    ])
+/** Rasterize the mark at `height` px. The width comes from the SVG's own
+ * viewBox (no duplicated ratio constant), and fit:'fill' replaces sharp's
+ * default 'cover' — cover crops whenever the rounding of the two dims
+ * disagrees with the exact aspect, which clipped the glyph. */
+async function markPng(svg: string, height: number): Promise<Buffer> {
+  const [, , w, h] = svg
+    .match(/viewBox="([^"]+)"/)![1]
+    .split(' ')
+    .map(Number);
+  return sharp(Buffer.from(svg))
+    .resize(Math.round((height * w) / h), height, { fit: 'fill' })
     .png()
     .toBuffer();
 }
 
+/** The mark centered on a `size`×`size` square — `markHeight` is the
+ * height of the (pad-expanded) viewBox box, so the glyph fraction of the
+ * canvas is markHeight / (1 + 2·pad) × … exactly as caller intends. */
+async function markSquare(
+  size: number,
+  svg: string,
+  markHeight: number,
+  background: string | { r: number; g: number; b: number; alpha: number },
+): Promise<Buffer> {
+  const mark = await markPng(svg, markHeight);
+  return sharp({
+    create: { width: size, height: size, channels: 4, background },
+  })
+    .composite([{ input: mark, gravity: 'center' }])
+    .png()
+    .toBuffer();
+}
+
+// Plain "any" icons: transparent background, 0.12 pad baked into the
+// viewBox on a full-canvas box — the glyph lands at 1/(1+2·0.12) ≈ 81% of
+// the canvas, so the mark never hits the edges.
+const PAD = 0.12;
+
 const icons: Array<[string, Buffer]> = [
-  ['icon-192.png', await png(BALL, 192)],
-  ['icon-512.png', await png(BALL, 512)],
-  ['maskable-192.png', await onBackground(192, 0.7)],
-  ['maskable-512.png', await onBackground(512, 0.7)],
-  ['apple-touch-icon.png', await onBackground(180, 0.83)],
+  [
+    'icon-192.png',
+    await markSquare(192, await prismeMarkSvg(INK, PAD), 192, {
+      r: 0,
+      g: 0,
+      b: 0,
+      alpha: 0,
+    }),
+  ],
+  [
+    'icon-512.png',
+    await markSquare(512, await prismeMarkSvg(INK, PAD), 512, {
+      r: 0,
+      g: 0,
+      b: 0,
+      alpha: 0,
+    }),
+  ],
+  // Maskable safe zone: content must fit a circle of 80% diameter. The mark
+  // is a tall narrow glyph — height is the binding dimension. No baked pad:
+  // the scale does the padding.
+  [
+    'maskable-192.png',
+    await markSquare(
+      192,
+      await prismeMarkSvg(INK),
+      Math.round(192 * 0.63),
+      BACKGROUND,
+    ),
+  ],
+  [
+    'maskable-512.png',
+    await markSquare(
+      512,
+      await prismeMarkSvg(INK),
+      Math.round(512 * 0.63),
+      BACKGROUND,
+    ),
+  ],
+  [
+    'apple-touch-icon.png',
+    await markSquare(
+      180,
+      await prismeMarkSvg(INK),
+      Math.round(180 * 0.7),
+      BACKGROUND,
+    ),
+  ],
 ];
 
 await mkdir(OUT_DIR, { recursive: true });

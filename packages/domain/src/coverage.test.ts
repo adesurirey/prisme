@@ -6,10 +6,9 @@ import {
   coverageGroup,
   frontPageOutlets,
   isReporting,
-  newestFirst,
   reportingOutletIds,
 } from './coverage.ts';
-import type { Article, Leaning, Outlet, Story } from './index.ts';
+import type { Article, Leaning, Outlet } from './index.ts';
 
 /**
  * The Coverage and Blindspot rules (issue #6, revised — see ADR-0011):

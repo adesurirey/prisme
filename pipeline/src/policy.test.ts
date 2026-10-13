@@ -5,7 +5,7 @@ import {
   resolveModels,
 } from './policy.ts';
 
-const ENV = { GEMINI_API_KEY: 'g', OPENROUTER_API_KEY: 'o' };
+const _ENV = { GEMINI_API_KEY: 'g', OPENROUTER_API_KEY: 'o' };
 
 afterEach(() => {
   vi.unstubAllEnvs();
