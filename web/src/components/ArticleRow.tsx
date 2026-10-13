@@ -3,6 +3,17 @@ import { coverageGroup } from '@prisme/domain';
 import { formatArticleDate } from '../article-date';
 
 /**
+ * Some feeds (France 24) join every word of the headline with no-break
+ * spaces, turning it into one unbreakable word: the min-w-0 flex column
+ * shrinks but the text paints over the row's image. Break the word-joining
+ * NBSPs (flanked by letters or digits) into normal spaces; keep the French
+ * typographic ones next to punctuation (« », :…) — those never merge words.
+ */
+export function breakableHeadline(headline: string): string {
+  return headline.replace(/(?<=[\p{L}\p{N}])\u00A0(?=[\p{L}\p{N}])/gu, ' ');
+}
+
+/**
  * One Article's text column inside the clickable Article card (issue #27):
  * the headline is the card's title — it must read as the main element, ahead
  * of the Outlet name, which sits in the muted meta line below with the
@@ -26,7 +37,7 @@ export default function ArticleRow({
     <div className="min-w-0 flex-1">
       {headline && (
         <p className="text-[16px] font-semibold leading-snug tracking-[-0.01em]">
-          {headline}
+          {breakableHeadline(headline)}
         </p>
       )}
       <p
