@@ -10,7 +10,7 @@ import { PRISME_MARK_DARK, PRISME_MARK_LIGHT } from '../favicon';
 // Decorative inside the labelled link, sized to the old text's cap height.
 const prismeWordmark = prismeWordmarkRaw
   .replace(' role="img" aria-label="Prisme"', ' aria-hidden="true"')
-  .replace('<svg ', '<svg class="h-[15px] w-auto" ');
+  .replace('<svg ', '<svg class="h-[16px] w-auto" ');
 
 interface Props {
   title: string;
@@ -72,11 +72,6 @@ const {
       <div class="mx-auto flex h-14 max-w-4xl items-center gap-3 px-5">
         <a href={withBase('/')} class="flex items-start" aria-label="Prisme — accueil">
           <Fragment set:html={prismeWordmark} />
-          <span
-            class="ml-1 text-[11px] font-medium leading-none text-muted"
-            aria-hidden="true"
-            >bêta</span
-          >
         </a>
         <!-- Reading toggle (issue #89, ADR-0016): Couverture (default) or
              Exposition for every coverage bar on the site, at once. Radio

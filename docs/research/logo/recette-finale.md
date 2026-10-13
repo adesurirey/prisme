@@ -4,16 +4,17 @@ Configuration retenue à l'issue de l'exploration (`type-exploration.html`,
 `convergent-ou-divergent.md` dans ce dossier). Variante **divergente** : les bords
 du mot s'ouvrent vers l'extérieur, comme la dispersion d'un prisme.
 
-Casse retenue : **« Prisme »** — P majuscule, reste en bas-de-casse. Option de repli
-préférée : **« PRISME »** tout en capitales (plus identifiable à très petite taille,
-mais plus imposante). La recherche continue avec « Prisme » : à décliner dans l'UI du
-site, et revenir à l'exploration si le rendu déçoit.
+Casse retenue : **« PRISME »** tout en capitales — adoptée après le rendu réel dans
+l'UI (option de repli devenue principale). Le mélange de hauteurs de « Prisme » (P
+majuscule + x-heights) se lisait comme du tremblement sous le skew ; en capitales, le
+mot tient comme un bloc et l'éventail devient un geste sur un mot solide. « Prisme »
+reste documenté comme option de repli si un usage un jour le demandait.
 
 ## Réglages retenus
 
 | Paramètre | Valeur |
 |---|---|
-| Casse | **« Prisme »** (P majuscule, reste en bas-de-casse) |
+| Casse | **« PRISME »** tout en capitales |
 | Fonte | **Inter** (variable), fallback `system-ui` |
 | Graisse | **Extra Bold (800)** |
 | Angle max (1ʳᵉ et dernière lettre) | **20°** |
@@ -34,10 +35,10 @@ Pourquoi ces choix :
 - **Tracking adaptatif** : à petite taille l'air compense le désalignement des lettres
   penchées (0.08em) ; en display les gros corps demandent moins d'interlettrage
   (0.04em), sinon le mot se désolidarise.
-- **« Prisme » plutôt que PRISME** : plus subtil, plus humain, moins imposant — le
-  rythme des hauteurs (P capitale, puis x-heights) donne une silhouette vivante.
-  PRISME reste l'option de repli : silhouette plus robuste à très petite taille, mais
-  plus criarde.
+- **PRISME en capitales** : plus carré, plus solide — le
+  mot tient comme un bloc et le skew lit comme un geste, pas comme du jitter.
+  « Prisme » (bas-de-casse mélangée) a été écarté au rendu réel : sous skew, les
+  hauteurs mélangées se lisent comme du tremblement.
 
 ## Angles par lettre
 
@@ -48,7 +49,7 @@ avec compensation optique (surcroît d'angle pour les x-heights, preset « Prism
 équilibré » dans l'outil d'exploration) existe mais est écartée pour l'instant — à
 réessayer si le rendu UI déçoit.
 
-| P | r | i | s | m | e |
+| P | R | I | S | M | E |
 |---|---|---|---|---|---|
 | +20° | +12° | +4° | −4° | −12° | −20° |
 
@@ -59,7 +60,7 @@ Formule : `angle(i) = 20° × (2.5 − i) / 2.5` pour i = 0..5, arrondi à l'ent
 Figma ne sait pas cisailer via l'interface — utiliser le plugin **Skew** ou
 **Skewdat** (gratuits, Community), lettre par lettre :
 
-1. Créer six textes indépendants `P`, `r`, `i`, `s`, `m`, `e` — Inter Extra Bold,
+1. Créer six textes indépendants `P`, `R`, `I`, `S`, `M`, `E` — Inter Extra Bold,
    même taille, même `y` (les baslines s'alignent automatiquement : le cisaillement
    ne déplace rien verticalement)
 2. Appliquer les angles du tableau ci-dessus
@@ -108,8 +109,8 @@ Décisions d'exploration notées :
   .prisme-logo .l-e { transform: skewX(-20deg); }
 </style>
 <span class="prisme-logo" aria-label="Prisme">
-  <span class="l-p">P</span><span class="l-r">r</span><span class="l-i">i</span><span
-  class="l-s">s</span><span class="l-m">m</span><span class="l-e">e</span>
+  <span class="l-p">P</span><span class="l-r">R</span><span class="l-i">I</span><span
+  class="l-s">S</span><span class="l-m">M</span><span class="l-e">E</span>
 </span>
 ```
 

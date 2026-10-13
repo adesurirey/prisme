@@ -9,6 +9,8 @@ Outputs (web/src/assets/brand/):
 Every letterform is the exact Inter glyph outline (quadratic-free, the source
 curves), transformed by exact affine matrices — no hand tracing, no rounding
 beyond 1 decimal. See docs/research/logo/recette-finale.md for the recipe.
+Uppercase PRISME per the adopted recipe; run again to regenerate after any
+recipe change.
 """
 
 from fontTools.ttLib import TTFont
@@ -26,8 +28,10 @@ FONT_PATH = os.path.join(os.environ.get("TMPDIR", "/tmp"), "Inter-var.ttf")
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "src", "assets", "brand")
 
 WEIGHT = 800
-LETTERS = "Prisme"
-ANGLES = {"P": 20, "r": 12, "i": 4, "s": -4, "m": -12, "e": -20}  # degrees, + = top leans left
+# Uppercase PRISME, adopted after live UI comparison (the mixed heights of
+# 'Prisme' read as jitter under skew; the all-caps block holds).
+LETTERS = "PRISME"
+ANGLES = {c: a for c, a in zip("PRISME", (20, 12, 4, -4, -12, -20))}  # degrees, + = top leans left
 UPM = 2048
 
 
@@ -56,7 +60,9 @@ def glyph_path(glyphSet, name, k, tx):
     return spen.getCommands(), bp.bounds
 
 
-def build(letters, tracking_em, opsz, angles=ANGLES):
+def build(letters, tracking_em, opsz, angles=None):
+    if angles is None:
+        angles = ANGLES
     font = load_font(opsz)
     glyphSet = font.getGlyphSet()
     cmap = font.getBestCmap()
