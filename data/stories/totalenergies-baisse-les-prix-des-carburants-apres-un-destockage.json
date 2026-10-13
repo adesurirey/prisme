@@ -5,6 +5,17 @@
   "createdAt": "2026-10-12T14:01:23.508Z",
   "articles": [
     {
+      "id": "ed2f0fe4c783",
+      "outletId": "tf1-info",
+      "headline": "Carburants : \"Il n'y a rien qui permet d'avoir une vision de long terme sur le recul des prix\", alerte Nicolas Doze",
+      "url": "https://www.tf1info.fr/economie/video-carburants-il-n-y-a-rien-qui-permet-d-avoir-une-vision-de-long-terme-sur-le-recul-des-prix-alerte-nicolas-doze-2469618.html",
+      "publishedAt": "2026-10-13T08:34:26.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/accord-entre-trump-et-poutine-sur-le-gazole-les-prix-vont-ils-baisser-l-analyse-de-nicolas-doze-2c4849-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "350f69b2b38a",
       "outletId": "bfmtv",
       "headline": "Crise des carburants: TOTALENERGIES annonce des baisse",
@@ -143,9 +154,10 @@
       "url": "https://www.lefigaro.fr/conjoncture/carburant-sebastien-lecornu-assure-que-les-prix-du-gazole-baisseront-des-le-1er-novembre-20261012",
       "publishedAt": "2026-10-12T18:38:46.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/12/d32aff27d7abf017087e60e15a00ec98ac12eb5fe582473b5730aa06f22aefcc.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "economy"
+      "section": "economy",
+      "everFrontPage": true
     },
     {
       "id": "ca43dc78ed54",
@@ -177,7 +189,7 @@
       "url": "https://www.lefigaro.fr/societes/comment-les-distributeurs-vont-ils-se-repartir-les-stocks-strategiques-pour-faire-baisser-les-prix-du-gazole-20261012",
       "publishedAt": "2026-10-12T16:50:00.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2024_crop/2026/10/12/f1cc9c8e9f55b1a1bfe3d1f44894a8dcf1a4f968e6d8189239bb7e0cf6c943b2.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -288,10 +300,11 @@
     "droite": [
       "L'exécutif promet une réduction atteignant dix-huit centimes par litre de gazole sur l'ensemble du territoire à compter du premier novembre.",
       "La mesure découle d'un entretien entre le chef du gouvernement et les acteurs de la distribution pour exiger la répercussion immédiate du déstockage de dix millions de barils.",
-      "L'opération de mise sur le marché des volumes stratégiques débutera le vingt-huit octobre et s'étalera sur trois mois afin d'atténuer la crise énergétique."
+      "L'opération de mise sur le marché des volumes stratégiques débutera le vingt-huit octobre et s'étalera sur trois mois afin d'atténuer la crise énergétique.",
+      "Des observateurs économiques soulignent toutefois l'absence de visibilité à long terme sur l'évolution réelle des tarifs malgré la libération des réserves."
     ]
   },
-  "differences": "La gauche met l'accent sur les gains financiers concrets pour les automobilistes et le calendrier précis fixé par l'exécutif, tandis que le centre intègre l'annonce spécifique de TotalEnergies qui promet une baisse de huit à douze centimes tout en rapportant des réactions mitigées d'usagers réclamant des efforts accrus. De son côté, la droite insiste sur l'intervention directe du Premier ministre auprès des acteurs économiques pour imposer la répercussion du déstockage des barils sur le territoire.",
+  "differences": "La gauche met l'accent sur les gains financiers concrets pour les automobilistes et le calendrier précis fixé par l'exécutif, tandis que le centre intègre l'annonce spécifique de TotalEnergies promettant une baisse modérée et rapporte des réactions mitigées d'usagers. De son côté, la droite insiste sur l'intervention directe du pouvoir exécutif pour imposer la répercussion des barils déstockés tout en intégrant, à travers des analyses économiques comme celle de TF1 Info, des doutes sur la pérennité de ces mesures à long terme.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 24
+  "summarizedArticleCount": 25
 }

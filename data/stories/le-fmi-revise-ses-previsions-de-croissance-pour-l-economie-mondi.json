@@ -5,6 +5,17 @@
   "createdAt": "2026-10-13T03:01:28.188Z",
   "articles": [
     {
+      "id": "d364b14ff706",
+      "outletId": "le-jdd",
+      "headline": "Croissance : le FMI alerte sur le décrochage français face à ses voisins européens",
+      "url": "https://www.lejdd.fr/economie/croissance-le-fmi-alerte-sur-le-decrochage-francais-face-a-ses-voisins-europeens-185892",
+      "publishedAt": "2026-10-13T09:30:59.000Z",
+      "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/13/11/sipa_01303034_000008-1.jpg?VersionId=NwAeHaYHdc7b1zkaR5.HproAx3SbfuLa",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "fb3aafa99019",
       "outletId": "rfi",
       "headline": "Le FMI relève sa prévision 2026 pour l'économie mondiale, tiraillée entre choc énergétique et boom de l'IA",
@@ -97,5 +108,26 @@
       "everFrontPage": true
     }
   ],
-  "section": "economy"
+  "section": "economy",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le FMI a publié des prévisions revues à la baisse pour l'économie française, anticipant une hausse limitée du produit intérieur brut.",
+      "L'institution internationale souligne les difficultés budgétaires de l'Hexagone et l'incertitude politique à l'approche de l'élection présidentielle.",
+      "Globalement, la zone euro bénéficie d'un optimisme mesuré de l'organisme, contrairement à la trajectoire tricolore qualifiée de contre-courant."
+    ],
+    "centre": [
+      "Le Fonds monétaire international a légèrement rehaussé ses projections mondiales pour l'année à venir, malgré un contexte marqué par des chocs énergétiques.",
+      "Le boom des investissements liés à l'intelligence artificielle soutient l'activité planétaire en dépit des tensions géopolitiques au Moyen-Orient.",
+      "À l'échelle européenne, la trajectoire générale s'améliore, mais la France se distingue par un net ralentissement de sa croissance par rapport à ses voisins."
+    ],
+    "droite": [
+      "Le FMI dresse un constat sévère pour la France, la qualifiant de mauvaise élève de la zone euro en raison d'un décrochage économique marqué.",
+      "Alors que les pays voisins voient leurs perspectives s'éclaircir et que la zone euro profite d'un regain d'optimisme, l'Hexagone accumule les retards.",
+      "Les analystes pointent la vulnérabilité française face aux aléas climatiques estivaux et à l'instabilité politique interne à la veille d'un scrutin présidentiel."
+    ]
+  },
+  "differences": "Les trois camps s'accordent sur le diagnostic général d'une économie mondiale résiliente grâce à l'intelligence artificielle et d'une zone euro orientée à la hausse, tout en constatant les difficultés spécifiques de la France. La droite insiste fortement sur le statut de « mouton noir » de l'Hexagone et sur l'impact de l'instabilité politique nationale, qualifiant la situation de décrochage sévère. Le centre adopte une perspective plus macroéconomique en mettant en balance les tensions énergétiques mondiales et la dynamique des nouvelles technologies. Le camp de gauche, quant à lui, contextualise ce ralentissement économique français en insistant sur le poids des difficultés budgétaires et l'échéance électorale à venir.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 9
 }
