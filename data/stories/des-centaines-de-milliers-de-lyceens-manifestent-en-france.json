@@ -401,6 +401,28 @@
       "section": "society"
     },
     {
+      "id": "84eb967a3675",
+      "outletId": "humanite",
+      "headline": "480 000 manifestants dans toute la France selon l’intersyndicale",
+      "url": "https://www.humanite.fr/-/-/480-000-manifestants-dans-toute-la-france-selon-lunef",
+      "publishedAt": "2026-10-13T15:39:35.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "77f75913223e",
+      "outletId": "le-monde",
+      "headline": "Près de 161 500 personnes ont défilé mardi partout en France, selon le ministère de l’intérieur ; les organisateurs annoncent 480 000 manifestants",
+      "url": "https://www.lemonde.fr/societe/live/2026/10/13/en-direct-mouvement-lyceen-a-paris-la-denonciation-des-violences-policieres-est-au-c-ur-de-la-mobilisation_6793059_3224.html",
+      "publishedAt": "2026-10-13T14:36:37.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/13/135/0/2520/1260/644/322/60/0/053fe4a_upload-1-bboutanclrry-imgp7654.jpg",
+      "frontPage": false,
+      "kind": "live",
+      "section": "society"
+    },
+    {
       "id": "c3127380e44b",
       "outletId": "rfi",
       "headline": "Mouvement lycéen en France: environ 480 000 manifestants selon l'intersyndicale",
@@ -412,5 +434,26 @@
       "section": "society"
     }
   ],
-  "section": "society"
+  "section": "society",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "La mobilisation des jeunes et des enseignants reste forte pour exiger des moyens accrus pour l'éducation et de meilleures conditions d'étude.",
+      "De graves préoccupations sont exprimées concernant les signalements de violences policières et les blessures graves survenues lors des rassemblements.",
+      "Les manifestants s'organisent pour pérenniser le mouvement malgré l'arrivée des vacances scolaires et appellent à converger avec d'autres secteurs."
+    ],
+    "centre": [
+      "Les estimations du nombre de manifestants divergent nettement entre les autorités et les organisations syndicales.",
+      "Les cortèges se sont globalement déroulés dans le calme mais ont été marqués par des incidents et des dégradations localisées en fin de parcours.",
+      "Le débat s'articule autour des réponses à apporter aux revendications sur le système éducatif tout en condamnant les violences et les blocages."
+    ],
+    "droite": [
+      "La participation est jugée en net repli par rapport aux semaines précédentes, illustrant l'essoufflement d'une contestation menée par une minorité active.",
+      "L'accent est mis sur les heurts, les destructions de biens et les nombreux membres des forces de l'ordre blessés.",
+      "Certaines personnalités politiques réclament une réponse pénale renforcée face aux débordements, tandis que d'autres pointent un sous-investissement historique."
+    ]
+  },
+  "differences": "Les médias de droite insistent particulièrement sur le recul du nombre de manifestants et sur les violences urbaines, réclamant de la fermeté et la fin de l'excuse de minorité comme le fait le JDD, tout en reconnaissant parfois des difficultés de financement. Les médias du centre adoptent une posture d'équilibre en rapportant à la fois les revendications de fond sur l'école et les interventions policières. Les médias de gauche mettent en avant la détermination persistante des étudiants et relayent massivement les accusations de dérives policières et d'atteintes à l'État de droit.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 39
 }
