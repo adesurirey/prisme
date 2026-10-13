@@ -4,9 +4,10 @@ import {
   coverageGroup,
   coverageOrder,
 } from '@prisme/domain';
+import { archiveDays, frenchArchiveDate } from '../archives';
 import LeaningBadge from '../components/LeaningBadge';
 import StoryCard from '../components/StoryCard';
-import { loadEdition, loadOutlets, withBase } from '../data';
+import { loadAllStoryFiles, loadEdition, loadOutlets, withBase } from '../data';
 import Base from '../layouts/Base.astro';
 import { formatParisDate } from '../paris-date';
 
@@ -23,6 +24,16 @@ const updatedTime = formatParisDate(new Date(edition.builtAt), {
 
 const perGroup = (group: CoverageGroup) =>
   outlets.filter((o) => coverageGroup(o.leaning) === group).length;
+
+// Archives navigation (issue #99, ADR-0017): the days that have a record,
+// newest first — the edition's own day is the newest. "Previous day"
+// (earlier record) and "next day" (back towards the current day); access
+// by date through a picker that opens the archive of the chosen day.
+const archive = archiveDays(await loadAllStoryFiles());
+const archiveOldest = archive.at(-1)?.day;
+const archiveLatest = archive[0]?.day;
+const archivePrevious = archive[1]?.day;
+const archiveNext = archive[0]?.day;
 ---
 
 <Base title="Prisme">
@@ -71,12 +82,69 @@ const perGroup = (group: CoverageGroup) =>
       {edition.stories.length} sujets — dernier point à {updatedTime}
     </p>
   </section>
+
+  <section aria-label="Archives" class="border-t border-line pb-10">
+    <h2 class="pt-6 text-[16px] text-muted">
+      <span class="font-semibold text-ink">Archives</span> — chaque jour de
+      l’édition garde son journal
+    </h2>
+    <nav
+      class="mt-4 flex flex-wrap items-center justify-between gap-3 text-[13px] text-muted"
+      aria-label="Navigation entre les jours d’archives"
+    >
+      {
+        archivePrevious && archiveLatest ? (
+          <a
+            href={withBase(`/archives/${archivePrevious}/`)}
+            class="transition-colors hover:text-ink"
+            rel="prev"
+          >
+            ← {frenchArchiveDate(archivePrevious)}
+          </a>
+        ) : (
+          <span class="opacity-50">Premier jour d’archives</span>
+        )
+      }
+      <form
+        class="flex items-center gap-2"
+        aria-label="Consulter les archives par date"
+      >
+        <label class="sr-only" for="archive-date">Consulter par date</label>
+        <input
+          type="date"
+          id="archive-date"
+          class="rounded-md border border-line bg-canvas px-2 py-1 text-[13px] text-ink"
+          data-archive-date
+          data-archive-days={JSON.stringify(archive.map((d) => d.day))}
+          data-archive-base={withBase('')}
+          min={archiveOldest}
+          max={archiveLatest}
+          aria-label="Consulter les archives par date"
+        />
+      </form>
+      {
+        archiveNext && archiveLatest ? (
+          <a
+            href={withBase(`/archives/${archiveNext}/`)}
+            class="transition-colors hover:text-ink"
+            rel="next"
+          >
+            {frenchArchiveDate(archiveNext)} →
+          </a>
+        ) : (
+          <span class="opacity-50">Dernier jour d’archives</span>
+        )
+      }
+    </nav>
+  </section>
 </Base>
 <!-- "En hausse" (per-visitor trending): the cards ship data-story-id/
      data-coverage; this module script compares them to the reader's last
      visit (localStorage) and reveals badges. Runs on this page only. -->
 <script>
+  import { installArchiveDateNav } from "../archive-date-nav";
   import { installTrending } from "../trending";
 
+  installArchiveDateNav(document, window);
   installTrending();
 </script>
