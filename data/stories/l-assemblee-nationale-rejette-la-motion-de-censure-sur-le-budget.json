@@ -38,11 +38,28 @@
       "frontPage": false,
       "kind": "news",
       "section": "politics"
+    },
+    {
+      "id": "9885b3abab3c",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, budget 2027 : la motion de rejet déposée par le Parti socialiste rejetée par les députés",
+      "url": "https://www.lemonde.fr/politique/live/2026/10/13/en-direct-budget-2027-les-debats-sur-le-projet-de-loi-de-finances-commencent-a-l-assemblee-nationale_6793072_823448.html",
+      "publishedAt": "2026-10-13T16:48:14.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/07/406/0/8000/4000/644/322/60/0/7792a94_upload-1-mx5br4m9uaam-jmug261006046.jpg",
+      "frontPage": true,
+      "kind": "live",
+      "section": "politics",
+      "everFrontPage": true
     }
   ],
   "section": "politics",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le groupe socialiste a pris l'initiative d'une motion de rejet préalable pour contester la copie budgétaire du gouvernement.",
+      "L'amendement de rejet a été repoussé dans l'hémicycle faute d'une majorité de suffrages coalisés.",
+      "L'examen détaillé des articles financiers a pu débuter immédiatement après ce vote."
+    ],
     "centre": [
       "Les socialistes ont essuyé un échec à l'Assemblée en voyant leur motion de rejet sur le projet de loi de finances 2027 repoussée.",
       "Le texte a recueilli 149 votes favorables tandis que 236 parlementaires s'y sont opposés lors du scrutin.",
@@ -54,7 +71,7 @@
       "Le Parti socialiste a adopté une posture nettement plus agressive cette année, reprochant à l'exécutif son inflexibilité."
     ]
   },
-  "differences": "Le centre s'attache à relater de manière neutre le déroulement chronologique et le résultat chiffré du scrutin à l'Assemblée, mettant en avant la poursuite des débats budgétaires. De son côté, la droite adopte une perspective plus analytique en soulignant les tensions politiques entre le Premier ministre et les socialistes, tout en pointant le refus du Rassemblement national de paralyser l'examen du texte.",
+  "differences": "Le centre, relayé par Ouest-France, s'attache à relater de manière factuelle le déroulement et l'échec de la motion socialiste tout en notant l'ouverture des débats, adoptant une posture similaire à la gauche qui insiste sur sa démarche politique initiale. De son côté, la droite adopte une perspective plus analytique en soulignant les tensions institutionnelles, la fermeté du Premier ministre et le refus d'alliance du Rassemblement national.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }
