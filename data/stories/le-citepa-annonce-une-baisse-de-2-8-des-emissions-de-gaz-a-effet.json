@@ -5,6 +5,29 @@
   "createdAt": "2026-10-13T06:01:23.310Z",
   "articles": [
     {
+      "id": "4b50cc8311ce",
+      "outletId": "france-24",
+      "headline": "En France, les émissions de gaz à effet de serre en baisse en 2026, mais le rythme reste trop lent",
+      "url": "https://www.france24.com/fr/france/20261013-france-%C3%A9missions-gaz-effet-de-serre-baisse-2026-mais-rythme-reste-trop-lent-carburants",
+      "publishedAt": "2026-10-13T06:35:11.000Z",
+      "imageUrl": "https://s.france24.com/media/display/82a54b6c-e77a-11ee-91ea-005056bfb2b6/w:1024/p:16x9/000_34J77HG.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "9b267fe59dd6",
+      "outletId": "20-minutes",
+      "headline": "Climat : Bonne nouvelle, les émissions de gaz à effet de serre devraient nettement baisser en France en 2026",
+      "url": "https://www.20minutes.fr/planete/4253808-20261013-climat-bonne-nouvelle-emissions-gaz-effet-serre-devraient-nettement-baisser-france-2026?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-13T06:17:55.000Z",
+      "imageUrl": "https://img.20mn.fr/lSqFitNPRbmvrdQi0e4LMyk/1200x768_station-service-shell-jusqu-a-3-le-litre-de-carburant-2-999-mougins-france-19-09-2026-syspeo-sys-b004-credit-syspeo-sipa-2609201517",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
+    {
       "id": "889fc8f36451",
       "outletId": "bfmtv",
       "headline": "Les prix dissuasifs du gazole y ont contribué: les émissions de gaz à effet de serre reculent en 2026, mais à un rythme toujours trop lent",
@@ -82,5 +105,26 @@
       "everFrontPage": true
     }
   ],
-  "section": "science"
+  "section": "science",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le Citepa annonce une diminution des rejets carbonés de 2,8 % sur l'ensemble de l'année, portée notamment par le premier semestre.",
+      "La baisse de la consommation énergétique dans les transports et le chauffage est directement liée aux coûts élevés des carburants.",
+      "La trajectoire actuelle de réduction des rejets polluants est jugée nettement insuffisante pour respecter les engagements climatiques de la décennie."
+    ],
+    "centre": [
+      "Le baromètre du Citepa prévoit un recul de 2,8 % des émissions polluantes de l'hexagone pour l'année en cours.",
+      "La cherté du gazole et des carburants a joué un rôle déterminant dans la diminution de la consommation des usagers.",
+      "Malgré cette tendance positive, l'accélération de la baisse demeure en deçà des exigences fixées pour l'horizon 2030."
+    ],
+    "droite": [
+      "Le bilan du Citepa fait état d'un repli des émissions nationales de gaz à effet de serre de 2,8 % en 2026.",
+      "Les secteurs du bâtiment et des transports concentrent l'essentiel de la diminution des rejets polluants.",
+      "Le rythme actuel de décroissance est qualifié d'insuffisant par rapport aux trajectoires exigées pour les objectifs de 2030."
+    ]
+  },
+  "differences": "L'ensemble des sensibilités politiques s'accorde sur les chiffres fournis par le Citepa et sur le constat d'un rythme insuffisant pour atteindre les buts climatiques de 2030. La gauche insiste davantage sur la lenteur de la transition et les difficultés structurelles, tandis que le centre et la droite mettent en avant le rôle dissuasif des prix élevés des carburants et la contribution spécifique des secteurs du transport et du bâtiment.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 9
 }

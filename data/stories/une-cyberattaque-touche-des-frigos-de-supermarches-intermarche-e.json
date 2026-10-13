@@ -5,6 +5,28 @@
   "createdAt": "2026-10-12T11:01:35.950Z",
   "articles": [
     {
+      "id": "7e8d7868f6f3",
+      "outletId": "atlantico",
+      "headline": "Mega piratage de la chaîne du froid française : sommes-nous prêts aux guerres numériques qui sont déjà là ?",
+      "url": "https://atlantico.fr/article/decryptage/mega-piratage-de-la-chaine-du-froid-francaise-sommes-nous-prets-aux-guerres-numeriques-qui-sont-deja-la-berthier-springuel",
+      "publishedAt": "2026-10-13T07:00:00.000Z",
+      "imageUrl": "https://atlantico.codexcdn.net/assets/as7cglkKJx5z5pMeq.jpg",
+      "frontPage": false,
+      "kind": "opinion",
+      "section": "science"
+    },
+    {
+      "id": "943869eea3cd",
+      "outletId": "la-croix",
+      "headline": "Frigos piratés : ce qu’on sait de la cyberattaque qui a frappé les supermarchés français",
+      "url": "https://www.la-croix.com/economie/frigos-pirates-ce-qu-on-sait-de-la-cyberattaque-qui-a-frappe-les-supermarches-francais-20261013",
+      "publishedAt": "2026-10-13T06:52:40.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/13/25599852-dans-cet-intermarche-des-cotes-d-armor-les-frigos-.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "78956dc70d92",
       "outletId": "europe-1",
       "headline": "«On a jeté 50.000 euros de marchandises» : après la cyberattaque, les grandes surfaces comptent leurs pertes",
@@ -528,18 +550,17 @@
       "Une investigation a été lancée par un service spécialisé pour analyser la vulnérabilité logicielle mise en cause."
     ],
     "centre": [
-      "Une intrusion numérique d'une ampleur inédite a affecté les dispositifs thermiques de grandes surfaces, provoquant des élévations de température.",
-      "Le préjudice matériel est estimé à plusieurs dizaines de millions d'euros suite à la destruction des denrées.",
-      "Les enseignes soulignent la gravité de cette atteinte à la chaîne d'approvisionnement alors que les recherches sur l'origine du piratage avancent.",
-      "Environ quatre cents magasins de la grande distribution ont été touchés par cette opération visant les infrastructures frigorifiques du fabricant danois Danfoss."
+      "Une intrusion numérique d'une ampleur inédite a affecté les dispositifs thermiques de grandes surfaces, provoquant des destructions massives de denrées fraîches.",
+      "Le préjudice matériel s'élève à plusieurs millions d'euros pour plusieurs grandes enseignes de la distribution.",
+      "Environ quatre cents magasins ont été touchés par cette opération visant les infrastructures frigorifiques du fabricant Danfoss."
     ],
     "droite": [
-      "Une attaque informatique majeure a perturbé les systèmes de froid de distributeurs en exploitant des failles chez le fabricant Danfoss.",
-      "Cet incident souligne la fragilité des dispositifs connectés face à l'imbrication des technologies numériques et industrielles.",
-      "Le parquet de Paris a ouvert une enquête pour identifier les auteurs de cette prise de contrôle à distance des congélateurs."
+      "Une attaque informatique majeure a perturbé les systèmes de froid de distributeurs en exploitant des failles chez un fournisseur.",
+      "Cet incident met en lumière la vulnérabilité des infrastructures essentielles face aux conflits numériques contemporains.",
+      "Le parquet de Paris a ouvert une enquête pour identifier les auteurs de cette prise de contrôle à distance."
     ]
   },
-  "differences": "Les trois camps s'accordent sur le constat d'une cyberattaque d'envergure ayant visé les équipements frigorifiques des supermarchés. La gauche insiste sur l'impact humain et le désarroi des commerçants face aux denrées jetées. Le centre se focalise sur l'ampleur financière des dégâts matériels, précisant le nombre de magasins touchés et la piste du fabricant Danfoss. Enfin, la droite adopte un angle structurel tout en intégrant désormais les détails chiffrés des pertes individuelles et l'ouverture d'une enquête judiciaire.",
+  "differences": "Les trois camps s'accordent sur le constat d'une cyberattaque d'envergure ayant visé les équipements frigorifiques de la grande distribution. La gauche insiste principalement sur l'impact humain et le désarroi des commerçants face aux pertes. Le centre détaille l'ampleur financière des dégâts matériels ainsi que les enseignes touchées, s'appuyant sur les derniers faits recensés. Enfin, la droite adopte un angle géopolitique et stratégique, s'interrogeant sur la préparation du pays face aux guerres numériques, tout en intégrant l'enquête judiciaire en cours.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 46
+  "summarizedArticleCount": 48
 }
