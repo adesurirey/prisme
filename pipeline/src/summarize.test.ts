@@ -97,6 +97,7 @@ function story(
     slug,
     title: `Sujet ${id}`,
     createdAt: '2026-10-06T08:00:00Z',
+    storyDay: '2026-10-06',
     articles,
     ...extra,
   };
@@ -219,6 +220,7 @@ describe('updateSummaries', () => {
     const calls: { input: SummaryInput }[] = [];
     const outcome = await updateSummaries({
       stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
       teasers: new Map([['a2', 'Teaser deux']]),
       outletById,
       model: fakeModel(GOOD_RESPONSE, calls),
@@ -245,6 +247,7 @@ describe('updateSummaries', () => {
     const calls: { input: SummaryInput }[] = [];
     const outcome = await updateSummaries({
       stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
       teasers: new Map(),
       outletById,
       model: fakeModel(GOOD_RESPONSE, calls),
@@ -270,6 +273,7 @@ describe('updateSummaries', () => {
     const calls: { input: SummaryInput }[] = [];
     const outcome = await updateSummaries({
       stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
       teasers: new Map(),
       outletById,
       model: fakeModel(null, calls),
@@ -306,6 +310,7 @@ describe('updateSummaries', () => {
     const calls: { input: SummaryInput }[] = [];
     await updateSummaries({
       stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
       teasers: new Map([['a2', 'Teaser deux']]),
       outletById,
       model: fakeModel(GOOD_RESPONSE, calls),
@@ -341,6 +346,7 @@ describe('updateSummaries', () => {
     );
     const outcome = await updateSummaries({
       stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
       teasers: new Map(),
       outletById,
       model: fakeModel(GOOD_RESPONSE),
@@ -354,6 +360,7 @@ describe('updateSummaries', () => {
     const s = story('s1', 'sujet-1', [article('a1', 'lemonde')]);
     const outcome = await updateSummaries({
       stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
       teasers: new Map(),
       outletById,
       model: undefined,
@@ -369,6 +376,7 @@ describe('updateSummaries', () => {
     const s = story('s1', 'sujet-1', [article('a1', 'lemonde')]);
     await updateSummaries({
       stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
       teasers: new Map(),
       outletById,
       model: fakeModel(GOOD_RESPONSE),
@@ -415,6 +423,7 @@ describe('summariesPrompt', () => {
     const calls: { input: SummaryInput }[] = [];
     await updateSummaries({
       stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
       teasers: new Map(),
       outletById,
       model: fakeModel(GOOD_RESPONSE, calls),
@@ -471,5 +480,42 @@ describe('summariesPrompt', () => {
     expect(prompt).toContain(
       'le camp droite comprend les médias classés « centre droit »',
     );
+  });
+});
+
+describe('updateSummaries — frozen Stories (ADR-0005/ADR-0006)', () => {
+  it('makes zero calls and never mutates a frozen Story with a stale count', async () => {
+    // A Story whose Summaries call once failed freezes with
+    // summarizedArticleCount < articles.length; since ADR-0017 it sits in
+    // the Edition input as backfill — every later build must leave its
+    // file (and its Summaries fields) byte-identical.
+    const s = story(
+      's1',
+      'sujet-1',
+      [
+        article('a1', 'lemonde', { publishedAt: '2026-10-05T10:00:00Z' }),
+        article('a2', 'figaro', { publishedAt: '2026-10-05T11:00:00Z' }),
+      ],
+      {
+        summarizedArticleCount: 1,
+        summaries: { centre: ['Résumé'] },
+        differences: 'Diff.',
+      },
+    );
+    const frozen = structuredClone(s);
+    const calls: { input: SummaryInput }[] = [];
+    const outcome = await updateSummaries({
+      stories: [s],
+      // Both Articles are older than 24h: the Story has frozen.
+      now: new Date('2026-10-06T12:00:00Z'),
+      teasers: new Map([['a2', 'Teaser deux']]),
+      outletById,
+      model: fakeModel(GOOD_RESPONSE, calls),
+      promptVersion: SUMMARIES_PROMPT_VERSION,
+    });
+    expect(calls).toHaveLength(0);
+    expect(s).toEqual(frozen);
+    expect(outcome.changed.size).toBe(0);
+    expect(outcome.calls).toBe(0);
   });
 });

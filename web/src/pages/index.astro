@@ -6,7 +6,7 @@ import {
 } from '@prisme/domain';
 import LeaningBadge from '../components/LeaningBadge';
 import StoryCard from '../components/StoryCard';
-import { loadEdition, loadOutlets, withBase } from '../data';
+import { loadEdition, loadOutlets } from '../data';
 import Base from '../layouts/Base.astro';
 import { formatParisDate } from '../paris-date';
 
@@ -71,6 +71,7 @@ const perGroup = (group: CoverageGroup) =>
       {edition.stories.length} sujets — dernier point à {updatedTime}
     </p>
   </section>
+
 </Base>
 <!-- "En hausse" (per-visitor trending): the cards ship data-story-id/
      data-coverage; this module script compares them to the reader's last

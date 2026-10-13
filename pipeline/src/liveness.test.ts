@@ -18,6 +18,7 @@ const story = (articles: Article[], id = 's1'): Story => ({
   slug: id,
   title: 'T',
   createdAt: NOW.toISOString(),
+  storyDay: '2026-10-06',
   articles,
 });
 

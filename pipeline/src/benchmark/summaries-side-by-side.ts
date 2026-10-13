@@ -69,6 +69,7 @@ async function main(): Promise<void> {
       const started = Date.now();
       const outcome = await updateSummaries({
         stories: [working],
+        now,
         teasers,
         outletById,
         model: client,

@@ -3,8 +3,11 @@
 #
 # Deletes data/stories/ and data/edition.json (keeping classifications.json —
 # Article ids are content-based, so the cache stays valid), then runs the
-# edition pipeline. Git history is the only rollback path, so the script
-# refuses to run on a dirty or unpushed tree.
+# edition pipeline. Past archive pages (/archives/<date>/) are derived at
+# web build time from data/stories/ (ADR-0017), so they die with the data —
+# the rebuild regenerates archives for the newly collected days only. Git
+# history is the only rollback path, so the script refuses to run on a
+# dirty or unpushed tree.
 #
 # Usage: scripts/wipe-edition.sh [--yes] [--force]
 #   --yes    skip the confirmation prompt
@@ -48,6 +51,8 @@ if [ "$YES" -ne 1 ]; then
   echo "This will permanently delete:"
   echo "  - data/stories/ ($story_count Story files)"
   echo "  - data/edition.json"
+  echo "  - past archive pages (/archives/<date>/ — derived from data/stories/,"
+  echo "    the rebuild only regenerates archives for the days it collects)"
   echo "Kept: data/classifications.json (classification cache stays valid)."
   echo "Rollback is only possible via git history (git checkout HEAD~1 -- data)."
   printf 'Continue? [y/N] '
@@ -60,7 +65,8 @@ fi
 
 # 4. Wipe.
 rm -rf data/stories data/edition.json
-echo "wiped: data/stories/, data/edition.json"
+echo "wiped: data/stories/, data/edition.json (past archive pages died with data/stories/;"
+echo "archives for newly collected days are rebuilt by 'pnpm --filter @prisme/web build')"
 
 # 5. Run the edition. The pipeline needs keys in the shell env; .env is not
 # loaded by tsx, so export it here (does not print the values).

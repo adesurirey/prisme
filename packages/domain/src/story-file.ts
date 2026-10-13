@@ -70,6 +70,16 @@ export function reconcileSlugs(created: Story[], taken: Set<string>): void {
 }
 
 /**
+ * A Story-day key is exactly ISO YYYY-MM-DD — the day the Story was born
+ * (ADR-0017). This is the canonical shape check: the pipeline validates it
+ * while parsing Story files, and the site's archive routing (day-key URLs,
+ * date picker) reuses it so both sides accept the same keys.
+ */
+export function isStoryDayKey(value: string): boolean {
+  return /^\d{4}-\d{2}-\d{2}$/.test(value);
+}
+
+/**
  * Parse one raw Story file. Returns the Story, or null when the file is not
  * a well-formed Story file (id, slug, title as strings, articles as an
  * array) — the caller decides what a null means (skip with a warning).
@@ -84,6 +94,8 @@ export function parseStoryFile(raw: unknown, name: string): Story | null {
     typeof candidate.id === 'string' &&
     typeof candidate.slug === 'string' &&
     typeof candidate.title === 'string' &&
+    typeof candidate.storyDay === 'string' &&
+    isStoryDayKey(candidate.storyDay) &&
     Array.isArray(candidate.articles)
   ) {
     return candidate as Story;

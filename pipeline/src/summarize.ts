@@ -21,6 +21,7 @@ import type {
 } from '@prisme/domain';
 import { coverageCounts, SECTION_LABELS } from '@prisme/domain';
 import { RETRYABLE_STATUS } from './http.ts';
+import { isLive } from './liveness.ts';
 
 /** Prompt version, for traceability in Story files (ADR-0006). Bump on any prompt/schema change. */
 export const SUMMARIES_PROMPT_VERSION = 'sum-2';
@@ -202,19 +203,27 @@ export function summariesPrompt(input: SummaryInput): string {
 }
 
 export async function updateSummaries(input: {
-  /** Live Edition Stories as working copies — mutated in place on success. */
+  /** Edition Stories as working copies — mutated in place on success. */
   stories: Story[];
+  /** Build instant — the liveness check (ADR-0009): frozen Stories are skipped. */
+  now: Date;
   teasers: Map<string, string>;
   outletById: Map<string, Outlet>;
   model?: SummaryModel;
   promptVersion: string;
 }): Promise<{ changed: Set<string>; calls: number }> {
-  const { stories, teasers, outletById, model, promptVersion } = input;
+  const { stories, now, teasers, outletById, model, promptVersion } = input;
   const changed = new Set<string>();
   let calls = 0;
   if (model == null) return { changed, calls };
 
   for (const story of stories) {
+    // Frozen Stories are never edited (ADR-0005): since ADR-0017 the Edition
+    // input includes backfill Stories, and a frozen Story may carry a stale
+    // summarizedArticleCount (its Summaries call once failed — the
+    // isolate-and-retry-later path). Liveness, the same check as
+    // frontpage.ts/edition-history.ts, gates the loop.
+    if (!isLive(story, now)) continue;
     const seen = story.summarizedArticleCount ?? 0;
     // Articles are append-only and sorted newest first (ADR-0006): the
     // unseen ones are the first `length - seen` entries.

@@ -16,6 +16,7 @@ function story(id: string, slug: string, hoursAgo = 1): Story {
     slug,
     title: 'Sujet',
     createdAt: '2026-10-06T10:00:00Z',
+    storyDay: '2026-10-06',
     articles: [
       {
         id,

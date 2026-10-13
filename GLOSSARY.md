@@ -53,7 +53,7 @@ The neutral French name of a Story, written by the Grouping model. Distinct from
 _Avoid_: Story headline
 
 **Live Story**:
-A Story with at least one Article less than 24 hours old. Live Stories can gain Articles and make up the Edition.
+A Story with at least one Article less than 24 hours old, within its Ingestion window. Live Stories can gain Articles and make up the current-day part of the Edition (ADR-0017).
 _Avoid_: Active story, open story
 
 **Frozen Story**:
@@ -77,8 +77,24 @@ The part of the news a Story belongs to: Politique, International, Économie, So
 _Avoid_: Category, rubric, topic
 
 **Edition**:
-The current selection of top Stories that Prisme publishes, updated throughout the day.
+The current selection of top Stories that Prisme publishes, updated throughout the day: current-day Stories ranked by Coverage first, then Backfill up to the Edition size (ADR-0017).
 _Avoid_: Issue, digest, daily, run
+
+**Story day**:
+The one Publication day (Europe/Paris) a Story belongs to — the day of its founding Article, fixed when the Story is created. An Article may only join a Story of its own Story day.
+_Avoid_: Story date, day of the story
+
+**Ingestion window**:
+The period after a Story's day during which the Story still accepts Articles — until 06:00 the next morning, Europe/Paris — covering Articles published just before midnight but collected after. Past the window, the Story is frozen.
+_Avoid_: Grace period, closing time
+
+**Backfill**:
+Previous days' Stories shown in the Edition after the current day's, newest day first, each day ranked by Coverage. Backfill erodes through the day and carries no visual marking.
+_Avoid_: Archive (in the Edition sense), old stories
+
+**Archive**:
+A dated page (`/archives/<date>/`) rendered at build time from the permanent Story files of that day — the day's record, not a snapshot of the Edition.
+_Avoid_: Snapshot, backup
 
 **Trending Story**:
 A Story in the Edition that the returning reader is shown as "En hausse" because it has gained ground since that reader last looked: its Coverage has grown by at least two Outlets since their last visit, or it has newly entered the Edition. The signal is the reader's own previous visit, not a global ranking movement; a reader seen too long ago gets no Trending Stories at all.

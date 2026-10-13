@@ -1,33 +1,37 @@
 import type { Story } from '@prisme/domain';
-import { reportingOutletIds } from '@prisme/domain';
+import { rankStories } from '@prisme/domain';
+
+export { rankStories };
 
 /**
- * The Edition ranking (issue #37, ADR-0009 as amended by ADR-0011): Stories
- * order by Coverage — distinct Outlets with any Article on the Story,
- * Opinion pieces included — then by the newest Article, then by creation
- * time and id — fully deterministic across builds. The Edition keeps the
- * top EDITION_SIZE Stories. Front-page flags no longer participate in
- * ranking; ADR-0008 keeps them as display metadata only.
+ * The Edition ranking (issue #37, ADR-0009 as amended by ADR-0011) lives in
+ * @prisme/domain — the archive pages (issue #99, ADR-0017) reuse the same
+ * key per Story day. The Edition keeps the top EDITION_SIZE Stories.
  */
 export const EDITION_SIZE = 20;
 
-function latestPublished(story: Story): number {
-  return Math.max(
-    0,
-    ...story.articles.map((a) => Date.parse(a.publishedAt) || 0),
+/**
+ * The dated Edition assembly (issue #98, ADR-0017): current-day Stories
+ * ranked by the ADR-0009 key first, then backfill — previous days'
+ * `everInEdition` Stories, newest day first (J-1, J-2…), each day ranked by
+ * the same key — capped at EDITION_SIZE. Backfill erodes through the day as
+ * current-day Stories push it down; at midnight the day rolls over and
+ * yesterday's Stories become backfill, so the changeover is smooth. Stories
+ * from a future day are dropped (defensive; the Grouping model cannot
+ * create them).
+ */
+export function assembleEdition(stories: Story[], today: string): Story[] {
+  const current = rankStories(stories.filter((s) => s.storyDay === today));
+  const previous = stories.filter(
+    (s) => s.storyDay < today && s.everInEdition === true,
   );
-}
-
-export function rankStories(stories: Story[]): Story[] {
-  const reporting = new Map<Story, number>();
-  for (const story of stories) {
-    reporting.set(story, reportingOutletIds(story.articles).size);
-  }
-  return [...stories].sort(
-    (a, b) =>
-      reporting.get(b)! - reporting.get(a)! ||
-      latestPublished(b) - latestPublished(a) ||
-      a.createdAt.localeCompare(b.createdAt) ||
-      (a.id < b.id ? -1 : a.id > b.id ? 1 : 0),
-  );
+  const backfillDays = [...new Set(previous.map((s) => s.storyDay))]
+    .sort()
+    .reverse();
+  return [
+    ...current,
+    ...backfillDays.flatMap((day) =>
+      rankStories(previous.filter((s) => s.storyDay === day)),
+    ),
+  ].slice(0, EDITION_SIZE);
 }
