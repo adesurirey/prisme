@@ -7,9 +7,9 @@ import {
   pickStoryImage,
   reportingOutletIds,
 } from '@prisme/domain';
-import { storyUrl } from '../archives';
 import { formatStoryDate } from '../article-date';
 import { withBase } from '../data';
+import { storyUrl } from '../story-url';
 import BlindspotBadge from './BlindspotBadge';
 import CoverageMeta from './CoverageMeta';
 import StoryImage from './StoryImage';
