@@ -5,8 +5,10 @@ import { backOnClick, installBackLink, shouldUseBack } from './back-link';
 /**
  * The back-to-index link's rules: a plain click becomes history.back()
  * only when the reader was just on the index (referrer matches the index
- * URL, ignoring a trailing slash); any other arrival or any modified
- * click (middle, modifiers) follows the real href.
+ * URL, ignoring a trailing slash) and there is a history entry to go back
+ * to (a tab opened in a new tab has the referrer but an empty history);
+ * any other arrival or any modified click (middle, modifiers) follows the
+ * real href.
  */
 
 const SITE = window.location.origin;
@@ -41,14 +43,26 @@ describe('shouldUseBack', () => {
 });
 
 describe('backOnClick', () => {
+  // The reader arrived from the index, so the history stub carries a
+  // previous entry (length 2); length 1 is a fresh tab with nowhere back.
+  const historyFromIndex = () => ({ back: vi.fn(), length: 2 });
+
   it('calls history.back() and reports it for a qualifying click', () => {
-    const history = { back: vi.fn() };
+    const history = historyFromIndex();
     expect(backOnClick(indexUrl, indexUrl, history)).toBe(true);
     expect(history.back).toHaveBeenCalledTimes(1);
   });
 
+  it('follows the href when the tab has no history to go back to', () => {
+    // New tab opened from the index: the referrer is set, but back() would
+    // be a silent no-op — the click must fall through to the real link.
+    const history = { back: vi.fn(), length: 1 };
+    expect(backOnClick(indexUrl, indexUrl, history)).toBe(false);
+    expect(history.back).not.toHaveBeenCalled();
+  });
+
   it('leaves history alone for a non-qualifying arrival', () => {
-    const history = { back: vi.fn() };
+    const history = historyFromIndex();
     expect(backOnClick('', indexUrl, history)).toBe(false);
     expect(history.back).not.toHaveBeenCalled();
   });
@@ -68,6 +82,9 @@ describe('installBackLink', () => {
       '<a href="/" data-back-to-index data-index-url="' +
       indexUrl +
       '" id="back">Aujourd\u2019hui</a>';
+    // The reader arrived from the index, so there is history to go back
+    // to (jsdom starts at length 1, a fresh tab).
+    vi.spyOn(window.history, 'length', 'get').mockReturnValue(2);
     const spy = vi.spyOn(window.history, 'back').mockImplementation(() => {});
     installBackLink(document, window);
     return spy;

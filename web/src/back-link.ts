@@ -28,13 +28,16 @@ export function shouldUseBack(referrer: string, indexUrl: string): boolean {
   }
 }
 
-/** Pure test: should this click be turned into history.back()? */
+/** Pure test: should this click be turned into history.back()? Only when
+ * the referrer qualifies and there is a history entry to go back to — a
+ * tab opened in a new tab carries the index referrer but an empty history,
+ * where back() would be a silent no-op that swallows the click. */
 export function backOnClick(
   referrer: string,
   indexUrl: string,
-  history: { back: () => void },
+  history: { back: () => void; length: number },
 ): boolean {
-  if (!shouldUseBack(referrer, indexUrl)) return false;
+  if (!shouldUseBack(referrer, indexUrl) || history.length <= 1) return false;
   history.back();
   return true;
 }
