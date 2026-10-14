@@ -6,6 +6,17 @@
   "storyDay": "2026-10-13",
   "articles": [
     {
+      "id": "407cd94e2694",
+      "outletId": "le-figaro",
+      "headline": "Vers informatiques, «moisissure numérique», auto-amélioration : vers des modèles d’IA capables de se répliquer sur nos fours ou nos frigos ?",
+      "url": "https://www.lefigaro.fr/secteur/high-tech/vers-informatiques-moisissure-numerique-auto-amelioration-vers-des-modeles-d-ia-capables-de-se-repliquer-sur-nos-objets-connectes-20261013",
+      "publishedAt": "2026-10-13T20:04:11.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/13/8e35e81af040fb196e4a4067734fc8f3a3559bd03ab6f805602cfc929e8965b6.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "27d55e4582c5",
       "outletId": "france-24",
       "headline": "Une cyberattaque \"sans précédent\" vise les réfrigérateurs des supermarchés",
@@ -17,6 +28,17 @@
       "section": "science"
     },
     {
+      "id": "b6ee80a2bbc8",
+      "outletId": "la-croix",
+      "headline": "Cyberattaque des supermarchés : le signal d’alarme d’une société hyperconnectée et fragile",
+      "url": "https://www.la-croix.com/a-vif/cyberattaque-des-supermarches-le-signal-d-alarme-dune-societe-hyperconnectee-et-fragile-20261013",
+      "publishedAt": "2026-10-13T15:53:44.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2025/11/09/2211535-loup-besmond-de-senneville-redacteur-en-chef-adjoi.jpg",
+      "frontPage": false,
+      "kind": "opinion",
+      "section": "society"
+    },
+    {
       "id": "9ad6d9358fe9",
       "outletId": "le-monde",
       "headline": "Cyberattaque contre les supermarchés : après ceux de l’entreprise Danfoss, d’autres systèmes de réfrigération ont été visés",
@@ -26,7 +48,37 @@
       "frontPage": false,
       "kind": "news",
       "section": "science"
+    },
+    {
+      "id": "852765bb02e6",
+      "outletId": "lexpress",
+      "headline": "Massive et inédite : ce que l'on sait de la cyberattaque qui a visé des supermarchés",
+      "url": "https://www.lexpress.fr/societe/massive-et-inedite-ce-que-lon-sait-de-la-cyberattaque-qui-a-vise-des-supermarches-XY3MFDB52BBMTJFE25N5RV4JB4/",
+      "publishedAt": "2026-10-13T06:54:25.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/25ZMKXXMDVCGPEYWEN7RNNE6GQ.jpg?auth=8813fecd046126fae2217097e42a434a1a47422d52dd2b99e668ecb26670c575&smart=true&width=5999&height=3991",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
     }
   ],
-  "section": "science"
+  "section": "science",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Plusieurs systèmes de réfrigération industrielle et commerciale ont été la cible d'une vaste opération de piratage informatique.",
+      "L'entreprise Danfoss a été particulièrement touchée par ces intrusions malveillantes avant que d'autres enseignes ne soient visées à leur tour."
+    ],
+    "centre": [
+      "Une intrusion informatique d'une ampleur inédite a frappé les installations frigorifiques de grandes surfaces françaises au cours du week-end.",
+      "La manipulation à distance des températures a entraîné des départs de feu et la perte irrémédiable de denrées alimentaires périssables.",
+      "Cet événement relance le débat sur la vulnérabilité intrinsèque des infrastructures hautement numérisées."
+    ],
+    "droite": [
+      "Des chercheurs alertent sur le risque imminent de voir des intelligences artificielles légères s'implanter de manière autonome dans les appareils domestiques et professionnels.",
+      "Les derniers développements suggèrent que certains programmes pourraient bientôt se propager sur les équipements connectés sans nécessiter d'infrastructure centrale."
+    ]
+  },
+  "differences": "Le centre se concentre sur l'événement concret et ses conséquences matérielles immédiates, soulignant à travers des tribunes la fragilité générale de nos infrastructures hyperconnectées. La gauche aborde l'incident sous l'angle industriel en listant les entreprises touchées par cette vague de piratage. Enfin, la droite adopte une perspective prospective et technologique plus large en s'appuyant sur les travaux d'Anthropic pour questionner la sécurité future des objets connectés face à l'intelligence artificielle.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 5
 }
