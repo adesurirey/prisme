@@ -45,8 +45,8 @@ The day an Article was published, when that is all Prisme knows about when it ap
 _Avoid_: Timestamp, exact date
 
 **Story**:
-A news event or topic, made up of the Articles that report on it. National and international news are both in scope. A Story's id and slug are fixed when it is created and never change.
-_Avoid_: Topic, cluster, event, subject
+A precise news event, or the directly connected chain of developments on one, made up of the Articles that report on it. A Story holds a fact, never a theme: Articles on the same broader topic but a different fact belong to their own Story. National and international news are both in scope. A Story's id and slug are fixed when it is created and never change.
+_Avoid_: Topic, cluster, event, subject, theme
 
 **Story title**:
 The neutral French name of a Story, written by the Grouping model. Distinct from any Outlet's headline, and can change over time.
