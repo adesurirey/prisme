@@ -6,12 +6,35 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "b3dcf61ab3f1",
+      "outletId": "le-monde",
+      "headline": "Turquie : la principale chaîne privée de télévision d’opposition, Halk TV, investie par la police",
+      "url": "https://www.lemonde.fr/international/article/2026/10/14/turquie-la-principale-chaine-privee-de-television-d-opposition-halk-tv-investie-par-la-police_6793716_3210.html",
+      "publishedAt": "2026-10-14T09:45:32.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/14/415/0/4988/2494/644/322/60/0/ce913d0_ftp-1-b10ye2iuvnaa-f1eba7d841f64525803bf941beb03640-0-7ff24334587e479095f2c407252f7a36.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "642a4003c4d5",
       "outletId": "france-24",
       "headline": "\"Un jour sombre pour la Turquie\" : le pouvoir prend le contrôle d'une chaîne TV de l'opposition",
       "url": "https://www.france24.com/fr/asie-pacifique/20261014-jour-sombre-pour-turquie-pouvoir-prend-contr%C3%B4le-cha%C3%AEne-tv-opposition-journalisme-censure",
       "publishedAt": "2026-10-14T08:59:34.000Z",
       "imageUrl": "https://s.france24.com/media/display/50cd18f0-c7aa-11f1-a852-e362370cce2e/w:1024/p:16x9/000-C8E939G.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "f8a93f8465d8",
+      "outletId": "huffpost",
+      "headline": "En Turquie, le pouvoir prend le contrôle de la principale chaîne de télévision d’opposition",
+      "url": "https://www.huffingtonpost.fr/international/article/en-turquie-le-pouvoir-prend-le-controle-de-la-principale-chaine-de-television-d-opposition_339970.html",
+      "publishedAt": "2026-10-14T08:54:08.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/14/0/0/1223/688/0/0/60/0/2a8c0e7_upload-1-r9il3omq9ivd-capture-d-ecran-2026-10-14-101451.png",
       "frontPage": false,
       "kind": "news",
       "section": "world"
@@ -87,22 +110,22 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La police turque a fait irruption à l'aube dans les locaux de la principale chaîne de télévision d'opposition, Halk TV, pour en prendre le contrôle.",
-      "Onze salariés de la station ont été interpellés dans le cadre de cette opération menée par le pouvoir.",
-      "Le chef de l'opposition a vivement condamné ces méthodes qu'il assimule à des pratiques dictatoriales."
+      "Le siège de la principale station contestataire a été investi par les autorités à l'aube.",
+      "Plusieurs collaborateurs ont été appréhendés lors de cette descente policière.",
+      "L'exécutif intensifie sa pression sur les voix dissidentes à travers des arrestations d'élus et le blocage de sites d'information indépendants."
     ],
     "centre": [
-      "Les forces de l'ordre ont investi le siège de la chaîne privée d'opposition Halk TV pour y placer un administrateur.",
-      "Cette intervention policière s'inscrit dans une campagne plus large visant les milieux médiatiques, politiques et associatifs du pays.",
-      "Elle fait suite au blocage récent d'un média indépendant en ligne sur fond de censure gouvernementale."
+      "Les forces de sécurité ont pris le contrôle des locaux de la principale télévision critique envers le pouvoir.",
+      "Un administrateur a été nommé pour superviser l'avenir de la station après l'interruption de sa diffusion.",
+      "Cette mesure répressive s'inscrit dans une campagne globale touchant la presse libre et les acteurs politiques."
     ],
     "droite": [
-      "Le siège de la principale chaîne d'opposition turque est passé sous le contrôle des forces de l'ordre.",
-      "La direction de Halk TV a signalé une interruption de sa diffusion en direct lors de l'opération.",
-      "Un administrateur a été officiellement désigné pour piloter l'avenir de ce média."
+      "Le siège du principal média contestataire est désormais sous la tutelle des autorités.",
+      "Un administrateur a été officiellement installé afin de gérer la structure.",
+      "Une suspension temporaire de la diffusion en direct a été observée pendant l'intervention."
     ]
   },
-  "differences": "Le centre et la gauche se font l'écho d'une répression plus large visant les médias indépendants et soulignent l'arrestation de plusieurs salariés ainsi que le contexte de censure numérique, tandis que la droite adopte un point de vue plus centré sur l'aspect institutionnel et la continuité technique de la chaîne avec la nomination d'un administrateur. La gauche, par le biais du centre-gauche, intègre directement les condamnations virulentes de l'opposition politique qui qualifie le régime de dictature.",
+  "differences": "La gauche met fortement l'accent sur la dimension autoritaire de la répression en insistant sur l'arrestation de collaborateurs et d'élus d'opposition ainsi que sur la censure de sites web indépendants. Le centre dresse un constat similaire sur la dégradation globale de la liberté de la presse tout en soulignant la nomination d'un administrateur. De son côté, la droite adopte une perspective plus institutionnelle et technique, se focalisant sur l'installation de cet administrateur et sur l'interruption temporaire du direct.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 9
 }

@@ -6,13 +6,24 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "3c7b5b24816a",
+      "outletId": "franceinfo",
+      "headline": "Un incendie s'est déclaré près de la gare d'Austerlitz à Paris",
+      "url": "https://www.franceinfo.fr/faits-divers/incendie/un-incendie-s-est-declare-pres-de-la-gare-d-austerlitz-a-paris_8236966.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-14T09:43:07.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/p9hJL8MoACN_WPdyAJTwXZ-Xqeg/0x791:7594x5063/432x243/filters:format(jpg)/2026/10/14/6acf4aa3f1020435071697.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "392f86a08f84",
       "outletId": "le-figaro",
       "headline": "Paris : un important incendie en cours sur un chantier aux abords de la gare d’Austerlitz",
       "url": "https://www.lefigaro.fr/faits-divers/un-important-incendie-en-cours-sur-un-chantier-aux-abords-de-la-gare-d-austerlitz-20261014",
       "publishedAt": "2026-10-14T08:57:39.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/14/f2115f1f6bc2a83489c979be20c8c7fec3d81bf026410ae1dd8813b87bf445c0.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -62,6 +73,17 @@
       "section": "misc"
     },
     {
+      "id": "ad805e4de740",
+      "outletId": "cnews",
+      "headline": "Paris : l'incendie en cours près de la gare d'Austerlitz est «maîtrisé», ont indiqué les pompiers",
+      "url": "https://www.cnews.fr/france/2026-10-14/paris-lincendie-en-cours-pres-de-la-gare-dausterlitz-est-maitrise-ont-indique-les",
+      "publishedAt": "2026-10-14T08:35:06.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_d38h2m4-1-taille1200_6acf3f7c9262d.jpg?h=f692311e&itok=NWIvKJUJ",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "5d8f2e36c099",
       "outletId": "le-monde",
       "headline": "Un incendie en cours près de la gare d’Austerlitz, à Paris",
@@ -78,22 +100,22 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un sinistre s'est déclaré en matinée dans un bâtiment en travaux situé à proximité immédiate des voies ferrées.",
-      "Des colonnes de fumée sombre ont été aperçues s'élevant au-dessus du treizième arrondissement de la capitale.",
-      "Les autorités n'ont signalé aucune perturbation sur la circulation des trains pour l'instant."
+      "Le sinistre survenu dans la matinée près des voies ferrées est désormais sous contrôle.",
+      "L'intégralité de la toiture du bâtiment visé a été détruite par les flammes.",
+      "Le trafic des trains n'a subi aucune répercussion selon les constats initiaux."
     ],
     "centre": [
-      "Un important feu s'est déclaré sur un chantier localisé non loin de la gare parisienne.",
-      "Un imposant nuage sombre est visible depuis plusieurs secteurs environnants.",
-      "Les services de secours sont mobilisés sur place pour maîtriser le sinistre qui n'impacte pas le trafic ferroviaire."
+      "Les flammes qui touchaient un immeuble en travaux près de la gare parisienne ont été maîtrisées.",
+      "Le toit de la structure concernée a entièrement brûlé sous l'effet de l'incendie.",
+      "L'intervention des équipes de secours a permis d'éviter toute perturbation du trafic ferroviaire."
     ],
     "droite": [
-      "Un violent incendie sévit actuellement sur une structure en rénovation jouxtant le complexe ferroviaire.",
-      "La compagnie ferroviaire a précisé que le bâtiment touché est une annexe du chantier de la gare.",
-      "Des équipes de pompiers sont à pied d'œuvre pour venir à bout du foyer."
+      "Un feu d'ampleur affecte un édifice en rénovation situé à proximité immédiate des installations ferroviaires.",
+      "La compagnie des chemins de fer a confirmé qu'il s'agit d'un local dépendant du chantier principal.",
+      "Les sapeurs-pompiers demeurent mobilisés sur les lieux sans que la circulation ferroviaire ne soit entravée."
     ]
   },
-  "differences": "Les différents bords politiques traitent l'événement de manière globalement homogène en insistant sur la localisation du sinistre et la présence de fumées visibles. Le camp de droite, par l'intermédiaire de ses composantes, apporte des précisions institutionnelles en citant la SNCF sur la nature exacte du bâtiment touché, tandis que la gauche privilégie une description visuelle de l'ambiance urbaine et l'absence d'impact sur les transports, se rejoignant toutes sur la mobilisation rapide des secours.",
+  "differences": "Les trois sensibilités convergent pour relater l'intervention rapide des secours et l'absence d'impact sur la circulation ferroviaire. Le centre et la gauche intègrent désormais l'information selon laquelle le toit du bâtiment a entièrement brûlé, le centre qualifiant l'incendie de maîtrisé. De son côté, la droite maintient son accent sur les précisions institutionnelles apportées par la SNCF concernant la nature exacte de l'annexe touchée.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 8
 }
