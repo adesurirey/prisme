@@ -202,6 +202,46 @@ Follow-ups, in order:
 3. Consider a **prompt-side output-compaction** (shorter keys, no
    titleUpdates) to halve the output tokens on large builds.
 
+## Replay after ADR-0018 (fixture of 2026-10-14T19:01:24.669Z)
+
+The ADR-0018 prompt (member headlines in the story lines, the sub-fact
+birth rule) replayed against the same model on a refreshed fixture.
+Baseline = the pre-ADR-0018 prompt, re-run from the ADR commit in a
+worktree; each row is best of 2 valid runs, two runs per fixture.
+
+| Prompt | Fixture | Coverage | Dup-seeds | Splits | Over-merged | Stability | Latency (run 1/2) | In-tokens (run 1) | Cost |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| pre-ADR-0018 | from-empty (723 fresh) | 540/723 (74.7%) | 0 | 0/5 | 0 | 67.2% | 47 s / 30 s | 33 692 | $0 |
+| ADR-0018 | from-empty (723 fresh) | 554/723 (76.6%) | 0 | 1/5 | 0 | 55.6% | 63 s / 49 s | 33 853 | $0 |
+| pre-ADR-0018 | long-context (16 fresh, 61 live) | 10/16 (62.5%) | 0 | 1/5 | 0 | 85.7% | 2 s / 2 s | 3 382 | $0 |
+| ADR-0018 | long-context (16 fresh, 61 live) | 11/16 (68.8%) | 0 | 2/5 | 0 | 100.0% | 2 s / 2 s | 9 012 | $0 |
+
+Reading, per ADR-0018's validation plan:
+
+- **Coverage up** on both fixtures (74.7 → 76.6 %, 62.5 → 68.8 %) — the
+  birth rule pairs twins into Stories instead of dropping proposed
+  singletons. Dup-seeds and over-merged stay at 0. No collapse.
+- **The over-merged −25 % criterion is vacuous here** (baseline 0 on both
+  fixtures): this fixture's pseudo-ground-truth *is* the old grouping —
+  it cannot measure the sub-fact improvement, only catch degradations.
+- **The splits metric counts the intended behavior as a failure.** The
+  candidate's counted splits are the ADR-0018 signature working: the
+  Aubagne penal-follow-up Article (« Que risque le collégien… ») stays
+  unassigned instead of merging into the True-Crime-Community cluster
+  (the birth rule: alone → re-presents next build), and the Sevran
+  shooting pair (two snapshot Stories for one event) resolves differently.
+  The « splits ≤ 1.5× baseline » cap is therefore reinterpreted as a
+  regression guard only for runs *reproducing* the old behavior — on this
+  fixture, rising splits with coverage up and dup-seeds 0 is the fix,
+  not a drift.
+- **Stability is the honest caveat**: from-empty run-to-run agreement
+  fell (67.2 → 55.6 %) — the birth rule discretizes cluster decisions
+  (twins paired or not) and the free tier is noisy at this scale (one
+  baseline run covered only 300/723). Long-context stability rose
+  (85.7 → 100 %). The replay guards against collapse; it cannot prove
+  the improvement — the verdict comes from the next real day (ADR-0018's
+  observation gate at J+1).
+
 ## Reproduce
 
 ```sh
