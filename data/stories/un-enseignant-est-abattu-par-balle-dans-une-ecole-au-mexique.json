@@ -30,5 +30,19 @@
       "everFrontPage": true
     }
   ],
-  "section": "misc"
+  "section": "misc",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Des individus armés ont pénétré de force dans un établissement scolaire du sud du pays.",
+      "Un professeur a été mortellement touché par des tirs, provoquant un mouvement de panique avant la fuite des assaillants."
+    ],
+    "centre": [
+      "Les forces de l'ordre recherchent activement le responsable de l'assassinat d'un professeur.",
+      "Le drame s'est produit dans l'État d'Oaxaca, peu de temps après un autre meurtre similaire dans une structure éducative mexicaine."
+    ]
+  },
+  "differences": "Le camp de gauche (représenté ici par 20 Minutes) se focalise sur le déroulement violent de l'attaque armée en insistant sur la panique générée dans l'établissement. De son côté, le camp du centre (à travers Ouest-France) élargit le contexte en mentionnant l'enquête policière en cours dans l'État d'Oaxaca et en soulignant la récurrence de ces homicides dans les écoles du pays.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 2
 }
