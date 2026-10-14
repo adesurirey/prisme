@@ -6,6 +6,17 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "9aad82e40d7d",
+      "outletId": "franceinfo",
+      "headline": "Des débris de missiles font quatre blessés en Arabie saoudite, Riyad revendique des frappes au Yémen",
+      "url": "https://www.franceinfo.fr/monde/iran/guerre-entre-les-etats-unis-israel-et-l-iran/des-debris-de-missiles-font-quatre-blesses-en-arabie-saoudite-riyad-revendique-des-frappes-au-yemen_8236528.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-14T05:07:12.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/fNZWPZF0-6KicJc4qMHSX61RWYU/0x0:6180x3476/432x243/filters:format(jpg)/2026/10/14/6acf0dca32aa7521883327.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "2d1e72887724",
       "outletId": "bfmtv",
       "headline": "L’ÉDITO INTERNATIONAL - Après la série d'attaques des Houthis à Riyad, pourquoi Donald Trump n’intervient pas?",
@@ -23,7 +34,7 @@
       "url": "https://www.lefigaro.fr/international/face-aux-rebelles-houthistes-l-embarras-de-donald-trump-tente-de-lacher-son-allie-saoudien-20261014",
       "publishedAt": "2026-10-14T04:15:00.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/13/62a6ec402f0cf3d5265a4c075e53d74aeab44004dfdc369db97ef620c1215bfa.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -43,10 +54,16 @@
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "La défense civile saoudienne rapporte que des débris de missiles ont blessé quatre personnes sur le territoire.",
+      "Les tirs sont attribués à la milice houthie active au Yémen.",
+      "En réponse, Riyad a officialisé le lancement de représailles militaires directes par des frappes au Yémen."
+    ],
     "centre": [
       "Les rebelles houthis ont multiplié les frappes par drones et missiles sur le territoire saoudien, ciblant notamment l'aéroport de Riyad.",
       "Ces attaques récentes ont fait de nombreuses victimes parmi la population et soulèvent des interrogations sur la réaction américaine.",
-      "Le prince héritier Mohammed ben Salman fait face à une impasse stratégique menaçant ses grands projets politiques et économiques."
+      "Le prince héritier Mohammed ben Salman fait face à une impasse stratégique menaçant ses grands projets politiques et économiques.",
+      "Des chutes de débris de missiles provoquent de nouveaux blessés tandis que Riyad revendique des opérations aériennes de riposte au Yémen."
     ],
     "droite": [
       "L'Arabie saoudite subit l'offensive la plus grave menée contre son territoire depuis une décennie par la milice yéménite.",
@@ -54,7 +71,7 @@
       "L'administration américaine montre une certaine réserve et tarde à répondre aux appels à l'aide de son partenaire traditionnel."
     ]
   },
-  "differences": "Le centre met l'accent sur la situation sécuritaire critique de l'Arabie saoudite et la détresse politique de Mohammed ben Salman face à cette escalade, tout en interrogeant l'attitude de Washington. De son côté, la droite insiste davantage sur l'isolement du royaume et l'embarras manifeste de l'administration américaine, qui tarde à voler au secours de son allié historique après l'attaque la plus meurtrière subie par Riyad en dix ans.",
+  "differences": "Le centre intègre désormais les récents dégâts matériels et humains liés aux chutes de débris tout en mentionnant la riposte saoudienne au Yémen rapportée par franceinfo, complétant ainsi son analyse de la crise sécuritaire et de l'embarras de Washington. La droite et la gauche continuent de se diviser sur l'intensité de la menace et l'attentisme américain, la gauche mettant en avant l'engrenage des frappes croisées entre le royaume et le Yémen.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }

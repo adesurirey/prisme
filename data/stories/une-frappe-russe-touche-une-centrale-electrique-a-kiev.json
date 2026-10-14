@@ -6,6 +6,18 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "97e338bd60b9",
+      "outletId": "le-figaro",
+      "headline": "Guerre en Ukraine : au moins six morts après des attaques nocturnes russes, des infrastructures énergétiques encore touchées",
+      "url": "https://www.lefigaro.fr/international/guerre-en-ukraine-au-moins-six-morts-apres-des-attaques-nocturnes-russes-20261014",
+      "publishedAt": "2026-10-14T05:51:16.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2191_crop/2026/10/14/e88254f99b213dc50dce68a2c683dfbf6444d0a76abc533be97704f28243d4a5.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "91bddf00afdf",
       "outletId": "bfmtv",
       "headline": "Des infrastructures énergétiques clés touchées par des missiles russes à Kiev, au moins trois morts",
@@ -87,9 +99,13 @@
       "Des frappes de missiles imputées aux forces moscovites ont endommagé des installations électriques vitales dans la région de Kiev.",
       "Le dernier bilan consolidé par les autorités fait état d'au moins trois personnes décédées des suites de ces bombardements.",
       "Cette vague de tirs survient en dépit des déclarations de Donald Trump concernant une éventuelle cessation des attaques sur les réseaux d'énergie."
+    ],
+    "droite": [
+      "Une série d'attaques nocturnes menées par la Russie a causé la mort d'au moins six personnes dans plusieurs régions ukrainiennes.",
+      "Les bombardements ont ciblé des infrastructures énergétiques essentielles, provoquant des coupures d'électricité dans plusieurs quartiers de Kiev."
     ]
   },
-  "differences": "Le camp de la gauche, incluant les nuances centre-gauche, cadre l'événement principalement à travers les détails communiqués par la municipalité de Kiev, en insistant sur le caractère massif des tirs balistiques, les coupures de courant et les bilans humains locaux. Le centre adopte une perspective un peu plus large en intégrant les estimations de mortalité globale revues à la hausse ainsi que la dimension géopolitique liée aux récentes déclarations de Donald Trump sur une trêve énergétique.",
+  "differences": "Le camp de la gauche met l'accent sur les déclarations de la municipalité de Kiev et les dégâts purement locaux, en soulignant l'utilisation de vecteurs balistiques. Le centre élargit la focale en intégrant un bilan humain plus lourd à l'échelle régionale ainsi qu'une mise en perspective géopolitique concernant les promesses de Donald Trump sur la trêve énergétique. Enfin, la droite, illustrée par Le Figaro, adopte une vision nationale plus large des pertes humaines en recensant les décès survenus simultanément à Kiev, dans le Dnipropetrovsk et à Zaporijjia.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 7
 }
