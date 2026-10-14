@@ -238,6 +238,28 @@ export function overlap(a: Set<string>, b: Set<string>): number {
   return shared / (a.size + b.size - shared);
 }
 
+/** How many member headlines the Grouping model sees per Story (ADR-0018). */
+export const LATEST_HEADLINES = 3;
+
+/** A Story's latest member headlines, newest first (ADR-0018): what the
+ * Story already reports, so the model can tell a distinct sub-fact from the
+ * Story's own fact. Exported for the grouping fixtures, which feed the same
+ * prompt. */
+export function latestHeadlines(
+  members: { headline: string; publishedAt: string }[],
+  count = LATEST_HEADLINES,
+): string[] {
+  return members
+    .map((m, order) => ({
+      headline: m.headline,
+      published: published(m.publishedAt),
+      order,
+    }))
+    .sort((x, y) => y.published - x.published || x.order - y.order)
+    .slice(0, count)
+    .map((m) => m.headline);
+}
+
 /**
  * The live Stories a proposed new-Story seed is Membership-checked against
  * before its Story is created (issue #36): the most headline-similar live
@@ -357,6 +379,7 @@ export async function groupStories(
       id: s.id,
       title: s.title,
       section: s.section,
+      latestHeadlines: latestHeadlines(s.articles),
     })),
     articles: fresh.map((a) => ({
       id: a.id,

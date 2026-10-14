@@ -1,9 +1,42 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
   geminiGroupingModel,
+  groupingPrompt,
   parseGroupingResponse,
   RATE_LIMIT_BACKOFF_MS,
 } from './gemini.ts';
+
+describe('groupingPrompt (ADR-0018)', () => {
+  it("shows each story's latest member headlines after its title", () => {
+    const prompt = groupingPrompt({
+      stories: [
+        {
+          id: 's1',
+          title: 'Story un',
+          section: 'politics',
+          latestHeadlines: ['Un policier mis en examen', '36 enquêtes IGPN'],
+        },
+        { id: 's2', title: 'Story deux' },
+      ],
+      articles: [],
+    });
+    expect(prompt).toContain(
+      '— derniers titres joints : « Un policier mis en examen » ; « 36 enquêtes IGPN »',
+    );
+    expect(prompt).not.toContain('Story deux — derniers');
+  });
+
+  it('carries the sub-fact birth rule', () => {
+    const prompt = groupingPrompt({ stories: [], articles: [] });
+    expect(prompt).toContain(
+      'un fait distinct de ces titres ne fusionne pas dans la story',
+    );
+    expect(prompt).toContain('newStoryKey');
+    expect(prompt).toContain(
+      'des faits distincts (volet judiciaire, volet politique, journée à venir) donnent des stories distinctes',
+    );
+  });
+});
 
 describe('parseGroupingResponse', () => {
   it('parses a well-formed proposal', () => {

@@ -42,6 +42,10 @@ export interface GroupingInputStory {
   id: string;
   title: string;
   section?: Section;
+  /** The Story's latest member headlines, newest first (ADR-0018): what
+   * the Story already reports, so a distinct sub-fact is visible to the
+   * model instead of merging into the first on-topic title it sees. */
+  latestHeadlines?: string[];
 }
 
 /** One new Article as fed to the Grouping model: headline, teaser, Section. */
@@ -194,10 +198,12 @@ export function groupingPrompt(input: {
   stories: GroupingInputStory[];
   articles: GroupingInputArticle[];
 }): string {
-  const storyLines = input.stories.map(
-    (s) =>
-      `- [${s.id}] ${s.title}${s.section ? ` (${SECTION_LABELS_FR[s.section]})` : ''}`,
-  );
+  const storyLines = input.stories.map((s) => {
+    const latest = (s.latestHeadlines ?? []).map((h) => `« ${h} »`).join(' ; ');
+    return `- [${s.id}] ${s.title}${
+      s.section ? ` (${SECTION_LABELS_FR[s.section]})` : ''
+    }${latest ? ` — derniers titres joints : ${latest}` : ''}`;
+  });
   const articleLines = input.articles.map((a) => {
     const teaser = a.teaser ? ` — ${a.teaser}` : '';
     return `- [${a.id}] ${a.headline}${teaser}${a.section ? ` (${SECTION_LABELS_FR[a.section]})` : ''}`;
@@ -215,6 +221,8 @@ export function groupingPrompt(input: {
     '- Pour chaque nouvel article, ajoute une entrée dans « assignments » : soit « storyId » (une story existante), soit « newStoryKey » (une story à créer), avec « confidence » entre 0 et 1.',
     "- Une story naît toujours d'au moins deux articles (ADR-0015) : si un article ne va avec rien, laisse-le sans entrée dans « assignments » — ne crée jamais une story pour un seul article ; il sera représenté au prochain build.",
     "- Une story correspond à un événement ou une affaire précise, jamais à un thème. N'utilise jamais de titre générique (« perspectives économiques… », « actualité politique… ») : un thème n'est pas une story.",
+    "- Les derniers articles déjà joints à chaque story existante te sont donnés : ils disent ce que la story raconte déjà. Un article qui rapporte un fait distinct de ces titres ne fusionne pas dans la story, même s'il relève du même thème : s'il a un jumeau dans le lot (même fait), regroupe-les sous un « newStoryKey » ; s'il est seul, laisse-le sans entrée — il sera représenté au prochain build.",
+    "- Au sein d'un même événement d'envergure, des faits distincts (volet judiciaire, volet politique, journée à venir) donnent des stories distinctes ; ne les fond jamais dans la story-mère au seul motif qu'ils touchent au même sujet.",
     '- Ne regroupe que ce qui rapporte le même événement ou la même affaire précise : un thème commun ou un protagoniste commun ne suffit pas.',
     "- Chaque nouvelle story a une « key » courte unique (lettres et chiffres) et un « title » : un titre neutre en français décrivant l'événement, sans copier le titre d'un outlet ni reprendre sa formulation, et sans renforcer la qualification de l'événement au-delà de ce que les titres sources affirment (par exemple : si tous les titres disent « attaque » ou « frappe », n'écris pas « attentat »). Style du titre : un acteur nommé, un verbe d'action, un complément concret (chiffre, lieu, enjeu) — jamais le style nominal sans verbe (« Condamnation de… », « Attribution du… », « Préparatifs face à… »). Interdits : commencer par une citation entre guillemets, le format « citation » : … repris des outlets, les préfixes de type « À la une ». Aucun mot rhétorique ou jugement de valeur : la neutralité porte sur la position, pas sur la forme. Une phrase de 40 à 110 caractères qui conserve les noms propres (personnes, lieux, sigles).",
     "- « titleUpdates » (optionnel) : uniquement pour des stories qui reçoivent de nouveaux articles, et uniquement si un meilleur titre existe ; un tel titre respecte le même style que ci-dessus et se formule d'après l'ensemble des titres des articles du groupe. Sinon laisse la story inchangée.",
