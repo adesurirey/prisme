@@ -12,8 +12,12 @@ describe('breakableHeadline', () => {
   });
 
   it('keeps the French typographic NBSP next to punctuation', () => {
-    expect(breakableHeadline('loi\u00A0: intégrale')).toBe('loi\u00A0: intégrale');
-    expect(breakableHeadline('«\u00A0intégrale\u00A0»')).toBe('«\u00A0intégrale\u00A0»');
+    expect(breakableHeadline('loi\u00A0: intégrale')).toBe(
+      'loi\u00A0: intégrale',
+    );
+    expect(breakableHeadline('«\u00A0intégrale\u00A0»')).toBe(
+      '«\u00A0intégrale\u00A0»',
+    );
   });
 });
 

@@ -167,6 +167,38 @@ describe('geminiModel failure policy (issue #40)', () => {
   };
   const model = () => geminiGroupingModel('test-key', noSleep);
 
+  it('logs the prompt size in chars and exact input tokens per call', async () => {
+    const body = {
+      ...OK_BODY,
+      usageMetadata: {
+        promptTokenCount: 1234,
+        candidatesTokenCount: 66,
+        totalTokenCount: 1300,
+      },
+    };
+    const log = vi.spyOn(console, 'log').mockImplementation(() => {});
+    stubFetch([{ status: 200, body }]);
+    await model().group({ stories: [], articles: [] });
+    const line = log.mock.calls.map((c) => c.join(' ')).join('\n');
+    expect(line).toMatch(
+      /Flash-Lite: prompt \d+ chars \/ 1234 input tokens \/ 66 output tokens/,
+    );
+    log.mockRestore();
+  });
+
+  it('warns on a non-STOP finish reason and a blocked prompt', async () => {
+    const body = {
+      ...OK_BODY,
+      candidates: [{ ...OK_BODY.candidates![0], finishReason: 'MAX_TOKENS' }],
+    };
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    stubFetch([{ status: 200, body }]);
+    await model().group({ stories: [], articles: [] });
+    const line = warn.mock.calls.map((c) => c.join(' ')).join('\n');
+    expect(line).toMatch(/finishReason=MAX_TOKENS/);
+    warn.mockRestore();
+  });
+
   it('a 429 waits the ~45 s quota backoff once, then succeeds', async () => {
     const fetchCalls = stubFetch([
       { status: 429, body: {} },

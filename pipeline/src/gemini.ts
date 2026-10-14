@@ -247,8 +247,9 @@ export function geminiGroupingModel(
     label,
     model,
     async group(input) {
+      const prompt = groupingPrompt(input);
       const body = {
-        contents: [{ parts: [{ text: groupingPrompt(input) }] }],
+        contents: [{ parts: [{ text: prompt }] }],
         generationConfig: {
           // v1beta generateContent: JSON output via responseMimeType + full
           // JSON Schema in responseJsonSchema (responseFormat.text is only
@@ -292,8 +293,47 @@ export function geminiGroupingModel(
             throw error;
           }
           const data = (await response.json()) as {
-            candidates?: { content?: { parts?: { text?: string }[] } }[];
+            candidates?: {
+              content?: { parts?: { text?: string }[] };
+              finishReason?: string;
+            }[];
+            usageMetadata?: {
+              promptTokenCount?: number;
+              candidatesTokenCount?: number;
+              thoughtsTokenCount?: number;
+              totalTokenCount?: number;
+            };
+            promptFeedback?: { blockReason?: string };
           };
+          // Token accounting per build, straight from the API's own numbers:
+          // prompt size (teasers exist only here — ADR-0003 — so this is the
+          // only place it can ever be measured) and output size (the build's
+          // real ceiling is maxOutputTokens: 65 536 on the output side).
+          const usage = data.usageMetadata;
+          const usageParts = [
+            `prompt ${prompt.length} chars`,
+            usage?.promptTokenCount != null
+              ? `${usage.promptTokenCount} input tokens`
+              : null,
+            usage?.candidatesTokenCount != null
+              ? `${usage.candidatesTokenCount} output tokens`
+              : null,
+            usage?.thoughtsTokenCount != null
+              ? `${usage.thoughtsTokenCount} thinking tokens`
+              : null,
+          ].filter((p) => p != null);
+          console.log(`${label}: ${usageParts.join(' / ')}`);
+          // A truncated response (MAX_TOKENS) yields incomplete JSON — log
+          // the finish reason so the unparseable-retry below has a cause.
+          const finishReason = data.candidates?.[0]?.finishReason;
+          if (finishReason != null && finishReason !== 'STOP')
+            console.warn(`${label}: finishReason=${finishReason}`);
+          // A safety-blocked prompt returns 200 with no candidate at all.
+          const blockReason = data.promptFeedback?.blockReason;
+          if (blockReason != null)
+            console.warn(
+              `${label}: prompt blocked (blockReason=${blockReason})`,
+            );
           const text = (data.candidates?.[0]?.content?.parts ?? [])
             .map((part) => part.text ?? '')
             .join('');
