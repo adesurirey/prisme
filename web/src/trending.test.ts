@@ -4,6 +4,7 @@ import {
   BASELINE_TTL_MS,
   installTrending,
   markTrending,
+  RECOMPUTE_WINDOW_MS,
   readSeen,
   readSession,
   SEEN_KEY,
@@ -14,6 +15,7 @@ import {
 } from './trending';
 
 const HOUR = 3_600_000;
+const MINUTE = 60_000;
 const NOW = 1_800_000_000_000;
 
 afterEach(() => {
@@ -46,6 +48,21 @@ describe('markTrending', () => {
       stories: { a: { coverage: 1, seenAt: NOW - BASELINE_TTL_MS - 1 } },
     };
     const { trendingIds } = markTrending(CURRENT, NOW, blob);
+    expect(trendingIds).toEqual([]);
+  });
+
+  it('never marks a story absent from the baseline, whatever its Coverage', () => {
+    const blob: SeenBlob = {
+      version: 1,
+      stories: { b: { coverage: 1, seenAt: NOW - 24 * HOUR } },
+    };
+    // c entered the Edition since the last visit — a new Story is not a
+    // gain: the badge means "you saw it before, it now covers more".
+    const { trendingIds } = markTrending(
+      [{ id: 'c', coverage: 30 }],
+      NOW,
+      blob,
+    );
     expect(trendingIds).toEqual([]);
   });
 
@@ -127,19 +144,6 @@ describe('markTrending', () => {
     expect(trendingIds).toEqual(['boundary']);
   });
 
-  it('marks a newly entered story whatever its Coverage', () => {
-    const blob: SeenBlob = {
-      version: 1,
-      stories: { b: { coverage: 1, seenAt: NOW - 24 * HOUR } },
-    };
-    const { trendingIds } = markTrending(
-      [{ id: 'c', coverage: 30 }],
-      NOW,
-      blob,
-    );
-    expect(trendingIds).toEqual(['c']);
-  });
-
   it('does not mark a Coverage gain of one outlet', () => {
     const blob: SeenBlob = {
       version: 1,
@@ -149,43 +153,80 @@ describe('markTrending', () => {
     expect(trendingIds).toEqual([]);
   });
 
-  it('marks a story that newly entered the Edition for a returning reader', () => {
+  it('does not mark a Coverage drop', () => {
     const blob: SeenBlob = {
       version: 1,
-      // b seen before (at coverage 1), c never seen.
-      stories: { b: { coverage: 1, seenAt: NOW - 24 * HOUR } },
+      stories: { a: { coverage: 8, seenAt: NOW - 24 * HOUR } },
+    };
+    const { trendingIds } = markTrending([{ id: 'a', coverage: 5 }], NOW, blob);
+    expect(trendingIds).toEqual([]);
+  });
+
+  it('caps the badges to the three biggest gainers, kept in Edition order', () => {
+    // Five eligible stories, gains 10, 9, 11, 8, 18 — only the top three
+    // gainers survive the cap, re-sorted back to Edition order.
+    const entries = [
+      { id: 'e1', baseline: 2, coverage: 12 },
+      { id: 'e2', baseline: 2, coverage: 11 },
+      { id: 'e3', baseline: 2, coverage: 13 },
+      { id: 'e4', baseline: 2, coverage: 10 },
+      { id: 'e5', baseline: 2, coverage: 20 },
+    ];
+    const blob: SeenBlob = {
+      version: 1,
+      stories: Object.fromEntries(
+        entries.map(({ id, baseline }) => [
+          id,
+          { coverage: baseline, seenAt: NOW - 24 * HOUR },
+        ]),
+      ),
     };
     const { trendingIds } = markTrending(
+      entries.map(({ id, coverage }) => ({ id, coverage })),
+      NOW,
+      blob,
+    );
+    // Top gains: e5 (+18), e3 (+11), e1 (+10) → back in Edition order.
+    expect(trendingIds).toEqual(['e1', 'e3', 'e5']);
+  });
+
+  it('breaks gain ties by Edition order', () => {
+    const blob: SeenBlob = {
+      version: 1,
+      stories: {
+        x: { coverage: 3, seenAt: NOW - 24 * HOUR },
+        y: { coverage: 3, seenAt: NOW - 24 * HOUR },
+      },
+    };
+    // Same +2 gain for both; y comes first in the Edition.
+    const { trendingIds } = markTrending(
       [
-        { id: 'b', coverage: 3 },
-        { id: 'c', coverage: 1 },
+        { id: 'y', coverage: 5 },
+        { id: 'x', coverage: 5 },
       ],
       NOW,
       blob,
     );
-    // c is in the Edition now and was absent from the last visit; b also
-    // qualifies the ordinary way (Coverage 1 → 3 crosses the delta).
-    expect(trendingIds).toEqual(['b', 'c']);
+    expect(trendingIds).toEqual(['y', 'x']);
   });
 
-  it('does not mark a story absent from a stale blob as newly entered', () => {
-    const blob: SeenBlob = {
-      version: 1,
-      stories: { b: { coverage: 1, seenAt: NOW - BASELINE_TTL_MS - HOUR } },
-    };
-    const { trendingIds } = markTrending(CURRENT, NOW, blob);
-    expect(trendingIds).toEqual([]);
-  });
-
-  it('marks both a Coverage climb and a new entry, deterministically ordered by Edition rank', () => {
+  it('keeps every eligible story when fewer than three, in Edition order', () => {
     const blob: SeenBlob = {
       version: 1,
       stories: {
-        a: { coverage: 1, seenAt: NOW - 24 * HOUR },
-        b: { coverage: 3, seenAt: NOW - 24 * HOUR },
+        a: { coverage: 2, seenAt: NOW - 24 * HOUR },
+        c: { coverage: 1, seenAt: NOW - 24 * HOUR },
       },
     };
-    const { trendingIds } = markTrending(CURRENT, NOW, blob);
+    // a: +3, c: +4 — both eligible, cap not reached.
+    const { trendingIds } = markTrending(
+      [
+        { id: 'a', coverage: 5 },
+        { id: 'c', coverage: 5 },
+      ],
+      NOW,
+      blob,
+    );
     expect(trendingIds).toEqual(['a', 'c']);
   });
 
@@ -213,6 +254,51 @@ describe('readSeen / writeSeen', () => {
     expect(readSeen(localStorage)).toEqual(null);
     localStorage.setItem(SEEN_KEY, '{not json');
     expect(readSeen(localStorage)).toEqual(null);
+  });
+});
+
+describe('readSession / writeSession', () => {
+  it('round-trips a session through sessionStorage', () => {
+    writeSession(sessionStorage, {
+      v: 1,
+      ids: ['a', 'b'],
+      lastComputeAt: NOW,
+    });
+    expect(readSession(sessionStorage)).toEqual({
+      v: 1,
+      ids: ['a', 'b'],
+      lastComputeAt: NOW,
+    });
+  });
+
+  it('reads null from nothing stored, malformed JSON, or a wrong shape', () => {
+    expect(readSession(sessionStorage)).toEqual(null);
+    sessionStorage.setItem(SESSION_KEY, '{not json');
+    expect(readSession(sessionStorage)).toEqual(null);
+    // Old plain-array shape: no compat shims, it is just no session.
+    sessionStorage.setItem(SESSION_KEY, '["a","b"]');
+    expect(readSession(sessionStorage)).toEqual(null);
+    sessionStorage.setItem(SESSION_KEY, '{"v":1,"ids":"a","lastComputeAt":1}');
+    expect(readSession(sessionStorage)).toEqual(null);
+    sessionStorage.setItem(SESSION_KEY, '{"v":1,"ids":["a"]}');
+    expect(readSession(sessionStorage)).toEqual(null);
+    sessionStorage.setItem(
+      SESSION_KEY,
+      '{"v":1,"ids":["a"],"lastComputeAt":"nope"}',
+    );
+    expect(readSession(sessionStorage)).toEqual(null);
+  });
+
+  it('drops non-string ids', () => {
+    sessionStorage.setItem(
+      SESSION_KEY,
+      `{"v":1,"ids":["a",1,null],"lastComputeAt":${NOW}}`,
+    );
+    expect(readSession(sessionStorage)).toEqual({
+      v: 1,
+      ids: ['a'],
+      lastComputeAt: NOW,
+    });
   });
 });
 
@@ -251,7 +337,7 @@ describe('installTrending', () => {
       expect(badge != null).toBe(true);
       expect(badge.textContent).toBe('\u2197\u2009en hausse');
       expect((badge as HTMLElement).title).toBe(
-        'Nouveau ou gagné en couverture depuis votre dernière visite',
+        'Gagné en couverture depuis votre dernière visite',
       );
     }
   };
@@ -293,7 +379,7 @@ describe('installTrending', () => {
     expect(readSeen(localStorage)).toEqual({ version: 1, stories: {} });
   });
 
-  it('keeps the badges visible on a re-render within the same session', () => {
+  it('keeps the badges visible on a re-render within the same visit', () => {
     card('a', 5);
     writeSeen(localStorage, {
       version: 1,
@@ -302,21 +388,85 @@ describe('installTrending', () => {
     installTrending(document, localStorage, new Date(NOW));
     expectBadge('a', true);
 
-    // The reader clicks the story and comes back: the snapshot erased the
-    // delta, but the session keeps the badge scannable.
+    // The reader clicks the story and comes back minutes later: the
+    // snapshot erased the delta, but the session (fresh within the
+    // recompute window) keeps the badge scannable.
     document.body.innerHTML = '';
     card('a', 5);
-    installTrending(document, localStorage, new Date(NOW));
+    installTrending(document, localStorage, new Date(NOW + 5 * MINUTE));
     expectBadge('a', true);
   });
 
-  it('prunes session badge ids to the current Edition on re-render', () => {
+  it('does not rewrite anything on a re-render inside the recompute window', () => {
     card('a', 5);
-    writeSession(sessionStorage, ['a', 'gone']);
+    const lastComputeAt = NOW - 5 * MINUTE;
+    writeSession(sessionStorage, { v: 1, ids: ['a', 'gone'], lastComputeAt });
+    writeSeen(localStorage, {
+      version: 1,
+      // a's Coverage already recorded at 5 — no gain to show, so the badge
+      // can only come from the session set.
+      stories: { a: { coverage: 5, seenAt: NOW - 24 * HOUR } },
+    });
 
     installTrending(document, localStorage, new Date(NOW));
 
-    expect(readSession(sessionStorage)).toEqual(['a']);
+    // Session ids displayed, pruned to the current cards ('gone' dropped).
+    expectBadge('a', true);
+    // The visit is NOT re-recorded: the baseline stays as-is and the
+    // recompute window is not extended.
+    expect(readSeen(localStorage)!.stories.a.seenAt).toBe(NOW - 24 * HOUR);
+    expect(readSession(sessionStorage)!.lastComputeAt).toBe(lastComputeAt);
+  });
+
+  it('replaces the session ids on a visit past the recompute window', () => {
+    card('a', 5);
+    card('b', 3);
+    writeSession(sessionStorage, {
+      v: 1,
+      ids: ['old1', 'old2', 'old3'],
+      lastComputeAt: NOW - 16 * MINUTE,
+    });
+    writeSeen(localStorage, {
+      version: 1,
+      stories: { a: { coverage: 3, seenAt: NOW - 24 * HOUR } },
+    });
+
+    installTrending(document, localStorage, new Date(NOW));
+
+    // a gained +2 → the only eligible story; the new ids REPLACE the old
+    // session set instead of merging with it.
+    expect(readSession(sessionStorage)).toEqual({
+      v: 1,
+      ids: ['a'],
+      lastComputeAt: NOW,
+    });
+    expectBadge('a', true);
+    expectBadge('b', false);
+    // The snapshot is written on the recompute.
+    expect(readSeen(localStorage)!.stories.a).toEqual({
+      coverage: 5,
+      seenAt: NOW,
+    });
+  });
+
+  it('recomputes when the recompute window has exactly elapsed', () => {
+    card('a', 5);
+    writeSeen(localStorage, {
+      version: 1,
+      stories: { a: { coverage: 3, seenAt: NOW - 24 * HOUR } },
+    });
+    writeSession(sessionStorage, {
+      v: 1,
+      ids: [],
+      lastComputeAt: NOW - RECOMPUTE_WINDOW_MS,
+    });
+
+    installTrending(document, localStorage, new Date(NOW));
+
+    // Exactly 15 min old → a real new visit: recomputed (+2 gain wins).
+    expect(readSession(sessionStorage)!.ids).toEqual(['a']);
+    expect(readSession(sessionStorage)!.lastComputeAt).toBe(NOW);
+    expectBadge('a', true);
   });
 
   it('clears badges in a new session (empty sessionStorage)', () => {
@@ -329,25 +479,5 @@ describe('installTrending', () => {
     installTrending(document, localStorage, new Date(NOW));
 
     expectBadge('a', false);
-  });
-});
-
-describe('readSession / writeSession', () => {
-  it('round-trips ids through sessionStorage', () => {
-    writeSession(sessionStorage, ['a', 'b']);
-    expect(readSession(sessionStorage)).toEqual(['a', 'b']);
-  });
-
-  it('reads [] from nothing stored, malformed JSON, or a non-array', () => {
-    expect(readSession(sessionStorage)).toEqual([]);
-    sessionStorage.setItem(SESSION_KEY, '{not json');
-    expect(readSession(sessionStorage)).toEqual([]);
-    sessionStorage.setItem(SESSION_KEY, '{"a":1}');
-    expect(readSession(sessionStorage)).toEqual([]);
-  });
-
-  it('drops non-string entries', () => {
-    sessionStorage.setItem(SESSION_KEY, '["a",1,null]');
-    expect(readSession(sessionStorage)).toEqual(['a']);
   });
 });

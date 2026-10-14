@@ -97,7 +97,7 @@ A dated page (`/archives/<date>/`) rendered at build time from the permanent Sto
 _Avoid_: Snapshot, backup
 
 **Trending Story**:
-A Story in the Edition that the returning reader is shown as "En hausse" because it has gained ground since that reader last looked: its Coverage has grown by at least two Outlets since their last visit, or it has newly entered the Edition. The signal is the reader's own previous visit, not a global ranking movement; a reader seen too long ago gets no Trending Stories at all.
+A Story in the Edition that the returning reader is shown as "En hausse" because its Coverage has grown since that reader last looked — at least two Outlets' worth, and at most three Stories per visit, the biggest gainers. A Story the reader has never seen never trends; the signal is the reader's own previous visit, not a global ranking movement, and a reader seen too long ago gets no Trending Stories at all.
 _Avoid_: Rising story, hot story, viral
 
 ### Reading a story
