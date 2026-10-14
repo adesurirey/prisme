@@ -1,6 +1,6 @@
 import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
-import { groupStories } from './grouping.ts';
+import { groupStories, memberDigest } from './grouping.ts';
 import { missingMembershipChecker } from './policy.ts';
 
 /** Deterministic 12-hex ids, so slug suffixes are predictable. */
@@ -67,12 +67,20 @@ function fakeGrouping(
 
 function fakeMembership(
   answer: boolean | null,
-  calls: { story?: string; article?: string }[] = [],
+  calls: {
+    story?: string;
+    article?: string;
+    headlines?: string[];
+  }[] = [],
 ): import('./decision-model.ts').MembershipChecker {
   return {
     label: 'FakeJev',
     async belongs(story, article) {
-      calls.push({ story: story.title, article: article.headline });
+      calls.push({
+        story: story.title,
+        article: article.headline,
+        headlines: story.headlines,
+      });
       return answer == null ? 'failed' : answer ? 'yes' : 'no';
     },
   };
@@ -143,6 +151,122 @@ describe('groupStories', () => {
     ]);
   });
 
+  it('a merge check shows the member digest, most similar headlines first (ADR-0018)', async () => {
+    const calls: {
+      story?: string;
+      article?: string;
+      headlines?: string[];
+    }[] = [];
+    const existing = [
+      story({
+        articles: [
+          article('m0', {
+            headline: 'Nouvelle journée de mobilisation lycéenne à Paris',
+            publishedAt: '2026-10-06T11:00:00Z',
+          }),
+          article('m1', {
+            headline:
+              'Le syndicat Alliance conteste la gestion des manifestations',
+            publishedAt: '2026-10-06T10:00:00Z',
+          }),
+          article('m2', {
+            headline: 'Le syndicat Alliance dépose plainte contre l\u2019État',
+            publishedAt: '2026-10-06T09:00:00Z',
+          }),
+        ],
+      }),
+    ];
+    await groupStories(
+      input({
+        articles: [
+          article('a1', {
+            headline: 'Le syndicat Alliance dépose plainte contre l\u2019État',
+          }),
+        ],
+        existing,
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.9 }],
+            titleUpdates: [],
+          }),
+          membership: fakeMembership(true, calls),
+        },
+      }),
+    );
+    expect(calls[0]?.headlines).toEqual([
+      'Le syndicat Alliance dépose plainte contre l\u2019État',
+      'Le syndicat Alliance conteste la gestion des manifestations',
+      'Nouvelle journée de mobilisation lycéenne à Paris',
+    ]);
+  });
+
+  it("a seed guard check shows the candidate Story's member digest (ADR-0018)", async () => {
+    const calls: {
+      story?: string;
+      article?: string;
+      headlines?: string[];
+    }[] = [];
+    const existing = [
+      story({
+        articles: [
+          article('m1', {
+            headline: 'Un syndicat de police dépose plainte contre l\u2019État',
+            publishedAt: '2026-10-06T09:00:00Z',
+          }),
+        ],
+      }),
+    ];
+    const outcome = await groupStories(
+      input({
+        articles: [
+          article('a1', {
+            headline: 'Le syndicat Alliance dépose plainte contre l\u2019État',
+          }),
+          article('a2', {
+            headline:
+              'La plainte du syndicat Alliance détaillée par le parquet',
+          }),
+        ],
+        existing,
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1', title: 'Une story précise' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+            titleUpdates: [],
+          }),
+          // The guard must say no (the seed survives), then the second
+          // member's merge check must say yes for the Story to hold two
+          // Articles — a proposed Story reduced to its seed alone is
+          // dropped (ADR-0015).
+          membership: {
+            label: 'FakeJev',
+            async belongs(story, article) {
+              calls.push({
+                story: story.title,
+                article: article.headline,
+                headlines: story.headlines,
+              });
+              return article.headline.startsWith('La plainte du syndicat')
+                ? 'yes'
+                : 'no';
+            },
+          },
+        },
+      }),
+    );
+    // The guard ran against the existing Story, digest included; a no lets
+    // the proposed Story keep its seed.
+    expect(calls[0]?.story).toBe('Story un');
+    expect(calls[0]?.headlines).toEqual([
+      'Un syndicat de police dépose plainte contre l\u2019État',
+    ]);
+    expect(outcome.stories).toHaveLength(2);
+  });
+
   it('an assignment merges the Article into the live Story when the Membership check says yes', async () => {
     const existing = [
       story({
@@ -192,7 +316,9 @@ describe('groupStories', () => {
     expect(
       outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
     ).toEqual(['a0', 'a1']);
-    expect(checkCalls).toEqual([{ story: 'Story un', article: 'Titre a1' }]);
+    expect(checkCalls).toEqual([
+      { story: 'Story un', article: 'Titre a1', headlines: ['Titre a0'] },
+    ]);
   });
 
   it('a refused Article stays unassigned (orphan) instead of splitting (ADR-0015)', async () => {
@@ -299,7 +425,9 @@ describe('groupStories', () => {
         },
       }),
     );
-    expect(checkCalls).toEqual([{ story: 'Story un', article: 'Titre a1' }]);
+    expect(checkCalls).toEqual([
+      { story: 'Story un', article: 'Titre a1', headlines: ['Titre a0'] },
+    ]);
   });
 
   it('every candidate pair is checked exactly once — no per-build budget (ADR-0012)', async () => {
@@ -527,8 +655,16 @@ describe('groupStories', () => {
       'a3',
     ]);
     expect(membershipCalls).toEqual([
-      { story: 'Titre a1', article: 'Titre a2' },
-      { story: 'Titre a1', article: 'Titre a3' },
+      {
+        story: 'Titre a1',
+        article: 'Titre a2',
+        headlines: ['Titre a1', 'Titre a3'],
+      },
+      {
+        story: 'Titre a1',
+        article: 'Titre a3',
+        headlines: ['Titre a1', 'Titre a2'],
+      },
     ]);
   });
 
@@ -1138,8 +1274,8 @@ describe('groupStories', () => {
       // k2's and k3's seeds were checked against the surviving k1 seed
       // headline — no existing Story, so no cross-build candidate ran.
       expect(checkCalls).toEqual([
-        { story: nobel.a1, article: nobel.a2 },
-        { story: nobel.a1, article: nobel.a3 },
+        { story: nobel.a1, article: nobel.a2, headlines: [nobel.a1] },
+        { story: nobel.a1, article: nobel.a3, headlines: [nobel.a1] },
       ]);
     });
 
@@ -1184,10 +1320,12 @@ describe('groupStories', () => {
         {
           story: 'Le Sénat adopte le budget 2027',
           article: 'Le budget 2027 adopté par le Sénat',
+          headlines: ['Le Sénat adopte le budget 2027'],
         },
         {
           story: 'Victoire du Stade Toulousain en rugby',
           article: 'Le Stade Toulousain remporte le match de rugby',
+          headlines: ['Victoire du Stade Toulousain en rugby'],
         },
       ]);
       expect(outcome.stories).toHaveLength(2);
@@ -1252,6 +1390,7 @@ describe('groupStories', () => {
         {
           story: 'Mouvement de contestation lycéen',
           article: 'EN DIRECT – Mobilisation des lycéens',
+          headlines: ['EN DIRECT – Colère des lycéens'],
         },
       ]);
     });
@@ -1323,8 +1462,8 @@ describe('groupStories', () => {
       // k2's seed checked against k1's seed; k2's member a3 then checked
       // against the absorber's seed too — not against k2's own seed.
       expect(checkCalls).toEqual([
-        { story: nobel.a1, article: nobel.a2 },
-        { story: nobel.a1, article: nobel.a3 },
+        { story: nobel.a1, article: nobel.a2, headlines: [nobel.a1] },
+        { story: nobel.a1, article: nobel.a3, headlines: [nobel.a1] },
       ]);
     });
 
@@ -1375,10 +1514,12 @@ describe('groupStories', () => {
         {
           story: 'Mouvement de contestation lycéen',
           article: 'EN DIRECT – Mobilisation des lycéens',
+          headlines: ['EN DIRECT – Colère des lycéens'],
         },
         {
           story: 'Mouvement de contestation lycéen',
           article: 'Blocus des lycées : ce qui bloque la rentrée',
+          headlines: ['EN DIRECT – Colère des lycéens'],
         },
       ]);
     });
@@ -1426,5 +1567,87 @@ describe('groupStories', () => {
       expect(s1.articles).toHaveLength(23); // a0 + 21 checked merges + the absorbed seed
       expect(outcome.stories).toHaveLength(1); // no splits: nothing starved
     });
+  });
+});
+
+describe('memberDigest (ADR-0018)', () => {
+  const candidate = article('a1', {
+    headline: 'Le syndicat Alliance dépose plainte contre l\u2019État',
+  });
+
+  it('ranks member headlines by token overlap with the candidate first, and never shows the candidate itself', () => {
+    const digest = memberDigest(candidate, [
+      {
+        id: 'x3',
+        headline: 'Nouvelle journée de mobilisation lycéenne à Paris',
+        publishedAt: '2026-10-06T11:00:00Z',
+      },
+      {
+        id: 'x2',
+        headline: 'Le syndicat Alliance conteste la gestion des manifestations',
+        publishedAt: '2026-10-06T10:00:00Z',
+      },
+      {
+        id: 'a1',
+        headline: 'Le syndicat Alliance dépose plainte contre l\u2019État',
+        publishedAt: '2026-10-06T09:00:00Z',
+      },
+      {
+        id: 'x1',
+        headline: 'Le syndicat Alliance dépose plainte contre l\u2019État',
+        publishedAt: '2026-10-06T09:00:00Z',
+      },
+    ]);
+    expect(digest).toEqual([
+      'Le syndicat Alliance dépose plainte contre l\u2019État',
+      'Le syndicat Alliance conteste la gestion des manifestations',
+      'Nouvelle journée de mobilisation lycéenne à Paris',
+    ]);
+  });
+
+  it('caps at five, breaking score ties by recency then original order', () => {
+    const members = [
+      { id: 'x5', headline: 'Titre cinq', publishedAt: '2026-10-06T10:00:00Z' },
+      {
+        id: 'x6',
+        headline: 'Titre récent',
+        publishedAt: '2026-10-06T11:00:00Z',
+      },
+      { id: 'x1', headline: 'Titre un', publishedAt: '2026-10-06T08:00:00Z' },
+      { id: 'x2', headline: 'Titre deux', publishedAt: '2026-10-06T07:00:00Z' },
+      {
+        id: 'x3',
+        headline: 'Titre trois',
+        publishedAt: '2026-10-06T06:00:00Z',
+      },
+      {
+        id: 'x4',
+        headline: 'Titre quatre',
+        publishedAt: '2026-10-06T05:00:00Z',
+      },
+    ];
+    // No overlap at all with the candidate: recency decides, five kept.
+    const digest = memberDigest(candidate, members);
+    expect(digest).toEqual([
+      'Titre récent',
+      'Titre cinq',
+      'Titre un',
+      'Titre deux',
+      'Titre trois',
+    ]);
+    // Same scores and same dates: original order holds.
+    const tied = memberDigest(candidate, [
+      {
+        id: 'x1',
+        headline: 'Premier ex aequo',
+        publishedAt: '2026-10-06T10:00:00Z',
+      },
+      {
+        id: 'x2',
+        headline: 'Second ex aequo',
+        publishedAt: '2026-10-06T10:00:00Z',
+      },
+    ]);
+    expect(tied).toEqual(['Premier ex aequo', 'Second ex aequo']);
   });
 });

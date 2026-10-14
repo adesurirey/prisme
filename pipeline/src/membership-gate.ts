@@ -55,7 +55,7 @@ export class MembershipGate {
    */
   async ask(input: {
     target: string;
-    story: { title: string; section?: Section };
+    story: { title: string; section?: Section; headlines?: string[] };
     article: { id: string; headline: string };
     teaser: string;
     label: string;
@@ -69,7 +69,11 @@ export class MembershipGate {
     let verdict: MembershipVerdict;
     try {
       verdict = await this.#checker.belongs(
-        { title: input.story.title, section: input.story.section },
+        {
+          title: input.story.title,
+          section: input.story.section,
+          headlines: input.story.headlines,
+        },
         { headline: input.article.headline, teaser: input.teaser },
       );
       if (verdict === 'failed') this.#failures++;

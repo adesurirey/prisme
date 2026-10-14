@@ -103,10 +103,10 @@ export const MEMBERSHIP_QUESTION = {
   belongs: {
     type: 'choice',
     instructions:
-      "Cet article rapporte-t-il le même événement ou le même sujet que cette story ? Juge uniquement à partir du titre de la story et du titre et chapô de l'article fournis.",
+      "Cet article rapporte-t-il le même fait que cette story, ou un développement direct de ce fait ? Juge à partir du titre de la story, des titres d'articles déjà joints à cette story, et du titre et chapô de l'article fournis.",
     criteria: {
-      yes: "C'est le même événement ou le même sujet : l'article peut rejoindre la story",
-      no: "Événement ou sujet différent : l'article ne doit pas rejoindre la story",
+      yes: "Même fait : l'article rapporte le fait même de la story, ou un développement direct de ce fait (suites d'enquête, nouveaux bilans, décisions ou réactions qui le concernent directement).",
+      no: "Autre fait : même s'il relève du même thème général (même mouvement, même dossier, mêmes acteurs), un article qui rapporte un autre fait ne rejoint pas la story.",
     },
   },
 } as const;
@@ -349,26 +349,42 @@ export type MembershipAnswer = 'yes' | 'no' | 'failed';
 export interface MembershipChecker {
   label: string;
   belongs(
-    story: { title: string; section?: Section },
+    story: { title: string; section?: Section; headlines?: string[] },
     article: { headline: string; teaser: string },
   ): Promise<MembershipAnswer>;
+}
+
+/** The check's payload (ADR-0018): the Story, the member headlines it
+ * already reports, then the candidate Article — the exact input the question
+ * tells the model to judge from. A member headline identical to the anchor
+ * title (a proposed Story is anchored on its seed Article, which is also a
+ * member) is dropped. Exported for tests. */
+export function membershipPayload(
+  story: { title: string; section?: Section; headlines?: string[] },
+  article: { headline: string; teaser: string },
+): { headline: string; teaser: string } {
+  const section = story.section ? ` (${SECTION_LABELS[story.section]})` : '';
+  const lines = [`Story : ${story.title}${section}`];
+  const members = (story.headlines ?? []).filter((h) => h !== story.title);
+  if (members.length > 0)
+    lines.push('Articles déjà joints :', ...members.map((h) => `- ${h}`));
+  lines.push(`Article : ${article.headline}`);
+  return {
+    headline: lines.join('\n'),
+    teaser: article.teaser ? `\n${article.teaser}` : '',
+  };
 }
 
 function membershipModel(apiKey: string): MembershipChecker {
   return {
     label: 'Jev',
     async belongs(story, article) {
-      const section = story.section
-        ? ` (${SECTION_LABELS[story.section]})`
-        : '';
-      const headline = `Article : ${article.headline}`;
-      const teaser = article.teaser ? `\n${article.teaser}` : '';
       return callTyped(
         'Jev',
         'https://openrouter.ai/api/alpha/decisions',
         apiKey,
         { model: OPENROUTER_MODELS.jev, questions: MEMBERSHIP_QUESTION },
-        { headline: `Story : ${story.title}${section}\n${headline}`, teaser },
+        membershipPayload(story, article),
         (answers) => {
           const belongs = parseMembershipAnswer(answers);
           return belongs == null ? null : { belongs };

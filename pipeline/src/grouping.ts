@@ -260,6 +260,38 @@ export function latestHeadlines(
     .map((m) => m.headline);
 }
 
+/** How many member headlines a Membership check sees (ADR-0018). */
+export const MEMBER_DIGEST_SIZE = 5;
+
+/** The member-headline digest a Membership check sees (ADR-0018): up to
+ * five member headlines, most token-overlapping with the candidate Article
+ * first — recency as tie-break, original order as final tie-break. The
+ * candidate itself never appears in its own digest (a check would read its
+ * own headline and answer trivially). Purely local selection: no model
+ * call, no extra check; the checker still decides. Recency alone would
+ * blind the check to sub-facts whose Articles are older than the Story's
+ * newest five. Exported for tests. */
+export function memberDigest(
+  article: { id: string; headline: string },
+  members: { id: string; headline: string; publishedAt: string }[],
+): string[] {
+  const articleTokens = tokens(article.headline);
+  return members
+    .filter((m) => m.id !== article.id)
+    .map((m, order) => ({
+      headline: m.headline,
+      score: overlap(articleTokens, tokens(m.headline)),
+      published: published(m.publishedAt),
+      order,
+    }))
+    .sort(
+      (x, y) =>
+        y.score - x.score || y.published - x.published || x.order - y.order,
+    )
+    .slice(0, MEMBER_DIGEST_SIZE)
+    .map((m) => m.headline);
+}
+
 /**
  * The live Stories a proposed new-Story seed is Membership-checked against
  * before its Story is created (issue #36): the most headline-similar live
@@ -492,7 +524,12 @@ export async function groupStories(
         const seedTokens = tokens(seed.headline);
         seedTokensOf.set(key, seedTokens);
         seedHeadlineOf.set(key, seed.headline);
-        const ask: { target: string; title: string; section?: Section }[] = [];
+        const ask: {
+          target: string;
+          title: string;
+          section?: Section;
+          headlines?: string[];
+        }[] = [];
         for (const candidate of seedCandidates(
           seed,
           live.filter((s) => s.storyDay === articleDay(seed)),
@@ -501,6 +538,7 @@ export async function groupStories(
             target: candidate.id,
             title: candidate.title,
             section: candidate.section,
+            headlines: memberDigest(seed, candidate.articles),
           });
         for (const earlier of keyOrder) {
           if (earlier === key) break;
@@ -514,13 +552,21 @@ export async function groupStories(
             earlierTokens != null &&
             overlap(seedTokens, earlierTokens) > 0
           )
-            ask.push({ target: `key:${earlier}`, title: earlierHeadline });
+            ask.push({
+              target: `key:${earlier}`,
+              title: earlierHeadline,
+              headlines: memberDigest(seed, keyMembers.get(earlier) ?? []),
+            });
         }
         for (const candidate of ask) {
           const yes =
             (await gate.ask({
               target: candidate.target,
-              story: { title: candidate.title, section: candidate.section },
+              story: {
+                title: candidate.title,
+                section: candidate.section,
+                headlines: candidate.headlines,
+              },
               article: seed,
               teaser: teasers.get(seed.id) ?? '',
               label: `Seed check failed: ${seed.id} → ${candidate.target}`,
@@ -588,13 +634,28 @@ export async function groupStories(
       if (article == null) continue;
       // New-Story checks are anchored on the seed Article: the proposed
       // title may be generic, the seed headline is the concrete event.
-      const story = pair.target.startsWith('key:')
-        ? {
-            title: keyMembers.get(pair.target.slice(4))![0].headline,
-            section: undefined,
+      let story:
+        | {
+            title: string;
+            section?: Section;
+            headlines?: string[];
           }
-        : byId.get(pair.target);
-      if (story == null) continue;
+        | undefined;
+      if (pair.target.startsWith('key:')) {
+        const members = keyMembers.get(pair.target.slice(4))!;
+        story = {
+          title: members[0].headline,
+          headlines: memberDigest(article, members),
+        };
+      } else {
+        const target = byId.get(pair.target);
+        if (target == null) continue;
+        story = {
+          title: target.title,
+          section: target.section,
+          headlines: memberDigest(article, target.articles),
+        };
+      }
       await gate.ask({
         target: pair.target,
         story,
