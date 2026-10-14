@@ -6,6 +6,17 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "92cb23981df3",
+      "outletId": "rfi",
+      "headline": "Ingérences étrangères: la France durcit le ton, les cyberattaques se poursuivent",
+      "url": "https://www.rfi.fr/fr/france/20261014-ing%C3%A9rences-%C3%A9trang%C3%A8res-la-france-durcit-le-ton-les-cyberattaques-se-poursuivent",
+      "publishedAt": "2026-10-14T06:25:39.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/44bf77ac-141c-11f1-9c74-005056bfb2b6/w:1024/p:16x9/1813020-un-clavier-d-ordinateur-illustrant-les-risques-de-cyberattaque-photo-d-illustration.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "2111f086c39d",
       "outletId": "europe-1",
       "headline": "Cyberattaque dans les supermarchés : comment les pirates ont-ils pris le contrôle des frigos ?",
@@ -43,22 +54,22 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Des pirates ont compromis la chaîne du froid dans de grandes surfaces en modifiant la température de systèmes connectés.",
-      "Cet incident met en lumière la faiblesse des mesures de sécurité protégeant les objets connectés industriels.",
-      "Les experts rappellent que la menace pesant sur ce type d'équipements reste globalement ignorée par le secteur économique."
+      "La manipulation à distance des systèmes de réfrigération commerciale met en évidence la vulnérabilité persistante des infrastructures numériques.",
+      "Des pirates informatiques ont perturbé la chaîne du froid dans plusieurs grandes surfaces.",
+      "Le secteur économique continue de négliger les risques inhérents à l'intégration généralisée d'objets connectés."
     ],
     "centre": [
-      "Près de trois cents supermarchés français ont subi une intrusion informatique ciblant leurs équipements de réfrigération.",
-      "Les autorités sécuritaires estiment que cet épisode préfigure des offensives d'envergure contre les réseaux essentiels du pays.",
-      "L'origine exacte des auteurs de l'intrusion demeure incertaine et nécessite des investigations approfondies."
+      "Une intrusion numérique d'envergure a touché des centaines d'établissements commerciaux français, affectant leurs unités de froid.",
+      "Une autre cyberattaque a simultanément visé un site institutionnel lié à la défense et à la sécurité nationale.",
+      "Les autorités font face à une recrudescence d'actions hostiles imputées à des ingérences étrangères, sans revendication précise à ce stade."
     ],
     "droite": [
-      "Une intrusion informatique sans précédent a touché les installations de réfrigération de trois cents points de vente en France.",
-      "L'attaque a provoqué des préjudices financiers considérables évalués à plusieurs millions d'euros.",
-      "Les investigations s'orientent vers la faille des systèmes de supervision à distance fournis par des prestataires spécialisés."
+      "L'attaque informatique subie par les enseignes commerciales engendre des pertes financières chiffrées en millions d'euros.",
+      "Les investigations mettent en cause les défaillances des plateformes de supervision gérées par des prestataires externes.",
+      "Plusieurs dizaines de points de vente poursuivent l'évaluation des préjudices matériels occasionnés par ces intrusions."
     ]
   },
-  "differences": "Les différents bords politiques partagent un même constat factuel sur l'attaque visant les installations de réfrigération, mais divergent dans leurs angles d'analyse. La gauche et le centre gauche, représentés par franceinfo, insistent sur la vulnérabilité structurelle des objets connectés et le manque de vigilance des entreprises. Le centre, à travers La Croix, élargit la focale sur la menace géopolitique et la préparation nécessaire face au sabotage d'infrastructures critiques. Enfin, la droite, via Europe 1, met principalement l'accent sur la matérialité des dégâts financiers et les failles des prestataires industriels ayant permis aux pirates de prendre le contrôle des systèmes.",
+  "differences": "Les trois camps analysent la cyberattaque sous des angles distincts. La gauche insiste sur la fragilité structurelle des objets connectés industriels et le manque de prévention des entreprises. Le centre élargit la perspective en associant cet incident à des opérations d'ingérence étrangère plus larges visant la sécurité nationale. De son côté, la droite, illustrée par Europe 1, focalise son attention sur l'ampleur des pertes financières et sur la responsabilité des prestataires technologiques extérieurs.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }

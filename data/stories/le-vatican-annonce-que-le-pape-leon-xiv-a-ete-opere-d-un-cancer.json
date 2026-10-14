@@ -6,6 +6,29 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "de7a70c038ea",
+      "outletId": "la-croix",
+      "headline": "Au Vatican, quelle gouvernance pendant l’hospitalisation de Léon XIV ?",
+      "url": "https://www.la-croix.com/religion/au-vatican-quelle-gouvernance-pendant-l-hospitalisation-de-leon-xiv-20261013",
+      "publishedAt": "2026-10-14T06:48:58.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/13/25605591-le-pape-leon-xiv-lors-de-l-angelus-le-dimanche-11-.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "49a66982c631",
+      "outletId": "le-figaro",
+      "headline": "Léon XIV atteint d’un cancer : les responsables politiques multiplient les messages de soutien",
+      "url": "https://www.lefigaro.fr/actualite-france/leon-xiv-atteint-d-un-cancer-les-responsables-politiques-multiplient-les-messages-de-soutien-20261014",
+      "publishedAt": "2026-10-14T06:35:41.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/14/28dc227c49ce78ccd726805cecb9d2cc264da017cf84dce62c04c18954d186d5.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "341889ad1c19",
       "outletId": "le-jdd",
       "headline": "Opération du pape Léon XIV : la tumeur retirée au poumon était cancéreuse, annonce le Vatican",
@@ -82,15 +105,17 @@
     "centre": [
       "Le chef de l'Église catholique a subi avec succès l'ablation d'une tumeur maligne pulmonaire.",
       "Les analyses médicales confirment la présence d'un adénocarcinome, nécessitant une période de repos prolongée.",
-      "Des spécialistes de la santé apportent un éclairage sur la nature de cette affection fréquente et ses perspectives de guérison."
+      "Des spécialistes de la santé apportent un éclairage sur la nature de cette affection fréquente et ses perspectives de guérison.",
+      "La question de la continuité de la gouvernance du Saint-Siège se pose durant la période d'hospitalisation et de convalescence."
     ],
     "droite": [
       "Le Vatican a officialisé le caractère cancéreux de la masse retirée lors de l'intervention chirurgicale.",
       "Toutes les audiences du Saint-Père sont suspendues jusqu'au mois de novembre.",
-      "Les experts médicaux interrogés analysent les causes probables et les scénarios de rétablissement pour le pontife."
+      "Les experts médicaux interrogés analysent les causes probables et les scénarios de rétablissement pour le pontife.",
+      "Les responsables politiques et les dirigeants nationaux multiplient les déclarations de solidarité envers le souverain pontife."
     ]
   },
-  "differences": "Les différents bords politiques s'accordent sur les faits médicaux de base communiqués par le Vatican, mais divergent dans la tonalité et l'angle d'analyse. La gauche, illustrée par Libération et Le HuffPost, insiste sur l'impact politique et l'originalité de la communication papale face à l'épreuve de la maladie. La droite (Le JDD, CNews) et le centre (France 24, La Croix) mettent davantage l'accent sur les détails cliniques, les analyses d'experts et les perspectives de convalescence, CNews dramatisant particulièrement l'attente autour de la santé du Saint-Père.",
+  "differences": "Les différents bords politiques s'accordent sur les faits médicaux et l'annonce officielle du Vatican, tout en variant dans leurs angles d'approche. La gauche se focalise sur la portée politique et la communication singulière du Vatican face à cette épreuve. Le centre (notamment La Croix) élargit l'analyse aux aspects pratiques de la gouvernance du Saint-Siège pendant la convalescence. La droite et le centre droit (illustrés par Le Figaro) complètent les rapports cliniques par une couverture nourrie des réactions de soutien de la classe politique internationale, combinant ainsi élan de solidarité et suivi de l'agenda pontifical.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 8
 }
