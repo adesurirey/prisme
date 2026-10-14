@@ -57,7 +57,10 @@ changes: no new phase, no new model, no ranking change.
 
    The « ou le même sujet » acceptance — the door the 92 walked through —
    is gone, and the « ni fait ni thème » mis-proposal falls into the no
-   criterion instead of forcing the model outside the binary.
+   criterion instead of forcing the model outside the binary. Presentation
+   note: in the code the criteria carry no « **Oui** »/« **Non** » lead-in —
+   the blockquote's bolded prefixes are these blockquote's rendering of the
+   yes/no choice values; the operative sentences are the criteria verbatim.
 
 2. **The check sees the Story's members.** `MembershipGate.ask` forwards
    up to five member headlines, picked by token overlap with the candidate
@@ -143,7 +146,15 @@ changes: no new phase, no new model, no ranking change.
   rate ≤ 1.5× baseline, coverage ≥ baseline − 2 pts, dup-seeds 0,
   stability ≥ baseline. The Membership question has no benchmark — its
   verdict comes from the next real day (the spot-check convention of
-  issue #5) and from the observation gate.
+  issue #5) and from the observation gate. Amendment after the replay
+  (recorded in docs/research/grouping-benchmark.md): on the refreshed
+  fixture the over-merged criterion is vacuous (baseline 0 — the
+  pseudo-ground-truth *is* the old grouping), and a rising split rate
+  alongside coverage up and dup-seeds 0 is this decision's intended
+  signature, not a regression; the split cap and the stability floor
+  therefore stand as regression guards for runs *reproducing* the old
+  behavior, and the improvement verdict is deferred to the observation
+  gate.
 - Observation gate at J+1: re-formation of a >40-Article Story on a busy
   day; orphan rate; sub-fact Stories making the Edition; summary quality
   on newly born Stories; top-20 churn at the 7-Outlet line. Mega-Story

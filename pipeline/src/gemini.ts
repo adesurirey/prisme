@@ -37,7 +37,8 @@ export interface GroupingModel {
   }): Promise<GroupingProposal>;
 }
 
-/** One live Story as fed to the Grouping model: title and Section only. */
+/** One live Story as fed to the Grouping model: title, Section, and its
+ * latest member headlines (ADR-0018). */
 export interface GroupingInputStory {
   id: string;
   title: string;

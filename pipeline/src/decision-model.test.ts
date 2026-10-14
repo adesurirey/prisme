@@ -38,9 +38,11 @@ describe('membershipPayload (ADR-0018)', () => {
     );
   });
 
-  it('keeps the memberless shape: the Story line and the Article line', () => {
+  it('keeps the plain shape when the digest reduces to nothing: the Story line and the Article line', () => {
+    // A one-member proposed Story: the digest is the seed's own headline,
+    // which the anchor-title drop removes — the payload stays two lines.
     const payload = membershipPayload(
-      { title: 'Titre un' },
+      { title: 'Titre un', headlines: ['Titre un'] },
       { headline: 'Candidat', teaser: 'chapô' },
     );
     expect(payload.headline).toBe('Story : Titre un\nArticle : Candidat');

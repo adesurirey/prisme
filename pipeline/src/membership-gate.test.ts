@@ -20,7 +20,7 @@ function checker(
   };
 }
 
-const story = { title: 'Story', section: undefined };
+const story = { title: 'Story', section: undefined, headlines: [] };
 const article = { id: 'a1', headline: 'Headline' };
 
 describe('MembershipGate', () => {

@@ -1,5 +1,7 @@
-import type { Section } from '@prisme/domain';
-import type { MembershipChecker } from './decision-model.ts';
+import type {
+  MembershipChecker,
+  MembershipStoryRef,
+} from './decision-model.ts';
 import { isTotalFailure } from './policy.ts';
 
 /**
@@ -55,7 +57,7 @@ export class MembershipGate {
    */
   async ask(input: {
     target: string;
-    story: { title: string; section?: Section; headlines?: string[] };
+    story: MembershipStoryRef;
     article: { id: string; headline: string };
     teaser: string;
     label: string;
@@ -68,14 +70,10 @@ export class MembershipGate {
     this.#attempts++;
     let verdict: MembershipVerdict;
     try {
-      verdict = await this.#checker.belongs(
-        {
-          title: input.story.title,
-          section: input.story.section,
-          headlines: input.story.headlines,
-        },
-        { headline: input.article.headline, teaser: input.teaser },
-      );
+      verdict = await this.#checker.belongs(input.story, {
+        headline: input.article.headline,
+        teaser: input.teaser,
+      });
       if (verdict === 'failed') this.#failures++;
     } catch (reason) {
       this.#failures++;
