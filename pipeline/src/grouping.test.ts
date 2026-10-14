@@ -97,6 +97,52 @@ function input(overrides: {
 }
 
 describe('groupStories', () => {
+  it('the Grouping model sees the 3 most recent member headlines of each open Story (ADR-0018)', async () => {
+    const calls: {
+      input?: Parameters<import('./gemini.ts').GroupingModel['group']>[0];
+    }[] = [];
+    const existing = [
+      story({
+        articles: [
+          article('old', {
+            headline: 'Vieux titre',
+            publishedAt: '2026-10-06T08:00:00Z',
+          }),
+          article('m3', {
+            headline: 'Troisième titre',
+            publishedAt: '2026-10-06T09:00:00Z',
+          }),
+          article('m1', {
+            headline: 'Premier titre',
+            publishedAt: '2026-10-06T11:00:00Z',
+          }),
+          article('m2', {
+            headline: 'Deuxième titre',
+            publishedAt: '2026-10-06T10:00:00Z',
+          }),
+        ],
+      }),
+    ];
+    await groupStories(
+      input({
+        articles: [article('a1')],
+        existing,
+        clients: {
+          grouping: fakeGrouping(
+            { newStories: [], assignments: [], titleUpdates: [] },
+            calls,
+          ),
+          membership: fakeMembership(true),
+        },
+      }),
+    );
+    expect(calls[0]?.input?.stories?.[0]?.latestHeadlines).toEqual([
+      'Premier titre',
+      'Deuxième titre',
+      'Troisième titre',
+    ]);
+  });
+
   it('an assignment merges the Article into the live Story when the Membership check says yes', async () => {
     const existing = [
       story({

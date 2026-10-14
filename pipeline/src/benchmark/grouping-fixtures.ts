@@ -18,6 +18,7 @@
 import { readFile } from 'node:fs/promises';
 import type { Story } from '@prisme/domain';
 import type { GroupingInputArticle, GroupingInputStory } from '../gemini.ts';
+import { latestHeadlines } from '../grouping.ts';
 import { DATA_DIR, readStories } from '../paths.ts';
 
 /** How far before builtAt the fresh batch reaches (one incremental build). */
@@ -94,6 +95,9 @@ export function buildFixtures(stories: Story[], builtAt: string): FixtureSet {
       title: s.title,
       ...(s.section ? { section: s.section } : {}),
       headlines: s.articles.map((a) => a.headline),
+      // The same member-headline context the production prompt gets
+      // (ADR-0018) — the replay must exercise what production sends.
+      latestHeadlines: latestHeadlines(s.articles),
     }));
 
   // from-empty keeps the same ground truth: the snapshot's own clustering,
