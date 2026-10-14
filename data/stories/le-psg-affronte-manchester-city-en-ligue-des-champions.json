@@ -6,6 +6,40 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "d197246d002a",
+      "outletId": "europe-1",
+      "headline": "Ligue des champions : le PSG domine Manchester City dans ce choc de la 2e journée (4-2)",
+      "url": "https://www.europe1.fr/sport/ligue-des-champions-le-psg-domine-manchester-city-dans-ce-choc-de-la-2e-journee-4-2-1149332?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-14T20:56:44.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/14/22/psg_franck_fife_afp_6acfec7cec3d0.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
+      "id": "4c878d0a7fb7",
+      "outletId": "le-figaro",
+      "headline": "Manchester City-PSG : chef-d’œuvre collectif, tête parfaite de Dembélé… Les buts du choc en vidéo",
+      "url": "https://www.lefigaro.fr/sports/football/ligue-des-champions/manchester-city-psg-en-video-le-but-du-ballon-d-or-dembele-qui-met-les-anglais-k-o-debout-20261014",
+      "publishedAt": "2026-10-14T20:10:47.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/2400x1350_crop/2026/10/14/6191ce1da47db00f726c4d6b937e1b4254db1b88ea2558707d8c9a4a53a87474.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
+      "id": "5c9f65fa7c93",
+      "outletId": "ouest-france",
+      "headline": "VIDÉO. Manchester City - PSG : revivez les trois sublimes buts parisiens à la mi-temps en Ligue des champions",
+      "url": "https://www.ouest-france.fr/sport/football/paris-sg/video-manchester-city-psg-revivez-les-trois-sublimes-buts-parisiens-a-la-mi-temps-en-ligue-des-champions-82ca3f84-c806-11f1-b3f5-183597cb1094?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-14T20:04:21.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZWE4MWQyNzA3YzI4YWUyYWIxZGQwMjk4ZTc2MWVhOGM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=20cf1b50acfb07495221ad99ed08b35cd6458ac70bebee8bd2ca71c06f4fdcc3",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
       "id": "42cd0c27f7dd",
       "outletId": "le-figaro",
       "headline": "EN DIRECT - Manchester City-PSG : premier choc en Ligue des champions pour les Parisiens, en quête du triplé",
@@ -86,5 +120,26 @@
       "section": "sport"
     }
   ],
-  "section": "sport"
+  "section": "sport",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le PSG s'est déplacé sur la pelouse de Manchester City pour le compte de la deuxième journée de Ligue des champions.",
+      "La composition alignée par le club parisien a notamment mis en avant les titularisations de Warren Zaïre-Emery et Maghnes Akliouche.",
+      "Le club de la capitale a largement dominé la première période avant de subir un réveil des Citizens en seconde mi-temps."
+    ],
+    "centre": [
+      "Le Paris Saint-Germain a affronté le leader de Premier League sur son terrain lors de cette phase de ligue européenne.",
+      "Les supporters et observateurs ont pu suivre le déroulement de la rencontre ainsi que les choix tactiques initiaux des entraîneurs.",
+      "La première mi-temps a été marquée par une domination parisienne concrétisée par plusieurs buts spectaculaires."
+    ],
+    "droite": [
+      "Le Paris SG a triomphé de Manchester City sur le score de quatre buts à deux lors de ce choc européen.",
+      "Les buteurs parisiens de la rencontre incluent Désiré Doué, Ousmane Dembélé, Vitinha et Maghnes Akliouche.",
+      "Ce succès intervient avant un prochain rendez-vous continental contre le FC Barcelone prévu dès la semaine suivante."
+    ]
+  },
+  "differences": "Les médias de droite se focalisent principalement sur le résultat sportif final et le contenu de la victoire parisienne 4-2, en insistant sur la performance des buteurs et la perspective du match contre le FC Barcelone. À l'inverse, les analyses du centre et du centre-gauche insistent davantage sur le déroulement tactique du direct, les compositions d'équipes et l'analyse minutieuse de la physionomie du match, notamment la domination de la première période suivie de la réaction mancunienne.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 10
 }
