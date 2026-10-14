@@ -23,9 +23,10 @@
       "url": "https://www.lefigaro.fr/international/guerre-en-ukraine-kiev-annonce-la-restriction-des-operations-de-starlink-pendant-la-nuit-20261014",
       "publishedAt": "2026-10-14T08:50:03.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1891_crop/2026/10/14/a8b25d390f6312da6a6e1fad44ec567578789ecae0da367ee0c9d5677bc9ba6a.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "world"
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "ff7902fb579c",
@@ -40,5 +41,25 @@
     }
   ],
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "L'Ukraine a observé une limitation nocturne des capacités du réseau satellitaire Starlink.",
+      "Le système fondé par Elon Musk est essentiel pour les communications tactiques et la coordination des troupes.",
+      "Cette dépendance s'inscrit dans un contexte plus large de recours aux technologies et renseignements occidentaux pour faire face aux assauts russes."
+    ],
+    "centre": [
+      "Un haut conseiller de la présidence ukrainienne a publiquement déploré des restrictions affectant le réseau Starlink pendant la nuit.",
+      "Le fonctionnement des terminaux a connu des perturbations subites sans que les autorités militaires n'aient été averties au préalable.",
+      "La technologie spatiale civile fournie par SpaceX est devenue un outil militaire stratégique pour le maintien de la connectivité sur le front."
+    ],
+    "droite": [
+      "Le gouvernement ukrainien s'est insurgé contre l'interruption nocturne des opérations du système de communication par satellite.",
+      "Les forces armées ukrainiennes déplorent un manque de communication de la part de l'opérateur avant cette mise en place de restrictions.",
+      "Le matériel haut débit demeure un instrument indispensable pour maintenir les liaisons Internet dans les zones isolées touchées par le conflit."
+    ]
+  },
+  "differences": "Les différents camps partagent globalement les mêmes faits en soulignant le rôle crucial des terminaux Starlink pour les forces ukrainiennes et la surprise provoquée par cette restriction nocturne non annoncée. La droite, à l'instar du Figaro, insiste particulièrement sur le grief militaire selon lequel le commandement n'a pas été prévenu par l'opérateur. La gauche apporte pour sa part une perspective géopolitique plus large sur la dépendance ukrainienne aux infrastructures et au renseignement occidentaux, tandis que le centre livre une synthèse factuelle des déclarations de la présidence ukrainienne.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 3
 }
