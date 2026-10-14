@@ -6,6 +6,29 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "5616e56c5a4a",
+      "outletId": "franceinfo",
+      "headline": "L'ancien président de Vinci Autoroutes, Pierre Coppey, proposé par l'Elysée comme nouveau contrôleur général des lieux de privation de liberté",
+      "url": "https://www.franceinfo.fr/societe/prisons/l-ancien-president-de-vinci-autoroutes-pierre-coppey-propose-par-l-elysee-comme-nouveau-controleur-general-des-lieux-de-privation-de-liberte_8237503.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-14T16:44:09.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/kn3GwQi7gv6o4nVV154yDjgcNH4/0x26:512x314/432x243/filters:format(jpg)/2026/10/14/6acfa7f91cacf380447455.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "aede73c9b05f",
+      "outletId": "le-monde",
+      "headline": "Pierre Coppey, ancien président de Vinci Autoroutes, choisi comme nouveau contrôleur général des lieux de privation de liberté par Emmanuel Macron",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/14/pierre-coppey-ancien-president-de-vinci-autoroutes-choisi-comme-nouveau-controleur-general-des-lieux-de-privation-de-liberte-par-emmanuel-macron_6793777_3224.html",
+      "publishedAt": "2026-10-14T16:39:37.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/14/243/0/8256/4128/644/322/60/0/40b1992_upload-1-vyc1auw9sgde-000-33hq98d.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "1e2f1af2be20",
       "outletId": "la-croix",
       "headline": "Contrôleur des prisons : Macron propose Pierre Coppey, l’ex-président de Vinci Autoroutes",
@@ -45,11 +68,33 @@
       "url": "https://www.ouest-france.fr/societe/prison/pierre-coppey-nomme-controleur-general-des-lieux-de-privation-de-liberte-75557c5c-aaaf-11f1-a618-771a80631f2f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-14T15:33:48.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMWYwZTM5ZDlkMjVkZmFiMjgxYWQ5ZDIzY2I4M2U0Y2M?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d6cc76708243595e42959abcc35e81b9586e36e4728d86b3ef47bbe32aa4f16d",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
     }
   ],
-  "section": "politics"
+  "section": "politics",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "L'exécutif a jeté son dévolu sur l'ancien dirigeant de Vinci Autoroutes pour occuper la fonction de contrôle des structures carcérales",
+      "Le profil choisi doit encore obtenir le feu vert des commissions parlementaires avant d'entrer officiellement en fonction",
+      "Le successeur pressenti préside également une structure associative venant en aide aux personnes marginalisées ou vulnérables",
+      "Il est pressenti pour succéder à Dominique Simonnot à la tête de cette autorité administrative indépendante"
+    ],
+    "centre": [
+      "Le chef de l'État a désigné l'ancien responsable autoroutier pour veiller sur les conditions de détention",
+      "La validation définitive de cette désignation reste suspendue à l'examen des parlementaires",
+      "Le parcours du futur contrôleur inclut des responsabilités dans le secteur associatif aux côtés des populations précaires"
+    ],
+    "droite": [
+      "L'ancien dirigeant du secteur autoroutier prend la suite de Dominique Simonnot après un mandat de six années",
+      "La proposition présidentielle désigne un profil issu du monde des grandes entreprises pour superviser les enceintes carcérales",
+      "Le choix du chef de l'État porte sur une personnalité ayant quitté ses précédentes fonctions managériales l'année précédente"
+    ]
+  },
+  "differences": "Les différents bords politiques traitent l'information de manière globalement homogène en insistant sur la transition à la tête du contrôle des prisons, où l'ancien responsable d'une grande entreprise autoroutière succède à Dominique Simonnot. La gauche se distingue légèrement en mettant en avant l'engagement associatif du nouveau nommé auprès des populations en précarité, tandis que la droite et les médias centristes s'attachent davantage à rappeler son parcours managérial et les étapes institutionnelles encore nécessaires avant sa prise de fonction définitive.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 6
 }
