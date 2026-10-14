@@ -6,6 +6,28 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "7a05a81425a8",
+      "outletId": "humanite",
+      "headline": "Violences policières : à Lens, l’avocat du lycéen ayant perdu sa main dénonce une enquête menée « à charge » contre son client",
+      "url": "https://www.humanite.fr/societe/bavures-policieres/violences-policieres-a-lens-lavocat-du-lyceen-ayant-perdu-sa-main-denonce-une-enquete-menee-a-charge-contre-son-client",
+      "publishedAt": "2026-10-14T12:44:46.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/Avocat-Lens-Main-arrachee.jpg.crdownload.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "2a85f82d2c21",
+      "outletId": "le-monde",
+      "headline": "Lycéen amputé d’une main à Lens : la famille s’est constituée partie civile pour « connaître la vérité »",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/14/lyceen-ampute-d-une-main-a-lens-la-famille-s-est-constituee-partie-civile-pour-connaitre-la-verite_6793734_3224.html",
+      "publishedAt": "2026-10-14T12:06:29.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/13/480/0/5768/2884/644/322/60/0/e272d60_ftp-1-sjsaeydlwn2c-5339685-01-06.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "eb7ee3cf241d",
       "outletId": "franceinfo",
       "headline": "\"Des faits de nature criminelle\" : l'avocat du lycéen à la main arrachée à Lens a déposé plainte pour \"violences volontaires ayant entraîné une infirmité permanente\"",
@@ -109,6 +131,12 @@
   "section": "misc",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le conseil d'Evan, l'adolescent de quinze ans amputé à Lens, a officialisé le dépôt d'un nouveau recours pénal.",
+      "La défense qualifie les agissements mis en cause de nature criminelle et parle de violences ayant provoqué un handicap définitif.",
+      "L'instruction initiale est vertement critiquée pour son orientation présumée partiale et sa mise en cause du jeune homme.",
+      "La famille insiste sur le besoin de transparence et dément formellement que l'élève ait touché l'engin explosif."
+    ],
     "centre": [
       "Le conseil de la victime conteste officiellement la chronologie et les conclusions présentées par le parquet concernant l'amputation de l'adolescent.",
       "Les lésions observées sur le jeune homme sont qualifiées par son conseil de blessures comparables à des traumatismes de guerre.",
@@ -120,7 +148,7 @@
       "La caractérisation des blessures comme étant de nature militaire est mise en avant pour souligner la violence extrême de l'événement."
     ]
   },
-  "differences": "Le centre se focalise principalement sur la démarche contentieuse engagée par la défense et la contestation directe de la version officielle du parquet. De son côté, la droite, illustrée par Le Figaro, adopte un angle narratif centré sur le déroulement factuel de la journée d'octobre et les explications fournies lors de la conférence de presse quant aux gestes précis du lycéen.",
+  "differences": "La gauche, complétée par des nuances de centre gauche, insiste fortement sur la dénonciation d'une enquête qu'elle juge menée à charge contre l'adolescent, tout en relayant le dépôt de nouvelles plaintes pour des qualifications criminelles. Le centre et la droite se concentrent davantage sur la bataille narrative autour du déroulement factuel des événements, la contestation de la version du parquet et la nature extrême des blessures.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 8
+  "summarizedArticleCount": 11
 }

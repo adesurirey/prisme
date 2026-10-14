@@ -6,13 +6,34 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "bade6f01f232",
+      "outletId": "rfi",
+      "headline": "Ukraine: partage de renseignements, Starlink… à quoi jouent les États-Unis?",
+      "url": "https://www.rfi.fr/fr/europe/20261014-ukraine-partage-de-renseignements-starlink-%C3%A0-quoi-jouent-les-%C3%A9tats-unis",
+      "publishedAt": "2026-10-14T13:30:35.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/2337ec26-c7d2-11f1-bb6b-77317c09f325/w:1024/p:16x9/AP26287464172350.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "b9b8c81c618f",
+      "outletId": "liberation",
+      "headline": "Starlink restreint en Ukraine, les capacités militaires de Kyiv menacées",
+      "url": "https://www.liberation.fr/international/europe/starlink-restreint-en-ukraine-les-capacites-militaires-de-kyiv-menacees-20261014_QYZZTWD4PJGXZCLNBNFZC77EB4/",
+      "publishedAt": "2026-10-14T13:25:25.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "16dc8819f8b0",
       "outletId": "ouest-france",
       "headline": "L’armée ukrainienne aveuglée et désarmée a du mal à défendre Kiev",
       "url": "https://www.ouest-france.fr/europe/ukraine/larmee-ukrainienne-aveuglee-et-desarmee-a-du-mal-a-defendre-kiev-ea29aeb0-c7b3-11f1-b3f5-183597cb1094?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-14T11:55:04.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjZmOGZiYjQwYWMzNmY1ODI0OTI0Y2UxYWM5YmQyNGQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=c09092133e8190c2cb099a8bd829573af2683c7dab0918956f2fecc00ead5630",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "opinion",
       "section": "world",
       "everFrontPage": true
@@ -89,14 +110,13 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "L'usage des terminaux satellitaires sur le front est entravé, privant l'armée ukrainienne d'un outil précieux pour la détection et l'interception des drones.",
-      "Ces limitations techniques s'accompagnent de critiques visant la politique de Washington, accusée d'affaiblir indirectement Kiev.",
-      "La question du réseau satellitaire met en lumière la vulnérabilité ukrainienne face aux choix de ses partenaires occidentaux."
+      "La capitale ukrainienne subit de nouveaux raids aériens tandis que les systèmes d'alerte précoce sont mis hors service.",
+      "L'entreprise SpaceX a procédé à la désactivation de terminaux satellitaires directement sur la ligne de front, pénalisant l'armée."
     ],
     "centre": [
-      "Les forces ukrainiennes font face à des restrictions sur le réseau satellitaire alors que le pays subit de nouvelles vagues de bombardements nocturnes.",
-      "Ces perturbations de connectivité coïncident avec des tensions politiques croissantes entre les autorités de Kiev et l'administration américaine.",
-      "La dépendance envers les infrastructures d'Elon Musk suscite de vives inquiétudes quant à la pérennité du soutien logistique et militaire."
+      "Des frappes de missiles nocturnes ont touché le territoire ukrainien en l'absence de toute alerte préalable pour la population.",
+      "Le chef de l'État ukrainien met directement en cause le manque de partage d'informations stratégiques par Washington.",
+      "La réduction d'activité du réseau satellitaire commercial d'Elon Musk fait planer un risque sérieux sur la conduite des opérations militaires."
     ],
     "droite": [
       "Le gouvernement ukrainien s'est insurgé contre l'interruption nocturne des opérations du système de communication par satellite.",
@@ -104,7 +124,7 @@
       "Le matériel haut débit demeure un instrument indispensable pour maintenir les liaisons Internet dans les zones isolées touchées par le conflit."
     ]
   },
-  "differences": "Les différents camps s'accordent sur le caractère stratégique du réseau Starlink pour l'armée ukrainienne et sur l'impact de ses restrictions, mais divergent dans l'analyse des responsabilités politiques. La gauche et le centre intègrent ces perturbations dans un contexte géopolitique plus large, pointant du doigt les tensions avec Washington et le rôle des alliés occidentaux qui font peser un risque sur la défense de Kiev. Le centre insiste particulièrement sur les répercussions des relations tendues entre Donald Trump et Volodymyr Zelensky. De son côté, la droite adopte un angle centré sur le grief purement technique et militaire, en soulignant le manque de communication préalable de l'opérateur envers le commandement ukrainien.",
+  "differences": "Les trois camps s'accordent sur le rôle critique des communications satellitaires et l'impact des frappes nocturnes, mais divergent sur l'interprétation des responsabilités. La gauche, par la voix de Libération, met l'accent sur la menace directe que font peser ces désactivations sur les capacités militaires de Kiev face aux bombardements. Le centre élargit la focale aux relations diplomatiques et au renseignement américain, s'interrogeant sur les choix de Washington. De son côté, la droite adopte une perspective plus technique et factuelle, focalisée sur les manquements opérationnels et l'absence de communication de l'opérateur envers le commandement ukrainien.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 9
 }
