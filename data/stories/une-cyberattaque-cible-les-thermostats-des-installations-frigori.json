@@ -6,6 +6,37 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "17d9f0cc9702",
+      "outletId": "lexpress",
+      "headline": "Cyberattaque contre des supermarchés : \"Le scénario le plus probable est celui d'une attaque liée à un Etat\"",
+      "url": "https://www.lexpress.fr/secret-defense/cyberattaque-contre-les-supermarches-le-scenario-le-plus-probable-est-celui-dune-attaque-liee-a-un-74Q5UHM7Z5ATZFZKLXIUMM6HVQ/",
+      "publishedAt": "2026-10-14T10:30:00.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/EVLB7CUGPJGIJM7DDCKP2BX4XM.jpg?auth=006a5f420095dbf76eb171f7e3905410469e511be4024930fc9d8aad195abeb4&smart=true&width=5486&height=3650",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "c5f6716bf28e",
+      "outletId": "lobs",
+      "headline": "Cyberattaque contre des frigos : « Protéger un système, ce n’est pas seulement empêcher une intrusion »",
+      "url": "https://www.nouvelobs.com/economie/20261014.OBS119199/cyberattaque-contre-des-frigos-proteger-un-systeme-ce-n-est-pas-seulement-empecher-une-intrusion.html",
+      "publishedAt": "2026-10-14T09:00:06.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "3a0e4f59ee3f",
+      "outletId": "liberation",
+      "headline": "Piratage des frigos de supermarchés : «C’était une attaque basique, elle aurait pu provoquer plus de dégâts»",
+      "url": "https://www.liberation.fr/economie/conso/piratage-des-frigos-de-supermarches-lattaque-aurait-pu-provoquer-plus-de-degats-20261014_EFCXYSCVRVFRNM7SBZHQID25YE/",
+      "publishedAt": "2026-10-14T08:33:43.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "92cb23981df3",
       "outletId": "rfi",
       "headline": "Ingérences étrangères: la France durcit le ton, les cyberattaques se poursuivent",
@@ -54,22 +85,21 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La manipulation à distance des systèmes de réfrigération commerciale met en évidence la vulnérabilité persistante des infrastructures numériques.",
-      "Des pirates informatiques ont perturbé la chaîne du froid dans plusieurs grandes surfaces.",
-      "Le secteur économique continue de négliger les risques inhérents à l'intégration généralisée d'objets connectés."
+      "La gouvernance défaillante des risques liés au numérique favorise ce type d'incident dans la grande distribution.",
+      "Des spécialistes estiment que les protections déployées manquent d'anticipation face à des menaces pourtant connues.",
+      "L'intrusion sur les systèmes de réfrigération, bien que basique, aurait pu engendrer des conséquences beaucoup plus graves."
     ],
     "centre": [
-      "Une intrusion numérique d'envergure a touché des centaines d'établissements commerciaux français, affectant leurs unités de froid.",
-      "Une autre cyberattaque a simultanément visé un site institutionnel lié à la défense et à la sécurité nationale.",
-      "Les autorités font face à une recrudescence d'actions hostiles imputées à des ingérences étrangères, sans revendication précise à ce stade."
+      "Plusieurs établissements commerciaux ont vu leurs installations frigorifiques compromises lors d'une action informatique malveillante.",
+      "Les pistes privilégiées par les observateurs et les autorités orientent les soupçons vers une origine étatique."
     ],
     "droite": [
-      "L'attaque informatique subie par les enseignes commerciales engendre des pertes financières chiffrées en millions d'euros.",
-      "Les investigations mettent en cause les défaillances des plateformes de supervision gérées par des prestataires externes.",
-      "Plusieurs dizaines de points de vente poursuivent l'évaluation des préjudices matériels occasionnés par ces intrusions."
+      "Les enseignes touchées par le piratage évaluent des préjudices financiers évalués à plusieurs millions d'euros.",
+      "Les enquêtes pointent la responsabilité des plateformes de supervision sous-traitées à des prestataires externes.",
+      "De nombreux points de vente tentent de chiffrer les dégâts matériels subis durant ces intrusions."
     ]
   },
-  "differences": "Les trois camps analysent la cyberattaque sous des angles distincts. La gauche insiste sur la fragilité structurelle des objets connectés industriels et le manque de prévention des entreprises. Le centre élargit la perspective en associant cet incident à des opérations d'ingérence étrangère plus larges visant la sécurité nationale. De son côté, la droite, illustrée par Europe 1, focalise son attention sur l'ampleur des pertes financières et sur la responsabilité des prestataires technologiques extérieurs.",
+  "differences": "Les trois sensibilités politiques abordent l'incident sous des angles différents. La gauche se concentre sur les défaillances structurelles de gouvernance et sur l'insuffisance des mesures de sécurité préventive face à des failles pourtant identifiées. Le centre met en avant l'hypothèse d'une action menée par un État, replaçant l'événement dans un contexte d'ingérences géopolitiques. Enfin, la droite, à l'instar d'Europe 1, polarise son analyse sur l'impact financier direct pour les entreprises et sur la mise en cause des prestataires externes chargés de la supervision technique.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 7
 }

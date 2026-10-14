@@ -6,6 +6,28 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "116c83118e5b",
+      "outletId": "bfmtv",
+      "headline": "Inde: deux chefs du parti des “cafards” placés en détention",
+      "url": "https://www.bfmtv.com/international/asie/inde/video-inde-deux-chefs-du-parti-des-cafards-places-en-detention_VN-202610140476.html",
+      "publishedAt": "2026-10-14T11:55:48.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/lbAnjGME_UaoDZS6Ax_ILDI1URY=/0x0:1280x720/800x0/images/Inde-deux-chefs-du-parti-des-cafards-places-en-detention-2365224.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "3b6def28c991",
+      "outletId": "franceinfo",
+      "headline": "En Inde, deux chefs du mouvement contestataire des \"cafards\" placés en détention après des manifestations",
+      "url": "https://www.franceinfo.fr/monde/inde/en-inde-deux-chefs-du-mouvement-contestataire-des-cafards-places-en-detention-apres-des-manifestations_8237065.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-14T11:00:34.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/xrjr_tznC2iRMl7ieA3SKm6GSOg/180x286:884x682/432x243/filters:format(jpg)/2026/10/14/6acf57ae130bd370244384.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "0706d7c001aa",
       "outletId": "le-monde",
       "headline": "En Inde, deux chefs du Parti du peuple cafard de nouveau placés en détention",
@@ -29,5 +51,19 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Deux figures dirigeantes du mouvement d'opposition ont été arrêtées pour au moins cinq jours par les autorités.",
+      "La mobilisation contre la commission électorale a évolué en une contestation plus large visant la dérive autoritaire du Premier ministre Narendra Modi, au pouvoir depuis 2014."
+    ],
+    "centre": [
+      "Plusieurs milliers de manifestants ont été appréhendés ces derniers jours à travers le pays par les forces de l'ordre.",
+      "La capitale fédérale reste quadrillée par la police tandis que de nouvelles interpellations ont eu lieu dans le cadre d'une crise politique majeure."
+    ]
+  },
+  "differences": "Le centre insiste particulièrement sur le dispositif policier d'envergure déployé dans la capitale et l'ampleur des arrestations massives menées par les forces de l'ordre. Le centre-gauche élargit davantage la perspective en contextualisant le mouvement de contestation face à la commission électorale et en qualifiant explicitement la gestion gouvernementale de dérive autoritaire sous Narendra Modi.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 4
 }

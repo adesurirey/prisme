@@ -6,6 +6,18 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "e902e889aa5a",
+      "outletId": "le-monde",
+      "headline": "L’incendie près de la gare d’Austerlitz, à Paris, est « maîtrisé », selon les sapeurs-pompiers",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/14/l-incendie-pres-de-la-gare-d-austerlitz-a-paris-est-maitrise-selon-les-sapeurs-pompiers_6793670_3225.html",
+      "publishedAt": "2026-10-14T11:53:27.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/14/1621/0/4284/2142/644/322/60/0/42d2310_upload-1-51lq5m08lou7-img-3579.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "34fe1428dacd",
       "outletId": "bfmtv",
       "headline": "Paris: un incendie en cours près de la gare d'Austerlitz",
@@ -101,7 +113,7 @@
       "url": "https://www.lemonde.fr/societe/article/2026/10/14/un-incendie-en-cours-pres-de-la-gare-d-austerlitz-a-paris_6793670_3224.html",
       "publishedAt": "2026-10-14T08:20:31.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/14/1621/0/4284/2142/644/322/60/0/42d2310_upload-1-51lq5m08lou7-img-3579.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -111,9 +123,9 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le sinistre survenu dans la matinée près des voies ferrées est désormais sous contrôle.",
-      "L'intégralité de la toiture du bâtiment visé a été détruite par les flammes.",
-      "Le trafic des trains n'a subi aucune répercussion selon les constats initiaux."
+      "Le feu spectaculaire survenu sur le toit d'un édifice en travaux du 13e arrondissement est désormais totalement maîtrisé.",
+      "L'événement n'a provoqué aucun blessé et n'a pas entravé la circulation des rames ferroviaires.",
+      "Les forces de police indiquent que les causes précises du départ de feu restent indéterminées à ce stade."
     ],
     "centre": [
       "Les sapeurs-pompiers ont maîtrisé un important feu de toiture dans un immeuble en rénovation au boulevard de l'Hôpital.",
@@ -126,7 +138,7 @@
       "Les sapeurs-pompiers demeurent mobilisés sur les lieux sans que la circulation ferroviaire ne soit entravée."
     ]
   },
-  "differences": "Les trois sensibilités rapportent unanimement l'absence de blessés et l'absence de répercussion sur le trafic ferroviaire. Le centre détaille particulièrement l'intervention des pompiers de Paris, l'étendue de la toiture détruite au boulevard de l'Hôpital et la maîtrise totale des flammes. La gauche conserve une formulation plus synthétique de l'incident, tandis que la droite maintient son focus sur les précisions institutionnelles et la nature du bâtiment touché.",
+  "differences": "Le camp de gauche intègre de nouveaux éléments en précisant l'intervention du Monde sur l'indétermination des causes et la localisation dans le 13e arrondissement, rejoignant le centre sur la maîtrise du sinistre. Tous les camps s'accordent sur l'absence de victimes et l'absence d'impact sur les transports, la gauche et le centre insistant sur le caractère spectaculaire des flammes en toiture tandis que la droite conserve son attention sur les aspects techniques et institutionnels du chantier.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 9
+  "summarizedArticleCount": 10
 }

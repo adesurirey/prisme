@@ -6,6 +6,29 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "1eed681f7611",
+      "outletId": "ouest-france",
+      "headline": "En Turquie, le pouvoir prend le contrôle de « Halk TV », la principale chaîne de télévision d’opposition",
+      "url": "https://www.ouest-france.fr/monde/turquie/en-turquie-le-pouvoir-prend-le-controle-de-halk-tv-la-principale-chaine-de-television-dopposition-31fb14f4-c7aa-11f1-9522-1f9ae0711c0a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-14T11:25:42.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMjU1YTIzODBjOWZhYjM1YjZlNzMyYmNjNDM2M2NiMmI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=23d8a3e3fbb1589675e8de0ba652f0f9fda21d4bddf9dc33e223f937fbc3aef5",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "2f93394a934d",
+      "outletId": "humanite",
+      "headline": "« Seuls les dictateurs feraient une chose pareille » : la police turque prend le contrôle de la principale chaîne de télévision d’opposition",
+      "url": "https://www.humanite.fr/monde/concentration-des-medias/seuls-les-dictateurs-feraient-une-chose-pareille-la-police-turque-prend-le-controle-de-la-principale-chaine-de-television-dopposition",
+      "publishedAt": "2026-10-14T10:24:02.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/Halk-TV-turquie.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "b3dcf61ab3f1",
       "outletId": "le-monde",
       "headline": "Turquie : la principale chaîne privée de télévision d’opposition, Halk TV, investie par la police",
@@ -110,22 +133,22 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le siège de la principale station contestataire a été investi par les autorités à l'aube.",
-      "Plusieurs collaborateurs ont été appréhendés lors de cette descente policière.",
-      "L'exécutif intensifie sa pression sur les voix dissidentes à travers des arrestations d'élus et le blocage de sites d'information indépendants."
+      "Les forces de l'ordre ont investi les locaux d'une grande station contestataire dès les premières heures de la journée.",
+      "L'accès au site a été totalement bloqué pour les journalistes et la diffusion a subi une coupure immédiate.",
+      "Cette intervention est qualifiée par les opposants et les observateurs de mesure dictatoriale visant à museler l'information critique."
     ],
     "centre": [
-      "Les forces de sécurité ont pris le contrôle des locaux de la principale télévision critique envers le pouvoir.",
-      "Un administrateur a été nommé pour superviser l'avenir de la station après l'interruption de sa diffusion.",
-      "Cette mesure répressive s'inscrit dans une campagne globale touchant la presse libre et les acteurs politiques."
+      "La police a investi les locaux de la principale chaîne audiovisuelle critique envers l'exécutif turc.",
+      "Le parquet justifie cette mesure par des accusations de malversations financières, de corruption et de trucage de marchés.",
+      "Les associations et les professionnels des médias perçoivent cette descente comme un nouveau palier franchi dans la dérive autoritaire du gouvernement d'Erdogan."
     ],
     "droite": [
-      "Le siège du principal média contestataire est désormais sous la tutelle des autorités.",
-      "Un administrateur a été officiellement installé afin de gérer la structure.",
-      "Une suspension temporaire de la diffusion en direct a été observée pendant l'intervention."
+      "Le siège du principal média contestataire est passé sous la tutelle directe des autorités publiques.",
+      "Un administrateur a été officiellement désigné pour assurer la gestion et l'avenir de la structure.",
+      "Le direct a été momentanément suspendu au moment où les forces de sécurité sont intervenues dans les locaux."
     ]
   },
-  "differences": "La gauche met fortement l'accent sur la dimension autoritaire de la répression en insistant sur l'arrestation de collaborateurs et d'élus d'opposition ainsi que sur la censure de sites web indépendants. Le centre dresse un constat similaire sur la dégradation globale de la liberté de la presse tout en soulignant la nomination d'un administrateur. De son côté, la droite adopte une perspective plus institutionnelle et technique, se focalisant sur l'installation de cet administrateur et sur l'interruption temporaire du direct.",
+  "differences": "La gauche qualifie l'opération d'acte dictatorial, en s'attardant sur l'exclusion des journalistes et l'interruption sèche du direct rapportées par L'Humanité. Le centre contextualise l'intervention en mentionnant les charges judiciaires invoquées par le parquet pour corruption et blanchiment, tout en soulignant la dénonciation d'un virage autoritaire par les sociétés civiles, ainsi que le rapportait Ouest-France. Enfin, la droite maintient un angle davantage factuel et institutionnel, en se focalisant sur la mise sous tutelle de la chaîne par l'installation d'un administrateur et sur la suspension temporaire de sa diffusion.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 9
+  "summarizedArticleCount": 11
 }

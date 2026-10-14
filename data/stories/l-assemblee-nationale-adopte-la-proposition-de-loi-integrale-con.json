@@ -6,16 +6,38 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "e2f7f5b56277",
+      "outletId": "lopinion",
+      "headline": "« Les victimes s’en souviendront » : pourquoi LFI a refusé de voter la loi intégrale",
+      "url": "https://www.lopinion.fr/politique/les-victimes-sen-souviendront-pourquoi-lfi-a-refuse-de-voter-la-loi-integrale",
+      "publishedAt": "2026-10-14T10:11:13.000Z",
+      "imageUrl": "https://beymedias.brightspotcdn.com/e7/d8/67d85184400fa59e2e075eab09ce/sipa-01305754-000002.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "452bafc8f1ca",
       "outletId": "le-monde",
       "headline": "Loi intégrale contre les violences sexuelles : un premier pas pour rester dans l’histoire",
       "url": "https://www.lemonde.fr/idees/article/2026/10/14/loi-integrale-contre-les-violences-sexuelles-un-premier-pas-pour-rester-dans-l-histoire_6793712_3232.html",
       "publishedAt": "2026-10-14T09:30:01.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/14/661/0/7913/3956/644/322/60/0/76350fc_upload-1-jjbpv3klcrdw-000-d36k4ry.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
+    },
+    {
+      "id": "858a112ab528",
+      "outletId": "franceinfo",
+      "headline": "Violences sexistes et sexuelles : la loi intégrale votée par les députés est \"extraordinaire\", se félicite l'association Face à l'inceste",
+      "url": "https://www.franceinfo.fr/societe/harcelement-sexuel/violences-sexistes-et-sexuelles-la-loi-integrale-votee-par-les-deputes-est-extraordinaire-se-felicite-l-association-face-a-l-inceste_8236948.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-14T09:20:08.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/lvA8dfCaFLKQKJbx0kzDTHuT-rI/0x285:5472x3363/432x243/filters:format(jpg)/2026/10/14/6acf48bbc5be5497616859.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "37fff3f2bb04",
@@ -40,6 +62,17 @@
       "section": "politics"
     },
     {
+      "id": "3e9fe3dad564",
+      "outletId": "humanite",
+      "headline": "Justice pour les femmes : pourquoi cette idée dérange tant",
+      "url": "https://www.humanite.fr/feminisme/loi-integrale-contre-les-vss/justice-pour-les-femmes-pourquoi-cette-idee-derange-tant",
+      "publishedAt": "2026-10-14T04:00:00.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/02/Vignette_2024_chronique_violaine_588c8f.png?w=1200",
+      "frontPage": false,
+      "kind": "opinion",
+      "section": "politics"
+    },
+    {
       "id": "5330c24efaea",
       "outletId": "20-minutes",
       "headline": "Violences sexistes et sexuelles : Que contient la « loi intégrale » votée à l’unanimité par les députés ?",
@@ -56,12 +89,16 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Les députés ont plébiscité un texte législatif global destiné à lutter contre l'ensemble de la chaîne des violences sexistes et sexuelles.",
-      "Le mouvement féministe salue une mesure historique tout en redoutant une révision conservatrice lors de l'examen à venir au Sénat.",
-      "L'unité politique a volé en éclats au moment du vote, marqué par l'abstention de La France insoumise et le ralliement opportuniste du Rassemblement national."
+      "Le texte adopté à l'Assemblée introduit une définition juridique propre à l'inceste au sein du code pénal et élargit cette notion aux cousins germains.",
+      "Les associations spécialisées qualifient le nouveau dispositif législatif d'exceptionnel pour la protection des victimes.",
+      "La décision de La France insoumis de s'abstenir lors du scrutin continue de susciter des interrogations sur les motivations du mouvement."
+    ],
+    "droite": [
+      "Le groupe politique insoumis a fait le choix de ne pas soutenir le texte législatif global contre les violences sexistes et sexuelles.",
+      "Malgré l'abstention d'une composante de l'opposition, le projet de loi a recueilli un vote favorable unitaire de la part des députés présents."
     ]
   },
-  "differences": "La couverture de la gauche met principalement en lumière la portée historique de cette avancée législative tout en révélant de fortes tensions internes, notamment entre le centre gauche qui insiste sur la fragilité du consensus et une aile plus radicale divisée sur les conditions du vote et la récupération politique de l'extrême droite. Il n'y a pas d'autre camp à comparer dans cette sélection.",
+  "differences": "Le camp de gauche met en avant les avancées concrètes apportées par le texte, notamment sur la définition de l'inceste, tout en soulignant l'accueil très positif des associations et les divisions persistantes lors du vote. De son côté, le camp de droite, représenté ici par le centre droit, focalise son attention sur le positionnement controversé de La France insoumise et son refus de voter le texte, tout en constatant l'adoption unanime de la proposition de loi.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 7
 }
