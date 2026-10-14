@@ -345,11 +345,21 @@ export function winnerModelFromEnv(): DecisionModel | null {
 /** yes = belongs; no = does not; failed = the model answered nothing usable (or the check threw). */
 export type MembershipAnswer = 'yes' | 'no' | 'failed';
 
+/** The Story side of one Membership check (ADR-0018): what the check judges
+ * from besides the candidate — the title, the Section label, and the member
+ * headlines the check may see. One shared type: the gate, the checker and
+ * the grouping call sites all pass the same shape. */
+export interface MembershipStoryRef {
+  title: string;
+  section?: Section;
+  headlines: string[];
+}
+
 /** The Membership check (issue #5): Jev answers yes/no about one (Article, Story) pair. */
 export interface MembershipChecker {
   label: string;
   belongs(
-    story: { title: string; section?: Section; headlines?: string[] },
+    story: MembershipStoryRef,
     article: { headline: string; teaser: string },
   ): Promise<MembershipAnswer>;
 }
@@ -360,12 +370,12 @@ export interface MembershipChecker {
  * title (a proposed Story is anchored on its seed Article, which is also a
  * member) is dropped. Exported for tests. */
 export function membershipPayload(
-  story: { title: string; section?: Section; headlines?: string[] },
+  story: MembershipStoryRef,
   article: { headline: string; teaser: string },
 ): { headline: string; teaser: string } {
   const section = story.section ? ` (${SECTION_LABELS[story.section]})` : '';
   const lines = [`Story : ${story.title}${section}`];
-  const members = (story.headlines ?? []).filter((h) => h !== story.title);
+  const members = story.headlines.filter((h) => h !== story.title);
   if (members.length > 0)
     lines.push('Articles déjà joints :', ...members.map((h) => `- ${h}`));
   lines.push(`Article : ${article.headline}`);

@@ -45,7 +45,10 @@ describe('missingMembershipChecker', () => {
   it('every attempt fails, so the gate total-failure rule fires only when checks were pending', async () => {
     const checker = missingMembershipChecker();
     await expect(
-      checker.belongs({ title: 'S' }, { headline: 'H', teaser: '' }),
+      checker.belongs(
+        { title: 'S', headlines: [] },
+        { headline: 'H', teaser: '' },
+      ),
     ).rejects.toThrow('Membership checker unavailable');
   });
 });

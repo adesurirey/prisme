@@ -42,7 +42,10 @@ import {
   reconcileSlugs,
   slugFor,
 } from '@prisme/domain';
-import type { MembershipChecker } from './decision-model.ts';
+import type {
+  MembershipChecker,
+  MembershipStoryRef,
+} from './decision-model.ts';
 import { storySection } from './edition.ts';
 import type { GroupingModel, GroupingProposal } from './gemini.ts';
 import { isLive, LIVE_WINDOW_MS } from './liveness.ts';
@@ -526,9 +529,7 @@ export async function groupStories(
         seedHeadlineOf.set(key, seed.headline);
         const ask: {
           target: string;
-          title: string;
-          section?: Section;
-          headlines?: string[];
+          story: MembershipStoryRef;
         }[] = [];
         for (const candidate of seedCandidates(
           seed,
@@ -536,9 +537,11 @@ export async function groupStories(
         ))
           ask.push({
             target: candidate.id,
-            title: candidate.title,
-            section: candidate.section,
-            headlines: memberDigest(seed, candidate.articles),
+            story: {
+              title: candidate.title,
+              section: candidate.section,
+              headlines: memberDigest(seed, candidate.articles),
+            },
           });
         for (const earlier of keyOrder) {
           if (earlier === key) break;
@@ -554,19 +557,17 @@ export async function groupStories(
           )
             ask.push({
               target: `key:${earlier}`,
-              title: earlierHeadline,
-              headlines: memberDigest(seed, keyMembers.get(earlier) ?? []),
+              story: {
+                title: earlierHeadline,
+                headlines: memberDigest(seed, keyMembers.get(earlier) ?? []),
+              },
             });
         }
         for (const candidate of ask) {
           const yes =
             (await gate.ask({
               target: candidate.target,
-              story: {
-                title: candidate.title,
-                section: candidate.section,
-                headlines: candidate.headlines,
-              },
+              story: candidate.story,
               article: seed,
               teaser: teasers.get(seed.id) ?? '',
               label: `Seed check failed: ${seed.id} → ${candidate.target}`,
@@ -634,13 +635,7 @@ export async function groupStories(
       if (article == null) continue;
       // New-Story checks are anchored on the seed Article: the proposed
       // title may be generic, the seed headline is the concrete event.
-      let story:
-        | {
-            title: string;
-            section?: Section;
-            headlines?: string[];
-          }
-        | undefined;
+      let story: MembershipStoryRef | undefined;
       if (pair.target.startsWith('key:')) {
         const members = keyMembers.get(pair.target.slice(4))!;
         story = {
