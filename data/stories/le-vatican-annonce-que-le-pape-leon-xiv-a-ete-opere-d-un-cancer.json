@@ -6,6 +6,17 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "9533e9c3378c",
+      "outletId": "la-croix",
+      "headline": "Santé du pape : Léon XIV a passé une nuit « tranquille » après son opération",
+      "url": "https://www.la-croix.com/religion/sante-du-pape-leon-xiv-a-passe-une-nuit-tranquille-apres-son-operation-20261014",
+      "publishedAt": "2026-10-14T07:08:38.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/14/2561532-le-pape-leon-xiv-a-passe-une-nuit-tranquille-a-l-h.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "de7a70c038ea",
       "outletId": "la-croix",
       "headline": "Au Vatican, quelle gouvernance pendant l’hospitalisation de Léon XIV ?",
@@ -23,7 +34,7 @@
       "url": "https://www.lefigaro.fr/actualite-france/leon-xiv-atteint-d-un-cancer-les-responsables-politiques-multiplient-les-messages-de-soutien-20261014",
       "publishedAt": "2026-10-14T06:35:41.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/14/28dc227c49ce78ccd726805cecb9d2cc264da017cf84dce62c04c18954d186d5.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -103,10 +114,9 @@
       "La transparence inhabituelle de la communication officielle sur cette pathologie est soulignée."
     ],
     "centre": [
-      "Le chef de l'Église catholique a subi avec succès l'ablation d'une tumeur maligne pulmonaire.",
-      "Les analyses médicales confirment la présence d'un adénocarcinome, nécessitant une période de repos prolongée.",
-      "Des spécialistes de la santé apportent un éclairage sur la nature de cette affection fréquente et ses perspectives de guérison.",
-      "La question de la continuité de la gouvernance du Saint-Siège se pose durant la période d'hospitalisation et de convalescence."
+      "Le chef de l'Église catholique a passé une première nuit sereine à l'hôpital romain selon le bulletin médical.",
+      "L'ablation de la tumeur maligne pulmonaire s'est déroulée selon le calendrier initialement prévu.",
+      "Les interrogations demeurent sur la continuité de la gouvernance du Saint-Siège durant la convalescence du pape âgé de soixante et onze ans."
     ],
     "droite": [
       "Le Vatican a officialisé le caractère cancéreux de la masse retirée lors de l'intervention chirurgicale.",
@@ -115,7 +125,7 @@
       "Les responsables politiques et les dirigeants nationaux multiplient les déclarations de solidarité envers le souverain pontife."
     ]
   },
-  "differences": "Les différents bords politiques s'accordent sur les faits médicaux et l'annonce officielle du Vatican, tout en variant dans leurs angles d'approche. La gauche se focalise sur la portée politique et la communication singulière du Vatican face à cette épreuve. Le centre (notamment La Croix) élargit l'analyse aux aspects pratiques de la gouvernance du Saint-Siège pendant la convalescence. La droite et le centre droit (illustrés par Le Figaro) complètent les rapports cliniques par une couverture nourrie des réactions de soutien de la classe politique internationale, combinant ainsi élan de solidarité et suivi de l'agenda pontifical.",
+  "differences": "Les différents bords politiques s'accordent sur les faits médicaux et l'annonce officielle du Vatican, tout en variant dans leurs angles d'approche. La gauche se focalise sur la portée politique et la communication singulière du Vatican face à cette épreuve. Le centre (notamment La Croix) intègre les dernières nouvelles rassurantes sur la première nuit post-opératoire tout en élargissant l'analyse aux aspects pratiques de la gouvernance. La droite et le centre droit (illustrés par Le Figaro) complètent les rapports cliniques par une couverture nourrie des réactions de soutien de la classe politique internationale, combinant ainsi élan de solidarité et suivi de l'agenda pontifical.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 8
+  "summarizedArticleCount": 9
 }
