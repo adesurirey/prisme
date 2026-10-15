@@ -79,15 +79,18 @@ const stamp = (d: Date) => {
       : `le ${k} à ${timeOnly(d)}`;
 };
 // Same day (same minute included): the day marker is stated once, up
-// front — "Publié aujourd'hui à 12h01, mis à jour à 18h45"; different
-// days carry their own marker ("Publié hier à 23h11, mis à jour
-// aujourd'hui à 09h00").
+// front and then not repeated — "Publié hier à 12h01, mis à jour à
+// 18h45"; different days carry their own marker ("Publié hier à
+// 23h11, mis à jour aujourd'hui à 09h00"). The shared marker is
+// stamp(published), so it reads "aujourd'hui" only when that day is
+// actually today — a Story published and updated yesterday must not
+// be stamped as today's (issue: story dates always say "aujourd'hui").
 const sameDay = dayKey(published) === dayKey(updated);
 const sameMinute = stamp(published) === stamp(updated);
 const publishedLine = sameMinute
   ? `Publié ${stamp(published)}`
   : sameDay
-    ? `Publié aujourd’hui à ${timeOnly(published)}\u2003mis à jour à ${timeOnly(updated)}`
+    ? `Publié ${stamp(published)}\u2003mis à jour à ${timeOnly(updated)}`
     : `Publié ${stamp(published)}\u2003mis à jour ${stamp(updated)}`;
 
 // SEO (issue #6): Prisme’s own description, derived only from the Coverage
