@@ -51,7 +51,7 @@ export default function StoryCard({
     >
       <a
         href={withBase(storyUrl(story))}
-        className="group/card flex items-start gap-4 rounded-xl px-5 py-5 transition-colors duration-200 ease-out hover:bg-hover"
+        className="group/card flex items-start gap-4 rounded-xl px-5 py-5"
       >
         <div className="min-w-0 flex-1">
           {/* The "En hausse" slot sits above the title — a per-visitor
@@ -59,7 +59,7 @@ export default function StoryCard({
               pile. Invisible (empty:hidden) until trending.ts appends the
               client-side badge. */}
           <p data-trending-slot className="empty:hidden mb-1 text-[13px]" />
-          <h2 className="text-[16px] font-semibold leading-snug tracking-[-0.01em]">
+          <h2 className="text-[16px] font-semibold sm:text-[18px] leading-snug tracking-[-0.01em] group-hover/card:underline">
             {story.title}
           </h2>
           {/* The "maj." date is the Story's newest Article — the same

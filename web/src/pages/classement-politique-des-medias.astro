@@ -1,5 +1,6 @@
 ---
 import {
+  coverageGroup,
   excludedOutlets,
   LEANING_LABELS,
   type Leaning,
@@ -28,7 +29,7 @@ const description =
     <p class="mb-6">
       <a
         href={withBase('/')}
-        class="inline-flex items-center gap-1.5 text-[13px] text-muted transition-colors hover:text-ink"
+        class="inline-flex items-center gap-1.5 text-[16px] text-muted transition-colors hover:text-ink"
       >
         <svg
           width="13"
@@ -48,10 +49,10 @@ const description =
         Aujourd’hui
       </a>
     </p>
-    <h1 class="text-[24px] font-semibold leading-snug tracking-[-0.02em]">
+    <h1 class="text-[26px] font-semibold leading-snug tracking-[-0.02em]">
       Classement politique des médias
     </h1>
-    <p class="mt-4 text-[15px] leading-relaxed text-muted">
+    <p class="mt-4 text-[16px] leading-relaxed text-muted">
       Prisme regroupe les articles de {outlets.length} médias français. Chaque média est
       classé à la main sur cinq tendances — {LEANING_LABELS.gauche.toLowerCase()},
       {LEANING_LABELS['centre-gauche'].toLowerCase()}, {LEANING_LABELS.centre.toLowerCase()},
@@ -63,8 +64,8 @@ const description =
       sources citées, et ce que le site ne fait pas.
     </p>
 
-    <section class="mt-10 space-y-4 text-[15px] leading-relaxed text-muted">
-      <h2 class="text-[17px] font-semibold text-ink">Le bord appartient au média, pas à l’article</h2>
+    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
+      <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Le bord appartient au média, pas à l’article</h2>
       <p>
         Un article du <em>Figaro</em> peut très bien défendre une position de gauche ; ça
         n’en fait pas un article « de droite ». C’est le média, dans sa durée, qui a une
@@ -80,8 +81,8 @@ const description =
       </p>
     </section>
 
-    <section class="mt-10 space-y-4 text-[15px] leading-relaxed text-muted">
-      <h2 class="text-[17px] font-semibold text-ink">La sélection n’est pas équilibrée — et c’est voulu</h2>
+    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
+      <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">La sélection n’est pas équilibrée — et c’est voulu</h2>
       <p>
         Les {outlets.length} médias sont choisis pour leur audience et leur poids
         éditorial, jamais pour équilibrer les bords. Il en résulte une répartition
@@ -95,8 +96,8 @@ const description =
       </p>
     </section>
 
-    <section class="mt-10 space-y-4 text-[15px] leading-relaxed text-muted">
-      <h2 class="text-[17px] font-semibold text-ink">Couverture et angles morts</h2>
+    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
+      <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Couverture et angles morts</h2>
       <p>
         Pour chaque sujet, Prisme compte combien de médias de chaque bord publient un
         article d’actualité dessus, les cinq tendances regroupées en trois camps :
@@ -107,8 +108,8 @@ const description =
       </p>
     </section>
 
-    <section class="mt-10 space-y-4 text-[15px] leading-relaxed text-muted">
-      <h2 class="text-[17px] font-semibold text-ink">Ce que fait l’IA — et ce qu’elle ne lit pas</h2>
+    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
+      <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Ce que fait l’IA — et ce qu’elle ne lit pas</h2>
       <p>
         Les synthèses « lu à gauche / au centre / à droite » sont écrites par un modèle
         de langage, à partir des seuls titres et chapôs publiés par les médias. Il ne lit
@@ -119,8 +120,8 @@ const description =
     </section>
 
     <section class="mt-10">
-      <h2 class="text-[17px] font-semibold text-ink">Les médias exclus</h2>
-      <p class="mt-2 text-[15px] leading-relaxed text-muted">
+      <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Les médias exclus</h2>
+      <p class="mt-2 text-[16px] leading-relaxed text-muted">
         Certains médias manquent à l’appel. En voici la liste et la raison, telles que
         vérifiées à la date indiquée.
       </p>
@@ -128,9 +129,9 @@ const description =
         {
           excludedOutlets.map((excluded) => (
             <li class="py-4">
-              <p class="text-[15px] font-medium text-ink">{excluded.name}</p>
-              <p class="mt-1 text-[14px] leading-relaxed text-muted">{excluded.reason}</p>
-              <p class="mt-1 text-[13px] text-muted">
+              <p class="text-[16px] font-medium text-ink">{excluded.name}</p>
+              <p class="mt-1 text-[16px] leading-relaxed text-muted">{excluded.reason}</p>
+              <p class="mt-1 text-[16px] text-muted">
                 Vérifié le {formatParisDate(new Date(excluded.checkedAt), {
                   day: 'numeric',
                   month: 'long',
@@ -144,34 +145,39 @@ const description =
     </section>
 
     <section class="mt-12">
-      <h2 class="text-[17px] font-semibold text-ink">Média par média</h2>
+      <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Média par média</h2>
       {
         leaningOrder.map((leaning) => (
           <div class="mt-8 first:mt-6">
-            <h3 class="flex items-center gap-2.5">
-              <LeaningBadge leaning={leaning} />
-              <span class="text-[12px] text-muted">{perLeaning(leaning).length} médias</span>
-              {leaning === 'centre-gauche' && (
-                <span class="text-[12px] text-muted">· compte avec la gauche</span>
-              )}
-              {leaning === 'centre-droite' && (
-                <span class="text-[12px] text-muted">· compte avec la droite</span>
-              )}
+            <h3 class="flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5 text-[16px]">
+              <span
+                aria-hidden="true"
+                class="inline-block size-2.5 translate-y-[-1px] rounded-full"
+                style={`background: var(--${coverageGroup(leaning)})`}
+              />
+              <span class="whitespace-nowrap font-semibold text-ink">
+                {LEANING_LABELS[leaning]}
+              </span>
+              <span class="text-muted">
+                {perLeaning(leaning).length} médias
+                {leaning === 'centre-gauche' && ' — compte avec la gauche'}
+                {leaning === 'centre-droite' && ' — compte avec la droite'}
+              </span>
             </h3>
             <ul class="mt-1 divide-y divide-line">
               {perLeaning(leaning).map((outlet) => (
                 <li class="py-4">
-                  <h4 class="flex flex-wrap items-baseline gap-x-2.5">
+                  <h4 class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
                     <a
                       href={outlet.site}
-                      class="text-[15px] font-medium text-ink underline-offset-2 hover:underline"
+                      class="text-[16px] font-medium text-ink underline-offset-2 hover:underline"
                       rel="noopener"
                     >
                       {outlet.name}
                     </a>
                     <PaywallBadge paywall={outlet.paywall} />
                   </h4>
-                  <p class="mt-1 text-[14px] leading-relaxed text-muted">
+                  <p class="mt-1 text-[16px] leading-relaxed text-muted">
                     {outlet.leaningNote}
                   </p>
                   <details class="group mt-1.5">
@@ -189,7 +195,7 @@ const description =
                       <ul class="flex flex-col gap-3">
                         {outlet.leaningSources.map((source) => (
                           <li>
-                            <p class="text-[13px] leading-relaxed">
+                            <p class="text-[16px] leading-relaxed">
                               <a
                                 href={source.url}
                                 class="font-medium text-ink underline-offset-2 hover:underline"
@@ -202,13 +208,13 @@ const description =
                                 {source.date ? `, ${source.date}` : ''}
                               </span>
                             </p>
-                            <p class="mt-0.5 text-[13px] leading-relaxed text-muted">
+                            <p class="mt-0.5 text-[16px] leading-relaxed text-muted">
                               {source.takeaway}
                             </p>
                           </li>
                         ))}
                       </ul>
-                      <p class="text-[13px] leading-relaxed text-muted">
+                      <p class="text-[16px] leading-relaxed text-muted">
                         Audience :{' '}
                         <a
                           href={outlet.readership.url}

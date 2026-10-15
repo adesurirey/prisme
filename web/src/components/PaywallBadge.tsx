@@ -35,5 +35,9 @@ export default function PaywallBadge({
       </span>
     );
   }
-  return <span className="text-[13px] text-muted">{label}</span>;
+  return (
+    <span className="rounded border border-line px-1.5 py-0.5 text-[11px] leading-none text-muted">
+      {label}
+    </span>
+  );
 }
