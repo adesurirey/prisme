@@ -25,14 +25,14 @@ const perGroup = (group: CoverageGroup) =>
   outlets.filter((o) => coverageGroup(o.leaning) === group).length;
 ---
 
-<Base title="Prisme">
+<Base title="Prisme — revue de presse">
   <section class="pt-10 pb-10">
     <h1 class="text-[24px] font-semibold tracking-[-0.02em]">
       L'actualité, décomposée
     </h1>
-    <!-- One clean row at every width: tight on mobile (where "médias"
-         is dropped — the dot + count read as a tally), roomier inline
-         legend from sm up. -->
+    {/* One clean row at every width: tight on mobile (where "médias" is
+        dropped — the dot + count read as a tally), roomier inline legend
+        from sm up. */}
     <div class="mt-4 flex items-center gap-4 sm:gap-x-5">
       {
         // The legend speaks in Coverage groups — the same three camps the

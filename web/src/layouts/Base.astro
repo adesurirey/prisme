@@ -40,31 +40,30 @@ const {
     {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcfcfc" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e0e10" />
-    <!-- PWA (issue #64): installable site — manifest, iOS home-screen icon
+    {/* PWA (issue #64): installable site — manifest, iOS home-screen icon
          and standalone display. The PNG icons are generated from the mark's
-         single source by web/scripts/generate-icons.ts. -->
+         single source by web/scripts/generate-icons.ts. */}
     <link rel="manifest" href={withBase('/manifest.webmanifest')} />
     <link rel="apple-touch-icon" href={withBase('/icons/apple-touch-icon.png')} />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Prisme" />
-    <!-- Favicon: the Prisme mark (the upright P), one explicit version per
+    {/* Favicon: the Prisme mark (the upright P), one explicit version per
          theme (--ink tokens), from its single source. The media attribute
          makes the browser pick — and live-swap — the right one, instead of
-         relying on @media inside the SVG. -->
+         relying on @media inside the SVG. */}
     <link rel="icon" media="(prefers-color-scheme: light)" href={PRISME_MARK_LIGHT} />
     <link rel="icon" media="(prefers-color-scheme: dark)" href={PRISME_MARK_DARK} />
-    <title>{title === 'Prisme' ? title : `${title} · Prisme`}</title>
-    <!-- Reading toggle (issue #89): restore the persisted mode before first
+    <title>{title}</title>
+    {/* Reading toggle (issue #89): restore the persisted mode before first
          paint so a stored Exposition never flashes Couverture widths.
-         Absent or unreadable = Couverture (the default, no attribute). -->
+         Absent or unreadable = Couverture (the default, no attribute). */}
     <script is:inline>
       try {
         if (localStorage.getItem('prisme:mode') === 'exposure')
           document.documentElement.dataset.mode = 'exposure';
       } catch {}
     </script>
-    <!-- GoatCounter analytics: async, cookie-free, no personal data. -->
     <script is:inline data-goatcounter="https://prisme.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </head>
   <body class="min-h-screen bg-canvas font-sans text-ink antialiased">
@@ -73,10 +72,10 @@ const {
         <a href={withBase('/')} class="flex items-start" aria-label="Prisme — accueil">
           <Fragment set:html={prismeWordmark} />
         </a>
-        <!-- Reading toggle (issue #89, ADR-0016): Couverture (default) or
+        {/* Reading toggle (issue #89, ADR-0016): Couverture (default) or
              Exposition for every coverage bar on the site, at once. Radio
              semantics with arrow-key navigation (roving tabindex); the live
-             region announces the switch. Styling follows aria-checked. -->
+             region announces the switch. Styling follows aria-checked. */}
         <div class="relative ml-auto shrink-0">
           <div
             class="mode-toggle"
@@ -100,10 +99,10 @@ const {
             >Exposition</button>
           </div>
           <p class="sr-only" role="status" data-mode-live></p>
-          <!-- Whisper (discoverability): the first four switches show a
+          {/* Whisper (discoverability): the first four switches show a
                fading caption saying what the destination reading does
                (mode-toggle.ts counts them in localStorage); aria-hidden
-               because the live region already announces the same text. -->
+               because the live region already announces the same text. */}
           <p class="mode-whisper" data-mode-whisper aria-hidden="true"></p>
         </div>
       </div>
@@ -125,8 +124,8 @@ const {
       </div>
     </footer>
   </body>
-  <!-- Pull-to-refresh (issue #66): uniform on every page, including frozen
-       Story pages. Astro bundles this module script; it installs itself. -->
+  {/* Pull-to-refresh (issue #66): uniform on every page, including frozen
+       Story pages. */}
   <script>
     import { installPullToRefresh } from '../pull-to-refresh';
 
@@ -137,9 +136,8 @@ const {
       install();
     }
   </script>
-  <!-- Reading toggle (issue #89, ADR-0016): the logic lives in
-       web/src/mode-toggle.ts (unit-tested); Astro bundles this module
-       script. The pre-paint restore stays is:inline in the head above. -->
+  {/* Reading toggle (issue #89, ADR-0016): the pre-paint restore stays
+       is:inline in the head above. */}
   <script>
     import { installModeToggle } from '../mode-toggle';
 
