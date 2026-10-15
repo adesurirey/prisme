@@ -65,30 +65,6 @@ describe('formatStoryDate', () => {
     );
   });
 
-  it('never invents a clock time for an Undated Article (ADR-0007)', () => {
-    vi.useFakeTimers();
-    vi.setSystemTime(new Date('2026-10-07T12:00:00Z')); // 14:00 in Paris
-    // publishedAt is the end of the Publication day, not a real clock time.
-    expect(
-      formatStoryDate({
-        publishedAt: '2026-10-07T21:59:00Z',
-        dayPrecision: true,
-      }),
-    ).toBe("aujourd'hui");
-    expect(
-      formatStoryDate({
-        publishedAt: '2026-10-06T21:59:00Z',
-        dayPrecision: true,
-      }),
-    ).toBe('hier');
-    expect(
-      formatStoryDate({
-        publishedAt: '2026-10-01T21:59:00Z',
-        dayPrecision: true,
-      }),
-    ).toBe('1 oct.');
-  });
-
   it('tolerates an unparseable date by showing nothing', () => {
     expect(formatStoryDate({ publishedAt: 'not a date' })).toBe('');
   });

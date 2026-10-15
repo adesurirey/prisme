@@ -88,8 +88,8 @@ describe('collect — Undated Articles (ADR-0007)', () => {
     );
 
     expect(articles).toHaveLength(2);
-    expect(articles[0].publishedAt).toBe('2026-10-06T22:00:00.000Z');
-    expect(articles[0].dayPrecision).toBe(true);
+    expect(articles[0].publishedAt).toBe('2026-10-07T14:00:00.000Z');
+    expect(articles[0].datedAtCollection).toBe(true);
   });
 
   it('caps the latest feed at the 20 most recent items, in feed order for undated feeds', async () => {
@@ -142,7 +142,7 @@ describe('collect — Undated Articles (ADR-0007)', () => {
 
     expect(articles).toHaveLength(1);
     expect(articles[0].publishedAt).toBe('2026-10-07T14:00:00.000Z');
-    expect(articles[0].dayPrecision).toBe(true);
+    expect(articles[0].datedAtCollection).toBe(true);
   });
 
   it('drops undated items when the feed is stale, and logs a failure', async () => {

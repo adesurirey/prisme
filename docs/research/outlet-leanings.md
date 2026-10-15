@@ -527,9 +527,10 @@ LeParisien.fr : 12e rang des sites, 61,9 M de visites (août 2026).
 
 **Flux vérifiés (2026-10-10).** `latest` <https://feeds.leparisien.fr/leparisien/rss> —
 200, 100 articles, **aucune date ni image** (titre et lien uniquement), temps couvert :
-non mesurable. Les articles sont datés par le collecteur depuis le slug de leur URL
-(JJ-MM-AAAA, ~96 % des items ; datés à la collecte pour le reste — ADR-0007, issue #12) :
-ils entrent dans la fenêtre des 24 h sans heure affichée. Ils restent sans image ni
+non mesurable. Les articles sont datés par le collecteur à l'instant de collecte, le jour
+de leur slug d'URL (JJ-MM-AAAA, ~96 % des items) servant seulement de garde-fou
+de fraîcheur — ADR-0007, issue #12) : ils entrent dans la fenêtre des 24 h et leur
+date s'affiche telle que reçue. Ils restent sans image ni
 chapô : pas de photo quand Le Parisien est seul sur un sujet, classification sur le titre
 seul. L'ancien flux « en-continu » répond 200 avec 0 article, et « rss/une » sert des
 archives de 2019 (vérifié le 2026-10-10).
@@ -1039,8 +1040,9 @@ issue #11.)
 ## Limites connues
 
 1. **Le Parisien n'a pas de dates dans ses flux** (titre et lien uniquement) : ses
-   articles sont datés depuis le slug de leur URL, à la journée près — sans heure affichée
-   — et restent sans image ni chapô (ADR-0007 ; traité côté pipeline, issue #12).
+   articles sont horodatés à l'instant de collecte, le jour de leur slug d'URL servant
+   de garde-fou de fraîcheur, et restent sans image ni chapô (ADR-0007 ; traité côté
+   pipeline, issue #12).
 2. **FrIdéo ne couvre ni Europe 1 ni Courrier international** ; leur placement repose sur
    d'autres sources, explicitées dans leurs dossiers.
 3. **La bande suit la mesure, pas la preuve** : quand l'intervalle de confiance contient

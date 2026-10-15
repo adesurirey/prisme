@@ -1037,7 +1037,7 @@ export const outlets: OutletConfig[] = [
         items: 100,
         covers: '',
         images: 'none',
-        note: "Flux minimal : titre et lien uniquement, aucune image. Date de publication lue depuis le slug de l'URL (JJ-MM-AAAA, ~96 % des items ; ADR-0007) ; les rares items sans date dans l'URL sont datés à la collecte tant que le flux est à jour. Sans image ni chapô : couverture sans photo, classification sur le titre seul. L'ancien flux « en-continu » répond 200 avec 0 article, et « rss/une » sert des archives de 2019.",
+        note: "Flux minimal : titre et lien uniquement, aucune image. Les items sans date sont horodatés à l'instant de collecte (ADR-0007), le jour du slug de l'URL (JJ-MM-AAAA, ~96 % des items) servant de garde-fou de fraîcheur. Sans image ni chapô : couverture sans photo, classification sur le titre seul. L'ancien flux « en-continu » répond 200 avec 0 article, et « rss/une » sert des archives de 2019.",
       },
     ],
     tdm: {

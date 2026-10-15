@@ -1,5 +1,7 @@
 import { XMLParser } from 'fast-xml-parser';
 
+import { LIVE_WINDOW_MS } from './liveness.ts';
+
 /**
  * One item as parsed from a feed. Carries the teaser (feed description) in
  * memory only — it must never reach a serialized type (ADR-0003).
@@ -12,10 +14,11 @@ export interface ParsedItem {
   teaser: string;
   imageUrl?: string;
   /**
-   * True for an Undated Article (ADR-0007): publishedAt is the start of its
-   * Publication day (read from the URL), not an exact feed timestamp.
+   * True for an Undated Article (ADR-0007): the feed carries no clock
+   * time, so publishedAt is the collection instant. Provenance marker
+   * only; the UI shows the date as received.
    */
-  dayPrecision?: true;
+  datedAtCollection?: true;
 }
 
 export interface ParsedFeed {
@@ -30,17 +33,25 @@ const parser = new XMLParser({
   cdataPropName: '__cdata',
 });
 
-export function parseFeed(xml: string): ParsedFeed {
+export function parseFeed(xml: string, now: Date = new Date()): ParsedFeed {
   const doc = parser.parse(xml);
   const channel = doc.rss?.channel;
   if (channel?.item)
     return {
-      items: toArray(channel.item).map(parseRssItem),
+      items: toArray(channel.item)
+        .map((item: any) => parseRssItem(item, now))
+        .filter((item: ParsedItem | undefined): item is ParsedItem =>
+          Boolean(item),
+        ),
       updatedAt: channelDate(channel.lastBuildDate ?? channel.pubDate),
     };
   if (doc.feed?.entry)
     return {
-      items: toArray(doc.feed.entry).map(parseAtomEntry),
+      items: toArray(doc.feed.entry)
+        .map((entry: any) => parseAtomEntry(entry, now))
+        .filter((item: ParsedItem | undefined): item is ParsedItem =>
+          Boolean(item),
+        ),
       updatedAt: channelDate(doc.feed.updated),
     };
   return { items: [], updatedAt: '' };
@@ -50,33 +61,39 @@ function channelDate(value: unknown): string {
   return isoDate(value);
 }
 
-function parseAtomEntry(entry: any): ParsedItem {
+function parseAtomEntry(entry: any, now: Date): ParsedItem | undefined {
   const links = entry.link ? toArray(entry.link) : [];
   const alternate = links.find((l) => l.rel !== 'self' && l.href) ?? links[0];
-  return withPublicationDay({
-    headline: stripEmojis(decodeEntities(text(entry.title))),
-    url: decodeEntities(text(alternate?.href)),
-    publishedAt: entry.published
-      ? new Date(entry.published).toISOString()
-      : entry.updated
-        ? new Date(entry.updated).toISOString()
-        : '',
-    teaser: decodeEntities(text(entry.summary) || text(entry.content)),
-  });
+  return withPublicationDay(
+    {
+      headline: stripEmojis(decodeEntities(text(entry.title))),
+      url: decodeEntities(text(alternate?.href)),
+      publishedAt: entry.published
+        ? new Date(entry.published).toISOString()
+        : entry.updated
+          ? new Date(entry.updated).toISOString()
+          : '',
+      teaser: decodeEntities(text(entry.summary) || text(entry.content)),
+    },
+    now,
+  );
 }
 
 /** The `-JJ-MM-AAAA-<id>` tail of an Article URL (Le Parisien convention). */
 const SLUG_DATE = /-(\d{2})-(\d{2})-(\d{4})-[^/]*$/;
 
 /**
- * An Undated Article (ADR-0007): the feed gives no time, the URL gives the
- * Publication day. Date it to the start of that Paris day — the URL gives
- * the day with certainty, and the earliest instant of that day is the only
- * invented time that is never in the future at collection time (an
- * end-of-day stamp could be) — and mark it day-precision so the UI never
- * shows the invented hour.
+ * An Undated Article (ADR-0007): the feed gives no time. The URL's
+ * Publication day (Le Parisien convention) serves only as a freshness
+ * guard — the Article is stamped with the exact collection instant, never
+ * an invented clock time, and marked so the arbitrariness stays recorded.
+ * An Article whose URL day is older than the live window is dropped: the
+ * collection stamp must not resurrect archive headlines as fresh.
  */
-function withPublicationDay(item: ParsedItem): ParsedItem {
+function withPublicationDay(
+  item: ParsedItem,
+  now: Date,
+): ParsedItem | undefined {
   if (item.publishedAt !== '') return item;
   const match = SLUG_DATE.exec(item.url);
   if (!match) return item;
@@ -84,10 +101,15 @@ function withPublicationDay(item: ParsedItem): ParsedItem {
   const month = Number(match[2]);
   const year = Number(match[3]);
   if (month < 1 || month > 12 || day > daysInMonth(year, month)) return item;
+  if (
+    Date.parse(startOfParisDay(year, month, day)) <
+    now.getTime() - LIVE_WINDOW_MS
+  )
+    return undefined;
   return {
     ...item,
-    publishedAt: startOfParisDay(year, month, day),
-    dayPrecision: true,
+    publishedAt: now.toISOString(),
+    datedAtCollection: true,
   };
 }
 
@@ -152,14 +174,17 @@ function decodeEntities(value: string): string {
   );
 }
 
-function parseRssItem(item: any): ParsedItem {
-  return withPublicationDay({
-    headline: stripEmojis(decodeEntities(text(item.title))),
-    url: decodeEntities(text(item.link)),
-    publishedAt: isoDate(item.pubDate),
-    teaser: decodeEntities(text(item.description)),
-    imageUrl: rssImageUrl(item),
-  });
+function parseRssItem(item: any, now: Date): ParsedItem | undefined {
+  return withPublicationDay(
+    {
+      headline: stripEmojis(decodeEntities(text(item.title))),
+      url: decodeEntities(text(item.link)),
+      publishedAt: isoDate(item.pubDate),
+      teaser: decodeEntities(text(item.description)),
+      imageUrl: rssImageUrl(item),
+    },
+    now,
+  );
 }
 
 /**

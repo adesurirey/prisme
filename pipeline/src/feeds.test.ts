@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { parseFeed } from './feeds.ts';
 
+// Fixed collection instant for the Undated-Article tests: 14:00 UTC on
+// 7 October 2026 (16:00 in Paris).
+const NOW = new Date('2026-10-07T14:00:00Z');
+const stamp = NOW.toISOString();
+
 describe('parseFeed', () => {
   it('parses an RSS item into headline, url, date and teaser', () => {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -94,7 +99,6 @@ describe('parseFeed', () => {
     const { items } = parseFeed(xml);
 
     expect(items[0].publishedAt).toBe('');
-    expect(items[0].dayPrecision).toBeUndefined();
   });
 
   it('falls back to atom content when there is no summary', () => {
@@ -194,18 +198,18 @@ describe('parseFeed', () => {
   });
 });
 
-describe('parseFeed — Undated Articles (ADR-0007)', () => {
-  it('dates an undated item to the start of its Publication day, read from the URL (summer, +02:00)', () => {
+describe('parseFeed — Undated Articles (ADR-0007, collection-time stamping)', () => {
+  it('stamps an undated item with the collection instant, its URL day being fresh (summer, +02:00)', () => {
     const xml = `<?xml version="1.0"?>
       <rss version="2.0"><channel>
         <item><title>Le Parisien</title><link>https://www.leparisien.fr/international/les-inepties-de-la-france-07-10-2026-NBXYDQGVGJACZD47XKSIMXKNGM.php</link></item>
       </channel></rss>`;
 
-    const { items } = parseFeed(xml);
+    const { items } = parseFeed(xml, NOW);
 
-    // 7 October 2026, 00:00:00 Paris (UTC+2) = 6 October 22:00 UTC.
-    expect(items[0].publishedAt).toBe('2026-10-06T22:00:00.000Z');
-    expect(items[0].dayPrecision).toBe(true);
+    // The exact collection instant, never an invented clock time.
+    expect(items[0].publishedAt).toBe(stamp);
+    expect(items[0].datedAtCollection).toBe(true);
   });
 
   it('handles the winter offset (+01:00) and the /archives/ slug shape', () => {
@@ -214,11 +218,11 @@ describe('parseFeed — Undated Articles (ADR-0007)', () => {
         <item><title>Archives</title><link>https://www.leparisien.fr/archives/5-decembre-on-vend-25-de-velos-en-plus-28-11-2019-8204574.php</link></item>
       </channel></rss>`;
 
-    const { items } = parseFeed(xml);
+    const { items } = parseFeed(xml, NOW);
 
-    // 28 November 2019, 00:00:00 Paris (UTC+1) = 27 November 23:00 UTC.
-    expect(items[0].publishedAt).toBe('2019-11-27T23:00:00.000Z');
-    expect(items[0].dayPrecision).toBe(true);
+    // The URL day (28-11-2019) is older than the live window: the
+    // collection stamp must not resurrect archive headlines as fresh.
+    expect(items).toHaveLength(0);
   });
 
   it('dates an undated Atom entry from its URL too', () => {
@@ -226,14 +230,14 @@ describe('parseFeed — Undated Articles (ADR-0007)', () => {
       <feed xmlns="http://www.w3.org/2005/Atom">
         <entry>
           <title>Titre</title>
-          <link href="https://www.leparisien.fr/sports/une-histoire-03-10-2026-ABC123.php"/>
+          <link href="https://www.leparisien.fr/sports/une-histoire-07-10-2026-ABC123.php"/>
         </entry>
       </feed>`;
 
-    const { items } = parseFeed(xml);
+    const { items } = parseFeed(xml, NOW);
 
-    expect(items[0].publishedAt).toBe('2026-10-02T22:00:00.000Z');
-    expect(items[0].dayPrecision).toBe(true);
+    expect(items[0].publishedAt).toBe(stamp);
+    expect(items[0].datedAtCollection).toBe(true);
   });
 
   it('keeps the feed date as exact time when both a date and a dated URL exist', () => {
@@ -246,10 +250,10 @@ describe('parseFeed — Undated Articles (ADR-0007)', () => {
         </item>
       </channel></rss>`;
 
-    const { items } = parseFeed(xml);
+    const { items } = parseFeed(xml, NOW);
 
     expect(items[0].publishedAt).toBe('2026-10-07T06:30:00.000Z');
-    expect(items[0].dayPrecision).toBeUndefined();
+    expect(items[0].datedAtCollection).toBeUndefined();
   });
 
   it('ignores date-like URL segments that are not a DD-MM-YYYY publication day', () => {
@@ -262,7 +266,7 @@ describe('parseFeed — Undated Articles (ADR-0007)', () => {
     const { items } = parseFeed(xml);
 
     expect(items[0].publishedAt).toBe('');
-    expect(items[0].dayPrecision).toBeUndefined();
+    expect(items[0].datedAtCollection).toBeUndefined();
     expect(items[1].publishedAt).toBe('');
   });
 
@@ -275,6 +279,6 @@ describe('parseFeed — Undated Articles (ADR-0007)', () => {
     const { items } = parseFeed(xml);
 
     expect(items[0].publishedAt).toBe('');
-    expect(items[0].dayPrecision).toBeUndefined();
+    expect(items[0].datedAtCollection).toBeUndefined();
   });
 });

@@ -37,11 +37,11 @@ The cheap language model Prisme uses to assign each Article its Kind and Section
 _Avoid_: Classifier, judge, AI (alone)
 
 **Undated Article**:
-An Article whose Outlet's feed carries no publication time. Prisme dates it to the end of its Publication day — read from the Article's own web address — or, when even the day is unknown, to the moment it collected it; such Articles are shown without a time of day.
+An Article whose Outlet's feed carries no publication time. Prisme stamps it with the exact instant of its collection (ADR-0007) — its URL's Publication day serving only as a freshness guard — and marks it `datedAtCollection`; the UI shows the stamp as received.
 _Avoid_: Dateless, missing date, guess
 
 **Publication day**:
-The day an Article was published, when that is all Prisme knows about when it appeared.
+The day an Article was published, when that is all Prisme knows about when it appeared. In an Undated Article's URL it serves as a freshness guard (ADR-0007), never as a dating source.
 _Avoid_: Timestamp, exact date
 
 **Story**:

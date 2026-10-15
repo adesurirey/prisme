@@ -1,5 +1,5 @@
 /**
- * Publication-day arithmetic for the dated Edition (ADR-0017, ADR-0007):
+ * Publication-day arithmetic for the dated Edition (ADR-0017):
  * a Story belongs to one Europe/Paris day — the day of its founding
  * Article, fixed at creation — and stays open to ingestion until 06:00
  * Europe/Paris the day after. A wall-clock rule, not a scheduled job: no

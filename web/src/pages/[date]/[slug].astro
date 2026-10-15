@@ -56,9 +56,7 @@ const mediaCount = reportingOutletIds(story.articles).size;
 // ("le 11 oct. 2026 à …"). Date and clock joined by "à" (French convention),
 // narrow no-break spaces around "h" — same pattern as index.astro. Paris days
 // are compared by their formatted date so the build host's timezone never
-// leaks in. An Undated Article (ADR-0007) carries only its Publication day —
-// shown without an invented clock time or relative wording. Short month:
-// the header meta line is tight on mobile.
+// leaks in. Short month: the header meta line is tight on mobile.
 const dayKey = (date: Date) =>
   formatParisDate(date, { day: 'numeric', month: 'short', year: 'numeric' });
 const timeOnly = (date: Date) =>
@@ -66,15 +64,11 @@ const timeOnly = (date: Date) =>
     ':',
     '\u202Fh\u202F',
   );
-const undated = story.articles[0]?.dayPrecision;
-const updated = new Date(
-  story.articles[0]?.publishedAt ?? (undated ? NaN : Date.now()),
-);
+const updated = new Date(story.articles[0]?.publishedAt ?? Date.now());
 const day = dayKey(updated);
 const now = new Date();
-const builtAt = undated
-  ? `le ${day}`
-  : day === dayKey(now)
+const builtAt =
+  day === dayKey(now)
     ? `à ${timeOnly(updated)}`
     : day === dayKey(new Date(now.getTime() - 24 * 60 * 60 * 1000))
       ? `hier à ${timeOnly(updated)}`

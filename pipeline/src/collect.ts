@@ -67,6 +67,7 @@ async function collectOutlet(
       outlet.feeds.une,
       fetcher,
       failures,
+      now,
     );
     const dated = dateUndatedItems(
       outlet,
@@ -88,6 +89,7 @@ async function collectOutlet(
       outlet.feeds.latest,
       fetcher,
       failures,
+      now,
     );
     const dated = dateUndatedItems(
       outlet,
@@ -127,9 +129,10 @@ async function fetchAndParse(
   feed: string,
   fetcher: Fetcher,
   failures: CollectedArticles['failures'],
+  now: Date,
 ): Promise<ParsedFeed> {
   try {
-    return parseFeed(await fetcher(feed));
+    return parseFeed(await fetcher(feed), now);
   } catch (reason) {
     const message = reason instanceof Error ? reason.message : String(reason);
     console.warn(`Feed failed: ${outlet.id} ${feed} — ${message}`);
@@ -139,9 +142,10 @@ async function fetchAndParse(
 }
 
 /**
- * Undated Articles the parser could not even day-date (ADR-0007): date them
- * at collection time while the feed itself is fresh; once the feed is stale,
- * that guess would freeze old headlines into the Edition, so drop them.
+ * Undated Articles with no date in their URL either (ADR-0007): stamp them
+ * with the collection instant while the feed itself is fresh; once the feed
+ * is stale, that stamp would freeze old headlines into the Edition, so
+ * drop them.
  */
 function dateUndatedItems(
   outlet: Outlet,
@@ -169,7 +173,7 @@ function dateUndatedItems(
       : {
           ...item,
           publishedAt: now.toISOString(),
-          dayPrecision: true as const,
+          datedAtCollection: true as const,
         },
   );
 }
@@ -187,7 +191,7 @@ function toArticle(
     publishedAt: item.publishedAt,
     imageUrl: item.imageUrl,
     frontPage,
-    ...(item.dayPrecision ? { dayPrecision: true as const } : {}),
+    ...(item.datedAtCollection ? { datedAtCollection: true as const } : {}),
   };
 }
 

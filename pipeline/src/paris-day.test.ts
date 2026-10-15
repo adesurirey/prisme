@@ -12,7 +12,7 @@ describe('parisDayKey', () => {
     expect(parisDayKey('2026-10-06T21:50:00Z')).toBe('2026-10-06');
   });
 
-  it('agrees with ADR-0007 dating: a dayPrecision Article at start of Paris day keeps its day', () => {
+  it('keys an Article dated at the start of its Paris day to that day', () => {
     expect(parisDayKey('2026-10-06T22:00:00Z')).toBe('2026-10-07'); // 00:00 Paris
   });
 });

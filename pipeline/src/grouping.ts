@@ -359,7 +359,7 @@ export async function groupStories(
       .sort(byNewestArticle);
 
   /** The belonging rule (ADR-0017): an Article may only join a Story of its
-   * own Publication day (Europe/Paris, ADR-0007 supplies the day). */
+   * own Publication day (Europe/Paris day of its publishedAt). */
   const canJoin = (article: Article, story: Story): boolean =>
     parisDayKey(article.publishedAt) === story.storyDay;
 

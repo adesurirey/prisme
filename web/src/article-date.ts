@@ -13,9 +13,7 @@
  * today stays a bare clock ("maj. 22:35"), yesterday keeps its marker
  * ("maj. hier à 23:11" — the day boundary is worth naming once the page
  * has been live overnight) and the full date returns for an older Story
- * ("maj. 7 oct., 14:32"). An Undated Article (ADR-0007) — whose
- * publishedAt is the end of its Publication day — yields the day alone,
- * never an invented clock time: "aujourd'hui", "hier", "7 oct.".
+ * ("maj. 7 oct., 14:32").
  */
 const clock = new Intl.DateTimeFormat('fr-FR', {
   hour: '2-digit',
@@ -36,20 +34,11 @@ export function formatArticleDate(publishedAt: string): string {
   return `${day.format(date)}, ${clock.format(date)}`;
 }
 
-/** The Story date shown on an index card: the newest Article's date, day
- * alone when that Article is Undated (ADR-0007). */
-export function formatStoryDate(article: {
-  publishedAt: string;
-  dayPrecision?: true;
-}): string {
+/** The Story date shown on an index card: the newest Article's date. */
+
+export function formatStoryDate(article: { publishedAt: string }): string {
   const { date, today, yesterday } = parse(article.publishedAt);
   if (!date) return '';
-  if (article.dayPrecision === true) {
-    // Undated Article (ADR-0007): the day alone, never a clock time.
-    if (today) return "aujourd'hui";
-    if (yesterday) return 'hier';
-    return day.format(date);
-  }
   if (today) return clock.format(date);
   if (yesterday) return `hier à ${clock.format(date)}`;
   return `${day.format(date)}, ${clock.format(date)}`;
