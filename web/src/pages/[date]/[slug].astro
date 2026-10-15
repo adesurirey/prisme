@@ -140,7 +140,13 @@ const description =
         // touch, plus a visually-hidden figcaption so the attribution
         // stays in the DOM (screen readers, view-source) regardless of
         // interaction.
-        <figure class="relative mt-6 overflow-hidden rounded-xl">
+        // Full-bleed at every width, like the Edition's hero card: the
+        // image band overhangs the container by 20px on each side
+        // (-mx-5), and the inner px-5 brings the title back level with
+        // the content below — same alignment trick, one proportion.
+        // The radius returns from sm up, where the canvas shows on the
+        // sides again.
+        <figure class="relative -mx-5 mt-6 overflow-hidden sm:rounded-xl">
           <div class="absolute inset-0">
             <StoryImage
               article={image}

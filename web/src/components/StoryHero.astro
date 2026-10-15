@@ -1,0 +1,150 @@
+---
+/**
+ * Hero variant of the Story card (Story page header style, [slug].astro)
+ * used for the Edition's first Story on the index: the image as the
+ * backdrop of the whole card, Section, title — and the Coverage bar at
+ * full card width, each segment carrying its own legend
+ * (« Gauche 42 % »), the same element and readings (Couverture default,
+ * Exposition via <html data-mode>) as CoverageMeta's compact bar
+ * (issue #89, ADR-0016). Whole card is one link to the Story page.
+ */
+import type { CoverageGroup, Outlet, Story } from '@prisme/domain';
+import {
+  coverageCounts,
+  coverageOrder,
+  exposureShares,
+  LEANING_LABELS,
+  pickStoryImage,
+  reportingOutletIds,
+  SECTION_LABELS,
+} from '@prisme/domain';
+import { withBase } from '../data';
+import { formatParisDate } from '../paris-date';
+import { storyUrl } from '../story-url';
+import StoryImage from './StoryImage';
+
+interface Props {
+  story: Story;
+  outlets: Outlet[];
+}
+const { story, outlets } = Astro.props;
+const byId = new Map(outlets.map((o) => [o.id, o]));
+const counts = coverageCounts(story.articles, byId);
+const shares = exposureShares(story.articles, byId);
+const reporting = reportingOutletIds(story.articles).size;
+const image = pickStoryImage(story, byId);
+const imageOutlet = image && byId.get(image.outletId);
+
+const total = coverageOrder.reduce((sum, l) => sum + counts[l], 0);
+const covered = total > 0;
+const covRate = (l: CoverageGroup) =>
+  covered ? Math.round((counts[l] / total) * 100) : 0;
+const expRate = (l: CoverageGroup) => Math.round(shares[l] * 100);
+
+// Per-segment legend strings, built up front ("Gauche\u202F42\u202F%"):
+// one text node per label, no JSX whitespace-collapse games. One string
+// per reading — Couverture (default) and Exposition — so the mode-text
+// swap shows the right one, exactly like CoverageMeta.
+const covLegend = (l: CoverageGroup) =>
+  `${LEANING_LABELS[l]}\u00A0${covRate(l)}\u202F%`;
+const expLegend = (l: CoverageGroup) =>
+  `${LEANING_LABELS[l]}\u00A0${expRate(l)}\u202F%`;
+
+// "Mis à jour …" — the Story's newest Article (articles[0], the same one
+// the Story page reads), but as a single compact stamp (no "Publié" half):
+// the day marker is always spelled out — "Mis à jour aujourd'hui à 18h45",
+// "Mis à jour hier à …", "Mis à jour le 11 oct. 2026 à …" — the capital M
+// naming it where the Story page's sentence carries both halves.
+const dayKey = (date: Date) =>
+  formatParisDate(date, { day: 'numeric', month: 'short', year: 'numeric' });
+const timeOnly = (date: Date) =>
+  formatParisDate(date, { hour: '2-digit', minute: '2-digit' }).replace(
+    ':',
+    'h',
+  );
+const updated = new Date(story.articles[0]?.publishedAt ?? Date.now());
+const now = new Date();
+const k = dayKey(updated);
+const updatedLine =
+  k === dayKey(now)
+    ? `Mis à jour aujourd’hui à ${timeOnly(updated)}`
+    : k === dayKey(new Date(now.getTime() - 24 * 60 * 60 * 1000))
+      ? `Mis à jour hier à ${timeOnly(updated)}`
+      : `Mis à jour le ${k} à ${timeOnly(updated)}`;
+
+const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} sur ${outlets.length} — ${coverageOrder
+  .map((l) => `${counts[l]} ${LEANING_LABELS[l].toLowerCase()}`)
+  .join(' | ')}`;
+---
+
+{
+  image && imageOutlet ? (
+    <article class="-mx-5" data-story-id={story.id} data-coverage={reporting}>
+      <a href={withBase(storyUrl(story))} class="group/card block sm:rounded-xl">
+        <figure class="relative overflow-hidden sm:rounded-xl">
+          <div class="absolute inset-0">
+            <StoryImage
+              article={image}
+              outlet={imageOutlet}
+              className="h-full w-full"
+              sizes="(max-width: 896px) 100vw, 896px"
+              eager
+            />
+            <div
+              aria-hidden="true"
+              class="absolute inset-0 bg-gradient-to-b from-canvas/20 via-canvas/75 to-canvas"
+            />
+          </div>
+          {/* Same image band as the Story page hero ([slug].astro): fixed
+              heights, one shared proportion. */}
+          <div class="relative px-5 pt-36 pb-5 sm:pt-[240px] sm:pb-6">
+            {story.section && (
+              <p class="mb-2 text-[11px] uppercase tracking-[0.08em] text-muted sm:text-[13px]">
+                {SECTION_LABELS[story.section]}
+              </p>
+            )}
+            <h2 class="text-[24px] font-bold leading-tight tracking-[-0.02em] text-ink group-hover/card:underline sm:text-[36px] sm:leading-snug">
+              {story.title}
+            </h2>
+            {/* Full-width Coverage bar, every segment its own legend. Same
+                two readings as CoverageMeta (--cov / --exp on <html
+                data-mode>); the per-reading labels ride the same
+                mode-text swap. Overflow-hidden clips the label on very
+                small segments — the color still speaks. */}
+            {covered && (
+              <span
+                role="img"
+                aria-label={ariaLabel}
+                class="coverage-bar mt-4 flex h-6 w-full gap-px overflow-hidden rounded-full bg-line"
+              >
+                {coverageOrder.map((l) =>
+                  counts[l] > 0 ? (
+                    <span
+                      data-group={l}
+                      data-exposure={shares[l]}
+                      class="coverage-seg flex min-w-0 items-center justify-center overflow-hidden"
+                      style={`--cov: ${counts[l]}; --exp: ${shares[l]}; flex-basis: 0; background: var(--${l}); color: var(--on-leaning);`}
+                    >
+                      <span class="mode-text-cov whitespace-nowrap px-3 text-[12px] font-semibold sm:text-[13px]">
+                        {covLegend(l)}
+                      </span>
+                      <span class="mode-text-exp whitespace-nowrap px-3 text-[12px] font-semibold sm:text-[13px]">
+                        {expLegend(l)}
+                      </span>
+                    </span>
+                  ) : null,
+                )}
+              </span>
+            )}
+            <p class="mt-3.5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-muted">
+              <span>
+                Couvert par {reporting} média{reporting > 1 ? 's' : ''}
+              </span>
+              <span class="text-faint">{updatedLine}</span>
+            </p>
+          </div>
+        </figure>
+      </a>
+    </article>
+  ) : null
+}
