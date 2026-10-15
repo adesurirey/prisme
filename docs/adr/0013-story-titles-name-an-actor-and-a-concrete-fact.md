@@ -29,6 +29,21 @@ The fix is in the grouping prompt (`pipeline/src/gemini.ts`):
   in `pipeline/src/grouping.ts` matches new-Story seeds against
   `tokens(story.title)`, so a title that drops entity tokens weakens the
   duplicate-detection candidate selection.
+- **Amendment — qualification fidelity is symmetric** (after the
+  `attentat`-escalation fix produced the opposite drift): the title's event
+  qualification must come from the group's headlines in *both* directions.
+  No word of qualification that no source headline uses (the original rule,
+  against escalation), and no weakening of a qualification the sources
+  share — « frappes meurtrières sur un aéroport » must not become
+  « des frappes sur un aéroport ». The first fix was one-sided: it capped
+  the title above the sources but said nothing about staying below them,
+  and the model read the permission as an invitation to hedge, stripping
+  the shared facts (figures, casualties, place precision) the headlines
+  did establish. Structure still must not be copied from outlets — but
+  factual vocabulary (names, places, figures, consequences) must come
+  from the group's headlines, and what several headlines affirm must
+  appear in the title when length allows. A neutral title is not a vague
+  title.
 
 ## Consequences
 
@@ -43,3 +58,7 @@ The fix is in the grouping prompt (`pipeline/src/gemini.ts`):
 - The rules are prompt-only: there is no style linter in CI yet. A
   regression is visible in `data:` commits, not caught by tests. Adding a
   title sample to the grouping benchmark is the follow-up if drift appears.
+  Drift has now appeared in both directions (nominal escalation to
+  « attentat », then post-fix dilution); if it recurs after the symmetric
+  rule, the benchmark title sample is the next step, before any separate
+  title pass.

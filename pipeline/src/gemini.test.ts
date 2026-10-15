@@ -36,6 +36,24 @@ describe('groupingPrompt (ADR-0018)', () => {
       'des faits distincts (volet judiciaire, volet politique, journée à venir) donnent des stories distinctes',
     );
   });
+
+  it('pins symmetric qualification fidelity in the title rule (ADR-0013)', () => {
+    const prompt = groupingPrompt({ stories: [], articles: [] });
+    // No escalation: a qualification no source uses must be forbidden.
+    expect(prompt).toContain(
+      "n'utilise aucun mot de qualification qu'aucun titre source n'emploie",
+    );
+    expect(prompt).toContain("n'écris pas « attentat »");
+    // No dilution either: shared qualification must survive.
+    expect(prompt).toContain(
+      "n'affaiblis pas la qualification que les sources partagent",
+    );
+    // Facts come from the group's headlines; structure must not.
+    expect(prompt).toContain(
+      'ce que plusieurs titres affirment doit apparaître dans le titre',
+    );
+    expect(prompt).toContain("Un titre neutre n'est pas un titre vague");
+  });
 });
 
 describe('parseGroupingResponse', () => {
