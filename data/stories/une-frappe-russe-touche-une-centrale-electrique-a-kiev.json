@@ -6,12 +6,34 @@
   "storyDay": "2026-10-14",
   "articles": [
     {
+      "id": "cdb2029333cb",
+      "outletId": "mediapart",
+      "headline": "Après l’accord Trump-Poutine sur le gazole, l’Ukraine tente de ravaler sa colère",
+      "url": "https://www.mediapart.fr/journal/international/141026/apres-l-accord-trump-poutine-sur-le-gazole-l-ukraine-tente-de-ravaler-sa-colere",
+      "publishedAt": "2026-10-14T17:22:22.000Z",
+      "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/10/14/261014-img-apres-l-accord-trump-poutine-sur-le-gazole-l-ukraine-tente-de-ravaler-sa-colere.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "4d2c9738abb9",
       "outletId": "bfmtv",
       "headline": "Guerre en Ukraine: une frappe de drone russe fait six morts à Loutsk",
       "url": "https://www.bfmtv.com/international/europe/ukraine/guerre-en-ukraine-une-frappe-de-drone-russe-fait-six-morts-a-loutsk_AD-202610140719.html",
       "publishedAt": "2026-10-14T16:39:20.000Z",
       "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/M5yx-aU_HG2erzrPHz0-FrvoyPg=/0x106:2048x1258/800x0/images/Ukraine-Kiev-frappe-Russie-russe-2350530.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "7257b67fd6aa",
+      "outletId": "humanite",
+      "headline": "Au lendemain des menaces de Donald Trump de suspendre le partage de renseignements, l’Ukraine touchée par des frappes russes sans alerte préalable",
+      "url": "https://www.humanite.fr/monde/donald-trump/au-lendemain-des-menaces-de-donald-trump-de-suspendre-le-partage-de-renseignements-lukraine-touchee-par-des-frappes-russes-sans-alerte-prealable",
+      "publishedAt": "2026-10-14T15:20:46.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/P16-Ukraine-No-renseign.jpg?w=1200",
       "frontPage": false,
       "kind": "news",
       "section": "world"
@@ -302,16 +324,12 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Plusieurs régions ukrainiennes, en particulier la capitale, ont subi des tirs de missiles russes visant le secteur énergétique.",
-      "Le maire de Kiev a qualifié l'offensive de massive, menée par des vecteurs balistiques et provoquant d'importantes coupures de courant.",
-      "L'attaque nocturne a fait six morts et met en cause des dysfonctionnements liés aux satellites Starlink.",
-      "Les récentes promesses de Donald Trump concernant un cessez-le-feu énergétique sont contredites par ces nouveaux bombardements.",
-      "Le président ukrainien a publiquement dénoncé une démonstration de mépris de la part de Moscou envers les États-Unis."
+      "Malgré les demandes américaines d'un cessez-le-feu énergétique et la colère ukrainienne face aux accords en coulisses, Moscou a ciblé trois centrales à Kiev.",
+      "Le pouvoir ukrainien tente de ménager son alliance avec Washington tout en subissant de plein fouet la poursuite des bombardements sur ses infrastructures."
     ],
     "centre": [
-      "Des frappes de missiles et de drones russes ont touché plusieurs régions, notamment Loutsk et Kiev, faisant au total une dizaine de morts et des milliers de foyers sans électricité.",
-      "Ces opérations militaires surviennent en dépit des déclarations de Donald Trump sur la protection des réseaux énergétiques, tandis que des rumeurs font état de pressions de Washington concernant les frappes ukrainiennes sur le pétrole russe.",
-      "Le chef de l'État ukrainien a déploré un piétinement des efforts diplomatiques américains tout en reprochant au maire de Kiev des défaillances dans la préparation face aux bombardements."
+      "Une frappe de drone russe menée à Loutsk a causé la mort de six personnes, illustrant la violence continue des attaques à travers le pays.",
+      "Le drame s'inscrit dans une série d'offensives ciblant le territoire ukrainien malgré les tensions diplomatiques en cours."
     ],
     "droite": [
       "Une série d'attaques nocturnes menées par la Russie a causé la mort d'au moins six personnes dans plusieurs régions ukrainiennes.",
@@ -320,7 +338,7 @@
       "Des équipes de reportage sur place témoignent de la violence des impacts et des destructions matérielles majeures constatées dans un immeuble de la capitale."
     ]
   },
-  "differences": "Le camp de la gauche insiste particulièrement sur les difficultés techniques liées à Starlink et l'échec des promesses géopolitiques de Donald Trump face au mépris affiché de Moscou. Le centre élargit la focale en intégrant un bilan humain actualisé à une dizaine de victimes touchant également l'ouest du pays, l'impact sur les foyers privés d'énergie, ainsi qu'une controverse sur d'éventuelles pressions diplomatiques et militaires exercées par Washington. Enfin, la droite et le centre droit adoptent une vision plus nationale et factuelle, axée sur les destructions matérielles et les interrogations concernant l'absence d'alerte préventive pour la population de la capitale.",
+  "differences": "La gauche met l'accent sur les tractations diplomatiques, l'accord tacite entre Washington et Moscou ainsi que le dilemme ukrainien face aux frappes sur ses centrales. Le centre privilégie l'actualité des bilans humains tragiques en région, notamment à Loutsk, illustrant la poursuite des hostilités. Enfin, la droite maintient son angle factuel et centré sur les dégâts matériels locaux ainsi que sur les défaillances des systèmes d'alerte à Kiev.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 26
+  "summarizedArticleCount": 28
 }
