@@ -23,7 +23,7 @@
       "url": "https://www.lefigaro.fr/conjoncture/inflation-la-hausse-des-prix-atteint-3-1-sur-un-an-en-septembre-20261015",
       "publishedAt": "2026-10-15T07:49:44.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2250_crop/2026/10/15/7c731c64d533613285ed99726800f663111bd7c6488256bf65b823d03cbc605a.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -35,6 +35,17 @@
       "url": "https://www.tf1info.fr/economie/l-inflation-grimpe-a-3-1-sur-un-an-en-france-son-plus-haut-niveau-depuis-2024-2470071.html",
       "publishedAt": "2026-10-15T07:17:46.000Z",
       "imageUrl": "https://photos.tf1info.fr/images/1024/684/insee-illustration-4b4dad-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "e3668237c2bc",
+      "outletId": "cnews",
+      "headline": "Pouvoir d'achat : l'inflation a atteint 3,1% sur un an en septembre, selon l'Insee",
+      "url": "https://www.cnews.fr/france/2026-10-15/pouvoir-dachat-linflation-atteint-31-sur-un-en-septembre-selon-linsee-1935412",
+      "publishedAt": "2026-10-15T07:05:31.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/adobestock_540635497_6ad07a149f59a.jpg?h=94c367f0&itok=7hEZkv7Y",
       "frontPage": false,
       "kind": "news",
       "section": "economy"
@@ -59,12 +70,12 @@
       "L'indicateur atteint son seuil maximal depuis le début de l'année 2024 selon les données publiées par l'institut national."
     ],
     "droite": [
-      "Les derniers chiffres officiels de l'Insee confirment une hausse annuelle de l'indice des prix à la consommation s'élevant à 3,1 pour cent pour le mois de septembre.",
-      "Cette progression marque un sommet inédit depuis janvier 2024, accentuée particulièrement par la flambée des tarifs énergétiques.",
-      "La persistance de cette dynamique inflationniste continue de peser lourdement sur le pouvoir d'achat des ménages."
+      "Les derniers chiffres définitifs de l'institut national confirment une hausse annuelle de l'indice des prix à la consommation s'élevant à 3,1 pour cent pour le mois de septembre, soit une révision à la hausse de 0,1 point.",
+      "Cette progression marque un sommet inédit depuis janvier 2024, fortement accentuée par la nette accélération des tarifs énergétiques.",
+      "La persistance de cette dynamique inflationniste continue de peser lourdement sur le pouvoir d'achat des ménages malgré un repli mensuel lié au tourisme."
     ]
   },
-  "differences": "Le centre et la droite partagent une lecture similaire des données de l'Insee en relayant l'atteinte d'un taux d'inflation de 3,1 pour cent sur un an, au plus haut depuis janvier 2024. La droite, à travers des titres comme Le Figaro, insiste davantage sur la pression continue que cette augmentation exerce sur le pouvoir d'achat et met en avant le rôle moteur de l'énergie dans cette accélération, tandis que le centre droit adopte un ton plus factuel et synthétique.",
+  "differences": "Le centre et la droite partagent une lecture similaire des données définitives de l'Insee en relayant l'atteinte d'un taux d'inflation de 3,1 pour cent sur un an, au plus haut depuis janvier 2024. La droite, à travers des médias comme Europe 1 ou Le Figaro, insiste davantage sur la pression continue que cette augmentation exerce sur le pouvoir d'achat, détaille la forte hausse des prix de l'énergie et mentionne la révision à la hausse par rapport à l'estimation provisoire, tandis que le centre adopte un ton plus global et synthétique.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 5
 }
