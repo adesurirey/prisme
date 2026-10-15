@@ -1,0 +1,47 @@
+---
+/**
+ * Photo credit for the Story hero image (idea: unfolding "i" badge).
+ * A native <details>/<summary> — no hydration, so it works on click,
+ * touch and keyboard with zero JS. Closed: a small frosted "i" glyph in
+ * the top-right corner. Open: the badge unfolds into the credit pill.
+ *
+ * The credit is the Outlet name — feeds carry no photographer field.
+ * The visually-hidden <figcaption> in the Story page keeps the
+ * attribution in the DOM regardless of interaction.
+ */
+interface Props {
+  /** Outlet name, e.g. "Reuters". */
+  name: string;
+}
+const { name } = Astro.props;
+---
+
+<details class="group absolute top-2 right-2 z-10">
+  <summary
+    class="flex max-w-[calc(100vw-2.5rem)] cursor-pointer list-none items-center gap-0.5 rounded-full bg-white/60 text-[var(--ink)] backdrop-blur-sm transition-colors hover:bg-white/85 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--ink)] dark:bg-black/35 dark:text-white dark:hover:bg-black/50 dark:focus-visible:outline-white [&::-webkit-details-marker]:hidden"
+    aria-label={`Crédit photo : ${name}`}
+  >
+    <span
+      class="flex h-6 w-6 shrink-0 items-center justify-center text-current"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        class="h-[15px] w-[15px]"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M12 11v5"></path>
+        <path d="M12 7.5h.01"></path>
+      </svg>
+    </span>
+    <span
+      class="hidden pr-3 text-[13px] font-normal tracking-normal whitespace-nowrap text-current group-open:block"
+    >
+      Photo : {name}
+    </span>
+  </summary>
+</details>
