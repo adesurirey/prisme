@@ -6,6 +6,28 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "3d4077a57222",
+      "outletId": "la-croix",
+      "headline": "L’inauguration d’un pont scelle le dégel entre la Chine et la Corée du Nord",
+      "url": "https://www.la-croix.com/international/l-inauguration-dun-pont-scelle-le-degel-entre-la-chine-et-la-coree-du-nord-20261015",
+      "publishedAt": "2026-10-15T17:02:01.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/15/2563123-jeudi-15-octobre-2026-un-pont-de-trois-kilometres-.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "e4d1b6ec2163",
+      "outletId": "france-24",
+      "headline": "Un nouveau pont entre Pékin et Pyongyang après 12 ans d'attente",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261015-un-nouveau-pont-entre-p%C3%A9kin-et-pyongyang-apr%C3%A8s-12-ans-d-attente",
+      "publishedAt": "2026-10-15T17:01:07.000Z",
+      "imageUrl": "https://s.france24.com/media/display/d34f8d2e-c8b5-11f1-ad06-4dd8ac2cf3bf/w:1024/p:16x9/FR-20261015-161913-162035-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "10bfa0e3fa82",
       "outletId": "lopinion",
       "headline": "Un nouveau pont pour mieux arrimer la Corée du Nord à la Chine",
@@ -50,5 +72,20 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "Un nouvel ouvrage d'art de trois kilomètres a été mis en service ce jeudi pour relier l'État reclus à son grand voisin.",
+      "Cette inauguration concrétise un réchauffement diplomatique après une période de relations distendues entre les deux gouvernements.",
+      "La mise en service intervient après douze années d'attente, l'infrastructure étant achevée depuis plus d'une décennie."
+    ],
+    "droite": [
+      "La mise en service effective de la liaison intervient avec un retard considérable par rapport au calendrier initialement prévu.",
+      "Le chantier s'est achevé depuis de nombreuses années avant de voir enfin ses premiers véhicules transiter."
+    ]
+  },
+  "differences": "Le centre insiste principalement sur la portée géopolitique de l'événement, en y voyant le signe tangible d'un dégel diplomatique et d'un rapprochement entre les deux régimes. De son côté, la droite adopte un angle plus technique et critique en mettant en avant les dysfonctionnements et la lenteur administrative, illustrés par les douze années de retard entre la fin du chantier et son ouverture effective.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 6
 }

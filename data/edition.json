@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-15T17:01:31.077Z",
+  "builtAt": "2026-10-15T18:01:26.919Z",
   "stories": [
     {
       "id": "23f442d43c98",
@@ -15,7 +15,7 @@
           "url": "https://www.lefigaro.fr/conjoncture/budget-2027-les-deputes-s-echarpent-sur-l-abattement-fiscal-des-retraites-symbole-de-la-guerre-des-generations-20261015",
           "publishedAt": "2026-10-15T16:45:00.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/15/e6a536cdb89040abc6a3f647e0bcfdad23c4b432985d239254db1596a98cb458.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -27,7 +27,7 @@
           "url": "https://www.lefigaro.fr/conjoncture/abattement-pour-les-retraites-heures-supplementaires-prime-carburant-comment-les-deputes-ont-modifie-le-budget-2027-20261015",
           "publishedAt": "2026-10-15T15:01:04.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x1976_crop/2026/10/15/52e570263f6b2f99d860326f4bccdfb3960c760b4bda909ffa52fac613ac5020.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -96,7 +96,7 @@
           "url": "https://www.lefigaro.fr/conjoncture/en-direct-budget-2027-l-examen-du-projet-de-loi-de-finances-se-poursuit-ce-jeudi-dans-l-hemicycle-20261015",
           "publishedAt": "2026-10-15T10:55:03.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/15/61fc23345f399dca842f43f760ba6620d745f8dd3d2d14f106422fd1cfa0483f.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "live",
           "section": "politics",
           "everFrontPage": true
@@ -198,6 +198,18 @@
       "createdAt": "2026-10-15T06:01:18.675Z",
       "storyDay": "2026-10-15",
       "articles": [
+        {
+          "id": "67f3b43a73cd",
+          "outletId": "ouest-france",
+          "headline": "Mobilisation lycéenne : nouvelles tensions ce jeudi en attendant la grande manifestation de samedi",
+          "url": "https://www.ouest-france.fr/education/mobilisation-lyceenne-nouvelles-tensions-en-attendant-samedi-8205f76c-c8a8-11f1-b3f5-183597cb1094?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-15T17:54:10.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwY2U1MTE5YWMwZmVhYjkwMjdmMzc1YjFkMGM2ZGY5MWM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=374563d5b31b324b132e30e2fa4215ad72211699e24f411785e28f14dc41af9a",
+          "frontPage": true,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
         {
           "id": "34367039713a",
           "outletId": "le-parisien",
@@ -355,7 +367,8 @@
           "Les représentants des élèves sont conviés pour la troisième fois par le ministère pour tenter de désamorcer la crise persistante.",
           "Le chef du gouvernement déplore publiquement la dérive des rassemblements et des blocus vers des actes de violence urbaine.",
           "Les autorités exécutives expriment de fortes inquiétudes à l'approche de nouvelles manifestations prévues dans le pays.",
-          "Une autorité publique rencontre les élèves mobilisés pour afficher une posture de protection et maintenir le contact sur le terrain."
+          "Une autorité publique rencontre les élèves mobilisés pour afficher une posture de protection et maintenir le contact sur le terrain.",
+          "La journée de jeudi est marquée par de nouveaux incidents violents dans le pays à l'approche des rassemblements annoncés pour le week-end."
         ],
         "droite": [
           "Le premier ministre s'alarme publiquement de la mutation des rassemblements juvéniles en actes de violence urbaine avec des dégradations constatées.",
@@ -363,9 +376,9 @@
           "Une nouvelle concertation à distance est programmée entre le ministère de tutelle et les organisations représentatives pour maintenir le dialogue."
         ]
       },
-      "differences": "Tous les courants médiatiques évoquent la persistance de la contestation lycéenne et la concertation avec le gouvernement, mais le centre et la droite mettent fortement l'accent sur les condamnations prononcées par l'exécutif face à la dérive des blocus en violences urbaines. Le centre intègre en outre la dimension de protection directe des élèves sur le terrain à travers la médiation des autorités, tandis que la droite détaille le maintien des blocages locaux et l'organisation d'une réunion ministérielle à distance. De son côté, la gauche se focalise davantage sur les revendications matérielles des jeunes et l'extension du mécontentement aux équipes de direction.",
+      "differences": "Tous les courants médiatiques évoquent la persistance de la contestation lycéenne et la concertation avec le gouvernement, mais le centre et la droite mettent fortement l'accent sur les condamnations prononcées par l'exécutif face à la dérive des blocus en violences urbaines. Le centre intègre en outre l'apparition de tensions inédites à l'approche des manifestations du week-end, comme le rapporte Ouest-France, tout en soulignant la protection des élèves sur le terrain. De son côté, la droite détaille le maintien des blocages locaux et l'organisation de réunions ministérielles, tandis que la gauche se focalise davantage sur les revendications matérielles des jeunes et l'extension du mécontentement aux équipes de direction.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 13
+      "summarizedArticleCount": 14
     },
     {
       "id": "94ab3524e17f",
@@ -623,7 +636,7 @@
           "url": "https://www.20minutes.fr/sport/football/ligue_des_champions/4254459-20261015-manchester-city-psg-match-incroyable-paris-livre-meilleure-prestation-premiere-periode?at_medium=display&at_campaign=149",
           "publishedAt": "2026-10-15T06:28:33.000Z",
           "imageUrl": "https://img.20mn.fr/29C72UGASy-rNGN-MEwaYSk/1200x768_usage-editorial-uniquement-toutes-les-images-sont-protegees-par-le-droit-d-auteur-de-every-second-media-limited-aucune-image-ne-peut-etre-reproduite-sans-autorisation-prealable-credit-obligatoire-photo-de-steve-flynn-every-second-media-shutterstock-17215990en-ousmane-dembele-du-paris-saint-germain-celebre-le-deuxieme-but-de-son-equipe-lors-de-la-deuxieme-journee-de-l-uefa-champions-league-entre-manchester-city-et-paris-saint-germain-a-l-etihad-stadium-de-manchester-en-angleterre-le-14-octobre-2026-credit-steve-flynn-every-second-media-manchester-city-v-paris-saint-germain-uefa-champions-league-etihad-stadium-angleterre-14-octobre-2026-shutterstock-editorial-manchester-city-v-paris-saint-17215990fr-usage-editorial-uniquement-toutes-les-images-sont-protegees-par-le-droit-d-auteur-de-every-second-media-limited-aucune-image-ne-peut-etre-reproduite-sans-autorisation-prealable-2610150229",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -748,7 +761,7 @@
           "url": "https://www.20minutes.fr/societe/4254496-20261015-fusillade-college-aubagne-autre-ado-place-garde-vue?at_medium=display&at_campaign=149",
           "publishedAt": "2026-10-15T08:36:05.000Z",
           "imageUrl": "https://img.20mn.fr/tjly7CZ_TBKwB_iAg-2XmSk/1200x768_commisariats-de-police-nationale-et-municipale-de-colombes-92-sur-le-theme-de-la-securite-du-quotidien-colombes-france-le-13-mai-2026-national-and-municipal-police-stations-in-colombes-92-to-discuss-everyday-security-colombes-france-may-13-2026-04nicolasmessyasz-2026-05-13a-179a-credit-nicolas-messyasz-sipa-2605131256",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -851,6 +864,137 @@
       "differences": "Les trois sensibilités politiques relatent l'évolution de l'enquête judiciaire tout en adoptant des angles différents. La gauche met en lumière l'influence idéologique et psychologique d'une mouvance numérique violente sur le premier auteur des faits. Le centre adopte une démarche factuelle en précisant les hypothèses techniques des enquêteurs concernant les réseaux sociaux, notamment TikTok. La droite se focalise principalement sur la recherche d'éventuels complices et la continuité des investigations policières.",
       "promptVersion": "sum-2",
       "summarizedArticleCount": 13
+    },
+    {
+      "id": "b747198b4a98",
+      "slug": "la-fonderie-de-bretagne-est-placee-en-liquidation-judiciaire",
+      "title": "La Fonderie de Bretagne est placée en liquidation judiciaire",
+      "createdAt": "2026-10-15T13:01:45.195Z",
+      "storyDay": "2026-10-15",
+      "articles": [
+        {
+          "id": "9097d632a8cc",
+          "outletId": "mediapart",
+          "headline": "Fonderie de Bretagne: histoire d’une spirale de destruction industrielle",
+          "url": "https://www.mediapart.fr/journal/economie-et-social/151026/fonderie-de-bretagne-histoire-d-une-spirale-de-destruction-industrielle",
+          "publishedAt": "2026-10-15T17:58:46.000Z",
+          "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/10/15/261015-img-fonderie-bretagne.jpg",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "economy"
+        },
+        {
+          "id": "a1b779ecb635",
+          "outletId": "humanite",
+          "headline": "« Le projet était de flinguer l’usine, ils ont réussi » : la Fonderie de Bretagne placée en liquidation judiciaire, 244 salariés sur le carreau",
+          "url": "https://www.humanite.fr/social-et-economie/fonderie-de-bretagne/le-projet-etait-de-flinguer-lusine-ils-ont-reussi-la-fonderie-de-bretagne-placee-en-liquidation-judiciaire-244-salaries-sur-le-carreau",
+          "publishedAt": "2026-10-15T16:09:21.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/p11-fonderie-de-bretagne_VE.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "f9dce106105f",
+          "outletId": "le-figaro",
+          "headline": "La Fonderie de Bretagne placée en liquidation judiciaire, faute de repreneur, annonce la CGT",
+          "url": "https://www.lefigaro.fr/societes/la-fonderie-de-bretagne-placee-en-liquidation-judiciaire-faute-de-repreneur-annonce-la-cgt-20261015",
+          "publishedAt": "2026-10-15T13:32:50.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/15/0728930d67d2e9e088f34f00e1768ce024bc486b3406ed9888d426eb55ebed3b.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "4753dffcecf0",
+          "outletId": "le-monde",
+          "headline": "La fin de la Fonderie de Bretagne, après soixante années d’existence et une série de reprises infructueuses",
+          "url": "https://www.lemonde.fr/economie/article/2026/10/15/la-fin-des-fonderies-de-bretagne-apres-soixante-annees-d-existence-et-une-serie-de-reprises-infructueuses_6794449_3234.html",
+          "publishedAt": "2026-10-15T13:07:54.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/14/124/0/5889/2944/644/322/60/0/63c73de_upload-1-lcz9vi6iexup-000-b9699zq.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "ee3f382c8ad9",
+          "outletId": "europe-1",
+          "headline": "La Fonderie de Bretagne placée en liquidation, faute de repreneur, annonce la CGT",
+          "url": "https://www.europe1.fr/economie/la-fonderie-de-bretagne-placee-en-liquidation-faute-de-repreneur-annonce-la-cgt-1151318?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-15T13:02:30.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/15/15/000_36qm7m3_1_6ad0cfa4c580e.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "3188083138c5",
+          "outletId": "bfmtv",
+          "headline": "\"Un drame humain et industriel inacceptable\": la Fonderie de Bretagne est placée en liquidation judiciaire, 244 salariés sur le carreau",
+          "url": "https://www.bfmtv.com/economie/entreprises/un-drame-humain-et-industriel-inacceptable-la-fonderie-de-bretagne-est-placee-en-liquidation-judiciaire-244-salaries-sur-le-carreau_AD-202610150585.html",
+          "publishedAt": "2026-10-15T12:59:38.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/ARjiN1BZ1sxTinSnxOi7ZuaTOQc=/0x40:768x472/800x0/images/Des-salaries-et-des-syndicalistes-de-la-CGT-de-la-Fonderie-de-Bretagne-devant-l-usine-de-Caudan-le-18-decembre-2024-dans-le-Morbihan-2001347.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "8a828f9696fb",
+          "outletId": "franceinfo",
+          "headline": "La Fonderie de Bretagne officiellement placée en liquidation judiciaire, 244 salariés licenciés",
+          "url": "https://www.franceinfo.fr/economie/industrie/la-fonderie-de-bretagne-officiellement-placee-en-liquidation-judiciaire-244-salaries-licencies_8238751.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-15T12:58:36.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/FG54sKa2pvktyvxfftcK1agAEGU/0x186:1600x1086/432x243/filters:format(jpg)/2026/10/14/6acf2f7f367c4847109747.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "307ddcdd4d1a",
+          "outletId": "humanite",
+          "headline": "« Nous sommes présents pour dire notre colère contre les responsables, Renault et l’État » : le tribunal de commerce doit prononcer la liquidation de la Fonderie de Bretagne",
+          "url": "https://www.humanite.fr/social-et-economie/fonderie-de-bretagne/nous-sommes-presents-pour-dire-notre-colere-contre-les-responsables-renault-et-letat-le-tribunal-de-commerce-doit-prononcer-la-liquidation-de-la-fonderie-de-br",
+          "publishedAt": "2026-10-15T09:15:23.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/fonderie-bretagne-edited.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "7ec30598b2af",
+          "outletId": "le-parisien",
+          "headline": "La Fonderie de Bretagne placée en liquidation, faute de repreneur",
+          "url": "https://www.leparisien.fr/economie/la-fonderie-de-bretagne-placee-en-liquidation-faute-de-repreneur-15-10-2026-W2MS2OCLINHTLOTLSNL6JSB2RM.php",
+          "publishedAt": "2026-10-14T22:00:00.000Z",
+          "frontPage": false,
+          "dayPrecision": true,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "section": "economy",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "La juridiction commerciale de Lorient a officialisé la cessation d'activité du site, entraînant la suppression de 244 emplois.",
+          "Les travailleurs et leurs représentants dénoncent une destruction industrielle planifiée plutôt qu'une fatalité économique inévitable.",
+          "La responsabilité de cette faillite est imputée collectivement à la direction et aux autorités publiques."
+        ],
+        "centre": [
+          "Le tribunal de commerce de Lorient a prononcé la liquidation judiciaire de l'entreprise après l'échec des recherches de repreneurs.",
+          "Plus de deux cents employés se retrouvent sans emploi, un peu plus d'un an après le rachat par Europlasma.",
+          "Les syndicats qualifient cette situation d'échec industriel majeur et préparent les démarches relatives aux futurs licenciements."
+        ],
+        "droite": [
+          "La Fonderie de Bretagne a été placée en liquidation judiciaire par le tribunal de commerce de Lorient faute d'acheteur.",
+          "Un peu plus d'un an après la reprise par Europlasma, cette décision menace l'ensemble des effectifs du site.",
+          "Les syndicats déplorent une situation critique pour les employés concernés par ces licenciements économiques."
+        ]
+      },
+      "differences": "Les différents camps s'accordent sur le constat factuel de la liquidation judiciaire prononcée à Lorient et sur la menace qui pèse sur les effectifs. La gauche, par l'intermédiaire de ses tribunes, insiste particulièrement sur la dimension politique et préméditée de ce naufrage en ciblant frontalement la responsabilité des pouvoirs publics et de la direction, là où les rédactions centristes et de droite se concentrent davantage sur le calendrier économique et l'échec récent de la reprise par Europlasma.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 9
     },
     {
       "id": "aca9b91b3377",
@@ -1017,127 +1161,6 @@
       "differences": "Les différents bords politiques partagent un constat factuel similaire autour des tensions liées à l'itinéraire parisien, mais la droite insiste davantage sur les impératifs de maintien de l'ordre et la responsabilité des organisateurs face aux propositions alternatives de la préfecture, tandis que la gauche met l'accent sur l'ampleur nationale du mouvement social contre la vie chère et le refus des contestataires face aux restrictions imposées. Le centre adopte une position intermédiaire en intégrant les estimations chiffrées de l'exécutif sur le nombre d'actions prévues en région tout en détaillant le tracé alternatif proposé à Paris.",
       "promptVersion": "sum-2",
       "summarizedArticleCount": 12
-    },
-    {
-      "id": "b747198b4a98",
-      "slug": "la-fonderie-de-bretagne-est-placee-en-liquidation-judiciaire",
-      "title": "La Fonderie de Bretagne est placée en liquidation judiciaire",
-      "createdAt": "2026-10-15T13:01:45.195Z",
-      "storyDay": "2026-10-15",
-      "articles": [
-        {
-          "id": "a1b779ecb635",
-          "outletId": "humanite",
-          "headline": "« Le projet était de flinguer l’usine, ils ont réussi » : la Fonderie de Bretagne placée en liquidation judiciaire, 244 salariés sur le carreau",
-          "url": "https://www.humanite.fr/social-et-economie/fonderie-de-bretagne/le-projet-etait-de-flinguer-lusine-ils-ont-reussi-la-fonderie-de-bretagne-placee-en-liquidation-judiciaire-244-salaries-sur-le-carreau",
-          "publishedAt": "2026-10-15T16:09:21.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/p11-fonderie-de-bretagne_VE.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "f9dce106105f",
-          "outletId": "le-figaro",
-          "headline": "La Fonderie de Bretagne placée en liquidation judiciaire, faute de repreneur, annonce la CGT",
-          "url": "https://www.lefigaro.fr/societes/la-fonderie-de-bretagne-placee-en-liquidation-judiciaire-faute-de-repreneur-annonce-la-cgt-20261015",
-          "publishedAt": "2026-10-15T13:32:50.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/15/0728930d67d2e9e088f34f00e1768ce024bc486b3406ed9888d426eb55ebed3b.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "4753dffcecf0",
-          "outletId": "le-monde",
-          "headline": "La fin de la Fonderie de Bretagne, après soixante années d’existence et une série de reprises infructueuses",
-          "url": "https://www.lemonde.fr/economie/article/2026/10/15/la-fin-des-fonderies-de-bretagne-apres-soixante-annees-d-existence-et-une-serie-de-reprises-infructueuses_6794449_3234.html",
-          "publishedAt": "2026-10-15T13:07:54.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/14/124/0/5889/2944/644/322/60/0/63c73de_upload-1-lcz9vi6iexup-000-b9699zq.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "ee3f382c8ad9",
-          "outletId": "europe-1",
-          "headline": "La Fonderie de Bretagne placée en liquidation, faute de repreneur, annonce la CGT",
-          "url": "https://www.europe1.fr/economie/la-fonderie-de-bretagne-placee-en-liquidation-faute-de-repreneur-annonce-la-cgt-1151318?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-15T13:02:30.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/15/15/000_36qm7m3_1_6ad0cfa4c580e.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "3188083138c5",
-          "outletId": "bfmtv",
-          "headline": "\"Un drame humain et industriel inacceptable\": la Fonderie de Bretagne est placée en liquidation judiciaire, 244 salariés sur le carreau",
-          "url": "https://www.bfmtv.com/economie/entreprises/un-drame-humain-et-industriel-inacceptable-la-fonderie-de-bretagne-est-placee-en-liquidation-judiciaire-244-salaries-sur-le-carreau_AD-202610150585.html",
-          "publishedAt": "2026-10-15T12:59:38.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/ARjiN1BZ1sxTinSnxOi7ZuaTOQc=/0x40:768x472/800x0/images/Des-salaries-et-des-syndicalistes-de-la-CGT-de-la-Fonderie-de-Bretagne-devant-l-usine-de-Caudan-le-18-decembre-2024-dans-le-Morbihan-2001347.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "8a828f9696fb",
-          "outletId": "franceinfo",
-          "headline": "La Fonderie de Bretagne officiellement placée en liquidation judiciaire, 244 salariés licenciés",
-          "url": "https://www.franceinfo.fr/economie/industrie/la-fonderie-de-bretagne-officiellement-placee-en-liquidation-judiciaire-244-salaries-licencies_8238751.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-15T12:58:36.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/FG54sKa2pvktyvxfftcK1agAEGU/0x186:1600x1086/432x243/filters:format(jpg)/2026/10/14/6acf2f7f367c4847109747.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "307ddcdd4d1a",
-          "outletId": "humanite",
-          "headline": "« Nous sommes présents pour dire notre colère contre les responsables, Renault et l’État » : le tribunal de commerce doit prononcer la liquidation de la Fonderie de Bretagne",
-          "url": "https://www.humanite.fr/social-et-economie/fonderie-de-bretagne/nous-sommes-presents-pour-dire-notre-colere-contre-les-responsables-renault-et-letat-le-tribunal-de-commerce-doit-prononcer-la-liquidation-de-la-fonderie-de-br",
-          "publishedAt": "2026-10-15T09:15:23.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/fonderie-bretagne-edited.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "7ec30598b2af",
-          "outletId": "le-parisien",
-          "headline": "La Fonderie de Bretagne placée en liquidation, faute de repreneur",
-          "url": "https://www.leparisien.fr/economie/la-fonderie-de-bretagne-placee-en-liquidation-faute-de-repreneur-15-10-2026-W2MS2OCLINHTLOTLSNL6JSB2RM.php",
-          "publishedAt": "2026-10-14T22:00:00.000Z",
-          "frontPage": false,
-          "dayPrecision": true,
-          "kind": "news",
-          "section": "economy"
-        }
-      ],
-      "section": "economy",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le tribunal de commerce de Lorient a officialisé la cessation d'activité du site après l'absence d'offre de rachat.",
-          "Cette décision entraîne la suppression des emplois de plus de deux cents salariés et met un terme à l'histoire industrielle de l'usine.",
-          "Les représentants syndicaux et les travailleurs pointent directement la responsabilité du groupe Renault et des pouvoirs publics dans ce naufrage économique.",
-          "Les salariés et leurs représentants syndicaux soulignent le caractère prémédité de cette fermeture au terme d'un dernier combat judiciaire."
-        ],
-        "centre": [
-          "Le tribunal de commerce de Lorient a prononcé la liquidation judiciaire de l'entreprise après l'échec des recherches de repreneurs.",
-          "Plus de deux cents employés se retrouvent sans emploi, un peu plus d'un an après le rachat par Europlasma.",
-          "Les syndicats qualifient cette situation d'échec industriel majeur et préparent les démarches relatives aux futurs licenciements."
-        ],
-        "droite": [
-          "La Fonderie de Bretagne a été placée en liquidation judiciaire par le tribunal de commerce de Lorient faute d'acheteur.",
-          "Un peu plus d'un an après la reprise par Europlasma, cette décision menace l'ensemble des effectifs du site.",
-          "Les syndicats déplorent une situation critique pour les employés concernés par ces licenciements économiques."
-        ]
-      },
-      "differences": "Les différents camps s'accordent sur le constat factuel de la liquidation judiciaire et la menace pesant sur les effectifs, mais divergent sur la répartition des responsabilités. Les médias de gauche pointent explicitement la responsabilité historique de Renault et de l'État dans ce gâchis industriel, tout en qualifiant la fermeture de préméditée, tandis que les rédactions centristes et de droite insistent davantage sur le calendrier de la crise, rappelant l'échec récent de la reprise par Europlasma.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 8
     },
     {
       "id": "0a0d7a763f10",
@@ -2177,6 +2200,193 @@
       "summarizedArticleCount": 8
     },
     {
+      "id": "57f44ce3da62",
+      "slug": "des-etudiants-d-hec-bloquent-l-ecole-et-rejoignent-la-mobilisati",
+      "title": "Des étudiants d'HEC bloquent l'école et rejoignent la mobilisation",
+      "createdAt": "2026-10-15T09:01:27.337Z",
+      "storyDay": "2026-10-15",
+      "articles": [
+        {
+          "id": "57134c6b63b4",
+          "outletId": "humanite",
+          "headline": "Mouvement lycéen : « Si même les étudiants d’HEC s’y mettent… »",
+          "url": "https://www.humanite.fr/societe/mouvement-lyceen/mouvement-lyceen-si-meme-les-etudiants-dhec-sy-mettent",
+          "publishedAt": "2026-10-15T17:46:03.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/SOPHIABERGER-5949.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "44155ac285b9",
+          "outletId": "le-figaro",
+          "headline": "«Privilégiés, mais pas aveugles» : un blocage à HEC pour soutenir le mouvement lycéen",
+          "url": "https://etudiant.lefigaro.fr/article/etudes/privilegies-mais-pas-aveugles-un-blocage-a-hec-pour-soutenir-la-revolte-des-lyceens-20261015/",
+          "publishedAt": "2026-10-15T11:01:07.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/1600x900_crop/2026/10/15/8ca13771f099beac4428ae1ab31d453470bebb36530e69ae130dcdeff7b13b3e.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "721300879941",
+          "outletId": "bfmtv",
+          "headline": "Les étudiants de HEC Paris se mobilisent en soutien des lycéens en colère",
+          "url": "https://www.bfmtv.com/societe/video-les-etudiants-de-hec-paris-se-mobilisent-en-soutien-des-lyceens-en-colere_VN-202610150409.html",
+          "publishedAt": "2026-10-15T09:44:26.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/2DGG_lB2b1IFMOBu4Ddqpdhz18g=/0x0:1280x720/800x0/images/Les-etudiants-de-HEC-Paris-se-mobilisent-en-soutien-des-lyceens-en-colere-2365837.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "50be0545933d",
+          "outletId": "huffpost",
+          "headline": "« Nos valeurs ne sont pas cotées en Bourse » : HEC bloqué en soutien au mouvement lycéen",
+          "url": "https://www.huffingtonpost.fr/france/article/nos-valeurs-ne-sont-pas-cotees-en-bourse-hec-bloque-en-soutien-au-mouvement-lyceen_340171.html",
+          "publishedAt": "2026-10-15T08:57:52.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/15/584/0/8096/4554/0/0/60/0/c8edd5c_upload-1-zlyidyk6wzr0-afp-20261015-d3c47n9-v3-highres-topshotfranceeducationprotestpolitics.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "3135656dfe7a",
+          "outletId": "le-figaro",
+          "headline": "«Bismillah HEC les ténèbres»: des étudiants bloquent la célèbre école de commerce et rejoignent le mouvement lycéen",
+          "url": "https://www.lefigaro.fr/actualite-france/bismillah-hec-les-tenebres-des-etudiants-bloquent-la-celebre-ecole-de-commerce-et-rejoignent-le-mouvement-lyceen-20261015",
+          "publishedAt": "2026-10-15T08:47:43.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/15/ad8870e735325382a428336532440cf5a8960b6cffbbbb526626a86124c4a2b6.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "d20d948fb42d",
+          "outletId": "cnews",
+          "headline": "Blocus des lycées : pour la première fois, les étudiants de HEC Paris bloquent l'entrée de l'école de commerce",
+          "url": "https://www.cnews.fr/france/2026-10-15/blocus-des-lycees-pour-la-premiere-fois-les-etudiants-de-hec-paris-bloquent",
+          "publishedAt": "2026-10-15T06:43:37.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/024_4669867-taille1200_6ad0754d4bd98.jpg?h=1a0787b4&itok=4BGgMa7f",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        }
+      ],
+      "section": "society",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Une vingtaine d'élèves de l'établissement prestigieux ont bloqué partiellement les accès au campus.",
+          "Cette initiative symbolique illustre le ralliement tardif mais notable de l'institution au mouvement contestataire en cours."
+        ],
+        "centre": [
+          "Le campus de la grande école de commerce a fait l'objet de perturbations matinales ce jeudi.",
+          "Une fraction des étudiants s'est rassemblée afin de marquer son soutien à la mobilisation des lycéens."
+        ],
+        "droite": [
+          "Un effectif restreint d'une vingtaine d'élèves a érigé un barrage matinal pour exprimer sa solidarité avec les manifestants.",
+          "L'administration observe une participation très limitée, soulignant que cette démarche externe ne traduit pas un malaise interne."
+        ]
+      },
+      "differences": "La gauche et le centre mettent en avant la symbolique du ralliement de cette grande école au mouvement de contestation, en insistant sur la solidarité avec les lycéens et les perturbations engendrées. De son côté, la droite, à l'instar de CNews et du Figaro, relativise la portée de l'événement en insistant sur la faiblesse des effectifs mobilisés et précise qu'il s'agit d'une démarche de solidarité externe dénuée de revendications internes.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 6
+    },
+    {
+      "id": "9b2d930aab87",
+      "slug": "la-chine-et-la-coree-du-nord-ouvrent-un-nouveau-pont-frontalier",
+      "title": "La Chine et la Corée du Nord ouvrent un nouveau pont frontalier",
+      "createdAt": "2026-10-15T10:01:24.551Z",
+      "storyDay": "2026-10-15",
+      "articles": [
+        {
+          "id": "3d4077a57222",
+          "outletId": "la-croix",
+          "headline": "L’inauguration d’un pont scelle le dégel entre la Chine et la Corée du Nord",
+          "url": "https://www.la-croix.com/international/l-inauguration-dun-pont-scelle-le-degel-entre-la-chine-et-la-coree-du-nord-20261015",
+          "publishedAt": "2026-10-15T17:02:01.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/15/2563123-jeudi-15-octobre-2026-un-pont-de-trois-kilometres-.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "e4d1b6ec2163",
+          "outletId": "france-24",
+          "headline": "Un nouveau pont entre Pékin et Pyongyang après 12 ans d'attente",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261015-un-nouveau-pont-entre-p%C3%A9kin-et-pyongyang-apr%C3%A8s-12-ans-d-attente",
+          "publishedAt": "2026-10-15T17:01:07.000Z",
+          "imageUrl": "https://s.france24.com/media/display/d34f8d2e-c8b5-11f1-ad06-4dd8ac2cf3bf/w:1024/p:16x9/FR-20261015-161913-162035-CS.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "10bfa0e3fa82",
+          "outletId": "lopinion",
+          "headline": "Un nouveau pont pour mieux arrimer la Corée du Nord à la Chine",
+          "url": "https://www.lopinion.fr/international/un-nouveau-pont-pour-mieux-arrimer-la-coree-du-nord-a-la-chine",
+          "publishedAt": "2026-10-15T12:43:51.000Z",
+          "imageUrl": "https://beymedias.brightspotcdn.com/c9/fb/c5e44da8468fb4473bcb415525c4/sipa-ap23067404-000002.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "de76596377ea",
+          "outletId": "cnews",
+          "headline": "Un pont entre la Chine et la Corée du Nord doit enfin ouvrir à la circulation... 12 ans après sa date de livraison initiale",
+          "url": "https://www.cnews.fr/monde/2026-10-15/un-pont-entre-la-chine-et-la-coree-du-nord-doit-enfin-ouvrir-la-circulation-12-ans",
+          "publishedAt": "2026-10-15T09:41:00.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/053_ar-20261014125642_kinq1_1a1_04176_115626521-taille1200_6acf43402e677.jpg?itok=SDsTEp-l",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "f115713c3ec8",
+          "outletId": "cnews",
+          "headline": "Un pont entre la Chine et la Corée du Nord doit enfin ouvrir à la circulation... Douze ans après sa date de livraison initiale",
+          "url": "https://www.cnews.fr/monde/2026-10-15/un-pont-entre-la-chine-et-la-coree-du-nord-doit-enfin-ouvrir-la-circulation-douze",
+          "publishedAt": "2026-10-15T09:41:00.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/053_ar-20261014125642_kinq1_1a1_04176_115626521-taille1200_6acf43402e677.jpg?itok=SDsTEp-l",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "f16991a58289",
+          "outletId": "bfmtv",
+          "headline": "Pyongyang s'ouvre (un peu) plus au monde: achevé depuis plus de 10 ans, le nouveau pont entre la Chine et la Corée du Nord a été officiellement ouvert à la circulation",
+          "url": "https://www.bfmtv.com/economie/international/la-coree-du-nord-s-ouvre-un-peu-plus-au-monde-acheve-depuis-plus-de-10-ans-le-nouveau-pont-entre-la-chine-et-la-coree-du-nord-a-ete-officiellement-ouvert-a-la-circulation_AD-202610150390.html",
+          "publishedAt": "2026-10-15T09:23:12.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/HKznaSMJTLGnpz4LnL2rq7wIZZ0=/0x49:2032x1192/800x0/images/Pont-Chine-Coree-du-Nord-2365801.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Un nouvel ouvrage d'art de trois kilomètres a été mis en service ce jeudi pour relier l'État reclus à son grand voisin.",
+          "Cette inauguration concrétise un réchauffement diplomatique après une période de relations distendues entre les deux gouvernements.",
+          "La mise en service intervient après douze années d'attente, l'infrastructure étant achevée depuis plus d'une décennie."
+        ],
+        "droite": [
+          "La mise en service effective de la liaison intervient avec un retard considérable par rapport au calendrier initialement prévu.",
+          "Le chantier s'est achevé depuis de nombreuses années avant de voir enfin ses premiers véhicules transiter."
+        ]
+      },
+      "differences": "Le centre insiste principalement sur la portée géopolitique de l'événement, en y voyant le signe tangible d'un dégel diplomatique et d'un rapprochement entre les deux régimes. De son côté, la droite adopte un angle plus technique et critique en mettant en avant les dysfonctionnements et la lenteur administrative, illustrés par les douze années de retard entre la fin du chantier et son ouverture effective.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 6
+    },
+    {
       "id": "8c4f05f8b3d7",
       "slug": "des-milliers-de-colombiens-manifestent-contre-le-gouvernement-d",
       "title": "Des milliers de Colombiens manifestent contre le gouvernement d'Abelardo de la Espriella",
@@ -2346,176 +2556,6 @@
         ]
       },
       "differences": "Les différents courants s'accordent sur l'interpellation du responsable de Novaïa Gazeta tout en mettant en valeur des angles distincts. La gauche privilégie l'annonce factuelle de l'arrestation par le journal d'opposition, le centre enrichit le récit en explicitant le contexte répressif et le statut de la publication vis-à-vis du Kremlin, et la droite se focalise sur les aspects pratiques de l'opération policière ainsi que sur la rupture soudaine des contacts avec la rédaction.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 5
-    },
-    {
-      "id": "09cd743ab8cc",
-      "slug": "arthur-gea-abandonne-en-quarts-de-finale-du-masters-1000-de-shan",
-      "title": "Arthur Gea abandonne en quarts de finale du Masters 1000 de Shanghai",
-      "createdAt": "2026-10-15T08:01:28.980Z",
-      "storyDay": "2026-10-15",
-      "articles": [
-        {
-          "id": "4b670642459a",
-          "outletId": "cnews",
-          "headline": "Tennis : pourquoi le jeune Français Arthur Gea a-t-il abandonné en quarts de finale du Masters 1000 de Shanghai ?",
-          "url": "https://www.cnews.fr/sport/2026-10-15/tennis-pourquoi-le-jeune-francais-arthur-gea-t-il-abandonne-en-quarts-de-finale-du",
-          "publishedAt": "2026-10-15T11:18:01.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/tennis_masters_1000_shanghai_arthur_gea_6ad0b0dc6f06a.jpg?h=f78a98b3&itok=Jo6qBII_",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "46d9b69747d7",
-          "outletId": "ouest-france",
-          "headline": "Masters 1000 de Shanghai. Arthur Gea abandonne en quarts de finale face à Alejandro Davidovich Fokina",
-          "url": "https://www.ouest-france.fr/sport/tennis/atp/masters-1000-de-shanghai-arthur-gea-abandonne-en-quarts-de-finale-face-a-alejandro-davidovich-fokina-5556792c-c86b-11f1-b3f5-183597cb1094?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-15T07:48:26.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZDExNThhMjU1ZTlkYWI2MGY5OTFkZjhmMGMxYjc4MTk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=59381b1783733b4a07e308ad8482ee42088828fc083f665c0d193810ed3db762",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "ca8b5a79b8ff",
-          "outletId": "le-figaro",
-          "headline": "Tennis: Arthur Gea jette l’éponge en quarts de finale du Masters 1000 de Shanghai",
-          "url": "https://www.lefigaro.fr/sports/tennis/tennis-arthur-gea-jette-l-eponge-en-quarts-de-finale-du-masters-1000-de-shanghai-20261015",
-          "publishedAt": "2026-10-15T07:45:54.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2683x1711_crop/2026/10/15/eaa2b99eaa16c8bd9ab5798cc068f7dcbe94a1f4c82938a98b8d984b9a059b25.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "2b0a4890c914",
-          "outletId": "europe-1",
-          "headline": "Masters 1000 de Shanghai : Arthur Gea abandonne en quarts de finale",
-          "url": "https://www.europe1.fr/sport/masters-1000-de-shanghai-arthur-gea-abandonne-en-quarts-de-finale-1150577?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-15T07:26:27.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/15/09/020_2300293924_2_6ad080aac14f7.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "807a9b813ed5",
-          "outletId": "franceinfo",
-          "headline": "Blessé, Arthur Gea abandonne en quart de finale du Masters 1000 de Shanghai",
-          "url": "https://www.franceinfo.fr/sports/tennis/blesse-arthur-gea-abandonne-en-quart-de-finale-du-masters-1000-de-shanghai_8238349.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-15T07:25:16.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/sb0Coc92Mt54n-RkOOUFSbay8Yo/0x0:4686x2635/432x243/filters:format(jpg)/2026/10/15/6ad07f3b840b9834678384.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        }
-      ],
-      "section": "sport",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le joueur français de 21 ans a dû quitter le court en pleurs suite à une blessure aux adducteurs.",
-          "Son parcours s'est arrêté brutalement en quarts de finale du tournoi chinois."
-        ],
-        "centre": [
-          "Le jeune Français a été contraint d'abandonner dans la première manche face à l'Espagnol Alejandro Davidovich Fokina.",
-          "Une douleur ressentie à la hanche et à la jambe droite est à l'origine de son retrait alors qu'il était mené."
-        ],
-        "droite": [
-          "L'athlète tricolore a jeté l'éponge dès le premier set après avoir fait appel au kiné pour soigner sa hanche et sa jambe droites.",
-          "Malgré cette fin abrupte face à Alejandro Davidovich Fokina, son bilan reste remarquable avec des victoires de prestige contre de têtes de série.",
-          "Cette belle semaine chinoise lui permettra d'intégrer le top 50 du classement mondial malgré la déception de l'abandon."
-        ]
-      },
-      "differences": "La gauche met l'accent sur la dimension émotionnelle de la sortie du joueur et la nature précise de sa blessure musculaire, tandis que le centre s'en tient aux faits bruts de la rencontre et aux soins prodigués sur le court. La droite adopte une perspective plus globale sur l'ensemble du tournoi, valorisant le parcours exceptionnel du jeune joueur et son entrée prochaine dans le top 50, tout en détaillant les circonstances précises de son retrait face à l'Espagnol.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 5
-    },
-    {
-      "id": "be5b2bae0870",
-      "slug": "un-rapport-alerte-sur-la-menace-climatique-pesant-sur-le-patrimo",
-      "title": "Un rapport alerte sur la menace climatique pesant sur le patrimoine",
-      "createdAt": "2026-10-15T05:01:19.660Z",
-      "storyDay": "2026-10-15",
-      "articles": [
-        {
-          "id": "8d5621391037",
-          "outletId": "humanite",
-          "headline": "Château de Versailles, cité de Carcassonne, vignobles de Bourgogne… le patrimoine français est menacé par le réchauffement climatique, selon le Réseau action climat",
-          "url": "https://www.humanite.fr/culture-et-savoir/patrimoine/chateau-de-versailles-cite-de-carcassonne-vignobles-de-bourgogne-le-patrimoine-francais-est-menace-par-le-rechauffement-climatique-selon-le-reseau-action-climat",
-          "publishedAt": "2026-10-15T10:16:00.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/chateau-versailles-1-edited.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "03118ac4d13e",
-          "outletId": "la-croix",
-          "headline": "Chambord, Carcassonne, Saint-Malo : ces joyaux du patrimoine français menacés par les risques climatiques",
-          "url": "https://www.la-croix.com/planete/chambord-carcassonne-saint-malo-ces-joyaux-du-patrimoine-francais-menaces-par-les-risques-climatiques-20261014",
-          "publishedAt": "2026-10-15T04:30:04.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/14/2562147-fortes-chaleurs-secheresse-inondations-montees-des.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "815453962eb5",
-          "outletId": "franceinfo",
-          "headline": "Musée du Louvre, cathédrale de Strasbourg, château de Chambord... Découvrez les 20 sites patrimoniaux menacés par le réchauffement climatique",
-          "url": "https://www.franceinfo.fr/environnement/crise-climatique/musee-du-louvre-cathedrale-de-strasbourg-chateau-de-chambord-decouvrez-les-20-sites-patrimoniaux-menaces-par-le-rechauffement-climatique_8236837.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-15T04:30:01.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/F3K41qI2W_8WnJhQ6LAzbTYhGjM/0x251:3846x2414/432x243/filters:format(jpg)/2026/10/14/6acf74a62e5f8950630824.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "a1a9b8d56e87",
-          "outletId": "liberation",
-          "headline": "Patrimoine français : «Les aléas climatiques affectent nos monuments, nos collections, nos lieux de mémoire et nos savoir-faire»",
-          "url": "https://www.liberation.fr/environnement/climat/patrimoine-francais-les-aleas-climatiques-affectent-nos-monuments-nos-collections-nos-lieux-de-memoire-et-nos-savoir-faire-20261015_YZW4LRKRWZFYLFYNCUDATJUWT4/",
-          "publishedAt": "2026-10-15T04:30:00.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "f4865b5b7c9d",
-          "outletId": "tf1-info",
-          "headline": "Patrimoine : ces vingt sites français emblématiques menacés par le changement climatique",
-          "url": "https://www.tf1info.fr/environnement-ecologie/patrimoine-ces-vingt-sites-francais-emblematiques-menaces-par-le-changement-climatique-2469963.html",
-          "publishedAt": "2026-10-15T04:30:00.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/saint-malo-bretagne-01dcd3-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        }
-      ],
-      "section": "science",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le Réseau action climat publie une étude démontrant l'exposition directe de vingt sites emblématiques français, tels que Versailles et Carcassonne, face aux bouleversements environnementaux.",
-          "Les publications de ce courant soulignent que l'urgence climatique fragilise durablement les monuments et les paysages culturels du pays.",
-          "L'organisation préconise d'associer impérativement des efforts d'adaptation locale à une politique globale de réduction des émissions."
-        ],
-        "centre": [
-          "Un rapport récent pointe l'impact concret des fortes chaleurs, des inondations et du retrait-gonflement des sols sur vingt joyaux du patrimoine national.",
-          "La liste des biens menacés inclut des sites variés, allant des châteaux de la Loire aux citadelles fortifiées et cités corsaires.",
-          "Les risques recensés menacent directement la préservation à long terme de ces infrastructures historiques face aux mutations environnementales."
-        ],
-        "droite": [
-          "Vingt sites patrimoniaux français font l'objet d'une attention particulière suite à la publication d'une étude sur la vulnérabilité environnementale.",
-          "Le document liste des menaces variées incluant la montée des eaux, les canicules et les incendies qui fragilisent la pierre et les sols.",
-          "L'association à l'origine du rapport rappelle que la mitigation des émissions de gaz à effet de serre reste indispensable pour accompagner les solutions locales d'adaptation."
-        ]
-      },
-      "differences": "La gauche intègre désormais explicitement la double nécessité d'adapter les édifices et d'atténuer le changement climatique, tout en illustrant la menace à travers de nouveaux sites comme Versailles ou Carcassonne. Le centre et la droite continuent quant à eux de privilégier une description large de la diversité des infrastructures touchées par la vulnérabilité environnementale et les aléas géologiques.",
       "promptVersion": "sum-2",
       "summarizedArticleCount": 5
     }
