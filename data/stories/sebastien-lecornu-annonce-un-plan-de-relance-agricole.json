@@ -6,13 +6,36 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "73dedd9fc8be",
+      "outletId": "bfmtv",
+      "headline": "Plan de relance agricole: Sébastien Lecornu annonce \"entre 500 et 700 millions d'euros\" pour 2027",
+      "url": "https://www.bfmtv.com/politique/video-plan-de-relance-agricole-sebastien-lecornu-annonce-entre-500-et-700-millions-d-euros-pour-2027_VN-202610150532.html",
+      "publishedAt": "2026-10-15T12:08:44.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/J1S8FyGyJUHhnY2tKB-_Ea1WdvE=/0x0:1280x720/800x0/images/Plan-de-relance-agricole-Sebastien-Lecornu-annonce-entre-500-et-700-millions-d-euros-pour-2027-2365999.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "44d6b6847991",
+      "outletId": "le-monde",
+      "headline": "Plan de relance agricole : Sébastien Lecornu annonce une enveloppe comprise « entre 500 et 700 millions d’euros »",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/15/plan-de-relance-agricole-entre-500-et-700-millions-d-euros-annonces-par-sebastien-lecornu_6794441_823448.html",
+      "publishedAt": "2026-10-15T12:02:53.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/07/46/0/7742/3871/644/322/60/0/55399c9_ftp-1-7t89ils0bs1a-2026-10-07t170951z-1287075031-rc2hynap2p0w-rtrmadp-3-france-protest-prime-minister.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "71552e7462c8",
       "outletId": "ouest-france",
       "headline": "Plan de relance agricole : Sébastien Lecornu annonce le déblocage de 500 à 700 millions d’euros",
       "url": "https://www.ouest-france.fr/economie/agriculture/plan-de-relance-agricole-sebastien-lecornu-annonce-le-deblocage-de-500-a-700-millions-deuros-0fed576a-c880-11f1-9522-1f9ae0711c0a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-15T11:59:29.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYmIwMTJmNGViZGFiYTdmN2M3NjU1YjM3N2MwMjQwYTM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=6ab2b5fdb12773ac56a0b843618c0a6fa7947a6429d24b60192cafc4622a3852",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -24,7 +47,7 @@
       "url": "https://www.lefigaro.fr/conjoncture/crise-agricole-traiter-l-urgence-et-aborder-l-avenir-sebastien-lecornu-annonce-une-enveloppe-entre-500-et-700-millions-d-euros-20261015",
       "publishedAt": "2026-10-15T11:38:10.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/15/3766547f8fd6e53803fbc9a0b19eca990bf3ff11f10751d21fc2be11110f46d3.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -88,6 +111,11 @@
   "section": "economy",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le chef du gouvernement a officialisé un plan de soutien financier destiné au monde paysan pour l'horizon 2027.",
+      "L'aide directe annoncée se situe dans une fourchette allant de 500 à 700 millions d'euros.",
+      "Cette enveloppe vient s'ajouter à des versements antérieurs importants déjà mobilisés pour faire face aux canicules et à la cherté des carburants."
+    ],
     "centre": [
       "Le Premier ministre a dévoilé une enveloppe financière allant de 500 à 700 millions d'euros pour soutenir la paysannerie.",
       "Le secteur fait face à de fortes difficultés économiques en raison des sécheresses successives et des vagues de chaleur estivales.",
@@ -100,7 +128,7 @@
       "Ces nouvelles dispositions s'ajoutent à des aides d'urgence antérieures déjà mobilisées face à la hausse des coûts énergétiques et climatiques."
     ]
   },
-  "differences": "Les médias de centre et de droite adoptent un cadrage largement convergent sur l'annonce gouvernementale, en soulignant de manière similaire l'enveloppe de 500 à 700 millions d'euros et les difficultés climatiques ou économiques des exploitants. Le centre se distingue toutefois par une couverture plus détaillée mentionnant des chiffres globaux plus élevés allant jusqu'à 1,3 milliard d'euros ainsi que la création du pacte Genevard sur la transmission, tandis que la droite insiste davantage sur le cumul de ces nouvelles mesures avec les aides d'urgence déjà versées par le passé.",
+  "differences": "Les camps de la gauche, du centre et de la droite partagent un constat similaire en mettant en avant l'enveloppe de 500 à 700 millions d'euros annoncée par le Premier ministre pour soutenir l'agriculture face aux crises climatiques et économiques. La gauche et la droite insistent toutes deux sur le cumul de ces nouvelles mesures avec des aides d'urgence déjà versées par le passé pour faire face aux canicules et aux coûts des carburants. Le centre se distingue quant à lui par une couverture plus exhaustive qui mentionne des montants globaux potentiellement plus élevés atteignant 1,3 milliard d'euros ainsi que des mesures spécifiques de simplification législative pour la transmission des exploitations.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 9
 }

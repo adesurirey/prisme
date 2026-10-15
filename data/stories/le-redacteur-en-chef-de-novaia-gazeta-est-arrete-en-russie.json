@@ -6,6 +6,29 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "cb675ec22e1a",
+      "outletId": "ouest-france",
+      "headline": "Le rédacteur en chef du média indépendant russe Novaïa Gazeta arrêté en Russie",
+      "url": "https://www.ouest-france.fr/europe/russie/le-redacteur-en-chef-du-media-independant-russe-novaia-gazeta-arrete-en-russie-d374fb40-c888-11f1-b3f5-183597cb1094?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-15T12:56:24.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwOTFhMjJmYzFiZDI1ZDZjODZhNDc3N2MxOWQwODg4ODY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=a00ea227186e978af8aae0469db5aa5ce4a5c829baca7e852f2741538cbeb2c5",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "21124a2ee4de",
+      "outletId": "rfi",
+      "headline": "Russie: arrestation du rédacteur en chef du média indépendant Novaïa Gazeta",
+      "url": "https://www.rfi.fr/fr/europe/20261015-russie-arrestation-du-r%C3%A9dacteur-en-chef-du-m%C3%A9dia-ind%C3%A9pendant-nova%C3%AFa-gazeta",
+      "publishedAt": "2026-10-15T12:12:01.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/29f640d2-2cfc-11ed-9237-005056a90284/w:1024/p:16x9/2022-09-05T091627Z_2061840327_RC2UAW9OU0YL_RTRMADP_3_UKRAINE-CRISIS-RUSSIA-MEDIA.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "b1955289ddfe",
       "outletId": "liberation",
       "headline": "Le rédacteur en chef de «Novaïa Gazeta» arrêté en Russie",
@@ -22,7 +45,7 @@
       "url": "https://www.lefigaro.fr/international/russie-le-redacteur-en-chef-du-media-independant-novaia-gazeta-serguei-sokolov-arrete-apres-une-perquisition-a-son-domicile-20261015",
       "publishedAt": "2026-10-15T11:47:46.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/15/6228a9c7ec53b9060c9a4455def47a1919d3994c04d7847b969379c8f6916b5e.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -48,14 +71,16 @@
     ],
     "centre": [
       "Sergueï Sokolov, responsable de la rédaction de Novaïa Gazeta, a subi une perquisition matinale à son domicile.",
-      "L'intéressé a ensuite été conduit vers les services judiciaires compétents selon les informations communiquées par son média."
+      "L'intéressé a ensuite été conduit vers les services judiciaires compétents selon les informations communiquées par son média.",
+      "La direction fait l'objet de mesures coercitives de la part du pouvoir en raison de ses travaux d'investigation sur les libertés fondamentales.",
+      "Le média employeur est officiellement répertorié par les institutions russes comme instrument sous influence extérieure."
     ],
     "droite": [
       "Le responsable du média contestataire a été appréhendé par les autorités après une fouille de son habitation.",
       "Les équipes journalistiques n'avaient plus de nouvelles de leur directeur depuis la mi-journée, peu avant une séance de travail prévue."
     ]
   },
-  "differences": "Les différents courants s'accordent sur l'interpellation du responsable de Novaïa Gazeta mais accentuent des détails distincts. La gauche privilégie l'annonce brute faite par le média d'opposition, tandis que le centre et la droite précisent les conditions matérielles de l'opération, notamment la perquisition domiciliaire et le transfert vers l'instance judiciaire. Le Figaro met particulièrement en avant la perte de contact avec le journaliste juste avant sa réunion éditoriale, soulignant le caractère subit de l'action.",
+  "differences": "Les différents courants s'accordent sur l'interpellation du responsable de Novaïa Gazeta tout en mettant en valeur des angles distincts. La gauche privilégie l'annonce factuelle de l'arrestation par le journal d'opposition, le centre enrichit le récit en explicitant le contexte répressif et le statut de la publication vis-à-vis du Kremlin, et la droite se focalise sur les aspects pratiques de l'opération policière ainsi que sur la rupture soudaine des contacts avec la rédaction.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 5
 }

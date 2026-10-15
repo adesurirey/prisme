@@ -6,6 +6,28 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "aaa26d73b021",
+      "outletId": "huffpost",
+      "headline": "La True Crime Community, une menace « marginale » en France mais qui inquiète le parquet antiterroriste",
+      "url": "https://www.huffingtonpost.fr/france/article/la-true-crime-community-une-menace-marginale-en-france-mais-qui-inquiete-le-parquet-antiterroriste_340182.html",
+      "publishedAt": "2026-10-15T12:48:01.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/15/496/0/5381/3026/0/0/60/0/b26c457_upload-1-91rnemypqj4b-afp-20261015-d3cd3aj-v1-highres-franceeducationinvestigation.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "73eb6fa596fb",
+      "outletId": "france-24",
+      "headline": "Fusillade à Aubagne : le tireur en détention provisoire, un autre mineur en garde à vue",
+      "url": "https://www.france24.com/fr/france/20261015-fusillade-d-aubagne-d%C3%A9tention-provisoire-pour-le-tireur-un-autre-mineur-en-garde-%C3%A0-vue",
+      "publishedAt": "2026-10-15T12:09:28.000Z",
+      "imageUrl": "https://s.france24.com/media/display/3e1a801c-c719-11f1-9a91-29a2e29ae696/w:1024/p:16x9/37dd1f2b82fb621ac1e17c20e2022b63bec92aa7.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "9fc6913bf78f",
       "outletId": "le-monde",
       "headline": "Tirs dans un collège à Aubagne : un adolescent de 13 ans soupçonné d’avoir été en lien avec le tireur a été placé en garde à vue",
@@ -135,19 +157,19 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un adolescent âgé de treize ans a été placé en garde à vue en lien avec la fusillade survenue dans un établissement scolaire des Bouches-du-Rhône.",
-      "Les investigations s'intéressent particulièrement aux connexions du suspect au sein d'une communauté numérique en ligne obsédée par les massacres."
+      "Le suspect principal écroué a admis son attachement à une mouvance numérique obsédée par les homicides en série dans les établissements scolaires.",
+      "Les autorités judiciaires spécialisées surveillent de près cette communauté marginale mais jugée préoccupante sur le territoire national."
     ],
     "centre": [
-      "Un nouveau mineur a été interpellé et placé en garde à vue dans le cadre de l'enquête menée sur les coups de feu dans un collège d'Aubagne.",
-      "L'information relative à cette arrestation a été validée par les autorités judiciaires compétentes."
+      "Le tireur présumé a été placé en détention provisoire tandis qu'un second collégien subit une mesure de garde à vue.",
+      "Les investigations explorent une piste sur les réseaux sociaux pour identifier d'éventuelles interactions entre mineurs fascinés par des drames similaires."
     ],
     "droite": [
-      "Un autre jeune suspect a été arrêté et placé en garde à vue à la suite des investigations sur l'attaque armée de l'établissement scolaire.",
-      "Cette nouvelle interpellation s'inscrit dans la continuité des recherches menées pour identifier d'éventuels complices ou liens avec le tireur."
+      "Une nouvelle arrestation a eu lieu dans l'enquête sur l'attaque armée survenue dans l'établissement scolaire des Bouches-du-Rhône.",
+      "Les investigations se poursuivent afin de cerner l'entourage du premier suspect et de repérer de possibles complices."
     ]
   },
-  "differences": "Les trois camps s'accordent sur l'interpellation d'un nouvel adolescent placé en garde à vue dans le cadre de l'enquête sur la fusillade d'Aubagne. Le camp de gauche (représenté ici par Le Monde) se distingue en apportant une précision contextuelle sur la piste suivie par les enquêteurs, qui ciblent une communauté en ligne fascinée par les tueries de masse. En revanche, le centre et la droite se contentent de relater l'arrestation du second mineur sans mentionner cette dimension psychologique et numérique.",
+  "differences": "Les trois sensibilités politiques relatent l'évolution de l'enquête judiciaire tout en adoptant des angles différents. La gauche met en lumière l'influence idéologique et psychologique d'une mouvance numérique violente sur le premier auteur des faits. Le centre adopte une démarche factuelle en précisant les hypothèses techniques des enquêteurs concernant les réseaux sociaux, notamment TikTok. La droite se focalise principalement sur la recherche d'éventuels complices et la continuité des investigations policières.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 11
+  "summarizedArticleCount": 13
 }
