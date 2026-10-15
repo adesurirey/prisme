@@ -29,5 +29,19 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Ouverture d'investigations officielles suite à la trouvaille d'un système de captation d'images dans les espaces de toilette réservés au personnel féminin de la marine.",
+      "Une élue influente et engagée pour les questions militaires alerte sur la possible diffusion en ligne des séquences enregistrées."
+    ],
+    "centre": [
+      "Ouverture d'investigations en Australie suite à la mise au jour d'un dispositif de vidéosurveillance dissimulé dans les sanitaires d'un bâtiment de la marine.",
+      "L'affaire suscite un vif émoi et met en lumière des failles graves en matière de respect de la vie privée au sein des armées."
+    ]
+  },
+  "differences": "Le camp de gauche met l'accent sur les déclarations d'une élue concernant la diffusion potentielle des images en ligne, soulignant la gravité des répercussions pour les victimes, tandis que le centre aborde l'incident sous l'angle du scandale institutionnel et de la découverte de l'appareil à bord d'un navire militaire, sans toutefois mentionner une éventuelle mise en ligne.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 2
 }
