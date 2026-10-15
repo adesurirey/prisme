@@ -6,6 +6,17 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "5d55611989ea",
+      "outletId": "france-24",
+      "headline": "Ukraine: \"L'abandon américain?\"",
+      "url": "https://www.france24.com/fr/%C3%A9missions/dans-la-presse/20261015-ukraine-l-abandon-am%C3%A9ricain",
+      "publishedAt": "2026-10-15T06:00:26.000Z",
+      "imageUrl": "https://s.france24.com/media/display/9412b226-c85b-11f1-8895-4dd8ac2cf3bf/w:1024/p:16x9/10-LIBERATION-UKRAINE.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "3303dffd4da5",
       "outletId": "tf1-info",
       "headline": "EN DIRECT - Guerre en Ukraine : la connexion à Starlink \"s'est améliorée\" mais SpaceX maintient une limite d'utilisation",
@@ -43,8 +54,8 @@
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Le réseau satellitaire de SpaceX est devenu indispensable aux forces ukrainiennes pour coordonner leurs opérations et leurs attaques de drones.",
-      "Des restrictions nocturnes sur certaines connexions ont immédiatement perturbé les missions militaires sur le terrain."
+      "Les quotidiens nationaux reviennent sur l'émoi suscité par la réduction de la bande passante satellitaire accordée aux troupes ukrainiennes.",
+      "La question de l'origine exacte des injonctions de bridage reste enveloppée d'un épais brouillard informationnel."
     ],
     "droite": [
       "Le dirigeant ukrainien réclame le plein rétablissement du service internet après des perturbations qu'il qualifie d'erreur majeure sur fond de tensions politiques.",
@@ -52,7 +63,7 @@
       "Les autorités ukrainiennes dépendent également crucialement du renseignement militaire des États-Unis pour anticiper les offensives adverses."
     ]
   },
-  "differences": "Le camp du centre se focalise principalement sur la dimension technique et militaire de la dépendance ukrainienne envers les services de SpaceX ainsi que sur l'impact direct des restrictions sur les opérations de drones. De son côté, le camp de droite, représenté ici par le centre droit, élargit le cadre géopolitique en mettant l'accent sur les déclarations de Volodymyr Zelensky, les tensions avec Donald Trump et la mise en cause directe de l'administration américaine par Elon Musk concernant les choix de limitation des flux.",
+  "differences": "Le camp du centre met l'accent sur les incertitudes diplomatiques et le flou persistant entourant les ordres de restriction du réseau, tandis que le camp de droite maintient son attention sur les accusations croisées entre Kiev, la direction de SpaceX et la Maison-Blanche.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }
