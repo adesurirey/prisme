@@ -6,6 +6,40 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "94917386e570",
+      "outletId": "europe-1",
+      "headline": "Mobilisation du 17 octobre : le préfet de police de Paris interdit un trajet de manifestation, propose une alternative",
+      "url": "https://www.europe1.fr/police-justice/mobilisation-du-17-octobre-le-prefet-de-police-de-paris-interdit-un-trajet-de-manifestation-propose-une-alternative-1151405?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-15T14:26:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/15/15/080_hl_jhelaine_3323979_1_6ad0d81663622.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "d14b56b7fcbb",
+      "outletId": "franceinfo",
+      "headline": "Manifestation du 17 octobre à Paris : le préfet de police interdit un parcours et propose une alternative refusée par les organisateurs",
+      "url": "https://www.franceinfo.fr/economie/greve/manifestation-du-17-octobre-a-paris-le-prefet-de-police-interdit-un-parcours-et-propose-une-alternative-refusee-par-les-organisateurs_8238844.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-15T14:18:40.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/13pDVlu-KzNJhf_NWcE3Cf8x5NU/0x52:1024x628/432x243/filters:format(jpg)/2026/10/15/6ad0e06a085c6001970242.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "6091ac9bb02e",
+      "outletId": "le-monde",
+      "headline": "Manifestation du 17 octobre : redoutant des violences, la Préfecture de police de Paris propose un autre parcours",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/15/manifestation-du-17-octobre-redoutant-des-violences-la-prefecture-de-police-de-paris-propose-un-parcours-alternatif_6794459_3224.html",
+      "publishedAt": "2026-10-15T14:12:27.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/07/500/0/6000/3000/644/322/60/0/4034ded_ftp-1-vya64tzshgd8-2026-10-07t095747z-1724510619-rc29ynayj9qi-rtrmadp-3-france-protest.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "ab2e3d359a5e",
       "outletId": "franceinfo",
       "headline": "Mouvement du 17 octobre : entre 200 et 300 actions attendues samedi dans tout le pays contre la vie chère",
@@ -26,6 +60,17 @@
       "frontPage": false,
       "kind": "news",
       "section": "society"
+    },
+    {
+      "id": "f3c8efc5b2f4",
+      "outletId": "le-figaro",
+      "headline": "«Des risques de troubles à l’ordre public» : le préfet de police de Paris interdit un trajet de manifestation pour le 17 octobre, mais propose une alternative",
+      "url": "https://www.lefigaro.fr/actualite-france/des-risques-de-troubles-a-l-ordre-public-le-prefet-de-police-de-paris-interdit-un-trajet-de-manifestation-pour-le-17-octobre-mais-propose-une-alternative-20261015",
+      "publishedAt": "2026-10-15T13:19:52.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/15/abe83197cb686f1d3579df1be469736df9f726ab3c4d3a2b7f8e63f98ac155a8.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "cc0637da94f3",
@@ -51,5 +96,26 @@
       "everFrontPage": true
     }
   ],
-  "section": "society"
+  "section": "politics",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Plus de mille actions et rassemblements sont recensés sur l'ensemble du territoire pour protester contre la hausse du coût de la vie et le gel des rémunérations publiques.",
+      "Le cortège parisien prévu entre la place de la République et celle de la Concorde a été modifié par les autorités en raison de craintes sécuritaires.",
+      "Les organisateurs de la mobilisation dans la capitale ont rejeté l'itinéraire de remplacement suggéré par la préfecture de police."
+    ],
+    "centre": [
+      "Entre deux cents et trois cents rassemblements locaux sont programmés dans les différentes régions françaises.",
+      "Les services de sécurité anticipent une forte affluence hors de la région parisienne pour cette journée de contestation sociale.",
+      "La préfecture de police de Paris a pris un arrêté pour interdire le parcours initialement déclaré par les manifestants."
+    ],
+    "droite": [
+      "La préfecture de police a invoqué des risques avérés de débordements pour interdire le trajet initialement choisi par les contestataires.",
+      "Un parcours de substitution reliant la place de la République à celle de Nation a été mis sur la table par les autorités.",
+      "Face au refus des organisateurs d'accepter l'itinéraire alternatif, l'arrêté d'interdiction du trajet de départ a été officiellement appliqué."
+    ]
+  },
+  "differences": "Les différents bords politiques partagent un constat factuel similaire autour des tensions liées à l'itinéraire parisien, mais la droite et le centre droit insistent davantage sur les impératifs de maintien de l'ordre et la responsabilité des organisateurs face aux propositions alternatives de la préfecture, tandis que la gauche et le centre gauche mettent l'accent sur l'ampleur nationale du mouvement social contre la vie chère et le refus des contestataires face aux restrictions imposées.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 8
 }
