@@ -6,6 +6,53 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "aba140e472fe",
+      "outletId": "le-figaro",
+      "headline": "Pour la première fois depuis 14 ans, la France ne comptera plus aucun panda sur son territoire à la fin de l’année",
+      "url": "https://www.lefigaro.fr/animaux/pour-la-premiere-fois-depuis-14-ans-la-france-ne-comptera-plus-aucun-panda-sur-son-territoire-a-la-fin-de-l-annee-20261015",
+      "publishedAt": "2026-10-15T13:51:44.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2003_crop/2026/10/15/5fac6913526c2a6aaf8c62fcf7fbddaa14357f62d5347afaddd0a9495a50555c.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "0a1bb0a886ea",
+      "outletId": "le-monde",
+      "headline": "Les deux derniers pandas du ZooParc de Beauval partiront en Chine le 17 décembre",
+      "url": "https://www.lemonde.fr/planete/article/2026/10/15/les-deux-derniers-pandas-du-zooparc-de-beauval-partiront-en-chine-le-17-decembre_6794454_3244.html",
+      "publishedAt": "2026-10-15T13:39:33.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/15/242/0/3932/1966/644/322/60/0/990187e_upload-1-4av6ufxfp6gp-000-33e99h8.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
+    {
+      "id": "5fe39c1ef103",
+      "outletId": "europe-1",
+      "headline": "Les deux derniers pandas hébergés en France partiront bientôt en Chine",
+      "url": "https://www.europe1.fr/animaux/les-deux-derniers-pandas-heberges-en-france-partiront-bientot-en-chine-1151252?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-15T13:04:58.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/15/14/058_2612397_1_6ad0c712d89ba.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "9b88dda58e84",
+      "outletId": "20-minutes",
+      "headline": "Zoo de Beauval : Les deux derniers pandas visibles en France partiront en Chine le 17 décembre",
+      "url": "https://www.20minutes.fr/animaux/4254625-20261015-zoo-beauval-deux-derniers-pandas-visibles-france-partiront-chine-17-decembre?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-15T12:18:59.000Z",
+      "imageUrl": "https://img.20mn.fr/UFDLmPVESh67FUqkNpgdOyk/1200x768_une-photo-prise-le-9-juin-2026-montre-le-parc-zoologique-de-beauval-a-saint-aignan-dans-le-centre-de-la-france-le-zoo-de-beauval-fonde-en-1980-par-francoise-delord-est-classe-parmi-les-5-plus-beaux-zoos-du-monde-souvant-guillaume-sipa-02832-credit-guillaume-souvant-sipa-2606111413",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
+    {
       "id": "660d2000500b",
       "outletId": "franceinfo",
       "headline": "Les deux pandas du zoo de Beauval quitteront la France pour la Chine le 17 décembre, un nouveau couple arrivera \"début 2027\"",
@@ -28,5 +75,25 @@
       "section": "science"
     }
   ],
-  "section": "world"
+  "section": "science",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Les jumelles Yuandudu et Huanlili quitteront le parc du Loir-et-Cher le 17 décembre pour rejoindre l'Asie dans le but de se reproduire.",
+      "Une interruption temporaire de la présence de ces ursidés sur le territoire est actée avant l'accueil d'un nouveau duo prévu pour le début de l'année 2027.",
+      "Le responsable de la structure animalière a précisé que cette future convention s'étendra sur une période de dix années."
+    ],
+    "centre": [
+      "Le départ pour la Chine des deux spécimens fin décembre marque la fermeture d'un chapitre pour le parc zoologique.",
+      "L'établissement français se retrouve momentanément dépourvu de ces ambassadeurs diplomatiques avant un renouvellement ultérieur."
+    ],
+    "droite": [
+      "La France se retrouvera totalement dépourvue de ces mammifères d'ici la fin de l'année, une situation inédite depuis plus d'une décennie.",
+      "Le transfert des deux animaux nés en 2021 a été planifié de longue date pour la mi-décembre.",
+      "Une brève éclipse sans aucun représentant de cette espèce sur le sol national précédera l'arrivée d'un nouveau duo en 2027 pour une décennie."
+    ]
+  },
+  "differences": "La droite, représentée par Le Figaro et Europe 1, insiste fortement sur le caractère historique et inédit du vide temporaire laissé en France, soulignant qu'il n'y aura plus aucun panda sur le territoire pour la première fois depuis 2012. En revanche, la gauche (via Le Monde, 20 Minutes et franceinfo) et le centre (Le Parisien) mettent davantage l'accent sur la suite des événements, notamment le projet de reproduction en Chine et l'arrivée rapide d'un nouveau couple dès le début de l'année 2027 pour une durée de dix ans, tout en rappelant l'identité des jumelles nées en 2021.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 6
 }
