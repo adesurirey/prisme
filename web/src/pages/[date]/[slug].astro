@@ -7,6 +7,7 @@ import {
   exposureShares,
   pickStoryImage,
   reportingOutletIds,
+  SECTION_LABELS,
 } from '@prisme/domain';
 import ArticleList from '../../components/ArticleList';
 import BlindspotBadge from '../../components/BlindspotBadge';
@@ -155,6 +156,11 @@ const description =
             <ImageCredit name={imageOutlet.name} />
           </div>
           <div class="relative px-5 pt-36 pb-4 sm:pt-[240px] sm:pb-5">
+            {story.section && (
+              <p class="mb-1 text-[11px] uppercase tracking-[0.08em] text-muted sm:text-[13px]">
+                {SECTION_LABELS[story.section]}
+              </p>
+            )}
             <h1 class="text-[24px] font-bold leading-tight tracking-[-0.02em] sm:text-[36px] sm:leading-snug">
               {story.title}
             </h1>
@@ -181,6 +187,11 @@ const description =
         </figure>
       ) : (
         <>
+          {story.section && (
+            <p class="mb-1 text-[11px] uppercase tracking-[0.08em] text-muted sm:text-[13px]">
+              {SECTION_LABELS[story.section]}
+            </p>
+          )}
           <h1 class="text-[28px] font-bold leading-snug tracking-[-0.02em] sm:text-[36px]">
             {story.title}
           </h1>
