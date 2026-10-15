@@ -6,6 +6,17 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "721300879941",
+      "outletId": "bfmtv",
+      "headline": "Les étudiants de HEC Paris se mobilisent en soutien des lycéens en colère",
+      "url": "https://www.bfmtv.com/societe/video-les-etudiants-de-hec-paris-se-mobilisent-en-soutien-des-lyceens-en-colere_VN-202610150409.html",
+      "publishedAt": "2026-10-15T09:44:26.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/2DGG_lB2b1IFMOBu4Ddqpdhz18g=/0x0:1280x720/800x0/images/Les-etudiants-de-HEC-Paris-se-mobilisent-en-soutien-des-lyceens-en-colere-2365837.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "50be0545933d",
       "outletId": "huffpost",
       "headline": "« Nos valeurs ne sont pas cotées en Bourse » : HEC bloqué en soutien au mouvement lycéen",
@@ -45,15 +56,19 @@
   "summaries": {
     "gauche": [
       "Des élèves de la prestigieuse école de commerce ont partiellement entravé l'accès à leur campus.",
-      "cette action a été entreprise en signe d'appui à la contestation menée par les lycéens."
+      "Cette action a été entreprise en signe d'appui à la contestation menée par les lycéens."
+    ],
+    "centre": [
+      "Le campus d'une grande école de commerce francilienne a connu des perturbations ce jeudi matin.",
+      "Une partie des élèves s'est mobilisée pour manifester son appui au mouvement de colère lycéen."
     ],
     "droite": [
       "Un petit groupe d'élèves a mis en place un barrage matinal pour se joindre au mouvement contestataire.",
-      "l'administration et les autorités publiques ont constaté une mobilisation limitée en termes d'effectifs.",
-      "les participants ont précisé que leur démarche relevait de la solidarité externe plutôt que de revendications internes."
+      "L'administration et les autorités publiques ont constaté une mobilisation limitée en termes d'effectifs.",
+      "Les participants ont précisé que leur démarche relevait de la solidarité externe plutôt que de revendications internes."
     ]
   },
-  "differences": "La gauche met en avant la dimension contestataire et les slogans anticapitalistes des étudiants en solidarité avec les lycéens, tandis que la droite, à l'instar du Figaro et de CNews, insiste sur le nombre restreint de participants et précise que les protestataires ne critiquent pas leurs propres conditions d'études, tout en relayant des controverses périphériques liées à l'établissement.",
+  "differences": "La gauche et le centre soulignent la dimension solidaire de l'action des étudiants envers les lycéens et l'impact des perturbations sur le campus, tandis que la droite, à l'instar du Figaro et de CNews, insiste sur le nombre restreint de participants pour relativiser la portée du mouvement et précise que la contestation ne vise pas les conditions internes de l'établissement.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }
