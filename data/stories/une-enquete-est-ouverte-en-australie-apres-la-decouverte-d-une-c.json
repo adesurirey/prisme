@@ -6,6 +6,18 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "6fae9f475339",
+      "outletId": "le-figaro",
+      "headline": "Australie : enquête après la découverte d’une caméra à bord d’un navire militaire dans les douches des femmes",
+      "url": "https://www.lefigaro.fr/international/australie-enquete-apres-la-decouverte-d-une-camera-a-bord-d-un-navire-militaire-dans-les-douches-des-femmes-20261015",
+      "publishedAt": "2026-10-15T07:49:32.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/15/914ec7668b64e34503fce1eeccb8ae7d966a67c355cacca087262c55b06e0fb8.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "59540c6a6a86",
       "outletId": "20-minutes",
       "headline": "Australie : Une caméra découverte dans des douches de femmes de la marine",
@@ -39,9 +51,13 @@
     "centre": [
       "Ouverture d'investigations en Australie suite à la mise au jour d'un dispositif de vidéosurveillance dissimulé dans les sanitaires d'un bâtiment de la marine.",
       "L'affaire suscite un vif émoi et met en lumière des failles graves en matière de respect de la vie privée au sein des armées."
+    ],
+    "droite": [
+      "La marine australienne ordonne l'inspection généralisée de l'ensemble de ses installations sanitaires navigantes après la découverte d'un appareil espion.",
+      "Un membre du personnel militaire est d'ores et déjà ciblé comme suspect principal dans le cadre de cette affaire."
     ]
   },
-  "differences": "Le camp de gauche met l'accent sur les déclarations d'une élue concernant la diffusion potentielle des images en ligne, soulignant la gravité des répercussions pour les victimes, tandis que le centre aborde l'incident sous l'angle du scandale institutionnel et de la découverte de l'appareil à bord d'un navire militaire, sans toutefois mentionner une éventuelle mise en ligne.",
+  "differences": "Le Figaro, du côté de la droite, se focalise sur les mesures concrètes prises par l'institution militaire, notamment l'inspection de tous les navires et l'identification d'un suspect, tandis que la gauche insiste sur les inquiétudes relatives à la diffusion potentielle des images et que le centre met en avant le scandale éthique et les failles de protection de la vie privée.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }
