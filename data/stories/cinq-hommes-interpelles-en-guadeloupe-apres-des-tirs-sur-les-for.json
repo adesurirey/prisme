@@ -6,6 +6,28 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "0ce1566d4213",
+      "outletId": "franceinfo",
+      "headline": "Cinq hommes ont été écroués, dont un mineur, après des tirs contre les forces de l'ordre en Guadeloupe",
+      "url": "https://www.franceinfo.fr/france/guadeloupe/cinq-hommes-ont-ete-ecroues-dont-un-mineur-apres-des-tirs-contre-les-forces-de-l-ordre-en-guadeloupe_8238046.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-15T06:04:04.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/iZl9A0anc-JrYN_VTDf90nfOqfM/0x319:5493x3408/432x243/filters:format(jpg)/2026/10/15/6ad06c4c5f185239934832.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "102f4e046ad4",
+      "outletId": "le-figaro",
+      "headline": "Tirs contre les forces de l’ordre en Guadeloupe : cinq suspects écroués, dont un mineur",
+      "url": "https://www.lefigaro.fr/actualite-france/tirs-contre-les-forces-de-l-ordre-en-guadeloupe-cinq-suspects-ecroues-dont-un-mineur-20261015",
+      "publishedAt": "2026-10-15T05:24:29.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1997_crop/2026/10/15/3fae1ea73c70d8cdefaed4d82ea2f8ed0d0c702e187dc190ee712f7de1048f35.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "c825f34bcc6b",
       "outletId": "bfmtv",
       "headline": "\"Deux équipes de braqueurs\": cinq hommes écroués, dont un mineur, après des tirs contre les forces de l'ordre en Guadeloupe",
@@ -27,19 +49,36 @@
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
+    },
+    {
+      "id": "6f878101d5c8",
+      "outletId": "le-parisien",
+      "headline": "« Un cap a été franchi » : cinq hommes écroués, dont un mineur, en Guadeloupe après des tirs contre les forces de l’ordre",
+      "url": "https://www.leparisien.fr/guadeloupe-971/un-cap-a-ete-franchi-cinq-hommes-ecroues-dont-un-mineur-en-guadeloupe-apres-des-tirs-contre-les-forces-de-lordre-15-10-2026-5IPSYFJT4ZHXVJEHEQ2DLS2TIQ.php",
+      "publishedAt": "2026-10-14T22:00:00.000Z",
+      "frontPage": false,
+      "dayPrecision": true,
+      "kind": "news",
+      "section": "misc"
     }
   ],
   "section": "misc",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Cinq individus, dont un mineur, ont été incarcérés suite à des tirs visant les services de police et de gendarmerie.",
+      "L'autorité judiciaire indique que les mis en cause se répartissent en deux structures distinctes spécialisées dans les vols à main armée."
+    ],
     "centre": [
-      "Cinq individus, incluant un mineur et répartis en deux groupes de braqueurs, ont été placés en détention provisoire.",
-      "Des coups de feu ont été essuyés par les forces de l'ordre guadeloupéennes lors de récents événements.",
-      "La justice locale qualifie la situation de franchissement d'un cap dans la violence.",
-      "Le problème persistant de la prolifération des armes est lié aux réseaux de trafic de stupéfiants dans l'archipel."
+      "La mise en détention provisoire de cinq personnes, incluant un adolescent, a été prononcée après des agressions par armes à feu contre les autorités.",
+      "Les enquêteurs rattachent les suspects à deux cellules de braqueurs distinctes opérant dans l'archipel."
+    ],
+    "droite": [
+      "Cinq individus âgés de 16 à 44 ans ont été mis en examen et écroués à la suite d'affiliations à des bandes criminelles.",
+      "Deux militaires du GIGN ont été blessés lors d'une opération aux Abymes, entraînant l'annonce de renforts pour l'archipel."
     ]
   },
-  "differences": "Le sujet est couvert exclusivement par des médias centristes, ce qui ne permet pas d'établir de comparaison inter-camps. Les publications se concentrent sur les aspects factuels des interpellations tout en soulignant la gravité institutionnelle de la situation sécuritaire liée aux narcotrafics dans les Antilles.",
+  "differences": "La droite, représentée par Le Figaro, se distingue en apportant des détails opérationnels absents des autres publications, notamment la blessure de deux gendarmes du GIGN et l'annonce de renforts sécuritaires. Les camps du centre et de la gauche partagent une couverture plus sobre centrée sur le profil des mis en cause, qualifiés de membres de deux équipes de braqueurs distinctes.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 5
 }

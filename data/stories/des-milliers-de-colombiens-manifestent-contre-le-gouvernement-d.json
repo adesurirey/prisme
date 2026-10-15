@@ -6,6 +6,29 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "dbf704b35fea",
+      "outletId": "le-figaro",
+      "headline": "Drapeau américain brûlé, «pays livré à Israël»: des milliers de Colombiens dans les rues contre leur nouveau gouvernement d’ultra-droite",
+      "url": "https://www.lefigaro.fr/international/drapeau-americain-brule-pays-livre-a-israel-des-milliers-de-colombiens-dans-les-rues-contre-leur-nouveau-gouvernement-d-ultra-droite-20261015",
+      "publishedAt": "2026-10-15T06:51:22.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/15/482c277e023d6e65fd15f989a28c52f25b166b69a644a48df616981df8c0ad68.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "a865a19289be",
+      "outletId": "rfi",
+      "headline": "Colombie: des milliers de manifestants défilent contre le nouveau gouvernement d'extrême droite",
+      "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261015-colombie-des-milliers-de-manifestants-d%C3%A9filent-contre-le-nouveau-gouvernement-d-extr%C3%AAme-droite",
+      "publishedAt": "2026-10-15T06:19:50.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/1144afd4-c85b-11f1-a9be-2d1c143cdef3/w:1024/p:16x9/AP26287715930412.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "6236f908f0a6",
       "outletId": "france-24",
       "headline": "Colombie : des milliers de manifestants dans la rue contre le durcissement du gouvernement de droite",
@@ -32,12 +55,17 @@
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Plusieurs milliers de personnes ont défilé mercredi dans les rues de Bogota pour exprimer leur opposition aux orientations politiques du président Abelardo de la Espriella.",
-      "Le chef de l'État, investi en août dernier, suscite l'inquiétude en raison de son rapprochement diplomatique avec Washington et de sa volonté de défaire les acquis sociaux de son prédécesseur.",
-      "Un climat d'inquiétude prévaut dans le pays, alimenté par la signature récente d'un décret modifiant les règles d'intervention des forces de l'ordre face aux mouvements sociaux."
+      "Des milliers de personnes ont manifesté à travers le pays pour s'opposer au nouveau gouvernement d'extrême droite.",
+      "Le mouvement de contestation rassemble syndicats, enseignants et étudiants, ainsi que le parti de l'ancien président.",
+      "Les participants dénoncent les projets de réforme présidentiels touchant la santé, l'éducation et l'environnement."
+    ],
+    "droite": [
+      "Des milliers de Colombiens ont battu le pavé dans plusieurs agglomérations pour contester l'exécutif en place.",
+      "La contestation a notamment été impulsée par l'opposition de gauche menée par l'ancien chef de l'État.",
+      "Le cortège a vu converger des syndicats, des organisations féministes, des étudiants et des communautés indigènes."
     ]
   },
-  "differences": "Seul le camp centriste traite de ces manifestations en Colombie, ce qui ne permet pas d'établir de comparaison inter-camps. Les articles mettent en avant la mobilisation populaire contre le virage à droite de l'exécutif et soulignent les craintes suscitées par les nouvelles mesures sécuritaires.",
+  "differences": "Les deux camps s'accordent sur l'ampleur de la mobilisation populaire contre le pouvoir en place, mais la droite qualifie explicitement le gouvernement d'ultra-droite et met en avant la figure de l'ancien président Gustavo Petro ainsi que des gestes radicaux comme le drapeau américain brûlé, tandis que le centre détaille davantage les contestations sectorielles liées aux réformes de l'éducation, de la santé et de l'environnement.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 4
 }

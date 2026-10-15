@@ -6,6 +6,17 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "52b5d02aec92",
+      "outletId": "le-figaro",
+      "headline": "Journaliste japonais arrêté en Russie : Tokyo rejette les accusations d’espionnage",
+      "url": "https://www.lefigaro.fr/international/journaliste-japonais-arrete-en-russie-tokyo-rejette-les-accusations-d-espionnage-20261015",
+      "publishedAt": "2026-10-15T05:25:04.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2183_crop/2026/10/15/f40f46a81caf52b4222fc5f98428db94324828d6f27e612c6e081c8fdab3ae7d.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "4d6c1da06505",
       "outletId": "la-croix",
       "headline": "Guerre en Ukraine : le Kremlin accuse le Japon d’espionnage ; possible attaque russe sur un pétrolier",
@@ -56,17 +67,21 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le gouvernement nippon dément formellement les accusations d'espionnage formulées par Moscou à l'encontre d'un reporter.",
-      "Un journaliste travaillant pour la publication Hokkaido Shimbun a été interpellé par les autorités russes.",
-      "Cette affaire s'inscrit dans le suivi continu du conflit en Ukraine et de ses répercussions géopolitiques."
+      "Le pouvoir exécutif nippon rejette avec force les allégations d'espionnage portées par Moscou contre un journaliste.",
+      "Un reporter employé par le journal Hokkaido Shimbun a été appréhendé par les services de sécurité russes.",
+      "Cet événement intervient dans le cadre des répercussions géopolitiques globales liées à la guerre en Ukraine."
     ],
     "centre": [
-      "Moscou impute des actes d'espionnage à un journaliste japonais, une allégation rejetée par Tokyo.",
-      "La dirigeante nippone a officiellement réfuté l'implication de son ressortissant dans de telles activités.",
-      "Parallèlement, les tensions régionales se manifestent aussi par des incidents maritimes en mer Noire enquêtés par la Roumanie."
+      "Moscou accuse un reporter japonais d'espionnage, une version formellement réfutée par les autorités de Tokyo.",
+      "L'exécutif nippon défend son ressortissant et nie toute implication dans des actes répréhensibles.",
+      "La situation s'inscrit dans un climat de tensions accrues, marqué également par des incidents maritimes en mer Noire."
+    ],
+    "droite": [
+      "La cheffe du gouvernement japonais a pris la défense du journaliste Yuki Imaï, incarcéré sur l'île de Sakhaline.",
+      "Le Japon a convoqué le représentant diplomatique russe pour exiger un procès équitable et assurer la protection de son citoyen."
     ]
   },
-  "differences": "Le camp du centre met l'accent sur le contexte global du conflit en Ukraine, en associant l'affaire de l'arrestation du journaliste japonais à des incidents maritimes en mer Noire, tandis que la gauche se focalise plus strictement sur la situation personnelle du reporter du Hokkaido Shimbun et le démenti des autorités de Tokyo. Aucun média de droite n'a couvert ce sujet dans la sélection.",
+  "differences": "Le camp de droite, illustré par Le Figaro, se focalise sur l'action diplomatique directe de Tokyo, notamment la convocation de l'ambassadeur russe et la défense politique de Yuki Imaï. Le centre élargit la perspective en reliant cette arrestation à des tensions régionales plus larges comme les incidents en mer Noire, tandis que la gauche adopte un angle plus centré sur l'individu et le démenti institutionnel initial.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 5
 }

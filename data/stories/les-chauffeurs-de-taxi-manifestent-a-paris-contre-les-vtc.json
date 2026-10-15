@@ -6,6 +6,28 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "b5f69398b44a",
+      "outletId": "tf1-info",
+      "headline": "Aéroports, \"zones blanches\", \"contrôles plus stricts\"... Pourquoi les taxis manifestent-ils à Paris aujourd'hui ?",
+      "url": "https://www.tf1info.fr/societe/aeroports-zones-blanches-controles-plus-stricts-pourquoi-les-taxis-manifestent-a-paris-ce-jeudi-15-octobre-2026-2470064.html",
+      "publishedAt": "2026-10-15T06:59:48.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/682/taxi-parisien-illustration-e76c74-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "7edd681dacce",
+      "outletId": "bfmtv",
+      "headline": "Les taxis manifestent contre la hausse du carburant et de la concurrence déloyale avec les plateformes de VTC",
+      "url": "https://www.bfmtv.com/economie/video-les-taxis-manifestent-contre-la-hausse-du-carburant-et-de-la-concurrence-deloyale-avec-les-plateformes-de-vtc_VN-202610150267.html",
+      "publishedAt": "2026-10-15T06:58:47.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/efVTMF2yfr_FGAAUIKzm0fBT4oM=/0x0:1280x720/800x0/images/Les-taxis-manifestent-contre-la-hausse-du-carburant-et-de-la-concurrence-deloyale-avec-les-plateformes-de-VTC-2365699.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "1835667b8e84",
       "outletId": "franceinfo",
       "headline": "Les taxis manifestent à Paris contre le \"chaos\" des VTC dans les aéroports parisiens",
@@ -49,22 +71,39 @@
       "frontPage": false,
       "kind": "news",
       "section": "economy"
+    },
+    {
+      "id": "7921dc18ba4d",
+      "outletId": "le-parisien",
+      "headline": "Manifestation de taxis en Île-de-France : les axes à éviter ce jeudi",
+      "url": "https://www.leparisien.fr/paris-75/manifestation-de-taxis-en-ile-de-france-les-axes-a-eviter-ce-jeudi-15-10-2026-QFXZZF3VWZE7POGT3BVD6AM7ZE.php",
+      "publishedAt": "2026-10-14T22:00:00.000Z",
+      "frontPage": false,
+      "dayPrecision": true,
+      "kind": "news",
+      "section": "society"
     }
   ],
   "section": "economy",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Près de deux mille conducteurs protestent ce jeudi dans la capitale pour exprimer leur exaspération.",
-      "Le mouvement cible particulièrement les aéroports franciliens, décrits comme des zones de désorganisation totale."
+      "Près de deux mille conducteurs se mobilisent dans la capitale pour manifester leur colère.",
+      "Le mouvement cible particulièrement les aéroports franciliens, qualifiés de zones de désorganisation totale.",
+      "Le collectif Team Taxi dénonce l'anarchie instaurée par les plateformes de transport de personnes."
+    ],
+    "centre": [
+      "Le rassemblement a débuté à l'aube depuis la Porte Maillot en direction de l'aéroport Charles de Gaulle.",
+      "Les manifestants protestent contre la hausse du carburant et la concurrence jugée déloyale des VTC.",
+      "La mobilisation est annoncée comme reconductible jusqu'à samedi et rassemble plusieurs centaines à deux mille participants."
     ],
     "droite": [
-      "Un collectif professionnel appelle à la mobilisation entre Paris et Roissy afin de dénoncer des pratiques de marché jugées inéquitables.",
-      "Les participants réclament une intervention publique plus ferme et un renforcement des vérifications visant les plateformes numériques.",
-      "L'action de contestation est planifiée pour durer plusieurs jours, avec un départ matinal depuis la Porte Maillot."
+      "Un appel à la contestation est lancé par un collectif professionnel pour relier Paris à Roissy.",
+      "Les protestataires pointent du doigt des pratiques de marché inéquitables et réclament des contrôles renforcés.",
+      "L'action, lancée depuis la Porte Maillot, est prévue pour durer plusieurs jours avec un caractère reconductible."
     ]
   },
-  "differences": "Les médias de gauche se focalisent principalement sur l'ampleur de la colère et la perturbation des zones aéroportuaires, tandis que la droite développe davantage les revendications structurelles portées par le collectif Team Taxi, en insistant sur la demande de régulation et les accusations de concurrence déloyale à l'encontre des plateformes.",
+  "differences": "La gauche met principalement l'accent sur le chaos et l'anarchie générés par les VTC dans les aéroports tout en soulignant l'ampleur de la colère. Le centre adopte une approche factuelle en mentionnant à la fois les revendications économiques, comme la hausse du carburant, et les aspects logistiques de la manifestation. La droite et le centre droit insistent davantage sur les revendications structurelles, la demande d'une régulation publique plus ferme et la nécessité d'intensifier les contrôles face à la concurrence jugée déloyale des plateformes numériques.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 7
 }

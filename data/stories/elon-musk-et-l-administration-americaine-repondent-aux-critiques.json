@@ -6,6 +6,17 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "9b84d0133b2e",
+      "outletId": "huffpost",
+      "headline": "Elon Musk suggère que Donald Trump est derrière les restrictions d’utilisation de Starlink en Ukraine",
+      "url": "https://www.huffingtonpost.fr/international/article/elon-musk-suggere-que-donald-trump-est-derriere-les-restrictions-d-utilisation-de-starlink-en-ukraine_340034.html",
+      "publishedAt": "2026-10-15T06:10:15.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2025/12/07/50/0/1200/675/0/0/60/0/a06500d_upload-1-iodg4ywmunl2-afp-20251119-84jg4jh-v1-midres-presidentdonaldtrumpdeliversremarksattheussaudii.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "5d55611989ea",
       "outletId": "france-24",
       "headline": "Ukraine: \"L'abandon américain?\"",
@@ -26,6 +37,18 @@
       "frontPage": false,
       "kind": "live",
       "section": "world"
+    },
+    {
+      "id": "7828860c291e",
+      "outletId": "20-minutes",
+      "headline": "Guerre en Ukraine : Les ralentissements de Starshield sont le fait du gouvernement américain, selon Musk",
+      "url": "https://www.20minutes.fr/monde/ukraine/4254419-20261015-guerre-ukraine-ralentissements-starshield-fait-gouvernement-americain-selon-musk?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-14T23:07:31.000Z",
+      "imageUrl": "https://img.20mn.fr/Y_z9uthaT1e5cqqIV2Bvdyk/1200x768_elon-musk-prend-la-parole-lors-d-un-evenement-marquant-le-lancement-du-site-america-gov-le-mardi-29-septembre-2026-a-washington-ap-photo-mark-schiefelbein-dcms231-26272760627890-2609292309",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "49e743666907",
@@ -53,17 +76,21 @@
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "La presse de gauche rapporte que le milliardaire à la tête de l'entreprise spatiale pointe directement la responsabilité de l'administration américaine dans la bride du réseau.",
+      "Les publications soulignent que ces restrictions techniques ont immédiatement pénalisé les opérations des drones ukrainiens face aux forces russes."
+    ],
     "centre": [
-      "Les quotidiens nationaux reviennent sur l'émoi suscité par la réduction de la bande passante satellitaire accordée aux troupes ukrainiennes.",
-      "La question de l'origine exacte des injonctions de bridage reste enveloppée d'un épais brouillard informationnel."
+      "Les quotidiens généralistes continuent de questionner le rôle exact de Washington dans la mise en place de ces limitations de connexion.",
+      "Le débat éditorial s'interroge sur un possible désengagement progressif des alliés occidentaux dans le conflit."
     ],
     "droite": [
-      "Le dirigeant ukrainien réclame le plein rétablissement du service internet après des perturbations qu'il qualifie d'erreur majeure sur fond de tensions politiques.",
-      "Le fondateur de l'entreprise rejette la responsabilité des limitations sur les autorités américaines, affirmant que les décisions émanent de l'exécutif.",
-      "Les autorités ukrainiennes dépendent également crucialement du renseignement militaire des États-Unis pour anticiper les offensives adverses."
+      "Le dirigeant ukrainien exige le rétablissement total de la connexion internet et qualifie les perturbations récentes de lourde erreur tactique.",
+      "Le fondateur de l'entreprise impute formellement la décision de brider le service à un ordre émanant de l'exécutif américain.",
+      "Les analyses conservatrices rappellent la dépendance vitale des forces de Kiev envers les services de renseignement des États-Unis."
     ]
   },
-  "differences": "Le camp du centre met l'accent sur les incertitudes diplomatiques et le flou persistant entourant les ordres de restriction du réseau, tandis que le camp de droite maintient son attention sur les accusations croisées entre Kiev, la direction de SpaceX et la Maison-Blanche.",
+  "differences": "Le camp de gauche met en avant la mise en cause directe de l'administration américaine par le dirigeant de SpaceX, alors que le centre insiste sur le flou géopolitique entourant ces décisions et les interrogations sur le soutien occidental. De son côté, la droite maintient son focal sur les tensions directes entre Kiev et les autorités américaines, tout en soulignant la vulnérabilité stratégique ukrainienne.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 6
 }

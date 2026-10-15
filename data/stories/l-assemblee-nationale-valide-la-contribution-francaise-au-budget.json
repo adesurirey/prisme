@@ -6,13 +6,46 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "6066b456a62a",
+      "outletId": "europe-1",
+      "headline": "Les députés adoptent la contribution française au budget de l'UE",
+      "url": "https://www.europe1.fr/economie/les-deputes-adoptent-la-contribution-francaise-au-budget-de-lue-1150259?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-15T05:47:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/15/07/080_hl_xbouzas_3338468_1_6ad061ddc5fd6.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "eb4fa5811bda",
+      "outletId": "cnews",
+      "headline": "Budget 2027 : une contribution de 30,9 milliards d'euros en faveur de l'UE adoptée par les députés",
+      "url": "https://www.cnews.fr/france/2026-10-15/budget-2027-une-contribution-de-309-milliards-deuros-en-faveur-de-lue-adoptee-par",
+      "publishedAt": "2026-10-15T05:16:38.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-06t131121z_1570186509_rc2pxnam30zt_rtrmadp_3_france-politics_6ad0530c8cd33.jpg?h=ff8f1f42&itok=7v5F9pRG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "bb170ebcd529",
+      "outletId": "la-croix",
+      "headline": "Budget 2027 : les députés adoptent la contribution française pour l’UE",
+      "url": "https://www.la-croix.com/international/budget-2027-les-deputes-adoptent-la-contribution-francaise-pour-l-ue-20261015",
+      "publishedAt": "2026-10-15T05:10:13.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/15/2562571-les-deputes-ont-approuve-mercredi-14-octobre-2026-.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "6611ce20b291",
       "outletId": "le-monde",
       "headline": "L’Assemblée nationale valide la contribution française au budget européen, malgré l’opposition de LFI et du RN",
       "url": "https://www.lemonde.fr/politique/article/2026/10/15/l-assemblee-nationale-valide-la-contribution-francaise-au-budget-europeen-malgre-l-opposition-de-lfi-et-du-rn_6793864_823448.html",
       "publishedAt": "2026-10-14T22:40:48.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/13/485/0/5825/2912/644/322/60/0/dcec3c9_ftp-1-dkje9vmdixbs-5343277-01-06.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -42,9 +75,14 @@
       "Les parlementaires ont entériné le versement de la quote-part française destinée aux institutions européennes.",
       "L'enveloppe financière validée s'élève à 30,9 milliards d'euros pour l'exercice à venir.",
       "Les formations politiques situées aux extrêmes de l'hémicycle ont tenté en vain de s'opposer à cette adoption."
+    ],
+    "droite": [
+      "Les députés ont validé la participation française au budget européen s'élevant à 30,9 milliards d'euros pour l'année 2027.",
+      "Le texte a été adopté de justesse malgré l'opposition conjointe des formations situées aux extrêmes de l'hémicycle.",
+      "Les débats ont également permis d'aborder des modifications concernant l'imposition des indemnités journalières et de rejeter plusieurs propositions de coupes budgétaires."
     ]
   },
-  "differences": "Le camp de gauche (représenté ici par le centre-gauche) et le camp centriste adoptent un cadrage factuel et extrêmement proche, mettant tous deux en avant le montant précis de la contribution validée par les députés et soulignant unanimement l'opposition commune des forces de gauche radicale et de droite nationaliste. Aucune divergence notable n'apparaît entre ces deux lectures quant au traitement de l'information.",
+  "differences": "Le camp de gauche et le camp centriste se concentrent strictement sur l'adoption du montant global de la contribution et l'opposition des extrêmes avec un ton neutre et synthétique. À l'inverse, le camp de droite intègre des détails procéduraux plus précis sur le déroulement des votes à l'Assemblée, en mentionnant les chiffres exacts des suffrages exprimés ainsi que les discussions parallèles touchant à la fiscalité et aux amendements rejetés.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 5
 }
