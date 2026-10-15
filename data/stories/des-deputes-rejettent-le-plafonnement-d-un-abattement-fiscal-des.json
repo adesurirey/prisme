@@ -6,6 +6,41 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "80ae831ed329",
+      "outletId": "le-figaro",
+      "headline": "EN DIRECT - Budget 2027 : les députés rejettent le plafonnement d’un abattement fiscal pour les retraités",
+      "url": "https://www.lefigaro.fr/conjoncture/en-direct-budget-2027-l-examen-du-projet-de-loi-de-finances-se-poursuit-ce-jeudi-dans-l-hemicycle-20261015",
+      "publishedAt": "2026-10-15T10:55:03.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/15/61fc23345f399dca842f43f760ba6620d745f8dd3d2d14f106422fd1cfa0483f.jpg",
+      "frontPage": true,
+      "kind": "live",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "26c37cb2ef52",
+      "outletId": "le-monde",
+      "headline": "Budget 2027 : l’Assemblée nationale rejette le plafonnement d’un abattement fiscal des retraités",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/15/budget-2027-l-assemblee-nationale-rejette-le-plafonnement-d-un-abattement-fiscal-des-retraites_6794431_823448.html",
+      "publishedAt": "2026-10-15T10:03:10.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/07/666/0/8000/4000/644/322/60/0/82546fd_upload-1-7hk1rukb26v6-jmug261006036.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "ccd8ce91f44c",
+      "outletId": "franceinfo",
+      "headline": "Budget 2027 : les députés rejettent le plafonnement d'un abattement fiscal pour les retraités",
+      "url": "https://www.franceinfo.fr/economie/budget/budget-2027-les-deputes-rejettent-le-plafonnement-d-un-abattement-fiscal-pour-les-retraites_8238589.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-15T10:02:38.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/boRsHPSE3AwZ1_MyQ3Tyq3ySxqU/0x378:7270x4467/432x243/filters:format(jpg)/2026/10/15/6ad0a2ca6ae40394598609.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "f741a9861e8f",
       "outletId": "liberation",
       "headline": "Budget 2027 : la réduction de l’abattement fiscal de 10 % des retraités rejetée par les députés",
@@ -42,18 +77,20 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Les parlementaires ont invalidé la diminution du seuil de l'avantage fiscal accordé aux anciens actifs lors des débats budgétaires.",
-      "Cette décision confirme la position déjà adoptée par la commission parlementaire lors des travaux préparatoires."
+      "L'Hémicycle a validé la suppression de la mesure visant à limiter l'avantage fiscal des seniors lors de l'examen des comptes publics pour 2027.",
+      "Le vote s'est soldé par 116 voix pour et 30 contre, en dépit de la désapprobation affichée par l'exécutif.",
+      "Ce dispositif prévoyait initialement d'apporter plus d'un milliard d'euros aux finances publiques."
     ],
     "centre": [
-      "L'Assemblée nationale a recalé l'option de limiter l'avantage fiscal sur les pensions des seniors dans le cadre des discussions sur les finances publiques pour 2027."
+      "Les parlementaires ont invalidé la limitation de l'abattement fiscal accordé aux retraités pendant l'examen du budget.",
+      "Le texte a été rejeté par un vote de l'Assemblée nationale malgré l'opposition du gouvernement."
     ],
     "droite": [
-      "L'amendement visant à restreindre l'abattement fiscal des retraités au sein du projet de loi de finances a été écarté par l'Hémicycle.",
-      "Le texte initial prévoyait un gain potentiel de plus d'un milliard d'euros pour les comptes de l'État."
+      "L'Assemblée examine en séance publique la première partie du texte budgétaire consacrée aux recettes.",
+      "Les députés ont écarté l'amendement qui proposait de restreindre l'avantage fiscal des anciens actifs."
     ]
   },
-  "differences": "Les différents bords politiques relatent le même rejet parlementaire sans divergence majeure sur le fond factuel, mais la droite, par la voix d'Europe 1, se distingue en rappelant le manque à gagner budgétaire de 1,4 milliard d'euros pour l'État, tandis que la gauche et le centre se concentrent sur la chronologie du vote et la confirmation de la décision prise en commission.",
+  "differences": "La gauche et le centre insistent sur les aspects chiffrés et politiques du scrutin, soulignant le résultat du vote (116 contre 30) et l'opposition du gouvernement ainsi que le manque à gagner pour l'État de 1,4 milliard d'euros. De son côté, la droite adopte un traitement plus factuel et institutionnel en replaçant l'événement dans le calendrier général de l'examen de la première partie du projet de loi de finances pour 2027 à l'Assemblée.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 6
 }

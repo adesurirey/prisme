@@ -6,6 +6,28 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "84e61933b4ca",
+      "outletId": "france-24",
+      "headline": "Musk impute à Trump des entraves satellitaires aux opérations militaires de l'Ukraine",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261015-musk-impute-%C3%A0-trump-des-entraves-satellitaires-aux-op%C3%A9rations-militaires-de-l-ukraine",
+      "publishedAt": "2026-10-15T10:03:57.000Z",
+      "imageUrl": "https://s.france24.com/media/display/82f77080-c874-11f1-86b6-d1d2c32ebb87/w:1024/p:16x9/FR-20261015-090205-090409-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "d7c5c1449c4b",
+      "outletId": "lexpress",
+      "headline": "Limitations de Starshield en Ukraine : Elon Musk rejette la faute sur Donald Trump",
+      "url": "https://www.lexpress.fr/monde/limitations-de-starshield-en-ukraine-elon-musk-rejette-la-faute-sur-donald-trump-ZQQ4EUJZ4BBRTAWVVJKP2VFI7I/",
+      "publishedAt": "2026-10-15T07:46:01.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/RNIAZ5QTT5AYFFRATMBOI4BZTI.JPG?auth=00453ee4a216126124b6ed7e29d5ecb2d86668e68e52de3cc15a036cbc79caa8&smart=true&width=5596&height=3731",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "9b84d0133b2e",
       "outletId": "huffpost",
       "headline": "Elon Musk suggère que Donald Trump est derrière les restrictions d’utilisation de Starlink en Ukraine",
@@ -77,20 +99,20 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La presse de gauche rapporte que le milliardaire à la tête de l'entreprise spatiale pointe directement la responsabilité de l'administration américaine dans la bride du réseau.",
-      "Les publications soulignent que ces restrictions techniques ont immédiatement pénalisé les opérations des drones ukrainiens face aux forces russes."
+      "Le dirigeant de l'entreprise spatiale rejette la responsabilité des limitations techniques directement sur l'administration américaine.",
+      "Ces restrictions de connectivité continuent d'affecter lourdement l'efficacité opérationnelle des forces ukrainiennes sur le terrain."
     ],
     "centre": [
-      "Les quotidiens généralistes continuent de questionner le rôle exact de Washington dans la mise en place de ces limitations de connexion.",
-      "Le débat éditorial s'interroge sur un possible désengagement progressif des alliés occidentaux dans le conflit."
+      "Le fondateur de SpaceX indique que les ralentissements du service satellitaire proviennent de décisions de l'armée et de l'exécutif américain.",
+      "L'Ukraine subit des contraintes sur son réseau militaire au moment où l'évolution du soutien des alliés occidentaux questionne les observateurs."
     ],
     "droite": [
-      "Le dirigeant ukrainien exige le rétablissement total de la connexion internet et qualifie les perturbations récentes de lourde erreur tactique.",
-      "Le fondateur de l'entreprise impute formellement la décision de brider le service à un ordre émanant de l'exécutif américain.",
-      "Les analyses conservatrices rappellent la dépendance vitale des forces de Kiev envers les services de renseignement des États-Unis."
+      "Les autorités ukrainiennes réclament le rétablissement complet de leur accès internet tactique face aux perturbations.",
+      "Le patron de l'entreprise attribue formellement le bridage du service à une directive émanant de la Maison-Blanche.",
+      "Les commentateurs conservateurs insistent sur la forte dépendance de Kiev vis-à-vis des infrastructures technologiques et du renseignement américain."
     ]
   },
-  "differences": "Le camp de gauche met en avant la mise en cause directe de l'administration américaine par le dirigeant de SpaceX, alors que le centre insiste sur le flou géopolitique entourant ces décisions et les interrogations sur le soutien occidental. De son côté, la droite maintient son focal sur les tensions directes entre Kiev et les autorités américaines, tout en soulignant la vulnérabilité stratégique ukrainienne.",
+  "differences": "La gauche met l'accent sur la mise en cause directe de Washington par le chef d'entreprise et les conséquences sur les drones, tandis que le centre, illustré par France 24 ou L'Express, insiste sur l'implication de l'exécutif américain et le flou autour du soutien militaire. De son côté, la droite maintient sa lecture sur l'affrontement entre Kiev et l'administration américaine, tout en soulignant la vulnérabilité stratégique ukrainienne.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 8
 }

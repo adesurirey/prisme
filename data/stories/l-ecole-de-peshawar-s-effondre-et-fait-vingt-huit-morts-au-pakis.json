@@ -6,12 +6,34 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "42b736961f89",
+      "outletId": "franceinfo",
+      "headline": "Au Pakistan, 27 enfants et un enseignant tués dans l'effondrement du toit de leur école",
+      "url": "https://www.franceinfo.fr/monde/asie/au-pakistan-27-enfants-et-un-enseignant-tues-dans-l-effondrement-du-toit-de-leur-ecole_8238436.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-15T09:04:45.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/ugWdcdUImjzPMEHUZKq2anPU_dk/0x249:4780x2937/432x243/filters:format(jpg)/2026/10/15/6ad09365bb693861368509.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "eac5d933be6c",
       "outletId": "rfi",
       "headline": "Pakistan: 27 enfants et un enseignant tués dans l'effondrement du toit de leur école",
       "url": "https://www.rfi.fr/fr/asie-pacifique/20261015-pakistan-27-enfants-et-un-enseignant-tu%C3%A9s-dans-l-effondrement-du-toit-de-leur-%C3%A9cole",
       "publishedAt": "2026-10-15T08:53:08.000Z",
       "imageUrl": "https://s.rfi.fr/media/display/c72cf2d4-c874-11f1-a4be-2d1c143cdef3/w:1024/p:16x9/AP26288264461412.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "95845981606e",
+      "outletId": "humanite",
+      "headline": "Pakistan : une trentaine d’enfants et leur enseignant tués dans l’effondrement du toit d’une école",
+      "url": "https://www.humanite.fr/monde/batiment/pakistan-une-trentaine-denfants-et-leur-enseignant-tues-dans-leffondrement-du-toit-dune-ecole",
+      "publishedAt": "2026-10-15T08:46:45.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/Peshawar.jpg?w=1200",
       "frontPage": false,
       "kind": "news",
       "section": "world"
@@ -87,13 +109,13 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Vingt-sept élèves et un membre du corps enseignant ont péri jeudi dans l'écroulement de la toiture d'un établissement scolaire situé à Peshawar.",
-      "Le sinistre a également fait plus d'une trentaine de blessés, dont une demi-douzaine se trouve dans un état critique.",
-      "La récurrence de tels drames structurels est soulignée, en raison d'infrastructures dégradées et d'un manque de rigueur dans les normes de sécurité."
+      "Vingt-sept élèves et un enseignant ont perdu la vie dans l'écroulement de la toiture d'un établissement à Peshawar.",
+      "Les services de secours redoutent la présence d'autres victimes encore ensevelies sous les décombres.",
+      "L'attention est portée sur la gravité potentielle du bilan global suite aux craintes formulées par les équipes d'intervention."
     ],
     "centre": [
-      "Un établissement scolaire de Peshawar a été le théâtre de l'effondrement de sa toiture, provoquant la mort de vingt-sept enfants et d'un enseignant.",
-      "L'origine de l'accident est attribuée à des failles structurelles et à l'utilisation de matériaux de piètre qualité, illustrant un problème persistant dans le pays."
+      "La mort de vingt-sept enfants et d'un professeur est confirmée après la chute du toit d'une école située dans le nord du pays.",
+      "Un responsable des services hospitaliers locaux a officialisé le bilan humain de cette catastrophe."
     ],
     "droite": [
       "Le toit d'une structure scolaire s'est effondré à Peshawar, dans le nord pakistanais, faisant vingt-huit victimes.",
@@ -101,7 +123,7 @@
       "Les plus hautes autorités politiques du pays ont publiquement fait part de leur vive émotion face à cette catastrophe."
     ]
   },
-  "differences": "La couverture médiatique s'accorde sur le bilan tragique de vingt-huit morts à Peshawar, mais la gauche et le centre-gauche se distinguent en intégrant les bilans précis des blessés ainsi que la mise en cause explicite des carences structurelles et des matériaux de mauvaise qualité. De son côté, la droite met l'accent sur les détails médicaux communiqués par l'hôpital local et sur la réaction émue des hautes autorités politiques nationales.",
+  "differences": "La couverture de gauche se distingue par l'intégration de la crainte des secours quant à la présence potentielle d'autres victimes bloquées sous les décombres, tandis que le centre confirme simplement le bilan macabre officialisé par un responsable hospitalier. De son côté, la droite maintient sa focalisation sur le nombre précis de blessés et sur les réactions d'émotion des plus hautes autorités politiques nationales.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 9
 }
