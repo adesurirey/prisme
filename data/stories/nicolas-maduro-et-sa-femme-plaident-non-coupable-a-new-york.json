@@ -6,6 +6,28 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "541733838241",
+      "outletId": "la-croix",
+      "headline": "À New York, Nicolas Maduro rejette les accusations de torture et dénonce de « fausses allégations »",
+      "url": "https://www.la-croix.com/international/a-new-york-nicolas-maduro-rejette-les-accusations-de-torture-et-denonce-de-fausses-allegations-20261015",
+      "publishedAt": "2026-10-15T20:30:00.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/15/2563483-des-soutiens-de-nicolas-maduro-defilaient-le-5-jan.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "d840ab9a4e7c",
+      "outletId": "europe-1",
+      "headline": "Accusés de torture, Nicolas Maduro et sa femme plaident non coupable devant un tribunal new yorkais",
+      "url": "https://www.europe1.fr/international/accuses-de-torture-nicolas-maduro-et-sa-femme-plaident-non-coupable-devant-un-tribunal-new-yorkais-1152116?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-15T18:38:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/15/20/000_d3dp9fj_1_6ad11ee2d622f.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "1edd57ce687a",
       "outletId": "franceinfo",
       "headline": "Accusés de torture par la justice américaine, l'ex-président vénézuélien Nicolas Maduro et sa femme ont plaidé non coupable devant un tribunal de New York",
@@ -41,5 +63,26 @@
       "everFrontPage": true
     }
   ],
-  "section": "world"
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "L'ancien dirigeant du Venezuela et son épouse ont comparu devant une juridiction new-yorkaise.",
+      "Ils font face à des charges formelles de torture formulées par les autorités judiciaires américaines.",
+      "Des organisations non gouvernementales ont régulièrement incriminé sa gestion présidentielle par le passé."
+    ],
+    "centre": [
+      "Nicolas Maduro et Cilia Flores ont rejeté les accusations de torture formulées à leur encontre.",
+      "Le couple présidentiel déchu a comparu ce jeudi devant un juge fédéral à New York.",
+      "Leurs incarcérations aux États-Unis font suite à leur arrestation intervenue au Venezuela au mois de janvier."
+    ],
+    "droite": [
+      "La justice américaine instruit de nouveaux chefs d'inculpation incluant des sévices physiques contre des opposants.",
+      "Le procès des deux prévenus devant se tenir au milieu de l'année 2027 a été évoqué.",
+      "L'ex-chef d'État conteste la légitimité des poursuites et se considère comme un prisonnier capturé."
+    ]
+  },
+  "differences": "Les différents bords politiques relatent globalement les mêmes faits judiciaires, mais la droite insiste davantage sur les détails sordides des sévices reprochés et sur les déclarations véhéments de l'ancien dirigeant se qualifiant de prisonnier de guerre, tandis que la gauche rappelle le contexte répressif documenté par les ONG tout au long de ses mandats présidentiels.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 5
 }

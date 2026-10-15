@@ -6,6 +6,17 @@
   "storyDay": "2026-10-15",
   "articles": [
     {
+      "id": "90b505ec7df1",
+      "outletId": "tf1-info",
+      "headline": "Inondations en Turquie : l'équivalent de trois mois de pluie à Istanbul",
+      "url": "https://www.tf1info.fr/international/videos/video-inondations-en-turquie-l-equivalent-de-trois-mois-de-pluie-a-istanbul-46152-2470245.html",
+      "publishedAt": "2026-10-15T20:55:15.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/inondations-en-turquie-l-equivalent-de-trois-mois-de-pluie-a-istanbul-8451fd-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "3ac6f7a1578d",
       "outletId": "ouest-france",
       "headline": "EN IMAGES. Istanbul en proie à des pluies torrentielles, au moins trois morts et cinq personnes portées disparues",
@@ -51,5 +62,21 @@
       "section": "world"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "La mégapole turque a subi des précipitations exceptionnelles transformant les axes routiers en rivières boueuses.",
+      "Le bilan provisoire fait état de trois personnes tuées et de cinq autres recherchées par les services de secours.",
+      "L'événement climatique met en lumière la vulnérabilité des aménagements urbains de la plus grande ville du pays."
+    ],
+    "droite": [
+      "Des trombes d'eau historiques ont frappé la métropole, atteignant des pics de précipitations inédits depuis 1942 selon les relevés officiels.",
+      "Les inondations ont entraîné la mort de trois individus et provoqué la disparition de quatre à cinq autres personnes.",
+      "Les intempéries ont également perturbé les liaisons aériennes et causé d'importants dégâts matériels dans plusieurs districts."
+    ]
+  },
+  "differences": "Le camp de droite met particulièrement en avant la dimension historique et record des intempéries en s'appuyant sur les données météorologiques depuis 1942, tout en détaillant les impacts sur le trafic aérien et les opérations de secours, tandis que le camp du centre insiste davantage sur la vulnérabilité structurelle des infrastructures face à ce type de catastrophe.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 5
 }
