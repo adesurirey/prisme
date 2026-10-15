@@ -29,6 +29,17 @@
       "everFrontPage": true
     },
     {
+      "id": "c4a509f1c235",
+      "outletId": "le-figaro",
+      "headline": "Ligue Europa : nouveau revers pour Marseille contre l’Olympiakos, Rennes arrache la victoire",
+      "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-marseille-ne-s-en-sort-pas-contre-l-olympiakos-rennes-arrache-la-victoire-20261015",
+      "publishedAt": "2026-10-15T21:14:35.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/15/ed0dc32edfe42662c04cf30c98d88e915989b8fe7cd73c3927dfdc0780221761.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "25627109dfe1",
       "outletId": "ouest-france",
       "headline": "Stade Rennais - OFI Crète. Les notes des Rennais : Ait Boudlal s’est racheté, Nagida a forcé la décision",
@@ -72,7 +83,37 @@
       "frontPage": false,
       "kind": "news",
       "section": "sport"
+    },
+    {
+      "id": "bcaf2cc64216",
+      "outletId": "europe-1",
+      "headline": "Ligue Europa : l'Olympiakos s'impose contre Marseille, Rennes se défait de l'OFI Crète",
+      "url": "https://www.europe1.fr/sport/ligue-europa-lolympiakos-simpose-contre-marseille-rennes-se-defait-de-lofi-crete-1152401?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-15T20:49:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/15/23/000_d3fc7gk_1_6ad142668abdf.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
     }
   ],
-  "section": "sport"
+  "section": "sport",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le club rennais s'est imposé in extremis à domicile sur le score de deux buts à un face aux Grecs.",
+      "L'équipe a longtemps été menée au score avant de renverser la situation dans le dernier quart d'heure de la rencontre."
+    ],
+    "centre": [
+      "Le Stade Rennais a arraché une victoire difficile face à l'OFI Crète grâce à des réalisations tardives signées Nagida et Ait-Boudlal.",
+      "Ce succès permet à l'entraîneur Franck Haise de signer enfin son premier succès européen et de mettre fin à une longue série noire.",
+      "La prestation des Bretons a toutefois manqué de conviction face à un adversaire regroupé en défense."
+    ],
+    "droite": [
+      "Rennes a arraché la victoire dans les derniers instants de la partie contre l'OFI Crète en Ligue Europa.",
+      "Cette soirée européenne a été marquée par des destins contrastés pour les clubs français engagés, avec notamment la défaite marseillaise."
+    ]
+  },
+  "differences": "Les différents camps s'accordent sur l'essentiel factuel, à savoir la victoire laborieuse du Stade Rennais arrachée en fin de match face aux Grecs. La presse de centre met toutefois un accent particulier sur la portée symbolique de ce succès pour l'entraîneur Franck Haise, qui brise enfin sa série noire en Coupe d'Europe, et insiste sur le contenu poussif de la rencontre. De son côté, la droite élargit le spectre de l'actualité européenne en englobant dans ses comptes-rendus les résultats contrastés des autres clubs français engagés dans la compétition, comme l'OM.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 8
 }
