@@ -4,7 +4,9 @@ import type { CSSProperties } from 'react';
 
 /**
  * Coverage as a meta line: one compact tri-color micro-bar followed by the
- * counted Articles ("x articles"). The same element on the Edition index
+ * counted Outlets ("42 % centre · 7 médias" on sm: and up; mobile keeps only the
+ * "7 médias" count, the bar speaks for itself; the toggle swaps the
+ * rate and the dominant group to the Exposition reading). The same element on the Edition index
  * cards and the Story page header.
  *
  * The bar is ONE element with TWO readings (issue #89, ADR-0016): segment
@@ -14,18 +16,21 @@ import type { CSSProperties } from 'react';
  * navbar toggle (Base.astro) flips the site-wide mode, and pure CSS picks
  * which scale drives `flex-grow` — no hydration, no per-card script. The
  * static aria-label keeps describing the Couverture: the default meaning
- * never silently changes. No tooltips (they never worked on mobile) and no
- * « x % » — the meta line shows only what it can honestly count.
+ * never silently changes. No tooltips (they never worked on mobile).
  */
 export default function CoverageMeta({
   counts,
   shares,
   reporting,
   totalOutlets,
-  articles,
   className = '',
   /** Bar width in px — 48 on the cards, wider where the header has room. */
   barWidth = 48,
+  /**
+   * Show the full « taux % bord : N médias » on every screen size — the
+   * Story page header has room; the index cards stay two-tiered.
+   */
+  fullText = false,
 }: {
   counts: Record<CoverageGroup, number>;
   /** Exposition shares per group (issue #88) — the toggle's other scale. */
@@ -34,16 +39,30 @@ export default function CoverageMeta({
   reporting: number;
   /** Outlets in the config. */
   totalOutlets: number;
-  /** Counted Articles — the "x articles" of the line. */
-  articles: number;
   className?: string;
   barWidth?: number;
+  fullText?: boolean;
 }) {
   const total = coverageOrder.reduce((sum, l) => sum + counts[l], 0);
   const covered = total > 0;
   const breakdown = coverageOrder
     .map((l) => `${counts[l]} ${LEANING_LABELS[l].toLowerCase()}`)
     .join(' | ');
+  // The dominant Coverage group and its share of the reporting Outlets —
+  // the "46 % droite" of the meta line. Ties go to the first group in
+  // coverageOrder (gauche before droite, matching the bar's segment order).
+  const dominant = coverageOrder.reduce((best, l) =>
+    counts[l] > counts[best] ? l : best,
+  );
+  const rate = covered ? Math.round((counts[dominant] / total) * 100) : 0;
+  // The Exposition reading of the same line: the dominant group by
+  // Reach-weighted share (ties go to the first group in coverageOrder,
+  // matching the bar) and its rounded percentage of the Story's total
+  // weight.
+  const dominantExp = coverageOrder.reduce((best, l) =>
+    shares[l] > shares[best] ? l : best,
+  );
+  const rateExp = covered ? Math.round(shares[dominantExp] * 100) : 0;
   return (
     <span
       className={`inline-flex flex-wrap items-center gap-x-[1em] gap-y-0.5 ${className}`}
@@ -77,9 +96,60 @@ export default function CoverageMeta({
           )}
         </span>
       )}
-      <span className="whitespace-nowrap">
-        {articles} article{articles > 1 ? 's' : ''}
-      </span>
+      {/* One text per reading, swapped by pure CSS off <html data-mode> —
+          the same mechanism that flips the bar widths (global.css), no
+          hydration. Two tiers: mobile compresses the bord to its initial
+          (G/C/D) — the bar already colors it — while sm: and up spells the
+          full « taux % bord ». The média count sits in its own span,
+          separated by the parent's gap — no separator glyph. Hierarchy as
+          in the Story page's décompte legend: the rate reads in the
+          default ink, the card title's color; the count in text-muted,
+          the dates' color. */}
+      {covered ? (
+        <>
+          <span className="mode-text-cov whitespace-nowrap">
+            <span className={fullText ? '' : 'hidden sm:inline'}>
+              <span className="text-ink">
+                {rate}
+                {'\u202F'}%{' '}
+              </span>
+              <span className="text-ink">
+                {LEANING_LABELS[dominant].toLowerCase()}
+              </span>
+            </span>
+            <span className={fullText ? 'hidden' : 'sm:hidden'}>
+              <span className="text-ink">
+                {rate}
+                {'\u202F'}%{' '}
+              </span>
+              <span className="text-ink">{dominant[0].toUpperCase()}</span>
+            </span>
+          </span>
+          <span className="mode-text-exp whitespace-nowrap">
+            <span className={fullText ? '' : 'hidden sm:inline'}>
+              <span className="text-ink">
+                {rateExp}
+                {'\u202F'}%{' '}
+              </span>
+              <span className="text-ink">
+                {LEANING_LABELS[dominantExp].toLowerCase()}
+              </span>
+            </span>
+            <span className={fullText ? 'hidden' : 'sm:hidden'}>
+              <span className="text-ink">
+                {rateExp}
+                {'\u202F'}%{' '}
+              </span>
+              <span className="text-ink">{dominantExp[0].toUpperCase()}</span>
+            </span>
+          </span>
+          <span className="whitespace-nowrap text-muted">
+            {reporting} média{reporting > 1 ? 's' : ''}
+          </span>
+        </>
+      ) : (
+        <span className="whitespace-nowrap">0 média</span>
+      )}
     </span>
   );
 }

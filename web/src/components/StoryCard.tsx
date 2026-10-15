@@ -1,13 +1,11 @@
 import type { Outlet, Story } from '@prisme/domain';
 import {
   blindspots,
-  countedArticles,
   coverageCounts,
   exposureShares,
   pickStoryImage,
   reportingOutletIds,
 } from '@prisme/domain';
-import { formatStoryDate } from '../article-date';
 import { withBase } from '../data';
 import { storyUrl } from '../story-url';
 import BlindspotBadge from './BlindspotBadge';
@@ -39,10 +37,6 @@ export default function StoryCard({
   const reporting = reportingOutletIds(story.articles).size;
   const spots = blindspots(counts);
   const image = pickStoryImage(story, byId);
-  const articles = countedArticles(story.articles);
-  // Newest Article first (grouping sorts Story Articles that way — the
-  // same articles[0] the Story page header reads).
-  const last = story.articles[0];
   return (
     <article
       className="-mx-5"
@@ -64,26 +58,14 @@ export default function StoryCard({
           </h2>
           {/* The "maj." date is the Story's newest Article — the same
               articles[0] the Story page header reads. */}
-          {/* Meta on one row, both tiers inline. Mobile wording drops
-              "maj." and the "à" join; sm: restores the full label. */}
+          {/* Meta on one row, both tiers inline. */}
           <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-muted sm:gap-x-3">
             <CoverageMeta
               counts={counts}
               shares={shares}
               reporting={reporting}
               totalOutlets={outlets.length}
-              articles={articles}
             />
-            {last && (
-              <span className="whitespace-nowrap text-faint">
-                <span className="sm:hidden">
-                  {formatStoryDate(last).replace(' à ', ' ')}
-                </span>
-                <span className="hidden sm:inline">
-                  maj. {formatStoryDate(last)}
-                </span>
-              </span>
-            )}
           </p>
           {spots.length > 0 && (
             <div className="mt-2.5 flex flex-wrap gap-2">

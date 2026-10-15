@@ -162,6 +162,23 @@ html[data-mode="exposure"] .coverage-seg {
 }
 
 /*
+ * The same swap for the meta line's text (CoverageMeta.tsx): one span per
+ * reading ships in the markup, CSS shows the one matching <html data-mode>.
+ * Default (no attribute) shows the Couverture text.
+ */
+.mode-text-exp {
+  display: none;
+}
+
+html[data-mode="exposure"] .mode-text-cov {
+  display: none;
+}
+
+html[data-mode="exposure"] .mode-text-exp {
+  display: inline;
+}
+
+/*
  * The reading toggle (navbar, Base.astro), copied from shadcn.io's
  * "Navbar Segmented Control" block: a solid bg-muted track at rounded-md
  * and a white card that slides under the checked label (shadcn's framer
