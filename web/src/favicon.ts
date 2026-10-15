@@ -38,4 +38,4 @@ const URI = (svg: string): string =>
   `data:image/svg+xml,${encodeURIComponent(svg)}`;
 
 export const PRISME_MARK_LIGHT = URI(prismeMarkSvg('#1b1b1f', 0.18));
-export const PRISME_MARK_DARK = URI(prismeMarkSvg('#ededf0', 0.18));
+export const PRISME_MARK_DARK = URI(prismeMarkSvg('#e6e6ea', 0.18));
