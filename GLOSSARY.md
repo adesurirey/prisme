@@ -100,6 +100,10 @@ _Avoid_: Snapshot, backup
 A Story in the Edition that the returning reader is shown as "En hausse" because its Coverage has grown since that reader last looked — at least two Outlets' worth, and at most three Stories per visit, the biggest gainers. A Story the reader has never seen never trends; the signal is the reader's own previous visit, not a global ranking movement, and a reader seen too long ago gets no Trending Stories at all.
 _Avoid_: Rising story, hot story, viral
 
+**New Story**:
+A Story in the Edition that was absent from the Edition the reader last saw — shown to an established returning reader as « Nouveau », next to the Trending Story's « En hausse ». Newness is the reader's own last visit, never a global first appearance: a Story the reader has already seen can never read as new, and a reader seen too long ago gets no New Stories at all.
+_Avoid_: Fresh, breaking, novel
+
 ### Reading a story
 
 **Prism**:

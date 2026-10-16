@@ -35,9 +35,19 @@ const updatedTime = formatParisDate(built, {
     {/* "À la une" + the day's date, one line over the hero card — the
         Edition leads with its content, not with a title (the catch line
         stays in the meta description). */}
+    {/* "À la une" + the day's date, one line over the hero card — the
+        Edition leads with its content, not with a title (the catch line
+        stays in the meta description). The "Nouveau" count pill sits on
+        the row's right side, next to the date: filled client-side by
+        trending.ts for an established returning reader, it counts the
+        Stories absent from that reader's last visit and locates the first
+        one on click. empty:hidden keeps the prerendered page silent. */}
     <div class="flex items-baseline justify-between gap-4">
       <h1 class="text-[17px] font-semibold tracking-[-0.01em]">À la une</h1>
-      <p class="text-[13px] text-muted capitalize">{dayLabel}</p>
+      <div class="flex items-baseline gap-4">
+        <div data-new-pill class="empty:hidden"></div>
+        <p class="text-[13px] text-muted capitalize">{dayLabel}</p>
+      </div>
     </div>
   </section>
 
@@ -67,13 +77,25 @@ const updatedTime = formatParisDate(built, {
 <script>
   import { installTrending, SEEN_KEY, SESSION_KEY } from "../trending";
 
-  // DEV-only mock: ?mock-trending seeds a fake baseline (every Story
-  // "seen" 3 Outlets behind) so the "En hausse" placement (StoryCard /
-  // StoryHero slot) can be demoed without a real returning-visit baseline.
+  // DEV-only mock: ?mock-trending seeds a fake baseline so both per-visit
+  // signals (StoryCard / StoryHero slot) can be demoed without a real
+  // returning-visit baseline: every Story but the last three is "seen" 3
+  // Outlets behind (« en hausse »); those three stay absent from the
+  // baseline (« nouveau » + count pill, ADR-0020).
   if (import.meta.env.DEV && location.search.includes("mock-trending")) {
-    const blob = { version: 1, stories: {} };
-    document.querySelectorAll("[data-story-id]").forEach((el) => {
-      blob.stories[el.dataset.storyId] = {
+    const cards = [
+      ...document.querySelectorAll<HTMLElement>("[data-story-id]"),
+    ];
+    const blob = {
+      version: 1,
+      stories: {} as Record<string, { coverage: number; seenAt: number }>,
+    };
+    const NEW_COUNT = 3;
+    cards.forEach((el, i) => {
+      if (i >= cards.length - NEW_COUNT) return;
+      const id = el.dataset.storyId;
+      if (id == null) return;
+      blob.stories[id] = {
         coverage: Math.max(0, Number(el.dataset.coverage ?? 0) - 3),
         seenAt: Date.now() - 3_600_000,
       };

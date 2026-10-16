@@ -1,0 +1,24 @@
+# New Stories get a per-reader « Nouveau » marker on one shared four-hour TTL
+
+The « Nouveau » gap: ADR-0019's consequence said it plainly — "A Story the reader has never seen gets no visual signal at all… If that proves blind, a separate, quieter 'new' marker is a new decision." It proved blind: a Story that newly entered the Edition appears wherever its Coverage ranks it, mixed into the list, with no way for a returning reader to spot it. The benchmark behind the decision is `docs/research/new-stories-benchmark.md` (patterns 1–3: per-user since-your-last-visit highlighting, count pills — Reddit, Wikipedia, X).
+
+We add two client-only affordances computed from one eligibility pass in `trending.ts`: a **« Nouveau » badge** on every Story absent from the reader's baseline (`entry == null`), rendered in the existing `data-trending-slot` (a card never carries both badges — a baseline-absent Story has no gain, so this is true by construction), plain text after a glyph preview round rejected the candidates: geometric glyphs (✦ ✧ ▸ ◆) render heavier than « ↗ en hausse »'s line-weight arrow and cramped against it, and a dot is taken — the Leaning dots and « Angle mort » already speak in dots; and a **count pill** (« 4 nouveaux » / « 1 nouveau ») in the « À la une » header row of the Edition index, which counts all new Stories and, on click, smooth-scrolls to the first new Story in Edition order, then disappears — its job is location, the badges do the marking. New Stories are **uncapped**: their pool is bounded by Story creation between visits, structurally small at the TTL below; a cap would only hide information the pill just counted. The badge set and the pill's visibility live in the visit session (`{v: 2, trendingIds, newIds, pillVisible}`) with the same 15-minute recompute window; badges persist for the whole visit, the pill does not survive its click. Backfill Stories qualify like any other: newness is absence from the reader's last-visit baseline, never a global first appearance.
+
+The color stays **sarcelle** (ADR-0014), whose meaning is hereby sharpened: no longer "this is climbing", but **"this changed since your last visit"** — « En hausse » (it grew) and « Nouveau » (it appeared) are two species of one genus. One color, one meaning, honestly restated; the label text carries the distinction.
+
+The baseline TTL drops from 48 hours to **four hours, shared by both signals** (`BASELINE_TTL_MS`): the « Nouveau » window is the evening-to-morning or hour-to-hour gap of a reader who checks in nearly every Edition. Past it, the reader can scan the whole turned-over Edition themselves — double-digit badge walls are noise, and the Edition's own turnover (yesterday's live pool closes at 06:00, ADR-0017) makes "new" meaningless beyond a day. « En hausse » inherits the tightening; both badges are the same genus and share one rhythm. **The Trending cap stays three**: a 4-hour replay of the Edition archive (133 Stories, 87 hourly checkpoints) still finds a median of 3 eligible gainers per visit, a 90th percentile of 7 and a peak of 12 — the cap remains the only scarcity mechanism a Coverage-gain badge has, while the new marker's pool needs none.
+
+## Considered Options
+
+- A monochrome « Nouveau » chip, or a second dedicated color: the chip undersells a per-visitor signal the reader asked for, and a second chrome color doubles the one-color discipline ADR-0014 was written to protect. Sharpening sarcelle's meaning keeps one color for the whole come-back signal family.
+- Capping « Nouveau » to three: the pill already announces the full count; capping the badges under it would make the card set contradict the pill.
+- A 24-hour TTL: keeps the once-a-day reader inside the window but badges whole-day turnover (up to ~17 Stories in the observed Edition) — exactly the noise the feature exists to remove. Four hours matches the target cadence (checks every one to two hours) with slack for a delayed visit.
+- A build-time « Nouveau » stamp visible to first-time visitors (benchmark option C): needs a cross-build record in `data/` and serves a reader state (first visit) we have decided gets no signals; revisit only if that ever changes.
+- Splitting `NEW_TTL_MS` from `TRENDING_TTL_MS`: two knobs for a distinction the design declares unreal — one genus, one window.
+
+## Consequences
+
+- A first visit and a stale baseline (> 4 h) get no pill and no badges of either kind: the signals only ever speak to an established returning reader.
+- A card shows « En hausse » or « Nouveau », never both; sarcelle now means "changed since your last visit", so any future consumer of `--trending` must fit that meaning.
+- `BASELINE_TTL_MS`, the gain knobs and `TRENDING_CAP` stay in `web/src/trending.ts`; review after observation with real reader habits.
+- The session blob is version 2; the localStorage baseline shape is unchanged.
