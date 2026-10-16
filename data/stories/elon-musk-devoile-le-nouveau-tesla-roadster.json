@@ -6,6 +6,28 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "ea141dd27fa8",
+      "outletId": "tf1-info",
+      "headline": "Rétropropulseurs, tonneau complet... les images de la spectaculaire démonstration du nouveau \"Roadster\" de Tesla",
+      "url": "https://www.tf1info.fr/high-tech/video-retropropulseurs-tonneau-complet-les-images-de-la-spectaculaire-demonstration-du-nouveau-roadster-de-tesla-elon-musk-2470310.html",
+      "publishedAt": "2026-10-16T09:49:57.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/905/480/tesla-roadster-15-octobre-2026-72f759-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "da7ae4fdb0d0",
+      "outletId": "franceinfo",
+      "headline": "Elon Musk dévoile une voiture volante, la Tesla Roadster, \"non-homologuée pour une utilisation sur la voie publique\"",
+      "url": "https://www.franceinfo.fr/internet/elon-musk/elon-musk-devoile-un-nouveau-modele-de-voiture-volante-la-tesla-roadster-non-homologuee-pour-une-utilisation-sur-la-voie-publique_8239822.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-16T08:57:15.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/adjNn8PFjVCC7Vk28RA4TE2OB6k/0x249:3181x2038/432x243/filters:format(jpg)/2026/10/16/6ad1d9e658acb770867684.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "670ec0ac0420",
       "outletId": "huffpost",
       "headline": "Elon Musk dévoile la Tesla Roadster, sa « voiture volante », dans une démonstration digne d’un film d’action",
@@ -45,7 +67,7 @@
       "url": "https://www.lefigaro.fr/automobile/tesla-roadster-elle-vole-elle-roule-elle-bondit-on-vous-raconte-la-folle-presentation-de-la-voiture-de-sport-d-elon-musk-20261016",
       "publishedAt": "2026-10-16T04:47:08.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/1210x720_crop/2026/10/16/be114e8629d10cc5212773c8ff8e4f3e4e8334c0d09856c24858e1adeacde483.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -78,7 +100,9 @@
   "summaries": {
     "gauche": [
       "Le dirigeant de la marque a présenté un nouveau véhicule électrique sportive aux capacités aériennes surprenantes.",
-      "La démonstration publique organisée au Texas a offert un spectacle s'apparentant aux scènes d'un film d'action."
+      "La démonstration publique organisée au Texas a offert un spectacle s'apparentant aux scènes d'un film d'action.",
+      "Le constructeur américain n'a pas communiqué le tarif de ce modèle futuriste.",
+      "Aucune date de commercialisation n'a été annoncée pour cette voiture qui demeure non homologuée sur route."
     ],
     "centre": [
       "La version définitive du Tesla Roadster a été officiellement présentée près de neuf années après le premier prototype.",
@@ -88,10 +112,11 @@
     "droite": [
       "Le constructeur a enfin révélé la version définitive de sa supercar après une décennie d'attente.",
       "L'événement s'est tenu dans un cadre spectaculaire à proximité d'un site d'essais de SpaceX.",
-      "La voiture intègre des équipements aérospatiaux inédits lui permettant d'effectuer des manœuvres aériennes."
+      "La voiture intègre des équipements aérospatiaux inédits lui permettant d'effectuer des manœuvres aériennes.",
+      "Le véhicule a réalisé des figures acrobatiques saisissantes lors de sa première apparition publique."
     ]
   },
-  "differences": "Le centre adopte une approche technique en insistant sur l'intégration de propulseurs spatiaux et les conditions commerciales d'acquisition, tout en mentionnant le délai de neuf ans écoulé depuis le prototype. La droite accentue la dimension événementielle et spectaculaire de la démonstration au Texas ainsi que la longue attente d'une décennie. Enfin, la gauche pose un regard plus critique et imagé sur l'événement en comparant la démonstration de cette voiture volante à une cascade de cinéma.",
+  "differences": "Le centre adopte une approche technique en insistant sur l'intégration de propulseurs spatiaux et les conditions commerciales d'acquisition, tout en mentionnant le délai de neuf ans écoulé depuis le prototype. La droite accentue la dimension événementielle et spectaculaire de la démonstration au Texas ainsi que la longue attente d'une décennie, tandis que le centre droit détaille les cascades réalisées et l'ouverture des carnets de commandes. Enfin, la gauche pose un regard plus critique et nuancé en insistant sur l'absence d'homologation routière, de prix et de calendrier pour cette voiture volante comparée à une cascade de cinéma.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 8
 }

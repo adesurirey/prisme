@@ -6,6 +6,18 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "3015f07878bd",
+      "outletId": "le-figaro",
+      "headline": "Aucun précédent, circonstances... Que sait-on de l’accident dans le tunnel sous la Manche, qui a fait 19 blessés ?",
+      "url": "https://www.lefigaro.fr/conjoncture/aucun-precedent-circonstances-que-sait-on-de-l-accident-dans-le-tunnel-sous-la-manche-qui-a-fait-19-blesses-20261016",
+      "publishedAt": "2026-10-16T10:48:31.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1997_crop/2026/10/16/8a873b4722844bfb54bd8a9ea5efae80fe258a2c42477169122f263a1f35857f.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "2887c308fb81",
       "outletId": "ouest-france",
       "headline": "Tunnel sous la Manche : 19 blessés dont deux graves, train percuté… Ce que l’on sait de l’accident d’une navette",
@@ -66,7 +78,7 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un minibus est entré en collision avec un train de marchandises stationné sur un quai français.",
+      "Un minibus a percuté un train de marchandises stationné sur un quai français.",
       "Dix-neuf personnes ont été blessées lors de cette collision, dont deux se trouvent dans un état critique.",
       "Le trafic ferroviaire transmanche a été maintenu sans perturbations significatives."
     ],
@@ -74,9 +86,14 @@
       "Une navette transportant des passagers a percuté un convoi de fret arrêté dans le terminal français.",
       "Le bilan de l'impact fait état de dix-neuf victimes, parmi lesquelles on dénombre deux blessés graves.",
       "Les liaisons reliant la France au Royaume-Uni n'ont pas subi de retards importants."
+    ],
+    "droite": [
+      "Un accident rare s'est produit jeudi soir sur le site d'Eurotunnel en France entre un minibus et une rame de train.",
+      "Le choc a causé des blessures à dix-neuf personnes selon un bilan provisoire.",
+      "L'exploitant Getlink fait face à un incident totalement inédit sur ses infrastructures."
     ]
   },
-  "differences": "La gauche et le centre adoptent un traitement très proche de l'événement, s'accordant sur la nature de la collision entre un minibus et un train de fret à l'arrêt, le nombre total de blessés et l'absence de perturbation majeure sur le trafic transmanche. Les deux camps mentionnent désormais également la gravité des blessures pour deux des victimes, un signalement plus précis que dans les premiers bulletins.",
+  "differences": "La gauche et le centre continuent de partager une approche factuelle très similaire, insistant sur la nature de la collision, le bilan précis des dix-neuf blessés et la fluidité maintenue du trafic transmanche. De son côté, la droite intègre le traitement de cet événement en soulignant le caractère exceptionnel et inédit de l'incident pour l'exploitant Getlink, tout en rappelant le nombre de victimes.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 5
+  "summarizedArticleCount": 6
 }
