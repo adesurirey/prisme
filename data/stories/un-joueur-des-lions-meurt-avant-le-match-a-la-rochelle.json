@@ -6,6 +6,27 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "e8cc6a2ef12d",
+      "outletId": "liberation",
+      "headline": "Rugby : un joueur sud-africain retrouvé mort en France à la veille d’un match",
+      "url": "https://www.liberation.fr/societe/sante/rugby-un-joueur-sud-africain-retrouve-mort-en-france-a-la-veille-dun-match-20261016_2FYON6TZAFB6ZG2GV7BDWH55J4/",
+      "publishedAt": "2026-10-16T13:49:12.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
+      "id": "b43d6325a8a4",
+      "outletId": "cnews",
+      "headline": "Rugby : un joueur des Lions retrouvé mort dans son hôtel sur l'Île-de-Ré à la veille d'un match contre La Rochelle",
+      "url": "https://www.cnews.fr/sport/2026-10-16/rugby-un-joueur-des-lions-retrouve-mort-dans-son-hotel-sur-lile-de-re-la-veille",
+      "publishedAt": "2026-10-16T13:42:58.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_9w97jw-taille1200_6ad228a2d6c8c.jpg?itok=KY6TmV5a",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "01ec60f2eb5a",
       "outletId": "le-parisien",
       "headline": "Coupe d’Europe de rugby : un joueur des Lions retrouvé mort avant le match contre La Rochelle, une enquête ouverte",
@@ -17,13 +38,24 @@
       "section": "sport"
     },
     {
+      "id": "5ad58514c393",
+      "outletId": "huffpost",
+      "headline": "Île de Ré : un rugbyman sud-africain retrouvé mort dans son hôtel, la veille d’un match contre La Rochelle",
+      "url": "https://www.huffingtonpost.fr/france/article/ile-de-re-un-rugbyman-sud-africain-retrouve-mort-dans-son-hotel-la-veille-d-un-match-contre-la-rochelle_340709.html",
+      "publishedAt": "2026-10-16T13:02:15.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/16/750/0/4000/2250/0/0/60/0/eb0d6aa_upload-1-yy249fkfzrh0-pexels-nayla-charo-3181636-5116575.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "fee09a864bca",
       "outletId": "le-figaro",
       "headline": "Rugby : un joueur de l’équipe sud-africaine des Lions est mort dans un hôtel de l’île de Ré avant le match contre La Rochelle",
       "url": "https://www.lefigaro.fr/sports/rugby/coupe-d-europe/rugby-un-joueur-de-l-equipe-sud-africaine-des-lions-est-decede-dans-un-hotel-de-l-ile-de-re-avant-le-match-contre-la-rochelle-20261016",
       "publishedAt": "2026-10-16T12:58:54.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/16/54f15f590f2243bc064ee6e987a2d25eebd1d41e298ae7d9509648f08963ab03.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -75,5 +107,25 @@
     }
   ],
   "section": "sport",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Un joueur sud-africain des Lions de Johannesburg est décédé dans un hôtel de l'île de Ré la veille d'une rencontre sportive.",
+      "Le parquet a ouvert une enquête judiciaire afin de déterminer les circonstances exactes de ce décès subit.",
+      "La question du maintien de la rencontre européenne prévue ce week-end a été soulevée par suite de ce drame."
+    ],
+    "centre": [
+      "Un membre de la délégation des Lions a succombé à un arrêt cardiaque dans sa chambre d'hôtel sur l'île de Ré.",
+      "L'identité du sportif n'a pas été communiquée publiquement dans l'attente de prévenir ses proches.",
+      "Une cellule psychologique a été installée au sein de l'établissement hôtelier pour accompagner l'équipe."
+    ],
+    "droite": [
+      "Le rugbyman sud-africain devait affronter le club de La Rochelle en Champions Cup ce samedi.",
+      "Le corps a été découvert sans vie dans une cabine de douche fermée de l'intérieur au sein de l'espace bien-être.",
+      "Les autorités judiciaires locales confirment qu'aucune trace de violence n'a été constatée sur la dépouille."
+    ]
+  },
+  "differences": "Les médias de droite se distinguent par l'apport de précisions matérielles sur les circonstances de la découverte du corps, notamment sa localisation dans une douche fermée de l'intérieur et l'absence de traces de violence. Les sources de gauche insistent davantage sur l'incertitude planant sur le maintien du match sportif, tandis que le centre met en avant la mise en place d'un accompagnement psychologique pour la délégation.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 9
 }
