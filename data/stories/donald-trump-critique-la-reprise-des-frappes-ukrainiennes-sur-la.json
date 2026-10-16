@@ -6,6 +6,38 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "c683bf945c43",
+      "outletId": "lexpress",
+      "headline": "\"C'est une honte\" : la nouvelle charge de Donald Trump contre Volodymyr Zelensky",
+      "url": "https://www.lexpress.fr/monde/cest-une-honte-la-nouvelle-charge-de-donald-trump-contre-volodymyr-zelensky-ECMRWFPBYFFBDAPOMTOL2KE6EM/",
+      "publishedAt": "2026-10-16T06:42:18.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/I5VX7FPJMVARNJIQO4UNCSFGVU.JPG?auth=f473381941130479f1603243a846bb3595477fc75c70ac300817c6cce2beff68&smart=true&width=6500&height=4333",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "91ef7385c56f",
+      "outletId": "la-croix",
+      "headline": "Guerre en Ukraine : Trump s’en prend de nouveau à Zelensky",
+      "url": "https://www.la-croix.com/international/ukraine-russie-jour-1696-point-conflit-ukrainien-poutine-aujourdhui-20261016",
+      "publishedAt": "2026-10-16T06:27:26.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/16/2563650-des-secouristes-ukrainiens-interviennent-sur-les-l.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "0db93b498296",
+      "outletId": "liberation",
+      "headline": "«Une honte» : Trump tance de nouveau Zelensky après l’annonce de la reprise des frappes ukrainiennes sur les raffineries russes",
+      "url": "https://www.liberation.fr/international/amerique/une-honte-trump-tance-de-nouveau-zelensky-apres-lannonce-de-la-reprise-des-frappes-ukrainiennes-sur-les-raffineries-russes-20261016_XVQDGBWGTRFJBFUW6DYFRUKJ44/",
+      "publishedAt": "2026-10-16T06:22:17.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "d2ee61580de4",
       "outletId": "bfmtv",
       "headline": "Guerre en Ukraine: Donald Trump juge \"plus difficile de travailler avec Volodymyr Zelensky qu'avec Vladimir Poutine\"",
@@ -135,12 +167,12 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le chef de l'État américain a qualifié d'inacceptable la décision ukrainienne de cibler à nouveau les infrastructures pétrolières russes.",
-      "Il a affirmé qu'il préférait interagir avec son homologue russe plutôt qu'avec le dirigeant ukrainien, soulignant des affinités personnelles négatives."
+      "Le dirigeant américain a vertement tancé son homologue ukrainien à la suite de l'annonce de nouveaux bombardements sur le secteur pétrolier russe.",
+      "Il a qualifié cette stratégie militaire de situation scandaleuse tout en prolongeant ses piques sur fond de tensions commerciales."
     ],
     "centre": [
-      "Le président des États-Unis a vertement critiqué la reprise des bombardements de Kiev contre le secteur énergétique russe, estimant cette stratégie préjudiciable à l'économie mondiale.",
-      "Il a accentué son désaccord avec Volodymyr Zelensky, jugeant le dialogue bien plus ardu avec lui qu'avec Vladimir Poutine au milieu de tensions bilatérales persistantes."
+      "Le président des États-Unis a vivement réagi contre Volodymyr Zelensky après que l'armée ukrainienne a ciblé de nouveau des raffineries en territoire russe.",
+      "Il a affirmé qu'il s'avérait nettement plus complexe de collaborer avec le chef d'État ukrainien qu'avec le dirigeant de la Russie."
     ],
     "droite": [
       "Le locataire de la Maison-Blanche a exprimé sa ferme réprobation face au retour des offensives ukrainiennes contre les raffineries situées en Russie, les qualifiant d'acte honteux.",
@@ -149,5 +181,5 @@
   },
   "differences": "L'analyse des différents quotidiens montre une homogénéité marquée dans la reprise des déclarations de Donald Trump, tous les bords politiques soulignant sa condamnation des frappes ukrainiennes et sa préférence déclarée pour le dirigeant russe. La presse de gauche se distingue toutefois en mettant l'accent sur l'aversion personnelle affichée par le président américain envers Volodymyr Zelensky, tandis que les rédactions centristes et de droite insèrent plus volontiers ses arguments économiques relatifs à la hausse des cours mondiaux du pétrole.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 11
+  "summarizedArticleCount": 14
 }

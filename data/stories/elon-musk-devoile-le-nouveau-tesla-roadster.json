@@ -6,6 +6,28 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "670ec0ac0420",
+      "outletId": "huffpost",
+      "headline": "Elon Musk dévoile la Tesla Roadster, sa « voiture volante », dans une démonstration digne d’un film d’action",
+      "url": "https://www.huffingtonpost.fr/tech-futurs/video/elon-musk-devoile-la-tesla-roadster-sa-voiture-volante-dans-une-demonstration-digne-d-un-film-d-action_340562.html",
+      "publishedAt": "2026-10-16T06:16:40.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/16/90/0/697/392/0/0/60/0/12ce086_upload-1-ydlab1epi7wb-capture-d-ecran-2026-10-16-080425.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "89f400504967",
+      "outletId": "bfmtv",
+      "headline": "\"Elle peut voler comme une fusée\": Elon Musk dévoile une Tesla dotée de propulseurs",
+      "url": "https://www.bfmtv.com/international/amerique-nord/etats-unis/video-elle-peut-voler-comme-une-fusee-elon-musk-devoile-une-tesla-dotee-de-propulseurs_VN-202610160204.html",
+      "publishedAt": "2026-10-16T06:08:27.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/5iEr7N6Zk-sGjlImlGBN2g_SdRQ=/0x0:1280x720/800x0/images/Elle-peut-voler-comme-une-fusee-Elon-Musk-devoile-une-Tesla-dotee-de-propulseurs-2366445.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "9cb3fc8a441b",
       "outletId": "cnews",
       "headline": "Tesla Roadster : Elon Musk dévoile sa nouvelle voiture capable de «voler» grâce à des fusées de SpaceX (vidéos)",
@@ -54,18 +76,22 @@
   "section": "science",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le dirigeant de la marque a présenté un nouveau véhicule électrique sportive aux capacités aériennes surprenantes.",
+      "La démonstration publique organisée au Texas a offert un spectacle s'apparentant aux scènes d'un film d'action."
+    ],
     "centre": [
-      "Elon Musk a présente la version définitive du Tesla Roadster lors d'un spectacle retransmis en direct.",
-      "Le véhicule intègre des technologies spatiales de SpaceX lui permettant d'effectuer des acrobaties aériennes.",
-      "Les réservations sont désormais ouvertes en France avec des acomptes atteignant 250 000 euros."
+      "La version définitive du Tesla Roadster a été officiellement présentée près de neuf années après le premier prototype.",
+      "Le véhicule intègre des propulseurs dérivés des technologies spatiales de SpaceX pour réaliser des performances spectaculaires.",
+      "Les réservations sont ouvertes et s'accompagnent d'acomptes importants."
     ],
     "droite": [
-      "La présentation officielle du nouveau véhicule sportif s'est déroulée lors d'un spectacle spectaculaire près d'un site de test de SpaceX au Texas.",
-      "Le modèle était attendu depuis une décennie avant d'être finalement dévoilé au public sous sa forme définitive.",
-      "La supercar intègre des technologies spatiales lui permettant de réaliser des manœuvres aériennes inédites."
+      "Le constructeur a enfin révélé la version définitive de sa supercar après une décennie d'attente.",
+      "L'événement s'est tenu dans un cadre spectaculaire à proximité d'un site d'essais de SpaceX.",
+      "La voiture intègre des équipements aérospatiaux inédits lui permettant d'effectuer des manœuvres aériennes."
     ]
   },
-  "differences": "Le centre met l'accent sur les caractéristiques techniques du véhicule, son équipement spatial et les modalités commerciales de réservation en France. De son côté, la droite adopte un angle événementiel en insistant sur la longue attente de dix ans, le cadre spectaculaire de la démonstration au Texas et la capacité de la voiture à voler grâce aux technologies de SpaceX.",
+  "differences": "Le centre adopte une approche technique en insistant sur l'intégration de propulseurs spatiaux et les conditions commerciales d'acquisition, tout en mentionnant le délai de neuf ans écoulé depuis le prototype. La droite accentue la dimension événementielle et spectaculaire de la démonstration au Texas ainsi que la longue attente d'une décennie. Enfin, la gauche pose un regard plus critique et imagé sur l'événement en comparant la démonstration de cette voiture volante à une cascade de cinéma.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 6
 }
