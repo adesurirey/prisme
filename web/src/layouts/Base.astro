@@ -29,7 +29,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="fr">
+<html lang="fr" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -59,6 +59,11 @@ const {
          paint so a stored Exposition never flashes Couverture widths.
          Absent or unreadable = Couverture (the default, no attribute). */}
     <script is:inline>
+      {/* Runs before first paint: any JS-capable browser gets `js` on
+          <html>, letting CSS hide the load-more tail (data-load-more-tail)
+          from the very first render — no reveal flash on load. Without JS
+          the class stays no-js and every Story stays visible. */}
+      document.documentElement.classList.replace('no-js', 'js');
       try {
         if (localStorage.getItem('prisme:mode') === 'exposure')
           document.documentElement.dataset.mode = 'exposure';

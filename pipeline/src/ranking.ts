@@ -5,22 +5,18 @@ import { ingestionIsOpen, parisDayKey } from './paris-day.ts';
 export { rankStories };
 
 /**
- * The Edition ranking (issue #37, ADR-0009 as amended by ADR-0011) lives in
- * @prisme/domain — the archive pages (issue #99, ADR-0017) reuse the same
- * key per Story day. The Edition keeps the top EDITION_SIZE Stories.
- */
-export const EDITION_SIZE = 20;
-
-/**
- * The dated Edition assembly (issue #98, ADR-0017, gap fix 2026-10): the
- * live pool — every Story whose ingestion window is still open, ranked by
- * the ADR-0009 key — first, then backfill — closed previous days'
- * `everInEdition` Stories, newest day first (J-1, J-2…), each day ranked by
- * the same key — capped at EDITION_SIZE. Backfill erodes through the day;
- * at midnight the day rolls over but yesterday's window stays open until
- * 06:00, so a Story born right after midnight still ranks into the Edition
- * (gets `everInEdition`, survives the freeze) instead of being born
- * already doomed to the never-in-Edition deletion rule (issue #75).
+ * The dated Edition assembly (ADR-0022, superseding ADR-0017's backfill
+ * tier): the Edition is every live Story — today's Stories, and yesterday's
+ * until 06:00 Paris — ranked by the ADR-0009 key, with no cut. The old
+ * `EDITION_SIZE = 20` cap was the Gemini free tier's Summaries budget
+ * leaking into editorial visibility; the budget now lives in `summarize.ts`
+ * (top-20 ranked Stories per build gain a Summaries call) while every Story
+ * stays visible. Backfill — closed previous days' `everInEdition` Stories —
+ * is gone: with 21–43 Stories observed per day the live pool alone covers
+ * the start of a new day, and uncapped backfill would grow the Edition
+ * forever with frozen Stories; previous days belong to the archive pages.
+ * A Story born right after midnight still ranks in (issue #75: it acquires
+ * `everInEdition` and survives its freezing, as a deletion-rule guardrail).
  * Stories from a future day are dropped (defensive; the Grouping model
  * cannot create them).
  */
@@ -29,19 +25,5 @@ export function assembleEdition(stories: Story[], now: Date): Story[] {
   const open = stories.filter(
     (s) => s.storyDay <= today && ingestionIsOpen(s.storyDay, now),
   );
-  const closedBackfill = stories.filter(
-    (s) =>
-      !ingestionIsOpen(s.storyDay, now) &&
-      s.storyDay < today &&
-      s.everInEdition === true,
-  );
-  const backfillDays = [...new Set(closedBackfill.map((s) => s.storyDay))]
-    .sort()
-    .reverse();
-  return [
-    ...rankStories(open),
-    ...backfillDays.flatMap((day) =>
-      rankStories(closedBackfill.filter((s) => s.storyDay === day)),
-    ),
-  ].slice(0, EDITION_SIZE);
+  return rankStories(open);
 }

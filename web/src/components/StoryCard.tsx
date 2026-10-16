@@ -29,9 +29,14 @@ import StoryImage from './StoryImage';
 export default function StoryCard({
   story,
   outlets,
+  tail,
 }: {
   story: Story;
   outlets: Outlet[];
+  /** Load-more tail marker (index.astro): the CSS rule
+   * `html.js [data-load-more-tail]` hides the card before first paint,
+   * load-more.ts flips `data-revealed` to bring it in. */
+  tail?: boolean;
 }) {
   const byId = new Map(outlets.map((o) => [o.id, o]));
   const counts = coverageCounts(story.articles, byId);
@@ -44,6 +49,7 @@ export default function StoryCard({
       className="-mx-5"
       data-story-id={story.id}
       data-coverage={reporting}
+      data-load-more-tail={tail ? '' : undefined}
     >
       <a
         href={withBase(storyUrl(story))}

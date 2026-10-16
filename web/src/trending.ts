@@ -34,6 +34,8 @@ export const SESSION_KEY = 'prisme.trendingSession';
 const SEEN_VERSION = 1;
 const SESSION_VERSION = 2;
 
+import { revealStory } from './load-more';
+
 /** Minimum Coverage gain, in distinct Outlets, past which a Story trends. */
 export const TRENDING_COVERAGE_DELTA_MIN = 2;
 
@@ -330,6 +332,9 @@ export function installTrending(
     pill.replaceChildren();
     const target = doc.querySelector(`[data-story-id="${newIds[0]}"]`);
     if (target == null) return;
+    // The Story may sit beyond the load-more batch (ADR-0022): a hidden
+    // element cannot be scrolled to, so expand the tail first.
+    revealStory(doc, newIds[0]!);
     if (typeof target.scrollIntoView === 'function') {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }

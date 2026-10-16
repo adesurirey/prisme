@@ -4,7 +4,8 @@ import { isLive } from './liveness.ts';
 /**
  * The Edition history (issue #75): each build reconciles the Stories' sticky
  * `everInEdition` flag with today's Edition — true the moment the Story
- * ranks into the top-`EDITION_SIZE`, never unset while the Story lives, so
+ * ranks into the uncapped Edition (ADR-0022), never unset while the Story
+ * lives, so
  * a Story's Edition history survives its freezing. A missing flag counts as
  * false (no backward compatibility; no migration). Frozen Stories are passed
  * through untouched (ADR-0005) — the flag is written only while a Story is
