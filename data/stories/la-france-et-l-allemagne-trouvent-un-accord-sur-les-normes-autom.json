@@ -6,6 +6,17 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "47add5a50aa7",
+      "outletId": "franceinfo",
+      "headline": "La France et l'Allemagne confirment un accord sur l'avenir de l'industrie automobile \"made in Europe\"",
+      "url": "https://www.franceinfo.fr/economie/automobile/la-france-et-l-allemagne-confirment-un-accord-sur-l-avenir-de-l-industrie-automobile_8240131.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-16T11:46:21.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/idxoDfvCybMWyu3FqrF29fRJVhE/0x59:1024x635/432x243/filters:format(jpg)/2026/10/16/6ad204b8e9a5d419320649.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "29ce71a55623",
       "outletId": "le-parisien",
       "headline": "La France et l’Allemagne confirment un accord sur l’avenir de l’industrie automobile européenne",
@@ -53,9 +64,14 @@
   "section": "economy",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Paris et Berlin sont parvenus à une entente sur le futur de la filière automobile européenne.",
+      "Le compromis accorde des marges de manœuvre additionnelles aux moteurs thermiques exigées par l'Allemagne."
+    ],
     "centre": [
-      "Paris et Berlin ont officialisé leur entente concernant la trajectoire du secteur automobile européen.",
-      "Le terrain d'entente combine une baisse des ambitions climatiques avec des garanties renforcées pour la production continentale."
+      "Un compromis officiel a été scellé entre la France et l'Allemagne concernant les régulations de l'automobile européenne.",
+      "L'accord articule un assouplissement des objectifs climatiques avec un soutien accru à la fabrication locale.",
+      "Le texte intègre des assouplissements pour les véhicules thermiques afin de répondre aux demandes de Berlin."
     ],
     "droite": [
       "Un accord bilatéral a été finalisé entre les gouvernements français et allemand autour de l'avenir de l'automobile.",
@@ -64,7 +80,7 @@
       "La validation définitive du texte reste conditionnée par les équilibres politiques à Berlin."
     ]
   },
-  "differences": "Le camp du centre met désormais en avant la confirmation officielle de l'entente et la synthèse trouvée entre baisse des exigences climatiques et renforcement du protectionnisme européen, un angle qui rejoint les analyses précédentes de la droite. La droite continue quant à elle de souligner l'obtention des gains industriels par l'Allemagne et les incertitudes politiques persistantes autour de la validation finale à Berlin, tandis que le camp de gauche ne couvre toujours pas le sujet.",
+  "differences": "Le camp de la gauche s'empare désormais du dossier en soulignant le compromis trouvé entre Paris et Berlin et l'introduction de flexibilités pour les motorisations thermiques. Le centre intègre cette nouvelle dimension tout en maintenant sa lecture axée sur l'équilibre entre ambitions écologiques revues à la baisse et protectionnisme continental. La droite conserve quant à elle sa focale sur les concessions faites à l'industrie d'outre-Rhin et les incertitudes entourant l'aval politique final à Berlin.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 5
 }

@@ -6,6 +6,50 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "3560ff0accda",
+      "outletId": "le-figaro",
+      "headline": "«Nous allons voler toutes les données» : à la veille de la manifestation du 17 octobre, le site des Républicains piraté par «l’extrême gauche»",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/nous-allons-voler-toutes-les-donnees-a-la-veille-de-la-manifestation-du-17-octobre-le-site-des-republicains-pirate-par-l-extreme-gauche-20261016",
+      "publishedAt": "2026-10-16T12:43:14.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/16/348a900192e0b0ccd11edf52c0210d6b1afc89e36b3842f97843fd1735d651f2.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "2cdceaf58c48",
+      "outletId": "bfmtv",
+      "headline": "17 octobre: le site des Républicains piraté par des soutiens à la mobilisation",
+      "url": "https://www.bfmtv.com/politique/les-republicains/video-17-octobre-le-site-des-republicains-pirate-par-des-soutiens-a-la-mobilisation_VN-202610160492.html",
+      "publishedAt": "2026-10-16T12:22:12.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/a2bnn0koorTTVaso-s0eRp1PsFo=/0x0:1280x720/800x0/images/17-octobre-le-site-des-Republicains-pirate-par-des-soutiens-a-la-mobilisation-2366687.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "d04e555d66fa",
+      "outletId": "tf1-info",
+      "headline": "\"Ceci est un appel à rejoindre les mobilisations\" : le site des Républicains piraté à la veille du mouvement du 17 octobre",
+      "url": "https://www.tf1info.fr/politique/ceci-est-un-appel-a-rejoindre-les-mobilisations-le-site-des-republicains-pirate-a-la-veille-du-mouvement-du-17-octobre-2026-2470344.html",
+      "publishedAt": "2026-10-16T12:09:49.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/661/lr-logo-republicains-afp-332-b781c1-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "7ac9d1b92c54",
+      "outletId": "liberation",
+      "headline": "«Vive le 17 octobre» : le site des Républicains brièvement transformé en appel à la mobilisation",
+      "url": "https://www.liberation.fr/politique/vive-le-17-octobre-le-site-des-republicains-brievement-transforme-en-appel-a-la-mobilisation-20261016_YVYRHCJ4RBHQLKUBIVRJSADODY/",
+      "publishedAt": "2026-10-16T11:36:42.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "9415aaf865bf",
       "outletId": "le-parisien",
       "headline": "« Ceci est un appel à rejoindre les mobilisations » : le site des Républicains piraté et inaccessible à la veille du 17 octobre",
@@ -32,17 +76,22 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le portail web du parti Les Républicains a subi une cyberattaque affichant un message incitant à des rassemblements.",
-      "Le mouvement politique a confirmé son intention de saisir la justice suite à cet incident informatique.",
-      "L'entourage de la direction indique qu'aucune information confidentielle ou critique n'a été compromise lors de cette intrusion."
+      "Le site internet du parti Les Républicains a subi une brève intrusion informatique ce vendredi.",
+      "La page d'accueil a affiché temporairement des messages et des visuels politiques en lien avec la mobilisation du 17 octobre.",
+      "La formation politique a confirmé sa volonté de porter plainte suite à cet incident."
     ],
     "centre": [
-      "Une action de piratage a rendu momentanément inaccessible la vitrine numérique de la formation politique de droite.",
-      "L'affichage frauduleux ciblait directement la journée de mobilisation prévue le 17 octobre.",
-      "Les responsables du parti ont officialisé le dépôt prochain d'une plainte pénale pour faire lumière sur cette attaque."
+      "La vitrine numérique du parti Les Républicains a été la cible d'un piratage informatique à la veille du mouvement social.",
+      "Le contenu de la page a été remplacé par un appel direct à participer aux manifestations prévues ce 17 octobre.",
+      "Les responsables du mouvement ont réagi en annonçant un dépôt de plainte imminent."
+    ],
+    "droite": [
+      "Le site web du parti Les Républicains a été compromis par des acteurs rattachés à l'extrême gauche peu avant la journée de contestation.",
+      "Les pirates informatiques ont menacé de diffuser des données internes si le parti ne se pliait pas à leurs exigences.",
+      "La direction de la formation politique a officialisé son intention de saisir la justice pour cette attaque."
     ]
   },
-  "differences": "Les camps du centre et du centre-gauche partagent une lecture factuelle strictement identique des événements, se concentrant sur l'inaccessibilité temporaire du site, le message lié au 17 octobre et la réponse judiciaire annoncée par le parti. Aucune divergence notable n'apparaît entre ces sensibilités, la droite n'étant pas représentée dans la couverture analysée pour cette revue.",
+  "differences": "Le Figaro à droite se distingue en qualifiant explicitement l'attaque d'acte orchestré par l'extrême gauche et en insistant sur la menace de vol de données, tandis que la gauche et le centre se focalisent sur la dimension technique et éphémère du piratage ainsi que sur l'appel à la mobilisation du 17 octobre. La gauche apporte en outre une précision culturelle et politique en mentionnant des visuels spécifiques affichés sur le site, alors que les autres sensibilités privilégient une approche plus généraliste de l'incident.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 6
 }

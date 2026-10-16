@@ -6,6 +6,29 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "8bfccc19dcb0",
+      "outletId": "ouest-france",
+      "headline": "Manifestations du 17 octobre : l’usage de grenades assourdissantes, autorisé par Laurent Nuñez, jugé « irresponsable »",
+      "url": "https://www.ouest-france.fr/societe/manifestation/manifestations-du-17-octobre-lusage-de-grenades-assourdissantes-autorise-par-laurent-nunez-taxe-d-irresponsable-0a523404-c940-11f1-b8bc-a46147b584ed?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-16T12:45:21.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYjkzMWM2YzM0NmUyNmMxNzI4MGM3OTljMWEzOTk4MmM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=b59502c42e35bce9f60cc167ea7aff05e4a506a6bdbe988d328d54927a0a4796",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "ab3d3f266b9b",
+      "outletId": "humanite",
+      "headline": "Pour le 17 octobre, Laurent Nuñez autorise à nouveau les grenades qui ont arrachées la main d’un lycéen",
+      "url": "https://www.humanite.fr/societe/grenades/pour-le-17-octobre-laurent-nunez-autorise-a-nouveau-les-grenades-qui-ont-arrachees-la-main-dun-lyceen",
+      "publishedAt": "2026-10-16T11:26:17.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/grenade-police.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "f6a4b6e48462",
       "outletId": "liberation",
       "headline": "Journée du 17 octobre : pas de consensus sur le parcours parisien, cellule de crise, retour des grenades assourdissantes… les autorités sur un mode méfiant",
@@ -122,20 +145,21 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le ministère de l'Intérieur maintient sa fermeté à la veille d'une mobilisation interprofessionnelle redoutée.",
-      "La présence attendue de nombreux jeunes dans les cortèges relance le débat sur la réponse policière.",
-      "Les autorités se préparent à faire face à la convergence de plusieurs mouvements sociaux."
+      "Le ministre de l'Intérieur réautorise des équipements controversés responsables de blessures graves sur de jeunes manifestants.",
+      "La décision ministérielle prise à la veille d'une journée de mobilisation interprofessionnelle suscite l'indignation des syndicats enseignants.",
+      "Les critiques dénoncent une mesure jugée particulièrement dangereuse dans un contexte de contestation sociale croissante."
     ],
     "centre": [
-      "Le gouvernement anticipe plus de deux cent cinquante rassemblements sur le territoire avec des risques de heurts.",
-      "La participation potentielle des lycéens mobilisés depuis plusieurs semaines inquiète les services de sécurité."
+      "Les forces de l'ordre obtiennent l'autorisation d'employer du matériel de maintien de l'ordre hautement sensible pour la journée du 17 octobre.",
+      "Le ministère justifie ce recours exceptionnel par la crainte de violences extrêmes lors des rassemblements prévus.",
+      "La décision provoque des réactions virulentes parmi les organisations syndicales qui rappellent le traumatisme récent d'un adolescent mutilé."
     ],
     "droite": [
-      "Les forces de l'ordre obtiennent le feu vert pour employer ces munitions spécifiques face aux menaces extrêmes.",
-      "L'exécutif tente de concadrer les risques de débordements tout en rappelant le contexte tendu de la contestation."
+      "Les forces de l'ordre disposent des moyens nécessaires pour encadrer les rassemblements à venir face à la menace de heurts majeurs.",
+      "L'exécutif tente de stabiliser la situation sécuritaire tout en maintenant un dispositif ferme face aux risques de débordements."
     ]
   },
-  "differences": "La droite met l'accent sur la nécessité de réagir face à des violences urbaines graves et rappelle le cadre d'utilisation de ces équipements controversés. Le centre et la gauche soulignent plutôt la complexité de la gestion de l'ordre public à la veille d'une convergence des luttes marquée par la présence de lycéens.",
+  "differences": "La gauche et le centre insistant fortement sur le danger potentiel de ces équipements après le drame récent ayant frappé un lycéen, la droite se focalise davantage sur l'impératif sécuritaire et la nécessité d'armer les forces de l'ordre face à des menaces graves. L'Humanité et Ouest-France soulignent l'irresponsabilité perçue de cette décision ministérielle, tandis que la droite justifie cette autorisation par le contexte tendu de la contestation.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 10
+  "summarizedArticleCount": 12
 }

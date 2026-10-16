@@ -6,6 +6,28 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "2f5192499740",
+      "outletId": "tf1-info",
+      "headline": "La première voiture volante dévoilée !",
+      "url": "https://www.tf1info.fr/high-tech/videos/video-la-premiere-voiture-volante-devoilee-43957-2470367.html",
+      "publishedAt": "2026-10-16T12:30:21.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/la-premiere-voiture-volante-devoilee-d881ab-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "8ed252fb2818",
+      "outletId": "europe-1",
+      "headline": "Tesla : Elon Musk dévoile son nouveau Roadster «volant» dans un show impressionnant",
+      "url": "https://www.europe1.fr/technologies/tesla-elon-musk-devoile-son-nouveau-roadster-volant-dans-un-show-impressionnant-1154183?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-16T11:38:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/16/13/000_d3g39g3_1_6ad20c1b2d3b5.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "ea141dd27fa8",
       "outletId": "tf1-info",
       "headline": "Rétropropulseurs, tonneau complet... les images de la spectaculaire démonstration du nouveau \"Roadster\" de Tesla",
@@ -67,7 +89,7 @@
       "url": "https://www.lefigaro.fr/automobile/tesla-roadster-elle-vole-elle-roule-elle-bondit-on-vous-raconte-la-folle-presentation-de-la-voiture-de-sport-d-elon-musk-20261016",
       "publishedAt": "2026-10-16T04:47:08.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/1210x720_crop/2026/10/16/be114e8629d10cc5212773c8ff8e4f3e4e8334c0d09856c24858e1adeacde483.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -110,13 +132,12 @@
       "Les réservations sont ouvertes et s'accompagnent d'acomptes importants."
     ],
     "droite": [
-      "Le constructeur a enfin révélé la version définitive de sa supercar après une décennie d'attente.",
-      "L'événement s'est tenu dans un cadre spectaculaire à proximité d'un site d'essais de SpaceX.",
-      "La voiture intègre des équipements aérospatiaux inédits lui permettant d'effectuer des manœuvres aériennes.",
-      "Le véhicule a réalisé des figures acrobatiques saisissantes lors de sa première apparition publique."
+      "Le constructeur a enfin révélé la version définitive de sa supercar après une décennie d'attente lors d'un show impressionnant au Texas.",
+      "La voiture intègre des équipements aérospatiaux inédits inspirés de SpaceX lui permettant d'effectuer des manœuvres aériennes spectaculaires.",
+      "Le véhicule a réalisé des figures acrobatiques saisissantes, telles qu'un tonneau, tout en maintenant le flou sur sa future commercialisation."
     ]
   },
-  "differences": "Le centre adopte une approche technique en insistant sur l'intégration de propulseurs spatiaux et les conditions commerciales d'acquisition, tout en mentionnant le délai de neuf ans écoulé depuis le prototype. La droite accentue la dimension événementielle et spectaculaire de la démonstration au Texas ainsi que la longue attente d'une décennie, tandis que le centre droit détaille les cascades réalisées et l'ouverture des carnets de commandes. Enfin, la gauche pose un regard plus critique et nuancé en insistant sur l'absence d'homologation routière, de prix et de calendrier pour cette voiture volante comparée à une cascade de cinéma.",
+  "differences": "Le centre adopte une perspective technique et commerciale en insistant sur l'intégration de propulseurs spatiaux, les conditions d'acquisition et le délai de neuf ans écoulé depuis le premier prototype. La droite et le centre droit accentuent quant à eux la dimension spectaculaire du show au Texas et la longue attente d'une décennie, le centre droit soulignant en outre l'opération marketing face à la concurrence tandis que la droite met en avant la comparaison avec un film de science-fiction. Enfin, la gauche maintient un regard plus critique en rappelant l'absence d'homologation routière, de prix et de calendrier officiel pour ce véhicule.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 8
+  "summarizedArticleCount": 10
 }

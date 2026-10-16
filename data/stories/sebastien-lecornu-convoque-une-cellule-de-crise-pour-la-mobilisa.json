@@ -6,6 +6,40 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "2e9e4c0e77a7",
+      "outletId": "le-figaro",
+      "headline": "Mobilisation du 17 octobre : Sébastien Lecornu convoque une cellule interministérielle de crise",
+      "url": "https://www.lefigaro.fr/politique/mobilisation-du-17-octobre-sebastien-lecornu-convoque-une-cellule-interministerielle-de-crise-20261016",
+      "publishedAt": "2026-10-16T12:19:47.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/16/35d5257000188f7af6cc08cf4edde7236e3c44ff32d9b69b1606a946c053bec7.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "02d1a496046f",
+      "outletId": "bfmtv",
+      "headline": "Manifestations du 17 octobre: une cellule de crise convoquée ce samedi par Sébastien Lecornu pour suivre la mobilisation",
+      "url": "https://www.bfmtv.com/societe/manifestations/manifestations-du-17-octobre-une-cellule-de-crise-convoquee-ce-samedi-par-sebastien-lecornu-pour-suivre-la-mobilisation_AN-202610160482.html",
+      "publishedAt": "2026-10-16T12:04:57.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Hmg5RN3QCV1bR_aT53BkEcccR-E=/0x40:768x472/800x0/images/Le-ministre-de-l-Interieur-Laurent-Nunez-a-gauche-et-a-droite-le-Premier-ministre-Sebastien-Lecornu-a-l-Assemblee-nationale-a-Paris-le-7-octobre-2026-2366652.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "9575c5e0a9e1",
+      "outletId": "europe-1",
+      "headline": "Mobilisation du 17 octobre : Lecornu convoque une cellule de crise samedi au niveau des directeurs de cabinet",
+      "url": "https://www.europe1.fr/politique/mobilisation-du-17-octobre-lecornu-convoque-une-cellule-de-crise-samedi-au-niveau-des-directeurs-de-cabinet-1154192?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-16T11:44:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Sebastien%20Lecornu/credits_stephane_de_sakutin_afp_69fb10244065b.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "57febcb035e9",
       "outletId": "le-parisien",
       "headline": "Mobilisation du 17 octobre : Sébastien Lecornu convoque une cellule de crise pour suivre le mouvement",
@@ -29,5 +63,20 @@
     }
   ],
   "section": "politics",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "Le Premier ministre Sébastien Lecornu réunit une cellule de crise interministérielle pour suivre la journée de mobilisation de ce samedi.",
+      "Cette instance de suivi est activée à la demande de Laurent Nuñez, ministre de l'Intérieur."
+    ],
+    "droite": [
+      "Une cellule interministérielle de crise est mise en place pour piloter la réponse face aux manifestations annoncées.",
+      "L'exécutif active ce dispositif au niveau des directeurs de cabinet pour coordonner les services de l'État.",
+      "Une divergence existe au sein de l'exécutif concernant l'origine de l'initiative, Matignon et la Place Beauvau revendiquant chacun l'idée de cette convocation.",
+      "Le ministère de l'Intérieur justifie cette mesure par la crainte d'une forte affluence et la multiplication des appels sur les réseaux sociaux."
+    ]
+  },
+  "differences": "Le centre se limite à rapporter factuellement la convocation de la cellule de crise par le Premier ministre à la demande de l'Intérieur, tandis que la droite entre dans les détails administratifs en précisant que le dispositif fonctionne au niveau des directeurs de cabinet. La droite met particulièrement en lumière les coulisses politiques et la subtile bataille de communication entre Matignon et la Place Beauvau pour s'attribuer l'initiative de la mesure.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 5
 }
