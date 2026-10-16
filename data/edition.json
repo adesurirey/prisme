@@ -1,13 +1,35 @@
 {
-  "builtAt": "2026-10-16T04:01:20.669Z",
+  "builtAt": "2026-10-16T05:01:25.881Z",
   "stories": [
     {
       "id": "35b8c2fd850d",
       "slug": "une-fusillade-dans-une-ecole-primaire-de-l-oregon-fait-quatre-mo",
-      "title": "Une fusillade dans une école primaire de l'Oregon fait quatre morts",
+      "title": "Un adolescent tue quatre personnes dans une école de l'Oregon",
       "createdAt": "2026-10-16T04:01:20.669Z",
       "storyDay": "2026-10-16",
       "articles": [
+        {
+          "id": "2fbbc34c23e5",
+          "outletId": "cnews",
+          "headline": "Fusillade aux Etats-Unis : un adolescent de 16 ans tue quatre personnes, dont trois enfants, dans une école primaire",
+          "url": "https://www.cnews.fr/monde/2026-10-16/fusillade-aux-etats-unis-un-adolescent-de-16-ans-tue-quatre-personnes-dont-trois",
+          "publishedAt": "2026-10-16T04:31:18.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-15t225005z_283704328_rc2y3oaq6n4i_rtrmadp_3_oregon-shooting_6ad1a74adbc9c.jpg?itok=Bm-xDrOW",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "90f82793f24c",
+          "outletId": "europe-1",
+          "headline": "États-Unis : un tireur fait quatre morts, dont trois enfants, dans une école primaire de l'Oregon",
+          "url": "https://www.europe1.fr/international/etats-unis-un-tireur-fait-quatre-morts-dont-trois-enfants-dans-une-ecole-primaire-de-loregon-1153205?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-16T04:23:50.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/16/06/063_2299885545_1_6ad1a8cde4846.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
         {
           "id": "ff45aa8396c1",
           "outletId": "huffpost",
@@ -77,19 +99,57 @@
           "Une attaque armée menée par un adolescent de seize ans dans une école primaire de l'Oregon a fait quatre victimes mortelles, comprenant trois enfants et un enseignant.",
           "Le suspect a été neutralisé par un habitant armé avant l'intervention des forces de l'ordre, alors que deux autres personnes ont été gravement blessées.",
           "Le drame s'est déroulé dans la ville de Bend, située dans l'ouest des États-Unis."
+        ],
+        "droite": [
+          "Un adolescent de seize ans a ouvert le feu dans une école primaire de Bend dans l'Oregon, faisant quatre morts et plusieurs blessés graves.",
+          "Le tireur a été stoppé net par un riverain armé qui l'a pris en chasse à l'intérieur de l'établissement avant l'arrivée des forces de l'ordre.",
+          "Les enfants décédés étaient âgés de cinq, huit et onze ans, tandis que l'établissement a fait l'objet d'une évacuation progressive."
         ]
       },
-      "differences": "Les médias de gauche et du centre livrent un récit factuel très convergent sur le drame de l'Oregon, insistant tous sur le lourd bilan humain, l'âge du tireur et l'intervention décisive d'un citoyen armé. Toutefois, le centre apporte des précisions géographiques et sanitaires plus détaillées, en mentionnant la ville de Bend et le nombre de blessés graves, des éléments absents des synthèses de la gauche.",
+      "differences": "Les médias de gauche, du centre et de droite partagent un constat factuel très similaire concernant le drame de l'Oregon, soulignant tous le lourd bilan humain, l'âge du tireur et l'intervention décisive d'un citoyen armé. Alors que la gauche s'en tient aux grandes lignes du bilan, le centre et la droite apportent des précisions géographiques et sanitaires plus détaillées, en mentionnant la ville de Bend ainsi que l'âge précis des jeunes victimes et la prise en charge des blessés graves à l'hôpital.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 5
+      "summarizedArticleCount": 7
     },
     {
       "id": "ee2c93b805f8",
       "slug": "donald-trump-critique-la-reprise-des-frappes-ukrainiennes-sur-la",
-      "title": "Donald Trump critique la reprise des frappes ukrainiennes sur la Russie",
+      "title": "Donald Trump juge honteuse la reprise des frappes ukrainiennes",
       "createdAt": "2026-10-16T04:01:20.669Z",
       "storyDay": "2026-10-16",
       "articles": [
+        {
+          "id": "d5533622c49c",
+          "outletId": "le-parisien",
+          "headline": "Guerre en Ukraine : Donald Trump juge que la reprise par Kiev des frappes sur les raffineries russes est une « honte »",
+          "url": "https://www.leparisien.fr/international/ukraine/guerre-en-ukraine-donald-trump-juge-que-la-reprise-par-kiev-des-frappes-sur-les-raffineries-russes-est-une-honte-16-10-2026-MQLHEEINDRBRNLWRHL4X2I2FGY.php",
+          "publishedAt": "2026-10-16T05:01:25.881Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "9c440afe3024",
+          "outletId": "bfmtv",
+          "headline": "Donald Trump juge que la reprise par l'Ukraine des frappes sur les raffineries russes est une \"honte\"",
+          "url": "https://www.bfmtv.com/international/amerique-nord/etats-unis/donald-trump/donald-trump-juge-que-la-reprise-par-l-ukraine-des-frappes-sur-les-raffineries-russes-est-une-honte_AD-202610160103.html",
+          "publishedAt": "2026-10-16T04:38:07.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/9cFYXGD569hcluNRzontVMYmNm8=/0x106:2048x1258/800x0/images/Donald-Trump-2366373.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "0684a6b042d5",
+          "outletId": "franceinfo",
+          "headline": "Donald Trump juge que la reprise par l'Ukraine des frappes sur les raffineries russes est une \"honte\"",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/donald-trump-juge-que-la-reprise-par-l-ukraine-des-frappes-sur-les-raffineries-russes-est-une-honte_8239546.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-16T04:25:28.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/Uol2wjigObnSpHUcEsyR_vaKKcc/0x0:7497x4217/432x243/filters:format(jpg)/2026/10/16/6ad1a6c0b0e11045179643.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
         {
           "id": "6944b7337014",
           "outletId": "le-monde",
@@ -130,24 +190,21 @@
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Donald Trump a qualifié de honteuse la reprise par Kiev des attaques ciblant les raffineries situées en territoire russe.",
-          "Le dirigeant américain a vivement pris à partie Volodymyr Zelensky, affirmant qu'il est plus complexe de négocier avec lui qu'avec Vladimir Poutine.",
-          "Il a également exprimé son animosité envers le président ukrainien, l'accusant de faire obstruction à la recherche d'un compromis."
+          "Le chef de l'exécutif américain a vivement fustigé la décision ukrainienne de cibler à nouveau les infrastructures pétrolières situées en territoire russe.",
+          "Il a publiquement déclaré qu'il s'avérait plus complexe de négocier avec le dirigeant ukrainien qu'avec le locataire du Kremlin, illustrant un regain de tension bilatérale."
         ],
         "centre": [
-          "Le président des États-Unis a vertement critiqué les frappes ukrainiennes menées contre des infrastructures pétrolières russes.",
-          "Il a haussé le ton face au chef de l'État ukrainien, déclarant qu'il s'avérait plus ardu de collaborer avec lui qu'avec son homologue russe.",
-          "Parallèlement, la diplomatie ukrainienne poursuit ses efforts pour consolider l'appui des partenaires européens à Kiev."
+          "Le président des États-Unis a qualifié d'inacceptable la reprise des bombardements de Kiev contre le secteur énergétique russe.",
+          "Il a accentué son désaccord avec son homologue ukrainien, estimant le dialogue plus ardu avec lui qu'avec Vladimir Poutine, tandis que Kiev tente de préserver l'appui de ses partenaires européens."
         ],
         "droite": [
-          "L'ancien locataire de la Maison-Blanche a vertement condamné le retour des bombardements ukrainiens sur les raffineries russes.",
-          "Il a accentué la pression verbale sur le dirigeant ukrainien en estimant qu'il demeure plus malaisé de traiter avec lui qu'avec le Kremlin.",
-          "Ces déclarations interviennent alors que Kiev cherche activement à obtenir de nouvelles garanties de soutien de la part des capitales européennes."
+          "L'ancien président américain a exprimé sa ferme réprobation face au retour des offensives ukrainiennes contre les raffineries en Russie.",
+          "Il a affirmé qu'il demeure plus difficile de composer avec le chef de l'État ukrainien qu'avec Moscou, dans un contexte où Kiev cherche des garanties de soutien en Europe."
         ]
       },
-      "differences": "L'analyse des différents quotidiens montre une forte homogénéité dans le traitement de la déclaration de Donald Trump, l'ensemble des bords politiques reprenant les mêmes propos virulents à l'encontre de Volodymyr Zelensky et sa condamnation des frappes sur les raffineries russes. Le centre se distingue légèrement en recontextualisant la séquence dans l'actualité diplomatique globale, notamment en mentionnant les démarches ukrainiennes en direction des Européens.",
+      "differences": "L'analyse des différents quotidiens révèle une quasi-unanimité dans le traitement des propos de Donald Trump, l'ensemble des bords politiques soulignant sa condamnation des frappes ukrainiennes sur les raffineries russes et sa critique de Volodymyr Zelensky. Les nuances demeurent mineures, la presse centriste et de droite intégrant plus explicitement les efforts parallèles de la diplomatie ukrainienne en direction des capitales européennes pour maintenir le front allié.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 3
+      "summarizedArticleCount": 6
     },
     {
       "id": "b1fecb037c5e",
@@ -157,16 +214,60 @@
       "storyDay": "2026-10-16",
       "articles": [
         {
+          "id": "b20f7938f2d9",
+          "outletId": "la-croix",
+          "headline": "Blocus des lycées : les « réponses concrètes » du gouvernement se font attendre",
+          "url": "https://www.la-croix.com/politique/blocus-des-lycees-les-reponses-concretes-du-gouvernement-se-font-attendre-20261015",
+          "publishedAt": "2026-10-16T04:55:06.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/15/2563272-pour-sortir-du-mouvement-de-blocage-des-etudiants-.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "8c904d55c1a8",
+          "outletId": "lopinion",
+          "headline": "17 octobre : derrière la mobilisation virtuelle, le flou du terrain",
+          "url": "https://www.lopinion.fr/economie/17-octobre-derriere-la-mobilisation-virtuelle-le-flou-du-terrain",
+          "publishedAt": "2026-10-16T04:50:00.000Z",
+          "imageUrl": "https://beymedias.brightspotcdn.com/5c/8c/1e71a32d46b1bae8238ec63dae16/sipa-01305636-000001.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "2f97d3df0c7f",
+          "outletId": "franceinfo",
+          "headline": "Mobilisation du 17 octobre : comment les gilets jaunes tentent de structurer le mouvement, relancé par la colère lycéenne",
+          "url": "https://www.franceinfo.fr/economie/transports/gilets-jaunes/mobilisation-du-17-octobre-comment-les-gilets-jaunes-tentent-de-structurer-le-mouvement-relance-par-la-colere-lyceenne_8238922.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-16T04:16:54.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/T5CT3Y2J6uhiJBPtIf-1DN_Ugh0/0x17:4050x2295/432x243/filters:format(jpg)/2026/10/15/6ad0f5aa0a75b363359009.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
           "id": "39330a567464",
           "outletId": "ouest-france",
           "headline": "Manifestations du samedi 17 octobre : l’appel au retour des Gilets jaunes sera-t-il suivi ?",
           "url": "https://www.ouest-france.fr/societe/gilets-jaunes/manifestations-du-samedi-17-octobre-lappel-au-retour-des-gilets-jaunes-sera-t-il-suivi-d6cbb258-c63e-11f1-92e9-819eb738846b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-10-16T04:00:29.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwY2QyMGQ2NTZlNWFiNTg5ODUxNGUxNDRmY2EwNzYzMTc?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=8ecd2d7257dd58e4df86dbded15c9b97ee88f925e0cffa5c6181f9f0cd6f470a",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
+        },
+        {
+          "id": "5891aca817ca",
+          "outletId": "franceinfo",
+          "headline": "Avant le 17 octobre, des futurs manifestants motivés par des colères qui se rejoignent, de \"l'élan des mobilisations lycéennes\" à l'envie de \"vivre correctement\"",
+          "url": "https://www.franceinfo.fr/economie/greve/temoignages-avant-le-17-octobre-des-futurs-manifestants-motives-par-des-coleres-qui-se-rejoignent-de-l-elan-des-mobilisations-lyceennes-a-l-envie-de-vivre-correctement_8238379.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-16T03:40:04.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/GV6BJfDqRwuXAA9E3ay6fd0jK60/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/15/6ad0e3d216f66630757243.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
         },
         {
           "id": "b7863bd00bd1",
@@ -181,21 +282,129 @@
           "everFrontPage": true
         }
       ],
+      "section": "society",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le mouvement de protestation s'élargit à de nombreuses professions pour exiger des mesures immédiates face à l'inflation.",
+          "Les organisateurs s'appuient sur les outils numériques pour structurer un millier d'actions prévues sur le territoire.",
+          "La jeunesse ins insuffle une dynamique nouvelle aux revendications sociales traditionnelles."
+        ],
+        "centre": [
+          "Les organisations étudiantes appellent à converger vers les cortèges contestataires prévus ce samedi.",
+          "L'exécutif conteste toute stratégie de temporisation face aux revendications relatives aux conditions d'apprentissage.",
+          "Les observateurs s'interrogent sur la capacité de mobilisation réelle de cet appel unitaire relayé principalement sur Internet."
+        ],
+        "droite": [
+          "La journée du 17 octobre met en lumière la difficulté d'évaluer la portée réelle d'une contestation nourrie par les réseaux sociaux."
+        ]
+      },
+      "differences": "Le centre gauche met l'accent sur la structuration organisationnelle et l'élargissement de la contestation à d'autres secteurs professionnels grâce à l'impulsion lycéenne, tandis que le centre s'interroge sur la concrétisation de ces appels et rapporte la défense du gouvernement face aux critiques d'attentisme. De son côté, le centre droit insiste particulièrement sur le décalage entre l'effervescence numérique de l'appel et l'incertitude quant à sa traduction effective sur le terrain.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 6
+    },
+    {
+      "id": "bd1f9c97bfeb",
+      "slug": "elon-musk-devoile-le-nouveau-tesla-roadster",
+      "title": "Elon Musk dévoile le nouveau Tesla Roadster",
+      "createdAt": "2026-10-16T05:01:25.881Z",
+      "storyDay": "2026-10-16",
+      "articles": [
+        {
+          "id": "5b1201030f27",
+          "outletId": "le-figaro",
+          "headline": "Tesla Roadster : elle vole, elle roule, elle bondit… On vous raconte la folle présentation de la voiture de sport d’Elon Musk",
+          "url": "https://www.lefigaro.fr/automobile/tesla-roadster-elle-vole-elle-roule-elle-bondit-on-vous-raconte-la-folle-presentation-de-la-voiture-de-sport-d-elon-musk-20261016",
+          "publishedAt": "2026-10-16T04:47:08.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/1210x720_crop/2026/10/16/be114e8629d10cc5212773c8ff8e4f3e4e8334c0d09856c24858e1adeacde483.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        },
+        {
+          "id": "740dc1eecada",
+          "outletId": "bfmtv",
+          "headline": "Elon Musk dévoile son Tesla Roadster capable de \"voler\" grâce à des fusées de SpaceX",
+          "url": "https://www.bfmtv.com/societe/video-elon-musk-devoile-son-tesla-roadster-capable-de-voler-grace-a-des-fusees-de-space-x_VN-202610160091.html",
+          "publishedAt": "2026-10-16T04:24:04.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/yebMsAuR4KKaVtc3Rh_BOrkhGzU=/0x0:1280x720/800x0/images/Elon-Musk-devoile-son-Tesla-Roadster-capable-de-voler-grace-a-des-fusees-de-SpaceX-2366364.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "9f67dcf135b9",
+          "outletId": "bfmtv",
+          "headline": "\"Mieux qu'une voiture de James Bond\": Elon Musk dévoile son Tesla Roadster capable de \"voler\" grâce à des fusées de SpaceX",
+          "url": "https://www.bfmtv.com/auto/mieux-qu-une-voiture-de-james-bond-elon-musk-devoile-son-tesla-roadster-capable-de-voler-grace-a-des-fusees-de-space-x_AN-202610160083.html",
+          "publishedAt": "2026-10-16T04:12:08.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/fp10YG1HoP823nBuXprFNSOvTZs=/1x1:1297x730/800x0/images/Tesla-Roadster-2366337.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        }
+      ],
+      "section": "science",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Elon Musk a présenté la version définitive du Tesla Roadster lors d'un spectacle retransmis en direct.",
+          "Le véhicule intègre des technologies spatiales de SpaceX lui permettant d'effectuer des acrobaties aériennes.",
+          "Les réservations sont désormais ouvertes en France avec des acomptes atteignant 250 000 euros."
+        ],
+        "droite": [
+          "La présentation officielle du nouveau véhicule sportif d'Elon Musk s'est déroulée sous la forme d'un spectacle spectaculaire.",
+          "Le modèle était attendu depuis une décennie avant d'être finalement dévoilé au public."
+        ]
+      },
+      "differences": "Le centre met l'accent sur les caractéristiques techniques et commerciales du véhicule, notamment son équipement spatial issu de SpaceX et les modalités de réservation en France, allant jusqu'à qualifier la voiture de mieux que celle de James Bond. De son côté, la droite adopte un ton plus narratif et événementiel en insistant sur la longue attente de dix ans et le caractère de spectacle de haute voltige de la présentation.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 3
+    },
+    {
+      "id": "6c3aaec666d9",
+      "slug": "les-deputes-votent-la-delivrance-de-medicaments-a-l-unite",
+      "title": "Les députés votent la délivrance de médicaments à l'unité",
+      "createdAt": "2026-10-16T05:01:25.881Z",
+      "storyDay": "2026-10-16",
+      "articles": [
+        {
+          "id": "61807981039b",
+          "outletId": "franceinfo",
+          "headline": "Budget 2027 : en commission, les députés votent pour la dispensation à l'unité des médicaments",
+          "url": "https://www.franceinfo.fr/economie/budget/budget-2027-en-commission-les-deputes-votent-pour-la-dispensation-a-l-unite-des-medicaments_8239555.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-16T04:46:10.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/5_wXlpdKU3bNbZcpq8AQ8zXYx9Q/0x0:4724x2657/432x243/filters:format(jpg)/2026/10/16/6ad1ab534064e442105630.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "cd85a9635f9f",
+          "outletId": "bfmtv",
+          "headline": "Finie la boîte de 20 pour une prescription de 3 cachets? Les députés adoptent en commission un amendement pour la dispensation des médicaments à l'unité",
+          "url": "https://www.bfmtv.com/economie/economie-social/finances-publiques/finie-la-boite-de-20-pour-une-prescription-de-3-cachets-les-deputes-adoptent-en-commission-un-amendement-pour-la-dispensiation-des-medicaments-a-l-unite_AD-202610160106.html",
+          "publishedAt": "2026-10-16T04:41:08.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/i0RyWVDMUGAe8jwwDyhxqVcWY7Q=/0x106:2048x1258/800x0/images/Pharmacie-d-officine-2324929.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
       "section": "politics",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Les jeunes manifestants misent sur la journée du 17 octobre pour relancer leur contestation.",
-          "Le dialogue institutionnel avec l'exécutif est dans l'impasse au moment où débutent les congés scolaires.",
-          "La stratégie adoptée cherche à unir les mécontentements étudiants avec la contestation sociale historique."
+          "Les parlementaires ont validé en commission une disposition pour généraliser la vente de comprimés au compte-gouttes.",
+          "Cette mesure vise à corriger le cadre actuel jugé trop restreint pour ce type de distribution."
         ],
         "centre": [
-          "Des mots d'ordre circulent pour organiser un retour des cortèges contestataires ce samedi 17 octobre 2026.",
-          "Les rassemblements initiaux ciblent la hausse du coût de la vie et tentent d'associer la jeunesse à leur mouvement.",
-          "L'incertitude demeure quant à la mobilisation concrète que générera cet appel unitaire."
+          "Un amendement voté en commission autorise les pharmaciens à distribuer les traitements selon la quantité exacte prescrite.",
+          "Un décret ultérieur fixera la liste précise des produits concernés, à l'instar de certains antibiotiques déjà éligibles."
         ]
       },
-      "differences": "Le centre insiste sur l'interrogation autour de la mobilisation et les aspects organisationnels de la journée du 17 octobre, tandis que le centre gauche, à travers Le Monde, se focalise sur l'analyse politique d'un mois de contestation lycéenne et sur la volonté stratégique de lier la jeunesse aux revendications des Gilets jaunes face à un dialogue gouvernemental bloqué.",
+      "differences": "La couverture est très homogène entre le centre-gauche et le centre, les deux camps rapportant l'adoption en commission d'un amendement sur la distribution pharmaceutique sur mesure. Le centre apporte une précision supplémentaire sur les modalités futures en mentionnant l'intervention d'un décret pour fixer la liste des produits concernés, tandis que le centre-gauche insiste sur la volonté d'élargir un dispositif jugé insuffisant jusqu'à présent.",
       "promptVersion": "sum-2",
       "summarizedArticleCount": 2
     },
@@ -495,7 +704,7 @@
           "url": "https://www.lemonde.fr/societe/article/2026/10/15/tunnel-sous-la-manche-un-accident-entre-un-bus-et-un-train-de-fret-fait-dix-neuf-blesses_6794797_3224.html",
           "publishedAt": "2026-10-15T20:04:48.000Z",
           "imageUrl": "https://img.lemde.fr/2024/10/24/375/0/2250/1125/644/322/60/0/4e171be_1729786778722-frame-159.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -772,7 +981,7 @@
           "url": "https://www.20minutes.fr/societe/4254451-20261015-direct-blocus-lycees-edouard-geffray-va-recevoir-troisieme-fois-organisations-lyceennes?at_medium=display&at_campaign=149",
           "publishedAt": "2026-10-15T04:53:13.000Z",
           "imageUrl": "https://img.20mn.fr/U9J5jJ32QruYm5okPy-ZuCk/1200x768_paris-october-14-2026-questions-to-the-government-session-at-the-national-assembly-between-deputies-and-ministers-of-the-government-paris-14-octobre-2026-edouard-geffray-ministre-de-l-education-nationale-lors-de-la-session-de-questions-au-gouvernement-a-l-assemblee-nationale-entre-les-deputes-et-les-ministres-du-gouvernement-arnaud-cesar-vilette-sipa-press-vilettearnaud-av0430-credit-arnaud-cesar-vilette-sipa-2610141652",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "live",
           "section": "society",
           "everFrontPage": true
@@ -2344,197 +2553,6 @@
       "differences": "La gauche se distingue en replaçant ces manœuvres dans le contexte des tensions frontalières récentes avec Séoul, tandis que le centre et la droite se focalisent principalement sur les aspects techniques et les déclarations officielles de Pyongyang concernant la fiabilité de ses systèmes de combat sous-marins, la droite ajoutant des détails visuels sur le mode de lancement des missiles.",
       "promptVersion": "sum-2",
       "summarizedArticleCount": 7
-    },
-    {
-      "id": "9962e1da33a8",
-      "slug": "le-juge-youssef-badr-est-cible-par-des-attaques-de-presse",
-      "title": "Le juge Youssef Badr est ciblé par des attaques de presse",
-      "createdAt": "2026-10-16T00:01:34.470Z",
-      "storyDay": "2026-10-15",
-      "articles": [
-        {
-          "id": "5219f119254b",
-          "outletId": "le-figaro",
-          "headline": "Attaques visant un juge de Bobigny : «Aucun magistrat ne doit être menacé ou insulté», affirme Gérald Darmanin",
-          "url": "https://www.lefigaro.fr/actualite-france/attaques-visant-un-juge-de-bobigny-le-conseil-superieur-de-la-magistrature-denonce-un-risque-de-destabilisation-de-l-institution-judiciaire-20261015",
-          "publishedAt": "2026-10-15T20:21:03.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2029_crop/2026/10/15/e702d957fa1275618e14d70289e7bb23fb8453666642cf24d0d10f2962f2dbd8.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "a19016dae18c",
-          "outletId": "huffpost",
-          "headline": "Pris à partie par « Frontières », le juge Youssef Badr reçoit le soutien de la magistrature",
-          "url": "https://www.huffingtonpost.fr/france/article/pris-a-partie-par-frontieres-le-juge-youssef-badr-recoit-le-soutien-de-la-magistrature_340397.html",
-          "publishedAt": "2026-10-15T19:21:51.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2022/07/23/514/0/5559/3126/0/0/60/0/9807441_1658618604870-60856f9d260000ec35b41763.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "9f1c09c92b46",
-          "outletId": "le-monde",
-          "headline": "Gérald Darmanin estime qu’« aucun magistrat ne doit être menacé ou insulté », en réaction aux attaques contre un juge de Bobigny",
-          "url": "https://www.lemonde.fr/societe/article/2026/10/15/gerald-darmanin-estime-qu-aucun-magistrat-ne-doit-etre-menace-ou-insulte-en-reaction-aux-attaques-contre-un-juge-de-bobigny_6794794_3224.html",
-          "publishedAt": "2026-10-15T18:55:49.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/07/28/0/0/3926/1963/644/322/60/0/0d1888a_upload-1-wn5stcdidakf-04bi-nat-y5a6425-copie.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "c20cbb82f5b3",
-          "outletId": "franceinfo",
-          "headline": "Le premier président de la cour d'appel de Paris exprime sa \"très vive inquiétude\" après des attaques visant un magistrat de Bobigny",
-          "url": "https://www.franceinfo.fr/societe/justice/le-premier-president-de-la-cour-d-appel-de-paris-exprime-sa-tres-vive-inquietude-apres-des-attaques-visant-un-magistrat-de-bobigny_8238445.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-15T18:32:24.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/Qw-Ui6BWZgU-y1XJXEDgH0DqUBQ/0x2:1200x677/432x243/filters:format(jpg)/2026/10/15/6ad0d663138b3645068554.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "69eab077f164",
-          "outletId": "liberation",
-          "headline": "Indignations dans la magistrature après un numéro de «Frontières» ciblant le juge Youssef Badr",
-          "url": "https://www.liberation.fr/societe/police-justice/indignations-dans-la-magistrature-apres-un-numero-de-frontieres-ciblant-le-juge-youssef-badr-20261015_5D6FIF7INZAXJARNQ6VEXUF4GU/",
-          "publishedAt": "2026-10-15T17:49:39.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "2742b11c2e6b",
-          "outletId": "lobs",
-          "headline": "Après les attaques contre le juge Youssef Badr, la « très vive inquiétude » de la cour d’appel de Paris et du Conseil supérieur de la Magistrature",
-          "url": "https://www.nouvelobs.com/justice/20261015.OBS119244/apres-les-attaques-contre-le-juge-youssef-badr-la-tres-vive-inquietude-de-la-cour-d-appel-de-paris-et-du-conseil-superieur-de-la-magistrature.html",
-          "publishedAt": "2026-10-15T17:31:57.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        }
-      ],
-      "section": "society",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le juge Youssef Badr fait l'objet d'une enquête critique de la part d'un périodique d'extrême droite suite à une condamnation récente.",
-          "La profession exprime une vive préoccupation et un large soutien au magistrat face aux intimidations en ligne.",
-          "Le Conseil supérieur de la magistrature et la cour d'appel de Paris dénoncent publiquement ces pressions."
-        ],
-        "droite": [
-          "Un média a mis en avant d'anciens messages et propos d'un magistrat de Bobigny pour interroger son objectivité professionnelle.",
-          "Les autorités régaliennes rappellent le principe fondamental selon lequel les représentants de la justice ne doivent subir aucune menace.",
-          "Le débat se cristallise autour de la frontière entre critique de l'institution judiciaire et mise en cause personnelle d'un fonctionnaire."
-        ]
-      },
-      "differences": "La gauche met l'accent sur la défense de l'institution et la condamnation unanime des méthodes d'un journal identitaire qualifié de provocateur, en soulignant l'inquiétude profonde de la profession. De son côté, la droite, illustrée par Le Figaro, adopte un angle plus institutionnel en relayant d'abord la réaction du ministre tout en rappelant l'origine de la polémique liée aux critiques formulées par la publication sur l'impartialité du magistrat visé.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 6
-    },
-    {
-      "id": "c7ffd07586e1",
-      "slug": "l-olympique-lyonnais-s-impose-face-a-crystal-palace-en-ligue-eur",
-      "title": "L'Olympique lyonnais s'impose face à Crystal Palace en Ligue Europa",
-      "createdAt": "2026-10-15T20:01:20.830Z",
-      "storyDay": "2026-10-15",
-      "articles": [
-        {
-          "id": "62a4c688b772",
-          "outletId": "le-parisien",
-          "headline": "Lyon-Crystal Palace (3-2) : malgré un creux en 2e mi-temps, les Gones poursuivent leur sans-faute en Ligue Europa",
-          "url": "https://www.leparisien.fr/sports/football/lyon-crystal-palace-3-2-malgre-un-creux-en-2e-mi-temps-les-gones-poursuivent-leur-sans-faute-en-ligue-europa-15-10-2026-EPZVGHQLEBHB3OQ3KBD63W2CPY.php",
-          "publishedAt": "2026-10-15T20:01:20.830Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "b70abb122a5a",
-          "outletId": "ouest-france",
-          "headline": "VIDÉO. Buts, temps forts… Revivez la victoire de l’OL contre Crystal Palace en Ligue Europa",
-          "url": "https://www.ouest-france.fr/sport/football/olympique-lyonnais/video-buts-temps-forts-revivez-la-victoire-de-lol-contre-crystal-palace-en-ligue-europa-f2262b42-c8cc-11f1-b3f5-183597cb1094?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-15T19:24:52.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwOWUxMDU2MjZlOTYxZTllYWRhMWIzN2VkMTcyODNiZDM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d431eff194cdc5d0c994a757d8f2ff9e305d9026496ec672c7d479e58adbd8e8",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "be96a4a96eb3",
-          "outletId": "le-figaro",
-          "headline": "Ligue Europa : Lyon domine difficilement Crystal Palace pour ses retrouvailles avec Pierre Sage",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-lyon-domine-crystal-palace-pour-ses-retrouvailles-avec-pierre-sage-20261015",
-          "publishedAt": "2026-10-15T19:18:22.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/15/ee4b02d4b20f8c35df7c26d51a774b92b83932fe2eaf9195020ed16c400130c4.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "a0e650c821d5",
-          "outletId": "europe-1",
-          "headline": "Ligue Europa : l'Olympique Lyonnais solide vainqueur de Crystal Palace",
-          "url": "https://www.europe1.fr/sport/ligue-europa-lolympique-lyonnais-solide-vainqueur-de-crystal-palace-1152125?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-15T18:48:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/15/20/000_d3f44d7_1_1_6ad1202881f81.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "10e8ba20ea92",
-          "outletId": "franceinfo",
-          "headline": "Vainqueur de Crystal Palace, Lyon poursuit son sans-faute en Ligue Europa",
-          "url": "https://www.franceinfo.fr/sports/foot/ligue-europa/vainqueur-de-crystal-palace-lyon-poursuit-son-sans-faute-en-ligue-europa_8239165.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-15T18:41:27.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/Q_4ggcL2YF5dWp7wYIn_5O1BHoc/0x0:7282x4096/432x243/filters:format(jpg)/2026/10/15/6ad10f45de7d2447824581.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "244fcd51ee6f",
-          "outletId": "20-minutes",
-          "headline": "OL - Crystal Palace : Lyon s'offre une victoire de prestige contre le vainqueur de la Ligue Conférence et Pierre Sage... Revivez le match avec nous",
-          "url": "https://www.20minutes.fr/sport/football/ligue_europa/4254046-20261015-direct-ol-crystal-palace-lyon-flou-sagico-promet-suivez-retour-ligue-europa-18h15?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-15T14:02:37.000Z",
-          "imageUrl": "https://img.20mn.fr/KH2Y5PcnRVK9H6Krl4N_jyk/1200x768_le-lyonnais-corentin-tolisso-deuxieme-a-droite-est-felicite-par-ses-coequipiers-apres-avoir-marque-le-premier-but-lors-du-match-de-football-de-la-phase-d-ouverture-de-l-europa-league-entre-lyon-et-crystal-palace-a-lyon-en-france-le-jeudi-15-octobre-2026-photo-ap-laurent-cipriani-xpg103-26288614638302-2610151906",
-          "frontPage": true,
-          "kind": "live",
-          "section": "sport",
-          "everFrontPage": true
-        }
-      ],
-      "section": "sport",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "L'Olympique lyonnais a battu Crystal Palace trois buts à deux en Ligue Europa au terme d'une rencontre spectaculaire.",
-          "Cette victoire permet aux Lyonnais de signer un deuxième succès consécutif et de maintenir un parcours sans faute dans la compétition.",
-          "Le match marquait les retrouvailles des Gones avec leur ancien entraîneur Pierre Sage, aujourd'hui à la tête du club londonien."
-        ],
-        "centre": [
-          "Les Lyonnais se sont imposés à domicile face à Crystal Palace sur le score de trois à deux lors de la deuxième journée de Ligue Europa.",
-          "Malgré un passage difficile en seconde période, l'équipe a préservé son avance pour enchaîner une deuxième victoire d'affilée.",
-          "La rencontre a été marquée par les retrouvailles chaleureuses avec l'ancien technicien lyonnais Pierre Sage."
-        ],
-        "droite": [
-          "L'Olympique lyonnais a arraché une victoire difficile mais solide sur sa pelouse face au club anglais de Crystal Palace (3-2).",
-          "Corentin Tolisso, Ernest Nuamah et Pavel Sulc ont été les buveurs décisifs pour les Rhodaniens malgré la réaction londonienne par Yeremy Pino et Daichi Kamada.",
-          "Ce deuxième succès dans la compétition européenne valide le bon départ des coéquipiers lyonnais face à leur ancien entraîneur."
-        ]
-      },
-      "differences": "Les différents camps relèvent tous la victoire lyonnaise par trois buts à deux contre Crystal Palace et l'enjeu des retrouvailles avec l'ancien entraîneur Pierre Sage, mais la droite insiste davantage sur la difficulté de la prestation et la réaction adverse en seconde période, tandis que le centre et la gauche valorisent plutôt le sans-faute comptable et le caractère spectaculaire de la rencontre.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 6
     }
   ]
 }

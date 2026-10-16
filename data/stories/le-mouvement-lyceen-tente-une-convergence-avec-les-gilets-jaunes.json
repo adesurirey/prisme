@@ -6,16 +6,60 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "b20f7938f2d9",
+      "outletId": "la-croix",
+      "headline": "Blocus des lycées : les « réponses concrètes » du gouvernement se font attendre",
+      "url": "https://www.la-croix.com/politique/blocus-des-lycees-les-reponses-concretes-du-gouvernement-se-font-attendre-20261015",
+      "publishedAt": "2026-10-16T04:55:06.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/15/2563272-pour-sortir-du-mouvement-de-blocage-des-etudiants-.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "8c904d55c1a8",
+      "outletId": "lopinion",
+      "headline": "17 octobre : derrière la mobilisation virtuelle, le flou du terrain",
+      "url": "https://www.lopinion.fr/economie/17-octobre-derriere-la-mobilisation-virtuelle-le-flou-du-terrain",
+      "publishedAt": "2026-10-16T04:50:00.000Z",
+      "imageUrl": "https://beymedias.brightspotcdn.com/5c/8c/1e71a32d46b1bae8238ec63dae16/sipa-01305636-000001.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "2f97d3df0c7f",
+      "outletId": "franceinfo",
+      "headline": "Mobilisation du 17 octobre : comment les gilets jaunes tentent de structurer le mouvement, relancé par la colère lycéenne",
+      "url": "https://www.franceinfo.fr/economie/transports/gilets-jaunes/mobilisation-du-17-octobre-comment-les-gilets-jaunes-tentent-de-structurer-le-mouvement-relance-par-la-colere-lyceenne_8238922.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-16T04:16:54.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/T5CT3Y2J6uhiJBPtIf-1DN_Ugh0/0x17:4050x2295/432x243/filters:format(jpg)/2026/10/15/6ad0f5aa0a75b363359009.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "39330a567464",
       "outletId": "ouest-france",
       "headline": "Manifestations du samedi 17 octobre : l’appel au retour des Gilets jaunes sera-t-il suivi ?",
       "url": "https://www.ouest-france.fr/societe/gilets-jaunes/manifestations-du-samedi-17-octobre-lappel-au-retour-des-gilets-jaunes-sera-t-il-suivi-d6cbb258-c63e-11f1-92e9-819eb738846b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-16T04:00:29.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwY2QyMGQ2NTZlNWFiNTg5ODUxNGUxNDRmY2EwNzYzMTc?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=8ecd2d7257dd58e4df86dbded15c9b97ee88f925e0cffa5c6181f9f0cd6f470a",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
+    },
+    {
+      "id": "5891aca817ca",
+      "outletId": "franceinfo",
+      "headline": "Avant le 17 octobre, des futurs manifestants motivés par des colères qui se rejoignent, de \"l'élan des mobilisations lycéennes\" à l'envie de \"vivre correctement\"",
+      "url": "https://www.franceinfo.fr/economie/greve/temoignages-avant-le-17-octobre-des-futurs-manifestants-motives-par-des-coleres-qui-se-rejoignent-de-l-elan-des-mobilisations-lyceennes-a-l-envie-de-vivre-correctement_8238379.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-16T03:40:04.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/GV6BJfDqRwuXAA9E3ay6fd0jK60/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/15/6ad0e3d216f66630757243.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "b7863bd00bd1",
@@ -30,21 +74,24 @@
       "everFrontPage": true
     }
   ],
-  "section": "politics",
+  "section": "society",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Les jeunes manifestants misent sur la journée du 17 octobre pour relancer leur contestation.",
-      "Le dialogue institutionnel avec l'exécutif est dans l'impasse au moment où débutent les congés scolaires.",
-      "La stratégie adoptée cherche à unir les mécontentements étudiants avec la contestation sociale historique."
+      "Le mouvement de protestation s'élargit à de nombreuses professions pour exiger des mesures immédiates face à l'inflation.",
+      "Les organisateurs s'appuient sur les outils numériques pour structurer un millier d'actions prévues sur le territoire.",
+      "La jeunesse ins insuffle une dynamique nouvelle aux revendications sociales traditionnelles."
     ],
     "centre": [
-      "Des mots d'ordre circulent pour organiser un retour des cortèges contestataires ce samedi 17 octobre 2026.",
-      "Les rassemblements initiaux ciblent la hausse du coût de la vie et tentent d'associer la jeunesse à leur mouvement.",
-      "L'incertitude demeure quant à la mobilisation concrète que générera cet appel unitaire."
+      "Les organisations étudiantes appellent à converger vers les cortèges contestataires prévus ce samedi.",
+      "L'exécutif conteste toute stratégie de temporisation face aux revendications relatives aux conditions d'apprentissage.",
+      "Les observateurs s'interrogent sur la capacité de mobilisation réelle de cet appel unitaire relayé principalement sur Internet."
+    ],
+    "droite": [
+      "La journée du 17 octobre met en lumière la difficulté d'évaluer la portée réelle d'une contestation nourrie par les réseaux sociaux."
     ]
   },
-  "differences": "Le centre insiste sur l'interrogation autour de la mobilisation et les aspects organisationnels de la journée du 17 octobre, tandis que le centre gauche, à travers Le Monde, se focalise sur l'analyse politique d'un mois de contestation lycéenne et sur la volonté stratégique de lier la jeunesse aux revendications des Gilets jaunes face à un dialogue gouvernemental bloqué.",
+  "differences": "Le centre gauche met l'accent sur la structuration organisationnelle et l'élargissement de la contestation à d'autres secteurs professionnels grâce à l'impulsion lycéenne, tandis que le centre s'interroge sur la concrétisation de ces appels et rapporte la défense du gouvernement face aux critiques d'attentisme. De son côté, le centre droit insiste particulièrement sur le décalage entre l'effervescence numérique de l'appel et l'incertitude quant à sa traduction effective sur le terrain.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 6
 }
