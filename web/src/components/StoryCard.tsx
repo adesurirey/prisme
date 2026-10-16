@@ -20,9 +20,11 @@ import StoryImage from './StoryImage';
  * to the Story page, where the Articles live, styled like the Story page's
  * Article cards (hover surface, no animation).
  *
- * The root carries data-story-id/data-coverage for the client-side "En
- * hausse" badge (trending.ts): the prerendered HTML has no idea who is
- * reading, so the per-visitor signal is decided in the browser.
+ * The root carries data-story-id/data-coverage for the client-side
+ * per-visitor badges (trending.ts): "En hausse" for a Coverage gain since
+ * the reader's last visit, "Nouveau" for a Story absent from it
+ * (ADR-0020). The prerendered HTML has no idea who is reading, so the
+ * per-visitor signals are decided in the browser.
  */
 export default function StoryCard({
   story,
@@ -48,9 +50,10 @@ export default function StoryCard({
         className="group/card flex items-start gap-4 rounded-xl px-5 py-5"
       >
         <div className="min-w-0 flex-1">
-          {/* The "En hausse" slot sits above the title — a per-visitor
-              highlight deserves the first read, not the bottom of the meta
-              pile. Invisible (empty:hidden) until trending.ts appends the
+          {/* The per-visitor badge slot ("En hausse" or "Nouveau",
+              trending.ts) sits above the title — a per-visitor highlight
+              deserves the first read, not the bottom of the meta pile.
+              Invisible (empty:hidden) until trending.ts appends the
               client-side badge. */}
           <p data-trending-slot className="empty:hidden mb-1 text-[13px]" />
           <h2 className="text-[16px] font-semibold sm:text-[18px] leading-snug tracking-[-0.01em] group-hover/card:underline">

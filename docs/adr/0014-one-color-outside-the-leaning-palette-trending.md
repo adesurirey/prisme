@@ -7,3 +7,4 @@ The design tokens reserve color for what it means — the three Coverage groups 
 - A fourth color now exists in the chrome. Any future use of `--trending` must stay on-message (it means "this is climbing", nothing else); if a second meaning ever wants the slot, that's a new ADR, not a reuse.
 - The badge is the only consumer: Coverage bars, Leaning dots and Blindspot badges keep their three-hue discipline.
 - The color adapts per theme like the Leaning tokens do (darker on the light canvas, vivid on the dark one).
+- Amended by ADR-0020: sarcelle now means "this changed since your last visit" — the « Nouveau » badge shares the color with « En hausse », distinguished by label, not hue.
