@@ -41,14 +41,12 @@ const covRate = (l: CoverageGroup) =>
   covered ? Math.round((counts[l] / total) * 100) : 0;
 const expRate = (l: CoverageGroup) => Math.round(shares[l] * 100);
 
-// Per-segment legend strings, built up front ("Gauche\u202F42\u202F%"):
-// one text node per label, no JSX whitespace-collapse games. One string
-// per reading — Couverture (default) and Exposition — so the mode-text
-// swap shows the right one, exactly like CoverageMeta.
-const covLegend = (l: CoverageGroup) =>
-  `${LEANING_LABELS[l]}\u00A0${covRate(l)}\u202F%`;
-const expLegend = (l: CoverageGroup) =>
-  `${LEANING_LABELS[l]}\u00A0${expRate(l)}\u202F%`;
+// Per-segment legends: the rate text ("42\u202F%"), one per reading —
+// Couverture (default) and Exposition — so the mode-text swap shows the
+// right one, exactly like CoverageMeta. The leaning label ships twice in
+// the markup (full and initial); the segment's container query picks the
+// one that fits (see the bar below).
+const rateText = (rate: number) => `\u00A0${rate}\u202F%`;
 
 // "Mis à jour …" — the Story's newest Article (articles[0], the same one
 // the Story page reads), but as a single compact stamp (no "Publié" half):
@@ -109,8 +107,12 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
             {/* Full-width Coverage bar, every segment its own legend. Same
                 two readings as CoverageMeta (--cov / --exp on <html
                 data-mode>); the per-reading labels ride the same
-                mode-text swap. Overflow-hidden clips the label on very
-                small segments — the color still speaks. */}
+                mode-text swap. Each segment is its own container
+                (@container): when it is wide enough for the full leaning
+                label plus the rate, the container query swaps the initial
+                for the full label — the color still speaks. The initial is
+                the default: browsers without container-query support
+                degrade to « G 40 % » instead of hiding the legend. */}
             {covered && (
               <span
                 role="img"
@@ -122,14 +124,18 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
                     <span
                       data-group={l}
                       data-exposure={shares[l]}
-                      class="coverage-seg flex min-w-0 items-center justify-center overflow-hidden"
+                      class="coverage-seg @container flex min-w-0 items-center justify-center overflow-hidden"
                       style={`--cov: ${counts[l]}; --exp: ${shares[l]}; flex-basis: 0; background: var(--${l}); color: var(--on-leaning);`}
                     >
-                      <span class="mode-text-cov whitespace-nowrap px-3 text-[12px] font-semibold sm:text-[13px]">
-                        {covLegend(l)}
+                      <span class="mode-text-cov whitespace-nowrap px-2 text-[12px] font-semibold sm:px-3 sm:text-[13px]">
+                        <span class="@min-[100px]:inline hidden">{LEANING_LABELS[l]}</span>
+                        <span class="@min-[100px]:hidden">{LEANING_LABELS[l].charAt(0)}</span>
+                        {rateText(covRate(l))}
                       </span>
-                      <span class="mode-text-exp whitespace-nowrap px-3 text-[12px] font-semibold sm:text-[13px]">
-                        {expLegend(l)}
+                      <span class="mode-text-exp whitespace-nowrap px-2 text-[12px] font-semibold sm:px-3 sm:text-[13px]">
+                        <span class="@min-[100px]:inline hidden">{LEANING_LABELS[l]}</span>
+                        <span class="@min-[100px]:hidden">{LEANING_LABELS[l].charAt(0)}</span>
+                        {rateText(expRate(l))}
                       </span>
                     </span>
                   ) : null,

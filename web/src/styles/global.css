@@ -170,6 +170,10 @@ html[data-mode="exposure"] .coverage-seg {
   display: none;
 }
 
+/* The visible span keeps the display its markup declares: inline by
+ * default (CoverageMeta.tsx, StoryHero.astro). Only the hidden side is
+ * forced here — an explicit display on the visible one would fight the
+ * components' own classes. */
 html[data-mode="exposure"] .mode-text-cov {
   display: none;
 }
