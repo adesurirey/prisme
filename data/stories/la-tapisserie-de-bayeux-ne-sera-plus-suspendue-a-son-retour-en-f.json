@@ -6,6 +6,29 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "8c24ceec141a",
+      "outletId": "le-parisien",
+      "headline": "Pourquoi la tapisserie de Bayeux sera exposée sur une table inclinée et non plus à la verticale à son retour de Londres",
+      "url": "https://www.leparisien.fr/culture-loisirs/expositions/pourquoi-la-tapisserie-de-bayeux-sera-exposee-sur-une-table-inclinee-et-non-plus-a-la-verticale-a-son-retour-de-londres-16-10-2026-EUCS7LOV2VHQXDE3NIXXVGTW6E.php",
+      "publishedAt": "2026-10-16T18:01:28.027Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
+      "id": "a74f2b370b5c",
+      "outletId": "le-monde",
+      "headline": "La tapisserie de Bayeux sera exposée sur une table inclinée à son retour de Londres",
+      "url": "https://www.lemonde.fr/culture/article/2026/10/16/la-tapisserie-de-bayeux-sera-exposee-sur-une-table-inclinee-a-son-retour-de-londres_6795586_3246.html",
+      "publishedAt": "2026-10-16T16:56:16.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/09/21/354/0/4253/2126/644/322/60/0/5a4dcae_ftp-1-nyueoxvn14ss-5146626-01-06.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "culture",
+      "everFrontPage": true
+    },
+    {
       "id": "4eead117db4f",
       "outletId": "tf1-info",
       "headline": "À son retour en France, la tapisserie de Bayeux ne sera plus exposée comme avant",
@@ -23,7 +46,7 @@
       "url": "https://www.lefigaro.fr/culture/patrimoine/la-tapisserie-de-bayeux-ne-sera-plus-suspendue-mais-exposee-sur-une-table-inclinee-20261016",
       "publishedAt": "2026-10-16T15:51:48.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2147_crop/2026/10/16/0438a66241ed9397558ac71d958710f02f21b1d14fdd5aa02cda0a7d51081614.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "culture",
       "everFrontPage": true
@@ -76,16 +99,21 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La tapisserie sera présentée sur une table inclinée lors de son retour en France en 2027.",
-      "Ce nouveau mode de présentation est préconisé par les experts depuis dix ans pour préserver l'intégrité de l'œuvre."
+      "La célèbre broderie sera disposée sur un plan incliné lors de sa réinstallation en territoire français.",
+      "Ce mode de monstration novateur résulte d'une concertation menée de longue date par les autorités culturelles.",
+      "L'expérience menée au Royaume-Uni a permis de conforter ce choix muséographique protecteur."
+    ],
+    "centre": [
+      "Le chef-d'œuvre médiéval quittera son mode de présentation vertical habituel pour reposer sur une table inclinée.",
+      "Cette évolution technique vise à garantir la préservation optimale de la toile lors de sa réinstallation."
     ],
     "droite": [
-      "La célèbre broderie millénaire ne sera plus jamais suspendue ni accrochée après son exposition à Londres.",
-      "Des voix s'élèvent pour critiquer le prêt consenti au Royaume-Uni en raison de la fragilité de l'œuvre.",
-      "Les responsables confirment que l'installation future privilégiera une surface inclinée ou horizontale pour des raisons de conservation."
+      "La broderie millénaire abandonnera définitivement l'accrochage vertical après son exposition britannique.",
+      "Des observateurs critiquent la décision de prêter une pièce aussi fragile au Royaume-Uni.",
+      "Les autorités privilégient désormais une surface horizontale ou inclinée pour des impératifs de conservation."
     ]
   },
-  "differences": "La droite met fortement l'accent sur le caractère inédit et définitif de la fin de l'accrochage vertical, tout en pointant la responsabilité politique de ce prêt jugé risqué par certains commentateurs, notamment chez Valeurs actuelles qui vise directement Emmanuel Macron. Le centre gauche, représenté par franceinfo, adopte un ton plus neutre et technique, en insistant sur le fait que ce nouveau mode d'exposition incliné était déjà préconisé de longue date par les spécialistes pour des impératifs de conservation.",
+  "differences": "La droite met l'accent sur le caractère définitif de l'abandon de l'accrochage vertical et relaie les critiques concernant les risques du prêt au Royaume-Uni. Le centre et la gauche se concentrent sur les aspects techniques de la future exposition sur table inclinée, insistant sur le fait que cette décision découle d'une réflexion ancienne menée par les experts pour assurer la préservation de l'œuvre.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 8
 }
