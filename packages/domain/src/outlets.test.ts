@@ -131,13 +131,17 @@ describe('outlet config', () => {
     }
   });
 
-  it('adds Marianne to the Edition, with a Centre-gauche Leaning and out of exclusions (issue #10)', () => {
-    const marianne = outlets.find((outlet) => outlet.id === 'marianne');
-    expect(marianne, 'marianne enters the Edition').toBeDefined();
-    expect(marianne!.leaning).toBe('centre-gauche');
-    expect(excludedOutlets.map((excluded) => excluded.id)).not.toContain(
-      'marianne',
+  it('excludes Marianne while its WAF blocks CI egress (ADR-0021)', () => {
+    expect(
+      outlets.find((outlet) => outlet.id === 'marianne'),
+      'marianne leaves the Edition',
+    ).toBeUndefined();
+    const excluded = excludedOutlets.find(
+      (excluded) => excluded.id === 'marianne',
     );
+    expect(excluded, 'marianne is excluded with a reason').toBeDefined();
+    expect(excluded!.reason).toContain('WAF');
+    expect(excluded!.checkedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   });
 
   it('adds Challenges (Centre) and L\u2019Opinion (Centre droit) to the Edition (issue #72)', () => {
@@ -223,7 +227,6 @@ describe('outlet config', () => {
     // centre-droite; pure-centre and hors-panel Outlets stay put.
     const placements: Record<string, OutletConfig['leaning']> = {
       'le-monde': 'centre-gauche',
-      marianne: 'centre-gauche',
       franceinfo: 'centre-gauche',
       '20-minutes': 'centre-gauche',
       'tf1-info': 'centre-droite',

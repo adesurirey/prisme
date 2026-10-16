@@ -8,7 +8,7 @@ l'Édition quand les trois critères sont réunis —
 2. un flux RSS fonctionnel, vérifié avec un User-Agent de navigateur normal ;
 3. un Leaning sourcé selon la méthode ci-dessous (≥ 2 sources citées, désaccords écrits).
 
-À ce jour, **30 médias** y répondent. La version typée de ce document est
+À ce jour, **29 médias** y répondent (Marianne en est sortie le 2026-10-16 — voir son dossier et l'ADR-0021). La version typée de ce document est
 `packages/domain/src/outlets.ts`, importée par le pipeline et le site ; les deux doivent
 rester identiques (les tests du module font respecter les règles de preuve).
 
@@ -367,6 +367,12 @@ journal de build rend toute contribution nulle visible (issue #35).
 
 **Paywall / TDM.** Partiellement payant ; **réservation TDM publiée** (`tdm-reservation:
 1` pour `/`, avec une politique `tdm-policy.json`).
+
+**Exclusion (2026-10-16, ADR-0021).** Marianne sort de l'Édition : son WAF bloque les IP
+CI sans contournement propre (miroir Google News examiné et rejeté — pas de teaser, pas
+d'image, liens non décodables proprement). Le dossier ci-dessus et le Leaning sourcé sont
+conservés pour la réintégration : le jour où le WAF laisse passer les IP CI, restaurer le
+flux direct, re-vérifier, re-sourcer le Leaning.
 
 ### Slate.fr — Centre gauche
 

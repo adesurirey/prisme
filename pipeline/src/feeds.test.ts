@@ -128,7 +128,46 @@ describe('parseFeed', () => {
 
     expect(items[0].headline).toBe('Novak Djokovic décroche à Pékin');
     expect(items[0].url).toBe('https://exemple.fr/a?x=1&y=2');
-    expect(items[0].teaser).toBe('<p>Un & deux</p>');
+    expect(items[0].teaser).toBe('Un & deux');
+  });
+
+  it('strips a " - Source" headline suffix named by the source element (Google News mirror, ADR-0021)', () => {
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+      <rss version="2.0"><channel>
+        <item>
+          <title>Une info importante - Marianne</title>
+          <link>https://news.google.com/rss/articles/CBMiTOKEN?oc=5</link>
+          <pubDate>Fri, 16 Oct 2026 05:00:10 GMT</pubDate>
+          <source>Marianne</source>
+          <description>&lt;a href="https://news.google.com/rss/articles/CBMiTOKEN?oc=5"&gt;Une info importante&lt;/a&gt;&nbsp;&nbsp;&lt;font color="#6f6f6f"&gt;Marianne&lt;/font&gt;</description>
+        </item>
+      </channel></rss>`;
+
+    const { items } = parseFeed(xml);
+
+    expect(items[0].headline).toBe('Une info importante');
+    // The mirror has no teaser: its description only repeats the headline.
+    expect(items[0].teaser).toBe('');
+    expect(items[0].publishedAt).toBe('2026-10-16T05:00:10.000Z');
+  });
+
+  it('keeps a mirror teaser that adds real text beyond the headline', () => {
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+      <rss version="2.0"><channel>
+        <item>
+          <title>Une info importante - Autre media</title>
+          <link>https://news.google.com/rss/articles/CBMiTOKEN?oc=5</link>
+          <source>Autre media</source>
+          <description>&lt;font&gt;Une info importante&lt;/font&gt;&lt;p&gt;Et voici un vrai chapeau, différent du titre.&lt;/p&gt;</description>
+        </item>
+      </channel></rss>`;
+
+    const { items } = parseFeed(xml);
+
+    expect(items[0].headline).toBe('Une info importante');
+    expect(items[0].teaser).toBe(
+      'Et voici un vrai chapeau, différent du titre.',
+    );
   });
 
   it('strips emojis from headlines, including ZWJ and variation selectors', () => {

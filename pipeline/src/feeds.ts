@@ -73,7 +73,7 @@ function parseAtomEntry(entry: any, now: Date): ParsedItem | undefined {
         : entry.updated
           ? new Date(entry.updated).toISOString()
           : '',
-      teaser: decodeEntities(text(entry.summary) || text(entry.content)),
+      teaser: teaserFrom(entry.summary || entry.content, text(entry.title), ''),
     },
     now,
   );
@@ -175,16 +175,51 @@ function decodeEntities(value: string): string {
 }
 
 function parseRssItem(item: any, now: Date): ParsedItem | undefined {
+  const headline = stripEmojis(decodeEntities(text(item.title)));
+  // Aggregator mirrors (Google News) suffix headlines with " - Source":
+  // the <source> element names the Outlet, so the suffix can be dropped
+  // by construction rather than per-outlet (ADR-0021).
+  const source = text(item.source);
+  const suffix = source ? ` - ${source}` : '';
+  const bareHeadline =
+    suffix && headline.endsWith(suffix)
+      ? headline.slice(0, -suffix.length)
+      : headline;
   return withPublicationDay(
     {
-      headline: stripEmojis(decodeEntities(text(item.title))),
+      headline: bareHeadline,
       url: decodeEntities(text(item.link)),
       publishedAt: isoDate(item.pubDate),
-      teaser: decodeEntities(text(item.description)),
+      teaser: teaserFrom(item.description, bareHeadline, source),
       imageUrl: rssImageUrl(item),
     },
     now,
   );
+}
+
+/**
+ * Mirror feeds (Google News, ADR-0021) carry no teaser: their description
+ * is HTML wrapping the headline and the source name. Strip the tags and the
+ * source name; drop the result when it only repeats the headline — the
+ * Decision model must not read the same sentence twice.
+ */
+function teaserFrom(
+  description: unknown,
+  headline: string,
+  source: string,
+): string {
+  const plain = decodeEntities(text(description))
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const withoutSource =
+    source && plain.endsWith(source)
+      ? plain.slice(0, -source.length).trim()
+      : plain;
+  if (withoutSource === headline) return '';
+  return withoutSource.startsWith(headline)
+    ? withoutSource.slice(headline.length).trim()
+    : withoutSource;
 }
 
 /**

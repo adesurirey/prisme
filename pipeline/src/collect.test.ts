@@ -50,8 +50,8 @@ describe('contributionSummary — per-outlet build-log guard (issue #35)', () =>
     const a = outlet({ latest: LATEST });
     const b = {
       ...outlet({ latest: LATEST }),
-      id: 'marianne',
-      name: 'Marianne',
+      id: 'silencieux',
+      name: 'Silencieux',
     };
     const article = (o: Outlet) => ({
       id: 'x',
@@ -68,9 +68,9 @@ describe('contributionSummary — per-outlet build-log guard (issue #35)', () =>
     );
     expect(counts).toEqual([
       ['le-parisien', 2],
-      ['marianne', 0],
+      ['silencieux', 0],
     ]);
-    expect(zero).toEqual(['marianne']);
+    expect(zero).toEqual(['silencieux']);
   });
 });
 
