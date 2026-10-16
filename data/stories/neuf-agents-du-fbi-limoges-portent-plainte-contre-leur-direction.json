@@ -29,5 +29,20 @@
       "everFrontPage": true
     }
   ],
-  "section": "world"
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Neuf fonctionnaires de la police fédérale américaine, congédiés abruptement en février dernier, ont saisi la justice contre leur hiérarchie.",
+      "Ces employés effectuaient des investigations sur la conservation illégale de dossiers confidentiels par Donald Trump.",
+      "La destitution de ces enquêteurs a été prononcée par le responsable de l'agence, Kash Patel."
+    ],
+    "centre": [
+      "Une action en justice a été intentée par neuf fonctionnaires de l'agence fédérale américaine récemment évincés de leurs fonctions.",
+      "La procédure vise conjointement le plus haut responsable de la police fédérale ainsi que le membre du gouvernement supervisant la justice."
+    ]
+  },
+  "differences": "Le camp de la gauche, illustré par Le Monde, apporte des précisions contextuelles importantes en rappelant que les plaignants enquêtaient sur l'affaire des documents classifiés de Donald Trump et en nommant explicitement le directeur de l'agence, Kash Patel. Le camp du centre, représenté par Le Parisien, livre une approche plus synthétique en se focalisant principalement sur la démarche judiciaire visant la direction du FBI et le ministre de la Justice, sans détailler les dossiers d'investigation initiaux des agents.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 2
 }
