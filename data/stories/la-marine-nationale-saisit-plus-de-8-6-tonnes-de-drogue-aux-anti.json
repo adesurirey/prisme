@@ -6,6 +6,40 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "708a3e2eb4fa",
+      "outletId": "le-monde",
+      "headline": "Près de 8,6 tonnes de stupéfiants saisis par la marine nationale lors de plusieurs opérations dans les Caraïbes et l’Atlantique",
+      "url": "https://www.lemonde.fr/international/article/2026/10/16/pres-de-8-6-tonnes-de-stupefiants-saisis-par-la-marine-nationale-lors-de-plusieurs-operations-dans-les-caraibes-et-l-atlantique_6795641_3210.html",
+      "publishedAt": "2026-10-16T21:59:06.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/16/75/0/1023/511/644/322/60/0/a37686a_ftp-1-ybgaobmzj4wz-afp-d3jq3zq-1024.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "a2dea6d840ac",
+      "outletId": "bfmtv",
+      "headline": "Plus de 8,6 tonnes de drogue saisies par la marine française aux Antilles début octobre",
+      "url": "https://www.bfmtv.com/police-justice/plus-de-8-6-tonnes-de-drogue-saisies-par-la-marine-francaise-aux-antilles-debut-octobre_AD-202610160878.html",
+      "publishedAt": "2026-10-16T21:50:23.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/fC4yvLxlk4W-xWx1ephZbfuhZ4o=/0x106:2048x1258/800x0/images/x-2251245.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "5222e76a4169",
+      "outletId": "ouest-france",
+      "headline": "La Marine nationale saisit plus de 8,6 tonnes de drogue aux Antilles",
+      "url": "https://www.ouest-france.fr/societe/drogue/la-marine-nationale-saisit-plus-de-8-6-tonnes-de-drogue-aux-antilles-f34bd0ae-c9a7-11f1-b8bc-a46147b584ed?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-16T21:43:14.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNWMwNzBiMWIyOGVhZmU0YTc0NjVhZGM4ZWRiOGMxOTU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=830d01fdb1e91e07949ed36992d82dc1aba40dfaa6da8ea7fcb962fe0ba33cd7",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "47bc630da049",
       "outletId": "le-figaro",
       "headline": "La marine française a saisi plus de 8,6 tonnes de drogue aux Antilles en octobre",
@@ -29,5 +63,26 @@
       "section": "misc"
     }
   ],
-  "section": "misc"
+  "section": "misc",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "La Marine nationale a confisqué près de 8,6 tonnes de stupéfiants dans les Caraïbes et l'Atlantique.",
+      "Le volume total se compose de 6,9 tonnes de cocaïne et de 1,7 tonne de marijuana.",
+      "Cinq individus ont été incarcérés en Martinique dans le cadre de ces opérations menées avec l'appui de pays alliés."
+    ],
+    "centre": [
+      "Les forces navales françaises ont intercepté plus de 8,6 tonnes de produits illicites début octobre dans les Antilles.",
+      "L'opération conjointe s'est déroulée en mer des Caraïbes et dans l'océan Atlantique.",
+      "Ouest-France précise que ces actions ont bénéficié du soutien logistique de la Colombie et du Venezuela."
+    ],
+    "droite": [
+      "Une quantité supérieure à 8,6 tonnes de drogues a été interceptée par l'armée française aux Antilles au cours du mois d'octobre.",
+      "Les saisies incluent une majorité de cocaïne ainsi que de la marijuana, selon les autorités.",
+      "Cinq personnes ont été interpellées en Martinique suite à la prise la plus importante, réalisée en coopération internationale."
+    ]
+  },
+  "differences": "Les différents camps rapportent de manière globalement homogène la saisie record de plus de 8,6 tonnes de stupéfiants par la marine française aux Antilles. La gauche et la droite insistent toutes deux sur la coopération internationale et les arrestations en Martinique. Le centre se distingue légèrement par des nuances apportées par certains titres quant aux pays partenaires impliqués, citant notamment le Venezuela aux côtés de la Colombie.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 5
 }
