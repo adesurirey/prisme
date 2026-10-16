@@ -19,7 +19,7 @@ import {
   SECTION_LABELS,
 } from '@prisme/domain';
 import { withBase } from '../data';
-import { formatParisDate } from '../paris-date';
+import { dayStamp, parisDayKey, parisTime } from '../story-date';
 import { storyUrl } from '../story-url';
 import StoryImage from './StoryImage';
 
@@ -48,27 +48,17 @@ const expRate = (l: CoverageGroup) => Math.round(shares[l] * 100);
 // one that fits (see the bar below).
 const rateText = (rate: number) => `\u00A0${rate}\u202F%`;
 
-// "Mis à jour …" — the Story's newest Article (articles[0], the same one
-// the Story page reads), but as a single compact stamp (no "Publié" half):
-// the day marker is always spelled out — "Mis à jour aujourd'hui à 18h45",
-// "Mis à jour hier à …", "Mis à jour le 11 oct. 2026 à …" — the capital M
-// naming it where the Story page's sentence carries both halves.
-const dayKey = (date: Date) =>
-  formatParisDate(date, { day: 'numeric', month: 'short', year: 'numeric' });
-const timeOnly = (date: Date) =>
-  formatParisDate(date, { hour: '2-digit', minute: '2-digit' }).replace(
-    ':',
-    'h',
-  );
+// "mis à jour …" — the Story's newest Article (articles[0], the same one
+// the Story page reads), but as a single compact stamp (no "Publié" half).
+// Today drops the day marker — the bare clock ("mis à jour à 18h45") reads
+// as "this morning" on a page the reader knows is today's edition — and the
+// rest comes from story-date's dayStamp ("hier à …", "le 11 oct. 2026 à …").
+// Lowercase m: the stamp trails "Couvert par …" as one caption line.
 const updated = new Date(story.articles[0]?.publishedAt ?? Date.now());
-const now = new Date();
-const k = dayKey(updated);
 const updatedLine =
-  k === dayKey(now)
-    ? `Mis à jour aujourd’hui à ${timeOnly(updated)}`
-    : k === dayKey(new Date(now.getTime() - 24 * 60 * 60 * 1000))
-      ? `Mis à jour hier à ${timeOnly(updated)}`
-      : `Mis à jour le ${k} à ${timeOnly(updated)}`;
+  parisDayKey(updated) === parisDayKey(new Date())
+    ? `mis à jour à ${parisTime(updated)}`
+    : `mis à jour ${dayStamp(updated)}`;
 
 const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} sur ${outlets.length} — ${coverageOrder
   .map((l) => `${counts[l]} ${LEANING_LABELS[l].toLowerCase()}`)

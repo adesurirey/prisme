@@ -18,7 +18,7 @@ import PrismTabs from '../../components/PrismTabs';
 import StoryImage from '../../components/StoryImage';
 import { loadAllStoryFiles, loadOutlets, withBase } from '../../data';
 import Base from '../../layouts/Base.astro';
-import { formatParisDate } from '../../paris-date';
+import { dayStamp, parisDayKey, parisTime } from '../../story-date';
 
 export async function getStaticPaths() {
   // Every Story file gets its page: live Stories in the Edition, live Stories
@@ -50,34 +50,12 @@ const imageOutlet = image && byId.get(image.outletId);
 const articleCount = countedArticles(story.articles);
 const mediaCount = reportingOutletIds(story.articles).size;
 
-// "Mis à jour …": bare clock for today ("Mis à jour à 20\u202Fh\u202F23",
-// Article rows drop "à": just the clock),
+// "Mis à jour …": bare clock for today ("Mis à jour à 20h23",
 // same as Article rows), "hier à …" for yesterday, absolute date otherwise
-// ("le 11 oct. 2026 à …"). Date and clock joined by "à" (French convention),
-// narrow no-break spaces around "h" — same pattern as index.astro. Paris days
-// are compared by their formatted date so the build host's timezone never
-// leaks in. Short month: the header meta line is tight on mobile.
-const dayKey = (date: Date) =>
-  formatParisDate(date, { day: 'numeric', month: 'short', year: 'numeric' });
-const timeOnly = (date: Date) =>
-  formatParisDate(date, { hour: '2-digit', minute: '2-digit' }).replace(
-    ':',
-    'h',
-  );
+// ("le 11 oct. 2026 à …"). Date and clock joined by "à" (French convention).
+// Shared clock and day markers come from story-date (same as StoryHero).
 const updated = new Date(story.articles[0]?.publishedAt ?? Date.now());
 const published = new Date(story.createdAt);
-const now = new Date();
-// Day marker per half — the Story page (unlike the index cards) spells the
-// day out ("aujourd'hui", "hier", "le 7 oct.") because the sentence carries
-// two timestamps that may fall on different days.
-const stamp = (d: Date) => {
-  const k = dayKey(d);
-  return k === dayKey(now)
-    ? `aujourd’hui à ${timeOnly(d)}`
-    : k === dayKey(new Date(now.getTime() - 24 * 60 * 60 * 1000))
-      ? `hier à ${timeOnly(d)}`
-      : `le ${k} à ${timeOnly(d)}`;
-};
 // Same day (same minute included): the day marker is stated once, up
 // front and then not repeated — "Publié hier à 12h01, mis à jour à
 // 18h45"; different days carry their own marker ("Publié hier à
@@ -85,13 +63,13 @@ const stamp = (d: Date) => {
 // stamp(published), so it reads "aujourd'hui" only when that day is
 // actually today — a Story published and updated yesterday must not
 // be stamped as today's (issue: story dates always say "aujourd'hui").
-const sameDay = dayKey(published) === dayKey(updated);
-const sameMinute = stamp(published) === stamp(updated);
+const sameDay = parisDayKey(published) === parisDayKey(updated);
+const sameMinute = dayStamp(published) === dayStamp(updated);
 const publishedLine = sameMinute
-  ? `Publié ${stamp(published)}`
+  ? `Publié ${dayStamp(published)}`
   : sameDay
-    ? `Publié ${stamp(published)}\u2003mis à jour à ${timeOnly(updated)}`
-    : `Publié ${stamp(published)}\u2003mis à jour ${stamp(updated)}`;
+    ? `Publié ${dayStamp(published)}\u2003mis à jour à ${parisTime(updated)}`
+    : `Publié ${dayStamp(published)}\u2003mis à jour ${dayStamp(updated)}`;
 
 // SEO (issue #6): Prisme’s own description, derived only from the Coverage
 // counters — never Outlet text (ADR-0003).
