@@ -586,75 +586,6 @@ export const outlets: OutletConfig[] = [
   },
 
   {
-    id: 'marianne',
-    name: 'Marianne',
-    leaning: 'centre-gauche',
-    paywall: 'partial',
-    site: 'https://www.marianne.net',
-    feeds: {
-      latest: 'https://www.marianne.net/rss.xml',
-    },
-    leaningSources: [
-      {
-        title:
-          "FrIdéo : où se situe Marianne ? (échelle d'idéologie de 30 médias français)",
-        author: 'Amr Sobhy, Le French News Lab (ICNLSP 2026)',
-        date: '2026',
-        url: 'https://frenchnewslab.org/fr/medias/marianne',
-        takeaway:
-          "Score −0,65 dans la bande « centre gauche » (intervalle −1,24…−0,06), 6 familles de preuves : l'un des désaccords les plus nets du panel, la propriété le plaçant à droite du centre quand les familles réseau et contenu le placent à gauche.",
-      },
-      {
-        title:
-          'La saga de « Marianne », hebdomadaire « anti-pensée unique », ses convulsions et son lent glissement conservateur',
-        author: 'Le Monde',
-        date: '2024-06-21',
-        url: 'https://www.lemonde.fr/economie/article/2024/06/21/la-saga-de-marianne-hebdo-anti-pensee-unique-ses-convulsions-et-son-lent-glissement-conservateur_6242147_3234.html',
-        takeaway:
-          "Décrit comme un « lent glissement conservateur » : la ligne du magazine a dérivé à droite au fil des changements d'actionnariat et de direction, sans se résoudre à un ancrage net.",
-      },
-      {
-        title: 'Marianne (article encyclopédique)',
-        author: 'Wikipédia',
-        date: '2026',
-        url: 'https://fr.wikipedia.org/wiki/Marianne_(magazine)',
-        takeaway:
-          "Perçu comme de gauche à sa création (1997), le magazine s'engage au cours des années 2010 vers une ligne éditoriale souverainiste ; diffusion 127 872 exemplaires (2024).",
-      },
-    ],
-    leaningNote:
-      "Placé à Centre gauche : FrIdéo le range dans « centre gauche » (intervalle excluant zéro), mais la propriété (Křetínský) et la période récente sont décrites comme un glissement à droite — Le Monde parle d'un « lent glissement conservateur », Wikipédia d'un engagement souverainiste depuis les années 2010. La mesure agrégée reste à gauche du centre ; ce glissement restera à suivre à chaque campagne de mise à jour de la configuration.",
-    readership: {
-      evidence:
-        'ACPM magazines 2025/2026 : 100 527 exemplaires France payée ; marianne.net : 4,8 M de visites par mois.',
-      url: 'https://www.acpm.fr/les-membres/support/4028424417-1-1/marianne-1',
-    },
-    reach: {
-      value: 4800000,
-      unit: 'visits',
-      source: 'ACPM',
-      asOf: '2026-08',
-    },
-    feedChecks: [
-      {
-        kind: 'latest',
-        url: 'https://www.marianne.net/rss.xml',
-        checkedAt: CHECKED,
-        status: 200,
-        items: 20,
-        covers: '~32 h',
-        images: 'all',
-        note: "Flux général, toutes rubriques : les rubriques sont tranchées par la classification (#4), pas par le choix du flux. Fragile aux robots : `marianne.net/rss` répond 403 (page HTML de blocage) sans en-têtes de navigateur complets, puis 301 vers rss.xml — à surveiller à chaque vérification. Depuis le 2026-10-08 (issue #35) : l'arête AWS WAF de marianne.net répond 405 (`x-amzn-waf-action: captcha`) aux adresses IP des runners GitHub, quel que soit le User-Agent ou les en-têtes — le flux contribue zéro article aux éditions construites en CI, alors qu'il répond 200 localement. Vérifié depuis un runner (probe curl + Node fetch, run 37777088410).",
-      },
-    ],
-    tdm: {
-      reserved: true,
-      checkedAt: CHECKED,
-      note: 'Réservation publiée (`tdm-reservation: 1` pour /) avec une politique `https://www.marianne.net/tdm-policy.json`.',
-    },
-  },
-
-  {
     id: 'slate-fr',
     name: 'Slate.fr',
     leaning: 'centre-gauche',
@@ -2139,6 +2070,13 @@ export const outlets: OutletConfig[] = [
 
 /** Outlets kept out of the Edition, with the reason and the date checked. */
 export const excludedOutlets: ExcludedOutlet[] = [
+  {
+    id: 'marianne',
+    name: 'Marianne',
+    reason:
+      "L'arête AWS WAF de marianne.net répond 405 (captcha) aux IP des runners GitHub et 403 aux IP datacenter en général, quel que soit le User-Agent : échec dans 144/144 exécutions CI depuis la première (2026-10-06), zéro contribution (sonde du 2026-10-16, ADR-0021). Un miroir Google News a été examiné puis rejeté : ses descriptions ne répètent que le titre — classification headline-only pour un média politique, pas d'images, résumés appauvris. Réintégrer avec le flux direct https://www.marianne.net/rss.xml (200 confirmé depuis une IP résidentielle : 20 articles, ~32 h, images toutes) dès que le WAF laisse passer les IP CI, et re-sourcer le Leaning.",
+    checkedAt: '2026-10-16',
+  },
   {
     id: 'lesechos',
     name: 'Les Échos',
