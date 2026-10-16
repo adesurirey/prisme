@@ -132,11 +132,15 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
                 )}
               </span>
             )}
+            {/* Same "En hausse" slot as StoryCard's meta line: trending.ts
+                appends the plain teal badge here. Invisible (empty:hidden)
+                until then. */}
             <p class="mt-3.5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-muted">
               <span>
                 Couvert par {reporting} média{reporting > 1 ? 's' : ''}
               </span>
               <span class="text-faint">{updatedLine}</span>
+              <span data-trending-slot class="empty:hidden" />
             </p>
           </div>
         </figure>

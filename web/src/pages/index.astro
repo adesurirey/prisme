@@ -65,7 +65,22 @@ const updatedTime = formatParisDate(built, {
    data-coverage; this module script compares them to the reader's last
    visit (localStorage) and reveals badges. Runs on this page only. */}
 <script>
-  import { installTrending } from "../trending";
+  import { installTrending, SEEN_KEY, SESSION_KEY } from "../trending";
+
+  // DEV-only mock: ?mock-trending seeds a fake baseline (every Story
+  // "seen" 3 Outlets behind) so the "En hausse" placement (StoryCard /
+  // StoryHero slot) can be demoed without a real returning-visit baseline.
+  if (import.meta.env.DEV && location.search.includes("mock-trending")) {
+    const blob = { version: 1, stories: {} };
+    document.querySelectorAll("[data-story-id]").forEach((el) => {
+      blob.stories[el.dataset.storyId] = {
+        coverage: Math.max(0, Number(el.dataset.coverage ?? 0) - 3),
+        seenAt: Date.now() - 3_600_000,
+      };
+    });
+    localStorage.setItem(SEEN_KEY, JSON.stringify(blob));
+    sessionStorage.removeItem(SESSION_KEY);
+  }
 
   installTrending();
 </script>
