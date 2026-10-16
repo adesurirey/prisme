@@ -1,5 +1,5 @@
 /**
- * "Voir plus de sujets" (ADR-0022): the Edition is uncapped, so the front
+ * "Afficher plus de sujets" (ADR-0022): the Edition is uncapped, so the front
  * page renders every Story in the static HTML and hides all but the first
  * batch. Progressive enhancement: without JavaScript — or for a crawler —
  * every Story is visible in the initial HTML; the script only ever reveals

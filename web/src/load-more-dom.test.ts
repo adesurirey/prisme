@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it } from 'vitest';
 import { installLoadMore, LOAD_MORE_INITIAL, revealStory } from './load-more';
 
 /**
- * DOM wiring tests for the "Voir plus de sujets" tail (ADR-0022): a
+ * DOM wiring tests for the "Afficher plus de sujets" tail (ADR-0022): a
  * minimal document stub with card roots and the button.
  */
 function page(total: number): Document {

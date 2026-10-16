@@ -61,7 +61,7 @@ measured quotas from the project's Google AI Studio dashboard
 ## Pagination
 
 The front page renders every Edition Story in the static HTML; Stories
-beyond the first 20 are hidden and revealed by a French "Voir plus de
+beyond the first 20 are hidden and revealed by a French "Afficher plus de
 sujets" button toggling visibility client-side. Rendering everything
 was chosen over JS-appended pages: at ~8 KB of markup per Story the full
 page is trivial (images are lazy-loaded), and every Story stays in the
