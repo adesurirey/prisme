@@ -1,12 +1,12 @@
 import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
-import { assembleEdition, EDITION_SIZE, rankStories } from './ranking.ts';
+import { assembleEdition, rankStories } from './ranking.ts';
 
 /**
  * The Edition ranking (issue #37, ADR-0009 as amended by ADR-0011): Stories
  * order by Coverage — distinct Outlets with any Article on the Story, Opinion
  * pieces included — then by the newest Article, then deterministically. The
- * Edition keeps the top EDITION_SIZE.
+ * Edition is uncapped (ADR-0022).
  */
 
 function article(id: string, overrides: Partial<Article> = {}): Article {
@@ -114,112 +114,43 @@ describe('rankStories', () => {
       ranked([story('b', [article('1')]), story('a', [article('2')])]),
     ).toEqual(['a', 'b']);
   });
-
-  it('keeps the top EDITION_SIZE in the Edition', () => {
-    expect(EDITION_SIZE).toBe(20);
-  });
 });
 
 /**
- * The dated Edition assembly (issue #98, ADR-0017, midnight-gap fix): the
- * live pool — window-open Stories — ranked by ADR-0009 first, then backfill
- * — closed previous days' everInEdition Stories, newest day first, each day
- * ranked by the same key — capped at EDITION_SIZE.
+ * The dated Edition assembly (ADR-0022): the live pool — window-open
+ * Stories — ranked by ADR-0009, uncapped. No backfill: closed previous
+ * days' Stories are the archive pages' business.
  */
 describe('assembleEdition', () => {
   const today = '2026-10-06';
 
-  it('puts current-day Stories above backfill days, J-1 before J-2', () => {
-    const j2 = story('j2', [article('1')], undefined, '2026-10-04');
-    const j1 = story('j1', [article('2')], undefined, '2026-10-05');
+  it('is uncapped: every live Story ranks in (ADR-0022)', () => {
+    const stories = Array.from({ length: 60 }, (_, i) =>
+      story(`s${String(i).padStart(2, '0')}`, [article(`a${i}`)]),
+    );
+    expect(assembleEdition(stories, DAY_NOON)).toHaveLength(60);
+  });
+
+  it('drops closed previous days Stories: no backfill (ADR-0022)', () => {
+    const j2 = {
+      ...story('j2', [article('1')], undefined, '2026-10-04'),
+      everInEdition: true,
+    };
+    const j1 = {
+      ...story('j1', [article('2')], undefined, '2026-10-05'),
+      everInEdition: true,
+    };
     const current = story('cur', [article('3')], undefined, today);
     expect(
-      assembleEdition(
-        [j2, j1, current].map((s) => ({ ...s, everInEdition: true })),
-        DAY_NOON,
-      ).map((s) => s.id),
-    ).toEqual(['cur', 'j1', 'j2']);
+      assembleEdition([j2, j1, current], DAY_NOON).map((s) => s.id),
+    ).toEqual(['cur']);
   });
 
-  it('ranks each backfill day by Coverage, independently', () => {
-    const j1 = [
-      story(
-        'j1-wide',
-        [article('1'), article('2', { outletId: 'b' })],
-        undefined,
-        '2026-10-05',
-      ),
-      story('j1-narrow', [article('3')], undefined, '2026-10-05'),
-    ];
-    const j2 = [
-      story(
-        'j2-wide',
-        [article('4'), article('5', { outletId: 'b' })],
-        undefined,
-        '2026-10-04',
-      ),
-      story('j2-narrow', [article('6')], undefined, '2026-10-04'),
-    ];
-    expect(
-      assembleEdition(
-        [...j1, ...j2].map((s) => ({ ...s, everInEdition: true })),
-        DAY_NOON,
-      ).map((s) => s.id),
-    ).toEqual(['j1-wide', 'j1-narrow', 'j2-wide', 'j2-narrow']);
-  });
-
-  it('draws backfill only from everInEdition Stories', () => {
-    const flagged = story('flagged', [article('1')], undefined, '2026-10-05');
-    const never = story('never', [article('2')], undefined, '2026-10-05');
-    expect(
-      assembleEdition(
-        [
-          { ...flagged, everInEdition: true },
-          { ...never, everInEdition: false },
-        ],
-        DAY_NOON,
-      ).map((s) => s.id),
-    ).toEqual(['flagged']);
-  });
-
-  it('caps the Edition at EDITION_SIZE, current-day first', () => {
-    const stories = [
-      story('cur', [article('0')], undefined, today),
-      ...Array.from({ length: EDITION_SIZE }, (_, i) =>
-        story(
-          `j1-${String(i).padStart(2, '0')}`,
-          [article(`a${i}`)],
-          undefined,
-          '2026-10-05',
-        ),
-      ),
-    ].map((s) => ({ ...s, everInEdition: true }));
-    const edition = assembleEdition(stories, DAY_NOON);
-    expect(edition).toHaveLength(EDITION_SIZE);
-    expect(edition[0]!.id).toBe('cur');
-    expect(edition.map((s) => s.id)).not.toContain('j1-19');
-  });
-
-  it('erodes: new current-day Stories displace backfill downward', () => {
-    const backfill = Array.from({ length: EDITION_SIZE }, (_, i) =>
-      story(
-        `j1-${String(i).padStart(2, '0')}`,
-        [article(`a${i}`)],
-        undefined,
-        '2026-10-05',
-      ),
-    ).map((s) => ({ ...s, everInEdition: true }));
-    const before = assembleEdition(backfill, DAY_NOON);
-    expect(before[0]!.storyDay).toBe('2026-10-05');
-    // One current-day Story enters: the last backfill Story falls off.
-    const after = assembleEdition(
-      [...backfill, story('cur', [article('z')], undefined, today)],
-      DAY_NOON,
-    );
-    expect(after).toHaveLength(EDITION_SIZE);
-    expect(after[0]!.id).toBe('cur');
-    expect(after.map((s) => s.id)).not.toContain('j1-19');
-    expect(after[1]!.id).toBe(before[0]!.id);
+  it('does not need everInEdition to rank in: every live Story is Edition material', () => {
+    const never = story('never', [article('2')], undefined, today);
+    expect(assembleEdition([never], DAY_NOON).map((s) => s.id)).toEqual([
+      'never',
+    ]);
   });
 
   it('is smooth at midnight: a day-D Story still ranks at 00:30 of D+1 (window open)', () => {
@@ -253,7 +184,7 @@ describe('assembleEdition', () => {
     ).toEqual(['late-born']);
   });
 
-  it('after the window closes: everInEdition becomes backfill, never-in-Edition drops', () => {
+  it('after the window closes: yesterday’s Stories leave the Edition, no backfill (ADR-0022)', () => {
     const shown = {
       ...story('shown', [article('1')], '2026-10-05T20:00:00Z', '2026-10-05'),
       everInEdition: true,
@@ -269,7 +200,7 @@ describe('assembleEdition', () => {
     };
     expect(
       assembleEdition([shown, never], NEXT_DAY_AFTER_WINDOW).map((s) => s.id),
-    ).toEqual(['shown']);
+    ).toEqual([]);
   });
 
   it('ranks window-open Stories of two days together by the ADR-0009 key', () => {

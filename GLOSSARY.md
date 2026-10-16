@@ -53,7 +53,7 @@ The neutral French name of a Story, written by the Grouping model. Distinct from
 _Avoid_: Story headline
 
 **Live Story**:
-A Story with at least one Article less than 24 hours old, within its Ingestion window. Live Stories can gain Articles and make up the current-day part of the Edition (ADR-0017).
+A Story with at least one Article less than 24 hours old, within its Ingestion window. Live Stories can gain Articles and make up the Edition (ADR-0022).
 _Avoid_: Active story, open story
 
 **Frozen Story**:
@@ -77,7 +77,7 @@ The part of the news a Story belongs to: Politique, International, Économie, So
 _Avoid_: Category, rubric, topic
 
 **Edition**:
-The current selection of top Stories that Prisme publishes, updated throughout the day: window-open Stories (today's, and yesterday's until 06:00 — the Edition's live pool) ranked by Coverage first, then Backfill up to the Edition size (ADR-0017, amended for the midnight gap).
+Everything Prisme publishes for the day, updated throughout the day: all window-open Stories (today's, and yesterday's until 06:00 — the Edition's live pool) ranked by Coverage, with no cut (ADR-0022). Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
 _Avoid_: Issue, digest, daily, run
 
 **Story day**:
@@ -88,9 +88,9 @@ _Avoid_: Story date, day of the story
 The period after a Story's day during which the Story still accepts Articles — until 06:00 the next morning, Europe/Paris — covering Articles published just before midnight but collected after. Past the window, the Story is frozen.
 _Avoid_: Grace period, closing time
 
-**Backfill**:
-Previous days' closed Stories shown in the Edition after the live pool, newest day first, each day ranked by Coverage. Backfill erodes through the day and carries no visual marking.
-_Avoid_: Archive (in the Edition sense), old stories
+**Summaries budget**:
+The at-most-20 top-ranked Stories per build that gain a Summaries call when they gained Articles — derived from the Gemini free tier's daily quota (ADR-0022). A Story outside the budget keeps its existing summary as-is.
+_Avoid_: Edition size, story cap
 
 **Archive**:
 A dated page (`/archives/<date>/`) rendered at build time from the permanent Story files of that day — the day's record, not a snapshot of the Edition.

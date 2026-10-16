@@ -26,6 +26,17 @@ import { isLive } from './liveness.ts';
 /** Prompt version, for traceability in Story files (ADR-0006). Bump on any prompt/schema change. */
 export const SUMMARIES_PROMPT_VERSION = 'sum-2';
 
+/**
+ * The per-build Summaries budget (ADR-0022): at most the top-20 ranked
+ * Stories among those that gained Articles gain a model call. Derived from
+ * the measured Gemini free-tier quotas (2026-10-17): RPD 500 is the binding
+ * constraint, Grouping makes ~24 calls/day, leaving ~476 calls for Summaries
+ * across ~24 hourly builds — ~20 per build. Stories beyond the budget keep
+ * their existing summary until a later build re-ranks them into the top-20;
+ * nothing is hidden from readers for budget reasons.
+ */
+export const SUMMARIES_BUDGET = 20;
+
 /** The production Summaries model, pinned for traceability. */
 export const SUMMARIES = {
   gateway: 'google',
@@ -211,16 +222,22 @@ export async function updateSummaries(input: {
   outletById: Map<string, Outlet>;
   model?: SummaryModel;
   promptVersion: string;
+  /**
+   * Maximum Stories summarized this build (ADR-0022). Input order is rank
+   * order — `run.ts` passes the ranked Edition. Undefined/omitted means no
+   * budget (the benchmark and side-by-side scripts rely on that).
+   */
+  budget?: number;
 }): Promise<{ changed: Set<string>; calls: number }> {
-  const { stories, now, teasers, outletById, model, promptVersion } = input;
+  const { stories, now, teasers, outletById, model, promptVersion, budget } =
+    input;
   const changed = new Set<string>();
   let calls = 0;
   if (model == null) return { changed, calls };
 
   for (const story of stories) {
-    // Frozen Stories are never edited (ADR-0005): since ADR-0017 the Edition
-    // input includes backfill Stories, and a frozen Story may carry a stale
-    // summarizedArticleCount (its Summaries call once failed — the
+    // Frozen Stories are never edited (ADR-0005): a frozen Story may carry
+    // a stale summarizedArticleCount (its Summaries call once failed — the
     // isolate-and-retry-later path). Liveness, the same check as
     // frontpage.ts/edition-history.ts, gates the loop.
     if (!isLive(story, now)) continue;
@@ -235,6 +252,10 @@ export async function updateSummaries(input: {
     const counts = coverageCounts(story.articles, outletById);
     const coveredLeanings = LEANINGS.filter((l) => counts[l] > 0);
     if (coveredLeanings.length === 0) continue;
+
+    // The budget (ADR-0022) counts actual model calls: Stories with no
+    // unseen Articles or no Coverage cost zero and never consume it.
+    if (budget != null && calls >= budget) continue;
 
     const newArticles: SummaryInputArticle[] = [];
     for (const article of story.articles.slice(0, newCount)) {

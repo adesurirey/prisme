@@ -106,6 +106,15 @@ body {
   overscroll-behavior-y: none;
 }
 
+/* Load-more tail (ADR-0022): under JS, Story cards beyond the first batch
+ * are hidden before first paint — the inline <head> script swaps
+ * <html class="no-js"> to `js` — so there is never a reveal flash on load.
+ * load-more.ts flips data-revealed on the cards a click brings in; without
+ * JS (html stays no-js) every Story is visible. */
+html.js [data-load-more-tail]:not([data-revealed]) {
+  display: none;
+}
+
 /* Visible keyboard focus, both schemes */
 :focus-visible {
   outline: 2px solid var(--line-strong);

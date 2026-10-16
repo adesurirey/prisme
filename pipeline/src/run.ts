@@ -20,7 +20,11 @@ import { fetchFeed } from './http.ts';
 import { CLASSIFICATIONS_PATH, DATA_DIR, STORIES_DIR } from './paths.ts';
 import { resolveModels } from './policy.ts';
 import { assembleEdition } from './ranking.ts';
-import { SUMMARIES_PROMPT_VERSION, updateSummaries } from './summarize.ts';
+import {
+  SUMMARIES_BUDGET,
+  SUMMARIES_PROMPT_VERSION,
+  updateSummaries,
+} from './summarize.ts';
 
 // Build-log section headers: one emoji-prefixed line per pipeline step, so a
 // scrolling CI log reads as a sequence of labeled blocks instead of one dense
@@ -99,14 +103,13 @@ export async function runEdition(): Promise<Edition> {
   const liveIds = new Set(outcome.live.map((s) => s.id));
   const frontpage = updateFrontPageHistory(outcome.stories, kept, now);
 
-  // The Edition (issue #98, ADR-0017, midnight-gap fix): the live pool —
-  // every Story whose ingestion window is still open (today's Stories, and
-  // yesterday's until 06:00 Paris) ranked by the ADR-0009 key first, then
-  // backfill — previous days' everInEdition Stories (frozen), newest day
-  // first, each day ranked the same way — capped at EDITION_SIZE. A Story
-  // born right after midnight ranks in and gets everInEdition instead of
-  // being deleted unfrozen (issue #75). Live Stories below the cut keep
-  // updating outside it and may return on a later build; only a Story with
+  // The Edition (ADR-0022, superseding ADR-0017's backfill tier): every
+  // live Story — today's Stories, and yesterday's until 06:00 Paris —
+  // ranked by the ADR-0009 key, uncapped. The old EDITION_SIZE cap was the
+  // Summaries budget leaking into visibility; the budget now gates only
+  // the Summaries calls below. A Story born right after midnight ranks in
+  // and gets everInEdition instead of being deleted unfrozen (issue #75).
+  // Live Stories keep updating and stay in the Edition; only a Story with
   // no live Articles freezes.
   const outletById = new Map(outlets.map((o) => [o.id, o]));
   const ranked = assembleEdition(frontpage.stories, now);
@@ -135,12 +138,13 @@ export async function runEdition(): Promise<Edition> {
     ...editionHistory.changed,
   ]);
 
-  // Summaries & Differences (issue #7, ADR-0006): one Flash-Lite call per
-  // live Edition Story that gained Articles since its last Summaries run —
-  // unchanged Stories make zero calls. Only Edition Stories are summarized;
-  // a Story below the cut picks its Summaries up when it returns. Without
-  // Summaries are always live (resolveModels); unchanged Stories make zero
-  // calls.
+  // Summaries & Differences (issue #7, ADR-0006, budgeted by ADR-0022):
+  // one Flash-Lite call per Story that gained Articles since its last
+  // Summaries run — unchanged Stories make zero calls — capped at the top
+  // SUMMARIES_BUDGET ranked Stories per build (the derivation lives with
+  // the constant in summarize.ts). Stories beyond the budget keep their
+  // existing summary, shown as-is, until a later build re-ranks them into
+  // the top-20. Nothing is hidden from readers for budget reasons.
   const summaries = models.summaries;
   const summaryOutcome = await updateSummaries({
     stories: edition.stories,
@@ -149,6 +153,7 @@ export async function runEdition(): Promise<Edition> {
     outletById,
     model: summaries,
     promptVersion: SUMMARIES_PROMPT_VERSION,
+    budget: SUMMARIES_BUDGET,
   });
   for (const slug of summaryOutcome.changed) changed.add(slug);
 

@@ -3,6 +3,7 @@ import StoryCard from '../components/StoryCard';
 import StoryHero from '../components/StoryHero.astro';
 import { loadEdition, loadOutlets } from '../data';
 import Base from '../layouts/Base.astro';
+import { LOAD_MORE_INITIAL } from '../load-more';
 import { formatParisDate } from '../paris-date';
 
 const edition = await loadEdition();
@@ -59,13 +60,41 @@ const updatedTime = formatParisDate(built, {
         index === 0 ? (
           <StoryHero story={story} outlets={outlets} />
         ) : (
-          <StoryCard story={story} outlets={outlets} />
+          <StoryCard
+            story={story}
+            outlets={outlets}
+            // Tail beyond the first batch: hidden by CSS before first
+            // paint (html.js rule in global.css), revealed per click by
+            // load-more.ts. Without JS the marker is inert — all visible.
+            tail={index >= LOAD_MORE_INITIAL}
+          />
         ),
       )
     }
+    {/* "Voir plus de sujets" (ADR-0022): everything is in the HTML; the
+        tail beyond LOAD_MORE_INITIAL is hidden by CSS from first paint and
+        revealed per click. Without JS, all Stories simply stay visible. */}
+    <button
+      type="button"
+      data-load-more
+      hidden
+      class="relative mx-auto mt-10 block cursor-pointer overflow-hidden rounded-full border border-line px-6 py-2 text-[13px] font-medium text-ink transition-colors hover:bg-canvas"
+    >
+      {/* Progress fill behind the label (width driven by load-more.ts),
+          tinted rather than solid ink so the edge never reads as a hard
+          cut through the label; width transitions for a smooth growth. */}
+      <span
+        data-load-more-fill
+        aria-hidden="true"
+        class="absolute inset-y-0 left-0 bg-ink/5 transition-[width] duration-300 ease-out dark:bg-ink/15"
+      ></span>
+      <span class="relative">
+        Afficher plus de sujets <span data-load-more-count></span>
+      </span>
+    </button>
     {/* Tight under the last card — <main>'s pb-16 and the footer's py-8
         carry the bottom whitespace. */}
-    <p class="mt-6 text-center text-[12px] text-faint">
+    <p class="mt-5 text-center text-[12px] text-faint">
       {edition.stories.length} sujets — dernier point à {updatedTime}
     </p>
   </section>
@@ -76,6 +105,7 @@ const updatedTime = formatParisDate(built, {
    visit (localStorage) and reveals badges. Runs on this page only. */}
 <script>
   import { installTrending, SEEN_KEY, SESSION_KEY } from "../trending";
+  import { installLoadMore } from "../load-more";
 
   // DEV-only mock: ?mock-trending seeds a fake baseline so both per-visit
   // signals (StoryCard / StoryHero slot) can be demoed without a real
@@ -104,5 +134,6 @@ const updatedTime = formatParisDate(built, {
     sessionStorage.removeItem(SESSION_KEY);
   }
 
+  installLoadMore();
   installTrending();
 </script>

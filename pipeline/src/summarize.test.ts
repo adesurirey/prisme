@@ -519,3 +519,77 @@ describe('updateSummaries — frozen Stories (ADR-0005/ADR-0006)', () => {
     expect(outcome.calls).toBe(0);
   });
 });
+
+/**
+ * The per-build Summaries budget (ADR-0022): at most the top-20 ranked
+ * Stories among those that gained Articles gain a model call — the Gemini
+ * free tier's RPD (500, shared with Grouping's ~24 calls/day) divides into
+ * hourly builds as ~20 calls per build. Unchanged Stories cost zero; a
+ * Story beyond the budget keeps its existing summary as-is until a later
+ * build re-ranks it into the top-20.
+ */
+describe('updateSummaries — per-build budget (ADR-0022)', () => {
+  const now = new Date('2026-10-06T12:00:00Z');
+
+  /** A live Story with one unseen Article and Coverage. */
+  function changedStory(id: string, summarizedArticleCount = 0) {
+    return story(id, `sujet-${id}`, [article(`a-${id}`, 'lemonde')], {
+      summarizedArticleCount,
+    });
+  }
+
+  it('summarizes only the first `budget` Stories in input order, skipping the rest untouched', async () => {
+    const stories = [changedStory('a'), changedStory('b'), changedStory('c')];
+    const calls: { input: SummaryInput }[] = [];
+    const outcome = await updateSummaries({
+      stories,
+      now,
+      teasers: new Map(),
+      outletById,
+      model: fakeModel(GOOD_RESPONSE, calls),
+      promptVersion: SUMMARIES_PROMPT_VERSION,
+      budget: 2,
+    });
+    expect(calls).toHaveLength(2);
+    expect(outcome.calls).toBe(2);
+    expect(stories[0]!.summaries).toBeDefined();
+    expect(stories[1]!.summaries).toBeDefined();
+    expect(stories[2]!.summaries).toBeUndefined();
+    expect(stories[2]!.summarizedArticleCount).toBe(0);
+    expect(outcome.changed).toEqual(new Set(['sujet-a', 'sujet-b']));
+  });
+
+  it('does not spend the budget on Stories with no unseen Articles', async () => {
+    const unchanged = story('old', 'sujet-old', [article('a-old', 'lemonde')], {
+      summarizedArticleCount: 1,
+    });
+    const first = changedStory('a');
+    const second = changedStory('b');
+    const calls: { input: SummaryInput }[] = [];
+    await updateSummaries({
+      stories: [unchanged, first, second],
+      now,
+      teasers: new Map(),
+      outletById,
+      model: fakeModel(GOOD_RESPONSE, calls),
+      promptVersion: SUMMARIES_PROMPT_VERSION,
+      budget: 2,
+    });
+    // `first` and `second` both summarize: the unchanged Story cost zero.
+    expect(calls).toHaveLength(2);
+  });
+
+  it('summarizes every Story when the budget covers them (default: no budget)', async () => {
+    const stories = [changedStory('a'), changedStory('b')];
+    const calls: { input: SummaryInput }[] = [];
+    await updateSummaries({
+      stories,
+      now,
+      teasers: new Map(),
+      outletById,
+      model: fakeModel(GOOD_RESPONSE, calls),
+      promptVersion: SUMMARIES_PROMPT_VERSION,
+    });
+    expect(calls).toHaveLength(2);
+  });
+});
