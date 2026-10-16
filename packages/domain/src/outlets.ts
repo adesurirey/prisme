@@ -119,6 +119,8 @@ export interface ExcludedOutlet {
   name: string;
   /** Why it is out, in French, publishable. */
   reason: string;
+  /** The same reason for the reader: plain French, no jargon, no anglicisms. */
+  publicReason: string;
   /** ISO date the reason was verified. */
   checkedAt: string;
 }
@@ -2075,6 +2077,8 @@ export const excludedOutlets: ExcludedOutlet[] = [
     name: 'Marianne',
     reason:
       "L'arête AWS WAF de marianne.net répond 405 (captcha) aux IP des runners GitHub et 403 aux IP datacenter en général, quel que soit le User-Agent : échec dans 144/144 exécutions CI depuis la première (2026-10-06), zéro contribution (sonde du 2026-10-16, ADR-0021). Un miroir Google News a été examiné puis rejeté : ses descriptions ne répètent que le titre — classification headline-only pour un média politique, pas d'images, résumés appauvris. Réintégrer avec le flux direct https://www.marianne.net/rss.xml (200 confirmé depuis une IP résidentielle : 20 articles, ~32 h, images toutes) dès que le WAF laisse passer les IP CI, et re-sourcer le Leaning.",
+    publicReason:
+      'Le site de Marianne refuse automatiquement les visites de nos programmes de collecte, malgré de nombreuses tentatives. Nous l’ajouterons dès que ce blocage sera levé.',
     checkedAt: '2026-10-16',
   },
   {
@@ -2082,6 +2086,8 @@ export const excludedOutlets: ExcludedOutlet[] = [
     name: 'Les Échos',
     reason:
       'Flux RSS bloqués : lesechos.fr/rss/* répond 403 (une, actualités, rubriques), vérifié le 2026-10-10.',
+    publicReason:
+      'Les Échos refuse l’accès à la liste de ses articles à nos programmes de collecte. Nous l’ajouterons dès que ce blocage sera levé.',
     checkedAt: CHECKED,
   },
   {
@@ -2089,6 +2095,8 @@ export const excludedOutlets: ExcludedOutlet[] = [
     name: 'Fdesouche',
     reason:
       "Agrégateur de liens, pas un média de source primaire : agréger ses articles compterait deux fois la couverture des médias déjà présents (examen préalable de l'issue #80, flux vérifié le 2026-10-10).",
+    publicReason:
+      'Fdesouche n’est pas un média : c’est un site qui renvoie vers des articles d’autres médias. Les compter reviendrait à compter deux fois les mêmes articles.',
     checkedAt: CHECKED,
   },
 ];

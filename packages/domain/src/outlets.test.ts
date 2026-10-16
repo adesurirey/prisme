@@ -21,6 +21,26 @@ describe('outlet config', () => {
       expect(ids).not.toContain(excluded.id);
   });
 
+  it('gives every excluded Outlet a plain-French reader reason', () => {
+    for (const excluded of excludedOutlets) {
+      expect(excluded.publicReason.trim(), excluded.id).not.toBe('');
+      // No technical jargon or anglicisms in the reader-facing reason.
+      for (const banned of [
+        'RSS',
+        'flux',
+        'IP',
+        'CI',
+        'WAF',
+        '403',
+        '405',
+        'issue',
+      ])
+        expect(excluded.publicReason.toLowerCase(), excluded.id).not.toContain(
+          banned.toLowerCase(),
+        );
+    }
+  });
+
   it('gives every Outlet a Leaning backed by at least 2 cited sources', () => {
     for (const outlet of outlets) {
       expect(outlet.leaningSources.length, outlet.id).toBeGreaterThanOrEqual(2);

@@ -130,7 +130,7 @@ const description =
           excludedOutlets.map((excluded) => (
             <li class="py-4">
               <p class="text-[16px] font-medium text-ink">{excluded.name}</p>
-              <p class="mt-1 text-[16px] leading-relaxed text-muted">{excluded.reason}</p>
+              <p class="mt-1 text-[16px] leading-relaxed text-muted">{excluded.publicReason}</p>
               <p class="mt-1 text-[16px] text-muted">
                 Vérifié le {formatParisDate(new Date(excluded.checkedAt), {
                   day: 'numeric',
