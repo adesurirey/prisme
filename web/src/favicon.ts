@@ -33,7 +33,7 @@ function paddedViewBox(pad: number): string {
 export function prismeMarkSvg(color: string, pad = 0): string {
   return prismeMarkAsset
     .replace(/viewBox="[^"]+"/, `viewBox="${paddedViewBox(pad)}"`)
-    .replace(/ role="img" aria-label="Prisme"/, '')
+    .replace(/ role="img" aria-label="Émile"/, '')
     .replaceAll('currentColor', color);
 }
 

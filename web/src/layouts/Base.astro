@@ -12,7 +12,7 @@ import { PRISME_MARK_DARK, PRISME_MARK_LIGHT } from '../favicon';
 // same box, so the navbar wordmark is bumped to 20px to hold the same
 // visual mass.
 const prismeWordmark = prismeWordmarkRaw
-  .replace(' role="img" aria-label="Prisme"', ' aria-hidden="true"')
+  .replace(' role="img" aria-label="Émile"', ' aria-hidden="true"')
   .replace('<svg ', '<svg class="h-[20px] w-auto" ');
 
 interface Props {
@@ -50,7 +50,7 @@ const {
     <link rel="apple-touch-icon" href={withBase('/icons/apple-touch-icon.png')} />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="Prisme" />
+    <meta name="apple-mobile-web-app-title" content="Émile" />
     {/* Favicon: the Prisme mark (the upright P), one explicit version per
          theme (--ink tokens), from its single source. The media attribute
          makes the browser pick — and live-swap — the right one, instead of
@@ -77,7 +77,7 @@ const {
   <body class="min-h-screen bg-canvas font-sans text-ink antialiased">
     <header class="sticky top-0 z-50 border-b border-line bg-canvas/90 backdrop-blur">
       <div class="mx-auto flex h-14 max-w-4xl items-center gap-3 px-5">
-        <a href={withBase('/')} class="flex items-start" aria-label="Prisme — accueil">
+        <a href={withBase('/')} class="flex items-start" aria-label="Émile — accueil">
           <Fragment set:html={prismeWordmark} />
         </a>
         {/* Reading toggle (issue #89, ADR-0016): Couverture (default) or
@@ -120,7 +120,7 @@ const {
     </main>
     <footer class="border-t border-line py-8">
       <div class="mx-auto flex max-w-4xl flex-wrap gap-x-5 gap-y-2 px-5 text-[13px] text-muted">
-        <p>© {new Date().getFullYear()} Prisme</p>
+        <p>© {new Date().getFullYear()} Émile</p>
         <p class="ml-auto flex gap-5">
           <a href={withBase('/classement-politique-des-medias/')} class="transition-colors hover:text-ink"
             >Classement politique des médias</a

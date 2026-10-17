@@ -33,7 +33,7 @@ describe('PWA manifest', () => {
     const manifest = JSON.parse(
       await readFile(path.join(dist, 'manifest.webmanifest'), 'utf8'),
     );
-    expect(manifest.name).toBe('Prisme');
+    expect(manifest.name).toBe('Émile');
     expect(manifest.display).toBe('standalone');
     expect(manifest.start_url).toBe('/prisme/');
     expect(manifest.scope).toBe('/prisme/');
@@ -80,8 +80,6 @@ describe('page head tags', () => {
       'rel="apple-touch-icon" href="/prisme/icons/apple-touch-icon.png"',
     );
     expect(html).toContain('name="apple-mobile-web-app-capable" content="yes"');
-    expect(html).toContain(
-      'name="apple-mobile-web-app-title" content="Prisme"',
-    );
+    expect(html).toContain('name="apple-mobile-web-app-title" content="Émile"');
   });
 });

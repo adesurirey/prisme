@@ -132,7 +132,7 @@ def build(letters, tracking_em, opsz, angles=None, pinch=None):
         x += hmtx[gname][0] + tracking
     vb = f"{xs_min:.1f} {ys_min:.1f} {xs_max - xs_min:.1f} {ys_max - ys_min:.1f}"
     d = " ".join(paths)
-    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{vb}" role="img" aria-label="Prisme"><path fill="currentColor" d="{d}"/></svg>\n'
+    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{vb}" role="img" aria-label="Émile"><path fill="currentColor" d="{d}"/></svg>\n'
 
 
 def main():
