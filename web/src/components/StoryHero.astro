@@ -21,6 +21,7 @@ import {
 import { withBase } from '../data';
 import { dayStamp, parisDayKey, parisTime } from '../story-date';
 import { storyUrl } from '../story-url';
+import ImageCredit from './ImageCredit';
 import StoryImage from './StoryImage';
 
 interface Props {
@@ -67,7 +68,7 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
 
 {
   image && imageOutlet ? (
-    <article class="-mx-5" data-story-id={story.id} data-coverage={reporting}>
+    <article class="relative -mx-5" data-story-id={story.id} data-coverage={reporting}>
       <a href={withBase(storyUrl(story))} class="group/card block sm:rounded-xl">
         <figure class="relative overflow-hidden sm:rounded-xl">
           <div class="absolute inset-0">
@@ -146,6 +147,10 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
           </div>
         </figure>
       </a>
+      {/* Photo credit: positioned sibling of the card link (painted above
+          it), not a descendant — toggling the native <details> badge must
+          never trigger the whole-card navigation. */}
+      {imageOutlet && <ImageCredit name={imageOutlet.name} />}
     </article>
   ) : null
 }

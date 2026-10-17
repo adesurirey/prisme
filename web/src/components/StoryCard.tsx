@@ -10,6 +10,7 @@ import { withBase } from '../data';
 import { storyUrl } from '../story-url';
 import BlindspotBadge from './BlindspotBadge';
 import CoverageMeta from './CoverageMeta';
+import ImageCredit from './ImageCredit';
 import StoryImage from './StoryImage';
 
 /**
@@ -25,6 +26,11 @@ import StoryImage from './StoryImage';
  * the reader's last visit, "Nouveau" for a Story absent from it
  * (ADR-0020). The prerendered HTML has no idea who is reading, so the
  * per-visitor signals are decided in the browser.
+ *
+ * Link structure: a stretched link (<a> absolute inset-0) makes the
+ * whole card navigate while the image column — positioned, painted
+ * above the link — carries the photo credit badge (ImageCredit, a
+ * native <details>): toggling the badge never triggers navigation.
  */
 export default function StoryCard({
   story,
@@ -44,17 +50,24 @@ export default function StoryCard({
   const reporting = reportingOutletIds(story.articles).size;
   const spots = blindspots(counts);
   const image = pickStoryImage(story, byId);
+  const imageOutlet = image && byId.get(image.outletId);
   return (
     <article
-      className="-mx-5"
+      className="group/card relative -mx-5"
       data-story-id={story.id}
       data-coverage={reporting}
       data-load-more-tail={tail ? '' : undefined}
     >
+      {/* Stretched link: the whole card navigates. */}
+      {/* biome-ignore lint/a11y/useAnchorContent: the link is the card's
+          click surface; the accessible name comes from the story title
+          the card displays right next to it. */}
       <a
         href={withBase(storyUrl(story))}
-        className="group/card flex items-start gap-4 rounded-xl px-5 py-5"
-      >
+        aria-label={story.title}
+        className="absolute inset-0 rounded-xl"
+      />
+      <div className="flex items-start gap-4 px-5 py-5">
         <div className="min-w-0 flex-1">
           {/* The per-visitor badge slot ("En hausse" or "Nouveau",
               trending.ts) sits above the title — a per-visitor highlight
@@ -84,15 +97,22 @@ export default function StoryCard({
             </div>
           )}
         </div>
-        <div className="shrink-0 self-center">
-          <StoryImage
-            article={image}
-            outlet={image && byId.get(image.outletId)}
-            className="h-18 w-32 rounded-md"
-            sizes="128px"
-          />
+        {/* Painted above the stretched link but click-through (the column
+            is pointer-events-none): tapping the thumbnail navigates via
+            the stretched link; the credit badge re-enables pointer events
+            so it toggles without following the card link. */}
+        <div className="pointer-events-none relative shrink-0 self-center">
+          {image && imageOutlet && (
+            <StoryImage
+              article={image}
+              outlet={imageOutlet}
+              className="h-18 w-32 rounded-md"
+              sizes="128px"
+            />
+          )}
+          {imageOutlet && <ImageCredit name={imageOutlet.name} compact />}
         </div>
-      </a>
+      </div>
     </article>
   );
 }
