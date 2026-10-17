@@ -7,10 +7,13 @@ import prismeWordmarkRaw from '../assets/brand/prisme-wordmark-nav.svg?raw';
 import { withBase } from '../data';
 import { PRISME_MARK_DARK, PRISME_MARK_LIGHT } from '../favicon';
 
-// Decorative inside the labelled link, sized to the old text's cap height.
+// Decorative inside the labelled link. 16px was sized to the all-caps
+// PRISME's cap height; the mixed-case Emile (x-heights) reads smaller at the
+// same box, so the navbar wordmark is bumped to 20px to hold the same
+// visual mass.
 const prismeWordmark = prismeWordmarkRaw
   .replace(' role="img" aria-label="Prisme"', ' aria-hidden="true"')
-  .replace('<svg ', '<svg class="h-[16px] w-auto" ');
+  .replace('<svg ', '<svg class="h-[20px] w-auto" ');
 
 interface Props {
   title: string;
