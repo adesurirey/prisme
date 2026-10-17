@@ -118,9 +118,9 @@ function fakeMembership(
       });
       return answer == null ? 'failed' : answer ? 'yes' : 'no';
     },
-    async sameSubject(episode, birth) {
+    async sameSubject(episodes, birth) {
       calls.push({
-        story: episode.title,
+        story: episodes.map((e) => e.title).join(' | '),
         article: birth.title,
         headlines: birth.headlines,
       });
@@ -2012,10 +2012,10 @@ describe('Topics (ADR-0024)', () => {
           calls.push({ story: story.title, article: articleHead.headline });
           return answer == null ? 'failed' : answer ? 'yes' : 'no';
         },
-        async sameSubject(episode, birth) {
+        async sameSubject(episodes, birth) {
           const answer = answers[calls.length] ?? null;
           calls.push({
-            story: episode.title,
+            story: episodes.map((e) => e.title).join(' | '),
             article: birth.title,
             headlines: birth.headlines,
           });
@@ -2069,9 +2069,9 @@ describe('Topics (ADR-0024)', () => {
         createdAt: EPISODE.createdAt,
       },
     ]);
-    // The second check is the topic check: the Episode against the whole
-    // birth (title + headlines), not a lone seed (the first one is the
-    // birth's internal merge).
+    // The second check is the topic check: the whole thread (here just the
+    // Episode) against the whole birth (title + headlines), not a lone seed
+    // (the first one is the birth's internal merge).
     expect(calls).toHaveLength(2);
     expect(calls[1]?.story).toBe(EPISODE.title);
     expect(calls[1]?.article).toBe('Titre k1');
@@ -2157,6 +2157,55 @@ describe('Topics (ADR-0024)', () => {
     expect(calls.every((c) => c.story !== EPISODE.title)).toBe(true);
     expect(born.topicId).toBe(born.slug);
     expect(outcome.topics).toEqual([]);
+  });
+
+  it('the topic check sees the whole thread, oldest first', async () => {
+    const { checker, calls } = fakeMembershipSeq([true, true]);
+    await groupStories(birthInput(checker));
+    // EPISODE (10-05) is the only story on disk — the thread is length 1.
+    expect(calls[1]?.story).toBe(EPISODE.title);
+
+    // Two stories of the same topic on disk: both go in, oldest first.
+    const older = story({
+      id: 's0',
+      slug: 'premiere-epilogue',
+      title: 'Premier épisode du sujet',
+      storyDay: '2026-10-04',
+      topicId: EPISODE.topicId,
+      articles: [
+        article('a9', {
+          headline: 'Le sujet commence',
+          publishedAt: '2026-10-04T10:00:00Z',
+        }),
+      ],
+    });
+    const { checker: checker2, calls: calls2 } = fakeMembershipSeq([
+      true,
+      true,
+    ]);
+    await groupStories(
+      input({
+        articles: [
+          article('a1', { headline: OREGON_EPISODE_HEADLINES[0]! }),
+          article('a2', { headline: OREGON_EPISODE_HEADLINES[1]! }),
+        ],
+        existing: [EPISODE, older],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+          }),
+          membership: checker2,
+          titles: fakeTitlePass(),
+        },
+      }),
+    );
+    expect(calls2[1]?.story).toBe(
+      'Premier épisode du sujet | ' + EPISODE.title,
+    );
   });
 
   it('Stories that gain Articles keep their Topic; updates found nothing', async () => {

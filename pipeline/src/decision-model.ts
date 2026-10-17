@@ -394,9 +394,10 @@ export interface MembershipChecker {
   ): Promise<MembershipAnswer>;
   /** The Topic check (ADR-0024): same model, its own question — “same
    * subject, continuing?” where belongs deliberately says “same theme,
-   * other fact” is a no. */
+   * other fact” is a no. The whole thread goes in, oldest first: the
+   * subject, not just its last episode. */
   sameSubject(
-    episode: MembershipStoryRef,
+    episodes: MembershipStoryRef[],
     birth: MembershipStoryRef,
   ): Promise<MembershipAnswer>;
 }
@@ -426,16 +427,25 @@ export function membershipPayload(
  * the episode on disk, then the new Story with its final title (the check
  * runs after the Title pass) and its member headlines. The birth's own
  * headline list matters: a lone generic title hides the subject. */
+/** The topic check's payload (ADR-0024): the whole thread, not just the
+ * matched episode — the subject is broader than its last episode, and the
+ * real-scale replay showed judging a birth against one story fragments the
+ * threads (a political reaction was judged against the strike story only,
+ * never against the war it belongs to). Episodes run oldest to newest, each
+ * bounded to its most birth-relevant headlines; the birth comes last with
+ * its final title and its own headlines. */
 export function topicPayload(
-  episode: MembershipStoryRef,
+  episodes: MembershipStoryRef[],
   birth: MembershipStoryRef,
 ): { headline: string; teaser: string } {
   const section = (s: MembershipStoryRef) =>
     s.section ? ` (${SECTION_LABELS[s.section]})` : '';
-  const lines = [`Story existante : ${episode.title}${section(episode)}`];
-  const members = episode.headlines.filter((h) => h !== episode.title);
-  if (members.length > 0)
-    lines.push('Articles déjà joints :', ...members.map((h) => `- ${h}`));
+  const lines: string[] = ['Sujet — épisodes déjà joints :'];
+  for (const episode of episodes) {
+    lines.push(`Épisode — ${episode.title}${section(episode)}`);
+    const members = episode.headlines.filter((h) => h !== episode.title);
+    if (members.length > 0) lines.push(...members.map((h) => `- ${h}`));
+  }
   lines.push(`Nouvelle story : ${birth.title}${section(birth)}`);
   const birthMembers = birth.headlines.filter((h) => h !== birth.title);
   if (birthMembers.length > 0) lines.push(...birthMembers.map((h) => `- ${h}`));
@@ -460,13 +470,13 @@ function membershipModel(apiKey: string): MembershipChecker {
         r == null ? 'failed' : r.belongs ? ('yes' as const) : ('no' as const),
       );
     },
-    async sameSubject(episode, birth) {
+    async sameSubject(episodes, birth) {
       return callTyped(
         'Jev',
         'https://openrouter.ai/api/alpha/decisions',
         apiKey,
         { model: OPENROUTER_MODELS.jev, questions: TOPIC_QUESTION },
-        topicPayload(episode, birth),
+        topicPayload(episodes, birth),
         (answers) => {
           const continues = parseTopicAnswer(answers);
           return continues == null ? null : { continues };

@@ -434,21 +434,31 @@ async function resolveTopics(input: {
       birth.storyDay,
     );
     if (episode?.topicId != null) {
-      const verdict = await input.membership.sameSubject(
-        {
-          title: episode.title,
-          section: episode.section,
-          headlines: episode.articles.map((a) => a.headline),
-        },
-        {
-          title: birth.title,
-          section: birth.section,
-          headlines: birth.articles.map((a) => a.headline),
-        },
-      );
+      // The whole thread goes to the check, oldest first (ADR-0024): the
+      // subject is broader than its last episode — a political reaction is
+      // judged against the war, not against the strike story it lexically
+      // matched. Each episode is bounded to its most birth-relevant
+      // headlines, so a long thread never blows up the payload.
+      const episodes = input.existing
+        .filter((s) => s.topicId === episode.topicId)
+        .sort(
+          (a, b) =>
+            a.storyDay.localeCompare(b.storyDay) ||
+            a.createdAt.localeCompare(b.createdAt),
+        )
+        .map((s) => ({
+          title: s.title,
+          section: s.section,
+          headlines: memberDigest(birth.articles[0]!, s.articles),
+        }));
+      const verdict = await input.membership.sameSubject(episodes, {
+        title: birth.title,
+        section: birth.section,
+        headlines: birth.articles.map((a) => a.headline),
+      });
       if (verdict === 'failed')
         throw new Error(
-          `Topic resolution failed: Membership could not answer whether Story ${birth.slug} continues Story ${episode.slug} (ADR-0024).`,
+          `Topic resolution failed: Membership could not answer whether Story ${birth.slug} continues the subject of Story ${episode.slug} (ADR-0024).`,
         );
       if (verdict === 'yes') {
         birth.topicId = episode.topicId;
