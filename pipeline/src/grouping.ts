@@ -420,8 +420,9 @@ export type ConfirmedTopic = Omit<Topic, 'slug'>;
  * a Story exists from two Articles (ADR-0015): only inheritances confirm a
  * Topic, and only confirmed Topics reach the registry — a singleton story
  * never becomes one. A Story on disk without a topicId (the pre-Topics
- * archive) is never inherited from — no retro-assignment. */
-async function resolveTopics(input: {
+ * archive) is never inherited from — no retro-assignment. Exported for the
+ * topic replay tool, which walks the archive through this exact code. */
+export async function resolveTopics(input: {
   births: Story[];
   existing: Story[];
   membership: MembershipChecker;
