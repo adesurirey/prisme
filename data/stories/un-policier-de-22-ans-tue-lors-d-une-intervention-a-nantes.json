@@ -1,10 +1,32 @@
 {
   "id": "2e76098fe811",
   "slug": "un-policier-de-22-ans-tue-lors-d-une-intervention-a-nantes",
-  "title": "Un policier de 22 ans est tué après avoir été percuté par une voiture lors d'une intervention près de Nantes",
+  "title": "Un policier adjoint de 22 ans est tué en intervention après avoir été percuté par une voiture près de Nantes",
   "createdAt": "2026-10-17T08:01:13.238Z",
   "storyDay": "2026-10-17",
   "articles": [
+    {
+      "id": "6b95e1f665d8",
+      "outletId": "franceinfo",
+      "headline": "Un \"terrible drame\", un policier de 22 ans trouve la mort sur le périphérique de Nantes lors d'une intervention",
+      "url": "https://france3-regions.franceinfo.fr/pays-de-la-loire/loire-atlantique/nantes/un-terrible-drame-un-policier-de-22-ans-trouve-la-mort-sur-le-peripherique-de-nantes-lors-d-une-intervention-3434970.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-17T09:58:50.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/SKHFh6jRTpnECNaxU_vON9U9kU8/432x243/filters:format(jpg)/2026/10/17/6ad32a5c5fe12360984324.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "830333abc52a",
+      "outletId": "cnews",
+      "headline": "Nantes : un policier adjoint de 22 ans tué en intervention sur le périphérique",
+      "url": "https://www.cnews.fr/faits-divers/2026-10-17/nantes-un-policier-adjoint-de-22-ans-tue-en-intervention-sur-le",
+      "publishedAt": "2026-10-17T09:09:24.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_1wc2n3-taille1200_6ad3359fbf120.jpg?h=f692311e&itok=YGteINZy",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "15b5415c7bea",
       "outletId": "bfmtv",
@@ -57,7 +79,7 @@
       "url": "https://www.ouest-france.fr/societe/police/un-policier-mortellement-percute-sur-le-peripherique-nantais-cette-nuit-alors-quil-etait-en-intervention-da2d2b94-c9e9-11f1-b8bc-a46147b584ed?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-17T07:40:07.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZmZlNzU5NmE5MGFlMWNjNTkxZDM1ODAwZmY5MGViOTg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=0e5c4b0560663e376030cf3148412ec00cfb0f21b1fb66627c88ecc7b5abb2d9",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -77,18 +99,23 @@
   "section": "misc",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Un agent de la paix de vingt-deux ans a succombé à ses blessures la nuit dernière sur le boulevard circulaire.",
+      "Le drame s'est déroulé à Saint-Herblain en Loire-Atlantique lors d'une opération d'interpellation.",
+      "Le jeune fonctionnaire a perdu la vie dans la nuit de vendredi à samedi en poursuivant des fuyards à pied."
+    ],
     "centre": [
       "Un agent de la paix de vingt-deux ans a succombé à ses blessures la nuit dernière sur le boulevard circulaire.",
       "Le drame s'est déroulé à Saint-Herblain en Loire-Atlantique lors d'une opération d'interpellation.",
       "Le fonctionnaire a été mortellement percuté alors qu'il tentait d'appréhender des suspects à pied."
     ],
     "droite": [
-      "Un membre des forces de l'ordre de vingt-deux ans a perdu la vie en mission nocturne.",
-      "Il a été fauché par un véhicule tiers en tentant d'intercepter des individus en fuite.",
-      "La préfecture a validé les détails de cet événement dramatique survenu sur l'axe nantais."
+      "Un membre des forces de l'ordre de vingt-deux ans a perdu la vie en mission nocturne après avoir été percuté par une voiture.",
+      "Il a été fauché en voulant intercepter des individus qui s'enfuyaient à pied sur l'axe nantais.",
+      "Les autorités préfectorales et le ministre de l'Intérieur ont validé les faits et rendu hommage au fonctionnaire."
     ]
   },
-  "differences": "Les deux camps s'accordent sur la description factuelle du drame impliquant un jeune policier fauché sur le périphérique nantais. Le centre affine la localisation exacte à Saint-Herblain et précise l'opération d'interpellation de fuyards, tandis que la droite conserve une perspective proche de ses publications précédentes en insistant sur la confirmation institutionnelle des autorités préfectorales.",
+  "differences": "Les différents camps partagent les faits essentiels concernant le décès tragique du jeune agent percuté lors d'une course-poursuite. Le centre et la gauche insistent sur les circonstances précises de l'intervention à Saint-Herblain et la poursuite des suspects, tandis que la droite, par l'intermédiaire de CNews, intègre rapidement les hommages officiels de la hiérarchie policière et du gouvernement pour accentuer la dimension mémorielle et la charge émotionnelle du drame.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 8
 }
