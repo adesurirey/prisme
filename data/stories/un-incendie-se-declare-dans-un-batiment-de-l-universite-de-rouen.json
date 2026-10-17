@@ -1,10 +1,31 @@
 {
   "id": "cff5ac938284",
   "slug": "un-incendie-se-declare-dans-un-batiment-de-l-universite-de-rouen",
-  "title": "Un incendie détruit la façade et une partie de la toiture d'un bâtiment de l'université de Rouen",
+  "title": "Un incendie détruit une partie de la façade et de la toiture d'un bâtiment de l'université de Rouen",
   "createdAt": "2026-10-17T06:01:16.342Z",
   "storyDay": "2026-10-17",
   "articles": [
+    {
+      "id": "3f91a5928ae4",
+      "outletId": "tf1-info",
+      "headline": "L'université de Rouen incendiée",
+      "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-l-universite-de-rouen-incendiee-67859-2470504.html",
+      "publishedAt": "2026-10-17T12:10:21.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/l-universite-de-rouen-incendiee-be6dca-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "08ceefa103cb",
+      "outletId": "liberation",
+      "headline": "La faculté des lettres de Rouen touchée par un incendie, les enquêteurs soupçonnent une «origine criminelle»",
+      "url": "https://www.liberation.fr/societe/police-justice/la-faculte-des-lettres-de-rouen-touchee-par-un-incendie-les-enqueteurs-soupconnent-une-origine-criminelle-20261017_PF5MGJYJS5BXDJHNVTIHOXH2IA/",
+      "publishedAt": "2026-10-17T10:54:26.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "156a748913b5",
       "outletId": "le-monde",
@@ -110,9 +131,9 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un sinistre nocturne a ravagé la façade ainsi qu'une portion significative de la toiture sur le campus de Mont-Saint-Aignan.",
-      "Une cinquantaine de soldats du feu ont été mobilisés sur les lieux pour maîtriser les flammes.",
-      "Une procédure judiciaire a été lancée afin d'élucider les causes exactes de cet événement, le centre gauche mentionnant en outre une prise de parole ministérielle qualifiant le feu d'intentionnel."
+      "Le sinistre nocturne a détruit deux étages ainsi qu'une surface importante de toiture au sein de la faculté des lettres.",
+      "Le feu a pris naissance à partir de détritus amassés au pied de la structure universitaire.",
+      "Les investigations en cours tendent à confirmer la piste d'un acte malveillant."
     ],
     "centre": [
       "Les flammes ont touché une structure universitaire durant la nuit près de Rouen.",
@@ -120,12 +141,12 @@
       "Les autorités ont ouvert une investigation pour déterminer l'origine de cet incident."
     ],
     "droite": [
-      "Un incendie nocturne a ravagé la façade et une grande partie de la toiture de la faculté de lettres sur le campus de l'université de Rouen.",
-      "Le dispositif de secours a engagé une cinquantaine de pompiers dès deux heures et demie du matin pour venir à bout du sinistre.",
-      "Les autorités privilégient la piste d'un départ de feu volontaire survenu en marge d'une journée de mobilisation."
+      "Une enquête pour destruction par incendie a été lancée à la suite du sinistre qui a ravagé le campus normand.",
+      "L'origine criminelle est confirmée bien que le lien avec les mouvements contestataires actuels reste incertain pour certains.",
+      "L'affaire mobilise une douzaine d'enquêteurs et suscite l'indignation de la présidence de l'université."
     ]
   },
-  "differences": "Les différents camps s'accordent sur les dégâts matériels importants subis par le bâtiment universitaire et sur l'ouverture d'une enquête judiciaire. Le camp de droite maintient son avance en pointant explicitement l'hypothèse criminelle liée aux mobilisations et en donnant l'heure précise des secours, une orientation désormais rejointe par la frange centre gauche qui rapporte l'affirmation ministérielle d'un acte volontaire. Le centre, quant à lui, conserve une approche plus neutre et factuelle sans s'avancer sur les motivations du sinistre, tandis que la gauche continue d'insister sur l'ampleur des destructions matérielles.",
+  "differences": "Les différents camps s'accordent sur la nature criminelle de l'incendie et sur la destruction partielle du bâtiment universitaire. Le camp de droite, relayé par les analyses du centre droit, insiste sur l'ouverture rapide d'une enquête judiciaire et sur l'indignation de la présidence, tout en soulignant la difficulté d'établir un lien avec les mobilisations étudiantes. À gauche, l'accent est mis de manière précise sur les dégâts matériels concrets, notamment la surface de toiture détruite et la localisation du départ de feu près de détritus. Le centre maintient pour sa part une perspective strictement factuelle sur le déroulement de l'intervention des secours.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 9
+  "summarizedArticleCount": 11
 }
