@@ -28,5 +28,20 @@
       "section": "economy"
     }
   ],
-  "section": "world"
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "L'économie irakienne a subi un manque à gagner de 60 milliards de dollars depuis la fin du mois de février.",
+      "Cette perte financière massive découle directement du conflit au Moyen-Orient et de la fermeture de la route maritime d'Ormuz par l'Iran.",
+      "L'impossibilité d'acheminer le pétrole, principale source de revenus du pays, par voie maritime paralyse l'exportation."
+    ],
+    "droite": [
+      "Le gouvernement irakien déplore un préjudice financier s'élevant à 60 milliards de dollars.",
+      "La situation s'explique par les répercussions économiques de la guerre en cours au Proche et Moyen-Orient."
+    ]
+  },
+  "differences": "Le centre apporte des précisions géopolitiques et économiques concrètes en identifiant le rôle de l'Iran et la fermeture physique du détroit d'Ormuz comme causes directes des difficultés d'exportation du pétrole irakien. De son côté, la droite, à travers Le Figaro, propose un cadrage plus général en imputant l'ensemble des pertes financières aux conséquences de la guerre au Moyen-Orient de manière plus large.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 2
 }

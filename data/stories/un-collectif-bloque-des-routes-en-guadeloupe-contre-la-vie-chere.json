@@ -40,5 +40,19 @@
       "section": "economy"
     }
   ],
-  "section": "society"
+  "section": "society",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Des barrages routiers et des tensions secouent l'archipel guadeloupéen pour protester contre le coût de la vie.",
+      "Le mouvement de contestation est porté par une coalition hétéroclite regroupant syndicats de la pêche, entrepreneurs et militants."
+    ],
+    "centre": [
+      "Des actions de blocage et des heurts violents se propagent dans plusieurs zones du territoire guadeloupéen.",
+      "Les manifestants mobilisent des barrages pour exprimer leur ras-le-bol face à la cherté de la vie, aux difficultés d'approvisionnement en eau et au prix des carburants."
+    ]
+  },
+  "differences": "Les médias de centre gauche apportent des précisions sur la composition du collectif contestataire à l'origine du mouvement, tandis que les sources classées au centre adoptent un angle plus descriptif axé sur la multiplication des barrages et des affrontements sur l'ensemble de l'archipel.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 3
 }

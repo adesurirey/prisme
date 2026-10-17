@@ -39,5 +39,25 @@
       "section": "sport"
     }
   ],
-  "section": "sport"
+  "section": "sport",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le duo tricolore a perdu la partie ultime du double mixte aux championnats continentaux.",
+      "La défaite s'est jouée sur un score serré de trois sets à deux face aux représentants allemands.",
+      "Les tricolores ont manqué de peu la victoire finale après une rencontre extrêmement disputée."
+    ],
+    "centre": [
+      "La paire française a obtenu la médaille d'argent continentale en double mixte après une rencontre haletante.",
+      "Les pongistes tricolores ont échoué en finale malgré l'obtention de quatre balles de match.",
+      "Le tandem allemand a finalement triomphé à l'issue d'une manche décisive particulièrement longue et intense."
+    ],
+    "droite": [
+      "Le binôme français a échoué lors de l'ultime étape de l'épreuve de double mixte des championnats européens.",
+      "La défaite tricolore a été concédée face à la formation allemande au terme d'un match intense."
+    ]
+  },
+  "differences": "Le centre met particulièrement en avant la cruauté de la défaite en soulignant les quatre balles de match gâchées et la médaille d'argent obtenue, tandis que la gauche et la droite se contentent de relater l'issue de la finale et le score serré face aux Allemands sans insistances superflues.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 3
 }

@@ -6,6 +6,17 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "63adfcc99930",
+      "outletId": "franceinfo",
+      "headline": "Qui est Hugo Deck, le vainqueur de la Diagonale des Fous 2026, la plus difficile des courses du Grand Raid ?",
+      "url": "https://la1ere.franceinfo.fr/reunion/qui-est-hugo-deck-le-vainqueur-de-la-diagonale-des-fous-2026-la-plus-dingue-des-courses-du-grand-raid-1748769.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-16T21:55:20.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/0Gy0DygF729vxzfUnDBR2OsVaIQ/432x243/filters:format(jpg)/2026/10/16/6ad2595220177260149537.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "04e5c7cd15ae",
       "outletId": "cnews",
       "headline": "Diagonale des Fous : le Français Hugo Deck triomphe pour sa première participation",
@@ -39,5 +50,23 @@
       "section": "sport"
     }
   ],
-  "section": "sport"
+  "section": "sport",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le jeune athlète originaire du Var a triomphé dans l'épreuve reine du Grand Raid à l'âge de 26 ans.",
+      "Cette victoire concrétise un parcours d'exception pour l'un des plus jeunes lauréats de l'histoire de la compétition."
+    ],
+    "centre": [
+      "Hugo Deck s'est imposé sur l'ultra-trail réunionnais dès sa toute première tentative.",
+      "Le vainqueur a souligné l'ampleur des efforts investis durant une décennie pour atteindre ce niveau d'excellence."
+    ],
+    "droite": [
+      "Le coureur français a bouclé les 180 kilomètres et près de 10 000 mètres de dénivelé en moins de 23 heures.",
+      "Il a forgé son succès en faisant la différence lors de la montée du Maïdo, devançant ses principaux rivaux jusqu'à l'arrivée à Saint-Denis."
+    ]
+  },
+  "differences": "Les différents camps partagent globalement le même compte rendu factuel de la victoire d'Hugo Deck, mais mettent l'accent sur des aspects variés de sa performance. La gauche insiste sur la jeunesse du sportif et son parcours personnel, le centre valorise la persévérance sur le long terme à travers les déclarations du vainqueur, tandis que la droite, illustrée par CNews et Le Figaro, détaille de manière plus technique les aspects sportifs de la course, mentionnant les chronomètres précis, la difficulté du parcours et les détails tactiques de l'échappée.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 4
 }
