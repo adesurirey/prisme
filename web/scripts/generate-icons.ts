@@ -48,39 +48,26 @@ const OUT_DIR = path.resolve(import.meta.dirname, '../public/icons');
 const INK = '#1b1b1f';
 const PAPER = '#ededf0';
 
-/** Rasterize the mark at `height` px. The width comes from the SVG's own
- * viewBox (no duplicated ratio constant), and fit:'fill' replaces sharp's
- * default 'cover' — cover crops whenever the rounding of the two dims
- * disagrees with the exact aspect, which clipped the glyph. */
-async function markPng(svg: string, height: number): Promise<Buffer> {
-  const [, , w, h] = svg
-    .match(/viewBox="([^"]+)"/)![1]
-    .split(' ')
-    .map(Number);
-  return sharp(Buffer.from(svg))
-    .resize(Math.round((height * w) / h), height, { fit: 'fill' })
-    .png()
-    .toBuffer();
-}
-
-/** The mark centered on a `size`×`size` square. `markHeight` is the max
- * height of the (pad-expanded) viewBox box — for glyphs wider than tall
- * (Fraunces' P) the box is scaled down so its WIDTH fits instead, keeping
- * the mark fully inside the canvas. */
+/** The mark centered on a `size`×`size` square. `fit` is the side of the
+ * square the (pad-expanded) viewBox box is scaled into — BOTH dimensions
+ * are constrained: the pinched P is wider than tall, so width, not height,
+ * is the binding dimension, and fitting by height alone let the glyph hit
+ * (and overflow) the canvas edges. */
 async function markSquare(
   size: number,
   svg: string,
-  markHeight: number,
+  fit: number,
   background: string | { r: number; g: number; b: number; alpha: number },
 ): Promise<Buffer> {
   const [, , w, h] = svg
     .match(/viewBox="([^"]+)"/)![1]
     .split(' ')
     .map(Number);
-  const mark = await markPng(
-    svg,
-    Math.round(Math.min(markHeight, (size * h) / w)),
-  );
+  const scale = Math.min(fit / w, fit / h);
+  const mark = await sharp(Buffer.from(svg))
+    .resize(Math.round(w * scale), Math.round(h * scale), { fit: 'fill' })
+    .png()
+    .toBuffer();
   return sharp({
     create: { width: size, height: size, channels: 4, background },
   })
@@ -89,10 +76,12 @@ async function markSquare(
     .toBuffer();
 }
 
-// Plain "any" icons: transparent background, 0.12 pad baked into the
-// viewBox on a full-canvas box — the glyph lands at 1/(1+2·0.12) ≈ 81% of
-// the canvas, so the mark never hits the edges.
-const PAD = 0.12;
+// Plain "any" icons: transparent background, 0.17 pad baked into the
+// viewBox — the pad-expanded box is fitted into the full canvas square, so
+// the glyph lands at ~77% of the canvas and never hits the edges. (The
+// pinch widened the glyph; 0.12 — sized for the straight P — let it grow
+// to ~83% and read as edge-to-edge.)
+const PAD = 0.17;
 
 const icons: Array<[string, Buffer]> = [
   [
@@ -113,15 +102,16 @@ const icons: Array<[string, Buffer]> = [
       alpha: 0,
     }),
   ],
-  // Maskable safe zone: content must fit a circle of 80% diameter. The mark
-  // is a tall narrow glyph — height is the binding dimension. No baked pad:
-  // the scale does the padding.
+  // Maskable safe zone: content must fit a circle of 80% diameter. The
+  // pinched mark is wider than tall — the WIDTH is the binding dimension.
+  // No baked pad: the fit does the padding (0.6 of the canvas leaves the
+  // glyph inside the safe circle even at its widest).
   [
     'maskable-192.png',
     await markSquare(
       192,
       await prismeMarkSvg(INK),
-      Math.round(192 * 0.63),
+      Math.round(192 * 0.6),
       PAPER,
     ),
   ],
@@ -130,7 +120,7 @@ const icons: Array<[string, Buffer]> = [
     await markSquare(
       512,
       await prismeMarkSvg(INK),
-      Math.round(512 * 0.63),
+      Math.round(512 * 0.6),
       PAPER,
     ),
   ],
@@ -143,7 +133,7 @@ const icons: Array<[string, Buffer]> = [
     await markSquare(
       180,
       await prismeMarkSvg(PAPER),
-      Math.round(180 * 0.7),
+      Math.round(180 * 0.8),
       INK,
     ),
   ],

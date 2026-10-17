@@ -18,6 +18,7 @@ from fontTools.varLib.instancer import instantiateVariableFont
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 from fontTools.pens.boundsPen import BoundsPen
+from fontTools.pens.recordingPen import RecordingPen
 from fontTools.misc.transform import Transform
 import math
 import os
@@ -36,6 +37,21 @@ ANGLES = {
 }
 UPM = 2000  # Fraunces
 
+# Per-letter "pinch" warp (experimental effect): each glyph is stretched
+# toward its top-left and bottom-right corners while its centre stays put —
+# as if the wordmark were grabbed by those two corners and pulled apart.
+# Horizontal displacement only, cubic in the anti-diagonal coordinate
+# t = u + v - 1 (t = -1 at the glyph's top-left, +1 at its bottom-right):
+#   dx = cap * (t * (1 - sharp) + sharp * t^3)
+# cap 0 = straight glyphs (no warp). Applied to nav, display and mark.
+PINCH_SHARP = 2.0
+PINCH_SHARP_NAV = 1.0  # softer: at 16px a strong cubic bends the stems into
+                       # an S that reads as a scaling artefact; straight
+                       # stems keep the small-size render crisp
+PINCH_CAP_NAV = 400.0
+PINCH_CAP_DISPLAY = 400.0
+PINCH_CAP_MARK = 400.0
+
 LETTERS = "PRISME"
 
 
@@ -51,24 +67,48 @@ def load_font(opsz):
     return font
 
 
-def glyph_path(glyphSet, name, k, tx):
+def glyph_path(glyphSet, name, k, tx, pinch=None):
     """SVG path data for glyph `name`, skewX(k) about the baseline, y flipped
-    to SVG (down), translated by tx. Returns (path_d, transformed_bbox)."""
+    to SVG (down), translated by tx. pinch=(cap, sharp) applies the per-glyph
+    pinch warp (see PINCH_* above). Returns (path_d, transformed_bbox)."""
     transform = Transform(1, 0, -k, -1, tx, 0)
-    tp = TransformPen(glyphSet[name], transform)
-    pen = SVGPathPen(glyphSet)
-    tp.addComponent = None  # components resolved by glyphSet pen chain
-    # TransformPen wraps the glyph drawing; feed it through SVGPathPen via a
-    # recording pen is overkill — draw with TransformPen outputting into SVGPathPen
-    from fontTools.pens.transformPen import TransformPen as TP
-    spen = SVGPathPen(glyphSet, ntos=lambda v: f"{v:.1f}".rstrip("0").rstrip("."))
-    glyphSet[name].draw(TP(spen, transform))
     bp = BoundsPen(glyphSet)
-    glyphSet[name].draw(TP(bp, transform))
+    glyphSet[name].draw(TransformPen(bp, transform))
+    rec = RecordingPen()
+    glyphSet[name].draw(TransformPen(rec, transform))
+    if pinch:
+        cap, sharp = pinch
+        x0, y0, x1, y1 = bp.bounds
+        w, h = x1 - x0, y1 - y0
+
+        def warp(pt):
+            x, y = pt
+            u, v = (x - x0) / w, (y - y0) / h
+            t = u + v - 1
+            return (x + cap * (t * (1 - sharp) + sharp * t * t * t), y)
+
+        warped = RecordingPen()
+        for op, pts in rec.value:
+            if op in ("moveTo", "lineTo"):
+                warped.value.append((op, (warp(pts[0]),)))
+            elif op in ("curveTo", "qCurveTo"):
+                warped.value.append(
+                    (op, tuple(warp(p) if p is not None else None for p in pts))
+                )
+            else:
+                warped.value.append((op, pts))
+        rec = warped
+        # bounds must be measured on the warped outline: the pinch pulls
+        # corner points outside the pre-warp bbox, which would clip them
+        wbp = BoundsPen(glyphSet)
+        rec.replay(wbp)
+        bp = wbp
+    spen = SVGPathPen(glyphSet, ntos=lambda v: f"{v:.1f}".rstrip("0").rstrip("."))
+    rec.replay(spen)
     return spen.getCommands(), bp.bounds
 
 
-def build(letters, tracking_em, opsz, angles=None):
+def build(letters, tracking_em, opsz, angles=None, pinch=None):
     if angles is None:
         angles = ANGLES
     font = load_font(opsz)
@@ -84,7 +124,7 @@ def build(letters, tracking_em, opsz, angles=None):
     for i, ch in enumerate(letters):
         gname = cmap[ord(ch)]
         k = math.tan(math.radians(angles[ch])) if ch in angles else 0.0
-        d, (x0, y0, x1, y1) = glyph_path(glyphSet, gname, k, x)
+        d, (x0, y0, x1, y1) = glyph_path(glyphSet, gname, k, x, pinch=pinch)
         paths.append(d)
         xs_min, xs_max = min(xs_min, x0), max(xs_max, x1)
         ys_min, ys_max = min(ys_min, y0), max(ys_max, y1)
@@ -97,10 +137,10 @@ def build(letters, tracking_em, opsz, angles=None):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     assets = {
-        "prisme-wordmark-nav.svg": build(LETTERS, 0.0, 14),
-        "prisme-wordmark-display.svg": build(LETTERS, 0.0, 32),
+        "prisme-wordmark-nav.svg": build(LETTERS, 0.0, 14, pinch=(PINCH_CAP_NAV, PINCH_SHARP_NAV)),
+        "prisme-wordmark-display.svg": build(LETTERS, 0.0, 32, pinch=(PINCH_CAP_DISPLAY, PINCH_SHARP)),
         # l'angle du P du wordmark, adopté au rendu réel
-        "prisme-mark.svg": build("P", 0, 14),
+        "prisme-mark.svg": build("P", 0, 14, pinch=(PINCH_CAP_MARK, PINCH_SHARP)),
     }
     for name, svg in assets.items():
         with open(os.path.join(OUT_DIR, name), "w") as f:
