@@ -45,6 +45,9 @@ UPM = 2000  # Fraunces
 #   dx = cap * (t * (1 - sharp) + sharp * t^3)
 # cap 0 = straight glyphs (no warp). Applied to nav, display and mark.
 PINCH_SHARP = 2.0
+PINCH_SHARP_NAV = 1.0  # softer: at 16px a strong cubic bends the stems into
+                       # an S that reads as a scaling artefact; straight
+                       # stems keep the small-size render crisp
 PINCH_CAP_NAV = 400.0
 PINCH_CAP_DISPLAY = 400.0
 PINCH_CAP_MARK = 400.0
@@ -129,7 +132,7 @@ def build(letters, tracking_em, opsz, angles=None, pinch=None):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     assets = {
-        "prisme-wordmark-nav.svg": build(LETTERS, 0.0, 14, pinch=(PINCH_CAP_NAV, PINCH_SHARP)),
+        "prisme-wordmark-nav.svg": build(LETTERS, 0.0, 14, pinch=(PINCH_CAP_NAV, PINCH_SHARP_NAV)),
         "prisme-wordmark-display.svg": build(LETTERS, 0.0, 32, pinch=(PINCH_CAP_DISPLAY, PINCH_SHARP)),
         # l'angle du P du wordmark, adopté au rendu réel
         "prisme-mark.svg": build("P", 0, 14, pinch=(PINCH_CAP_MARK, PINCH_SHARP)),
