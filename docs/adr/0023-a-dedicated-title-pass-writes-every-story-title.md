@@ -19,7 +19,8 @@ silent-failure posture is wrong for the homepage's main entry.
 - **Births** — Stories created this build (survived the seed guard, ≥2
   Articles): their headlines, keyed by the Grouping proposal's key, plus the
   previous **Episode** when one exists — the most headline-similar Story on
-  disk (token overlap ≥ 0.25, `episodeContext`), so the title can carry what
+  disk within the age window (`bestEpisodeMatch`, token overlap ≥ 0.25 — the
+  window is ADR-0024's), so the title can carry what
   changed since the episode the reader already saw. This is what makes the
   Edition read as day-by-day episodes from titles alone.
 - **Updates** — existing Stories that gained Articles: their full headline

@@ -121,6 +121,36 @@ export function parseMembershipAnswer(answers: unknown): boolean | null {
   return null;
 }
 
+/** The Topic question (ADR-0024): the same-subject judgement the Membership
+ * question deliberately refuses. ADR-0018 sends a new fact to a new Story —
+ * the belongs criteria reject “same theme, other fact” — but for Topics a
+ * new fact of the same event is exactly what an Episode is. The real-scale
+ * replay of 2026-10-17 proved the difference: asked the belongs question,
+ * Jev refused the identical-event links that open a thread (a strike on
+ * Kyiv's power grid refused by its own previous story) and the Guerre
+ * Ukraine and Budget threads never formed. */
+export const TOPIC_QUESTION = {
+  continues: {
+    type: 'choice',
+    instructions:
+      "Cette nouvelle story poursuit-elle le même sujet que la story existante ? Un sujet est un événement suivi de jour en jour : chaque story du sujet en est un épisode, et rapporte un fait nouveau de cet événement. Juge à partir du titre de la story existante, des titres d'articles déjà joints à cette story, et du titre et des titres d'articles de la nouvelle story.",
+    criteria: {
+      yes: "Même sujet en continuation : la nouvelle story rapporte un fait nouveau du même événement — développement, nouvel élément, enquête, bilan, réaction ou décision qui le concerne. C'est un épisode de plus du sujet, même si le fait rapporté n'est pas celui de la story existante.",
+      no: "Autre sujet : un événement différent, même s'il partage le thème général, le lieu, le format ou des acteurs (autre match, autre vote, autre fait divers).",
+    },
+  },
+} as const;
+
+/** true = same subject; false = other subject; null = invalid answer. */
+export function parseTopicAnswer(answers: unknown): boolean | null {
+  if (answers == null || typeof answers !== 'object') return null;
+  const answer = choiceOf((answers as Record<string, unknown>).continues);
+  if (!answer) return null;
+  if (answer.choice === 'yes') return true;
+  if (answer.choice === 'no') return false;
+  return null;
+}
+
 /**
  * Extract and validate the two answers. Returns null when an answer is
  * missing or out-of-list — the caller retries once, then gives up.
@@ -362,6 +392,14 @@ export interface MembershipChecker {
     story: MembershipStoryRef,
     article: { headline: string; teaser: string },
   ): Promise<MembershipAnswer>;
+  /** The Topic check (ADR-0024): same model, its own question — “same
+   * subject, continuing?” where belongs deliberately says “same theme,
+   * other fact” is a no. The whole thread goes in, oldest first: the
+   * subject, not just its last episode. */
+  sameSubject(
+    episodes: MembershipStoryRef[],
+    birth: MembershipStoryRef,
+  ): Promise<MembershipAnswer>;
 }
 
 /** The check's payload (ADR-0018): the Story, the member headlines it
@@ -385,15 +423,57 @@ export function membershipPayload(
   };
 }
 
-function membershipModel(apiKey: string): MembershipChecker {
+/** The topic check's payload (ADR-0024): both sides are full Story refs —
+ * the episode on disk, then the new Story with its final title (the check
+ * runs after the Title pass) and its member headlines. The birth's own
+ * headline list matters: a lone generic title hides the subject. */
+/** The topic check's payload (ADR-0024): the whole thread, not just the
+ * matched episode — the subject is broader than its last episode, and the
+ * real-scale replay showed judging a birth against one story fragments the
+ * threads (a political reaction was judged against the strike story only,
+ * never against the war it belongs to). Episodes run oldest to newest, each
+ * bounded to its most birth-relevant headlines; the birth comes last with
+ * its final title and its own headlines. */
+export function topicPayload(
+  episodes: MembershipStoryRef[],
+  birth: MembershipStoryRef,
+): { headline: string; teaser: string } {
+  const section = (s: MembershipStoryRef) =>
+    s.section ? ` (${SECTION_LABELS[s.section]})` : '';
+  const lines: string[] = ['Sujet — épisodes déjà joints :'];
+  for (const episode of episodes) {
+    lines.push(`Épisode — ${episode.title}${section(episode)}`);
+    const members = episode.headlines.filter((h) => h !== episode.title);
+    if (members.length > 0) lines.push(...members.map((h) => `- ${h}`));
+  }
+  lines.push(
+    birth.title
+      ? `Nouvelle story : ${birth.title}${section(birth)}`
+      : 'Nouvelle story (pas encore titrée) :',
+  );
+  const birthMembers = birth.headlines.filter((h) => h !== birth.title);
+  if (birthMembers.length > 0) lines.push(...birthMembers.map((h) => `- ${h}`));
+  return { headline: lines.join('\n'), teaser: '' };
+}
+
+/** Membership checkers through OpenRouter's System One gateway: one key,
+ * one request shape, any pinned model — Jev in production, Clef-flash as
+ * the cheaper model-comparison candidate (docs/research/
+ * topics-model-comparison.md). Both questions travel: belongs (ADR-0018)
+ * and the Topic same-subject (ADR-0024). */
+export function membershipModelFromOpenRouter(
+  apiKey: string,
+  label: string,
+  model: string,
+): MembershipChecker {
   return {
-    label: 'Jev',
+    label,
     async belongs(story, article) {
       return callTyped(
-        'Jev',
+        label,
         'https://openrouter.ai/api/alpha/decisions',
         apiKey,
-        { model: OPENROUTER_MODELS.jev, questions: MEMBERSHIP_QUESTION },
+        { model, questions: MEMBERSHIP_QUESTION },
         membershipPayload(story, article),
         (answers) => {
           const belongs = parseMembershipAnswer(answers);
@@ -401,6 +481,21 @@ function membershipModel(apiKey: string): MembershipChecker {
         },
       ).then((r) =>
         r == null ? 'failed' : r.belongs ? ('yes' as const) : ('no' as const),
+      );
+    },
+    async sameSubject(episodes, birth) {
+      return callTyped(
+        label,
+        'https://openrouter.ai/api/alpha/decisions',
+        apiKey,
+        { model, questions: TOPIC_QUESTION },
+        topicPayload(episodes, birth),
+        (answers) => {
+          const continues = parseTopicAnswer(answers);
+          return continues == null ? null : { continues };
+        },
+      ).then((r) =>
+        r == null ? 'failed' : r.continues ? ('yes' as const) : ('no' as const),
       );
     },
   };
@@ -414,5 +509,9 @@ function membershipModel(apiKey: string): MembershipChecker {
  */
 export function membershipModelFromEnv(): MembershipChecker | null {
   if (!process.env.OPENROUTER_API_KEY) return null;
-  return membershipModel(process.env.OPENROUTER_API_KEY);
+  return membershipModelFromOpenRouter(
+    process.env.OPENROUTER_API_KEY,
+    'Jev',
+    OPENROUTER_MODELS.jev,
+  );
 }

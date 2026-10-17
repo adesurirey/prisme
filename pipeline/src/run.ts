@@ -1,7 +1,7 @@
 import { randomBytes } from 'node:crypto';
-import { mkdir, unlink, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, unlink, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import type { Edition } from '@prisme/domain';
+import type { Edition, TopicRegistry } from '@prisme/domain';
 import { outlets, publicOutlets } from '@prisme/domain';
 import {
   type ClassificationCache,
@@ -25,6 +25,7 @@ import {
   SUMMARIES_PROMPT_VERSION,
   updateSummaries,
 } from './summarize.ts';
+import { mergeTopicRegistry } from './topic-registry.ts';
 
 // Build-log section headers: one emoji-prefixed line per pipeline step, so a
 // scrolling CI log reads as a sequence of labeled blocks instead of one dense
@@ -99,6 +100,37 @@ export async function runEdition(): Promise<Edition> {
       titles: models.titles,
     },
   });
+  if (outcome.topics.length > 0)
+    console.log(
+      `Topics: ${outcome.topics.length} confirmed this build (reached two Episodes, ADR-0024).`,
+    );
+
+  // Topic registry (ADR-0024): data/topics.json gains the Topics confirmed
+  // this build — a topic exists from two Episodes, like a Story from two
+  // Articles (ADR-0015) — and never changes otherwise: Stories never leave
+  // their Topic, and a Topic's entry is written once, from its founding
+  // Story. The registry module owns the merge and the public-slug minting.
+  // An absent file (first Topics build) means an empty registry.
+  const topicsPath = new URL('topics.json', DATA_DIR);
+  if (outcome.topics.length > 0) {
+    let registry: TopicRegistry = { topics: [] };
+    try {
+      registry = JSON.parse(
+        await readFile(topicsPath, 'utf8'),
+      ) as TopicRegistry;
+    } catch (error) {
+      // Absent file: first build that confirms a Topic. Any other read or
+      // parse failure propagates and fails the build (ADR-0005) — a corrupt
+      // registry is never silently reset and overwritten.
+      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+    }
+    const { registry: merged, added } = mergeTopicRegistry(
+      registry,
+      outcome.topics,
+    );
+    if (added > 0)
+      await writeFile(topicsPath, `${JSON.stringify(merged, null, 2)}\n`);
+  }
 
   // Front-page history (issue #6): reconcile the flags of every live Story
   // with today's collection — `frontPage` is the current snapshot,

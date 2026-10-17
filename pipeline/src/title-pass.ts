@@ -25,13 +25,14 @@ export const TITLE_PASS = {
 } as const;
 
 /** One Story born this build, keyed by the Grouping proposal's key.
- * `episode` is the most headline-similar Story already on disk — the
- * previous episode of the same event, when there is one — so the title can
- * carry what changed (ADR-0023). */
+ * `episode` is the previous episode of the birth's confirmed Topic (ADR-0024):
+ * topics resolve before this pass, so the context is only fed a Jev-judged
+ * thread — a refused match is a new subject, and its title must not anchor
+ * on the refused episode. `subject` is the thread's display label. */
 export interface TitlePassBirth {
   key: string;
   headlines: string[];
-  episode?: { title: string; storyDay: string };
+  episode?: { title: string; storyDay: string; subject?: string };
 }
 
 /** An existing Story that gained Articles: full headline history, so the
@@ -128,7 +129,7 @@ export function titlePassPrompt(input: TitlePassInput): string {
     lines.push('Stories qui naissent :');
     for (const birth of input.births) {
       const episode = birth.episode
-        ? ` (poursuit l'épisode « ${birth.episode.title} », ${birth.episode.storyDay})`
+        ? ` (poursuit le sujet « ${birth.episode.subject ?? birth.episode.title} » — épisode « ${birth.episode.title} », ${birth.episode.storyDay})`
         : '';
       lines.push(`- [${birth.key}]${episode}`);
       for (const headline of birth.headlines) lines.push(`  - ${headline}`);

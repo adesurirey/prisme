@@ -3,6 +3,8 @@ import {
   MEMBERSHIP_QUESTION,
   membershipPayload,
   parseMembershipAnswer,
+  TOPIC_QUESTION,
+  topicPayload,
 } from './decision-model.ts';
 
 describe('membershipPayload (ADR-0018)', () => {
@@ -86,5 +88,60 @@ describe('parseMembershipAnswer', () => {
     expect(parseMembershipAnswer({ belongs: { choice: 'maybe' } })).toBeNull();
     expect(parseMembershipAnswer(null)).toBeNull();
     expect(parseMembershipAnswer('nonsense')).toBeNull();
+  });
+});
+
+describe('topicPayload (ADR-0024)', () => {
+  it('lists the whole thread oldest first, then the birth', () => {
+    const payload = topicPayload(
+      [
+        {
+          title: 'Des frappes russes touchent une centrale électrique à Kiev',
+          headlines: ['Premier bilan', 'Nouvelles frappes'],
+        },
+        {
+          title: 'Donald Trump juge honteuse la reprise des frappes',
+          headlines: ['La Maison-Blanche réagit'],
+        },
+      ],
+      {
+        title: 'Le pape demande une trêve à Poutine',
+        headlines: ['Le Vatican appelle au cessez-le-feu'],
+      },
+    );
+    expect(payload.headline).toBe(
+      'Sujet — épisodes déjà joints :\n' +
+        'Épisode — Des frappes russes touchent une centrale électrique à Kiev\n' +
+        '- Premier bilan\n' +
+        '- Nouvelles frappes\n' +
+        'Épisode — Donald Trump juge honteuse la reprise des frappes\n' +
+        '- La Maison-Blanche réagit\n' +
+        'Nouvelle story : Le pape demande une trêve à Poutine\n' +
+        '- Le Vatican appelle au cessez-le-feu',
+    );
+    expect(payload.teaser).toBe('');
+  });
+
+  it('drops headlines duplicating the episode title, keeps the question criteria', () => {
+    const payload = topicPayload(
+      [
+        {
+          title: 'Un tireur fait plusieurs victimes',
+          headlines: [
+            'Un tireur fait plusieurs victimes',
+            'Le bilan s’alourdit',
+          ],
+        },
+      ],
+      { title: 'L’auteur était un ancien élève', headlines: [] },
+    );
+    expect(payload.headline).toBe(
+      'Sujet — épisodes déjà joints :\n' +
+        'Épisode — Un tireur fait plusieurs victimes\n' +
+        '- Le bilan s’alourdit\n' +
+        'Nouvelle story : L’auteur était un ancien élève',
+    );
+    expect(TOPIC_QUESTION.continues.criteria.yes).toContain('réaction');
+    expect(TOPIC_QUESTION.continues.criteria.no).toContain('autre match');
   });
 });
