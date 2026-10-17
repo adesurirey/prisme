@@ -12,7 +12,9 @@ import prismeMarkAsset from './assets/brand/prisme-mark.svg?raw';
 
 /** The mark's viewBox, re-padded around the glyph by `pad` (a fraction of
  * the glyph height per side; 0 = the glyph fills the viewBox — favicons
- * sit at ~0.18, matching how other sites' icons breathe in a browser tab). */
+ * sit at ~0.10 — the pinch makes the P wider (stretched shoulder and foot),
+ * and a favicon fits its square, so the old 0.18 padding read as a smaller
+ * glyph. 0.10 restores the pre-pinch apparent size with breathing to spare. */
 function paddedViewBox(pad: number): string {
   const [x, y, w, h] = prismeMarkAsset
     .match(/viewBox="([^"]+)"/)![1]
@@ -37,5 +39,5 @@ export function prismeMarkSvg(color: string, pad = 0): string {
 const URI = (svg: string): string =>
   `data:image/svg+xml,${encodeURIComponent(svg)}`;
 
-export const PRISME_MARK_LIGHT = URI(prismeMarkSvg('#1b1b1f', 0.18));
-export const PRISME_MARK_DARK = URI(prismeMarkSvg('#e6e6ea', 0.18));
+export const PRISME_MARK_LIGHT = URI(prismeMarkSvg('#1b1b1f', 0.1));
+export const PRISME_MARK_DARK = URI(prismeMarkSvg('#e6e6ea', 0.1));
