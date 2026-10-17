@@ -1,9 +1,12 @@
 # Logotype Prisme — recette finale
 
 Configuration retenue à l'issue de l'exploration (`type-exploration.html`,
-`convergent-ou-divergent.md` dans ce dossier), **révision 2 — Fraunces** (détail de
-la révision en fin de document). Variante **divergente** : les bords du mot s'ouvrent
-vers l'extérieur, comme la dispersion d'un prisme.
+`convergent-ou-divergent.md` dans ce dossier), **révision 3 — Fraunces + pinch**
+(l'historique des révisions en fin de document). Variante **divergente** : les bords
+du mot s'ouvrent vers l'extérieur, comme la dispersion d'un prisme — et chaque lettre
+est pincée vers ses deux coins opposés, comme si on avait attrapé le mot par le coin
+supérieur gauche et le coin inférieur droit et tiré (détail et justification :
+ADR-0025).
 
 Casse : **« PRISME »** tout en capitales — adoptée après le rendu réel dans l'UI
 (option de repli devenue principale). Le mélange de hauteurs de « Prisme » (P
@@ -21,6 +24,7 @@ mot tient comme un bloc et l'éventail devient un geste sur un mot solide.
 | Courbe du dégradé | **linéaire (courbe 1)** — chaque lettre un cran sur le même arc |
 | Tracking | **0** (l'interlettrage natif de Fraunces est déjà généreux) |
 | opsz | 14 en nav, 32 en display |
+| Pinch par lettre | **cap 400** partout ; **sharp 2.0** (display, mark), **sharp 1.0** (nav) |
 
 Pourquoi ces choix :
 
@@ -58,6 +62,41 @@ Pourquoi ces choix :
 
 Formule : `angle(i) = 8° × (1 − 2·i/5)` pour i = 0..5.
 
+## Le pinch par lettre (révision 3)
+
+Après la transformation affine de chaque glyphe (skew du fan + retournement
+vertical), un warp cubique horizontal déforme chaque lettre vers ses deux coins
+opposés : le coin supérieur gauche est tiré vers la gauche, le coin inférieur droit
+vers la droite, le centre reste en place. C'est le geste « attrapé et tiré » —
+asymétrique et organique, là où toute transformation affine ne produit qu'un
+italique mécanique.
+
+Coordonnée anti-diagonale du glyphe : `t = u + v − 1` (u, v ∈ [0,1] dans la bbox du
+glyphe ; t = −1 au coin supérieur gauche, +1 au coin inférieur droit, 0 sur
+l'anti-diagonale). Déplacement :
+
+```
+dx = cap · ( t · (1 − sharp) + sharp · t³ )
+```
+
+- **cap 400** : amplitude aux coins (~28% de la hauteur du glyphe). Réglé au jugé
+  sur les prototypes (`compare2.html` de la session d'exploration) : 250 était subtil
+  mais discret en display, 900 déchirait les serifs.
+- **sharp** pondère le linéaire contre le cubique. À **2.0** le centre est figé et
+  les coins crient — parfait au display et sur le mark. Mais à 16px de navbar, les
+  fûts verticaux plient en S et lisent comme un artefact de mise à l'échelle : la
+  nav utilise **sharp 1.0** — fûts droits, étirement des coins conservé.
+- La bbox de chaque glyphe est mesurée **après** le warp : mesurée avant, les coins
+  tirés sortaient du viewBox et étaient rognés (bug corrigé dans la même branche que
+  la révision 3).
+- Le pinch compose avec le fan 8° : les deux gestes vivent dans le même script
+  générateur, jamais l'un sans l'autre.
+
+Verdict du rendu réel : le mot gagne une personnalité ownable sans couleur ni
+ornement — cohérent avec le registre « wonky » natif de Fraunces et avec la
+métaphore du prisme (dévié, jamais droit). Le P pincé signe mieux que le P droit :
+l'icône devient asymétrique donc reconnaissable.
+
 ## Reproduction dans Figma
 
 Figma ne sait pas cisailer via l'interface — utiliser le plugin **Skew** ou
@@ -93,18 +132,29 @@ Décisions d'exploration notées (historique) :
   le mark au centre d'une toile carrée ; le P Fraunces, plus large que haut, entre
   dans le carré par sa largeur)
 
+Note révision 3 : le P pincé est **plus large** que le P droit (épaule tirée à
+gauche, pied étiré à droite) et une favicon se cale sur son carré — le pad de
+`favicon.ts` passe de 0.18 à **0.10** pour compenser et redonner au glyphe sa taille
+perçue d'origine (ADR-0025, conséquences).
+
 ## Implémentation web
 
 Pas de HTML par lettre : les assets sont des **SVG générés** par
 `web/scripts/generate-brand-svg.py` (outlines Fraunces exactes, matrices affines, un
 `<path>` par lettre), écrits dans `web/src/assets/brand/` :
 
-- `prisme-wordmark-nav.svg` (tracking 0, opsz 14) — inline dans `Base.astro` via
-  `?raw`, hauteur 14px, `fill="currentColor"` suit le thème
-- `prisme-wordmark-display.svg` (tracking 0, opsz 32) — usage hero/à-propos
-- `prisme-mark.svg` (P, +8°, opsz 14) — **source unique de la géométrie** :
-  `favicon.ts` (data URIs clair/sombre, pad 0.18) et `PrismeMark.tsx` le dérivent par
-  import `?raw`, `generate-icons.ts` le rasterise en PNG (carrés, non rognés)
+- `prisme-wordmark-nav.svg` (tracking 0, opsz 14, pinch sharp 1.0) — inline dans
+  `Base.astro` via `?raw`, hauteur 16px, `fill="currentColor"` suit le thème
+- `prisme-wordmark-display.svg` (tracking 0, opsz 32, pinch sharp 2.0) — usage
+  hero/à-propos
+- `prisme-mark.svg` (P, +8°, opsz 14, pinch sharp 2.0) — **source unique de la
+  géométrie** : `favicon.ts` (data URIs clair/sombre, pad 0.10) et `PrismeMark.tsx`
+  le dérivent par import `?raw`, `generate-icons.ts` le rasterise en PNG (carrés,
+  non rognés)
+
+Les réglages du pinch sont des constantes en tête du script (`PINCH_CAP_*`,
+`PINCH_SHARP*`) ; toute modification passe par le script, jamais par édition des
+SVG générés.
 
 Régénération après tout changement de recette :
 `python3 web/scripts/generate-brand-svg.py && pnpm --filter @prisme/web generate:icons`.
@@ -114,9 +164,16 @@ Régénération après tout changement de recette :
 - **Révision 1 — Inter Extra Bold, 20°, tracking adaptatif** : la première recette
   complète. Rejetée au rendu réel : lisait « futuriste / Star Wars », un registre
   produit-tech pour un média de presse.
-- **Révision 2 — Fraunces Bold, 8°, tracking 0** (actuelle) : l'esprit manchette de
+- **Révision 2 — Fraunces Bold, 8°, tracking 0** : l'esprit manchette de
   presse. La personnalité est rationnée à un seul attribut (l'angle), réduit au
   minimum perceptible au display ; en petit, le nom est volontairement sage. Option
   neutralité totale (fonte système, zéro geste) examinée et écartée : sur un site
   noir & blanc sans autres signaux de marque, le nom serait le seul élément
   reconnaissable — le rendre générique le ferait lire comme du placeholder.
+- **Révision 3 — pinch par lettre** (actuelle, branche `wordmark-pinch`) : au
+  rendu réel prolongé, le fan 8° seul manquait de personnalité ownable. Chaque
+  glyphe est pincé vers ses deux coins opposés (cap 400 ; sharp 2.0, adouci à 1.0
+  en nav pour garder les fûts droits à 16px). Choix parmi cinq familles de
+  prototypes (affine, diagonal, cubique global, linéaire par lettre, cubique par
+  lettre) — détails et alternatives écartées dans ADR-0025. Le pad favicon passe
+  de 0.18 à 0.10 pour compenser l'élargissement du P pincé.
