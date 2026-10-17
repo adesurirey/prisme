@@ -53,6 +53,14 @@ describe('groupingPrompt (ADR-0018)', () => {
       'ce que plusieurs titres affirment doit apparaître dans le titre',
     );
     expect(prompt).toContain("Un titre neutre n'est pas un titre vague");
+    // No length rule at all: the sentence is deleted outright (ADR-0013
+    // amendment, 2026-10-17 — the cap and « si la longueur le permet » read
+    // as permission to drop shared facts). Proper nouns survive as a short
+    // fold-in to the shared-facts clause (the seed guard matches title
+    // tokens).
+    expect(prompt).not.toContain('110 caractères');
+    expect(prompt).not.toContain('limite de longueur');
+    expect(prompt).toContain('noms propres compris');
   });
 });
 

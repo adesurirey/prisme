@@ -42,8 +42,22 @@ The fix is in the grouping prompt (`pipeline/src/gemini.ts`):
   did establish. Structure still must not be copied from outlets — but
   factual vocabulary (names, places, figures, consequences) must come
   from the group's headlines, and what several headlines affirm must
-  appear in the title when length allows. A neutral title is not a vague
-  title.
+  appear in the title. A neutral title is not a vague title.
+
+**Amendment — no length limit (2026-10-17, after the Oregon-episode drift):**
+the 40–110-character cap and the « when length allows » clause were read
+by the model as permission to drop shared facts. A 3-headline group whose
+headlines *all* asserted that the school-shooting suspect was a former
+pupil of the school produced « Un adolescent auteur d'une fusillade dans
+une école aux États-Unis » — 66 of the 110 allowed characters used, no
+place (Oregon), no school level (primaire), none of the shared new fact
+(ancien élève), no action verb. The whole length sentence is deleted
+rather than replaced with a looser one — absent guidelines, the model
+infers there is no limit — and the proper-noun rule folds into the
+shared-facts clause as four words (« noms propres compris »), since the
+seed guard matches title tokens. Downstream already
+tolerates any length: slugs truncate at 64 characters (`slugify`), the UI
+has no title clamp.
 
 ## Consequences
 
