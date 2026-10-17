@@ -129,10 +129,17 @@ const description =
         // sides again.
         <figure class="relative -mx-5 mt-6 overflow-hidden sm:rounded-xl">
           <div class="absolute inset-0">
+            {/* h−1px + mb-px: the photo must not reach the figure's bottom
+              edge. Its height lands on fractional pixels (line-height sums),
+              and when the edge falls mid-pixel the photo's anti-aliased last
+              row bleeds through as a gray hairline — even under the opaque
+              end of the fade, whose own edge snaps differently. Lifting the
+              image 1px keeps its edge inside the fully-opaque zone of the
+              gradient (mb-px fills the freed strip back to the edge). */}
             <StoryImage
               article={image}
               outlet={imageOutlet}
-              className="h-full w-full"
+              className="mb-px h-[calc(100%-1px)] w-full"
               sizes="(max-width: 896px) 100vw, 896px"
               eager
             />

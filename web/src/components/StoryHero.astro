@@ -72,10 +72,13 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
       <a href={withBase(storyUrl(story))} class="group/card block sm:rounded-xl">
         <figure class="relative overflow-hidden sm:rounded-xl">
           <div class="absolute inset-0">
+            {/* h−1px + mb-px: keep the photo 1px above the figure's bottom
+                edge — see the same lift in [slug].astro (fractional-height
+                heroes otherwise bleed a gray hairline at the edge). */}
             <StoryImage
               article={image}
               outlet={imageOutlet}
-              className="h-full w-full"
+              className="mb-px h-[calc(100%-1px)] w-full"
               sizes="(max-width: 896px) 100vw, 896px"
               eager
             />
