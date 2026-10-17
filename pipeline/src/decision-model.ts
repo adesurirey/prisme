@@ -121,6 +121,36 @@ export function parseMembershipAnswer(answers: unknown): boolean | null {
   return null;
 }
 
+/** The Topic question (ADR-0024): the same-subject judgement the Membership
+ * question deliberately refuses. ADR-0018 sends a new fact to a new Story —
+ * the belongs criteria reject “same theme, other fact” — but for Topics a
+ * new fact of the same event is exactly what an Episode is. The real-scale
+ * replay of 2026-10-17 proved the difference: asked the belongs question,
+ * Jev refused the identical-event links that open a thread (a strike on
+ * Kyiv's power grid refused by its own previous story) and the Guerre
+ * Ukraine and Budget threads never formed. */
+export const TOPIC_QUESTION = {
+  continues: {
+    type: 'choice',
+    instructions:
+      "Cette nouvelle story poursuit-elle le même sujet que la story existante ? Un sujet est un événement suivi de jour en jour : chaque story du sujet en est un épisode, et rapporte un fait nouveau de cet événement. Juge à partir du titre de la story existante, des titres d'articles déjà joints à cette story, et du titre et des titres d'articles de la nouvelle story.",
+    criteria: {
+      yes: "Même sujet en continuation : la nouvelle story rapporte un fait nouveau du même événement — développement, nouvel élément, enquête, bilan, réaction ou décision qui le concerne. C'est un épisode de plus du sujet, même si le fait rapporté n'est pas celui de la story existante.",
+      no: "Autre sujet : un événement différent, même s'il partage le thème général, le lieu, le format ou des acteurs (autre match, autre vote, autre fait divers).",
+    },
+  },
+} as const;
+
+/** true = same subject; false = other subject; null = invalid answer. */
+export function parseTopicAnswer(answers: unknown): boolean | null {
+  if (answers == null || typeof answers !== 'object') return null;
+  const answer = choiceOf((answers as Record<string, unknown>).continues);
+  if (!answer) return null;
+  if (answer.choice === 'yes') return true;
+  if (answer.choice === 'no') return false;
+  return null;
+}
+
 /**
  * Extract and validate the two answers. Returns null when an answer is
  * missing or out-of-list — the caller retries once, then gives up.
@@ -362,6 +392,13 @@ export interface MembershipChecker {
     story: MembershipStoryRef,
     article: { headline: string; teaser: string },
   ): Promise<MembershipAnswer>;
+  /** The Topic check (ADR-0024): same model, its own question — “same
+   * subject, continuing?” where belongs deliberately says “same theme,
+   * other fact” is a no. */
+  sameSubject(
+    episode: MembershipStoryRef,
+    birth: MembershipStoryRef,
+  ): Promise<MembershipAnswer>;
 }
 
 /** The check's payload (ADR-0018): the Story, the member headlines it
@@ -385,6 +422,26 @@ export function membershipPayload(
   };
 }
 
+/** The topic check's payload (ADR-0024): both sides are full Story refs —
+ * the episode on disk, then the new Story with its final title (the check
+ * runs after the Title pass) and its member headlines. The birth's own
+ * headline list matters: a lone generic title hides the subject. */
+export function topicPayload(
+  episode: MembershipStoryRef,
+  birth: MembershipStoryRef,
+): { headline: string; teaser: string } {
+  const section = (s: MembershipStoryRef) =>
+    s.section ? ` (${SECTION_LABELS[s.section]})` : '';
+  const lines = [`Story existante : ${episode.title}${section(episode)}`];
+  const members = episode.headlines.filter((h) => h !== episode.title);
+  if (members.length > 0)
+    lines.push('Articles déjà joints :', ...members.map((h) => `- ${h}`));
+  lines.push(`Nouvelle story : ${birth.title}${section(birth)}`);
+  const birthMembers = birth.headlines.filter((h) => h !== birth.title);
+  if (birthMembers.length > 0) lines.push(...birthMembers.map((h) => `- ${h}`));
+  return { headline: lines.join('\n'), teaser: '' };
+}
+
 function membershipModel(apiKey: string): MembershipChecker {
   return {
     label: 'Jev',
@@ -401,6 +458,21 @@ function membershipModel(apiKey: string): MembershipChecker {
         },
       ).then((r) =>
         r == null ? 'failed' : r.belongs ? ('yes' as const) : ('no' as const),
+      );
+    },
+    async sameSubject(episode, birth) {
+      return callTyped(
+        'Jev',
+        'https://openrouter.ai/api/alpha/decisions',
+        apiKey,
+        { model: OPENROUTER_MODELS.jev, questions: TOPIC_QUESTION },
+        topicPayload(episode, birth),
+        (answers) => {
+          const continues = parseTopicAnswer(answers);
+          return continues == null ? null : { continues };
+        },
+      ).then((r) =>
+        r == null ? 'failed' : r.continues ? ('yes' as const) : ('no' as const),
       );
     },
   };

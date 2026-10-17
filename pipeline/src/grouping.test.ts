@@ -118,6 +118,14 @@ function fakeMembership(
       });
       return answer == null ? 'failed' : answer ? 'yes' : 'no';
     },
+    async sameSubject(episode, birth) {
+      calls.push({
+        story: episode.title,
+        article: birth.title,
+        headlines: birth.headlines,
+      });
+      return answer == null ? 'failed' : answer ? 'yes' : 'no';
+    },
   };
 }
 
@@ -290,6 +298,9 @@ describe('groupStories', () => {
                 ? 'yes'
                 : 'no';
             },
+            async sameSubject() {
+              throw new Error('no topic check in this test');
+            },
           },
         },
       }),
@@ -429,6 +440,9 @@ describe('groupStories', () => {
                 throw new Error('FakeJev HTTP 503: down');
               return 'no';
             },
+            sameSubject: async () => {
+              throw new Error('no topic check in this test');
+            },
           },
         },
       }),
@@ -540,6 +554,9 @@ describe('groupStories', () => {
               label: 'FakeJev',
               belongs: async () => {
                 throw new Error('FakeJev HTTP 401: bad key');
+              },
+              sameSubject: async () => {
+                throw new Error('no topic check in this test');
               },
             },
           },
@@ -1982,9 +1999,10 @@ describe('Topics (ADR-0024)', () => {
    * the whole resolution). Answers the calls in order; null means 'failed'. */
   function fakeMembershipSeq(answers: (boolean | null)[]): {
     checker: import('./decision-model.ts').MembershipChecker;
-    calls: { story?: string; article?: string }[];
+    calls: { story?: string; article?: string; headlines?: string[] }[];
   } {
-    const calls: { story?: string; article?: string }[] = [];
+    const calls: { story?: string; article?: string; headlines?: string[] }[] =
+      [];
     return {
       calls,
       checker: {
@@ -1992,6 +2010,15 @@ describe('Topics (ADR-0024)', () => {
         async belongs(story, articleHead) {
           const answer = answers[calls.length] ?? null;
           calls.push({ story: story.title, article: articleHead.headline });
+          return answer == null ? 'failed' : answer ? 'yes' : 'no';
+        },
+        async sameSubject(episode, birth) {
+          const answer = answers[calls.length] ?? null;
+          calls.push({
+            story: episode.title,
+            article: birth.title,
+            headlines: birth.headlines,
+          });
           return answer == null ? 'failed' : answer ? 'yes' : 'no';
         },
       },
@@ -2042,11 +2069,13 @@ describe('Topics (ADR-0024)', () => {
         createdAt: EPISODE.createdAt,
       },
     ]);
-    // The second check is the topic check: asked from the birth's seed
-    // against the Episode (the first one is the birth's internal merge).
+    // The second check is the topic check: the Episode against the whole
+    // birth (title + headlines), not a lone seed (the first one is the
+    // birth's internal merge).
     expect(calls).toHaveLength(2);
     expect(calls[1]?.story).toBe(EPISODE.title);
-    expect(calls[1]?.article).toBe(OREGON_EPISODE_HEADLINES[0]);
+    expect(calls[1]?.article).toBe('Titre k1');
+    expect(calls[1]?.headlines).toEqual(OREGON_EPISODE_HEADLINES);
   });
 
   it('a refused Episode founds a new Topic named by the founding slug', async () => {

@@ -424,7 +424,6 @@ export type ConfirmedTopic = Omit<Topic, 'slug'>;
 async function resolveTopics(input: {
   births: Story[];
   existing: Story[];
-  teasers: Map<string, string>;
   membership: MembershipChecker;
 }): Promise<ConfirmedTopic[]> {
   const confirmed: ConfirmedTopic[] = [];
@@ -435,14 +434,17 @@ async function resolveTopics(input: {
       birth.storyDay,
     );
     if (episode?.topicId != null) {
-      const seed = birth.articles[0]!;
-      const verdict = await input.membership.belongs(
+      const verdict = await input.membership.sameSubject(
         {
           title: episode.title,
           section: episode.section,
           headlines: episode.articles.map((a) => a.headline),
         },
-        { headline: seed.headline, teaser: input.teasers.get(seed.id) ?? '' },
+        {
+          title: birth.title,
+          section: birth.section,
+          headlines: birth.articles.map((a) => a.headline),
+        },
       );
       if (verdict === 'failed')
         throw new Error(
@@ -1021,7 +1023,6 @@ export async function groupStories(
   const topics = await resolveTopics({
     births: created,
     existing,
-    teasers,
     membership: clients.membership,
   });
 

@@ -17,6 +17,9 @@ function checker(
         throw new Error('FakeJev: more checks than scripted answers');
       return answer as 'yes' | 'no' | 'failed';
     },
+    async sameSubject() {
+      throw new Error('no topic check in this test');
+    },
   };
 }
 

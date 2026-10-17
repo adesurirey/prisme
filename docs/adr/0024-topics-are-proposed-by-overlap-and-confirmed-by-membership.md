@@ -55,6 +55,17 @@ an already-listed Topic change nothing.
 
 The seed-guard pattern (ADR-0018): **the lexicon proposes, Membership disposes**.
 
+The check has its own question (`TOPIC_QUESTION`, `pipeline/src/decision-model.ts`)
+and its own payload (`topicPayload`: the episode on disk against the whole
+birth — final title and member headlines, never a lone seed). Reusing the
+Membership belongs question verbatim was tried and failed: its criteria
+deliberately refuse “same theme, other fact” (ADR-0018 — a new fact is a new
+Story), but a new fact of the same event is exactly what an Episode is. The
+real-scale replay of 2026-10-17 (52 Jev checks over the archive, 26 yes /
+26 no) showed the belongs question kill the very threads Topics exist for:
+the Guerre Ukraine and Budget threads never formed, and a strike on Kyiv's
+power grid was refused by its own previous story.
+
 An age window bounds the proposal (`EPISODE_MAX_AGE_DAYS = 7`, shared with the
 Title pass's episode context): a Story on disk more than 7 days older than the
 birth's day is never proposed, and nothing from after the birth's day either.
@@ -96,3 +107,4 @@ rebuild, not migration code (ADR-0002, POC).
   a product question, not a pipeline question — left open on purpose.
 - Topic assignment happens once per Story, at birth, before the file is written;
   Story slugs and titles are untouched by this decision.
+
