@@ -148,9 +148,11 @@ Pas de HTML par lettre : les assets sont des **SVG générés** par
 - `prisme-wordmark-display.svg` (tracking 0, opsz 32, pinch sharp 2.0) — usage
   hero/à-propos
 - `prisme-mark.svg` (P, +8°, opsz 14, pinch sharp 2.0) — **source unique de la
-  géométrie** : `favicon.ts` (data URIs clair/sombre, pad 0.10) et `PrismeMark.tsx`
+  géométrie** : `favicon.ts` (data URIs clair/sombre, viewBox carrée centrée sur le
+  glyphe, pad 0.10) et `PrismeMark.tsx`
   le dérivent par import `?raw`, `generate-icons.ts` le rasterise en PNG (carrés,
-  non rognés)
+  non rognés ; le fit contraint largeur ET hauteur — le P pincé est plus large que
+  haut)
 
 Les réglages du pinch sont des constantes en tête du script (`PINCH_CAP_*`,
 `PINCH_SHARP*`) ; toute modification passe par le script, jamais par édition des
