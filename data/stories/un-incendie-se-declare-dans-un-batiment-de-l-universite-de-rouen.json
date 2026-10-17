@@ -6,6 +6,50 @@
   "storyDay": "2026-10-17",
   "articles": [
     {
+      "id": "23155119535a",
+      "outletId": "le-parisien",
+      "headline": "Un bâtiment universitaire touché par un incendie près de Rouen",
+      "url": "https://www.leparisien.fr/seine-maritime-76/un-batiment-universitaire-touche-par-un-incendie-pres-de-rouen-17-10-2026-6IFLMNCBIRDKRB7EISTQXW7N7I.php",
+      "publishedAt": "2026-10-17T07:01:18.213Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "f40780511231",
+      "outletId": "tf1-info",
+      "headline": "Rouen : un incendie à l'université de Rouen-Normandie, une enquête ouverte",
+      "url": "https://www.tf1info.fr/justice-faits-divers/rouen-un-incendie-a-l-universite-de-rouen-normandie-une-enquete-ouverte-2470475.html",
+      "publishedAt": "2026-10-17T06:30:23.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/610/480/pompiers-numero-18-6aca61-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "02ab2cc334e1",
+      "outletId": "franceinfo",
+      "headline": "La façade d'un bâtiment de l'université de Rouen a été détruite dans un incendie, une enquête ouverte pour identifier les causes",
+      "url": "https://www.franceinfo.fr/faits-divers/la-facade-d-un-batiment-de-l-universite-de-rouen-a-ete-detruite-dans-un-incendie-une-enquete-ouverte-pour-identifier-les-causes_8241445.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-17T06:29:09.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/NsBI3OxoTSU98J0pPU3Tqny2dFQ/0x312:6000x3687/432x243/filters:format(jpg)/2026/10/17/6ad3134493047660025716.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "49599652a1f7",
+      "outletId": "le-figaro",
+      "headline": "Un incendie à l'université de Rouen détruit la façade et «une grande partie de la toiture» d'un bâtiment",
+      "url": "https://www.lefigaro.fr/faits-divers/un-incendie-a-l-universite-de-rouen-detruit-la-facade-et-une-grande-partie-de-la-toiture-d-un-batiment-20261017",
+      "publishedAt": "2026-10-17T06:21:35.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/2400x1600_crop/2026/10/17/51537671788abc668dce92599c7987cf7cbfc60ab9f00edc1304236a78156957.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "ee6a94d2e531",
       "outletId": "bfmtv",
       "headline": "Une enquête ouverte après un incendie dans un bâtiment de l'université de Rouen-Normandie",
@@ -31,13 +75,23 @@
   "section": "misc",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Un sinistre nocturne a ravagé la façade ainsi qu'une portion significative de la toiture sur le campus de Mont-Saint-Aignan.",
+      "Une cinquantaine de soldats du feu ont été mobilisés sur les lieux pour maîtriser les flammes.",
+      "Une procédure judiciaire a été lancée afin d'élucider les causes exactes de cet événement."
+    ],
     "centre": [
-      "Un feu a éclaté durant la nuit au sein du campus universitaire de Mont-Saint-Aignan.",
-      "L'intervention des secours a permis de circonscrire les flammes après deux heures d'effort.",
-      "Les autorités judiciaires ont initié des investigations pour déterminer l'origine du sinistre."
+      "Les flammes ont touché une structure universitaire durant la nuit près de Rouen.",
+      "L'intervention des secours a permis de circonscrire l'incendie après environ deux heures d'effort.",
+      "Les autorités ont ouvert une investigation pour déterminer l'origine de cet incident."
+    ],
+    "droite": [
+      "Le feu a causé d'importants dégâts matériels, détruisant la façade et une vaste portion du toit d'un édifice universitaire.",
+      "Le dispositif de secours a engagé cinquante pompiers et trente véhicules pour venir à bout du sinistre.",
+      "Si le foyer principal a été éteigné en fin de nuit, des interventions sur des foyers résiduels se sont prolongées en matinée."
     ]
   },
-  "differences": "Le sujet est exclusivement couvert par la ligne éditoriale centrale, qui rapporte de manière factuelle les faits divers liés au sinistre nocturne, l'intervention rapide des secours et l'ouverture d'une enquête. Il n'y a donc pas de divergences inter-camps à comparer pour cette actualité.",
+  "differences": "Les différents camps partagent un même socle factuel en rapportant les dégâts matériels subis par le bâtiment universitaire de Mont-Saint-Aignan et l'ouverture d'une enquête judiciaire. Toutefois, le camp de droite apporte un niveau de précision technique supérieur en détaillant l'ampleur des moyens déployés, mentionnant explicitement le nombre d'engins engagés et la persistance de foyers résiduels traités en matinée. De son côté, le camp de gauche met l'accent sur l'importance des destructions en insistant sur la toiture, tandis que le centre livre une synthèse plus ramassée des événements.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 6
 }
