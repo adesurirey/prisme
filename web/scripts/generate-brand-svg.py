@@ -9,7 +9,7 @@ Outputs (web/src/assets/brand/):
 Every letterform is the exact Inter glyph outline (quadratic-free, the source
 curves), transformed by exact affine matrices — no hand tracing, no rounding
 beyond 1 decimal. See docs/research/logo/recette-finale.md for the recipe.
-Mixed-case **Emile** per the exploratory recipe (E majuscule + minuscules); run
+Mixed-case **Émile** (accent aigu, exploratory — see emile branch notes); run
 again to regenerate after any
 recipe change.
 """
@@ -30,11 +30,11 @@ FONT_PATH = os.path.join(os.environ.get("TMPDIR", "/tmp"), "Fraunces-var.ttf")
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "src", "assets", "brand")
 
 WEIGHT = 700  # Bold
-# Mixed-case Emile; fan linéaire (courbe 1) de +max° à -max° sur les lettres.
+# Mixed-case Émile; fan linéaire (courbe 1) de +max° à -max° sur les lettres.
 MAX_ANGLE = 8.0  # degrees, + = top leans left
 ANGLES = {
-    c: MAX_ANGLE * (1 - 2 * i / (len("Emile") - 1))
-    for i, c in enumerate("Emile")
+    c: MAX_ANGLE * (1 - 2 * i / (len("Émile") - 1))
+    for i, c in enumerate("Émile")
 }
 UPM = 2000  # Fraunces
 
@@ -53,7 +53,7 @@ PINCH_CAP_NAV = 400.0
 PINCH_CAP_DISPLAY = 400.0
 PINCH_CAP_MARK = 400.0
 
-LETTERS = "Emile"
+LETTERS = "Émile"
 
 
 def load_font(opsz):
@@ -144,7 +144,7 @@ def main():
         # la première lettre du wordmark, à son angle — même matrice que
         # l'initiale du mot (recette « mark = initiale du wordmark »)
         "prisme-mark.svg": build(
-            "E", 0, 14, angles={"E": MAX_ANGLE}, pinch=(PINCH_CAP_MARK, PINCH_SHARP)
+            "É", 0, 14, angles={"É": MAX_ANGLE}, pinch=(PINCH_CAP_MARK, PINCH_SHARP)
         ),
     }
     for name, svg in assets.items():
