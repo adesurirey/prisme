@@ -1,7 +1,7 @@
 /**
  * One-off generator for the PWA icon PNGs (issue #64), committed to
  * web/public/icons/ and served at /prisme/icons/*.png. It rasterizes the
- * Prisme mark's single source — src/assets/brand/prisme-mark.svg, the P at
+ * Prisme mark's single source — src/assets/brand/prisme-mark.svg, the E at
  * the wordmark's angle — with sharp. Run manually whenever the mark ever
  * changes:
  *
@@ -50,7 +50,7 @@ const PAPER = '#ededf0';
 
 /** The mark centered on a `size`×`size` square. `fit` is the side of the
  * square the (pad-expanded) viewBox box is scaled into — BOTH dimensions
- * are constrained: the pinched P is wider than tall, so width, not height,
+ * are constrained: the pinched E is wider than tall, so width, not height,
  * is the binding dimension, and fitting by height alone let the glyph hit
  * (and overflow) the canvas edges. */
 async function markSquare(

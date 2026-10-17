@@ -2,7 +2,7 @@ import type { CSSProperties } from 'react';
 import prismeMarkAsset from '../assets/brand/prisme-mark.svg?raw';
 
 /**
- * The Prisme mark — the P at the wordmark's angle (+20°, top leans left;
+ * The Prisme mark — the E at the wordmark's angle (+20°, top leans left;
  * docs/research/logo/recette-finale.md). Brand icon of the site:
  * Comparaison button, anywhere the product signs itself. Monochrome by
  * design: it inherits `currentColor`, so it flips with the active
