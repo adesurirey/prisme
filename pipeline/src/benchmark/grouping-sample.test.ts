@@ -27,7 +27,6 @@ const proposalOf = (clusters: [string, string][]): GroupingProposal => ({
     newStoryKey: cluster,
     confidence: 0.9,
   })),
-  titleUpdates: [],
 });
 
 describe('candidatePairs (sanity sampler buckets)', () => {

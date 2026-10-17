@@ -51,6 +51,7 @@ import type { GroupingModel, GroupingProposal } from './gemini.ts';
 import { isLive, LIVE_WINDOW_MS } from './liveness.ts';
 import { MembershipGate } from './membership-gate.ts';
 import { ingestionIsOpen, parisDayKey } from './paris-day.ts';
+import type { TitlePassModel } from './title-pass.ts';
 
 /** Above this many checks in one build, the run log warns (ADR-0012). */
 export const MEMBERSHIP_CHECKS_WARN = 2000;
@@ -60,6 +61,8 @@ export interface GroupingClients {
   grouping: GroupingModel;
   /** Live or the declared fail-when-pending adapter (policy.ts). */
   membership: MembershipChecker;
+  /** Live: writes every Story title after resolution (ADR-0023). */
+  titles: TitlePassModel;
 }
 
 export interface GroupingInput {
@@ -324,6 +327,43 @@ function seedCandidates(seed: Article, live: Story[]): Story[] {
     .map((c) => c.story);
 }
 
+/** Below this token overlap a Story on disk is not the previous episode of
+ * a new cluster: the context line would attach an unrelated subject
+ * (ADR-0023). Higher than the seed guard's any-overlap bound because a
+ * wrong episode only misleads the title, while a skipped guard check
+ * creates a duplicate Story. */
+export const EPISODE_MIN_OVERLAP = 0.25;
+
+/** The most headline-similar Story on disk for a new cluster: the previous
+ * episode of the same event, fed to the Title pass so the new title carries
+ * what changed since the episode the reader already saw (ADR-0023). Scored
+ * like the seed guard — the best overlap of any cluster headline with the
+ * Story's title or any of its member headlines. The Story itself is never
+ * in `existing` (it is born this build). Exported for tests. */
+export function episodeContext(
+  headlines: string[],
+  existing: Story[],
+): { title: string; storyDay: string } | undefined {
+  let best: { title: string; storyDay: string; score: number } | undefined;
+  for (const headline of headlines) {
+    const headlineTokens = tokens(headline);
+    if (headlineTokens.size === 0) continue;
+    for (const story of existing) {
+      const score = Math.max(
+        overlap(headlineTokens, tokens(story.title)),
+        ...story.articles.map((a) =>
+          overlap(headlineTokens, tokens(a.headline)),
+        ),
+      );
+      if (score >= EPISODE_MIN_OVERLAP && (best == null || score > best.score))
+        best = { title: story.title, storyDay: story.storyDay, score };
+    }
+  }
+  return best == null
+    ? undefined
+    : { title: best.title, storyDay: best.storyDay };
+}
+
 export async function groupStories(
   input: GroupingInput,
 ): Promise<GroupingOutcome> {
@@ -377,15 +417,15 @@ export async function groupStories(
 
   // Note: a Story is never born from a single Article (ADR-0015) — newStory
   // is only called for model-proposed keys, and the two-Article minimum is
-  // enforced by the drop pass and invariant below.
-  const newStory = (title: string, storyDay: string): Story => {
+  // enforced by the drop pass and invariant below. Title and slug are
+  // deferred to the Title pass: the slug derives from the final title
+  // (ADR-0023), so a birth carries neither until the pass has answered.
+  const newStory = (storyDay: string): Story => {
     const id = makeId();
-    const slug = slugFor(title, id, taken);
-    taken.add(slug);
     const story: Story = {
       id,
-      slug,
-      title,
+      slug: '',
+      title: '',
       createdAt: now.toISOString(),
       storyDay,
       articles: [],
@@ -471,7 +511,7 @@ export async function groupStories(
     for (const ns of proposal.newStories) {
       const founding = keyMembers.get(ns.key)?.[0];
       if (!founding) continue;
-      keyStories.set(ns.key, newStory(ns.title, articleDay(founding)));
+      keyStories.set(ns.key, newStory(articleDay(founding)));
     }
 
     // The belonging rule (ADR-0017) filters each key's members to the
@@ -755,7 +795,6 @@ export async function groupStories(
         byId.delete(story.id);
         created.splice(created.indexOf(story), 1);
         changedStories.delete(story);
-        taken.delete(story.slug);
       }
     }
     // After the drop pass, so the count includes the dropped Stories' own
@@ -776,13 +815,63 @@ export async function groupStories(
         );
     }
 
-    // Titles may be re-proposed for Stories that gained Articles (ADR-0005);
-    // the slug is fixed at creation and never changes.
-    for (const update of proposal.titleUpdates) {
-      const story = byId.get(update.storyId);
-      if (story != null && changedStories.has(story))
-        story.title = update.title;
+    // The Title pass (ADR-0023): one call per build, after resolution —
+    // births are titled at creation (the slug will derive from the title),
+    // and Stories that gained Articles may be re-titled while live. A
+    // failed call propagates and fails the build: nothing has been written,
+    // the last committed Edition stays live (same posture as Grouping).
+    const births = [...keyStories.entries()]
+      .filter(([, story]) => created.includes(story))
+      .map(([key, story]) => ({
+        key,
+        headlines: story.articles.map((a) => a.headline),
+        episode: episodeContext(
+          story.articles.map((a) => a.headline),
+          existing,
+        ),
+      }));
+    const updates = [...changedStories]
+      .filter((s) => !created.includes(s))
+      .sort(byNewestArticle)
+      .map((s) => ({
+        storyId: s.id,
+        title: s.title,
+        headlines: s.articles.map((a) => a.headline),
+      }));
+    if (births.length > 0 || updates.length > 0) {
+      const titled = await clients.titles.title({ births, updates });
+      if (titled == null)
+        throw new Error('Title pass failed: the model returned no titles.');
+      const titleOfKey = new Map(titled.titles.map((t) => [t.key, t.title]));
+      for (const [key, story] of keyStories) {
+        if (!created.includes(story)) continue;
+        const title = titleOfKey.get(key);
+        if (title == null)
+          throw new Error(
+            `Title pass failed: no title for new Story key ${key} — a Story is never written untitled.`,
+          );
+        story.title = title;
+      }
+      // Retitles only touch Stories that gained Articles (the input set);
+      // never a Story born this build, whose title just came from the pass.
+      // The slug, assigned below, never changes afterwards (ADR-0005).
+      for (const update of titled.titleUpdates) {
+        const story = byId.get(update.storyId);
+        if (
+          story != null &&
+          changedStories.has(story) &&
+          !created.includes(story)
+        )
+          story.title = update.title;
+      }
     }
+  }
+
+  // Slugs are derived from the final titles and fixed at creation
+  // (ADR-0005): a later retitle of a live Story never re-derives them.
+  for (const story of created) {
+    story.slug = slugFor(story.title, story.id, taken);
+    taken.add(story.slug);
   }
 
   // Within-build slug collisions are re-resolved by the settled rule (Q9):

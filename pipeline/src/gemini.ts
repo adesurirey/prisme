@@ -57,17 +57,17 @@ export interface GroupingInputArticle {
   section?: Section;
 }
 
-/** What the model proposes: merges into existing Stories and new Stories. */
+/** What the model proposes: merges into existing Stories and new Stories.
+ * Titles are not proposed here: a dedicated Title pass writes them after
+ * resolution (ADR-0023) — one call per build, one job per call. */
 export interface GroupingProposal {
-  newStories: { key: string; title: string }[];
+  newStories: { key: string }[];
   assignments: {
     articleId: string;
     storyId?: string;
     newStoryKey?: string;
     confidence: number;
   }[];
-  /** Better neutral titles, only for Stories that gained Articles (Q6). */
-  titleUpdates: { storyId: string; title: string }[];
 }
 
 /** JSON Schema for the structured output (generationConfig.responseFormat).
@@ -79,8 +79,8 @@ export const GROUPING_SCHEMA = {
       type: 'array',
       items: {
         type: 'object',
-        properties: { key: { type: 'string' }, title: { type: 'string' } },
-        required: ['key', 'title'],
+        properties: { key: { type: 'string' } },
+        required: ['key'],
       },
     },
     assignments: {
@@ -94,14 +94,6 @@ export const GROUPING_SCHEMA = {
           confidence: { type: 'number' },
         },
         required: ['articleId'],
-      },
-    },
-    titleUpdates: {
-      type: 'array',
-      items: {
-        type: 'object',
-        properties: { storyId: { type: 'string' }, title: { type: 'string' } },
-        required: ['storyId', 'title'],
       },
     },
   },
@@ -121,23 +113,18 @@ export function parseGroupingResponse(text: string): GroupingProposal | null {
     return null;
   }
   if (data == null || typeof data !== 'object') return null;
-  const { newStories, assignments, titleUpdates } = data as Record<
-    string,
-    unknown
-  >;
+  const { newStories, assignments } = data as Record<string, unknown>;
   if (!Array.isArray(newStories) || !Array.isArray(assignments)) return null;
 
   const stories = newStories
     .filter(
-      (story): story is { key: string; title: string } =>
+      (story): story is { key: string } =>
         story != null &&
         typeof story === 'object' &&
         typeof (story as Record<string, unknown>).key === 'string' &&
-        (story as Record<string, unknown>).key !== '' &&
-        typeof (story as Record<string, unknown>).title === 'string' &&
-        (story as Record<string, unknown>).title !== '',
+        (story as Record<string, unknown>).key !== '',
     )
-    .map(({ key, title }) => ({ key, title }));
+    .map(({ key }) => ({ key }));
 
   const parsedAssignments = assignments.flatMap((a) => {
     if (a == null || typeof a !== 'object') return [];
@@ -162,21 +149,7 @@ export function parseGroupingResponse(text: string): GroupingProposal | null {
     ];
   });
 
-  const updates = Array.isArray(titleUpdates)
-    ? titleUpdates.flatMap((u) => {
-        if (u == null || typeof u !== 'object') return [];
-        const { storyId, title } = u as Record<string, unknown>;
-        if (typeof storyId !== 'string' || storyId === '') return [];
-        if (typeof title !== 'string' || title === '') return [];
-        return [{ storyId, title }];
-      })
-    : [];
-
-  return {
-    newStories: stories,
-    assignments: parsedAssignments,
-    titleUpdates: updates,
-  };
+  return { newStories: stories, assignments: parsedAssignments };
 }
 
 const SECTION_LABELS_FR: Record<Section, string> = {
@@ -192,10 +165,9 @@ const SECTION_LABELS_FR: Record<Section, string> = {
 };
 
 /** The prompt: Story titles + Sections, Article headlines + teasers, nothing else (ADR-0003).
- * Title style rules are sourced in ADR-0013 — named actor + concrete fact,
- * symmetric qualification fidelity (no escalation, no dilution), systematic
- * `titleUpdates`; don't loosen them without revisiting that decision.
- * Exported for the grouping benchmark (issue #41). */
+ * The model only groups: keys and assignments. Titles are written by the
+ * dedicated Title pass (title-pass.ts, ADR-0023) — one call per build, one
+ * job per call. Exported for the grouping benchmark (issue #41). */
 export function groupingPrompt(input: {
   stories: GroupingInputStory[];
   articles: GroupingInputArticle[];
@@ -226,10 +198,7 @@ export function groupingPrompt(input: {
     "- Les derniers articles déjà joints à chaque story existante te sont donnés : ils disent ce que la story raconte déjà. Un article qui rapporte un fait distinct de ces titres ne fusionne pas dans la story, même s'il relève du même thème : s'il a un jumeau dans le lot (même fait), regroupe-les sous un « newStoryKey » ; s'il est seul, laisse-le sans entrée — il sera représenté au prochain build.",
     "- Au sein d'un même événement d'envergure, des faits distincts (volet judiciaire, volet politique, journée à venir) donnent des stories distinctes ; ne les fond jamais dans la story-mère au seul motif qu'ils touchent au même sujet.",
     '- Ne regroupe que ce qui rapporte le même événement ou la même affaire précise : un thème commun ou un protagoniste commun ne suffit pas.',
-    "- Chaque nouvelle story a une « key » courte unique (lettres et chiffres) et un « title » : un titre neutre en français décrivant l'événement. La qualification de l'événement vient des titres du groupe : n'utilise aucun mot de qualification qu'aucun titre source n'emploie (si tous les titres disent « attaque » ou « frappe », n'écris pas « attentat »), et n'affaiblis pas la qualification que les sources partagent (« frappes meurtrières sur un aéroport » ne devient pas « des frappes sur un aéroport »).",
-    "- Le contenu du titre vient des titres du groupe : n'en reprends pas la structure (format « citation » : …, accroches, préfixes), mais les faits qu'ils rapportent — noms, lieux, chiffres, conséquences ; ce que plusieurs titres affirment doit apparaître dans le titre, noms propres compris (personnes, lieux, sigles). Un titre neutre n'est pas un titre vague.",
-    "- Style du titre : un acteur nommé, un verbe d'action, un complément concret (chiffre, lieu, enjeu) — jamais le style nominal sans verbe (« Condamnation de… », « Attribution du… », « Préparatifs face à… »). Interdits : commencer par une citation entre guillemets, les préfixes de type « À la une ». Aucun mot rhétorique ou jugement de valeur : la neutralité porte sur la position, pas sur la forme.",
-    "- « titleUpdates » (optionnel) : uniquement pour des stories qui reçoivent de nouveaux articles, et uniquement si un meilleur titre existe ; un tel titre respecte le même style que ci-dessus et se formule d'après l'ensemble des titres des articles du groupe. Sinon laisse la story inchangée.",
+    "- Chaque nouvelle story a une « key » courte unique (lettres et chiffres). N'écris aucun titre : les titres sont écrits par une passe dédiée qui reçoit les titres des articles de chaque story après le regroupement.",
   ].join('\n');
 }
 

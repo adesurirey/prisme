@@ -50,7 +50,6 @@ function proposal(overrides?: Partial<GroupingProposal>): GroupingProposal {
       { articleId: 'a2', storyId: 'aaaa00000002', confidence: 0.9 },
       { articleId: 'a3', storyId: 'aaaa00000002', confidence: 0.9 },
     ],
-    titleUpdates: [],
     ...overrides,
   };
 }
@@ -100,7 +99,7 @@ describe('evaluateProposal — coverage', () => {
     const e = evaluateProposal(
       fixture(),
       proposal({
-        newStories: [{ key: 'k1', title: 'Réactions syndicales' }],
+        newStories: [{ key: 'k1' }],
         assignments: [
           { articleId: 'a1', storyId: 'aaaa00000001', confidence: 0.9 },
           { articleId: 'a2', storyId: 'k1', confidence: 0.9 },
@@ -118,7 +117,7 @@ describe('evaluateProposal — dup seeds', () => {
     const e = evaluateProposal(
       fixture(),
       proposal({
-        newStories: [{ key: 'k1', title: 'Maricarmen à Paris' }],
+        newStories: [{ key: 'k1' }],
         assignments: [
           {
             articleId: 'a1',
@@ -148,7 +147,7 @@ describe('evaluateProposal — dup seeds', () => {
         ],
       }),
       proposal({
-        newStories: [{ key: 'k1', title: 'Annulation surprise' }],
+        newStories: [{ key: 'k1' }],
         assignments: [
           {
             articleId: 'a1',
@@ -167,7 +166,7 @@ describe('evaluateProposal — dup seeds', () => {
     const e = evaluateProposal(
       fixture(),
       proposal({
-        newStories: [{ key: 'k1', title: 'Retraites : la loi promulguée' }],
+        newStories: [{ key: 'k1' }],
         assignments: [
           { articleId: 'a1', storyId: 'aaaa00000001', confidence: 0.9 },
           { articleId: 'a2', newStoryKey: 'k1', confidence: 0.5 },
@@ -182,7 +181,7 @@ describe('evaluateProposal — dup seeds', () => {
     const e = evaluateProposal(
       fixture({ liveStories: [] }),
       proposal({
-        newStories: [{ key: 'k1', title: 'Maricarmen à Paris' }],
+        newStories: [{ key: 'k1' }],
         assignments: [
           { articleId: 'a1', newStoryKey: 'k1', confidence: 0.5 },
           { articleId: 'a2', newStoryKey: 'k1', confidence: 0.5 },
@@ -201,7 +200,7 @@ describe('evaluateProposal — splits and over-merges', () => {
         groundTruth: { a2: 'orig2', a3: 'orig2' },
       }),
       proposal({
-        newStories: [{ key: 'k1', title: 'Réactions syndicales' }],
+        newStories: [{ key: 'k1' }],
         assignments: [
           { articleId: 'a1', storyId: 'aaaa00000001', confidence: 0.9 },
           { articleId: 'a2', storyId: 'aaaa00000002', confidence: 0.9 },
@@ -219,7 +218,7 @@ describe('evaluateProposal — splits and over-merges', () => {
     const e = evaluateProposal(
       fixture({ groundTruth: { a1: 'orig1', a2: 'orig2' } }),
       proposal({
-        newStories: [{ key: 'k1', title: 'Fourre-tout' }],
+        newStories: [{ key: 'k1' }],
         assignments: [
           { articleId: 'a1', newStoryKey: 'k1', confidence: 0.5 },
           { articleId: 'a2', newStoryKey: 'k1', confidence: 0.5 },

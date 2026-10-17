@@ -7,6 +7,8 @@ import type { GroupingModel } from './gemini.ts';
 import { groupingModelFromEnv } from './gemini.ts';
 import type { SummaryModel } from './summarize.ts';
 import { summariesModelFromEnv } from './summarize.ts';
+import type { TitlePassModel } from './title-pass.ts';
+import { titlePassModelFromEnv } from './title-pass.ts';
 
 /**
  * The fail-vs-degrade policy (ADR-0005, as amended in issue #40), in one
@@ -57,6 +59,8 @@ export interface ModelPolicy {
   decision: { model: DecisionModel | null; note?: string };
   /** Live: shares GEMINI_API_KEY with Grouping, which already failed the build. */
   summaries: SummaryModel;
+  /** Live: writes every Story title after Grouping resolution (ADR-0023); shares GEMINI_API_KEY with Grouping. */
+  titles: TitlePassModel;
 }
 
 /**
@@ -72,6 +76,7 @@ export function resolveModels(): ModelPolicy {
     );
   const grouping = groupingModelFromEnv()!;
   const summaries = summariesModelFromEnv()!;
+  const titles = titlePassModelFromEnv()!;
   const openrouter = process.env.OPENROUTER_API_KEY;
   const decision = openrouter
     ? { model: winnerModelFromEnv()! }
@@ -87,5 +92,6 @@ export function resolveModels(): ModelPolicy {
     membership,
     decision,
     summaries,
+    titles,
   };
 }

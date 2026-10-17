@@ -49,8 +49,12 @@ A precise news event, or the directly connected chain of developments on one, ma
 _Avoid_: Topic, cluster, event, subject, theme
 
 **Story title**:
-The neutral French name of a Story, written by the Grouping model. Distinct from any Outlet's headline, and can change over time.
+The neutral French name of a Story, written by the Title pass (ADR-0023) — never by the Grouping model. Distinct from any Outlet's headline. A Live Story's title may change while it gains Articles; a Frozen Story's title is immutable, like its slug.
 _Avoid_: Story headline
+
+**Episode**:
+A later Story covering the same news event as an earlier one — the day-by-day continuation the reader follows from titles alone. A Story's Ingestion window closed, or the new development is a distinct fact: a new Episode is born (ADR-0017, ADR-0018), and the Title pass is shown the previous Episode's title so the new one carries what changed (ADR-0023).
+_Avoid_: Follow-up, part 2, sequel
 
 **Live Story**:
 A Story with at least one Article less than 24 hours old, within its Ingestion window. Live Stories can gain Articles and make up the Edition (ADR-0022).
@@ -61,8 +65,12 @@ A Story with no live Articles left. It has left the Edition; once it has entered
 _Avoid_: Archived story, closed story, expired story
 
 **Grouping model**:
-The cheap language model Prisme uses each build to assign new Articles to live Stories or start new ones.
+The cheap language model Prisme uses each build to assign new Articles to live Stories or start new ones. It never writes titles (ADR-0023).
 _Avoid_: Clustering, matcher, AI (alone)
+
+**Title pass**:
+The cheap language model call, one per build after Grouping resolution, that writes every Story title — births and, for Stories that gained Articles, retitles. The only place a Story title is ever written; a failed pass fails the build (ADR-0023).
+_Avoid_: Titling model, retitle job
 
 **Membership check**:
 A yes/no check that decides whether an Article the Grouping model matched with low confidence joins that Story.

@@ -11,7 +11,8 @@ worse, titles that ignored what the group's member headlines established
 first article alone). A dry rewrite applying a concrete style produced
 clearly better titles for most of them.
 
-The fix is in the grouping prompt (`pipeline/src/gemini.ts`):
+The fix is in the grouping prompt (`pipeline/src/gemini.ts`) — moved to the
+dedicated Title pass (`pipeline/src/title-pass.ts`) by ADR-0023, same rules:
 
 - **Style**: a named actor, an action verb, a concrete complement (number,
   place, stake). 40–110 characters. Never an agentless noun phrase.
@@ -65,13 +66,19 @@ changes, the dense single paragraph was split (and the duplicated
 ## Consequences
 
 - Titles are mutable while a Story is live; slugs are frozen once assigned
-  (ADR-0005), so retitling never breaks Story URLs.
+  (ADR-0005), so retitling never breaks Story URLs. Amended in ADR-0023:
+  the retitle now happens in the dedicated Title pass, and only when a
+  Story gained Articles — a frozen Story's title is immutable.
 - Titles for single-Article Stories follow the same rules; a fresh
   single-Article Story starts from the model's title, not the raw headline.
+  (Stale since ADR-0015 — no Story is ever born from one Article; every
+  Story is titled at birth by the Title pass.)
 - Watch the grouping behavior over the next Editions (false merges, duplicate
   Stories). If drift appears, suspect the added title load first; the remedy
   is a dedicated title pass in a separate call, then the systematic
-  `titleUpdates` pass.
+  `titleUpdates` pass. **Done — ADR-0023**: the drift appeared (Oregon
+  episode, 2026-10-17), and the dedicated pass is now the only writer of
+  Story titles, with the previous Episode as context for continuing events.
 - The rules are prompt-only: there is no style linter in CI yet. A
   regression is visible in `data:` commits, not caught by tests. Adding a
   title sample to the grouping benchmark is the follow-up if drift appears.

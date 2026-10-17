@@ -37,36 +37,12 @@ describe('groupingPrompt (ADR-0018)', () => {
     );
   });
 
-  it('pins symmetric qualification fidelity in the title rule (ADR-0013)', () => {
+  it('the grouping prompt names no title: titles are written by the Title pass (ADR-0023)', () => {
     const prompt = groupingPrompt({ stories: [], articles: [] });
-    // No escalation: a qualification no source uses must be forbidden.
-    expect(prompt).toContain(
-      "n'utilise aucun mot de qualification qu'aucun titre source n'emploie",
-    );
-    expect(prompt).toContain("n'écris pas « attentat »");
-    // No dilution either: shared qualification must survive.
-    expect(prompt).toContain(
-      "n'affaiblis pas la qualification que les sources partagent",
-    );
-    // Facts come from the group's headlines; structure must not.
-    expect(prompt).toContain(
-      'ce que plusieurs titres affirment doit apparaître dans le titre',
-    );
-    expect(prompt).toContain("Un titre neutre n'est pas un titre vague");
-    // No length rule at all: the sentence is deleted outright (ADR-0013
-    // amendment, 2026-10-17 — the cap and « si la longueur le permet » read
-    // as permission to drop shared facts). Proper nouns survive as a short
-    // fold-in to the shared-facts clause (the seed guard matches title
-    // tokens).
-    expect(prompt).not.toContain('110 caractères');
-    expect(prompt).not.toContain('limite de longueur');
-    expect(prompt).toContain('noms propres compris');
-    // The title rules span three bullets — fidelity, content, style — one
-    // job each, instead of one dense paragraph (ADR-0013 amendment).
-    expect(prompt).toContain(
-      '- Le contenu du titre vient des titres du groupe',
-    );
-    expect(prompt).toContain('- Style du titre : un acteur nommé');
+    expect(prompt).toContain("N'écris aucun titre");
+    // No title rule left behind — they live in title-pass.ts (ADR-0013).
+    expect(prompt).not.toContain('titre neutre');
+    expect(prompt).not.toContain('titleUpdates');
   });
 });
 
@@ -74,22 +50,16 @@ describe('parseGroupingResponse', () => {
   it('parses a well-formed proposal', () => {
     const proposal = parseGroupingResponse(
       JSON.stringify({
-        newStories: [{ key: 'budget', title: 'Le Sénat adopte le budget' }],
+        newStories: [{ key: 'budget' }],
         assignments: [
           { articleId: 'a1', storyId: 's1', confidence: 0.9 },
           { articleId: 'a2', newStoryKey: 'budget', confidence: 0.4 },
         ],
-        titleUpdates: [{ storyId: 's1', title: 'Nouveau titre' }],
       }),
     );
     expect(proposal).not.toBeNull();
-    expect(proposal!.newStories).toEqual([
-      { key: 'budget', title: 'Le Sénat adopte le budget' },
-    ]);
+    expect(proposal!.newStories).toEqual([{ key: 'budget' }]);
     expect(proposal!.assignments).toHaveLength(2);
-    expect(proposal!.titleUpdates).toEqual([
-      { storyId: 's1', title: 'Nouveau titre' },
-    ]);
   });
 
   it('returns null for non-JSON text', () => {
@@ -146,36 +116,18 @@ describe('parseGroupingResponse', () => {
     expect(proposal!.assignments[0]!.confidence).toBe(0);
   });
 
-  it('drops new stories without a key or a non-empty title', () => {
+  it('drops new stories without a key, and stray model titles are ignored', () => {
     const proposal = parseGroupingResponse(
       JSON.stringify({
         newStories: [
-          { key: 'k1', title: 'Titre' },
-          { key: 'k2' },
+          { key: 'k1' },
           { key: '', title: 'Titre vide' },
           { title: 'Sans clé' },
         ],
         assignments: [],
       }),
     );
-    expect(proposal!.newStories).toEqual([{ key: 'k1', title: 'Titre' }]);
-  });
-
-  it('drops malformed title updates', () => {
-    const proposal = parseGroupingResponse(
-      JSON.stringify({
-        newStories: [],
-        assignments: [],
-        titleUpdates: [
-          { storyId: 's1', title: 'Bon titre' },
-          { storyId: 's2' },
-          { title: 'Sans story' },
-        ],
-      }),
-    );
-    expect(proposal!.titleUpdates).toEqual([
-      { storyId: 's1', title: 'Bon titre' },
-    ]);
+    expect(proposal!.newStories).toEqual([{ key: 'k1' }]);
   });
 });
 
@@ -187,7 +139,7 @@ describe('geminiModel failure policy (issue #40)', () => {
           parts: [
             {
               text: JSON.stringify({
-                newStories: [{ key: 'k1', title: 'Titre' }],
+                newStories: [{ key: 'k1' }],
                 assignments: [],
               }),
             },

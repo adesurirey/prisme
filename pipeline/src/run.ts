@@ -93,7 +93,11 @@ export async function runEdition(): Promise<Edition> {
     existing,
     now,
     makeId: () => randomBytes(6).toString('hex'),
-    clients: { grouping: models.grouping, membership: models.membership },
+    clients: {
+      grouping: models.grouping,
+      membership: models.membership,
+      titles: models.titles,
+    },
   });
 
   // Front-page history (issue #6): reconcile the flags of every live Story

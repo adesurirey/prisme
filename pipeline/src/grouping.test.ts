@@ -1,6 +1,6 @@
 import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
-import { groupStories, memberDigest } from './grouping.ts';
+import { episodeContext, groupStories, memberDigest } from './grouping.ts';
 import { missingMembershipChecker } from './policy.ts';
 
 /** Deterministic 12-hex ids, so slug suffixes are predictable. */
@@ -45,7 +45,42 @@ const NO_CLIENTS = {
     },
   },
   membership: missingMembershipChecker(),
+  titles: {
+    label: 'FakeTitles',
+    model: 'fake',
+    title: async () => {
+      throw new Error('no Title pass answer in this test');
+    },
+  },
 };
+
+/** A Title pass that answers with the given titles/updates, recording its
+ * inputs. Called with no answer, it auto-answers one `Titre <key>` per
+ * birth (the slug follows), with no updates; `null` throws loudly — for
+ * paths the test must never reach. */
+function fakeTitlePass(
+  answer: {
+    titles?: { key: string; title: string }[];
+    titleUpdates?: { storyId: string; title: string }[];
+  } | null = {},
+  calls: { input?: import('./title-pass.ts').TitlePassInput }[] = [],
+): import('./title-pass.ts').TitlePassModel {
+  return {
+    label: 'FakeTitles',
+    model: 'fake',
+    async title(input) {
+      calls.push({ input });
+      if (answer == null) throw new Error('no Title pass answer in this test');
+      const auto = input.births.map((b) => ({
+        key: b.key,
+        title: `Titre ${b.key}`,
+      }));
+      const titles = answer.titles ?? auto;
+      const updates = answer.titleUpdates ?? [];
+      return { titles, titleUpdates: updates };
+    },
+  };
+}
 
 function fakeGrouping(
   proposal: import('./gemini.ts').GroupingProposal | null,
@@ -90,7 +125,11 @@ function input(overrides: {
   articles?: Article[];
   existing?: Story[];
   teasers?: Map<string, string>;
-  clients?: import('./grouping.ts').GroupingClients;
+  clients?:
+    | (Omit<import('./grouping.ts').GroupingClients, 'titles'> & {
+        titles?: import('./title-pass.ts').TitlePassModel;
+      })
+    | undefined;
   makeId?: () => string;
   now?: Date;
 }) {
@@ -100,7 +139,9 @@ function input(overrides: {
     existing: overrides.existing ?? [],
     now: overrides.now ?? NOW,
     makeId: overrides.makeId ?? counter(),
-    clients: overrides.clients ?? NO_CLIENTS,
+    clients: overrides.clients
+      ? { titles: fakeTitlePass(), ...overrides.clients }
+      : NO_CLIENTS,
   };
 }
 
@@ -136,10 +177,7 @@ describe('groupStories', () => {
         articles: [article('a1')],
         existing,
         clients: {
-          grouping: fakeGrouping(
-            { newStories: [], assignments: [], titleUpdates: [] },
-            calls,
-          ),
+          grouping: fakeGrouping({ newStories: [], assignments: [] }, calls),
           membership: fakeMembership(true),
         },
       }),
@@ -188,7 +226,6 @@ describe('groupStories', () => {
           grouping: fakeGrouping({
             newStories: [],
             assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.9 }],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true, calls),
         },
@@ -231,12 +268,11 @@ describe('groupStories', () => {
         existing,
         clients: {
           grouping: fakeGrouping({
-            newStories: [{ key: 'k1', title: 'Une story précise' }],
+            newStories: [{ key: 'k1' }],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
               { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
             ],
-            titleUpdates: [],
           }),
           // The guard must say no (the seed survives), then the second
           // member's merge check must say yes for the Story to hold two
@@ -284,7 +320,6 @@ describe('groupStories', () => {
           grouping: fakeGrouping({
             newStories: [],
             assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.9 }],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true),
         },
@@ -307,7 +342,6 @@ describe('groupStories', () => {
           grouping: fakeGrouping({
             newStories: [],
             assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.5 }],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true, checkCalls),
         },
@@ -331,7 +365,6 @@ describe('groupStories', () => {
           grouping: fakeGrouping({
             newStories: [],
             assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.5 }],
-            titleUpdates: [],
           }),
           membership: fakeMembership(false),
         },
@@ -364,7 +397,6 @@ describe('groupStories', () => {
                 assignments: [
                   { articleId: 'a1', storyId: 's1', confidence: 0.5 },
                 ],
-                titleUpdates: [],
               }),
               membership,
             },
@@ -387,7 +419,6 @@ describe('groupStories', () => {
               { articleId: 'a1', storyId: 's1', confidence: 0.5 },
               { articleId: 'a2', storyId: 's1', confidence: 0.5 },
             ],
-            titleUpdates: [],
           }),
           // One check throws, the other answers no: some checks answered,
           // so the build proceeds and both Articles are orphaned.
@@ -419,7 +450,6 @@ describe('groupStories', () => {
           grouping: fakeGrouping({
             newStories: [],
             assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.9 }],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true, checkCalls),
         },
@@ -446,7 +476,6 @@ describe('groupStories', () => {
               storyId: 's1',
               confidence: 0.5,
             })),
-            titleUpdates: [],
           }),
           membership: fakeMembership(true, checkCalls),
         },
@@ -506,7 +535,6 @@ describe('groupStories', () => {
               assignments: [
                 { articleId: 'a1', storyId: 's1', confidence: 0.5 },
               ],
-              titleUpdates: [],
             }),
             membership: {
               label: 'FakeJev',
@@ -530,7 +558,6 @@ describe('groupStories', () => {
             assignments: [
               { articleId: 'a1', storyId: 'nope', confidence: 0.9 },
             ],
-            titleUpdates: [],
           }),
           membership: missingMembershipChecker(),
         },
@@ -553,7 +580,6 @@ describe('groupStories', () => {
               { articleId: 'a1', storyId: 'nope-1', confidence: 0.9 },
               { articleId: 'a2', storyId: 'nope-2', confidence: 0.9 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(false),
         },
@@ -570,7 +596,6 @@ describe('groupStories', () => {
           grouping: fakeGrouping({
             newStories: [],
             assignments: [],
-            titleUpdates: [],
           }),
           membership: missingMembershipChecker(),
         },
@@ -579,7 +604,7 @@ describe('groupStories', () => {
     expect(outcome.stories).toHaveLength(0); // orphan, no singleton birth
   });
 
-  it('a new Story from the model carries the neutral title and a fresh id', async () => {
+  it('a new Story carries the Title pass title and a fresh id; the slug derives from the title', async () => {
     const outcome = await groupStories(
       input({
         articles: [
@@ -588,14 +613,16 @@ describe('groupStories', () => {
         ],
         clients: {
           grouping: fakeGrouping({
-            newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
+            newStories: [{ key: 'k1' }],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
               { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true),
+          titles: fakeTitlePass({
+            titles: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
+          }),
         },
       }),
     );
@@ -613,12 +640,11 @@ describe('groupStories', () => {
         articles: [article('a1'), article('a2')],
         clients: {
           grouping: fakeGrouping({
-            newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
+            newStories: [{ key: 'k1' }],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
               { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(false),
         },
@@ -634,13 +660,12 @@ describe('groupStories', () => {
         articles: [article('a1'), article('a2'), article('a3')],
         clients: {
           grouping: fakeGrouping({
-            newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
+            newStories: [{ key: 'k1' }],
             assignments: [
               { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
               { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
               { articleId: 'a3', newStoryKey: 'k1', confidence: 0.9 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true, membershipCalls),
         },
@@ -675,12 +700,11 @@ describe('groupStories', () => {
         articles: [article('a1'), article('a2')],
         clients: {
           grouping: fakeGrouping({
-            newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
+            newStories: [{ key: 'k1' }],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
               { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(false, membershipCalls),
         },
@@ -702,12 +726,11 @@ describe('groupStories', () => {
             articles: [article('a1'), article('a2')],
             clients: {
               grouping: fakeGrouping({
-                newStories: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
+                newStories: [{ key: 'k1' }],
                 assignments: [
                   { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
                   { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
                 ],
-                titleUpdates: [],
               }),
               membership,
             },
@@ -723,17 +746,14 @@ describe('groupStories', () => {
         articles: [article('a1'), article('a2')],
         clients: {
           grouping: fakeGrouping({
-            newStories: [
-              { key: 'k1', title: 'Vide' },
-              { key: 'k2', title: 'Pleine' },
-            ],
+            newStories: [{ key: 'k1' }, { key: 'k2' }],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k2', confidence: 0.3 },
               { articleId: 'a2', newStoryKey: 'k2', confidence: 0.3 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true),
+          titles: fakeTitlePass({ titles: [{ key: 'k2', title: 'Pleine' }] }),
         },
       }),
     );
@@ -749,14 +769,16 @@ describe('groupStories', () => {
         existing,
         clients: {
           grouping: fakeGrouping({
-            newStories: [{ key: 'k1', title: 'Collision' }],
+            newStories: [{ key: 'k1' }],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
               { articleId: 'a2', newStoryKey: 'k1', confidence: 0.3 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true),
+          titles: fakeTitlePass({
+            titles: [{ key: 'k1', title: 'Collision' }],
+          }),
         },
       }),
     );
@@ -778,8 +800,8 @@ describe('groupStories', () => {
         clients: {
           grouping: fakeGrouping({
             newStories: [
-              { key: 'k2', title: 'Même sujet' }, // created first → id 000000000001
-              { key: 'k1', title: 'Même sujet' },
+              { key: 'k2' }, // created first → id 000000000001
+              { key: 'k1' },
             ],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k2', confidence: 0.3 },
@@ -787,9 +809,14 @@ describe('groupStories', () => {
               { articleId: 'a3', newStoryKey: 'k1', confidence: 0.3 },
               { articleId: 'a4', newStoryKey: 'k1', confidence: 0.3 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true),
+          titles: fakeTitlePass({
+            titles: [
+              { key: 'k1', title: 'Même sujet' },
+              { key: 'k2', title: 'Même sujet' },
+            ],
+          }),
         },
       }),
     );
@@ -818,8 +845,8 @@ describe('groupStories', () => {
         clients: {
           grouping: fakeGrouping({
             newStories: [
-              { key: 'k1', title: 'Même sujet' }, // created first → id ffffffffffff
-              { key: 'k2', title: 'Même sujet' }, // created second → id 000000000001
+              { key: 'k1' }, // created first → id ffffffffffff
+              { key: 'k2' }, // created second → id 000000000001
             ],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
@@ -827,9 +854,14 @@ describe('groupStories', () => {
               { articleId: 'a3', newStoryKey: 'k2', confidence: 0.3 },
               { articleId: 'a4', newStoryKey: 'k2', confidence: 0.3 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true),
+          titles: fakeTitlePass({
+            titles: [
+              { key: 'k1', title: 'Même sujet' },
+              { key: 'k2', title: 'Même sujet' },
+            ],
+          }),
         },
       }),
     );
@@ -852,14 +884,16 @@ describe('groupStories', () => {
         existing,
         clients: {
           grouping: fakeGrouping({
-            newStories: [{ key: 'k1', title: 'Collision' }],
+            newStories: [{ key: 'k1' }],
             assignments: [
               { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
               { articleId: 'a2', newStoryKey: 'k1', confidence: 0.3 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true),
+          titles: fakeTitlePass({
+            titles: [{ key: 'k1', title: 'Collision' }],
+          }),
         },
       }),
     );
@@ -867,7 +901,7 @@ describe('groupStories', () => {
     expect(created.slug).toBe('collision-00000000'); // 8-hex slice
   });
 
-  it('re-proposes the title of a Story that gained Articles; the slug never changes', async () => {
+  it('re-titles a Story that gained Articles via the Title pass; the slug never changes', async () => {
     const existing = [story({ articles: [article('a0')] })];
     const outcome = await groupStories(
       input({
@@ -877,9 +911,11 @@ describe('groupStories', () => {
           grouping: fakeGrouping({
             newStories: [],
             assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.9 }],
-            titleUpdates: [{ storyId: 's1', title: 'Meilleur titre' }],
           }),
           membership: fakeMembership(true),
+          titles: fakeTitlePass({
+            titleUpdates: [{ storyId: 's1', title: 'Meilleur titre' }],
+          }),
         },
       }),
     );
@@ -901,9 +937,11 @@ describe('groupStories', () => {
           grouping: fakeGrouping({
             newStories: [],
             assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.9 }],
-            titleUpdates: [{ storyId: 's2', title: 'Titre changé' }],
           }),
           membership: fakeMembership(false),
+          titles: fakeTitlePass({
+            titleUpdates: [{ storyId: 's2', title: 'Titre changé' }],
+          }),
         },
       }),
     );
@@ -940,7 +978,6 @@ describe('groupStories', () => {
               assignments: [
                 { articleId: 'a1', storyId: 's1', confidence: 0.9 },
               ],
-              titleUpdates: [],
             },
             calls,
           ),
@@ -1005,7 +1042,6 @@ describe('groupStories', () => {
           grouping: fakeGrouping({
             newStories: [],
             assignments: [{ articleId: 'a-y', storyId: 's1', confidence: 0.9 }],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true),
         },
@@ -1034,7 +1070,6 @@ describe('groupStories', () => {
             assignments: [
               { articleId: 'a-next', storyId: 's1', confidence: 0.9 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true),
         },
@@ -1077,12 +1112,11 @@ describe('groupStories', () => {
         ],
         clients: {
           grouping: fakeGrouping({
-            newStories: [{ key: 'k1', title: 'Nouvel événement' }],
+            newStories: [{ key: 'k1' }],
             assignments: [
               { articleId: 'a-seed', newStoryKey: 'k1', confidence: 0.3 },
               { articleId: 'a-mate', newStoryKey: 'k1', confidence: 0.3 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true),
         },
@@ -1104,12 +1138,11 @@ describe('groupStories', () => {
         ],
         clients: {
           grouping: fakeGrouping({
-            newStories: [{ key: 'k1', title: 'Nouvel événement' }],
+            newStories: [{ key: 'k1' }],
             assignments: [
               { articleId: 'a-seed', newStoryKey: 'k1', confidence: 0.3 },
               { articleId: 'a-next', newStoryKey: 'k1', confidence: 0.3 },
             ],
-            titleUpdates: [],
           }),
           membership: fakeMembership(true),
         },
@@ -1147,7 +1180,6 @@ describe('groupStories', () => {
               assignments: [
                 { articleId: 'a1', storyId: 's1', confidence: 0.9 },
               ],
-              titleUpdates: [],
             },
             calls,
           ),
@@ -1181,7 +1213,6 @@ describe('groupStories', () => {
           grouping: fakeGrouping({
             newStories: [],
             assignments: [{ articleId: 'a2', storyId: 's1', confidence: 0.9 }],
-            titleUpdates: [],
           }),
           membership: fakeMembership(false),
         },
@@ -1208,7 +1239,6 @@ describe('groupStories', () => {
           grouping: fakeGrouping({
             newStories: [],
             assignments: [{ articleId: 'a1', storyId: 'sf', confidence: 0.9 }], // model must not see it
-            titleUpdates: [],
           }),
           membership: fakeMembership(false),
         },
@@ -1239,18 +1269,23 @@ describe('groupStories', () => {
 
     function nobelProposal() {
       return {
-        newStories: [
-          { key: 'k1', title: nobel.a1 },
-          { key: 'k2', title: nobel.a2 },
-          { key: 'k3', title: nobel.a3 },
-        ],
+        newStories: [{ key: 'k1' }, { key: 'k2' }, { key: 'k3' }],
         assignments: [
           { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
           { articleId: 'a2', newStoryKey: 'k2', confidence: 0.3 },
           { articleId: 'a3', newStoryKey: 'k3', confidence: 0.3 },
         ],
-        titleUpdates: [],
       };
+    }
+
+    function nobelTitles() {
+      return fakeTitlePass({
+        titles: [
+          { key: 'k1', title: nobel.a1 },
+          { key: 'k2', title: nobel.a2 },
+          { key: 'k3', title: nobel.a3 },
+        ],
+      });
     }
 
     it('three same-build twin seeds collapse into one Story; only the twin checks run', async () => {
@@ -1261,6 +1296,7 @@ describe('groupStories', () => {
           clients: {
             grouping: fakeGrouping(nobelProposal()),
             membership: fakeMembership(true, checkCalls),
+            titles: nobelTitles(),
           },
         }),
       );
@@ -1297,17 +1333,13 @@ describe('groupStories', () => {
           ],
           clients: {
             grouping: fakeGrouping({
-              newStories: [
-                { key: 'k1', title: 'Le Sénat adopte le budget 2027' },
-                { key: 'k2', title: 'Victoire du Stade Toulousain en rugby' },
-              ],
+              newStories: [{ key: 'k1' }, { key: 'k2' }],
               assignments: [
                 { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
                 { articleId: 'a2', newStoryKey: 'k1', confidence: 0.3 },
                 { articleId: 'a3', newStoryKey: 'k2', confidence: 0.3 },
                 { articleId: 'a4', newStoryKey: 'k2', confidence: 0.3 },
               ],
-              titleUpdates: [],
             }),
             membership: fakeMembership(true, checkCalls),
           },
@@ -1339,6 +1371,7 @@ describe('groupStories', () => {
           clients: {
             grouping: fakeGrouping(nobelProposal()),
             membership: fakeMembership(false),
+            titles: nobelTitles(),
           },
         }),
       );
@@ -1368,13 +1401,10 @@ describe('groupStories', () => {
           existing,
           clients: {
             grouping: fakeGrouping({
-              newStories: [
-                { key: 'k1', title: 'EN DIRECT – Mobilisation des lycéens' },
-              ],
+              newStories: [{ key: 'k1' }],
               assignments: [
                 { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
               ],
-              titleUpdates: [],
             }),
             membership: fakeMembership(true, checkCalls),
           },
@@ -1415,13 +1445,10 @@ describe('groupStories', () => {
           existing,
           clients: {
             grouping: fakeGrouping({
-              newStories: [
-                { key: 'k1', title: 'EN DIRECT – Mobilisation des lycéens' },
-              ],
+              newStories: [{ key: 'k1' }],
               assignments: [
                 { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
               ],
-              titleUpdates: [],
             }),
             membership: fakeMembership(false),
           },
@@ -1438,16 +1465,12 @@ describe('groupStories', () => {
           articles: nobelArticles(),
           clients: {
             grouping: fakeGrouping({
-              newStories: [
-                { key: 'k1', title: nobel.a1 },
-                { key: 'k2', title: nobel.a2 },
-              ],
+              newStories: [{ key: 'k1' }, { key: 'k2' }],
               assignments: [
                 { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
                 { articleId: 'a2', newStoryKey: 'k2', confidence: 0.3 },
                 { articleId: 'a3', newStoryKey: 'k2', confidence: 0.3 },
               ],
-              titleUpdates: [],
             }),
             membership: fakeMembership(true, checkCalls),
           },
@@ -1491,14 +1514,11 @@ describe('groupStories', () => {
           existing,
           clients: {
             grouping: fakeGrouping({
-              newStories: [
-                { key: 'k1', title: 'EN DIRECT – Mobilisation des lycéens' },
-              ],
+              newStories: [{ key: 'k1' }],
               assignments: [
                 { articleId: 'a1', newStoryKey: 'k1', confidence: 0.3 },
                 { articleId: 'a2', newStoryKey: 'k1', confidence: 0.3 },
               ],
-              titleUpdates: [],
             }),
             membership: fakeMembership(true, checkCalls),
           },
@@ -1544,9 +1564,7 @@ describe('groupStories', () => {
           existing,
           clients: {
             grouping: fakeGrouping({
-              newStories: [
-                { key: 'k1', title: 'EN DIRECT – Mobilisation des lycéens' },
-              ],
+              newStories: [{ key: 'k1' }],
               assignments: [
                 ...fresh.slice(0, 21).map((a) => ({
                   articleId: a.id,
@@ -1555,7 +1573,6 @@ describe('groupStories', () => {
                 })),
                 { articleId: 'a22', newStoryKey: 'k1', confidence: 0.3 },
               ],
-              titleUpdates: [],
             }),
             membership: fakeMembership(true, checkCalls),
           },
@@ -1649,5 +1666,259 @@ describe('memberDigest (ADR-0018)', () => {
       },
     ]);
     expect(tied).toEqual(['Premier ex aequo', 'Second ex aequo']);
+  });
+});
+
+describe('Title pass (ADR-0023)', () => {
+  it('births are titled by the pass, updates carry the full history, slugs derive from titles', async () => {
+    const passCalls1: { input?: import('./title-pass.ts').TitlePassInput }[] =
+      [];
+    const outcome = await groupStories(
+      input({
+        articles: [
+          article('a1', { headline: 'Le Sénat adopte le budget' }),
+          article('a2', { headline: 'Le budget adopté cette nuit' }),
+          article('a3', {
+            headline: 'Le budget adopté',
+            publishedAt: '2026-10-06T11:00:00Z',
+          }),
+        ],
+        existing: [
+          story({ articles: [article('a0', { headline: 'Ancien fait' })] }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a3', storyId: 's1', confidence: 0.9 },
+            ],
+          }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass(
+            {
+              titles: [{ key: 'k1', title: 'Le Sénat adopte le budget' }],
+              titleUpdates: [{ storyId: 's1', title: 'Meilleur titre' }],
+            },
+            passCalls1,
+          ),
+        },
+      }),
+    );
+    const [pass] = passCalls1;
+    // One birth with both headlines; the gaining Story is an update with
+    // its full history (founding Article included), not just the newcomer.
+    expect(pass?.input?.births.map((b) => b.key)).toEqual(['k1']);
+    expect(pass?.input?.births[0]?.headlines).toHaveLength(2);
+    expect(pass?.input?.updates.map((u) => u.storyId)).toEqual(['s1']);
+    expect(pass?.input?.updates[0]?.headlines).toEqual([
+      'Le budget adopté',
+      'Ancien fait',
+    ]);
+    const born = outcome.stories.find((s) => s.id === '000000000001')!;
+    expect(born.title).toBe('Le Sénat adopte le budget');
+    expect(born.slug).toBe('le-senat-adopte-le-budget');
+    expect(outcome.stories.find((s) => s.id === 's1')!.title).toBe(
+      'Meilleur titre',
+    );
+  });
+
+  it('a birth similar to a Story on disk carries it as the previous episode', async () => {
+    const episodeCalls: { input?: import('./title-pass.ts').TitlePassInput }[] =
+      [];
+    await groupStories(
+      input({
+        articles: [
+          article('a1', {
+            headline:
+              'Fusillade dans une école de l’Oregon : l’auteur était un ancien élève',
+          }),
+          article('a2', {
+            headline:
+              'La tuerie de l’Oregon : l’adolescent avait été élève de l’école',
+          }),
+        ],
+        existing: [
+          story({
+            title:
+              'Un adolescent tue quatre personnes dans une école de l’Oregon',
+            storyDay: '2026-10-16',
+            articles: [
+              article('a0', {
+                headline:
+                  'Quatre morts dans une fusillade dans une école de l’Oregon',
+                publishedAt: '2026-10-16T10:00:00Z',
+              }),
+            ],
+          }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+          }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass({}, episodeCalls),
+        },
+      }),
+    );
+    const [pass] = episodeCalls;
+    expect(pass?.input?.births[0]?.episode).toEqual({
+      title: 'Un adolescent tue quatre personnes dans une école de l’Oregon',
+      storyDay: '2026-10-16',
+    });
+  });
+
+  it('an unrelated birth carries no episode context', async () => {
+    const unrelatedCalls: {
+      input?: import('./title-pass.ts').TitlePassInput;
+    }[] = [];
+    await groupStories(
+      input({
+        articles: [
+          article('a1', { headline: 'Angèle sort son troisième album' }),
+          article('a2', { headline: 'Angèle conclut sa tournée à Paris' }),
+        ],
+        existing: [
+          story({
+            title:
+              'Un adolescent tue quatre personnes dans une école de l’Oregon',
+            articles: [article('a0')],
+          }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+          }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass({}, unrelatedCalls),
+        },
+      }),
+    );
+    expect(unrelatedCalls.at(-1)?.input?.births[0]?.episode).toBeUndefined();
+  });
+
+  it('a failed Title pass fails the build', async () => {
+    await expect(
+      groupStories(
+        input({
+          articles: [article('a1')],
+          existing: [story({ articles: [article('a0')] })],
+          clients: {
+            grouping: fakeGrouping({
+              newStories: [],
+              assignments: [
+                { articleId: 'a1', storyId: 's1', confidence: 0.9 },
+              ],
+            }),
+            membership: fakeMembership(true),
+            titles: {
+              label: 'FakeTitles',
+              model: 'fake',
+              title: async () => {
+                throw new Error('Title pass down');
+              },
+            },
+          },
+        }),
+      ),
+    ).rejects.toThrow('Title pass down');
+  });
+
+  it('a birth without a title from the pass fails the build', async () => {
+    await expect(
+      groupStories(
+        input({
+          articles: [article('a1'), article('a2')],
+          clients: {
+            grouping: fakeGrouping({
+              newStories: [{ key: 'k1' }],
+              assignments: [
+                { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+                { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+              ],
+            }),
+            membership: fakeMembership(true),
+            titles: fakeTitlePass({ titles: [] }),
+          },
+        }),
+      ),
+    ).rejects.toThrow(/no title for new Story key k1/);
+  });
+
+  it('updates never include Stories born this build', async () => {
+    const updateCalls: { input?: import('./title-pass.ts').TitlePassInput }[] =
+      [];
+    await groupStories(
+      input({
+        articles: [article('a1'), article('a2')],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+          }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass({}, updateCalls),
+        },
+      }),
+    );
+    expect(updateCalls.at(-1)?.input?.updates).toEqual([]);
+  });
+
+  it('the pass is skipped when nothing was born and nothing gained Articles', async () => {
+    const skippedCalls: { input?: import('./title-pass.ts').TitlePassInput }[] =
+      [];
+    const outcome = await groupStories(
+      input({
+        articles: [],
+        existing: [story({ articles: [article('a0')] })],
+        clients: {
+          grouping: fakeGrouping({ newStories: [], assignments: [] }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass(null, skippedCalls),
+        },
+      }),
+    );
+    expect(outcome.changed.size).toBe(0);
+    expect(skippedCalls).toHaveLength(0);
+  });
+
+  it('episodeContext ranks the best overlap and respects the threshold', () => {
+    const oregon = story({
+      title: 'Un adolescent tue quatre personnes dans une école de l’Oregon',
+      storyDay: '2026-10-16',
+      articles: [
+        article('a0', {
+          headline:
+            'Quatre morts dans une fusillade dans une école de l’Oregon',
+        }),
+      ],
+    });
+    const other = story({ title: 'Angèle sort son troisième album' });
+    expect(
+      episodeContext(
+        [
+          'Fusillade dans une école de l’Oregon : l’auteur était un ancien élève',
+        ],
+        [other, oregon],
+      ),
+    ).toEqual({
+      title: 'Un adolescent tue quatre personnes dans une école de l’Oregon',
+      storyDay: '2026-10-16',
+    });
+    expect(
+      episodeContext(['Angèle en concert à Paris'], [oregon]),
+    ).toBeUndefined();
   });
 });

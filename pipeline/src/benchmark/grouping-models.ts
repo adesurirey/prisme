@@ -311,20 +311,8 @@ const strictGroupingSchema = (): Record<string, unknown> => {
           additionalProperties: false,
         },
       },
-      titleUpdates: {
-        type: 'array',
-        items: {
-          type: 'object',
-          properties: {
-            storyId: { type: 'string' },
-            title: { type: 'string' },
-          },
-          required: ['storyId', 'title'],
-          additionalProperties: false,
-        },
-      },
     },
-    required: ['newStories', 'assignments', 'titleUpdates'],
+    required: ['newStories', 'assignments'],
     additionalProperties: false,
   };
 };
@@ -352,9 +340,8 @@ export function chunkedGroupingModel(
       for (let i = 0; i < input.articles.length; i += pageSize) {
         pages.push(input.articles.slice(i, i + pageSize));
       }
-      const newStories: { key: string; title: string }[] = [];
+      const newStories: { key: string }[] = [];
       const assignments: GroupingProposal['assignments'] = [];
-      const titleUpdates: GroupingProposal['titleUpdates'] = [];
       let inputTokens = 0;
       let outputTokens = 0;
       let costUsd: number | null = 0;
@@ -373,7 +360,7 @@ export function chunkedGroupingModel(
           (call.proposal?.newStories ?? []).map((s) => s.key),
         );
         for (const story of call.proposal?.newStories ?? []) {
-          newStories.push({ key: `${prefix}${story.key}`, title: story.title });
+          newStories.push({ key: `${prefix}${story.key}` });
         }
         for (const a of call.proposal?.assignments ?? []) {
           // Same recovery as the grader, but per page: a storyId naming
@@ -395,9 +382,6 @@ export function chunkedGroupingModel(
             confidence: a.confidence,
           });
         }
-        for (const t of call.proposal?.titleUpdates ?? []) {
-          titleUpdates.push(t);
-        }
         const gaveUp =
           call.proposal == null ||
           (call.proposal.assignments.length === 0 && articles.length > 0);
@@ -413,7 +397,7 @@ export function chunkedGroupingModel(
         }
       }
       return {
-        proposal: { newStories, assignments, titleUpdates },
+        proposal: { newStories, assignments },
         inputTokens,
         outputTokens,
         costUsd,
