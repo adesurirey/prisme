@@ -57,7 +57,10 @@ infers there is no limit — and the proper-noun rule folds into the
 shared-facts clause as four words (« noms propres compris »), since the
 seed guard matches title tokens. Downstream already
 tolerates any length: slugs truncate at 64 characters (`slugify`), the UI
-has no title clamp.
+has no title clamp. The same amendment repartitions the title rules into
+three bullets — fidelity, content, style — one job each; no rule text
+changes, the dense single paragraph was split (and the duplicated
+« citation » : … interdiction deduplicated).
 
 ## Consequences
 

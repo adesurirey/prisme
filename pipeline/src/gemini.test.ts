@@ -61,6 +61,12 @@ describe('groupingPrompt (ADR-0018)', () => {
     expect(prompt).not.toContain('110 caractères');
     expect(prompt).not.toContain('limite de longueur');
     expect(prompt).toContain('noms propres compris');
+    // The title rules span three bullets — fidelity, content, style — one
+    // job each, instead of one dense paragraph (ADR-0013 amendment).
+    expect(prompt).toContain(
+      '- Le contenu du titre vient des titres du groupe',
+    );
+    expect(prompt).toContain('- Style du titre : un acteur nommé');
   });
 });
 
