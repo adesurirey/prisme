@@ -1,10 +1,21 @@
 {
   "id": "2e76098fe811",
   "slug": "un-policier-de-22-ans-tue-lors-d-une-intervention-a-nantes",
-  "title": "Un policier de 22 ans tué lors d'une intervention à Nantes",
+  "title": "Un policier de 22 ans est tué après avoir été percuté par une voiture lors d'une intervention près de Nantes",
   "createdAt": "2026-10-17T08:01:13.238Z",
   "storyDay": "2026-10-17",
   "articles": [
+    {
+      "id": "15b5415c7bea",
+      "outletId": "bfmtv",
+      "headline": "Un policier de 22 ans meurt renversé par une voiture lors d'une intervention près de Nantes",
+      "url": "https://www.bfmtv.com/police-justice/un-policier-de-22-ans-meurt-renverse-par-une-voiture-lors-d-une-intervention-pres-de-nantes_AN-202610170130.html",
+      "publishedAt": "2026-10-17T08:07:22.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/KcSqRchbJq-kSUfUuIhMyDqnUPM=/0x105:2048x1257/800x0/images/Un-ecusson-de-la-police-nationale-1758376.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "e5b0cb486deb",
       "outletId": "le-parisien",
@@ -15,6 +26,18 @@
       "datedAtCollection": true,
       "kind": "news",
       "section": "misc"
+    },
+    {
+      "id": "70011d67bb29",
+      "outletId": "le-figaro",
+      "headline": "Un policier meurt dans un accident lors d'une intervention à Nantes",
+      "url": "https://www.lefigaro.fr/faits-divers/un-policier-meurt-dans-un-accident-lors-d-une-intervention-a-nantes-20261017",
+      "publishedAt": "2026-10-17T07:55:34.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2250_crop/2026/10/17/42a55e60b0bab1321fbdbb126857b4b78c3ce19b27d95b529238a8773dabfba7.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
     },
     {
       "id": "f0024a0e4235",
@@ -55,17 +78,17 @@
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Un jeune fonctionnaire de vingt-deux ans a perdu la vie la nuit dernière près de Nantes.",
-      "Le drame s'est produit sur le boulevard périphérique à la hauteur d'Orvault.",
-      "L'agent a été mortellement fauche par un véhicule alors qu'il participait à une opération de police."
+      "Un agent de la paix de vingt-deux ans a succombé à ses blessures la nuit dernière sur le boulevard circulaire.",
+      "Le drame s'est déroulé à Saint-Herblain en Loire-Atlantique lors d'une opération d'interpellation.",
+      "Le fonctionnaire a été mortellement percuté alors qu'il tentait d'appréhender des suspects à pied."
     ],
     "droite": [
-      "Un membre des forces de l'ordre de vingt-deux ans a succombé à ses blessures lors d'une mission nocturne sur le périphérique nantais.",
-      "Il a été percuté par une voiture tierce en tentant d'intercepter des fuyards à pied.",
-      "Les autorités préfectorales ont confirmé les circonstances tragiques de cet accident survenu en pleine intervention."
+      "Un membre des forces de l'ordre de vingt-deux ans a perdu la vie en mission nocturne.",
+      "Il a été fauché par un véhicule tiers en tentant d'intercepter des individus en fuite.",
+      "La préfecture a validé les détails de cet événement dramatique survenu sur l'axe nantais."
     ]
   },
-  "differences": "Les médias du centre et de la droite relatent les mêmes faits tragiques concernant le décès du jeune policier fauché sur le périphérique de Nantes. La droite apporte davantage de précisions contextuelles en mentionnant la nature exacte de l'intervention, à savoir la poursuite à pied d'individus soupçonnés de dégradations, et cite explicitement les communiqués de la préfecture et de la police nationale, tandis que le centre privilégie une approche plus synthétique centrée sur l'émotion et la localisation précise du drame.",
+  "differences": "Les deux camps s'accordent sur la description factuelle du drame impliquant un jeune policier fauché sur le périphérique nantais. Le centre affine la localisation exacte à Saint-Herblain et précise l'opération d'interpellation de fuyards, tandis que la droite conserve une perspective proche de ses publications précédentes en insistant sur la confirmation institutionnelle des autorités préfectorales.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 6
 }
