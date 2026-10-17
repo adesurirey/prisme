@@ -9,7 +9,7 @@ import type { ConfirmedTopic } from './grouping.ts';
  * topicId, and the minting of each new Topic's public slug from its label:
  * `slugFor` over the slugs the registry already uses, so the registry's own
  * namespace never collides and never touches a Story slug. The suffix
- * source is the topicId (the founding Story's slug) — immutable, so the
+ * source is the topicId (the founding Story's id) — immutable, so the
  * minting is deterministic no matter when a Topic is confirmed.
  */
 export function mergeTopicRegistry(

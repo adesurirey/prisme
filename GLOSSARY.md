@@ -56,7 +56,7 @@ The neutral French name of a Story, written by the Title pass (ADR-0023) — nev
 _Avoid_: Story headline
 
 **Episode**:
-A later Story covering the same news event as an earlier one — the day-by-day continuation the reader follows from titles alone. A Story's Ingestion window closed, or the new development is a distinct fact: a new Episode is born (ADR-0017, ADR-0018), and the Title pass is shown the previous Episode's title so the new one carries what changed (ADR-0023).
+A later Story covering the same news event as an earlier one — the day-by-day continuation the reader follows from titles alone. A Story's Ingestion window closed, or the new development is a distinct fact: a new Episode is born (ADR-0017, ADR-0018), and the Title pass is shown the previous Episode's title — when its thread is confirmed, with the Topic's label — so the new one carries what changed (ADR-0023, ADR-0024).
 _Avoid_: Follow-up, part 2, sequel
 
 **Live Story**:

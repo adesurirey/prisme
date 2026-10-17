@@ -1,8 +1,8 @@
 # Topics are proposed by headline overlap and confirmed by Membership
 
-The Title pass (ADR-0023) already computes, for every new Story, the previous
-**Episode**: the most headline-similar Story on disk (`episodeContext`, token
-overlap ≥ 0.25). A backtest of that mechanism over the whole archive — 5 days,
+The Title pass (ADR-0023) needs, for every new Story, the previous
+**Episode**: the most headline-similar Story on disk (token overlap ≥ 0.25).
+A backtest of that mechanism over the whole archive — 5 days,
 160 Stories, 52 proposed links, graded by hand (`pipeline/src/episode-backtest.ts`,
 free to re-run) — graded **28 true, 13 partial (same thread, distinct events),
 11 false (21 %)**. The false links share one cause: generic vocabulary (sports
@@ -90,7 +90,7 @@ generous against the 0–3 day range the backtest measured for true links, so
 sagas that breathe keep their thread; the backtest revises the window as the
 archive grows. An event resuming after the window founds a new Topic.
 
-- A birth with an `episodeContext` match (overlap ≥ 0.25) is Membership-checked
+- A birth with a `bestEpisodeMatch` match (overlap ≥ 0.25) is Membership-checked
   against that episode: "same subject?" Confirmed — the birth inherits the
   episode's Topic; refused — the birth founds a new Topic. Refusals cost one
   cheap check; confirmations inherit for free.

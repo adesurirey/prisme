@@ -395,17 +395,6 @@ export function bestEpisodeMatch(
 
 /** The previous episode as the Title pass consumes it (ADR-0023): title and
  * day only — the Title pass never sees Story ids. */
-export function episodeContext(
-  headlines: string[],
-  existing: Story[],
-  day: string,
-): { title: string; storyDay: string } | undefined {
-  const story = bestEpisodeMatch(headlines, existing, day);
-  return story == null
-    ? undefined
-    : { title: story.title, storyDay: story.storyDay };
-}
-
 /** A Topic confirmed this build: a birth inherited it, so the thread has
  * reached two Episodes (ADR-0024). The run hands these to the registry
  * module, which owns the merge and mints the public slug — grouping itself

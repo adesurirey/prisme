@@ -1,6 +1,6 @@
 import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
-import { episodeContext, groupStories, memberDigest } from './grouping.ts';
+import { bestEpisodeMatch, groupStories, memberDigest } from './grouping.ts';
 import { missingMembershipChecker } from './policy.ts';
 
 /** Deterministic 12-hex ids, so slug suffixes are predictable. */
@@ -1914,7 +1914,7 @@ describe('Title pass (ADR-0023)', () => {
     expect(skippedCalls).toHaveLength(0);
   });
 
-  it('episodeContext ranks the best overlap and respects the threshold', () => {
+  it('bestEpisodeMatch ranks the best overlap and respects the threshold', () => {
     const oregon = story({
       title: 'Un adolescent tue quatre personnes dans une école de l’Oregon',
       storyDay: '2026-10-05',
@@ -1927,19 +1927,16 @@ describe('Title pass (ADR-0023)', () => {
     });
     const other = story({ title: 'Angèle sort son troisième album' });
     expect(
-      episodeContext(
+      bestEpisodeMatch(
         [
           'Fusillade dans une école de l’Oregon : l’auteur était un ancien élève',
         ],
         [other, oregon],
         '2026-10-06',
       ),
-    ).toEqual({
-      title: 'Un adolescent tue quatre personnes dans une école de l’Oregon',
-      storyDay: '2026-10-05',
-    });
+    ).toBe(oregon);
     expect(
-      episodeContext(['Angèle en concert à Paris'], [oregon], '2026-10-06'),
+      bestEpisodeMatch(['Angèle en concert à Paris'], [oregon], '2026-10-06'),
     ).toBeUndefined();
   });
 
@@ -1957,7 +1954,7 @@ describe('Title pass (ADR-0023)', () => {
     // 8 days before 2026-10-06: beyond EPISODE_MAX_AGE_DAYS (7) — the story
     // is lexically a match but stale for the reader and for Topics.
     expect(
-      episodeContext(
+      bestEpisodeMatch(
         [
           'Fusillade dans une école de l’Oregon : l’auteur était un ancien élève',
         ],
@@ -1967,7 +1964,7 @@ describe('Title pass (ADR-0023)', () => {
     ).toBeUndefined();
     // Exactly 7 days: at the window edge, still the previous episode.
     expect(
-      episodeContext(
+      bestEpisodeMatch(
         [
           'Fusillade dans une école de l’Oregon : l’auteur était un ancien élève',
         ],
