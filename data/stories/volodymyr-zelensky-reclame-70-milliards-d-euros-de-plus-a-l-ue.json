@@ -45,7 +45,7 @@
       "url": "https://www.lemonde.fr/international/live/2026/10/16/en-direct-guerre-en-ukraine-nous-ne-lacherons-pas-l-ukraine-il-faut-tenir-la-ligne-face-aux-ambiguites-insiste-emmanuel-macron_6791198_3210.html",
       "publishedAt": "2026-10-16T18:41:47.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/16/118/0/5000/2500/644/322/60/0/13f25af_ftp-1-dyaraubxyu29-2026-10-16t172955z-1471415968-rc2h4oarl7t5-rtrmadp-3-eu-summit.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "live",
       "section": "world",
       "everFrontPage": true
@@ -71,6 +71,18 @@
       "frontPage": false,
       "kind": "news",
       "section": "world"
+    },
+    {
+      "id": "6dca2bb2509b",
+      "outletId": "20-minutes",
+      "headline": "Guerre en Ukraine : Trump s’énerve, l’Europe fait bloc autour de Zelensky et Poutine se veut conquérant",
+      "url": "https://www.20minutes.fr/monde/ukraine/4254969-20261016-guerre-ukraine-trump-enerve-europe-fait-bloc-autour-zelensky-poutine-veut-conquerant?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-16T17:40:28.000Z",
+      "imageUrl": "https://img.20mn.fr/t1Bx28vZSleiRGMyGM3GdSk/1200x768_le-president-donald-trump-s-adresse-a-des-journalistes-sur-la-pelouse-sud-de-la-maison-blanche-le-vendredi-16-octobre-2026-a-washington-ap-photo-jacquelyn-martin-dcpu546-26289625451695-2610161924",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "f3bf5289ac8e",
@@ -126,6 +138,18 @@
       "frontPage": false,
       "kind": "news",
       "section": "world"
+    },
+    {
+      "id": "461788cd7cdb",
+      "outletId": "le-figaro",
+      "headline": "Rassemblés autour de Volodymyr Zelensky, les Européens apprennent à faire sans Donald Trump",
+      "url": "https://www.lefigaro.fr/international/rassembles-autour-de-volodymyr-zelensky-les-europeens-apprennent-a-faire-sans-donald-trump-20261016",
+      "publishedAt": "2026-10-16T17:05:00.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2068_crop/2026/10/16/26c9e7c928972104a1a796a23cba919ef8b18c41b92ceec69a49f35457c31897.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "d1eadc6975dd",
@@ -241,6 +265,17 @@
       "section": "world"
     },
     {
+      "id": "643f02728e14",
+      "outletId": "humanite",
+      "headline": "Guerre en Ukraine : à Bruxelles, les Vingt Sept au secours de Zelensky « trahi » par Trump",
+      "url": "https://www.humanite.fr/monde/bruxelles/guerre-en-ukraine-a-bruxelles-les-vingt-sept-au-secours-de-zelensky-trahi-par-trump",
+      "publishedAt": "2026-10-16T12:40:48.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/europe-zelensky.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "b548d6d04c09",
       "outletId": "le-monde",
       "headline": "EN DIRECT, guerre en Ukraine : Volodymyr Zelensky demande à l’UE 70 milliards d’euros en plus en 2027",
@@ -271,5 +306,5 @@
   },
   "differences": "La gauche et le centre se concentrent sur la demande de fonds de Kiev et l'affichage d'unité européenne à Bruxelles, le centre mettant particulièrement l'accent sur l'onde de choc géopolitique provoquée par Donald Trump et la prudence d'Emmanuel Macron face à la somme exigée. La droite élargit quant à elle le spectre en articulant l'actualité européenne avec les tensions transatlantiques et les débats de politique intérieure française concernant la pérennité de l'effort de guerre.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 22
+  "summarizedArticleCount": 25
 }

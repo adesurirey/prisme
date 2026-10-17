@@ -6,6 +6,17 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "de48680217b0",
+      "outletId": "cnews",
+      "headline": "Léon XIV : le Vatican publie les premières photos touchantes du pape depuis son opération chirurgicale",
+      "url": "https://www.cnews.fr/monde/2026-10-16/leon-xiv-le-vatican-publie-les-premieres-photos-touchantes-du-pape-depuis-son",
+      "publishedAt": "2026-10-16T14:07:50.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-16t123622z_1016416884_rc2a4oa7rwfx_rtrmadp_3_pope-health-taille1200_6ad229aa4f158.jpg?h=4698561f&itok=BUItqm-s",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "96e58d38ea67",
       "outletId": "europe-1",
       "headline": "Le Vatican publie les premières photos du pape depuis son opération",
@@ -15,6 +26,18 @@
       "frontPage": false,
       "kind": "news",
       "section": "society"
+    },
+    {
+      "id": "0d3907111ff7",
+      "outletId": "20-minutes",
+      "headline": "Léon XIV : Le Vatican publie les premières photos du pape depuis son opération",
+      "url": "https://www.20minutes.fr/monde/4255012-20261016-pape-vatican-publie-premieres-photos-leon-xiv-depuis-operation?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-16T13:03:04.000Z",
+      "imageUrl": "https://img.20mn.fr/57hsFgXSQn2Uv7QNAkyOLyk/1200x768_cette-photo-publiee-par-vatican-media-le-vendredi-16-octobre-2026-montre-le-pape-leon-xiv-celebrant-la-messe-a-la-polyclinique-agostino-gemelli-de-rome-ou-il-est-en-convalescence-apres-avoir-subi-une-ablation-d-un-cancer-du-poumon-droit-vatican-media-via-ap-xds1228-26289446705531-ap-donne-acces-a-cette-photo-distribuee-publiquement-et-publiee-par-vatican-media-credit-obligatoire-recadrage-alternatif-de-xds128-du-vendredi-16-octobre-2026-2610161437",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
     },
     {
       "id": "722cc78bec1b",
@@ -29,5 +52,22 @@
     }
   ],
   "section": "society",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le souverain pontife récupère à l'établissement hospitalier Gemelli de Rome.",
+      "L'intervention chirurgicale a eu lieu mardi afin d'extraire une masse cancéreuse pulmonaire."
+    ],
+    "centre": [
+      "Le Saint-Siège a diffusé les premiers clichés officiels montrant le chef de l'Église catholique.",
+      "L'ecclésiastique poursuit sa convalescence romaine à la suite de son passage au bloc opératoire."
+    ],
+    "droite": [
+      "Des photographies rassurantes montrent le pontife debout en tenue religieuse aux côtés de son entourage.",
+      "Le pape a tenu à célébrer un office religieux en compagnie du personnel soignant de l'hôpital romain."
+    ]
+  },
+  "differences": "La droite, illustrée par CNews et Europe 1, privilégie le registre émotionnel et visuel en insistant sur les détails rassurants des clichés, comme la messe célébrée avec les soignants et la posture debout du pape. À l'inverse, le centre (La Croix) et le centre-gauche (20 Minutes) adoptent un ton plus sobre et factuel, se concentrant principalement sur le lieu de convalescence et le contexte médical de l'intervention sans superlatifs.",
+  "promptVersion": "sum-2",
+  "summarizedArticleCount": 4
 }

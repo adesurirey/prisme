@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-17T00:01:14.592Z",
+  "builtAt": "2026-10-17T01:01:14.896Z",
   "stories": [
     {
       "id": "35b8c2fd850d",
@@ -42,6 +42,17 @@
           "kind": "news",
           "section": "world",
           "everFrontPage": true
+        },
+        {
+          "id": "f275be756b80",
+          "outletId": "le-figaro",
+          "headline": "Trump et le puissant lobby américain des armes, la NRA, saluent l’homme qui a abattu le tireur dans une école américaine",
+          "url": "https://www.lefigaro.fr/international/trump-qualifie-de-heros-l-homme-qui-a-abattu-le-tireur-dans-une-ecole-americaine-en-oregon-20261016",
+          "publishedAt": "2026-10-16T19:00:00.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/16/21a3dccfc320b6c191b7b3c6b1d24cc79a4ddf9ab19ef185526d1e8ab4c9ef9e.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
         },
         {
           "id": "1b4f6d196229",
@@ -226,12 +237,12 @@
         "droite": [
           "Une attaque armée menée par un adolescent dans une école primaire de l'Oregon a fait quatre morts et de multiples blessés graves.",
           "Un riverain armé, père de famille et charpentier de profession, a pourchassé et stoppé le tireur à l'intérieur de l'établissement.",
-          "La droite met en avant le portrait et l'action héroïque de ce citoyen ayant protégé ses propres enfants scolarisés sur place."
+          "Le Figaro dresse le portrait détaillé de ce père de famille armé qui s'est lancé à la poursuite du tireur pour protéger ses filles scolarisées sur place."
         ]
       },
-      "differences": "La droite s'aligne désormais sur le centre en consacrant des portraits détaillés au riverain armé érigé en héros, tandis que la gauche reste focalisée sur le bilan humain et le déroulement factuel de la tragédie sans personnaliser l'intervention citoyenne.",
+      "differences": "La droite, à l'instar du Figaro, accentue la mise en avant du profil héroïque du riverain armé ayant agi pour sauver ses propres enfants, s'alignant sur le centre qui valorise cette intervention tout en l'associant au débat sur les armes. De son côté, la gauche persiste à centrer sa couverture sur le bilan humain dramatique et le déroulement factuel des violences, se tenant à l'écart de toute personnalisation héroïque de l'acte citoyen.",
       "promptVersion": "sum-2",
-      "summarizedArticleCount": 18
+      "summarizedArticleCount": 19
     },
     {
       "id": "ee2c93b805f8",
@@ -441,6 +452,316 @@
       "summarizedArticleCount": 16
     },
     {
+      "id": "1af6ecd96c66",
+      "slug": "volodymyr-zelensky-reclame-70-milliards-d-euros-de-plus-a-l-ue",
+      "title": "Volodymyr Zelensky réclame 70 milliards d'euros de plus à l'UE",
+      "createdAt": "2026-10-16T14:01:29.169Z",
+      "storyDay": "2026-10-16",
+      "articles": [
+        {
+          "id": "a883fdf67987",
+          "outletId": "france-24",
+          "headline": "Boudé par Trump, Volodymyr Zelensky se tourne une nouvelle fois vers les Européens",
+          "url": "https://www.france24.com/fr/europe/20261016-boud%C3%A9-trump-volodymyr-zelensky-tourne-nouvelle-fois-vers-europ%C3%A9ens",
+          "publishedAt": "2026-10-16T20:38:01.000Z",
+          "imageUrl": "https://s.france24.com/media/display/c6338998-c99a-11f1-9ea4-6313a763b466/w:1024/p:16x9/000-D3GY8H7.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "345751a287b1",
+          "outletId": "france-24",
+          "headline": "Secoué par Trump, Zelensky se tourne vers les Européens",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261016-secou%C3%A9-par-trump-zelensky-se-tourne-vers-les-europ%C3%A9ens",
+          "publishedAt": "2026-10-16T19:26:09.000Z",
+          "imageUrl": "https://s.france24.com/media/display/0a25b38a-c98f-11f1-9b8e-2d1c143cdef3/w:1024/p:16x9/Zelensky-00-00-02-19-Still002.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "b581fa63da90",
+          "outletId": "tf1-info",
+          "headline": "Ukraine : Zelensky appelle l'Europe à l'aide",
+          "url": "https://www.tf1info.fr/international/videos/video-ukraine-zelensky-appelle-l-europe-a-l-aide-65773-2470436.html",
+          "publishedAt": "2026-10-16T18:55:16.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/576/ukraine-zelensky-appelle-l-europe-a-l-aide-8e3408-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "77661ec29723",
+          "outletId": "le-monde",
+          "headline": "EN DIRECT, guerre en Ukraine : « Nous ne lâcherons pas l’Ukraine », il faut « tenir la ligne » face aux « ambiguïtés », insiste Emmanuel Macron",
+          "url": "https://www.lemonde.fr/international/live/2026/10/16/en-direct-guerre-en-ukraine-nous-ne-lacherons-pas-l-ukraine-il-faut-tenir-la-ligne-face-aux-ambiguites-insiste-emmanuel-macron_6791198_3210.html",
+          "publishedAt": "2026-10-16T18:41:47.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/16/118/0/5000/2500/644/322/60/0/13f25af_ftp-1-dyaraubxyu29-2026-10-16t172955z-1471415968-rc2h4oarl7t5-rtrmadp-3-eu-summit.JPG",
+          "frontPage": false,
+          "kind": "live",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "90233da16f8a",
+          "outletId": "le-monde",
+          "headline": "L’UE « ne lâchera pas l’Ukraine », assure Emmanuel Macron, dénonçant les « ambiguïtés » de certains, en allusion à Donald Trump",
+          "url": "https://www.lemonde.fr/politique/article/2026/10/16/aide-a-l-ukraine-emmanuel-macron-temporise-apres-la-demande-de-kiev-d-une-rallonge-de-70-milliards-d-euros_6795632_823448.html",
+          "publishedAt": "2026-10-16T17:54:29.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/16/38/0/1024/512/644/322/60/0/e42eb0b_ftp-1-uuvmy5jlltpn-afp-d3ce9jl-1024.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "93426b7e4f95",
+          "outletId": "bfmtv",
+          "headline": "\"Nous ne lâcherons pas l'Ukraine\", promet Emmanuel Macron",
+          "url": "https://www.bfmtv.com/international/asie/russie/video-nous-ne-lacherons-pas-l-ukraine-promet-emmanuel-macron_VN-202610160759.html",
+          "publishedAt": "2026-10-16T17:42:25.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/831DV2a2pnWlWCm9xfq1xLUcsU4=/0x0:1280x720/800x0/images/Nous-ne-lacherons-pas-l-Ukraine-promet-Emmanuel-Macron-2366902.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "6dca2bb2509b",
+          "outletId": "20-minutes",
+          "headline": "Guerre en Ukraine : Trump s’énerve, l’Europe fait bloc autour de Zelensky et Poutine se veut conquérant",
+          "url": "https://www.20minutes.fr/monde/ukraine/4254969-20261016-guerre-ukraine-trump-enerve-europe-fait-bloc-autour-zelensky-poutine-veut-conquerant?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-16T17:40:28.000Z",
+          "imageUrl": "https://img.20mn.fr/t1Bx28vZSleiRGMyGM3GdSk/1200x768_le-president-donald-trump-s-adresse-a-des-journalistes-sur-la-pelouse-sud-de-la-maison-blanche-le-vendredi-16-octobre-2026-a-washington-ap-photo-jacquelyn-martin-dcpu546-26289625451695-2610161924",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "f3bf5289ac8e",
+          "outletId": "franceinfo",
+          "headline": "\"Nous ne lâcherons pas l'Ukraine\", promet Emmanuel Macron à l'issue d'un sommet européen avec Volodymyr Zelensky",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/nous-ne-lacherons-pas-l-ukraine-promet-emmanuel-macron-a-l-issue-d-un-sommet-europeen-avec-volodymyr-zelensky_8240845.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-16T17:32:10.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/11qA1I3qWI7QGl6P0dXYow9XInc/0x53:1024x629/432x243/filters:format(jpg)/2026/10/16/6ad25df6c358f683349819.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "f8d4512a339b",
+          "outletId": "la-croix",
+          "headline": "À Bruxelles, Volodymyr Zelensky, lâché par Trump, se tourne vers les Européens",
+          "url": "https://www.la-croix.com/international/a-bruxelles-volodymyr-zelensky-lache-par-trump-se-tourne-vers-les-europeens-20261016",
+          "publishedAt": "2026-10-16T17:29:13.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/16/2564335-vendredi-16-octobre-le-president-volodymyr-zelensk.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "5194516ff2be",
+          "outletId": "bfmtv",
+          "headline": "Emmanuel Macron assure que l'Europe \"ne lâchera pas l'Ukraine\"",
+          "url": "https://www.bfmtv.com/politique/video-emmanuel-macron-assure-que-l-europe-ne-lachera-pas-l-ukraine_VN-202610160746.html",
+          "publishedAt": "2026-10-16T17:21:42.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/vxzyL2sFxMp1mb22L79fAgKMob8=/0x0:1280x720/800x0/images/Emmanuel-Macron-assure-que-l-Europe-ne-lachera-pas-l-Ukraine-2366895.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "69bb3baa7eb9",
+          "outletId": "bfmtv",
+          "headline": "\"Nous ne lâcherons pas l'Ukraine\", assure Emmanuel Macron",
+          "url": "https://www.bfmtv.com/politique/video-nous-ne-lacherons-pas-l-ukraine-assure-emmanuel-macron_VN-202610160740.html",
+          "publishedAt": "2026-10-16T17:18:06.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/X_cuVvjAakWdLtXGoneZlsm6Mbw=/0x0:1280x720/800x0/images/Nous-ne-lacherons-pas-l-Ukraine-assure-Emmanuel-Macron-2366887.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "f7c3ce607ac0",
+          "outletId": "bfmtv",
+          "headline": "\"Nous ne lâcherons pas l'Ukraine\": Emmanuel Macron réaffirme le soutien de la France à Kiev en marge du Conseil européen",
+          "url": "https://www.bfmtv.com/international/europe/nous-ne-lacherons-pas-l-ukraine-emmanuel-macron-reaffirme-le-soutien-de-la-france-a-kiev-en-marge-du-conseil-europeen_AN-202610160737.html",
+          "publishedAt": "2026-10-16T17:17:37.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/DcS1ZLI3SdL1s8jDIsckr-XPlZQ=/0x0:1920x1080/800x0/images/Le-president-de-la-Republique-Emmanuel-Macron-prend-la-parole-depuis-Bruxelles-vendredi-16-octobre-2366880.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "461788cd7cdb",
+          "outletId": "le-figaro",
+          "headline": "Rassemblés autour de Volodymyr Zelensky, les Européens apprennent à faire sans Donald Trump",
+          "url": "https://www.lefigaro.fr/international/rassembles-autour-de-volodymyr-zelensky-les-europeens-apprennent-a-faire-sans-donald-trump-20261016",
+          "publishedAt": "2026-10-16T17:05:00.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2068_crop/2026/10/16/26c9e7c928972104a1a796a23cba919ef8b18c41b92ceec69a49f35457c31897.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "d1eadc6975dd",
+          "outletId": "le-jdd",
+          "headline": "Guerre en Ukraine : Zelensky réclame 70 milliards d’euros supplémentaires à l’Union européenne",
+          "url": "https://www.lejdd.fr/International/guerre-en-ukraine-zelensky-reclame-70-milliards-deuros-supplementaires-a-lunion-europeenne-186201",
+          "publishedAt": "2026-10-16T15:59:51.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/16/17/sipa_shutterstock41419767_000101.jpg?VersionId=QjgYvN7075ojNdRETsNZK554h3UOSCuf",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "eda12abaebf1",
+          "outletId": "le-figaro",
+          "headline": "Guerre en Ukraine : Volodymyr Zelensky réclame 70 milliards d’euros supplémentaires en 2027 à l’Union européenne",
+          "url": "https://www.lefigaro.fr/international/guerre-en-ukraine-volodymyr-zelensky-reclame-70-milliards-d-euros-supplementaires-en-2027-a-l-union-europeenne-20261016",
+          "publishedAt": "2026-10-16T15:44:37.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2089_crop/2026/10/16/9be8ca00dca21baf3a0f7953446d59699071e9a933ce578038fa1a571008bd2e.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "d0e1770ec4a9",
+          "outletId": "atlantico",
+          "headline": "Guerre en Ukraine : Volodymyr Zelensky demande à l'Union européenne 70 milliards d'euros d'aide supplémentaires",
+          "url": "https://atlantico.fr/article/decryptage/guerre-en-ukraine-volodymyr-zelensky-demande-a-l-union-europeenne-70-milliards-d-euros-d-aide-supplementaires-conseil-europeen-Bruxelles",
+          "publishedAt": "2026-10-16T15:32:00.000Z",
+          "imageUrl": "https://atlantico.codexcdn.net/assets/asFRctySTpX3lDQIQ.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "d79b67701504",
+          "outletId": "le-monde",
+          "headline": "EN DIRECT, guerre en Ukraine : Ursula von der Leyen confirme le trou de 70 milliards d’euros de l’Ukraine en 2027, qui « devra être comblé »",
+          "url": "https://www.lemonde.fr/international/live/2026/10/16/en-direct-guerre-en-ukraine-il-est-plus-facile-de-communiquer-avec-donald-trump-qu-avec-vladimir-poutine-affirme-volodymyr-zelensky_6791198_3210.html",
+          "publishedAt": "2026-10-16T15:21:07.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/16/3/0/5859/2929/644/322/60/0/749c34d_ftp-1-o4qvkyj8zviu-bead7cdd538c492e85ca99454e02f59a-0-6371e95e776440cb8e03723a5b714894.jpg",
+          "frontPage": false,
+          "kind": "live",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "290e7b009b67",
+          "outletId": "lexpress",
+          "headline": "Guerre en Ukraine : le plaidoyer de Volodymyr Zelensky à l'UE pour une rallonge de 70 milliards d'euros",
+          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-le-plaidoyer-de-volodymyr-zelensky-a-lue-pour-une-rallonge-de-70-milliards-deuros-EBQPX3MIK5B45MQFOO3GCZYHHI/",
+          "publishedAt": "2026-10-16T15:15:00.000Z",
+          "imageUrl": "https://www.lexpress.fr/resizer/v2/UPZOMYXEJJH47G3U4WYE2DZ2N4.jpg?auth=b50b2118334dfff1c2dec02f7a2f5459915a14ae10cbc82d8dee20efbeaa81d1&smart=true&width=4300&height=2868",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "1ccc9e3d68eb",
+          "outletId": "tf1-info",
+          "headline": "Guerre en Ukraine : Volodymyr Zelensky réclame à l'UE 70 milliards d'euros en plus en 2027",
+          "url": "https://www.tf1info.fr/international/guerre-ukraine-russie-volodymyr-zelensky-reclame-a-l-ue-70-milliards-d-euros-en-plus-en-2027-2470386.html",
+          "publishedAt": "2026-10-16T14:24:09.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/zelensky-sommet-ue-bruxelles-2026-10-16-33451a-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "110bc143fb92",
+          "outletId": "europe-1",
+          "headline": "Guerre en Ukraine : Volodymyr Zelensky réclame à l'UE 70 milliards d'euros en plus en 2027",
+          "url": "https://www.europe1.fr/international/guerre-en-ukraine-volodymyr-zelensky-reclame-a-lue-70-milliards-deuros-en-plus-en-2027-1154468?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-16T14:21:23.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/16/15/075_oikonomou-notitle261016_npos4_1_6ad22b54ce91f.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "5a86b31a25fd",
+          "outletId": "le-figaro",
+          "headline": "EN DIRECT - Guerre en Ukraine : Volodymyr Zelensky réclame 70 milliards d’euros en plus en 2027 à l’Union européenne",
+          "url": "https://www.lefigaro.fr/international/en-direct-guerre-en-ukraine-ce-n-est-pas-le-moment-de-cesser-d-aider-kiev-ni-de-lever-les-sanctions-contre-moscou-avertit-l-ue-20261016",
+          "publishedAt": "2026-10-16T13:55:03.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2009_crop/2026/10/16/ed0c137d4c9715994025c50c19b4ed62569dbcbdfd0f4b88a9fee335eab394bc.jpg",
+          "frontPage": true,
+          "kind": "live",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "15e345b55641",
+          "outletId": "franceinfo",
+          "headline": "Guerre en Ukraine : Volodymyr Zelensky demande à l'Union européenne 70 milliards d'euros d'aide supplémentaires en 2027",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-volodymyr-zelensky-reclame-a-l-union-europeenne-70-milliards-d-euros-supplementaires-en-2027_8240332.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-16T13:28:40.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/qUBQGG9BYEQUm0aAKTwOUbktfWQ/0x93:1024x669/432x243/filters:format(jpg)/2026/10/16/6ad21f8ede439391699946.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "2e64b5464fe5",
+          "outletId": "bfmtv",
+          "headline": "Volodymyr Zelensky réclame 70 milliards d'euros de plus à l'UE: Marine Le Pen estime que la France n'a \"plus les moyens\", un dirigeant letton suggère à chaque Européen de boire une bière de moins par an",
+          "url": "https://www.bfmtv.com/economie/entreprises/defense/volodymyr-zelensky-reclame-70-milliards-d-euros-de-plus-a-l-ue-marine-le-pen-estime-que-la-france-n-a-plus-les-moyens-un-dirigeant-letton-suggere-a-chaque-europeen-de-boire-une-biere-de-moins-par-an_AV-202610160531.html",
+          "publishedAt": "2026-10-16T13:24:11.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/l4N1PNtybHf5XUDtB5KvwbCS_bQ=/0x147:2048x1299/800x0/images/Emmanuel-Macron-accueille-le-president-ukrainien-Volodymyr-Zelensky-au-palais-de-l-Elysee-a-Paris-le-6-janvier-2026-2211596.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "643f02728e14",
+          "outletId": "humanite",
+          "headline": "Guerre en Ukraine : à Bruxelles, les Vingt Sept au secours de Zelensky « trahi » par Trump",
+          "url": "https://www.humanite.fr/monde/bruxelles/guerre-en-ukraine-a-bruxelles-les-vingt-sept-au-secours-de-zelensky-trahi-par-trump",
+          "publishedAt": "2026-10-16T12:40:48.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/europe-zelensky.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "b548d6d04c09",
+          "outletId": "le-monde",
+          "headline": "EN DIRECT, guerre en Ukraine : Volodymyr Zelensky demande à l’UE 70 milliards d’euros en plus en 2027",
+          "url": "https://www.lemonde.fr/international/live/2026/10/16/en-direct-guerre-en-ukraine-starlink-est-vraiment-indispensable-pour-kiev-et-l-ue-reconnait-qu-elle-ne-peut-pas-remplacer-cette-capacite-a-court-terme_6791198_3210.html",
+          "publishedAt": "2026-10-16T10:27:31.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/16/140/0/5495/2747/644/322/60/0/e713e88_ftp-1-2zvnboalh1h1-7ea0603e1f7a4a93a419a41b14072dd6-0-8c9a8449b1e34f91a2659264e5817b62.jpg",
+          "frontPage": false,
+          "kind": "live",
+          "section": "world",
+          "everFrontPage": true
+        }
+      ],
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le dirigeant ukrainien a formellement sollicité une rallonge financière européenne de soixante-dix milliards d'euros pour soutenir son pays, un déficit confirmé par Ursula von der Leyen.",
+          "Emmanuel Macron a réaffirmé depuis Bruxelles que les Européens ne lâcheraient pas Kiev et a mis en garde contre les ambiguïtés géopolitiques."
+        ],
+        "centre": [
+          "Bousculé par le retour de Donald Trump aux Etats-Unis, Volodymyr Zelensky s'est tourné vers les dirigeants européens à Bruxelles pour réclamer une aide de soixante-dix milliards d'euros.",
+          "Emmanuel Macron a promis d'examiner l'ensemble des options, tout en jugeant prématuré de fixer un montant précis à ce stade."
+        ],
+        "droite": [
+          "Le président ukrainien a réclamé soixante-dix milliards d'euros supplémentaires à l'Union européenne pour faire face aux difficultés financières et militaires de son pays.",
+          "Le sommet européen se déroule dans un contexte de tensions accrues avec Donald Trump sur la stratégie ukrainienne, tandis que Volodymyr Zelensky a également réagi aux prises de position de Marine Le Pen sur la suspension du soutien français."
+        ]
+      },
+      "differences": "La gauche et le centre se concentrent sur la demande de fonds de Kiev et l'affichage d'unité européenne à Bruxelles, le centre mettant particulièrement l'accent sur l'onde de choc géopolitique provoquée par Donald Trump et la prudence d'Emmanuel Macron face à la somme exigée. La droite élargit quant à elle le spectre en articulant l'actualité européenne avec les tensions transatlantiques et les débats de politique intérieure française concernant la pérennité de l'effort de guerre.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 25
+    },
+    {
       "id": "6b7f77d8c490",
       "slug": "une-photojournaliste-rouee-de-coups-par-des-colons-en-cisjordani",
       "title": "Une photojournaliste rouée de coups par des colons en Cisjordanie",
@@ -604,281 +925,6 @@
       "differences": "Les nouveaux articles permettent de préciser le déroulement de l'agression subie par la photojournaliste Heidi Levine, attaquée par un groupe nombreux d'hommes armés. La gauche (incluant le centre gauche) met fortement l'accent sur la violence inouïe de l'attaque menée par des individus masqués équipés de barres de fer. Le centre adopte un angle centré sur la profession de la victime et relaie la demande officielle de son journal exigeant une enquête des autorités. La droite conserve une approche prudente et factuelle, insistant principalement sur l'évacuation médicale de la journaliste et le climat général de tension lié à la récolte des olives.",
       "promptVersion": "sum-2",
       "summarizedArticleCount": 12
-    },
-    {
-      "id": "1af6ecd96c66",
-      "slug": "volodymyr-zelensky-reclame-70-milliards-d-euros-de-plus-a-l-ue",
-      "title": "Volodymyr Zelensky réclame 70 milliards d'euros de plus à l'UE",
-      "createdAt": "2026-10-16T14:01:29.169Z",
-      "storyDay": "2026-10-16",
-      "articles": [
-        {
-          "id": "a883fdf67987",
-          "outletId": "france-24",
-          "headline": "Boudé par Trump, Volodymyr Zelensky se tourne une nouvelle fois vers les Européens",
-          "url": "https://www.france24.com/fr/europe/20261016-boud%C3%A9-trump-volodymyr-zelensky-tourne-nouvelle-fois-vers-europ%C3%A9ens",
-          "publishedAt": "2026-10-16T20:38:01.000Z",
-          "imageUrl": "https://s.france24.com/media/display/c6338998-c99a-11f1-9ea4-6313a763b466/w:1024/p:16x9/000-D3GY8H7.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "345751a287b1",
-          "outletId": "france-24",
-          "headline": "Secoué par Trump, Zelensky se tourne vers les Européens",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261016-secou%C3%A9-par-trump-zelensky-se-tourne-vers-les-europ%C3%A9ens",
-          "publishedAt": "2026-10-16T19:26:09.000Z",
-          "imageUrl": "https://s.france24.com/media/display/0a25b38a-c98f-11f1-9b8e-2d1c143cdef3/w:1024/p:16x9/Zelensky-00-00-02-19-Still002.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "b581fa63da90",
-          "outletId": "tf1-info",
-          "headline": "Ukraine : Zelensky appelle l'Europe à l'aide",
-          "url": "https://www.tf1info.fr/international/videos/video-ukraine-zelensky-appelle-l-europe-a-l-aide-65773-2470436.html",
-          "publishedAt": "2026-10-16T18:55:16.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/ukraine-zelensky-appelle-l-europe-a-l-aide-8e3408-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "77661ec29723",
-          "outletId": "le-monde",
-          "headline": "EN DIRECT, guerre en Ukraine : « Nous ne lâcherons pas l’Ukraine », il faut « tenir la ligne » face aux « ambiguïtés », insiste Emmanuel Macron",
-          "url": "https://www.lemonde.fr/international/live/2026/10/16/en-direct-guerre-en-ukraine-nous-ne-lacherons-pas-l-ukraine-il-faut-tenir-la-ligne-face-aux-ambiguites-insiste-emmanuel-macron_6791198_3210.html",
-          "publishedAt": "2026-10-16T18:41:47.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/16/118/0/5000/2500/644/322/60/0/13f25af_ftp-1-dyaraubxyu29-2026-10-16t172955z-1471415968-rc2h4oarl7t5-rtrmadp-3-eu-summit.JPG",
-          "frontPage": true,
-          "kind": "live",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "90233da16f8a",
-          "outletId": "le-monde",
-          "headline": "L’UE « ne lâchera pas l’Ukraine », assure Emmanuel Macron, dénonçant les « ambiguïtés » de certains, en allusion à Donald Trump",
-          "url": "https://www.lemonde.fr/politique/article/2026/10/16/aide-a-l-ukraine-emmanuel-macron-temporise-apres-la-demande-de-kiev-d-une-rallonge-de-70-milliards-d-euros_6795632_823448.html",
-          "publishedAt": "2026-10-16T17:54:29.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/16/38/0/1024/512/644/322/60/0/e42eb0b_ftp-1-uuvmy5jlltpn-afp-d3ce9jl-1024.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "93426b7e4f95",
-          "outletId": "bfmtv",
-          "headline": "\"Nous ne lâcherons pas l'Ukraine\", promet Emmanuel Macron",
-          "url": "https://www.bfmtv.com/international/asie/russie/video-nous-ne-lacherons-pas-l-ukraine-promet-emmanuel-macron_VN-202610160759.html",
-          "publishedAt": "2026-10-16T17:42:25.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/831DV2a2pnWlWCm9xfq1xLUcsU4=/0x0:1280x720/800x0/images/Nous-ne-lacherons-pas-l-Ukraine-promet-Emmanuel-Macron-2366902.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "f3bf5289ac8e",
-          "outletId": "franceinfo",
-          "headline": "\"Nous ne lâcherons pas l'Ukraine\", promet Emmanuel Macron à l'issue d'un sommet européen avec Volodymyr Zelensky",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/nous-ne-lacherons-pas-l-ukraine-promet-emmanuel-macron-a-l-issue-d-un-sommet-europeen-avec-volodymyr-zelensky_8240845.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-16T17:32:10.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/11qA1I3qWI7QGl6P0dXYow9XInc/0x53:1024x629/432x243/filters:format(jpg)/2026/10/16/6ad25df6c358f683349819.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "f8d4512a339b",
-          "outletId": "la-croix",
-          "headline": "À Bruxelles, Volodymyr Zelensky, lâché par Trump, se tourne vers les Européens",
-          "url": "https://www.la-croix.com/international/a-bruxelles-volodymyr-zelensky-lache-par-trump-se-tourne-vers-les-europeens-20261016",
-          "publishedAt": "2026-10-16T17:29:13.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/16/2564335-vendredi-16-octobre-le-president-volodymyr-zelensk.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "5194516ff2be",
-          "outletId": "bfmtv",
-          "headline": "Emmanuel Macron assure que l'Europe \"ne lâchera pas l'Ukraine\"",
-          "url": "https://www.bfmtv.com/politique/video-emmanuel-macron-assure-que-l-europe-ne-lachera-pas-l-ukraine_VN-202610160746.html",
-          "publishedAt": "2026-10-16T17:21:42.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/vxzyL2sFxMp1mb22L79fAgKMob8=/0x0:1280x720/800x0/images/Emmanuel-Macron-assure-que-l-Europe-ne-lachera-pas-l-Ukraine-2366895.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "69bb3baa7eb9",
-          "outletId": "bfmtv",
-          "headline": "\"Nous ne lâcherons pas l'Ukraine\", assure Emmanuel Macron",
-          "url": "https://www.bfmtv.com/politique/video-nous-ne-lacherons-pas-l-ukraine-assure-emmanuel-macron_VN-202610160740.html",
-          "publishedAt": "2026-10-16T17:18:06.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/X_cuVvjAakWdLtXGoneZlsm6Mbw=/0x0:1280x720/800x0/images/Nous-ne-lacherons-pas-l-Ukraine-assure-Emmanuel-Macron-2366887.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "f7c3ce607ac0",
-          "outletId": "bfmtv",
-          "headline": "\"Nous ne lâcherons pas l'Ukraine\": Emmanuel Macron réaffirme le soutien de la France à Kiev en marge du Conseil européen",
-          "url": "https://www.bfmtv.com/international/europe/nous-ne-lacherons-pas-l-ukraine-emmanuel-macron-reaffirme-le-soutien-de-la-france-a-kiev-en-marge-du-conseil-europeen_AN-202610160737.html",
-          "publishedAt": "2026-10-16T17:17:37.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/DcS1ZLI3SdL1s8jDIsckr-XPlZQ=/0x0:1920x1080/800x0/images/Le-president-de-la-Republique-Emmanuel-Macron-prend-la-parole-depuis-Bruxelles-vendredi-16-octobre-2366880.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "d1eadc6975dd",
-          "outletId": "le-jdd",
-          "headline": "Guerre en Ukraine : Zelensky réclame 70 milliards d’euros supplémentaires à l’Union européenne",
-          "url": "https://www.lejdd.fr/International/guerre-en-ukraine-zelensky-reclame-70-milliards-deuros-supplementaires-a-lunion-europeenne-186201",
-          "publishedAt": "2026-10-16T15:59:51.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/16/17/sipa_shutterstock41419767_000101.jpg?VersionId=QjgYvN7075ojNdRETsNZK554h3UOSCuf",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "eda12abaebf1",
-          "outletId": "le-figaro",
-          "headline": "Guerre en Ukraine : Volodymyr Zelensky réclame 70 milliards d’euros supplémentaires en 2027 à l’Union européenne",
-          "url": "https://www.lefigaro.fr/international/guerre-en-ukraine-volodymyr-zelensky-reclame-70-milliards-d-euros-supplementaires-en-2027-a-l-union-europeenne-20261016",
-          "publishedAt": "2026-10-16T15:44:37.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2089_crop/2026/10/16/9be8ca00dca21baf3a0f7953446d59699071e9a933ce578038fa1a571008bd2e.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "d0e1770ec4a9",
-          "outletId": "atlantico",
-          "headline": "Guerre en Ukraine : Volodymyr Zelensky demande à l'Union européenne 70 milliards d'euros d'aide supplémentaires",
-          "url": "https://atlantico.fr/article/decryptage/guerre-en-ukraine-volodymyr-zelensky-demande-a-l-union-europeenne-70-milliards-d-euros-d-aide-supplementaires-conseil-europeen-Bruxelles",
-          "publishedAt": "2026-10-16T15:32:00.000Z",
-          "imageUrl": "https://atlantico.codexcdn.net/assets/asFRctySTpX3lDQIQ.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "d79b67701504",
-          "outletId": "le-monde",
-          "headline": "EN DIRECT, guerre en Ukraine : Ursula von der Leyen confirme le trou de 70 milliards d’euros de l’Ukraine en 2027, qui « devra être comblé »",
-          "url": "https://www.lemonde.fr/international/live/2026/10/16/en-direct-guerre-en-ukraine-il-est-plus-facile-de-communiquer-avec-donald-trump-qu-avec-vladimir-poutine-affirme-volodymyr-zelensky_6791198_3210.html",
-          "publishedAt": "2026-10-16T15:21:07.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/16/3/0/5859/2929/644/322/60/0/749c34d_ftp-1-o4qvkyj8zviu-bead7cdd538c492e85ca99454e02f59a-0-6371e95e776440cb8e03723a5b714894.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "290e7b009b67",
-          "outletId": "lexpress",
-          "headline": "Guerre en Ukraine : le plaidoyer de Volodymyr Zelensky à l'UE pour une rallonge de 70 milliards d'euros",
-          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-le-plaidoyer-de-volodymyr-zelensky-a-lue-pour-une-rallonge-de-70-milliards-deuros-EBQPX3MIK5B45MQFOO3GCZYHHI/",
-          "publishedAt": "2026-10-16T15:15:00.000Z",
-          "imageUrl": "https://www.lexpress.fr/resizer/v2/UPZOMYXEJJH47G3U4WYE2DZ2N4.jpg?auth=b50b2118334dfff1c2dec02f7a2f5459915a14ae10cbc82d8dee20efbeaa81d1&smart=true&width=4300&height=2868",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "1ccc9e3d68eb",
-          "outletId": "tf1-info",
-          "headline": "Guerre en Ukraine : Volodymyr Zelensky réclame à l'UE 70 milliards d'euros en plus en 2027",
-          "url": "https://www.tf1info.fr/international/guerre-ukraine-russie-volodymyr-zelensky-reclame-a-l-ue-70-milliards-d-euros-en-plus-en-2027-2470386.html",
-          "publishedAt": "2026-10-16T14:24:09.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/zelensky-sommet-ue-bruxelles-2026-10-16-33451a-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "110bc143fb92",
-          "outletId": "europe-1",
-          "headline": "Guerre en Ukraine : Volodymyr Zelensky réclame à l'UE 70 milliards d'euros en plus en 2027",
-          "url": "https://www.europe1.fr/international/guerre-en-ukraine-volodymyr-zelensky-reclame-a-lue-70-milliards-deuros-en-plus-en-2027-1154468?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-16T14:21:23.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/16/15/075_oikonomou-notitle261016_npos4_1_6ad22b54ce91f.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "5a86b31a25fd",
-          "outletId": "le-figaro",
-          "headline": "EN DIRECT - Guerre en Ukraine : Volodymyr Zelensky réclame 70 milliards d’euros en plus en 2027 à l’Union européenne",
-          "url": "https://www.lefigaro.fr/international/en-direct-guerre-en-ukraine-ce-n-est-pas-le-moment-de-cesser-d-aider-kiev-ni-de-lever-les-sanctions-contre-moscou-avertit-l-ue-20261016",
-          "publishedAt": "2026-10-16T13:55:03.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2009_crop/2026/10/16/ed0c137d4c9715994025c50c19b4ed62569dbcbdfd0f4b88a9fee335eab394bc.jpg",
-          "frontPage": true,
-          "kind": "live",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "15e345b55641",
-          "outletId": "franceinfo",
-          "headline": "Guerre en Ukraine : Volodymyr Zelensky demande à l'Union européenne 70 milliards d'euros d'aide supplémentaires en 2027",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-volodymyr-zelensky-reclame-a-l-union-europeenne-70-milliards-d-euros-supplementaires-en-2027_8240332.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-16T13:28:40.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/qUBQGG9BYEQUm0aAKTwOUbktfWQ/0x93:1024x669/432x243/filters:format(jpg)/2026/10/16/6ad21f8ede439391699946.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "2e64b5464fe5",
-          "outletId": "bfmtv",
-          "headline": "Volodymyr Zelensky réclame 70 milliards d'euros de plus à l'UE: Marine Le Pen estime que la France n'a \"plus les moyens\", un dirigeant letton suggère à chaque Européen de boire une bière de moins par an",
-          "url": "https://www.bfmtv.com/economie/entreprises/defense/volodymyr-zelensky-reclame-70-milliards-d-euros-de-plus-a-l-ue-marine-le-pen-estime-que-la-france-n-a-plus-les-moyens-un-dirigeant-letton-suggere-a-chaque-europeen-de-boire-une-biere-de-moins-par-an_AV-202610160531.html",
-          "publishedAt": "2026-10-16T13:24:11.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/l4N1PNtybHf5XUDtB5KvwbCS_bQ=/0x147:2048x1299/800x0/images/Emmanuel-Macron-accueille-le-president-ukrainien-Volodymyr-Zelensky-au-palais-de-l-Elysee-a-Paris-le-6-janvier-2026-2211596.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "b548d6d04c09",
-          "outletId": "le-monde",
-          "headline": "EN DIRECT, guerre en Ukraine : Volodymyr Zelensky demande à l’UE 70 milliards d’euros en plus en 2027",
-          "url": "https://www.lemonde.fr/international/live/2026/10/16/en-direct-guerre-en-ukraine-starlink-est-vraiment-indispensable-pour-kiev-et-l-ue-reconnait-qu-elle-ne-peut-pas-remplacer-cette-capacite-a-court-terme_6791198_3210.html",
-          "publishedAt": "2026-10-16T10:27:31.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/16/140/0/5495/2747/644/322/60/0/e713e88_ftp-1-2zvnboalh1h1-7ea0603e1f7a4a93a419a41b14072dd6-0-8c9a8449b1e34f91a2659264e5817b62.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "world",
-          "everFrontPage": true
-        }
-      ],
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le dirigeant ukrainien a formellement sollicité une rallonge financière européenne de soixante-dix milliards d'euros pour soutenir son pays, un déficit confirmé par Ursula von der Leyen.",
-          "Emmanuel Macron a réaffirmé depuis Bruxelles que les Européens ne lâcheraient pas Kiev et a mis en garde contre les ambiguïtés géopolitiques."
-        ],
-        "centre": [
-          "Bousculé par le retour de Donald Trump aux Etats-Unis, Volodymyr Zelensky s'est tourné vers les dirigeants européens à Bruxelles pour réclamer une aide de soixante-dix milliards d'euros.",
-          "Emmanuel Macron a promis d'examiner l'ensemble des options, tout en jugeant prématuré de fixer un montant précis à ce stade."
-        ],
-        "droite": [
-          "Le président ukrainien a réclamé soixante-dix milliards d'euros supplémentaires à l'Union européenne pour faire face aux difficultés financières et militaires de son pays.",
-          "Le sommet européen se déroule dans un contexte de tensions accrues avec Donald Trump sur la stratégie ukrainienne, tandis que Volodymyr Zelensky a également réagi aux prises de position de Marine Le Pen sur la suspension du soutien français."
-        ]
-      },
-      "differences": "La gauche et le centre se concentrent sur la demande de fonds de Kiev et l'affichage d'unité européenne à Bruxelles, le centre mettant particulièrement l'accent sur l'onde de choc géopolitique provoquée par Donald Trump et la prudence d'Emmanuel Macron face à la somme exigée. La droite élargit quant à elle le spectre en articulant l'actualité européenne avec les tensions transatlantiques et les débats de politique intérieure française concernant la pérennité de l'effort de guerre.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 22
     },
     {
       "id": "d6c9a94f2ad9",
@@ -2026,6 +2072,140 @@
       "summarizedArticleCount": 9
     },
     {
+      "id": "50f0ec6309bd",
+      "slug": "le-rn-et-l-udr-saisissent-le-conseil-constitutionnel-pour-reclam",
+      "title": "Le RN et l'UDR saisissent le Conseil constitutionnel pour réclamer la démission de Richard Ferrand",
+      "createdAt": "2026-10-16T14:01:29.169Z",
+      "storyDay": "2026-10-16",
+      "articles": [
+        {
+          "id": "0efc09c9f399",
+          "outletId": "bfmtv",
+          "headline": "Conseil constitutionnel: les parlementaires RN réclament la démission de Richard Ferrand",
+          "url": "https://www.bfmtv.com/politique/front-national/video-conseil-constitutionnel-les-parlementaires-rn-reclament-la-demission-de-richard-ferrand_VN-202610160796.html",
+          "publishedAt": "2026-10-16T18:42:35.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Y9w465Z2GfS_Ujo8e_TpKnmsuqk=/0x0:1280x720/800x0/images/Conseil-constitutionnel-les-parlementaires-RN-reclament-la-demission-de-Richard-Ferrand-2366926.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "3e1c159b31ae",
+          "outletId": "europe-1",
+          "headline": "«Il a piétiné l'État de droit» : au Mondial de l'Auto, Jordan Bardella réclame la démission de Richard Ferrand",
+          "url": "https://www.europe1.fr/politique/il-a-pietine-letat-de-droit-au-mondial-de-lauto-jordan-bardella-reclame-la-demission-de-richard-ferrand-1154900?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-16T17:39:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/16/18/000_d3hd277_1_6ad255be36859.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "616f93dd684a",
+          "outletId": "franceinfo",
+          "headline": "Le recours du RN contre Richard Ferrand, appelant à le débarquer de la présidence du Conseil constitutionnel, est-il fondé juridiquement ?",
+          "url": "https://www.franceinfo.fr/politique/front-national/le-recours-du-rn-contre-richard-ferrand-appelant-a-le-debarquer-de-la-presidence-du-conseil-constitutionnel-est-il-fonde-juridiquement_8240527.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-16T16:59:04.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/OfXTeHRFDjooX4MNF1Fc2Jxyrlc/0x348:6000x3723/432x243/filters:format(jpg)/2026/10/16/6ad253fed5022412928224.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "106477d5093a",
+          "outletId": "huffpost",
+          "headline": "Le clash entre Marine Le Pen et Richard Ferrand s’envenime avec cette initiative inutile des députés RN",
+          "url": "https://www.huffingtonpost.fr/politique/article/le-clash-entre-marine-le-pen-et-richard-ferrand-s-envenime-avec-cette-initiative-inutile-des-deputes-rn_340705.html",
+          "publishedAt": "2026-10-16T14:12:33.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2025/11/07/585/0/5616/3159/0/0/60/0/6fdc2cd_upload-1-3rsfdf3wvhp0-afp-20251104-hl-xbouzas-2943751-v1-highres-francepoliticsquestionsgovernmentnat.jpg",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "politics"
+        },
+        {
+          "id": "53dac26e0d09",
+          "outletId": "europe-1",
+          "headline": "Le RN et l'UDR saisissent le Conseil constitutionnel, réclamant la démission de Richard Ferrand",
+          "url": "https://www.europe1.fr/politique/le-rn-et-ludr-saisissent-le-conseil-constitutionnel-reclamant-la-demission-de-richard-ferrand-1154465?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-16T14:07:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Conseil%20constitutionnel/arthur_n._orchard_hans_lucas_hans_lucas_via_afp_699751162713a.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c15dd9eb40b8",
+          "outletId": "humanite",
+          "headline": "Le Rassemblement national réclame la démission de Richard Ferrand, président du Conseil constitutionnel",
+          "url": "https://www.humanite.fr/politique/conseil-constitutionnel/le-rassemblement-national-reclame-la-demission-de-richard-ferrand-president-du-conseil-constitutionnel",
+          "publishedAt": "2026-10-16T13:53:29.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/richard-ferrand-attaque-par-le-rn.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "56671d737f29",
+          "outletId": "le-jdd",
+          "headline": "Le RN et l'UDR saisissent le Conseil constitutionnel pour réclamer la démission de Richard Ferrand",
+          "url": "https://www.lejdd.fr/politique/le-rn-et-ludr-saisissent-le-conseil-constitutionnel-pour-reclamer-la-demission-de-richard-ferrand-186183",
+          "publishedAt": "2026-10-16T13:47:10.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/16/15/000_786a6ke.jpg?VersionId=1I3MJC4Ygbbf59pLURYlsXQOYkV9n5JC",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "2e19cf810981",
+          "outletId": "liberation",
+          "headline": "Débat sur l’article 11 : les députés d’extrême droite saisissent le Conseil constitutionnel pour obtenir la tête de Richard Ferrand",
+          "url": "https://www.liberation.fr/politique/debat-sur-larticle-11-les-deputes-rn-udr-saisissent-le-conseil-constitutionnel-pour-obtenir-la-tete-de-richard-ferrand-20261016_HKTRNX5ST5BABEAT7IFXWLB7UA/",
+          "publishedAt": "2026-10-16T13:33:18.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "5080dc71dc7c",
+          "outletId": "franceinfo",
+          "headline": "Les parlementaires RN et UDR saisissent le Conseil constitutionnel pour réclamer \"la démission d'office\" de son président Richard Ferrand",
+          "url": "https://www.franceinfo.fr/politique/les-parlementaires-rn-et-udr-saisissent-le-conseil-constitutionnel-pour-reclamer-la-demission-d-office-de-son-president-richard-ferrand_8240230.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-16T12:02:57.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/h6ZvEo5_xljNfs0NBrAuvKtiL0U/0x0:1024x576/432x243/filters:format(jpg)/2026/10/16/6ad208e59ae86603551263.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "4759365d9660",
+          "outletId": "cnews",
+          "headline": "Richard Ferrand : le RN et l'UDR saisissent le Conseil constitutionnel pour demander la démission de son président",
+          "url": "https://www.cnews.fr/france/2026-10-16/richard-ferrand-le-rn-et-ludr-saisissent-le-conseil-constitutionnel-pour-demander",
+          "publishedAt": "2026-10-16T11:53:00.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_644u48m_1_-taille1200_6ad20ee1beaa1.jpg?h=1483d620&itok=1bLT1P30",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Des députés du Rassemblement national ont formellement saisi le Conseil constitutionnel pour exiger le départ de son dirigeant.",
+          "Cette offensive parlementaire fait suite à des désaccords profonds concernant l'utilisation potentielle de l'article 11 pour modifier la Constitution par référendum."
+        ],
+        "droite": [
+          "Les députés du Rassemblement national et de l'Union des droites pour la République ont formellement saisi le Conseil constitutionnel pour exiger le départ de son dirigeant.",
+          "Jordan Bardella a publiquement relayé cette demande depuis le Mondial de l'Auto, accusant le président de l'institution d'avoir compromis l'État de droit.",
+          "Les formations nationalistes reprochent au magistrat d'avoir critiqué publiquement leur proposition de révision constitutionnelle par référendum et d'avoir préjugé d'une question de droit."
+        ]
+      },
+      "differences": "Le camp de la droite insiste sur une démarche institutionnelle ferme pour dénoncer une violation présumée de la neutralité par le président du Conseil constitutionnel, tout en s'appuyant sur des déclarations publiques fortes de ses responsables. Le centre adopte un angle purement factuel en se concentrant sur le dépôt de la saisine et sur le contexte des désaccords politiques liés à l'article 11. La gauche ne propose aucune couverture active sur le sujet dans cette sélection.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 10
+    },
+    {
       "id": "dd9837f6c7b8",
       "slug": "la-tapisserie-de-bayeux-ne-sera-plus-suspendue-a-son-retour-en-f",
       "title": "La tapisserie de Bayeux ne sera plus suspendue à son retour en France",
@@ -2141,118 +2321,6 @@
         ]
       },
       "differences": "La droite met l'accent sur le caractère définitif de l'abandon de l'accrochage vertical et relaie les critiques concernant les risques du prêt au Royaume-Uni. Le centre et la gauche se concentrent sur les aspects techniques de la future exposition sur table inclinée, insistant sur le fait que cette décision découle d'une réflexion ancienne menée par les experts pour assurer la préservation de l'œuvre.",
-      "promptVersion": "sum-2",
-      "summarizedArticleCount": 8
-    },
-    {
-      "id": "50f0ec6309bd",
-      "slug": "le-rn-et-l-udr-saisissent-le-conseil-constitutionnel-pour-reclam",
-      "title": "Le RN et l'UDR saisissent le Conseil constitutionnel pour réclamer la démission de Richard Ferrand",
-      "createdAt": "2026-10-16T14:01:29.169Z",
-      "storyDay": "2026-10-16",
-      "articles": [
-        {
-          "id": "0efc09c9f399",
-          "outletId": "bfmtv",
-          "headline": "Conseil constitutionnel: les parlementaires RN réclament la démission de Richard Ferrand",
-          "url": "https://www.bfmtv.com/politique/front-national/video-conseil-constitutionnel-les-parlementaires-rn-reclament-la-demission-de-richard-ferrand_VN-202610160796.html",
-          "publishedAt": "2026-10-16T18:42:35.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Y9w465Z2GfS_Ujo8e_TpKnmsuqk=/0x0:1280x720/800x0/images/Conseil-constitutionnel-les-parlementaires-RN-reclament-la-demission-de-Richard-Ferrand-2366926.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "3e1c159b31ae",
-          "outletId": "europe-1",
-          "headline": "«Il a piétiné l'État de droit» : au Mondial de l'Auto, Jordan Bardella réclame la démission de Richard Ferrand",
-          "url": "https://www.europe1.fr/politique/il-a-pietine-letat-de-droit-au-mondial-de-lauto-jordan-bardella-reclame-la-demission-de-richard-ferrand-1154900?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-16T17:39:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/16/18/000_d3hd277_1_6ad255be36859.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "53dac26e0d09",
-          "outletId": "europe-1",
-          "headline": "Le RN et l'UDR saisissent le Conseil constitutionnel, réclamant la démission de Richard Ferrand",
-          "url": "https://www.europe1.fr/politique/le-rn-et-ludr-saisissent-le-conseil-constitutionnel-reclamant-la-demission-de-richard-ferrand-1154465?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-16T14:07:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Conseil%20constitutionnel/arthur_n._orchard_hans_lucas_hans_lucas_via_afp_699751162713a.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "c15dd9eb40b8",
-          "outletId": "humanite",
-          "headline": "Le Rassemblement national réclame la démission de Richard Ferrand, président du Conseil constitutionnel",
-          "url": "https://www.humanite.fr/politique/conseil-constitutionnel/le-rassemblement-national-reclame-la-demission-de-richard-ferrand-president-du-conseil-constitutionnel",
-          "publishedAt": "2026-10-16T13:53:29.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/richard-ferrand-attaque-par-le-rn.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "56671d737f29",
-          "outletId": "le-jdd",
-          "headline": "Le RN et l'UDR saisissent le Conseil constitutionnel pour réclamer la démission de Richard Ferrand",
-          "url": "https://www.lejdd.fr/politique/le-rn-et-ludr-saisissent-le-conseil-constitutionnel-pour-reclamer-la-demission-de-richard-ferrand-186183",
-          "publishedAt": "2026-10-16T13:47:10.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/16/15/000_786a6ke.jpg?VersionId=1I3MJC4Ygbbf59pLURYlsXQOYkV9n5JC",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "2e19cf810981",
-          "outletId": "liberation",
-          "headline": "Débat sur l’article 11 : les députés d’extrême droite saisissent le Conseil constitutionnel pour obtenir la tête de Richard Ferrand",
-          "url": "https://www.liberation.fr/politique/debat-sur-larticle-11-les-deputes-rn-udr-saisissent-le-conseil-constitutionnel-pour-obtenir-la-tete-de-richard-ferrand-20261016_HKTRNX5ST5BABEAT7IFXWLB7UA/",
-          "publishedAt": "2026-10-16T13:33:18.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "5080dc71dc7c",
-          "outletId": "franceinfo",
-          "headline": "Les parlementaires RN et UDR saisissent le Conseil constitutionnel pour réclamer \"la démission d'office\" de son président Richard Ferrand",
-          "url": "https://www.franceinfo.fr/politique/les-parlementaires-rn-et-udr-saisissent-le-conseil-constitutionnel-pour-reclamer-la-demission-d-office-de-son-president-richard-ferrand_8240230.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-16T12:02:57.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/h6ZvEo5_xljNfs0NBrAuvKtiL0U/0x0:1024x576/432x243/filters:format(jpg)/2026/10/16/6ad208e59ae86603551263.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "4759365d9660",
-          "outletId": "cnews",
-          "headline": "Richard Ferrand : le RN et l'UDR saisissent le Conseil constitutionnel pour demander la démission de son président",
-          "url": "https://www.cnews.fr/france/2026-10-16/richard-ferrand-le-rn-et-ludr-saisissent-le-conseil-constitutionnel-pour-demander",
-          "publishedAt": "2026-10-16T11:53:00.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_644u48m_1_-taille1200_6ad20ee1beaa1.jpg?h=1483d620&itok=1bLT1P30",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "centre": [
-          "Des députés du Rassemblement national ont formellement saisi le Conseil constitutionnel pour exiger le départ de son dirigeant.",
-          "Cette offensive parlementaire fait suite à des désaccords profonds concernant l'utilisation potentielle de l'article 11 pour modifier la Constitution par référendum."
-        ],
-        "droite": [
-          "Les députés du Rassemblement national et de l'Union des droites pour la République ont formellement saisi le Conseil constitutionnel pour exiger le départ de son dirigeant.",
-          "Jordan Bardella a publiquement relayé cette demande depuis le Mondial de l'Auto, accusant le président de l'institution d'avoir compromis l'État de droit.",
-          "Les formations nationalistes reprochent au magistrat d'avoir critiqué publiquement leur proposition de révision constitutionnelle par référendum et d'avoir préjugé d'une question de droit."
-        ]
-      },
-      "differences": "Le camp de la droite insiste sur une démarche institutionnelle ferme pour dénoncer une violation présumée de la neutralité par le président du Conseil constitutionnel, tout en s'appuyant sur des déclarations publiques fortes. Le centre, représenté par BFMTV, adopte un angle factuel en expliquant que cette saisine découle directement d'un désaccord politique persistant entre Marine Le Pen et Richard Ferrand au sujet de l'article 11. La gauche ne propose pas de couverture active dans cette sélection.",
       "promptVersion": "sum-2",
       "summarizedArticleCount": 8
     },
@@ -3428,6 +3496,79 @@
       "summarizedArticleCount": 5
     },
     {
+      "id": "f3596870e01b",
+      "slug": "le-vatican-publie-de-premieres-photos-du-pape-leon-xiv-en-conval",
+      "title": "Le Vatican publie de premières photos du pape Léon XIV en convalescence à l'hôpital",
+      "createdAt": "2026-10-16T17:01:26.272Z",
+      "storyDay": "2026-10-16",
+      "articles": [
+        {
+          "id": "de48680217b0",
+          "outletId": "cnews",
+          "headline": "Léon XIV : le Vatican publie les premières photos touchantes du pape depuis son opération chirurgicale",
+          "url": "https://www.cnews.fr/monde/2026-10-16/leon-xiv-le-vatican-publie-les-premieres-photos-touchantes-du-pape-depuis-son",
+          "publishedAt": "2026-10-16T14:07:50.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-16t123622z_1016416884_rc2a4oa7rwfx_rtrmadp_3_pope-health-taille1200_6ad229aa4f158.jpg?h=4698561f&itok=BUItqm-s",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "96e58d38ea67",
+          "outletId": "europe-1",
+          "headline": "Le Vatican publie les premières photos du pape depuis son opération",
+          "url": "https://www.europe1.fr/international/le-vatican-publie-les-premieres-photos-du-pape-depuis-son-operation-1154456?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-16T13:45:35.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/16/15/000_d3h66ke_1_6ad227cdc0cbf.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "0d3907111ff7",
+          "outletId": "20-minutes",
+          "headline": "Léon XIV : Le Vatican publie les premières photos du pape depuis son opération",
+          "url": "https://www.20minutes.fr/monde/4255012-20261016-pape-vatican-publie-premieres-photos-leon-xiv-depuis-operation?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-16T13:03:04.000Z",
+          "imageUrl": "https://img.20mn.fr/57hsFgXSQn2Uv7QNAkyOLyk/1200x768_cette-photo-publiee-par-vatican-media-le-vendredi-16-octobre-2026-montre-le-pape-leon-xiv-celebrant-la-messe-a-la-polyclinique-agostino-gemelli-de-rome-ou-il-est-en-convalescence-apres-avoir-subi-une-ablation-d-un-cancer-du-poumon-droit-vatican-media-via-ap-xds1228-26289446705531-ap-donne-acces-a-cette-photo-distribuee-publiquement-et-publiee-par-vatican-media-credit-obligatoire-recadrage-alternatif-de-xds128-du-vendredi-16-octobre-2026-2610161437",
+          "frontPage": true,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "722cc78bec1b",
+          "outletId": "la-croix",
+          "headline": "Santé du pape : le Vatican publie les premières images de Léon XIV depuis son opération",
+          "url": "https://www.la-croix.com/religion/sante-du-pape-les-analyses-de-leon-xiv-confirment-une-amelioration-constante-de-son-etat-20261016",
+          "publishedAt": "2026-10-16T12:35:18.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/16/2564045-photo-fournie-par-le-vatican-montrant-le-pape-cele.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        }
+      ],
+      "section": "society",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le souverain pontife récupère à l'établissement hospitalier Gemelli de Rome.",
+          "L'intervention chirurgicale a eu lieu mardi afin d'extraire une masse cancéreuse pulmonaire."
+        ],
+        "centre": [
+          "Le Saint-Siège a diffusé les premiers clichés officiels montrant le chef de l'Église catholique.",
+          "L'ecclésiastique poursuit sa convalescence romaine à la suite de son passage au bloc opératoire."
+        ],
+        "droite": [
+          "Des photographies rassurantes montrent le pontife debout en tenue religieuse aux côtés de son entourage.",
+          "Le pape a tenu à célébrer un office religieux en compagnie du personnel soignant de l'hôpital romain."
+        ]
+      },
+      "differences": "La droite, illustrée par CNews et Europe 1, privilégie le registre émotionnel et visuel en insistant sur les détails rassurants des clichés, comme la messe célébrée avec les soignants et la posture debout du pape. À l'inverse, le centre (La Croix) et le centre-gauche (20 Minutes) adoptent un ton plus sobre et factuel, se concentrant principalement sur le lieu de convalescence et le contexte médical de l'intervention sans superlatifs.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 4
+    },
+    {
       "id": "1c4772e46df6",
       "slug": "sebastien-lecornu-convoque-une-cellule-de-crise-pour-la-mobilisa",
       "title": "Sébastien Lecornu convoque une cellule de crise pour la mobilisation du 17 octobre",
@@ -4341,6 +4482,54 @@
       "summarizedArticleCount": 3
     },
     {
+      "id": "afca9e34db58",
+      "slug": "tous-les-candidats-au-poste-de-secretaire-general-de-l-onu-essui",
+      "title": "Tous les candidats au poste de secrétaire général de l'ONU essuient un veto",
+      "createdAt": "2026-10-17T01:01:14.896Z",
+      "storyDay": "2026-10-17",
+      "articles": [
+        {
+          "id": "38741d711b41",
+          "outletId": "le-monde",
+          "headline": "Prochain secrétaire général de l’ONU : aucun candidat ne fait consensus pour succéder à Antonio Guterres",
+          "url": "https://www.lemonde.fr/international/article/2026/10/17/prochain-secretaire-general-de-l-onu-aucun-candidat-ne-fait-consensus-pour-succeder-a-antonio-guterres_6795742_3210.html",
+          "publishedAt": "2026-10-17T00:34:25.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/07/541/0/6500/3250/644/322/60/0/dc7a4c2_ftp-1-fit4gompmfr2-2026-10-07t153428z-1024932215-rc2o7hav5cx0-rtrmadp-3-un-election-secretarygeneral.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "7903ef1c37f5",
+          "outletId": "ouest-france",
+          "headline": "Succession à la tête de l’Onu : tous les candidats essuient un veto de membres permanents du Conseil de sécurité",
+          "url": "https://www.ouest-france.fr/monde/organismes-internationaux/onu/succession-a-la-tete-de-lonu-tous-les-candidats-essuient-un-veto-de-membres-permanents-du-conseil-de-securite-b7546a72-c9aa-11f1-b8bc-a46147b584ed?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-16T22:00:34.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNzFmNzRhOTI0MjY3YWUyMWU0YzZiZDU0ZjlhNjJjY2Q?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=88b1a2d89db379bb1c7c137dec26ce4fa1398b8a9db8775b1a63b770e454fd49",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        }
+      ],
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le scrutin préliminaire pour la succession d'Antonio Guterres ne dégage aucune majorité unanime parmi les membres permanents.",
+          "Chacun des sept prétendants enregistre au moins un vote négatif de la part des puissances disposant du droit de veto.",
+          "La représentante costaricaine Rebeca Grynspan conserve la première place de cette consultation préliminaire."
+        ],
+        "centre": [
+          "Les sept personnalités en lice pour prendre la tête des Nations unies ont toutes fait l'objet d'un veto de la part des membres permanents du Conseil de sécurité.",
+          "Ce premier vote indicatif tenu vendredi dernier laisse présager l'apparition possible de nouvelles candidatures prochainement."
+        ]
+      },
+      "differences": "Le camp de gauche, représenté par Le Monde, met l'accent sur les dynamiques de classement en signalant que Rebeca Grynspan maintient sa position en tête malgré les blocages. De son côté, le camp centriste avec Ouest-France insiste davantage sur la portée procédurale de ce premier vote indicatif et envisage l'arrivée imminente de nouveaux postulants.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 2
+    },
+    {
       "id": "b2dc756ee173",
       "slug": "katie-zacharia-evincee-apres-cinq-jours-comme-porte-parole-de-tr",
       "title": "Katie Zacharia évincée après cinq jours comme porte-parole de Trump",
@@ -4816,7 +5005,17 @@
         }
       ],
       "section": "world",
-      "everInEdition": true
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Le souverain pontife s'est entretenu directement avec le chef de l'État russe pour exiger un cessser-le-feu.",
+          "La démarche diplomatique vise en particulier la localité d'Olechky, située directement sur la ligne de front ukrainienne.",
+          "Cette initiative humanitaire d'urgence est motivée par la situation critique des habitants confrontés à des manques de nourritures sévères."
+        ]
+      },
+      "differences": "Seul le centre couvre ce sujet à travers deux publications qui rapportent l'appel lancé par le Vatican à Vladimir Poutine en faveur d'une cessation des combats à Olechky, en insistant sur l'urgence humanitaire et les graves privations alimentaires touchant cette zone de front en Ukraine. Il n'y a donc pas de confrontation de points d'vue entre différents camps à comparer.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 2
     },
     {
       "id": "b85c39835f9a",
@@ -4896,40 +5095,16 @@
         }
       ],
       "section": "economy",
-      "everInEdition": true
-    },
-    {
-      "id": "f3596870e01b",
-      "slug": "le-vatican-publie-de-premieres-photos-du-pape-leon-xiv-en-conval",
-      "title": "Le Vatican publie de premières photos du pape Léon XIV en convalescence à l'hôpital",
-      "createdAt": "2026-10-16T17:01:26.272Z",
-      "storyDay": "2026-10-16",
-      "articles": [
-        {
-          "id": "96e58d38ea67",
-          "outletId": "europe-1",
-          "headline": "Le Vatican publie les premières photos du pape depuis son opération",
-          "url": "https://www.europe1.fr/international/le-vatican-publie-les-premieres-photos-du-pape-depuis-son-operation-1154456?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-16T13:45:35.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/16/15/000_d3h66ke_1_6ad227cdc0cbf.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "722cc78bec1b",
-          "outletId": "la-croix",
-          "headline": "Santé du pape : le Vatican publie les premières images de Léon XIV depuis son opération",
-          "url": "https://www.la-croix.com/religion/sante-du-pape-les-analyses-de-leon-xiv-confirment-une-amelioration-constante-de-son-etat-20261016",
-          "publishedAt": "2026-10-16T12:35:18.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/16/2564045-photo-fournie-par-le-vatican-montrant-le-pape-cele.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        }
-      ],
-      "section": "society",
-      "everInEdition": true
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Un sondage récent indique qu'une proportion importante de la population valide l'action collective menée à la mi-octobre.",
+          "Le mouvement social axé sur la défense du pouvoir d'achat recueille l'adhésion de plus de deux tiers des citoyens interrogés."
+        ]
+      },
+      "differences": "Seul le centre couvre ce sujet à travers ces articles, qui mettent en avant les résultats précis d'une enquête d'opinion sur l'adhésion populaire à la mobilisation contre la vie chère. Il n'y a donc rien à comparer avec les autres camps politiques.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 2
     },
     {
       "id": "94d8137c35d4",
@@ -4962,7 +5137,17 @@
         }
       ],
       "section": "politics",
-      "everInEdition": true
+      "everInEdition": true,
+      "summaries": {
+        "droite": [
+          "La commission des affaires sociales a adopté un amendement visant à interdire la cigarette aux nouvelles générations.",
+          "La mesure concerne spécifiquement les individus nés à compter du premier janvier 2009.",
+          "Il s'agit d'une disposition à portée hautement symbolique qui n'aura pas d'impact direct immédiat sur le projet de loi budgétaire."
+        ]
+      },
+      "differences": "Seul le camp de droite couvre le sujet à travers ses différents médias, ce qui ne permet pas d'établir de comparaison inter-camps.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 2
     },
     {
       "id": "90b7220a8d8e",
@@ -5045,7 +5230,20 @@
         }
       ],
       "section": "economy",
-      "everInEdition": true
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le volume des lancements d'entreprises atteint un sommet inédit en France au mois de septembre",
+          "Cette progression remarquable contrasta nettement avec la morosité et les difficultés persistantes de la conjoncture nationale"
+        ],
+        "droite": [
+          "Le pays enregistre un volume sans précédent de fondations d'entreprises sur la période de septembre",
+          "Cette performance économique remarquable survient en dépit d'un climat national globalement morose"
+        ]
+      },
+      "differences": "Les deux camps adoptent un cadrage très proche en soulignant le paradoxe entre ce record de créations d'entreprises et la situation économique atone du pays. L'article de droite, publié par Europe 1, insiste sur l'idée que le dynamisme entrepreneurial se manifeste malgré un contexte difficile, tandis que l'article de centre gauche, relayé par 20 Minutes, formule ce contraste de manière plus directe en affirmant que l'économie générale se porte mal malgré cette embellie statistique.",
+      "promptVersion": "sum-2",
+      "summarizedArticleCount": 2
     }
   ]
 }
