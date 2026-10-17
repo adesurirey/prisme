@@ -1,7 +1,7 @@
 import prismeMarkAsset from './assets/brand/prisme-mark.svg?raw';
 
 /**
- * The Prisme mark — the P at the wordmark's angle (+20°, top leans left),
+ * The Prisme mark — the E at the wordmark's angle (+20°, top leans left),
  * Prisme's brand icon (docs/research/logo/recette-finale.md, "Favicon &
  * icônes d'app"). Derived from the generated asset
  * src/assets/brand/prisme-mark.svg (the single source; regenerating it via
@@ -12,11 +12,11 @@ import prismeMarkAsset from './assets/brand/prisme-mark.svg?raw';
 
 /** The mark's viewBox, made SQUARE around the glyph with `pad` (a fraction
  * of the glyph height per side) as breathing room. A favicon is displayed
- * in a square, and the pinched P is wider than tall — a non-square viewBox
+ * in a square, and the pinched E is wider than tall — a non-square viewBox
  * made the browser scale the glyph down by its width. Centering a square
  * side (max dimension + 2·pad) keeps the glyph at full size.
  * pad 0.10 compensates the pinch's extra width: the old 0.18 (sized for the
- * straight P) read as a smaller glyph (see recette-finale.md, révision 3). */
+ * straight E) read as a smaller glyph (see recette-finale.md, révision 3). */
 function paddedViewBox(pad: number): string {
   const [x, y, w, h] = prismeMarkAsset
     .match(/viewBox="([^"]+)"/)![1]

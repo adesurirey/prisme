@@ -9,7 +9,8 @@ Outputs (web/src/assets/brand/):
 Every letterform is the exact Inter glyph outline (quadratic-free, the source
 curves), transformed by exact affine matrices — no hand tracing, no rounding
 beyond 1 decimal. See docs/research/logo/recette-finale.md for the recipe.
-Uppercase PRISME per the adopted recipe; run again to regenerate after any
+Mixed-case **Emile** per the exploratory recipe (E majuscule + minuscules); run
+again to regenerate after any
 recipe change.
 """
 
@@ -29,11 +30,11 @@ FONT_PATH = os.path.join(os.environ.get("TMPDIR", "/tmp"), "Fraunces-var.ttf")
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "src", "assets", "brand")
 
 WEIGHT = 700  # Bold
-# Uppercase PRISME; fan linéaire (courbe 1) de +max° à -max° sur les 6 lettres.
+# Mixed-case Emile; fan linéaire (courbe 1) de +max° à -max° sur les lettres.
 MAX_ANGLE = 8.0  # degrees, + = top leans left
 ANGLES = {
-    c: MAX_ANGLE * (1 - 2 * i / (len("PRISME") - 1))
-    for i, c in enumerate("PRISME")
+    c: MAX_ANGLE * (1 - 2 * i / (len("Emile") - 1))
+    for i, c in enumerate("Emile")
 }
 UPM = 2000  # Fraunces
 
@@ -52,7 +53,7 @@ PINCH_CAP_NAV = 400.0
 PINCH_CAP_DISPLAY = 400.0
 PINCH_CAP_MARK = 400.0
 
-LETTERS = "PRISME"
+LETTERS = "Emile"
 
 
 def load_font(opsz):
@@ -140,7 +141,11 @@ def main():
         "prisme-wordmark-nav.svg": build(LETTERS, 0.0, 14, pinch=(PINCH_CAP_NAV, PINCH_SHARP_NAV)),
         "prisme-wordmark-display.svg": build(LETTERS, 0.0, 32, pinch=(PINCH_CAP_DISPLAY, PINCH_SHARP)),
         # l'angle du P du wordmark, adopté au rendu réel
-        "prisme-mark.svg": build("P", 0, 14, pinch=(PINCH_CAP_MARK, PINCH_SHARP)),
+        # la première lettre du wordmark, à son angle — même matrice que
+        # l'initiale du mot (recette « mark = initiale du wordmark »)
+        "prisme-mark.svg": build(
+            "E", 0, 14, angles={"E": MAX_ANGLE}, pinch=(PINCH_CAP_MARK, PINCH_SHARP)
+        ),
     }
     for name, svg in assets.items():
         with open(os.path.join(OUT_DIR, name), "w") as f:
