@@ -48,6 +48,7 @@ pnpm monorepo. Run everything from the repo root:
 - `pnpm typecheck` — all packages (tsc + astro check).
 - `pnpm --filter @prisme/web build` — build the static site (needs `data/` to exist; run `pnpm edition` first).
 - `pnpm benchmark:export` / `pnpm benchmark:grade` — sample headline+teaser pairs for hand labeling, then grade the decision models against the labels (grade needs `OPENROUTER_API_KEY` in env).
+- `pnpm backtest:episodes` — replay the episode mechanism (`episodeContext`) over the `data/` archive and print every proposed episode link with its score; free, no API — the grading tool for episode links and Topics (ADR-0023, ADR-0024).
 
 Packages: `packages/domain` (shared types and the sourced Outlet config), `pipeline` (collector, `tsx`), `web` (Astro + React).
 

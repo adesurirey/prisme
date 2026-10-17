@@ -35,7 +35,7 @@
  * two Articles throws) keeps the policy true by construction.
  */
 import { readdir, readFile } from 'node:fs/promises';
-import type { Article, Section, Story } from '@prisme/domain';
+import type { Article, Section, Story, Topic } from '@prisme/domain';
 import {
   newestFirst,
   parseStoryFile,
@@ -52,6 +52,7 @@ import { isLive, LIVE_WINDOW_MS } from './liveness.ts';
 import { MembershipGate } from './membership-gate.ts';
 import { ingestionIsOpen, parisDayKey } from './paris-day.ts';
 import type { TitlePassModel } from './title-pass.ts';
+import { topicLabel } from './topic-label.ts';
 
 /** Above this many checks in one build, the run log warns (ADR-0012). */
 export const MEMBERSHIP_CHECKS_WARN = 2000;
@@ -85,6 +86,9 @@ export interface GroupingOutcome {
   changed: Set<string>;
   /** Stories with at least one live Article — what the Edition publishes. */
   live: Story[];
+  /** Topics confirmed this build — threads that reached two Episodes; the
+   * run merges them into data/topics.json (ADR-0024). */
+  topics: ConfirmedTopic[];
 }
 
 function published(date: string): number {
@@ -222,15 +226,21 @@ const STOPWORDS = new Set([
 
 /** Lowercase, accent-stripped content tokens of a headline.
  * Exported for the grouping benchmark's dup-seed detector (issue #41). */
+/** The match key of one raw word: lowercased, accent-stripped — undefined
+ * for stopwords and sub-2-char words, which carry no content signal. Shared
+ * by tokens() and the Topic label (ADR-0024), which must agree on what
+ * counts as a content word. */
+export function wordKey(raw: string): string | undefined {
+  const word = raw.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
+  if (word.length < 2 || STOPWORDS.has(word)) return undefined;
+  return word;
+}
+
 export function tokens(text: string): Set<string> {
   const out = new Set<string>();
-  for (const raw of text.toLowerCase().split(/[^\p{L}\p{N}]+/u)) {
-    // Strip accents before the stopword check: the list is written
-    // unaccented (ete, apres, …), so checking the raw form first lets
-    // accented French function words through as content tokens.
-    const word = raw.normalize('NFD').replace(/\p{M}/gu, '');
-    if (word.length < 2 || STOPWORDS.has(word)) continue;
-    out.add(word);
+  for (const raw of text.split(/[^\p{L}\p{N}]+/u)) {
+    const key = wordKey(raw);
+    if (key != null) out.add(key);
   }
   return out;
 }
@@ -334,21 +344,42 @@ function seedCandidates(seed: Article, live: Story[]): Story[] {
  * creates a duplicate Story. */
 export const EPISODE_MIN_OVERLAP = 0.25;
 
-/** The most headline-similar Story on disk for a new cluster: the previous
- * episode of the same event, fed to the Title pass so the new title carries
- * what changed since the episode the reader already saw (ADR-0023). Scored
- * like the seed guard — the best overlap of any cluster headline with the
- * Story's title or any of its member headlines. The Story itself is never
- * in `existing` (it is born this build). Exported for tests. */
-export function episodeContext(
+/** A Story on disk older than this many days before the birth's day is no
+ * longer the previous episode (ADR-0024): the Title pass context claims to
+ * be the episode the reader already saw, and an old match is not that —
+ * while for Topics, inheriting from a stale Story is where a weak lexical
+ * match compounds into a permanent wrong thread. Generous against the
+ * observed 0–3 day range of true links, so sagas that breathe (weekend
+ * pauses) keep their thread; revised by the episode backtest as the archive
+ * grows. An event resuming after the window founds a new Topic. */
+export const EPISODE_MAX_AGE_DAYS = 7;
+
+/** The oldest storyDay an episode may have for a birth of `day`. */
+function episodeCutoff(day: string): string {
+  return new Date(Date.parse(day) - EPISODE_MAX_AGE_DAYS * 86_400_000)
+    .toISOString()
+    .slice(0, 10);
+}
+
+/** The most headline-similar Story on disk for a new cluster of `day`: the
+ * previous episode of the same event. Scored like the seed guard — the best
+ * overlap of any cluster headline with the Story's title or any of its member
+ * headlines. Only Stories within the age window count (ADR-0024): strictly
+ * not-after the birth's day, and no older than EPISODE_MAX_AGE_DAYS. The
+ * Story itself is never in `existing` (it is born this build). Exported for
+ * tests; also drives Topic assignment (ADR-0024). */
+export function bestEpisodeMatch(
   headlines: string[],
   existing: Story[],
-): { title: string; storyDay: string } | undefined {
-  let best: { title: string; storyDay: string; score: number } | undefined;
+  day: string,
+): Story | undefined {
+  const cutoff = episodeCutoff(day);
+  let best: { story: Story; score: number } | undefined;
   for (const headline of headlines) {
     const headlineTokens = tokens(headline);
     if (headlineTokens.size === 0) continue;
     for (const story of existing) {
+      if (story.storyDay > day || story.storyDay < cutoff) continue;
       const score = Math.max(
         overlap(headlineTokens, tokens(story.title)),
         ...story.articles.map((a) =>
@@ -356,12 +387,101 @@ export function episodeContext(
         ),
       );
       if (score >= EPISODE_MIN_OVERLAP && (best == null || score > best.score))
-        best = { title: story.title, storyDay: story.storyDay, score };
+        best = { story, score };
     }
   }
-  return best == null
+  return best?.story;
+}
+
+/** The previous episode as the Title pass consumes it (ADR-0023): title and
+ * day only — the Title pass never sees Story ids. */
+export function episodeContext(
+  headlines: string[],
+  existing: Story[],
+  day: string,
+): { title: string; storyDay: string } | undefined {
+  const story = bestEpisodeMatch(headlines, existing, day);
+  return story == null
     ? undefined
-    : { title: best.title, storyDay: best.storyDay };
+    : { title: story.title, storyDay: story.storyDay };
+}
+
+/** A Topic confirmed this build: a birth inherited it, so the thread has
+ * reached two Episodes (ADR-0024). The run hands these to the registry
+ * module, which owns the merge and mints the public slug — grouping itself
+ * never sees registry state. */
+export type ConfirmedTopic = Omit<Topic, 'slug'>;
+
+/** Resolve the Topic of every Story born this build (ADR-0024), after the
+ * Title pass and slug assignment. Every birth carries its Topic key for
+ * life: the Episode it continues (lexicon proposes, Membership disposes —
+ * a failed check throws and fails the build, ADR-0005) or, when it founds,
+ * its own slug as a prospective key. A Topic exists from two Episodes, like
+ * a Story exists from two Articles (ADR-0015): only inheritances confirm a
+ * Topic, and only confirmed Topics reach the registry — a singleton story
+ * never becomes one. A Story on disk without a topicId (the pre-Topics
+ * archive) is never inherited from — no retro-assignment. */
+async function resolveTopics(input: {
+  births: Story[];
+  existing: Story[];
+  teasers: Map<string, string>;
+  membership: MembershipChecker;
+}): Promise<ConfirmedTopic[]> {
+  const confirmed: ConfirmedTopic[] = [];
+  for (const birth of input.births) {
+    const episode = bestEpisodeMatch(
+      birth.articles.map((a) => a.headline),
+      input.existing,
+      birth.storyDay,
+    );
+    if (episode?.topicId != null) {
+      const seed = birth.articles[0]!;
+      const verdict = await input.membership.belongs(
+        {
+          title: episode.title,
+          section: episode.section,
+          headlines: episode.articles.map((a) => a.headline),
+        },
+        { headline: seed.headline, teaser: input.teasers.get(seed.id) ?? '' },
+      );
+      if (verdict === 'failed')
+        throw new Error(
+          `Topic resolution failed: Membership could not answer whether Story ${birth.slug} continues Story ${episode.slug} (ADR-0024).`,
+        );
+      if (verdict === 'yes') {
+        birth.topicId = episode.topicId;
+        // The thread reached two Episodes: the Topic exists. The founding
+        // Story on disk — frozen, final title — labels it, and its short
+        // display label comes from the thread's own headlines (ADR-0024).
+        // The public slug is not minted here: the registry module owns it
+        // (ADR-0024), grouping never sees registry state.
+        const labelPool = [
+          episode.title,
+          ...episode.articles.map((a) => a.headline),
+          birth.title,
+          ...birth.articles.map((a) => a.headline),
+        ];
+        confirmed.push({
+          topicId: episode.topicId,
+          title: episode.title,
+          label: topicLabel(
+            labelPool,
+            input.existing.map((s) =>
+              [s.title, ...s.articles.map((a) => a.headline)].join(' '),
+            ),
+          ),
+          storyDay: episode.storyDay,
+          createdAt: episode.createdAt,
+        });
+        continue;
+      }
+    }
+    // No inheritable Episode (none matched, the pre-Topics archive, or
+    // Membership refused): the birth founds a prospective Topic — its own
+    // slug as key, no registry entry until a second Episode joins.
+    birth.topicId = birth.slug;
+  }
+  return confirmed;
 }
 
 export async function groupStories(
@@ -407,7 +527,12 @@ export async function groupStories(
 
   if (fresh.length === 0) {
     // Nothing new: nothing changes (issue #5 acceptance criterion).
-    return { stories, changed: new Set<string>(), live: liveSorted() };
+    return {
+      stories,
+      changed: new Set<string>(),
+      live: liveSorted(),
+      topics: [],
+    };
   }
 
   const merge = (story: Story, article: Article): void => {
@@ -828,6 +953,7 @@ export async function groupStories(
         episode: episodeContext(
           story.articles.map((a) => a.headline),
           existing,
+          story.storyDay,
         ),
       }));
     const updates = [...changedStories]
@@ -889,10 +1015,21 @@ export async function groupStories(
     else delete story.section;
   }
 
+  // Topics (ADR-0024): resolved after slugs — the Topic id is the founding
+  // Story's slug — and before anything is written. A failed Membership
+  // check throws and fails the build (ADR-0005).
+  const topics = await resolveTopics({
+    births: created,
+    existing,
+    teasers,
+    membership: clients.membership,
+  });
+
   return {
     stories,
     changed: new Set([...changedStories].map((s) => s.slug)),
     live: liveSorted(),
+    topics,
   };
 }
 

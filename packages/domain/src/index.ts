@@ -173,7 +173,7 @@ export interface Story {
   id: string;
   /** Stable slug used in /sujet/<slug>, fixed at creation, never changes. */
   slug: string;
-  /** Neutral French title written by the Grouping model; may change over time. */
+  /** Neutral French title written by the Title pass; may change over time. */
   title: string;
   /** ISO 8601 creation time, fixed at creation. */
   createdAt: string;
@@ -194,6 +194,33 @@ export interface Story {
   summarizedArticleCount?: number;
   /** Sticky: true once the Story ranked into the Edition (issue #75). */
   everInEdition?: boolean;
+  /** The Story's Topic (ADR-0024): a thread of Episodes, assigned once at
+   * birth — the founding Story's own slug when it founds its Topic. Absent
+   * on Stories born before Topics existed: no retro-assignment. */
+  topicId?: string;
+}
+
+/** One Topic in the registry (ADR-0024): a thread of Episodes founded by one
+ * Story. The id is the founding Story's slug (immutable, ADR-0005); the
+ * label is its final title at founding. */
+export interface Topic {
+  topicId: string;
+  /** Public URL slug, minted once at confirmation from the short label —
+   * its own namespace, never a Story slug (ADR-0024). Immutable with the
+   * label it derives from. */
+  slug: string;
+  title: string;
+  /** Short display label, two or three words naming the thread — the most
+   * distinctive repeated word pair of its headlines (ADR-0024), computed
+   * once at confirmation. Not an article title. */
+  label: string;
+  storyDay: string;
+  createdAt: string;
+}
+
+/** The Topic registry — data/topics.json, written when a build founds Topics. */
+export interface TopicRegistry {
+  topics: Topic[];
 }
 
 /** The current selection of top Stories Prisme publishes. */

@@ -48,6 +48,9 @@ _Avoid_: Timestamp, exact date
 A precise news event, or the directly connected chain of developments on one, made up of the Articles that report on it. A Story holds a fact, never a theme: Articles on the same broader topic but a different fact belong to their own Story. National and international news are both in scope. A Story's id and slug are fixed when it is created and never change.
 _Avoid_: Topic, cluster, event, subject, theme
 
+**Topic**:
+A thread of Episodes: one event followed across days — not a theme (theming is the Classification's Section) and not a recurring format (whether "PSG matches" merge is a deferred product question). A Topic exists from two Episodes, like a Story exists from two Articles (ADR-0015); every Story still carries its Topic key for life — the Episode it continues, or its own slug as a prospective key at founding. Assignment at birth: the lexicon proposes (`episodeContext`, within the age window), Membership disposes. The Topic id is the founding Story's slug (internal join key); the registry, `data/topics.json`, lists only confirmed Topics, each with a short display label (two or three words from the thread's own headlines — « Mobilisation lycéenne » — computed at confirmation) and a public slug derived from that label, in its own namespace (ADR-0024). No UI reads Topics yet (ADR-0024).
+
 **Story title**:
 The neutral French name of a Story, written by the Title pass (ADR-0023) — never by the Grouping model. Distinct from any Outlet's headline. A Live Story's title may change while it gains Articles; a Frozen Story's title is immutable, like its slug.
 _Avoid_: Story headline

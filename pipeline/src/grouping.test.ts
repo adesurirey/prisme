@@ -1743,12 +1743,12 @@ describe('Title pass (ADR-0023)', () => {
           story({
             title:
               'Un adolescent tue quatre personnes dans une école de l’Oregon',
-            storyDay: '2026-10-16',
+            storyDay: '2026-10-05',
             articles: [
               article('a0', {
                 headline:
                   'Quatre morts dans une fusillade dans une école de l’Oregon',
-                publishedAt: '2026-10-16T10:00:00Z',
+                publishedAt: '2026-10-05T10:00:00Z',
               }),
             ],
           }),
@@ -1769,7 +1769,7 @@ describe('Title pass (ADR-0023)', () => {
     const [pass] = episodeCalls;
     expect(pass?.input?.births[0]?.episode).toEqual({
       title: 'Un adolescent tue quatre personnes dans une école de l’Oregon',
-      storyDay: '2026-10-16',
+      storyDay: '2026-10-05',
     });
   });
 
@@ -1897,7 +1897,7 @@ describe('Title pass (ADR-0023)', () => {
   it('episodeContext ranks the best overlap and respects the threshold', () => {
     const oregon = story({
       title: 'Un adolescent tue quatre personnes dans une école de l’Oregon',
-      storyDay: '2026-10-16',
+      storyDay: '2026-10-05',
       articles: [
         article('a0', {
           headline:
@@ -1912,13 +1912,252 @@ describe('Title pass (ADR-0023)', () => {
           'Fusillade dans une école de l’Oregon : l’auteur était un ancien élève',
         ],
         [other, oregon],
+        '2026-10-06',
       ),
     ).toEqual({
       title: 'Un adolescent tue quatre personnes dans une école de l’Oregon',
-      storyDay: '2026-10-16',
+      storyDay: '2026-10-05',
     });
     expect(
-      episodeContext(['Angèle en concert à Paris'], [oregon]),
+      episodeContext(['Angèle en concert à Paris'], [oregon], '2026-10-06'),
     ).toBeUndefined();
+  });
+
+  it('an Episode older than the age window is not the previous episode (ADR-0024)', () => {
+    const oregon = story({
+      title: 'Un adolescent tue quatre personnes dans une école de l’Oregon',
+      storyDay: '2026-09-28',
+      articles: [
+        article('a0', {
+          headline:
+            'Quatre morts dans une fusillade dans une école de l’Oregon',
+        }),
+      ],
+    });
+    // 8 days before 2026-10-06: beyond EPISODE_MAX_AGE_DAYS (7) — the story
+    // is lexically a match but stale for the reader and for Topics.
+    expect(
+      episodeContext(
+        [
+          'Fusillade dans une école de l’Oregon : l’auteur était un ancien élève',
+        ],
+        [oregon],
+        '2026-10-06',
+      ),
+    ).toBeUndefined();
+    // Exactly 7 days: at the window edge, still the previous episode.
+    expect(
+      episodeContext(
+        [
+          'Fusillade dans une école de l’Oregon : l’auteur était un ancien élève',
+        ],
+        [{ ...oregon, storyDay: '2026-09-29' }],
+        '2026-10-06',
+      ),
+    ).toBeDefined();
+  });
+});
+
+describe('Topics (ADR-0024)', () => {
+  // The proven episode pair: the Oregon cluster of the day vs the previous
+  // day's Oregon Story on disk (overlap ≈ 0.33, above the 0.25 threshold).
+  const OREGON_EPISODE_HEADLINES = [
+    'Fusillade dans une école de l’Oregon : l’auteur était un ancien élève',
+    'La tuerie de l’Oregon : l’adolescent avait été élève de l’école',
+  ];
+  const EPISODE = story({
+    title: 'Un adolescent tue quatre personnes dans une école de l’Oregon',
+    storyDay: '2026-10-05',
+    topicId: 'un-adolescent-tue-quatre-personnes-dans-une-ecole-de-l-oreg',
+    articles: [
+      article('a0', {
+        headline: 'Quatre morts dans une fusillade dans une école de l’Oregon',
+        publishedAt: '2026-10-16T10:00:00Z',
+      }),
+    ],
+  });
+
+  /** A Membership checker answering calls in sequence: the birth's internal
+   * merge checks come first, the topic check last (resolveTopics runs after
+   * the whole resolution). Answers the calls in order; null means 'failed'. */
+  function fakeMembershipSeq(answers: (boolean | null)[]): {
+    checker: import('./decision-model.ts').MembershipChecker;
+    calls: { story?: string; article?: string }[];
+  } {
+    const calls: { story?: string; article?: string }[] = [];
+    return {
+      calls,
+      checker: {
+        label: 'FakeJev',
+        async belongs(story, articleHead) {
+          const answer = answers[calls.length] ?? null;
+          calls.push({ story: story.title, article: articleHead.headline });
+          return answer == null ? 'failed' : answer ? 'yes' : 'no';
+        },
+      },
+    };
+  }
+
+  function birthInput(
+    membership: import('./decision-model.ts').MembershipChecker,
+  ) {
+    return input({
+      articles: [
+        article('a1', { headline: OREGON_EPISODE_HEADLINES[0]! }),
+        article('a2', { headline: OREGON_EPISODE_HEADLINES[1]! }),
+      ],
+      existing: [EPISODE],
+      clients: {
+        grouping: fakeGrouping({
+          newStories: [{ key: 'k1' }],
+          assignments: [
+            { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+            { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+          ],
+        }),
+        membership,
+        titles: fakeTitlePass(),
+      },
+    });
+  }
+
+  it('a birth whose Membership check confirms its Episode inherits its Topic', async () => {
+    const { checker, calls } = fakeMembershipSeq([true, true]);
+    const outcome = await groupStories(birthInput(checker));
+    const born = outcome.stories.find((s) => s.id === '000000000001')!;
+    expect(born.topicId).toBe(EPISODE.topicId);
+    // The thread reached two Episodes: the Topic exists, labelled by the
+    // founding Story on disk — not by the birth.
+    expect(outcome.topics).toEqual([
+      {
+        topicId: EPISODE.topicId,
+        // No slug here: the registry module mints it at merge time.
+        title: EPISODE.title,
+        // The short display label (ADR-0024): the thread's most distinctive
+        // repeated pair — here « ancien élève », the birth's only rare
+        // tokens (every token the founder shares scores zero against its
+        // own document in the corpus).
+        label: 'Ancien élève',
+        storyDay: '2026-10-05',
+        createdAt: EPISODE.createdAt,
+      },
+    ]);
+    // The second check is the topic check: asked from the birth's seed
+    // against the Episode (the first one is the birth's internal merge).
+    expect(calls).toHaveLength(2);
+    expect(calls[1]?.story).toBe(EPISODE.title);
+    expect(calls[1]?.article).toBe(OREGON_EPISODE_HEADLINES[0]);
+  });
+
+  it('a refused Episode founds a new Topic named by the founding slug', async () => {
+    const { checker } = fakeMembershipSeq([true, false]);
+    const outcome = await groupStories(birthInput(checker));
+    const born = outcome.stories.find((s) => s.id === '000000000001')!;
+    // Refused: the birth founds a prospective Topic (its own slug as key)
+    // but no registry entry — the thread has a single Episode so far.
+    expect(born.topicId).toBe(born.slug);
+    expect(outcome.topics).toEqual([]);
+  });
+
+  it('a failed Membership check fails the build (ADR-0005)', async () => {
+    const { checker } = fakeMembershipSeq([true, null]);
+    await expect(groupStories(birthInput(checker))).rejects.toThrow(
+      /Topic resolution failed/,
+    );
+  });
+
+  it('a birth with no Episode match founds a new Topic without asking Membership about the Episode', async () => {
+    const { checker, calls } = fakeMembershipSeq([true]);
+    const outcome = await groupStories(
+      input({
+        articles: [
+          article('a1', {
+            headline: 'Angèle sort son troisième album Instinct',
+          }),
+          article('a2', { headline: 'Instinct, le nouvel album d’Angèle' }),
+        ],
+        existing: [EPISODE],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+          }),
+          membership: checker,
+          titles: fakeTitlePass(),
+        },
+      }),
+    );
+    const born = outcome.stories.find((s) => s.id === '000000000001')!;
+    // Prospective key only: a single-Episode thread is not a Topic yet.
+    expect(born.topicId).toBe(born.slug);
+    expect(outcome.topics).toEqual([]);
+    // The only check was the birth's internal merge — never the Episode.
+    expect(calls).toHaveLength(1);
+    expect(calls.every((c) => c.story !== EPISODE.title)).toBe(true);
+  });
+
+  it('an Episode without a topicId is never inherited from (no retro-assignment)', async () => {
+    const { checker, calls } = fakeMembershipSeq([true]);
+    const outcome = await groupStories(
+      input({
+        articles: [
+          article('a1', { headline: OREGON_EPISODE_HEADLINES[0]! }),
+          article('a2', { headline: OREGON_EPISODE_HEADLINES[1]! }),
+        ],
+        existing: [{ ...EPISODE, topicId: undefined }],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+          }),
+          membership: checker,
+          titles: fakeTitlePass(),
+        },
+      }),
+    );
+    const born = outcome.stories.find((s) => s.id === '000000000001')!;
+    // The episode matches, but there is no Topic on it to inherit — the
+    // birth founds its own without spending a check.
+    expect(calls).toHaveLength(1);
+    expect(calls.every((c) => c.story !== EPISODE.title)).toBe(true);
+    expect(born.topicId).toBe(born.slug);
+    expect(outcome.topics).toEqual([]);
+  });
+
+  it('Stories that gain Articles keep their Topic; updates found nothing', async () => {
+    const { checker, calls } = fakeMembershipSeq([true]);
+    const outcome = await groupStories(
+      input({
+        articles: [article('a3', { headline: 'Le Sénat adopte le budget' })],
+        existing: [
+          story({
+            title: 'Le budget défendu à l’Assemblée',
+            articles: [article('a0', { headline: 'Le budget présenté' })],
+            topicId: 'le-budget-defendu-a-l-assemblee',
+          }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [{ articleId: 'a3', storyId: 's1', confidence: 0.9 }],
+          }),
+          membership: checker,
+          titles: fakeTitlePass(),
+        },
+      }),
+    );
+    expect(outcome.stories.find((s) => s.id === 's1')!.topicId).toBe(
+      'le-budget-defendu-a-l-assemblee',
+    );
+    expect(outcome.topics).toEqual([]);
+    // The only check is the merge itself — Topics never spend one on updates.
+    expect(calls).toHaveLength(1);
+    expect(calls[0]?.story).toBe('Le budget défendu à l’Assemblée');
   });
 });
