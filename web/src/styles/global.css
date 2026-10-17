@@ -97,6 +97,14 @@
  * between pages with and without a vertical scrollbar. */
 html {
   scrollbar-gutter: stable;
+  /* The -mx-5 full-bleed cards plus the image-credit touch targets
+   * (padded summaries with matching negative margins, ImageCredit.tsx)
+   * can overhang the viewport edge by a pixel or two on narrow screens.
+   * Any horizontal overflow makes iOS Safari pan the page sideways and
+   * wobble vertical scrolls. `clip` (not `hidden`) kills the overflow
+   * without creating a scroll container, so the sticky header stays put.
+   */
+  overflow-x: clip;
 }
 
 /* The page's pull-to-refresh is Prisme's own (web/src/pull-to-refresh.ts,
@@ -104,6 +112,9 @@ html {
  * here keeps the two gestures from fighting on Chrome Android. */
 body {
   overscroll-behavior-y: none;
+  /* Mirror of the html rule: belt and braces against sideways panning
+   * on iOS (see the comment on html). */
+  overflow-x: clip;
 }
 
 /* Load-more tail (ADR-0022): under JS, Story cards beyond the first batch
