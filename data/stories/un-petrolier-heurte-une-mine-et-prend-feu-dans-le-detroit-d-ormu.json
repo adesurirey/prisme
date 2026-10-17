@@ -1,10 +1,22 @@
 {
   "id": "fbecdf0a5010",
   "slug": "un-petrolier-heurte-une-mine-et-prend-feu-dans-le-detroit-d-ormu",
-  "title": "Un pétrolier heurte une mine et prend feu dans le détroit d'Ormuz selon l'Iran",
+  "title": "Un pétrolier prend feu après avoir heurté une mine dans le détroit d'Ormuz",
   "createdAt": "2026-10-17T10:01:13.982Z",
   "storyDay": "2026-10-17",
   "articles": [
+    {
+      "id": "d986266fe292",
+      "outletId": "ouest-france",
+      "headline": "Guerre au Moyen-Orient : deux pétroliers en feu après avoir heurté des mines dans le détroit d’Ormuz",
+      "url": "https://www.ouest-france.fr/monde/iran/guerre-au-moyen-orient-deux-petroliers-en-feu-apres-avoir-heurte-des-mines-dans-le-detroit-dormuz-ce166a44-ca3b-11f1-ad87-e24a1a2986e9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-17T15:31:32.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwODg4ZDdlZmMzM2YxN2FmN2ExMTE3MDkyYjA2M2U0ZDg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=e156ee2fcb0886031d81b1bbfbf2a624c3b40d4e91b8a97cdc62c748f7fb1dce",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
     {
       "id": "a78559f62a23",
       "outletId": "le-figaro",
@@ -29,6 +41,18 @@
       "section": "world"
     },
     {
+      "id": "080a542a935c",
+      "outletId": "20-minutes",
+      "headline": "Iran : Deux pétroliers heurtent des mines dans le détroit d’Ormuz et prennent feu",
+      "url": "https://www.20minutes.fr/monde/4255162-20261017-iran-petrolier-heurte-mine-detroit-ormuz-prend-feu-apres-teheran?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-17T09:20:04.000Z",
+      "imageUrl": "https://img.20mn.fr/pzAVd_GqTQWOnwhKdIHPkik/1200x768_8-mai-2026-mer-d-oman-eaux-internationales-le-destroyer-a-missiles-guides-de-classe-arleigh-burke-de-la-marine-americaine-uss-rafael-peralta-intercepte-le-petrolier-m-v-herby-battant-pavillon-iranien-faisant-appliquer-le-blocus-maritime-autoproclame-contre-les-navires-entrant-ou-sortant-des-ports-et-des-zones-cotieres-iraniens-le-24-avril-2026-sur-la-mer-d-arabie-image-de-credit-us-navy-planet-pix-via-zuma-press-wire-20260508-zaa-p138-001-zeus-2605082151",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "7333fdccc97b",
       "outletId": "bfmtv",
       "headline": "\"Un superpétrolier a heurté une mine\": l'Iran intensifie ses attaques dans le détroit d'Ormuz, alors que le baril de pétrole frôle à nouveau les 110 dollars",
@@ -44,17 +68,16 @@
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Un navire pétrolier a été la cible d'une explosion suivie d'un incendie après avoir touché un engin explosif.",
-      "Les autorités militaires iraniennes confirment l'incident survenu dans le passage maritime stratégique.",
-      "Cet événement s'inscrit dans un contexte d'intensification des actions hostiles dans la zone, exerçant une pression à la hausse sur les cours mondiaux du pétrole."
+      "Deux navires transportant du brut se sont embrasés après un contact avec des engins explosifs dans un passage maritime sous haute tension.",
+      "L'autorité militaire iranienne a officialisé l'incident impliquant ces bâtiments.",
+      "Cet événement survient dans une zone stratégique marquée par les affrontements géopolitiques et les efforts d'escorte."
     ],
     "droite": [
-      "Les forces des Gardiens de la Révolution ont officialisé la collision entre un navire et un engin explosif.",
-      "Le bâtiment impliqué transportait une importante quantité de brut et naviguait dans des conditions qualifiées d'irrégulières par Téhéran.",
-      "L'impact a entraîné une déflagration majeure et un violent feu à bord du transporteur."
+      "Les forces armées iraniennes ont rapporté que deux grands transporteurs de pétrole ont été la proies des flammes à la suite d'impacts avec des explosifs.",
+      "L'incident s'est déroulé dans un passage maritime particulièrement disputé au milieu des tensions diplomatiques et militaires."
     ]
   },
-  "differences": "Le camp de droite, représenté par Le Figaro et TF1 Info, se focalise strictement sur les déclarations des Gardiens de la Révolution en rapportant l'incident technique et l'infraction alléguée du navire sans ajouter de considération extérieure. À l'inverse, le centre (BFMTV) élargit le cadre géopolitique et économique en reliant immédiatement cet événement à une recrudescence des hostilités dans la région et à ses conséquences directes sur l'envolée des cours du pétrole.",
+  "differences": "Le centre, représenté par Ouest-France, élargit le cadre de l'événement en soulignant l'échec relatif des escortes américaines dans cette zone de friction entre Téhéran et Washington, tout en signalant le passage de un à deux navires touchés. De son côté, la droite (Le Figaro) adopte une approche plus sobre et strictement factuelle en se limitant aux déclarations des Gardiens de la Révolution concernant la double collision avec des mines sans détailler le contexte des escortes.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 5
 }

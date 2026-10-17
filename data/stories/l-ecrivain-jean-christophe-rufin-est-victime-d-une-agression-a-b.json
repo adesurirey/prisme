@@ -1,10 +1,32 @@
 {
   "id": "f1e442647680",
   "slug": "l-ecrivain-jean-christophe-rufin-est-victime-d-une-agression-a-b",
-  "title": "L'écrivain Jean-Christophe Rufin victime d'une violente agression à Bourges",
+  "title": "L'écrivain Jean-Christophe Rufin dépose plainte après avoir été agressé à son domicile de Bourges",
   "createdAt": "2026-10-17T11:01:20.467Z",
   "storyDay": "2026-10-17",
   "articles": [
+    {
+      "id": "384a648ca940",
+      "outletId": "huffpost",
+      "headline": "L’écrivain Jean-Christophe Rufin, membre de l’Académie française, porte plainte après une violente agression",
+      "url": "https://www.huffingtonpost.fr/france/article/l-ecrivain-jean-christophe-rufin-membre-de-l-academie-francaise-porte-plainte-apres-une-violente-agression_341127.html",
+      "publishedAt": "2026-10-17T15:38:20.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/17/12/0/4961/2790/0/0/60/0/886aefc_upload-1-5knihy3vy0aa-afp-20250602-hl-edervaux-2787227-v1-highres-franicefestivaldulivreauthorportrai.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "a4e2d2c02656",
+      "outletId": "cnews",
+      "headline": "«C'était vraiment une boucherie» : l'écrivain et académicien Jean-Christophe Rufin victime d'une violente agression",
+      "url": "https://www.cnews.fr/france/2026-10-17/cetait-vraiment-une-boucherie-lecrivain-et-academicien-jean-christophe-rufin",
+      "publishedAt": "2026-10-17T15:27:15.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/votre_texte_de_paragraphe_6ad3892d47ad8.png?itok=UIUyQgmN",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "59a0bb363715",
       "outletId": "ouest-france",
@@ -16,6 +38,17 @@
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
+    },
+    {
+      "id": "2182aac57643",
+      "outletId": "le-figaro",
+      "headline": "Bourges : l’écrivain Jean-Christophe Rufin agressé par trois individus devant son domicile",
+      "url": "https://www.lefigaro.fr/faits-divers/bourges-l-ecrivain-jean-christophe-rufin-agresse-par-trois-individus-devant-son-domicile-20261017",
+      "publishedAt": "2026-10-17T12:21:46.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/17/42a6ff9fb413b45fe34d15204e4125869025ac548159eb8ebb4e0ad90aa44b6f.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "65e73d35fb03",
@@ -45,17 +78,19 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "L'agression de l'auteur s'est produite un jeudi soir dans la commune de Bourges.",
-      "Une enquête pour violences volontaires assorties de circonstances aggravantes a été ouverte.",
-      "Un individu a été interpellé et placé en garde à vue."
+      "L'écrivain et académicien a subi une agression violente à proximité de son domicile situé dans la commune de Bourges.",
+      "La victime a été prise à partie par des individus alcoolisés occupant un logement loué via une plateforme touristique."
     ],
     "centre": [
-      "Le médecin et académicien a subi une agression physique en bas de son domicile à Bourges.",
-      "L'affaire a entraîné l'hospitalisation de l'écrivain ainsi que l'ouverture d'une procédure judiciaire.",
-      "Trois personnes sont activement recherchées par les forces de l'ordre après les faits."
+      "Le médecin et académicien a été pris pour cible en bas de chez lui lors d'une altercation nocturne à Bourges.",
+      "Les autorités poursuivent activement leurs recherches pour retrouver trois individus suspectés d'être impliqués dans les faits."
+    ],
+    "droite": [
+      "L'académicien est intervenu pour calmer des personnes bruyantes avant que la situation ne dégénère brutalement.",
+      "La victime relate avoir subi des coups de pied au niveau de la tête ainsi qu'un coup de bouteille de rhum sur le crâne."
     ]
   },
-  "differences": "Les médias de gauche mettent l'accent sur les suites institutionnelles et policières de l'affaire en insistant sur l'ouverture de l'enquête pour violences aggravées et le placement en garde à vue d'un suspect. De son côté, la presse du centre adopte une couverture plus factuelle et narrative en insistant sur les circonstances de l'attaque, l'hospitalisation de la victime et la recherche de trois agresseurs présumés.",
+  "differences": "La gauche met l'accent sur le contexte résidentiel de l'agression liée à des occupants bruyants, tandis que le centre privilégie les aspects factuels de l'enquête en cours et la recherche des suspects. De son côté, la droite adopte un ton plus dramatique et sensationnaliste en insistant sur la violence inouïe des coups reçus par l'écrivain d'après son propre témoignage.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 6
 }
