@@ -14,6 +14,7 @@ const POOR_IMAGE_OUTLETS = new Set([
   'france-24',
   'franceinfo',
   'tf1-info',
+  'humanite',
 ]);
 
 /**
