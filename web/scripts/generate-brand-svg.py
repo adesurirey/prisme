@@ -98,6 +98,11 @@ def glyph_path(glyphSet, name, k, tx, pinch=None):
             else:
                 warped.value.append((op, pts))
         rec = warped
+        # bounds must be measured on the warped outline: the pinch pulls
+        # corner points outside the pre-warp bbox, which would clip them
+        wbp = BoundsPen(glyphSet)
+        rec.replay(wbp)
+        bp = wbp
     spen = SVGPathPen(glyphSet, ntos=lambda v: f"{v:.1f}".rstrip("0").rstrip("."))
     rec.replay(spen)
     return spen.getCommands(), bp.bounds
