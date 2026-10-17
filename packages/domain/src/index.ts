@@ -195,14 +195,14 @@ export interface Story {
   /** Sticky: true once the Story ranked into the Edition (issue #75). */
   everInEdition?: boolean;
   /** The Story's Topic (ADR-0024): a thread of Episodes, assigned once at
-   * birth — the founding Story's own slug when it founds its Topic. Absent
+   * birth — the founding Story's own id when it founds its Topic. Absent
    * on Stories born before Topics existed: no retro-assignment. */
   topicId?: string;
 }
 
 /** One Topic in the registry (ADR-0024): a thread of Episodes founded by one
- * Story. The id is the founding Story's slug (immutable, ADR-0005); the
- * label is its final title at founding. */
+ * Story. The id is the founding Story's id (immutable); the label is its
+ * final title at founding. */
 export interface Topic {
   topicId: string;
   /** Public URL slug, minted once at confirmation from the short label —

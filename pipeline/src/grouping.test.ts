@@ -1761,6 +1761,7 @@ describe('Title pass (ADR-0023)', () => {
             title:
               'Un adolescent tue quatre personnes dans une école de l’Oregon',
             storyDay: '2026-10-05',
+            topicId: 'un-adolescent-tue-quatre-personnes-dans-une-ecole-de',
             articles: [
               article('a0', {
                 headline:
@@ -1787,6 +1788,8 @@ describe('Title pass (ADR-0023)', () => {
     expect(pass?.input?.births[0]?.episode).toEqual({
       title: 'Un adolescent tue quatre personnes dans une école de l’Oregon',
       storyDay: '2026-10-05',
+      // The thread's display label (topics resolve before the Title pass).
+      subject: 'Ancien élève',
     });
   });
 
@@ -2074,7 +2077,8 @@ describe('Topics (ADR-0024)', () => {
     // (the first one is the birth's internal merge).
     expect(calls).toHaveLength(2);
     expect(calls[1]?.story).toBe(EPISODE.title);
-    expect(calls[1]?.article).toBe('Titre k1');
+    // The birth is untitled at topic time — its headlines carry it.
+    expect(calls[1]?.article).toBe('');
     expect(calls[1]?.headlines).toEqual(OREGON_EPISODE_HEADLINES);
   });
 
@@ -2082,9 +2086,10 @@ describe('Topics (ADR-0024)', () => {
     const { checker } = fakeMembershipSeq([true, false]);
     const outcome = await groupStories(birthInput(checker));
     const born = outcome.stories.find((s) => s.id === '000000000001')!;
-    // Refused: the birth founds a prospective Topic (its own slug as key)
-    // but no registry entry — the thread has a single Episode so far.
-    expect(born.topicId).toBe(born.slug);
+    // Refused: the birth founds a prospective Topic (its own id as key —
+    // no slug exists at topic time) but no registry entry — the thread has
+    // a single Episode so far.
+    expect(born.topicId).toBe(born.id);
     expect(outcome.topics).toEqual([]);
   });
 
@@ -2121,7 +2126,7 @@ describe('Topics (ADR-0024)', () => {
     );
     const born = outcome.stories.find((s) => s.id === '000000000001')!;
     // Prospective key only: a single-Episode thread is not a Topic yet.
-    expect(born.topicId).toBe(born.slug);
+    expect(born.topicId).toBe(born.id);
     expect(outcome.topics).toEqual([]);
     // The only check was the birth's internal merge — never the Episode.
     expect(calls).toHaveLength(1);
@@ -2155,7 +2160,7 @@ describe('Topics (ADR-0024)', () => {
     // birth founds its own without spending a check.
     expect(calls).toHaveLength(1);
     expect(calls.every((c) => c.story !== EPISODE.title)).toBe(true);
-    expect(born.topicId).toBe(born.slug);
+    expect(born.topicId).toBe(born.id);
     expect(outcome.topics).toEqual([]);
   });
 

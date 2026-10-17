@@ -446,7 +446,11 @@ export function topicPayload(
     const members = episode.headlines.filter((h) => h !== episode.title);
     if (members.length > 0) lines.push(...members.map((h) => `- ${h}`));
   }
-  lines.push(`Nouvelle story : ${birth.title}${section(birth)}`);
+  lines.push(
+    birth.title
+      ? `Nouvelle story : ${birth.title}${section(birth)}`
+      : 'Nouvelle story (pas encore titrée) :',
+  );
   const birthMembers = birth.headlines.filter((h) => h !== birth.title);
   if (birthMembers.length > 0) lines.push(...birthMembers.map((h) => `- ${h}`));
   return { headline: lines.join('\n'), teaser: '' };

@@ -91,11 +91,12 @@ const counters = { yes: 0, no: 0 };
 const log = (line: string) => lines.push(line);
 
 for (const story of files) {
-  const [confirmed] = await resolveTopics({
+  const { topics: confirmedTopics } = await resolveTopics({
     births: [story],
     existing: seen,
     membership: loggingProxy(membership, counters, log),
   });
+  const confirmed = confirmedTopics[0];
   if (confirmed != null) {
     const { registry: merged, added } = mergeTopicRegistry(registry, [
       confirmed,

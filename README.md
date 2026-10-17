@@ -18,9 +18,9 @@ flowchart LR
     classDef model stroke:#8250df,stroke-width:2;
     A[Collect<br>every Outlet’s RSS feed] --> B[Classify<br>Decision model — Kind + Section]:::model
     B --> C[Group<br>Grouping model — new Articles into Stories]:::model
-    C --> T[Title<br>Title pass — every Story title,<br>episodes carry what changed]:::model
-    T --> T2[Topic<br>Membership — threads Episodes into sujets:<br>same-subject checks, label + slug]:::model
-    T2 --> D[Rank<br>front pages, Coverage, recency → Edition]
+    C --> T2[Topic<br>Membership — threads Episodes into sujets:<br>same-subject checks, label + slug]:::model
+    T2 --> T[Title<br>Title pass — every Story title anchored on<br>a Jev-confirmed thread]:::model
+    T --> D[Rank<br>front pages, Coverage, recency → Edition]
     D --> E[Summarize<br>Flash-Lite — Summaries + Differences]:::model
     E --> F[(Write<br>edition.json + topics.json + story files)]:::store
     F --> G[Publish<br>Astro prerender]
@@ -37,8 +37,8 @@ traceability.
 | --- | --- | --- |
 | Classify (Kind + Section), Membership and Topic checks | Jev (`typesafe/jev-1.13`) | OpenRouter — chosen by a hand-labeled benchmark |
 | Group (Stories from new Articles; never titles) | Flash-Lite (`gemini-3.5-flash-lite`) | Gemini free tier |
-| Title (every Story title, at birth and on retitle) | Flash-Lite (`gemini-3.5-flash-lite`) | Gemini free tier |
 | Topic (Sujets: same-subject checks, labels, slugs — `data/topics.json`) | Jev (`typesafe/jev-1.13`) | OpenRouter — one check per birth that matches an episode |
+| Title (every Story title, at birth and on retitle) | Flash-Lite (`gemini-3.5-flash-lite`) | Gemini free tier |
 | Summarize (Summaries + Differences) | Flash-Lite (`gemini-3.5-flash-lite`) | Gemini free tier |
 
 Leanings are set by hand, one per Outlet, backed by sources — never classified

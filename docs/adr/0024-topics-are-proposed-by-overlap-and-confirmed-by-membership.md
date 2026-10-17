@@ -24,11 +24,11 @@ A Topic is a thread of episodes: one event followed across days, not a theme
 is deliberately deferred to the product phase). A Topic exists from two
 Episodes, like a Story exists from two Articles (ADR-0015): a singleton story
 is not a Topic, and most news never becomes one. Every Story still carries its
-Topic key for life — the Episode it continues, or its own slug as a
+Topic key for life — the Episode it continues, or its own id as a
 prospective key when it founds — because the key is what lets a second
 Episode attach to the thread whenever it arrives, and an inert key on a
 never-continued Story costs nothing. The Topic id is the founding Story's
-slug (immutable, ADR-0005); the label is the founding Story's final title,
+id (immutable); the label is the founding Story's final title,
 taken from its file at confirmation — a Frozen Story's title is final — and
 alongside it the registry entry carries a **short display label**: two or
 three words naming the thread without being an article title (« Mobilisation
@@ -44,9 +44,8 @@ registry entry also carries the topic's **public slug**, minted once at
 confirmation from the label (`slugFor(label, …)` against the slugs the
 registry already uses): its own namespace, never a Story slug, so a future
 `sujets/<slug>` page cannot collide with a Story page. The internal key
-(`topicId` = the founding Story's slug) stays what it is — it must exist at
-birth, before any label does, and stamping it onto a frozen file afterwards
-would break the freeze.
+(`topicId` = the founding Story's id) stays what it is — it must exist at
+birth, before any label or slug does.
 The registry is `data/topics.json` and lists only confirmed Topics; Story files
 carry `topicId`. The registry is written once per Topic — later Episodes of
 an already-listed Topic change nothing.
@@ -70,6 +69,16 @@ against the war it belongs to, so the subject scattered into micro-threads
 that no build revisits. The criteria are frontal about what an episode
 may be: a reaction, decision or announcement concerning the event, even
 staging other actors than the last episode.
+
+Topics resolve **before the Title pass**. The naive order — title first, then
+resolve Topics — fed the Title pass an episode chosen by lexical match alone:
+a birth whose match Membership refused still got “poursuit l'épisode X” and
+its title could anchor on the wrong subject. With resolution first, the
+pass's episode context is only fed a Jev-confirmed thread — and the confirmed
+thread's display label goes with it (“poursuit le sujet « Mobilisation
+lycéenne » — épisode « … »”), finer context than a lone episode title. The
+untitled birth takes no part in the label pool or the same-subject payload:
+its headlines carry the subject, and its founding key is its own id.
 
 An age window bounds the proposal (`EPISODE_MAX_AGE_DAYS = 7`, shared with the
 Title pass's episode context): a Story on disk more than 7 days older than the

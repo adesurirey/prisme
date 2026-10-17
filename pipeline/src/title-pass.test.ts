@@ -27,7 +27,7 @@ describe('titlePassPrompt', () => {
   it('lists births with their headlines and the previous episode, updates with their history', () => {
     const prompt = titlePassPrompt(input);
     expect(prompt).toContain(
-      "- [k1] (poursuit l'épisode « Épisode précédent », 2026-10-16)",
+      '- [k1] (poursuit le sujet « Épisode précédent » — épisode « Épisode précédent », 2026-10-16)',
     );
     expect(prompt).toContain('  - Un tireur fait plusieurs victimes');
     expect(prompt).toContain('- [k2]');
