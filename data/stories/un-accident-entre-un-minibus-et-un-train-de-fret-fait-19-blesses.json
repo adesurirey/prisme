@@ -6,6 +6,17 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "3c82f3e575b6",
+      "outletId": "le-monde",
+      "headline": "Accident à l’entrée du tunnel sous la Manche : le conducteur du minibus qui a percuté un train à l’arrêt, faisant 19 blessés, était « expérimenté »",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/16/eurotunnel-le-conducteur-du-minibus-qui-a-percute-un-train-a-l-arret-faisant-19-blesses-etait-experimente_6795572_3234.html",
+      "publishedAt": "2026-10-16T15:44:31.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/15/684/0/8192/4096/644/322/60/0/0739bb6_ftp-1-ryx1xgvptfnc-56676aacad97460887059aaa318ed93d-0-336159699ef043d09f8da4d43c963091.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "58859f4be5bb",
       "outletId": "tf1-info",
       "headline": "Tunnel sous la Manche : collision entre un bus et un train",
@@ -89,9 +100,9 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un minibus a percuté un train de marchandises stationné sur un quai français.",
-      "Dix-neuf personnes ont été blessées lors de cette collision, dont deux se trouvent dans un état critique.",
-      "Le trafic ferroviaire transmanche a été maintenu sans perturbations significatives."
+      "Un conducteur expérimenté était au volant du minibus lors de la collision avec le train de marchandises.",
+      "Le véhicule transportait des chauffeurs de poids lourds depuis l'avant du convoi jusqu'à leurs camions garés plus loin.",
+      "Le bilan global reste établi à dix-neuf blessés dont deux en urgence absolue, tandis que le trafic ferroviaire n'a pas été perturbé durablement."
     ],
     "centre": [
       "Une navette transportant des passagers a percuté un convoi de fret arrêté dans le terminal français.",
@@ -104,7 +115,7 @@
       "L'exploitant Getlink fait face à un incident inédit tandis que le trafic est redevenu normal."
     ]
   },
-  "differences": "La gauche et le centre maintiennent une approche purement factuelle axée sur la nature de la collision, le bilan des dix-neuf blessés et la continuité du trafic. De son côté, la droite, enrichie par les apports du centre droit, nuance son traitement en soulignant le caractère rarissime et inédit de l'événement pour l'exploitant Getlink, tout en précisant le profil des victimes, à savoir des chauffeurs routiers, et l'évolution de leur prise en charge médicale.",
+  "differences": "La gauche intègre de nouveaux éléments de précision concernant l'expérience du conducteur et la configuration exacte du transport des chauffeurs de poids lourds au sein de la navette, tout en maintenant le bilan factuel de l'accident. Le centre et la droite conservent quant à eux un traitement centré sur le bilan global des blessés, la nature technique de la collision et la gestion de l'incident par l'exploitant Getlink, la droite insistant particulièrement sur le caractère inédit de l'événement.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 8
 }

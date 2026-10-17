@@ -6,6 +6,18 @@
   "storyDay": "2026-10-16",
   "articles": [
     {
+      "id": "2ee92d888755",
+      "outletId": "le-monde",
+      "headline": "L’accord franco-allemand sur l’automobile ménage Stellantis mais n’épargne pas Renault",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/16/l-accord-franco-allemand-sur-l-automobile-menage-stellantis-mais-n-epargne-pas-renault_6795636_3234.html",
+      "publishedAt": "2026-10-16T19:40:56.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/07/01/917/0/5500/2750/644/322/60/0/38ec60b_upload-1-soi8j2i7pwu1-2026-05-04t112957z-1704067828-rc272laudmuu-rtrmadp-3-stellantis-france.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "3b7faa67403d",
       "outletId": "le-figaro",
       "headline": "Les constructeurs, grands gagnants de l’accord franco-allemand sur l’automobile européenne",
@@ -89,22 +101,22 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Paris et Berlin se sont entendus pour tracer l'avenir de la filière automobile européenne.",
-      "Le texte du compromis introduit des marges de manœuvre supplémentaires pour les moteurs thermiques, répondant aux exigences allemandes."
+      "Paris et Berlin se sont entendus pour tracer l'avenir de la filière automobile européenne, en introduisant des marges de manœuvre supplémentaires pour les moteurs thermiques afin de répondre aux exigences allemandes.",
+      "Le compromis instaure des critères d'éligibilité aux subventions exigeant au moins 70 % de composants européens et une production dans l'Union.",
+      "Ces nouvelles règles créent toutefois un déséquilibre concurrentiel entre les constructeurs, impactant particulièrement le groupe Renault par rapport à son rival Stellantis."
     ],
     "centre": [
-      "Un compromis officiel a été scellé entre la France et l'Allemagne concernant les régulations de l'automobile européenne.",
-      "L'accord articule un assouplissement des objectifs climatiques avec un soutien accru à la fabrication locale.",
-      "Le texte intègre des souplesses pour les véhicules thermiques afin de satisfaire les requêtes de Berlin."
+      "Un compromis officiel a été scellé entre la France et l'Allemagne concernant les régulations de l'automobile européenne, articulant assouplissement climatique et soutien à la fabrication locale.",
+      "Le texte intègre des souplesses pour les véhicules thermiques afin de satisfaire les requêtes de Berlin.",
+      "L'accord introduit des exigences de localisation fixées à 70 % de pièces européennes pour l'accès aux aides publiques, un seuil abaissé qui pèse inégalement sur les fabricants selon leurs chaînes d'approvisionnement."
     ],
     "droite": [
       "Un accord franco-allemand redéfinit les régulations de l'automobile européenne en modérant la trajectoire des émissions de CO2.",
       "Le compromis réjouit les constructeurs tout en introduisant de nouvelles exigences de contenu local dans les véhicules.",
-      "Les autorités allemandes saluent une issue favorable à leur compétitivité et demandent la préservation des emplois.",
-      "La concrétisation de ces mesures reste suspendue aux équilibres politiques internes en Allemagne."
+      "Les autorités allemandes saluent une issue favorable à leur compétitivité et demandent la préservation des emplois, tandis que la concrétisation de ces mesures reste suspendue aux équilibres politiques internes en Allemagne."
     ]
   },
-  "differences": "La gauche et le centre continuent de souligner l'équilibre général entre flexibilité thermique et protectionnisme continental, tandis que la droite, à travers les nouvelles analyses du Figaro, insiste particulièrement sur la satisfaction des constructeurs automobiles face à l'allègement des contraintes carbone. La droite met également en avant les réactions officielles outre-Rhin qui lient cet accord à la compétitivité industrielle et à la défense de l'emploi, tout en maintenant sa vigilance sur l'aval politique à Berlin.",
+  "differences": "La gauche et le centre intègrent désormais la dimension industrielle et concurrentielle des nouvelles règles de production européenne, Le Monde soulignant notamment les répercussions inégales de la règle des 70 % de composants locaux entre les constructeurs français comme Renault et Stellantis. La droite, quant à elle, maintient son focus sur la modération des contraintes carbone, la défense de la compétitivité et les incertitudes politiques outre-Rhin, sans aborder frontalement les divergences de traitement entre marques.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 8
 }
