@@ -13,6 +13,14 @@ payload — the two knobs the replay experiment of 2026-10-17 turned:
 | A | belongs (« même fait ? ») | episode vs seed headline | 26/26 | 15 | `.benchmark/topics/jev-belongs-question-episode-payload-2026-10-17.txt` |
 | B | TOPIC_QUESTION (« même sujet ? ») | episode vs whole birth | 33/19 | 17 | `.benchmark/topics/jev-samesubject-question-episode-payload-2026-10-17.txt` |
 | C — production | TOPIC_QUESTION | whole thread vs whole birth | 39/13 | 17 | `.benchmark/topics/Jev-2026-10-17T10-11.txt` |
+| D | TOPIC_QUESTION | whole thread vs whole birth | 45/7 | 17 | `.benchmark/topics/Clef-flash-2026-10-17T10-14.txt` |
+
+Run D is Clef-flash (`cloudflare/clef-flash`) through the same OpenRouter
+gateway — the model-comparison candidate at the pinned benchmark prices:
+$0.09/MTok input vs Jev's $0.042/MTok, i.e. ~2× **more** expensive per input
+token on this route (a cheaper Clef-flash route would be Cloudflare-direct,
+which needs its own keys). The lexical proposal is unchanged, so the same 52
+links are judged.
 
 ## What each knob changed
 
@@ -50,3 +58,21 @@ user as true) is judged correctly in run C.
 4. Compare against run C, three axes: checks yes/no ratio, the registry table
    (topics, labels, épisode counts), and the per-link verdicts on the arguable
    pairs listed above — they are the discriminating set.
+
+## Run D vs run C (2026-10-17): 6 divergences on 52 links
+
+Clef-flash is the more permissive judge. It fixed **every** false negative of
+run C — « Trump juge honteuse la reprise des frappes » against the frappes
+thread, « Le pape demande une trêve », « contribution française au budget »,
+and « médicaments à l'unité » — and its 7 refusals are all correct (every
+known-false link, plus taxi/lycéen kept separate). Two divergences count
+against it: « Le RC Lens perd contre le Sporting » joined the LOSC–Arsenal
+thread, forming a « Ligue champions » topic — exactly the recurring-format
+merge ADR-0024 defers to the product phase (defensible if recurring-format
+topics are wanted, wrong under the event-thread definition); « médicaments à
+l'unité » joined the budget thread (borderline-true — it was voted during the
+budget debates). Net: Clef-flash graded 50/52 on the hand baseline vs 49/52
+for Jev — marginally more accurate, and its extra links are recurring-format
+merges, a product decision, not a model decision. Cost runs the other way:
+on the pinned prices Clef-flash costs ~2× more per input token on this
+gateway, so the switch buys granularity, not savings.

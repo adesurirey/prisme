@@ -452,15 +452,24 @@ export function topicPayload(
   return { headline: lines.join('\n'), teaser: '' };
 }
 
-function membershipModel(apiKey: string): MembershipChecker {
+/** Membership checkers through OpenRouter's System One gateway: one key,
+ * one request shape, any pinned model — Jev in production, Clef-flash as
+ * the cheaper model-comparison candidate (docs/research/
+ * topics-model-comparison.md). Both questions travel: belongs (ADR-0018)
+ * and the Topic same-subject (ADR-0024). */
+export function membershipModelFromOpenRouter(
+  apiKey: string,
+  label: string,
+  model: string,
+): MembershipChecker {
   return {
-    label: 'Jev',
+    label,
     async belongs(story, article) {
       return callTyped(
-        'Jev',
+        label,
         'https://openrouter.ai/api/alpha/decisions',
         apiKey,
-        { model: OPENROUTER_MODELS.jev, questions: MEMBERSHIP_QUESTION },
+        { model, questions: MEMBERSHIP_QUESTION },
         membershipPayload(story, article),
         (answers) => {
           const belongs = parseMembershipAnswer(answers);
@@ -472,10 +481,10 @@ function membershipModel(apiKey: string): MembershipChecker {
     },
     async sameSubject(episodes, birth) {
       return callTyped(
-        'Jev',
+        label,
         'https://openrouter.ai/api/alpha/decisions',
         apiKey,
-        { model: OPENROUTER_MODELS.jev, questions: TOPIC_QUESTION },
+        { model, questions: TOPIC_QUESTION },
         topicPayload(episodes, birth),
         (answers) => {
           const continues = parseTopicAnswer(answers);
@@ -496,5 +505,9 @@ function membershipModel(apiKey: string): MembershipChecker {
  */
 export function membershipModelFromEnv(): MembershipChecker | null {
   if (!process.env.OPENROUTER_API_KEY) return null;
-  return membershipModel(process.env.OPENROUTER_API_KEY);
+  return membershipModelFromOpenRouter(
+    process.env.OPENROUTER_API_KEY,
+    'Jev',
+    OPENROUTER_MODELS.jev,
+  );
 }

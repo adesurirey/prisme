@@ -11,15 +11,29 @@ import type {
   MembershipChecker,
   MembershipStoryRef,
 } from './decision-model.js';
-import { membershipModelFromEnv } from './decision-model.js';
+import {
+  membershipModelFromEnv,
+  membershipModelFromOpenRouter,
+  OPENROUTER_MODELS,
+} from './decision-model.js';
 import { resolveTopics } from './grouping.js';
 import { mergeTopicRegistry } from './topic-registry.js';
 
 const dir = join(import.meta.dirname, '../../data/stories');
-const membership = membershipModelFromEnv();
+// The checker under test: TOPIC_CHECKER=clef-flash (default Jev) — the
+// model-comparison switch of docs/research/topics-model-comparison.md.
+// Clef-flash travels the same OpenRouter gateway as Jev, one key.
+const membership =
+  process.env.TOPIC_CHECKER === 'clef-flash'
+    ? membershipModelFromOpenRouter(
+        process.env.OPENROUTER_API_KEY!,
+        'Clef-flash',
+        OPENROUTER_MODELS.clefFlash,
+      )
+    : membershipModelFromEnv();
 if (membership == null)
   throw new Error(
-    'no OPENROUTER_API_KEY — the replay needs the live Membership model',
+    `no membership model for TOPIC_CHECKER=${process.env.TOPIC_CHECKER ?? 'jev'} — missing OPENROUTER_API_KEY?`,
   );
 
 /** A logging proxy over the live checker: every question and verdict goes
