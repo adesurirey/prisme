@@ -146,5 +146,5 @@ A short, bullet-point account of a Story as told by the Outlets of one Coverage 
 _Avoid_: Digest, recap, abstract
 
 **Differences**:
-A comparison of how the Leanings frame, emphasise or leave out parts of a Story.
+A comparison of how the Leanings treat a Story: exactly one treatment bullet per covered Leaning — its media's angle, vocabulary, emphasis, and what it leaves out — read side by side.
 _Avoid_: Contrast, comparison, diff
