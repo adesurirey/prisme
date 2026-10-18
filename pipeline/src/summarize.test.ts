@@ -105,7 +105,10 @@ function story(
 
 /** Records every call so tests can assert on the exact model input. */
 function fakeModel(
-  response: { summaries: Record<string, unknown>; differences: string } | null,
+  response: {
+    summaries: Record<string, unknown>;
+    differences: string[];
+  } | null,
   calls: { input: SummaryInput }[] = [],
 ): SummaryModel {
   return {
@@ -126,7 +129,7 @@ const GOOD_RESPONSE = {
     centre: ['Lu au centre'],
     droite: ['Lu à droite'],
   },
-  differences: 'La droite insiste sur X.',
+  differences: ['La droite insiste sur X.'],
 };
 
 describe('parseSummaryResponse', () => {
@@ -137,7 +140,7 @@ describe('parseSummaryResponse', () => {
         centre: ['Bullet trois'],
         droite: [],
       },
-      differences: 'La droite insiste sur X, la gauche sur Y.',
+      differences: ['La droite insiste sur X, la gauche sur Y.'],
     });
     expect(parseSummaryResponse(text)).toEqual({
       summaries: {
@@ -145,7 +148,7 @@ describe('parseSummaryResponse', () => {
         centre: ['Bullet trois'],
         droite: [],
       },
-      differences: 'La droite insiste sur X, la gauche sur Y.',
+      differences: ['La droite insiste sur X, la gauche sur Y.'],
     });
   });
 
@@ -155,20 +158,34 @@ describe('parseSummaryResponse', () => {
 
   it('returns null when Summaries or Differences are missing or the wrong shape', () => {
     expect(
-      parseSummaryResponse(JSON.stringify({ differences: 'x' })),
+      parseSummaryResponse(JSON.stringify({ differences: ['x'] })),
     ).toBeNull();
     expect(parseSummaryResponse(JSON.stringify({ summaries: {} }))).toBeNull();
     expect(
       parseSummaryResponse(
         JSON.stringify({
           summaries: { gauche: 'not an array' },
-          differences: 'x',
+          differences: ['x'],
         }),
       ),
     ).toBeNull();
     expect(
       parseSummaryResponse(
         JSON.stringify({ summaries: { gauche: ['ok'] }, differences: 42 }),
+      ),
+    ).toBeNull();
+    expect(
+      parseSummaryResponse(
+        JSON.stringify({ summaries: { gauche: ['ok'] }, differences: 'x' }),
+      ),
+    ).toBeNull();
+    // All-empty bullets are as good as no Differences at all.
+    expect(
+      parseSummaryResponse(
+        JSON.stringify({
+          summaries: { gauche: ['ok'] },
+          differences: ['', '  '],
+        }),
       ),
     ).toBeNull();
   });
@@ -180,22 +197,22 @@ describe('parseSummaryResponse', () => {
         centre: [],
         droite: [],
       },
-      differences: '  Texte.  ',
+      differences: ['  Texte.  '],
     });
     expect(parseSummaryResponse(text)).toEqual({
       summaries: { gauche: ['ok', 'autre'], centre: [], droite: [] },
-      differences: 'Texte.',
+      differences: ['Texte.'],
     });
   });
 
   it('keeps absent Leanings absent', () => {
     const text = JSON.stringify({
       summaries: { centre: ['seule'] },
-      differences: 'x',
+      differences: ['x'],
     });
     expect(parseSummaryResponse(text)).toEqual({
       summaries: { centre: ['seule'] },
-      differences: 'x',
+      differences: ['x'],
     });
   });
 });
@@ -214,7 +231,7 @@ describe('updateSummaries', () => {
       {
         summarizedArticleCount: 1,
         summaries: { centre: ['Vieux résumé'] },
-        differences: 'Ancienne lecture.',
+        differences: ['Ancienne lecture.'],
       },
     );
     const calls: { input: SummaryInput }[] = [];
@@ -231,7 +248,7 @@ describe('updateSummaries', () => {
       centre: ['Lu au centre'],
       droite: ['Lu à droite'],
     });
-    expect(s.differences).toBe('La droite insiste sur X.');
+    expect(s.differences).toEqual(['La droite insiste sur X.']);
     expect(s.promptVersion).toBe(SUMMARIES_PROMPT_VERSION);
     expect(s.summarizedArticleCount).toBe(2);
     expect(outcome.changed).toEqual(new Set(['sujet-1']));
@@ -242,7 +259,7 @@ describe('updateSummaries', () => {
     const s = story('s1', 'sujet-1', [article('a1', 'lemonde')], {
       summarizedArticleCount: 1,
       summaries: { centre: ['Résumé'] },
-      differences: 'Diff.',
+      differences: ['Diff.'],
     });
     const calls: { input: SummaryInput }[] = [];
     const outcome = await updateSummaries({
@@ -267,7 +284,7 @@ describe('updateSummaries', () => {
       {
         summarizedArticleCount: 1,
         summaries: { centre: ['Résumé'] },
-        differences: 'Diff.',
+        differences: ['Diff.'],
       },
     );
     const calls: { input: SummaryInput }[] = [];
@@ -304,7 +321,7 @@ describe('updateSummaries', () => {
       {
         summarizedArticleCount: 2,
         summaries: { centre: ['Vieux'] },
-        differences: 'Ancienne.',
+        differences: ['Ancienne.'],
       },
     );
     const calls: { input: SummaryInput }[] = [];
@@ -320,7 +337,7 @@ describe('updateSummaries', () => {
     const { input } = calls[0];
     expect(input.story.title).toBe('Sujet s1');
     expect(input.previousSummaries).toEqual({ centre: ['Vieux'] });
-    expect(input.previousDifferences).toBe('Ancienne.');
+    expect(input.previousDifferences).toEqual(['Ancienne.']);
     expect(input.newArticles).toEqual([
       {
         headline: 'Titre a2',
@@ -341,7 +358,7 @@ describe('updateSummaries', () => {
       {
         summarizedArticleCount: 1,
         summaries: { centre: ['Vieux résumé'], droite: ['Vieux aussi'] },
-        differences: 'Ancienne.',
+        differences: ['Ancienne.'],
       },
     );
     const outcome = await updateSummaries({
@@ -396,6 +413,18 @@ describe('summariesPrompt', () => {
       coveredLeanings: ['centre'],
     });
     expect(prompt).toContain(SUMMARIES_PROMPT_VERSION);
+  });
+
+  it('echoes previous Differences as one pipe-joined line, like leaning summaries', () => {
+    const prompt = summariesPrompt({
+      story: { id: 's1', title: 'Sujet', section: undefined },
+      previousSummaries: undefined,
+      previousDifferences: ['Un contraste.', 'Un autre.'],
+      newArticles: [],
+      coveredLeanings: ['centre'],
+    });
+    expect(prompt).toContain('- Différences : Un contraste. | Un autre.');
+    expect(prompt).not.toContain('Un contraste.,Un autre.');
   });
 
   it('instructs honesty for a single-Leaning Story: describe, never invent contrasts', () => {
@@ -499,7 +528,7 @@ describe('updateSummaries — frozen Stories (ADR-0005/ADR-0006)', () => {
       {
         summarizedArticleCount: 1,
         summaries: { centre: ['Résumé'] },
-        differences: 'Diff.',
+        differences: ['Diff.'],
       },
     );
     const frozen = structuredClone(s);

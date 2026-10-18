@@ -16,7 +16,7 @@ import PrismeMark from './PrismeMark';
 export default function PrismTabs(props: {
   counts: Record<CoverageGroup, number>;
   summaries: StorySummaries | undefined;
-  differences: string | undefined;
+  differences: string[] | undefined;
 }) {
   const { counts, summaries, differences } = props;
   // Default tab: Centre when it has a summary, else the first Leaning that
@@ -98,10 +98,20 @@ export default function PrismTabs(props: {
         return (
           <div key={key} role="tabpanel" hidden={!selected} className="pt-4">
             {key === 'comparaison' ? (
-              differences ? (
-                <p className="text-[16px] leading-relaxed text-ink">
-                  {differences}
-                </p>
+              differences?.length ? (
+                // One bullet reads as a paragraph, several as a bullet list —
+                // same typography as the per-Leaning tabs.
+                differences.length === 1 ? (
+                  <p className="text-[16px] leading-relaxed text-ink">
+                    {differences[0]}
+                  </p>
+                ) : (
+                  <ul className="flex list-disc flex-col gap-1.5 pl-5 text-[16px] leading-relaxed text-ink">
+                    {differences.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                )
               ) : (
                 <p className="text-[13px] text-muted">
                   Comparaison indisponible.

@@ -1,6 +1,6 @@
 /**
  * Summaries model (issue #7, ADR-0006): per-Coverage-group bullet-point
- * Summaries and a Differences paragraph for each live Edition Story that
+ * Summaries and Differences bullet points for each live Edition Story that
  * gained Articles, from headlines + teasers only — never the article page
  * (ADR-0003). Articles carry their granular Leaning band (issue #46), so the
  * model can account for the composition of a group and note within-group
@@ -24,7 +24,7 @@ import { RETRYABLE_STATUS } from './http.ts';
 import { isLive } from './liveness.ts';
 
 /** Prompt version, for traceability in Story files (ADR-0006). Bump on any prompt/schema change. */
-export const SUMMARIES_PROMPT_VERSION = 'sum-2';
+export const SUMMARIES_PROMPT_VERSION = 'sum-3';
 
 /**
  * The per-build Summaries budget (ADR-0022): at most the top-20 ranked
@@ -58,7 +58,7 @@ export interface SummaryInputArticle {
 export interface SummaryInput {
   story: { id: string; title: string; section?: Section };
   previousSummaries?: StorySummaries;
-  previousDifferences?: string;
+  previousDifferences?: string[];
   /** Only the Articles beyond summarizedArticleCount — the new headlines. */
   newArticles: SummaryInputArticle[];
   /** Leanings with Coverage: the model summarizes these, and only these. */
@@ -75,14 +75,14 @@ export interface SummaryModel {
 /** Extraction and validation of the Summaries model's answer. */
 export interface ParsedSummaries {
   summaries: StorySummaries;
-  differences: string;
+  differences: string[];
 }
 
 const LEANINGS = ['gauche', 'centre', 'droite'] as const;
 
 /**
  * Extract and validate the response: per-Leaning bullet lists (only
- * non-empty strings kept) and a non-empty Differences paragraph. A
+ * non-empty strings kept) and a non-empty Differences bullet list. A
  * structurally broken response returns null — the caller retries once, then
  * leaves the Story without Summaries (ADR-0006 accepted loss).
  */
@@ -95,14 +95,13 @@ export function parseSummaryResponse(text: string): ParsedSummaries | null {
   }
   if (data == null || typeof data !== 'object') return null;
   const { summaries, differences } = data as Record<string, unknown>;
-  if (
-    summaries == null ||
-    typeof summaries !== 'object' ||
-    typeof differences !== 'string'
-  )
-    return null;
-  const trimmed = differences.trim();
-  if (trimmed === '') return null;
+  if (summaries == null || typeof summaries !== 'object') return null;
+  if (!Array.isArray(differences)) return null;
+  const keptDifferences = differences
+    .filter((d): d is string => typeof d === 'string')
+    .map((d) => d.trim())
+    .filter((d) => d !== '');
+  if (keptDifferences.length === 0) return null;
 
   const result: ParsedSummaries['summaries'] = {};
   for (const leaning of LEANINGS) {
@@ -114,7 +113,7 @@ export function parseSummaryResponse(text: string): ParsedSummaries | null {
     );
     result[leaning] = kept;
   }
-  return { summaries: result, differences: trimmed };
+  return { summaries: result, differences: keptDifferences };
 }
 
 /** JSON Schema for the structured output (generationConfig.responseJsonSchema). */
@@ -129,7 +128,7 @@ const SUMMARIES_SCHEMA = {
         droite: { type: 'array', items: { type: 'string' } },
       },
     },
-    differences: { type: 'string' },
+    differences: { type: 'array', items: { type: 'string' } },
   },
   required: ['summaries', 'differences'],
 } as const;
@@ -182,8 +181,9 @@ export function summariesPrompt(input: SummaryInput): string {
         }
       }
     }
-    if (previousDifferences)
-      lines.push(`- Différences : ${previousDifferences}`);
+    if (previousDifferences?.length) {
+      lines.push(`- Différences : ${previousDifferences.join(' | ')}`);
+    }
     lines.push('');
   }
 
@@ -207,8 +207,8 @@ export function summariesPrompt(input: SummaryInput): string {
     'Consignes :',
     "- Pour chaque camp couvert, écris « summaries.<camp> » : un tableau de 2 à 5 puces courtes en français, factuelles, qui résument ce que les médias de ce camp rapportent du sujet. Les camps regroupent les bandes : le camp gauche comprend les médias classés « centre gauche », le camp droite comprend les médias classés « centre droit ». Reformule : ne recopie jamais la formulation d'un titre ou d'un teaser. Ne nomme aucun média dans les résumés ; tu peux en revanche signaler une nuance interne au camp (par exemple entre « gauche » et « centre gauche ») sans désigner de titre.",
     '- Les tribunes éclairent le positionnement de leur camp mais restent des prises de position, pas des faits établis.',
-    "- Écris « differences » : un seul paragraphe court en français qui compare comment les camps cadrent, accentuent ou laissent de côté des parties du sujet — y compris les divergences à l'intérieur d'un même camp (par exemple entre « droite » et « centre droit »). Tu peux citer un média à l'appui d'un contraste concret. Décris sans trancher : dis qui met l'accent sur quoi, jamais qui a raison.",
-    "- Si un seul camp couvre le sujet : son résumé le présente, et « differences » décrit sa lecture et dit sans détour qu'il n'y a rien à comparer — ne rien inventer.",
+    "- Écris « differences » : un tableau de 1 à 4 puces courtes en français qui comparent comment les camps cadrent, accentuent ou laissent de côté des parties du sujet — y compris les divergences à l'intérieur d'un même camp (par exemple entre « droite » et « centre droit »). Une puce = un contraste ; ne force pas une puce par camp : quand des camps partagent le même angle, regroupe-les dans la même puce, et quand un camp n'apporte rien, laisse-le de côté. Tu peux citer un média à l'appui d'un contraste concret. Décris sans trancher : dis qui met l'accent sur quoi, jamais qui a raison.",
+    "- Si un seul camp couvre le sujet : son résumé le présente, et « differences » décrit sa lecture — y compris, s'il y en a, les divergences à l'intérieur du camp (par exemple entre « gauche » et « centre gauche »). S'il n'y a vraiment rien à comparer, dis-le sans détour — ne rien inventer.",
   );
   return lines.join('\n');
 }
