@@ -467,7 +467,7 @@ describe('summariesPrompt', () => {
     expect(prompt).toContain('ne rien inventer');
   });
 
-  it('forces one treatment bullet per covered camp and excludes relayed statements (sum-6)', () => {
+  it('forces one treatment bullet per covered camp and excludes relayed statements (sum-7)', () => {
     const prompt = summariesPrompt({
       story: { id: 's1', title: 'Sujet', section: undefined },
       articles: [
@@ -502,6 +502,13 @@ describe('summariesPrompt', () => {
     // Cold-analysis checklist: vocabulary, emphasis, hidden or ignored facts.
     expect(prompt).toContain("le vocabulaire qu'ils emploient");
     expect(prompt).toContain("ce qu'ils taisent ou passent sous silence");
+    // Reformulation may not bleed into the facts: precise vocabulary stays,
+    // striking source formulas are quoted, never abstracted away.
+    expect(prompt).toContain('garde le vocabulaire précis des faits');
+    expect(prompt).toContain(
+      'Ne remplace jamais un mot précis par un terme générique',
+    );
+    expect(prompt).toContain('cite-la entre guillemets');
     // Intra-camp divergences live inside the camp's own bullet, not a
     // separate one.
     expect(prompt).toContain('une seconde phrase');

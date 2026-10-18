@@ -9,7 +9,7 @@
  * Language API (free tier, shared with the Grouping model).
  *
  * Each call re-synthesizes from the Story's WHOLE Article set (prompt
- * sum-6): the previous Summaries are never fed back, so the model cannot
+ * sum-7): the previous Summaries are never fed back, so the model cannot
  * patch or append to them. Incremental updating (sum-1..sum-3) made each
  * call append a bullet about the latest development to the previous text —
  * the Summary read as a chronicle of successive states instead of a
@@ -34,7 +34,7 @@ import { RETRYABLE_STATUS } from './http.ts';
 import { isLive } from './liveness.ts';
 
 /** Prompt version, for traceability in Story files (ADR-0006). Bump on any prompt/schema change. */
-export const SUMMARIES_PROMPT_VERSION = 'sum-6';
+export const SUMMARIES_PROMPT_VERSION = 'sum-7';
 
 /**
  * The per-build Summaries budget (ADR-0022): at most the top-20 ranked
@@ -157,14 +157,18 @@ const LEANING_LABELS_FR: Record<Leaning, string> = {
 /**
  * The prompt: the Story's whole Article set — headlines + teasers with
  * Outlet tags, nothing else (ADR-0003) — and never the previous Summaries,
- * so every call is a fresh synthesis of the current Story (prompt sum-6).
- * sum-6 reshapes « differences » into a cold, media-level comparison:
+ * so every call is a fresh synthesis of the current Story (prompt sum-7).
+ * sum-7 keeps sum-6's « differences » — a cold, media-level comparison:
  * exactly one treatment bullet per covered camp (angle, vocabulary, hidden
  * or ignored facts), within-camp divergences between bands carried inside
  * that camp's own bullet — and what a camp's media merely relay from other
  * camps never counts as that camp's treatment. The version appears in the
  * text so a prompt change without a version bump cannot pass review
- * unnoticed.
+ * unnoticed. Since sum-7, the anti-formula-copying rule no longer bleeds
+ * into the facts: the model keeps the sources' precise vocabulary (proper
+ * names, exact categories, figures, places) and quotes striking formulas
+ * instead of paraphrasing them into generic abstractions — reader feedback
+ * showed « ancien actif » where the sources said « retraité ».
  */
 export function summariesPrompt(input: SummaryInput): string {
   const { story, articles, coveredLeanings } = input;
@@ -194,7 +198,7 @@ export function summariesPrompt(input: SummaryInput): string {
     `Tu couvres uniquement : ${coveredLeanings.map((l) => LEANING_LABELS_FR[l]).join(', ')}.`,
     '',
     'Consignes :',
-    "- Pour chaque camp couvert, écris « summaries.<camp> » : un tableau de 2 à 5 puces courtes en français, factuelles, qui résument ce que les médias de ce camp rapportent du sujet. Les camps regroupent les bandes : le camp gauche comprend les médias classés « centre gauche », le camp droite comprend les médias classés « centre droit ». Reformule : ne recopie jamais la formulation d'un titre ou d'un teaser. Par défaut, parle pour le camp tout entier sans nommer de média ; nomme un média seulement quand c'est nécessaire à l'exactitude : pour signaler une nuance interne au camp (par exemple entre « gauche » et « centre gauche ») ou pour attribuer une information que tous les médias du camp ne rapportent pas.",
+    "- Pour chaque camp couvert, écris « summaries.<camp> » : un tableau de 2 à 5 puces courtes en français, factuelles, qui résument ce que les médias de ce camp rapportent du sujet. Les camps regroupent les bandes : le camp gauche comprend les médias classés « centre gauche », le camp droite comprend les médias classés « centre droit ». Reformule les phrases — ne recopie jamais la formulation d'un titre ou d'un teaser — mais garde le vocabulaire précis des faits : noms propres, catégories exactes, chiffres, lieux. Ne remplace jamais un mot précis par un terme générique ou abstrait (« ancien actif » pour « retraité », « le dirigeant américain » pour « Trump ») ; si une formule des sources est marquante, cite-la entre guillemets plutôt que de la paraphraser. Par défaut, parle pour le camp tout entier sans nommer de média ; nomme un média seulement quand c'est nécessaire à l'exactitude : pour signaler une nuance interne au camp (par exemple entre « gauche » et « centre gauche ») ou pour attribuer une information que tous les médias du camp ne rapportent pas.",
     '- Les tribunes éclairent le positionnement de leur camp mais restent des prises de position, pas des faits établis.',
     "- Écris « differences » : un tableau en français d'exactement une puce par camp couvert, dans l'ordre gauche, centre, droite. Analyse froidement le traitement du sujet par les médias de chaque camp — pas le débat politique entre camps : la puce décrit l'angle choisi par ces médias, le vocabulaire qu'ils emploient, ce qu'ils mettent en avant, ce qu'ils taisent ou passent sous silence.",
     "- Ne compte comme traitement d'un camp que ce que ses propres médias écrivent du sujet. Ce qu'un média rapporte des propos, accusations ou réactions d'autres camps (déclarations politiques, communiqués, réactions d'élus) n'est pas le traitement de son camp : ignore-le dans sa puce — et n'attribue jamais à un camp un propos que ses médias ne font que relayer.",
@@ -250,7 +254,7 @@ export async function updateSummaries(input: {
     if (budget != null && calls >= budget) continue;
 
     // The whole Article set, not a delta: the model re-synthesizes from
-    // scratch (prompt sum-6). Headlines are stored in the Story file;
+    // scratch (prompt sum-7). Headlines are stored in the Story file;
     // teasers exist only while the Article is still in the feeds' window.
     const articles: SummaryInputArticle[] = [];
     for (const article of story.articles) {

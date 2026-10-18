@@ -92,7 +92,7 @@ async function main(): Promise<void> {
   });
 
   const lines: string[] = [
-    `# Summaries prompt A/B — sum-5 vs sum-6 — ${now.toISOString()}`,
+    `# Summaries prompt A/B — stored sum-5 vs ${SUMMARIES_PROMPT_VERSION} — ${now.toISOString()}`,
     '',
     `Model: ${SUMMARIES.label} (\`${SUMMARIES.model}\`).`,
     `Corpus: « ${story.title} » — ${story.articles.length} Articles (coverage: ${composition}).`,
