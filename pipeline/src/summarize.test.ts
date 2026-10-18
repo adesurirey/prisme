@@ -1,6 +1,7 @@
 import type { Article, Outlet, Story } from '@prisme/domain';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import {
+  geminiSummariesModel,
   parseSummaryResponse,
   SUMMARIES_PROMPT_VERSION,
   type SummaryInput,
@@ -302,7 +303,7 @@ describe('updateSummaries', () => {
     expect(outcome.changed.size).toBe(0);
   });
 
-  it('feeds the model only the new Articles, tagged, plus the previous Summaries and Differences', async () => {
+  it('feeds the model the WHOLE Article set — no delta, no previous Summaries', async () => {
     const s = story(
       's1',
       'sujet-1',
@@ -315,7 +316,7 @@ describe('updateSummaries', () => {
           publishedAt: '2026-10-06T09:00:00Z',
           kind: 'opinion',
         }),
-        // Below the seen count: must NOT be in the input again.
+        // Below the seen count: still fed — the synthesis covers the corpus.
         article('a0', 'lemonde', { publishedAt: '2026-10-06T08:00:00Z' }),
       ],
       {
@@ -328,7 +329,12 @@ describe('updateSummaries', () => {
     await updateSummaries({
       stories: [s],
       now: new Date('2026-10-06T12:00:00Z'),
-      teasers: new Map([['a2', 'Teaser deux']]),
+      teasers: new Map([
+        // Teasers exist only while an Article is still in the feeds' window:
+        // a2 and a1 are still collected, a0 has rotated out.
+        ['a2', 'Teaser deux'],
+        ['a1', 'Teaser un'],
+      ]),
       outletById,
       model: fakeModel(GOOD_RESPONSE, calls),
       promptVersion: SUMMARIES_PROMPT_VERSION,
@@ -336,9 +342,11 @@ describe('updateSummaries', () => {
     expect(calls).toHaveLength(1);
     const { input } = calls[0];
     expect(input.story.title).toBe('Sujet s1');
-    expect(input.previousSummaries).toEqual({ centre: ['Vieux'] });
-    expect(input.previousDifferences).toEqual(['Ancienne.']);
-    expect(input.newArticles).toEqual([
+    // The previous Summaries/Differences are never fed back: each call is a
+    // fresh synthesis, so the output can never be a patch on the old text.
+    expect(input).not.toHaveProperty('previousSummaries');
+    expect(input).not.toHaveProperty('previousDifferences');
+    expect(input.articles).toEqual([
       {
         headline: 'Titre a2',
         teaser: 'Teaser deux',
@@ -346,6 +354,22 @@ describe('updateSummaries', () => {
         outletLeaning: 'droite',
         opinion: false,
         frontPage: true,
+      },
+      {
+        headline: 'Titre a1',
+        teaser: 'Teaser un',
+        outletName: 'Le Monde',
+        outletLeaning: 'centre',
+        opinion: true,
+        frontPage: false,
+      },
+      {
+        headline: 'Titre a0',
+        teaser: '',
+        outletName: 'Le Monde',
+        outletLeaning: 'centre',
+        opinion: false,
+        frontPage: false,
       },
     ]);
   });
@@ -407,32 +431,29 @@ describe('summariesPrompt', () => {
   it('carries the prompt version so a prompt change cannot be forgotten', () => {
     const prompt = summariesPrompt({
       story: { id: 's1', title: 'Sujet', section: 'politics' },
-      previousSummaries: undefined,
-      previousDifferences: undefined,
-      newArticles: [],
+      articles: [],
       coveredLeanings: ['centre'],
     });
     expect(prompt).toContain(SUMMARIES_PROMPT_VERSION);
   });
 
-  it('echoes previous Differences as one pipe-joined line, like leaning summaries', () => {
+  it('frames the call as a fresh synthesis, never an update of previous output', () => {
     const prompt = summariesPrompt({
       story: { id: 's1', title: 'Sujet', section: undefined },
-      previousSummaries: undefined,
-      previousDifferences: ['Un contraste.', 'Un autre.'],
-      newArticles: [],
+      articles: [],
       coveredLeanings: ['centre'],
     });
-    expect(prompt).toContain('- Différences : Un contraste. | Un autre.');
-    expect(prompt).not.toContain('Un contraste.,Un autre.');
+    expect(prompt).toContain('Articles du sujet');
+    expect(prompt).toContain('état actuel du sujet');
+    // The sum-1..sum-3 update framing invited chronicle-style patches.
+    expect(prompt).not.toContain('déjà publiés');
+    expect(prompt).not.toContain('mets à jour');
   });
 
   it('instructs honesty for a single-Leaning Story: describe, never invent contrasts', () => {
     const prompt = summariesPrompt({
       story: { id: 's1', title: 'Sujet', section: undefined },
-      previousSummaries: undefined,
-      previousDifferences: undefined,
-      newArticles: [
+      articles: [
         {
           headline: 'T',
           teaser: '',
@@ -466,9 +487,7 @@ describe('summariesPrompt', () => {
   it('tags each Article with its Outlet and Leaning, so per-Leaning Summaries are attributable', () => {
     const prompt = summariesPrompt({
       story: { id: 's1', title: 'Sujet', section: undefined },
-      previousSummaries: undefined,
-      previousDifferences: undefined,
-      newArticles: [
+      articles: [
         {
           headline: 'T',
           teaser: 'Tea',
@@ -486,9 +505,7 @@ describe('summariesPrompt', () => {
   it('tags Articles with their granular band and spells out the group fold (issue #46)', () => {
     const prompt = summariesPrompt({
       story: { id: 's1', title: 'Sujet', section: undefined },
-      previousSummaries: undefined,
-      previousDifferences: undefined,
-      newArticles: [
+      articles: [
         {
           headline: 'T',
           teaser: '',
@@ -557,6 +574,61 @@ describe('updateSummaries — frozen Stories (ADR-0005/ADR-0006)', () => {
  * Story beyond the budget keeps its existing summary as-is until a later
  * build re-ranks it into the top-20.
  */
+describe('geminiSummariesModel request body', () => {
+  it('pins temperature to 0: a re-synthesis changes only when the Story does', async () => {
+    let body: unknown;
+    const realFetch = globalThis.fetch;
+    globalThis.fetch = (async (_url, init) => {
+      body = JSON.parse(String(init?.body));
+      return {
+        ok: true,
+        status: 200,
+        json: async () => ({
+          candidates: [
+            {
+              content: {
+                parts: [
+                  {
+                    text: JSON.stringify({
+                      summaries: { centre: ['Lu au centre'] },
+                      differences: ['Diff.'],
+                    }),
+                  },
+                ],
+              },
+            },
+          ],
+        }),
+      } as unknown as Response;
+    }) as typeof fetch;
+    try {
+      const model = geminiSummariesModel('test-key', 'test-model', 'Test');
+      const parsed = await model.summarize({
+        story: { id: 's1', title: 'Sujet' },
+        articles: [],
+        coveredLeanings: ['centre'],
+      });
+      expect(parsed).toEqual({
+        summaries: { centre: ['Lu au centre'] },
+        differences: ['Diff.'],
+      });
+      const generationConfig = (
+        body as {
+          generationConfig?: {
+            temperature?: number;
+            responseJsonSchema?: unknown;
+          };
+        }
+      ).generationConfig;
+      expect(generationConfig?.temperature).toBe(0);
+      expect(generationConfig?.responseJsonSchema).toBeDefined();
+    } finally {
+      globalThis.fetch = realFetch;
+      vi.restoreAllMocks();
+    }
+  });
+});
+
 describe('updateSummaries — per-build budget (ADR-0022)', () => {
   const now = new Date('2026-10-06T12:00:00Z');
 

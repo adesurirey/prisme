@@ -8,6 +8,16 @@
  * structured-output call per changed Story against Google's Generative
  * Language API (free tier, shared with the Grouping model).
  *
+ * Each call re-synthesizes from the Story's WHOLE Article set (prompt
+ * sum-4): the previous Summaries are never fed back, so the model cannot
+ * patch or append to them. Incremental updating (sum-1..sum-3) made each
+ * call append a bullet about the latest development to the previous text —
+ * the Summary read as a chronicle of successive states instead of a
+ * snapshot of the Story. Feeding all Articles (headlines are stored in the
+ * Story file; teasers survive only while the Article is still in the feeds'
+ * window) keeps every Summary an accurate picture of the current Story,
+ * whichever camp's Articles arrived when.
+ *
  * Summaries are written into the Story file only while the Story is Live
  * (ADR-0005: frozen files are never edited); unchanged Stories make no call.
  */
@@ -24,7 +34,7 @@ import { RETRYABLE_STATUS } from './http.ts';
 import { isLive } from './liveness.ts';
 
 /** Prompt version, for traceability in Story files (ADR-0006). Bump on any prompt/schema change. */
-export const SUMMARIES_PROMPT_VERSION = 'sum-3';
+export const SUMMARIES_PROMPT_VERSION = 'sum-4';
 
 /**
  * The per-build Summaries budget (ADR-0022): at most the top-20 ranked
@@ -57,10 +67,8 @@ export interface SummaryInputArticle {
 /** Everything the Summaries model sees for one Story, and nothing else. */
 export interface SummaryInput {
   story: { id: string; title: string; section?: Section };
-  previousSummaries?: StorySummaries;
-  previousDifferences?: string[];
-  /** Only the Articles beyond summarizedArticleCount — the new headlines. */
-  newArticles: SummaryInputArticle[];
+  /** The Story's WHOLE Article set — the model re-synthesizes from scratch. */
+  articles: SummaryInputArticle[];
   /** Leanings with Coverage: the model summarizes these, and only these. */
   coveredLeanings: CoverageGroup[];
 }
@@ -147,18 +155,14 @@ const LEANING_LABELS_FR: Record<Leaning, string> = {
 };
 
 /**
- * The prompt: previous Summaries + Differences, new headlines + teasers with
- * Outlet tags, nothing else (ADR-0003). The version appears in the text so a
- * prompt change without a version bump cannot pass review unnoticed.
+ * The prompt: the Story's whole Article set — headlines + teasers with
+ * Outlet tags, nothing else (ADR-0003) — and never the previous Summaries,
+ * so every call is a fresh synthesis of the current Story (prompt sum-4).
+ * The version appears in the text so a prompt change without a version bump
+ * cannot pass review unnoticed.
  */
 export function summariesPrompt(input: SummaryInput): string {
-  const {
-    story,
-    previousSummaries,
-    previousDifferences,
-    newArticles,
-    coveredLeanings,
-  } = input;
+  const { story, articles, coveredLeanings } = input;
   const section = story.section ? ` (${SECTION_LABELS[story.section]})` : '';
   const lines: string[] = [
     `Version du prompt : ${SUMMARIES_PROMPT_VERSION}.`,
@@ -167,29 +171,9 @@ export function summariesPrompt(input: SummaryInput): string {
     '',
   ];
 
-  if (previousSummaries || previousDifferences) {
-    lines.push(
-      'Résumés et différences déjà publiés (le sujet évolue, tu les mets à jour) :',
-    );
-    if (previousSummaries) {
-      for (const leaning of LEANINGS) {
-        const bullets = previousSummaries[leaning];
-        if (bullets?.length) {
-          lines.push(
-            `- ${LEANING_LABELS_FR[leaning]} : ${bullets.join(' | ')}`,
-          );
-        }
-      }
-    }
-    if (previousDifferences?.length) {
-      lines.push(`- Différences : ${previousDifferences.join(' | ')}`);
-    }
-    lines.push('');
-  }
-
   lines.push(
-    'Nouveaux articles :',
-    ...newArticles.map((a) => {
+    'Articles du sujet :',
+    ...articles.map((a) => {
       const teaser = a.teaser ? ` — ${a.teaser}` : '';
       const tags = [
         a.outletName,
@@ -205,6 +189,7 @@ export function summariesPrompt(input: SummaryInput): string {
     `Tu couvres uniquement : ${coveredLeanings.map((l) => LEANING_LABELS_FR[l]).join(', ')}.`,
     '',
     'Consignes :',
+    "- Tu réécris tout à chaque appel : décris l'état actuel du sujet tel que le montrent l'ensemble des articles ci-dessus, pas une chronique de ses développements successifs. Chaque puce doit être vraie pour le sujet dans son ensemble, indépendamment de l'ordre d'arrivée des articles.",
     "- Pour chaque camp couvert, écris « summaries.<camp> » : un tableau de 2 à 5 puces courtes en français, factuelles, qui résument ce que les médias de ce camp rapportent du sujet. Les camps regroupent les bandes : le camp gauche comprend les médias classés « centre gauche », le camp droite comprend les médias classés « centre droit ». Reformule : ne recopie jamais la formulation d'un titre ou d'un teaser. Ne nomme aucun média dans les résumés ; tu peux en revanche signaler une nuance interne au camp (par exemple entre « gauche » et « centre gauche ») sans désigner de titre.",
     '- Les tribunes éclairent le positionnement de leur camp mais restent des prises de position, pas des faits établis.',
     "- Écris « differences » : un tableau de 1 à 4 puces courtes en français qui comparent comment les camps cadrent, accentuent ou laissent de côté des parties du sujet — y compris les divergences à l'intérieur d'un même camp (par exemple entre « droite » et « centre droit »). Une puce = un contraste ; ne force pas une puce par camp : quand des camps partagent le même angle, regroupe-les dans la même puce, et quand un camp n'apporte rien, laisse-le de côté. Tu peux citer un média à l'appui d'un contraste concret. Décris sans trancher : dis qui met l'accent sur quoi, jamais qui a raison.",
@@ -257,11 +242,14 @@ export async function updateSummaries(input: {
     // unseen Articles or no Coverage cost zero and never consume it.
     if (budget != null && calls >= budget) continue;
 
-    const newArticles: SummaryInputArticle[] = [];
-    for (const article of story.articles.slice(0, newCount)) {
+    // The whole Article set, not a delta: the model re-synthesizes from
+    // scratch (prompt sum-4). Headlines are stored in the Story file;
+    // teasers exist only while the Article is still in the feeds' window.
+    const articles: SummaryInputArticle[] = [];
+    for (const article of story.articles) {
       const outlet = outletById.get(article.outletId);
       if (outlet == null) continue; // unknown Outlet: no Leaning to tag, ignored like in Coverage
-      newArticles.push({
+      articles.push({
         headline: article.headline,
         teaser: teasers.get(article.id) ?? '',
         outletName: outlet.name,
@@ -273,9 +261,7 @@ export async function updateSummaries(input: {
 
     const summaryInput: SummaryInput = {
       story: { id: story.id, title: story.title, section: story.section },
-      previousSummaries: story.summaries,
-      previousDifferences: story.differences,
-      newArticles,
+      articles,
       coveredLeanings,
     };
 
@@ -332,6 +318,9 @@ export function geminiSummariesModel(
           responseMimeType: 'application/json',
           responseJsonSchema: SUMMARIES_SCHEMA,
           maxOutputTokens: 8_192,
+          // Pinned: a re-synthesis should change only when the Story does,
+          // not on sampling noise between builds.
+          temperature: 0,
         },
       };
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
