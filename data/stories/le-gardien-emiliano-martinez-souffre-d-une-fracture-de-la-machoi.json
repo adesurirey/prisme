@@ -17,6 +17,18 @@
       "section": "sport"
     },
     {
+      "id": "d4749b522d58",
+      "outletId": "20-minutes",
+      "headline": "Chelsea : Emiliano Martinez a dû être opéré d’une fracture de la mâchoire après son choc violent avec Branthwaite",
+      "url": "https://www.20minutes.fr/sport/football/premier_league/4255331-20261018-chelsea-emiliano-martinez-etre-opere-fracture-machoire-apres-choc-violent-branthwaite?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-18T12:24:10.000Z",
+      "imageUrl": "https://img.20mn.fr/R7fWyyAtSEqw2ZYR7YVSfyk/1200x768_le-gardien-de-but-de-chelsea-emiliano-martinez-recoit-des-soins-pour-une-blessure-lors-du-match-de-football-de-premier-league-anglaise-entre-everton-et-chelsea-a-liverpool-en-angleterre-le-samedi-17-octobre-2026-mike-egerton-pa-via-ap-th801-26290477456004-royaume-uni-sorti-aucune-vente-aucune-archive-la-photographie-ne-peut-etre-stockee-ou-utilisee-pendant-plus-de-14-jours-apres-la-date-de-transmission-credit-obligatoire-2610172303",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
       "id": "7808bdca6de7",
       "outletId": "le-parisien",
       "headline": "« L’opération s’est bien passée » : le gardien argentin Emiliano Martinez rassurant après son violent choc à la tête",
@@ -44,20 +56,24 @@
   "section": "sport",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le gardien argentin Emiliano Martinez a subi un choc violent avec Branthwaite lors du match de Chelsea samedi.",
+      "Il a dû être transporté à l'hôpital sur civière dès samedi soir pour y être opéré d'une fracture de la mâchoire."
+    ],
     "centre": [
-      "Le gardien Emiliano Martinez a subi une intervention chirurgicale suite à un choc violent reçu lors d'une rencontre sportive.",
-      "Le joueur argentin a publié un message rassurant sur son état de santé depuis son lit d'hôpital.",
-      "La presse du centre précise que la blessure consiste en une fracture de la mâchoire survenue lors d'un match à Everton."
+      "Le gardien de Chelsea Emiliano Martinez a été victime d'une fracture de la mâchoire à la suite d'un violent choc à la tête.",
+      "L'opération chirurgicale s'est bien déroulée et le joueur s'est voulu rassurant."
     ],
     "droite": [
-      "Le gardien de Chelsea a été opéré avec succès ce dimanche après une fracture de la mâchoire contractée contre Everton.",
-      "L'établissement hospitalier a confirmé la nécessité d'une intervention chirurgicale après des examens complémentaires.",
-      "Le joueur sera indisponible pour une durée de plusieurs semaines selon le communiqué officiel de son club."
+      "Le gardien de Chelsea Emiliano Martinez a été opéré avec succès ce dimanche d'une fracture de la mâchoire après un choc à Everton.",
+      "L'Argentin de 34 ans sera absent des terrains pendant plusieurs semaines selon son club."
     ]
   },
   "differences": [
-    "La droite insiste particulièrement sur la durée de l'indisponibilité du joueur en évoquant une absence de plusieurs semaines, tandis que le centre privilégie l'aspect rassurant du message posté par le gardien."
+    "Le camp gauche privilégie l'immédiateté et la violence de l'action en soulignant l'évacuation sur civière dès le samedi soir.",
+    "Le camp centre insiste sur l'aspect rassurant de l'intervention chirurgicale et l'état de santé du gardien après son choc.",
+    "Le camp droite détaille le contexte sportif précis du match contre Everton et l'annonce officielle du club concernant la durée de l'indisponibilité."
   ],
-  "promptVersion": "sum-5",
-  "summarizedArticleCount": 3
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4
 }

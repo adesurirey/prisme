@@ -1,10 +1,21 @@
 {
   "id": "cb6bbfc7bf1c",
   "slug": "un-incendie-sur-une-base-militaire-dans-l-ouest-du-canada-fait-p",
-  "title": "Un incendie sur une base militaire en Alberta fait plusieurs morts et blessés au Canada",
+  "title": "Quatre soldats canadiens meurent dans un incendie sur une base militaire en Alberta",
   "createdAt": "2026-10-18T10:01:16.965Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "344b4656f4f8",
+      "outletId": "tf1-info",
+      "headline": "Un \"désastre\" en plein exercice : quatre soldats canadiens tués dans un incendie sur une base militaire",
+      "url": "https://www.tf1info.fr/international/canada-un-desastre-en-plein-exercice-quatre-soldats-tues-dans-un-incendie-sur-une-base-militaire-2470673.html",
+      "publishedAt": "2026-10-18T20:41:11.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/768/base-militaire-canadienne-wainwright-2026-539efa-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "784ab17b753f",
       "outletId": "bfmtv",
@@ -90,24 +101,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le gouvernement fait état d'un drame survenu dans une structure militaire albertaine, signalant un bilan humain lourd avec des pertes en vies humaines et de multiples blessés.",
-      "La situation sanitaire locale est qualifiée de critique avec des structures de soins saturées, entraînant l'interruption du scrutin anticipé pour le référendum de la zone."
+      "Quatre soldats canadiens ont perdu la vie dans un violent incendie survenu pendant un exercice militaire sur la base de Wainwright en Alberta.",
+      "Une dizaine de militaires ont été grièvement blessés et évacués vers des hôpitaux locaux totalement submergés par l'afflux de victimes.",
+      "Le gouvernement canadien a qualifié le drame d'incident grave, entraînant notamment la suspension du vote anticipé pour le référendum local dans la région."
     ],
     "centre": [
-      "Un accident d'une particulière gravité a touché l'installation militaire de Wainwright, située dans la partie occidentale du pays, sans qu'un bilan chiffré précis ne soit encore officialisé.",
-      "L'exécutif canadien confirme des victimes décédées et blessées à la suite du sinistre survenu un samedi soir, qualifiant l'événement de désastre rare et exceptionnel."
+      "Un incendie majeur sur la base militaire de Wainwright dans l'ouest du Canada a provoqué la mort de quatre soldats et fait de nombreux blessés graves.",
+      "Le Premier ministre Mark Carney et les autorités locales ont qualifié l'événement de désastre rarissime ne survenant qu'une fois tous les quinze à vingt-cinq ans.",
+      "Les structures de santé de la zone ont été complètement débordées par l'urgence, nécessitant l'évacuation des blessés vers plusieurs hôpitaux de la province."
     ],
     "droite": [
-      "Le chef du gouvernement qualifie le sinistre de grande ampleur et inédit pour la région, précisant que les flammes ont débordé du périmètre militaire.",
-      "L'événement tragique s'est déroulé dans la province de l'Alberta au sein d'une enceinte de l'armée, provoquant la mort de plusieurs personnes.",
-      "Le ministre de la Défense souligne le caractère exceptionnel de ce drame survenu dans l'ouest du pays, tandis que les causes exactes restent à éclaircir."
+      "Quatre militaires canadiens ont trouvé la mort samedi au cours d'un violent incendie déclaré sur une base militaire de l'ouest du pays en plein exercice.",
+      "Plus d'une dizaine d'autres soldats ont été grièvement blessés lors de ce sinistre qualifié de catastrophe sans précédent récent.",
+      "Les victimes ont été rapidement évacuées vers divers établissements hospitaliers de la province de l'Alberta."
     ]
   },
   "differences": [
-    "La gauche se distingue par son insistance sur les répercussions civiles et sanitaires locales, mentionnant la saturation hospitalière et la suspension du vote référendaire, tandis que les autres sensibilités se focalisent principalement sur l'événement militaire lui-même.",
-    "La droite se singularise par la mise en avant des déclarations de l'exécutif et de la défense, précisant que l'incendie a franchi les limites de la base et insistant sur le caractère sans précédent de la catastrophe.",
-    "Le centre, illustré notamment par BFMTV, rejoint l'exécutif en qualifiant le sinistre d'événement rarissime de grande ampleur, tout en maintenant l'absence de bilan chiffré précis à ce stade."
+    "La gauche met l'accent sur la saturation immédiate des structures de santé locales et les répercussions collatérales de l'accident sur la vie démocratique régionale, notamment la suspension du référendum.",
+    "Le centre insiste sur le caractère exceptionnel et la rareté historique de ce type de catastrophe en s'appuyant sur les déclarations officielles du Premier ministre.",
+    "La droite privilégie un récit centré sur le bilan humain dramatique et les circonstances opérationnelles de l'exercice militaire qui a tourné au drame."
   ],
-  "promptVersion": "sum-3",
-  "summarizedArticleCount": 7
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 8
 }
