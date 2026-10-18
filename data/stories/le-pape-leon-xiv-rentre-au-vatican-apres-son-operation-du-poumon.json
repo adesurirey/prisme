@@ -6,6 +6,17 @@
   "storyDay": "2026-10-18",
   "articles": [
     {
+      "id": "f3cbbba5fcec",
+      "outletId": "cnews",
+      "headline": "«J'ai vraiment ressenti votre soutien» : le pape Léon XIV s’est adressé à la foule au Vatican pour la première fois depuis son opération",
+      "url": "https://www.cnews.fr/monde/2026-10-18/jai-vraiment-ressenti-votre-soutien-le-pape-leon-xiv-sest-adresse-la-foule-au",
+      "publishedAt": "2026-10-18T12:57:52.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/080_cpp_vaticanmedia_015707_1_6ad4b42171f4c.jpg?itok=tkW-RfVX",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "ab5b6ea1d5cd",
       "outletId": "tf1-info",
       "headline": "\"J'ai vraiment ressenti votre soutien\" : le pape s'adresse à la foule au Vatican pour la première fois depuis son opération",
@@ -56,7 +67,7 @@
       "url": "https://www.ouest-france.fr/societe/religions/pape-leon-xiv/le-pape-leon-xiv-fait-sa-premiere-apparition-publique-depuis-son-operation-dun-nodule-cancereux-671ecbd8-cadb-11f1-b8bc-a46147b584ed?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-18T10:53:00.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZTNkNDllYWYxNTY1NDdhOThmZjNhMDEwOWQ2MThjYmY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=926cc2a55a5a8d993472aadc341d6591583b8badbadc17f5d350f2789cefd5b6",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -127,7 +138,8 @@
     "droite": [
       "Le pape Léon XIV a fait sa première apparition devant les fidèles depuis sa sortie de l'hôpital intervenue la veille.",
       "Âgé de soixante et onze ans, le pontife a subi une intervention chirurgicale mardi dernier à l'hôpital Gemelli de Rome.",
-      "L'opération consistait en l'ablation d'un nodule cancéreux situé dans le poumon droit."
+      "L'opération consistait en l'ablation d'un nodule cancéreux situé dans le poumon droit.",
+      "Le souverain pontife a tenu à exprimer publiquement sa gratitude envers les fidèles ainsi que le personnel soignant."
     ]
   },
   "differences": [
@@ -136,5 +148,5 @@
     "Le centre et la gauche privilégient le récit de la première apparition publique et de la communion avec les fidèles lors de la prière dominicale."
   ],
   "promptVersion": "sum-3",
-  "summarizedArticleCount": 9
+  "summarizedArticleCount": 10
 }
