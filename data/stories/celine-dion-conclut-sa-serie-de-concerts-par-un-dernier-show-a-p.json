@@ -1,10 +1,33 @@
 {
   "id": "cb77d8b29575",
   "slug": "celine-dion-conclut-sa-serie-de-concerts-par-un-dernier-show-a-p",
-  "title": "Céline Dion conclut sa série de concerts par un dernier show à Paris",
+  "title": "Céline Dion achève sa série de concerts à Paris avec un dernier spectacle",
   "createdAt": "2026-10-18T04:01:16.053Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "15cd3b07f963",
+      "outletId": "le-monde",
+      "headline": "Céline Dion clôt en beauté sa première série de concerts à Paris : « Je m’ennuie déjà de vous ! »",
+      "url": "https://www.lemonde.fr/culture/article/2026/10/18/celine-dion-clot-en-beaute-sa-premiere-serie-de-concerts-a-paris-je-m-ennuie-deja-de-vous_6797040_3246.html",
+      "publishedAt": "2026-10-18T05:45:49.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/09/28/458/0/5500/2750/644/322/60/0/9d950c3_ftp-1-pn5tjkrd9xrr-2026-09-28t212250z-101408844-rc2jsnaahghi-rtrmadp-3-fashion-paris-loreal.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "culture",
+      "everFrontPage": true
+    },
+    {
+      "id": "62fba4210900",
+      "outletId": "huffpost",
+      "headline": "On était au dernier concert de Céline Dion à Paris, et il va nous falloir du temps pour nous en remettre",
+      "url": "https://www.huffingtonpost.fr/culture/article/on-etait-au-dernier-concert-de-celine-dion-a-paris-et-il-va-nous-falloir-du-temps-pour-nous-en-remettre_340298.html",
+      "publishedAt": "2026-10-18T05:12:19.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/16/49/71/1099/618/0/0/60/0/503e924_upload-1-v1nlsrjyeb5a-afp-20260912-c8696qv-v1-midres-francecanadamusiccelebs.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
     {
       "id": "27eb6299078d",
       "outletId": "le-parisien",
@@ -33,13 +56,17 @@
   "section": "culture",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "La star canadienne a parachevé sa résidence scénique dans la capitale avec un ultime spectacle mémorable.",
+      "L'interprète a partagé son émotion face aux fans et s'est montrée particulièrement épanouie sur scène après plusieurs semaines de représentations."
+    ],
     "centre": [
       "La chanteuse canadienne a achevé sa série de représentations parisiennes par une performance marquante.",
       "L'artiste a exprimé sa tristesse de quitter son public tout en confirmant son retour sur scène dans la capitale l'année prochaine.",
       "La billetterie pour les nouvelles dates prévues au printemps a connu un succès immédiat auprès des admirateurs."
     ]
   },
-  "differences": "Le sujet est exclusivement couvert par le centre, qui met en avant la dimension émotive et l'immense succès populaire de la fin de cette série de représentations à Paris, tout en informant ses lecteurs sur les prochaines dates prévues l'année suivante. Il n'y a donc pas de divergences ou de comparaisons inter-camps à formuler.",
+  "differences": "La gauche et le centre convergent pour saluer l'intensité émotionnelle de l'ultime représentation parisienne de l'artiste. Le centre se distingue toutefois en apportant des précisions pratiques et économiques sur la suite de la tournée, notamment le triomphe immédiat de la billetterie pour les futures dates au printemps, tandis que la gauche adopte un ton plus intime en relatant l'ambiance vécue au cœur de la salle de concert.",
   "promptVersion": "sum-2",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 4
 }
