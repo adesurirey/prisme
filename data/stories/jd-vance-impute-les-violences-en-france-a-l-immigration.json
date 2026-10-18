@@ -1,10 +1,21 @@
 {
   "id": "200f8d4103a5",
   "slug": "jd-vance-impute-les-violences-en-france-a-l-immigration",
-  "title": "Le vice-président américain JD Vance et Donald Trump imputent l'immigration aux violences des manifestations en France",
+  "title": "Donald Trump et JD Vance imputent l'immigration aux violences des manifestations en France",
   "createdAt": "2026-10-18T04:01:16.053Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "bbd5505fbd9b",
+      "outletId": "cnews",
+      "headline": "Mobilisation du 17 octobre : Donald Trump affirme que «la France brûle» et que le pays est «brisé» par l'immigration",
+      "url": "https://www.cnews.fr/monde/2026-10-18/mobilisation-du-17-octobre-donald-trump-affirme-que-la-france-brule-et-que-le-pays",
+      "publishedAt": "2026-10-18T15:33:52.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-14t004732z_1563531806_rc2o2oanofrk_rtrmadp_3_usa-trump-taille1200_6ad4e8da99bba.jpg?itok=TMj288US",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "272bd1b3a246",
       "outletId": "le-parisien",
@@ -122,7 +133,7 @@
       "url": "https://www.20minutes.fr/societe/4255265-20261018-mobilisation-17-octobre-comme-trump-vance-impute-violences-france-immigration?at_medium=display&at_campaign=149",
       "publishedAt": "2026-10-18T03:18:56.000Z",
       "imageUrl": "https://img.20mn.fr/2rA6_r1gRuyIwYbSA1t8VCk/1200x768_le-vice-president-jd-vance-prend-la-parole-lors-d-un-rassemblement-de-campagne-de-mi-mandat-au-complexe-de-formation-level-up-a-monroe-michigan-le-jeudi-15-octobre-2026-daniel-heuer-photo-de-piscine-via-ap-mipu544-26288778984852-photo-de-piscine-2610152343",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -157,14 +168,15 @@
     "droite": [
       "Le chef de l'État américain instrumentalise les incidents du 17 octobre pour imputer le désordre public aux flux migratoires.",
       "La situation sécuritaire hexagonale est saisie par Washington pour illustrer l'échec des politiques migratoires.",
-      "Les plus hauts dirigeants américains pointent immédiatement la gravité des dégradations observées pendant les rassemblements."
+      "Donald Trump qualifie publiquement la France de pays brisé et en proie aux flammes en raison de l'immigration.",
+      "Le dirigeant américain exhorte Paris à fermer ses frontières pour faire face aux violences survenues lors de la mobilisation."
     ]
   },
   "differences": [
     "Le camp de gauche met l'accent sur l'outrance de la réaction américaine et l'instrumentalisation des tensions, qualifiant le discours de Washington de mise en cause injustifiée.",
     "Le centre se focalise sur la retranscription des propos présidentiels américains liant directement les troubles à la question migratoire, sans adopter explicitement la thèse.",
-    "La droite, par l'intermédiaire de ses relais médiatiques, valide et met en avant l'analyse américaine voyant dans les émeutes la confirmation directe de l'échec migratoire."
+    "La droite valide et met en avant l'analyse américaine voyant dans les émeutes la confirmation directe de l'échec migratoire, en relayant les appels appuyés de Washington à un durcissement des frontières."
   ],
   "promptVersion": "sum-3",
-  "summarizedArticleCount": 12
+  "summarizedArticleCount": 13
 }

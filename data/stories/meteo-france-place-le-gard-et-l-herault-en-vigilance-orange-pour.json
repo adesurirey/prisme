@@ -1,10 +1,44 @@
 {
   "id": "59a3c3de8a58",
   "slug": "meteo-france-place-le-gard-et-l-herault-en-vigilance-orange-pour",
-  "title": "Météo-France place le Gard et l'Hérault en vigilance orange pour des risques d'orages et d'inondations",
+  "title": "Météo-France place le Gard et l'Hérault en vigilance orange pour des risques de pluies, d'inondations et d'orages",
   "createdAt": "2026-10-18T15:01:22.486Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "ddec7b271d39",
+      "outletId": "cnews",
+      "headline": "Orages : voici les deux départements placés en vigilance orange ce lundi",
+      "url": "https://www.cnews.fr/france/2026-10-18/orages-voici-les-deux-departements-places-en-vigilance-orange-ce-lundi-1937479",
+      "publishedAt": "2026-10-18T15:30:12.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/tasos-mansour-_hgpdpymv-8-unsplash_2_-taille1200_6ad4d676ba44f.jpg?itok=aYNm-Kzd",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "733535b2d3e2",
+      "outletId": "ouest-france",
+      "headline": "Orages, pluies et inondations : les départements du Gard et de l’Hérault placés en vigilance orange lundi",
+      "url": "https://www.ouest-france.fr/meteo/orage/orages-pluies-et-inondations-les-departements-du-gard-et-de-lherault-seront-places-en-vigilance-orange-lundi-ae994eec-caff-11f1-ad87-e24a1a2986e9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-18T15:06:54.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZDM2OTY0MDAwNDBlMmUxMTEzMzA2NmIzMzcxNGI5YjM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d29391c34f5c6a2bf71e9acdc5dfb8156b8795fda221200902bbd301eed09a49",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
+    {
+      "id": "0092120d8b8e",
+      "outletId": "tf1-info",
+      "headline": "Deux départements placés en vigilance orange pluie-inondation et orages ce lundi",
+      "url": "https://www.tf1info.fr/meteo/deux-departements-gard-herault-places-en-vigilance-orange-pluie-inondations-et-orages-lundi-19-octobre-2026-2470624.html",
+      "publishedAt": "2026-10-18T15:02:17.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/546/meteo-orages-ciel-gris-pluies-fd0194-2@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
     {
       "id": "5a2135095d55",
       "outletId": "franceinfo",
@@ -39,12 +73,19 @@
     ],
     "centre": [
       "Le passage au niveau orange est officialisé pour les territoires du Gard et de l'Hérault dès le début d'après-midi lundi.",
-      "L'organisme de prévision qualifie cet événement climatique de nouvel épisode méditerranéen associant pluies et foudre."
+      "L'organisme de prévision qualifie cet événement climatique de nouvel épisode méditerranéen associant pluies et foudre.",
+      "Les autorités prévoient de fortes précipitations accompagnées d'un risque accru d'inondations et de rafales soutenues sur le littoral."
+    ],
+    "droite": [
+      "Deux départements du sud-est basculent en vigilance orange en raison d'un risque marqué de dégradations orageuses.",
+      "Les intempéries doivent débuter à partir de 14 heures et se prolonger durant la nuit suivante.",
+      "Le littoral de l'Hérault anticipe des rafales de vent atteignant 85 km/h conjuguées à de fortes pluies."
     ]
   },
   "differences": [
-    "La gauche, via franceinfo, détaille l'origine météorologique exacte du phénomène en pointant une goutte froide ibérique, tandis que le centre (BFMTV) qualifie l'événement de manière plus générale comme un épisode méditerranéen pluvio-orageux."
+    "La gauche, via franceinfo, se distingue en détaillant l'origine météorologique précise du phénomène avec une goutte froide ibérique, tandis que le centre et la droite privilégient une qualification plus générale d'épisode méditerranéen pluvio-orageux.",
+    "La droite (CNews) insiste davantage sur les aspects pratiques et les prévisions locales en mentionnant des rafales de vent spécifiques sur la côte ainsi que le passif climatique de fin septembre."
   ],
   "promptVersion": "sum-3",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 5
 }
