@@ -12,7 +12,7 @@ import { backOnClick, installBackLink, shouldUseBack } from './back-link';
  */
 
 const SITE = window.location.origin;
-const indexUrl = `${SITE}/prisme/`;
+const indexUrl = `${SITE}/`;
 
 describe('shouldUseBack', () => {
   it('matches a referrer that is the index', () => {
@@ -20,11 +20,11 @@ describe('shouldUseBack', () => {
   });
 
   it('ignores a trailing-slash difference on the index path', () => {
-    expect(shouldUseBack(`${SITE}/prisme`, indexUrl)).toBe(true);
+    expect(shouldUseBack(`${SITE}`, indexUrl)).toBe(true);
   });
 
   it('rejects a referrer from a Story page', () => {
-    expect(shouldUseBack(`${SITE}/prisme/sujet/x/`, indexUrl)).toBe(false);
+    expect(shouldUseBack(`${SITE}/sujet/x/`, indexUrl)).toBe(false);
   });
 
   it('rejects an empty referrer', () => {
@@ -32,9 +32,7 @@ describe('shouldUseBack', () => {
   });
 
   it('rejects an external referrer', () => {
-    expect(shouldUseBack('https://elsewhere.example/prisme/', indexUrl)).toBe(
-      false,
-    );
+    expect(shouldUseBack('https://elsewhere.example/', indexUrl)).toBe(false);
   });
 
   it('tolerates an unparseable referrer', () => {
@@ -101,7 +99,7 @@ describe('installBackLink', () => {
   });
 
   it('lets a click from elsewhere follow the href', () => {
-    const spy = page(`${SITE}/prisme/sujet/autre/`);
+    const spy = page(`${SITE}/sujet/autre/`);
     const link = document.getElementById('back')!;
     const event = new MouseEvent('click', { bubbles: true, cancelable: true });
     link.dispatchEvent(event);

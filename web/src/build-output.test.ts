@@ -17,7 +17,7 @@ let dist: string;
 beforeAll(() => {
   // Strip a stray BASE_URL from the environment: some shells (agents, CI
   // wrappers) export one, and the child build would otherwise pick it up
-  // instead of the configured /prisme base.
+  // instead of the configured / base.
   const env = { ...process.env };
   delete env.BASE_URL;
   execSync('node_modules/.bin/astro build', {
@@ -35,16 +35,16 @@ describe('PWA manifest', () => {
     );
     expect(manifest.name).toBe('Prisme');
     expect(manifest.display).toBe('standalone');
-    expect(manifest.start_url).toBe('/prisme/');
-    expect(manifest.scope).toBe('/prisme/');
+    expect(manifest.start_url).toBe('/');
+    expect(manifest.scope).toBe('/');
     expect(manifest.theme_color).toBe('#fcfcfc');
     expect(manifest.background_color).toBe('#fcfcfc');
     expect(manifest.icons).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ src: '/prisme/icons/icon-192.png' }),
-        expect.objectContaining({ src: '/prisme/icons/icon-512.png' }),
+        expect.objectContaining({ src: '/icons/icon-192.png' }),
+        expect.objectContaining({ src: '/icons/icon-512.png' }),
         expect.objectContaining({
-          src: '/prisme/icons/maskable-512.png',
+          src: '/icons/maskable-512.png',
           purpose: 'maskable',
         }),
       ]),
@@ -56,7 +56,7 @@ describe('PWA manifest', () => {
       await readFile(path.join(dist, 'manifest.webmanifest'), 'utf8'),
     );
     for (const icon of manifest.icons) {
-      const file = path.join(dist, icon.src.replace(/^\/prisme\//, ''));
+      const file = path.join(dist, icon.src.replace(/^\//, ''));
       const bytes = await readFile(file);
       // PNG magic number.
       expect([...bytes.subarray(0, 4)]).toEqual([0x89, 0x50, 0x4e, 0x47]);
@@ -73,11 +73,9 @@ describe('PWA manifest', () => {
 describe('page head tags', () => {
   it('references the manifest and the apple-touch-icon', async () => {
     const html = await readFile(path.join(dist, 'index.html'), 'utf8');
+    expect(html).toContain('rel="manifest" href="/manifest.webmanifest"');
     expect(html).toContain(
-      'rel="manifest" href="/prisme/manifest.webmanifest"',
-    );
-    expect(html).toContain(
-      'rel="apple-touch-icon" href="/prisme/icons/apple-touch-icon.png"',
+      'rel="apple-touch-icon" href="/icons/apple-touch-icon.png"',
     );
     expect(html).toContain('name="apple-mobile-web-app-capable" content="yes"');
     expect(html).toContain(

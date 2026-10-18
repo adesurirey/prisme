@@ -2,10 +2,10 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 
-// GitHub Pages project site: https://adesurirey.github.io/prisme/
+// Custom domain: https://leprisme.info/
 export default defineConfig({
-  site: 'https://adesurirey.github.io',
-  base: '/prisme',
+  site: 'https://leprisme.info',
+  base: '/',
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
