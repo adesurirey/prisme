@@ -2,6 +2,7 @@ import type { Outlet, Story } from '@prisme/domain';
 import {
   blindspots,
   coverageCounts,
+  coverageWeights,
   exposureShares,
   pickStoryImage,
   reportingOutletIds,
@@ -46,6 +47,7 @@ export default function StoryCard({
 }) {
   const byId = new Map(outlets.map((o) => [o.id, o]));
   const counts = coverageCounts(story.articles, byId);
+  const weights = coverageWeights(story.articles, byId);
   const shares = exposureShares(story.articles, byId);
   const reporting = reportingOutletIds(story.articles).size;
   const spots = blindspots(counts);
@@ -84,6 +86,7 @@ export default function StoryCard({
           <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-muted sm:gap-x-3">
             <CoverageMeta
               counts={counts}
+              weights={weights}
               shares={shares}
               reporting={reporting}
               totalOutlets={outlets.length}

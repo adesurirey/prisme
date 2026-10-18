@@ -104,7 +104,7 @@ export function radioStep(
  */
 export function modeDescription(mode: ReadingMode): string {
   return mode === 'coverage'
-    ? 'Les barres affichent combien de médias rapportent chaque sujet'
+    ? 'Les barres affichent la couverture de chaque camp, pondérée par le volume d’articles'
     : 'Les barres affichent la part de lecteurs touchés par chaque média pour un sujet';
 }
 

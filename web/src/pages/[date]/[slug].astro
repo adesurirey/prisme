@@ -4,6 +4,7 @@ import {
   blindspots,
   countedArticles,
   coverageCounts,
+  coverageWeights,
   exposureShares,
   pickStoryImage,
   reportingOutletIds,
@@ -40,6 +41,7 @@ const outlets = loadOutlets();
 const byId = new Map(outlets.map((o) => [o.id, o]));
 
 const counts = coverageCounts(story.articles, byId);
+const weights = coverageWeights(story.articles, byId);
 const shares = exposureShares(story.articles, byId);
 const reporting = reportingOutletIds(story.articles).size;
 const spots = blindspots(counts);
@@ -161,6 +163,7 @@ const description =
             <p class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-muted">
               <CoverageMeta
                 counts={counts}
+                weights={weights}
                 shares={shares}
                 reporting={reporting}
                 totalOutlets={outlets.length}
@@ -192,6 +195,7 @@ const description =
           <p class="mt-4 text-[13px] text-muted">
             <CoverageMeta
               counts={counts}
+              weights={weights}
               shares={shares}
               reporting={reporting}
               totalOutlets={outlets.length}

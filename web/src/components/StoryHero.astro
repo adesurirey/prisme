@@ -12,6 +12,7 @@ import type { CoverageGroup, Outlet, Story } from '@prisme/domain';
 import {
   coverageCounts,
   coverageOrder,
+  coverageWeights,
   exposureShares,
   LEANING_LABELS,
   pickStoryImage,
@@ -31,6 +32,7 @@ interface Props {
 const { story, outlets } = Astro.props;
 const byId = new Map(outlets.map((o) => [o.id, o]));
 const counts = coverageCounts(story.articles, byId);
+const weights = coverageWeights(story.articles, byId);
 const shares = exposureShares(story.articles, byId);
 const reporting = reportingOutletIds(story.articles).size;
 const image = pickStoryImage(story, byId);
@@ -38,8 +40,10 @@ const imageOutlet = image && byId.get(image.outletId);
 
 const total = coverageOrder.reduce((sum, l) => sum + counts[l], 0);
 const covered = total > 0;
+// Volume-weighted Couverture rate (ADR-0026), like CoverageMeta's text.
+const weightTotal = coverageOrder.reduce((sum, l) => sum + weights[l], 0);
 const covRate = (l: CoverageGroup) =>
-  covered ? Math.round((counts[l] / total) * 100) : 0;
+  covered ? Math.round((weights[l] / weightTotal) * 100) : 0;
 const expRate = (l: CoverageGroup) => Math.round(shares[l] * 100);
 
 // Per-segment legends: the rate text ("42\u202F%"), one per reading —
@@ -61,7 +65,7 @@ const updatedLine =
     ? `mis à jour à ${parisTime(updated)}`
     : `mis à jour ${dayStamp(updated)}`;
 
-const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} sur ${outlets.length} — ${coverageOrder
+const ariaLabel = `Couverture, pondérée par le volume d'articles : ${reporting} média${reporting > 1 ? 's' : ''} sur ${outlets.length} — ${coverageOrder
   .map((l) => `${counts[l]} ${LEANING_LABELS[l].toLowerCase()}`)
   .join(' | ')}`;
 ---
@@ -119,7 +123,7 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
                       data-group={l}
                       data-exposure={shares[l]}
                       class="coverage-seg @container flex min-w-0 items-center justify-center overflow-hidden"
-                      style={`--cov: ${counts[l]}; --exp: ${shares[l]}; flex-basis: 0; background: var(--${l}); color: var(--on-leaning);`}
+                      style={`--cov: ${weights[l]}; --exp: ${shares[l]}; flex-basis: 0; background: var(--${l}); color: var(--on-leaning);`}
                     >
                       <span class="mode-text-cov whitespace-nowrap px-2 text-[12px] font-semibold sm:px-3 sm:text-[13px]">
                         <span class="@min-[100px]:inline hidden">{LEANING_LABELS[l]}</span>

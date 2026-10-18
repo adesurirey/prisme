@@ -10,16 +10,20 @@ import type { CSSProperties } from 'react';
  * cards and the Story page header.
  *
  * The bar is ONE element with TWO readings (issue #89, ADR-0016): segment
- * widths default to Couverture (distinct Outlets per group, `--cov`) and
- * also carry the Reach-weighted Exposition share (`--exp` custom property
- * plus a `data-exposure` attribute — issue #88's `exposureShares()`). The
- * navbar toggle (Base.astro) flips the site-wide mode, and pure CSS picks
- * which scale drives `flex-grow` — no hydration, no per-card script. The
- * static aria-label keeps describing the Couverture: the default meaning
- * never silently changes. No tooltips (they never worked on mobile).
+ * widths default to Couverture (each Outlet weighted by √ of its article
+ * count per group, `--cov`) and also carry the Reach- and volume-weighted
+ * Exposition share (`--exp` custom property plus a `data-exposure`
+ * attribute — issue #88's `exposureShares()`, volume weighting ADR-0026).
+ * The navbar toggle (Base.astro) flips the site-wide mode, and pure CSS
+ * picks which scale drives `flex-grow` — no hydration, no per-card script.
+ * The text rates are volume-weighted too; the counts shown stay raw
+ * (distinct Outlets, counted Articles) — the weighting lives in the
+ * widths, the aria-label names it. No tooltips (they never worked on
+ * mobile).
  */
 export default function CoverageMeta({
   counts,
+  weights,
   shares,
   reporting,
   totalOutlets,
@@ -33,6 +37,8 @@ export default function CoverageMeta({
   fullText = false,
 }: {
   counts: Record<CoverageGroup, number>;
+  /** Volume-weighted Coverage per group (ADR-0026) — the default scale. */
+  weights: Record<CoverageGroup, number>;
   /** Exposition shares per group (issue #88) — the toggle's other scale. */
   shares: Record<CoverageGroup, number>;
   /** Distinct Outlets on the Story, editorials included. */
@@ -45,16 +51,20 @@ export default function CoverageMeta({
 }) {
   const total = coverageOrder.reduce((sum, l) => sum + counts[l], 0);
   const covered = total > 0;
+  const weightTotal = coverageOrder.reduce((sum, l) => sum + weights[l], 0);
   const breakdown = coverageOrder
     .map((l) => `${counts[l]} ${LEANING_LABELS[l].toLowerCase()}`)
     .join(' | ');
-  // The dominant Coverage group and its share of the reporting Outlets —
-  // the "46 % droite" of the meta line. Ties go to the first group in
-  // coverageOrder (gauche before droite, matching the bar's segment order).
+  // The dominant Coverage group and its volume-weighted share — the "46 %
+  // droite" of the meta line (ADR-0026: volume-weighted, like the bar
+  // widths). Ties go to the first group in coverageOrder (gauche before
+  // droite, matching the bar's segment order).
   const dominant = coverageOrder.reduce((best, l) =>
-    counts[l] > counts[best] ? l : best,
+    weights[l] > weights[best] ? l : best,
   );
-  const rate = covered ? Math.round((counts[dominant] / total) * 100) : 0;
+  const rate = covered
+    ? Math.round((weights[dominant] / weightTotal) * 100)
+    : 0;
   // The Exposition reading of the same line: the dominant group by
   // Reach-weighted share (ties go to the first group in coverageOrder,
   // matching the bar) and its rounded percentage of the Story's total
@@ -67,7 +77,7 @@ export default function CoverageMeta({
     <span
       className={`inline-flex flex-wrap items-center gap-x-[1em] gap-y-0.5 ${className}`}
       role="img"
-      aria-label={`Couverture : ${reporting} média${reporting > 1 ? 's' : ''} sur ${totalOutlets} — ${breakdown}`}
+      aria-label={`Couverture, pondérée par le volume d'articles : ${reporting} média${reporting > 1 ? 's' : ''} sur ${totalOutlets} — ${breakdown}`}
     >
       {covered && (
         <span
@@ -85,7 +95,7 @@ export default function CoverageMeta({
                   className="coverage-seg h-full"
                   style={
                     {
-                      '--cov': counts[l],
+                      '--cov': weights[l],
                       '--exp': shares[l],
                       flexBasis: 0,
                       background: `var(--${l})`,

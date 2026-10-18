@@ -84,7 +84,7 @@ describe('persistMode', () => {
 describe('modeDescription', () => {
   it('describes each reading in one line', () => {
     expect(modeDescription('coverage')).toBe(
-      'Les barres affichent combien de médias rapportent chaque sujet',
+      'Les barres affichent la couverture de chaque camp, pondérée par le volume d’articles',
     );
     expect(modeDescription('exposure')).toBe(
       'Les barres affichent la part de lecteurs touchés par chaque média pour un sujet',
@@ -157,7 +157,7 @@ describe('announcement', () => {
 
   it('describes the Couverture reading', () => {
     expect(announcement('coverage', document)).toBe(
-      'Les barres affichent combien de médias rapportent chaque sujet',
+      'Les barres affichent la couverture de chaque camp, pondérée par le volume d’articles',
     );
   });
 
@@ -261,7 +261,7 @@ describe('installModeToggle', () => {
     expect(whisper.classList.contains('is-shown')).toBe(true);
     coverage.click();
     expect(whisper.textContent).toBe(
-      'Les barres affichent combien de médias rapportent chaque sujet',
+      'Les barres affichent la couverture de chaque camp, pondérée par le volume d’articles',
     );
     expect(whisper.classList.contains('is-shown')).toBe(true);
     exposure.click();
@@ -283,7 +283,7 @@ describe('installModeToggle', () => {
     exposure.click();
     expect(whisper.classList.contains('is-shown')).toBe(false);
     expect(whisper.textContent).toBe(
-      'Les barres affichent combien de médias rapportent chaque sujet',
+      'Les barres affichent la couverture de chaque camp, pondérée par le volume d’articles',
     );
     expect(localStorage.getItem('prisme:mode-whisper')).toBe('4');
   });
