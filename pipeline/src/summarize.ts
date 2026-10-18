@@ -9,7 +9,7 @@
  * Language API (free tier, shared with the Grouping model).
  *
  * Each call re-synthesizes from the Story's WHOLE Article set (prompt
- * sum-4): the previous Summaries are never fed back, so the model cannot
+ * sum-5): the previous Summaries are never fed back, so the model cannot
  * patch or append to them. Incremental updating (sum-1..sum-3) made each
  * call append a bullet about the latest development to the previous text —
  * the Summary read as a chronicle of successive states instead of a
@@ -34,7 +34,7 @@ import { RETRYABLE_STATUS } from './http.ts';
 import { isLive } from './liveness.ts';
 
 /** Prompt version, for traceability in Story files (ADR-0006). Bump on any prompt/schema change. */
-export const SUMMARIES_PROMPT_VERSION = 'sum-4';
+export const SUMMARIES_PROMPT_VERSION = 'sum-5';
 
 /**
  * The per-build Summaries budget (ADR-0022): at most the top-20 ranked
@@ -157,7 +157,7 @@ const LEANING_LABELS_FR: Record<Leaning, string> = {
 /**
  * The prompt: the Story's whole Article set — headlines + teasers with
  * Outlet tags, nothing else (ADR-0003) — and never the previous Summaries,
- * so every call is a fresh synthesis of the current Story (prompt sum-4).
+ * so every call is a fresh synthesis of the current Story (prompt sum-5).
  * The version appears in the text so a prompt change without a version bump
  * cannot pass review unnoticed.
  */
@@ -189,7 +189,7 @@ export function summariesPrompt(input: SummaryInput): string {
     `Tu couvres uniquement : ${coveredLeanings.map((l) => LEANING_LABELS_FR[l]).join(', ')}.`,
     '',
     'Consignes :',
-    "- Pour chaque camp couvert, écris « summaries.<camp> » : un tableau de 2 à 5 puces courtes en français, factuelles, qui résument ce que les médias de ce camp rapportent du sujet. Les camps regroupent les bandes : le camp gauche comprend les médias classés « centre gauche », le camp droite comprend les médias classés « centre droit ». Reformule : ne recopie jamais la formulation d'un titre ou d'un teaser. Ne nomme aucun média dans les résumés ; tu peux en revanche signaler une nuance interne au camp (par exemple entre « gauche » et « centre gauche ») sans désigner de titre.",
+    "- Pour chaque camp couvert, écris « summaries.<camp> » : un tableau de 2 à 5 puces courtes en français, factuelles, qui résument ce que les médias de ce camp rapportent du sujet. Les camps regroupent les bandes : le camp gauche comprend les médias classés « centre gauche », le camp droite comprend les médias classés « centre droit ». Reformule : ne recopie jamais la formulation d'un titre ou d'un teaser. Par défaut, parle pour le camp tout entier sans nommer de média ; nomme un média seulement quand c'est nécessaire à l'exactitude : pour signaler une nuance interne au camp (par exemple entre « gauche » et « centre gauche ») ou pour attribuer une information que tous les médias du camp ne rapportent pas.",
     '- Les tribunes éclairent le positionnement de leur camp mais restent des prises de position, pas des faits établis.',
     "- Écris « differences » : un tableau de 1 à 4 puces courtes en français qui comparent comment les camps cadrent, accentuent ou laissent de côté des parties du sujet — y compris les divergences à l'intérieur d'un même camp (par exemple entre « droite » et « centre droit »). Une puce = un contraste ; ne force pas une puce par camp : quand des camps partagent le même angle, regroupe-les dans la même puce, et quand un camp n'apporte rien, laisse-le de côté. Tu peux citer un média à l'appui d'un contraste concret. Décris sans trancher : dis qui met l'accent sur quoi, jamais qui a raison.",
     "- Si un seul camp couvre le sujet : son résumé le présente, et « differences » décrit sa lecture — y compris, s'il y en a, les divergences à l'intérieur du camp (par exemple entre « gauche » et « centre gauche »). S'il n'y a vraiment rien à comparer, dis-le sans détour — ne rien inventer.",
@@ -242,7 +242,7 @@ export async function updateSummaries(input: {
     if (budget != null && calls >= budget) continue;
 
     // The whole Article set, not a delta: the model re-synthesizes from
-    // scratch (prompt sum-4). Headlines are stored in the Story file;
+    // scratch (prompt sum-5). Headlines are stored in the Story file;
     // teasers exist only while the Article is still in the feeds' window.
     const articles: SummaryInputArticle[] = [];
     for (const article of story.articles) {
