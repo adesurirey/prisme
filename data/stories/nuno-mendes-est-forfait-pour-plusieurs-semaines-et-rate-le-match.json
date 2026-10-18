@@ -1,10 +1,21 @@
 {
   "id": "ceb44c180eee",
   "slug": "nuno-mendes-est-forfait-pour-plusieurs-semaines-et-rate-le-match",
-  "title": "Nuno Mendes rate le match du PSG contre le Barça en raison d'un forfait de plusieurs semaines",
+  "title": "Nuno Mendes déclare forfait pour plusieurs semaines avec le PSG avant le match contre le Barça",
   "createdAt": "2026-10-18T15:01:22.486Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "35b57035e791",
+      "outletId": "le-figaro",
+      "headline": "PSG-Barça : sans Nuno Mendes, comment Paris va contenir le poison Lamine Yamal",
+      "url": "https://www.lefigaro.fr/sports/football/ligue-des-champions/psg-barca-sans-nuno-mendes-comment-paris-va-contenir-le-poison-lamine-yamal-20261018",
+      "publishedAt": "2026-10-18T16:20:25.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/18/0fc0b130ad82e9a3bd95beb722118b7233391ef17910aaa04352ab26e851169b.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
     {
       "id": "d980a6ca4f16",
       "outletId": "cnews",
@@ -45,7 +56,7 @@
       "url": "https://www.lefigaro.fr/sports/football/ligue-des-champions/psg-barca-enorme-coup-dur-pour-les-parisiens-avec-le-forfait-de-nuno-mendes-20261018",
       "publishedAt": "2026-10-18T14:19:54.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/18/f8d0fa7da33078ad72dcb760a4d741654fd0728831ce71d7ec076119f8493cb5.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -56,19 +67,19 @@
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Le PSG officialise l'absence de son défenseur pour la réception du club catalan.",
-      "Le latéral portugais souffre d'une lésion musculaire à la jambe gauche.",
-      "La durée précise de l'indisponibilité n'a pas été communiquée par l'institution sportive."
+      "Le PSG officialise le forfait de Nuno Mendes pour le match contre le FC Barcelone en Ligue des champions.",
+      "Le latéral gauche souffre d'une lésion à la cuisse gauche consécutive à la rencontre de championnat jouée à Strasbourg.",
+      "L'indisponibilité du joueur est estimée à plusieurs semaines, constituant une mauvaise nouvelle sportive pour le club parisien."
     ],
     "droite": [
-      "Le club parisien confirme le forfait du joueur pour la confrontation européenne de mardi.",
-      "L'examen médical met en évidence une lésion localisée à la cuisse gauche survenue lors de la dernière rencontre de championnat.",
-      "Cette indisponibilité soudaine prive l'encadrement technique d'une option importante pour ce rendez-vous crucial."
+      "Nuno Mendes est contraint de déclarer forfait pour la réception du FC Barcelone après une blessure contractée à Strasbourg.",
+      "Le défenseur souffre d'une lésion musculaire à la cuisse gauche l'éloignant des terrains pour plusieurs semaines.",
+      "La presse de ce bord souligne l'ampleur de ce coup dur tactique pour l'entraîneur parisien, notamment pour contenir le joueur barcelonais Lamine Yamal."
     ]
   },
   "differences": [
-    "La droite précise explicitement la nature exacte de la blessure à la cuisse gauche et l'échéance immédiate du match de mardi, tandis que le centre reste plus général sur la durée exacte de l'absence."
+    "Les médias de droite insistent particulièrement sur la conséquence tactique de cette absence, notamment sur la difficulté à neutraliser l'attaquant barcelonais Lamine Yamal, tandis que les médias du centre se concentrent sur la durée de l'indisponibilité et le caractère officiel du communiqué du club."
   ],
-  "promptVersion": "sum-3",
-  "summarizedArticleCount": 4
+  "promptVersion": "sum-5",
+  "summarizedArticleCount": 5
 }

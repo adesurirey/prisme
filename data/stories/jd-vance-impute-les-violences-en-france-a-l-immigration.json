@@ -6,6 +6,17 @@
   "storyDay": "2026-10-18",
   "articles": [
     {
+      "id": "f321c64809a4",
+      "outletId": "le-jdd",
+      "headline": "Émeutes du 17 octobre : Peter Magyar défend «la politique migratoire la plus stricte»",
+      "url": "https://www.lejdd.fr/International/emeutes-du-17-octobre-peter-magyar-prone-la-politique-migratoire-la-plus-stricte-186378",
+      "publishedAt": "2026-10-18T16:44:08.000Z",
+      "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/18/18/000_d2qb6qt.jpg?VersionId=E2U.nvEPHg3B9NJmR_BEDRjmGM86UsYG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "bbd5505fbd9b",
       "outletId": "cnews",
       "headline": "Mobilisation du 17 octobre : Donald Trump affirme que «la France brûle» et que le pays est «brisé» par l'immigration",
@@ -56,6 +67,17 @@
       "url": "https://www.huffingtonpost.fr/international/article/la-france-brule-donald-trump-et-jd-vance-n-ont-qu-un-mot-a-la-bouche-apres-les-violences_341519.html",
       "publishedAt": "2026-10-18T13:40:27.000Z",
       "imageUrl": "https://focus.huffingtonpost.fr/2026/10/18/0/0/5538/3115/0/0/60/0/11c4ece_upload-1-ov6of9xjhpva-afp-20260728-2288038531-v1-highres-latesenatorlindseygrahammemorializedinwashin.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "f1892aa871ae",
+      "outletId": "europe-1",
+      "headline": "Emeutes du 17 octobre : Trump affirme que «la France brûle», un pays «brisé» par l'immigration",
+      "url": "https://www.europe1.fr/international/emeutes-du-17-octobre-trump-affirme-que-la-france-brule-un-pays-brise-par-limmigration-1160250?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-18T13:21:54.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Trump/donald_trump_kevin_dietsch_getty_images_north_america_getty_images_via_afp_6a9877ae2bddc.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "world"
@@ -156,27 +178,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le sommet de l'État américain réagit très rapidement aux tensions sociales observées en France.",
-      "Les dirigeants des États-Unis instrumentalisent médiatiquement les débordements survenus lors de la mobilisation du 17 octobre.",
-      "La rhétorique adoptée par Washington met en cause de manière outrancière l'ordre public français."
+      "Le camp souligne que Donald Trump et son vice-président JD Vance ont réagi très rapidement après les manifestations du 17 octobre.",
+      "Il rapporte les déclarations de Donald Trump affirmant que la France brûle et appelant à fermer les frontières.",
+      "Il relaie les propos de JD Vance accusant les progressistes occidentaux d'avoir importé le tiers-monde en France."
     ],
     "centre": [
-      "Les déclarations de Donald Trump qualifiant la situation française de chaos sont largement relayées par les médias modérés.",
-      "L'administration américaine pointe explicitement le facteur migratoire derrière les dégradations constatées le 17 octobre.",
-      "Les autorités des États-Unis commentent publiquement les épisodes de violences urbaines constatés lors des récents cortèges."
+      "Les médias rapportent les réactions de Donald Trump et JD Vance imputant directement l'immigration aux violences urbaines.",
+      "Ils soulignent que le président américain estime que la France est brisée et en feu à la suite de ces mobilisations.",
+      "Ils mentionnent les critiques formulées par l'exécutif américain visant la politique migratoire française."
     ],
     "droite": [
-      "Le chef de l'État américain instrumentalise les incidents du 17 octobre pour imputer le désordre public aux flux migratoires.",
-      "La situation sécuritaire hexagonale est saisie par Washington pour illustrer l'échec des politiques migratoires.",
-      "Donald Trump qualifie publiquement la France de pays brisé et en proie aux flammes en raison de l'immigration.",
-      "Le dirigeant américain exhorte Paris à fermer ses frontières pour faire face aux violences survenues lors de la mobilisation."
+      "Le camp met en avant les déclarations chocs de Donald Trump déclarant que la France brûle et est brisée par l'immigration.",
+      "Il détaille l'appel du président américain à renforcer les contrôles frontaliers et à reprendre le contrôle de la situation.",
+      "Il rapporte les accusations de JD Vance ciblant les progressistes occidentaux et la politique migratoire.",
+      "Il cite des réactions internationales similaires, comme celle du Premier ministre hongrois défendant des mesures strictes."
     ]
   },
   "differences": [
-    "Le camp de gauche met l'accent sur l'outrance de la réaction américaine et l'instrumentalisation des tensions, qualifiant le discours de Washington de mise en cause injustifiée.",
-    "Le centre se focalise sur la retranscription des propos présidentiels américains liant directement les troubles à la question migratoire, sans adopter explicitement la thèse.",
-    "La droite valide et met en avant l'analyse américaine voyant dans les émeutes la confirmation directe de l'échec migratoire, en relayant les appels appuyés de Washington à un durcissement des frontières."
+    "La droite insiste particulièrement sur la sévérité des propos de Donald Trump et intègre des parallèles internationaux, comme l'exemple hongrois relayé par Le JDD.",
+    "La gauche adopte un ton plus neutre en se limitant à rapporter les citations exactes des dirigeants américains sans s'attarder sur un contexte politique élargi."
   ],
-  "promptVersion": "sum-3",
-  "summarizedArticleCount": 13
+  "promptVersion": "sum-5",
+  "summarizedArticleCount": 15
 }

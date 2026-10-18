@@ -6,12 +6,34 @@
   "storyDay": "2026-10-18",
   "articles": [
     {
+      "id": "3d601c421d0a",
+      "outletId": "le-parisien",
+      "headline": "Céline Dion, des premières larmes au dernier triomphe… Le récit de ses 16 concerts",
+      "url": "https://www.leparisien.fr/culture-loisirs/musique/celine-dion-des-premieres-larmes-au-dernier-triomphe-le-recit-de-ses-16-concerts-18-10-2026-EYOLEPNUO5EX7O72LOKGI7XUQI.php",
+      "publishedAt": "2026-10-18T17:01:16.914Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
       "id": "bdc7c4263c68",
       "outletId": "franceinfo",
       "headline": "\"C'était vraiment une soirée inoubliable\" : Céline Dion comble ses fans pour son dernier show à Paris",
       "url": "https://www.franceinfo.fr/culture/musique/celine-dion/c-etait-vraiment-une-soiree-inoubliable-celine-dion-comble-ses-fans-pour-son-dernier-show-a-paris_8242831.html#xtor=RSS-3-[lestitres]",
       "publishedAt": "2026-10-18T14:24:12.000Z",
       "imageUrl": "https://www.franceinfo.fr/pictures/hwdybEw9XIc_lg3oiXtRjdonFmA/0x142:1560x1019/432x243/filters:format(jpg)/2026/10/18/6ad4bebd7295b129356860.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
+      "id": "b1320a8729cf",
+      "outletId": "tf1-info",
+      "headline": "\"Je m'ennuie déjà de vous !\" Céline Dion dit au revoir au public français et lui donne rendez-vous en 2027",
+      "url": "https://www.tf1info.fr/culture/je-m-ennuie-deja-de-vous-celine-dion-dit-au-revoir-au-public-francais-et-lui-donne-rendez-vous-en-2027-2470619.html",
+      "publishedAt": "2026-10-18T13:32:35.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/683/celine-dion-paris-fashion-week-2026-09c10e-0@1x.jpeg",
       "frontPage": false,
       "kind": "news",
       "section": "culture"
@@ -125,27 +147,24 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La chanteuse originaire du Québec a conclu sa série de représentations dans la capitale devant plus de trente mille spectateurs.",
-      "L'artiste a exprimé sa nostalgie auprès de son auditoire lors de l'ultime représentation de cette première séquence scénique.",
-      "Les seize représentations données depuis la rentrée ont été marquées par des moments d'échange spontanés avec le public.",
-      "Un bilan de cette première partie de résidence met en lumière l'intensité des seize dates parisiennes et les souvenirs marquants laissés par la diva.",
-      "La fin de cette série de concerts est qualifiée d'événement inoubliable ayant comblé les admirateurs venus du monde entier après cinq semaines de retrouvailles."
+      "La chanteuse a achevé avec succès sa série de seize représentations dans la capitale, saluée par un public conquis.",
+      "Les critiques soulignent l'émotion et la liberté montrées par l'artiste lors de cette ultime performance.",
+      "Le public et les observateurs expriment une certaine nostalgie après plus d'un mois de présence sur scène."
     ],
     "centre": [
-      "La chanteuse canadienne a achevé sa série de représentations parisiennes par une performance marquante.",
-      "L'artiste a exprimé sa tristesse de quitter son public tout en confirmant son retour sur scène dans la capitale l'année prochaine.",
-      "Le public est invité à participer à des sessions de questions-réponses concernant le bilan global, l'état de santé de la vedette et l'ouverture prochaine de la billetterie pour le printemps 2027."
+      "La star a conclu ses seize représentations parisiennes par un spectacle jugé particulièrement mémorable.",
+      "L'événement marque une étape importante dans son retour sur scène, avec l'annonce de nouvelles dates pour le printemps prochain.",
+      "Le public et les fans partagent leur émotion au lendemain de cette dernière représentation."
     ],
     "droite": [
-      "La star québécoise a achevé ce samedi la première partie de sa résidence parisienne après plus d'un mois de représentations.",
-      "Ce dernier spectacle marque la conclusion de plusieurs semaines d'émotions intenses et de retrouvailles pour les admirateurs venus du monde entier."
+      "Le dernier spectacle parisien de la chanteuse a suscité une vive nostalgie chez ses admirateurs.",
+      "Le Figaro rapporte le sentiment de vide ressenti par le public au lendemain de cet ultime rendez-vous."
     ]
   },
   "differences": [
-    "La droite se focalise sur l'aspect émotionnel et le sentiment de nostalgie des admirateurs au lendemain de l'ultime représentation parisienne.",
-    "Le centre élargit sa couverture aux perspectives d'avenir, notamment l'annonce d'un retour futur et les interrogations sur la santé de la star, tandis que la gauche et la droite privilégient la rétrospective des spectacles passés.",
-    "La gauche intègre le centre-gauche pour insister sur le caractère mémorable et festif de cette dernière soirée devant des spectateurs venus de tous horizons."
+    "La gauche insiste sur l'aspect libérateur et l'énergie retrouvée de la diva sur scène, tandis que la droite met l'accent sur la mélancolie des fans face à la fin des représentations.",
+    "Le centre accorde une place importante aux aspects pratiques du retour de la star, notamment l'annonce de nouvelles dates de concert et la question de sa santé."
   ],
-  "promptVersion": "sum-3",
-  "summarizedArticleCount": 10
+  "promptVersion": "sum-5",
+  "summarizedArticleCount": 12
 }

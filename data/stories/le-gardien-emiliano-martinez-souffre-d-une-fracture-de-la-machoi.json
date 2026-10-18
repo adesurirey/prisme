@@ -1,10 +1,21 @@
 {
   "id": "f97d02101765",
   "slug": "le-gardien-emiliano-martinez-souffre-d-une-fracture-de-la-machoi",
-  "title": "Le gardien Emiliano Martinez souffre d'une fracture de la mâchoire après une opération consécutive à un choc à la tête",
+  "title": "Le gardien Emiliano Martinez subit une opération après une fracture de la mâchoire",
   "createdAt": "2026-10-18T09:01:15.862Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "049562e1f261",
+      "outletId": "cnews",
+      "headline": "Premier League : après son choc contre Everton, Emiliano Martinez opéré d’une fracture de la mâchoire",
+      "url": "https://www.cnews.fr/sport/2026-10-18/premier-league-apres-son-choc-contre-everton-emiliano-martinez-opere-dune-fracture",
+      "publishedAt": "2026-10-18T16:37:59.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/design_sans_titre_6ad4e67709976.png?h=3995ad7d&itok=0-WERnxF",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
     {
       "id": "7808bdca6de7",
       "outletId": "le-parisien",
@@ -34,15 +45,19 @@
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Le portier argentin Emiliano Martinez a subi une intervention chirurgicale après avoir reçu un violent coup à la tête.",
-      "L'intéressé a tenu à donner des nouvelles rassurantes suite à cet incident.",
-      "Le joueur de Chelsea souffre d'une fracture de la mâchoire consécutive au choc survenu lors de la rencontre face à Everton.",
-      "Les examens médicaux ont permis d'écarter des blessures plus graves, telles qu'une atteinte au cou ou une fracture crânienne."
+      "Le gardien Emiliano Martinez a subi une intervention chirurgicale suite à un choc violent reçu lors d'une rencontre sportive.",
+      "Le joueur argentin a publié un message rassurant sur son état de santé depuis son lit d'hôpital.",
+      "La presse du centre précise que la blessure consiste en une fracture de la mâchoire survenue lors d'un match à Everton."
+    ],
+    "droite": [
+      "Le gardien de Chelsea a été opéré avec succès ce dimanche après une fracture de la mâchoire contractée contre Everton.",
+      "L'établissement hospitalier a confirmé la nécessité d'une intervention chirurgicale après des examens complémentaires.",
+      "Le joueur sera indisponible pour une durée de plusieurs semaines selon le communiqué officiel de son club."
     ]
   },
   "differences": [
-    "Le sujet est couvert exclusivement par le centre, ce qui ne permet pas d'établir de comparaison avec d'autres sensibilités politiques."
+    "La droite insiste particulièrement sur la durée de l'indisponibilité du joueur en évoquant une absence de plusieurs semaines, tandis que le centre privilégie l'aspect rassurant du message posté par le gardien."
   ],
-  "promptVersion": "sum-2",
-  "summarizedArticleCount": 2
+  "promptVersion": "sum-5",
+  "summarizedArticleCount": 3
 }
