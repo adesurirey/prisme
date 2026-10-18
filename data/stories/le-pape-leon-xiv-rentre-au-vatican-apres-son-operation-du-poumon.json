@@ -6,6 +6,29 @@
   "storyDay": "2026-10-18",
   "articles": [
     {
+      "id": "bca9386f719c",
+      "outletId": "ouest-france",
+      "headline": "Le pape Léon XIV fait sa première apparition publique depuis son opération d’un nodule cancéreux",
+      "url": "https://www.ouest-france.fr/societe/religions/pape-leon-xiv/le-pape-leon-xiv-fait-sa-premiere-apparition-publique-depuis-son-operation-dun-nodule-cancereux-671ecbd8-cadb-11f1-b8bc-a46147b584ed?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-18T10:53:00.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZTNkNDllYWYxNTY1NDdhOThmZjNhMDEwOWQ2MThjYmY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=926cc2a55a5a8d993472aadc341d6591583b8badbadc17f5d350f2789cefd5b6",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
+      "id": "e2d971ca4cc6",
+      "outletId": "bfmtv",
+      "headline": "\"J'ai vraiment ressenti votre soutien\": lors de sa première apparition publique depuis son opération, le pape annonce qu'il reprendra ses activités \"progressivement\"",
+      "url": "https://www.bfmtv.com/societe/religions/j-ai-vraiment-ressenti-votre-soutien-lors-de-sa-premiere-apparition-publique-depuis-son-operation-le-pape-annonce-qu-il-reprendra-ses-activites-progressivement_AD-202610180181.html",
+      "publishedAt": "2026-10-18T10:29:13.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/cXNkfMIINp9bL9qNHzp6LEzJL5Y=/0x106:2048x1258/800x0/images/Le-pape-Leon-XIV-salue-la-foule-depuis-la-fenetre-du-palais-apostolique-donnant-sur-la-place-Saint-Pierre-au-lendemain-de-son-retour-au-Vatican-apres-une-intervention-chirurgicale-le-18-octobre-2026-2367474.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "8a971b636b82",
       "outletId": "20-minutes",
       "headline": "Le pape de retour au Vatican quatre jours après son opération au poumon",
@@ -51,16 +74,14 @@
       "Les médecins confirment la bonne évolution de son état de santé général après l'ablation d'un nodule pulmonaire."
     ],
     "centre": [
-      "Le souverain pontife a quitté l'établissement de soins romain pour retrouver ses appartements au Vatican.",
-      "Cette sortie intervient peu de temps après l'opération d'une lésion cancéreuse au poumon.",
-      "Le déroulement de cette convalescence suscite des questionnements quant aux suites à donner à son pontificat."
+      "Le souverain pontife a fait sa première apparition publique depuis son intervention médicale pour remercier les fidèles.",
+      "Il s'est adressé aux croyants rassemblés sur la place Saint-Pierre à l'occasion de la prière dominicale de l'Angélus.",
+      "Le pape a indiqué qu'il allait reprendre ses charges et ses engagements de manière graduelle."
     ]
   },
   "differences": [
-    "La gauche et le centre s'accordent sur le déroulement factuel de la sortie d'hospitalisation du pape Léon XIV, tout en maintenant leurs nuances de cadrage initiales.",
-    "Le centre, incluant désormais des titres de tendance centre gauche, continue d'élargir la perspective vers les répercussions de cet épisode médical sur l'avenir du pontificat, tandis que la gauche privilégie une approche recentrée sur le bulletin de santé et le retour au Vatican.",
-    "Le camp de droite demeure absent de la couverture de ce sujet."
+    "Le centre met en avant la première apparition publique du pape et ses annonces concernant la reprise progressive de ses fonctions, tandis que la gauche se concentre essentiellement sur les aspects médicaux de sa convalescence et de son retour au Vatican."
   ],
-  "promptVersion": "sum-2",
-  "summarizedArticleCount": 3
+  "promptVersion": "sum-3",
+  "summarizedArticleCount": 5
 }

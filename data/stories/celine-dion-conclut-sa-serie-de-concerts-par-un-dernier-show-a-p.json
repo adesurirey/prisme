@@ -1,10 +1,33 @@
 {
   "id": "cb77d8b29575",
   "slug": "celine-dion-conclut-sa-serie-de-concerts-par-un-dernier-show-a-p",
-  "title": "Céline Dion termine sa série de concerts à Paris avec un dernier spectacle",
+  "title": "Céline Dion conclut sa série de concerts à Paris par un dernier spectacle",
   "createdAt": "2026-10-18T04:01:16.053Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "da68d1d3e0fd",
+      "outletId": "le-figaro",
+      "headline": "«On savait que le dernier soir arriverait» : le blues des fans de Céline Dion au lendemain de son dernier show parisien",
+      "url": "https://www.lefigaro.fr/musique/on-savait-que-le-dernier-soir-arriverait-le-blues-des-fans-de-celine-dion-au-lendemain-de-son-dernier-show-parisien-20261018",
+      "publishedAt": "2026-10-18T10:35:07.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/18/f23e8a9ac9a57524b045235a30f22700b8888030c4b3fc08967ba0d89594b792.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "culture",
+      "everFrontPage": true
+    },
+    {
+      "id": "52224931876c",
+      "outletId": "franceinfo",
+      "headline": "Sept moments forts à retenir de la première partie de concerts de Céline Dion à Paris",
+      "url": "https://www.franceinfo.fr/culture/musique/celine-dion/sept-moments-forts-a-retenir-de-la-premiere-partie-de-concerts-de-celine-dion-a-paris_8241679.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-18T08:28:34.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/jOU7Odsi8eUYBAx0B8BABZ6H5L8/0x276:4300x2695/432x243/filters:format(jpg)/2026/10/18/6ad478b7a3bc5510783252.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
     {
       "id": "2dd11beed8c2",
       "outletId": "le-parisien",
@@ -93,17 +116,23 @@
     "gauche": [
       "La chanteuse originaire du Québec a conclu sa série de représentations dans la capitale devant plus de trente mille spectateurs.",
       "L'artiste a exprimé sa nostalgie auprès de son auditoire lors de l'ultime représentation de cette première séquence scénique.",
-      "Les seize représentations données depuis la rentrée ont été marquées par des moments d'échange spontanés avec le public."
+      "Les seize représentations données depuis la rentrée ont été marquées par des moments d'échange spontanés avec le public.",
+      "Un bilan de cette première partie de résidence met en lumière l'intensité des seize dates parisiennes et les souvenirs marquants laissés par la diva."
     ],
     "centre": [
       "La chanteuse canadienne a achevé sa série de représentations parisiennes par une performance marquante.",
       "L'artiste a exprimé sa tristesse de quitter son public tout en confirmant son retour sur scène dans la capitale l'année prochaine.",
       "Le public est invité à participer à des sessions de questions-réponses concernant le bilan global, l'état de santé de la vedette et l'ouverture prochaine de la billetterie pour le printemps 2027."
+    ],
+    "droite": [
+      "La star québécoise a achevé ce samedi la première partie de sa résidence parisienne après plus d'un mois de représentations.",
+      "Ce dernier spectacle marque la conclusion de plusieurs semaines d'émotions intenses et de retrouvailles pour les admirateurs venus du monde entier."
     ]
   },
   "differences": [
-    "Le centre élargit désormais sa couverture aux perspectives futures et aux interrogations du public sur l'état de santé de la star ainsi que sur l'ouverture de la billetterie pour 2027, tandis que la gauche maintient son angle centré sur le bilan rétrospectif des spectacles passés et la proximité émotionnelle avec les spectateurs."
+    "La droite se focalise sur l'aspect émotionnel et le sentiment de nostalgie des admirateurs au lendemain de l'ultime représentation parisienne.",
+    "Le centre élargit sa couverture aux perspectives d'avenir, notamment l'annonce d'un retour futur et les interrogations sur la santé de la star, tandis que la gauche et la droite privilégient la rétrospective des spectacles passés."
   ],
-  "promptVersion": "sum-2",
-  "summarizedArticleCount": 7
+  "promptVersion": "sum-3",
+  "summarizedArticleCount": 9
 }
