@@ -6,12 +6,45 @@
   "storyDay": "2026-10-18",
   "articles": [
     {
+      "id": "4266e9d8aa21",
+      "outletId": "le-parisien",
+      "headline": "Euro de tennis de table : Félix Lebrun succède à son frère Alexis sur le toit du continent",
+      "url": "https://www.leparisien.fr/sports/tennis-de-table/euro-de-tennis-de-table-felix-lebrun-succede-a-son-frere-alexis-sur-le-toit-du-continent-18-10-2026-KKF7S5UH7NEZXBNJ6SAYXZVWAE.php",
+      "publishedAt": "2026-10-18T19:01:17.580Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
+      "id": "4c0b8b8e054a",
+      "outletId": "humanite",
+      "headline": "Tennis de table : Félix Lebrun, champion d’Europe en simple, entre dans l’histoire",
+      "url": "https://www.humanite.fr/sports/equipe-de-france/tennis-de-table-felix-lebrun-champion-deurope-en-simple-entre-dans-lhistoire",
+      "publishedAt": "2026-10-18T18:10:57.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/Lebrun-entre-dans-lhistoire.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "b0ae1b8d6fd6",
       "outletId": "le-monde",
       "headline": "Félix Lebrun, sacré champion d’Europe pour la première fois, confirme son statut actuel de meilleur joueur du continent",
       "url": "https://www.lemonde.fr/sport/article/2026/10/18/felix-lebrun-sacre-champion-d-europe-pour-la-premiere-fois-confirme-son-statut-actuel-de-meilleur-joueur-du-continent_6797194_3242.html",
       "publishedAt": "2026-10-18T17:58:00.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/18/466/0/5590/2795/644/322/60/0/887b91e_upload-1-pivekvmdzkc9-000-d3mm8t2.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
+      "id": "dbcbe2858d38",
+      "outletId": "huffpost",
+      "headline": "Félix Lebrun marche dans les pas de son frère en décrochant le titre de champion d’Europe",
+      "url": "https://www.huffingtonpost.fr/sport/article/felix-lebrun-marche-dans-les-pas-de-son-frere-en-decrochant-le-titre-de-champion-d-europe_341585.html",
+      "publishedAt": "2026-10-18T17:53:11.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/18/375/0/6196/3485/0/0/60/0/db5f99c_upload-1-i2miknheel3r-afp-20261018-d3mq9wf-v1-highres-ttennissloeurchampionships.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "sport"
@@ -90,26 +123,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le pongiste de vingt ans a battu le Suédois Anton Kallberg en finale en Slovénie.",
-      "Il succède ainsi à son frère Alexis au palmarès de la compétition.",
-      "Il réalise un doublé en s'imposant également en double."
+      "Le pongiste de vingt ans Félix Lebrun a remporté la finale des championnats d'Europe en simple en Slovénie face au Suédois Anton Kallberg.",
+      "Il réalise un doublé historique après son sacre en double la veille aux côtés de son frère aîné Alexis, auquel il succède au palmarès continental.",
+      "Ce titre acquis en sept sets confirme son statut de numéro deux mondial au terme d'une saison remarquable."
     ],
     "centre": [
-      "Le numéro deux mondial a remporté la finale des championnats d'Europe en sept sets.",
-      "Il s'impose face à Anton Kallberg au terme d'une finale serrée.",
-      "Cette victoire vient couronner une excellente semaine pour le tennis de table français."
+      "Félix Lebrun a été sacré champion d'Europe de tennis de table en simple en dominant le Suédois Anton Kallberg sur le score de quatre à trois.",
+      "Le numéro deux mondial s'impose en Slovénie au terme d'une finale serrée conclue par un ultime set à sens unique.",
+      "Il succède ainsi à son frère Alexis au sommet du continent et réalise un doublé en remportant également l'or en double."
     ],
     "droite": [
-      "Le sportif français a décroché l'or européen pour sa première participation à une finale en simple.",
-      "Il s'est défait de son adversaire suédois au terme d'une rencontre accrochée et renversante.",
-      "Il complète son triomphe en s'adjugeant également le titre en double avec son frère aîné."
+      "Félix Lebrun est devenu champion d'Europe en simple après sa victoire en finale contre le Suédois Anton Kallberg lors des championnats continentaux en Slovénie.",
+      "Le joueur de vingt ans succède au palmarès à son frère Alexis et complète sa semaine par un doublé après son titre en double messieurs.",
+      "Il s'est imposé quatre sets à trois au bout d'un match intense après avoir notamment surmonté la déception du Grand Smash de Chine."
     ]
   },
   "differences": [
-    "La gauche met principalement l'accent sur la jeunesse du champion et la transmission familiale du titre entre les deux frères.",
-    "Le centre insiste sur la dimension collective du bilan tricolore et le déroulement haletant de la finale en sept manches.",
-    "La droite insiste davantage sur la performance historique du joueur, soulignant sa résilience mentale après des échecs récents."
+    "La gauche met l'accent sur la dimension historique et l'entrée dans l'âge adulte du jeune joueur de vingt ans en soulignant son parcours.",
+    "Le centre livre un récit sportif direct centré sur la performance technique, le score serré de la finale et la dynamique de la semaine française.",
+    "La droite insiste sur le scénario renversant du match face à Anton Kallberg tout en replaçant la victoire dans la trajectoire personnelle du pongiste après ses récents échecs."
   ],
-  "promptVersion": "sum-6",
-  "summarizedArticleCount": 7
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 10
 }

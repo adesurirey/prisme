@@ -6,6 +6,17 @@
   "storyDay": "2026-10-18",
   "articles": [
     {
+      "id": "cdfdb7b91c79",
+      "outletId": "cnews",
+      "headline": "Pluie-inondation : voici les deux départements placés en vigilance orange ce lundi",
+      "url": "https://www.cnews.fr/france/2026-10-18/pluie-inondation-voici-les-deux-departements-places-en-vigilance-orange-ce-lundi",
+      "publishedAt": "2026-10-18T17:53:39.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/adobestock_489229706_1_6ad4e50653a72.jpeg?itok=hG7-PsbB",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "ddec7b271d39",
       "outletId": "cnews",
       "headline": "Orages : voici les deux départements placés en vigilance orange ce lundi",
@@ -67,25 +78,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Météo-France déclenche l'alerte orange pour le Gard et l'Hérault face à un danger imminent d'intempéries.",
-      "Le début de cet épisode critique est attendu dès le lundi après-midi.",
-      "Une masse d'air froid venue d'Espagne est identifiée comme la cause principale de ces perturbations."
+      "Météo-France a placé le Gard et l'Hérault en vigilance orange pour des risques de pluies, d'inondations et d'orages.",
+      "L'alerte est effective à partir de lundi après-midi.",
+      "Une vaste goutte froide en provenance d'Espagne favorise ces remontées orageuses."
     ],
     "centre": [
-      "Le passage au niveau orange est officialisé pour les territoires du Gard et de l'Hérault dès le début d'après-midi lundi.",
-      "L'organisme de prévision qualifie cet événement climatique de nouvel épisode méditerranéen associant pluies et foudre.",
-      "Les autorités prévoient de fortes précipitations accompagnées d'un risque accru d'inondations et de rafales soutenues sur le littoral."
+      "Les départements du Gard et de l'Hérault sont placés en vigilance orange pour orages, pluies et inondations ce lundi.",
+      "Météo-France émet ce bulletin d'alerte face aux risques météorologiques dans le sud de la France."
     ],
     "droite": [
-      "Deux départements du sud-est basculent en vigilance orange en raison d'un risque marqué de dégradations orageuses.",
-      "Les intempéries doivent débuter à partir de 14 heures et se prolonger durant la nuit suivante.",
-      "Le littoral de l'Hérault anticipe des rafales de vent atteignant 85 km/h conjuguées à de fortes pluies."
+      "Météo-France a placé le Gard et l'Hérault en vigilance orange pour pluie-inondation et orages ce lundi 19 octobre.",
+      "Des précipitations importantes, des ruissellements et des inondations localisées sont redoutés dans ces départements du sud.",
+      "Des rafales de vent atteignant 85 km/h sont attendues sur la côte méditerranéenne, notamment à Sète et Agde.",
+      "Ces intempéries surviennent après de fortes pluies enregistrées à la fin du mois de septembre."
     ]
   },
   "differences": [
-    "La gauche, via franceinfo, se distingue en détaillant l'origine météorologique précise du phénomène avec une goutte froide ibérique, tandis que le centre et la droite privilégient une qualification plus générale d'épisode méditerranéen pluvio-orageux.",
-    "La droite (CNews) insiste davantage sur les aspects pratiques et les prévisions locales en mentionnant des rafales de vent spécifiques sur la côte ainsi que le passif climatique de fin septembre."
+    "La gauche met en avant l'origine météorologique du phénomène en mentionnant la goutte froide en provenance d'Espagne.",
+    "Le centre livre un compte rendu synthétique et factuel de l'alerte sans s'attarder sur les détails géographiques ou historiques.",
+    "La droite détaille précisément les impacts attendus, les vitesses de vent prévues sur la côte et rappelle les précédents épisodes pluvieux de septembre."
   ],
-  "promptVersion": "sum-3",
-  "summarizedArticleCount": 5
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6
 }
