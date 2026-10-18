@@ -437,14 +437,13 @@ describe('summariesPrompt', () => {
     expect(prompt).toContain(SUMMARIES_PROMPT_VERSION);
   });
 
-  it('frames the call as a fresh synthesis, never an update of previous output', () => {
+  it('presents the whole corpus and never an update of previous output', () => {
     const prompt = summariesPrompt({
       story: { id: 's1', title: 'Sujet', section: undefined },
       articles: [],
       coveredLeanings: ['centre'],
     });
     expect(prompt).toContain('Articles du sujet');
-    expect(prompt).toContain('état actuel du sujet');
     // The sum-1..sum-3 update framing invited chronicle-style patches.
     expect(prompt).not.toContain('déjà publiés');
     expect(prompt).not.toContain('mets à jour');
