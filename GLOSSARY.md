@@ -126,7 +126,7 @@ The three-camp grouping of Leanings that Coverage, Blindspots and Summaries work
 _Avoid_: Bucket, camp, bloc
 
 **Coverage**:
-How a Story's reporting is distributed across Coverage groups and Outlets: the number of Outlets reporting the Story (each with at least one Article — news, live or Opinion, ADR-0011), counted per Coverage group.
+How a Story's reporting is distributed across Coverage groups and Outlets: each Outlet reporting the Story (with at least one Article — news, live or Opinion, ADR-0011) weighs the square root of its number of Articles on the Story, summed per Coverage group (ADR-0026). The raw count of distinct Outlets stays what Blindspots read and the meta line shows; only the bar width and the rate are volume-weighted. Answers *qui en parle, à quelle intensité*.
 _Avoid_: Distribution, reach, share
 
 **Reach**:
@@ -134,7 +134,7 @@ The raw monthly audience figure recorded for an Outlet in its config, with its s
 _Avoid_: Audience (alone), traffic, popularity
 
 **Exposition**:
-A Story's Reach-weighted share per Coverage group: each reporting Outlet weighs the square root of its Reach, and a group's Exposition is its sum over the Story's total. A second reading of the same coverage bar, chosen by the reader; never a replacement for Coverage, which stays the default. Computed only when every reporting Outlet has a Reach.
+A Story's Reach- and volume-weighted share per Coverage group: each reporting Outlet weighs the square root of its Reach times the square root of its number of Articles on the Story (ADR-0026), and a group's Exposition is its sum over the Story's total. A second reading of the same coverage bar, chosen by the reader; never a replacement for Coverage, which stays the default. Computed only when every reporting Outlet has a Reach. Answers *ce que les gens voient* — volume reads the readers' repeated sight of the Story as much as the Outlet's editorial commitment.
 _Avoid_: Weighted coverage, audience share, influence
 
 **Blindspot**:
