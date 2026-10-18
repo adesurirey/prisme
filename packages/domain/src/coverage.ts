@@ -38,6 +38,17 @@ export function coverageGroup(leaning: Leaning): CoverageGroup {
   }
 }
 /**
+ * The compression exponent applied to an Outlet's article volume before
+ * summing (ADR-0026): 0.5 is the sqrt first cut — a named constant so the
+ * method can be compared and changed in one place, like
+ * EXPOSURE_COMPRESSION_EXPONENT for Reach. Volume reads intensity: the
+ * editorial commitment an Outlet puts on a Story, and a proxy for how much
+ * its readers see it. A single mega-feed Outlet cannot dominate — √4 = 2
+ * where raw volume would say 4.
+ */
+export const VOLUME_WEIGHT_EXPONENT = 0.5;
+
+/**
  * A Story is reported by Articles of these Kinds: news, live and Opinion
  * (ADR-0011). Only not_news and unclassified Articles never count.
  */
@@ -56,6 +67,48 @@ export function reportingOutletIds(articles: Article[]): Set<string> {
     if (isReporting(article)) ids.add(article.outletId);
   }
   return ids;
+}
+
+/**
+ * Coverage weight per group (ADR-0026): each distinct reporting Outlet
+ * weighs the VOLUME_WEIGHT_EXPONENT power of its number of reporting
+ * Articles on the Story, unknown Outlets ignored. Coverage answers *who
+ * talks, how loudly*: an Outlet that follows the Story all day with ten
+ * Articles covers it more than one that runs a single piece. The counts
+ * stay distinct (`coverageCounts`) — Blindspots read silences, the meta
+ * line shows raw numbers — only the bar width and the rate are weighted.
+ */
+export function coverageWeights(
+  articles: Article[],
+  outletById: Map<string, Outlet>,
+): Record<CoverageGroup, number> {
+  const sums: Record<CoverageGroup, number> = {
+    gauche: 0,
+    centre: 0,
+    droite: 0,
+  };
+  for (const [id, count] of reportingArticleCounts(articles)) {
+    const outlet = outletById.get(id);
+    if (!outlet) continue;
+    sums[coverageGroup(outlet.leaning)] += count ** VOLUME_WEIGHT_EXPONENT;
+  }
+  return sums;
+}
+
+/**
+ * The number of reporting Articles per Outlet on the Story — the volume
+ * both Coverage weights and Exposition weights read (ADR-0026). One
+ * counting loop, shared, so the two readings can never drift apart.
+ */
+export function reportingArticleCounts(
+  articles: Article[],
+): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const article of articles) {
+    if (!isReporting(article)) continue;
+    counts.set(article.outletId, (counts.get(article.outletId) ?? 0) + 1);
+  }
+  return counts;
 }
 
 /** Coverage per group: distinct reporting Outlets, unknown Outlets ignored. */

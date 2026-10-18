@@ -4,9 +4,11 @@ import {
   countedArticles,
   coverageCounts,
   coverageGroup,
+  coverageWeights,
   frontPageOutlets,
   isReporting,
   reportingOutletIds,
+  VOLUME_WEIGHT_EXPONENT,
 } from './coverage.ts';
 import type { Article, Leaning, Outlet } from './index.ts';
 
@@ -181,6 +183,70 @@ describe('coverageCounts', () => {
     expect(reportingOutletIds(articles)).toEqual(
       new Set(['gauche-1', 'centre-1']),
     );
+  });
+});
+
+describe('VOLUME_WEIGHT_EXPONENT', () => {
+  it('is the sqrt volume compression of the first cut (ADR-0026)', () => {
+    expect(VOLUME_WEIGHT_EXPONENT).toBe(0.5);
+  });
+});
+
+describe('coverageWeights', () => {
+  it('weighs each reporting Outlet by √(its article count), not once (ADR-0026)', () => {
+    // 4 Articles → √4 = 2 ; 1 Article → √1 = 1.
+    const articles = [
+      article('a', { outletId: 'centre-1', kind: 'news' }),
+      article('b', { outletId: 'centre-1', kind: 'news' }),
+      article('c', { outletId: 'centre-1', kind: 'opinion' }),
+      article('d', { outletId: 'centre-1', kind: 'live' }),
+      article('e', { outletId: 'centre-2', kind: 'news' }),
+      article('f', { outletId: 'droite-1', kind: 'news' }),
+    ];
+    expect(coverageWeights(articles, byId)).toEqual({
+      gauche: 0,
+      centre: 3,
+      droite: 1,
+    });
+  });
+
+  it('never counts not_news or unclassified Articles in the volume', () => {
+    const articles = [
+      article('a', { outletId: 'centre-1', kind: 'not_news' }),
+      article('b', { outletId: 'centre-1' }),
+      article('c', { outletId: 'centre-1', kind: 'news' }),
+    ];
+    expect(coverageWeights(articles, byId)).toEqual({
+      gauche: 0,
+      centre: 1,
+      droite: 0,
+    });
+  });
+
+  it('ignores Outlets missing from the config, like coverageCounts', () => {
+    const articles = [
+      article('a', { outletId: 'inconnu', kind: 'news' }),
+      article('b', { outletId: 'inconnu', kind: 'news' }),
+    ];
+    expect(coverageWeights(articles, byId)).toEqual({
+      gauche: 0,
+      centre: 0,
+      droite: 0,
+    });
+  });
+
+  it('keeps Blindspots readable on distinct Outlets, not weights', () => {
+    // Un seul média à droite mais un gros volume : le poids est > 1,
+    // le blindspot se lit sur coverageCounts (distinct), pas sur les poids.
+    const articles = [
+      article('a', { outletId: 'gauche-1', kind: 'news' }),
+      article('b', { outletId: 'centre-1', kind: 'news' }),
+      article('c', { outletId: 'centre-1', kind: 'news' }),
+      article('d', { outletId: 'droite-1', kind: 'news' }),
+    ];
+    const weights = coverageWeights(articles, byId);
+    expect(weights.droite).toBeGreaterThan(0);
+    expect(blindspots(coverageCounts(articles, byId))).toEqual([]);
   });
 });
 

@@ -3,12 +3,12 @@ import { EXPOSURE_COMPRESSION_EXPONENT, exposureShares } from './exposure.ts';
 import type { Article, Leaning, OutletConfig } from './index.ts';
 
 /**
- * The Exposure rules (issue #88, spec #86): a Story's Reach-weighted share
- * per Coverage group — each distinct reporting Outlet weighs the square root
- * of its Reach, once whatever its number of Articles; a group's Exposition
- * is its sum over the Story's total. A Story with no reporting Outlet has
- * all-zero shares: it reuses the existing "not covered" bar state upstream,
- * with no special branch here.
+ * The Exposure rules (issue #88, spec #86; volume weighting — ADR-0026):
+ * a Story's Reach- and volume-weighted share per Coverage group — each
+ * distinct reporting Outlet weighs √(Reach) × √(its number of Articles);
+ * a group's Exposition is its sum over the Story's total. A Story with no
+ * reporting Outlet has all-zero shares: it reuses the existing "not
+ * covered" bar state upstream, with no special branch here.
  */
 
 function outlet(id: string, leaning: Leaning, reach: number): OutletConfig {
@@ -93,14 +93,33 @@ describe('exposureShares', () => {
     expect(sum).toBeCloseTo(1, 12);
   });
 
-  it('weighs an Outlet with several Articles once, not once per Article', () => {
-    const single = [article('a', { outletId: 'centre-1', kind: 'news' })];
+  it('weights an Outlet by √(its article count), so volume lifts the share (ADR-0026)', () => {
+    // gauche-1 (1 article, √100 = 10 → 10) vs centre-1 (4 articles, √25 =
+    // 5 → 5 × √4 = 10): the volume squares the reach gap to parity.
+    const single = [article('a', { outletId: 'gauche-1', kind: 'news' })];
     const several = [
-      article('a', { outletId: 'centre-1', kind: 'news' }),
-      article('b', { outletId: 'centre-1', kind: 'live' }),
-      article('c', { outletId: 'centre-1', kind: 'opinion' }),
+      article('b', { outletId: 'centre-1', kind: 'news' }),
+      article('c', { outletId: 'centre-1', kind: 'live' }),
+      article('d', { outletId: 'centre-1', kind: 'opinion' }),
+      article('e', { outletId: 'centre-1', kind: 'news' }),
     ];
-    expect(exposureShares(several, byId)).toEqual(exposureShares(single, byId));
+    expect(exposureShares([...several, ...single], byId)).toEqual({
+      gauche: 0.5,
+      centre: 0.5,
+      droite: 0,
+    });
+  });
+
+  it('weights a single-article Outlet exactly by √reach, volume-free', () => {
+    const articles = [
+      article('a', { outletId: 'gauche-1', kind: 'news' }),
+      article('b', { outletId: 'droite-1', kind: 'news' }),
+    ];
+    expect(exposureShares(articles, byId)).toEqual({
+      gauche: 2 / 3,
+      centre: 0,
+      droite: 1 / 3,
+    });
   });
 
   it('counts an Outlet present only through an Opinion piece (ADR-0011)', () => {
