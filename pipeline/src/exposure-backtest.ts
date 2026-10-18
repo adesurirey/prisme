@@ -1,10 +1,10 @@
-// One-off backtest (free, no API): replay the archive through the Exposure
-// and Coverage weighting and print per-Story shares for the candidate
-// exponent matrices — volume brut/√/log × Reach brut/√/log — so a human can
-// grade the constants against real Stories. The grading tool for the
-// ADR-0026 volume exponent and the ADR-0016 deferred Reach-exponent
-// comparison. Run: pnpm backtest:exposure
-import { readdirSync, readFileSync } from 'node:fs';
+// One-off backtest (free, no API): replay the current Edition (data/edition.json)
+// through the Exposure weighting and print the candidate exponent matrices —
+// volume brut/√/log × Reach brut/√/log — for a human to grade the constants
+// against real Stories (ADR-0026; the Reach-exponent comparison ADR-0016
+// deferred). Only Stories where a candidate changes the dominant group are
+// printed — the others cannot move the decision. Run: pnpm backtest:exposure
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   type Article,
@@ -12,33 +12,32 @@ import {
   coverageGroup,
   coverageOrder,
   exposureShares as domainExposureShares,
-  isReporting,
+  type Edition,
   type Outlet,
   reportingArticleCounts,
   reportingOutletIds,
   type Story,
 } from '@prisme/domain';
 
-const dir = join(import.meta.dirname, '../../data/stories');
+const edition: Edition = JSON.parse(
+  readFileSync(join(import.meta.dirname, '../../data/edition.json'), 'utf8'),
+) as Edition;
 const outlets: Outlet[] = JSON.parse(
   readFileSync(join(import.meta.dirname, '../../data/outlets.json'), 'utf8'),
 ) as Outlet[];
 const byId = new Map(outlets.map((o) => [o.id, o]));
 
-const stories: Story[] = readdirSync(dir)
-  .filter((f) => f.endsWith('.json'))
-  .map((f) => JSON.parse(readFileSync(join(dir, f), 'utf8')) as Story)
-  .sort(
-    (a, b) =>
-      a.storyDay.localeCompare(b.storyDay) ||
-      a.createdAt.localeCompare(b.createdAt),
-  );
+const stories: Story[] = [...edition.stories].sort(
+  (a, b) =>
+    a.storyDay.localeCompare(b.storyDay) ||
+    a.createdAt.localeCompare(b.createdAt),
+);
 
 type Compress = (count: number) => number;
 const brut: Compress = (c) => c;
 const sqrt: Compress = (c) => Math.sqrt(c);
 const log: Compress = (c) => Math.log2(1 + c);
-const NAMES: Record<string, Compress> = { brut, sqrt, log };
+const CANDIDATES: Record<string, Compress> = { brut, sqrt, log };
 
 /** Shares per group for one candidate (volume, reach) exponent pair. */
 function shares(
@@ -64,24 +63,70 @@ function shares(
   return sums;
 }
 
+/** The group with the biggest share — ties to the first in coverageOrder. */
+function dominant(s: Record<CoverageGroup, number>): CoverageGroup {
+  return coverageOrder.reduce((best, g) => (s[g] > s[best] ? g : best));
+}
+
 const pct = (s: Record<CoverageGroup, number>) =>
   coverageOrder.map((g) => `${g} ${Math.round(s[g] * 100)}%`).join(' · ');
 
-const current = (story: Story) =>
-  pct(domainExposureShares(story.articles, byId));
+const eligible = stories.filter(
+  (s) => reportingOutletIds(s.articles).size >= 2,
+);
 
-for (const story of stories) {
-  const reporting = reportingOutletIds(story.articles).size;
-  if (reporting < 2) continue;
-  console.log(
-    `\n## ${story.storyDay} ${story.slug} (${reporting} médias, ${story.articles.length} articles)`,
-  );
-  console.log(`  production √/√ : ${current(story)}`);
-  for (const [vn, v] of Object.entries(NAMES)) {
-    for (const [rn, r] of Object.entries(NAMES)) {
-      console.log(
-        `  vol=${vn} reach=${rn} : ${pct(shares(story.articles, v, r))}`,
-      );
+// Production (√/√) shares per Story, and the candidate rows that diverge
+// from it enough to change the dominant group — the decision-relevant set.
+type Row = { name: string; shares: Record<CoverageGroup, number> };
+const diverging = new Map<Story, Row[]>();
+const changes = new Map<string, number>();
+for (const [vn, v] of Object.entries(CANDIDATES)) {
+  for (const [rn, r] of Object.entries(CANDIDATES)) {
+    changes.set(`vol=${vn} reach=${rn}`, 0);
+  }
+}
+for (const story of eligible) {
+  const production = domainExposureShares(story.articles, byId);
+  const prodDominant = dominant(production);
+  const rows: Row[] = [];
+  for (const [vn, v] of Object.entries(CANDIDATES)) {
+    for (const [rn, r] of Object.entries(CANDIDATES)) {
+      const name = `vol=${vn} reach=${rn}`;
+      const s = shares(story.articles, v, r);
+      if (dominant(s) !== prodDominant) {
+        changes.set(name, (changes.get(name) ?? 0) + 1);
+        rows.push({ name, shares: s });
+      }
     }
   }
+  if (rows.length > 0) diverging.set(story, rows);
+}
+
+console.log(
+  `Édition en cours — ${eligible.length} Stories rapportées par ≥ 2 médias`,
+);
+console.log('Candidat          Stories où il change le groupe dominant');
+for (const [name, count] of changes) {
+  console.log(
+    `  ${name.padEnd(18)} ${String(count).padStart(3)} / ${eligible.length}`,
+  );
+}
+console.log(
+  `\nDétail des ${diverging.size} Stories où au moins un candidat change le groupe dominant (production √/√ imprimée pour comparaison) :\n`,
+);
+for (const [story, rows] of diverging) {
+  const production = domainExposureShares(story.articles, byId);
+  console.log(
+    `## ${story.storyDay} ${story.slug} (${reportingOutletIds(story.articles).size} médias, ${story.articles.length} articles)`,
+  );
+  console.log(`  production √/√ : ${pct(production)}`);
+  for (const { name, shares: s } of rows) {
+    console.log(`  ${name.padEnd(18)} : ${pct(s)}`);
+  }
+  console.log('');
+}
+if (diverging.size === 0) {
+  console.log(
+    'Aucun candidat ne change le groupe dominant — √/√ est sans risque sur cette édition.',
+  );
 }
