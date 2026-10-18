@@ -1,10 +1,43 @@
 {
   "id": "200f8d4103a5",
   "slug": "jd-vance-impute-les-violences-en-france-a-l-immigration",
-  "title": "Le vice-président américain JD Vance impute l'immigration aux violences des manifestations en France",
+  "title": "Le vice-président américain JD Vance et Donald Trump imputent l'immigration aux violences des manifestations en France",
   "createdAt": "2026-10-18T04:01:16.053Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "272bd1b3a246",
+      "outletId": "le-parisien",
+      "headline": "« La France brûle » : après les violences du 17 octobre, Donald Trump critique « l’immigration »",
+      "url": "https://www.leparisien.fr/politique/la-france-brule-apres-les-violences-du-17-octobre-donald-trump-critique-limmigration-18-10-2026-KWMAHIYGSVFB5PEYUALT4ATESY.php",
+      "publishedAt": "2026-10-18T15:01:22.486Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "a20a51bce228",
+      "outletId": "tf1-info",
+      "headline": "\"La France est en feu\", alerte Donald Trump après les violences urbaines du 17 octobre",
+      "url": "https://www.tf1info.fr/international/la-france-est-en-feu-alerte-donald-trump-apres-les-violences-urbaines-du-17-octobre-2470622.html",
+      "publishedAt": "2026-10-18T14:40:41.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/682/trump-kentucky-17-octobre-2026-7fa1cd-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "82532251035e",
+      "outletId": "le-jdd",
+      "headline": "«La France brûle !» : Donald Trump met en cause l’immigration après les émeutes du 17 octobre",
+      "url": "https://www.lejdd.fr/International/la-france-brule-donald-trump-met-en-cause-limmigration-apres-les-emeutes-du-17-octobre-186369",
+      "publishedAt": "2026-10-18T14:18:58.000Z",
+      "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/18/16/063_2300696274.jpg?VersionId=pKgxwFpcQqmFG_vUynRCudChKh8eQHC1",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "ecb22435413c",
       "outletId": "huffpost",
@@ -117,18 +150,21 @@
       "La rhétorique adoptée par Washington met en cause de manière outrancière l'ordre public français."
     ],
     "centre": [
-      "L'actualité des manifestations françaises mobilise rapidement les réactions des hauts responsables de l'administration américaine.",
+      "Les déclarations de Donald Trump qualifiant la situation française de chaos sont largement relayées par les médias modérés.",
+      "L'administration américaine pointe explicitement le facteur migratoire derrière les dégradations constatées le 17 octobre.",
       "Les autorités des États-Unis commentent publiquement les épisodes de violences urbaines constatés lors des récents cortèges."
     ],
     "droite": [
-      "Les plus aluts dirigeants américains pointent immédiatement la gravité des dégradations observées pendant les rassemblements.",
-      "La situation sécuritaire hexagonale est saisie par Washington pour illustrer l'échec des politiques migratoires."
+      "Le chef de l'État américain instrumentalise les incidents du 17 octobre pour imputer le désordre public aux flux migratoires.",
+      "La situation sécuritaire hexagonale est saisie par Washington pour illustrer l'échec des politiques migratoires.",
+      "Les plus hauts dirigeants américains pointent immédiatement la gravité des dégradations observées pendant les rassemblements."
     ]
   },
   "differences": [
-    "Le camp de gauche, à travers Le HuffPost, insiste sur la rapidité de la réaction de l'exécutif américain qui dramatise la situation en qualifiant les manifestations de chaos.",
-    "Le centre et la droite relaient les déclarations de Washington en insistant sur le constat d'insécurité, la droite y voyant en outre la confirmation de ses thèses sécuritaires."
+    "Le camp de gauche met l'accent sur l'outrance de la réaction américaine et l'instrumentalisation des tensions, qualifiant le discours de Washington de mise en cause injustifiée.",
+    "Le centre se focalise sur la retranscription des propos présidentiels américains liant directement les troubles à la question migratoire, sans adopter explicitement la thèse.",
+    "La droite, par l'intermédiaire de ses relais médiatiques, valide et met en avant l'analyse américaine voyant dans les émeutes la confirmation directe de l'échec migratoire."
   ],
   "promptVersion": "sum-3",
-  "summarizedArticleCount": 9
+  "summarizedArticleCount": 12
 }

@@ -1,10 +1,32 @@
 {
   "id": "0a978add47e8",
   "slug": "le-pape-leon-xiv-rentre-au-vatican-apres-son-operation-du-poumon",
-  "title": "Le pape Léon XIV rentre au Vatican quatre jours après son opération au poumon",
+  "title": "Le pape Léon XIV rentre au Vatican et s'adresse aux fidèles quatre jours après son opération au poumon",
   "createdAt": "2026-10-18T04:01:16.053Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "550bf39b754a",
+      "outletId": "le-monde",
+      "headline": "Le pape Léon XIV remercie les fidèles réunis place Saint-Pierre après son opération et annonce la reprise progressive de ses activités",
+      "url": "https://www.lemonde.fr/religions/article/2026/10/18/le-pape-leon-xiv-remercie-les-fideles-reunis-place-saint-pierre-apres-son-operation-et-annonce-la-reprise-progressive-de-ses-activites_6797082_1653130.html",
+      "publishedAt": "2026-10-18T14:45:16.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/18/96/0/2670/1335/644/322/60/0/3fc080d_ftp-1-1gbvgiqz9me8-2026-10-18t111310z-301354690-rc2n5oamrnuj-rtrmadp-3-pope-health-prayer.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
+      "id": "5a93b33296f9",
+      "outletId": "liberation",
+      "headline": "Léon XIV après son hospitalisation pour un cancer du poumon : «Je vais reprendre progressivement mes activités»",
+      "url": "https://www.liberation.fr/societe/religions/leon-xiv-apres-son-hospitalisation-pour-un-cancer-du-poumon-je-vais-reprendre-progressivement-mes-activites-20261018_LBBS2YURHRBDNPD3J7QAGZ4HIQ/",
+      "publishedAt": "2026-10-18T14:33:58.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
     {
       "id": "f3cbbba5fcec",
       "outletId": "cnews",
@@ -124,29 +146,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le chef de l'Église catholique a regagné sa résidence officielle au Vatican.",
-      "Son hospitalisation aura duré quatre journées consécutives suite à une intervention chirurgicale thoracique.",
-      "Les médecins confirment la bonne évolution de son état de santé général après l'ablation d'un nodule pulmonaire.",
-      "Le souverain pontife est réapparu publiquement pour prononcer la prière dominicale de l'Angélus."
+      "Le chef de l'Église catholique a retrouvé sa résidence officielle au Vatican suite à quatre jours d'hospitalisation.",
+      "Le souverain pontife est réapparu publiquement pour diriger la prière dominicale de l'Angélus depuis le palais apostolique.",
+      "Il a confirmé sa volonté de rétablir ses charges de manière progressive tout en exprimant sa gratitude aux croyants."
     ],
     "centre": [
-      "Le souverain pontife a fait sa première apparition publique depuis son intervention médicale pour remercier les fidèles.",
-      "Il s'est adressé aux croyants rassemblés sur la place Saint-Pierre à l'occasion de la prière dominicale de l'Angélus.",
-      "Le pape a indiqué qu'il allait reprendre ses charges et ses engagements de manière graduelle.",
-      "La presse de ce courant précise qu'il a subi une lobectomie le mardi treize octobre pour retirer un nodule cancéreux."
+      "Le souverain pontife a fait sa première apparition publique depuis son intervention médicale pour remercier les fidèles rassemblés place Saint-Pierre.",
+      "Il a indiqué qu'il allait reprendre ses engagements de façon graduelle après son hospitalisation.",
+      "La presse de ce courant rappelle qu'il a subi une lobectomie à l'hôpital Gemelli de Rome pour retirer un nodule cancéreux."
     ],
     "droite": [
       "Le pape Léon XIV a fait sa première apparition devant les fidèles depuis sa sortie de l'hôpital intervenue la veille.",
-      "Âgé de soixante et onze ans, le pontife a subi une intervention chirurgicale mardi dernier à l'hôpital Gemelli de Rome.",
-      "L'opération consistait en l'ablation d'un nodule cancéreux situé dans le poumon droit.",
-      "Le souverain pontife a tenu à exprimer publiquement sa gratitude envers les fidèles ainsi que le personnel soignant."
+      "Âgé de soixante et onze ans, le pontife a subi une intervention chirurgicale mardi dernier à l'hôpital Gemelli pour une tumeur au poumon droit.",
+      "Le souverain pontife a tenu à exprimer publiquement sa reconnaissance envers les fidèles ainsi que le personnel soignant."
     ]
   },
   "differences": [
-    "Le centre et la droite insistent sur le caractère cancéreux de la tumeur pulmonaire retirée, une précision médicale moins mise en avant par la gauche.",
-    "La droite précise l'âge du souverain pontife ainsi que l'établissement hospitalier romain où s'est déroulée l'intervention, contrairement aux autres courants.",
-    "Le centre et la gauche privilégient le récit de la première apparition publique et de la communion avec les fidèles lors de la prière dominicale."
+    "Le centre et la droite insistent sur le diagnostic cancéreux et les détails médicaux de l'intervention, des éléments moins mis en avant par la gauche.",
+    "La droite précise l'âge du souverain pontife ainsi que l'établissement hospitalier romain où s'est déroulée l'opération, contrairement à la gauche qui se focalise sur la dimension spirituelle de l'Angélus.",
+    "Le centre intègre désormais l'âge du pape et les précisions sur l'hôpital Gemelli, se rapprochant ainsi du traitement adopté par la droite."
   ],
   "promptVersion": "sum-3",
-  "summarizedArticleCount": 10
+  "summarizedArticleCount": 12
 }
