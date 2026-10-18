@@ -1,10 +1,22 @@
 {
   "id": "eaefc2fb35ab",
   "slug": "lyon-bat-nice-deux-buts-a-un-et-prend-la-tete-de-la-ligue-1",
-  "title": "Lyon bat Nice deux buts à un et prend la tête de la Ligue 1",
+  "title": "Lyon s'impose face à Nice et prend la tête de la Ligue 1",
   "createdAt": "2026-10-18T21:01:17.681Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "5905be2e9b04",
+      "outletId": "le-figaro",
+      "headline": "Lyon-Nice : l’OL s’impose dans la souffrance, Athekame impressionne, Nice se réveille trop tard… Les tops et les flops",
+      "url": "https://www.lefigaro.fr/sports/football/ligue-1/lyon-nice-l-ol-s-impose-dans-la-souffrance-athekame-impressionne-nice-se-reveille-trop-tard-les-tops-et-les-flops-20261018",
+      "publishedAt": "2026-10-18T21:58:35.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/10/18/4758fd180fd0e82bacf5e214d06048e81a1d01e9be33b53e9bdca77305905cf3.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
     {
       "id": "4e7b9b417e24",
       "outletId": "le-parisien",
@@ -23,7 +35,7 @@
       "url": "https://www.lefigaro.fr/flash-sport/ligue-1-apres-sa-victoire-sur-nice-lyon-nouveau-leader-du-championnat-20261018",
       "publishedAt": "2026-10-18T20:50:07.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/1815x1021_crop/2026/10/18/fc111a76cf6ac20a417a5599ec429949e6cc5720317bfae1d14afd063dbba79e.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -34,19 +46,20 @@
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Lyon s'impose deux buts à un contre Nice après un début de match délicat.",
-      "Cette victoire permet aux Lyonnais de ravir la première place de la Ligue 1 au Paris Saint-Germain."
+      "L'Olympique lyonnais s'est imposé 2 buts à 1 face à l'OGC Nice au Groupama Stadium, en clôture de la 7e journée de Ligue 1.",
+      "Mal embarqués durant la rencontre, les Lyonnais ont su renverser la situation face aux Aiglons.",
+      "Cette victoire permet à Lyon de chasser le Paris Saint-Germain du trône et de s'emparer de la place de leader du championnat."
     ],
     "droite": [
-      "L'Olympique lyonnais bat Nice sur le score de deux à un lors de la septième journée du championnat.",
-      "Les Gones s'emparent de la tête du classement au terme de cette rencontre dominicale.",
-      "Lyon rejoint en tête le Paris Saint-Germain, Lille, le Paris FC et Monaco avec un total de points égal."
+      "Lyon s'est imposé sur le score de 2 à 1 face à Nice, dimanche soir au Groupama Stadium, lors de la 7e journée de Ligue 1.",
+      "Les Gones ont gagné dans la souffrance, portés notamment par la prestation d'Athekame face à des Aiglons qui ont réagi trop tard.",
+      "Ce succès permet au club s'installer en tête de la Ligue 1 à égalité de points avec le PSG, Lille, le Paris FC et Monaco."
     ]
   },
   "differences": [
-    "Le centre contextualise la performance lyonnaise en soulignant la difficulté initiale de la rencontre et le vol du trône au Paris Saint-Germain.",
-    "La droite, par une mise en avant à la une du Figaro, insiste particulièrement sur la configuration globale du sommet du classement où Lyon rejoint un groupe de leaders à égalité de points."
+    "Le centre choisit de dramatiser l'enjeu du sommet en insistant sur le renversement de situation et le détrônement du Paris Saint-Germain.",
+    "La droite privilégie une analyse technique et nuancée du match, mettant en avant la difficulté de la victoire lyonnaise, les performances individuelles et la configuration serrée du haut de tableau."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }
