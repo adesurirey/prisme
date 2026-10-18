@@ -6,6 +6,50 @@
   "storyDay": "2026-10-18",
   "articles": [
     {
+      "id": "ab5b6ea1d5cd",
+      "outletId": "tf1-info",
+      "headline": "\"J'ai vraiment ressenti votre soutien\" : le pape s'adresse à la foule au Vatican pour la première fois depuis son opération",
+      "url": "https://www.tf1info.fr/international/j-ai-vraiment-ressenti-votre-soutien-le-pape-s-adresse-a-la-foule-au-vatican-pour-la-premiere-fois-depuis-son-operation-2470598.html",
+      "publishedAt": "2026-10-18T12:01:07.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/682/pape-leo-xiv-angelus-18-octobre-2026-c9d482-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "d407b740db19",
+      "outletId": "le-figaro",
+      "headline": "Le pape Léon XIV s'adresse à la foule au Vatican pour la première fois, cinq jours après son opération",
+      "url": "https://www.lefigaro.fr/international/le-pape-leon-xiv-s-adresse-a-la-foule-au-vatican-pour-la-premiere-fois-cinq-jours-apres-son-operation-20261018",
+      "publishedAt": "2026-10-18T11:41:02.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/18/54efb4f1ec6372ebff3baaf6f232e993db1db8beb77776deae3c58b8ea6d94d0.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "8e66f5d2dd3a",
+      "outletId": "la-croix",
+      "headline": "« J’ai vraiment senti votre soutien » : de retour au Vatican, Léon XIV a retrouvé les fidèles",
+      "url": "https://www.la-croix.com/religion/j-ai-vraiment-senti-votre-soutien-de-retour-au-vatican-leon-xiv-a-retrouve-les-fideles-20261018",
+      "publishedAt": "2026-10-18T11:32:26.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/18/2565402-le-pape-leon-xiv-depuis-la-fenetre-du-palais-apost.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "8a0970e2a3d0",
+      "outletId": "franceinfo",
+      "headline": "\"J'ai vraiment ressenti votre soutien, merci\" : le pape Léon XIV s'adresse à la foule pour la première fois depuis son opération",
+      "url": "https://www.franceinfo.fr/monde/vatican/pape-leon-xiv/j-ai-vraiment-ressenti-votre-soutien-merci-le-pape-leon-xiv-s-adresse-a-la-foule-pour-la-premiere-fois-depuis-son-operation_8242744.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-18T11:19:34.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/y2zbWsg7qq2q6p_0V0Li16WfATU/0x53:1024x629/432x243/filters:format(jpg)/2026/10/18/6ad4aa8d51fcb583574963.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "bca9386f719c",
       "outletId": "ouest-france",
       "headline": "Le pape Léon XIV fait sa première apparition publique depuis son opération d’un nodule cancéreux",
@@ -71,17 +115,26 @@
     "gauche": [
       "Le chef de l'Église catholique a regagné sa résidence officielle au Vatican.",
       "Son hospitalisation aura duré quatre journées consécutives suite à une intervention chirurgicale thoracique.",
-      "Les médecins confirment la bonne évolution de son état de santé général après l'ablation d'un nodule pulmonaire."
+      "Les médecins confirment la bonne évolution de son état de santé général après l'ablation d'un nodule pulmonaire.",
+      "Le souverain pontife est réapparu publiquement pour prononcer la prière dominicale de l'Angélus."
     ],
     "centre": [
       "Le souverain pontife a fait sa première apparition publique depuis son intervention médicale pour remercier les fidèles.",
       "Il s'est adressé aux croyants rassemblés sur la place Saint-Pierre à l'occasion de la prière dominicale de l'Angélus.",
-      "Le pape a indiqué qu'il allait reprendre ses charges et ses engagements de manière graduelle."
+      "Le pape a indiqué qu'il allait reprendre ses charges et ses engagements de manière graduelle.",
+      "La presse de ce courant précise qu'il a subi une lobectomie le mardi treize octobre pour retirer un nodule cancéreux."
+    ],
+    "droite": [
+      "Le pape Léon XIV a fait sa première apparition devant les fidèles depuis sa sortie de l'hôpital intervenue la veille.",
+      "Âgé de soixante et onze ans, le pontife a subi une intervention chirurgicale mardi dernier à l'hôpital Gemelli de Rome.",
+      "L'opération consistait en l'ablation d'un nodule cancéreux situé dans le poumon droit."
     ]
   },
   "differences": [
-    "Le centre met en avant la première apparition publique du pape et ses annonces concernant la reprise progressive de ses fonctions, tandis que la gauche se concentre essentiellement sur les aspects médicaux de sa convalescence et de son retour au Vatican."
+    "Le centre et la droite insistent sur le caractère cancéreux de la tumeur pulmonaire retirée, une précision médicale moins mise en avant par la gauche.",
+    "La droite précise l'âge du souverain pontife ainsi que l'établissement hospitalier romain où s'est déroulée l'intervention, contrairement aux autres courants.",
+    "Le centre et la gauche privilégient le récit de la première apparition publique et de la communion avec les fidèles lors de la prière dominicale."
   ],
   "promptVersion": "sum-3",
-  "summarizedArticleCount": 5
+  "summarizedArticleCount": 9
 }
