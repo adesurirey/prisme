@@ -467,6 +467,47 @@ describe('summariesPrompt', () => {
     expect(prompt).toContain('ne rien inventer');
   });
 
+  it('forces one treatment bullet per covered camp and excludes relayed statements (sum-6)', () => {
+    const prompt = summariesPrompt({
+      story: { id: 's1', title: 'Sujet', section: undefined },
+      articles: [
+        {
+          headline: 'T',
+          teaser: '',
+          outletName: 'Le Monde',
+          outletLeaning: 'centre',
+          opinion: false,
+          frontPage: false,
+        },
+        {
+          headline: 'T2',
+          teaser: '',
+          outletName: 'Le Figaro',
+          outletLeaning: 'droite',
+          opinion: false,
+          frontPage: false,
+        },
+      ],
+      coveredLeanings: ['centre', 'droite'],
+    });
+    // The comparison is structurally guaranteed: exactly one bullet per
+    // covered camp, never more.
+    expect(prompt).toContain('exactement une puce par camp couvert');
+    expect(prompt).toContain('jamais plus');
+    // The analysis targets the media treatment, never the political debate:
+    // what a camp's media merely relay from other camps is not its treatment.
+    expect(prompt).toContain(
+      "n'attribue jamais à un camp un propos que ses médias ne font que relayer",
+    );
+    // Cold-analysis checklist: vocabulary, emphasis, hidden or ignored facts.
+    expect(prompt).toContain("le vocabulaire qu'ils emploient");
+    expect(prompt).toContain("ce qu'ils taisent ou passent sous silence");
+    // Intra-camp divergences live inside the camp's own bullet, not a
+    // separate one.
+    expect(prompt).toContain('une seconde phrase');
+    expect(prompt).toContain('jamais une puce séparée');
+  });
+
   it('folds centre-gauche Articles into the gauche group (issue #46)', async () => {
     const s = story('s1', 'sujet-1', [article('a1', 'franceinfo')]);
     const calls: { input: SummaryInput }[] = [];

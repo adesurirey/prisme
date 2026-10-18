@@ -9,7 +9,7 @@
  * Language API (free tier, shared with the Grouping model).
  *
  * Each call re-synthesizes from the Story's WHOLE Article set (prompt
- * sum-5): the previous Summaries are never fed back, so the model cannot
+ * sum-6): the previous Summaries are never fed back, so the model cannot
  * patch or append to them. Incremental updating (sum-1..sum-3) made each
  * call append a bullet about the latest development to the previous text —
  * the Summary read as a chronicle of successive states instead of a
@@ -34,7 +34,7 @@ import { RETRYABLE_STATUS } from './http.ts';
 import { isLive } from './liveness.ts';
 
 /** Prompt version, for traceability in Story files (ADR-0006). Bump on any prompt/schema change. */
-export const SUMMARIES_PROMPT_VERSION = 'sum-5';
+export const SUMMARIES_PROMPT_VERSION = 'sum-6';
 
 /**
  * The per-build Summaries budget (ADR-0022): at most the top-20 ranked
@@ -157,9 +157,14 @@ const LEANING_LABELS_FR: Record<Leaning, string> = {
 /**
  * The prompt: the Story's whole Article set — headlines + teasers with
  * Outlet tags, nothing else (ADR-0003) — and never the previous Summaries,
- * so every call is a fresh synthesis of the current Story (prompt sum-5).
- * The version appears in the text so a prompt change without a version bump
- * cannot pass review unnoticed.
+ * so every call is a fresh synthesis of the current Story (prompt sum-6).
+ * sum-6 reshapes « differences » into a cold, media-level comparison:
+ * exactly one treatment bullet per covered camp (angle, vocabulary, hidden
+ * or ignored facts), within-camp divergences between bands carried inside
+ * that camp's own bullet — and what a camp's media merely relay from other
+ * camps never counts as that camp's treatment. The version appears in the
+ * text so a prompt change without a version bump cannot pass review
+ * unnoticed.
  */
 export function summariesPrompt(input: SummaryInput): string {
   const { story, articles, coveredLeanings } = input;
@@ -191,8 +196,11 @@ export function summariesPrompt(input: SummaryInput): string {
     'Consignes :',
     "- Pour chaque camp couvert, écris « summaries.<camp> » : un tableau de 2 à 5 puces courtes en français, factuelles, qui résument ce que les médias de ce camp rapportent du sujet. Les camps regroupent les bandes : le camp gauche comprend les médias classés « centre gauche », le camp droite comprend les médias classés « centre droit ». Reformule : ne recopie jamais la formulation d'un titre ou d'un teaser. Par défaut, parle pour le camp tout entier sans nommer de média ; nomme un média seulement quand c'est nécessaire à l'exactitude : pour signaler une nuance interne au camp (par exemple entre « gauche » et « centre gauche ») ou pour attribuer une information que tous les médias du camp ne rapportent pas.",
     '- Les tribunes éclairent le positionnement de leur camp mais restent des prises de position, pas des faits établis.',
-    "- Écris « differences » : un tableau de 1 à 4 puces courtes en français qui comparent comment les camps cadrent, accentuent ou laissent de côté des parties du sujet — y compris les divergences à l'intérieur d'un même camp (par exemple entre « droite » et « centre droit »). Une puce = un contraste ; ne force pas une puce par camp : quand des camps partagent le même angle, regroupe-les dans la même puce, et quand un camp n'apporte rien, laisse-le de côté. Tu peux citer un média à l'appui d'un contraste concret. Décris sans trancher : dis qui met l'accent sur quoi, jamais qui a raison.",
-    "- Si un seul camp couvre le sujet : son résumé le présente, et « differences » décrit sa lecture — y compris, s'il y en a, les divergences à l'intérieur du camp (par exemple entre « gauche » et « centre gauche »). S'il n'y a vraiment rien à comparer, dis-le sans détour — ne rien inventer.",
+    "- Écris « differences » : un tableau en français d'exactement une puce par camp couvert, dans l'ordre gauche, centre, droite. Analyse froidement le traitement du sujet par les médias de chaque camp — pas le débat politique entre camps : la puce décrit l'angle choisi par ces médias, le vocabulaire qu'ils emploient, ce qu'ils mettent en avant, ce qu'ils taisent ou passent sous silence.",
+    "- Ne compte comme traitement d'un camp que ce que ses propres médias écrivent du sujet. Ce qu'un média rapporte des propos, accusations ou réactions d'autres camps (déclarations politiques, communiqués, réactions d'élus) n'est pas le traitement de son camp : ignore-le dans sa puce — et n'attribue jamais à un camp un propos que ses médias ne font que relayer.",
+    "- Rédige les puces de camp sur le même gabarit — une phrase courte et factuelle par défaut — pour qu'elles se lisent côte à côte et fassent ressortir les écarts. Une puce de camp dit comment les médias du camp racontent le sujet, pas ce qu'ils racontent de plus : ne répète pas le contenu de « summaries.<camp> ».",
+    "- Si un camp est divisé entre ses bandes (par exemple entre « droite » et « centre droit »), fais porter la nuance par sa propre puce : ajoute une seconde phrase qui distingue les traitements des bandes, jamais une puce séparée. « differences » compte exactement une puce par camp couvert, jamais plus. Tu peux citer un média à l'appui d'une nuance concrète. Décris sans trancher : dis quel média met l'accent sur quoi, jamais qui a raison.",
+    "- Si un seul camp couvre le sujet : « differences » est la puce de ce camp — le traitement du sujet par ses médias, y compris, dans la même puce, s'il y en a, ses divergences internes entre bandes (par exemple entre « gauche » et « centre gauche »). S'il n'y a vraiment rien à comparer, dis-le sans détour — ne rien inventer.",
   );
   return lines.join('\n');
 }
@@ -242,7 +250,7 @@ export async function updateSummaries(input: {
     if (budget != null && calls >= budget) continue;
 
     // The whole Article set, not a delta: the model re-synthesizes from
-    // scratch (prompt sum-5). Headlines are stored in the Story file;
+    // scratch (prompt sum-6). Headlines are stored in the Story file;
     // teasers exist only while the Article is still in the feeds' window.
     const articles: SummaryInputArticle[] = [];
     for (const article of story.articles) {
