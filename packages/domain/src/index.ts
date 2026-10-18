@@ -186,8 +186,9 @@ export interface Story {
   section?: Section;
   /** Per-Leaning Summaries, only for Leanings that cover the Story (issue #7, ADR-0006). */
   summaries?: StorySummaries;
-  /** The model's comparison of how the Leanings frame the Story. */
-  differences?: string;
+  /** The model's comparison of how the Leanings frame the Story, as bullets:
+   * one contrast per bullet, easy to scan. */
+  differences?: string[];
   /** Version of the Summaries prompt that wrote these fields (ADR-0006). */
   promptVersion?: string;
   /** Number of Articles the last Summaries run saw; Articles are append-only. */

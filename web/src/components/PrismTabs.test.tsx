@@ -12,7 +12,7 @@ const COVERED = {
     centre: ['Lu au centre'],
     droite: ['Lu à droite'],
   },
-  differences: 'La droite insiste sur X.',
+  differences: ['La droite insiste sur X.'],
 };
 
 describe('PrismTabs', () => {
@@ -30,7 +30,7 @@ describe('PrismTabs', () => {
       <PrismTabs
         counts={{ gauche: 0, centre: 1, droite: 0 }}
         summaries={{ centre: ['Lu au centre'] }}
-        differences="Seul le centre couvre le sujet."
+        differences={['Seul le centre couvre le sujet.']}
       />,
     );
     expect(screen.getByText('Non couvert par la gauche')).toBeTruthy();
@@ -52,7 +52,7 @@ describe('PrismTabs', () => {
       <PrismTabs
         counts={{ gauche: 2, centre: 1, droite: 3 }}
         summaries={{ gauche: ['Lu à gauche'], droite: ['Lu à droite'] }}
-        differences="X."
+        differences={['X.']}
       />,
     );
     const gauchePanel = screen
@@ -78,6 +78,40 @@ describe('PrismTabs', () => {
     expect(centrePanel.hasAttribute('hidden')).toBe(true);
     expect(droitePanel.hasAttribute('hidden')).toBe(false);
     expect(droiteTab.getAttribute('aria-selected')).toBe('true');
+  });
+
+  it('renders several Differences bullets as a bullet list', () => {
+    render(
+      <PrismTabs
+        {...COVERED}
+        differences={[
+          'La droite insiste sur la fermeté.',
+          'La gauche critique la stratégie de maintien de l’ordre.',
+        ]}
+      />,
+    );
+    expect(screen.getByText('La droite insiste sur la fermeté.')).toBeTruthy();
+    expect(
+      screen.getByText(
+        'La gauche critique la stratégie de maintien de l’ordre.',
+      ),
+    ).toBeTruthy();
+    const li = screen
+      .getByText('La droite insiste sur la fermeté.')
+      .closest('li')!;
+    expect(li).toBeTruthy();
+  });
+
+  it('renders a single Differences bullet as a paragraph', () => {
+    render(
+      <PrismTabs
+        {...COVERED}
+        differences={['Seul le centre couvre le sujet.']}
+      />,
+    );
+    const text = screen.getByText('Seul le centre couvre le sujet.');
+    expect(text.closest('li')).toBeNull();
+    expect(text.closest('p')).toBeTruthy();
   });
 
   it('shows an honest placeholder for a covered Leaning whose Summaries are missing', () => {

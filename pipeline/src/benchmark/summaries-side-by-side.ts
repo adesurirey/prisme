@@ -95,7 +95,13 @@ async function main(): Promise<void> {
         if (!bullets?.length) continue;
         lines.push(`**${leaning}**`, '', ...bullets.map((b) => `- ${b}`), '');
       }
-      lines.push(`**Différences**`, '', r.story.differences ?? '_(échec)_', '');
+      const d = r.story.differences;
+      lines.push(
+        '**Différences**',
+        '',
+        ...(d?.length ? d.map((b) => `- ${b}`) : ['_(échec)_']),
+        '',
+      );
     }
     lines.push('---', '');
     console.log(`Done: ${story.title}`);
