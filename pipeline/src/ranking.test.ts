@@ -31,13 +31,15 @@ function story(
   return { id, slug: id, title: 'Sujet', createdAt, storyDay, articles };
 }
 
-// Noon Paris on day D (10:00 UTC, CEST): D's window is open, D-1's and
-// earlier are closed — the ordinary in-day view of the Edition.
+// Noon Paris on day D+1 (10:00 UTC, CEST): Stories founded up to 24h ago
+// are open — the ordinary in-day view of the Edition.
 const DAY_NOON = new Date('2026-10-06T10:00:00Z');
-// 00:30 Paris of day D+1 (22:30 UTC of D): D's window is still open until
-// 06:00 Paris — the post-midnight view where the midnight gap appeared.
+// 00:30 Paris of day D+1 (22:30 UTC of D): the post-midnight view where the
+// midnight gap appeared — an evening Story's window runs to the next
+// evening.
 const NEXT_DAY_EARLY = new Date('2026-10-05T22:30:00Z');
-// 06:30 Paris of day D+1 (04:30 UTC): D's window has just closed.
+// 06:30 Paris of day D+1 (04:30 UTC): an early-morning Story of day D is
+// just past its window close; an evening one is not.
 const NEXT_DAY_AFTER_WINDOW = new Date('2026-10-06T04:30:00Z');
 
 const ranked = (stories: Story[]) => rankStories(stories).map((s) => s.id);
@@ -117,9 +119,10 @@ describe('rankStories', () => {
 });
 
 /**
- * The dated Edition assembly (ADR-0022): the live pool — window-open
- * Stories — ranked by ADR-0009, uncapped. No backfill: closed previous
- * days' Stories are the archive pages' business.
+ * The dated Edition assembly (ADR-0026): the live pool — Stories whose
+ * Ingestion window `[founding, founding + 24h]` is open — ranked by
+ * ADR-0009, uncapped, with a sharp exit at the window close. No backfill:
+ * closed Stories are the archive pages' business.
  */
 describe('assembleEdition', () => {
   const today = '2026-10-06';
@@ -131,13 +134,25 @@ describe('assembleEdition', () => {
     expect(assembleEdition(stories, DAY_NOON)).toHaveLength(60);
   });
 
-  it('drops closed previous days Stories: no backfill (ADR-0022)', () => {
+  it('drops Stories whose Ingestion window has closed: no backfill (ADR-0022, ADR-0026)', () => {
+    // Founded 2026-10-04 10:00Z (window closed 2026-10-05 10:00Z) and
+    // 2026-10-05 09:00Z (closed 09:00Z of the Edition instant): both left.
     const j2 = {
-      ...story('j2', [article('1')], undefined, '2026-10-04'),
+      ...story(
+        'j2',
+        [article('1', { publishedAt: '2026-10-04T10:00:00Z' })],
+        undefined,
+        '2026-10-04',
+      ),
       everInEdition: true,
     };
     const j1 = {
-      ...story('j1', [article('2')], undefined, '2026-10-05'),
+      ...story(
+        'j1',
+        [article('2', { publishedAt: '2026-10-05T09:00:00Z' })],
+        undefined,
+        '2026-10-05',
+      ),
       everInEdition: true,
     };
     const current = story('cur', [article('3')], undefined, today);
@@ -154,28 +169,35 @@ describe('assembleEdition', () => {
   });
 
   it('is smooth at midnight: a day-D Story still ranks at 00:30 of D+1 (window open)', () => {
-    // Yesterday's Story (day D), already in the Edition during D.
+    // Yesterday's Story, founded 22:00 Paris on day D: 2.5h old at 00:30
+    // of D+1 — its window runs until 22:00 Paris of D+1.
     const yesterday = {
-      ...story('d', [article('1')], undefined, '2026-10-05'),
+      ...story(
+        'd',
+        [article('1', { publishedAt: '2026-10-05T20:00:00Z' })],
+        undefined,
+        '2026-10-05',
+      ),
       everInEdition: true,
     };
-    // The day has rolled over but D's ingestion window stays open until
-    // 06:00: the Story ranks in the live pool, not as backfill.
+    // The day has rolled over but the window stays open: the Story ranks
+    // in the live pool, not as backfill.
     expect(
       assembleEdition([yesterday], NEXT_DAY_EARLY).map((s) => s.id),
     ).toEqual(['d']);
   });
 
-  it('midnight gap fix: a day-D Story never in the Edition still ranks at 00:30 of D+1', () => {
-    // Born right after midnight (the 2026-10-13 22:01 UTC build): day D,
-    // never shown, structurally invisible to the old current-day tier —
-    // born doomed to the never-in-Edition deletion rule (issue #75).
+  it('midnight gap fix: a Story born right after midnight still ranks at 00:30 (issue #75)', () => {
+    // Born right after midnight (the 2026-10-13 22:01 UTC build shape):
+    // founded 00:01 Paris, never shown, structurally invisible to the old
+    // current-day tier — born doomed to the never-in-Edition deletion rule
+    // (issue #75). Its window is open: it ranks.
     const lateBorn = {
       ...story(
         'late-born',
-        [article('1', { publishedAt: '2026-10-05T23:50:00Z' })],
-        '2026-10-05T22:10:00Z',
-        '2026-10-05',
+        [article('1', { publishedAt: '2026-10-05T22:01:00Z' })],
+        '2026-10-05T22:01:00Z',
+        '2026-10-06',
       ),
       everInEdition: false,
     };
@@ -184,37 +206,76 @@ describe('assembleEdition', () => {
     ).toEqual(['late-born']);
   });
 
-  it('after the window closes: yesterday’s Stories leave the Edition, no backfill (ADR-0022)', () => {
-    const shown = {
-      ...story('shown', [article('1')], '2026-10-05T20:00:00Z', '2026-10-05'),
-      everInEdition: true,
-    };
-    const never = {
+  it('an evening Story keeps ranking into the night while an old one has left (ADR-0026, issue #116)', () => {
+    // At 06:30 of D+1 (the old 06:00 close had just passed): a Story
+    // founded 04:00Z of day D (24.5h old) has left the Edition at its
+    // window close + ε, while the evening Story founded 21:00Z of day D
+    // (the Trump/Zelensky shape) is only 7.5h old and stays.
+    const early = {
       ...story(
-        'never',
-        [article('2', { publishedAt: '2026-10-05T23:50:00Z' })],
-        '2026-10-05T22:10:00Z',
+        'early',
+        [article('1', { publishedAt: '2026-10-05T04:00:00Z' })],
+        '2026-10-05T04:00:00Z',
         '2026-10-05',
       ),
-      everInEdition: false,
+      everInEdition: true,
+    };
+    const evening = {
+      ...story(
+        'evening',
+        [article('2', { publishedAt: '2026-10-05T21:00:00Z' })],
+        '2026-10-05T21:00:00Z',
+        '2026-10-05',
+      ),
+      everInEdition: true,
     };
     expect(
-      assembleEdition([shown, never], NEXT_DAY_AFTER_WINDOW).map((s) => s.id),
+      assembleEdition([early, evening], NEXT_DAY_AFTER_WINDOW).map((s) => s.id),
+    ).toEqual(['evening']);
+  });
+
+  it('the evening Story leaves at its own window close + ε (sharp exit, ADR-0026)', () => {
+    // Founded 21:00Z of day D: the window closes 21:00Z of D+1 — one
+    // second later the Story is off la Une, however important.
+    const evening = {
+      ...story(
+        'evening',
+        [article('2', { publishedAt: '2026-10-05T21:00:00Z' })],
+        '2026-10-05T21:00:00Z',
+        '2026-10-05',
+      ),
+      everInEdition: true,
+    };
+    expect(
+      assembleEdition([evening], new Date('2026-10-06T20:59:59Z')).map(
+        (s) => s.id,
+      ),
+    ).toEqual(['evening']);
+    expect(
+      assembleEdition([evening], new Date('2026-10-06T21:00:01Z')),
     ).toEqual([]);
   });
 
   it('ranks window-open Stories of two days together by the ADR-0009 key', () => {
-    // At 00:30 of D+1 both days' windows are open: one ranked live pool.
+    // At 00:30 of D+1 both Stories' windows are open: one ranked live pool.
     const wideYesterday = {
       ...story(
         'wide-d',
-        [article('1'), article('2', { outletId: 'b' })],
-        '2026-10-05T21:00:00Z',
+        [
+          article('1', { publishedAt: '2026-10-05T20:00:00Z' }),
+          article('2', { outletId: 'b', publishedAt: '2026-10-05T21:00:00Z' }),
+        ],
+        '2026-10-05T20:00:00Z',
         '2026-10-05',
       ),
       everInEdition: false,
     };
-    const narrowToday = story('narrow-d1', [article('3')], undefined, today);
+    const narrowToday = story(
+      'narrow-d1',
+      [article('3', { publishedAt: '2026-10-05T22:10:00Z' })],
+      '2026-10-05T22:10:00Z',
+      '2026-10-06',
+    );
     expect(
       assembleEdition([narrowToday, wideYesterday], NEXT_DAY_EARLY).map(
         (s) => s.id,

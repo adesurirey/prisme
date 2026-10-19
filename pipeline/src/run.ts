@@ -139,14 +139,14 @@ export async function runEdition(): Promise<Edition> {
   const liveIds = new Set(outcome.live.map((s) => s.id));
   const frontpage = updateFrontPageHistory(outcome.stories, kept, now);
 
-  // The Edition (ADR-0022, superseding ADR-0017's backfill tier): every
-  // live Story — today's Stories, and yesterday's until 06:00 Paris —
-  // ranked by the ADR-0009 key, uncapped. The old EDITION_SIZE cap was the
-  // Summaries budget leaking into visibility; the budget now gates only
-  // the Summaries calls below. A Story born right after midnight ranks in
-  // and gets everInEdition instead of being deleted unfrozen (issue #75).
-  // Live Stories keep updating and stay in the Edition; only a Story with
-  // no live Articles freezes.
+  // The Edition (ADR-0022, ADR-0026): every Story whose Ingestion window
+  // is open — founded less than 24 hours ago — ranked by the ADR-0009 key,
+  // uncapped, with a sharp exit at the window close. The old EDITION_SIZE
+  // cap was the Summaries budget leaking into visibility; the budget now
+  // gates only the Summaries calls below. A Story born right after
+  // midnight ranks in and gets everInEdition instead of being deleted
+  // unfrozen (issue #75). Live Stories keep updating and stay in the
+  // Edition; a Story whose window has closed freezes.
   const outletById = new Map(outlets.map((o) => [o.id, o]));
   const ranked = assembleEdition(frontpage.stories, now);
 
