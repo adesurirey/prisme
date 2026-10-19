@@ -6,6 +6,17 @@
   "storyDay": "2026-10-18",
   "articles": [
     {
+      "id": "6262b295e546",
+      "outletId": "le-parisien",
+      "headline": "Pluie-inondations : le Gard et l’Hérault placés en vigilance orange, un passage en vigilance rouge n’est pas exclu",
+      "url": "https://www.leparisien.fr/meteo/pluie-inondations-le-gard-et-lherault-places-en-vigilance-orange-un-passage-en-vigilance-rouge-nest-pas-exclu-19-10-2026-R7TCNKKLYFAL5EV4XOZ3JWI7FA.php",
+      "publishedAt": "2026-10-19T06:01:22.297Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "27683c4785b2",
       "outletId": "bfmtv",
       "headline": "Pluie-inondations et orages: le Gard et l'Hérault en vigilance orange ce lundi, un passage en vigilance rouge possible",
@@ -68,7 +79,7 @@
       "url": "https://www.lemonde.fr/planete/article/2026/10/19/pluie-et-inondations-le-gard-et-l-herault-places-en-vigilance-orange-lundi-a-partir-de-14-heures_6797409_3244.html",
       "publishedAt": "2026-10-19T03:39:26.000Z",
       "imageUrl": "https://img.lemde.fr/2025/06/26/250/0/3000/1500/644/322/60/0/0397993_upload-1-pfmowr3mcztu-frame-18.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -146,26 +157,24 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Météo-France a placé le Gard et l'Hérault en vigilance orange pour pluie-inondation et orages à partir de lundi 14 heures.",
-      "L'institut météorologique anticipe des précipitations dès la matinée suivies d'orages plus violents remontant de la Méditerranée dans l'après-midi.",
-      "Franceinfo précise qu'une vaste goutte froide en provenance d'Espagne favorise ces remontées orageuses."
+      "Météo-France a placé le Gard et l'Hérault en vigilance orange pour des risques de pluie, d'inondation et d'orage à partir de lundi 14 heures.",
+      "Les services météorologiques prévoient des précipitations matinales suivies d'orages plus violents remontant de la Méditerranée dans l'après-midi."
     ],
     "centre": [
-      "Le Gard et l'Hérault passent en vigilance orange ce lundi pour des risques de pluie-inondation et d'orages.",
-      "BFMTV indique qu'un passage en vigilance rouge au cours de la journée n'est pas exclu par Météo-France.",
-      "Ouest-France et TF1 Info relaient l'alerte émise pour ces deux départements de la zone méditerranéenne."
+      "Le Gard et l'Hérault font l'objet d'une vigilance orange pour pluie-inondation et orages en raison d'un épisode méditerranéen prévu ce lundi.",
+      "Les autorités n'excluent pas une évolution de la vigilance vers le niveau rouge selon l'intensité des intempéries."
     ],
     "droite": [
-      "Météo-France place le Gard et l'Hérault en vigilance orange pour un épisode méditerranéen pluvio-orageux très actif.",
-      "Le Figaro et CNews rapportent un risque de cumuls pouvant atteindre 70 mm en moins d'une heure, accompagnés de rafales à 80 km/h, de grêle et de phénomènes tourbillonnaires.",
-      "Europe 1 mentionne que les départements limitrophes des Bouches-du-Rhône, de la Lozère, de l'Ardèche et du Vaucluse pourraient également voir leur niveau d'alerte relevé."
+      "Météo-France a déclenché une vigilance orange dans le Gard et l'Hérault face à un épisode méditerranéen qualifié de très violent.",
+      "Les prévisions font état de cumuls pouvant atteindre 70 mm en moins d'une heure, accompagnés de rafales de 80 km/h, de grêle et de possibles phénomènes tourbillonnaires.",
+      "Le niveau d'alerte pourrait également être relevé pour les départements voisins des Bouches-du-Rhône, de la Lozère, de l'Ardèche et du Vaucluse."
     ]
   },
   "differences": [
-    "La gauche contextualise l'épisode météorologique en mentionnant l'origine géographique du phénomène, une goutte froide venant d'Espagne.",
-    "Le centre livre un compte-rendu factuel et synthétique de la mise en alerte des deux départements en insistant sur l'éventualité d'une vigilance rouge.",
-    "La droite détaille avec précision les indicateurs techniques et chiffrés des prévisions ainsi que l'impact potentiel sur les départements limitrophes."
+    "La gauche livre un compte-rendu strictement factuel des horaires et des types de risques annoncés par Météo-France, sans emphase particulière.",
+    "Le centre met en avant l'imminence de l'épisode météorologique tout en soulignant la menace potentielle d'un passage au niveau de vigilance rouge.",
+    "La droite adopte un ton plus alarmiste en insistant sur la violence de l'épisode méditerranéen et en détaillant avec précision les seuils chiffrés des précipitations, des rafales ainsi que les risques de grêle et de trombes."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 12
+  "summarizedArticleCount": 13
 }
