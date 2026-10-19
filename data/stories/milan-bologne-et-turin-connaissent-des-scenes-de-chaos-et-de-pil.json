@@ -1,10 +1,21 @@
 {
   "id": "141a2bacfbeb",
   "slug": "milan-bologne-et-turin-connaissent-des-scenes-de-chaos-et-de-pil",
-  "title": "Milan, Bologne et Turin connaissent des scènes de chaos et de pillages lors des manifestations",
+  "title": "Milan, Bologne et Turin secouées par de nouvelles scènes de chaos et de pillages",
   "createdAt": "2026-10-19T00:01:24.651Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "67c7c7bf7e12",
+      "outletId": "le-parisien",
+      "headline": "Deuxième jour de chaos et de pillages dans le centre de Milan",
+      "url": "https://www.leparisien.fr/faits-divers/deuxieme-jour-de-chaos-et-de-pillages-dans-le-centre-de-milan-19-10-2026-ZSSERCDX5BETZAY3FZRIVDKZTU.php",
+      "publishedAt": "2026-10-19T08:01:20.445Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "83902e7aab49",
       "outletId": "le-figaro",
@@ -33,15 +44,19 @@
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "centre": [
+      "Milan est touchée par une deuxième journée consécutive de violences urbaines et de pillages en plein centre-ville.",
+      "Le mouvement de contestation commence à se propager à l'ensemble de la péninsule italienne."
+    ],
     "droite": [
-      "Des manifestations contre la vie chère ont dégénéré en affrontements avec les forces de l'ordre samedi à Milan.",
-      "Des scènes de chaos et de pillages comparables à celles observées en France se sont propagées dans les villes de Bologne et de Turin.",
-      "L'Italie est touchée par une contestation populaire associant la hausse du coût de la vie et celle des carburants."
+      "Les villes de Milan, Bologne et Turin subissent des vagues de chaos et de pillages similaires à d'autres pays.",
+      "L'Opinion relie ces violences à Milan et les blocages dans les Pouilles à une contestation de la vie chère et des prix des carburants."
     ]
   },
   "differences": [
-    "La droite analyse les événements en insistant sur la propagation transfrontalière du chaos urbain et des pillages similaires à ceux de la France."
+    "Le centre se focalise sur le récit chronologique et localisé des événements successifs à Milan, soulignant la répétition des troubles.",
+    "La droite élargit immédiatement la focale géographique à plusieurs grandes villes italiennes et connecte les émeutes à des revendications sociales et économiques plus larges."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }

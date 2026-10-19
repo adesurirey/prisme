@@ -6,6 +6,17 @@
   "storyDay": "2026-10-19",
   "articles": [
     {
+      "id": "6346cf06d1c9",
+      "outletId": "huffpost",
+      "headline": "En Guadeloupe, les autorités vont plus loin qu’en Hexagone après les violences du week-end",
+      "url": "https://www.huffingtonpost.fr/france/article/en-guadeloupe-les-autorites-vont-plus-loin-qu-en-hexagone-apres-les-violences-du-week-end_341816.html",
+      "publishedAt": "2026-10-19T06:03:03.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/19/156/0/3000/1687/0/0/60/0/15d12ca_upload-1-twtxtp59dlui-afp-20261015-hl-cbernhardt-3338592-v1-highres-guadeloupefrancepointeapitrehotel.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "f5fe9e2c6113",
       "outletId": "le-parisien",
       "headline": "En Guadeloupe, le préfet instaure un couvre-feu pour les mineurs, après des violences en marge du mouvement contre la vie chère",
@@ -45,20 +56,27 @@
   "section": "politics",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le préfet de Guadeloupe a mis en place un couvre-feu ciblant spécifiquement les mineurs dans deux communes.",
+      "Cette mesure restrictive intervient à la suite d'incidents urbains survenus pendant le week-end.",
+      "Les tensions et les heurts sont liés au mouvement social de contestation contre la vie chère."
+    ],
     "centre": [
-      "Le préfet de Guadeloupe a mis en place une interdiction de circulation nocturne pour les mineurs.",
-      "Cette décision fait suite aux actes de violence survenus lors des manifestations contre la vie chère sur l'île."
+      "Un arrêté préfectoral instaure une mesure de couvre-feu pour les mineurs en Guadeloupe.",
+      "La décision fait suite à des troubles à l'ordre public survenus en marge des manifestations contre la vie chère.",
+      "L'interdiction de circulation nocturne concerne dans un premier temps deux communes de l'archipel."
     ],
     "droite": [
-      "Un couvre-feu nocturne a été décrété en Guadeloupe pour les jeunes de moins de dix-huit ans non accompagnés.",
-      "La mesure a été adoptée après des épisodes de heurts et de pillages.",
-      "L'interdiction de circuler s'applique spécifiquement du dimanche soir au lundi matin."
+      "Le préfet de Guadeloupe décrète un couvre-feu pour les mineurs après de nouvelles tensions.",
+      "L'archipel a connu des épisodes de violences, incluant des heurts et des pillages.",
+      "Les troubles se sont déroulés dans le contexte de la mobilisation contre la vie chère."
     ]
   },
   "differences": [
-    "Les médias centristes se concentrent sur le contexte global des protestations contre la vie chère pour expliquer la mise en place du couvre-feu.",
-    "Les médias de droite insistent davantage sur la nature délictuelle des événements en mentionnant explicitement les pillages et les heurts."
+    "La gauche met en avant le caractère exceptionnel et plus strict de la décision préfectorale par rapport à l'Hexagone.",
+    "Le centre livre un compte-rendu strictement factuel en associant directement le couvre-feu à la contestation contre la vie chère.",
+    "La droite insiste particulièrement sur la nature violente des débordements en mentionnant explicitement les actes de pillage."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }
