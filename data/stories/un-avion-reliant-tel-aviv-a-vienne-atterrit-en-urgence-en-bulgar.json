@@ -6,6 +6,17 @@
   "storyDay": "2026-10-19",
   "articles": [
     {
+      "id": "76184f67570f",
+      "outletId": "tf1-info",
+      "headline": "Un vol reliant Tel-Aviv à Vienne dérouté vers la Bulgarie après une alerte à la bombe",
+      "url": "https://www.tf1info.fr/international/un-vol-reliant-tel-aviv-a-vienne-deroute-vers-la-bulgarie-apres-une-alerte-a-la-bombe-2470691.html",
+      "publishedAt": "2026-10-19T06:05:14.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/683/airbus-a320-austrian-airlines-image-d-archive-350b7f-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "d8cb2659e733",
       "outletId": "cnews",
       "headline": "Autriche : une alerte à la bombe contraint un avion en provenance de Tel-Aviv à atterrir en urgence en Bulgarie",
@@ -69,23 +80,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le Monde relate qu'un vol d'Austrian Airlines entre Tel-Aviv et Vienne a été dérouté vers la Bulgarie en raison d'une alerte à la bombe.",
-      "Le quotidien précise que l'appareil transportait 51 passagers et six membres d'équipage avant d'effectuer une fouille de sécurité à Sofia."
+      "Un vol d'Austrian Airlines reliant Tel-Aviv à Vienne a été dérouté vers la Bulgarie ce dimanche suite à une alerte à la bombe.",
+      "L'appareil transportait 51 passagers et six membres d'équipage.",
+      "Une fouille de sécurité complète a été menée après l'atterrissage de l'avion à Sofia."
     ],
     "centre": [
-      "Le Parisien et Ouest-France signalent qu'un avion reliant Tel-Aviv à l'Autriche a dû être dérouté vers la Bulgarie suite à une alerte à la bombe."
+      "Un avion assurant la liaison entre Tel-Aviv et Vienne a dû être dérouté vers la Bulgarie en raison d'une alerte à la bombe.",
+      "Les passagers ont été évacués de l'appareil dès son arrivée sur le sol bulgare.",
+      "Le ministère bulgare des Transports a ordonné l'ouverture d'une enquête officielle sur cet incident aérien."
     ],
     "droite": [
-      "CNews et Le Figaro rapportent qu'un avion d'Austrian Airlines effectuant la liaison Tel-Aviv Vienne a été dérouté vers la Bulgarie à cause d'une alerte à la bombe.",
-      "Le Figaro et CNews indiquent que l'appareil transportant 51 passagers et six membres d'équipage a été fouillé à l'atterrissage à Sofia.",
-      "CNews précise que l'armée de l'air bulgare a dépêché un chasseur MiG-29 pour escorter l'avion et qu'une enquête a été ouverte."
+      "Un Airbus A-320 d'Austrian Airlines transportant 51 passagers et six membres d'équipage a subi une alerte à la bombe en plein vol ce dimanche.",
+      "L'armée de l'air bulgare a immédiatement dépêché un chasseur MiG-29 pour escorter l'appareil jusqu'à son atterrissage d'urgence.",
+      "Une fouille de sécurité et une enquête ont été lancées, dans un contexte marqué par de récents incidents similaires dans les airs."
     ]
   },
   "differences": [
-    "Le Monde concentre son récit factuel sur le déroulement du vol dérouté et l'intervention des autorités à Sofia.",
-    "La presse du centre se limite à une synthèse concise et laconique de l'incident aérien.",
-    "La droite privilégie un traitement plus détaillé en insistant sur le contexte sécuritaire, l'intervention militaire bulgare et les aspects logistiques de l'enquête."
+    "La gauche se limite strictement aux données factuelles de base concernant le déroutement, l'effectif à bord et la fouille de l'appareil.",
+    "Le centre livre un compte-rendu synthétique de l'incident en insistant sur l'évacuation des passagers et l'ouverture d'une enquête ministérielle.",
+    "La droite adopte un angle plus sécuritaire et détaillé en mentionnant l'intervention de l'aviation militaire bulgare ainsi qu'un précédent récent."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5
+  "summarizedArticleCount": 6
 }

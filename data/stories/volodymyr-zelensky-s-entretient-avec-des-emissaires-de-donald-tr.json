@@ -1,10 +1,33 @@
 {
   "id": "d0f958f5e67f",
   "slug": "volodymyr-zelensky-s-entretient-avec-des-emissaires-de-donald-tr",
-  "title": "Volodymyr Zelensky s'entretient avec des émissaires de Donald Trump pour relancer le partage de renseignements",
+  "title": "Volodymyr Zelensky s'entretient avec des émissaires de Donald Trump et annonce la reprise du partage de renseignements",
   "createdAt": "2026-10-19T01:01:18.026Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "9265e3d3ff87",
+      "outletId": "la-croix",
+      "headline": "Guerre en Ukraine : « aucune pause » dans le partage de renseignements ; accusations de Trump",
+      "url": "https://www.la-croix.com/international/ukraine-russie-jour-1699-point-conflit-ukrainien-poutine-aujourdhui-20261019",
+      "publishedAt": "2026-10-19T06:22:48.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/19/2566040-degats-apres-une-frappe-russe-sur-un-quartier-resi.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "a73c3f40c560",
+      "outletId": "le-figaro",
+      "headline": "Guerre en Ukraine : Marco Rubio dément toute «pause» dans le partage de renseignements avec Kiev",
+      "url": "https://www.lefigaro.fr/international/guerre-en-ukraine-marco-rubio-dement-toute-pause-dans-le-partage-de-renseignements-avec-kiev-20261019",
+      "publishedAt": "2026-10-19T06:09:17.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/19/87f31305836aed3f3487a58cd4ab67e73021c79b38654e36e4a002fb084abdd4.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
     {
       "id": "d236247a6b35",
       "outletId": "20-minutes",
@@ -46,14 +69,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Volodymyr Zelensky s'est entretenu par téléphone avec des émissaires de Donald Trump pour tenter d'apaiser les tensions avec Washington.",
-      "Cette discussion a permis d'annoncer la reprise du partage de renseignements entre l'Ukraine et les États-Unis.",
-      "Les frappes russes et ukrainiennes se sont multipliées contre les infrastructures énergétiques respectives des deux belligérants."
+      "Volodymyr Zelensky s'est entretenu par téléphone avec des émissaires de Donald Trump pour tenter de désamorcer les tensions entre Kiev et Washington.",
+      "Le chef de l'État ukrainien s'est déclaré « reconnaissant » après l'annonce de la reprise du partage de renseignements avec les États-Unis.",
+      "Ces discussions se déroulent alors que la Russie et l'Ukraine intensifient leurs bombardements réciproques contre les infrastructures énergétiques.",
+      "20 Minutes souligne que ces efforts diplomatiques interviennent dans un contexte de frappes croisées persistantes."
+    ],
+    "centre": [
+      "Le secrétaire d'État américain, Marco Rubio, a affirmé qu'il n'y avait « aucune pause » dans la transmission de renseignements à Kiev.",
+      "Donald Trump a publiquement reproché à Volodymyr Zelensky de « ne pas vouloir mettre fin » au conflit armé.",
+      "La presse du centre relaye la persistance des frappes sur les cibles énergétiques en Ukraine et en Russie ce lundi 19 octobre."
+    ],
+    "droite": [
+      "Le Figaro place en une les déclarations de Marco Rubio démentant toute interruption du partage de renseignements avec les autorités ukrainiennes.",
+      "Le secrétaire d'État américain a exhorté Volodymyr Zelensky à concentrer ses efforts sur la recherche d'une issue à la guerre."
     ]
   },
   "differences": [
-    "Les médias du centre gauche soulignent la volonté de Volodymyr Zelensky d'apaiser les relations diplomatiques avec Washington malgré l'échec initial de ses démarches, tout en articulant cette actualité avec l'intensification des frappes ciblées sur les réseaux énergétiques."
+    "La gauche privilégie l'angle de la décrispation diplomatique menée par Volodymyr Zelensky face à Washington et insiste sur le contexte d'intensification des frappes énergétiques.",
+    "Le centre polarise son traitement sur les déclarations contradictoires entre le démenti de Marco Rubio et les accusations directes formulées par Donald Trump contre Kiev.",
+    "La droite met en avant les exigences de l'administration américaine envers Volodymyr Zelensky, en insistant sur l'appel pressant à conclure rapidement le conflit."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 5
 }
