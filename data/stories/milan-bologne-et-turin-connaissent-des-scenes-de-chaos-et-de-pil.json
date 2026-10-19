@@ -1,10 +1,43 @@
 {
   "id": "141a2bacfbeb",
   "slug": "milan-bologne-et-turin-connaissent-des-scenes-de-chaos-et-de-pil",
-  "title": "Milan, Bologne et Turin secouées par de nouvelles scènes de chaos et de pillages",
+  "title": "Milan, Bologne et Turin sont secouées par de nouvelles scènes de chaos et de pillages",
   "createdAt": "2026-10-19T00:01:24.651Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "c23fc2607753",
+      "outletId": "france-24",
+      "headline": "Italie : le mécontentement face à l'inflation grandit dans les rues de Milan",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261019-italie-le-m%C3%A9contentement-face-%C3%A0-l-inflation-grandit-dans-les-rues-de-milan",
+      "publishedAt": "2026-10-19T10:05:13.000Z",
+      "imageUrl": "https://s.france24.com/media/display/20fcb92a-cba4-11f1-86c1-d1d2c32ebb87/w:1024/p:16x9/2026-10-18T190535Z-1312064184-RC26U98T8IZE-RTRMADP-3-ITALY-PROTEST.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "78d8119da735",
+      "outletId": "franceinfo",
+      "headline": "La ville de Milan théâtre de violences urbaines et de pillages en marge de manifestations contre la vie chère samedi et dimanche",
+      "url": "https://www.franceinfo.fr/monde/italie/la-ville-de-milan-theatre-de-violences-urbaines-et-de-pillages-en-marge-de-manifestations-contre-la-vie-chere-samedi-et-dimanche_8243644.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-19T09:09:12.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/U7lsX8Eh1INb3V7IuWgov3T1fu0/0x312:6000x3687/432x243/filters:format(jpg)/2026/10/19/6ad5d8ed73242504181349.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "2ba0e2f5d55b",
+      "outletId": "atlantico",
+      "headline": "Deuxième jour d’affrontements à Milan : vitrines brisées et magasins pillés",
+      "url": "https://atlantico.fr/article/video/deuxieme-jour-daffrontements-a-milan-vitrines-brisees-et-magasins-pilles",
+      "publishedAt": "2026-10-19T08:31:00.000Z",
+      "imageUrl": "https://atlantico.codexcdn.net/assets/asFfNK6ysHvbL6gBN.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "67c7c7bf7e12",
       "outletId": "le-parisien",
@@ -44,19 +77,26 @@
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "La ville de Milan a connu un week-end de violences urbaines et de pillages en marge de manifestations contre la vie chère.",
+      "Ces dégradations en Italie font écho au mouvement de contestation sociale du 17 octobre en France."
+    ],
     "centre": [
-      "Milan est touchée par une deuxième journée consécutive de violences urbaines et de pillages en plein centre-ville.",
-      "Le mouvement de contestation commence à se propager à l'ensemble de la péninsule italienne."
+      "Des affrontements entre des jeunes et la police ont secoué Milan pour le deuxième jour consécutif ce dimanche 18 octobre.",
+      "Ces violences font suite à une manifestation contre la vie chère et la hausse du coût de la vie qui a entraîné plus de 200 arrestations par les forces de l'ordre depuis samedi.",
+      "Le phénomène de contestation touche l'ensemble de la péninsule italienne, mêlant prix des carburants et colère des classes populaires."
     ],
     "droite": [
-      "Les villes de Milan, Bologne et Turin subissent des vagues de chaos et de pillages similaires à d'autres pays.",
-      "L'Opinion relie ces violences à Milan et les blocages dans les Pouilles à une contestation de la vie chère et des prix des carburants."
+      "Plusieurs villes italiennes, notamment Milan, Bologne et Turin, ont été secouées par des scènes de chaos et de pillages.",
+      "Au cœur de Milan, des groupes de jeunes cagoulés ont brisé des vitrines et pillé des magasins lors de violents heurts.",
+      "Pour disperser les manifestants, la police a dû employer des canons à eau et des gaz lacrymogènes."
     ]
   },
   "differences": [
-    "Le centre se focalise sur le récit chronologique et localisé des événements successifs à Milan, soulignant la répétition des troubles.",
-    "La droite élargit immédiatement la focale géographique à plusieurs grandes villes italiennes et connecte les émeutes à des revendications sociales et économiques plus larges."
+    "Le camp gauche insiste sur le parallèle direct avec le mouvement social français du 17 octobre autour des revendications contre la vie chère.",
+    "Le camp centre privilégie une approche globale des tensions en soulignant l'ampleur nationale de la contestation populaire et le nombre élevé d'interpellations à Milan.",
+    "Le camp droite met l'accent sur la dimension spectaculaire et destructrice des émeutes en citant explicitement plusieurs grandes villes touchées et l'usage de moyens policiers coercitifs."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 6
 }

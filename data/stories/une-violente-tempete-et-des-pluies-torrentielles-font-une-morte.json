@@ -6,6 +6,18 @@
   "storyDay": "2026-10-18",
   "articles": [
     {
+      "id": "e9f3e3918922",
+      "outletId": "le-monde",
+      "headline": "Espagne : deux morts après de fortes pluies et des inondations ; les habitants de la région de Valence appelés à rester chez eux",
+      "url": "https://www.lemonde.fr/international/article/2026/10/19/espagne-deux-morts-apres-de-fortes-pluies-et-des-inondations-les-habitants-de-la-region-de-valence-appeles-a-rester-chez-eux_6797518_3210.html",
+      "publishedAt": "2026-10-19T10:49:37.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/19/547/0/3281/1640/644/322/60/0/9a04c50_upload-1-jdyekry0eaxj-000-d27a4br.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "7b4cad5dd138",
       "outletId": "le-parisien",
       "headline": "Dans l’est de l’Espagne, un décès et de nombreuses perturbations après une violente tempête et des pluies torrentielles",
@@ -32,17 +44,24 @@
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le Monde fait état de deux décès causés par de fortes intempéries dans l'est du pays.",
+      "Le Premier ministre Pedro Sanchez qualifie la situation de très difficile dans la région de Valence.",
+      "Il est demandé aux habitants de cette région de rester chez eux et d'éviter tout déplacement."
+    ],
     "centre": [
-      "Une violente tempête a frappé l'est de l'Espagne, provoquant un décès et d'importantes perturbations dans les transports et la vie quotidienne."
+      "Le Parisien rapporte un décès et de multiples perturbations consécutifs à une tempête d'une grande violence.",
+      "Des pluies torrentielles s'abattent actuellement sur l'est de l'Espagne."
     ],
     "droite": [
-      "Des intempéries majeures, marquées par des inondations et des pluies torrentielles, ont causé la mort d'une femme à proximité de Barcelone."
+      "Le Figaro annonce qu'une femme a perdu la vie près de Barcelone en raison d'inondations et de précipitations torrentielles."
     ]
   },
   "differences": [
-    "Le centre privilégie une approche globale des perturbations et des dégâts matériels causés par la tempête dans l'est du pays.",
-    "La droite centre son traitement sur le drame humain en insistant sur le décès de la victime près de Barcelone."
+    "La gauche chiffre le bilan humain à deux morts et met l'accent sur les consignes strictes de confinement données par l'exécutif à Valence.",
+    "Le centre retient un bilan d'un mort et insiste sur l'ampleur des perturbations logistiques provoquées par la tempête.",
+    "La droite focalise son traitement sur le décès d'une femme localisé précisément près de Barcelone."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }
