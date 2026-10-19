@@ -6,13 +6,34 @@
   "storyDay": "2026-10-19",
   "articles": [
     {
+      "id": "5d5190f5f736",
+      "outletId": "le-figaro",
+      "headline": "Assurance : l’indemnisation des commerces vandalisés reste incertaine",
+      "url": "https://www.lefigaro.fr/flash-eco/assurance-l-indemnisation-des-commerces-vandalises-reste-incertaine-20261019",
+      "publishedAt": "2026-10-19T18:00:32.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/2937x1652_crop/2026/10/19/7214495ea2af86ff1c0f7db9b331c6e3b260c87c2c10646a51813dbf8989b571.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "cd950da04f45",
+      "outletId": "liberation",
+      "headline": "Mobilisation du 17 octobre : pour les commerçants, des dégâts encore difficiles à évaluer et parfois complexes à indemniser",
+      "url": "https://www.liberation.fr/economie/mobilisation-du-17-octobre-pour-les-commercants-des-degats-encore-difficiles-a-evaluer-et-parfois-complexes-a-indemniser-20261019_V7FNZAWVYVB6THDEXYTCTIWHNI/",
+      "publishedAt": "2026-10-19T17:19:05.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "5641cd8e9080",
       "outletId": "ouest-france",
       "headline": "Violences du 17 octobre : quelle indemnisation par les assurances des dommages causés aux commerçants ?",
       "url": "https://www.ouest-france.fr/economie/assurance/violences-du-17-octobre-quelle-indemnisation-par-les-assurances-des-dommages-causes-aux-commercants-d8aaee06-cbd2-11f1-b8bc-a46147b584ed?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-19T16:46:47.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNjY4OTM3MDdjNzljMjkxYWUzYzRlZWZiODU5ZWY3MWE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=a4571b29e43ed2c2faad9fcdb03d11f4238481824e5e2df09ce0f7f032251a60",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -33,15 +54,27 @@
   "section": "economy",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le gouvernement a promis des réparations rapides après les manifestations du 17 octobre.",
+      "L'évaluation des dommages subis par les commerçants reste ardue.",
+      "Le cadre juridique des assurances pourrait compliquer l'obtention des indemnisations financières et matérielles."
+    ],
     "centre": [
-      "Les assureurs ont annoncé des mesures exceptionnelles ce lundi soir pour indemniser les commerçants touchés par les violences du 17 octobre.",
-      "Le délai pour déclarer les sinistres est allongé à 30 jours au lieu de 5, avec des procédures d'indemnisation accélérées et des facilités pour les avances de fonds.",
-      "L'application se fera au cas par cas selon les contrats, France Assureurs ne recommandant pas cette fois de baisse générale des franchises contrairement à 2023."
+      "Les assureurs ont mis en place des dispositifs dérogatoires suite aux dégradations du 17 octobre.",
+      "Le délai de déclaration des sinistres est étendu à trente jours au lieu de cinq.",
+      "Les procédures d'indemnisation des commerçants touchés sont considérablement accélérées."
+    ],
+    "droite": [
+      "Les remboursements des commerces vandalisés demeurent incertains.",
+      "L'application des garanties souscrites et des clauses contractuelles dictent l'ampleur des dédommagements.",
+      "L'exécutif envisage la création d'un fonds de soutien pour épauler les professionnels."
     ]
   },
   "differences": [
-    "Le camp du centre se focalise sur les aspects administratifs et pratiques des mesures d'aide aux commerçants, en insistant sur l'allongement des délais de déclaration et l'absence de réduction des franchises par rapport à l'année précédente."
+    "La gauche insiste sur les obstacles administratifs et législatifs qui freinent la réparation des préjudices.",
+    "Le centre met en avant la réactivité des professionnels du secteur à travers des dispositions exceptionnelles d'indemnisation.",
+    "La droite pointe l'incertitude financière persistante et subordonne les compensations aux critères stricts des contrats d'assurance."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 4
 }
