@@ -54,8 +54,13 @@ const mediaCount = reportingOutletIds(story.articles).size;
 // same as Article rows), "hier à …" for yesterday, absolute date otherwise
 // ("le 11 oct. 2026 à …"). Date and clock joined by "à" (French convention).
 // Shared clock and day markers come from story-date (same as StoryHero).
-const updated = new Date(story.articles[0]?.publishedAt ?? Date.now());
 const published = new Date(story.createdAt);
+const updated = new Date(
+  Math.max(
+    story.articles[0] ? new Date(story.articles[0].publishedAt).getTime() : 0,
+    published.getTime(),
+  ),
+);
 // Same day (same minute included): the day marker is stated once, up
 // front and then not repeated — "Publié hier à 12h01, mis à jour à
 // 18h45"; different days carry their own marker ("Publié hier à
