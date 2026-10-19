@@ -6,6 +6,30 @@
   "storyDay": "2026-10-18",
   "articles": [
     {
+      "id": "f1f9977cfc74",
+      "outletId": "le-monde",
+      "headline": "Canada : quatre morts et 19 blessés dans un « état critique » après un incendie sur une base militaire en Alberta",
+      "url": "https://www.lemonde.fr/international/article/2026/10/19/canada-quatre-morts-et-19-blesses-dans-un-etat-critique-apres-un-incendie-sur-une-base-militaire-en-alberta_6797056_3211.html",
+      "publishedAt": "2026-10-19T00:00:11.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/18/688/0/8256/4128/644/322/60/0/fd2fce9_ftp-1-uecpuznsi2g9-03dba0b7c3fb4622a1cd61c5704d02c0-0-18c98dfb754a405090d04d11fc2969fb.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "6ec2b3d2dc13",
+      "outletId": "ouest-france",
+      "headline": "Canada : un « incident » sur une base militaire fait 4 morts et 39 blessés, un médecin évoque « un désastre »",
+      "url": "https://www.ouest-france.fr/monde/canada/canada-un-incident-sur-une-base-militaire-fait-plusieurs-morts-db1d3196-caa4-11f1-b8bc-a46147b584ed?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-18T23:00:26.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMGJlZGQ4MDNhN2EwNTM3ZWYzZTEwNWZlNTlhYzJhMmM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=a5692389f50754b450686f35ab260499a8374f863b390417d9065c5f4ff1d914",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "344b4656f4f8",
       "outletId": "tf1-info",
       "headline": "Un \"désastre\" en plein exercice : quatre soldats canadiens tués dans un incendie sur une base militaire",
@@ -101,26 +125,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Quatre soldats canadiens ont perdu la vie dans un violent incendie survenu pendant un exercice militaire sur la base de Wainwright en Alberta.",
-      "Une dizaine de militaires ont été grièvement blessés et évacués vers des hôpitaux locaux totalement submergés par l'afflux de victimes.",
-      "Le gouvernement canadien a qualifié le drame d'incident grave, entraînant notamment la suspension du vote anticipé pour le référendum local dans la région."
+      "Quatre militaires sont morts et dix-neuf autres se trouvent dans un état critique à la suite d'un incendie survenu sur une base militaire en Alberta.",
+      "Le premier ministre canadien Mark Carney a qualifié l'événement d'« une des plus grandes tragédies » sur le sol canadien en temps de paix.",
+      "Les établissements de santé locaux ont été totalement submergés par l'afflux de blessés."
     ],
     "centre": [
-      "Un incendie majeur sur la base militaire de Wainwright dans l'ouest du Canada a provoqué la mort de quatre soldats et fait de nombreux blessés graves.",
-      "Le Premier ministre Mark Carney et les autorités locales ont qualifié l'événement de désastre rarissime ne survenant qu'une fois tous les quinze à vingt-cinq ans.",
-      "Les structures de santé de la zone ont été complètement débordées par l'urgence, nécessitant l'évacuation des blessés vers plusieurs hôpitaux de la province."
+      "Un incident a provoqué un violent incendie sur la base militaire de Wainwright, dans l'ouest du Canada.",
+      "Le bilan fait état de quatre morts et de dizaines de blessés, dont une vingtaine en état critique.",
+      "Un médecin qualifie la situation de « désastre », tandis que le gouvernement évoque un événement exceptionnel ne survenant qu'une fois tous les quinze à vingt-cinq ans."
     ],
     "droite": [
-      "Quatre militaires canadiens ont trouvé la mort samedi au cours d'un violent incendie déclaré sur une base militaire de l'ouest du pays en plein exercice.",
-      "Plus d'une dizaine d'autres soldats ont été grièvement blessés lors de ce sinistre qualifié de catastrophe sans précédent récent.",
-      "Les victimes ont été rapidement évacuées vers divers établissements hospitaliers de la province de l'Alberta."
+      "Quatre soldats canadiens ont perdu la vie dans un violent incendie survenu pendant un exercice militaire.",
+      "Une dizaine de militaires ont été grièvement blessés et évacués vers plusieurs hôpitaux de la province.",
+      "Les autorités soulignent l'extrême rareté de ce type d'accident dramatique dans un passé récent."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la saturation immédiate des structures de santé locales et les répercussions collatérales de l'accident sur la vie démocratique régionale, notamment la suspension du référendum.",
-    "Le centre insiste sur le caractère exceptionnel et la rareté historique de ce type de catastrophe en s'appuyant sur les déclarations officielles du Premier ministre.",
-    "La droite privilégie un récit centré sur le bilan humain dramatique et les circonstances opérationnelles de l'exercice militaire qui a tourné au drame."
+    "La gauche met l'accent sur la dimension nationale du deuil institutionnel et la saturation des hôpitaux.",
+    "Le centre insiste sur le caractère exceptionnel et qualifié de « désastre » de l'incident en se concentrant sur le bilan chiffré.",
+    "La droite privilégie le contexte opérationnel du drame survenu en plein exercice et l'évacuation des blessés."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 8
+  "summarizedArticleCount": 10
 }
