@@ -3,6 +3,12 @@
 Supersedes the backfill tier of ADR-0017 and the `EDITION_SIZE = 20` cut.
 Decided 2026-10-17.
 
+> **Partially superseded by ADR-0026** (2026-10-19): the live pool's
+> definition below (« today's, and yesterday's until 06:00 Paris ») is gone
+> — the Edition is every Story whose Ingestion window `[founding,
+> founding + 24h]` is open, with a sharp exit at the close. The uncapped
+> ranking and the Summaries budget remain in force.
+
 The Edition was capped at 20 Stories for one reason only: the free tier of
 the Gemini API could not afford more Summaries calls. That leaked an AI
 budget into editorial visibility — Stories were hidden from readers because

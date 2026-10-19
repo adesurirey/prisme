@@ -60,7 +60,7 @@ A later Story covering the same news event as an earlier one — the day-by-day 
 _Avoid_: Follow-up, part 2, sequel
 
 **Live Story**:
-A Story with at least one Article less than 24 hours old, within its Ingestion window. Live Stories can gain Articles and make up the Edition (ADR-0022).
+A Story whose Ingestion window is open — founded less than 24 hours ago, so every one of its Articles is less than 24 hours old (ADR-0026). Live Stories can gain Articles and make up the Edition (ADR-0022).
 _Avoid_: Active story, open story
 
 **Frozen Story**:
@@ -88,16 +88,16 @@ The part of the news a Story belongs to: Politique, International, Économie, So
 _Avoid_: Category, rubric, topic
 
 **Edition**:
-Everything Prisme publishes for the day, updated throughout the day: all window-open Stories (today's, and yesterday's until 06:00 — the Edition's live pool) ranked by Coverage, with no cut (ADR-0022). Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
+Everything Prisme publishes for the day, updated throughout the day: all Stories whose Ingestion window is open — founded less than 24 hours ago (ADR-0026) — ranked by Coverage, with no cut (ADR-0022). A Story leaves la Une at its window close, at most 24 hours after its founding. Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
 _Avoid_: Issue, digest, daily, run
 
 **Story day**:
-The one Publication day (Europe/Paris) a Story belongs to — the day of its founding Article, fixed when the Story is created. An Article may only join a Story of its own Story day.
+The one Publication day (Europe/Paris) a Story belongs to — the day of its founding Article, fixed when the Story is created. It keys the Story's URL, its archive page and the Episode age window; which Articles may join is governed by the Ingestion window, not by the day (ADR-0026).
 _Avoid_: Story date, day of the story
 
 **Ingestion window**:
-The period after a Story's day during which the Story still accepts Articles — until 06:00 the next morning, Europe/Paris — covering Articles published just before midnight but collected after. Past the window, the Story is frozen.
-_Avoid_: Grace period, closing time
+The period, from a Story's founding, during which the Story still accepts Articles: `[founding, founding + 24h]` in instant arithmetic, where the founding instant is the earliest `publishedAt` among the Story's Articles (ADR-0026). An evening Story absorbs its overnight cycle — the founding is at most 24 hours old, so the window is DST-proof by construction. Past the window, the Story is frozen.
+_Avoid_: Grace period, closing time, 06:00 rule
 
 **Summaries budget**:
 The at-most-20 top-ranked Stories per build that gain a Summaries call when they gained Articles — derived from the Gemini free tier's daily quota (ADR-0022). A Story outside the budget keeps its existing summary as-is.

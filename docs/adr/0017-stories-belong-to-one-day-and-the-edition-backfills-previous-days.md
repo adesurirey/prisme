@@ -2,8 +2,12 @@
 
 > **Partially superseded by ADR-0022** (2026-10-17): the backfill tier and
 > the EDITION_SIZE cap are gone — the Edition is the uncapped live pool.
-> The Story day, the 06:00 ingestion window and the archive pages below
-> remain in force.
+> **Superseded by ADR-0026** (2026-10-19): the appartenance rule (one
+> Publication day per Article) and the 06:00 ingestion window below are
+> gone — a Story ingests for 24 hours from its founding Article, in
+> instant arithmetic. Do not reintroduce the one-publication-day rule from
+> this record alone. The Story day (fixed at creation), the archive pages
+> and the day-based Episode/Topic arithmetic remain in force.
 
 Continuous-news Stories spanned days and froze the ranking (ADR-0005 × ADR-0009): the home was a rolling cumulative and the day-by-day evolution was invisible — one Story reached 273 Articles across 27 Outlets with 103 Articles in its last 12 hours. Decision: a Story belongs to **one Publication day** (Europe/Paris) — the day of its founding Article, fixed at creation. An Article may only join a Story of its own Publication day (the Europe/Paris day of its `publishedAt`); a new day means new Stories. The Grouping model and prompt are untouched; the candidate pool shrinks to the current day, so the prompt gets shorter. A Story stays open to ingestion until 06:00 Europe/Paris the day after its day, so an Article published 23h50 but collected after midnight still finds its Story; past that it is frozen (ADR-0005 permanence untouched) and a late-collected old Article stays Unassigned. The Edition ranks current-day Stories first by ADR-0009 Coverage, then fills remaining slots up to EDITION_SIZE (20) with **backfill**: previous days' Stories that have `everInEdition`, newest day first (J-1, then J-2, J-3… as far back as needed), each day ranked by Coverage. Backfill erodes through the day as current-day Stories push it down; at midnight the changeover is smooth. Backfill cards get no visual marking, and a Story may repeat across days (yesterday's episode under today's) — accepted as a chronology the reader already tracks; a lexical dedup heuristic was explicitly rejected. Pages `/archives/<YYYY-MM-DD>/` (ISO date) are rendered at build time from the permanent Story files filtered by Story day — all `everInEdition` Stories of that day, unlimited, ranked like the home — with previous/next navigation from the home plus access by date. This is an appartenance rule, not a scheduled job: no midnight cron. The "chaîne" concept (predecessor links, chain index pages, "Jour 3" labels) is deliberately deferred.
 
