@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-19T09:01:20.377Z",
+  "builtAt": "2026-10-19T10:01:25.161Z",
   "stories": [
     {
       "id": "9477f6799865",
@@ -15,7 +15,7 @@
           "url": "https://www.lefigaro.fr/actualite-france/violences-du-17-octobre-je-suis-responsable-de-ce-qui-se-passe-souligne-laurent-nunez-qui-admet-une-perte-de-controle-dans-certaines-villes-20261019",
           "publishedAt": "2026-10-19T07:34:45.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/19/87a99f8d9dfeb5d8218ecb3d9e586832f746e9d7563254115808de93ba7e2b4c.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -282,7 +282,7 @@
           "url": "https://www.lemonde.fr/societe/live/2026/10/19/en-direct-mobilisation-du-17-octobre-emmanuel-macron-a-refuse-la-demission-du-ministre-de-l-interieur-laurent-nunez_6795855_3224.html",
           "publishedAt": "2026-10-19T05:17:00.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/19/750/0/5000/2500/644/322/60/0/308cc1f_upload-1-d0soqwaytmyz-2026-10-18-paris-pol-lemonde-17oct-jour-apres-104.JPG",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -1702,7 +1702,7 @@
           "url": "https://www.lefigaro.fr/meteo/pluie-inondations-le-gard-et-l-herault-places-en-vigilance-orange-20261019",
           "publishedAt": "2026-10-19T03:47:04.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2029_crop/2026/10/19/de802410394e995bb942144210cca55370d1993414c2d377efd1867cad9440bd.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "science",
           "everFrontPage": true
@@ -1748,7 +1748,7 @@
           "url": "https://www.ouest-france.fr/meteo/orage/orages-pluies-et-inondations-les-departements-du-gard-et-de-lherault-seront-places-en-vigilance-orange-lundi-ae994eec-caff-11f1-ad87-e24a1a2986e9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-10-18T15:06:54.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZDM2OTY0MDAwNDBlMmUxMTEzMzA2NmIzMzcxNGI5YjM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d29391c34f5c6a2bf71e9acdc5dfb8156b8795fda221200902bbd301eed09a49",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "science",
           "everFrontPage": true
@@ -1816,10 +1816,21 @@
     {
       "id": "d0f958f5e67f",
       "slug": "volodymyr-zelensky-s-entretient-avec-des-emissaires-de-donald-tr",
-      "title": "Volodymyr Zelensky s'entretient avec des émissaires de Donald Trump pour apaiser les tensions et annonce la reprise du partage de renseignements",
+      "title": "Donald Trump attaque Volodymyr Zelensky tandis que Washington dément toute pause dans le partage de renseignements",
       "createdAt": "2026-10-19T01:01:18.026Z",
       "storyDay": "2026-10-18",
       "articles": [
+        {
+          "id": "b04cb470d909",
+          "outletId": "le-parisien",
+          "headline": "Guerre en Ukraine : « Zelensky doit se concentrer sur la fin de la guerre », passe d’armes entre Kiev et Washington sur le partage de renseignement",
+          "url": "https://www.leparisien.fr/international/ukraine/guerre-en-ukraine-zelensky-doit-se-concentrer-sur-la-fin-de-la-guerre-passe-darmes-entre-kiev-et-washington-sur-le-partage-de-renseignement-19-10-2026-OJNKRHY66FE2NCLEW5T7XVQOZA.php",
+          "publishedAt": "2026-10-19T10:01:25.161Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
         {
           "id": "f8d3b8489051",
           "outletId": "bfmtv",
@@ -1881,7 +1892,7 @@
           "url": "https://www.lefigaro.fr/international/guerre-en-ukraine-marco-rubio-dement-toute-pause-dans-le-partage-de-renseignements-avec-kiev-20261019",
           "publishedAt": "2026-10-19T06:09:17.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/19/87f31305836aed3f3487a58cd4ab67e73021c79b38654e36e4a002fb084abdd4.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -1927,29 +1938,29 @@
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Le président ukrainien Volodymyr Zelensky subit de nouvelles critiques de la part de Donald Trump malgré l'ouverture de discussions avec ses émissaires.",
-          "Donald Trump reproche au dirigeant ukrainien de rejeter la fin des hostilités et de maintenir ses frappes contre les infrastructures énergétiques.",
-          "Le dialogue se poursuit entre Kiev et les représentants américains pour tenter de renouer le contact malgré les tensions.",
-          "L'actualité est marquée par la poursuite de frappes croisées touchant les sites énergétiques russes et ukrainiens."
+          "Donald Trump multiplie les critiques contre Volodymyr Zelensky, affirmant que le président ukrainien refuse de conclure le conflit et continue de viser les infrastructures énergétiques.",
+          "Volodymyr Zelensky s'entretient avec des émissaires américains afin de tenter d'apaiser les tensions avec Washington.",
+          "Le chef de la diplomatie américaine, Marco Rubio, dément toute interruption dans le partage de renseignements avec Kiev.",
+          "Volodymyr Zelensky exprime sa reconnaissance suite à la reprise de la transmission des informations stratégiques par les États-Unis."
         ],
         "centre": [
-          "Le secrétaire d'État américain Marco Rubio a formellement démenti toute interruption dans le partage de renseignements avec Kiev.",
-          "Marco Rubio a exhorté le président ukrainien Volodymyr Zelensky à axer ses efforts sur la conclusion du conflit.",
-          "Donald Trump a publiquement accusé Volodymyr Zelensky de ne pas vouloir clore la guerre.",
-          "Volodymyr Zelensky s'est entretenu avec des émissaires de Donald Trump pour apaiser les tensions diplomatiques avec Washington et a acté la reprise du partage de renseignements."
+          "Marco Rubio affirme qu'il n'y a eu aucune suspension dans le partage de renseignements entre Washington et Kiev.",
+          "Donald Trump reproche publiquement à Volodymyr Zelensky de ne pas vouloir mettre un terme à la guerre en Ukraine.",
+          "Le président ukrainien échange avec des représentants américains pour tenter de ramener le calme dans les relations bilatérales.",
+          "Les autorités ukrainiennes confirment la poursuite ou la reprise de la coopération en matière de renseignements avec les États-Unis."
         ],
         "droite": [
-          "Le secrétaire d'État américain Marco Rubio a nié l'existence d'une quelconque pause dans le transfert de renseignements vers l'Ukraine.",
-          "Marco Rubio a demandé à Volodymyr Zelensky de focaliser son attention sur la résolution du conflit en cours."
+          "Marco Rubio intervient pour rejeter officiellement l'existence d'une pause dans le partage des données de renseignement avec l'Ukraine.",
+          "Les tensions persistent entre Kiev et Washington sur fond de désaccords concernant la stratégie pour terminer le conflit."
         ]
       },
       "differences": [
-        "La gauche met l'accent sur la persistance des attaques de Donald Trump contre Volodymyr Zelensky et sur la poursuite des frappes énergétiques croisées.",
-        "Le centre se concentre sur les déclarations rassurantes de Marco Rubio concernant le partage de renseignements et sur les efforts de conciliation menés par Zelensky avec les émissaires américains.",
-        "La droite adopte un angle centré sur le démenti officiel de Marco Rubio et sur son appel direct à Kiev pour accélérer la fin de la guerre."
+        "La gauche insiste en premier lieu sur la violence des attaques verbales de Donald Trump contre Volodymyr Zelensky et met en avant les efforts diplomatiques du dirigeant ukrainien pour renouer le dialogue.",
+        "Le centre privilégie la déclaration officielle de Marco Rubio tout en rapportant le désaccord persistant et les critiques formulées par Donald Trump à l'encontre de Kiev.",
+        "La droite se concentre strictement sur le démenti institutionnel de Marco Rubio concernant le partage de renseignements, minimisant les passes d'armes politiques."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 9
+      "summarizedArticleCount": 10
     },
     {
       "id": "6ca62e9da074",
@@ -2555,6 +2566,165 @@
       "summarizedArticleCount": 5
     },
     {
+      "id": "f768b6ab9bc7",
+      "slug": "la-coordination-des-gilets-jaunes-annonce-un-acte-ii-pour-samedi",
+      "title": "La coordination des gilets jaunes annonce un acte II pour samedi prochain",
+      "createdAt": "2026-10-19T10:01:25.161Z",
+      "storyDay": "2026-10-19",
+      "articles": [
+        {
+          "id": "e5e236e2c190",
+          "outletId": "ouest-france",
+          "headline": "Des Gilets jaunes annoncent un « acte II » dès ce samedi, une intersyndicale appelle à une grève massive le 5 novembre",
+          "url": "https://www.ouest-france.fr/societe/manifestation/des-gilets-jaunes-annoncent-un-acte-ii-des-ce-samedi-une-intersyndicale-appelle-a-une-greve-massive-le-5-novembre-88b94450-cb9c-11f1-ad87-e24a1a2986e9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-19T09:48:26.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYzI1MGMzNGM1ODQ1ZWE0MTExZDI3YTNkM2NkOTIzYWQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=092145984f16801cb4ee994a258c6c23ffc6054556b57fc129a6b038f2f55963",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "f8493024f625",
+          "outletId": "tf1-info",
+          "headline": "\"Acte II\" des gilets jaunes : la coordination annonce une nouvelle mobilisation le 24 octobre",
+          "url": "https://www.tf1info.fr/societe/acte-ii-des-gilets-jaunes-la-coordination-annonce-une-nouvelle-mobilisation-le-24-octobre-2470761.html",
+          "publishedAt": "2026-10-19T09:43:05.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/682/fumee-place-republique-paris-17-octobre-2026-543ad0-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "fc36f9c84e89",
+          "outletId": "bfmtv",
+          "headline": "La coordination des gilets jaunes à l'origine des manifestations annonce un \"acte II\" pour samedi prochain",
+          "url": "https://www.bfmtv.com/societe/manifestations/la-coordination-des-gilets-jaunes-annonce-un-acte-ii-de-la-mobilisation-pour-samedi-prochain_AP-202610190367.html",
+          "publishedAt": "2026-10-19T09:30:22.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/bFwILbArgISHCSIkJwlTkt5ownE=/7x111:2039x1254/800x0/images/Des-gilets-jaunes-lors-de-la-manifestation-du-17-octobre-2026-a-Paris-2367945.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "7e1381cbb100",
+          "outletId": "mediapart",
+          "headline": "Le fil du lundi 19 octobre. Des Gilets jaunes appellent à un acte II samedi",
+          "url": "https://www.mediapart.fr/journal/politique/191026/le-fil-du-lundi-19-octobre-des-gilets-jaunes-appellent-un-acte-ii-samedi",
+          "publishedAt": "2026-10-19T08:01:39.000Z",
+          "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/10/19/251019-img-le-fil-de-la-journee-macron-refuse-la-demission-de-nunez-1.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "f768b6ab9bc7",
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "La coordination des Gilets jaunes planifie une nouvelle mobilisation pour samedi suivant la date du 17 octobre.",
+          "Mediapart intègre cet appel au sein d'une chronologie générale comprenant le refus présidentiel concernant le ministre de l'Intérieur et le blocage du Louvre par des étudiants."
+        ],
+        "centre": [
+          "La structure organisatrice des rassemblements du 17 octobre programme un acte II fixé au samedi 24 octobre à travers le territoire.",
+          "Le site internet dédié à la contestation diffuse une cartographie recensant de nombreuses actions programmées.",
+          "Ouest-France mentionne en parallèle la convocation par l'intersyndicale CFDT-CGT-FO-Unsa-FSU d'une journée de grèves et de manifestations le 5 novembre axée sur les salaires."
+        ],
+        "droite": [
+          "La coordination issue des manifestations du 17 octobre contre la cherté de la vie officialise la tenue d'un acte II pour le samedi 24 octobre.",
+          "TF1 Info précise que la cartographie des actions en ligne sur le portail dédié comptabilise déjà plusieurs dizaines de rassemblements validés."
+        ]
+      },
+      "differences": [
+        "La gauche contextualise l'appel au sein de l'actualité sociale et institutionnelle globale du pays sans s'attarder sur la logistique des cortèges.",
+        "Le centre livre un compte-rendu factuel et détaillé de la carte des mobilisations tout en élargissant l'horizon vers la grève intersyndicale du 5 novembre.",
+        "La droite centre son analyse sur les aspects pratiques et géographiques du mouvement en s'appuyant sur les données cartographiques publiées en ligne."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 4
+    },
+    {
+      "id": "5f7eafcd7ac6",
+      "slug": "la-police-israelienne-arrete-dix-colons-apres-l-attaque-d-un-con",
+      "title": "La police israélienne arrête dix colons après l'attaque d'un convoi diplomatique européen",
+      "createdAt": "2026-10-19T10:01:25.161Z",
+      "storyDay": "2026-10-19",
+      "articles": [
+        {
+          "id": "8ccaed61c2ce",
+          "outletId": "bfmtv",
+          "headline": "Maire français agressé en Cisjordanie: la police israélienne annonce dix arrestations après l'attaque d'un convoi diplomatique européen par des colons",
+          "url": "https://www.bfmtv.com/international/moyen-orient/palestine/maire-francais-agresse-en-cisjordanie-la-police-israelienne-annonce-dix-arrestations-apres-l-attaque-d-un-convoi-diplomatique-europeen-par-des-colons_AD-202610190377.html",
+          "publishedAt": "2026-10-19T09:43:44.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/mD2vP8REQ5LadISjiIwuTrnl1vQ=/0x212:2048x1364/800x0/images/Armee-israelienne-Cisjordanie-2189549.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "6046d54b6fa1",
+          "outletId": "le-figaro",
+          "headline": "Cisjordanie : la police israélienne annonce l’arrestation de dix colons, soupçonnés d’être impliqués dans une attaque contre un maire français",
+          "url": "https://www.lefigaro.fr/international/cisjordanie-la-police-israelienne-annonce-l-arrestation-de-dix-colons-soupconnes-d-etre-impliques-dans-une-attaque-contre-un-maire-francais-20261019",
+          "publishedAt": "2026-10-19T09:09:51.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/19/d50e0e9ee3fb9c4d9b53642c7333194868d648293c0549d4edc940e223544402.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "b40825b9e692",
+          "outletId": "le-monde",
+          "headline": "Violences de colons en Cisjordanie : dix personnes arrêtées, annonce la police israélienne",
+          "url": "https://www.lemonde.fr/international/article/2026/10/19/violences-de-colons-en-cisjordanie-dix-personnes-arretees-annonce-la-police-israelienne_6797499_3210.html",
+          "publishedAt": "2026-10-19T08:14:45.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/19/0/0/4000/2000/644/322/60/0/f1f2f47_ftp-1-kyrxmjhlm7db-2026-10-19t064846z-1030576402-rc264oaf7f81-rtrmadp-3-israel-palestinians-westbank-arrests.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "708a01ee92b4",
+          "outletId": "franceinfo",
+          "headline": "En Cisjordanie occupée, la police israélienne annonce dix arrestations après des violences de colons contre un convoi de diplomates européens",
+          "url": "https://www.franceinfo.fr/monde/palestine/en-cisjordanie-occupee-la-police-israelienne-annonce-dix-arrestations-apres-des-violences-de-colons-contre-un-convoi-de-diplomates-europeens_8243569.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-19T07:10:25.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/SJ1rBuAFz_UNAQeufpjCWYzfxqk/0x106:1024x682/432x243/filters:format(jpg)/2026/10/19/6ad5cb84e28de722954989.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "bc8a9a976206",
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "La police israélienne a interpellé dix individus après l'agression d'une délégation diplomatique européenne en Cisjordanie.",
+          "Le maire d'Aulnoye-Aymeries, Bernard Baudoux, a subi des violences physiques lors de cet accrochage.",
+          "Une photographe américaine avait également été grièvement blessée par des colons la veille.",
+          "Le ministre israélien des Affaires étrangères, Gideon Saar, a qualifié ces agissements de graves et les a réprouvés."
+        ],
+        "centre": [
+          "Dix interpellations ont été menées par les forces de l'ordre israéliennes suite à l'agression d'un cortège diplomatique européen en Cisjordanie.",
+          "Bernard Baudoux, premier édile communiste de la commune d'Aulnoye-Aymeries dans le département du Nord, a été frappé lors de l'attaque menée par des colons."
+        ],
+        "droite": [
+          "Dix colons ont été appréhendés par les autorités israéliennes à la suite de violences exercées contre un cortège diplomatique européen.",
+          "L'attaque s'est produite en Cisjordanie et a ciblé Bernard Baudoux, premier édile d'Aulnoye-Aymeries, âgé de 78 ans."
+        ]
+      },
+      "differences": [
+        "Le camp gauche élargit la perspective en mentionnant la photographe américaine blessée la veille et la condamnation explicite de Gideon Saar.",
+        "Le camp centre se focalise strictement sur l'événement factuel de l'agression du maire français et l'intervention policière.",
+        "Le camp droite met en avant l'âge précis de la victime française pour souligner la gravité de l'attaque menée par les colons."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 4
+    },
+    {
       "id": "aa4199116863",
       "slug": "gael-monfils-et-elina-svitolina-annoncent-leur-divorce",
       "title": "Gaël Monfils et Elina Svitolina annoncent leur divorce",
@@ -2964,6 +3134,68 @@
       "summarizedArticleCount": 5
     },
     {
+      "id": "4fcfb33116da",
+      "slug": "un-suspect-interpelle-apres-l-agression-d-une-deputee-australien",
+      "title": "Un suspect interpellé après l'agression d'une députée australienne",
+      "createdAt": "2026-10-19T10:01:25.161Z",
+      "storyDay": "2026-10-19",
+      "articles": [
+        {
+          "id": "b6cd2bf0bbd7",
+          "outletId": "franceinfo",
+          "headline": "Une députée australienne gravement blessée lors d'une \"attaque\", un suspect interpellé",
+          "url": "https://www.franceinfo.fr/monde/asie/une-deputee-australienne-gravement-blessee-lors-d-une-attaque-un-suspect-interpelle_8243767.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-19T09:48:44.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/-kefBhtTAKE4oe2L84KHLUxqvIs/0x0:7407x4166/432x243/filters:format(jpg)/2026/10/19/6ad5e76e1d5dc803163742.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "beaae3be5df9",
+          "outletId": "le-figaro",
+          "headline": "Australie : une députée blessée lors d’une agression, un suspect placé en garde à vue",
+          "url": "https://www.lefigaro.fr/international/australie-une-deputee-blessee-lors-d-une-agression-un-suspect-place-en-garde-a-vue-20261019",
+          "publishedAt": "2026-10-19T09:36:23.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/19/a9ba0e2032d3bd2e6532c0ea77f69491ebf93fdc1c7deb6977c5bd2255406b68.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "f0feb7fde3ad",
+          "outletId": "liberation",
+          "headline": "Un suspect arrêté après la violente agression d’une députée australienne",
+          "url": "https://www.liberation.fr/international/asie-pacifique/un-suspect-arrete-apres-la-violente-agression-dune-deputee-australienne-20261019_Q3QIKTWF7RBVTI2OUCOZ5J5BQQ/",
+          "publishedAt": "2026-10-19T09:13:34.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "4fcfb33116da",
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "La députée indépendante Helen Haines a été grièvement blessée après avoir été renversée par une voiture devant son bureau dans la région de Victoria.",
+          "La victime, élue de la circonscription d'Indi depuis 2019, reste hospitalisée à la suite de cette violente agression.",
+          "Un homme âgé de 43 ans a été interpellé par les forces de l'ordre et fait actuellement l'objet d'interrogatoires."
+        ],
+        "droite": [
+          "Helen Haines, députée indépendante, a été blessée lors d'un incident grave survenu près de son bureau dans le pays.",
+          "Le premier ministre australien Anthony Albanese a exprimé son soutien à la parlementaire victime de ces faits.",
+          "Un suspect de 43 ans a été placé en garde à vue après avoir été maîtrisé par des passants puis arrêté par la police."
+        ]
+      },
+      "differences": [
+        "La gauche insiste sur la brutalité physique des faits en précisant que l'élue a été violemment renversée par un véhicule et demeure hospitalisée.",
+        "La droite privilégie une approche institutionnelle en mettant en avant l'intervention rapide des passants et le soutien officiel affiché par le premier ministre Anthony Albanese."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3
+    },
+    {
       "id": "141a2bacfbeb",
       "slug": "milan-bologne-et-turin-connaissent-des-scenes-de-chaos-et-de-pil",
       "title": "Milan, Bologne et Turin secouées par de nouvelles scènes de chaos et de pillages",
@@ -3274,6 +3506,58 @@
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 3
+    },
+    {
+      "id": "32f7917c7cc3",
+      "slug": "elon-musk-promet-de-donner-une-action-spacex-a-chaque-enfant-en",
+      "title": "Elon Musk promet de donner une action SpaceX à chaque enfant en Amérique",
+      "createdAt": "2026-10-19T10:01:25.161Z",
+      "storyDay": "2026-10-19",
+      "articles": [
+        {
+          "id": "cd066bd12d2c",
+          "outletId": "le-figaro",
+          "headline": "Elon Musk veut donner une action SpaceX à «chaque enfant en Amérique»",
+          "url": "https://www.lefigaro.fr/societes/elon-musk-veut-donner-une-action-spacex-a-chaque-enfant-en-amerique-20261019",
+          "publishedAt": "2026-10-19T09:39:37.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/19/5cf9fe66c9affc7b0bd75a018bf20f3606c064a4d2a59aaf0a4cac76d961c544.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "8fc47d77bbaf",
+          "outletId": "bfmtv",
+          "headline": "Ce serait un \"don\" à 10 milliards de dollars: Elon Musk promet de \"donner une de ses actions SpaceX à chaque enfant en Amérique\" en 2027",
+          "url": "https://www.bfmtv.com/economie/entreprises/ce-serait-un-don-a-10-milliards-de-dollars-elon-musk-promet-de-donner-une-de-ses-actions-space-x-a-chaque-enfant-en-amerique-en-2027_AV-202610190370.html",
+          "publishedAt": "2026-10-19T09:38:13.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/kjBomkZk0oZlP5WpoSCApMesTNw=/0x106:2048x1258/800x0/images/Elon-Musk-2307995.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "topicId": "32f7917c7cc3",
+      "section": "economy",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Elon Musk s'engage à distribuer une part de son entreprise aérospatiale à chaque mineur américain à l'horizon 2027.",
+          "Cette opération philanthropique est évaluée à dix milliards de dollars selon l'annonce publiée sur la plateforme X.",
+          "La valeur unitaire de ce titre financier est estimée à cent quarante-six dollars."
+        ],
+        "droite": [
+          "Le fondateur de SpaceX envisage de céder une action de la société à l'ensemble de la jeunesse américaine dès l'année prochaine.",
+          "Cette déclaration intervient dans le contexte politique tendu des élections de mi-mandat pour Donald Trump.",
+          "Le projet reste pour l'instant dépourvu de précisions opérationnelles concrètes."
+        ]
+      },
+      "differences": [
+        "Le camp centre chiffre précisément l'impact financier de l'opération et fixe l'échéance à 2027 en s'appuyant sur les détails communiqués par l'entrepreneur.",
+        "Le camp droite contextualise l'annonce par rapport à l'échéance électorale de Donald Trump tout en soulignant le flou des modalités."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2
     },
     {
       "id": "985b3e8a7555",
@@ -3694,54 +3978,6 @@
         "Le traitement de droite développe amplement le profil de l'arbitre en insistant sur son expérience cumulée et son bilan historique favorable au club parisien, contrairement au centre qui se limite à rappeler sa nationalité et le précédent de la saison passée."
       ],
       "promptVersion": "sum-3",
-      "summarizedArticleCount": 2
-    },
-    {
-      "id": "79ada0cd2962",
-      "slug": "un-maire-francais-agresse-et-un-convoi-de-diplomates-europeens-v",
-      "title": "Un maire français agressé et un convoi de diplomates européens visé en Cisjordanie occupée",
-      "createdAt": "2026-10-19T01:01:18.026Z",
-      "storyDay": "2026-10-18",
-      "articles": [
-        {
-          "id": "93a575457e3c",
-          "outletId": "lobs",
-          "headline": "Attaque en Cisjordanie occupée : un convoi de diplomates européens ciblé, un maire français agressé… Ce que l’on sait",
-          "url": "https://www.nouvelobs.com/monde/20261018.OBS119313/attaque-en-cisjordanie-occupee-un-convoi-de-diplomates-europeens-cible-un-maire-francais-agresse-ce-que-l-on-sait.html",
-          "publishedAt": "2026-10-18T09:57:58.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/10/18/0/0/3352/2235/0/0/60/0/b89fdab_upload-1-go0xfitmbdyn-000-d3lc8cr.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "06e4836f21c2",
-          "outletId": "20-minutes",
-          "headline": "Cisjordanie : Un maire français agressé par des colons accuse Israël de « tolérer » leurs violences, l’UE condamne",
-          "url": "https://www.20minutes.fr/monde/israel/4255303-20261018-cisjordanie-maire-francais-agresse-colons-accuse-israel-tolerer-violences?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-18T09:30:18.000Z",
-          "imageUrl": "https://img.20mn.fr/DCd_cLGiSjS0cB_HIoccRCk/1200x768_des-palestiniens-recoltent-leurs-olives-sur-leurs-terres-du-village-de-rujeib-en-cisjordanie-occupee-le-9-novembre-2024-cette-annee-comme-depuis-des-decennies-a-ete-marquee-par-des-violences-et-des-attaques-de-la-part-des-colons-et-de-l-armee-israelienne-des-palestiniens-recoltent-leurs-olives-sur-leurs-terres-dans-le-village-de-rujeib-en-cisjordanie-occupe-le-9-novembre-2024-cette-annee-comme-depuis-des-decennies-a-ete-rythmee-par-des-violences-et-des-attaques-de-la-part-des-colons-et-de-l-armee-israelienne-toufik-khadija-sipa-0805-credit-khadija-toufik-sipa-2503051532",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "bc8a9a976206",
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Un convoi diplomatique européen a été attaqué par des colons israéliens lors d'une visite à Taybeh en Cisjordanie occupée.",
-          "Le maire communiste d'Aulnoye-Aymeries, Bernard Baudoux, a été frappé par des colons israéliens.",
-          "L'agression s'est déroulée dans le contexte d'une intensification des violences visant la récolte palestinienne des olives.",
-          "Le maire français accuse Israël de tolérer ces agissements et l'Union européenne a condamné l'incident."
-        ]
-      },
-      "differences": [
-        "La gauche met l'accent sur la dimension politique et militante de l'agression, en soulignant l'implication d'un édile communiste et la responsabilité d'Israël dans la impunité des violences de colons."
-      ],
-      "promptVersion": "sum-7",
       "summarizedArticleCount": 2
     },
     {
