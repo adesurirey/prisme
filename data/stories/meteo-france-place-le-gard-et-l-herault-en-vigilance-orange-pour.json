@@ -1,10 +1,34 @@
 {
   "id": "59a3c3de8a58",
   "slug": "meteo-france-place-le-gard-et-l-herault-en-vigilance-orange-pour",
-  "title": "Météo-France place le Gard et l'Hérault en vigilance orange pour des risques de pluies, d'inondations et d'orages",
+  "title": "Météo-France place le Gard et l'Hérault en vigilance orange pour des risques de pluie, d'inondation et d'orage",
   "createdAt": "2026-10-18T15:01:22.486Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "644f38948cab",
+      "outletId": "le-figaro",
+      "headline": "Pluie-inondations : le Gard et l'Hérault placés en vigilance orange",
+      "url": "https://www.lefigaro.fr/meteo/pluie-inondations-le-gard-et-l-herault-places-en-vigilance-orange-20261019",
+      "publishedAt": "2026-10-19T03:47:04.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2029_crop/2026/10/19/de802410394e995bb942144210cca55370d1993414c2d377efd1867cad9440bd.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
+    {
+      "id": "6c7ffb569a3e",
+      "outletId": "le-monde",
+      "headline": "Pluie et inondations : le Gard et l’Hérault placés en vigilance orange lundi à partir de 14 heures",
+      "url": "https://www.lemonde.fr/planete/article/2026/10/19/pluie-et-inondations-le-gard-et-l-herault-places-en-vigilance-orange-lundi-a-partir-de-14-heures_6797409_3244.html",
+      "publishedAt": "2026-10-19T03:39:26.000Z",
+      "imageUrl": "https://img.lemde.fr/2025/06/26/250/0/3000/1500/644/322/60/0/0397993_upload-1-pfmowr3mcztu-frame-18.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
     {
       "id": "cdfdb7b91c79",
       "outletId": "cnews",
@@ -78,26 +102,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Météo-France a placé le Gard et l'Hérault en vigilance orange pour des risques de pluies, d'inondations et d'orages.",
-      "L'alerte est effective à partir de lundi après-midi.",
-      "Une vaste goutte froide en provenance d'Espagne favorise ces remontées orageuses."
+      "Météo-France a placé le Gard et l'Hérault en vigilance orange pour des risques de pluie, d'inondation et d'orage dès lundi après-midi.",
+      "L'épisode météorologique est alimenté par une vaste goutte froide provenant d'Espagne, entraînant des remontées orageuses.",
+      "Les intempéries doivent débuter avec des précipitations dans la matinée, suivies d'orages plus intenses remontant de la Méditerranée."
     ],
     "centre": [
-      "Les départements du Gard et de l'Hérault sont placés en vigilance orange pour orages, pluies et inondations ce lundi.",
-      "Météo-France émet ce bulletin d'alerte face aux risques météorologiques dans le sud de la France."
+      "Les départements du Gard et de l'Hérault font l'objet d'une vigilance orange pour des risques d'orages, de pluie et d'inondation ce lundi.",
+      "L'alerte météorologique concerne l'ensemble de la journée de lundi, avec une attention particulière portée sur ces deux départements du Sud."
     ],
     "droite": [
-      "Météo-France a placé le Gard et l'Hérault en vigilance orange pour pluie-inondation et orages ce lundi 19 octobre.",
-      "Des précipitations importantes, des ruissellements et des inondations localisées sont redoutés dans ces départements du sud.",
-      "Des rafales de vent atteignant 85 km/h sont attendues sur la côte méditerranéenne, notamment à Sète et Agde.",
-      "Ces intempéries surviennent après de fortes pluies enregistrées à la fin du mois de septembre."
+      "Météo-France a placé le Gard et l'Hérault en vigilance orange pour pluie-inondation et orages en raison de précipitations pouvant atteindre 70 mm en moins d'une heure.",
+      "L'alerte s'accompagne de prévisions de rafales soufflant jusqu'à 80 ou 85 km/h, de chutes de grêle et de risques de phénomènes tourbillonnaires.",
+      "CNews précise que les températures oscilleront entre 11 °C à Tarbes et 23 °C à Nice pour cette journée de lundi 19 octobre.",
+      "CNews rappelle également que ces départements avaient déjà été touchés par des pluies diluviennes à la fin du mois de septembre."
     ]
   },
   "differences": [
-    "La gauche met en avant l'origine météorologique du phénomène en mentionnant la goutte froide en provenance d'Espagne.",
-    "Le centre livre un compte rendu synthétique et factuel de l'alerte sans s'attarder sur les détails géographiques ou historiques.",
-    "La droite détaille précisément les impacts attendus, les vitesses de vent prévues sur la côte et rappelle les précédents épisodes pluvieux de septembre."
+    "La gauche met l'accent sur l'origine technique de l'épisode, en soulignant l'influence d'une goutte froide venue d'Espagne.",
+    "Le centre livre une information synthétique et directe sur le placement des deux départements en vigilance orange.",
+    "La droite détaille avec précision les seuils de précipitations, les vitesses de rafales de vent et le contexte des intempéries précédentes."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 8
 }
