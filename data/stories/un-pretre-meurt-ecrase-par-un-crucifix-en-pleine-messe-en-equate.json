@@ -6,6 +6,17 @@
   "storyDay": "2026-10-18",
   "articles": [
     {
+      "id": "bfc3309d5ca5",
+      "outletId": "le-parisien",
+      "headline": "En Équateur, un prêtre évoquant la mort dans son homélie, est tué par la chute du crucifix, lors d’une messe retransmise en direct",
+      "url": "https://www.leparisien.fr/international/en-equateur-un-pretre-evoquant-la-mort-dans-son-homelie-est-tue-par-la-chute-du-crucifix-lors-dune-messe-retransmise-en-direct-19-10-2026-QLEJIJYL4VF2NN7WJUXZDLPWDA.php",
+      "publishedAt": "2026-10-19T02:01:18.742Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "dfadfa0d312c",
       "outletId": "le-figaro",
       "headline": "Équateur : un prêtre meurt en pleine messe, écrasé par un grand crucifix",
@@ -32,15 +43,21 @@
   "section": "misc",
   "everInEdition": true,
   "summaries": {
+    "centre": [
+      "Un prêtre en Équateur a perdu la vie après la chute d'un crucifix sur lui.",
+      "Le drame est survécu au cours d'une messe retransmise en direct à la télévision et sur les réseaux sociaux.",
+      "L'homélie du religieux prononcée juste avant l'accident portait thématiquement sur la mort."
+    ],
     "droite": [
-      "Un prêtre est décédé dans l'église Notre Dame du Perpétuel Secours de Guayaquil, en Équateur, après la chute d'un lourd crucifix en bois.",
-      "Le drame s'est produit en plein office religieux, alors qu'un grand crucifix mural s'est soudainement détaché pour écraser le célébrant.",
-      "TF1 Info précise les cris de détresse de l'assistance appelant une ambulance, survenus samedi 17 octobre lors de cet accident mortel."
+      "Le tragique accident s'est déroulé dans l'église Notre-Dame du Perpétuel Secours située à Guayaquil.",
+      "Un imposant crucifix en bois s'est descellé du mur de l'édifice religieux pour écraser le célébrant pendant l'office.",
+      "TF1 Info précise que le drame s'est produit un samedi et cite les appels désespérés des fidèles demandant une ambulance."
     ]
   },
   "differences": [
-    "Le camp de droite met en avant le caractère tragique et insolite du décès survenu en Équateur, en privilégiant l'impact visuel et émotionnel du drame à travers les détails de la chute et les appels au secours."
+    "Le centre privilégie la mise en scène macabre de l'événement en soulignant la retransmission en direct et la coïncidence thématique de l'homélie avec la mort.",
+    "La droite adopte un ton plus factuel et localisé, détaillant précisément le lieu du drame, la nature de l'objet contondant et reprenant les exclamations de détresse des témoins."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }
