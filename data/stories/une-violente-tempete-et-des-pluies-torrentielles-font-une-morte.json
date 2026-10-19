@@ -1,7 +1,7 @@
 {
   "id": "c5f581e864a7",
   "slug": "une-violente-tempete-et-des-pluies-torrentielles-font-une-morte",
-  "title": "Une violente tempête et des pluies torrentielles font une morte et de nombreuses perturbations dans l'est de l'Espagne",
+  "title": "Une violente tempête et des pluies torrentielles font des morts et des perturbations dans l'est de l'Espagne",
   "createdAt": "2026-10-19T01:01:18.026Z",
   "storyDay": "2026-10-18",
   "articles": [
@@ -16,6 +16,16 @@
       "kind": "news",
       "section": "world",
       "everFrontPage": true
+    },
+    {
+      "id": "f335c1409b4f",
+      "outletId": "liberation",
+      "headline": "Tempête «Adam» en Espagne : deux morts, la région de Valence appelée à se confiner",
+      "url": "https://www.liberation.fr/international/europe/tempete-adam-en-espagne-deux-morts-la-region-de-valence-appelee-a-se-confiner-20261019_JYYQLNQQUFCELEGHQ57BYH2YUA/",
+      "publishedAt": "2026-10-19T10:10:39.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "7b4cad5dd138",
@@ -45,23 +55,23 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le Monde fait état de deux décès causés par de fortes intempéries dans l'est du pays.",
-      "Le Premier ministre Pedro Sanchez qualifie la situation de très difficile dans la région de Valence.",
-      "Il est demandé aux habitants de cette région de rester chez eux et d'éviter tout déplacement."
+      "De fortes précipitations et des inondations provoquent la mort de deux personnes dans l'est de l'Espagne depuis dimanche.",
+      "Le premier ministre Pedro Sanchez appelle les habitants de la région de Valence à se confiner et à éviter tout déplacement face à une situation qualifiée de très difficile.",
+      "Les intempéries, liées à la tempête Adam, touchent également le sud de la France et doivent se prolonger jusqu'à mardi."
     ],
     "centre": [
-      "Le Parisien rapporte un décès et de multiples perturbations consécutifs à une tempête d'une grande violence.",
-      "Des pluies torrentielles s'abattent actuellement sur l'est de l'Espagne."
+      "Une violente tempête accompagnée de pluies torrentielles frappe l'est de l'Espagne, entraînant de nombreuses perturbations.",
+      "Le bilan humain fait état d'un à deux décès selon les rédactions, tandis que la région de Valence fait l'objet de consignes strictes de confinement de la part du gouvernement."
     ],
     "droite": [
-      "Le Figaro annonce qu'une femme a perdu la vie près de Barcelone en raison d'inondations et de précipitations torrentielles."
+      "Des inondations et des pluies torrentielles s'abattent sur l'Espagne et entraînent la mort d'une femme près de Barcelone."
     ]
   },
   "differences": [
-    "La gauche chiffre le bilan humain à deux morts et met l'accent sur les consignes strictes de confinement données par l'exécutif à Valence.",
-    "Le centre retient un bilan d'un mort et insiste sur l'ampleur des perturbations logistiques provoquées par la tempête.",
-    "La droite focalise son traitement sur le décès d'une femme localisé précisément près de Barcelone."
+    "La gauche met l'accent sur l'ampleur régionale des intempéries attribuées à la tempête Adam en insistant sur les consignes de confinement du premier ministre Pedro Sanchez.",
+    "Le centre privilégie un compte rendu factuel centré sur l'ensemble des perturbations et le bilan des victimes dans l'est du pays.",
+    "La droite focalise son traitement sur un cas de décès précis survenu près de Barcelone sans mentionner les consignes gouvernementales."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }
