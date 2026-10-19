@@ -17,6 +17,13 @@ import type { Story } from '@prisme/domain';
  */
 export const LIVE_WINDOW_MS = 24 * 60 * 60 * 1000;
 
+/** The UTC instant of an ISO date, or undefined when it does not parse —
+ * the one parse-and-guard every instant computation goes through. */
+export function parseInstant(iso: string): number | undefined {
+  const t = Date.parse(iso);
+  return Number.isNaN(t) ? undefined : t;
+}
+
 /**
  * The founding instant of a Story (ADR-0026): the earliest `publishedAt`
  * among its Articles. Under the strict membership rule no Article precedes
@@ -30,8 +37,8 @@ export function foundingInstant(
 ): number | undefined {
   let min: number | undefined;
   for (const article of story.articles) {
-    const t = Date.parse(article.publishedAt);
-    if (!Number.isNaN(t) && (min === undefined || t < min)) min = t;
+    const t = parseInstant(article.publishedAt);
+    if (t != null && (min === undefined || t < min)) min = t;
   }
   return min;
 }
@@ -63,10 +70,8 @@ export function joinsIngestionWindow(
   founding: number,
   publishedAt: string,
 ): boolean {
-  const t = Date.parse(publishedAt);
-  return (
-    !Number.isNaN(t) && t >= founding && t <= ingestionWindowClosesAt(founding)
-  );
+  const t = parseInstant(publishedAt);
+  return t != null && t >= founding && t <= ingestionWindowClosesAt(founding);
 }
 
 /**

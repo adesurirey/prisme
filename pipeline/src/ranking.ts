@@ -1,6 +1,6 @@
 import type { Story } from '@prisme/domain';
 import { rankStories } from '@prisme/domain';
-import { foundingInstant, ingestionIsOpen } from './liveness.ts';
+import { isLive } from './liveness.ts';
 import { parisDayKey } from './paris-day.ts';
 
 export { rankStories };
@@ -22,11 +22,6 @@ export { rankStories };
  */
 export function assembleEdition(stories: Story[], now: Date): Story[] {
   const today = parisDayKey(now.toISOString());
-  const open = stories.filter((s) => {
-    const founding = foundingInstant(s);
-    return (
-      s.storyDay <= today && founding != null && ingestionIsOpen(founding, now)
-    );
-  });
+  const open = stories.filter((s) => s.storyDay <= today && isLive(s, now));
   return rankStories(open);
 }

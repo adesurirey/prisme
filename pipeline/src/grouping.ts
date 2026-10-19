@@ -57,6 +57,7 @@ import {
   isLive,
   joinsIngestionWindow,
   LIVE_WINDOW_MS,
+  parseInstant,
 } from './liveness.ts';
 import { MembershipGate } from './membership-gate.ts';
 import { parisDayKey } from './paris-day.ts';
@@ -100,18 +101,14 @@ export interface GroupingOutcome {
   topics: ConfirmedTopic[];
 }
 
-function published(date: string): number {
-  const t = Date.parse(date);
-  return Number.isNaN(t) ? 0 : t;
-}
-
 /** True when the Story's Ingestion window is open (ADR-0026). */
 export { isLive };
 
-/** Deterministic Story order: newest Article first, ties by id. */
+/** Deterministic Story order: newest Article first, ties by id. An
+ * unparseable instant sorts oldest (0), like the old NaN→0 guard. */
 function byNewestArticle(a: Story, b: Story): number {
   const latest = (s: Story) =>
-    Math.max(0, ...s.articles.map((a) => published(a.publishedAt)));
+    Math.max(0, ...s.articles.map((a) => parseInstant(a.publishedAt) ?? 0));
   return latest(b) - latest(a) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 }
 
@@ -129,7 +126,7 @@ function freshArticles(
   const cutoff = now.getTime() - LIVE_WINDOW_MS;
   const known = new Set(existing.flatMap((s) => s.articles.map((a) => a.id)));
   return articles.filter(
-    (a) => !known.has(a.id) && published(a.publishedAt) > cutoff,
+    (a) => !known.has(a.id) && (parseInstant(a.publishedAt) ?? 0) > cutoff,
   );
 }
 
@@ -276,7 +273,7 @@ export function latestHeadlines(
   return members
     .map((m, order) => ({
       headline: m.headline,
-      published: published(m.publishedAt),
+      published: parseInstant(m.publishedAt) ?? 0,
       order,
     }))
     .sort((x, y) => y.published - x.published || x.order - y.order)
@@ -305,7 +302,7 @@ export function memberDigest(
     .map((m, order) => ({
       headline: m.headline,
       score: overlap(articleTokens, tokens(m.headline)),
-      published: published(m.publishedAt),
+      published: parseInstant(m.publishedAt) ?? 0,
       order,
     }))
     .sort(
@@ -674,9 +671,10 @@ export async function groupStories(
     for (const ns of proposal.newStories) {
       const members = keyMembers.get(ns.key);
       if (members == null || members.length === 0) continue;
-      const founding = Math.min(
-        ...members.map((m) => published(m.publishedAt)),
-      );
+      // The founding instant is THE one computation — the same
+      // foundingInstant the window arithmetic runs on (ADR-0026).
+      const founding = foundingInstant({ articles: members });
+      if (founding == null) continue;
       keyStories.set(
         ns.key,
         newStory(parisDayKey(new Date(founding).toISOString())),
