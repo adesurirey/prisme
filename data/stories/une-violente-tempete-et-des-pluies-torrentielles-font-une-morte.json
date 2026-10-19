@@ -1,10 +1,32 @@
 {
   "id": "c5f581e864a7",
   "slug": "une-violente-tempete-et-des-pluies-torrentielles-font-une-morte",
-  "title": "Des pluies torrentielles et des inondations provoquent des décès en Espagne",
+  "title": "Des pluies torrentielles et des inondations font quatre morts en Espagne et confinent la région de Valence",
   "createdAt": "2026-10-19T01:01:18.026Z",
   "storyDay": "2026-10-18",
   "articles": [
+    {
+      "id": "51476dce0544",
+      "outletId": "rfi",
+      "headline": "Espagne: au moins quatre morts dans des pluies torrentielles et des inondations dans l'Est",
+      "url": "https://www.rfi.fr/fr/europe/20261019-espagne-au-moins-quatre-morts-dans-des-pluies-torrentielles-et-des-inondations-dans-l-est",
+      "publishedAt": "2026-10-19T20:40:36.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/ff31b36e-cbfc-11f1-99e0-4dd8ac2cf3bf/w:1024/p:16x9/ESPAGNE-INONDATIONS-INTEMPERIES-OLIVA.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "0da2689b7c0a",
+      "outletId": "tf1-info",
+      "headline": "Pluies violentes en Espagne : des habitants piégés par la montée des eaux",
+      "url": "https://www.tf1info.fr/international/videos/video-pluies-violentes-en-espagne-des-habitants-pieges-par-la-montee-des-eaux-35849-2470885.html",
+      "publishedAt": "2026-10-19T20:30:20.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/pluies-violentes-en-espagne-des-habitants-pieges-par-la-montee-des-eaux-7f28e5-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "2fd9e55949da",
       "outletId": "le-figaro",
@@ -78,26 +100,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La tempête Adam a provoqué des inondations meurtrières dans l'est du pays.",
-      "Libération dénombre deux décès et rapporte l'appel aux habitants de Valence à se confiner.",
-      "Le Monde confirme un bilan provisoire de deux morts dans la région valencienne."
+      "La tempête «Adam» provoque des inondations majeures dans l'est de l'Espagne.",
+      "Le bilan provisoire fait état de deux décès liés aux intempéries.",
+      "Les autorités enjoignent aux résidents de la zone de Valence de demeurer confinée à domicile."
     ],
     "centre": [
-      "Des précipitations exceptionnelles ont frappé l'est et le littoral de l'Espagne, faisant quatre morts selon les autorités.",
-      "La population de la région de Valence a reçu la consigne de rester chez elle pour éviter tout déplacement.",
-      "Le Parisien fait état d'un décès initial et de nombreuses perturbations dans la zone touchée."
+      "Des précipitations exceptionnelles qualifiées de « goutte froide » ou de DANA touchent principalement la Catalogne et Valence.",
+      "Le bilan humain s'établit entre un et quatre morts selon les sources et l'évolution des données.",
+      "D'importants dispositifs de secours incluant hélicoptères et embarcations sont déployés pour porter assistance aux habitants bloqués par les eaux."
     ],
     "droite": [
-      "Le Figaro fait état de quatre morts et de cumuls pluviométriques atteignant 700 litres par mètre carré en 24 heures.",
-      "Les autorités ont ordonné le confinement de la région de Valence face à l'ampleur des inondations.",
-      "Une femme a perdu la vie près de Barcelone selon une information rapportée par Le Figaro."
+      "Des cumuls d'eau atteignant 700 litres par mètre carré en 24 heures sont mesurés sur le littoral espagnol.",
+      "Les autorités locales appellent la population de la région valencienne à un strict confinement.",
+      "Les intempéries torrentielles causent la mort de quatre personnes, dont une victime recensée près de Barcelone."
     ]
   },
   "differences": [
-    "La gauche met en avant le nom de la tempête Adam et retient un bilan prudemment évalué à deux décès dans ses colonnes.",
-    "Le centre insiste sur les bilans chiffrés officiels de quatre victimes et détaille l'ensemble des perturbations matérielles et des consignes de confinement.",
-    "La droite privilégie les données météorologiques chiffrées extrêmes, comme les relevés de 700 litres par mètre carré, tout en documentant un décès supplémentaire près de Barcelone."
+    "La gauche thématise l'événement sous l'angle d'une tempête nommée « Adam » en mettant l'accent sur les consignes de confinement à Valence.",
+    "Le centre privilégie l'analyse météorologique du phénomène de la « goutte froide » et détaille l'ampleur des opérations de secours.",
+    "La droite insiste sur les mesures quantitatives des précipitations extrêmes en se concentrant sur les bilans humains et les zones littorales."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 8
 }
