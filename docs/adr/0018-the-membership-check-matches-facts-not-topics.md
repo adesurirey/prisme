@@ -1,6 +1,6 @@
 # The Membership check matches facts, not topics
 
-Date: 2026-10-14 · Amends ADR-0005 (the Membership check's question and inputs), ADR-0013 (the grouping prompt) · Glossary: `Story`
+Date: 2026-10-14 · Amended 2026-10-19 (the own-headline-cycle test, below) · Amends ADR-0005 (the Membership check's question and inputs), ADR-0013 (the grouping prompt) · Glossary: `Story`
 
 ## Context
 
@@ -101,6 +101,34 @@ changes: no new phase, no new model, no ranking change.
    mega-Stories freeze at 06:00 the next day and remain as published POC
    artifacts. The seed guard inherits the reformulated question unchanged
    (it already routes through the same Membership check).
+
+## Amendment (2026-10-19): the own-headline-cycle test
+
+Observed in the 2026-10-19 edition: the Macron-allocution Story ingested
+the Nuñez resignation thread (11 Articles) inside its 24h window. The
+prompt's own « envergure » rule said distinct facts split, but the
+Membership question's yes criteria — « décisions ou réactions qui le
+concernent directement » — said a resignation is a direct development.
+The two prompts contradicted each other, and the check, asked last, won.
+
+Both prompts now carry one shared criterion, replacing fact-type
+enumerations: **a development that has its own fact, its own central
+actor and its own headline cycle — it would make its own Story without
+the event that triggered it — is a distinct fact (the episode), not an
+addition to the parent Story.** In `MEMBERSHIP_QUESTION`, « un
+développement direct de ce fait » leaves the yes criteria (the very
+phrase that admitted the resignation thread) and the no criteria gain
+the test; in the grouping prompt, the « envergure » bullet gains the
+same test with an explicit « newStoryKey » instruction. A split
+deposits a development where the mechanism already waits for it: the
+Episode link (`bestEpisodeMatch`, ADR-0024).
+
+Validated in production, not by a paid replay (the user's call): observe
+the next days — political-reaction clusters splitting off as episodes,
+no singleton surge, no reforming mega-Story. A wrongly split
+development still reaches readers through its episode link; a wrongly
+merged one never splits again (membership stickiness, ADR-0005), which
+is why the test leans split.
 
 ## Considered Options
 

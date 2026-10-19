@@ -105,8 +105,8 @@ export const MEMBERSHIP_QUESTION = {
     instructions:
       "Cet article rapporte-t-il le même fait que cette story, ou un développement direct de ce fait ? Juge à partir du titre de la story, des titres d'articles déjà joints à cette story, et du titre et chapô de l'article fournis.",
     criteria: {
-      yes: "Même fait : l'article rapporte le fait même de la story, ou un développement direct de ce fait (suites d'enquête, nouveaux bilans, décisions ou réactions qui le concernent directement).",
-      no: "Autre fait : même s'il relève du même thème général (même mouvement, même dossier, mêmes acteurs), un article qui rapporte un autre fait ne rejoint pas la story.",
+      yes: "Même fait : l'article rapporte le fait même de la story, ou une suite du même fait qui n'aurait pas d'existence propre sans lui (suites d'enquête, nouveaux bilans, réactions qui ne portent que sur ce fait).",
+      no: "Autre fait : même s'il relève du même thème général (même mouvement, même dossier, mêmes acteurs), un article qui rapporte un autre fait ne rejoint pas la story. Un développement qui a son propre fait, son propre acteur central et son propre cycle de titres — il ferait sa propre story sans l'événement qui l'a déclenché — est un autre fait, même s'il découle directement du fait de la story.",
     },
   },
 } as const;

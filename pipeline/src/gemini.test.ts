@@ -35,6 +35,9 @@ describe('groupingPrompt (ADR-0018)', () => {
     expect(prompt).toContain(
       'des faits distincts (volet judiciaire, volet politique, journée à venir) donnent des stories distinctes',
     );
+    // The own-headline-cycle episode rule (ADR-0018 amendment).
+    expect(prompt).toContain('propre cycle de titres');
+    expect(prompt).toContain("ne l'assigne jamais à la story-mère");
   });
 
   it('the grouping prompt names no title: titles are written by the Title pass (ADR-0023)', () => {

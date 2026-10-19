@@ -62,10 +62,16 @@ describe('membershipPayload (ADR-0018)', () => {
       'uniquement à partir du titre',
     );
     expect(MEMBERSHIP_QUESTION.belongs.criteria.yes).toContain(
+      "n'aurait pas d'existence propre sans lui",
+    );
+    expect(MEMBERSHIP_QUESTION.belongs.criteria.yes).not.toContain(
       'développement direct',
     );
     expect(MEMBERSHIP_QUESTION.belongs.criteria.no).toContain(
       'même thème général',
+    );
+    expect(MEMBERSHIP_QUESTION.belongs.criteria.no).toContain(
+      'propre cycle de titres',
     );
   });
 });
