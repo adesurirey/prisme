@@ -1,10 +1,21 @@
 {
   "id": "be52620c01f9",
   "slug": "un-effondrement-dans-une-mine-d-or-illegale-en-colombie-fait-neu",
-  "title": "Un effondrement dans une mine d'or illégale en Colombie fait neuf morts et des disparus",
+  "title": "Un éboulement dans une mine d'or illégale en Colombie fait neuf morts et des disparus",
   "createdAt": "2026-10-19T23:01:17.784Z",
   "storyDay": "2026-10-19",
   "articles": [
+    {
+      "id": "b8ee3321ccd8",
+      "outletId": "le-monde",
+      "headline": "En Colombie, un éboulement dans une mine d’or illégale fait 14 morts",
+      "url": "https://www.lemonde.fr/international/article/2026/10/20/en-colombie-un-eboulement-dans-une-mine-d-or-illegale-fait-14-morts_6797784_3210.html",
+      "publishedAt": "2026-10-20T01:50:13.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/20/46/0/588/294/644/322/60/0/1dc668b_upload-1-fn9gh7svo1q4-colombie.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "c60c80d7b896",
       "outletId": "ouest-france",
@@ -24,7 +35,7 @@
       "url": "https://www.lefigaro.fr/flash-actu/un-effondrement-dans-une-mine-d-or-illegale-fait-neuf-morts-en-colombie-20261019",
       "publishedAt": "2026-10-19T21:14:43.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/19/a5da14ee0892225bfa252098ac34ca2c033ab09508fb22ce46a559c3d4f25732.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -34,20 +45,27 @@
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Un éboulement dans une mine d'or illégale a provoqué quatorze décès dans la région du Nariño, au sud-ouest de la Colombie.",
+      "Les opérations de recherche sont désormais terminées sur le site minier.",
+      "La zone est sous l'emprise de groupes criminels qui se financent notamment grâce à l'extraction illégale d'or."
+    ],
     "centre": [
-      "Neuf personnes sont décédées et quinze autres sont portées disparues suite à l'effondrement d'une mine d'or illégale en Colombie.",
-      "L'accident s'est produit le lundi 19 octobre.",
-      "Les opérations de secours sont entravées par la difficulté d'accès à la zone contrôlée par des groupes criminels."
+      "L'effondrement d'une mine d'or illégale en Colombie a entraîné la mort de quatorze personnes et fait sept blessés.",
+      "Les équipes de secours rencontrent de grandes difficultés pour accéder au site minier.",
+      "La zone de l'accident est strictement contrôlée par des groupes criminels."
     ],
     "droite": [
-      "Le gouvernement du Nariño rapporte la mort de neuf individus dans l'éboulement d'une mine d'or clandestine.",
-      "La difficulté des opérations de sauvetage est attribuée à la topographie complexe du terrain ainsi qu'à l'emprise de groupes criminels sur place."
+      "Un effondrement survenu dans une mine d'or illégale en Colombie a causé la mort de neuf personnes.",
+      "Selon le gouvernement du Nariño, l'accès au lieu du drame est entravé par la complexité du terrain.",
+      "La présence de groupes criminels complique l'intervention des équipes de secours sur place."
     ]
   },
   "differences": [
-    "Le centre met en avant la chronologie précise du drame et le bilan humain complet en insistant sur la difficulté des secours dans une zone criminelle.",
-    "La droite adopte un angle institutionnel en s'appuyant sur les déclarations du gouvernement du Nariño pour souligner les obstacles sécuritaires et géographiques."
+    "La gauche met l'accent sur un bilan plus lourd de quatorze morts et la fin des recherches, en soulignant le rôle de l'extraction illégale dans le financement des groupes criminels.",
+    "Le centre retient également quatorze décès tout en mentionnant les sept blessés, et insiste sur les difficultés d'accès des secours dans la zone contrôlée.",
+    "La droite privilégie un bilan de neuf morts et met en avant les obstacles logistiques liés au terrain difficile et aux groupes criminels, selon le gouvernement du Nariño."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }

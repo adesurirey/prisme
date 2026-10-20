@@ -23,12 +23,30 @@
       "url": "https://www.lefigaro.fr/elections/presidentielles/je-m-en-fous-david-lisnard-s-agace-apres-avoir-ete-interroge-sur-le-17-octobre-1961-20261020",
       "publishedAt": "2026-10-20T00:29:37.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/20/a2e5a344306c24a08e9c66d74e41d46f11d0b70e423b64605b9ea472344dfda6.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "politics"
+      "section": "politics",
+      "everFrontPage": true
     }
   ],
   "topicId": "e629f8759d07",
   "section": "politics",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "David Lisnard a réagi avec irritation en direct sur LCI à une question portant sur les événements du 17 octobre 1961.",
+      "La question a été posée par une étudiante identifiée comme proche de La France insoumise au sujet des Algériens tués lors de cette date."
+    ],
+    "droite": [
+      "David Lisnard a vertement réagi en direct sur LCI face à une question sur la répression du 17 octobre 1961.",
+      "Le maire de Cannes était invité à l'origine pour s'exprimer sur les récentes violences et pillages survenus samedi dernier.",
+      "La question initiale émanait d'une étudiante proche de LFI concernant les Algériens tués et jetés dans la Seine."
+    ]
+  },
+  "differences": [
+    "Le camp centre choisit de relater l'incident de manière factuelle et directe à travers sa citation choc sans surinterprétation politique.",
+    "Le camp droite contextualise l'intervention de David Lisnard en rappelant le motif initial de son invitation sur le plateau et l'origine politique de la question posée par l'étudiante."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 2
 }

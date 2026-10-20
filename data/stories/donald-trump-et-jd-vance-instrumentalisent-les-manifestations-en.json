@@ -1,10 +1,33 @@
 {
   "id": "77f1c2bcc642",
   "slug": "donald-trump-et-jd-vance-instrumentalisent-les-manifestations-en",
-  "title": "Donald Trump et JD Vance instrumentalisent les manifestations en France pour mobiliser leur base",
+  "title": "Donald Trump instrumentalise les manifestations et violences en France pour mobiliser sa base",
   "createdAt": "2026-10-20T01:01:16.731Z",
   "storyDay": "2026-10-19",
   "articles": [
+    {
+      "id": "10e088c93344",
+      "outletId": "le-parisien",
+      "headline": "« Prise d’assaut par les migrants, les djihadistes et les communistes » : Donald Trump se saisit des violences en France",
+      "url": "https://www.leparisien.fr/international/etats-unis/prise-dassaut-par-les-migrants-les-djihadistes-et-les-communistes-donald-trump-se-saisit-des-violences-en-france-20-10-2026-OU7LN5X2VFH7FFKV6WGRHP7W4Q.php",
+      "publishedAt": "2026-10-20T02:01:16.840Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "e3938ae7f4e5",
+      "outletId": "le-figaro",
+      "headline": "«Ne francisez pas notre Amérique» : le clan Trump se saisit des violences en France",
+      "url": "https://www.lefigaro.fr/international/ne-francisez-pas-notre-amerique-a-l-approche-des-midterms-le-clan-trump-se-saisit-des-violences-en-france-20261020",
+      "publishedAt": "2026-10-20T01:27:08.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/20/c2e6b58a974db9f6786b1141ceb1e7d092de3bd8c6656a54493b8fad7b274b84.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
     {
       "id": "53d2bce0a699",
       "outletId": "20-minutes",
@@ -45,18 +68,24 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Donald Trump exploite les violences du 17 octobre en France pour galvaniser sa base MAGA en vue du scrutin du 3 novembre.",
-      "Le dirigeant américain instrumentalise la situation pour cibler l'immigration clandestine."
+      "20 Minutes indique que Donald Trump instrumentalise les manifestations et les violences survenues en France le 17 octobre pour remobiliser sa base MAGA en vue des élections de mi-mandat du 3 novembre.",
+      "Le même média précise que le président américain s'appuie sur cette situation pour fustiger l'immigration clandestine devant ses électeurs."
     ],
     "centre": [
-      "Donald Trump a qualifié la situation de très triste en pointant du doigt l'immigration après les manifestations et violences du 17 octobre.",
-      "Le président Donald Trump et son vice-président J.D. Vance présentent le mouvement lycéen comme la conséquence d'une crise migratoire pour servir leurs intérêts."
+      "Le Parisien rapporte que Donald Trump qualifie la situation en France de « prise d'assaut par les migrants, les djihadistes et les communistes » à l'occasion des violences.",
+      "BFMTV souligne que le dirigeant américain déplore une situation « très triste » en pointant de nouveau la responsabilité de l'immigration dans les troubles.",
+      "France 24 analyse que Donald Trump et J.D. Vance opèrent une récupération politique des manifestations du 17 octobre et du mouvement lycéen pour accréditer l'idée d'une crise migratoire au profit du mouvement Maga."
+    ],
+    "droite": [
+      "Le Figaro rapporte que le clan Trump s'empare des violences en France en lançant le mot d'ordre « Ne francisez pas notre Amérique ».",
+      "Le quotidien relie cette instrumentalisation au contexte électoral américain, rappelant que l'opposition est favorite pour décrocher le contrôle du Congrès le 3 novembre sur fond de mécontentement face à la vie chère."
     ]
   },
   "differences": [
-    "Le camp gauche analyse directement la démarche de Donald Trump comme une stratégie de mobilisation électorale ciblée sur l'immigration clandestine en vue des élections.",
-    "Le camp centre rapporte les déclarations de Donald Trump sur la situation tout en qualifiant le discours du tandem américain de récupération politique du mouvement lycéen."
+    "La gauche cible directement une stratégie électorale délibérée en qualifiant l'intervention de Donald Trump d'instrumentalisation de la base MAGA face à l'immigration clandestine.",
+    "Le centre documente les propos exacts du président américain et de son vice-président tout en analysant les ressorts médiatiques de leur récupération politique des manifestations.",
+    "La droite replace l'événement dans le calendrier des élections de mi-mandat du 3 novembre et met en avant le slogan du clan républicain pour contrer la politique intérieure."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 5
 }
