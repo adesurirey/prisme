@@ -22,6 +22,9 @@ interface Props {
   publishedTime?: string;
   /** Extra page-level JSON-LD (e.g. NewsArticle on a Story page). */
   jsonLd?: object;
+  /** True on the 404 page: it serves for every unknown URL, so no
+   *  canonical/og:url — pointing at /404/ would be wrong. */
+  noCanonical?: boolean;
 }
 
 const {
@@ -31,6 +34,7 @@ const {
   ogType = 'website',
   publishedTime,
   jsonLd,
+  noCanonical,
 } = Astro.props;
 
 // Canonical + og:url: one absolute URL per page, in the served form (the
@@ -38,7 +42,9 @@ const {
 // A missing or odd Astro.url.pathname falls back to the homepage.
 const site = Astro.site ?? new URL('https://leprisme.info');
 const canonicalPath = Astro.url.pathname.replace(/\/*$/, '/') || '/';
-const canonicalUrl = new URL(canonicalPath, site).href;
+const canonicalUrl = noCanonical
+  ? undefined
+  : new URL(canonicalPath, site).href;
 
 // Site-wide JSON-LD (every page): the site identity for the Knowledge
 // Panel and sitelinks searchbox eligibility.
@@ -69,8 +75,12 @@ const siteJsonLd = {
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <link rel="canonical" href={canonicalUrl} />
-    <meta property="og:url" content={canonicalUrl} />
+    {!noCanonical && (
+      <>
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:url" content={canonicalUrl} />
+      </>
+    )}
     <meta property="og:site_name" content="Prisme" />
     <meta property="og:type" content={ogType} />
     {ogImage && <meta property="og:image" content={ogImage} />}

@@ -144,6 +144,7 @@ describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () =
   it('ships the branded French 404 page', async () => {
     const html = await readFile(path.join(dist, '404.html'), 'utf8');
     expect(html).toContain("Cette page n'existe pas");
-    expect(html).toContain('Aller à la une');
+    // The Story-page back link is the way home — no separate CTA style.
+    expect(html).toContain('Aujourd’hui');
   });
 });
