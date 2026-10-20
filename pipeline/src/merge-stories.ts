@@ -16,6 +16,7 @@ import { readFile, unlink, writeFile } from 'node:fs/promises';
 import process from 'node:process';
 import { createInterface } from 'node:readline/promises';
 import type { Edition, RedirectRegistry, Story } from '@prisme/domain';
+import { rankStories } from '@prisme/domain';
 import { mergeRedirectRegistry, mergeStories } from './merge.ts';
 import { DATA_DIR, readStories, STORIES_DIR } from './paths.ts';
 
@@ -153,11 +154,15 @@ async function main(): Promise<number> {
   await unlink(new URL(`${absorbed.slug}.json`, STORIES_DIR));
 
   // The Edition is rebuilt from the Story files each run: replace the
-  // Base's entry in place, drop the absorbed one. Rank order is untouched —
-  // the next run re-ranks.
-  edition.stories = edition.stories
-    .filter((s) => s.id !== absorbed.id)
-    .map((s) => (s.id === merged.id ? merged : s));
+  // Base's entry in place, drop the absorbed one — then re-rank with the
+  // production key itself (rankStories, the same function assembleEdition
+  // feeds at every build), so a Story that grew through the merge sits at
+  // its deserved rank immediately instead of waiting for the next build.
+  edition.stories = rankStories(
+    edition.stories
+      .filter((s) => s.id !== absorbed.id)
+      .map((s) => (s.id === merged.id ? merged : s)),
+  );
   await writeFile(
     new URL('edition.json', DATA_DIR),
     `${JSON.stringify(edition, null, 2)}\n`,
