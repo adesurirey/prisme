@@ -41,9 +41,9 @@ const LAYOUT = {
   /** Wordmark top. The wordmark is a wide, low box (its height is ~16% of
    *  its width), so 150px puts its visual mass in the upper third. */
   wordmarkY: 150,
-  /** Wordmark width — deliberately smaller than a display treatment: the
-   *  card is a signature, not a poster. */
-  wordmarkWidth: 440,
+  /** Wordmark width — sized to dominate the top half without crowding
+   *  the margins (700 read as a poster; 440 as an afterthought). */
+  wordmarkWidth: 520,
   /** Catchline baseline — centered between wordmark and URL. */
   catchlineY: 402,
   catchlineSize: 58,
