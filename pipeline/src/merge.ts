@@ -1,4 +1,4 @@
-import type { Story } from '@prisme/domain';
+import type { RedirectEntry, RedirectRegistry, Story } from '@prisme/domain';
 
 /**
  * The manual merge (merge-stories.ts): the Base Story survives whole — its
@@ -10,25 +10,6 @@ import type { Story } from '@prisme/domain';
  * I/O (story files, edition.json, the redirect registry).
  */
 import { isLive } from './liveness.ts';
-
-/** One side of a redirect: the Story path that makes up the page URL. */
-export interface RedirectPath {
-  day: string;
-  slug: string;
-}
-
-/** One redirect written by a merge: the dead URL's path to the survivor's. */
-export interface RedirectEntry {
-  from: RedirectPath;
-  to: RedirectPath;
-  /** ISO 8601 instant of the merge that wrote the entry. */
-  createdAt: string;
-}
-
-/** The redirect registry — data/redirects.json. */
-export interface RedirectRegistry {
-  redirects: RedirectEntry[];
-}
 
 export interface MergeStoriesOptions {
   now: Date;

@@ -66,9 +66,10 @@ writing, and never commits — it prints the git command to review and paste.
 Two merges are refused without `--force`: across story days, and into a frozen
 Story (whose Summaries the pipeline never rewrites). A Story that once ranked
 into the Edition keeps its published URL alive after the merge: a redirect
-entry lands in `data/redirects.json`, and the site build emits a stub page at
-the dead URL pointing readers (and search engines, via a canonical link) at
-the surviving page.
+entry lands in `data/redirects.json`, and the site serves the old path as a
+0-second meta-refresh redirect to the surviving page (Astro's built-in
+redirects — honored by the dev server and emitted as stub pages by the
+build).
 
 ## Benchmarking the Decision model (Kind + Section)
 
