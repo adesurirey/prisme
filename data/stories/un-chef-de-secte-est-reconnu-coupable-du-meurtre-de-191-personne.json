@@ -6,6 +6,17 @@
   "storyDay": "2026-10-19",
   "articles": [
     {
+      "id": "3f46d4902ec2",
+      "outletId": "france-24",
+      "headline": "Kenya : le gourou Paul Mackenzie et ses complices coupables des meurtres de 190 enfants",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261020-kenya-le-gourou-paul-mackenzie-et-ses-complices-coupables-des-meurtres-de-190-enfants",
+      "publishedAt": "2026-10-20T10:58:24.000Z",
+      "imageUrl": "https://s.france24.com/media/display/56a70782-cc72-11f1-9dc0-638c1c1f5fd6/w:1024/p:16x9/FR-20261019-214408-214551-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "8bfbdbaba2c0",
       "outletId": "france-24",
       "headline": "Kenya : Paul Mackenzie, reconnu coupable pour le meurtre de 191 personnes",
@@ -66,23 +77,21 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le tribunal a déclaré Paul Mackenzie coupable d'avoir poussé des enfants à jeûner jusqu'à la mort pour « rencontrer Jésus ».",
-      "Le chef de secte et ses adeptes sont responsables de la mort de 190 enfants retrouvés dans la région de Malindi."
+      "Le tribunal kenyan a déclaré le gourou Paul Mackenzie coupable d'avoir affamé jusqu'à la mort 190 enfants au sein de sa secte."
     ],
     "centre": [
-      "Paul Mackenzie et 29 coaccusés ont été jugés coupables des meurtres de 191 personnes dans la forêt de Shakahola.",
-      "Le tribunal prononcera la sentence le 6 novembre contre le pasteur qui prêchait le jeûne mortel.",
-      "Le bilan total s'élève à 190 enfants et un adulte tués par la famine."
+      "Le gourou Paul Mackenzie et ses complices ont été reconnus coupables des meurtres de 191 personnes par un tribunal à Mombasa.",
+      "La juge Diana Kavedza Mochache a validé la culpabilité des 29 prévenus dans cette affaire de jeûne mortel pour rencontrer Jésus."
     ],
     "droite": [
-      "La justice kényane a reconnu le dirigeant de secte coupable des meurtres de 191 personnes."
+      "Un chef de secte a été jugé coupable au Kenya des meurtres de 191 personnes."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur le drame des enfants affamés par le gourou et le contexte global de la dérive sectaire avant la fin du monde.",
-    "Le centre dresse un compte rendu factuel et détaillé du verdict prononcé à Mombasa, incluant le nombre exact de victimes et la date de la sentence.",
-    "La droite livre un communiqué laconique se limitant au strict prononcé de culpabilité du chef de secte pour les 191 meurtres."
+    "La gauche met immédiatement l'accent sur le sort des 190 enfants victimes de la secte.",
+    "Le centre détaille l'ensemble du bilan de 191 morts, la décision de la juge Diana Kavedza Mochache à Mombasa et le nombre de complices.",
+    "La droite propose un résumé factuel synthétique centré sur la condamnation principale du chef de secte."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5
+  "summarizedArticleCount": 6
 }
