@@ -1,10 +1,32 @@
 {
   "id": "1838d05f51ef",
   "slug": "la-justice-prononce-les-premieres-condamnations-apres-les-emeute",
-  "title": "La justice prononce les premières condamnations après les émeutes du 17 octobre en France",
+  "title": "La justice prononce les premières condamnations après les émeutes du 17 octobre",
   "createdAt": "2026-10-20T04:01:16.171Z",
   "storyDay": "2026-10-19",
   "articles": [
+    {
+      "id": "908b2354ed35",
+      "outletId": "lobs",
+      "headline": "« C’est un immense gâchis » : au tribunal de Paris, les premières condamnations tombent après la mobilisation du 17 octobre",
+      "url": "https://www.nouvelobs.com/justice/20261020.OBS119359/c-est-un-immense-gachis-au-tribunal-de-paris-les-premieres-condamnations-tombent-apres-la-mobilisation-du-17-octobre.html",
+      "publishedAt": "2026-10-20T07:55:56.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/10/20/0/0/5317/3544/0/0/60/0/fb0fba6_upload-1-2sgxrd6tvgu5-000-d3le2hh.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "50ff0b8026dd",
+      "outletId": "cnews",
+      "headline": "Violences urbaines : sursis pour des pilleurs à Nantes, 2 mois de prison pour jet de bouteilles enflammées... Les premières peines sont tombées",
+      "url": "https://www.cnews.fr/france/2026-10-20/violences-urbaines-sursis-pour-des-pilleurs-nantes-2-mois-de-prison-pour-jet-de",
+      "publishedAt": "2026-10-20T05:08:30.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/le_point_complet_sur_les_premie_res_condamnations_avec_sabrina_bierlein-bouyer_6ad6fa11c8e6f.jpg?h=3041fa58&itok=RUHQCT44",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "cd4ef0d9a09b",
       "outletId": "rfi",
@@ -29,24 +51,28 @@
     }
   ],
   "topicId": "7efa9d23050d",
-  "section": "society",
+  "section": "misc",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le Nouvel Obs a assisté lundi 19 octobre aux comparutions immédiates au tribunal de Paris suite aux violences et pillages de la mobilisation du 17 octobre.",
+      "Les audiences concernent des jeunes aux profils décrits comme étonnamment anodins, qualifiés par le journal d'immense gâchis."
+    ],
     "centre": [
-      "Le gouvernement fait état de 2 513 gardes à vue et de 67 incarcérations consécutives aux violences survenues le week-end des 17 et 18 octobre en France.",
-      "Les tribunaux entament, dès ce lundi 19 octobre, les premières comparutions immédiates dans plusieurs juridictions du pays.",
-      "Plusieurs grandes agglomérations, parmi lesquelles Lyon, Paris, Lille et Nice, appliquent un couvre-feu nocturne pour faire face à la situation."
+      "L'exécutif a dénombré 2 513 gardes à vue et 67 incarcérations suite aux violences du week-end des 17 et 18 octobre en France.",
+      "Les premières comparutions immédiates ont eu lieu lundi 19 octobre dans les tribunaux du pays, tandis que plusieurs grandes villes comme Lyon, Paris, Lille ou Nice ont appliqué un couvre-feu."
     ],
     "droite": [
-      "Le bilan des violences du 17 octobre fait état de 2 397 gardes à vue et de 997 membres des forces de l'ordre blessés, dont 7 grièvement.",
-      "Le tribunal judiciaire de Paris examine en comparution immédiate les premiers prévenus, dont un ex-pompier volontaire interpellé avec du matériel incendiaire près de la Bastille.",
-      "Les autorités exécutives, représentées notamment par Gérald Darmanin et Sébastien Lecornu, soulignent le profil souvent réitérant des mis en cause et appellent à une réponse pénale ferme."
+      "Les premières peines sont tombées après les violences urbaines du week-end, incluant du sursis pour des pilleurs à Nantes et deux mois de prison ferme pour un jet de bouteilles enflammées.",
+      "À Nantes, quatre prévenus aux profils contrastés ont été jugés le 19 octobre, comprenant un entrepreneur du Web, un jeune diplômé, un étudiant en CAP cuisine et un étranger sous OQTF.",
+      "Europe 1 signale le début des comparutions immédiates à Paris suite aux émeutes du 17 octobre."
     ]
   },
   "differences": [
-    "Le média centriste adopte une perspective institutionnelle et nationale, mettant en avant le volume global des interpellations et la mise en place de couvre-feux dans plusieurs grandes villes.",
-    "Le média de droite focalise son attention sur le lourd bilan physique des forces de l'ordre, l'arsenal saisi sur les prévenus et la nécessité affirmée par l'exécutif d'une réponse pénale particulièrement sévère."
+    "La gauche humanise les prévenus en insistant sur le gâchis humain de la jeunesse jugée en comparution immédiate.",
+    "Le centre dresse un bilan chiffré global des interpellations et incarcérations tout en mentionnant la mise en place de couvre-feux locaux.",
+    "La droite détaille les profils sociologiques et judiciaires contrastés des prévenus ainsi que la sévérité des premières peines prononcées."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 4
 }

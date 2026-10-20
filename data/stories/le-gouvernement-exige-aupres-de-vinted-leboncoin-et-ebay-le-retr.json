@@ -1,10 +1,32 @@
 {
   "id": "d702e96cfa04",
   "slug": "le-gouvernement-exige-aupres-de-vinted-leboncoin-et-ebay-le-retr",
-  "title": "Le gouvernement exige auprès des plateformes en ligne le retrait d'annonces de produits issus des pillages",
+  "title": "Le gouvernement exige le retrait des annonces en ligne de produits issus des pillages",
   "createdAt": "2026-10-19T17:01:20.064Z",
   "storyDay": "2026-10-19",
   "articles": [
+    {
+      "id": "1661a5cfec7e",
+      "outletId": "france-24",
+      "headline": "17 octobre : des articles volés revendus sur Vinted et Leboncoin ?",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261020-17-octobre-des-articles-vol%C3%A9s-revendus-sur-vinted-et-leboncoin",
+      "publishedAt": "2026-10-20T09:19:15.000Z",
+      "imageUrl": "https://s.france24.com/media/display/3093adbc-cc62-11f1-8418-638c1c1f5fd6/w:1024/p:16x9/FR-20261020-091213-091356-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "d0e9a307e676",
+      "outletId": "le-figaro",
+      "headline": "Violences du 17 octobre : ce que Vinted, Leboncoin et eBay se sont engagées à faire pour éviter le recel des produits pillés",
+      "url": "https://www.lefigaro.fr/conso/violences-du-17-octobre-ce-que-vinted-leboncoin-et-ebay-se-sont-engagees-a-faire-pour-eviter-le-recel-des-produits-pilles-20261020",
+      "publishedAt": "2026-10-20T09:02:06.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/20/e3d8c0c9ae0d37c42c4eb8802232aa71545b1a82bc80c39b5c6adbfb8473a37a.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
     {
       "id": "3c03b1ddf1ae",
       "outletId": "lobs",
@@ -39,17 +61,27 @@
     }
   ],
   "topicId": "d702e96cfa04",
-  "section": "economy",
+  "section": "misc",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Bercy a convoqué les plateformes Vinted, Amazon, Leboncoin et eBay pour obtenir le retrait immédiat des annonces de biens dérobés lors des violences du 17 octobre.",
-      "Le gouvernement associe les ministères de la Justice et de l'Intérieur à ces réunions pour identifier les receleurs et empêcher l'écoulement des marchandises."
+      "Le gouvernement et Bercy ont convoqué les plateformes numériques pour bloquer la revente des biens dérobés lors des manifestations du 17 octobre.",
+      "Vinted, Leboncoin, Amazon et Ebay sont sommés par les autorités d'éliminer immédiatement les propositions suspectes."
+    ],
+    "centre": [
+      "Des objets dérobés dans les magasins le samedi 17 octobre sont répertoriés sous forme d'annonces sur Vinted et Leboncoin.",
+      "Le gouvernement a réuni les plateformes en urgence pour exiger le retrait des offres litigieuses, et Vinted déclare avoir agi en conséquence."
+    ],
+    "droite": [
+      "Les plateformes numériques se sont engagées auprès des autorités à renforcer leur surveillance pour empêcher le recel d'objets pillés.",
+      "Vinted, Leboncoin et eBay doivent présenter un premier rapport chiffré concernant leurs mesures d'ici quarante-huit heures."
     ]
   },
   "differences": [
-    "Les médias de gauche soulignent la fermeté de l'exécutif en mettant en avant la coordination interministérielle avec la Justice et l'Intérieur pour cibler les receleurs."
+    "La gauche insiste sur la fermeté de l'injonction gouvernementale et cible l'intervention directe de Bercy face aux plateformes.",
+    "Le centre documente l'apparition concrète des objets volés sur les applications et la réaction immédiate des entreprises.",
+    "La droite met l'accent sur les engagements pris par les plateformes et sur le calendrier de suivi opérationnel imposé par les autorités."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 5
 }
