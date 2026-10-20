@@ -6,6 +6,28 @@
   "storyDay": "2026-10-19",
   "articles": [
     {
+      "id": "3e56e1ca2af4",
+      "outletId": "tf1-info",
+      "headline": "Le visage du jour : Guillaume Guérin, le maire de Limoges en première ligne",
+      "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-le-visage-du-jour-guillaume-guerin-le-maire-de-limoges-en-premiere-ligne-23650-2470913.html",
+      "publishedAt": "2026-10-20T06:10:21.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/le-visage-du-jour-guillaume-guerin-le-maire-de-limoges-en-premiere-ligne-d9785d-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "ecffaa7c1170",
+      "outletId": "le-figaro",
+      "headline": "Incendie de la mairie de Limoges : Sébastien Lecornu se rendra sur place vendredi, annonce Matignon",
+      "url": "https://www.lefigaro.fr/politique/incendie-de-la-mairie-de-limoges-sebastien-lecornu-se-rendra-sur-place-vendredi-annonce-matignon-20261020",
+      "publishedAt": "2026-10-20T05:41:43.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/20/da6d55d9c12ebd4ed9809c8bf6c0bd6385fa015c23b2060b5dda9b8b43c91ed0.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "e6f4243fc48f",
       "outletId": "europe-1",
       "headline": "Violences urbaines : traumatisée par l'incendie de l'hôtel de ville, Limoges attend le soutien de l'Etat",
@@ -66,14 +88,15 @@
   "everInEdition": true,
   "summaries": {
     "droite": [
-      "Le maire de Limoges réclame le financement intégral de la reconstruction de l'hôtel de ville par l'État et menace de démissionner après l'incendie du bâtiment du XIXe siècle par des casseurs.",
-      "Le ministre de la Justice Gérald Darmanin demande des poursuites lourdes contre ceux qui ont «trahi la République», tandis que Sébastien Lecornu doit se rendre sur place.",
-      "Des émeutiers ont forcé l'hôtel de ville, incendié des véhicules de police municipale et entravé l'intervention de 80 pompiers mobilisés."
+      "Le maire de Limoges, Guillaume Guérin, exprime sa colère après l'incendie de l'hôtel de ville par des casseurs et critique le manque de moyens des forces de l'ordre.",
+      "Le gouvernement répond à la crise en annonçant la visite sur place de Sébastien Lecornu pour désamorcer la situation politique.",
+      "La municipalité réclame le financement intégral de la reconstruction de l'édifice du XIXe siècle par l'État et menace de démissionner.",
+      "Les tribunes et commentaires qualifient l'événement de symbole des attaques contre les institutions et exigent une réponse pénale ferme."
     ]
   },
   "differences": [
-    "Les médias de droite adoptent un angle sécuritaire et symbolique, insistant sur la destruction de l'hôtel de ville comme attaque contre la République, la fermeté judiciaire réclamée par le gouvernement et les difficultés d'intervention des forces de l'ordre."
+    "La droite privilégie un angle sécuritaire et politique, mettant en avant la colère du maire, la défaillance des forces de l'ordre et la symbolique de l'attaque contre l'État, tout en insistant sur la nécessité d'une réponse pénale ferme."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5
+  "summarizedArticleCount": 7
 }

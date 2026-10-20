@@ -1,10 +1,21 @@
 {
   "id": "f77391a35b70",
   "slug": "emmanuel-macron-se-rend-dans-le-golfe-persique-pour-trouver-une",
-  "title": "Emmanuel Macron se rend dans le golfe Persique pour trouver une issue à la hausse des prix",
+  "title": "Emmanuel Macron se rend dans le golfe Persique pour une tournée diplomatique",
   "createdAt": "2026-10-20T01:01:16.731Z",
   "storyDay": "2026-10-19",
   "articles": [
+    {
+      "id": "8d6d64508a4c",
+      "outletId": "rfi",
+      "headline": "Après le Koweït et les Émirats, Emmanuel Macron poursuit sa tournée dans le Golfe au Bahreïn et au Qatar",
+      "url": "https://www.rfi.fr/fr/moyen-orient/20261020-apr%C3%A8s-le-kowe%C3%AFt-et-les-%C3%A9mirats-emmanuel-macron-poursuit-sa-tourn%C3%A9e-dans-le-golfe-au-bahre%C3%AFn-et-au-qatar",
+      "publishedAt": "2026-10-20T03:06:57.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/edf0915a-cc25-11f1-9570-4dd8ac2cf3bf/w:1024/p:16x9/2026-10-19T154050Z-13601047-RC2E6OAAN0VC-RTRMADP-3-GULF-FRANCE-UAE.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "e71165ea1f5e",
       "outletId": "le-monde",
@@ -35,21 +46,24 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le chef de l'État a entamé lundi un déplacement de trois jours au Koweït, aux Émirats arabes unis, au Bahreïn et au Qatar.",
-      "L'objectif officiel de ce voyage est de sécuriser les approvisionnements énergétiques de la France face à la flambée des prix du carburant.",
-      "Les monarchies de la région ont vu leurs exportations d'hydrocarbures chuter à cause du blocage du détroit d'Ormuz.",
-      "Ces pays de la région n'ont pas plus de prise que Paris sur l'affrontement en cours entre les États-Unis et l'Iran."
+      "Le chef de l'État a entamé un voyage de trois jours au Koweït, aux Émirats arabes unis, au Bahreïn et au Qatar.",
+      "Le déplacement vise à sécuriser les approvisionnements énergétiques de l'Hexagone face à la flambée des prix des carburants.",
+      "Les monarchies de la région disposent d'une marge de manœuvre limitée face aux tensions géopolitiques entre Washington et Téhéran."
+    ],
+    "centre": [
+      "Le président de la République effectue une tournée diplomatique dans le golfe Persique incluant le Koweït, les Émirats, le Bahreïn et le Qatar.",
+      "Le voyage a été maintenu en dépit des violences survenues en métropole les 17 et 18 octobre.",
+      "L'objectif officiel est d'obtenir des garanties sur les hydrocarbures pour faire face aux fortes tensions sur les marchés."
     ],
     "droite": [
-      "Emmanuel Macron a entamé lundi une tournée de 48 heures au Koweït.",
-      "Ce déplacement s'inscrit dans le cadre de la recherche de solutions en ces temps de guerre.",
-      "Le président de la République cherche à sécuriser les approvisionnements énergétiques de la France."
+      "Emmanuel Macron réalise une tournée diplomatique au sein des pays du golfe Persique."
     ]
   },
   "differences": [
-    "La gauche insiste sur les limites géopolitiques de la démarche présidentielle en soulignant l'impuissance des monarchies du Golfe face au blocus du détroit d'Ormuz et aux tensions américano-iraniennes.",
-    "La droite qualifie le déplacement présidentiel de prise de large et d'analyse en mettant l'accent sur le contexte de guerre justifiant la sécurisation des approvisionnements énergétiques."
+    "La gauche met en avant l'échec potentiel de la mission face au bras de fer entre les États-Unis et l'Iran.",
+    "Le centre insiste sur le contexte tendu des marchés énergétiques et le maintien du déplacement malgré les violences en France.",
+    "La droite se focalise sur le départ du chef de l'État hors du territoire national à travers une formule critique."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }
