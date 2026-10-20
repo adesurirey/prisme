@@ -1,10 +1,31 @@
 {
   "id": "d2ea3c3fb8bd",
   "slug": "meteo-france-place-sept-departements-en-vigilance-orange-pour-pl",
-  "title": "Météo-France place sept départements en vigilance orange pour pluie-inondation et orages",
+  "title": "Sept départements du Sud-Est et la Corse placés en vigilance orange pour pluie-inondation et orages",
   "createdAt": "2026-10-20T05:01:35.862Z",
   "storyDay": "2026-10-19",
   "articles": [
+    {
+      "id": "b4867a168697",
+      "outletId": "liberation",
+      "headline": "Episode méditerranéen : sept départements en vigilance orange mardi",
+      "url": "https://www.liberation.fr/environnement/climat/episode-mediterraneen-sept-departements-en-vigilance-orange-mardi-20261020_3DIT5U3CSJDUVIHGNLOULKOMJU/",
+      "publishedAt": "2026-10-20T05:36:57.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "f08d339631a9",
+      "outletId": "cnews",
+      "headline": "Gard, Hérault et Bouches-du-Rhône... Les images impressionnantes des inondations dans le sud du pays (vidéos)",
+      "url": "https://www.cnews.fr/france/2026-10-20/gard-herault-et-bouches-du-rhone-les-images-impressionnantes-des-inondations-dans",
+      "publishedAt": "2026-10-20T05:26:44.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_88u66kf-taille1200_6ad6fca8c0728.jpg?itok=nWkLNpFn",
+      "frontPage": false,
+      "kind": "news",
+      "section": "other"
+    },
     {
       "id": "c205eb569510",
       "outletId": "le-parisien",
@@ -13,6 +34,17 @@
       "publishedAt": "2026-10-20T05:01:35.862Z",
       "frontPage": false,
       "datedAtCollection": true,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "20a6a9ddff96",
+      "outletId": "le-monde",
+      "headline": "Pluie, inondations et crues : six départements du Sud-Est et la Haute-Corse placés en vigilance orange",
+      "url": "https://www.lemonde.fr/planete/article/2026/10/20/pluie-inondations-et-crues-six-departements-du-sud-est-et-la-haute-corse-places-en-vigilance-orange_6797409_3245.html",
+      "publishedAt": "2026-10-20T05:00:56.000Z",
+      "imageUrl": "https://img.lemde.fr/2025/06/26/250/0/3000/1500/644/322/60/0/0397993_upload-1-pfmowr3mcztu-frame-18.jpg",
+      "frontPage": false,
       "kind": "news",
       "section": "science"
     },
@@ -55,24 +87,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Météo-France a placé sept puis huit départements du Sud-Est et la Haute-Corse en vigilance orange.",
-      "Les intempéries cumulent des risques de pluie-inondation, d'orages et de crues.",
-      "Les précipitations orageuses se maintiennent encore plusieurs heures dans le Gard et l'Ardèche selon le prévisionniste."
+      "Sept départements du Sud-Est et la Corse ont été placés en vigilance orange en raison d'un épisode méditerranéen.",
+      "A Montpellier, la fermeture des crèches et des lieux accueillant du public a été décidée, accompagnée de l'ouverture de deux gymnases pour les populations vulnérables.",
+      "Les intempéries ont provoqué d'importantes perturbations incluant de la pluie, des inondations et des crues dans plusieurs zones."
     ],
     "centre": [
-      "Sept départements du Sud sont placés en vigilance orange ce mardi en raison de la pluie et des orages."
+      "Sept départements du Sud-Est ont fait l'objet d'une vigilance orange pour des risques de pluie, d'inondations et d'orages.",
+      "Le dispositif de vigilance de Météo-France a concerné des territoires allant de l'Ardèche jusqu'à la Haute-Corse selon les actualisations.",
+      "Les crues ont particulièrement touché des départements comme l'Hérault et le Gard au cours de cet épisode météorologique."
     ],
     "droite": [
-      "Cinq départements du littoral méditerranéen sont concernés par une vigilance orange pour risque de pluie-inondation ce mardi 20 octobre.",
-      "Les zones touchées englobent l'Ardèche, les Bouches-du-Rhône, la Haute-Corse, le Var et le Vaucluse.",
-      "Des pluies orageuses intenses s'attardent sur le Languedoc, le sud du Massif central et l'ouest de la Provence avant de s'étendre vers le Centre, l'Ile-de-France et la Normandie."
+      "Des pluies diluviennes engendrées par la tempête Adam ont provoqué des inondations spectaculaires dans le sud du pays.",
+      "Les services de secours et la police municipale sont intervenus pour sécuriser de nombreuses villes touchées dans le Gard, l'Hérault et les Bouches-du-Rhône.",
+      "Météo-France a centré sa vigilance orange sur cinq départements du littoral méditerranéen pour cet épisode de pluies orageuses."
     ]
   },
   "differences": [
-    "La gauche insiste largement sur l'élargissement de la vigilance à huit départements et aux crues en combinant les alertes pluie-inondation, orages et crues.",
-    "Le centre se contente d'un compte rendu concis du nombre total de départements placés en vigilance orange dans le Sud.",
-    "La droite restreint l'alerte à cinq départements méditerranéens tout en détaillant géographiquement la trajectoire des perturbations vers le centre et le nord du pays."
+    "La gauche met l'accent sur les mesures administratives préventives et locales prises pour protéger les habitants.",
+    "Le centre adopte une approche strictement institutionnelle en se focalisant sur le suivi des cartes de vigilance de Météo-France.",
+    "La droite privilégie une couverture visuelle et spectaculaire des intempéries en insistant sur les dégâts concrets et l'action des services sur le terrain."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 7
 }
