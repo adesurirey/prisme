@@ -50,6 +50,7 @@ pnpm monorepo. Run everything from the repo root:
 - `pnpm benchmark:export` / `pnpm benchmark:grade` — sample headline+teaser pairs for hand labeling, then grade the decision models against the labels (grade needs `OPENROUTER_API_KEY` in env).
 - `pnpm backtest:episodes` — replay the episode mechanism (`bestEpisodeMatch`) over the `data/` archive and print every proposed episode link with its score; free, no API — the grading tool for episode links and Topics (ADR-0023, ADR-0024).
 - `pnpm replay:topics` — **paid** (live Membership calls): replay the archive through the production topic resolution (`resolveTopics`) and print every check with its verdict; grades the Topic mechanism and compares Membership models (`docs/research/topics-model-comparison.md`), raw transcripts in `.benchmark/topics/`.
+- `pnpm merge-stories <base-slug> <absorbed-slug>` — manual merge when the Grouping model split a Story you judge should be one: the Base (first argument) survives whole — slug, id, title, Summaries, Topic — and the absorbed Story gives it its Articles and dies; the next edition run re-summarizes the merged set. Free, no API. Refuses cross-day and frozen-base merges unless `--force`; writes a redirect entry in `data/redirects.json` for the dead URL when the absorbed Story ever ranked into the Edition; `--dry-run` prints the plan, `--yes` skips the confirm; never commits (prints the git command).
 
 Packages: `packages/domain` (shared types and the sourced Outlet config), `pipeline` (collector, `tsx`), `web` (Astro + React).
 

@@ -44,6 +44,32 @@ traceability.
 Leanings are set by hand, one per Outlet, backed by sources — never classified
 by a model.
 
+## Fixing a bad split: merging two Stories by hand
+
+The Grouping model sometimes splits what a human judges should be one Story —
+two pages about the same development, each holding a handful of Articles.
+`pnpm merge-stories` merges them by hand:
+
+```sh
+pnpm merge-stories <base-slug> <absorbed-slug>            # review, then confirm
+pnpm merge-stories <base-slug> <absorbed-slug> --dry-run  # print the plan only
+```
+
+The slugs are the story pages' own (`/<day>/<slug>/`). The **base** (first
+argument) survives whole — its URL, title, Summaries and Topic stay — and the
+**absorbed** story (second) gives it its Articles and disappears. The next
+hourly build re-summarizes the merged set from scratch, so the bullet points
+take the incoming Articles into account.
+
+Guard rails: the command prints its plan and asks for confirmation before
+writing, and never commits — it prints the git command to review and paste.
+Two merges are refused without `--force`: across story days, and into a frozen
+Story (whose Summaries the pipeline never rewrites). A Story that once ranked
+into the Edition keeps its published URL alive after the merge: a redirect
+entry lands in `data/redirects.json`, and the site build emits a stub page at
+the dead URL pointing readers (and search engines, via a canonical link) at
+the surviving page.
+
 ## Benchmarking the Decision model (Kind + Section)
 
 Same pattern as the grouping benchmark (issue #4): hand labels check the

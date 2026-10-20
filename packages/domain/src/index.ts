@@ -246,5 +246,7 @@ export * from './outlets.ts';
 // The Edition ranking key (issue #37, ADR-0009): shared by the Edition cut
 // and the archive pages (issue #99, ADR-0017).
 export * from './ranking.ts';
+// Redirects between Story URLs, written by the manual-merge CLI.
+export * from './redirect.ts';
 export * from './split-per-outlet.ts';
 export * from './story-file.ts';
