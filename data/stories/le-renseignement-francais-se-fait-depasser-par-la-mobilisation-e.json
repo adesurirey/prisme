@@ -1,10 +1,44 @@
 {
   "id": "0f463de73d1d",
   "slug": "le-renseignement-francais-se-fait-depasser-par-la-mobilisation-e",
-  "title": "Le renseignement français se fait dépasser par la mobilisation et les violences",
+  "title": "La France insoumise saisit la justice contre le ministre de l'Intérieur après des révélations sur les renseignements territoriaux",
   "createdAt": "2026-10-20T01:01:16.731Z",
   "storyDay": "2026-10-19",
   "articles": [
+    {
+      "id": "fae80788741a",
+      "outletId": "le-parisien",
+      "headline": "Violences du 17 octobre : LFI accuse le gouvernement de « manipulation » des renseignements territoriaux après les révélations de Mediapart",
+      "url": "https://www.leparisien.fr/politique/violences-du-17-octobre-lfi-accuse-le-gouvernement-de-manipulation-des-renseignements-territoriaux-apres-les-revelations-de-mediapart-20-10-2026-ATRJ3W4LJZGGXLCNGX7VNTIQXI.php",
+      "publishedAt": "2026-10-20T09:01:21.536Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "f51b0277ab5b",
+      "outletId": "franceinfo",
+      "headline": "Le député LFI Manuel Bompard dénonce un \"scandale d'État\" et va \"saisir la Cour de justice de la République\" contre le ministre de l'Intérieur",
+      "url": "https://www.franceinfo.fr/politique/la-france-insoumise/le-depute-lfi-manuel-bompard-denonce-un-scandale-d-etat-et-va-saisir-la-cour-de-justice-de-la-republique-contre-le-ministre-de-l-interieur_8245195.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-20T08:10:38.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/akG5l0pPQI5yR7JaZynuWbsr_CE/204x0:1126x518/432x243/filters:format(jpg)/2026/10/20/6ad70dc0158b4116093916.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "15a8bf919944",
+      "outletId": "le-figaro",
+      "headline": "Violences urbaines : LFI veut attaquer Laurent Nuñez en justice après des révélations de Mediapart",
+      "url": "https://www.lefigaro.fr/politique/violences-urbaines-lfi-veut-attaquer-laurent-nunez-en-justice-apres-des-revelations-de-mediapart-20261020",
+      "publishedAt": "2026-10-20T08:07:09.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/20/0339a0602cc7b45df23bcbea6805743e41741fe8d40f27ce6cbac11022f6e9b3.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
     {
       "id": "e3effa82b593",
       "outletId": "20-minutes",
@@ -47,18 +81,25 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Les services de renseignement français ont été pris de court par l'ampleur de la mobilisation du 17 octobre.",
-      "Un manque d'anticipation criant est reproché aux services de l'État face aux violences et aux pillages du week-end."
+      "Manuel Bompard annonce la saisine de la Cour de justice de la République contre Laurent Nuñez à la suite des révélations de Mediapart.",
+      "La France insoumise accuse le gouvernement d'orchestrer un « scandale d'État » et de fabriquer de faux documents.",
+      "Les services de renseignement sont critiqués pour leur incapacité à anticiper l'ampleur des violences et des pillages du 17 octobre."
+    ],
+    "centre": [
+      "La France insoumise dénonce une manipulation des renseignements territoriaux et porte plainte contre le ministre de l'Intérieur.",
+      "Mediapart révèle qu'il aurait été demandé aux services de cibler spécifiquement LFI derrière le mouvement social."
     ],
     "droite": [
-      "Emmanuel Macron et Sébastien Lecornu font face à une crise sécuritaire majeure à six mois de la présidentielle, marquée par des couvre-feux localisés.",
-      "Le renseignement prévoit de modifier sa surveillance des réseaux sociaux et le maintien de l'ordre ambitionne d'être plus réactif après ce fiasco."
+      "Le Figaro place en une l'intention de La France insoumise d'attaquer Laurent Nuñez en justice après l'enquête de Mediapart.",
+      "Un commissaire cité affirme qu'il lui a été demandé d'impliquer LFI à tort dans les violences urbaines.",
+      "Les forces de l'ordre prévoient de modifier leur surveillance des réseaux sociaux et de renforcer le maintien de l'ordre après ces incidents."
     ]
   },
   "differences": [
-    "La gauche pointe l'échec opérationnel du renseignement et son incapacité à anticiper la mobilisation et les dégradations.",
-    "La droite élargit l'analyse à la crise globale du pouvoir exécutif tout en détaillant la réponse sécuritaire et la réorganisation des forces de l'ordre."
+    "La gauche qualifie les faits de « scandale d'État » en se focalisant sur la responsabilité directe du ministre de l'Intérieur.",
+    "Le centre adopte une posture factuelle en se bornant à relayer la saisine de la justice par le parti d'opposition.",
+    "La droite contextualise l'affaire en soulignant la volonté de LFI d'attaquer le gouvernement tout en analysant les failles sécuritaires des forces de l'ordre."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 6
 }
