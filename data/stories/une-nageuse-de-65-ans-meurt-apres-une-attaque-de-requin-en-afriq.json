@@ -1,10 +1,20 @@
 {
   "id": "fc7748fbf946",
   "slug": "une-nageuse-de-65-ans-meurt-apres-une-attaque-de-requin-en-afriq",
-  "title": "Une nageuse de 65 ans meurt après une attaque de requin en Afrique du Sud",
+  "title": "Une nageuse meurt après une attaque de requin en Afrique du Sud",
   "createdAt": "2026-10-20T13:01:23.488Z",
   "storyDay": "2026-10-20",
   "articles": [
+    {
+      "id": "63442b1dd776",
+      "outletId": "liberation",
+      "headline": "Un requin tue une nageuse sur une plage très fréquentée d’Afrique du Sud",
+      "url": "https://www.liberation.fr/international/afrique/un-requin-tue-une-nageuse-sur-une-plage-tres-frequentee-dafrique-du-sud-20261020_BHUDQJ6VANGZ7DFPVPLNOK2XAQ/",
+      "publishedAt": "2026-10-20T17:09:53.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "b4e30cce9833",
       "outletId": "tf1-info",
@@ -43,18 +53,25 @@
   "section": "misc",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Une nageuse de 65 ans a été mortellement attaquée par un requin sur une plage très fréquentée à Kugompo.",
+      "Le drame est survenu ce mardi 20 octobre alors que la victime nageait au sein d'un groupe.",
+      "La municipalité a prononcé la fermeture immédiate de l'ensemble des plages des environs."
+    ],
     "centre": [
-      "Une nageuse de 65 ans a péri dans une attaque de requin sur une plage très fréquentée d'Afrique du Sud."
+      "Une nageuse âgée de 65 ans a succombé à l'attaque d'un requin sur une plage très fréquentée en Afrique du Sud.",
+      "Les plages environnantes ont été fermées par les autorités locales suite à l'incident."
     ],
     "droite": [
-      "Une femme de 65 ans a succombé à une attaque de requin sur la plage d'Orient Beach, située dans la ville de Kugompo.",
-      "La municipalité a ordonné la fermeture des plages environnantes et a appelé la population à éviter toute baignade."
+      "Une femme a perdu la vie en Afrique du Sud après avoir été attaquée par un requin.",
+      "Le centre droit précise que les plages de la zone ont été fermées jusqu'à nouvel ordre."
     ]
   },
   "differences": [
-    "Le centre met l'accent sur le caractère fréquenté du lieu de drame sans mentionner le nom de la ville.",
-    "La droite précise le nom de la ville, Kugompo, et insiste sur les mesures d'interdiction prises par la municipalité."
+    "La gauche privilégie un récit factuel et précis en mentionnant l'âge de la victime, le jour exact du drame et la localisation précise à Kugompo.",
+    "Le centre livre un compte-rendu synthétique qui met l'accent sur le profil de la victime et la fréquentation du site de l'attaque.",
+    "La droite adopte une formulation très sobre et concise en insistant principalement sur l'issue fatale de l'attaque de requin, tout en précisant la fermeture des plages."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }
