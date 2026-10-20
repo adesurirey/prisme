@@ -56,6 +56,39 @@ describe('slugify', () => {
     expect(slugify('X'.repeat(70))).toHaveLength(64);
     expect(slugify('---')).toBe('');
   });
+
+  it('truncates at a word boundary, ending on a complete word', () => {
+    const title =
+      'Un condamné à mort et deux ans de prison ferme pour les manifestants';
+    const slug = slugify(title);
+    expect(slug.length).toBeLessThanOrEqual(64);
+    expect(slug.endsWith('-')).toBe(false);
+    // cuts back to the last whole word instead of slicing mid-word
+    expect(slug).toBe(
+      'un-condamne-a-mort-et-deux-ans-de-prison-ferme-pour-les',
+    );
+    // every hyphen-separated part is a whole word from the title
+    for (const part of slug.split('-')) {
+      expect(
+        title
+          .toLowerCase()
+          .split(/[^a-zà-ÿ]+/)
+          .some(
+            (w) => w.normalize('NFD').replace(/[\u0300-\u036f]/g, '') === part,
+          ),
+      ).toBe(true);
+    }
+  });
+
+  it('leaves a title shorter than the limit untouched', () => {
+    expect(slugify('Déjà-vu à Épinay, une affaire jugée aujourd’hui')).toBe(
+      'deja-vu-a-epinay-une-affaire-jugee-aujourd-hui',
+    );
+  });
+
+  it('hard-cuts a single word longer than the limit', () => {
+    expect(slugify('X'.repeat(70))).toHaveLength(64);
+  });
 });
 
 describe('slugFor', () => {

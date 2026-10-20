@@ -10,16 +10,28 @@ import type { Story } from './index.ts';
  * never reused (ADR-0005).
  */
 
+/**
+ * Cut to the max length at a word boundary so the slug ends on a complete
+ * word; a single word longer than the max is still hard-cut.
+ */
+function truncate(s: string, max: number): string {
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max);
+  const lastHyphen = cut.lastIndexOf('-');
+  return lastHyphen > 0 ? cut.slice(0, lastHyphen) : cut;
+}
+
 /** The bare slugified title, or 'sujet' when nothing survives slugifying. */
 export function slugify(title: string): string {
-  return title
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 64)
-    .replace(/-+$/g, '');
+  return truncate(
+    title
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, ''),
+    64,
+  ).replace(/-+$/g, '');
 }
 
 /** The id-suffix fallback chain for one base slug, from the Story's own id. */
