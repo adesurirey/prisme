@@ -100,6 +100,7 @@ describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () =
     expect(sitemap).toContain(
       '<loc>https://leprisme.info/classement-politique-des-medias/</loc>',
     );
+    expect(sitemap).toContain('<loc>https://leprisme.info/methode/</loc>');
     // At least one Story URL under its own day.
     expect(sitemap).toMatch(/<loc>https:\/\/leprisme.info\/20\d\d-\d\d-\d\d\//);
   });
