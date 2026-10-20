@@ -186,19 +186,25 @@ const siteJsonLd = {
       <slot />
     </main>
     <footer class="border-t border-line py-8">
-      <div class="mx-auto flex max-w-4xl flex-wrap gap-x-5 gap-y-2 px-5 text-[13px] text-muted">
+      <div class="mx-auto max-w-4xl px-5 text-[13px] text-muted">
         <p>© {new Date().getFullYear()} Prisme</p>
-        <p class="ml-auto flex gap-5">
+        <nav
+          class="mt-3 flex flex-col gap-y-2 sm:mt-0 sm:flex-row sm:flex-wrap sm:items-center sm:justify-end sm:gap-x-5"
+        >
           <a href={withBase('/methode/')} class="transition-colors hover:text-ink"
             >Méthode</a
           >
-          <a href={withBase('/classement-politique-des-medias/')} class="transition-colors hover:text-ink"
+          <a
+            href={withBase('/classement-politique-des-medias/')}
+            class="whitespace-nowrap transition-colors hover:text-ink"
             >Classement politique des médias</a
           >
-          <a href={withBase('/mentions-legales/')} class="transition-colors hover:text-ink"
+          <a
+            href={withBase('/mentions-legales/')}
+            class="whitespace-nowrap transition-colors hover:text-ink"
             >Mentions légales</a
           >
-        </p>
+        </nav>
       </div>
     </footer>
   </body>
