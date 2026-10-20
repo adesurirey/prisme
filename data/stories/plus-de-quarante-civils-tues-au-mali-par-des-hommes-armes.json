@@ -1,10 +1,32 @@
 {
   "id": "3d7552c5c738",
   "slug": "plus-de-quarante-civils-tues-au-mali-par-des-hommes-armes",
-  "title": "Plus de quarante civils tués au Mali par des hommes armés",
+  "title": "Une attaque de l'État islamique tue plus de quarante civils au Mali",
   "createdAt": "2026-10-19T23:01:17.784Z",
   "storyDay": "2026-10-20",
   "articles": [
+    {
+      "id": "8eeff923e8ff",
+      "outletId": "le-parisien",
+      "headline": "Une attaque sanglante, attribuée à l’État Islamique, provoque la mort de plus de 40 civils au Mali",
+      "url": "https://www.leparisien.fr/international/une-attaque-sanglante-attribuee-a-letat-islamique-provoque-la-mort-de-40-civils-au-mali-20-10-2026-GJHGH5HFKRHERPGB22NG3TYGWA.php",
+      "publishedAt": "2026-10-20T01:01:16.731Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "55e029d8ba64",
+      "outletId": "le-monde",
+      "headline": "Au Mali, plus de quarante civils tués par des hommes armés dans la région de Ménaka, selon des sources locales",
+      "url": "https://www.lemonde.fr/afrique/article/2026/10/20/au-mali-plus-d-une-quarantaine-de-civils-tues-par-des-hommes-armes-dans-la-region-de-menaka-selon-des-sources-locales_6797751_3212.html",
+      "publishedAt": "2026-10-20T00:24:12.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/20/560/0/6720/3360/644/322/60/0/27706ba_upload-1-jgvb9ygqtkxp-000-9te6z7.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "446d9583e34c",
       "outletId": "ouest-france",
@@ -33,19 +55,27 @@
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Plus de quarante civils ont péri dans la région de Ménaka lors d'assauts menés par des hommes armés.",
+      "Le Monde précise que les violences ont ciblé des campements de la communauté Daoussahak.",
+      "Cette communauté est liée au « Mouvement pour le salut de l’Azawad », allié de la junte de Bamako."
+    ],
     "centre": [
-      "Une attaque terroriste attribuée à l'État islamique a causé la mort de plus de quarante civils lundi 19 octobre dans le nord-est du Mali.",
-      "L'assaut sanglant aurait été commis en représailles aux opérations militaires menées par la junte au pouvoir dans cette région."
+      "Une série d'attaques meurtrières attribuées à l’État islamique a causé la mort de plus de quarante civils au Mali.",
+      "Les raids ont touché le nord-est du territoire malien, ciblant des populations civiles.",
+      "Ouest-France indique que ces violences constituent des représailles contre les opérations de la junte militaire."
     ],
     "droite": [
-      "Plus de quarante civils ont péri dimanche dans des attaques perpétrées par des hommes armés.",
-      "Les assaillants ont ciblé des campements habités majoritairement par la communauté Daoussahak, liée au Mouvement pour le salut de l'Azawad."
+      "Plus de quarante civils ont été assassinés par des hommes armés dans le nord-est malien.",
+      "Le Figaro rapporte que les assauts ont visé des campements de la communauté Daoussahak.",
+      "Les victimes appartiennent à un groupe d'où est issu le « Mouvement pour le salut de l’Azawad »."
     ]
   },
   "differences": [
-    "Le centre met en avant l'origine terroriste de l'attentat et les représailles présumées contre les opérations de la junte malienne.",
-    "La droite insiste sur le ciblage ethnique précis des campements de la communauté Daoussahak et du mouvement armé associé."
+    "Le camp gauche, représenté par Le Monde, centre son article sur l'origine communautaire des victimes et leurs liens politiques avec la junte au pouvoir.",
+    "Le camp centre adopte une couverture sécuritaire en nommant l'État islamique et en évoquant des représailles militaires d'après Ouest-France.",
+    "Le camp droite, via Le Figaro, livre un compte rendu factuel des victimes civiles et de l'appartenance ethnique des campements touchés, sans mentionner l'implication de l'État islamique."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 4
 }

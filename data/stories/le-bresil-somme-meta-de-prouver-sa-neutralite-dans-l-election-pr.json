@@ -6,6 +6,28 @@
   "storyDay": "2026-10-19",
   "articles": [
     {
+      "id": "f38f71f79dec",
+      "outletId": "le-parisien",
+      "headline": "« Je ne crois plus rien de ce que je vois » : Meta, accusé d’interférence dans la campagne présidentielle au Brésil, a 24 heures pour s’expliquer",
+      "url": "https://www.leparisien.fr/international/je-ne-crois-plus-rien-de-ce-que-je-vois-meta-accuse-dinterference-dans-la-campagne-presidentielle-au-bresil-a-24-heures-pour-sexpliquer-20-10-2026-6ZT3CTCYTBHQXKUENENY43PV6A.php",
+      "publishedAt": "2026-10-20T01:01:16.731Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "2d9ced8bd89a",
+      "outletId": "le-figaro",
+      "headline": "Élection au Brésil : Meta doit prouver en 24 heures que Lula et Bolsonaro sont traités de la même façon",
+      "url": "https://www.lefigaro.fr/international/election-au-bresil-meta-doit-prouver-en-24-heures-que-lula-et-bolsonaro-sont-traites-de-la-meme-facon-20261020",
+      "publishedAt": "2026-10-20T00:29:04.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/20/f50a0dce714c78728950c0ba7e85ead6ea9e953d8fb382f92e84bf3a6ec39102.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "310918674f41",
       "outletId": "le-monde",
       "headline": "Election présidentielle au Brésil : Meta a 24 heures pour prouver que la plate-forme réserve le même traitement à Lula et Flavio Bolsonaro",
@@ -34,17 +56,24 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La justice électorale brésilienne exige que Meta justifie dans un délai de vingt-quatre heures l'équité de traitement entre Lula et Flavio Bolsonaro sur ses applications.",
-      "Lula reproche à la multinationale américaine de limiter la portée de ses publications sur Instagram et WhatsApp."
+      "Le Brésil a ordonné à Meta de justifier le traitement de ses applications Instagram et WhatsApp dans le cadre de l'élection présidentielle sous un délai de vingt-quatre heures.",
+      "Le chef de l'État brésilien accuse un algorithme de brider la visibilité de ses publications tout en bloquant l'accès au contenu électoral qui lui est favorable.",
+      "L'injonction officielle cible directement la gestion de la plateforme américaine face aux accusations de favoritisme envers l'opposition."
     ],
     "centre": [
-      "À une semaine du second tour du scrutin présidentiel brésilien fixé au 25 octobre, les autorités judiciaires somment Meta de démontrer sous vingt-quatre heures l'égalité de traitement accordée aux campagnes de Lula et de Flavio Bolsonaro."
+      "Les autorités brésiliennes exigent que Meta démontre sa stricte neutralité dans l'élection présidentielle dans un délai de vingt-quatre heures.",
+      "La décision intervient à la suite de plaintes concernant une ingérence présumée des réseaux sociaux dans la campagne en cours."
+    ],
+    "droite": [
+      "Meta fait l'objet d'un ultimatum brésilien de vingt-quatre heures pour prouver l'équité de son traitement entre le président sortant et son principal opposant.",
+      "L'exécutif accuse la firme américaine de limiter la portée des contenus favorables à sa campagne sur Instagram et WhatsApp à l'aide d'un algorithme."
     ]
   },
   "differences": [
-    "Le centre gauche insiste explicitement sur les accusations formulées par Lula concernant la censure de ses contenus sur Instagram et WhatsApp.",
-    "Le centre met l'accent sur le contexte temporel urgent du second tour de l'élection présidentielle fixé au 25 octobre."
+    "La gauche met l'accent sur la confrontation directe entre le pouvoir en place et la plateforme américaine, qualifiant les dysfonctionnements d'ingérence active.",
+    "Le centre adopte une approche institutionnelle et neutre en se focalisant sur l'injonction administrative et le délai imparti sans surligner les accusations de manipulation.",
+    "La droite insiste sur le soupçon de censure visant spécifiquement les contenus présidentiels et place l'équilibre du traitement entre les candidats au cœur de son analyse."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 4
 }

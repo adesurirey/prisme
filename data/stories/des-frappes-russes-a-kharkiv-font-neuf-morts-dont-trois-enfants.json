@@ -1,10 +1,21 @@
 {
   "id": "2f09d46129f3",
   "slug": "des-frappes-russes-a-kharkiv-font-neuf-morts-dont-trois-enfants",
-  "title": "Des frappes russes à Kharkiv font neuf morts, dont trois enfants",
+  "title": "Des frappes russes font neuf morts, dont trois enfants, à Kharkiv",
   "createdAt": "2026-10-19T17:01:20.064Z",
   "storyDay": "2026-10-19",
   "articles": [
+    {
+      "id": "50801ccaa048",
+      "outletId": "franceinfo",
+      "headline": "En Ukraine, six morts dont trois enfants dans une frappe russe dans un parc près de Kharkiv",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/en-ukraine-six-morts-dont-trois-enfants-dans-une-frappe-russe-dans-un-parc-pres-de-kharkiv_8244463.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-19T19:13:52.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/1BuP9rBsAT4bS66dNlCfrXdym0o/0x95:1024x671/432x243/filters:format(jpg)/2026/10/19/6ad66b6f036eb643386279.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "6e59bc7872dd",
       "outletId": "tf1-info",
@@ -32,14 +43,19 @@
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Une frappe russe a touché un parc près de Kharkiv, tuant six personnes dont trois enfants.",
+      "La police régionale a souligné que le site était fréquenté par de nombreuses familles avec des enfants au moment de l'attaque."
+    ],
     "droite": [
-      "Une frappe russe dans la région de Kharkiv a causé la mort de six personnes, parmi lesquelles figurent trois mineurs.",
-      "Trois autres décès ont été recensés dans la région de Lougansk à la suite d'un tir ukrainien visant un véhicule funéraire selon les autorités prorusses."
+      "Des frappes russes ont fait neuf morts, dont trois enfants, à Kharkiv et en territoire occupé.",
+      "TF1 Info fait état de six morts, dont trois enfants, dans un bombardement visant la région de Kharkiv."
     ]
   },
   "differences": [
-    "La droite élargit le cadre du sujet aux territoires occupés en combinant le bilan de Kharkiv et celui de Lougansk fourni par les autorités prorusses."
+    "Le camp gauche se focalise sur le drame humain survenu dans un parc familial près de Kharkiv à travers les déclarations de la police régionale.",
+    "Le camp droite élargit son bilan à neuf victimes et mentionne des frappes en territoire occupé, illustrant des variations de chiffrage entre ses bandes."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }
