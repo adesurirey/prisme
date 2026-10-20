@@ -113,7 +113,11 @@ describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () =
       '<meta property="og:url" content="https://leprisme.info/">',
     );
     expect(home).toContain('property="og:site_name" content="Prisme"');
-    expect(home).toContain('name="twitter:card" content="summary"');
+    // No ogImage passed → the site-wide fallback brand card.
+    expect(home).toContain(
+      'property="og:image" content="https://leprisme.info/og-default.png"',
+    );
+    expect(home).toContain('name="twitter:card" content="summary_large_image"');
 
     const classement = await readFile(
       path.join(dist, 'classement-politique-des-medias/index.html'),
