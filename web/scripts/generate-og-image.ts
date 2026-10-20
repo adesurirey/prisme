@@ -38,18 +38,16 @@ const SANS = "-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif";
 const LAYOUT = {
   /** Left margin, shared by every element. */
   x: 84,
-  /** Wordmark top. The wordmark is a wide, low box (its height is ~16% of
-   *  its width), so 150px puts its visual mass in the upper third. */
-  wordmarkY: 150,
+  wordmarkY: 192,
   /** Wordmark width — sized to dominate the top half without crowding
    *  the margins (700 read as a poster; 440 as an afterthought). */
-  wordmarkWidth: 520,
+  wordmarkWidth: 640,
   /** Catchline baseline — centered between wordmark and URL. */
-  catchlineY: 402,
-  catchlineSize: 58,
+  catchlineY: 434,
+  catchlineSize: 72,
   /** URL baseline — its descender leaves ~66px, matching the top margin. */
-  urlY: 564,
-  urlSize: 26,
+  urlY: 568,
+  urlSize: 36,
 };
 
 async function ogImageSvg(): Promise<string> {
