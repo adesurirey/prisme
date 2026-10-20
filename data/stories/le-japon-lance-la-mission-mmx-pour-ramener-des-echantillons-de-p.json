@@ -1,10 +1,21 @@
 {
   "id": "06baaea9f586",
   "slug": "le-japon-lance-la-mission-mmx-pour-ramener-des-echantillons-de-p",
-  "title": "Le Japon lance sa mission spatiale MMX pour explorer les lunes de Mars",
+  "title": "Le Japon lance sa mission spatiale MMX pour explorer les lunes de Mars et ramener des échantillons de Phobos",
   "createdAt": "2026-10-19T09:01:20.377Z",
   "storyDay": "2026-10-19",
   "articles": [
+    {
+      "id": "0b20d1aca16a",
+      "outletId": "le-parisien",
+      "headline": "« Des indices sur les origines de la vie » ? : une sonde japonaise, aidée d’engins français, en route pour les lunes de Mars",
+      "url": "https://www.leparisien.fr/sciences/des-indices-sur-les-origines-de-la-vie-une-sonde-japonaise-aidee-dengins-francais-en-route-pour-les-lunes-de-mars-20-10-2026-EJRPUK2FHZEGRLBNGAUDFHISR4.php",
+      "publishedAt": "2026-10-20T00:01:19.318Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "science"
+    },
     {
       "id": "f79c0fb4b80d",
       "outletId": "franceinfo",
@@ -23,6 +34,17 @@
       "url": "https://www.lefigaro.fr/sciences/le-japon-lance-une-fusee-pour-une-mission-visant-les-lunes-de-mars-20261019",
       "publishedAt": "2026-10-19T20:22:39.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2020_crop/2026/10/19/d55619415725d0a4be9e8ecc4ec33cb0fc2d924b60ecc8e2008b22768268bc50.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "3c7d70e25482",
+      "outletId": "courrier-international",
+      "headline": "L’agence spatiale japonaise va lancer une sonde pour comprendre les mystères d’une lune martienne",
+      "url": "https://www.courrierinternational.com/article/espace-l-agence-spatiale-japonaise-va-lancer-une-sonde-pour-comprendre-les-mysteres-d-une-lune-martienne_279805",
+      "publishedAt": "2026-10-19T16:45:49.000Z",
+      "imageUrl": "https://focus.courrierinternational.com/2026/10/19/0/0/3500/2498/644/0/60/0/3f2f0a4_ftp-1-7jrw7ee1myrr-2026-10-19t075820z-1510975680-rc246oa6a6gt-rtrmadp-3-japan-space-phobos-rocket.JPG",
       "frontPage": false,
       "kind": "news",
       "section": "science"
@@ -89,23 +111,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le Japon lance la mission MMX vers les lunes de Mars pour collecter des échantillons, avec une participation technologique française notable incluant deux engins et le rover franco-allemand Idefix.",
-      "L'expédition spatiale cherche à percer les mystères de la formation des satellites martiens tout en espérant trouver des indices sur l'origine du Système solaire et de la vie sur Terre."
+      "Le Japon lance la mission spatiale MMX pour explorer les lunes de Mars, Phobos et Deimos.",
+      "L'expédition intègre des équipements français, dont le rover Idefix développé avec l'Allemagne.",
+      "L'objectif scientifique est de récupérer dix grammes d'échantillons sur Phobos pour analyser les origines du Système solaire et de la vie sur Terre."
     ],
     "centre": [
-      "Le Japon engage une nouvelle fusée dans l'espace afin d'atteindre les lunes de Mars pour une mission d'exploration inédite.",
-      "L'objectif scientifique prioritaire est de ramener sur Terre des échantillons de Phobos afin d'élucider l'origine de ces satellites naturels et d'interroger la genèse de la vie terrestre."
+      "L'agence spatiale japonaise a procédé au lancement d'une sonde depuis l'île de Tanegashima.",
+      "La mission MMX vise à élucider la formation des deux satellites naturels martiens.",
+      "Le projet ambitionne de rapporter sur Terre des prélèvements du sol de Phobos afin d'obtenir des indices sur l'apparition de la vie."
     ],
     "droite": [
-      "Le Japon a procédé au lancement d'une fusée consacrée à une exploration inédite des lunes de Mars.",
-      "Cette mission spatiale vise à récolter des échantillons pour tenter de comprendre les origines du Système solaire ainsi que de la vie sur Terre."
+      "Le Japon a officialisé le lancement d'une fusée consacrée à l'exploration des lunes martiennes.",
+      "La mission spatiale tente l'exploit inédit de collecter des échantillons directement sur place.",
+      "Les chercheurs espèrent lever le voile sur les origines du Système solaire et de la vie terrestre grâce à cette expédition."
     ]
   },
   "differences": [
-    "La gauche insiste particulièrement sur la contribution technique française et européenne à la mission, notamment à travers les engins embarqués et le rover Idefix.",
-    "Le centre privilégie l'ampleur technique et l'objectif ambitieux de prélèvement direct sur la lune Phobos.",
-    "La droite adopte un compte rendu factuel et synthétique centré sur l'annonce institutionnelle du lancement japonais et ses finalités scientifiques."
+    "La gauche met particulièrement en avant la dimension collaborative de l'expédition en mentionnant explicitement la contribution française et le rover Idefix.",
+    "Le centre adopte un format factuel et détaillé en insistant sur les aspects techniques du lancement depuis l'île de Tanegashima et l'enjeu précis de la quantité d'échantillons ciblée.",
+    "La droite se focalise sur l'annonce officielle du lancement et l'exploit technologique inédit que représente la récupération des prélèvements martiens."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 9
 }
