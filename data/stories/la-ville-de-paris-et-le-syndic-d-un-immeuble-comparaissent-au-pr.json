@@ -1,10 +1,33 @@
 {
   "id": "207a2f6e3249",
   "slug": "la-ville-de-paris-et-le-syndic-d-un-immeuble-comparaissent-au-pr",
-  "title": "La Ville de Paris et le syndic d'un immeuble comparaissent au procès de l'explosion de la rue de Trévise",
+  "title": "La justice ouvre le procès de l'explosion de la rue de Trévise",
   "createdAt": "2026-10-19T20:01:21.894Z",
   "storyDay": "2026-10-19",
   "articles": [
+    {
+      "id": "29097d1c1f20",
+      "outletId": "le-parisien",
+      "headline": "« Identifier les vrais responsables » : face aux victimes de la rue de Trévise, la Ville de Paris, le syndic et l’ombre de GRDF",
+      "url": "https://www.leparisien.fr/faits-divers/identifier-les-vrais-responsables-face-aux-victimes-de-la-rue-de-trevise-la-ville-de-paris-le-syndic-et-lombre-de-grdf-20-10-2026-CRFQOVP3HZFIZMT3LIBU6UBF5E.php",
+      "publishedAt": "2026-10-20T04:01:16.171Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "e32dda1f541c",
+      "outletId": "ouest-france",
+      "headline": "Explosion rue de Trévise : le procès s’ouvre aujourd’hui, près de huit ans après le drame qui a tué quatre personnes",
+      "url": "https://www.ouest-france.fr/societe/justice/explosion-rue-de-trevise-le-proces-souvre-aujourdhui-pres-de-huit-ans-apres-le-drame-qui-a-tue-quatre-personnes-532e5dbe-cbad-11f1-ad87-e24a1a2986e9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-20T04:00:13.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjAzN2ZlMjgwZGUwNGYwMWIyNGRiMDk3MjY0ZmU5MmU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=35e0ac3f00b1a990953b689d83bf03dcbced880825bd6cbc99d7ddecb94815d3",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
     {
       "id": "15e2e468f481",
       "outletId": "tf1-info",
@@ -45,20 +68,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le procès de l'explosion de la rue de Trévise s'ouvre avec la comparution de la Ville de Paris et du syndic d'un immeuble en tant que personnes morales.",
-      "Les prévenus doivent répondre des chefs d'homicides involontaires, blessures involontaires et destruction par l'effet d'une explosion ou d'un incendie.",
-      "La catastrophe du 12 janvier 2019 a causé la mort de quatre personnes et a fait plus de 200 blessés et sinistrés."
+      "Le journal Le Monde relate l'ouverture du procès de l'explosion de la rue de Trévise survenue le 12 janvier 2019.",
+      "La Ville de Paris et le syndic de copropriété comparaissent devant le tribunal correctionnel pour homicides et blessures involontaires.",
+      "Le drame a provoqué la mort de quatre personnes et a fait plus de 200 blessés et sinistrés."
+    ],
+    "centre": [
+      "Le procès concernant la catastrophe de la rue de Trévise s'ouvre près de huit ans après les faits.",
+      "La Ville de Paris et le syndic de copropriété sont jugés pour homicides involontaires suite à une explosion au gaz.",
+      "Le bilan officiel s'établit à quatre personnes tuées et près de 200 blessés lors de ce drame."
     ],
     "droite": [
-      "Le procès tant attendu de l'explosion de la rue de Trévise qui s'est produite le 12 janvier 2019 s'ouvre ce mardi 20 octobre.",
-      "La catastrophe a fait quatre morts et des dizaines de blessés.",
-      "La Ville de Paris et le syndic de copropriété comparaissent pour répondre des négligences liées à l'affaissement d'un trottoir ayant percé une canalisation de gaz."
+      "TF1 Info rapporte les témoignages de rescapés et de proches de victimes à la veille du procès de la rue de Trévise.",
+      "Seules des personnes morales, à savoir la Ville de Paris et le syndic de copropriété, se trouvent sur le banc des prévenus.",
+      "Les mis en cause sont poursuivis pour avoir négligé l'affaissement d'un trottoir ayant endommagé une canalisation de gaz."
     ]
   },
   "differences": [
-    "La gauche insiste sur la qualification juridique précise des faits et l'ampleur totale des victimes en comptabilisant l'ensemble des sinistrés.",
-    "La droite privilégie le récit émotionnel des victimes et pointe directement l'hypothèse technique des négligences sur un trottoir."
+    "Le Monde adopte une approche institutionnelle et juridique rigoureuse en listant précisément les qualifications pénales retenues contre les deux personnes morales.",
+    "Les médias du centre se concentrent sur la chronologie judiciaire du dossier et l'ampleur du bilan humain dressé par les autorités.",
+    "TF1 Info privilégie l'angle humain et émotionnel en mettant en avant les traumatismes des rescapés et l'absence de personnes physiques parmi les prévenus."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 5
 }
