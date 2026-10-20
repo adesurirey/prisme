@@ -1,6 +1,6 @@
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
-import type { Edition, Outlet, RedirectRegistry, Story } from '@prisme/domain';
+import type { Edition, Outlet, Story } from '@prisme/domain';
 import { parseStoryFile, publicOutlets } from '@prisme/domain';
 
 /**
@@ -78,24 +78,6 @@ export async function loadStory(slug: string): Promise<Story | undefined> {
   } catch {
     return undefined;
   }
-}
-
-/**
- * The redirect registry (data/redirects.json, written by the manual-merge
- * CLI). Absent before the first merge — an empty registry, like topics.json
- * before the first Topics build.
- */
-export async function loadRedirects(): Promise<RedirectRegistry> {
-  let raw: string;
-  try {
-    raw = await readDataFile('redirects.json');
-  } catch {
-    // Absent before the first merge: an empty registry.
-    return { redirects: [] };
-  }
-  // A present-but-corrupt registry fails the build (ADR-0005), like
-  // topics.json in the pipeline.
-  return JSON.parse(raw);
 }
 
 /** Link helper for the GitHub Pages base path. */
