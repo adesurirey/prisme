@@ -6,7 +6,7 @@
  * the committed data/ snapshot (ADR-0002).
  */
 import { execSync } from 'node:child_process';
-import { readFile, stat } from 'node:fs/promises';
+import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { beforeAll, describe, expect, it } from 'vitest';
 
@@ -81,5 +81,69 @@ describe('page head tags', () => {
     expect(html).toContain(
       'name="apple-mobile-web-app-title" content="Prisme"',
     );
+  });
+});
+
+describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () => {
+  it('ships robots.txt pointing at the sitemap', async () => {
+    const robots = await readFile(path.join(dist, 'robots.txt'), 'utf8');
+    expect(robots).toContain(
+      'Sitemap: https://leprisme.info/sitemap-index.xml',
+    );
+  });
+
+  it('emits sitemap-index.xml with the Edition and Story URLs', async () => {
+    const index = await readFile(path.join(dist, 'sitemap-index.xml'), 'utf8');
+    expect(index).toContain('/sitemap-0.xml');
+    const sitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');
+    expect(sitemap).toContain('<loc>https://leprisme.info/</loc>');
+    expect(sitemap).toContain(
+      '<loc>https://leprisme.info/classement-politique-des-medias/</loc>',
+    );
+    // At least one Story URL under its own day.
+    expect(sitemap).toMatch(/<loc>https:\/\/leprisme.info\/20\d\d-\d\d-\d\d\//);
+  });
+
+  it('gives every page a canonical, og:url and Twitter card', async () => {
+    const home = await readFile(path.join(dist, 'index.html'), 'utf8');
+    expect(home).toContain(
+      '<link rel="canonical" href="https://leprisme.info/">',
+    );
+    expect(home).toContain(
+      '<meta property="og:url" content="https://leprisme.info/">',
+    );
+    expect(home).toContain('property="og:site_name" content="Prisme"');
+    expect(home).toContain('name="twitter:card" content="summary"');
+
+    const classement = await readFile(
+      path.join(dist, 'classement-politique-des-medias/index.html'),
+      'utf8',
+    );
+    expect(classement).toContain(
+      '<link rel="canonical" href="https://leprisme.info/classement-politique-des-medias/">',
+    );
+  });
+
+  it('emits NewsArticle JSON-LD with isBasedOn on a Story page', async () => {
+    const storyDir = (await readdir(path.join(dist, '2026-10-20'))).find(
+      (name) => !name.startsWith('.'),
+    );
+    expect(storyDir).toBeDefined();
+    const html = await readFile(
+      path.join(dist, '2026-10-20', storyDir!, 'index.html'),
+      'utf8',
+    );
+    expect(html).toContain('"@type":"NewsArticle"');
+    expect(html).toContain('"isBasedOn":');
+    expect(html).toContain('property="article:published_time"');
+    expect(html).toContain('name="twitter:card" content="summary_large_image"');
+    // Site-wide identity JSON-LD is also present.
+    expect(html).toContain('"@type":"WebSite"');
+  });
+
+  it('ships the branded French 404 page', async () => {
+    const html = await readFile(path.join(dist, '404.html'), 'utf8');
+    expect(html).toContain("Cette page n'existe pas");
+    expect(html).toContain('Aller à la une');
   });
 });

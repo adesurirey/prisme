@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+
+// SEO (issue: branded 404): GitHub Pages falls back to dist/404.html when
+// present — without it the default English "Page not found · GitHub Pages"
+// page serves, unbranded and out of the site's voice (docs/brand.md).
+---
+
+<Base title="Page introuvable — Prisme">
+  <section class="pt-20 pb-16 text-center">
+    <p class="text-[13px] font-semibold uppercase tracking-[0.08em] text-muted">Erreur 404</p>
+    <h1 class="mt-2 text-[26px] font-semibold leading-snug tracking-[-0.02em] sm:text-[32px]">
+      Cette page n'existe pas
+    </h1>
+    <p class="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-muted">
+      Le lien est peut-être ancien : les sujets du jour sont sur la une, les jours passés
+      restent consultables depuis la page d'accueil.
+    </p>
+    <p class="mt-8">
+      <a
+        href="/"
+        class="inline-flex items-center gap-1.5 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 transition-colors hover:decoration-ink"
+      >
+        <svg
+          width="13"
+          height="13"
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+          class="shrink-0"
+        >
+          <path
+            d="M13 8H3m0 0 4-4M3 8l4 4"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+        Aller à la une
+      </a>
+    </p>
+  </section>
+</Base>

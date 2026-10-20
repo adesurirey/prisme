@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 
@@ -31,7 +32,10 @@ export default defineConfig({
   site: 'https://leprisme.info',
   base: '/',
   redirects,
-  integrations: [react()],
+  // Sitemap (robots.txt points at /sitemap-index.xml): every built Story,
+  // the Edition index and the classement page, since old day pages have no
+  // inlinks once they roll off the homepage.
+  integrations: [react(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },

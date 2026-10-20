@@ -80,10 +80,27 @@ const publishedLine = sameMinute
 // counters — never Outlet text (ADR-0003).
 const description =
   reporting > 0
-    ? `Comment la presse française couvre « ${story.title} » : ${reporting} média${
+    ? `Comment la presse française couvre « ${story.title} » : ${reporting} média${
         reporting > 1 ? 's' : ''
       } sur ${outlets.length}, ${counts.gauche} gauche, ${counts.centre} centre, ${counts.droite} droite.`
     : undefined;
+
+// JSON-LD (NewsArticle): the Story as a press-review entry. isBasedOn lists
+// the source Articles' URLs — the semantically honest provenance for a
+// revue de presse. dateModified is the newest Article publication (the same
+// clock the "mis à jour" line uses), never later than the next edition run.
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'NewsArticle',
+  headline: story.title,
+  datePublished: published.toISOString(),
+  dateModified: updated.toISOString(),
+  inLanguage: 'fr',
+  image: image?.imageUrl ? [image.imageUrl] : undefined,
+  isBasedOn: story.articles.map((a) => a.url),
+  mainEntityOfPage: Astro.url,
+  publisher: { '@type': 'Organization', name: 'Prisme', url: Astro.site?.href },
+};
 ---
 
 <Base
@@ -91,6 +108,8 @@ const description =
   description={description}
   ogImage={image?.imageUrl}
   ogType="article"
+  publishedTime={published.toISOString()}
+  jsonLd={jsonLd}
 >
   <article class="pt-10">
     <p class="mb-6">
