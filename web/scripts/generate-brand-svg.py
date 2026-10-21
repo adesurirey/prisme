@@ -137,7 +137,7 @@ def main():
     assets = {
         "prisme-wordmark-nav.svg": build(LETTERS, 0.0, 14, pinch=(PINCH_CAP_NAV, PINCH_SHARP_NAV)),
         # l'angle du P du wordmark, adopté au rendu réel
-        "prisme-mark.svg": build("P", 0, 14, pinch=(PINCH_CAP_MARK, PINCH_SHARP)),
+        "prisme-mark.svg": build("P", 0, 14, pinch=(PINCH_CAP_MARK, PINCH_SHARP_NAV)),
     }
     for name, svg in assets.items():
         with open(os.path.join(OUT_DIR, name), "w") as f:
