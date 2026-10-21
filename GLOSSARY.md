@@ -60,11 +60,11 @@ A later Story covering the same news event as an earlier one — the day-by-day 
 _Avoid_: Follow-up, part 2, sequel
 
 **Live Story**:
-A Story whose Ingestion window is open — founded less than 24 hours ago, so every one of its Articles is less than 24 hours old (ADR-0026). Live Stories can gain Articles and make up the Edition (ADR-0022).
+A Story whose Ingestion window is open — at most 12 hours have passed since its newest Article, once that is later than 24 hours from the founding (ADR-0027). Live Stories can gain Articles and appear in the Editions' windows (ADR-0022).
 _Avoid_: Active story, open story
 
 **Frozen Story**:
-A Story with no live Articles left. It has left the Edition; once it has entered the Edition its page stays published and is never modified again. A Frozen Story that never entered the Edition is deleted at the end of each run (issue #75).
+A Story whose Ingestion window has closed — silent past its 24-hour floor plus 12 hours. It no longer ingests and is never modified again; it stays visible in an Edition's window while its Articles are recent enough, and once it has entered the Edition its page stays published. A Frozen Story that never entered the Edition is deleted at the end of each run (issue #75).
 _Avoid_: Archived story, closed story, expired story
 
 **Grouping model**:
@@ -80,7 +80,7 @@ A yes/no check that decides whether an Article the Grouping model matched with l
 _Avoid_: Verification, noul check
 
 **Unassigned Article**:
-An Article this build matched with no Story: refused by a Membership check, mis-targeted, or left unmatched by the Grouping model. It is written to no Story file, so the next build presents it again as fresh. No Story is ever born from fewer than two Articles (ADR-0015).
+An Article this build matched with no Story: refused by a Membership check, mis-targeted, or left unmatched by the Grouping model. It is written to no Story file, so the next build presents it again as fresh. No Story is ever born from fewer than two Articles or fewer than two Outlets (ADR-0015, ADR-0027).
 _Avoid_: Orphan (use unassigned), rejected article, floating article
 
 **Section**:
@@ -88,19 +88,19 @@ The part of the news a Story belongs to: Politique, International, Économie, So
 _Avoid_: Category, rubric, topic
 
 **Edition**:
-Everything Prisme publishes for the day, updated throughout the day: all Stories whose Ingestion window is open — founded less than 24 hours ago (ADR-0026) — ranked by Coverage, with no cut (ADR-0022). A Story leaves la Une at its window close, at most 24 hours after its founding. Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
+A rolling window over all Stories — frozen ones included — ranked by Coverage counted inside the window, re-ranked at every build. « Aujourd'hui » (the home) is the last 24 hours, uncapped (ADR-0022); « 7 jours » (`/7-jours/`) is the last 7 days, floored to Stories covered by at least 10 Outlets in the window. A Story stays on la Une while Outlets keep reporting it inside the window, then sinks and disappears — by decay, never by a clock (ADR-0027). Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
 _Avoid_: Issue, digest, daily, run
 
 **Story day**:
-The one Publication day (Europe/Paris) a Story belongs to — the day of its founding Article, fixed when the Story is created. It keys the Story's URL, its archive page and the Episode age window; which Articles may join is governed by the Ingestion window, not by the day (ADR-0026).
+The one Publication day (Europe/Paris) a Story belongs to — the day of its founding Article, fixed when the Story is created. It keys the Story's URL, its archive page and the Episode age window; which Articles may join is governed by the Ingestion window, not by the day (ADR-0026, ADR-0027).
 _Avoid_: Story date, day of the story
 
 **Ingestion window**:
-The period, from a Story's founding, during which the Story still accepts Articles: `[founding, founding + 24h]` in instant arithmetic, where the founding instant is the earliest `publishedAt` among the Story's Articles (ADR-0026). An evening Story absorbs its overnight cycle — the founding is at most 24 hours old, so the window is DST-proof by construction. Past the window, the Story is frozen.
+The period, from a Story's founding, during which the Story still accepts Articles: `[founding, max(founding + 24h, newest + 12h)]` in instant arithmetic, where the founding instant is the earliest `publishedAt` among its Articles and the newest its latest (ADR-0027). Every Story gets at least one full day; while coverage continues, each new Article extends the Story by 12 hours — a silence longer than that closes it, permanently.
 _Avoid_: Grace period, closing time, 06:00 rule
 
 **Summaries budget**:
-The at-most-20 top-ranked Stories per build that gain a Summaries call when they gained Articles — derived from the Gemini free tier's daily quota (ADR-0022). A Story outside the budget keeps its existing summary as-is.
+The at-most-20 top-ranked Stories per build that gain a Summaries call — and only when a Story grew at least 25 % since its last pass, or has never been summarized (ADR-0022, ADR-0027; derived from the Gemini free tier's daily quota). A Story outside the budget, or below the growth gate, keeps its existing summary as-is.
 _Avoid_: Edition size, story cap
 
 **Archive**:

@@ -1,5 +1,14 @@
 # AI reads only RSS headlines and teasers, and outlet text is never published or stored
 
+> **Amended by ADR-0027** (2026-10-21): teasers are no longer strictly
+> transient — the collector accumulates them into a gitignored private
+> cache (`.cache/teasers.json`, round-tripped through CI cache) so that
+> whole-Story Summaries on multi-day Stories keep their input after
+> Articles rotate out of the feeds. The line holds where it matters:
+> nothing Outlet-written is published or committed; the public repo and
+> the site stay clean. The « Summaries can't be regenerated from scratch
+> later » consequence below is correspondingly relaxed for live Stories.
+
 Several Outlets (Le Figaro, franceinfo, Ouest-France…) formally opt out of text and data mining (`tdmrep.json`, EU DSM Directive art. 4), and most block AI crawlers. French press neighbouring rights also cover the display of article snippets. So the AI reads only the headline and teaser each Outlet publishes in its own RSS feed. It never reads article pages or full bodies included in a feed. The site publishes headlines, links and Prisme's own Summaries and Differences, never Outlet text.
 
 The same input for every Outlet also keeps Differences fair. If some Leanings were summarised from full articles and others from headlines, the comparison would be skewed.

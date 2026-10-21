@@ -9,6 +9,13 @@ Decided 2026-10-17.
 > founding + 24h]` is open, with a sharp exit at the close. The uncapped
 > ranking and the Summaries budget remain in force.
 
+> **Partially superseded by ADR-0027** (2026-10-21): the Edition is no
+> longer the live pool — it is a rolling window over all Stories (frozen
+> included) ranked by Coverage counted inside the window. The 24-hour
+> Edition stays uncapped; the « 7 jours » Edition carries a significance
+> floor (≥ 10 Outlets). The Summaries budget survives, now gated by
+> growth (≥ 25 % since a Story's last pass).
+
 The Edition was capped at 20 Stories for one reason only: the free tier of
 the Gemini API could not afford more Summaries calls. That leaked an AI
 budget into editorial visibility — Stories were hidden from readers because

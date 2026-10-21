@@ -1,5 +1,12 @@
 # Stories ingest for 24 hours from their founding Article
 
+> **Partially superseded by ADR-0027** (2026-10-21): the fixed 24h window
+> below is gone — a Story ingests until silence, `max(founding + 24h,
+> newest + 12h)` — and the Edition's sharp exit is gone with it: Editions
+> are rolling windows ranked by Coverage counted inside the window. The
+> founding-instant derivation, the instant arithmetic and the strict
+> no-pre-founding bound remain in force.
+
 Supersedes the appartenance rule and the 06:00 Ingestion window of
 ADR-0017 (whose Story day, URLs, archive pages and backfill deletion —
 as reshaped by ADR-0022 — remain in force). Decided 2026-10-19.
