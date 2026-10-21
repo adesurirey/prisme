@@ -1,10 +1,22 @@
 {
   "id": "73c160554bcc",
   "slug": "une-panne-nationale-touche-le-reseau-mobile-de-l-operateur",
-  "title": "Une panne nationale affecte le réseau mobile de l'opérateur Orange et de sa filiale Sosh",
+  "title": "Une panne nationale perturbe le réseau mobile de l'opérateur Orange et de sa filiale Sosh",
   "createdAt": "2026-10-21T11:01:26.138Z",
   "storyDay": "2026-10-21",
   "articles": [
+    {
+      "id": "f7b779fd67ea",
+      "outletId": "le-monde",
+      "headline": "Orange annonce le rétablissement de son réseau mobile",
+      "url": "https://www.lemonde.fr/pixels/article/2026/10/21/orange-annonce-le-retablissement-de-son-reseau-mobile_6798249_4408997.html",
+      "publishedAt": "2026-10-21T20:22:27.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/06/24/0/0/5358/2679/644/322/60/0/f9769f7_ftp-1-bss2znmq9zoh-5425727-01-06.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
     {
       "id": "35c436b71fec",
       "outletId": "europe-1",
@@ -168,26 +180,28 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Une panne majeure d'ampleur nationale a affecté le réseau mobile d'Orange et de Sosh durant une grande partie de la journée.",
-      "Des millions d'abonnés se sont retrouvés dans l'impossibilité d'émettre des appels, d'envoyer des messages ou d'utiliser les données mobiles.",
-      "Libération signale qu'une « migration ratée vers la 5G » serait à l'origine de cet incident technique d'après Numerama."
+      "Une panne majeure sur le réseau national d'Orange et de sa filiale Sosh a privé des millions d'abonnés de services mobiles toute la journée du 21 octobre.",
+      "Libération mentionne, en citant Numerama, qu'une migration ratée vers la 5G serait à l'origine de l'incident.",
+      "L'opérateur a annoncé en soirée le rétablissement progressif du réseau et la poursuite de la surveillance des équipements."
     ],
     "centre": [
-      "Une vaste panne nationale a perturbé les services mobiles de l'opérateur Orange et de sa filiale Sosh dès la matinée.",
-      "De nombreux clients ont témoigné de difficultés à joindre leurs proches ou les services d'urgence, provoquant des milliers de signalements.",
-      "L'entreprise a présenté ses excuses et annoncé en soirée le rétablissement progressif des appels, des SMS et des usages mobiles."
+      "Une panne d'ampleur nationale a affecté l'opérateur Orange et sa filiale Sosh, provoquant des perturbations sur les appels, les SMS et l'internet mobile.",
+      "Le pic des signalements a été atteint dans la matinée sur les plateformes de recensement des pannes, illustrant l'impact sur les particuliers et les entreprises.",
+      "La presse généraliste a illustré la crise à travers le témoignage de clients se retrouvant injoignables lors d'urgences médicales.",
+      "L'entreprise a officialisé dans la soirée le retour à la normale de l'ensemble de ses services mobiles."
     ],
     "droite": [
-      "Le réseau mobile de l'opérateur Orange a subi une interruption totale à l'échelle nationale touchant l'ensemble de ses clients particuliers et professionnels.",
-      "L'entreprise a indiqué que « l'incident est lié à une défaillance d'un équipement au niveau de notre cœur de réseau mobile ».",
-      "Près de 12.000 signalements ont été recensés sur la plateforme Downdetector lors du pic de la panne avant un retour à la normale constaté dans la soirée."
+      "Une panne nationale a touché le réseau mobile d'Orange et de Sosh, générant près de 12.000 signalements sur Downdetector avec un pic de perturbations à 11h50.",
+      "L'opérateur a attribué l'incident à la défaillance d'un équipement situé au niveau de son cœur de réseau mobile.",
+      "Les communications vocales, les messages et les usages internet ont été totalement rétablis pour l'ensemble des clients particuliers et professionnels en fin de journée.",
+      "Les concurrents Bouygues Telecom et SFR ont confirmé ne pas être concernés par cet incident."
     ]
   },
   "differences": [
-    "La gauche se distingue en contextualisant l'origine technique de la panne par une mention directe à des sources spécialisées comme Numerama.",
-    "Le centre privilégie une couverture axée sur le vécu des abonnés et l'impact immédiat des perturbations dans la vie quotidienne.",
-    "La droite adopte un traitement technique et factuel centré sur les données communiquées par l'opérateur et les pics de signalement."
+    "La gauche se distingue en évoquant une origine technique précise de la panne liée à la 5G, en s'appuyant sur des enquêtes extérieures.",
+    "Le centre adopte un angle centré sur le vécu des usagers et les conséquences concrètes de l'interruption des communications.",
+    "La droite privilégie un traitement technique et chiffré de l'événement en détaillant l'origine du matériel défaillant et le volume des signalements."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 14
+  "summarizedArticleCount": 15
 }

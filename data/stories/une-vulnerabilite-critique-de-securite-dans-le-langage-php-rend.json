@@ -1,10 +1,45 @@
 {
   "id": "96e03af34e0f",
   "slug": "une-vulnerabilite-critique-de-securite-dans-le-langage-php-rend",
-  "title": "Une vulnérabilité critique dans le langage PHP paralyse de nombreux sites internet institutionnels et des millions de plateformes dans le monde",
+  "title": "Une vulnérabilité critique dans le langage PHP paralyse de nombreux sites internet institutionnels et des millions de plateformes",
   "createdAt": "2026-10-21T17:01:24.444Z",
   "storyDay": "2026-10-21",
   "articles": [
+    {
+      "id": "de6744532411",
+      "outletId": "le-figaro",
+      "headline": "Qu’est-ce que PHP, ce langage informatique qui a fait vaciller une partie de l’Internet mondial ?",
+      "url": "https://www.lefigaro.fr/secteur/high-tech/qu-est-ce-que-php-ce-langage-informatique-qui-a-fait-vaciller-une-partie-d-internet-20261021",
+      "publishedAt": "2026-10-21T20:22:16.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/21/6553024f28e166d7c811415679dc532a411f2ea80349d71dd34bcc8b13b53d28.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
+    {
+      "id": "61c4d7e76c0c",
+      "outletId": "le-figaro",
+      "headline": "Gouvernements paniqués, cyberattaques massives en préparation, implication d’OpenAI… Le jour où Internet a été débranché en urgence à cause du PHP",
+      "url": "https://www.lefigaro.fr/secteur/high-tech/gouvernements-paniques-cyberattaques-massives-en-preparation-implication-d-openai-le-jour-ou-internet-a-ete-debranche-en-urgence-a-cause-du-php-20261021",
+      "publishedAt": "2026-10-21T20:22:14.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/21/2a99ff9ae45e95bd72555034915c1f5576d0274add8c5f5fed59a8d9b9ce3cc4.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
+    {
+      "id": "1352efa49d18",
+      "outletId": "lobs",
+      "headline": "Météo France, préfectures… Pourquoi de nombreux sites internet étaient inaccessibles mercredi ?",
+      "url": "https://www.nouvelobs.com/economie/20261021.OBS119415/meteo-france-prefectures-pourquoi-de-nombreux-sites-internet-etaient-inaccessibles-mercredi.html",
+      "publishedAt": "2026-10-21T19:07:21.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/08/31/0/5/4972/3315/0/0/60/0/4a8d554_upload-1-lzqjhuxyqajp-080-hl-rdoucelin-3005193.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
     {
       "id": "1ce264638602",
       "outletId": "tf1-info",
@@ -199,26 +234,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Deux failles informatiques critiques sur le langage PHP ont menacé des millions de sites web à travers le monde.",
-      "En France, les plateformes des impôts et de la Préfecture de Police ont été temporairement fermées ce mercredi 21 octobre.",
-      "Des correctifs ont été trouvés, mais les gestionnaires ont procédé à des fermetures préventives pour parer à tout risque d'attaque."
+      "Deux vulnérabilités critiques dans le langage de programmation PHP ont entraîné la fermeture temporaire de millions de sites web dans le monde le mercredi 21 octobre.",
+      "En France, les plateformes gouvernementales et administratives, incluant les sites des préfectures, de la police et des impôts, ont été rendues inaccessibles à titre préventif.",
+      "Un correctif a été rapidement déployé pour faire face à cette menace d'envergure mondiale sur la cybersécurité."
     ],
     "centre": [
-      "Une vulnérabilité de sécurité mondiale affectant le langage PHP a contraint l'Anssi à demander des déconnexions d'urgence.",
-      "En France, les sites des impôts, de Météo-France et de l'ensemble des préfectures ont été placés en maintenance préventive.",
-      "Plusieurs pays en Europe et les États-Unis sont également touchés par cet incident qui paralyse une partie d'Internet."
+      "Une faille de sécurité critique touchant le protocole PHP a provoqué une mise en maintenance d'urgence de nombreux sites internet à travers le globe le mercredi 21 octobre.",
+      "En France, l'incident a touché des services publics majeurs, tels que Météo-France, les impôts et les préfectures, conformément aux alertes émises par l'Anssi.",
+      "Les autorités américaines, à travers la NSA, ont recommandé une mise à jour immédiate pour parer à cette menace globale."
     ],
     "droite": [
-      "Des milliers de sites internet ont été mis hors ligne par précaution en raison de failles majeures dans le langage PHP.",
-      "Le ministère de l'Intérieur a agi à la demande de l'Anssi pour neutraliser les risques sur les services publics.",
-      "L'agence américaine de cybersécurité (NSA) et le Centre national britannique (NCSC) ont recommandé de se déconnecter dans l'attente de mises à jour."
+      "Des failles critiques dans le langage PHP ont menacé près de 70% du web mondial et mis hors de service des milliers de sites institutionnels par précaution.",
+      "L'agence américaine NSA et le Centre national britannique de cybersécurité ont recommandé des mesures d'urgence pour parer à ces cyberattaques massives.",
+      "L'utilisation de l'intelligence artificielle a joué un rôle déterminant dans la détection de ces vulnérabilités et l'accélération des menaces, selon Europe 1."
     ]
   },
   "differences": [
-    "La gauche insiste sur l'ampleur mondiale des menaces pesant sur des centaines de millions de sites en expliquant en détail le rôle fondamental du protocole PHP.",
-    "Le centre adopte un angle institutionnel strict en recensant précisément les services publics et ministères français mis hors ligne à la demande des autorités.",
-    "La droite met en avant l'intervention des services de renseignement étrangers et souligne le rôle de l'intelligence artificielle dans la détection de telles vulnérabilités."
+    "La gauche insiste en premier lieu sur la perturbation concrète des services publics français et l'impact immédiat sur la vie quotidienne des citoyens, tout en soulignant la dimension planétaire de la menace informatique.",
+    "Le centre adopte une approche institutionnelle et factuelle en privilégiant les alertes émises par les agences de cybersécurité internationales et françaises, comme l'Anssi.",
+    "La droite dramatise l'événement en évoquant un « Internet débranché en urgence » et met en avant la menace géopolitique ainsi que le rôle de l'intelligence artificielle dans la détection des failles."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 17
+  "summarizedArticleCount": 20
 }
