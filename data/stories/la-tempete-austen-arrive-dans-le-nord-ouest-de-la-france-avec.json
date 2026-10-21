@@ -1,10 +1,32 @@
 {
   "id": "e98221363e30",
   "slug": "la-tempete-austen-arrive-dans-le-nord-ouest-de-la-france-avec",
-  "title": "La tempête Austen balaie le nord-ouest de la France avec des rafales jusqu’à 140 km/h",
+  "title": "La tempête Austen balaie le nord-ouest de la France avec des rafales atteignant jusqu'à 140 km/h et perturbe le trafic ferroviaire",
   "createdAt": "2026-10-21T14:01:24.270Z",
   "storyDay": "2026-10-21",
   "articles": [
+    {
+      "id": "af2123ffadb6",
+      "outletId": "franceinfo",
+      "headline": "Le trafic ferroviaire perturbé dans le Nord et le Nord-Ouest à partir de vendredi matin, en raison de la tempête Austen",
+      "url": "https://www.franceinfo.fr/economie/transports/le-trafic-ferroviaire-perturbe-dans-le-nord-et-le-nord-ouest-a-partir-de-vendredi-matin-en-raison-de-la-tempete-austen_8247802.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-21T18:15:40.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/u4PkqTm138b4pCNMjscYTn9e6kI/0x106:1024x682/432x243/filters:format(jpg)/2026/10/21/6ad8fe7eacf91763030600.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "other"
+    },
+    {
+      "id": "341afd30aa5a",
+      "outletId": "la-croix",
+      "headline": "Tempête : le trafic ferroviaire perturbé vendredi dans le nord-ouest de la France",
+      "url": "https://www.la-croix.com/societe/tempete-le-trafic-ferroviaire-perturbe-vendredi-dans-le-nord-ouest-de-la-france-20261021",
+      "publishedAt": "2026-10-21T18:06:31.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/21/2568979-a-cause-de-la-tempete-austen-annoncee-la-circulati.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "other"
+    },
     {
       "id": "6f5e48f46f0a",
       "outletId": "cnews",
@@ -54,25 +76,23 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La tempête Austen, première de la saison automnale, touchera le nord-ouest de la France dès jeudi soir.",
-      "Des vents violents compris entre 110 et 130 km/h sont attendus sur les côtes de la Manche, la Bretagne, la Normandie et les Hauts-de-France.",
-      "Des pluies soutenues accompagneront le passage de cette perturbation jusqu'à vendredi après-midi."
+      "La tempête Austen touche le nord-ouest du pays à partir de jeudi soir avec des vents de 110 à 130 km/h et des pluies soutenues.",
+      "Les départements de Bretagne, de Normandie et des Hauts-de-France subissent de plein fouet ces intempéries qui perturbent les transports."
     ],
     "centre": [
-      "La tempête Austen, première de l'automne, s'apprête à frapper le nord-ouest de l'Hexagone ce vendredi.",
-      "Des rafales exceptionnelles pouvant atteindre jusqu'à 140 km/h sont prévues dans les zones concernées."
+      "La tempête Austen engendre des rafales supérieures à 110 km/h et perturbe fortement le trafic ferroviaire de la SNCF en Normandie et dans l'Ouest.",
+      "Le phénomène météorologique, qualifié de première tempête automnale, affecte également le trafic pour la journée de samedi."
     ],
     "droite": [
-      "Météo-France a placé 13 départements en vigilance jaune en raison de risques de vents violents pour la journée du jeudi 22 octobre.",
-      "La tempête Austen, qualifiée de « bombe météorologique » par La Chaîne Météo, va balayer les îles britanniques et le nord-ouest de la France.",
-      "Des rafales dépassant les 100 km/h sont annoncées sur la Bretagne, la Normandie et les Hauts-de-France, accompagnées d'une houle massive."
+      "Météo-France place 13 départements en vigilance jaune en raison de vents violents associés à l'arrivée de la première tempête de l'automne.",
+      "La dépression, qualifiée de bombe météorologique par La Chaîne Météo, provoque des rafales dépassant 100 km/h sur la façade nord-ouest dès la nuit de jeudi."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur l'aspect pluvieux et l'arrivée précoce dès le jeudi soir des intempéries dans le nord-ouest.",
-    "Le centre focalise son traitement sur l'intensité maximale des rafales pouvant atteindre 140 km/h.",
-    "La droite privilégie les aspects techniques en citant les alertes de Météo-France et le terme de « bombe météorologique »."
+    "La gauche met l'accent sur l'intensité physique des intempéries et l'arrivée rapide des pluies dans les régions de l'Ouest.",
+    "Le centre focalise son traitement sur les conséquences directes pour les usagers des transports et les annulations de la SNCF.",
+    "La droite insiste sur les aspects techniques de la prévision météorologique et la description chiffrée de la vigilance par départements."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 6
 }

@@ -1,10 +1,53 @@
 {
   "id": "96e03af34e0f",
   "slug": "une-vulnerabilite-critique-de-securite-dans-le-langage-php-rend",
-  "title": "Une vulnérabilité critique de sécurité dans le langage PHP rend inaccessibles de nombreux sites internet en France",
+  "title": "Une vulnérabilité critique dans le langage PHP paralyse de nombreux sites internet institutionnels et des millions de plateformes dans le monde",
   "createdAt": "2026-10-21T17:01:24.444Z",
   "storyDay": "2026-10-21",
   "articles": [
+    {
+      "id": "1ce264638602",
+      "outletId": "tf1-info",
+      "headline": "Faille majeure de sécurité : l'Internet mondial en partie stoppé",
+      "url": "https://www.tf1info.fr/international/videos/video-faille-majeure-de-securite-l-internet-mondial-en-partie-stoppe-88995-2471260.html",
+      "publishedAt": "2026-10-21T18:35:14.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/faille-majeure-de-securite-l-internet-mondial-en-partie-stoppe-10fc48-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "c62b0b4ffb54",
+      "outletId": "liberation",
+      "headline": "Qu’est-ce que le PHP, ce langage informatique qui fait tourner près de 70 % des sites web ?",
+      "url": "https://www.liberation.fr/economie/quest-ce-que-le-php-ce-langage-informatique-qui-fait-tourner-pres-de-70-des-sites-web-20261021_YGFN2LUS4VDNRCJVTIZXS27RCU/",
+      "publishedAt": "2026-10-21T18:32:44.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "c62d9cdb52d9",
+      "outletId": "europe-1",
+      "headline": "Préfectures françaises, services publics… Pourquoi des milliers de sites internet ont été mis hors ligne",
+      "url": "https://www.europe1.fr/technologies/prefectures-francaises-services-publics-pourquoi-des-milliers-de-sites-internet-ont-ete-mis-hors-ligne-1171338?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-21T18:07:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/20/043_dpa-pa_251216-99-940198_dpai_1_6ad907aa78ad6.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "742ebf3290f2",
+      "outletId": "cnews",
+      "headline": "Préfectures, impôts, Météo-France... Pourquoi des dizaines de sites sont-ils inaccessibles ce mercredi ?",
+      "url": "https://www.cnews.fr/vie-numerique/2026-10-21/prefectures-impots-meteo-france-pourquoi-des-dizaines-de-sites-sont-ils",
+      "publishedAt": "2026-10-21T18:06:00.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/capture_d_e_cran_2026-10-21_a_19.15.34_6ad8f3468371a.png?h=44581ea2&itok=5Psf-4Ny",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
     {
       "id": "ab9d8c24e8af",
       "outletId": "bfmtv",
@@ -156,26 +199,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Deux failles majeures de sécurité dans le langage PHP ont entraîné la fermeture temporaire de millions de sites web à travers le monde.",
-      "En France, plusieurs plateformes gouvernementales et institutionnelles, telles que les préfectures de police et le site des impôts, ont été rendues inaccessibles.",
-      "Ces mesures préventives ont été prises par les autorités pour éviter des attaques informatiques d'envergure."
+      "Deux failles informatiques critiques sur le langage PHP ont menacé des millions de sites web à travers le monde.",
+      "En France, les plateformes des impôts et de la Préfecture de Police ont été temporairement fermées ce mercredi 21 octobre.",
+      "Des correctifs ont été trouvés, mais les gestionnaires ont procédé à des fermetures préventives pour parer à tout risque d'attaque."
     ],
     "centre": [
-      "Une vulnérabilité critique affectant le langage informatique PHP menace les deux tiers des sites internet mondiaux.",
-      "En France, le ministère de l'Intérieur a ordonné la mise en maintenance préventive de nombreux services publics, dont les impôts et les préfectures.",
-      "Les États-Unis ont émis des recommandations urgentes incitant à appliquer immédiatement les correctifs nécessaires."
+      "Une vulnérabilité de sécurité mondiale affectant le langage PHP a contraint l'Anssi à demander des déconnexions d'urgence.",
+      "En France, les sites des impôts, de Météo-France et de l'ensemble des préfectures ont été placés en maintenance préventive.",
+      "Plusieurs pays en Europe et les États-Unis sont également touchés par cet incident qui paralyse une partie d'Internet."
     ],
     "droite": [
-      "Une brèche informatique critique touchant le langage PHP a provoqué l'arrêt d'une partie de l'Internet mondial.",
-      "À la demande expresse de l'Anssi, tous les sites des préfectures françaises ont été coupés préventivement.",
-      "L'Europe et les États-Unis subissent également les répercussions de cette faille majeure, en attendant des correctifs de la part des éditeurs."
+      "Des milliers de sites internet ont été mis hors ligne par précaution en raison de failles majeures dans le langage PHP.",
+      "Le ministère de l'Intérieur a agi à la demande de l'Anssi pour neutraliser les risques sur les services publics.",
+      "L'agence américaine de cybersécurité (NSA) et le Centre national britannique (NCSC) ont recommandé de se déconnecter dans l'attente de mises à jour."
     ]
   },
   "differences": [
-    "La gauche insiste sur l'ampleur internationale des plateformes mises hors ligne et cite explicitement les impacts sur la vie quotidienne des citoyens.",
-    "Le centre adopte une approche institutionnelle en soulignant les consignes émises par les agences de cybersécurité nationales et étrangères.",
-    "La droite met particulièrement en avant l'intervention directe de l'Anssi pour justifier l'arrêt des services publics français."
+    "La gauche insiste sur l'ampleur mondiale des menaces pesant sur des centaines de millions de sites en expliquant en détail le rôle fondamental du protocole PHP.",
+    "Le centre adopte un angle institutionnel strict en recensant précisément les services publics et ministères français mis hors ligne à la demande des autorités.",
+    "La droite met en avant l'intervention des services de renseignement étrangers et souligne le rôle de l'intelligence artificielle dans la détection de telles vulnérabilités."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 13
+  "summarizedArticleCount": 17
 }
