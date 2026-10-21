@@ -8,11 +8,11 @@ const perLeaning = (leaning: Leaning): number =>
   outlets.filter((o) => o.leaning === leaning).length;
 
 const description =
-  "D'où vient l'actualité sur Prisme : les flux RSS des médias, comment les sujets sont groupés, ce que les modèles voient — et ce que Prisme ne fait pas.";
+  "D'où vient l'actualité sur Prisme : les flux RSS des médias, comment les sujets se forment, ce que les modèles de langage voient — et ce que Prisme ne fait pas.";
 ---
 
 <Base
-  title="Comment fonctionne Prisme : la méthode de la une à l'angle mort"
+  title="Comment fonctionne Prisme : de la une à l'angle mort"
   description={description}
   jsonLd={{
     "@context": "https://schema.org",
@@ -49,82 +49,87 @@ const description =
       Comment fonctionne Prisme
     </h1>
     <p class="mt-4 text-[16px] leading-relaxed text-muted">
-      Cette page décrit la méthode : d'où vient l'actualité montrée sur Prisme,
-      comment les sujets se forment, ce que les modèles de langage voient — et
-      ce qu'ils ne voient jamais. Elle dit aussi ce que Prisme ne fait pas.
+      D'où vient l'actualité montrée sur Prisme, comment les sujets se forment, ce que
+      les modèles de langage voient — et ce qu'ils ne lisent jamais.
     </p>
 
-    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
+    <section
+      id="ce-que-prisme-montre"
+      class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted"
+    >
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">
         Ce que Prisme montre
       </h2>
       <p>
-        Prisme montre la une des grands médias français — ce que chaque média
-        met lui-même en avant sur son site — regroupée par sujet, et comparée de
-        gauche à droite. Rien n'est inventé ou sélectionné par Prisme : les
-        articles viennent des propres flux des {outlets.length} médias suivis, et
-        un article n'est marqué « à la une » que si le média le déclare tel.
+        Prisme montre la une des grands médias français — ce que chaque média met
+        lui-même en avant — regroupée par sujet et comparée de gauche à droite. Prisme
+        n'invente rien : chaque article vient du flux public de son média, et il n'est
+        marqué « à la une » que si le média le déclare tel.
       </p>
       <p>
-        Les articles qui parlent du même événement sont réunis dans un même
-        sujet. Quand un sujet est repris par plusieurs médias, la page du sujet
-        montre sa couverture — combien de médias à gauche, au centre et à droite
-        le traitent — et, pour chaque camp, une synthèse en quelques points et
-        les différences de traitement.
+        Les articles qui couvrent le même événement sont réunis dans un même sujet.
+        Quand un sujet est repris par plusieurs médias, sa page montre la couverture —
+        combien de médias à gauche, au centre et à droite le traitent — puis, camp par
+        camp, une synthèse en quelques points et les différences de traitement.
       </p>
       <p>
-        Par défaut, la barre de couverture compte les médias : un média = une
-        voix, quelle que soit sa taille. Un interrupteur permet une seconde
-        lecture, l'exposition : chaque média y pèse selon son audience — ses
-        visites mensuelles, certifiées quand elles existent, estimées sinon —
-        avec une limite qui empêche un très grand média d'écraser tous les
-        autres. L'exposition ne remplace jamais la couverture : c'est la même
-        barre, lue autrement, à toi de choisir.
+        Par défaut, la barre de couverture compte les médias : un média = une voix,
+        quelle que soit sa taille. Un interrupteur propose une seconde lecture,
+        l'exposition : chaque média y pèse selon son audience — ses visites mensuelles,
+        certifiées quand elles existent, estimées sinon — avec un plafond qui empêche
+        un très grand média d'écraser les autres. L'exposition ne remplace pas la
+        couverture : c'est la même barre, lue autrement — à vous de choisir.
       </p>
     </section>
 
-    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
+    <section
+      id="comment-les-sujets-se-forment"
+      class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted"
+    >
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">
         Comment les sujets se forment
       </h2>
       <p>
-        Chaque heure, Prisme relève le flux RSS de chaque média — le fil public
-        où un média publie ses titres et ses chapôs. Prisme ne lit pas les
-        articles eux-mêmes : aucun texte d'article n'est téléchargé, stocké ou
-        reproduit. Tout ce que le site traite tient dans le titre et le chapô
-        que le média publie déjà à tous ses lecteurs. Tous les médias sont
-        traités exactement pareil : même source, même quantité de texte. C'est
-        ce qui rend les comparaisons équitables.
+        Chaque heure, Prisme relève le flux RSS de chaque média — le fil public où
+        chaque média publie ses titres et ses chapôs. Prisme ne lit jamais les articles
+        eux-mêmes : aucun texte d'article n'est téléchargé, stocké ou reproduit. Tout
+        ce que le site traite tient dans le titre et le chapô que le média publie déjà
+        pour tous ses lecteurs. Tous les médias sont traités exactement de la même
+        manière : même source, même quantité de texte. C'est ce qui rend les
+        comparaisons équitables.
       </p>
       <p>
-        Cinq modèles de langage transforment ces titres en sujets. Le premier
-        décide, pour chaque article, s'il s'agit d'une information, d'un
-        éditorial ou d'autre chose, et à quelle partie de l'actualité il
-        appartient. Le deuxième regroupe les articles qui parlent du même
-        événement. Un troisième vérifie chaque rattachement proposé, en posant
-        une question simple : ce titre parle-t-il bien du même fait que le sujet
-        existant ? Un quatrième écrit le titre de chaque sujet — un titre
-        neutre, en français, construit à partir des titres du groupe et jamais
-        copié d'un seul média. Le dernier rédige les synthèses et les
-        différences de traitement, camp par camp.
+        Cinq modèles de langage transforment ces titres en sujets. Le premier décide,
+        pour chaque article, s'il s'agit d'une information, d'un éditorial ou d'autre
+        chose, et à quelle partie de l'actualité il appartient. Le deuxième regroupe
+        les articles qui parlent du même événement. Le troisième vérifie chaque
+        rattachement, en posant une question simple : ce titre parle-t-il bien du même
+        fait que le sujet existant ? Le quatrième écrit le titre de chaque sujet — un
+        titre neutre, en français, construit à partir des titres du groupe, jamais
+        copié sur un seul média. Le cinquième rédige les synthèses et les différences
+        de traitement, camp par camp.
       </p>
       <p>
         Ces modèles ne voient que des titres et des chapôs — jamais un article
-        complet, jamais un article payant en clair. Et ils ne décident pas de
-        tout : un sujet n'existe que s'il est repris par au moins deux médias,
-        chaque rattachement est vérifié, et un article qui ne trouve pas sa
-        place est présenté de nouveau au passage suivant plutôt que rangé de
-        force.
+        complet, jamais un article payant en clair. Une synthèse ne résume donc que ce
+        que les titres et chapôs donnent à voir : la manière dont chaque bord présente
+        le sujet, pas le fond des articles. Et ils ne décident pas de tout : un sujet
+        n'existe que s'il est repris par au moins deux médias, chaque rattachement est
+        vérifié, et un article qui ne trouve pas sa place est représenté au passage
+        suivant plutôt que rangé de force.
       </p>
       <p>
-        Un sujet reste à la une tant que des articles continuent d'arriver, dans
-        la limite de 24 heures après sa création. Ensuite il quitte la une, sa
-        page reste consultable telle quelle, et la couverture du même événement
-        le lendemain forme un nouvel épisode.
+        Un sujet reste à la une tant que des articles continuent d'arriver, 24 heures
+        au plus après sa naissance. Ensuite il quitte la une, sa page reste
+        consultable telle quelle, et la couverture du même événement le lendemain
+        forme un nouvel épisode.
       </p>
     </section>
 
-    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
+    <section
+      id="le-bord-politique-appartient-au-media"
+      class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted"
+    >
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">
         Le bord politique appartient au média
       </h2>
@@ -136,73 +141,66 @@ const description =
         {LEANING_LABELS.centre.toLowerCase()}, {
           LEANING_LABELS["centre-droite"].toLowerCase()
         }
-        et {LEANING_LABELS.droite.toLowerCase()}. Ce classement n'est jamais
-        déduit des articles par un modèle : un article du <em>Figaro</em> peut défendre
-        une position de gauche, ça n'en fait pas un article « de droite ». C'est le
-        média, dans sa durée, qui porte la position.
+        et {LEANING_LABELS.droite.toLowerCase()} — et jamais par un modèle : le bord
+        politique appartient au média, pas aux articles.
       </p>
       <p>
-        Chaque classement s'appuie sur au moins deux sources publiques
-        indépendantes, citées avec leurs désaccords — le détail, média par
-        média, est sur la page
-        <InlineLink href={withBase("/classement-politique-des-medias/")}
-          >classement politique des médias</InlineLink
-        >.
-      </p>
-      <p>
-        Le site lui-même ne parle qu'en trois camps : {
+        Le site, lui, ne parle qu'en trois camps : {
           perLeaning("gauche") + perLeaning("centre-gauche")
-        } médias à gauche (dont
-        {perLeaning("centre-gauche")} au centre gauche),
+        } médias à gauche (dont {perLeaning("centre-gauche")} au centre gauche),
         {perLeaning("centre")} au centre et {
           perLeaning("centre-droite") + perLeaning("droite")
-        } à droite (dont {perLeaning("centre-droite")} au centre droit). Ces cinq
-        tendances ne disparaissent pas derrière les trois camps : la fiche de chaque
-        média porte sa tendance exacte, et les trois camps ne servent qu'aux comptages
-        — légendes, barres de couverture et synthèses.
+        } à droite (dont {perLeaning("centre-droite")} au centre droit) — la fiche de
+        chaque média porte sa tendance exacte. Les sources de chaque classement, avec
+        leurs désaccords, sont détaillées média par média sur la page
+        <InlineLink href={withBase("/classement-politique-des-medias/")}
+          >« Classement politique des médias »</InlineLink
+        >.
       </p>
     </section>
 
-    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
+    <section
+      id="angle-mort"
+      class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted"
+    >
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">
         L'angle mort
       </h2>
       <p>
         Sur une page de sujet, la mention « angle mort » signale un camp qui ne
-        traite pas un événement alors que les deux autres le reprennent — pas
-        même par un éditorial. C'est le sujet dont tout le monde parle, sauf
-        eux.
+        traite pas un événement que les deux autres reprennent — pas même par un
+        éditorial. C'est le sujet dont tout le monde parle, sauf eux.
       </p>
       <p>
-        Un angle mort est une observation, pas une accusation. Prisme décrit ce
-        que chaque média a publié, un jour donné, sur un événement donné ; il ne
-        juge ni l'intention, ni la ligne du média, ni la valeur de l'info. Les
-        médias choisissent leur une — c'est leur métier. Prisme rend ce choix
-        visible, c'est tout.
+        Un angle mort est une observation, pas une accusation. Prisme décrit ce que
+        chaque média a publié, un jour donné, sur un événement donné ; il ne juge ni
+        l'intention, ni la ligne du média, ni la valeur de l'information. Choisir sa
+        une est le métier d'un média ; Prisme rend ce choix visible, c'est tout.
       </p>
     </section>
 
-    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
+    <section
+      id="ce-que-prisme-ne-fait-pas"
+      class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted"
+    >
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">
         Ce que Prisme ne fait pas
       </h2>
       <p>
-        Prisme ne réécrit aucun titre : chaque article est montré avec son titre
-        d'origine, et renvoie vers le site du média. Aucun texte d'article n'est
-        reproduit — Prisme n'affiche que des titres, des chapôs et ses propres
-        synthèses. Aucun média n'est classé automatiquement : le bord politique
-        de chaque média est posé à la main et sourcé, jamais déduit des articles
-        par un modèle.
+        Prisme ne réécrit aucun titre : chaque article garde son titre d'origine et
+        renvoie vers le site du média. Aucun texte d'article n'est reproduit —
+        seulement des titres, des chapôs et les synthèses de Prisme. Aucun média n'est
+        classé automatiquement : chaque classement est établi à la main, sourcé.
       </p>
       <p>
         Prisme ne note pas non plus la fiabilité des médias, ne dit pas si une
-        information est vraie ou fausse, et ne cherche pas à équilibrer la
-        sélection des {outlets.length} médias : la répartition inégale des bords est
-        celle de la presse nationale française, et c'est une part de ce que Prisme
-        montre. Certains médias réservent par ailleurs la fouille de leurs textes
-        et données (TDM) : c'est déclaré, et indiqué média par média sur la page <InlineLink href={withBase("/classement-politique-des-medias/")}
-          >classement politique des médias</InlineLink
-        >.
+        information est vraie ou fausse, et ne cherche pas à équilibrer les bords :
+        la répartition inégale des {outlets.length} médias est celle de la presse
+        nationale française — le détail est sur la page
+        <InlineLink href={withBase("/classement-politique-des-medias/")}
+          >« Classement politique des médias »</InlineLink
+        >. Certains médias réservent par ailleurs la fouille de leurs textes et de
+        leurs données (TDM) : c'est indiqué média par média sur la même page.
       </p>
     </section>
   </article>

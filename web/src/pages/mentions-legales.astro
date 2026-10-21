@@ -12,7 +12,7 @@ const description =
     <p class="mb-6">
       <a
         href={withBase('/')}
-        class="inline-flex items-center gap-1.5 text-[13px] text-muted transition-colors hover:text-ink"
+        class="inline-flex items-center gap-1.5 text-[16px] text-muted transition-colors hover:text-ink"
       >
         <svg
           width="13"
@@ -32,11 +32,11 @@ const description =
         Aujourd’hui
       </a>
     </p>
-    <h1 class="text-[24px] font-semibold leading-snug tracking-[-0.02em] sm:text-[26px]">
+    <h1 class="text-[26px] font-semibold leading-snug tracking-[-0.02em]">
       Mentions légales
     </h1>
 
-    <section class="mt-8 space-y-6 text-[16px] leading-relaxed text-muted">
+    <section class="mt-10 space-y-6 text-[16px] leading-relaxed text-muted">
       <div>
         <h2 class="text-[16px] font-semibold text-ink">Éditeur</h2>
         <p class="mt-1.5">
@@ -66,9 +66,11 @@ const description =
         <h2 class="text-[16px] font-semibold text-ink">Nature du site</h2>
         <p class="mt-1.5">
           Prisme est un prototype personnel, sans but commercial. Il ne publie aucun
-          contenu de presse : il renvoie vers les articles des médias, dont il n’affiche
-          que les titres, chapôs et images déjà publics. Les sources des classements sont
-          détaillées sur la page
+          contenu de presse : il renvoie vers les articles des médias et n’en affiche
+          que les titres, chapôs et images, déjà publics. Comment Prisme fonctionne —
+          et ce qu’il ne fait pas — est décrit sur la page
+          <InlineLink href={withBase('/methode/')}>« Comment fonctionne Prisme »</InlineLink> ;
+          les sources des classements, média par média, sur la page
           <InlineLink href={withBase('/classement-politique-des-medias/')}
             >« Classement politique des médias »</InlineLink
           >.
@@ -78,9 +80,9 @@ const description =
       <div>
         <h2 class="text-[16px] font-semibold text-ink">Données personnelles</h2>
         <p class="mt-1.5">
-          Le site ne dépose aucun cookie et ne mesure pas l’audience. Il ne collecte
-          aucune donnée personnelle : les erreurs signalées via GitHub transitent par le
-          dépôt public du projet.
+          Le site ne dépose aucun cookie et ne mesure pas l’audience ; il ne collecte
+          aucune donnée personnelle. Les erreurs peuvent être signalées sur le dépôt
+          GitHub public du projet — les échanges y sont publics.
         </p>
       </div>
     </section>
