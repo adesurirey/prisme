@@ -6,6 +6,28 @@
   "storyDay": "2026-10-21",
   "articles": [
     {
+      "id": "7fdc71149f52",
+      "outletId": "europe-1",
+      "headline": "«Elle est définitivement la voix conservatrice» : sans la connaître, Donald Trump estime que Marine Le Pen est la mieux placée pour 2027",
+      "url": "https://www.europe1.fr/international/elle-est-definitivement-la-voix-conservatrice-sans-la-connaitre-donald-trump-estime-que-marine-le-pen-est-la-mieux-placee-pour-2027-1170279?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-21T12:25:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Trump/donald_trump_kent_nishimura_afp_6ad8a1dc221e7.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "8219201dec79",
+      "outletId": "le-jdd",
+      "headline": "«C’est elle, la voix conservatrice» : Donald Trump encense Marine Le Pen après les émeutes",
+      "url": "https://www.lejdd.fr/International/cest-elle-la-voix-conservatrice-donald-trump-encense-marine-le-pen-apres-les-emeutes-186612",
+      "publishedAt": "2026-10-21T10:23:02.000Z",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "4be11f2c0d8d",
       "outletId": "franceinfo",
       "headline": "Donald Trump dit voir dans Marine Le Pen la \"voix conservatrice\" en France",
@@ -67,20 +89,23 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Donald Trump a qualifié Marine Le Pen de voix conservatrice en France en vue de l'élection présidentielle de 2027.",
-      "Le président américain a estimé qu'elle avait été mal traitée par la justice française.",
-      "Il a exploité les violences et pillages récents pour diffuser sa rhétorique anti-immigration."
+      "Le HuffPost souligne l'approbation explicite de Donald Trump à l'égard de Marine Le Pen en perspective de la présidentielle de 2027.",
+      "franceinfo rapporte que le président américain qualifie la candidate du Rassemblement national de « voix conservatrice » en France."
     ],
     "centre": [
-      "Donald Trump a désigné Marine Le Pen comme la voix conservatrice de la France après les violences survenues le week-end du 17 octobre qu'il attribue à l'immigration.",
-      "Il l'a qualifiée de grande favorite pour l'élection présidentielle de 2027 tout en s'abstenant de lui accorder un soutien officiel.",
-      "Le dirigeant américain a également affirmé qu'elle avait subi un mauvais traitement de la part de l'institution judiciaire."
+      "Le Parisien et 20 Minutes constatent que Donald Trump encense Marine Le Pen sans toutefois lui accorder de soutien officiel à ce stade.",
+      "BFMTV précise que ces déclarations interviennent après les violences du 17 octobre que le dirigeant américain attribue à l'immigration."
+    ],
+    "droite": [
+      "Europe 1 et Le JDD indiquent que Donald Trump estime que Marine Le Pen est la mieux placée pour 2027 et qu'elle a été mal traitée.",
+      "Les deux médias soulignent que le président américain la décrit comme la « voix conservatrice » et de la raison face aux émeutes."
     ]
   },
   "differences": [
-    "La gauche insiste principalement sur l'instrumentalisation politique des émeutes par Donald Trump pour nourrir sa rhétorique anti-immigration.",
-    "Le centre met l'accent sur l'absence de soutien officiel de Donald Trump malgré ses éloges et sa mise en avant de Marine Le Pen pour 2027."
+    "La gauche se focalise sur la portée électorale et le soutien politique implicite formulé par Donald Trump en vue de 2027.",
+    "Le centre met en balance les éloges appuyés du président américain et l'absence pour l'instant d'un soutien officiel, tout en mentionnant le contexte des violences.",
+    "La droite privilégie le portrait flatteur dressé par Donald Trump qui érigerait Marine Le Pen en figure de la raison et de la conservation face aux émeutes."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5
+  "summarizedArticleCount": 7
 }

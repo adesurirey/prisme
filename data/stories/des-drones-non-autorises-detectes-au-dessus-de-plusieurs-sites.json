@@ -6,13 +6,35 @@
   "storyDay": "2026-10-21",
   "articles": [
     {
+      "id": "684ef844ce46",
+      "outletId": "france-24",
+      "headline": "Des drones non autorisés ont survolé la base navale de Toulon et des sites militaires français",
+      "url": "https://www.france24.com/fr/france/20261021-drones-non-autoris%C3%A9s-survol%C3%A9-base-navale-toulon-sites-militaires-fran%C3%A7ais",
+      "publishedAt": "2026-10-21T09:33:24.000Z",
+      "imageUrl": "https://s.france24.com/media/display/9f8b5d4c-cd2e-11f1-a491-638c1c1f5fd6/w:1024/p:16x9/000-97W37QV.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "cf04ea015692",
+      "outletId": "la-croix",
+      "headline": "Des drones non autorisés ont survolé des sites militaires dans la région de Toulon",
+      "url": "https://www.la-croix.com/societe/des-drones-non-autorises-ont-survole-des-sites-militaires-dans-la-region-de-toulon-20261021",
+      "publishedAt": "2026-10-21T09:09:00.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/21/2568290-la-base-navale-de-toulon-ici-en-novembre-2022-fait.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "77c9d61297c3",
       "outletId": "le-monde",
       "headline": "Toulon : des drones non autorisés ont survolé plusieurs sites militaires, selon la marine nationale",
       "url": "https://www.lemonde.fr/pixels/article/2026/10/21/toulon-des-drones-non-autorises-ont-survole-plusieurs-sites-militaires-selon-la-marine-nationale_6798224_4408996.html",
       "publishedAt": "2026-10-21T08:51:33.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/21/965/0/5780/2890/644/322/60/0/c74ef90_upload-1-ayzz24xdzlvu-000-97w37qv.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -37,6 +59,17 @@
       "frontPage": false,
       "kind": "news",
       "section": "politics"
+    },
+    {
+      "id": "b1358e13d4c4",
+      "outletId": "cnews",
+      "headline": "Toulon : des survols de drones non autorisés détectés lors d’un exercice militaire",
+      "url": "https://www.cnews.fr/france/2026-10-21/toulon-des-survols-de-drones-non-autorises-detectes-lors-dun-exercice-militaire",
+      "publishedAt": "2026-10-21T08:24:14.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/adobestock_297617231_6ad87495415ba.jpeg?itok=1tmA9F5d",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "bf66c68c63c1",
@@ -79,23 +112,25 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Des appareils volants non identifiés ont évolué près d'infrastructures de la défense à Toulon durant l'exercice interarmées Typhon.",
-      "La Marine nationale a officialisé ces survols et l'ouverture d'une procédure judiciaire pour identifier l'origine des engins."
+      "La Marine nationale a confirmé que plusieurs sites militaires et la base navale de Toulon ont été survolés par des drones non autorisés.",
+      "Ces intrusions ont eu lieu pendant l'exercice interarmées Typhon qui s'est déroulé du 5 au 16 octobre."
     ],
     "centre": [
-      "L'exercice interarmées Typhon mené en octobre a été perturbé par la présence d'engins volants sans autorisation.",
-      "Les intrusions ont touché des zones névralgiques de la base navale toulonnaise."
+      "Des drones aériens non autorisés ont survolé ou approché des installations militaires lors de manœuvres dans la région de Toulon.",
+      "L'exercice interarmées Typhon, mené du 5 au 16 octobre pour la défense du port militaire, a été la cible de ces survols.",
+      "Aucune infrastructure sensible n'a été menacée et une enquête judiciaire a été ouverte selon la Marine nationale."
     ],
     "droite": [
-      "Plusieurs infrastructures militaires de premier plan ont subi des intrusions aériennes illicites durant des manœuvres.",
-      "L'exercice Typhon de protection du port de Toulon a été la cible de ces survols répétés."
+      "Le commandement de zone Méditerranée a annoncé que des survols de drones non autorisés ont eu lieu aux abords et au-dessus de sites militaires sensibles près de Toulon.",
+      "Ces intrusions se sont produites durant l'exercice interarmées Typhon organisé du 5 au 16 octobre.",
+      "Une enquête judiciaire a été ouverte et la Marine nationale précise qu'aucune infrastructure n'a été mise en danger."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur les suites judiciaires en insistant sur l'enquête ouverte pour identifier la provenance des engins.",
-    "Le centre privilégie une approche purement factuelle en décrivant le déroulement et le contexte opérationnel des manœuvres de la Marine.",
-    "La droite insiste sur la vulnérabilité des zones stratégiques en soulignant le caractère sensible des infrastructures visées."
+    "Les médias de gauche se concentrent strictement sur la confirmation par la marine des survols illégaux de sites sensibles lors de l'exercice.",
+    "Les médias du centre adoptent un ton purement factuel en reprenant les communiqués officiels sur le déroulement des manœuvres et l'absence de menace.",
+    "Les médias de droite théâtralisent l'événement en évoquant une « partition technologique » tout en reprenant les détails techniques de l'enquête judiciaire."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 9
 }

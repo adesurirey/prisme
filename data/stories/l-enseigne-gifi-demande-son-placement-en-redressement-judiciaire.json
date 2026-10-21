@@ -6,6 +6,17 @@
   "storyDay": "2026-10-20",
   "articles": [
     {
+      "id": "1d8fe15fecf3",
+      "outletId": "la-croix",
+      "headline": "GiFi : en grande difficulté, l’enseigne va solliciter un redressement judiciaire",
+      "url": "https://www.la-croix.com/en-grande-difficulte-gifi-va-solliciter-un-redressement-judiciaire-20261020",
+      "publishedAt": "2026-10-21T05:31:56.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/20/2567944-apres-de-graves-difficultes-et-une-valse-des-dirig.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "a9c42a77d4f9",
       "outletId": "franceinfo",
       "headline": "En grande difficulté, l'enseigne GIFI va \"solliciter\" son placement en redressement judiciaire",
@@ -67,19 +78,23 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "L'enseigne à bas prix GiFi, qui emploie 6 000 salariés, a annoncé aux comités sociaux d’entreprise un dépôt de bilan et une demande de placement en redressement judiciaire.",
-      "Le tribunal de commerce de Toulouse va ouvrir une période d’observation et lancer la recherche de repreneurs après le retrait des banques créancières.",
-      "Le Monde souligne que les banques ont refusé d'apporter de l'argent frais après l'effacement de 470 millions d'euros de dettes en 2025."
+      "L'enseigne de distribution GiFi a officialisé son dépôt de bilan auprès de ses 6 000 salariés.",
+      "Le personnel des magasins à petits prix exprime de fortes inquiétudes concernant son avenir professionnel."
+    ],
+    "centre": [
+      "Fragilisée par un échec informatique majeur et une concurrence accrue, l'entreprise GiFi va demander son placement en redressement judiciaire.",
+      "La direction a communiqué cette décision aux 6 000 salariés lors d'une annonce auprès du tribunal de commerce de Toulouse."
     ],
     "droite": [
-      "Le président du directoire Patrick Puy a officialisé auprès des 6 000 collaborateurs la démarche de placement en redressement judiciaire.",
-      "La direction assure que cette procédure n’aura aucune incidence immédiate sur l’emploi et qu'aucun plan de sauvegarde de l'emploi n'est initié pour le moment."
+      "La marque de bazar GiFi traverse une période de graves difficultés financières.",
+      "L'entreprise s'apprête à solliciter officiellement une procédure de redressement judiciaire."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur l'inquiétude sociale des 6 000 salariés, l'échec financier des banques et la recherche imminente de repreneurs sous l'égide du tribunal de commerce de Toulouse.",
-    "La droite privilégie les aspects techniques et rassurants de la direction, en mettant en avant les déclarations du président du directoire Patrick Puy sur l'absence de conséquences immédiates sur l'emploi."
+    "La gauche emploie le terme « dépôt de bilan » et centre son récit sur l'angoisse des 6 000 salariés face à la menace sociale.",
+    "Le centre détaille les causes techniques et concurrentielles de la crise, mentionnant le raté informatique et la saisine du tribunal de Toulouse.",
+    "La droite adopte un angle factuel et sobre, qualifiant l'entreprise de « bazar » en grande difficulté s'acheminant vers un redressement judiciaire."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5
+  "summarizedArticleCount": 6
 }

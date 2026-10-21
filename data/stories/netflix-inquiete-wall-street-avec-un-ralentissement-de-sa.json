@@ -6,13 +6,24 @@
   "storyDay": "2026-10-20",
   "articles": [
     {
+      "id": "412bfb51aa6d",
+      "outletId": "le-monde",
+      "headline": "Netflix, en mal de croissance et en pleine restructuration, peine à convaincre Wall Street malgré des bénéfices en hausse",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/21/netflix-en-mal-de-croissance-et-en-pleine-restructuration-peine-a-convaincre-wall-street-malgre-des-benefices-en-hausse_6798250_3234.html",
+      "publishedAt": "2026-10-21T12:45:08.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/21/202/0/6500/3250/644/322/60/0/7a6fce8_ftp-1-88reycbofgzq-2026-10-21t094810z-519254678-rc225jah7fnj-rtrmadp-3-netflix-stocks.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "f1b5e1802c1a",
       "outletId": "20-minutes",
       "headline": "Moins de pub, Distancé par YouTube… Netflix inquiète et plonge en bourse",
       "url": "https://www.20minutes.fr/arts-stars/4256142-20261021-moins-pub-distance-youtube-netflix-inquiete-plonge-bourse?at_medium=display&at_campaign=149",
       "publishedAt": "2026-10-20T23:48:21.000Z",
       "imageUrl": "https://img.20mn.fr/57zSYnOBSJSRbPOLbxz6HSk/1200x768_sur-cette-photo-d-illustration-le-logo-netflix-est-affiche-sur-un-smartphone-mateusz-slodkowski-sopa-images-sopa-images-20250122sopamasl044-credit-sopa-images-sipa-2501241251",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -34,20 +45,19 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le géant du streaming a déçu les marchés financiers lors de la publication de ses résultats trimestriels.",
-      "L'entreprise a revu à la baisse ses prévisions concernant les revenus publicitaires.",
-      "La plateforme subit un ralentissement de sa croissance et fait face à une concurrence accrue avec YouTube."
+      "La plateforme de streaming enregistre des résultats financiers jugés décevants par les marchés financiers.",
+      "Le service subit des rentrées publicitaires inférieures aux attentes et une érosion du temps d'écoute.",
+      "Le Monde souligne que l'entreprise peine à convaincre Wall Street malgré des bénéfices en progression."
     ],
     "droite": [
-      "Netflix inquiète Wall Street avec un ralentissement continu de sa croissance au troisième trimestre.",
-      "Le titre boursier de l'entreprise recule fortement dans le sillage de publications boursières décevantes.",
-      "La firme fait face à des difficultés incluant des licenciements et une régression des activités publicitaires."
+      "Netflix subit une chute boursière en raison de revenus publicitaires en retrait et d'une croissance ralentie.",
+      "Le groupe fait face à une restructuration marquée par des licenciements au troisième trimestre."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur les difficultés concurrentielles face à YouTube et la baisse des prévisions publicitaires.",
-    "La droite insiste sur la sanction boursière durable subie par l'action depuis janvier et mentionne les suppressions de postes."
+    "La gauche met l'accent sur les difficultés de rentabilité et la baisse de l'audience en privilégiant une analyse des performances globales.",
+    "La droite insiste en premier lieu sur la restructuration interne de l'entreprise et la sanction immédiate des marchés financiers."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }
