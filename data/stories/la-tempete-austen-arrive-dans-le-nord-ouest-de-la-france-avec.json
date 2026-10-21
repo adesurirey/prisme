@@ -1,10 +1,32 @@
 {
   "id": "e98221363e30",
   "slug": "la-tempete-austen-arrive-dans-le-nord-ouest-de-la-france-avec",
-  "title": "La tempête Austen arrive dans le nord-ouest de la France avec des rafales jusqu’à 140 km/h",
+  "title": "La tempête Austen balaie le nord-ouest de la France avec des rafales jusqu’à 140 km/h",
   "createdAt": "2026-10-21T14:01:24.270Z",
   "storyDay": "2026-10-21",
   "articles": [
+    {
+      "id": "6f5e48f46f0a",
+      "outletId": "cnews",
+      "headline": "Vents violents : voici les 13 départements placés en vigilance jaune ce jeudi",
+      "url": "https://www.cnews.fr/france/2026-10-21/vents-violents-voici-les-13-departements-places-en-vigilance-jaune-ce-jeudi",
+      "publishedAt": "2026-10-21T16:10:50.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/043_dpa-pa_250604-99-64519_dpai_1_6a8efdb9d9db6_6a90478d01b63_6ad8e17367649.jpg?itok=NpkzgrJY",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "a83f85b8ed2d",
+      "outletId": "europe-1",
+      "headline": "Rafales à plus de 100 km/h, houle massive... La tempête Austen va balayer le Nord-Ouest de la France vendredi",
+      "url": "https://www.europe1.fr/societe/rafales-a-plus-de-100-km-h-houle-massive-la-tempete-austen-va-balayer-le-nord-ouest-de-la-france-vendredi-1170570?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-21T15:51:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/15/024_5018927_2_6ad8b9ff319fd.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
     {
       "id": "4c00e05a39a6",
       "outletId": "le-parisien",
@@ -32,19 +54,25 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La tempête Austen, première de la saison, est attendue à partir de jeudi soir dans le nord-ouest de la France.",
-      "Le phénomène météorologique doit générer des vents compris entre 110 et 130 km/h ainsi que des pluies soutenues.",
-      "Les intempéries toucheront le sud du Royaume-Uni et les côtes de la Manche, incluant la Bretagne, la Normandie et les Hauts-de-France jusqu'à vendredi après-midi."
+      "La tempête Austen, première de la saison automnale, touchera le nord-ouest de la France dès jeudi soir.",
+      "Des vents violents compris entre 110 et 130 km/h sont attendus sur les côtes de la Manche, la Bretagne, la Normandie et les Hauts-de-France.",
+      "Des pluies soutenues accompagneront le passage de cette perturbation jusqu'à vendredi après-midi."
     ],
     "centre": [
-      "La tempête Austen, qualifiée de première de l'automne, touchera le nord-ouest de l'Hexagone dès vendredi.",
-      "Des rafales atteignant jusqu'à 140 km/h sont annoncées par les services météorologiques pour cet événement."
+      "La tempête Austen, première de l'automne, s'apprête à frapper le nord-ouest de l'Hexagone ce vendredi.",
+      "Des rafales exceptionnelles pouvant atteindre jusqu'à 140 km/h sont prévues dans les zones concernées."
+    ],
+    "droite": [
+      "Météo-France a placé 13 départements en vigilance jaune en raison de risques de vents violents pour la journée du jeudi 22 octobre.",
+      "La tempête Austen, qualifiée de « bombe météorologique » par La Chaîne Météo, va balayer les îles britanniques et le nord-ouest de la France.",
+      "Des rafales dépassant les 100 km/h sont annoncées sur la Bretagne, la Normandie et les Hauts-de-France, accompagnées d'une houle massive."
     ]
   },
   "differences": [
-    "Libération anticipe l'arrivée de la perturbation dès le jeudi soir en ciblant précisément les régions de la Bretagne, de la Normandie et des Hauts-de-France, tout en minimisant légèrement l'intensité maximale des vents entre 110 et 130 km/h.",
-    "Le Parisien retarde l'échéance à vendredi et braque les projecteurs sur la violence maximale des rafales pouvant grimper jusqu'à 140 km/h."
+    "La gauche met l'accent sur l'aspect pluvieux et l'arrivée précoce dès le jeudi soir des intempéries dans le nord-ouest.",
+    "Le centre focalise son traitement sur l'intensité maximale des rafales pouvant atteindre 140 km/h.",
+    "La droite privilégie les aspects techniques en citant les alertes de Météo-France et le terme de « bombe météorologique »."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 4
 }

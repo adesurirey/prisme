@@ -1,10 +1,21 @@
 {
   "id": "690b51f37b60",
   "slug": "le-parlement-europeen-fait-l-objet-de-perquisitions-dans-le",
-  "title": "Le Parlement européen fait l'objet de perquisitions dans le cadre d’une enquête visant son ancien groupe Identité et démocratie",
+  "title": "Le Parlement européen fait l'objet de perquisitions dans le cadre d'une enquête visant le groupe Identité et démocratie",
   "createdAt": "2026-10-21T14:01:24.270Z",
   "storyDay": "2026-10-21",
   "articles": [
+    {
+      "id": "511421676039",
+      "outletId": "france-24",
+      "headline": "Perquisitions au Parlement européen dans une enquête ciblant un ancien groupe du Rassemblement national",
+      "url": "https://www.france24.com/fr/europe/20261021-perquisitions-parlement-europ%C3%A9en-enqu%C3%AAte-sur-ancien-groupe-rn",
+      "publishedAt": "2026-10-21T15:18:14.000Z",
+      "imageUrl": "https://s.france24.com/media/display/8d6a56ec-cd5e-11f1-9158-4da0d2c6855d/w:1024/p:16x9/000-D3VA8TC.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
     {
       "id": "a70c832a1082",
       "outletId": "le-parisien",
@@ -15,6 +26,18 @@
       "datedAtCollection": true,
       "kind": "news",
       "section": "politics"
+    },
+    {
+      "id": "b6c5b53f19d1",
+      "outletId": "le-monde",
+      "headline": "Le secrétariat général du groupe du RN au Parlement européen perquisitionné dans le cadre d’une enquête sur des infractions financières",
+      "url": "https://www.lemonde.fr/politique/article/2026/10/21/soupcon-d-infractions-financieres-le-secretaire-general-du-groupe-du-rn-au-parlement-europeen-perquisitionne_6798262_823448.html",
+      "publishedAt": "2026-10-21T13:57:24.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/09/13/500/0/3000/1500/644/322/60/0/22b8dd3_upload-1-xad81jmj11wa-rn-meetingrentre-e-asurp-208943.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
     },
     {
       "id": "dac70e9e2c38",
@@ -76,26 +99,25 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le parquet européen a mené simultanément des perquisitions dans les bureaux administratifs de Strasbourg et Bruxelles.",
-      "Ces opérations ciblent Identité et Démocratie, l'ancien groupe parlementaire d'extrême droite auquel appartenait le Rassemblement national jusqu'en 2024.",
-      "L'enquête porte sur des soupçons de détournements de fonds européens durant la législature précédente."
+      "Le parquet européen a ordonné des perquisitions au Parlement européen visant l'ancien groupe Identité et Démocratie.",
+      "L'enquête porte sur des soupçons d'infractions financières et de détournements de fonds publics commis entre 2019 et 2024.",
+      "Le Monde précise que les investigations ciblent les locaux de Philip Claeys à Strasbourg et Bruxelles ainsi que des prestations liées à la GUD Connection."
     ],
     "centre": [
-      "Des perquisitions ont été exécutées le mercredi 21 octobre au Parlement européen par le parquet européen.",
-      "La mesure vise l'ancien groupe Identité et Démocratie où siégeait le Rassemblement national.",
-      "Cette investigation s'inscrit dans le cadre de soupçons de détournements de fonds publics."
+      "Des perquisitions ont eu lieu dans les locaux du Parlement européen à l'encontre de l'ex-groupe Identité et Démocratie.",
+      "Le Rassemblement national est directement concerné par ces investigations du parquet européen portant sur la gestion de fonds communautaires.",
+      "Ces opérations font suite à des soupçons de détournements financiers mis au jour pour la période de la mandature précédente."
     ],
     "droite": [
-      "Le Parlement européen fait l'objet de perquisitions ciblant l'ancien groupe Identité et Démocratie.",
-      "L'enquête du parquet européen concerne des soupçons de détournements de fonds européens durant la période 2019-2024.",
-      "Une série de perquisitions avait déjà été menée dans plusieurs pays européens au mois de juin dans le cadre de la même affaire."
+      "Le Parlement européen fait l'objet d'une série de perquisitions menées dans le cadre d'une procédure judiciaire.",
+      "L'enquête vise spécifiquement l'ancien groupe parlementaire au sein duquel siégeaient les élus du Rassemblement national."
     ]
   },
   "differences": [
-    "La gauche insiste explicitement sur l'étiquette d'extrême droite du groupe visé et souligne le rôle du Rassemblement national.",
-    "Le centre adopte un angle factuel et neutre en se concentrant sur les actes procéduraux du parquet européen et les lieux des perquisitions.",
-    "La droite contextualise l'événement en rappelant la chronologie des investigations menées depuis le mois de juin dans plusieurs pays."
+    "La gauche met l'accent sur les détails judiciaires précis et les noms des structures impliquées en citant les investigations de ses journaux.",
+    "Le centre livre un compte rendu factuel et synthétique des opérations de police en insistant sur l'implication passée du Rassemblement national.",
+    "La droite adopte une formulation sobre et directe en évitant tout commentaire superflu sur les implications politiques de l'enquête européenne."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 8
 }
