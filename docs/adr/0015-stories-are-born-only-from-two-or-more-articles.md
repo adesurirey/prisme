@@ -1,5 +1,11 @@
 # Stories are born only from two or more Articles
 
+> **Amended by ADR-0027** (2026-10-21): the minimum is now two Articles
+> **and two distinct Outlets** — an Opinion piece counts toward the birth
+> (ADR-0011). The model never sees Outlet ids, so the rule is enforced at
+> the drop pass like the two-Article minimum; everything below otherwise
+> stands.
+
 Date: 2026-10-11 · Amends ADR-0005 (creation side); works with ADR-0012
 
 ## Context

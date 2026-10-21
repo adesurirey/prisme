@@ -1,5 +1,12 @@
 # Coverage rules the Edition ranking
 
+> **Amended by ADR-0027** (2026-10-21): the ranking key is Coverage
+> counted **inside the Edition's rolling window** — Outlets publishing
+> within the window, Opinion included (ADR-0011) — with windowed
+> tie-breaks (newest Article in the window, then creation time, then
+> id). Coverage as the sole key stands; the whole-Article-set reading
+> below is gone.
+
 Issue #37's audit of the edition built 2026-10-08T11:38:55Z found that the ranking key (issue #6: front-page Outlets, then Coverage) concentrated the Edition on the Outlets with fast-rotating `une` feeds. Of 690 live Stories, 64 had any front-page article — all exactly one (front-page singletons) — so the top-20 cut was decided by Coverage→recency tie-breaks among those singletons: Ouest-France took 10 Edition slots and Le Figaro 9, 28 of the Edition's articles came from those two Outlets, 15 Outlets contributed zero, and the day's highest-Coverage Story (79 articles across ~15 Outlets, no front-page flag) fell below the cut. Front-page presence, a per-Article snapshot of `une` feeds (ADR-0008), measured feed turnover as much as an Outlet's own judgment.
 
 Decision: Coverage — distinct reporting Outlets, Opinion pieces excluded — is the sole ranking key, followed by the newest Article, then creation time and id, fully deterministic across builds. Front-page flags leave the ranking entirely; `une` feeds, `frontPage` and `everFrontPage` recording, and the "À la une chez…" display stay as ADR-0008 defines them, as metadata rather than a ranking signal. The 24h collection window, not the ranking key, bounds staleness: a Story with no new Articles for 24 hours freezes out of the next Edition. EDITION_SIZE stays 20. Amended in ADR-0017: the ranking applies to the current day's Stories; the Edition fills its remaining slots with backfill — previous days' `everInEdition` Stories, newest day first, ranked by the same key.
