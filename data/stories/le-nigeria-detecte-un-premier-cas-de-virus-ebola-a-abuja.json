@@ -6,6 +6,18 @@
   "storyDay": "2026-10-20",
   "articles": [
     {
+      "id": "bb1ab9346856",
+      "outletId": "le-monde",
+      "headline": "Nigeria : un premier cas de maladie à virus Ebola identifié et en isolement",
+      "url": "https://www.lemonde.fr/flux-video-immersif/video/2026/10/21/nigeria-un-premier-cas-de-maladie-a-virus-ebola-identifie-et-en-isolement_6798254_6717263.html",
+      "publishedAt": "2026-10-21T13:00:06.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/21/500/0/6000/3000/644/322/60/0/599bf41_ftp-1-pr20fvzsfmlj-2026-10-21t091438z-621331589-rc2l7oa6rnrg-rtrmadp-3-health-ebola-nigeria.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "817faf2e1470",
       "outletId": "rfi",
       "headline": "Un premier cas d'Ebola Bundibugyo détecté au Nigeria",
@@ -43,16 +55,20 @@
   "section": "society",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le ministre de la santé du Nigeria, Muhammad Ali Pate, a officialisé l'admission d'une patiente contaminée dans un établissement privé de la capitale, Abuja.",
+      "La malade contaminée est une femme revenue de l'Ouganda par un vol international."
+    ],
     "centre": [
-      "Le Nigeria a détecté un premier cas de virus Ebola de souche Bundibugyo chez une patiente venue d'Ouganda et arrivée par avion à Abuja.",
-      "Le gouvernement nigérian a placé quarante-quatre personnes en tant que cas contacts sous surveillance.",
-      "Il s'agit de la première résurgence de la maladie dans le pays depuis l'épidémie de 2014 qui avait causé huit décès.",
-      "La presse centrale mentionne également l'ampleur de l'épidémie en République démocratique du Congo avec plus de 9 000 cas et 4 381 décès."
+      "Le Nigeria a diagnostiqué un premier cas du virus Ebola de souche Bundibugyo chez une femme en provenance d'Ouganda.",
+      "Quarante-quatre personnes ayant été en contact avec la malade ont été identifiées par les autorités.",
+      "Il s'agit de la première résurgence de la maladie dans le pays depuis l'épidémie meurtrière de 2014 qui avait causé huit décès."
     ]
   },
   "differences": [
-    "Le camp du centre adopte une couverture purement informative et factuelle, se concentrant sur la chronologie sanitaire de l'arrivée du virus à Abuja, l'identification des 44 cas contacts et le rappel de l'épidémie précédente de 2014, tout en élargissant parfois le contexte à la situation en République démocratique du Congo."
+    "La gauche se focalise sur l'annonce officielle du cas par le gouvernement nigérian et les détails immédiats de l'hospitalisation à Abuja.",
+    "Le centre élargit la focale sur le contexte épidémiologique en précisant la souche du virus, le traçage des cas contacts et la comparaison avec l'épidémie de 2014."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }

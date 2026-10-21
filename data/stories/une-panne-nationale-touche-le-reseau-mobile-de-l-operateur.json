@@ -1,10 +1,32 @@
 {
   "id": "73c160554bcc",
   "slug": "une-panne-nationale-touche-le-reseau-mobile-de-l-operateur",
-  "title": "Une panne nationale touche le réseau mobile de l'opérateur Orange et de sa filiale Sosh",
+  "title": "Une panne nationale affecte le réseau mobile de l'opérateur Orange et de sa filiale Sosh",
   "createdAt": "2026-10-21T11:01:26.138Z",
   "storyDay": "2026-10-21",
   "articles": [
+    {
+      "id": "694ba1526d3b",
+      "outletId": "le-parisien",
+      "headline": "Panne nationale du réseau Orange : « Je devais appeler mon compagnon à l’hôpital, je n’ai aucune nouvelle »",
+      "url": "https://www.leparisien.fr/societe/panne-nationale-du-reseau-orange-je-devais-appeler-mon-compagnon-a-lhopital-je-nai-aucune-nouvelle-21-10-2026-VII4DH4CAVECDIPTSAQIABL6XE.php",
+      "publishedAt": "2026-10-21T14:01:24.270Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "c2a32a7d31a5",
+      "outletId": "la-croix",
+      "headline": "Orange : une panne nationale affecte le réseau mobile de l’opérateur téléphonique",
+      "url": "https://www.la-croix.com/economie/orange-une-panne-nationale-affecte-le-reseau-mobile-de-l-operateur-telephonique-20261021",
+      "publishedAt": "2026-10-21T13:37:51.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/21/2568544-orange-est-touche-par-une-panne-au-niveau-national.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
     {
       "id": "af65d174ec3b",
       "outletId": "le-monde",
@@ -124,23 +146,27 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Une panne nationale affecte le réseau mobile d'Orange et de sa filiale Sosh, touchant les appels, les SMS et l'internet mobile.",
-      "Le site Downdetector a recensé des milliers de signalements de la part d'utilisateurs subissant une interruption de service."
+      "Une panne d'ampleur nationale affecte le réseau mobile de l'opérateur Orange ainsi que sa filiale Sosh.",
+      "Les services d'appels, d'envoi de messages et d'Internet mobile sont perturbés depuis la fin de la matinée pour de nombreux clients.",
+      "Le site spécialisé Downdetector a recensé plusieurs milliers de signalements de la part d'abonnés impactés."
     ],
     "centre": [
-      "L'opérateur Orange et sa filiale Sosh subissent une panne d'ampleur nationale perturbant les services de téléphonie et de données mobiles.",
-      "Les équipes techniques de l'entreprise sont mobilisées pour identifier l'origine de l'incident et rétablir le réseau au plus vite."
+      "Le réseau mobile de l'opérateur Orange et de sa filiale Sosh subit une panne d'envergure nationale.",
+      "L'incident perturbe lourdement les appels, l'envoi de SMS et les usages mobiles de nombreux abonnés à travers la France.",
+      "Les équipes techniques de l'entreprise sont mobilisées pour identifier l'origine du dysfonctionnement et rétablir le service.",
+      "Des témoignages d'utilisateurs illustrent la difficulté à joindre des proches dans des situations d'urgence."
     ],
     "droite": [
-      "Une panne générale du réseau mobile d'Orange paralyse les appels, les messages et l'accès à internet sur l'ensemble du territoire français.",
-      "Le pic des signalements a atteint environ 12.000 rapports de panne à la mi-journée selon la plateforme Downdetector."
+      "Une panne générale paralyse l'ensemble du réseau mobile de l'opérateur Orange et de sa filiale Sosh sur le territoire français.",
+      "Le site Downdetector a enregistré un pic de signalements atteignant près de 12 000 alertes à la mi-journée.",
+      "L'opérateur a présenté ses excuses aux abonnés sur le réseau social X et assure que ses équipes interviennent pour un retour à la normale."
     ]
   },
   "differences": [
-    "La presse de gauche met l'accent sur l'ampleur nationale de l'incident en s'appuyant sur les données de la plateforme Downdetector.",
-    "La presse du centre se concentre sur les aspects pratiques de la panne et la mobilisation des équipes techniques de l'opérateur.",
-    "La presse de droite insiste sur la gravité de la perturbation en détaillant l'évolution chiffrée des signalements au cours de la journée."
+    "La gauche met l'accent sur l'ampleur technique de la panne à partir des données de signalement de la plateforme Downdetector.",
+    "Le centre adopte un angle centré sur le service public et le vécu des abonnés, en illustrant l'impact concret des perturbations par des témoignages d'usagers.",
+    "La droite insiste sur la chronologie précise de la crise en s'appuyant sur le pic chiffré des signalements et sur la communication officielle de l'opérateur sur les réseaux sociaux."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 10
+  "summarizedArticleCount": 12
 }
