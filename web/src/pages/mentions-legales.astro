@@ -1,4 +1,5 @@
 ---
+import InlineLink from '../components/InlineLink.astro';
 import { withBase } from '../data';
 import Base from '../layouts/Base.astro';
 
@@ -41,11 +42,10 @@ const description =
         <p class="mt-1.5">
           Arnaud de Surirey, directeur de la publication.
           <br />
-          Contact : <a
-            href="mailto:salves.panache.8i@icloud.com"
-            class="text-ink underline-offset-2 hover:underline"
-            >salves.panache.8i@icloud.com</a
-          >
+          Contact :
+            <InlineLink href="mailto:salves.panache.8i@icloud.com"
+              >salves.panache.8i@icloud.com</InlineLink
+            >
         </p>
       </div>
 
@@ -56,9 +56,9 @@ const description =
           <br />
           88 Colin P Kelly Jr Street, San Francisco, CA 94107, États-Unis
           <br />
-          <a href="https://docs.github.com/fr/site-policy" class="text-ink underline-offset-2 hover:underline" rel="noopener">
+          <InlineLink href="https://docs.github.com/fr/site-policy">
             Conditions et politiques du site GitHub
-          </a>
+          </InlineLink>
         </p>
       </div>
 
@@ -69,9 +69,8 @@ const description =
           contenu de presse : il renvoie vers les articles des médias, dont il n’affiche
           que les titres, chapôs et images déjà publics. Les sources des classements sont
           détaillées sur la page
-          <a
-            href={withBase('/classement-politique-des-medias/')}
-            class="text-ink underline-offset-2 hover:underline">« Classement politique des médias »</a
+          <InlineLink href={withBase('/classement-politique-des-medias/')}
+            >« Classement politique des médias »</InlineLink
           >.
         </p>
       </div>

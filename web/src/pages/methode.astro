@@ -1,5 +1,6 @@
 ---
 import { LEANING_LABELS, type Leaning, outlets } from '@prisme/domain';
+import InlineLink from '../components/InlineLink.astro';
 import { withBase } from '../data';
 import Base from '../layouts/Base.astro';
 
@@ -143,10 +144,9 @@ const description =
       <p>
         Chaque classement s'appuie sur au moins deux sources publiques
         indépendantes, citées avec leurs désaccords — le détail, média par
-        média, est sur la page <a
-          href={withBase("/classement-politique-des-medias/")}
-          class="underline transition-colors"
-          rel="noopener">classement politique des médias</a
+        média, est sur la page
+        <InlineLink href={withBase("/classement-politique-des-medias/")}
+          >classement politique des médias</InlineLink
         >.
       </p>
       <p>
@@ -200,10 +200,8 @@ const description =
         sélection des {outlets.length} médias : la répartition inégale des bords est
         celle de la presse nationale française, et c'est une part de ce que Prisme
         montre. Certains médias réservent par ailleurs la fouille de leurs textes
-        et données (TDM) : c'est déclaré, et indiqué média par média sur la page <a
-          href={withBase("/classement-politique-des-medias/")}
-          class="underline"
-          rel="noopener">classement politique des médias</a
+        et données (TDM) : c'est déclaré, et indiqué média par média sur la page <InlineLink href={withBase("/classement-politique-des-medias/")}
+          >classement politique des médias</InlineLink
         >.
       </p>
     </section>

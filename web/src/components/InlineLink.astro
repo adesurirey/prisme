@@ -1,0 +1,22 @@
+---
+// The one inline link for prose (static pages): permanent underline at the
+// browser-default thickness and position, decoration in the current text
+// color, and the site-wide hover feedback — a color shift to ink, the same
+// grammar as the footer nav. Size, weight and resting color stay with the
+// caller; external http(s) links get rel="noopener" automatically.
+// (Links that head a block wear the SiteBadge pill instead, so a heading
+// is never mistaken for a link.)
+interface Props {
+  href: string;
+  class?: string;
+}
+
+const { href, class: className } = Astro.props;
+const external = /^https?:\/\//.test(href);
+---
+
+<a
+  {href}
+  class:list={["underline transition-colors hover:text-ink", className]}
+  rel={external ? "noopener" : undefined}
+><slot /></a>

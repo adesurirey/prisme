@@ -1,0 +1,22 @@
+---
+// The Outlet's home-site link, worn as a badge: the pill carries the link
+// (short domain as the label) so the outlet name itself stays a plain
+// title — a heading can't be told apart from a link. Same visual language
+// as PaywallBadge's meta-line pill, plus the site-wide link hover
+// (color shift to ink, as the footer nav).
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+const label = href
+  .replace(/^https?:\/\//, '')
+  .replace(/^www\./, '')
+  .replace(/\/$/, '');
+---
+
+<a
+  {href}
+  class="rounded border border-line px-1.5 py-0.5 text-[11px] leading-none text-muted transition-colors hover:text-ink"
+  rel="noopener"
+>{label}</a>

@@ -8,8 +8,10 @@ import {
   type OutletConfig,
   outlets,
 } from '@prisme/domain';
+import InlineLink from '../components/InlineLink.astro';
 import LeaningBadge from '../components/LeaningBadge';
 import PaywallBadge from '../components/PaywallBadge';
+import SiteBadge from '../components/SiteBadge.astro';
 import { withBase } from '../data';
 import Base from '../layouts/Base.astro';
 import { formatParisDate } from '../paris-date';
@@ -168,13 +170,10 @@ const description =
               {perLeaning(leaning).map((outlet) => (
                 <li class="py-4">
                   <h4 class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
-                    <a
-                      href={outlet.site}
-                      class="text-[16px] font-medium text-ink underline-offset-2 hover:underline"
-                      rel="noopener"
-                    >
+                    <span class="text-[16px] font-medium text-ink">
                       {outlet.name}
-                    </a>
+                    </span>
+                    <SiteBadge href={outlet.site} />
                     <PaywallBadge paywall={outlet.paywall} />
                   </h4>
                   <p class="mt-1 text-[16px] leading-relaxed text-muted">
@@ -195,14 +194,10 @@ const description =
                       <ul class="flex flex-col gap-3">
                         {outlet.leaningSources.map((source) => (
                           <li>
-                            <p class="text-[16px] leading-relaxed">
-                              <a
-                                href={source.url}
-                                class="font-medium text-ink underline-offset-2 hover:underline"
-                                rel="noopener"
-                              >
+                            <p class="text-[16px] leading-relaxed text-muted">
+                              <InlineLink href={source.url}>
                                 {source.title}
-                              </a>
+                              </InlineLink>
                               <span class="text-muted">
                                 {' '}— {source.author}
                                 {source.date ? `, ${source.date}` : ''}
@@ -215,14 +210,14 @@ const description =
                         ))}
                       </ul>
                       <p class="text-[16px] leading-relaxed text-muted">
-                        Audience :{' '}
-                        <a
-                          href={outlet.readership.url}
-                          class="underline decoration-line-strong underline-offset-2 transition-colors hover:text-muted"
-                          rel="noopener"
-                        >
-                          {outlet.readership.evidence}
-                        </a>
+                        Audience :{' '}
+                        {outlet.readership.url ? (
+                          <InlineLink href={outlet.readership.url}>
+                            {outlet.readership.evidence}
+                          </InlineLink>
+                        ) : (
+                          outlet.readership.evidence
+                        )}
                       </p>
                     </div>
                   </details>
