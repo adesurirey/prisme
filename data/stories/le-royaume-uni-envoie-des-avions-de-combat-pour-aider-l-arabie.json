@@ -6,6 +6,17 @@
   "storyDay": "2026-10-20",
   "articles": [
     {
+      "id": "5dfc2812a9d6",
+      "outletId": "cnews",
+      "headline": "Le Royaume-Uni déploie des avions de chasse dans le Golfe pour soutenir l'Arabie saoudite face aux Houthis",
+      "url": "https://www.cnews.fr/monde/2026-10-21/le-royaume-uni-deploie-des-avions-de-chasse-dans-le-golfe-pour-soutenir-larabie",
+      "publishedAt": "2026-10-21T17:04:00.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/020_2301303631-taille1200_6ad8be56b1242.jpg?itok=g_qLusut",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "674a34ad00f2",
       "outletId": "rfi",
       "headline": "Le Royaume-Uni va envoyer des avions de combat pour aider l'Arabie saoudite face aux Houthis du Yémen",
@@ -45,18 +56,23 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le Royaume-Uni renforce son partenariat historique avec l'Arabie saoudite en déployant des avions de combat et un appareil A400M pour des missions strictement défensives.",
-      "Le Monde précise que cette décision vise notamment à protéger l'approvisionnement énergétique face aux répercussions du conflit yéménite."
+      "Le Royaume-Uni renforce son assistance militaire auprès de l'Arabie saoudite face aux rebelles houthistes basés au Yémen",
+      "Le journal Le Monde rappelle la permanence des liens d'alliance historique unissant Londres et Riyad"
     ],
     "centre": [
-      "Londres fournit des conseillers militaires, des avions de combat et un appareil A400M de la Royal Air Force pour soutenir Riyad.",
-      "Ce dispositif militaire a pour mission exclusive d'aider l'Arabie saoudite à se défendre contre les frappes des Houthis au Yémen."
+      "Londres dépêche des avions de chasse en direction du Golfe pour prêter main-forte à l'Arabie saoudite",
+      "L'objectif affiché de cette mobilisation est de faire face aux attaques aériennes menées par les houthistes yéménites"
+    ],
+    "droite": [
+      "Le ministère britannique de la Défense officialise le déploiement d'appareils Typhoon de la Royal Air Force",
+      "Ces missions de protection aérienne des infrastructures et des villes saoudiennes possèdent un caractère strictement défensif et excluent toute frappe offensive"
     ]
   },
   "differences": [
-    "Le camp gauche insiste sur la continuité de l'alliance historique et les motivations économiques liées à l'approvisionnement énergétique.",
-    "Le camp centre met en avant le volet strictement militaire et logistique du déploiement face aux attaques des Houthis."
+    "Le camp gauche insiste sur la profondeur historique du partenariat unissant le Royaume-Uni et l'Arabie saoudite.",
+    "Le camp centre privilégie une approche synthétique mettant en avant l'aide militaire directe apportée par Londres face aux houthistes.",
+    "Le camp droite entre dans le détail technique du communiqué officiel du ministère de la Défense britannique en insistant sur la nature strictement défensive des missions."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }

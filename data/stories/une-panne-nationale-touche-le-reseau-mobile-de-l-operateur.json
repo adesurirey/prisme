@@ -6,6 +6,17 @@
   "storyDay": "2026-10-21",
   "articles": [
     {
+      "id": "e9481c6dbd7a",
+      "outletId": "bfmtv",
+      "headline": "Orange: une panne affecte le réseau mobile de l'opérateur depuis plusieurs heures",
+      "url": "https://www.bfmtv.com/tech/video-orange-une-panne-affecte-le-reseau-mobile-de-l-operateur-depuis-plusieurs-heures_VN-202610210815.html",
+      "publishedAt": "2026-10-21T17:22:58.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/nag5isBto_hT4nm2PKUQ1bdczFE=/0x0:1280x720/800x0/images/Orange-une-panne-affecte-le-reseau-mobile-de-l-operateur-depuis-plusieurs-heures-2369713.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "694ba1526d3b",
       "outletId": "le-parisien",
       "headline": "Panne nationale du réseau Orange : « Je devais appeler mon compagnon à l’hôpital, je n’ai aucune nouvelle »",
@@ -146,27 +157,25 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Une panne d'ampleur nationale affecte le réseau mobile de l'opérateur Orange ainsi que sa filiale Sosh.",
-      "Les services d'appels, d'envoi de messages et d'Internet mobile sont perturbés depuis la fin de la matinée pour de nombreux clients.",
-      "Le site spécialisé Downdetector a recensé plusieurs milliers de signalements de la part d'abonnés impactés."
+      "Une panne d'ampleur nationale affecte le réseau mobile de l'opérateur Orange et de sa filiale Sosh, générant des milliers de signalements en quelques minutes.",
+      "Les abonnés subissent d'importantes perturbations les empêchant d'utiliser leurs données mobiles, d'envoyer des messages et de passer des appels.",
+      "Libération mentionne, en citant Numerama, qu'une migration ratée vers la 5G serait à l'origine de l'incident."
     ],
     "centre": [
-      "Le réseau mobile de l'opérateur Orange et de sa filiale Sosh subit une panne d'envergure nationale.",
-      "L'incident perturbe lourdement les appels, l'envoi de SMS et les usages mobiles de nombreux abonnés à travers la France.",
-      "Les équipes techniques de l'entreprise sont mobilisées pour identifier l'origine du dysfonctionnement et rétablir le service.",
-      "Des témoignages d'utilisateurs illustrent la difficulté à joindre des proches dans des situations d'urgence."
+      "Une panne nationale perturbe le réseau mobile de l'opérateur Orange et de sa filiale Sosh depuis plusieurs heures.",
+      "Les équipes techniques de l'entreprise sont mobilisées pour identifier l'origine du dysfonctionnement et rétablir les services.",
+      "Les concurrents Bouygues Telecom et SFR précisent ne pas rencontrer d'incidents sur leurs propres infrastructures."
     ],
     "droite": [
-      "Une panne générale paralyse l'ensemble du réseau mobile de l'opérateur Orange et de sa filiale Sosh sur le territoire français.",
-      "Le site Downdetector a enregistré un pic de signalements atteignant près de 12 000 alertes à la mi-journée.",
-      "L'opérateur a présenté ses excuses aux abonnés sur le réseau social X et assure que ses équipes interviennent pour un retour à la normale."
+      "L'ensemble du réseau mobile de l'opérateur Orange et de sa filiale Sosh est touché par une panne en France.",
+      "De nombreux utilisateurs constatent l'impossibilité de passer des appels et d'utiliser les services de communication."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur l'ampleur technique de la panne à partir des données de signalement de la plateforme Downdetector.",
-    "Le centre adopte un angle centré sur le service public et le vécu des abonnés, en illustrant l'impact concret des perturbations par des témoignages d'usagers.",
-    "La droite insiste sur la chronologie précise de la crise en s'appuyant sur le pic chiffré des signalements et sur la communication officielle de l'opérateur sur les réseaux sociaux."
+    "La gauche se distingue en mentionnant une cause technique précise relayée par un site spécialisé.",
+    "Le centre livre un suivi factuel et institutionnel en insistant sur la mobilisation des équipes techniques d'Orange.",
+    "La droite propose un traitement centré sur le constat brut de la panne et son impact direct sur les utilisateurs."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 12
+  "summarizedArticleCount": 13
 }

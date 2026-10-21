@@ -6,6 +6,28 @@
   "storyDay": "2026-10-21",
   "articles": [
     {
+      "id": "ab9d8c24e8af",
+      "outletId": "bfmtv",
+      "headline": "Une partie d'internet mondial mise à l'arrêt",
+      "url": "https://www.bfmtv.com/economie/video-une-partie-d-internet-mondial-mise-a-l-arret_VN-202610210818.html",
+      "publishedAt": "2026-10-21T17:25:34.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/FwSUTUisnourrHTAV58MBvMSUcs=/0x0:1280x720/800x0/images/Une-partie-d-internet-mondial-mise-a-l-arret-2369719.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "e1fbd218518f",
+      "outletId": "la-croix",
+      "headline": "Failles PHP : des millions de sites menacés, les États-Unis recommandent une mise à jour immédiate",
+      "url": "https://www.la-croix.com/international/failles-php-des-millions-de-sites-menaces-les-etats-unis-recommandent-une-mise-a-jour-immediate-20261021",
+      "publishedAt": "2026-10-21T17:22:00.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/21/2568918-plusieurs-sites-utilisant-le-protocole-de-programm.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "392ba9d161b3",
       "outletId": "humanite",
       "headline": "Des centaines de millions de sites web menacés, des plateformes gouvernementales mises hors lignes… Tout comprendre aux failles informatiques liées au langage de programmation PHP",
@@ -134,23 +156,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Des millions de sites web mondiaux et français, incluant les services des impôts, Météo-France et la Préfecture de Police, ont été mis hors ligne ce mercredi 21 octobre à la suite d'une alerte de sécurité.",
-      "Une vulnérabilité critique touchant le langage informatique PHP a conduit les gestionnaires à bloquer l'accès aux plateformes de manière préventive pour éviter des attaques informatiques."
+      "Deux failles majeures de sécurité dans le langage PHP ont entraîné la fermeture temporaire de millions de sites web à travers le monde.",
+      "En France, plusieurs plateformes gouvernementales et institutionnelles, telles que les préfectures de police et le site des impôts, ont été rendues inaccessibles.",
+      "Ces mesures préventives ont été prises par les autorités pour éviter des attaques informatiques d'envergure."
     ],
     "centre": [
-      "Le ministère de l'Intérieur et l'Anssi ont ordonné la mise en maintenance d'urgence de nombreux sites publics, dont les préfectures et le portail des impôts.",
-      "La décision fait suite à la découverte de deux failles majeures dans un langage de programmation très répandu, provoquant une inquiétude générale chez les développeurs."
+      "Une vulnérabilité critique affectant le langage informatique PHP menace les deux tiers des sites internet mondiaux.",
+      "En France, le ministère de l'Intérieur a ordonné la mise en maintenance préventive de nombreux services publics, dont les impôts et les préfectures.",
+      "Les États-Unis ont émis des recommandations urgentes incitant à appliquer immédiatement les correctifs nécessaires."
     ],
     "droite": [
-      "Une partie de l'Internet mondial et français a été mise à l'arrêt ce mercredi après-midi à la suite d'une alerte émise par l'Anssi.",
-      "L'ensemble des préfectures, y compris la préfecture de police de Paris, ainsi que d'autres services en Europe et aux États-Unis, sont devenus inaccessibles en raison d'une vulnérabilité critique de sécurité."
+      "Une brèche informatique critique touchant le langage PHP a provoqué l'arrêt d'une partie de l'Internet mondial.",
+      "À la demande expresse de l'Anssi, tous les sites des préfectures françaises ont été coupés préventivement.",
+      "L'Europe et les États-Unis subissent également les répercussions de cette faille majeure, en attendant des correctifs de la part des éditeurs."
     ]
   },
   "differences": [
-    "La gauche insiste en premier lieu sur l'ampleur mondiale du phénomène et la menace directe pesant sur des centaines de millions de plateformes.",
-    "Le centre met l'accent sur la dimension opérationnelle de la crise, soulignant la panique des développeurs et les interventions d'urgence menées par l'Anssi et le ministère de l'Intérieur.",
-    "La droite privilégie un angle centré sur l'arrêt brutal des services administratifs français et la mise hors ligne de toutes les préfectures à la demande expresse des autorités de sécurité."
+    "La gauche insiste sur l'ampleur internationale des plateformes mises hors ligne et cite explicitement les impacts sur la vie quotidienne des citoyens.",
+    "Le centre adopte une approche institutionnelle en soulignant les consignes émises par les agences de cybersécurité nationales et étrangères.",
+    "La droite met particulièrement en avant l'intervention directe de l'Anssi pour justifier l'arrêt des services publics français."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 11
+  "summarizedArticleCount": 13
 }
