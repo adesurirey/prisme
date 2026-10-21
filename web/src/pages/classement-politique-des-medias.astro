@@ -9,7 +9,6 @@ import {
   outlets,
 } from '@prisme/domain';
 import InlineLink from '../components/InlineLink.astro';
-import LeaningBadge from '../components/LeaningBadge';
 import PaywallBadge from '../components/PaywallBadge';
 import SiteBadge from '../components/SiteBadge.astro';
 import { withBase } from '../data';
@@ -19,12 +18,19 @@ import { formatParisDate } from '../paris-date';
 const perLeaning = (leaning: Leaning): OutletConfig[] =>
   outlets.filter((o) => o.leaning === leaning);
 
+const tdmLabel = (tdm: OutletConfig['tdm']): string =>
+  tdm.reserved === true
+    ? 'réservation publiée'
+    : tdm.reserved === false
+      ? 'aucune réservation'
+      : 'indéterminé';
+
 const description =
-  'Comment chaque média français est classé sur cinq tendances, de la gauche à la droite : les sources citées, la méthode, et les médias exclus. Les classements du Figaro, de Libération, du Monde… média par média.';
+  'Comment chaque média français est classé, de gauche à droite : les cinq tendances, les sources derrière chaque classement, les médias exclus. Le Figaro, Libération, Le Monde… média par média.';
 ---
 
 <Base
-  title="Classement politique des médias français : de la gauche à la droite"
+  title="Classement politique des médias français : de gauche à droite"
   description={description}
 >
   <article class="pt-10">
@@ -59,73 +65,61 @@ const description =
       classé à la main sur cinq tendances — {LEANING_LABELS.gauche.toLowerCase()},
       {LEANING_LABELS['centre-gauche'].toLowerCase()}, {LEANING_LABELS.centre.toLowerCase()},
       {LEANING_LABELS['centre-droite'].toLowerCase()} et {LEANING_LABELS.droite.toLowerCase()}.
-      Le site lui-même ne parle qu’en trois camps — gauche, centre, droite : le centre
-      gauche compte avec la gauche, le centre droit avec la droite. C’est la lecture des
-      légendes, des barres de couverture et des synthèses. Cette page est le seul endroit
-      qui détaille les cinq tendances : elle dit d’où vient chaque classement, avec les
-      sources citées, et ce que le site ne fait pas.
+      Le site, lui, ne parle qu’en trois camps — gauche, centre, droite : le centre
+      gauche compte avec la gauche, le centre droit avec la droite ; c’est la langue des
+      légendes, des barres de couverture et des synthèses.
+    </p>
+    <p class="mt-4 text-[16px] leading-relaxed text-muted">
+      Cette page dit d’où vient chaque classement, média par média, avec ses sources et
+      ses désaccords. Pour le reste — la collecte des articles, la formation des sujets,
+      l’écriture des synthèses — voir la page
+      <InlineLink href={withBase('/methode/')}>« Comment fonctionne Prisme »</InlineLink>.
     </p>
 
     <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
-      <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Le bord appartient au média, pas à l’article</h2>
+      <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">
+        Le bord appartient au média, pas à l’article
+      </h2>
       <p>
-        Un article du <em>Figaro</em> peut très bien défendre une position de gauche ; ça
-        n’en fait pas un article « de droite ». C’est le média, dans sa durée, qui a une
-        position : sa ligne éditoriale, ce qu’il choisit de mettre en avant, ce qu’il
-        laisse de côté. On classe donc le média une fois pour toutes, à la main, et on ne
-        touche jamais au classement des articles eux-mêmes.
+        Un article du <em>Figaro</em> peut défendre une position de gauche : ça n’en fait
+        pas pour autant un article « de droite », ni « de gauche ». Le bord politique
+        appartient au média, jamais à l’article. C’est le média qui a une position, sur
+        la durée : sa ligne éditoriale, ce qu’il met en avant, ce qu’il laisse de côté.
+        Chaque média est donc classé une fois pour toutes, à la main — et aucun modèle
+        ne classe jamais les articles eux-mêmes.
       </p>
       <p>
-        Chaque classement s’appuie sur au moins deux sources publiques indépendantes — une
-        échelle idéologique construite à partir de données, et des travaux de référence.
-        Elles sont citées pour chaque média plus bas, et quand elles se contredisent, ça
-        s'écrit noir sur blanc.
+        Chaque classement s’appuie sur au moins deux sources publiques indépendantes :
+        une échelle idéologique construite à partir de données, et des travaux de
+        référence. Elles sont citées média par média plus bas ; quand elles se
+        contredisent, le désaccord est écrit noir sur blanc.
       </p>
     </section>
 
     <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
-      <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">La sélection n’est pas équilibrée — et c’est voulu</h2>
+      <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">
+        La sélection n’est pas équilibrée — et c’est voulu
+      </h2>
       <p>
         Les {outlets.length} médias sont choisis pour leur audience et leur poids
-        éditorial, jamais pour équilibrer les bords. Il en résulte une répartition
-        inégale —
-        {perLeaning('gauche').length} à gauche, {perLeaning('centre-gauche').length} au centre
-        gauche, {perLeaning('centre').length} au centre, {perLeaning('centre-droite').length} au
-        centre droit et {perLeaning('droite').length} à droite — qui ressemble à celle de la
-        presse nationale française. À quoi ça sert ? À voir ce qui se passe quand un sujet n’est
-        repris que d’un côté : sur une page de sujet, la barre de couverture et les
-        mentions « angle mort » le montrent directement.
-      </p>
-    </section>
-
-    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
-      <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Couverture et angles morts</h2>
-      <p>
-        Pour chaque sujet, Prisme compte combien de médias de chaque bord publient un
-        article d’actualité dessus, les cinq tendances regroupées en trois camps :
-        centre gauche compte avec la gauche, centre droit avec la droite. Un éditorial ou une
-        tribune ne compte pas : il commente, il ne couvre pas. Un bord devient un « angle
-        mort » quand les deux autres parlent du sujet et lui pas. Le comptage vient des titres
-        et chapôs des articles collectés, pas d’un jugement sur leur contenu.
-      </p>
-    </section>
-
-    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
-      <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Ce que fait l’IA — et ce qu’elle ne lit pas</h2>
-      <p>
-        Les synthèses « lu à gauche / au centre / à droite » sont écrites par un modèle
-        de langage, à partir des seuls titres et chapôs publiés par les médias. Il ne lit
-        jamais les articles eux-mêmes : Prisme ne les stocke pas et ne les reproduit pas.
-        Une synthèse ne peut donc résumer que ce que les titres et chapôs donnent à voir —
-        la manière dont chaque bord présente le sujet, pas le fond des articles.
+        éditorial, jamais pour équilibrer les bords. D’où une répartition inégale —
+        {perLeaning('gauche').length} à gauche, {perLeaning('centre-gauche').length} au
+        centre gauche, {perLeaning('centre').length} au centre,
+        {perLeaning('centre-droite').length} au centre droit et
+        {perLeaning('droite').length} à droite — qui ressemble à celle de la presse
+        nationale française. Cette répartition est elle-même une information : elle
+        montre ce qui se passe quand un sujet n’est repris que d’un seul bord. La barre
+        de couverture et les mentions « angle mort » le rendent visible sur chaque page
+        de sujet — le mécanisme est détaillé dans
+        <InlineLink href={withBase('/methode/#angle-mort')}>« L’angle mort »</InlineLink>.
       </p>
     </section>
 
     <section class="mt-10">
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Les médias exclus</h2>
       <p class="mt-2 text-[16px] leading-relaxed text-muted">
-        Certains médias manquent à l’appel. En voici la liste et la raison, telles que
-        vérifiées à la date indiquée.
+        Certains médias manquent à l’appel. Pour chacun, la raison de l’exclusion,
+        vérifiée à la date indiquée.
       </p>
       <ul class="mt-4 flex max-w-3xl flex-col divide-y divide-line border-y border-line">
         {
@@ -218,6 +212,14 @@ const description =
                         ) : (
                           outlet.readership.evidence
                         )}
+                      </p>
+                      <p class="text-[16px] leading-relaxed text-muted">
+                        Texte et données (TDM) : {tdmLabel(outlet.tdm)} — vérifié le
+                        {formatParisDate(new Date(outlet.tdm.checkedAt), {
+                          day: 'numeric',
+                          month: 'long',
+                          year: 'numeric',
+                        })}
                       </p>
                     </div>
                   </details>
