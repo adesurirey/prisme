@@ -6,6 +6,17 @@
   "storyDay": "2026-10-20",
   "articles": [
     {
+      "id": "817faf2e1470",
+      "outletId": "rfi",
+      "headline": "Un premier cas d'Ebola Bundibugyo détecté au Nigeria",
+      "url": "https://www.rfi.fr/fr/afrique/20261021-un-premier-cas-d-ebola-bundibugyo-d%C3%A9tect%C3%A9-au-nigeria",
+      "publishedAt": "2026-10-21T03:04:49.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/b85d37ac-9fcd-11f1-9c76-005056bf30b7/w:1024/p:16x9/Ali-Pate-Nigeria.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "2217fbb6bf70",
       "outletId": "france-24",
       "headline": "Le Nigeria annonce un premier cas de virus Ebola à Abuja",
@@ -33,14 +44,15 @@
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Le gouvernement nigérian a officialisé la détection d'un cas d'Ebola à Abuja chez une patiente arrivée en avion depuis l'Ouganda.",
-      "Quarante-quatre personnes ayant eu des contacts étroits avec la malade ont été identifiées par les autorités sanitaires.",
-      "Cette propagation intervient alors que l'épidémie sévit également en République démocratique du Congo avec des milliers de cas et de décès enregistrés."
+      "Le Nigeria a détecté un premier cas de virus Ebola de souche Bundibugyo chez une patiente venue d'Ouganda et arrivée par avion à Abuja.",
+      "Le gouvernement nigérian a placé quarante-quatre personnes en tant que cas contacts sous surveillance.",
+      "Il s'agit de la première résurgence de la maladie dans le pays depuis l'épidémie de 2014 qui avait causé huit décès.",
+      "La presse centrale mentionne également l'ampleur de l'épidémie en République démocratique du Congo avec plus de 9 000 cas et 4 381 décès."
     ]
   },
   "differences": [
-    "Le centre livre un traitement factuel et homogène en insistant sur l'arrivée de la patiente par voie aérienne dans la capitale et sur le traçage immédiat des quarante-quatre personnes identifiées comme cas contacts."
+    "Le camp du centre adopte une couverture purement informative et factuelle, se concentrant sur la chronologie sanitaire de l'arrivée du virus à Abuja, l'identification des 44 cas contacts et le rappel de l'épidémie précédente de 2014, tout en élargissant parfois le contexte à la situation en République démocratique du Congo."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }
