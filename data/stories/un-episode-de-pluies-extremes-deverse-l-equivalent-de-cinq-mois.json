@@ -1,10 +1,22 @@
 {
   "id": "ed349caef1ae",
   "slug": "un-episode-de-pluies-extremes-deverse-l-equivalent-de-cinq-mois",
-  "title": "Un épisode de pluies extrêmes déverse l'équivalent de cinq mois de précipitations en 24 heures en Corse",
+  "title": "En Corse, des intempéries records déversent cinq mois de pluie en 24 heures et font deux morts dans le Sud-Est",
   "createdAt": "2026-10-21T20:01:24.588Z",
   "storyDay": "2026-10-21",
   "articles": [
+    {
+      "id": "3d3748d13609",
+      "outletId": "le-monde",
+      "headline": "Dans le Sud-Est et en Corse, deux morts après des intempéries records",
+      "url": "https://www.lemonde.fr/climat/article/2026/10/21/dans-le-sud-est-et-en-corse-deux-morts-apres-des-intemperies-records_6798310_1652612.html",
+      "publishedAt": "2026-10-21T20:30:10.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/21/393/0/4724/2362/644/322/60/0/4162de8_upload-1-5qpdu7gcmghj-hanslucas-hl-gbeyson-3349253.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
     {
       "id": "d4a99282a927",
       "outletId": "tf1-info",
@@ -32,20 +44,18 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La station Météo France de Solenzara, en Haute-Corse, a enregistré des records historiques de cumul de pluie mardi 20 octobre.",
-      "Les données transmises à Libération indiquent un niveau inédit de précipitations en France métropolitaine pour un laps de temps aussi court.",
-      "Ce déluge de quelques heures surpasse tous les précédents épisodes méditerranéens et réécrit la climatologie des pluies extrêmes."
+      "Le Monde rapporte que les intempéries méditerranéennes dans les Bouches-du-Rhône et en Corse ont fait deux victimes et provoqué d'importantes perturbations.",
+      "Libération souligne, selon des données de Météo France, qu'un tel déluge en quelques heures « réécrit la climatologie des pluies extrêmes » et bat tous les records en France métropolitaine."
     ],
     "droite": [
-      "Plusieurs records de pluviométrie ont été battus dans le Sud-Est, avec un pic remarquable à Solenzara sur la côte est de la Corse.",
-      "Il est tombé 196 millimètres de pluie en une heure, soit un mois et demi de précipitations, et 612 millimètres en 24 heures.",
-      "Ce volume inédit en France métropolitaine, équivalant à cinq mois de pluie, s'explique par la hausse de la température de la mer Méditerranée."
+      "TF1 Info indique qu'une pluviométrie record a frappé Solenzara avec 612 millimètres en 24 heures, soit cinq mois de pluie, du jamais vu en métropole.",
+      "Le média relie ce phénomène exceptionnel à la hausse de la température de la mer Méditerranée."
     ]
   },
   "differences": [
-    "Libération adopte un angle scientifique et climatique en soulignant que l'événement réécrit la climatologie des pluies extrêmes, en s'appuyant sur les données exclusives de Météo France.",
-    "TF1 Info privilégie l'ampleur spectaculaire des dégâts et des chiffres, qualifiant le phénomène d'inédit en France métropolitaine et l'attribuant directement à la température de la Méditerranée."
+    "La gauche met l'accent sur le bilan humain tragique et qualifie l'événement d'historique en se basant sur les données climatologiques de Météo France.",
+    "La droite privilégie l'analyse technique des chiffres impressionnants de précipitations à Solenzara et pointe la hausse de la température de la Méditerranée."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }

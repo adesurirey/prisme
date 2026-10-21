@@ -6,6 +6,17 @@
   "storyDay": "2026-10-21",
   "articles": [
     {
+      "id": "35c436b71fec",
+      "outletId": "europe-1",
+      "headline": "Orange annonce un rétablissement de son réseau mobile",
+      "url": "https://www.europe1.fr/societe/orange-annonce-un-retablissement-de-son-reseau-mobile-1171476?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-21T19:33:14.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/21/000_d3yv29f_1_6ad9142661d10.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "e9481c6dbd7a",
       "outletId": "bfmtv",
       "headline": "Orange: une panne affecte le réseau mobile de l'opérateur depuis plusieurs heures",
@@ -157,25 +168,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Une panne d'ampleur nationale affecte le réseau mobile de l'opérateur Orange et de sa filiale Sosh, générant des milliers de signalements en quelques minutes.",
-      "Les abonnés subissent d'importantes perturbations les empêchant d'utiliser leurs données mobiles, d'envoyer des messages et de passer des appels.",
-      "Libération mentionne, en citant Numerama, qu'une migration ratée vers la 5G serait à l'origine de l'incident."
+      "Une panne majeure d'ampleur nationale a affecté le réseau mobile d'Orange et de Sosh durant une grande partie de la journée.",
+      "Des millions d'abonnés se sont retrouvés dans l'impossibilité d'émettre des appels, d'envoyer des messages ou d'utiliser les données mobiles.",
+      "Libération signale qu'une « migration ratée vers la 5G » serait à l'origine de cet incident technique d'après Numerama."
     ],
     "centre": [
-      "Une panne nationale perturbe le réseau mobile de l'opérateur Orange et de sa filiale Sosh depuis plusieurs heures.",
-      "Les équipes techniques de l'entreprise sont mobilisées pour identifier l'origine du dysfonctionnement et rétablir les services.",
-      "Les concurrents Bouygues Telecom et SFR précisent ne pas rencontrer d'incidents sur leurs propres infrastructures."
+      "Une vaste panne nationale a perturbé les services mobiles de l'opérateur Orange et de sa filiale Sosh dès la matinée.",
+      "De nombreux clients ont témoigné de difficultés à joindre leurs proches ou les services d'urgence, provoquant des milliers de signalements.",
+      "L'entreprise a présenté ses excuses et annoncé en soirée le rétablissement progressif des appels, des SMS et des usages mobiles."
     ],
     "droite": [
-      "L'ensemble du réseau mobile de l'opérateur Orange et de sa filiale Sosh est touché par une panne en France.",
-      "De nombreux utilisateurs constatent l'impossibilité de passer des appels et d'utiliser les services de communication."
+      "Le réseau mobile de l'opérateur Orange a subi une interruption totale à l'échelle nationale touchant l'ensemble de ses clients particuliers et professionnels.",
+      "L'entreprise a indiqué que « l'incident est lié à une défaillance d'un équipement au niveau de notre cœur de réseau mobile ».",
+      "Près de 12.000 signalements ont été recensés sur la plateforme Downdetector lors du pic de la panne avant un retour à la normale constaté dans la soirée."
     ]
   },
   "differences": [
-    "La gauche se distingue en mentionnant une cause technique précise relayée par un site spécialisé.",
-    "Le centre livre un suivi factuel et institutionnel en insistant sur la mobilisation des équipes techniques d'Orange.",
-    "La droite propose un traitement centré sur le constat brut de la panne et son impact direct sur les utilisateurs."
+    "La gauche se distingue en contextualisant l'origine technique de la panne par une mention directe à des sources spécialisées comme Numerama.",
+    "Le centre privilégie une couverture axée sur le vécu des abonnés et l'impact immédiat des perturbations dans la vie quotidienne.",
+    "La droite adopte un traitement technique et factuel centré sur les données communiquées par l'opérateur et les pics de signalement."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 13
+  "summarizedArticleCount": 14
 }
