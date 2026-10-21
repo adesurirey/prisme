@@ -6,6 +6,29 @@
   "storyDay": "2026-10-20",
   "articles": [
     {
+      "id": "11a361d482b5",
+      "outletId": "la-croix",
+      "headline": "Guerre en Ukraine : Witkoff a rencontré Poutine ; la Russie libère l’Américain Stephen Hubbard",
+      "url": "https://www.la-croix.com/international/guerre-en-ukraine-witkoff-va-rencontrer-poutine-les-pourparlers-d-oslo-juges-positifs-20261021",
+      "publishedAt": "2026-10-21T10:22:20.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/21/2568148-volodymyr-zelensky-s-est-rendu-en-norvege-ou-il-a-.jpg",
+      "frontPage": false,
+      "kind": "live",
+      "section": "world"
+    },
+    {
+      "id": "40b92dd15e20",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, guerre en Ukraine : Vladimir Poutine annonce la libération de l’Américain Stephen Hubbard lors d’un échange avec Steve Witkoff",
+      "url": "https://www.lemonde.fr/international/live/2026/10/21/en-direct-guerre-en-ukraine-dmitri-peskov-le-porte-parole-du-kremlin-affirme-que-la-russie-veut-la-paix-pas-une-treve-avant-la-rencontre-entre-vladimir-poutine-et-steve-witkoff_6796922_3210.html",
+      "publishedAt": "2026-10-21T07:55:14.000Z",
+      "imageUrl": "https://img.lemde.fr/2024/10/07/0/0/2000/1000/644/322/60/0/b755c4e_5897159-01-06.jpg",
+      "frontPage": true,
+      "kind": "live",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "0b8660bdefb3",
       "outletId": "tf1-info",
       "headline": "Après des discussions \"très productives et constructives\" avec Kiev, Witkoff attendu en Russie pour une rencontre avec Poutine",
@@ -124,26 +147,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "L'émissaire américain Steve Witkoff a rencontré Volodymyr Zelensky à Oslo avant de se rendre en Russie pour y voir Vladimir Poutine.",
-      "Le Monde note que le président ukrainien tente d'entretenir l'espoir d'être entendu par Washington malgré un alignement croissant de la Maison-Blanche sur Moscou.",
-      "Donald Trump a accentué sa pression sur l'Ukraine, exigeant un accord avec la Russie et estimant n'avoir rien reçu en échange de l'aide fournie."
+      "L'émissaire américain Steve Witkoff a rencontré Volodymyr Zelensky à Oslo puis Vladimir Poutine à Saint-Pétersbourg pour porter des propositions de paix.",
+      "Le Kremlin a annoncé la libération de l'Américain Stephen Hubbard lors de cet échange avec Steve Witkoff.",
+      "Donald Trump a accentué la pression sur Kiev en réclamant la volonté de Volodymyr Zelensky de stopper le conflit."
     ],
     "centre": [
-      "Steve Witkoff mène une tournée diplomatique incluant des discussions avec Volodymyr Zelensky en Norvège et une future rencontre avec Vladimir Poutine.",
-      "Donald Trump s'impatiente face à Kiev, estimant avoir beaucoup donné à l'Ukraine sans contrepartie et réclamant un accord rapide avec Moscou.",
-      "Ouest-France rapporte que ces pressions diplomatiques coïncident avec de nouveaux bombardements russes meurtriers sur la région de Kiev."
+      "Steve Witkoff a mené des discussions jugées constructives avec Volodymyr Zelensky en Norvège avant de s'entretenir avec Vladimir Poutine en Russie.",
+      "Vladimir Poutine a officialisé la libération de Stephen Hubbard au cours de sa rencontre avec l'envoyé américain.",
+      "Donald Trump a exprimé son impatience vis-à-vis de l'aide fournie à l'Ukraine et exige la conclusion rapide d'un accord avec Moscou."
     ],
     "droite": [
-      "Steve Witkoff qualifie de « très productives » ses discussions avec Volodymyr Zelensky avant sa rencontre prévue avec Vladimir Poutine.",
-      "Donald Trump a durci le ton en déclarant qu'il « veut que l'Ukraine conclue un accord » avec la Russie pour mettre fin au conflit.",
-      "Europe 1 précise que le président américain accuse l'Ukraine de faire obstacle à la paix tout en évoquant la libération prochaine d'un citoyen américain détenu en Russie."
+      "Les émissaires de Donald Trump ont mené des pourparlers jugés très productifs avec Volodymyr Zelensky avant de rencontrer Vladimir Poutine.",
+      "Donald Trump a durci ses exigences envers Kiev en déclarant vouloir que l'Ukraine conclue un accord avec la Russie.",
+      "Le président américain a manifesté sa fermeté face à Volodymyr Zelensky pour obtenir la fin rapide des hostilités."
     ]
   },
   "differences": [
-    "La gauche insiste sur la vulnérabilité de Volodymyr Zelensky face à une Maison-Blanche qu'elle juge de plus en plus alignée sur les positions de Moscou.",
-    "Le centre adopte un format factuel et direct, couplant les pressions politiques de Donald Trump aux réalités des bombardements sur le terrain ukrainien.",
-    "La droite met en avant l'activisme diplomatique des émissaires de Washington et relaie fermement les exigences de fermeté formulées par Donald Trump envers Kiev."
+    "La gauche insiste en direct sur la pression accrue de la Maison-Blanche et le doute persistant de Volodymyr Zelensky face aux États-Unis.",
+    "Le centre documente l'agenda diplomatique complet de Steve Witkoff entre Oslo et Saint-Pétersbourg, couplé à la libération de Stephen Hubbard.",
+    "La droite focalise ses reportages sur le durcissement du ton de Donald Trump et la productivité des discussions diplomatiques menées avec Kiev."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 10
+  "summarizedArticleCount": 12
 }
