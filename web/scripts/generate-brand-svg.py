@@ -2,8 +2,7 @@
 """Generate the Prisme brand SVG assets from the Inter variable font.
 
 Outputs (web/src/assets/brand/):
-  prisme-wordmark-nav.svg      wordmark, tracking 0.08em, opsz 14  (small contexts)
-  prisme-wordmark-display.svg  wordmark, tracking 0.04em, opsz 32  (large contexts)
+  prisme-wordmark-nav.svg      wordmark, tracking 0.08em, opsz 14  (the unique wordmark)
   prisme-mark.svg              skewed P (+12°, the wordmark angle), opsz 14 (favicon, app icons)
 
 Every letterform is the exact Inter glyph outline (quadratic-free, the source
@@ -43,13 +42,12 @@ UPM = 2000  # Fraunces
 # Horizontal displacement only, cubic in the anti-diagonal coordinate
 # t = u + v - 1 (t = -1 at the glyph's top-left, +1 at its bottom-right):
 #   dx = cap * (t * (1 - sharp) + sharp * t^3)
-# cap 0 = straight glyphs (no warp). Applied to nav, display and mark.
+# cap 0 = straight glyphs (no warp). Applied to nav and mark.
 PINCH_SHARP = 2.0
 PINCH_SHARP_NAV = 1.0  # softer: at 16px a strong cubic bends the stems into
                        # an S that reads as a scaling artefact; straight
                        # stems keep the small-size render crisp
 PINCH_CAP_NAV = 400.0
-PINCH_CAP_DISPLAY = 400.0
 PINCH_CAP_MARK = 400.0
 
 LETTERS = "PRISME"
@@ -138,7 +136,6 @@ def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     assets = {
         "prisme-wordmark-nav.svg": build(LETTERS, 0.0, 14, pinch=(PINCH_CAP_NAV, PINCH_SHARP_NAV)),
-        "prisme-wordmark-display.svg": build(LETTERS, 0.0, 32, pinch=(PINCH_CAP_DISPLAY, PINCH_SHARP)),
         # l'angle du P du wordmark, adopté au rendu réel
         "prisme-mark.svg": build("P", 0, 14, pinch=(PINCH_CAP_MARK, PINCH_SHARP)),
     }
