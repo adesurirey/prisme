@@ -6,6 +6,18 @@
   "storyDay": "2026-10-21",
   "articles": [
     {
+      "id": "8edf183a288f",
+      "outletId": "le-figaro",
+      "headline": "Arnaques, annonces frauduleuses… Booking visé par une enquête de la Commission européenne",
+      "url": "https://www.lefigaro.fr/conso/arnaques-annonces-frauduleuses-booking-vise-par-une-enquete-de-la-commission-europeenne-20261022",
+      "publishedAt": "2026-10-22T04:38:37.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/22/e86af259e89a570a0edaa478d10000fb86036b74e94283287d16e8594308f6de.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "9134ebe5f45c",
       "outletId": "courrier-international",
       "headline": "Le site de réservation d’hébergements Booking.com visé par une enquête de la Commission européenne",
@@ -54,18 +66,23 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La Commission européenne a enclenché une procédure visant la plateforme Booking pour évaluer son dispositif de protection contre les annonces frauduleuses.",
-      "L'exécutif européen exige que l'entreprise démontre l'efficacité de ses actions face aux arnaques en ligne et aux escroqueries."
+      "La Commission européenne lance une procédure contre la plateforme Booking pour contrer les escroqueries et les annonces mensongères.",
+      "Le Monde rappelle que les usagers européens doivent pouvoir planifier leurs séjours en toute sécurité sans redouter de supercherie."
     ],
     "centre": [
-      "Bruxelles cible la plateforme de réservation Booking au moyen d'une enquête officielle concernant les annonces trompeuses.",
-      "L'autorité européenne entend s'assurer que le site met en œuvre des mesures adéquates pour contrer les faux appartements et les tentatives de hameçonnage."
+      "Bruxelles initie une action formelle visant le site Booking.com afin de s'assurer de l'efficacité de ses dispositifs de lutte contre la fraude.",
+      "L'exécutif européen réagit à l'accumulation de signalements concernant de faux logements, des propositions trompeuses et des attaques par hameçonnage."
+    ],
+    "droite": [
+      "Le portail de réservation Booking fait l'objet d'investigations de la part de l'Union européenne.",
+      "Cette décision intervient après la réception de multiples signalements émanant d'utilisateurs victimes d'arnaques, d'annonces frauduleuses et de tentatives de phishing."
     ]
   },
   "differences": [
-    "Les médias de gauche adoptent un angle axé sur la régulation et la protection des consommateurs face aux dérives des plateformes marchandes.",
-    "Les médias du centre privilégient un traitement centré sur l'action de Bruxelles et la nature concrète des fraudes ciblées par la procédure."
+    "La gauche insiste sur la dimension de protection des consommateurs et le droit des citoyens à voyager sans fraude.",
+    "Le centre détaille la nature technique des infractions reprochées, notamment les faux appartements et les tentatives de hameçonnage.",
+    "La droite adopte un angle centré sur le volume de plaintes reçues par les institutions européennes concernant la sécurité des réservations."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 5
 }

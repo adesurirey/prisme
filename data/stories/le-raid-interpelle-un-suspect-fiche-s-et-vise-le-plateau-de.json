@@ -1,7 +1,7 @@
 {
   "id": "7bd950b7706a",
   "slug": "le-raid-interpelle-un-suspect-fiche-s-et-vise-le-plateau-de",
-  "title": "Le Raid interpelle un suspect fiché S et vise le plateau de Millevaches après l'incendie de la mairie de Limoges",
+  "title": "Le Raid interpelle un suspect fiché S après l'incendie de la mairie de Limoges et cible le plateau de Millevaches",
   "createdAt": "2026-10-22T04:01:20.020Z",
   "storyDay": "2026-10-21",
   "articles": [
@@ -17,6 +17,28 @@
       "section": "politics"
     },
     {
+      "id": "0a1d28cfc3c3",
+      "outletId": "lobs",
+      "headline": "Incendie de la mairie de Limoges : la mauvaise réputation d’Hodei Docampo Ciarra, l’activiste écologiste en garde à vue",
+      "url": "https://www.nouvelobs.com/justice/20261021.OBS119414/incendie-de-la-mairie-de-limoges-la-mauvaise-reputation-d-hodei-docampo-ciarra-l-activiste-ecologiste-en-garde-a-vue.html",
+      "publishedAt": "2026-10-21T21:41:48.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/10/21/0/0/4999/3333/0/0/60/0/1fc9afe_upload-1-4kyd13zr3ske-080-hl-ecabane-3342782.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "6770b7b0e9c1",
+      "outletId": "le-monde",
+      "headline": "Incendie de la mairie de Limoges : le principal suspect, un militant écologiste fiché « S », a grandi dans un milieu « communautaire » et « alternatif »",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/21/incendie-de-la-mairie-de-limoges-le-principal-suspect-un-militant-ecologiste-fiche-s-a-grandi-dans-un-milieu-communautaire-et-alternatif_6798301_3224.html",
+      "publishedAt": "2026-10-21T17:45:04.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/18/201/0/3543/1771/644/322/60/0/9bb6048_upload-1-jkeh3ahclncu-incendie-hotel-de-ville-limoges-17-octobre-thierry-laporte-pour-le-monde-6.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "b13d70081cc0",
       "outletId": "le-jdd",
       "headline": "Plateau de Millevaches : qu’est-ce que ce territoire accusé d’abriter des camps d'entraînement de l’ultragauche ?",
@@ -29,22 +51,31 @@
     }
   ],
   "topicId": "28b82ce43b07",
-  "section": "politics",
+  "section": "misc",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le suspect principal, Hodei Docampo Ciarra, a été interpellé à l'aube par le Raid pour l'incendie de la mairie de Limoges.",
+      "Cet activiste écologiste de trente-quatre ans possède un lourd passé judiciaire, ayant déjà été condamné pour des violences.",
+      "L'enquête se penche également sur son milieu familial, son père ayant été condamné pour des actes similaires contre la 5G.",
+      "Le Monde précise que le menuisier fiché S a grandi dans un environnement alternatif et communautaire."
+    ],
     "centre": [
-      "Le plateau de Millevaches fait l'objet d'une attention accrue de la part des autorités à la suite de l'incendie de l'hôtel de ville de Limoges.",
-      "L'attention se porte sur l'hypothèse de l'existence de structures qualifiées de camps d'entraînement d'ultragauche dans cette zone rurale."
+      "Le Raid a interpellé un suspect fiché S à la suite de l'incendie criminel de la mairie de Limoges.",
+      "L'enquête sur cet attentat présumé s'oriente vers le plateau de Millevaches, soupçonné d'abriter des camps de l'ultragauche.",
+      "David Lisnard a publiquement dénoncé la présence de structures terroristes d'ultragauche sur ce territoire rural."
     ],
     "droite": [
-      "David Lisnard a publiquement mis en cause le plateau de Millevaches en évoquant l'implantation de camps d'entraînement terroristes liés à l'ultragauche.",
-      "Ce territoire rural situé entre la Creuse, la Corrèze et la Haute-Vienne est régulièrement pointé du doigt pour l'accueil de militants radicaux."
+      "Le plateau de Millevaches est directement visé par les autorités après l'incendie de l'hôtel de ville de Limoges.",
+      "Ce territoire rural est régulièrement pointé du doigt pour abriter des militants radicaux d'ultragauche.",
+      "Le JDD rappelle que David Lisnard qualifie cette zone d'abriter des camps d'entraînement terroristes."
     ]
   },
   "differences": [
-    "Le centre contextualise l'intérêt des autorités pour le plateau de Millevaches comme une conséquence directe de l'incendie de la mairie de Limoges en s'interrogeant sur la réalité de ces implantations.",
-    "La droite relaie directement les déclarations accusatrices de David Lisnard qualifiant le secteur de base arrière pour des militants radicaux et des camps terroristes."
+    "La gauche se focalise sur le profil individuel, familial et judiciaire du suspect interpellé pour l'incendie sans reprendre les accusations de terrorisme.",
+    "Le centre articule l'interpellation du suspect avec la géographie politique du plateau de Millevaches et les déclarations sécuritaires.",
+    "La droite privilégie l'angle sécuritaire et territorial en mettant en avant l'existence supposée de camps d'entraînement radicaux sur le plateau de Millevaches."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 4
 }

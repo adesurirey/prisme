@@ -1,10 +1,32 @@
 {
   "id": "5ad9726a87f5",
   "slug": "la-russie-et-l-ukraine-se-disent-pretes-a-des-negociations",
-  "title": "La Russie et l'Ukraine se disent prêtes à des négociations tripartites avec les États-Unis",
+  "title": "La Russie et l'Ukraine se disent prêtes à mener des négociations tripartites avec les États-Unis",
   "createdAt": "2026-10-22T00:01:27.415Z",
   "storyDay": "2026-10-21",
   "articles": [
+    {
+      "id": "fe58786697fb",
+      "outletId": "la-croix",
+      "headline": "Guerre en Ukraine : attaques réciproques ; la fin de la conflit « proche » selon Trump",
+      "url": "https://www.la-croix.com/international/ukraine-russie-jour-1700-point-conflit-ukrainien-poutine-aujourdhui-20261022",
+      "publishedAt": "2026-10-22T04:50:07.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/22/2569228-degats-causes-par-une-frappe-de-drone-russe-sur-un.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "8b3d9ea2d7f4",
+      "outletId": "courrier-international",
+      "headline": "Ukraine : Poutine et Zelensky prêts à reprendre des négociations tripartites avec les États-Unis",
+      "url": "https://www.courrierinternational.com/article/geopolitique-ukraine-poutine-et-zelensky-prets-a-reprendre-des-negociations-tripartites-avec-les-etats-unis_280174",
+      "publishedAt": "2026-10-22T03:58:02.000Z",
+      "imageUrl": "https://focus.courrierinternational.com/2026/10/21/0/0/5051/3402/644/0/60/0/fba1c11_ftp-1-ntpjundi7l8j-afp-d3xr3g4.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "7e27a73b764b",
       "outletId": "le-monde",
@@ -56,20 +78,27 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La Russie envisage une reprise des discussions tripartites avec l'Ukraine et les Etats-Unis vers la mi-novembre, suggérant une date autour du 10 novembre par la voix de son conseiller diplomatique Iouri Ouchakov.",
-      "Le Kremlin a qualifié d'insuffisantes les propositions de paix présentées la veille à Oslo par Kiev et les Européens.",
-      "Volodymyr Zelensky a exprimé l'accord de l'Ukraine pour participer à ces pourparlers dès que possible."
+      "La Russie et l'Ukraine manifestent leur accord pour renouer des discussions trilatérales impliquant les Etats-Unis.",
+      "Le conseiller diplomatique du Kremlin évoque une reprise potentielle des échanges vers le 10 novembre.",
+      "Volodymyr Zelensky exprime son accord pour participer rapidement à cette table ronde diplomatique."
+    ],
+    "centre": [
+      "Vladimir Poutine et Volodymyr Zelensky se déclarent disposés à engager des pourparlers tripartites avec les Etats-Unis.",
+      "L'émissaire américain Steve Witkoff s'est rendu à Saint-Pétersbourg pour s'entretenir avec le président russe.",
+      "Donald Trump affirme que la conclusion de ce conflit armé est désormais très proche.",
+      "La reprise des discussions est envisagée par Moscou autour de la mi-novembre selon les sources diplomatiques."
     ],
     "droite": [
-      "Moscou a fait part de son intention de renouer le dialogue avec Kiev et Washington à l'issue d'une réunion organisée à Saint-Pétersbourg.",
-      "Le Kremlin et l'administration ukrainienne valident le principe de ces discussions trilatérales menées avec les Américains.",
-      "Donald Trump a estimé que la résolution du conflit ukrainien n'avait jamais été aussi proche."
+      "Le Kremlin et Kiev acceptent de se retrouver pour de prochaines discussions diplomatiques aux côtés des Américains.",
+      "Une réunion préparatoire s'est tenue à Saint-Pétersbourg avec l'émissaire américain Steve Witkoff.",
+      "Donald Trump estime que la fin des hostilités en Ukraine n'a jamais été aussi proche."
     ]
   },
   "differences": [
-    "Le camp gauche privilégie l'analyse des tractations diplomatiques en mentionnant les réserves russes formulées à Oslo et en précisant le calendrier avancé pour la mi-novembre.",
-    "Le camp droite met en avant le contexte des déclarations issues de la réunion de Saint-Pétersbourg et relaie de manière appuyée la déclaration optimiste de Donald Trump sur l'issue imminente du conflit."
+    "La gauche se concentre strictement sur l'annonce concrète de la reprise des discussions diplomatiques entre Kiev, Moscou et Washington en citant des échéances précises.",
+    "Le centre élargit le panorama en mentionnant la visite de l'émissaire américain Steve Witkoff à Saint-Pétersbourg et les déclarations optimistes de Donald Trump sur la fin du conflit.",
+    "La droite associe directement l'annonce des pourparlers trilatéraux aux propos de Donald Trump sur l'imminence de la paix, tout en rappelant la réunion préparatoire menée par le Kremlin."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 6
 }
