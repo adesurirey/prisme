@@ -23,19 +23,21 @@
  * gate's dedup ledger bounds every (Article, Story) pair to one check, so
  * the count is finite by construction (ADR-0012).
  *
- * Birth policy (ADR-0015): a Story is created only with at least two
- * Articles. An Article that matches nothing, whose Membership check is
- * refused or isolated-failed, or whose target is unknown or frozen stays
- * unassigned — written to no Story file, so the next build re-presents it
- * as fresh (the retry-ability the old split path destroyed: membership was
- * sticky, singletons never re-merge). A proposed Story reduced to its seed
- * alone is dropped before it can publish. A new Story proposed by the
- * Grouping model gets the seed guard (issue #36) first: across builds
- * against the most headline-similar live Stories, and within the build
- * against the other surviving seeds — so two same-event Articles proposed
- * as separate one-member Stories fold into one two-member Story instead of
- * both being dropped. A build-failing invariant (any created Story under
- * two Articles throws) keeps the policy true by construction.
+ * Birth policy (ADR-0015, amended by ADR-0027): a Story is created only
+ * with at least two Articles from at least two distinct Outlets (an
+ * Opinion piece counts, ADR-0011). An Article that matches nothing, whose
+ * Membership check is refused or isolated-failed, or whose target is
+ * unknown or frozen stays unassigned — written to no Story file, so the
+ * next build re-presents it as fresh (the retry-ability the old split path
+ * destroyed: membership was sticky, singletons never re-merge). A proposed
+ * Story reduced to its seed alone, or whose members are all one Outlet, is
+ * dropped before it can publish. A new Story proposed by the Grouping
+ * model gets the seed guard (issue #36) first: across builds against the
+ * most headline-similar live Stories, and within the build against the
+ * other surviving seeds — so two same-event Articles proposed as separate
+ * one-member Stories fold into one two-member Story instead of both being
+ * dropped. A build-failing invariant (any created Story under two Articles
+ * or two Outlets throws) keeps the policy true by construction.
  */
 import { readdir, readFile } from 'node:fs/promises';
 import type { Article, Section, Story, Topic } from '@prisme/domain';
@@ -127,6 +129,20 @@ function freshArticles(
   const known = new Set(existing.flatMap((s) => s.articles.map((a) => a.id)));
   return articles.filter(
     (a) => !known.has(a.id) && (parseInstant(a.publishedAt) ?? 0) > cutoff,
+  );
+}
+
+/** The birth minimum (ADR-0015, amended by ADR-0027): a Story is born only
+ * from at least two Articles from at least two distinct Outlets — an
+ * Opinion piece counts toward the birth like any Article (ADR-0011). The
+ * Grouping model never sees Outlet ids (ADR-0003), so the Outlet dimension
+ * lives here, not in the prompt: the drop pass and the build-failing
+ * invariant share this one rule. */
+export function meetsBirthMinimum(
+  articles: Pick<Article, 'outletId'>[],
+): boolean {
+  return (
+    articles.length >= 2 && new Set(articles.map((a) => a.outletId)).size >= 2
   );
 }
 
@@ -568,11 +584,12 @@ export async function groupStories(
     changedStories.add(story);
   };
 
-  // Note: a Story is never born from a single Article (ADR-0015) — newStory
-  // is only called for model-proposed keys, and the two-Article minimum is
-  // enforced by the drop pass and invariant below. Title and slug are
-  // deferred to the Title pass: the slug derives from the final title
-  // (ADR-0023), so a birth carries neither until the pass has answered.
+  // Note: a Story is never born from a single Article or a single Outlet's
+  // Articles (ADR-0015, ADR-0027) — newStory is only called for
+  // model-proposed keys, and the birth minimum is enforced by the drop pass
+  // and invariant below. Title and slug are deferred to the Title pass: the
+  // slug derives from the final title (ADR-0023), so a birth carries
+  // neither until the pass has answered.
   const newStory = (storyDay: string): Story => {
     const id = makeId();
     const story: Story = {
@@ -970,14 +987,17 @@ export async function groupStories(
         `⚠ Membership: ${gate.checksUsed} checks in one build is unusual — inspect the Grouping proposal for a combinatorial blowup (ADR-0012).`,
       );
 
-    // Stories below the two-Article birth minimum are dropped before they
-    // ever publish (ADR-0015): no Article claimed (never proposed), or only
-    // the seed joined (its members were refused). Their Articles are
-    // orphaned — written to no Story file, they retry next build. An
-    // existing Story may still grow from one Article to two: the minimum
-    // governs births, not merges.
+    // Stories below the birth minimum are dropped before they ever
+    // publish (ADR-0015, amended by ADR-0027): no Article claimed (never
+    // proposed), only the seed joined (its members were refused), or all
+    // members from one Outlet — the Grouping model never sees Outlet ids,
+    // so the Outlet dimension is enforced here. Their Articles are
+    // orphaned — written to no Story file, they retry each build until a
+    // second Outlet covers the event or they age out of the collection
+    // window. An existing Story may still grow from Articles of one
+    // Outlet: the minimum governs births, not merges.
     for (const story of keyStories.values()) {
-      if (story.articles.length < 2) {
+      if (!meetsBirthMinimum(story.articles)) {
         for (const a of story.articles)
           if (!orphans.includes(a.id)) orphans.push(a.id);
         stories.splice(stories.indexOf(story), 1);
@@ -990,17 +1010,18 @@ export async function groupStories(
     // Articles — every unassigned Article retries next build (ADR-0015).
     if (orphans.length > 0)
       console.log(
-        `Grouping: ${orphans.length} article(s) left unassigned — no Story is born from fewer than two Articles (ADR-0015); they retry next build.`,
+        `Grouping: ${orphans.length} article(s) left unassigned — no Story is born from fewer than two Articles or fewer than two Outlets (ADR-0015, ADR-0027); they retry next build.`,
       );
 
-    // Invariant tripwire (ADR-0015): a Story born this build always has at
-    // least two Articles. Unreachable while the drop pass above holds — its
-    // job is to fail loudly if a future refactor reintroduces singleton
-    // births, the corruption class no check caught in 2026-10.
+    // Invariant tripwire (ADR-0015, amended by ADR-0027): a Story born
+    // this build always has at least two Articles from at least two
+    // distinct Outlets. Unreachable while the drop pass above holds — its
+    // job is to fail loudly if a future refactor reintroduces singleton or
+    // single-Outlet births, the corruption class no check caught in 2026-10.
     for (const story of created) {
-      if (story.articles.length < 2)
+      if (!meetsBirthMinimum(story.articles))
         throw new Error(
-          `No-singleton policy violated (ADR-0015): Story ${story.id} was created with ${story.articles.length} Article(s).`,
+          `Birth minimum violated (ADR-0015, ADR-0027): Story ${story.id} was created with ${story.articles.length} Article(s) from ${new Set(story.articles.map((a) => a.outletId)).size} Outlet(s).`,
         );
     }
 
