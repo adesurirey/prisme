@@ -6,6 +6,17 @@
   "storyDay": "2026-10-21",
   "articles": [
     {
+      "id": "cf8fbc931b06",
+      "outletId": "bfmtv",
+      "headline": "Frappes en Ukraine: Volodymyr Zelensky estime que la Russie n'a pas \"changé d'attitude\" au lendemain d'une rencontre entre l'émissaire de Donald Trump et Vladimir Poutine",
+      "url": "https://www.bfmtv.com/international/europe/ukraine/frappes-en-ukraine-volodymyr-zelensky-estime-que-la-russie-n-a-pas-change-d-attitude-au-lendemain-d-une-rencontre-entre-l-emissaire-de-donald-trump-et-vladimir-poutine_AD-202610220456.html",
+      "publishedAt": "2026-10-22T09:59:24.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/CEvWbvE1_c6k4nx9cEU4ryBuyq4=/0x106:2048x1258/800x0/images/Volodymyr-Zelensky-2370154.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "27a373c7e3f0",
       "outletId": "liberation",
       "headline": "Des attaques entre Kyiv et Moscou font sept morts, au lendemain de pourparlers entre la Russie et les Etats-Unis",
@@ -78,7 +89,7 @@
       "url": "https://www.lefigaro.fr/flash-actu/la-russie-et-l-ukraine-pretes-a-de-prochaines-negociations-ensemble-avec-les-americains-20261021",
       "publishedAt": "2026-10-21T20:38:39.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/21/a705500c8685c42853ad2f5a86a711b1d59caecb87af4fdf3da5b0b6e02e8470.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -111,26 +122,25 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La Russie et l'Ukraine se disent prêtes à reprendre des négociations tripartites avec les États-Unis à la suite d'une rencontre à Saint-Pétersbourg entre l'émissaire américain Steve Witkoff et Vladimir Poutine.",
-      "Des attaques nocturnes ont touché douze régions ukrainiennes, faisant sept morts au total selon Libération et au moins deux morts et trente-quatre blessés selon Le Monde.",
-      "Volodymyr Zelensky affirme que ces frappes prouvent que la Russie n'a pas changé d'attitude et réclame une pression réelle incluant défense antiaérienne et sanctions."
+      "La Russie et l'Ukraine confirment leur accord pour relancer des discussions tripartites avec les États-Unis après des pourparlers à Saint-Pétersbourg.",
+      "Des frappes nocturnes menées conjointement par Kiev et Moscou font sept morts dans les deux camps.",
+      "Volodymyr Zelensky estime que les bombardements russes démontrent l'absence de changement dans l'attitude de Vladimir Poutine malgré la diplomatie américaine."
     ],
     "centre": [
-      "Vladimir Poutine et Volodymyr Zelensky sont disposés à renouer avec des discussions à trois aux côtés des États-Unis.",
-      "Cette annonce fait suite à l'entretien mené à Saint-Pétersbourg par l'émissaire américain Steve Witkoff avec le président russe.",
-      "Des frappes réciproques entre Kiev et Moscou se sont déroulées au même moment, tandis que Donald Trump estime que la fin du conflit est proche."
+      "Vladimir Poutine et Volodymyr Zelensky acceptent de participer à de nouvelles négociations tripartites en association avec les États-Unis.",
+      "Donald Trump juge que la fin du conflit ukrainien est désormais proche après l'implication de son émissaire Steve Witkoff.",
+      "Malgré les avancées diplomatiques, l'Ukraine subit des frappes aériennes nocturnes dans douze régions, faisant des victimes et des blessés."
     ],
     "droite": [
-      "Moscou et Kiev se déclarent prêts à engager de prochaines négociations tripartites avec les Américains.",
-      "Le conseiller diplomatique du Kremlin a confirmé cette disposition à la suite d'une réunion à Saint-Pétersbourg.",
-      "Donald Trump affirme que la fin de la guerre en Ukraine n'a jamais été aussi proche."
+      "Moscou et Kiev se disent prêts à mener des pourparlers communs sous l'égide des Américains.",
+      "Des attaques militaires réciproques surviennent quelques heures seulement après les discussions diplomatiques russo-américaines."
     ]
   },
   "differences": [
-    "Le camp gauche met principalement l'accent sur les bombardements nocturnes, les victimes civiles et les déclarations de Volodymyr Zelensky exigeant des sanctions renforcées, subordonnant l'ouverture diplomatique à la poursuite des hostilités.",
-    "Le camp centre adopte une couverture équilibrée en associant l'annonce des pourparlers tripartites et l'optimisme affiché par Donald Trump aux réalités immédiates des attaques réciproques sur le terrain.",
-    "Le camp droite focalise son traitement sur la perspective diplomatique des négociations à trois et sur la déclaration de Donald Trump qualifiant la fin du conflit de imminente."
+    "Le camp gauche insiste lourdement sur le bilan humain des attaques nocturnes et sur le scepticisme de Volodymyr Zelensky face aux intentions réelles de Moscou.",
+    "Le camp centre adopte une approche équilibrée en combinant l'annonce des négociations tripartites, les déclarations optimistes de Donald Trump et la réalité des frappes sur le terrain.",
+    "Le camp droite privilégie un résumé concis des pourparlers diplomatiques et des attaques immédiates sans s'attarder sur les détails des bilans humains."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 9
+  "summarizedArticleCount": 10
 }
