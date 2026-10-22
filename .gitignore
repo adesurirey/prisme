@@ -14,3 +14,9 @@ dist/
 # Benchmark pairs (headline+teaser) stay local for the same reason (issue #4):
 # only the labels file, docs/research/decision-model-labels.json, is committed.
 .benchmark/
+
+# Private teaser cache (ADR-0027, amending ADR-0003): Outlet-written teaser
+# text is never committed — the file is round-tripped through the Actions
+# cache instead. Gitignored from its first commit, alongside the code that
+# writes it.
+.cache/

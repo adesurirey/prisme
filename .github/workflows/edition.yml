@@ -51,6 +51,19 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      # Private teaser cache round-trip (ADR-0027, amending ADR-0003): the
+      # pipeline accumulates Outlet-written teaser text into .cache/teasers.json
+      # so multi-day Story re-Summaries keep their input quality after Articles
+      # rotate out of the feeds. The file is never committed (gitignored); the
+      # Actions cache carries it across hourly builds. The key is unique per
+      # run and restore-keys falls back to the newest previous cache.
+      - uses: actions/cache/restore@v4
+        with:
+          path: .cache/teasers.json
+          key: teasers-${{ github.run_id }}
+          restore-keys: |
+            teasers-
+
       # The pipeline tolerates failing feeds; a total failure aborts the build.
       # OPENROUTER_API_KEY drives Article classification (issue #4) and the
       # Membership check (issue #5); without it classification degrades to
@@ -62,6 +75,12 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .cache/teasers.json
+          key: teasers-${{ github.run_id }}
 
       - name: Commit data
         run: |
