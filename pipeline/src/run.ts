@@ -160,34 +160,38 @@ export async function runEdition(): Promise<Edition> {
   const liveIds = new Set(outcome.live.map((s) => s.id));
   const frontpage = updateFrontPageHistory(outcome.stories, kept, now);
 
-  // The Edition (ADR-0022, ADR-0026): every Story whose Ingestion window
-  // is open — founded less than 24 hours ago — ranked by the ADR-0009 key,
-  // uncapped, with a sharp exit at the window close. The old EDITION_SIZE
-  // cap was the Summaries budget leaking into visibility; the budget now
-  // gates only the Summaries calls below. A Story born right after
-  // midnight ranks in and gets everInEdition instead of being deleted
-  // unfrozen (issue #75). Live Stories keep updating and stay in the
-  // Edition; a Story whose window has closed freezes.
+  // The Edition (ADR-0027, superseding ADR-0022/0026's live pool): two
+  // rolling windows over ALL Stories — frozen ones included — where a
+  // Story is a member iff at least one of its Articles was published
+  // inside the window. « Aujourd'hui » (the last 24 hours) stays uncapped
+  // and keeps feeding the home; the Summaries budget below takes its
+  // top-20 in this ranked order. « 7 jours » (the last 7 days) is floored
+  // to Stories covered by ≥ 10 Outlets in the window. A Story leaves la
+  // Une by decay — no Outlet reporting it inside the window — never at a
+  // clock edge; overnight coverage is still on la Une in the morning.
   const outletById = new Map(outlets.map((o) => [o.id, o]));
   const ranked = assembleEdition(frontpage.stories, now);
 
   // Edition history (issue #75): `everInEdition` is sticky — set the moment
-  // a Story ranks into the Edition, so the flag survives its freezing. Like
+  // a Story ranks into either Edition window, so the flag survives its
+  // freezing and the never-entered deletion rule below keeps working. Like
   // the front-page flags, only live Stories are touched; changed files are
   // rewritten.
   const editionHistory = updateEditionHistory(
     frontpage.stories,
-    new Set(ranked.map((s) => s.id)),
+    new Set([...ranked.day, ...ranked.week].map((s) => s.id)),
     now,
   );
-  // Re-map the ranked Edition onto the reconciled Stories by id: the flags
-  // above may replace flag-changed Stories with new objects, and the Summaries
-  // step below mutates the Edition Stories in place — they must be the same
-  // objects that get written to disk, or fresh Summaries would be lost.
+  // Re-map the ranked windows onto the reconciled Stories by id: the flags
+  // above may replace flag-changed Stories with new objects, and the
+  // Summaries step below mutates the Edition Stories in place — they must
+  // be the same objects that get written to disk, or fresh Summaries
+  // would be lost.
   const reconciledById = new Map(editionHistory.stories.map((s) => [s.id, s]));
   const edition: Edition = {
     builtAt: now.toISOString(),
-    stories: ranked.map((s) => reconciledById.get(s.id) ?? s),
+    stories: ranked.day.map((s) => reconciledById.get(s.id) ?? s),
+    weekStories: ranked.week.map((s) => reconciledById.get(s.id) ?? s),
   };
   const changed = new Set([
     ...outcome.changed,
@@ -198,10 +202,11 @@ export async function runEdition(): Promise<Edition> {
   // Summaries & Differences (issue #7, ADR-0006, budgeted by ADR-0022):
   // one Flash-Lite call per Story that gained Articles since its last
   // Summaries run — unchanged Stories make zero calls — capped at the top
-  // SUMMARIES_BUDGET ranked Stories per build (the derivation lives with
-  // the constant in summarize.ts). Stories beyond the budget keep their
-  // existing summary, shown as-is, until a later build re-ranks them into
-  // the top-20. Nothing is hidden from readers for budget reasons.
+  // SUMMARIES_BUDGET ranked Stories per build, in the 24-hour window's
+  // ranked order (the derivation lives with the constant in
+  // summarize.ts). Stories beyond the budget keep their existing summary,
+  // shown as-is, until a later build re-ranks them into the top-20.
+  // Nothing is hidden from readers for budget reasons.
   const summaries = models.summaries;
   const summaryOutcome = await updateSummaries({
     stories: edition.stories,
@@ -222,9 +227,9 @@ export async function runEdition(): Promise<Edition> {
   const filesToWrite = changed.size;
   section('📰', 'Edition');
   console.log(
-    `${edition.stories.length} ranked stories (of ${liveIds.size} live) ` +
-      `from ${kept.length} articles; ${existing.length} on disk, ` +
-      `${filesToWrite} file(s) to write, ${summaryOutcome.calls} summaries call(s).`,
+    `${edition.stories.length} ranked stories in « Aujourd'hui » (of ${liveIds.size} live), ` +
+      `${edition.weekStories.length} in « 7 jours » — from ${kept.length} articles; ` +
+      `${existing.length} on disk, ${filesToWrite} file(s) to write, ${summaryOutcome.calls} summaries call(s).`,
   );
 
   // Per-outlet contribution grid (issue #35): an Outlet contributing zero
