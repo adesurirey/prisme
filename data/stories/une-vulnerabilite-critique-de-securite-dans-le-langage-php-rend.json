@@ -1,7 +1,7 @@
 {
   "id": "96e03af34e0f",
   "slug": "une-vulnerabilite-critique-de-securite-dans-le-langage-php-rend",
-  "title": "Une vulnérabilité critique dans le langage PHP paralyse de nombreux sites internet institutionnels et des millions de plateformes",
+  "title": "Une vulnérabilité critique dans le langage PHP paralyse de nombreux sites internet institutionnels",
   "createdAt": "2026-10-21T17:01:24.444Z",
   "storyDay": "2026-10-21",
   "articles": [
@@ -36,6 +36,17 @@
       "url": "https://www.nouvelobs.com/economie/20261021.OBS119415/meteo-france-prefectures-pourquoi-de-nombreux-sites-internet-etaient-inaccessibles-mercredi.html",
       "publishedAt": "2026-10-21T19:07:21.000Z",
       "imageUrl": "https://focus.nouvelobs.com/2026/08/31/0/5/4972/3315/0/0/60/0/4a8d554_upload-1-lzqjhuxyqajp-080-hl-rdoucelin-3005193.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "2a3bf9cfacd1",
+      "outletId": "lexpress",
+      "headline": "Cybersécurité : la France et d'autres pays mettent leurs sites gouvernementaux en maintenance après la découverte de failles par l'IA",
+      "url": "https://www.lexpress.fr/economie/high-tech/cybersecurite-la-france-et-dautres-pays-mettent-leurs-sites-gouvernementaux-en-maintenance-apres-la-RI5XYI2MCRAG5DBAW7KLZTBYYI/",
+      "publishedAt": "2026-10-21T18:59:08.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/Q7JSVHQAEVANNA636OJWKDQONY.jpg?auth=f86fc579d2033588ece2729c05483c4a2226a74611f381d86b295023ae4b95ff&smart=true&width=5184&height=3456",
       "frontPage": false,
       "kind": "news",
       "section": "science"
@@ -200,7 +211,7 @@
       "url": "https://www.lemonde.fr/pixels/article/2026/10/21/failles-php-pourquoi-de-nombreux-sites-ont-soudainement-ete-mis-en-maintenance_6798279_4408996.html",
       "publishedAt": "2026-10-21T15:03:12.000Z",
       "imageUrl": "https://img.lemde.fr/2026/01/22/250/0/3000/1500/644/322/60/0/a8c9242_upload-1-ecmwdmfbjpzu-fond-9.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -234,26 +245,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Deux vulnérabilités critiques dans le langage de programmation PHP ont entraîné la fermeture temporaire de millions de sites web dans le monde le mercredi 21 octobre.",
-      "En France, les plateformes gouvernementales et administratives, incluant les sites des préfectures, de la police et des impôts, ont été rendues inaccessibles à titre préventif.",
-      "Un correctif a été rapidement déployé pour faire face à cette menace d'envergure mondiale sur la cybersécurité."
+      "De multiples sites internet dans le monde ont été fermés temporairement le mercredi 21 octobre en raison de deux failles de sécurité majeures dans le langage de programmation PHP.",
+      "En France, des plateformes publiques et institutionnelles, telles que les préfectures, Météo-France et les services des impôts, sont devenues inaccessibles.",
+      "Les autorités ont ordonné la mise en maintenance préventive des sites exposés afin d'écarter tout risque d'attaque informatique."
     ],
     "centre": [
-      "Une faille de sécurité critique touchant le protocole PHP a provoqué une mise en maintenance d'urgence de nombreux sites internet à travers le globe le mercredi 21 octobre.",
-      "En France, l'incident a touché des services publics majeurs, tels que Météo-France, les impôts et les préfectures, conformément aux alertes émises par l'Anssi.",
-      "Les autorités américaines, à travers la NSA, ont recommandé une mise à jour immédiate pour parer à cette menace globale."
+      "Une vulnérabilité critique affectant le langage PHP a provoqué la mise hors ligne de nombreux sites gouvernementaux et institutionnels en France et à l'étranger.",
+      "L'Agence nationale de sécurité des systèmes informatiques (ANSSI) a demandé la mise en maintenance préventive des services exposés.",
+      "Des agences de sécurité internationales, à l'instar de l'agence américaine NSA, ont recommandé une mise à jour immédiate des systèmes."
     ],
     "droite": [
-      "Des failles critiques dans le langage PHP ont menacé près de 70% du web mondial et mis hors de service des milliers de sites institutionnels par précaution.",
-      "L'agence américaine NSA et le Centre national britannique de cybersécurité ont recommandé des mesures d'urgence pour parer à ces cyberattaques massives.",
-      "L'utilisation de l'intelligence artificielle a joué un rôle déterminant dans la détection de ces vulnérabilités et l'accélération des menaces, selon Europe 1."
+      "Deux failles critiques de sécurité découvertes dans le langage informatique PHP ont menacé jusqu'à 70 % des sites web mondiaux.",
+      "Des milliers de plateformes, incluant les préfectures, les ministères, les impôts et Météo-France, ont été débranchées en urgence sur demande de l'ANSSI.",
+      "Plusieurs articles soulignent que ces vulnérabilités ont été identifiées grâce à l'intelligence artificielle, illustrant de nouveaux défis pour la cybersécurité."
     ]
   },
   "differences": [
-    "La gauche insiste en premier lieu sur la perturbation concrète des services publics français et l'impact immédiat sur la vie quotidienne des citoyens, tout en soulignant la dimension planétaire de la menace informatique.",
-    "Le centre adopte une approche institutionnelle et factuelle en privilégiant les alertes émises par les agences de cybersécurité internationales et françaises, comme l'Anssi.",
-    "La droite dramatise l'événement en évoquant un « Internet débranché en urgence » et met en avant la menace géopolitique ainsi que le rôle de l'intelligence artificielle dans la détection des failles."
+    "La gauche met l'accent sur l'accès restreint des services publics pour le grand public tout en restant factuelle sur les correctifs.",
+    "Le centre privilégie une approche institutionnelle et internationale en insistant sur les consignes de sécurité émises par les agences étatiques.",
+    "La droite dramatise l'événement en évoquant un web mondial menacé à 70 % et met en avant le rôle de l'intelligence artificielle dans la détection des failles."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 20
+  "summarizedArticleCount": 21
 }

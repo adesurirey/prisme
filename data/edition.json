@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-22T02:01:21.061Z",
+  "builtAt": "2026-10-22T03:01:21.599Z",
   "stories": [
     {
       "id": "354828a1cd7f",
@@ -616,6 +616,276 @@
       "summarizedArticleCount": 31
     },
     {
+      "id": "96e03af34e0f",
+      "slug": "une-vulnerabilite-critique-de-securite-dans-le-langage-php-rend",
+      "title": "Une vulnérabilité critique dans le langage PHP paralyse de nombreux sites internet institutionnels",
+      "createdAt": "2026-10-21T17:01:24.444Z",
+      "storyDay": "2026-10-21",
+      "articles": [
+        {
+          "id": "de6744532411",
+          "outletId": "le-figaro",
+          "headline": "Qu’est-ce que PHP, ce langage informatique qui a fait vaciller une partie de l’Internet mondial ?",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/qu-est-ce-que-php-ce-langage-informatique-qui-a-fait-vaciller-une-partie-d-internet-20261021",
+          "publishedAt": "2026-10-21T20:22:16.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/21/6553024f28e166d7c811415679dc532a411f2ea80349d71dd34bcc8b13b53d28.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        },
+        {
+          "id": "61c4d7e76c0c",
+          "outletId": "le-figaro",
+          "headline": "Gouvernements paniqués, cyberattaques massives en préparation, implication d’OpenAI… Le jour où Internet a été débranché en urgence à cause du PHP",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/gouvernements-paniques-cyberattaques-massives-en-preparation-implication-d-openai-le-jour-ou-internet-a-ete-debranche-en-urgence-a-cause-du-php-20261021",
+          "publishedAt": "2026-10-21T20:22:14.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/21/2a99ff9ae45e95bd72555034915c1f5576d0274add8c5f5fed59a8d9b9ce3cc4.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        },
+        {
+          "id": "1352efa49d18",
+          "outletId": "lobs",
+          "headline": "Météo France, préfectures… Pourquoi de nombreux sites internet étaient inaccessibles mercredi ?",
+          "url": "https://www.nouvelobs.com/economie/20261021.OBS119415/meteo-france-prefectures-pourquoi-de-nombreux-sites-internet-etaient-inaccessibles-mercredi.html",
+          "publishedAt": "2026-10-21T19:07:21.000Z",
+          "imageUrl": "https://focus.nouvelobs.com/2026/08/31/0/5/4972/3315/0/0/60/0/4a8d554_upload-1-lzqjhuxyqajp-080-hl-rdoucelin-3005193.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "2a3bf9cfacd1",
+          "outletId": "lexpress",
+          "headline": "Cybersécurité : la France et d'autres pays mettent leurs sites gouvernementaux en maintenance après la découverte de failles par l'IA",
+          "url": "https://www.lexpress.fr/economie/high-tech/cybersecurite-la-france-et-dautres-pays-mettent-leurs-sites-gouvernementaux-en-maintenance-apres-la-RI5XYI2MCRAG5DBAW7KLZTBYYI/",
+          "publishedAt": "2026-10-21T18:59:08.000Z",
+          "imageUrl": "https://www.lexpress.fr/resizer/v2/Q7JSVHQAEVANNA636OJWKDQONY.jpg?auth=f86fc579d2033588ece2729c05483c4a2226a74611f381d86b295023ae4b95ff&smart=true&width=5184&height=3456",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "1ce264638602",
+          "outletId": "tf1-info",
+          "headline": "Faille majeure de sécurité : l'Internet mondial en partie stoppé",
+          "url": "https://www.tf1info.fr/international/videos/video-faille-majeure-de-securite-l-internet-mondial-en-partie-stoppe-88995-2471260.html",
+          "publishedAt": "2026-10-21T18:35:14.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/576/faille-majeure-de-securite-l-internet-mondial-en-partie-stoppe-10fc48-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "c62b0b4ffb54",
+          "outletId": "liberation",
+          "headline": "Qu’est-ce que le PHP, ce langage informatique qui fait tourner près de 70 % des sites web ?",
+          "url": "https://www.liberation.fr/economie/quest-ce-que-le-php-ce-langage-informatique-qui-fait-tourner-pres-de-70-des-sites-web-20261021_YGFN2LUS4VDNRCJVTIZXS27RCU/",
+          "publishedAt": "2026-10-21T18:32:44.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "c62d9cdb52d9",
+          "outletId": "europe-1",
+          "headline": "Préfectures françaises, services publics… Pourquoi des milliers de sites internet ont été mis hors ligne",
+          "url": "https://www.europe1.fr/technologies/prefectures-francaises-services-publics-pourquoi-des-milliers-de-sites-internet-ont-ete-mis-hors-ligne-1171338?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-21T18:07:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/20/043_dpa-pa_251216-99-940198_dpai_1_6ad907aa78ad6.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "742ebf3290f2",
+          "outletId": "cnews",
+          "headline": "Préfectures, impôts, Météo-France... Pourquoi des dizaines de sites sont-ils inaccessibles ce mercredi ?",
+          "url": "https://www.cnews.fr/vie-numerique/2026-10-21/prefectures-impots-meteo-france-pourquoi-des-dizaines-de-sites-sont-ils",
+          "publishedAt": "2026-10-21T18:06:00.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/capture_d_e_cran_2026-10-21_a_19.15.34_6ad8f3468371a.png?h=44581ea2&itok=5Psf-4Ny",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "ab9d8c24e8af",
+          "outletId": "bfmtv",
+          "headline": "Une partie d'internet mondial mise à l'arrêt",
+          "url": "https://www.bfmtv.com/economie/video-une-partie-d-internet-mondial-mise-a-l-arret_VN-202610210818.html",
+          "publishedAt": "2026-10-21T17:25:34.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/FwSUTUisnourrHTAV58MBvMSUcs=/0x0:1280x720/800x0/images/Une-partie-d-internet-mondial-mise-a-l-arret-2369719.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "e1fbd218518f",
+          "outletId": "la-croix",
+          "headline": "Failles PHP : des millions de sites menacés, les États-Unis recommandent une mise à jour immédiate",
+          "url": "https://www.la-croix.com/international/failles-php-des-millions-de-sites-menaces-les-etats-unis-recommandent-une-mise-a-jour-immediate-20261021",
+          "publishedAt": "2026-10-21T17:22:00.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/21/2568918-plusieurs-sites-utilisant-le-protocole-de-programm.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "392ba9d161b3",
+          "outletId": "humanite",
+          "headline": "Des centaines de millions de sites web menacés, des plateformes gouvernementales mises hors lignes… Tout comprendre aux failles informatiques liées au langage de programmation PHP",
+          "url": "https://www.humanite.fr/societe/hackers/des-centaines-de-millions-de-sites-web-menaces-des-plateformes-gouvernementales-mises-hors-lignes-tout-comprendre-aux-failles-informatiques-liees-au-langage-de-programmation-php",
+          "publishedAt": "2026-10-21T16:56:51.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/ite-en-carafe.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "98da991f6506",
+          "outletId": "le-figaro",
+          "headline": "Une partie de l’Internet mondial mise à l’arrêt après la découverte de failles «critiques» dans le langage informatique PHP",
+          "url": "https://www.lefigaro.fr/conjoncture/une-partie-de-l-internet-mondial-mise-a-l-arret-apres-la-decouverte-de-failles-critiques-dans-le-langage-informatique-php-20261021",
+          "publishedAt": "2026-10-21T16:50:28.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/21/8101671aedfb5cc41516fd2b1be271daee80f2e794d9a8e044ff8c33a45447a9.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        },
+        {
+          "id": "d50cc99c7b6f",
+          "outletId": "franceinfo",
+          "headline": "Préfectures, médias, impôts... De nombreux sites internet inaccessibles afin de corriger une faille de cybersécurité mondiale",
+          "url": "https://www.franceinfo.fr/internet/securite-sur-internet/prefectures-medias-impots-pourquoi-de-nombreux-sites-internet-sont-inaccessibles-mercredi-apres-midi_8247511.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-21T16:47:53.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/0bqFrv_Gt_aQCcZjk3YGJFwhwps/45x0:1593x871/432x243/filters:format(jpg)/2026/10/21/6ad8e109dd96e988535207.png",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "10a0818a971c",
+          "outletId": "huffpost",
+          "headline": "Météo-France, impôts, préfectures... Pourquoi de nombreux sites ne fonctionnent pas ce mercredi",
+          "url": "https://www.huffingtonpost.fr/france/article/meteo-france-impots-prefectures-pourquoi-de-nombreux-sites-ne-fonctionnent-pas-ce-mercredi_342870.html",
+          "publishedAt": "2026-10-21T16:33:46.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/21/0/150/1541/867/0/0/60/0/42f3c52_upload-1-tkwwisq7rhs9-capture-d-ecran-2026-10-21-181921.png",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "38c5fbd4f60d",
+          "outletId": "liberation",
+          "headline": "Préfectures, impôts, médias… Des dizaines de sites inaccessibles en raison d’une «vulnérabilité critique de sécurité» mondiale",
+          "url": "https://www.liberation.fr/economie/economie-numerique/cybersecurite-les-sites-internet-de-toutes-les-prefectures-inaccessibles-20261021_ZFTA5AJFYVHMPDBLUSANWEWUX4/",
+          "publishedAt": "2026-10-21T16:30:17.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "a785e8df5724",
+          "outletId": "bfmtv",
+          "headline": "Météo France, le site des impôts, des préfectures, certains médias... Ce que l'on sait de la faille internet qui met les sites en maintenance et panique les développeurs",
+          "url": "https://www.bfmtv.com/tech/cybersecurite/meteo-france-le-site-des-impots-des-prefectures-certains-medias-ce-que-l-on-sait-de-la-faille-internet-qui-met-les-sites-en-maintenance-et-panique-les-developpeurs_AN-202610210758.html",
+          "publishedAt": "2026-10-21T16:21:31.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/CvDYO5FM2PIXCTwQoL_gP8mRgXI=/2x2:1298x731/800x0/images/Une-personne-surfant-sur-Internet-photo-d-illustration-2369645.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "76ca8183e97b",
+          "outletId": "tf1-info",
+          "headline": "\"Vulnérabilité critique\" : Les sites internet des préfectures rendus inaccessibles par une faille de sécurité mondiale",
+          "url": "https://www.tf1info.fr/high-tech/vulnerabilite-critique-les-sites-internet-des-prefectures-rendus-inaccessibles-par-une-faille-de-securite-mondiale-2471249.html",
+          "publishedAt": "2026-10-21T16:09:17.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/529/prefecture-police-inaccessible-21-octobre-e49768-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "2d91495ddcf5",
+          "outletId": "lopinion",
+          "headline": "Cette double faille informatique qui met en danger jusqu'à 70 % des sites web mondiaux",
+          "url": "https://www.lopinion.fr/international/cette-double-faille-informatique-qui-met-en-danger-jusqua-70-des-sites-web-mondiaux",
+          "publishedAt": "2026-10-21T15:32:22.000Z",
+          "imageUrl": "https://beymedias.brightspotcdn.com/0f/0f/7e4900fa449581645edbe04a1b0e/pexels-sora-shimazaki-5935787.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "edc073e7b13c",
+          "outletId": "le-monde",
+          "headline": "Failles PHP : pourquoi de nombreux sites ont soudainement été mis « en maintenance",
+          "url": "https://www.lemonde.fr/pixels/article/2026/10/21/failles-php-pourquoi-de-nombreux-sites-ont-soudainement-ete-mis-en-maintenance_6798279_4408996.html",
+          "publishedAt": "2026-10-21T15:03:12.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/01/22/250/0/3000/1500/644/322/60/0/a8c9242_upload-1-ecmwdmfbjpzu-fond-9.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        },
+        {
+          "id": "30a0e921bffa",
+          "outletId": "20-minutes",
+          "headline": "Cybersécurité : Les sites de plusieurs préfectures inaccessibles après une alerte critique de l’Anssi",
+          "url": "https://www.20minutes.fr/high-tech/4256380-20261021-cybersecurite-sites-plusieurs-prefectures-inaccessibles-apres-alerte-critique-anssi?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-21T14:58:13.000Z",
+          "imageUrl": "https://img.20mn.fr/z-Pe3mVoS7qIMpNmvjKzFik/1200x768_vous-avez-contacte-la-police-ne-quittez-pas-vous-avez-contacte-la-police-ne-quittez-pas",
+          "frontPage": true,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        },
+        {
+          "id": "bd9ebd2fab87",
+          "outletId": "europe-1",
+          "headline": "Les sites internet de toutes les préfectures, dont la préfecture de police de Paris, inaccessibles",
+          "url": "https://www.europe1.fr/societe/les-sites-internet-de-toutes-les-prefectures-dont-la-prefecture-de-police-de-paris-inaccessibles-1170789?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-21T14:54:49.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/16/080_hl_ibenyoussef_3308260_1_6ad8d2beaf155.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "96e03af34e0f",
+      "section": "science",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "De multiples sites internet dans le monde ont été fermés temporairement le mercredi 21 octobre en raison de deux failles de sécurité majeures dans le langage de programmation PHP.",
+          "En France, des plateformes publiques et institutionnelles, telles que les préfectures, Météo-France et les services des impôts, sont devenues inaccessibles.",
+          "Les autorités ont ordonné la mise en maintenance préventive des sites exposés afin d'écarter tout risque d'attaque informatique."
+        ],
+        "centre": [
+          "Une vulnérabilité critique affectant le langage PHP a provoqué la mise hors ligne de nombreux sites gouvernementaux et institutionnels en France et à l'étranger.",
+          "L'Agence nationale de sécurité des systèmes informatiques (ANSSI) a demandé la mise en maintenance préventive des services exposés.",
+          "Des agences de sécurité internationales, à l'instar de l'agence américaine NSA, ont recommandé une mise à jour immédiate des systèmes."
+        ],
+        "droite": [
+          "Deux failles critiques de sécurité découvertes dans le langage informatique PHP ont menacé jusqu'à 70 % des sites web mondiaux.",
+          "Des milliers de plateformes, incluant les préfectures, les ministères, les impôts et Météo-France, ont été débranchées en urgence sur demande de l'ANSSI.",
+          "Plusieurs articles soulignent que ces vulnérabilités ont été identifiées grâce à l'intelligence artificielle, illustrant de nouveaux défis pour la cybersécurité."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur l'accès restreint des services publics pour le grand public tout en restant factuelle sur les correctifs.",
+        "Le centre privilégie une approche institutionnelle et internationale en insistant sur les consignes de sécurité émises par les agences étatiques.",
+        "La droite dramatise l'événement en évoquant un web mondial menacé à 70 % et met en avant le rôle de l'intelligence artificielle dans la détection des failles."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 21
+    },
+    {
       "id": "9c9efae40657",
       "slug": "le-taux-d-emprunt-de-la-france-a-dix-ans-franchit-la-barre-des",
       "title": "Le taux d'emprunt de la France à dix ans franchit le seuil des 5 pour cent, une première depuis 2002",
@@ -851,265 +1121,6 @@
       "summarizedArticleCount": 18
     },
     {
-      "id": "96e03af34e0f",
-      "slug": "une-vulnerabilite-critique-de-securite-dans-le-langage-php-rend",
-      "title": "Une vulnérabilité critique dans le langage PHP paralyse de nombreux sites internet institutionnels et des millions de plateformes",
-      "createdAt": "2026-10-21T17:01:24.444Z",
-      "storyDay": "2026-10-21",
-      "articles": [
-        {
-          "id": "de6744532411",
-          "outletId": "le-figaro",
-          "headline": "Qu’est-ce que PHP, ce langage informatique qui a fait vaciller une partie de l’Internet mondial ?",
-          "url": "https://www.lefigaro.fr/secteur/high-tech/qu-est-ce-que-php-ce-langage-informatique-qui-a-fait-vaciller-une-partie-d-internet-20261021",
-          "publishedAt": "2026-10-21T20:22:16.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/21/6553024f28e166d7c811415679dc532a411f2ea80349d71dd34bcc8b13b53d28.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "science",
-          "everFrontPage": true
-        },
-        {
-          "id": "61c4d7e76c0c",
-          "outletId": "le-figaro",
-          "headline": "Gouvernements paniqués, cyberattaques massives en préparation, implication d’OpenAI… Le jour où Internet a été débranché en urgence à cause du PHP",
-          "url": "https://www.lefigaro.fr/secteur/high-tech/gouvernements-paniques-cyberattaques-massives-en-preparation-implication-d-openai-le-jour-ou-internet-a-ete-debranche-en-urgence-a-cause-du-php-20261021",
-          "publishedAt": "2026-10-21T20:22:14.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/21/2a99ff9ae45e95bd72555034915c1f5576d0274add8c5f5fed59a8d9b9ce3cc4.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "science",
-          "everFrontPage": true
-        },
-        {
-          "id": "1352efa49d18",
-          "outletId": "lobs",
-          "headline": "Météo France, préfectures… Pourquoi de nombreux sites internet étaient inaccessibles mercredi ?",
-          "url": "https://www.nouvelobs.com/economie/20261021.OBS119415/meteo-france-prefectures-pourquoi-de-nombreux-sites-internet-etaient-inaccessibles-mercredi.html",
-          "publishedAt": "2026-10-21T19:07:21.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/08/31/0/5/4972/3315/0/0/60/0/4a8d554_upload-1-lzqjhuxyqajp-080-hl-rdoucelin-3005193.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "1ce264638602",
-          "outletId": "tf1-info",
-          "headline": "Faille majeure de sécurité : l'Internet mondial en partie stoppé",
-          "url": "https://www.tf1info.fr/international/videos/video-faille-majeure-de-securite-l-internet-mondial-en-partie-stoppe-88995-2471260.html",
-          "publishedAt": "2026-10-21T18:35:14.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/faille-majeure-de-securite-l-internet-mondial-en-partie-stoppe-10fc48-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "c62b0b4ffb54",
-          "outletId": "liberation",
-          "headline": "Qu’est-ce que le PHP, ce langage informatique qui fait tourner près de 70 % des sites web ?",
-          "url": "https://www.liberation.fr/economie/quest-ce-que-le-php-ce-langage-informatique-qui-fait-tourner-pres-de-70-des-sites-web-20261021_YGFN2LUS4VDNRCJVTIZXS27RCU/",
-          "publishedAt": "2026-10-21T18:32:44.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "c62d9cdb52d9",
-          "outletId": "europe-1",
-          "headline": "Préfectures françaises, services publics… Pourquoi des milliers de sites internet ont été mis hors ligne",
-          "url": "https://www.europe1.fr/technologies/prefectures-francaises-services-publics-pourquoi-des-milliers-de-sites-internet-ont-ete-mis-hors-ligne-1171338?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-21T18:07:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/20/043_dpa-pa_251216-99-940198_dpai_1_6ad907aa78ad6.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "742ebf3290f2",
-          "outletId": "cnews",
-          "headline": "Préfectures, impôts, Météo-France... Pourquoi des dizaines de sites sont-ils inaccessibles ce mercredi ?",
-          "url": "https://www.cnews.fr/vie-numerique/2026-10-21/prefectures-impots-meteo-france-pourquoi-des-dizaines-de-sites-sont-ils",
-          "publishedAt": "2026-10-21T18:06:00.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/capture_d_e_cran_2026-10-21_a_19.15.34_6ad8f3468371a.png?h=44581ea2&itok=5Psf-4Ny",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "ab9d8c24e8af",
-          "outletId": "bfmtv",
-          "headline": "Une partie d'internet mondial mise à l'arrêt",
-          "url": "https://www.bfmtv.com/economie/video-une-partie-d-internet-mondial-mise-a-l-arret_VN-202610210818.html",
-          "publishedAt": "2026-10-21T17:25:34.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/FwSUTUisnourrHTAV58MBvMSUcs=/0x0:1280x720/800x0/images/Une-partie-d-internet-mondial-mise-a-l-arret-2369719.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "e1fbd218518f",
-          "outletId": "la-croix",
-          "headline": "Failles PHP : des millions de sites menacés, les États-Unis recommandent une mise à jour immédiate",
-          "url": "https://www.la-croix.com/international/failles-php-des-millions-de-sites-menaces-les-etats-unis-recommandent-une-mise-a-jour-immediate-20261021",
-          "publishedAt": "2026-10-21T17:22:00.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/21/2568918-plusieurs-sites-utilisant-le-protocole-de-programm.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "392ba9d161b3",
-          "outletId": "humanite",
-          "headline": "Des centaines de millions de sites web menacés, des plateformes gouvernementales mises hors lignes… Tout comprendre aux failles informatiques liées au langage de programmation PHP",
-          "url": "https://www.humanite.fr/societe/hackers/des-centaines-de-millions-de-sites-web-menaces-des-plateformes-gouvernementales-mises-hors-lignes-tout-comprendre-aux-failles-informatiques-liees-au-langage-de-programmation-php",
-          "publishedAt": "2026-10-21T16:56:51.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/ite-en-carafe.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "98da991f6506",
-          "outletId": "le-figaro",
-          "headline": "Une partie de l’Internet mondial mise à l’arrêt après la découverte de failles «critiques» dans le langage informatique PHP",
-          "url": "https://www.lefigaro.fr/conjoncture/une-partie-de-l-internet-mondial-mise-a-l-arret-apres-la-decouverte-de-failles-critiques-dans-le-langage-informatique-php-20261021",
-          "publishedAt": "2026-10-21T16:50:28.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/21/8101671aedfb5cc41516fd2b1be271daee80f2e794d9a8e044ff8c33a45447a9.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science",
-          "everFrontPage": true
-        },
-        {
-          "id": "d50cc99c7b6f",
-          "outletId": "franceinfo",
-          "headline": "Préfectures, médias, impôts... De nombreux sites internet inaccessibles afin de corriger une faille de cybersécurité mondiale",
-          "url": "https://www.franceinfo.fr/internet/securite-sur-internet/prefectures-medias-impots-pourquoi-de-nombreux-sites-internet-sont-inaccessibles-mercredi-apres-midi_8247511.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-21T16:47:53.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/0bqFrv_Gt_aQCcZjk3YGJFwhwps/45x0:1593x871/432x243/filters:format(jpg)/2026/10/21/6ad8e109dd96e988535207.png",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "10a0818a971c",
-          "outletId": "huffpost",
-          "headline": "Météo-France, impôts, préfectures... Pourquoi de nombreux sites ne fonctionnent pas ce mercredi",
-          "url": "https://www.huffingtonpost.fr/france/article/meteo-france-impots-prefectures-pourquoi-de-nombreux-sites-ne-fonctionnent-pas-ce-mercredi_342870.html",
-          "publishedAt": "2026-10-21T16:33:46.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/21/0/150/1541/867/0/0/60/0/42f3c52_upload-1-tkwwisq7rhs9-capture-d-ecran-2026-10-21-181921.png",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "38c5fbd4f60d",
-          "outletId": "liberation",
-          "headline": "Préfectures, impôts, médias… Des dizaines de sites inaccessibles en raison d’une «vulnérabilité critique de sécurité» mondiale",
-          "url": "https://www.liberation.fr/economie/economie-numerique/cybersecurite-les-sites-internet-de-toutes-les-prefectures-inaccessibles-20261021_ZFTA5AJFYVHMPDBLUSANWEWUX4/",
-          "publishedAt": "2026-10-21T16:30:17.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "a785e8df5724",
-          "outletId": "bfmtv",
-          "headline": "Météo France, le site des impôts, des préfectures, certains médias... Ce que l'on sait de la faille internet qui met les sites en maintenance et panique les développeurs",
-          "url": "https://www.bfmtv.com/tech/cybersecurite/meteo-france-le-site-des-impots-des-prefectures-certains-medias-ce-que-l-on-sait-de-la-faille-internet-qui-met-les-sites-en-maintenance-et-panique-les-developpeurs_AN-202610210758.html",
-          "publishedAt": "2026-10-21T16:21:31.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/CvDYO5FM2PIXCTwQoL_gP8mRgXI=/2x2:1298x731/800x0/images/Une-personne-surfant-sur-Internet-photo-d-illustration-2369645.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "76ca8183e97b",
-          "outletId": "tf1-info",
-          "headline": "\"Vulnérabilité critique\" : Les sites internet des préfectures rendus inaccessibles par une faille de sécurité mondiale",
-          "url": "https://www.tf1info.fr/high-tech/vulnerabilite-critique-les-sites-internet-des-prefectures-rendus-inaccessibles-par-une-faille-de-securite-mondiale-2471249.html",
-          "publishedAt": "2026-10-21T16:09:17.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/529/prefecture-police-inaccessible-21-octobre-e49768-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "2d91495ddcf5",
-          "outletId": "lopinion",
-          "headline": "Cette double faille informatique qui met en danger jusqu'à 70 % des sites web mondiaux",
-          "url": "https://www.lopinion.fr/international/cette-double-faille-informatique-qui-met-en-danger-jusqua-70-des-sites-web-mondiaux",
-          "publishedAt": "2026-10-21T15:32:22.000Z",
-          "imageUrl": "https://beymedias.brightspotcdn.com/0f/0f/7e4900fa449581645edbe04a1b0e/pexels-sora-shimazaki-5935787.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "edc073e7b13c",
-          "outletId": "le-monde",
-          "headline": "Failles PHP : pourquoi de nombreux sites ont soudainement été mis « en maintenance",
-          "url": "https://www.lemonde.fr/pixels/article/2026/10/21/failles-php-pourquoi-de-nombreux-sites-ont-soudainement-ete-mis-en-maintenance_6798279_4408996.html",
-          "publishedAt": "2026-10-21T15:03:12.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/01/22/250/0/3000/1500/644/322/60/0/a8c9242_upload-1-ecmwdmfbjpzu-fond-9.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "science",
-          "everFrontPage": true
-        },
-        {
-          "id": "30a0e921bffa",
-          "outletId": "20-minutes",
-          "headline": "Cybersécurité : Les sites de plusieurs préfectures inaccessibles après une alerte critique de l’Anssi",
-          "url": "https://www.20minutes.fr/high-tech/4256380-20261021-cybersecurite-sites-plusieurs-prefectures-inaccessibles-apres-alerte-critique-anssi?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-21T14:58:13.000Z",
-          "imageUrl": "https://img.20mn.fr/z-Pe3mVoS7qIMpNmvjKzFik/1200x768_vous-avez-contacte-la-police-ne-quittez-pas-vous-avez-contacte-la-police-ne-quittez-pas",
-          "frontPage": true,
-          "kind": "news",
-          "section": "science",
-          "everFrontPage": true
-        },
-        {
-          "id": "bd9ebd2fab87",
-          "outletId": "europe-1",
-          "headline": "Les sites internet de toutes les préfectures, dont la préfecture de police de Paris, inaccessibles",
-          "url": "https://www.europe1.fr/societe/les-sites-internet-de-toutes-les-prefectures-dont-la-prefecture-de-police-de-paris-inaccessibles-1170789?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-21T14:54:49.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/16/080_hl_ibenyoussef_3308260_1_6ad8d2beaf155.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "96e03af34e0f",
-      "section": "science",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Deux vulnérabilités critiques dans le langage de programmation PHP ont entraîné la fermeture temporaire de millions de sites web dans le monde le mercredi 21 octobre.",
-          "En France, les plateformes gouvernementales et administratives, incluant les sites des préfectures, de la police et des impôts, ont été rendues inaccessibles à titre préventif.",
-          "Un correctif a été rapidement déployé pour faire face à cette menace d'envergure mondiale sur la cybersécurité."
-        ],
-        "centre": [
-          "Une faille de sécurité critique touchant le protocole PHP a provoqué une mise en maintenance d'urgence de nombreux sites internet à travers le globe le mercredi 21 octobre.",
-          "En France, l'incident a touché des services publics majeurs, tels que Météo-France, les impôts et les préfectures, conformément aux alertes émises par l'Anssi.",
-          "Les autorités américaines, à travers la NSA, ont recommandé une mise à jour immédiate pour parer à cette menace globale."
-        ],
-        "droite": [
-          "Des failles critiques dans le langage PHP ont menacé près de 70% du web mondial et mis hors de service des milliers de sites institutionnels par précaution.",
-          "L'agence américaine NSA et le Centre national britannique de cybersécurité ont recommandé des mesures d'urgence pour parer à ces cyberattaques massives.",
-          "L'utilisation de l'intelligence artificielle a joué un rôle déterminant dans la détection de ces vulnérabilités et l'accélération des menaces, selon Europe 1."
-        ]
-      },
-      "differences": [
-        "La gauche insiste en premier lieu sur la perturbation concrète des services publics français et l'impact immédiat sur la vie quotidienne des citoyens, tout en soulignant la dimension planétaire de la menace informatique.",
-        "Le centre adopte une approche institutionnelle et factuelle en privilégiant les alertes émises par les agences de cybersécurité internationales et françaises, comme l'Anssi.",
-        "La droite dramatise l'événement en évoquant un « Internet débranché en urgence » et met en avant la menace géopolitique ainsi que le rôle de l'intelligence artificielle dans la détection des failles."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 20
-    },
-    {
       "id": "73c160554bcc",
       "slug": "une-panne-nationale-touche-le-reseau-mobile-de-l-operateur",
       "title": "Une panne nationale perturbe le réseau mobile de l'opérateur Orange et de sa filiale Sosh",
@@ -1191,7 +1202,7 @@
           "url": "https://www.ouest-france.fr/high-tech/orange/loperateur-orange-victime-dune-panne-de-reseau-nationale-048e3c3c-cd34-11f1-bf87-17eca79cb13c?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-10-21T11:49:34.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwOGQxMWQwMWJlYTVmOTVhMmJlZWFjYTQ3NWRiNjlmZDM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=75f2c61678a2cb0f07d929a14e57e6c08c8ab5c4536241a962a52b7619365dd9",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -1319,7 +1330,7 @@
     {
       "id": "0d0f404e2998",
       "slug": "laurent-nunez-annonce-que-plusieurs-dizaines-de-milliers-de",
-      "title": "Laurent Nuñez annonce la présence de plusieurs dizaines de milliers de contre-manifestants et un dispositif de sécurité renforcé pour le congrès du RN à Orléans",
+      "title": "Laurent Nuñez annonce des dizaines de milliers de contre-manifestants au congrès du RN à Orléans",
       "createdAt": "2026-10-21T17:01:24.444Z",
       "storyDay": "2026-10-21",
       "articles": [
@@ -1412,6 +1423,17 @@
           "everFrontPage": true
         },
         {
+          "id": "5180e9125109",
+          "outletId": "le-jdd",
+          "headline": "INFO JDD. Congrès du RN à Orléans : l’alerte du renseignement",
+          "url": "https://www.lejdd.fr/politique/info-jdd-congres-du-rn-a-orleans-lalerte-du-renseignement-186663",
+          "publishedAt": "2026-10-21T14:45:24.000Z",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
           "id": "8f8558a95320",
           "outletId": "huffpost",
           "headline": "Le congrès du RN menacé ? Ce que l’on sait des craintes liées à l’événement",
@@ -1439,28 +1461,28 @@
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Le ministre de l'Intérieur Laurent Nuñez anticipe la présence de « plusieurs dizaines de milliers » de contre-manifestants à Orléans pour protester contre le congrès du Rassemblement national.",
-          "Une manifestation déclarée est prévue dès 10h30 au départ du parvis de la cathédrale contre « le racisme, le fascisme et l'impérialisme », avec l'appel de partis et de syndicats.",
-          "Europe 1 précise que les opposants mobilisés incluent des syndicats comme la CGT et la CFDT, des partis politiques tels que le PS, Les Écologistes et le NPA, ainsi que des militants antifascistes."
+          "Le ministre de l'Intérieur Laurent Nuñez annonce la présence de plusieurs dizaines de milliers d'opposants à Orléans pour le congrès du Rassemblement national.",
+          "Une manifestation majeure contre le racisme et le fascisme est programmée samedi à 10 h 30 sur le parvis de la cathédrale.",
+          "Les autorités prévoient un dispositif de sécurité d'une ampleur considérable pour encadrer cet événement sous haute tension."
         ],
         "centre": [
-          "Laurent Nuñez a annoncé qu'« un dispositif de service d'ordre extrêmement conséquent » sera déployé à Orléans pour encadrer le congrès du Rassemblement national et les mobilisations d'opposants.",
-          "Le ministre de l'Intérieur confirme que « plusieurs dizaines de milliers » de contre-manifestants sont attendus dans la ville ce week-end.",
-          "L'événement se déroule sous haute tension alors que 5 000 à 10 000 participants sont attendus pour le rendez-vous politique du parti."
+          "Laurent Nuñez confirme que des dizaines de milliers de contre-manifestants se rendront à Orléans ce week-end lors du rassemblement du parti d'extrême droite.",
+          "Un service d'ordre extrêmement conséquent sera déployé pour sécuriser à la fois le congrès et les cortèges déclarés.",
+          "Les services de renseignement redoutent des risques d'affrontements entre opposants et participants."
         ],
         "droite": [
-          "Le ministre de l'Intérieur Laurent Nuñez a officialisé le déploiement d'un « dispositif de service d'ordre extrêmement conséquent » face à l'afflux attendu de contre-manifestants à Orléans.",
-          "Jusqu'à 40 000 opposants au Rassemblement national sont attendus ce week-end, dont environ 2 000 éléments radicaux selon des informations d'Europe 1.",
-          "Les autorités redoutent des débordements et maintiennent une haute surveillance autour du Zénith d'Orléans où Marine Le Pen doit être investie candidate à la présidentielle."
+          "Le ministère de l'Intérieur anticipe jusqu'à 40 000 opposants au congrès du Rassemblement national à Orléans, dont 2 000 individus radicaux.",
+          "Europe 1 et le Journal du Dimanche mettent en avant les alertes des services de renseignement concernant de potentiels heurts sur place.",
+          "Un dispositif de forces mobiles très important est mobilisé pour faire face aux tensions attendues ce week-end."
         ]
       },
       "differences": [
-        "La gauche met en avant le détail des organisations politiques et syndicales mobilisées ainsi que les slogans de la contestation.",
-        "Le centre adopte une approche strictement factuelle en se concentrant sur les déclarations chiffrées de Laurent Nuñez et les mesures d'ordre public.",
-        "La droite insiste particulièrement sur la menace sécuritaire en mentionnant la présence potentielle d'éléments radicaux et le contexte de l'investiture présidentielle de Marine Le Pen."
+        "La gauche se concentre strictement sur l'annonce chiffrée de la mobilisation et le parcours de la manifestation déclarée contre le racisme.",
+        "Le centre livre un compte rendu institutionnel centré sur les déclarations du ministre de l'Intérieur et la forte mobilisation des forces de l'ordre.",
+        "La droite se distingue en insistant sur les craintes sécuritaires des services de renseignement et en chiffrant la présence d'éléments radicaux."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 10
+      "summarizedArticleCount": 11
     },
     {
       "id": "c86528e798f2",
@@ -1608,151 +1630,157 @@
       "summarizedArticleCount": 10
     },
     {
-      "id": "f6d43f577712",
-      "slug": "l-onu-alerte-sur-un-rechauffement-climatique-mondial-qui",
-      "title": "L'ONU alerte sur un réchauffement climatique mondial qui se dirige vers 2,6 degrés d'ici à 2100",
-      "createdAt": "2026-10-21T06:01:20.671Z",
+      "id": "249ca71b8021",
+      "slug": "vladimir-poutine-annonce-la-liberation-de-l-americain-stephen",
+      "title": "Vladimir Poutine annonce la libération de l'Américain Stephen Hubbard et Donald Trump nie toute contrepartie",
+      "createdAt": "2026-10-21T13:01:25.745Z",
       "storyDay": "2026-10-21",
       "articles": [
         {
-          "id": "7f85e17cc3c0",
-          "outletId": "ouest-france",
-          "headline": "Vers un échauffement climatique à + 2,6 °C, l’Onu alerte et appelle à agir",
-          "url": "https://www.ouest-france.fr/environnement/climat/vers-un-echauffement-climatique-a-2-6-c-lonu-alerte-et-appelle-a-agir-967c5e64-cd46-11f1-bf87-17eca79cb13c?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-21T12:24:29.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwN2Y5OTIyZmNiZDY2ODdjZjhhZGRiNmZhOTZjZmY0ZmU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=0bd7310b08fa00f53901fc771d18730d35ed6fe46b8a42c9147e8f0ae38ae25f",
+          "id": "3e18ede12b97",
+          "outletId": "bfmtv",
+          "headline": "Steve Witkoff rencontre l'américain Stephen Hubbard, libéré par la Russie",
+          "url": "https://www.bfmtv.com/international/asie/russie/video-steve-witkoff-rencontre-l-americain-stephen-hubbard-libere-par-la-russie_VN-202610210946.html",
+          "publishedAt": "2026-10-21T20:29:59.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/-t3mRuF2qBSzj1sdJ40zTj9oZYY=/0x0:1280x720/800x0/images/Steve-Witkoff-rencontre-l-americain-Stephen-Hubbard-libere-par-la-Russie-2369822.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "science",
-          "everFrontPage": true
+          "section": "world"
         },
         {
-          "id": "8edc91595e91",
+          "id": "d258c253b2d0",
+          "outletId": "bfmtv",
+          "headline": "Russie: qui est Stephen Hubbard, cet Américain libéré de prison après la demande de Donald Trump?",
+          "url": "https://www.bfmtv.com/international/asie/russie/video-russie-qui-est-stephen-hubbard-cet-americain-libere-de-prison-apres-la-demande-de-donald-trump_VN-202610210849.html",
+          "publishedAt": "2026-10-21T17:52:43.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/4MpE0YEJvI9XG_PPY3F5uF6kFZU=/0x0:1280x720/800x0/images/Russie-qui-est-Stephen-Hubbard-cet-Americain-libere-de-prison-apres-la-demande-de-Donald-Trump-2369744.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "96f659be12c3",
+          "outletId": "lexpress",
+          "headline": "Le cadeau de Vladimir Poutine à Donald Trump : la libération d’un détenu américain \"sans rien demander en retour\"",
+          "url": "https://www.lexpress.fr/monde/amerique/le-cadeau-de-vladimir-poutine-a-donald-trump-la-liberation-dun-detenu-americain-sans-rien-demander-I46IWXSNWZFMLB4FFHHSPMRRDQ/",
+          "publishedAt": "2026-10-21T17:23:38.000Z",
+          "imageUrl": "https://www.lexpress.fr/resizer/v2/TC45CXSY3JET3PHC67IEP3U4KM.JPG?auth=95a2f7922e71e3f3fe91c0b6b56070dd35803e4c954a4890f010067bb76952c4&smart=true&width=3133&height=2090",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "7b16facbdc13",
+          "outletId": "liberation",
+          "headline": "Libération d’un Américain détenu par la Russie : pour séduire Trump, Poutine fait le geste minimum",
+          "url": "https://www.liberation.fr/international/europe/liberation-dun-americain-detenu-par-la-russie-pour-seduire-trump-poutine-fait-le-geste-minimum-20261021_6JMA556GYRE3VN73TFBETP65XY/",
+          "publishedAt": "2026-10-21T17:21:20.000Z",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "world"
+        },
+        {
+          "id": "4085265ada4d",
+          "outletId": "la-croix",
+          "headline": "Entre Trump et Poutine, la logique du troc sur le dos de l’Ukraine",
+          "url": "https://www.la-croix.com/a-vif/entre-trump-et-poutine-la-logique-du-troc-sur-le-dos-de-l-ukraine-20261021",
+          "publishedAt": "2026-10-21T15:55:18.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2025/10/26/22385444-jean-christophe-ploquin-redacteur-en-chef.jpg",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "world"
+        },
+        {
+          "id": "95fd5c5a7298",
+          "outletId": "courrier-international",
+          "headline": "Moscou libère un prisonnier américain, Witkoff qualifie Poutine d’“humaniste”",
+          "url": "https://www.courrierinternational.com/article/diplomatie-moscou-libere-un-prisonnier-americain-witkoff-qualifie-poutine-d-humaniste_280108",
+          "publishedAt": "2026-10-21T14:47:09.000Z",
+          "imageUrl": "https://focus.courrierinternational.com/2026/10/21/0/0/3294/2196/644/0/60/0/784be52_ftp-1-8iczj4g01koq-afp-d3xw6g3.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "1e9ade86946e",
           "outletId": "le-parisien",
-          "headline": "« Un échec historique » : le monde vers un réchauffement de 2,6 °C, mais il est encore temps d’agir selon l’ONU",
-          "url": "https://www.leparisien.fr/environnement/climat/un-echec-historique-le-monde-vers-un-rechauffement-de-26-c-mais-il-est-encore-temps-dagir-selon-lonu-21-10-2026-LM5NCMWPXFCMRBJYZTIHDYOVWY.php",
-          "publishedAt": "2026-10-21T12:01:26.534Z",
+          "headline": "L’Américain Stephen Hubbard détenu en Russie depuis quatre ans libéré, Donald Trump nie toute « contrepartie »",
+          "url": "https://www.leparisien.fr/international/etats-unis/lamericain-stephen-hubbard-detenu-en-russie-depuis-quatre-ans-libere-donald-trump-nie-toute-contrepartie-21-10-2026-2KVAROI6ENGYNPOAFAHBUSBTYM.php",
+          "publishedAt": "2026-10-21T14:01:24.270Z",
           "frontPage": false,
           "datedAtCollection": true,
           "kind": "news",
-          "section": "science"
+          "section": "world"
         },
         {
-          "id": "9b33e56ef811",
+          "id": "fb35faaeed10",
           "outletId": "europe-1",
-          "headline": "Climat : le monde vers un réchauffement de 2,6°C, mais il est encore temps d'agir, selon l'ONU",
-          "url": "https://www.europe1.fr/environnement/climat-le-monde-vers-un-rechauffement-de-26degc-mais-il-est-encore-temps-dagir-selon-lonu-1170129?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-21T10:25:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/12/000_d3hq4nq_1_1_6ad89653a7c4f.jpg",
+          "headline": "La Russie libère l'Américain Stephen Hubbard, Donald Trump nie toute «contrepartie»",
+          "url": "https://www.europe1.fr/international/la-russie-libere-lamericain-stephen-hubbard-donald-trump-nie-toute-contrepartie-1170561?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-21T13:36:39.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/15/000_d3xh8g3_1_6ad8bf9a4beb9.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "science"
+          "section": "world"
         },
         {
-          "id": "7cc78d2f0fac",
-          "outletId": "humanite",
-          "headline": "Réchauffement climatique : vers + 2,6 °C d’ici à 2100, l’ONU appelle à agir vite pour éviter le pire",
-          "url": "https://www.humanite.fr/environnement/climat/rechauffement-climatique-vers-26-c-dici-a-2100-lonu-appelle-a-agir-vite-pour-eviter-le-pire",
-          "publishedAt": "2026-10-21T08:57:15.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/rechauffement-climatique-edited.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "b552a1f9d3f3",
-          "outletId": "huffpost",
-          "headline": "Le réchauffement climatique en passe d’être encore plus élevé que prévu, alerte l’ONU",
-          "url": "https://www.huffingtonpost.fr/environnement/article/le-rechauffement-climatique-en-passe-d-etre-encore-plus-eleve-que-prevu-alerte-l-onu_342674.html",
-          "publishedAt": "2026-10-21T05:44:23.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/21/461/0/6000/3375/0/0/60/0/9930908_upload-1-20mn1ywxvdmc-pexels-lebele-19158485.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "47b874ddd60a",
-          "outletId": "la-croix",
-          "headline": "Climat : le monde vers un réchauffement de 2,6 °C selon l’ONU",
-          "url": "https://www.la-croix.com/planete/climat-le-monde-vers-un-rechauffement-de-26-c-selon-l-onu-20261021",
-          "publishedAt": "2026-10-21T05:18:46.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/21/2568100-l-onu-alerte-sur-une-nouvelle-projection-a-26c-a-l.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "ce4138c8d380",
-          "outletId": "franceinfo",
-          "headline": "Le monde se dirige vers un réchauffement de 2,6°C d'ici à 2100, à cause de politiques climatiques \"dangereusement insuffisantes\", alerte l'ONU",
-          "url": "https://www.franceinfo.fr/environnement/crise-climatique/le-monde-se-dirige-vers-un-rechauffement-de-2-6-c-d-ici-a-2100-a-cause-de-politiques-climatiques-dangereusement-insuffisantes-alerte-l-onu_8246770.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-21T05:17:05.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/qcfgCwZfUV_D4bb08-st2P01RDc/0x60:5902x3380/432x243/filters:format(jpg)/2026/10/21/6ad84acc817f6151963706.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "08c899c582f5",
-          "outletId": "rfi",
-          "headline": "L’ONU acte «le dépassement inévitable» d’1,5°C de réchauffement, après des «décennies d’insuffisance climatique»",
-          "url": "https://www.rfi.fr/fr/environnement/20261021-l-onu-acte-le-d%C3%A9passement-in%C3%A9vitable-d-1-5%C2%B0c-de-r%C3%A9chauffement-apr%C3%A8s-des-d%C3%A9cennies-d-insuffisance-climatique",
-          "publishedAt": "2026-10-21T05:16:47.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/2817ebdc-d6ed-11f0-9ae8-005056bf30b7/w:1024/p:16x9/keep.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "a3db83fbc9c8",
+          "id": "db5db1ef5c75",
           "outletId": "liberation",
-          "headline": "Climat : la fenêtre pour rester sous 1,5 °C de réchauffement est officiellement fermée selon l’ONU… Mais elle pourrait se rouvrir",
-          "url": "https://www.liberation.fr/environnement/climat/climat-la-fenetre-pour-rester-sous-15-c-de-rechauffement-est-officiellement-fermee-selon-lonu-mais-elle-pourrait-se-rouvrir-20261021_43SHU6NRYBAWHDKSMNW5RG3JHE/",
-          "publishedAt": "2026-10-21T05:05:00.000Z",
+          "headline": "Stephen Hubbard, un Américain détenu depuis 2022 en Russie, a été libéré",
+          "url": "https://www.liberation.fr/international/europe/vladimir-poutine-annonce-que-lamericain-stephen-hubbard-va-etre-libere-des-geoles-russes-20261021_VQWTM77I4BGMTDN5HBAMCSML2E/",
+          "publishedAt": "2026-10-21T13:01:22.000Z",
           "frontPage": false,
           "kind": "news",
-          "section": "science"
+          "section": "world"
         },
         {
-          "id": "d8720ea5e00e",
-          "outletId": "le-monde",
-          "headline": "L’action climatique est « dangereusement insuffisante », alertent les Nations unies face au dépassement annoncé du seuil de 1,5 °C de réchauffement",
-          "url": "https://www.lemonde.fr/planete/article/2026/10/21/l-action-climatique-est-dangereusement-insuffisante-alertent-les-nations-unies-face-au-depassement-annonce-du-seuil-de-1-5-c-de-rechauffement_6798118_3244.html",
-          "publishedAt": "2026-10-21T03:00:14.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/20/251/0/2997/1498/644/322/60/0/67fe086_upload-1-7dtagdec2qav-le-monde-ciren-030.jpg",
+          "id": "dad236019bcd",
+          "outletId": "franceinfo",
+          "headline": "Vladimir Poutine annonce la libération de l'Américain Stephen Hubbard, Donald Trump affirme qu'il a été relâché sans \"contrepartie\"",
+          "url": "https://www.franceinfo.fr/monde/russie/vladimir-poutine-annonce-la-liberation-de-l-americain-stephen-hubbard_8247160.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-21T10:55:07.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/Rc-hkbxJbIkhQSoWRhog9JVRUJQ/0x18:1024x594/432x243/filters:format(jpg)/2026/10/21/6ad89564701c4687990884.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "science",
-          "everFrontPage": true
+          "section": "world"
+        },
+        {
+          "id": "88ce4920aec7",
+          "outletId": "france-24",
+          "headline": "Alors qu'il rencontre Witkoff, Poutine annonce la libération de l'Américain Stephen Hubbard",
+          "url": "https://www.france24.com/fr/europe/20261021-steve-witkoff-l-%C3%A9missaire-am%C3%A9ricain-de-trump-en-russie-pour-des-pourparlers-avec-poutine",
+          "publishedAt": "2026-10-21T03:51:28.000Z",
+          "imageUrl": "https://s.france24.com/media/display/6eda9058-cd3f-11f1-84de-8bea73bbe173/w:1024/p:16x9/2026-10-21T102625Z-722811654-RC2M7OATXY8O-RTRMADP-3-UKRAINE-CRISIS-PUTIN-WITKOFF.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
         }
       ],
-      "topicId": "f6d43f577712",
-      "section": "science",
+      "topicId": "87509759590f",
+      "section": "world",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "L'ONU avertit que les engagements actuels mènent la planète vers une hausse des températures de 2,6 °C d'ici 2100.",
-          "Le secrétaire général Antonio Guterres qualifie la situation d'échec historique et appelle à des actions immédiates pour éviter le pire.",
-          "Libération souligne que le seuil de 1,5 °C est franchi mais que la trajectoire reste réversible avec des efforts colossaux de réduction des émissions."
+          "Vladimir Poutine a libéré ce mercredi l'Américain Stephen Hubbard, détenu en Russie depuis 2022 et condamné en 2024 à près de sept ans de prison.",
+          "Pour Libération et franceinfo, le président russe effectue ce geste minimal afin de séduire Donald Trump et d'afficher sa volonté de négocier sur le conflit sans faire de concession."
         ],
         "centre": [
-          "Le Programme des Nations unies pour l'environnement publie un rapport alarmant sur l'insuffisance des politiques climatiques mondiales.",
-          "Les experts estiment que le réchauffement atteindra 2,6 °C d'ici la fin du siècle au rythme actuel.",
-          "RFI précise que l'organisation acte un dépassement temporaire de la limite de 1,5 °C et évoque le recours controversé au captage de CO2."
+          "Vladimir Poutine a annoncé la libération de Stephen Hubbard, un enseignant américain de 75 ans arrêté en Ukraine en 2022 et accusé de mercenariat.",
+          "L'émissaire spécial américain Steve Witkoff a rencontré le dirigeant russe à Saint-Pétersbourg et a qualifié Poutine d'humaniste.",
+          "Donald Trump a nié toute contrepartie à cette libération, tandis que plusieurs médias soulignent une logique de troc et une manœuvre politique en vue des élections de mi-mandat."
         ],
         "droite": [
-          "L'ONU indique que les mesures globales actuelles sont largement insuffisantes pour contenir la hausse des températures sous la barre des 1,5 °C.",
-          "Le rapport annuel du PNUE projette une augmentation globale de 2,6 °C d'ici 2100, avec un risque d'atteindre 2,8 °C.",
-          "Europe 1 relaye les déclarations d'Antonio Guterres qualifiant la trajectoire actuelle de dangereusement éloignée des objectifs de l'accord de Paris."
+          "La Russie a libéré l'Américain Stephen Hubbard à la suite d'une démarche de Donald Trump.",
+          "Le président américain a rejeté l'existence d'une quelconque contrepartie dans ce dossier."
         ]
       },
       "differences": [
-        "La gauche met l'accent sur l'urgence absolue d'agir pour éviter le pire et insiste sur la possibilité théorique de rouvrir la fenêtre climatique sous 1,5 °C.",
-        "Le centre adopte un ton institutionnel en insistant sur les détails techniques du rapport du PNUE, tout en mentionnant les scénarios de dépassement et de géo-ingénierie.",
-        "La droite insiste principalement sur le constat d'échec des politiques climatiques et la gravité des projections chiffrées présentées par l'organisation internationale."
+        "La gauche analyse la libération comme une manœuvre tactique de Poutine pour amadouer Washington tout en maintenant sa position en Ukraine.",
+        "Le centre détaille les rencontres diplomatiques, qualifie le geste de troc politique et rapporte les qualifications élogieuses de l'émissaire américain envers Poutine.",
+        "La droite adopte un compte rendu factuel et synthétique centré sur l'annonce de la libération et le démenti de Donald Trump concernant d'éventuelles contreparties."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 10
+      "summarizedArticleCount": 11
     },
     {
       "id": "afbf5cdcc391",
@@ -2066,283 +2094,23 @@
       "summarizedArticleCount": 9
     },
     {
-      "id": "bb19bf0baf81",
-      "slug": "le-parquet-requiert-cinq-ans-d-ineligibilite-contre-le-depute",
-      "title": "Le parquet requiert une inéligibilité de cinq ans avec exécution immédiate contre le député LFI Sébastien Delogu au procès pour recel",
-      "createdAt": "2026-10-21T20:01:24.588Z",
-      "storyDay": "2026-10-21",
-      "articles": [
-        {
-          "id": "7988c22cb42d",
-          "outletId": "ouest-france",
-          "headline": "Une inéligibilité de cinq ans avec exécution immédiate requise contre le député LFI Sébastien Delogu",
-          "url": "https://www.ouest-france.fr/societe/justice/une-ineligibilite-de-cinq-ans-avec-execution-immediate-requise-contre-le-depute-lfi-sebastien-delogu-13e45ff2-cd7c-11f1-bb5f-3dc5c0feacca?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-21T22:03:02.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYjMyMzZiMzViMmVhZDVkYjI3YTk2YTcwZGUyNWJkZTY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=95c8070065686a323f4a8a48e5dea695774e6a9383a73d7397b95c0813114858",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "20dcb942cfb8",
-          "outletId": "le-parisien",
-          "headline": "Procès pour recel de vol : le député LFI de Marseille Sébastien Delogu menacé d’inéligibilité",
-          "url": "https://www.leparisien.fr/faits-divers/proces-pour-recel-de-vol-le-depute-lfi-de-marseille-sebastien-delogu-menace-dineligibilite-21-10-2026-ZIQC3WZSAJAZRLMCZOZDFAU7N4.php",
-          "publishedAt": "2026-10-21T20:01:24.588Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "9d774c1c8f51",
-          "outletId": "le-monde",
-          "headline": "Au tribunal de Marseille, les excuses maladroites du député Delogu menacé d’inéligibilité",
-          "url": "https://www.lemonde.fr/politique/article/2026/10/21/au-tribunal-de-marseille-les-excuses-maladroites-du-depute-delogu-menace-d-ineligibilite_6798309_823448.html",
-          "publishedAt": "2026-10-21T20:00:09.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/08/27/143/0/2645/1322/644/322/60/0/3c9e537_ftp-1-58lpszjjpjay-5929866-01-06.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "9b65354732c9",
-          "outletId": "le-figaro",
-          "headline": "Inéligibilité de cinq ans avec exécution immédiate requise contre le député LFI Sébastien Delogu",
-          "url": "https://www.lefigaro.fr/marseille/ineligibilite-de-cinq-ans-avec-execution-immediate-requise-contre-le-depute-lfi-sebastien-delogu-20261021",
-          "publishedAt": "2026-10-21T19:11:08.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/21/d7382d84f07f826db69221634a78b996bd930acba8b96fdddd0b7e4eda4775ce.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "913a026e1045",
-          "outletId": "la-croix",
-          "headline": "Procès de Sébastien Delogu : le parquet requiert une inéligibilité de cinq ans",
-          "url": "https://www.la-croix.com/politique/proces-de-sebastien-delogu-le-parquet-requiert-une-ineligibilite-de-cinq-ans-20261021",
-          "publishedAt": "2026-10-21T19:06:01.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/21/2569022-sebastien-delogu-arrive-au-tribunal-de-marseille-p.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "5333a3f449e8",
-          "outletId": "cnews",
-          "headline": "Sébastien Delogu : cinq ans d'inéligibilité avec exécution immédiate requis contre le député LFI, poursuivi pour diffusion de documents issus d’un vol",
-          "url": "https://www.cnews.fr/france/2026-10-21/sebastien-delogu-cinq-ans-dineligibilite-avec-execution-immediate-requis-contre",
-          "publishedAt": "2026-10-21T19:05:00.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_c6mh7de-taille1200_6ad712799542e.jpg?h=f692311e&itok=Jd6irk5R",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "2541f288d21c",
-          "outletId": "europe-1",
-          "headline": "Inéligibilité de cinq ans avec exécution immédiate requise contre le député LFI Sébastien Delogu",
-          "url": "https://www.europe1.fr/police-justice/ineligibilite-de-cinq-ans-avec-execution-immediate-requise-contre-le-depute-lfi-sebastien-delogu-1171380?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-21T18:58:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/20/000_d3gt4g3_1_6ad906bb0e2f9.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "4770eccaa230",
-          "outletId": "franceinfo",
-          "headline": "Cinq ans d'inéligibilité, avec exécution immédiate, requis contre le député LFI Sébastien Delogu pour recel et divulgation d'informations privées",
-          "url": "https://www.franceinfo.fr/faits-divers/justice-proces/cinq-ans-d-ineligibilite-requis-contre-le-depute-lfi-sebastien-delogu-pour-recel-et-divulgation-d-informations-privees_8247868.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-21T18:57:48.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/2bsX_icEST5BjNTvSfvkIQg6L3U/0x0:1024x576/432x243/filters:format(jpg)/2026/10/21/6ad909a96853f297007028.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "0ebb8a4899f2",
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le député LFI Sébastien Delogu a comparu devant le tribunal correctionnel de Marseille pour avoir diffusé des documents volés appartenant à une figure de la communauté juive.",
-          "Le parquet a requis contre le parlementaire deux ans de prison avec sursis ainsi qu'une peine d'inéligibilité de cinq ans assortie d'une exécution immédiate.",
-          "L'élu marseillais a présenté des excuses jugées maladroites, expliquant devant les juges avoir été mal conseillé lors de la diffusion de ces informations privées."
-        ],
-        "centre": [
-          "Sébastien Delogu, député LFI de Marseille, est jugé par le tribunal correctionnel pour recel et divulgation d'informations privées.",
-          "Le parquet a requis une peine de deux ans de prison avec sursis et une inéligibilité de cinq ans avec exécution immédiate.",
-          "Cette sanction, si elle était prononcée, mettrait immédiatement fin au mandat du parlementaire marseillais.",
-          "Durant l'audience, l'élu a fait valoir son droit au silence tout en formulant de simples excuses."
-        ],
-        "droite": [
-          "Le parquet a requis une inéligibilité de cinq ans avec exécution immédiate et deux ans de prison avec sursis à l'encontre du député LFI Sébastien Delogu.",
-          "L'élu comparaissait à Marseille pour avoir divulgué des documents privés volés à un chef d'entreprise au cours d'un conflit social.",
-          "Le parlementaire a choisi de faire valoir son droit au silence tout en présentant de brèves excuses pour les faits reprochés, sans détailler ses motivations passées."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur la nature des documents diffusés et qualifie les excuses formulées par le parlementaire de maladroites.",
-        "Le centre se concentre principalement sur la menace directe que fait peser la peine requise sur le maintien du mandat du député.",
-        "La droite met en avant le contexte conflictuel initial du vol des documents commis au préjudice d'un chef d'entreprise."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 8
-    },
-    {
-      "id": "249ca71b8021",
-      "slug": "vladimir-poutine-annonce-la-liberation-de-l-americain-stephen",
-      "title": "Vladimir Poutine annonce la libération de l'Américain Stephen Hubbard et Donald Trump nie toute contrepartie",
-      "createdAt": "2026-10-21T13:01:25.745Z",
-      "storyDay": "2026-10-21",
-      "articles": [
-        {
-          "id": "3e18ede12b97",
-          "outletId": "bfmtv",
-          "headline": "Steve Witkoff rencontre l'américain Stephen Hubbard, libéré par la Russie",
-          "url": "https://www.bfmtv.com/international/asie/russie/video-steve-witkoff-rencontre-l-americain-stephen-hubbard-libere-par-la-russie_VN-202610210946.html",
-          "publishedAt": "2026-10-21T20:29:59.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/-t3mRuF2qBSzj1sdJ40zTj9oZYY=/0x0:1280x720/800x0/images/Steve-Witkoff-rencontre-l-americain-Stephen-Hubbard-libere-par-la-Russie-2369822.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "d258c253b2d0",
-          "outletId": "bfmtv",
-          "headline": "Russie: qui est Stephen Hubbard, cet Américain libéré de prison après la demande de Donald Trump?",
-          "url": "https://www.bfmtv.com/international/asie/russie/video-russie-qui-est-stephen-hubbard-cet-americain-libere-de-prison-apres-la-demande-de-donald-trump_VN-202610210849.html",
-          "publishedAt": "2026-10-21T17:52:43.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/4MpE0YEJvI9XG_PPY3F5uF6kFZU=/0x0:1280x720/800x0/images/Russie-qui-est-Stephen-Hubbard-cet-Americain-libere-de-prison-apres-la-demande-de-Donald-Trump-2369744.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "7b16facbdc13",
-          "outletId": "liberation",
-          "headline": "Libération d’un Américain détenu par la Russie : pour séduire Trump, Poutine fait le geste minimum",
-          "url": "https://www.liberation.fr/international/europe/liberation-dun-americain-detenu-par-la-russie-pour-seduire-trump-poutine-fait-le-geste-minimum-20261021_6JMA556GYRE3VN73TFBETP65XY/",
-          "publishedAt": "2026-10-21T17:21:20.000Z",
-          "frontPage": false,
-          "kind": "opinion",
-          "section": "world"
-        },
-        {
-          "id": "4085265ada4d",
-          "outletId": "la-croix",
-          "headline": "Entre Trump et Poutine, la logique du troc sur le dos de l’Ukraine",
-          "url": "https://www.la-croix.com/a-vif/entre-trump-et-poutine-la-logique-du-troc-sur-le-dos-de-l-ukraine-20261021",
-          "publishedAt": "2026-10-21T15:55:18.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2025/10/26/22385444-jean-christophe-ploquin-redacteur-en-chef.jpg",
-          "frontPage": false,
-          "kind": "opinion",
-          "section": "world"
-        },
-        {
-          "id": "95fd5c5a7298",
-          "outletId": "courrier-international",
-          "headline": "Moscou libère un prisonnier américain, Witkoff qualifie Poutine d’“humaniste”",
-          "url": "https://www.courrierinternational.com/article/diplomatie-moscou-libere-un-prisonnier-americain-witkoff-qualifie-poutine-d-humaniste_280108",
-          "publishedAt": "2026-10-21T14:47:09.000Z",
-          "imageUrl": "https://focus.courrierinternational.com/2026/10/21/0/0/3294/2196/644/0/60/0/784be52_ftp-1-8iczj4g01koq-afp-d3xw6g3.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "1e9ade86946e",
-          "outletId": "le-parisien",
-          "headline": "L’Américain Stephen Hubbard détenu en Russie depuis quatre ans libéré, Donald Trump nie toute « contrepartie »",
-          "url": "https://www.leparisien.fr/international/etats-unis/lamericain-stephen-hubbard-detenu-en-russie-depuis-quatre-ans-libere-donald-trump-nie-toute-contrepartie-21-10-2026-2KVAROI6ENGYNPOAFAHBUSBTYM.php",
-          "publishedAt": "2026-10-21T14:01:24.270Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "fb35faaeed10",
-          "outletId": "europe-1",
-          "headline": "La Russie libère l'Américain Stephen Hubbard, Donald Trump nie toute «contrepartie»",
-          "url": "https://www.europe1.fr/international/la-russie-libere-lamericain-stephen-hubbard-donald-trump-nie-toute-contrepartie-1170561?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-21T13:36:39.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/15/000_d3xh8g3_1_6ad8bf9a4beb9.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "db5db1ef5c75",
-          "outletId": "liberation",
-          "headline": "Stephen Hubbard, un Américain détenu depuis 2022 en Russie, a été libéré",
-          "url": "https://www.liberation.fr/international/europe/vladimir-poutine-annonce-que-lamericain-stephen-hubbard-va-etre-libere-des-geoles-russes-20261021_VQWTM77I4BGMTDN5HBAMCSML2E/",
-          "publishedAt": "2026-10-21T13:01:22.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "dad236019bcd",
-          "outletId": "franceinfo",
-          "headline": "Vladimir Poutine annonce la libération de l'Américain Stephen Hubbard, Donald Trump affirme qu'il a été relâché sans \"contrepartie\"",
-          "url": "https://www.franceinfo.fr/monde/russie/vladimir-poutine-annonce-la-liberation-de-l-americain-stephen-hubbard_8247160.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-21T10:55:07.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/Rc-hkbxJbIkhQSoWRhog9JVRUJQ/0x18:1024x594/432x243/filters:format(jpg)/2026/10/21/6ad89564701c4687990884.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "88ce4920aec7",
-          "outletId": "france-24",
-          "headline": "Alors qu'il rencontre Witkoff, Poutine annonce la libération de l'Américain Stephen Hubbard",
-          "url": "https://www.france24.com/fr/europe/20261021-steve-witkoff-l-%C3%A9missaire-am%C3%A9ricain-de-trump-en-russie-pour-des-pourparlers-avec-poutine",
-          "publishedAt": "2026-10-21T03:51:28.000Z",
-          "imageUrl": "https://s.france24.com/media/display/6eda9058-cd3f-11f1-84de-8bea73bbe173/w:1024/p:16x9/2026-10-21T102625Z-722811654-RC2M7OATXY8O-RTRMADP-3-UKRAINE-CRISIS-PUTIN-WITKOFF.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "87509759590f",
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Vladimir Poutine a libéré ce mercredi l'Américain Stephen Hubbard, détenu depuis 2022 et condamné en 2024.",
-          "Pour Libération, le chef du Kremlin réalise ce geste minimum afin de séduire Donald Trump en s'affichant ouvertement disposé à négocier sur le conflit sans pour autant formuler la moindre concession.",
-          "L'émissaire Steve Witkoff a rencontré l'enseignant américain libéré lors de son déplacement."
-        ],
-        "centre": [
-          "Vladimir Poutine a annoncé la libération de Stephen Hubbard, un ressortissant américain incarcéré en Russie depuis 2022 et condamné à près de sept ans de prison pour des accusations contestées de mercenariat.",
-          "L'émissaire spécial Donald Trump a nié toute contrepartie dans cette affaire, tandis que son envoyé Steve Witkoff a qualifié le président russe d'humaniste lors d'une rencontre à Saint-Pétersbourg.",
-          "Plusieurs médias estiment que Moscou multiplie les gestes diplomatiques en direction de Donald Trump alors que celui-ci se trouve en difficulté politique à l'approche des élections de mi-mandat."
-        ],
-        "droite": [
-          "La Russie a procédé à la libération de l'Américain Stephen Hubbard.",
-          "Donald Trump a formellement nié l'existence d'une quelconque contrepartie à cette remise en liberté."
-        ]
-      },
-      "differences": [
-        "La gauche analyse cet événement à travers une tribune critique qui y voit une simple manœuvre tactique du Kremlin pour amadouer Washington sans avancer sur le fond du dossier ukrainien.",
-        "Le centre livre un récit factuel et détaillé des circonstances de la détention et des réactions officielles, tout en soulignant le contexte géopolitique et les enjeux électoraux américains.",
-        "La droite se limite strictement à une relation factuelle de la libération de Stephen Hubbard et du démenti de Donald Trump concernant une contrepartie."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 10
-    },
-    {
       "id": "01adf668e5e2",
       "slug": "la-cgt-appelle-a-generaliser-la-greve-a-partir-du-5-novembre-a",
-      "title": "La CGT appelle à généraliser la grève à partir du 5 novembre après la réunion à Matignon",
+      "title": "La CGT appelle à la grève générale à partir du 5 novembre après une réunion à Matignon",
       "createdAt": "2026-10-21T12:01:26.534Z",
       "storyDay": "2026-10-21",
       "articles": [
+        {
+          "id": "95b5cc106423",
+          "outletId": "bfmtv",
+          "headline": "Grève générale le 5 novembre : la France va s'embraser ? - 21/10",
+          "url": "https://www.bfmtv.com/replay-emissions/bfm-grand-soir/video-greve-generale-le-5-novembre-la-france-va-s-embraser-21-10_VN-202610210986.html",
+          "publishedAt": "2026-10-21T22:04:31.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/MPa-s0sbuaJEYJ9oL9LaPt9QTiQ=/0x0:1280x720/800x0/images/Greve-generale-le-5-novembre-la-France-va-s-embraser-21-10-2369852.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
         {
           "id": "61bf868e2600",
           "outletId": "lobs",
@@ -2472,27 +2240,154 @@
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Les cinq syndicats reçus à Matignon ont jugé la réunion décevante et sans réponse de l'exécutif face à leurs revendications.",
-          "La CGT a appelé à généraliser la grève à partir du 5 novembre à l'issue de cet entretien de plus de deux heures trente.",
-          "Le Monde rappelle que cette annonce intervient alors que Gérald Darmanin a fait état de 2 500 gardes à vue et de 174 incarcérations."
+          "Plusieurs syndicats lancent un appel à la grève générale fixée au 5 novembre à l'issue d'une réunion qualifiée de décevante à Matignon.",
+          "La CGT insiste sur la nécessité de généraliser la mobilisation syndicale pour franchir un nouveau cap.",
+          "Le Monde rappelle le contexte des manifestations du 17 octobre marquées par 2 500 gardes à vue et 174 incarcérations selon Gérald Darmanin."
         ],
         "centre": [
-          "Plusieurs médias confirment l'appel de la CGT à une grève générale le 5 novembre après la réunion intersyndicale à Matignon.",
-          "La préfecture de police de Paris avait interdit plus tôt dans la journée la manifestation des lycéens et étudiants."
+          "Maxime Switek aborde la question d'une possible embrasement de la France à l'occasion de la grève du 5 novembre sur BFMTV.",
+          "La CGT officialise son appel à la grève générale programmée pour le 5 novembre prochain en sortant des discussions gouvernementales."
         ],
         "droite": [
-          "Les syndicats sont ressortis déçus de leur rencontre à Matignon avec le Premier ministre, déplorant l'absence de mesures concrètes.",
-          "Sophie Binet a estimé qu'il fallait franchir un nouveau cap en affirmant que la grève doit prendre le relais à partir du 5 novembre.",
-          "Le Figaro associe ces annonces aux violences urbaines et rapporte les déclarations de Marine Le Pen sur le congrès du RN à Orléans."
+          "Sophie Binet déclare depuis Matignon que la grève doit prendre le relais à partir du 5 novembre.",
+          "Le Figaro souligne que l'État a interdit plusieurs manifestations et rassemblements étudiants dans différentes villes en raison des craintes de débordements."
         ]
       },
       "differences": [
-        "La gauche contextualise le mouvement social en insistant sur le bilan répressif des manifestations du 17 octobre et l'absence de réponses de l'exécutif.",
-        "Le centre livre un compte-rendu factuel et direct de l'appel syndical à la grève générale en l'associant aux restrictions préfectorales.",
-        "La droite insiste sur la radicalisation du mouvement en reliant l'appel à la grève aux violences urbaines et aux réactions politiques de l'opposition."
+        "La gauche met l'accent sur la déception issue de la réunion avec le gouvernement pour justifier la radicalisation du mouvement.",
+        "Le centre adopte un ton interrogatif et factuel sur l'impact potentiel de cette journée de grève nationale.",
+        "La droite centre son analyse sur la transition de la rue vers la grève et rappelle les interdictions de manifester décrétées par l'État face aux violences urbaines."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 11
+      "summarizedArticleCount": 12
+    },
+    {
+      "id": "bb19bf0baf81",
+      "slug": "le-parquet-requiert-cinq-ans-d-ineligibilite-contre-le-depute",
+      "title": "Le parquet requiert une inéligibilité de cinq ans avec exécution immédiate contre le député LFI Sébastien Delogu au procès pour recel",
+      "createdAt": "2026-10-21T20:01:24.588Z",
+      "storyDay": "2026-10-21",
+      "articles": [
+        {
+          "id": "7988c22cb42d",
+          "outletId": "ouest-france",
+          "headline": "Une inéligibilité de cinq ans avec exécution immédiate requise contre le député LFI Sébastien Delogu",
+          "url": "https://www.ouest-france.fr/societe/justice/une-ineligibilite-de-cinq-ans-avec-execution-immediate-requise-contre-le-depute-lfi-sebastien-delogu-13e45ff2-cd7c-11f1-bb5f-3dc5c0feacca?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-21T22:03:02.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYjMyMzZiMzViMmVhZDVkYjI3YTk2YTcwZGUyNWJkZTY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=95c8070065686a323f4a8a48e5dea695774e6a9383a73d7397b95c0813114858",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "20dcb942cfb8",
+          "outletId": "le-parisien",
+          "headline": "Procès pour recel de vol : le député LFI de Marseille Sébastien Delogu menacé d’inéligibilité",
+          "url": "https://www.leparisien.fr/faits-divers/proces-pour-recel-de-vol-le-depute-lfi-de-marseille-sebastien-delogu-menace-dineligibilite-21-10-2026-ZIQC3WZSAJAZRLMCZOZDFAU7N4.php",
+          "publishedAt": "2026-10-21T20:01:24.588Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "9d774c1c8f51",
+          "outletId": "le-monde",
+          "headline": "Au tribunal de Marseille, les excuses maladroites du député Delogu menacé d’inéligibilité",
+          "url": "https://www.lemonde.fr/politique/article/2026/10/21/au-tribunal-de-marseille-les-excuses-maladroites-du-depute-delogu-menace-d-ineligibilite_6798309_823448.html",
+          "publishedAt": "2026-10-21T20:00:09.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/08/27/143/0/2645/1322/644/322/60/0/3c9e537_ftp-1-58lpszjjpjay-5929866-01-06.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "9b65354732c9",
+          "outletId": "le-figaro",
+          "headline": "Inéligibilité de cinq ans avec exécution immédiate requise contre le député LFI Sébastien Delogu",
+          "url": "https://www.lefigaro.fr/marseille/ineligibilite-de-cinq-ans-avec-execution-immediate-requise-contre-le-depute-lfi-sebastien-delogu-20261021",
+          "publishedAt": "2026-10-21T19:11:08.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/21/d7382d84f07f826db69221634a78b996bd930acba8b96fdddd0b7e4eda4775ce.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "913a026e1045",
+          "outletId": "la-croix",
+          "headline": "Procès de Sébastien Delogu : le parquet requiert une inéligibilité de cinq ans",
+          "url": "https://www.la-croix.com/politique/proces-de-sebastien-delogu-le-parquet-requiert-une-ineligibilite-de-cinq-ans-20261021",
+          "publishedAt": "2026-10-21T19:06:01.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/21/2569022-sebastien-delogu-arrive-au-tribunal-de-marseille-p.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "5333a3f449e8",
+          "outletId": "cnews",
+          "headline": "Sébastien Delogu : cinq ans d'inéligibilité avec exécution immédiate requis contre le député LFI, poursuivi pour diffusion de documents issus d’un vol",
+          "url": "https://www.cnews.fr/france/2026-10-21/sebastien-delogu-cinq-ans-dineligibilite-avec-execution-immediate-requis-contre",
+          "publishedAt": "2026-10-21T19:05:00.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_c6mh7de-taille1200_6ad712799542e.jpg?h=f692311e&itok=Jd6irk5R",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "2541f288d21c",
+          "outletId": "europe-1",
+          "headline": "Inéligibilité de cinq ans avec exécution immédiate requise contre le député LFI Sébastien Delogu",
+          "url": "https://www.europe1.fr/police-justice/ineligibilite-de-cinq-ans-avec-execution-immediate-requise-contre-le-depute-lfi-sebastien-delogu-1171380?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-21T18:58:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/20/000_d3gt4g3_1_6ad906bb0e2f9.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "4770eccaa230",
+          "outletId": "franceinfo",
+          "headline": "Cinq ans d'inéligibilité, avec exécution immédiate, requis contre le député LFI Sébastien Delogu pour recel et divulgation d'informations privées",
+          "url": "https://www.franceinfo.fr/faits-divers/justice-proces/cinq-ans-d-ineligibilite-requis-contre-le-depute-lfi-sebastien-delogu-pour-recel-et-divulgation-d-informations-privees_8247868.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-21T18:57:48.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/2bsX_icEST5BjNTvSfvkIQg6L3U/0x0:1024x576/432x243/filters:format(jpg)/2026/10/21/6ad909a96853f297007028.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "0ebb8a4899f2",
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le député LFI Sébastien Delogu a comparu devant le tribunal correctionnel de Marseille pour avoir diffusé des documents volés appartenant à une figure de la communauté juive.",
+          "Le parquet a requis contre le parlementaire deux ans de prison avec sursis ainsi qu'une peine d'inéligibilité de cinq ans assortie d'une exécution immédiate.",
+          "L'élu marseillais a présenté des excuses jugées maladroites, expliquant devant les juges avoir été mal conseillé lors de la diffusion de ces informations privées."
+        ],
+        "centre": [
+          "Sébastien Delogu, député LFI de Marseille, est jugé par le tribunal correctionnel pour recel et divulgation d'informations privées.",
+          "Le parquet a requis une peine de deux ans de prison avec sursis et une inéligibilité de cinq ans avec exécution immédiate.",
+          "Cette sanction, si elle était prononcée, mettrait immédiatement fin au mandat du parlementaire marseillais.",
+          "Durant l'audience, l'élu a fait valoir son droit au silence tout en formulant de simples excuses."
+        ],
+        "droite": [
+          "Le parquet a requis une inéligibilité de cinq ans avec exécution immédiate et deux ans de prison avec sursis à l'encontre du député LFI Sébastien Delogu.",
+          "L'élu comparaissait à Marseille pour avoir divulgué des documents privés volés à un chef d'entreprise au cours d'un conflit social.",
+          "Le parlementaire a choisi de faire valoir son droit au silence tout en présentant de brèves excuses pour les faits reprochés, sans détailler ses motivations passées."
+        ]
+      },
+      "differences": [
+        "La gauche insiste sur la nature des documents diffusés et qualifie les excuses formulées par le parlementaire de maladroites.",
+        "Le centre se concentre principalement sur la menace directe que fait peser la peine requise sur le maintien du mandat du député.",
+        "La droite met en avant le contexte conflictuel initial du vol des documents commis au préjudice d'un chef d'entreprise."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 8
     },
     {
       "id": "690b51f37b60",
@@ -2800,7 +2695,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/10/21/meta-condamne-a-verser-25-milliards-de-dollars-au-nouveau-mexique-apres-le-scandale-cambridge-analytica_6798305_3210.html",
           "publishedAt": "2026-10-21T18:52:28.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/21/389/0/4308/2154/644/322/60/0/44e9007_upload-1-h7sh5o76lndx-063-2297773733.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -3311,6 +3206,107 @@
       "summarizedArticleCount": 8
     },
     {
+      "id": "9db19c6d594f",
+      "slug": "le-senat-examine-le-projet-de-loi-controverse-dit-des-casseurs",
+      "title": "Le Sénat examine le projet de loi controversé dit des casseurs-payeurs",
+      "createdAt": "2026-10-21T11:01:26.138Z",
+      "storyDay": "2026-10-21",
+      "articles": [
+        {
+          "id": "3c453b36a9d3",
+          "outletId": "bfmtv",
+          "headline": "Loi casseur-payeur: Philippe Vigier, député \"Les Démocrates\", se dit favorable à la loi car il existe \"une responsabilité collective\" des casseurs lors de manifestations",
+          "url": "https://www.bfmtv.com/politique/video-loi-casseur-payeur-philippe-vigier-depute-les-democrates-se-dit-favorable-a-la-loi-car-il-existe-une-responsabilite-collective-des-casseurs-lors-de-manifestations_VN-202610210977.html",
+          "publishedAt": "2026-10-21T21:48:11.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Y0B7907gXZ3Lvs9QLteHA8V0TK8=/0x0:1280x720/800x0/images/Loi-casseur-payeur-Philippe-Vigier-depute-Les-Democrates-se-dit-favorable-a-la-loi-car-il-existe-une-responsabilite-collective-des-casseurs-lors-de-manifestations-2369847.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "d01a9740f45f",
+          "outletId": "slate-fr",
+          "headline": "«Casseurs payeurs»: pourquoi le projet de loi du gouvernement risque de faire un flop",
+          "url": "https://www.slate.fr/economie/projet-loi-casseurs-payeurs-foupoudav-gouvernement-abois",
+          "publishedAt": "2026-10-21T17:55:01.000Z",
+          "imageUrl": "https://cdn.slate.fr/uploads/store/story_273852/original_273852.png",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "politics"
+        },
+        {
+          "id": "ee58b09f06ad",
+          "outletId": "rfi",
+          "headline": "France: après les violences urbaines, le projet de loi «casseurs-payeurs» franchit une première étape au Sénat",
+          "url": "https://www.rfi.fr/fr/france/20261021-france-apr%C3%A8s-les-violences-urbaines-le-projet-de-loi-casseurs-payeurs-franchit-une-premi%C3%A8re-%C3%A9tape-au-s%C3%A9nat",
+          "publishedAt": "2026-10-21T15:34:38.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/e35c56a8-cd64-11f1-a0a3-4da0d2c6855d/w:1024/p:16x9/FRANCE-PARIS-VIOLENCES-URBAINES.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "4d8471c945ad",
+          "outletId": "rfi",
+          "headline": "France: «Ceux qui accompagnent les casseurs sont complices et doivent être condamnés», estime Philippe Ballard (RN)",
+          "url": "https://www.rfi.fr/fr/podcasts/invit%C3%A9-politique/20261021-france-ceux-qui-accompagnent-les-casseurs-sont-complices-et-doivent-%C3%AAtre-condamn%C3%A9s-estime-philippe-ballard-rn",
+          "publishedAt": "2026-10-21T14:21:41.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/d677680a-cbc1-11f1-adb8-638c1c1f5fd6/w:1024/p:16x9/2026-10-17T161359Z-1093177141-RC235OA6LME5-RTRMADP-3-FRANCE-PROTEST.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "2b5ff92d4049",
+          "outletId": "liberation",
+          "headline": "Sébastien Lecornu juge «absolument indispensable» la très critiquée et très critiquable loi «casseurs-payeurs»",
+          "url": "https://www.liberation.fr/politique/sebastien-lecornu-juge-absolument-indispensable-la-tres-critiquee-et-tres-critiquable-loi-casseurs-payeurs-20261021_VUU2HJRRHZCYBECVMCON3T5YJM/",
+          "publishedAt": "2026-10-21T09:23:55.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "224ef3002ed2",
+          "outletId": "le-figaro",
+          "headline": "Responsabilité collective, saisie des prestations sociales… Ce que contient la loi «casseurs payeurs» examinée au Sénat à partir de ce mercredi",
+          "url": "https://www.lefigaro.fr/politique/responsabilite-collective-saisie-des-prestations-sociales-ce-que-contient-la-loi-casseurs-payeurs-dont-l-examen-au-senat-a-ete-avance-20261004",
+          "publishedAt": "2026-10-21T05:10:03.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/04/d448a5e499ae263d94c4f2e95b82ecd3b5cb8089c3fca8ece612afc8c7857cfa.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "9db19c6d594f",
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le texte gouvernemental sur la responsabilité civile collective suscite de vives critiques à gauche sur sa constitutionnalité.",
+          "Une tribune publiée dans Slate qualifie le projet de « bourbier annoncé » et pointe son inefficacité pour responsabiliser la jeunesse.",
+          "Libération souligne le caractère « absolument indispensable » accordé au texte par Sébastien Lecornu malgré les critiques."
+        ],
+        "centre": [
+          "Le projet de loi « casseurs-payeurs » est examiné par le Sénat après une adoption en Commission des lois le 21 octobre.",
+          "Le texte instaure une responsabilité collective pour les dommages et un mécanisme de ponction des aides sociales pour les pilleurs.",
+          "Philippe Vigier et Philippe Ballard soutiennent la mesure, ce dernier estimant que les accompagnateurs de casseurs sont complices."
+        ],
+        "droite": [
+          "Le Figaro détaille le contenu du projet de loi examiné au Sénat à partir du mercredi 27 octobre.",
+          "Le journal met en avant les mesures phares du texte, notamment la responsabilité collective et la saisie des prestations sociales."
+        ]
+      },
+      "differences": [
+        "La gauche adopte un ton critique en mettant l'accent sur les risques juridiques et l'inefficacité supposée du dispositif.",
+        "Le centre livre un suivi factuel et institutionnel du parcours législatif tout en relayant les déclarations des soutiens politiques.",
+        "La droite privilégie une approche descriptive en dressant l'inventaire précis des dispositions pénales et administratives du texte."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 6
+    },
+    {
       "id": "2cf9b6715ae8",
       "slug": "une-personne-est-portee-disparue-dans-le-var-apres-de-fortes",
       "title": "Intempéries dans le Var : une personne portée disparue après la découverte de sa voiture vide",
@@ -3573,6 +3569,87 @@
         "Le camp de gauche privilégie un compte-rendu factuel axé sur les annonces du parquet et la découverte du corps dans le Finistère.",
         "Le camp du centre met en avant le profil du mis en cause et l’historique judiciaire familial, notamment les poursuites pour viols incestueux engagées dès le mois d’avril.",
         "Le camp de droite se focalise sur les aveux du suspect concernant les coups portés lors d'une dispute en mars et précise son origine géographique."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 4
+    },
+    {
+      "id": "7fea49d0eac4",
+      "slug": "les-etats-unis-ordonnent-le-depart-de-leurs-employes-non",
+      "title": "Les États-Unis ordonnent l'évacuation de leur personnel non essentiel en Arabie saoudite face aux frappes",
+      "createdAt": "2026-10-21T23:01:18.903Z",
+      "storyDay": "2026-10-21",
+      "articles": [
+        {
+          "id": "8d7d155bda5a",
+          "outletId": "france-24",
+          "headline": "Les États-Unis ordonnent le départ de l'ambassade américaine à Riyad d'employés et leurs familles",
+          "url": "https://www.france24.com/fr/moyen-orient/20261022-les-%C3%A9tats-unis-ordonnent-le-d%C3%A9part-de-l-ambassade-am%C3%A9ricaine-%C3%A0-riyad-d-employ%C3%A9s-et-leurs-familles",
+          "publishedAt": "2026-10-22T00:37:58.000Z",
+          "imageUrl": "https://s.france24.com/media/display/d354537c-cdb0-11f1-b90c-eb48fa034ddc/w:1024/p:16x9/0328d7752153aea478c46acce26547da30511c34.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "a88c25e22547",
+          "outletId": "le-parisien",
+          "headline": "Les États-Unis évacuent le personnel « non essentiel » de l’ambassade en Arabie saoudite, alors que les Houthis multiplient les frappes",
+          "url": "https://www.leparisien.fr/international/etats-unis/les-etats-unis-evacuent-le-personnel-non-essentiel-de-lambassade-en-arabie-saoudite-alors-que-les-houthis-multiplient-les-frappes-22-10-2026-6QGDTVDQJZDE5HQWJGKZJIOUFQ.php",
+          "publishedAt": "2026-10-21T23:01:18.903Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "2545888254ec",
+          "outletId": "le-monde",
+          "headline": "Les Etats-Unis ordonnent le départ d’une partie des employés de leur ambassade à Riyad",
+          "url": "https://www.lemonde.fr/international/article/2026/10/21/les-etats-unis-ordonnent-le-depart-d-une-partie-des-employes-de-leur-ambassade-a-riyad_6798311_3210.html",
+          "publishedAt": "2026-10-21T20:54:31.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/03/03/300/0/3600/1800/644/322/60/0/7bd8d09_ftp-1-zdpsz71q50xg-5351499-01-06.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "ab53fa61cb5e",
+          "outletId": "europe-1",
+          "headline": "Moyen-Orient : les États-Unis ordonnent le départ de leurs employés non essentiels en Arabie saoudite",
+          "url": "https://www.europe1.fr/international/moyen-orient-les-etats-unis-ordonnent-le-depart-de-leurs-employes-non-essentiels-en-arabie-saoudite-1171542?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-21T20:31:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/22/020_2214251216_1_6ad91cf4b1c42.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "7fea49d0eac4",
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le département d'État américain a ordonné l'évacuation des employés non essentiels et de leurs familles de l'ambassade à Riyad.",
+          "Trois personnes sont décédées à l'aéroport international de Dammam lors d'une attaque en Arabie saoudite.",
+          "Des explosions ont été signalées à proximité du détroit d'Ormuz."
+        ],
+        "centre": [
+          "Le gouvernement américain a ordonné le départ du personnel non essentiel de son ambassade en Arabie saoudite ainsi que des familles de diplomates.",
+          "La décision intervient alors que des attaques frappent l'Arabie saoudite, dont un assaut ayant fait des victimes à l'aéroport de Damman dans l'est du pays.",
+          "Le journal Le Parisien met en avant l'implication des Houthis dans la multiplication des frappes dans la région."
+        ],
+        "droite": [
+          "Les États-Unis ont ordonné le départ des employés non essentiels de leur ambassade en Arabie saoudite face aux attaques répétées.",
+          "Selon une source diplomatique, cette mesure d'évacuation concerne également les familles du personnel dans les ambassades aux Émirats arabes unis, en Jordanie, au Qatar et à Bahreïn.",
+          "Le royaume saoudien subit des tirs quasi-quotidiens attribués aux rebelles houthis yéménites soutenus par l'Iran."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur le bilan humain précis à Dammam et signale des explosions au détroit d'Ormuz.",
+        "Le centre se focalise sur la décision d'évacuation de l'ambassade américaine en soulignant le contexte des frappes des Houthis.",
+        "La droite élargit le périmètre géographique de la mesure diplomatique à plusieurs pays de la région et insiste sur l'origine pro-iranienne des attaques."
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 4
@@ -4131,6 +4208,135 @@
       "summarizedArticleCount": 5
     },
     {
+      "id": "cb4f295f2173",
+      "slug": "elon-musk-menace-les-democrates-avant-les-midterms",
+      "title": "Elon Musk menace les démocrates d'enquêtes en cas de majorité au Congrès",
+      "createdAt": "2026-10-22T02:01:21.061Z",
+      "storyDay": "2026-10-21",
+      "articles": [
+        {
+          "id": "93c8a7240252",
+          "outletId": "le-parisien",
+          "headline": "« Ceux qui prendront l’épée périront par l’épée » : Elon Musk menaçant face à la perspective d’enquêtes le visant en cas de majorité démocrate aux midterms",
+          "url": "https://www.leparisien.fr/international/etats-unis/ceux-qui-prendront-lepee-periront-par-lepee-elon-musk-menacant-face-a-la-perspective-denquetes-le-visant-en-cas-de-majorite-democrate-aux-midterms-22-10-2026-XGLJRMITTRAN5BFAEPHJ6D6KMQ.php",
+          "publishedAt": "2026-10-22T03:01:21.599Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "1e7bf844e1df",
+          "outletId": "20-minutes",
+          "headline": "États-Unis : « Ceux qui prendront l’épée périront par l’épée »… Musk menace avant les midterms",
+          "url": "https://www.20minutes.fr/monde/etats-unis/4256481-20261022-etats-unis-ceux-prendront-epee-periront-epee-musk-menace-avant-midterms?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-22T00:32:21.000Z",
+          "imageUrl": "https://img.20mn.fr/G7x6X-A6TbO8DP_fj0bQ2Sk/1200x768_elon-musk-ecoute-le-discours-du-president-donald-trump-lors-d-un-evenement-a-l-institut-americain-pour-la-paix-le-jeudi-8-octobre-2026-a-washington-photo-ap-julia-demaree-nikhinson-dcpu577-26281640891990-2610081949",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "a24a3c3b7a64",
+          "outletId": "le-figaro",
+          "headline": "Elon Musk menace les démocrates en cas d’ouverture d’enquêtes à son encontre après les midterms",
+          "url": "https://www.lefigaro.fr/international/elon-musk-menace-les-democrates-en-cas-d-ouverture-d-enquetes-a-son-encontre-apres-les-midterms-20261021",
+          "publishedAt": "2026-10-21T20:32:28.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/21/68bb45538b11027295ae40732a00547bc5b413389a478b4634404fed35d982b0.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "cb4f295f2173",
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "20 Minutes rapporte les déclarations d'Elon Musk affirmant que « ceux qui prendront l’épée périront par l’épée » en réaction aux informations de Politico.",
+          "Le média indique que le patron de Tesla réagit très mal aux projets des démocrates visant à multiplier les enquêtes parlementaires à son encontre en cas de victoire aux midterms."
+        ],
+        "centre": [
+          "Le Parisien évoque la réplique menaçante d'Elon Musk, résumée par la formule « ceux qui prendront l’épée périront par l’épée », face au risque d'enquêtes en cas de majorité démocrate aux midterms."
+        ],
+        "droite": [
+          "Le Figaro relaye les menaces adressées par Elon Musk aux démocrates suite aux révélations de Politico concernant de futures enquêtes parlementaires après les élections du 3 novembre.",
+          "Le journal précise que les investigations envisagées par les démocrates ciblent notamment les coupes drastiques réalisées en 2025 dans l'appareil d'État fédéral ainsi que de potentiels conflits d'intérêts."
+        ]
+      },
+      "differences": [
+        "La gauche met en avant la mise en garde théâtrale d'Elon Musk en reprenant sa citation choc face aux indiscrétions du média Politico sur le Congrès.",
+        "Le centre centre son analyse sur la citation menaçante d'Elon Musk face à la perspective d'une offensive parlementaire démocrate.",
+        "La droite privilégie une contextualisation factuelle en détaillant les motifs précis des enquêtes prévues par les démocrates suite aux coupes budgétaires et aux conflits d'intérêts."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3
+    },
+    {
+      "id": "229c0c358771",
+      "slug": "le-senat-vote-la-prolongation-de-deux-ans-du-dispositif-d",
+      "title": "Le Sénat prolonge de deux ans l'encadrement des loyers",
+      "createdAt": "2026-10-21T20:01:24.588Z",
+      "storyDay": "2026-10-21",
+      "articles": [
+        {
+          "id": "38c5fdc02bde",
+          "outletId": "le-monde",
+          "headline": "Encadrement des loyers : le Sénat adopte la prolongation du dispositif dans une version minimaliste",
+          "url": "https://www.lemonde.fr/societe/article/2026/10/22/encadrement-des-loyers-le-senat-adopte-la-prolongation-du-dispositif-dans-une-version-minimaliste_6798480_3224.html",
+          "publishedAt": "2026-10-22T02:00:01.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/21/127/0/6720/3360/644/322/60/0/e98a359_upload-1-tvlfdthko1qy-cbi1349065.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "0866544f989a",
+          "outletId": "le-figaro",
+          "headline": "Encadrement des loyers : le Sénat vote la prolongation du dispositif pendant deux ans",
+          "url": "https://www.lefigaro.fr/conjoncture/encadrement-des-loyers-le-senat-vote-la-prolongation-du-dispositif-pendant-deux-ans-20261021",
+          "publishedAt": "2026-10-21T20:00:34.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/21/a6ad72dc2e812f8da29bc4c4f901ab57bbfbe737454fb2d491bc35a142c6952e.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "d96ae0cf726a",
+          "outletId": "liberation",
+          "headline": "Encadrement des loyers : les sénateurs prolongent de deux ans la mesure dans les communes concernées",
+          "url": "https://www.liberation.fr/societe/logement/encadrement-des-loyers-les-senateurs-prolongent-de-deux-ans-la-mesure-dans-les-communes-concernees-20261021_2A747RDO4BBUFIZRALQLYGQSIQ/",
+          "publishedAt": "2026-10-21T19:40:59.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "229c0c358771",
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le Sénat a adopté une proposition de loi socialiste prolongeant pour deux ans l'encadrement des loyers dans les 71 communes qui l'expérimentent déjà.",
+          "Le texte voté par les sénateurs ne prévoit ni extension ni renforcement du dispositif, contrairement aux attentes des députés qui visaient une pérennisation.",
+          "La proposition de loi, portée par le député socialiste Iñaki Echaniz, doit retourner à l'Assemblée nationale avant l'échéance du 24 novembre."
+        ],
+        "droite": [
+          "Le Sénat a voté la prolongation de l'encadrement des loyers pour une durée de deux ans.",
+          "Ce vote sénatorial intervient pour éviter l'extinction du dispositif à la fin de sa phase d'expérimentation fixée au 24 novembre."
+        ]
+      },
+      "differences": [
+        "La gauche souligne la portée restrictive du texte sénatorial qui limite l'expérimentation à l'existant sans l'étendre.",
+        "La droite se focalise sur la nécessité technique d'éviter l'expiration du dispositif avant la date butoir."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3
+    },
+    {
       "id": "bc87fce675ee",
       "slug": "ebay-supprime-1-000-postes-soit-environ-9-de-ses-effectifs",
       "title": "eBay va supprimer 1 000 postes, soit environ 9 % de ses effectifs",
@@ -4191,76 +4397,6 @@
       "differences": [
         "La gauche met en lumière la brutalité du plan social en le rattachant à une série de suppressions de postes répétées malgré des voyants financiers au vert.",
         "Le centre adopte un angle gestionnaire en insistant sur la réorganisation stratégique et l'optimisation des secteurs porteurs."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 3
-    },
-    {
-      "id": "7fea49d0eac4",
-      "slug": "les-etats-unis-ordonnent-le-depart-de-leurs-employes-non",
-      "title": "Les États-Unis ordonnent le départ de leurs employés non essentiels en Arabie saoudite face aux frappes des Houthis",
-      "createdAt": "2026-10-21T23:01:18.903Z",
-      "storyDay": "2026-10-21",
-      "articles": [
-        {
-          "id": "a88c25e22547",
-          "outletId": "le-parisien",
-          "headline": "Les États-Unis évacuent le personnel « non essentiel » de l’ambassade en Arabie saoudite, alors que les Houthis multiplient les frappes",
-          "url": "https://www.leparisien.fr/international/etats-unis/les-etats-unis-evacuent-le-personnel-non-essentiel-de-lambassade-en-arabie-saoudite-alors-que-les-houthis-multiplient-les-frappes-22-10-2026-6QGDTVDQJZDE5HQWJGKZJIOUFQ.php",
-          "publishedAt": "2026-10-21T23:01:18.903Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "2545888254ec",
-          "outletId": "le-monde",
-          "headline": "Les Etats-Unis ordonnent le départ d’une partie des employés de leur ambassade à Riyad",
-          "url": "https://www.lemonde.fr/international/article/2026/10/21/les-etats-unis-ordonnent-le-depart-d-une-partie-des-employes-de-leur-ambassade-a-riyad_6798311_3210.html",
-          "publishedAt": "2026-10-21T20:54:31.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/03/03/300/0/3600/1800/644/322/60/0/7bd8d09_ftp-1-zdpsz71q50xg-5351499-01-06.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "ab53fa61cb5e",
-          "outletId": "europe-1",
-          "headline": "Moyen-Orient : les États-Unis ordonnent le départ de leurs employés non essentiels en Arabie saoudite",
-          "url": "https://www.europe1.fr/international/moyen-orient-les-etats-unis-ordonnent-le-depart-de-leurs-employes-non-essentiels-en-arabie-saoudite-1171542?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-21T20:31:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/21/22/020_2214251216_1_6ad91cf4b1c42.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "7fea49d0eac4",
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le Monde indique que Washington a ordonné le départ d'une partie des employés de l'ambassade à Riyad.",
-          "Le quotidien mentionne la mort de deux personnes en Arabie saoudite après l'interception de drones.",
-          "Les rebelles houthis du Yémen ont nié toute implication dans les attaques contre le royaume.",
-          "Des explosions ont également été signalées à proximité du détroit d'Ormuz."
-        ],
-        "centre": [
-          "Les autorités américaines ont ordonné l'évacuation du personnel non essentiel de leur représentation diplomatique en Arabie saoudite.",
-          "Cette décision intervient alors que les Houthis multiplient les frappes aériennes contre le territoire saoudien."
-        ],
-        "droite": [
-          "Le Département d'État a ordonné le départ des employés non essentiels de l'ambassade à Riyad ainsi que des familles de diplomates.",
-          "Cette mesure s'applique également aux familles du personnel diplomatique aux Émirats arabes unis, en Jordanie, au Qatar et à Bahreïn.",
-          "Ces restrictions font suite à des attaques quasi-quotidiennes menées par les Houthis yéménites soutenus par l'Iran."
-        ]
-      },
-      "differences": [
-        "La gauche contextualise la décision américaine en l'associant à des bilans humains précis en Arabie saoudite et à des incidents géographiques connexes près du détroit d'Ormuz.",
-        "Le centre se focalise strictement sur l'annonce de l'évacuation diplomatique américaine face à l'intensification des frappes des Houthis.",
-        "La droite élargit le périmètre régional en signalant le départ de familles de diplomates dans plusieurs pays limitrophes et insiste sur le rôle de l'Iran aux côtés des rebelles."
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 3
@@ -4365,68 +4501,6 @@
       "summarizedArticleCount": 6
     },
     {
-      "id": "9db19c6d594f",
-      "slug": "le-senat-examine-le-projet-de-loi-controverse-dit-des-casseurs",
-      "title": "Le Sénat examine le projet de loi controversé dit des casseurs-payeurs",
-      "createdAt": "2026-10-21T11:01:26.138Z",
-      "storyDay": "2026-10-21",
-      "articles": [
-        {
-          "id": "d01a9740f45f",
-          "outletId": "slate-fr",
-          "headline": "«Casseurs payeurs»: pourquoi le projet de loi du gouvernement risque de faire un flop",
-          "url": "https://www.slate.fr/economie/projet-loi-casseurs-payeurs-foupoudav-gouvernement-abois",
-          "publishedAt": "2026-10-21T17:55:01.000Z",
-          "imageUrl": "https://cdn.slate.fr/uploads/store/story_273852/original_273852.png",
-          "frontPage": false,
-          "kind": "opinion",
-          "section": "politics"
-        },
-        {
-          "id": "2b5ff92d4049",
-          "outletId": "liberation",
-          "headline": "Sébastien Lecornu juge «absolument indispensable» la très critiquée et très critiquable loi «casseurs-payeurs»",
-          "url": "https://www.liberation.fr/politique/sebastien-lecornu-juge-absolument-indispensable-la-tres-critiquee-et-tres-critiquable-loi-casseurs-payeurs-20261021_VUU2HJRRHZCYBECVMCON3T5YJM/",
-          "publishedAt": "2026-10-21T09:23:55.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "224ef3002ed2",
-          "outletId": "le-figaro",
-          "headline": "Responsabilité collective, saisie des prestations sociales… Ce que contient la loi «casseurs payeurs» examinée au Sénat à partir de ce mercredi",
-          "url": "https://www.lefigaro.fr/politique/responsabilite-collective-saisie-des-prestations-sociales-ce-que-contient-la-loi-casseurs-payeurs-dont-l-examen-au-senat-a-ete-avance-20261004",
-          "publishedAt": "2026-10-21T05:10:03.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/04/d448a5e499ae263d94c4f2e95b82ecd3b5cb8089c3fca8ece612afc8c7857cfa.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "9db19c6d594f",
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le projet de loi dit «casseurs-payeurs» arrive au Sénat le 27 octobre.",
-          "Slate.fr estime que le texte accumule les risques d'inconstitutionnalité et ne responsabilise pas la jeunesse.",
-          "Sébastien Lecornu qualifie la loi «casseurs-payeurs» d'«absolument indispensable» selon Libération."
-        ],
-        "droite": [
-          "Le Sénat examine à partir de ce mercredi le projet de loi «casseurs payeurs».",
-          "Le Figaro détaille le contenu du texte, incluant la responsabilité collective et la saisie des prestations sociales."
-        ]
-      },
-      "differences": [
-        "La gauche critique vivement le texte à travers des tribunes et des déclarations ministérielles en dénonçant ses failles juridiques et ses risques d'inconstitutionnalité.",
-        "La droite adopte un traitement informatif et descriptif en détaillant précisément les mesures concrètes du texte examinées au Sénat."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 3
-    },
-    {
       "id": "d2ab0c591e81",
       "slug": "une-publicite-de-campagne-electorale-avec-la-mere-d-une",
       "title": "Une publicité de campagne électorale avec la mère d'une candidate suscite la polémique aux États-Unis",
@@ -4473,59 +4547,6 @@
       "differences": [
         "La gauche relate l'événement en mettant en avant l'implication de la mère d'Amy Acton contre sa fille dans le spot de Vivek Ramaswamy.",
         "La droite adopte un angle similaire en insistant sur la polémique et les critiques essuyées par le candidat républicain dans l'Ohio."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 2
-    },
-    {
-      "id": "cb4f295f2173",
-      "slug": "elon-musk-menace-les-democrates-avant-les-midterms",
-      "title": "Elon Musk menace les démocrates avant les midterms",
-      "createdAt": "2026-10-22T02:01:21.061Z",
-      "storyDay": "2026-10-21",
-      "articles": [
-        {
-          "id": "1e7bf844e1df",
-          "outletId": "20-minutes",
-          "headline": "États-Unis : « Ceux qui prendront l’épée périront par l’épée »… Musk menace avant les midterms",
-          "url": "https://www.20minutes.fr/monde/etats-unis/4256481-20261022-etats-unis-ceux-prendront-epee-periront-epee-musk-menace-avant-midterms?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-22T00:32:21.000Z",
-          "imageUrl": "https://img.20mn.fr/G7x6X-A6TbO8DP_fj0bQ2Sk/1200x768_elon-musk-ecoute-le-discours-du-president-donald-trump-lors-d-un-evenement-a-l-institut-americain-pour-la-paix-le-jeudi-8-octobre-2026-a-washington-photo-ap-julia-demaree-nikhinson-dcpu577-26281640891990-2610081949",
-          "frontPage": true,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "a24a3c3b7a64",
-          "outletId": "le-figaro",
-          "headline": "Elon Musk menace les démocrates en cas d’ouverture d’enquêtes à son encontre après les midterms",
-          "url": "https://www.lefigaro.fr/international/elon-musk-menace-les-democrates-en-cas-d-ouverture-d-enquetes-a-son-encontre-apres-les-midterms-20261021",
-          "publishedAt": "2026-10-21T20:32:28.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/21/68bb45538b11027295ae40732a00547bc5b413389a478b4634404fed35d982b0.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "cb4f295f2173",
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le dirigeant de Tesla réagit vivement à des articles de presse évoquant de futures investigations parlementaires démocrates.",
-          "L'entrepreneur adresse une mise en garde publique aux démocrates en vue des élections de mi-mandat.",
-          "20 Minutes rapporte que le patron qualifie la situation par la citation : « Ceux qui prendront l’épée périront par l’épée »."
-        ],
-        "droite": [
-          "Le média Politico dévoile la liste des thématiques d'investigation préparées par les démocrates pour le scrutin du 3 novembre.",
-          "Elon Musk avertit le camp démocrate en réaction aux menaces d'enquêtes parlementaires consécutives aux midterms.",
-          "Le Figaro précise les motifs potentiels d'investigation, incluant les réductions budgétaires fédérales de 2025 et les risques de conflits d'intérêts."
-        ]
-      },
-      "differences": [
-        "La gauche focalise son compte rendu sur la réplique vindicative et la citation dramatique d'Elon Musk face aux révélations de la presse.",
-        "La droite privilégie l'analyse des motivations politiques et factuelles des démocrates révélées par Politico avant de traiter la réaction de l'entrepreneur."
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 2
@@ -4591,57 +4612,6 @@
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 3
-    },
-    {
-      "id": "229c0c358771",
-      "slug": "le-senat-vote-la-prolongation-de-deux-ans-du-dispositif-d",
-      "title": "Le Sénat vote la prolongation de deux ans du dispositif d'encadrement des loyers dans les communes concernées",
-      "createdAt": "2026-10-21T20:01:24.588Z",
-      "storyDay": "2026-10-21",
-      "articles": [
-        {
-          "id": "0866544f989a",
-          "outletId": "le-figaro",
-          "headline": "Encadrement des loyers : le Sénat vote la prolongation du dispositif pendant deux ans",
-          "url": "https://www.lefigaro.fr/conjoncture/encadrement-des-loyers-le-senat-vote-la-prolongation-du-dispositif-pendant-deux-ans-20261021",
-          "publishedAt": "2026-10-21T20:00:34.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/21/a6ad72dc2e812f8da29bc4c4f901ab57bbfbe737454fb2d491bc35a142c6952e.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "d96ae0cf726a",
-          "outletId": "liberation",
-          "headline": "Encadrement des loyers : les sénateurs prolongent de deux ans la mesure dans les communes concernées",
-          "url": "https://www.liberation.fr/societe/logement/encadrement-des-loyers-les-senateurs-prolongent-de-deux-ans-la-mesure-dans-les-communes-concernees-20261021_2A747RDO4BBUFIZRALQLYGQSIQ/",
-          "publishedAt": "2026-10-21T19:40:59.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "229c0c358771",
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le Sénat a adopté la prolongation pour deux ans de l'encadrement des loyers dans les communes concernées.",
-          "Le texte initial a été porté par le député socialiste Iñaki Echaniz.",
-          "Le projet retourne à l'Assemblée nationale, qui doit impérativement l'adopter dans les mêmes termes avant le 24 novembre pour éviter l'extinction de la mesure."
-        ],
-        "droite": [
-          "Les sénateurs ont voté la reconduction du dispositif d'encadrement des loyers pour une durée de deux ans.",
-          "Sans une validation définitive par l'Assemblée nationale avant le 24 novembre, l'expérimentation de la mesure arrivera à son terme."
-        ]
-      },
-      "differences": [
-        "La gauche met en avant l'origine socialiste de l'initiative parlementaire et l'urgence calendaire face au risque d'extinction du dispositif.",
-        "La droite se focalise strictement sur la décision sénatoriale de prorogation et l'échéance butoir du 24 novembre fixée pour l'Assemblée nationale."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 2
     },
     {
       "id": "0ebb8a4899f2",
