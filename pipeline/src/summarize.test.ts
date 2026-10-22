@@ -427,6 +427,149 @@ describe('updateSummaries', () => {
   });
 });
 
+describe('updateSummaries — 25% growth gate (ADR-0027)', () => {
+  it('summarizes a first-time Story (no watermark) over its whole Article set', async () => {
+    const articles = [
+      article('a1', 'lemonde', { publishedAt: '2026-10-06T09:00:00Z' }),
+      article('a2', 'figaro', { publishedAt: '2026-10-06T11:00:00Z' }),
+    ];
+    const s = story('s1', 'sujet-1', articles); // no summarizedArticleCount
+    const calls: { input: SummaryInput }[] = [];
+    const outcome = await updateSummaries({
+      stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
+      teasers: new Map(),
+      outletById,
+      model: fakeModel(GOOD_RESPONSE, calls),
+      promptVersion: SUMMARIES_PROMPT_VERSION,
+    });
+    expect(calls).toHaveLength(1);
+    expect(calls[0].input.articles).toHaveLength(2);
+    expect(s.summarizedArticleCount).toBe(2);
+    expect(outcome.changed).toEqual(new Set(['sujet-1']));
+  });
+
+  it('keeps Summaries unchanged below 25% growth since the last pass', async () => {
+    // 9 seen, 10 now: +1 = 12.5% growth — under the gate.
+    const articles = Array.from({ length: 10 }, (_, i) =>
+      article(`a${i}`, 'lemonde', {
+        publishedAt: `2026-10-06T0${i}:00:00Z`,
+      }),
+    );
+    const s = story('s1', 'sujet-1', articles, {
+      summarizedArticleCount: 9,
+      summaries: { centre: ['Résumé'] },
+      differences: ['Diff.'],
+    });
+    const calls: { input: SummaryInput }[] = [];
+    const outcome = await updateSummaries({
+      stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
+      teasers: new Map(),
+      outletById,
+      model: fakeModel(GOOD_RESPONSE, calls),
+      promptVersion: SUMMARIES_PROMPT_VERSION,
+    });
+    expect(calls).toHaveLength(0);
+    expect(s.summaries).toEqual({ centre: ['Résumé'] });
+    expect(s.summarizedArticleCount).toBe(9);
+    expect(outcome.changed.size).toBe(0);
+    expect(outcome.calls).toBe(0);
+  });
+
+  it('re-summarizes at exactly 25% growth (the gate is « at least »)', async () => {
+    // 8 seen, 10 now: +2 = 25% — the gate fires.
+    const articles = Array.from({ length: 10 }, (_, i) =>
+      article(`a${i}`, i % 2 === 0 ? 'lemonde' : 'figaro', {
+        publishedAt: `2026-10-06T0${i}:00:00Z`,
+      }),
+    );
+    const s = story('s1', 'sujet-1', articles, {
+      summarizedArticleCount: 8,
+      summaries: { centre: ['Vieux'] },
+      differences: ['Ancienne.'],
+    });
+    const calls: { input: SummaryInput }[] = [];
+    await updateSummaries({
+      stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
+      teasers: new Map(),
+      outletById,
+      model: fakeModel(GOOD_RESPONSE, calls),
+      promptVersion: SUMMARIES_PROMPT_VERSION,
+    });
+    expect(calls).toHaveLength(1);
+    expect(s.summaries).toEqual({
+      centre: ['Lu au centre'],
+      droite: ['Lu à droite'],
+    });
+    expect(s.summarizedArticleCount).toBe(10);
+  });
+
+  it('costs no call when a 100-Article Story gains one Article', async () => {
+    const articles = Array.from({ length: 101 }, (_, i) =>
+      article(`a${i}`, 'lemonde', {
+        publishedAt: `2026-10-06T10:00:00Z`,
+      }),
+    );
+    const s = story('s1', 'sujet-1', articles, {
+      summarizedArticleCount: 100,
+      summaries: { centre: ['Résumé'] },
+      differences: ['Diff.'],
+    });
+    const calls: { input: SummaryInput }[] = [];
+    const outcome = await updateSummaries({
+      stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
+      teasers: new Map(),
+      outletById,
+      model: fakeModel(GOOD_RESPONSE, calls),
+      promptVersion: SUMMARIES_PROMPT_VERSION,
+    });
+    expect(calls).toHaveLength(0);
+    expect(outcome.calls).toBe(0);
+    expect(s.summaries).toEqual({ centre: ['Résumé'] });
+  });
+
+  it('spends the budget only on Stories passing the gate', async () => {
+    // Under the gate: 9 seen, 10 now. Over it: never summarized.
+    const gated = story(
+      's-gated',
+      'sujet-gated',
+      Array.from({ length: 10 }, (_, i) =>
+        article(`g${i}`, 'lemonde', { publishedAt: '2026-10-06T09:00:00Z' }),
+      ),
+      {
+        summarizedArticleCount: 9,
+        summaries: { centre: ['Résumé'] },
+        differences: ['Diff.'],
+      },
+    );
+    const firstTime = story('s-new', 'sujet-new', [
+      article('n1', 'lemonde'),
+      article('n2', 'figaro'),
+    ]);
+    const calls: { input: SummaryInput }[] = [];
+    const outcome = await updateSummaries({
+      stories: [gated, firstTime],
+      now: new Date('2026-10-06T12:00:00Z'),
+      teasers: new Map(),
+      outletById,
+      model: fakeModel(GOOD_RESPONSE, calls),
+      promptVersion: SUMMARIES_PROMPT_VERSION,
+      budget: 1,
+    });
+    expect(outcome.calls).toBe(1);
+    expect(calls).toHaveLength(1);
+    expect(calls[0].input.story.id).toBe('s-new');
+    expect(gated.summaries).toEqual({ centre: ['Résumé'] });
+    expect(firstTime.summaries).toEqual({
+      centre: ['Lu au centre'],
+      droite: ['Lu à droite'],
+    });
+  });
+});
+
 describe('summariesPrompt', () => {
   it('carries the prompt version so a prompt change cannot be forgotten', () => {
     const prompt = summariesPrompt({
