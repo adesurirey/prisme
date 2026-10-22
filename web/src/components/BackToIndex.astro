@@ -1,0 +1,41 @@
+---
+/**
+ * The "À la une" back link to the index, shared by every sub-page (Story,
+ * 404, mentions légales, méthode, classement) so the arrow-link style and
+ * copy live in one place. Pass `backLink` on pages that load the
+ * back-link script (installBackLink) to get the history.back() behavior;
+ * elsewhere the attributes are inert and the link is a plain href.
+ */
+import { withBase } from '../data';
+
+interface Props {
+  backLink?: boolean;
+}
+
+const { backLink = false } = Astro.props;
+---
+
+<p class="mb-6">
+  <a
+    href={withBase('/')}
+    {...(backLink ? { 'data-back-to-index': true, 'data-index-url': withBase('/') } : {})}
+    class="inline-flex items-center gap-1.5 text-[13px] text-muted transition-colors hover:text-ink"
+  >
+    <svg
+      width="13"
+      height="13"
+      viewBox="0 0 16 16"
+      fill="none"
+      aria-hidden="true"
+      class="shrink-0"
+    >
+      <path
+        d="M13 8H3m0 0 4-4M3 8l4 4"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+    À la une
+  </a>
+</p>

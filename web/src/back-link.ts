@@ -1,6 +1,6 @@
 /**
  * Back to the index with the browser's own scroll memory: the Story page's
- * "Aujourd'hui" link is a plain <a href>, which full-page-loads the index
+ * "À la une" link is a plain <a href>, which full-page-loads the index
  * and drops the reader back at the top — they lose their place in the
  * list. The browser's back button doesn't have that problem (bfcache and
  * history scrolling restore the position natively), so when the reader

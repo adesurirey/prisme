@@ -1,40 +1,18 @@
 ---
-import { withBase } from '../data';
+import BackToIndex from '../components/BackToIndex.astro';
 import Base from '../layouts/Base.astro';
 
 // SEO (issue: branded 404): GitHub Pages falls back to dist/404.html when
 // present — without it the default English "Page not found · GitHub Pages"
 // page serves, unbranded and out of the site's voice (docs/brand.md).
-// Layout mirrors a Story page: the same "Aujourd'hui" back link on top,
+// Layout mirrors a Story page: the same shared "À la une" back link on top,
 // the same H1 and body text scales — no new link or button style, the
 // arrow link at the top is the way home.
 ---
 
 <Base title="Page introuvable — Prisme" noCanonical>
   <article class="pt-10">
-    <p class="mb-6">
-      <a
-        href={withBase('/')}
-        class="inline-flex items-center gap-1.5 text-[13px] text-muted transition-colors hover:text-ink"
-      >
-        <svg
-          width="13"
-          height="13"
-          viewBox="0 0 16 16"
-          fill="none"
-          aria-hidden="true"
-          class="shrink-0"
-        >
-          <path
-            d="M13 8H3m0 0 4-4M3 8l4 4"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-        </svg>
-        Aujourd’hui
-      </a>
-    </p>
+    <BackToIndex />
     <p class="mb-1 text-[11px] uppercase tracking-[0.08em] text-muted sm:text-[13px]">
       Erreur 404
     </p>

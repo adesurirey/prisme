@@ -79,7 +79,7 @@ describe('installBackLink', () => {
     document.body.innerHTML =
       '<a href="/" data-back-to-index data-index-url="' +
       indexUrl +
-      '" id="back">Aujourd\u2019hui</a>';
+      '" id="back">\u00c0 la une</a>';
     // The reader arrived from the index, so there is history to go back
     // to (jsdom starts at length 1, a fresh tab).
     vi.spyOn(window.history, 'length', 'get').mockReturnValue(2);

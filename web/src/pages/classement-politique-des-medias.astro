@@ -8,6 +8,7 @@ import {
   type OutletConfig,
   outlets,
 } from '@prisme/domain';
+import BackToIndex from '../components/BackToIndex.astro';
 import InlineLink from '../components/InlineLink.astro';
 import PaywallBadge from '../components/PaywallBadge';
 import SiteBadge from '../components/SiteBadge.astro';
@@ -34,29 +35,7 @@ const description =
   description={description}
 >
   <article class="pt-10">
-    <p class="mb-6">
-      <a
-        href={withBase('/')}
-        class="inline-flex items-center gap-1.5 text-[16px] text-muted transition-colors hover:text-ink"
-      >
-        <svg
-          width="13"
-          height="13"
-          viewBox="0 0 16 16"
-          fill="none"
-          aria-hidden="true"
-          class="shrink-0"
-        >
-          <path
-            d="M13 8H3m0 0 4-4M3 8l4 4"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-        </svg>
-        Aujourd’hui
-      </a>
-    </p>
+    <BackToIndex />
     <h1 class="text-[26px] font-semibold leading-snug tracking-[-0.02em]">
       Classement politique des médias
     </h1>

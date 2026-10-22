@@ -150,6 +150,6 @@ describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () =
     const html = await readFile(path.join(dist, '404.html'), 'utf8');
     expect(html).toContain("Cette page n'existe pas");
     // The Story-page back link is the way home — no separate CTA style.
-    expect(html).toContain('Aujourd’hui');
+    expect(html).toContain('À la une');
   });
 });
