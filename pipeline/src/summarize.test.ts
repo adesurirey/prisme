@@ -374,6 +374,31 @@ describe('updateSummaries', () => {
     ]);
   });
 
+  it('feeds aged teasers from the cache to the model input (ADR-0027)', async () => {
+    // run.ts passes a teasers map already merged with the private cache:
+    // an Article that rotated out of the feeds still carries its teaser.
+    const s = story(
+      's1',
+      'sujet-1',
+      [article('a1', 'lemonde'), article('aged', 'lemonde')],
+      { summarizedArticleCount: 1 },
+    );
+    const calls: { input: SummaryInput }[] = [];
+    await updateSummaries({
+      stories: [s],
+      now: new Date('2026-10-06T12:00:00Z'),
+      teasers: new Map([['aged', 'Teaser vieilli']]),
+      outletById,
+      model: fakeModel(GOOD_RESPONSE, calls),
+      promptVersion: SUMMARIES_PROMPT_VERSION,
+    });
+    expect(calls).toHaveLength(1);
+    const aged = calls[0].input.articles.find(
+      (a) => a.headline === 'Titre aged',
+    );
+    expect(aged?.teaser).toBe('Teaser vieilli');
+  });
+
   it('marks a Story with Summaries as changed even when it already had some (rewrite, not append)', async () => {
     const s = story(
       's1',

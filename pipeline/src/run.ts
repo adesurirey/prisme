@@ -17,7 +17,12 @@ import { updateEditionHistory } from './edition-history.ts';
 import { updateFrontPageHistory } from './frontpage.ts';
 import { groupStories, loadStories } from './grouping.ts';
 import { fetchFeed } from './http.ts';
-import { CLASSIFICATIONS_PATH, DATA_DIR, STORIES_DIR } from './paths.ts';
+import {
+  CLASSIFICATIONS_PATH,
+  DATA_DIR,
+  STORIES_DIR,
+  TEASER_CACHE_PATH,
+} from './paths.ts';
 import { resolveModels } from './policy.ts';
 import { assembleEdition } from './ranking.ts';
 import {
@@ -25,6 +30,11 @@ import {
   SUMMARIES_PROMPT_VERSION,
   updateSummaries,
 } from './summarize.ts';
+import {
+  loadTeaserCache,
+  mergeTeasers,
+  saveTeaserCache,
+} from './teaser-cache.ts';
 import { mergeTopicRegistry } from './topic-registry.ts';
 
 // Build-log section headers: one emoji-prefixed line per pipeline step, so a
@@ -44,10 +54,21 @@ export async function runEdition(): Promise<Edition> {
 
   section('📡', 'Collect');
   const now = new Date();
-  const { articles, teasers, failures } = await collect(
-    outlets,
-    fetchFeed,
-    now,
+  // Private teaser cache (ADR-0027, amending ADR-0003): the collector's
+  // in-memory teasers are merged into the cache — never overwriting an
+  // existing entry — so a multi-day Story re-Summary still receives the
+  // teasers of Articles that rotated out of the feeds. The cache lives at
+  // .cache/teasers.json, outside the published data/, gitignored; CI
+  // round-trips it through the Actions cache. A missing or corrupt file
+  // degrades to headline-only input and never fails a build.
+  const teaserCache = await loadTeaserCache(TEASER_CACHE_PATH);
+  const {
+    articles,
+    teasers: collectedTeasers,
+    failures,
+  } = await collect(outlets, fetchFeed, now);
+  const teasers = new Map(
+    Object.entries(mergeTeasers(teaserCache, collectedTeasers)),
   );
   console.log(
     `${articles.length} articles from ${outlets.length} outlets` +
@@ -192,6 +213,11 @@ export async function runEdition(): Promise<Edition> {
     budget: SUMMARIES_BUDGET,
   });
   for (const slug of summaryOutcome.changed) changed.add(slug);
+
+  // Save the cache with this build's accumulation (ADR-0027): after the
+  // model passes so a Story that re-Summarized this build had the aged
+  // entries available, and so a clean build persists them for the next one.
+  await saveTeaserCache(mergeTeasers(teaserCache, teasers), TEASER_CACHE_PATH);
 
   const filesToWrite = changed.size;
   section('📰', 'Edition');

@@ -210,3 +210,30 @@ describe('collect — Front page is declared, never inferred (ADR-0008)', () => 
     expect(articles[0].frontPage).toBe(true);
   });
 });
+
+describe('collect — teaser accumulation, never overwrite (ADR-0027)', () => {
+  const feedWithTeaser = (urls: string[]): string => `<?xml version="1.0"?>
+  <rss version="2.0"><channel>
+    ${urls
+      .map(
+        (url) =>
+          `<item><title>Titre</title><link>${url}</link><description>Teaser ${url.match(/ABC(\d+)/)?.[1]}</description></item>`,
+      )
+      .join('\n    ')}
+  </channel></rss>`;
+
+  it('returns the une-feed teaser when both feeds carry one — first writer wins', async () => {
+    const url = parisienUrl('07-10-2026', 1);
+    const { teasers } = await collect(
+      [outlet({ une: UNE, latest: LATEST })],
+      fetcher({
+        [UNE]: feedWithTeaser([url]),
+        [LATEST]: feedWithTeaser([url]),
+      }),
+      NOW,
+    );
+
+    expect(teasers).toHaveLength(1);
+    expect([...teasers.values()][0]).toMatch(/001$/);
+  });
+});
