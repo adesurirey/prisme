@@ -1,10 +1,21 @@
 {
   "id": "96e03af34e0f",
   "slug": "une-vulnerabilite-critique-de-securite-dans-le-langage-php-rend",
-  "title": "Une vulnérabilité critique dans le langage PHP paralyse de nombreux sites internet institutionnels",
+  "title": "Une faille informatique critique dans le langage PHP paralyse de nombreux sites internet institutionnels",
   "createdAt": "2026-10-21T17:01:24.444Z",
   "storyDay": "2026-10-21",
   "articles": [
+    {
+      "id": "61054b3fb1e1",
+      "outletId": "bfmtv",
+      "headline": "PHP : une faille de sécurité critique",
+      "url": "https://www.bfmtv.com/economie/replay-emissions/good-morning-business/video-php-une-faille-de-securite-critique_VN-202610220193.html",
+      "publishedAt": "2026-10-22T05:58:32.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/e5TkXAaeD-Rj2nyExgL8ahkweCM=/0x0:1280x720/800x0/images/PHP-une-faille-de-securite-critique-2369962.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
     {
       "id": "de6744532411",
       "outletId": "le-figaro",
@@ -245,26 +256,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "De multiples sites internet dans le monde ont été fermés temporairement le mercredi 21 octobre en raison de deux failles de sécurité majeures dans le langage de programmation PHP.",
-      "En France, des plateformes publiques et institutionnelles, telles que les préfectures, Météo-France et les services des impôts, sont devenues inaccessibles.",
-      "Les autorités ont ordonné la mise en maintenance préventive des sites exposés afin d'écarter tout risque d'attaque informatique."
+      "Plusieurs millions de sites internet dans le monde ont été suspendus temporairement ce mercredi après la découverte de failles critiques dans le langage de programmation PHP.",
+      "En France, des services publics majeurs comme Météo-France, des préfectures et le site des impôts sont devenus inaccessibles par mesure de précaution.",
+      "Des explications pédagogues ont été proposées pour faire comprendre au grand public le fonctionnement et l'importance de ce langage qui fait fonctionner une grande partie du web mondial."
     ],
     "centre": [
-      "Une vulnérabilité critique affectant le langage PHP a provoqué la mise hors ligne de nombreux sites gouvernementaux et institutionnels en France et à l'étranger.",
-      "L'Agence nationale de sécurité des systèmes informatiques (ANSSI) a demandé la mise en maintenance préventive des services exposés.",
-      "Des agences de sécurité internationales, à l'instar de l'agence américaine NSA, ont recommandé une mise à jour immédiate des systèmes."
+      "Une double vulnérabilité critique découverte dans PHP a conduit à la mise hors ligne préventive de nombreux sites institutionnels et gouvernementaux à travers le monde.",
+      "La France et plusieurs autres pays ont placé leurs plateformes étatiques en maintenance pour éviter des cyberattaques d'envergure.",
+      "Des agences de cybersécurité internationales, dont l'agence américaine NSA, ont recommandé des mises à jour immédiates, l'intelligence artificielle ayant joué un rôle clé tant dans la détection des failles que dans l'accélération des menaces."
     ],
     "droite": [
-      "Deux failles critiques de sécurité découvertes dans le langage informatique PHP ont menacé jusqu'à 70 % des sites web mondiaux.",
-      "Des milliers de plateformes, incluant les préfectures, les ministères, les impôts et Météo-France, ont été débranchées en urgence sur demande de l'ANSSI.",
-      "Plusieurs articles soulignent que ces vulnérabilités ont été identifiées grâce à l'intelligence artificielle, illustrant de nouveaux défis pour la cybersécurité."
+      "Une déconnexion en urgence d'une partie de l'Internet mondial a eu lieu suite à l'identification de failles de sécurité majeures dans le langage PHP.",
+      "Des services essentiels en France, incluant l'ensemble des préfectures et la préfecture de police de Paris, ont été coupés afin d'empêcher toute intrusion.",
+      "Certains médias soulignent le rôle de l'intelligence artificielle dans la découverte de ces brèches et évoquent une situation de panique parmi les gouvernements et les développeurs face aux risques de cyberattaques massives."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur l'accès restreint des services publics pour le grand public tout en restant factuelle sur les correctifs.",
-    "Le centre privilégie une approche institutionnelle et internationale en insistant sur les consignes de sécurité émises par les agences étatiques.",
-    "La droite dramatise l'événement en évoquant un web mondial menacé à 70 % et met en avant le rôle de l'intelligence artificielle dans la détection des failles."
+    "La gauche insiste en priorité sur la liste concrète des services publics français touchés et vulgarise l'impact de l'incident pour les usagers.",
+    "Le centre met l'accent sur la dimension internationale de la crise et sur les consignes de sécurité émises par les agences étatiques.",
+    "La droite dramatise l'événement en évoquant un Internet « débranché en urgence » et insiste sur la panique générale ainsi que sur la menace de cyberattaques massives."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 21
+  "summarizedArticleCount": 22
 }

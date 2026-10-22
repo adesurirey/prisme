@@ -6,6 +6,17 @@
   "storyDay": "2026-10-21",
   "articles": [
     {
+      "id": "ae0d8dabf2fd",
+      "outletId": "rfi",
+      "headline": "Ebola: «Aucun pays n'est à l'abri si on ne renforce pas la surveillance», affirme le Dr Jean Kaseya",
+      "url": "https://www.rfi.fr/fr/podcasts/le-grand-invit%C3%A9-afrique/20261022-ebola-aucun-pays-n-est-%C3%A0-l-abri-si-on-ne-renforce-pas-la-surveillance-affirme-le-dr-jean-kaseya",
+      "publishedAt": "2026-10-22T05:19:51.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/36f35b2c-76e4-11f1-b3e1-005056bfb2b6/w:1024/p:16x9/000-34JN8XF.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "8ebb1680c9de",
       "outletId": "rfi",
       "headline": "Ebola au Nigeria: des zones d'ombre sur le parcours de la patiente passée par l'Ouganda",
@@ -55,18 +66,19 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le journal Le Monde confirme la détection au Nigeria d'un cas de maladie à virus Ebola appartenant à la souche Bundibugyo chez une patiente."
+      "Le journal Le Monde confirme l'apparition d'un premier cas d'Ebola au Nigeria appartenant spécifiquement à l'espèce Bundibugyo."
     ],
     "centre": [
-      "Le Nigeria a officialisé un premier cas d'Ebola de souche Bundibugyo chez une femme hospitalisée à Abuja après un vol international depuis l'Ouganda.",
-      "Les autorités sanitaires locales font face à des zones d'ombre concernant le trajet exact de la patiente avant son arrivée, les données de l'OMS et de l'Africa CDC divergent de celles d' Kampala.",
-      "Des analyses génétiques approfondies ont été lancées afin d'identifier un éventuel lien avec la circulation virale active dans la région."
+      "Le Nigeria enregistre un premier cas d'Ebola de souche Bundibugyo chez une patiente arrivée d'Ouganda par un vol international et admise à Abuja.",
+      "Le directeur général d'Africa CDC, le Dr Jean Kaseya, alerte sur une circulation avérée du virus en Ouganda malgré les démentis de Kampala et s'inquiète du nombre important de cas contacts.",
+      "Des zones d'ombre persistent sur le parcours exact de la patiente contaminée et des analyses génétiques tentent d'établir un lien avec l'épidémie régionale.",
+      "L'épidémie gagne du terrain dans la région, le Kenya étant également touché par neuf cas confirmés."
     ]
   },
   "differences": [
-    "La gauche se concentre exclusivement sur la confirmation scientifique de la souche virale identifiée chez la patiente.",
-    "Le centre met l'accent sur le choc de cette découverte à Abuja, le parcours incertain de la patiente et les contradictions entre institutions sanitaires."
+    "La gauche se focalise sobrement sur la confirmation scientifique de la souche virale identifiée au Nigeria.",
+    "Le centre adopte un angle d'alerte sanitaire globale en détaillant les inquiétudes des autorités sanitaires internationales sur la propagation du virus et les zones d'ombre du parcours de la patiente."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 5
 }
