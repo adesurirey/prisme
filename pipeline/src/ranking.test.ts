@@ -249,19 +249,21 @@ describe('assembleEdition', () => {
     );
 
   it('includes a frozen Story with an Article inside the window (ADR-0027)', () => {
-    // Founded 2026-10-05T04:00Z — its Ingestion window closed at 04:00Z of
-    // the Edition instant's day, so the Story is frozen — but an Article
-    // published 08:00Z of day D keeps it on la Une: the Edition is a window
-    // over all Stories, not the set of window-open ones.
+    // Founded 2026-10-04T20:00Z, newest Article 2026-10-05T12:00Z: its
+    // Ingestion window closed at max(founding + 24h, newest + 12h) =
+    // 2026-10-05T20:00Z (the floor term wins), so the Story is frozen at
+    // the Edition instant — but that Article is inside the day window, so
+    // the Story stays on la Une: the Edition is a window over all Stories,
+    // not the set of window-open ones.
     const frozen = {
       ...story(
         'frozen',
         [
-          article('f1', { publishedAt: '2026-10-05T04:00:00Z' }),
-          article('f2', { publishedAt: '2026-10-06T08:00:00Z' }),
+          article('f1', { publishedAt: '2026-10-04T20:00:00Z' }),
+          article('f2', { publishedAt: '2026-10-05T12:00:00Z' }),
         ],
-        '2026-10-05T04:00:00Z',
-        '2026-10-05',
+        '2026-10-04T20:00:00Z',
+        '2026-10-04',
       ),
       everInEdition: true,
     };

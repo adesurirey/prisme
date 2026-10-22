@@ -1,6 +1,6 @@
 import { XMLParser } from 'fast-xml-parser';
 
-import { LIVE_WINDOW_MS } from './liveness.ts';
+import { COLLECTION_WINDOW_MS } from './liveness.ts';
 
 /**
  * One item as parsed from a feed. Carries the teaser (feed description) in
@@ -87,8 +87,8 @@ const SLUG_DATE = /-(\d{2})-(\d{2})-(\d{4})-[^/]*$/;
  * Publication day (Le Parisien convention) serves only as a freshness
  * guard — the Article is stamped with the exact collection instant, never
  * an invented clock time, and marked so the arbitrariness stays recorded.
- * An Article whose URL day is older than the live window is dropped: the
- * collection stamp must not resurrect archive headlines as fresh.
+ * An Article whose URL day is older than the collection window is dropped:
+ * the collection stamp must not resurrect archive headlines as fresh.
  */
 function withPublicationDay(
   item: ParsedItem,
@@ -103,7 +103,7 @@ function withPublicationDay(
   if (month < 1 || month > 12 || day > daysInMonth(year, month)) return item;
   if (
     Date.parse(startOfParisDay(year, month, day)) <
-    now.getTime() - LIVE_WINDOW_MS
+    now.getTime() - COLLECTION_WINDOW_MS
   )
     return undefined;
   return {

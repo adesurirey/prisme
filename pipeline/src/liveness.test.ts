@@ -1,12 +1,15 @@
 import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
 import {
+  COLLECTION_WINDOW_MS,
   foundingInstant,
+  INGESTION_FLOOR_MS,
+  INGESTION_SILENCE_MS,
   ingestionIsOpen,
   ingestionWindowClosesAt,
   isLive,
   joinsIngestionWindow,
-  LIVE_WINDOW_MS,
+  newestInstant,
 } from './liveness.ts';
 
 const NOW = new Date('2026-10-07T14:00:00Z');
@@ -29,9 +32,14 @@ const story = (articles: Article[], id = 's1'): Story => ({
   articles,
 });
 
-describe('LIVE_WINDOW_MS', () => {
-  it('is exactly 24 hours', () => {
-    expect(LIVE_WINDOW_MS).toBe(24 * 60 * 60 * 1000);
+describe('the two windows are separate constants (ADR-0027)', () => {
+  it('the collection window is exactly 24 hours — what a build gathers', () => {
+    expect(COLLECTION_WINDOW_MS).toBe(24 * 60 * 60 * 1000);
+  });
+
+  it('the Ingestion floor is 24 hours and the silence term 12 hours', () => {
+    expect(INGESTION_FLOOR_MS).toBe(24 * 60 * 60 * 1000);
+    expect(INGESTION_SILENCE_MS).toBe(12 * 60 * 60 * 1000);
   });
 });
 
@@ -51,6 +59,7 @@ describe('foundingInstant (ADR-0026)', () => {
   it('is derived on demand, never stored: no field carries it', () => {
     const s = story([article('2026-10-06T10:00:00Z')]);
     expect(Object.keys(s)).not.toContain('founding');
+    expect(Object.keys(s)).not.toContain('newest');
   });
 
   it('is undefined for an empty or all-undated Story', () => {
@@ -67,39 +76,114 @@ describe('foundingInstant (ADR-0026)', () => {
   });
 });
 
-describe('ingestion window (ADR-0026): [founding, founding + 24h]', () => {
-  it('closes 24 hours after the founding instant, whatever the wall clock', () => {
-    // 22:00 UTC Oct 6 + 24h = 22:00 UTC Oct 7 — no 06:00 Paris cut.
-    expect(ingestionWindowClosesAt(Date.parse('2026-10-06T22:00:00Z'))).toBe(
+describe('newestInstant (ADR-0027)', () => {
+  it('is the latest publishedAt among the Story’s Articles', () => {
+    expect(
+      newestInstant(
+        story([
+          article('2026-10-06T12:00:00Z', 'a2'),
+          article('2026-10-06T10:00:00Z', 'a1'),
+          article('2026-10-06T11:00:00Z', 'a3'),
+        ]),
+      ),
+    ).toBe(Date.parse('2026-10-06T12:00:00Z'));
+  });
+
+  it('is undefined for an empty or all-undated Story', () => {
+    expect(newestInstant(story([]))).toBeUndefined();
+    expect(newestInstant(story([article('not-a-date')]))).toBeUndefined();
+  });
+
+  it('ignores an unparseable date among dated ones', () => {
+    expect(
+      newestInstant(
+        story([article('not-a-date', 'a0'), article('2026-10-06T10:00:00Z')]),
+      ),
+    ).toBe(Date.parse('2026-10-06T10:00:00Z'));
+  });
+});
+
+describe('ingestion window (ADR-0027): [founding, max(founding + 24h, newest + 12h)]', () => {
+  it('is never shorter than founding + 24h: the floor term wins while it is the later', () => {
+    // Founded 22:00Z, newest Article five hours later: the pure-rolling
+    // 12h-from-newest rule would close the window at founding + 17h —
+    // ADR-0027 measured that regression (252 of 339 Stories frozen
+    // earlier) and rejected it. The floor holds: founding + 24h.
+    const s = story([
+      article('2026-10-06T22:00:00Z', 'a0'),
+      article('2026-10-07T03:00:00Z', 'a2'),
+    ]);
+    expect(ingestionWindowClosesAt(s)).toBe(Date.parse('2026-10-07T22:00:00Z'));
+  });
+
+  it('extends to newest + 12h once that is later than the floor', () => {
+    // Founded 22:00Z Oct 6, newest Article 20:00Z Oct 7 (founding + 22h):
+    // the close is newest + 12h = 08:00Z Oct 8, past founding + 24h.
+    const s = story([
+      article('2026-10-06T22:00:00Z', 'a0'),
+      article('2026-10-07T20:00:00Z', 'a2'),
+    ]);
+    expect(ingestionWindowClosesAt(s)).toBe(Date.parse('2026-10-08T08:00:00Z'));
+  });
+
+  it('each Article that joined pushed the close 12 hours past itself', () => {
+    const solo = story([article('2026-10-06T22:00:00Z', 'a0')]);
+    const grown = story([
+      article('2026-10-06T22:00:00Z', 'a0'),
+      article('2026-10-07T18:00:00Z', 'a2'),
+    ]);
+    expect(ingestionWindowClosesAt(solo)).toBe(
       Date.parse('2026-10-07T22:00:00Z'),
+    );
+    expect(ingestionWindowClosesAt(grown)).toBe(
+      Date.parse('2026-10-08T06:00:00Z'),
     );
   });
 
   it('is open right at the founding instant', () => {
     expect(
       ingestionIsOpen(
-        Date.parse('2026-10-06T22:00:00Z'),
+        story([article('2026-10-06T22:00:00Z', 'a0')]),
         new Date('2026-10-06T22:00:00Z'),
       ),
     ).toBe(true);
   });
 
-  it('is closed at the window close + ε (sharp exit)', () => {
-    const founding = Date.parse('2026-10-06T21:59:59Z');
-    expect(ingestionIsOpen(founding, new Date('2026-10-07T21:59:59Z'))).toBe(
-      true,
-    );
-    expect(ingestionIsOpen(founding, new Date('2026-10-07T22:00:00Z'))).toBe(
-      false,
-    );
-  });
-
   it('is closed before the founding instant', () => {
     expect(
       ingestionIsOpen(
-        Date.parse('2026-10-06T22:00:00Z'),
+        story([article('2026-10-06T22:00:00Z', 'a0')]),
         new Date('2026-10-06T21:59:59Z'),
       ),
+    ).toBe(false);
+  });
+
+  it('floor boundary: open at exactly founding + 24h, closed one second later', () => {
+    const s = story([article('2026-10-06T22:00:00Z', 'a0')]);
+    expect(ingestionIsOpen(s, new Date('2026-10-07T21:59:59Z'))).toBe(true);
+    expect(ingestionIsOpen(s, new Date('2026-10-07T22:00:00Z'))).toBe(true);
+    expect(ingestionIsOpen(s, new Date('2026-10-07T22:00:01Z'))).toBe(false);
+  });
+
+  it('silence boundary: open at exactly newest + 12h, closed one second later', () => {
+    // In the extension regime (close = newest + 12h, later than the floor):
+    // founded 22:00Z Oct 6, newest 20:00Z Oct 7, close 08:00Z Oct 8.
+    const s = story([
+      article('2026-10-06T22:00:00Z', 'a0'),
+      article('2026-10-07T20:00:00Z', 'a2'),
+    ]);
+    expect(ingestionIsOpen(s, new Date('2026-10-08T07:59:59Z'))).toBe(true);
+    expect(ingestionIsOpen(s, new Date('2026-10-08T08:00:00Z'))).toBe(true);
+    expect(ingestionIsOpen(s, new Date('2026-10-08T08:00:01Z'))).toBe(false);
+  });
+
+  it('is closed for an empty or all-undated Story: no founding, no window', () => {
+    expect(ingestionWindowClosesAt(story([]))).toBeUndefined();
+    expect(ingestionIsOpen(story([]), NOW)).toBe(false);
+    expect(joinsIngestionWindow(story([]), NOW.toISOString())).toBe(false);
+    expect(ingestionIsOpen(story([article('not-a-date')]), NOW)).toBe(false);
+    expect(
+      joinsIngestionWindow(story([article('not-a-date')]), NOW.toISOString()),
     ).toBe(false);
   });
 
@@ -107,19 +191,37 @@ describe('ingestion window (ADR-0026): [founding, founding + 24h]', () => {
     // Founded 2026-10-18 00:01 Paris (= 22:01 UTC Oct 17, the reference
     // Stories of issue #116): an Article published 2026-10-18 10:00 Paris
     // (08:00 UTC) — after midnight, well inside the window — joins.
-    const founding = Date.parse('2026-10-17T22:01:00Z');
-    expect(joinsIngestionWindow(founding, '2026-10-18T08:00:00Z')).toBe(true);
+    const s = story([article('2026-10-17T22:01:00Z', 'a0')]);
+    expect(joinsIngestionWindow(s, '2026-10-18T08:00:00Z')).toBe(true);
   });
 
   it('an Article published exactly at the window close still joins; one second later does not', () => {
-    const founding = Date.parse('2026-10-06T22:00:00Z');
-    expect(joinsIngestionWindow(founding, '2026-10-07T22:00:00Z')).toBe(true);
-    expect(joinsIngestionWindow(founding, '2026-10-07T22:00:01Z')).toBe(false);
+    const s = story([article('2026-10-06T22:00:00Z', 'a0')]);
+    expect(joinsIngestionWindow(s, '2026-10-07T22:00:00Z')).toBe(true);
+    expect(joinsIngestionWindow(s, '2026-10-07T22:00:01Z')).toBe(false);
   });
 
-  it('an Article published before the founding never joins (strict, no pre-founding Articles)', () => {
-    const founding = Date.parse('2026-10-06T22:00:00Z');
-    expect(joinsIngestionWindow(founding, '2026-10-06T21:59:59Z')).toBe(false);
+  it('an Article inside the silence extension joins up to newest + 12h, not a second later', () => {
+    const s = story([
+      article('2026-10-06T22:00:00Z', 'a0'),
+      article('2026-10-07T20:00:00Z', 'a2'),
+    ]);
+    expect(joinsIngestionWindow(s, '2026-10-08T08:00:00Z')).toBe(true);
+    expect(joinsIngestionWindow(s, '2026-10-08T08:00:01Z')).toBe(false);
+  });
+
+  it('an Article published before the founding never joins (strict, no pre-founding Articles) — even mid-extension', () => {
+    const s = story([
+      article('2026-10-06T22:00:00Z', 'a0'),
+      article('2026-10-07T20:00:00Z', 'a2'),
+    ]);
+    expect(joinsIngestionWindow(s, '2026-10-06T21:59:59Z')).toBe(false);
+    expect(joinsIngestionWindow(s, '2026-10-06T22:00:00Z')).toBe(true);
+  });
+
+  it('an Article with an unparseable date never joins', () => {
+    const s = story([article('2026-10-06T22:00:00Z', 'a0')]);
+    expect(joinsIngestionWindow(s, 'not-a-date')).toBe(false);
   });
 
   it('DST fall-back weekend: instant arithmetic, not wall-clock (Europe, last Sunday of October 2026)', () => {
@@ -127,18 +229,27 @@ describe('ingestion window (ADR-0026): [founding, founding + 24h]', () => {
     // clocks fall back Sunday 03:00 Paris → 02:00. The window closes
     // Sunday 22:00 Paris = 21:00 UTC (CET) — exactly 24h of elapsed time,
     // although the wall clock spans 25 hours of civil time.
-    const founding = Date.parse('2026-10-24T21:00:00Z');
+    const s = story([article('2026-10-24T21:00:00Z', 'a0')]);
     // Sunday 22:30 Paris = 21:30 UTC (CET): 24.5h after the founding in
     // real elapsed time — past the window, even though the wall clock says
     // only 23.5h of civil time since 23:00 Saturday.
-    expect(joinsIngestionWindow(founding, '2026-10-25T20:29:00Z')).toBe(true);
-    expect(joinsIngestionWindow(founding, '2026-10-25T21:31:00Z')).toBe(false);
-    expect(ingestionIsOpen(founding, new Date('2026-10-25T20:59:00Z'))).toBe(
-      true,
-    );
-    expect(ingestionIsOpen(founding, new Date('2026-10-25T21:01:00Z'))).toBe(
-      false,
-    );
+    expect(joinsIngestionWindow(s, '2026-10-25T20:29:00Z')).toBe(true);
+    expect(joinsIngestionWindow(s, '2026-10-25T21:31:00Z')).toBe(false);
+    expect(ingestionIsOpen(s, new Date('2026-10-25T20:59:00Z'))).toBe(true);
+    expect(ingestionIsOpen(s, new Date('2026-10-25T21:01:00Z'))).toBe(false);
+  });
+
+  it('DST fall-back in the silence term: newest + 12h of elapsed time, not wall-clock', () => {
+    // Founded Saturday 21:00 UTC (CEST), newest Article Sunday 10:00 UTC
+    // (CET, after the fall-back): the close is Sunday 22:00 UTC — 25h of
+    // elapsed time from the founding, 12h of elapsed time from the newest,
+    // whatever the civil clocks did overnight.
+    const s = story([
+      article('2026-10-24T21:00:00Z', 'a0'),
+      article('2026-10-25T10:00:00Z', 'a2'),
+    ]);
+    expect(ingestionIsOpen(s, new Date('2026-10-25T21:59:00Z'))).toBe(true);
+    expect(ingestionIsOpen(s, new Date('2026-10-25T22:01:00Z'))).toBe(false);
   });
 
   it('DST spring-forward weekend: instant arithmetic, not wall-clock (Europe, last Sunday of March 2026)', () => {
@@ -146,34 +257,66 @@ describe('ingestion window (ADR-0026): [founding, founding + 24h]', () => {
     // jump Sunday 02:00 Paris → 03:00. Sunday 21:30 Paris = 20:30 UTC
     // (CEST): 22.5h after the founding in real elapsed time — inside the
     // window, even though the wall clock says 23h30 was not yet reached.
-    const founding = Date.parse('2026-03-28T22:00:00Z');
-    expect(joinsIngestionWindow(founding, '2026-03-29T20:30:00Z')).toBe(true);
-    expect(joinsIngestionWindow(founding, '2026-03-29T22:01:00Z')).toBe(false);
+    const s = story([article('2026-03-28T22:00:00Z', 'a0')]);
+    expect(joinsIngestionWindow(s, '2026-03-29T20:30:00Z')).toBe(true);
+    expect(joinsIngestionWindow(s, '2026-03-29T22:01:00Z')).toBe(false);
   });
 });
 
 describe('isLive', () => {
   it('is true for a Story founded just inside the window', () => {
-    const fresh = new Date(NOW.getTime() - LIVE_WINDOW_MS + 1000);
+    const fresh = new Date(NOW.getTime() - COLLECTION_WINDOW_MS + 1000);
     expect(isLive(story([article(fresh.toISOString())]), NOW)).toBe(true);
   });
 
-  it('is false for a Story founded just past the window (sharp 24h exit)', () => {
-    const stale = new Date(NOW.getTime() - LIVE_WINDOW_MS - 1000);
+  it('is false for a Story silent past its full day (the floor exit)', () => {
+    // One Article, published at the founding, silence ever since: the
+    // window closes at founding + 24h — the sharp exit of the floor term.
+    const stale = new Date(NOW.getTime() - COLLECTION_WINDOW_MS - 1000);
     expect(isLive(story([article(stale.toISOString())]), NOW)).toBe(false);
   });
 
-  it('is false for a Story with an Article inside its window but whose window has closed', () => {
-    // Founded 24h + 1s ago, an Article published one minute before the
-    // close (so one minute ago): the recency rule would call it live, the
-    // window rule freezes it — the sharp exit at the close (ADR-0026).
-    const founding = NOW.getTime() - LIVE_WINDOW_MS - 1000;
-    const beforeClose = new Date(founding + LIVE_WINDOW_MS - 60_000);
+  it('is true more than 24h past the founding while the newest Article is less than 12h old (ADR-0027)', () => {
+    // Founded 30h ago, newest Article 2h ago: the ADR-0026 rule froze this
+    // Story (the close at founding + 24h passed 6h ago); the silence rule
+    // keeps it open until newest + 12h. This reversal is the feature.
+    const founding = new Date(NOW.getTime() - 30 * 3_600_000);
+    const newest = new Date(NOW.getTime() - 2 * 3_600_000);
     expect(
       isLive(
         story([
-          article(new Date(founding).toISOString(), 'a0'),
-          article(beforeClose.toISOString(), 'a2'),
+          article(founding.toISOString(), 'a0'),
+          article(newest.toISOString(), 'a2'),
+        ]),
+        NOW,
+      ),
+    ).toBe(true);
+  });
+
+  it('is live at exactly newest + 12h past a 24h-old founding (the silence boundary)', () => {
+    const founding = new Date(NOW.getTime() - 30 * 3_600_000);
+    const newest = new Date(NOW.getTime() - 12 * 3_600_000);
+    expect(
+      isLive(
+        story([
+          article(founding.toISOString(), 'a0'),
+          article(newest.toISOString(), 'a2'),
+        ]),
+        NOW,
+      ),
+    ).toBe(true);
+  });
+
+  it('is false once the silence outlasts the extension', () => {
+    // Founded 40h ago, newest Article 36h ago: the close is max(founding +
+    // 24h, newest + 12h) = founding + 24h, 16h ago — frozen.
+    const founding = new Date(NOW.getTime() - 40 * 3_600_000);
+    const newest = new Date(NOW.getTime() - 36 * 3_600_000);
+    expect(
+      isLive(
+        story([
+          article(founding.toISOString(), 'a0'),
+          article(newest.toISOString(), 'a2'),
         ]),
         NOW,
       ),
@@ -181,7 +324,7 @@ describe('isLive', () => {
   });
 
   it('is true for a Story with several Articles all inside the window', () => {
-    const early = new Date(NOW.getTime() - LIVE_WINDOW_MS + 60_000);
+    const early = new Date(NOW.getTime() - COLLECTION_WINDOW_MS + 60_000);
     const late = new Date(NOW.getTime() - 60_000);
     expect(
       isLive(

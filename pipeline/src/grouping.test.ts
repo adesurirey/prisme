@@ -1180,7 +1180,7 @@ describe('groupStories', () => {
     expect(outcome.live).toHaveLength(0);
   });
 
-  it('an Article published 23:50 and collected at 00:10 joins its Story (ADR-0026 window)', async () => {
+  it('an Article published 23:50 and collected at 00:10 joins its Story (ADR-0027 window)', async () => {
     // 2026-10-06T21:50Z = 23:50 Paris on Oct 6; NOW = 00:10 Paris on Oct 7.
     const outcome = await groupStories(
       input({
@@ -1206,7 +1206,7 @@ describe('groupStories', () => {
     expect(outcome.changed.has('story-un')).toBe(true);
   });
 
-  it('an Article published the morning after an evening founding joins the Story (ADR-0026, issue #116)', async () => {
+  it('an Article published the morning after an evening founding joins the Story (ADR-0027, issue #116)', async () => {
     // The Trump/Zelensky shape: a Story founded 2026-10-17 22:01 UTC
     // (00:01 Paris) absorbs the overnight cycle — here an Article published
     // 2026-10-18 08:00 UTC (10:00 Paris), which the day rule of ADR-0017
@@ -1244,8 +1244,9 @@ describe('groupStories', () => {
     expect(outcome.live.map((s) => s.id)).toEqual(['s1']);
   });
 
-  it('an Article published just past the window close is refused: the Story is frozen (ADR-0026)', async () => {
-    // Founded 2026-10-17T22:01:00Z, the window closes 2026-10-18T22:01:00Z:
+  it('an Article published just past the window close is refused: the Story is frozen (ADR-0027)', async () => {
+    // Founded 2026-10-17T22:01:00Z with no later Article, the window closes
+    // at founding + 24h = 2026-10-18T22:01:00Z (the floor term):
     // an Article published one second later finds a frozen Story and stays
     // Unassigned — re-presented next build, retried against open windows.
     const outcome = await groupStories(
@@ -1276,6 +1277,193 @@ describe('groupStories', () => {
     expect(s.articles.map((a) => a.id)).toEqual(['a0']); // not merged: window closed
     expect(outcome.changed.size).toBe(0);
     expect(outcome.live).toHaveLength(0);
+  });
+
+  it('a Story more than 24h past its founding whose newest Article is less than 12h old is still live and absorbs a matching Article (ADR-0027)', async () => {
+    // Founded 2026-10-05T10:00Z, newest Article 2026-10-06T10:00Z, NOW
+    // 2026-10-06T12:00Z: 26 hours past the founding — ADR-0026 froze it 2
+    // hours ago; the silence rule keeps it open until newest + 12h. The
+    // model sees it in the live pool and the assignment merges.
+    const calls: {
+      input?: Parameters<import('./gemini.ts').GroupingModel['group']>[0];
+    }[] = [];
+    const outcome = await groupStories(
+      input({
+        articles: [article('a-new', { publishedAt: '2026-10-06T11:30:00Z' })],
+        existing: [
+          story({
+            id: 's1',
+            slug: 'saga',
+            title: 'Saga',
+            storyDay: '2026-10-05',
+            articles: [
+              article('a0', { publishedAt: '2026-10-05T10:00:00Z' }),
+              article('a1', { publishedAt: '2026-10-06T10:00:00Z' }),
+            ],
+          }),
+        ],
+        clients: {
+          grouping: fakeGrouping(
+            {
+              newStories: [],
+              assignments: [
+                { articleId: 'a-new', storyId: 's1', confidence: 0.9 },
+              ],
+            },
+            calls,
+          ),
+          membership: fakeMembership(true),
+        },
+      }),
+    );
+    // The resolver's live pool follows the new window: the model sees it.
+    expect(calls[0]!.input!.stories.map((s) => s.id)).toEqual(['s1']);
+    const s = outcome.stories.find((s) => s.id === 's1')!;
+    expect(s.articles.map((a) => a.id)).toContain('a-new');
+    expect(outcome.changed.has('saga')).toBe(true);
+  });
+
+  it('a Story silent past max(founding + 24h, newest + 12h) is frozen: invisible to the model, refusing merges (ADR-0027)', async () => {
+    // Founded 2026-10-04T20:00Z, newest Article 2026-10-05T00:00Z, NOW
+    // 2026-10-06T12:00Z: the close is founding + 24h (2026-10-05T20:00Z) —
+    // the silence term (2026-10-05T12:00Z) never rose past the floor. The
+    // Story is closed for good (ADR-0005): same-event fresh coverage
+    // cannot merge and will birth its Episode instead.
+    const calls: {
+      input?: Parameters<import('./gemini.ts').GroupingModel['group']>[0];
+    }[] = [];
+    const outcome = await groupStories(
+      input({
+        articles: [article('a-new', { publishedAt: '2026-10-06T11:00:00Z' })],
+        existing: [
+          story({
+            id: 's1',
+            slug: 'passee',
+            title: 'Passée',
+            storyDay: '2026-10-04',
+            articles: [
+              article('a0', { publishedAt: '2026-10-04T20:00:00Z' }),
+              article('a1', { publishedAt: '2026-10-05T00:00:00Z' }),
+            ],
+          }),
+        ],
+        clients: {
+          grouping: fakeGrouping(
+            {
+              newStories: [],
+              assignments: [
+                { articleId: 'a-new', storyId: 's1', confidence: 0.9 },
+              ],
+            },
+            calls,
+          ),
+          membership: fakeMembership(true),
+        },
+      }),
+    );
+    expect(calls[0]!.input!.stories).toEqual([]); // invisible to the model
+    const s = outcome.stories.find((s) => s.id === 's1')!;
+    expect(s.articles.map((a) => a.id)).toEqual(['a0', 'a1']); // untouched
+    expect(outcome.changed.size).toBe(0);
+    expect(outcome.live).toHaveLength(0);
+  });
+
+  it('the floor holds: a Story silent 23h past its founding still absorbs (founding + 24h, not founding + 12h) (ADR-0027)', async () => {
+    // Founded 2026-10-05T13:00Z with a single Article, NOW 2026-10-06
+    // 12:00Z: the close is founding + 24h (2026-10-06T13:00Z) — one hour
+    // of life left. The pure-rolling rule ADR-0027 rejected would have
+    // frozen it 11 hours ago (newest + 12h = 2026-10-06T01:00Z); the floor
+    // term keeps every Story a full day.
+    const outcome = await groupStories(
+      input({
+        articles: [article('a-new', { publishedAt: '2026-10-06T11:00:00Z' })],
+        existing: [
+          story({
+            id: 's1',
+            slug: 'soir',
+            title: 'Soir',
+            storyDay: '2026-10-05',
+            articles: [article('a0', { publishedAt: '2026-10-05T13:00:00Z' })],
+          }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [
+              { articleId: 'a-new', storyId: 's1', confidence: 0.9 },
+            ],
+          }),
+          membership: fakeMembership(true),
+        },
+      }),
+    );
+    const s = outcome.stories.find((s) => s.id === 's1')!;
+    expect(s.articles.map((a) => a.id)).toContain('a-new');
+    expect(outcome.changed.has('soir')).toBe(true);
+  });
+
+  it('fresh coverage of a Story silent past its extension births its Episode (ADR-0027)', async () => {
+    // The predecessor froze at founding + 24h (2026-10-05T20:00Z — the
+    // floor term wins here: newest + 12h = 2026-10-05T12:00Z is earlier);
+    // the new development is fresh and cannot join the closed Story
+    // (ADR-0005): it births the Episode (ADR-0018), and the Jev-confirmed
+    // thread inherits the predecessor's Topic (ADR-0024) — the exit a 24h-
+    // frozen Story already had, now also the exit for silences past the
+    // extension. The two fresh Articles come from two distinct Outlets —
+    // the birth minimum (ADR-0015, ADR-0027) — the scoop's Outlet plus the
+    // follow-up's.
+    // (The proven episode pair of the Topics suite, against a frozen
+    // predecessor this time.)
+    const predecessor = story({
+      id: 's1',
+      slug: 'oregon',
+      title: 'Un adolescent tue quatre personnes dans une école de l’Oregon',
+      storyDay: '2026-10-04',
+      topicId: 'un-adolescent-tue-quatre-personnes-dans-une-ecole-de-l-oreg',
+      articles: [
+        article('a0', {
+          headline:
+            'Quatre morts dans une fusillade dans une école de l’Oregon',
+          publishedAt: '2026-10-04T20:00:00Z',
+        }),
+        article('a1', {
+          headline:
+            'La tuerie de l’Oregon : l’adolescent avait été élève de l’école',
+          publishedAt: '2026-10-05T00:00:00Z',
+        }),
+      ],
+    });
+    const outcome = await groupStories(
+      input({
+        articles: [
+          article('a2', {
+            headline:
+              'Fusillade dans une école de l’Oregon : l’auteur était un ancien élève',
+          }),
+          article('a3', {
+            outletId: 'lefigaro',
+            headline:
+              'La tuerie de l’Oregon : un an après, le procès s’ouvre à Portland',
+          }),
+        ],
+        existing: [predecessor],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a3', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+          }),
+          membership: fakeMembership(true),
+        },
+      }),
+    );
+    const born = outcome.stories.find((s) => s.id === '000000000001')!;
+    expect(born.topicId).toBe(predecessor.topicId);
+    const p = outcome.stories.find((s) => s.id === 's1')!;
+    expect(p.articles).toHaveLength(2); // untouched, closed for good
+    expect(outcome.live.map((s) => s.id)).toEqual(['000000000001']);
   });
 
   it('a late-collected old Article (window closed) is never grouped: Unassigned, retried next build', async () => {
@@ -1429,10 +1617,11 @@ describe('groupStories', () => {
     ]); // newest first
   });
 
-  it('the model only sees Stories whose Ingestion window is open (ADR-0026)', async () => {
+  it('the model only sees Stories whose Ingestion window is open (ADR-0027)', async () => {
     // NOW = Oct 6 12:00Z (14:00 Paris): the Oct 5 Story was founded 26
-    // hours ago — its window is closed, invisible to the model even though
-    // prompt text is unchanged.
+    // hours ago and silent ever since — its window closed at founding +
+    // 24h, so it is invisible to the model even though prompt text is
+    // unchanged.
     const calls: {
       input?: Parameters<import('./gemini.ts').GroupingModel['group']>[0];
     }[] = [];
@@ -1467,12 +1656,13 @@ describe('groupStories', () => {
     expect(modelInput.stories.map((s) => s.id)).toEqual(['s1']);
   });
 
-  it('mega-story guardrail: a Story’s Articles never exceed its 24h window (ADR-0026)', async () => {
+  it('an overnight cycle lands whole in one Story: each merge extends the window (ADR-0027)', async () => {
     // A Story founded 2026-10-05 22:00 UTC absorbs a full overnight cycle —
     // one Article per hour, 22:30 UTC through 21:30 UTC the next day. Every
-    // merge passes its Membership check, and the whole member set still
-    // spans strictly less than 24 hours of publishedAt: the window is
-    // bounded from birth, no Story ever decays into a topic-like mega-page.
+    // merge passes its Membership check and extends the window 12 hours
+    // past itself, so the day's coverage stays one Story instead of
+    // forking next-day fragments (ADR-0027); the Story is still live at
+    // the end of the build.
     const overnight = Array.from({ length: 24 }, (_, i) =>
       article(`b${String(i).padStart(2, '0')}`, {
         publishedAt: new Date(
@@ -1511,6 +1701,7 @@ describe('groupStories', () => {
     expect(Math.max(...times) - Math.min(...times)).toBeLessThanOrEqual(
       24 * 60 * 60 * 1000,
     );
+    expect(outcome.live.map((s) => s.id)).toContain('s1');
   });
 
   it('recomputes the Story Section after merges, from the Articles', async () => {
