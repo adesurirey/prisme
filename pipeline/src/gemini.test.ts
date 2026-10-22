@@ -40,6 +40,15 @@ describe('groupingPrompt (ADR-0018)', () => {
     expect(prompt).toContain("ne l'assigne jamais à la story-mère");
   });
 
+  it('carries the two-distinct-Outlets birth rule (ADR-0027)', () => {
+    const prompt = groupingPrompt({ stories: [], articles: [] });
+    expect(prompt).toContain(
+      "d'au moins deux articles d'au moins deux médias distincts",
+    );
+    // The old two-Articles-only wording is gone (ADR-0015 as amended).
+    expect(prompt).not.toContain("d'au moins deux articles (ADR-0015)");
+  });
+
   it('the grouping prompt names no title: titles are written by the Title pass (ADR-0023)', () => {
     const prompt = groupingPrompt({ stories: [], articles: [] });
     expect(prompt).toContain("N'écris aucun titre");

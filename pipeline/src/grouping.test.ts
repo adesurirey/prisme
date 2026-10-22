@@ -1,6 +1,11 @@
 import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
-import { bestEpisodeMatch, groupStories, memberDigest } from './grouping.ts';
+import {
+  bestEpisodeMatch,
+  groupStories,
+  meetsBirthMinimum,
+  memberDigest,
+} from './grouping.ts';
 import { missingMembershipChecker } from './policy.ts';
 
 /** Deterministic 12-hex ids, so slug suffixes are predictable. */
@@ -269,6 +274,7 @@ describe('groupStories', () => {
             headline: 'Le syndicat Alliance dépose plainte contre l\u2019État',
           }),
           article('a2', {
+            outletId: 'liberation',
             headline:
               'La plainte du syndicat Alliance détaillée par le parquet',
           }),
@@ -626,7 +632,10 @@ describe('groupStories', () => {
       input({
         articles: [
           article('a1', { publishedAt: '2026-10-06T09:00:00Z' }),
-          article('a2', { publishedAt: '2026-10-06T10:00:00Z' }),
+          article('a2', {
+            outletId: 'liberation',
+            publishedAt: '2026-10-06T10:00:00Z',
+          }),
         ],
         clients: {
           grouping: fakeGrouping({
@@ -670,11 +679,130 @@ describe('groupStories', () => {
     expect(outcome.stories).toHaveLength(0);
   });
 
+  it('two same-Outlet Articles proposed as a new Story never publish; both stay Unassigned and retry each build (ADR-0027)', async () => {
+    // The Grouping model never sees Outlet ids, so the Outlet dimension of
+    // the birth minimum is enforced at the drop pass, like the two-Article
+    // minimum: a single-Outlet proposal is dropped before it can publish.
+    const groupingCalls: {
+      input?: Parameters<import('./gemini.ts').GroupingModel['group']>[0];
+    }[] = [];
+    const proposePair = () =>
+      fakeGrouping(
+        {
+          newStories: [{ key: 'k1' }],
+          assignments: [
+            { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+            { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+          ],
+        },
+        groupingCalls,
+      );
+    const first = await groupStories(
+      input({
+        articles: [article('a1'), article('a2')], // both lemonde: one Outlet
+        clients: {
+          grouping: proposePair(),
+          membership: fakeMembership(true),
+        },
+      }),
+    );
+    // Dropped before it can publish: no Story, no file, nothing live.
+    expect(first.stories).toHaveLength(0);
+    expect(first.changed.size).toBe(0);
+    expect(first.live).toHaveLength(0);
+    // Both Articles stayed Unassigned — written to no Story file — so the
+    // next build re-presents them as fresh, until a second Outlet covers
+    // the event or they age out of the collection window.
+    await groupStories(
+      input({
+        articles: [article('a1'), article('a2')],
+        existing: first.stories,
+        clients: {
+          grouping: proposePair(),
+          membership: fakeMembership(true),
+        },
+      }),
+    );
+    expect(groupingCalls[1]?.input?.articles.map((a) => a.id)).toEqual([
+      'a1',
+      'a2',
+    ]);
+  });
+
+  it('the same pair plus one Article from a second Outlet births the Story; the earliest Article anchors the founding (ADR-0027)', async () => {
+    // The second Outlet's scoop — published 23:50 Paris on Oct 5, collected
+    // with the Oct 6 pair — is the earliest member: it anchors the founding
+    // instant (and the Story day) even though it was not the seed.
+    const outcome = await groupStories(
+      input({
+        articles: [
+          article('a1', { publishedAt: '2026-10-06T09:00:00Z' }),
+          article('a2', { publishedAt: '2026-10-06T10:00:00Z' }),
+          article('scoop', {
+            outletId: 'liberation',
+            publishedAt: '2026-10-05T21:50:00Z',
+          }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'scoop', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+          }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass({ titles: [{ key: 'k1', title: 'Le scoop' }] }),
+        },
+      }),
+    );
+    expect(outcome.stories).toHaveLength(1);
+    expect(outcome.stories[0]!.articles.map((a) => a.id).sort()).toEqual([
+      'a1',
+      'a2',
+      'scoop',
+    ]);
+    // The founding instant is the earliest Article of the member set —
+    // the scoop's Publication day (ADR-0017, ADR-0026).
+    expect(outcome.stories[0]!.storyDay).toBe('2026-10-05');
+  });
+
+  it('a birth from one news Article and one Opinion Article of two different Outlets is valid (ADR-0011, ADR-0027)', async () => {
+    // An Opinion piece counts toward the birth like any Article: the
+    // minimum counts Articles and Outlets, never Kinds.
+    const outcome = await groupStories(
+      input({
+        articles: [
+          article('a1', { kind: 'news' }),
+          article('o1', { outletId: 'liberation', kind: 'opinion' }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'o1', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+          }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass({ titles: [{ key: 'k1', title: 'Édito' }] }),
+        },
+      }),
+    );
+    expect(outcome.stories).toHaveLength(1);
+    expect(outcome.stories[0]!.articles.map((a) => a.id)).toEqual(['a1', 'o1']);
+  });
+
   it('a new Story carries its seed unconditionally; every further member is checked against the seed', async () => {
     const membershipCalls: { story?: string; article?: string }[] = [];
     const outcome = await groupStories(
       input({
-        articles: [article('a1'), article('a2'), article('a3')],
+        articles: [
+          article('a1'),
+          article('a2', { outletId: 'liberation' }),
+          article('a3'),
+        ],
         clients: {
           grouping: fakeGrouping({
             newStories: [{ key: 'k1' }],
@@ -689,7 +817,8 @@ describe('groupStories', () => {
       }),
     );
     // a1 is the seed (fresh order): joins without a check. a2 and a3 are
-    // checked — against the seed headline, not the proposed title.
+    // checked — against the seed headline, not the proposed title. a2
+    // carries the second Outlet the birth minimum needs (ADR-0027).
     expect(outcome.stories).toHaveLength(1);
     expect(outcome.stories[0]!.articles.map((a) => a.id)).toEqual([
       'a1',
@@ -760,7 +889,7 @@ describe('groupStories', () => {
   it('a key Story no Article claimed never publishes', async () => {
     const outcome = await groupStories(
       input({
-        articles: [article('a1'), article('a2')],
+        articles: [article('a1'), article('a2', { outletId: 'liberation' })],
         clients: {
           grouping: fakeGrouping({
             newStories: [{ key: 'k1' }, { key: 'k2' }],
@@ -782,7 +911,7 @@ describe('groupStories', () => {
     const existing = [story({ slug: 'collision' })];
     const outcome = await groupStories(
       input({
-        articles: [article('a1'), article('a2')],
+        articles: [article('a1'), article('a2', { outletId: 'liberation' })],
         existing,
         clients: {
           grouping: fakeGrouping({
@@ -808,9 +937,13 @@ describe('groupStories', () => {
       input({
         articles: [
           article('a1', { headline: 'Le Sénat adopte le budget 2027' }),
-          article('a2', { headline: 'Le budget 2027 adopté par le Sénat' }),
+          article('a2', {
+            outletId: 'liberation',
+            headline: 'Le budget 2027 adopté par le Sénat',
+          }),
           article('a3', { headline: 'Victoire du Stade Toulousain en rugby' }),
           article('a4', {
+            outletId: 'liberation',
             headline: 'Le Stade Toulousain remporte le match de rugby',
           }),
         ],
@@ -852,9 +985,13 @@ describe('groupStories', () => {
       input({
         articles: [
           article('a1', { headline: 'Le Sénat adopte le budget 2027' }),
-          article('a2', { headline: 'Le budget 2027 adopté par le Sénat' }),
+          article('a2', {
+            outletId: 'liberation',
+            headline: 'Le budget 2027 adopté par le Sénat',
+          }),
           article('a3', { headline: 'Victoire du Stade Toulousain en rugby' }),
           article('a4', {
+            outletId: 'liberation',
             headline: 'Le Stade Toulousain remporte le match de rugby',
           }),
         ],
@@ -897,7 +1034,7 @@ describe('groupStories', () => {
     ];
     const outcome = await groupStories(
       input({
-        articles: [article('a1'), article('a2')],
+        articles: [article('a1'), article('a2', { outletId: 'liberation' })],
         existing,
         clients: {
           grouping: fakeGrouping({
@@ -1170,7 +1307,10 @@ describe('groupStories', () => {
         now: new Date('2026-10-06T22:10:00Z'),
         articles: [
           article('a-seed', { publishedAt: '2026-10-06T21:50:00Z' }),
-          article('a-mate', { publishedAt: '2026-10-06T21:55:00Z' }),
+          article('a-mate', {
+            outletId: 'liberation',
+            publishedAt: '2026-10-06T21:55:00Z',
+          }),
         ],
         clients: {
           grouping: fakeGrouping({
@@ -1198,7 +1338,10 @@ describe('groupStories', () => {
       input({
         articles: [
           article('a-seed', { publishedAt: '2026-10-06T10:00:00Z' }),
-          article('a-early', { publishedAt: '2026-10-06T09:50:00Z' }),
+          article('a-early', {
+            outletId: 'liberation',
+            publishedAt: '2026-10-06T09:50:00Z',
+          }),
         ],
         clients: {
           grouping: fakeGrouping({
@@ -1261,7 +1404,10 @@ describe('groupStories', () => {
         now: new Date('2026-10-06T22:10:00Z'),
         articles: [
           article('a-seed', { publishedAt: '2026-10-06T22:01:00Z' }),
-          article('a-next', { publishedAt: '2026-10-06T22:05:00Z' }),
+          article('a-next', {
+            outletId: 'liberation',
+            publishedAt: '2026-10-06T22:05:00Z',
+          }),
         ],
         clients: {
           grouping: fakeGrouping({
@@ -1438,8 +1584,10 @@ describe('groupStories', () => {
     function nobelArticles(): Article[] {
       return [
         article('a1', { headline: nobel.a1 }),
-        article('a2', { headline: nobel.a2 }),
-        article('a3', { headline: nobel.a3 }),
+        // Two Outlets among the twins: the collapsed birth meets the
+        // two-Outlet minimum (ADR-0027).
+        article('a2', { outletId: 'liberation', headline: nobel.a2 }),
+        article('a3', { outletId: 'liberation', headline: nobel.a3 }),
       ];
     }
 
@@ -1498,12 +1646,14 @@ describe('groupStories', () => {
           articles: [
             article('a1', { headline: 'Le Sénat adopte le budget 2027' }),
             article('a2', {
+              outletId: 'liberation',
               headline: 'Le budget 2027 adopté par le Sénat',
             }),
             article('a3', {
               headline: 'Victoire du Stade Toulousain en rugby',
             }),
             article('a4', {
+              outletId: 'liberation',
               headline: 'Le Stade Toulousain remporte le match de rugby',
             }),
           ],
@@ -1763,6 +1913,39 @@ describe('groupStories', () => {
   });
 });
 
+describe('meetsBirthMinimum (ADR-0015, ADR-0027)', () => {
+  it('needs at least two Articles: the Article dimension of the birth minimum', () => {
+    expect(meetsBirthMinimum([])).toBe(false);
+    expect(meetsBirthMinimum([article('a1')])).toBe(false);
+  });
+
+  it('needs at least two distinct Outlets: the Outlet dimension (ADR-0027)', () => {
+    expect(
+      meetsBirthMinimum([article('a1'), article('a2'), article('a3')]), // all default to lemonde
+    ).toBe(false);
+  });
+
+  it('two Articles from two distinct Outlets meet the minimum', () => {
+    expect(
+      meetsBirthMinimum([
+        article('a1'),
+        article('o1', { outletId: 'liberation' }),
+      ]),
+    ).toBe(true);
+  });
+
+  it('an Opinion Article counts toward the birth like any Article (ADR-0011)', () => {
+    // The rule counts Articles and Outlets, never Kinds — an Opinion
+    // piece from a second Outlet completes a birth.
+    expect(
+      meetsBirthMinimum([
+        article('a1', { kind: 'news' }),
+        article('o1', { outletId: 'liberation', kind: 'opinion' }),
+      ]),
+    ).toBe(true);
+  });
+});
+
 describe('memberDigest (ADR-0018)', () => {
   const candidate = article('a1', {
     headline: 'Le syndicat Alliance dépose plainte contre l\u2019État',
@@ -1853,7 +2036,10 @@ describe('Title pass (ADR-0023)', () => {
       input({
         articles: [
           article('a1', { headline: 'Le Sénat adopte le budget' }),
-          article('a2', { headline: 'Le budget adopté cette nuit' }),
+          article('a2', {
+            outletId: 'liberation',
+            headline: 'Le budget adopté cette nuit',
+          }),
           article('a3', {
             headline: 'Le budget adopté',
             publishedAt: '2026-10-06T11:00:00Z',
@@ -1911,6 +2097,7 @@ describe('Title pass (ADR-0023)', () => {
               'Fusillade dans une école de l’Oregon : l’auteur était un ancien élève',
           }),
           article('a2', {
+            outletId: 'liberation',
             headline:
               'La tuerie de l’Oregon : l’adolescent avait été élève de l’école',
           }),
@@ -1960,7 +2147,10 @@ describe('Title pass (ADR-0023)', () => {
       input({
         articles: [
           article('a1', { headline: 'Angèle sort son troisième album' }),
-          article('a2', { headline: 'Angèle conclut sa tournée à Paris' }),
+          article('a2', {
+            outletId: 'liberation',
+            headline: 'Angèle conclut sa tournée à Paris',
+          }),
         ],
         existing: [
           story({
@@ -2016,7 +2206,7 @@ describe('Title pass (ADR-0023)', () => {
     await expect(
       groupStories(
         input({
-          articles: [article('a1'), article('a2')],
+          articles: [article('a1'), article('a2', { outletId: 'liberation' })],
           clients: {
             grouping: fakeGrouping({
               newStories: [{ key: 'k1' }],
@@ -2038,7 +2228,7 @@ describe('Title pass (ADR-0023)', () => {
       [];
     await groupStories(
       input({
-        articles: [article('a1'), article('a2')],
+        articles: [article('a1'), article('a2', { outletId: 'liberation' })],
         clients: {
           grouping: fakeGrouping({
             newStories: [{ key: 'k1' }],
@@ -2190,7 +2380,10 @@ describe('Topics (ADR-0024)', () => {
     return input({
       articles: [
         article('a1', { headline: OREGON_EPISODE_HEADLINES[0]! }),
-        article('a2', { headline: OREGON_EPISODE_HEADLINES[1]! }),
+        article('a2', {
+          outletId: 'liberation',
+          headline: OREGON_EPISODE_HEADLINES[1]!,
+        }),
       ],
       existing: [EPISODE],
       clients: {
@@ -2264,7 +2457,10 @@ describe('Topics (ADR-0024)', () => {
           article('a1', {
             headline: 'Angèle sort son troisième album Instinct',
           }),
-          article('a2', { headline: 'Instinct, le nouvel album d’Angèle' }),
+          article('a2', {
+            outletId: 'liberation',
+            headline: 'Instinct, le nouvel album d’Angèle',
+          }),
         ],
         existing: [EPISODE],
         clients: {
@@ -2295,7 +2491,10 @@ describe('Topics (ADR-0024)', () => {
       input({
         articles: [
           article('a1', { headline: OREGON_EPISODE_HEADLINES[0]! }),
-          article('a2', { headline: OREGON_EPISODE_HEADLINES[1]! }),
+          article('a2', {
+            outletId: 'liberation',
+            headline: OREGON_EPISODE_HEADLINES[1]!,
+          }),
         ],
         existing: [{ ...EPISODE, topicId: undefined }],
         clients: {
@@ -2348,7 +2547,10 @@ describe('Topics (ADR-0024)', () => {
       input({
         articles: [
           article('a1', { headline: OREGON_EPISODE_HEADLINES[0]! }),
-          article('a2', { headline: OREGON_EPISODE_HEADLINES[1]! }),
+          article('a2', {
+            outletId: 'liberation',
+            headline: OREGON_EPISODE_HEADLINES[1]!,
+          }),
         ],
         existing: [EPISODE, older],
         clients: {
