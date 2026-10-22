@@ -237,11 +237,15 @@ export async function updateSummaries(input: {
     // isolate-and-retry-later path). Liveness, the same check as
     // frontpage.ts/edition-history.ts, gates the loop.
     if (!isLive(story, now)) continue;
-    const seen = story.summarizedArticleCount ?? 0;
-    // Articles are append-only and sorted newest first (ADR-0006): the
-    // unseen ones are the first `length - seen` entries.
-    const newCount = story.articles.length - seen;
-    if (newCount <= 0) continue;
+    // ADR-0027: a Story re-enters the Summaries budget only when it has
+    // never been summarized or grew at least 25% since its last pass —
+    // the watermark counter carries the gate. When it fires, the pass
+    // re-synthesizes from the whole Article set (below), never a delta.
+    const seen = story.summarizedArticleCount;
+    if (seen != null) {
+      const growth = (story.articles.length - seen) / seen;
+      if (growth < 0.25) continue;
+    }
 
     // Only Leanings with Coverage are summarized (ADR-0011: an all-Opinion
     // Story now has Coverage, so it is summarized like any other).
@@ -249,8 +253,8 @@ export async function updateSummaries(input: {
     const coveredLeanings = LEANINGS.filter((l) => counts[l] > 0);
     if (coveredLeanings.length === 0) continue;
 
-    // The budget (ADR-0022) counts actual model calls: Stories with no
-    // unseen Articles or no Coverage cost zero and never consume it.
+    // The budget (ADR-0022) counts actual model calls: Stories below the
+    // growth gate or with no Coverage cost zero and never consume it.
     if (budget != null && calls >= budget) continue;
 
     // The whole Article set, not a delta: the model re-synthesizes from
