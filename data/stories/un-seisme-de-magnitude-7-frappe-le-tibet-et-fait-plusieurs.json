@@ -6,13 +6,35 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "ee76f87c41cd",
+      "outletId": "rfi",
+      "headline": "Un puissant séisme de magnitude 7 fait des morts et de nombreux blessés au Tibet",
+      "url": "https://www.rfi.fr/fr/asie-pacifique/20261022-un-puissant-s%C3%A9isme-de-magnitude-7-fait-des-morts-et-de-nombreux-bless%C3%A9s-au-tibet",
+      "publishedAt": "2026-10-22T21:33:40.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/27dfdcfe-ce60-11f1-8cb5-7967b15eed96/w:1024/p:16x9/000-C74N8KE.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "050fdd855cca",
+      "outletId": "france-24",
+      "headline": "Chine : un séisme de magnitude 7 fait de nombreux morts au Tibet",
+      "url": "https://www.france24.com/fr/asie-pacifique/20261022-chine-un-s%C3%A9isme-de-magnitude-7-fait-de-nombreux-morts-au-tibet",
+      "publishedAt": "2026-10-22T21:17:28.000Z",
+      "imageUrl": "https://s.france24.com/media/display/fbbd82cc-ce5d-11f1-97a6-23d55109f116/w:1024/p:16x9/ac629e79b049c0c45210a347ff86908be3a86cb3.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "cf0c8beb399b",
       "outletId": "le-monde",
       "headline": "En Chine, le séisme de magnitude 7 qui a frappé la région du Tibet fait 16 morts et des dizaines de blessés",
       "url": "https://www.lemonde.fr/planete/article/2026/10/22/en-chine-le-seisme-de-magnitude-7-qui-a-frappe-la-region-du-tibet-fait-16-morts-et-des-dizaines-de-blesses_6798655_3245.html",
       "publishedAt": "2026-10-22T20:52:18.000Z",
       "imageUrl": "https://img.lemde.fr/2025/06/26/250/0/3000/1500/644/322/60/0/a4171a8_upload-1-gmnv4c2b7rpr-frame-39.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -68,25 +90,25 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un séisme d'une magnitude de 7 a touché le Tibet tard dans la soirée.",
-      "Le bilan provisoire fait état de 16 morts et de nombreuses personnes blessées.",
-      "Des effondrements d'habitations ont été confirmés par l'agence Xinhua."
+      "Un séisme majeur de magnitude 7 a secoué le Tibet en Chine jeudi soir à 22 h 33.",
+      "Le tremblement de terre a fait 16 morts et des dizaines de blessés dans cette zone sismique.",
+      "Plus de 300 habitations se sont effondrées sous la violence de la secousse selon Xinhua."
     ],
     "centre": [
-      "La région tibétaine a été secouée par un tremblement de terre d'une magnitude de 7.",
-      "L'événement sismique a causé la mort de plusieurs victimes dans la zone."
+      "Un séisme de magnitude 7 a frappé le Tibet jeudi 22 octobre selon l'agence Xinhua.",
+      "Le bilan provisoire fait état de 16 morts et de 32 blessés dans la région himalayenne.",
+      "Plus de 300 maisons se sont effondrées dans cette zone montagneuse touchée par les secousses."
     ],
     "droite": [
-      "Un séisme majeur de magnitude 7 a frappé la région du Tibet.",
-      "L'épicentre a été localisé à 390 kilomètres au nord-est de Lhassa selon l'USGS.",
-      "Le Figaro précise qu'aucun bilan officiel n'a encore été communiqué par les autorités."
+      "Un puissant séisme de magnitude 7 a touché la région du Tibet en Chine.",
+      "Des victimes et des dégâts matériels importants sont signalés à la suite de la secousse."
     ]
   },
   "differences": [
-    "La gauche chiffre immédiatement les pertes humaines en recensant 16 décès et des dizaines de blessés.",
-    "Le centre livre un résumé très laconique signalant l'événement et des victimes sans entrer dans le détail des bilans chiffrés.",
-    "La droite souligne l'absence de chiffres officiels de la part des autorités et localise précisément l'épicentre d'après l'USGS."
+    "La gauche détaille le bilan humain et l'ampleur des dégâts matériels en s'appuyant sur les données officielles de l'agence Xinhua.",
+    "Le centre met l'accent sur les bilans précis de 16 morts et 32 blessés fournis par les autorités chinoises.",
+    "La droite se focalise sur l'alerte initiale et la nature puissante de la secousse sans détailler immédiatement l'ensemble des bilans chiffrés."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5
+  "summarizedArticleCount": 7
 }

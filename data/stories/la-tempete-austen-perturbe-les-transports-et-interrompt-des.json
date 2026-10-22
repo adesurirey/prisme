@@ -6,6 +6,28 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "36bfe22871b4",
+      "outletId": "cnews",
+      "headline": "Tempête Austen : C, D, E, H… Voici les lignes SNCF qui seront perturbées ce vendredi",
+      "url": "https://www.cnews.fr/france/2026-10-22/tempete-austen-c-d-e-h-voici-les-lignes-sncf-qui-seront-perturbees-ce-vendredi",
+      "publishedAt": "2026-10-22T20:23:00.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_smouchmouche_2627784-taille1200_6ada74c0b573c.jpg?h=8826e3bd&itok=JUldt8AV",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "0c5a7818a696",
+      "outletId": "europe-1",
+      "headline": "Tempête Austen : trafic perturbé en Ile-de-France vendredi, des lignes suspendues",
+      "url": "https://www.europe1.fr/societe/tempete-austen-trafic-perturbe-en-ile-de-france-vendredi-des-lignes-suspendues-1174596?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-10-22T20:21:25.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/22/22/080_hl_dperron_3312558_1_6ada701b5b7c2.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "other"
+    },
+    {
       "id": "1119ae13d516",
       "outletId": "le-figaro",
       "headline": "Transports en Île-de-France : le trafic de plusieurs lignes de train interrompu ce vendredi en raison de la tempête Austen",
@@ -34,15 +56,14 @@
   "everInEdition": true,
   "summaries": {
     "droite": [
-      "Le trafic de plusieurs lignes de train est interrompu ce vendredi en Île-de-France à cause de la tempête Austen.",
-      "De fortes rafales de vent sont attendues sur une partie de la région, entraînant des perturbations sur le réseau francilien.",
-      "TF1 Info précise que quinze départements sont placés en vigilance orange par Météo-France en raison de cette bombe météorologique.",
-      "La tempête provoque des vents atteignant 140 km/h et perturbe la circulation ferroviaire avant de s'affaiblir vendredi en fin d'après-midi."
+      "La tempête Austen entraîne la suspension préventive de plusieurs lignes de train et RER en Île-de-France pour ce vendredi.",
+      "SNCF Réseau limite la vitesse des circulations et recommande aux voyageurs de différer leurs déplacements par mesure de sécurité.",
+      "Météo-France place plusieurs départements en vigilance orange face aux risques de vents violents pouvant atteindre 140 km/h."
     ]
   },
   "differences": [
-    "La droite se focalise exclusivement sur les perturbations concrètes du réseau ferroviaire francilien et l'approche de la tempête."
+    "La droite se focalise exclusivement sur les aspects pratiques et sécuritaires des perturbations ferroviaires en Île-de-France en reprenant les consignes de prudence de la SNCF."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 4
 }

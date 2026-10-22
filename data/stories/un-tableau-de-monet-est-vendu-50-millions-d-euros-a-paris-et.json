@@ -6,6 +6,17 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "d8ae8bee2c5a",
+      "outletId": "la-croix",
+      "headline": "Art : un tableau de Monet vendu 50 millions d’euros, record pour des enchères d’art en France",
+      "url": "https://www.la-croix.com/culture/art-un-tableau-de-monet-vendu-50-millions-d-euros-record-pour-des-encheres-dart-en-france-20261022",
+      "publishedAt": "2026-10-22T19:15:12.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/22/2569997-le-tableau-iris-de-claude-monet-s-est-vendu-jeudi-.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
       "id": "055baea3f3bd",
       "outletId": "europe-1",
       "headline": "Paris : un tableau de Monet vendu 50 millions d'euros, record pour des enchères d'art en France",
@@ -23,7 +34,7 @@
       "url": "https://www.lemonde.fr/culture/article/2026/10/22/un-tableau-de-monet-vendu-50-millions-d-euros-a-paris-record-pour-des-encheres-d-art-en-france_6798663_3246.html",
       "publishedAt": "2026-10-22T18:34:13.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/22/489/0/5865/2932/644/322/60/0/2d14653_upload-1-2id911a8he30-000-c8jt2bv.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "culture",
       "everFrontPage": true
@@ -102,27 +113,28 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le tableau \"Iris\" de Claude Monet a atteint 50 millions d'euros chez Sotheby's à Paris, établissant un record absolu d'enchères d'art en France.",
-      "L'oeuvre était restée inédite et totalement inconnue du public, illustrée auparavant par une unique photographie en noir et blanc.",
-      "La valorisation exceptionnelle de cette toile tardive est attribuée à son format monumental ainsi qu'à son état de conservation remarquable."
+      "Le tableau \"Iris\" de Claude Monet a atteint le montant historique de 50 millions d'euros lors d'une vente aux enchères chez Sotheby's à Paris.",
+      "Cette transaction constitue un record absolu pour une œuvre d'art adjugée aux enchères en France.",
+      "L'œuvre était totalement inédite pour le grand public, n'étant connue auparavant que par une unique photographie en noir et blanc.",
+      "Franceinfo précise que la valeur de cette grande toile de fin de vie s'appuie également sur sa conservation exceptionnelle et ses dimensions de 1,60 mètre sur 1,80 mètre."
     ],
     "centre": [
-      "Une toile monumentale de Claude Monet intitulée \"Iris\" a été adjugée pour 50 millions d'euros à Paris par la maison Sotheby's.",
-      "Cette transaction historique constitue un record absolu pour des enchères artistiques en France.",
-      "Le journal Ouest-France mentionne de son côté un montant d'adjudication de 43 millions d'euros pour la même oeuvre."
+      "L'œuvre \"Iris\" de Claude Monet a été vendue pour la somme de 50 millions d'euros lors d'une vente aux enchères organisée par Sotheby's à Paris.",
+      "Cet événement marque un record historique pour une vente artistique menée en France.",
+      "Ouest-France mentionne toutefois un montant de transaction s'élevant à 43 millions d'euros pour cette adjudication."
     ],
     "droite": [
-      "La toile monumentale \"Iris\" de Claude Monet a été vendue pour 50 millions d'euros frais inclus lors de ventes aux enchères à Paris.",
-      "Ce montant constitue un record historique pour une oeuvre d'art adjugée en France, selon la maison Sotheby's.",
-      "Le tableau mesurant 1,60 mètre sur 1,80 mètre n'avait jamais quitté l'hôtel particulier de la famille Schlumberger et dépassait largement son estimation initiale.",
-      "Trois autres toiles du peintre impressionniste ont également été vendues pour plusieurs millions d'euros lors de cet événement."
+      "Le tableau monumental \"Iris\" de Claude Monet a été adjugé à Paris pour 50 millions d'euros, frais inclus.",
+      "Cette vente historique établit le record absolu d'une œuvre d'art vendue aux enchères en France selon Sotheby's.",
+      "La toile de 1,60 mètre sur 1,80 mètre était présentée pour la première fois au public, sortant directement de l'hôtel particulier parisien de la famille Schlumberger.",
+      "L'œuvre bénéficiait d'une estimation préalable comprise entre 22 et 30 millions d'euros, qualifiée par la maison de ventes de plus haute estimation jamais attribuée."
     ]
   },
   "differences": [
-    "Le camp de gauche met l'accent sur le caractère inédit de l'oeuvre et son parcours secret avant la vente.",
-    "Le camp du centre livre une information synthétique tout en comportant des divergences locales sur le montant final de l'adjudication.",
-    "Le camp de droite développe précisément les caractéristiques physiques de la toile, son estimation financière initiale et la vente d'autres oeuvres associées."
+    "Le camp gauche insiste sur le caractère inédit de la toile, longtemps invisible du public, tout en valorisant les précisions techniques sur son état et sa dimension.",
+    "Le camp centre adopte un traitement factuel centré sur l'événement et le montant record, tout en incluant une divergence chiffrée notable chez Ouest-France.",
+    "Le camp droite privilégie un récit détaillé axé sur l'exclusivité de la découverte, l'historique familial du tableau issu de la collection Schlumberger et l'écart avec les estimations initiales."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 8
+  "summarizedArticleCount": 9
 }
