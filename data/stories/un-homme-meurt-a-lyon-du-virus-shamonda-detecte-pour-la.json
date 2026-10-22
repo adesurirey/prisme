@@ -6,6 +6,17 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "8963d35f0007",
+      "outletId": "rfi",
+      "headline": "Le virus Shamonda détecté pour la première fois chez l'être humain en France, un patient immunodéprimé décède",
+      "url": "https://www.rfi.fr/fr/france/20261022-le-virus-shamonda-d%C3%A9tect%C3%A9-pour-la-premi%C3%A8re-fois-chez-l-%C3%AAtre-humain-en-france-un-patient-immunod%C3%A9prim%C3%A9-d%C3%A9c%C3%A8de",
+      "publishedAt": "2026-10-22T16:12:38.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/5f6771f0-cf43-11ea-9d16-005056a98db9/w:1024/p:16x9/000_1qq477_0.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "abf527e12d6b",
       "outletId": "lobs",
       "headline": "Faut-il s’inquiéter du virus Shamonda, qui vient de faire sa première victime humaine en France ?",
@@ -210,26 +221,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un patient sévèrement immunodéprimé est mort à Lyon début octobre après avoir contracté le virus Shamonda, un pathogène jusqu'ici cantonné aux animaux d'élevage.",
-      "Les autorités sanitaires soulignent qu'aucun risque sanitaire n'est identifié pour la population générale.",
-      "Ce virus n'entre pas dans le cadre de la législation européenne et ne fait l'objet d'aucune mesure officielle de surveillance ou de lutte."
+      "Un patient sévèrement immunodéprimé est décédé à Lyon au début du mois d'octobre des suites du virus Shamonda.",
+      "Il s'agit d'une première contamination humaine documentée pour ce pathogène jusqu'alors cantonné aux bovins et transmis par des moucherons.",
+      "Les autorités sanitaires soulignent qu'aucun risque pour la population générale n'est identifié à ce stade."
     ],
     "centre": [
-      "Le virus Shamonda a été détecté pour la première fois chez un être humain, un patient hospitalisé aux Hospices civils de Lyon.",
-      "La maladie, connue depuis les années 1960 chez les bovins et transmise par des insectes piqueurs, a provoqué le décès du patient au début d'octobre.",
-      "Le gouvernement et les autorités sanitaires affirment qu'il s'agit d'un cas exceptionnel sans transmission interhumaine."
+      "Un homme immunodéprimé est mort en France des complications cérébrales liées au virus Shamonda, une première mondiale selon les autorités.",
+      "Le virus circulait jusqu'ici uniquement chez les animaux d'élevage et n'avait jamais été détecté chez l'être humain.",
+      "Le gouvernement assure qu'aucun risque sanitaire n'est identifié pour la population générale."
     ],
     "droite": [
-      "Un patient français lourdement immunodéprimé est décédé à Lyon des suites du virus Shamonda, une première mondiale documentée chez l'être humain.",
-      "La nouvelle de cette infection opportuniste d'origine animale a ravivé les craintes d'une menace pandémique.",
-      "Le virus est diffusé par de petits insectes piqueurs et circulait jusqu'alors principalement en Afrique et en Asie parmi les animaux d'élevage."
+      "Un patient lourdement immunodéprimé est décédé aux Hospices civils de Lyon après avoir contracté le virus Shamonda.",
+      "C'est la première fois que ce virus animal, présent chez les bovins, est détecté chez un être humain.",
+      "Le JDD qualifie l'événement de première mondiale, tandis que Causeur signale que la nouvelle réveille les craintes d'une menace pandémique."
     ]
   },
   "differences": [
-    "La gauche insiste sur l'absence de cadre réglementaire européen et de surveillance spécifique pour ce virus.",
-    "Le centre adopte un ton strictement informatif en se concentrant sur le profil du patient et l'origine animale de la transmission.",
-    "La droite accentue la dimension anxiogène de l'événement en évoquant une « menace pandémique » et une « première mondiale »."
+    "La gauche insiste sur la vulnérabilité du patient et le passage d'un virus animal aux animaux d'élevage vers l'humain.",
+    "Le centre adopte un ton strictement informatif et factuel en relayant les données officielles sur l'absence de risque pour la population.",
+    "La droite dramatise la portée de l'événement en évoquant une « menace pandémique » ou une « infection opportuniste », tout en relayant les rassurances des autorités."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 18
+  "summarizedArticleCount": 19
 }

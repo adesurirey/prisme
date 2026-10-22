@@ -6,6 +6,17 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "36c93205c9cc",
+      "outletId": "huffpost",
+      "headline": "Le crash d’un avion Mirage 2000D près de Nancy a tué un deuxième militaire, confirme le parquet",
+      "url": "https://www.huffingtonpost.fr/france/article/le-crash-d-un-avion-mirage-2000d-pres-de-nancy-a-tue-un-deuxieme-militaire-confirme-le-parquet_343501.html",
+      "publishedAt": "2026-10-22T18:23:32.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/21/321/0/4410/2480/0/0/60/0/56bed0b_upload-1-hmexz6cgrowv-afp-20261007-valls-tactical260929-np51t-v1-highres-tacticalleadershipprogrammea.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "efb14ab33ee5",
       "outletId": "le-parisien",
       "headline": "Crash d’un Mirage 2000D en Meurthe-et-Moselle : le corps du deuxième militaire retrouvé",
@@ -38,6 +49,18 @@
       "frontPage": false,
       "kind": "news",
       "section": "misc"
+    },
+    {
+      "id": "dd1b00be06cf",
+      "outletId": "20-minutes",
+      "headline": "Crash du Mirage 2000D : Les deux occupants de l’avion sont bel et bien décédés",
+      "url": "https://www.20minutes.fr/societe/4256773-20261022-crash-mirage-2000d-deux-occupants-avion-bel-bien-decedes?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-22T17:34:41.000Z",
+      "imageUrl": "https://img.20mn.fr/PJUyz6mPTKyVALFntQjsqik/1200x768_la-ba-133-abrite-la-3e-escadre-de-chasse-dont-les-escadrons-volent-tous-avec-le-mirage-4000d-chasseur-specialise-dans-l-attaque-au-sol-escadron-de-chasse-1-3-navarre-escadron-de-chasse-2-3-champagne-escadron-de-chasse-3-3-ardennes-escadron-de-transformation-mirage-2000d-4-3-argonne-elle-se-situe-a-l-ouest-de-nancy-france-04-05-2026-creee-en-1915-la-base-aerienne-133-nancy-ochey-a-henry-jeandet-a-de-l-armee-de-l-air-francaise-est-situee-dans-les-communes-d-ochey-et-de-thuilley-aux-groseilles-au-sud-de-toul-et-a-l-ouest-de-nancy-dans-le-departement-de-meurthe-et-moselle-en-region-grand-est-il-s-agit-de-l-une-des-bases-aeriennes-francaises-les-plus-anciennes-levequepatrick-09050160-credit-patrick-leveque-sipa-2605061003",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
     },
     {
       "id": "140889bc95f9",
@@ -78,27 +101,25 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le parquet de Metz a officialisé le décès des deux militaires se trouvant à bord du Mirage 2000D.",
-      "Le drame s'est produit mardi soir lors du trajet de retour consécutif à un vol d'entraînement.",
-      "Les raisons précises ayant provoqué l'accident demeurent indéterminées à ce stade."
+      "Le parquet de Metz a officialisé le décès du second militaire prisonnier de l'appareil.",
+      "Le drame s'est produit tard dans la soirée de mardi lors d'un vol d'entraînement nocturne.",
+      "Emmanuel Macron avait annoncé dès le lendemain la découverte du corps du pilote."
     ],
     "centre": [
-      "La justice a validé la mort des deux membres d'équipage de l'appareil militaire.",
-      "Le corps du deuxième militaire a été localisé à l'issue de recherches menées près de Nancy.",
-      "L'appareil effectuait une mission d'entraînement avant de s'écraser pour des causes encore inconnues.",
-      "Les victimes sont identifiées comme le lieutenant Quentin Klysz et le lieutenant-colonel Antranig Sarkissian."
+      "La justice a validé la mort des deux membres d'équipage dont le Mirage 2000D s'est abîmé près de Nancy.",
+      "Les victimes sont identifiées comme le lieutenant Quentin Klysz et le lieutenant-colonel Antranig Sarkissian.",
+      "Les raisons précises de l'accident survenu au retour d'un exercice demeurent indéterminées."
     ],
     "droite": [
-      "Le parquet de Metz a confirmé deux décès à la suite des investigations menées sur la zone du crash.",
-      "L'accident impliquant l'avion de chasse est intervenue mardi soir aux alentours de 23 heures près de Nancy.",
-      "La mort de la seconde victime a été officialisée après la découverte d'éléments matériels sur place."
+      "Le parquet de Metz a confirmé l'existence d'une seconde victime à la suite des investigations sur zone.",
+      "Le drame de l'arme aérienne est intervenu mardi peu avant minuit lors d'une mission de routine."
     ]
   },
   "differences": [
-    "La gauche se concentre strictement sur l'officialisation judiciaire du décès par le parquet de Metz, en insistant sur le contexte d'un vol d'entraînement dont les causes restent totalement mystérieuses.",
-    "Le centre adopte un traitement particulièrement détaillé en nommant directement les deux officiers décédés et en précisant l'absence d'éjection avant l'impact au sol.",
-    "La droite privilégie une approche factuelle et synthétique en mettant en avant les constatations matérielles du parquet sur la zone du crash menant à l'officialisation du second décès."
+    "La gauche met en avant l'intervention présidentielle dès le lendemain pour annoncer la première découverte macabre.",
+    "Le centre détaille l'identité complète des officiers décédés ainsi que le déroulement technique de la mission.",
+    "La droite privilégie une formulation sobre et factuelle centrée sur les déclarations du parquet local."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6
+  "summarizedArticleCount": 8
 }

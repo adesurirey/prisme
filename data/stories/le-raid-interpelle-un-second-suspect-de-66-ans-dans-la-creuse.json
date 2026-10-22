@@ -6,12 +6,34 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "370d96b67348",
+      "outletId": "lobs",
+      "headline": "Incendie de la mairie de Limoges : un deuxième suspect interpellé",
+      "url": "https://www.nouvelobs.com/justice/20261022.OBS119445/incendie-de-la-mairie-de-limoges-un-deuxieme-suspect-interpelle.html",
+      "publishedAt": "2026-10-22T18:59:04.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/10/22/0/0/5986/3991/0/0/60/0/f0feba2_upload-1-petig6iltm3l-000-d3lr764.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "a31fb95b876d",
       "outletId": "mediapart",
       "headline": "Un deuxième suspect interpellé après l’incendie criminel de la mairie de Limoges",
       "url": "https://www.mediapart.fr/journal/france/221026/un-deuxieme-suspect-interpelle-apres-l-incendie-criminel-de-la-mairie-de-limoges",
       "publishedAt": "2026-10-22T15:52:13.000Z",
       "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/10/22/261022-img-limoges.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "9208b5e65d63",
+      "outletId": "cnews",
+      "headline": "Incendie de la mairie de Limoges : pourquoi le plateau de Millevaches est-il dans le viseur ?",
+      "url": "https://www.cnews.fr/france/2026-10-22/incendie-de-la-mairie-de-limoges-pourquoi-le-plateau-de-millevaches-est-il-dans",
+      "publishedAt": "2026-10-22T15:30:02.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_88at2g6-taille1200_6ad8db505a9ec.jpg?itok=P7yKlO-f",
       "frontPage": false,
       "kind": "news",
       "section": "misc"
@@ -66,23 +88,24 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "L'enquête sur l'incendie de la mairie de Limoges s'accélère avec l'arrestation d'un second suspect dans la Creuse.",
-      "Le parquet requalifie les faits en tentative de meurtre en raison des risques encourus par les policiers sur place.",
-      "Ces interpellations font suite à celle d'un premier homme de 34 ans interpellé mardi en Haute-Vienne."
+      "L'enquête sur l'incendie de l'hôtel de ville de Limoges, survenu le 17 octobre lors de manifestations, s'accélère avec l'interpellation d'un deuxième suspect dans la Creuse.",
+      "Un premier suspect âgé de 34 ans, identifié comme écologiste et fiché S, avait déjà été interpellé mardi en Haute-Vienne.",
+      "Le parquet a requalifié les faits en tentative de meurtre, notamment en raison des risques encourus par les forces de l'ordre présentes."
     ],
     "centre": [
-      "Le maire de Limoges, Guillaume Guérin, réagit sur l'antenne de France 24 après l'incendie de la mairie."
+      "Le maire de Limoges, Guillaume Guérin, s'est exprimé sur France 24 pour réagir aux suites de l'incendie de la mairie."
     ],
     "droite": [
-      "Un second suspect âgé de 66 ans a été interpellé jeudi dans la Creuse avec l'appui du RAID après l'incendie criminel de la mairie de Limoges.",
-      "L'enquête progresse suite à cet incendie survenu le 17 octobre lors de la mobilisation contre la vie chère."
+      "Un second suspect âgé de 66 ans a été interpellé jeudi dans la Creuse avec l'appui du RAID, après l'arrestation le 20 octobre d'Hodei C.D., un écologiste de 34 ans fiché S.",
+      "L'enquête, initialement ouverte pour destruction en bande organisée, a été élargie au chef de tentative de meurtre sur personne dépositaire de l'autorité publique.",
+      "Les articles mettent en lumière l'implication présumée de la mouvance de l'ultragauche et relancent les interrogations sur les réseaux militants et les sabotages attribués au plateau de Millevaches."
     ]
   },
   "differences": [
-    "La gauche insiste sur l'évolution judiciaire de l'affaire et la requalification des faits en tentative de meurtre.",
-    "Le centre se focalise exclusivement sur la prise de parole institutionnelle du maire Guillaume Guérin.",
-    "La droite privilégie le récit factuel de l'opération policière menée par le RAID pour interpeller le second suspect."
+    "La gauche se concentre strictement sur le déroulement factuel des interpellations et la requalification juridique de l'enquête, sans mentionner l'appartenance politique des suspects.",
+    "Le centre se focalise exclusivement sur la réaction institutionnelle du maire de la ville concernée.",
+    "La droite contextualise longuement les interpellations en insistant sur l'appartenance des suspects à l'ultragauche, les fiches S et les tensions liées au plateau de Millevaches."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5
+  "summarizedArticleCount": 7
 }

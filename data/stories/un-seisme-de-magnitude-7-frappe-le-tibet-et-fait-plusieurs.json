@@ -6,6 +6,17 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "e0d22e746c0a",
+      "outletId": "le-figaro",
+      "headline": "Chine : un puissant séisme de magnitude 7 frappe la région du Tibet, des victimes signalées",
+      "url": "https://www.lefigaro.fr/international/chine-un-puissant-seisme-de-magnitude-7-frappe-la-region-du-tibet-20261022",
+      "publishedAt": "2026-10-22T19:04:37.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/22/39480146ec6338b9847fad7af66f383bfe5ab8ec81b871cc7ed8e726326a17c6.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "abf45d663d36",
       "outletId": "bfmtv",
       "headline": "Un séisme de magnitude 7 fait plusieurs victimes au Tibet",
@@ -45,18 +56,25 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un séisme majeur d'une magnitude de 7 a touché le Tibet jeudi soir à 22 h 33.",
-      "L'agence officielle Xinhua signale des effondrements de habitations dans cette zone habituelle de tremblements de terre."
+      "Un séisme majeur de magnitude 7 s'est produit jeudi à 22 h 33 dans la région autonome du Tibet.",
+      "L'agence officielle Xinhua a confirmé des effondrements d'habitations et des victimes humaines.",
+      "Cette zone géographique subit fréquemment des secousses sismiques."
     ],
     "centre": [
-      "Une secousse tellurique de magnitude 7 a frappé le Tibet en provoquant des victimes.",
-      "Plusieurs habitations se sont effondrées et le bilan précis reste encore indéterminé."
+      "Une violente secousse de magnitude 7 a touché le Tibet, entraînant plusieurs décès et blessés.",
+      "Les secouristes et les autorités font face à des dégâts matériels importants dans les zones touchées."
+    ],
+    "droite": [
+      "Un tremblement de terre de magnitude 7 a frappé le Tibet, provoquant des dégâts humains et matériels.",
+      "D'après l'Institut géologique américain USGS, l'épicentre se trouve à 390 kilomètres au nord-est de Lhassa.",
+      "Le Figaro précise qu'aucun bilan chiffré officiel n'a encore été communiqué par les autorités chinoises."
     ]
   },
   "differences": [
-    "La gauche met en avant l'heure exacte et la fréquence des séismes dans la région en s'appuyant sur l'agence officielle Xinhua.",
-    "Le centre insiste sur l'incertitude du bilan humain tout en confirmant les dégâts matériels importants."
+    "Le camp gauche privilégie une mise en contexte géographique et factuelle en insistant sur la récurrence des séismes et les dégâts structurels rapportés par l'agence Xinhua.",
+    "Le camp centre adopte une approche informative directe, axée principalement sur le bilan humain immédiat de la catastrophe.",
+    "Le camp droite intègre des données techniques de localisation fournies par l'USGS et relève l'absence initiale de chiffres officiels de mortalité."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }
