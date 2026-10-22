@@ -4,8 +4,9 @@ import type { Story } from '@prisme/domain';
  * The 24h window (ADR-0009 × ADR-0026): how long a build collects, how long
  * a Story ingests, and how long it stays Live — one product decision, one
  * constant. `collect.ts`/`feeds.ts` (what a build collects) and
- * `grouping.ts`/`ranking.ts` (what ingests and what publishes) must agree on
- * it by construction.
+ * `grouping.ts` (what ingests) must agree on it by construction. The
+ * Edition's rolling windows (ADR-0027) no longer read liveness: ranking.ts
+ * owns their lengths as its own constants.
  *
  * The Ingestion window (ADR-0026, superseding ADR-0017's Publication-day +
  * 06:00 grace window) is `[founding, founding + 24h]` in instant arithmetic,

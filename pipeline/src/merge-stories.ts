@@ -155,9 +155,11 @@ async function main(): Promise<number> {
 
   // The Edition is rebuilt from the Story files each run: replace the
   // Base's entry in place, drop the absorbed one — then re-rank with the
-  // production key itself (rankStories, the same function assembleEdition
-  // feeds at every build), so a Story that grew through the merge sits at
-  // its deserved rank immediately instead of waiting for the next build.
+  // whole-life Coverage key (rankStories; the build's assembleEdition
+  // ranks inside rolling windows, ADR-0027 — this immediate re-rank is
+  // the merge's best guess, and the next build re-derives both windows),
+  // so a Story that grew through the merge sits at its deserved rank
+  // immediately instead of waiting for the next build.
   edition.stories = rankStories(
     edition.stories
       .filter((s) => s.id !== absorbed.id)
