@@ -4,12 +4,15 @@
  * sticky), and only new Articles — under 24 hours old, absent from every
  * Story — are assigned, by the Grouping model, to a live Story or a new one.
  *
- * A Story ingests for 24 hours from its founding Article (ADR-0026): the
- * Ingestion window is `[founding, founding + 24h]` in instant arithmetic,
+ * A Story ingests until silence (ADR-0027): the Ingestion window is
+ * `[founding, max(founding + 24h, newest + 12h)]` in instant arithmetic,
  * where the founding instant is the earliest `publishedAt` among the
- * Story's Articles — never stored. A Story whose window has closed has
- * frozen: it is passed through untouched, never shown to the model, and a
- * later Article about the same event starts a new Story (its Episode,
+ * Story's Articles and the newest its latest — both derived on demand,
+ * never stored. Every Story keeps at least its full day (ADR-0026's
+ * floor); each Article that joins extends it by 12 hours while that is
+ * later than founding + 24h. A Story whose window has closed has frozen:
+ * it is passed through untouched, never shown to the model, and a later
+ * Article about the same event starts a new Story (its Episode,
  * ADR-0018). Its full Article history is kept forever (ADR-0005).
  *
  * Failure policy (ADR-0005, as amended in issue #40): a failed Grouping
@@ -54,11 +57,11 @@ import type {
 import { storySection } from './edition.ts';
 import type { GroupingModel, GroupingProposal } from './gemini.ts';
 import {
+  COLLECTION_WINDOW_MS,
   foundingInstant,
   ingestionIsOpen,
   isLive,
   joinsIngestionWindow,
-  LIVE_WINDOW_MS,
   parseInstant,
 } from './liveness.ts';
 import { MembershipGate } from './membership-gate.ts';
@@ -103,7 +106,7 @@ export interface GroupingOutcome {
   topics: ConfirmedTopic[];
 }
 
-/** True when the Story's Ingestion window is open (ADR-0026). */
+/** True when the Story's Ingestion window is open (ADR-0027). */
 export { isLive };
 
 /** Deterministic Story order: newest Article first, ties by id. An
@@ -115,17 +118,17 @@ function byNewestArticle(a: Story, b: Story): number {
 }
 
 /** Articles inside the rolling 24h collection window that no Story on disk
- * claims yet (ADR-0026): freshness is the collection window alone — the
- * Publication-day-open clause of ADR-0017 is gone, and window containment
- * is enforced where it belongs, at membership time. An Article whose target
- * Story's window rejects it stays Unassigned and is re-presented next
- * build. */
+ * claims yet (ADR-0027): freshness is the collection window alone — decoupled
+ * from the Ingestion window, which is longer while coverage continues — and
+ * window containment is enforced where it belongs, at membership time. An
+ * Article whose target Story's window rejects it stays Unassigned and is
+ * re-presented next build. */
 function freshArticles(
   articles: Article[],
   existing: Story[],
   now: Date,
 ): Article[] {
-  const cutoff = now.getTime() - LIVE_WINDOW_MS;
+  const cutoff = now.getTime() - COLLECTION_WINDOW_MS;
   const known = new Set(existing.flatMap((s) => s.articles.map((a) => a.id)));
   return articles.filter(
     (a) => !known.has(a.id) && (parseInstant(a.publishedAt) ?? 0) > cutoff,
@@ -548,17 +551,19 @@ export async function groupStories(
   for (const a of articles) sectionById.set(a.id, a.section);
   const sectionOf = (id: string): Section | undefined => sectionById.get(id);
 
-  /** The live Stories — those whose Ingestion window is open (ADR-0026):
+  /** The live Stories — those whose Ingestion window is open (ADR-0027):
    * the same set the Grouping model sees and the Edition publishes. */
   const liveSorted = () =>
     stories.filter((s) => isLive(s, now)).sort(byNewestArticle);
 
-  /** The belonging rule (ADR-0026): an Article joins a Story iff its
-   * publishedAt falls inside the Story's Ingestion window — strictly, with
-   * no pre-founding Articles. `founding` is the founding instant of the
-   * target Story. */
-  const canJoin = (article: Article, founding: number): boolean =>
-    joinsIngestionWindow(founding, article.publishedAt);
+  /** The belonging rule (ADR-0026, extended by ADR-0027): an Article joins
+   * a Story iff its publishedAt falls inside the Story's Ingestion window
+   * `[founding, max(founding + 24h, newest + 12h)]` — strictly, with no
+   * pre-founding Articles. */
+  const canJoin = (
+    article: Article,
+    target: Pick<Story, 'articles'>,
+  ): boolean => joinsIngestionWindow(target, article.publishedAt);
 
   // Topics confirmed this build, hoisted over the two resolution paths
   // below (the no-fresh-Articles path confirms nothing) — with the episode
@@ -617,7 +622,7 @@ export async function groupStories(
   };
 
   const groupingInput = {
-    // Only window-open Stories (ADR-0026) are visible to the model; frozen
+    // Only window-open Stories (ADR-0027) are visible to the model; frozen
     // ones are closed (ADR-0005). Prompt text is unchanged — the pool is
     // what moved from day-based to window-based.
     stories: liveSorted().map((s) => ({
@@ -699,22 +704,24 @@ export async function groupStories(
       keyFounding.set(ns.key, founding);
     }
 
-    // The belonging rule (ADR-0026) filters each key's members to the
-    // founding's Ingestion window at claim time: nothing precedes the
-    // founding — it is the earliest member — and a member published up to
-    // 24 hours after it joins, so the overnight cycle belongs to the
-    // evening Story. The filter stands as the rule's guard. Against an
-    // existing Story the strict lower bound does refuse: an Article
-    // published before that Story's founding stays Unassigned — re-
-    // presented next build, never stored into the Story it matched
-    // (ADR-0017's 23h50 motivating example is the accepted cost: it
-    // orphans instead of joining a Story founded after it).
+    // The belonging rule (ADR-0026, ADR-0027) filters each key's members
+    // to the founding's Ingestion window at claim time: nothing precedes
+    // the founding — it is the earliest member — and the close,
+    // max(founding + 24h, newest + 12h), is at least the newest member +
+    // 12h, so the whole proposed cohort sits inside it (fresh Articles
+    // span less than a day of publishedAt — the collection window). The
+    // filter stands as the rule's guard. Against an existing Story the
+    // strict lower bound does refuse: an Article published before that
+    // Story's founding stays Unassigned — re-presented next build, never
+    // stored into the Story it matched (ADR-0017's 23h50 motivating
+    // example is the accepted cost: it orphans instead of joining a Story
+    // founded after it).
     for (const [key, members] of keyMembers) {
       const founding = keyFounding.get(key);
       if (founding == null) continue;
       keyMembers.set(
         key,
-        members.filter((m) => canJoin(m, founding)),
+        members.filter((m) => canJoin(m, { articles: members })),
       );
     }
 
@@ -745,7 +752,7 @@ export async function groupStories(
     const gate = new MembershipGate({ checker: clients.membership });
     {
       // Guard candidates: existing Stories only (never the proposed keys),
-      // open per the Ingestion window (ADR-0026); a closed Story can never
+      // open per the Ingestion window (ADR-0027); a closed Story can never
       // absorb a seed. Stories whose window does not contain the seed are
       // filtered per seed below.
       const live = stories
@@ -767,10 +774,7 @@ export async function groupStories(
         }[] = [];
         for (const candidate of seedCandidates(
           seed,
-          live.filter((s) => {
-            const founding = foundingInstant(s);
-            return founding != null && canJoin(seed, founding);
-          }),
+          live.filter((s) => canJoin(seed, s)),
         ))
           ask.push({
             target: candidate.id,
@@ -920,13 +924,8 @@ export async function groupStories(
         }
         // Frozen (window closed), or out-of-window target: the model only
         // sees open Stories, and an Article joins only inside the target's
-        // Ingestion window (ADR-0026).
-        const founding = foundingInstant(story);
-        if (
-          founding == null ||
-          !ingestionIsOpen(founding, now) ||
-          !canJoin(article, founding)
-        ) {
+        // Ingestion window (ADR-0027).
+        if (!ingestionIsOpen(story, now) || !canJoin(article, story)) {
           orphan(article);
           continue;
         }
@@ -949,11 +948,13 @@ export async function groupStories(
         // The seed joins its surviving model-proposed Story unconditionally;
         // every further member must pass the Membership check against the
         // seed (an absorbed seed's guard verdict is already recorded). The
-        // window is anchored on the seed's founding instant (ADR-0026).
+        // window is anchored on the key's whole claimed member set (ADR-0027):
+        // its founding is the earliest member, not the seed — fresh is
+        // newest-first, so the partially built Story would mis-anchor it.
         const story = keyStories.get(target.slice(4))!;
         const members = keyMembers.get(target.slice(4))!;
         if (
-          canJoin(article, keyFounding.get(target.slice(4))!) &&
+          canJoin(article, { articles: members }) &&
           (members[0].id === article.id ||
             gate.verdict(article.id, target) === 'yes')
         ) {
@@ -965,11 +966,9 @@ export async function groupStories(
         // Absorbed into an existing Story: the seed's guard verdict and
         // every further member's checked verdict were recorded up front.
         const story = byId.get(target);
-        const founding = story != null ? foundingInstant(story) : undefined;
         if (
           story != null &&
-          founding != null &&
-          canJoin(article, founding) &&
+          canJoin(article, story) &&
           gate.verdict(article.id, target) === 'yes'
         ) {
           merge(story, article);
