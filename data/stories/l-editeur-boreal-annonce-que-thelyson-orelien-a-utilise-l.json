@@ -1,10 +1,31 @@
 {
   "id": "354828a1cd7f",
   "slug": "l-editeur-boreal-annonce-que-thelyson-orelien-a-utilise-l",
-  "title": "L'éditeur Boréal rompt sa collaboration avec Thélyson Orélien après avoir confirmé l'utilisation de l'IA",
+  "title": "L'éditeur Boréal rompt avec Thélyson Orélien après avoir confirmé l'utilisation de l'IA pour son roman",
   "createdAt": "2026-10-21T17:01:24.444Z",
   "storyDay": "2026-10-21",
   "articles": [
+    {
+      "id": "a19aa943936d",
+      "outletId": "mediapart",
+      "headline": "L’IA a bien été utilisée dans l’écriture du roman de Thélyson Orélien, selon son éditeur",
+      "url": "https://www.mediapart.fr/journal/culture-et-idees/221026/l-ia-bien-ete-utilisee-dans-l-ecriture-du-roman-de-thelyson-orelien-selon-son-editeur",
+      "publishedAt": "2026-10-22T10:34:14.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
+      "id": "fa326e17de7d",
+      "outletId": "france-24",
+      "headline": "Thélyson Orélien a utilisé l'IA pour écrire son roman \"C'était ça ou mourir\", selon son éditeur",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261022-th%C3%A9lyson-or%C3%A9lien-a-utilis%C3%A9-l-ia-pour-%C3%A9crire-son-roman-c-%C3%A9tait-%C3%A7a-ou-mourir-selon-son-%C3%A9diteur",
+      "publishedAt": "2026-10-22T10:32:23.000Z",
+      "imageUrl": "https://s.france24.com/media/display/a1d367c6-cdff-11f1-be5f-3f59e19fd7f8/w:1024/p:16x9/FR-20261022-110715-110832-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
     {
       "id": "17f705cbd117",
       "outletId": "le-point",
@@ -146,7 +167,7 @@
       "url": "https://www.lemonde.fr/pixels/article/2026/10/21/l-ia-a-ete-utilisee-pour-l-ecriture-du-roman-de-thelyson-orelien-annonce-son-editeur-canadien-qui-met-fin-a-sa-collaboration-avec-l-auteur_6798291_4408996.html",
       "publishedAt": "2026-10-21T16:42:57.000Z",
       "imageUrl": "https://img.lemde.fr/2026/09/25/543/0/6500/3250/644/322/60/0/4a45fb5_ftp-1-q1fsbwugu7bn-2026-09-25t140339z-1315286628-rc2donaoykx2-rtrmadp-3-france-book-ai.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "culture",
       "everFrontPage": true
@@ -245,25 +266,24 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "L'éditeur Boréal a rompu sa collaboration avec Thélyson Orélien après une analyse externe révélant des traces d'IA dans les métadonnées de son roman « C’était ça ou mourir ».",
-      "L'écrivain conteste avoir rédigé le livre par intelligence artificielle, tout en admettant l'avoir employée pour des recherches historiques.",
-      "Philippe Claudel, président de l'académie Goncourt, a exprimé sa tristesse face à cette controverse littéraire."
+      "L'éditeur canadien Boréal a rompu avec l'écrivain Thélyson Orélien après avoir découvert des traces d'intelligence artificielle dans son roman C'était ça ou mourir.",
+      "L'auteur a initialement nié avoir eu recours à l'IA pour la rédaction de son livre, avant d'admettre l'avoir utilisée pour des recherches bibliographiques."
     ],
     "centre": [
-      "Les Éditions du Boréal ont mis fin à leur relation professionnelle avec l'auteur Thélyson Orélien suite à l'authentification de l'utilisation de l'IA.",
-      "Une enquête approfondie et externe des versions de travail a permis de découvrir des balises d'intelligence artificielle dans les documents du roman.",
-      "L'écrivain canadien d'origine haïtienne se dit dépassé par la situation et maintient avoir eu recours à cet outil uniquement pour documenter son œuvre."
+      "Les Éditions du Boréal ont mis fin à leur collaboration avec l'écrivain canadien d'origine haïtienne Thélyson Orélien.",
+      "Une enquête approfondie menée par la maison d'édition a permis de trouver des balises d'intelligence artificielle dans les documents du roman C'était ça ou mourir.",
+      "Thélyson Orélien conteste toujours avoir rédigé son ouvrage à l'aide de l'IA, se déclarant dépassé par la polémique."
     ],
     "droite": [
       "L'éditeur canadien Boréal a annoncé la fin de sa collaboration avec l'écrivain Thélyson Orélien.",
-      "Cette décision fait suite à la confirmation de l'utilisation de l'intelligence artificielle dans l'écriture du roman « C’était ça ou mourir »."
+      "L'utilisation de l'intelligence artificielle a été formellement confirmée dans l'écriture du roman C'était ça ou mourir."
     ]
   },
   "differences": [
-    "La gauche insiste sur le trouble psychologique de l'auteur et intègre la réaction institutionnelle de l'académie Goncourt pour humaniser la controverse.",
-    "Le centre expose minutieusement les preuves techniques avancées par la maison d'édition, telles que l'analyse externe et les métadonnées.",
-    "La droite se focalise strictement sur l'annonce factuelle de la rupture contractuelle entre Boréal et l'écrivain sans s'attarder sur sa défense."
+    "La gauche insiste sur l'évolution des déclarations de l'auteur, qui a reconnu l'usage de l'IA pour ses recherches après avoir tout contesté.",
+    "Le centre détaille les aspects techniques de l'enquête menée par la maison d'édition, notamment l'analyse des métadonnées et des documents de l'auteur.",
+    "La droite privilégie un compte rendu synthétique et direct de la rupture du contrat éditorial et de la confirmation de l'utilisation de l'IA."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 21
+  "summarizedArticleCount": 23
 }

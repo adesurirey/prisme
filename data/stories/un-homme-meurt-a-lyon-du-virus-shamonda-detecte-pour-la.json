@@ -1,10 +1,21 @@
 {
   "id": "0b438727f533",
   "slug": "un-homme-meurt-a-lyon-du-virus-shamonda-detecte-pour-la",
-  "title": "Un patient meurt à Lyon du virus Shamonda, détecté pour la première fois chez l'être humain",
+  "title": "Un patient meurt à Lyon du virus Shamonda détecté pour la première fois chez l'être humain",
   "createdAt": "2026-10-22T09:01:24.355Z",
   "storyDay": "2026-10-22",
   "articles": [
+    {
+      "id": "58371b984c0f",
+      "outletId": "tf1-info",
+      "headline": "Le virus Shamonda détecté pour la première fois chez un humain, un patient français décédé",
+      "url": "https://www.tf1info.fr/sante/le-virus-shamonda-detecte-pour-la-premiere-fois-chez-un-humain-un-patient-francais-mort-2471368.html",
+      "publishedAt": "2026-10-22T10:17:03.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/723/480/accueil-urgences-02ad3c-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
     {
       "id": "9b34e8e16178",
       "outletId": "le-jdd",
@@ -12,9 +23,10 @@
       "url": "https://www.lejdd.fr/Societe/aucun-risque-sanitaire-pour-la-population-un-patient-meurt-du-virus-shamonda-a-lyon-une-premiere-mondiale-186705",
       "publishedAt": "2026-10-22T10:00:48.000Z",
       "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/22/11/080_hl_xbouzas_2326374.jpg?VersionId=7mIJReRrn0VruAuh.NOQze.tTseXmIMo",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "society"
+      "section": "society",
+      "everFrontPage": true
     },
     {
       "id": "402f5677b96b",
@@ -122,24 +134,23 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un patient fortement immunodéprimé est mort à Lyon des suites d'une infection par le virus Shamonda, une première mondiale documentée.",
-      "Le virus se transmet par la piqûre de petits insectes piqueurs et circulait jusqu'ici uniquement chez des animaux d'élevage en Afrique et en Asie."
+      "Un patient immunodéprimé est mort en France début octobre après avoir contracté le virus Shamonda.",
+      "Le pathogène, transmis par de petits insectes piqueurs, circulait jusqu'ici uniquement en Afrique, en Asie et plus récemment chez des bovins en Europe."
     ],
     "centre": [
-      "Un homme est décédé à Lyon des suites du virus Shamonda, identifié pour la toute première fois chez un être humain.",
-      "Ce virus animal, qui touche principalement les bovins, se transmet par des insectes piqueurs."
+      "Un homme hospitalisé à Lyon est décédé des suites du virus Shamonda, une première mondiale chez l'être humain.",
+      "Les autorités sanitaires soulignent l'absence de risque pour la population malgré la détection de ce virus animal chez un patient."
     ],
     "droite": [
-      "Les autorités sanitaires ont annoncé la mort d'un patient à Lyon infecté par le virus Shamonda, un cas inédit chez l'humain.",
-      "Le virus a été détecté cet été dans des élevages bovins en France et en Europe, mais les autorités rassurent en affirmant qu'aucun risque sanitaire ne pèse sur la population à ce stade.",
-      "Il s'agit d'un cas exceptionnel survenu chez un patient sévèrement immunodéprimé hospitalisé pour une pathologie grave."
+      "Les ministères de la Santé et de l'Agriculture ont annoncé un décès à Lyon lié au virus Shamonda, identifié pour la première fois chez un humain.",
+      "Le patient touché présentait un terrain fortement immunodéprimé selon les autorités, qui rassurent en affirmant qu'il n'y a «aucun risque sanitaire»."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la vulnérabilité médicale du patient décédé et sur l'historique de circulation du virus en Afrique et en Asie.",
-    "Le centre livre un compte-rendu factuel et synthétique de la découverte de ce premier cas humain à Lyon sans s'étendre sur les aspects contextuels.",
-    "La droite insiste particulièrement sur le message rassurant des autorités quant à l'absence de risque sanitaire pour la population générale tout en détaillant l'émergence récente du virus chez les bovins en Europe."
+    "La gauche insiste sur le profil immunodéprimé du patient décédé et sur l'historique de circulation du virus en Afrique et en Asie.",
+    "Le centre met en avant le caractère inédit de la transmission à l'humain et l'absence de danger pour la population générale.",
+    "La droite souligne la rareté du cas et relaie en priorité les déclarations officielles rassurantes des autorités sur l'absence de risque sanitaire."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 10
+  "summarizedArticleCount": 11
 }
