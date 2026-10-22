@@ -6,6 +6,29 @@
   "storyDay": "2026-10-21",
   "articles": [
     {
+      "id": "c699b71dcb8b",
+      "outletId": "franceinfo",
+      "headline": "Pourquoi l'internet mondial est lancé dans une course contre la montre pour corriger des failles \"critiques\" de cybersécurité",
+      "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/pourquoi-l-internet-mondial-est-lance-dans-une-course-contre-la-montre-pour-corriger-des-failles-critiques-de-cybersecurite_8248471.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-22T13:21:18.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/Cz_8wggMPwAFZYRGSXH--CGqFhQ/0x73:1024x649/432x243/filters:format(jpg)/2026/10/22/6ad9cd8e6a101087301272.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "65e7537a7836",
+      "outletId": "20-minutes",
+      "headline": "Quels risques courrons-nous avec les failles « PHP » qui menacent 70 % des sites Web ?",
+      "url": "https://www.20minutes.fr/high-tech/4256563-20261022-risques-courrons-failles-php-menacent-70-sites-web?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-22T09:19:44.000Z",
+      "imageUrl": "https://img.20mn.fr/rAsf-UxTQIqVSis6GHbqYCk/1200x768_22-octobre-2026-taichung-taiwan-l-acronyme-php-hypertext-preprocessor-un-langage-de-script-integre-au-html-et-des-chiffres-de-code-binaire-sont-affiches-sur-un-ecran-mercredi-le-projet-php-a-annonce-des-mises-a-jour-de-securite-pour-deux-vulnerabilites-critiques-cve-2026-109618-et-cve-2026-109619-en-php-image-de-credit-andre-m-chang-zuma-press-wire-20261022-zip-c217-001-zeus-2610220847",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
+    {
       "id": "35551c245b3f",
       "outletId": "france-24",
       "headline": "Faille sur Internet : qu’est-ce que le PHP, qui fait tourner la majorité des sites web ?",
@@ -267,26 +290,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Des failles critiques sur le protocole PHP ont entraîné la fermeture temporaire de millions de sites web à travers le monde.",
-      "En France, des plateformes gouvernementales majeures, dont Météo-France, les services des impôts et plusieurs préfectures, ont été rendues inaccessibles.",
-      "Ces mesures préventives ont été prises pour contrer des risques de cyberattaques massives."
+      "De nombreux services publics français, incluant Météo-France, les préfectures et le site des impôts, ont été temporairement mis hors ligne mercredi pour parer à une double vulnérabilité critique du langage PHP.",
+      "Les spécialistes mondiaux qualifient la brèche de critique et appellent à l'application immédiate de correctifs, près de 70 pour cent du web mondial étant potentiellement concernés.",
+      "L'Obs, Libération et Le HuffPost soulignent l'impact direct de la panne sur les démarches administratives des citoyens en France."
     ],
     "centre": [
-      "Une vulnérabilité majeure affectant le langage de programmation PHP a contraint de nombreux services publics et sites internet à se mettre en maintenance.",
-      "Les États-Unis ont recommandé une mise à jour immédiate pour parer à cette double faille de cybersécurité mondiale.",
-      "En France, les sites des préfectures et de l'administration ont été coupés en urgence pour éviter d'éventuelles compromissions."
+      "Une faille informatique majeure touchant le langage de programmation PHP a contraint plusieurs gouvernements, dont la France, à placer des services administratifs en maintenance.",
+      "Les agences de cybersécurité alertent sur la dangerosité de cette vulnérabilité qui affecte une grande majorité des sites internet à l'échelle internationale.",
+      "L'Express précise que la découverte de ces failles a été réalisée avec l'assistance de l'intelligence artificielle."
     ],
     "droite": [
-      "Une faille informatique critique sur le langage PHP a provoqué l'arrêt d'une partie de l'Internet mondial.",
-      "Des milliers de sites institutionnels et de services publics français, incluant les impôts et l'ensemble des préfectures, ont été mis hors ligne.",
-      "La découverte de ces vulnérabilités a nécessité des interventions d'urgence pour sécuriser les plateformes gouvernementales."
+      "La découverte de deux failles critiques dans le langage PHP a provoqué l'arrêt d'urgence de milliers de sites internet à travers le monde, touchant en particulier l'ensemble des préfectures françaises et les services fiscaux.",
+      "Le Figaro relate une situation de panique parmi les gouvernements face à des cyberattaques massives redoutées, tandis que d'autres médias comme CNews dressent la liste des administrations inaccessibles.",
+      "Les autorités américaines et françaises recommandent des mesures correctives immédiates pour endiguer la crise."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur l'impact concret des pannes pour les usagers en citant des services précis comme Météo-France.",
-    "Le centre adopte une approche institutionnelle et internationale en insistant sur les recommandations officielles et la dimension mondiale de la crise.",
-    "La droite dramatise l'événement en utilisant un vocabulaire alarmiste sur la paralysie d'une partie de l'Internet mondial."
+    "La gauche privilégie un angle pratique axé sur les perturbations administratives concrètes subies par les usagers en France.",
+    "Le centre adopte une approche technique et institutionnelle centrée sur la nature de la vulnérabilité PHP et les alertes des agences de sécurité.",
+    "La droite dramatise l'événement en évoquant une panique généralisée des gouvernements et des menaces imminentes de cyberattaques à grande échelle."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 23
+  "summarizedArticleCount": 25
 }
