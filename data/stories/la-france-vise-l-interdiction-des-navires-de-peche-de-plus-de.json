@@ -12,7 +12,7 @@
       "url": "https://www.ouest-france.fr/mer/peche/manche-est-la-france-vise-linterdiction-des-navires-de-peche-de-plus-de-25-metres-dans-la-bande-cotiere-en-2027-87f1ab22-cdf7-11f1-bf87-17eca79cb13c?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-22T16:00:48.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNWI3YmNjMjIzNTEzNDYwY2Q5ZmM2NTc1MjNlOWMxODM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=3eb4d27abe18ad584294274f7d09ec3a0a1e396f43cf52d1e49b9eaa38f7b5a9",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -31,5 +31,21 @@
   ],
   "topicId": "375ed9fe987e",
   "section": "politics",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "La France prévoit d'interdire les bateaux de pêche de plus de 25 mètres dans la zone côtière de la Manche Est à l'horizon 2027."
+    ],
+    "droite": [
+      "La ministre de la Pêche, Catherine Chabaud, a initié une consultation pour bannir les navires de plus de 25 mètres des eaux territoriales françaises de la Manche.",
+      "Cette démarche administrative implique d'informer les autres États membres sans nécessiter leur aval préalable.",
+      "Le texte pourra s'appliquer dès le début de l'année si la Commission européenne valide l'absence de difficulté juridique."
+    ]
+  },
+  "differences": [
+    "Le camp du centre met en avant l'objectif temporel et géographique de la mesure pour la Manche Est sans détailler la procédure.",
+    "Le camp de droite insiste sur le mécanisme réglementaire, la consultation ministérielle en cours et les conditions juridiques européennes de mise en application."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 2
 }

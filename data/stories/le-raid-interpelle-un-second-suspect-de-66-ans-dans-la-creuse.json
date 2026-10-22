@@ -1,10 +1,32 @@
 {
   "id": "57a46e81d509",
   "slug": "le-raid-interpelle-un-second-suspect-de-66-ans-dans-la-creuse",
-  "title": "Le Raid interpelle un second suspect de 66 ans dans la Creuse après l'incendie de la mairie de Limoges",
+  "title": "La justice requalifie l'incendie de la mairie de Limoges en tentative de meurtre après l'arrestation d'un second suspect",
   "createdAt": "2026-10-22T15:01:31.349Z",
   "storyDay": "2026-10-22",
   "articles": [
+    {
+      "id": "a31fb95b876d",
+      "outletId": "mediapart",
+      "headline": "Un deuxième suspect interpellé après l’incendie criminel de la mairie de Limoges",
+      "url": "https://www.mediapart.fr/journal/france/221026/un-deuxieme-suspect-interpelle-apres-l-incendie-criminel-de-la-mairie-de-limoges",
+      "publishedAt": "2026-10-22T15:52:13.000Z",
+      "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/10/22/261022-img-limoges.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "4b571c72dab3",
+      "outletId": "humanite",
+      "headline": "Incendie de la mairie de Limoges : le parquet requalifie les faits en « tentative de meurtre »",
+      "url": "https://www.humanite.fr/-/-/limoges-le-parquet-a-requalifie-les-faits-en-tentative-de-meurtre-sur-les-policiers-municipaux-retranches-dans-lhotel-de-ville",
+      "publishedAt": "2026-10-22T15:24:28.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "124efe290e40",
       "outletId": "cnews",
@@ -43,19 +65,24 @@
   "section": "misc",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "L'enquête sur l'incendie de la mairie de Limoges s'accélère avec l'arrestation d'un second suspect dans la Creuse.",
+      "Le parquet requalifie les faits en tentative de meurtre en raison des risques encourus par les policiers sur place.",
+      "Ces interpellations font suite à celle d'un premier homme de 34 ans interpellé mardi en Haute-Vienne."
+    ],
     "centre": [
-      "Le parquet confirme l'interpellation d'un second suspect âgé de 66 ans dans la Creuse lors d'une opération menée jeudi matin.",
-      "Le maire Guillaume Guérin intervient sur France 24 pour réagir à l'enquête concernant l'incendie criminel de la mairie de Limoges."
+      "Le maire de Limoges, Guillaume Guérin, réagit sur l'antenne de France 24 après l'incendie de la mairie."
     ],
     "droite": [
-      "Les enquêteurs épaulés par le RAID de Bordeaux ont interpellé un homme de 66 ans dans la Creuse, soupçonné de destruction en bande organisée.",
-      "La procureure de la République Émilie Abrantes précise que le premier suspect arrêté est désormais poursuivi pour tentative de meurtre sur des policiers."
+      "Un second suspect âgé de 66 ans a été interpellé jeudi dans la Creuse avec l'appui du RAID après l'incendie criminel de la mairie de Limoges.",
+      "L'enquête progresse suite à cet incendie survenu le 17 octobre lors de la mobilisation contre la vie chère."
     ]
   },
   "differences": [
-    "Le centre privilégie la dimension institutionnelle de l'enquête en relayant l'intervention directe du maire Guillaume Guérin sur France 24.",
-    "La droite détaille l'opération policière menée par le RAID et insiste sur les qualifications judiciaires aggravées, comme la tentative de meurtre sur des policiers."
+    "La gauche insiste sur l'évolution judiciaire de l'affaire et la requalification des faits en tentative de meurtre.",
+    "Le centre se focalise exclusivement sur la prise de parole institutionnelle du maire Guillaume Guérin.",
+    "La droite privilégie le récit factuel de l'opération policière menée par le RAID pour interpeller le second suspect."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 5
 }
