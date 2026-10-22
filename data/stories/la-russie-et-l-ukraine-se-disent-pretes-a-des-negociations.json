@@ -6,6 +6,27 @@
   "storyDay": "2026-10-21",
   "articles": [
     {
+      "id": "27a373c7e3f0",
+      "outletId": "liberation",
+      "headline": "Des attaques entre Kyiv et Moscou font sept morts, au lendemain de pourparlers entre la Russie et les Etats-Unis",
+      "url": "https://www.liberation.fr/international/europe/des-attaques-reciproques-de-kyiv-et-moscou-font-sept-morts-au-lendemain-de-pourparlers-entre-la-russie-et-les-etats-unis-20261022_MQREMETDYRC5FNDNSFX376T66M/",
+      "publishedAt": "2026-10-22T08:18:57.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "8b56ae9ee82f",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, guerre en Ukraine : pour Volodymyr Zelensky, les dernières frappes russes contre Kiev prouvent que la Russie « n’a pas changé d’attitude » malgré la relance diplomatique des Etats-Unis",
+      "url": "https://www.lemonde.fr/international/live/2026/10/22/en-direct-guerre-en-ukraine-hillary-clinton-accuse-donald-trump-de-faire-tout-son-possible-pour-nuire-a-l-ukraine_6796922_3210.html",
+      "publishedAt": "2026-10-22T07:47:07.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/22/1013/0/5817/2908/644/322/60/0/3cc42df_ftp-1-wm8akj4semjp-2026-10-22t073938z-1804781187-rc258oaqbnnc-rtrmadp-3-ukraine-crisis-attack-kyiv.JPG",
+      "frontPage": false,
+      "kind": "live",
+      "section": "world"
+    },
+    {
       "id": "842c68fe956d",
       "outletId": "tf1-info",
       "headline": "Guerre en Ukraine : des attaques réciproques quelques heures après les pourparlers russo-américains",
@@ -57,9 +78,10 @@
       "url": "https://www.lefigaro.fr/flash-actu/la-russie-et-l-ukraine-pretes-a-de-prochaines-negociations-ensemble-avec-les-americains-20261021",
       "publishedAt": "2026-10-21T20:38:39.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/21/a705500c8685c42853ad2f5a86a711b1d59caecb87af4fdf3da5b0b6e02e8470.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "world"
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "6fd6bd7bbcde",
@@ -89,26 +111,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La Russie et l'Ukraine expriment leur accord pour engager des pourparlers trilatéraux avec les États-Unis.",
-      "Le conseiller diplomatique du Kremlin fixe la reprise des discussions au 10 novembre environ.",
-      "Volodymyr Zelensky confirme son ouverture à cette médiation américaine après la visite de l'émissaire Steve Witkoff."
+      "La Russie et l'Ukraine se disent prêtes à reprendre des négociations tripartites avec les États-Unis à la suite d'une rencontre à Saint-Pétersbourg entre l'émissaire américain Steve Witkoff et Vladimir Poutine.",
+      "Des attaques nocturnes ont touché douze régions ukrainiennes, faisant sept morts au total selon Libération et au moins deux morts et trente-quatre blessés selon Le Monde.",
+      "Volodymyr Zelensky affirme que ces frappes prouvent que la Russie n'a pas changé d'attitude et réclame une pression réelle incluant défense antiaérienne et sanctions."
     ],
     "centre": [
-      "Vladimir Poutine et Volodymyr Zelensky se déclarent disposés à relancer des négociations tripartites avec Washington.",
-      "Ces annonces succèdent à la visite de l'émissaire américain Steve Witkoff à Saint-Pétersbourg.",
-      "Donald Trump affirme que l'issue du conflit ukrainien est désormais proche malgré les hostilités persistantes."
+      "Vladimir Poutine et Volodymyr Zelensky sont disposés à renouer avec des discussions à trois aux côtés des États-Unis.",
+      "Cette annonce fait suite à l'entretien mené à Saint-Pétersbourg par l'émissaire américain Steve Witkoff avec le président russe.",
+      "Des frappes réciproques entre Kiev et Moscou se sont déroulées au même moment, tandis que Donald Trump estime que la fin du conflit est proche."
     ],
     "droite": [
-      "Moscou et Kiev valident le principe de discussions à trois avec les Américains.",
-      "Les bombardements continuent entre les deux belligérants peu après les entretiens diplomatiques menés par Steve Witkoff.",
-      "Donald Trump estime que la fin de la guerre n'a jamais été aussi proche."
+      "Moscou et Kiev se déclarent prêts à engager de prochaines négociations tripartites avec les Américains.",
+      "Le conseiller diplomatique du Kremlin a confirmé cette disposition à la suite d'une réunion à Saint-Pétersbourg.",
+      "Donald Trump affirme que la fin de la guerre en Ukraine n'a jamais été aussi proche."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur le calendrier précis des pourparlers annoncé par le Kremlin et la confirmation de Volodymyr Zelensky.",
-    "Le centre contextualise l'ouverture diplomatique en soulignant le rôle de l'émissaire américain Steve Witkoff et les déclarations optimistes de Donald Trump.",
-    "La droite associe immédiatement l'annonce des négociations aux frappes militaires réciproques et aux propos de Donald Trump sur la fin imminente du conflit."
+    "Le camp gauche met principalement l'accent sur les bombardements nocturnes, les victimes civiles et les déclarations de Volodymyr Zelensky exigeant des sanctions renforcées, subordonnant l'ouverture diplomatique à la poursuite des hostilités.",
+    "Le camp centre adopte une couverture équilibrée en associant l'annonce des pourparlers tripartites et l'optimisme affiché par Donald Trump aux réalités immédiates des attaques réciproques sur le terrain.",
+    "Le camp droite focalise son traitement sur la perspective diplomatique des négociations à trois et sur la déclaration de Donald Trump qualifiant la fin du conflit de imminente."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 9
 }

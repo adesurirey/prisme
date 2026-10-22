@@ -1,10 +1,21 @@
 {
   "id": "96e03af34e0f",
   "slug": "une-vulnerabilite-critique-de-securite-dans-le-langage-php-rend",
-  "title": "Une faille informatique critique dans le langage PHP paralyse de nombreux sites internet institutionnels",
+  "title": "Une faille critique dans le langage PHP paralyse des services publics et des millions de sites internet",
   "createdAt": "2026-10-21T17:01:24.444Z",
   "storyDay": "2026-10-21",
   "articles": [
+    {
+      "id": "35551c245b3f",
+      "outletId": "france-24",
+      "headline": "Faille sur Internet : qu’est-ce que le PHP, qui fait tourner la majorité des sites web ?",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261022-faille-sur-internet-qu-est-ce-que-le-php-qui-fait-tourner-la-majorit%C3%A9-des-sites-web",
+      "publishedAt": "2026-10-22T08:58:34.000Z",
+      "imageUrl": "https://s.france24.com/media/display/8a62bfea-cdcf-11f1-835f-8bea73bbe173/w:1024/p:16x9/17d20d48dd7c35c2a22cd35c79d7522fecda4d4e.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
     {
       "id": "61054b3fb1e1",
       "outletId": "bfmtv",
@@ -256,26 +267,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Plusieurs millions de sites internet dans le monde ont été suspendus temporairement ce mercredi après la découverte de failles critiques dans le langage de programmation PHP.",
-      "En France, des services publics majeurs comme Météo-France, des préfectures et le site des impôts sont devenus inaccessibles par mesure de précaution.",
-      "Des explications pédagogues ont été proposées pour faire comprendre au grand public le fonctionnement et l'importance de ce langage qui fait fonctionner une grande partie du web mondial."
+      "Des failles critiques sur le protocole PHP ont entraîné la fermeture temporaire de millions de sites web à travers le monde.",
+      "En France, des plateformes gouvernementales majeures, dont Météo-France, les services des impôts et plusieurs préfectures, ont été rendues inaccessibles.",
+      "Ces mesures préventives ont été prises pour contrer des risques de cyberattaques massives."
     ],
     "centre": [
-      "Une double vulnérabilité critique découverte dans PHP a conduit à la mise hors ligne préventive de nombreux sites institutionnels et gouvernementaux à travers le monde.",
-      "La France et plusieurs autres pays ont placé leurs plateformes étatiques en maintenance pour éviter des cyberattaques d'envergure.",
-      "Des agences de cybersécurité internationales, dont l'agence américaine NSA, ont recommandé des mises à jour immédiates, l'intelligence artificielle ayant joué un rôle clé tant dans la détection des failles que dans l'accélération des menaces."
+      "Une vulnérabilité majeure affectant le langage de programmation PHP a contraint de nombreux services publics et sites internet à se mettre en maintenance.",
+      "Les États-Unis ont recommandé une mise à jour immédiate pour parer à cette double faille de cybersécurité mondiale.",
+      "En France, les sites des préfectures et de l'administration ont été coupés en urgence pour éviter d'éventuelles compromissions."
     ],
     "droite": [
-      "Une déconnexion en urgence d'une partie de l'Internet mondial a eu lieu suite à l'identification de failles de sécurité majeures dans le langage PHP.",
-      "Des services essentiels en France, incluant l'ensemble des préfectures et la préfecture de police de Paris, ont été coupés afin d'empêcher toute intrusion.",
-      "Certains médias soulignent le rôle de l'intelligence artificielle dans la découverte de ces brèches et évoquent une situation de panique parmi les gouvernements et les développeurs face aux risques de cyberattaques massives."
+      "Une faille informatique critique sur le langage PHP a provoqué l'arrêt d'une partie de l'Internet mondial.",
+      "Des milliers de sites institutionnels et de services publics français, incluant les impôts et l'ensemble des préfectures, ont été mis hors ligne.",
+      "La découverte de ces vulnérabilités a nécessité des interventions d'urgence pour sécuriser les plateformes gouvernementales."
     ]
   },
   "differences": [
-    "La gauche insiste en priorité sur la liste concrète des services publics français touchés et vulgarise l'impact de l'incident pour les usagers.",
-    "Le centre met l'accent sur la dimension internationale de la crise et sur les consignes de sécurité émises par les agences étatiques.",
-    "La droite dramatise l'événement en évoquant un Internet « débranché en urgence » et insiste sur la panique générale ainsi que sur la menace de cyberattaques massives."
+    "La gauche met l'accent sur l'impact concret des pannes pour les usagers en citant des services précis comme Météo-France.",
+    "Le centre adopte une approche institutionnelle et internationale en insistant sur les recommandations officielles et la dimension mondiale de la crise.",
+    "La droite dramatise l'événement en utilisant un vocabulaire alarmiste sur la paralysie d'une partie de l'Internet mondial."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 22
+  "summarizedArticleCount": 23
 }
