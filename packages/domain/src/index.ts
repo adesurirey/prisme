@@ -196,6 +196,8 @@ export interface Story {
   promptVersion?: string;
   /** Number of Articles the last Summaries run saw; Articles are append-only. */
   summarizedArticleCount?: number;
+  /** Number of Articles the last Title pass saw; Articles are append-only. */
+  titledArticleCount?: number;
   /** Sticky: true once the Story ranked into the Edition (issue #75). */
   everInEdition?: boolean;
   /** The Story's Topic (ADR-0024): a thread of Episodes, assigned once at

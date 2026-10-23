@@ -2515,6 +2515,247 @@ describe('Title pass (ADR-0023)', () => {
   });
 });
 
+describe('Title pass — 25% growth gate (ADR-0027)', () => {
+  it('a Story that grew less than 25% since its last title pass stays out of the retitle list', async () => {
+    // 10 Articles seen at the last pass, 11 now: +1 = 10% growth — the
+    // Story gained Articles but stays under the gate.
+    const articles = Array.from({ length: 10 }, (_, i) =>
+      article(`a${i}`, { publishedAt: `2026-10-06T0${i}:00:00Z` }),
+    );
+    const passCalls: { input?: import('./title-pass.ts').TitlePassInput }[] =
+      [];
+    const outcome = await groupStories(
+      input({
+        articles: [article('a10', { publishedAt: '2026-10-06T10:00:00Z' })],
+        existing: [story({ articles, titledArticleCount: 10 })],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [{ articleId: 'a10', storyId: 's1', confidence: 0.9 }],
+          }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass(null, passCalls), // throws if the pass runs
+        },
+      }),
+    );
+    const s1 = outcome.stories.find((s) => s.id === 's1')!;
+    expect(passCalls).toHaveLength(0); // nothing born, nothing to retitle
+    expect(s1.articles).toHaveLength(11);
+    expect(s1.title).toBe('Story un');
+    expect(s1.titledArticleCount).toBe(10);
+    // The Story still gained an Article: its file is rewritten, watermark
+    // held — the stamp never drops the change from the build's set.
+    expect(outcome.changed.has('story-un')).toBe(true);
+  });
+
+  it('a Story that grew at least 25% since its last title pass enters the retitle list with its whole headline set', async () => {
+    // 8 Articles seen at the last pass, 10 now: +2 = 25% growth — the gate
+    // is « at least », and the boundary fires.
+    const articles = Array.from({ length: 8 }, (_, i) =>
+      article(`a${i}`, { publishedAt: `2026-10-06T0${i}:00:00Z` }),
+    );
+    const passCalls: { input?: import('./title-pass.ts').TitlePassInput }[] =
+      [];
+    await groupStories(
+      input({
+        articles: [
+          article('a8', { publishedAt: '2026-10-06T08:00:00Z' }),
+          article('a9', { publishedAt: '2026-10-06T09:00:00Z' }),
+        ],
+        existing: [story({ articles, titledArticleCount: 8 })],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [
+              { articleId: 'a8', storyId: 's1', confidence: 0.9 },
+              { articleId: 'a9', storyId: 's1', confidence: 0.9 },
+            ],
+          }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass(
+            { titleUpdates: [{ storyId: 's1', title: 'Meilleur titre' }] },
+            passCalls,
+          ),
+        },
+      }),
+    );
+    const [pass] = passCalls;
+    expect(pass?.input?.updates.map((u) => u.storyId)).toEqual(['s1']);
+    // The whole headline set — all ten, newest first — never windowed or
+    // truncated: the title names the event, not its latest development.
+    expect(pass?.input?.updates[0]?.headlines).toEqual([
+      'Titre a9',
+      'Titre a8',
+      'Titre a7',
+      'Titre a6',
+      'Titre a5',
+      'Titre a4',
+      'Titre a3',
+      'Titre a2',
+      'Titre a1',
+      'Titre a0',
+    ]);
+  });
+
+  it('a 100-Article Story that gains one Article is not re-titled — titles stop re-firing hourly (ADR-0027)', async () => {
+    const articles = Array.from({ length: 100 }, (_, i) => article(`a${i}`));
+    const passCalls: { input?: import('./title-pass.ts').TitlePassInput }[] =
+      [];
+    const outcome = await groupStories(
+      input({
+        articles: [article('a100')],
+        existing: [story({ articles, titledArticleCount: 100 })],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [
+              { articleId: 'a100', storyId: 's1', confidence: 0.9 },
+            ],
+          }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass(null, passCalls), // throws if the pass runs
+        },
+      }),
+    );
+    const s1 = outcome.stories.find((s) => s.id === 's1')!;
+    expect(passCalls).toHaveLength(0);
+    expect(s1.title).toBe('Story un');
+    expect(s1.titledArticleCount).toBe(100);
+  });
+
+  it('a Story with no watermark yet is re-titled once, then stamped — Stories born before ADR-0027 transition in one build', async () => {
+    const articles = Array.from({ length: 4 }, (_, i) =>
+      article(`a${i}`, { publishedAt: `2026-10-06T0${i + 4}:00:00Z` }),
+    );
+    const passCalls: { input?: import('./title-pass.ts').TitlePassInput }[] =
+      [];
+    const outcome = await groupStories(
+      input({
+        articles: [article('a4', { publishedAt: '2026-10-06T09:00:00Z' })],
+        existing: [story({ articles })], // no titledArticleCount on disk
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [{ articleId: 'a4', storyId: 's1', confidence: 0.9 }],
+          }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass(
+            { titleUpdates: [{ storyId: 's1', title: 'Meilleur titre' }] },
+            passCalls,
+          ),
+        },
+      }),
+    );
+    expect(passCalls[0]?.input?.updates.map((u) => u.storyId)).toEqual(['s1']);
+    const s1 = outcome.stories.find((s) => s.id === 's1')!;
+    expect(s1.title).toBe('Meilleur titre');
+    expect(s1.titledArticleCount).toBe(5);
+  });
+
+  it('a declined retitle still stamps the watermark — the pass ran over the whole set', async () => {
+    // 4 Articles seen at the last pass, 5 now: +1 = 25% growth — the gate
+    // fires, and the model keeps the current title.
+    const articles = Array.from({ length: 4 }, (_, i) =>
+      article(`a${i}`, { publishedAt: `2026-10-06T0${i + 4}:00:00Z` }),
+    );
+    const passCalls: { input?: import('./title-pass.ts').TitlePassInput }[] =
+      [];
+    const outcome = await groupStories(
+      input({
+        articles: [article('a4', { publishedAt: '2026-10-06T09:00:00Z' })],
+        existing: [story({ articles, titledArticleCount: 4 })],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [{ articleId: 'a4', storyId: 's1', confidence: 0.9 }],
+          }),
+          membership: fakeMembership(true),
+          // No titleUpdates in the answer: the model declines the retitle.
+          titles: fakeTitlePass({}, passCalls),
+        },
+      }),
+    );
+    expect(passCalls[0]?.input?.updates.map((u) => u.storyId)).toEqual(['s1']);
+    const s1 = outcome.stories.find((s) => s.id === 's1')!;
+    expect(s1.title).toBe('Story un');
+    // Stamped anyway: the pass saw the whole set, so the Story re-enters
+    // only on ≥ 25% further growth — not next build.
+    expect(s1.titledArticleCount).toBe(5);
+  });
+
+  it('a birth is stamped with the watermark over its whole Article set; one more Article (+50%) re-enters the retitle list next build', async () => {
+    const birthCalls: { input?: import('./title-pass.ts').TitlePassInput }[] =
+      [];
+    const outcome = await groupStories(
+      input({
+        articles: [
+          article('a1', { headline: 'Le Sénat adopte le budget' }),
+          article('a2', {
+            outletId: 'liberation',
+            headline: 'Le budget adopté cette nuit',
+            publishedAt: '2026-10-06T11:00:00Z',
+          }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+          }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass({}, birthCalls),
+        },
+      }),
+    );
+    const born = outcome.stories.find((s) => s.id === '000000000001')!;
+    // Births always reach the pass with all their headlines (ADR-0027).
+    expect(birthCalls[0]?.input?.births[0]?.headlines).toEqual([
+      'Le budget adopté cette nuit',
+      'Le Sénat adopte le budget',
+    ]);
+    expect(born.titledArticleCount).toBe(2);
+
+    // Next build: one more Article = +50% growth since the birth pass —
+    // the retitle list re-enters the Story, whole set again.
+    const retitleCalls: {
+      input?: import('./title-pass.ts').TitlePassInput;
+    }[] = [];
+    const second = await groupStories(
+      input({
+        articles: [
+          article('a3', {
+            headline: 'Le budget promulgué',
+            publishedAt: '2026-10-06T11:30:00Z',
+          }),
+        ],
+        existing: outcome.stories,
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [
+              { articleId: 'a3', storyId: born.id, confidence: 0.9 },
+            ],
+          }),
+          membership: fakeMembership(true),
+          titles: fakeTitlePass(
+            { titleUpdates: [{ storyId: born.id, title: 'Meilleur titre' }] },
+            retitleCalls,
+          ),
+        },
+      }),
+    );
+    expect(retitleCalls[0]?.input?.updates.map((u) => u.storyId)).toEqual([
+      born.id,
+    ]);
+    expect(retitleCalls[0]?.input?.updates[0]?.headlines).toHaveLength(3);
+    const grown = second.stories.find((s) => s.id === born.id)!;
+    expect(grown.title).toBe('Meilleur titre');
+    expect(grown.titledArticleCount).toBe(3);
+  });
+});
+
 describe('Topics (ADR-0024)', () => {
   // The proven episode pair: the Oregon cluster of the day vs the previous
   // day's Oregon Story on disk (overlap ≈ 0.33, above the 0.25 threshold).
