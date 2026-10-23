@@ -1,10 +1,21 @@
 {
   "id": "7a41c142ecd8",
   "slug": "un-seisme-de-magnitude-7-frappe-le-tibet-et-fait-plusieurs",
-  "title": "Un séisme de magnitude 7 frappe la région du Tibet et fait 16 morts",
+  "title": "Un séisme de magnitude 7 frappe le Tibet et fait 16 morts",
   "createdAt": "2026-10-22T19:01:26.734Z",
   "storyDay": "2026-10-22",
   "articles": [
+    {
+      "id": "23d736f0a5e6",
+      "outletId": "la-croix",
+      "headline": "Chine : 16 morts dans un séisme de magnitude 7 au Tibet",
+      "url": "https://www.la-croix.com/chine-16-morts-dans-un-seisme-de-magnitude-7-au-tibet-20261022",
+      "publishedAt": "2026-10-23T04:56:43.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2024/08/08/1552968-un-technicien-de-l-institut-national-de-sismologie.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "17a4bd79ffe9",
       "outletId": "ouest-france",
@@ -12,7 +23,7 @@
       "url": "https://www.ouest-france.fr/monde/tibet/chine-un-seisme-au-tibet-fait-16-et-32-blesses-selon-un-bilan-provisoire-068c0a98-ce59-11f1-bb5f-3dc5c0feacca?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-22T22:12:34.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYmFiODE5NWIxMjk0NTk4YjFhZWJhYjcyZjg4MjcxZWU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ea34bef34e5e946c05c1a77b51055503bb78147da81dab6ca536c097ea3a4fb1",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -102,25 +113,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un séisme majeur de magnitude 7 a secoué la région himalayenne du Tibet à 22 h 33 heure locale.",
-      "Le premier bilan officiel fait état de 16 décès et de nombreux blessés.",
-      "Plus de 300 habitations se sont effondrées sous la violence de la secousse tellurique selon l'agence Xinhua."
+      "Un séisme majeur de magnitude 7 est survenu jeudi à 22 h 33 dans la région himalayenne du Tibet.",
+      "Le bilan provisoire fait état de 16 morts ainsi que de dizaines de blessés.",
+      "Plus de 300 habitations se sont effondrées sous la violence de la secousse selon l'agence officielle Xinhua."
     ],
     "centre": [
-      "Un séisme de magnitude 7 a frappé le Tibet près de la frontière népalaise dans la nuit de jeudi à vendredi.",
-      "Le bilan provisoire communiqué par l'agence officielle Xinhua dénombre 16 personnes tuées et 32 blessés.",
-      "France 24 et l'agence Xinhua signalent également l'effondrement de plus de 300 maisons dans cette zone montagneuse."
+      "Un tremblement de terre de magnitude 7 a frappé le Tibet jeudi 22 octobre.",
+      "Le dernier bilan communiqué fait état de 16 décès et de 32 à 46 blessés selon les sources.",
+      "L'épicentre situé dans le canton de Maru a entraîné l'effondrement de plus de 300 maisons.",
+      "Les opérations de secours se poursuivent sur place dans cette zone montagneuse."
     ],
     "droite": [
-      "Un puissant séisme de magnitude 7 a frappé la région du Tibet en Chine.",
-      "Des victimes et des dégâts matériels sont signalés à la suite de cette secousse tellurique."
+      "Un puissant séisme de magnitude 7 a secoué la région du Tibet jeudi.",
+      "Plusieurs victimes et des dégâts matériels importants ont été signalés par les autorités."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur l'horaire précis de la secousse nocturne et l'ampleur des dégâts matériels recensés par les autorités.",
-    "Le centre livre un compte rendu factuel et standardisé en insistant sur le bilan humain provisoire et l'agence officielle Xinhua.",
-    "La droite se contente d'une brève alerte initiale signalant le séisme et la présence de victimes sans détailler le bilan."
+    "La gauche détaille l'horaire précis de la secousse et cite l'agence officielle Xinhua pour relayer l'ampleur des dégâts matériels.",
+    "Le centre fournit une couverture factuelle très homogène insistant sur le bilan humain chiffré et le lancement des secours.",
+    "La droite se focalise sur la puissance du séisme et l'existence de victimes sans entrer dans le détail chiffré des bilans."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 8
+  "summarizedArticleCount": 9
 }
