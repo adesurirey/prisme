@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-23T05:01:29.334Z",
+  "builtAt": "2026-10-23T06:01:26.284Z",
   "stories": [
     {
       "id": "738eed38941c",
@@ -172,7 +172,7 @@
           "url": "https://www.20minutes.fr/societe/4256731-20261022-mobilisation-24-octobre-seules-manifestations-organisees-syndicats-autorisees-annonce-macron?at_medium=display&at_campaign=149",
           "publishedAt": "2026-10-22T15:29:54.000Z",
           "imageUrl": "https://img.20mn.fr/_ELrXYrFR96doeNRE4W71yk/1200x768_le-president-francais-emmanuel-macron-au-centre-assiste-a-une-reunion-du-conseil-de-securite-avec-le-ministre-francais-de-l-interieur-laurent-nunez-au-centre-deuxieme-a-gauche-et-le-premier-ministre-francais-sebastien-lecornu-au-centre-gauche-au-palais-de-l-elysee-a-paris-le-jeudi-22-octobre-2026-ap-photo-teresa-suarez-piscine-ena115-26295395008410-pool-2610221310",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -598,6 +598,17 @@
       "storyDay": "2026-10-22",
       "articles": [
         {
+          "id": "ab432fe8cbff",
+          "outletId": "bfmtv",
+          "headline": "Virus Shamonda : un premier décès à Lyon",
+          "url": "https://www.bfmtv.com/lyon/replay-emissions/bonjour-lyon/video-virus-shamonda-un-premier-deces-a-lyon_VN-202610230182.html",
+          "publishedAt": "2026-10-23T05:54:33.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/wFEc2kEmLLhg99lhsuW-uWZOrF0=/0x0:1280x720/800x0/images/Virus-Shamonda-un-premier-deces-a-Lyon-2370750.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
           "id": "8963d35f0007",
           "outletId": "rfi",
           "headline": "Le virus Shamonda détecté pour la première fois chez l'être humain en France, un patient immunodéprimé décède",
@@ -813,28 +824,28 @@
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Un patient sévèrement immunodéprimé est décédé à Lyon au début du mois d'octobre des suites du virus Shamonda.",
-          "Il s'agit d'une première contamination humaine documentée pour ce pathogène jusqu'alors cantonné aux bovins et transmis par des moucherons.",
-          "Les autorités sanitaires soulignent qu'aucun risque pour la population générale n'est identifié à ce stade."
+          "Un patient sévèrement immunodéprimé est décédé à Lyon début octobre après avoir contracté le virus Shamonda.",
+          "Il s'agit de la première détection documentée de ce virus animal chez un être humain dans le monde.",
+          "Les autorités sanitaires soulignent qu'aucun risque sanitaire global n'est identifié pour la population."
         ],
         "centre": [
-          "Un homme immunodéprimé est mort en France des complications cérébrales liées au virus Shamonda, une première mondiale selon les autorités.",
-          "Le virus circulait jusqu'ici uniquement chez les animaux d'élevage et n'avait jamais été détecté chez l'être humain.",
-          "Le gouvernement assure qu'aucun risque sanitaire n'est identifié pour la population générale."
+          "Un homme immunodéprimé est mort dans un hôpital de Lyon des suites du virus Shamonda, marquant le premier cas humain recensé au monde.",
+          "Transmis habituellement par des moucherons et circulant chez les animaux d'élevage, le pathogène n'avait jamais infecté l'homme auparavant.",
+          "Les autorités ont tenu à rassurer en affirmant qu'aucun risque pour la population générale n'a été identifié."
         ],
         "droite": [
-          "Un patient lourdement immunodéprimé est décédé aux Hospices civils de Lyon après avoir contracté le virus Shamonda.",
-          "C'est la première fois que ce virus animal, présent chez les bovins, est détecté chez un être humain.",
-          "Le JDD qualifie l'événement de première mondiale, tandis que Causeur signale que la nouvelle réveille les craintes d'une menace pandémique."
+          "Un premier cas d'infection humaine par le virus Shamonda a entraîné la mort d'un patient lourdement immunodéprimé aux Hospices civils de Lyon.",
+          "Ce virus opportuniste d'origine animale, propre aux bovins et transmis par des moucherons, n'implique aucune transmission interhumaine.",
+          "Face aux craintes d'une nouvelle menace pandémique, les autorités sanitaires rappellent l'absence de risque pour la population générale."
         ]
       },
       "differences": [
-        "La gauche insiste sur la vulnérabilité du patient et le passage d'un virus animal aux animaux d'élevage vers l'humain.",
-        "Le centre adopte un ton strictement informatif et factuel en relayant les données officielles sur l'absence de risque pour la population.",
-        "La droite dramatise la portée de l'événement en évoquant une « menace pandémique » ou une « infection opportuniste », tout en relayant les rassurances des autorités."
+        "Les médias de gauche adoptent un ton strictement informatif et sanitaire en insistant sur la vulnérabilité du patient et la rareté du phénomène.",
+        "Les médias du centre se concentrent sur la dimension inédite de la découverte scientifique et la communication rassurante des autorités face à ce virus animal.",
+        "Les médias de droite mettent en avant la frayeur potentielle d'une menace pandémique tout en détaillant l'origine bovine et l'absence de transmission interhumaine."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 19
+      "summarizedArticleCount": 20
     },
     {
       "id": "99bde10d4b3e",
@@ -1843,6 +1854,131 @@
       "summarizedArticleCount": 17
     },
     {
+      "id": "eb0c6376e97c",
+      "slug": "les-deputes-rejettent-une-taxe-sur-les-produits-sucres",
+      "title": "Les députés rejettent la taxe sur les produits sucrés lors de l'examen du budget de la Sécurité sociale",
+      "createdAt": "2026-10-22T21:01:29.582Z",
+      "storyDay": "2026-10-22",
+      "articles": [
+        {
+          "id": "d7466d631233",
+          "outletId": "le-figaro",
+          "headline": "Budget de la Sécu : les députés rejettent la taxe sur les produits sucrés… pas encore totalement enterrée",
+          "url": "https://www.lefigaro.fr/conso/budget-de-la-secu-les-deputes-rejettent-la-taxe-sur-les-produits-sucres-pas-encore-totalement-enterree-20261023",
+          "publishedAt": "2026-10-23T05:33:50.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1688_crop/2026/10/23/b94cc7e85a3188dfc0558d6b7d24a93a39f1e16aad56745f8a69490c7c97a835.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "b992d6e596de",
+          "outletId": "cnews",
+          "headline": "Budget de la Sécu : les députés rejettent une taxe sur les produits sucrés",
+          "url": "https://www.cnews.fr/france/2026-10-23/budget-de-la-secu-les-deputes-rejettent-une-taxe-sur-les-produits-sucres-1940335",
+          "publishedAt": "2026-10-23T05:13:28.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-06t131121z_1570186509_rc2pxnam30zt_rtrmadp_3_france-politics_1_-taille1200_6adae11745ec6.jpg?itok=42VKveRZ",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "5a8afdecc1c4",
+          "outletId": "le-monde",
+          "headline": "Budget 2027 : les députés rejettent la taxe sur les produits sucrés proposée par le gouvernement",
+          "url": "https://www.lemonde.fr/sante/article/2026/10/23/budget-2027-les-deputes-rejettent-la-taxe-sur-les-produits-sucres-proposee-par-le-gouvernement_6798700_1651302.html",
+          "publishedAt": "2026-10-22T23:08:47.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/23/500/0/6000/3000/644/322/60/0/15863c2_upload-1-a0t74llrwsum-000-73hm6wf.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "82bf3eb6f7f3",
+          "outletId": "20-minutes",
+          "headline": "Budget de la « Sécu » : Les députés LR et RN rejettent une taxe poussant les industriels à diminuer la quantité de sucre",
+          "url": "https://www.20minutes.fr/societe/4256792-20261022-budget-secu-deputes-lr-rn-rejettent-taxe-poussant-industriels-diminuer-quantite-sucre?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-22T20:06:44.000Z",
+          "imageUrl": "https://img.20mn.fr/lOmWnvseQFm_8Bbdl-ncEik/1200x768_paris-26-mai-2025-hemicycle-lors-des-debats-a-l-assemblee-nationale-francaise-sur-la-loi-duplomb-visant-a-reautoriser-l-utilisation-de-neonicotinoides-dans-des-cultures-telles-que-la-betterave-a-sucre-et-les-noisettes-arnaud-cesar-vilette-sipa-press-sipa-1108-credit-arnaud-cesar-vilette-sipa-2505270953",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "4f3623ea1158",
+          "outletId": "europe-1",
+          "headline": "Budget de la «Sécu» : les députés rejettent une taxe sur les produits sucrés",
+          "url": "https://www.europe1.fr/politique/budget-de-la-secu-les-deputes-rejettent-une-taxe-sur-les-produits-sucres-1174527?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-22T19:51:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/22/21/080_hl_quentindegroeve_3352867_1_6ada648d70d72.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "bf5ac0d9fa3f",
+          "outletId": "la-croix",
+          "headline": "Budget 2027 : les députés rejettent une taxe sur les produits sucrés",
+          "url": "https://www.la-croix.com/economie/budget-2027-les-deputes-rejettent-une-taxe-sur-les-produits-sucres-20261022",
+          "publishedAt": "2026-10-22T19:08:25.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/22/2570013-les-deputes-ont-rejete-jeudi-22-octobre-2026-la-cr.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "d4d2c8f46c32",
+          "outletId": "liberation",
+          "headline": "Budget 2027 : la taxe sur les produits sucrés torpillée sur fond de lobbying intense de l’industrie agro-alimentaire",
+          "url": "https://www.liberation.fr/societe/sante/budget-2027-derriere-la-taxe-sur-les-produits-sucres-une-volte-face-gouvernementale-et-des-lobbys-a-plein-regime-sur-fond-durgence-sanitaire-20261022_GV4M7V2QJBGEVCEZU2U2LTL3SE/",
+          "publishedAt": "2026-10-22T18:00:31.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "80416b4b98a5",
+          "outletId": "bfmtv",
+          "headline": "Budget de la Sécurité sociale: les députés suppriment l'article élargissant la taxe sur les produits sucrés",
+          "url": "https://www.bfmtv.com/politique/gouvernement/video-budget-de-la-securite-sociale-les-deputes-suppriment-l-article-elargissant-la-taxe-sur-les-produits-sucres_VN-202610220860.html",
+          "publishedAt": "2026-10-22T17:43:51.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/qiadqWn1Rb-FpqMgmPIA8NdxKOk=/0x0:1280x720/800x0/images/Budget-de-la-Securite-sociale-les-deputes-suppriment-l-article-elargissant-la-taxe-sur-les-produits-sucres-2370518.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "eb0c6376e97c",
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Les députés ont voté la suppression de la taxe sur les produits transformés sucrés lors de l'examen du budget de la Sécurité sociale pour 2027.",
+          "Libération souligne l'influence d'un lobbying intense de l'industrie agroalimentaire dans ce rejet.",
+          "Les groupes LFI, socialistes et écologistes se sont opposés à cette suppression à l'Assemblée nationale."
+        ],
+        "centre": [
+          "L'Assemblée nationale a rejeté par 86 voix contre 58 la taxe sur les produits sucrés défendue par la ministre de la Santé Stéphanie Rist.",
+          "Le Monde et Europe 1 rappellent que ce vote de première lecture est loin d'être définitif et que le texte doit encore être examiné au Sénat.",
+          "La mesure visait à inciter les industriels à réduire le taux de sucre pour lutter contre les maladies chroniques."
+        ],
+        "droite": [
+          "Les députés Les Républicains, du Rassemblement national et leurs alliés ont voté la suppression de la taxe lors de l'examen du budget de la Sécurité sociale.",
+          "20 Minutes précise que les députés ont jugé que cette taxe augmenterait les prix pour les consommateurs sans réduire efficacement leur consommation.",
+          "La mesure gouvernementale ciblait les produits transformés afin de pousser les industriels à diminuer les ajouts de sucre."
+        ]
+      },
+      "differences": [
+        "La gauche met principalement l'accent sur l'influence du lobbying industriel dans le rejet de la mesure.",
+        "Le centre adopte un ton neutre et procédural, insistant sur le fait que le parcours législatif du texte se poursuit au Sénat.",
+        "La droite valorise l'argument du pouvoir d'achat des consommateurs pour justifier la suppression de cette taxe."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 8
+    },
+    {
       "id": "7a41c142ecd8",
       "slug": "un-seisme-de-magnitude-7-frappe-le-tibet-et-fait-plusieurs",
       "title": "Un séisme de magnitude 7 frappe le Tibet et fait 16 morts",
@@ -2395,107 +2531,100 @@
       "summarizedArticleCount": 11
     },
     {
-      "id": "eb0c6376e97c",
-      "slug": "les-deputes-rejettent-une-taxe-sur-les-produits-sucres",
-      "title": "Les députés rejettent une taxe sur les produits sucrés lors de l'examen du budget",
-      "createdAt": "2026-10-22T21:01:29.582Z",
-      "storyDay": "2026-10-22",
+      "id": "3f7f5dbcd539",
+      "slug": "la-tempete-austen-place-23-departements-en-vigilance-orange-et",
+      "title": "La tempête Austen place 23 départements en vigilance orange et prive 161 000 foyers d'électricité",
+      "createdAt": "2026-10-23T06:01:26.284Z",
+      "storyDay": "2026-10-23",
       "articles": [
         {
-          "id": "5a8afdecc1c4",
-          "outletId": "le-monde",
-          "headline": "Budget 2027 : les députés rejettent la taxe sur les produits sucrés proposée par le gouvernement",
-          "url": "https://www.lemonde.fr/sante/article/2026/10/23/budget-2027-les-deputes-rejettent-la-taxe-sur-les-produits-sucres-proposee-par-le-gouvernement_6798700_1651302.html",
-          "publishedAt": "2026-10-22T23:08:47.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/23/500/0/6000/3000/644/322/60/0/15863c2_upload-1-a0t74llrwsum-000-73hm6wf.jpg",
+          "id": "0078141a701a",
+          "outletId": "le-parisien",
+          "headline": "DIRECT. Tempête Austen : 161 000 foyers sans électricité dans l’ouest du pays, des perturbations dans les transports",
+          "url": "https://www.leparisien.fr/meteo/direct-tempete-austen-23-departements-dont-lile-de-france-places-en-vigilance-orange-ce-vendredi-des-perturbations-dans-les-transports-23-10-2026-JI3URJICFNHSRPEODJATYPN5FE.php",
+          "publishedAt": "2026-10-23T06:01:26.284Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "live",
+          "section": "society"
+        },
+        {
+          "id": "a987dee106c4",
+          "outletId": "le-parisien",
+          "headline": "Tempête Austen : 23 départements dont l’Île-de-France désormais en vigilance orange ce vendredi",
+          "url": "https://www.leparisien.fr/meteo/tempete-austen-23-departements-dont-lile-de-france-en-vigilance-orange-ce-vendredi-23-10-2026-NW26TWK2QNC3PBRE7CRZOWZJNA.php",
+          "publishedAt": "2026-10-23T06:01:26.284Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "86a773d0acb8",
+          "outletId": "ouest-france",
+          "headline": "Rafale à 161 km/h, plus de 120 000 foyers sans électricité, transports supprimés… la tempête Austen balaye la Bretagne",
+          "url": "https://www.ouest-france.fr/meteo/tempete/rafale-a-161-km-h-plus-de-120-000-foyers-sans-electricite-transports-supprimes-la-tempete-austen-balaye-la-bretagne-5e029396-ce9f-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-23T05:48:19.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZmNiMDYxZTI3ZTJlNzE2YjQ1MzY3ZDNjZmI5NGEwZTU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=54c25387370a8962441e40184c22ed69b9514b20ceed9e3208e3f49a398ca14c",
           "frontPage": true,
           "kind": "news",
-          "section": "politics",
+          "section": "science",
           "everFrontPage": true
         },
         {
-          "id": "82bf3eb6f7f3",
-          "outletId": "20-minutes",
-          "headline": "Budget de la « Sécu » : Les députés LR et RN rejettent une taxe poussant les industriels à diminuer la quantité de sucre",
-          "url": "https://www.20minutes.fr/societe/4256792-20261022-budget-secu-deputes-lr-rn-rejettent-taxe-poussant-industriels-diminuer-quantite-sucre?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-22T20:06:44.000Z",
-          "imageUrl": "https://img.20mn.fr/lOmWnvseQFm_8Bbdl-ncEik/1200x768_paris-26-mai-2025-hemicycle-lors-des-debats-a-l-assemblee-nationale-francaise-sur-la-loi-duplomb-visant-a-reautoriser-l-utilisation-de-neonicotinoides-dans-des-cultures-telles-que-la-betterave-a-sucre-et-les-noisettes-arnaud-cesar-vilette-sipa-press-sipa-1108-credit-arnaud-cesar-vilette-sipa-2505270953",
+          "id": "c5a48c898795",
+          "outletId": "le-figaro",
+          "headline": "EN DIRECT - Tempête Austen : la «bombe météorologique» va toucher Paris, 23 départements en alerte orange et des rafales de vents jusqu’à 150 km/h",
+          "url": "https://www.lefigaro.fr/meteo/en-direct-tempete-austen-vents-meteo-vigilance-orange-rafales-bretagne-finistere-ile-de-france-20261023",
+          "publishedAt": "2026-10-23T05:47:02.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/23/32183586b77a262df82dbec0d163d74d0c774f113312b7a21896b5c182ca51b2.jpg",
           "frontPage": true,
-          "kind": "news",
-          "section": "politics",
+          "kind": "live",
+          "section": "science",
           "everFrontPage": true
         },
         {
-          "id": "4f3623ea1158",
+          "id": "3d25c2679191",
+          "outletId": "france-24",
+          "headline": "Tempête Austen : 161 000 foyers privés d'électricité, 23 départements français en vigilance orange",
+          "url": "https://www.france24.com/fr/france/20261023-temp%C3%AAte-austen-161-000-foyers-priv%C3%A9s-d-%C3%A9lectricit%C3%A9-23-d%C3%A9partements-en-vigilance-orange",
+          "publishedAt": "2026-10-23T05:44:08.000Z",
+          "imageUrl": "https://s.france24.com/media/display/0a6316aa-cea1-11f1-a8eb-9f7e36a26be0/w:1024/p:16x9/000-D44A2G3.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "109adfd62713",
           "outletId": "europe-1",
-          "headline": "Budget de la «Sécu» : les députés rejettent une taxe sur les produits sucrés",
-          "url": "https://www.europe1.fr/politique/budget-de-la-secu-les-deputes-rejettent-une-taxe-sur-les-produits-sucres-1174527?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-22T19:51:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/22/21/080_hl_quentindegroeve_3352867_1_6ada648d70d72.jpg",
+          "headline": "Tempête Austen : 23 départements placés en vigilance orange vent, 161.000 foyers privés d'électricité",
+          "url": "https://www.europe1.fr/societe/tempete-austen-23-departements-places-en-vigilance-orange-vent-161000-foyers-prives-delectricite-1175397?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-23T04:56:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/23/07/000_d44a2g3_1_1_6adaeb912ae48.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "bf5ac0d9fa3f",
-          "outletId": "la-croix",
-          "headline": "Budget 2027 : les députés rejettent une taxe sur les produits sucrés",
-          "url": "https://www.la-croix.com/economie/budget-2027-les-deputes-rejettent-une-taxe-sur-les-produits-sucres-20261022",
-          "publishedAt": "2026-10-22T19:08:25.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/22/2570013-les-deputes-ont-rejete-jeudi-22-octobre-2026-la-cr.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "d4d2c8f46c32",
-          "outletId": "liberation",
-          "headline": "Budget 2027 : la taxe sur les produits sucrés torpillée sur fond de lobbying intense de l’industrie agro-alimentaire",
-          "url": "https://www.liberation.fr/societe/sante/budget-2027-derriere-la-taxe-sur-les-produits-sucres-une-volte-face-gouvernementale-et-des-lobbys-a-plein-regime-sur-fond-durgence-sanitaire-20261022_GV4M7V2QJBGEVCEZU2U2LTL3SE/",
-          "publishedAt": "2026-10-22T18:00:31.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "80416b4b98a5",
-          "outletId": "bfmtv",
-          "headline": "Budget de la Sécurité sociale: les députés suppriment l'article élargissant la taxe sur les produits sucrés",
-          "url": "https://www.bfmtv.com/politique/gouvernement/video-budget-de-la-securite-sociale-les-deputes-suppriment-l-article-elargissant-la-taxe-sur-les-produits-sucres_VN-202610220860.html",
-          "publishedAt": "2026-10-22T17:43:51.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/qiadqWn1Rb-FpqMgmPIA8NdxKOk=/0x0:1280x720/800x0/images/Budget-de-la-Securite-sociale-les-deputes-suppriment-l-article-elargissant-la-taxe-sur-les-produits-sucres-2370518.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
+          "section": "science"
         }
       ],
-      "topicId": "eb0c6376e97c",
-      "section": "politics",
+      "topicId": "e98221363e30",
+      "section": "science",
       "everInEdition": true,
       "summaries": {
-        "gauche": [
-          "L'Assemblée nationale a rejeté la taxe sur les produits sucrés lors de l'examen du projet de loi de financement de la Sécurité sociale pour 2027.",
-          "La mesure, qui devait étendre l'écotaxe existante sur les sodas aux produits transformés trop riches en sucre, a été repoussée par 86 voix contre 58.",
-          "Libération souligne le rôle d'un lobbying intense de l'industrie agro-alimentaire et pointe l'impulsion donnée par la droite et l'extrême droite.",
-          "Le Monde et 20 Minutes rappellent que ce vote n'est pas définitif et que le texte doit encore être examiné par le Sénat."
-        ],
         "centre": [
-          "Les députés ont supprimé l'article visant à élargir la taxe sur les produits sucrés durant l'examen du budget de la Sécurité sociale pour 2027.",
-          "Le dispositif fiscal, défendu par la ministre de la Santé Stéphanie Rist pour lutter contre les maladies chroniques, a été rejeté par 86 voix contre 58.",
-          "Cette mesure avait pour objectif d'inciter les industriels à baisser la teneur en sucre de leurs recettes face aux risques sanitaires.",
-          "Le vote de l'Assemblée nationale intervient en première lecture et le parcours législatif du texte se poursuivra au Sénat."
+          "La tempête Austen frappe les côtes bretonnes avec des rafales atteignant 161 km/h à la pointe du Raz.",
+          "Vingt-trois départements sont placés en vigilance orange, incluant l'Île-de-France et le nord du pays.",
+          "Enedis recense 161 000 foyers privés d'électricité, principalement dans l'ouest de la France.",
+          "Les transports subissent des perturbations notables avec des suspensions de lignes ferroviaires."
         ],
         "droite": [
-          "L'Assemblée nationale a rejeté par 86 voix contre 58 la création d'une taxe sur les produits sucrés proposée par le gouvernement pour le budget de la Sécurité sociale 2027.",
-          "Le texte prévoyait de pousser les industriels à réduire le taux de sucre pour lutter contre les maladies chroniques associées.",
-          "La mesure a été supprimée malgré le soutien de la ministre de la Santé, alors qu'elle faisait face à une levée de boucliers de l'industrie agro-alimentaire.",
-          "Europe 1 précise que le vote en première lecture est loin d'être définitif avant la transmission du projet de loi au Sénat."
+          "Vingt-trois départements basculent en vigilance orange en raison de la tempête qualifiée de bombe météorologique.",
+          "La SNCF suspend préventivement de nombreuses liaisons ferroviaires en Île-de-France, en Normandie et en Bretagne.",
+          "Un total de 161 000 foyers est privé de courant, dont 128 000 en Bretagne, 19 000 dans les Pays de la Loire et 14 000 en Normandie."
         ]
       },
       "differences": [
-        "La gauche met l'accent sur l'influence du lobbying agro-alimentaire et cible explicitement la responsabilité de la droite et de l'extrême droite dans l'échec de la mesure.",
-        "Le centre adopte un ton strictement factuel et neutre en se concentrant sur le déroulement institutionnel du vote à l'Assemblée et le rejet chiffré du texte gouvernemental.",
-        "La droite insiste sur le contexte sanitaire de la mesure tout en soulignant l'opposition frontale des industriels et le soutien maintenu de la ministre de la Santé."
+        "Le camp centre adopte une approche globale des dégâts en quantifiant immédiatement l'impact matériel et les perturbations de transport.",
+        "Le camp droite qualifie la tempête de bombe météorologique et détaille précisément la répartition géographique des pannes d'électricité par région."
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 6
@@ -3839,6 +3968,52 @@
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 3
+    },
+    {
+      "id": "14284cdc73b5",
+      "slug": "donald-trump-exige-des-excuses-de-lebron-james-apres-une",
+      "title": "Donald Trump exige des excuses de LeBron James après une polémique pendant l’hymne américain",
+      "createdAt": "2026-10-23T06:01:26.284Z",
+      "storyDay": "2026-10-23",
+      "articles": [
+        {
+          "id": "639d5734a592",
+          "outletId": "cnews",
+          "headline": "Donald Trump s’en prend à LeBron James et exige des excuses après une polémique pendant l’hymne américain",
+          "url": "https://www.cnews.fr/monde/2026-10-23/donald-trump-sen-prend-lebron-james-et-exige-des-excuses-apres-une-polemique",
+          "publishedAt": "2026-10-23T05:33:06.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-14t013123z_637670558_rc2p2oam54lx_rtrmadp_3_usa-trump-taille1200_6ad1a6db91a6b_6adaf1ced41d3.jpg?itok=RVPo-907",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "097ba626d88f",
+          "outletId": "le-figaro",
+          "headline": "Trump s’en prend à LeBron James et exige des excuses après une polémique pendant l’hymne américain",
+          "url": "https://www.lefigaro.fr/sports/basket/nba/trump-s-en-prend-a-lebron-james-et-exige-des-excuses-apres-une-polemique-pendant-l-hymne-americain-20261023",
+          "publishedAt": "2026-10-23T05:24:05.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/23/3ec4df524aaabf21a448d98666599aac90efb875cc8c2d0b3fd0bf0297af9f08.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        }
+      ],
+      "topicId": "14284cdc73b5",
+      "section": "sport",
+      "everInEdition": true,
+      "summaries": {
+        "droite": [
+          "Donald Trump a publié sur Truth Social une vidéo de LeBron James effectuant des mouvements d'échauffement pendant l'hymne national américain avant un match des Philadelphia 76ers.",
+          "Le président des États-Unis a qualifié le comportement du basketteur de « honte absolue » et a exigé qu'il présente des excuses publiques.",
+          "Donald Trump a également affirmé que LeBron James avait manqué de respect au pays et a rappelé qu'il n'avait « pas bon » selon lui."
+        ]
+      },
+      "differences": [
+        "La droite se focalise exclusivement sur l'attaque virulente de Donald Trump contre LeBron James à la suite d'une vidéo montrant le joueur s'échauffer pendant l'hymne national."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2
     },
     {
       "id": "42b9d04b6d70",
