@@ -1,10 +1,32 @@
 {
   "id": "f730426aed48",
   "slug": "la-tempete-austen-perturbe-les-transports-et-interrompt-des",
-  "title": "La tempête Austen perturbe les transports et interrompt des lignes de train en Île-de-France",
+  "title": "La tempête Austen perturbe les transports et interrompt des lignes de train en Île-de-France et dans le nord-ouest",
   "createdAt": "2026-10-22T19:01:26.734Z",
   "storyDay": "2026-10-22",
   "articles": [
+    {
+      "id": "76fcbca5efab",
+      "outletId": "tf1-info",
+      "headline": "Tempête Austen : Bretagne, Île-de-France, Hauts-de-France... De fortes perturbations dans les transports",
+      "url": "https://www.tf1info.fr/meteo/tempete-austen-bretagne-ile-de-france-hauts-de-france-les-transports-fortement-perturbes-2471591.html",
+      "publishedAt": "2026-10-23T10:01:56.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/617/train-ter-haut-de-france-80cf1e-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "other"
+    },
+    {
+      "id": "7301d2494e52",
+      "outletId": "cnews",
+      "headline": "Austen : jusqu'à quand la tempête va-t-elle durer ?",
+      "url": "https://www.cnews.fr/france/2026-10-23/austen-jusqua-quand-la-tempete-va-t-elle-durer-1940464",
+      "publishedAt": "2026-10-23T09:41:16.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-23t082448z_1356243273_rc2w8oa0boew_rtrmadp_3_europe-weather-britain-taille1200_6adb1c7698afa.jpg?h=181ec3a9&itok=_Z_AHE_U",
+      "frontPage": false,
+      "kind": "news",
+      "section": "other"
+    },
     {
       "id": "76a41f712a84",
       "outletId": "le-monde",
@@ -56,7 +78,7 @@
       "url": "https://www.lefigaro.fr/conjoncture/transports-en-ile-de-france-le-trafic-de-plusieurs-lignes-de-train-interrompu-ce-vendredi-en-raison-de-la-tempete-austen-20261022",
       "publishedAt": "2026-10-22T18:54:59.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/22/4694986192bd184a6165a102137b62b1c65d8cd64c201eeeafaa73c9c300672e.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "other",
       "everFrontPage": true
@@ -77,20 +99,26 @@
   "section": "other",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le Monde rapporte de fortes perturbations et des interruptions de trafic ferroviaire en Normandie, en Île-de-France, en Bretagne et dans les Hauts-de-France.",
+      "Le quotidien mentionne également des restrictions de circulation appliquées sur le réseau routier dans l'ouest du pays."
+    ],
     "centre": [
-      "Le Parisien liste les lignes de transport franciliennes touchées par les perturbations météorologiques de ce vendredi.",
-      "TF1 Info annonce l'arrivée de la tempête Austen avec des rafales de vent atteignant 140 km/h et de nombreuses suppressions de trains."
+      "Le Parisien détaille les lignes ferroviaires impactées en Île-de-France par les intempéries de la tempête Austen.",
+      "TF1 Info indique que de fortes perturbations touchent les transports en Bretagne, en Normandie, dans les Hauts-de-France et en Île-de-France avec des vents dépassant les 100 km/h."
     ],
     "droite": [
-      "CNews et Europe 1 détaillent la liste des lignes SNCF perturbées ou suspendues préventivement en Île-de-France pour assurer la sécurité des voyageurs.",
-      "Le Figaro et les autres médias rappellent que Météo-France a placé plusieurs départements en vigilance orange face aux risques de vents violents."
+      "CNews précise que 23 départements ont été placés en vigilance orange pour vents violents et que des rafales atteignant 140 km/h sont craintes sur le littoral breton.",
+      "Europe 1 indique que la SNCF suspend préventivement de nombreuses lignes et limite la vitesse des trains et des RER en Île-de-France afin de garantir la sécurité.",
+      "Le Figaro et CNews soulignent l'impact direct des rafales sur le trafic des transports franciliens et les perturbations des lignes SNCF C, D, E et H."
     ]
   },
   "differences": [
-    "Le centre se focalise sur les aspects pratiques et l'impact immédiat des perturbations sur les usagers des transports en Île-de-France.",
-    "La droite met en avant les mesures préventives prises par la SNCF et les consignes de sécurité émanant des autorités météorologiques."
+    "Le Monde adopte une perspective régionale globale en soulignant l'arrêt des circulations ferroviaires et les restrictions routières dans le nord-ouest.",
+    "Le centre se concentre sur un suivi pratique et utilitaire en recensant précisément les lignes et les zones géographiques touchées par les perturbations.",
+    "La droite accentue la dimension météorologique critique en détaillant les seuils de vent et les mesures préventives massives prises par la SNCF pour anticiper le danger."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "titledArticleCount": 6
+  "summarizedArticleCount": 8,
+  "titledArticleCount": 8
 }
