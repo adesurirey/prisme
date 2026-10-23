@@ -3,8 +3,9 @@
  * Code and data keys are in English; the UI is in French.
  *
  * Note: teasers (feed "description" text) are deliberately absent from every
- * type here — ADR-0003: outlet text is never stored or published. The
- * collector keeps teasers in memory only and these types never carry them.
+ * type here — ADR-0003, as amended by ADR-0027: outlet text lives only in
+ * the pipeline's private, gitignored cache and is never published,
+ * committed or rendered. These types never carry it.
  */
 
 import type { Reach } from './outlets.ts';
