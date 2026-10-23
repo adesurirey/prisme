@@ -6,6 +6,29 @@
   "storyDay": "2026-10-23",
   "articles": [
     {
+      "id": "672d1524ac2f",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, guerre en Ukraine : la Russie dit accepter une trêve dans la ville ukrainienne d’Olechky à partir de mardi pour permettre des opérations humanitaires",
+      "url": "https://www.lemonde.fr/international/live/2026/10/23/en-direct-guerre-en-ukraine-la-russie-dit-accepter-une-treve-dans-la-ville-ukrainienne-d-olechky-a-partir-de-mardi-pour-permettre-des-operations-humanitaires_6796922_3210.html",
+      "publishedAt": "2026-10-23T17:07:10.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/23/342/0/4102/2051/644/322/60/0/bb79ba7_ftp-1-0fzqv2zzh6mu-e3a4d1fbe64e4c2488b6ede8847b9477-0-c315d03de18f466dafe2004698f0a560.jpg",
+      "frontPage": true,
+      "kind": "live",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "ddc03f1feb63",
+      "outletId": "rfi",
+      "headline": "La Russie et l'Ukraine acceptent un cessez-le-feu dans la ville ukrainienne d'Olechky",
+      "url": "https://www.rfi.fr/fr/europe/20261023-la-russie-et-l-ukraine-acceptent-un-cessez-le-feu-dans-la-ville-ukrainienne-d-olechky",
+      "publishedAt": "2026-10-23T17:05:18.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/d10917de-cf03-11f1-98be-5b4a75578ebb/w:1024/p:16x9/2026-10-06T154730Z-1343676881-RC2RXNAI8IHD-RTRMADP-3-UKRAINE-CRISIS-OLESHKY.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "9d63eb7e4c5e",
       "outletId": "liberation",
       "headline": "Melania Trump affirme avoir obtenu une trêve entre Russes et Ukrainiens à Olechky",
@@ -83,31 +106,31 @@
     }
   ],
   "topicId": "cfb65f540f85",
-  "titledArticleCount": 7,
+  "titledArticleCount": 9,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La Première dame américaine a annoncé une trêve dans la ville d'Olechky.",
-      "Le cessez-le-feu doit débuter le 29 octobre dans cette localité occupée par la Russie.",
-      "Cette mesure vise à autoriser l'acheminement de l'aide humanitaire et l'évacuation des civils."
+      "La Première dame des États-Unis a annoncé avoir obtenu un cessez-le-feu à partir du 29 octobre dans la ville ukrainienne d'Olechky.",
+      "Cette trêve entre les forces russes et ukrainiennes vise à permettre l'acheminement de vivres et de médicaments ainsi que l'évacuation des civils.",
+      "La ville est occupée par la Russie depuis 2022 et se trouve dans une situation humanitaire critique."
     ],
     "centre": [
-      "Melania Trump a affirmé avoir négocié un cessez-le-feu local à Olechky, sur le front ukrainien.",
-      "Moscou et Kiev ont tous deux validé cette suspension des affrontements.",
-      "La ville fait face à une urgence humanitaire critique en raison de pénuries massives de vivres et de médicaments."
+      "La Maison-Blanche a confirmé que Moscou et Kiev ont accepté une suspension temporaire des opérations militaires à Olechky dès mardi pour des opérations humanitaires.",
+      "Plusieurs médias soulignent le rôle central de Melania Trump, qui affirme avoir convaincu les belligérants d'instaurer ce couloir sécurisé.",
+      "Donald Trump a félicité sa compagne pour cette initiative visant à secourir une population manquant de nourriture et de médicaments sur la ligne de front."
     ],
     "droite": [
-      "La Maison-Blanche et Melania Trump revendiquent l'obtention exclusive de cette trêve à Olechky dès le 29 octobre.",
-      "La Première dame qualifie la situation locale de désastre humanitaire et met en avant son rôle diplomatique déterminant.",
-      "Donald Trump a publiquement salué l'initiative de sa compagne."
+      "La Maison-Blanche et Melania Trump revendiquent l'obtention d'une trêve locale à Olechky à compter du 29 octobre pour acheminer l'aide humanitaire.",
+      "La Première dame américaine qualifie la localité de ville sur la ligne de front et affirme dans un communiqué qu'il aurait été impossible d'y apporter des secours sans son intervention.",
+      "CNews précise qu'il s'agit d'une revendication exclusive de Washington, tandis que Le Figaro rapporte l'annonce officielle de la trêve."
     ]
   },
   "differences": [
-    "La gauche se limite strictement à l'annonce factuelle de la trêve et à ses objectifs humanitaires immédiats.",
-    "Le centre contextualise l'accord en insistant sur la gravité de la crise humanitaire et la confirmation conjointe de Kiev et Moscou.",
-    "La droite insiste particulièrement sur la mise en scène politique de la médiation en relayant les déclarations triomomphantes de la Maison-Blanche et les félicitations de Donald Trump."
+    "La gauche se concentre strictement sur l'annonce factuelle de la trêve humanitaire obtenue par Melania Trump à Olechky, sans s'attarder sur les déclarations politiques.",
+    "Le centre met en avant l'implication personnelle de Melania Trump et les félicitations de Donald Trump tout en détaillant les modalités du couloir humanitaire.",
+    "La droite insiste lourdement sur la dimension politique et le rôle exclusif de médiation revendiqué par la Première dame américaine et la Maison-Blanche."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 7
+  "summarizedArticleCount": 9
 }
