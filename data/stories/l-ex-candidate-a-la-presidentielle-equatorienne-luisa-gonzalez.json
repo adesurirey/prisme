@@ -1,10 +1,21 @@
 {
   "id": "034a72bd55f2",
   "slug": "l-ex-candidate-a-la-presidentielle-equatorienne-luisa-gonzalez",
-  "title": "L'ex-candidate à la présidentielle équatorienne Luisa Gonzalez est arrêtée",
+  "title": "La justice équatoriale place Luisa Gonzalez en détention provisoire",
   "createdAt": "2026-10-23T09:01:28.107Z",
   "storyDay": "2026-10-22",
   "articles": [
+    {
+      "id": "5c14196881fe",
+      "outletId": "le-figaro",
+      "headline": "Équateur : la justice ordonne la détention provisoire de l’ex-candidate de gauche à la présidentielle",
+      "url": "https://www.lefigaro.fr/flash-actu/equateur-la-justice-ordonne-la-detention-provisoire-de-l-ex-candidate-de-gauche-a-la-presidentielle-20261023",
+      "publishedAt": "2026-10-23T19:49:39.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/23/3f48736f0a7af5a186a30212f3e6688dd532ad0ae5deca10d02aede4ef38cc43.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "e82ffa572581",
       "outletId": "humanite",
@@ -29,23 +40,28 @@
     }
   ],
   "topicId": "034a72bd55f2",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "L'ancienne candidate à l'élection présidentielle Luisa Gonzalez a été interpellée en Équateur lors des derniers événements internationaux.",
-      "Cette arrestation s'inscrit dans une actualité marquée par plusieurs crises à travers le monde."
+      "L’arrestation de Luisa Gonzalez est intervenue au cours d’une séquence internationale marquée par des crises multiples en Europe et en Amérique latine.",
+      "La figure de l’opposition équatorienne a été interpellée par les autorités dans le cadre d’une actualité politique régionale très tendue."
     ],
     "centre": [
-      "La police équatorienne a procédé à l'arrestation de Luisa Gonzalez, ancienne candidate de gauche à la présidentielle, le jeudi 22 octobre 2026.",
-      "Cette interpellation fait suite à une enquête concernant un financement illégal présumé de sa campagne électorale de 2023, qui proviendrait du Venezuela."
+      "Luisa Gonzalez, ancienne candidate de gauche à la présidentielle face à Daniel Noboa, a été interpellée par la police le 22 octobre 2026.",
+      "La justice cible un financement irrégulier présumé de sa campagne électorale de 2023, qui proviendrait du Venezuela."
+    ],
+    "droite": [
+      "Le parquet a ordonné le placement en détention provisoire de l’ex-candidate de gauche à la présidentielle.",
+      "La mesure judiciaire est motivée par des soupçons de blanchiment d’actifs liés au financement de sa campagne menée en 2023."
     ]
   },
   "differences": [
-    "La gauche intègre l'arrestation de Luisa Gonzalez dans un récapitulatif global des crises internationales en la qualifiant de « figure de la gauche équatorienne ».",
-    "Le centre détaille précisément les motifs de l'interpellation en mentionnant l'enquête pour financement irrégulier vénézuélien et le contexte de l'élection de Daniel Noboa."
+    "La gauche intègre l'événement dans un vaste récapitulatif des crises internationales de l'été sans s'attarder sur les accusations judiciaires.",
+    "Le centre détaille les faits en nommant le président actuel Daniel Noboa et l'origine vénézuélienne des fonds de campagne.",
+    "La droite se concentre strictement sur la procédure judiciaire en qualifiant précisément le chef d'inculpation de blanchiment d'actifs."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }
