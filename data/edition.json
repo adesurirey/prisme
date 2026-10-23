@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-22T23:01:22.073Z",
+  "builtAt": "2026-10-23T00:01:26.876Z",
   "stories": [
     {
       "id": "738eed38941c",
@@ -1187,7 +1187,7 @@
           "url": "https://www.lemonde.fr/societe/article/2026/10/22/accident-du-mirage-2000-d-pres-de-nancy-la-mort-des-deux-militaires-confirmee-par-le-parquet_6798657_3224.html",
           "publishedAt": "2026-10-22T17:58:15.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/21/253/0/3042/1521/644/322/60/0/4c0b1fd_ftp-1-wnvtpp6e2o3q-afp-d3xu4up.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -1313,7 +1313,7 @@
           "url": "https://www.lemonde.fr/culture/article/2026/10/22/un-tableau-de-monet-vendu-50-millions-d-euros-a-paris-record-pour-des-encheres-d-art-en-france_6798663_3246.html",
           "publishedAt": "2026-10-22T18:34:13.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/22/489/0/5865/2932/644/322/60/0/2d14653_upload-1-2id911a8he30-000-c8jt2bv.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
           "section": "culture",
           "everFrontPage": true
@@ -3066,7 +3066,7 @@
           "url": "https://www.lefigaro.fr/sports/football/ligue-europa/hoffenheim-lyon-kramaric-chirurgical-baumann-infranchissable-des-gones-malmenes-toute-la-soiree-les-tops-et-les-flops-20261022",
           "publishedAt": "2026-10-22T21:54:25.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/10/22/9b2a01ca5843f445311e223e5cc7915fbcecaa39badbd93b2424bccb4419bffb.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -3213,6 +3213,53 @@
       "summarizedArticleCount": 2
     },
     {
+      "id": "6a570e630ab7",
+      "slug": "une-ia-decouvre-une-faille-php-qui-paralyse-des-sites",
+      "title": "Une IA découvre une faille PHP qui paralyse des sites",
+      "createdAt": "2026-10-23T00:01:26.876Z",
+      "storyDay": "2026-10-22",
+      "articles": [
+        {
+          "id": "5be82852a968",
+          "outletId": "la-croix",
+          "headline": "Failles PHP sur Internet : « C’est le pire en matière de cybersécurité»",
+          "url": "https://www.la-croix.com/economie/failles-php-sur-internet-on-ne-peut-pas-faire-plus-grave-c-est-le-pire-en-matiere-de-cyberattaque-20261022",
+          "publishedAt": "2026-10-22T16:27:34.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/22/2569835-le-langage-de-programmation-php-a-fait-l-objet-de-.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "c75ff4019291",
+          "outletId": "rfi",
+          "headline": "Une IA découvre une faille dans le langage informatique PHP, des milliers de sites web mis hors ligne",
+          "url": "https://www.rfi.fr/fr/technologies/20261022-une-ia-d%C3%A9couvre-une-faille-dans-le-langage-informatique-php-des-milliers-de-sites-web-mis-hors-ligne",
+          "publishedAt": "2026-10-22T13:52:37.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/ed5589da-ce1e-11f1-bdb9-3f59e19fd7f8/w:1024/p:16x9/2026-10-22T114858Z-1429938995-RC2B8OACKA8V-RTRMADP-3-CYBERSECURITY-PHP.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        }
+      ],
+      "topicId": "96e03af34e0f",
+      "section": "science",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Une intelligence artificielle a mis en evidence des vulnerabilites critiques dans le langage PHP, qui sous-tend 70 pour cent des sites web.",
+          "Des milliers de plateformes ont du couper leur acces pour se proteger, illustrant une menace qualifiee de « pire en matiere de cybersecurite ».",
+          "Si les grands acteurs ont deploie les correctifs requis des le 21 octobre 2026, la vulnerabilite reste elevee pour les structures aux ressources limitees.",
+          "La decouverte de ces failles par des systemes automatises avant l'intervention humaine fait redouter de futures exploitations malveillantes a grande echelle."
+        ]
+      },
+      "differences": [
+        "Le camp centre analyse l'evenement a travers un angle technique et prospectif, insistant sur le role inedit des intelligences artificielles dans la decouverte de failles majeures et sur la vulnerabilite persistante des petites structures face aux menaces futures."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2
+    },
+    {
       "id": "375ed9fe987e",
       "slug": "la-france-vise-l-interdiction-des-navires-de-peche-de-plus-de",
       "title": "La France vise l'interdiction des navires de pêche de plus de 25 mètres dans la bande côtière en 2027",
@@ -3351,6 +3398,52 @@
       },
       "differences": [
         "Les médias de droite mettent en avant l'adhésion massive des Français à la sanction financière des casseurs à travers les résultats du sondage CSA, tout en détaillant les mesures gouvernementales annoncées par Gérald Darmanin et Vincent Jeanbrun."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2
+    },
+    {
+      "id": "e24ea1b0a22b",
+      "slug": "des-voleurs-ciblent-le-fioul",
+      "title": "Des voleurs ciblent le fioul",
+      "createdAt": "2026-10-23T00:01:26.876Z",
+      "storyDay": "2026-10-22",
+      "articles": [
+        {
+          "id": "47bb4cbea6e7",
+          "outletId": "tf1-info",
+          "headline": "\"Il y avait des traces de voiture jusqu'à la citerne\" : après l'essence, les voleurs ciblent le fioul",
+          "url": "https://www.tf1info.fr/societe/il-y-avait-des-traces-de-voiture-qui-se-sont-approchees-jusqu-a-la-citerne-apres-l-essence-les-voleurs-ciblent-le-fioul-2471481.html",
+          "publishedAt": "2026-10-22T19:35:59.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/960/540/vols-fioul-agricole-1e0b17-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "5dccb3dbbe29",
+          "outletId": "tf1-info",
+          "headline": "Après l'essence, les voleurs ciblent le fioul",
+          "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-apres-l-essence-les-voleurs-ciblent-le-fioul-80386-2471494.html",
+          "publishedAt": "2026-10-22T19:20:21.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/576/apres-l-essence-les-voleurs-ciblent-le-fioul-1-ae1750-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "e24ea1b0a22b",
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "droite": [
+          "La forte hausse du prix du fioul domestique, atteignant deux euros le litre soit une augmentation de 76 % sur un an, provoque une recrudescence des vols par siphonnage à l'approche de l'hiver.",
+          "Les siphonnages de cuves touchent divers lieux incluant des églises, des exploitations agricoles avec un total de 1 400 vols de carburants dénombrés par le ministère de l'Intérieur, ainsi que des particuliers.",
+          "Des cas précis sont rapportés, comme le vol de 400 litres de combustible à La Côte en Haute-Savoie."
+        ]
+      },
+      "differences": [
+        "Le camp de droite met l'accent sur l'impact financier de l'inflation énergétique et illustre la délinquance par des exemples concrets et des données chiffrées du ministère de l'Intérieur."
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 2
