@@ -17,6 +17,17 @@
       "section": "society"
     },
     {
+      "id": "256448d689ff",
+      "outletId": "lopinion",
+      "headline": "Ce que l’on sait du virus Shamonda, qui a infecté un homme pour la première fois en France",
+      "url": "https://www.lopinion.fr/economie/ce-que-lon-sait-du-virus-shamonda-qui-a-infecte-un-homme-pour-la-premiere-fois-en-france",
+      "publishedAt": "2026-10-23T04:00:00.000Z",
+      "imageUrl": "https://beymedias.brightspotcdn.com/1e/cb/59fed52f433db66aca9c2389940e/pexels-travelerchitect-33673341.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "8963d35f0007",
       "outletId": "rfi",
       "headline": "Le virus Shamonda détecté pour la première fois chez l'être humain en France, un patient immunodéprimé décède",
@@ -232,26 +243,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un patient sévèrement immunodéprimé est décédé à Lyon début octobre après avoir contracté le virus Shamonda.",
-      "Il s'agit de la première détection documentée de ce virus animal chez un être humain dans le monde.",
-      "Les autorités sanitaires soulignent qu'aucun risque sanitaire global n'est identifié pour la population."
+      "Un patient sévèrement immunodéprimé est décédé à Lyon début octobre des suites d'une infection par le virus Shamonda.",
+      "Le pathogène, qui circulait jusqu'ici exclusivement chez les animaux d'élevage et les bovins, a été détecté pour la toute première fois chez l'être humain.",
+      "Les autorités sanitaires soulignent qu'à ce stade, aucun risque sanitaire n'est identifié pour l'ensemble de la population."
     ],
     "centre": [
-      "Un homme immunodéprimé est mort dans un hôpital de Lyon des suites du virus Shamonda, marquant le premier cas humain recensé au monde.",
-      "Transmis habituellement par des moucherons et circulant chez les animaux d'élevage, le pathogène n'avait jamais infecté l'homme auparavant.",
-      "Les autorités ont tenu à rassurer en affirmant qu'aucun risque pour la population générale n'a été identifié."
+      "Un homme est décédé à Lyon des suites d'une contamination par le virus Shamonda, une première mondiale de détection chez l'être humain.",
+      "Jusqu'à présent, ce virus était connu pour circuler chez les bovins et les animaux d'élevage.",
+      "Les autorités confirment qu'il n'y a pas de risque sanitaire pour la population générale."
     ],
     "droite": [
-      "Un premier cas d'infection humaine par le virus Shamonda a entraîné la mort d'un patient lourdement immunodéprimé aux Hospices civils de Lyon.",
-      "Ce virus opportuniste d'origine animale, propre aux bovins et transmis par des moucherons, n'implique aucune transmission interhumaine.",
-      "Face aux craintes d'une nouvelle menace pandémique, les autorités sanitaires rappellent l'absence de risque pour la population générale."
+      "Un patient lourdement immunodéprimé est mort aux Hospices civils de Lyon après avoir contracté le virus Shamonda.",
+      "C'est la première fois dans le monde qu'un cas humain de ce virus animal et bovin est officiellement détecté.",
+      "Les autorités se veulent rassurantes en écartant tout risque pour la population générale et toute transmission interhumaine."
     ]
   },
   "differences": [
-    "Les médias de gauche adoptent un ton strictement informatif et sanitaire en insistant sur la vulnérabilité du patient et la rareté du phénomène.",
-    "Les médias du centre se concentrent sur la dimension inédite de la découverte scientifique et la communication rassurante des autorités face à ce virus animal.",
-    "Les médias de droite mettent en avant la frayeur potentielle d'une menace pandémique tout en détaillant l'origine bovine et l'absence de transmission interhumaine."
+    "La gauche contextualise le décès en insistant sur la vulnérabilité médicale extrême du patient et la nature animale initiale de l'agent pathogène.",
+    "Le centre livre un compte-rendu factuel et synthétique en insistant sur le caractère inédit de cette découverte scientifique à l'échelle mondiale.",
+    "La droite accentue la dramaturgie en qualifiant le virus de « mystérieux » ou de « nouveau », tout en insistant massivement sur les messages rassurants des autorités face aux craintes d'une menace pandémique."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 20
+  "summarizedArticleCount": 21
 }

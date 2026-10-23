@@ -6,6 +6,18 @@
   "storyDay": "2026-10-23",
   "articles": [
     {
+      "id": "3318005c6cce",
+      "outletId": "20-minutes",
+      "headline": "NBA : « Une honte absolue »… Trump s’attaque à LeBron James pour son comportement pendant l’hymne national",
+      "url": "https://www.20minutes.fr/sport/basketball/nba/4256844-20261023-nba-honte-absolue-trump-attaque-lebron-james-comportement-pendant-hymne-national?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-23T07:13:55.000Z",
+      "imageUrl": "https://img.20mn.fr/GCZC7wCXSCyXpyfcfXsY0yk/1200x768_le-president-donald-trump-danse-lors-d-un-rassemblement-de-campagne-a-l-aeroport-de-sioux-gateway-le-jeudi-22-octobre-2026-a-sioux-city-dans-l-iowa-ap-photo-charlie-neibergall-iaje429-26296089348326-2610230430",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
       "id": "eeba3e464071",
       "outletId": "le-parisien",
       "headline": "« Il manque de respect à notre pays » : Donald Trump attaque de nouveau LeBron James pour son comportement pendant l’hymne américain",
@@ -13,6 +25,17 @@
       "publishedAt": "2026-10-23T07:01:21.064Z",
       "frontPage": false,
       "datedAtCollection": true,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
+      "id": "d06beeaae853",
+      "outletId": "huffpost",
+      "headline": "Le comportement de LeBron James pendant l’hymne américain met Donald Trump en colère",
+      "url": "https://www.huffingtonpost.fr/international/article/le-comportement-de-lebron-james-pendant-l-hymne-americain-met-donald-trump-en-colere_343697.html",
+      "publishedAt": "2026-10-23T06:05:30.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/23/0/0/1228/753/0/0/60/0/ab2a10d_upload-1-mc16wrttyjyf-design-sans-titre-4.png",
+      "frontPage": false,
       "kind": "news",
       "section": "sport"
     },
@@ -43,18 +66,24 @@
   "section": "sport",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le HuffPost rappelle l'historique des tensions récurrentes entre Donald Trump et LeBron James depuis 2017.",
+      "Le HuffPost et 20 Minutes soulignent la colère de Donald Trump après la diffusion d'une vidéo montrant LeBron James s'échauffer durant l'hymne national."
+    ],
     "centre": [
-      "Le Parisien rapporte les critiques de Donald Trump envers LeBron James concernant son attitude lors de l'hymne national américain."
+      "Le Parisien et 20 Minutes relatent l'attaque portée par Donald Trump contre l'attitude de LeBron James lors de l'hymne américain.",
+      "Les articles du centre soulignent la qualification de la part de Donald Trump d'« une honte absolue » concernant le comportement du basketteur."
     ],
     "droite": [
-      "Donald Trump a publié une vidéo sur Truth Social montrant LeBron James en train de s'échauffer durant l'hymne américain.",
-      "Le président américain qualifie cette attitude de « honte absolue » et exige des excuses de la part du basketteur."
+      "CNews et Le Figaro rapportent que Donald Trump exige des excuses publiques de la part de LeBron James.",
+      "CNews détaille le message publié par le président américain sur sa plateforme Truth Social reprochant au joueur de manquer de respect au pays."
     ]
   },
   "differences": [
-    "Le centre se limite à mentionner l'attaque de Donald Trump contre le basketteur sans développer les détails de la polémique.",
-    "La droite met en avant les accusations précises de Donald Trump formulées sur son réseau social, en reprenant ses citations exactes et sa demande d'excuses."
+    "La gauche contextualise l'incident en rappelant les passes d'armes fréquentes entre Donald Trump et LeBron James depuis 2017.",
+    "Le centre se focalise principalement sur la nouvelle attaque frontale du président américain visant l'attitude du basketteur.",
+    "La droite met particulièrement en avant la revendication explicite d'excuses formulée par Donald Trump à l'encontre de l'athlète."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 5
 }
