@@ -6,6 +6,18 @@
   "storyDay": "2026-10-23",
   "articles": [
     {
+      "id": "36684758522b",
+      "outletId": "ouest-france",
+      "headline": "Tempête Austen : environ 1 000 foyers privés d’électricité « un peu partout » en Mayenne",
+      "url": "https://www.ouest-france.fr/meteo/tempete/tempete-austen-environ-1-000-foyers-prives-delectricite-un-peu-partout-en-mayenne-728e3822-ceba-11f1-a953-ed5fcc297d72?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-23T09:01:06.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYTM5YWZiMTE3OGJlNmRhZTQ2ZDM4ZjE1NDRkMmQxYTU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=765ca84e7f20c8ec223376a8c7e82ddaa4cc78497c6d5a73d2c7b8a43ce699de",
+      "frontPage": true,
+      "kind": "news",
+      "section": "other",
+      "everFrontPage": true
+    },
+    {
       "id": "0692228a9cf4",
       "outletId": "le-figaro",
       "headline": "Tempête Austen : 161.000 foyers privés d’électricité en France, annonce Enedis",
@@ -24,7 +36,7 @@
       "url": "https://www.ouest-france.fr/meteo/tempete/tempete-austen-45-500-foyers-prives-delectricite-dans-le-morbihan-des-arbres-sur-les-routes-8216b248-ceaa-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-23T07:42:58.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMWYzYzBiMWQyNWM0ZjJiYTQwZDg1N2M3NTg1MTBiZjk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=8ae7b923d7d6621c9e5356704d5222a9f14ade303c56a96d1fa56aeb0523dc44",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "other",
       "everFrontPage": true
@@ -47,7 +59,7 @@
       "url": "https://www.ouest-france.fr/meteo/tempete/la-tempete-austen-provoque-des-chutes-darbres-et-une-panne-electrique-le-trafic-des-trains-perturbe-en-maine-et-loire-4f2a5728-ceae-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-23T07:34:19.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZTcxZWQ2NzVlZTM4NDUyZmUwZWU1NTkzNmJiZjc1NGE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=4b9fba43919c1f11a4c3051c2e3f05379202dfca0909a8eab836ba8760dce116",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "other",
       "everFrontPage": true
@@ -125,7 +137,7 @@
       "url": "https://www.ouest-france.fr/meteo/tempete/rafale-a-161-km-h-plus-de-120-000-foyers-sans-electricite-transports-supprimes-la-tempete-austen-balaye-la-bretagne-5e029396-ce9f-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-23T05:48:19.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZmNiMDYxZTI3ZTJlNzE2YjQ1MzY3ZDNjZmI5NGEwZTU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=54c25387370a8962441e40184c22ed69b9514b20ceed9e3208e3f49a398ca14c",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -211,7 +223,7 @@
     }
   ],
   "topicId": "e98221363e30",
-  "section": "science",
+  "section": "other",
   "everInEdition": true,
   "summaries": {
     "gauche": [
@@ -238,5 +250,6 @@
     "La droite et le centre droit mettent l'accent sur la dimension préventive des mesures de sécurité, reprenant le terme de « bombe météorologique » et détaillant l'extension géographique progressive des zones d'alerte."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 18
+  "summarizedArticleCount": 18,
+  "titledArticleCount": 19
 }

@@ -6,6 +6,39 @@
   "storyDay": "2026-10-23",
   "articles": [
     {
+      "id": "eb634b82dc1e",
+      "outletId": "france-24",
+      "headline": "Netanyahu ordonne de préparer le \"bouclage total\" de la Cisjordanie occupée après une attaque",
+      "url": "https://www.france24.com/fr/moyen-orient/20261023-netanyahu-ordonne-de-pr%C3%A9parer-le-bouclage-total-de-la-cisjordanie-occup%C3%A9e-apr%C3%A8s-une-attaque",
+      "publishedAt": "2026-10-23T08:54:31.000Z",
+      "imageUrl": "https://s.france24.com/media/display/c0f92bb8-ceb8-11f1-a0a6-bdb9616e85cf/w:1024/p:16x9/AP26296286800872.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "30b5a9af6a82",
+      "outletId": "rfi",
+      "headline": "Benyamin Netanyahu ordonne le «bouclage total» de la Cisjordanie occupée après une attaque",
+      "url": "https://www.rfi.fr/fr/moyen-orient/20261023-isra%C3%ABl-benyamin-netanyahu-ordonne-le-bouclage-total-de-la-cisjordanie-occup%C3%A9e-apr%C3%A8s-une-attaque",
+      "publishedAt": "2026-10-23T08:08:57.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/26a5353e-ceb8-11f1-a544-bdb9616e85cf/w:1024/p:16x9/2026-10-23T063328Z-2064792553-RC2U8OACJOYD-RTRMADP-3-ISRAEL-PALESTINIANS-ATTACK-WEST-BANK.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "1335df9e420e",
+      "outletId": "la-croix",
+      "headline": "Guerre au Moyen-Orient : cinq personnes blessées dans une attaque ; « bouclage total » de la Cisjordanie",
+      "url": "https://www.la-croix.com/international/direct-guerre-iran-israel-usa-jour-123-moyen-orient-bilan-resume-aujourdhui-20261023",
+      "publishedAt": "2026-10-23T08:03:56.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/23/2570228-un-membre-de-la-defense-civile-palestinienne-devan.jpg",
+      "frontPage": false,
+      "kind": "live",
+      "section": "world"
+    },
+    {
       "id": "ef937f02914d",
       "outletId": "le-parisien",
       "headline": "Israël : Benyamin Netanyahou ordonne de préparer un « bouclage total » de la Cisjordanie après une attaque",
@@ -45,26 +78,26 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le Monde rapporte qu'une attaque armée près de Hébron a fait cinq blessés, dont deux dans un état critique.",
-      "L'armée israélienne affirme avoir abattu les deux assaillants présumés de cette attaque en Cisjordanie.",
-      "Benyamin Nétanyahou a annulé des événements électoraux du Likoud à l'approche des législatives en Israël à la suite de ces événements."
+      "Le Premier ministre Benyamin Nétanyahou a annulé ses activités électorales avec le Likoud à la suite d'une fusillade près de Hébron.",
+      "L'attaque armée a fait cinq blessés, dont deux se trouvent dans un état critique.",
+      "Les forces armées israéliennes ont abattu les deux assaillants présumés sur les lieux."
     ],
     "centre": [
-      "Benyamin Netanyahou a ordonné la préparation d'un bouclage total de la Cisjordanie.",
-      "Cette décision fait suite à une attaque armée survenue près de Hébron.",
-      "L'armée israélienne a neutralisé les deux assaillants présumés après que l'attaque a fait cinq blessés."
+      "Le chef du gouvernement Benyamin Netanyahou a ordonné la mise en place d'un bouclage total de la Cisjordanie occupée après une agression armée.",
+      "Cinq personnes ont été blessées lors de cette action menée par deux auteurs qui ont été abattus par la suite.",
+      "L'évènement survient à quelques jours des élections législatives fixées au 27 octobre, tandis qu'un ministre a réclamé des mesures sévères."
     ],
     "droite": [
-      "Deux Palestiniens ont été tués par l'armée israélienne dans le sud de la Cisjordanie occupée.",
-      "L'armée israélienne présente ces deux hommes comme les auteurs d'une attaque par balles.",
-      "Cinq personnes ont été blessées lors de cet événement, dont deux se trouvent dans un état grave."
+      "Une attaque par balles perpétrée dans le sud de la Cisjordanie occupée a fait cinq blessés, dont deux grièvement touchés.",
+      "L'armée israélienne a abattu deux Palestiniens présentés comme les auteurs de cette agression armée."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur les répercussions politiques de l'attaque en soulignant l'annulation des rassemblements électoraux du Likoud par Benyamin Nétanyahou avant les législatives.",
-    "Le centre se focalise sur les mesures sécuritaires étatiques en mettant en avant l'ordre de bouclage total de la Cisjordanie donné par le Premier ministre.",
-    "La droite privilégie le bilan tactique et territorial des affrontements en précisant le contexte géographique de la Cisjordanie occupée et en qualifiant directement les assaillants de Palestiniens tués par l'armée."
+    "La gauche met l'accent sur les répercussions politiques immédiates en soulignant l'annulation des rendez-vous électoraux du Likoud par Benyamin Nétanyahou.",
+    "Le centre met en avant les mesures sécuritaires étatiques décidées par le Premier ministre, notamment le bouclage total de la Cisjordanie et le contexte pré-électoral.",
+    "La droite centre son compte-rendu sur l'action militaire directe des forces israéliennes face aux assaillants palestiniens identifiés."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 6,
+  "titledArticleCount": 6
 }
