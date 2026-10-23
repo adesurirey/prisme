@@ -1,8 +1,12 @@
-# Quality gate for PRs and pushes to main: lint, typecheck, tests, and a full
-# site build. No secrets here and no pipeline run: since the amended ADR-0005
-# a missing GEMINI_API_KEY fails the build, so CI exercises `pnpm edition` in
-# no workflow. The web build runs against the committed data/ (ADR-0002), the
-# same live dataset the site serves.
+# Quality gate for PRs and pushes to main: lint, typecheck, tests (which
+# include a full site build against the committed fixture, web/test-data).
+# No secrets here and no pipeline run: since the amended ADR-0005 a missing
+# GEMINI_API_KEY fails the build, so CI exercises `pnpm edition` in no
+# workflow. The fixture build (PRISME_DATA_DIR, web/src/data.ts) keeps the
+# gate deterministic — the archive shifts under every hourly run; the
+# real-data build is exercised where it matters, by the deploy workflows on
+# main (edition.yml hourly, web.yml on merges), from the same data/ the
+# site serves.
 name: CI
 
 on:
@@ -36,9 +40,8 @@ jobs:
 
       - run: pnpm typecheck
 
+      # pnpm test includes the web build-output suite: two astro builds —
+      # the committed fixture and an empty-« En direct » derived copy — so
+      # the shipped pages (incl. /en-direct/) are asserted on what the
+      # build actually renders, independent of the changing archive.
       - run: pnpm test
-
-      # The web build needs data/ to exist; it uses the committed edition
-      # (ADR-0002). The pipeline itself is only exercised by the scheduled
-      # edition.yml workflow, which holds the model keys.
-      - run: pnpm --filter @prisme/web build

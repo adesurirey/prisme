@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import path from 'node:path';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
@@ -14,8 +15,14 @@ import { defineConfig } from 'astro/config';
  */
 let redirects = {};
 try {
+  // PRISME_DATA_DIR (web/src/data.ts): the fixture build reads the
+  // fixture's registry — normally absent, so no redirects.
+  const dataDir =
+    process.env.PRISME_DATA_DIR != null
+      ? process.env.PRISME_DATA_DIR
+      : '../data';
   const raw = JSON.parse(
-    readFileSync(new URL('../data/redirects.json', import.meta.url), 'utf8'),
+    readFileSync(path.resolve(dataDir, 'redirects.json'), 'utf8'),
   );
   redirects = Object.fromEntries(
     raw.redirects.map((r) => [
@@ -40,7 +47,8 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
-      filter: (page) => !['/7-jours/'].includes(new URL(page).pathname),
+      filter: (page) =>
+        !['/7-jours/', '/en-direct/'].includes(new URL(page).pathname),
     }),
   ],
   vite: {
