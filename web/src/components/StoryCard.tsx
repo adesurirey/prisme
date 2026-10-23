@@ -3,9 +3,11 @@ import {
   blindspots,
   coverageCounts,
   exposureShares,
+  foundingInstant,
   pickStoryImage,
   reportingOutletIds,
 } from '@prisme/domain';
+import { formatStoryDate } from '../article-date';
 import { withBase } from '../data';
 import { storyUrl } from '../story-url';
 import BlindspotBadge from './BlindspotBadge';
@@ -52,6 +54,9 @@ export default function StoryCard({
   const spots = blindspots(counts);
   const image = pickStoryImage(story, byId);
   const imageOutlet = image && byId.get(image.outletId);
+  // The founding instant (ADR-0026): the earliest Article's publication —
+  // the timeline anchor every edition's list is read by.
+  const founded = foundingInstant(story);
   return (
     <article
       className="group/card relative -mx-5"
@@ -79,8 +84,10 @@ export default function StoryCard({
           <h2 className="text-[16px] font-semibold sm:text-[18px] leading-snug tracking-[-0.01em] group-hover/card:underline">
             {story.title}
           </h2>
-          {/* The "maj." date is the Story's newest Article — the same
-              articles[0] the Story page header reads. */}
+          {/* The founding time (issue #136, ADR-0029): after the Coverage
+              count, no prefix, every screen size — today « 21:11 »,
+              yesterday « hier à 21:11 », older « 7 oct. » — so every
+              list (En direct, Aujourd'hui, 7 jours) reads as a timeline. */}
           {/* Meta on one row, both tiers inline. */}
           <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-muted sm:gap-x-3">
             <CoverageMeta
@@ -89,6 +96,11 @@ export default function StoryCard({
               reporting={reporting}
               totalOutlets={outlets.length}
             />
+            {founded !== undefined && (
+              <span className="whitespace-nowrap text-faint">
+                {formatStoryDate(new Date(founded))}
+              </span>
+            )}
           </p>
           {spots.length > 0 && (
             <div className="mt-2.5 flex flex-wrap gap-2">

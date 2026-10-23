@@ -8,11 +8,44 @@
 import { execSync } from 'node:child_process';
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
+import type { Story } from '@prisme/domain';
+import { foundingInstant } from '@prisme/domain';
 import { beforeAll, describe, expect, it } from 'vitest';
+import { formatStoryDate } from './article-date';
+import { loadEdition } from './data';
 
 const WEB_DIR = path.resolve(import.meta.dirname, '..');
 
 let dist: string;
+
+/** The founding time shipped in a built card (issue #136): pick the first
+ * Story past the hero — the lead renders in the hero variant, whose
+ * caption line carries its own « mis à jour » stamp — with a founding
+ * instant, and assert the card carries the formatted time. */
+async function expectCardFoundingTime(html: string, stories: Story[]) {
+  let picked: { story: Story; instant: number } | undefined;
+  for (const story of stories.slice(1)) {
+    const instant = foundingInstant(story);
+    if (instant !== undefined) {
+      picked = { story, instant };
+      break;
+    }
+  }
+  if (!picked)
+    throw new Error(
+      'no Story with a founding instant beyond the hero — cannot test',
+    );
+  const founded = formatStoryDate(new Date(picked.instant));
+  const at = html.indexOf(`data-story-id="${picked.story.id}"`);
+  expect(at).toBeGreaterThan(-1);
+  const card = html.slice(at, html.indexOf('</article>', at));
+  // One plain span after the Coverage count — no prefix, no small-screen
+  // hiding: the timeline anchor shows on every screen.
+  expect(founded).not.toBe('');
+  expect(card).toContain(
+    `<span class="whitespace-nowrap text-faint">${founded}</span>`,
+  );
+}
 
 beforeAll(() => {
   // Strip a stray BASE_URL from the environment: some shells (agents, CI
@@ -131,6 +164,21 @@ describe('« 7 jours » edition (issue #128, ADR-0027, ADR-0028)', () => {
     // crawled (robots.txt allows them) but not suggested to crawlers.
     expect(sitemap).not.toContain('<loc>https://leprisme.info/7-jours/</loc>');
     expect(sitemap).toContain('<loc>https://leprisme.info/</loc>');
+  });
+});
+
+describe('card founding time (issue #136, ADR-0029)', () => {
+  it('ships the founding time after the Coverage count on the index cards', async () => {
+    const home = await readFile(path.join(dist, 'index.html'), 'utf8');
+    await expectCardFoundingTime(home, (await loadEdition()).stories);
+  });
+
+  it('ships it on the « 7 jours » cards too — every edition', async () => {
+    const week = await readFile(
+      path.join(dist, '7-jours', 'index.html'),
+      'utf8',
+    );
+    await expectCardFoundingTime(week, (await loadEdition()).weekStories);
   });
 });
 

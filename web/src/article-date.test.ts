@@ -46,26 +46,39 @@ describe('formatArticleDate', () => {
 describe('formatStoryDate', () => {
   afterEach(() => vi.useRealTimers());
 
-  it('keeps the Article scales, with today as a bare clock', () => {
+  it('shows the bare clock for a Story founded today, Paris time', () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date('2026-10-07T12:00:00Z')); // 14:00 in Paris
-    expect(formatStoryDate({ publishedAt: '2026-10-07T12:32:00Z' })).toBe(
-      '14:32',
-    );
-    expect(formatStoryDate({ publishedAt: '2026-10-06T21:11:00Z' })).toBe(
+    expect(formatStoryDate(new Date('2026-10-07T12:32:00Z'))).toBe('14:32');
+  });
+
+  it('says "hier à" for a Story founded the day before, Paris time', () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-10-08T09:00:00Z')); // 8 October in Paris
+    expect(formatStoryDate(new Date('2026-10-07T21:11:00Z'))).toBe(
       'hier à 23:11',
     );
   });
 
-  it('keeps the full date for an older Story, where it must stand out', () => {
+  it('keeps only the short date for an older Story — no clock, no year', () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date('2026-10-11T12:00:00Z'));
-    expect(formatStoryDate({ publishedAt: '2026-10-07T12:32:00Z' })).toBe(
-      '7 oct., 14:32',
+    expect(formatStoryDate(new Date('2026-10-07T12:32:00Z'))).toBe('7 oct.');
+    expect(formatStoryDate(new Date('2026-01-05T09:05:00Z'))).toBe('5 janv.');
+  });
+
+  it("compares Paris days, not the build host's days", () => {
+    vi.useFakeTimers();
+    // 2026-10-07 22:30 UTC is already 8 October in Paris; a UTC host would
+    // still call the founded day "today". Paris says yesterday.
+    vi.setSystemTime(new Date('2026-10-07T22:30:00Z')); // 8 oct. 00:30 in Paris
+    expect(formatStoryDate(new Date('2026-10-07T14:00:00Z'))).toBe(
+      'hier à 16:00',
     );
   });
 
-  it('tolerates an unparseable date by showing nothing', () => {
-    expect(formatStoryDate({ publishedAt: 'not a date' })).toBe('');
+  it('renders nothing for a Story without a founding instant', () => {
+    expect(formatStoryDate(undefined)).toBe('');
+    expect(formatStoryDate(new Date('not a date'))).toBe('');
   });
 });
