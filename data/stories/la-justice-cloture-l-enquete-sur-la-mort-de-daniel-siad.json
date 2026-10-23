@@ -6,6 +6,18 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "7f21edc6e75b",
+      "outletId": "20-minutes",
+      "headline": "Affaire Epstein : L’enquête sur les causes de la mort de Daniel Siad, rabatteur présumé, fermée sans infraction",
+      "url": "https://www.20minutes.fr/monde/4256799-20261023-affaire-epstein-enquete-causes-mort-daniel-siad-rabatteur-presume-fermee-infraction?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-22T23:21:34.000Z",
+      "imageUrl": "https://img.20mn.fr/AG-ltQEFSBOprM4F-2MQCCk/1200x768_daniel-siad-etait-soupconne-de-recruter-des-jeunes-mannequins-pour-les-envoyer-entre-les-griffes-du-pedocriminel-americain-jeffrey-epstein",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "bf2810374544",
       "outletId": "le-parisien",
       "headline": "Manifestation du 17 octobre : la famille de l’homme décédé réclame des résultats d’autopsie « au plus vite »",
@@ -55,20 +67,26 @@
   "section": "misc",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le parquet de Nanterre a ordonné la fermeture de l'enquête concernant le décès de Daniel Siad, survenu sans qu'une infraction ne soit relevée.",
+      "L'homme était identifié comme un recruteur de mannequins ayant exercé pour Jeffrey Epstein.",
+      "Les expertises médico-légales menées sur le corps favorisent l'hypothèse d'une défaillance cardiaque."
+    ],
     "centre": [
-      "La justice a finalisé ses investigations concernant le décès de Daniel Siad, identifié comme un rabatteur potentiel de Jeffrey Epstein.",
-      "Les conclusions privilégient une cause médicale pour sa mort, attribuée à une origine cardiaque.",
-      "Auparavant, les proches de la victime avaient manifesté mi-octobre pour exiger l'obtention rapide des résultats d'autopsie."
+      "L'enquête ouverte sur la mort de Daniel Siad, qualifié de rabatteur présumé de Jeffrey Epstein, s'est conclue par un classement.",
+      "Les conclusions médico-légales indiquent que le décès est vraisemblablement d'origine cardiaque.",
+      "Par ailleurs, la famille de la victime a réclamé la transmission rapide des résultats d'autopsie à la suite d'une mobilisation."
     ],
     "droite": [
-      "Le parquet s'apprête à clore les investigations sur le décès de Daniel Siad, présenté comme un rabatteur présumé de Jeffrey Epstein.",
-      "L'homme avait été retrouvé sans vie dans son domicile parisien en juillet dernier."
+      "La justice s'apprête à clore les investigations relatives au décès de Daniel Siad, recruteur présumé de Jeffrey Epstein.",
+      "Aucune infraction n'a été mise en évidence par les autorités judiciaires dans ce dossier."
     ]
   },
   "differences": [
-    "Le centre détaille l'aboutissement médico-légal des investigations et l'origine cardiaque du décès tout en rappelant la mobilisation initiale de la famille.",
-    "La droite se focalise sur l'annonce institutionnelle imminente de la clôture de la procédure et le profil sulfureux de l'impliqué."
+    "La gauche met l'accent sur la décision du parquet de Nanterre de refermer l'enquête sans retenir d'infraction, tout en rappelant le rôle attribué à Daniel Siad auprès de Jeffrey Epstein.",
+    "Le centre élargit sa couverture en associant l'annonce de la clôture des investigations et les conclusions médico-légales aux revendications de la famille concernant l'accès rapide aux documents d'autopsie.",
+    "La droite se concentre strictement sur l'annonce institutionnelle de la fermeture prochaine du dossier judiciaire, en insistant sur l'absence d'infraction constatée."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 5
 }

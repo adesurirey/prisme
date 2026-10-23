@@ -6,6 +6,17 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "44e7419fbe55",
+      "outletId": "france-24",
+      "headline": "Ligue Europa : l'OL corrigé, l'OM encore battu, Rennes décroche un nul",
+      "url": "https://www.france24.com/fr/sports/20261023-football-ligue-europa-ol-corrige-hoffenheim-om-battu-rennes-match-nul",
+      "publishedAt": "2026-10-23T01:25:26.000Z",
+      "imageUrl": "https://s.france24.com/media/display/0af517a6-ce80-11f1-b48a-1da646a5f16c/w:1024/p:16x9/AP26295748951214.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "c69d6bdacc56",
       "outletId": "le-figaro",
       "headline": "Hoffenheim-Lyon : Kramaric chirurgical, Baumann infranchissable, des Gones malmenés toute la soirée… Les tops et les flops",
@@ -45,18 +56,20 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "L'Olympique lyonnais a subi une défaite nette face à Hoffenheim lors de la troisième journée de Ligue Europa.",
-      "L'équipe lyonnaise est passée à côté de sa rencontre et met un terme à sa série de deux victoires initiales dans la compétition."
+      "L'Olympique lyonnais a subi sa première défaite de la saison en Ligue Europa face à Hoffenheim."
+    ],
+    "centre": [
+      "L'Olympique lyonnais a perdu ses premiers points sur la pelouse d'Hoffenheim lors de la troisième journée de Ligue Europa."
     ],
     "droite": [
-      "L'Olympique lyonnais s'est lourdement incliné sur le score de trois buts à zéro sur la pelouse d'Hoffenheim.",
-      "Cette défaite constitue un coup d'arrêt pour les Gones après leurs deux premiers succès consécutifs en Ligue Europa."
+      "L'Olympique lyonnais a lourdement chuté sur le score de trois à zéro en Allemagne."
     ]
   },
   "differences": [
-    "Le camp gauche, représenté par franceinfo, qualifie la prestation des Lyonnais d'un match raté où l'équipe a été battue sans briller, mettant l'accent sur la fin de leur série.",
-    "Le camp droite, représenté par Le Figaro, dramatise la défaite en employant un vocabulaire incisif évoquant une correction, un coup d'arrêt et une équipe malmenée toute la soirée."
+    "Le camp gauche, représenté par franceinfo, qualifie la prestation lyonnaise de terne en soulignant que l'équipe est passée à côté de sa rencontre sans briller.",
+    "Le camp centre, illustré par France 24, contextualise ce premier revers en le comparant aux résultats des autres clubs français engagés en Ligue Europa.",
+    "Le camp droite, incarné par Le Figaro, insiste lourdement sur la sévérité du score et la performance des individualités adverses à travers des notes et des tops."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 4
 }

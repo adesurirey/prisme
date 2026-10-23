@@ -1,10 +1,22 @@
 {
   "id": "8e6178da3185",
   "slug": "la-ville-de-new-york-interdit-les-caleches-de-central-park",
-  "title": "La ville de New York interdit les calèches de Central Park après vingt ans de débats",
+  "title": "New York interdit les calèches de Central Park après vingt ans de débats",
   "createdAt": "2026-10-22T23:01:22.073Z",
   "storyDay": "2026-10-22",
   "articles": [
+    {
+      "id": "4f37dee9351e",
+      "outletId": "20-minutes",
+      "headline": "Etats-Unis : New York vote l’interdiction des calèches dans Central Park",
+      "url": "https://www.20minutes.fr/monde/etats-unis/4256820-20261023-etats-unis-new-york-vote-interdiction-caleches-central-park?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-23T01:27:31.000Z",
+      "imageUrl": "https://img.20mn.fr/foC2glf9T5SB2VNRlLdhFSk/1200x768_credit-obligatoire-photo-d-erik-pendzich-shutterstock-13096501c-des-personnes-font-une-balade-en-caleche-a-central-park-le-16-aout-2022-a-new-york-daily-life-new-york-etats-unis-16-aout-2022-shutterstock-editorial-daily-life-new-york-usa-13096501c-2208162055",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
     {
       "id": "ec7392ee6a3c",
       "outletId": "france-24",
@@ -32,20 +44,24 @@
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le Conseil municipal de New York a adopté l'interdiction des calèches hippomobiles de Central Park, qui entrera en vigueur le 1er juin 2028.",
+      "La décision suscite des prises de position divergentes entre les associations de protection animale, les cochers et Donald Trump."
+    ],
     "centre": [
-      "Le Conseil municipal de New York a voté pour interdire les calèches de Central Park à compter du 1er juin 2028.",
-      "Le maire Zohran Mamdani doit promulguer cette mesure qui met fin à deux décennies de controverses autour de cette attraction touristique.",
-      "Un délai de transition a été prévu afin d'accompagner les 150 cochers concernés vers une reconversion professionnelle."
+      "Le Conseil municipal de New York a voté l'interdiction de cette attraction touristique sujette à controverse depuis vingt ans.",
+      "La mesure doit être promulguée par le maire Zohran Mamdani et prévoit une période de transition pour accompagner les 150 cochers vers de nouveaux emplois."
     ],
     "droite": [
-      "Le Conseil municipal de New York a voté l'interdiction des calèches de Central Park après vingt ans de débats.",
-      "Donald Trump a regretté cette décision qu'il qualifie de fin d'une « expérience new-yorkaise par excellence » prise pour « des raisons politiques »."
+      "Le Conseil municipal de New York a voté pour l'arrêt définitif des calèches dans Central Park au terme de deux décennies de controverses.",
+      "Le président américain Donald Trump a déploré la disparition de cette « Grande Tradition » et d'une « expérience new-yorkaise par excellence », qu'il attribue à des motivations politiques."
     ]
   },
   "differences": [
-    "Le camp centre met en avant le calendrier d'application de la mesure et l'accompagnement social des cochers, adoptant un angle strictement municipal et pratique.",
-    "Le camp droite focalise son traitement sur la réaction critique de Donald Trump, qualifiant la décision municipale d'atteinte à une « Grande Tradition »."
+    "Le camp gauche met l'accent sur l'affrontement direct entre les défenseurs des animaux et les cochers à la suite du vote.",
+    "Le camp centre adopte une perspective institutionnelle en détaillant le calendrier d'application et les mesures d'accompagnement social pour les cochers.",
+    "Le camp droite focalise son angle sur la réaction critique de Donald Trump et la défense d'un patrimoine culturel new-yorkais."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }
