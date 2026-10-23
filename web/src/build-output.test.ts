@@ -84,6 +84,44 @@ describe('page head tags', () => {
   });
 });
 
+describe('« 7 jours » edition (issue #128, ADR-0027)', () => {
+  it('prerenders /7-jours/ with a canonical and both edition names', async () => {
+    const html = await readFile(
+      path.join(dist, '7-jours', 'index.html'),
+      'utf8',
+    );
+    expect(html).toContain(
+      '<link rel="canonical" href="https://leprisme.info/7-jours/">',
+    );
+    // The editions header: the page's own edition is the h1, the other
+    // a link back home (exactly one h1 per page).
+    expect(html).toMatch(/<h1[^>]*>\s*7 jours\s*<\/h1>/);
+    expect(html).toMatch(/<a[^>]*href="\/"[^>]*>\s*Aujourd'hui\s*<\/a>/);
+    expect(html).not.toContain('installTrending');
+    // No per-reader daily-visit semantics on the weekly page: no
+    // trending script, no badge text, no "Nouveau" pill hook.
+    expect(html).not.toContain('En hausse');
+    expect(html).not.toContain('data-new-pill');
+  });
+
+  it('links the home to the weekly edition under its new name', async () => {
+    const home = await readFile(path.join(dist, 'index.html'), 'utf8');
+    // The toggle: the home's own name is the h1, « 7 jours » links out.
+    expect(home).toMatch(/<h1[^>]*>\s*Aujourd'hui\s*<\/h1>/);
+    expect(home).toMatch(/<a[^>]*href="\/7-jours\/"[^>]*>\s*7 jours\s*<\/a>/);
+    // The h1 moved from « À la une » to « Aujourd'hui » — the old name
+    // survives in the sub-page back links, not here.
+    expect(home).not.toContain('À la une');
+    // The per-reader pill hook stays on the home.
+    expect(home).toContain('data-new-pill');
+  });
+
+  it('lists /7-jours/ in the sitemap', async () => {
+    const sitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');
+    expect(sitemap).toContain('<loc>https://leprisme.info/7-jours/</loc>');
+  });
+});
+
 describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () => {
   it('ships robots.txt pointing at the sitemap', async () => {
     const robots = await readFile(path.join(dist, 'robots.txt'), 'utf8');

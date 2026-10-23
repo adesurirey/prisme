@@ -1,0 +1,40 @@
+---
+/**
+ * The "Afficher plus de sujets" button (ADR-0022), shared by the Edition
+ * pages (la Une and « 7 jours ») so its markup and copy live in one
+ * place. Everything is in the static HTML; the tail beyond the first
+ * batch is hidden by CSS from first paint (html.js rule in global.css)
+ * and revealed per click by load-more.ts, which unhides this button only
+ * when there is a tail to reveal. Without JS the button stays hidden and
+ * every Story is visible.
+ *
+ * The button carries its own wiring (the script below): every page that
+ * renders it gets installLoadMore, and pages without it never ship the
+ * module — no per-page script to keep in sync.
+ */
+---
+
+<button
+  type="button"
+  data-load-more
+  hidden
+  class="group relative mx-auto mt-10 block cursor-pointer overflow-hidden rounded-full border border-line px-6 py-2 text-[13px] font-medium text-ink transition-[border-color,transform] duration-150 hover:border-line-strong active:scale-[0.98]"
+>
+  {/* Progress fill behind the label (width driven by load-more.ts),
+      tinted rather than solid ink so the edge never reads as a hard
+      cut through the label; width transitions for a smooth growth.
+      Deepens slightly on hover — the button answers the pointer. */}
+  <span
+    data-load-more-fill
+    aria-hidden="true"
+    class="absolute inset-y-0 left-0 bg-ink/5 transition-[width,background-color] duration-300 ease-out group-hover:bg-ink/10 dark:bg-ink/15 dark:group-hover:bg-ink/25"
+  ></span>
+  <span class="relative">
+    Afficher plus de sujets <span data-load-more-count></span>
+  </span>
+</button>
+<script>
+  import { installLoadMore } from '../load-more';
+
+  installLoadMore();
+</script>
