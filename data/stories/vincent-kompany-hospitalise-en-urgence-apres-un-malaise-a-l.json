@@ -23,7 +23,7 @@
       "url": "https://www.lefigaro.fr/sports/football/allemagne/bundesliga-victime-d-un-malaise-a-l-entrainement-vincent-kompany-hospitalise-pour-des-examens-approfondis-20261023",
       "publishedAt": "2026-10-23T16:58:13.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/23/d6c4d9c92d8eea2ee36d7b3fa6804056f9681686dc12ca42b1cfba185b0ba09e.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -35,7 +35,7 @@
       "url": "https://www.ouest-france.fr/sport/football/bayern-munich/bayern-munich-vincent-kompany-sest-effondre-apres-lentrainement-et-a-ete-transporte-en-urgence-a-lhopital-53e933fc-cef8-11f1-a953-ed5fcc297d72?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-23T16:39:25.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZTFlYWUxN2YxM2VkZDcxYWQ5MTJiMWE1ZDI1ZTBhMGE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ea007f36777fbfd50b7d67867347ef2d49a5220224511ed29892d81d38e87c2e",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -44,5 +44,21 @@
   "topicId": "20be26d5b338",
   "titledArticleCount": 3,
   "section": "sport",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "Vincent Kompany, l'entraîneur du Bayern Munich, a été hospitalisé en urgence après un malaise survenu à l'entraînement.",
+      "L'incident a nécessité l'intervention d'un hélicoptère qui s'est posé directement au centre d'entraînement du club allemand selon Bild."
+    ],
+    "droite": [
+      "L'entraîneur bavarois Vincent Kompany a été victime d'un malaise lors d'une séance d'entraînement ce vendredi 23 octobre.",
+      "Il a été transporté à l'hôpital afin de subir des examens médicaux approfondis."
+    ]
+  },
+  "differences": [
+    "Le camp centre privilégie un récit dramatique et immédiat en insistant sur l'urgence de l'hospitalisation et l'utilisation spectaculaire d'un hélicoptère.",
+    "Le camp droite adopte une approche plus institutionnelle et sobre en mettant l'accent sur la réalisation d'examens médicaux approfondis suite à l'incident."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 3
 }
