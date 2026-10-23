@@ -21,11 +21,12 @@ import StoryImage from './StoryImage';
  * to the Story page, where the Articles live, styled like the Story page's
  * Article cards (hover surface, no animation).
  *
- * The root carries data-story-id/data-coverage for the client-side
- * per-visitor badges (trending.ts): "En hausse" for a Coverage gain since
- * the reader's last visit, "Nouveau" for a Story absent from it
- * (ADR-0020). The prerendered HTML has no idea who is reading, so the
- * per-visitor signals are decided in the browser.
+ * The root carries data-story-id/data-article-count for the client-side
+ * per-visitor badge (trending.ts): "En hausse" when the Story's Article
+ * count grew ≥ 25 % since the reader's last visit — the same domain gate
+ * that re-fires a Summaries pass (ADR-0029). The prerendered HTML has no
+ * idea who is reading, so the per-visitor signal is decided in the
+ * browser.
  *
  * Link structure: a stretched link (<a> absolute inset-0) makes the
  * whole card navigate while the image column — positioned, painted
@@ -55,7 +56,7 @@ export default function StoryCard({
     <article
       className="group/card relative -mx-5"
       data-story-id={story.id}
-      data-coverage={reporting}
+      data-article-count={story.articles.length}
       data-load-more-tail={tail ? '' : undefined}
     >
       {/* Stretched link: the whole card navigates. */}
@@ -69,7 +70,7 @@ export default function StoryCard({
       />
       <div className="flex items-start gap-4 px-5 py-5">
         <div className="min-w-0 flex-1">
-          {/* The per-visitor badge slot ("En hausse" or "Nouveau",
+          {/* The per-visitor badge slot ("En hausse",
               trending.ts) sits above the title — a per-visitor highlight
               deserves the first read, not the bottom of the meta pile.
               Invisible (empty:hidden) until trending.ts appends the

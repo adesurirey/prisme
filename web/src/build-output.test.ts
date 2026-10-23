@@ -104,7 +104,7 @@ describe('« 7 jours » edition (issue #128, ADR-0027, ADR-0028)', () => {
     expect(html).toMatch(/<noscript>[\s\S]*href="\/"[\s\S]*<\/noscript>/);
     expect(html).not.toContain('installTrending');
     // No per-reader daily-visit semantics on the weekly page: no
-    // trending script, no badge text, no "Nouveau" pill hook.
+    // trending script and no badge text (ADR-0029).
     expect(html).not.toContain('En hausse');
     expect(html).not.toContain('data-new-pill');
   });
@@ -121,8 +121,8 @@ describe('« 7 jours » edition (issue #128, ADR-0027, ADR-0028)', () => {
     expect(home).toMatch(
       /<noscript>[\s\S]*href="\/7-jours\/"[\s\S]*<\/noscript>/,
     );
-    // The per-reader pill hook stays on the home.
-    expect(home).toContain('data-new-pill');
+    // « Nouveau » is gone entirely (ADR-0029): no pill hook anywhere.
+    expect(home).not.toContain('data-new-pill');
   });
 
   it('keeps the noindexed windowed edition out of the sitemap (ADR-0028)', async () => {
