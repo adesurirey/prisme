@@ -1,10 +1,21 @@
 {
   "id": "f730426aed48",
   "slug": "la-tempete-austen-perturbe-les-transports-et-interrompt-des",
-  "title": "La tempête Austen perturbe les transports et interrompt des lignes de train en Île-de-France et dans le nord-ouest",
+  "title": "La tempête Austen perturbe les transports et interrompt les lignes de train dans le nord-ouest",
   "createdAt": "2026-10-22T19:01:26.734Z",
   "storyDay": "2026-10-22",
   "articles": [
+    {
+      "id": "fac9f16a1140",
+      "outletId": "franceinfo",
+      "headline": "Les images de la tempête Austen qui a soufflé sur le Nord-Ouest",
+      "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/tempetes/tempete-austen-des-rafales-jusqu-a-160-km-h-en-bretagne_8250763.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-23T12:03:31.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/n-9HoEFZ548WQ1G5bnfZ92g32kk/0x66:1646x991/432x243/filters:format(jpg)/2026/10/23/6adb495275fb1890037796.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "other"
+    },
     {
       "id": "76fcbca5efab",
       "outletId": "tf1-info",
@@ -15,6 +26,18 @@
       "frontPage": false,
       "kind": "news",
       "section": "other"
+    },
+    {
+      "id": "1f8b6b4fa8d1",
+      "outletId": "le-figaro",
+      "headline": "Ponts fermés, trains retardés, coupures d’électricité… La tempête Austen balaie la Loire-Atlantique",
+      "url": "https://www.lefigaro.fr/nantes/ponts-fermes-trains-retardes-coupures-d-electricite-la-tempete-austen-balaie-la-loire-atlantique-20261023",
+      "publishedAt": "2026-10-23T10:01:45.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/23/b90dabc6464b6031d03a01a2faf79124250bdfa1021b388a736fa30d999bb32a.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "other",
+      "everFrontPage": true
     },
     {
       "id": "7301d2494e52",
@@ -100,25 +123,24 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le Monde rapporte de fortes perturbations et des interruptions de trafic ferroviaire en Normandie, en Île-de-France, en Bretagne et dans les Hauts-de-France.",
-      "Le quotidien mentionne également des restrictions de circulation appliquées sur le réseau routier dans l'ouest du pays."
+      "La tempête Austen a frappé la Bretagne avec des vents atteignant 160 km/h, provoquant des dégâts matériels importants comme des routes coupées et des arbres arrachés.",
+      "Le trafic ferroviaire a été fortement interrompu en Normandie, en Île-de-France, en Bretagne et dans les Hauts-de-France, tandis que des restrictions de circulation ont été imposées sur les routes de l'ouest."
     ],
     "centre": [
-      "Le Parisien détaille les lignes ferroviaires impactées en Île-de-France par les intempéries de la tempête Austen.",
-      "TF1 Info indique que de fortes perturbations touchent les transports en Bretagne, en Normandie, dans les Hauts-de-France et en Île-de-France avec des vents dépassant les 100 km/h."
+      "La tempête Austen engendre d'importantes perturbations dans les transports en Île-de-France, touchant spécifiquement plusieurs lignes ferroviaires."
     ],
     "droite": [
-      "CNews précise que 23 départements ont été placés en vigilance orange pour vents violents et que des rafales atteignant 140 km/h sont craintes sur le littoral breton.",
-      "Europe 1 indique que la SNCF suspend préventivement de nombreuses lignes et limite la vitesse des trains et des RER en Île-de-France afin de garantir la sécurité.",
-      "Le Figaro et CNews soulignent l'impact direct des rafales sur le trafic des transports franciliens et les perturbations des lignes SNCF C, D, E et H."
+      "Vingt-trois départements ont été placés en vigilance orange aux vents violents en raison de la tempête Austen, qui balaie l'ouest et le centre de la France avec des rafales allant jusqu'à 140 km/h sur le littoral breton.",
+      "La SNCF a suspendu préventivement de nombreuses lignes en Île-de-France, en Normandie et en Bretagne, tout en limitant la vitesse des trains et des RER pour assurer la sécurité.",
+      "Les intempéries provoquent des coupures d'électricité, des ponts fermés et des retards ferroviaires, notamment dans la Loire-Atlantique."
     ]
   },
   "differences": [
-    "Le Monde adopte une perspective régionale globale en soulignant l'arrêt des circulations ferroviaires et les restrictions routières dans le nord-ouest.",
-    "Le centre se concentre sur un suivi pratique et utilitaire en recensant précisément les lignes et les zones géographiques touchées par les perturbations.",
-    "La droite accentue la dimension météorologique critique en détaillant les seuils de vent et les mesures préventives massives prises par la SNCF pour anticiper le danger."
+    "La gauche met l'accent sur le bilan humain et matériel direct dans les régions touchées, en insistant sur l'ampleur des dégâts en Bretagne.",
+    "Le centre focalise son traitement sur les aspects pratiques des perturbations en Île-de-France et les lignes de transport impactées.",
+    "La droite dresse un panorama national détaillé des zones placées en vigilance orange, tout en insistant sur les mesures préventives prises par la SNCF et les gestionnaires de réseau."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 8,
-  "titledArticleCount": 8
+  "summarizedArticleCount": 10,
+  "titledArticleCount": 10
 }
