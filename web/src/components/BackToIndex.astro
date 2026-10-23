@@ -5,6 +5,11 @@
  * copy live in one place. Pass `backLink` on pages that load the
  * back-link script (installBackLink) to get the history.back() behavior;
  * elsewhere the attributes are inert and the link is a plain href.
+ *
+ * The label is invariant: « À la une » names the page itself, whose
+ * window (Aujourd'hui, 7 jours, …) is just the select's setting
+ * (ADR-0028). The week-aware installer may retarget href and back
+ * target; it never rewrites the wording.
  */
 import { withBase } from '../data';
 
@@ -42,6 +47,6 @@ const { backLink = false } = Astro.props;
         stroke-linecap="round"
         stroke-linejoin="round"></path>
     </svg>
-    <span data-back-label>À la une</span>
+    <span>À la une</span>
   </a>
 </p>

@@ -143,7 +143,7 @@ describe('installBackLink', () => {
     expect(spy).not.toHaveBeenCalled();
   });
 
-  it('retargets and relabels the link for a reader arriving from « 7 jours »', () => {
+  it('retargets the link for a reader arriving from « 7 jours », label unchanged', () => {
     Object.defineProperty(document, 'referrer', {
       configurable: true,
       value: weekUrl,
@@ -155,16 +155,16 @@ describe('installBackLink', () => {
       indexUrl +
       '" data-week-url="' +
       weekUrl +
-      '" id="back"><span data-back-label>À la une</span></a>';
+      '" id="back">À la une</a>';
     vi.spyOn(window.history, 'length', 'get').mockReturnValue(2);
     const spy = vi.spyOn(window.history, 'back').mockImplementation(() => {});
     installBackLink(document, window);
-    // Target, href and label all become the weekly edition — every path
-    // (history.back, fallback href, middle-click) keeps the same promise.
+    // Target and href become the weekly edition — every path
+    // (history.back, fallback href, middle-click) keeps the same promise
+    // — while the label stays « À la une »: it names the page, the
+    // select names the window (ADR-0028).
     const link = document.getElementById('back')! as HTMLAnchorElement;
-    expect(link.querySelector('[data-back-label]')!.textContent).toBe(
-      '7 jours',
-    );
+    expect(link.textContent).toBe('À la une');
     expect(link.getAttribute('href')).toBe(weekUrl);
     link.dispatchEvent(
       new MouseEvent('click', { bubbles: true, cancelable: true }),

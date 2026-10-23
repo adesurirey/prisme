@@ -84,8 +84,8 @@ describe('page head tags', () => {
   });
 });
 
-describe('« 7 jours » edition (issue #128, ADR-0027)', () => {
-  it('prerenders /7-jours/ with a canonical and both edition names', async () => {
+describe('« 7 jours » edition (issue #128, ADR-0027, ADR-0028)', () => {
+  it('prerenders /7-jours/ with a canonical, noindex and the shared header', async () => {
     const html = await readFile(
       path.join(dist, '7-jours', 'index.html'),
       'utf8',
@@ -93,10 +93,15 @@ describe('« 7 jours » edition (issue #128, ADR-0027)', () => {
     expect(html).toContain(
       '<link rel="canonical" href="https://leprisme.info/7-jours/">',
     );
-    // The editions header: the page's own edition is the h1, the other
-    // a link back home (exactly one h1 per page).
-    expect(html).toMatch(/<h1[^>]*>\s*7 jours\s*<\/h1>/);
-    expect(html).toMatch(/<a[^>]*href="\/"[^>]*>\s*Aujourd'hui\s*<\/a>/);
+    // The editions header (ADR-0028): « À la une » is the h1 on every
+    // edition, the window — « 7 jours » here — is the select's
+    // preselected value, and the noscript links carry the home to
+    // readers without JS (exactly one h1 per page).
+    expect(html).toMatch(/<h1[^>]*>\s*À la une\s*<\/h1>/);
+    expect(html).not.toMatch(/<h1[^>]*>\s*7 jours\s*<\/h1>/);
+    expect(html).toContain('data-edition-switcher');
+    expect(html).toContain('<option value="/7-jours/" selected>');
+    expect(html).toMatch(/<noscript>[\s\S]*href="\/"[\s\S]*<\/noscript>/);
     expect(html).not.toContain('installTrending');
     // No per-reader daily-visit semantics on the weekly page: no
     // trending script, no badge text, no "Nouveau" pill hook.
@@ -104,21 +109,28 @@ describe('« 7 jours » edition (issue #128, ADR-0027)', () => {
     expect(html).not.toContain('data-new-pill');
   });
 
-  it('links the home to the weekly edition under its new name', async () => {
+  it("opens on « À la une » with the select on « Aujourd'hui » (ADR-0028)", async () => {
     const home = await readFile(path.join(dist, 'index.html'), 'utf8');
-    // The toggle: the home's own name is the h1, « 7 jours » links out.
-    expect(home).toMatch(/<h1[^>]*>\s*Aujourd'hui\s*<\/h1>/);
-    expect(home).toMatch(/<a[^>]*href="\/7-jours\/"[^>]*>\s*7 jours\s*<\/a>/);
-    // The h1 moved from « À la une » to « Aujourd'hui » — the old name
-    // survives in the sub-page back links, not here.
-    expect(home).not.toContain('À la une');
+    // The h1 names the surface on every edition; the window is the
+    // select's preselected value, and the noscript links carry «
+    // 7 jours » to readers without JS.
+    expect(home).toMatch(/<h1[^>]*>\s*À la une\s*<\/h1>/);
+    expect(home).not.toMatch(/<h1[^>]*>\s*Aujourd'hui\s*<\/h1>/);
+    expect(home).toContain('data-edition-switcher');
+    expect(home).toContain('<option value="/" selected>');
+    expect(home).toMatch(
+      /<noscript>[\s\S]*href="\/7-jours\/"[\s\S]*<\/noscript>/,
+    );
     // The per-reader pill hook stays on the home.
     expect(home).toContain('data-new-pill');
   });
 
-  it('lists /7-jours/ in the sitemap', async () => {
+  it('keeps the noindexed windowed edition out of the sitemap (ADR-0028)', async () => {
     const sitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');
-    expect(sitemap).toContain('<loc>https://leprisme.info/7-jours/</loc>');
+    // The windowed editions are noindexed near-duplicates of la Une:
+    // crawled (robots.txt allows them) but not suggested to crawlers.
+    expect(sitemap).not.toContain('<loc>https://leprisme.info/7-jours/</loc>');
+    expect(sitemap).toContain('<loc>https://leprisme.info/</loc>');
   });
 });
 
@@ -141,6 +153,18 @@ describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () =
     expect(sitemap).toContain('<loc>https://leprisme.info/methode/</loc>');
     // At least one Story URL under its own day.
     expect(sitemap).toMatch(/<loc>https:\/\/leprisme.info\/20\d\d-\d\d-\d\d\//);
+  });
+
+  it('noindexes the windowed edition and leaves the home indexable (ADR-0028)', async () => {
+    const home = await readFile(path.join(dist, 'index.html'), 'utf8');
+    const week = await readFile(
+      path.join(dist, '7-jours', 'index.html'),
+      'utf8',
+    );
+    // Meta noindex with crawl allowed — a robots.txt disallow would
+    // hide the page from the very crawler that must read the noindex.
+    expect(week).toContain('<meta name="robots" content="noindex"');
+    expect(home).not.toContain('name="robots"');
   });
 
   it('gives every page a canonical, og:url and Twitter card', async () => {

@@ -1,59 +1,121 @@
 ---
 /**
- * The editions header row shared by the home (« Aujourd'hui ») and the
- * weekly edition (« 7 jours », issue #128 / ADR-0027): the two Edition
- * names side by side — the active one is the page's h1, the other a
- * quiet link to its page, in the site's navigation-link grammar (muted
- * at rest, ink on hover, no underline — same as the back links and the
- * footer nav; underlines are the prose signal, InlineLink). One
- * component renders both pages so the pair stays mirrored.
+ * The editions header, shared by every edition page (ADR-0028):
+ * « À la une » names the surface and is the h1 on all of them — the
+ * window (Aujourd'hui, 7 jours; later 30 jours, En direct) is a
+ * *setting of that one page*, switched by a native <select> rather
+ * than a row of links: four labels don't fit a 360px phone next to
+ * the h1, and the platform picker is the bulletproof pattern — touch
+ * target, wheel/bottom-sheet and screen-reader pop-up semantics come
+ * free, no ARIA to mis-wire. It wears the back-link recipe — 13px
+ * muted text, the chevron in that same color via the shared span — so
+ * it reads as a quiet control, not a second title (selects, unlike
+ * text inputs, don't trigger iOS's small-font zoom). A fixed short
+ * list, so it
+ * auto-submits on change (edition-switcher.ts); without JS the select
+ * is inert and the <noscript> links take over — they exist for
+ * humans, not crawlers (the windowed editions are noindexed,
+ * ADR-0028).
  *
- * The `aside` slot carries the right side of the row: the edition's
- * temporal anchor (day label on the home, "depuis le …" window start on
- * the weekly page). The home also passes the per-reader "Nouveau" pill —
- * daily-visit semantics that stay there (ADR-0027).
+ * The `aside` slot carries the right side of the row: the per-reader
+ * "Nouveau" pill (home only, ADR-0020) and the edition's temporal
+ * anchor. The anchor hides under `sm:` — the footer count line
+ * already carries the timestamp there.
  */
 import { withBase } from '../data';
 
 interface Props {
-  /** The page's own edition: its name renders as the h1. */
+  /** The page's own edition: the select arrives preselected on it. */
   edition: 'today' | 'week';
 }
 
 const { edition } = Astro.props;
-const todayActive = edition === 'today';
+
+/** The shipped editions — the select's options and the noscript
+ *  fallback links. « 30 jours » and « En direct » append here when
+ *  their pages ship (their slugs and noindex treatment are settled,
+ *  ADR-0028). */
+const EDITIONS = [
+  { key: 'today', label: "Aujourd'hui", href: withBase('/') },
+  { key: 'week', label: '7 jours', href: withBase('/7-jours/') },
+] as const;
+
+const current = EDITIONS.find((e) => e.key === edition);
 ---
 
 <div class="flex items-baseline justify-between gap-4">
   <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+    <h1
+      class="text-[16px] sm:text-[18px] font-semibold tracking-[-0.01em]"
+    >
+      À la une
+    </h1>
     {
-      todayActive ? (
-        <h1 class="text-[17px] font-semibold tracking-[-0.01em]">
-          Aujourd'hui
-        </h1>
-      ) : (
-        <a
-          href={withBase('/')}
-          class="text-[17px] font-medium text-muted transition-colors hover:text-ink"
-        >
-          Aujourd'hui
-        </a>
-      )
+      /* The face is a real button — the browser's own focus ring, the
+        OutletGroup disclosure's recipe — that opens the native picker
+        of the select hidden behind it (showPicker). The select stays
+        the form control whose change navigates: one tab stop (the
+        button), the picker itself is platform UI. sr-only, not
+        display:none: showPicker needs a rendered element, and its
+        font-size drives the picker's option size. */
     }
-    {
-      todayActive ? (
-        <a
-          href={withBase('/7-jours/')}
-          class="text-[17px] font-medium text-muted transition-colors hover:text-ink"
+    <span class="relative inline-flex">
+      <button
+        type="button"
+        data-edition-switcher-face
+        aria-haspopup="listbox"
+        aria-label={`Édition : ${current?.label}`}
+        class="inline-flex cursor-pointer items-center gap-1.5 text-[13px] text-muted transition-colors hover:text-ink"
+      >
+        {current?.label}
+        <svg
+          viewBox="0 0 16 16"
+          fill="none"
+          aria-hidden="true"
+          class="size-3 shrink-0"
         >
-          7 jours
-        </a>
-      ) : (
-        <h1 class="text-[17px] font-semibold tracking-[-0.01em]">7 jours</h1>
-      )
-    }
+          <path
+            d="M3.5 6 8 10.5 12.5 6"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <select
+        id="edition-switcher"
+        data-edition-switcher
+        aria-hidden="true"
+        tabindex="-1"
+        class="sr-only text-[13px]"
+      >
+        {
+          EDITIONS.map((e) => (
+            <option value={e.href} selected={e.key === edition}>
+              {e.label}
+            </option>
+          ))
+        }
+      </select>
+    </span>
   </div>
   <div class="flex flex-wrap items-baseline gap-4">
     <slot name="aside" />
   </div>
 </div>
+<noscript>
+  <p class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[13px] text-muted">
+    {
+      EDITIONS.filter((e) => e.key !== edition).map((e) => (
+        <a href={e.href} class="transition-colors hover:text-ink">
+          {e.label}
+        </a>
+      ))
+    }
+  </p>
+</noscript>
+<script>
+  import { installEditionSwitcher } from "../edition-switcher";
+
+  installEditionSwitcher();
+</script>

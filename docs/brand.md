@@ -12,15 +12,11 @@ exactly, do not paraphrase.
 
 > L'actualité, décomposée
 
-The home h1. The prism's action, without the word — "Prisme" already sits
-in the navbar right above it, so the title performs the mechanism instead
-of repeating the name (a prism decomposes light; the pinched wordmark is
-that gesture, drawn: every letter leans off the P's stem and stretches
-toward its opposite corners the way every Coverage leans off the same
-Story — ADR-0025 and docs/research/logo/recette-finale.md). The meta description keeps the mission
-wording (*La même actualité, vue par tous les bords politiques.*) — it
-answers a different question, *what*, when the brand is quoted away from
-the logo.
+The catchline. The prism's action, without the word — "Prisme" already
+sits next to it, so the line performs the mechanism instead of repeating
+the name (a prism decomposes light; the pinched wordmark is that gesture,
+drawn: every letter leans off the P's stem and stretches toward its
+opposite corners the way every Coverage leans off the same Story.
 
 ## Mission
 
