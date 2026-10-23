@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { installLoadMore, LOAD_MORE_INITIAL, revealStory } from './load-more';
+import { installLoadMore, LOAD_MORE_INITIAL } from './load-more';
 
 /**
  * DOM wiring tests for the "Afficher plus de sujets" tail (ADR-0022): a
@@ -32,10 +32,13 @@ function page(total: number): Document {
   });
   const fill = { style: { width: '' } };
   const count = { textContent: '' };
+  let clickHandler: () => void = () => {};
   const button = {
     hidden: true,
     dataset: {},
-    addEventListener: () => {},
+    addEventListener: (_: string, handler: () => void) => {
+      clickHandler = handler;
+    },
     querySelector: (sel: string) =>
       sel === '[data-load-more-fill]'
         ? fill
@@ -43,6 +46,7 @@ function page(total: number): Document {
           ? count
           : null,
   } as unknown as HTMLButtonElement;
+  (button as any).__click = () => clickHandler();
   (button as any).__fill = fill;
   (button as any).__count = count;
   const doc = {
@@ -62,11 +66,11 @@ describe('installLoadMore — progress counter and fill', () => {
     expect(button.__fill.style.width).toBe(`${(20 / 45) * 100}%`);
   });
 
-  it('updates the counter and fill when revealStory expands the tail', () => {
+  it('updates the counter and fill when a click expands the tail', () => {
     const doc = page(45);
     installLoadMore(doc);
-    revealStory(doc, 's25');
     const button = doc.querySelector('[data-load-more]') as any;
+    button.__click();
     expect(button.__count.textContent).toBe('(40/45)');
     expect(button.__fill.style.width).toBe(`${(40 / 45) * 100}%`);
   });
@@ -98,27 +102,5 @@ describe('installLoadMore', () => {
     expect(
       (doc.querySelector('[data-load-more]') as HTMLButtonElement).hidden,
     ).toBe(true);
-  });
-});
-
-describe('revealStory', () => {
-  it('expands the tail until the target Story is visible', () => {
-    const doc = page(45);
-    installLoadMore(doc);
-    expect(revealStory(doc, 's25')).toBe(true);
-    const cards = doc.querySelectorAll<HTMLElement>('[data-story-id]');
-    expect((cards[25] as any)._revealed).toBe(true);
-    expect((cards[39] as any)._revealed).toBe(true);
-    expect((cards[40] as any)._revealed).toBe(false);
-    // Newly revealed cards carry the .reveal entrance animation (aligned
-    // with ArticleList follow-ups).
-    expect((cards[25] as any)._classes.has('reveal')).toBe(true);
-  });
-
-  it('is a no-op for a Story already visible or unknown', () => {
-    const doc = page(45);
-    installLoadMore(doc);
-    expect(revealStory(doc, 's5')).toBe(false);
-    expect(revealStory(doc, 'nope')).toBe(false);
   });
 });

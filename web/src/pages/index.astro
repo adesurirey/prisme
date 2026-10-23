@@ -7,11 +7,15 @@ import { loadEdition, loadOutlets } from '../data';
 import Base from '../layouts/Base.astro';
 import { LOAD_MORE_INITIAL } from '../load-more';
 import { formatParisDate } from '../paris-date';
+import { dayActivityWindow } from '../story-activity';
 
 const edition = await loadEdition();
 const outlets = loadOutlets();
 
 const built = new Date(edition.builtAt);
+// The cards' sparkline window: the rolling last 24 hours, the edition's own
+// time base — same rolling rule as the Edition itself (ADR-0027).
+const activityWindow = dayActivityWindow(built);
 
 // The edition's day, Paris clock — "mercredi 15 oct. 2026" — anchors the
 // header row above the hero card: the Edition is a day's reading, and the
@@ -40,17 +44,10 @@ const updatedTime = formatParisDate(built, {
   <section class="pt-10 pb-6">
     {/* The editions header (ADR-0028): « À la une » names the surface as
         the h1 on every edition; the window is the select's setting, with
-        « Aujourd'hui » preselected here. The aside carries the per-reader
-        "Nouveau" pill — daily-visit semantics that stay on the home
-        (ADR-0020): filled client-side by trending.ts for an established
-        returning reader, it counts the Stories absent from that reader's
-        last visit and locates the first one on click; empty:hidden keeps
-        the prerendered page silent. It is the one aside item that
-        survives on phones. The day label anchors the edition to its
-        build day (same formatter as every build-time date,
+        « Aujourd'hui » preselected here. The day label anchors the edition
+        to its build day (same formatter as every build-time date,
         paris-date.ts) and hides under sm:. */}
     <EditionHeader edition="today">
-      <div data-new-pill class="empty:hidden" slot="aside"></div>
       <p class="hidden text-[13px] text-muted first-letter:uppercase sm:block" slot="aside">{`${dayLabel} ${yearLabel}`}</p>
     </EditionHeader>
   </section>
@@ -61,11 +58,12 @@ const updatedTime = formatParisDate(built, {
         // The Edition's first Story leads in the hero variant (Story
         // page header style, full-width legend bar); the rest stay cards.
         index === 0 ? (
-          <StoryHero story={story} outlets={outlets} />
+          <StoryHero story={story} outlets={outlets} activityWindow={activityWindow} />
         ) : (
           <StoryCard
             story={story}
             outlets={outlets}
+            activityWindow={activityWindow}
             // Tail beyond the first batch: hidden by CSS before first
             // paint (html.js rule in global.css), revealed per click by
             // load-more.ts. Without JS the marker is inert — all visible.
@@ -87,39 +85,3 @@ const updatedTime = formatParisDate(built, {
   </section>
 
 </Base>
-{/* "En hausse" (per-visitor trending): the cards ship data-story-id/
-   data-coverage; this module script compares them to the reader's last
-   visit (localStorage) and reveals badges. Runs on this page only —
-   load-more wires itself from LoadMoreButton. */}
-<script>
-  import { installTrending, SEEN_KEY, SESSION_KEY } from "../trending";
-
-  // DEV-only mock: ?mock-trending seeds a fake baseline so both per-visit
-  // signals (StoryCard / StoryHero slot) can be demoed without a real
-  // returning-visit baseline: every Story but the last three is "seen" 3
-  // Outlets behind (« en hausse »); those three stay absent from the
-  // baseline (« nouveau » + count pill, ADR-0020).
-  if (import.meta.env.DEV && location.search.includes("mock-trending")) {
-    const cards = [
-      ...document.querySelectorAll<HTMLElement>("[data-story-id]"),
-    ];
-    const blob = {
-      version: 1,
-      stories: {} as Record<string, { coverage: number; seenAt: number }>,
-    };
-    const NEW_COUNT = 3;
-    cards.forEach((el, i) => {
-      if (i >= cards.length - NEW_COUNT) return;
-      const id = el.dataset.storyId;
-      if (id == null) return;
-      blob.stories[id] = {
-        coverage: Math.max(0, Number(el.dataset.coverage ?? 0) - 3),
-        seenAt: Date.now() - 3_600_000,
-      };
-    });
-    localStorage.setItem(SEEN_KEY, JSON.stringify(blob));
-    sessionStorage.removeItem(SESSION_KEY);
-  }
-
-  installTrending();
-</script>

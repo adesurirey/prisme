@@ -102,9 +102,9 @@ describe('« 7 jours » edition (issue #128, ADR-0027, ADR-0028)', () => {
     expect(html).toContain('data-edition-switcher');
     expect(html).toContain('<option value="/7-jours/" selected>');
     expect(html).toMatch(/<noscript>[\s\S]*href="\/"[\s\S]*<\/noscript>/);
+    // No per-reader signal anywhere since the sparklines (ADR-0030):
+    // no trending script, no badge text, no pill hook.
     expect(html).not.toContain('installTrending');
-    // No per-reader daily-visit semantics on the weekly page: no
-    // trending script, no badge text, no "Nouveau" pill hook.
     expect(html).not.toContain('En hausse');
     expect(html).not.toContain('data-new-pill');
   });
@@ -121,8 +121,11 @@ describe('« 7 jours » edition (issue #128, ADR-0027, ADR-0028)', () => {
     expect(home).toMatch(
       /<noscript>[\s\S]*href="\/7-jours\/"[\s\S]*<\/noscript>/,
     );
-    // The per-reader pill hook stays on the home.
-    expect(home).toContain('data-new-pill');
+    // The home ships the intrinsic sparklines: at least one card's aria
+    // line speaks Article flow over the edition's window (the pill hook
+    // is gone — nothing per-reader is decided in the browser anymore).
+    expect(home).not.toContain('data-new-pill');
+    expect(home).toMatch(/articles sur 24 h, pic à /);
   });
 
   it('keeps the noindexed windowed edition out of the sitemap (ADR-0028)', async () => {

@@ -32,12 +32,6 @@
    * flat, solid gray — quiet, but enough for the knob to read against. */
   --toggle-track: #f0f0f2;
 
-  /* The one color outside the Leaning palette: the Trending Story badge
-   * ("En hausse", ADR-0014). Sarcelle is calm but unmistakably set apart
-   * from rouge, or and droite. Light theme darkens it for readability on
-   * the near-white canvas. */
-  --trending: #0d9488;
-
   --hover: rgba(17, 17, 20, 0.02);
 }
 
@@ -62,9 +56,6 @@
     /* Reading toggle track, dark-theme value. */
     --toggle-track: #26262b;
 
-    /* Trending Story badge (ADR-0014), vivid on the dark canvas. */
-    --trending: #2dd4bf;
-
     --hover: rgba(255, 255, 255, 0.025);
   }
 }
@@ -80,7 +71,6 @@
   --color-gauche: var(--gauche);
   --color-centre: var(--centre);
   --color-droite: var(--droite);
-  --color-trending: var(--trending);
   --color-hover: var(--hover);
   --color-on-leaning: var(--on-leaning);
 
@@ -307,11 +297,4 @@ html[data-mode="exposure"] .mode-toggle::before {
 .mode-whisper.is-shown {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Anchor offset for the sticky navbar (h-14): anything scrolled to via
- * scrollIntoView(block: 'start') — e.g. the "N nouveau" pill's jump to
- * the first new Story — must land below the navbar, not under it. */
-[data-story-id] {
-  scroll-margin-top: 4.5rem;
 }

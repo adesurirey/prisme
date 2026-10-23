@@ -107,13 +107,9 @@ _Avoid_: Edition size, story cap
 A dated page (`/archives/<date>/`) rendered at build time from the permanent Story files of that day — the day's record, not a snapshot of the Edition.
 _Avoid_: Snapshot, backup
 
-**Trending Story**:
-A Story in the Edition that the returning reader is shown as "En hausse" because its Coverage has grown since that reader last looked — at least two Outlets' worth, and at most three Stories per visit, the biggest gainers. A Story the reader has never seen never trends; the signal is the reader's own previous visit, not a global ranking movement, and a reader seen too long ago gets no Trending Stories at all.
-_Avoid_: Rising story, hot story, viral
-
-**New Story**:
-A Story in the Edition that was absent from the Edition the reader last saw — shown to an established returning reader as « Nouveau », next to the Trending Story's « En hausse ». Newness is the reader's own last visit, never a global first appearance: a Story the reader has already seen can never read as new, and a reader seen too long ago gets no New Stories at all.
-_Avoid_: Fresh, breaking, novel
+**Activity sparkline**:
+The tiny monochrome chart on every Edition card: the Story's Article flow across the edition's window — hourly bins over the rolling last 24 hours on the daily pages, day bins over the rolling last 7 days on « 7 jours » — prerendered, identical for every reader. The Story page stretches the same data into the chronologie de couverture: the whole life, split per bord. Replaces the per-reader « En hausse » badge and its baseline, and retires « Nouveau » with it — newness is « En direct »'s job, a page, not a marker (ADR-0029, ADR-0030).
+_Avoid_: Trending story, rising story, hot story, viral
 
 ### Reading a story
 

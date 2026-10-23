@@ -7,7 +7,13 @@ import {
   reportingOutletIds,
 } from '@prisme/domain';
 import { withBase } from '../data';
+import {
+  type EditionActivityWindow,
+  hasActivity,
+  storyActivity,
+} from '../story-activity';
 import { storyUrl } from '../story-url';
+import ActivitySparkline from './ActivitySparkline';
 import BlindspotBadge from './BlindspotBadge';
 import CoverageMeta from './CoverageMeta';
 import ImageCredit from './ImageCredit';
@@ -17,15 +23,17 @@ import StoryImage from './StoryImage';
  * One Story in the Edition index, in ranking order (issue #6: the Edition
  * orders by Outlets currently on the Front page, then Coverage): Section,
  * title, Blindspot badges, the Coverage meta line (compact strip + counted
- * Articles — see CoverageMeta) — one whole-card link
- * to the Story page, where the Articles live, styled like the Story page's
- * Article cards (hover surface, no animation).
+ * Articles, then the activity sparkline — see CoverageMeta,
+ * ActivitySparkline) — one whole-card link to the Story page, where the
+ * Articles live, styled like the Story page's Article cards (hover surface,
+ * no animation).
  *
- * The root carries data-story-id/data-coverage for the client-side
- * per-visitor badges (trending.ts): "En hausse" for a Coverage gain since
- * the reader's last visit, "Nouveau" for a Story absent from it
- * (ADR-0020). The prerendered HTML has no idea who is reading, so the
- * per-visitor signals are decided in the browser.
+ * The sparkline is the intrinsic replacement for the per-visitor badges
+ * (ADR-0030, superseding ADR-0029's « En hausse »): the Story's
+ * real Article flow across the edition's window, prerendered, identical
+ * for every reader. The root still carries data-story-id — load-more counts
+ * the cards with it — but nothing per-reader is decided in the browser
+ * anymore.
  *
  * Link structure: a stretched link (<a> absolute inset-0) makes the
  * whole card navigate while the image column — positioned, painted
@@ -35,10 +43,14 @@ import StoryImage from './StoryImage';
 export default function StoryCard({
   story,
   outlets,
+  activityWindow,
   tail,
 }: {
   story: Story;
   outlets: Outlet[];
+  /** The edition's activity window (rolling 24 h / 7 jours): the sparkline's
+   *  time base and its reader label. */
+  activityWindow: EditionActivityWindow;
   /** Load-more tail marker (index.astro): the CSS rule
    * `html.js [data-load-more-tail]` hides the card before first paint,
    * load-more.ts flips `data-revealed` to bring it in. */
@@ -51,11 +63,11 @@ export default function StoryCard({
   const spots = blindspots(counts);
   const image = pickStoryImage(story, byId);
   const imageOutlet = image && byId.get(image.outletId);
+  const activity = storyActivity(story.articles, byId, activityWindow);
   return (
     <article
       className="group/card relative -mx-5"
       data-story-id={story.id}
-      data-coverage={reporting}
       data-load-more-tail={tail ? '' : undefined}
     >
       {/* Stretched link: the whole card navigates. */}
@@ -69,12 +81,6 @@ export default function StoryCard({
       />
       <div className="flex items-start gap-4 px-5 py-5">
         <div className="min-w-0 flex-1">
-          {/* The per-visitor badge slot ("En hausse" or "Nouveau",
-              trending.ts) sits above the title — a per-visitor highlight
-              deserves the first read, not the bottom of the meta pile.
-              Invisible (empty:hidden) until trending.ts appends the
-              client-side badge. */}
-          <p data-trending-slot className="empty:hidden mb-1 text-[13px]" />
           <h2 className="text-[16px] font-semibold sm:text-[18px] leading-snug tracking-[-0.01em] group-hover/card:underline">
             {story.title}
           </h2>
@@ -88,6 +94,18 @@ export default function StoryCard({
               reporting={reporting}
               totalOutlets={outlets.length}
             />
+            {/* The Story's Article flow across the edition's window —
+                intrinsic, identical for every reader. Pushed to the row's
+                right end; wraps under the coverage line when the two don't
+                fit together. */}
+            {hasActivity(activity) && (
+              <span className="ml-auto flex items-center text-muted">
+                <ActivitySparkline
+                  bins={activity}
+                  windowLabel={activityWindow.label}
+                />
+              </span>
+            )}
           </p>
           {spots.length > 0 && (
             <div className="mt-2.5 flex flex-wrap gap-2">
