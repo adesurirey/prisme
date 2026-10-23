@@ -52,6 +52,13 @@ const description =
         camp, une synthèse en quelques points et les différences de traitement.
       </p>
       <p>
+        Deux échelles de lecture sont proposées. « Aujourd'hui » montre l'actualité
+        des dernières 24 heures — une fenêtre qui glisse d'heure en heure, elle ne
+        repart pas à minuit. « 7 jours » couvre les 7 derniers jours et n'y garde
+        que les sujets repris par au moins 10 médias : les sujets qui comptent à
+        l'échelle de la semaine, pour qui suit l'actualité moins souvent.
+      </p>
+      <p>
         Par défaut, la barre de couverture compte les médias : un média = une voix,
         quelle que soit sa taille. Un interrupteur propose une seconde lecture,
         l'exposition : chaque média y pèse selon son audience — ses visites mensuelles,
@@ -98,10 +105,13 @@ const description =
         suivant plutôt que rangé de force.
       </p>
       <p>
-        Un sujet reste à la une tant que des articles continuent d'arriver, 24 heures
-        au plus après sa naissance. Ensuite il quitte la une, sa page reste
-        consultable telle quelle, et la couverture du même événement le lendemain
-        forme un nouvel épisode.
+        Un sujet reste ouvert tant que sa couverture continue : chaque article qui
+        arrive prolonge le sujet, chaque sujet garde au moins une journée complète,
+        et c'est un silence — plus aucun article — qui le referme. La couverture
+        du même événement le lendemain rejoint donc le même sujet ; un nouvel
+        épisode ne se forme qu'après un silence. Un sujet quitte la une quand plus
+        aucun média ne l'a couvert dans la fenêtre affichée, pas à une heure fixe :
+        sa page reste consultable telle quelle.
       </p>
     </section>
 
@@ -152,8 +162,9 @@ const description =
       </p>
       <p>
         Un angle mort est une observation, pas une accusation. Prisme décrit ce que
-        chaque média a publié, un jour donné, sur un événement donné ; il ne juge ni
-        l'intention, ni la ligne du média, ni la valeur de l'information. Choisir sa
+        chaque média a publié — ou non — sur un événement donné, sur toute la durée
+        du sujet ; il ne juge ni l'intention, ni la ligne du média, ni la valeur de
+        l'information. Choisir sa
         une est le métier d'un média ; Prisme rend ce choix visible, c'est tout.
       </p>
     </section>
