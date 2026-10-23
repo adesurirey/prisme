@@ -173,10 +173,11 @@ export async function runEdition(): Promise<Edition> {
   const ranked = assembleEdition(frontpage.stories, now);
 
   // Edition history (issue #75): `everInEdition` is sticky — set the moment
-  // a Story ranks into either Edition window, so the flag survives its
-  // freezing and the never-entered deletion rule below keeps working. Like
-  // the front-page flags, only live Stories are touched; changed files are
-  // rewritten.
+  // a Story ranks into either Edition window, frozen members included
+  // (ADR-0027: the windows span frozen Stories, and an unstamped member
+  // would be deleted by the cleanup below while still linked on « 7 jours »),
+  // so the flag survives its freezing and the never-entered deletion rule
+  // below keeps working. Changed files are rewritten.
   const editionHistory = updateEditionHistory(
     frontpage.stories,
     new Set([...ranked.day, ...ranked.week].map((s) => s.id)),
