@@ -2,8 +2,9 @@ import { describe, expect, it } from 'vitest';
 import { grewAtLeast } from './growth.ts';
 
 /**
- * The shared growth gate (ADR-0027): the one arithmetic behind both the
- * Summaries gate (summarize.ts) and the retitle gate (grouping.ts).
+ * The shared growth gate (ADR-0027, moved to the domain by ADR-0029): the
+ * one arithmetic behind the Summaries gate (pipeline, summarize.ts), the
+ * retitle gate (pipeline, grouping.ts) and the web's « En hausse » badge.
  */
 describe('grewAtLeast', () => {
   it('passes a Story the pass has never seen (births always pass)', () => {

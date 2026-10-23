@@ -1,4 +1,5 @@
 import type { Story } from '@prisme/domain';
+import { foundingInstant, newestInstant, parseInstant } from '@prisme/domain';
 
 /**
  * The windows (ADR-0027, superseding ADR-0026's one-constant rule): what a
@@ -16,15 +17,16 @@ import type { Story } from '@prisme/domain';
  * `[founding, max(founding + 24h, newest + 12h)]` in instant arithmetic:
  * the founding instant is the earliest `publishedAt` among the Story's
  * Articles and the newest its latest — both derived on demand, never
- * stored. The floor term keeps ADR-0026's guarantee — every Story at least
- * one full day, evening Stories their overnight cycle; the silence term
- * extends the Story while coverage continues — each new Article buys
- * INGESTION_SILENCE_MS more hours — and a silence longer than that closes
- * the Story, permanently (ADR-0005): later coverage of the same event
- * births its Episode instead. No civil-date logic remains in the window
- * rule, so DST transitions cannot mis-time it; the Story day itself stays
- * a Europe/Paris day (paris-day.ts), fixed at creation for URLs, archive
- * pages and the Episode age window.
+ * stored (they live in the domain package, `foundingInstant`/`newestInstant`,
+ * shared with the Edition's « En direct » key). The floor term keeps
+ * ADR-0026's guarantee — every Story at least one full day, evening Stories
+ * their overnight cycle; the silence term extends the Story while coverage
+ * continues — each new Article buys INGESTION_SILENCE_MS more hours — and a
+ * silence longer than that closes the Story, permanently (ADR-0005): later
+ * coverage of the same event births its Episode instead. No civil-date
+ * logic remains in the window rule, so DST transitions cannot mis-time it;
+ * the Story day itself stays a Europe/Paris day (paris-day.ts), fixed at
+ * creation for URLs, archive pages and the Episode age window.
  */
 
 /**
@@ -51,49 +53,6 @@ export const INGESTION_FLOOR_MS = 24 * 60 * 60 * 1000;
  * Story; a silence longer than that closes it (ADR-0005).
  */
 export const INGESTION_SILENCE_MS = 12 * 60 * 60 * 1000;
-
-/** The UTC instant of an ISO date, or undefined when it does not parse —
- * the one parse-and-guard every instant computation goes through. */
-export function parseInstant(iso: string): number | undefined {
-  const t = Date.parse(iso);
-  return Number.isNaN(t) ? undefined : t;
-}
-
-/**
- * The founding instant of a Story (ADR-0026): the earliest `publishedAt`
- * among its Articles. Under the strict membership rule no Article precedes
- * it, so it equals the founding (seed) Article's instant and is stable for
- * the Story's life. Returns undefined when the Story holds no dated Article
- * (an empty or undated file): an undefined founding has no window — nothing
- * is live, nothing may join.
- */
-export function foundingInstant(
-  story: Pick<Story, 'articles'>,
-): number | undefined {
-  let min: number | undefined;
-  for (const article of story.articles) {
-    const t = parseInstant(article.publishedAt);
-    if (t != null && (min === undefined || t < min)) min = t;
-  }
-  return min;
-}
-
-/**
- * The newest instant of a Story (ADR-0027): the latest `publishedAt` among
- * its Articles — the instant the silence term runs from. Derived on
- * demand, never stored, like the founding instant. Returns undefined when
- * the Story holds no dated Article.
- */
-export function newestInstant(
-  story: Pick<Story, 'articles'>,
-): number | undefined {
-  let max: number | undefined;
-  for (const article of story.articles) {
-    const t = parseInstant(article.publishedAt);
-    if (t != null && (max === undefined || t > max)) max = t;
-  }
-  return max;
-}
 
 /**
  * The instant the Ingestion window of `story` closes (ADR-0027):

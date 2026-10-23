@@ -230,12 +230,18 @@ export interface TopicRegistry {
   topics: Topic[];
 }
 
-/** The current selection of top Stories Prisme publishes: the two
- * rolling windows of ADR-0027, re-derived at every build over all
- * Stories — frozen ones included. */
+/** The current selection of top Stories Prisme publishes: the three
+ * rolling windows of ADR-0027 (as amended by ADR-0029), re-derived at
+ * every build over all Stories — frozen ones included. */
 export interface Edition {
   /** ISO 8601 build time. */
   builtAt: string;
+  /** « En direct » (`/en-direct/`): every Story whose founding instant
+   * (ADR-0026, the earliest Article publication time) falls within the
+   * rolling last 8 hours before builtAt, ranked latest-first
+   * (rankStoriesLatestFirst), uncapped and unfloored — the window is the
+   * cap. Always a subset of `stories` by construction (ADR-0029). */
+  latestStories: Story[];
   /** « Aujourd'hui » (the home): the last-24-hours window, ranked by
    * Coverage counted inside the window, uncapped (ADR-0022, ADR-0027). */
   stories: Story[];
@@ -251,6 +257,13 @@ export * from './cover.ts';
 export * from './coverage.ts';
 // The Exposure rule: Reach-weighted shares per Coverage group (issue #88).
 export * from './exposure.ts';
+// The ADR-0027 growth gate: one function, one meaning — the pipeline's AI
+// passes today, the web's « En hausse » badge from here as it ships
+// (ADR-0029).
+export * from './growth.ts';
+// Story instant derivations (ADR-0026/0027): founding and newest instants,
+// computed on demand, never stored.
+export * from './instants.ts';
 // The sourced Outlet config (issue #2): Leanings with citations, readership,
 // verified feeds and TDM reservations. See docs/research/outlet-leanings.md.
 export * from './outlets.ts';

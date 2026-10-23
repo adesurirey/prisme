@@ -2,14 +2,12 @@ import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
 import {
   COLLECTION_WINDOW_MS,
-  foundingInstant,
   INGESTION_FLOOR_MS,
   INGESTION_SILENCE_MS,
   ingestionIsOpen,
   ingestionWindowClosesAt,
   isLive,
   joinsIngestionWindow,
-  newestInstant,
 } from './liveness.ts';
 
 const NOW = new Date('2026-10-07T14:00:00Z');
@@ -40,66 +38,6 @@ describe('the two windows are separate constants (ADR-0027)', () => {
   it('the Ingestion floor is 24 hours and the silence term 12 hours', () => {
     expect(INGESTION_FLOOR_MS).toBe(24 * 60 * 60 * 1000);
     expect(INGESTION_SILENCE_MS).toBe(12 * 60 * 60 * 1000);
-  });
-});
-
-describe('foundingInstant (ADR-0026)', () => {
-  it('is the earliest publishedAt among the Story’s Articles', () => {
-    expect(
-      foundingInstant(
-        story([
-          article('2026-10-06T12:00:00Z', 'a2'),
-          article('2026-10-06T10:00:00Z', 'a1'),
-          article('2026-10-06T11:00:00Z', 'a3'),
-        ]),
-      ),
-    ).toBe(Date.parse('2026-10-06T10:00:00Z'));
-  });
-
-  it('is derived on demand, never stored: no field carries it', () => {
-    const s = story([article('2026-10-06T10:00:00Z')]);
-    expect(Object.keys(s)).not.toContain('founding');
-    expect(Object.keys(s)).not.toContain('newest');
-  });
-
-  it('is undefined for an empty or all-undated Story', () => {
-    expect(foundingInstant(story([]))).toBeUndefined();
-    expect(foundingInstant(story([article('not-a-date')]))).toBeUndefined();
-  });
-
-  it('ignores an unparseable date among dated ones', () => {
-    expect(
-      foundingInstant(
-        story([article('not-a-date', 'a0'), article('2026-10-06T10:00:00Z')]),
-      ),
-    ).toBe(Date.parse('2026-10-06T10:00:00Z'));
-  });
-});
-
-describe('newestInstant (ADR-0027)', () => {
-  it('is the latest publishedAt among the Story’s Articles', () => {
-    expect(
-      newestInstant(
-        story([
-          article('2026-10-06T12:00:00Z', 'a2'),
-          article('2026-10-06T10:00:00Z', 'a1'),
-          article('2026-10-06T11:00:00Z', 'a3'),
-        ]),
-      ),
-    ).toBe(Date.parse('2026-10-06T12:00:00Z'));
-  });
-
-  it('is undefined for an empty or all-undated Story', () => {
-    expect(newestInstant(story([]))).toBeUndefined();
-    expect(newestInstant(story([article('not-a-date')]))).toBeUndefined();
-  });
-
-  it('ignores an unparseable date among dated ones', () => {
-    expect(
-      newestInstant(
-        story([article('not-a-date', 'a0'), article('2026-10-06T10:00:00Z')]),
-      ),
-    ).toBe(Date.parse('2026-10-06T10:00:00Z'));
   });
 });
 
