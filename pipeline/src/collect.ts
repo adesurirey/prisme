@@ -14,8 +14,9 @@ export type Fetcher = (url: string) => Promise<string>;
 export interface CollectedArticles {
   articles: Article[];
   /**
-   * article id → teaser, in memory only (ADR-0003): the Decision model reads
-   * the teaser at classification time; it is never serialized or written.
+   * article id → teaser (ADR-0003, as amended by ADR-0027): the Decision
+   * model reads the teaser at classification time; it stays in memory here
+   * and in the private gitignored cache — never committed or rendered.
    */
   teasers: Map<string, string>;
   /** Outlets whose feeds could not be fetched or parsed. */
