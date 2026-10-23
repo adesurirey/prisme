@@ -6,6 +6,40 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "f191cf5e9f35",
+      "outletId": "ouest-france",
+      "headline": "Mouvement social : Macron en première ligne avec les lycéens et les forces de l’ordre ce vendredi, Lecornu à Limoges",
+      "url": "https://www.ouest-france.fr/europe/france/mouvement-social-macron-en-premiere-ligne-avec-les-lyceens-et-les-forces-de-lordre-ce-vendredi-lecornu-a-limoges-85ac2024-ce68-11f1-bf87-17eca79cb13c?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-23T03:30:03.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYTE4NjJmMzFlNWE4Y2VhZjExNDJkOTJhZmE4NjQzNTQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2b3a5409c6daf72c4e082e16aee37ba865d3e59cde54e6517080e64395ca5852",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "e0debf2afd05",
+      "outletId": "france-24",
+      "headline": "France en direct : Macron avec les lycéens et les forces de l'ordre, Lecornu à Limoges",
+      "url": "https://www.france24.com/fr/france/20261022-en-direct-france-macron-recoit-lyceens-rencontre-forces-de-l-ordre-lecornu-limoges-manifestations",
+      "publishedAt": "2026-10-22T22:55:51.000Z",
+      "imageUrl": "https://s.france24.com/media/display/b003a0ce-ce6b-11f1-a0f5-23d55109f116/w:1024/p:16x9/AP26295395173953-1.jpg",
+      "frontPage": false,
+      "kind": "live",
+      "section": "politics"
+    },
+    {
+      "id": "69f6ed7b6e1f",
+      "outletId": "bfmtv",
+      "headline": "Emmanuel Macron va recevoir des organisations lycéennes: \"On n'est pas dupes\", ironise Sofia Tizaoui, ancienne présidente de l'Union syndicale lycéenne",
+      "url": "https://www.bfmtv.com/politique/elysee/video-emmanuel-macron-va-recevoir-des-organisations-lyceennes-on-n-est-pas-dupes-ironise-sofia-tizaoui-ancienne-presidente-de-l-union-syndicale-lyceenne_VN-202610220985.html",
+      "publishedAt": "2026-10-22T21:40:22.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/CxkOPTz8sOwv6P692WdRVUY0MTU=/0x0:1280x720/800x0/images/Emmanuel-Macron-va-recevoir-des-organisations-lyceennes-On-n-est-pas-dupes-ironise-Sofia-Tizaoui-ancienne-presidente-de-l-Union-syndicale-lyceenne-2370632.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "94bc5ba21c49",
       "outletId": "tf1-info",
       "headline": "Mobilisation lycéenne : Emmanuel Macron recevra les organisations vendredi après-midi à l'Élysée",
@@ -33,18 +67,25 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le chef de l'État doit s'entretenir vendredi à 15 heures avec les associations lycéennes au palais de l'Élysée.",
-      "La réunion rassemblera des représentants d'organisations aux points de vue divers ainsi que des membres des Conseils académiques de la vie lycéenne."
+      "Le chef de l'État recevra des représentants lycéens vendredi à 15 heures à l'Élysée.",
+      "La réunion associera les principales associations exprimant la parole des élèves ainsi que des membres des Conseils académiques de la vie lycéenne."
+    ],
+    "centre": [
+      "Emmanuel Macron s'implique directement en rencontrant les organisations lycéennes et les forces de l'ordre vendredi, tandis que Sébastien Lecornu se déplace à Limoges.",
+      "Cette première entrevue à l'Élysée intervient après plus d'un mois de contestation et à la veille d'un nouvel acte de mobilisation.",
+      "La présidence indique que le président entend écouter les doléances et les inquiétudes des jeunes à la suite des manifestations violentes.",
+      "Certains acteurs syndicaux affirment toutefois ne pas être dupes face à cette initiative gouvernementale."
     ],
     "droite": [
-      "Emmanuel Macron organisera une rencontre vendredi après-midi à l'Élysée avec des lycéens et des représentants de leurs organisations.",
-      "Cette convocation intervient dans un contexte de manifestations et de blocages d'établissements marqués par des violences."
+      "Le président de la République s'entretiendra vendredi après-midi au palais de l'Élysée avec plusieurs représentants lycéens.",
+      "L'exécutif précise que cette rencontre vise à examiner les revendications des jeunes formulées durant les blocus et les manifestations marqués par des violences."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur le format pluriel et institutionnel de la rencontre en précisant l'heure exacte et la diversité des instances conviées.",
-    "La droite insiste sur le contexte sécuritaire en soulignant que la réunion fait suite à des blocus et des manifestations émaillés de violences."
+    "La gauche se focalise strictement sur le calendrier de la convocation et la composition institutionnelle des instances conviées à l'Élysée.",
+    "Le centre contextualise l'événement en soulignant l'intervention personnelle du président face à la crise et relaie des réactions sceptiques de syndicalistes.",
+    "La droite insiste sur le contexte sécuritaire en associant directement la réunion à l'Élysée aux violences survenues lors des blocus lycéens."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 5
 }
