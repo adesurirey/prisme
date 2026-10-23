@@ -18,6 +18,11 @@ import { formatParisDate } from '../paris-date';
  * trending script runs here, so no "Nouveau" / "En hausse" badge ever
  * appears, and the reader's daily baseline (trending.ts) is never
  * written from this page.
+ *
+ * Header and indexation (ADR-0028): the shared editions header — h1
+ * « À la une », select preselected on « 7 jours » — and a meta noindex:
+ * the weekly list is a near-duplicate of la Une over the same Stories,
+ * so only the home edition is indexed.
  */
 const stories = await loadWeekStories();
 const outlets = loadOutlets();
@@ -27,10 +32,10 @@ const built = new Date(edition.builtAt);
 
 // The window's start, Paris clock — "depuis le 16 oct." — names how far
 // back the recap reaches: seven days to the day of the build (same
-// formatter as every build-time date, paris-date.ts). Short on purpose
-// (mobile): the page title "7 jours" already carries the window
-// semantics. French keeps days and months lowercase — the label only
-// takes a first-letter capital.
+// formatter as every build-time date, paris-date.ts). Short on purpose,
+// and hidden on phones (ADR-0028): the row there is h1 + select, and
+// the footer count line carries the timestamp. French keeps days and
+// months lowercase — the label only takes a first-letter capital.
 const sinceLabel = `depuis le ${formatParisDate(
   new Date(built.getTime() - 6 * 86_400_000),
   { day: 'numeric', month: 'short' },
@@ -52,6 +57,7 @@ const description =
 <Base
   title="Prisme — 7 jours"
   description={description}
+  noindex
   jsonLd={{
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -62,7 +68,7 @@ const description =
 >
   <section class="pt-10 pb-6">
     <EditionHeader edition="week">
-      <p class="text-[13px] text-muted first-letter:uppercase" slot="aside">{sinceLabel}</p>
+      <p class="hidden text-[13px] text-muted first-letter:uppercase sm:block" slot="aside">{sinceLabel}</p>
     </EditionHeader>
   </section>
 

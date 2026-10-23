@@ -49,10 +49,6 @@ export const INDEX_URL_ATTR = 'data-index-url';
  * from (issue #128). */
 export const WEEK_URL_ATTR = 'data-week-url';
 
-/** The link's label span — swapped when the reader came from the weekly
- * edition, so the link names where it actually goes. */
-const LABEL_ATTR = 'data-back-label';
-
 /** Pure test: which edition page the referrer is — the weekly edition,
  * la Une, or nothing known (any other page, external, empty). The back
  * link retargets and relabels itself accordingly: a reader who arrived
@@ -74,10 +70,11 @@ export function referrerEdition(
  * anything else follows the href.
  *
  * Edition-aware (issue #128): when the referrer is the « 7 jours »
- * edition (URL in data-week-url), the link first retargets itself —
- * href, back target and label span all become « 7 jours » — so both the
- * history.back() path and every fallback (middle-click, new tab, no
- * history) keep the same promise: back to the edition they came from.
+ * edition (URL in data-week-url), the link retargets itself — href and
+ * back target become « 7 jours » — so both the history.back() path and
+ * every fallback (middle-click, new tab, no history) keep the same
+ * promise: back to the edition they came from. The label never changes:
+ * « À la une » names the page, the select names the window (ADR-0028).
  */
 export function installBackLink(doc: Document, win: Window): void {
   for (const link of doc.querySelectorAll<HTMLAnchorElement>(
@@ -94,8 +91,6 @@ export function installBackLink(doc: Document, win: Window): void {
     ) {
       backUrl = weekUrl;
       link.href = weekUrl;
-      const label = link.querySelector(`[${LABEL_ATTR}]`);
-      if (label) label.textContent = '7 jours';
     }
 
     const target = backUrl;

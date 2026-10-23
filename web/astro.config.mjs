@@ -33,9 +33,16 @@ export default defineConfig({
   base: '/',
   redirects,
   // Sitemap (robots.txt points at /sitemap-index.xml): every built Story,
-  // the Edition index and the classement page, since old day pages have no
-  // inlinks once they roll off the homepage.
-  integrations: [react(), sitemap()],
+  // the home Edition and the classement page, since old day pages have no
+  // inlinks once they roll off the homepage. The windowed editions stay
+  // out: they are noindexed near-duplicates of la Une (ADR-0028) —
+  // append each new edition's path here when it ships.
+  integrations: [
+    react(),
+    sitemap({
+      filter: (page) => !['/7-jours/'].includes(new URL(page).pathname),
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },
