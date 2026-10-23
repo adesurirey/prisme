@@ -35,8 +35,9 @@ export interface TitlePassBirth {
   episode?: { title: string; storyDay: string; subject?: string };
 }
 
-/** An existing Story that gained Articles: full headline history, so the
- * title is framed from the whole group (ADR-0013). */
+/** An existing Story that grew at least 25% since its last title pass
+ * (ADR-0027's retitle gate — the caller holds the watermark): full headline
+ * history, so the title is framed from the whole group (ADR-0013). */
 export interface TitlePassUpdate {
   storyId: string;
   title: string;

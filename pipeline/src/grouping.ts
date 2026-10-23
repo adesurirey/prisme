@@ -1036,7 +1036,11 @@ export async function groupStories(
 
     // The Title pass (ADR-0023): one call per build, after resolution —
     // births are titled at creation (the slug will derive from the title),
-    // and Stories that gained Articles may be re-titled while live. A
+    // and live Stories that grew enough may be re-titled. ADR-0027 gates
+    // the retitle list on ≥ 25% growth since the Story's last title pass,
+    // so titles of long-running Stories stop re-firing hourly; a gated
+    // retitle, when it fires, still sees the Story's whole headline set —
+    // the title names the event, not its latest development. A
     // failed call propagates and fails the build: nothing has been written,
     // the last committed Edition stays live (same posture as Grouping).
     const births = [...keyStories.entries()]
@@ -1046,14 +1050,23 @@ export async function groupStories(
         headlines: story.articles.map((a) => a.headline),
         episode: episodeOf.get(story),
       }));
-    const updates = [...changedStories]
+    // The retitle gate (ADR-0027): same arithmetic as the Summaries gate
+    // (summarize.ts) — a Story with no watermark yet (born before
+    // ADR-0027) passes once and is stamped below. Only the frequency is
+    // gated: the payload built below is the whole headline set, never
+    // windowed or truncated.
+    const retitled = [...changedStories]
       .filter((s) => !created.includes(s))
-      .sort(byNewestArticle)
-      .map((s) => ({
-        storyId: s.id,
-        title: s.title,
-        headlines: s.articles.map((a) => a.headline),
-      }));
+      .filter((s) => {
+        const seen = s.titledArticleCount;
+        return seen == null || (s.articles.length - seen) / seen >= 0.25;
+      })
+      .sort(byNewestArticle);
+    const updates = retitled.map((s) => ({
+      storyId: s.id,
+      title: s.title,
+      headlines: s.articles.map((a) => a.headline),
+    }));
     if (births.length > 0 || updates.length > 0) {
       const titled = await clients.titles.title({ births, updates });
       if (titled == null)
@@ -1067,6 +1080,10 @@ export async function groupStories(
             `Title pass failed: no title for new Story key ${key} — a Story is never written untitled.`,
           );
         story.title = title;
+        // The retitle watermark (ADR-0027): the pass titled this birth
+        // over its whole Article set — later retitles fire only on ≥ 25%
+        // further growth from here.
+        story.titledArticleCount = story.articles.length;
       }
       // Retitles only touch Stories that gained Articles (the input set);
       // never a Story born this build, whose title just came from the pass.
@@ -1080,6 +1097,13 @@ export async function groupStories(
         )
           story.title = update.title;
       }
+      // The watermark is stamped for every Story the pass saw — a declined
+      // retitle (the model kept the current title) passed over the whole
+      // headline set too, so it re-enters only on ≥ 25% further growth,
+      // not next build (ADR-0027). Every stamped Story is in
+      // changedStories, so the watermark rides the Story file out.
+      for (const story of retitled)
+        story.titledArticleCount = story.articles.length;
     }
   }
 
