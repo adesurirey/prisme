@@ -27,7 +27,10 @@ const built = new Date(edition.builtAt);
 
 // The window's start, Paris clock — "depuis le 16 oct." — names how far
 // back the recap reaches: seven days to the day of the build (same
-// formatter as every build-time date, paris-date.ts).
+// formatter as every build-time date, paris-date.ts). Short on purpose
+// (mobile): the page title "7 jours" already carries the window
+// semantics. French keeps days and months lowercase — the label only
+// takes a first-letter capital.
 const sinceLabel = `depuis le ${formatParisDate(
   new Date(built.getTime() - 6 * 86_400_000),
   { day: 'numeric', month: 'short' },
@@ -59,7 +62,7 @@ const description =
 >
   <section class="pt-10 pb-6">
     <EditionHeader edition="week">
-      <p class="text-[13px] text-muted" slot="aside">{sinceLabel}</p>
+      <p class="text-[13px] text-muted first-letter:uppercase" slot="aside">{sinceLabel}</p>
     </EditionHeader>
   </section>
 
