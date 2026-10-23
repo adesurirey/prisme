@@ -32,13 +32,12 @@ export async function loadEdition(): Promise<Edition> {
 /**
  * The « 7 jours » window of the Edition artifact (ADR-0027): Stories
  * covered by at least 10 Outlets publishing in the last 7 days, ranked
- * by that in-window Coverage. An absent `weekStories` reads as an empty
- * week — the committed snapshot predates the key, and a quiet week below
- * the floor is a real state too — rather than breaking the build.
+ * by that in-window Coverage. The pipeline always writes the key; the
+ * reader requires it.
  */
 export async function loadWeekStories(): Promise<Story[]> {
   const edition = await loadEdition();
-  return edition.weekStories ?? [];
+  return edition.weekStories;
 }
 
 /**
