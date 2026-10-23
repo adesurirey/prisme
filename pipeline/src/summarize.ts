@@ -30,6 +30,7 @@ import type {
   StorySummaries,
 } from '@prisme/domain';
 import { coverageCounts, SECTION_LABELS } from '@prisme/domain';
+import { grewAtLeast } from './growth.ts';
 import { RETRYABLE_STATUS } from './http.ts';
 import { isLive } from './liveness.ts';
 
@@ -239,13 +240,12 @@ export async function updateSummaries(input: {
     if (!isLive(story, now)) continue;
     // ADR-0027: a Story re-enters the Summaries budget only when it has
     // never been summarized or grew at least 25% since its last pass —
-    // the watermark counter carries the gate. When it fires, the pass
-    // re-synthesizes from the whole Article set (below), never a delta.
-    const seen = story.summarizedArticleCount;
-    if (seen != null) {
-      const growth = (story.articles.length - seen) / seen;
-      if (growth < 0.25) continue;
-    }
+    // the shared growth gate (grewAtLeast, growth.ts) carries the
+    // watermark, same arithmetic as the retitle gate. When it fires, the
+    // pass re-synthesizes from the whole Article set (below), never a
+    // delta.
+    if (!grewAtLeast(story.summarizedArticleCount, story.articles.length))
+      continue;
 
     // Only Leanings with Coverage are summarized (ADR-0011: an all-Opinion
     // Story now has Coverage, so it is summarized like any other).

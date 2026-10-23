@@ -56,6 +56,7 @@ import type {
 } from './decision-model.ts';
 import { storySection } from './edition.ts';
 import type { GroupingModel, GroupingProposal } from './gemini.ts';
+import { grewAtLeast } from './growth.ts';
 import {
   COLLECTION_WINDOW_MS,
   foundingInstant,
@@ -1050,17 +1051,14 @@ export async function groupStories(
         headlines: story.articles.map((a) => a.headline),
         episode: episodeOf.get(story),
       }));
-    // The retitle gate (ADR-0027): same arithmetic as the Summaries gate
-    // (summarize.ts) — a Story with no watermark yet (born before
-    // ADR-0027) passes once and is stamped below. Only the frequency is
-    // gated: the payload built below is the whole headline set, never
-    // windowed or truncated.
+    // The retitle gate (ADR-0027): the shared growth gate (grewAtLeast,
+    // growth.ts) — the same arithmetic as the Summaries gate — a Story with
+    // no watermark yet (born before ADR-0027) passes once and is stamped
+    // below. Only the frequency is gated: the payload built below is the
+    // whole headline set, never windowed or truncated.
     const retitled = [...changedStories]
       .filter((s) => !created.includes(s))
-      .filter((s) => {
-        const seen = s.titledArticleCount;
-        return seen == null || (s.articles.length - seen) / seen >= 0.25;
-      })
+      .filter((s) => grewAtLeast(s.titledArticleCount, s.articles.length))
       .sort(byNewestArticle);
     const updates = retitled.map((s) => ({
       storyId: s.id,
