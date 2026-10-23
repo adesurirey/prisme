@@ -6,6 +6,17 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "1c2415fe71b5",
+      "outletId": "le-parisien",
+      "headline": "Tempête Austen en Île-de-France : quelles sont les lignes impactées par les intempéries ce vendredi ?",
+      "url": "https://www.leparisien.fr/info-paris-ile-de-france-oise/transports/tempete-austen-en-ile-de-france-quelles-sont-les-lignes-impactees-par-les-intemperies-ce-vendredi-23-10-2026-Z3WGIJHXPZH2ZGTFV4P3G3K5II.php",
+      "publishedAt": "2026-10-23T07:01:21.064Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "other"
+    },
+    {
       "id": "36bfe22871b4",
       "outletId": "cnews",
       "headline": "Tempête Austen : C, D, E, H… Voici les lignes SNCF qui seront perturbées ce vendredi",
@@ -55,15 +66,19 @@
   "section": "other",
   "everInEdition": true,
   "summaries": {
+    "centre": [
+      "Le Parisien liste les lignes de transport franciliennes touchées par les perturbations météorologiques de ce vendredi.",
+      "TF1 Info annonce l'arrivée de la tempête Austen avec des rafales de vent atteignant 140 km/h et de nombreuses suppressions de trains."
+    ],
     "droite": [
-      "La tempête Austen entraîne la suspension préventive de plusieurs lignes de train et RER en Île-de-France pour ce vendredi.",
-      "SNCF Réseau limite la vitesse des circulations et recommande aux voyageurs de différer leurs déplacements par mesure de sécurité.",
-      "Météo-France place plusieurs départements en vigilance orange face aux risques de vents violents pouvant atteindre 140 km/h."
+      "CNews et Europe 1 détaillent la liste des lignes SNCF perturbées ou suspendues préventivement en Île-de-France pour assurer la sécurité des voyageurs.",
+      "Le Figaro et les autres médias rappellent que Météo-France a placé plusieurs départements en vigilance orange face aux risques de vents violents."
     ]
   },
   "differences": [
-    "La droite se focalise exclusivement sur les aspects pratiques et sécuritaires des perturbations ferroviaires en Île-de-France en reprenant les consignes de prudence de la SNCF."
+    "Le centre se focalise sur les aspects pratiques et l'impact immédiat des perturbations sur les usagers des transports en Île-de-France.",
+    "La droite met en avant les mesures préventives prises par la SNCF et les consignes de sécurité émanant des autorités météorologiques."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 5
 }
