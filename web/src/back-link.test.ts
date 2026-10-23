@@ -1,6 +1,11 @@
 // @vitest-environment jsdom
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { backOnClick, installBackLink, shouldUseBack } from './back-link';
+import {
+  backOnClick,
+  installBackLink,
+  referrerEdition,
+  shouldUseBack,
+} from './back-link';
 
 /**
  * The back-to-index link's rules: a plain click becomes history.back()
@@ -13,6 +18,7 @@ import { backOnClick, installBackLink, shouldUseBack } from './back-link';
 
 const SITE = window.location.origin;
 const indexUrl = `${SITE}/`;
+const weekUrl = `${SITE}/7-jours/`;
 
 describe('shouldUseBack', () => {
   it('matches a referrer that is the index', () => {
@@ -63,6 +69,24 @@ describe('backOnClick', () => {
     const history = historyFromIndex();
     expect(backOnClick('', indexUrl, history)).toBe(false);
     expect(history.back).not.toHaveBeenCalled();
+  });
+});
+
+describe('referrerEdition', () => {
+  it('recognizes the weekly edition (issue #128)', () => {
+    expect(referrerEdition(weekUrl, indexUrl, weekUrl)).toBe('week');
+  });
+
+  it('recognizes la Une', () => {
+    expect(referrerEdition(indexUrl, indexUrl, weekUrl)).toBe('index');
+  });
+
+  it('returns null for any other arrival', () => {
+    expect(referrerEdition(`${SITE}/sujet/x/`, indexUrl, weekUrl)).toBeNull();
+    expect(referrerEdition('', indexUrl, weekUrl)).toBeNull();
+    expect(
+      referrerEdition('https://elsewhere.example/', indexUrl, weekUrl),
+    ).toBeNull();
   });
 });
 
@@ -117,5 +141,34 @@ describe('installBackLink', () => {
       }),
     );
     expect(spy).not.toHaveBeenCalled();
+  });
+
+  it('retargets and relabels the link for a reader arriving from « 7 jours »', () => {
+    Object.defineProperty(document, 'referrer', {
+      configurable: true,
+      value: weekUrl,
+    });
+    document.body.innerHTML =
+      '<a href="' +
+      indexUrl +
+      '" data-back-to-index data-index-url="' +
+      indexUrl +
+      '" data-week-url="' +
+      weekUrl +
+      '" id="back"><span data-back-label>À la une</span></a>';
+    vi.spyOn(window.history, 'length', 'get').mockReturnValue(2);
+    const spy = vi.spyOn(window.history, 'back').mockImplementation(() => {});
+    installBackLink(document, window);
+    // Target, href and label all become the weekly edition — every path
+    // (history.back, fallback href, middle-click) keeps the same promise.
+    const link = document.getElementById('back')! as HTMLAnchorElement;
+    expect(link.querySelector('[data-back-label]')!.textContent).toBe(
+      '7 jours',
+    );
+    expect(link.getAttribute('href')).toBe(weekUrl);
+    link.dispatchEvent(
+      new MouseEvent('click', { bubbles: true, cancelable: true }),
+    );
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });

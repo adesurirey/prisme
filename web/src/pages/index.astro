@@ -1,4 +1,6 @@
 ---
+import EditionHeader from '../components/EditionHeader.astro';
+import LoadMoreButton from '../components/LoadMoreButton.astro';
 import StoryCard from '../components/StoryCard';
 import StoryHero from '../components/StoryHero.astro';
 import { loadEdition, loadOutlets } from '../data';
@@ -33,26 +35,22 @@ const updatedTime = formatParisDate(built, {
 
 <Base title="Prisme — revue de presse">
   <section class="pt-10 pb-6">
-    {/* "À la une" + the day's date, one line over the hero card — the
-        Edition leads with its content, not with a title (the catch line
-        stays in the meta description). */}
-    {/* "À la une" + the day's date, one line over the hero card — the
-        Edition leads with its content, not with a title (the catch line
-        stays in the meta description). The "Nouveau" count pill sits on
-        the row's right side, next to the date: filled client-side by
-        trending.ts for an established returning reader, it counts the
-        Stories absent from that reader's last visit and locates the first
-        one on click. empty:hidden keeps the prerendered page silent. */}
-    <div class="flex items-baseline justify-between gap-4">
-      <h1 class="text-[17px] font-semibold tracking-[-0.01em]">À la une</h1>
-      <div class="flex items-baseline gap-4">
-        <div data-new-pill class="empty:hidden"></div>
-        <p class="text-[13px] text-muted capitalize">{dayLabel}</p>
-      </div>
-    </div>
+    {/* The editions header (issue #128, ADR-0027): the home's own name,
+        « Aujourd'hui », leads as the h1; « 7 jours » links to the weekly
+        edition. The day label anchors the edition to its build day (same
+        formatter as every build-time date, paris-date.ts); the "Nouveau"
+        count pill sits beside it — filled client-side by trending.ts for
+        an established returning reader (daily-visit semantics that stay
+        on the home), it counts the Stories absent from that reader's
+        last visit and locates the first one on click. empty:hidden keeps
+        the prerendered page silent. */}
+    <EditionHeader edition="today">
+      <div data-new-pill class="empty:hidden" slot="aside"></div>
+      <p class="text-[13px] text-muted capitalize" slot="aside">{dayLabel}</p>
+    </EditionHeader>
   </section>
 
-  <section aria-label="Sujets de l'édition">
+  <section aria-label="Sujets du jour">
     {
       edition.stories.map((story, index) =>
         // The Edition's first Story leads in the hero variant (Story
@@ -71,28 +69,11 @@ const updatedTime = formatParisDate(built, {
         ),
       )
     }
-    {/* "Afficher plus de sujets" (ADR-0022): everything is in the HTML; the
-        tail beyond LOAD_MORE_INITIAL is hidden by CSS from first paint and
-        revealed per click. Without JS, all Stories simply stay visible. */}
-    <button
-      type="button"
-      data-load-more
-      hidden
-      class="group relative mx-auto mt-10 block cursor-pointer overflow-hidden rounded-full border border-line px-6 py-2 text-[13px] font-medium text-ink transition-[border-color,transform] duration-150 hover:border-line-strong active:scale-[0.98]"
-    >
-      {/* Progress fill behind the label (width driven by load-more.ts),
-          tinted rather than solid ink so the edge never reads as a hard
-          cut through the label; width transitions for a smooth growth.
-          Deepens slightly on hover — the button answers the pointer. */}
-      <span
-        data-load-more-fill
-        aria-hidden="true"
-        class="absolute inset-y-0 left-0 bg-ink/5 transition-[width,background-color] duration-300 ease-out group-hover:bg-ink/10 dark:bg-ink/15 dark:group-hover:bg-ink/25"
-      ></span>
-      <span class="relative">
-        Afficher plus de sujets <span data-load-more-count></span>
-      </span>
-    </button>
+    {/* "Afficher plus de sujets" (ADR-0022): the shared button —
+        everything is in the HTML; the tail beyond LOAD_MORE_INITIAL is
+        hidden by CSS from first paint and revealed per click. Without
+        JS, all Stories simply stay visible. */}
+    <LoadMoreButton />
     {/* Tight under the last card — <main>'s pb-16 and the footer's py-8
         carry the bottom whitespace. */}
     <p class="mt-5 text-center text-[12px] text-faint">
@@ -103,10 +84,10 @@ const updatedTime = formatParisDate(built, {
 </Base>
 {/* "En hausse" (per-visitor trending): the cards ship data-story-id/
    data-coverage; this module script compares them to the reader's last
-   visit (localStorage) and reveals badges. Runs on this page only. */}
+   visit (localStorage) and reveals badges. Runs on this page only —
+   load-more wires itself from LoadMoreButton. */}
 <script>
   import { installTrending, SEEN_KEY, SESSION_KEY } from "../trending";
-  import { installLoadMore } from "../load-more";
 
   // DEV-only mock: ?mock-trending seeds a fake baseline so both per-visit
   // signals (StoryCard / StoryHero slot) can be demoed without a real
@@ -135,6 +116,5 @@ const updatedTime = formatParisDate(built, {
     sessionStorage.removeItem(SESSION_KEY);
   }
 
-  installLoadMore();
   installTrending();
 </script>
