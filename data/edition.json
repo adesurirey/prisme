@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-23T00:01:26.876Z",
+  "builtAt": "2026-10-23T01:01:17.039Z",
   "stories": [
     {
       "id": "738eed38941c",
@@ -1313,7 +1313,7 @@
           "url": "https://www.lemonde.fr/culture/article/2026/10/22/un-tableau-de-monet-vendu-50-millions-d-euros-a-paris-record-pour-des-encheres-d-art-en-france_6798663_3246.html",
           "publishedAt": "2026-10-22T18:34:13.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/22/489/0/5865/2932/644/322/60/0/2d14653_upload-1-2id911a8he30-000-c8jt2bv.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "culture",
           "everFrontPage": true
@@ -2869,6 +2869,67 @@
         "La gauche insiste sur l'ampleur du dispositif policier national de soixante-dix mille agents et sur l'interdiction des défilés dans plusieurs grandes villes.",
         "Le centre se focalise strictement sur les aspects logistiques et géographiques du parcours parisien validé par la préfecture entre Bastille et Nation.",
         "La droite met en avant la fermeté sécuritaire en détaillant l'augmentation des effectifs de vingt pour cent, l'appel à des unités d'élite et les interdictions préfectorales."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3
+    },
+    {
+      "id": "ee6f69deb482",
+      "slug": "le-changement-climatique-menace-96-des-recifs-coralliens-d",
+      "title": "Le changement climatique menace 96 % des récifs coralliens d'extinction d'ici à cinquante ans",
+      "createdAt": "2026-10-23T01:01:17.039Z",
+      "storyDay": "2026-10-22",
+      "articles": [
+        {
+          "id": "a606d68b0df7",
+          "outletId": "cnews",
+          "headline": "Changement climatique : 96 % des récifs coralliens sont menacés de disparition d’ici à 2075",
+          "url": "https://www.cnews.fr/environnement/2026-10-22/changement-climatique-96-des-recifs-coralliens-sont-menaces-de-disparition",
+          "publishedAt": "2026-10-22T16:10:23.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-20t130732z_1935166177_rc28m7a5a835_rtrmadp_3_climate-cop31-event-rockstrom-taille1200_6ada358b44d75.jpg?itok=Jhw0tYKl",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "cb8ddd6fb897",
+          "outletId": "le-monde",
+          "headline": "Changement climatique : 96 % des récifs coralliens classés « en danger critique d’extinction » d’ici à cinquante ans",
+          "url": "https://www.lemonde.fr/planete/article/2026/10/22/changement-climatique-96-des-recifs-coralliens-classes-en-danger-critique-d-extinction-d-ici-cinquante-ans_6798628_3244.html",
+          "publishedAt": "2026-10-22T14:06:07.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/22/288/0/3451/1725/644/322/60/0/9b11b00_ftp-1-7vm7g7dvjng4-0f561cb5cd854bfb9065df70384b64c4-1-0a4a0ce2e0a645b3ad40ac94b91b2514.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "5129226c3c76",
+          "outletId": "europe-1",
+          "headline": "Changement climatique : 96 % des récifs coralliens menacés d'extinction d'ici 50 ans",
+          "url": "https://www.europe1.fr/environnement/changement-climatique-96-des-recifs-coralliens-menaces-dextinction-dici-50-ans-1173711?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-22T12:02:43.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/22/14/r_cifs_gabriel_barathieu_biosphoto_biosphoto_via_afp_6ad9fb1984047.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        }
+      ],
+      "topicId": "ee6f69deb482",
+      "section": "science",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le Monde rapporte que 96 % des récifs coralliens risquent de disparaître d'ici cinquante ans.",
+          "Le journal cite plusieurs sites majeurs menacés comme la Grande Barrière de corail, le Triangle de corail et la mer Rouge."
+        ],
+        "droite": [
+          "L'UICN a classé 96 % des écosystèmes coralliens en eaux peu profondes en danger critique d'extinction d'ici 2075 lors de la COP17 biodiversité à Erevan.",
+          "Cette évaluation mondiale inédite, portée par CNews et Europe 1, concerne 127 écosystèmes tropicaux et subtropicaux répartis dans plus de 80 pays."
+        ]
+      },
+      "differences": [
+        "Le Monde adopte un angle géographique précis en listant les grandes zones coralliennes menacées à travers le monde.",
+        "CNews et Europe 1 privilégient un angle institutionnel et chiffré en insistant sur le cadre de la COP17 et le rapport d'évaluation de l'UICN."
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 3
