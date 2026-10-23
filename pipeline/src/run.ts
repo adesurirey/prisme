@@ -223,7 +223,9 @@ export async function runEdition(): Promise<Edition> {
   // Save the cache with this build's accumulation (ADR-0027): after the
   // model passes so a Story that re-Summarized this build had the aged
   // entries available, and so a clean build persists them for the next one.
-  await saveTeaserCache(mergeTeasers(teaserCache, teasers), TEASER_CACHE_PATH);
+  // `teasers` is already the merged map (cache + collection, above); no pass
+  // mutates it.
+  await saveTeaserCache(Object.fromEntries(teasers), TEASER_CACHE_PATH);
 
   const filesToWrite = changed.size;
   section('📰', 'Edition');
