@@ -21,8 +21,12 @@ const dayLabel = formatParisDate(built, {
   weekday: 'long',
   day: 'numeric',
   month: 'short',
-  year: 'numeric',
 });
+
+// The year is noise on a phone — the edition is always today's — so it
+// only shows from `sm:` up (kept in one text node with a leading space
+// so copy-paste still reads "jeudi 22 oct. 2026").
+const yearLabel = formatParisDate(built, { year: 'numeric' });
 
 // The edition's last update, Paris clock — "22 h 01", thin no-break
 // spaces around the h (docs/brand.md, French typographic craft) — shown
@@ -46,7 +50,7 @@ const updatedTime = formatParisDate(built, {
         the prerendered page silent. */}
     <EditionHeader edition="today">
       <div data-new-pill class="empty:hidden" slot="aside"></div>
-      <p class="text-[13px] text-muted capitalize" slot="aside">{dayLabel}</p>
+      <p class="text-[13px] text-muted first-letter:uppercase" slot="aside">{dayLabel}<span class="hidden sm:inline"> {yearLabel}</span></p>
     </EditionHeader>
   </section>
 
