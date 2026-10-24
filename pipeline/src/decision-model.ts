@@ -111,6 +111,25 @@ export const MEMBERSHIP_QUESTION = {
   },
 } as const;
 
+/** The birth-guard question (ADR-0030): the belongs judgement of
+ * ADR-0018 asked of a whole proposed Story against a live one — same
+ * fact or direct development, never the broader theme. The bunch carries
+ * the event even when its seed is a legitimately narrow Article (the
+ * métro-closures seed inside a security-dispositif bunch, issue #140):
+ * judging the seed alone refuses a birth whose members are the live
+ * Story's own chain. */
+export const ABSORB_QUESTION = {
+  belongs: {
+    type: 'choice',
+    instructions:
+      "Cette story proposée rapporte-t-elle le même fait que la story existante, ou un développement direct de ce fait ? Juge à partir du titre de la story existante, des titres d'articles déjà joints à cette story, et des titres d'articles de la story proposée.",
+    criteria: {
+      yes: "Même fait : la story proposée rapporte le fait même de la story existante, ou une suite directe de ce fait qui n'aurait pas d'existence propre sans lui — ses articles sont la couverture de l'événement que la story existante poursuit.",
+      no: "Autre fait : même s'il relève du même thème général (même mouvement, même dossier, mêmes acteurs), un fait distinct qui ferait sa propre story sans l'événement de la story existante.",
+    },
+  },
+} as const;
+
 /** true = belongs; false = does not; null = invalid answer (treated as “no”). */
 export function parseMembershipAnswer(answers: unknown): boolean | null {
   if (answers == null || typeof answers !== 'object') return null;
@@ -392,6 +411,14 @@ export interface MembershipChecker {
     story: MembershipStoryRef,
     article: { headline: string; teaser: string },
   ): Promise<MembershipAnswer>;
+  /** The birth-guard check (ADR-0030): does the proposed new Story carry
+   * the same event a live Story already has — the belongs judgement asked
+   * of a whole bunch, because a legitimately narrow seed must not decide
+   * for its Story (issue #140). */
+  absorbs(
+    story: MembershipStoryRef,
+    bunch: MembershipStoryRef,
+  ): Promise<MembershipAnswer>;
   /** The Topic check (ADR-0024): same model, its own question — “same
    * subject, continuing?” where belongs deliberately says “same theme,
    * other fact” is a no. The whole thread goes in, oldest first: the
@@ -421,6 +448,22 @@ export function membershipPayload(
     headline: lines.join('\n'),
     teaser: article.teaser ? `\n${article.teaser}` : '',
   };
+}
+
+/** The birth-guard check's payload (ADR-0030): the live Story with its
+ * member digest, then the proposed Story as a headline list — the bunch's
+ * own headlines, seed (newest) first. Exported for tests. */
+export function absorbPayload(
+  story: MembershipStoryRef,
+  bunch: MembershipStoryRef,
+): { headline: string; teaser: string } {
+  const section = story.section ? ` (${SECTION_LABELS[story.section]})` : '';
+  const lines = [`Story existante : ${story.title}${section}`];
+  const members = story.headlines.filter((h) => h !== story.title);
+  if (members.length > 0)
+    lines.push('Articles déjà joints :', ...members.map((h) => `- ${h}`));
+  lines.push('Story proposée :', ...bunch.headlines.map((h) => `- ${h}`));
+  return { headline: lines.join('\n'), teaser: '' };
 }
 
 /** The topic check's payload (ADR-0024): both sides are full Story refs —
@@ -475,6 +518,21 @@ export function membershipModelFromOpenRouter(
         apiKey,
         { model, questions: MEMBERSHIP_QUESTION },
         membershipPayload(story, article),
+        (answers) => {
+          const belongs = parseMembershipAnswer(answers);
+          return belongs == null ? null : { belongs };
+        },
+      ).then((r) =>
+        r == null ? 'failed' : r.belongs ? ('yes' as const) : ('no' as const),
+      );
+    },
+    async absorbs(story, bunch) {
+      return callTyped(
+        label,
+        'https://openrouter.ai/api/alpha/decisions',
+        apiKey,
+        { model, questions: ABSORB_QUESTION },
+        absorbPayload(story, bunch),
         (answers) => {
           const belongs = parseMembershipAnswer(answers);
           return belongs == null ? null : { belongs };
