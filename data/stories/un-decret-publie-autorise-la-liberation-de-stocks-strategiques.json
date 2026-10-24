@@ -6,6 +6,29 @@
   "storyDay": "2026-10-24",
   "articles": [
     {
+      "id": "b1b857962625",
+      "outletId": "cnews",
+      "headline": "Crise des carburants : le prix du gazole va enfin diminuer grâce à ce nouveau décret, voici quand il sera effectif",
+      "url": "https://www.cnews.fr/france/2026-10-24/crise-des-carburants-le-prix-du-gazole-va-enfin-diminuer-grace-ce-nouveau-decret",
+      "publishedAt": "2026-10-24T10:49:03.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_gbedrignans_3302789-taille1200_6adc842291449.jpg?itok=wdIgFQrK",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "1019e5093206",
+      "outletId": "le-monde",
+      "headline": "Prix des carburants : un décret en vue de la libération de stocks stratégiques de gazole publié au « Journal officiel »",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/24/prix-des-carburants-un-decret-en-vue-de-la-liberation-de-stocks-strategiques-de-gazole-publie-au-journal-officiel_6799684_3234.html",
+      "publishedAt": "2026-10-24T09:20:17.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/12/288/0/3463/1731/644/322/60/0/d1177ee_ftp-1-gjh14obpzvh8-5333166-01-06.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "a27dfe25224f",
       "outletId": "europe-1",
       "headline": "Crise des carburants : un décret publié en vue de la libération de stocks stratégiques de gazole",
@@ -30,23 +53,25 @@
     }
   ],
   "topicId": "a13153bef56f",
-  "titledArticleCount": 2,
+  "titledArticleCount": 4,
   "section": "economy",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le gouvernement débloque 1,6 million de m3 des réserves stratégiques de l'État pour faire baisser les tarifs.",
-      "L'exécutif vise une diminution de 12 à 18 centimes par litre à la pompe pour les usagers."
+      "Le Journal officiel a publié un décret autorisant la libération de 1,6 million de mètres cubes de gazole issus des stocks stratégiques de l'État.",
+      "Le gouvernement vise une réduction du prix à la pompe estimée entre 12 et 18 centimes par litre.",
+      "Le Monde précise que les distributeurs ont l'obligation de répercuter intégralement cette baisse dès le 1er novembre par anticipation."
     ],
     "droite": [
-      "Un décret officialise les conditions économiques de la mobilisation des stocks stratégiques de gazole annoncée par Sébastien Lecornu.",
-      "Le texte autorise la vente maximale de 10 millions de barils jusqu'au 31 janvier avec des répercussions attendues dès le 1er novembre."
+      "Un décret publié au Journal officiel concrétise la libération de stocks stratégiques de gazole annoncée par le Premier ministre Sébastien Lecornu.",
+      "Le texte autorise la vente d'un volume maximal de 1,6 million de mètres cubes, soit environ 10 millions de barils, jusqu'au 31 janvier.",
+      "CNews et Europe 1 rapportent que cette mesure permettra de baisser le prix du gazole de 12 à 18 centimes par litre pour soulager les automobilistes."
     ]
   },
   "differences": [
-    "La gauche met directement en avant l'objectif social de baisse immédiate des tarifs pour le pouvoir d'achat des usagers.",
-    "La droite insiste sur le calendrier technique de la mesure, mentionnant le rôle du Premier ministre et les aspects réglementaires du décret."
+    "Le camp gauche, représenté par Le Monde et 20 Minutes, insiste sur l'obligation réglementaire imposée aux distributeurs de répercuter intégralement la baisse dès le 1er novembre.",
+    "Le camp droite, incarné par CNews et Europe 1, met l'accent sur le soulagement des automobilistes face à la crise des carburants et salue la concrétisation de l'annonce du Premier ministre."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 4
 }

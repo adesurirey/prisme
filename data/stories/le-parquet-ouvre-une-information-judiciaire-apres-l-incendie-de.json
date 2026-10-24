@@ -6,6 +6,29 @@
   "storyDay": "2026-10-23",
   "articles": [
     {
+      "id": "d88f4f19765c",
+      "outletId": "le-jdd",
+      "headline": "Mairie de Limoges incendiée : deux suspects écroués, dont un fiché S",
+      "url": "https://www.lejdd.fr/Societe/mairie-de-limoges-incendiee-deux-suspects-ecroues-dont-un-fiche-s-186819",
+      "publishedAt": "2026-10-24T10:27:48.000Z",
+      "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/24/12/000_d48f3g3.jpg?VersionId=E_C8zrtZajEVdoci61mBZxU.rBfxCJXd",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "e5b46ed5d9f9",
+      "outletId": "le-figaro",
+      "headline": "Incendie de la mairie de Limoges : deux suspects placés en détention provisoire",
+      "url": "https://www.lefigaro.fr/faits-divers/incendie-de-la-mairie-de-limoges-deux-suspects-places-en-detention-provisoire-20261024",
+      "publishedAt": "2026-10-24T10:25:33.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/24/1f72177b841d622e647a8dd7ea97d2cd6bd34bbbf469f6cadf72b348fd112f28.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "fd4d51dedab8",
       "outletId": "le-parisien",
       "headline": "Incendie de la mairie de Limoges : les deux suspects mis en examen et placés en détention provisoire",
@@ -96,30 +119,30 @@
     }
   ],
   "topicId": "28b82ce43b07",
-  "titledArticleCount": 8,
+  "titledArticleCount": 10,
   "section": "misc",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le parquet a ouvert une information judiciaire pour tentative d'homicide et destruction en bande organisée.",
-      "Les deux suspects interpellés ont été placés en détention provisoire."
+      "Le parquet a ouvert une information judiciaire pour tentative d'homicide sur personne dépositaire de l'autorité publique et destruction en bande organisée.",
+      "Deux suspects âgés de 34 et 66 ans ont été mis en examen et placés en détention provisoire."
     ],
     "centre": [
-      "Les deux hommes suspectés d'avoir incendié la mairie de Limoges le 17 octobre ont été mis en examen.",
-      "Le parquet a ouvert une information judiciaire et requis le placement en détention provisoire des suspects.",
-      "Le Premier ministre Sébastien Lecornu a annoncé le classement du bâtiment comme monument historique."
+      "Deux suspects âgés de 34 et 66 ans ont été mis en examen et placés en détention provisoire.",
+      "Le parquet a ouvert une information judiciaire pour tentative d'homicide et destruction de biens.",
+      "TF1 Info précise que le Premier ministre Sébastien Lecornu a annoncé le classement prochain du bâtiment en monument historique."
     ],
     "droite": [
-      "Les deux suspects de l'incendie de la mairie de Limoges ont été mis en examen et écroués.",
-      "Les mis en cause sont âgés de 34 et 66 ans et ont été interpellés dans la semaine.",
-      "L'incendie s'est produit lors d'une mobilisation de 5.000 personnes où des éléments radicaux ont attaqué le bâtiment."
+      "Deux hommes de 34 et 66 ans ont été mis en examen et écroués suite à l'incendie de l'hôtel de ville le 17 octobre.",
+      "Europe 1 indique que l'un des suspects est fiché S et que la cité judiciaire a été fermée pour raisons de sécurité.",
+      "Le Figaro et Le JDD rappellent que les faits se sont déroulés lors de la mobilisation du 17 octobre."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur les qualifications juridiques exactes retenues par le parquet, notamment la tentative d'homicide et la destruction en bande organisée.",
-    "Le centre livre un suivi factuel et institutionnel de l'affaire, rapportant l'ouverture de l'information judiciaire, les réquisitions du parquet ainsi que l'annonce gouvernementale sur la reconstruction du bâtiment.",
-    "La droite privilégie un récit contextuel des violences du 17 octobre, détaillant le profil des suspects, le déroulement de l'attaque menée par des éléments radicaux et la mobilisation de Limoges."
+    "La gauche met l'accent sur la qualification pénale lourde retenue par le parquet, notamment la tentative d'homicide sur personne dépositaire de l'autorité publique.",
+    "Le centre adopte un traitement factuel centré sur les suites judiciaires, tout en intégrant des annonces gouvernementales concernant la reconstruction de l'édifice.",
+    "La droite insiste sur le profil des suspects, signalant notamment qu'un individu est fiché S, et rappelle les violences commises par des éléments radicaux lors du défilé."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 8
+  "summarizedArticleCount": 10
 }
