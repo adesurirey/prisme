@@ -85,4 +85,40 @@ export class MembershipGate {
     this.#verdicts.set(key, verdict);
     return verdict;
   }
+
+  /**
+   * Ask the birth-guard question for one (proposed bunch, candidate Story)
+   * pair (ADR-0030) and record the verdict under the bunch's seed Article
+   * id — so the materialization loop's seed-vs-absorber verdict is the
+   * guard verdict, and every further member is checked individually
+   * against the absorber by the ordinary merge pairs. Asking for an
+   * already-asked pair returns the cached verdict and issues no new check.
+   */
+  async absorbs(input: {
+    target: string;
+    story: MembershipStoryRef;
+    bunch: MembershipStoryRef;
+    seedId: string;
+    label: string;
+  }): Promise<MembershipVerdict> {
+    const key = `${input.seedId}|${input.target}`;
+    const cached = this.#verdicts.get(key);
+    if (cached != null) return cached;
+
+    this.#checksUsed++;
+    this.#attempts++;
+    let verdict: MembershipVerdict;
+    try {
+      verdict = await this.#checker.absorbs(input.story, input.bunch);
+      if (verdict === 'failed') this.#failures++;
+    } catch (reason) {
+      this.#failures++;
+      console.warn(
+        `${input.label}: ${reason instanceof Error ? reason.message : reason}`,
+      );
+      verdict = 'failed';
+    }
+    this.#verdicts.set(key, verdict);
+    return verdict;
+  }
 }

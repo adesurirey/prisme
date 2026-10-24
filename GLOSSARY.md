@@ -76,7 +76,7 @@ The cheap language model call, one per build after Grouping resolution, that wri
 _Avoid_: Titling model, retitle job
 
 **Membership check**:
-A yes/no check that decides whether an Article the Grouping model matched with low confidence joins that Story.
+A yes/no check that decides whether an Article joins the Story the Grouping model matched it to, or whether a proposed new Story carries the same event a live Story already has (the birth guard, ADR-0030).
 _Avoid_: Verification, noul check
 
 **Unassigned Article**:
