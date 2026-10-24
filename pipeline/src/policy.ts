@@ -38,6 +38,9 @@ export function missingMembershipChecker(): MembershipChecker {
     async belongs() {
       throw new Error('Membership checker unavailable');
     },
+    async absorbs() {
+      throw new Error('Membership checker unavailable');
+    },
     async sameSubject() {
       throw new Error('Membership checker unavailable');
     },

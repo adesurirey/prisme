@@ -131,6 +131,14 @@ function fakeMembership(
       });
       return answer == null ? 'failed' : answer ? 'yes' : 'no';
     },
+    async absorbs(story, bunch) {
+      calls.push({
+        story: story.title,
+        article: bunch.title,
+        headlines: story.headlines,
+      });
+      return answer == null ? 'failed' : answer ? 'yes' : 'no';
+    },
   };
 }
 
@@ -304,6 +312,14 @@ describe('groupStories', () => {
                 ? 'yes'
                 : 'no';
             },
+            async absorbs(story, bunch) {
+              calls.push({
+                story: story.title,
+                article: bunch.title,
+                headlines: story.headlines,
+              });
+              return 'no';
+            },
             async sameSubject() {
               throw new Error('no topic check in this test');
             },
@@ -449,6 +465,9 @@ describe('groupStories', () => {
             sameSubject: async () => {
               throw new Error('no topic check in this test');
             },
+            absorbs: async () => {
+              throw new Error('no guard check in this test');
+            },
           },
         },
       }),
@@ -563,6 +582,9 @@ describe('groupStories', () => {
               },
               sameSubject: async () => {
                 throw new Error('no topic check in this test');
+              },
+              absorbs: async () => {
+                throw new Error('no guard check in this test');
               },
             },
           },
@@ -778,6 +800,9 @@ describe('groupStories', () => {
         return article.headline.startsWith('Ghost ') ? 'no' : 'yes';
       },
       async sameSubject() {
+        return 'no';
+      },
+      async absorbs() {
         return 'no';
       },
     };
@@ -1820,7 +1845,7 @@ describe('groupStories', () => {
     expect(outcome.stories).toHaveLength(1);
   });
 
-  describe('seed guard (issue #36)', () => {
+  describe('birth guard (issue #36, ADR-0030)', () => {
     const nobel = {
       a1: 'Le prix Nobel de littérature 2026 décerné à Anne Carson',
       a2: "Le prix Nobel de littérature décerné à l'écrivaine Anne Carson",
@@ -2155,6 +2180,174 @@ describe('groupStories', () => {
       const s1 = outcome.stories.find((s) => s.id === 's1')!;
       expect(s1.articles).toHaveLength(23); // a0 + 21 checked merges + the absorbed seed
       expect(outcome.stories).toHaveLength(1); // no splits: nothing starved
+    });
+
+    it('a same-event birth beside its live mother is absorbed — the 2026-10-24 incident (issue #140, ADR-0030)', async () => {
+      // The real morning, replayed: four live Stories qualify lexically —
+      // three same-subject different-fact Stories outrank the true twin,
+      // so the old top-2 cap asked only the near-misses and the duplicate
+      // was born. Unbounded candidates ask all four; only the mother says
+      // yes, her chain joins her, and the narrow portrait retries alone.
+      const absorbsCalls: { story?: string; article?: string }[] = [];
+      const SURVIVOR =
+        "Laurent Nuñez mobilise 70 000 forces de l'ordre pour les manifestations";
+      const survivor = story({
+        id: '1e52bac1f877',
+        slug: 'laurent-nunez-mobilise-70-000-forces-de-l-ordre-pour-les',
+        title: SURVIVOR,
+        createdAt: '2026-10-23T13:01:29.637Z',
+        storyDay: '2026-10-23',
+        articles: [
+          article('n0', {
+            outletId: 'humanite',
+            headline:
+              '70 000 policiers et gendarmes dont « le RAID, le GIGN et la BRI » mobilisés',
+            publishedAt: '2026-10-23T11:15:30.000Z',
+          }),
+          article('n1', {
+            outletId: 'europe-1',
+            headline:
+              'INFO EUROPE 1 – «Actions plus violentes» et «détermination renforcée»',
+            publishedAt: '2026-10-23T10:01:00.000Z',
+          }),
+        ],
+      });
+      const crowders = [
+        story({
+          id: '3bca5d1e9243',
+          slug: 'intersyndicale',
+          title:
+            "L'intersyndicale maintient le parcours de la manifestation du 24 octobre à Paris malgré l'interdiction de la préfecture",
+          articles: [
+            article('c1a', {
+              headline:
+                '24 octobre : manifestation sous haute surveillance à Paris, interdite à Marseille',
+              publishedAt: '2026-10-23T17:30:00.000Z',
+            }),
+            article('c1b', {
+              outletId: 'tf1-info',
+              headline:
+                'Dispositif policier, interdictions... : samedi, la carte de la fermeté',
+              publishedAt: '2026-10-22T18:50:22.000Z',
+            }),
+          ],
+        }),
+        story({
+          id: '738eed38941c',
+          slug: 'conseil-etat',
+          title:
+            'Le Conseil d’État saisi en urgence contre l’interdiction des manifestations non syndicales',
+          articles: [
+            article('c2a', {
+              outletId: 'bfmtv',
+              headline:
+                '24 octobre: Emmanuel Macron indique que "des tracés alternatifs" seront proposés',
+              publishedAt: '2026-10-23T17:10:00.000Z',
+            }),
+            article('c2b', {
+              outletId: 'humanite',
+              headline:
+                'Emmanuel Macron interdit toute manifestation en dehors de celles organisées par les syndicats',
+              publishedAt: '2026-10-22T10:42:05.000Z',
+            }),
+          ],
+        }),
+        story({
+          id: 'ee682df6b940',
+          slug: 'commercants',
+          title:
+            "Des commerçants s'arment pour protéger leurs boutiques avant les manifestations",
+          articles: [
+            article('c3a', {
+              outletId: 'causeur',
+              headline:
+                'Paris : face aux pillages, des commerçants s’arment pour le 24 octobre',
+              publishedAt: '2026-10-23T15:00:00.000Z',
+            }),
+          ],
+        }),
+      ];
+      const bunch = [
+        article('seed', {
+          outletId: 'le-parisien',
+          headline:
+            'Manifestation du 24 octobre à Paris : les 24 stations de métro fermées ce samedi',
+          publishedAt: '2026-10-24T05:01:18.076Z',
+        }),
+        article('libe', {
+          outletId: 'liberation',
+          headline:
+            'Paroles de manifestants : «Si je commence à ne pas y aller car j’ai peur de me faire gazer, c’est une capitulation»',
+          publishedAt: '2026-10-24T04:47:00.000Z',
+        }),
+        article('courrier', {
+          outletId: 'courrier-international',
+          headline:
+            'Nouveau week-end de manifestations, un dispositif de sécurité “massif” déployé',
+          publishedAt: '2026-10-24T04:00:05.000Z',
+        }),
+        article('rfi', {
+          outletId: 'rfi',
+          headline:
+            'Manifestations en France: un «acte II» sous haute surveillance, les manifestants entre peur et détermination',
+          publishedAt: '2026-10-23T22:00:49.000Z',
+        }),
+      ];
+      const membership: import('./decision-model.ts').MembershipChecker = {
+        label: 'FakeJev',
+        async belongs(story, article) {
+          // Only the narrow «Paroles» portrait is refused by the mother;
+          // the dispositif and acte-II articles are her own chain.
+          return article.headline.startsWith('Paroles') ? 'no' : 'yes';
+        },
+        async absorbs(story, bunch) {
+          absorbsCalls.push({ story: story.title, article: bunch.title });
+          return story.title === SURVIVOR ? 'yes' : 'no';
+        },
+        async sameSubject() {
+          throw new Error('no topic check in this test');
+        },
+      };
+      const outcome = await groupStories(
+        input({
+          articles: bunch,
+          existing: [survivor, ...crowders],
+          now: new Date('2026-10-24T05:01:18.400Z'),
+          clients: {
+            grouping: fakeGrouping({
+              newStories: [{ key: 'k1' }],
+              assignments: bunch.map((a) => ({
+                articleId: a.id,
+                newStoryKey: 'k1',
+                confidence: 0.3,
+              })),
+            }),
+            membership,
+          },
+        }),
+      );
+      // No twin was born: the four live Stories are the whole outcome.
+      expect(outcome.stories).toHaveLength(4);
+      // The guard asked EVERY qualifying candidate — under the old top-2
+      // cap the three lexical crowders spent the checks and the twin was
+      // never compared to its mother (issue #140).
+      expect(absorbsCalls.map((c) => c.story).sort()).toEqual(
+        [SURVIVOR, ...crowders.map((c) => c.title)].sort(),
+      );
+      // The mother absorbed her chain — the seed (on the bunch verdict)
+      // and the two members that passed their own checks; the «Paroles»
+      // portrait was refused and stays Unassigned, to retry next build.
+      const mother = outcome.stories.find((s) => s.id === '1e52bac1f877')!;
+      expect(mother.articles.map((a) => a.id).sort()).toEqual([
+        'courrier',
+        'n0',
+        'n1',
+        'rfi',
+        'seed',
+      ]);
+      expect(
+        outcome.stories.some((s) => s.articles.some((a) => a.id === 'libe')),
+      ).toBe(false);
     });
   });
 });
@@ -2857,6 +3050,9 @@ describe('Topics (ADR-0024)', () => {
             headlines: birth.headlines,
           });
           return answer == null ? 'failed' : answer ? 'yes' : 'no';
+        },
+        async absorbs() {
+          throw new Error('no guard check in this test');
         },
       },
     };

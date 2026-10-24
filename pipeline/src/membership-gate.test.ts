@@ -20,6 +20,9 @@ function checker(
     async sameSubject() {
       throw new Error('no topic check in this test');
     },
+    async absorbs() {
+      throw new Error('no guard check in this test');
+    },
   };
 }
 
