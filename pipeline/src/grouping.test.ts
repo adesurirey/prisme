@@ -2582,7 +2582,8 @@ describe('Title pass — 25% growth gate (ADR-0027)', () => {
     const [pass] = passCalls;
     expect(pass?.input?.updates.map((u) => u.storyId)).toEqual(['s1']);
     // The whole headline set — all ten, newest first — never windowed or
-    // truncated: the title names the event, not its latest development.
+    // truncated: the founding anchor is the prompt's update rule, not the
+    // payload order (replaying oldest-first weakened it).
     expect(pass?.input?.updates[0]?.headlines).toEqual([
       'Titre a9',
       'Titre a8',

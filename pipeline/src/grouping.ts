@@ -1063,6 +1063,11 @@ export async function groupStories(
     const updates = retitled.map((s) => ({
       storyId: s.id,
       title: s.title,
+      // Stored order (newest first): the payload is the whole headline set,
+      // never windowed or truncated — the founding anchor is the prompt's
+      // update rule, and replaying this story's decision point showed
+      // reordering oldest-first *weakens* that anchor (the payload's last
+      // line reads as the title-worthy fact).
       headlines: s.articles.map((a) => a.headline),
     }));
     if (births.length > 0 || updates.length > 0) {
