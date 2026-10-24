@@ -1,10 +1,33 @@
 {
   "id": "75822d657c7c",
   "slug": "gims-reporte-sa-tournee-automnale-pour-raisons-de-sante",
-  "title": "Gims reporte sa tournée automnale pour raisons de santé",
+  "title": "Gims reporte sa tournée prévue cet automne pour raisons médicales",
   "createdAt": "2026-10-24T17:01:24.751Z",
   "storyDay": "2026-10-24",
   "articles": [
+    {
+      "id": "3cfac379963d",
+      "outletId": "20-minutes",
+      "headline": "Gims annonce le report de sa tournée pour raisons médicales",
+      "url": "https://www.20minutes.fr/arts-stars/culture/musique/4257232-20261024-gims-annonce-report-tournee-raisons-medicales?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-24T18:37:15.000Z",
+      "imageUrl": "https://img.20mn.fr/zcQEhNpPQrG9z0jpWA-O-Ck/1200x768_presentation-de-gims-chanteur-au-high-club-de-nice-france-23-01-2025-syspeo-sysa014-credit-syspeo-sipa-2501241846",
+      "frontPage": true,
+      "kind": "news",
+      "section": "culture",
+      "everFrontPage": true
+    },
+    {
+      "id": "5819d0172111",
+      "outletId": "cnews",
+      "headline": "Gims reporte sa tournée à quelques jours du coup d'envoi de son premier concert pour des raisons médicales",
+      "url": "https://www.cnews.fr/culture/2026-10-24/gims-reporte-sa-tournee-quelques-jours-du-coup-denvoi-de-son-premier-concert",
+      "publishedAt": "2026-10-24T18:22:32.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_c2fh2t4-taille1200_6adcece8cd1f1.jpg?h=f692311e&itok=vicVeP-A",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
     {
       "id": "faec81832d69",
       "outletId": "le-parisien",
@@ -40,24 +63,28 @@
     }
   ],
   "topicId": "75822d657c7c",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "culture",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le chanteur Gims a officialisé le report de sa tournée intitulee Carpe Diem Tour.",
+      "Cette annulation de dernière minute a ete motivée par des impératifs de santé."
+    ],
     "centre": [
-      "Le chanteur Gims a repoussé sa série de concerts prévue en France et en Belgique de la fin de l'automne jusqu'en décembre.",
-      "L'artiste a qualifié cette décision d'annonce difficile et a indiqué qu'elle faisait suite à des recommandations médicales, sans en préciser la nature exacte.",
-      "De nouvelles dates ont d'ores et déjà été fixées pour reprogrammer l'ensemble des représentations annulées."
+      "Gims a suspendu la serie de concerts prévue cet automne en France et en Belgique en raison d'un problème médical.",
+      "L'artiste a qualifié cette décision de difficile mais a déjà communiqué les nouvelles dates de sa tournée."
     ],
     "droite": [
-      "Gims a reporté in extremis sa tournée à trois jours de sa reprise pour des impératifs de santé qu'il ne détaille pas.",
-      "Le chanteur a déclaré qu'il devait se plier aux avis médicaux, tout en promettant à son public un retour rapide avec la même passion."
+      "Gims a reporté in extremis sa tournée Carpe Diem Tour à quelques jours du lancement initial prévu au Zénith de Nantes.",
+      "Le chanteur a dû se plier aux recommandations médicales malgré des mois de préparation pour ce spectacle."
     ]
   },
   "differences": [
-    "Le centre privilégie une approche factuelle en détaillant l'étendue calendaire du report et la mise en place immédiate de nouvelles dates.",
-    "Le centre droit adopte un ton plus direct et dramatisé en insistant sur le délai de dernière minute et en citant les termes exacts employés par l'artiste."
+    "La gauche livre un résumé laconique centré strictement sur l'annonce du report.",
+    "Le centre contextualise l'annonce en précisant l'étendue géographique des concerts annulés et la reprogrammation rapide des dates.",
+    "La droite adopte un ton plus narratif en insistant sur le timing dramatique de la décision à trois jours du lancement et sur la déception de l'artiste."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 5
 }

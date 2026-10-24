@@ -6,6 +6,30 @@
   "storyDay": "2026-10-24",
   "articles": [
     {
+      "id": "c59c05c90650",
+      "outletId": "20-minutes",
+      "headline": "Guerre en Ukraine : L’armée ukrainienne récupère sa connexion à Starlink, passe d’armes entre la Russie et la Moldavie",
+      "url": "https://www.20minutes.fr/monde/ukraine/4257219-20261024-guerre-ukraine-armee-ukrainienne-recupere-connexion-starlink-passe-armes-entre-russie-moldavie?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-24T17:10:33.000Z",
+      "imageUrl": "https://img.20mn.fr/EHGeYPh0TLiemklxAv3uXCk/1200x768_2-octobre-2026-helsinki-uusimaa-finlande-le-cinquieme-forum-annuel-d-helsinki-sur-la-securite-aura-lieu-du-2-au-4-octobre-2026-a-helsinki-en-finlande-le-forum-a-ete-ouvert-par-une-seance-d-ouverture-avec-maia-sandu-presidente-de-la-republique-de-moldavie-et-alexander-stubb-president-de-la-republique-de-finlande-maia-sandu-prononce-un-discours-image-de-credit-marina-takimoto-zuma-press-wire-20261002-zip-t227-009-zeus-2610021827",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "939da32d7147",
+      "outletId": "20-minutes",
+      "headline": "Guerre en Ukraine : Kiev dit avoir de nouveau une « connexion stable » du système Starlink",
+      "url": "https://www.20minutes.fr/monde/ukraine/4257204-20261024-guerre-ukraine-kiev-dit-avoir-nouveau-connexion-stable-systeme-starlink?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-24T14:13:29.000Z",
+      "imageUrl": "https://img.20mn.fr/tVsZjZHiRX-nfrR9gD9ezCk/1200x768_des-soldats-d-un-bataillon-de-fusiliers-operationnel-distinct-de-la-police-nationale-d-ukraine-dans-la-region-de-zaporizhzhia-ont-installe-un-terminal-de-communication-par-satellite-starlink-sur-une-position-de-combat-dans-la-region-de-donetsk-en-ukraine-le-16-octobre-2026-photo-de-dmytro-smolienko-ukrinform-ukr-inform-agency-ukr-inform3330-credit-dmytro-smolienko-sipa-2610191028",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "737d9a3befc6",
       "outletId": "franceinfo",
       "headline": "L'Ukraine dit de nouveau bénéficier d'une \"connexion stable\" au système Starlink, crucial pour son armée",
@@ -74,29 +98,30 @@
     }
   ],
   "topicId": "87509759590f",
-  "titledArticleCount": 5,
+  "titledArticleCount": 8,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le Monde indique que Kiev signale le retour d'une liaison stable pour le réseau Starlink, indispensable à ses forces armées.",
-      "La Maison Blanche a annoncé un accord entre Moscou et Kiev pour cesser temporairement les combats à Olechky dès mardi afin de distribuer de l'aide et évacuer les civils."
+      "L'armée ukrainienne a retrouvé une connexion satellite stable avec un débit supérieur à 400 km/h.",
+      "Ce rétablissement fait suite à des tensions entre Volodymyr Zelensky et Donald Trump.",
+      "Le système reste indispensable pour piloter les drones et assurer la logistique militaire."
     ],
     "centre": [
-      "L'Ukraine a confirmé le rétablissement d'une liaison stable pour le système militaire Starshield, atteignant des débits supérieurs à 400 km/h selon Kiev.",
-      "Cette résolution intervient après des tensions entre Volodymyr Zelensky et Donald Trump, ravivant les inquiétudes sur la dépendance européenne et ukrainienne face aux technologies de SpaceX.",
-      "Le mystère demeure quant à l'origine du ralentissement initial des équipements ukrainiens."
+      "L'Ukraine confirme le retour d'un accès stable au réseau Starshield après plusieurs jours de perturbations.",
+      "Kiev souligne l'importance vitale de cette liaison pour le front, tout en alertant sur la dépendance envers SpaceX.",
+      "La Maison Blanche a par ailleurs annoncé une suspension temporaire des combats à Olechky pour acheminer de l'aide humanitaire."
     ],
     "droite": [
-      "L'Ukraine a annoncé samedi un retour à la normale pour la version militaire de Starlink, après une dégradation signalée le 14 octobre qui perturbait le guidage des drones d'attaque.",
-      "L'Opinion précise que le ministre de la Défense ukrainien, Ievheni Khmara, a confirmé ces débits supérieurs à 400 km/h tout en soulignant l'opacité sur l'origine des perturbations."
+      "L'Ukraine signale le rétablissement d'un signal stable sur le réseau Starlink de SpaceX.",
+      "La dégradation constatée depuis le 14 octobre entravait directement le guidage des drones d'attaque."
     ]
   },
   "differences": [
-    "Le camp gauche privilégie l'actualité humanitaire et diplomatique en associant le rétablissement de la connexion à l'annonce d'une trêve locale à Olechky.",
-    "Le camp centre se focalise sur les enjeux géopolitiques et technologiques, soulignant la vulnérabilité de Kiev face au contrôle américain des infrastructures de SpaceX.",
-    "Le camp droite adopte un angle strictement militaire et technique, détaillant l'impact des perturbations sur le guidage des drones et la confirmation des vitesses par le ministère de la Défense."
+    "La gauche met l'accent sur les tensions politiques préalables entre Kiev et Washington.",
+    "Le centre insiste sur les risques géopolitiques liés à la dépendance de l'Europe et de l'Ukraine vis-à-vis des infrastructures privées américaines.",
+    "La droite se focalise sur les aspects techniques et militaires des perturbations subies par les drones ukrainiens."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5
+  "summarizedArticleCount": 8
 }
