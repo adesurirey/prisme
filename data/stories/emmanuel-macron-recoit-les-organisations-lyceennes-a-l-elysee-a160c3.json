@@ -6,6 +6,17 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "aa7794ef8810",
+      "outletId": "tf1-info",
+      "headline": "\"J'hésite encore\" : ces manifestants du 17 octobre partagés à l'idée d'y retourner samedi",
+      "url": "https://www.tf1info.fr/justice-faits-divers/j-hesite-encore-ces-manifestants-du-17-octobre-partages-a-l-idee-d-y-retourner-samedi-2471700.html",
+      "publishedAt": "2026-10-24T05:00:00.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/960/540/manifestante-temoignage-f97e87-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "3fed796eab98",
       "outletId": "le-monde",
       "headline": "EN DIRECT, manifestations du 24 octobre : « La menace reste élevée », estime Sébastien Lecornu en ciblant « l’ultragauche » et « la délinquance »",
@@ -47,6 +58,17 @@
       "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/WbQQcNvczdPlgeGS_KE30Su86LU=/0x0:1280x720/800x0/images/24-octobre-Les-moyens-qui-ont-ete-mis-en-place-pour-demain-sont-des-moyens-importants-detaille-Jean-Didier-Berger-ministre-delegue-aupres-du-ministre-de-l-Interieur-2371226.jpg",
       "frontPage": false,
       "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "8f1375bbe36d",
+      "outletId": "humanite",
+      "headline": "Fin du direct",
+      "url": "https://www.humanite.fr/-/-/fin-du-direct-22",
+      "publishedAt": "2026-10-23T17:53:24.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+      "frontPage": false,
+      "kind": "live",
       "section": "politics"
     },
     {
@@ -253,27 +275,29 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Emmanuel Macron reçoit une vingtaine de représentants lycéens à l'Élysée pour écouter leurs revendications après plus d'un mois de crise.",
-      "Les organisations lycéennes appellent à continuer la mobilisation jusqu'à l'obtention de mesures concrètes malgré cette première entrevue.",
-      "La CGT, par la voix de Sophie Binet, dénonce une liberté de manifestation bafouée qu'elle qualifie de fondement de la démocratie."
+      "Le chef de l'État préside un conseil de défense le matin avant de recevoir une vingtaine de représentants lycéens à l'Élysée à 15 heures.",
+      "Le mouvement de contestation dure depuis plus d'un mois face à la politique gouvernementale.",
+      "La secrétaire générale de la CGT, Sophie Binet, qualifie de grave et inquiétante l'interdiction des manifestations.",
+      "Le président se rend ensuite dans une caserne de police du 19e arrondissement de Paris pour saluer les forces de sécurité."
     ],
     "centre": [
-      "Emmanuel Macron convoque un conseil de défense avant de s'entretenir avec les organisations lycéennes et de rencontrer les forces de l'ordre.",
-      "Soixante-dix mille policiers et gendarmes sont déployés à la veille d'une nouvelle journée de manifestations à hauts risques.",
-      "Le gouvernement qualifie les dispositifs de sécurité mis en place pour le lendemain d'importants pour encadrer la contestation."
+      "Emmanuel Macron reçoit les organisations lycéennes à l'Élysée pour écouter leurs revendications à la veille de la mobilisation du 24 octobre.",
+      "Plus de 70 000 policiers et gendarmes sont déployés pour encadrer les manifestations de samedi.",
+      "Un conseil de défense se tient sous la présidence du chef de l'État pour ajuster le dispositif de sécurité face aux violences urbaines.",
+      "Le Premier ministre Sébastien Lecornu évoque un retour d'expérience ciblant l'ultragauche et la délinquance lors de son déplacement à Limoges."
     ],
     "droite": [
-      "Emmanuel Macron se positionne en première ligne en recevant pour la première fois les délégations lycéennes et en présidant un conseil de défense.",
-      "Plusieurs dossiers épineux sont sur la table, allant des emplois du temps et des classes surchargées jusqu'à la suppression de Parcoursup.",
-      "La présidence accueille les associations lycéennes dans toute la diversité de leurs points de vue à la veille de l'acte II des mobilisations."
+      "Emmanuel Macron se montre en première ligne en recevant pour la première fois les organisations lycéennes et en présidant un conseil de défense.",
+      "Le chef de l'État se rend ensuite auprès des forces de l'ordre à la veille d'une nouvelle journée de contestation strictement encadrée.",
+      "Les discussions abordent divers sujets de préoccupation des étudiants, allant des conditions de classe à la suppression de Parcoursup."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la contestation sociale prolongée, la défiance persistante des lycéens après l'Élysée et les alertes de la CGT sur la répression gouvernementale.",
-    "Le centre adopte une couverture en direct centrée sur le dispositif sécuritaire massif, le conseil de défense et la double séquence politique et policière du chef de l'État.",
-    "La droite insiste sur la rupture stratégique d'Emmanuel Macron qui prend personnellement la main en première ligne face aux revendications concrètes et au mouvement."
+    "La gauche insiste lourdement sur la répression gouvernementale et relaie les critiques syndicales contre les interdictions de manifester.",
+    "Le centre adopte un angle factuel et institutionnel, combinant la rencontre à l'Élysée avec les mesures de sécurité et les déclarations ministérielles.",
+    "La droite valorise la posture volontariste du président de l'exécutif en première ligne pour gérer la crise et encadrer la mobilisation."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 19,
+  "summarizedArticleCount": 24,
   "titledArticleCount": 21
 }
