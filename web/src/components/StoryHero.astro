@@ -19,16 +19,24 @@ import {
   SECTION_LABELS,
 } from '@prisme/domain';
 import { withBase } from '../data';
+import {
+  type EditionActivityWindow,
+  hasActivity,
+  storyActivity,
+} from '../story-activity';
 import { dayStamp, parisDayKey, parisTime } from '../story-date';
 import { storyUrl } from '../story-url';
+import ActivitySparkline from './ActivitySparkline';
 import ImageCredit from './ImageCredit';
 import StoryImage from './StoryImage';
 
 interface Props {
   story: Story;
   outlets: Outlet[];
+  /** The edition's activity window (rolling 24 h / 7 jours). */
+  activityWindow: EditionActivityWindow;
 }
-const { story, outlets } = Astro.props;
+const { story, outlets, activityWindow } = Astro.props;
 const byId = new Map(outlets.map((o) => [o.id, o]));
 const counts = coverageCounts(story.articles, byId);
 const shares = exposureShares(story.articles, byId);
@@ -61,6 +69,8 @@ const updatedLine =
     ? `mis à jour à ${parisTime(updated)}`
     : `mis à jour ${dayStamp(updated)}`;
 
+const activity = storyActivity(story.articles, byId, activityWindow);
+
 const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} sur ${outlets.length} — ${coverageOrder
   .map((l) => `${counts[l]} ${LEANING_LABELS[l].toLowerCase()}`)
   .join(' | ')}`;
@@ -68,7 +78,7 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
 
 {
   image && imageOutlet ? (
-    <article class="relative -mx-5" data-story-id={story.id} data-article-count={story.articles.length}>
+    <article class="relative -mx-5" data-story-id={story.id}>
       <a href={withBase(storyUrl(story))} class="group/card block sm:rounded-xl">
         <figure class="relative overflow-hidden sm:rounded-xl">
           <div class="absolute inset-0">
@@ -136,16 +146,19 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
                 )}
               </span>
             )}
-            {/* Same per-visitor badge slot as StoryCard's meta line
-                ("En hausse"): trending.ts
-                appends the plain teal badge here. Invisible (empty:hidden)
-                until then. */}
             <p class="mt-3.5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-muted">
               <span>
                 Couvert par {reporting} média{reporting > 1 ? 's' : ''}
               </span>
               <span class="text-faint">{updatedLine}</span>
-              <span data-trending-slot class="empty:hidden" />
+              {hasActivity(activity) && (
+                <span class="ml-auto flex items-center">
+                  <ActivitySparkline
+                    bins={activity}
+                    windowLabel={activityWindow.label}
+                  />
+                </span>
+              )}
             </p>
           </div>
         </figure>

@@ -330,26 +330,20 @@ describe('« En direct » edition (issue #137, ADR-0029)', () => {
     expect(sitemap).toContain('<loc>https://leprisme.info/</loc>');
   });
 
-  it('wires the badge script through the same code path as la Une', async () => {
+  it('runs no per-reader script on any edition (ADR-0030)', async () => {
     const home = await readDist('index.html');
     const live = await readDist('en-direct/index.html');
-    // The shared glue: a chunk hash home and « En direct » both ship and
-    // « 7 jours » doesn't — identical bundled code, not a copy.
-    const homeHashes = new Set(chunkHashes(home));
-    const liveHashes = new Set(chunkHashes(live));
-    const weekHashes = new Set(
-      chunkHashes(await readDist('7-jours/index.html')),
-    );
-    const shared = [...homeHashes].filter(
-      (h) => liveHashes.has(h) && !weekHashes.has(h),
-    );
-    expect(shared).toHaveLength(1);
-    // That glue leads to the trending module — the baseline key and the
-    // badge slot are in the page's chunk graph.
-    const texts = await scriptChunkTexts(live);
-    const joined = texts.join('\n');
-    expect(joined).toContain('prisme.seenStories');
-    expect(joined).toContain('data-trending-slot');
+    const week = await readDist('7-jours/index.html');
+    // The trending glue is gone from every page's chunk graph: no
+    // baseline key ships, and no page decides anything per reader.
+    for (const html of [home, live, week]) {
+      const chunks = (await scriptChunkTexts(html)).join('\n');
+      expect(chunks).not.toContain('prisme.seenStories');
+      expect(chunks).not.toContain('installTrending');
+    }
+    // Both daily-scale editions ship the intrinsic sparklines instead.
+    expect(home).toMatch(/articles sur 24 h, pic à /);
+    expect(live).toMatch(/articles sur 24 h, pic à /);
   });
 
   it('renders the empty state naming the window and the last collection time', async () => {
@@ -381,8 +375,9 @@ describe('« 7 jours » edition (issue #128, ADR-0027, ADR-0028)', () => {
     expect(html).not.toMatch(/<h1[^>]*>\s*7 jours\s*<\/h1>/);
     expect(html).toContain('data-edition-switcher');
     expect(html).toContain('<option value="/7-jours/" selected>');
-    // No per-reader daily-visit semantics on the weekly page: no
-    // trending module in the chunk graph and no badge text (ADR-0029).
+    expect(html).toMatch(/<noscript>[\s\S]*href="\/"[\s\S]*<\/noscript>/);
+    // No per-reader signal anywhere since the sparklines (ADR-0030): the
+    // trending module is gone from the chunk graph, badges and pill with it.
     const chunks = (await scriptChunkTexts(html)).join('\n');
     expect(chunks).not.toContain('prisme.seenStories');
     expect(html).not.toContain('En hausse');
@@ -396,8 +391,16 @@ describe('« 7 jours » edition (issue #128, ADR-0027, ADR-0028)', () => {
     expect(home).toMatch(/<h1[^>]*>\s*À la une\s*<\/h1>/);
     expect(home).not.toMatch(/<h1[^>]*>\s*Aujourd'hui\s*<\/h1>/);
     expect(home).toContain('data-edition-switcher');
-    // « Nouveau » is gone entirely (ADR-0029): no pill hook anywhere.
+    expect(home).toContain('<option value="/" selected>');
+    expect(home).toMatch(
+      /<noscript>[\s\S]*href="\/7-jours\/"[\s\S]*<\/noscript>/,
+    );
+    // « Nouveau » is gone entirely (ADR-0029), and the home ships the
+    // intrinsic sparklines (ADR-0030): nothing per-reader is decided in
+    // the browser anymore — at least one card's aria line speaks Article
+    // flow over the edition's window.
     expect(home).not.toContain('data-new-pill');
+    expect(home).toMatch(/articles sur 24 h, pic à /);
   });
 });
 

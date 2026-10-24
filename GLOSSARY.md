@@ -88,12 +88,8 @@ The part of the news a Story belongs to: Politique, International, Économie, So
 _Avoid_: Category, rubric, topic
 
 **Edition**:
-A rolling window over all Stories — frozen ones included — re-ranked at every build. « Aujourd'hui » (the home) is the last 24 hours, uncapped (ADR-0022); « 7 jours » (`/7-jours/`) is the last 7 days, floored to Stories covered by at least 10 Outlets in the window; both rank by Coverage counted inside the window. « En direct » (`/en-direct/`) is the exception: the last 8 hours by founding instant, ranked latest-first (ADR-0029). A Story stays on la Une while Outlets keep reporting it inside the window, then sinks and disappears — by decay, never by a clock (ADR-0027). Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
+A rolling window over all Stories — frozen ones included — ranked by Coverage counted inside the window, re-ranked at every build. « Aujourd'hui » (the home) is the last 24 hours, uncapped (ADR-0022); « 7 jours » (`/7-jours/`) is the last 7 days, floored to Stories covered by at least 10 Outlets in the window. A Story stays on la Une while Outlets keep reporting it inside the window, then sinks and disappears — by decay, never by a clock (ADR-0027). Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
 _Avoid_: Issue, digest, daily, run
-
-**En direct**:
-The latest-first Edition window: every Story whose founding Article falls within the last 8 hours, newest first, uncapped — the page-shaped answer to "what's new since I was here" for a reader returning several times a day (ADR-0029). Replaces the per-reader « Nouveau » marker (ADR-0020).
-_Avoid_: Live feed, newsfeed, breaking news
 
 **Story day**:
 The one Publication day (Europe/Paris) a Story belongs to — the day of its founding Article, fixed when the Story is created. It keys the Story's URL, its archive page and the Episode age window; which Articles may join is governed by the Ingestion window, not by the day (ADR-0026, ADR-0027).
@@ -111,9 +107,9 @@ _Avoid_: Edition size, story cap
 A dated page (`/archives/<date>/`) rendered at build time from the permanent Story files of that day — the day's record, not a snapshot of the Edition.
 _Avoid_: Snapshot, backup
 
-**Trending Story**:
-A Story in the Edition that the returning reader is shown as « En hausse » because its Article count grew at least 25 % since that reader last looked — the same gate that re-fires a Summaries pass, so the badge means the Story was re-synthesized with more material (ADR-0029). Uncapped, on every page that runs the signal; a Story the reader has never seen never trends, and a reader seen more than four hours ago gets no Trending Stories at all.
-_Avoid_: Rising story, hot story, viral
+**Activity sparkline**:
+The tiny monochrome chart on every Edition card: the Story's Article flow across the edition's window — hourly bins over the rolling last 24 hours on the daily pages, day bins over the rolling last 7 days on « 7 jours » — prerendered, identical for every reader. The Story page stretches the same data into the chronologie de couverture: the whole life, split per bord. Replaces the per-reader « En hausse » badge and its baseline, and retires « Nouveau » with it — newness is « En direct »'s job, a page, not a marker (ADR-0029, ADR-0030).
+_Avoid_: Trending story, rising story, hot story, viral
 
 ### Reading a story
 
