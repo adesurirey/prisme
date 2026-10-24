@@ -4,6 +4,7 @@ import LoadMoreButton from '../components/LoadMoreButton.astro';
 import StoryCard from '../components/StoryCard';
 import StoryHero from '../components/StoryHero.astro';
 import { loadEdition, loadOutlets } from '../data';
+import { formatParisClock } from '../latest';
 import Base from '../layouts/Base.astro';
 import { LOAD_MORE_INITIAL } from '../load-more';
 import { formatParisDate } from '../paris-date';
@@ -20,9 +21,9 @@ const activityWindow = dayActivityWindow(built);
 // The edition's day, Paris clock — "mercredi 15 oct. 2026" — anchors the
 // header row above the hero card: the Edition is a day's reading, and the
 // date names the day the pipeline last ran (same formatter as every
-// build-time date, paris-date.ts). The whole anchor hides on phones
-// (ADR-0028): the row there is h1 + select (+ pill), and the footer
-// count line already carries the timestamp.
+// build-time date, paris-date.ts). The anchor shows on every screen size
+// (ADR-0029 lifted the small-screen hiding — it only ever existed to
+// make room for the « Nouveau » pill).
 const dayLabel = formatParisDate(built, {
   weekday: 'long',
   day: 'numeric',
@@ -31,24 +32,20 @@ const dayLabel = formatParisDate(built, {
 
 const yearLabel = formatParisDate(built, { year: 'numeric' });
 
-// The edition's last update, Paris clock — "22 h 01", thin no-break
-// spaces around the h (docs/brand.md, French typographic craft) — shown
-// in the page's footer line.
-const updatedTime = formatParisDate(built, {
-  hour: '2-digit',
-  minute: '2-digit',
-}).replace(':', '\u202Fh\u202F');
+// The edition's last update, Paris clock — shown in the page's footer
+// line (same shared clock as every edition, latest.ts).
+const updatedTime = formatParisClock(built);
 ---
 
 <Base title="Prisme — revue de presse">
   <section class="pt-10 pb-6">
     {/* The editions header (ADR-0028): « À la une » names the surface as
         the h1 on every edition; the window is the select's setting, with
-        « Aujourd'hui » preselected here. The day label anchors the edition
-        to its build day (same formatter as every build-time date,
-        paris-date.ts) and hides under sm:. */}
+        « Aujourd'hui » preselected here. The day label anchors the
+        edition to its build day (same formatter as every build-time
+        date, paris-date.ts) and shows on every screen size (ADR-0029). */}
     <EditionHeader edition="today">
-      <p class="hidden text-[13px] text-muted first-letter:uppercase sm:block" slot="aside">{`${dayLabel} ${yearLabel}`}</p>
+      <p class="text-[13px] text-muted first-letter:uppercase" slot="aside">{`${dayLabel} ${yearLabel}`}</p>
     </EditionHeader>
   </section>
 

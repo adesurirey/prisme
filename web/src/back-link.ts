@@ -42,25 +42,36 @@ export function backOnClick(
   return true;
 }
 
-/** The index URL each link compares its referrer against. */
-export const INDEX_URL_ATTR = 'data-index-url';
+/** The list of home URLs (la Une, « 7 jours », « En direct », …) each
+ * link compares its referrer against, as a JSON array. */
+export const HOME_URLS_ATTR = 'data-home-urls';
 
-/** The weekly edition's URL, the other possible home the reader came
- * from (issue #128). */
-export const WEEK_URL_ATTR = 'data-week-url';
-
-/** Pure test: which edition page the referrer is — the weekly edition,
- * la Une, or nothing known (any other page, external, empty). The back
- * link retargets and relabels itself accordingly: a reader who arrived
- * from « 7 jours » returns there, not to la Une (issue #128). */
-export function referrerEdition(
+/** Pure test: which home the referrer is, first match wins — or null
+ * (any other page, external, empty). The back link retargets itself to
+ * the home the reader actually came from: « 7 jours » (issue #128),
+ * « En direct », la Une. */
+export function referrerHome(
   referrer: string,
-  indexUrl: string,
-  weekUrl: string,
-): 'index' | 'week' | null {
-  if (shouldUseBack(referrer, weekUrl)) return 'week';
-  if (shouldUseBack(referrer, indexUrl)) return 'index';
+  homeUrls: string[],
+): string | null {
+  for (const homeUrl of homeUrls) {
+    if (shouldUseBack(referrer, homeUrl)) return homeUrl;
+  }
   return null;
+}
+
+/** Parse the link's data-home-urls JSON array, tolerating a missing or
+ * malformed attribute (no homes known — the link stays a plain href). */
+export function parseHomeUrls(raw: string | undefined): string[] {
+  if (!raw) return [];
+  try {
+    const parsed: unknown = JSON.parse(raw);
+    return Array.isArray(parsed)
+      ? parsed.filter((u): u is string => typeof u === 'string' && u !== '')
+      : [];
+  } catch {
+    return [];
+  }
 }
 
 /**
@@ -69,28 +80,27 @@ export function referrerEdition(
  * history.back() — the browser restores the index scroll position itself;
  * anything else follows the href.
  *
- * Edition-aware (issue #128): when the referrer is the « 7 jours »
- * edition (URL in data-week-url), the link retargets itself — href and
- * back target become « 7 jours » — so both the history.back() path and
- * every fallback (middle-click, new tab, no history) keep the same
- * promise: back to the edition they came from. The label never changes:
- * « À la une » names the page, the select names the window (ADR-0028).
+ * Edition-aware (issue #128, ADR-0029): the link carries every home URL
+ * it could have come from (data-home-urls, JSON array — la Une, « 7
+ * jours », « En direct »). When the referrer matches one, the link
+ * retargets itself — href and back target become that home — so both the
+ * history.back() path and every fallback (middle-click, new tab, no
+ * history) keep the same promise: back to the edition they came from.
+ * The label never changes: « À la une » names the page, the select names
+ * the window (ADR-0028).
  */
 export function installBackLink(doc: Document, win: Window): void {
   for (const link of doc.querySelectorAll<HTMLAnchorElement>(
     'a[data-back-to-index]',
   )) {
-    const indexUrl = link.dataset.indexUrl ?? '';
-    if (!indexUrl) continue;
+    const homeUrls = parseHomeUrls(link.dataset.homeUrls);
+    if (homeUrls.length === 0) continue;
 
-    let backUrl = indexUrl;
-    const weekUrl = link.dataset.weekUrl ?? '';
-    if (
-      weekUrl &&
-      referrerEdition(doc.referrer, indexUrl, weekUrl) === 'week'
-    ) {
-      backUrl = weekUrl;
-      link.href = weekUrl;
+    let backUrl = homeUrls[0]!;
+    const fromHome = referrerHome(doc.referrer, homeUrls);
+    if (fromHome) {
+      backUrl = fromHome;
+      link.href = fromHome;
     }
 
     const target = backUrl;

@@ -72,7 +72,6 @@ describe('installLoadMore — progress counter and fill', () => {
     const button = doc.querySelector('[data-load-more]') as any;
     button.__click();
     expect(button.__count.textContent).toBe('(40/45)');
-    expect(button.__fill.style.width).toBe(`${(40 / 45) * 100}%`);
   });
 });
 

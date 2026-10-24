@@ -1,8 +1,8 @@
 ---
 /**
- * The editions header, shared by every edition page (ADR-0028):
- * « À la une » names the surface and is the h1 on all of them — the
- * window (Aujourd'hui, 7 jours; later 30 jours, En direct) is a
+ * The editions header, shared by every edition page (ADR-0028, amended by
+ * ADR-0029): « À la une » names the surface and is the h1 on all of them —
+ * the window (En direct, Aujourd'hui, 7 jours; later 30 jours) is a
  * *setting of that one page*, switched by a native <select> rather
  * than a row of links: four labels don't fit a 360px phone next to
  * the h1, and the platform picker is the bulletproof pattern — touch
@@ -17,24 +17,30 @@
  * humans, not crawlers (the windowed editions are noindexed,
  * ADR-0028).
  *
+ * The EDITIONS order is freshness-first by window length (ADR-0029):
+ * En direct (8 h), Aujourd'hui (24 h), 7 jours — « 30 jours » slots
+ * after « 7 jours » when it ships.
+ *
  * The `aside` slot carries the right side of the row: the edition's
- * temporal anchor. The anchor hides under `sm:` — the footer count
- * line already carries the timestamp there.
+ * temporal anchor. It shows on every screen size — the small-screen
+ * hiding was lifted when the « Nouveau » pill it made room for was
+ * removed (ADR-0029); the pages style the anchor themselves.
  */
 import { withBase } from '../data';
 
 interface Props {
   /** The page's own edition: the select arrives preselected on it. */
-  edition: 'today' | 'week';
+  edition: 'live' | 'today' | 'week';
 }
 
 const { edition } = Astro.props;
 
 /** The shipped editions — the select's options and the noscript
- *  fallback links. « 30 jours » and « En direct » append here when
- *  their pages ship (their slugs and noindex treatment are settled,
- *  ADR-0028). */
+ *  fallback links, freshness-first (ADR-0029). « 30 jours » appends
+ *  here when its page ships (its slug and noindex treatment are
+ *  settled, ADR-0028). */
 const EDITIONS = [
+  { key: 'live', label: 'En direct', href: withBase('/en-direct/') },
   { key: 'today', label: "Aujourd'hui", href: withBase('/') },
   { key: 'week', label: '7 jours', href: withBase('/7-jours/') },
 ] as const;

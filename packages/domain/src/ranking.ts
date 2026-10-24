@@ -1,5 +1,6 @@
 import { reportingOutletIds } from './coverage.ts';
 import type { Article, Story } from './index.ts';
+import { foundingInstant, newestInstant, parseInstant } from './instants.ts';
 
 /**
  * The whole-life Edition ranking key (issue #37, ADR-0009 as amended by
@@ -13,10 +14,7 @@ import type { Article, Story } from './index.ts';
  * in ranking; ADR-0008 keeps them as display metadata only.
  */
 function latestPublished(story: Story): number {
-  return Math.max(
-    0,
-    ...story.articles.map((a) => Date.parse(a.publishedAt) || 0),
-  );
+  return newestInstant(story) ?? 0;
 }
 
 export function rankStories(stories: Story[]): Story[] {
@@ -49,8 +47,8 @@ export function articlesInWindow(
   const since = until - windowMs;
   const inWindow: Article[] = [];
   for (const article of articles) {
-    const t = Date.parse(article.publishedAt);
-    if (!Number.isNaN(t) && t >= since && t <= until) inWindow.push(article);
+    const t = parseInstant(article.publishedAt);
+    if (t != null && t >= since && t <= until) inWindow.push(article);
   }
   return inWindow;
 }
@@ -84,6 +82,39 @@ export function rankStoriesInWindow(
       key.get(b)!.outlets - key.get(a)!.outlets ||
       key.get(b)!.newest - key.get(a)!.newest ||
       a.createdAt.localeCompare(b.createdAt) ||
+      (a.id < b.id ? -1 : a.id > b.id ? 1 : 0),
+  );
+}
+
+/**
+ * The « En direct » ranking key (ADR-0029) — the one window whose question
+ * is "when", not "how much": founding instant desc (ADR-0026, the earliest
+ * Article publication time), then the newest Article desc, then the
+ * whole-life Coverage desc — distinct reporting Outlets, Opinion included
+ * (ADR-0011); for window members the whole-life and in-window Coverage
+ * coincide, and whole-life keeps the key self-contained — then id asc,
+ * fully deterministic across builds. Membership (the founding instant
+ * inside the rolling last 8 hours) lives with the Edition assembly
+ * (pipeline, assembleEdition); the key itself is total — a Story with no
+ * dated Article sorts last, deterministically.
+ */
+export function rankStoriesLatestFirst(stories: Story[]): Story[] {
+  const key = new Map<
+    Story,
+    { founding: number; newest: number; outlets: number }
+  >();
+  for (const story of stories) {
+    key.set(story, {
+      founding: foundingInstant(story) ?? 0,
+      newest: newestInstant(story) ?? 0,
+      outlets: reportingOutletIds(story.articles).size,
+    });
+  }
+  return [...stories].sort(
+    (a, b) =>
+      key.get(b)!.founding - key.get(a)!.founding ||
+      key.get(b)!.newest - key.get(a)!.newest ||
+      key.get(b)!.outlets - key.get(a)!.outlets ||
       (a.id < b.id ? -1 : a.id > b.id ? 1 : 0),
   );
 }

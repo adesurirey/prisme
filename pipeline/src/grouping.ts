@@ -45,7 +45,10 @@
 import { readdir, readFile } from 'node:fs/promises';
 import type { Article, Section, Story, Topic } from '@prisme/domain';
 import {
+  foundingInstant,
+  grewAtLeast,
   newestFirst,
+  parseInstant,
   parseStoryFile,
   reconcileSlugs,
   slugFor,
@@ -56,14 +59,11 @@ import type {
 } from './decision-model.ts';
 import { storySection } from './edition.ts';
 import type { GroupingModel, GroupingProposal } from './gemini.ts';
-import { grewAtLeast } from './growth.ts';
 import {
   COLLECTION_WINDOW_MS,
-  foundingInstant,
   ingestionIsOpen,
   isLive,
   joinsIngestionWindow,
-  parseInstant,
 } from './liveness.ts';
 import { MembershipGate } from './membership-gate.ts';
 import { parisDayKey } from './paris-day.ts';
@@ -1052,7 +1052,7 @@ export async function groupStories(
         episode: episodeOf.get(story),
       }));
     // The retitle gate (ADR-0027): the shared growth gate (grewAtLeast,
-    // growth.ts) — the same arithmetic as the Summaries gate — a Story with
+    // domain package) — the same arithmetic as the Summaries gate — a Story with
     // no watermark yet (born before ADR-0027) passes once and is stamped
     // below. Only the frequency is gated: the payload built below is the
     // whole headline set, never windowed or truncated.

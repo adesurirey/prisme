@@ -201,3 +201,7 @@ permanent (ADR-0005) and age out of the 7-day window within a week.
 - The GLOSSARY's Edition, Ingestion window, Live Story, Frozen Story,
   Summaries budget and Unassigned Article entries are updated by this
   ADR.
+- Amended by ADR-0029: the Editions are three windows — « En direct »
+  (the last 8 h by founding instant, ranked latest-first) joins
+  « Aujourd'hui » and « 7 jours », and the growth gate above moves to
+  the domain package, shared with the web's « En hausse » badge.

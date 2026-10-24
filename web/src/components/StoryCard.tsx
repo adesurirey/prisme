@@ -3,9 +3,11 @@ import {
   blindspots,
   coverageCounts,
   exposureShares,
+  foundingInstant,
   pickStoryImage,
   reportingOutletIds,
 } from '@prisme/domain';
+import { formatStoryDate } from '../article-date';
 import { withBase } from '../data';
 import {
   type EditionActivityWindow,
@@ -28,12 +30,13 @@ import StoryImage from './StoryImage';
  * Articles live, styled like the Story page's Article cards (hover surface,
  * no animation).
  *
- * The sparkline is the intrinsic replacement for the per-visitor badges
- * (ADR-0030, superseding ADR-0029's « En hausse »): the Story's
- * real Article flow across the edition's window, prerendered, identical
- * for every reader. The root still carries data-story-id — load-more counts
+ * The sparkline is the intrinsic replacement for the per-visitor badge
+ * (ADR-0030, superseding ADR-0029's « En hausse »): the Story's real
+ * Article flow across the edition's window, prerendered, identical for
+ * every reader. The root still carries data-story-id — load-more counts
  * the cards with it — but nothing per-reader is decided in the browser
- * anymore.
+ * anymore; alongside the sparkline, the founding time (ADR-0026) keeps
+ * every list reading as a timeline.
  *
  * Link structure: a stretched link (<a> absolute inset-0) makes the
  * whole card navigate while the image column — positioned, painted
@@ -64,6 +67,9 @@ export default function StoryCard({
   const image = pickStoryImage(story, byId);
   const imageOutlet = image && byId.get(image.outletId);
   const activity = storyActivity(story.articles, byId, activityWindow);
+  // The founding instant (ADR-0026): the earliest Article's publication —
+  // the timeline anchor every edition's list is read by.
+  const founded = foundingInstant(story);
   return (
     <article
       className="group/card relative -mx-5"
@@ -84,8 +90,11 @@ export default function StoryCard({
           <h2 className="text-[16px] font-semibold sm:text-[18px] leading-snug tracking-[-0.01em] group-hover/card:underline">
             {story.title}
           </h2>
-          {/* The "maj." date is the Story's newest Article — the same
-              articles[0] the Story page header reads. */}
+          {/* The founding time (issue #136, ADR-0029): after the Coverage
+              count, no prefix, desktop only (hidden on small screens where
+              the meta row wraps too tight) — today « 21:11 »,
+              yesterday « hier à 21:11 », older « 7 oct. » — so every
+              list (En direct, Aujourd'hui, 7 jours) reads as a timeline. */}
           {/* Meta on one row, both tiers inline. */}
           <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-muted sm:gap-x-3">
             <CoverageMeta
@@ -94,6 +103,14 @@ export default function StoryCard({
               reporting={reporting}
               totalOutlets={outlets.length}
             />
+            {/* The founding time (issue #136, ADR-0029): after the Coverage
+                count, no prefix, desktop only (hidden on small screens where
+                the meta row wraps too tight). */}
+            {founded !== undefined && (
+              <span className="hidden whitespace-nowrap text-faint sm:inline">
+                {formatStoryDate(new Date(founded))}
+              </span>
+            )}
             {/* The Story's Article flow across the edition's window —
                 intrinsic, identical for every reader. Pushed to the row's
                 right end; wraps under the coverage line when the two don't
