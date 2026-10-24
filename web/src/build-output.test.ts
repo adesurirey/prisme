@@ -85,10 +85,12 @@ beforeAll(async () => {
     stdio: 'pipe',
     env,
   });
-  // emptyDist (Astro's default dist/) now holds the empty-window build.
+  // dist (Astro's default) now holds the empty-window build.
   emptyDist = path.join(WEB_DIR, 'dist');
   await rm(derived, { recursive: true, force: true });
-});
+  // Two sequential astro builds: the default 10 s hook timeout is not
+  // enough on CI runners (12.6 s there, ~7 s locally).
+}, 120_000);
 
 afterAll(async () => {
   await rm(fixtureDist, { recursive: true, force: true });
@@ -188,11 +190,12 @@ async function expectCardFoundingTime(html: string, stories: Story[]) {
   const at = html.indexOf(`data-story-id="${picked.story.id}"`);
   expect(at).toBeGreaterThan(-1);
   const card = html.slice(at, html.indexOf('</article>', at));
-  // One plain span after the Coverage count — no prefix, no small-screen
-  // hiding: the timeline anchor shows on every screen.
+  // One span after the Coverage count — no prefix; desktop-only: hidden
+  // under sm:, where the meta row wraps too tight (user decision on the
+  // #137 review, superseding #136's every-screen version).
   expect(founded).not.toBe('');
   expect(card).toContain(
-    `<span class="whitespace-nowrap text-faint">${founded}</span>`,
+    `<span class="hidden whitespace-nowrap text-faint sm:inline">${founded}</span>`,
   );
 }
 
