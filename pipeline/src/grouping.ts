@@ -688,7 +688,10 @@ export async function groupStories(
     // `fresh` is newest-first (collect.ts), so the earliest-published
     // member anchors the window and the Story day, and every later join
     // respects it — stable for the Story's life since no member may
-    // precede the founding.
+    // precede the founding. Only the build-time window anchor comes from
+    // the claimed set: the Story day itself is re-derived from the
+    // admitted members below (issue #142) — a claimed-then-refused member
+    // must not pick the Story's public day.
     const keyStories = new Map<string, Story>();
     const keyFounding = new Map<string, number>();
     for (const ns of proposal.newStories) {
@@ -1023,6 +1026,21 @@ export async function groupStories(
         throw new Error(
           `Birth minimum violated (ADR-0015, ADR-0027): Story ${story.id} was created with ${story.articles.length} Article(s) from ${new Set(story.articles.map((a) => a.outletId)).size} Outlet(s).`,
         );
+    }
+
+    // The Story day is re-derived from the admitted Articles (ADR-0017,
+    // issue #142): newStory anchors the day on the claimed founding
+    // instant — the earliest publishedAt among claimed members, taken
+    // before any Membership verdict — so a claimed-then-refused member can
+    // precede every admitted one and ghost-anchor the Story's public day
+    // (its URL and archive page) on an Article that never joined. Nothing
+    // downstream has read the day yet (Topics resolve next, the Title pass
+    // after), so re-fixing it from the final member set is still "fixed at
+    // creation" (ADR-0017).
+    for (const story of created) {
+      const founding = foundingInstant(story);
+      if (founding != null)
+        story.storyDay = parisDayKey(new Date(founding).toISOString());
     }
 
     // Topics (ADR-0024): resolved BEFORE the Title pass — the pass's

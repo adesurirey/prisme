@@ -768,6 +768,61 @@ describe('groupStories', () => {
     expect(outcome.stories[0]!.storyDay).toBe('2026-10-05');
   });
 
+  it('the Story day follows the admitted founding, never a claimed-then-refused ghost member (issue #142)', async () => {
+    // The ghost is claimed for the key and published one Paris day before
+    // every admitted member — but its Membership check is refused, so it
+    // never joins. The day must come from the admitted set, not the ghost.
+    const membership: import('./decision-model.ts').MembershipChecker = {
+      label: 'FakeJev',
+      async belongs(story, article) {
+        return article.headline.startsWith('Ghost ') ? 'no' : 'yes';
+      },
+      async sameSubject() {
+        return 'no';
+      },
+    };
+    const outcome = await groupStories(
+      input({
+        articles: [
+          article('a2', {
+            outletId: 'leparisien',
+            publishedAt: '2026-10-06T10:00:00Z',
+          }),
+          article('a1', {
+            outletId: 'liberation',
+            publishedAt: '2026-10-06T09:00:00Z', // Paris 2026-10-06 11:00
+          }),
+          article('ghost', {
+            headline: 'Ghost revendiqué puis refusé',
+            publishedAt: '2026-10-05T21:30:00Z', // Paris 2026-10-05 23:30
+          }),
+        ],
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'ghost', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+          }),
+          membership,
+          titles: fakeTitlePass({ titles: [{ key: 'k1', title: 'Admis' }] }),
+        },
+      }),
+    );
+    // The ghost was refused: the Story keeps the two admitted Articles
+    // (two Outlets — the birth minimum holds) and its day is the Paris day
+    // of the earliest admitted member (2026-10-06T09:00Z), not the ghost's
+    // claim-time 2026-10-05.
+    expect(outcome.stories).toHaveLength(1);
+    expect(outcome.stories[0]!.articles.map((a) => a.id).sort()).toEqual([
+      'a1',
+      'a2',
+    ]);
+    expect(outcome.stories[0]!.storyDay).toBe('2026-10-06');
+  });
+
   it('a birth from one news Article and one Opinion Article of two different Outlets is valid (ADR-0011, ADR-0027)', async () => {
     // An Opinion piece counts toward the birth like any Article: the
     // minimum counts Articles and Outlets, never Kinds.
