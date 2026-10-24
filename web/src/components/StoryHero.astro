@@ -68,7 +68,7 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
 
 {
   image && imageOutlet ? (
-    <article class="relative -mx-5" data-story-id={story.id} data-coverage={reporting}>
+    <article class="relative -mx-5" data-story-id={story.id} data-article-count={story.articles.length}>
       <a href={withBase(storyUrl(story))} class="group/card block sm:rounded-xl">
         <figure class="relative overflow-hidden sm:rounded-xl">
           <div class="absolute inset-0">
@@ -137,7 +137,7 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
               </span>
             )}
             {/* Same per-visitor badge slot as StoryCard's meta line
-                ("En hausse" or "Nouveau"): trending.ts
+                ("En hausse"): trending.ts
                 appends the plain teal badge here. Invisible (empty:hidden)
                 until then. */}
             <p class="mt-3.5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-muted">

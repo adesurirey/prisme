@@ -4,6 +4,7 @@ import LoadMoreButton from '../components/LoadMoreButton.astro';
 import StoryCard from '../components/StoryCard';
 import StoryHero from '../components/StoryHero.astro';
 import { loadEdition, loadOutlets, loadWeekStories } from '../data';
+import { formatParisClock } from '../latest';
 import Base from '../layouts/Base.astro';
 import { LOAD_MORE_INITIAL } from '../load-more';
 import { formatParisDate } from '../paris-date';
@@ -15,9 +16,9 @@ import { formatParisDate } from '../paris-date';
  * ranked by that in-window Coverage). Anatomically la Une's mirror —
  * hero for the week's biggest Story, Story cards, load-more, count
  * line — but with none of the per-reader daily-visit semantics: no
- * trending script runs here, so no "Nouveau" / "En hausse" badge ever
- * appears, and the reader's daily baseline (trending.ts) is never
- * written from this page.
+ * trending script runs here, so no "En hausse" badge ever appears, and
+ * the reader's daily baseline (trending.ts) is never written from this
+ * page (ADR-0029).
  *
  * Header and indexation (ADR-0028): the shared editions header — h1
  * « À la une », select preselected on « 7 jours » — and a meta noindex:
@@ -33,20 +34,18 @@ const built = new Date(edition.builtAt);
 // The window's start, Paris clock — "depuis le 16 oct." — names how far
 // back the recap reaches: seven days to the day of the build (same
 // formatter as every build-time date, paris-date.ts). Short on purpose,
-// and hidden on phones (ADR-0028): the row there is h1 + select, and
-// the footer count line carries the timestamp. French keeps days and
-// months lowercase — the label only takes a first-letter capital.
+// and shown on every screen size (ADR-0029 lifted the small-screen
+// hiding — it only ever existed to make room for the « Nouveau »
+// pill). French keeps days and months lowercase — the label only takes
+// a first-letter capital.
 const sinceLabel = `depuis le ${formatParisDate(
   new Date(built.getTime() - 6 * 86_400_000),
   { day: 'numeric', month: 'short' },
 )}`;
 
-// The edition's last update, Paris clock — same thin no-break spaces as
-// la Une's footer line.
-const updatedTime = formatParisDate(built, {
-  hour: '2-digit',
-  minute: '2-digit',
-}).replace(':', '\u202Fh\u202F');
+// The edition's last update, Paris clock — same shared clock as every
+// edition's footer line.
+const updatedTime = formatParisClock(built);
 
 // SEO: the mission wording for the weekly scale — the floor is stated,
 // because it is what the page shows (brand brief: say what we show).
@@ -68,7 +67,7 @@ const description =
 >
   <section class="pt-10 pb-6">
     <EditionHeader edition="week">
-      <p class="hidden text-[13px] text-muted first-letter:uppercase sm:block" slot="aside">{sinceLabel}</p>
+      <p class="text-[13px] text-muted first-letter:uppercase" slot="aside">{sinceLabel}</p>
     </EditionHeader>
   </section>
 

@@ -3,9 +3,11 @@ import {
   blindspots,
   coverageCounts,
   exposureShares,
+  foundingInstant,
   pickStoryImage,
   reportingOutletIds,
 } from '@prisme/domain';
+import { formatStoryDate } from '../article-date';
 import { withBase } from '../data';
 import { storyUrl } from '../story-url';
 import BlindspotBadge from './BlindspotBadge';
@@ -21,11 +23,12 @@ import StoryImage from './StoryImage';
  * to the Story page, where the Articles live, styled like the Story page's
  * Article cards (hover surface, no animation).
  *
- * The root carries data-story-id/data-coverage for the client-side
- * per-visitor badges (trending.ts): "En hausse" for a Coverage gain since
- * the reader's last visit, "Nouveau" for a Story absent from it
- * (ADR-0020). The prerendered HTML has no idea who is reading, so the
- * per-visitor signals are decided in the browser.
+ * The root carries data-story-id/data-article-count for the client-side
+ * per-visitor badge (trending.ts): "En hausse" when the Story's Article
+ * count grew ≥ 25 % since the reader's last visit — the same domain gate
+ * that re-fires a Summaries pass (ADR-0029). The prerendered HTML has no
+ * idea who is reading, so the per-visitor signal is decided in the
+ * browser.
  *
  * Link structure: a stretched link (<a> absolute inset-0) makes the
  * whole card navigate while the image column — positioned, painted
@@ -51,11 +54,14 @@ export default function StoryCard({
   const spots = blindspots(counts);
   const image = pickStoryImage(story, byId);
   const imageOutlet = image && byId.get(image.outletId);
+  // The founding instant (ADR-0026): the earliest Article's publication —
+  // the timeline anchor every edition's list is read by.
+  const founded = foundingInstant(story);
   return (
     <article
       className="group/card relative -mx-5"
       data-story-id={story.id}
-      data-coverage={reporting}
+      data-article-count={story.articles.length}
       data-load-more-tail={tail ? '' : undefined}
     >
       {/* Stretched link: the whole card navigates. */}
@@ -69,7 +75,7 @@ export default function StoryCard({
       />
       <div className="flex items-start gap-4 px-5 py-5">
         <div className="min-w-0 flex-1">
-          {/* The per-visitor badge slot ("En hausse" or "Nouveau",
+          {/* The per-visitor badge slot ("En hausse",
               trending.ts) sits above the title — a per-visitor highlight
               deserves the first read, not the bottom of the meta pile.
               Invisible (empty:hidden) until trending.ts appends the
@@ -78,8 +84,11 @@ export default function StoryCard({
           <h2 className="text-[16px] font-semibold sm:text-[18px] leading-snug tracking-[-0.01em] group-hover/card:underline">
             {story.title}
           </h2>
-          {/* The "maj." date is the Story's newest Article — the same
-              articles[0] the Story page header reads. */}
+          {/* The founding time (issue #136, ADR-0029): after the Coverage
+              count, no prefix, desktop only (hidden on small screens where
+              the meta row wraps too tight) — today « 21:11 »,
+              yesterday « hier à 21:11 », older « 7 oct. » — so every
+              list (En direct, Aujourd'hui, 7 jours) reads as a timeline. */}
           {/* Meta on one row, both tiers inline. */}
           <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-muted sm:gap-x-3">
             <CoverageMeta
@@ -88,6 +97,11 @@ export default function StoryCard({
               reporting={reporting}
               totalOutlets={outlets.length}
             />
+            {founded !== undefined && (
+              <span className="hidden whitespace-nowrap text-faint sm:inline">
+                {formatStoryDate(new Date(founded))}
+              </span>
+            )}
           </p>
           {spots.length > 0 && (
             <div className="mt-2.5 flex flex-wrap gap-2">

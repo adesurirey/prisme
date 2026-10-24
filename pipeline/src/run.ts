@@ -160,15 +160,16 @@ export async function runEdition(): Promise<Edition> {
   const liveIds = new Set(outcome.live.map((s) => s.id));
   const frontpage = updateFrontPageHistory(outcome.stories, kept, now);
 
-  // The Edition (ADR-0027, superseding ADR-0022/0026's live pool): two
-  // rolling windows over ALL Stories — frozen ones included — where a
-  // Story is a member iff at least one of its Articles was published
-  // inside the window. « Aujourd'hui » (the last 24 hours) stays uncapped
-  // and keeps feeding the home; the Summaries budget below takes its
-  // top-20 in this ranked order. « 7 jours » (the last 7 days) is floored
-  // to Stories covered by ≥ 10 Outlets in the window. A Story leaves la
-  // Une by decay — no Outlet reporting it inside the window — never at a
-  // clock edge; overnight coverage is still on la Une in the morning.
+  // The Edition (ADR-0027, amended by ADR-0029's third window;
+  // superseding ADR-0022/0026's live pool): rolling windows over ALL
+  // Stories — frozen ones included. « En direct » (the last 8 hours by
+  // founding instant, ranked latest-first) is by construction a subset of
+  // « Aujourd'hui » (the last 24 hours), which stays uncapped and keeps
+  // feeding the home; the Summaries budget below takes its top-20 in this
+  // ranked order. « 7 jours » (the last 7 days) is floored to Stories
+  // covered by ≥ 10 Outlets in the window. A Story leaves la Une by decay
+  // — no Outlet reporting it inside the window — never at a clock edge;
+  // overnight coverage is still on la Une in the morning.
   const outletById = new Map(outlets.map((o) => [o.id, o]));
   const ranked = assembleEdition(frontpage.stories, now);
 
@@ -191,6 +192,7 @@ export async function runEdition(): Promise<Edition> {
   const reconciledById = new Map(editionHistory.stories.map((s) => [s.id, s]));
   const edition: Edition = {
     builtAt: now.toISOString(),
+    latestStories: ranked.latest.map((s) => reconciledById.get(s.id) ?? s),
     stories: ranked.day.map((s) => reconciledById.get(s.id) ?? s),
     weekStories: ranked.week.map((s) => reconciledById.get(s.id) ?? s),
   };
@@ -230,7 +232,8 @@ export async function runEdition(): Promise<Edition> {
   const filesToWrite = changed.size;
   section('📰', 'Edition');
   console.log(
-    `${edition.stories.length} ranked stories in « Aujourd'hui » (of ${liveIds.size} live), ` +
+    `${edition.latestStories.length} in « En direct », ` +
+      `${edition.stories.length} ranked stories in « Aujourd'hui » (of ${liveIds.size} live), ` +
       `${edition.weekStories.length} in « 7 jours » — from ${kept.length} articles; ` +
       `${existing.length} on disk, ${filesToWrite} file(s) to write, ${summaryOutcome.calls} summaries call(s).`,
   );

@@ -29,8 +29,7 @@ import type {
   Story,
   StorySummaries,
 } from '@prisme/domain';
-import { coverageCounts, SECTION_LABELS } from '@prisme/domain';
-import { grewAtLeast } from './growth.ts';
+import { coverageCounts, grewAtLeast, SECTION_LABELS } from '@prisme/domain';
 import { RETRYABLE_STATUS } from './http.ts';
 import { isLive } from './liveness.ts';
 
@@ -240,7 +239,7 @@ export async function updateSummaries(input: {
     if (!isLive(story, now)) continue;
     // ADR-0027: a Story re-enters the Summaries budget only when it has
     // never been summarized or grew at least 25% since its last pass —
-    // the shared growth gate (grewAtLeast, growth.ts) carries the
+    // the shared growth gate (grewAtLeast, domain package) carries the
     // watermark, same arithmetic as the retitle gate. When it fires, the
     // pass re-synthesizes from the whole Article set (below), never a
     // delta.

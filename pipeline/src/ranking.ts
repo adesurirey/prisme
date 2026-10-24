@@ -1,12 +1,14 @@
 import type { Story } from '@prisme/domain';
 import {
   articlesInWindow,
+  foundingInstant,
   rankStories,
   rankStoriesInWindow,
+  rankStoriesLatestFirst,
   reportingOutletIds,
 } from '@prisme/domain';
 
-export { rankStories, rankStoriesInWindow };
+export { rankStories, rankStoriesInWindow, rankStoriesLatestFirst };
 
 /** The « Aujourd'hui » window (ADR-0027): the last 24 hours, rolling — not
  * calendar-day, so the morning edition still carries the overnight
@@ -22,8 +24,17 @@ export const WEEK_WINDOW_MS = 7 * DAY_WINDOW_MS;
  * floor, never a cap: the week's weight sets the list's length. */
 export const WEEK_FLOOR_OUTLETS = 10;
 
-/** The two Edition windows a build assembles (ADR-0027). */
+/** The « En direct » window (ADR-0029): the rolling last 8 hours, measured
+ * over the archive — a 12 h window holds a median of 19 Stories (above the
+ * 15 ceiling set for this feature), 8 h a median of 12. No cap, no floor:
+ * the window is the cap. */
+export const LATEST_WINDOW_MS = 8 * 60 * 60 * 1000;
+
+/** The three Edition windows a build assembles (ADR-0027, ADR-0029). */
 export interface EditionWindows {
+  /** « En direct » — every Story founded within the last LATEST_WINDOW_MS,
+   * ranked latest-first, uncapped and unfloored (ADR-0029). */
+  latest: Story[];
   /** « Aujourd'hui » — the last DAY_WINDOW_MS over all Stories (frozen
    * included), ranked by the in-window key, uncapped (ADR-0022). */
   day: Story[];
@@ -33,22 +44,37 @@ export interface EditionWindows {
 }
 
 /**
- * The rolling-window Edition assembly (ADR-0027, superseding ADR-0026's
- * open-window pool): a window over ALL Stories — frozen ones included —
- * where a Story is a member iff at least one of its Articles was published
- * inside the window, ranked by Coverage counted inside the window. A Story
- * leaves la Une by decay — no Outlet reporting it inside the window —
- * never at a clock edge: a Story that just closed keeps sinking until its
- * Articles age out. The old pre-0026 day tiers and the ADR-0026 storyDay
- * guard are gone; the window bounds alone decide, and their upper bound
- * keeps a future-dated Article out (defensive, hand-edited files).
+ * The rolling-window Edition assembly (ADR-0027, amended by ADR-0029's
+ * third window; superseding ADR-0026's open-window pool): windows over ALL
+ * Stories — frozen ones included. « Aujourd'hui » and « 7 jours » admit a
+ * Story iff at least one of its Articles was published inside the window,
+ * ranked by Coverage counted inside the window; a Story leaves la Une by
+ * decay — no Outlet reporting it inside the window — never at a clock
+ * edge: a Story that just closed keeps sinking until its Articles age out.
+ * « En direct » admits a Story iff its founding instant (ADR-0026, the
+ * earliest Article publication time) falls inside the last 8 hours —
+ * ranked latest-first, uncapped and unfloored: the window is the cap, and
+ * the founding-bound membership makes every member a « Aujourd'hui » Story
+ * by construction (ADR-0029). The old pre-0026 day tiers and the ADR-0026
+ * storyDay guard are gone; the window bounds alone decide, and their upper
+ * bound keeps a future-dated Article out (defensive, hand-edited files).
  */
 export function assembleEdition(stories: Story[], now: Date): EditionWindows {
   const members = (windowMs: number) =>
     stories.filter(
       (s) => articlesInWindow(s.articles, windowMs, now).length > 0,
     );
+  const until = now.getTime();
+  const since = until - LATEST_WINDOW_MS;
+  const latest = stories.filter((s) => {
+    const founding = foundingInstant(s);
+    // Inclusive at both ends, like every window bound: a Story founded
+    // exactly 8 hours ago is still En direct; a future founding (no
+    // dated Article, or a defensive future-dated file) is not.
+    return founding != null && founding >= since && founding <= until;
+  });
   return {
+    latest: rankStoriesLatestFirst(latest),
     day: rankStoriesInWindow(members(DAY_WINDOW_MS), DAY_WINDOW_MS, now),
     week: rankStoriesInWindow(
       members(WEEK_WINDOW_MS),

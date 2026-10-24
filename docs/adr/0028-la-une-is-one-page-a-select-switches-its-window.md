@@ -66,3 +66,8 @@ churns hourly — must never compete at all.
   accepted because the destinations are deliberately not indexed. If a
   windowed edition is ever re-indexed, it must also re-enter the sitemap
   and grow real links (footer or desktop) at the same time.
+- Amended by ADR-0029: « En direct » ships as the picker's first entry —
+  the order reads freshness-first (En direct, Aujourd'hui, 7 jours;
+  « 30 jours » after « 7 jours » when it ships) — and the temporal
+  anchors return on small screens on every edition: the hiding existed
+  to fit the « Nouveau » pill, which ADR-0029 removes.

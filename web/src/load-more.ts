@@ -31,11 +31,6 @@ export function visibleCount(total: number, clicks: number): number {
   );
 }
 
-/** Clicks needed for `count` Stories to be visible. */
-function clicksFor(count: number): number {
-  return Math.max(0, Math.ceil((count - LOAD_MORE_INITIAL) / LOAD_MORE_STEP));
-}
-
 function cardsOf(doc: Document): HTMLElement[] {
   return [...doc.querySelectorAll<HTMLElement>('[data-story-id]')];
 }
@@ -80,7 +75,7 @@ function renderProgress(
  * removes itself once every Story is visible. The button ships `hidden`;
  * this only unhides it when there is something to hide — a short Edition
  * keeps the page as-is. The click count lives on the button
- * (`data-load-more-clicks`) so {@link revealStory} can expand the same tail.
+ * (`data-load-more-clicks`).
  */
 export function installLoadMore(doc: Document = document): void {
   const cards = cardsOf(doc);
@@ -103,25 +98,4 @@ export function installLoadMore(doc: Document = document): void {
 
   render(0);
   button.hidden = false;
-}
-
-/**
- * Expands the tail until the Story with this id is visible — the "Nouveau"
- * pill jumps to a Story that may sit beyond the current batch, and a
- * `display:none` element cannot be scrolled to. True when the expansion
- * actually revealed something.
- */
-export function revealStory(doc: Document, id: string): boolean {
-  const button = doc.querySelector<HTMLButtonElement>('[data-load-more]');
-  if (button == null) return false;
-  const cards = cardsOf(doc);
-  const index = cards.findIndex((card) => card.dataset.storyId === id);
-  if (index < 0) return false;
-  const current = Number(button.dataset.loadMoreClicks ?? 0);
-  const needed = clicksFor(index + 1);
-  if (needed <= current) return false;
-  button.dataset.loadMoreClicks = String(needed);
-  applyRevealed(cards, needed);
-  renderProgress(button, cards.length, needed);
-  return true;
 }

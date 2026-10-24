@@ -308,10 +308,3 @@ html[data-mode="exposure"] .mode-toggle::before {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Anchor offset for the sticky navbar (h-14): anything scrolled to via
- * scrollIntoView(block: 'start') — e.g. the "N nouveau" pill's jump to
- * the first new Story — must land below the navbar, not under it. */
-[data-story-id] {
-  scroll-margin-top: 4.5rem;
-}
