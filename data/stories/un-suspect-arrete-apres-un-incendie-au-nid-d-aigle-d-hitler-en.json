@@ -6,6 +6,39 @@
   "storyDay": "2026-10-24",
   "articles": [
     {
+      "id": "a136fb995c01",
+      "outletId": "tf1-info",
+      "headline": "Allemagne : le \"Nid d'Aigle\" d'Adolf Hitler incendié, un suspect arrêté",
+      "url": "https://www.tf1info.fr/international/allemagne-incendie-au-nid-d-aigle-d-adolf-hitler-un-suspect-arrete-2471735.html",
+      "publishedAt": "2026-10-24T06:04:43.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/562/incendie-kehlsteinhaus-octobre-2026-fabc33-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "ed3397fca77a",
+      "outletId": "franceinfo",
+      "headline": "La résidence de villégiature d'Adolphe Hitler, \"le nid d'aigle\", incendiée en Bavière, un suspect arrêté",
+      "url": "https://www.franceinfo.fr/monde/europe/allemagne/la-residence-de-villegiature-d-adolphe-hitler-le-nid-d-aigle-incendiee-en-baviere-un-suspect-arrete_8251921.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-24T05:57:44.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/IYSgV0TBFdpxNA15xkQAUvpAlps/13x0:1010x561/432x243/filters:format(jpg)/2026/10/24/6adc45d7c9d2e018696872.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "0bafb7a20c2f",
+      "outletId": "cnews",
+      "headline": "Allemagne : un suspect arrêté après un incendie d’ampleur au «Nid d’Aigle» de Hitler",
+      "url": "https://www.cnews.fr/monde/2026-10-24/allemagne-un-suspect-arrete-apres-un-incendie-dampleur-au-nid-daigle-de-hitler",
+      "publishedAt": "2026-10-24T05:01:25.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_d4a22ky_6adc3682ad60b.jpg?h=0c5b3539&itok=UupijkPH",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "96420d1f7a4b",
       "outletId": "bfmtv",
       "headline": "Allemagne: un incendie se déclare au \"Nid d'Aigle\", l'ancienne résidence d'Adolf Hitler, un suspect arrêté",
@@ -35,35 +68,37 @@
       "url": "https://www.lefigaro.fr/international/allemagne-un-suspect-arrete-apres-un-incendie-d-ampleur-au-nid-d-aigle-de-hitler-20261024",
       "publishedAt": "2026-10-24T03:03:22.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x3000_crop/2026/10/24/370fb8f6f5f1c2ff6d64fb6f680325ce82d56643de3b49acdaa467456929eda8.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
     }
   ],
   "topicId": "75e4344ce0c1",
-  "titledArticleCount": 3,
-  "section": "world",
+  "titledArticleCount": 6,
+  "section": "misc",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Les pompiers ont été avertis par le déclenchement de l'alarme avant 22 heures et ont découvert une structure entièrement embrasée sans personne à l'intérieur.",
-      "Les autorités étudient sérieusement l'hypothèse d'un acte criminel délibéré."
+      "La résidence de villégiature historique de la Bavière a été ravie par les flammes durant la nuit.",
+      "L'alerte a été donnée par les détecteurs de fumée et les pompiers n'ont trouvé personne à l'intérieur à leur arrivée.",
+      "Les enquêteurs examinent la piste criminelle et ont placé un suspect en garde à vue."
     ],
     "centre": [
-      "Un incendie s'est déclaré durant la nuit du vendredi 23 au samedi 24 octobre au sein de l'ancienne habitation d'Adolf Hitler.",
-      "Un individu suspect a été interpellé par les services de police allemands suite aux événements."
+      "Un incendie s'est déclaré dans la nuit de vendredi à samedi au célèbre site historique bavarois.",
+      "Les autorités allemandes ont rapidement procédé à l'interpellation d'un individu suspect."
     ],
     "droite": [
-      "Le bâtiment touché correspond au Kehlsteinhaus, la structure perchée dans les reliefs alpins bavarois.",
-      "Cette construction historique servait de lieu de rassemblement pour les hauts dignitaires du régime nazi."
+      "Près de deux cents pompiers ont été mobilisés pour maîtriser le sinistre touchant cette bâtisse historique perchée en altitude.",
+      "La police locale a interpellé un suspect et privilégie l'hypothèse d'un acte criminel.",
+      "Le bâtiment touché servait autrefois aux réceptions officielles des hauts dignitaires du régime nazi."
     ]
   },
   "differences": [
-    "La gauche se concentre sur l'intervention des secours et l'enquête criminelle en cours sur place.",
-    "Le centre met en avant la chronologie nocturne de l'incident et l'arrestation immédiate du suspect par la police.",
-    "La droite insiste sur la dimension historique et géographique du site en rappelant sa fonction initiale sous le nazisme."
+    "La gauche met l'accent sur l'intervention nocturne des secours et l'examen rapide de la piste criminelle.",
+    "Le centre livre un compte-rendu synthétique et sobre centré sur l'arrestation du suspect sans s'attarder sur le contexte.",
+    "La droite détaille l'ampleur impressionnante des moyens déployés sur place tout en rappelant la fonction historique du site sous le régime nazi."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3
+  "summarizedArticleCount": 6
 }
