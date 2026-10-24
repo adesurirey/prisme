@@ -1,6 +1,59 @@
 {
-  "builtAt": "2026-10-24T03:01:21.521Z",
+  "builtAt": "2026-10-24T04:01:23.004Z",
   "latestStories": [
+    {
+      "id": "75e4344ce0c1",
+      "slug": "un-suspect-arrete-apres-un-incendie-au-nid-d-aigle-d-hitler-en",
+      "title": "Un suspect arrêté après un incendie au Nid d’Aigle d’Hitler en Bavière",
+      "createdAt": "2026-10-24T04:01:23.004Z",
+      "storyDay": "2026-10-24",
+      "articles": [
+        {
+          "id": "4358f8b01c19",
+          "outletId": "le-monde",
+          "headline": "Le nid d’aigle d’Hitler en Bavière incendié, un suspect arrêté",
+          "url": "https://www.lemonde.fr/international/article/2026/10/24/le-nid-d-aigle-d-hitler-en-baviere-incendie-un-suspect-arrete_6799514_3210.html",
+          "publishedAt": "2026-10-24T03:31:21.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/24/0/0/2000/1000/644/322/60/0/7adcdbe_ftp-1-g3gpy9a7hrun-2026-10-24t023709z-974251543-rc2e9oajg49z-rtrmadp-3-germany-fire.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "7f83243b6ed1",
+          "outletId": "le-figaro",
+          "headline": "Allemagne : un suspect arrêté après un incendie d’ampleur au «Nid d’Aigle» de Hitler",
+          "url": "https://www.lefigaro.fr/international/allemagne-un-suspect-arrete-apres-un-incendie-d-ampleur-au-nid-d-aigle-de-hitler-20261024",
+          "publishedAt": "2026-10-24T03:03:22.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x3000_crop/2026/10/24/370fb8f6f5f1c2ff6d64fb6f680325ce82d56643de3b49acdaa467456929eda8.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "75e4344ce0c1",
+      "titledArticleCount": 2,
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le bâtiment a été la proie des flammes en fin de soirée, provoquant l'intervention des pompiers alertés par l'alarme.",
+          "Aucune personne n'a été découverte à l'intérieur des locaux ravacés par l'incendie.",
+          "Les enquêteurs étudient activement l'hypothèse d'un acte criminel pour expliquer le sinistre."
+        ],
+        "droite": [
+          "Un important incendie a touché la résidence historique du Kehlsteinhaus en Bavière, utilisée autrefois par les dignitaires nazis.",
+          "Les autorités ont procédé à l'arrestation d'un suspect à la suite de ce sinistre d'ampleur dans les Alpes bavaroises."
+        ]
+      },
+      "differences": [
+        "La gauche se focalise sur l'intervention des secours, l'absence de victimes sur place et l'examen de la piste criminelle.",
+        "La droite met en avant l'ampleur des dégâts au Nid d'Aigle d'Adolf Hitler et l'interpellation rapide d'un suspect."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2
+    },
     {
       "id": "a25392344327",
       "slug": "marco-rubio-invite-les-opposants-cubains-a-collaborer-avec-la",
@@ -27,7 +80,7 @@
           "url": "https://www.lefigaro.fr/international/le-moment-est-venu-marco-rubio-appelle-ceux-qui-veulent-un-changement-a-cuba-a-cooperer-avec-la-cia-20261024",
           "publishedAt": "2026-10-23T23:49:15.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2005_crop/2026/10/24/a4082551085e27f712b224f7585ec0899f978342f18faff33edec5a69e6481d4.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -56,12 +109,75 @@
       "summarizedArticleCount": 2
     },
     {
+      "id": "da73cc92d026",
+      "slug": "la-justice-accorde-un-non-lieu-a-javier-milei-dans-l-enquete",
+      "title": "La justice accorde un non-lieu à Javier Milei dans l’enquête sur la cryptomonnaie $LIBRA en Argentine",
+      "createdAt": "2026-10-24T04:01:23.004Z",
+      "storyDay": "2026-10-24",
+      "articles": [
+        {
+          "id": "cb935f5980fb",
+          "outletId": "rfi",
+          "headline": "Argentine: non-lieu pour Milei dans l'enquête pour escroquerie présumée liée à la cryptomonnaie douteuse $LIBRA",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261024-argentine-non-lieu-pour-milei-dans-l-enqu%C3%AAte-pour-escroquerie-pr%C3%A9sum%C3%A9e-li%C3%A9e-%C3%A0-la-cryptomonnaie-douteuse-libra",
+          "publishedAt": "2026-10-24T03:00:50.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/2255d2a8-91a1-11f1-9b0b-005056a97e36/w:1024/p:16x9/AP26162767102295.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "18c4b991e16e",
+          "outletId": "le-monde",
+          "headline": "Argentine : non-lieu pour le président Javier Milei dans l’affaire d’une cryptomonnaie effondrée",
+          "url": "https://www.lemonde.fr/international/article/2026/10/24/argentine-non-lieu-pour-le-president-javier-milei-dans-l-affaire-d-une-cryptomonnaie-effondree_6799280_3210.html",
+          "publishedAt": "2026-10-23T23:44:16.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/21/848/0/5088/2544/644/322/60/0/671117a_ftp-1-beyzl93mfqui-2026-10-21t122140z-282923826-rc2k7oac01iv-rtrmadp-3-spain-argentina.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "da73cc92d026",
+      "titledArticleCount": 2,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "La justice argentine a blanchi le dirigeant ultralibéral dans un dossier impliquant une devise numérique.",
+          "Le chef de l'État avait fait la promotion du jeton sur le réseau social X avant de supprimer sa publication.",
+          "L'effondrement de la valeur de cet actif numérique a lourdement touché plus de 114 000 portefeuilles virtuels."
+        ],
+        "centre": [
+          "Les autorités judiciaires ont prononcé un non-lieu en faveur du président Javier Milei et de sa sœur Karina.",
+          "Cette décision intervient dans le cadre des investigations concernant les soupçons d'escroquerie autour de la cryptomonnaie $LIBRA."
+        ]
+      },
+      "differences": [
+        "Le camp gauche insiste sur le rôle initial de la communication présidentielle et l'ampleur des pertes financières subies par les investisseurs.",
+        "Le camp centre adopte une perspective institutionnelle centrée sur la décision judiciaire blanchissant le président et sa sœur."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2
+    },
+    {
       "id": "9994651e069d",
       "slug": "m-pokora-et-adele-castillon-figurent-au-palmares-des-nrj-music",
-      "title": "M. Pokora et Adèle Castillon figurent au palmarès des NRJ Music Awards 2026",
+      "title": "Adèle Castillon et M. Pokora figurent au palmarès des NRJ Music Awards 2026",
       "createdAt": "2026-10-23T23:01:32.080Z",
       "storyDay": "2026-10-23",
       "articles": [
+        {
+          "id": "71ec0e5f9339",
+          "outletId": "le-parisien",
+          "headline": "« Je ne m’aimais pas » : aux NRJ Music Awards, la revanche d’Adèle Castillon sacrée chanson de l’année",
+          "url": "https://www.leparisien.fr/culture-loisirs/tv/je-ne-maimais-pas-aux-nrj-music-awards-la-revanche-dadele-castillon-sacree-chanson-de-lannee-24-10-2026-QRPYLDIQ75AMHLNUT2H4B2KRP4.php",
+          "publishedAt": "2026-10-24T04:01:23.004Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "culture"
+        },
         {
           "id": "ceff9bd81144",
           "outletId": "tf1-info",
@@ -86,25 +202,30 @@
         }
       ],
       "topicId": "9994651e069d",
-      "titledArticleCount": 2,
+      "titledArticleCount": 3,
       "section": "culture",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "La vingt-huitième édition des NRJ Music Awards a mis à l'honneur M. Pokora et Adèle Castillon.",
-          "Les artistes issus de la Star Academy et de la scène rap occupent une place majeure dans la liste des nommés."
+          "La 28e édition de la cérémonie s'est déroulée au Palais des Festivals de Cannes.",
+          "Le palmarès met en avant M. Pokora, Adèle Castillon ainsi que de nombreux anciens candidats de télé-crochets."
+        ],
+        "centre": [
+          "Adèle Castillon a remporté le trophée de la chanson de l'année grâce à son titre évoquant sa reconstruction personnelle.",
+          "Le Palais des Festivals de Cannes a accueilli la 28e édition de l'événement musical réunissant des artistes francophones et internationaux."
         ],
         "droite": [
-          "La vingt-huitième cérémonie des NRJ Music Awards s'est tenue vendredi soir au Palais des Festivals de Cannes.",
-          "Le palmarès consacre notamment M. Pokora, Adèle Castillon, Marine, Mosimann et Ambre aux côtés de vedettes internationales."
+          "Le palmarès complet de la 28e édition distingue notamment M. Pokora, Adèle Castillon, Marine, Mosimann et Ambre.",
+          "L'événement s'est tenu vendredi au Palais des Festivals de Cannes en récompensant les figures de la pop francophone et mondiale."
         ]
       },
       "differences": [
-        "Le HuffPost met en avant la forte présence des anciens candidats de télé-réalité musicale et des rappeurs parmi les nommés.",
-        "TF1 Info livre une couverture promotionnelle et exhaustive du palmarès, mettant en valeur le lieu de l'événement et les stars de la pop."
+        "La gauche met en perspective la présence récurrente des anciens participants de télé-crochets parmi les nommés.",
+        "Le centre centre se focalise particulièrement sur la consécration d'Adèle Castillon et sa revanche personnelle.",
+        "Le centre droit dresse un panorama exhaustif et généraliste des artistes récompensés lors de la soirée cannoise."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 2
+      "summarizedArticleCount": 3
     },
     {
       "id": "d01a089021ea",
@@ -203,7 +324,7 @@
           "url": "https://www.ouest-france.fr/monde/alaska/trump-assume-un-recours-en-justice-en-cas-de-victoire-democrate-en-alaska-9de546f6-ce87-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-10-23T20:29:50.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYWVlNDYyOWYzOTNmZWZmOGFmY2I4ZTQxODRjM2FhMzM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=5e4419646ac7f345173b83a04d77e87f5063f8eaf01b61308b24a4a168802e01",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -229,128 +350,6 @@
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 2
-    },
-    {
-      "id": "0ce0f923bb61",
-      "slug": "le-parti-communiste-francais-subit-une-cyberattaque",
-      "title": "Le Parti communiste français subit une cyberattaque",
-      "createdAt": "2026-10-24T01:01:20.720Z",
-      "storyDay": "2026-10-23",
-      "articles": [
-        {
-          "id": "c89b54ba2575",
-          "outletId": "le-figaro",
-          "headline": "Le Parti Communiste Français victime d'une fuite de données",
-          "url": "https://www.lefigaro.fr/flash-actu/le-parti-communiste-francais-victime-d-une-fuite-de-donnees-20261023",
-          "publishedAt": "2026-10-23T20:28:47.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2172_crop/2026/10/23/a1d2dce0e9ef940f03c9bb6056ee591e0d7fece749857160cdc1cc09a75264a6.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "5c2da71208e4",
-          "outletId": "franceinfo",
-          "headline": "Le Parti communiste français victime d'une cyberattaque",
-          "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/le-parti-communiste-francais-victime-d-une-cyberattaque_8251381.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-23T19:15:45.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/pN-aSq2bh8OMLsdrE5pY5ntqvEI/0x118:2277x1399/432x243/filters:format(jpg)/2026/10/23/6adbb22010fd1126297347.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "0ce0f923bb61",
-      "titledArticleCount": 2,
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le Parti communiste français a été la cible d'une fuite informatique compromettant les informations de ses membres et sympathisants.",
-          "L'organisation politique a immédiatement saisi la justice en déposant plainte suite à cet incident."
-        ],
-        "droite": [
-          "Le Parti communiste français a officialisé l'incident vendredi en signalant une fuite de données concernant son fichier des adhérents et sympathisants.",
-          "D'après les investigations de la plateforme spécialisée FrenchBreache, cette compromission numérique touche un total de 190.000 individus."
-        ]
-      },
-      "differences": [
-        "La gauche privilégie l'angle de l'action judiciaire entreprise par la formation politique.",
-        "La droite met en avant les aspects techniques de l'intrusion en reprenant les volumes chiffrés communiqués par des observateurs spécialisés."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 2
-    },
-    {
-      "id": "6d7896f281f9",
-      "slug": "les-etats-unis-pourraient-frapper-l-iran-des-ce-week-end",
-      "title": "Les États-Unis pourraient frapper l'Iran dès ce week-end",
-      "createdAt": "2026-10-24T03:01:21.521Z",
-      "storyDay": "2026-10-23",
-      "articles": [
-        {
-          "id": "f7f5bd09a6d4",
-          "outletId": "france-24",
-          "headline": "Les États-Unis pourraient frapper l'Iran dès ce week-end, avance un diplomate américain",
-          "url": "https://www.france24.com/fr/moyen-orient/20261023-les-%C3%A9tats-unis-pourraient-frapper-l-iran-d%C3%A8s-ce-week-end-avance-un-diplomate-am%C3%A9ricain",
-          "publishedAt": "2026-10-23T20:42:44.000Z",
-          "imageUrl": "https://s.france24.com/media/display/12cc8c8a-cf1f-11f1-a70f-5b4a75578ebb/w:1024/p:16x9/2026-07-08T184511Z-354446009-MT1ZUMA000QICAX7-RTRMADP-3-ZUMA.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "228bfa3402c2",
-          "outletId": "le-figaro",
-          "headline": "Les États-Unis pourraient frapper l'Iran dès ce week-end, selon un diplomate américain",
-          "url": "https://www.lefigaro.fr/flash-actu/les-etats-unis-pourraient-frapper-l-iran-des-ce-week-end-selon-un-diplomate-americain-20261023",
-          "publishedAt": "2026-10-23T20:11:23.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/23/fa0f3c7d8be775d86ac34acbccf7073a5d5127375d690f4e78ee95b2489e67c1.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "9341d427682d",
-          "outletId": "20-minutes",
-          "headline": "Guerre au Moyen-Orient : Les Etats-Unis pourraient attaquer à nouveau l’Iran dès ce week-end",
-          "url": "https://www.20minutes.fr/monde/etats-unis/4257105-20261023-guerre-moyen-orient-etats-unis-pourraient-attaquer-nouveau-iran-week-end?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-23T19:07:38.000Z",
-          "imageUrl": "https://img.20mn.fr/yzzHXEkBTXyS3ebJ0wUUjik/1200x768_30-avril-2026-mer-d-oman-eaux-internationales-des-marins-de-la-marine-americaine-prennent-du-recul-alors-qu-un-avion-de-chasse-furtif-f-35b-lightning-ii-du-corps-des-marines-affecte-au-121-escadron-d-attaque-des-green-knights-of-marine-fighter-se-prepare-a-etre-lance-depuis-le-pont-d-envol-du-navire-d-assaut-amphibie-de-classe-america-uss-tripoli-le-17-avril-2026-dans-la-mer-d-arabie-image-de-credit-us-navy-u-s-navy-planet-pix-via-zuma-press-wire-20260430-zaa-p138-014-zeus-2604301745",
-          "frontPage": true,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "6d7896f281f9",
-      "titledArticleCount": 3,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Les États-Unis envisagent une offensive imminente contre l'Iran dès le week-end.",
-          "L'émissaire américain Tom Barrack refuse d'exclure une action militaire à court terme.",
-          "Les pourparlers diplomatiques avec Téhéran se poursuivent en parallèle des menaces."
-        ],
-        "centre": [
-          "Un diplomate américain indique que les États-Unis pourraient frapper l'Iran dès ce week-end.",
-          "Ces déclarations font suite aux avertissements répétés de Washington et d'Israël.",
-          "L'émissaire Tom Barrack a officialisé cette perspective lors d'un entretien vendredi."
-        ],
-        "droite": [
-          "Washington pourrait lancer des frappes contre l'Iran dès le week-end selon un diplomate.",
-          "Les négociations entre les États-Unis et Téhéran demeurent bloquées.",
-          "Cette situation survient huit mois après le déclenchement des frappes israélo-américaines."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur le maintien simultané des discussions diplomatiques malgré l'imminence brandie de l'attaque.",
-        "Le centre livre un compte-rendu factuel axé sur l'annonce immédiate de l'émissaire américain.",
-        "La droite contextualise l'annonce par l'échec persistant des pourparlers et la durée du conflit."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 3
     }
   ],
   "stories": [
@@ -2238,7 +2237,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/10/23/cisjordanie-en-reponse-a-la-mort-de-deux-militaires-israeliens-netanyahou-promet-des-destructions-d-ampleur-et-encore-plus-de-colonies_6799138_3210.html",
           "publishedAt": "2026-10-23T18:01:39.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/23/251/0/3011/1505/644/322/60/0/ff2ff0e_ftp-1-rrehap36ghnu-afp-d48r7v7.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -3618,280 +3617,6 @@
       "titledArticleCount": 13
     },
     {
-      "id": "fd9503d64a54",
-      "slug": "la-france-fait-face-a-une-degradation-inevitable-de-sa-note-par",
-      "title": "L'agence Moody's maintient la note souveraine de la France à Aa3 avec une perspective négative",
-      "createdAt": "2026-10-23T04:01:23.034Z",
-      "storyDay": "2026-10-23",
-      "articles": [
-        {
-          "id": "fe690d2078f1",
-          "outletId": "20-minutes",
-          "headline": "Dette publique : Moody’s laisse la situation s’éclaircir avant de se prononcer sur la note française",
-          "url": "https://www.20minutes.fr/economie/4257124-20261024-dette-publique-moody-laisse-situation-eclaircir-avant-prononcer-note-francaise?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-23T23:42:00.000Z",
-          "imageUrl": "https://img.20mn.fr/ETK0Q0qNS7iy-OCncc8LIik/1200x768_fr-paris-ministere-de-l-economie-des-finances-et-de-l-industrie-situe-a-l-est-de-la-capitale-dans-le-quartier-de-bercy-paris-ministere-de-l-economie-des-finances-et-de-l-industrie-est-situe-a-l-est-de-la-capitale-dans-le-quartier-de-bercy-houpline-renard-hr1136-credit-houpline-renard-sipa-2609151041",
-          "frontPage": true,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "2c6f208467e4",
-          "outletId": "le-monde",
-          "headline": "L’agence Moody’s ne dégrade pas la note de la France malgré l’incertitude budgétaire et politique",
-          "url": "https://www.lemonde.fr/economie/article/2026/10/24/l-agence-moody-s-ne-degrade-pas-la-note-de-la-france-malgre-l-incertitude-budgetaire-et-politique_6799214_3234.html",
-          "publishedAt": "2026-10-23T22:52:22.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/07/666/0/8000/4000/644/322/60/0/55ae34b_upload-1-zd5zslpi3kq2-jmug261006039.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "d0870c458bb0",
-          "outletId": "lopinion",
-          "headline": "Moody's maintient sa note, la France garde son crédit",
-          "url": "https://www.lopinion.fr/economie/moodys-maintient-sa-note-la-france-garde-son-credit",
-          "publishedAt": "2026-10-23T21:45:24.000Z",
-          "imageUrl": "https://beymedias.brightspotcdn.com/dd/a6/9a27a4ac4a7d829156eca7b93e7b/sipa-01209152-000018.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "cc932a0945a2",
-          "outletId": "le-figaro",
-          "headline": "Moody’s maintient la note de la France : Lecornu salue un signal qui «déjoue les pronostics déclinistes»",
-          "url": "https://www.lefigaro.fr/conjoncture/moody-s-maintient-la-note-de-la-france-lecornu-salue-un-signal-qui-dejoue-les-pronostics-declinistes-20261023",
-          "publishedAt": "2026-10-23T21:39:38.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/23/549fea26db14beb8be4d150944f26f5fdae76db054014fb9ac638a3852ec079a.JPG",
-          "frontPage": true,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "4cd9d067ba18",
-          "outletId": "rfi",
-          "headline": "France: l'agence Moody's maintient la note souveraine à Aa3 avec perspective négative",
-          "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261023-france-l-agence-moody-s-maintient-la-note-souveraine-%C3%A0-aa3-avec-perspective-n%C3%A9gative",
-          "publishedAt": "2026-10-23T21:26:18.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/7da2e4f0-166c-11ea-947a-005056bf7c53/w:1024/p:16x9/MOODYS.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "2ce4b6ebd496",
-          "outletId": "franceinfo",
-          "headline": "L'agence Moody's maintient la note souveraine de la France à Aa3 avec perspective négative",
-          "url": "https://www.franceinfo.fr/economie/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative_8251510.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-23T21:23:31.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/h0hlVJSmbQjMMtMhLOk1OVbr1zM/0x53:1024x629/432x243/filters:format(jpg)/2026/10/23/6adbd02ba0151464898876.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "4068d5eaeee3",
-          "outletId": "le-monde",
-          "headline": "L’agence Moody’s maintient la note souveraine de la France à Aa3, mais y assortit une perspective négative",
-          "url": "https://www.lemonde.fr/economie/article/2026/10/23/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-mais-y-assortit-une-perspective-negative_6799147_3234.html",
-          "publishedAt": "2026-10-23T21:22:46.000Z",
-          "imageUrl": "https://img.lemde.fr/2024/04/26/302/0/4588/2294/644/322/60/0/0b14626_5311719-01-06.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "4ae7bf92328a",
-          "outletId": "ouest-france",
-          "headline": "Dette : l’agence Moody’s maintient finalement la note de la France",
-          "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/dette-lagence-moodys-maintient-finalement-la-note-de-la-france-9daff212-cec8-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-23T21:19:30.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMWVkYzMyODNkNzAwYWNkN2FlZDFiMWRkNjhjNzA4MTA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=85dd8dd636ed5c38cd6974445bb73a1469ffd3b6c782a435d1e105ab2ec07449",
-          "frontPage": true,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "9cbfba1a5c98",
-          "outletId": "france-24",
-          "headline": "L'agence Moody's maintient la note souveraine de la France à Aa3 avec perspective négative",
-          "url": "https://www.france24.com/fr/france/20261022-notation-de-la-france-un-abaissement-de-la-note-par-moody-s-jug%C3%A9-tr%C3%A8s-plausible",
-          "publishedAt": "2026-10-23T21:12:03.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "2fe42d51b836",
-          "outletId": "tf1-info",
-          "headline": "Moody's : l'agence maintient la note souveraine de la France à Aa3 avec perspective négative",
-          "url": "https://www.tf1info.fr/economie/moody-s-l-agence-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative-2471725.html",
-          "publishedAt": "2026-10-23T21:04:05.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/668/moody-s-agence-de-notation-siege-new-york-2012-7edf58-1@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "e5d8af70d2ca",
-          "outletId": "europe-1",
-          "headline": "Dette française : pas de dégradation de la note chez Moody's, mais la pression reste forte",
-          "url": "https://www.europe1.fr/economie/dette-francaise-pas-de-degradation-de-la-note-chez-moodys-mais-la-pression-reste-forte-1177134?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-23T21:03:51.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/23/23/080_hl_jlbulcao_2185528_1_6adbcafdba6de.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "1a5cde1445b8",
-          "outletId": "le-figaro",
-          "headline": "Une décennie de déclassements de la note de la France par Moody’s en trois infographies",
-          "url": "https://www.lefigaro.fr/conjoncture/une-decennie-de-declassements-de-la-note-de-la-france-par-moody-s-20251024",
-          "publishedAt": "2026-10-23T21:03:28.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/640x392_crop/2025/10/23/01b6a518ff5ed1d154a7c9450c736af4bb8162110f37005844da4923a1800036.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "7c8ee7583a8a",
-          "outletId": "liberation",
-          "headline": "Dette : contre toute attente, Moody’s maintient la note de la France",
-          "url": "https://www.liberation.fr/economie/dette-contre-toute-attente-moodys-maintient-la-note-de-la-france-20261023_B6U3PWPYWFFHNKTAT7H3JXBBNY/",
-          "publishedAt": "2026-10-23T21:02:59.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "090b71759789",
-          "outletId": "cnews",
-          "headline": "Dette publique : l'agence Moody's maintient la note souveraine de la France, mais avec une perspective négative",
-          "url": "https://www.cnews.fr/france/2026-10-23/dette-publique-lagence-moodys-maintient-la-note-souveraine-de-la-france-mais-avec",
-          "publishedAt": "2026-10-23T21:01:00.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_jmbarrere_3354295-taille1200_6adbca992021c.jpg?h=8826e3bd&itok=mLXk7AB-",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "5e976be82d3f",
-          "outletId": "le-figaro",
-          "headline": "Dette : à la surprise générale, Moody’s ne dégrade pas la France",
-          "url": "https://www.lefigaro.fr/conjoncture/dette-a-la-surprise-generale-moody-s-ne-degrade-pas-la-france-20261023",
-          "publishedAt": "2026-10-23T20:53:46.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2964x1668_crop/2026/10/23/c3f2bb3d4de046746d55ce12ab2e303e73b8b56d7b95f5c7bd20a1590c7daad8.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "95af6aef75ac",
-          "outletId": "franceinfo",
-          "headline": "Mouvement social, crise politique, poids de la dette... Pourquoi l'agence Moody's va sans doute abaisser la note de la France vendredi",
-          "url": "https://www.franceinfo.fr/economie/crise/crise-de-la-dette/mouvement-social-crise-politique-poids-de-la-dette-pourquoi-l-agence-moody-s-va-sans-doute-abaisser-la-note-de-la-france-vendredi_8249629.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-23T05:36:36.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/hdDZq3gX00Y5uG2cwZm7XvtehIw/0x53:1024x629/432x243/filters:format(jpg)/2026/10/22/6ada6a92e4b91950040662.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "ee660889d96e",
-          "outletId": "la-croix",
-          "headline": "Crise sociale et taux d’emprunt à 5 % : la France prise en étau entre la rue et les marchés financiers",
-          "url": "https://www.la-croix.com/economie/crise-sociale-et-taux-d-emprunt-a-5-la-france-prise-en-etau-entre-la-rue-et-les-marches-financiers-20261022",
-          "publishedAt": "2026-10-23T04:32:06.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/22/2569679-dans-les-bureaux-de-l-agence-france-tresor-aft-cha.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "8324e3adf0a3",
-          "outletId": "cnews",
-          "headline": "Dette française : Moody's pourrait abaisser la note de la France ce vendredi",
-          "url": "https://www.cnews.fr/france/2026-10-23/dette-francaise-moodys-pourrait-abaisser-la-note-de-la-france-ce-vendredi-1940143",
-          "publishedAt": "2026-10-23T04:16:12.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_jmbarrere_3350862-taille1200_6ada25003df90.jpg?h=1483d620&itok=hwvELOs9",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "2469fd2fbbb5",
-          "outletId": "le-figaro",
-          "headline": "Dette : pourquoi Moody’s a toutes les raisons de dégrader la note de la France ce vendredi",
-          "url": "https://www.lefigaro.fr/conjoncture/dette-pourquoi-moody-s-a-toutes-les-raisons-de-degrader-la-note-de-la-france-ce-vendredi-20261023",
-          "publishedAt": "2026-10-23T04:00:00.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/22/d9482183a598d88788fc6dac23809674fbe2666943447aa8231bec217c078b90.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "4271d20e245b",
-          "outletId": "le-point",
-          "headline": "Note de la France : pourquoi la dégradation semble inévitable",
-          "url": "https://www.lepoint.fr/economie/note-de-la-france-pourquoi-la-degradation-semble-inevitable-K3K2P227MRHB3NICY7B3MTF7PI/",
-          "publishedAt": "2026-10-23T04:00:00.000Z",
-          "imageUrl": "https://www.lepoint.fr/resizer/v2/6YANEX7XG5HCJJJTKXSIG7VMJQ.jpg?auth=af635f68e86c52fcf08b374366dddb7b3ee2b641d74c5dbd2131cd562d17a6ec&smart=true&width=1200&height=900",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "106ca0c39d13",
-          "outletId": "france-24",
-          "headline": "La France bientôt dégradée ? Le pouvoir des agences de notation",
-          "url": "https://www.france24.com/fr/%C3%A9missions/les-cl%C3%A9s-de-l-info/20261022-la-france-bient%C3%B4t-d%C3%A9grad%C3%A9e-le-pouvoir-des-agences-de-notation",
-          "publishedAt": "2026-10-22T22:55:17.000Z",
-          "imageUrl": "https://s.france24.com/media/display/bba23a40-ce6a-11f1-97ce-97baf3e9dd31/w:1024/p:16x9/FRAN261022-2339-Live-CS2339.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        }
-      ],
-      "topicId": "fd9503d64a54",
-      "section": "economy",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "L'agence Moody's a maintenu la note de la dette souveraine de la France à Aa3 vendredi 23 octobre, contre toute attente des économistes.",
-          "La décision écarte l'hypothèse d'une baisse à un simple A, malgré les incertitudes politiques liées au budget et le climat social tendu.",
-          "Le Premier ministre Sébastien Lecornu a salué une mesure qui « déjoue les pronostics déclinistes »."
-        ],
-        "centre": [
-          "L'agence de notation Moody's a choisi de maintenir la note souveraine de la France à Aa3 avec une perspective négative, s'abstenant de toute sanction immédiate.",
-          "La décision intervient alors que les taux d'emprunt dépassent les 5 % et que la situation sociale et politique reste particulièrement troublée.",
-          "Ce maintien inattendu se démarque des rétrogradations déjà prononcées par les agences concurrentes Fitch et Standard & Poor's."
-        ],
-        "droite": [
-          "L'agence Moody's a préservé la note Aa3 de la France avec une perspective négative, épargnant au pays une dégradation que beaucoup jugeaient inévitable.",
-          "Le gouvernement et ses soutiens ont salué un signal fort qui contredit les prévisions pessimistes sur les finances publiques.",
-          "La presse de droite rappelle que la menace d'un déclassement persiste, alors que la France emprunte à plus de 5 % et que l'agence S&P doit rendre son verdict fin novembre."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur le caractère inattendu de la décision face aux tensions sociales, en retenant l'hypothèse d'un vote du budget.",
-        "Le centre privilégie une approche technique en replaçant la décision de Moody's dans le contexte global des taux d'emprunt élevés et des choix divergents des autres agences.",
-        "La droite insiste sur le soulagement budgétaire et politique tout en soulignant la persistance des risques financiers, le Figaro et Europe 1 rappelant l'échéance de l'agence S&P fin novembre."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 20,
-      "titledArticleCount": 20
-    },
-    {
       "id": "1e52bac1f877",
       "slug": "laurent-nunez-mobilise-70-000-forces-de-l-ordre-pour-les",
       "title": "Laurent Nuñez mobilise 70 000 forces de l'ordre pour les manifestations",
@@ -3960,7 +3685,7 @@
           "url": "https://www.lemonde.fr/societe/article/2026/10/23/mobilisation-du-24-octobre-un-dispositif-policier-consequent-mais-pas-hors-du-commun_6799125_3224.html",
           "publishedAt": "2026-10-23T16:55:55.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/19/438/0/3000/1500/644/322/60/0/2f5a546_upload-1-j8bxfxthibun-asurp-nuit18-19oct-paris-109721.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -4538,6 +4263,280 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 24,
       "titledArticleCount": 24
+    },
+    {
+      "id": "fd9503d64a54",
+      "slug": "la-france-fait-face-a-une-degradation-inevitable-de-sa-note-par",
+      "title": "L'agence Moody's maintient la note souveraine de la France à Aa3 avec une perspective négative",
+      "createdAt": "2026-10-23T04:01:23.034Z",
+      "storyDay": "2026-10-23",
+      "articles": [
+        {
+          "id": "fe690d2078f1",
+          "outletId": "20-minutes",
+          "headline": "Dette publique : Moody’s laisse la situation s’éclaircir avant de se prononcer sur la note française",
+          "url": "https://www.20minutes.fr/economie/4257124-20261024-dette-publique-moody-laisse-situation-eclaircir-avant-prononcer-note-francaise?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-23T23:42:00.000Z",
+          "imageUrl": "https://img.20mn.fr/ETK0Q0qNS7iy-OCncc8LIik/1200x768_fr-paris-ministere-de-l-economie-des-finances-et-de-l-industrie-situe-a-l-est-de-la-capitale-dans-le-quartier-de-bercy-paris-ministere-de-l-economie-des-finances-et-de-l-industrie-est-situe-a-l-est-de-la-capitale-dans-le-quartier-de-bercy-houpline-renard-hr1136-credit-houpline-renard-sipa-2609151041",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "2c6f208467e4",
+          "outletId": "le-monde",
+          "headline": "L’agence Moody’s ne dégrade pas la note de la France malgré l’incertitude budgétaire et politique",
+          "url": "https://www.lemonde.fr/economie/article/2026/10/24/l-agence-moody-s-ne-degrade-pas-la-note-de-la-france-malgre-l-incertitude-budgetaire-et-politique_6799214_3234.html",
+          "publishedAt": "2026-10-23T22:52:22.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/07/666/0/8000/4000/644/322/60/0/55ae34b_upload-1-zd5zslpi3kq2-jmug261006039.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "d0870c458bb0",
+          "outletId": "lopinion",
+          "headline": "Moody's maintient sa note, la France garde son crédit",
+          "url": "https://www.lopinion.fr/economie/moodys-maintient-sa-note-la-france-garde-son-credit",
+          "publishedAt": "2026-10-23T21:45:24.000Z",
+          "imageUrl": "https://beymedias.brightspotcdn.com/dd/a6/9a27a4ac4a7d829156eca7b93e7b/sipa-01209152-000018.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "cc932a0945a2",
+          "outletId": "le-figaro",
+          "headline": "Moody’s maintient la note de la France : Lecornu salue un signal qui «déjoue les pronostics déclinistes»",
+          "url": "https://www.lefigaro.fr/conjoncture/moody-s-maintient-la-note-de-la-france-lecornu-salue-un-signal-qui-dejoue-les-pronostics-declinistes-20261023",
+          "publishedAt": "2026-10-23T21:39:38.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/23/549fea26db14beb8be4d150944f26f5fdae76db054014fb9ac638a3852ec079a.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "4cd9d067ba18",
+          "outletId": "rfi",
+          "headline": "France: l'agence Moody's maintient la note souveraine à Aa3 avec perspective négative",
+          "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261023-france-l-agence-moody-s-maintient-la-note-souveraine-%C3%A0-aa3-avec-perspective-n%C3%A9gative",
+          "publishedAt": "2026-10-23T21:26:18.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/7da2e4f0-166c-11ea-947a-005056bf7c53/w:1024/p:16x9/MOODYS.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "2ce4b6ebd496",
+          "outletId": "franceinfo",
+          "headline": "L'agence Moody's maintient la note souveraine de la France à Aa3 avec perspective négative",
+          "url": "https://www.franceinfo.fr/economie/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative_8251510.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-23T21:23:31.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/h0hlVJSmbQjMMtMhLOk1OVbr1zM/0x53:1024x629/432x243/filters:format(jpg)/2026/10/23/6adbd02ba0151464898876.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "4068d5eaeee3",
+          "outletId": "le-monde",
+          "headline": "L’agence Moody’s maintient la note souveraine de la France à Aa3, mais y assortit une perspective négative",
+          "url": "https://www.lemonde.fr/economie/article/2026/10/23/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-mais-y-assortit-une-perspective-negative_6799147_3234.html",
+          "publishedAt": "2026-10-23T21:22:46.000Z",
+          "imageUrl": "https://img.lemde.fr/2024/04/26/302/0/4588/2294/644/322/60/0/0b14626_5311719-01-06.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "4ae7bf92328a",
+          "outletId": "ouest-france",
+          "headline": "Dette : l’agence Moody’s maintient finalement la note de la France",
+          "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/dette-lagence-moodys-maintient-finalement-la-note-de-la-france-9daff212-cec8-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-23T21:19:30.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMWVkYzMyODNkNzAwYWNkN2FlZDFiMWRkNjhjNzA4MTA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=85dd8dd636ed5c38cd6974445bb73a1469ffd3b6c782a435d1e105ab2ec07449",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "9cbfba1a5c98",
+          "outletId": "france-24",
+          "headline": "L'agence Moody's maintient la note souveraine de la France à Aa3 avec perspective négative",
+          "url": "https://www.france24.com/fr/france/20261022-notation-de-la-france-un-abaissement-de-la-note-par-moody-s-jug%C3%A9-tr%C3%A8s-plausible",
+          "publishedAt": "2026-10-23T21:12:03.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "2fe42d51b836",
+          "outletId": "tf1-info",
+          "headline": "Moody's : l'agence maintient la note souveraine de la France à Aa3 avec perspective négative",
+          "url": "https://www.tf1info.fr/economie/moody-s-l-agence-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative-2471725.html",
+          "publishedAt": "2026-10-23T21:04:05.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/668/moody-s-agence-de-notation-siege-new-york-2012-7edf58-1@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "e5d8af70d2ca",
+          "outletId": "europe-1",
+          "headline": "Dette française : pas de dégradation de la note chez Moody's, mais la pression reste forte",
+          "url": "https://www.europe1.fr/economie/dette-francaise-pas-de-degradation-de-la-note-chez-moodys-mais-la-pression-reste-forte-1177134?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-23T21:03:51.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/23/23/080_hl_jlbulcao_2185528_1_6adbcafdba6de.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "1a5cde1445b8",
+          "outletId": "le-figaro",
+          "headline": "Une décennie de déclassements de la note de la France par Moody’s en trois infographies",
+          "url": "https://www.lefigaro.fr/conjoncture/une-decennie-de-declassements-de-la-note-de-la-france-par-moody-s-20251024",
+          "publishedAt": "2026-10-23T21:03:28.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/640x392_crop/2025/10/23/01b6a518ff5ed1d154a7c9450c736af4bb8162110f37005844da4923a1800036.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "7c8ee7583a8a",
+          "outletId": "liberation",
+          "headline": "Dette : contre toute attente, Moody’s maintient la note de la France",
+          "url": "https://www.liberation.fr/economie/dette-contre-toute-attente-moodys-maintient-la-note-de-la-france-20261023_B6U3PWPYWFFHNKTAT7H3JXBBNY/",
+          "publishedAt": "2026-10-23T21:02:59.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "090b71759789",
+          "outletId": "cnews",
+          "headline": "Dette publique : l'agence Moody's maintient la note souveraine de la France, mais avec une perspective négative",
+          "url": "https://www.cnews.fr/france/2026-10-23/dette-publique-lagence-moodys-maintient-la-note-souveraine-de-la-france-mais-avec",
+          "publishedAt": "2026-10-23T21:01:00.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_jmbarrere_3354295-taille1200_6adbca992021c.jpg?h=8826e3bd&itok=mLXk7AB-",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "5e976be82d3f",
+          "outletId": "le-figaro",
+          "headline": "Dette : à la surprise générale, Moody’s ne dégrade pas la France",
+          "url": "https://www.lefigaro.fr/conjoncture/dette-a-la-surprise-generale-moody-s-ne-degrade-pas-la-france-20261023",
+          "publishedAt": "2026-10-23T20:53:46.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2964x1668_crop/2026/10/23/c3f2bb3d4de046746d55ce12ab2e303e73b8b56d7b95f5c7bd20a1590c7daad8.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "95af6aef75ac",
+          "outletId": "franceinfo",
+          "headline": "Mouvement social, crise politique, poids de la dette... Pourquoi l'agence Moody's va sans doute abaisser la note de la France vendredi",
+          "url": "https://www.franceinfo.fr/economie/crise/crise-de-la-dette/mouvement-social-crise-politique-poids-de-la-dette-pourquoi-l-agence-moody-s-va-sans-doute-abaisser-la-note-de-la-france-vendredi_8249629.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-23T05:36:36.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/hdDZq3gX00Y5uG2cwZm7XvtehIw/0x53:1024x629/432x243/filters:format(jpg)/2026/10/22/6ada6a92e4b91950040662.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "ee660889d96e",
+          "outletId": "la-croix",
+          "headline": "Crise sociale et taux d’emprunt à 5 % : la France prise en étau entre la rue et les marchés financiers",
+          "url": "https://www.la-croix.com/economie/crise-sociale-et-taux-d-emprunt-a-5-la-france-prise-en-etau-entre-la-rue-et-les-marches-financiers-20261022",
+          "publishedAt": "2026-10-23T04:32:06.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/22/2569679-dans-les-bureaux-de-l-agence-france-tresor-aft-cha.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "8324e3adf0a3",
+          "outletId": "cnews",
+          "headline": "Dette française : Moody's pourrait abaisser la note de la France ce vendredi",
+          "url": "https://www.cnews.fr/france/2026-10-23/dette-francaise-moodys-pourrait-abaisser-la-note-de-la-france-ce-vendredi-1940143",
+          "publishedAt": "2026-10-23T04:16:12.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_jmbarrere_3350862-taille1200_6ada25003df90.jpg?h=1483d620&itok=hwvELOs9",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "2469fd2fbbb5",
+          "outletId": "le-figaro",
+          "headline": "Dette : pourquoi Moody’s a toutes les raisons de dégrader la note de la France ce vendredi",
+          "url": "https://www.lefigaro.fr/conjoncture/dette-pourquoi-moody-s-a-toutes-les-raisons-de-degrader-la-note-de-la-france-ce-vendredi-20261023",
+          "publishedAt": "2026-10-23T04:00:00.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/22/d9482183a598d88788fc6dac23809674fbe2666943447aa8231bec217c078b90.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "4271d20e245b",
+          "outletId": "le-point",
+          "headline": "Note de la France : pourquoi la dégradation semble inévitable",
+          "url": "https://www.lepoint.fr/economie/note-de-la-france-pourquoi-la-degradation-semble-inevitable-K3K2P227MRHB3NICY7B3MTF7PI/",
+          "publishedAt": "2026-10-23T04:00:00.000Z",
+          "imageUrl": "https://www.lepoint.fr/resizer/v2/6YANEX7XG5HCJJJTKXSIG7VMJQ.jpg?auth=af635f68e86c52fcf08b374366dddb7b3ee2b641d74c5dbd2131cd562d17a6ec&smart=true&width=1200&height=900",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "106ca0c39d13",
+          "outletId": "france-24",
+          "headline": "La France bientôt dégradée ? Le pouvoir des agences de notation",
+          "url": "https://www.france24.com/fr/%C3%A9missions/les-cl%C3%A9s-de-l-info/20261022-la-france-bient%C3%B4t-d%C3%A9grad%C3%A9e-le-pouvoir-des-agences-de-notation",
+          "publishedAt": "2026-10-22T22:55:17.000Z",
+          "imageUrl": "https://s.france24.com/media/display/bba23a40-ce6a-11f1-97ce-97baf3e9dd31/w:1024/p:16x9/FRAN261022-2339-Live-CS2339.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "topicId": "fd9503d64a54",
+      "section": "economy",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "L'agence Moody's a maintenu la note de la dette souveraine de la France à Aa3 vendredi 23 octobre, contre toute attente des économistes.",
+          "La décision écarte l'hypothèse d'une baisse à un simple A, malgré les incertitudes politiques liées au budget et le climat social tendu.",
+          "Le Premier ministre Sébastien Lecornu a salué une mesure qui « déjoue les pronostics déclinistes »."
+        ],
+        "centre": [
+          "L'agence de notation Moody's a choisi de maintenir la note souveraine de la France à Aa3 avec une perspective négative, s'abstenant de toute sanction immédiate.",
+          "La décision intervient alors que les taux d'emprunt dépassent les 5 % et que la situation sociale et politique reste particulièrement troublée.",
+          "Ce maintien inattendu se démarque des rétrogradations déjà prononcées par les agences concurrentes Fitch et Standard & Poor's."
+        ],
+        "droite": [
+          "L'agence Moody's a préservé la note Aa3 de la France avec une perspective négative, épargnant au pays une dégradation que beaucoup jugeaient inévitable.",
+          "Le gouvernement et ses soutiens ont salué un signal fort qui contredit les prévisions pessimistes sur les finances publiques.",
+          "La presse de droite rappelle que la menace d'un déclassement persiste, alors que la France emprunte à plus de 5 % et que l'agence S&P doit rendre son verdict fin novembre."
+        ]
+      },
+      "differences": [
+        "La gauche insiste sur le caractère inattendu de la décision face aux tensions sociales, en retenant l'hypothèse d'un vote du budget.",
+        "Le centre privilégie une approche technique en replaçant la décision de Moody's dans le contexte global des taux d'emprunt élevés et des choix divergents des autres agences.",
+        "La droite insiste sur le soulagement budgétaire et politique tout en soulignant la persistance des risques financiers, le Figaro et Europe 1 rappelant l'échéance de l'agence S&P fin novembre."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 20,
+      "titledArticleCount": 20
     },
     {
       "id": "ff7c4345c3a5",
@@ -5639,7 +5638,7 @@
           "url": "https://www.ouest-france.fr/sport/football/paris-sg/mettez-les-u19-des-supporters-parisiens-appellent-au-boycott-apres-le-report-de-psg-lyon-b0056a86-cf14-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-10-23T20:01:38.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwN2UxZWQ0NzgxYzE3N2RiMTE1Y2Y5YTVlYmIyNmI4ZTY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=51cf1c591af65de385f79173d7ac7f9023e703695aea296523a7257b384afe5e",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -6291,197 +6290,6 @@
       "titledArticleCount": 9
     },
     {
-      "id": "c9866002b88b",
-      "slug": "emmanuel-macron-recoit-les-organisations-lyceennes-a-l-elysee",
-      "title": "Emmanuel Macron reçoit les organisations lycéennes à l'Élysée",
-      "createdAt": "2026-10-22T23:01:22.073Z",
-      "storyDay": "2026-10-22",
-      "articles": [
-        {
-          "id": "a65a790491c4",
-          "outletId": "20-minutes",
-          "headline": "Colère des lycéens : Quelles sont les pistes envisagées pour améliorer Parcoursup ?",
-          "url": "https://www.20minutes.fr/societe/4257114-20261023-colere-lyceens-pistes-envisagees-ameliorer-parcoursup?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-23T21:26:09.000Z",
-          "imageUrl": "https://img.20mn.fr/mv4mKYQnRDaKSz_cbyqmvyk/1200x768_un-ecran-d-ordinateur-affiche-le-logo-de-parcoursup-la-plateforme-de-candidature-a-l-enseignement-superieur-en-france-qui-est-devenue-l-une-des-cibles-d-un-mouvement-de-protestation-national-de-lyceens-depuis-septembre-2026-les-etudiants-se-mobilisent-pour-reclamer-de-meilleures-conditions-scolaires-davantage-d-enseignants-des-installations-renovees-des-classes-moins-surpeuplees-et-la-suppression-de-parcoursup-qu-ils-critiquent-pour-creer-du-stress-et-renforcer-les-inegalites-d-acces-a-l-enseignement-superieur-les-manifestations-mettent-egalement-en-lumiere-les-inquietudes-suscitees-par-les-longues-journees-d-ecole-et-l-inegalite-des-chances-en-matiere-d-education-le-14-octobre-2026-yassine-mahjoub-sipa-mahjoubyassine-by2f5294-credit-yassine-mahjoub-sipa-2610141717",
-          "frontPage": true,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "bbb6a4bcb93a",
-          "outletId": "bfmtv",
-          "headline": "Emmanuel Macron a reconnu auprès des lycéens le \"besoin d'une refonte en profondeur de Parcoursup\"",
-          "url": "https://www.bfmtv.com/societe/manifestations/emmanuel-macron-a-reconnu-aupres-des-lyceens-le-besoin-d-une-refonte-en-profondeur-de-parcoursup_AD-202610230888.html",
-          "publishedAt": "2026-10-23T21:18:40.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/mDuqqbDVnNjclnn7eVUHVYE44IE=/0x49:2048x1201/800x0/images/Macron-2343592.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "b2e949fbcdb6",
-          "outletId": "bfmtv",
-          "headline": "24 octobre: \"Demain, on ne sait pas combien de personnes seront dans la rue\", craint Hervé Morin, président de la région Normandie",
-          "url": "https://www.bfmtv.com/societe/manifestations/video-24-octobre-demain-on-ne-sait-pas-combien-de-personnes-seront-dans-la-rue-craint-herve-morin-president-de-la-region-normandie_VN-202610230868.html",
-          "publishedAt": "2026-10-23T20:47:30.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/MEvDzzb0XL8sXmtSRVN72fgtG5U=/0x0:1280x720/800x0/images/24-octobre-Demain-on-ne-sait-pas-combien-de-personnes-seront-dans-la-rue-craint-Herve-Morin-president-de-la-region-Normandie-2371260.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "2a35ebd28b1c",
-          "outletId": "bfmtv",
-          "headline": "Colère lycéenne: \"Est-ce qu'on va bouger sur Parcoursup ? La réponse est oui\", déclare Sébastien Lecornu",
-          "url": "https://www.bfmtv.com/politique/video-colere-lyceenne-est-ce-qu-on-va-bouger-sur-parcoursup-la-reponse-est-oui-declare-sebastien-lecornu_VN-202610230858.html",
-          "publishedAt": "2026-10-23T20:29:09.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/a96wG69c_3H_0R2a-EBXnnAp8k4=/0x0:1280x720/800x0/images/Colere-lyceenne-Est-ce-qu-on-va-bouger-sur-Parcoursup-La-reponse-est-oui-declare-Sebastien-Lecornu-2371251.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "529e4bb496c0",
-          "outletId": "bfmtv",
-          "headline": "24 octobre: \"Demain est un enjeu important de sécurité\", détaille Sébastien Lecornu dans la Haute-Vienne",
-          "url": "https://www.bfmtv.com/politique/video-24-octobre-demain-est-un-enjeu-important-de-securite-detaille-sebastien-lecornu-dans-la-haute-vienne_VN-202610230854.html",
-          "publishedAt": "2026-10-23T20:21:37.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/azl1ig0-6wV5xwFUOgxyY9_Ciso=/0x0:1280x720/800x0/images/24-octobre-Demain-est-un-enjeu-important-de-securite-detaille-Sebastien-Lecornu-dans-la-Haute-Vienne-2371247.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "c4a75ae8ceee",
-          "outletId": "franceinfo",
-          "headline": "Emmanuel Macron a reconnu auprès des représentants lycéens le \"besoin d'une refonte en profondeur de Parcoursup\"",
-          "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/emmanuel-macron-a-reconnu-aupres-des-representants-lyceens-le-besoin-d-une-refonte-en-profondeur-de-parcoursup_8251462.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-23T20:12:13.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/Cwsux6zMIkf1hoVkPuOjOUTooco/0x53:1024x629/432x243/filters:format(jpg)/2026/10/23/6adbbf462491c512176263.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "ec696256ae75",
-          "outletId": "le-parisien",
-          "headline": "Emmanuel Macron a promis « une refonte de Parcoursup », selon les représentants lycéens qui appellent à continuer la mobilisation",
-          "url": "https://www.leparisien.fr/societe/emmanuel-macron-a-promis-une-refonte-de-parcoursup-selon-les-representants-lyceens-qui-appellent-a-continuer-la-mobilisation-UM2JHAHXDVGARDATVAAV5HLWL4.php",
-          "publishedAt": "2026-10-23T19:01:28.543Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "69bb6dce5cf9",
-          "outletId": "huffpost",
-          "headline": "Mouvement lycéen : cette promesse de Macron n’a pas empêché un nouvel appel à la mobilisation",
-          "url": "https://www.huffingtonpost.fr/france/article/mouvement-lyceen-cette-promesse-de-macron-n-a-pas-empeche-un-nouvel-appel-a-la-mobilisation_343961.html",
-          "publishedAt": "2026-10-23T18:42:17.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/06/06/62/0/1200/675/0/0/60/0/a03df63_upload-1-oz7kzesbxay5-afp-20260601-b4mx92x-v3-midres-franceeconomybusinesssummit.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "9c82f33f888b",
-          "outletId": "la-croix",
-          "headline": "Mouvement lycéen : après leur rencontre avec Macron, les représentants appellent à continuer à se mobiliser",
-          "url": "https://www.la-croix.com/politique/mouvement-lyceen-apres-leur-rencontre-avec-macron-les-representants-appellent-a-continuer-a-se-mobiliser-20261023",
-          "publishedAt": "2026-10-23T17:39:22.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/23/2570940-l-ensemble-des-representants-des-lyceens-globaleme.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "f191cf5e9f35",
-          "outletId": "ouest-france",
-          "headline": "Mouvement social : Macron en première ligne avec les lycéens et les forces de l’ordre ce vendredi, Lecornu à Limoges",
-          "url": "https://www.ouest-france.fr/europe/france/mouvement-social-macron-en-premiere-ligne-avec-les-lyceens-et-les-forces-de-lordre-ce-vendredi-lecornu-a-limoges-85ac2024-ce68-11f1-bf87-17eca79cb13c?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-23T03:30:03.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYTE4NjJmMzFlNWE4Y2VhZjExNDJkOTJhZmE4NjQzNTQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2b3a5409c6daf72c4e082e16aee37ba865d3e59cde54e6517080e64395ca5852",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "e0debf2afd05",
-          "outletId": "france-24",
-          "headline": "France en direct : Macron avec les lycéens et les forces de l'ordre, Lecornu à Limoges",
-          "url": "https://www.france24.com/fr/france/20261022-en-direct-france-macron-recoit-lyceens-rencontre-forces-de-l-ordre-lecornu-limoges-manifestations",
-          "publishedAt": "2026-10-22T22:55:51.000Z",
-          "imageUrl": "https://s.france24.com/media/display/b003a0ce-ce6b-11f1-a0f5-23d55109f116/w:1024/p:16x9/AP26295395173953-1.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "politics"
-        },
-        {
-          "id": "69f6ed7b6e1f",
-          "outletId": "bfmtv",
-          "headline": "Emmanuel Macron va recevoir des organisations lycéennes: \"On n'est pas dupes\", ironise Sofia Tizaoui, ancienne présidente de l'Union syndicale lycéenne",
-          "url": "https://www.bfmtv.com/politique/elysee/video-emmanuel-macron-va-recevoir-des-organisations-lyceennes-on-n-est-pas-dupes-ironise-sofia-tizaoui-ancienne-presidente-de-l-union-syndicale-lyceenne_VN-202610220985.html",
-          "publishedAt": "2026-10-22T21:40:22.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/CxkOPTz8sOwv6P692WdRVUY0MTU=/0x0:1280x720/800x0/images/Emmanuel-Macron-va-recevoir-des-organisations-lyceennes-On-n-est-pas-dupes-ironise-Sofia-Tizaoui-ancienne-presidente-de-l-Union-syndicale-lyceenne-2370632.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "94bc5ba21c49",
-          "outletId": "tf1-info",
-          "headline": "Mobilisation lycéenne : Emmanuel Macron recevra les organisations vendredi après-midi à l'Élysée",
-          "url": "https://www.tf1info.fr/politique/mobilisation-lyceenne-emmanuel-macron-recevra-les-organisations-vendredi-apres-midi-a-l-elysee-2471509.html",
-          "publishedAt": "2026-10-22T21:14:06.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/macron-conseil-securite-22-octobre-2026-0fec2e-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "57575bd74c36",
-          "outletId": "franceinfo",
-          "headline": "Emmanuel Macron recevra les organisations lycéennes vendredi à 15 heures, annonce l'Elysée",
-          "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/emmanuel-macron-recevra-les-organisations-lyceennes-vendredi-a-15heures-annonce-l-elysee_8249623.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-22T20:44:24.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/9H_U9bXnDObCi-oThy6A_b64sXg/0x0:1024x576/432x243/filters:format(jpg)/2026/10/22/6ada65cb46e0e276949439.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "6700ddd0b583",
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Emmanuel Macron a reçu les représentants lycéens à l'Élysée et a reconnu le besoin d'une refonte en profondeur de Parcoursup, selon les informations rapportées par franceinfo.",
-          "Le HuffPost souligne que cette promesse présidentielle sur Parcoursup n'a pas suffi à apaiser la contestation et que les lycéens maintiennent un nouvel appel à la mobilisation."
-        ],
-        "centre": [
-          "Le président Emmanuel Macron a reçu vendredi 23 octobre les organisations lycéennes à l'Élysée pour écouter leurs revendications après plus d'un mois de colère.",
-          "À la suite de cette réunion, les représentants lycéens affirment que le chef de l'État a promis une refonte de Parcoursup.",
-          "Malgré cette annonce, les organisations lycéennes maintiennent leur appel à la mobilisation et attendent une rencontre avec le Premier ministre Sébastien Lecornu.",
-          "Emmanuel Macron s'est également rendu auprès des forces de l'ordre en amont des manifestations du 24 octobre, tandis que Sébastien Lecornu s'est déplacé à Limoges."
-        ],
-        "droite": [
-          "TF1 Info annonce la tenue de la réunion entre Emmanuel Macron et les organisations lycéennes vendredi après-midi à l'Élysée dans le contexte de la mobilisation."
-        ]
-      },
-      "differences": [
-        "La gauche met l'accent sur le maintien des appels à la mobilisation malgré les annonces de l'exécutif.",
-        "Le centre dresse un compte rendu factuel et général de la rencontre à l'Élysée ainsi que des déplacements de Macron et de Lecornu.",
-        "La droite se limite à l'annonce programmatique de la rencontre à l'Élysée sans développer le suivi de la contestation."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 12,
-      "titledArticleCount": 12
-    },
-    {
       "id": "3bca5d1e9243",
       "slug": "la-prefecture-autorise-un-parcours-encadre-entre-bastille-et",
       "title": "L'intersyndicale maintient le parcours de la manifestation du 24 octobre à Paris malgré l'interdiction de la préfecture",
@@ -6799,6 +6607,197 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 7,
       "titledArticleCount": 7
+    },
+    {
+      "id": "c9866002b88b",
+      "slug": "emmanuel-macron-recoit-les-organisations-lyceennes-a-l-elysee",
+      "title": "Emmanuel Macron reçoit les organisations lycéennes à l'Élysée",
+      "createdAt": "2026-10-22T23:01:22.073Z",
+      "storyDay": "2026-10-22",
+      "articles": [
+        {
+          "id": "a65a790491c4",
+          "outletId": "20-minutes",
+          "headline": "Colère des lycéens : Quelles sont les pistes envisagées pour améliorer Parcoursup ?",
+          "url": "https://www.20minutes.fr/societe/4257114-20261023-colere-lyceens-pistes-envisagees-ameliorer-parcoursup?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-23T21:26:09.000Z",
+          "imageUrl": "https://img.20mn.fr/mv4mKYQnRDaKSz_cbyqmvyk/1200x768_un-ecran-d-ordinateur-affiche-le-logo-de-parcoursup-la-plateforme-de-candidature-a-l-enseignement-superieur-en-france-qui-est-devenue-l-une-des-cibles-d-un-mouvement-de-protestation-national-de-lyceens-depuis-septembre-2026-les-etudiants-se-mobilisent-pour-reclamer-de-meilleures-conditions-scolaires-davantage-d-enseignants-des-installations-renovees-des-classes-moins-surpeuplees-et-la-suppression-de-parcoursup-qu-ils-critiquent-pour-creer-du-stress-et-renforcer-les-inegalites-d-acces-a-l-enseignement-superieur-les-manifestations-mettent-egalement-en-lumiere-les-inquietudes-suscitees-par-les-longues-journees-d-ecole-et-l-inegalite-des-chances-en-matiere-d-education-le-14-octobre-2026-yassine-mahjoub-sipa-mahjoubyassine-by2f5294-credit-yassine-mahjoub-sipa-2610141717",
+          "frontPage": true,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "bbb6a4bcb93a",
+          "outletId": "bfmtv",
+          "headline": "Emmanuel Macron a reconnu auprès des lycéens le \"besoin d'une refonte en profondeur de Parcoursup\"",
+          "url": "https://www.bfmtv.com/societe/manifestations/emmanuel-macron-a-reconnu-aupres-des-lyceens-le-besoin-d-une-refonte-en-profondeur-de-parcoursup_AD-202610230888.html",
+          "publishedAt": "2026-10-23T21:18:40.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/mDuqqbDVnNjclnn7eVUHVYE44IE=/0x49:2048x1201/800x0/images/Macron-2343592.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "b2e949fbcdb6",
+          "outletId": "bfmtv",
+          "headline": "24 octobre: \"Demain, on ne sait pas combien de personnes seront dans la rue\", craint Hervé Morin, président de la région Normandie",
+          "url": "https://www.bfmtv.com/societe/manifestations/video-24-octobre-demain-on-ne-sait-pas-combien-de-personnes-seront-dans-la-rue-craint-herve-morin-president-de-la-region-normandie_VN-202610230868.html",
+          "publishedAt": "2026-10-23T20:47:30.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/MEvDzzb0XL8sXmtSRVN72fgtG5U=/0x0:1280x720/800x0/images/24-octobre-Demain-on-ne-sait-pas-combien-de-personnes-seront-dans-la-rue-craint-Herve-Morin-president-de-la-region-Normandie-2371260.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "2a35ebd28b1c",
+          "outletId": "bfmtv",
+          "headline": "Colère lycéenne: \"Est-ce qu'on va bouger sur Parcoursup ? La réponse est oui\", déclare Sébastien Lecornu",
+          "url": "https://www.bfmtv.com/politique/video-colere-lyceenne-est-ce-qu-on-va-bouger-sur-parcoursup-la-reponse-est-oui-declare-sebastien-lecornu_VN-202610230858.html",
+          "publishedAt": "2026-10-23T20:29:09.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/a96wG69c_3H_0R2a-EBXnnAp8k4=/0x0:1280x720/800x0/images/Colere-lyceenne-Est-ce-qu-on-va-bouger-sur-Parcoursup-La-reponse-est-oui-declare-Sebastien-Lecornu-2371251.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "529e4bb496c0",
+          "outletId": "bfmtv",
+          "headline": "24 octobre: \"Demain est un enjeu important de sécurité\", détaille Sébastien Lecornu dans la Haute-Vienne",
+          "url": "https://www.bfmtv.com/politique/video-24-octobre-demain-est-un-enjeu-important-de-securite-detaille-sebastien-lecornu-dans-la-haute-vienne_VN-202610230854.html",
+          "publishedAt": "2026-10-23T20:21:37.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/azl1ig0-6wV5xwFUOgxyY9_Ciso=/0x0:1280x720/800x0/images/24-octobre-Demain-est-un-enjeu-important-de-securite-detaille-Sebastien-Lecornu-dans-la-Haute-Vienne-2371247.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c4a75ae8ceee",
+          "outletId": "franceinfo",
+          "headline": "Emmanuel Macron a reconnu auprès des représentants lycéens le \"besoin d'une refonte en profondeur de Parcoursup\"",
+          "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/emmanuel-macron-a-reconnu-aupres-des-representants-lyceens-le-besoin-d-une-refonte-en-profondeur-de-parcoursup_8251462.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-23T20:12:13.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/Cwsux6zMIkf1hoVkPuOjOUTooco/0x53:1024x629/432x243/filters:format(jpg)/2026/10/23/6adbbf462491c512176263.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "ec696256ae75",
+          "outletId": "le-parisien",
+          "headline": "Emmanuel Macron a promis « une refonte de Parcoursup », selon les représentants lycéens qui appellent à continuer la mobilisation",
+          "url": "https://www.leparisien.fr/societe/emmanuel-macron-a-promis-une-refonte-de-parcoursup-selon-les-representants-lyceens-qui-appellent-a-continuer-la-mobilisation-UM2JHAHXDVGARDATVAAV5HLWL4.php",
+          "publishedAt": "2026-10-23T19:01:28.543Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "69bb6dce5cf9",
+          "outletId": "huffpost",
+          "headline": "Mouvement lycéen : cette promesse de Macron n’a pas empêché un nouvel appel à la mobilisation",
+          "url": "https://www.huffingtonpost.fr/france/article/mouvement-lyceen-cette-promesse-de-macron-n-a-pas-empeche-un-nouvel-appel-a-la-mobilisation_343961.html",
+          "publishedAt": "2026-10-23T18:42:17.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/06/06/62/0/1200/675/0/0/60/0/a03df63_upload-1-oz7kzesbxay5-afp-20260601-b4mx92x-v3-midres-franceeconomybusinesssummit.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "9c82f33f888b",
+          "outletId": "la-croix",
+          "headline": "Mouvement lycéen : après leur rencontre avec Macron, les représentants appellent à continuer à se mobiliser",
+          "url": "https://www.la-croix.com/politique/mouvement-lyceen-apres-leur-rencontre-avec-macron-les-representants-appellent-a-continuer-a-se-mobiliser-20261023",
+          "publishedAt": "2026-10-23T17:39:22.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/23/2570940-l-ensemble-des-representants-des-lyceens-globaleme.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "f191cf5e9f35",
+          "outletId": "ouest-france",
+          "headline": "Mouvement social : Macron en première ligne avec les lycéens et les forces de l’ordre ce vendredi, Lecornu à Limoges",
+          "url": "https://www.ouest-france.fr/europe/france/mouvement-social-macron-en-premiere-ligne-avec-les-lyceens-et-les-forces-de-lordre-ce-vendredi-lecornu-a-limoges-85ac2024-ce68-11f1-bf87-17eca79cb13c?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-23T03:30:03.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYTE4NjJmMzFlNWE4Y2VhZjExNDJkOTJhZmE4NjQzNTQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2b3a5409c6daf72c4e082e16aee37ba865d3e59cde54e6517080e64395ca5852",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "e0debf2afd05",
+          "outletId": "france-24",
+          "headline": "France en direct : Macron avec les lycéens et les forces de l'ordre, Lecornu à Limoges",
+          "url": "https://www.france24.com/fr/france/20261022-en-direct-france-macron-recoit-lyceens-rencontre-forces-de-l-ordre-lecornu-limoges-manifestations",
+          "publishedAt": "2026-10-22T22:55:51.000Z",
+          "imageUrl": "https://s.france24.com/media/display/b003a0ce-ce6b-11f1-a0f5-23d55109f116/w:1024/p:16x9/AP26295395173953-1.jpg",
+          "frontPage": false,
+          "kind": "live",
+          "section": "politics"
+        },
+        {
+          "id": "69f6ed7b6e1f",
+          "outletId": "bfmtv",
+          "headline": "Emmanuel Macron va recevoir des organisations lycéennes: \"On n'est pas dupes\", ironise Sofia Tizaoui, ancienne présidente de l'Union syndicale lycéenne",
+          "url": "https://www.bfmtv.com/politique/elysee/video-emmanuel-macron-va-recevoir-des-organisations-lyceennes-on-n-est-pas-dupes-ironise-sofia-tizaoui-ancienne-presidente-de-l-union-syndicale-lyceenne_VN-202610220985.html",
+          "publishedAt": "2026-10-22T21:40:22.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/CxkOPTz8sOwv6P692WdRVUY0MTU=/0x0:1280x720/800x0/images/Emmanuel-Macron-va-recevoir-des-organisations-lyceennes-On-n-est-pas-dupes-ironise-Sofia-Tizaoui-ancienne-presidente-de-l-Union-syndicale-lyceenne-2370632.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "94bc5ba21c49",
+          "outletId": "tf1-info",
+          "headline": "Mobilisation lycéenne : Emmanuel Macron recevra les organisations vendredi après-midi à l'Élysée",
+          "url": "https://www.tf1info.fr/politique/mobilisation-lyceenne-emmanuel-macron-recevra-les-organisations-vendredi-apres-midi-a-l-elysee-2471509.html",
+          "publishedAt": "2026-10-22T21:14:06.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/682/macron-conseil-securite-22-octobre-2026-0fec2e-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "57575bd74c36",
+          "outletId": "franceinfo",
+          "headline": "Emmanuel Macron recevra les organisations lycéennes vendredi à 15 heures, annonce l'Elysée",
+          "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/emmanuel-macron-recevra-les-organisations-lyceennes-vendredi-a-15heures-annonce-l-elysee_8249623.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-22T20:44:24.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/9H_U9bXnDObCi-oThy6A_b64sXg/0x0:1024x576/432x243/filters:format(jpg)/2026/10/22/6ada65cb46e0e276949439.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "6700ddd0b583",
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Emmanuel Macron a reçu les représentants lycéens à l'Élysée et a reconnu le besoin d'une refonte en profondeur de Parcoursup, selon les informations rapportées par franceinfo.",
+          "Le HuffPost souligne que cette promesse présidentielle sur Parcoursup n'a pas suffi à apaiser la contestation et que les lycéens maintiennent un nouvel appel à la mobilisation."
+        ],
+        "centre": [
+          "Le président Emmanuel Macron a reçu vendredi 23 octobre les organisations lycéennes à l'Élysée pour écouter leurs revendications après plus d'un mois de colère.",
+          "À la suite de cette réunion, les représentants lycéens affirment que le chef de l'État a promis une refonte de Parcoursup.",
+          "Malgré cette annonce, les organisations lycéennes maintiennent leur appel à la mobilisation et attendent une rencontre avec le Premier ministre Sébastien Lecornu.",
+          "Emmanuel Macron s'est également rendu auprès des forces de l'ordre en amont des manifestations du 24 octobre, tandis que Sébastien Lecornu s'est déplacé à Limoges."
+        ],
+        "droite": [
+          "TF1 Info annonce la tenue de la réunion entre Emmanuel Macron et les organisations lycéennes vendredi après-midi à l'Élysée dans le contexte de la mobilisation."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur le maintien des appels à la mobilisation malgré les annonces de l'exécutif.",
+        "Le centre dresse un compte rendu factuel et général de la rencontre à l'Élysée ainsi que des déplacements de Macron et de Lecornu.",
+        "La droite se limite à l'annonce programmatique de la rencontre à l'Élysée sans développer le suivi de la contestation."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 12,
+      "titledArticleCount": 12
     },
     {
       "id": "f730426aed48",
@@ -7242,7 +7241,7 @@
           "url": "https://www.lemonde.fr/societe/article/2026/10/23/derriere-la-condamnation-d-olivier-bouygues-un-serieux-avertissement-pour-les-grands-proprietaires-de-domaines-de-chasse_6799135_3224.html",
           "publishedAt": "2026-10-23T17:56:47.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/23/655/0/5579/2789/644/322/60/0/2bffbc0_upload-1-7msqvo7sqklt-000-c7jb7zt.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -7393,6 +7392,73 @@
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 4
+    },
+    {
+      "id": "9994651e069d",
+      "slug": "m-pokora-et-adele-castillon-figurent-au-palmares-des-nrj-music",
+      "title": "Adèle Castillon et M. Pokora figurent au palmarès des NRJ Music Awards 2026",
+      "createdAt": "2026-10-23T23:01:32.080Z",
+      "storyDay": "2026-10-23",
+      "articles": [
+        {
+          "id": "71ec0e5f9339",
+          "outletId": "le-parisien",
+          "headline": "« Je ne m’aimais pas » : aux NRJ Music Awards, la revanche d’Adèle Castillon sacrée chanson de l’année",
+          "url": "https://www.leparisien.fr/culture-loisirs/tv/je-ne-maimais-pas-aux-nrj-music-awards-la-revanche-dadele-castillon-sacree-chanson-de-lannee-24-10-2026-QRPYLDIQ75AMHLNUT2H4B2KRP4.php",
+          "publishedAt": "2026-10-24T04:01:23.004Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "culture"
+        },
+        {
+          "id": "ceff9bd81144",
+          "outletId": "tf1-info",
+          "headline": "NRJ Music Awards 2026 : M. Pokora, Adèle Castillon, Marine, Mosimann, Ambre... découvrez le palmarès complet",
+          "url": "https://www.tf1info.fr/culture/nrj-music-awards-2026-m-pokora-adele-castillon-marine-mosimann-ambre-decouvrez-le-palmares-complet-2471730.html",
+          "publishedAt": "2026-10-23T22:34:24.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/marine-delplace-nrj-music-awards-2026-f7aa4c-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "culture"
+        },
+        {
+          "id": "7797e22ca871",
+          "outletId": "huffpost",
+          "headline": "NRJ Music Awards 2026 : M. Pokora, Adèle Castillon et tout le palmarès de la 28e cérémonie",
+          "url": "https://www.huffingtonpost.fr/culture/article/nrj-music-awards-2026-mosimann-recompense-suivez-en-direct-le-palmares-de-la-28e-ceremonie_343401.html",
+          "publishedAt": "2026-10-23T22:30:27.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/23/151/0/5676/3192/0/0/60/0/8b0b7f6_upload-1-bj2vpqxfoyvz-afp-20261023-d49h8zp-v1-highres-francemediatvnrjmusicawards2026.jpg",
+          "frontPage": false,
+          "kind": "live",
+          "section": "culture"
+        }
+      ],
+      "topicId": "9994651e069d",
+      "titledArticleCount": 3,
+      "section": "culture",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "La 28e édition de la cérémonie s'est déroulée au Palais des Festivals de Cannes.",
+          "Le palmarès met en avant M. Pokora, Adèle Castillon ainsi que de nombreux anciens candidats de télé-crochets."
+        ],
+        "centre": [
+          "Adèle Castillon a remporté le trophée de la chanson de l'année grâce à son titre évoquant sa reconstruction personnelle.",
+          "Le Palais des Festivals de Cannes a accueilli la 28e édition de l'événement musical réunissant des artistes francophones et internationaux."
+        ],
+        "droite": [
+          "Le palmarès complet de la 28e édition distingue notamment M. Pokora, Adèle Castillon, Marine, Mosimann et Ambre.",
+          "L'événement s'est tenu vendredi au Palais des Festivals de Cannes en récompensant les figures de la pop francophone et mondiale."
+        ]
+      },
+      "differences": [
+        "La gauche met en perspective la présence récurrente des anciens participants de télé-crochets parmi les nommés.",
+        "Le centre centre se focalise particulièrement sur la consécration d'Adèle Castillon et sa revanche personnelle.",
+        "Le centre droit dresse un panorama exhaustif et généraliste des artistes récompensés lors de la soirée cannoise."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3
     },
     {
       "id": "d01a089021ea",
@@ -8344,81 +8410,109 @@
       "summarizedArticleCount": 3
     },
     {
-      "id": "5550ac349337",
-      "slug": "l-ete-2026-provoque-50-000-deces-excedentaires-dans-les-villes",
-      "title": "Plus de 50 000 décès liés à la chaleur ont été enregistrés cet été dans les villes européennes",
-      "createdAt": "2026-10-23T04:01:23.034Z",
-      "storyDay": "2026-10-23",
+      "id": "75e4344ce0c1",
+      "slug": "un-suspect-arrete-apres-un-incendie-au-nid-d-aigle-d-hitler-en",
+      "title": "Un suspect arrêté après un incendie au Nid d’Aigle d’Hitler en Bavière",
+      "createdAt": "2026-10-24T04:01:23.004Z",
+      "storyDay": "2026-10-24",
       "articles": [
         {
-          "id": "795ad64007fc",
-          "outletId": "franceinfo",
-          "headline": "C'est \"le pire été jamais enregistré\" : la canicule a tué 50 000 personnes dans les villes européennes cet été",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/c-est-le-pire-ete-jamais-enregistre-la-canicule-a-tue-50-000-personnes-dans-les-villes-europeennes-cet-ete_8249155.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-23T05:40:26.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/eTNZmf8oePwN5XgfBg0ocN-wyQE/0x53:1024x629/432x243/filters:format(jpg)/2026/10/22/6ada216f5841e878928840.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "6670329be052",
-          "outletId": "le-parisien",
-          "headline": "« 50 000 décès liés à la canicule cet été dans les zones urbaines européennes » : du jamais-vu depuis 26 ans",
-          "url": "https://www.leparisien.fr/environnement/climat/50-000-deces-lies-a-la-canicule-cet-ete-dans-les-zones-urbaines-europeennes-du-jamais-vu-depuis-26-ans-23-10-2026-6Z2TGZVXDVF4FPOCRC5OX4POIE.php",
-          "publishedAt": "2026-10-23T05:01:29.334Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "98c1b0492e3d",
-          "outletId": "tf1-info",
-          "headline": "Été 2026 : 50.000 décès excédentaires dans les villes européennes à cause de la chaleur",
-          "url": "https://www.tf1info.fr/sante/ete-2026-50-000-deces-excedentaires-dans-les-villes-europeennes-a-cause-de-la-chaleur-2471393.html",
-          "publishedAt": "2026-10-23T04:00:00.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/canicule-temperature-paris-18-juin-2026-4d6590-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "science"
-        },
-        {
-          "id": "8a5caaea8c81",
+          "id": "4358f8b01c19",
           "outletId": "le-monde",
-          "headline": "Avec plus de 50 000 décès liés à la chaleur dont les deux tiers attribués au changement climatique, l’été 2026 a été le plus meurtrier dans les villes d’Europe",
-          "url": "https://www.lemonde.fr/planete/article/2026/10/23/avec-plus-de-50-000-deces-lies-a-la-chaleur-dont-les-deux-tiers-attribues-au-changement-climatique-l-ete-2026-a-ete-le-plus-meurtrier-dans-les-villes-d-europe_6798935_3244.html",
-          "publishedAt": "2026-10-23T03:00:24.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/07/17/218/0/5432/2716/644/322/60/0/bcdf974_upload-1-kaobjqiugfxa-chaudauchu-58.jpg",
+          "headline": "Le nid d’aigle d’Hitler en Bavière incendié, un suspect arrêté",
+          "url": "https://www.lemonde.fr/international/article/2026/10/24/le-nid-d-aigle-d-hitler-en-baviere-incendie-un-suspect-arrete_6799514_3210.html",
+          "publishedAt": "2026-10-24T03:31:21.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/24/0/0/2000/1000/644/322/60/0/7adcdbe_ftp-1-g3gpy9a7hrun-2026-10-24t023709z-974251543-rc2e9oajg49z-rtrmadp-3-germany-fire.JPG",
           "frontPage": false,
           "kind": "news",
-          "section": "science",
+          "section": "misc"
+        },
+        {
+          "id": "7f83243b6ed1",
+          "outletId": "le-figaro",
+          "headline": "Allemagne : un suspect arrêté après un incendie d’ampleur au «Nid d’Aigle» de Hitler",
+          "url": "https://www.lefigaro.fr/international/allemagne-un-suspect-arrete-apres-un-incendie-d-ampleur-au-nid-d-aigle-de-hitler-20261024",
+          "publishedAt": "2026-10-24T03:03:22.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x3000_crop/2026/10/24/370fb8f6f5f1c2ff6d64fb6f680325ce82d56643de3b49acdaa467456929eda8.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
           "everFrontPage": true
         }
       ],
-      "topicId": "5550ac349337",
-      "section": "science",
+      "topicId": "75e4344ce0c1",
+      "titledArticleCount": 2,
+      "section": "misc",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Une étude publiée dans la revue \"Nature\" évalue à plus de 50 000 le nombre de décès excédentaires liés à la chaleur dans les villes européennes.",
-          "Le Monde précise que les deux tiers de ces victimes sont attribués au changement climatique, surpassant la mortalité des canicules de 2003 et 2022 à travers 854 agglomérations."
-        ],
-        "centre": [
-          "La publication d'une recherche scientifique évalue à plus de 50 000 le bilan des décès urbains en Europe imputables aux fortes chaleurs.",
-          "Le Parisien qualifie cet épisode estival de niveau inédit depuis vingt-six ans dans les zones urbaines."
+          "Le bâtiment a été la proie des flammes en fin de soirée, provoquant l'intervention des pompiers alertés par l'alarme.",
+          "Aucune personne n'a été découverte à l'intérieur des locaux ravacés par l'incendie.",
+          "Les enquêteurs étudient activement l'hypothèse d'un acte criminel pour expliquer le sinistre."
         ],
         "droite": [
-          "TF1 Info rapporte qu'une étude britannique impute à la chaleur un total de 50 000 décès excédentaires dans les agglomérations européennes."
+          "Un important incendie a touché la résidence historique du Kehlsteinhaus en Bavière, utilisée autrefois par les dignitaires nazis.",
+          "Les autorités ont procédé à l'arrestation d'un suspect à la suite de ce sinistre d'ampleur dans les Alpes bavaroises."
         ]
       },
       "differences": [
-        "Le camp de gauche met en avant l'imputation directe d'une grande partie des décès au changement climatique ainsi que la comparaison avec les canicules historiques de 2003 et 2022.",
-        "Le camp du centre met l'accent sur le caractère inédit de ce bilan chiffré et sur l'échelle temporelle de vingt-six ans.",
-        "Le camp de droite livre une synthèse factuelle et condensée du rapport britannique sans ajouter de contextualisation climatique."
+        "La gauche se focalise sur l'intervention des secours, l'absence de victimes sur place et l'examen de la piste criminelle.",
+        "La droite met en avant l'ampleur des dégâts au Nid d'Aigle d'Adolf Hitler et l'interpellation rapide d'un suspect."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 4
+      "summarizedArticleCount": 2
+    },
+    {
+      "id": "da73cc92d026",
+      "slug": "la-justice-accorde-un-non-lieu-a-javier-milei-dans-l-enquete",
+      "title": "La justice accorde un non-lieu à Javier Milei dans l’enquête sur la cryptomonnaie $LIBRA en Argentine",
+      "createdAt": "2026-10-24T04:01:23.004Z",
+      "storyDay": "2026-10-24",
+      "articles": [
+        {
+          "id": "cb935f5980fb",
+          "outletId": "rfi",
+          "headline": "Argentine: non-lieu pour Milei dans l'enquête pour escroquerie présumée liée à la cryptomonnaie douteuse $LIBRA",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261024-argentine-non-lieu-pour-milei-dans-l-enqu%C3%AAte-pour-escroquerie-pr%C3%A9sum%C3%A9e-li%C3%A9e-%C3%A0-la-cryptomonnaie-douteuse-libra",
+          "publishedAt": "2026-10-24T03:00:50.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/2255d2a8-91a1-11f1-9b0b-005056a97e36/w:1024/p:16x9/AP26162767102295.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "18c4b991e16e",
+          "outletId": "le-monde",
+          "headline": "Argentine : non-lieu pour le président Javier Milei dans l’affaire d’une cryptomonnaie effondrée",
+          "url": "https://www.lemonde.fr/international/article/2026/10/24/argentine-non-lieu-pour-le-president-javier-milei-dans-l-affaire-d-une-cryptomonnaie-effondree_6799280_3210.html",
+          "publishedAt": "2026-10-23T23:44:16.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/21/848/0/5088/2544/644/322/60/0/671117a_ftp-1-beyzl93mfqui-2026-10-21t122140z-282923826-rc2k7oac01iv-rtrmadp-3-spain-argentina.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "da73cc92d026",
+      "titledArticleCount": 2,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "La justice argentine a blanchi le dirigeant ultralibéral dans un dossier impliquant une devise numérique.",
+          "Le chef de l'État avait fait la promotion du jeton sur le réseau social X avant de supprimer sa publication.",
+          "L'effondrement de la valeur de cet actif numérique a lourdement touché plus de 114 000 portefeuilles virtuels."
+        ],
+        "centre": [
+          "Les autorités judiciaires ont prononcé un non-lieu en faveur du président Javier Milei et de sa sœur Karina.",
+          "Cette décision intervient dans le cadre des investigations concernant les soupçons d'escroquerie autour de la cryptomonnaie $LIBRA."
+        ]
+      },
+      "differences": [
+        "Le camp gauche insiste sur le rôle initial de la communication présidentielle et l'ampleur des pertes financières subies par les investisseurs.",
+        "Le camp centre adopte une perspective institutionnelle centrée sur la décision judiciaire blanchissant le président et sa sœur."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2
     },
     {
       "id": "cb8558fdaeab",
@@ -8446,7 +8540,7 @@
           "url": "https://www.ouest-france.fr/monde/alaska/trump-assume-un-recours-en-justice-en-cas-de-victoire-democrate-en-alaska-9de546f6-ce87-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-10-23T20:29:50.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYWVlNDYyOWYzOTNmZWZmOGFmY2I4ZTQxODRjM2FhMzM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=5e4419646ac7f345173b83a04d77e87f5063f8eaf01b61308b24a4a168802e01",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -8499,7 +8593,7 @@
           "url": "https://www.lefigaro.fr/international/le-moment-est-venu-marco-rubio-appelle-ceux-qui-veulent-un-changement-a-cuba-a-cooperer-avec-la-cia-20261024",
           "publishedAt": "2026-10-23T23:49:15.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2005_crop/2026/10/24/a4082551085e27f712b224f7585ec0899f978342f18faff33edec5a69e6481d4.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -8523,57 +8617,6 @@
       "differences": [
         "Le camp gauche insiste sur le caractère inédit de cette ingérence et la replace dans l'histoire longue des tentatives de déstabilisation américaines contre Cuba.",
         "Le camp droite met en avant l'appel pressant de Marco Rubio et reprend sa formule appelant à un «partenariat discret»."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 2
-    },
-    {
-      "id": "9994651e069d",
-      "slug": "m-pokora-et-adele-castillon-figurent-au-palmares-des-nrj-music",
-      "title": "M. Pokora et Adèle Castillon figurent au palmarès des NRJ Music Awards 2026",
-      "createdAt": "2026-10-23T23:01:32.080Z",
-      "storyDay": "2026-10-23",
-      "articles": [
-        {
-          "id": "ceff9bd81144",
-          "outletId": "tf1-info",
-          "headline": "NRJ Music Awards 2026 : M. Pokora, Adèle Castillon, Marine, Mosimann, Ambre... découvrez le palmarès complet",
-          "url": "https://www.tf1info.fr/culture/nrj-music-awards-2026-m-pokora-adele-castillon-marine-mosimann-ambre-decouvrez-le-palmares-complet-2471730.html",
-          "publishedAt": "2026-10-23T22:34:24.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/marine-delplace-nrj-music-awards-2026-f7aa4c-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "7797e22ca871",
-          "outletId": "huffpost",
-          "headline": "NRJ Music Awards 2026 : M. Pokora, Adèle Castillon et tout le palmarès de la 28e cérémonie",
-          "url": "https://www.huffingtonpost.fr/culture/article/nrj-music-awards-2026-mosimann-recompense-suivez-en-direct-le-palmares-de-la-28e-ceremonie_343401.html",
-          "publishedAt": "2026-10-23T22:30:27.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/23/151/0/5676/3192/0/0/60/0/8b0b7f6_upload-1-bj2vpqxfoyvz-afp-20261023-d49h8zp-v1-highres-francemediatvnrjmusicawards2026.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "culture"
-        }
-      ],
-      "topicId": "9994651e069d",
-      "titledArticleCount": 2,
-      "section": "culture",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "La vingt-huitième édition des NRJ Music Awards a mis à l'honneur M. Pokora et Adèle Castillon.",
-          "Les artistes issus de la Star Academy et de la scène rap occupent une place majeure dans la liste des nommés."
-        ],
-        "droite": [
-          "La vingt-huitième cérémonie des NRJ Music Awards s'est tenue vendredi soir au Palais des Festivals de Cannes.",
-          "Le palmarès consacre notamment M. Pokora, Adèle Castillon, Marine, Mosimann et Ambre aux côtés de vedettes internationales."
-        ]
-      },
-      "differences": [
-        "Le HuffPost met en avant la forte présence des anciens candidats de télé-réalité musicale et des rappeurs parmi les nommés.",
-        "TF1 Info livre une couverture promotionnelle et exhaustive du palmarès, mettant en valeur le lieu de l'événement et les stars de la pop."
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 2
@@ -8625,6 +8668,57 @@
       "differences": [
         "La gauche privilégie l'angle de l'action judiciaire entreprise par la formation politique.",
         "La droite met en avant les aspects techniques de l'intrusion en reprenant les volumes chiffrés communiqués par des observateurs spécialisés."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2
+    },
+    {
+      "id": "7da066887178",
+      "slug": "un-vaccin-therapeutique-a-arn-messager-confirme-son-efficacite",
+      "title": "Un vaccin thérapeutique à ARN messager confirme son efficacité contre le mélanome",
+      "createdAt": "2026-10-24T04:01:23.004Z",
+      "storyDay": "2026-10-23",
+      "articles": [
+        {
+          "id": "eaa779757d17",
+          "outletId": "courrier-international",
+          "headline": "L’efficacité du vaccin à ARN messager contre les rechutes du mélanome est confirmée",
+          "url": "https://www.courrierinternational.com/article/sante-l-efficacite-du-vaccin-a-arn-messager-contre-les-rechutes-du-melanome-est-confirmee_280836",
+          "publishedAt": "2026-10-23T16:35:07.000Z",
+          "imageUrl": "https://focus.courrierinternational.com/2026/10/22/0/0/4000/2388/644/0/60/0/8cbeafa_ftp-1-ycu5msip4ohe-2026-10-22t195828z-1255944525-rc2lcr9gp8gh-rtrmadp-3-cancer-merck-moderna.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "234ee655b6bf",
+          "outletId": "franceinfo",
+          "headline": "Cancer : le premier vaccin thérapeutique à ARN messager donne de très bon résultats contre le mélanome, le cancer de la peau le plus mortel",
+          "url": "https://www.franceinfo.fr/sante/cancer/cancer-le-premier-vaccin-therapeutique-a-arn-messager-donne-de-tres-bon-resultats-contre-le-melanome-le-cancer-de-la-peau-le-plus-mortel_8251084.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-23T16:05:56.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/t70lnmipq90x3_GMNwB16g0__xA/0x68:2190x1300/432x243/filters:format(jpg)/2026/10/23/6adb83cf069a0128380889.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        }
+      ],
+      "topicId": "7da066887178",
+      "titledArticleCount": 2,
+      "section": "science",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le premier vaccin thérapeutique à ARN messager démontre des résultats très positifs dans la lutte contre le mélanome.",
+          "Le congrès de l'ESMO réunit à Madrid plus de 30 000 spécialistes pour examiner cette avancée majeure qui marque un tournant dans l'oncologie."
+        ],
+        "centre": [
+          "Le vaccin à ARN messager élaboré par Moderna et Merck réduit de plus de 40 % le risque de récidive chez les patients opérés d'un mélanome.",
+          "Ces résultats confirmés font l'objet d'une présentation détaillée au congrès européen de cancérologie organisé à Madrid."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur le caractère historique et révolutionnaire de cette thérapie inédite pour l'ensemble de l'oncologie, en soulignant l'ampleur de la mobilisation médicale au congrès de Madrid.",
+        "Le centre privilégie une approche chiffrée et précise en mettant en avant l'efficacité concrète du traitement développé par Moderna et Merck face à un cancer agressif."
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 2
@@ -9075,272 +9169,81 @@
       "summarizedArticleCount": 2
     },
     {
-      "id": "0b438727f533",
-      "slug": "un-homme-meurt-a-lyon-du-virus-shamonda-detecte-pour-la",
-      "title": "Un patient immunodéprimé meurt à Lyon du virus Shamonda détecté pour la première fois chez l'être humain",
-      "createdAt": "2026-10-22T09:01:24.355Z",
-      "storyDay": "2026-10-22",
+      "id": "5550ac349337",
+      "slug": "l-ete-2026-provoque-50-000-deces-excedentaires-dans-les-villes",
+      "title": "Plus de 50 000 décès liés à la chaleur ont été enregistrés cet été dans les villes européennes",
+      "createdAt": "2026-10-23T04:01:23.034Z",
+      "storyDay": "2026-10-23",
       "articles": [
         {
-          "id": "ab432fe8cbff",
-          "outletId": "bfmtv",
-          "headline": "Virus Shamonda : un premier décès à Lyon",
-          "url": "https://www.bfmtv.com/lyon/replay-emissions/bonjour-lyon/video-virus-shamonda-un-premier-deces-a-lyon_VN-202610230182.html",
-          "publishedAt": "2026-10-23T05:54:33.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/wFEc2kEmLLhg99lhsuW-uWZOrF0=/0x0:1280x720/800x0/images/Virus-Shamonda-un-premier-deces-a-Lyon-2370750.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "256448d689ff",
-          "outletId": "lopinion",
-          "headline": "Ce que l’on sait du virus Shamonda, qui a infecté un homme pour la première fois en France",
-          "url": "https://www.lopinion.fr/economie/ce-que-lon-sait-du-virus-shamonda-qui-a-infecte-un-homme-pour-la-premiere-fois-en-france",
-          "publishedAt": "2026-10-23T04:00:00.000Z",
-          "imageUrl": "https://beymedias.brightspotcdn.com/1e/cb/59fed52f433db66aca9c2389940e/pexels-travelerchitect-33673341.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "8963d35f0007",
-          "outletId": "rfi",
-          "headline": "Le virus Shamonda détecté pour la première fois chez l'être humain en France, un patient immunodéprimé décède",
-          "url": "https://www.rfi.fr/fr/france/20261022-le-virus-shamonda-d%C3%A9tect%C3%A9-pour-la-premi%C3%A8re-fois-chez-l-%C3%AAtre-humain-en-france-un-patient-immunod%C3%A9prim%C3%A9-d%C3%A9c%C3%A8de",
-          "publishedAt": "2026-10-22T16:12:38.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/5f6771f0-cf43-11ea-9d16-005056a98db9/w:1024/p:16x9/000_1qq477_0.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "abf527e12d6b",
-          "outletId": "lobs",
-          "headline": "Faut-il s’inquiéter du virus Shamonda, qui vient de faire sa première victime humaine en France ?",
-          "url": "https://www.nouvelobs.com/societe/20261022.OBS119431/faut-il-s-inquieter-du-virus-shamonda-qui-vient-de-faire-sa-premiere-victime-humaine-en-france.html",
-          "publishedAt": "2026-10-22T14:53:46.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "98447e4d56d0",
-          "outletId": "causeur",
-          "headline": "Premier cas humain et un mort à Lyon : que sait-on du mystérieux virus Shamonda ?",
-          "url": "https://www.causeur.fr/virus-shamonda-lyon-premier-cas-humain-mort-sante-335875",
-          "publishedAt": "2026-10-22T14:12:45.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "388730d14d17",
-          "outletId": "tf1-info",
-          "headline": "Virus Shamonda : existe-t-il une menace sanitaire après la détection d'un premier cas chez un humain ?",
-          "url": "https://www.tf1info.fr/sante/virus-shamonda-existe-t-il-une-menace-sanitaire-apres-la-detection-d-un-premier-cas-chez-un-humain-en-france-2471437.html",
-          "publishedAt": "2026-10-22T13:35:52.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/625/hopital-illustration-2-f22472-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "bcf0b110b63d",
-          "outletId": "huffpost",
-          "headline": "C’est quoi le Shamonda, ce virus détecté pour la première fois chez un humain ?",
-          "url": "https://www.huffingtonpost.fr/sante/article/c-est-quoi-le-shamonda-ce-virus-detecte-pour-la-premiere-fois-chez-un-humain_343367.html",
-          "publishedAt": "2026-10-22T13:12:03.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/07/30/125/0/1200/675/0/0/60/0/580a2a1_upload-1-tmwqladnpxsk-afp-20260623-b82x6t3-v2-midres-franceweatherclimateheatwave.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "b71b8b49763b",
-          "outletId": "la-croix",
-          "headline": "Shamonda : que sait-on de ce virus détecté pour la première fois chez un humain ?",
-          "url": "https://www.la-croix.com/sante/shamonda-que-sait-on-de-ce-virus-detecte-pour-la-premiere-fois-chez-un-humain-20261022",
-          "publishedAt": "2026-10-22T13:01:20.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/22/2569651-debut-octobre-2026-un-patient-immunodeprime-est-de.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "23c5bd690a4c",
-          "outletId": "le-monde",
-          "headline": "Le virus Shamonda détecté pour la première fois chez un humain, un patient immunodéprimé mort en France",
-          "url": "https://www.lemonde.fr/planete/article/2026/10/22/le-virus-shamonda-detecte-pour-la-premiere-fois-chez-un-humain-un-patient-immunodeprime-mort-en-france_6798613_3244.html",
-          "publishedAt": "2026-10-22T11:20:39.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/05/26/250/0/3000/1500/644/322/60/0/b94d607_upload-1-zgrh51cxh7lc-frame-650.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "8e16fb184399",
-          "outletId": "france-24",
-          "headline": "Le virus Shamonda détecté pour la première fois chez un être humain en France",
-          "url": "https://www.france24.com/fr/france/20261022-virus-shamonda-d%C3%A9tect%C3%A9-premi%C3%A8re-fois-%C3%AAtre-humain-france",
-          "publishedAt": "2026-10-22T11:02:47.000Z",
-          "imageUrl": "https://s.france24.com/media/display/c90e21c2-ce00-11f1-9ac6-23d55109f116/w:1024/p:16x9/AP25281484289422.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "58371b984c0f",
-          "outletId": "tf1-info",
-          "headline": "Le virus Shamonda détecté pour la première fois chez un humain, un patient français décédé",
-          "url": "https://www.tf1info.fr/sante/le-virus-shamonda-detecte-pour-la-premiere-fois-chez-un-humain-un-patient-francais-mort-2471368.html",
-          "publishedAt": "2026-10-22T10:17:03.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/723/480/accueil-urgences-02ad3c-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "9b34e8e16178",
-          "outletId": "le-jdd",
-          "headline": "«Aucun risque sanitaire pour la population» : un patient meurt du virus Shamonda à Lyon, une première mondiale",
-          "url": "https://www.lejdd.fr/Societe/aucun-risque-sanitaire-pour-la-population-un-patient-meurt-du-virus-shamonda-a-lyon-une-premiere-mondiale-186705",
-          "publishedAt": "2026-10-22T10:00:48.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/22/11/080_hl_xbouzas_2326374.jpg?VersionId=7mIJReRrn0VruAuh.NOQze.tTseXmIMo",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "402f5677b96b",
-          "outletId": "cnews",
-          "headline": "Virus Shamonda : un homme meurt en France, le tout premier cas humain détecté",
-          "url": "https://www.cnews.fr/sante/2026-10-22/virus-shamonda-un-homme-meurt-en-france-le-tout-premier-cas-humain-detecte-1939828",
-          "publishedAt": "2026-10-22T09:58:11.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/adobestock_258283673-taille1200_6ad9d364849cd.jpg?h=23e85b0d&itok=XGRzMMuD",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "9b8e4c866618",
-          "outletId": "le-figaro",
-          "headline": "Le virus Shamonda détecté pour la première fois chez un humain, un patient est mort en France",
-          "url": "https://sante.lefigaro.fr/social/sante-publique/le-virus-shamonda-detecte-pour-la-premiere-fois-chez-un-humain-un-patient-est-mort-en-france-20261022",
-          "publishedAt": "2026-10-22T09:58:04.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/22/adf8b9de04bcb3b2b99db2251e5107843c6362e7788d72e9577f98545dcb516b.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "dc023e546342",
-          "outletId": "20-minutes",
-          "headline": "Lyon : Ce que l’on sait sur le virus Shamonda, un virus animal détecté pour la première fois chez l’être humain",
-          "url": "https://www.20minutes.fr/sante/4256523-20261022-lyon-sait-virus-shamonda-virus-animal-detecte-premiere-fois-chez-etre-humain?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-22T09:44:29.000Z",
-          "imageUrl": "https://img.20mn.fr/Vge1LLvVRciZqLvq0Cf3Lik/1200x768_au-gaec-du-but-polo-aymeric-et-l-apprenti-maxime-travaillent-14-h-par-jour-pour-les-130-vaches-laitieres-de-la-ferme-la-premiere-traite-commence-a-7h-la-derniere-est-a-20h-dans-la-journee-la-mise-au-pre-du-troupeau-l-entretien-du-materiel-donner-a-manger-aux-veaux-et-en-ce-moment-le-labourage-des-champs-en-ce-moment-de-confinement-a-cause-du-coronavirus-les-eleveurs-et-agriculteurs-sont-au-travail-ici-vaches-laitieres-vrigny-le-26-03-2020-siccolipatrick-0847038-2003270939",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "79784031d03f",
-          "outletId": "liberation",
-          "headline": "Le virus Shamonda détecté pour la première fois chez un humain, un patient immunodéprimé mort en France",
-          "url": "https://www.liberation.fr/societe/sante/le-virus-shamonda-detecte-pour-la-premiere-fois-chez-un-humain-un-patient-immunodeprime-mort-en-france-20261022_L5I3M2ZQKNARXOFX7HAWMMLA2A/",
-          "publishedAt": "2026-10-22T09:29:20.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "e6c662962905",
-          "outletId": "le-figaro",
-          "headline": "Qu’est-ce que le Shamonda européen, ce nouveau virus des bovins qui a fait un premier mort en France ?",
-          "url": "https://www.lefigaro.fr/sciences/qu-est-ce-que-le-shamonda-europeen-ce-nouveau-virus-des-bovins-qui-se-propage-en-france-20260909",
-          "publishedAt": "2026-10-22T09:19:36.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/09/07/2742e2f13ea6f6b5b7b9bddf05b03188b807797570e36149cd2eaa87b61f1132.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "cf107ff91c2b",
-          "outletId": "europe-1",
-          "headline": "Le virus Shamonda détecté pour la première fois chez un humain, un patient immunodéprimé mort en France",
-          "url": "https://www.europe1.fr/sante/le-virus-shamonda-detecte-pour-la-premiere-fois-chez-un-humain-un-patient-immunodeprime-mort-en-france-1173387?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-22T09:11:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/hopital-soins/couloir_hopital_thibaud_moritz_afp_6996eddbcb9fd.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "48987d21d259",
+          "id": "795ad64007fc",
           "outletId": "franceinfo",
-          "headline": "Un homme est mort en France après avoir contracté le virus Shamonda, une première dans le monde, \"aucun risque sanitaire\" selon les autorités",
-          "url": "https://www.franceinfo.fr/sante/maladie/un-premier-cas-de-virus-shamonda-chez-l-etre-humain-detecte-en-france_8248633.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-22T09:03:01.000Z",
+          "headline": "C'est \"le pire été jamais enregistré\" : la canicule a tué 50 000 personnes dans les villes européennes cet été",
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/c-est-le-pire-ete-jamais-enregistre-la-canicule-a-tue-50-000-personnes-dans-les-villes-europeennes-cet-ete_8249155.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-23T05:40:26.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/eTNZmf8oePwN5XgfBg0ocN-wyQE/0x53:1024x629/432x243/filters:format(jpg)/2026/10/22/6ada216f5841e878928840.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "society"
+          "section": "science"
         },
         {
-          "id": "4f442672bd8e",
+          "id": "6670329be052",
           "outletId": "le-parisien",
-          "headline": "Un homme est mort à Lyon du virus Shamonda, pour la première fois détecté chez l’être humain",
-          "url": "https://www.leparisien.fr/societe/sante/un-homme-est-mort-a-lyon-du-virus-shamonda-pour-la-premiere-fois-detecte-chez-letre-humain-22-10-2026-ZMSLRYDRQZFKNEK2OHJYRXWR4A.php",
-          "publishedAt": "2026-10-22T09:01:24.355Z",
+          "headline": "« 50 000 décès liés à la canicule cet été dans les zones urbaines européennes » : du jamais-vu depuis 26 ans",
+          "url": "https://www.leparisien.fr/environnement/climat/50-000-deces-lies-a-la-canicule-cet-ete-dans-les-zones-urbaines-europeennes-du-jamais-vu-depuis-26-ans-23-10-2026-6Z2TGZVXDVF4FPOCRC5OX4POIE.php",
+          "publishedAt": "2026-10-23T05:01:29.334Z",
           "frontPage": false,
           "datedAtCollection": true,
           "kind": "news",
           "section": "society"
         },
         {
-          "id": "50c4765d28eb",
-          "outletId": "bfmtv",
-          "headline": "La maladie n'avait jamais été identifiée chez l'être humain: un homme est mort à Lyon du virus Shamonda, qui circule chez les bovins",
-          "url": "https://www.bfmtv.com/sante/la-maladie-n-avait-jamais-ete-identifiee-chez-l-homme-un-homme-est-mort-a-lyon-du-virus-shamonda-qui-circule-chez-les-bovins_AN-202610220350.html",
-          "publishedAt": "2026-10-22T08:24:58.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/9uC6xa6Wj0m8jWQCvUHVvqqccKc=/0x102:2048x1254/800x0/images/Les-Hospices-civils-de-Lyon-HCL-403875.jpg",
+          "id": "98c1b0492e3d",
+          "outletId": "tf1-info",
+          "headline": "Été 2026 : 50.000 décès excédentaires dans les villes européennes à cause de la chaleur",
+          "url": "https://www.tf1info.fr/sante/ete-2026-50-000-deces-excedentaires-dans-les-villes-europeennes-a-cause-de-la-chaleur-2471393.html",
+          "publishedAt": "2026-10-23T04:00:00.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/682/canicule-temperature-paris-18-juin-2026-4d6590-0@1x.jpeg",
           "frontPage": false,
           "kind": "news",
-          "section": "society"
+          "section": "science"
+        },
+        {
+          "id": "8a5caaea8c81",
+          "outletId": "le-monde",
+          "headline": "Avec plus de 50 000 décès liés à la chaleur dont les deux tiers attribués au changement climatique, l’été 2026 a été le plus meurtrier dans les villes d’Europe",
+          "url": "https://www.lemonde.fr/planete/article/2026/10/23/avec-plus-de-50-000-deces-lies-a-la-chaleur-dont-les-deux-tiers-attribues-au-changement-climatique-l-ete-2026-a-ete-le-plus-meurtrier-dans-les-villes-d-europe_6798935_3244.html",
+          "publishedAt": "2026-10-23T03:00:24.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/07/17/218/0/5432/2716/644/322/60/0/bcdf974_upload-1-kaobjqiugfxa-chaudauchu-58.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
         }
       ],
-      "topicId": "0b438727f533",
-      "section": "society",
+      "topicId": "5550ac349337",
+      "section": "science",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Un patient sévèrement immunodéprimé est décédé à Lyon début octobre des suites d'une infection par le virus Shamonda.",
-          "Le pathogène, qui circulait jusqu'ici exclusivement chez les animaux d'élevage et les bovins, a été détecté pour la toute première fois chez l'être humain.",
-          "Les autorités sanitaires soulignent qu'à ce stade, aucun risque sanitaire n'est identifié pour l'ensemble de la population."
+          "Une étude publiée dans la revue \"Nature\" évalue à plus de 50 000 le nombre de décès excédentaires liés à la chaleur dans les villes européennes.",
+          "Le Monde précise que les deux tiers de ces victimes sont attribués au changement climatique, surpassant la mortalité des canicules de 2003 et 2022 à travers 854 agglomérations."
         ],
         "centre": [
-          "Un homme est décédé à Lyon des suites d'une contamination par le virus Shamonda, une première mondiale de détection chez l'être humain.",
-          "Jusqu'à présent, ce virus était connu pour circuler chez les bovins et les animaux d'élevage.",
-          "Les autorités confirment qu'il n'y a pas de risque sanitaire pour la population générale."
+          "La publication d'une recherche scientifique évalue à plus de 50 000 le bilan des décès urbains en Europe imputables aux fortes chaleurs.",
+          "Le Parisien qualifie cet épisode estival de niveau inédit depuis vingt-six ans dans les zones urbaines."
         ],
         "droite": [
-          "Un patient lourdement immunodéprimé est mort aux Hospices civils de Lyon après avoir contracté le virus Shamonda.",
-          "C'est la première fois dans le monde qu'un cas humain de ce virus animal et bovin est officiellement détecté.",
-          "Les autorités se veulent rassurantes en écartant tout risque pour la population générale et toute transmission interhumaine."
+          "TF1 Info rapporte qu'une étude britannique impute à la chaleur un total de 50 000 décès excédentaires dans les agglomérations européennes."
         ]
       },
       "differences": [
-        "La gauche contextualise le décès en insistant sur la vulnérabilité médicale extrême du patient et la nature animale initiale de l'agent pathogène.",
-        "Le centre livre un compte-rendu factuel et synthétique en insistant sur le caractère inédit de cette découverte scientifique à l'échelle mondiale.",
-        "La droite accentue la dramaturgie en qualifiant le virus de « mystérieux » ou de « nouveau », tout en insistant massivement sur les messages rassurants des autorités face aux craintes d'une menace pandémique."
+        "Le camp de gauche met en avant l'imputation directe d'une grande partie des décès au changement climatique ainsi que la comparaison avec les canicules historiques de 2003 et 2022.",
+        "Le camp du centre met l'accent sur le caractère inédit de ce bilan chiffré et sur l'échelle temporelle de vingt-six ans.",
+        "Le camp de droite livre une synthèse factuelle et condensée du rapport britannique sans ajouter de contextualisation climatique."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 21
+      "summarizedArticleCount": 4
     },
     {
       "id": "42b9d04b6d70",
@@ -9976,83 +9879,272 @@
       "summarizedArticleCount": 10
     },
     {
-      "id": "cbc49f4efc66",
-      "slug": "la-justice-devoile-le-profil-des-interpelles-apres-les",
-      "title": "La justice dévoile le profil des interpellés après les violences du 17 octobre",
-      "createdAt": "2026-10-23T04:01:23.034Z",
+      "id": "0b438727f533",
+      "slug": "un-homme-meurt-a-lyon-du-virus-shamonda-detecte-pour-la",
+      "title": "Un patient immunodéprimé meurt à Lyon du virus Shamonda détecté pour la première fois chez l'être humain",
+      "createdAt": "2026-10-22T09:01:24.355Z",
       "storyDay": "2026-10-22",
       "articles": [
         {
-          "id": "44685b9885d3",
-          "outletId": "liberation",
-          "headline": "Devant la justice, les profils bigarrés des interpellés du 17 octobre",
-          "url": "https://www.liberation.fr/societe/police-justice/devant-la-justice-les-profils-bigarres-des-interpelles-du-17-octobre-20261023_KCBEHA42IJGQFARWLGSD5GBVCQ/",
-          "publishedAt": "2026-10-23T03:37:00.000Z",
+          "id": "ab432fe8cbff",
+          "outletId": "bfmtv",
+          "headline": "Virus Shamonda : un premier décès à Lyon",
+          "url": "https://www.bfmtv.com/lyon/replay-emissions/bonjour-lyon/video-virus-shamonda-un-premier-deces-a-lyon_VN-202610230182.html",
+          "publishedAt": "2026-10-23T05:54:33.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/wFEc2kEmLLhg99lhsuW-uWZOrF0=/0x0:1280x720/800x0/images/Virus-Shamonda-un-premier-deces-a-Lyon-2370750.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "society"
         },
         {
-          "id": "5464fdc4fdbf",
+          "id": "256448d689ff",
+          "outletId": "lopinion",
+          "headline": "Ce que l’on sait du virus Shamonda, qui a infecté un homme pour la première fois en France",
+          "url": "https://www.lopinion.fr/economie/ce-que-lon-sait-du-virus-shamonda-qui-a-infecte-un-homme-pour-la-premiere-fois-en-france",
+          "publishedAt": "2026-10-23T04:00:00.000Z",
+          "imageUrl": "https://beymedias.brightspotcdn.com/1e/cb/59fed52f433db66aca9c2389940e/pexels-travelerchitect-33673341.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "8963d35f0007",
+          "outletId": "rfi",
+          "headline": "Le virus Shamonda détecté pour la première fois chez l'être humain en France, un patient immunodéprimé décède",
+          "url": "https://www.rfi.fr/fr/france/20261022-le-virus-shamonda-d%C3%A9tect%C3%A9-pour-la-premi%C3%A8re-fois-chez-l-%C3%AAtre-humain-en-france-un-patient-immunod%C3%A9prim%C3%A9-d%C3%A9c%C3%A8de",
+          "publishedAt": "2026-10-22T16:12:38.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/5f6771f0-cf43-11ea-9d16-005056a98db9/w:1024/p:16x9/000_1qq477_0.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "abf527e12d6b",
+          "outletId": "lobs",
+          "headline": "Faut-il s’inquiéter du virus Shamonda, qui vient de faire sa première victime humaine en France ?",
+          "url": "https://www.nouvelobs.com/societe/20261022.OBS119431/faut-il-s-inquieter-du-virus-shamonda-qui-vient-de-faire-sa-premiere-victime-humaine-en-france.html",
+          "publishedAt": "2026-10-22T14:53:46.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "98447e4d56d0",
+          "outletId": "causeur",
+          "headline": "Premier cas humain et un mort à Lyon : que sait-on du mystérieux virus Shamonda ?",
+          "url": "https://www.causeur.fr/virus-shamonda-lyon-premier-cas-humain-mort-sante-335875",
+          "publishedAt": "2026-10-22T14:12:45.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "388730d14d17",
+          "outletId": "tf1-info",
+          "headline": "Virus Shamonda : existe-t-il une menace sanitaire après la détection d'un premier cas chez un humain ?",
+          "url": "https://www.tf1info.fr/sante/virus-shamonda-existe-t-il-une-menace-sanitaire-apres-la-detection-d-un-premier-cas-chez-un-humain-en-france-2471437.html",
+          "publishedAt": "2026-10-22T13:35:52.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/625/hopital-illustration-2-f22472-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "bcf0b110b63d",
+          "outletId": "huffpost",
+          "headline": "C’est quoi le Shamonda, ce virus détecté pour la première fois chez un humain ?",
+          "url": "https://www.huffingtonpost.fr/sante/article/c-est-quoi-le-shamonda-ce-virus-detecte-pour-la-premiere-fois-chez-un-humain_343367.html",
+          "publishedAt": "2026-10-22T13:12:03.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/07/30/125/0/1200/675/0/0/60/0/580a2a1_upload-1-tmwqladnpxsk-afp-20260623-b82x6t3-v2-midres-franceweatherclimateheatwave.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "b71b8b49763b",
+          "outletId": "la-croix",
+          "headline": "Shamonda : que sait-on de ce virus détecté pour la première fois chez un humain ?",
+          "url": "https://www.la-croix.com/sante/shamonda-que-sait-on-de-ce-virus-detecte-pour-la-premiere-fois-chez-un-humain-20261022",
+          "publishedAt": "2026-10-22T13:01:20.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/22/2569651-debut-octobre-2026-un-patient-immunodeprime-est-de.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "23c5bd690a4c",
+          "outletId": "le-monde",
+          "headline": "Le virus Shamonda détecté pour la première fois chez un humain, un patient immunodéprimé mort en France",
+          "url": "https://www.lemonde.fr/planete/article/2026/10/22/le-virus-shamonda-detecte-pour-la-premiere-fois-chez-un-humain-un-patient-immunodeprime-mort-en-france_6798613_3244.html",
+          "publishedAt": "2026-10-22T11:20:39.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/05/26/250/0/3000/1500/644/322/60/0/b94d607_upload-1-zgrh51cxh7lc-frame-650.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "8e16fb184399",
           "outletId": "france-24",
-          "headline": "Violences du 17 octobre : le profil type des personnes incarcérées dévoilé",
-          "url": "https://www.france24.com/fr/france/20261022-violences-17-octobre-profil-type-personnes-%C3%A9crou%C3%A9es-d%C3%A9voil%C3%A9",
-          "publishedAt": "2026-10-22T19:19:07.000Z",
-          "imageUrl": "https://s.france24.com/media/display/822fec10-ca48-11f1-8fa1-d1d2c32ebb87/w:1024/p:16x9/000-D3L84RN.jpg",
+          "headline": "Le virus Shamonda détecté pour la première fois chez un être humain en France",
+          "url": "https://www.france24.com/fr/france/20261022-virus-shamonda-d%C3%A9tect%C3%A9-premi%C3%A8re-fois-%C3%AAtre-humain-france",
+          "publishedAt": "2026-10-22T11:02:47.000Z",
+          "imageUrl": "https://s.france24.com/media/display/c90e21c2-ce00-11f1-9ac6-23d55109f116/w:1024/p:16x9/AP25281484289422.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "society"
         },
         {
-          "id": "1b2e9fded705",
+          "id": "58371b984c0f",
+          "outletId": "tf1-info",
+          "headline": "Le virus Shamonda détecté pour la première fois chez un humain, un patient français décédé",
+          "url": "https://www.tf1info.fr/sante/le-virus-shamonda-detecte-pour-la-premiere-fois-chez-un-humain-un-patient-francais-mort-2471368.html",
+          "publishedAt": "2026-10-22T10:17:03.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/723/480/accueil-urgences-02ad3c-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "9b34e8e16178",
+          "outletId": "le-jdd",
+          "headline": "«Aucun risque sanitaire pour la population» : un patient meurt du virus Shamonda à Lyon, une première mondiale",
+          "url": "https://www.lejdd.fr/Societe/aucun-risque-sanitaire-pour-la-population-un-patient-meurt-du-virus-shamonda-a-lyon-une-premiere-mondiale-186705",
+          "publishedAt": "2026-10-22T10:00:48.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/22/11/080_hl_xbouzas_2326374.jpg?VersionId=7mIJReRrn0VruAuh.NOQze.tTseXmIMo",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "402f5677b96b",
+          "outletId": "cnews",
+          "headline": "Virus Shamonda : un homme meurt en France, le tout premier cas humain détecté",
+          "url": "https://www.cnews.fr/sante/2026-10-22/virus-shamonda-un-homme-meurt-en-france-le-tout-premier-cas-humain-detecte-1939828",
+          "publishedAt": "2026-10-22T09:58:11.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/adobestock_258283673-taille1200_6ad9d364849cd.jpg?h=23e85b0d&itok=XGRzMMuD",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "9b8e4c866618",
+          "outletId": "le-figaro",
+          "headline": "Le virus Shamonda détecté pour la première fois chez un humain, un patient est mort en France",
+          "url": "https://sante.lefigaro.fr/social/sante-publique/le-virus-shamonda-detecte-pour-la-premiere-fois-chez-un-humain-un-patient-est-mort-en-france-20261022",
+          "publishedAt": "2026-10-22T09:58:04.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/22/adf8b9de04bcb3b2b99db2251e5107843c6362e7788d72e9577f98545dcb516b.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "dc023e546342",
+          "outletId": "20-minutes",
+          "headline": "Lyon : Ce que l’on sait sur le virus Shamonda, un virus animal détecté pour la première fois chez l’être humain",
+          "url": "https://www.20minutes.fr/sante/4256523-20261022-lyon-sait-virus-shamonda-virus-animal-detecte-premiere-fois-chez-etre-humain?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-22T09:44:29.000Z",
+          "imageUrl": "https://img.20mn.fr/Vge1LLvVRciZqLvq0Cf3Lik/1200x768_au-gaec-du-but-polo-aymeric-et-l-apprenti-maxime-travaillent-14-h-par-jour-pour-les-130-vaches-laitieres-de-la-ferme-la-premiere-traite-commence-a-7h-la-derniere-est-a-20h-dans-la-journee-la-mise-au-pre-du-troupeau-l-entretien-du-materiel-donner-a-manger-aux-veaux-et-en-ce-moment-le-labourage-des-champs-en-ce-moment-de-confinement-a-cause-du-coronavirus-les-eleveurs-et-agriculteurs-sont-au-travail-ici-vaches-laitieres-vrigny-le-26-03-2020-siccolipatrick-0847038-2003270939",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "79784031d03f",
+          "outletId": "liberation",
+          "headline": "Le virus Shamonda détecté pour la première fois chez un humain, un patient immunodéprimé mort en France",
+          "url": "https://www.liberation.fr/societe/sante/le-virus-shamonda-detecte-pour-la-premiere-fois-chez-un-humain-un-patient-immunodeprime-mort-en-france-20261022_L5I3M2ZQKNARXOFX7HAWMMLA2A/",
+          "publishedAt": "2026-10-22T09:29:20.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "e6c662962905",
+          "outletId": "le-figaro",
+          "headline": "Qu’est-ce que le Shamonda européen, ce nouveau virus des bovins qui a fait un premier mort en France ?",
+          "url": "https://www.lefigaro.fr/sciences/qu-est-ce-que-le-shamonda-europeen-ce-nouveau-virus-des-bovins-qui-se-propage-en-france-20260909",
+          "publishedAt": "2026-10-22T09:19:36.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/09/07/2742e2f13ea6f6b5b7b9bddf05b03188b807797570e36149cd2eaa87b61f1132.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "cf107ff91c2b",
           "outletId": "europe-1",
-          "headline": "Entre 18 et 25 ans, principalement des hommes... Quel est le profil des 186 personnes écrouées après les pillages ?",
-          "url": "https://www.europe1.fr/societe/entre-18-et-25-ans-principalement-des-hommes-quel-est-le-profil-des-186-personnes-ecrouees-apres-les-pillages-1174452?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-22T19:02:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/22/20/080_hl_mcurtat_3345368_1_6ada59dd456e1.jpg",
+          "headline": "Le virus Shamonda détecté pour la première fois chez un humain, un patient immunodéprimé mort en France",
+          "url": "https://www.europe1.fr/sante/le-virus-shamonda-detecte-pour-la-premiere-fois-chez-un-humain-un-patient-immunodeprime-mort-en-france-1173387?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-22T09:11:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/hopital-soins/couloir_hopital_thibaud_moritz_afp_6996eddbcb9fd.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "society"
         },
         {
-          "id": "d7a5cdea193e",
-          "outletId": "humanite",
-          "headline": "Gérald Darmanin : 217 personnes incarcérées parmi les 2 700 placées en garde à vue",
-          "url": "https://www.humanite.fr/-/-/gerald-darmanin-217-personnes-ont-ete-incarcerees-parmi-les-2-700-placees-en-garde-a-vue",
-          "publishedAt": "2026-10-22T14:54:54.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "id": "48987d21d259",
+          "outletId": "franceinfo",
+          "headline": "Un homme est mort en France après avoir contracté le virus Shamonda, une première dans le monde, \"aucun risque sanitaire\" selon les autorités",
+          "url": "https://www.franceinfo.fr/sante/maladie/un-premier-cas-de-virus-shamonda-chez-l-etre-humain-detecte-en-france_8248633.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-22T09:03:01.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "4f442672bd8e",
+          "outletId": "le-parisien",
+          "headline": "Un homme est mort à Lyon du virus Shamonda, pour la première fois détecté chez l’être humain",
+          "url": "https://www.leparisien.fr/societe/sante/un-homme-est-mort-a-lyon-du-virus-shamonda-pour-la-premiere-fois-detecte-chez-letre-humain-22-10-2026-ZMSLRYDRQZFKNEK2OHJYRXWR4A.php",
+          "publishedAt": "2026-10-22T09:01:24.355Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "50c4765d28eb",
+          "outletId": "bfmtv",
+          "headline": "La maladie n'avait jamais été identifiée chez l'être humain: un homme est mort à Lyon du virus Shamonda, qui circule chez les bovins",
+          "url": "https://www.bfmtv.com/sante/la-maladie-n-avait-jamais-ete-identifiee-chez-l-homme-un-homme-est-mort-a-lyon-du-virus-shamonda-qui-circule-chez-les-bovins_AN-202610220350.html",
+          "publishedAt": "2026-10-22T08:24:58.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/9uC6xa6Wj0m8jWQCvUHVvqqccKc=/0x102:2048x1254/800x0/images/Les-Hospices-civils-de-Lyon-HCL-403875.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "society"
         }
       ],
-      "topicId": "6700ddd0b583",
+      "topicId": "0b438727f533",
       "section": "society",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Libération met en avant la diversité des profils interpellés de Paris à Marseille, incluant étudiants et sans domicile fixe.",
-          "L'Humanité relaie les déclarations du ministre de la Justice Gérald Darmanin faisant état de 217 incarcérations pour 2 700 gardes à vue.",
-          "Les médias de gauche décrivent une machine judiciaire sous tension, marquée par l'urgence et des consignes de sévérité."
+          "Un patient sévèrement immunodéprimé est décédé à Lyon début octobre des suites d'une infection par le virus Shamonda.",
+          "Le pathogène, qui circulait jusqu'ici exclusivement chez les animaux d'élevage et les bovins, a été détecté pour la toute première fois chez l'être humain.",
+          "Les autorités sanitaires soulignent qu'à ce stade, aucun risque sanitaire n'est identifié pour l'ensemble de la population."
         ],
         "centre": [
-          "France 24 publie les données de la Chancellerie dressant le portrait type des individus interpellés lors des violences.",
-          "Le profil type identifié correspond à un homme de 18 à 25 ans, de nationalité française et sans casier judiciaire.",
-          "Les interpellations font suite aux manifestations émaillées de pillages et d'agressions envers les forces de l'ordre."
+          "Un homme est décédé à Lyon des suites d'une contamination par le virus Shamonda, une première mondiale de détection chez l'être humain.",
+          "Jusqu'à présent, ce virus était connu pour circuler chez les bovins et les animaux d'élevage.",
+          "Les autorités confirment qu'il n'y a pas de risque sanitaire pour la population générale."
         ],
         "droite": [
-          "Europe 1 détaille la note de la Chancellerie selon laquelle 68 % des écroués ont 25 ans ou moins.",
-          "La note indique que 95 % des personnes placées en détention provisoire sont des hommes et que 52 % n'ont pas d'antécédents.",
-          "Le profil du pilleur représente près de la moitié des 186 dossiers examinés par la note officielle."
+          "Un patient lourdement immunodéprimé est mort aux Hospices civils de Lyon après avoir contracté le virus Shamonda.",
+          "C'est la première fois dans le monde qu'un cas humain de ce virus animal et bovin est officiellement détecté.",
+          "Les autorités se veulent rassurantes en écartant tout risque pour la population générale et toute transmission interhumaine."
         ]
       },
       "differences": [
-        "La gauche insiste sur la grande hétérogénéité sociale des interpellés et la pression subie par l'institution judiciaire.",
-        "Le centre se focalise sur les statistiques officielles de la Chancellerie pour tracer un portrait type sociologique.",
-        "La droite détaille précisément les chiffres de la note administrative sur les classes d'âge et les profils délinquants."
+        "La gauche contextualise le décès en insistant sur la vulnérabilité médicale extrême du patient et la nature animale initiale de l'agent pathogène.",
+        "Le centre livre un compte-rendu factuel et synthétique en insistant sur le caractère inédit de cette découverte scientifique à l'échelle mondiale.",
+        "La droite accentue la dramaturgie en qualifiant le virus de « mystérieux » ou de « nouveau », tout en insistant massivement sur les messages rassurants des autorités face aux craintes d'une menace pandémique."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 4
+      "summarizedArticleCount": 21
     }
   ],
   "weekStories": [
@@ -23380,7 +23472,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/10/23/cisjordanie-en-reponse-a-la-mort-de-deux-militaires-israeliens-netanyahou-promet-des-destructions-d-ampleur-et-encore-plus-de-colonies_6799138_3210.html",
           "publishedAt": "2026-10-23T18:01:39.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/23/251/0/3011/1505/644/322/60/0/ff2ff0e_ftp-1-rrehap36ghnu-afp-d48r7v7.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -29074,7 +29166,7 @@
           "url": "https://www.lemonde.fr/societe/article/2026/10/23/mobilisation-du-24-octobre-un-dispositif-policier-consequent-mais-pas-hors-du-commun_6799125_3224.html",
           "publishedAt": "2026-10-23T16:55:55.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/19/438/0/3000/1500/644/322/60/0/2f5a546_upload-1-j8bxfxthibun-asurp-nuit18-19oct-paris-109721.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
