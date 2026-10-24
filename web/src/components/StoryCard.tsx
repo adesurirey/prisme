@@ -85,7 +85,8 @@ export default function StoryCard({
             {story.title}
           </h2>
           {/* The founding time (issue #136, ADR-0029): after the Coverage
-              count, no prefix, every screen size — today « 21:11 »,
+              count, no prefix, desktop only (hidden on small screens where
+              the meta row wraps too tight) — today « 21:11 »,
               yesterday « hier à 21:11 », older « 7 oct. » — so every
               list (En direct, Aujourd'hui, 7 jours) reads as a timeline. */}
           {/* Meta on one row, both tiers inline. */}
@@ -97,7 +98,7 @@ export default function StoryCard({
               totalOutlets={outlets.length}
             />
             {founded !== undefined && (
-              <span className="whitespace-nowrap text-faint">
+              <span className="hidden whitespace-nowrap text-faint sm:inline">
                 {formatStoryDate(new Date(founded))}
               </span>
             )}
