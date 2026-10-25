@@ -134,7 +134,7 @@ export default function PrismTabs(props: {
         );
       })}
       {/* Attribution: the Summaries and Comparaison are Prisme's synthesis. */}
-      <p className="mt-6 flex items-center gap-1.5 text-[12px] text-faint">
+      <p className="mt-4 flex items-center gap-1.5 text-[12px] text-faint">
         {/* Muted info glyph: marks the line as generated, not editorial. */}
         <svg
           viewBox="0 0 16 16"

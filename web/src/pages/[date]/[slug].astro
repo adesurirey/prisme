@@ -248,13 +248,19 @@ const jsonLd = {
         // No rule under the title: the first row's hover surface would
         // otherwise stack a third line right beneath it.
       }
-      <h2 class="mb-3 text-[16px] text-muted">
+      <h2 class="mb-6 text-[16px] text-muted">
         <span class="font-semibold text-ink">
           {articleCount} article{articleCount > 1 ? "s" : ""}
         </span>{" "}
         de {mediaCount} média{mediaCount > 1 ? "s" : ""}
       </h2>
-        {lifeBins && hasActivity(lifeBins) && <ActivityChart bins={lifeBins} />}
+      {
+        lifeBins && hasActivity(lifeBins) && (
+          <div class="mb-5">
+            <ActivityChart bins={lifeBins} />
+          </div>
+        )
+      }
       {
         // One island for the whole list (issue #27): the head rows and the
         // follow-ups behind "Voir les N autres articles" are all in the
