@@ -24,7 +24,8 @@ import type {
 } from '../gemini.ts';
 import {
   GROUPING,
-  GROUPING_SCHEMA,
+  GROUPING_MAX_OUTPUT_TOKENS,
+  groupingGenerationConfig,
   groupingPrompt,
   parseGroupingResponse,
 } from '../gemini.ts';
@@ -69,13 +70,9 @@ function googleGroupingModel(
     async group(input) {
       const body = {
         contents: [{ parts: [{ text: groupingPrompt(input) }] }],
-        generationConfig: {
-          responseMimeType: 'application/json',
-          responseJsonSchema: GROUPING_SCHEMA,
-          // Same headroom as production: the from-empty fixture assigns
-          // several hundred Articles in one call.
-          maxOutputTokens: 65_536,
-        },
+        // The same config object production sends — the parity claim is
+        // enforced by sharing it, not by keeping copies in sync.
+        generationConfig: groupingGenerationConfig(),
       };
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
       const response = await fetch(url, {
@@ -206,10 +203,11 @@ function openRouterGroupingModel(
             schema: strictGroupingSchema(),
           },
         },
-        // Same headroom as production: without it the provider's default
-        // output cap truncates the JSON mid-assignment (the from-empty
-        // fixture needs tens of thousands of output tokens).
-        max_tokens: 65_536,
+        // Same headroom as production (GROUPING_MAX_OUTPUT_TOKENS): without
+        // it the provider's default output cap truncates the JSON
+        // mid-assignment (the from-empty fixture needs tens of thousands of
+        // output tokens).
+        max_tokens: GROUPING_MAX_OUTPUT_TOKENS,
         // Ask OpenRouter to report token counts and cost in the response.
         usage: { include: true },
         // Grouping is a mechanical structured-output task: no thinking
