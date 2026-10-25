@@ -253,14 +253,25 @@ const STOPWORDS = new Set([
 
 /** Lowercase, accent-stripped content tokens of a headline.
  * Exported for the grouping benchmark's dup-seed detector (issue #41). */
-/** The match key of one raw word: lowercased, accent-stripped — undefined
- * for stopwords and sub-2-char words, which carry no content signal. Shared
- * by tokens() and the Topic label (ADR-0024), which must agree on what
- * counts as a content word. */
+/** The match key of one raw word: lowercased, accent-stripped, then lightly
+ * stemmed (issue #141) — undefined for stopwords and sub-2-char words, which
+ * carry no content signal. Shared by tokens() and the Topic label (ADR-0024),
+ * which must agree on what counts as a content word. The stemmer is the
+ * minimal French one (Savoy): strip the plural s/x, then the feminine e,
+ * only while the stem keeps at least 4 characters — enough to fold
+ * manifestations → manifestation without over-merging short words. */
 export function wordKey(raw: string): string | undefined {
   const word = raw.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
   if (word.length < 2 || STOPWORDS.has(word)) return undefined;
-  return word;
+  return stem(word);
+}
+
+function stem(word: string): string {
+  let out = word;
+  if (/[sx]$/.test(out) && out.length >= 5) out = out.slice(0, -1);
+  const stripped = out.replace(/e+$/, '');
+  if (stripped.length >= 4) out = stripped;
+  return out;
 }
 
 export function tokens(text: string): Set<string> {
