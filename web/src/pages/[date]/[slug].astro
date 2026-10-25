@@ -9,6 +9,7 @@ import {
   reportingOutletIds,
   SECTION_LABELS,
 } from '@prisme/domain';
+import ActivityChart from '../../components/ActivityChart';
 import ArticleList from '../../components/ArticleList';
 import BackToIndex from '../../components/BackToIndex.astro';
 import BlindspotBadge from '../../components/BlindspotBadge';
@@ -18,6 +19,7 @@ import PrismTabs from '../../components/PrismTabs';
 import StoryImage from '../../components/StoryImage';
 import { loadAllStoryFiles, loadOutlets, withBase } from '../../data';
 import Base from '../../layouts/Base.astro';
+import { lifeActivityWindow, storyActivity } from '../../story-activity';
 import { dayStamp, parisDayKey, parisTime } from '../../story-date';
 
 export async function getStaticPaths() {
@@ -49,6 +51,17 @@ const imageOutlet = image && byId.get(image.outletId);
 // One mixed list, all Leanings together, newest first (ArticleList sorts): // each Outlet's extra Articles collapse behind their own "+N autres" row.
 const articleCount = countedArticles(story.articles);
 const mediaCount = reportingOutletIds(story.articles).size;
+
+// The coverage chronology: the Story's whole life (first→last
+// Article) binned per hour — per Paris day beyond 48 hours — split per
+// bord. Below the « X articles de X médias » heading it answers « le
+// burst, puis quoi »: qui a ouvert le sujet et comment ça a suivi. The
+// axis never runs shorter than a day, so a fresh Story reads its burst
+// at the right end of a 24 h ribbon.
+const lifeWindow = lifeActivityWindow(story.articles);
+const lifeBins = lifeWindow
+  ? storyActivity(story.articles, byId, lifeWindow)
+  : null;
 
 // "Mis à jour …": bare clock for today ("Mis à jour à 20h23",
 // same as Article rows), "hier à …" for yesterday, absolute date otherwise
@@ -232,12 +245,19 @@ const jsonLd = {
         // No rule under the title: the first row's hover surface would
         // otherwise stack a third line right beneath it.
       }
-      <h2 class="mb-3 text-[16px] text-muted">
+      <h2 class="mb-6 text-[16px] text-muted">
         <span class="font-semibold text-ink">
           {articleCount} article{articleCount > 1 ? "s" : ""}
         </span>{" "}
         de {mediaCount} média{mediaCount > 1 ? "s" : ""}
       </h2>
+      {
+        lifeBins && (
+          <div class="mb-5">
+            <ActivityChart bins={lifeBins} />
+          </div>
+        )
+      }
       {
         // One island for the whole list (issue #27): the head rows and the
         // follow-ups behind "Voir les N autres articles" are all in the

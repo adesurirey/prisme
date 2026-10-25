@@ -418,6 +418,22 @@ describe('card founding time (issue #136, ADR-0029)', () => {
   });
 });
 
+describe('coverage chronology (ADR-0032)', () => {
+  it("ships the Story's life chart on the Story page — and only there", async () => {
+    const story = edition.stories[0]!;
+    const page = await readDist(`${story.storyDay}/${story.slug}/index.html`);
+    // The chart: a stacked SVG with a native <title> per bin and the
+    // span aria line — prerendered, no client script.
+    expect(page).toContain('<svg');
+    expect(page).toContain('Chronologie des publications : ');
+    expect(page).toMatch(/\d+ articles? sur \d+ (heures?|jours?)/);
+    expect(page).toContain('<title>');
+    // The cards keep the per-reader badge (ADR-0029) and carry no chart.
+    const home = await readDist('index.html');
+    expect(home).not.toContain('Chronologie des publications');
+  });
+});
+
 describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () => {
   it('ships robots.txt pointing at the sitemap', async () => {
     const robots = await readDist('robots.txt');

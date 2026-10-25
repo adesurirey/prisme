@@ -111,6 +111,10 @@ _Avoid_: Edition size, story cap
 A dated page (`/archives/<date>/`) rendered at build time from the permanent Story files of that day — the day's record, not a snapshot of the Edition.
 _Avoid_: Snapshot, backup
 
+**Coverage chronology**:
+The stacked chart on the Story page (reader-facing: « chronologie de couverture »): the Story's whole life — first→last Article — in hourly bins while the span stays within 48 hours, Paris-day bins beyond, each bin split per bord (gauche, centre, droite). The axis never runs shorter than a day, so a fresh Story's burst reads at the right end of a 24 h ribbon. Prerendered SVG, identical for every reader; every Story page has one (ADR-0032).
+_Avoid_: Activity sparkline, histogram, chronologie
+
 **Trending Story**:
 A Story in the Edition that the returning reader is shown as « En hausse » because the Summaries pass re-synthesized it after that reader last saw it — the recorded fact (`summarizedAt`), not a count approximation; however long the absence (ADR-0029 as amended by ADR-0031). Uncapped, on every page that runs the signal; a Story the reader has never seen never trends.
 _Avoid_: Rising story, hot story, viral
