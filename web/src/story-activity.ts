@@ -4,7 +4,7 @@
  * are prerendered SVG (zero client JS), so every window here is anchored at
  * the edition's build instant, never at "now".
  *
- * One window feeds the chart (ADR-0031): the Story page shows the Story's
+ * One window feeds the chart (ADR-0032): the Story page shows the Story's
  * whole life — first→last Article, hourly bins while the span stays within
  * 48 hours, day bins beyond.
  *

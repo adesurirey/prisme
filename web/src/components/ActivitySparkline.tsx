@@ -3,7 +3,7 @@ import { activityAriaLabel } from '../story-activity';
 
 /**
  * The card's tiny sparkline of Story activity. Currently benched: the
- * branch ships only the Story page's chronologie (ADR-0031) and the cards
+ * branch ships only the Story page's chronologie (ADR-0032) and the cards
  * keep the « En hausse » badge (ADR-0029), but this component is kept for
  * a future card surface. It needs a window with a reader label — the
  * rolling 24 h / 7 jours windows it was built for live in this file's

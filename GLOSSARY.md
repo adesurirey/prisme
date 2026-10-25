@@ -108,7 +108,7 @@ A dated page (`/archives/<date>/`) rendered at build time from the permanent Sto
 _Avoid_: Snapshot, backup
 
 **Chronologie de couverture**:
-The stacked chart on the Story page: the Story's whole life — first→last Article — in hourly bins while the span stays within 48 hours, Paris-day bins beyond, each bin split per bord (gauche, centre, droite). The axis never runs shorter than a day, so a fresh Story's burst reads at the right end of a 24 h ribbon. Prerendered SVG, identical for every reader; every Story page has one (ADR-0031).
+The stacked chart on the Story page: the Story's whole life — first→last Article — in hourly bins while the span stays within 48 hours, Paris-day bins beyond, each bin split per bord (gauche, centre, droite). The axis never runs shorter than a day, so a fresh Story's burst reads at the right end of a 24 h ribbon. Prerendered SVG, identical for every reader; every Story page has one (ADR-0032).
 _Avoid_: Activity sparkline, coverage timeline, histogram
 
 **Trending Story**:

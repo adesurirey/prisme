@@ -418,7 +418,7 @@ describe('card founding time (issue #136, ADR-0029)', () => {
   });
 });
 
-describe('chronologie de couverture (ADR-0031)', () => {
+describe('chronologie de couverture (ADR-0032)', () => {
   it("ships the Story's life chart on the Story page — and only there", async () => {
     const story = edition.stories[0]!;
     const page = await readDist(`${story.storyDay}/${story.slug}/index.html`);

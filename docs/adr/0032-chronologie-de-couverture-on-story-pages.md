@@ -3,7 +3,7 @@
 Decided 2026-10-24. Owns the Story page's coverage chronology — a stacked
 prerendered chart of the Story's Articles over its whole life, split per
 bord. Leaves the per-card surfaces untouched: « En hausse » stays what
-ADR-0029 made it, and the cards carry no chart.
+ADR-0029 made it (as ADR-0031 records it), and the cards carry no chart.
 
 ## Context
 
