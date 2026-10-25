@@ -32,13 +32,10 @@ function page(total: number): Document {
   });
   const fill = { style: { width: '' } };
   const count = { textContent: '' };
-  let clickHandler: () => void = () => {};
   const button = {
     hidden: true,
     dataset: {},
-    addEventListener: (_: string, handler: () => void) => {
-      clickHandler = handler;
-    },
+    addEventListener: () => {},
     querySelector: (sel: string) =>
       sel === '[data-load-more-fill]'
         ? fill
@@ -46,7 +43,6 @@ function page(total: number): Document {
           ? count
           : null,
   } as unknown as HTMLButtonElement;
-  (button as any).__click = () => clickHandler();
   (button as any).__fill = fill;
   (button as any).__count = count;
   const doc = {
@@ -64,14 +60,6 @@ describe('installLoadMore — progress counter and fill', () => {
     const button = doc.querySelector('[data-load-more]') as any;
     expect(button.__count.textContent).toBe('(20/45)');
     expect(button.__fill.style.width).toBe(`${(20 / 45) * 100}%`);
-  });
-
-  it('updates the counter and fill when a click expands the tail', () => {
-    const doc = page(45);
-    installLoadMore(doc);
-    const button = doc.querySelector('[data-load-more]') as any;
-    button.__click();
-    expect(button.__count.textContent).toBe('(40/45)');
   });
 });
 

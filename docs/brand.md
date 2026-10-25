@@ -96,11 +96,11 @@ The UI already embodies the brand; these rules keep it that way.
   belongs to the press. Never introduce a decorative accent color — the only
   colors in the UI are the three Coverage group colors (Gauche, Centre,
   Droite), used by the dots, the Coverage bar, the Blindspot dot and the
-  favicon. A granular band (Centre gauche, Centre droit) lives in the label
-  text only — its dot wears its group's color.
+  favicon, plus the one exception below. A granular band (Centre gauche,
+  Centre droit) lives in the label text only — its dot wears its group's
+  color.
 - **Color means something.** If a pixel is colored, it encodes a Leaning —
-  nothing else. The one former exception, the Trending Story badge's
-  sarcelle, is retired with the badge (ADR-0030): the activity sparkline
-  that replaced it is monochrome on purpose.
+  or, as the single exception (ADR-0014), the Trending Story badge: sarcelle
+  (`--trending`) means "this Story is climbing", nothing else.
   Monochrome chrome, hairlines, generous whitespace (Linear-like).
 

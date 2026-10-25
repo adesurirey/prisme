@@ -11,7 +11,6 @@ import {
 } from '../latest';
 import Base from '../layouts/Base.astro';
 import { LOAD_MORE_INITIAL } from '../load-more';
-import { dayActivityWindow } from '../story-activity';
 
 /**
  * « En direct » (issue #137, ADR-0029): the live edition — every Story
@@ -21,9 +20,10 @@ import { dayActivityWindow } from '../story-activity';
  * count line — but the one edition whose question is "when", not "how
  * much", so the ranking is the domain's latest-first key, never Coverage.
  *
- * Same intrinsic sparklines as la Une (ADR-0030): the rolling 24 h
- * window, and the card shows the Story's real Article flow — identical
- * for every reader, nothing per-visit decided in the browser.
+ * Per-reader signal (ADR-0029): the trending script runs here through the
+ * same code path as la Une (trending-page.ts) — the badge means "grew
+ * since your last visit", and a visit to either page feeds the same
+ * merged baseline.
  *
  * Header and indexation (ADR-0028 as amended by ADR-0029): the shared
  * editions header — h1 « À la une », select preselected on « En direct »,
@@ -34,12 +34,8 @@ import { dayActivityWindow } from '../story-activity';
 const stories = await loadLatestStories();
 const edition = await loadEdition();
 const outlets = loadOutlets();
-// The cards' sparkline window: the rolling last 24 hours (ADR-0030) —
+
 const built = new Date(edition.builtAt);
-// The cards' sparkline window: the rolling last 24 hours (ADR-0030) —
-// En direct's Stories are young, so their sparklines are early-life
-// bursts by construction.
-const activityWindow = dayActivityWindow(built);
 
 // The footer line's last update, Paris clock — same thin no-break spaces
 // as every edition's count line.
@@ -90,16 +86,11 @@ const description = `Ce qui vient de se passer dans la presse française : les d
             // The latest Story leads in the hero variant, like every
             // edition's first; the rest stay cards in founding order.
             index === 0 ? (
-              <StoryHero
-                story={story}
-                outlets={outlets}
-                activityWindow={activityWindow}
-              />
+              <StoryHero story={story} outlets={outlets} />
             ) : (
               <StoryCard
                 story={story}
                 outlets={outlets}
-                activityWindow={activityWindow}
                 tail={index >= LOAD_MORE_INITIAL}
               />
             ),
@@ -115,3 +106,10 @@ const description = `Ce qui vient de se passer dans la presse française : les d
     }
   </section>
 </Base>
+{/* "En hausse" (per-visitor trending, ADR-0029): the shared page
+   wiring — same code path as la Une; « 7 jours » never runs it. */}
+<script>
+  import { installTrendingPage } from '../trending-page';
+
+  installTrendingPage();
+</script>

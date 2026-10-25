@@ -1,77 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import {
-  type ActivityWindow,
-  dayActivityWindow,
-  weekActivityWindow,
-} from './story-activity';
+import type { ActivityWindow } from './story-activity';
 
 /**
- * The Story activity graph (chronologie de couverture): window and binning
- * rules. All windows are rolling, anchored at the edition's build time;
- * hour bins align to clock hours, day bins to Paris midnights — never the
- * build host's timezone (same rule as paris-date.ts).
+ * The Story activity graph (chronologie de couverture): binning rules for
+ * the Story page's life window. Hour bins align to clock hours, day bins
+ * to Paris midnights — never the build host's timezone (same rule as
+ * paris-date.ts).
  */
-
-describe('dayActivityWindow', () => {
-  it('is the rolling last 24 hours in 24 hourly bins, the last one partial', () => {
-    // 14:23:45 UTC = 16:23:45 Paris (CEST). The last bin holds the
-    // partial 14:00–14:23 hour; the axis starts at yesterday 15:00 UTC.
-    const built = new Date('2026-10-23T14:23:45Z');
-    const window: ActivityWindow = dayActivityWindow(built);
-    expect(window.binMs).toBe(3_600_000);
-    expect(window.label).toBe('24 h');
-    expect(window.end).toBe(built.getTime());
-    expect(window.start).toBe(Date.parse('2026-10-22T15:00:00Z'));
-    // Exactly 24 bins, on the hour.
-    expect((window.end - window.start) / window.binMs).toBeCloseTo(23.396, 3);
-  });
-
-  it('bins align to the clock hour, not the build second', () => {
-    const built = new Date('2026-10-23T14:00:00Z');
-    const window = dayActivityWindow(built);
-    expect(window.start).toBe(Date.parse('2026-10-22T14:00:00Z'));
-  });
-});
-
-describe('weekActivityWindow', () => {
-  it('is the rolling last 7 days in 7 day bins aligned to Paris midnights', () => {
-    const built = new Date('2026-10-23T14:23:45Z');
-    const window: ActivityWindow = weekActivityWindow(built);
-    expect(window.binMs).toBe(86_400_000);
-    expect(window.label).toBe('7 jours');
-    expect(window.end).toBe(built.getTime());
-    // Paris midnight of the build day (CEST, UTC+2) is 22:00 UTC the day
-    // before; six days earlier is the first bin's start.
-    expect(window.start).toBe(Date.parse('2026-10-16T22:00:00Z'));
-  });
-
-  it('survives the October DST switch: every bin starts at a Paris midnight', () => {
-    // Built after the switch (CET, UTC+1): the week reaches back over the
-    // 25 octobre change, so bin starts are 23h and 24h apart — each one a
-    // Paris midnight, never a fixed 24h stride.
-    const built = new Date('2026-10-26T10:00:00Z');
-    const window = weekActivityWindow(built);
-    expect(window.start).toBe(Date.parse('2026-10-19T22:00:00Z'));
-    expect(window.end).toBe(built.getTime());
-    // Last bin: Paris midnight of the build day (CET, UTC+1).
-    expect(window.end - Date.parse('2026-10-25T23:00:00Z')).toBeLessThan(
-      86_400_000,
-    );
-  });
-
-  it('survives the March DST switch the other way', () => {
-    // 2026: Paris goes to CEST on 29 mars. Built 30 mars, the week reaches
-    // back over the switch.
-    const built = new Date('2026-03-30T10:00:00Z');
-    const window = weekActivityWindow(built);
-    // Paris midnight of 30 mars (CEST, UTC+2) is 22:00 UTC on the 29th.
-    expect(window.end - Date.parse('2026-03-29T22:00:00Z')).toBeLessThan(
-      86_400_000,
-    );
-    // Paris midnight of 24 mars (CET, UTC+1) is 23:00 UTC on the 23rd.
-    expect(window.start).toBe(Date.parse('2026-03-23T23:00:00Z'));
-  });
-});
 
 // ---------------------------------------------------------------------------
 // Binning, life window, labels.
@@ -215,7 +150,7 @@ describe('labels', () => {
     ).toBe('22 oct. · 1 article · 1 gauche');
   });
 
-  it('labels the sparkline with the window, count and peak', () => {
+  it('labels the chart with the window, count and peak', () => {
     const bins = [
       {
         start: Date.parse('2026-10-22T04:00:00Z'),

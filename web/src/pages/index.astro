@@ -8,15 +8,11 @@ import { formatParisClock } from '../latest';
 import Base from '../layouts/Base.astro';
 import { LOAD_MORE_INITIAL } from '../load-more';
 import { formatParisDate } from '../paris-date';
-import { dayActivityWindow } from '../story-activity';
 
 const edition = await loadEdition();
 const outlets = loadOutlets();
 
 const built = new Date(edition.builtAt);
-// The cards' sparkline window: the rolling last 24 hours, the edition's own
-// time base — same rolling rule as the Edition itself (ADR-0027).
-const activityWindow = dayActivityWindow(built);
 
 // The edition's day, Paris clock — "mercredi 15 oct. 2026" — anchors the
 // header row above the hero card: the Edition is a day's reading, and the
@@ -55,12 +51,11 @@ const updatedTime = formatParisClock(built);
         // The Edition's first Story leads in the hero variant (Story
         // page header style, full-width legend bar); the rest stay cards.
         index === 0 ? (
-          <StoryHero story={story} outlets={outlets} activityWindow={activityWindow} />
+          <StoryHero story={story} outlets={outlets} />
         ) : (
           <StoryCard
             story={story}
             outlets={outlets}
-            activityWindow={activityWindow}
             // Tail beyond the first batch: hidden by CSS before first
             // paint (html.js rule in global.css), revealed per click by
             // load-more.ts. Without JS the marker is inert — all visible.
@@ -82,3 +77,14 @@ const updatedTime = formatParisClock(built);
   </section>
 
 </Base>
+{/* "En hausse" (per-visitor trending, ADR-0029): the cards ship
+   data-story-id/data-article-count; this module script compares each
+   Article count to the reader's last visit (localStorage) through the
+   domain growth gate and reveals badges. Shared with « En direct »
+   (trending-page.ts); « 7 jours » never runs it — load-more wires
+   itself from LoadMoreButton. */}
+<script>
+  import { installTrendingPage } from "../trending-page";
+
+  installTrendingPage();
+</script>

@@ -8,7 +8,6 @@ import { formatParisClock } from '../latest';
 import Base from '../layouts/Base.astro';
 import { LOAD_MORE_INITIAL } from '../load-more';
 import { formatParisDate } from '../paris-date';
-import { weekActivityWindow } from '../story-activity';
 
 /**
  * « 7 jours » (issue #128, ADR-0027): the weekly edition — a thin
@@ -16,8 +15,10 @@ import { weekActivityWindow } from '../story-activity';
  * Stories covered by at least 10 Outlets publishing in the window,
  * ranked by that in-window Coverage). Anatomically la Une's mirror —
  * hero for the week's biggest Story, Story cards, load-more, count
- * line — with the same intrinsic sparklines: the window here is the
- * rolling last 7 days. No per-reader signal runs anywhere anymore.
+ * line — but with none of the per-reader daily-visit semantics: no
+ * trending script runs here, so no "En hausse" badge ever appears, and
+ * the reader's daily baseline (trending.ts) is never written from this
+ * page (ADR-0029).
  *
  * Header and indexation (ADR-0028): the shared editions header — h1
  * « À la une », select preselected on « 7 jours » — and a meta noindex:
@@ -29,9 +30,6 @@ const outlets = loadOutlets();
 
 const edition = await loadEdition();
 const built = new Date(edition.builtAt);
-// The cards' sparkline window: the rolling last 7 days, the page's own
-// window — same rule as the Edition (ADR-0027).
-const activityWindow = weekActivityWindow(built);
 
 // The window's start, Paris clock — "depuis le 16 oct." — names how far
 // back the recap reaches: seven days to the day of the build (same
@@ -88,12 +86,11 @@ const description =
             // The week's biggest Story leads in the hero variant, like
             // la Une's first; the rest stay cards.
             index === 0 ? (
-              <StoryHero story={story} outlets={outlets} activityWindow={activityWindow} />
+              <StoryHero story={story} outlets={outlets} />
             ) : (
               <StoryCard
                 story={story}
                 outlets={outlets}
-                activityWindow={activityWindow}
                 tail={index >= LOAD_MORE_INITIAL}
               />
             ),

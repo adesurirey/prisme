@@ -4,14 +4,9 @@
  * are prerendered SVG (zero client JS), so every window here is anchored at
  * the edition's build instant, never at "now".
  *
- * Two windows feed the charts (ADR-0030):
- * - Cards roll with their edition: the rolling last 24 hours in 24 hourly
- *   bins on « Aujourd'hui » / « En direct », the rolling last 7 days in 7
- *   day bins on « 7 jours ». Articles outside the window are excluded —
- *   never clamped into an edge bin (a fabricated midnight burst is worse
- *   than a small mismatch with the « X articles » count).
- * - The Story page shows the Story's whole life: first→last Article,
- *   hourly bins while the span stays within 48 hours, day bins beyond.
+ * One window feeds the chart (ADR-0031): the Story page shows the Story's
+ * whole life — first→last Article, hourly bins while the span stays within
+ * 48 hours, day bins beyond.
  *
  * Hour bins align to clock hours; day bins align to Europe/Paris midnights
  * (the reader's clock), never the build host's timezone — same rule as
@@ -37,44 +32,19 @@ export interface ActivityBin {
   total: number;
 }
 
-/** A time window to bin into: `[start, end)` cut into `binMs`-wide bins.
- *  `label` names the window in reader words for the sparkline's aria line
- *  (« 24 h », « 7 jours »); the life window has none — the Story page chart
- *  speaks its span instead (`activitySpanLabel`). */
+/** A time window to bin into: `[start, end)` cut into `binMs`-wide bins. */
 export interface ActivityWindow {
   start: number;
   end: number;
   /** Nominal bin width; day bins around a DST switch may be 23h or 25h. */
   binMs: number;
-  /** The window in reader words, or undefined for the life window. */
-  label?: string;
-}
-
-/** A rolling edition window (card sparklines): always carries its reader
- *  label — the life window (Story page chart) is the one without one. */
-export interface EditionActivityWindow extends ActivityWindow {
-  /** The window in reader words: « 24 h », « 7 jours ». */
-  label: string;
 }
 
 const HOUR_MS = 3_600_000;
 const DAY_MS = 86_400_000;
 
-/** Rolling last 24 hours, 24 hourly bins — the last one partial unless the
- *  build instant falls exactly on the hour. `end` is exclusive: an exact
- *  hour closes the window on the bin before it, never a phantom empty one.
- */
-export function dayActivityWindow(built: Date): EditionActivityWindow {
-  const end = built.getTime();
-  const lastBinStart = Math.floor((end - 1) / HOUR_MS) * HOUR_MS;
-  return {
-    start: lastBinStart - 23 * HOUR_MS,
-    end,
-    binMs: HOUR_MS,
-    label: '24 h',
-  };
-}
-
+// ---------------------------------------------------------------------------
+// Binning, life window, labels.
 /**
  * The UTC instant of Paris midnight of the Paris calendar day `ymd`
  * (`YYYY-MM-DD`). Paris is UTC+01 or UTC+02 all year (DST turns at 03:00
@@ -116,27 +86,6 @@ function parisYmd(ms: number): string {
     month: '2-digit',
     day: '2-digit',
   }).format(new Date(ms));
-}
-
-/** Rolling last 7 days, 7 day bins, each starting at a Paris midnight —
- *  the last one partial (today so far). Bins are placed per Paris calendar
- *  day, so a DST switch inside the window yields one 23h and one 25h bin
- *  instead of drifting hour bins. `end` is exclusive, same as the day
- *  window: a build at Paris midnight closes on the day before.
- */
-export function weekActivityWindow(built: Date): EditionActivityWindow {
-  const end = built.getTime();
-  const lastBinStart = parisMidnight(parisYmd(end - 1));
-  const [year, month, day] = parisYmd(lastBinStart).split('-').map(Number);
-  // Six Paris days back, by calendar arithmetic on the day number — a
-  // fixed 24h stride would land 23:00 Paris after the autumn switch.
-  const first = new Date(Date.UTC(year!, month! - 1!, day! - 6, 12));
-  return {
-    start: parisMidnight(parisYmd(first.getTime())),
-    end,
-    binMs: DAY_MS,
-    label: '7 jours',
-  };
 }
 
 // ---------------------------------------------------------------------------
@@ -240,7 +189,7 @@ export function lifeActivityWindow(articles: Article[]): ActivityWindow | null {
 }
 
 /** Fewer Articles than this and a chart is noise, not signal: no graph on
- *  the card, none on the Story page. */
+ *  the Story page. */
 export const MIN_ACTIVITY_ARTICLES = 4;
 
 /** True when the bins carry enough Articles to chart (grilled: ≥ 4). */
@@ -282,7 +231,7 @@ export function binTitle(bin: ActivityBin): string {
 }
 
 /**
- * The sparkline's accessible line: « 12 articles sur 24 h, pic à 6h » —
+ * The chart's accessible line: « 12 articles sur 24 h, pic à 6h » —
  * count, window, and when the burst fired (first bin at the max, ties by
  * bin order). Day-scale bins name the peak by date: « pic le 21 oct. ».
  */
