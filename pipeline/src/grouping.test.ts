@@ -1,5 +1,6 @@
 import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it, vi } from 'vitest';
+import { groupingPrompt } from './gemini.ts';
 import {
   bestEpisodeMatch,
   groupStories,
@@ -1212,7 +1213,7 @@ describe('groupStories', () => {
     expect(outcome.changed.has('story-deux')).toBe(false);
   });
 
-  it('the model only sees live Stories and gets teasers and Sections', async () => {
+  it('the model only sees live Stories and gets headlines + Sections — never teasers (#154)', async () => {
     const existing = [
       story({ articles: [article('a0')] }),
       story({
@@ -1248,13 +1249,84 @@ describe('groupStories', () => {
     );
     const modelInput = calls[0]!.input!;
     expect(modelInput.stories.map((s) => s.id)).toEqual(['s1']); // the frozen Story is invisible
-    expect(modelInput.articles).toEqual([
-      {
-        id: 'a1',
-        headline: 'Titre a1',
-        teaser: 'Chapô de a1',
-        section: undefined,
-      },
+    // The teasers map carries 'Chapô de a1' — the model input must not.
+    // toStrictEqual, not toEqual: the exact shape, no leftover teaser key.
+    expect(modelInput.articles).toStrictEqual([
+      { id: 'a1', headline: 'Titre a1', section: undefined },
+    ]);
+  });
+
+  it('a build with teasers on hand prompts the model byte-identically to one without (#154)', async () => {
+    // The regression lock for the teaser drop: the teasers map still feeds
+    // Membership and Summaries, but must never move the grouping prompt.
+    const existing = [story({ articles: [article('a0')] })];
+    const run = async (withTeasers: boolean) => {
+      const calls: {
+        input?: Parameters<import('./gemini.ts').GroupingModel['group']>[0];
+      }[] = [];
+      await groupStories(
+        input({
+          articles: [article('a0'), article('a1')],
+          teasers: withTeasers ? new Map([['a1', 'Chapô de a1']]) : undefined,
+          existing,
+          clients: {
+            grouping: fakeGrouping(
+              {
+                newStories: [],
+                assignments: [
+                  { articleId: 'a1', storyId: 's1', confidence: 0.9 },
+                ],
+              },
+              calls,
+            ),
+            membership: fakeMembership(false),
+          },
+        }),
+      );
+      return groupingPrompt(calls[0]!.input!);
+    };
+    expect(await run(true)).toBe(await run(false));
+  });
+
+  it('the Membership check still receives the teaser (#154)', async () => {
+    // The other half of the teaser drop: the evidence leaves the grouping
+    // prompt but stays with the fact-matching authority (ADR-0018).
+    const existing = [story({ articles: [article('a0')] })];
+    const belongsCalls: {
+      headline: string;
+      teaser: string;
+    }[] = [];
+    await groupStories(
+      input({
+        articles: [article('a0'), article('a1')],
+        teasers: new Map([['a1', 'Chapô de a1']]),
+        existing,
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.5 }],
+          }),
+          membership: {
+            label: 'FakeJev',
+            async belongs(_story, article) {
+              belongsCalls.push({
+                headline: article.headline,
+                teaser: article.teaser,
+              });
+              return 'yes';
+            },
+            async absorbs() {
+              return 'no';
+            },
+            async sameSubject() {
+              return 'no';
+            },
+          },
+        },
+      }),
+    );
+    expect(belongsCalls).toStrictEqual([
+      { headline: 'Titre a1', teaser: 'Chapô de a1' },
     ]);
   });
 

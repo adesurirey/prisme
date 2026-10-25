@@ -26,8 +26,9 @@ to the latest Edition's `builtAt` — currently **2026-10-08T16:17:29.723Z**
   from the archive at a pinned historical build; see the dedicated section
   below.
 
-Headlines and titles only — ADR-0003 forbids teasers on disk, and grouping
-runs fine without them (verified by the #38 replay).
+Headlines and titles only — ADR-0003 forbids teasers on disk. Since #154
+(2026-10-25) the production grouping input is headline-only too: fixture
+and production inputs are the same shape by construction.
 
 ## Metrics (no human labels needed)
 
@@ -314,6 +315,53 @@ feedback graded on the standard fixtures. The fixture keeps its value:
 the magnet-vs-birth behavior and the scatter are now pinned under
 measurement, and the recorded baseline is the « before » any variant must
 not regress against.
+
+## Grouping input drops teasers (issue #154, 2026-10-25)
+
+The fresh-Article half of the production grouping prompt loses the
+teaser — headline + Section only (`GroupingInputArticle`). Membership
+(ADR-0018), the birth-guard (ADR-0030) and Topic resolution (ADR-0024)
+keep their inputs. What this buys, honestly ranked:
+
+1. **Parity by construction** — production and benchmark grouping
+   inputs are byte-identical; the teaser gap that made the 2026-10-24
+   deadlock unreproducible closes, and the next real grouping failure
+   becomes reproducible as a fixture. This is the ticket's primary
+   justification.
+2. **Cost** — the grouping call was the only place teaser tokens were
+   measurable; expect a large input-token drop per build.
+3. **Deadlock pull (unproven)** — the march teasers' route/tribunal
+   recap plausibly pulled same-fact judgments toward the magnet, but
+   the benchmark cannot A/B teasers (its fixtures never had them; the
+   #149 baseline already *is* the headline-only behavior). Observation
+   of the next heavy news day in CI is the only test.
+
+**Regression gate for the paid run** (fixed before running, per the
+#149 baseline — breach → revert, no debate):
+
+- deadlock fixture keeps the birth (its role as regression guard);
+- per fixture, coverage ≥ baseline − 1 pt (deadlock: 98.6 %,
+  long-context: 90.9 %);
+- dup-seed rate and split rate ≤ baseline + 1 pt absolute (both 0 at
+  baseline).
+
+**Observation gate** — the next busy day's CI logs: Unassigned counts,
+magnet-Story warnings, and refusals-per-build against the pre-ship week
+(the direct measure of the named risk: less evidence per Article could
+raise wrong-merge proposals → more Membership refusals; the #148 cache
+absorbs the cost, the rate is what tells us).
+
+**Gate run** (2026-10-25, `gemini/gemini-3.5-flash-lite`, two runs per
+fixture, from-empty skipped as outgrown): **pass — no threshold
+breached.** Deadlock keeps the birth (best of 2: born 68, 0 → magnet,
+1 cluster), coverage 98.6 % (= baseline) and 100 % (long-context, its
+fresh pool drifted to 4 Articles — it is rebuilt at run time, unlike
+the pinned deadlock fixture), dup-seeds 0, splits at baseline. Recorded
+honestly: the second deadlock run flooded the magnet (62/69 assigned to
+it, 0 born) — the run-to-run bimodality the fixture exists to measure,
+now visible on headline-only input too. It halves the best-of-2
+stability (83.7 % vs baseline 91.1 %, ungated) and is exactly what the
+observation gate watches for in production.
 
 ## Reproduce
 

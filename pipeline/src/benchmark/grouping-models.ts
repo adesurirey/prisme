@@ -12,7 +12,9 @@
  *   Clef-flash. Candidates are picked from OpenRouter's model list.
  *
  * State sent to the models: Story titles + Article headlines (+ Sections),
- * no teasers — the fixture carries none (ADR-0003).
+ * headline-only since #154 — the same shape the fixtures always had
+ * (ADR-0003): production and benchmark grouping inputs are identical by
+ * construction.
  */
 
 import type {

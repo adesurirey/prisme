@@ -216,19 +216,16 @@ describe('buildDeadlockFixture (issue #149)', () => {
       {
         id: 'f-last',
         headline: 'Fin de journée sous tension',
-        teaser: '',
         section: 'politics',
       },
       {
         id: 'f-mid',
         headline: 'Une foule immense à Paris',
-        teaser: '',
         section: 'society',
       },
       {
         id: 'f-first',
         headline: 'Des centaines d’interpellations en soirée',
-        teaser: '',
         section: 'politics',
       },
     ]);

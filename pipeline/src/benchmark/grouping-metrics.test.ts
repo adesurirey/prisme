@@ -29,13 +29,11 @@ function fixture(overrides?: Partial<GroupingFixture>): GroupingFixture {
       {
         id: 'a1',
         headline: 'Maricarmen annonce deux dates à Paris',
-        teaser: '',
       },
-      { id: 'a2', headline: 'Retraites : la loi promulguée', teaser: '' },
+      { id: 'a2', headline: 'Retraites : la loi promulguée' },
       {
         id: 'a3',
         headline: 'Retraites : les syndicats réagissent',
-        teaser: '',
       },
     ],
     ...overrides,
@@ -287,7 +285,6 @@ describe('evaluateProposal — deadlock metrics (issue #149)', () => {
       freshArticles: ['a1', 'a2', 'a3', 'a4'].map((id) => ({
         id,
         headline: `Manifestation du 24 octobre, article ${id}`,
-        teaser: '',
       })),
     };
   }

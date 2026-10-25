@@ -717,7 +717,6 @@ export async function groupStories(
     articles: fresh.map((a) => ({
       id: a.id,
       headline: a.headline,
-      teaser: teasers.get(a.id) ?? '',
       section: a.section,
     })),
   };
