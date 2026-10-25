@@ -1,6 +1,6 @@
 # The Membership check matches facts, not topics
 
-Date: 2026-10-14 · Amended 2026-10-19 (the own-headline-cycle test, below) · Amends ADR-0005 (the Membership check's question and inputs), ADR-0013 (the grouping prompt) · Glossary: `Story`
+Date: 2026-10-14 · Amended 2026-10-19 (the own-headline-cycle test, below) · Amended 2026-10-25 (the grouping input drops teasers, below) · Amends ADR-0005 (the Membership check's question and inputs), ADR-0013 (the grouping prompt) · Glossary: `Story`
 
 ## Context
 
@@ -189,3 +189,29 @@ is why the test leans split.
   re-forms → the splitter pass (option 2, its own ADR). Fragmentation
   (orphan or singleton surge) → loosen the question. Mixed → iterate the
   wording.
+
+## Amendment (2026-10-25): the grouping input drops teasers
+
+Issue #154: the fresh-Article half of the grouping prompt loses the
+teaser — headline + Section only (`GroupingInputArticle`). The
+Membership payload is unchanged: the candidate Article's headline +
+teaser stays with the fact-matching authority, and the Story-side
+member headlines were never teasers. The birth-guard (ADR-0030) and
+Topic (`sameSubject`, ADR-0024) inputs are untouched — headline-only by
+design, one variable changed per ticket.
+
+The division of labor this produces: the Grouping model proposes on
+headlines + Sections (one big call, no teaser tokens), and the
+Membership check adjudicates with the teaser (small per-pair calls) —
+the teaser's evidence moves downstream to where it decides, instead of
+traveling redundantly in the prompt that only proposes.
+
+Consequences: production grouping inputs are byte-identical to the
+benchmark fixtures' by construction — the teaser gap that made the
+2026-10-24 deadlock unreproducible (issue #149's finding) closes, and
+the next real grouping failure becomes reproducible as a fixture. The
+prompt's input-token cost drops accordingly. What the change cannot
+promise: the deadlock's teaser-pull cause is plausible but unprovable
+offline — the benchmark gate (regression thresholds recorded in
+docs/research/grouping-benchmark.md) plus observation of the next heavy
+news day in CI is the honest validation.

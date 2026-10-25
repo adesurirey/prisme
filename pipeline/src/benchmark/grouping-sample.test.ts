@@ -9,7 +9,6 @@ function fixtureOf(
   const freshArticles: GroupingInputArticle[] = pairs.map(([id]) => ({
     id,
     headline: `headline ${id}`,
-    teaser: '',
     section: 'politics' as const,
   }));
   return {

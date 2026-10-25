@@ -1,8 +1,10 @@
 /**
  * Grouping-model client (issue #5): assigns new Articles to live Stories or
- * starts new ones, from Story titles + Sections and Article headline + teaser
- * only — never the article page (ADR-0003). One structured-output call per
- * build against Google's Generative Language API (free tier; see ADR-0005).
+ * starts new ones, from Story titles + Sections and Article headline +
+ * Section only — never the article page, never the teaser (ADR-0003;
+ * teaser dropped from the grouping input by #154). One structured-output
+ * call per build against Google's Generative Language API (free tier; see
+ * ADR-0005).
  *
  * 2.5 Flash-Lite is legacy-restricted for new projects (Google docs), so the
  * pinned model is the current Flash-Lite generation. A malformed response or
@@ -49,11 +51,13 @@ export interface GroupingInputStory {
   latestHeadlines?: string[];
 }
 
-/** One new Article as fed to the Grouping model: headline, teaser, Section. */
+/** One new Article as fed to the Grouping model: headline, Section — no
+ * teaser (issue #154): the grouping prompt is headline-only, byte-identical
+ * to the benchmark fixtures' input by construction; the teaser's evidence
+ * stays with the Membership check (ADR-0018). */
 export interface GroupingInputArticle {
   id: string;
   headline: string;
-  teaser: string;
   section?: Section;
 }
 
@@ -164,10 +168,12 @@ const SECTION_LABELS_FR: Record<Section, string> = {
   other: 'Autre',
 };
 
-/** The prompt: Story titles + Sections, Article headlines + teasers, nothing else (ADR-0003).
- * The model only groups: keys and assignments. Titles are written by the
- * dedicated Title pass (title-pass.ts, ADR-0023) — one call per build, one
- * job per call. Exported for the grouping benchmark (issue #41). */
+/** The prompt: Story titles + Sections, Article headlines + Sections,
+ * nothing else (ADR-0003; teasers dropped from the grouping input by
+ * issue #154). The model only groups: keys and assignments. Titles are
+ * written by the dedicated Title pass (title-pass.ts, ADR-0023) — one call
+ * per build, one job per call. Exported for the grouping benchmark
+ * (issue #41). */
 export function groupingPrompt(input: {
   stories: GroupingInputStory[];
   articles: GroupingInputArticle[];
@@ -179,8 +185,7 @@ export function groupingPrompt(input: {
     }${latest ? ` — derniers titres joints : ${latest}` : ''}`;
   });
   const articleLines = input.articles.map((a) => {
-    const teaser = a.teaser ? ` — ${a.teaser}` : '';
-    return `- [${a.id}] ${a.headline}${teaser}${a.section ? ` (${SECTION_LABELS_FR[a.section]})` : ''}`;
+    return `- [${a.id}] ${a.headline}${a.section ? ` (${SECTION_LABELS_FR[a.section]})` : ''}`;
   });
   return [
     'Tu regroupes des articles de presse par événement ou sujet (une « story »).',
@@ -287,9 +292,9 @@ export function geminiGroupingModel(
             promptFeedback?: { blockReason?: string };
           };
           // Token accounting per build, straight from the API's own numbers:
-          // prompt size (teasers exist only here — ADR-0003 — so this is the
-          // only place it can ever be measured) and output size (the build's
-          // real ceiling is maxOutputTokens: 65 536 on the output side).
+          // prompt size (headlines only since #154 — the grouping prompt no
+          // longer carries teasers) and output size (the build's real
+          // ceiling is maxOutputTokens: 65 536 on the output side).
           const usage = data.usageMetadata;
           const usageParts = [
             `prompt ${prompt.length} chars`,

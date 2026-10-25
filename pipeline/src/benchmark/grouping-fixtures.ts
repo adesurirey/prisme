@@ -15,8 +15,9 @@
  *   from the archive at a pinned historical build — see
  *   buildDeadlockFixture.
  *
- * Headlines and titles only: ADR-0003 forbids teasers on disk, and grouping
- * runs fine without them (verified by the #38 replay).
+ * Headlines and titles only: ADR-0003 forbids teasers on disk, and since
+ * #154 the production grouping input is headline-only too — fixture and
+ * production inputs are the same shape by construction.
  */
 import { readFile } from 'node:fs/promises';
 import type { Article, Story } from '@prisme/domain';
@@ -60,12 +61,12 @@ function ts(date: string): number {
 }
 
 /** A snapshot Article as the Grouping model sees it: id, headline, Section.
- * Teasers never reach the benchmark fixtures (ADR-0003). */
+ * Teasers never reach the benchmark fixtures (ADR-0003) — and since #154,
+ * the production grouping input is the same headline-only shape. */
 function toInputArticle(a: Article): GroupingInputArticle {
   return {
     id: a.id,
     headline: a.headline,
-    teaser: '',
     ...(a.section ? { section: a.section } : {}),
   };
 }
