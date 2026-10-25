@@ -33,7 +33,7 @@ export default function ActivityChart({ bins }: { bins: ActivityBin[] }) {
       : [0, Math.round(n / 3), Math.round((2 * n) / 3), n - 1];
   return (
     <figure className="mt-3" data-activity-chart>
-      <div className="relative h-[70px]">
+      <div className="relative h-12">
         <svg
           role="img"
           aria-label={`Chronologie des publications : ${activityAriaLabel(bins, activitySpanLabel(bins))}`}
