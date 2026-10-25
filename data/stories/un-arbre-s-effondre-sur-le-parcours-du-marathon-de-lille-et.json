@@ -6,6 +6,17 @@
   "storyDay": "2026-10-25",
   "articles": [
     {
+      "id": "16b41c143edf",
+      "outletId": "cnews",
+      "headline": "Marathon de Lille : un coureur gravement après la chute d’un arbre",
+      "url": "https://www.cnews.fr/sport/2026-10-25/marathon-de-lille-un-coureur-gravement-apres-la-chute-dun-arbre-1941837",
+      "publishedAt": "2026-10-25T19:09:28.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/iconsport_364143_0455-taille1200_6ade4f731e236.jpg?h=1483d620&itok=vX5yxsPn",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "0df62a6a0874",
       "outletId": "le-parisien",
       "headline": "« Nous avons été très recouverts par les branches » : un coureur du marathon de Lille grièvement blessé après la chute d’un arbre",
@@ -51,25 +62,31 @@
     }
   ],
   "topicId": "caf4296465c9",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "sport",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un accident s'est produit ce dimanche vers 11 h 30 au 5e kilomètre du marathon de Lille lorsqu'un marronnier s'est effondré.",
-      "Une victime a été transportée à l'hôpital en urgence relative selon France 3 Hauts-de-France."
+      "L'accident s'est produit vers 11 h 30 au niveau du cinquième kilomètre du parcours.",
+      "Un marronnier s'est effondré, blessant un coureur transporté à l'hôpital en urgence relative selon France 3 Hauts-de-France."
     ],
     "centre": [
-      "Un coureur participant au marathon de Lille a été grièvement blessé ce dimanche 25 octobre après la chute d'un impressionnant marronnier sur le parcours.",
-      "La chute de l'arbre est intervenue au début de l'épreuve, au niveau de l'avenue Léon Jouhaux selon la préfecture du Nord.",
-      "La victime a été hospitalisée mais ses jours ne seraient pas en danger d'après les informations rapportées."
+      "Trois coureurs ont été surpris par la chute d'un arbre au cinquième kilomètre du marathon de Lille.",
+      "Deux participants ont pu repartir tandis qu'un homme de vingt-cinq ans a été grièvement blessé et hospitalisé, sans que ses jours ne soient en danger.",
+      "La préfecture indique que l'arbre est tombé sur l'avenue Léon Jouhaux."
+    ],
+    "droite": [
+      "Un arbre s'est effondré sur le parcours du marathon de Lille au cinquième kilomètre, touchant trois coureurs.",
+      "Un participant de vingt-cinq ans a été grièvement blessé et hospitalisé, l'organisateur précisant que son pronostic vital n'est pas engagé.",
+      "La préfecture attribue la chute du marronnier aux fragilités causées par le passage de la tempête Austen."
     ]
   },
   "differences": [
-    "La gauche contextualise l'événement en précisant l'horaire précis de 11 h 30 et le kilomètre exact de l'incident grâce à une source régionale.",
-    "Le centre met l'accent sur la gravité des blessures de la victime et la localisation précise de l'accident avenue Léon Jouhaux selon les autorités."
+    "La gauche privilégie un compte-rendu factuel et succinct en mentionnant une hospitalisation en urgence relative d'après France 3 Hauts-de-France.",
+    "Le centre livre un récit détaillé de l'événement en insistant sur le nombre de victimes et la violence du choc.",
+    "La droite met en avant les causes météorologiques de l'accident en soulignant le rôle possible de la tempête Austen."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-10-25T17:01:26.452Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-10-25T20:01:23.947Z"
 }
