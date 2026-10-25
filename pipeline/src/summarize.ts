@@ -301,6 +301,10 @@ export async function updateSummaries(input: {
     story.differences = parsed.differences;
     story.promptVersion = promptVersion;
     story.summarizedArticleCount = story.articles.length;
+    // The recorded fact (ADR-0031): this build actually rewrote the
+    // Summaries — the instant the « En hausse » badge compares against
+    // the reader's last sight of the Story.
+    story.summarizedAt = now.toISOString();
     changed.add(story.slug);
   }
   return { changed, calls };

@@ -252,6 +252,8 @@ describe('updateSummaries', () => {
     expect(s.differences).toEqual(['La droite insiste sur X.']);
     expect(s.promptVersion).toBe(SUMMARIES_PROMPT_VERSION);
     expect(s.summarizedArticleCount).toBe(2);
+    // The recorded fact (ADR-0031): the stamp is the build instant.
+    expect(s.summarizedAt).toBe('2026-10-06T12:00:00.000Z');
     expect(outcome.changed).toEqual(new Set(['sujet-1']));
     expect(outcome.calls).toBe(1);
   });
@@ -273,6 +275,7 @@ describe('updateSummaries', () => {
     });
     expect(calls).toHaveLength(0);
     expect(s.summaries).toEqual({ centre: ['Résumé'] });
+    expect(s.summarizedAt).toBeUndefined();
     expect(outcome.changed.size).toBe(0);
     expect(outcome.calls).toBe(0);
   });
@@ -300,6 +303,7 @@ describe('updateSummaries', () => {
     expect(calls).toHaveLength(1);
     expect(s.summaries).toEqual({ centre: ['Résumé'] });
     expect(s.summarizedArticleCount).toBe(1);
+    expect(s.summarizedAt).toBeUndefined();
     expect(outcome.changed.size).toBe(0);
   });
 
@@ -471,6 +475,8 @@ describe('updateSummaries — 25% growth gate (ADR-0027)', () => {
     expect(calls).toHaveLength(1);
     expect(calls[0].input.articles).toHaveLength(2);
     expect(s.summarizedArticleCount).toBe(2);
+    // First summarization included: a birth stamps too (ADR-0031).
+    expect(s.summarizedAt).toBe('2026-10-06T12:00:00.000Z');
     expect(outcome.changed).toEqual(new Set(['sujet-1']));
   });
 
@@ -498,6 +504,7 @@ describe('updateSummaries — 25% growth gate (ADR-0027)', () => {
     expect(calls).toHaveLength(0);
     expect(s.summaries).toEqual({ centre: ['Résumé'] });
     expect(s.summarizedArticleCount).toBe(9);
+    expect(s.summarizedAt).toBeUndefined();
     expect(outcome.changed.size).toBe(0);
     expect(outcome.calls).toBe(0);
   });

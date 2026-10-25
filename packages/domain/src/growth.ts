@@ -1,10 +1,11 @@
 /**
- * The ADR-0027 growth gate (shared domain, per ADR-0029): the one
- * arithmetic behind everything that means "this Story materially changed" —
- * the pipeline's two watermark-gated AI passes, Summaries (summarize.ts)
- * and retitles (grouping.ts), and — as its web half ships — the per-reader
- * « En hausse » badge, which imports this very function so the badge can
- * never drift from what the pipeline re-synthesized. A pass re-fires on a
+ * The ADR-0027 growth gate (moved to the shared domain by ADR-0029):
+ * the one arithmetic behind everything that means "this Story
+ * materially changed" — the pipeline's two watermark-gated AI passes,
+ * Summaries (summarize.ts) and retitles (grouping.ts). (The web's
+ * « En hausse » badge imported it too between ADR-0029 and ADR-0031;
+ * since ADR-0031 the badge compares the pass's recorded instant
+ * instead.) A pass re-fires on a
  * Story only when its Article count grew at least 25 % since that pass's
  * last run, so a multi-day Story is not re-synthesized hourly for +1
  * Article. A Story the pass has never seen passes (births always do);

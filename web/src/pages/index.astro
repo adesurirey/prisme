@@ -77,12 +77,12 @@ const updatedTime = formatParisClock(built);
   </section>
 
 </Base>
-{/* "En hausse" (per-visitor trending, ADR-0029): the cards ship
-   data-story-id/data-article-count; this module script compares each
-   Article count to the reader's last visit (localStorage) through the
-   domain growth gate and reveals badges. Shared with « En direct »
-   (trending-page.ts); « 7 jours » never runs it — load-more wires
-   itself from LoadMoreButton. */}
+{/* "En hausse" (per-visitor trending, ADR-0029 as amended by
+   ADR-0031): the cards ship data-story-id/data-summarized-at; this
+   module script compares each pass's recorded instant to the reader's
+   last sight of the Story (localStorage) and reveals badges. Shared
+   with « En direct » (trending-page.ts); « 7 jours » never runs it —
+   load-more wires itself from LoadMoreButton. */}
 <script>
   import { installTrendingPage } from "../trending-page";
 
