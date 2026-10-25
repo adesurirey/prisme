@@ -1,5 +1,5 @@
 /**
- * The Story activity graph (« chronologie de couverture »): Articles over
+ * The Story's coverage chronology (« chronologie de couverture » on the page): Articles over
  * time, binned, split per Coverage group. Pure build-time math — the charts
  * are prerendered SVG (zero client JS), so every window here is anchored at
  * the edition's build instant, never at "now".

@@ -6,7 +6,7 @@ import type { ActivityBin } from '../story-activity';
 import ActivityChart from './ActivityChart';
 
 /**
- * The Story page's chronologie de couverture: a stacked SVG histogram of
+ * The Story page's coverage chronology: a stacked SVG histogram of
  * Articles per hour (or Paris day), segments bottom-to-top in fixed group
  * order, one hover title per bin, sparse Paris-time ticks — all prerendered,
  * zero client JS.

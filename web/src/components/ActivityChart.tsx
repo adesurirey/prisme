@@ -9,7 +9,7 @@ import {
 } from '../story-activity';
 
 /**
- * The Story page's « chronologie de couverture »: Articles per bin as one
+ * The Story page's coverage chronology (« chronologie de couverture » on the page): Articles per bin as one
  * stacked SVG histogram, prerendered at build — zero client JS. Segments
  * stack bottom→top in fixed group order (gauche, centre, droite) in the
  * site's three bord colors; the legend is free — the Prism tabs above and

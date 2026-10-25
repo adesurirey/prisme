@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import type { ActivityWindow } from './story-activity';
 
 /**
- * The Story activity graph (chronologie de couverture): binning rules for
+ * The Story's coverage chronology: binning rules for
  * the Story page's life window. Hour bins align to clock hours, day bins
  * to Paris midnights — never the build host's timezone (same rule as
  * paris-date.ts).

@@ -1,6 +1,6 @@
-# The chronologie de couverture charts the Story's life on its page
+# The coverage chronology charts the Story's life on its page
 
-Decided 2026-10-24. Owns the Story page's coverage chronology — a stacked
+Decided 2026-10-24. Owns the Story page's coverage chronology (reader-facing: « chronologie de couverture ») — a stacked
 prerendered chart of the Story's Articles over its whole life, split per
 bord. Leaves the per-card surfaces untouched: « En hausse » stays what
 ADR-0029 made it (as ADR-0031 records it), and the cards carry no chart.
