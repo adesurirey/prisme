@@ -57,11 +57,28 @@ export interface ClusterMetrics {
   splitPairs: number;
 }
 
+/** The deadlock fixture's own scale (issue #149): the loop shape vs the
+ * birth — the graded « before » and « after » of the refusal-feedback
+ * prompt change (issue #150). */
+export interface DeadlockMetrics {
+  /** Fresh Articles re-assigned to the magnet Story — the loop shape: the
+   * model keeps proposing the merge the Membership check keeps refusing. */
+  toMagnet: number;
+  /** Fresh Articles proposed into a new Story of ≥2 fresh Articles — the
+   * birth the fix must produce (ADR-0015's minimum, as far as the
+   * benchmark can see it: Outlets are not in the prompt, ADR-0003). */
+  born: number;
+  /** New-Story clusters claiming ≥2 fresh Articles. */
+  birthClusters: number;
+}
+
 export interface Evaluation {
   coverage: CoverageMetrics;
   /** Empty for from-empty (no live Stories to duplicate). */
   dupSeeds: DupSeedHit[];
   clusters: ClusterMetrics;
+  /** Present on the deadlock fixture only (issue #149). */
+  deadlock?: DeadlockMetrics;
   /** id → final cluster key ('story:<id>', 'new:<key>' or 'bad:…'). */
   finalCluster: Map<string, string>;
 }
@@ -235,6 +252,31 @@ export function evaluateProposal(
     }
   }
 
+  // Deadlock scale (issue #149): the magnet loop vs the birth, over the
+  // fixture's fresh Articles only — invented article ids count for nothing.
+  let deadlock: DeadlockMetrics | undefined;
+  if (fixture.deadlock != null) {
+    const freshIds = new Set(fixture.freshArticles.map((a) => a.id));
+    const magnetKey = `story:${fixture.deadlock.magnetStoryId}`;
+    const newClusterSizes = new Map<string, number>();
+    for (const [id, key] of finalCluster) {
+      if (!freshIds.has(id) || !key.startsWith('new:')) continue;
+      newClusterSizes.set(key, (newClusterSizes.get(key) ?? 0) + 1);
+    }
+    let toMagnet = 0;
+    let born = 0;
+    for (const [id, key] of finalCluster) {
+      if (!freshIds.has(id)) continue;
+      if (key === magnetKey) toMagnet++;
+      else if ((newClusterSizes.get(key) ?? 0) >= 2) born++;
+    }
+    let birthClusters = 0;
+    for (const size of newClusterSizes.values()) {
+      if (size >= 2) birthClusters++;
+    }
+    deadlock = { toMagnet, born, birthClusters };
+  }
+
   return {
     coverage,
     dupSeeds,
@@ -245,6 +287,7 @@ export function evaluateProposal(
       keptPairs,
       splitPairs,
     },
+    ...(deadlock != null ? { deadlock } : {}),
     finalCluster,
   };
 }

@@ -13,13 +13,18 @@ to the latest Edition's `builtAt` — currently **2026-10-08T16:17:29.723Z**
 
 - **from-empty** — all 444 snapshot Articles as fresh Articles, no live
   Stories: the post-reset rebuild shape (the #36 session's 456-article
-  rebuild).
+  rebuild). At the current archive size (5 283 Articles at the 2026-10-25
+  edition) this fixture has outgrown the single-call output cap — see the
+  deadlock-baseline section below.
 - **long-context** — 218 live Stories (every snapshot Story holding no
   fresh Article) + the 142-Article fresh batch (Articles under an hour old
   at builtAt): the steady-state shape the issue warns about. The Stories
   holding the fresh batch drop out of the prompt, so the batch's original
   Stories are the pseudo-ground-truth for splits, and the remaining live
   Stories are what a proposed seed must not duplicate.
+- **deadlock** (issue #149) — the 2026-10-24 grouping deadlock reconstructed
+  from the archive at a pinned historical build; see the dedicated section
+  below.
 
 Headlines and titles only — ADR-0003 forbids teasers on disk, and grouping
 runs fine without them (verified by the #38 replay).
@@ -242,6 +247,74 @@ Reading, per ADR-0018's validation plan:
   the improvement — the verdict comes from the next real day (ADR-0018's
   observation gate at J+1).
 
+## Deadlock fixture and baseline (issue #149)
+
+The 2026-10-24 grouping deadlock (spec #147): all day the live magnet Story
+(the tribunal ruling on the Paris march route, born 2026-10-22) pulled the
+new march Articles, the Membership check refused each merge, and the
+Articles stayed Unassigned — re-presented to an unchanged prompt, hour
+after hour, until the magnet's Ingestion window closed at 00:53 and the
+march Story finally birthed at 01:01 with 61 Articles. The prompt-feedback
+ticket (#150) must be graded against that day, so the day became a
+fixture:
+
+- **Pin** — `2026-10-24T23:01:20.223Z`, the last hourly build of the day
+  (edition commit `6a460674`).
+- **Live Stories** — every archive Story that existed at the pin
+  (`createdAt ≤ pin`) with members cut at the pin (`publishedAt ≤ pin`) and
+  its Ingestion window open there (ADR-0027): 31 Stories, the magnet among
+  them with all 41 of its members — the full field the model saw, in the
+  production order (newest member first). Accepted approximations: story
+  titles are the archive's final ones, members that joined after the pin
+  are included when their `publishedAt` precedes it (three Articles, that
+  day), and a Story later merged away is absent — none of which touches
+  the magnet–march pair.
+- **Fresh Articles** — the march Story's Articles inside the pin's 24 h
+  collection window: the day's 69 march Articles, exactly the ones that
+  sat Unassigned through every build. The rest of the day's 300+
+  Unassigned pool left no archive trace and is not reconstructible.
+- **Ground truth** — each fresh Article → the march Story it eventually
+  founded.
+
+Baseline (2026-10-25, `gemini/gemini-3.5-flash-lite`, the production model,
+two runs per fixture; from-empty skipped — at 5 283 Articles it has
+outgrown the single-call output cap, so this round ran
+`--only long-context,deadlock`):
+
+| fixture | fresh | live | coverage | → magnet | born | dup-seeds | splits | over-merged | stability | latency |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| long-context | 11 | 466 | 90.9% | — | — | 0 | 0/3 groups | 0 | 100.0% | 3.4 s |
+| deadlock | 69 | 31 | 98.6% | 0 | 65 (1 cluster) | 0 | 1/1 groups | 0 | 91.1% | 7.0 s |
+
+**The finding: the reconstructed state does not reproduce the loop — the
+current prompt already births.** Both runs propose one new Story claiming
+65 and 64 of the 69 march Articles (run 2 sends a single Article to the
+magnet, run 1 none), scattering 2–4 to other on-topic live Stories (the
+Conseil d'État and Gilets-jaunes mobilizations) and leaving one
+unassigned. The production loop was emergent from the full-day state,
+which the archive cannot reconstruct:
+
+- the real fresh pool held 300+ mixed Articles — the march Articles
+  interleaved with everything else the day collected. A clean block of 69
+  same-event Articles makes the twins rule (ADR-0018) trivially
+  applicable; diluted among 300+, the model matched by topic proximity to
+  the magnet instead.
+- production prompts carry teasers (in memory only); benchmark fixtures
+  never do (ADR-0003). The march Articles' teasers often recapped the
+  route/tribunal context — exactly the evidence that pulls a same-fact
+  judgment toward the magnet.
+
+Consequence for #150's validation gate: « the deadlock fixture must birth
+the march Story » is already true of the baseline, so the criterion
+degrades to a regression guard — the landed variant must keep the birth
+(and not worsen the scatter), while the standard fixtures carry the
+no-regression rule (split rate, dup-seeds, coverage). The deadlock's
+real-world fix rests on the refusal cache (#148, landed) plus the prompt
+feedback graded on the standard fixtures. The fixture keeps its value:
+the magnet-vs-birth behavior and the scatter are now pinned under
+measurement, and the recorded baseline is the « before » any variant must
+not regress against.
+
 ## Reproduce
 
 ```sh
@@ -251,6 +324,9 @@ pnpm benchmark:grouping -- gemini/gemini-3.5-flash-lite \
 # Add a new candidate anytime; the report regenerates from all recorded
 # results in .benchmark/grouping/results/:
 pnpm benchmark:grouping -- openrouter/<vendor>/<model>
+# Restrict a paid run to part of the fixture set (e.g. when from-empty's
+# current size cannot complete under the output cap):
+pnpm benchmark:grouping -- gemini/gemini-3.5-flash-lite --only long-context,deadlock
 # Sanity sample (issue #41, no model calls): 30 blind pairs from the
 # recorded models' clashes with the snapshot key — the human labels
 # verdicts in .benchmark/grouping/labels/, the grader prints agreement
