@@ -223,6 +223,31 @@ export type Sleep = (ms: number) => Promise<void>;
 const defaultSleep: Sleep = (ms) =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
+/** The grouping generationConfig, shared by production and the benchmark's
+ * Gemini gateway (issue #154 review): the "benchmark inputs are identical to
+ * production by construction" claim holds only while this stays one object.
+ * v1beta generateContent: JSON output via responseMimeType + full JSON Schema
+ * in responseJsonSchema (responseFormat.text is only accepted on the
+ * Interactions API). */
+export function groupingGenerationConfig(): {
+  responseMimeType: string;
+  responseJsonSchema: unknown;
+  maxOutputTokens: number;
+} {
+  return {
+    responseMimeType: 'application/json',
+    responseJsonSchema: GROUPING_SCHEMA,
+    // The default output cap would truncate large builds — the first build
+    // after a reset assigns several hundred Articles in one call.
+    maxOutputTokens: GROUPING_MAX_OUTPUT_TOKENS,
+  };
+}
+
+/** The grouping output cap, shared across gateways: the benchmark's OpenRouter
+ * adapter sends the same headroom as `max_tokens` (its API shape differs, the
+ * number must not drift). */
+export const GROUPING_MAX_OUTPUT_TOKENS = 65_536;
+
 export function geminiGroupingModel(
   apiKey: string,
   sleep: Sleep = defaultSleep,
@@ -236,16 +261,7 @@ export function geminiGroupingModel(
       const prompt = groupingPrompt(input);
       const body = {
         contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: {
-          // v1beta generateContent: JSON output via responseMimeType + full
-          // JSON Schema in responseJsonSchema (responseFormat.text is only
-          // accepted on the Interactions API).
-          responseMimeType: 'application/json',
-          responseJsonSchema: GROUPING_SCHEMA,
-          // The default output cap would truncate large builds — the first
-          // build after a reset assigns several hundred Articles in one call.
-          maxOutputTokens: 65_536,
-        },
+        generationConfig: groupingGenerationConfig(),
       };
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
       for (let attempt = 1; attempt <= 2; attempt++) {

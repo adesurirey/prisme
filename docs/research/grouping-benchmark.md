@@ -337,7 +337,11 @@ keep their inputs. What this buys, honestly ranked:
    of the next heavy news day in CI is the only test.
 
 **Regression gate for the paid run** (fixed before running, per the
-#149 baseline — breach → revert, no debate):
+#149 baseline — breach → revert, no debate; as everywhere in this doc,
+per-fixture figures are the **best of two runs** — that selection rule
+is part of each threshold, so « the deadlock fixture keeps the birth »
+means the best-of-2 record births, while a run-level magnet flood is
+the bimodality under measurement, not a breach):
 
 - deadlock fixture keeps the birth (its role as regression guard);
 - per fixture, coverage ≥ baseline − 1 pt (deadlock: 98.6 %,
