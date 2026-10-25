@@ -1,10 +1,21 @@
 {
   "id": "c97cbd823f03",
   "slug": "la-tempete-austen-laisse-59-000-foyers-sans-electricite",
-  "title": "La tempête Austen laisse 59 000 foyers sans électricité",
+  "title": "La tempête Austen laisse 59 000 foyers sans électricité en Bretagne et en Normandie",
   "createdAt": "2026-10-25T14:01:25.517Z",
   "storyDay": "2026-10-25",
   "articles": [
+    {
+      "id": "1a50e8132962",
+      "outletId": "le-parisien",
+      "headline": "Tempête Austen : toujours 59 000 foyers sans électricité à la mi-journée de dimanche, surtout en Bretagne et en Normandie",
+      "url": "https://www.leparisien.fr/meteo/tempete-austen-toujours-59-000-foyers-sans-electricite-a-la-mi-journee-de-dimanche-25-10-2026-VUBFGRKANVHGDD36PSONF2NY4U.php",
+      "publishedAt": "2026-10-25T17:01:26.452Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "society"
+    },
     {
       "id": "10ff540d929d",
       "outletId": "le-figaro",
@@ -30,24 +41,29 @@
     }
   ],
   "topicId": "e98221363e30",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "society",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le dimanche à midi, 59 000 clients d'Enedis étaient encore coupés du réseau électrique.",
-      "La Bretagne et la Normandie constituent les zones les plus touchées, avec respectivement 27 500 et 14 700 foyers impactés."
+      "À midi ce dimanche, Enedis recensait 59 000 foyers toujours coupés du réseau électrique.",
+      "La Bretagne et la Normandie concentrent l'essentiel des pannes, avec respectivement 27 500 et 14 700 clients touchés selon l'opérateur."
+    ],
+    "centre": [
+      "Le gestionnaire du réseau confirme que 59 000 foyers demeurent sans courant à la mi-journée.",
+      "Les perturbations impactent principalement les régions de Bretagne et de Normandie."
     ],
     "droite": [
-      "Près de 59 000 foyers demeuraient sans courant le dimanche à midi en Bretagne et en Normandie.",
-      "L'opérateur Enedis a mobilisé 2 600 agents, incluant 2 000 salariés et 600 intervenants prestataires."
+      "Un total de 59 000 foyers reste privé d'électricité ce dimanche à midi en Bretagne et en Normandie.",
+      "Enedis a mobilisé 2 000 salariés propres ainsi que 600 intervenants issus de prestataires pour rétablir la situation."
     ]
   },
   "differences": [
-    "Le camp gauche détaille la répartition géographique précise des pannes entre la Bretagne et la Normandie en citant les chiffres d'Enedis.",
-    "Le camp droite met en valeur l'ampleur de la mobilisation humaine engagée par le gestionnaire Enedis pour rétablir la situation."
+    "La gauche détaille précisément le nombre de foyers impactés région par région en citant le communiqué d'Enedis.",
+    "Le centre livre un compte rendu synthétique et factuel des données communiquées par le gestionnaire.",
+    "La droite complète le bilan chiffré des pannes en mettant en avant l'importance des moyens humains déployés sur le terrain."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-10-25T14:01:25.517Z"
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-10-25T17:01:26.452Z"
 }

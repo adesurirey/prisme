@@ -6,6 +6,38 @@
   "storyDay": "2026-10-25",
   "articles": [
     {
+      "id": "a6bd6b3023bb",
+      "outletId": "cnews",
+      "headline": "Grenoble : un bus de sympathisants RN attaqué par des individus encagoulés",
+      "url": "https://www.cnews.fr/france/2026-10-25/grenoble-un-bus-de-sympathisants-rn-attaque-par-des-individus-encagoules-1941707",
+      "publishedAt": "2026-10-25T15:01:03.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/orleans-taille1200_6ade153daec9c.jpg?itok=Ws4ihqjf",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "be5c177c3cbf",
+      "outletId": "liberation",
+      "headline": "Grenoble : un bus de militants RN prêts à partir pour Orléans au congrès du parti, vandalisé par des personnes cagoulées",
+      "url": "https://www.liberation.fr/societe/police-justice/grenoble-un-bus-de-militants-rn-prets-a-partir-pour-orleans-au-congres-du-parti-vandalise-par-des-personnes-cagoulees-20261025_HH4MNJCNSZEWBMBYYDBWKXJXHE/",
+      "publishedAt": "2026-10-25T14:07:02.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "1d13efc063b4",
+      "outletId": "le-jdd",
+      "headline": "Grenoble : un bus de sympathisants du RN en partance pour Orléans dégradé par des antifas",
+      "url": "https://www.lejdd.fr/politique/grenoble-un-bus-de-sympathisants-du-rn-en-partance-pour-orleans-degrade-par-des-antifas-186987",
+      "publishedAt": "2026-10-25T14:05:16.000Z",
+      "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/25/14/000_9yb6y8.jpg?VersionId=SwDN1H8UfDq0udE2.7RM.xFjNcSszH0Q",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "06fce68a5fb0",
       "outletId": "le-parisien",
       "headline": "Congrès du Rassemblement national : un bus de militants du parti pris pour cible à la gare de Grenoble, une enquête ouverte",
@@ -30,26 +62,32 @@
     }
   ],
   "topicId": "0d0f404e2998",
-  "titledArticleCount": 2,
+  "titledArticleCount": 5,
   "section": "politics",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le journal Libération rapporte que des individus cagoulés ont vandalisé un bus transportant des militants du Rassemblement national à Grenoble ce dimanche vers 5 heures du matin.",
+      "Le média précise que le groupe s'apprêtait à quitter la ville pour se rendre au congrès du parti dans le Loiret où Marine Le Pen doit intervenir dans l'après-midi.",
+      "Une enquête a été ouverte par le parquet, notamment pour le motif de « violences volontaires aggravées »."
+    ],
     "centre": [
-      "Un véhicule transportant des militants du Rassemblement national a subi des actes de vandalisme à la gare de Grenoble.",
-      "L'incident s'est produit avant le rassemblement politique du parti prévu à Orléans.",
-      "Les autorités judiciaires ont saisi les services compétents pour mener des investigations."
+      "Le Parisien indique qu'un bus transportant des militants du Rassemblement national a été pris pour cible à la gare de Grenoble ce dimanche matin.",
+      "Le véhicule visé s'apprêtait à transporter des sympathisants vers le congrès national du parti politique.",
+      "Une enquête judiciaire a été officiellement ouverte à la suite de ces dégradations."
     ],
     "droite": [
-      "Onze personnes se trouvaient à bord du véhicule visé par des agresseurs dissimulés sous des capuches à cinq heures du matin.",
-      "L'attaque s'est déroulée à Grenoble au moment où le groupe s'apprêtait à rejoindre le congrès du mouvement à Orléans.",
-      "Le véhicule a été totalement neutralisé par les dégâts, bien qu'aucun passager n'ait été blessé selon les informations policières."
+      "CNews et Le Figaro rapportent qu'un groupe d'une dizaine d'individus encagoulés, qualifiés de militants « antifas », a attaqué un bus à Grenoble ce dimanche vers 5 heures du matin.",
+      "Onze passagers se trouvaient à l'intérieur du véhicule dont les vitres ont été brisées, rendant le convoi totalement inutilisable pour se rendre au congrès d'Orléans.",
+      "Aucun blessé n'est à déplorer parmi les passagers malgré la violence de l'attaque survenue avant le départ."
     ]
   },
   "differences": [
-    "Le camp centre se limite à relater sobrement l'ouverture d'une enquête judiciaire après les dégradations subies par le bus à la gare de Grenoble.",
-    "Le camp droite théâtralise l'événement en insistant sur l'horaire matinal, le mode opératoire des agresseurs cagoulés et l'état inutilisable du véhicule."
+    "La gauche se concentre strictement sur l'événement factuel de l'enquête ouverte pour violences et la mention du congrès de Marine Le Pen.",
+    "Le centre adopte un angle purement factuel sur le lieu précis de l'attaque à la gare de Grenoble et l'ouverture de l'enquête.",
+    "La droite qualifie explicitement les agresseurs de militants antifas et insiste sur l'état d'inutilisabilité du bus et l'absence de blessés parmi les onze passagers."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-10-25T12:01:22.347Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-10-25T17:01:26.452Z"
 }
