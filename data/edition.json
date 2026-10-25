@@ -1,13 +1,24 @@
 {
-  "builtAt": "2026-10-25T20:01:23.947Z",
+  "builtAt": "2026-10-25T21:01:21.791Z",
   "latestStories": [
     {
       "id": "459df1ff8cd9",
       "slug": "volodymyr-zelensky-annonce-une-reunion-entre-russes-ukrainiens",
-      "title": "Volodymyr Zelensky annonce une réunion entre Russes, Ukrainiens et Américains en novembre",
+      "title": "Volodymyr Zelensky confirme qu'une réunion entre Russes, Ukrainiens et Américains aura lieu en novembre",
       "createdAt": "2026-10-25T20:01:23.947Z",
       "storyDay": "2026-10-25",
       "articles": [
+        {
+          "id": "c0229b9b2967",
+          "outletId": "le-figaro",
+          "headline": "Volodymyr Zelensky confirme qu'une réunion entre Russes, Ukrainiens et Américains aura lieu en novembre",
+          "url": "https://www.lefigaro.fr/international/volodymyr-zelensky-confirme-qu-une-reunion-entre-russes-ukrainiens-et-americains-aura-lieu-en-novembre-20261025",
+          "publishedAt": "2026-10-25T20:37:04.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/25/c90daa5c5e174bbe0003e964ff5206149202becbdf0c2e6b8b296a6e8ce79720.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
         {
           "id": "adb47975b6f2",
           "outletId": "le-parisien",
@@ -26,32 +37,39 @@
           "url": "https://www.lemonde.fr/international/live/2026/10/25/en-direct-guerre-en-ukraine-volodymyr-zelensky-confirme-qu-une-reunion-entre-russes-ukrainiens-et-americains-aura-lieu-en-novembre_6799896_3210.html",
           "publishedAt": "2026-10-25T19:57:03.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/21/1247/0/8256/4128/644/322/60/0/a449cbb_ftp-1-jtrccsrv83gg-afp-d3xh822.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "live",
-          "section": "world"
+          "section": "world",
+          "everFrontPage": true
         }
       ],
       "topicId": "d0f958f5e67f",
-      "titledArticleCount": 2,
+      "titledArticleCount": 3,
       "section": "world",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Le chef de l'Etat ukrainien a officialisé la tenue d'une concertation trilatérale associant Kiev, Moscou et Washington au cours du mois de novembre.",
-          "L'intervenant a réaffirmé la disposition de son pays au dialogue tout en exigeant le maintien des mesures coercitives visant la Russie préalablement à ces échanges."
+          "Le président ukrainien a confirmé lors d'une interview télévisée la tenue d'une réunion trilatérale en novembre entre l'Ukraine, la Russie et les États-Unis.",
+          "L'Ukraine se déclare « prête à discuter » dans le cadre de ces pourparlers.",
+          "Volodymyr Zelensky exige que les sanctions internationales contre Moscou soient maintenues jusqu'à la tenue de ces négociations."
         ],
         "centre": [
-          "Volodymyr Zelensky a validé l'organisation d'une rencontre diplomatique regroupant l'Ukraine, la Russie et les Etats-Unis en novembre prochain.",
-          "Le dirigeant a formulé le souhait que les sanctions économiques ne soient pas allégées avant la tenue de cette table ronde."
+          "Volodymyr Zelensky a officialisé la tenue d'une rencontre diplomatique trilatérale regroupant Ukrainiens, Russes et Américains pour le mois de novembre.",
+          "Le chef de l'État ukrainien a affirmé que son pays aborde ces échanges avec la volonté d'ouvrir le dialogue."
+        ],
+        "droite": [
+          "Une réunion trilatérale associant Russes, Ukrainiens et Américains est confirmée pour le mois de novembre.",
+          "L'événement s'inscrit dans la continuité des initiatives diplomatiques menées par Washington pour relancer les négociations de paix après l'interruption des pourparlers depuis le début de la guerre en Iran."
         ]
       },
       "differences": [
-        "La gauche met l'accent sur les conditions préalables exigées par Kiev en insistant sur le maintien des sanctions internationales contre Moscou.",
-        "Le centre privilégie l'annonce institutionnelle de la tenue du sommet trilatéral et la confirmation de la disposition ukrainienne au dialogue."
+        "La gauche insiste sur les conditions politiques posées par Kiev en exigeant le maintien des sanctions contre Moscou.",
+        "Le centre adopte un angle factuel direct en mettant en avant la volonté affichée du dirigeant ukrainien d'engager le dialogue.",
+        "La droite privilégie l'analyse géopolitique en contextualisant la réunion par les efforts diplomatiques américains récents."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 2,
-      "summarizedAt": "2026-10-25T20:01:23.947Z"
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-10-25T21:01:21.791Z"
     },
     {
       "id": "6d5546a47bb8",
@@ -307,6 +325,17 @@
           "section": "sport"
         },
         {
+          "id": "74f788e2b885",
+          "outletId": "cnews",
+          "headline": "Marathon de Lille : un coureur gravement blessé après la chute d’un arbre",
+          "url": "https://www.cnews.fr/sport/2026-10-25/marathon-de-lille-un-coureur-gravement-blesse-apres-la-chute-dun-arbre-1941837",
+          "publishedAt": "2026-10-25T19:09:28.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/iconsport_364143_0455-taille1200_6ade4f731e236.jpg?h=1483d620&itok=vX5yxsPn",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
           "id": "0df62a6a0874",
           "outletId": "le-parisien",
           "headline": "« Nous avons été très recouverts par les branches » : un coureur du marathon de Lille grièvement blessé après la chute d’un arbre",
@@ -475,6 +504,96 @@
       "summarizedAt": "2026-10-25T18:01:27.811Z"
     },
     {
+      "id": "b07c8097e231",
+      "slug": "plusieurs-centaines-de-personnes-participent-a-aubervilliers-a",
+      "title": "Plusieurs centaines de personnes participent à Aubervilliers à la marche blanche en hommage à Pengo Bossio Wangi",
+      "createdAt": "2026-10-25T21:01:21.791Z",
+      "storyDay": "2026-10-25",
+      "articles": [
+        {
+          "id": "b5b1292592d6",
+          "outletId": "tf1-info",
+          "headline": "Attaque dans les Yvelines : des centaines de personnes réunies à Aubervilliers à la marche blanche en hommage à Pengo Bossio Wangi",
+          "url": "https://www.tf1info.fr/justice-faits-divers/video-attaque-dans-les-yvelines-trappes-des-centaines-de-personnes-a-la-marche-blanche-en-hommage-a-pengo-bossio-wangi-a-aubervilliers-2471916.html",
+          "publishedAt": "2026-10-25T20:53:24.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/marche-silencieuse-aubervilliers-2026-74fb11-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "c7ac7ea77cc9",
+          "outletId": "liberation",
+          "headline": "«Je me suis reconnu en lui et ça m’effraie» : à Aubervilliers, une marche blanche pour Pengo Bossio Wangi, victime d’un assassinat raciste",
+          "url": "https://www.liberation.fr/societe/je-me-suis-reconnu-en-lui-et-ca-meffraie-a-aubervilliers-une-marche-blanche-pour-pengo-bossio-wangi-victime-dun-assassinat-raciste-20261025_NHNVDNSARNHFZM3HAI3F6WHTOE/",
+          "publishedAt": "2026-10-25T19:52:12.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "6a7bd1d2d222",
+          "outletId": "le-monde",
+          "headline": "Attentat raciste de Trappes : plusieurs centaines de personnes à la marche blanche en hommage à Pengo Bossio Wangi",
+          "url": "https://www.lemonde.fr/societe/article/2026/10/25/attentat-raciste-de-trappes-plusieurs-centaines-de-personnes-a-la-marche-blanche-en-hommage-a-pengo-bossio-wangi_6800112_3224.html",
+          "publishedAt": "2026-10-25T18:43:28.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/25/478/0/5737/2868/644/322/60/0/e186fc7_ftp-1-xnk4la0meypr-afp-d4d29nf.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "92b9dfa155a4",
+          "outletId": "franceinfo",
+          "headline": "\"Tu resteras à jamais dans nos cœurs\" : à Aubervilliers, des centaines de personnes à la marche blanche en hommage à Pengo Bossio Wangi, tué à Trappes",
+          "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/reportage-tu-resteras-a-jamais-dans-nos-c-urs-a-aubervilliers-des-centaines-de-personnes-a-la-marche-blanche-en-hommage-a-pengo-bossio-wangi-tue-a-trappes_8253328.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-25T17:02:34.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/17q0pTdhJSUQyNeh7wl7CflgVYA/0x360:2048x1512/432x243/filters:format(jpg)/2026/10/25/6ade31dd748f4288689935.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "22f13957089d",
+          "outletId": "france-24",
+          "headline": "À Aubervilliers, une marche blanche en mémoire de Pengo Bossio Wangi, jeune espoir du MMA",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261025-%C3%A0-aubervilliers-une-marche-blanche-en-m%C3%A9moire-de-pengo-bossio-wangi-jeune-espoir-du-mma",
+          "publishedAt": "2026-10-25T14:46:18.000Z",
+          "imageUrl": "https://s.france24.com/media/display/b38f3930-d080-11f1-a9e3-4b25c96ec90e/w:1024/p:16x9/FR-20261025-141534-141813-CS.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "1560e3262942",
+      "titledArticleCount": 5,
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Plusieurs centaines de personnes ont participé à une marche silencieuse à Aubervilliers pour rendre hommage à Pengo Bossio Wangi, un pratiquant de MMA de 26 ans.",
+          "Le rassemblement, organisé par le club de sport où s'entraînait la victime, s'est déroulé entre hommage et colère suite à cet assassinat qualifié d'acte raciste et terroriste commis à Trappes.",
+          "L'événement a réuni la famille, des amis, des élus locaux et des anonymes, marqués par la nature ciblée de l'attaque."
+        ],
+        "centre": [
+          "Une centaine de personnes se sont rassemblées à Aubervilliers pour une marche blanche en mémoire de Pengo Bossio Wangi, présenté comme un jeune espoir du MMA.",
+          "Le suspect de l'attaque a été transféré à l'infirmerie de la préfecture de police de Paris pour évaluer si son état de santé permet la poursuite de son audition."
+        ],
+        "droite": [
+          "Plusieurs centaines de personnes, incluant la famille, des proches, des élus et des anonymes, ont pris part à une marche silencieuse à Aubervilliers.",
+          "Le cortège a été initié par le club de MMA où s'entraîné la victime de 26 ans, tuée par balles lors de l'attaque perpétrée dans les Yvelines."
+        ]
+      },
+      "differences": [
+        "La gauche qualifie explicitement le meurtre d'assassinat raciste et terroriste tout en soulignant le climat de peur et de colère au sein du cortège.",
+        "Le centre privilégie un format d'actualité factuelle en se concentrant sur le déroulement de l'hommage et l'état de santé du suspect.",
+        "La droite adopte une couverture strictement factuelle et neutre de la marche, sans employer de qualification idéologique sur le mobile du crime."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-10-25T21:01:21.791Z"
+    },
+    {
       "id": "5cfff0b66262",
       "slug": "des-enquetes-ouvertes-a-nice-et-montpellier-apres-des",
       "title": "Des enquêtes ouvertes à Nice et Montpellier après des agressions de manifestants par des militants d'ultradroite",
@@ -552,6 +671,76 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 4,
       "summarizedAt": "2026-10-25T19:01:23.544Z"
+    },
+    {
+      "id": "592ea1afe2f9",
+      "slug": "le-parlement-algerien-autorise-l-envoi-de-forces-militaires-au",
+      "title": "Le Parlement algérien autorise l'envoi de forces militaires au Niger",
+      "createdAt": "2026-10-25T21:01:21.791Z",
+      "storyDay": "2026-10-25",
+      "articles": [
+        {
+          "id": "59661437eaec",
+          "outletId": "rfi",
+          "headline": "Le Parlement algérien approuve l'envoi de forces au Niger, son premier déploiement à l'étranger depuis 1973",
+          "url": "https://www.rfi.fr/fr/afrique/20261025-le-parlement-alg%C3%A9rien-approuve-l-envoi-de-forces-au-niger-son-premier-d%C3%A9ploiement-%C3%A0-l-%C3%A9tranger-depuis-1973",
+          "publishedAt": "2026-10-25T20:06:51.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/685f9896-d0ae-11f1-9e15-5b4a75578ebb/w:1024/p:16x9/AP22186561002163.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "f894a0f50349",
+          "outletId": "le-monde",
+          "headline": "En Algérie, le Parlement autorise l’envoi d’unités militaires au Niger",
+          "url": "https://www.lemonde.fr/afrique/article/2026/10/25/en-algerie-le-parlement-autorise-l-envoi-d-unites-militaires-au-niger_6800111_3212.html",
+          "publishedAt": "2026-10-25T18:40:31.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/08/29/279/0/5887/2943/644/322/60/0/c731fbf_ftp-1-ssmkvksxqhdx-2026-08-29t195721z-1747522112-rc2i8nazurnp-rtrmadp-3-niger-security.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "10cdb2821486",
+          "outletId": "le-jdd",
+          "headline": "Algérie : le Parlement autorise l’envoi de troupes au Niger",
+          "url": "https://www.lejdd.fr/International/algerie-le-parlement-autorise-lenvoi-de-troupes-au-niger-186984",
+          "publishedAt": "2026-10-25T13:36:44.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/25/14/075_app-notitle220705_npfkd.jpg?VersionId=bVFL5RDTS9JhFopyzxjj50EJh1zkPT4C",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "592ea1afe2f9",
+      "titledArticleCount": 3,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le Parlement algérien a validé ce dimanche un déploiement militaire au Niger.",
+          "Cette décision historique met fin à plus de soixante ans de doctrine stricte de non-intervention militaire à l'étranger.",
+          "Cette initiative militaire est appelée à modifier profondément l'équilibre géopolitique de la région sahélienne."
+        ],
+        "centre": [
+          "Le Parlement algérien a approuvé l'envoi de forces armées chez son voisin nigérien pour répondre à des impératifs sécuritaires.",
+          "Il s'agit du premier déploiement militaire hors des frontières nationales depuis la guerre israélo-arabe de 1973, marquant une rupture historique de 53 ans."
+        ],
+        "droite": [
+          "Les deux chambres du Parlement algérien ont adopté une motion permettant à l'armée d'intervenir hors du territoire national.",
+          "Cette autorisation vise à concrétiser une opération militaire au Niger à la demande expresse des autorités nigériennes."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur la rupture historique avec la doctrine traditionnelle de non-intervention et les conséquences géopolitiques régionales.",
+        "Le centre privilégie la perspective historique en insistant sur la durée exacte de l'interruption des opérations extérieures depuis 1973.",
+        "La droite se focalise sur le cadre institutionnel du vote parlementaire et le fondement officiel de la demande des autorités nigériennes."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-10-25T21:01:21.791Z"
     },
     {
       "id": "b31e5ede7271",
@@ -645,101 +834,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 5,
       "summarizedAt": "2026-10-25T18:01:27.811Z"
-    },
-    {
-      "id": "c97cbd823f03",
-      "slug": "la-tempete-austen-laisse-59-000-foyers-sans-electricite",
-      "title": "Tempête Austen : près de 59 000 foyers toujours privés d'électricité en Bretagne et en Normandie",
-      "createdAt": "2026-10-25T14:01:25.517Z",
-      "storyDay": "2026-10-25",
-      "articles": [
-        {
-          "id": "0c9ec2faa19c",
-          "outletId": "cnews",
-          "headline": "Tempête Austen : Enedis annonce que 40.000 foyers sont privés d'électricité ce dimanche soir",
-          "url": "https://www.cnews.fr/france/2026-10-25/tempete-austen-enedis-annonce-que-40000-foyers-sont-prives-delectricite-ce",
-          "publishedAt": "2026-10-25T18:05:48.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-23t173430z_360074559_rc229oaa3ctm_rtrmadp_3_europe-weather-france_6ade3e01ca114.jpg?h=67dffbb3&itok=pXorwOvZ",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "9717e42fed21",
-          "outletId": "ouest-france",
-          "headline": "Tempête Austen : encore 40 000 foyers privés d’électricité dimanche soir, principalement en Bretagne et Normandie",
-          "url": "https://www.ouest-france.fr/meteo/tempete/tempete-austen-encore-40-000-foyers-prives-delectricite-dimanche-soir-73444a9a-d09a-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-25T17:48:31.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNDViNjgxOGU5OGFiNTNmMDQ2Mjk4Y2YxMWNmYzAwYjA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=cef59a840663e4858776dfb569220affa502eddf447ae1722ffbd095d8b3e8e0",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "1a50e8132962",
-          "outletId": "le-parisien",
-          "headline": "Tempête Austen : toujours 59 000 foyers sans électricité à la mi-journée de dimanche, surtout en Bretagne et en Normandie",
-          "url": "https://www.leparisien.fr/meteo/tempete-austen-toujours-59-000-foyers-sans-electricite-a-la-mi-journee-de-dimanche-25-10-2026-VUBFGRKANVHGDD36PSONF2NY4U.php",
-          "publishedAt": "2026-10-25T17:01:26.452Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "10ff540d929d",
-          "outletId": "le-figaro",
-          "headline": "Tempête Austen : 59.000 foyers encore privés d'électricité dimanche midi",
-          "url": "https://www.lefigaro.fr/conjoncture/tempete-austen-59-000-foyers-encore-prives-d-electricite-dimanche-midi-20261025",
-          "publishedAt": "2026-10-25T12:19:01.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/25/c76ea9de414ddbbf64072314fc58716c1fb3dd47374640b7684dcd10a2b5688e.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "a26fb12786ea",
-          "outletId": "20-minutes",
-          "headline": "Tempête Austen : Encore 59.000 foyers privés d’électricité à midi ce dimanche, selon Enedis",
-          "url": "https://www.20minutes.fr/societe/4257321-20261025-tempete-austen-encore-59-000-foyers-prives-electricite-midi-dimanche-selon-enedis?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-25T12:04:01.000Z",
-          "imageUrl": "https://img.20mn.fr/jRR9fipKT16_uHDQy29CQSk/1200x768_des-branches-d-arbres-arrachees-dans-la-region-de-douai-dans-le-departement-du-nord-en-france-apres-le-passage-de-la-tempete-austen-le-23-octobre-2026",
-          "frontPage": true,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "e98221363e30",
-      "titledArticleCount": 5,
-      "section": "society",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le gestionnaire du réseau Enedis a recensé 59.000 clients sans courant à la mi-journée de ce dimanche.",
-          "La Bretagne et la Normandie constituent les deux territoires les plus lourdement touchés par les coupures.",
-          "Le détail fourni indique 27.500 foyers privés d'électricité en Bretagne et 14.700 en Normandie à midi."
-        ],
-        "centre": [
-          "Près de 59.000 foyers étaient privés d'électricité à la mi-journée ce dimanche suite au passage des tempêtes.",
-          "Ce chiffre a baissé à environ 40.000 foyers concernés en fin de journée, principalement localisés en Bretagne et en Normandie.",
-          "Les équipes techniques d'Enedis restent mobilisées pour procéder aux opérations de rétablissement du réseau."
-        ],
-        "droite": [
-          "Le gestionnaire Enedis a dénombré 59.000 logements sans électricité dès dimanche midi, puis 40.000 en fin de journée.",
-          "Un effectif de 2.000 salariés d'Enedis et 600 agents prestataires a été déployé sur le terrain.",
-          "Les interventions techniques font face à des difficultés en raison du maintien de vents soutenus sur les zones sinistrées."
-        ]
-      },
-      "differences": [
-        "La gauche se concentre exclusivement sur le bilan quantitatif des pannes dressé à la mi-journée par le gestionnaire.",
-        "Le centre embrasse l'évolution chronologique complète de la situation en suivant la décrue du nombre de foyers touchés du midi au soir.",
-        "La droite met particulièrement en valeur l'ampleur des moyens humains mobilisés par Enedis ainsi que les contraintes météorologiques pesant sur les interventions."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 5,
-      "summarizedAt": "2026-10-25T19:01:23.544Z"
     }
   ],
   "stories": [
@@ -846,7 +940,7 @@
           "url": "https://www.ouest-france.fr/societe/faits-divers/attaque-a-trappes-et-la-verriere-le-suspect-soumis-a-une-periode-dobservation-psychiatrique-9fe5ae30-d087-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-10-25T17:50:55.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjVkNzhkN2M1YWY4MzA5YzUyODU4NGIzNzRhZjJmNzY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=8869ce205325c822f76a296e8fe43d01ac31e27f3fa4e86390ac4d2b579ff2f3",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -5655,6 +5749,18 @@
       "storyDay": "2026-10-25",
       "articles": [
         {
+          "id": "002cf1670bd4",
+          "outletId": "ouest-france",
+          "headline": "Présidentielle au Brésil : après des problèmes de transport public, le vote est prolongé de deux heures",
+          "url": "https://www.ouest-france.fr/monde/bresil/presidentielle-au-bresil-apres-des-problemes-de-transport-public-le-vote-est-prolonge-de-deux-heures-45a80584-d0b0-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-25T20:58:30.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYjUyMzZmZmM0NTczOTY0NWVkNmQ3MmY3ZmQxNzljZTA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1eeb7f486d44375b41acee37653817b10ac51e8f94180addb31af2f01bc6d0db",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
           "id": "28c5bda2b958",
           "outletId": "le-figaro",
           "headline": "«Des électeurs sont empêchés de voter», faute de bus dans plusieurs villes du Brésil, dénonce Lula",
@@ -6151,7 +6257,7 @@
           "url": "https://www.lemonde.fr/sport/article/2026/10/25/la-nfl-fait-ses-grands-debuts-a-paris-un-rendez-vous-tres-attendu-a-la-preparation-perturbee_6800105_3242.html",
           "publishedAt": "2026-10-25T17:22:32.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/25/657/0/3941/1970/644/322/60/0/be5478a_ftp-1-pdk4mighhmsr-d11fdb44c3454ef3bd2dcabac90697a9-0-70eac7d37c244d949b0c4021411c7686.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -7664,10 +7770,32 @@
     {
       "id": "11829ed1c944",
       "slug": "la-liste-etudiante-defie-aleksandar-vucic-lors-des-elections",
-      "title": "Les Serbes se mobilisent aux élections législatives dans un scrutin aux allures de référendum anti-Vucic",
+      "title": "Les Serbes se mobilisent aux élections législatives et Aleksandar Vucic reconnaît sa défaite",
       "createdAt": "2026-10-25T09:01:21.796Z",
       "storyDay": "2026-10-25",
       "articles": [
+        {
+          "id": "4405daef44bd",
+          "outletId": "le-monde",
+          "headline": "Serbie : Aleksandar Vucic reconnaît sa défaite aux élections législatives anticipées",
+          "url": "https://www.lemonde.fr/international/article/2026/10/25/serbie-aleksandar-vucic-reconnait-sa-defaite-aux-elections-legislatives-anticipees_6800116_3210.html",
+          "publishedAt": "2026-10-25T20:55:51.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/25/396/0/4752/2376/644/322/60/0/5f7cf65_ftp-1-gximiiu49lh4-2026-10-25t204932z-1410583075-rc2jaoaafn8o-rtrmadp-3-serbia-election.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "66c9fa88df72",
+          "outletId": "rfi",
+          "headline": "Serbie: l'ancien président Aleksandar Vucic reconnaît sa défaite aux législatives anticipées",
+          "url": "https://www.rfi.fr/fr/europe/20261025-serbie-l-ancien-pr%C3%A9sident-aleksandar-vucic-reconna%C3%AEt-sa-d%C3%A9faite-aux-l%C3%A9gislatives-anticip%C3%A9es",
+          "publishedAt": "2026-10-25T20:55:08.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/ffdbf976-d0b3-11f1-92c6-bba4eee3dc72/w:1024/p:16x9/AP26298363103588.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
         {
           "id": "ee5006431c69",
           "outletId": "le-figaro",
@@ -7675,7 +7803,7 @@
           "url": "https://www.lefigaro.fr/international/serbie-taux-de-participation-record-depuis-plus-de-30-ans-pour-des-legislatives-20261025",
           "publishedAt": "2026-10-25T19:24:50.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/25/9770819c3352005868e6649b937c88fb1c67d7aba2a1907f2689d7c2c3331730.JPG",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -7759,28 +7887,32 @@
         }
       ],
       "topicId": "11829ed1c944",
-      "titledArticleCount": 7,
+      "titledArticleCount": 10,
       "section": "world",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Le taux de participation a atteint près de 35% à midi, en nette hausse par rapport aux précédentes législatives de 2023.",
-          "Une liste soutenue par le mouvement étudiant se présente aux élections après deux ans de mobilisation contre la corruption et le pouvoir du dirigeant serbe.",
-          "Le président démissionnaire Aleksandar Vucic brigue le poste de premier ministre dans un scrutin très disputé."
+          "La Serbie organise des élections législatives anticipées le 25 octobre après deux ans de manifestations contre la corruption et le pouvoir du dirigeant nationaliste Aleksandar Vucic.",
+          "Une liste d'opposition menée par des étudiants et composée de personnalités de la société civile affronte le parti au pouvoir SNS lors d'un scrutin marqué par une forte mobilisation.",
+          "Aleksandar Vucic reconnaît finalement sa défaite électorale après avoir dirigé le pays pendant quatorze ans, menacé par un important mouvement de contestation populaire."
         ],
         "centre": [
-          "Les électeurs serbes votent lors d'élections législatives anticipées convoquées après deux ans de manifestations nées de l'effondrement du toit d'une gare à Novi Sad en 2024.",
-          "Les étudiants font face au parti auvergnat avec une liste de 250 personnalités de la société civile, portés par des rassemblements massifs.",
-          "La société civile exprime des craintes quant à une possible utilisation de la force par le pouvoir en cas de défaite électorale."
+          "Les électeurs serbes se mobilisent massivement pour des élections législatives anticipées aux allures de référendum contre l'ancien président Aleksandar Vucic.",
+          "Le scrutin fait suite à une grave crise politique déclenchée par l'effondrement tragique d'un toit de gare à Novi Sad en 2024, provoquant une mobilisation historique des étudiants.",
+          "L'ancien dirigeant populiste Aleksandar Vucic concède sa défaite électorale face à une liste étudiante soutenue par une foule importante de manifestants."
+        ],
+        "droite": [
+          "La commission électorale serbe enregistre un taux de participation record de 64,89 % à 18 heures lors des élections législatives anticipées du 25 octobre, du jamais vu depuis 1993."
         ]
       },
       "differences": [
-        "La gauche met l'accent sur la forte mobilisation citoyenne et la dynamique de contestation menée par les étudiants contre la corruption.",
-        "Le centre insiste sur l'origine du mouvement de protestation lié à l'accident tragique de Novi Sad et sur les tensions autour d'une éventuelle défaite du pouvoir en place."
+        "La gauche insiste lourdement sur la nature contestataire du scrutin, mettant en avant la longue mobilisation des étudiants contre la corruption du système en place.",
+        "Le centre analyse le vote comme un référendum politique direct contre le dirigeant sortant et détaille les origines de la crise issue du drame de Novi Sad.",
+        "La droite se focalise principalement sur la dimension technique et statistique du scrutin en soulignant la valeur historique du taux de participation record."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 7,
-      "summarizedAt": "2026-10-25T18:01:27.811Z"
+      "summarizedArticleCount": 10,
+      "summarizedAt": "2026-10-25T21:01:21.791Z"
     },
     {
       "id": "842ef742ba3e",
@@ -8621,6 +8753,217 @@
       "titledArticleCount": 34
     },
     {
+      "id": "c97cbd823f03",
+      "slug": "la-tempete-austen-laisse-59-000-foyers-sans-electricite",
+      "title": "Tempête Austen : près de 59 000 foyers toujours privés d'électricité en Bretagne et en Normandie",
+      "createdAt": "2026-10-25T14:01:25.517Z",
+      "storyDay": "2026-10-25",
+      "articles": [
+        {
+          "id": "a0067d2aa02d",
+          "outletId": "tf1-info",
+          "headline": "\"C'est assez compliqué parce qu'il ne fait pas chaud\" : en Normandie, le passage de la tempête Austen a laissé de nombreux foyers sans électricité",
+          "url": "https://www.tf1info.fr/meteo/video-c-est-assez-complique-parce-qu-il-ne-fait-pas-chaud-en-normandie-le-passage-de-la-tempete-austen-a-laisse-de-nombreux-foyers-sans-electricite-2471911.html",
+          "publishedAt": "2026-10-25T20:20:15.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/960/540/capjta-electricite-normandie-315625-1@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "0c9ec2faa19c",
+          "outletId": "cnews",
+          "headline": "Tempête Austen : Enedis annonce que 40.000 foyers sont privés d'électricité ce dimanche soir",
+          "url": "https://www.cnews.fr/france/2026-10-25/tempete-austen-enedis-annonce-que-40000-foyers-sont-prives-delectricite-ce",
+          "publishedAt": "2026-10-25T18:05:48.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-23t173430z_360074559_rc229oaa3ctm_rtrmadp_3_europe-weather-france_6ade3e01ca114.jpg?h=67dffbb3&itok=pXorwOvZ",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "9717e42fed21",
+          "outletId": "ouest-france",
+          "headline": "Tempête Austen : encore 40 000 foyers privés d’électricité dimanche soir, principalement en Bretagne et Normandie",
+          "url": "https://www.ouest-france.fr/meteo/tempete/tempete-austen-encore-40-000-foyers-prives-delectricite-dimanche-soir-73444a9a-d09a-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-25T17:48:31.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNDViNjgxOGU5OGFiNTNmMDQ2Mjk4Y2YxMWNmYzAwYjA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=cef59a840663e4858776dfb569220affa502eddf447ae1722ffbd095d8b3e8e0",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "1a50e8132962",
+          "outletId": "le-parisien",
+          "headline": "Tempête Austen : toujours 59 000 foyers sans électricité à la mi-journée de dimanche, surtout en Bretagne et en Normandie",
+          "url": "https://www.leparisien.fr/meteo/tempete-austen-toujours-59-000-foyers-sans-electricite-a-la-mi-journee-de-dimanche-25-10-2026-VUBFGRKANVHGDD36PSONF2NY4U.php",
+          "publishedAt": "2026-10-25T17:01:26.452Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "10ff540d929d",
+          "outletId": "le-figaro",
+          "headline": "Tempête Austen : 59.000 foyers encore privés d'électricité dimanche midi",
+          "url": "https://www.lefigaro.fr/conjoncture/tempete-austen-59-000-foyers-encore-prives-d-electricite-dimanche-midi-20261025",
+          "publishedAt": "2026-10-25T12:19:01.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/25/c76ea9de414ddbbf64072314fc58716c1fb3dd47374640b7684dcd10a2b5688e.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "a26fb12786ea",
+          "outletId": "20-minutes",
+          "headline": "Tempête Austen : Encore 59.000 foyers privés d’électricité à midi ce dimanche, selon Enedis",
+          "url": "https://www.20minutes.fr/societe/4257321-20261025-tempete-austen-encore-59-000-foyers-prives-electricite-midi-dimanche-selon-enedis?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-25T12:04:01.000Z",
+          "imageUrl": "https://img.20mn.fr/jRR9fipKT16_uHDQy29CQSk/1200x768_des-branches-d-arbres-arrachees-dans-la-region-de-douai-dans-le-departement-du-nord-en-france-apres-le-passage-de-la-tempete-austen-le-23-octobre-2026",
+          "frontPage": true,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "e98221363e30",
+      "titledArticleCount": 5,
+      "section": "society",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le gestionnaire du réseau Enedis a recensé 59.000 clients sans courant à la mi-journée de ce dimanche.",
+          "La Bretagne et la Normandie constituent les deux territoires les plus lourdement touchés par les coupures.",
+          "Le détail fourni indique 27.500 foyers privés d'électricité en Bretagne et 14.700 en Normandie à midi."
+        ],
+        "centre": [
+          "Près de 59.000 foyers étaient privés d'électricité à la mi-journée ce dimanche suite au passage des tempêtes.",
+          "Ce chiffre a baissé à environ 40.000 foyers concernés en fin de journée, principalement localisés en Bretagne et en Normandie.",
+          "Les équipes techniques d'Enedis restent mobilisées pour procéder aux opérations de rétablissement du réseau."
+        ],
+        "droite": [
+          "Le gestionnaire Enedis a dénombré 59.000 logements sans électricité dès dimanche midi, puis 40.000 en fin de journée.",
+          "Un effectif de 2.000 salariés d'Enedis et 600 agents prestataires a été déployé sur le terrain.",
+          "Les interventions techniques font face à des difficultés en raison du maintien de vents soutenus sur les zones sinistrées."
+        ]
+      },
+      "differences": [
+        "La gauche se concentre exclusivement sur le bilan quantitatif des pannes dressé à la mi-journée par le gestionnaire.",
+        "Le centre embrasse l'évolution chronologique complète de la situation en suivant la décrue du nombre de foyers touchés du midi au soir.",
+        "La droite met particulièrement en valeur l'ampleur des moyens humains mobilisés par Enedis ainsi que les contraintes météorologiques pesant sur les interventions."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-10-25T19:01:23.544Z"
+    },
+    {
+      "id": "13c84501a14e",
+      "slug": "un-bus-de-sympathisants-du-rassemblement-national-est-degrade-a",
+      "title": "Un bus de sympathisants du Rassemblement national est dégradé à Grenoble avant le congrès d'Orléans",
+      "createdAt": "2026-10-25T12:01:22.347Z",
+      "storyDay": "2026-10-25",
+      "articles": [
+        {
+          "id": "5b814627a842",
+          "outletId": "ouest-france",
+          "headline": "Un car de sympathisants du RN dégradé par des militants encagoulés à Grenoble",
+          "url": "https://www.ouest-france.fr/societe/faits-divers/un-car-de-sympathisants-du-rn-degrade-par-des-militants-encagoules-a-grenoble-3c7a9fe2-d0a8-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-25T19:44:55.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwOWUyNjI2NmIzOTQ3NjIyZWEzNDY2MjQ3OGRmYTAzNzI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=f208879c68608c6fd839676968c24e99d2cb061b64ea1755489323c2288f5538",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "a6bd6b3023bb",
+          "outletId": "cnews",
+          "headline": "Grenoble : un bus de sympathisants RN attaqué par des individus encagoulés",
+          "url": "https://www.cnews.fr/france/2026-10-25/grenoble-un-bus-de-sympathisants-rn-attaque-par-des-individus-encagoules-1941707",
+          "publishedAt": "2026-10-25T15:01:03.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/orleans-taille1200_6ade153daec9c.jpg?itok=Ws4ihqjf",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "be5c177c3cbf",
+          "outletId": "liberation",
+          "headline": "Grenoble : un bus de militants RN prêts à partir pour Orléans au congrès du parti, vandalisé par des personnes cagoulées",
+          "url": "https://www.liberation.fr/societe/police-justice/grenoble-un-bus-de-militants-rn-prets-a-partir-pour-orleans-au-congres-du-parti-vandalise-par-des-personnes-cagoulees-20261025_HH4MNJCNSZEWBMBYYDBWKXJXHE/",
+          "publishedAt": "2026-10-25T14:07:02.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "1d13efc063b4",
+          "outletId": "le-jdd",
+          "headline": "Grenoble : un bus de sympathisants du RN en partance pour Orléans dégradé par des antifas",
+          "url": "https://www.lejdd.fr/politique/grenoble-un-bus-de-sympathisants-du-rn-en-partance-pour-orleans-degrade-par-des-antifas-186987",
+          "publishedAt": "2026-10-25T14:05:16.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/25/14/000_9yb6y8.jpg?VersionId=SwDN1H8UfDq0udE2.7RM.xFjNcSszH0Q",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "06fce68a5fb0",
+          "outletId": "le-parisien",
+          "headline": "Congrès du Rassemblement national : un bus de militants du parti pris pour cible à la gare de Grenoble, une enquête ouverte",
+          "url": "https://www.leparisien.fr/faits-divers/congres-du-rassemblement-national-un-bus-de-militants-du-parti-pris-pour-cible-a-la-gare-de-grenoble-une-enquete-ouverte-25-10-2026-OWVOPLTRP5C6BCCCPT6VZZI5KU.php",
+          "publishedAt": "2026-10-25T12:01:22.347Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "6e24bb5bd89d",
+          "outletId": "le-figaro",
+          "headline": "Grenoble: un bus de sympathisants du RN dégradé par des militants cagoulés, avant son départ pour le congrès du parti à Orléans",
+          "url": "https://www.lefigaro.fr/politique/grenoble-un-bus-de-sympathisants-rn-degrade-par-des-militants-cagoules-les-coupables-en-fuite-20261025",
+          "publishedAt": "2026-10-25T11:53:52.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/25/94d0109d801570761b75eca41b673514ec8929ec520b73fa00a4e14054f87e9f.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "0d0f404e2998",
+      "titledArticleCount": 5,
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le journal Libération rapporte que des individus cagoulés ont vandalisé un bus transportant des militants du Rassemblement national à Grenoble ce dimanche vers 5 heures du matin.",
+          "Le média précise que le groupe s'apprêtait à quitter la ville pour se rendre au congrès du parti dans le Loiret où Marine Le Pen doit intervenir dans l'après-midi.",
+          "Une enquête a été ouverte par le parquet, notamment pour le motif de « violences volontaires aggravées »."
+        ],
+        "centre": [
+          "Le Parisien indique qu'un bus transportant des militants du Rassemblement national a été pris pour cible à la gare de Grenoble ce dimanche matin.",
+          "Le véhicule visé s'apprêtait à transporter des sympathisants vers le congrès national du parti politique.",
+          "Une enquête judiciaire a été officiellement ouverte à la suite de ces dégradations."
+        ],
+        "droite": [
+          "CNews et Le Figaro rapportent qu'un groupe d'une dizaine d'individus encagoulés, qualifiés de militants « antifas », a attaqué un bus à Grenoble ce dimanche vers 5 heures du matin.",
+          "Onze passagers se trouvaient à l'intérieur du véhicule dont les vitres ont été brisées, rendant le convoi totalement inutilisable pour se rendre au congrès d'Orléans.",
+          "Aucun blessé n'est à déplorer parmi les passagers malgré la violence de l'attaque survenue avant le départ."
+        ]
+      },
+      "differences": [
+        "La gauche se concentre strictement sur l'événement factuel de l'enquête ouverte pour violences et la mention du congrès de Marine Le Pen.",
+        "Le centre adopte un angle purement factuel sur le lieu précis de l'attaque à la gare de Grenoble et l'ouverture de l'enquête.",
+        "La droite qualifie explicitement les agresseurs de militants antifas et insiste sur l'état d'inutilisabilité du bus et l'absence de blessés parmi les onze passagers."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-10-25T17:01:26.452Z"
+    },
+    {
       "id": "12a770c7e0e0",
       "slug": "les-houthis-revendiquent-des-attaques-contre-des-aeroports-et",
       "title": "L'Arabie saoudite intercepte dix missiles lancés par les Houthis visent des installations pétrolières",
@@ -8772,6 +9115,96 @@
       "summarizedAt": "2026-10-25T13:01:17.136Z"
     },
     {
+      "id": "b07c8097e231",
+      "slug": "plusieurs-centaines-de-personnes-participent-a-aubervilliers-a",
+      "title": "Plusieurs centaines de personnes participent à Aubervilliers à la marche blanche en hommage à Pengo Bossio Wangi",
+      "createdAt": "2026-10-25T21:01:21.791Z",
+      "storyDay": "2026-10-25",
+      "articles": [
+        {
+          "id": "b5b1292592d6",
+          "outletId": "tf1-info",
+          "headline": "Attaque dans les Yvelines : des centaines de personnes réunies à Aubervilliers à la marche blanche en hommage à Pengo Bossio Wangi",
+          "url": "https://www.tf1info.fr/justice-faits-divers/video-attaque-dans-les-yvelines-trappes-des-centaines-de-personnes-a-la-marche-blanche-en-hommage-a-pengo-bossio-wangi-a-aubervilliers-2471916.html",
+          "publishedAt": "2026-10-25T20:53:24.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/marche-silencieuse-aubervilliers-2026-74fb11-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "c7ac7ea77cc9",
+          "outletId": "liberation",
+          "headline": "«Je me suis reconnu en lui et ça m’effraie» : à Aubervilliers, une marche blanche pour Pengo Bossio Wangi, victime d’un assassinat raciste",
+          "url": "https://www.liberation.fr/societe/je-me-suis-reconnu-en-lui-et-ca-meffraie-a-aubervilliers-une-marche-blanche-pour-pengo-bossio-wangi-victime-dun-assassinat-raciste-20261025_NHNVDNSARNHFZM3HAI3F6WHTOE/",
+          "publishedAt": "2026-10-25T19:52:12.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "6a7bd1d2d222",
+          "outletId": "le-monde",
+          "headline": "Attentat raciste de Trappes : plusieurs centaines de personnes à la marche blanche en hommage à Pengo Bossio Wangi",
+          "url": "https://www.lemonde.fr/societe/article/2026/10/25/attentat-raciste-de-trappes-plusieurs-centaines-de-personnes-a-la-marche-blanche-en-hommage-a-pengo-bossio-wangi_6800112_3224.html",
+          "publishedAt": "2026-10-25T18:43:28.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/25/478/0/5737/2868/644/322/60/0/e186fc7_ftp-1-xnk4la0meypr-afp-d4d29nf.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "92b9dfa155a4",
+          "outletId": "franceinfo",
+          "headline": "\"Tu resteras à jamais dans nos cœurs\" : à Aubervilliers, des centaines de personnes à la marche blanche en hommage à Pengo Bossio Wangi, tué à Trappes",
+          "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/reportage-tu-resteras-a-jamais-dans-nos-c-urs-a-aubervilliers-des-centaines-de-personnes-a-la-marche-blanche-en-hommage-a-pengo-bossio-wangi-tue-a-trappes_8253328.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-25T17:02:34.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/17q0pTdhJSUQyNeh7wl7CflgVYA/0x360:2048x1512/432x243/filters:format(jpg)/2026/10/25/6ade31dd748f4288689935.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "22f13957089d",
+          "outletId": "france-24",
+          "headline": "À Aubervilliers, une marche blanche en mémoire de Pengo Bossio Wangi, jeune espoir du MMA",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261025-%C3%A0-aubervilliers-une-marche-blanche-en-m%C3%A9moire-de-pengo-bossio-wangi-jeune-espoir-du-mma",
+          "publishedAt": "2026-10-25T14:46:18.000Z",
+          "imageUrl": "https://s.france24.com/media/display/b38f3930-d080-11f1-a9e3-4b25c96ec90e/w:1024/p:16x9/FR-20261025-141534-141813-CS.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "1560e3262942",
+      "titledArticleCount": 5,
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Plusieurs centaines de personnes ont participé à une marche silencieuse à Aubervilliers pour rendre hommage à Pengo Bossio Wangi, un pratiquant de MMA de 26 ans.",
+          "Le rassemblement, organisé par le club de sport où s'entraînait la victime, s'est déroulé entre hommage et colère suite à cet assassinat qualifié d'acte raciste et terroriste commis à Trappes.",
+          "L'événement a réuni la famille, des amis, des élus locaux et des anonymes, marqués par la nature ciblée de l'attaque."
+        ],
+        "centre": [
+          "Une centaine de personnes se sont rassemblées à Aubervilliers pour une marche blanche en mémoire de Pengo Bossio Wangi, présenté comme un jeune espoir du MMA.",
+          "Le suspect de l'attaque a été transféré à l'infirmerie de la préfecture de police de Paris pour évaluer si son état de santé permet la poursuite de son audition."
+        ],
+        "droite": [
+          "Plusieurs centaines de personnes, incluant la famille, des proches, des élus et des anonymes, ont pris part à une marche silencieuse à Aubervilliers.",
+          "Le cortège a été initié par le club de MMA où s'entraîné la victime de 26 ans, tuée par balles lors de l'attaque perpétrée dans les Yvelines."
+        ]
+      },
+      "differences": [
+        "La gauche qualifie explicitement le meurtre d'assassinat raciste et terroriste tout en soulignant le climat de peur et de colère au sein du cortège.",
+        "Le centre privilégie un format d'actualité factuelle en se concentrant sur le déroulement de l'hommage et l'état de santé du suspect.",
+        "La droite adopte une couverture strictement factuelle et neutre de la marche, sans employer de qualification idéologique sur le mobile du crime."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-10-25T21:01:21.791Z"
+    },
+    {
       "id": "caf4296465c9",
       "slug": "un-arbre-s-effondre-sur-le-parcours-du-marathon-de-lille-et",
       "title": "Un coureur du marathon de Lille grièvement blessé après la chute d'un arbre",
@@ -8783,6 +9216,17 @@
           "outletId": "cnews",
           "headline": "Marathon de Lille : un coureur gravement après la chute d’un arbre",
           "url": "https://www.cnews.fr/sport/2026-10-25/marathon-de-lille-un-coureur-gravement-apres-la-chute-dun-arbre-1941837",
+          "publishedAt": "2026-10-25T19:09:28.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/iconsport_364143_0455-taille1200_6ade4f731e236.jpg?h=1483d620&itok=vX5yxsPn",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "74f788e2b885",
+          "outletId": "cnews",
+          "headline": "Marathon de Lille : un coureur gravement blessé après la chute d’un arbre",
+          "url": "https://www.cnews.fr/sport/2026-10-25/marathon-de-lille-un-coureur-gravement-blesse-apres-la-chute-dun-arbre-1941837",
           "publishedAt": "2026-10-25T19:09:28.000Z",
           "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/iconsport_364143_0455-taille1200_6ade4f731e236.jpg?h=1483d620&itok=vX5yxsPn",
           "frontPage": false,
@@ -8862,101 +9306,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 5,
       "summarizedAt": "2026-10-25T20:01:23.947Z"
-    },
-    {
-      "id": "c97cbd823f03",
-      "slug": "la-tempete-austen-laisse-59-000-foyers-sans-electricite",
-      "title": "Tempête Austen : près de 59 000 foyers toujours privés d'électricité en Bretagne et en Normandie",
-      "createdAt": "2026-10-25T14:01:25.517Z",
-      "storyDay": "2026-10-25",
-      "articles": [
-        {
-          "id": "0c9ec2faa19c",
-          "outletId": "cnews",
-          "headline": "Tempête Austen : Enedis annonce que 40.000 foyers sont privés d'électricité ce dimanche soir",
-          "url": "https://www.cnews.fr/france/2026-10-25/tempete-austen-enedis-annonce-que-40000-foyers-sont-prives-delectricite-ce",
-          "publishedAt": "2026-10-25T18:05:48.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-23t173430z_360074559_rc229oaa3ctm_rtrmadp_3_europe-weather-france_6ade3e01ca114.jpg?h=67dffbb3&itok=pXorwOvZ",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "9717e42fed21",
-          "outletId": "ouest-france",
-          "headline": "Tempête Austen : encore 40 000 foyers privés d’électricité dimanche soir, principalement en Bretagne et Normandie",
-          "url": "https://www.ouest-france.fr/meteo/tempete/tempete-austen-encore-40-000-foyers-prives-delectricite-dimanche-soir-73444a9a-d09a-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-25T17:48:31.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNDViNjgxOGU5OGFiNTNmMDQ2Mjk4Y2YxMWNmYzAwYjA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=cef59a840663e4858776dfb569220affa502eddf447ae1722ffbd095d8b3e8e0",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "1a50e8132962",
-          "outletId": "le-parisien",
-          "headline": "Tempête Austen : toujours 59 000 foyers sans électricité à la mi-journée de dimanche, surtout en Bretagne et en Normandie",
-          "url": "https://www.leparisien.fr/meteo/tempete-austen-toujours-59-000-foyers-sans-electricite-a-la-mi-journee-de-dimanche-25-10-2026-VUBFGRKANVHGDD36PSONF2NY4U.php",
-          "publishedAt": "2026-10-25T17:01:26.452Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "10ff540d929d",
-          "outletId": "le-figaro",
-          "headline": "Tempête Austen : 59.000 foyers encore privés d'électricité dimanche midi",
-          "url": "https://www.lefigaro.fr/conjoncture/tempete-austen-59-000-foyers-encore-prives-d-electricite-dimanche-midi-20261025",
-          "publishedAt": "2026-10-25T12:19:01.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/25/c76ea9de414ddbbf64072314fc58716c1fb3dd47374640b7684dcd10a2b5688e.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "a26fb12786ea",
-          "outletId": "20-minutes",
-          "headline": "Tempête Austen : Encore 59.000 foyers privés d’électricité à midi ce dimanche, selon Enedis",
-          "url": "https://www.20minutes.fr/societe/4257321-20261025-tempete-austen-encore-59-000-foyers-prives-electricite-midi-dimanche-selon-enedis?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-25T12:04:01.000Z",
-          "imageUrl": "https://img.20mn.fr/jRR9fipKT16_uHDQy29CQSk/1200x768_des-branches-d-arbres-arrachees-dans-la-region-de-douai-dans-le-departement-du-nord-en-france-apres-le-passage-de-la-tempete-austen-le-23-octobre-2026",
-          "frontPage": true,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "e98221363e30",
-      "titledArticleCount": 5,
-      "section": "society",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le gestionnaire du réseau Enedis a recensé 59.000 clients sans courant à la mi-journée de ce dimanche.",
-          "La Bretagne et la Normandie constituent les deux territoires les plus lourdement touchés par les coupures.",
-          "Le détail fourni indique 27.500 foyers privés d'électricité en Bretagne et 14.700 en Normandie à midi."
-        ],
-        "centre": [
-          "Près de 59.000 foyers étaient privés d'électricité à la mi-journée ce dimanche suite au passage des tempêtes.",
-          "Ce chiffre a baissé à environ 40.000 foyers concernés en fin de journée, principalement localisés en Bretagne et en Normandie.",
-          "Les équipes techniques d'Enedis restent mobilisées pour procéder aux opérations de rétablissement du réseau."
-        ],
-        "droite": [
-          "Le gestionnaire Enedis a dénombré 59.000 logements sans électricité dès dimanche midi, puis 40.000 en fin de journée.",
-          "Un effectif de 2.000 salariés d'Enedis et 600 agents prestataires a été déployé sur le terrain.",
-          "Les interventions techniques font face à des difficultés en raison du maintien de vents soutenus sur les zones sinistrées."
-        ]
-      },
-      "differences": [
-        "La gauche se concentre exclusivement sur le bilan quantitatif des pannes dressé à la mi-journée par le gestionnaire.",
-        "Le centre embrasse l'évolution chronologique complète de la situation en suivant la décrue du nombre de foyers touchés du midi au soir.",
-        "La droite met particulièrement en valeur l'ampleur des moyens humains mobilisés par Enedis ainsi que les contraintes météorologiques pesant sur les interventions."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 5,
-      "summarizedAt": "2026-10-25T19:01:23.544Z"
     },
     {
       "id": "0733d71587c0",
@@ -9238,281 +9587,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 5,
       "summarizedAt": "2026-10-25T17:01:26.452Z"
-    },
-    {
-      "id": "13c84501a14e",
-      "slug": "un-bus-de-sympathisants-du-rassemblement-national-est-degrade-a",
-      "title": "Un bus de sympathisants du Rassemblement national est dégradé à Grenoble avant le congrès d'Orléans",
-      "createdAt": "2026-10-25T12:01:22.347Z",
-      "storyDay": "2026-10-25",
-      "articles": [
-        {
-          "id": "a6bd6b3023bb",
-          "outletId": "cnews",
-          "headline": "Grenoble : un bus de sympathisants RN attaqué par des individus encagoulés",
-          "url": "https://www.cnews.fr/france/2026-10-25/grenoble-un-bus-de-sympathisants-rn-attaque-par-des-individus-encagoules-1941707",
-          "publishedAt": "2026-10-25T15:01:03.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/orleans-taille1200_6ade153daec9c.jpg?itok=Ws4ihqjf",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "be5c177c3cbf",
-          "outletId": "liberation",
-          "headline": "Grenoble : un bus de militants RN prêts à partir pour Orléans au congrès du parti, vandalisé par des personnes cagoulées",
-          "url": "https://www.liberation.fr/societe/police-justice/grenoble-un-bus-de-militants-rn-prets-a-partir-pour-orleans-au-congres-du-parti-vandalise-par-des-personnes-cagoulees-20261025_HH4MNJCNSZEWBMBYYDBWKXJXHE/",
-          "publishedAt": "2026-10-25T14:07:02.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "1d13efc063b4",
-          "outletId": "le-jdd",
-          "headline": "Grenoble : un bus de sympathisants du RN en partance pour Orléans dégradé par des antifas",
-          "url": "https://www.lejdd.fr/politique/grenoble-un-bus-de-sympathisants-du-rn-en-partance-pour-orleans-degrade-par-des-antifas-186987",
-          "publishedAt": "2026-10-25T14:05:16.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/25/14/000_9yb6y8.jpg?VersionId=SwDN1H8UfDq0udE2.7RM.xFjNcSszH0Q",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "06fce68a5fb0",
-          "outletId": "le-parisien",
-          "headline": "Congrès du Rassemblement national : un bus de militants du parti pris pour cible à la gare de Grenoble, une enquête ouverte",
-          "url": "https://www.leparisien.fr/faits-divers/congres-du-rassemblement-national-un-bus-de-militants-du-parti-pris-pour-cible-a-la-gare-de-grenoble-une-enquete-ouverte-25-10-2026-OWVOPLTRP5C6BCCCPT6VZZI5KU.php",
-          "publishedAt": "2026-10-25T12:01:22.347Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "6e24bb5bd89d",
-          "outletId": "le-figaro",
-          "headline": "Grenoble: un bus de sympathisants du RN dégradé par des militants cagoulés, avant son départ pour le congrès du parti à Orléans",
-          "url": "https://www.lefigaro.fr/politique/grenoble-un-bus-de-sympathisants-rn-degrade-par-des-militants-cagoules-les-coupables-en-fuite-20261025",
-          "publishedAt": "2026-10-25T11:53:52.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/25/94d0109d801570761b75eca41b673514ec8929ec520b73fa00a4e14054f87e9f.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "0d0f404e2998",
-      "titledArticleCount": 5,
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le journal Libération rapporte que des individus cagoulés ont vandalisé un bus transportant des militants du Rassemblement national à Grenoble ce dimanche vers 5 heures du matin.",
-          "Le média précise que le groupe s'apprêtait à quitter la ville pour se rendre au congrès du parti dans le Loiret où Marine Le Pen doit intervenir dans l'après-midi.",
-          "Une enquête a été ouverte par le parquet, notamment pour le motif de « violences volontaires aggravées »."
-        ],
-        "centre": [
-          "Le Parisien indique qu'un bus transportant des militants du Rassemblement national a été pris pour cible à la gare de Grenoble ce dimanche matin.",
-          "Le véhicule visé s'apprêtait à transporter des sympathisants vers le congrès national du parti politique.",
-          "Une enquête judiciaire a été officiellement ouverte à la suite de ces dégradations."
-        ],
-        "droite": [
-          "CNews et Le Figaro rapportent qu'un groupe d'une dizaine d'individus encagoulés, qualifiés de militants « antifas », a attaqué un bus à Grenoble ce dimanche vers 5 heures du matin.",
-          "Onze passagers se trouvaient à l'intérieur du véhicule dont les vitres ont été brisées, rendant le convoi totalement inutilisable pour se rendre au congrès d'Orléans.",
-          "Aucun blessé n'est à déplorer parmi les passagers malgré la violence de l'attaque survenue avant le départ."
-        ]
-      },
-      "differences": [
-        "La gauche se concentre strictement sur l'événement factuel de l'enquête ouverte pour violences et la mention du congrès de Marine Le Pen.",
-        "Le centre adopte un angle purement factuel sur le lieu précis de l'attaque à la gare de Grenoble et l'ouverture de l'enquête.",
-        "La droite qualifie explicitement les agresseurs de militants antifas et insiste sur l'état d'inutilisabilité du bus et l'absence de blessés parmi les onze passagers."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 5,
-      "summarizedAt": "2026-10-25T17:01:26.452Z"
-    },
-    {
-      "id": "f6c6cb46502c",
-      "slug": "des-journalistes-de-mediapart-denoncent-des-violences-du",
-      "title": "Des journalistes de Mediapart dénoncent des violences du service d'ordre au congrès du RN à Orléans",
-      "createdAt": "2026-10-25T02:01:20.102Z",
-      "storyDay": "2026-10-24",
-      "articles": [
-        {
-          "id": "e531a7e109ba",
-          "outletId": "lobs",
-          "headline": "Mediapart brièvement viré, des fouilles particulières… Au congrès du RN, frictions entre le service d’ordre et des médias",
-          "url": "https://www.nouvelobs.com/politique/20261025.OBS119510/mediapart-brievement-vire-des-fouilles-particulieres-au-congres-du-rn-frictions-entre-le-service-d-ordre-et-des-medias.html",
-          "publishedAt": "2026-10-25T09:57:40.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/10/25/0/0/5976/3984/0/0/60/0/84cc888_upload-1-1fkndttsqaal-080-hl-bohier-3357118.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "1b92139eb4a0",
-          "outletId": "ouest-france",
-          "headline": "Congrès du RN à Orléans : Mediapart exclu, des journalistes accusent le service d’ordre d’attouchements",
-          "url": "https://www.ouest-france.fr/politique/rassemblement-national/congres-du-rn-a-orleans-mediapart-exclu-des-journalistes-accusent-le-service-dordre-dattouchements-b7b6c562-cff1-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-24T22:07:07.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMTI1NWM2MmQzNjQ3OTBjYTY2YzEyYjY4Yjc4YWFmNDg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2f4c0dad1e5e43378d36c37ff05513d0464a41803d1e9ee121296ed0e251b37b",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "d20722711bbf",
-          "outletId": "20-minutes",
-          "headline": "« Mediapart dehors »… Au Congrès du RN à Orléans, certains médias n’étaient pas les bienvenus",
-          "url": "https://www.20minutes.fr/arts-stars/medias/4257249-20261024-mediapart-dehors-congres-rn-orleans-certains-medias-bienvenus?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-24T20:58:04.000Z",
-          "imageUrl": "https://img.20mn.fr/w7QwiQiNQM2ez_37Ku0Hcyk/1200x768_des-journalistes-du-media-francais-mediapart-sont-expulses-par-la-securite-du-19e-congres-a-orleans-en-france-le-samedi-24-octobre-2026-ap-photo-teresa-suarez-sua100-26297566662473-2610241757",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "06e2be5921a2",
-          "outletId": "huffpost",
-          "headline": "De Mediapart aux soutiens-gorge des femmes, le RN embarrassé par son service d’ordre lors de son congrès",
-          "url": "https://www.huffingtonpost.fr/politique/article/de-mediapart-aux-soutiens-gorge-des-femmes-le-rn-embarrasse-par-son-service-d-ordre-lors-de-son-congres_344393.html",
-          "publishedAt": "2026-10-24T20:48:37.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/24/257/0/4944/2781/0/0/60/0/3e4bd97_upload-1-zs2da96bjqbh-afp-20261024-d4b29aj-v1-highres-francepoliticsrncongress.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "e98394c9c9bc",
-          "outletId": "mediapart",
-          "headline": "«Mediapart» dénonce la brutalité du service d’ordre du RN à l’encontre de ses journalistes",
-          "url": "https://www.mediapart.fr/journal/politique/241026/mediapart-denonce-la-brutalite-du-service-d-ordre-du-rn-l-encontre-de-ses-journalistes",
-          "publishedAt": "2026-10-24T20:03:17.000Z",
-          "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/10/24/261024-img-pp-video.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "0d0f404e2998",
-      "titledArticleCount": 5,
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Quatre journalistes de Mediapart ont été expulsés avec brutalité de la salle par le service d'ordre lors du congrès du Rassemblement national à Orléans.",
-          "Le site d'investigation dénonce des pratiques inacceptables en démocratie, alimentées par les menaces reçues après ses révélations sur Jordan Bardella.",
-          "Le premier jour de l'événement a également été marqué par des vérifications du port de soutiens-gorges lors des fouilles subies par des femmes.",
-          "L'ensemble de ces incidents est perçu par plusieurs rédactions comme le reflet du penchant autoritaire du parti d'extrême droite."
-        ],
-        "centre": [
-          "Des journalistes de Mediapart ont été exfiltrés de force de l'espace presse par la sécurité du Rassemblement national lors du congrès d'Orléans.",
-          "Plusieurs femmes présentes ont rapporté avoir subi des palpations à la poitrine qualifiées d'attouchements lors des contrôles à l'entrée.",
-          "Les journalistes du site d'investigation ont été conspués et pris à partie par des militants avant de devoir momentanément quitter les lieux."
-        ]
-      },
-      "differences": [
-        "La gauche insiste lourdement sur la gravité institutionnelle des violences en y voyant une menace directe contre la démocratie et la liberté d'informer.",
-        "Le centre adopte un ton factuel centré sur les incidents précis survenus dans l'espace presse et les accusations de gestes déplacés lors des fouilles."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 5,
-      "summarizedAt": "2026-10-25T10:01:21.602Z"
-    },
-    {
-      "id": "4ad68b0d9611",
-      "slug": "l-italie-deploie-un-important-dispositif-de-securite-face-aux",
-      "title": "L'Italie déploie un important dispositif de sécurité pour encadrer des manifestations",
-      "createdAt": "2026-10-24T22:01:17.634Z",
-      "storyDay": "2026-10-24",
-      "articles": [
-        {
-          "id": "544a7cf56484",
-          "outletId": "bfmtv",
-          "headline": "Italie: un important dispositif de sécurité déployé pour assurer le maintien de l'ordre pendant les manifestations dans 8 villes du pays",
-          "url": "https://www.bfmtv.com/international/europe/italie/video-italie-un-important-dispositif-de-securite-deploye-pour-assurer-le-maintien-de-l-ordre-pendant-les-manifestations-dans-8-villes-du-pays_VN-202610240458.html",
-          "publishedAt": "2026-10-24T21:30:27.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/B3P-GfX2ps0uZzjFPs6M5kkOaJU=/0x0:1280x720/800x0/images/Italie-un-important-dispositif-de-securite-deploye-pour-assurer-le-maintien-de-l-ordre-pendant-les-manifestations-dans-8-villes-du-pays-2371662.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "a3c1b0513ad5",
-          "outletId": "rfi",
-          "headline": "Italie: déploiement massif des forces de sécurité pour les manifestations après des heurts",
-          "url": "https://www.rfi.fr/fr/europe/20261024-italie-d%C3%A9ploiement-massif-des-forces-de-s%C3%A9curit%C3%A9-pour-les-manifestations-apr%C3%A8s-des-heurts",
-          "publishedAt": "2026-10-24T21:28:12.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/882003a4-cff1-11f1-80a0-5b4a75578ebb/w:1024/p:16x9/2026-10-24T151135Z-974136982-RC2R9OAQZ5AS-RTRMADP-3-ITALY-PROTEST.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "475cc3b0c338",
-          "outletId": "ouest-france",
-          "headline": "Italie : des manifestations contre la vie chère et neuf interpellations",
-          "url": "https://www.ouest-france.fr/europe/italie/italie-des-manifestations-contre-la-vie-chere-et-neuf-interpellations-272da5e6-cfe8-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-24T21:21:29.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNDBhZDE1ZTY5M2ExNGUyZjNjMzE0YmRkODdjY2M3ZjQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=826ec9bc3c99c3f250f08bc39f756896af236bc56a679f195e1141204e16fe4f",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "12353a1d28c4",
-          "outletId": "cnews",
-          "headline": "Italie : perquisitions, arrestations, soldats déployés… Le gouvernement renforce son dispositif sécuritaire",
-          "url": "https://www.cnews.fr/monde/2026-10-24/italie-perquisitions-arrestations-soldats-deployes-le-gouvernement-renforce-son",
-          "publishedAt": "2026-10-24T20:40:34.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/068_aa_24102026_3007350_6add05c60b600.jpg?h=480419cc&itok=iuQkYeFO",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "1b52e7cdb910",
-          "outletId": "le-monde",
-          "headline": "En Italie, des manifestations à l’ampleur limitée contre la hausse du coût de la vie après un déploiement massif de membres des forces de l’ordre et de l’armée",
-          "url": "https://www.lemonde.fr/international/article/2026/10/24/en-italie-des-manifestations-a-l-ampleur-limitee-contre-la-hausse-du-cout-de-la-vie-apres-un-massif-deploiement-de-forces-de-l-ordre_6799731_3210.html",
-          "publishedAt": "2026-10-24T20:30:01.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/24/491/0/5900/2950/644/322/60/0/663d4dd_ftp-1-xgb3obngfkja-2026-10-24t151135z-974136982-rc2r9oaqz5as-rtrmadp-3-italy-protest.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "4ad68b0d9611",
-      "titledArticleCount": 5,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le gouvernement de Giorgia Meloni a validé des mesures sécuritaires rigoureuses après des heurts comparables à ceux observés en France.",
-          "Des cortèges d'ampleur restreinte ont eu lieu ce samedi contre la cherté de la vie suite au déploiement des forces de l'ordre et des militaires."
-        ],
-        "centre": [
-          "Plusieurs milliers de manifestants ont défilé ce samedi 24 octobre à Rome et Milan à l'appel d'étudiants, de camionneurs et d'agriculteurs.",
-          "La mobilisation vise à protester contre la vie chère et les coupes budgétaires malgré un important dispositif de maintien de l'ordre.",
-          "Les actions se sont révélées en grande partie pacifiques tandis que des organisations étudiantes ont condamné la réponse sécuritaire du pouvoir."
-        ],
-        "droite": [
-          "Un important dispositif sécuritaire a été déployé dans huit villes italiennes en amont des rassemblements prévus ce samedi 24 octobre.",
-          "Les autorités ont mené des dizaines de perquisitions et interpellé un suspect présenté comme le meneur du Mouvement du 17 octobre.",
-          "Cinq cents soldats ont été mobilisés à Milan à la suite d'affrontements violents et de pillages survenus la semaine précédente."
-        ]
-      },
-      "differences": [
-        "Le camp gauche insiste sur la nature restrictive des réformes de l'exécutif en place et relève la dimension sociale des mobilisations.",
-        "Le camp centre dresse le bilan d'une mobilisation modeste mais tendue, en mettant en avant les critiques des étudiants contre la stratégie des autorités.",
-        "Le camp droite focalise son traitement sur les opérations préventives de police, les interpellations et la menace sécuritaire justifiant l'envoi de l'armée."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 5
     },
     {
       "id": "6d5546a47bb8",
@@ -9797,6 +9871,146 @@
       "summarizedAt": "2026-10-25T13:01:17.136Z"
     },
     {
+      "id": "459df1ff8cd9",
+      "slug": "volodymyr-zelensky-annonce-une-reunion-entre-russes-ukrainiens",
+      "title": "Volodymyr Zelensky confirme qu'une réunion entre Russes, Ukrainiens et Américains aura lieu en novembre",
+      "createdAt": "2026-10-25T20:01:23.947Z",
+      "storyDay": "2026-10-25",
+      "articles": [
+        {
+          "id": "c0229b9b2967",
+          "outletId": "le-figaro",
+          "headline": "Volodymyr Zelensky confirme qu'une réunion entre Russes, Ukrainiens et Américains aura lieu en novembre",
+          "url": "https://www.lefigaro.fr/international/volodymyr-zelensky-confirme-qu-une-reunion-entre-russes-ukrainiens-et-americains-aura-lieu-en-novembre-20261025",
+          "publishedAt": "2026-10-25T20:37:04.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/25/c90daa5c5e174bbe0003e964ff5206149202becbdf0c2e6b8b296a6e8ce79720.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "adb47975b6f2",
+          "outletId": "le-parisien",
+          "headline": "« Nous sommes prêts à discuter » : Volodymyr Zelensky confirme qu’une réunion entre Russes, Ukrainiens et Américains aura lieu en novembre",
+          "url": "https://www.leparisien.fr/international/ukraine/nous-sommes-prets-a-discuter-volodymyr-zelensky-confirme-quune-reunion-entre-russes-ukrainiens-et-americains-aura-lieu-en-novembre-25-10-2026-HC67ERCMNNC5XE7LVY23BXKX3A.php",
+          "publishedAt": "2026-10-25T20:01:23.947Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "3a1888a58178",
+          "outletId": "le-monde",
+          "headline": "EN DIRECT, guerre en Ukraine : Volodymyr Zelensky confirme qu’une réunion entre Russes, Ukrainiens et Américains aura lieu en novembre",
+          "url": "https://www.lemonde.fr/international/live/2026/10/25/en-direct-guerre-en-ukraine-volodymyr-zelensky-confirme-qu-une-reunion-entre-russes-ukrainiens-et-americains-aura-lieu-en-novembre_6799896_3210.html",
+          "publishedAt": "2026-10-25T19:57:03.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/21/1247/0/8256/4128/644/322/60/0/a449cbb_ftp-1-jtrccsrv83gg-afp-d3xh822.jpg",
+          "frontPage": true,
+          "kind": "live",
+          "section": "world",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "d0f958f5e67f",
+      "titledArticleCount": 3,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le président ukrainien a confirmé lors d'une interview télévisée la tenue d'une réunion trilatérale en novembre entre l'Ukraine, la Russie et les États-Unis.",
+          "L'Ukraine se déclare « prête à discuter » dans le cadre de ces pourparlers.",
+          "Volodymyr Zelensky exige que les sanctions internationales contre Moscou soient maintenues jusqu'à la tenue de ces négociations."
+        ],
+        "centre": [
+          "Volodymyr Zelensky a officialisé la tenue d'une rencontre diplomatique trilatérale regroupant Ukrainiens, Russes et Américains pour le mois de novembre.",
+          "Le chef de l'État ukrainien a affirmé que son pays aborde ces échanges avec la volonté d'ouvrir le dialogue."
+        ],
+        "droite": [
+          "Une réunion trilatérale associant Russes, Ukrainiens et Américains est confirmée pour le mois de novembre.",
+          "L'événement s'inscrit dans la continuité des initiatives diplomatiques menées par Washington pour relancer les négociations de paix après l'interruption des pourparlers depuis le début de la guerre en Iran."
+        ]
+      },
+      "differences": [
+        "La gauche insiste sur les conditions politiques posées par Kiev en exigeant le maintien des sanctions contre Moscou.",
+        "Le centre adopte un angle factuel direct en mettant en avant la volonté affichée du dirigeant ukrainien d'engager le dialogue.",
+        "La droite privilégie l'analyse géopolitique en contextualisant la réunion par les efforts diplomatiques américains récents."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-10-25T21:01:21.791Z"
+    },
+    {
+      "id": "592ea1afe2f9",
+      "slug": "le-parlement-algerien-autorise-l-envoi-de-forces-militaires-au",
+      "title": "Le Parlement algérien autorise l'envoi de forces militaires au Niger",
+      "createdAt": "2026-10-25T21:01:21.791Z",
+      "storyDay": "2026-10-25",
+      "articles": [
+        {
+          "id": "59661437eaec",
+          "outletId": "rfi",
+          "headline": "Le Parlement algérien approuve l'envoi de forces au Niger, son premier déploiement à l'étranger depuis 1973",
+          "url": "https://www.rfi.fr/fr/afrique/20261025-le-parlement-alg%C3%A9rien-approuve-l-envoi-de-forces-au-niger-son-premier-d%C3%A9ploiement-%C3%A0-l-%C3%A9tranger-depuis-1973",
+          "publishedAt": "2026-10-25T20:06:51.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/685f9896-d0ae-11f1-9e15-5b4a75578ebb/w:1024/p:16x9/AP22186561002163.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "f894a0f50349",
+          "outletId": "le-monde",
+          "headline": "En Algérie, le Parlement autorise l’envoi d’unités militaires au Niger",
+          "url": "https://www.lemonde.fr/afrique/article/2026/10/25/en-algerie-le-parlement-autorise-l-envoi-d-unites-militaires-au-niger_6800111_3212.html",
+          "publishedAt": "2026-10-25T18:40:31.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/08/29/279/0/5887/2943/644/322/60/0/c731fbf_ftp-1-ssmkvksxqhdx-2026-08-29t195721z-1747522112-rc2i8nazurnp-rtrmadp-3-niger-security.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "10cdb2821486",
+          "outletId": "le-jdd",
+          "headline": "Algérie : le Parlement autorise l’envoi de troupes au Niger",
+          "url": "https://www.lejdd.fr/International/algerie-le-parlement-autorise-lenvoi-de-troupes-au-niger-186984",
+          "publishedAt": "2026-10-25T13:36:44.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/10/25/14/075_app-notitle220705_npfkd.jpg?VersionId=bVFL5RDTS9JhFopyzxjj50EJh1zkPT4C",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "592ea1afe2f9",
+      "titledArticleCount": 3,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le Parlement algérien a validé ce dimanche un déploiement militaire au Niger.",
+          "Cette décision historique met fin à plus de soixante ans de doctrine stricte de non-intervention militaire à l'étranger.",
+          "Cette initiative militaire est appelée à modifier profondément l'équilibre géopolitique de la région sahélienne."
+        ],
+        "centre": [
+          "Le Parlement algérien a approuvé l'envoi de forces armées chez son voisin nigérien pour répondre à des impératifs sécuritaires.",
+          "Il s'agit du premier déploiement militaire hors des frontières nationales depuis la guerre israélo-arabe de 1973, marquant une rupture historique de 53 ans."
+        ],
+        "droite": [
+          "Les deux chambres du Parlement algérien ont adopté une motion permettant à l'armée d'intervenir hors du territoire national.",
+          "Cette autorisation vise à concrétiser une opération militaire au Niger à la demande expresse des autorités nigériennes."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur la rupture historique avec la doctrine traditionnelle de non-intervention et les conséquences géopolitiques régionales.",
+        "Le centre privilégie la perspective historique en insistant sur la durée exacte de l'interruption des opérations extérieures depuis 1973.",
+        "La droite se focalise sur le cadre institutionnel du vote parlementaire et le fondement officiel de la demande des autorités nigériennes."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-10-25T21:01:21.791Z"
+    },
+    {
       "id": "37cb682dba39",
       "slug": "des-hommes-armes-tuent-au-moins-20-personnes-dans-le-nord-est",
       "title": "Des hommes armés tuent au moins 50 personnes dans le nord-est du Nigeria",
@@ -9938,56 +10152,96 @@
       "summarizedArticleCount": 3
     },
     {
-      "id": "459df1ff8cd9",
-      "slug": "volodymyr-zelensky-annonce-une-reunion-entre-russes-ukrainiens",
-      "title": "Volodymyr Zelensky annonce une réunion entre Russes, Ukrainiens et Américains en novembre",
-      "createdAt": "2026-10-25T20:01:23.947Z",
-      "storyDay": "2026-10-25",
+      "id": "4ad68b0d9611",
+      "slug": "l-italie-deploie-un-important-dispositif-de-securite-face-aux",
+      "title": "L'Italie déploie un important dispositif de sécurité pour encadrer des manifestations",
+      "createdAt": "2026-10-24T22:01:17.634Z",
+      "storyDay": "2026-10-24",
       "articles": [
         {
-          "id": "adb47975b6f2",
-          "outletId": "le-parisien",
-          "headline": "« Nous sommes prêts à discuter » : Volodymyr Zelensky confirme qu’une réunion entre Russes, Ukrainiens et Américains aura lieu en novembre",
-          "url": "https://www.leparisien.fr/international/ukraine/nous-sommes-prets-a-discuter-volodymyr-zelensky-confirme-quune-reunion-entre-russes-ukrainiens-et-americains-aura-lieu-en-novembre-25-10-2026-HC67ERCMNNC5XE7LVY23BXKX3A.php",
-          "publishedAt": "2026-10-25T20:01:23.947Z",
+          "id": "544a7cf56484",
+          "outletId": "bfmtv",
+          "headline": "Italie: un important dispositif de sécurité déployé pour assurer le maintien de l'ordre pendant les manifestations dans 8 villes du pays",
+          "url": "https://www.bfmtv.com/international/europe/italie/video-italie-un-important-dispositif-de-securite-deploye-pour-assurer-le-maintien-de-l-ordre-pendant-les-manifestations-dans-8-villes-du-pays_VN-202610240458.html",
+          "publishedAt": "2026-10-24T21:30:27.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/B3P-GfX2ps0uZzjFPs6M5kkOaJU=/0x0:1280x720/800x0/images/Italie-un-important-dispositif-de-securite-deploye-pour-assurer-le-maintien-de-l-ordre-pendant-les-manifestations-dans-8-villes-du-pays-2371662.jpg",
           "frontPage": false,
-          "datedAtCollection": true,
           "kind": "news",
           "section": "world"
         },
         {
-          "id": "3a1888a58178",
-          "outletId": "le-monde",
-          "headline": "EN DIRECT, guerre en Ukraine : Volodymyr Zelensky confirme qu’une réunion entre Russes, Ukrainiens et Américains aura lieu en novembre",
-          "url": "https://www.lemonde.fr/international/live/2026/10/25/en-direct-guerre-en-ukraine-volodymyr-zelensky-confirme-qu-une-reunion-entre-russes-ukrainiens-et-americains-aura-lieu-en-novembre_6799896_3210.html",
-          "publishedAt": "2026-10-25T19:57:03.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/21/1247/0/8256/4128/644/322/60/0/a449cbb_ftp-1-jtrccsrv83gg-afp-d3xh822.jpg",
+          "id": "a3c1b0513ad5",
+          "outletId": "rfi",
+          "headline": "Italie: déploiement massif des forces de sécurité pour les manifestations après des heurts",
+          "url": "https://www.rfi.fr/fr/europe/20261024-italie-d%C3%A9ploiement-massif-des-forces-de-s%C3%A9curit%C3%A9-pour-les-manifestations-apr%C3%A8s-des-heurts",
+          "publishedAt": "2026-10-24T21:28:12.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/882003a4-cff1-11f1-80a0-5b4a75578ebb/w:1024/p:16x9/2026-10-24T151135Z-974136982-RC2R9OAQZ5AS-RTRMADP-3-ITALY-PROTEST.jpg",
           "frontPage": false,
-          "kind": "live",
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "475cc3b0c338",
+          "outletId": "ouest-france",
+          "headline": "Italie : des manifestations contre la vie chère et neuf interpellations",
+          "url": "https://www.ouest-france.fr/europe/italie/italie-des-manifestations-contre-la-vie-chere-et-neuf-interpellations-272da5e6-cfe8-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-24T21:21:29.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNDBhZDE1ZTY5M2ExNGUyZjNjMzE0YmRkODdjY2M3ZjQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=826ec9bc3c99c3f250f08bc39f756896af236bc56a679f195e1141204e16fe4f",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "12353a1d28c4",
+          "outletId": "cnews",
+          "headline": "Italie : perquisitions, arrestations, soldats déployés… Le gouvernement renforce son dispositif sécuritaire",
+          "url": "https://www.cnews.fr/monde/2026-10-24/italie-perquisitions-arrestations-soldats-deployes-le-gouvernement-renforce-son",
+          "publishedAt": "2026-10-24T20:40:34.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/068_aa_24102026_3007350_6add05c60b600.jpg?h=480419cc&itok=iuQkYeFO",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "1b52e7cdb910",
+          "outletId": "le-monde",
+          "headline": "En Italie, des manifestations à l’ampleur limitée contre la hausse du coût de la vie après un déploiement massif de membres des forces de l’ordre et de l’armée",
+          "url": "https://www.lemonde.fr/international/article/2026/10/24/en-italie-des-manifestations-a-l-ampleur-limitee-contre-la-hausse-du-cout-de-la-vie-apres-un-massif-deploiement-de-forces-de-l-ordre_6799731_3210.html",
+          "publishedAt": "2026-10-24T20:30:01.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/24/491/0/5900/2950/644/322/60/0/663d4dd_ftp-1-xgb3obngfkja-2026-10-24t151135z-974136982-rc2r9oaqz5as-rtrmadp-3-italy-protest.JPG",
+          "frontPage": false,
+          "kind": "news",
           "section": "world"
         }
       ],
-      "topicId": "d0f958f5e67f",
-      "titledArticleCount": 2,
+      "topicId": "4ad68b0d9611",
+      "titledArticleCount": 5,
       "section": "world",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Le chef de l'Etat ukrainien a officialisé la tenue d'une concertation trilatérale associant Kiev, Moscou et Washington au cours du mois de novembre.",
-          "L'intervenant a réaffirmé la disposition de son pays au dialogue tout en exigeant le maintien des mesures coercitives visant la Russie préalablement à ces échanges."
+          "Le gouvernement de Giorgia Meloni a validé des mesures sécuritaires rigoureuses après des heurts comparables à ceux observés en France.",
+          "Des cortèges d'ampleur restreinte ont eu lieu ce samedi contre la cherté de la vie suite au déploiement des forces de l'ordre et des militaires."
         ],
         "centre": [
-          "Volodymyr Zelensky a validé l'organisation d'une rencontre diplomatique regroupant l'Ukraine, la Russie et les Etats-Unis en novembre prochain.",
-          "Le dirigeant a formulé le souhait que les sanctions économiques ne soient pas allégées avant la tenue de cette table ronde."
+          "Plusieurs milliers de manifestants ont défilé ce samedi 24 octobre à Rome et Milan à l'appel d'étudiants, de camionneurs et d'agriculteurs.",
+          "La mobilisation vise à protester contre la vie chère et les coupes budgétaires malgré un important dispositif de maintien de l'ordre.",
+          "Les actions se sont révélées en grande partie pacifiques tandis que des organisations étudiantes ont condamné la réponse sécuritaire du pouvoir."
+        ],
+        "droite": [
+          "Un important dispositif sécuritaire a été déployé dans huit villes italiennes en amont des rassemblements prévus ce samedi 24 octobre.",
+          "Les autorités ont mené des dizaines de perquisitions et interpellé un suspect présenté comme le meneur du Mouvement du 17 octobre.",
+          "Cinq cents soldats ont été mobilisés à Milan à la suite d'affrontements violents et de pillages survenus la semaine précédente."
         ]
       },
       "differences": [
-        "La gauche met l'accent sur les conditions préalables exigées par Kiev en insistant sur le maintien des sanctions internationales contre Moscou.",
-        "Le centre privilégie l'annonce institutionnelle de la tenue du sommet trilatéral et la confirmation de la disposition ukrainienne au dialogue."
+        "Le camp gauche insiste sur la nature restrictive des réformes de l'exécutif en place et relève la dimension sociale des mobilisations.",
+        "Le camp centre dresse le bilan d'une mobilisation modeste mais tendue, en mettant en avant les critiques des étudiants contre la stratégie des autorités.",
+        "Le camp droite focalise son traitement sur les opérations préventives de police, les interpellations et la menace sécuritaire justifiant l'envoi de l'armée."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 2,
-      "summarizedAt": "2026-10-25T20:01:23.947Z"
+      "summarizedArticleCount": 5
     },
     {
       "id": "a33bb0fdd2f6",
@@ -10086,119 +10340,94 @@
       "summarizedAt": "2026-10-25T14:01:25.517Z"
     },
     {
-      "id": "75822d657c7c",
-      "slug": "gims-reporte-sa-tournee-automnale-pour-raisons-de-sante",
-      "title": "Gims reporte sa tournée d'automne pour raisons médicales",
-      "createdAt": "2026-10-24T17:01:24.751Z",
+      "id": "f6c6cb46502c",
+      "slug": "des-journalistes-de-mediapart-denoncent-des-violences-du",
+      "title": "Des journalistes de Mediapart dénoncent des violences du service d'ordre au congrès du RN à Orléans",
+      "createdAt": "2026-10-25T02:01:20.102Z",
       "storyDay": "2026-10-24",
       "articles": [
         {
-          "id": "0eba4b09ff2e",
-          "outletId": "liberation",
-          "headline": "Gims annonce le report de sa tournée d’automne sur «avis médicaux»",
-          "url": "https://www.liberation.fr/culture/musique/gims-annonce-le-report-de-sa-tournee-dautomne-sur-avis-medicaux-20261025_GOVUFW3FMFACPD4JE3MTOBVFPU/",
-          "publishedAt": "2026-10-25T13:11:46.000Z",
+          "id": "e531a7e109ba",
+          "outletId": "lobs",
+          "headline": "Mediapart brièvement viré, des fouilles particulières… Au congrès du RN, frictions entre le service d’ordre et des médias",
+          "url": "https://www.nouvelobs.com/politique/20261025.OBS119510/mediapart-brievement-vire-des-fouilles-particulieres-au-congres-du-rn-frictions-entre-le-service-d-ordre-et-des-medias.html",
+          "publishedAt": "2026-10-25T09:57:40.000Z",
+          "imageUrl": "https://focus.nouvelobs.com/2026/10/25/0/0/5976/3984/0/0/60/0/84cc888_upload-1-1fkndttsqaal-080-hl-bohier-3357118.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "culture"
+          "section": "politics"
         },
         {
-          "id": "4a1e25a83ce6",
-          "outletId": "huffpost",
-          "headline": "Gims reporte son retour sur scène pour des raisons de santé : « Je dois me rendre à l’évidence »",
-          "url": "https://www.huffingtonpost.fr/culture/article/gims-reporte-son-retour-sur-scene-pour-des-raisons-de-sante-je-dois-me-rendre-a-l-evidence_344423.html",
-          "publishedAt": "2026-10-24T20:03:13.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/24/0/0/4271/2402/0/0/60/0/f5d1966_upload-1-omwg1b1z97rx-afp-20260716-c2ej3cq-v1-highres-francemusicfestival.jpg",
+          "id": "1b92139eb4a0",
+          "outletId": "ouest-france",
+          "headline": "Congrès du RN à Orléans : Mediapart exclu, des journalistes accusent le service d’ordre d’attouchements",
+          "url": "https://www.ouest-france.fr/politique/rassemblement-national/congres-du-rn-a-orleans-mediapart-exclu-des-journalistes-accusent-le-service-dordre-dattouchements-b7b6c562-cff1-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-24T22:07:07.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMTI1NWM2MmQzNjQ3OTBjYTY2YzEyYjY4Yjc4YWFmNDg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2f4c0dad1e5e43378d36c37ff05513d0464a41803d1e9ee121296ed0e251b37b",
           "frontPage": false,
           "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "3cfac379963d",
-          "outletId": "20-minutes",
-          "headline": "Gims annonce le report de sa tournée pour raisons médicales",
-          "url": "https://www.20minutes.fr/arts-stars/culture/musique/4257232-20261024-gims-annonce-report-tournee-raisons-medicales?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-24T18:37:15.000Z",
-          "imageUrl": "https://img.20mn.fr/zcQEhNpPQrG9z0jpWA-O-Ck/1200x768_presentation-de-gims-chanteur-au-high-club-de-nice-france-23-01-2025-syspeo-sysa014-credit-syspeo-sipa-2501241846",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture",
+          "section": "politics",
           "everFrontPage": true
         },
         {
-          "id": "5819d0172111",
-          "outletId": "cnews",
-          "headline": "Gims reporte sa tournée à quelques jours du coup d'envoi de son premier concert pour des raisons médicales",
-          "url": "https://www.cnews.fr/culture/2026-10-24/gims-reporte-sa-tournee-quelques-jours-du-coup-denvoi-de-son-premier-concert",
-          "publishedAt": "2026-10-24T18:22:32.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_c2fh2t4-taille1200_6adcece8cd1f1.jpg?h=f692311e&itok=vicVeP-A",
+          "id": "d20722711bbf",
+          "outletId": "20-minutes",
+          "headline": "« Mediapart dehors »… Au Congrès du RN à Orléans, certains médias n’étaient pas les bienvenus",
+          "url": "https://www.20minutes.fr/arts-stars/medias/4257249-20261024-mediapart-dehors-congres-rn-orleans-certains-medias-bienvenus?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-24T20:58:04.000Z",
+          "imageUrl": "https://img.20mn.fr/w7QwiQiNQM2ez_37Ku0Hcyk/1200x768_des-journalistes-du-media-francais-mediapart-sont-expulses-par-la-securite-du-19e-congres-a-orleans-en-france-le-samedi-24-octobre-2026-ap-photo-teresa-suarez-sua100-26297566662473-2610241757",
           "frontPage": false,
           "kind": "news",
-          "section": "culture"
+          "section": "politics",
+          "everFrontPage": true
         },
         {
-          "id": "faec81832d69",
-          "outletId": "le-parisien",
-          "headline": "« Une annonce difficile » : Gims reporte sa tournée prévue cet automne pour raisons de santé",
-          "url": "https://www.leparisien.fr/culture-loisirs/musique/une-annonce-difficile-gims-reporte-sa-tournee-prevue-cet-automne-pour-raisons-de-sante-24-10-2026-YEP26XXPNJGLVBGL534YL6IQDE.php",
-          "publishedAt": "2026-10-24T17:01:24.751Z",
+          "id": "06e2be5921a2",
+          "outletId": "huffpost",
+          "headline": "De Mediapart aux soutiens-gorge des femmes, le RN embarrassé par son service d’ordre lors de son congrès",
+          "url": "https://www.huffingtonpost.fr/politique/article/de-mediapart-aux-soutiens-gorge-des-femmes-le-rn-embarrasse-par-son-service-d-ordre-lors-de-son-congres_344393.html",
+          "publishedAt": "2026-10-24T20:48:37.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/24/257/0/4944/2781/0/0/60/0/3e4bd97_upload-1-zs2da96bjqbh-afp-20261024-d4b29aj-v1-highres-francepoliticsrncongress.jpg",
           "frontPage": false,
-          "datedAtCollection": true,
           "kind": "news",
-          "section": "culture"
+          "section": "politics"
         },
         {
-          "id": "3e12484f105f",
-          "outletId": "tf1-info",
-          "headline": "Gims reporte sa tournée en dernière minute : \"Je dois me rendre à l'évidence et me ranger aux avis médicaux\"",
-          "url": "https://www.tf1info.fr/culture/gims-reporte-sa-tournee-en-derniere-minute-je-dois-me-rendre-a-l-evidence-et-me-ranger-aux-avis-medicaux-2471788.html",
-          "publishedAt": "2026-10-24T16:42:37.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/gims-afp-25-666657-0@1x.jpeg",
+          "id": "e98394c9c9bc",
+          "outletId": "mediapart",
+          "headline": "«Mediapart» dénonce la brutalité du service d’ordre du RN à l’encontre de ses journalistes",
+          "url": "https://www.mediapart.fr/journal/politique/241026/mediapart-denonce-la-brutalite-du-service-d-ordre-du-rn-l-encontre-de-ses-journalistes",
+          "publishedAt": "2026-10-24T20:03:17.000Z",
+          "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/10/24/261024-img-pp-video.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "ef2585bb5c64",
-          "outletId": "bfmtv",
-          "headline": "\"C'est une annonce difficile\": Gims annonce le report de ses concerts pour raisons médicales",
-          "url": "https://www.bfmtv.com/culture/musique/c-est-une-annonce-difficile-gims-annonce-le-report-de-ses-concerts-pour-raisons-medicales_AN-202610240362.html",
-          "publishedAt": "2026-10-24T16:34:14.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/8Hzf5Za1rGHpqd7JV5Kmw-POJ3A=/0x40:768x472/800x0/images/Gims-en-concert-a-Abidjan-le-17-mai-2024-2069686.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
+          "section": "politics"
         }
       ],
-      "topicId": "75822d657c7c",
-      "titledArticleCount": 7,
-      "section": "culture",
+      "topicId": "0d0f404e2998",
+      "titledArticleCount": 5,
+      "section": "politics",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Le chanteur Gims a annoncé le report de sa tournée d'automne baptisée Carpe Diem Tour en raison d'impératifs médicaux.",
-          "Prévue initialement pour démarrer le 27 octobre en France et en Belgique, la série de 15 concerts est repoussée à la fin de l'année 2027.",
-          "L'artiste a officialisé cette décision à contrecœur via un communiqué et sur son compte Instagram."
+          "Quatre journalistes de Mediapart ont été expulsés avec brutalité de la salle par le service d'ordre lors du congrès du Rassemblement national à Orléans.",
+          "Le site d'investigation dénonce des pratiques inacceptables en démocratie, alimentées par les menaces reçues après ses révélations sur Jordan Bardella.",
+          "Le premier jour de l'événement a également été marqué par des vérifications du port de soutiens-gorges lors des fouilles subies par des femmes.",
+          "L'ensemble de ces incidents est perçu par plusieurs rédactions comme le reflet du penchant autoritaire du parti d'extrême droite."
         ],
         "centre": [
-          "Gims a reporté sa tournée d'automne en France et en Belgique en raison d'un problème de santé imprévu.",
-          "Le chanteur a officialisé sur Instagram le report de ses représentations initialement programmées entre le 27 octobre et le 17 décembre 2026.",
-          "Les nouvelles dates des concerts de son Carpe Diem Tour ont déjà été dévoilées au public."
-        ],
-        "droite": [
-          "Gims a été contraint d'annuler le lancement de son Carpe Diem Tour prévu à Nantes seulement 72 heures avant le début.",
-          "Le chanteur a dû se plier aux recommandations de ses médecins malgré son souhait initial de monter sur scène.",
-          "L'artiste, sacré artiste masculin aux Victoires de la musique 2025, a exprimé sa tristesse face à ce report de dernière minute."
+          "Des journalistes de Mediapart ont été exfiltrés de force de l'espace presse par la sécurité du Rassemblement national lors du congrès d'Orléans.",
+          "Plusieurs femmes présentes ont rapporté avoir subi des palpations à la poitrine qualifiées d'attouchements lors des contrôles à l'entrée.",
+          "Les journalistes du site d'investigation ont été conspués et pris à partie par des militants avant de devoir momentanément quitter les lieux."
         ]
       },
       "differences": [
-        "La gauche met l'accent sur l'ampleur du report avec un renvoi lointain à fin 2027.",
-        "Le centre insiste sur l'aspect pratique en soulignant que les nouvelles dates du Carpe Diem Tour ont rapidement été communiquées.",
-        "La droite privilégie le récit dramatique de l'annulation de dernière minute à soixante-douze heures du premier concert prévu à Nantes."
+        "La gauche insiste lourdement sur la gravité institutionnelle des violences en y voyant une menace directe contre la démocratie et la liberté d'informer.",
+        "Le centre adopte un ton factuel centré sur les incidents précis survenus dans l'espace presse et les accusations de gestes déplacés lors des fouilles."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 7,
-      "summarizedAt": "2026-10-25T14:01:25.517Z"
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-10-25T10:01:21.602Z"
     },
     {
       "id": "02f68671bbbf",
@@ -10628,6 +10857,121 @@
       "summarizedArticleCount": 3
     },
     {
+      "id": "75822d657c7c",
+      "slug": "gims-reporte-sa-tournee-automnale-pour-raisons-de-sante",
+      "title": "Gims reporte sa tournée d'automne pour raisons médicales",
+      "createdAt": "2026-10-24T17:01:24.751Z",
+      "storyDay": "2026-10-24",
+      "articles": [
+        {
+          "id": "0eba4b09ff2e",
+          "outletId": "liberation",
+          "headline": "Gims annonce le report de sa tournée d’automne sur «avis médicaux»",
+          "url": "https://www.liberation.fr/culture/musique/gims-annonce-le-report-de-sa-tournee-dautomne-sur-avis-medicaux-20261025_GOVUFW3FMFACPD4JE3MTOBVFPU/",
+          "publishedAt": "2026-10-25T13:11:46.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "culture"
+        },
+        {
+          "id": "4a1e25a83ce6",
+          "outletId": "huffpost",
+          "headline": "Gims reporte son retour sur scène pour des raisons de santé : « Je dois me rendre à l’évidence »",
+          "url": "https://www.huffingtonpost.fr/culture/article/gims-reporte-son-retour-sur-scene-pour-des-raisons-de-sante-je-dois-me-rendre-a-l-evidence_344423.html",
+          "publishedAt": "2026-10-24T20:03:13.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/24/0/0/4271/2402/0/0/60/0/f5d1966_upload-1-omwg1b1z97rx-afp-20260716-c2ej3cq-v1-highres-francemusicfestival.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "culture"
+        },
+        {
+          "id": "3cfac379963d",
+          "outletId": "20-minutes",
+          "headline": "Gims annonce le report de sa tournée pour raisons médicales",
+          "url": "https://www.20minutes.fr/arts-stars/culture/musique/4257232-20261024-gims-annonce-report-tournee-raisons-medicales?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-24T18:37:15.000Z",
+          "imageUrl": "https://img.20mn.fr/zcQEhNpPQrG9z0jpWA-O-Ck/1200x768_presentation-de-gims-chanteur-au-high-club-de-nice-france-23-01-2025-syspeo-sysa014-credit-syspeo-sipa-2501241846",
+          "frontPage": false,
+          "kind": "news",
+          "section": "culture",
+          "everFrontPage": true
+        },
+        {
+          "id": "5819d0172111",
+          "outletId": "cnews",
+          "headline": "Gims reporte sa tournée à quelques jours du coup d'envoi de son premier concert pour des raisons médicales",
+          "url": "https://www.cnews.fr/culture/2026-10-24/gims-reporte-sa-tournee-quelques-jours-du-coup-denvoi-de-son-premier-concert",
+          "publishedAt": "2026-10-24T18:22:32.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_c2fh2t4-taille1200_6adcece8cd1f1.jpg?h=f692311e&itok=vicVeP-A",
+          "frontPage": false,
+          "kind": "news",
+          "section": "culture"
+        },
+        {
+          "id": "faec81832d69",
+          "outletId": "le-parisien",
+          "headline": "« Une annonce difficile » : Gims reporte sa tournée prévue cet automne pour raisons de santé",
+          "url": "https://www.leparisien.fr/culture-loisirs/musique/une-annonce-difficile-gims-reporte-sa-tournee-prevue-cet-automne-pour-raisons-de-sante-24-10-2026-YEP26XXPNJGLVBGL534YL6IQDE.php",
+          "publishedAt": "2026-10-24T17:01:24.751Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "culture"
+        },
+        {
+          "id": "3e12484f105f",
+          "outletId": "tf1-info",
+          "headline": "Gims reporte sa tournée en dernière minute : \"Je dois me rendre à l'évidence et me ranger aux avis médicaux\"",
+          "url": "https://www.tf1info.fr/culture/gims-reporte-sa-tournee-en-derniere-minute-je-dois-me-rendre-a-l-evidence-et-me-ranger-aux-avis-medicaux-2471788.html",
+          "publishedAt": "2026-10-24T16:42:37.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/gims-afp-25-666657-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "culture"
+        },
+        {
+          "id": "ef2585bb5c64",
+          "outletId": "bfmtv",
+          "headline": "\"C'est une annonce difficile\": Gims annonce le report de ses concerts pour raisons médicales",
+          "url": "https://www.bfmtv.com/culture/musique/c-est-une-annonce-difficile-gims-annonce-le-report-de-ses-concerts-pour-raisons-medicales_AN-202610240362.html",
+          "publishedAt": "2026-10-24T16:34:14.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/8Hzf5Za1rGHpqd7JV5Kmw-POJ3A=/0x40:768x472/800x0/images/Gims-en-concert-a-Abidjan-le-17-mai-2024-2069686.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "culture"
+        }
+      ],
+      "topicId": "75822d657c7c",
+      "titledArticleCount": 7,
+      "section": "culture",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le chanteur Gims a annoncé le report de sa tournée d'automne baptisée Carpe Diem Tour en raison d'impératifs médicaux.",
+          "Prévue initialement pour démarrer le 27 octobre en France et en Belgique, la série de 15 concerts est repoussée à la fin de l'année 2027.",
+          "L'artiste a officialisé cette décision à contrecœur via un communiqué et sur son compte Instagram."
+        ],
+        "centre": [
+          "Gims a reporté sa tournée d'automne en France et en Belgique en raison d'un problème de santé imprévu.",
+          "Le chanteur a officialisé sur Instagram le report de ses représentations initialement programmées entre le 27 octobre et le 17 décembre 2026.",
+          "Les nouvelles dates des concerts de son Carpe Diem Tour ont déjà été dévoilées au public."
+        ],
+        "droite": [
+          "Gims a été contraint d'annuler le lancement de son Carpe Diem Tour prévu à Nantes seulement 72 heures avant le début.",
+          "Le chanteur a dû se plier aux recommandations de ses médecins malgré son souhait initial de monter sur scène.",
+          "L'artiste, sacré artiste masculin aux Victoires de la musique 2025, a exprimé sa tristesse face à ce report de dernière minute."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur l'ampleur du report avec un renvoi lointain à fin 2027.",
+        "Le centre insiste sur l'aspect pratique en soulignant que les nouvelles dates du Carpe Diem Tour ont rapidement été communiquées.",
+        "La droite privilégie le récit dramatique de l'annulation de dernière minute à soixante-douze heures du premier concert prévu à Nantes."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 7,
+      "summarizedAt": "2026-10-25T14:01:25.517Z"
+    },
+    {
       "id": "17989ef74549",
       "slug": "des-manifestants-affrontent-les-forces-de-l-ordre-en-albanie",
       "title": "Des manifestants affrontent les forces de l'ordre en Albanie contre la corruption",
@@ -10890,164 +11234,6 @@
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 9
-    },
-    {
-      "id": "d8f9c2a78a72",
-      "slug": "la-gauche-manifeste-a-orleans-contre-le-congres-du",
-      "title": "La gauche manifeste à Orléans contre le congrès du Rassemblement national",
-      "createdAt": "2026-10-25T05:01:21.112Z",
-      "storyDay": "2026-10-24",
-      "articles": [
-        {
-          "id": "328bc5169e36",
-          "outletId": "lobs",
-          "headline": "Dans la manifestation contre le RN à Orléans : « Après l’attaque de Trappes, les racistes sont encore moins les bienvenus »",
-          "url": "https://www.nouvelobs.com/politique/20261024.OBS119500/dans-la-manifestation-contre-le-rn-a-orleans-apres-l-attaque-de-trappes-les-racistes-sont-encore-moins-les-bienvenus.html",
-          "publishedAt": "2026-10-24T20:11:59.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "0ebd6e2738f3",
-          "outletId": "mediapart",
-          "headline": "«Les véritables patriotes, c’est nous»: face au congrès du RN, la gauche défile unie à Orléans",
-          "url": "https://www.mediapart.fr/journal/france/241026/les-veritables-patriotes-c-est-nous-face-au-congres-du-rn-la-gauche-defile-unie-orleans",
-          "publishedAt": "2026-10-24T19:17:44.000Z",
-          "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/10/24/261024-img-a-la-contre-mobilisation-02.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "c3ae14709d0e",
-          "outletId": "le-figaro",
-          "headline": "À Orléans, une mobilisation anti-RN sans heurts majeurs",
-          "url": "https://www.lefigaro.fr/politique/a-orleans-une-mobilisation-anti-rn-sans-heurts-majeurs-20261024",
-          "publishedAt": "2026-10-24T17:26:30.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/24/efd2131e915c0b3bd9bd75e4ff8b0f58ecebc7dc18f5a8a362a354cb8bd31c2e.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "2b49b6d435c8",
-          "outletId": "humanite",
-          "headline": "Congrès du RN à Orléans : toute la gauche politique et sociale se rassemble contre le Rassemblement national et ses perroquets",
-          "url": "https://www.humanite.fr/politique/antifascisme/a-orleans-toute-la-gauche-politique-et-sociale-se-rassemble-contre-le-rn-et-ses-perroquets",
-          "publishedAt": "2026-10-24T16:00:00.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/IMG-20261024-WA0014.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "56e79aeb641f",
-          "outletId": "huffpost",
-          "headline": "« Ils sont responsables d’un climat raciste » : Après l’attaque terroriste de Trappes, le RN est au centre des critiques",
-          "url": "https://www.huffingtonpost.fr/politique/article/ils-sont-responsables-d-un-climat-raciste-apres-l-attaque-terroriste-de-trappes-le-rn-est-au-centre-des-critiques_344357.html",
-          "publishedAt": "2026-10-24T15:49:37.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/24/497/0/4767/2681/0/0/60/0/8ee5010_upload-1-wc2j2ip7nvlx-afp-20261024-d4al8v6-v1-highres-francesocialpoliticsdemo.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "66763e06f103",
-          "outletId": "20-minutes",
-          "headline": "Congrès RN à Orléans : Dans une ville bunkérisée, la gauche manifeste contre « un parti qui menace la démocratie »",
-          "url": "https://www.20minutes.fr/politique/4257192-20261024-congres-rn-orleans-ville-bunkerisee-gauche-manifeste-contre-parti-menace-democratie?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-24T15:47:20.000Z",
-          "imageUrl": "https://img.20mn.fr/h_JnHOMJTYWthNyr0e4wBCk/1200x768_un-manifestant-tient-une-pancarte-sur-laquelle-on-peut-lire-non-au-rn-lors-d-une-manifestation-en-marge-du-congres-d-extreme-droite-du-rassemblement-national-rn-a-orleans-en-france-le-samedi-24-octobre-2026-ap-photo-teresa-suarez-ena125-26297361091916-2610241218",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "3c30133fef86",
-          "outletId": "liberation",
-          "headline": "«On a un ennemi commun, le RN» : à Orléans, la gauche unie contre l’extrême droite dans une grande manifestation pacifiste",
-          "url": "https://www.liberation.fr/politique/on-a-un-ennemi-commun-le-rn-a-orleans-la-gauche-unie-contre-lextreme-droite-dans-une-grande-manifestation-pacifiste-20261024_X2AMCZTZTNBLBMGLV3GBM464GA/",
-          "publishedAt": "2026-10-24T15:30:28.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "6ef6874ce43c",
-          "outletId": "franceinfo",
-          "headline": "\"J'aurais beaucoup à craindre que ce genre de parti passe au pouvoir\" : à Orléans, une marche pour dire non au Rassemblement national",
-          "url": "https://www.franceinfo.fr/politique/front-national/j-aurais-beaucoup-a-craindre-que-ce-genre-de-parti-passe-au-pouvoir-a-orleans-une-marche-pour-dire-non-au-rassemblement-national_8252362.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-24T15:22:40.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/4vNyweKwoJEIibDZ7lcQxfRu4XQ/0x0:5775x3248/432x243/filters:format(jpg)/2026/10/24/6adccc79c4b8f893310234.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "293715a1dd26",
-          "outletId": "la-croix",
-          "headline": "« Le RN n’a sa place ni ici ni ailleurs » : à Orléans, intersyndicale et militants s’affichent unis contre l’extrême droite",
-          "url": "https://www.la-croix.com/societe/le-rn-n-a-sa-place-ni-ici-ni-ailleurs-a-orleans-intersyndicale-et-militants-saffichent-unis-contre-lextreme-droite-20261024",
-          "publishedAt": "2026-10-24T14:47:23.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/24/2571462-des-militants-anti-extreme-droite-manifestent-a-or.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "aadef7d1bbfa",
-          "outletId": "france-24",
-          "headline": "Une forte mobilisation anti-Rassemblement National à Orléans en marge du congrès du parti",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261024-une-forte-mobilisation-anti-rassemblement-national-%C3%A0-orl%C3%A9ans-en-marge-du-congr%C3%A8s-du-parti",
-          "publishedAt": "2026-10-24T14:23:10.000Z",
-          "imageUrl": "https://s.france24.com/media/display/2ce7b576-cfb6-11f1-a23b-bba4eee3dc72/w:1024/p:16x9/AP26297385911510.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "2aeb8eeb2999",
-          "outletId": "le-point",
-          "headline": "« L’extrême droite fait des morts » : à Orléans, le cortège antiraciste a défilé dans le calme",
-          "url": "https://www.lepoint.fr/politique/lextreme-droite-fait-des-morts-a-orleans-le-cortege-antiraciste-a-defile-dans-le-calme-EHP4LA6FN5BW3A6H57HNU6VQZM/",
-          "publishedAt": "2026-10-24T13:05:38.000Z",
-          "imageUrl": "https://www.lepoint.fr/resizer/v2/3VCGK5BEQBLFVMJA3VZXRF4ZWE.jpg?auth=7bb7d1ddf19ce966a58dbeff49b2e37079fb045da0c6cb956daf3d9cb4389895&smart=true&width=1200&height=900",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "0d0f404e2998",
-      "titledArticleCount": 11,
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Entre 11 000 et 30 000 manifestants ont défilé ce samedi 24 octobre à Orléans dans un cortège antifasciste et pacifiste pour protester contre le congrès du Rassemblement national.",
-          "La mobilisation, marquée par une large union de la gauche politique et syndicale, s'est déroulée sans heurts dans une ville lourdement sécurisée.",
-          "Le contexte a été marqué par une forte émotion et des critiques virulentes contre l'extrême droite suite à l'attentat raciste et islamophobe perpétré à Trappes."
-        ],
-        "centre": [
-          "Entre 11 000 et 26 000 opposants au Rassemblement national ont manifesté ce samedi 24 octobre à Orléans, selon les autorités et les organisateurs.",
-          "Le rassemblement, qui s'est déroulé dans le calme, s'est tenu à proximité du lieu où le parti d'extrême droite organisait son congrès annuel.",
-          "Associations, syndicats et partis politiques ont joint leurs forces pour former un front commun malgré la crainte des autorités face à d'éventuels débordements."
-        ],
-        "droite": [
-          "Une mobilisation anti-RN s'est déroulée sans heurts majeurs ce samedi à Orléans, réunissant une dizaine de milliers de personnes au nord de la ville.",
-          "Le cortège antiraciste a défilé dans le calme tandis que le congrès du parti à la flamme débutait de l'autre côté de la ville, sous haute surveillance.",
-          "Le maire d'Orléans a tenu à rappeler que la partie politique n'était pas encore gagnée face à l'extrême droite."
-        ]
-      },
-      "differences": [
-        "La gauche met fortement l'accent sur la dimension antifasciste de la mobilisation etancre sa contestation dans le climat d'émotion provoqué par l'attentat de Trappes, tout en insistant sur la large union syndicale et politique.",
-        "Le centre adopte un ton factuel et mesuré en se focalisant sur les estimations contradictoires de participation fournies par la préfecture et les organisateurs, tout en soulignant le défi sécuritaire pour la ville.",
-        "La droite privilégie un angle sécuritaire et rapporteur en insistant sur l'absence de heurts majeurs et le calme de la manifestation, tout en maintenant une vigilance marquée face aux implantations de l'extrême droite."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 11
     }
   ],
   "weekStories": [
@@ -11154,7 +11340,7 @@
           "url": "https://www.ouest-france.fr/societe/faits-divers/attaque-a-trappes-et-la-verriere-le-suspect-soumis-a-une-periode-dobservation-psychiatrique-9fe5ae30-d087-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-10-25T17:50:55.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjVkNzhkN2M1YWY4MzA5YzUyODU4NGIzNzRhZjJmNzY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=8869ce205325c822f76a296e8fe43d01ac31e27f3fa4e86390ac4d2b579ff2f3",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -28913,6 +29099,18 @@
       "storyDay": "2026-10-25",
       "articles": [
         {
+          "id": "002cf1670bd4",
+          "outletId": "ouest-france",
+          "headline": "Présidentielle au Brésil : après des problèmes de transport public, le vote est prolongé de deux heures",
+          "url": "https://www.ouest-france.fr/monde/bresil/presidentielle-au-bresil-apres-des-problemes-de-transport-public-le-vote-est-prolonge-de-deux-heures-45a80584-d0b0-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-25T20:58:30.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYjUyMzZmZmM0NTczOTY0NWVkNmQ3MmY3ZmQxNzljZTA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1eeb7f486d44375b41acee37653817b10ac51e8f94180addb31af2f01bc6d0db",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
           "id": "28c5bda2b958",
           "outletId": "le-figaro",
           "headline": "«Des électeurs sont empêchés de voter», faute de bus dans plusieurs villes du Brésil, dénonce Lula",
@@ -31323,7 +31521,7 @@
           "url": "https://www.lemonde.fr/sport/article/2026/10/25/la-nfl-fait-ses-grands-debuts-a-paris-un-rendez-vous-tres-attendu-a-la-preparation-perturbee_6800105_3242.html",
           "publishedAt": "2026-10-25T17:22:32.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/25/657/0/3941/1970/644/322/60/0/be5478a_ftp-1-pdk4mighhmsr-d11fdb44c3454ef3bd2dcabac90697a9-0-70eac7d37c244d949b0c4021411c7686.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true

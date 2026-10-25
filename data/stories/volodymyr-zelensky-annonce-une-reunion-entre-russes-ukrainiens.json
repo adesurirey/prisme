@@ -1,10 +1,21 @@
 {
   "id": "459df1ff8cd9",
   "slug": "volodymyr-zelensky-annonce-une-reunion-entre-russes-ukrainiens",
-  "title": "Volodymyr Zelensky annonce une réunion entre Russes, Ukrainiens et Américains en novembre",
+  "title": "Volodymyr Zelensky confirme qu'une réunion entre Russes, Ukrainiens et Américains aura lieu en novembre",
   "createdAt": "2026-10-25T20:01:23.947Z",
   "storyDay": "2026-10-25",
   "articles": [
+    {
+      "id": "c0229b9b2967",
+      "outletId": "le-figaro",
+      "headline": "Volodymyr Zelensky confirme qu'une réunion entre Russes, Ukrainiens et Américains aura lieu en novembre",
+      "url": "https://www.lefigaro.fr/international/volodymyr-zelensky-confirme-qu-une-reunion-entre-russes-ukrainiens-et-americains-aura-lieu-en-novembre-20261025",
+      "publishedAt": "2026-10-25T20:37:04.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/25/c90daa5c5e174bbe0003e964ff5206149202becbdf0c2e6b8b296a6e8ce79720.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "adb47975b6f2",
       "outletId": "le-parisien",
@@ -23,30 +34,37 @@
       "url": "https://www.lemonde.fr/international/live/2026/10/25/en-direct-guerre-en-ukraine-volodymyr-zelensky-confirme-qu-une-reunion-entre-russes-ukrainiens-et-americains-aura-lieu-en-novembre_6799896_3210.html",
       "publishedAt": "2026-10-25T19:57:03.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/21/1247/0/8256/4128/644/322/60/0/a449cbb_ftp-1-jtrccsrv83gg-afp-d3xh822.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "live",
-      "section": "world"
+      "section": "world",
+      "everFrontPage": true
     }
   ],
   "topicId": "d0f958f5e67f",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le chef de l'Etat ukrainien a officialisé la tenue d'une concertation trilatérale associant Kiev, Moscou et Washington au cours du mois de novembre.",
-      "L'intervenant a réaffirmé la disposition de son pays au dialogue tout en exigeant le maintien des mesures coercitives visant la Russie préalablement à ces échanges."
+      "Le président ukrainien a confirmé lors d'une interview télévisée la tenue d'une réunion trilatérale en novembre entre l'Ukraine, la Russie et les États-Unis.",
+      "L'Ukraine se déclare « prête à discuter » dans le cadre de ces pourparlers.",
+      "Volodymyr Zelensky exige que les sanctions internationales contre Moscou soient maintenues jusqu'à la tenue de ces négociations."
     ],
     "centre": [
-      "Volodymyr Zelensky a validé l'organisation d'une rencontre diplomatique regroupant l'Ukraine, la Russie et les Etats-Unis en novembre prochain.",
-      "Le dirigeant a formulé le souhait que les sanctions économiques ne soient pas allégées avant la tenue de cette table ronde."
+      "Volodymyr Zelensky a officialisé la tenue d'une rencontre diplomatique trilatérale regroupant Ukrainiens, Russes et Américains pour le mois de novembre.",
+      "Le chef de l'État ukrainien a affirmé que son pays aborde ces échanges avec la volonté d'ouvrir le dialogue."
+    ],
+    "droite": [
+      "Une réunion trilatérale associant Russes, Ukrainiens et Américains est confirmée pour le mois de novembre.",
+      "L'événement s'inscrit dans la continuité des initiatives diplomatiques menées par Washington pour relancer les négociations de paix après l'interruption des pourparlers depuis le début de la guerre en Iran."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur les conditions préalables exigées par Kiev en insistant sur le maintien des sanctions internationales contre Moscou.",
-    "Le centre privilégie l'annonce institutionnelle de la tenue du sommet trilatéral et la confirmation de la disposition ukrainienne au dialogue."
+    "La gauche insiste sur les conditions politiques posées par Kiev en exigeant le maintien des sanctions contre Moscou.",
+    "Le centre adopte un angle factuel direct en mettant en avant la volonté affichée du dirigeant ukrainien d'engager le dialogue.",
+    "La droite privilégie l'analyse géopolitique en contextualisant la réunion par les efforts diplomatiques américains récents."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-10-25T20:01:23.947Z"
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-10-25T21:01:21.791Z"
 }

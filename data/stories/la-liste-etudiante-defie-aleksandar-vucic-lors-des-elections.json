@@ -1,10 +1,32 @@
 {
   "id": "11829ed1c944",
   "slug": "la-liste-etudiante-defie-aleksandar-vucic-lors-des-elections",
-  "title": "Les Serbes se mobilisent aux élections législatives dans un scrutin aux allures de référendum anti-Vucic",
+  "title": "Les Serbes se mobilisent aux élections législatives et Aleksandar Vucic reconnaît sa défaite",
   "createdAt": "2026-10-25T09:01:21.796Z",
   "storyDay": "2026-10-25",
   "articles": [
+    {
+      "id": "4405daef44bd",
+      "outletId": "le-monde",
+      "headline": "Serbie : Aleksandar Vucic reconnaît sa défaite aux élections législatives anticipées",
+      "url": "https://www.lemonde.fr/international/article/2026/10/25/serbie-aleksandar-vucic-reconnait-sa-defaite-aux-elections-legislatives-anticipees_6800116_3210.html",
+      "publishedAt": "2026-10-25T20:55:51.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/25/396/0/4752/2376/644/322/60/0/5f7cf65_ftp-1-gximiiu49lh4-2026-10-25t204932z-1410583075-rc2jaoaafn8o-rtrmadp-3-serbia-election.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "66c9fa88df72",
+      "outletId": "rfi",
+      "headline": "Serbie: l'ancien président Aleksandar Vucic reconnaît sa défaite aux législatives anticipées",
+      "url": "https://www.rfi.fr/fr/europe/20261025-serbie-l-ancien-pr%C3%A9sident-aleksandar-vucic-reconna%C3%AEt-sa-d%C3%A9faite-aux-l%C3%A9gislatives-anticip%C3%A9es",
+      "publishedAt": "2026-10-25T20:55:08.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/ffdbf976-d0b3-11f1-92c6-bba4eee3dc72/w:1024/p:16x9/AP26298363103588.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "ee5006431c69",
       "outletId": "le-figaro",
@@ -12,7 +34,7 @@
       "url": "https://www.lefigaro.fr/international/serbie-taux-de-participation-record-depuis-plus-de-30-ans-pour-des-legislatives-20261025",
       "publishedAt": "2026-10-25T19:24:50.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/25/9770819c3352005868e6649b937c88fb1c67d7aba2a1907f2689d7c2c3331730.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -96,26 +118,30 @@
     }
   ],
   "topicId": "11829ed1c944",
-  "titledArticleCount": 7,
+  "titledArticleCount": 10,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le taux de participation a atteint près de 35% à midi, en nette hausse par rapport aux précédentes législatives de 2023.",
-      "Une liste soutenue par le mouvement étudiant se présente aux élections après deux ans de mobilisation contre la corruption et le pouvoir du dirigeant serbe.",
-      "Le président démissionnaire Aleksandar Vucic brigue le poste de premier ministre dans un scrutin très disputé."
+      "La Serbie organise des élections législatives anticipées le 25 octobre après deux ans de manifestations contre la corruption et le pouvoir du dirigeant nationaliste Aleksandar Vucic.",
+      "Une liste d'opposition menée par des étudiants et composée de personnalités de la société civile affronte le parti au pouvoir SNS lors d'un scrutin marqué par une forte mobilisation.",
+      "Aleksandar Vucic reconnaît finalement sa défaite électorale après avoir dirigé le pays pendant quatorze ans, menacé par un important mouvement de contestation populaire."
     ],
     "centre": [
-      "Les électeurs serbes votent lors d'élections législatives anticipées convoquées après deux ans de manifestations nées de l'effondrement du toit d'une gare à Novi Sad en 2024.",
-      "Les étudiants font face au parti auvergnat avec une liste de 250 personnalités de la société civile, portés par des rassemblements massifs.",
-      "La société civile exprime des craintes quant à une possible utilisation de la force par le pouvoir en cas de défaite électorale."
+      "Les électeurs serbes se mobilisent massivement pour des élections législatives anticipées aux allures de référendum contre l'ancien président Aleksandar Vucic.",
+      "Le scrutin fait suite à une grave crise politique déclenchée par l'effondrement tragique d'un toit de gare à Novi Sad en 2024, provoquant une mobilisation historique des étudiants.",
+      "L'ancien dirigeant populiste Aleksandar Vucic concède sa défaite électorale face à une liste étudiante soutenue par une foule importante de manifestants."
+    ],
+    "droite": [
+      "La commission électorale serbe enregistre un taux de participation record de 64,89 % à 18 heures lors des élections législatives anticipées du 25 octobre, du jamais vu depuis 1993."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la forte mobilisation citoyenne et la dynamique de contestation menée par les étudiants contre la corruption.",
-    "Le centre insiste sur l'origine du mouvement de protestation lié à l'accident tragique de Novi Sad et sur les tensions autour d'une éventuelle défaite du pouvoir en place."
+    "La gauche insiste lourdement sur la nature contestataire du scrutin, mettant en avant la longue mobilisation des étudiants contre la corruption du système en place.",
+    "Le centre analyse le vote comme un référendum politique direct contre le dirigeant sortant et détaille les origines de la crise issue du drame de Novi Sad.",
+    "La droite se focalise principalement sur la dimension technique et statistique du scrutin en soulignant la valeur historique du taux de participation record."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 7,
-  "summarizedAt": "2026-10-25T18:01:27.811Z"
+  "summarizedArticleCount": 10,
+  "summarizedAt": "2026-10-25T21:01:21.791Z"
 }
