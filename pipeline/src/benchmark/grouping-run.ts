@@ -20,8 +20,13 @@
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 import type { GroupingProposal } from '../gemini.ts';
-import { type FixtureSet, fixturesFromData } from './grouping-fixtures.ts';
 import {
+  type FixtureSet,
+  fixturesFromData,
+  type GroupingFixture,
+} from './grouping-fixtures.ts';
+import {
+  type DeadlockMetrics,
   type Evaluation,
   evaluateProposal,
   stability,
@@ -51,13 +56,15 @@ export interface FixtureRun {
     coverage: Evaluation['coverage'];
     dupSeeds: Evaluation['dupSeeds'];
     clusters: Evaluation['clusters'];
+    /** The deadlock fixture only (issue #149). */
+    deadlock?: DeadlockMetrics;
   } | null;
   /** Full proposal: ids, model-written titles — nothing from the feeds. */
   proposal: GroupingProposal | null;
 }
 
 export interface FixtureResult {
-  fixture: 'from-empty' | 'long-context';
+  fixture: GroupingFixture['name'];
   freshArticles: number;
   liveStories: number;
   runs: FixtureRun[];
@@ -132,6 +139,12 @@ async function runFixture(
       call.proposal == null || empty
         ? null
         : evaluateProposal(fixture, call.proposal);
+    if (evaluation?.deadlock != null) {
+      const d = evaluation.deadlock;
+      console.log(
+        `    run ${run} deadlock: → magnet ${d.toMagnet}, born ${d.born} (${d.birthClusters} new-Story cluster(s))`,
+      );
+    }
     if (call.proposal == null) {
       console.error(
         `${model.spec} ${fixture.name} run ${run}: unparseable response (${call.outputTokens} output tokens, finish ${call.finishReason ?? '?'}) — head: ${(call.rawSnippet ?? '').slice(0, 150).replaceAll(/\s+/gu, ' ')}`,
@@ -155,6 +168,9 @@ async function runFixture(
               coverage: evaluation.coverage,
               dupSeeds: evaluation.dupSeeds,
               clusters: evaluation.clusters,
+              ...(evaluation.deadlock != null
+                ? { deadlock: evaluation.deadlock }
+                : {}),
             },
       proposal: call.proposal,
     });
@@ -204,10 +220,14 @@ async function runCandidate(
     if (best?.evaluation) {
       const c = best.evaluation.coverage;
       const cl = best.evaluation.clusters;
+      const d = best.evaluation.deadlock;
       console.log(
         `    best of ${validRuns.length} valid runs: coverage ${c.covered}/${c.total}, dup-seeds ${best.evaluation.dupSeeds.length}, ` +
           `splits ${cl.splitGroups}/${cl.groundTruthGroups} groups, over-merged ${cl.overMergedPairs} pairs, ` +
-          `stability ${result.stability == null ? 'n/a' : `${(result.stability * 100).toFixed(1)}%`}`,
+          `stability ${result.stability == null ? 'n/a' : `${(result.stability * 100).toFixed(1)}%`}` +
+          (d != null
+            ? ` — deadlock → magnet ${d.toMagnet}, born ${d.born} (${d.birthClusters} cluster(s))`
+            : ''),
       );
     }
     fixtures.push(result);
@@ -236,6 +256,8 @@ function summarize(result: FixtureResult): {
   keptPairs: number | null;
   splitPairs: number | null;
   unknownTargets: number;
+  /** The deadlock fixture only (issue #149): null on the standard fixtures. */
+  deadlock: DeadlockMetrics | null;
   avgLatencyMs: number;
   avgInputTokens: number;
   avgCostUsd: number | null;
@@ -265,6 +287,7 @@ function summarize(result: FixtureResult): {
     keptPairs: cl.keptPairs,
     splitPairs: cl.splitPairs,
     unknownTargets: cov.unknownTarget.length,
+    deadlock: best.evaluation?.deadlock ?? null,
     avgLatencyMs: avg((r) => r.latencyMs),
     avgInputTokens: avg((r) => r.inputTokens),
     avgCostUsd: costs.length > 0 ? avg((r) => r.costUsd ?? 0) : null,
@@ -284,27 +307,33 @@ async function writeReport(records: CandidateRecord[]): Promise<void> {
   const lines: string[] = [
     '# Grouping benchmark results (issue #41)',
     '',
-    `Regenerated from .benchmark/grouping/results/*.json — fixtures built from data/ at edition ${records[0]?.fixtureBuiltAt ?? 'n/a'}.`,
+    `Regenerated from .benchmark/grouping/results/*.json — the standard fixtures build from data/ at edition ${records[0]?.fixtureBuiltAt ?? 'n/a'}; the deadlock fixture is pinned to the 2026-10-24T23:01:20Z build (issue #149).`,
     '',
     'Metrics per fixture (best valid run): coverage = fresh Articles with exactly one valid assignment; dup-seeds = proposed new Stories whose seed overlaps >50% content tokens with a live Story; splits = ground-truth groups (≥2 fresh Articles from the same snapshot Story) landing in more than one cluster; over-merged = pairs from different snapshot Stories co-clustered; stability = Jaccard of co-clustering pair sets across the two runs.',
+    '',
+    'Deadlock fixture (issue #149): the reconstructed 2026-10-24 deadlock state — the live Stories of the day’s last build (the tribunal-ruling magnet among them) plus the day’s 69 fresh march Articles that stayed Unassigned through every build. « → magnet » counts fresh Articles re-assigned to the magnet Story (the production loop shape); « born » counts fresh Articles proposed into a new Story of ≥2 Articles (the birth). The baseline verdict and its caveats live in docs/research/grouping-benchmark.md.',
     '',
   ];
   for (const record of records) {
     lines.push(`## ${record.spec}`, '');
     lines.push(
-      '| fixture | fresh | live Stories | coverage | bad targets | dup-seeds | splits | kept/split pairs | over-merged | stability | latency | input tok | cost/run |',
-      '| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |',
+      '| fixture | fresh | live Stories | coverage | → magnet | born | bad targets | dup-seeds | splits | kept/split pairs | over-merged | stability | latency | input tok | cost/run |',
+      '| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |',
     );
     for (const fr of record.fixtures) {
       const s = summarize(fr);
       if (s == null) {
         lines.push(
-          `| ${fr.fixture} | ${fr.freshArticles} | ${fr.liveStories} | — (no valid run) | — | — | — | — | — | — | — | — | — |`,
+          `| ${fr.fixture} | ${fr.freshArticles} | ${fr.liveStories} | — (no valid run) | — | — | — | — | — | — | — | — | — | — | — |`,
         );
         continue;
       }
+      const deadlockCells =
+        s.deadlock == null
+          ? '— | —'
+          : `${s.deadlock.toMagnet} | ${s.deadlock.born} (${s.deadlock.birthClusters})`;
       lines.push(
-        `| ${fr.fixture} | ${fr.freshArticles} | ${fr.liveStories} | ${fmtPct(s.coverage)} | ${s.unknownTargets} | ${s.dupSeeds} | ` +
+        `| ${fr.fixture} | ${fr.freshArticles} | ${fr.liveStories} | ${fmtPct(s.coverage)} | ${deadlockCells} | ${s.unknownTargets} | ${s.dupSeeds} | ` +
           `${s.splitGroups == null ? '—' : `${s.splitGroups}/${s.groundTruthGroups} groups`} | ` +
           `${s.keptPairs ?? '—'}/${s.splitPairs ?? '—'} | ${s.overMergedPairs ?? '—'} | ` +
           `${fmtPct(fr.stability)} | ${Math.round(s.avgLatencyMs)} ms | ${Math.round(s.avgInputTokens)} | ${fmtUsd(s.avgCostUsd)} |`,
@@ -316,20 +345,58 @@ async function writeReport(records: CandidateRecord[]): Promise<void> {
 }
 
 async function main(): Promise<void> {
-  const specs = process.argv.slice(2).filter((a) => a !== '--');
+  const args = process.argv.slice(2).filter((a) => a !== '--');
+  // `--only <csv>` restricts a paid run to part of the fixture set —
+  // e.g. `--only long-context,deadlock` when from-empty's current size
+  // (every Article in the snapshot) cannot complete under the output cap.
+  const onlyIndex = args.indexOf('--only');
+  let only: Set<GroupingFixture['name']> | null = null;
+  if (onlyIndex !== -1) {
+    const value = args[onlyIndex + 1];
+    args.splice(onlyIndex, 2);
+    if (
+      value == null ||
+      value.startsWith('gemini/') ||
+      value.startsWith('openrouter/')
+    ) {
+      console.error('--only needs a comma-separated fixture list');
+      process.exit(1);
+    }
+    only = new Set(
+      value
+        .split(',')
+        .map((n) => n.trim())
+        .filter(Boolean) as GroupingFixture['name'][],
+    );
+  }
+  const specs = args;
   if (specs.length === 0) {
     console.error(
-      'Usage: tsx src/benchmark/grouping-run.ts <gemini|openrouter>/<model> [...]',
+      'Usage: tsx src/benchmark/grouping-run.ts [--only from-empty,long-context,deadlock] <gemini|openrouter>/<model> [...]',
     );
     process.exit(1);
   }
   await mkdir(new URL('results/', OUT_DIR), { recursive: true });
-  const set = await fixturesFromData();
+  const full = await fixturesFromData();
   await writeFile(
     new URL('fixtures.json', OUT_DIR),
-    JSON.stringify(set, null, 2),
+    JSON.stringify(full, null, 2),
     'utf8',
   );
+  const unknown =
+    only == null
+      ? []
+      : [...only].filter((name) => !full.fixtures.some((f) => f.name === name));
+  if (unknown.length > 0) {
+    console.error(
+      `Unknown fixtures: ${unknown.join(', ')} — available: ${full.fixtures.map((f) => f.name).join(', ')}`,
+    );
+    process.exit(1);
+  }
+  const set =
+    only == null
+      ? full
+      : { ...full, fixtures: full.fixtures.filter((f) => only!.has(f.name)) };
   for (const spec of specs) {
     const record = await runCandidate(spec, set);
     const path = new URL(`results/${fileName(spec)}`, OUT_DIR);

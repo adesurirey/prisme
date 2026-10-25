@@ -136,9 +136,14 @@ export interface GroupingOutcome {
 export { isLive };
 
 /** Deterministic Story order: newest Article first, ties by id. An
- * unparseable instant sorts oldest (0), like the old NaN→0 guard. */
-function byNewestArticle(a: Story, b: Story): number {
-  const latest = (s: Story) =>
+ * unparseable instant sorts oldest (0), like the old NaN→0 guard.
+ * Exported for the deadlock fixture (issue #149): the benchmark
+ * reconstructs the prompt's live-Story order, newest first. */
+export function byNewestArticle(
+  a: Pick<Story, 'id' | 'articles'>,
+  b: Pick<Story, 'id' | 'articles'>,
+): number {
+  const latest = (s: Pick<Story, 'id' | 'articles'>) =>
     Math.max(0, ...s.articles.map((a) => parseInstant(a.publishedAt) ?? 0));
   return latest(b) - latest(a) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 }

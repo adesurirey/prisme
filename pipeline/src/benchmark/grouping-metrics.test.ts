@@ -262,3 +262,96 @@ describe('stability', () => {
     expect(stability(a, a)).toBeNull();
   });
 });
+
+/**
+ * The deadlock fixture’s own metrics (issue #149): the graded « before » is
+ * the loop shape (fresh march Articles re-assigned to the magnet Story),
+ * the graded « after » the birth (a new Story claiming them — issue #150).
+ */
+describe('evaluateProposal — deadlock metrics (issue #149)', () => {
+  const MAGNET = '3bca5d1e9243';
+
+  function deadlockFixture(): GroupingFixture {
+    return {
+      name: 'deadlock',
+      deadlock: { magnetStoryId: MAGNET },
+      groundTruth: { a1: 'march', a2: 'march', a3: 'march', a4: 'march' },
+      liveStories: [
+        {
+          id: MAGNET,
+          title: 'Le tribunal administratif rejette le recours',
+          headlines: ['Le tribunal rejette le recours'],
+        },
+        ...liveStories,
+      ],
+      freshArticles: ['a1', 'a2', 'a3', 'a4'].map((id) => ({
+        id,
+        headline: `Manifestation du 24 octobre, article ${id}`,
+        teaser: '',
+      })),
+    };
+  }
+
+  it('counts the loop shape: fresh Articles re-assigned to the magnet Story', () => {
+    const e = evaluateProposal(
+      deadlockFixture(),
+      proposal({
+        assignments: [
+          { articleId: 'a1', storyId: MAGNET, confidence: 0.9 },
+          { articleId: 'a2', storyId: MAGNET, confidence: 0.9 },
+          { articleId: 'a3', storyId: MAGNET, confidence: 0.9 },
+          // Unassigned — the refusal’s aftermath, not a birth.
+        ],
+      }),
+    );
+    expect(e.deadlock).toEqual({ toMagnet: 3, born: 0, birthClusters: 0 });
+  });
+
+  it('counts the birth shape: fresh Articles proposed into one new Story', () => {
+    const e = evaluateProposal(
+      deadlockFixture(),
+      proposal({
+        newStories: [{ key: 'k1' }],
+        assignments: [
+          { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+          { articleId: 'a2', newStoryKey: 'k1', confidence: 0.9 },
+          { articleId: 'a3', newStoryKey: 'k1', confidence: 0.9 },
+          { articleId: 'a4', storyId: MAGNET, confidence: 0.9 },
+        ],
+      }),
+    );
+    expect(e.deadlock).toEqual({ toMagnet: 1, born: 3, birthClusters: 1 });
+  });
+
+  it('does not count a singleton new-Story key as a birth (ADR-0015)', () => {
+    const e = evaluateProposal(
+      deadlockFixture(),
+      proposal({
+        newStories: [{ key: 'k1' }],
+        assignments: [
+          { articleId: 'a1', newStoryKey: 'k1', confidence: 0.9 },
+          { articleId: 'a2', storyId: MAGNET, confidence: 0.9 },
+          { articleId: 'a3', storyId: 'aaaa00000002', confidence: 0.9 },
+        ],
+      }),
+    );
+    // a3 lands on another live Story: not the magnet, not a birth — the
+    // standard metrics and splits carry it.
+    expect(e.deadlock).toEqual({ toMagnet: 1, born: 0, birthClusters: 0 });
+  });
+
+  it('ignores assignments to ids outside the fresh pool', () => {
+    const e = evaluateProposal(
+      deadlockFixture(),
+      proposal({
+        assignments: [{ articleId: 'ghost', storyId: MAGNET, confidence: 0.9 }],
+      }),
+    );
+    expect(e.deadlock).toEqual({ toMagnet: 0, born: 0, birthClusters: 0 });
+  });
+
+  it('computes no deadlock metrics on the standard fixtures', () => {
+    const e = evaluateProposal(fixture(), proposal());
+    expect(e.deadlock).toBeUndefined();
+  });
+});
