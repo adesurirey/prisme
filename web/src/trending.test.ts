@@ -1,8 +1,7 @@
 // @vitest-environment jsdom
-import { grewAtLeast } from '@prisme/domain';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
-  BASELINE_TTL_MS,
+  BASELINE_RETENTION_MS,
   installTrending,
   markTrending,
   RECOMPUTE_WINDOW_MS,
@@ -26,9 +25,9 @@ afterEach(() => {
 });
 
 const CURRENT = [
-  { id: 'a', articleCount: 8 },
-  { id: 'b', articleCount: 3 },
-  { id: 'c', articleCount: 1 },
+  { id: 'a', summarizedAt: NOW - 30 * MINUTE },
+  { id: 'b', summarizedAt: null },
+  { id: 'c', summarizedAt: NOW - 2 * HOUR },
 ];
 
 describe('markTrending', () => {
@@ -37,161 +36,142 @@ describe('markTrending', () => {
     expect(trendingIds).toEqual([]);
     // The visit itself is recorded for next time.
     expect(next.stories).toEqual({
-      a: { articleCount: 8, seenAt: NOW },
-      b: { articleCount: 3, seenAt: NOW },
-      c: { articleCount: 1, seenAt: NOW },
+      a: { seenAt: NOW },
+      b: { seenAt: NOW },
+      c: { seenAt: NOW },
     });
   });
 
-  it('never marks a story absent from the baseline, whatever its Article count', () => {
+  it('never marks a story absent from the baseline, even freshly re-summarized', () => {
     const blob: SeenBlob = {
-      version: 2,
-      stories: { b: { articleCount: 1, seenAt: NOW - HOUR } },
+      version: 3,
+      stories: { b: { seenAt: NOW - HOUR } },
     };
-    // c entered the Edition since the last visit — absence is not growth:
-    // the badge means "you saw this Story before, it grew since".
+    // c entered the Edition and was re-summarized since the last visit —
+    // absence is not change: the badge means "you saw this Story before,
+    // its résumé changed since" (newness is En direct's job, ADR-0029).
     const { trendingIds } = markTrending(
-      [{ id: 'c', articleCount: 30 }],
+      [{ id: 'c', summarizedAt: NOW - MINUTE }],
       NOW,
       blob,
     );
     expect(trendingIds).toEqual([]);
   });
 
-  it('never marks a stale entry, but fresh entries still badge beside it', () => {
+  it('badges however long the gap — the 4 h TTL is gone (ADR-0031)', () => {
+    // A reader gone three days: the entry survives, and a Story
+    // re-summarized two days into their absence still badges. The
+    // comparison of two recorded instants has no staleness.
     const blob: SeenBlob = {
-      version: 2,
+      version: 3,
       stories: {
-        a: { articleCount: 2, seenAt: NOW - BASELINE_TTL_MS - 1 },
-        b: { articleCount: 2, seenAt: NOW - HOUR },
-      },
-    };
-    // a's entry is past the 4 h TTL — that Story gets no badge. The
-    // freshness is per Story (the baseline means "everything I've seen",
-    // ADR-0029): b's fresh entry with 100 % growth still badges.
-    const { trendingIds } = markTrending(
-      [
-        { id: 'a', articleCount: 8 },
-        { id: 'b', articleCount: 4 },
-      ],
-      NOW,
-      blob,
-    );
-    expect(trendingIds).toEqual(['b']);
-  });
-
-  it('gates on the domain growth gate: exactly 25 % growth passes', () => {
-    const blob: SeenBlob = {
-      version: 2,
-      stories: {
-        exact: { articleCount: 8, seenAt: NOW - HOUR },
-        short: { articleCount: 8, seenAt: NOW - HOUR },
-        dropped: { articleCount: 8, seenAt: NOW - HOUR },
+        a: { seenAt: NOW - 72 * HOUR },
+        b: { seenAt: NOW - 72 * HOUR },
       },
     };
     const { trendingIds } = markTrending(
       [
-        // 8 → 10 is exactly +25 % — the gate is « at least ».
-        { id: 'exact', articleCount: 10 },
-        // 8 → 9 is ≈ 12.5 % — below the gate.
-        { id: 'short', articleCount: 9 },
-        // A drop is not growth.
-        { id: 'dropped', articleCount: 7 },
+        { id: 'a', summarizedAt: NOW - 48 * HOUR },
+        { id: 'b', summarizedAt: NOW - 96 * HOUR },
       ],
       NOW,
       blob,
     );
-    expect(trendingIds).toEqual(['exact']);
-    // The badge can never drift from what the pipeline re-synthesized:
-    // the eligibility arithmetic IS the domain gate (ADR-0027, ADR-0029).
-    expect(grewAtLeast(8, 10)).toBe(true);
-    expect(grewAtLeast(8, 9)).toBe(false);
+    expect(trendingIds).toEqual(['a']);
   });
 
-  it('does not mark a story whose Article count is unchanged', () => {
+  it('badges exactly when the pass ran after the sight — and only then', () => {
     const blob: SeenBlob = {
-      version: 2,
-      stories: { a: { articleCount: 8, seenAt: NOW - HOUR } },
+      version: 3,
+      stories: {
+        after: { seenAt: NOW - HOUR },
+        sameInstant: { seenAt: NOW - HOUR },
+        before: { seenAt: NOW - HOUR },
+        never: { seenAt: NOW - HOUR },
+      },
     };
     const { trendingIds } = markTrending(
-      [{ id: 'a', articleCount: 8 }],
+      [
+        // Rewritten 30 min after the sight — badges.
+        { id: 'after', summarizedAt: NOW - 30 * MINUTE },
+        // Rewritten at the very instant of the sight — the reader is
+        // about to read that rewrite already, no badge.
+        { id: 'sameInstant', summarizedAt: NOW - HOUR },
+        // Last rewritten before the sight — the reader saw the latest.
+        { id: 'before', summarizedAt: NOW - 2 * HOUR },
+        // No recorded pass (never summarized, or not since ADR-0031).
+        { id: 'never', summarizedAt: null },
+      ],
       NOW,
       blob,
     );
-    expect(trendingIds).toEqual([]);
+    expect(trendingIds).toEqual(['after']);
   });
 
   it('badges every eligible story, uncapped, in page order', () => {
-    // Five Stories past the gate: all five badge (ADR-0029 removed the
+    // Five re-summarized Stories: all five badge (ADR-0029 removed the
     // cap of three), returned in page order.
-    const entries = [
-      { id: 'e1', baseline: 2, count: 4 },
-      { id: 'e2', baseline: 4, count: 8 },
-      { id: 'e3', baseline: 10, count: 13 },
-      { id: 'e4', baseline: 1, count: 2 },
-      { id: 'e5', baseline: 20, count: 26 },
-    ];
+    const ids = ['e1', 'e2', 'e3', 'e4', 'e5'];
     const blob: SeenBlob = {
-      version: 2,
+      version: 3,
       stories: Object.fromEntries(
-        entries.map(({ id, baseline }) => [
-          id,
-          { articleCount: baseline, seenAt: NOW - HOUR },
-        ]),
+        ids.map((id) => [id, { seenAt: NOW - HOUR }]),
       ),
     };
     const { trendingIds } = markTrending(
-      entries.map(({ id, count }) => ({ id, articleCount: count })),
+      ids.map((id) => ({ id, summarizedAt: NOW - MINUTE })),
       NOW,
       blob,
     );
-    expect(trendingIds).toEqual(['e1', 'e2', 'e3', 'e4', 'e5']);
+    expect(trendingIds).toEqual(ids);
   });
 
-  it('merges the baseline: visited cards overwrite, absent entries persist, stale prune', () => {
+  it('merges the baseline: visited cards overwrite, absent entries persist, ancient ones prune', () => {
     const goneSeenAt = NOW - 2 * HOUR;
     const blob: SeenBlob = {
-      version: 2,
+      version: 3,
       stories: {
-        // Fresh when this page renders, but the card is absent — the
+        // On no card this render, seen well within the horizon — the
         // entry persists with its ORIGINAL seen-at.
-        gone: { articleCount: 7, seenAt: goneSeenAt },
-        // Past the TTL — pruned lazily by the merge write.
-        stale: { articleCount: 5, seenAt: NOW - BASELINE_TTL_MS - 1 },
-        // Fresh and on the page — overwritten with the new count + now.
-        a: { articleCount: 2, seenAt: NOW - HOUR },
+        gone: { seenAt: goneSeenAt },
+        // Past the retention horizon — pruned lazily by the merge write
+        // (a storage bound, never an eligibility rule).
+        ancient: { seenAt: NOW - BASELINE_RETENTION_MS - 1 },
+        // On the page — overwritten with now.
+        a: { seenAt: NOW - HOUR },
       },
     };
     const { trendingIds, next } = markTrending(
       [
-        // 2 → 4 is +100 % — badges.
-        { id: 'a', articleCount: 4 },
-        { id: 'b', articleCount: 1 },
+        // Re-summarized after the sight — badges.
+        { id: 'a', summarizedAt: NOW - 30 * MINUTE },
+        { id: 'b', summarizedAt: NOW - MINUTE },
       ],
       NOW,
       blob,
     );
     expect(trendingIds).toEqual(['a']);
     expect(next.stories).toEqual({
-      // Visited cards overwrite their entries: count + now.
-      a: { articleCount: 4, seenAt: NOW },
-      b: { articleCount: 1, seenAt: NOW },
+      // Visited cards overwrite their entries: now.
+      a: { seenAt: NOW },
+      b: { seenAt: NOW },
       // Everything else persists, original seen-at untouched — the
       // baseline means "everything I've seen", not "the last page".
-      gone: { articleCount: 7, seenAt: goneSeenAt },
-      // 'stale' is gone: the TTL pruned it.
+      gone: { seenAt: goneSeenAt },
+      // 'ancient' is gone: the retention horizon pruned it.
     });
   });
 
   it('records the snapshot even when the page renders no cards', () => {
     const blob: SeenBlob = {
-      version: 2,
-      stories: { gone: { articleCount: 7, seenAt: NOW - HOUR } },
+      version: 3,
+      stories: { gone: { seenAt: NOW - HOUR } },
     };
     const { next } = markTrending([], NOW, blob);
-    // gone is still fresh: the merge keeps it even with no card rendered.
+    // gone is well within the horizon: the merge keeps it even with no
+    // card rendered.
     expect(next.stories).toEqual({
-      gone: { articleCount: 7, seenAt: NOW - HOUR },
+      gone: { seenAt: NOW - HOUR },
     });
   });
 });
@@ -199,8 +179,8 @@ describe('markTrending', () => {
 describe('readSeen / writeSeen', () => {
   it('round-trips a blob through localStorage', () => {
     const blob: SeenBlob = {
-      version: 2,
-      stories: { a: { articleCount: 2, seenAt: NOW } },
+      version: 3,
+      stories: { a: { seenAt: NOW } },
     };
     writeSeen(localStorage, blob);
     expect(readSeen(localStorage)).toEqual(blob);
@@ -212,10 +192,10 @@ describe('readSeen / writeSeen', () => {
     expect(readSeen(localStorage)).toEqual(null);
   });
 
-  it('reads null from the old v1 shape — no compatibility code', () => {
+  it('reads null from the old v2 shape (count-based) — no compatibility code', () => {
     localStorage.setItem(
       SEEN_KEY,
-      '{"version":1,"stories":{"a":{"coverage":2,"seenAt":1}}}',
+      '{"version":2,"stories":{"a":{"articleCount":4,"seenAt":1}}}',
     );
     expect(readSeen(localStorage)).toEqual(null);
   });
@@ -279,11 +259,11 @@ describe('installTrending', () => {
   // Mirrors the real StoryCard markup: article > a > div > h2 with a
   // data-trending-slot — the shape this fixture guards against (appending
   // against the card root would misplace the badge; it must land in the
-  // slot). Cards ship the Article count the script reads.
-  const card = (id: string, articleCount: number) => {
+  // slot). Cards ship the pass's recorded instant ('' when there is none).
+  const card = (id: string, summarizedAt: string) => {
     const el = document.createElement('article');
     el.dataset.storyId = id;
-    el.dataset.articleCount = String(articleCount);
+    el.dataset.summarizedAt = summarizedAt;
     const a = document.createElement('a');
     const div = document.createElement('div');
     const h2 = document.createElement('h2');
@@ -296,6 +276,8 @@ describe('installTrending', () => {
     document.body.append(el);
   };
 
+  const iso = (ms: number) => new Date(ms).toISOString();
+
   const expectBadge = (id: string, present: boolean) => {
     const el = document.querySelector(`[data-story-id="${id}"]`)!;
     expect(el.querySelector('[data-trending-badge]') !== null).toBe(present);
@@ -306,52 +288,66 @@ describe('installTrending', () => {
         '[data-trending-slot] [data-trending-badge]',
       )!;
       expect(badge != null).toBe(true);
-      expect(badge.textContent).toBe('\u2197\u2009en hausse');
+      expect(badge.textContent).toBe('↗\u2009en hausse');
       expect((badge as HTMLElement).title).toBe(
         'Couverture et résumé enrichis depuis votre dernière visite',
       );
     }
   };
 
-  it('reveals the badge on grown cards and records the visit', () => {
-    card('a', 4);
-    const blob: SeenBlob = {
-      version: 2,
+  it('reveals the badge on re-summarized cards and records the visit', () => {
+    card('a', iso(NOW - 30 * MINUTE));
+    card('b', iso(NOW - 2 * HOUR));
+    writeSeen(localStorage, {
+      version: 3,
       stories: {
-        a: { articleCount: 2, seenAt: NOW - HOUR },
-        b: { articleCount: 2, seenAt: NOW - HOUR },
+        a: { seenAt: NOW - HOUR },
+        b: { seenAt: NOW - HOUR },
       },
-    };
-    card('b', 2);
-    writeSeen(localStorage, blob);
+    });
 
     installTrending(document, localStorage, new Date(NOW));
 
+    // a was re-summarized after the sight → badge; b's last rewrite is
+    // older than the sight → none.
     expectBadge('a', true);
     expectBadge('b', false);
-    // The visit is recorded: a second install on identical data marks nothing.
+    // The visit is recorded: a second install on identical data marks
+    // nothing (the sight now postdates the pass).
     const next = readSeen(localStorage)!;
-    expect(next.stories.a).toEqual({ articleCount: 4, seenAt: NOW });
+    expect(next.stories.a).toEqual({ seenAt: NOW });
+    expect(next.stories.b).toEqual({ seenAt: NOW });
+  });
+
+  it('never badges a card with no recorded pass, seen or not', () => {
+    card('a', ''); // never (re-)summarized since the field exists
+    card('b', ''); // never seen either
+    writeSeen(localStorage, {
+      version: 3,
+      stories: { a: { seenAt: NOW - HOUR } },
+    });
+
+    installTrending(document, localStorage, new Date(NOW));
+
+    expectBadge('a', false);
+    expectBadge('b', false);
   });
 
   it('marks nothing on a first visit and still records the snapshot', () => {
-    card('a', 4);
+    card('a', iso(NOW - MINUTE));
     installTrending(document, localStorage, new Date(NOW));
     expectBadge('a', false);
-    expect(readSeen(localStorage)!.stories.a).toEqual({
-      articleCount: 4,
-      seenAt: NOW,
-    });
+    expect(readSeen(localStorage)!.stories.a).toEqual({ seenAt: NOW });
   });
 
   it('never fills the count pill — the hook is gone (ADR-0029)', () => {
-    card('a', 4);
+    card('a', iso(NOW - MINUTE));
     const pillEl = document.createElement('div');
     pillEl.dataset.newPill = '';
     document.body.append(pillEl);
     writeSeen(localStorage, {
-      version: 2,
-      stories: { a: { articleCount: 1, seenAt: NOW - HOUR } },
+      version: 3,
+      stories: { a: { seenAt: NOW - HOUR } },
     });
 
     installTrending(document, localStorage, new Date(NOW));
@@ -362,44 +358,44 @@ describe('installTrending', () => {
   });
 
   it('merges the baseline across pages: absent entries keep their seen-at', () => {
-    card('a', 4);
-    card('b', 2);
+    card('a', iso(NOW - MINUTE));
+    card('b', iso(NOW - MINUTE));
     installTrending(document, localStorage, new Date(NOW));
     // Page 1 seen: a and b recorded at NOW.
 
     // The reader moves to another page (a different build's cards) two
     // hours later: b is overwritten, c joins, a persists untouched.
     document.body.innerHTML = '';
-    card('b', 2);
-    card('c', 3);
+    card('b', iso(NOW + 2 * HOUR - MINUTE));
+    card('c', iso(NOW + 2 * HOUR - MINUTE));
     installTrending(document, localStorage, new Date(NOW + 2 * HOUR));
 
     const stories = readSeen(localStorage)!.stories;
-    expect(stories.a).toEqual({ articleCount: 4, seenAt: NOW });
-    expect(stories.b).toEqual({ articleCount: 2, seenAt: NOW + 2 * HOUR });
-    expect(stories.c).toEqual({ articleCount: 3, seenAt: NOW + 2 * HOUR });
+    expect(stories.a).toEqual({ seenAt: NOW });
+    expect(stories.b).toEqual({ seenAt: NOW + 2 * HOUR });
+    expect(stories.c).toEqual({ seenAt: NOW + 2 * HOUR });
   });
 
   it('keeps the badges visible on a re-render within the same visit', () => {
-    card('a', 4);
+    card('a', iso(NOW - 30 * MINUTE));
     writeSeen(localStorage, {
-      version: 2,
-      stories: { a: { articleCount: 2, seenAt: NOW - HOUR } },
+      version: 3,
+      stories: { a: { seenAt: NOW - HOUR } },
     });
     installTrending(document, localStorage, new Date(NOW));
     expectBadge('a', true);
 
     // The reader clicks the story and comes back minutes later: the
-    // snapshot erased the growth, but the session (fresh within the
-    // recompute window) keeps the badge scannable.
+    // snapshot moved the sight past the pass, but the session (fresh
+    // within the recompute window) keeps the badge scannable.
     document.body.innerHTML = '';
-    card('a', 4);
+    card('a', iso(NOW - 30 * MINUTE));
     installTrending(document, localStorage, new Date(NOW + 5 * MINUTE));
     expectBadge('a', true);
   });
 
   it('does not rewrite anything on a re-render inside the recompute window', () => {
-    card('a', 4);
+    card('a', iso(NOW - 30 * MINUTE));
     const lastComputeAt = NOW - 5 * MINUTE;
     writeSession(sessionStorage, {
       v: 3,
@@ -407,10 +403,10 @@ describe('installTrending', () => {
       lastComputeAt,
     });
     writeSeen(localStorage, {
-      version: 2,
-      // a's count already recorded at 4 — no growth to show, so the badge
+      version: 3,
+      // a's sight already postdates the pass — no badge to show, so it
       // can only come from the session set.
-      stories: { a: { articleCount: 4, seenAt: NOW - HOUR } },
+      stories: { a: { seenAt: NOW - MINUTE } },
     });
 
     installTrending(document, localStorage, new Date(NOW));
@@ -419,27 +415,28 @@ describe('installTrending', () => {
     expectBadge('a', true);
     // The visit is NOT re-recorded: the baseline stays as-is and the
     // recompute window is not extended.
-    expect(readSeen(localStorage)!.stories.a.seenAt).toBe(NOW - HOUR);
+    expect(readSeen(localStorage)!.stories.a.seenAt).toBe(NOW - MINUTE);
     expect(readSession(sessionStorage)!.lastComputeAt).toBe(lastComputeAt);
   });
 
   it('replaces the session ids on a visit past the recompute window', () => {
-    card('a', 4);
-    card('b', 2);
+    card('a', iso(NOW - 30 * MINUTE));
+    card('b', iso(NOW - MINUTE));
     writeSession(sessionStorage, {
       v: 3,
       trendingIds: ['old1', 'old2', 'old3'],
       lastComputeAt: NOW - 16 * MINUTE,
     });
     writeSeen(localStorage, {
-      version: 2,
-      stories: { a: { articleCount: 2, seenAt: NOW - HOUR } },
+      version: 3,
+      stories: { a: { seenAt: NOW - HOUR } },
     });
 
     installTrending(document, localStorage, new Date(NOW));
 
-    // a grew +100 % → trending; b is absent from the baseline → nothing.
-    // The fresh ids REPLACE the old session set instead of merging with it.
+    // a was re-summarized after the sight → trending; b is absent from
+    // the baseline → nothing. The fresh ids REPLACE the old session set
+    // instead of merging with it.
     expect(readSession(sessionStorage)).toEqual({
       v: 3,
       trendingIds: ['a'],
@@ -448,17 +445,14 @@ describe('installTrending', () => {
     expectBadge('a', true);
     expectBadge('b', false);
     // The snapshot is written on the recompute.
-    expect(readSeen(localStorage)!.stories.a).toEqual({
-      articleCount: 4,
-      seenAt: NOW,
-    });
+    expect(readSeen(localStorage)!.stories.a).toEqual({ seenAt: NOW });
   });
 
   it('recomputes when the recompute window has exactly elapsed', () => {
-    card('a', 4);
+    card('a', iso(NOW - 30 * MINUTE));
     writeSeen(localStorage, {
-      version: 2,
-      stories: { a: { articleCount: 2, seenAt: NOW - HOUR } },
+      version: 3,
+      stories: { a: { seenAt: NOW - HOUR } },
     });
     writeSession(sessionStorage, {
       v: 3,
@@ -468,22 +462,22 @@ describe('installTrending', () => {
 
     installTrending(document, localStorage, new Date(NOW));
 
-    // Exactly 15 min old → a real new visit: recomputed (growth wins).
+    // Exactly 15 min old → a real new visit: recomputed (the pass won).
     expect(readSession(sessionStorage)!.trendingIds).toEqual(['a']);
     expect(readSession(sessionStorage)!.lastComputeAt).toBe(NOW);
     expectBadge('a', true);
   });
 
-  it('clears badges in a new session (empty sessionStorage)', () => {
-    card('a', 4);
+  it('shows no badge in a new session when nothing was re-summarized', () => {
+    card('a', iso(NOW - 2 * HOUR));
     writeSeen(localStorage, {
-      version: 2,
-      stories: { a: { articleCount: 4, seenAt: NOW - HOUR } },
+      version: 3,
+      stories: { a: { seenAt: NOW - HOUR } },
     });
 
     installTrending(document, localStorage, new Date(NOW));
 
-    // Same count as the baseline: no growth, no badge.
+    // The last pass predates the sight: no change to show, no badge.
     expectBadge('a', false);
   });
 });

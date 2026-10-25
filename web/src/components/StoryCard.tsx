@@ -23,10 +23,10 @@ import StoryImage from './StoryImage';
  * to the Story page, where the Articles live, styled like the Story page's
  * Article cards (hover surface, no animation).
  *
- * The root carries data-story-id/data-article-count for the client-side
- * per-visitor badge (trending.ts): "En hausse" when the Story's Article
- * count grew ≥ 25 % since the reader's last visit — the same domain gate
- * that re-fires a Summaries pass (ADR-0029). The prerendered HTML has no
+ * The root carries data-story-id/data-summarized-at for the client-side
+ * per-visitor badge (trending.ts): "En hausse" when the pipeline's
+ * Summaries pass rewrote the Story after the reader's last sight of it
+ * (ADR-0029 as amended by ADR-0031). The prerendered HTML has no
  * idea who is reading, so the per-visitor signal is decided in the
  * browser.
  *
@@ -61,7 +61,7 @@ export default function StoryCard({
     <article
       className="group/card relative -mx-5"
       data-story-id={story.id}
-      data-article-count={story.articles.length}
+      data-summarized-at={story.summarizedAt ?? ''}
       data-load-more-tail={tail ? '' : undefined}
     >
       {/* Stretched link: the whole card navigates. */}

@@ -5,6 +5,7 @@ import {
   groupStories,
   meetsBirthMinimum,
   memberDigest,
+  wordKey,
 } from './grouping.ts';
 import { missingMembershipChecker } from './policy.ts';
 
@@ -165,6 +166,29 @@ function input(overrides: {
       : NO_CLIENTS,
   };
 }
+
+describe('wordKey — light French stemming (issue #141)', () => {
+  it('strips the plural s so inflections share one key', () => {
+    expect(wordKey('manifestations')).toBe(wordKey('manifestation'));
+    expect(wordKey('interpellations')).toBe(wordKey('interpellation'));
+  });
+
+  it('strips the feminine e so gendered forms share one key', () => {
+    expect(wordKey('mobilisée')).toBe(wordKey('mobilisé'));
+    expect(wordKey('grenades')).toBe(wordKey('grenade'));
+  });
+
+  it('keeps short words intact rather than over-merging', () => {
+    expect(wordKey('rue')).toBe('rue');
+    expect(wordKey('jeux')).toBe('jeux');
+    expect(wordKey('lois')).toBe('lois');
+  });
+
+  it('still drops stopwords on their surface form', () => {
+    expect(wordKey('une')).toBeUndefined();
+    expect(wordKey('avec')).toBeUndefined();
+  });
+});
 
 describe('groupStories', () => {
   it('the Grouping model sees the 3 most recent member headlines of each open Story (ADR-0018)', async () => {

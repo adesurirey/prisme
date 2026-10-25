@@ -112,7 +112,7 @@ The stacked chart on the Story page: the Story's whole life — first→last Art
 _Avoid_: Activity sparkline, coverage timeline, histogram
 
 **Trending Story**:
-A Story in the Edition that the returning reader is shown as « En hausse » because its Article count grew at least 25 % since that reader last looked — the same gate that re-fires a Summaries pass, so the badge means the Story was re-synthesized with more material (ADR-0029). Uncapped, on every page that runs the signal; a Story the reader has never seen never trends, and a reader seen more than four hours ago gets no Trending Stories at all.
+A Story in the Edition that the returning reader is shown as « En hausse » because the Summaries pass re-synthesized it after that reader last saw it — the recorded fact (`summarizedAt`), not a count approximation; however long the absence (ADR-0029 as amended by ADR-0031). Uncapped, on every page that runs the signal; a Story the reader has never seen never trends.
 _Avoid_: Rising story, hot story, viral
 
 ### Reading a story

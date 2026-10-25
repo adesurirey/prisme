@@ -3,8 +3,9 @@ import { grewAtLeast } from './growth.ts';
 
 /**
  * The shared growth gate (ADR-0027, moved to the domain by ADR-0029): the
- * one arithmetic behind the Summaries gate (pipeline, summarize.ts), the
- * retitle gate (pipeline, grouping.ts) and the web's « En hausse » badge.
+ * one arithmetic behind the pipeline's two watermark gates — Summaries
+ * (summarize.ts) and retitles (grouping.ts). The web's « En hausse » badge
+ * imported it until ADR-0031 moved it to the recorded summarizedAt.
  */
 describe('grewAtLeast', () => {
   it('passes a Story the pass has never seen (births always pass)', () => {

@@ -195,6 +195,11 @@ export interface Story {
   differences?: string[];
   /** Version of the Summaries prompt that wrote these fields (ADR-0006). */
   promptVersion?: string;
+  /** ISO instant the last Summaries pass that wrote these fields ran —
+   *  the recorded fact behind the « En hausse » badge (ADR-0031): stamped
+   *  on every actual rewrite, first summarization included; absent on
+   *  Stories not (re-)summarized since the field exists. */
+  summarizedAt?: string;
   /** Number of Articles the last Summaries run saw; Articles are append-only. */
   summarizedArticleCount?: number;
   /** Number of Articles the last Title pass saw; Articles are append-only. */
