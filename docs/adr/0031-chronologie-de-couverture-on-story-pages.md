@@ -25,12 +25,17 @@ it at build time with zero client JS, identical for every reader.
 - **Window**: the Story's whole life. Hourly bins while the span stays
   within 48 hours, Paris-midnight day bins beyond (DST-safe: 23h/25h
   bins, never a fixed 24h stride — same rule as paris-date.ts).
-- **Chart**: ~120px tall, contiguous bars, a baseline and one faint mid
-  gridline, 3–4 sparse ticks, a native SVG `<title>` per bin
+- **Chart**: a ~70px ribbon (Datadog-log-flow scale), contiguous bars,
+  a baseline only — no mid gridline, it emphasized the empty lead on
+  fresh stories — 3–4 sparse ticks, a native SVG `<title>` per bin
   (« 16h · 12 articles · 7 gauche, 4 centre, 1 droite ») and an aria
   label with the span (« Chronologie des publications : 441 articles sur
   14 heures »).
-- **Threshold**: below 4 articles the chart is noise — no graph.
+- **Minimum axis, not a minimum count**: the hourly axis never runs
+  shorter than 24 hours — a Story that burst an hour ago gets its burst
+  at the right end of a 24 h ribbon (Datadog-log-flow scale, ~70 px),
+  never a one-bar stub. The axis only grows past that when the life
+  does.
 
 ## Consequences
 
@@ -39,5 +44,5 @@ it at build time with zero client JS, identical for every reader.
 - The card surfaces keep ADR-0029's per-reader badge unchanged; the two
   mechanisms coexist (the badge answers "what moved since you last
   looked", the chart answers "how did this Story unfold").
-- `MIN_ACTIVITY_ARTICLES` gates the chart only; the badge's growth gate
-  (ADR-0027 pipeline, ADR-0029 client) is untouched.
+- Every Story page carries the chart; the badge's growth gate (ADR-0027
+  pipeline, ADR-0029 client) is untouched.

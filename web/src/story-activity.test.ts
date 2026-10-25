@@ -16,9 +16,7 @@ import {
   activityAriaLabel,
   activitySpanLabel,
   binTitle,
-  hasActivity,
   lifeActivityWindow,
-  MIN_ACTIVITY_ARTICLES,
   storyActivity,
 } from './story-activity';
 
@@ -199,7 +197,7 @@ describe('labels', () => {
   });
 });
 
-describe('hasActivity / activitySpanLabel', () => {
+describe('activitySpanLabel', () => {
   const bin = (total: number, start = 0, end = 3_600_000) =>
     ({
       start,
@@ -208,10 +206,28 @@ describe('hasActivity / activitySpanLabel', () => {
       total,
     }) as import('./story-activity').ActivityBin;
 
-  it('charts from four Articles on', () => {
-    expect(MIN_ACTIVITY_ARTICLES).toBe(4);
-    expect(hasActivity([bin(3), bin(0)])).toBe(false);
-    expect(hasActivity([bin(3), bin(1)])).toBe(true);
+  it('never runs the hourly axis shorter than a day', () => {
+    const at = (h: string) => `2026-10-22T1${h}:00:00Z`;
+    // A Story that burst at 14:00Z with a single Article: the axis still
+    // spans the 24 hours ending on its last full hour — the burst reads
+    // at the right end, not as a one-bar stub.
+    const fresh = lifeActivityWindow([
+      { publishedAt: at('4') } as import('@prisme/domain').Article,
+    ]);
+    expect(fresh).toEqual({
+      start: Date.parse('2026-10-21T15:00:00Z'),
+      end: Date.parse('2026-10-22T15:00:00Z'),
+      binMs: 3_600_000,
+    });
+    // A life longer than a day keeps its own start: the axis only
+    // extends, never trims.
+    const older = lifeActivityWindow([
+      {
+        publishedAt: '2026-10-21T09:30:00Z',
+      } as import('@prisme/domain').Article,
+      { publishedAt: at('4') } as import('@prisme/domain').Article,
+    ]);
+    expect(older!.start).toBe(Date.parse('2026-10-21T09:00:00Z'));
   });
 
   it("names the bins' span for the chart's aria-label", () => {

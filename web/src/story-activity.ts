@@ -164,8 +164,12 @@ export function storyActivity(
 /**
  * The Story page's window: the Story's whole life (first→last Article),
  * hourly bins while the span stays within 48 hours, day bins (Paris
- * midnights) beyond. Null for a Story without datable Articles.
+ * midnights) beyond. The axis never runs shorter than a full day (a Story
+ * that popped an hour ago gets its burst at the right end of a 24 h axis,
+ * not a one-bar stub); it only grows past that when the life does. Null
+ * for a Story without datable Articles.
  */
+const MIN_LIFE_SPAN_MS = 24 * HOUR_MS;
 export function lifeActivityWindow(articles: Article[]): ActivityWindow | null {
   const times = articles
     .map((a) => Date.parse(a.publishedAt))
@@ -175,9 +179,13 @@ export function lifeActivityWindow(articles: Article[]): ActivityWindow | null {
   const last = times.at(-1);
   if (first === undefined || last === undefined) return null;
   if (last - first <= 48 * HOUR_MS) {
+    const end = Math.floor(last / HOUR_MS) * HOUR_MS + HOUR_MS;
     return {
-      start: Math.floor(first / HOUR_MS) * HOUR_MS,
-      end: Math.floor(last / HOUR_MS) * HOUR_MS + HOUR_MS,
+      start: Math.min(
+        Math.floor(first / HOUR_MS) * HOUR_MS,
+        end - MIN_LIFE_SPAN_MS,
+      ),
+      end,
       binMs: HOUR_MS,
     };
   }
@@ -186,15 +194,6 @@ export function lifeActivityWindow(articles: Article[]): ActivityWindow | null {
     end: parisMidnight(parisYmd(last)) + DAY_MS,
     binMs: DAY_MS,
   };
-}
-
-/** Fewer Articles than this and a chart is noise, not signal: no graph on
- *  the Story page. */
-export const MIN_ACTIVITY_ARTICLES = 4;
-
-/** True when the bins carry enough Articles to chart (grilled: ≥ 4). */
-export function hasActivity(bins: ActivityBin[]): boolean {
-  return bins.reduce((sum, bin) => sum + bin.total, 0) >= MIN_ACTIVITY_ARTICLES;
 }
 
 /** The bin's start in the reader's clock: « 16h » on an hour scale, the

@@ -33,7 +33,7 @@ export default function ActivityChart({ bins }: { bins: ActivityBin[] }) {
       : [0, Math.round(n / 3), Math.round((2 * n) / 3), n - 1];
   return (
     <figure className="mt-3" data-activity-chart>
-      <div className="relative h-[120px]">
+      <div className="relative h-[70px]">
         <svg
           role="img"
           aria-label={`Chronologie des publications : ${activityAriaLabel(bins, activitySpanLabel(bins))}`}
@@ -41,16 +41,9 @@ export default function ActivityChart({ bins }: { bins: ActivityBin[] }) {
           viewBox={`0 0 ${n} 100`}
           preserveAspectRatio="none"
         >
-          {/* One faint mid gridline, then the baseline — the quiet frame
-              that makes shape readable as a chart. */}
-          <line
-            x1="0"
-            y1="50"
-            x2={n}
-            y2="50"
-            stroke="var(--line)"
-            strokeWidth="0.5"
-          />
+          {/* The baseline — the quiet frame that makes shape readable
+              as a chart. No mid gridline: at ribbon height it only
+              emphasized the empty lead on fresh stories. */}
           <line
             x1="0"
             y1="100"

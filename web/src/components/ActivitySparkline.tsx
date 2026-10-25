@@ -17,8 +17,8 @@ import { activityAriaLabel } from '../story-activity';
  * rolling last 24 hours on the daily pages, the last 7 days on « 7 jours ».
  * Prerendered, zero client JS; the numbers live in the aria line.
  *
- * Whether to render at all is the caller's call (it gates on
- * `hasActivity()`); this component only draws what it is given.
+ * The component only draws what it is given — gating is the caller's
+ * call.
  */
 export default function ActivitySparkline({
   bins,

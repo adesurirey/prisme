@@ -59,9 +59,9 @@ describe('ActivityChart', () => {
     ]);
   });
 
-  it('draws a baseline and one faint mid gridline', () => {
+  it('draws only the baseline — no mid gridline at ribbon height', () => {
     const { container } = render(<ActivityChart bins={bins} />);
-    expect(container.querySelectorAll('line')).toHaveLength(2);
+    expect(container.querySelectorAll('line')).toHaveLength(1);
   });
 
   it('marks sparse ticks in Paris time, one per bin when few', () => {
