@@ -6,6 +6,17 @@
   "storyDay": "2026-10-25",
   "articles": [
     {
+      "id": "0c9ec2faa19c",
+      "outletId": "cnews",
+      "headline": "Tempête Austen : Enedis annonce que 40.000 foyers sont privés d'électricité ce dimanche soir",
+      "url": "https://www.cnews.fr/france/2026-10-25/tempete-austen-enedis-annonce-que-40000-foyers-sont-prives-delectricite-ce",
+      "publishedAt": "2026-10-25T18:05:48.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-23t173430z_360074559_rc229oaa3ctm_rtrmadp_3_europe-weather-france_6ade3e01ca114.jpg?h=67dffbb3&itok=pXorwOvZ",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "9717e42fed21",
       "outletId": "ouest-france",
       "headline": "Tempête Austen : encore 40 000 foyers privés d’électricité dimanche soir, principalement en Bretagne et Normandie",
@@ -53,29 +64,32 @@
     }
   ],
   "topicId": "e98221363e30",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "society",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Enedis recense 59 000 foyers coupés du réseau à la mi-journée ce dimanche.",
-      "La Bretagne et la Normandie constituent les territoires les plus touchés avec respectivement 27 500 et 14 700 clients impactés."
+      "Le gestionnaire du réseau Enedis a recensé 59.000 clients sans courant à la mi-journée de ce dimanche.",
+      "La Bretagne et la Normandie constituent les deux territoires les plus lourdement touchés par les coupures.",
+      "Le détail fourni indique 27.500 foyers privés d'électricité en Bretagne et 14.700 en Normandie à midi."
     ],
     "centre": [
-      "Le gestionnaire du réseau comptabilise encore 59 000 logements sans courant à la mi-journée.",
-      "Ouest-France fait état d'une baisse à 40 000 foyers non réalimentés dimanche soir suite aux intempéries successives."
+      "Près de 59.000 foyers étaient privés d'électricité à la mi-journée ce dimanche suite au passage des tempêtes.",
+      "Ce chiffre a baissé à environ 40.000 foyers concernés en fin de journée, principalement localisés en Bretagne et en Normandie.",
+      "Les équipes techniques d'Enedis restent mobilisées pour procéder aux opérations de rétablissement du réseau."
     ],
     "droite": [
-      "Près de 59 000 foyers demeurent non réalimentés en électricité à la mi-journée dominicale.",
-      "Enedis déploie un dispositif de terrain associant 2 000 agents propres et 600 prestataires dans les zones sinistrées de Bretagne et de Normandie."
+      "Le gestionnaire Enedis a dénombré 59.000 logements sans électricité dès dimanche midi, puis 40.000 en fin de journée.",
+      "Un effectif de 2.000 salariés d'Enedis et 600 agents prestataires a été déployé sur le terrain.",
+      "Les interventions techniques font face à des difficultés en raison du maintien de vents soutenus sur les zones sinistrées."
     ]
   },
   "differences": [
-    "Le camp gauche privilégie un compte rendu chiffré et détaillé par région issu du communiqué d'Enedis.",
-    "Le camp centre met en balance l'urgence à la mi-journée et la décrue progressive du nombre de foyers coupés constatée le soir.",
-    "Le camp droite insiste sur l'ampleur des moyens humains mobilisés par l'opérateur pour faire face à la situation."
+    "La gauche se concentre exclusivement sur le bilan quantitatif des pannes dressé à la mi-journée par le gestionnaire.",
+    "Le centre embrasse l'évolution chronologique complète de la situation en suivant la décrue du nombre de foyers touchés du midi au soir.",
+    "La droite met particulièrement en valeur l'ampleur des moyens humains mobilisés par Enedis ainsi que les contraintes météorologiques pesant sur les interventions."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-10-25T18:01:27.811Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-10-25T19:01:23.544Z"
 }
