@@ -1,5 +1,5 @@
 /**
- * Trending Stories ("En hausse", ADR-0029 as amended by ADR-0031): a
+ * Trending Stories ("Faits nouveaux", ADR-0029 as amended by ADR-0031): a
  * Story in the Edition is flagged for a returning reader when the
  * pipeline's Summaries pass re-synthesized it — the recorded fact
  * (`summarizedAt` on the Story) — AFTER *that reader's* last sight of
@@ -182,9 +182,13 @@ export function writeSeen(storage: Storage, blob: SeenBlob): void {
 function trendingBadge(): HTMLElement {
   const span = document.createElement('span');
   span.dataset.trendingBadge = '';
-  span.className = 'inline-flex items-center font-medium text-trending';
+  span.className = 'inline-flex items-center gap-1.5 font-medium text-trending';
   span.title = 'Couverture et résumé enrichis depuis votre dernière visite';
-  span.textContent = '↗\u2009en hausse';
+  span.textContent = 'Faits nouveaux';
+  const dot = document.createElement('span');
+  dot.setAttribute('aria-hidden', 'true');
+  dot.className = 'inline-block size-1.5 rounded-full bg-current';
+  span.prepend(dot);
   return span;
 }
 

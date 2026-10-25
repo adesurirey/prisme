@@ -12,7 +12,7 @@ export function installTrendingPage(): void {
   // DEV-only mock: ?mock-trending seeds a fake baseline so the per-visit
   // signal (StoryCard / StoryHero slot) can be demoed without a real
   // returning-visit baseline: every Story but the last three carries a
-  // re-summarization half an hour after the seeded sight (≥ « en hausse »);
+  // re-summarization half an hour after the seeded sight (→ « faits nouveaux »);
   // those three were last re-summarized before it (no badge).
   if (import.meta.env.DEV && location.search.includes('mock-trending')) {
     const cards = [

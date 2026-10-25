@@ -196,7 +196,7 @@ export interface Story {
   /** Version of the Summaries prompt that wrote these fields (ADR-0006). */
   promptVersion?: string;
   /** ISO instant the last Summaries pass that wrote these fields ran —
-   *  the recorded fact behind the « En hausse » badge (ADR-0031): stamped
+   *  the recorded fact behind the « Faits nouveaux » badge (ADR-0031): stamped
    *  on every actual rewrite, first summarization included; absent on
    *  Stories not (re-)summarized since the field exists. */
   summarizedAt?: string;
@@ -263,7 +263,7 @@ export * from './coverage.ts';
 // The Exposure rule: Reach-weighted shares per Coverage group (issue #88).
 export * from './exposure.ts';
 // The ADR-0027 growth gate: one function, one meaning — the pipeline's AI
-// passes today, the web's « En hausse » badge from here as it ships
+// passes today, the web's « Faits nouveaux » badge from here as it ships
 // (ADR-0029).
 export * from './growth.ts';
 // Story instant derivations (ADR-0026/0027): founding and newest instants,

@@ -288,7 +288,7 @@ describe('installTrending', () => {
         '[data-trending-slot] [data-trending-badge]',
       )!;
       expect(badge != null).toBe(true);
-      expect(badge.textContent).toBe('↗\u2009en hausse');
+      expect(badge.textContent).toBe('Faits nouveaux');
       expect((badge as HTMLElement).title).toBe(
         'Couverture et résumé enrichis depuis votre dernière visite',
       );

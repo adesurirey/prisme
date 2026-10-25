@@ -385,7 +385,7 @@ describe('« 7 jours » edition (issue #128, ADR-0027, ADR-0028)', () => {
     // trending module in the chunk graph and no badge text (ADR-0029).
     const chunks = (await scriptChunkTexts(html)).join('\n');
     expect(chunks).not.toContain('prisme.seenStories');
-    expect(html).not.toContain('En hausse');
+    expect(html).not.toContain('Faits nouveaux');
     expect(html).not.toContain('data-new-pill');
   });
 

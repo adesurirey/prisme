@@ -24,7 +24,7 @@ import StoryImage from './StoryImage';
  * Article cards (hover surface, no animation).
  *
  * The root carries data-story-id/data-summarized-at for the client-side
- * per-visitor badge (trending.ts): "En hausse" when the pipeline's
+ * per-visitor badge (trending.ts): "Faits nouveaux" when the pipeline's
  * Summaries pass rewrote the Story after the reader's last sight of it
  * (ADR-0029 as amended by ADR-0031). The prerendered HTML has no
  * idea who is reading, so the per-visitor signal is decided in the
@@ -75,7 +75,7 @@ export default function StoryCard({
       />
       <div className="flex items-start gap-4 px-5 py-5">
         <div className="min-w-0 flex-1">
-          {/* The per-visitor badge slot ("En hausse",
+          {/* The per-visitor badge slot ("Faits nouveaux",
               trending.ts) sits above the title — a per-visitor highlight
               deserves the first read, not the bottom of the meta pile.
               Invisible (empty:hidden) until trending.ts appends the
