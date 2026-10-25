@@ -68,7 +68,7 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
 
 {
   image && imageOutlet ? (
-    <article class="relative -mx-5" data-story-id={story.id} data-article-count={story.articles.length}>
+    <article class="relative -mx-5" data-story-id={story.id} data-summarized-at={story.summarizedAt ?? ''}>
       <a href={withBase(storyUrl(story))} class="group/card block sm:rounded-xl">
         <figure class="relative overflow-hidden sm:rounded-xl">
           <div class="absolute inset-0">
