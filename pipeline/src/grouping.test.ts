@@ -1,10 +1,11 @@
 import type { Article, Story } from '@prisme/domain';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import {
   bestEpisodeMatch,
   groupStories,
   meetsBirthMinimum,
   memberDigest,
+  REFUSALS_PER_STORY_WARN,
   wordKey,
 } from './grouping.ts';
 import { missingMembershipChecker } from './policy.ts';
@@ -154,6 +155,7 @@ function input(overrides: {
     | undefined;
   makeId?: () => string;
   now?: Date;
+  priorRefusals?: ReadonlySet<string>;
 }) {
   return {
     articles: overrides.articles ?? [],
@@ -161,6 +163,7 @@ function input(overrides: {
     existing: overrides.existing ?? [],
     now: overrides.now ?? NOW,
     makeId: overrides.makeId ?? counter(),
+    priorRefusals: overrides.priorRefusals ?? new Set<string>(),
     clients: overrides.clients
       ? { titles: fakeTitlePass(), ...overrides.clients }
       : NO_CLIENTS,
@@ -3308,5 +3311,283 @@ describe('Topics (ADR-0024)', () => {
     // The only check is the merge itself — Topics never spend one on updates.
     expect(calls).toHaveLength(1);
     expect(calls[0]?.story).toBe('Le budget défendu à l’Assemblée');
+  });
+});
+
+describe('groupStories — refusal cache (issue #148)', () => {
+  /** A Membership checker with per-question scripted verdicts, recording
+   * every call — the refusal-cache tests need mixed answers in one build. */
+  function scriptedMembership(
+    script: {
+      belongs: (headline: string) => 'yes' | 'no';
+      absorbs?: () => 'yes' | 'no';
+    },
+    calls: string[] = [],
+  ): import('./decision-model.ts').MembershipChecker {
+    return {
+      label: 'FakeJev',
+      async belongs(story, article) {
+        calls.push(`belongs ${story.title} ← ${article.headline}`);
+        return script.belongs(article.headline);
+      },
+      async sameSubject() {
+        calls.push('sameSubject');
+        return 'yes';
+      },
+      async absorbs(story, bunch) {
+        calls.push(`absorbs ${story.title} ← ${bunch.title}`);
+        return script.absorbs?.() ?? 'yes';
+      },
+    };
+  }
+
+  it('a prior refusal re-proposed by the model orphans the Article with zero checker calls — never re-paid (issue #148)', async () => {
+    const checkCalls: {
+      story?: string;
+      article?: string;
+      headlines?: string[];
+    }[] = [];
+    const existing = [story({ articles: [article('a0')] })];
+    const outcome = await groupStories(
+      input({
+        articles: [article('a0'), article('a1')],
+        existing,
+        priorRefusals: new Set(['a1|s1']),
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.9 }],
+          }),
+          // Would answer yes if asked — the pair must never reach it.
+          membership: fakeMembership(true, checkCalls),
+        },
+      }),
+    );
+    // Unchanged behavior on the reader side: the Article stays Unassigned.
+    expect(
+      outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
+    ).toEqual(['a0']);
+    expect(outcome.stories).toHaveLength(1);
+    expect(outcome.changed.has('story-un')).toBe(false);
+    // The savings: no check was spent, and the refusal is not re-recorded.
+    expect(checkCalls).toHaveLength(0);
+    expect(outcome.refusals.size).toBe(0);
+  });
+
+  it('a build whose only pending checks are answered by the cache succeeds even with a missing checker — no total failure (issue #148)', async () => {
+    const existing = [story({ articles: [article('a0')] })];
+    const outcome = await groupStories(
+      input({
+        articles: [article('a0'), article('a1')],
+        existing,
+        priorRefusals: new Set(['a1|s1']),
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [{ articleId: 'a1', storyId: 's1', confidence: 0.9 }],
+          }),
+          // Throws when called — nothing may be asked this build.
+          membership: missingMembershipChecker(),
+        },
+      }),
+    );
+    expect(
+      outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
+    ).toEqual(['a0']);
+  });
+
+  it("carries this build's merge refusals in the outcome — never a yes, never a failure (issue #148)", async () => {
+    const existing = [story({ articles: [article('a0')] })];
+    const outcome = await groupStories(
+      input({
+        articles: [article('a0'), article('a1'), article('a2')],
+        existing,
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [],
+            assignments: [
+              { articleId: 'a1', storyId: 's1', confidence: 0.9 },
+              { articleId: 'a2', storyId: 's1', confidence: 0.9 },
+            ],
+          }),
+          membership: scriptedMembership({
+            belongs: (headline) => (headline === 'Titre a1' ? 'no' : 'yes'),
+          }),
+        },
+      }),
+    );
+    // a2 joins; a1 is refused and stays Unassigned.
+    expect(
+      outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
+    ).toEqual(['a0', 'a2']);
+    expect(outcome.refusals).toEqual(new Map([['a1|s1', NOW.toISOString()]]));
+  });
+
+  it('guard (absorbs) refusals and key-target checks stay build-local — only merge questions persist (issue #148)', async () => {
+    const calls: string[] = [];
+    const existing = [
+      story({
+        articles: [
+          article('a0', {
+            headline: 'Le tribunal administratif interdit la marche à Paris',
+          }),
+        ],
+      }),
+    ];
+    const outcome = await groupStories(
+      input({
+        articles: [
+          article('a0'),
+          article('a3', {
+            headline:
+              'Marche à Paris : les manifestants maintiennent le cortège',
+          }),
+          article('a4', {
+            outletId: 'lemonde',
+            headline:
+              'Marche à Paris : la police procède à des interpellations',
+          }),
+          article('a5', {
+            outletId: 'lefigaro',
+            headline: 'À Paris, la marche maintenue malgré l’interdiction',
+          }),
+        ],
+        existing,
+        clients: {
+          grouping: fakeGrouping({
+            newStories: [{ key: 'k1' }],
+            assignments: [
+              { articleId: 'a3', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a4', newStoryKey: 'k1', confidence: 0.9 },
+              { articleId: 'a5', newStoryKey: 'k1', confidence: 0.9 },
+            ],
+          }),
+          membership: scriptedMembership(
+            {
+              // The guard refuses the absorption; a4 is refused against the
+              // seed (a key: target); a5 joins.
+              absorbs: () => 'no',
+              belongs: (headline) =>
+                headline.includes('interpellations') ? 'no' : 'yes',
+            },
+            calls,
+          ),
+        },
+      }),
+    );
+    // The birth survives the guard: a3 seeds, a5 joins, a4 is refused.
+    const born = outcome.stories.find((s) => s.id === '000000000001')!;
+    expect(born.articles.map((a) => a.id)).toEqual(['a3', 'a5']);
+    expect(
+      outcome.stories.find((s) => s.id === 's1')!.articles.map((a) => a.id),
+    ).toEqual(['a0']);
+    // The guard question was asked — and none of its verdicts persist.
+    expect(calls.some((c) => c.startsWith('absorbs '))).toBe(true);
+    expect(outcome.refusals.size).toBe(0);
+  });
+
+  it('the Membership log reports refusals recorded and active-ledger size (issue #148)', async () => {
+    const log = vi.spyOn(console, 'log').mockImplementation(() => {});
+    try {
+      const existing = [story({ articles: [article('a0')] })];
+      await groupStories(
+        input({
+          articles: [article('a0'), article('a1'), article('a2')],
+          existing,
+          priorRefusals: new Set(['a1|s1', 'a9|s9']),
+          clients: {
+            grouping: fakeGrouping({
+              newStories: [],
+              assignments: [
+                { articleId: 'a1', storyId: 's1', confidence: 0.9 },
+                { articleId: 'a2', storyId: 's1', confidence: 0.9 },
+              ],
+            }),
+            membership: scriptedMembership({
+              belongs: (headline) => (headline === 'Titre a2' ? 'no' : 'yes'),
+            }),
+          },
+        }),
+      );
+      const line = log.mock.calls
+        .map((args) => args.join(' '))
+        .find((text) => text.startsWith('Membership:'));
+      expect(line).toContain('1 check(s) this build');
+      expect(line).toContain('1 answered from prior refusals');
+      expect(line).toContain('1 refusal(s) recorded');
+      expect(line).toContain('ledger: 3 active pair(s)');
+    } finally {
+      log.mockRestore();
+    }
+  });
+
+  it('warns on Stories with unusual refusal counts — the magnet-Story signature (issue #148)', async () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    try {
+      const magnet = new Set(
+        Array.from(
+          { length: REFUSALS_PER_STORY_WARN + 1 },
+          (_, i) => `p${i}|s1`,
+        ),
+      );
+      const existing = [story({ articles: [article('a0')] })];
+      await groupStories(
+        input({
+          articles: [article('a0'), article('a1')],
+          existing,
+          priorRefusals: magnet,
+          clients: {
+            grouping: fakeGrouping({
+              newStories: [],
+              assignments: [
+                { articleId: 'a1', storyId: 's1', confidence: 0.9 },
+              ],
+            }),
+            membership: fakeMembership(false),
+          },
+        }),
+      );
+      const warned = warn.mock.calls
+        .map((args) => args.join(' '))
+        .find((text) => text.includes('refusal'));
+      expect(warned).toContain('s1');
+      expect(warned).toContain('magnet');
+    } finally {
+      warn.mockRestore();
+    }
+  });
+
+  it('does not warn below the unusual-refusal threshold', async () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    try {
+      const existing = [story({ articles: [article('a0')] })];
+      await groupStories(
+        input({
+          articles: [article('a0'), article('a1')],
+          existing,
+          priorRefusals: new Set(
+            Array.from(
+              { length: REFUSALS_PER_STORY_WARN - 1 },
+              (_, i) => `p${i}|s1`,
+            ),
+          ),
+          clients: {
+            grouping: fakeGrouping({
+              newStories: [],
+              assignments: [
+                { articleId: 'a1', storyId: 's1', confidence: 0.9 },
+              ],
+            }),
+            membership: fakeMembership(false),
+          },
+        }),
+      );
+      // Prior (W-1) + this build's refusal = W: not unusual.
+      expect(
+        warn.mock.calls.map((args) => args.join(' ')).join('\n'),
+      ).not.toContain('magnet');
+    } finally {
+      warn.mockRestore();
+    }
   });
 });

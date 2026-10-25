@@ -156,3 +156,75 @@ describe('MembershipGate', () => {
     expect(gate.checksUsed).toBe(50);
   });
 });
+
+describe('MembershipGate — prior refusals (issue #148)', () => {
+  it("answers a prior build's refusal without spending a check", async () => {
+    const calls: { story: string; article: string }[] = [];
+    const gate = new MembershipGate({
+      checker: checker(new Error('FakeJev: unexpected check'), calls),
+      priorRefusals: new Set(['a1|s1']),
+    });
+    expect(
+      await gate.ask({ target: 's1', story, article, teaser: '', label: 'x' }),
+    ).toBe('no');
+    expect(calls).toHaveLength(0);
+    expect(gate.checksUsed).toBe(0);
+    expect(gate.priorAnswers).toBe(1);
+    // Coherent read-back: the cached refusal is the pair's verdict.
+    expect(gate.verdict('a1', 's1')).toBe('no');
+  });
+
+  it('does not count a prior answer toward the total-failure rule', async () => {
+    const gate = new MembershipGate({
+      checker: checker(new Error('HTTP 503: down')),
+      priorRefusals: new Set(['a1|s1']),
+    });
+    await gate.ask({ target: 's1', story, article, teaser: '', label: 'x' });
+    expect(gate.checksUsed).toBe(0);
+    expect(gate.allAttemptsFailed).toBe(false);
+  });
+
+  it('records this build’s merge-question refusals — never a yes, never a failure', async () => {
+    const gate = new MembershipGate({
+      checker: checker(['no', 'no', 'yes', 'failed']),
+    });
+    for (const target of ['s1', 's2', 's3', 's4'])
+      await gate.ask({ target, story, article, teaser: '', label: 'x' });
+    expect([...gate.refusals()]).toEqual(['a1|s1', 'a1|s2']);
+  });
+
+  it('a prior answer is not re-recorded as this build’s refusal', async () => {
+    const gate = new MembershipGate({
+      checker: checker(new Error('FakeJev: unexpected check')),
+      priorRefusals: new Set(['a1|s1']),
+    });
+    await gate.ask({ target: 's1', story, article, teaser: '', label: 'x' });
+    expect([...gate.refusals()]).toEqual([]);
+  });
+
+  it('a birth-guard refusal never enters the refusal set — guard verdicts stay build-local (issue #148)', async () => {
+    const guardChecker: import('./decision-model.ts').MembershipChecker = {
+      label: 'FakeJev',
+      async belongs() {
+        throw new Error('no merge check in this test');
+      },
+      async sameSubject() {
+        throw new Error('no topic check in this test');
+      },
+      async absorbs() {
+        return 'no';
+      },
+    };
+    const gate = new MembershipGate({ checker: guardChecker });
+    expect(
+      await gate.absorbs({
+        target: 's1',
+        story,
+        bunch: { title: 'Bunch', headlines: [] },
+        seedId: 'a1',
+        label: 'x',
+      }),
+    ).toBe('no');
+    expect([...gate.refusals()]).toEqual([]);
+  });
+});

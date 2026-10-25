@@ -57,12 +57,23 @@ jobs:
       # rotate out of the feeds. The file is never committed (gitignored); the
       # Actions cache carries it across hourly builds. The key is unique per
       # run and restore-keys falls back to the newest previous cache.
+      # The Membership-refusal cache (issue #148) rides the same pattern:
+      # .cache/refusals.json carries the 48 h ledger of definitive Membership
+      # refusals so an identical (Article, Story) question is never paid for
+      # twice — ids and instants only.
       - uses: actions/cache/restore@v4
         with:
           path: .cache/teasers.json
           key: teasers-${{ github.run_id }}
           restore-keys: |
             teasers-
+
+      - uses: actions/cache/restore@v4
+        with:
+          path: .cache/refusals.json
+          key: refusals-${{ github.run_id }}
+          restore-keys: |
+            refusals-
 
       # The pipeline tolerates failing feeds; a total failure aborts the build.
       # OPENROUTER_API_KEY drives Article classification (issue #4) and the
@@ -81,6 +92,14 @@ jobs:
         with:
           path: .cache/teasers.json
           key: teasers-${{ github.run_id }}
+
+      # Written only when every model pass succeeded; saving a restored or
+      # absent file on a failed build is harmless (never wrong data).
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .cache/refusals.json
+          key: refusals-${{ github.run_id }}
 
       - name: Commit data
         run: |

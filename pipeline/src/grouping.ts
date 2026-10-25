@@ -67,7 +67,11 @@ import {
   isLive,
   joinsIngestionWindow,
 } from './liveness.ts';
-import { MembershipGate, type MembershipVerdict } from './membership-gate.ts';
+import {
+  MembershipGate,
+  type MembershipVerdict,
+  targetOfPairKey,
+} from './membership-gate.ts';
 import { parisDayKey } from './paris-day.ts';
 import { runPool } from './pool.ts';
 import type { TitlePassModel } from './title-pass.ts';
@@ -75,6 +79,13 @@ import { topicLabel } from './topic-label.ts';
 
 /** Above this many checks in one build, the run log warns (ADR-0012). */
 export const MEMBERSHIP_CHECKS_WARN = 2000;
+
+/** Above this many active refusals against one Story, the run log warns
+ * (issue #148): the magnet-Story signature — a Story the Membership check
+ * keeps refusing while the Grouping model keeps re-proposing its Articles
+ * (the 2026-10-24 deadlock's mechanism, spec #147). Counted over the active
+ * 48 h ledger, so the warning follows the pattern and decays with it. */
+export const REFUSALS_PER_STORY_WARN = 20;
 
 export interface GroupingClients {
   /** Live: resolveModels (policy.ts) fails the build before this point. */
@@ -95,6 +106,11 @@ export interface GroupingInput {
   now: Date;
   /** Random 12-hex Story id source; injectable for tests. */
   makeId: () => string;
+  /** Prior build's merge refusals (issue #148): pair keys
+   * `${articleId}|${storyId}`, TTL-pruned by the caller. A pair in this set
+   * is answered 'no' without spending a check — the model's behavior is
+   * untouched; only the check is never re-paid. */
+  priorRefusals: ReadonlySet<string>;
   clients: GroupingClients;
 }
 
@@ -108,6 +124,12 @@ export interface GroupingOutcome {
   /** Topics confirmed this build — threads that reached two Episodes; the
    * run merges them into data/topics.json (ADR-0024). */
   topics: ConfirmedTopic[];
+  /** Merge-question refusals recorded this build (issue #148): pair key
+   * `${articleId}|${storyId}` → this build's instant. The run merges them
+   * into the refusal cache and saves it only after every model pass
+   * succeeded — an earlier failure writes nothing (ADR-0005). Birth-guard
+   * verdicts and `key:` targets never appear here. */
+  refusals: Map<string, string>;
 }
 
 /** True when the Story's Ingestion window is open (ADR-0027). */
@@ -584,6 +606,7 @@ export async function groupStories(
   input: GroupingInput,
 ): Promise<GroupingOutcome> {
   const { articles, teasers, existing, now, makeId, clients } = input;
+  const priorRefusals = input.priorRefusals;
   const fresh = freshArticles(articles, existing, now);
   /** Stories to write back, tracked as objects so slug reassignment is safe. */
   const changedStories = new Set<Story>();
@@ -624,6 +647,9 @@ export async function groupStories(
     Story,
     { title: string; storyDay: string; subject?: string }
   >();
+  // Merge-question refusals recorded this build (issue #148), filled after
+  // the assignment loop; the no-fresh-Articles path records none.
+  let refusals = new Map<string, string>();
 
   if (fresh.length === 0) {
     // Nothing new: nothing changes (issue #5 acceptance criterion).
@@ -632,6 +658,7 @@ export async function groupStories(
       changed: new Set<string>(),
       live: liveSorted(),
       topics: [],
+      refusals,
     };
   }
 
@@ -801,8 +828,13 @@ export async function groupStories(
     // merge pairs by headline overlap. A missing OPENROUTER_API_KEY
     // arrives as the declared fail-when-pending adapter (policy.ts): every
     // attempt fails, so the total-failure rule fires exactly when checks
-    // were pending.
-    const gate = new MembershipGate({ checker: clients.membership });
+    // were pending. The prior build's refusals ride along (issue #148): a
+    // pair already refused is answered 'no' without a check and without
+    // counting toward the total-failure rule.
+    const gate = new MembershipGate({
+      checker: clients.membership,
+      priorRefusals,
+    });
     {
       // Guard candidates: existing Stories only (never the proposed keys),
       // open per the Ingestion window (ADR-0027); a closed Story can never
@@ -1057,12 +1089,55 @@ export async function groupStories(
       }
     }
 
+    // This build's refusals (issue #148): merge-question 'no's against
+    // real Story ids, stamped with the build instant. `key:` targets are
+    // build-local — a proposed key never recurs — and guard verdicts never
+    // entered the gate's refusal set, so neither persists.
+    refusals = new Map<string, string>();
+    for (const key of gate.refusals()) {
+      if (targetOfPairKey(key).startsWith('key:')) continue;
+      refusals.set(key, now.toISOString());
+    }
     console.log(
-      `Membership: ${gate.checksUsed} check(s) this build (Stories born: ${created.length}, Stories live: ${stories.length}).`,
+      `Membership: ${gate.checksUsed} check(s) this build, ` +
+        `${gate.priorAnswers} answered from prior refusals, ` +
+        `${refusals.size} refusal(s) recorded ` +
+        `(ledger: ${priorRefusals.size + refusals.size} active pair(s); ` +
+        `Stories born: ${created.length}, Stories live: ${stories.length}).`,
     );
     if (gate.checksUsed > MEMBERSHIP_CHECKS_WARN)
       console.warn(
         `⚠ Membership: ${gate.checksUsed} checks in one build is unusual — inspect the Grouping proposal for a combinatorial blowup (ADR-0012).`,
+      );
+
+    // Magnet-Story visibility (issue #148): over the active 48 h ledger
+    // (prior + this build's), a Story refusing unusually many merges is
+    // the deadlock's signature — surfaced in CI instead of silent.
+    const refusalCountByStory = new Map<string, number>();
+    const countRefusal = (key: string): void => {
+      const storyId = targetOfPairKey(key);
+      refusalCountByStory.set(
+        storyId,
+        (refusalCountByStory.get(storyId) ?? 0) + 1,
+      );
+    };
+    for (const key of priorRefusals) countRefusal(key);
+    for (const key of refusals.keys()) countRefusal(key);
+    const magnets = [...refusalCountByStory]
+      .filter(([, count]) => count > REFUSALS_PER_STORY_WARN)
+      .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1));
+    if (magnets.length > 0)
+      console.warn(
+        `⚠ Membership: unusual refusal counts (issue #148) — ${magnets
+          .map(([id, count]) => {
+            const story = byId.get(id);
+            return story != null && story.title !== ''
+              ? `Story ${id} « ${story.title} »: ${count}`
+              : `Story ${id}: ${count}`;
+          })
+          .join(
+            ', ',
+          )} — magnet Story: it keeps refusing merges the Grouping model re-proposes; inspect its Ingestion window.`,
       );
 
     // Stories below the birth minimum are dropped before they ever
@@ -1230,6 +1305,7 @@ export async function groupStories(
     changed: new Set([...changedStories].map((s) => s.slug)),
     live: liveSorted(),
     topics,
+    refusals,
   };
 }
 

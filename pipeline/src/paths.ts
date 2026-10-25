@@ -21,6 +21,19 @@ export const TEASER_CACHE_PATH = new URL(
   import.meta.url,
 );
 
+/**
+ * The private Membership-refusal cache (issue #148): beside the teaser
+ * cache under the gitignored .cache/ — outside the published data/. Ids
+ * and instants only (no Outlet text, ADR-0003 holds trivially); a missing
+ * or corrupt file degrades to an empty ledger and never fails a build. CI
+ * round-trips it through the Actions cache, same pattern as the teaser
+ * cache.
+ */
+export const REFUSAL_CACHE_PATH = new URL(
+  '../../.cache/refusals.json',
+  import.meta.url,
+);
+
 export async function readStories(): Promise<Story[]> {
   const files = (await readdir(STORIES_DIR)).filter((f) => f.endsWith('.json'));
   return Promise.all(

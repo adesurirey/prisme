@@ -20,11 +20,17 @@ import { fetchFeed } from './http.ts';
 import {
   CLASSIFICATIONS_PATH,
   DATA_DIR,
+  REFUSAL_CACHE_PATH,
   STORIES_DIR,
   TEASER_CACHE_PATH,
 } from './paths.ts';
 import { resolveModels } from './policy.ts';
 import { assembleEdition } from './ranking.ts';
+import {
+  loadRefusalCache,
+  mergeRefusals,
+  saveRefusalCache,
+} from './refusal-cache.ts';
 import {
   SUMMARIES_BUDGET,
   SUMMARIES_PROMPT_VERSION,
@@ -108,6 +114,11 @@ export async function runEdition(): Promise<Edition> {
   // groupStories — nothing is written, and the build fails (ADR-0005, as
   // amended in issue #40).
   section('🧩', 'Group');
+  // The refusal cache (issue #148) rides along: prior-build Membership
+  // refusals answer an identical (Article, Story) pair without a paid
+  // check. Ids and instants only, TTL 48 h; a missing or corrupt file
+  // degrades to an empty ledger with a warning and never fails the build.
+  const priorRefusals = await loadRefusalCache(REFUSAL_CACHE_PATH, now);
   const existing = await loadStories(STORIES_DIR);
   const outcome = await groupStories({
     articles: kept,
@@ -115,6 +126,7 @@ export async function runEdition(): Promise<Edition> {
     existing,
     now,
     makeId: () => randomBytes(6).toString('hex'),
+    priorRefusals: new Set(Object.keys(priorRefusals)),
     clients: {
       grouping: models.grouping,
       membership: models.membership,
@@ -228,6 +240,16 @@ export async function runEdition(): Promise<Edition> {
   // `teasers` is already the merged map (cache + collection, above); no pass
   // mutates it.
   await saveTeaserCache(Object.fromEntries(teasers), TEASER_CACHE_PATH);
+
+  // Refusal cache (issue #148): merged and saved here — after every model
+  // pass succeeded, like the teaser cache, so a failed build writes nothing
+  // and its refusals are simply re-paid next build (ADR-0005
+  // retry-ability). The merge prunes against the build instant, keeping the
+  // ledger bounded to ~2 days of pairs.
+  await saveRefusalCache(
+    mergeRefusals(priorRefusals, outcome.refusals, now),
+    REFUSAL_CACHE_PATH,
+  );
 
   const filesToWrite = changed.size;
   section('📰', 'Edition');

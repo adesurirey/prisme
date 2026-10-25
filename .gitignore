@@ -15,8 +15,9 @@ dist/
 # only the labels file, docs/research/decision-model-labels.json, is committed.
 .benchmark/
 
-# Private teaser cache (ADR-0027, amending ADR-0003): Outlet-written teaser
-# text is never committed — the file is round-tripped through the Actions
-# cache instead. Gitignored from its first commit, alongside the code that
-# writes it.
+# Private caches, never committed (ADR-0027's gitignored-cache precedent):
+# .cache/teasers.json holds Outlet-written teaser text — never published
+# (ADR-0003); .cache/refusals.json holds the Membership-refusal ledger —
+# ids and instants only (issue #148). Both round-trip through the Actions
+# cache, and both degrade to empty when missing — never a build failure.
 .cache/
