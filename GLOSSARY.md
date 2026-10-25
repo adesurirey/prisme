@@ -88,8 +88,12 @@ The part of the news a Story belongs to: Politique, International, Économie, So
 _Avoid_: Category, rubric, topic
 
 **Edition**:
-A rolling window over all Stories — frozen ones included — ranked by Coverage counted inside the window, re-ranked at every build. « Aujourd'hui » (the home) is the last 24 hours, uncapped (ADR-0022); « 7 jours » (`/7-jours/`) is the last 7 days, floored to Stories covered by at least 10 Outlets in the window. A Story stays on la Une while Outlets keep reporting it inside the window, then sinks and disappears — by decay, never by a clock (ADR-0027). Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
+A rolling window over all Stories — frozen ones included — re-ranked at every build. « Aujourd'hui » (the home) is the last 24 hours, uncapped (ADR-0022); « 7 jours » (`/7-jours/`) is the last 7 days, floored to Stories covered by at least 10 Outlets in the window; both rank by Coverage counted inside the window. « En direct » (`/en-direct/`) is the exception: the last 8 hours by founding instant, ranked latest-first (ADR-0029). A Story stays on la Une while Outlets keep reporting it inside the window, then sinks and disappears — by decay, never by a clock (ADR-0027). Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
 _Avoid_: Issue, digest, daily, run
+
+**En direct**:
+The latest-first Edition window: every Story whose founding Article falls within the last 8 hours, newest first, uncapped — the page-shaped answer to "what's new since I was here" for a reader returning several times a day (ADR-0029). Replaces the per-reader « Nouveau » marker (ADR-0020).
+_Avoid_: Live feed, newsfeed, breaking news
 
 **Story day**:
 The one Publication day (Europe/Paris) a Story belongs to — the day of its founding Article, fixed when the Story is created. It keys the Story's URL, its archive page and the Episode age window; which Articles may join is governed by the Ingestion window, not by the day (ADR-0026, ADR-0027).
