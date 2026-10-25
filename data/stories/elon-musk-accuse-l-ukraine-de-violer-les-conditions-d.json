@@ -6,6 +6,18 @@
   "storyDay": "2026-10-25",
   "articles": [
     {
+      "id": "14a7053218ae",
+      "outletId": "ouest-france",
+      "headline": "Guerre en Ukraine : Trois morts près de Kharkiv, Musk accuse l’Ukraine sur Starlink… Le point sur la nuit",
+      "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-trois-morts-pres-de-kharkiv-musk-accuse-lukraine-sur-starlink-le-point-sur-la-nuit-2965c2d0-cfe8-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-25T04:38:26.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNzlhYzJhMjM3ODAyOTVmNjBjYzVhNDc4YzE5YTNjZTA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=7fc38f366bbf6ccab4977bd42caf7ef7c58c13578bc4aecd6f91554d8d30af87",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "8ada3532f5eb",
       "outletId": "le-monde",
       "headline": "EN DIRECT, guerre en Ukraine : Elon Musk accuse Kiev de violer les conditions d’utilisation du réseau Starlink",
@@ -31,23 +43,28 @@
     }
   ],
   "topicId": "87509759590f",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le dirigeant de SpaceX a averti Kiev que son réseau satellitaire civil ne devait pas servir d'outil militaire.",
-      "L'entrepreneur américain menace l'Ukraine d'une coupure définitive de l'accès à Starlink en cas de non-respect des règles."
+      "Le milliardaire américain Elon Musk reproche publiquement à Kiev de enfreindre les règles d'utilisation de son service de communication par satellites.",
+      "Le dirigeant de l'entreprise technologique rappelle que Starlink constitue un dispositif purement civil et non un outil militaire, menaçant de couper l'accès au réseau."
+    ],
+    "centre": [
+      "Elon Musk adresse un avertissement officiel aux autorités ukrainiennes concernant une supposée infraction aux conditions d'utilisation du réseau Starlink.",
+      "La nuit est également marquée par des frappes ayant causé la mort de trois personnes près de Kharkiv, dans une zone placée sous contrôle russe."
     ],
     "droite": [
-      "Le propriétaire de SpaceX reproche à Kiev de ne pas respecter le cadre d'utilisation de son service de communication par satellites.",
-      "Le quotidien rappelle que l'Ukraine s'appuie à la fois sur Starlink et sur sa déclinaison militaire Starshield face aux offensives russes."
+      "Le fondateur de l'entreprise met en cause l'Ukraine pour non-respect des règles régissant l'utilisation de ses satellites de communication.",
+      "L'armée ukrainienne s'appuie habituellement sur le système civil Starlink ainsi que sur sa déclinaison militaire Starshield pour repousser les offensives de drones et de missiles menées par la Russie."
     ]
   },
   "differences": [
-    "La gauche se concentre exclusivement sur l'avertissement et les menaces de coupure proférées par le chef d'entreprise américain.",
-    "La droite contextualise l'incident en soulignant la dépendance stratégique ukrainienne envers les technologies satellitaires civiles et militaires."
+    "La gauche met l'accent sur les déclarations strictes du magnat de la tech concernant la nature civile de son réseau et sa menace d'interruption.",
+    "Le centre associe l'avertissement technologique d'Elon Musk au bilan humain immédiat de la nuit sur le front ukrainien.",
+    "La droite contextualise l'altercation en rappelant la dépendance stratégique des forces ukrainiennes envers les technologies de communication satellitaire."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2
+  "summarizedArticleCount": 3
 }

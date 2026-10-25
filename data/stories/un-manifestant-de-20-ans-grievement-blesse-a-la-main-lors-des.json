@@ -6,6 +6,18 @@
   "storyDay": "2026-10-24",
   "articles": [
     {
+      "id": "50c61be7375c",
+      "outletId": "20-minutes",
+      "headline": "Manifestations du 24 octobre : Un manifestant blessé à la main à Toulouse, un autre à un œil à Poitiers",
+      "url": "https://www.20minutes.fr/societe/4257274-20261025-manifestations-24-octobre-manifestant-blesse-main-toulouse-autre-poitiers?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-25T04:48:41.000Z",
+      "imageUrl": "https://img.20mn.fr/XuyOUw_tTR6LKJUGygmm2ik/1200x768_manifestation-du-24-octobre-dans-les-rues-de-toulouse-contre-la-vie-chere-toulouse-france-24-10-26-manifestation-le-24-octobre-dans-les-rues-de-toulouse-toulouse-france-24-10-26-garniermael-garnier2942-credit-mael-garnier-sipa-2610242245",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
       "id": "aee08aa9e5ff",
       "outletId": "ouest-france",
       "headline": "Un manifestant de 20 ans grièvement blessé à la main à Toulouse",
@@ -52,23 +64,28 @@
     }
   ],
   "topicId": "b81dfbd471ce",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "society",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Un jeune de 20 ans a subi une grave blessure à la main lors de la dispersion de la manifestation du 24 octobre à Toulouse.",
+      "Un policier a également dû être pris en charge par les secours à la fin de cet événement."
+    ],
     "centre": [
-      "Un homme de 20 ans a subi une grave blessure à la main à Toulouse lors de la dispersion d'une manifestation contre la vie chère et pour les lycées, samedi 24 octobre.",
-      "La préfecture de Haute-Garonne a indiqué que des investigations seront menées pour éclaircir les circonstances de cet incident survenu en fin de rassemblement."
+      "Un homme de 20 ans a eu la main grièvement blessée à la fin d'un rassemblement contre la vie chère et pour les lycées à Toulouse.",
+      "Des heurts avec les forces de l'ordre sont survenus le samedi 24 octobre, suivis d'une annonce de la préfecture sur l'ouverture d'investigations."
     ],
     "droite": [
-      "Un manifestant âgé de 20 ans a eu plusieurs doigts arrachés lors d'incidents survenus en fin de cortège dans le quartier des Arènes à Toulouse, selon un street médic cité par TF1 Info.",
-      "La préfecture confirme qu'une enquête sera diligentée pour faire la lumière sur cet événement."
+      "Des incidents ont éclaté dans le quartier des Arènes à Toulouse en fin de mobilisation.",
+      "Un manifestant a été évacué avec plusieurs doigts arrachés et des investigations ont été promises par les autorités."
     ]
   },
   "differences": [
-    "Les médias du centre se concentrent sur le cadre institutionnel de l'incident, en rapportant sobrement les faits communiqués par la préfecture de Haute-Garonne lors de la dispersion du rassemblement.",
-    "Les médias du centre droit adoptent un angle plus précis sur la gravité des blessures en reprenant le témoignage d'un street médic mentionnant des doigts arrachés."
+    "Les médias de gauche rapportent les faits bruts concernant les blessés des deux côtés sans contextualiser les motivations de la mobilisation.",
+    "Les médias du centre englobent le drame dans le cadre plus large d'un rassemblement contre la vie chère marqué par des heurts.",
+    "Les médias de droite insistent sur la violence des incidents dans un quartier précis et sur la gravité des blessures physiques constatées."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4
+  "summarizedArticleCount": 5
 }
