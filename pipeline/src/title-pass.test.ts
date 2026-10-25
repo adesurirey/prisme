@@ -84,6 +84,17 @@ describe('titlePassPrompt', () => {
     expect(prompt).toContain('uniquement si un meilleur titre existe');
   });
 
+  it('pins the founding-anchor rule for retitles (ADR-0027): the title names the event, not its latest development', () => {
+    const prompt = titlePassPrompt(input);
+    expect(prompt).toContain(
+      "le titre actuel nomme l'événement qui a fondé la story",
+    );
+    expect(prompt).toContain('il en reste le sujet');
+    expect(prompt).toContain('ne remplace pas cet événement');
+    expect(prompt).toContain('au plus il le complète après deux points');
+    expect(prompt).toContain("contredit par l'ensemble des titres");
+  });
+
   it('has no length rule at all (ADR-0013 amendment: absent guidelines, the model infers)', () => {
     const prompt = titlePassPrompt(input);
     expect(prompt).not.toContain('110 caractères');

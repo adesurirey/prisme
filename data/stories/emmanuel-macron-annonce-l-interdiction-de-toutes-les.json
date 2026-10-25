@@ -6,6 +6,39 @@
   "storyDay": "2026-10-22",
   "articles": [
     {
+      "id": "364204f317c0",
+      "outletId": "humanite",
+      "headline": "A Bordeaux, les syndicats revendiquent 15 000 manifestants malgré une interdiction",
+      "url": "https://www.humanite.fr/-/-/a-bordeaux-les-syndicats-revendiquent-15-000-manifestants-malgre-une-interdiction",
+      "publishedAt": "2026-10-24T14:28:01.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "61155a2366a9",
+      "outletId": "le-parisien",
+      "headline": "Mobilisation du 24 octobre : Paris, Lyon, Marseille, Bordeaux... La justice valide ou invalide les interdictions de manifester",
+      "url": "https://www.leparisien.fr/politique/mobilisation-du-24-octobre-paris-lyon-marseille-bordeaux-la-justice-valide-ou-invalide-les-interdictions-de-manifester-24-10-2026-GKJFVNJAYBAU5E4KD3KDORDOGM.php",
+      "publishedAt": "2026-10-24T14:01:20.152Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "a8351bf29a31",
+      "outletId": "blast",
+      "headline": "Manifestation du 24 octobre : dans les tribunaux, une vaste offensive contre les interdictions de manifester",
+      "url": "https://www.blast-info.fr/articles/2026/manifestation-du-24-octobre-dans-les-tribunaux-une-vaste-offensive-contre-les-interdictions-de-manifester-fh3t92IQSk2Ccg9RJCZlYA",
+      "publishedAt": "2026-10-24T09:30:00.000Z",
+      "imageUrl": "https://static.blast-info.fr/stories/2026/thumb_story_list-manifestation-du-24-octobre-dans-les-tribunaux-une-vaste-offensive-contre-les-interdictions-de-manifester-fh3t92IQSk2Ccg9RJCZlYA.webp",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "0523a373c55d",
       "outletId": "le-parisien",
       "headline": "Le Conseil d’État rejette les recours sur les interdictions généralisées de manifester demandées par Emmanuel Macron",
@@ -162,7 +195,7 @@
       "url": "https://www.20minutes.fr/societe/4257049-20261023-manifestation-24-octobre-point-musees-sites-touristiques-resteront-fermes-samedi?at_medium=display&at_campaign=149",
       "publishedAt": "2026-10-23T14:57:07.000Z",
       "imageUrl": "https://img.20mn.fr/_0alYCoqSSyw1hZlZ9eASik/1200x768_le-chef-d-uvre-idee-di-pietra-de-giuseppe-penone-de-la-collection-pinault-devant-la-bourse-du-commerce-paris-france-14-10-2026-meigneux-meigneux008-credit-romuald-meigneux-sipa-2610141437",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "culture",
       "everFrontPage": true
@@ -826,7 +859,7 @@
       "url": "https://www.lefigaro.fr/actualite-france/acte-ii-du-24-octobre-quel-sera-le-parcours-de-la-manifestation-parisienne-20261021",
       "publishedAt": "2026-10-22T10:44:14.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/21/6fc418889e7737f4595a118b86fb508bf96761875186716e6078ff85a7bf217e.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -870,27 +903,30 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Sept partis de gauche ont saisi le Conseil d'État pour contester l'interdiction des manifestations non syndicales décrétée par Emmanuel Macron.",
-      "Plusieurs figures et syndicats, dont la CGT et LFI, dénoncent une dérive autoritaire et une atteinte grave aux libertés publiques.",
-      "De nombreuses préfectures ont prononcé l'interdiction de rassemblements et de défilés, notamment à Lyon, Marseille et Lille."
+      "Sept partis de gauche ont saisi en urgence le Conseil d’État pour contester l'interdiction des manifestations non syndicales décidée par Emmanuel Macron.",
+      "Plusieurs organisations, dont La France insoumise et la Ligue des droits de l’homme, dénoncent une dérive autoritaire et une atteinte grave à la liberté de manifester.",
+      "Des arrêtés préfectoraux ont massivement interdit les cortèges prévus ce samedi 24 octobre dans plusieurs grandes villes, notamment à Lyon, Marseille et Lille.",
+      "Des syndicats comme la CGT et des figures locales, à l'instar du maire marseillais Benoît Payan, critiquent des mesures liberticides qui n'apaiseront pas la situation."
     ],
     "centre": [
-      "Emmanuel Macron a annoncé que seules les manifestations organisées par les syndicats seraient tolérées pour le week-end du 24 octobre.",
-      "Le Conseil d'État a rejeté les recours formés contre ces interdictions généralisées de manifester.",
-      "La préfecture de police de Paris a validé un parcours sécurisé entre Bastille et Nation pour le cortège syndical."
+      "Le Conseil d’État a été saisi en urgence par des partis d'opposition après la consigne d'Emmanuel Macron d'interdire les rassemblements non syndicaux.",
+      "Le chef de l'État a affirmé qu'en principe, seules les manifestations organisées par les syndicats seraient tolérées ce samedi 24 octobre.",
+      "Les préfets ont pris de nombreux arrêtés d'interdiction ou de restriction dans les métropoles afin d'éviter de nouveaux débordements après les violences du 17 octobre.",
+      "À Paris, un parcours a été validé par la préfecture de police entre la place de la Bastille et la place de la Nation pour l'intersyndicale."
     ],
     "droite": [
-      "Le gouvernement a déployé environ 80 000 forces de sécurité pour encadrer le nouvel acte de mobilisation et prévenir de nouveaux pillages.",
-      "Plusieurs partis de gauche ont contesté sans succès ces restrictions devant le Conseil d'État.",
-      "À Marseille et dans d'autres villes, des commerçants terrifiés par les violences récentes ont préféré garder portes closes."
+      "Le gouvernement déploie un dispositif de sécurité exceptionnel, mobilisant environ 80 000 forces de l'ordre face au risque de nouveaux pillages et violences urbaines.",
+      "À la suite des déclarations d'Emmanuel Macron, les préfets ont interdit de nombreuses manifestations non syndicales pour garantir un retour au calme dans les métropoles.",
+      "Des villes comme Lyon, Nice et Marseille prennent des mesures drastiques, incluant des fermetures d'églises et de musées ainsi que la protection des commerces.",
+      "Le Conseil d’État fait face à plusieurs recours déposés par la gauche pour contester ces interdictions préfectorales."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la défense des libertés fondamentales en qualifiant les restrictions gouvernementales de dérive autoritaire liberticide.",
-    "Le centre adopte un traitement factuel en se focalisant sur les arbitrages sécuritaires de l'exécutif et les décisions des préfectures.",
-    "La droite insiste sur la menace des violences urbaines et le traumatisme des commerçants pillés pour justifier le renforcement des forces de l'ordre."
+    "La gauche focalise son traitement sur la défense des libertés publiques et qualifie les interdictions préfectorales de répression liberticide.",
+    "Le centre adopte un angle institutionnel et factuel, en relatant la mise en place des restrictions par l'exécutif et les saisines de la justice administrative.",
+    "La droite centre son analyse sur la nécessité absolue du maintien de l'ordre et la protection des biens et des commerçants après les violences récentes."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 63,
+  "summarizedArticleCount": 79,
   "titledArticleCount": 78
 }

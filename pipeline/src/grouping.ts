@@ -35,12 +35,14 @@
  * destroyed: membership was sticky, singletons never re-merge). A proposed
  * Story reduced to its seed alone, or whose members are all one Outlet, is
  * dropped before it can publish. A new Story proposed by the Grouping
- * model gets the seed guard (issue #36) first: across builds against the
- * most headline-similar live Stories, and within the build against the
- * other surviving seeds — so two same-event Articles proposed as separate
- * one-member Stories fold into one two-member Story instead of both being
- * dropped. A build-failing invariant (any created Story under two Articles
- * or two Outlets throws) keeps the policy true by construction.
+ * model gets the birth guard (issue #36, ADR-0030) first: across builds,
+ * the whole claimed bunch is checked against every live Story sharing a
+ * content token with it — a live Story beats a new twin of her own
+ * event — and within the build against the other surviving seeds, so two
+ * same-event Articles proposed as separate one-member Stories fold into
+ * one two-member Story instead of both being dropped. A build-failing
+ * invariant (any created Story under two Articles or two Outlets throws)
+ * keeps the policy true by construction.
  */
 import { readdir, readFile } from 'node:fs/promises';
 import type { Article, Section, Story, Topic } from '@prisme/domain';
@@ -65,8 +67,9 @@ import {
   isLive,
   joinsIngestionWindow,
 } from './liveness.ts';
-import { MembershipGate } from './membership-gate.ts';
+import { MembershipGate, type MembershipVerdict } from './membership-gate.ts';
 import { parisDayKey } from './paris-day.ts';
+import { runPool } from './pool.ts';
 import type { TitlePassModel } from './title-pass.ts';
 import { topicLabel } from './topic-label.ts';
 
@@ -151,14 +154,13 @@ export function meetsBirthMinimum(
 }
 
 /**
- * Seed guard (issue #36): the proposed new-Story seeds are the only
- * Articles that would reach a Story without a Membership check. Before a
- * proposed Story keeps its seed, the seed is checked against this many
- * live Stories — the most headline-similar ones. The token-overlap score
- * below only bounds which Stories are worth a check; the Membership model
- * still decides.
+ * Birth-guard checks in flight at once (ADR-0030): the candidate checks
+ * of one proposed Story are independent, and a busy morning's birth faces
+ * a dozen-plus qualifying live Stories (archive replay: median 11, max 36
+ * on a healthy archive) — sequential awaits would add minutes to the
+ * build.
  */
-const MAX_SEED_CANDIDATES = 2;
+const GUARD_CHECK_CONCURRENCY = 8;
 
 /** Function words the overlap score ignores (French + English). */
 const STOPWORDS = new Set([
@@ -334,22 +336,29 @@ export function memberDigest(
 }
 
 /**
- * The live Stories a proposed new-Story seed is Membership-checked against
- * before its Story is created (issue #36): the most headline-similar live
- * Stories, scored by the best overlap with the Story's title or any of its
- * Articles' headlines — a lone generic title hides a concrete event, the
- * recent Articles carry it. The score only bounds which Stories are worth
- * a check; the Membership model still decides.
+ * The live Stories a proposed new-Story bunch is checked against before
+ * its Story is created (issue #36, ADR-0030): every Story sharing at
+ * least one content token with any bunch headline — scored by the best
+ * overlap only to order the asking, never to cut the list. A lexical
+ * top-k crowded the true twin out on the 2026-10-24 manifestations
+ * morning (issue #140): the same-subject different-fact Stories of a hot
+ * news cycle outscore the same-fact twin for every bunch member, so a
+ * cap of two spent its checks on near-misses the checker correctly
+ * refused. The any-overlap bound only keeps unrelated Stories away; the
+ * Membership model still decides. Exported for tests.
  */
-function seedCandidates(seed: Article, live: Story[]): Story[] {
-  const seedTokens = tokens(seed.headline);
-  if (seedTokens.size === 0) return [];
+export function bunchCandidates(members: Article[], live: Story[]): Story[] {
+  const bunchTokens = members.map((m) => tokens(m.headline));
+  if (bunchTokens.every((t) => t.size === 0)) return [];
   return live
     .map((story) => ({
       story,
       score: Math.max(
-        overlap(seedTokens, tokens(story.title)),
-        ...story.articles.map((a) => overlap(seedTokens, tokens(a.headline))),
+        0,
+        ...bunchTokens.flatMap((t) => [
+          overlap(t, tokens(story.title)),
+          ...story.articles.map((a) => overlap(t, tokens(a.headline))),
+        ]),
       ),
     }))
     .filter((c) => c.score > 0)
@@ -358,8 +367,38 @@ function seedCandidates(seed: Article, live: Story[]): Story[] {
         y.score - x.score ||
         (x.story.id < y.story.id ? -1 : x.story.id > y.story.id ? 1 : 0),
     )
-    .slice(0, MAX_SEED_CANDIDATES)
     .map((c) => c.story);
+}
+
+/**
+ * The candidate Story's member digest for a birth-guard check (ADR-0030):
+ * up to five headlines, most token-overlapping with the proposed bunch
+ * first — like memberDigest, but ranked against the whole bunch, so the
+ * digest surfaces what the live Story already reports about THIS event
+ * (the dispositif headlines against a manifestations bunch, not the
+ * Story's five newest). Exported for tests.
+ */
+export function bunchDigest(
+  bunch: Pick<Article, 'headline'>[],
+  members: { headline: string; publishedAt: string }[],
+): string[] {
+  const bunchTokens = bunch.map((b) => tokens(b.headline));
+  return members
+    .map((m, order) => ({
+      headline: m.headline,
+      score: Math.max(
+        0,
+        ...bunchTokens.map((t) => overlap(t, tokens(m.headline))),
+      ),
+      published: parseInstant(m.publishedAt) ?? 0,
+      order,
+    }))
+    .sort(
+      (x, y) =>
+        y.score - x.score || y.published - x.published || x.order - y.order,
+    )
+    .slice(0, MEMBER_DIGEST_SIZE)
+    .map((m) => m.headline);
 }
 
 /** Below this token overlap a Story on disk is not the previous episode of
@@ -688,7 +727,10 @@ export async function groupStories(
     // `fresh` is newest-first (collect.ts), so the earliest-published
     // member anchors the window and the Story day, and every later join
     // respects it — stable for the Story's life since no member may
-    // precede the founding.
+    // precede the founding. Only the build-time window anchor comes from
+    // the claimed set: the Story day itself is re-derived from the
+    // admitted members below (issue #142) — a claimed-then-refused member
+    // must not pick the Story's public day.
     const keyStories = new Map<string, Story>();
     const keyFounding = new Map<string, number>();
     for (const ns of proposal.newStories) {
@@ -726,36 +768,44 @@ export async function groupStories(
       );
     }
 
-    // Seed guard (issue #36). The seed was the one Article that bypassed
-    // every Membership check, so three same-event Articles proposed as
-    // separate new Stories in one build never had their headlines compared
-    // (the Nobel triple-split), and a proposed singleton could duplicate a
-    // live Story the model failed to merge into (the lycéens singletons).
-    // Before a proposed new Story keeps its seed, the seed gets the same
-    // Jev Membership question a merge gets — cross-build candidates first
-    // (an existing Story beats a new twin), then the surviving earlier
-    // seeds of this build — each candidate filtered to a token overlap with
-    // the seed first, so unrelated proposals never run a check (a fresh
-    // build can propose hundreds of new Stories). A yes redirects
-    // the seed into that Story: the proposed Story receives no seed and is
-    // dropped before it can publish, and its further members are
-    // re-targeted to the absorbing Story. Guard checks run first: an
-    // unguarded seed creates a duplicate Story, which is worse than the
-    // splits a starving merge would leave (ADR-0012 removed the budget).
+    // Birth guard (issue #36, ADR-0030). A proposed new Story must not be
+    // born beside a live Story already carrying its event: while a Story
+    // is live, same-event chain coverage joins her (ADR-0030) — only a
+    // distinct fact births, in parallel if it must. Before a proposed
+    // Story keeps its claimed bunch, the whole bunch gets the Membership
+    // question a merge gets (a legitimately narrow seed must not decide
+    // for its Story, issue #140): cross-build candidates first (an
+    // existing Story beats a new twin), then the surviving earlier seeds
+    // of this build — the #36 Nobel triple-split and singleton twins. A
+    // yes redirects the key into that Story: the proposed Story receives
+    // no seed and is dropped before it can publish, and its further
+    // members are re-targeted to the absorbing Story and checked there
+    // individually. Guard checks run first: an unguarded birth creates a
+    // duplicate Story, which is worse than the splits a starving merge
+    // would leave (ADR-0012 removed the budget).
     const absorbedInto = new Map<string, string>();
     // The Membership gate owns the verdict ledger and the
     // attempt/failure counters (ADR-0005, as amended; the budget is gone,
-    // ADR-0012). Which pairs to ask
-    // stays here — guard seeds first, then merge pairs by headline overlap.
-    // A missing OPENROUTER_API_KEY arrives as the declared fail-when-pending
-    // adapter (policy.ts): every attempt fails, so the total-failure rule
-    // fires exactly when checks were pending.
+    // ADR-0012). Which pairs to ask stays here — guard checks first, then
+    // merge pairs by headline overlap. A missing OPENROUTER_API_KEY
+    // arrives as the declared fail-when-pending adapter (policy.ts): every
+    // attempt fails, so the total-failure rule fires exactly when checks
+    // were pending.
     const gate = new MembershipGate({ checker: clients.membership });
     {
       // Guard candidates: existing Stories only (never the proposed keys),
       // open per the Ingestion window (ADR-0027); a closed Story can never
-      // absorb a seed. Stories whose window does not contain the seed are
-      // filtered per seed below.
+      // absorb a birth. Stories whose window does not contain the seed are
+      // filtered per key below. Candidates are every live Story sharing at
+      // least one content token with the bunch — never a lexical top-k
+      // (ADR-0030): on the 2026-10-24 manifestations morning the true twin
+      // ranked 4th of 12 behind three same-subject different-fact Stories,
+      // so both top-2 checks went to near-misses the checker correctly
+      // refused and the duplicate was born (issue #140). Same-subject
+      // neighbours reliably outscore the same-fact twin; the any-overlap
+      // bound only keeps unrelated Stories away, and the Membership model
+      // still decides. The checks of one key are pooled — they are
+      // independent, and a birth can face dozens of candidates.
       const live = stories
         .filter((s) => !created.includes(s) && isLive(s, now))
         .sort(byNewestArticle);
@@ -769,21 +819,33 @@ export async function groupStories(
         const seedTokens = tokens(seed.headline);
         seedTokensOf.set(key, seedTokens);
         seedHeadlineOf.set(key, seed.headline);
+        // The ask list is order-fixed before the pool runs; the first yes
+        // in list order absorbs, whatever the completion order.
         const ask: {
           target: string;
-          story: MembershipStoryRef;
+          ask: () => Promise<MembershipVerdict>;
         }[] = [];
-        for (const candidate of seedCandidates(
-          seed,
+        for (const candidate of bunchCandidates(
+          members,
           live.filter((s) => canJoin(seed, s)),
         ))
           ask.push({
             target: candidate.id,
-            story: {
-              title: candidate.title,
-              section: candidate.section,
-              headlines: memberDigest(seed, candidate.articles),
-            },
+            ask: () =>
+              gate.absorbs({
+                target: candidate.id,
+                story: {
+                  title: candidate.title,
+                  section: candidate.section,
+                  headlines: bunchDigest(members, candidate.articles),
+                },
+                bunch: {
+                  title: seed.headline,
+                  headlines: members.map((m) => m.headline),
+                },
+                seedId: seed.id,
+                label: `Guard check failed: ${seed.id} → ${candidate.id}`,
+              }),
           });
         for (const earlier of keyOrder) {
           if (earlier === key) break;
@@ -799,26 +861,31 @@ export async function groupStories(
           )
             ask.push({
               target: `key:${earlier}`,
-              story: {
-                title: earlierHeadline,
-                headlines: memberDigest(seed, keyMembers.get(earlier) ?? []),
-              },
+              ask: () =>
+                gate.ask({
+                  target: `key:${earlier}`,
+                  story: {
+                    title: earlierHeadline,
+                    headlines: memberDigest(
+                      seed,
+                      keyMembers.get(earlier) ?? [],
+                    ),
+                  },
+                  article: seed,
+                  teaser: teasers.get(seed.id) ?? '',
+                  label: `Seed check failed: ${seed.id} → key:${earlier}`,
+                }),
             });
         }
-        for (const candidate of ask) {
-          const yes =
-            (await gate.ask({
-              target: candidate.target,
-              story: candidate.story,
-              article: seed,
-              teaser: teasers.get(seed.id) ?? '',
-              label: `Seed check failed: ${seed.id} → ${candidate.target}`,
-            })) === 'yes';
-          if (yes) {
-            absorbedInto.set(key, candidate.target);
+        const verdicts = new Map<string, MembershipVerdict>();
+        await runPool(ask, GUARD_CHECK_CONCURRENCY, async (entry) => {
+          verdicts.set(entry.target, await entry.ask());
+        });
+        for (const entry of ask)
+          if (verdicts.get(entry.target) === 'yes') {
+            absorbedInto.set(key, entry.target);
             break;
           }
-        }
       }
     }
 
@@ -1025,6 +1092,21 @@ export async function groupStories(
         );
     }
 
+    // The Story day is re-derived from the admitted Articles (ADR-0017,
+    // issue #142): newStory anchors the day on the claimed founding
+    // instant — the earliest publishedAt among claimed members, taken
+    // before any Membership verdict — so a claimed-then-refused member can
+    // precede every admitted one and ghost-anchor the Story's public day
+    // (its URL and archive page) on an Article that never joined. Nothing
+    // downstream has read the day yet (Topics resolve next, the Title pass
+    // after), so re-fixing it from the final member set is still "fixed at
+    // creation" (ADR-0017).
+    for (const story of created) {
+      const founding = foundingInstant(story);
+      if (founding != null)
+        story.storyDay = parisDayKey(new Date(founding).toISOString());
+    }
+
     // Topics (ADR-0024): resolved BEFORE the Title pass — the pass's
     // episode context is only fed a Jev-confirmed thread, with its display
     // label; a refused match is a new subject and gets no episode context.
@@ -1063,6 +1145,11 @@ export async function groupStories(
     const updates = retitled.map((s) => ({
       storyId: s.id,
       title: s.title,
+      // Stored order (newest first): the payload is the whole headline set,
+      // never windowed or truncated — the founding anchor is the prompt's
+      // update rule, and replaying this story's decision point showed
+      // reordering oldest-first *weakens* that anchor (the payload's last
+      // line reads as the title-worthy fact).
       headlines: s.articles.map((a) => a.headline),
     }));
     if (births.length > 0 || updates.length > 0) {

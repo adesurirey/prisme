@@ -56,6 +56,13 @@ function loggingProxy(
       );
       return verdict;
     },
+    async absorbs(story, bunch) {
+      const verdict = await checker.absorbs(story, bunch);
+      log(
+        `absorbs ${verdict?.toUpperCase() ?? 'FAILED'}  ${ref(story)}  <- ${ref(bunch)}`,
+      );
+      return verdict;
+    },
     async sameSubject(episodes, birth) {
       const verdict = await checker.sameSubject(episodes, birth);
       if (verdict === 'yes') counters.yes++;
