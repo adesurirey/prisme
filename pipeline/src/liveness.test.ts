@@ -2,6 +2,7 @@ import type { Article, Story } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
 import {
   COLLECTION_WINDOW_MS,
+  INGESTION_CEILING_MS,
   INGESTION_FLOOR_MS,
   INGESTION_SILENCE_MS,
   ingestionIsOpen,
@@ -39,9 +40,13 @@ describe('the two windows are separate constants (ADR-0027)', () => {
     expect(INGESTION_FLOOR_MS).toBe(24 * 60 * 60 * 1000);
     expect(INGESTION_SILENCE_MS).toBe(12 * 60 * 60 * 1000);
   });
+
+  it('the ceiling is 72 hours (ADR-0033)', () => {
+    expect(INGESTION_CEILING_MS).toBe(72 * 60 * 60 * 1000);
+  });
 });
 
-describe('ingestion window (ADR-0027): [founding, max(founding + 24h, newest + 12h)]', () => {
+describe('ingestion window (ADR-0027, ADR-0033): [founding, min(max(founding + 24h, newest + 12h), founding + 72h)]', () => {
   it('is never shorter than founding + 24h: the floor term wins while it is the later', () => {
     // Founded 22:00Z, newest Article five hours later: the pure-rolling
     // 12h-from-newest rule would close the window at founding + 17h —
@@ -198,6 +203,75 @@ describe('ingestion window (ADR-0027): [founding, max(founding + 24h, newest + 1
     const s = story([article('2026-03-28T22:00:00Z', 'a0')]);
     expect(joinsIngestionWindow(s, '2026-03-29T20:30:00Z')).toBe(true);
     expect(joinsIngestionWindow(s, '2026-03-29T22:01:00Z')).toBe(false);
+  });
+});
+
+describe('the ceiling (ADR-0033): a chain ingests at most 72 hours', () => {
+  const F = '2026-10-06T22:00:00Z';
+
+  it('never binds while the newest Article is at most founding + 60h — the silence term stays under it', () => {
+    // Founded 22:00Z Oct 6, newest Article 00:00Z Oct 9 (founding + 50h):
+    // newest + 12h = founding + 62h, still under the ceiling — ADR-0027's
+    // silence rule governs the common case untouched.
+    const s = story([article(F, 'a0'), article('2026-10-09T00:00:00Z', 'a2')]);
+    expect(ingestionWindowClosesAt(s)).toBe(Date.parse('2026-10-09T12:00:00Z'));
+  });
+
+  it('binds once the newest Article lands past founding + 60h: the close is founding + 72h, not newest + 12h', () => {
+    // The Trappes shape: coverage never pauses, newest Article at
+    // founding + 65h — the silence term would say founding + 77h; the
+    // ceiling caps the chain at founding + 72h.
+    const s = story([article(F, 'a0'), article('2026-10-09T15:00:00Z', 'a2')]);
+    expect(ingestionWindowClosesAt(s)).toBe(Date.parse('2026-10-09T22:00:00Z'));
+  });
+
+  it('boundary equality: a newest Article exactly at founding + 60h closes at founding + 72h (both terms agree)', () => {
+    const s = story([article(F, 'a0'), article('2026-10-09T10:00:00Z', 'a2')]);
+    expect(ingestionWindowClosesAt(s)).toBe(Date.parse('2026-10-09T22:00:00Z'));
+  });
+
+  it('is open at exactly founding + 72h despite continuous coverage, closed one second later', () => {
+    const s = story([article(F, 'a0'), article('2026-10-09T15:00:00Z', 'a2')]);
+    expect(ingestionIsOpen(s, new Date('2026-10-09T21:59:59Z'))).toBe(true);
+    expect(ingestionIsOpen(s, new Date('2026-10-09T22:00:00Z'))).toBe(true);
+    expect(ingestionIsOpen(s, new Date('2026-10-09T22:00:01Z'))).toBe(false);
+  });
+
+  it('an Article published exactly at the ceiling still joins; one second later births an Episode instead', () => {
+    const s = story([article(F, 'a0'), article('2026-10-09T15:00:00Z', 'a2')]);
+    expect(joinsIngestionWindow(s, '2026-10-09T22:00:00Z')).toBe(true);
+    expect(joinsIngestionWindow(s, '2026-10-09T22:00:01Z')).toBe(false);
+  });
+
+  it('DST fall-back under the ceiling: 72h of elapsed time, not wall-clock', () => {
+    // Founded Saturday 2026-10-24 21:00 UTC (CEST); the clocks fall back
+    // Sunday Oct 25. The ceiling closes Tuesday 21:00 UTC — exactly 72h of
+    // elapsed time, 73h of civil time across the transition. The newest
+    // Article at founding + 65h would have kept the silence rule open five
+    // more hours; the ceiling ends the chain.
+    const s = story([
+      article('2026-10-24T21:00:00Z', 'a0'),
+      article('2026-10-27T14:00:00Z', 'a2'),
+    ]);
+    expect(joinsIngestionWindow(s, '2026-10-27T21:00:00Z')).toBe(true);
+    expect(joinsIngestionWindow(s, '2026-10-27T21:00:01Z')).toBe(false);
+    expect(ingestionIsOpen(s, new Date('2026-10-27T20:59:00Z'))).toBe(true);
+    expect(ingestionIsOpen(s, new Date('2026-10-27T21:01:00Z'))).toBe(false);
+  });
+
+  it('isLive drops a continuously covered Story at the ceiling (the Episode handoff, ADR-0030)', () => {
+    // Founded 4 days ago, newest Article 7h ago — the mega-Story shape the
+    // ceiling exists for: still live under the pure silence rule (newest
+    // + 12h is in the future), frozen under the ceiling, so the birth
+    // guard no longer absorbs same-event births and the Episode mechanism
+    // takes over.
+    const founding = new Date(NOW.getTime() - 96 * 3_600_000);
+    const newest = new Date(NOW.getTime() - 7 * 3_600_000);
+    const s = story([
+      article(founding.toISOString(), 'a0'),
+      article(newest.toISOString(), 'a2'),
+    ]);
+    expect(isLive(s, NOW)).toBe(false);
   });
 });
 
