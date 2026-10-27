@@ -6,6 +6,17 @@
   "storyDay": "2026-10-27",
   "articles": [
     {
+      "id": "b1065926eaa2",
+      "outletId": "humanite",
+      "headline": "Guerre en Ukraine : pour la première fois depuis un an, Poutine a parlé à des dirigeants européens… pour reconnaître « de grandes divergences de vues »",
+      "url": "https://www.humanite.fr/monde/guerre-en-ukraine/guerre-en-ukraine-pour-la-premiere-fois-depuis-un-an-poutine-a-parle-a-des-dirigeants-europeens-pour-reconnaitre-de-grandes-divergences-de-vues",
+      "publishedAt": "2026-10-27T17:04:40.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/ukraine_bd2d64.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "ab37afa04a42",
       "outletId": "bfmtv",
       "headline": "\"De grandes divergences\": les dirigeants norvégiens et finlandais ont eu un entretien \"franc\" avec Vladimir Poutine",
@@ -15,6 +26,18 @@
       "frontPage": false,
       "kind": "news",
       "section": "world"
+    },
+    {
+      "id": "bf9529683908",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, guerre en Ukraine : l’appel avec Vladimir Poutine a été préparé conjointement avec l’Ukraine, déclare le président finlandais, Alexander Stubb",
+      "url": "https://www.lemonde.fr/international/live/2026/10/27/en-direct-guerre-en-ukraine-des-coupures-d-electricite-dans-sept-oblasts-a-la-suite-d-attaques-russes-contre-les-infrastructures-energetiques_6799896_3210.html",
+      "publishedAt": "2026-10-27T13:18:11.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/27/0/0/6144/3072/644/322/60/0/6a9fd7d_ftp-1-12ewllgqwraa-2026-10-27t145946z-213560037-rc2qboacthwa-rtrmadp-3-ukraine-crisis-finland.JPG",
+      "frontPage": true,
+      "kind": "live",
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "73f3d04b4d86",
@@ -52,26 +75,32 @@
     }
   ],
   "topicId": "f88fb8d003e0",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le président russe Vladimir Poutine s'est entretenu avec les dirigeants norvégien et finlandais, constatant de grandes divergences de vues sur l'Ukraine.",
+      "Cet échange inédit depuis un an intervient dans le contexte du revirement de Donald Trump et de son accord avec Vladimir Poutine.",
+      "Sur le terrain, une trêve a débuté afin de permettre l'acheminement de l'aide vers la ville d'Oleshky."
+    ],
     "centre": [
-      "Le président finlandais et le Premier ministre norvégien se sont entretenus le 27 octobre avec Vladimir Poutine pour évoquer la guerre en Ukraine.",
-      "Les participants ont qualifié cette discussion de « franc et substantiel », tout en reconnaissant l'existence de « grandes divergences ».",
-      "Cet échange fait suite aux consultations menées précédemment à Oslo entre Volodymyr Zelensky et des émissaires américains."
+      "Le dirigeant russe a échangé avec les premiers responsables norvégien et finlandais lors d'une discussion qualifiée de franche et substantielle.",
+      "Le président finlandais Alexander Stubb a précisé que cet appel téléphonique avait été préparé conjointement avec l'Ukraine.",
+      "Les discussions font suite aux réunions tenues la semaine dernière entre Volodymyr Zelensky et des émissaires américains à Oslo."
     ],
     "droite": [
-      "Vladimir Poutine a eu un échange « franc et substantiel » avec les dirigeants de la Norvège et de la Finlande concernant la guerre en Ukraine.",
-      "Cette discussion s'est déroulée après une concertation avec l'Ukraine, selon le communiqué publié.",
-      "Les deux dirigeants nordiques se sont exprimés en leur nom propre et non au nom de l'ensemble des pays européens."
+      "Vladimir Poutine a eu un échange qualifié de franc et substantiel avec les dirigeants norvégien et finlandais au sujet du conflit ukrainien.",
+      "Le Figaro précise que les deux responsables nordiques se sont exprimés en leur nom propre, et non au nom de l'ensemble des Européens.",
+      "La discussion s'est tenue après de préalables consultations menées avec l'Ukraine."
     ]
   },
   "differences": [
-    "Les médias du centre se focalisent sur la qualification de l'entretien et sur son articulation avec les discussions tenues à Oslo par Volodymyr Zelensky.",
-    "Le média de droite insiste sur le cadre diplomatique de la démarche, soulignant la concertation préalable avec l'Ukraine et le positionnement strictement individuel des dirigeants nordiques."
+    "La gauche, incluant le centre gauche, met en avant l'isolement humanitaire de la ville d'Oleshky et le contexte géopolitique lié à Donald Trump pour situer l'échange de Poutine.",
+    "Le centre privilégie un compte-rendu factuel et diplomatique centré sur la nature substantielle de l'entretien et sa coordination avec l'Ukraine.",
+    "La droite insiste particulièrement sur le format diplomatique de la discussion, soulignant que les dirigeants nordiques parlaient en leur nom propre et après consultation ukrainienne."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-10-27T16:01:54.180Z"
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-10-27T18:01:29.775Z"
 }
