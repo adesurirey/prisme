@@ -6,6 +6,17 @@
   "storyDay": "2026-10-27",
   "articles": [
     {
+      "id": "352a2b487a12",
+      "outletId": "la-croix",
+      "headline": "France 2030 : « un besoin de financement élevé » pour des « résultats encore incertains » selon la Cour des comptes",
+      "url": "https://www.la-croix.com/sport/france-2030-un-besoin-de-financement-eleve-pour-des-resultats-encore-incertains-selon-la-cour-des-comptes-20261027",
+      "publishedAt": "2026-10-27T21:30:12.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/10/27/2574049-la-cour-des-comptes-a-publie-mardi-27-octobre-son-.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "adf293747ebf",
       "outletId": "bfmtv",
       "headline": "54 milliards pour transformer l'économie française: cinq ans après son lancement, le plan d'investissement \"France 2030\" a-t-il tenu toutes ses promesses?",
@@ -29,6 +40,18 @@
       "everFrontPage": true
     },
     {
+      "id": "ee8bc342e83a",
+      "outletId": "le-monde",
+      "headline": "France 2030 : le grand plan d’Emmanuel Macron face à un « mur budgétaire », alerte la Cour des comptes",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/27/france-2030-le-grand-plan-d-emmanuel-macron-face-a-un-mur-budgetaire-alerte-la-cour-des-comptes_6801339_3234.html",
+      "publishedAt": "2026-10-27T19:00:04.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/27/167/0/1024/512/644/322/60/0/b9042f2_upload-1-kyeq9wpwlutc-000-9pj8lg-1.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "e39535063ea5",
       "outletId": "lopinion",
       "headline": "France 2030 : trop de subventions, pas assez de stratégie d'après la Cour des comptes",
@@ -41,26 +64,30 @@
     }
   ],
   "topicId": "7f8168e096f5",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "economy",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le plan d'investissement de 54 milliards d'euros voulu par Emmanuel Macron en 2021 fait face à un mur budgétaire selon la Cour des comptes.",
+      "Le Monde souligne que le dispositif a été lancé sans réflexion suffisante et que l'argent public risque de manquer pour concrétiser les engagements."
+    ],
     "centre": [
-      "Le Conseil d'analyse économique évalue positivement les retombées du plan France 2030 sur l'économie nationale.",
-      "La Cour des comptes pointe du doigt des failles dans l'exécution et le suivi des investissements.",
-      "L'institution met en garde contre un mur d'engagements financiers à honorer lors des prochaines années.",
-      "Le programme souffre d'un excès de subventions et d'un manque d'orientation stratégique globale."
+      "La Cour des comptes a publié un bilan à mi-parcours de France 2030, saluant un déploiement rapide mais pointant des résultats encore incertains.",
+      "L'institution relève un besoin de financement élevé, des fragilités dans la mise en œuvre, un recours excessif aux subventions et l'absence d'une stratégie d'innovation globale.",
+      "Le Conseil d'analyse économique évalue pour sa part favorablement les effets des investissements sur l'économie tricolore."
     ],
     "droite": [
-      "Les magistrats de la rue Cambon reconnaissent la vitesse de déploiement du plan massif de 54 milliards d'euros.",
-      "L'Opinion, dans la ligne centre droit, met en exergue les faiblesses stratégiques et la surabondance de subventions soulignées par la Cour des comptes."
+      "L'Opinion rapporte que la rue Cambon salue la rapidité d'exécution du plan massif d'investissement.",
+      "Les magistrats soulignent toutefois des défauts stratégiques majeurs, notamment une surabondance de subventions et un manque de vision stratégique."
     ]
   },
   "differences": [
-    "Les médias du centre mettent en avant l'opposition entre l'évaluation favorable du Conseil d'analyse économique et les réserves de la Cour des comptes sur les risques financiers.",
-    "Le média de droite se focalise sur les défaillances de pilotage stratégique et l'excès d'aides financières tout en saluant la rapidité d'exécution initiale."
+    "Le camp gauche insiste sur l'impréparation originelle du dispositif macroniste et l'imminence d'une rupture financière.",
+    "Le camp centre dresse un bilan institutionnel équilibré entre la rapidité du déploiement et la lourdeur des risques de financement.",
+    "Le camp droite focalise son analyse sur l'inefficacité stratégique et l'excès de subventions publiques malgré l'exécution rapide."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-10-27T19:01:31.983Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-10-27T22:01:25.819Z"
 }
