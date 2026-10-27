@@ -6,6 +6,17 @@
   "storyDay": "2026-10-26",
   "articles": [
     {
+      "id": "723235fa6c45",
+      "outletId": "atlantico",
+      "headline": "Grand remplacement administratif : l’IA licencie 16 % des fonctionnaires hollandais",
+      "url": "https://atlantico.fr/article/rdv/grand-remplacement-administratif-lia-licencie-16-des-fonctionnaires-hollandais",
+      "publishedAt": "2026-10-27T08:13:00.000Z",
+      "imageUrl": "https://atlantico.codexcdn.net/assets/as3ksIOduD6MsjBtT.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "d687d363c5b8",
       "outletId": "le-parisien",
       "headline": "Le gouvernement néerlandais veut supprimer 25 000 agents publics et les remplacer par de l’intelligence artificielle",
@@ -29,24 +40,25 @@
     }
   ],
   "topicId": "b10dea852fec",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Le gouvernement néerlandais envisage de retrancher 25 000 agents publics de ses effectifs.",
-      "L'exécutif projette de substituer l'intelligence artificielle à ces fonctionnaires évincés."
+      "Le gouvernement néerlandais prévoit d’éliminer 25 000 postes de fonctionnaires au total.",
+      "Cette réduction des effectifs publics s'accompagnera d'un remplacement par l’intelligence artificielle."
     ],
     "droite": [
-      "Les Pays-Bas prévoient de retrancher 25 000 postes de fonctionnaires d'ici 2035, soit 16% de leur fonction publique.",
-      "L'administration néerlandais compte adopter une feuille de route pour intégrer l'intelligence artificielle afin de combler les manques et accroître sa productivité."
+      "Les Pays-Bas envisagent de supprimer 25 000 postes d’agents publics d’ici l’année 2035.",
+      "Atlantico évoque un « grand remplacement administratif » tandis que Le Figaro souligne la volonté de rendre l'administration plus productive en réduisant de 16 % l’effectif de sa fonction publique.",
+      "Le transfert de ces missions vers l’intelligence artificielle permettra de générer une économie annuelle de 3,5 milliards d’euros pour le budget néerlandais."
     ]
   },
   "differences": [
-    "Le centre se focalise sur l'annonce abrupte de la suppression des postes et leur substitution technologique directe.",
-    "La droite contextualise la mesure dans le temps en précisant l'horizon 2035 et l'objectif explicite d'accroître la productivité administrative."
+    "Le média du centre se contente d'une annonce factuelle et succincte du plan de suppression de postes et d'automatisation.",
+    "La droite adopte un ton plus incisif et qualifie l'opération de « grand remplacement administratif », tout en insistant sur l'ampleur des économies budgétaires et la hausse de productivité visée."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-10-27T00:01:26.571Z"
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-10-27T16:01:54.180Z"
 }
