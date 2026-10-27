@@ -1,10 +1,33 @@
 {
   "id": "752bc93a1fa8",
   "slug": "une-treve-humanitaire-commence-a-olechky-pour-une-operation",
-  "title": "Une trêve humanitaire commence à Olechky pour une opération dans la zone occupée",
+  "title": "Une trêve humanitaire commence à Olechky",
   "createdAt": "2026-10-27T03:01:21.529Z",
   "storyDay": "2026-10-27",
   "articles": [
+    {
+      "id": "d217a982fb66",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, guerre en Ukraine : une trêve humanitaire est censée avoir commencé à Olechky, ville ukrainienne sous occupation russe",
+      "url": "https://www.lemonde.fr/international/live/2026/10/27/en-direct-guerre-en-ukraine-une-treve-humanitaire-est-censee-avoir-commence-a-olechky-ville-ukrainienne-sous-occupation-russe_6799896_3210.html",
+      "publishedAt": "2026-10-27T04:59:09.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/17/442/0/3051/1525/644/322/60/0/7f75b42_ftp-1-lvgjaz50moxm-e4f8b194f57c4de99ed0f8082dc7fbad-1-285b8ed625824d9bb1a1830b6b195f85.jpg",
+      "frontPage": false,
+      "kind": "live",
+      "section": "world"
+    },
+    {
+      "id": "c9d7f9400420",
+      "outletId": "ouest-france",
+      "headline": "Guerre en Ukraine : trêve humanitaire à Olechky, bombardements à Kiev… Le point sur la nuit",
+      "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-treve-a-olechky-bombardements-a-kiev-le-point-sur-la-nuit-cbe28e28-d194-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-27T04:27:33.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZDhiN2EzYzc2MmQxNDhiZGQ2NDM1OTVkMzEyYzkwZWE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=98cab0d8ae15d033285b657a5e48ad8e0a9686cccdfafc23b74bd319a890e432",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
     {
       "id": "134fc816f200",
       "outletId": "france-24",
@@ -30,25 +53,31 @@
     }
   ],
   "topicId": "cfb65f540f85",
-  "titledArticleCount": 2,
+  "titledArticleCount": 4,
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Une trêve humanitaire a débuté à Olechky, une commune ukrainienne occupée par la Russie.",
+      "Cette interruption des combats vise à ravitailler en nourriture et en médicaments les habitants de cette localité isolée.",
+      "Des frappes de l'armée russe à Kiev ont provoqué la mort d'une personne et blessé dix autres."
+    ],
     "centre": [
-      "Kiev et Moscou ont enclenché une cessation des hostilités matinale à Olechky.",
-      "Cette localité méridionale subit une occupation russe et souffre d'une pénurie généralisée.",
-      "L'opération humanitaire vise à ravitailler les habitants isolés de la zone."
+      "Les belligérants ont entamé une trêve humanitaire dans la ville d'Olechky, placée sous occupation russe.",
+      "L'objectif de cette mesure est de venir en aide aux civils manquant de tout dans cette zone isolée.",
+      "Des bombardements russes ont simultanément touché Kiev, faisant au moins un mort au cours de la nuit."
     ],
     "droite": [
-      "Les forces russes contrôlant Olechky ont vu débuter une cessation des hostilités à visée humanitaire.",
-      "Le Figaro, à la une, rappelle l'implication de Melania Trump qui avait officialisé l'obtention de ce cessez-le-feu."
+      "La trêve humanitaire a commencé à Olechky, une localité ukrainienne sous contrôle des forces russes.",
+      "Cette suspension des hostilités fait suite à l'intervention de Melania Trump, qui avait annoncé avoir obtenu ce cessez-le-feu."
     ]
   },
   "differences": [
-    "Le centre se concentre sur les aspects logistiques de l'opération humanitaire menée conjointement par Kiev et Moscou dans une localité isolée.",
-    "La droite met en avant le rôle diplomatique personnel de Melania Trump dans l'obtention de cette trêve à Olechky."
+    "La gauche met un accent particulier sur la situation humanitaire critique à Olechky tout en associant immédiatement l'événement aux frappes meurtrières menées par la Russie à Kiev.",
+    "Le centre livre un compte rendu factuel et synthétique centré sur la double actualité de la trêve humanitaire à Olechky et des bombardements nocturnes subis par la capitale ukrainienne.",
+    "La droite se distingue en focalisant son attention sur l'origine diplomatique de la trêve, en attribuant l'obtention du cessez-le-feu à l'initiative de Melania Trump."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-10-27T03:01:21.529Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-10-27T05:01:19.454Z"
 }
