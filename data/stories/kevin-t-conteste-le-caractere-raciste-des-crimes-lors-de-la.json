@@ -1,10 +1,21 @@
 {
   "id": "cf1f7cda7dc2",
   "slug": "kevin-t-conteste-le-caractere-raciste-des-crimes-lors-de-la",
-  "title": "Kévin T. conteste le caractère raciste des crimes lors de la reprise de sa garde à vue après l'attentat de Trappes",
+  "title": "Attaque terroriste dans les Yvelines : Kévin T. conteste le caractère raciste des crimes lors de la reprise de sa garde à vue",
   "createdAt": "2026-10-26T21:01:25.200Z",
   "storyDay": "2026-10-26",
   "articles": [
+    {
+      "id": "2c0fbaccac3c",
+      "outletId": "rfi",
+      "headline": "Attentat raciste en France: reprise de la garde à vue du suspect après l'expertise psychiatrique",
+      "url": "https://www.rfi.fr/fr/france/20261027-attentat-raciste-en-france-reprise-de-la-garde-%C3%A0-vue-du-suspect-apr%C3%A8s-l-expertise-psychiatrique",
+      "publishedAt": "2026-10-27T13:58:26.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/b87c914c-d204-11f1-a402-4b25c96ec90e/w:1024/p:16x9/AP26296455001174.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "d1ea8a70bbca",
       "outletId": "franceinfo",
@@ -29,24 +40,31 @@
     }
   ],
   "topicId": "1560e3262942",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "misc",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Des images de vidéosurveillance issues d'une station-service illustrent la progression du meurtrier lors de l'attentat commis à Trappes.",
-      "Les enregistrements diffusés témoignent de la détermination de l'auteur présumé des faits dans les Yvelines."
+      "La garde à vue de Kévin T. a repris après une interruption médicale liée à son état psychiatrique.",
+      "Des images de vidéosurveillance provenant d'une station-service documentent le parcours du tireur à Trappes."
+    ],
+    "centre": [
+      "Le parquet national antiterroriste a ouvert une enquête pour assassinat terroriste avec la circonstance aggravante de haine raciale.",
+      "La garde à vue du suspect, un temps suspendue pour des expertises psychiatriques, a repris lundi 26 octobre.",
+      "Des vidéos de surveillance issues d'une station-service mettent en lumière la progression et la détermination du meurtrier."
     ],
     "droite": [
-      "Des images de vidéosurveillance tournées dans une station-service de Trappes montrent le tireur muni d'une arme automatique.",
-      "La garde à vue de Kévin T. a repris après une suspension pour raisons psychiatriques, tandis que quatre proches ont été libérés."
+      "La garde à vue de Kévin T., un moment suspendue pour des raisons psychiatriques, a repris au début de la semaine.",
+      "Quatre proches du suspect placés en garde à vue après l'attentat de Trappes ont été remis en liberté lundi matin.",
+      "Des enregistrements glaçants issus d'une station-service montrent le tireur en action avec son arme automatique."
     ]
   },
   "differences": [
-    "Le camp gauche se focalise strictement sur l'exploitation des images de vidéosurveillance d'une station-service pour documenter la progression et la détermination du meurtrier à Trappes.",
-    "Le camp droite qualifie l'attaque d'attentat terroriste, qualifie les images de \"glaçantes\" et \"effroyables\", et détaille la situation judiciaire de Kévin T. ainsi que la remise en liberté de ses proches."
+    "Le camp gauche insiste sur les faits judiciaires et l'exploitation des images de vidéosurveillance par franceinfo sans mentionner les proches.",
+    "Le camp centre adopte une perspective institutionnelle et factuelle centrée sur les qualifications antiterroristes de l'enquête menée par le parquet.",
+    "Le camp droite dramatise les événements en qualifiant les documents visuels de glaçants et d'effroyables tout en signalant la libération des proches de Kévin T."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-10-26T21:01:25.200Z"
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-10-27T14:01:33.407Z"
 }
