@@ -11,22 +11,27 @@ import { foundingInstant, newestInstant, parseInstant } from '@prisme/domain';
  * windows (ADR-0027) no longer read liveness: ranking.ts owns their lengths
  * as its own constants.
  *
- * The Ingestion window (ADR-0027, superseding ADR-0026's
- * `[founding, founding + 24h]`, itself superseding ADR-0017's
+ * The Ingestion window (ADR-0027, as amended by ADR-0033, superseding
+ * ADR-0026's `[founding, founding + 24h]`, itself superseding ADR-0017's
  * Publication-day + 06:00 grace window) is
- * `[founding, max(founding + 24h, newest + 12h)]` in instant arithmetic:
- * the founding instant is the earliest `publishedAt` among the Story's
- * Articles and the newest its latest — both derived on demand, never
- * stored (they live in the domain package, `foundingInstant`/`newestInstant`,
- * shared with the Edition's « En direct » key). The floor term keeps
- * ADR-0026's guarantee — every Story at least one full day, evening Stories
- * their overnight cycle; the silence term extends the Story while coverage
- * continues — each new Article buys INGESTION_SILENCE_MS more hours — and a
- * silence longer than that closes the Story, permanently (ADR-0005): later
- * coverage of the same event births its Episode instead. No civil-date
- * logic remains in the window rule, so DST transitions cannot mis-time it;
- * the Story day itself stays a Europe/Paris day (paris-day.ts), fixed at
- * creation for URLs, archive pages and the Episode age window.
+ * `[founding, min(max(founding + 24h, newest + 12h), founding + 72h)]` in
+ * instant arithmetic: the founding instant is the earliest `publishedAt`
+ * among the Story's Articles and the newest its latest — both derived on
+ * demand, never stored (they live in the domain package,
+ * `foundingInstant`/`newestInstant`, shared with the Edition's « En
+ * direct » key). The floor term keeps ADR-0026's guarantee — every Story
+ * at least one full day, evening Stories their overnight cycle; the
+ * silence term extends the Story while coverage continues — each new
+ * Article buys INGESTION_SILENCE_MS more hours — and a silence longer
+ * than that closes the Story, permanently (ADR-0005): later coverage of
+ * the same event births its Episode instead. The ceiling term (ADR-0033)
+ * bounds the pathological tail: however continuous the coverage, no
+ * Story ingests past founding + 72h — later coverage of the same event
+ * births an Episode that threads the Story's Topic (ADR-0018, ADR-0024).
+ * No civil-date logic remains in the window rule, so DST transitions
+ * cannot mis-time it; the Story day itself stays a Europe/Paris day
+ * (paris-day.ts), fixed at creation for URLs, archive pages and the
+ * Episode age window.
  */
 
 /**
@@ -55,10 +60,23 @@ export const INGESTION_FLOOR_MS = 24 * 60 * 60 * 1000;
 export const INGESTION_SILENCE_MS = 12 * 60 * 60 * 1000;
 
 /**
- * The instant the Ingestion window of `story` closes (ADR-0027):
- * `max(founding + INGESTION_FLOOR_MS, newest + INGESTION_SILENCE_MS)`, in
- * instant arithmetic — never shorter than founding + 24h. undefined when
- * the Story has no founding (no dated Article): no window at all.
+ * The ceiling (ADR-0033, amending ADR-0027): however continuous the
+ * coverage, a Story's Ingestion window never runs past
+ * `founding + INGESTION_CEILING_MS`. It governs only the pathological
+ * tail — it binds only when the newest Article lands past
+ * `founding + 60h`; before that, `newest + INGESTION_SILENCE_MS` stays
+ * under it. Later coverage of the same event births an Episode instead
+ * (ADR-0018) and threads the Story's Topic (ADR-0024).
+ */
+export const INGESTION_CEILING_MS = 72 * 60 * 60 * 1000;
+
+/**
+ * The instant the Ingestion window of `story` closes (ADR-0027, as
+ * amended by ADR-0033): `min(max(founding + INGESTION_FLOOR_MS, newest +
+ * INGESTION_SILENCE_MS), founding + INGESTION_CEILING_MS)`, in instant
+ * arithmetic — never shorter than founding + 24h, never longer than
+ * founding + 72h. undefined when the Story has no founding (no dated
+ * Article): no window at all.
  */
 export function ingestionWindowClosesAt(
   story: Pick<Story, 'articles'>,
@@ -69,13 +87,16 @@ export function ingestionWindowClosesAt(
   // dated Article exists and the newest instant is defined whenever the
   // founding is.
   const newest = newestInstant(story)!;
-  return Math.max(founding + INGESTION_FLOOR_MS, newest + INGESTION_SILENCE_MS);
+  return Math.min(
+    Math.max(founding + INGESTION_FLOOR_MS, newest + INGESTION_SILENCE_MS),
+    founding + INGESTION_CEILING_MS,
+  );
 }
 
 /**
- * True while the Story still accepts Articles (ADR-0027):
- * `founding ≤ now ≤ max(founding + 24h, newest + 12h)` — open at birth,
- * sharp exit at the close.
+ * True while the Story still accepts Articles (ADR-0027, ADR-0033):
+ * `founding ≤ now ≤ min(max(founding + 24h, newest + 12h), founding +
+ * 72h)` — open at birth, sharp exit at the close.
  */
 export function ingestionIsOpen(
   story: Pick<Story, 'articles'>,
@@ -89,11 +110,12 @@ export function ingestionIsOpen(
 }
 
 /**
- * The belonging rule (ADR-0026, extended by ADR-0027): an Article may join
- * the Story iff its `publishedAt` falls inside the Story's Ingestion
- * window — strictly, with no pre-founding Articles, up to the close
- * `max(founding + 24h, newest + 12h)`; an Article that joins in the
- * silence regime extends the window 12 hours past itself.
+ * The belonging rule (ADR-0026, extended by ADR-0027, bounded by
+ * ADR-0033): an Article may join the Story iff its `publishedAt` falls
+ * inside the Story's Ingestion window — strictly, with no pre-founding
+ * Articles, up to the close `min(max(founding + 24h, newest + 12h),
+ * founding + 72h)`; an Article that joins in the silence regime extends
+ * the window 12 hours past itself, and no window runs past the ceiling.
  */
 export function joinsIngestionWindow(
   story: Pick<Story, 'articles'>,
@@ -109,7 +131,8 @@ export function joinsIngestionWindow(
 /**
  * True when the Story is Live (GLOSSARY): its Ingestion window is open —
  * at most 12 hours since its newest Article, once that is later than 24
- * hours from the founding (ADR-0027).
+ * hours from the founding, and never more than 72 hours from the
+ * founding (ADR-0027, ADR-0033).
  */
 export function isLive(story: Story, now: Date): boolean {
   return ingestionIsOpen(story, now);

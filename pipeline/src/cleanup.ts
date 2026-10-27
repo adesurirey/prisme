@@ -3,9 +3,10 @@ import { isLive } from './liveness.ts';
 
 /**
  * The end-of-run cleanup decision (issue #75): a Story file is deleted iff
- * the Story is frozen (its Ingestion window is closed, ADR-0027 — silence
- * past max(founding + 24h, newest + 12h); a Story frozen with a
- * 13-hour-old Article exists) and never entered the Edition
+ * the Story is frozen (its Ingestion window is closed, ADR-0027 as
+ * amended by ADR-0033 — silence past max(founding + 24h, newest + 12h)
+ * or the founding + 72h ceiling, whichever is earlier; a Story frozen
+ * with a 13-hour-old Article exists) and never entered the Edition
  * (`everInEdition` false or absent — treated as false, no backward
  * compatibility; a frozen Story that ranks into a window is stamped, see
  * edition-history.ts). Live Stories — in or below the Edition cut — are

@@ -205,3 +205,7 @@ permanent (ADR-0005) and age out of the 7-day window within a week.
   (the last 8 h by founding instant, ranked latest-first) joins
   « Aujourd'hui » and « 7 jours », and the growth gate above moves to
   the domain package, shared with the web's « En hausse » badge.
+- Amended by ADR-0033: the Ingestion window also closes at a ceiling —
+  `min(max(founding + 24h, newest + 12h), founding + 72h)` — so a
+  continuously covered event cannot hold its Story open past three days;
+  the silence rule above stays in force for the common case.

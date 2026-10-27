@@ -60,11 +60,11 @@ A later Story covering the same news event as an earlier one — the day-by-day 
 _Avoid_: Follow-up, part 2, sequel
 
 **Live Story**:
-A Story whose Ingestion window is open — at most 12 hours have passed since its newest Article, once that is later than 24 hours from the founding (ADR-0027). Live Stories can gain Articles and appear in the Editions' windows (ADR-0022).
+A Story whose Ingestion window is open — at most 12 hours have passed since its newest Article, once that is later than 24 hours from the founding, and never more than 72 hours from the founding (ADR-0027, ADR-0033). Live Stories can gain Articles and appear in the Editions' windows (ADR-0022).
 _Avoid_: Active story, open story
 
 **Frozen Story**:
-A Story whose Ingestion window has closed — silent past its 24-hour floor plus 12 hours. It no longer ingests and is never modified again; it stays visible in an Edition's window while its Articles are recent enough, and once it has entered the Edition its page stays published. A Frozen Story that never entered the Edition is deleted at the end of each run (issue #75).
+A Story whose Ingestion window has closed — silent past its 24-hour floor plus 12 hours, or past its 72-hour ceiling. It no longer ingests and is never modified again; it stays visible in an Edition's window while its Articles are recent enough, and once it has entered the Edition its page stays published. A Frozen Story that never entered the Edition is deleted at the end of each run (issue #75).
 _Avoid_: Archived story, closed story, expired story
 
 **Grouping model**:
@@ -100,7 +100,7 @@ The one Publication day (Europe/Paris) a Story belongs to — the day of its fou
 _Avoid_: Story date, day of the story
 
 **Ingestion window**:
-The period, from a Story's founding, during which the Story still accepts Articles: `[founding, max(founding + 24h, newest + 12h)]` in instant arithmetic, where the founding instant is the earliest `publishedAt` among its Articles and the newest its latest (ADR-0027). Every Story gets at least one full day; while coverage continues, each new Article extends the Story by 12 hours — a silence longer than that closes it, permanently.
+The period, from a Story's founding, during which the Story still accepts Articles: `[founding, min(max(founding + 24h, newest + 12h), founding + 72h)]` in instant arithmetic, where the founding instant is the earliest `publishedAt` among its Articles and the newest its latest (ADR-0027, ADR-0033). Every Story gets at least one full day; while coverage continues, each new Article extends the Story by 12 hours — but no Story ingests past 72 hours from its founding, however continuous the coverage. A silence longer than the extension, or the ceiling, closes the Story, permanently.
 _Avoid_: Grace period, closing time, 06:00 rule
 
 **Summaries budget**:
