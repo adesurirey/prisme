@@ -6,6 +6,17 @@
   "storyDay": "2026-10-26",
   "articles": [
     {
+      "id": "b568306de6e4",
+      "outletId": "le-point",
+      "headline": "Ballon d’Or : Harry Kane, la consécration d’un buteur complet",
+      "url": "https://www.lepoint.fr/sport/ballon-dor-harry-kane-la-consecration-dun-buteur-complet-7ABENW6TENA6HPU4466VO6VWIQ/",
+      "publishedAt": "2026-10-27T00:29:13.000Z",
+      "imageUrl": "https://www.lepoint.fr/resizer/v2/CHDXPTPNMFA3JP6O74MQOUY5L4.jpg?auth=51492cc5de0f36697b166b3c9b193a6d5a09f06dcbe67fcb08f1d7782b6c757b&smart=true&width=1200&height=900",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "220e724b5899",
       "outletId": "le-parisien",
       "headline": "Ballon d'or 2026 : Kylian Mbappé termine deuxième derrière Harry Kane",
@@ -78,9 +89,10 @@
       "url": "https://www.lefigaro.fr/sports/football/kane-sacre-mbappe-2e-dembele-7e-le-classement-complet-du-ballon-d-or-2026-20261027",
       "publishedAt": "2026-10-26T23:59:06.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/27/d14879fd2d6162864f5854387fc83896ceca509f28fe7705b9fa5a06350c3082.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "sport"
+      "section": "sport",
+      "everFrontPage": true
     },
     {
       "id": "2868d56744cf",
