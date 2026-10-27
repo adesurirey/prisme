@@ -6,6 +6,18 @@
   "storyDay": "2026-10-27",
   "articles": [
     {
+      "id": "35f975bbd2c0",
+      "outletId": "ouest-france",
+      "headline": "Inflation, chômage… La confiance des ménages français tombée au plus bas depuis juin 2013 en octobre, selon l’Insee",
+      "url": "https://www.ouest-france.fr/economie/inflation-chomage-la-confiance-des-menages-francais-tombee-au-plus-bas-depuis-juin-2013-en-octobre-selon-linsee-d431a580-d1e1-11f1-af78-2d36ec019942?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-27T09:13:16.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZTk0ZDQ3ZWQzMzJjOGVlZTNkNWE5YWRlM2YwZmMwNjg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=7828c998919bac70ab8b033ef8cd526e126c649e87b4fcc16434158761a13617",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "5a6fdddbe130",
       "outletId": "tf1-info",
       "headline": "La confiance des ménages au plus bas depuis juin 2013, selon l'Insee",
@@ -23,10 +35,21 @@
       "url": "https://www.lefigaro.fr/conjoncture/la-confiance-des-menages-francais-au-plus-bas-depuis-juin-2013-en-octobre-selon-l-insee-20261027",
       "publishedAt": "2026-10-27T08:28:53.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/27/0e90aab43c45e0f34cd8a94973883be17b8f179b9c9e1912ccc20e6f357f709e.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
+    },
+    {
+      "id": "8931340dc2fa",
+      "outletId": "cnews",
+      "headline": "Crise économique : la confiance des ménages au plus bas depuis plus de 13 ans",
+      "url": "https://www.cnews.fr/france/2026-10-27/crise-economique-la-confiance-des-menages-au-plus-bas-depuis-plus-de-13-ans",
+      "publishedAt": "2026-10-27T08:05:05.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/jakub-zerdzicki-u4-i4oh4xlg-unsplash-taille1200_6ae059c94f243.jpg?h=0abe275e&itok=CfnRGzM_",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
     },
     {
       "id": "24a1e696bf24",
@@ -52,26 +75,26 @@
     }
   ],
   "topicId": "97df0c88156d",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "economy",
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Selon l'Insee, l'indice mesurant la confiance des ménages français s'est effondré en octobre 2026 pour atteindre la valeur de 80.",
-      "Il s'agit du plancher le plus bas constaté pour cet indicateur depuis le mois de juin 2013.",
-      "Les rédactions soulignent que cette dégradation reflète une vive inquiétude de la population à l'égard de ses finances personnelles."
+      "L'Insee a publié ce mardi les données indiquant une baisse marquée de la confiance des ménages français au mois d'octobre.",
+      "L'indicateur synthétique est descendu à 80, atteignant ainsi son plancher depuis juin 2013.",
+      "Cette étude met en évidence la montée des inquiétudes de la population concernant ses finances personnelles."
     ],
     "droite": [
-      "L'Insee publie ce mardi un indicateur de confiance des ménages en forte baisse pour le mois d'octobre 2026.",
-      "L'indice national chute à 80, s'établissant à son étiage le plus faible depuis juin 2013.",
-      "Le Figaro relève que cette tendance négative est principalement alourdie par le jugement pessimiste des citoyens sur leur situation financière propre."
+      "La chute de cinq points enregistrée en octobre ramène l'indicateur à 80, son seuil le plus bas depuis plus de treize ans.",
+      "L'Institut national de la statistique attribue cette dégradation principalement au pessimisme grandissant des ménages quant à leur situation financière personnelle.",
+      "Le journal CNews précise que le solde d'opinion sur la situation financière à venir a reculé de neuf points au cours du mois."
     ]
   },
   "differences": [
-    "Le centre expose la chute de l'indice brut de l'Insee et l'anxiété financière générale de la population sans insister sur une cause précise.",
-    "La droite met en avant l'impact direct du pessimisme des Français concernant leurs finances personnelles sur la baisse de l'indicateur."
+    "Les médias du centre livrent une synthèse factuelle et directe de la publication de l'Insee en mettant en avant la portée historique de cette baisse depuis juin 2013.",
+    "Les médias de droite adoptent un traitement plus chiffré en insistant sur l'ampleur de la baisse avec une perte de cinq points en un mois, tout en soulignant les anticipations négatives des ménages."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-10-27T09:01:28.776Z"
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-10-27T10:01:32.869Z"
 }

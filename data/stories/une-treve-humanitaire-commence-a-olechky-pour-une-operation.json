@@ -6,6 +6,29 @@
   "storyDay": "2026-10-27",
   "articles": [
     {
+      "id": "8ccd935cbbb7",
+      "outletId": "ouest-france",
+      "headline": "En Ukraine, une trêve démarre à Olechky pour permettre l’acheminement d’aide humanitaire",
+      "url": "https://www.ouest-france.fr/europe/ukraine/en-ukraine-une-treve-demarre-a-olechky-pour-permettre-lacheminement-daide-humanitaire-6f1f3a02-d1d9-11f1-af78-2d36ec019942?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-27T09:22:46.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMjU1ZDk1YTdhNmFmYzAwNDQ1OTU3ZDY4MmMyYjE5NWQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=6c1d50c1ea8a1e61c2b010c4b7b2d4b2f99765441fbb7daf6280fb158c8309ee",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "efab55bda6bd",
+      "outletId": "lexpress",
+      "headline": "Guerre en Ukraine : ce que l'on sait de la trêve à Olechky, ville occupée au bord de la famine",
+      "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-ce-que-lon-sait-de-la-treve-a-olechky-ville-occupee-au-bord-de-la-famine-LW2RXENTONFAVBBY2A6PVLGUB4/",
+      "publishedAt": "2026-10-27T09:13:55.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/LTN42GWASVALXI2S2KC3FG6BMY.JPG?auth=0f03c7fcbb078339357b528fa4bb1dfbfb65157cfa90ee7494defe93241876a1&smart=true&width=5351&height=3567",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "c97a18b771dc",
       "outletId": "liberation",
       "headline": "Guerre Ukraine : la trêve de Mélania Trump à Olechky débute, Kyiv à nouveau lourdement frappé",
@@ -85,32 +108,31 @@
     }
   ],
   "topicId": "cfb65f540f85",
-  "titledArticleCount": 7,
+  "titledArticleCount": 9,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Une trêve locale est entrée en vigueur à Olechky, localité ukrainienne sous occupation russe.",
-      "Cette suspension des combats, qualifiée de trêve de Melania Trump, accompagne un rapprochement entre Washington et Moscou.",
-      "Des frappes massives et meurtrières continuent de toucher Kiev en parallèle.",
-      "L'opération humanitaire vise des habitants isolés en manque cruel de vivres et de médicaments."
+      "Une cessation des combats localisée a débuté à Olechky, acceptée par Kyiv et Moscou.",
+      "Cette trêve intervient dans le contexte d'un rapprochement entre les États-Unis et la Russie.",
+      "En parallèle, les bombardements se poursuivent sur Kiev."
     ],
     "centre": [
-      "Un cessez-le-feu localisé a débuté à Olechky pour acheminer de l'aide humanitaire d'urgence à une population isolée.",
-      "L'initiative est diversement attribuée selon les médias à Melania Trump ou à une tentative du pape Léon XIV.",
-      "Des bombardements nocturnes ont touché la capitale ukrainienne, causant des dégâts matériels et des pertes humaines."
+      "Un cessez-le-feu humanitaire est entré en vigueur à Olechky pour ravitailler cette ville occupée en proie à la famine.",
+      "Plusieurs médias soulignent que cette trêve a été obtenue grâce à l'intervention de Melania Trump ou à l'appel de Léon XIV.",
+      "Des frappes russes nocturnes ont touché Kiev, faisant au moins un mort et plusieurs blessés."
     ],
     "droite": [
-      "Un cessez-le-feu humanitaire a débuté à Olechky, localité ukrainienne située en zone occupée par les forces russes.",
-      "Le Figaro attribue explicitement l'obtention de cette trêve à une annonce de la première dame des États-Unis, Melania Trump."
+      "La trêve humanitaire a débuté à Olechky, une localité située dans le sud de l'Ukraine et occupée par les forces russes.",
+      "Le Figaro rappelle que cette mesure a été annoncée après les démarches de la première dame des États-Unis, Melania Trump."
     ]
   },
   "differences": [
-    "La gauche lie explicitement la trêve locale à un rapprochement géopolitique entre les États-Unis et la Russie tout en insistant sur la poursuite des bombardements à Kiev.",
-    "Le centre adopte une couverture factuelle de l'aide humanitaire en mentionnant de manière divergente les médiations diplomatiques ou religieuses à l'origine du cessez-le-feu.",
-    "La droite focalise l'essentiel de son compte-rendu sur le rôle diplomatique personnel de la première dame américaine, Melania Trump, dans l'obtention de la trêve."
+    "La gauche insiste sur le contexte diplomatique d'un rapprochement russo-américain et signale la persistance des frappes malgré la trêve.",
+    "Le centre met en avant la dimension humanitaire d'urgence pour ravitailler la ville d'Olechky tout en relayant les initiatives diplomatiques de Melania Trump et du pape.",
+    "La droite centre son compte-rendu sur l'origine diplomatique de la mesure en mettant en avant le rôle de Melania Trump."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 7,
-  "summarizedAt": "2026-10-27T08:01:25.839Z"
+  "summarizedArticleCount": 9,
+  "summarizedAt": "2026-10-27T10:01:32.869Z"
 }
