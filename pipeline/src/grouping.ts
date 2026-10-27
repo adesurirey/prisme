@@ -344,6 +344,32 @@ export function latestHeadlines(
     .map((m) => m.headline);
 }
 
+/** The founding anchor: the earliest member's headline and Paris day,
+ * derived on demand like the founding instant (ADR-0026) — the stable
+ * event reference every model input labels explicitly. The recency- and
+ * overlap-ranked views (latestHeadlines, memberDigest) follow the Story's
+ * latest sub-thread, so a multi-day Story presented herself to the models
+ * as that sub-thread (the 2026-10-27 Trappes drift: the founding headline
+ * shares ~no content token with late candidates — measured 0.000 on the
+ * garde-à-vue day — and never reached either prompt). Exported for the
+ * grouping fixtures, which must exercise what production sends. */
+export function foundingAnchor(
+  members: { headline: string; publishedAt: string }[],
+): { headline: string; day: string } | undefined {
+  let best: { headline: string; day: string; published: number } | undefined;
+  for (const member of members) {
+    const published = parseInstant(member.publishedAt);
+    if (published == null) continue;
+    if (best == null || published < best.published)
+      best = {
+        headline: member.headline,
+        day: parisDayKey(member.publishedAt),
+        published,
+      };
+  }
+  return best == null ? undefined : { headline: best.headline, day: best.day };
+}
+
 /** How many member headlines a Membership check sees (ADR-0018). */
 export const MEMBER_DIGEST_SIZE = 5;
 
@@ -716,6 +742,7 @@ export async function groupStories(
       id: s.id,
       title: s.title,
       section: s.section,
+      founding: foundingAnchor(s.articles),
       latestHeadlines: latestHeadlines(s.articles),
     })),
     articles: fresh.map((a) => ({
@@ -889,6 +916,7 @@ export async function groupStories(
                 story: {
                   title: candidate.title,
                   section: candidate.section,
+                  founding: foundingAnchor(candidate.articles),
                   headlines: bunchDigest(members, candidate.articles),
                 },
                 bunch: {
@@ -918,6 +946,7 @@ export async function groupStories(
                   target: `key:${earlier}`,
                   story: {
                     title: earlierHeadline,
+                    founding: foundingAnchor(keyMembers.get(earlier) ?? []),
                     headlines: memberDigest(
                       seed,
                       keyMembers.get(earlier) ?? [],
@@ -1001,6 +1030,7 @@ export async function groupStories(
         const members = keyMembers.get(pair.target.slice(4))!;
         story = {
           title: members[0].headline,
+          founding: foundingAnchor(members),
           headlines: memberDigest(article, members),
         };
       } else {
@@ -1009,6 +1039,7 @@ export async function groupStories(
         story = {
           title: target.title,
           section: target.section,
+          founding: foundingAnchor(target.articles),
           headlines: memberDigest(article, target.articles),
         };
       }
@@ -1240,11 +1271,13 @@ export async function groupStories(
     const updates = retitled.map((s) => ({
       storyId: s.id,
       title: s.title,
-      // Stored order (newest first): the payload is the whole headline set,
-      // never windowed or truncated — the founding anchor is the prompt's
-      // update rule, and replaying this story's decision point showed
-      // reordering oldest-first *weakens* that anchor (the payload's last
-      // line reads as the title-worthy fact).
+      // The founding anchor, labeled: the update rule anchors the title on
+      // the founding event, which the model had to infer from a headline
+      // pile that is mostly newer — the Trappes retitle ratchet. Stored
+      // order (newest first) stays: replaying this story's decision point
+      // showed reordering oldest-first *weakens* that anchor (the payload's
+      // last line reads as the title-worthy fact).
+      founding: foundingAnchor(s.articles),
       headlines: s.articles.map((a) => a.headline),
     }));
     if (births.length > 0 || updates.length > 0) {

@@ -23,7 +23,11 @@ import { readFile } from 'node:fs/promises';
 import type { Article, Story } from '@prisme/domain';
 import { newestFirst, parseInstant } from '@prisme/domain';
 import type { GroupingInputArticle, GroupingInputStory } from '../gemini.ts';
-import { byNewestArticle, latestHeadlines } from '../grouping.ts';
+import {
+  byNewestArticle,
+  foundingAnchor,
+  latestHeadlines,
+} from '../grouping.ts';
 import { COLLECTION_WINDOW_MS, ingestionIsOpen } from '../liveness.ts';
 import { DATA_DIR, readStories } from '../paths.ts';
 
@@ -108,6 +112,7 @@ export function buildFixtures(stories: Story[], builtAt: string): FixtureSet {
       headlines: s.articles.map((a) => a.headline),
       // The same member-headline context the production prompt gets
       // (ADR-0018) — the replay must exercise what production sends.
+      founding: foundingAnchor(s.articles),
       latestHeadlines: latestHeadlines(s.articles),
     }));
 
@@ -217,6 +222,7 @@ export function buildDeadlockFixture(stories: Story[]): GroupingFixture {
     .map(({ articles, ...story }) => ({
       ...story,
       headlines: articles.map((a) => a.headline),
+      founding: foundingAnchor(articles),
       latestHeadlines: latestHeadlines(articles),
     }));
   if (!liveStories.some((s) => s.id === DEADLOCK_MAGNET_STORY_ID)) {
