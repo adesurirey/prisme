@@ -19,6 +19,7 @@ describe('titlePassPrompt', () => {
       {
         storyId: 's1',
         title: 'Titre actuel',
+        founding: { headline: 'Titre fondateur', day: '2026-10-06' },
         headlines: ['Titre actuel', 'Ancien titre'],
       },
     ],
@@ -32,6 +33,9 @@ describe('titlePassPrompt', () => {
     expect(prompt).toContain('  - Un tireur fait plusieurs victimes');
     expect(prompt).toContain('- [k2]');
     expect(prompt).toContain('- [s1] Titre actuel : « Titre actuel »');
+    expect(prompt).toContain(
+      '  Événement fondateur (2026-10-06) : « Titre fondateur »',
+    );
     expect(prompt).toContain('  - Ancien titre');
   });
 

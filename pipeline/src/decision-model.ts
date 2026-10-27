@@ -103,7 +103,7 @@ export const MEMBERSHIP_QUESTION = {
   belongs: {
     type: 'choice',
     instructions:
-      "Cet article rapporte-t-il le même fait que cette story, ou un développement direct de ce fait ? Juge à partir du titre de la story, des titres d'articles déjà joints à cette story, et du titre et chapô de l'article fournis.",
+      "Cet article rapporte-t-il le même fait que cette story, ou un développement direct de ce fait ? Juge à partir de l'événement fondateur de la story (donné sous son titre), du titre de la story, des titres d'articles déjà joints à cette story, et du titre et chapô de l'article fournis.",
     criteria: {
       yes: "Même fait : l'article rapporte le fait même de la story, ou une suite du même fait qui n'aurait pas d'existence propre sans lui (suites d'enquête, nouveaux bilans, réactions qui ne portent que sur ce fait).",
       no: "Autre fait : même s'il relève du même thème général (même mouvement, même dossier, mêmes acteurs), un article qui rapporte un autre fait ne rejoint pas la story. Un développement qui a son propre fait, son propre acteur central et son propre cycle de titres — il ferait sa propre story sans l'événement qui l'a déclenché — est un autre fait, même s'il découle directement du fait de la story.",
@@ -122,7 +122,7 @@ export const ABSORB_QUESTION = {
   belongs: {
     type: 'choice',
     instructions:
-      "Cette story proposée rapporte-t-elle le même fait que la story existante, ou un développement direct de ce fait ? Juge à partir du titre de la story existante, des titres d'articles déjà joints à cette story, et des titres d'articles de la story proposée.",
+      "Cette story proposée rapporte-t-elle le même fait que la story existante, ou un développement direct de ce fait ? Juge à partir de l'événement fondateur de la story existante (donné sous son titre), du titre de la story existante, des titres d'articles déjà joints à cette story, et des titres d'articles de la story proposée.",
     criteria: {
       yes: "Même fait : la story proposée rapporte le fait même de la story existante, ou une suite directe de ce fait qui n'aurait pas d'existence propre sans lui — ses articles sont la couverture de l'événement que la story existante poursuit.",
       no: "Autre fait : même s'il relève du même thème général (même mouvement, même dossier, mêmes acteurs), un fait distinct qui ferait sa propre story sans l'événement de la story existante.",
@@ -401,6 +401,14 @@ export type MembershipAnswer = 'yes' | 'no' | 'failed';
 export interface MembershipStoryRef {
   title: string;
   section?: Section;
+  /** The founding anchor: the Story's earliest member headline and its
+   * Paris day, labeled « Événement fondateur » in the payloads — the
+   * stable event reference the check judges against. Without it a
+   * multi-day Story presents herself through her drifted title and her
+   * overlap-ranked digest, i.e. as her latest sub-thread (the 2026-10-27
+   * Trappes drift: the founding headline shares ~no content token with
+   * late candidates and never reached the check). */
+  founding?: { headline: string; day: string };
   headlines: string[];
 }
 
@@ -440,6 +448,10 @@ export function membershipPayload(
 ): { headline: string; teaser: string } {
   const section = story.section ? ` (${SECTION_LABELS[story.section]})` : '';
   const lines = [`Story : ${story.title}${section}`];
+  if (story.founding)
+    lines.push(
+      `Événement fondateur (${story.founding.day}) : « ${story.founding.headline} »`,
+    );
   const members = story.headlines.filter((h) => h !== story.title);
   if (members.length > 0)
     lines.push('Articles déjà joints :', ...members.map((h) => `- ${h}`));
@@ -459,6 +471,10 @@ export function absorbPayload(
 ): { headline: string; teaser: string } {
   const section = story.section ? ` (${SECTION_LABELS[story.section]})` : '';
   const lines = [`Story existante : ${story.title}${section}`];
+  if (story.founding)
+    lines.push(
+      `Événement fondateur (${story.founding.day}) : « ${story.founding.headline} »`,
+    );
   const members = story.headlines.filter((h) => h !== story.title);
   if (members.length > 0)
     lines.push('Articles déjà joints :', ...members.map((h) => `- ${h}`));

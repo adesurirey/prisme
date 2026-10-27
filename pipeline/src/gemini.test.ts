@@ -26,6 +26,27 @@ describe('groupingPrompt (ADR-0018)', () => {
     expect(prompt).not.toContain('Story deux — derniers');
   });
 
+  it('shows the founding anchor between the title and the latest headlines (the 2026-10-27 drift fix)', () => {
+    const prompt = groupingPrompt({
+      stories: [
+        {
+          id: 's1',
+          title: 'Attentat à Trappes : la garde à vue reprend',
+          founding: {
+            headline: 'Un homme tire dans la rue à Trappes',
+            day: '2026-10-23',
+          },
+          latestHeadlines: ['La garde à vue a repris'],
+        },
+      ],
+      articles: [],
+    });
+    expect(prompt).toContain(
+      '— fondateur (2026-10-23) : « Un homme tire dans la rue à Trappes » — derniers titres joints : « La garde à vue a repris »',
+    );
+    expect(prompt).toContain("le fondateur dit ce qu'elle est");
+  });
+
   it('carries the sub-fact birth rule', () => {
     const prompt = groupingPrompt({ stories: [], articles: [] });
     expect(prompt).toContain(

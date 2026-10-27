@@ -45,6 +45,11 @@ export interface GroupingInputStory {
   id: string;
   title: string;
   section?: Section;
+  /** The founding anchor: the Story's earliest member headline and its
+   * day — the stable event reference shown before the latest headlines,
+   * so a multi-day Story presents her founding fact, not only the
+   * sub-thread her latest headlines happen to report. */
+  founding?: { headline: string; day: string };
   /** The Story's latest member headlines, newest first (ADR-0018): what
    * the Story already reports, so a distinct sub-fact is visible to the
    * model instead of merging into the first on-topic title it sees. */
@@ -180,9 +185,12 @@ export function groupingPrompt(input: {
 }): string {
   const storyLines = input.stories.map((s) => {
     const latest = (s.latestHeadlines ?? []).map((h) => `« ${h} »`).join(' ; ');
+    const founding = s.founding
+      ? ` — fondateur (${s.founding.day}) : « ${s.founding.headline} »`
+      : '';
     return `- [${s.id}] ${s.title}${
       s.section ? ` (${SECTION_LABELS_FR[s.section]})` : ''
-    }${latest ? ` — derniers titres joints : ${latest}` : ''}`;
+    }${founding}${latest ? ` — derniers titres joints : ${latest}` : ''}`;
   });
   const articleLines = input.articles.map((a) => {
     return `- [${a.id}] ${a.headline}${a.section ? ` (${SECTION_LABELS_FR[a.section]})` : ''}`;
@@ -200,6 +208,7 @@ export function groupingPrompt(input: {
     '- Pour chaque nouvel article, ajoute une entrée dans « assignments » : soit « storyId » (une story existante), soit « newStoryKey » (une story à créer), avec « confidence » entre 0 et 1.',
     "- Une story naît toujours d'au moins deux articles d'au moins deux médias distincts (ADR-0015, ADR-0027) : si un article ne va avec rien, laisse-le sans entrée dans « assignments » — ne crée jamais une story pour un seul article ; il sera représenté au prochain build.",
     "- Une story correspond à un événement ou une affaire précise, jamais à un thème. N'utilise jamais de titre générique (« perspectives économiques… », « actualité politique… ») : un thème n'est pas une story.",
+    "- L'événement fondateur de chaque story existante t'est donné : le fait qui a créé la story et en reste le sujet, même après plusieurs jours de développements. Les « derniers titres joints » disent où en est la story ; le fondateur dit ce qu'elle est.",
     "- Les derniers articles déjà joints à chaque story existante te sont donnés : ils disent ce que la story raconte déjà. Un article qui rapporte un fait distinct de ces titres ne fusionne pas dans la story, même s'il relève du même thème : s'il a un jumeau dans le lot (même fait), regroupe-les sous un « newStoryKey » ; s'il est seul, laisse-le sans entrée — il sera représenté au prochain build.",
     "- Au sein d'un même événement d'envergure, des faits distincts (volet judiciaire, volet politique, journée à venir) donnent des stories distinctes ; ne les fond jamais dans la story-mère au seul motif qu'ils touchent au même sujet. Un développement qui a son propre fait, son propre acteur central et son propre cycle de titres — il ferait sa propre story sans l'événement qui l'a déclenché — est une story distincte (l'épisode) : crée-la sous un « newStoryKey », ne l'assigne jamais à la story-mère.",
     '- Ne regroupe que ce qui rapporte le même événement ou la même affaire précise : un thème commun ou un protagoniste commun ne suffit pas.',

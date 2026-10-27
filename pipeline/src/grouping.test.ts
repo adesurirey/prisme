@@ -3,6 +3,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { groupingPrompt } from './gemini.ts';
 import {
   bestEpisodeMatch,
+  foundingAnchor,
   groupStories,
   meetsBirthMinimum,
   memberDigest,
@@ -236,6 +237,12 @@ describe('groupStories', () => {
       'Deuxième titre',
       'Troisième titre',
     ]);
+    // The founding anchor (2026-10-27 drift fix): the earliest member's
+    // headline and Paris day reach the Grouping model with the story line.
+    expect(calls[0]?.input?.stories?.[0]?.founding).toEqual({
+      headline: 'Vieux titre',
+      day: '2026-10-06',
+    });
   });
 
   it('a merge check shows the member digest, most similar headlines first (ADR-0018)', async () => {
@@ -2481,6 +2488,40 @@ describe('meetsBirthMinimum (ADR-0015, ADR-0027)', () => {
         article('o1', { outletId: 'liberation', kind: 'opinion' }),
       ]),
     ).toBe(true);
+  });
+});
+
+describe('foundingAnchor (the 2026-10-27 Trappes drift fix)', () => {
+  it('returns the earliest dated member headline and its Paris day', () => {
+    expect(
+      foundingAnchor([
+        { headline: 'Plus récent', publishedAt: '2026-10-26T18:00:00Z' },
+        { headline: 'Fondateur', publishedAt: '2026-10-23T11:00:00Z' },
+        { headline: 'Milieu', publishedAt: '2026-10-25T09:00:00Z' },
+      ]),
+    ).toEqual({ headline: 'Fondateur', day: '2026-10-23' });
+  });
+
+  it('uses the Paris civil day, not the UTC day', () => {
+    // 22:30Z on the 6th is 00:30 on the 7th in Paris (CEST, UTC+2).
+    expect(
+      foundingAnchor([
+        { headline: 'Soir', publishedAt: '2026-10-06T22:30:00Z' },
+      ]),
+    ).toEqual({ headline: 'Soir', day: '2026-10-07' });
+  });
+
+  it('ignores undated members and returns undefined when none is dated', () => {
+    expect(
+      foundingAnchor([
+        { headline: 'Sans date', publishedAt: 'n/a' },
+        { headline: 'Daté', publishedAt: '2026-10-06T10:00:00Z' },
+      ]),
+    ).toEqual({ headline: 'Daté', day: '2026-10-06' });
+    expect(
+      foundingAnchor([{ headline: 'Sans date', publishedAt: 'n/a' }]),
+    ).toBeUndefined();
+    expect(foundingAnchor([])).toBeUndefined();
   });
 });
 

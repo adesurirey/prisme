@@ -41,6 +41,12 @@ export interface TitlePassBirth {
 export interface TitlePassUpdate {
   storyId: string;
   title: string;
+  /** The founding anchor: the Story's earliest member headline and its
+   * day, labeled first in the update block — the founding event made
+   * explicit instead of inferred from a headline pile that is mostly
+   * newer (the Trappes retitle ratchet: three titles, each naming the
+   * then-latest development). */
+  founding?: { headline: string; day: string };
   headlines: string[];
 }
 
@@ -141,6 +147,10 @@ export function titlePassPrompt(input: TitlePassInput): string {
     lines.push('Stories qui ont gagné des articles :');
     for (const update of input.updates) {
       lines.push(`- [${update.storyId}] Titre actuel : « ${update.title} »`);
+      if (update.founding)
+        lines.push(
+          `  Événement fondateur (${update.founding.day}) : « ${update.founding.headline} »`,
+        );
       for (const headline of update.headlines) lines.push(`  - ${headline}`);
     }
     lines.push('');
@@ -152,7 +162,7 @@ export function titlePassPrompt(input: TitlePassInput): string {
     "- Si la story poursuit un épisode antérieur (indiqué entre parenthèses), son titre porte le fait nouveau que les titres du groupe établissent : le lecteur qui a lu l'épisode précédent doit comprendre, depuis le titre seul, ce qui a changé. Ne reprends pas la structure du titre de l'épisode précédent.",
     "- Style du titre : un acteur nommé, un verbe d'action, un complément concret (chiffre, lieu, enjeu) — jamais le style nominal sans verbe (« Condamnation de… », « Attribution du… », « Préparatifs face à… »). Interdits : commencer par une citation entre guillemets, les préfixes de type « À la une ». Aucun mot rhétorique ou jugement de valeur : la neutralité porte sur la position, pas sur la forme.",
     "- « titleUpdates » : uniquement pour les stories qui ont gagné des articles, et uniquement si un meilleur titre existe ; un tel titre respecte le même style que ci-dessus et se formule d'après l'ensemble des titres du groupe. Sinon la story garde son titre.",
-    "- Titre d'une story qui a grandi : le titre actuel nomme l'événement qui a fondé la story — il en reste le sujet. Un développement ultérieur présent dans les titres du groupe (nouvel épisode, décision de justice, bilan, réaction) ne remplace pas cet événement ; au plus il le complète après deux points, et seulement si la plupart des titres l'établissent. Ne propose un nouveau titre que si le titre actuel est contredit par l'ensemble des titres ou leur reste étranger.",
+    "- Titre d'une story qui a grandi : le titre actuel nomme l'événement qui a fondé la story (rappelé en tête du bloc : « Événement fondateur ») — il en reste le sujet. Un développement ultérieur présent dans les titres du groupe (nouvel épisode, décision de justice, bilan, réaction) ne remplace pas cet événement ; au plus il le complète après deux points, et seulement si la plupart des titres l'établissent. Ne propose un nouveau titre que si le titre actuel est contredit par l'ensemble des titres ou leur reste étranger.",
   );
   return lines.join('\n');
 }

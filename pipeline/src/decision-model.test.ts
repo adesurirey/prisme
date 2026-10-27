@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
+  ABSORB_QUESTION,
+  absorbPayload,
   MEMBERSHIP_QUESTION,
   membershipPayload,
   parseMembershipAnswer,
@@ -51,6 +53,29 @@ describe('membershipPayload (ADR-0018)', () => {
     expect(payload.teaser).toBe('\nchapô');
   });
 
+  it('labels the founding anchor right under the Story title (the 2026-10-27 Trappes drift fix)', () => {
+    const payload = membershipPayload(
+      {
+        title: 'Attentat à Trappes : la garde à vue reprend',
+        section: 'misc',
+        founding: {
+          headline: 'Un homme tire dans la rue à Trappes',
+          day: '2026-10-23',
+        },
+        headlines: ['La garde à vue a repris', 'Le procureur s’exprime'],
+      },
+      { headline: 'La garde à vue de Kévin T. a repris', teaser: '' },
+    );
+    expect(payload.headline).toBe(
+      'Story : Attentat à Trappes : la garde à vue reprend (Faits divers)\n' +
+        'Événement fondateur (2026-10-23) : « Un homme tire dans la rue à Trappes »\n' +
+        'Articles déjà joints :\n' +
+        '- La garde à vue a repris\n' +
+        '- Le procureur s’exprime\n' +
+        'Article : La garde à vue de Kévin T. a repris',
+    );
+  });
+
   it('the question matches facts, not topics (ADR-0018)', () => {
     expect(MEMBERSHIP_QUESTION.belongs.instructions).toContain(
       'le même fait que cette story',
@@ -94,6 +119,44 @@ describe('parseMembershipAnswer', () => {
     expect(parseMembershipAnswer({ belongs: { choice: 'maybe' } })).toBeNull();
     expect(parseMembershipAnswer(null)).toBeNull();
     expect(parseMembershipAnswer('nonsense')).toBeNull();
+  });
+
+  it('both questions tell the model to judge from the founding anchor (the 2026-10-27 drift fix)', () => {
+    expect(MEMBERSHIP_QUESTION.belongs.instructions).toContain(
+      "l'événement fondateur de la story",
+    );
+    expect(ABSORB_QUESTION.belongs.instructions).toContain(
+      "l'événement fondateur de la story existante",
+    );
+  });
+});
+
+describe('absorbPayload (ADR-0030)', () => {
+  it('lists the live Story with her founding anchor, then the proposed bunch', () => {
+    const payload = absorbPayload(
+      {
+        title: 'Laurent Nuñez mobilise 70 000 forces de l’ordre',
+        founding: {
+          headline: 'Nuñez annonce une mobilisation massive',
+          day: '2026-10-23',
+        },
+        headlines: ['Dispositif renforcé samedi soir'],
+      },
+      {
+        title: 'Le métro ferme plusieurs stations',
+        headlines: ['Le métro ferme 12 stations', 'Stores barricadés'],
+      },
+    );
+    expect(payload.headline).toBe(
+      'Story existante : Laurent Nuñez mobilise 70 000 forces de l’ordre\n' +
+        'Événement fondateur (2026-10-23) : « Nuñez annonce une mobilisation massive »\n' +
+        'Articles déjà joints :\n' +
+        '- Dispositif renforcé samedi soir\n' +
+        'Story proposée :\n' +
+        '- Le métro ferme 12 stations\n' +
+        '- Stores barricadés',
+    );
+    expect(payload.teaser).toBe('');
   });
 });
 
