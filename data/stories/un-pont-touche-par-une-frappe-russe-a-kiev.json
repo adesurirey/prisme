@@ -1,10 +1,21 @@
 {
   "id": "8aea1fc7a5ab",
   "slug": "un-pont-touche-par-une-frappe-russe-a-kiev",
-  "title": "Un pont touché par une frappe russe à Kiev",
+  "title": "Guerre en Ukraine : un pont de Kiev touché par une frappe russe",
   "createdAt": "2026-10-27T05:01:19.454Z",
   "storyDay": "2026-10-27",
   "articles": [
+    {
+      "id": "1343c56af950",
+      "outletId": "tf1-info",
+      "headline": "Ukraine : un pont important dans le sud de Kiev touché par une frappe russe, trêve à Olechky",
+      "url": "https://www.tf1info.fr/international/ukraine-un-pont-important-dans-le-sud-de-kiev-touche-par-une-frappe-russe-treve-a-olechky-2472172.html",
+      "publishedAt": "2026-10-27T05:34:59.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/682/kiev-16-janvier-2026-5db29d-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "6fdf328eb26f",
       "outletId": "20-minutes",
@@ -24,31 +35,32 @@
       "url": "https://www.lefigaro.fr/international/guerre-en-ukraine-un-pont-strategique-a-kiev-touche-par-une-frappe-russe-20261027",
       "publishedAt": "2026-10-27T03:47:13.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2050_crop/2026/10/27/cefd61d1df06222fd9c4b1079156a41d1d77ec5ae9f8d4552230dc16efea4cd5.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
     }
   ],
   "topicId": "5ad9726a87f5",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un important axe de transport de Kiev a subi une frappe russe ce mardi 27 octobre.",
-      "L'événement s'inscrit dans le suivi en direct du conflit russo-ukrainien."
+      "Une frappe nocturne russe a atteint le pont Pivdennyi dans le sud de Kiev.",
+      "L'infrastructure visée constitue un axe de transport majeur pour la capitale ukrainienne.",
+      "Des tirs d'une dizaine de missiles ont ciblé la ville durant la nuit."
     ],
     "droite": [
-      "Le pont Pivdennyi, situé dans le sud de la capitale ukrainienne, a été touché par une frappe russe.",
-      "Le maire Vitali Klitschko a annoncé cette frappe sur cet important axe stratégique."
+      "Le maire Vitali Klitschko a officialisé qu'une frappe russe a endommagé le pont Pivdennyi.",
+      "L'édifice touché est qualifié d'axe stratégique et de transport important dans la zone sud de Kiev."
     ]
   },
   "differences": [
-    "La gauche, représentée par 20 Minutes, opte pour un format de suivi en direct mettant l'accent sur la dimension générale du conflit.",
-    "La droite, représentée par Le Figaro, centre son analyse sur la dimension stratégique de l'infrastructure visée en nommant explicitement le pont Pivdennyi et le maire de Kiev."
+    "La gauche intègre l'événement dans un direct actualisé du conflit mentionnant également une trêve à Olechky.",
+    "La droite privilégie l'attribution officielle de l'information par le maire Vitali Klitschko en insistant sur le caractère stratégique du pont."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-10-27T05:01:19.454Z"
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-10-27T06:01:23.093Z"
 }
