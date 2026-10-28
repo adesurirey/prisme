@@ -6,13 +6,24 @@
   "storyDay": "2026-10-27",
   "articles": [
     {
+      "id": "cfd035e7ed70",
+      "outletId": "franceinfo",
+      "headline": "Fin de carrière pour l'ex-numéro 3 mondial de tennis Stan Wawrinka, battu au premier tour à Bâle",
+      "url": "https://www.franceinfo.fr/sports/tennis/fin-de-carriere-pour-l-ex-numero-3-mondial-de-tennis-stan-wawrinka-battu-au-1er-tour-a-bale_8256823.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-10-28T08:57:34.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/KOlOrCy7RXh9w0ybHbcU85Llfv4/0x0:5097x2867/432x243/filters:format(jpg)/2026/10/28/6ae1aef188c99981942587.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "8c45ad9c32e9",
       "outletId": "le-figaro",
       "headline": "Tennis : fin de carrière pour Stan Wawrinka, battu à Bâle",
       "url": "https://www.lefigaro.fr/sports/tennis/tennis-fin-de-carriere-pour-stan-wawrinka-battu-a-bale-20261028",
       "publishedAt": "2026-10-28T07:49:55.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/28/cd710165e910682f6d837c8b016b0fefec2d231f816fb3a2a98bb41c88627976.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -42,25 +53,30 @@
     }
   ],
   "topicId": "b07050f38130",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "sport",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Stan Wawrinka met un terme à sa carrière professionnelle après une défaite au premier tour du tournoi de Bâle.",
+      "L'ancien numéro 3 mondial quitte le circuit avec 16 titres, dont trois levées du Grand Chelem et l'Open d'Australie."
+    ],
     "centre": [
-      "Le joueur suisse Stan Wawrinka a conclu sa carrière professionnelle après une défaite au premier tour du tournoi de Bâle face au Tchèque Jiri Lehecka.",
-      "Il a bénéficié d'un vibrant hommage de Roger Federer, son ancien partenaire avec qui il a remporté l'or olympique à Pékin en 2008.",
-      "Le parcours du joueur de 41 ans est marqué par trois titres en Grand Chelem, seize trophées remportés et un statut d'ancien numéro trois mondial."
+      "Le Suisse de 41 ans a disputé son ultime match mardi face au Tchèque Jiri Lehecka au tournoi de Bâle.",
+      "Roger Federer a adressé un hommage touchant à son compatriote, avec qui il a remporté l'or olympique à Pékin en 2008.",
+      "L'ancien numéro 3 mondial figure parmi les rares joueurs à avoir brisé l'hégémonie de Federer, Nadal et Djokovic."
     ],
     "droite": [
-      "Le joueur suisse Stan Wawrinka a disputé son tout dernier match mardi soir lors du tournoi de Bâle.",
-      "Cette défaite au premier tour marque la fin de la carrière professionnelle du vétéran suisse à l'âge de 41 ans."
+      "Le vétéran suisse Stan Wawrinka a officialisé la fin de sa carrière sportive à l'âge de 41 ans.",
+      "Il a disputé son dernier match sur le circuit professionnel mardi soir à l'occasion du tournoi de Bâle."
     ]
   },
   "differences": [
-    "Le centre contextualise la retraite sportive en rappelant l'ensemble du palmarès et en mettant en avant l'hommage appuyé de Roger Federer.",
-    "La droite se concentre sur l'annonce immédiate et factuelle de l'ultime match du vétéran suisse sans s'attarder sur le détail du palmarès."
+    "Le camp gauche insiste sur le palmarès global du joueur et son parcours historique en simple.",
+    "Le camp centre privilégie l'émotion de l'adieu à Bâle en soulignant l'hommage de Roger Federer et la place historique de Wawrinka face au Big Three.",
+    "Le camp droite se focalise sobrement sur l'âge du vétéran suisse et la conclusion immédiate de sa carrière à Bâle."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-10-28T08:01:24.671Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-10-28T09:01:27.046Z"
 }
