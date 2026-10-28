@@ -1,10 +1,22 @@
 {
   "id": "d0b4543e6929",
   "slug": "un-homme-meurt-en-garde-a-vue-au-commissariat-de-saint-ouen-et",
-  "title": "Un homme meurt en garde à vue au commissariat de Saint-Ouen et l'IGPN ouvre une enquête",
+  "title": "L'IGPN est saisie après la mort d'un homme en garde à vue dans le commissariat de Saint-Ouen",
   "createdAt": "2026-10-28T19:01:28.996Z",
   "storyDay": "2026-10-28",
   "articles": [
+    {
+      "id": "9db399dab9b3",
+      "outletId": "ouest-france",
+      "headline": "Saint-Ouen : l’IGPN saisie après la mort d’un homme de 44 ans au commissariat",
+      "url": "https://www.ouest-france.fr/societe/faits-divers/saint-ouen-ligpn-saisie-apres-la-mort-dun-homme-de-44-ans-au-commissariat-1cc92d4e-d300-11f1-af78-2d36ec019942?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-28T19:19:34.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwY2MwYjRjNmY3N2QxNmM2ZDhjZGMzZTg1YjkzNzcwNjA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=3ce8e73e22486eb23e76f6644f6d78c2efd3822a8d45e21a32f930cdf81cdadc",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
     {
       "id": "c5af18639159",
       "outletId": "humanite",
@@ -23,7 +35,7 @@
       "url": "https://www.lefigaro.fr/actualite-france/l-igpn-la-police-des-polices-saisie-apres-la-mort-d-un-homme-de-44-ans-au-commissariat-de-saint-ouen-20261028",
       "publishedAt": "2026-10-28T18:50:16.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/28/801ee1535536dcc8b8932ea6694021b5c04d4e8cd520d0eabbe2d5788af3c36c.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -40,27 +52,32 @@
     }
   ],
   "topicId": "d0b4543e6929",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "misc",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Mauricio K., un homme de 44 ans, est décédé mardi 27 octobre lors de sa garde à vue au commissariat de Saint-Ouen.",
-      "Le père de la victime a déposé une plainte pour violences volontaires ayant entraîné la mort et exige un juge d'instruction.",
-      "Le quadragénaire a été retrouvé inanimé et en arrêt cardio-respiratoire dans sa cellule avant l'intervention infructueuse des sapeurs-pompiers.",
-      "Une enquête a été confiée à l'IGPN pour faire la lumière sur les circonstances du décès survenu dans l'enceinte policière."
+      "Mauricio K., âgé de 44 ans, est décédé le mardi 27 octobre lors de sa garde à vue au sein du commissariat de Saint-Ouen.",
+      "La famille de la victime a déposé plainte pour des faits de violences volontaires ayant entraîné la mort et exige la désignation d'un juge d'instruction.",
+      "L'Inspection générale de la police nationale a ouvert une enquête après que le quadragénaire a été retrouvé inanimé en arrêt cardio-respiratoire dans sa cellule."
+    ],
+    "centre": [
+      "Un homme de 44 ans est décédé le mardi 28 octobre au cours de sa garde à vue au commissariat de Saint-Ouen en Seine-Saint-Denis.",
+      "Une enquête a été confiée à l'Inspection générale de la police nationale suite à ce décès.",
+      "Les proches de la victime ont décidé de déposer une plainte auprès de la justice."
     ],
     "droite": [
-      "Un homme âgé de 44 ans est mort mardi au commissariat de Saint-Ouen alors qu'il se trouvait en garde à vue.",
-      "Une enquête a été ouverte pour déterminer précisément les causes de ce décès survenu dans les locaux de police.",
-      "L'Inspection générale de la Police nationale a été saisie afin de mener les investigations sur cette affaire."
+      "Un homme âgé de 44 ans a perdu la vie mardi dans les locaux du commissariat de police de Saint-Ouen.",
+      "Une procédure judiciaire a été initiée afin de déterminer précisément les causes du décès survenu pendant la garde à vue.",
+      "L'enquête de police a été confiée aux services de l'Inspection générale de la police nationale."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la plainte en justice pour violences volontaires déposée par la famille et sur les accusations graves visant les conditions de détention, tandis que la droite se focalise sur l'ouverture technique d'une enquête par l'IGPN pour déterminer les causes de la mort sans relayer d'accusations formelles.",
-    "La droite adopte un angle strictement factuel et neutre sur l'intervention de la police des polices, en évitant toute mise en cause prématurée du commissariat contrairement à la presse de gauche qui insiste sur la gravité des faits s'étant déroulés en cellule."
+    "La gauche met l'accent sur les accusations de la famille visant les forces de l'ordre et relaie la citation des proches affirmant que des actes graves ont commis dans l'établissement.",
+    "Le centre livre un compte-rendu factuel et synthétique des faits en mentionnant l'ouverture de l'enquête et le dépôt de plainte sans emphase.",
+    "La droite adopte un angle institutionnel en qualifiant l'organisme d'enquête de « police des polices » et en précisant que l'investigation vise d'abord à établir les causes exactes du décès."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-10-28T19:01:28.996Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-10-28T20:01:21.457Z"
 }
