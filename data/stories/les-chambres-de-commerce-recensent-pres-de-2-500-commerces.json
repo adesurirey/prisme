@@ -1,10 +1,21 @@
 {
   "id": "0035a71a88a6",
   "slug": "les-chambres-de-commerce-recensent-pres-de-2-500-commerces",
-  "title": "Les chambres de commerce recensent près de 2 500 commerces vandalisés à Paris après les manifestations du 17 octobre",
+  "title": "Près de 2 500 commerces ont été vandalisés à Paris lors des manifestations du 17 octobre selon les chambres de commerce",
   "createdAt": "2026-10-27T22:01:25.819Z",
   "storyDay": "2026-10-27",
   "articles": [
+    {
+      "id": "502286b24e35",
+      "outletId": "bfmtv",
+      "headline": "Le gouvernement promet des aides allant \"jusqu'à 10.000 euros\" pour les commerces vandalisés en marge des manifestations",
+      "url": "https://www.bfmtv.com/politique/video-le-gouvernement-promet-des-aides-allant-jusqu-a-10-000-euros-pour-les-commerces-vandalises-en-marge-des-manifestations_VN-202610280092.html",
+      "publishedAt": "2026-10-28T05:16:35.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/OTI-SkP5XszOZ5KofmYvZymtcAY=/0x0:1280x720/800x0/images/Le-gouvernement-promet-des-aides-allant-jusqu-a-10-000-euros-pour-les-commerces-vandalises-en-marge-des-manifestations-2373360.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
     {
       "id": "88129c698940",
       "outletId": "le-figaro",
@@ -12,9 +23,10 @@
       "url": "https://www.lefigaro.fr/conjoncture/plus-de-1700-annonces-de-produits-supposement-pilles-le-17-octobre-retirees-des-sites-de-vente-annonce-serge-papin-20261027",
       "publishedAt": "2026-10-27T20:17:04.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/27/cf943205af853dc4eabc473cd8c06745faeba3898808cf3434aabb70e128b65b.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "society"
+      "section": "society",
+      "everFrontPage": true
     },
     {
       "id": "10878bff7923",
@@ -28,6 +40,18 @@
       "section": "economy"
     },
     {
+      "id": "ab74a714239c",
+      "outletId": "le-figaro",
+      "headline": "Violences du 17 octobre : le gouvernement va verser jusqu’à 10.000 euros d’aides aux commerçants touchés",
+      "url": "https://www.lefigaro.fr/societes/violences-du-17-octobre-le-gouvernement-va-verser-jusqu-a-10-000-euros-d-aides-aux-commercants-touches-20261027",
+      "publishedAt": "2026-10-27T18:17:14.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/27/89f907dcef0c6b8b2a5f0861351e9b04d8713ed6e4ae677ec968f620de5a823c.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "d0697e2f9ff2",
       "outletId": "liberation",
       "headline": "Manifestations du 17 octobre : près de 2 500 commerces vandalisés, selon les chambres de commerce et d’industrie",
@@ -39,24 +63,31 @@
     }
   ],
   "topicId": "7efa9d23050d",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "economy",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le réseau consulaire a établi un bilan national de près de 2 500 commerces dégradés lors des mobilisations du 17 octobre.",
-      "Le gouvernement a annoncé l'octroi d'une aide financière pouvant atteindre 10 000 euros pour les exploitants les plus lourdement touchés."
+      "Le réseau consulaire a établi un bilan national faisant état de près de 2.500 commerces endommagés lors des mobilisations.",
+      "Le ministre délégué Serge Papin a dévoilé une enveloppe d'aide pouvant atteindre 10.000 euros destinée aux établissements les plus lourdement touchés."
+    ],
+    "centre": [
+      "Le gouvernement déploie un fonds d'urgence prévoyant des subventions allant jusqu'à 10.000 euros pour les restaurateurs et commerçants victimes des pillages des 17 et 18 octobre.",
+      "Un dispositif complémentaire incluant des prêts à taux zéro via Bpifrance et des mesures de chômage partiel est activé.",
+      "CCI France recense près de 2.500 commerces impactés sur l'ensemble du territoire, dont plus de 600 demeurent fermés."
     ],
     "droite": [
-      "Les autorités consulaires font état de près de 2 500 établissements impactés lors des violences du 17 octobre, avec encore plus de 600 fermetures en cours.",
-      "Le gouvernement a obtenu des principales plateformes numériques le retrait de plus de 1 700 annonces de marchandises prétendument issues des pillages."
+      "Le ministre Serge Papin indique que les entreprises de moins de 50 salariés réalisant moins de 10 millions d'euros de chiffre d'affaires sont éligibles au fonds d'aide gouvernemental.",
+      "Plus de 1.700 annonces en ligne proposant à la revente des marchandises issues des pillages ont été supprimées par les plateformes après intervention des autorités, selon Le Figaro.",
+      "Le Figaro relève que plus d'un millier de commerces ont été directement saccagés, pillés ou incendiés lors de la journée du 17 octobre."
     ]
   },
   "differences": [
-    "La gauche met en avant l'ampleur nationale du bilan chiffré par les chambres consulaires et focalise son attention sur les dispositifs d'aide publique déployés pour soutenir les commerçants.",
-    "La droite qualifie l'événement de coup de grâce pour l'économie de proximité en insistant sur la persistance des fermetures d'établissements et sur la traque des revendeurs en ligne d'objets pillés."
+    "La gauche met en avant le bilan chiffré global des destructions établi par les chambres consulaires ainsi que l'annonce ministérielle des aides financières.",
+    "Le centre focalise son traitement sur la panoplie des dispositifs économiques d'urgence mis en place par l'exécutif pour relancer l'activité des professionnels.",
+    "La droite insiste particulièrement sur la répression des reventes illégales de marchandises dérobées sur les plateformes numériques tout en détaillant les critères stricts d'attribution des aides."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-10-27T22:01:25.819Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-10-28T06:01:25.690Z"
 }
