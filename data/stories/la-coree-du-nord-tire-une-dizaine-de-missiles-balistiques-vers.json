@@ -6,6 +6,18 @@
   "storyDay": "2026-10-29",
   "articles": [
     {
+      "id": "7abf8ca4bea0",
+      "outletId": "le-monde",
+      "headline": "La Corée du Nord a tiré « une dizaine de missiles balistiques » dans la mer du Japon, selon Séoul",
+      "url": "https://www.lemonde.fr/international/article/2026/10/29/la-coree-du-nord-a-tire-une-dizaine-de-missiles-balistiques-dans-la-mer-du-japon-selon-seoul_6802157_3210.html",
+      "publishedAt": "2026-10-29T06:29:51.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/29/88/0/4242/2121/644/322/60/0/27185fc_ftp-1-kyrdkrefyrnz-afp-d4re3lj.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "34ea60a026a5",
       "outletId": "le-parisien",
       "headline": "La Corée du Nord tire un projectile non identifié dans la mer du Japon",
@@ -29,19 +41,25 @@
     }
   ],
   "topicId": "6c6fb408dc23",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "La Corée du Nord a procédé au lancement d'une dizaine de missiles balistiques en direction de la mer du Japon selon les autorités sud-coréennes.",
+      "Cette opération militaire s'inscrit dans un contexte de recrudescence des tensions et d'incidents récurrents entre Séoul et Pyongyang.",
+      "La garde côtière japonaise a diffusé une consigne de vigilance à l'attention des navires naviguant dans la zone."
+    ],
     "centre": [
-      "La Corée du Nord a procédé au tir d'un projectile non identifié se dirigeant vers les eaux de la mer du Japon.",
-      "Le régime nord-coréen a lancé une dizaine de missiles balistiques à courte portée, dans un contexte de tensions accrues et d'incidents répétés avec son voisin du Sud au cours des derniers mois."
+      "Pyongyang a effectué un tir de missiles balistiques à courte portée vers la mer du Japon, d'après les informations communiquées par Séoul.",
+      "L'armée sud-coréenne a indiqué avoir rehaussé son niveau de surveillance face à la multiplication des frictions récentes entre les deux États."
     ]
   },
   "differences": [
-    "Le centre met l'accent sur la répétition des tirs balistiques à courte portée par Pyongyang et replace l'actualité dans le contexte des tensions croissantes avec la Corée du Sud."
+    "Le camp gauche détaille le nombre précis d'engins tirés et met en avant l'appel à la vigilance de la garde côtière japonaise.",
+    "Le camp centre met l'accent sur la nature à courte portée des projectiles et sur le renforcement immédiat de la surveillance militaire par Séoul."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-10-29T06:01:25.736Z"
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-10-29T07:01:28.162Z"
 }
