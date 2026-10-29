@@ -6,6 +6,18 @@
   "storyDay": "2026-10-29",
   "articles": [
     {
+      "id": "8381bb064a81",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, Midterms 2026 : Donald Trump dans l’Ohio, Barack Obama à Atlanta, enquête ouverte sur une candidate démocrate en Alaska… le point sur les dernières informations",
+      "url": "https://www.lemonde.fr/international/live/2026/10/29/en-direct-midterms-2026-donald-trump-dans-l-ohio-barack-obama-a-atlanta-enquete-ouverte-contre-une-candidate-democrate-en-alaska-le-point-sur-les-dernieres-informations_6801590_3210.html",
+      "publishedAt": "2026-10-29T10:34:57.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/29/802/0/4809/2404/644/322/60/0/856c33a_ftp-1-l8eqpbi8ufxs-afp-d4re3m7.jpg",
+      "frontPage": true,
+      "kind": "live",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "d640b3fed768",
       "outletId": "le-parisien",
       "headline": "Midterms 2026 : l’affaire de l’homonyme qui embarrasse les démocrates en Alaska, et renforce Trump dans ses attaques contre la fraude",
@@ -30,24 +42,29 @@
     }
   ],
   "topicId": "919f07d4f18c",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "politics",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le gouverneur républicain de l'Alaska, Mike Dunleavy, ouvre une enquête pour examiner d'éventuelles sanctions pénales ou civiles contre la campagne de Mary Peltola.",
+      "La candidate démocrate au Sénat est mise en cause pour le recrutement d'un homonyme du sénateur sortant afin de diviser l'électorat."
+    ],
     "centre": [
-      "Les élections de mi-mandat en Alaska provoquent l'embarras du camp démocrate suite à des révélations sur un homonyme.",
-      "Donald Trump profite de cette polémique électorale pour intensifier ses accusations concernant la fraude."
+      "Une controverse électorale en Alaska met en difficulté les démocrates et offre à Donald Trump de nouveaux arguments sur la question de la fraude.",
+      "L'affaire concerne l'utilisation d'un homonyme pour perturber la campagne du sénateur sortant."
     ],
     "droite": [
-      "Donald Trump exige l'exclusion d'une candidate démocrate en Alaska à la suite d'une enquête du New York Times.",
-      "La campagne de cette ancienne juge tribale amérindienne a ciblé les listes électorales en 2025 pour dénicher un homonyme du sénateur sortant Dan Sullivan."
+      "Donald Trump réclaye la disqualification de la candidate démocrate Mary Peltola en Alaska après des révélations du « New York Times ».",
+      "La campagne de l'ancienne juge tribale amérindienne a mené des recherches sur les listes électorales en 2025 pour trouver un homonyme au sénateur Dan Sullivan."
     ]
   },
   "differences": [
-    "Le centre contextualise l'affaire en insistant sur la gêne politique des démocrates et le carburant ainsi offert au discours de Trump sur la fraude.",
-    "Le droite centre son analyse sur la demande d'exclusion formulée par Donald Trump en s'appuyant directement sur les révélations d'enquête du New York Times."
+    "Le camp gauche se focalise strictement sur l'enquête ouverte par le gouverneur de l'Alaska concernant l'affaire de l'homonyme.",
+    "Le camp centre relie directement la polémique locale en Alaska aux accusations récurrentes de Donald Trump sur la fraude.",
+    "Le camp droite met en avant la demande de disqualification formulée par Donald Trump en s'appuyant sur l'enquête du « New York Times »."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-10-29T05:01:24.371Z"
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-10-29T12:01:24.484Z"
 }

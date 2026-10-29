@@ -1,10 +1,21 @@
 {
   "id": "9e721411bc52",
   "slug": "un-piratage-divulgue-les-noms-de-41000-employes-de-la-securite",
-  "title": "Un piratage informatique divulgue les noms de 41 000 employés de la Sécurité intérieure américaine",
+  "title": "Un piratage informatique divulgue les données de plus de 41 000 employés de la Sécurité intérieure américaine",
   "createdAt": "2026-10-29T04:01:16.305Z",
   "storyDay": "2026-10-29",
   "articles": [
+    {
+      "id": "5a73fedb50ff",
+      "outletId": "bfmtv",
+      "headline": "\"Ils ont nos informations, il est donc normal que nous ayons les leurs\": les données de plus de 40.000 membres de la Sécurité intérieure aux États-Unis, dont des agents de l'ICE infiltrés, divulguées par des hackers",
+      "url": "https://www.bfmtv.com/tech/cybersecurite/ils-ont-nos-informations-il-est-donc-normal-que-nous-ayons-les-leurs-les-donnees-de-plus-de-40-000-membres-de-la-securite-interieure-aux-etats-unis-dont-des-agents-de-l-ice-infiltres-divulguees-par-des-hackers_AD-202610290444.html",
+      "publishedAt": "2026-10-29T11:26:39.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/IP5pxFT4X1KoPuS72qgpBKciiiA=/6x57:2022x1191/800x0/images/Police-de-l-immigration-americaine-illustration-2224687.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "9d4f46d31d9b",
       "outletId": "ouest-france",
@@ -41,24 +52,25 @@
     }
   ],
   "topicId": "9e721411bc52",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Une organisation non gouvernementale a mis en ligne les informations personnelles de dizaines de milliers d'agents du département américain de la Sécurité intérieure.",
-      "Cette violation de données, intervenue un mercredi, est qualifiée d'ampleur considérable tant par sa dimension que par ses conséquences potentielles."
+      "Un groupe de hackers baptisé Department of Peace a exploité une faille informatique pour subtiliser les données de 41.000 employés du département américain de la Sécurité intérieure.",
+      "Les informations dérobées, incluant les noms d'agents infiltrés de l'ICE, ont été transmises à l'ONG Distributed Denial of Secrets qui les a publiées en ligne.",
+      "Les auteurs de la fuite justifient leur action par une logique de réciprocité en estimant détenir des informations compromettantes."
     ],
     "droite": [
-      "Le groupe Distributed Denial of Secrets a rendu publiques des données concernant plus de 41 000 salariés de la Sécurité intérieure.",
-      "Les informations divulguées incluent l'identité, l'localisation des bureaux et les attributions des agents de cette administration centrale dans la politique migratoire de Donald Trump."
+      "L'ONG Distributed Denial of Secrets a rendu publiques les données personnelles de plus de 41.000 agents de la Sécurité intérieure américaine.",
+      "La fuite concerne les noms, les bureaux et les affectations des employés de cette administration centrale dans la politique migratoire de Donald Trump."
     ]
   },
   "differences": [
-    "Le centre insiste sur l'ampleur et l'impact exceptionnels de la cyberattaque en reprenant les qualificatifs des sources.",
-    "La droite contextualise l'incident en soulignant le rôle stratégique de l'agence touchée dans la gestion de l'immigration sous l'administration Trump."
+    "Le centre insiste sur le mode opératoire du piratage, l'implication du groupe Department of Peace et la nature sensible des agents infiltrés de l'ICE compromis.",
+    "La droite se focalise sur la mise en ligne des informations par l'ONG Distributed Denial of Secrets en soulignant le lien direct avec l'administration de Donald Trump et la politique migratoire."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-10-29T05:01:24.371Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-10-29T12:01:24.484Z"
 }
