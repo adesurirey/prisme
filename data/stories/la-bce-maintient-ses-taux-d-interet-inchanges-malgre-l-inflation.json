@@ -12,7 +12,7 @@
       "url": "https://www.lefigaro.fr/conjoncture/la-bce-maintient-son-principal-taux-directeur-inchange-a-2-5-20261029",
       "publishedAt": "2026-10-29T13:59:49.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/29/0d192b2eedfdd685742b66812f42585b7096ca25612153ef7e5de3725535f8bc.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -43,5 +43,25 @@
   "topicId": "9f8bb30fb15e",
   "titledArticleCount": 3,
   "section": "economy",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "La Banque centrale européenne a décidé de maintenir l'ensemble de ses taux d'intérêt inchangés.",
+      "L'inflation en zone euro reste proche de quatre pour cent et nettement supérieure à l'objectif de l'institution.",
+      "BFMTV rapporte que le maintien des taux a été éclipsé par l'annonce du départ anticipé de Christine Lagarde.",
+      "Les marchés financiers anticipent déjà une nouvelle hausse des taux directeurs lors de la réunion de décembre."
+    ],
+    "droite": [
+      "Le principal taux directeur de la Banque centrale européenne est maintenu à deux virgule cinq pour cent.",
+      "Cette décision fait suite à deux relèvements opérés dans le courant de l'année.",
+      "Le Figaro indique que cette politique vise à contenir les pressions inflationnistes alimentées par l'énergie et les tensions au Moyen-Orient."
+    ]
+  },
+  "differences": [
+    "Le centre met en avant le contexte global en associant le maintien des taux à l'inflation persistante et à l'annonce du départ de Christine Lagarde.",
+    "La droite se focalise strictement sur la politique monétaire de la BCE et relie directement le statu quo aux tensions géopolitiques et énergétiques."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-10-29T18:01:24.993Z"
 }

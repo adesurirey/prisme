@@ -23,7 +23,7 @@
       "url": "https://www.lefigaro.fr/international/turquie-2-morts-et-plusieurs-blesses-apres-l-effondrement-d-une-cheminee-de-fee-sur-un-site-touristique-de-cappadoce-20261029",
       "publishedAt": "2026-10-29T13:43:36.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/10/29/7180e7a2e70c0b6855bdc4fd935dc3b3f405e94a1e7f52c95f030923653bd301.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -35,7 +35,7 @@
       "url": "https://www.ouest-france.fr/monde/turquie/turquie-deux-morts-apres-leffondrement-dune-cheminee-de-fee-sur-un-site-touristique-en-cappadoce-71e9567e-d39a-11f1-81f2-0d14b9f9c452?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-10-29T13:32:36.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNjc3YmM3Zjk0MGU4MGRjNGExNzc5MTA3MWQwYTA3NDQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=774e9cd17590ecd4f676ead3eb7b0c4717c92d6b2c24f8862a69d5f7eda5974a",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -44,5 +44,22 @@
   "topicId": "e27c5c3e1512",
   "titledArticleCount": 3,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "Deux touristes ont perdu la vie en Cappadoce, en Turquie, après qu'une formation rocheuse caractéristique s'est effondrée.",
+      "Le drame s'est produit jeudi 29 octobre sur un site touristique très fréquenté de la région."
+    ],
+    "droite": [
+      "Une « cheminée de fée » s'est écroulée le jeudi 29 octobre à Göreme en raison d'intempéries, entraînant la mort de deux personnes et blessant une troisième.",
+      "Les équipes de secours ont immédiatement été déployées sur place pour intervenir sur ce site touristique prisé de Cappadoce."
+    ]
+  },
+  "differences": [
+    "Le centre livre un compte rendu succinct et factuel se limitant au bilan humain et au lieu du drame.",
+    "La droite enrichit son article en précisant les causes météorologiques, le nombre exact de blessés ainsi que la mobilisation des secours."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-10-29T18:01:24.993Z"
 }
