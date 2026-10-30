@@ -6,6 +6,40 @@
   "storyDay": "2026-10-30",
   "articles": [
     {
+      "id": "1cdf87864778",
+      "outletId": "le-monde",
+      "headline": "« Ils nous ont tués » : le journal indépendant russe « Novaïa Gazeta » annonce sa fermeture",
+      "url": "https://www.lemonde.fr/international/video/2026/10/30/ils-nous-ont-tues-le-journal-independant-russe-novaia-gazeta-annonce-sa-fermeture_6803133_3210.html",
+      "publishedAt": "2026-10-30T19:09:53.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/30/688/0/8256/4128/644/322/60/0/facf653_upload-1-cngnpcavk8pv-000-d2dv9yy.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "49f52f302bc2",
+      "outletId": "le-monde",
+      "headline": "« Novaïa Gazeta » : le comité Nobel appelle la Russie « à mettre fin à la répression »",
+      "url": "https://www.lemonde.fr/international/article/2026/10/30/novaia-gazeta-le-comite-nobel-appelle-la-russie-a-mettre-fin-a-la-repression_6803097_3210.html",
+      "publishedAt": "2026-10-30T14:13:02.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/30/360/0/4324/2162/644/322/60/0/78b5db8_ftp-1-4jpsym46ttmk-afp-d4wa2bf.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "1157650f5c35",
+      "outletId": "humanite",
+      "headline": "« Nous avons été tués » : Sergueï Sokolov, le rédacteur en chef de « Novaya Gazeta », annonce la fermeture du journal d’investigation indépendant",
+      "url": "https://www.humanite.fr/monde/journalisme/nous-avons-ete-tues-serguei-sokolov-le-redacteur-en-chef-de-novaya-gazeta-annonce-la-fermeture-du-journal-dinvestigation-independant",
+      "publishedAt": "2026-10-30T13:00:00.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/Serguei-Sokolov.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "6c14f422634b",
       "outletId": "rfi",
       "headline": "Russie: le journal d'opposition «Novaïa Gazeta» annonce sa fin sous la pression des autorités",
@@ -62,31 +96,32 @@
     }
   ],
   "topicId": "9f90a6c7eae4",
-  "titledArticleCount": 5,
+  "titledArticleCount": 8,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le journal indépendant Novaïa Gazeta met un terme à ses activités sous la contrainte du pouvoir russe.",
-      "Le quotidien était qualifié d'agent de l'étranger par le Kremlin et subissait des menaces durables.",
-      "Six collaborateurs du média ont perdu la vie au cours des vingt dernières années, dont Anna Politovskaia."
+      "Le journal d'investigation indépendant « Novaïa Gazeta » annonce sa fermeture forcée sous la pression des autorités russes, qualifiée de « gigantesque campagne militaire » par l'ancien rédacteur en chef Dmitri Mouratov.",
+      "Le comité Nobel de la paix appelle la Russie à cesser sa répression contre la liberté d'expression.",
+      "Le média rappelé son statut d'« agent de l'étranger » et l'assassinat de six de ses journalistes, dont Anna Politovskaia.",
+      "L'Humanité souligne le climat de terreur généralisé pesant sur les journalistes et la société."
     ],
     "centre": [
-      "Le média d'opposition Novaïa Gazeta annonce sa fermeture après trente années d'existence.",
-      "Le rédacteur en chef Sergueï Sokolov pointe directement la responsabilité des services spéciaux russes.",
-      "La rédaction a été expulsée de ses locaux historiques à Moscou suite à des pressions continues."
+      "Le bastion de la presse indépendante « Novaïa Gazeta » annonce la fin de ses activités après trente ans d'existence en raison du harcèlement des autorités.",
+      "Le rédacteur en chef Sergueï Sokolov dénonce le rôle direct des services spéciaux russes dans cette fermeture contrainte.",
+      "Le journal mettait en lumière la corruption, les violences du pouvoir et les violations des droits humains, en s'opposant notamment à la guerre en Ukraine."
     ],
     "droite": [
-      "Le quotidien indépendant Novaïa Gazeta cesse définitivement de paraître face au harcèlement des autorités.",
-      "Le journal a officialisé sa dissolution à travers une déclaration vidéo diffusée par sa direction."
+      "Le journal indépendant russe « Novaïa Gazeta » cesse définitivement de paraître sous la contrainte des autorités et des services spéciaux.",
+      "Le rédacteur en chef Sergueï Sokolov a officialisé cette décision dans une déclaration publiée sur YouTube."
     ]
   },
   "differences": [
-    "La gauche insiste lourdement sur le passif répressif et l'historique d'assassinats de journalistes qui ont frappé la rédaction.",
-    "Le centre privilégie l'actualité institutionnelle immédiate en détaillant l'expulsion des locaux et les déclarations du rédacteur en chef.",
-    "La droite adopte un angle factuel et sobre, se limitant à relayer l'annonce officielle de la fermeture et le témoignage vidéo de la direction."
+    "La gauche met l'accent sur la dimension historique et dramatique de la disparition du dernier média libre, en insistant sur le climat de terreur et la mémoire des journalistes assassinés.",
+    "Le centre adopte un angle factuel et institutionnel, retraçant les trente ans d'enquêtes du journal sur la corruption et les violations des droits humains avant sa fermeture par les services spéciaux.",
+    "La droite se concentre strictement sur l'annonce brute de la cessation d'activité et la déclaration officielle du rédacteur en chef sur YouTube."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-10-30T11:01:19.843Z"
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-10-30T21:01:20.737Z"
 }
