@@ -292,7 +292,7 @@ describe('the editions picker (ADR-0028, as amended by ADR-0029)', () => {
     expectAnchorVisible(await readDist('7-jours/index.html'), weekAnchor);
     expectAnchorVisible(
       await readDist('en-direct/index.html'),
-      '8 dernières heures',
+      '12 dernières heures',
     );
   });
 });

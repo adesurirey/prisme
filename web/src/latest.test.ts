@@ -13,7 +13,7 @@ describe('latestEmptyLine', () => {
     // 18:45 UTC is 20:45 in Paris — the footer-clock format, thin no-break
     // spaces around the h (docs/brand.md).
     expect(latestEmptyLine(new Date('2026-10-15T18:45:00Z'))).toBe(
-      'Rien de fondé dans les 8 dernières heures — dernière collecte à 20\u202Fh\u202F45',
+      'Rien de fondé dans les 12 dernières heures — dernière collecte à 20\u202Fh\u202F45',
     );
   });
 

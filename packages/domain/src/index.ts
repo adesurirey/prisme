@@ -243,7 +243,7 @@ export interface Edition {
   builtAt: string;
   /** « En direct » (`/en-direct/`): every Story whose founding instant
    * (ADR-0026, the earliest Article publication time) falls within the
-   * rolling last 8 hours before builtAt, ranked latest-first
+   * rolling last 12 hours before builtAt, ranked latest-first
    * (rankStoriesLatestFirst), uncapped and unfloored — the window is the
    * cap. Always a subset of `stories` by construction (ADR-0029). */
   latestStories: Story[];

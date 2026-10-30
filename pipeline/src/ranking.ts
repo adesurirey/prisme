@@ -24,11 +24,13 @@ export const WEEK_WINDOW_MS = 7 * DAY_WINDOW_MS;
  * floor, never a cap: the week's weight sets the list's length. */
 export const WEEK_FLOOR_OUTLETS = 10;
 
-/** The « En direct » window (ADR-0029): the rolling last 8 hours, measured
- * over the archive — a 12 h window holds a median of 19 Stories (above the
- * 15 ceiling set for this feature), 8 h a median of 12. No cap, no floor:
+/** The « En direct » window (ADR-0029, widened by ADR-0035): the rolling
+ * last 12 hours. The window holds a median of 19 Stories (p75 25, max 48)
+ * — ADR-0029's 15-Story ceiling answered the superseded novelty-signal
+ * framing and is lifted: En direct is the chronological thread of the
+ * news, and the list's length is the news's density. No cap, no floor:
  * the window is the cap. */
-export const LATEST_WINDOW_MS = 8 * 60 * 60 * 1000;
+export const LATEST_WINDOW_MS = 12 * 60 * 60 * 1000;
 
 /** The three Edition windows a build assembles (ADR-0027, ADR-0029). */
 export interface EditionWindows {
@@ -52,7 +54,7 @@ export interface EditionWindows {
  * decay — no Outlet reporting it inside the window — never at a clock
  * edge: a Story that just closed keeps sinking until its Articles age out.
  * « En direct » admits a Story iff its founding instant (ADR-0026, the
- * earliest Article publication time) falls inside the last 8 hours —
+ * earliest Article publication time) falls inside the last 12 hours —
  * ranked latest-first, uncapped and unfloored: the window is the cap, and
  * the founding-bound membership makes every member a « Aujourd'hui » Story
  * by construction (ADR-0029). The old pre-0026 day tiers and the ADR-0026
@@ -69,7 +71,7 @@ export function assembleEdition(stories: Story[], now: Date): EditionWindows {
   const latest = stories.filter((s) => {
     const founding = foundingInstant(s);
     // Inclusive at both ends, like every window bound: a Story founded
-    // exactly 8 hours ago is still En direct; a future founding (no
+    // exactly 12 hours ago is still En direct; a future founding (no
     // dated Article, or a defensive future-dated file) is not.
     return founding != null && founding >= since && founding <= until;
   });

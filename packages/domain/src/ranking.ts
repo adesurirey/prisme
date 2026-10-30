@@ -94,7 +94,7 @@ export function rankStoriesInWindow(
  * (ADR-0011); for window members the whole-life and in-window Coverage
  * coincide, and whole-life keeps the key self-contained — then id asc,
  * fully deterministic across builds. Membership (the founding instant
- * inside the rolling last 8 hours) lives with the Edition assembly
+ * inside the rolling last 12 hours) lives with the Edition assembly
  * (pipeline, assembleEdition); the key itself is total — a Story with no
  * dated Article sorts last, deterministically.
  */

@@ -76,3 +76,7 @@ ceiling set for this feature; 8 h holds a median of 12 (p75 17, max 41).
   one species: « this grew since your last visit ».
 - The GLOSSARY's Edition and Trending Story entries are updated, the New
   Story entry removed, and an En direct entry added by this ADR.
+- Amended by ADR-0035: the window widens from 8 h to 12 h and the
+  15-Story ceiling is lifted — the ceiling answered the superseded
+  per-reader novelty framing; En direct is the chronological thread, and
+  the list's length is the news's density.

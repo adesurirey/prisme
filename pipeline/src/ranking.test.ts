@@ -228,14 +228,14 @@ describe('rankStoriesInWindow', () => {
  * last 24 hours, uncapped, the home) and « 7 jours » (the last 7 days,
  * floored to Stories covered by ≥ 10 Outlets in the window) admit a Story
  * iff at least one of its Articles was published inside the window;
- * « En direct » (the last 8 hours) admits a Story iff its founding instant
+ * « En direct » (the last 12 hours) admits a Story iff its founding instant
  * falls inside the window. A Story leaves la Une by decay — no Outlet
  * reporting it inside the window — never at a clock edge.
  */
 describe('assembleEdition', () => {
   // At DAY_NOON the day window is [2026-10-05T10:00:00Z, 2026-10-06T10:00:00Z],
   // the week window [2026-09-29T10:00:00Z, 2026-10-06T10:00:00Z] and the
-  // En direct window [2026-10-06T02:00:00Z, 2026-10-06T10:00:00Z].
+  // En direct window [2026-10-05T22:00:00Z, 2026-10-06T10:00:00Z].
   const windows = (stories: Story[], now: Date = DAY_NOON) => {
     const { latest, day, week } = assembleEdition(stories, now);
     return {
@@ -536,7 +536,7 @@ describe('assembleEdition', () => {
 
 /**
  * The « En direct » window (ADR-0029): every Story whose founding instant
- * (ADR-0026) falls within the rolling last 8 hours, ranked latest-first,
+ * (ADR-0026) falls within the rolling last 12 hours, ranked latest-first,
  * uncapped and unfloored — the window is the cap. Members are by
  * construction always ingestion-live and always a subset of
  * « Aujourd’hui ».
@@ -545,18 +545,18 @@ describe('assembleEdition — « En direct » (ADR-0029)', () => {
   const latest = (stories: Story[], now: Date = DAY_NOON) =>
     assembleEdition(stories, now).latest.map((s) => s.id);
 
-  it('admits by founding instant: founded exactly 8h ago is in, one second earlier is out', () => {
+  it('admits by founding instant: founded exactly 12h ago is in, one second earlier is out', () => {
     const atEdge = story(
-      'at-8h',
-      [article('e', { publishedAt: '2026-10-06T02:00:00Z' })],
-      '2026-10-06T02:00:00Z',
+      'at-12h',
+      [article('e', { publishedAt: '2026-10-05T22:00:00Z' })],
+      '2026-10-05T22:00:00Z',
     );
     const justPast = story(
-      'past-8h',
-      [article('p', { publishedAt: '2026-10-06T01:59:59Z' })],
-      '2026-10-06T01:59:59Z',
+      'past-12h',
+      [article('p', { publishedAt: '2026-10-05T21:59:59Z' })],
+      '2026-10-05T21:59:59Z',
     );
-    expect(latest([justPast, atEdge])).toEqual(['at-8h']);
+    expect(latest([justPast, atEdge])).toEqual(['at-12h']);
   });
 
   it('never admits an older-founded Story for a fresh Article: membership follows the founding', () => {
@@ -611,8 +611,9 @@ describe('assembleEdition — « En direct » (ADR-0029)', () => {
 
   it('is always a subset of « Aujourd’hui » — the tested invariant (ADR-0029)', () => {
     // A mixed archive: a frozen day-old Story, an old-founded Story still
-    // growing, one founded 9 hours ago, two founded inside the window.
-    // Non-empty on purpose: the invariant must not pass vacuously.
+    // growing, one founded 13 hours ago — just outside the window, inside
+    // the day — two founded inside the window. Non-empty on purpose: the
+    // invariant must not pass vacuously.
     const frozen = {
       ...story(
         'frozen',
@@ -629,10 +630,10 @@ describe('assembleEdition — « En direct » (ADR-0029)', () => {
         publishedAt: '2026-10-06T09:00:00Z',
       }),
     ]);
-    const nineHoursOld = story(
-      '9h',
-      [article('n', { publishedAt: '2026-10-06T01:00:00Z' })],
-      '2026-10-06T01:00:00Z',
+    const thirteenHoursOld = story(
+      '13h',
+      [article('n', { publishedAt: '2026-10-05T21:00:00Z' })],
+      '2026-10-05T21:00:00Z',
     );
     const young = (id: string, hour: number) =>
       story(
@@ -643,7 +644,7 @@ describe('assembleEdition — « En direct » (ADR-0029)', () => {
     const stories = [
       frozen,
       growing,
-      nineHoursOld,
+      thirteenHoursOld,
       young('young-3', 3),
       young('young-7', 7),
     ];

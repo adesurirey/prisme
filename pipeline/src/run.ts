@@ -174,7 +174,7 @@ export async function runEdition(): Promise<Edition> {
 
   // The Edition (ADR-0027, amended by ADR-0029's third window;
   // superseding ADR-0022/0026's live pool): rolling windows over ALL
-  // Stories — frozen ones included. « En direct » (the last 8 hours by
+  // Stories — frozen ones included. « En direct » (the last 12 hours by
   // founding instant, ranked latest-first) is by construction a subset of
   // « Aujourd'hui » (the last 24 hours), which stays uncapped and keeps
   // feeding the home; the Summaries budget below takes its top-20 in this

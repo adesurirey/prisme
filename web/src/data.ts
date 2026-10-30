@@ -53,7 +53,7 @@ export async function loadWeekStories(): Promise<Story[]> {
 
 /**
  * The « En direct » window of the Edition artifact (ADR-0029): every Story
- * founded within the rolling last 8 hours, ranked latest-first. The
+ * founded within the rolling last 12 hours, ranked latest-first. The
  * pipeline always writes the key; the reader requires it.
  */
 export async function loadLatestStories(): Promise<Story[]> {
