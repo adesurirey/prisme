@@ -6,6 +6,28 @@
   "storyDay": "2026-10-30",
   "articles": [
     {
+      "id": "6c14f422634b",
+      "outletId": "rfi",
+      "headline": "Russie: le journal d'opposition «Novaïa Gazeta» annonce sa fin sous la pression des autorités",
+      "url": "https://www.rfi.fr/fr/europe/20261030-russie-le-journal-d-opposition-nova%C3%AFa-gazeta-annonce-sa-fin-sous-la-pression-des-autorit%C3%A9s",
+      "publishedAt": "2026-10-30T10:43:23.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/c61d51de-d447-11f1-bfea-1beafce15fea/w:1024/p:16x9/000-D2DV9ZB.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "143299adad1f",
+      "outletId": "france-24",
+      "headline": "\"Novaïa Gazeta cesse d'exister\": le journal russe contraint de fermer sous la pression des autorités",
+      "url": "https://www.france24.com/fr/europe/20261030-nova%C3%AFa-gazeta-cesse-d-exister-le-journal-russe-contraint-de-fermer-sous-la-pression-des-autorit%C3%A9s",
+      "publishedAt": "2026-10-30T09:12:38.000Z",
+      "imageUrl": "https://s.france24.com/media/display/aa71012c-c193-11f1-8aa8-73f176a2394c/w:1024/p:16x9/000-9PA86E.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "39b402f7eb8e",
       "outletId": "liberation",
       "headline": "En Russie, le journal indépendant «Novaïa Gazeta» annonce sa fermeture sous la pression des autorités",
@@ -22,7 +44,7 @@
       "url": "https://www.lefigaro.fr/international/russie-le-journal-independant-novaia-gazeta-annonce-sa-fermeture-sous-la-pression-des-autorites-20261030",
       "publishedAt": "2026-10-30T08:45:48.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/30/372893ed4ed5b7a496c3a86e3db3e08ba09394478852d6dd6d115b315765fc0b.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -40,26 +62,31 @@
     }
   ],
   "topicId": "9f90a6c7eae4",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le journal Novaïa Gazeta suspend ses activités en raison de la pression exercée par le Kremlin.",
-      "Le média subissait le statut d'agent de l'étranger et le meurtre de six journalistes, dont Anna Politovskaia.",
-      "Le quotidien indépendant a également été expulsé de son siège historique à Moscou après trente ans.",
-      "La rédaction était reconnue pour ses enquêtes sur la corruption et les violations des droits humains."
+      "Le journal indépendant Novaïa Gazeta met un terme à ses activités sous la contrainte du pouvoir russe.",
+      "Le quotidien était qualifié d'agent de l'étranger par le Kremlin et subissait des menaces durables.",
+      "Six collaborateurs du média ont perdu la vie au cours des vingt dernières années, dont Anna Politovskaia."
+    ],
+    "centre": [
+      "Le média d'opposition Novaïa Gazeta annonce sa fermeture après trente années d'existence.",
+      "Le rédacteur en chef Sergueï Sokolov pointe directement la responsabilité des services spéciaux russes.",
+      "La rédaction a été expulsée de ses locaux historiques à Moscou suite à des pressions continues."
     ],
     "droite": [
-      "Le média indépendant Novaïa Gazeta annonce sa fermeture définitive face à la pression des autorités russes.",
-      "Le rédacteur en chef Sergueï Sokolov a déclaré sur YouTube que les services spéciaux ont obligé la rédaction à cesser son travail."
+      "Le quotidien indépendant Novaïa Gazeta cesse définitivement de paraître face au harcèlement des autorités.",
+      "Le journal a officialisé sa dissolution à travers une déclaration vidéo diffusée par sa direction."
     ]
   },
   "differences": [
-    "La gauche met en perspective l'histoire du journal, ses enquêtes de fond et la violence de la répression subie au fil des ans, incluant les assassinats de journalistes et l'expulsion de son siège.",
-    "La droite centre l'essentiel de son compte-rendu sur l'annonce officielle de la fermeture et l'intervention directe des services spéciaux russes selon la déclaration du rédacteur en chef Sergueï Sokolov."
+    "La gauche insiste lourdement sur le passif répressif et l'historique d'assassinats de journalistes qui ont frappé la rédaction.",
+    "Le centre privilégie l'actualité institutionnelle immédiate en détaillant l'expulsion des locaux et les déclarations du rédacteur en chef.",
+    "La droite adopte un angle factuel et sobre, se limitant à relayer l'annonce officielle de la fermeture et le témoignage vidéo de la direction."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-10-30T09:01:23.397Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-10-30T11:01:19.843Z"
 }
