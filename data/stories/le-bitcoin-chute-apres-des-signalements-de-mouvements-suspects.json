@@ -1,10 +1,22 @@
 {
   "id": "386242e5af4e",
   "slug": "le-bitcoin-chute-apres-des-signalements-de-mouvements-suspects",
-  "title": "Le bitcoin chute après des signalements de mouvements suspects sur la plateforme Binance",
+  "title": "Le bitcoin chute après des signalements de mouvements suspects et un piratage sur la plateforme Binance",
   "createdAt": "2026-10-30T00:01:25.670Z",
   "storyDay": "2026-10-29",
   "articles": [
+    {
+      "id": "effd464db49e",
+      "outletId": "le-figaro",
+      "headline": "Fonds gelés, près de 6 milliards de dollars volés, cyberattaque massive : le piratage de la plateforme Binance plonge le secteur des cryptos dans la panique",
+      "url": "https://www.lefigaro.fr/secteur/high-tech/fonds-geles-pres-de-6-milliards-de-dollars-voles-cyberattaque-massive-le-piratage-de-la-plateforme-binance-plonge-le-secteur-des-cryptos-dans-la-panique-20261030",
+      "publishedAt": "2026-10-30T02:32:47.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1715_crop/2026/10/30/b9f29efb47af69a15d583e70281315c79e29f0baba2b574d68cfcda0e8ef912e.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
     {
       "id": "43edd5228149",
       "outletId": "le-parisien",
@@ -42,24 +54,24 @@
     }
   ],
   "topicId": "386242e5af4e",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "economy",
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Le Bitcoin subit une forte baisse consécutivement au piratage de la plateforme d'échange Binance."
+      "Le Bitcoin enregistre une baisse marquée suite au piratage de la plateforme d'échange Binance."
     ],
     "droite": [
-      "La plateforme Binance enquête sur un incident de sécurité après des alertes concernant des mouvements atypiques.",
-      "L'entreprise rassure sa communauté en affirmant que les avoirs des utilisateurs demeurent totalement protégés.",
-      "Le cours du bitcoin chute lourdement à la suite de rumeurs persistantes de cyberattaque d'envergure sur l'infrastructure."
+      "La plateforme Binance fait l'objet d'une enquête après des signalements de mouvements suspects et une cyberattaque massive.",
+      "Près de 6 milliards de dollars auraient été dérobés en l'espace de quarante minutes, provoquant la panique sur le marché des cryptomonnaies.",
+      "Binance affirme dans un communiqué que les fonds des utilisateurs restent en sécurité et totalement à l'abri."
     ]
   },
   "differences": [
-    "Le camp du centre qualifie directement l'incident de piratage avéré pour expliquer la baisse du bitcoin.",
-    "Le camp de droite met l'accent sur les déclarations rassurantes de l'entreprise tout en qualifiant l'événement de simple rumeur de cyberattaque et de problème potentiel."
+    "Le camp centre se limite à une mention factuelle et sobre de la baisse du Bitcoin consécutive à l'incident de sécurité.",
+    "Le camp droite livre un récit détaillé et alarmiste de la cyberattaque, insistant sur l'ampleur colossale des montants en jeu et la panique générée."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-10-30T00:01:25.670Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-10-30T03:01:23.489Z"
 }

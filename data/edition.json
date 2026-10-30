@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-10-30T02:01:22.126Z",
+  "builtAt": "2026-10-30T03:01:23.489Z",
   "latestStories": [
     {
       "id": "6c73bb1fb8c2",
@@ -216,9 +216,10 @@
           "url": "https://www.lemonde.fr/international/article/2026/10/30/la-coree-du-nord-teste-des-drones-d-attaque-selon-son-agence-de-presse-officielle_6802526_3210.html",
           "publishedAt": "2026-10-30T01:15:55.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/29/260/0/3200/1600/644/322/60/0/93f0b44_ftp-1-g65wfmfjkqox-2026-10-29t221830z-16871677-rc29doacz2fd-rtrmadp-3-northkorea-arms.JPG",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
-          "section": "world"
+          "section": "world",
+          "everFrontPage": true
         },
         {
           "id": "c7024ad7e492",
@@ -257,10 +258,22 @@
     {
       "id": "0ff786a0bc0c",
       "slug": "l-avion-de-la-fuite-de-flavio-bolsonaro-a-ete-paye-depuis-un",
-      "title": "L'avion de la fuite de Flavio Bolsonaro a été payé depuis un compte bancaire aux États-Unis",
+      "title": "Flavio Bolsonaro a fui le Brésil dans un avion payé depuis les États-Unis",
       "createdAt": "2026-10-30T00:01:25.670Z",
       "storyDay": "2026-10-30",
       "articles": [
+        {
+          "id": "203ea82c9a8e",
+          "outletId": "le-monde",
+          "headline": "Flavio Bolsonaro aurait fui le Brésil à bord d’un avion payé depuis les Etats-Unis",
+          "url": "https://www.lemonde.fr/international/article/2026/10/30/flavio-bolsonaro-aurait-fui-le-bresil-a-bord-d-un-avion-paye-depuis-les-etats-unis_6802658_3210.html",
+          "publishedAt": "2026-10-30T02:50:31.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/28/175/0/2098/1049/644/322/60/0/6db3ab7_ftp-1-q8afmbhpqeow-219b1f2890ba4d439c607a606adb7549-0-c7743acb4c604086b0993de5a398fb2f.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
         {
           "id": "07f9afe951d6",
           "outletId": "le-parisien",
@@ -279,41 +292,58 @@
           "url": "https://www.lefigaro.fr/international/flavio-bolsonaro-a-fui-le-bresil-dans-un-avion-paye-depuis-un-compte-bancaire-aux-etats-unis-20261030",
           "publishedAt": "2026-10-29T23:27:47.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/30/d19700624fc3272222facfcc34f4b36c08725ad819a437f86ee9fee66025946b.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
         }
       ],
       "topicId": "4c90a0fd689f",
-      "titledArticleCount": 2,
+      "titledArticleCount": 3,
       "section": "world",
       "everInEdition": true,
       "summaries": {
+        "gauche": [
+          "Le sénateur brésilien Flavio Bolsonaro a quitté le pays à bord d'un jet financé via un compte bancaire américain.",
+          "L'appareil a été affrété par un intermédiaire et un conseiller de Donald Trump, d'après des informations du Wall Street Journal et du New York Times."
+        ],
         "centre": [
-          "Un avion utilisé par Flavio Bolsonaro pour quitter le Brésil a été réglé par l'intermédiaire d'un courtier basé aux États-Unis.",
-          "Le journal interroge le lien éventuel entre le paiement de cet affrètement et un proche de Donald Trump."
+          "Flavio Bolsonaro a pris la fuite hors du Brésil à bord d'un avion dont le vol a été réglé depuis les États-Unis.",
+          "Un courtier américain confirme avoir été engagé pour cette opération liée à l'entourage de Donald Trump."
         ],
         "droite": [
-          "Flavio Bolsonaro a quitté le Brésil à bord d'un avion dont la course a été réglée depuis un compte bancaire aux États-Unis.",
-          "D'après le New York Times, l'appareil aurait été affrété par Jason Miller, un conseiller de Donald Trump."
+          "Flavio Bolsonaro a quitté le territoire brésilien à bord d'un avion payé par le biais d'un compte bancaire américain.",
+          "Le New York Times indique que le vol a été affrété par Jason Miller, conseiller de Donald Trump."
         ]
       },
       "differences": [
-        "Le camp centre met en doute la proximité politique en interrogeant l'implication d'un proche de Trump à travers l'intervention d'un courtier américain.",
-        "Le camp droite pointe directement l'implication de Jason Miller, conseiller de Donald Trump, en s'appuyant explicitement sur les révélations du New York Times."
+        "La gauche met l'accent sur l'implication internationale et cite conjointement les révélations du Wall Street Journal et du New York Times.",
+        "Le centre adopte un angle interrogatif en reprenant les déclarations directes d'un courtier américain sur les conditions de son engagement.",
+        "La droite privilégie une formulation directe en identifiant nommément Jason Miller comme l'affréteur du jet d'après la presse américaine."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 2,
-      "summarizedAt": "2026-10-30T00:01:25.670Z"
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-10-30T03:01:23.489Z"
     },
     {
       "id": "386242e5af4e",
       "slug": "le-bitcoin-chute-apres-des-signalements-de-mouvements-suspects",
-      "title": "Le bitcoin chute après des signalements de mouvements suspects sur la plateforme Binance",
+      "title": "Le bitcoin chute après des signalements de mouvements suspects et un piratage sur la plateforme Binance",
       "createdAt": "2026-10-30T00:01:25.670Z",
       "storyDay": "2026-10-29",
       "articles": [
+        {
+          "id": "effd464db49e",
+          "outletId": "le-figaro",
+          "headline": "Fonds gelés, près de 6 milliards de dollars volés, cyberattaque massive : le piratage de la plateforme Binance plonge le secteur des cryptos dans la panique",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/fonds-geles-pres-de-6-milliards-de-dollars-voles-cyberattaque-massive-le-piratage-de-la-plateforme-binance-plonge-le-secteur-des-cryptos-dans-la-panique-20261030",
+          "publishedAt": "2026-10-30T02:32:47.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1715_crop/2026/10/30/b9f29efb47af69a15d583e70281315c79e29f0baba2b574d68cfcda0e8ef912e.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
         {
           "id": "43edd5228149",
           "outletId": "le-parisien",
@@ -351,26 +381,80 @@
         }
       ],
       "topicId": "386242e5af4e",
-      "titledArticleCount": 3,
+      "titledArticleCount": 4,
       "section": "economy",
       "everInEdition": true,
       "summaries": {
         "centre": [
-          "Le Bitcoin subit une forte baisse consécutivement au piratage de la plateforme d'échange Binance."
+          "Le Bitcoin enregistre une baisse marquée suite au piratage de la plateforme d'échange Binance."
         ],
         "droite": [
-          "La plateforme Binance enquête sur un incident de sécurité après des alertes concernant des mouvements atypiques.",
-          "L'entreprise rassure sa communauté en affirmant que les avoirs des utilisateurs demeurent totalement protégés.",
-          "Le cours du bitcoin chute lourdement à la suite de rumeurs persistantes de cyberattaque d'envergure sur l'infrastructure."
+          "La plateforme Binance fait l'objet d'une enquête après des signalements de mouvements suspects et une cyberattaque massive.",
+          "Près de 6 milliards de dollars auraient été dérobés en l'espace de quarante minutes, provoquant la panique sur le marché des cryptomonnaies.",
+          "Binance affirme dans un communiqué que les fonds des utilisateurs restent en sécurité et totalement à l'abri."
         ]
       },
       "differences": [
-        "Le camp du centre qualifie directement l'incident de piratage avéré pour expliquer la baisse du bitcoin.",
-        "Le camp de droite met l'accent sur les déclarations rassurantes de l'entreprise tout en qualifiant l'événement de simple rumeur de cyberattaque et de problème potentiel."
+        "Le camp centre se limite à une mention factuelle et sobre de la baisse du Bitcoin consécutive à l'incident de sécurité.",
+        "Le camp droite livre un récit détaillé et alarmiste de la cyberattaque, insistant sur l'ampleur colossale des montants en jeu et la panique générée."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 3,
-      "summarizedAt": "2026-10-30T00:01:25.670Z"
+      "summarizedArticleCount": 4,
+      "summarizedAt": "2026-10-30T03:01:23.489Z"
+    },
+    {
+      "id": "040525f72e3b",
+      "slug": "l-automobiliste-implique-dans-la-mort-du-cycliste-paul-varry",
+      "title": "L'automobiliste impliqué dans la mort du cycliste Paul Varry est libéré sous bracelet électronique",
+      "createdAt": "2026-10-30T03:01:23.489Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "97f8ce3eaedf",
+          "outletId": "20-minutes",
+          "headline": "Mort du cycliste Paul Varry à Paris : L’automobiliste libéré sous bracelet électronique",
+          "url": "https://www.20minutes.fr/justice/4258795-20261030-mort-cycliste-paul-varry-paris-automobiliste-libere-sous-bracelet-electronique?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-30T00:11:48.000Z",
+          "imageUrl": "https://img.20mn.fr/EnzofsTIT9eozPOhTqyS3Ck/1200x768_paris-19-octobre-2024-manifestation-a-l-appel-de-l-association-paris-en-selle-en-hommage-a-paul-varry-cycliste-tue-par-un-automobiliste-le-15-octobre-les-personnes-presentes-tiennent-des-pancartes-sipa-55056-credit-arnaud-cesar-vilette-sipa-2410221310",
+          "frontPage": true,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "02d05f216880",
+          "outletId": "le-figaro",
+          "headline": "Mort du cycliste Paul Varry à Paris : l'automobiliste remis en liberté sous bracelet électronique avant son procès",
+          "url": "https://www.lefigaro.fr/actualite-france/mort-du-cycliste-paul-varry-a-paris-l-automobiliste-remis-en-liberte-sous-bracelet-electronique-avant-son-proces-20261029",
+          "publishedAt": "2026-10-29T22:24:49.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2002_crop/2026/10/29/50f6e16f14f63dec6099e97b1b19a089fc07300f623941d45072a6630ccb6849.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "040525f72e3b",
+      "titledArticleCount": 2,
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "La cour d’appel de Paris a ordonné ce jeudi la remise en liberté sous bracelet électronique du conducteur mis en cause.",
+          "Le suspect reste poursuivi pour le meurtre du cycliste Paul Varry, survenu en octobre 2024 dans la capitale.",
+          "L’automobiliste doit désormais comparaître prochainement devant la cour d’assises."
+        ],
+        "droite": [
+          "Le conducteur de SUV impliqué dans la mort du cycliste Paul Varry à Paris en octobre 2024 va bénéficier d’une libération sous bracelet électronique.",
+          "Le mis en cause attend désormais son procès devant la cour d’assises sous l’accusation de meurtre pour la mort de ce cycliste de 27 ans."
+        ]
+      },
+      "differences": [
+        "La gauche rappelle explicitement la décision de la cour d'appel intervenue ce jeudi tout en insistant sur le maintien des poursuites pour meurtre.",
+        "La droite qualifie précisément le véhicule en cause de SUV et mentionne l'âge de la victime de vingt-sept ans sans dater l'arrêt de la cour d'appel."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2,
+      "summarizedAt": "2026-10-30T03:01:23.489Z"
     },
     {
       "id": "6c78d80c67ad",
@@ -1090,6 +1174,17 @@
           "url": "https://www.lemonde.fr/societe/article/2026/10/29/avant-son-attentat-raciste-a-trappes-l-assaillant-avait-ete-interpelle-trois-jours-avant-pour-des-violences-sur-un-automobiliste_6802427_3224.html",
           "publishedAt": "2026-10-29T22:59:23.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/29/442/0/5304/2652/644/322/60/0/272c481_ftp-1-xhnhkheabujv-afp-d4ve4we.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "832a2df1d7af",
+          "outletId": "franceinfo",
+          "headline": "Attentat raciste dans les Yvelines : le suspect, Kévin Tessier, a été mis en examen et placé en détention provisoire",
+          "url": "https://www.franceinfo.fr/societe/trappes/direct-attentat-raciste-a-trappes-le-suspect-a-ete-transfere-dans-la-nuit-au-tribunal-judiciaire-de-paris-en-vue-de-sa-mise-en-examen_8258192.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-29T22:52:46.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/a6Z2O2CED7YjtQ5i5C7Jdcq28ok/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/29/6ae3996d9a561462453400.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "misc"
@@ -3749,7 +3844,7 @@
           "url": "https://www.lefigaro.fr/conjoncture/apres-le-depart-de-christine-lagarde-pourquoi-la-france-est-mal-partie-pour-conserver-la-presidence-de-la-bce-20261029",
           "publishedAt": "2026-10-29T10:45:13.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x1999_crop/2026/03/30/0bae969ec7184933a7cc2b18eced9c93a32c873680bc0a6930b59e4bf3cbe9a1.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -6634,114 +6729,6 @@
       "summarizedAt": "2026-10-29T21:01:20.894Z"
     },
     {
-      "id": "919f07d4f18c",
-      "slug": "donald-trump-demande-la-disqualification-d-une-candidate",
-      "title": "Donald Trump demande la disqualification d'une candidate démocrate en Alaska après des révélations sur l'affaire des homonymes aux midterms",
-      "createdAt": "2026-10-29T05:01:24.371Z",
-      "storyDay": "2026-10-29",
-      "articles": [
-        {
-          "id": "739068996080",
-          "outletId": "lobs",
-          "headline": "En Alaska, deux candidats aux « midterms » nommés Dan Sullivan sèment la pagaille",
-          "url": "https://www.nouvelobs.com/monde/20261029.OBS119653/en-alaska-deux-candidats-aux-midterms-nommes-dan-sullivan-sement-la-pagaille.html",
-          "publishedAt": "2026-10-29T18:30:15.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/10/29/0/0/8256/5504/0/0/60/0/d3cd336_upload-1-2dvedolengn2-000-d37v4r7.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "2f0d89ff6cd9",
-          "outletId": "le-monde",
-          "headline": "Midterms 2026 : deux Dan Sullivan pour un siège en Alaska, la manipulation des démocrates dévoilée",
-          "url": "https://www.lemonde.fr/international/article/2026/10/29/midterms-2026-deux-dan-sullivan-pour-un-siege-en-alaska-la-manipulation-des-democrates-devoilee_6802377_3210.html",
-          "publishedAt": "2026-10-29T18:11:59.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/24/0/0/5500/2750/644/322/60/0/54dacee_ftp-1-wpo7txqep8aj-2026-10-24t015453z-461159314-rc214oam03ar-rtrmadp-3-usa-election-alaska-trump.JPG",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "8381bb064a81",
-          "outletId": "le-monde",
-          "headline": "EN DIRECT, Midterms 2026 : Donald Trump dans l’Ohio, Barack Obama à Atlanta, enquête ouverte sur une candidate démocrate en Alaska… le point sur les dernières informations",
-          "url": "https://www.lemonde.fr/international/live/2026/10/29/en-direct-midterms-2026-donald-trump-dans-l-ohio-barack-obama-a-atlanta-enquete-ouverte-contre-une-candidate-democrate-en-alaska-le-point-sur-les-dernieres-informations_6801590_3210.html",
-          "publishedAt": "2026-10-29T10:34:57.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/29/802/0/4809/2404/644/322/60/0/856c33a_ftp-1-l8eqpbi8ufxs-afp-d4re3m7.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "d42a20cff8a8",
-          "outletId": "huffpost",
-          "headline": "Midterms 2026 : comment les démocrates ont tenté de saboter les républicains avec Dan Sullivan en Alaska",
-          "url": "https://www.huffingtonpost.fr/international/article/midterms-2026-comment-les-democrates-ont-tente-de-saboter-les-republicains-avec-dan-sullivan-en-alaska_347360.html",
-          "publishedAt": "2026-10-29T09:59:07.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/29/0/0/5616/3159/0/0/60/0/b34288e_upload-1-kmyfh14l0bpu-afp-20261006-d2bt394-v1-highres-uspoliticsvance.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "d640b3fed768",
-          "outletId": "le-parisien",
-          "headline": "Midterms 2026 : l’affaire de l’homonyme qui embarrasse les démocrates en Alaska, et renforce Trump dans ses attaques contre la fraude",
-          "url": "https://www.leparisien.fr/international/etats-unis/midterms-2026-laffaire-de-lhomonyme-qui-embarrasse-les-democrates-en-alaska-et-renforce-trump-dans-ses-attaques-contre-la-fraude-29-10-2026-YJCR533WKZBJBF7JPF2D3GKDPA.php",
-          "publishedAt": "2026-10-29T05:01:24.371Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "fb501fb9d00c",
-          "outletId": "le-figaro",
-          "headline": "Midterms : Trump veut disqualifier une candidate démocrate en Alaska, après des révélations du New York Times",
-          "url": "https://www.lefigaro.fr/international/midterms-trump-veut-disqualifier-une-candidate-democrate-en-alaska-apres-des-revelations-du-new-york-times-20261028",
-          "publishedAt": "2026-10-29T02:28:58.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/28/159028c78657e63cdb09698ffc36829de4c1a8370f3090b0a847ffd95bc63707.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "919f07d4f18c",
-      "titledArticleCount": 6,
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le New York Times a révélé qu'un stratagème a été orchestré en Alaska pour présenter un homonyme du sénateur républicain Dan Sullivan lors des élections de mi-mandat.",
-          "L'entourage de la candidate démocrate Mary Peltola a activement recherché et soutenu ce faux candidat pour perturber la campagne adverse.",
-          "Donald Trump est entré en vive colère face à cette tactique électorale et réclame la disqualification immédiate de la candidate démocrate.",
-          "Le gouverneur de l'Alaska, Mike Dunleavy, a ordonné l'ouverture d'une enquête officielle pour déterminer d'éventuelles infractions pénales ou civiles."
-        ],
-        "centre": [
-          "Les révélations du New York Times mettent en lumière la manœuvre des démocrates en Alaska impliquant deux candidats du même nom pour le scrutin de 2026.",
-          "Cette stratégie visant à diviser les suffrages du sénateur sortant Dan Sullivan met la candidate Mary Peltola dans une position très délicate.",
-          "L'affaire alimente directement le narratif de Donald Trump concernant la fraude électorale aux États-Unis."
-        ],
-        "droite": [
-          "La presse de droite rapporte l'enquête du New York Times sur la manœuvre menée par la campagne de l'ancienne juge tribale Mary Peltola.",
-          "Les recherches dans les registres électoraux en 2025 ont permis d'identifier un homonyme pour affronter le sénateur républicain Dan Sullivan.",
-          "Donald Trump instrumentalise cette affaire pour exiger l'exclusion de la candidate démocrate de la course électorale en Alaska."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur l'aspect technique de la manœuvre politique révélée par la presse américaine pour brouiller les pistes lors du scrutin.",
-        "Le centre met l'accent sur l'embarras politique occasionné pour le camp démocrate et la résonance de l'affaire avec les discours de Donald Trump.",
-        "La droite focalise son traitement sur la responsabilité directe de la candidate démocrate et les poursuites exigées par Donald Trump."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 6,
-      "summarizedAt": "2026-10-30T00:01:25.670Z"
-    },
-    {
       "id": "e27c5c3e1512",
       "slug": "deux-touristes-meurent-en-turquie-apres-l-effondrement-d-une",
       "title": "Turquie : deux touristes meurent après l'effondrement d'une cheminée de fée en Cappadoce",
@@ -7387,6 +7374,533 @@
       "summarizedAt": "2026-10-30T02:01:22.126Z"
     },
     {
+      "id": "91b1dabe3e1b",
+      "slug": "dominique-de-villepin-et-plusieurs-figures-politiques-rejettent",
+      "title": "Dominique de Villepin et plusieurs figures politiques rejettent la primaire des démocrates proposée par Gabriel Attal",
+      "createdAt": "2026-10-30T03:01:23.489Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "a024506d3305",
+          "outletId": "le-figaro",
+          "headline": "EN DIRECT - Présidentielle 2027 : «C’est le chant du cygne», Dominique de Villepin refuse à son tour la «primaire des démocrates» voulue par Gabriel Attal",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-attal-primaire-democrates-retailleau-philippe-lisnard-les-republicains-20261029",
+          "publishedAt": "2026-10-29T21:15:16.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/29/c34da2731798d773cecfccf8ee50bc1dc5e7bdda659732ee46140f4ade1c5893.jpg",
+          "frontPage": true,
+          "kind": "live",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "eb09aab93d07",
+          "outletId": "le-monde",
+          "headline": "Présidentielle 2027 : après sa proposition d’une primaire aux contours flous, Gabriel Attal cible le « centre et la droite »",
+          "url": "https://www.lemonde.fr/politique/article/2026/10/29/presidentielle-2027-apres-sa-proposition-d-une-primaire-aux-contours-flous-gabriel-attal-cible-le-centre-et-la-droite_6802391_823448.html",
+          "publishedAt": "2026-10-29T20:49:56.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/21/268/0/4645/2322/644/322/60/0/fdf6c33_upload-1-ah3ggn1lh9w8-cbi1348033.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "9d9c4aabe0a3",
+          "outletId": "lobs",
+          "headline": "Face aux multiples scénarios de primaire au centre et à droite, le rassemblement « démocrate » de Gabriel Attal fait un flop",
+          "url": "https://www.nouvelobs.com/politique/20261029.OBS119651/face-aux-multiples-scenarios-de-primaire-au-centre-et-a-droite-le-rassemblement-democrate-de-gabriel-attal-fait-un-flop.html",
+          "publishedAt": "2026-10-29T17:45:11.000Z",
+          "imageUrl": "https://focus.nouvelobs.com/2026/10/29/0/0/5017/3344/0/0/60/0/36ad961_upload-1-ncxg7b9tdelz-000-c9677ng.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "12531cb61c6a",
+          "outletId": "franceinfo",
+          "headline": "\"Ce serait du suicide\" : la primaire proposée par Gabriel Attal en vue de la présidentielle ne convainc ni Edouard Philippe, ni Bruno Retailleau",
+          "url": "https://www.franceinfo.fr/elections/presidentielle/ce-serait-du-suicide-la-primaire-proposee-par-gabriel-attal-en-vue-de-la-presidentielle-ne-convainc-ni-edouard-philippe-ni-bruno-retailleau_8258924.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-29T16:19:39.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/LxE58LV86pkK7HR3I1PTPsNIHpg/0x161:5000x2973/432x243/filters:format(jpg)/2026/10/29/6ae35f62d2626684073866.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "c65483501222",
+      "titledArticleCount": 4,
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Gabriel Attal a convoqué les candidats du centre, de la droite et de la gauche modérée à une « grande primaire des démocrates » pour contrer un second tour entre LFI et le RN.",
+          "L'initiative de Gabriel Attal est globalement rejetée à gauche, où les personnalités déclinent l'invitation pour privilégier leurs propres candidatures ou d'autres stratégies.",
+          "Le Monde note que face au manque d'enthousiasme, Gabriel Attal a recentré sa proposition en ciblant particulièrement le centre et la droite pour faire pression sur Edouard Philippe."
+        ],
+        "droite": [
+          "Dominique de Villepin a rejeté à son tour l'idée d'une « primaire des démocrates » portée par Gabriel Attal, qualifiant cette proposition de « chant du cygne ».",
+          "Le projet de Gabriel Attal, visant à désigner un candidat unique face à Marine Le Pen et Jean-Luc Mélenchon, fait face au refus unanime de personnalités comme Edouard Philippe et Bruno Retailleau."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur l'échec global et le rejet unanime du rassemblement proposé par Gabriel Attal, qualifié de « flop » par L'Obs.",
+        "La droite se focalise sur la fin de non-recevoir opposée par ses figures majeures comme Dominique de Villepin, qui balaie l'initiative de Gabriel Attal."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 4,
+      "summarizedAt": "2026-10-30T03:01:23.489Z"
+    },
+    {
+      "id": "919f07d4f18c",
+      "slug": "donald-trump-demande-la-disqualification-d-une-candidate",
+      "title": "Donald Trump demande la disqualification d'une candidate démocrate en Alaska après des révélations sur l'affaire des homonymes aux midterms",
+      "createdAt": "2026-10-29T05:01:24.371Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "739068996080",
+          "outletId": "lobs",
+          "headline": "En Alaska, deux candidats aux « midterms » nommés Dan Sullivan sèment la pagaille",
+          "url": "https://www.nouvelobs.com/monde/20261029.OBS119653/en-alaska-deux-candidats-aux-midterms-nommes-dan-sullivan-sement-la-pagaille.html",
+          "publishedAt": "2026-10-29T18:30:15.000Z",
+          "imageUrl": "https://focus.nouvelobs.com/2026/10/29/0/0/8256/5504/0/0/60/0/d3cd336_upload-1-2dvedolengn2-000-d37v4r7.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "2f0d89ff6cd9",
+          "outletId": "le-monde",
+          "headline": "Midterms 2026 : deux Dan Sullivan pour un siège en Alaska, la manipulation des démocrates dévoilée",
+          "url": "https://www.lemonde.fr/international/article/2026/10/29/midterms-2026-deux-dan-sullivan-pour-un-siege-en-alaska-la-manipulation-des-democrates-devoilee_6802377_3210.html",
+          "publishedAt": "2026-10-29T18:11:59.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/24/0/0/5500/2750/644/322/60/0/54dacee_ftp-1-wpo7txqep8aj-2026-10-24t015453z-461159314-rc214oam03ar-rtrmadp-3-usa-election-alaska-trump.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "8381bb064a81",
+          "outletId": "le-monde",
+          "headline": "EN DIRECT, Midterms 2026 : Donald Trump dans l’Ohio, Barack Obama à Atlanta, enquête ouverte sur une candidate démocrate en Alaska… le point sur les dernières informations",
+          "url": "https://www.lemonde.fr/international/live/2026/10/29/en-direct-midterms-2026-donald-trump-dans-l-ohio-barack-obama-a-atlanta-enquete-ouverte-contre-une-candidate-democrate-en-alaska-le-point-sur-les-dernieres-informations_6801590_3210.html",
+          "publishedAt": "2026-10-29T10:34:57.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/29/802/0/4809/2404/644/322/60/0/856c33a_ftp-1-l8eqpbi8ufxs-afp-d4re3m7.jpg",
+          "frontPage": false,
+          "kind": "live",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "d42a20cff8a8",
+          "outletId": "huffpost",
+          "headline": "Midterms 2026 : comment les démocrates ont tenté de saboter les républicains avec Dan Sullivan en Alaska",
+          "url": "https://www.huffingtonpost.fr/international/article/midterms-2026-comment-les-democrates-ont-tente-de-saboter-les-republicains-avec-dan-sullivan-en-alaska_347360.html",
+          "publishedAt": "2026-10-29T09:59:07.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/29/0/0/5616/3159/0/0/60/0/b34288e_upload-1-kmyfh14l0bpu-afp-20261006-d2bt394-v1-highres-uspoliticsvance.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "d640b3fed768",
+          "outletId": "le-parisien",
+          "headline": "Midterms 2026 : l’affaire de l’homonyme qui embarrasse les démocrates en Alaska, et renforce Trump dans ses attaques contre la fraude",
+          "url": "https://www.leparisien.fr/international/etats-unis/midterms-2026-laffaire-de-lhomonyme-qui-embarrasse-les-democrates-en-alaska-et-renforce-trump-dans-ses-attaques-contre-la-fraude-29-10-2026-YJCR533WKZBJBF7JPF2D3GKDPA.php",
+          "publishedAt": "2026-10-29T05:01:24.371Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "fb501fb9d00c",
+          "outletId": "le-figaro",
+          "headline": "Midterms : Trump veut disqualifier une candidate démocrate en Alaska, après des révélations du New York Times",
+          "url": "https://www.lefigaro.fr/international/midterms-trump-veut-disqualifier-une-candidate-democrate-en-alaska-apres-des-revelations-du-new-york-times-20261028",
+          "publishedAt": "2026-10-29T02:28:58.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/28/159028c78657e63cdb09698ffc36829de4c1a8370f3090b0a847ffd95bc63707.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "919f07d4f18c",
+      "titledArticleCount": 6,
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le New York Times a révélé qu'un stratagème a été orchestré en Alaska pour présenter un homonyme du sénateur républicain Dan Sullivan lors des élections de mi-mandat.",
+          "L'entourage de la candidate démocrate Mary Peltola a activement recherché et soutenu ce faux candidat pour perturber la campagne adverse.",
+          "Donald Trump est entré en vive colère face à cette tactique électorale et réclame la disqualification immédiate de la candidate démocrate.",
+          "Le gouverneur de l'Alaska, Mike Dunleavy, a ordonné l'ouverture d'une enquête officielle pour déterminer d'éventuelles infractions pénales ou civiles."
+        ],
+        "centre": [
+          "Les révélations du New York Times mettent en lumière la manœuvre des démocrates en Alaska impliquant deux candidats du même nom pour le scrutin de 2026.",
+          "Cette stratégie visant à diviser les suffrages du sénateur sortant Dan Sullivan met la candidate Mary Peltola dans une position très délicate.",
+          "L'affaire alimente directement le narratif de Donald Trump concernant la fraude électorale aux États-Unis."
+        ],
+        "droite": [
+          "La presse de droite rapporte l'enquête du New York Times sur la manœuvre menée par la campagne de l'ancienne juge tribale Mary Peltola.",
+          "Les recherches dans les registres électoraux en 2025 ont permis d'identifier un homonyme pour affronter le sénateur républicain Dan Sullivan.",
+          "Donald Trump instrumentalise cette affaire pour exiger l'exclusion de la candidate démocrate de la course électorale en Alaska."
+        ]
+      },
+      "differences": [
+        "La gauche insiste sur l'aspect technique de la manœuvre politique révélée par la presse américaine pour brouiller les pistes lors du scrutin.",
+        "Le centre met l'accent sur l'embarras politique occasionné pour le camp démocrate et la résonance de l'affaire avec les discours de Donald Trump.",
+        "La droite focalise son traitement sur la responsabilité directe de la candidate démocrate et les poursuites exigées par Donald Trump."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-10-30T00:01:25.670Z"
+    },
+    {
+      "id": "9e721411bc52",
+      "slug": "un-piratage-divulgue-les-noms-de-41000-employes-de-la-securite",
+      "title": "Un piratage informatique divulgue les données de plus de 41 000 employés de la Sécurité intérieure américaine",
+      "createdAt": "2026-10-29T04:01:16.305Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "5a73fedb50ff",
+          "outletId": "bfmtv",
+          "headline": "\"Ils ont nos informations, il est donc normal que nous ayons les leurs\": les données de plus de 40.000 membres de la Sécurité intérieure aux États-Unis, dont des agents de l'ICE infiltrés, divulguées par des hackers",
+          "url": "https://www.bfmtv.com/tech/cybersecurite/ils-ont-nos-informations-il-est-donc-normal-que-nous-ayons-les-leurs-les-donnees-de-plus-de-40-000-membres-de-la-securite-interieure-aux-etats-unis-dont-des-agents-de-l-ice-infiltres-divulguees-par-des-hackers_AD-202610290444.html",
+          "publishedAt": "2026-10-29T11:26:39.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/IP5pxFT4X1KoPuS72qgpBKciiiA=/6x57:2022x1191/800x0/images/Police-de-l-immigration-americaine-illustration-2224687.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "9d4f46d31d9b",
+          "outletId": "ouest-france",
+          "headline": "États-Unis : 41 000 noms d’agent de la Sécurité intérieure divulgués dans un piratage d’ampleur",
+          "url": "https://www.ouest-france.fr/monde/etats-unis/etats-unis-41-000-noms-de-la-securite-interieure-divulgues-dans-un-piratage-4b62e2fc-d347-11f1-81f2-0d14b9f9c452?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-29T04:05:57.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZDIzZTk0ZmUxYzIyM2RkNTUzNTZjOGNiODgyYWM2OTQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9fef0c99dee632a8fafdacf808e0beb05847c5d79b271206e21ff114be64000d",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "015cb47b90bd",
+          "outletId": "le-parisien",
+          "headline": "« Énorme par sa taille et son impact » : aux États-Unis, 41 000 noms d’agents d’ICE et de la Sécurité intérieure divulgués dans un piratage",
+          "url": "https://www.leparisien.fr/international/etats-unis/enorme-par-sa-taille-et-son-impact-aux-etats-unis-41-000-noms-dagents-de-lice-et-de-la-securite-interieure-divulgues-dans-un-piratage-29-10-2026-CJC3SMQZ7NA7RPB57BOFPBH23E.php",
+          "publishedAt": "2026-10-29T04:01:16.305Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "502030e5dd65",
+          "outletId": "le-figaro",
+          "headline": "États-Unis : les données de plus de 41.000 employés de la Sécurité intérieure divulguées dans un piratage",
+          "url": "https://www.lefigaro.fr/international/etats-unis-les-donnees-de-plus-de-41-000-employes-de-la-securite-interieure-divulguees-dans-un-piratage-20261029",
+          "publishedAt": "2026-10-29T03:23:07.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1949_crop/2026/10/29/1cec8757fedf30a672ce1c0d31de20c3cbd81ee6b59a34600496c281f7908cb3.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "9e721411bc52",
+      "titledArticleCount": 4,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Un groupe de hackers baptisé Department of Peace a exploité une faille informatique pour subtiliser les données de 41.000 employés du département américain de la Sécurité intérieure.",
+          "Les informations dérobées, incluant les noms d'agents infiltrés de l'ICE, ont été transmises à l'ONG Distributed Denial of Secrets qui les a publiées en ligne.",
+          "Les auteurs de la fuite justifient leur action par une logique de réciprocité en estimant détenir des informations compromettantes."
+        ],
+        "droite": [
+          "L'ONG Distributed Denial of Secrets a rendu publiques les données personnelles de plus de 41.000 agents de la Sécurité intérieure américaine.",
+          "La fuite concerne les noms, les bureaux et les affectations des employés de cette administration centrale dans la politique migratoire de Donald Trump."
+        ]
+      },
+      "differences": [
+        "Le centre insiste sur le mode opératoire du piratage, l'implication du groupe Department of Peace et la nature sensible des agents infiltrés de l'ICE compromis.",
+        "La droite se focalise sur la mise en ligne des informations par l'ONG Distributed Denial of Secrets en soulignant le lien direct avec l'administration de Donald Trump et la politique migratoire."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 4,
+      "summarizedAt": "2026-10-29T12:01:24.484Z"
+    },
+    {
+      "id": "0ff786a0bc0c",
+      "slug": "l-avion-de-la-fuite-de-flavio-bolsonaro-a-ete-paye-depuis-un",
+      "title": "Flavio Bolsonaro a fui le Brésil dans un avion payé depuis les États-Unis",
+      "createdAt": "2026-10-30T00:01:25.670Z",
+      "storyDay": "2026-10-30",
+      "articles": [
+        {
+          "id": "203ea82c9a8e",
+          "outletId": "le-monde",
+          "headline": "Flavio Bolsonaro aurait fui le Brésil à bord d’un avion payé depuis les Etats-Unis",
+          "url": "https://www.lemonde.fr/international/article/2026/10/30/flavio-bolsonaro-aurait-fui-le-bresil-a-bord-d-un-avion-paye-depuis-les-etats-unis_6802658_3210.html",
+          "publishedAt": "2026-10-30T02:50:31.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/28/175/0/2098/1049/644/322/60/0/6db3ab7_ftp-1-q8afmbhpqeow-219b1f2890ba4d439c607a606adb7549-0-c7743acb4c604086b0993de5a398fb2f.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "07f9afe951d6",
+          "outletId": "le-parisien",
+          "headline": "« J’ai été engagé par un broker des États-Unis » : L’avion à bord duquel Bolsonaro a fui le Brésil a-t-il payé par un proche de Trump ?",
+          "url": "https://www.leparisien.fr/international/jai-ete-engage-par-un-broker-des-etats-unis-lavion-a-bord-duquel-bolsonaro-a-fui-le-bresil-a-t-il-paye-par-un-proche-de-trump-30-10-2026-LPDMPOCQMRGWFNJS52CEW4A4OQ.php",
+          "publishedAt": "2026-10-30T00:01:25.670Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "a2820dfd18c3",
+          "outletId": "le-figaro",
+          "headline": "Flavio Bolsonaro a fui le Brésil dans un avion payé depuis un compte bancaire aux États-Unis",
+          "url": "https://www.lefigaro.fr/international/flavio-bolsonaro-a-fui-le-bresil-dans-un-avion-paye-depuis-un-compte-bancaire-aux-etats-unis-20261030",
+          "publishedAt": "2026-10-29T23:27:47.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/30/d19700624fc3272222facfcc34f4b36c08725ad819a437f86ee9fee66025946b.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "4c90a0fd689f",
+      "titledArticleCount": 3,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le sénateur brésilien Flavio Bolsonaro a quitté le pays à bord d'un jet financé via un compte bancaire américain.",
+          "L'appareil a été affrété par un intermédiaire et un conseiller de Donald Trump, d'après des informations du Wall Street Journal et du New York Times."
+        ],
+        "centre": [
+          "Flavio Bolsonaro a pris la fuite hors du Brésil à bord d'un avion dont le vol a été réglé depuis les États-Unis.",
+          "Un courtier américain confirme avoir été engagé pour cette opération liée à l'entourage de Donald Trump."
+        ],
+        "droite": [
+          "Flavio Bolsonaro a quitté le territoire brésilien à bord d'un avion payé par le biais d'un compte bancaire américain.",
+          "Le New York Times indique que le vol a été affrété par Jason Miller, conseiller de Donald Trump."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur l'implication internationale et cite conjointement les révélations du Wall Street Journal et du New York Times.",
+        "Le centre adopte un angle interrogatif en reprenant les déclarations directes d'un courtier américain sur les conditions de son engagement.",
+        "La droite privilégie une formulation directe en identifiant nommément Jason Miller comme l'affréteur du jet d'après la presse américaine."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-10-30T03:01:23.489Z"
+    },
+    {
+      "id": "5fcec31376e7",
+      "slug": "quatre-petroliers-prennent-feu-apres-avoir-percute-des-mines",
+      "title": "Quatre pétroliers prennent feu après avoir percuté des mines dans le détroit d’Ormuz",
+      "createdAt": "2026-10-29T20:01:23.514Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "ce03164e5803",
+          "outletId": "le-monde",
+          "headline": "Quatre pétroliers en feu après des explosions de mines dans le détroit d’Ormuz",
+          "url": "https://www.lemonde.fr/international/article/2026/10/30/quatre-petroliers-en-feu-apres-des-explosions-de-mines-dans-le-detroit-d-ormuz_6802559_3210.html",
+          "publishedAt": "2026-10-30T01:52:20.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/24/558/0/6000/3000/644/322/60/0/7696200_ftp-1-9byb8hgy4kna-a0c69cab2d2341bb8b0288201da85f96-0-0f47b95ff8ef4a2a951bed2ac4b7dbc0.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "0a2ed20f7efc",
+          "outletId": "le-parisien",
+          "headline": "Détroit d’Ormuz : quatre pétroliers en feu après avoir percuté des mines navales, selon l’Iran",
+          "url": "https://www.leparisien.fr/international/detroit-dormuz-quatre-petroliers-en-feu-apres-avoir-percute-des-mines-navales-selon-liran-29-10-2026-C22FKBV76VCSVMRBG7BVUSVUMI.php",
+          "publishedAt": "2026-10-29T20:01:23.514Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "ce24c6780c60",
+          "outletId": "le-figaro",
+          "headline": "Détroit d’Ormuz : quatre pétroliers en feu après avoir percuté des mines, selon les forces armées iraniennes",
+          "url": "https://www.lefigaro.fr/international/detroit-d-ormuz-quatre-petroliers-en-feu-apres-avoir-percute-des-mines-selon-les-forces-armees-iraniennes-20261029",
+          "publishedAt": "2026-10-29T17:01:00.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/29/dc9cfd1d764f17ed18aac93474e51dca352fadbb4383fab72618c59d06b9c84d.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "5fcec31376e7",
+      "titledArticleCount": 3,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Quatre navires pétroliers ont subi des incendies consécutifs à des détonations de mines dans le détroit d’Ormuz.",
+          "Les autorités iraniennes déclarent avoir arraisonné un aéronef sans pilote appartenant aux États-Unis.",
+          "Téhéran impute la responsabilité des incidents à des bateaux qui auraient coupé leurs balises de positionnement avant les détonations."
+        ],
+        "centre": [
+          "Quatre bâtiments transportant du pétrole ont pris feu dans le détroit d’Ormuz à la suite de l'impact de mines navales.",
+          "L'information concernant l'origine des explosions est attribuée aux autorités militaires de l'Iran."
+        ],
+        "droite": [
+          "Quatre pétroliers ont été ravagés par les flammes après avoir touché des mines dans le détroit d’Ormuz, selon l'armée iranienne.",
+          "Washington revendique la sécurisation des principales routes maritimes de cette zone stratégique pour le commerce mondial des hydrocarbures.",
+          "Téhéran rejette publiquement les affirmations des États-Unis dans un contexte de blocage diplomatique persistant."
+        ]
+      },
+      "differences": [
+        "La gauche met en avant les accusations iraniennes visant l'extinction des systèmes de navigation des navires et mentionne la saisie d'un drone américain.",
+        "Le centre livre un compte-rendu strictement factuel et minimaliste des faits en reprenant l'origine iranienne des déclarations sur les mines.",
+        "La droite insiste sur le contexte géopolitique global en opposant les affirmations de Washington sur la sécurité maritime aux dénégations de Téhéran."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-10-30T02:01:22.126Z"
+    },
+    {
+      "id": "8d485fa2093b",
+      "slug": "le-salvador-deploie-plus-de-2000-militaires-en-haiti",
+      "title": "Le Salvador déploie plus de 2000 militaires en Haïti",
+      "createdAt": "2026-10-30T01:01:28.908Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "32c450a42cc1",
+          "outletId": "le-parisien",
+          "headline": "« Tous les signes pointent vers un soutien américain » : pourquoi le Salvador a-t-il envoyé 2000 soldats en Haïti ?",
+          "url": "https://www.leparisien.fr/international/tous-les-signes-pointent-vers-un-soutien-americain-pourquoi-le-salvador-a-t-il-envoye-2000-soldats-en-haiti-30-10-2026-7IJHTVWTOJHBDMRG2CR3Z4XW7I.php",
+          "publishedAt": "2026-10-30T01:01:28.908Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "f8bb90e7ddab",
+          "outletId": "ouest-france",
+          "headline": "Le Salvador déploie des milliers de soldats en Haïti pour une opération de sauvetage de « façade »",
+          "url": "https://www.ouest-france.fr/monde/haiti/le-salvador-deploie-des-milliers-de-soldats-en-haiti-pour-une-operation-de-sauvetage-de-facade-7ef6e304-d3e5-11f1-af78-2d36ec019942?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-29T23:13:23.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMDhlOGU4NDk5OGY2ZGI0NTI0ODI5NzRmMWQxYmI5ZTU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d04117bc925dbaa6d9e08e8c895f7b310bb8a1285c9fbab7e68a1092d722003c",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "c5af5679ade5",
+          "outletId": "rfi",
+          "headline": "Le Salvador déploie plus de 2 000 militaires en Haïti dans une opération de sauvetage",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261029-le-salvador-d%C3%A9ploie-plus-de-2-000-militaires-en-ha%C3%AFti-dans-une-op%C3%A9ration-de-sauvetage",
+          "publishedAt": "2026-10-29T17:02:07.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/4c16dc34-d3b6-11f1-b274-d18c5759e759/w:1024/p:16x9/2026-10-23T233440Z-1843819307-RC269OAB25UB-RTRMADP-3-HAITI-VIOLENCE-GANGS.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "8d485fa2093b",
+      "titledArticleCount": 3,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Le Salvador a envoyé plus de 2 000 soldats en Haïti pour retrouver quatre militaires portés disparus.",
+          "Ce déploiement massif fait suite à une embuscade menée par des groupes armés contre ces effectifs sur l'île.",
+          "L'ampleur de cette opération de sauvetage officielle suscite des interrogations quant à ses véritables motivations."
+        ]
+      },
+      "differences": [
+        "Les médias du centre adoptent un ton interrogatif, mettant en doute les motifs officiels d'une intervention qu'ils jugent disproportionnée par rapport à son objectif annoncé."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-10-30T01:01:28.908Z"
+    },
+    {
+      "id": "f6065bd700fd",
+      "slug": "la-cnil-inflige-une-amende-de-7-millions-d-euros-a-fnac-darty",
+      "title": "La CNIL inflige une amende de 7 millions d'euros à Fnac Darty pour non-respect des règles sur les cookies et données personnelles",
+      "createdAt": "2026-10-29T14:01:28.010Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "17de46ca6b4d",
+          "outletId": "le-parisien",
+          "headline": "Données personnelles : la Cnil inflige une amende de 7 millions d’euros à Fnac Darty pour non-respect de la législation sur les cookies",
+          "url": "https://www.leparisien.fr/high-tech/donnees-personnelles-la-cnil-inflige-une-amende-de-7-millions-deuros-a-fnac-darty-pour-non-respect-de-la-legislation-sur-les-cookies-29-10-2026-TDE6DP3IHFBVZBJQDFBW6QMEUY.php",
+          "publishedAt": "2026-10-29T14:01:28.010Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "67ee7bd6c6e1",
+          "outletId": "franceinfo",
+          "headline": "Fnac Darty écope d'une amende de 7 millions d'euros pour non-respect de la législation sur la collecte de données personnelles",
+          "url": "https://www.franceinfo.fr/internet/fnac-darty-ecope-d-une-amende-de-7-millions-d-euros-pour-non-respect-de-la-legislation-sur-la-collecte-de-donnees-personnelles_8258825.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-29T12:53:34.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/8QlFJhFxOXJgnH7smPLITYg5ftY/0x53:1024x629/432x243/filters:format(jpg)/2026/10/29/6ae33d5568afe311267497.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "2e70ef383bea",
+          "outletId": "le-monde",
+          "headline": "Fnac Darty sanctionné d’une amende de 7 millions d’euros par la CNIL pour non-respect de la législations sur les données personnelles",
+          "url": "https://www.lemonde.fr/economie/article/2026/10/29/fnac-darty-sanctionne-d-une-amende-de-7-millions-d-euros-par-la-cnil-pour-non-respect-de-la-legislations-sur-les-donnees-personnelles_6802316_3234.html",
+          "publishedAt": "2026-10-29T11:29:34.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/29/456/0/5472/2736/644/322/60/0/8d35ad0_ftp-1-23xiuqmv2g0d-afp-d4rx3zq.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "f6065bd700fd",
+      "titledArticleCount": 3,
+      "section": "economy",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "La CNIL a prononcé une sanction financière de sept millions d'euros à l'encontre de Fnac Darty pour des manquements liés aux traceurs publicitaires.",
+          "L'autorité administrative reproche au groupe d'avoir déposé des cookies sur l'application mobile de la Fnac sans recueillir l'accord préalable des utilisateurs.",
+          "Le Monde précise qu'une astreinte financière de 10 000 euros par jour a également été décidée pour contraindre l'entreprise à se mettre en conformité."
+        ],
+        "centre": [
+          "La commission nationale de l'informatique et des libertés a infligé une amende de sept millions d'euros au groupe Fnac Darty.",
+          "La sanction fait suite au non-respect de la législation française concernant la gestion des données personnelles et des cookies."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur les détails techniques de la sanction, en particulier l'astreinte journalière inédite révélée par Le Monde.",
+        "Le centre livre un compte-rendu factuel et synthétique de la sanction prononcée par l'autorité administrative sans ajouter d'éléments contextuels majeurs."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-10-29T14:01:28.010Z"
+    },
+    {
       "id": "c65483501222",
       "slug": "gabriel-attal-appelle-a-organiser-une-primaire-des-democrates",
       "title": "Présidentielle 2027 : Gabriel Attal appelle à une « grande primaire des démocrates », rejetée par ses opposants",
@@ -7651,82 +8165,6 @@
       "summarizedAt": "2026-10-29T13:01:28.656Z"
     },
     {
-      "id": "9e721411bc52",
-      "slug": "un-piratage-divulgue-les-noms-de-41000-employes-de-la-securite",
-      "title": "Un piratage informatique divulgue les données de plus de 41 000 employés de la Sécurité intérieure américaine",
-      "createdAt": "2026-10-29T04:01:16.305Z",
-      "storyDay": "2026-10-29",
-      "articles": [
-        {
-          "id": "5a73fedb50ff",
-          "outletId": "bfmtv",
-          "headline": "\"Ils ont nos informations, il est donc normal que nous ayons les leurs\": les données de plus de 40.000 membres de la Sécurité intérieure aux États-Unis, dont des agents de l'ICE infiltrés, divulguées par des hackers",
-          "url": "https://www.bfmtv.com/tech/cybersecurite/ils-ont-nos-informations-il-est-donc-normal-que-nous-ayons-les-leurs-les-donnees-de-plus-de-40-000-membres-de-la-securite-interieure-aux-etats-unis-dont-des-agents-de-l-ice-infiltres-divulguees-par-des-hackers_AD-202610290444.html",
-          "publishedAt": "2026-10-29T11:26:39.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/IP5pxFT4X1KoPuS72qgpBKciiiA=/6x57:2022x1191/800x0/images/Police-de-l-immigration-americaine-illustration-2224687.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "9d4f46d31d9b",
-          "outletId": "ouest-france",
-          "headline": "États-Unis : 41 000 noms d’agent de la Sécurité intérieure divulgués dans un piratage d’ampleur",
-          "url": "https://www.ouest-france.fr/monde/etats-unis/etats-unis-41-000-noms-de-la-securite-interieure-divulgues-dans-un-piratage-4b62e2fc-d347-11f1-81f2-0d14b9f9c452?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-29T04:05:57.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZDIzZTk0ZmUxYzIyM2RkNTUzNTZjOGNiODgyYWM2OTQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9fef0c99dee632a8fafdacf808e0beb05847c5d79b271206e21ff114be64000d",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "015cb47b90bd",
-          "outletId": "le-parisien",
-          "headline": "« Énorme par sa taille et son impact » : aux États-Unis, 41 000 noms d’agents d’ICE et de la Sécurité intérieure divulgués dans un piratage",
-          "url": "https://www.leparisien.fr/international/etats-unis/enorme-par-sa-taille-et-son-impact-aux-etats-unis-41-000-noms-dagents-de-lice-et-de-la-securite-interieure-divulgues-dans-un-piratage-29-10-2026-CJC3SMQZ7NA7RPB57BOFPBH23E.php",
-          "publishedAt": "2026-10-29T04:01:16.305Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "502030e5dd65",
-          "outletId": "le-figaro",
-          "headline": "États-Unis : les données de plus de 41.000 employés de la Sécurité intérieure divulguées dans un piratage",
-          "url": "https://www.lefigaro.fr/international/etats-unis-les-donnees-de-plus-de-41-000-employes-de-la-securite-interieure-divulguees-dans-un-piratage-20261029",
-          "publishedAt": "2026-10-29T03:23:07.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1949_crop/2026/10/29/1cec8757fedf30a672ce1c0d31de20c3cbd81ee6b59a34600496c281f7908cb3.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "9e721411bc52",
-      "titledArticleCount": 4,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "centre": [
-          "Un groupe de hackers baptisé Department of Peace a exploité une faille informatique pour subtiliser les données de 41.000 employés du département américain de la Sécurité intérieure.",
-          "Les informations dérobées, incluant les noms d'agents infiltrés de l'ICE, ont été transmises à l'ONG Distributed Denial of Secrets qui les a publiées en ligne.",
-          "Les auteurs de la fuite justifient leur action par une logique de réciprocité en estimant détenir des informations compromettantes."
-        ],
-        "droite": [
-          "L'ONG Distributed Denial of Secrets a rendu publiques les données personnelles de plus de 41.000 agents de la Sécurité intérieure américaine.",
-          "La fuite concerne les noms, les bureaux et les affectations des employés de cette administration centrale dans la politique migratoire de Donald Trump."
-        ]
-      },
-      "differences": [
-        "Le centre insiste sur le mode opératoire du piratage, l'implication du groupe Department of Peace et la nature sensible des agents infiltrés de l'ICE compromis.",
-        "La droite se focalise sur la mise en ligne des informations par l'ONG Distributed Denial of Secrets en soulignant le lien direct avec l'administration de Donald Trump et la politique migratoire."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-10-29T12:01:24.484Z"
-    },
-    {
       "id": "d6ccf4768df1",
       "slug": "le-parquet-de-toulouse-saisit-l-igpn-apres-la-plainte-d-un",
       "title": "Le parquet de Toulouse saisit l'IGPN après la plainte d'un manifestant grièvement blessé à la main",
@@ -7845,306 +8283,6 @@
       "summarizedAt": "2026-10-29T12:01:24.484Z"
     },
     {
-      "id": "4373c3a5c3ef",
-      "slug": "emmanuel-macron-aborde-la-mobilisation-lyceenne-et-parcoursup",
-      "title": "Emmanuel Macron aborde la mobilisation lycéenne et Parcoursup lors de son interview par HugoDécrypte",
-      "createdAt": "2026-10-29T02:01:23.762Z",
-      "storyDay": "2026-10-29",
-      "articles": [
-        {
-          "id": "dd82356e69ba",
-          "outletId": "tf1-info",
-          "headline": "Limitation des réseaux sociaux, Parcoursup, racisme... Ce qu'il faut retenir de l'interview d'Emmanuel Macron",
-          "url": "https://www.tf1info.fr/politique/limitation-des-reseaux-sociaux-parcoursup-racisme-ce-qu-il-faut-retenir-de-l-interview-d-emmanuel-macron-2472632.html",
-          "publishedAt": "2026-10-29T05:49:11.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/macron-trappes-mairie-octobre-2026-7a4811-1@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "8c8acad86257",
-          "outletId": "huffpost",
-          "headline": "Chez HugoDécrypte, Macron reconnaît la gravité de la crise lycéenne, mais défend la façon dont le gouvernement l’a gérée",
-          "url": "https://www.huffingtonpost.fr/politique/article/chez-hugodecrypte-macron-reconnait-la-gravite-de-la-crise-lyceenne-mais-defend-la-facon-dont-le-gouvernement-l-a-geree_347064.html",
-          "publishedAt": "2026-10-29T05:38:00.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/28/0/9/2876/1618/0/0/60/0/a62e88a_upload-1-tqvwvvj7lkrl-screenshot-2026-10-28-at-4-23-57-pm.png",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "d0a244a1b16b",
-          "outletId": "tf1-info",
-          "headline": "EN DIRECT - Colère lycéenne : Parcoursup \"crée de la défiance, donc on doit le refonder\", reconnaît Macron",
-          "url": "https://www.tf1info.fr/societe/direct-crise-lyceenne-colere-sociale-presidentielle-2027-parcoursup-cree-de-la-defiance-donc-on-doit-le-refonder-selon-emmanuel-macron-les-dernieres-informations-de-ce-jeudi-29-octobre-2026-2472629.html",
-          "publishedAt": "2026-10-29T05:00:00.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/lyceenne-blocage-paris-5-octobre-2026-0cb49f-2@1x.jpeg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "society"
-        },
-        {
-          "id": "159aa8a35d0c",
-          "outletId": "ouest-france",
-          "headline": "Mobilisation lycéenne, Parcoursup, pouvoir d’achat… Ce qu’il faut retenir de l’interview d’Emmanuel Macron",
-          "url": "https://www.ouest-france.fr/societe/manifestation/mobilisation-lyceenne-parcoursup-pouvoir-dachat-ce-quil-faut-retenir-de-lintervention-demmanuel-macron-f3925bd0-d0e8-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-29T02:06:56.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjc2M2EwZTQ3ZThkZDJhOTlkYWJjMjljZjE4MzgxZWM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=89f8d42bec189b4a0d79c0bda52bfc6395d196e02684eeca8e0fa222c21227e6",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "b42acf8c4038",
-          "outletId": "le-parisien",
-          "headline": "Lycées, 17 octobre, attentat de Trappes… Ce qu’il faut retenir de l’interview d’Emmanuel Macron par Hugo Décrypte",
-          "url": "https://www.leparisien.fr/politique/lycees-17-octobre-attentat-de-trappes-ce-quil-faut-retenir-de-linterview-demmanuel-macron-par-hugo-decrypte-29-10-2026-YYUHFVMTT5HFVM6OTX2PTC6TQI.php",
-          "publishedAt": "2026-10-29T02:01:23.762Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "c086d1ef37b8",
-          "outletId": "franceinfo",
-          "headline": "Mobilisation lycéenne, Parcoursup, racisme... Ce qu'il faut retenir de l'interview d'Emmanuel Macron à la chaîne HugoDécrypte",
-          "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/mobilisation-lyceenne-parcoursup-racisme-ce-qu-il-faut-retenir-de-l-interview-d-emmanuel-macron-a-la-chaine-hugodecrypte_8258006.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-28T23:17:00.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/b7Hbb1DIoTqthkFttogVcosZZlU/0x0:1657x932/432x243/filters:format(jpg)/2026/10/28/6ae26fa9c56f5539534802.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        }
-      ],
-      "topicId": "4373c3a5c3ef",
-      "titledArticleCount": 6,
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le chef de l'État a reconnu la gravité de la crise traversée par les lycéens lors de son intervention.",
-          "Il a défendu l'action gouvernementale tout en exhortant les jeunes à regagner les salles de classe.",
-          "L'avenir de Parcoursup et la question du pouvoir d'achat ont figuré au cœur des échanges menés par le créateur de contenu."
-        ],
-        "centre": [
-          "Emmanuel Macron a accordé une interview remarquée au vidéaste HugoDécrypte pour aborder la contestation lycéenne.",
-          "Le président a appelé au retour du calme dans les établissements scolaires avant la rentrée de la Toussaint.",
-          "Il a évoqué la refonte de la plateforme Parcoursup ainsi que la situation du pouvoir d'achat."
-        ],
-        "droite": [
-          "Le président de la République a admis que Parcoursup générait de la défiance et nécessitait une refonte complète.",
-          "Il a appelé à la reprise des cours dans le calme pour l'ensemble des lycéens mobilisés.",
-          "L'entretien a également permis d'aborder la limitation des réseaux sociaux et l'attentat raciste survenu à Trappes."
-        ]
-      },
-      "differences": [
-        "La gauche insiste en premier lieu sur la reconnaissance présidentielle de la crise et la défense de la gestion gouvernementale.",
-        "Le centre livre un compte-rendu factuel et généraliste des thèmes abordés sans angle politique marqué.",
-        "La droite met particulièrement en avant la future refonte de Parcoursup et les déclarations sur la sécurité et le climat de désinhibition."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 6,
-      "summarizedAt": "2026-10-29T06:01:25.736Z"
-    },
-    {
-      "id": "5fcec31376e7",
-      "slug": "quatre-petroliers-prennent-feu-apres-avoir-percute-des-mines",
-      "title": "Quatre pétroliers prennent feu après avoir percuté des mines dans le détroit d’Ormuz",
-      "createdAt": "2026-10-29T20:01:23.514Z",
-      "storyDay": "2026-10-29",
-      "articles": [
-        {
-          "id": "ce03164e5803",
-          "outletId": "le-monde",
-          "headline": "Quatre pétroliers en feu après des explosions de mines dans le détroit d’Ormuz",
-          "url": "https://www.lemonde.fr/international/article/2026/10/30/quatre-petroliers-en-feu-apres-des-explosions-de-mines-dans-le-detroit-d-ormuz_6802559_3210.html",
-          "publishedAt": "2026-10-30T01:52:20.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/24/558/0/6000/3000/644/322/60/0/7696200_ftp-1-9byb8hgy4kna-a0c69cab2d2341bb8b0288201da85f96-0-0f47b95ff8ef4a2a951bed2ac4b7dbc0.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "0a2ed20f7efc",
-          "outletId": "le-parisien",
-          "headline": "Détroit d’Ormuz : quatre pétroliers en feu après avoir percuté des mines navales, selon l’Iran",
-          "url": "https://www.leparisien.fr/international/detroit-dormuz-quatre-petroliers-en-feu-apres-avoir-percute-des-mines-navales-selon-liran-29-10-2026-C22FKBV76VCSVMRBG7BVUSVUMI.php",
-          "publishedAt": "2026-10-29T20:01:23.514Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "ce24c6780c60",
-          "outletId": "le-figaro",
-          "headline": "Détroit d’Ormuz : quatre pétroliers en feu après avoir percuté des mines, selon les forces armées iraniennes",
-          "url": "https://www.lefigaro.fr/international/detroit-d-ormuz-quatre-petroliers-en-feu-apres-avoir-percute-des-mines-selon-les-forces-armees-iraniennes-20261029",
-          "publishedAt": "2026-10-29T17:01:00.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/29/dc9cfd1d764f17ed18aac93474e51dca352fadbb4383fab72618c59d06b9c84d.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "5fcec31376e7",
-      "titledArticleCount": 3,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Quatre navires pétroliers ont subi des incendies consécutifs à des détonations de mines dans le détroit d’Ormuz.",
-          "Les autorités iraniennes déclarent avoir arraisonné un aéronef sans pilote appartenant aux États-Unis.",
-          "Téhéran impute la responsabilité des incidents à des bateaux qui auraient coupé leurs balises de positionnement avant les détonations."
-        ],
-        "centre": [
-          "Quatre bâtiments transportant du pétrole ont pris feu dans le détroit d’Ormuz à la suite de l'impact de mines navales.",
-          "L'information concernant l'origine des explosions est attribuée aux autorités militaires de l'Iran."
-        ],
-        "droite": [
-          "Quatre pétroliers ont été ravagés par les flammes après avoir touché des mines dans le détroit d’Ormuz, selon l'armée iranienne.",
-          "Washington revendique la sécurisation des principales routes maritimes de cette zone stratégique pour le commerce mondial des hydrocarbures.",
-          "Téhéran rejette publiquement les affirmations des États-Unis dans un contexte de blocage diplomatique persistant."
-        ]
-      },
-      "differences": [
-        "La gauche met en avant les accusations iraniennes visant l'extinction des systèmes de navigation des navires et mentionne la saisie d'un drone américain.",
-        "Le centre livre un compte-rendu strictement factuel et minimaliste des faits en reprenant l'origine iranienne des déclarations sur les mines.",
-        "La droite insiste sur le contexte géopolitique global en opposant les affirmations de Washington sur la sécurité maritime aux dénégations de Téhéran."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 3,
-      "summarizedAt": "2026-10-30T02:01:22.126Z"
-    },
-    {
-      "id": "8d485fa2093b",
-      "slug": "le-salvador-deploie-plus-de-2000-militaires-en-haiti",
-      "title": "Le Salvador déploie plus de 2000 militaires en Haïti",
-      "createdAt": "2026-10-30T01:01:28.908Z",
-      "storyDay": "2026-10-29",
-      "articles": [
-        {
-          "id": "32c450a42cc1",
-          "outletId": "le-parisien",
-          "headline": "« Tous les signes pointent vers un soutien américain » : pourquoi le Salvador a-t-il envoyé 2000 soldats en Haïti ?",
-          "url": "https://www.leparisien.fr/international/tous-les-signes-pointent-vers-un-soutien-americain-pourquoi-le-salvador-a-t-il-envoye-2000-soldats-en-haiti-30-10-2026-7IJHTVWTOJHBDMRG2CR3Z4XW7I.php",
-          "publishedAt": "2026-10-30T01:01:28.908Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "f8bb90e7ddab",
-          "outletId": "ouest-france",
-          "headline": "Le Salvador déploie des milliers de soldats en Haïti pour une opération de sauvetage de « façade »",
-          "url": "https://www.ouest-france.fr/monde/haiti/le-salvador-deploie-des-milliers-de-soldats-en-haiti-pour-une-operation-de-sauvetage-de-facade-7ef6e304-d3e5-11f1-af78-2d36ec019942?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-29T23:13:23.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMDhlOGU4NDk5OGY2ZGI0NTI0ODI5NzRmMWQxYmI5ZTU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d04117bc925dbaa6d9e08e8c895f7b310bb8a1285c9fbab7e68a1092d722003c",
-          "frontPage": true,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "c5af5679ade5",
-          "outletId": "rfi",
-          "headline": "Le Salvador déploie plus de 2 000 militaires en Haïti dans une opération de sauvetage",
-          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261029-le-salvador-d%C3%A9ploie-plus-de-2-000-militaires-en-ha%C3%AFti-dans-une-op%C3%A9ration-de-sauvetage",
-          "publishedAt": "2026-10-29T17:02:07.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/4c16dc34-d3b6-11f1-b274-d18c5759e759/w:1024/p:16x9/2026-10-23T233440Z-1843819307-RC269OAB25UB-RTRMADP-3-HAITI-VIOLENCE-GANGS.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "8d485fa2093b",
-      "titledArticleCount": 3,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "centre": [
-          "Le Salvador a envoyé plus de 2 000 soldats en Haïti pour retrouver quatre militaires portés disparus.",
-          "Ce déploiement massif fait suite à une embuscade menée par des groupes armés contre ces effectifs sur l'île.",
-          "L'ampleur de cette opération de sauvetage officielle suscite des interrogations quant à ses véritables motivations."
-        ]
-      },
-      "differences": [
-        "Les médias du centre adoptent un ton interrogatif, mettant en doute les motifs officiels d'une intervention qu'ils jugent disproportionnée par rapport à son objectif annoncé."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 3,
-      "summarizedAt": "2026-10-30T01:01:28.908Z"
-    },
-    {
-      "id": "f6065bd700fd",
-      "slug": "la-cnil-inflige-une-amende-de-7-millions-d-euros-a-fnac-darty",
-      "title": "La CNIL inflige une amende de 7 millions d'euros à Fnac Darty pour non-respect des règles sur les cookies et données personnelles",
-      "createdAt": "2026-10-29T14:01:28.010Z",
-      "storyDay": "2026-10-29",
-      "articles": [
-        {
-          "id": "17de46ca6b4d",
-          "outletId": "le-parisien",
-          "headline": "Données personnelles : la Cnil inflige une amende de 7 millions d’euros à Fnac Darty pour non-respect de la législation sur les cookies",
-          "url": "https://www.leparisien.fr/high-tech/donnees-personnelles-la-cnil-inflige-une-amende-de-7-millions-deuros-a-fnac-darty-pour-non-respect-de-la-legislation-sur-les-cookies-29-10-2026-TDE6DP3IHFBVZBJQDFBW6QMEUY.php",
-          "publishedAt": "2026-10-29T14:01:28.010Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "67ee7bd6c6e1",
-          "outletId": "franceinfo",
-          "headline": "Fnac Darty écope d'une amende de 7 millions d'euros pour non-respect de la législation sur la collecte de données personnelles",
-          "url": "https://www.franceinfo.fr/internet/fnac-darty-ecope-d-une-amende-de-7-millions-d-euros-pour-non-respect-de-la-legislation-sur-la-collecte-de-donnees-personnelles_8258825.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-29T12:53:34.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/8QlFJhFxOXJgnH7smPLITYg5ftY/0x53:1024x629/432x243/filters:format(jpg)/2026/10/29/6ae33d5568afe311267497.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "2e70ef383bea",
-          "outletId": "le-monde",
-          "headline": "Fnac Darty sanctionné d’une amende de 7 millions d’euros par la CNIL pour non-respect de la législations sur les données personnelles",
-          "url": "https://www.lemonde.fr/economie/article/2026/10/29/fnac-darty-sanctionne-d-une-amende-de-7-millions-d-euros-par-la-cnil-pour-non-respect-de-la-legislations-sur-les-donnees-personnelles_6802316_3234.html",
-          "publishedAt": "2026-10-29T11:29:34.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/29/456/0/5472/2736/644/322/60/0/8d35ad0_ftp-1-23xiuqmv2g0d-afp-d4rx3zq.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "f6065bd700fd",
-      "titledArticleCount": 3,
-      "section": "economy",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "La CNIL a prononcé une sanction financière de sept millions d'euros à l'encontre de Fnac Darty pour des manquements liés aux traceurs publicitaires.",
-          "L'autorité administrative reproche au groupe d'avoir déposé des cookies sur l'application mobile de la Fnac sans recueillir l'accord préalable des utilisateurs.",
-          "Le Monde précise qu'une astreinte financière de 10 000 euros par jour a également été décidée pour contraindre l'entreprise à se mettre en conformité."
-        ],
-        "centre": [
-          "La commission nationale de l'informatique et des libertés a infligé une amende de sept millions d'euros au groupe Fnac Darty.",
-          "La sanction fait suite au non-respect de la législation française concernant la gestion des données personnelles et des cookies."
-        ]
-      },
-      "differences": [
-        "La gauche met l'accent sur les détails techniques de la sanction, en particulier l'astreinte journalière inédite révélée par Le Monde.",
-        "Le centre livre un compte-rendu factuel et synthétique de la sanction prononcée par l'autorité administrative sans ajouter d'éléments contextuels majeurs."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 3,
-      "summarizedAt": "2026-10-29T14:01:28.010Z"
-    },
-    {
       "id": "6c6fb408dc23",
       "slug": "la-coree-du-nord-tire-une-dizaine-de-missiles-balistiques-vers",
       "title": "La Corée du Nord tire une dizaine de missiles balistiques vers la mer du Japon",
@@ -8210,117 +8348,24 @@
       "summarizedAt": "2026-10-29T07:01:28.162Z"
     },
     {
-      "id": "9bc06af75608",
-      "slug": "la-coree-du-nord-teste-des-drones-d-attaque",
-      "title": "La Corée du Nord teste des drones d'attaque",
-      "createdAt": "2026-10-30T02:01:22.126Z",
-      "storyDay": "2026-10-30",
-      "articles": [
-        {
-          "id": "34badda34d12",
-          "outletId": "le-monde",
-          "headline": "La Corée du Nord teste des drones d’attaque, selon son agence de presse officielle",
-          "url": "https://www.lemonde.fr/international/article/2026/10/30/la-coree-du-nord-teste-des-drones-d-attaque-selon-son-agence-de-presse-officielle_6802526_3210.html",
-          "publishedAt": "2026-10-30T01:15:55.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/29/260/0/3200/1600/644/322/60/0/93f0b44_ftp-1-g65wfmfjkqox-2026-10-29t221830z-16871677-rc29doacz2fd-rtrmadp-3-northkorea-arms.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "c7024ad7e492",
-          "outletId": "france-24",
-          "headline": "La Corée du Nord teste des drones d'attaque, Kim Jong-un veut acquérir une \"supériorité absolue\"",
-          "url": "https://www.france24.com/fr/asie-pacifique/20261029-coree-nord-teste-drones-missiles-attaque-kim-jong-un-veut-acquerir-superiorite-absolue-seoul-kcna",
-          "publishedAt": "2026-10-29T23:55:37.000Z",
-          "imageUrl": "https://s.france24.com/media/display/8f840fcc-d3f3-11f1-bc65-1beafce15fea/w:1024/p:16x9/2026-10-29T230502Z-1125020976-RC29DOAMMSDH-RTRMADP-3-NORTHKOREA-ARMS.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "9bc06af75608",
-      "titledArticleCount": 2,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le dirigeant Kim Jong-un a supervisé des essais de nouveaux drones armés selon l'agence officielle nord-coréenne.",
-          "Pyongyang cherche à développer massivement ses capacités militaires basées sur l'intelligence artificielle pour obtenir un avantage stratégique décisif."
-        ],
-        "centre": [
-          "Les autorités nord-coréennes ont confirmé avoir testé avec succès des drones kamikazes et polyvalents sous la supervision de Kim Jong-un.",
-          "Le pouvoir insiste sur la nécessité d'atteindre une suprériorité technologique totale dans l'armement sans pilote, incluant également des missiles."
-        ]
-      },
-      "differences": [
-        "Le camp gauche se focalise sobrement sur l'injonction de Kim Jong-un à accélérer l'innovation militaire en associant drones et intelligence artificielle.",
-        "Le camp centre élargit la focale sur la nature exacte et variée du matériel testé, soulignant l'emploi de munitions explosives et de lance-roquettes."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 2,
-      "summarizedAt": "2026-10-30T02:01:22.126Z"
-    },
-    {
-      "id": "0ff786a0bc0c",
-      "slug": "l-avion-de-la-fuite-de-flavio-bolsonaro-a-ete-paye-depuis-un",
-      "title": "L'avion de la fuite de Flavio Bolsonaro a été payé depuis un compte bancaire aux États-Unis",
-      "createdAt": "2026-10-30T00:01:25.670Z",
-      "storyDay": "2026-10-30",
-      "articles": [
-        {
-          "id": "07f9afe951d6",
-          "outletId": "le-parisien",
-          "headline": "« J’ai été engagé par un broker des États-Unis » : L’avion à bord duquel Bolsonaro a fui le Brésil a-t-il payé par un proche de Trump ?",
-          "url": "https://www.leparisien.fr/international/jai-ete-engage-par-un-broker-des-etats-unis-lavion-a-bord-duquel-bolsonaro-a-fui-le-bresil-a-t-il-paye-par-un-proche-de-trump-30-10-2026-LPDMPOCQMRGWFNJS52CEW4A4OQ.php",
-          "publishedAt": "2026-10-30T00:01:25.670Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "a2820dfd18c3",
-          "outletId": "le-figaro",
-          "headline": "Flavio Bolsonaro a fui le Brésil dans un avion payé depuis un compte bancaire aux États-Unis",
-          "url": "https://www.lefigaro.fr/international/flavio-bolsonaro-a-fui-le-bresil-dans-un-avion-paye-depuis-un-compte-bancaire-aux-etats-unis-20261030",
-          "publishedAt": "2026-10-29T23:27:47.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/30/d19700624fc3272222facfcc34f4b36c08725ad819a437f86ee9fee66025946b.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "4c90a0fd689f",
-      "titledArticleCount": 2,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "centre": [
-          "Un avion utilisé par Flavio Bolsonaro pour quitter le Brésil a été réglé par l'intermédiaire d'un courtier basé aux États-Unis.",
-          "Le journal interroge le lien éventuel entre le paiement de cet affrètement et un proche de Donald Trump."
-        ],
-        "droite": [
-          "Flavio Bolsonaro a quitté le Brésil à bord d'un avion dont la course a été réglée depuis un compte bancaire aux États-Unis.",
-          "D'après le New York Times, l'appareil aurait été affrété par Jason Miller, un conseiller de Donald Trump."
-        ]
-      },
-      "differences": [
-        "Le camp centre met en doute la proximité politique en interrogeant l'implication d'un proche de Trump à travers l'intervention d'un courtier américain.",
-        "Le camp droite pointe directement l'implication de Jason Miller, conseiller de Donald Trump, en s'appuyant explicitement sur les révélations du New York Times."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 2,
-      "summarizedAt": "2026-10-30T00:01:25.670Z"
-    },
-    {
       "id": "386242e5af4e",
       "slug": "le-bitcoin-chute-apres-des-signalements-de-mouvements-suspects",
-      "title": "Le bitcoin chute après des signalements de mouvements suspects sur la plateforme Binance",
+      "title": "Le bitcoin chute après des signalements de mouvements suspects et un piratage sur la plateforme Binance",
       "createdAt": "2026-10-30T00:01:25.670Z",
       "storyDay": "2026-10-29",
       "articles": [
+        {
+          "id": "effd464db49e",
+          "outletId": "le-figaro",
+          "headline": "Fonds gelés, près de 6 milliards de dollars volés, cyberattaque massive : le piratage de la plateforme Binance plonge le secteur des cryptos dans la panique",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/fonds-geles-pres-de-6-milliards-de-dollars-voles-cyberattaque-massive-le-piratage-de-la-plateforme-binance-plonge-le-secteur-des-cryptos-dans-la-panique-20261030",
+          "publishedAt": "2026-10-30T02:32:47.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1715_crop/2026/10/30/b9f29efb47af69a15d583e70281315c79e29f0baba2b574d68cfcda0e8ef912e.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
         {
           "id": "43edd5228149",
           "outletId": "le-parisien",
@@ -8358,26 +8403,133 @@
         }
       ],
       "topicId": "386242e5af4e",
-      "titledArticleCount": 3,
+      "titledArticleCount": 4,
       "section": "economy",
       "everInEdition": true,
       "summaries": {
         "centre": [
-          "Le Bitcoin subit une forte baisse consécutivement au piratage de la plateforme d'échange Binance."
+          "Le Bitcoin enregistre une baisse marquée suite au piratage de la plateforme d'échange Binance."
         ],
         "droite": [
-          "La plateforme Binance enquête sur un incident de sécurité après des alertes concernant des mouvements atypiques.",
-          "L'entreprise rassure sa communauté en affirmant que les avoirs des utilisateurs demeurent totalement protégés.",
-          "Le cours du bitcoin chute lourdement à la suite de rumeurs persistantes de cyberattaque d'envergure sur l'infrastructure."
+          "La plateforme Binance fait l'objet d'une enquête après des signalements de mouvements suspects et une cyberattaque massive.",
+          "Près de 6 milliards de dollars auraient été dérobés en l'espace de quarante minutes, provoquant la panique sur le marché des cryptomonnaies.",
+          "Binance affirme dans un communiqué que les fonds des utilisateurs restent en sécurité et totalement à l'abri."
         ]
       },
       "differences": [
-        "Le camp du centre qualifie directement l'incident de piratage avéré pour expliquer la baisse du bitcoin.",
-        "Le camp de droite met l'accent sur les déclarations rassurantes de l'entreprise tout en qualifiant l'événement de simple rumeur de cyberattaque et de problème potentiel."
+        "Le camp centre se limite à une mention factuelle et sobre de la baisse du Bitcoin consécutive à l'incident de sécurité.",
+        "Le camp droite livre un récit détaillé et alarmiste de la cyberattaque, insistant sur l'ampleur colossale des montants en jeu et la panique générée."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 3,
-      "summarizedAt": "2026-10-30T00:01:25.670Z"
+      "summarizedArticleCount": 4,
+      "summarizedAt": "2026-10-30T03:01:23.489Z"
+    },
+    {
+      "id": "9bc06af75608",
+      "slug": "la-coree-du-nord-teste-des-drones-d-attaque",
+      "title": "La Corée du Nord teste des drones d'attaque",
+      "createdAt": "2026-10-30T02:01:22.126Z",
+      "storyDay": "2026-10-30",
+      "articles": [
+        {
+          "id": "34badda34d12",
+          "outletId": "le-monde",
+          "headline": "La Corée du Nord teste des drones d’attaque, selon son agence de presse officielle",
+          "url": "https://www.lemonde.fr/international/article/2026/10/30/la-coree-du-nord-teste-des-drones-d-attaque-selon-son-agence-de-presse-officielle_6802526_3210.html",
+          "publishedAt": "2026-10-30T01:15:55.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/29/260/0/3200/1600/644/322/60/0/93f0b44_ftp-1-g65wfmfjkqox-2026-10-29t221830z-16871677-rc29doacz2fd-rtrmadp-3-northkorea-arms.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "c7024ad7e492",
+          "outletId": "france-24",
+          "headline": "La Corée du Nord teste des drones d'attaque, Kim Jong-un veut acquérir une \"supériorité absolue\"",
+          "url": "https://www.france24.com/fr/asie-pacifique/20261029-coree-nord-teste-drones-missiles-attaque-kim-jong-un-veut-acquerir-superiorite-absolue-seoul-kcna",
+          "publishedAt": "2026-10-29T23:55:37.000Z",
+          "imageUrl": "https://s.france24.com/media/display/8f840fcc-d3f3-11f1-bc65-1beafce15fea/w:1024/p:16x9/2026-10-29T230502Z-1125020976-RC29DOAMMSDH-RTRMADP-3-NORTHKOREA-ARMS.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "9bc06af75608",
+      "titledArticleCount": 2,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le dirigeant Kim Jong-un a supervisé des essais de nouveaux drones armés selon l'agence officielle nord-coréenne.",
+          "Pyongyang cherche à développer massivement ses capacités militaires basées sur l'intelligence artificielle pour obtenir un avantage stratégique décisif."
+        ],
+        "centre": [
+          "Les autorités nord-coréennes ont confirmé avoir testé avec succès des drones kamikazes et polyvalents sous la supervision de Kim Jong-un.",
+          "Le pouvoir insiste sur la nécessité d'atteindre une suprériorité technologique totale dans l'armement sans pilote, incluant également des missiles."
+        ]
+      },
+      "differences": [
+        "Le camp gauche se focalise sobrement sur l'injonction de Kim Jong-un à accélérer l'innovation militaire en associant drones et intelligence artificielle.",
+        "Le camp centre élargit la focale sur la nature exacte et variée du matériel testé, soulignant l'emploi de munitions explosives et de lance-roquettes."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2,
+      "summarizedAt": "2026-10-30T02:01:22.126Z"
+    },
+    {
+      "id": "040525f72e3b",
+      "slug": "l-automobiliste-implique-dans-la-mort-du-cycliste-paul-varry",
+      "title": "L'automobiliste impliqué dans la mort du cycliste Paul Varry est libéré sous bracelet électronique",
+      "createdAt": "2026-10-30T03:01:23.489Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "97f8ce3eaedf",
+          "outletId": "20-minutes",
+          "headline": "Mort du cycliste Paul Varry à Paris : L’automobiliste libéré sous bracelet électronique",
+          "url": "https://www.20minutes.fr/justice/4258795-20261030-mort-cycliste-paul-varry-paris-automobiliste-libere-sous-bracelet-electronique?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-30T00:11:48.000Z",
+          "imageUrl": "https://img.20mn.fr/EnzofsTIT9eozPOhTqyS3Ck/1200x768_paris-19-octobre-2024-manifestation-a-l-appel-de-l-association-paris-en-selle-en-hommage-a-paul-varry-cycliste-tue-par-un-automobiliste-le-15-octobre-les-personnes-presentes-tiennent-des-pancartes-sipa-55056-credit-arnaud-cesar-vilette-sipa-2410221310",
+          "frontPage": true,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "02d05f216880",
+          "outletId": "le-figaro",
+          "headline": "Mort du cycliste Paul Varry à Paris : l'automobiliste remis en liberté sous bracelet électronique avant son procès",
+          "url": "https://www.lefigaro.fr/actualite-france/mort-du-cycliste-paul-varry-a-paris-l-automobiliste-remis-en-liberte-sous-bracelet-electronique-avant-son-proces-20261029",
+          "publishedAt": "2026-10-29T22:24:49.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2002_crop/2026/10/29/50f6e16f14f63dec6099e97b1b19a089fc07300f623941d45072a6630ccb6849.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "040525f72e3b",
+      "titledArticleCount": 2,
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "La cour d’appel de Paris a ordonné ce jeudi la remise en liberté sous bracelet électronique du conducteur mis en cause.",
+          "Le suspect reste poursuivi pour le meurtre du cycliste Paul Varry, survenu en octobre 2024 dans la capitale.",
+          "L’automobiliste doit désormais comparaître prochainement devant la cour d’assises."
+        ],
+        "droite": [
+          "Le conducteur de SUV impliqué dans la mort du cycliste Paul Varry à Paris en octobre 2024 va bénéficier d’une libération sous bracelet électronique.",
+          "Le mis en cause attend désormais son procès devant la cour d’assises sous l’accusation de meurtre pour la mort de ce cycliste de 27 ans."
+        ]
+      },
+      "differences": [
+        "La gauche rappelle explicitement la décision de la cour d'appel intervenue ce jeudi tout en insistant sur le maintien des poursuites pour meurtre.",
+        "La droite qualifie précisément le véhicule en cause de SUV et mentionne l'âge de la victime de vingt-sept ans sans dater l'arrêt de la cour d'appel."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2,
+      "summarizedAt": "2026-10-30T03:01:23.489Z"
     },
     {
       "id": "6c78d80c67ad",
@@ -8770,56 +8922,108 @@
       "summarizedAt": "2026-10-29T12:01:24.484Z"
     },
     {
-      "id": "c200ff7ab81b",
-      "slug": "une-hausse-des-avc-chez-les-jeunes-interroge-les-professionnels",
-      "title": "Une hausse des AVC chez les jeunes interroge les professionnels de santé",
-      "createdAt": "2026-10-29T06:01:25.736Z",
+      "id": "4373c3a5c3ef",
+      "slug": "emmanuel-macron-aborde-la-mobilisation-lyceenne-et-parcoursup",
+      "title": "Emmanuel Macron aborde la mobilisation lycéenne et Parcoursup lors de son interview par HugoDécrypte",
+      "createdAt": "2026-10-29T02:01:23.762Z",
       "storyDay": "2026-10-29",
       "articles": [
         {
-          "id": "636f839dfb31",
-          "outletId": "le-parisien",
-          "headline": "Explosion des AVC chez les jeunes, un « tabou » persistant : « On ne pense pas que ça peut être grave »",
-          "url": "https://www.leparisien.fr/societe/sante/explosion-des-avc-chez-les-jeunes-un-tabou-persistant-on-ne-pense-pas-que-ca-peut-etre-grave-29-10-2026-YK2Q6IFVT5CKFO3YI6H5QPXFNU.php",
-          "publishedAt": "2026-10-29T06:01:25.736Z",
+          "id": "dd82356e69ba",
+          "outletId": "tf1-info",
+          "headline": "Limitation des réseaux sociaux, Parcoursup, racisme... Ce qu'il faut retenir de l'interview d'Emmanuel Macron",
+          "url": "https://www.tf1info.fr/politique/limitation-des-reseaux-sociaux-parcoursup-racisme-ce-qu-il-faut-retenir-de-l-interview-d-emmanuel-macron-2472632.html",
+          "publishedAt": "2026-10-29T05:49:11.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/macron-trappes-mairie-octobre-2026-7a4811-1@1x.jpeg",
           "frontPage": false,
-          "datedAtCollection": true,
           "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "8c8acad86257",
+          "outletId": "huffpost",
+          "headline": "Chez HugoDécrypte, Macron reconnaît la gravité de la crise lycéenne, mais défend la façon dont le gouvernement l’a gérée",
+          "url": "https://www.huffingtonpost.fr/politique/article/chez-hugodecrypte-macron-reconnait-la-gravite-de-la-crise-lyceenne-mais-defend-la-facon-dont-le-gouvernement-l-a-geree_347064.html",
+          "publishedAt": "2026-10-29T05:38:00.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/28/0/9/2876/1618/0/0/60/0/a62e88a_upload-1-tqvwvvj7lkrl-screenshot-2026-10-28-at-4-23-57-pm.png",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "d0a244a1b16b",
+          "outletId": "tf1-info",
+          "headline": "EN DIRECT - Colère lycéenne : Parcoursup \"crée de la défiance, donc on doit le refonder\", reconnaît Macron",
+          "url": "https://www.tf1info.fr/societe/direct-crise-lyceenne-colere-sociale-presidentielle-2027-parcoursup-cree-de-la-defiance-donc-on-doit-le-refonder-selon-emmanuel-macron-les-dernieres-informations-de-ce-jeudi-29-octobre-2026-2472629.html",
+          "publishedAt": "2026-10-29T05:00:00.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/lyceenne-blocage-paris-5-octobre-2026-0cb49f-2@1x.jpeg",
+          "frontPage": false,
+          "kind": "live",
           "section": "society"
         },
         {
-          "id": "83e553443895",
-          "outletId": "20-minutes",
-          "headline": "« J’ai commencé à voir tout en vert de mon œil droit »… Pourquoi de plus en plus de jeunes font des AVC",
-          "url": "https://www.20minutes.fr/sante/4255007-20261029-commence-voir-tout-vert-droit-pourquoi-plus-plus-jeunes-font-avc?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-29T02:54:48.000Z",
-          "imageUrl": "https://img.20mn.fr/roAnCQVdRnaq8QWAg_myVik/1200x768_czcezcezceez",
+          "id": "159aa8a35d0c",
+          "outletId": "ouest-france",
+          "headline": "Mobilisation lycéenne, Parcoursup, pouvoir d’achat… Ce qu’il faut retenir de l’interview d’Emmanuel Macron",
+          "url": "https://www.ouest-france.fr/societe/manifestation/mobilisation-lyceenne-parcoursup-pouvoir-dachat-ce-quil-faut-retenir-de-lintervention-demmanuel-macron-f3925bd0-d0e8-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-29T02:06:56.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjc2M2EwZTQ3ZThkZDJhOTlkYWJjMjljZjE4MzgxZWM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=89f8d42bec189b4a0d79c0bda52bfc6395d196e02684eeca8e0fa222c21227e6",
           "frontPage": false,
           "kind": "news",
-          "section": "society",
+          "section": "politics",
           "everFrontPage": true
+        },
+        {
+          "id": "b42acf8c4038",
+          "outletId": "le-parisien",
+          "headline": "Lycées, 17 octobre, attentat de Trappes… Ce qu’il faut retenir de l’interview d’Emmanuel Macron par Hugo Décrypte",
+          "url": "https://www.leparisien.fr/politique/lycees-17-octobre-attentat-de-trappes-ce-quil-faut-retenir-de-linterview-demmanuel-macron-par-hugo-decrypte-29-10-2026-YYUHFVMTT5HFVM6OTX2PTC6TQI.php",
+          "publishedAt": "2026-10-29T02:01:23.762Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c086d1ef37b8",
+          "outletId": "franceinfo",
+          "headline": "Mobilisation lycéenne, Parcoursup, racisme... Ce qu'il faut retenir de l'interview d'Emmanuel Macron à la chaîne HugoDécrypte",
+          "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/mobilisation-lyceenne-parcoursup-racisme-ce-qu-il-faut-retenir-de-l-interview-d-emmanuel-macron-a-la-chaine-hugodecrypte_8258006.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-28T23:17:00.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/b7Hbb1DIoTqthkFttogVcosZZlU/0x0:1657x932/432x243/filters:format(jpg)/2026/10/28/6ae26fa9c56f5539534802.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
         }
       ],
-      "topicId": "c200ff7ab81b",
-      "titledArticleCount": 2,
-      "section": "society",
+      "topicId": "4373c3a5c3ef",
+      "titledArticleCount": 6,
+      "section": "politics",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "La probabilité de subir un infarctus cérébral a doublé chez les moins de 50 ans entre les années 1980 et 2000.",
-          "Des patients témoignent de symptômes visuels soudains préfigurant l'accident vasculaire."
+          "Le chef de l'État a reconnu la gravité de la crise traversée par les lycéens lors de son intervention.",
+          "Il a défendu l'action gouvernementale tout en exhortant les jeunes à regagner les salles de classe.",
+          "L'avenir de Parcoursup et la question du pouvoir d'achat ont figuré au cœur des échanges menés par le créateur de contenu."
         ],
         "centre": [
-          "Les professionnels de santé constatent une augmentation marquée des accidents vasculaires cérébraux touchant les jeunes populations.",
-          "Le diagnostic est souvent retardé car la gravité de la situation n'est pas envisagée par les patients concernés."
+          "Emmanuel Macron a accordé une interview remarquée au vidéaste HugoDécrypte pour aborder la contestation lycéenne.",
+          "Le président a appelé au retour du calme dans les établissements scolaires avant la rentrée de la Toussaint.",
+          "Il a évoqué la refonte de la plateforme Parcoursup ainsi que la situation du pouvoir d'achat."
+        ],
+        "droite": [
+          "Le président de la République a admis que Parcoursup générait de la défiance et nécessitait une refonte complète.",
+          "Il a appelé à la reprise des cours dans le calme pour l'ensemble des lycéens mobilisés.",
+          "L'entretien a également permis d'aborder la limitation des réseaux sociaux et l'attentat raciste survenu à Trappes."
         ]
       },
       "differences": [
-        "Le camp gauche privilégie une approche épidémiologique et individuelle en s'appuyant sur des statistiques temporelles et des témoignages de patients.",
-        "Le camp centre adopte une perspective sociétale en soulignant le manque de sensibilisation et la persistance d'un tabou autour de cette pathologie chez les jeunes."
+        "La gauche insiste en premier lieu sur la reconnaissance présidentielle de la crise et la défense de la gestion gouvernementale.",
+        "Le centre livre un compte-rendu factuel et généraliste des thèmes abordés sans angle politique marqué.",
+        "La droite met particulièrement en avant la future refonte de Parcoursup et les déclarations sur la sécurité et le climat de désinhibition."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 2,
+      "summarizedArticleCount": 6,
       "summarizedAt": "2026-10-29T06:01:25.736Z"
     },
     {
@@ -9033,6 +9237,59 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 4,
       "summarizedAt": "2026-10-29T07:01:28.162Z"
+    },
+    {
+      "id": "c200ff7ab81b",
+      "slug": "une-hausse-des-avc-chez-les-jeunes-interroge-les-professionnels",
+      "title": "Une hausse des AVC chez les jeunes interroge les professionnels de santé",
+      "createdAt": "2026-10-29T06:01:25.736Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "636f839dfb31",
+          "outletId": "le-parisien",
+          "headline": "Explosion des AVC chez les jeunes, un « tabou » persistant : « On ne pense pas que ça peut être grave »",
+          "url": "https://www.leparisien.fr/societe/sante/explosion-des-avc-chez-les-jeunes-un-tabou-persistant-on-ne-pense-pas-que-ca-peut-etre-grave-29-10-2026-YK2Q6IFVT5CKFO3YI6H5QPXFNU.php",
+          "publishedAt": "2026-10-29T06:01:25.736Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "83e553443895",
+          "outletId": "20-minutes",
+          "headline": "« J’ai commencé à voir tout en vert de mon œil droit »… Pourquoi de plus en plus de jeunes font des AVC",
+          "url": "https://www.20minutes.fr/sante/4255007-20261029-commence-voir-tout-vert-droit-pourquoi-plus-plus-jeunes-font-avc?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-29T02:54:48.000Z",
+          "imageUrl": "https://img.20mn.fr/roAnCQVdRnaq8QWAg_myVik/1200x768_czcezcezceez",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "c200ff7ab81b",
+      "titledArticleCount": 2,
+      "section": "society",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "La probabilité de subir un infarctus cérébral a doublé chez les moins de 50 ans entre les années 1980 et 2000.",
+          "Des patients témoignent de symptômes visuels soudains préfigurant l'accident vasculaire."
+        ],
+        "centre": [
+          "Les professionnels de santé constatent une augmentation marquée des accidents vasculaires cérébraux touchant les jeunes populations.",
+          "Le diagnostic est souvent retardé car la gravité de la situation n'est pas envisagée par les patients concernés."
+        ]
+      },
+      "differences": [
+        "Le camp gauche privilégie une approche épidémiologique et individuelle en s'appuyant sur des statistiques temporelles et des témoignages de patients.",
+        "Le camp centre adopte une perspective sociétale en soulignant le manque de sensibilisation et la persistance d'un tabou autour de cette pathologie chez les jeunes."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2,
+      "summarizedAt": "2026-10-29T06:01:25.736Z"
     },
     {
       "id": "41dafe91a4be",
@@ -24613,6 +24870,17 @@
           "section": "misc"
         },
         {
+          "id": "832a2df1d7af",
+          "outletId": "franceinfo",
+          "headline": "Attentat raciste dans les Yvelines : le suspect, Kévin Tessier, a été mis en examen et placé en détention provisoire",
+          "url": "https://www.franceinfo.fr/societe/trappes/direct-attentat-raciste-a-trappes-le-suspect-a-ete-transfere-dans-la-nuit-au-tribunal-judiciaire-de-paris-en-vue-de-sa-mise-en-examen_8258192.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-29T22:52:46.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/a6Z2O2CED7YjtQ5i5C7Jdcq28ok/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/29/6ae3996d9a561462453400.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
           "id": "9825c9e7fb25",
           "outletId": "20-minutes",
           "headline": "Attentat raciste à Trappes et La Verrière : Kevin T. avait été interpellé trois jours avant l’attaque",
@@ -29917,7 +30185,7 @@
           "url": "https://www.lefigaro.fr/conjoncture/apres-le-depart-de-christine-lagarde-pourquoi-la-france-est-mal-partie-pour-conserver-la-presidence-de-la-bce-20261029",
           "publishedAt": "2026-10-29T10:45:13.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x1999_crop/2026/03/30/0bae969ec7184933a7cc2b18eced9c93a32c873680bc0a6930b59e4bf3cbe9a1.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
