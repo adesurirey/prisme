@@ -6,6 +6,18 @@
   "storyDay": "2026-10-30",
   "articles": [
     {
+      "id": "213b9de106df",
+      "outletId": "ouest-france",
+      "headline": "Midterms aux États-Unis : Trump annule ses meetings du week-end et privilégiera les apparitions virtuelles",
+      "url": "https://www.ouest-france.fr/monde/etats-unis/elections-americaines/midterms-aux-etats-unis-trump-annule-ses-meetings-du-week-end-et-privilegiera-les-apparitions-virtuelles-c7fd5818-d3fd-11f1-af78-2d36ec019942?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-10-30T01:30:58.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNjRmMTgzYTE5NzI2N2M1ZDhkYWNkYjljYTY1MzJkNDY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=c6a81a6a6cacc5d0f1569e5cb4de6b63f7424fb13b3d6036bc98f8cd031e2f01",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "11aa6c75319a",
       "outletId": "le-parisien",
       "headline": "Fatigue, préparation d’une opération militaire… Spéculations autour de l’annulation par Donald Trump de ses meetings du week-end",
@@ -14,6 +26,17 @@
       "frontPage": false,
       "datedAtCollection": true,
       "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "fd2dbcddc164",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, midterms 2026 : Donald Trump annule ses meetings du week-end dans le Kansas et l’Iowa",
+      "url": "https://www.lemonde.fr/international/live/2026/10/30/en-direct-midterms-2026-donald-trump-annule-ses-meetings-du-week-end_6801590_3210.html",
+      "publishedAt": "2026-10-30T00:58:44.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/29/0/0/7167/3583/644/322/60/0/1e5a3b3_ftp-1-g1juecssgop8-afp-d4vc66u.jpg",
+      "frontPage": false,
+      "kind": "live",
       "section": "world"
     },
     {
@@ -30,24 +53,32 @@
     }
   ],
   "topicId": "6c73bb1fb8c2",
-  "titledArticleCount": 2,
+  "titledArticleCount": 4,
   "section": "world",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le parti républicain a officialisé jeudi l'annulation de deux rassemblements de campagne que Donald Trump devait animer dans le Kansas et l'Iowa.",
+      "Ces annulations surviennent à cinq jours des élections de mi-mandat prévues en 2026.",
+      "Donald Trump sera remplacé par la tenue d'un nombre élevé de rassemblements virtuels."
+    ],
     "centre": [
-      "Le Parisien rapporte que Donald Trump a annulé ses rassemblements de campagne prévus pour le week-end.",
-      "Le journal mentionne des interrogations et des spéculations concernant une possible fatigue ou la préparation d'une opération militaire."
+      "Donald Trump a annulé ses déplacements de campagne prévus pour le week-end à l'approche des élections de mi-mandat.",
+      "Le parti républicain a précisé que le président américain participerait à la place à de nombreux rendez-vous virtuels.",
+      "Ces annulations inopinées ont suscité des interrogations concernant une potentielle fatigue du chef de l'État ou la préparation d'une opération militaire."
     ],
     "droite": [
-      "Le Figaro indique que Donald Trump a annulé ses meetings du week-end à l'approche des élections de mi-mandat.",
-      "Le média précise que le président américain, interrogé sur sa fatigue, a affirmé se sentir parfaitement bien."
+      "Le parti républicain a annoncé jeudi l'annulation des deux rassemblements physiques prévus pour Donald Trump ce week-end en marge des élections de mi-mandat.",
+      "Le président américain sera présent à travers de multiples interventions virtuelles pour pallier cette absence sur le terrain.",
+      "Interrogé sur son état de santé à l'âge de 80 ans et sur une éventuelle fatigue liée à sa tournée nationale, Donald Trump a assuré se porter parfaitement bien."
     ]
   },
   "differences": [
-    "Le centre, représenté par Le Parisien, met l'accent sur les spéculations autour des raisons de ces annulations, évoquant fatigue et opérations militaires.",
-    "La droite, représentée par Le Figaro, contextualise l'annulation à l'approche des midterms et rapporte directement la dénégation de fatigue formulée par Donald Trump."
+    "La gauche se limite strictement à relayer l'agenda officiel de la campagne et l'annulation des déplacements dans l'Iowa et le Kansas.",
+    "Le centre élargit son traitement aux spéculations sur les motifs de ces annulations, évoquant des hypothèses liées à la santé ou à l'actualité militaire.",
+    "La droite intègre les démentis personnels de Donald Trump concernant sa condition physique et son âge face aux interrogations médiatiques."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-10-30T01:01:28.908Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-10-30T02:01:22.126Z"
 }

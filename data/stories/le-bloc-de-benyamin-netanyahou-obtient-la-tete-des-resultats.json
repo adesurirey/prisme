@@ -6,6 +6,17 @@
   "storyDay": "2026-10-30",
   "articles": [
     {
+      "id": "c752f95f8b07",
+      "outletId": "france-24",
+      "headline": "Législatives en Israël : le camp Netanyahu en tête mais sans majorité, selon les résultats officiels",
+      "url": "https://www.france24.com/fr/moyen-orient/20261030-israel-legislatives-netanyahu-tete-sans-majorite-resultats-officiels-eisenkot-partis-arabes",
+      "publishedAt": "2026-10-30T01:52:55.000Z",
+      "imageUrl": "https://s.france24.com/media/display/0b800e90-d404-11f1-acfb-bf1914cabd52/w:1024/p:16x9/AP26300421850547-1.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "b7c5e3df65ec",
       "outletId": "le-parisien",
       "headline": "En Israël, le bloc de Netanyahou en tête des résultats finaux mais sans majorité, les partis arabes possibles faiseurs de roi",
@@ -15,6 +26,18 @@
       "datedAtCollection": true,
       "kind": "news",
       "section": "world"
+    },
+    {
+      "id": "b18606cea757",
+      "outletId": "le-monde",
+      "headline": "Législatives en Israël : le camp de Benyamin Nétanyahou arrive en tête mais sans majorité selon les résultats définitifs",
+      "url": "https://www.lemonde.fr/international/article/2026/10/30/legislatives-en-israel-le-camp-de-benyamin-netanyahou-arrive-en-tete-mais-sans-majorite-selon-les-resultats-definitifs_6802493_3210.html",
+      "publishedAt": "2026-10-30T01:00:44.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/28/481/0/5760/2880/644/322/60/0/faf952f_upload-1-rqzrcxh9aoaa-lgeai-qg-netanyahou-30.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "9e4bda865c01",
@@ -65,31 +88,30 @@
     }
   ],
   "topicId": "a33bb0fdd2f6",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "20 Minutes annonce que Benyamin Netanyahou arrive officiellement en tête du scrutin sans atteindre le seuil de la majorité à la Knesset.",
-      "Le média souligne que les formations politiques arabes devront jouer un rôle décisif dans le processus de formation du prochain gouvernement."
+      "Le camp de Benyamin Netanyahou recueille 53 sièges aux élections législatives en Israël selon les résultats officiels définitifs publiés dans la nuit de jeudi à vendredi.",
+      "L'opposition dirigée par Gadi Eisenkot obtient 48 députés à la Knesset tandis que deux listes arabes totalisent 19 sièges et s'imposent comme des arbitres incontournables."
     ],
     "centre": [
-      "Le Parisien, Ouest-France et RFI rapportent la publication des résultats définitifs confirmant la tête du bloc de Benyamin Netanyahou et de ses alliés sans majorité absolue.",
-      "Ouest-France rappelle l'appel du président Isaac Herzog demandant aux partis de tout faire pour constituer une coalition et éviter un nouveau scrutin.",
-      "Les articles mettent en avant le positionnement des listes arabes, qualifiées de potentielles faiseuses de roi pour débloquer la situation institutionnelle."
+      "La coalition sortante de droite et d'extrême droite menée par le Premier ministre Benjamin Netanyahu arrive en tête du scrutin avec 53 sièges sur 120 à la Knesset.",
+      "Le bloc d'opposition de Gadi Eisenkot totalise 48 sièges et les partis arabes obtiennent 19 mandats, jouant un rôle décisif pour la formation d'une future coalition.",
+      "Le président israélien Isaac Herzog a exhorté les partis politiques à tout faire pour bâtir un gouvernement et écarter l'hypothèse de nouvelles élections."
     ],
     "droite": [
-      "Le Figaro met en avant la première place obtenue par le camp de Benyamin Netanyahou à l'issue des élections législatives israéliennes.",
-      "Le quotidien conservateur indique toutefois l'absence de majorité pour le bloc sortant selon les données communiquées par la Commission électorale israélienne.",
-      "Le journal relève la percée remarquable enregistrée par les deux listes arabes, Raam et la Liste unifiée, dans le paysage politique."
+      "Les résultats définitifs de la Commission électorale israélienne confirment que le camp de Benyamin Netanyahou est en tête du scrutin sans pour autant atteindre la majorité absolue.",
+      "Le Figaro met spécifiquement en avant la percée spectaculaire des deux listes arabes Raam et la Liste unifiée."
     ]
   },
   "differences": [
-    "Le camp de gauche (20 Minutes) se focalise principalement sur l'incapacité immédiate du Premier ministre à gouverner seul et sur l'arbitrage institutionnel inévitable des formations arabes.",
-    "Le camp centré (Le Parisien, Ouest-France, RFI) adopte une approche factuelle et institutionnelle en soulignant à la fois l'appel présidentiel à l'unité et le rôle central des partis arabes.",
-    "Le camp de droite (Le Figaro) met en exergue la performance électorale du bloc majoritaire tout en soulignant la percée notable des listes arabes aux côtés de l'absence de majorité."
+    "Le camp gauche analyse les résultats sous l'angle d'un blocage institutionnel persistant en insistant sur le rôle pivot des listes arabes.",
+    "Le camp centre adopte une couverture factuelle globale en mettant en relief l'appel du président Isaac Herzog à éviter de nouvelles élections.",
+    "Le camp droite focalise son traitement sur la publication officielle des données électorales tout en soulignant la percée spécifique des listes arabes Raam et Liste unifiée."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-10-30T01:01:28.908Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-10-30T02:01:22.126Z"
 }
