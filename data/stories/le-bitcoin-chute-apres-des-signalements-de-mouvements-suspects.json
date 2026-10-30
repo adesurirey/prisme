@@ -1,10 +1,21 @@
 {
   "id": "386242e5af4e",
   "slug": "le-bitcoin-chute-apres-des-signalements-de-mouvements-suspects",
-  "title": "Le bitcoin chute après des signalements de mouvements suspects et un piratage sur la plateforme Binance",
+  "title": "Le bitcoin chute après le piratage massif de la plateforme Binance et le gel de milliards de dollars",
   "createdAt": "2026-10-30T00:01:25.670Z",
   "storyDay": "2026-10-29",
   "articles": [
+    {
+      "id": "4d5986538fba",
+      "outletId": "france-24",
+      "headline": "Cryptomonnaies : une cyberattaque massive pousse Binance à geler 2,5 milliards de dollars",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261030-cryptomonnaies-binance-cyberattaque-massive-gel-2-5-milliards-de-dollars-bitcoin-ether",
+      "publishedAt": "2026-10-30T03:15:02.000Z",
+      "imageUrl": "https://s.france24.com/media/display/9baaa84a-9069-11ee-a55a-005056bfb2b6/w:1024/p:16x9/2023-11-24T134442Z_540451245_RC2OJ4ABFUX9_RTRMADP_3_FINTECH-BINANCE-TENG.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
     {
       "id": "effd464db49e",
       "outletId": "le-figaro",
@@ -54,24 +65,26 @@
     }
   ],
   "topicId": "386242e5af4e",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "economy",
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Le Bitcoin enregistre une baisse marquée suite au piratage de la plateforme d'échange Binance."
+      "La plateforme Binance a suspendu temporairement ses dépôts et retraits après une cyberattaque estimée à 2,54 milliards de dollars de fonds gelés.",
+      "Le cabinet Chainalysis évalue le montant total des fonds volés à environ 5,9 milliards de dollars tandis que l'entreprise promet de couvrir l'intégralité des pertes.",
+      "Cet incident informatique majeur entraîne directement une chute de la valeur du bitcoin et perturbe le marché des monnaies numériques."
     ],
     "droite": [
-      "La plateforme Binance fait l'objet d'une enquête après des signalements de mouvements suspects et une cyberattaque massive.",
-      "Près de 6 milliards de dollars auraient été dérobés en l'espace de quarante minutes, provoquant la panique sur le marché des cryptomonnaies.",
-      "Binance affirme dans un communiqué que les fonds des utilisateurs restent en sécurité et totalement à l'abri."
+      "Près de 6 milliards de dollars ont été transférés de la plateforme Binance vers un programme inconnu en l'espace de quarante minutes.",
+      "Le secteur des cryptomonnaies fait face à une panique générale à la suite de cette cyberattaque massive et du gel des avoirs.",
+      "Le bitcoin dévisse nettement sur les marchés alors que Binance communique initialement sur la sécurité des fonds et diligente une enquête."
     ]
   },
   "differences": [
-    "Le camp centre se limite à une mention factuelle et sobre de la baisse du Bitcoin consécutive à l'incident de sécurité.",
-    "Le camp droite livre un récit détaillé et alarmiste de la cyberattaque, insistant sur l'ampleur colossale des montants en jeu et la panique générée."
+    "Le camp centre adopte une approche factuelle et institutionnelle en privilégiant les montants officiels gelés et les mesures de compensation annoncées par la plateforme.",
+    "Le camp droite dramatise l'événement en mettant en avant la panique sectorielle, la rapidité du transfert des fonds et le vocabulaire de la crise."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-10-30T03:01:23.489Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-10-30T05:01:19.675Z"
 }

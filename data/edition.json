@@ -1,6 +1,60 @@
 {
-  "builtAt": "2026-10-30T04:01:17.462Z",
+  "builtAt": "2026-10-30T05:01:19.675Z",
   "latestStories": [
+    {
+      "id": "46c14c09606f",
+      "slug": "l-australienne-erin-patterson-voit-sa-peine-alourdie-apres-sa",
+      "title": "L'Australienne Erin Patterson voit sa peine alourdie après sa condamnation pour empoisonnement aux champignons",
+      "createdAt": "2026-10-30T05:01:19.675Z",
+      "storyDay": "2026-10-30",
+      "articles": [
+        {
+          "id": "083d009d0180",
+          "outletId": "le-figaro",
+          "headline": "Australie : Erin Patterson, l'empoisonneuse aux champignons, voit sa peine alourdie",
+          "url": "https://www.lefigaro.fr/international/australie-erin-patterson-l-empoisonneuse-aux-champignons-voit-sa-peine-alourdie-20261030",
+          "publishedAt": "2026-10-30T04:20:29.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2108x1407_crop/2026/10/30/d4ebad1cb00a3cfb3d52d9fa4da07dfe1a1860b00b9906d76facef7ab770b440.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "86403eac0753",
+          "outletId": "ouest-france",
+          "headline": "Empoisonnement aux champignons : l’Australienne voit sa peine alourdie après un procès en appel",
+          "url": "https://www.ouest-france.fr/monde/australie/empoisonnement-aux-champignons-laustralienne-voit-sa-peine-alourdie-apres-un-proces-en-appel-104ec11c-d3f7-11f1-af78-2d36ec019942?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-30T00:41:23.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwOGNiYmU5MjY0NTYwZjY0Y2Q3YTgyZTFkMjA1NzU1YjE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1f4b84928fc1735f8f02d8236969f537d61df2be2a843732c29bfc679657f56e",
+          "frontPage": true,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "46c14c09606f",
+      "titledArticleCount": 2,
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "L'Australienne Erin Patterson voit sa peine alourdie en appel à l'issue de son procès.",
+          "La condamnation initiale prévoyait une période de sûreté de trente-trois ans avant une libération conditionnelle."
+        ],
+        "droite": [
+          "Erin Patterson, surnommée l'empoisonneuse aux champignons, a vu sa peine alourdie en Australie.",
+          "Elle avait préparé un bœuf Wellington agrémenté d'amanites phalloïdes, l'un des champignons les plus vénéneux, pour sa belle-famille.",
+          "Le drame a causé la mort de trois personnes, tandis qu'un invité a réchappé à l'intoxication."
+        ]
+      },
+      "differences": [
+        "Le centre, représenté par Ouest-France, se focalise sur la procédure judiciaire et la décision de la cour d'appel concernant la durée de la peine.",
+        "La droite, illustrée par Le Figaro, insiste sur la nature macabre des faits, décrivant en détail le plat incriminé et le profil de la cuisinière."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2,
+      "summarizedAt": "2026-10-30T05:01:19.675Z"
+    },
     {
       "id": "6c73bb1fb8c2",
       "slug": "donald-trump-annule-ses-meetings-du-week-end-a-l-approche-des",
@@ -49,7 +103,7 @@
           "url": "https://www.lefigaro.fr/international/a-quelques-jours-des-midterms-donald-trump-annule-ses-meetings-du-week-end-20261030",
           "publishedAt": "2026-10-30T00:13:26.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2004_crop/2026/10/30/9c650c76c5d46b246f5161b51b35faa9225a7200bb9cc64896b56e17f3f84107.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -216,7 +270,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/10/30/la-coree-du-nord-teste-des-drones-d-attaque-selon-son-agence-de-presse-officielle_6802526_3210.html",
           "publishedAt": "2026-10-30T01:15:55.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/29/260/0/3200/1600/644/322/60/0/93f0b44_ftp-1-g65wfmfjkqox-2026-10-29t221830z-16871677-rc29doacz2fd-rtrmadp-3-northkorea-arms.JPG",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -328,10 +382,21 @@
     {
       "id": "386242e5af4e",
       "slug": "le-bitcoin-chute-apres-des-signalements-de-mouvements-suspects",
-      "title": "Le bitcoin chute après des signalements de mouvements suspects et un piratage sur la plateforme Binance",
+      "title": "Le bitcoin chute après le piratage massif de la plateforme Binance et le gel de milliards de dollars",
       "createdAt": "2026-10-30T00:01:25.670Z",
       "storyDay": "2026-10-29",
       "articles": [
+        {
+          "id": "4d5986538fba",
+          "outletId": "france-24",
+          "headline": "Cryptomonnaies : une cyberattaque massive pousse Binance à geler 2,5 milliards de dollars",
+          "url": "https://www.france24.com/fr/%C3%A9co-tech/20261030-cryptomonnaies-binance-cyberattaque-massive-gel-2-5-milliards-de-dollars-bitcoin-ether",
+          "publishedAt": "2026-10-30T03:15:02.000Z",
+          "imageUrl": "https://s.france24.com/media/display/9baaa84a-9069-11ee-a55a-005056bfb2b6/w:1024/p:16x9/2023-11-24T134442Z_540451245_RC2OJ4ABFUX9_RTRMADP_3_FINTECH-BINANCE-TENG.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
         {
           "id": "effd464db49e",
           "outletId": "le-figaro",
@@ -381,26 +446,28 @@
         }
       ],
       "topicId": "386242e5af4e",
-      "titledArticleCount": 4,
+      "titledArticleCount": 5,
       "section": "economy",
       "everInEdition": true,
       "summaries": {
         "centre": [
-          "Le Bitcoin enregistre une baisse marquée suite au piratage de la plateforme d'échange Binance."
+          "La plateforme Binance a suspendu temporairement ses dépôts et retraits après une cyberattaque estimée à 2,54 milliards de dollars de fonds gelés.",
+          "Le cabinet Chainalysis évalue le montant total des fonds volés à environ 5,9 milliards de dollars tandis que l'entreprise promet de couvrir l'intégralité des pertes.",
+          "Cet incident informatique majeur entraîne directement une chute de la valeur du bitcoin et perturbe le marché des monnaies numériques."
         ],
         "droite": [
-          "La plateforme Binance fait l'objet d'une enquête après des signalements de mouvements suspects et une cyberattaque massive.",
-          "Près de 6 milliards de dollars auraient été dérobés en l'espace de quarante minutes, provoquant la panique sur le marché des cryptomonnaies.",
-          "Binance affirme dans un communiqué que les fonds des utilisateurs restent en sécurité et totalement à l'abri."
+          "Près de 6 milliards de dollars ont été transférés de la plateforme Binance vers un programme inconnu en l'espace de quarante minutes.",
+          "Le secteur des cryptomonnaies fait face à une panique générale à la suite de cette cyberattaque massive et du gel des avoirs.",
+          "Le bitcoin dévisse nettement sur les marchés alors que Binance communique initialement sur la sécurité des fonds et diligente une enquête."
         ]
       },
       "differences": [
-        "Le camp centre se limite à une mention factuelle et sobre de la baisse du Bitcoin consécutive à l'incident de sécurité.",
-        "Le camp droite livre un récit détaillé et alarmiste de la cyberattaque, insistant sur l'ampleur colossale des montants en jeu et la panique générée."
+        "Le camp centre adopte une approche factuelle et institutionnelle en privilégiant les montants officiels gelés et les mesures de compensation annoncées par la plateforme.",
+        "Le camp droite dramatise l'événement en mettant en avant la panique sectorielle, la rapidité du transfert des fonds et le vocabulaire de la crise."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-10-30T03:01:23.489Z"
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-10-30T05:01:19.675Z"
     },
     {
       "id": "040525f72e3b",
@@ -416,7 +483,7 @@
           "url": "https://www.lemonde.fr/societe/article/2026/10/30/mort-du-cycliste-paul-varry-le-conducteur-libere-sous-bracelet-electronique_6802724_3224.html",
           "publishedAt": "2026-10-30T03:43:20.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/29/578/0/6926/3463/644/322/60/0/b4069c8_ftp-1-tbrjrwq5yos8-afp-d4vg4we.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -538,7 +605,7 @@
           "url": "https://www.ouest-france.fr/societe/police/ligpn-ouvre-une-enquete-apres-la-plainte-dun-elu-insoumis-qui-accuse-un-policier-de-lavoir-gaze-le-18-octobre-b8f043d4-d3e0-11f1-af78-2d36ec019942?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-10-29T21:54:50.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNTYwNTllZDcxMWU0Y2UzOTVhYWI5MGRkMmFhMTQ2Zjg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ae5eac57b2af2ce5e8d4417380095b76dff9f46112d659f1914e55c934b3fedb",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -577,277 +644,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 2,
       "summarizedAt": "2026-10-29T23:01:21.571Z"
-    },
-    {
-      "id": "4d6aa975adb5",
-      "slug": "l-inter-et-l-ac-milan-presentent-le-projet-de-leur-nouveau",
-      "title": "L'Inter et l'AC Milan présentent le projet de leur nouveau stade pour remplacer San Siro",
-      "createdAt": "2026-10-29T22:01:23.217Z",
-      "storyDay": "2026-10-29",
-      "articles": [
-        {
-          "id": "89274d0f566b",
-          "outletId": "ouest-france",
-          "headline": "Serie A. Les deux clubs de Milan présentent le Generali Stadium, destiné à remplacer San Siro",
-          "url": "https://www.ouest-france.fr/sport/football/equipe-italie/serie-a-les-deux-clubs-de-milan-presentent-le-generali-stadium-destine-a-remplacer-san-siro-1c7fe89c-d3db-11f1-81f2-0d14b9f9c452?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-29T21:17:37.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwOWE2NTBjYjQ2ODJhYzlkZGUwYjdjYTRhYWQ2ZTU0Y2Y?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=853633d884320071dc6d0080f049185e0895c671cdb23dd3b3764b9926cbed55",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "5523c5e23b55",
-          "outletId": "le-figaro",
-          "headline": "Serie A : San Siro, la fin d’une des cathédrales du football, l’Inter et l’AC Milan dévoilent leur futur stade",
-          "url": "https://www.lefigaro.fr/sports/football/serie-a-san-siro-la-fin-d-une-des-cathedrales-du-football-l-inter-et-l-ac-milan-devoilent-leur-futur-stade-20261029",
-          "publishedAt": "2026-10-29T20:56:28.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/29/1cd2d3450303e825ac4e9eab5aae6924297980f61b97441a106f0e2632a93d2f.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        }
-      ],
-      "topicId": "4d6aa975adb5",
-      "titledArticleCount": 2,
-      "section": "sport",
-      "everInEdition": true,
-      "summaries": {
-        "centre": [
-          "L'Inter et l'AC Milan ont dévoilé le projet du Generali Stadium ce jeudi 29 octobre.",
-          "Le nouveau stade doit remplacer San Siro pour la saison 2031-2032.",
-          "La nouvelle enceinte disposera d'une capacité de 71 500 places, contre 75 000 pour l'actuel stade Giuseppe-Meazza."
-        ],
-        "droite": [
-          "Les deux clubs milanais ont présenté jeudi leur projet de futur Generali Stadium prévu pour 2031.",
-          "Ce projet pharaonique entrainera la quasi-disparition du mythique San Siro."
-        ]
-      },
-      "differences": [
-        "Le centre livre un compte-rendu technique et factuel, détaillant la chronologie, le nom officiel et la jauge précise du futur stade.",
-        "La droite adopte un ton plus lyrique et nostalgique, qualifiant San Siro de « cathédrale du football » et décrivant le projet comme « pharaonique »."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 2,
-      "summarizedAt": "2026-10-29T22:01:23.217Z"
-    },
-    {
-      "id": "3eb27fe968b6",
-      "slug": "edouard-philippe-est-place-sous-le-statut-de-temoin-assiste",
-      "title": "Édouard Philippe placé sous le statut de témoin assisté dans l'enquête pour détournement de fonds publics au Havre",
-      "createdAt": "2026-10-29T21:01:20.894Z",
-      "storyDay": "2026-10-29",
-      "articles": [
-        {
-          "id": "5a1aea2652ac",
-          "outletId": "huffpost",
-          "headline": "Édouard Philippe placé sous le statut de témoin assisté dans une enquête pour détournement de fonds publics",
-          "url": "https://www.huffingtonpost.fr/politique/article/edouard-philippe-place-sous-le-statut-de-temoin-assiste-dans-une-enquete-pour-detournement-de-fonds-publics_347888.html",
-          "publishedAt": "2026-10-29T21:49:18.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/29/232/0/4453/2504/0/0/60/0/1e66940_upload-1-wfzo3ysf4dlq-afp-20261014-d3b32cp-v1-highres-france2027politicselection.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "758d027203c3",
-          "outletId": "france-24",
-          "headline": "Soupçons de détournement de fonds publics : Édouard Philippe placé sous le statut de témoin assisté",
-          "url": "https://www.france24.com/fr/france/20261029-soup%C3%A7ons-de-d%C3%A9tournement-de-fonds-publics-%C3%A9douard-philippe-plac%C3%A9-sous-le-statut-de-t%C3%A9moin-assist%C3%A9",
-          "publishedAt": "2026-10-29T21:09:57.000Z",
-          "imageUrl": "https://s.france24.com/media/display/7d92c268-bc01-11f1-8bef-177f79e345bf/w:1024/p:16x9/84109011edb91dfc4b0670eeca752d88a90ffe76.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "e4a76ee4286c",
-          "outletId": "franceinfo",
-          "headline": "Edouard Philippe placé sous le statut de témoin assisté dans une affaire de détournement de fonds publics, son avocat salue une \"décision favorable\"",
-          "url": "https://www.franceinfo.fr/politique/edouard-philippe/edouard-philippe-place-sous-le-statut-de-temoin-assiste-dans-une-affaire-de-detournement-de-fonds-publics-son-avocat-salue-une-decision-favorable_8259449.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-29T21:09:21.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/9XBeIEyhBCJ92SKNMLa4vvGl2rc/0x815:8256x5459/432x243/filters:format(jpg)/2026/10/29/6ae3b5fd88dbe389649483.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "a7648dd38ee6",
-          "outletId": "le-parisien",
-          "headline": "Accusations de détournement de fonds publics : Édouard Philippe placé sous le statut de témoin assisté",
-          "url": "https://www.leparisien.fr/politique/accusations-de-detournement-de-fonds-publics-edouard-philippe-place-sous-le-statut-de-temoin-assiste-29-10-2026-4NACFYRQMFD2JIUP6KBWO7KLHE.php",
-          "publishedAt": "2026-10-29T21:01:20.894Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "d9a1239a4806",
-          "outletId": "20-minutes",
-          "headline": "Edouard Philippe placé sous le statut de témoin assisté dans une affaire de détournement de fonds publics",
-          "url": "https://www.20minutes.fr/justice/4258786-20261029-edouard-philippe-place-sous-statut-temoin-assiste-affaire-detournement-fonds-publics?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-29T20:51:39.000Z",
-          "imageUrl": "https://img.20mn.fr/UWqbXUtdS8aL0wTSIPAMLik/1200x768_edouard-philippe-ancien-premier-ministre-francais-maire-du-havre-et-president-du-parti-politique-horizons-prononce-un-discours-lors-du-congres-du-parti-radical-parti-radical-a-dijon-france-dijon-11-octobre-2026-konrad-k-konrad-027-credit-konrad-k-sipa-2610111647",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "1ca4f2cc13ba",
-          "outletId": "le-monde",
-          "headline": "Edouard Philippe placé sous le statut de témoin assisté dans une enquête ouverte notamment pour détournement de fonds publics",
-          "url": "https://www.lemonde.fr/societe/article/2026/10/29/edouard-philippe-place-sous-le-statut-de-temoin-assiste-dans-une-enquete-ouverte-notamment-pour-detournement-de-fonds-publics_6802392_3224.html",
-          "publishedAt": "2026-10-29T20:50:29.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/22/505/0/4724/2362/644/322/60/0/9d75f9a_upload-1-x7mclzvbusrf-mmagnin-edouard-philippe-charleville-mezieres-29.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "fff0e4c2290d",
-          "outletId": "le-figaro",
-          "headline": "Accusations de détournement de fonds publics : Édouard Philippe placé sous le statut de témoin assisté",
-          "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/accusations-de-detournement-de-fonds-publics-edouard-philippe-place-sous-le-statut-de-temoin-assiste-20261029",
-          "publishedAt": "2026-10-29T20:49:53.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/29/262849f30aed6054ac044e00839927ab7d2d152a9cc2fb718ad6e06be93b34f2.JPG",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "05ef43df5d68",
-          "outletId": "liberation",
-          "headline": "Accusations de détournement de fonds publics : Edouard Philippe placé sous le statut de témoin assisté",
-          "url": "https://www.liberation.fr/politique/elections/accusations-de-detournement-de-fonds-publics-edouard-philippe-place-sous-le-statut-de-temoin-assiste-20261029_UWFAVBEB3JFJTOXIU74AZIPC6I/",
-          "publishedAt": "2026-10-29T20:48:58.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "88f828f969f6",
-          "outletId": "europe-1",
-          "headline": "Soupçons de détournement de fonds publics : Edouard Philippe placé sous le statut de témoin assisté",
-          "url": "https://www.europe1.fr/politique/soupcons-de-detournement-de-fonds-publics-edouard-philippe-place-sous-le-statut-de-temoin-assiste-1193133?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-29T20:45:33.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/29/21/000_d4vb263_1_6ae3afd5f3278.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "1698339012f9",
-          "outletId": "ouest-france",
-          "headline": "Édouard Philippe placé sous le statut de témoin assisté dans l’enquête pour détournement de fonds publics au Havre",
-          "url": "https://www.ouest-france.fr/politique/edouard-philippe/edouard-philippe-place-sous-le-statut-de-temoin-assiste-dans-lenquete-pour-detournement-de-fonds-publics-au-havre-e4e3aa7c-d3d5-11f1-af78-2d36ec019942?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-29T20:34:24.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYWJjY2Q4YTlhZGFlOTA5NjI2Y2RlOTk2NjEwZjZjMGQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=b9cd107f8323534bac650d92f88a574a3fe29410f544157f8fafedf0e357c735",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "3eb27fe968b6",
-      "titledArticleCount": 9,
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "L'ancien Premier ministre Édouard Philippe a été entendu toute la journée du jeudi 29 octobre par deux juges d'instruction financiers au tribunal.",
-          "Le maire du Havre et candidat à l'élection présidentielle de 2027 est ressorti sous le statut de témoin assisté dans une enquête concernant la gestion de la Cité numérique.",
-          "L'investigation englobe des soupçons de détournement de fonds publics, de favoritisme et de harcèlement moral.",
-          "L'avocat d'Édouard Philippe a salué une « décision favorable » confirmant selon lui l'absence de reproches légitimes envers son client."
-        ],
-        "centre": [
-          "Édouard Philippe a passé la journée de jeudi devant deux magistrats instructeurs financiers dans le cadre de poursuites le concernant.",
-          "L'édile du Havre s'est vu notifier le statut de témoin assisté, qualifié de moins incriminant qu'une mise en examen.",
-          "L'information judiciaire porte sur des infractions potentielles telles que le détournement de fonds publics et le favoritisme au sein de la communauté d'agglomération.",
-          "La défense de l'ancien chef du gouvernement a estimé qu'il s'agissait d'une décision positive démontrant l'innocence de l'élu."
-        ],
-        "droite": [
-          "Le maire du Havre et candidat Horizons a comparu toute la journée de jeudi devant des juges d'instruction financiers.",
-          "Il s'est vu attribuer le statut de témoin assisté dans le dossier judiciaire ouvert pour détournement de fonds publics, favoritisme et harcèlement moral.",
-          "Les investigations se concentrent sur des dysfonctionnements présumés au sein de la communauté d'agglomération de la ville.",
-          "Le conseil d'Édouard Philippe a qualifié l'issue de cette audition de « décision favorable », arguant qu'aucun élément ne pèse contre son mandant."
-        ]
-      },
-      "differences": [
-        "La gauche insiste explicitement sur le profil d'Édouard Philippe en tant que candidat déclaré à l'élection présidentielle de 2027 et détaille l'affaire spécifique de la Cité numérique.",
-        "Le centre adopte une perspective strictement institutionnelle et factuelle en insistant sur la technicité juridique du statut de témoin assisté par rapport à une mise en examen.",
-        "La droite se focalise principalement sur la régularité de la procédure financière et relaie en premier lieu les déclarations rassurantes de la défense sur l'absence de charges."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 9,
-      "summarizedAt": "2026-10-29T22:01:23.217Z"
-    },
-    {
-      "id": "8f158210eaf6",
-      "slug": "un-incendie-ravage-le-centre-ville-de-bergerac-sans-faire-de",
-      "title": "Un incendie ravage le centre-ville de Bergerac et fait planer un risque d'effondrement",
-      "createdAt": "2026-10-29T21:01:20.894Z",
-      "storyDay": "2026-10-29",
-      "articles": [
-        {
-          "id": "cd41109e4879",
-          "outletId": "tf1-info",
-          "headline": "Incendie à Bergerac : d'importants dégâts à déplorer",
-          "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-incendie-a-bergerac-d-importants-degats-a-deplorer-45424-2472838.html",
-          "publishedAt": "2026-10-29T21:35:11.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/incendie-a-bergerac-d-importants-degats-a-deplorer-ecadd0-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "1f58daba9f72",
-          "outletId": "le-parisien",
-          "headline": "« Un vrai miracle » : le vieux Bergerac ravagé par un encendie sans faire de blessé mais avec des risques d’effondrement",
-          "url": "https://www.leparisien.fr/dordogne-24/un-vrai-miracle-le-vieux-bergerac-ravage-par-un-encendie-sans-faire-de-blesse-mais-avec-des-risques-deffondrement-29-10-2026-LJ7EEVZDQVAF5DWQWWFN5XP6HY.php",
-          "publishedAt": "2026-10-29T21:01:20.894Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "63a743e43c76",
-          "outletId": "tf1-info",
-          "headline": "Incendie à Bergerac : risque d'effondrement en centre-ville",
-          "url": "https://www.tf1info.fr/regions/videos/video-incendie-a-bergerac-risque-d-effondrement-en-centre-ville-76725-2472821.html",
-          "publishedAt": "2026-10-29T20:25:14.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/incendie-a-bergerac-risque-d-effondrement-en-centre-ville-360e04-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "topicId": "8f158210eaf6",
-      "titledArticleCount": 3,
-      "section": "misc",
-      "everInEdition": true,
-      "summaries": {
-        "centre": [
-          "Un incendie majeur a ravagé le cœur historique de Bergerac, en Dordogne, sans faire aucun blessé.",
-          "Le sinistre fait peser de réels risques d'effondrement sur plusieurs bâtiments de la commune."
-        ],
-        "droite": [
-          "Un violent incendie a détruit 650 m2 de toitures et touché neuf immeubles dans le centre historique de Bergerac dans la nuit du 28 au 29 octobre.",
-          "Aucune victime n'est à déplorer, mais le maire qualifie la situation de « désastre patrimonial » et des chantiers de démolition sont envisagés."
-        ]
-      },
-      "differences": [
-        "Le centre insiste sur l'absence de blessés qualifiée de « vrai miracle » et sur la menace directe d'effondrement du vieux Bergerac.",
-        "La droite détaille précisément l'ampleur technique des dégâts matériels, mentionnant les surfaces calcinées et la menace de démolitions imminentes."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 3,
-      "summarizedAt": "2026-10-29T22:01:23.217Z"
     }
   ],
   "stories": [
@@ -5820,124 +5616,6 @@
       "summarizedAt": "2026-10-30T02:01:22.126Z"
     },
     {
-      "id": "028abcc7e2f2",
-      "slug": "au-moins-927-personnes-sans-abri-sont-mortes-en-france-en-2025",
-      "title": "Un collectif annonce qu'au moins 927 personnes sans-abri sont mortes en France en 2025",
-      "createdAt": "2026-10-29T08:01:21.679Z",
-      "storyDay": "2026-10-29",
-      "articles": [
-        {
-          "id": "a223cef8779d",
-          "outletId": "humanite",
-          "headline": "927 personnes sans domicile sont mortes en 2025, dont au moins 20 de moins de 15 ans, selon le collectif Les Morts de la Rue",
-          "url": "https://www.humanite.fr/societe/acces-au-logement/927-personnes-sans-domicile-sont-mortes-en-2025-dont-au-moins-20-de-moins-de-15-ans-selon-le-collectif-les-morts-de-la-rue",
-          "publishedAt": "2026-10-29T09:00:00.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/sdf-edited.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "c33754df5ebf",
-          "outletId": "le-parisien",
-          "headline": "« Un palier » mais « pas une baisse de la mortalité » : au moins 927 personnes sans-abri sont décédées en 2025, selon un collectif",
-          "url": "https://www.leparisien.fr/societe/un-palier-mais-pas-une-baisse-de-la-mortalite-au-moins-927-personnes-sans-abri-sont-decedees-en-2025-selon-un-collectif-29-10-2026-DDA4VIVMANGFLHXUVIFFWOTUQA.php",
-          "publishedAt": "2026-10-29T08:01:21.679Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "c1550be6709f",
-          "outletId": "cnews",
-          "headline": "Près de 1.000 personnes sans-abri sont décédées en France l'année dernière",
-          "url": "https://www.cnews.fr/france/2026-10-29/pres-de-1000-personnes-sans-abri-sont-decedees-en-france-lannee-derniere-1943883",
-          "publishedAt": "2026-10-29T07:56:00.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/068_aa_03062026_2810499-taille1200_6ae2ff1c05218.jpg?h=8d1442b3&itok=dyiZjP0W",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "f449567768d5",
-          "outletId": "le-figaro",
-          "headline": "Au moins 927 personnes sans-abri sont mortes en 2025, selon un collectif",
-          "url": "https://www.lefigaro.fr/actualite-france/au-moins-927-personnes-sans-abri-sont-mortes-en-2025-selon-un-collectif-20261029",
-          "publishedAt": "2026-10-29T07:44:24.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2002_crop/2026/10/29/2712cc56d5b8b5d835c4da21b9dc8647e7bf3aaa21ccbe62d49c1c9f5cf82c9e.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "88fb65b122e8",
-          "outletId": "tf1-info",
-          "headline": "Les décès de personnes sans-abri ont doublé en 14 ans : elles étaient âgées de 49 ans en moyenne",
-          "url": "https://www.tf1info.fr/societe/les-deces-de-personnes-sans-abri-ont-double-en-14-ans-elles-etaient-agees-de-49-ans-en-moyenne-2472635.html",
-          "publishedAt": "2026-10-29T07:10:07.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/681/sans-abri-france-illustration-bed1a8-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "b963cb734efb",
-          "outletId": "franceinfo",
-          "headline": "En 2025, 927 personnes sans domicile fixe sont mortes en France, selon le collectif \"Les Morts de la rue\"",
-          "url": "https://www.franceinfo.fr/societe/sdf/en-2025-927-personnes-sans-domicile-fixe-sont-mortes-en-france-selon-le-collectif-les-morts-de-la-rue_8256067.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-29T06:00:02.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/fgp7eAsQp-4SxaF5kK0ElBespyI/0x0:1024x576/432x243/filters:format(jpg)/2026/10/27/6ae0cd4a80c77715109735.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "f012c8d73b19",
-          "outletId": "liberation",
-          "headline": "En 2025, en France, 927 personnes sont mortes «sans chez-soi»",
-          "url": "https://www.liberation.fr/societe/logement/en-2025-en-france-927-personnes-sont-decedees-sans-chez-soi-20261029_X2OQRG4L2RD4TLQXD4DTIQ67UE/",
-          "publishedAt": "2026-10-29T05:00:01.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        }
-      ],
-      "topicId": "028abcc7e2f2",
-      "titledArticleCount": 7,
-      "section": "society",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le collectif Les Morts de la Rue a publié son rapport annuel le jeudi 29 octobre, indiquant qu'au moins 927 personnes sans domicile sont décédées en France en 2025.",
-          "Le bilan fait état d'au moins 20 victimes âgées de moins de 15 ans, selon les données de l'association.",
-          "Le nombre total de décès est jugé stable par rapport à 2024, mais il a été multiplié par deux en près de quinze ans, selon les précisions de Libération.",
-          "Les chiffres reposent uniquement sur les décès authentifiés par acte de décès, ce qui conduit franceinfo à souligner que la réalité est nécessairement pire."
-        ],
-        "centre": [
-          "Le collectif Les Morts de la Rue a rendu public son rapport annuel le jeudi 29 octobre concernant l'année 2025.",
-          "Le bilan dénombre au moins 927 personnes sans-abri décédées en France sur la période.",
-          "Le total est qualifié de palier et non d'une baisse de la mortalité par rapport aux 938 décès recensés en 2024.",
-          "Le rapport précise que les données ne sont ni exhaustives ni définitives, le collectif qualifiant son travail de plancher documenté."
-        ],
-        "droite": [
-          "Le rapport annuel du collectif Les Morts de la Rue, publié le jeudi 29 octobre, recense au moins 927 décès de personnes sans domicile en France en 2025.",
-          "Le chiffre est légèrement inférieur aux 938 décès enregistrés en 2024, marquant un palier après plusieurs années de hausse.",
-          "Le collectif et TF1 Info soulignent que la cause du décès est inconnue dans deux cas sur trois.",
-          "TF1 Info précise que les personnes décédées étaient âgées de 49 ans en moyenne et que le nombre de décès a doublé en 14 ans."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur le doublement de la mortalité en quinze ans et met en avant les enfants de moins de 15 ans décédés.",
-        "Le centre se concentre sur l'analyse chiffrée du palier atteint en 2025 sans y voir d'amélioration.",
-        "La droite met en avant le volume global proche du millier de morts et souligne l'absence de cause connue dans deux cas sur trois."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 7,
-      "summarizedAt": "2026-10-29T12:01:24.484Z"
-    },
-    {
       "id": "a8a09010432b",
       "slug": "un-helicoptere-de-la-force-europeenne-s-ecrase-en-bosnie-et",
       "title": "Un hélicoptère de la Force européenne s'écrase en Bosnie et fait quatre morts",
@@ -6244,6 +5922,124 @@
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 5,
+      "summarizedAt": "2026-10-29T12:01:24.484Z"
+    },
+    {
+      "id": "028abcc7e2f2",
+      "slug": "au-moins-927-personnes-sans-abri-sont-mortes-en-france-en-2025",
+      "title": "Un collectif annonce qu'au moins 927 personnes sans-abri sont mortes en France en 2025",
+      "createdAt": "2026-10-29T08:01:21.679Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "a223cef8779d",
+          "outletId": "humanite",
+          "headline": "927 personnes sans domicile sont mortes en 2025, dont au moins 20 de moins de 15 ans, selon le collectif Les Morts de la Rue",
+          "url": "https://www.humanite.fr/societe/acces-au-logement/927-personnes-sans-domicile-sont-mortes-en-2025-dont-au-moins-20-de-moins-de-15-ans-selon-le-collectif-les-morts-de-la-rue",
+          "publishedAt": "2026-10-29T09:00:00.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/sdf-edited.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "c33754df5ebf",
+          "outletId": "le-parisien",
+          "headline": "« Un palier » mais « pas une baisse de la mortalité » : au moins 927 personnes sans-abri sont décédées en 2025, selon un collectif",
+          "url": "https://www.leparisien.fr/societe/un-palier-mais-pas-une-baisse-de-la-mortalite-au-moins-927-personnes-sans-abri-sont-decedees-en-2025-selon-un-collectif-29-10-2026-DDA4VIVMANGFLHXUVIFFWOTUQA.php",
+          "publishedAt": "2026-10-29T08:01:21.679Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "c1550be6709f",
+          "outletId": "cnews",
+          "headline": "Près de 1.000 personnes sans-abri sont décédées en France l'année dernière",
+          "url": "https://www.cnews.fr/france/2026-10-29/pres-de-1000-personnes-sans-abri-sont-decedees-en-france-lannee-derniere-1943883",
+          "publishedAt": "2026-10-29T07:56:00.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/068_aa_03062026_2810499-taille1200_6ae2ff1c05218.jpg?h=8d1442b3&itok=dyiZjP0W",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "f449567768d5",
+          "outletId": "le-figaro",
+          "headline": "Au moins 927 personnes sans-abri sont mortes en 2025, selon un collectif",
+          "url": "https://www.lefigaro.fr/actualite-france/au-moins-927-personnes-sans-abri-sont-mortes-en-2025-selon-un-collectif-20261029",
+          "publishedAt": "2026-10-29T07:44:24.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2002_crop/2026/10/29/2712cc56d5b8b5d835c4da21b9dc8647e7bf3aaa21ccbe62d49c1c9f5cf82c9e.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "88fb65b122e8",
+          "outletId": "tf1-info",
+          "headline": "Les décès de personnes sans-abri ont doublé en 14 ans : elles étaient âgées de 49 ans en moyenne",
+          "url": "https://www.tf1info.fr/societe/les-deces-de-personnes-sans-abri-ont-double-en-14-ans-elles-etaient-agees-de-49-ans-en-moyenne-2472635.html",
+          "publishedAt": "2026-10-29T07:10:07.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/681/sans-abri-france-illustration-bed1a8-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "b963cb734efb",
+          "outletId": "franceinfo",
+          "headline": "En 2025, 927 personnes sans domicile fixe sont mortes en France, selon le collectif \"Les Morts de la rue\"",
+          "url": "https://www.franceinfo.fr/societe/sdf/en-2025-927-personnes-sans-domicile-fixe-sont-mortes-en-france-selon-le-collectif-les-morts-de-la-rue_8256067.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-29T06:00:02.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/fgp7eAsQp-4SxaF5kK0ElBespyI/0x0:1024x576/432x243/filters:format(jpg)/2026/10/27/6ae0cd4a80c77715109735.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "f012c8d73b19",
+          "outletId": "liberation",
+          "headline": "En 2025, en France, 927 personnes sont mortes «sans chez-soi»",
+          "url": "https://www.liberation.fr/societe/logement/en-2025-en-france-927-personnes-sont-decedees-sans-chez-soi-20261029_X2OQRG4L2RD4TLQXD4DTIQ67UE/",
+          "publishedAt": "2026-10-29T05:00:01.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        }
+      ],
+      "topicId": "028abcc7e2f2",
+      "titledArticleCount": 7,
+      "section": "society",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le collectif Les Morts de la Rue a publié son rapport annuel le jeudi 29 octobre, indiquant qu'au moins 927 personnes sans domicile sont décédées en France en 2025.",
+          "Le bilan fait état d'au moins 20 victimes âgées de moins de 15 ans, selon les données de l'association.",
+          "Le nombre total de décès est jugé stable par rapport à 2024, mais il a été multiplié par deux en près de quinze ans, selon les précisions de Libération.",
+          "Les chiffres reposent uniquement sur les décès authentifiés par acte de décès, ce qui conduit franceinfo à souligner que la réalité est nécessairement pire."
+        ],
+        "centre": [
+          "Le collectif Les Morts de la Rue a rendu public son rapport annuel le jeudi 29 octobre concernant l'année 2025.",
+          "Le bilan dénombre au moins 927 personnes sans-abri décédées en France sur la période.",
+          "Le total est qualifié de palier et non d'une baisse de la mortalité par rapport aux 938 décès recensés en 2024.",
+          "Le rapport précise que les données ne sont ni exhaustives ni définitives, le collectif qualifiant son travail de plancher documenté."
+        ],
+        "droite": [
+          "Le rapport annuel du collectif Les Morts de la Rue, publié le jeudi 29 octobre, recense au moins 927 décès de personnes sans domicile en France en 2025.",
+          "Le chiffre est légèrement inférieur aux 938 décès enregistrés en 2024, marquant un palier après plusieurs années de hausse.",
+          "Le collectif et TF1 Info soulignent que la cause du décès est inconnue dans deux cas sur trois.",
+          "TF1 Info précise que les personnes décédées étaient âgées de 49 ans en moyenne et que le nombre de décès a doublé en 14 ans."
+        ]
+      },
+      "differences": [
+        "La gauche insiste sur le doublement de la mortalité en quinze ans et met en avant les enfants de moins de 15 ans décédés.",
+        "Le centre se concentre sur l'analyse chiffrée du palier atteint en 2025 sans y voir d'amélioration.",
+        "La droite met en avant le volume global proche du millier de morts et souligne l'absence de cause connue dans deux cas sur trois."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 7,
       "summarizedAt": "2026-10-29T12:01:24.484Z"
     },
     {
@@ -6856,7 +6652,7 @@
           "url": "https://www.lefigaro.fr/international/a-quelques-jours-des-midterms-donald-trump-annule-ses-meetings-du-week-end-20261030",
           "publishedAt": "2026-10-30T00:13:26.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2004_crop/2026/10/30/9c650c76c5d46b246f5161b51b35faa9225a7200bb9cc64896b56e17f3f84107.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -7078,130 +6874,69 @@
       "summarizedAt": "2026-10-30T00:01:25.670Z"
     },
     {
-      "id": "c8f1eeca9fa9",
-      "slug": "l-union-europeenne-et-le-canada-tiennent-un-sommet-pour",
-      "title": "L'Union européenne et le Canada tiennent un sommet pour renforcer leur rapprochement",
-      "createdAt": "2026-10-29T04:01:16.305Z",
+      "id": "c7eb36613bc4",
+      "slug": "onze-pays-de-l-ue-liberent-42-6-millions-de-barils-de-petrole",
+      "title": "Onze pays de l'UE libèrent 42,6 millions de barils de pétrole pour stabiliser les prix du gazole",
+      "createdAt": "2026-10-30T05:01:19.675Z",
       "storyDay": "2026-10-29",
       "articles": [
         {
-          "id": "ca03d51919ed",
-          "outletId": "le-figaro",
-          "headline": "«Construire le partenariat le plus étroit que nous ayons jamais établi» : un sommet entre l’UE et le Canada jeudi et vendredi à Montéral",
-          "url": "https://www.lefigaro.fr/conjoncture/construire-le-partenariat-le-plus-etroit-que-nous-ayons-jamais-etabli-un-sommet-entre-l-ue-et-le-canada-jeudi-et-vendredi-a-monteral-20261029",
-          "publishedAt": "2026-10-29T06:47:32.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2455x1637_crop/2026/10/29/4b9251d3834587b0b5185df531678b33b0514dec97dc57b4be647d94d5725303.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "688f983c344e",
+          "id": "4cf8b82e5cdc",
           "outletId": "bfmtv",
-          "headline": "Un sommet entre l'UE et le Canada pour sceller \"le partenariat le plus étroit que nous ayons jamais établi avec un pays non-européen\"",
-          "url": "https://www.bfmtv.com/economie/economie-social/union-europeenne/un-sommet-entre-l-ue-et-le-canada-pour-sceller-le-partenariat-le-plus-etroit-que-nous-ayons-jamais-etabli-avec-un-pays-non-europeen_AD-202610290099.html",
-          "publishedAt": "2026-10-29T05:25:13.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/nc1a3eF4vsUDvxZujPZkMMN3T5k=/0x112:2048x1264/800x0/images/Carney-Costa-Von-der-Leyen-2347381.jpg",
+          "headline": "Un coup de pouce de 12 à 18 centimes par litre: comment le gouvernement espère faire baisser le prix du gazole dès le 1er novembre en libérant 10 millions de barils des stocks stratégiques",
+          "url": "https://www.bfmtv.com/economie/entreprises/energie/un-coup-de-pouce-de-12-a-18-centimes-par-litre-comment-le-gouvernement-espere-faire-baisser-le-prix-du-gazole-des-le-1er-novembre-en-liberant-10-millions-de-barils-des-stocks-strategiques_AV-202610300093.html",
+          "publishedAt": "2026-10-30T04:59:22.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/_ATjuzvdToCkQm1EZz6MwJhOEFI=/0x107:2048x1259/800x0/images/Carburant-2353268.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "world"
+          "section": "economy"
         },
         {
-          "id": "2bfa7c4e9b0c",
-          "outletId": "cnews",
-          "headline": "Sommet UE-Canada : «membre associé», défense, commerce... Comment le pays va-t-il collaborer avec l'Europe ?",
-          "url": "https://www.cnews.fr/monde/2026-10-29/sommet-ue-canada-membre-associe-defense-commerce-comment-le-pays-va-t-il",
-          "publishedAt": "2026-10-29T05:17:29.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/afp_photo_european_union_christophe_licoppe_6ae20c3df062c.jpg?itok=zvh0XnnA",
-          "frontPage": false,
+          "id": "9ba1fb4b8444",
+          "outletId": "le-monde",
+          "headline": "Crise énergétique : onze pays de l’UE vont libérer 42,6 millions de barils de pétrole afin de stabiliser les prix du gazole avant l’hiver",
+          "url": "https://www.lemonde.fr/economie/article/2026/10/30/crise-energetique-onze-pays-de-l-ue-vont-liberer-42-6-millions-de-barils-de-petrole-afin-de-stabiliser-les-prix-du-gazole-avant-l-hiver_6802691_3234.html",
+          "publishedAt": "2026-10-30T03:21:07.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/29/129/0/5598/2799/644/322/60/0/cbf580d_ftp-1-ml8arwrrej3i-afp-d4v37c7.jpg",
+          "frontPage": true,
           "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "91c9f347fac0",
-          "outletId": "liberation",
-          "headline": "Sommet UE-Canada : une «occasion en or» pour définir l’alliance entre Bruxelles et Ottawa",
-          "url": "https://www.liberation.fr/international/europe/sommet-ue-canada-une-occasion-en-or-pour-definir-lalliance-entre-bruxelles-et-ottawa-20261029_6F5CT75MWJFPHKFSRRHMSRZM6Q/",
-          "publishedAt": "2026-10-29T04:18:00.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "3417a3356d05",
-          "outletId": "courrier-international",
-          "headline": "Sommet Canada-UE : vous êtes plutôt “membre associé” ou “alliance de l’avenir” ?",
-          "url": "https://www.courrierinternational.com/article/diplomatie-sommet-canada-ue-vous-etes-plutot-membre-associe-ou-alliance-de-l-avenir_282069",
-          "publishedAt": "2026-10-29T04:00:18.000Z",
-          "imageUrl": "https://focus.courrierinternational.com/2026/09/17/0/0/3440/2288/644/0/60/0/ddbeb53_ftp-1-wp2jxpadjizb-2026-09-17t111835z-1547500559-rc2yknabxx4o-rtrmadp-3-eu-canada.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "77ccf14a76ad",
-          "outletId": "rfi",
-          "headline": "UE-Canada: un sommet pour renforcer le rapprochement entre Bruxelles et Ottawa",
-          "url": "https://www.rfi.fr/fr/europe/20261029-ue-canada-un-sommet-pour-renforcer-le-rapprochement-entre-bruxelles-et-ottawa",
-          "publishedAt": "2026-10-29T03:42:51.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/9f523cd0-d326-11f1-a375-75c7729144f1/w:1024/p:16x9/000-C8KT6UA.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "e3bd6a399e15",
-          "outletId": "20-minutes",
-          "headline": "Trump, minerais… On vous résume les enjeux du sommet entre l’Union européenne et le Canada",
-          "url": "https://www.20minutes.fr/monde/canada/4258471-20261029-trump-minerais-resume-enjeux-sommet-entre-union-europeenne-canada?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-29T03:12:31.000Z",
-          "imageUrl": "https://img.20mn.fr/3Vwq7xOIQQGBKPBy0ZkiHyk/1200x768_dossier-le-premier-ministre-canadien-mark-carney-a-l-avant-gauche-s-entretient-avec-la-presidente-de-la-commission-europeenne-ursula-von-der-leyen-au-parlement-europeen-de-strasbourg-dans-l-est-de-la-france-le-17-septembre-2026-ap-photo-pascal-bastien-dossier-flms102-26264053021764-file-2609210351",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
+          "section": "economy",
           "everFrontPage": true
         },
         {
-          "id": "99bfac701d5f",
-          "outletId": "france-24",
-          "headline": "L'UE et le Canada entament un sommet pour sceller un rapprochement inédit",
-          "url": "https://www.france24.com/fr/europe/20261029-ue-canada-entament-sommet-rapprochement-inedit-von-der-leyen-mark-carney",
-          "publishedAt": "2026-10-29T00:13:06.000Z",
-          "imageUrl": "https://s.france24.com/media/display/de478f98-d32c-11f1-b496-47de50b3c1e4/w:1024/p:16x9/AP26264053021764.jpg",
+          "id": "f3e338206c8b",
+          "outletId": "liberation",
+          "headline": "Crise des carburants : onze pays de l’UE vont libérer 42,6 millions de barils de pétrole, dont la moitié de gazole",
+          "url": "https://www.liberation.fr/international/europe/crise-des-carburants-douze-pays-de-lue-vont-liberer-426-millions-de-barils-de-petrole-dont-la-moitie-de-gazole-20261029_IIUBYMLTFRENBGOYP22V5PFWVY/",
+          "publishedAt": "2026-10-29T21:00:46.000Z",
           "frontPage": false,
           "kind": "news",
-          "section": "world"
+          "section": "economy"
         }
       ],
-      "topicId": "c8f1eeca9fa9",
-      "titledArticleCount": 7,
-      "section": "world",
+      "topicId": "c7eb36613bc4",
+      "titledArticleCount": 3,
+      "section": "economy",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Libération souligne que le sommet bilatéral de Montréal du 29 au 30 octobre constitue une occasion historique pour structurer le partenariat entre Bruxelles et Ottawa.",
-          "20 Minutes met en avant le rôle central du contexte géopolitique, marqué par la pression de Donald Trump et la coopération sur les minerais, dans ce rapprochement transatlantique.",
-          "Les médias de gauche s'attardent sur le projet encore imprécis d'octroyer au Canada le statut inédit de membre associé du bloc européen."
+          "Onze pays de l'Union européenne ont décidé de puiser dans leurs réserves stratégiques d'ici fin janvier.",
+          "Cette mesure se traduit par la libération de 42,6 millions de barils de pétrole, dont la moitié spécifiquement en gazole.",
+          "L'objectif affiché est de stabiliser les tarifs avant l'hiver dans un contexte où le gazole dépasse 2,30 euros le litre, sans que Bruxelles ne craigne de pénurie d'approvisionnement."
         ],
         "centre": [
-          "BFMTV rapporte que le Canada et l'Union européenne lancent à Montréal le partenariat le plus étroit jamais conclu avec un pays tiers, favorisé par le retour de Donald Trump.",
-          "Courrier international et RFI indiquent que si les relations économiques et diplomatiques sont excellentes, de nombreux sujets stratégiques comme la défense et les minerais font l'objet de négociations serrées.",
-          "France 24 précise que face aux réticences de l'Allemagne et d'autres États membres, la qualification de membre associé pourrait finalement être abandonnée."
-        ],
-        "droite": [
-          "CNews analyse le sommet de Montréal comme une alliance stratégique destinée à contrer l'influence américaine et chinoise sur la scène internationale.",
-          "La droite met en lumière l'élargissement de la coopération bilatérale à des secteurs clés tels que le commerce numérique, l'exploitation minière et la guerre en Ukraine.",
-          "Le média note que l'intégration du Canada comme membre associé des Vingt-Sept fait partie des pistes évoquées pour sceller ce rapprochement."
+          "Onze pays européens vont libérer 42,6 millions de barils de pétrole pour stabiliser les prix du gazole avant l'hiver.",
+          "Le gouvernement français promet une baisse des prix à la pompe dès le 1er novembre grâce à la libération de 10 millions de barils issus des stocks stratégiques.",
+          "Ces volumes vendus sous les prix du marché doivent permettre aux consommateurs finaux d'économiser entre 12 et 18 centimes par litre."
         ]
       },
       "differences": [
-        "La gauche privilégie une approche prudente en insistant sur le caractère encore flou et les ambitions diplomatiques du statut de membre associé.",
-        "Le centre adopte une couverture factuelle et exhaustive des enjeux économiques, tout en soulignant les tensions géopolitiques avec les États-Unis et les divergences internes à l'UE.",
-        "La droite dramatise l'enjeu en qualifiant la rencontre de véritable mariage destiné à rééquilibrer la domination des grandes puissances mondiales."
+        "La gauche met l'accent sur l'ampleur européenne de la crise des carburants et la proportion de gazole concernée face à des tarifs dépassant 2,30 euros le litre.",
+        "Le centre focalise son traitement sur le calendrier national immédiat et l'estimation chiffrée des économies concrètes pour le pouvoir d'achat dès le 1er novembre."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 7,
-      "summarizedAt": "2026-10-29T06:01:25.736Z"
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-10-30T05:01:19.675Z"
     },
     {
       "id": "040525f72e3b",
@@ -7217,7 +6952,7 @@
           "url": "https://www.lemonde.fr/societe/article/2026/10/30/mort-du-cycliste-paul-varry-le-conducteur-libere-sous-bracelet-electronique_6802724_3224.html",
           "publishedAt": "2026-10-30T03:43:20.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/29/578/0/6926/3463/644/322/60/0/b4069c8_ftp-1-tbrjrwq5yos8-afp-d4vg4we.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -7268,6 +7003,96 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 3,
       "summarizedAt": "2026-10-30T04:01:17.462Z"
+    },
+    {
+      "id": "386242e5af4e",
+      "slug": "le-bitcoin-chute-apres-des-signalements-de-mouvements-suspects",
+      "title": "Le bitcoin chute après le piratage massif de la plateforme Binance et le gel de milliards de dollars",
+      "createdAt": "2026-10-30T00:01:25.670Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "4d5986538fba",
+          "outletId": "france-24",
+          "headline": "Cryptomonnaies : une cyberattaque massive pousse Binance à geler 2,5 milliards de dollars",
+          "url": "https://www.france24.com/fr/%C3%A9co-tech/20261030-cryptomonnaies-binance-cyberattaque-massive-gel-2-5-milliards-de-dollars-bitcoin-ether",
+          "publishedAt": "2026-10-30T03:15:02.000Z",
+          "imageUrl": "https://s.france24.com/media/display/9baaa84a-9069-11ee-a55a-005056bfb2b6/w:1024/p:16x9/2023-11-24T134442Z_540451245_RC2OJ4ABFUX9_RTRMADP_3_FINTECH-BINANCE-TENG.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "effd464db49e",
+          "outletId": "le-figaro",
+          "headline": "Fonds gelés, près de 6 milliards de dollars volés, cyberattaque massive : le piratage de la plateforme Binance plonge le secteur des cryptos dans la panique",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/fonds-geles-pres-de-6-milliards-de-dollars-voles-cyberattaque-massive-le-piratage-de-la-plateforme-binance-plonge-le-secteur-des-cryptos-dans-la-panique-20261030",
+          "publishedAt": "2026-10-30T02:32:47.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1715_crop/2026/10/30/b9f29efb47af69a15d583e70281315c79e29f0baba2b574d68cfcda0e8ef912e.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "43edd5228149",
+          "outletId": "le-parisien",
+          "headline": "Le Bitcoin en chute après le piratage d’une des principales plateformes d’échange de cryptomonnaies",
+          "url": "https://www.leparisien.fr/economie/le-bitcoin-en-chute-apres-un-piratage-dune-des-principales-plateformes-dechange-30-10-2026-DUSTOHBPRBBHPI7CSMHO6GRDEE.php",
+          "publishedAt": "2026-10-30T00:01:25.670Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "f9b8fbd8ad76",
+          "outletId": "le-figaro",
+          "headline": "La plateforme de cryptomonnaies Binance enquête sur un éventuel «problème de sécurité» après des signalements de mouvements suspects",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/la-plateforme-de-cryptomonnaies-binance-enquete-sur-un-eventuel-probleme-de-securite-apres-des-signalements-de-mouvements-suspects-20261029",
+          "publishedAt": "2026-10-29T22:56:40.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2002_crop/2026/10/29/2dc6de4a9cedf02b70efe7141b0d7d3fe3ff9001166a041480e1b5242447522d.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "8e6897d93454",
+          "outletId": "le-figaro",
+          "headline": "Le bitcoin dévisse après des rumeurs de cyberattaque massive sur la plateforme de cryptomonnaies Binance",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/le-bitcoin-devisse-apres-des-rumeurs-de-cyberattaque-massive-sur-la-plateforme-de-cryptomonnaies-binance-20261029",
+          "publishedAt": "2026-10-29T22:49:00.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2082_crop/2026/10/29/efd3f3d6352f06f84de6effb197145ae3bd2081a71dd9ef2f84cc1352b721cdc.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "386242e5af4e",
+      "titledArticleCount": 5,
+      "section": "economy",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "La plateforme Binance a suspendu temporairement ses dépôts et retraits après une cyberattaque estimée à 2,54 milliards de dollars de fonds gelés.",
+          "Le cabinet Chainalysis évalue le montant total des fonds volés à environ 5,9 milliards de dollars tandis que l'entreprise promet de couvrir l'intégralité des pertes.",
+          "Cet incident informatique majeur entraîne directement une chute de la valeur du bitcoin et perturbe le marché des monnaies numériques."
+        ],
+        "droite": [
+          "Près de 6 milliards de dollars ont été transférés de la plateforme Binance vers un programme inconnu en l'espace de quarante minutes.",
+          "Le secteur des cryptomonnaies fait face à une panique générale à la suite de cette cyberattaque massive et du gel des avoirs.",
+          "Le bitcoin dévisse nettement sur les marchés alors que Binance communique initialement sur la sécurité des fonds et diligente une enquête."
+        ]
+      },
+      "differences": [
+        "Le camp centre adopte une approche factuelle et institutionnelle en privilégiant les montants officiels gelés et les mesures de compensation annoncées par la plateforme.",
+        "Le camp droite dramatise l'événement en mettant en avant la panique sectorielle, la rapidité du transfert des fonds et le vocabulaire de la crise."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-10-30T05:01:19.675Z"
     },
     {
       "id": "0ff786a0bc0c",
@@ -7353,7 +7178,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/10/30/quatre-petroliers-en-feu-apres-des-explosions-de-mines-dans-le-detroit-d-ormuz_6802559_3210.html",
           "publishedAt": "2026-10-30T01:52:20.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/24/558/0/6000/3000/644/322/60/0/7696200_ftp-1-9byb8hgy4kna-a0c69cab2d2341bb8b0288201da85f96-0-0f47b95ff8ef4a2a951bed2ac4b7dbc0.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -8007,6 +7832,132 @@
       "summarizedAt": "2026-10-29T12:01:24.484Z"
     },
     {
+      "id": "c8f1eeca9fa9",
+      "slug": "l-union-europeenne-et-le-canada-tiennent-un-sommet-pour",
+      "title": "L'Union européenne et le Canada tiennent un sommet pour renforcer leur rapprochement",
+      "createdAt": "2026-10-29T04:01:16.305Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "ca03d51919ed",
+          "outletId": "le-figaro",
+          "headline": "«Construire le partenariat le plus étroit que nous ayons jamais établi» : un sommet entre l’UE et le Canada jeudi et vendredi à Montéral",
+          "url": "https://www.lefigaro.fr/conjoncture/construire-le-partenariat-le-plus-etroit-que-nous-ayons-jamais-etabli-un-sommet-entre-l-ue-et-le-canada-jeudi-et-vendredi-a-monteral-20261029",
+          "publishedAt": "2026-10-29T06:47:32.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2455x1637_crop/2026/10/29/4b9251d3834587b0b5185df531678b33b0514dec97dc57b4be647d94d5725303.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "688f983c344e",
+          "outletId": "bfmtv",
+          "headline": "Un sommet entre l'UE et le Canada pour sceller \"le partenariat le plus étroit que nous ayons jamais établi avec un pays non-européen\"",
+          "url": "https://www.bfmtv.com/economie/economie-social/union-europeenne/un-sommet-entre-l-ue-et-le-canada-pour-sceller-le-partenariat-le-plus-etroit-que-nous-ayons-jamais-etabli-avec-un-pays-non-europeen_AD-202610290099.html",
+          "publishedAt": "2026-10-29T05:25:13.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/nc1a3eF4vsUDvxZujPZkMMN3T5k=/0x112:2048x1264/800x0/images/Carney-Costa-Von-der-Leyen-2347381.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "2bfa7c4e9b0c",
+          "outletId": "cnews",
+          "headline": "Sommet UE-Canada : «membre associé», défense, commerce... Comment le pays va-t-il collaborer avec l'Europe ?",
+          "url": "https://www.cnews.fr/monde/2026-10-29/sommet-ue-canada-membre-associe-defense-commerce-comment-le-pays-va-t-il",
+          "publishedAt": "2026-10-29T05:17:29.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/afp_photo_european_union_christophe_licoppe_6ae20c3df062c.jpg?itok=zvh0XnnA",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "91c9f347fac0",
+          "outletId": "liberation",
+          "headline": "Sommet UE-Canada : une «occasion en or» pour définir l’alliance entre Bruxelles et Ottawa",
+          "url": "https://www.liberation.fr/international/europe/sommet-ue-canada-une-occasion-en-or-pour-definir-lalliance-entre-bruxelles-et-ottawa-20261029_6F5CT75MWJFPHKFSRRHMSRZM6Q/",
+          "publishedAt": "2026-10-29T04:18:00.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "3417a3356d05",
+          "outletId": "courrier-international",
+          "headline": "Sommet Canada-UE : vous êtes plutôt “membre associé” ou “alliance de l’avenir” ?",
+          "url": "https://www.courrierinternational.com/article/diplomatie-sommet-canada-ue-vous-etes-plutot-membre-associe-ou-alliance-de-l-avenir_282069",
+          "publishedAt": "2026-10-29T04:00:18.000Z",
+          "imageUrl": "https://focus.courrierinternational.com/2026/09/17/0/0/3440/2288/644/0/60/0/ddbeb53_ftp-1-wp2jxpadjizb-2026-09-17t111835z-1547500559-rc2yknabxx4o-rtrmadp-3-eu-canada.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "77ccf14a76ad",
+          "outletId": "rfi",
+          "headline": "UE-Canada: un sommet pour renforcer le rapprochement entre Bruxelles et Ottawa",
+          "url": "https://www.rfi.fr/fr/europe/20261029-ue-canada-un-sommet-pour-renforcer-le-rapprochement-entre-bruxelles-et-ottawa",
+          "publishedAt": "2026-10-29T03:42:51.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/9f523cd0-d326-11f1-a375-75c7729144f1/w:1024/p:16x9/000-C8KT6UA.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "e3bd6a399e15",
+          "outletId": "20-minutes",
+          "headline": "Trump, minerais… On vous résume les enjeux du sommet entre l’Union européenne et le Canada",
+          "url": "https://www.20minutes.fr/monde/canada/4258471-20261029-trump-minerais-resume-enjeux-sommet-entre-union-europeenne-canada?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-29T03:12:31.000Z",
+          "imageUrl": "https://img.20mn.fr/3Vwq7xOIQQGBKPBy0ZkiHyk/1200x768_dossier-le-premier-ministre-canadien-mark-carney-a-l-avant-gauche-s-entretient-avec-la-presidente-de-la-commission-europeenne-ursula-von-der-leyen-au-parlement-europeen-de-strasbourg-dans-l-est-de-la-france-le-17-septembre-2026-ap-photo-pascal-bastien-dossier-flms102-26264053021764-file-2609210351",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "99bfac701d5f",
+          "outletId": "france-24",
+          "headline": "L'UE et le Canada entament un sommet pour sceller un rapprochement inédit",
+          "url": "https://www.france24.com/fr/europe/20261029-ue-canada-entament-sommet-rapprochement-inedit-von-der-leyen-mark-carney",
+          "publishedAt": "2026-10-29T00:13:06.000Z",
+          "imageUrl": "https://s.france24.com/media/display/de478f98-d32c-11f1-b496-47de50b3c1e4/w:1024/p:16x9/AP26264053021764.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "c8f1eeca9fa9",
+      "titledArticleCount": 7,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Libération souligne que le sommet bilatéral de Montréal du 29 au 30 octobre constitue une occasion historique pour structurer le partenariat entre Bruxelles et Ottawa.",
+          "20 Minutes met en avant le rôle central du contexte géopolitique, marqué par la pression de Donald Trump et la coopération sur les minerais, dans ce rapprochement transatlantique.",
+          "Les médias de gauche s'attardent sur le projet encore imprécis d'octroyer au Canada le statut inédit de membre associé du bloc européen."
+        ],
+        "centre": [
+          "BFMTV rapporte que le Canada et l'Union européenne lancent à Montréal le partenariat le plus étroit jamais conclu avec un pays tiers, favorisé par le retour de Donald Trump.",
+          "Courrier international et RFI indiquent que si les relations économiques et diplomatiques sont excellentes, de nombreux sujets stratégiques comme la défense et les minerais font l'objet de négociations serrées.",
+          "France 24 précise que face aux réticences de l'Allemagne et d'autres États membres, la qualification de membre associé pourrait finalement être abandonnée."
+        ],
+        "droite": [
+          "CNews analyse le sommet de Montréal comme une alliance stratégique destinée à contrer l'influence américaine et chinoise sur la scène internationale.",
+          "La droite met en lumière l'élargissement de la coopération bilatérale à des secteurs clés tels que le commerce numérique, l'exploitation minière et la guerre en Ukraine.",
+          "Le média note que l'intégration du Canada comme membre associé des Vingt-Sept fait partie des pistes évoquées pour sceller ce rapprochement."
+        ]
+      },
+      "differences": [
+        "La gauche privilégie une approche prudente en insistant sur le caractère encore flou et les ambitions diplomatiques du statut de membre associé.",
+        "Le centre adopte une couverture factuelle et exhaustive des enjeux économiques, tout en soulignant les tensions géopolitiques avec les États-Unis et les divergences internes à l'UE.",
+        "La droite dramatise l'enjeu en qualifiant la rencontre de véritable mariage destiné à rééquilibrer la domination des grandes puissances mondiales."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 7,
+      "summarizedAt": "2026-10-29T06:01:25.736Z"
+    },
+    {
       "id": "6c6fb408dc23",
       "slug": "la-coree-du-nord-tire-une-dizaine-de-missiles-balistiques-vers",
       "title": "La Corée du Nord tire une dizaine de missiles balistiques vers la mer du Japon",
@@ -8072,81 +8023,58 @@
       "summarizedAt": "2026-10-29T07:01:28.162Z"
     },
     {
-      "id": "386242e5af4e",
-      "slug": "le-bitcoin-chute-apres-des-signalements-de-mouvements-suspects",
-      "title": "Le bitcoin chute après des signalements de mouvements suspects et un piratage sur la plateforme Binance",
-      "createdAt": "2026-10-30T00:01:25.670Z",
-      "storyDay": "2026-10-29",
+      "id": "46c14c09606f",
+      "slug": "l-australienne-erin-patterson-voit-sa-peine-alourdie-apres-sa",
+      "title": "L'Australienne Erin Patterson voit sa peine alourdie après sa condamnation pour empoisonnement aux champignons",
+      "createdAt": "2026-10-30T05:01:19.675Z",
+      "storyDay": "2026-10-30",
       "articles": [
         {
-          "id": "effd464db49e",
+          "id": "083d009d0180",
           "outletId": "le-figaro",
-          "headline": "Fonds gelés, près de 6 milliards de dollars volés, cyberattaque massive : le piratage de la plateforme Binance plonge le secteur des cryptos dans la panique",
-          "url": "https://www.lefigaro.fr/secteur/high-tech/fonds-geles-pres-de-6-milliards-de-dollars-voles-cyberattaque-massive-le-piratage-de-la-plateforme-binance-plonge-le-secteur-des-cryptos-dans-la-panique-20261030",
-          "publishedAt": "2026-10-30T02:32:47.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1715_crop/2026/10/30/b9f29efb47af69a15d583e70281315c79e29f0baba2b574d68cfcda0e8ef912e.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "43edd5228149",
-          "outletId": "le-parisien",
-          "headline": "Le Bitcoin en chute après le piratage d’une des principales plateformes d’échange de cryptomonnaies",
-          "url": "https://www.leparisien.fr/economie/le-bitcoin-en-chute-apres-un-piratage-dune-des-principales-plateformes-dechange-30-10-2026-DUSTOHBPRBBHPI7CSMHO6GRDEE.php",
-          "publishedAt": "2026-10-30T00:01:25.670Z",
+          "headline": "Australie : Erin Patterson, l'empoisonneuse aux champignons, voit sa peine alourdie",
+          "url": "https://www.lefigaro.fr/international/australie-erin-patterson-l-empoisonneuse-aux-champignons-voit-sa-peine-alourdie-20261030",
+          "publishedAt": "2026-10-30T04:20:29.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2108x1407_crop/2026/10/30/d4ebad1cb00a3cfb3d52d9fa4da07dfe1a1860b00b9906d76facef7ab770b440.jpg",
           "frontPage": false,
-          "datedAtCollection": true,
           "kind": "news",
-          "section": "economy"
+          "section": "misc"
         },
         {
-          "id": "f9b8fbd8ad76",
-          "outletId": "le-figaro",
-          "headline": "La plateforme de cryptomonnaies Binance enquête sur un éventuel «problème de sécurité» après des signalements de mouvements suspects",
-          "url": "https://www.lefigaro.fr/secteur/high-tech/la-plateforme-de-cryptomonnaies-binance-enquete-sur-un-eventuel-probleme-de-securite-apres-des-signalements-de-mouvements-suspects-20261029",
-          "publishedAt": "2026-10-29T22:56:40.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2002_crop/2026/10/29/2dc6de4a9cedf02b70efe7141b0d7d3fe3ff9001166a041480e1b5242447522d.jpg",
+          "id": "86403eac0753",
+          "outletId": "ouest-france",
+          "headline": "Empoisonnement aux champignons : l’Australienne voit sa peine alourdie après un procès en appel",
+          "url": "https://www.ouest-france.fr/monde/australie/empoisonnement-aux-champignons-laustralienne-voit-sa-peine-alourdie-apres-un-proces-en-appel-104ec11c-d3f7-11f1-af78-2d36ec019942?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-30T00:41:23.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwOGNiYmU5MjY0NTYwZjY0Y2Q3YTgyZTFkMjA1NzU1YjE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1f4b84928fc1735f8f02d8236969f537d61df2be2a843732c29bfc679657f56e",
           "frontPage": true,
           "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "8e6897d93454",
-          "outletId": "le-figaro",
-          "headline": "Le bitcoin dévisse après des rumeurs de cyberattaque massive sur la plateforme de cryptomonnaies Binance",
-          "url": "https://www.lefigaro.fr/secteur/high-tech/le-bitcoin-devisse-apres-des-rumeurs-de-cyberattaque-massive-sur-la-plateforme-de-cryptomonnaies-binance-20261029",
-          "publishedAt": "2026-10-29T22:49:00.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2082_crop/2026/10/29/efd3f3d6352f06f84de6effb197145ae3bd2081a71dd9ef2f84cc1352b721cdc.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "economy",
+          "section": "misc",
           "everFrontPage": true
         }
       ],
-      "topicId": "386242e5af4e",
-      "titledArticleCount": 4,
-      "section": "economy",
+      "topicId": "46c14c09606f",
+      "titledArticleCount": 2,
+      "section": "misc",
       "everInEdition": true,
       "summaries": {
         "centre": [
-          "Le Bitcoin enregistre une baisse marquée suite au piratage de la plateforme d'échange Binance."
+          "L'Australienne Erin Patterson voit sa peine alourdie en appel à l'issue de son procès.",
+          "La condamnation initiale prévoyait une période de sûreté de trente-trois ans avant une libération conditionnelle."
         ],
         "droite": [
-          "La plateforme Binance fait l'objet d'une enquête après des signalements de mouvements suspects et une cyberattaque massive.",
-          "Près de 6 milliards de dollars auraient été dérobés en l'espace de quarante minutes, provoquant la panique sur le marché des cryptomonnaies.",
-          "Binance affirme dans un communiqué que les fonds des utilisateurs restent en sécurité et totalement à l'abri."
+          "Erin Patterson, surnommée l'empoisonneuse aux champignons, a vu sa peine alourdie en Australie.",
+          "Elle avait préparé un bœuf Wellington agrémenté d'amanites phalloïdes, l'un des champignons les plus vénéneux, pour sa belle-famille.",
+          "Le drame a causé la mort de trois personnes, tandis qu'un invité a réchappé à l'intoxication."
         ]
       },
       "differences": [
-        "Le camp centre se limite à une mention factuelle et sobre de la baisse du Bitcoin consécutive à l'incident de sécurité.",
-        "Le camp droite livre un récit détaillé et alarmiste de la cyberattaque, insistant sur l'ampleur colossale des montants en jeu et la panique générée."
+        "Le centre, représenté par Ouest-France, se focalise sur la procédure judiciaire et la décision de la cour d'appel concernant la durée de la peine.",
+        "La droite, illustrée par Le Figaro, insiste sur la nature macabre des faits, décrivant en détail le plat incriminé et le profil de la cuisinière."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-10-30T03:01:23.489Z"
+      "summarizedArticleCount": 2,
+      "summarizedAt": "2026-10-30T05:01:19.675Z"
     },
     {
       "id": "9bc06af75608",
@@ -8162,7 +8090,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/10/30/la-coree-du-nord-teste-des-drones-d-attaque-selon-son-agence-de-presse-officielle_6802526_3210.html",
           "publishedAt": "2026-10-30T01:15:55.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/29/260/0/3200/1600/644/322/60/0/93f0b44_ftp-1-g65wfmfjkqox-2026-10-29t221830z-16871677-rc29doacz2fd-rtrmadp-3-northkorea-arms.JPG",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -8323,7 +8251,7 @@
           "url": "https://www.ouest-france.fr/societe/police/ligpn-ouvre-une-enquete-apres-la-plainte-dun-elu-insoumis-qui-accuse-un-policier-de-lavoir-gaze-le-18-octobre-b8f043d4-d3e0-11f1-af78-2d36ec019942?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-10-29T21:54:50.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwNTYwNTllZDcxMWU0Y2UzOTVhYWI5MGRkMmFhMTQ2Zjg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ae5eac57b2af2ce5e8d4417380095b76dff9f46112d659f1914e55c934b3fedb",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -8644,82 +8572,6 @@
       "summarizedAt": "2026-10-29T12:01:24.484Z"
     },
     {
-      "id": "9e721411bc52",
-      "slug": "un-piratage-divulgue-les-noms-de-41000-employes-de-la-securite",
-      "title": "Un piratage informatique divulgue les données de plus de 41 000 employés de la Sécurité intérieure américaine",
-      "createdAt": "2026-10-29T04:01:16.305Z",
-      "storyDay": "2026-10-29",
-      "articles": [
-        {
-          "id": "5a73fedb50ff",
-          "outletId": "bfmtv",
-          "headline": "\"Ils ont nos informations, il est donc normal que nous ayons les leurs\": les données de plus de 40.000 membres de la Sécurité intérieure aux États-Unis, dont des agents de l'ICE infiltrés, divulguées par des hackers",
-          "url": "https://www.bfmtv.com/tech/cybersecurite/ils-ont-nos-informations-il-est-donc-normal-que-nous-ayons-les-leurs-les-donnees-de-plus-de-40-000-membres-de-la-securite-interieure-aux-etats-unis-dont-des-agents-de-l-ice-infiltres-divulguees-par-des-hackers_AD-202610290444.html",
-          "publishedAt": "2026-10-29T11:26:39.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/IP5pxFT4X1KoPuS72qgpBKciiiA=/6x57:2022x1191/800x0/images/Police-de-l-immigration-americaine-illustration-2224687.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "9d4f46d31d9b",
-          "outletId": "ouest-france",
-          "headline": "États-Unis : 41 000 noms d’agent de la Sécurité intérieure divulgués dans un piratage d’ampleur",
-          "url": "https://www.ouest-france.fr/monde/etats-unis/etats-unis-41-000-noms-de-la-securite-interieure-divulgues-dans-un-piratage-4b62e2fc-d347-11f1-81f2-0d14b9f9c452?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-29T04:05:57.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZDIzZTk0ZmUxYzIyM2RkNTUzNTZjOGNiODgyYWM2OTQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9fef0c99dee632a8fafdacf808e0beb05847c5d79b271206e21ff114be64000d",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "015cb47b90bd",
-          "outletId": "le-parisien",
-          "headline": "« Énorme par sa taille et son impact » : aux États-Unis, 41 000 noms d’agents d’ICE et de la Sécurité intérieure divulgués dans un piratage",
-          "url": "https://www.leparisien.fr/international/etats-unis/enorme-par-sa-taille-et-son-impact-aux-etats-unis-41-000-noms-dagents-de-lice-et-de-la-securite-interieure-divulgues-dans-un-piratage-29-10-2026-CJC3SMQZ7NA7RPB57BOFPBH23E.php",
-          "publishedAt": "2026-10-29T04:01:16.305Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "502030e5dd65",
-          "outletId": "le-figaro",
-          "headline": "États-Unis : les données de plus de 41.000 employés de la Sécurité intérieure divulguées dans un piratage",
-          "url": "https://www.lefigaro.fr/international/etats-unis-les-donnees-de-plus-de-41-000-employes-de-la-securite-interieure-divulguees-dans-un-piratage-20261029",
-          "publishedAt": "2026-10-29T03:23:07.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1949_crop/2026/10/29/1cec8757fedf30a672ce1c0d31de20c3cbd81ee6b59a34600496c281f7908cb3.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "9e721411bc52",
-      "titledArticleCount": 4,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "centre": [
-          "Un groupe de hackers baptisé Department of Peace a exploité une faille informatique pour subtiliser les données de 41.000 employés du département américain de la Sécurité intérieure.",
-          "Les informations dérobées, incluant les noms d'agents infiltrés de l'ICE, ont été transmises à l'ONG Distributed Denial of Secrets qui les a publiées en ligne.",
-          "Les auteurs de la fuite justifient leur action par une logique de réciprocité en estimant détenir des informations compromettantes."
-        ],
-        "droite": [
-          "L'ONG Distributed Denial of Secrets a rendu publiques les données personnelles de plus de 41.000 agents de la Sécurité intérieure américaine.",
-          "La fuite concerne les noms, les bureaux et les affectations des employés de cette administration centrale dans la politique migratoire de Donald Trump."
-        ]
-      },
-      "differences": [
-        "Le centre insiste sur le mode opératoire du piratage, l'implication du groupe Department of Peace et la nature sensible des agents infiltrés de l'ICE compromis.",
-        "La droite se focalise sur la mise en ligne des informations par l'ONG Distributed Denial of Secrets en soulignant le lien direct avec l'administration de Donald Trump et la politique migratoire."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-10-29T12:01:24.484Z"
-    },
-    {
       "id": "4373c3a5c3ef",
       "slug": "emmanuel-macron-aborde-la-mobilisation-lyceenne-et-parcoursup",
       "title": "Emmanuel Macron aborde la mobilisation lycéenne et Parcoursup lors de son interview par HugoDécrypte",
@@ -8952,6 +8804,82 @@
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 3,
+      "summarizedAt": "2026-10-29T12:01:24.484Z"
+    },
+    {
+      "id": "9e721411bc52",
+      "slug": "un-piratage-divulgue-les-noms-de-41000-employes-de-la-securite",
+      "title": "Un piratage informatique divulgue les données de plus de 41 000 employés de la Sécurité intérieure américaine",
+      "createdAt": "2026-10-29T04:01:16.305Z",
+      "storyDay": "2026-10-29",
+      "articles": [
+        {
+          "id": "5a73fedb50ff",
+          "outletId": "bfmtv",
+          "headline": "\"Ils ont nos informations, il est donc normal que nous ayons les leurs\": les données de plus de 40.000 membres de la Sécurité intérieure aux États-Unis, dont des agents de l'ICE infiltrés, divulguées par des hackers",
+          "url": "https://www.bfmtv.com/tech/cybersecurite/ils-ont-nos-informations-il-est-donc-normal-que-nous-ayons-les-leurs-les-donnees-de-plus-de-40-000-membres-de-la-securite-interieure-aux-etats-unis-dont-des-agents-de-l-ice-infiltres-divulguees-par-des-hackers_AD-202610290444.html",
+          "publishedAt": "2026-10-29T11:26:39.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/IP5pxFT4X1KoPuS72qgpBKciiiA=/6x57:2022x1191/800x0/images/Police-de-l-immigration-americaine-illustration-2224687.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "9d4f46d31d9b",
+          "outletId": "ouest-france",
+          "headline": "États-Unis : 41 000 noms d’agent de la Sécurité intérieure divulgués dans un piratage d’ampleur",
+          "url": "https://www.ouest-france.fr/monde/etats-unis/etats-unis-41-000-noms-de-la-securite-interieure-divulgues-dans-un-piratage-4b62e2fc-d347-11f1-81f2-0d14b9f9c452?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-29T04:05:57.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZDIzZTk0ZmUxYzIyM2RkNTUzNTZjOGNiODgyYWM2OTQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9fef0c99dee632a8fafdacf808e0beb05847c5d79b271206e21ff114be64000d",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "015cb47b90bd",
+          "outletId": "le-parisien",
+          "headline": "« Énorme par sa taille et son impact » : aux États-Unis, 41 000 noms d’agents d’ICE et de la Sécurité intérieure divulgués dans un piratage",
+          "url": "https://www.leparisien.fr/international/etats-unis/enorme-par-sa-taille-et-son-impact-aux-etats-unis-41-000-noms-dagents-de-lice-et-de-la-securite-interieure-divulgues-dans-un-piratage-29-10-2026-CJC3SMQZ7NA7RPB57BOFPBH23E.php",
+          "publishedAt": "2026-10-29T04:01:16.305Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "502030e5dd65",
+          "outletId": "le-figaro",
+          "headline": "États-Unis : les données de plus de 41.000 employés de la Sécurité intérieure divulguées dans un piratage",
+          "url": "https://www.lefigaro.fr/international/etats-unis-les-donnees-de-plus-de-41-000-employes-de-la-securite-interieure-divulguees-dans-un-piratage-20261029",
+          "publishedAt": "2026-10-29T03:23:07.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1949_crop/2026/10/29/1cec8757fedf30a672ce1c0d31de20c3cbd81ee6b59a34600496c281f7908cb3.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "9e721411bc52",
+      "titledArticleCount": 4,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Un groupe de hackers baptisé Department of Peace a exploité une faille informatique pour subtiliser les données de 41.000 employés du département américain de la Sécurité intérieure.",
+          "Les informations dérobées, incluant les noms d'agents infiltrés de l'ICE, ont été transmises à l'ONG Distributed Denial of Secrets qui les a publiées en ligne.",
+          "Les auteurs de la fuite justifient leur action par une logique de réciprocité en estimant détenir des informations compromettantes."
+        ],
+        "droite": [
+          "L'ONG Distributed Denial of Secrets a rendu publiques les données personnelles de plus de 41.000 agents de la Sécurité intérieure américaine.",
+          "La fuite concerne les noms, les bureaux et les affectations des employés de cette administration centrale dans la politique migratoire de Donald Trump."
+        ]
+      },
+      "differences": [
+        "Le centre insiste sur le mode opératoire du piratage, l'implication du groupe Department of Peace et la nature sensible des agents infiltrés de l'ICE compromis.",
+        "La droite se focalise sur la mise en ligne des informations par l'ONG Distributed Denial of Secrets en soulignant le lien direct avec l'administration de Donald Trump et la politique migratoire."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 4,
       "summarizedAt": "2026-10-29T12:01:24.484Z"
     },
     {
@@ -35399,280 +35327,6 @@
       "titledArticleCount": 41
     },
     {
-      "id": "fd9503d64a54",
-      "slug": "la-france-fait-face-a-une-degradation-inevitable-de-sa-note-par",
-      "title": "L'agence Moody's maintient la note souveraine de la France à Aa3 avec une perspective négative",
-      "createdAt": "2026-10-23T04:01:23.034Z",
-      "storyDay": "2026-10-23",
-      "articles": [
-        {
-          "id": "fe690d2078f1",
-          "outletId": "20-minutes",
-          "headline": "Dette publique : Moody’s laisse la situation s’éclaircir avant de se prononcer sur la note française",
-          "url": "https://www.20minutes.fr/economie/4257124-20261024-dette-publique-moody-laisse-situation-eclaircir-avant-prononcer-note-francaise?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-23T23:42:00.000Z",
-          "imageUrl": "https://img.20mn.fr/ETK0Q0qNS7iy-OCncc8LIik/1200x768_fr-paris-ministere-de-l-economie-des-finances-et-de-l-industrie-situe-a-l-est-de-la-capitale-dans-le-quartier-de-bercy-paris-ministere-de-l-economie-des-finances-et-de-l-industrie-est-situe-a-l-est-de-la-capitale-dans-le-quartier-de-bercy-houpline-renard-hr1136-credit-houpline-renard-sipa-2609151041",
-          "frontPage": true,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "2c6f208467e4",
-          "outletId": "le-monde",
-          "headline": "L’agence Moody’s ne dégrade pas la note de la France malgré l’incertitude budgétaire et politique",
-          "url": "https://www.lemonde.fr/economie/article/2026/10/24/l-agence-moody-s-ne-degrade-pas-la-note-de-la-france-malgre-l-incertitude-budgetaire-et-politique_6799214_3234.html",
-          "publishedAt": "2026-10-23T22:52:22.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/07/666/0/8000/4000/644/322/60/0/55ae34b_upload-1-zd5zslpi3kq2-jmug261006039.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "d0870c458bb0",
-          "outletId": "lopinion",
-          "headline": "Moody's maintient sa note, la France garde son crédit",
-          "url": "https://www.lopinion.fr/economie/moodys-maintient-sa-note-la-france-garde-son-credit",
-          "publishedAt": "2026-10-23T21:45:24.000Z",
-          "imageUrl": "https://beymedias.brightspotcdn.com/dd/a6/9a27a4ac4a7d829156eca7b93e7b/sipa-01209152-000018.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "cc932a0945a2",
-          "outletId": "le-figaro",
-          "headline": "Moody’s maintient la note de la France : Lecornu salue un signal qui «déjoue les pronostics déclinistes»",
-          "url": "https://www.lefigaro.fr/conjoncture/moody-s-maintient-la-note-de-la-france-lecornu-salue-un-signal-qui-dejoue-les-pronostics-declinistes-20261023",
-          "publishedAt": "2026-10-23T21:39:38.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/23/549fea26db14beb8be4d150944f26f5fdae76db054014fb9ac638a3852ec079a.JPG",
-          "frontPage": true,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "4cd9d067ba18",
-          "outletId": "rfi",
-          "headline": "France: l'agence Moody's maintient la note souveraine à Aa3 avec perspective négative",
-          "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261023-france-l-agence-moody-s-maintient-la-note-souveraine-%C3%A0-aa3-avec-perspective-n%C3%A9gative",
-          "publishedAt": "2026-10-23T21:26:18.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/7da2e4f0-166c-11ea-947a-005056bf7c53/w:1024/p:16x9/MOODYS.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "2ce4b6ebd496",
-          "outletId": "franceinfo",
-          "headline": "L'agence Moody's maintient la note souveraine de la France à Aa3 avec perspective négative",
-          "url": "https://www.franceinfo.fr/economie/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative_8251510.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-23T21:23:31.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/h0hlVJSmbQjMMtMhLOk1OVbr1zM/0x53:1024x629/432x243/filters:format(jpg)/2026/10/23/6adbd02ba0151464898876.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "4068d5eaeee3",
-          "outletId": "le-monde",
-          "headline": "L’agence Moody’s maintient la note souveraine de la France à Aa3, mais y assortit une perspective négative",
-          "url": "https://www.lemonde.fr/economie/article/2026/10/23/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-mais-y-assortit-une-perspective-negative_6799147_3234.html",
-          "publishedAt": "2026-10-23T21:22:46.000Z",
-          "imageUrl": "https://img.lemde.fr/2024/04/26/302/0/4588/2294/644/322/60/0/0b14626_5311719-01-06.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "4ae7bf92328a",
-          "outletId": "ouest-france",
-          "headline": "Dette : l’agence Moody’s maintient finalement la note de la France",
-          "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/dette-lagence-moodys-maintient-finalement-la-note-de-la-france-9daff212-cec8-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-23T21:19:30.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMWVkYzMyODNkNzAwYWNkN2FlZDFiMWRkNjhjNzA4MTA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=85dd8dd636ed5c38cd6974445bb73a1469ffd3b6c782a435d1e105ab2ec07449",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "9cbfba1a5c98",
-          "outletId": "france-24",
-          "headline": "L'agence Moody's maintient la note souveraine de la France à Aa3 avec perspective négative",
-          "url": "https://www.france24.com/fr/france/20261022-notation-de-la-france-un-abaissement-de-la-note-par-moody-s-jug%C3%A9-tr%C3%A8s-plausible",
-          "publishedAt": "2026-10-23T21:12:03.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "2fe42d51b836",
-          "outletId": "tf1-info",
-          "headline": "Moody's : l'agence maintient la note souveraine de la France à Aa3 avec perspective négative",
-          "url": "https://www.tf1info.fr/economie/moody-s-l-agence-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative-2471725.html",
-          "publishedAt": "2026-10-23T21:04:05.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/668/moody-s-agence-de-notation-siege-new-york-2012-7edf58-1@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "e5d8af70d2ca",
-          "outletId": "europe-1",
-          "headline": "Dette française : pas de dégradation de la note chez Moody's, mais la pression reste forte",
-          "url": "https://www.europe1.fr/economie/dette-francaise-pas-de-degradation-de-la-note-chez-moodys-mais-la-pression-reste-forte-1177134?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-23T21:03:51.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/23/23/080_hl_jlbulcao_2185528_1_6adbcafdba6de.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "1a5cde1445b8",
-          "outletId": "le-figaro",
-          "headline": "Une décennie de déclassements de la note de la France par Moody’s en trois infographies",
-          "url": "https://www.lefigaro.fr/conjoncture/une-decennie-de-declassements-de-la-note-de-la-france-par-moody-s-20251024",
-          "publishedAt": "2026-10-23T21:03:28.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/640x392_crop/2025/10/23/01b6a518ff5ed1d154a7c9450c736af4bb8162110f37005844da4923a1800036.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "7c8ee7583a8a",
-          "outletId": "liberation",
-          "headline": "Dette : contre toute attente, Moody’s maintient la note de la France",
-          "url": "https://www.liberation.fr/economie/dette-contre-toute-attente-moodys-maintient-la-note-de-la-france-20261023_B6U3PWPYWFFHNKTAT7H3JXBBNY/",
-          "publishedAt": "2026-10-23T21:02:59.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "090b71759789",
-          "outletId": "cnews",
-          "headline": "Dette publique : l'agence Moody's maintient la note souveraine de la France, mais avec une perspective négative",
-          "url": "https://www.cnews.fr/france/2026-10-23/dette-publique-lagence-moodys-maintient-la-note-souveraine-de-la-france-mais-avec",
-          "publishedAt": "2026-10-23T21:01:00.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_jmbarrere_3354295-taille1200_6adbca992021c.jpg?h=8826e3bd&itok=mLXk7AB-",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "5e976be82d3f",
-          "outletId": "le-figaro",
-          "headline": "Dette : à la surprise générale, Moody’s ne dégrade pas la France",
-          "url": "https://www.lefigaro.fr/conjoncture/dette-a-la-surprise-generale-moody-s-ne-degrade-pas-la-france-20261023",
-          "publishedAt": "2026-10-23T20:53:46.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2964x1668_crop/2026/10/23/c3f2bb3d4de046746d55ce12ab2e303e73b8b56d7b95f5c7bd20a1590c7daad8.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "95af6aef75ac",
-          "outletId": "franceinfo",
-          "headline": "Mouvement social, crise politique, poids de la dette... Pourquoi l'agence Moody's va sans doute abaisser la note de la France vendredi",
-          "url": "https://www.franceinfo.fr/economie/crise/crise-de-la-dette/mouvement-social-crise-politique-poids-de-la-dette-pourquoi-l-agence-moody-s-va-sans-doute-abaisser-la-note-de-la-france-vendredi_8249629.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-23T05:36:36.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/hdDZq3gX00Y5uG2cwZm7XvtehIw/0x53:1024x629/432x243/filters:format(jpg)/2026/10/22/6ada6a92e4b91950040662.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "ee660889d96e",
-          "outletId": "la-croix",
-          "headline": "Crise sociale et taux d’emprunt à 5 % : la France prise en étau entre la rue et les marchés financiers",
-          "url": "https://www.la-croix.com/economie/crise-sociale-et-taux-d-emprunt-a-5-la-france-prise-en-etau-entre-la-rue-et-les-marches-financiers-20261022",
-          "publishedAt": "2026-10-23T04:32:06.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/22/2569679-dans-les-bureaux-de-l-agence-france-tresor-aft-cha.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "8324e3adf0a3",
-          "outletId": "cnews",
-          "headline": "Dette française : Moody's pourrait abaisser la note de la France ce vendredi",
-          "url": "https://www.cnews.fr/france/2026-10-23/dette-francaise-moodys-pourrait-abaisser-la-note-de-la-france-ce-vendredi-1940143",
-          "publishedAt": "2026-10-23T04:16:12.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_jmbarrere_3350862-taille1200_6ada25003df90.jpg?h=1483d620&itok=hwvELOs9",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "2469fd2fbbb5",
-          "outletId": "le-figaro",
-          "headline": "Dette : pourquoi Moody’s a toutes les raisons de dégrader la note de la France ce vendredi",
-          "url": "https://www.lefigaro.fr/conjoncture/dette-pourquoi-moody-s-a-toutes-les-raisons-de-degrader-la-note-de-la-france-ce-vendredi-20261023",
-          "publishedAt": "2026-10-23T04:00:00.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/22/d9482183a598d88788fc6dac23809674fbe2666943447aa8231bec217c078b90.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "4271d20e245b",
-          "outletId": "le-point",
-          "headline": "Note de la France : pourquoi la dégradation semble inévitable",
-          "url": "https://www.lepoint.fr/economie/note-de-la-france-pourquoi-la-degradation-semble-inevitable-K3K2P227MRHB3NICY7B3MTF7PI/",
-          "publishedAt": "2026-10-23T04:00:00.000Z",
-          "imageUrl": "https://www.lepoint.fr/resizer/v2/6YANEX7XG5HCJJJTKXSIG7VMJQ.jpg?auth=af635f68e86c52fcf08b374366dddb7b3ee2b641d74c5dbd2131cd562d17a6ec&smart=true&width=1200&height=900",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "106ca0c39d13",
-          "outletId": "france-24",
-          "headline": "La France bientôt dégradée ? Le pouvoir des agences de notation",
-          "url": "https://www.france24.com/fr/%C3%A9missions/les-cl%C3%A9s-de-l-info/20261022-la-france-bient%C3%B4t-d%C3%A9grad%C3%A9e-le-pouvoir-des-agences-de-notation",
-          "publishedAt": "2026-10-22T22:55:17.000Z",
-          "imageUrl": "https://s.france24.com/media/display/bba23a40-ce6a-11f1-97ce-97baf3e9dd31/w:1024/p:16x9/FRAN261022-2339-Live-CS2339.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        }
-      ],
-      "topicId": "fd9503d64a54",
-      "section": "economy",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "L'agence Moody's a maintenu la note de la dette souveraine de la France à Aa3 vendredi 23 octobre, contre toute attente des économistes.",
-          "La décision écarte l'hypothèse d'une baisse à un simple A, malgré les incertitudes politiques liées au budget et le climat social tendu.",
-          "Le Premier ministre Sébastien Lecornu a salué une mesure qui « déjoue les pronostics déclinistes »."
-        ],
-        "centre": [
-          "L'agence de notation Moody's a choisi de maintenir la note souveraine de la France à Aa3 avec une perspective négative, s'abstenant de toute sanction immédiate.",
-          "La décision intervient alors que les taux d'emprunt dépassent les 5 % et que la situation sociale et politique reste particulièrement troublée.",
-          "Ce maintien inattendu se démarque des rétrogradations déjà prononcées par les agences concurrentes Fitch et Standard & Poor's."
-        ],
-        "droite": [
-          "L'agence Moody's a préservé la note Aa3 de la France avec une perspective négative, épargnant au pays une dégradation que beaucoup jugeaient inévitable.",
-          "Le gouvernement et ses soutiens ont salué un signal fort qui contredit les prévisions pessimistes sur les finances publiques.",
-          "La presse de droite rappelle que la menace d'un déclassement persiste, alors que la France emprunte à plus de 5 % et que l'agence S&P doit rendre son verdict fin novembre."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur le caractère inattendu de la décision face aux tensions sociales, en retenant l'hypothèse d'un vote du budget.",
-        "Le centre privilégie une approche technique en replaçant la décision de Moody's dans le contexte global des taux d'emprunt élevés et des choix divergents des autres agences.",
-        "La droite insiste sur le soulagement budgétaire et politique tout en soulignant la persistance des risques financiers, le Figaro et Europe 1 rappelant l'échéance de l'agence S&P fin novembre."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 20,
-      "titledArticleCount": 20
-    },
-    {
       "id": "b6c5266b136e",
       "slug": "geoffroy-roux-de-bezieux-est-nomme-president-du-comite-d",
       "title": "Geoffroy Roux de Bézieux est nommé président du comité d'organisation des JO d'hiver 2030",
@@ -36302,6 +35956,280 @@
       "summarizedAt": "2026-10-26T20:01:21.600Z"
     },
     {
+      "id": "fd9503d64a54",
+      "slug": "la-france-fait-face-a-une-degradation-inevitable-de-sa-note-par",
+      "title": "L'agence Moody's maintient la note souveraine de la France à Aa3 avec une perspective négative",
+      "createdAt": "2026-10-23T04:01:23.034Z",
+      "storyDay": "2026-10-23",
+      "articles": [
+        {
+          "id": "fe690d2078f1",
+          "outletId": "20-minutes",
+          "headline": "Dette publique : Moody’s laisse la situation s’éclaircir avant de se prononcer sur la note française",
+          "url": "https://www.20minutes.fr/economie/4257124-20261024-dette-publique-moody-laisse-situation-eclaircir-avant-prononcer-note-francaise?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-23T23:42:00.000Z",
+          "imageUrl": "https://img.20mn.fr/ETK0Q0qNS7iy-OCncc8LIik/1200x768_fr-paris-ministere-de-l-economie-des-finances-et-de-l-industrie-situe-a-l-est-de-la-capitale-dans-le-quartier-de-bercy-paris-ministere-de-l-economie-des-finances-et-de-l-industrie-est-situe-a-l-est-de-la-capitale-dans-le-quartier-de-bercy-houpline-renard-hr1136-credit-houpline-renard-sipa-2609151041",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "2c6f208467e4",
+          "outletId": "le-monde",
+          "headline": "L’agence Moody’s ne dégrade pas la note de la France malgré l’incertitude budgétaire et politique",
+          "url": "https://www.lemonde.fr/economie/article/2026/10/24/l-agence-moody-s-ne-degrade-pas-la-note-de-la-france-malgre-l-incertitude-budgetaire-et-politique_6799214_3234.html",
+          "publishedAt": "2026-10-23T22:52:22.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/07/666/0/8000/4000/644/322/60/0/55ae34b_upload-1-zd5zslpi3kq2-jmug261006039.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "d0870c458bb0",
+          "outletId": "lopinion",
+          "headline": "Moody's maintient sa note, la France garde son crédit",
+          "url": "https://www.lopinion.fr/economie/moodys-maintient-sa-note-la-france-garde-son-credit",
+          "publishedAt": "2026-10-23T21:45:24.000Z",
+          "imageUrl": "https://beymedias.brightspotcdn.com/dd/a6/9a27a4ac4a7d829156eca7b93e7b/sipa-01209152-000018.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "cc932a0945a2",
+          "outletId": "le-figaro",
+          "headline": "Moody’s maintient la note de la France : Lecornu salue un signal qui «déjoue les pronostics déclinistes»",
+          "url": "https://www.lefigaro.fr/conjoncture/moody-s-maintient-la-note-de-la-france-lecornu-salue-un-signal-qui-dejoue-les-pronostics-declinistes-20261023",
+          "publishedAt": "2026-10-23T21:39:38.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/23/549fea26db14beb8be4d150944f26f5fdae76db054014fb9ac638a3852ec079a.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "4cd9d067ba18",
+          "outletId": "rfi",
+          "headline": "France: l'agence Moody's maintient la note souveraine à Aa3 avec perspective négative",
+          "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261023-france-l-agence-moody-s-maintient-la-note-souveraine-%C3%A0-aa3-avec-perspective-n%C3%A9gative",
+          "publishedAt": "2026-10-23T21:26:18.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/7da2e4f0-166c-11ea-947a-005056bf7c53/w:1024/p:16x9/MOODYS.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "2ce4b6ebd496",
+          "outletId": "franceinfo",
+          "headline": "L'agence Moody's maintient la note souveraine de la France à Aa3 avec perspective négative",
+          "url": "https://www.franceinfo.fr/economie/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative_8251510.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-23T21:23:31.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/h0hlVJSmbQjMMtMhLOk1OVbr1zM/0x53:1024x629/432x243/filters:format(jpg)/2026/10/23/6adbd02ba0151464898876.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "4068d5eaeee3",
+          "outletId": "le-monde",
+          "headline": "L’agence Moody’s maintient la note souveraine de la France à Aa3, mais y assortit une perspective négative",
+          "url": "https://www.lemonde.fr/economie/article/2026/10/23/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-mais-y-assortit-une-perspective-negative_6799147_3234.html",
+          "publishedAt": "2026-10-23T21:22:46.000Z",
+          "imageUrl": "https://img.lemde.fr/2024/04/26/302/0/4588/2294/644/322/60/0/0b14626_5311719-01-06.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "4ae7bf92328a",
+          "outletId": "ouest-france",
+          "headline": "Dette : l’agence Moody’s maintient finalement la note de la France",
+          "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/dette-lagence-moodys-maintient-finalement-la-note-de-la-france-9daff212-cec8-11f1-95ba-26d2045f6620?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-23T21:19:30.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwMWVkYzMyODNkNzAwYWNkN2FlZDFiMWRkNjhjNzA4MTA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=85dd8dd636ed5c38cd6974445bb73a1469ffd3b6c782a435d1e105ab2ec07449",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "9cbfba1a5c98",
+          "outletId": "france-24",
+          "headline": "L'agence Moody's maintient la note souveraine de la France à Aa3 avec perspective négative",
+          "url": "https://www.france24.com/fr/france/20261022-notation-de-la-france-un-abaissement-de-la-note-par-moody-s-jug%C3%A9-tr%C3%A8s-plausible",
+          "publishedAt": "2026-10-23T21:12:03.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "2fe42d51b836",
+          "outletId": "tf1-info",
+          "headline": "Moody's : l'agence maintient la note souveraine de la France à Aa3 avec perspective négative",
+          "url": "https://www.tf1info.fr/economie/moody-s-l-agence-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative-2471725.html",
+          "publishedAt": "2026-10-23T21:04:05.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/668/moody-s-agence-de-notation-siege-new-york-2012-7edf58-1@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "e5d8af70d2ca",
+          "outletId": "europe-1",
+          "headline": "Dette française : pas de dégradation de la note chez Moody's, mais la pression reste forte",
+          "url": "https://www.europe1.fr/economie/dette-francaise-pas-de-degradation-de-la-note-chez-moodys-mais-la-pression-reste-forte-1177134?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-10-23T21:03:51.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/23/23/080_hl_jlbulcao_2185528_1_6adbcafdba6de.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "1a5cde1445b8",
+          "outletId": "le-figaro",
+          "headline": "Une décennie de déclassements de la note de la France par Moody’s en trois infographies",
+          "url": "https://www.lefigaro.fr/conjoncture/une-decennie-de-declassements-de-la-note-de-la-france-par-moody-s-20251024",
+          "publishedAt": "2026-10-23T21:03:28.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/640x392_crop/2025/10/23/01b6a518ff5ed1d154a7c9450c736af4bb8162110f37005844da4923a1800036.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "7c8ee7583a8a",
+          "outletId": "liberation",
+          "headline": "Dette : contre toute attente, Moody’s maintient la note de la France",
+          "url": "https://www.liberation.fr/economie/dette-contre-toute-attente-moodys-maintient-la-note-de-la-france-20261023_B6U3PWPYWFFHNKTAT7H3JXBBNY/",
+          "publishedAt": "2026-10-23T21:02:59.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "090b71759789",
+          "outletId": "cnews",
+          "headline": "Dette publique : l'agence Moody's maintient la note souveraine de la France, mais avec une perspective négative",
+          "url": "https://www.cnews.fr/france/2026-10-23/dette-publique-lagence-moodys-maintient-la-note-souveraine-de-la-france-mais-avec",
+          "publishedAt": "2026-10-23T21:01:00.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_jmbarrere_3354295-taille1200_6adbca992021c.jpg?h=8826e3bd&itok=mLXk7AB-",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "5e976be82d3f",
+          "outletId": "le-figaro",
+          "headline": "Dette : à la surprise générale, Moody’s ne dégrade pas la France",
+          "url": "https://www.lefigaro.fr/conjoncture/dette-a-la-surprise-generale-moody-s-ne-degrade-pas-la-france-20261023",
+          "publishedAt": "2026-10-23T20:53:46.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2964x1668_crop/2026/10/23/c3f2bb3d4de046746d55ce12ab2e303e73b8b56d7b95f5c7bd20a1590c7daad8.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "95af6aef75ac",
+          "outletId": "franceinfo",
+          "headline": "Mouvement social, crise politique, poids de la dette... Pourquoi l'agence Moody's va sans doute abaisser la note de la France vendredi",
+          "url": "https://www.franceinfo.fr/economie/crise/crise-de-la-dette/mouvement-social-crise-politique-poids-de-la-dette-pourquoi-l-agence-moody-s-va-sans-doute-abaisser-la-note-de-la-france-vendredi_8249629.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-10-23T05:36:36.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/hdDZq3gX00Y5uG2cwZm7XvtehIw/0x53:1024x629/432x243/filters:format(jpg)/2026/10/22/6ada6a92e4b91950040662.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "ee660889d96e",
+          "outletId": "la-croix",
+          "headline": "Crise sociale et taux d’emprunt à 5 % : la France prise en étau entre la rue et les marchés financiers",
+          "url": "https://www.la-croix.com/economie/crise-sociale-et-taux-d-emprunt-a-5-la-france-prise-en-etau-entre-la-rue-et-les-marches-financiers-20261022",
+          "publishedAt": "2026-10-23T04:32:06.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/22/2569679-dans-les-bureaux-de-l-agence-france-tresor-aft-cha.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "8324e3adf0a3",
+          "outletId": "cnews",
+          "headline": "Dette française : Moody's pourrait abaisser la note de la France ce vendredi",
+          "url": "https://www.cnews.fr/france/2026-10-23/dette-francaise-moodys-pourrait-abaisser-la-note-de-la-france-ce-vendredi-1940143",
+          "publishedAt": "2026-10-23T04:16:12.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_jmbarrere_3350862-taille1200_6ada25003df90.jpg?h=1483d620&itok=hwvELOs9",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "2469fd2fbbb5",
+          "outletId": "le-figaro",
+          "headline": "Dette : pourquoi Moody’s a toutes les raisons de dégrader la note de la France ce vendredi",
+          "url": "https://www.lefigaro.fr/conjoncture/dette-pourquoi-moody-s-a-toutes-les-raisons-de-degrader-la-note-de-la-france-ce-vendredi-20261023",
+          "publishedAt": "2026-10-23T04:00:00.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/22/d9482183a598d88788fc6dac23809674fbe2666943447aa8231bec217c078b90.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "4271d20e245b",
+          "outletId": "le-point",
+          "headline": "Note de la France : pourquoi la dégradation semble inévitable",
+          "url": "https://www.lepoint.fr/economie/note-de-la-france-pourquoi-la-degradation-semble-inevitable-K3K2P227MRHB3NICY7B3MTF7PI/",
+          "publishedAt": "2026-10-23T04:00:00.000Z",
+          "imageUrl": "https://www.lepoint.fr/resizer/v2/6YANEX7XG5HCJJJTKXSIG7VMJQ.jpg?auth=af635f68e86c52fcf08b374366dddb7b3ee2b641d74c5dbd2131cd562d17a6ec&smart=true&width=1200&height=900",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "106ca0c39d13",
+          "outletId": "france-24",
+          "headline": "La France bientôt dégradée ? Le pouvoir des agences de notation",
+          "url": "https://www.france24.com/fr/%C3%A9missions/les-cl%C3%A9s-de-l-info/20261022-la-france-bient%C3%B4t-d%C3%A9grad%C3%A9e-le-pouvoir-des-agences-de-notation",
+          "publishedAt": "2026-10-22T22:55:17.000Z",
+          "imageUrl": "https://s.france24.com/media/display/bba23a40-ce6a-11f1-97ce-97baf3e9dd31/w:1024/p:16x9/FRAN261022-2339-Live-CS2339.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "topicId": "fd9503d64a54",
+      "section": "economy",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "L'agence Moody's a maintenu la note de la dette souveraine de la France à Aa3 vendredi 23 octobre, contre toute attente des économistes.",
+          "La décision écarte l'hypothèse d'une baisse à un simple A, malgré les incertitudes politiques liées au budget et le climat social tendu.",
+          "Le Premier ministre Sébastien Lecornu a salué une mesure qui « déjoue les pronostics déclinistes »."
+        ],
+        "centre": [
+          "L'agence de notation Moody's a choisi de maintenir la note souveraine de la France à Aa3 avec une perspective négative, s'abstenant de toute sanction immédiate.",
+          "La décision intervient alors que les taux d'emprunt dépassent les 5 % et que la situation sociale et politique reste particulièrement troublée.",
+          "Ce maintien inattendu se démarque des rétrogradations déjà prononcées par les agences concurrentes Fitch et Standard & Poor's."
+        ],
+        "droite": [
+          "L'agence Moody's a préservé la note Aa3 de la France avec une perspective négative, épargnant au pays une dégradation que beaucoup jugeaient inévitable.",
+          "Le gouvernement et ses soutiens ont salué un signal fort qui contredit les prévisions pessimistes sur les finances publiques.",
+          "La presse de droite rappelle que la menace d'un déclassement persiste, alors que la France emprunte à plus de 5 % et que l'agence S&P doit rendre son verdict fin novembre."
+        ]
+      },
+      "differences": [
+        "La gauche insiste sur le caractère inattendu de la décision face aux tensions sociales, en retenant l'hypothèse d'un vote du budget.",
+        "Le centre privilégie une approche technique en replaçant la décision de Moody's dans le contexte global des taux d'emprunt élevés et des choix divergents des autres agences.",
+        "La droite insiste sur le soulagement budgétaire et politique tout en soulignant la persistance des risques financiers, le Figaro et Europe 1 rappelant l'échéance de l'agence S&P fin novembre."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 20,
+      "titledArticleCount": 20
+    },
+    {
       "id": "ad2584f7ce6d",
       "slug": "le-conseil-constitutionnel-ecarte-la-demande-de-demission-de",
       "title": "Le Conseil constitutionnel rejette la demande de démission de Richard Ferrand",
@@ -36779,309 +36707,6 @@
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 9
-    },
-    {
-      "id": "a160c31ec07d",
-      "slug": "emmanuel-macron-recoit-les-organisations-lyceennes-a-l-elysee-a160c3",
-      "title": "Emmanuel Macron reçoit les organisations lycéennes à l'Élysée avant une nouvelle mobilisation",
-      "createdAt": "2026-10-23T05:01:29.334Z",
-      "storyDay": "2026-10-22",
-      "articles": [
-        {
-          "id": "aa7794ef8810",
-          "outletId": "tf1-info",
-          "headline": "\"J'hésite encore\" : ces manifestants du 17 octobre partagés à l'idée d'y retourner samedi",
-          "url": "https://www.tf1info.fr/justice-faits-divers/j-hesite-encore-ces-manifestants-du-17-octobre-partages-a-l-idee-d-y-retourner-samedi-2471700.html",
-          "publishedAt": "2026-10-24T05:00:00.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/960/540/manifestante-temoignage-f97e87-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "3fed796eab98",
-          "outletId": "le-monde",
-          "headline": "EN DIRECT, manifestations du 24 octobre : « La menace reste élevée », estime Sébastien Lecornu en ciblant « l’ultragauche » et « la délinquance »",
-          "url": "https://www.lemonde.fr/societe/live/2026/10/24/en-direct-manifestations-du-24-octobre-la-menace-reste-elevee-estime-sebastien-lecornu-en-ciblant-l-ultragauche-et-la-delinquance_6795855_3224.html",
-          "publishedAt": "2026-10-23T22:29:04.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/23/0/1499/5589/2795/644/322/60/0/095e9ed_ftp-1-4rpt0pvhvt18-afp-d49x29l.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "politics"
-        },
-        {
-          "id": "95642ed749ae",
-          "outletId": "bfmtv",
-          "headline": "Mobilisation du 24 octobre: \"Ce n'est pas notre rôle de défendre nos commerces face à des violences\", explique Antoine Delomez, gérant de l'Atelier Amelot dans le 11ème arrondissement de Paris",
-          "url": "https://www.bfmtv.com/societe/video-mobilisation-du-24-octobre-ce-n-est-pas-notre-role-de-defendre-nos-commerces-face-a-des-violences-explique-antoine-delomez-gerant-de-l-atelier-amelot-dans-le-11eme-arrondissement-de-paris_VN-202610230903.html",
-          "publishedAt": "2026-10-23T21:54:04.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/pg0tS0REcY7_FzqqgYKTCSHR4tI=/0x0:1280x720/800x0/images/Mobilisation-du-24-octobre-Ce-n-est-pas-notre-role-de-defendre-nos-commerces-face-a-des-violences-explique-Antoine-Delomez-gerant-de-l-Atelier-Amelot-dans-le-11eme-arrondissement-de-Paris-2371285.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "0bd9852a0cf5",
-          "outletId": "france-24",
-          "headline": "Manifestations du 24 octobre : 70 000 policiers et gendarmes déployés, les lycéens toujours mobilisés",
-          "url": "https://www.france24.com/fr/france/20261023-manifestations-du-24-octobre-70-000-policiers-et-gendarmes-d%C3%A9ploy%C3%A9s-les-lyc%C3%A9ens-toujours-mobilis%C3%A9s",
-          "publishedAt": "2026-10-23T21:13:14.000Z",
-          "imageUrl": "https://s.france24.com/media/display/5ef70560-ced2-11f1-9c1d-5b4a75578ebb/w:1024/p:16x9/2026-10-22T144648Z-214123398-RC2E8OAIMY4S-RTRMADP-3-FRANCE-PROTEST.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "fb214f5cb1f1",
-          "outletId": "bfmtv",
-          "headline": "24 octobre: \"Les moyens qui ont été mis en place pour demain sont des moyens importants\", détaille Jean-Didier Berger, ministre délégué auprès du ministre de l’Intérieur",
-          "url": "https://www.bfmtv.com/politique/video-24-octobre-les-moyens-qui-ont-ete-mis-en-place-pour-demain-sont-des-moyens-importants-detaille-jean-didier-berger-ministre-delegue-aupres-du-ministre-de-l-interieur_VN-202610230831.html",
-          "publishedAt": "2026-10-23T18:49:07.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/WbQQcNvczdPlgeGS_KE30Su86LU=/0x0:1280x720/800x0/images/24-octobre-Les-moyens-qui-ont-ete-mis-en-place-pour-demain-sont-des-moyens-importants-detaille-Jean-Didier-Berger-ministre-delegue-aupres-du-ministre-de-l-Interieur-2371226.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "8f1375bbe36d",
-          "outletId": "humanite",
-          "headline": "Fin du direct",
-          "url": "https://www.humanite.fr/-/-/fin-du-direct-22",
-          "publishedAt": "2026-10-23T17:53:24.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
-          "frontPage": false,
-          "kind": "live",
-          "section": "politics"
-        },
-        {
-          "id": "959336766241",
-          "outletId": "humanite",
-          "headline": "Après la rencontre avec Emmanuel Macron, les représentants des lycéens appellent à « continuer à se mobiliser »",
-          "url": "https://www.humanite.fr/-/-/apres-la-rencontre-avec-emmanuel-macron-les-representants-des-lyceens-appellent-a-continuer-a-se-mobiliser",
-          "publishedAt": "2026-10-23T16:29:30.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "26ebf69219bd",
-          "outletId": "humanite",
-          "headline": "Le président français doit se rendre à 19 heures dans une caserne de police dans le 19e arrondissement de Paris",
-          "url": "https://www.humanite.fr/-/-/le-president-francais-doit-se-rendre-a-19-heures-dans-une-caserne-de-police-dans-le-19e-arrondissement-de-paris",
-          "publishedAt": "2026-10-23T14:57:51.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "723b7df5e05a",
-          "outletId": "humanite",
-          "headline": "Les lycéens reçus par Macron à 15 heures, mais sans grandes illusions sur l’issue de la rencontre",
-          "url": "https://www.humanite.fr/-/-/les-lyceens-recus-par-macron-a-15-heures-mais-sans-grandes-illusions-sur-lissue-de-la-rencontre",
-          "publishedAt": "2026-10-23T08:14:34.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "05dfc04ba272",
-          "outletId": "bfmtv",
-          "headline": "Manifestations du 24 octobre: un conseil de défense en cours autour d'Emmanuel Macron",
-          "url": "https://www.bfmtv.com/politique/elysee/video-manifestations-du-24-octobre-un-conseil-de-defense-en-cours-autour-d-emmanuel-macron_VN-202610230324.html",
-          "publishedAt": "2026-10-23T07:54:20.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/LGYEQogo6pcAIOO9MDKU0S7fHsw=/0x0:1280x720/800x0/images/Manifestations-du-24-octobre-un-conseil-de-defense-en-cours-autour-d-Emmanuel-Macron-2370862.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "f2ced0690c77",
-          "outletId": "europe-1",
-          "headline": "À la veille d'une nouvelle mobilisation étudiante, Emmanuel Macron reçoit pour la première fois les organisations lycéennes",
-          "url": "https://www.europe1.fr/politique/a-la-veille-dune-nouvelle-mobilisation-etudiante-emmanuel-macron-recoit-pour-la-premiere-fois-les-organisations-lyceennes-1175376?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-23T07:45:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/23/06/000_d43e86j_1_6adae9f1cfdd8.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "9a16411546be",
-          "outletId": "humanite",
-          "headline": "Macron préside un conseil de défense puis reçoit les lycéens à l’Élysée",
-          "url": "https://www.humanite.fr/-/-/macron-preside-un-conseil-de-defense-puis-recoit-les-lyceens-a-lelysee",
-          "publishedAt": "2026-10-23T07:21:58.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
-          "frontPage": false,
-          "kind": "opinion",
-          "section": "politics"
-        },
-        {
-          "id": "9bacc0e235cf",
-          "outletId": "franceinfo",
-          "headline": "Interdiction des manifestations : \"C'est très grave, la liberté de manifester c'est le fondement de la démocratie\", déclare Sophie Binet, secrétaire générale de la CGT",
-          "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/direct-manifestations-du-24-octobre-emmanuel-macron-preside-un-conseil-de-defense-a-9-heures-avant-de-recevoir-les-lyceens-dans-l-apres-midi_8250124.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-23T07:16:22.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/BHE5rt8qf2Owu6a_zug9ctO1Z1s/172x12:1671x855/432x243/filters:format(jpg)/2026/10/23/6adb09c2de3b6766121157.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "6370edbda909",
-          "outletId": "humanite",
-          "headline": "Sophie Binet (CGT) : « C’est très grave, la liberté de manifester, c’est le fondement de la démocratie »",
-          "url": "https://www.humanite.fr/-/-/sophie-binet-cgt-cest-tres-grave-la-liberte-de-manifester-cest-le-fondement-de-la-democratie",
-          "publishedAt": "2026-10-23T07:11:49.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "afdcb90d0cf9",
-          "outletId": "humanite",
-          "headline": "Bonjour et bienvenue dans ce direct",
-          "url": "https://www.humanite.fr/-/-/bonjour-et-bienvenue-dans-ce-direct",
-          "publishedAt": "2026-10-23T07:00:00.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
-          "frontPage": false,
-          "kind": "live",
-          "section": "politics"
-        },
-        {
-          "id": "72ba26811966",
-          "outletId": "la-croix",
-          "headline": "DIRECT. Manifestation du 24 octobre : les lycéens reçus à l’Élysée ; conseil de défense… Suivez la situation",
-          "url": "https://www.la-croix.com/societe/direct-manifestation-17-octobre-jour-7-violences-couvre-feu-dispositif-aujourdhui-20261023",
-          "publishedAt": "2026-10-23T06:53:33.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/23/2569942-certains-commerces-posent-des-panneaux-de-bois-pou.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "politics"
-        },
-        {
-          "id": "e5061db1e078",
-          "outletId": "liberation",
-          "headline": "Macron reçoit des lycéens, la tempête Austen balaie la France, affaire des viols au tribunal de Bobigny… L’actu de ce vendredi 23 octobre au matin",
-          "url": "https://www.liberation.fr/international/europe/macron-recoit-des-lyceens-la-tempete-austen-balaie-la-france-affaire-des-viols-au-tribunal-de-bobigny-lactu-de-ce-vendredi-23-octobre-au-matin-20261023_VKFZZ5AFUVGJZHFH62S64PQIFM/",
-          "publishedAt": "2026-10-23T05:44:38.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "f3c204579763",
-          "outletId": "bfmtv",
-          "headline": "DIRECT. Colère sociale: conseil de défense, rencontre avec les organisations lycéennes et les forces de l'ordre... La journée très chargée d'Emmanuel Macron avant une nouvelle mobilisation attendue le 24 octobre",
-          "url": "https://www.bfmtv.com/politique/direct-colere-sociale-conseil-de-defense-rencontre-avec-les-organisations-lyceennes-et-les-forces-de-l-ordre-la-journee-tres-chargee-d-emmanuel-macron-avant-une-nouvelle-mobilisation-attendue-le-24-octobre_LN-202610230108.html",
-          "publishedAt": "2026-10-23T04:55:08.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/ZJkcdaoo4R3J4I4ewRYBIOngSE0=/0x106:2048x1258/800x0/images/Emmanuel-Macron-le-5-fevrier-2026-2343432.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "1ec4a5ded1c1",
-          "outletId": "le-figaro",
-          "headline": "EN DIRECT - Mobilisation du 24 octobre : Macron en première ligne avec les lycéens et les forces de l’ordre, Lecornu attendu à Limoges",
-          "url": "https://www.lefigaro.fr/actualite-france/en-direct-mobilisation-24-octobre-manifestations-paris-emmanuel-macron-lyceens-sebastien-lecornu-20261023",
-          "publishedAt": "2026-10-23T04:44:02.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/23/62273129d068f8e7c8932a5e14a774820885d46ba970a13b63fea0e737aabf31.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "b1881b814e96",
-          "outletId": "huffpost",
-          "headline": "Avant le 24 octobre, Emmanuel Macron accélère et va recevoir les lycéens pour la première fois",
-          "url": "https://www.huffingtonpost.fr/politique/article/avant-le-24-octobre-emmanuel-macron-accelere-et-va-recevoir-les-lyceens-pour-la-premiere-fois_343565.html",
-          "publishedAt": "2026-10-23T04:35:50.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/06/05/0/0/1200/675/0/0/60/0/b9cbfdc_upload-1-msx1huskgsr3-afp-20260326-a4rr3p8-v1-midres-francepoliticsceremonyfuneral.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "5f5337f2fa72",
-          "outletId": "tf1-info",
-          "headline": "EN DIRECT - Violences urbaines : Emmanuel Macron rencontre les organisations lycéennes et les forces de l'ordre aujourd'hui",
-          "url": "https://www.tf1info.fr/societe/en-direct-manifestation-24-octobre-pillages-heurts-violences-urbaines-des-couvre-feux-partiels-instaures-matignon-lecornu-melenchon-macron-le-pen-les-dernieres-informations-du-23-octobre-2026-2471513.html",
-          "publishedAt": "2026-10-23T04:30:00.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/police-paris-clashs-18-octobre-2026-7f2a10-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "politics"
-        },
-        {
-          "id": "099b4ff8dacc",
-          "outletId": "bfmtv",
-          "headline": "Emmanuel Macron recevra les organisations lycéennes vendredi à 15 heures",
-          "url": "https://www.bfmtv.com/replay-emissions/bfm-premiere/video-emmanuel-macron-recevra-les-organisations-lyceennes-vendredi-a-15-heures_VN-202610230077.html",
-          "publishedAt": "2026-10-23T04:18:53.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/8gqPWP4lTLXP1k5P0igGovCO-GE=/0x0:1280x720/800x0/images/Emmanuel-Macron-recevra-les-organisations-lyceennes-vendredi-a-15-heures-2370673.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "5b323782058a",
-          "outletId": "europe-1",
-          "headline": "En direct - Manifestation du 24 octobre : Emmanuel Macron recevra les lycéens et les forces de l'ordre, Sébastien Lecornu attendu à Limoges",
-          "url": "https://www.europe1.fr/politique/en-direct-manifestation-du-24-octobre-emmanuel-macron-recevra-les-lyceens-et-les-forces-de-lordre-sebastien-lecornu-attendu-a-limoges-1175286?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-23T04:00:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Macron/emmanuel_macron_thomas_samson_pool_afp_6aad38ed968de.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "politics"
-        },
-        {
-          "id": "51b7ab013dea",
-          "outletId": "europe-1",
-          "headline": "En direct - Manifestation du 24 octobre : Emmanuel Macron recevra les organisations lycéennes vendredi à 15h",
-          "url": "https://www.europe1.fr/societe/en-direct-manifestation-du-24-octobre-emmanuel-macron-recevra-les-organisations-lyceennes-vendredi-a-15h-1173270?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-22T18:44:17.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Macron/martin_bertrand_hans_lucas_hans_lucas_via_afp_696a5d36c6f24.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "politics"
-        }
-      ],
-      "topicId": "6700ddd0b583",
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le chef de l'État préside un conseil de défense le matin avant de recevoir une vingtaine de représentants lycéens à l'Élysée à 15 heures.",
-          "Le mouvement de contestation dure depuis plus d'un mois face à la politique gouvernementale.",
-          "La secrétaire générale de la CGT, Sophie Binet, qualifie de grave et inquiétante l'interdiction des manifestations.",
-          "Le président se rend ensuite dans une caserne de police du 19e arrondissement de Paris pour saluer les forces de sécurité."
-        ],
-        "centre": [
-          "Emmanuel Macron reçoit les organisations lycéennes à l'Élysée pour écouter leurs revendications à la veille de la mobilisation du 24 octobre.",
-          "Plus de 70 000 policiers et gendarmes sont déployés pour encadrer les manifestations de samedi.",
-          "Un conseil de défense se tient sous la présidence du chef de l'État pour ajuster le dispositif de sécurité face aux violences urbaines.",
-          "Le Premier ministre Sébastien Lecornu évoque un retour d'expérience ciblant l'ultragauche et la délinquance lors de son déplacement à Limoges."
-        ],
-        "droite": [
-          "Emmanuel Macron se montre en première ligne en recevant pour la première fois les organisations lycéennes et en présidant un conseil de défense.",
-          "Le chef de l'État se rend ensuite auprès des forces de l'ordre à la veille d'une nouvelle journée de contestation strictement encadrée.",
-          "Les discussions abordent divers sujets de préoccupation des étudiants, allant des conditions de classe à la suppression de Parcoursup."
-        ]
-      },
-      "differences": [
-        "La gauche insiste lourdement sur la répression gouvernementale et relaie les critiques syndicales contre les interdictions de manifester.",
-        "Le centre adopte un angle factuel et institutionnel, combinant la rencontre à l'Élysée avec les mesures de sécurité et les déclarations ministérielles.",
-        "La droite valorise la posture volontariste du président de l'exécutif en première ligne pour gérer la crise et encadrer la mobilisation."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 24,
-      "titledArticleCount": 21
     },
     {
       "id": "3eb27fe968b6",
