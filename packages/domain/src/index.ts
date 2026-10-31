@@ -236,8 +236,8 @@ export interface TopicRegistry {
 }
 
 /** The current selection of top Stories Prisme publishes: the three
- * rolling windows of ADR-0027 (as amended by ADR-0029), re-derived at
- * every build over all Stories — frozen ones included. */
+ * rolling windows of ADR-0027 (as amended by ADR-0029, 0036 and 0037),
+ * re-derived at every build over all Stories — frozen ones included. */
 export interface Edition {
   /** ISO 8601 build time. */
   builtAt: string;

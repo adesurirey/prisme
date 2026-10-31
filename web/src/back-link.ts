@@ -81,8 +81,8 @@ export function parseHomeUrls(raw: string | undefined): string[] {
  * anything else follows the href.
  *
  * Edition-aware (issue #128, ADR-0029): the link carries every home URL
- * it could have come from (data-home-urls, JSON array — la Une, « 7
- * jours », « En direct »). When the referrer matches one, the link
+ * it could have come from (data-home-urls, JSON array — la Une, « Le
+ * fil », « En direct »). When the referrer matches one, the link
  * retargets itself — href and back target become that home — so both the
  * history.back() path and every fallback (middle-click, new tab, no
  * history) keep the same promise: back to the edition they came from.

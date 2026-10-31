@@ -101,7 +101,7 @@ describe('parseHomeUrls', () => {
 });
 
 describe('referrerHome', () => {
-  it('recognizes the weekly edition (issue #128)', () => {
+  it('recognizes the « Le fil » edition', () => {
     expect(referrerHome(feedUrl, homeUrls)).toBe(feedUrl);
   });
 
@@ -179,7 +179,7 @@ describe('installBackLink', () => {
 
   it('retargets the link for a reader arriving from « Le fil », label unchanged', () => {
     const spy = page(feedUrl);
-    // Target and href become the weekly edition — every path
+    // Target and href become the edition the reader came from — every
     // (history.back, fallback href, middle-click) keeps the same promise
     // — while the label stays « À la une »: it names the page, the
     // select names the window (ADR-0028).

@@ -19,7 +19,7 @@ The recipe lives between the two keys: rank the day pool by coverage,
 decayed by silence. Measured before shipping (backtest:feed — free, no
 API; 408 hourly checkpoints over 18 days of archive):
 
-| half-life | lead turns over | top-3 residence (med) | entrants/h in top 20 | top-20 shared with Aujourd'hui / En direct |
+| half-life | lead turns over | top-3 residence (med) | entrants/h in top 20 | top-20 shared with Aujourd'hui's top 20 / En direct's members |
 |---|---|---|---|---|
 | (la Une) | ~11 h | 17 h | 1 | — / — |
 | 3 h | ~4 h | 5 h | 2 | 14 / 10 |

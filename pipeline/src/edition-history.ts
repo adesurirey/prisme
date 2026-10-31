@@ -4,7 +4,7 @@ import { isLive } from './liveness.ts';
 /**
  * The Edition history (issue #75): each build reconciles the Stories' sticky
  * `everInEdition` flag with today's Edition — true the moment the Story
- * ranks into either Edition window (ADR-0027), never unset, so the flag
+ * ranks into an Edition window (ADR-0027), never unset, so the flag
  * survives the Story's freezing and the never-entered deletion rule
  * (cleanup.ts) keeps working. A missing flag counts as false (no backward
  * compatibility; no migration). Frozen Stories are stamped only when they
