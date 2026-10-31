@@ -247,6 +247,12 @@ export interface Edition {
    * (rankStoriesLatestFirst), uncapped and unfloored — the window is the
    * cap. Always a subset of `stories` by construction (ADR-0029). */
   latestStories: Story[];
+  /** « Le fil » (`/le-fil/`): every Story with at least one Article in
+   * the rolling last 24 hours — « Aujourd'hui »'s pool, re-ranked — by
+   * the coverage-weighted feed key (rankStoriesFeed): in-window
+   * Coverage halved every FEED_HALF_LIFE_MS since the newest in-window
+   * Article, uncapped and unfloored (ADR-0036). */
+  feedStories: Story[];
   /** « Aujourd'hui » (the home): the last-24-hours window, ranked by
    * Coverage counted inside the window, uncapped (ADR-0022, ADR-0027). */
   stories: Story[];

@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import type { Article, Story } from './index.ts';
-import { rankStoriesLatestFirst } from './ranking.ts';
+import {
+  FEED_HALF_LIFE_MS,
+  rankStoriesFeed,
+  rankStoriesLatestFirst,
+} from './ranking.ts';
 
 /**
  * The « En direct » ranking key (ADR-0029): founding instant desc, then the
@@ -141,5 +145,117 @@ describe('rankStoriesLatestFirst', () => {
       article('2', { publishedAt: '2026-10-06T08:00:00Z' }),
     ]);
     expect(ranked([undated, dated])).toEqual(['dated', 'undated']);
+  });
+});
+
+/**
+ * The « Le fil » ranking key (ADR-0036): in-window Coverage — distinct
+ * reporting Outlets (Opinion included, ADR-0011) — times an exponential
+ * decay, halved every FEED_HALF_LIFE_MS since the Story's newest
+ * in-window Article; ties fall to newest desc, founding desc, id asc.
+ * The window where "when" and "how much" both decide: a widely covered
+ * Story outlasts a fresh scoop, silence sinks it.
+ */
+describe('rankStoriesFeed', () => {
+  const NOW = new Date('2026-10-06T10:00:00Z');
+  const DAY = 24 * 60 * 60 * 1000;
+  const feed = (stories: Story[]) =>
+    rankStoriesFeed(stories, DAY, NOW).map((s) => s.id);
+
+  it('weighs Coverage against silence: a widely covered Story outlasts a fresh scoop', () => {
+    // 8 Outlets silent for one half-life score 4 — still above a fresh
+    // 3-Outlet scoop (~2.7)…
+    const big = story('big', [
+      article('b0', { publishedAt: '2026-10-06T04:00:00Z' }),
+      ...['b', 'c', 'd', 'e', 'f', 'g', 'h'].map((o) =>
+        article(`b-${o}`, { outletId: o, publishedAt: '2026-10-06T04:00:00Z' }),
+      ),
+    ]);
+    const scoop = story('scoop', [
+      article('s0', { publishedAt: '2026-10-06T09:30:00Z' }),
+      article('s1', { outletId: 'b', publishedAt: '2026-10-06T09:30:00Z' }),
+      article('s2', { outletId: 'c', publishedAt: '2026-10-06T09:30:00Z' }),
+    ]);
+    expect(feed([scoop, big])).toEqual(['big', 'scoop']);
+    // …but two half-lives of silence (score 2) and the scoop passes it.
+    const quieter = story('big', [
+      article('b0', { publishedAt: '2026-10-05T22:00:00Z' }),
+      ...['b', 'c', 'd', 'e', 'f', 'g', 'h'].map((o) =>
+        article(`b-${o}`, { outletId: o, publishedAt: '2026-10-05T22:00:00Z' }),
+      ),
+    ]);
+    expect(feed([scoop, quieter])).toEqual(['scoop', 'big']);
+  });
+
+  it('halves exactly at FEED_HALF_LIFE_MS: the score tie falls to recency', () => {
+    expect(FEED_HALF_LIFE_MS).toBe(6 * 3_600_000); // ADR-0036's one knob
+    // 4 Outlets silent for one half-life weigh 2 — exactly the weight of
+    // a fresh 2-Outlet Story; the tie-break (newest desc) takes over.
+    const quiet = story('quiet', [
+      article('q0', { publishedAt: '2026-10-06T04:00:00Z' }),
+      article('q1', { outletId: 'b', publishedAt: '2026-10-06T04:00:00Z' }),
+      article('q2', { outletId: 'c', publishedAt: '2026-10-06T04:00:00Z' }),
+      article('q3', { outletId: 'd', publishedAt: '2026-10-06T04:00:00Z' }),
+    ]);
+    const fresh = story('fresh', [
+      article('f0', { publishedAt: '2026-10-06T10:00:00Z' }),
+      article('f1', { outletId: 'b', publishedAt: '2026-10-06T10:00:00Z' }),
+    ]);
+    expect(feed([quiet, fresh])).toEqual(['fresh', 'quiet']);
+  });
+
+  it('breaks score and recency ties by founding desc, then id asc', () => {
+    const foundedOlder = story('older', [
+      article('o0', { publishedAt: '2026-10-05T20:00:00Z' }),
+      article('o1', { outletId: 'b', publishedAt: '2026-10-06T09:00:00Z' }),
+    ]);
+    const foundedNewer = story('newer', [
+      article('n0', { publishedAt: '2026-10-06T06:00:00Z' }),
+      article('n1', { outletId: 'b', publishedAt: '2026-10-06T09:00:00Z' }),
+    ]);
+    expect(feed([foundedOlder, foundedNewer])).toEqual(['newer', 'older']);
+    const a = story(
+      'a',
+      [article('a0', { publishedAt: '2026-10-06T09:00:00Z' })],
+      '2026-10-05T20:00:00Z',
+    );
+    const b = story(
+      'b',
+      [article('b0', { publishedAt: '2026-10-06T09:00:00Z' })],
+      '2026-10-05T20:00:00Z',
+    );
+    expect(feed([b, a])).toEqual(['a', 'b']);
+  });
+
+  it('counts distinct reporting Outlets in the window — Opinion in, not_news out', () => {
+    const reporting = story('reporting', [
+      article('r0', { publishedAt: '2026-10-06T09:00:00Z' }),
+      article('r1', {
+        outletId: 'b',
+        kind: 'opinion',
+        publishedAt: '2026-10-06T09:00:00Z',
+      }),
+    ]);
+    const flat = story('flat', [
+      article('f0', { publishedAt: '2026-10-06T09:00:00Z' }),
+      article('f1', {
+        outletId: 'b',
+        kind: 'not_news',
+        publishedAt: '2026-10-06T09:00:00Z',
+      }),
+    ]);
+    expect(feed([flat, reporting])).toEqual(['reporting', 'flat']);
+  });
+
+  it('keeps a total order: a Story with no Article in the window sorts last', () => {
+    // The pipeline cuts membership before ranking; the key stays total
+    // for safety, like every Edition key.
+    const member = story('member', [
+      article('m0', { publishedAt: '2026-10-06T09:00:00Z' }),
+    ]);
+    const outsider = story('outsider', [
+      article('x0', { publishedAt: '2026-10-01T09:00:00Z' }),
+    ]);
+    expect(feed([outsider, member])).toEqual(['member', 'outsider']);
   });
 });

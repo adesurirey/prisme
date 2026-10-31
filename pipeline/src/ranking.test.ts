@@ -237,9 +237,10 @@ describe('assembleEdition', () => {
   // the week window [2026-09-29T10:00:00Z, 2026-10-06T10:00:00Z] and the
   // En direct window [2026-10-05T22:00:00Z, 2026-10-06T10:00:00Z].
   const windows = (stories: Story[], now: Date = DAY_NOON) => {
-    const { latest, day, week } = assembleEdition(stories, now);
+    const { latest, feed, day, week } = assembleEdition(stories, now);
     return {
       latest: latest.map((s) => s.id),
+      feed: feed.map((s) => s.id),
       day: day.map((s) => s.id),
       week: week.map((s) => s.id),
     };
@@ -291,7 +292,12 @@ describe('assembleEdition', () => {
       ),
       everInEdition: true,
     };
-    expect(windows([decayed])).toEqual({ latest: [], day: [], week: [] });
+    expect(windows([decayed])).toEqual({
+      latest: [],
+      feed: [],
+      day: [],
+      week: [],
+    });
   });
 
   it('has an Article in the day window at exactly 24h of age, out one second earlier', () => {
@@ -312,6 +318,7 @@ describe('assembleEdition', () => {
     );
     expect(windows([justPast, atEdge])).toEqual({
       latest: [],
+      feed: ['edge'],
       day: ['edge'],
       week: [],
     });
@@ -343,6 +350,7 @@ describe('assembleEdition', () => {
     };
     expect(windows([smallFresh, bigOld, bigFresh])).toEqual({
       latest: ['big-fresh', 'small-fresh'],
+      feed: ['big-fresh', 'small-fresh'],
       day: ['big-fresh', 'small-fresh'],
       week: ['big-fresh', 'big-old'],
     });
@@ -478,11 +486,13 @@ describe('assembleEdition', () => {
     };
     expect(windows([evening], new Date('2026-10-06T20:59:59Z'))).toEqual({
       latest: [],
+      feed: ['evening'],
       day: ['evening'],
       week: ['evening'],
     });
     expect(windows([evening], new Date('2026-10-06T21:00:01Z'))).toEqual({
       latest: [],
+      feed: [],
       day: [],
       week: ['evening'],
     });
@@ -528,6 +538,7 @@ describe('assembleEdition', () => {
     );
     expect(windows([future])).toEqual({
       latest: [],
+      feed: [],
       day: [],
       week: [],
     });
@@ -664,5 +675,58 @@ describe('assembleEdition — « En direct » (ADR-0029)', () => {
       '2026-10-07',
     );
     expect(latest([future])).toEqual([]);
+  });
+});
+
+describe('assembleEdition — « Le fil » (ADR-0036)', () => {
+  const feed = (stories: Story[], now: Date = DAY_NOON) =>
+    assembleEdition(stories, now).feed.map((s) => s.id);
+
+  it('re-ranks « Aujourd’hui »’s pool: silence can flip a Coverage order', () => {
+    // 'wide' carries 4 Outlets but has been silent for two half-lives
+    // (weight 1); 'narrow' has 3, all fresh (weight ~2.7). La Une ranks
+    // 'wide' first — pure in-window Coverage — and Le fil flips it: the
+    // feed's question is "who is being talked about", not only "how much".
+    const wide = story('wide', [
+      article('w0', { publishedAt: '2026-10-05T22:00:00Z' }),
+      article('w1', { outletId: 'b', publishedAt: '2026-10-05T22:00:00Z' }),
+      article('w2', { outletId: 'c', publishedAt: '2026-10-05T22:00:00Z' }),
+      article('w3', { outletId: 'd', publishedAt: '2026-10-05T22:00:00Z' }),
+    ]);
+    const narrow = story('narrow', [
+      article('n0', { publishedAt: '2026-10-06T09:30:00Z' }),
+      article('n1', { outletId: 'b', publishedAt: '2026-10-06T09:30:00Z' }),
+      article('n2', { outletId: 'c', publishedAt: '2026-10-06T09:30:00Z' }),
+    ]);
+    const windows = assembleEdition([narrow, wide], DAY_NOON);
+    expect(windows.day.map((s) => s.id)).toEqual(['wide', 'narrow']);
+    expect(windows.feed.map((s) => s.id)).toEqual(['narrow', 'wide']);
+  });
+
+  it('admits an old-founded Story still covered — no founding bound, unlike « En direct »', () => {
+    // Founded three days ago, reported again this morning: a day member,
+    // a feed member, but not En direct — the morning page carries the
+    // previous evening's still-covered Stories (ADR-0036's premise).
+    const carried = story('carried', [
+      article('old', { publishedAt: '2026-10-03T10:00:00Z' }),
+      article('new', { outletId: 'b', publishedAt: '2026-10-06T08:00:00Z' }),
+    ]);
+    const windows = assembleEdition([carried], DAY_NOON);
+    expect(windows.latest.map((s) => s.id)).toEqual([]);
+    expect(windows.feed.map((s) => s.id)).toEqual(['carried']);
+    expect(windows.day.map((s) => s.id)).toEqual(['carried']);
+  });
+
+  it('shares « Aujourd’hui »’s membership exactly — uncapped, unfloored', () => {
+    const stories = Array.from({ length: 30 }, (_, i) =>
+      story(
+        `s${String(i).padStart(2, '0')}`,
+        [article(`a${i}`, { publishedAt: '2026-10-06T03:00:00Z' })],
+        '2026-10-06T03:00:00Z',
+      ),
+    );
+    const windows = assembleEdition(stories, DAY_NOON);
+    expect(new Set(windows.feed)).toEqual(new Set(windows.day));
+    expect(windows.feed).toHaveLength(30);
   });
 });

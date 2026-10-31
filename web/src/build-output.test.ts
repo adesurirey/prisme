@@ -7,7 +7,8 @@
  * data/: the archive shifts under every hourly run, and tests must not
  * (PRISME_DATA_DIR, data.ts — test infrastructure only). The fixture is a
  * faithful Edition artifact: windows consistent with builtAt, the
- * 7-jours floor respected, latestStories a subset of the day list.
+ * 7-jours floor respected, latestStories a subset of the day list,
+ * feedStories the day pool re-ranked by the feed key (ADR-0036).
  *
  * The suite builds twice: the fixture as committed, and a derived copy
  * with an empty « En direct » window for the empty-state assertions.
@@ -116,8 +117,9 @@ function expectAnchorVisible(html: string, label: string): void {
   expect(klass!).not.toContain('sm:block');
 }
 
-/** The editions select's options, in shipped order (ADR-0028/0029:
- * freshness-first — En direct, Aujourd'hui, 7 jours). */
+/** The editions select's options, in shipped order (ADR-0028/0029 as
+ * amended by ADR-0036: chronology-first — En direct, Le fil,
+ * Aujourd'hui, 7 jours). */
 function optionsOf(html: string): { value: string; selected: boolean }[] {
   return [...html.matchAll(/<option value="([^"]*)"([^>]*)>/g)].map((m) => ({
     value: m[1],
@@ -128,6 +130,7 @@ function optionsOf(html: string): { value: string; selected: boolean }[] {
 function expectPickerOrder(html: string): void {
   expect(optionsOf(html).map((o) => o.value)).toEqual([
     '/en-direct/',
+    '/le-fil/',
     '/',
     '/7-jours/',
   ]);
@@ -256,10 +259,11 @@ describe('page head tags', () => {
 });
 
 describe('the editions picker (ADR-0028, as amended by ADR-0029)', () => {
-  it("reads freshness-first on every edition: En direct, Aujourd'hui, 7 jours", async () => {
+  it("reads chronology-first on every edition: En direct, Le fil, Aujourd'hui, 7 jours", async () => {
     for (const page of [
       'index.html',
       'en-direct/index.html',
+      'le-fil/index.html',
       '7-jours/index.html',
     ]) {
       expectPickerOrder(await readDist(page));
@@ -269,13 +273,20 @@ describe('the editions picker (ADR-0028, as amended by ADR-0029)', () => {
   it("arrives preselected on the page's own window, with noscript links to the others", async () => {
     const home = await readDist('index.html');
     const live = await readDist('en-direct/index.html');
+    const fil = await readDist('le-fil/index.html');
     const week = await readDist('7-jours/index.html');
     expect(home).toContain('<option value="/" selected>');
-    expect(noscriptHrefs(home)).toEqual(['/en-direct/', '/7-jours/']);
+    expect(noscriptHrefs(home)).toEqual([
+      '/en-direct/',
+      '/le-fil/',
+      '/7-jours/',
+    ]);
     expect(live).toContain('<option value="/en-direct/" selected>');
-    expect(noscriptHrefs(live)).toEqual(['/', '/7-jours/']);
+    expect(noscriptHrefs(live)).toEqual(['/le-fil/', '/', '/7-jours/']);
+    expect(fil).toContain('<option value="/le-fil/" selected>');
+    expect(noscriptHrefs(fil)).toEqual(['/en-direct/', '/', '/7-jours/']);
     expect(week).toContain('<option value="/7-jours/" selected>');
-    expect(noscriptHrefs(week)).toEqual(['/en-direct/', '/']);
+    expect(noscriptHrefs(week)).toEqual(['/en-direct/', '/le-fil/', '/']);
   });
 
   it('shows the temporal anchors on every screen size (ADR-0029)', async () => {
@@ -293,6 +304,10 @@ describe('the editions picker (ADR-0028, as amended by ADR-0029)', () => {
     expectAnchorVisible(
       await readDist('en-direct/index.html'),
       '12 dernières heures',
+    );
+    expectAnchorVisible(
+      await readDist('le-fil/index.html'),
+      '24 dernières heures',
     );
   });
 });
@@ -321,11 +336,12 @@ describe('« En direct » edition (issue #137, ADR-0029)', () => {
     expect(html).toContain('<meta name="robots" content="noindex"');
   });
 
-  it('stays out of the sitemap with « 7 jours » (ADR-0028)', async () => {
+  it('stays out of the sitemap with « Le fil » and « 7 jours » (ADR-0028)', async () => {
     const sitemap = await readDist('sitemap-0.xml');
     expect(sitemap).not.toContain(
       '<loc>https://leprisme.info/en-direct/</loc>',
     );
+    expect(sitemap).not.toContain('<loc>https://leprisme.info/le-fil/</loc>');
     expect(sitemap).not.toContain('<loc>https://leprisme.info/7-jours/</loc>');
     expect(sitemap).toContain('<loc>https://leprisme.info/</loc>');
   });
@@ -333,15 +349,18 @@ describe('« En direct » edition (issue #137, ADR-0029)', () => {
   it('wires the badge script through the same code path as la Une', async () => {
     const home = await readDist('index.html');
     const live = await readDist('en-direct/index.html');
-    // The shared glue: a chunk hash home and « En direct » both ship and
-    // « 7 jours » doesn't — identical bundled code, not a copy.
+    const fil = await readDist('le-fil/index.html');
+    // The shared glue: a chunk hash home, « En direct » and « Le fil »
+    // all ship and « 7 jours » doesn't — identical bundled code, not a
+    // copy (ADR-0029 extended to Le fil by ADR-0036).
     const homeHashes = new Set(chunkHashes(home));
     const liveHashes = new Set(chunkHashes(live));
+    const filHashes = new Set(chunkHashes(fil));
     const weekHashes = new Set(
       chunkHashes(await readDist('7-jours/index.html')),
     );
     const shared = [...homeHashes].filter(
-      (h) => liveHashes.has(h) && !weekHashes.has(h),
+      (h) => liveHashes.has(h) && filHashes.has(h) && !weekHashes.has(h),
     );
     expect(shared).toHaveLength(1);
     // That glue leads to the trending module — the baseline key and the
@@ -364,6 +383,36 @@ describe('« En direct » edition (issue #137, ADR-0029)', () => {
     expect(html).not.toContain('data-story-id');
     expect(html).not.toContain('<article');
     expect(html).not.toContain('dernier point à');
+  });
+});
+
+describe('« Le fil » edition (ADR-0036)', () => {
+  it("prerenders the feed key's order with la Une's anatomy: hero, cards, load-more, count line", async () => {
+    const html = await readDist('le-fil/index.html');
+    // One h1 naming the surface; the window is the select's setting.
+    expect(html).toMatch(/<h1[^>]*>\s*À la une\s*<\/h1>/);
+    expect(html).not.toMatch(/<h1[^>]*>\s*Le fil\s*<\/h1>/);
+    // The stories ship in the artifact's feed order — highest weight
+    // first — hero first, cards after.
+    const ids = [...html.matchAll(/data-story-id="([^"]*)"/g)].map((m) => m[1]);
+    expect(ids).toEqual(edition.feedStories.map((s) => s.id));
+    expect(html).toContain('data-load-more');
+    expect(html).toContain(
+      `${edition.feedStories.length} sujets — dernier point à 20\u202Fh\u202F45`,
+    );
+  });
+
+  it('is noindexed with a canonical, like every windowed edition (ADR-0028)', async () => {
+    const html = await readDist('le-fil/index.html');
+    expect(html).toContain(
+      '<link rel="canonical" href="https://leprisme.info/le-fil/">',
+    );
+    expect(html).toContain('<meta name="robots" content="noindex"');
+  });
+
+  it('ships the founding time on its cards — every timeline edition', async () => {
+    const fil = await readDist('le-fil/index.html');
+    await expectCardFoundingTime(fil, edition.feedStories);
   });
 });
 

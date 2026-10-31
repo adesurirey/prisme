@@ -88,12 +88,16 @@ The part of the news a Story belongs to: Politique, International, Économie, So
 _Avoid_: Category, rubric, topic
 
 **Edition**:
-A rolling window over all Stories — frozen ones included — re-ranked at every build. « Aujourd'hui » (the home) is the last 24 hours, uncapped (ADR-0022); « 7 jours » (`/7-jours/`) is the last 7 days, floored to Stories covered by at least 10 Outlets in the window; both rank by Coverage counted inside the window. « En direct » (`/en-direct/`) is the exception: the last 12 hours by founding instant, ranked latest-first (ADR-0029, widened by ADR-0035). A Story stays on la Une while Outlets keep reporting it inside the window, then sinks and disappears — by decay, never by a clock (ADR-0027). Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
+A rolling window over all Stories — frozen ones included — re-ranked at every build. « Aujourd'hui » (the home) is the last 24 hours, uncapped (ADR-0022); « 7 jours » (`/7-jours/`) is the last 7 days, floored to Stories covered by at least 10 Outlets in the window; both rank by Coverage counted inside the window. « Le fil » (`/le-fil/`) re-ranks « Aujourd'hui »'s 24-hour pool by the coverage-weighted feed key — in-window Coverage halved every six hours since the Story's newest in-window Article (ADR-0036). « En direct » (`/en-direct/`) is the exception: the last 12 hours by founding instant, ranked latest-first (ADR-0029, widened by ADR-0035). A Story stays on la Une while Outlets keep reporting it inside the window, then sinks and disappears — by decay, never by a clock (ADR-0027). Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
 _Avoid_: Issue, digest, daily, run
 
 **En direct**:
 The latest-first Edition window: every Story whose founding Article falls within the last 12 hours, newest first, uncapped — the chronological thread of the news, the page where one reads the sequence of events over the last hours (ADR-0029, widened by ADR-0035). Replaces the per-reader « Nouveau » marker (ADR-0020).
 _Avoid_: Live feed, newsfeed, breaking news
+
+**Le fil**:
+The coverage-weighted timeline Edition: every Story with an Article in the last 24 hours — « Aujourd'hui »'s pool — ranked by in-window Coverage halved every six hours since the newest in-window Article: coverage makes a Story last, silence sinks it (ADR-0036). Not personalized — every reader sees the same fil.
+_Avoid_: newsfeed, personalized feed, algo feed
 
 **Story day**:
 The one Publication day (Europe/Paris) a Story belongs to — the day of its founding Article, fixed when the Story is created. It keys the Story's URL, its archive page and the Episode age window; which Articles may join is governed by the Ingestion window, not by the day (ADR-0026, ADR-0027).

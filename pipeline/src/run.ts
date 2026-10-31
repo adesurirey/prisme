@@ -172,13 +172,15 @@ export async function runEdition(): Promise<Edition> {
   const liveIds = new Set(outcome.live.map((s) => s.id));
   const frontpage = updateFrontPageHistory(outcome.stories, kept, now);
 
-  // The Edition (ADR-0027, amended by ADR-0029's third window;
+  // The Edition (ADR-0027, amended by ADR-0029's and ADR-0036's windows;
   // superseding ADR-0022/0026's live pool): rolling windows over ALL
   // Stories — frozen ones included. « En direct » (the last 12 hours by
   // founding instant, ranked latest-first) is by construction a subset of
   // « Aujourd'hui » (the last 24 hours), which stays uncapped and keeps
   // feeding the home; the Summaries budget below takes its top-20 in this
-  // ranked order. « 7 jours » (the last 7 days) is floored to Stories
+  // ranked order. « Le fil » re-ranks « Aujourd'hui »'s pool by the feed
+  // key — in-window Coverage halved every 6 h of silence (ADR-0036).
+  // « 7 jours » (the last 7 days) is floored to Stories
   // covered by ≥ 10 Outlets in the window. A Story leaves la Une by decay
   // — no Outlet reporting it inside the window — never at a clock edge;
   // overnight coverage is still on la Une in the morning.
@@ -186,14 +188,15 @@ export async function runEdition(): Promise<Edition> {
   const ranked = assembleEdition(frontpage.stories, now);
 
   // Edition history (issue #75): `everInEdition` is sticky — set the moment
-  // a Story ranks into either Edition window, frozen members included
+  // a Story ranks into any Edition window, frozen members included
   // (ADR-0027: the windows span frozen Stories, and an unstamped member
-  // would be deleted by the cleanup below while still linked on « 7 jours »),
-  // so the flag survives its freezing and the never-entered deletion rule
-  // below keeps working. Changed files are rewritten.
+  // would be deleted by the cleanup below while still linked on « Le fil »
+  // or « En direct »), so the flag survives its freezing and the
+  // never-entered deletion rule below keeps working. Changed files are
+  // rewritten.
   const editionHistory = updateEditionHistory(
     frontpage.stories,
-    new Set([...ranked.day, ...ranked.week].map((s) => s.id)),
+    new Set([...ranked.day, ...ranked.feed, ...ranked.week].map((s) => s.id)),
     now,
   );
   // Re-map the ranked windows onto the reconciled Stories by id: the flags
@@ -205,6 +208,7 @@ export async function runEdition(): Promise<Edition> {
   const edition: Edition = {
     builtAt: now.toISOString(),
     latestStories: ranked.latest.map((s) => reconciledById.get(s.id) ?? s),
+    feedStories: ranked.feed.map((s) => reconciledById.get(s.id) ?? s),
     stories: ranked.day.map((s) => reconciledById.get(s.id) ?? s),
     weekStories: ranked.week.map((s) => reconciledById.get(s.id) ?? s),
   };
@@ -254,7 +258,7 @@ export async function runEdition(): Promise<Edition> {
   const filesToWrite = changed.size;
   section('📰', 'Edition');
   console.log(
-    `${edition.latestStories.length} in « En direct », ` +
+    `${edition.latestStories.length} in « En direct », ${edition.feedStories.length} in « Le fil », ` +
       `${edition.stories.length} ranked stories in « Aujourd'hui » (of ${liveIds.size} live), ` +
       `${edition.weekStories.length} in « 7 jours » — from ${kept.length} articles; ` +
       `${existing.length} on disk, ${filesToWrite} file(s) to write, ${summaryOutcome.calls} summaries call(s).`,

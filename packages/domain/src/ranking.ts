@@ -86,6 +86,64 @@ export function rankStoriesInWindow(
   );
 }
 
+/** The « Le fil » half-life (ADR-0036): every FEED_HALF_LIFE_MS without
+ * a new in-window Article halves a Story's weight — the one knob that
+ * tunes the feed between « En direct » (short) and « Aujourd'hui »
+ * (long). Measured over 18 days of archive (backtest:feed): at 6 h the
+ * lead turns over every ~6 h and the top-20 shares 16/20 with
+ * « Aujourd'hui » and 9/20 with « En direct » — the measured middle. */
+export const FEED_HALF_LIFE_MS = 6 * 60 * 60 * 1000;
+
+/**
+ * The « Le fil » ranking key (ADR-0036) — the window where "when" and
+ * "how much" both decide: each Story weighs its in-window Coverage —
+ * distinct reporting Outlets with at least one Article in the window
+ * (Opinion included, ADR-0011), the same basis as rankStoriesInWindow —
+ * times an exponential decay, halved every FEED_HALF_LIFE_MS since the
+ * Story's newest in-window Article: coverage makes a Story last,
+ * silence sinks it. Ties fall to the newest in-window Article desc,
+ * then the founding instant desc (ADR-0026), then id asc — fully
+ * deterministic across builds. Membership (« Aujourd'hui »'s pool: at
+ * least one Article, any kind, inside the window) lives with the
+ * Edition assembly (pipeline, assembleEdition); the key itself is
+ * total — a Story with no Article in the window weighs nothing and
+ * sorts last, deterministically.
+ */
+export function rankStoriesFeed(
+  stories: Story[],
+  windowMs: number,
+  now: Date,
+): Story[] {
+  const t = now.getTime();
+  const key = new Map<
+    Story,
+    { score: number; newest: number; founding: number }
+  >();
+  for (const story of stories) {
+    // articlesInWindow already dropped unparseable instants, so every
+    // Date.parse below is a real instant; an empty window leaves
+    // newest at 0, whose age dwarfs any half-life — weight 0.
+    const articles = articlesInWindow(story.articles, windowMs, now);
+    const newest = Math.max(
+      0,
+      ...articles.map((a) => Date.parse(a.publishedAt)),
+    );
+    const outlets = reportingOutletIds(articles).size;
+    key.set(story, {
+      score: outlets * 2 ** (-(t - newest) / FEED_HALF_LIFE_MS),
+      newest,
+      founding: foundingInstant(story) ?? 0,
+    });
+  }
+  return [...stories].sort(
+    (a, b) =>
+      key.get(b)!.score - key.get(a)!.score ||
+      key.get(b)!.newest - key.get(a)!.newest ||
+      key.get(b)!.founding - key.get(a)!.founding ||
+      (a.id < b.id ? -1 : a.id > b.id ? 1 : 0),
+  );
+}
+
 /**
  * The « En direct » ranking key (ADR-0029) — the one window whose question
  * is "when", not "how much": founding instant desc (ADR-0026, the earliest

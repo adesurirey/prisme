@@ -41,6 +41,17 @@ export async function loadEdition(): Promise<Edition> {
 }
 
 /**
+ * The « Le fil » window of the Edition artifact (ADR-0036): every Story
+ * with an Article in the rolling last 24 hours — « Aujourd'hui »'s pool,
+ * re-ranked by the coverage-weighted feed key (rankStoriesFeed). The
+ * pipeline always writes the key; the reader requires it.
+ */
+export async function loadFeedStories(): Promise<Story[]> {
+  const edition = await loadEdition();
+  return edition.feedStories;
+}
+
+/**
  * The « 7 jours » window of the Edition artifact (ADR-0027): Stories
  * covered by at least 10 Outlets publishing in the last 7 days, ranked
  * by that in-window Coverage. The pipeline always writes the key; the

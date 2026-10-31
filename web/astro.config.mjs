@@ -48,7 +48,9 @@ export default defineConfig({
     react(),
     sitemap({
       filter: (page) =>
-        !['/7-jours/', '/en-direct/'].includes(new URL(page).pathname),
+        !['/7-jours/', '/en-direct/', '/le-fil/'].includes(
+          new URL(page).pathname,
+        ),
     }),
   ],
   vite: {

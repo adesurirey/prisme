@@ -11,6 +11,7 @@
     "benchmark:grouping-sample": "tsx src/benchmark/grouping-sample.ts",
     "benchmark:grouping-grade": "tsx src/benchmark/grouping-grade.ts",
     "backtest:episodes": "tsx src/episode-backtest.ts",
+    "backtest:feed": "tsx src/feed-backtest.ts",
     "merge-stories": "tsx src/merge-stories.ts",
     "replay:topics": "tsx src/topic-replay.ts",
     "test": "vitest run",

@@ -14,6 +14,7 @@
     "benchmark:grouping-sample": "pnpm --filter @prisme/pipeline benchmark:grouping-sample",
     "benchmark:grouping-grade": "pnpm --filter @prisme/pipeline benchmark:grouping-grade",
     "backtest:episodes": "pnpm --filter @prisme/pipeline backtest:episodes",
+    "backtest:feed": "pnpm --filter @prisme/pipeline backtest:feed",
     "merge-stories": "pnpm --filter @prisme/pipeline merge-stories",
     "replay:topics": "pnpm --filter @prisme/pipeline replay:topics",
     "lint": "biome check .",

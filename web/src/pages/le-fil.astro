@@ -1,0 +1,111 @@
+---
+import EditionHeader from '../components/EditionHeader.astro';
+import LoadMoreButton from '../components/LoadMoreButton.astro';
+import StoryCard from '../components/StoryCard';
+import StoryHero from '../components/StoryHero.astro';
+import { loadEdition, loadFeedStories, loadOutlets } from '../data';
+import { formatParisClock } from '../latest';
+import Base from '../layouts/Base.astro';
+import { LOAD_MORE_INITIAL } from '../load-more';
+
+/**
+ * « Le fil » (ADR-0036): the coverage-weighted timeline — « Aujourd'hui »'s
+ * pool (every Story with an Article in the rolling last 24 hours)
+ * re-ranked by the domain's feed key: a Story weighs the Outlets covering
+ * it in the window, halved every six hours since its newest Article —
+ * coverage makes a Story last, silence sinks it. Anatomically la Une's
+ * mirror — hero for the highest-weighted Story, Story cards, load-more,
+ * count line — the edition where "when" and "how much" both decide.
+ *
+ * Per-reader signal (ADR-0029, extended by ADR-0036): the trending script
+ * runs here through the same code path as la Une and « En direct »
+ * (trending-page.ts) — the badge means "grew since your last visit", and a
+ * visit to any of the three feeds the same merged baseline.
+ *
+ * Header and indexation (ADR-0028): the shared editions header — h1
+ * « À la une », select preselected on « Le fil », second entry of the
+ * chronology-first picker — and a meta noindex: the hourly-churning
+ * near-duplicate of la Une must never compete with it in search
+ * (ADR-0028), and it stays out of the sitemap with the other windows.
+ */
+const stories = await loadFeedStories();
+const edition = await loadEdition();
+const outlets = loadOutlets();
+
+const built = new Date(edition.builtAt);
+
+// The footer line's last update, Paris clock — same thin no-break spaces
+// as every edition's count line.
+const updatedTime = formatParisClock(built);
+
+// SEO: the mission wording names the mechanism (brand brief: say what we
+// show) — a Story rises when Outlets report it, sinks when they fall
+// silent, never leaves the last 24 hours.
+const description =
+  'Le fil de la presse française : les sujets des dernières 24 heures, remontés quand les médias en parlent et relégués quand ils se taisent — actualisés à chaque collecte horaire.';
+---
+
+<Base
+  title="Prisme — Le fil"
+  description={description}
+  noindex
+  jsonLd={{
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Le fil',
+    description,
+    inLanguage: 'fr',
+  }}
+>
+  <section class="pt-10 pb-6">
+    {/* The editions header: « À la une » is the h1, the select arrives
+        preselected on « Le fil ». The temporal anchor names the window —
+        the same 24 hours as la Une; what differs is the ranking, which
+        the anchor leaves to the reading. */}
+    <EditionHeader edition="feed">
+      <p class="text-[13px] text-muted" slot="aside">24 dernières heures</p>
+    </EditionHeader>
+  </section>
+
+  <section aria-label="Sujets du fil">
+    {
+      stories.length === 0 ? (
+        // The day pool empty (a quiet archive's night): same honesty as
+        // every empty state — what happened, when collection last ran.
+        <p class="py-8 text-center text-[14px] text-muted">
+          Aucun sujet couvert dans les dernières 24 heures — dernière
+          collecte à {updatedTime}.
+        </p>
+      ) : (
+        <>
+          {stories.map((story, index) =>
+            // The highest-weighted Story leads in the hero variant, like
+            // every edition's first; the rest stay cards in feed order.
+            index === 0 ? (
+              <StoryHero story={story} outlets={outlets} />
+            ) : (
+              <StoryCard
+                story={story}
+                outlets={outlets}
+                tail={index >= LOAD_MORE_INITIAL}
+              />
+            ),
+          )}
+          <LoadMoreButton />
+          {/* The count line mirrors la Une's — sujet count and last
+              update; the window itself is named by the header anchor. */}
+          <p class="mt-5 text-center text-[12px] text-faint">
+            {stories.length} sujets — dernier point à {updatedTime}
+          </p>
+        </>
+      )
+    }
+  </section>
+</Base>
+{/* "Faits nouveaux" (per-visitor trending, ADR-0029): the shared page
+   wiring — same code path as la Une and « En direct ». */}
+<script>
+  import { installTrendingPage } from '../trending-page';
+
+  installTrendingPage();
+</script>

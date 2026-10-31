@@ -71,3 +71,6 @@ churns hourly — must never compete at all.
   « 30 jours » after « 7 jours » when it ships) — and the temporal
   anchors return on small screens on every edition: the hiding existed
   to fit the « Nouveau » pill, which ADR-0029 removes.
+- Amended by ADR-0036: « Le fil » joins the picker — the order reads
+  chronology-first (En direct, Le fil, Aujourd'hui, 7 jours): pure
+  chronology, chronology weighted by Coverage, pure Coverage, the week.

@@ -80,3 +80,6 @@ ceiling set for this feature; 8 h holds a median of 12 (p75 17, max 41).
   15-Story ceiling is lifted — the ceiling answered the superseded
   per-reader novelty framing; En direct is the chronological thread, and
   the list's length is the news's density.
+- Amended by ADR-0036: « Le fil » takes over as the coverage-weighted
+  timeline — the reader-visits-several-times-a-day habit En direct never
+  fully served — and the picker's order note reads chronology-first.
