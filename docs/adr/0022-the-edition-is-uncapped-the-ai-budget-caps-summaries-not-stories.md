@@ -89,3 +89,5 @@ Stories 21+ from search engines (no sitemap exists).
   archive is still pruned only by the never-in-Edition rule.
 - Reaching the free tier's ceiling requires raising the budget number
   from a re-measured dashboard, not a code rework.
+- Amended by ADR-0037: the « 7 jours » significance floor is gone with
+  the edition that carried it — the Edition stays uncapped, as decided.

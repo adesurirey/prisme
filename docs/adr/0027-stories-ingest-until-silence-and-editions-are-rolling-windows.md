@@ -210,3 +210,6 @@ permanent (ADR-0005) and age out of the 7-day window within a week.
   `min(max(founding + 24h, newest + 12h), founding + 72h)` — so a
   continuously covered event cannot hold its Story open past three days;
   the silence rule above stays in force for the common case.
+- Amended by ADR-0036/0037: the Editions are « En direct », « Le fil »
+  and « Aujourd'hui » — the week window and its 10-Outlet floor are
+  gone (ADR-0037); the rolling windows and the decay rule above stand.

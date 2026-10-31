@@ -7,7 +7,7 @@
  * elsewhere the attributes are inert and the link is a plain href.
  *
  * The label is invariant: « À la une » names the page itself, whose
- * window (Aujourd'hui, 7 jours, En direct, …) is just the select's
+ * window (Aujourd'hui, Le fil, En direct) is just the select's
  * setting (ADR-0028). The edition-aware installer may retarget href and
  * back target to the home the reader came from; it never rewrites the
  * wording. The first URL in the list is the fallback (la Une).
@@ -29,7 +29,7 @@ const { backLink = false } = Astro.props;
           'data-back-to-index': true,
           'data-home-urls': JSON.stringify([
             withBase('/'),
-            withBase('/7-jours/'),
+            withBase('/le-fil/'),
             withBase('/en-direct/'),
           ]),
         }

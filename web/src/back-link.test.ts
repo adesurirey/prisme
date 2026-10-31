@@ -20,9 +20,9 @@ import {
 
 const SITE = window.location.origin;
 const indexUrl = `${SITE}/`;
-const weekUrl = `${SITE}/7-jours/`;
+const feedUrl = `${SITE}/le-fil/`;
 const liveUrl = `${SITE}/en-direct/`;
-const homeUrls = [indexUrl, weekUrl, liveUrl];
+const homeUrls = [indexUrl, feedUrl, liveUrl];
 
 describe('shouldUseBack', () => {
   it('matches a referrer that is the index', () => {
@@ -102,7 +102,7 @@ describe('parseHomeUrls', () => {
 
 describe('referrerHome', () => {
   it('recognizes the weekly edition (issue #128)', () => {
-    expect(referrerHome(weekUrl, homeUrls)).toBe(weekUrl);
+    expect(referrerHome(feedUrl, homeUrls)).toBe(feedUrl);
   });
 
   it('recognizes the live edition (ADR-0029)', () => {
@@ -177,15 +177,15 @@ describe('installBackLink', () => {
     expect(spy).not.toHaveBeenCalled();
   });
 
-  it('retargets the link for a reader arriving from « 7 jours », label unchanged', () => {
-    const spy = page(weekUrl);
+  it('retargets the link for a reader arriving from « Le fil », label unchanged', () => {
+    const spy = page(feedUrl);
     // Target and href become the weekly edition — every path
     // (history.back, fallback href, middle-click) keeps the same promise
     // — while the label stays « À la une »: it names the page, the
     // select names the window (ADR-0028).
     const link = document.getElementById('back')! as HTMLAnchorElement;
     expect(link.textContent).toBe('À la une');
-    expect(link.getAttribute('href')).toBe(weekUrl);
+    expect(link.getAttribute('href')).toBe(feedUrl);
     click();
     expect(spy).toHaveBeenCalledTimes(1);
   });

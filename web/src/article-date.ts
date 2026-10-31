@@ -11,8 +11,8 @@
  *
  * formatStoryDate is the Story-level variant (the index cards' founding
  * time, issue #136, ADR-0029): it takes the Story's founding instant — not
- * the newest Article's date — so every list (En direct, Aujourd'hui,
- * 7 jours) reads as a timeline. No prefix: the Coverage count precedes it.
+ * the newest Article's date — so every list (En direct, Le fil,
+ * Aujourd'hui) reads as a timeline. No prefix: the Coverage count precedes it.
  * Today stays a bare clock (« 21:11 »), yesterday keeps its marker (« hier
  * à 21:11 » — the day boundary is worth naming once the page has been live
  * overnight) and an older Story keeps only the short date (« 7 oct. » — no

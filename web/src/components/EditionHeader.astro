@@ -2,7 +2,7 @@
 /**
  * The editions header, shared by every edition page (ADR-0028, amended by
  * ADR-0029): « À la une » names the surface and is the h1 on all of them —
- * the window (En direct, Aujourd'hui, 7 jours; later 30 jours) is a
+ * the window (En direct, Le fil, Aujourd'hui) is a
  * *setting of that one page*, switched by a native <select> rather
  * than a row of links: four labels don't fit a 360px phone next to
  * the h1, and the platform picker is the bulletproof pattern — touch
@@ -18,8 +18,8 @@
  * ADR-0028).
  *
  * The EDITIONS order is chronology-first (ADR-0029, amended by
- * ADR-0036): En direct (pure chronology), Le fil (chronology weighted
- * by Coverage), Aujourd'hui (pure Coverage), 7 jours — the gradient
+ * ADR-0036/0037): En direct (pure chronology), Le fil (chronology
+ * weighted by Coverage), Aujourd'hui (pure Coverage) — the gradient
  * from "when" to "how much".
  *
  * The `aside` slot carries the right side of the row: the edition's
@@ -31,20 +31,20 @@ import { withBase } from '../data';
 
 interface Props {
   /** The page's own edition: the select arrives preselected on it. */
-  edition: 'live' | 'feed' | 'today' | 'week';
+  edition: 'live' | 'feed' | 'today';
 }
 
 const { edition } = Astro.props;
 
 /** The shipped editions — the select's options and the noscript
- *  fallback links, freshness-first (ADR-0029, amended by ADR-0036:
- *  chronology-first — En direct is pure chronology, « Le fil » mixes
- *  chronology and Coverage, « Aujourd'hui » is pure Coverage). */
+ *  fallback links, chronology-first (ADR-0029, amended by ADR-0036 and
+ *  ADR-0037: En direct is pure chronology, « Le fil » mixes chronology
+ *  and Coverage, « Aujourd'hui » is pure Coverage — the week window is
+ *  gone). */
 const EDITIONS = [
   { key: 'live', label: 'En direct', href: withBase('/en-direct/') },
   { key: 'feed', label: 'Le fil', href: withBase('/le-fil/') },
   { key: 'today', label: "Aujourd'hui", href: withBase('/') },
-  { key: 'week', label: '7 jours', href: withBase('/7-jours/') },
 ] as const;
 
 const current = EDITIONS.find((e) => e.key === edition);

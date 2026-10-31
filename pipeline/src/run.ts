@@ -180,8 +180,7 @@ export async function runEdition(): Promise<Edition> {
   // feeding the home; the Summaries budget below takes its top-20 in this
   // ranked order. « Le fil » re-ranks « Aujourd'hui »'s pool by the feed
   // key — in-window Coverage halved every 6 h of silence (ADR-0036).
-  // « 7 jours » (the last 7 days) is floored to Stories
-  // covered by ≥ 10 Outlets in the window. A Story leaves la Une by decay
+  // The week window is gone (ADR-0037). A Story leaves la Une by decay
   // — no Outlet reporting it inside the window — never at a clock edge;
   // overnight coverage is still on la Une in the morning.
   const outletById = new Map(outlets.map((o) => [o.id, o]));
@@ -196,7 +195,7 @@ export async function runEdition(): Promise<Edition> {
   // rewritten.
   const editionHistory = updateEditionHistory(
     frontpage.stories,
-    new Set([...ranked.day, ...ranked.feed, ...ranked.week].map((s) => s.id)),
+    new Set([...ranked.day, ...ranked.feed].map((s) => s.id)),
     now,
   );
   // Re-map the ranked windows onto the reconciled Stories by id: the flags
@@ -210,7 +209,6 @@ export async function runEdition(): Promise<Edition> {
     latestStories: ranked.latest.map((s) => reconciledById.get(s.id) ?? s),
     feedStories: ranked.feed.map((s) => reconciledById.get(s.id) ?? s),
     stories: ranked.day.map((s) => reconciledById.get(s.id) ?? s),
-    weekStories: ranked.week.map((s) => reconciledById.get(s.id) ?? s),
   };
   const changed = new Set([
     ...outcome.changed,
@@ -260,7 +258,7 @@ export async function runEdition(): Promise<Edition> {
   console.log(
     `${edition.latestStories.length} in « En direct », ${edition.feedStories.length} in « Le fil », ` +
       `${edition.stories.length} ranked stories in « Aujourd'hui » (of ${liveIds.size} live), ` +
-      `${edition.weekStories.length} in « 7 jours » — from ${kept.length} articles; ` +
+      `from ${kept.length} articles; ` +
       `${existing.length} on disk, ${filesToWrite} file(s) to write, ${summaryOutcome.calls} summaries call(s).`,
   );
 

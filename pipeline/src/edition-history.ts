@@ -10,7 +10,8 @@ import { isLive } from './liveness.ts';
  * compatibility; no migration). Frozen Stories are stamped only when they
  * rank into a window this build — the windows span frozen Stories (ADR-0027),
  * and an unstamped member would be deleted by the cleanup while still
- * linked on « 7 jours ». Otherwise frozen Stories are passed through
+ * linked on « Le fil » or « En direct ». Otherwise frozen Stories are passed
+ * through
  * untouched: the stamp touches only this flag, never the Story's content
  * (ADR-0005) — same shape of reconciliation as `updateFrontPageHistory`.
  */
@@ -30,7 +31,7 @@ export function updateEditionHistory(
   const reconciled = stories.map((story) => {
     // A frozen non-member passes through: only a frozen Story that ranks
     // into a window this build is stamped, so cleanup never drops a file
-    // that /7-jours/ links to (spec #121 review) — a > 24h outage can
+    // an Edition page links to (spec #121 review) — a > 24h outage can
     // birth-and-freeze a Story no build ever saw live.
     if (!isLive(story, now) && !editionStoryIds.has(story.id)) return story;
     const ever = story.everInEdition === true || editionStoryIds.has(story.id);

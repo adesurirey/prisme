@@ -74,3 +74,5 @@ churns hourly — must never compete at all.
 - Amended by ADR-0036: « Le fil » joins the picker — the order reads
   chronology-first (En direct, Le fil, Aujourd'hui, 7 jours): pure
   chronology, chronology weighted by Coverage, pure Coverage, the week.
+- Amended by ADR-0037: « 7 jours » leaves the picker the same day — the
+  three shipped editions are En direct, Le fil, Aujourd'hui.

@@ -72,3 +72,5 @@ API; 408 hourly checkpoints over 18 days of archive):
 - GLOSSARY's Edition entry and its new Le fil entry, the Méthode page's
   reading scales, and `backtest:feed` (the replay tool that graded the
   half-life) ship with this ADR.
+- Amended by ADR-0037: « 7 jours » leaves the picker the day it joined
+  — the gradient is En direct, Le fil, Aujourd'hui.

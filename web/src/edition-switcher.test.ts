@@ -17,7 +17,7 @@ describe('installEditionSwitcher', () => {
     document.body.innerHTML = `
       <select data-edition-switcher aria-label="Choisir l'édition">
         <option value="/">Aujourd'hui</option>
-        <option value="/7-jours/">7 jours</option>
+        <option value="/le-fil/">Le fil</option>
       </select>`;
     return document.querySelector<HTMLSelectElement>(
       '[data-edition-switcher]',
@@ -28,9 +28,9 @@ describe('installEditionSwitcher', () => {
     const select = mount();
     const win = { location: { assign: vi.fn() } };
     installEditionSwitcher(document, win as unknown as Window);
-    select.value = '/7-jours/';
+    select.value = '/le-fil/';
     select.dispatchEvent(new Event('change'));
-    expect(win.location.assign).toHaveBeenCalledWith('/7-jours/');
+    expect(win.location.assign).toHaveBeenCalledWith('/le-fil/');
   });
 
   it('does nothing until the reader changes the selection', () => {
@@ -51,10 +51,10 @@ describe('installEditionSwitcher', () => {
 
   it('opens the native picker from the face button', () => {
     document.body.innerHTML = `
-      <button type="button" data-edition-switcher-face>7 jours</button>
+      <button type="button" data-edition-switcher-face>Le fil</button>
       <select data-edition-switcher class="sr-only" tabindex="-1" aria-hidden="true">
         <option value="/">Aujourd'hui</option>
-        <option value="/7-jours/" selected>7 jours</option>
+        <option value="/le-fil/" selected>Le fil</option>
       </select>`;
     const select = document.querySelector<HTMLSelectElement>(
       '[data-edition-switcher]',
@@ -75,7 +75,7 @@ describe('installEditionSwitcher', () => {
 
   it('falls back to the transparent overlay without showPicker', () => {
     document.body.innerHTML = `
-      <button type="button" data-edition-switcher-face>7 jours</button>
+      <button type="button" data-edition-switcher-face>Le fil</button>
       <select data-edition-switcher class="sr-only" tabindex="-1" aria-hidden="true">
         <option value="/">Aujourd'hui</option>
       </select>`;
@@ -92,7 +92,7 @@ describe('installEditionSwitcher', () => {
 
   it('keeps working when the picker refuses to open', () => {
     document.body.innerHTML = `
-      <button type="button" data-edition-switcher-face>7 jours</button>
+      <button type="button" data-edition-switcher-face>Le fil</button>
       <select data-edition-switcher class="sr-only" tabindex="-1" aria-hidden="true">
         <option value="/">Aujourd'hui</option>
       </select>`;

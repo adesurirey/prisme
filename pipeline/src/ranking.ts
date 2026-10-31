@@ -7,7 +7,6 @@ import {
   rankStoriesFeed,
   rankStoriesInWindow,
   rankStoriesLatestFirst,
-  reportingOutletIds,
 } from '@prisme/domain';
 
 export {
@@ -22,15 +21,6 @@ export {
  * international coverage. */
 export const DAY_WINDOW_MS = 24 * 60 * 60 * 1000;
 
-/** The « 7 jours » window (ADR-0027): the last 7 days, rolling. */
-export const WEEK_WINDOW_MS = 7 * DAY_WINDOW_MS;
-
-/** The « 7 jours » floor (ADR-0027): only Stories covered by at least 10
- * distinct reporting Outlets in the window — ~34 % of the 29 configured
- * Outlets, the measured « significant at the scale of a week » cut. A
- * floor, never a cap: the week's weight sets the list's length. */
-export const WEEK_FLOOR_OUTLETS = 10;
-
 /** The « En direct » window (ADR-0029, widened by ADR-0035): the rolling
  * last 12 hours. The window holds a median of 19 Stories (p75 25, max 48)
  * — ADR-0029's 15-Story ceiling answered the superseded novelty-signal
@@ -40,7 +30,7 @@ export const WEEK_FLOOR_OUTLETS = 10;
 export const LATEST_WINDOW_MS = 12 * 60 * 60 * 1000;
 
 /** The three Edition windows a build assembles (ADR-0027, ADR-0029,
- * ADR-0036). */
+ * ADR-0036; the week window is gone, ADR-0037). */
 export interface EditionWindows {
   /** « En direct » — every Story founded within the last LATEST_WINDOW_MS,
    * ranked latest-first, uncapped and unfloored (ADR-0029). */
@@ -52,16 +42,13 @@ export interface EditionWindows {
   /** « Aujourd'hui » — the last DAY_WINDOW_MS over all Stories (frozen
    * included), ranked by the in-window key, uncapped (ADR-0022). */
   day: Story[];
-  /** « 7 jours » — the last WEEK_WINDOW_MS, ranked, floored to
-   * WEEK_FLOOR_OUTLETS reporting Outlets in the window. */
-  week: Story[];
 }
 
 /**
  * The rolling-window Edition assembly (ADR-0027, amended by ADR-0029's
  * and ADR-0036's windows; superseding ADR-0026's open-window pool):
- * windows over ALL Stories — frozen ones included. « Aujourd'hui » and
- * « 7 jours » admit a Story iff at least one of its Articles was published
+ * windows over ALL Stories — frozen ones included. « Aujourd'hui »
+ * admits a Story iff at least one of its Articles was published
  * inside the window, ranked by Coverage counted inside the window; a
  * Story leaves la Une by decay — no Outlet reporting it inside the
  * window — never at a clock edge: a Story that just closed keeps sinking
@@ -96,14 +83,5 @@ export function assembleEdition(stories: Story[], now: Date): EditionWindows {
     latest: rankStoriesLatestFirst(latest),
     feed: rankStoriesFeed(dayMembers, DAY_WINDOW_MS, now),
     day: rankStoriesInWindow(dayMembers, DAY_WINDOW_MS, now),
-    week: rankStoriesInWindow(
-      members(WEEK_WINDOW_MS),
-      WEEK_WINDOW_MS,
-      now,
-    ).filter(
-      (s) =>
-        reportingOutletIds(articlesInWindow(s.articles, WEEK_WINDOW_MS, now))
-          .size >= WEEK_FLOOR_OUTLETS,
-    ),
   };
 }

@@ -6,9 +6,9 @@
  * committed fixture dataset (web/test-data), never against the repo's
  * data/: the archive shifts under every hourly run, and tests must not
  * (PRISME_DATA_DIR, data.ts — test infrastructure only). The fixture is a
- * faithful Edition artifact: windows consistent with builtAt, the
- * 7-jours floor respected, latestStories a subset of the day list,
- * feedStories the day pool re-ranked by the feed key (ADR-0036).
+ * faithful Edition artifact: windows consistent with builtAt,
+ * latestStories a subset of the day list, feedStories the day pool
+ * re-ranked by the feed key (ADR-0036).
  *
  * The suite builds twice: the fixture as committed, and a derived copy
  * with an empty « En direct » window for the empty-state assertions.
@@ -118,8 +118,8 @@ function expectAnchorVisible(html: string, label: string): void {
 }
 
 /** The editions select's options, in shipped order (ADR-0028/0029 as
- * amended by ADR-0036: chronology-first — En direct, Le fil,
- * Aujourd'hui, 7 jours). */
+ * amended by ADR-0036/0037: chronology-first — En direct, Le fil,
+ * Aujourd'hui). */
 function optionsOf(html: string): { value: string; selected: boolean }[] {
   return [...html.matchAll(/<option value="([^"]*)"([^>]*)>/g)].map((m) => ({
     value: m[1],
@@ -132,7 +132,6 @@ function expectPickerOrder(html: string): void {
     '/en-direct/',
     '/le-fil/',
     '/',
-    '/7-jours/',
   ]);
 }
 
@@ -259,12 +258,11 @@ describe('page head tags', () => {
 });
 
 describe('the editions picker (ADR-0028, as amended by ADR-0029)', () => {
-  it("reads chronology-first on every edition: En direct, Le fil, Aujourd'hui, 7 jours", async () => {
+  it("reads chronology-first on every edition: En direct, Le fil, Aujourd'hui", async () => {
     for (const page of [
       'index.html',
       'en-direct/index.html',
       'le-fil/index.html',
-      '7-jours/index.html',
     ]) {
       expectPickerOrder(await readDist(page));
     }
@@ -274,19 +272,12 @@ describe('the editions picker (ADR-0028, as amended by ADR-0029)', () => {
     const home = await readDist('index.html');
     const live = await readDist('en-direct/index.html');
     const fil = await readDist('le-fil/index.html');
-    const week = await readDist('7-jours/index.html');
     expect(home).toContain('<option value="/" selected>');
-    expect(noscriptHrefs(home)).toEqual([
-      '/en-direct/',
-      '/le-fil/',
-      '/7-jours/',
-    ]);
+    expect(noscriptHrefs(home)).toEqual(['/en-direct/', '/le-fil/']);
     expect(live).toContain('<option value="/en-direct/" selected>');
-    expect(noscriptHrefs(live)).toEqual(['/le-fil/', '/', '/7-jours/']);
+    expect(noscriptHrefs(live)).toEqual(['/le-fil/', '/']);
     expect(fil).toContain('<option value="/le-fil/" selected>');
-    expect(noscriptHrefs(fil)).toEqual(['/en-direct/', '/', '/7-jours/']);
-    expect(week).toContain('<option value="/7-jours/" selected>');
-    expect(noscriptHrefs(week)).toEqual(['/en-direct/', '/le-fil/', '/']);
+    expect(noscriptHrefs(fil)).toEqual(['/en-direct/', '/']);
   });
 
   it('shows the temporal anchors on every screen size (ADR-0029)', async () => {
@@ -295,12 +286,7 @@ describe('the editions picker (ADR-0028, as amended by ADR-0029)', () => {
       day: 'numeric',
       month: 'short',
     })} ${formatParisDate(builtAt, { year: 'numeric' })}`;
-    const weekAnchor = `depuis le ${formatParisDate(
-      new Date(builtAt.getTime() - 6 * 86_400_000),
-      { day: 'numeric', month: 'short' },
-    )}`;
     expectAnchorVisible(await readDist('index.html'), homeAnchor);
-    expectAnchorVisible(await readDist('7-jours/index.html'), weekAnchor);
     expectAnchorVisible(
       await readDist('en-direct/index.html'),
       '12 dernières heures',
@@ -336,13 +322,12 @@ describe('« En direct » edition (issue #137, ADR-0029)', () => {
     expect(html).toContain('<meta name="robots" content="noindex"');
   });
 
-  it('stays out of the sitemap with « Le fil » and « 7 jours » (ADR-0028)', async () => {
+  it('stays out of the sitemap with « Le fil » (ADR-0028)', async () => {
     const sitemap = await readDist('sitemap-0.xml');
     expect(sitemap).not.toContain(
       '<loc>https://leprisme.info/en-direct/</loc>',
     );
     expect(sitemap).not.toContain('<loc>https://leprisme.info/le-fil/</loc>');
-    expect(sitemap).not.toContain('<loc>https://leprisme.info/7-jours/</loc>');
     expect(sitemap).toContain('<loc>https://leprisme.info/</loc>');
   });
 
@@ -351,13 +336,13 @@ describe('« En direct » edition (issue #137, ADR-0029)', () => {
     const live = await readDist('en-direct/index.html');
     const fil = await readDist('le-fil/index.html');
     // The shared glue: a chunk hash home, « En direct » and « Le fil »
-    // all ship and « 7 jours » doesn't — identical bundled code, not a
-    // copy (ADR-0029 extended to Le fil by ADR-0036).
+    // all ship and the Méthode page doesn't — identical bundled code,
+    // not a copy (ADR-0029 extended to Le fil by ADR-0036).
     const homeHashes = new Set(chunkHashes(home));
     const liveHashes = new Set(chunkHashes(live));
     const filHashes = new Set(chunkHashes(fil));
     const weekHashes = new Set(
-      chunkHashes(await readDist('7-jours/index.html')),
+      chunkHashes(await readDist('methode/index.html')),
     );
     const shared = [...homeHashes].filter(
       (h) => liveHashes.has(h) && filHashes.has(h) && !weekHashes.has(h),
@@ -416,26 +401,9 @@ describe('« Le fil » edition (ADR-0036)', () => {
   });
 });
 
-describe('« 7 jours » edition (issue #128, ADR-0027, ADR-0028)', () => {
-  it('prerenders /7-jours/ with a canonical, noindex and the shared header', async () => {
-    const html = await readDist('7-jours/index.html');
-    expect(html).toContain(
-      '<link rel="canonical" href="https://leprisme.info/7-jours/">',
-    );
-    // The editions header (ADR-0028): « À la une » is the h1 on every
-    // edition, the window — « 7 jours » here — is the select's
-    // preselected value, and the noscript links carry the other
-    // editions to readers without JS (exactly one h1 per page).
-    expect(html).toMatch(/<h1[^>]*>\s*À la une\s*<\/h1>/);
-    expect(html).not.toMatch(/<h1[^>]*>\s*7 jours\s*<\/h1>/);
-    expect(html).toContain('data-edition-switcher');
-    expect(html).toContain('<option value="/7-jours/" selected>');
-    // No per-reader daily-visit semantics on the weekly page: no
-    // trending module in the chunk graph and no badge text (ADR-0029).
-    const chunks = (await scriptChunkTexts(html)).join('\n');
-    expect(chunks).not.toContain('prisme.seenStories');
-    expect(html).not.toContain('Faits nouveaux');
-    expect(html).not.toContain('data-new-pill');
+describe('« 7 jours » is gone (ADR-0037)', () => {
+  it('builds no /7-jours/ page', async () => {
+    await expect(readDist('7-jours/index.html')).rejects.toThrow();
   });
 
   it("opens on « À la une » with the select on « Aujourd'hui » (ADR-0028)", async () => {
@@ -454,11 +422,6 @@ describe('card founding time (issue #136, ADR-0029)', () => {
   it('ships the founding time after the Coverage count on the index cards', async () => {
     const home = await readDist('index.html');
     await expectCardFoundingTime(home, edition.stories);
-  });
-
-  it('ships it on the « 7 jours » cards too — every edition', async () => {
-    const week = await readDist('7-jours/index.html');
-    await expectCardFoundingTime(week, edition.weekStories);
   });
 
   it('ships it on the « En direct » cards — the timeline edition', async () => {
@@ -508,7 +471,7 @@ describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () =
     const home = await readDist('index.html');
     // Meta noindex with crawl allowed — a robots.txt disallow would
     // hide the page from the very crawler that must read the noindex.
-    expect(await readDist('7-jours/index.html')).toContain(
+    expect(await readDist('le-fil/index.html')).toContain(
       '<meta name="robots" content="noindex"',
     );
     expect(home).not.toContain('name="robots"');

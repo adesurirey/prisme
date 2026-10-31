@@ -69,8 +69,8 @@ describe('updateEditionHistory', () => {
 
   it('stamps a frozen Story that ranks into a window, so cleanup keeps its file (spec #121 review)', () => {
     // A > 24h pipeline outage can birth-and-freeze a Story no build ever
-    // saw live; its newest Article (3 days old) still ranks it into the
-    // « 7 jours » window — the Story is linked on /7-jours/ this build.
+    // saw live; its newest Article (3 days old) still ranks it into a
+    // window — the Story is linked on an Edition page this build.
     const s = story('s1', 's1', 72);
     const result = updateEditionHistory([s], new Set(['s1']), NOW);
     expect(result.stories[0].everInEdition).toBe(true);

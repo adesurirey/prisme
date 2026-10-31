@@ -256,10 +256,6 @@ export interface Edition {
   /** « Aujourd'hui » (the home): the last-24-hours window, ranked by
    * Coverage counted inside the window, uncapped (ADR-0022, ADR-0027). */
   stories: Story[];
-  /** « 7 jours » (`/7-jours/`): the last-7-days window, ranked by the
-   * same in-window key, floored to Stories covered by at least 10
-   * Outlets publishing in the window (ADR-0027). */
-  weekStories: Story[];
 }
 
 // The Story cover rule: which Article's image represents the Story, scored

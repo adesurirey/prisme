@@ -207,7 +207,7 @@ function parseSummarizedAt(value: string | undefined): number | null {
  * Wire the Edition index: read each card's data attributes, decide the
  * per-visitor signal from the stored snapshot, reveal badges, write the
  * merged baseline. Runs on any page; only cards on a page that runs it
- * are affected. « 7 jours » never runs it — badge-free by ADR-0029.
+ * are affected. Pages that never run it stay badge-free.
  *
  * Badges survive within a visit: a re-render within RECOMPUTE_WINDOW_MS
  * of the last computation — clicking a story and coming back, reloading —

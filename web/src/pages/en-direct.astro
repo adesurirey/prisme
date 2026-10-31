@@ -29,7 +29,7 @@ import { LOAD_MORE_INITIAL } from '../load-more';
  * editions header — h1 « À la une », select preselected on « En direct »,
  * first entry of the freshness-first picker — and a meta noindex: the
  * hourly-churning subset must never compete with la Une in search
- * (ADR-0028), and it stays out of the sitemap with « 7 jours ».
+ * (ADR-0028), and it stays out of the sitemap with « Le fil ».
  */
 const stories = await loadLatestStories();
 const edition = await loadEdition();
@@ -107,7 +107,7 @@ const description = `Ce qui vient de se passer dans la presse française : les d
   </section>
 </Base>
 {/* "Faits nouveaux" (per-visitor trending, ADR-0029): the shared page
-   wiring — same code path as la Une; « 7 jours » never runs it. */}
+   wiring — same code path as la Une and « Le fil ». */}
 <script>
   import { installTrendingPage } from '../trending-page';
 

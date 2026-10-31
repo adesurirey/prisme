@@ -10,7 +10,7 @@ import { formatParisDate } from './paris-date';
 
 /** The live window's temporal anchor: the rolling last 12 hours
  * (pipeline/src/ranking.ts's LATEST_WINDOW_MS — the copy mirrors the
- * pipeline constant, the way « 7 jours » mirrors WEEK_WINDOW_MS). */
+ * pipeline constant). */
 export const LATEST_WINDOW_LABEL = '12 dernières heures';
 
 /** The footer-line clock — « 20 h 45 », thin no-break spaces around the

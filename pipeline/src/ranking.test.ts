@@ -223,26 +223,25 @@ describe('rankStoriesInWindow', () => {
 });
 
 /**
- * The rolling-window Edition assembly (ADR-0027, amended by ADR-0029):
- * windows over ALL Stories — frozen ones included. « Aujourd'hui » (the
- * last 24 hours, uncapped, the home) and « 7 jours » (the last 7 days,
- * floored to Stories covered by ≥ 10 Outlets in the window) admit a Story
- * iff at least one of its Articles was published inside the window;
- * « En direct » (the last 12 hours) admits a Story iff its founding instant
- * falls inside the window. A Story leaves la Une by decay — no Outlet
- * reporting it inside the window — never at a clock edge.
+ * The rolling-window Edition assembly (ADR-0027, amended by ADR-0029
+ * and ADR-0036; the week window is gone, ADR-0037): windows over ALL
+ * Stories — frozen ones included. « Aujourd'hui » (the last 24 hours,
+ * uncapped, the home) admits a Story iff at least one of its Articles
+ * was published inside the window; « Le fil » re-ranks that pool by the
+ * feed key; « En direct » (the last 12 hours) admits a Story iff its
+ * founding instant falls inside the window. A Story leaves la Une by
+ * decay — no Outlet reporting it inside the window — never at a clock
+ * edge.
  */
 describe('assembleEdition', () => {
-  // At DAY_NOON the day window is [2026-10-05T10:00:00Z, 2026-10-06T10:00:00Z],
-  // the week window [2026-09-29T10:00:00Z, 2026-10-06T10:00:00Z] and the
-  // En direct window [2026-10-05T22:00:00Z, 2026-10-06T10:00:00Z].
+  // At DAY_NOON the day window is [2026-10-05T10:00:00Z, 2026-10-06T10:00:00Z]
+  // and the En direct window [2026-10-05T22:00:00Z, 2026-10-06T10:00:00Z].
   const windows = (stories: Story[], now: Date = DAY_NOON) => {
-    const { latest, feed, day, week } = assembleEdition(stories, now);
+    const { latest, feed, day } = assembleEdition(stories, now);
     return {
       latest: latest.map((s) => s.id),
       feed: feed.map((s) => s.id),
       day: day.map((s) => s.id),
-      week: week.map((s) => s.id),
     };
   };
   /** `outlets` distinct-Outlets Articles all published at `publishedAt`. */
@@ -275,13 +274,13 @@ describe('assembleEdition', () => {
       everInEdition: true,
     };
     expect(isLive(frozen, DAY_NOON)).toBe(false);
-    // The frozen Story is on la Une; the week claim is left to the floor
-    // tests below — at one Outlet this Story stays under its cut.
+    // The frozen Story is on la Une and in Le fil — the Edition is a
+    // window over all Stories, not the set of window-open ones.
     expect(windows([frozen]).day).toEqual(['frozen']);
   });
 
   it('excludes a Story with no Article in the window, however covered it was', () => {
-    // Ten Outlets, eight days ago: past even the week window — the Story
+    // Ten Outlets, eight days ago: past every window — the Story
     // left by decay, never by a clock (ADR-0027).
     const decayed = {
       ...story(
@@ -296,14 +295,12 @@ describe('assembleEdition', () => {
       latest: [],
       feed: [],
       day: [],
-      week: [],
     });
   });
 
   it('has an Article in the day window at exactly 24h of age, out one second earlier', () => {
     // The window is inclusive at both ends: the boundary Article is in,
-    // the one a second older has aged out of « Aujourd'hui » (both stay in
-    // the week window, but one Outlet each keeps them below its floor).
+    // the one a second older has aged out of « Aujourd'hui ».
     const atEdge = story(
       'edge',
       [article('e', { publishedAt: '2026-10-05T10:00:00Z' })],
@@ -320,17 +317,10 @@ describe('assembleEdition', () => {
       latest: [],
       feed: ['edge'],
       day: ['edge'],
-      week: [],
     });
   });
 
-  it('is uncapped: every Story with an Article in the window ranks (ADR-0022)', () => {
-    const stories = Array.from({ length: 60 }, (_, i) =>
-      story(`s${String(i).padStart(2, '0')}`, [article(`a${i}`)]),
-    );
-    expect(windows(stories).day).toHaveLength(60);
-  });
-  it('carries both windows: a below-floor day Story, an aged-out-of-day week Story', () => {
+  it('is uncapped and unfloored: every Story with an Article in the window ranks (ADR-0022)', () => {
     const bigFresh = story(
       'big-fresh',
       coveredBy('bf', 10, '2026-10-06T09:00:00Z'),
@@ -339,100 +329,15 @@ describe('assembleEdition', () => {
       'small-fresh',
       coveredBy('sf', 2, '2026-10-06T08:00:00Z'),
     );
-    const bigOld = {
-      ...story(
-        'big-old',
-        coveredBy('bo', 10, '2026-10-03T10:00:00Z'),
-        '2026-10-03T10:00:00Z',
-        '2026-10-03',
-      ),
-      everInEdition: true,
-    };
-    expect(windows([smallFresh, bigOld, bigFresh])).toEqual({
+    expect(windows([smallFresh, bigFresh])).toEqual({
       latest: ['big-fresh', 'small-fresh'],
       feed: ['big-fresh', 'small-fresh'],
       day: ['big-fresh', 'small-fresh'],
-      week: ['big-fresh', 'big-old'],
     });
-  });
-
-  it('spans the week window exactly: 7 days of age is in, one second less is out', () => {
-    const atEdge = {
-      ...story(
-        'edge',
-        coveredBy('e', 10, '2026-09-29T10:00:00Z'),
-        '2026-09-29T10:00:00Z',
-        '2026-09-29',
-      ),
-      everInEdition: true,
-    };
-    const justPast = {
-      ...story(
-        'past',
-        coveredBy('p', 10, '2026-09-29T09:59:59Z'),
-        '2026-09-29T09:59:59Z',
-        '2026-09-29',
-      ),
-      everInEdition: true,
-    };
-    expect(windows([justPast, atEdge]).week).toEqual(['edge']);
-  });
-
-  it('floors « 7 jours » at ten Outlets publishing in the window', () => {
-    const nine = {
-      ...story(
-        'nine',
-        coveredBy('n', 9, '2026-10-03T10:00:00Z'),
-        '2026-10-03T10:00:00Z',
-        '2026-10-03',
-      ),
-      everInEdition: true,
-    };
-    const ten = {
-      ...story(
-        'ten',
-        coveredBy('t', 10, '2026-10-03T10:00:00Z'),
-        '2026-10-03T10:00:00Z',
-        '2026-10-03',
-      ),
-      everInEdition: true,
-    };
-    const eleven = {
-      ...story(
-        'eleven',
-        coveredBy('el', 11, '2026-10-03T10:00:00Z'),
-        '2026-10-03T10:00:00Z',
-        '2026-10-03',
-      ),
-      everInEdition: true,
-    };
-    expect(windows([nine, ten, eleven]).week).toEqual(['eleven', 'ten']);
-  });
-
-  it('never lets a not_news Article carry a Story over the floor (ADR-0009)', () => {
-    // Ten distinct Outlets in the window, one of them not_news: nine
-    // reporting Outlets — below the floor.
-    const articles = Array.from({ length: 10 }, (_, i) =>
-      article(`nn${i}`, {
-        outletId: `o${i}`,
-        publishedAt: '2026-10-03T10:00:00Z',
-        kind: i === 9 ? 'not_news' : 'news',
-      }),
+    const stories = Array.from({ length: 60 }, (_, i) =>
+      story(`s${String(i).padStart(2, '0')}`, [article(`a${i}`)]),
     );
-    const notNewsTenth = {
-      ...story('nn', articles, '2026-10-03T10:00:00Z', '2026-10-03'),
-      everInEdition: true,
-    };
-    const tenReporting = {
-      ...story(
-        'tr',
-        coveredBy('tr', 10, '2026-10-03T10:00:00Z'),
-        '2026-10-03T10:00:00Z',
-        '2026-10-03',
-      ),
-      everInEdition: true,
-    };
-    expect(windows([notNewsTenth, tenReporting]).week).toEqual(['tr']);
+    expect(windows(stories).day).toHaveLength(60);
   });
 
   it('never gates membership on everInEdition', () => {
@@ -470,11 +375,11 @@ describe('assembleEdition', () => {
     ]);
   });
 
-  it('a Story sinks out of « Aujourd’hui » as its Articles age past 24h, and stays in « 7 jours »', () => {
+  it('a Story sinks out of « Aujourd’hui » as its Articles age past 24h', () => {
     // Founded 21:00Z of day D by ten Outlets: at 20:59:59Z of D+1 its
     // Articles are one second short of 24h of age — still on la Une; one
-    // second later they have aged out of the day window, however
-    // important, and only the week window still holds the Story.
+    // second later they have aged out of every daily Edition, however
+    // important the Story (ADR-0027: decay, never a clock).
     const evening = {
       ...story(
         'evening',
@@ -488,13 +393,11 @@ describe('assembleEdition', () => {
       latest: [],
       feed: ['evening'],
       day: ['evening'],
-      week: ['evening'],
     });
     expect(windows([evening], new Date('2026-10-06T21:00:01Z'))).toEqual({
       latest: [],
       feed: [],
       day: [],
-      week: ['evening'],
     });
   });
 
@@ -540,7 +443,6 @@ describe('assembleEdition', () => {
       latest: [],
       feed: [],
       day: [],
-      week: [],
     });
   });
 });

@@ -52,17 +52,6 @@ export async function loadFeedStories(): Promise<Story[]> {
 }
 
 /**
- * The « 7 jours » window of the Edition artifact (ADR-0027): Stories
- * covered by at least 10 Outlets publishing in the last 7 days, ranked
- * by that in-window Coverage. The pipeline always writes the key; the
- * reader requires it.
- */
-export async function loadWeekStories(): Promise<Story[]> {
-  const edition = await loadEdition();
-  return edition.weekStories;
-}
-
-/**
  * The « En direct » window of the Edition artifact (ADR-0029): every Story
  * founded within the rolling last 12 hours, ranked latest-first. The
  * pipeline always writes the key; the reader requires it.

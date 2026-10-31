@@ -42,14 +42,14 @@ export function backOnClick(
   return true;
 }
 
-/** The list of home URLs (la Une, « 7 jours », « En direct », …) each
+/** The list of home URLs (la Une, « Le fil », « En direct », …) each
  * link compares its referrer against, as a JSON array. */
 export const HOME_URLS_ATTR = 'data-home-urls';
 
 /** Pure test: which home the referrer is, first match wins — or null
  * (any other page, external, empty). The back link retargets itself to
- * the home the reader actually came from: « 7 jours » (issue #128),
- * « En direct », la Une. */
+ * the home the reader actually came from: « Le fil », « En direct »,
+ * la Une. */
 export function referrerHome(
   referrer: string,
   homeUrls: string[],
