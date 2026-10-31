@@ -6,6 +6,29 @@
   "storyDay": "2026-10-30",
   "articles": [
     {
+      "id": "25deb813ea78",
+      "outletId": "20-minutes",
+      "headline": "Dette publique : L’agence Fitch maintient la note A + de la France mais abaisse sa perspective",
+      "url": "https://www.20minutes.fr/economie/4259113-20261031-dette-publique-agence-fitch-maintient-note-france-abaisse-perspective?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-10-30T23:31:54.000Z",
+      "imageUrl": "https://img.20mn.fr/TbzgNoALQRKIGqDPgWekESk/1200x768_france-12-09-2025-illustration-agences-de-notation-financiere-logo-fitch-ratings-et-grille-de-notation-france-12-09-2025-illustration-agences-de-notation-financiere-logo-fitch-ratings-et-grille-de-notation-photo-de-jean-marc-barrere-hans-lucas-via-afp",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
+      "id": "558c3360d143",
+      "outletId": "le-monde",
+      "headline": "L’agence Fitch maintient la note de la dette souveraine de la France mais dégrade sa perspective",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/31/l-agence-fitch-maintient-la-note-de-la-dette-souveraine-de-la-france-mais-degrade-sa-perspective_6803235_3234.html",
+      "publishedAt": "2026-10-30T23:19:06.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/30/688/0/8256/4128/644/322/60/0/d520e32_ftp-1-a6g4nxpmzu0o-afp-d4yu2ct.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "998c55983f31",
       "outletId": "ouest-france",
       "headline": "Dette : l’agence de notation Fitch maintient le A + de la France mais abaisse sa perspective",
@@ -42,30 +65,33 @@
     }
   ],
   "topicId": "144a7dad9806",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "economy",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Franceinfo rapporte que l'agence Fitch a confirmé la note souveraine de la France au niveau A+ vendredi.",
-      "L'agence pointe toutefois des risques liés au ralentissement économique et à la dégradation des comptes publics.",
-      "La hausse des taux d'emprunt français inquiète également les analystes selon franceinfo."
+      "L'agence Fitch a validé la note de solvabilité A+ tout en portant la perspective financière de la France en zone négative.",
+      "Cette décision découle directement de la hausse des taux d'emprunt et de la dégradation persistante des comptes publics.",
+      "Roland Lescure a estimé que cette évaluation démontre l'urgence absolue de voter un budget rigoureux avant la fin de l'année.",
+      "L'institution financière a également pointé les risques liés au ralentissement de la croissance économique hexagonale."
     ],
     "centre": [
-      "Ouest-France indique que l'agence Fitch maintient la note de la France à A+ mais dégrade la perspective à négative.",
-      "L'instabilité politique et sociale actuelle pèse lourdement sur la perception des marchés financiers selon l'agence."
+      "Fitch Ratings a reconduit la note A+ de l'économie française lors de son évaluation rendue publique vendredi 30 octobre.",
+      "La perspective associée a toutefois été rétrogradée de stable à négative par les analystes.",
+      "Ce revirement est attribué par l'agence au contexte social et politique tendu qui suscite l'inquiétude des marchés."
     ],
     "droite": [
-      "Le Figaro souligne que Fitch maintient la note A+ tout en assombrissant la perspective de la dette française.",
-      "L'agence met en cause une croissance faible, des déficits aggravés et des rendements obligataires élevés qui compliquent l'ajustement budgétaire."
+      "Fitch a maintenu la note A+ attribuée à la dette française tout en dégradant sa perspective d'évolution.",
+      "L'agence met en cause l'accumulation de rendements plus élevés et d'une croissance faible qui compliquent l'effort d'assainissement budgétaire.",
+      "Ces facteurs compromettent la capacité de l'État à enrayer la trajectoire ascendante de son endettement selon le communiqué."
     ]
   },
   "differences": [
-    "La gauche insiste principalement sur les alertes macroéconomiques concernant la croissance et la dégradation de la situation budgétaire.",
-    "Le centre met en avant la sanction de la perspective financière par les marchés sur fond d'incertitudes politiques et sociales.",
-    "La droite pointe l'accumulation des difficultés structurelles, combinant faible croissance, déficits et hausse du coût de la dette."
+    "Le camp gauche insiste principalement sur l'appel du gouvernement à la responsabilité budgétaire immédiate face à la dégradation des indicateurs.",
+    "Le camp centre privilégie la mention du climat politique et social pesant sur la décision de l'agence de notation.",
+    "Le camp droite focalise son analyse sur les difficultés structurelles de consolidation des finances publiques face aux rendements élevés."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-10-30T23:01:21.257Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-10-31T00:01:17.394Z"
 }
