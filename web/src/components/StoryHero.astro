@@ -71,6 +71,16 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
     <article class="relative -mx-5" data-story-id={story.id} data-summarized-at={story.summarizedAt ?? ''}>
       <a href={withBase(storyUrl(story))} class="group/card block sm:rounded-xl">
         <figure class="relative overflow-hidden sm:rounded-xl">
+          {/* Per-visitor badge slot pinned to the image's top-left corner
+              (StoryCard keeps its own in the meta line): trending.ts
+              appends the plain teal badge here. Invisible (empty:hidden)
+              until then. Pill matches ImageCredit's frosted credit pill:
+              same 24px height, 13px label, insets and white/black frost
+              for dark mode, so the two image overlays read as a pair. */}
+          <span
+            data-trending-slot
+            class="empty:hidden absolute top-2 left-2 z-10 flex h-6 items-center rounded-full bg-white/55 px-3 text-[13px] font-normal tracking-normal text-[var(--ink)] backdrop-blur-sm dark:bg-black/35 dark:text-white"
+          />
           <div class="absolute inset-0">
             {/* h−1px + mb-px: keep the photo 1px above the figure's bottom
                 edge — see the same lift in [slug].astro (fractional-height
@@ -145,7 +155,6 @@ const ariaLabel = `Couverture : ${reporting} média${reporting > 1 ? 's' : ''} s
                 Couvert par {reporting} média{reporting > 1 ? 's' : ''}
               </span>
               <span class="text-faint">{updatedLine}</span>
-              <span data-trending-slot class="empty:hidden flex items-center" />
             </p>
           </div>
         </figure>
