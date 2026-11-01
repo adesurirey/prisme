@@ -203,8 +203,11 @@ export async function runEdition(): Promise<Edition> {
   // above may replace flag-changed Stories with new objects, and the
   // Summaries step below mutates the Edition Stories in place — they must
   // be the same objects that get written to disk, or fresh Summaries
-  // would be lost. The artifact keeps its pre-#158 field names until the
-  // surface rename — no data-shape change, no wipe (spec #158).
+  // would be lost. The artifact's field names are its stable published
+  // keys — spec #158 keeps them as they are: no rename pending, no
+  // data-shape change, no wipe. The Summaries budget below draws its
+  // top-20 from the capped Top window — behaviorally identical (the cap
+  // slices the ranked order; the budget 20 ≤ cap 25).
   const reconciledById = new Map(editionHistory.stories.map((s) => [s.id, s]));
   const edition: Edition = {
     builtAt: now.toISOString(),
