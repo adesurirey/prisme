@@ -6,6 +6,28 @@
   "storyDay": "2026-11-01",
   "articles": [
     {
+      "id": "eec6087c6c00",
+      "outletId": "bfmtv",
+      "headline": "États-Unis: neuf morts dans le crash d'un petit avion en Floride, une enquête ouverte",
+      "url": "https://www.bfmtv.com/international/amerique-nord/etats-unis/etats-unis-neuf-morts-dans-le-crash-d-un-petit-avion-en-floride-une-enquete-ouverte_AD-202611010449.html",
+      "publishedAt": "2026-11-01T22:55:51.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/ccuLYVVWZENWUciR6gunFc_Mlyk=/0x106:2048x1258/800x0/images/Le-drapeau-des-Etats-Unis-illustration-1775004.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "0268ae7d63f4",
+      "outletId": "tf1-info",
+      "headline": "\"Une terrible tragédie\" : au moins 9 morts après le crash d'un avion de tourisme dans une zone résidentielle en Floride",
+      "url": "https://www.tf1info.fr/international/accident-crash-bombardier-learjet-60-palm-beach-au-moins-9-morts-dans-une-zone-residentielle-en-floride-pres-de-mar-a-lago-2473284.html",
+      "publishedAt": "2026-11-01T22:09:41.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/682/greenacres-florida-jet-crash-novembre-1-2026-52c909-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "36f85ce4dfa5",
       "outletId": "franceinfo",
       "headline": "Neuf morts dans le crash d'un petit avion en Floride",
@@ -23,7 +45,7 @@
       "url": "https://www.lefigaro.fr/international/floride-un-jet-prive-s-ecrase-et-explose-dans-un-quartier-residentiel-9-morts-20261101",
       "publishedAt": "2026-11-01T21:43:29.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/1523x856_crop/2026/11/01/31cdb4104ce698e8c8da721d3f5c760a327334ed937a97a7c5bf0c59e0fa5ede.png",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -87,30 +109,32 @@
     }
   ],
   "topicId": "f85412a59c3b",
-  "titledArticleCount": 7,
+  "titledArticleCount": 9,
   "section": "misc",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un petit avion parti du Texas vers les Bahamas s'est écrasé dans un quartier résidentiel du comté de Palm Beach en Floride.",
-      "Le ministre américain des Transports a confirmé la mort de neuf personnes à bord.",
-      "La Federal Aviation Administration et le National Transportation Safety Board vont mener une enquête conjointe sur l'incident."
+      "Un avion d'affaires parti d'Austin au Texas et destiné aux Bahamas s'est écrasé dans un quartier résidentiel du comté de Palm Beach.",
+      "Le crash de cet appareil a provoqué la mort de neuf personnes selon les informations disponibles.",
+      "Le régulateur aérien américain a annoncé l'ouverture d'une enquête conjointe avec l'agence fédérale de sécurité des transports."
     ],
     "centre": [
-      "Un jet privé transportant neuf personnes s'est écrasé en pleine ville en Floride."
+      "Un petit avion d'affaires s'est écrasé dans le comté de Palm Beach en Floride, entraînant la mort de neuf personnes.",
+      "Le drame s'est produit à une dizaine de kilomètres de la résidence de Donald Trump à Mar-a-Lago.",
+      "Une enquête a été officiellement ouverte pour déterminer les causes de cet accident survenu en zone urbaine."
     ],
     "droite": [
-      "Un Learjet 60 s'est écrasé et a explosé dans une zone résidentielle du comté de Palm Beach, causant neuf morts selon le gouvernement américain.",
-      "L'appareil s'est totalement désintégré à l'impact, laissant un important cratère de feu.",
-      "Europe 1 précise que le crash s'est produit près de l'aéroport Trump de West Palm Beach et peu après le départ d'Air Force One."
+      "Un Learjet 60 transportant neuf personnes s'est écrasé dans une zone résidentielle du comté de Palm Beach en Floride, provoquant une immense explosion.",
+      "Le ministre américain des Transports a qualifié l'événement de « terrible tragédie » et a confirmé le décès de tous les occupants de l'appareil.",
+      "L'appareil, qui effectuait une liaison entre le Texas et les Bahamas, s'est totalement désintégré à l'impact près de l'aéroport de West Palm Beach."
     ]
   },
   "differences": [
-    "La gauche livre un compte-rendu factuel axé sur le bilan humain et l'enquête des agences fédérales.",
-    "Le centre se limite à une brève factuelle synthétisant le lieu et le nombre d'occupants.",
-    "La droite privilégie le registre spectaculaire en insistant sur l'explosion, la désintégration de l'appareil et le contexte géographique local."
+    "La gauche privilégie un récit factuel axé sur la trajectoire du vol entre le Texas et les Bahamas ainsi que sur l'enquête fédérale annoncée.",
+    "Le centre insiste sur la localisation précise de la catastrophe, soulignant sa proximité immédiate avec la résidence de Donald Trump à Mar-a-Lago.",
+    "La droite dramatise l'événement en insistant sur la violence de l'impact, l'embrasement du quartier et les déclarations officielles du ministre des Transports qualifiant le crash de « terrible tragédie »."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 7,
-  "summarizedAt": "2026-11-01T22:01:16.825Z"
+  "summarizedArticleCount": 9,
+  "summarizedAt": "2026-11-01T23:01:14.034Z"
 }
