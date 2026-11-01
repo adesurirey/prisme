@@ -25,7 +25,7 @@ import {
   TEASER_CACHE_PATH,
 } from './paths.ts';
 import { resolveModels } from './policy.ts';
-import { assembleEdition } from './ranking.ts';
+import { assembleEdition, RANKED_CAP } from './ranking.ts';
 import {
   loadRefusalCache,
   mergeRefusals,
@@ -172,43 +172,45 @@ export async function runEdition(): Promise<Edition> {
   const liveIds = new Set(outcome.live.map((s) => s.id));
   const frontpage = updateFrontPageHistory(outcome.stories, kept, now);
 
-  // The Edition (ADR-0027, amended by ADR-0029's and ADR-0036's windows;
-  // superseding ADR-0022/0026's live pool): rolling windows over ALL
-  // Stories — frozen ones included. « En direct » (the last 12 hours by
-  // founding instant, ranked latest-first) is by construction a subset of
-  // « Aujourd'hui » (the last 24 hours), which stays uncapped and keeps
-  // feeding the home; the Summaries budget below takes its top-20 in this
-  // ranked order. « Le fil » re-ranks « Aujourd'hui »'s pool by the feed
-  // key — in-window Coverage halved every 6 h of silence (ADR-0036).
-  // The week window is gone (ADR-0037). A Story leaves la Une by decay
-  // — no Outlet reporting it inside the window — never at a clock edge;
-  // overnight coverage is still on la Une in the morning.
+  // The Edition (ADR-0027, amended by ADR-0029's and ADR-0036's windows,
+  // re-sorted by spec #158; superseding ADR-0022/0026's live pool):
+  // rolling windows over ALL Stories — frozen ones included. Nouveau
+  // (the last 24 hours by founding instant, ranked latest-first,
+  // uncapped) is by construction a subset of the 24-hour pool; Brûlant
+  // re-ranks that pool by the double-decay key — in-window Coverage
+  // halved every 6 h of silence, then every 18 h of founding age — and
+  // Top ranks it by in-window Coverage, both capped at 25: the Summaries
+  // budget below takes its top-20 in this ranked order. The week window
+  // is gone (ADR-0037). A Story leaves la Une by decay — no Outlet
+  // reporting it inside the window — never at a clock edge; overnight
+  // coverage is still on la Une in the morning.
   const outletById = new Map(outlets.map((o) => [o.id, o]));
   const ranked = assembleEdition(frontpage.stories, now);
 
-  // Edition history (issue #75): `everInEdition` is sticky — set the moment
-  // a Story ranks into any Edition window, frozen members included
-  // (ADR-0027: the windows span frozen Stories, and an unstamped member
-  // would be deleted by the cleanup below while still linked on « Le fil »
-  // or « En direct »), so the flag survives its freezing and the
-  // never-entered deletion rule below keeps working. Changed files are
-  // rewritten.
+  // Edition history (issue #75): `everInEdition` is sticky — set the
+  // moment a Story ranks into a capped Edition sort (Brûlant or Top —
+  // never Nouveau, spec #158), frozen members included (ADR-0027: the
+  // windows span frozen Stories, and an unstamped capped member would be
+  // deleted by the cleanup below while still linked on a page) — so the
+  // flag survives its freezing and the never-entered deletion rule below
+  // keeps working. Changed files are rewritten.
   const editionHistory = updateEditionHistory(
     frontpage.stories,
-    new Set([...ranked.day, ...ranked.feed].map((s) => s.id)),
+    new Set([...ranked.hot, ...ranked.top].map((s) => s.id)),
     now,
   );
   // Re-map the ranked windows onto the reconciled Stories by id: the flags
   // above may replace flag-changed Stories with new objects, and the
   // Summaries step below mutates the Edition Stories in place — they must
   // be the same objects that get written to disk, or fresh Summaries
-  // would be lost.
+  // would be lost. The artifact keeps its pre-#158 field names until the
+  // surface rename — no data-shape change, no wipe (spec #158).
   const reconciledById = new Map(editionHistory.stories.map((s) => [s.id, s]));
   const edition: Edition = {
     builtAt: now.toISOString(),
-    latestStories: ranked.latest.map((s) => reconciledById.get(s.id) ?? s),
-    feedStories: ranked.feed.map((s) => reconciledById.get(s.id) ?? s),
-    stories: ranked.day.map((s) => reconciledById.get(s.id) ?? s),
+    latestStories: ranked.new.map((s) => reconciledById.get(s.id) ?? s),
+    feedStories: ranked.hot.map((s) => reconciledById.get(s.id) ?? s),
+    stories: ranked.top.map((s) => reconciledById.get(s.id) ?? s),
   };
   const changed = new Set([
     ...outcome.changed,
@@ -256,8 +258,8 @@ export async function runEdition(): Promise<Edition> {
   const filesToWrite = changed.size;
   section('📰', 'Edition');
   console.log(
-    `${edition.latestStories.length} in « En direct », ${edition.feedStories.length} in « Le fil », ` +
-      `${edition.stories.length} ranked stories in « Aujourd'hui » (of ${liveIds.size} live), ` +
+    `${edition.latestStories.length} in « Nouveau » (uncapped), ${edition.feedStories.length} in « Brûlant » and ` +
+      `${edition.stories.length} in « Top » (both capped at ${RANKED_CAP}) — of ${liveIds.size} live, ` +
       `from ${kept.length} articles; ` +
       `${existing.length} on disk, ${filesToWrite} file(s) to write, ${summaryOutcome.calls} summaries call(s).`,
   );
@@ -310,9 +312,12 @@ export async function runEdition(): Promise<Edition> {
 
   // End-of-run cleanup (issue #75): after all writes succeeded, delete the
   // Story files that are frozen and never entered the Edition — they were
-  // never linked, so no published URL breaks. A live Story below the cut is
-  // never deleted (it may return on a later build); a Story that once
-  // entered the Edition keeps its file and page forever. Deletion I/O errors
+  // never linked, so no published URL breaks. Under spec #158 "entered the
+  // Edition" means ranked into a capped sort (Brûlant or Top): a frozen
+  // Story below both caps is deleted even as a pool member — only capped
+  // members are linked, so only they are protected. A live Story below the
+  // cap is never deleted (it may return on a later build); a Story that
+  // once entered the Edition keeps its file and page forever. Deletion I/O errors
   // fail the build.
   const toDelete = slugsToDelete(editionHistory.stories, now);
   for (const slug of toDelete) {

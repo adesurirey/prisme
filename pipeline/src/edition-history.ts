@@ -4,16 +4,18 @@ import { isLive } from './liveness.ts';
 /**
  * The Edition history (issue #75): each build reconciles the Stories' sticky
  * `everInEdition` flag with today's Edition — true the moment the Story
- * ranks into an Edition window (ADR-0027), never unset, so the flag
+ * ranks into a capped Edition sort, Brûlant or Top (spec #158 — never
+ * Nouveau, never the uncapped pool tail: only capped members are linked,
+ * so only they are protected from the cleanup), never unset, so the flag
  * survives the Story's freezing and the never-entered deletion rule
  * (cleanup.ts) keeps working. A missing flag counts as false (no backward
  * compatibility; no migration). Frozen Stories are stamped only when they
- * rank into a window this build — the windows span frozen Stories (ADR-0027),
- * and an unstamped member would be deleted by the cleanup while still
- * linked on « Le fil » or « En direct ». Otherwise frozen Stories are passed
- * through
- * untouched: the stamp touches only this flag, never the Story's content
- * (ADR-0005) — same shape of reconciliation as `updateFrontPageHistory`.
+ * rank into a capped sort this build — the windows span frozen Stories
+ * (ADR-0027), and an unstamped capped member would be deleted by the
+ * cleanup while still linked on a page. Otherwise frozen Stories are
+ * passed through untouched: the stamp touches only this flag, never the
+ * Story's content (ADR-0005) — same shape of reconciliation as
+ * `updateFrontPageHistory`.
  */
 export interface EditionHistoryResult {
   /** The Stories with the reconciled flag (input Stories are never mutated). */
@@ -30,9 +32,12 @@ export function updateEditionHistory(
   const changed = new Set<string>();
   const reconciled = stories.map((story) => {
     // A frozen non-member passes through: only a frozen Story that ranks
-    // into a window this build is stamped, so cleanup never drops a file
-    // an Edition page links to (spec #121 review) — a > 24h outage can
-    // birth-and-freeze a Story no build ever saw live.
+    // into a capped sort this build is stamped, so cleanup never drops a
+    // file an Edition page links to (spec #121 review) — a > 24h outage can
+    // birth-and-freeze a Story no build ever saw live. A frozen Story
+    // below both caps (a pool member ranked 26th, a Nouveau-only Story)
+    // passes through unstamped and stays deletable: no page ever linked
+    // it (spec #158).
     if (!isLive(story, now) && !editionStoryIds.has(story.id)) return story;
     const ever = story.everInEdition === true || editionStoryIds.has(story.id);
     if (ever === (story.everInEdition === true)) return story;

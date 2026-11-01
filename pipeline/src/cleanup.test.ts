@@ -6,8 +6,9 @@ const NOW = new Date('2026-10-06T11:00:00Z');
 
 /**
  * The end-of-run cleanup (issue #75): a Story file is deleted iff the Story
- * is frozen (no Article in the 24h window) and never entered the Edition.
- * Live Stories — in or below the Edition cut — are never deleted.
+ * is frozen (Ingestion window closed) and never entered the Edition — ranked
+ * into a capped sort, Brûlant or Top (spec #158). Live Stories are never
+ * deleted.
  */
 
 function story(id: string, slug: string, hoursAgo = 1): Story {
