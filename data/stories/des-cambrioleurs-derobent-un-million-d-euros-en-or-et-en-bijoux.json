@@ -6,6 +6,18 @@
   "storyDay": "2026-10-31",
   "articles": [
     {
+      "id": "75bd9b7b6dd2",
+      "outletId": "20-minutes",
+      "headline": "Hauts-de-Seine : Un lingot d’or et des bijoux dérobés à une femme âgée pour un préjudice évalué à un million d’euros",
+      "url": "https://www.20minutes.fr/faits_divers/4259294-20261101-hauts-seine-lingot-or-bijoux-derobes-femme-agee-prejudice-evalue-million-euros?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-01T09:09:17.000Z",
+      "imageUrl": "https://img.20mn.fr/JrnZavw3R8KIwkFjHcaMFyk/1200x768_lingot-d-or-et-pepites-photo-en-studio-photo-de-ktsdesign-phototheque-scientifique-kts-phototheque-scientifique-via-afp",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "4f840f80239b",
       "outletId": "le-parisien",
       "headline": "Les cambrioleurs s’emparent d’un million d’euros en or et en bijoux à Neuilly-sur-Seine",
@@ -30,25 +42,30 @@
     }
   ],
   "topicId": "82d7f01f3736",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "misc",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Un vol par effraction a été commis au préjudice d'une habitante âgée de Neuilly-sur-Seine entre le 20 et le 28 octobre.",
+      "Le butin dérobé comprend un lingot d'or ainsi que divers bijoux, pour une valeur totale estimée à un million d'euros.",
+      "La victime oriente ses soupçons vers son employée de maison."
+    ],
     "centre": [
-      "Un cambriolage d'un montant d'un million d'euros en or et en bijoux a été commis chez une habitante âgée à Neuilly-sur-Seine.",
-      "Le préjudice total inclut des lingots d'or ainsi que divers objets précieux dérobés au domicile de la victime."
+      "Des cambrioleurs ont dérobé un million d'euros en or et en bijoux au domicile d'une femme âgée à Neuilly-sur-Seine."
     ],
     "droite": [
-      "Une résidente âgée de Neuilly-sur-Seine a été cambriolée à son domicile, subissant la perte d'un million d'euros en lingots d'or et en bijoux.",
-      "La victime s'est aperçue du vol plusieurs jours après les faits et soupçonne son employée de maison ainsi qu'un inconnu.",
-      "Le Figaro précise que l'employée s'était présentée au domicile de la victime accompagnée d'un individu non identifié."
+      "Une femme âgée a été dépouillée d'un million d'euros en lingot d'or et en bijoux à son domicile situé à Neuilly-sur-Seine.",
+      "Le vol a été découvert par la victime plusieurs jours après sa commission.",
+      "La victime suspecte son employée de maison, qui s'était rendue chez elle en compagnie d'un individu inconnu."
     ]
   },
   "differences": [
-    "Le camp du centre se limite à relater sobrement le montant et la nature du butin dérobé ainsi que le lieu des faits.",
-    "Le camp de droite adopte un angle exclusif d'enquête en révélant les soupçons de la victime et le détail des circonstances entourant l'employée de maison."
+    "La gauche met en avant la temporalité précise du cambriolage et signale les soupçons de la victime envers son employée en s'appuyant sur des informations rapportées par un autre média.",
+    "Le centre livre un résumé laconique centré exclusivement sur le montant du préjudice et la nature des biens dérobés.",
+    "La droite détaille les circonstances de la découverte tardive du vol et précise que l'employée de maison était accompagnée d'un inconnu lors de sa venue au domicile."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-10-31T20:01:15.332Z"
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-11-01T10:01:13.992Z"
 }
