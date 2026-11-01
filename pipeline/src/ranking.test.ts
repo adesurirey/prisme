@@ -10,10 +10,11 @@ import {
 /**
  * The Edition ranking (issue #37, ADR-0009 as amended by ADR-0011): Stories
  * order by Coverage — distinct Outlets with any Article on the Story, Opinion
- * pieces included — then by the newest Article, then deterministically. The
- * Edition is uncapped (ADR-0022). Since ADR-0027 the Editions rank inside
- * rolling windows (rankStoriesInWindow, assembleEdition); rankStories is the
- * whole-life key.
+ * pieces included — then by the newest Article, then deterministically.
+ * Since ADR-0027 the Editions rank inside rolling windows
+ * (rankStoriesInWindow, assembleEdition); rankStories is the whole-life
+ * key. The ranked sorts are capped at 25 (spec #158, ending ADR-0022's
+ * uncapped rule).
  */
 
 function article(id: string, overrides: Partial<Article> = {}): Article {
@@ -224,24 +225,24 @@ describe('rankStoriesInWindow', () => {
 
 /**
  * The rolling-window Edition assembly (ADR-0027, amended by ADR-0029
- * and ADR-0036; the week window is gone, ADR-0037): windows over ALL
- * Stories — frozen ones included. « Aujourd'hui » (the last 24 hours,
- * uncapped, the home) admits a Story iff at least one of its Articles
- * was published inside the window; « Le fil » re-ranks that pool by the
- * feed key; « En direct » (the last 12 hours) admits a Story iff its
- * founding instant falls inside the window. A Story leaves la Une by
- * decay — no Outlet reporting it inside the window — never at a clock
- * edge.
+ * and ADR-0036, re-sorted by spec #158): windows over ALL Stories —
+ * frozen ones included. The pool admits a Story iff at least one of its
+ * Articles was published inside the last 24 hours; Brûlant re-ranks the
+ * pool by the double-decay key, Top by in-window Coverage, and both
+ * ranked sorts are capped at 25 — Nouveau admits by founding instant
+ * inside the last 24 hours, uncapped: the window is the cap. A Story
+ * leaves la Une by decay — no Outlet reporting it inside the window —
+ * never at a clock edge.
  */
 describe('assembleEdition', () => {
-  // At DAY_NOON the day window is [2026-10-05T10:00:00Z, 2026-10-06T10:00:00Z]
-  // and the En direct window [2026-10-05T22:00:00Z, 2026-10-06T10:00:00Z].
+  // At DAY_NOON the day window and Nouveau's founding window are both
+  // [2026-10-05T10:00:00Z, 2026-10-06T10:00:00Z].
   const windows = (stories: Story[], now: Date = DAY_NOON) => {
-    const { latest, feed, day } = assembleEdition(stories, now);
+    const { new: nouveau, hot, top } = assembleEdition(stories, now);
     return {
-      latest: latest.map((s) => s.id),
-      feed: feed.map((s) => s.id),
-      day: day.map((s) => s.id),
+      new: nouveau.map((s) => s.id),
+      hot: hot.map((s) => s.id),
+      top: top.map((s) => s.id),
     };
   };
   /** `outlets` distinct-Outlets Articles all published at `publishedAt`. */
@@ -257,7 +258,7 @@ describe('assembleEdition', () => {
   it('includes a frozen Story with an Article inside the window (ADR-0027)', () => {
     // Founded 2026-10-04T20:00Z, newest Article 2026-10-05T12:00Z: its
     // Ingestion window closed at max(founding + 24h, newest + 12h) =
-    // 2026-10-05T20:00Z (the floor term wins), so the Story is frozen at
+    // 2026-10-06T00:00Z (the silence term wins), so the Story is frozen at
     // the Edition instant — but that Article is inside the day window, so
     // the Story stays on la Une: the Edition is a window over all Stories,
     // not the set of window-open ones.
@@ -274,9 +275,13 @@ describe('assembleEdition', () => {
       everInEdition: true,
     };
     expect(isLive(frozen, DAY_NOON)).toBe(false);
-    // The frozen Story is on la Une and in Le fil — the Edition is a
-    // window over all Stories, not the set of window-open ones.
-    expect(windows([frozen]).day).toEqual(['frozen']);
+    // The frozen Story is on la Une in both ranked sorts — the Edition
+    // is a window over all Stories, not the set of window-open ones.
+    expect(windows([frozen])).toEqual({
+      new: [],
+      hot: ['frozen'],
+      top: ['frozen'],
+    });
   });
 
   it('excludes a Story with no Article in the window, however covered it was', () => {
@@ -291,16 +296,13 @@ describe('assembleEdition', () => {
       ),
       everInEdition: true,
     };
-    expect(windows([decayed])).toEqual({
-      latest: [],
-      feed: [],
-      day: [],
-    });
+    expect(windows([decayed])).toEqual({ new: [], hot: [], top: [] });
   });
 
   it('has an Article in the day window at exactly 24h of age, out one second earlier', () => {
     // The window is inclusive at both ends: the boundary Article is in,
-    // the one a second older has aged out of « Aujourd'hui ».
+    // the one a second older has aged out of the pool — and its Story,
+    // founded on it, out of Nouveau with it.
     const atEdge = story(
       'edge',
       [article('e', { publishedAt: '2026-10-05T10:00:00Z' })],
@@ -314,13 +316,13 @@ describe('assembleEdition', () => {
       '2026-10-05',
     );
     expect(windows([justPast, atEdge])).toEqual({
-      latest: [],
-      feed: ['edge'],
-      day: ['edge'],
+      new: ['edge'],
+      hot: ['edge'],
+      top: ['edge'],
     });
   });
 
-  it('is uncapped and unfloored: every Story with an Article in the window ranks (ADR-0022)', () => {
+  it('admits every pool member under the cap: membership is uncapped, the ranked sorts are not', () => {
     const bigFresh = story(
       'big-fresh',
       coveredBy('bf', 10, '2026-10-06T09:00:00Z'),
@@ -330,27 +332,23 @@ describe('assembleEdition', () => {
       coveredBy('sf', 2, '2026-10-06T08:00:00Z'),
     );
     expect(windows([smallFresh, bigFresh])).toEqual({
-      latest: ['big-fresh', 'small-fresh'],
-      feed: ['big-fresh', 'small-fresh'],
-      day: ['big-fresh', 'small-fresh'],
+      new: ['big-fresh', 'small-fresh'],
+      hot: ['big-fresh', 'small-fresh'],
+      top: ['big-fresh', 'small-fresh'],
     });
-    const stories = Array.from({ length: 60 }, (_, i) =>
-      story(`s${String(i).padStart(2, '0')}`, [article(`a${i}`)]),
-    );
-    expect(windows(stories).day).toHaveLength(60);
   });
 
   it('never gates membership on everInEdition', () => {
     const never = story('never', [article('2')]);
-    expect(windows([never]).day).toEqual(['never']);
+    expect(windows([never]).top).toEqual(['never']);
   });
 
   it('is rolling, not calendar-day: an overnight Article keeps a Story on la Une at 00:30', () => {
-    // At 00:30 Paris of day D+1 the day window still reaches back to
+    // At 00:30 Paris of day D+1 both windows still reach back to
     // 00:30 of day D: both the evening Story and one born right after
-    // midnight rank (the issue #75 shape — no clock edge, no thin
-    // morning edition); the newest in-window Article breaks their
-    // one-Outlet tie.
+    // midnight rank in every sort (the issue #75 shape — no clock edge,
+    // no thin morning edition); the newest in-window Article breaks
+    // their one-Outlet tie, the founding instant orders Nouveau.
     const evening = {
       ...story(
         'evening',
@@ -369,17 +367,18 @@ describe('assembleEdition', () => {
       ),
       everInEdition: false,
     };
-    expect(windows([evening, lateBorn], NEXT_DAY_EARLY).day).toEqual([
-      'late-born',
-      'evening',
-    ]);
+    expect(windows([evening, lateBorn], NEXT_DAY_EARLY)).toEqual({
+      new: ['late-born', 'evening'],
+      hot: ['late-born', 'evening'],
+      top: ['late-born', 'evening'],
+    });
   });
 
-  it('a Story sinks out of « Aujourd’hui » as its Articles age past 24h', () => {
+  it('a Story sinks out of the pool as its Articles age past 24h', () => {
     // Founded 21:00Z of day D by ten Outlets: at 20:59:59Z of D+1 its
     // Articles are one second short of 24h of age — still on la Une; one
-    // second later they have aged out of every daily Edition, however
-    // important the Story (ADR-0027: decay, never a clock).
+    // second later they have aged out of every sort, however important
+    // the Story (ADR-0027: decay, never a clock).
     const evening = {
       ...story(
         'evening',
@@ -390,19 +389,19 @@ describe('assembleEdition', () => {
       everInEdition: true,
     };
     expect(windows([evening], new Date('2026-10-06T20:59:59Z'))).toEqual({
-      latest: [],
-      feed: ['evening'],
-      day: ['evening'],
+      new: ['evening'],
+      hot: ['evening'],
+      top: ['evening'],
     });
     expect(windows([evening], new Date('2026-10-06T21:00:01Z'))).toEqual({
-      latest: [],
-      feed: [],
-      day: [],
+      new: [],
+      hot: [],
+      top: [],
     });
   });
 
   it('ranks two days’ Stories together by the in-window key', () => {
-    // At 00:30 of D+1 both Stories have Articles inside the day window:
+    // At 00:30 of D+1 both Stories have Articles inside the window:
     // one ranked pool, ordered by in-window Coverage.
     const wideYesterday = {
       ...story(
@@ -422,7 +421,7 @@ describe('assembleEdition', () => {
       '2026-10-05T22:10:00Z',
       '2026-10-06',
     );
-    expect(windows([narrowToday, wideYesterday], NEXT_DAY_EARLY).day).toEqual([
+    expect(windows([narrowToday, wideYesterday], NEXT_DAY_EARLY).top).toEqual([
       'wide-d',
       'narrow-d1',
     ]);
@@ -439,57 +438,76 @@ describe('assembleEdition', () => {
       '2026-10-06T11:00:00Z',
       '2026-10-07',
     );
-    expect(windows([future])).toEqual({
-      latest: [],
-      feed: [],
-      day: [],
-    });
+    expect(windows([future])).toEqual({ new: [], hot: [], top: [] });
+  });
+
+  it('is deterministic across builds: the same Stories in any input order give the same windows', () => {
+    const stories = [
+      story('s1', [article('1', { publishedAt: '2026-10-06T08:00:00Z' })]),
+      story(
+        's2',
+        [
+          article('2', { publishedAt: '2026-10-06T09:00:00Z' }),
+          article('3', { outletId: 'b', publishedAt: '2026-10-06T09:30:00Z' }),
+        ],
+        '2026-10-06T09:00:00Z',
+      ),
+      story(
+        's3',
+        [article('4', { publishedAt: '2026-10-05T11:00:00Z' })],
+        '2026-10-05T11:00:00Z',
+      ),
+    ];
+    const first = windows(stories);
+    expect(windows([...stories].reverse())).toEqual(first);
   });
 });
 
 /**
- * The « En direct » window (ADR-0029): every Story whose founding instant
- * (ADR-0026) falls within the rolling last 12 hours, ranked latest-first,
- * uncapped and unfloored — the window is the cap. Members are by
- * construction always ingestion-live and always a subset of
- * « Aujourd’hui ».
+ * The Nouveau window (spec #158, widening ADR-0029's twelve hours):
+ * every Story whose founding instant (ADR-0026) falls within the rolling
+ * last 24 hours, ranked latest-first, uncapped — the window is the cap.
+ * Members are by construction always a subset of the 24-hour pool
+ * (founding-bounded membership: a Story founded inside 24 h has its
+ * founding Article — its earliest — inside the window too).
  */
-describe('assembleEdition — « En direct » (ADR-0029)', () => {
-  const latest = (stories: Story[], now: Date = DAY_NOON) =>
-    assembleEdition(stories, now).latest.map((s) => s.id);
+describe('assembleEdition — Nouveau (spec #158)', () => {
+  const nouveau = (stories: Story[], now: Date = DAY_NOON) =>
+    assembleEdition(stories, now).new.map((s) => s.id);
 
-  it('admits by founding instant: founded exactly 12h ago is in, one second earlier is out', () => {
+  it('admits by founding instant: founded exactly 24h ago is in, one second earlier is out', () => {
     const atEdge = story(
-      'at-12h',
-      [article('e', { publishedAt: '2026-10-05T22:00:00Z' })],
-      '2026-10-05T22:00:00Z',
+      'at-24h',
+      [article('e', { publishedAt: '2026-10-05T10:00:00Z' })],
+      '2026-10-05T10:00:00Z',
     );
     const justPast = story(
-      'past-12h',
-      [article('p', { publishedAt: '2026-10-05T21:59:59Z' })],
-      '2026-10-05T21:59:59Z',
+      'past-24h',
+      [article('p', { publishedAt: '2026-10-05T09:59:59Z' })],
+      '2026-10-05T09:59:59Z',
     );
-    expect(latest([justPast, atEdge])).toEqual(['at-12h']);
+    expect(nouveau([justPast, atEdge])).toEqual(['at-24h']);
   });
 
   it('never admits an older-founded Story for a fresh Article: membership follows the founding', () => {
-    // Founded 14h ago, still widely reported (its newest Article is one
-    // hour old): on la Une in every Coverage window, but not En direct —
-    // the window's question is "what was just founded", not "what is
-    // being reported".
-    const growing = story('growing', [
-      article('old', { publishedAt: '2026-10-05T20:00:00Z' }),
-      article('new', {
-        outletId: 'b',
-        publishedAt: '2026-10-06T09:00:00Z',
-      }),
-    ]);
+    // Founded 26h ago, still reported (its newest Article is one hour
+    // old): on la Une in both ranked sorts, but not Nouveau — the
+    // window's question is "what was just founded", not "what is being
+    // reported".
+    const growing = story(
+      'growing',
+      [
+        article('old', { publishedAt: '2026-10-05T08:00:00Z' }),
+        article('new', { outletId: 'b', publishedAt: '2026-10-06T09:00:00Z' }),
+      ],
+      '2026-10-05T08:00:00Z',
+    );
     const windows = assembleEdition([growing], DAY_NOON);
-    expect(windows.latest.map((s) => s.id)).toEqual([]);
-    expect(windows.day.map((s) => s.id)).toEqual(['growing']);
+    expect(windows.new.map((s) => s.id)).toEqual([]);
+    expect(windows.top.map((s) => s.id)).toEqual(['growing']);
   });
 
-  it('is uncapped and unfloored: any single-Outlet Story founded in the window ranks', () => {
+  it('is uncapped: any single-Outlet Story founded in the window ranks', () => {
     const stories = Array.from({ length: 30 }, (_, i) =>
       story(
         `s${String(i).padStart(2, '0')}`,
@@ -497,36 +515,43 @@ describe('assembleEdition — « En direct » (ADR-0029)', () => {
         '2026-10-06T03:00:00Z',
       ),
     );
-    expect(latest(stories)).toHaveLength(30);
+    expect(nouveau(stories)).toHaveLength(30);
   });
 
-  it('ranks latest-first, differently from the Coverage-ordered « Aujourd’hui »', () => {
+  it('ranks latest-first, differently from the Coverage-ordered Top', () => {
     // The wide Story ranks first on Coverage; the narrow scoop founded a
-    // hour later tops En direct — founding desc beats every other tier.
-    const wide = story('wide', [
-      article('w0', { publishedAt: '2026-10-06T08:00:00Z' }),
-      ...['b', 'c'].map((o) =>
-        article(`w-${o}`, {
-          outletId: o,
-          publishedAt: '2026-10-06T08:30:00Z',
-        }),
-      ),
-    ]);
+    // hour later tops Nouveau — founding desc beats every other tier.
+    const wide = story(
+      'wide',
+      [
+        article('w0', { publishedAt: '2026-10-06T08:00:00Z' }),
+        ...['b', 'c'].map((o) =>
+          article(`w-${o}`, {
+            outletId: o,
+            publishedAt: '2026-10-06T08:30:00Z',
+          }),
+        ),
+      ],
+      '2026-10-06T08:00:00Z',
+    );
     const scoop = story(
       'scoop',
       [article('s0', { publishedAt: '2026-10-06T09:30:00Z' })],
       '2026-10-06T09:30:00Z',
     );
     const windows = assembleEdition([scoop, wide], DAY_NOON);
-    expect(windows.day.map((s) => s.id)).toEqual(['wide', 'scoop']);
-    expect(windows.latest.map((s) => s.id)).toEqual(['scoop', 'wide']);
+    expect(windows.top.map((s) => s.id)).toEqual(['wide', 'scoop']);
+    expect(windows.new.map((s) => s.id)).toEqual(['scoop', 'wide']);
   });
 
-  it('is always a subset of « Aujourd’hui » — the tested invariant (ADR-0029)', () => {
-    // A mixed archive: a frozen day-old Story, an old-founded Story still
-    // growing, one founded 13 hours ago — just outside the window, inside
-    // the day — two founded inside the window. Non-empty on purpose: the
-    // invariant must not pass vacuously.
+  it('is always a subset of the pool — the tested invariant (ADR-0029, founding-bounded)', () => {
+    // A mixed archive under the cap, so the capped slices equal the
+    // pool: a frozen day-old Story, an old-founded Story still growing,
+    // one founded 25 hours ago — just outside the founding window, its
+    // fresh Article still inside the day window — two founded inside
+    // the window. Non-empty on purpose: the invariant must not pass
+    // vacuously. A Story founded inside 24 h has all its Articles inside
+    // 24 h, so Nouveau ⊆ pool by construction.
     const frozen = {
       ...story(
         'frozen',
@@ -536,17 +561,21 @@ describe('assembleEdition — « En direct » (ADR-0029)', () => {
       ),
       everInEdition: true,
     };
-    const growing = story('growing', [
-      article('g0', { publishedAt: '2026-10-05T20:00:00Z' }),
-      article('g1', {
-        outletId: 'b',
-        publishedAt: '2026-10-06T09:00:00Z',
-      }),
-    ]);
-    const thirteenHoursOld = story(
-      '13h',
-      [article('n', { publishedAt: '2026-10-05T21:00:00Z' })],
-      '2026-10-05T21:00:00Z',
+    const growing = story(
+      'growing',
+      [
+        article('g0', { publishedAt: '2026-10-05T08:30:00Z' }),
+        article('g1', { outletId: 'b', publishedAt: '2026-10-06T09:00:00Z' }),
+      ],
+      '2026-10-05T08:30:00Z',
+    );
+    const twentyFiveHoursOld = story(
+      '25h',
+      [
+        article('n', { publishedAt: '2026-10-05T09:00:00Z' }),
+        article('n2', { outletId: 'b', publishedAt: '2026-10-06T09:30:00Z' }),
+      ],
+      '2026-10-05T09:00:00Z',
     );
     const young = (id: string, hour: number) =>
       story(
@@ -557,78 +586,144 @@ describe('assembleEdition — « En direct » (ADR-0029)', () => {
     const stories = [
       frozen,
       growing,
-      thirteenHoursOld,
+      twentyFiveHoursOld,
       young('young-3', 3),
       young('young-7', 7),
     ];
-    const { latest, day } = assembleEdition(stories, DAY_NOON);
-    const latestIds = latest.map((s) => s.id);
-    const dayIds = new Set(day.map((s) => s.id));
-    expect(latestIds.length).toBeGreaterThan(0);
-    expect(latestIds.every((id) => dayIds.has(id))).toBe(true);
-    expect(latestIds).toEqual(['young-7', 'young-3']);
+    const {
+      new: nouveauStories,
+      hot,
+      top,
+    } = assembleEdition(stories, DAY_NOON);
+    const nouveauIds = nouveauStories.map((s) => s.id);
+    const hotIds = new Set(hot.map((s) => s.id));
+    const topIds = new Set(top.map((s) => s.id));
+    expect(nouveauIds.length).toBeGreaterThan(0);
+    expect(nouveauIds.every((id) => hotIds.has(id))).toBe(true);
+    expect(nouveauIds.every((id) => topIds.has(id))).toBe(true);
+    expect(nouveauIds).toEqual(['young-7', 'young-3']);
   });
 
-  it('keeps a future-dated founding out of « En direct » too (defensive)', () => {
+  it('keeps a future-dated founding out of Nouveau too (defensive)', () => {
     const future = story(
       'future',
       [article('1', { publishedAt: '2026-10-06T11:00:00Z' })],
       '2026-10-06T11:00:00Z',
       '2026-10-07',
     );
-    expect(latest([future])).toEqual([]);
+    expect(nouveau([future])).toEqual([]);
   });
 });
 
-describe('assembleEdition — « Le fil » (ADR-0036)', () => {
-  const feed = (stories: Story[], now: Date = DAY_NOON) =>
-    assembleEdition(stories, now).feed.map((s) => s.id);
-
-  it('re-ranks « Aujourd’hui »’s pool: silence can flip a Coverage order', () => {
-    // 'wide' carries 4 Outlets but has been silent for two half-lives
-    // (weight 1); 'narrow' has 3, all fresh (weight ~2.7). La Une ranks
-    // 'wide' first — pure in-window Coverage — and Le fil flips it: the
-    // feed's question is "who is being talked about", not only "how much".
-    const wide = story('wide', [
-      article('w0', { publishedAt: '2026-10-05T22:00:00Z' }),
-      article('w1', { outletId: 'b', publishedAt: '2026-10-05T22:00:00Z' }),
-      article('w2', { outletId: 'c', publishedAt: '2026-10-05T22:00:00Z' }),
-      article('w3', { outletId: 'd', publishedAt: '2026-10-05T22:00:00Z' }),
-    ]);
-    const narrow = story('narrow', [
-      article('n0', { publishedAt: '2026-10-06T09:30:00Z' }),
-      article('n1', { outletId: 'b', publishedAt: '2026-10-06T09:30:00Z' }),
-      article('n2', { outletId: 'c', publishedAt: '2026-10-06T09:30:00Z' }),
-    ]);
-    const windows = assembleEdition([narrow, wide], DAY_NOON);
-    expect(windows.day.map((s) => s.id)).toEqual(['wide', 'narrow']);
-    expect(windows.feed.map((s) => s.id)).toEqual(['narrow', 'wide']);
-  });
-
-  it('admits an old-founded Story still covered — no founding bound, unlike « En direct »', () => {
-    // Founded three days ago, reported again this morning: a day member,
-    // a feed member, but not En direct — the morning page carries the
-    // previous evening's still-covered Stories (ADR-0036's premise).
-    const carried = story('carried', [
-      article('old', { publishedAt: '2026-10-03T10:00:00Z' }),
-      article('new', { outletId: 'b', publishedAt: '2026-10-06T08:00:00Z' }),
-    ]);
-    const windows = assembleEdition([carried], DAY_NOON);
-    expect(windows.latest.map((s) => s.id)).toEqual([]);
-    expect(windows.feed.map((s) => s.id)).toEqual(['carried']);
-    expect(windows.day.map((s) => s.id)).toEqual(['carried']);
-  });
-
-  it('shares « Aujourd’hui »’s membership exactly — uncapped, unfloored', () => {
-    const stories = Array.from({ length: 30 }, (_, i) =>
+/**
+ * The ranked sorts (spec #158): Brûlant re-ranks the 24-hour pool by the
+ * double-decay key, Top by in-window Coverage — and both are capped at
+ * 25: the slice keeps the key's order, it never re-decides membership.
+ * Nouveau alone stays uncapped and carries everything.
+ */
+describe('assembleEdition — Brûlant and Top caps (spec #158)', () => {
+  const cap = (stories: Story[], now: Date = DAY_NOON) => {
+    const { hot, top } = assembleEdition(stories, now);
+    return {
+      hot: hot.map((s) => s.id),
+      top: top.map((s) => s.id),
+    };
+  };
+  /** 30 one-Outlet Stories founded together: full ties everywhere, so
+   * every key falls through to id asc — a deterministic order the cap
+   * slices. */
+  const thirtyTied = () =>
+    Array.from({ length: 30 }, (_, i) =>
       story(
         `s${String(i).padStart(2, '0')}`,
         [article(`a${i}`, { publishedAt: '2026-10-06T03:00:00Z' })],
         '2026-10-06T03:00:00Z',
       ),
     );
+
+  it('caps Brûlant and Top at 25 — the first 25 of each key’s order, never a different membership', () => {
+    const stories = thirtyTied();
+    const first25 = stories.slice(0, 25).map((s) => s.id);
+    expect(cap(stories)).toEqual({ hot: first25, top: first25 });
+  });
+
+  it('leaves the Story ranked 26th out of both capped sorts, in the pool and in Nouveau', () => {
+    const stories = thirtyTied();
     const windows = assembleEdition(stories, DAY_NOON);
-    expect(new Set(windows.feed)).toEqual(new Set(windows.day));
-    expect(windows.feed).toHaveLength(30);
+    const ranked26th = 's25';
+    const hotIds = new Set(windows.hot.map((s) => s.id));
+    const topIds = new Set(windows.top.map((s) => s.id));
+    expect(hotIds.has(ranked26th)).toBe(false);
+    expect(topIds.has(ranked26th)).toBe(false);
+    // Still a pool member and a Nouveau member — only the page is capped,
+    // not the news: Nouveau carries the tail.
+    expect(windows.new.map((s) => s.id)).toContain(ranked26th);
+  });
+
+  it('re-ranks the pool with both clocks: founding age can flip the Coverage order', () => {
+    // 'squatter' carries 4 Outlets and was heard from again half an hour
+    // ago, but was founded 20 h before the build — Top ranks it first on
+    // Coverage, the founding clock sinks it under the fresh three-Outlet
+    // scoop (spec #158, the key of the same counter-example in the domain
+    // tests).
+    const squatter = story(
+      'squatter',
+      [
+        article('sq-old', {
+          outletId: 'a',
+          publishedAt: '2026-10-05T14:00:00Z',
+        }),
+        ...['b', 'c', 'd'].map((o) =>
+          article(`sq-${o}`, {
+            outletId: o,
+            publishedAt: '2026-10-06T09:30:00Z',
+          }),
+        ),
+      ],
+      '2026-10-05T14:00:00Z',
+    );
+    const scoop = story(
+      'scoop',
+      [
+        article('sc-a', { publishedAt: '2026-10-06T09:00:00Z' }),
+        article('sc-b', {
+          outletId: 'b',
+          publishedAt: '2026-10-06T09:00:00Z',
+        }),
+        article('sc-c', {
+          outletId: 'c',
+          publishedAt: '2026-10-06T09:00:00Z',
+        }),
+      ],
+      '2026-10-06T09:00:00Z',
+    );
+    const windows = assembleEdition([scoop, squatter], DAY_NOON);
+    expect(windows.top.map((s) => s.id)).toEqual(['squatter', 'scoop']);
+    expect(windows.hot.map((s) => s.id)).toEqual(['scoop', 'squatter']);
+  });
+
+  it('admits an old-founded Story still covered into Brûlant and Top — no founding bound, unlike Nouveau', () => {
+    // Founded three days ago, reported again this morning: a pool
+    // member in both ranked sorts, but not Nouveau — the pages carry
+    // the previous days' still-covered Stories (ADR-0036's premise,
+    // kept by spec #158).
+    const carried = story(
+      'carried',
+      [
+        article('old', { publishedAt: '2026-10-03T10:00:00Z' }),
+        article('new', { outletId: 'b', publishedAt: '2026-10-06T08:00:00Z' }),
+      ],
+      '2026-10-03T10:00:00Z',
+    );
+    const windows = assembleEdition([carried], DAY_NOON);
+    expect(windows.new.map((s) => s.id)).toEqual([]);
+    expect(windows.hot.map((s) => s.id)).toEqual(['carried']);
+    expect(windows.top.map((s) => s.id)).toEqual(['carried']);
+  });
+
+  it('caps deterministically: the same Stories in any input order give the same 25', () => {
+    const stories = thirtyTied();
+    const first = cap(stories);
+    expect(cap([...stories].reverse())).toEqual(first);
   });
 });
