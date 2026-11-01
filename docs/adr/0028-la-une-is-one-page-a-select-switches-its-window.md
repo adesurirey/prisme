@@ -76,3 +76,7 @@ churns hourly — must never compete at all.
   chronology, chronology weighted by Coverage, pure Coverage, the week.
 - Amended by ADR-0037: « 7 jours » leaves the picker the same day — the
   three shipped editions are En direct, Le fil, Aujourd'hui.
+- Amended by ADR-0039: the three windows are re-sorted and renamed as the
+  Nouveau / Brûlant / Top sorts of the same one page — Brûlant is the
+  home and the only indexed sort; Nouveau and Top keep the noindex, the
+  sitemap exclusion and the crawl allowance decided here.

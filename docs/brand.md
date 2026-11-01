@@ -69,7 +69,11 @@ accusation.
   restraint, not slogans.
 - **French, lightly.** The UI is French and idiomatic; avoid anglicisms —
   write *à la une*, *éditorial*, *vérification*, not *fake news*,
-  *fact-check*, *homepage*.
+  *fact-check*, *homepage*. Widely adopted anglicisms stay allowed
+  where they aid comprehension and navigation: *Top* names the coverage
+  sort beside *Nouveau* and *Brûlant* because every French reader meets
+  the word daily (ADR-0041) — but an anglicism must still earn its place
+  over the French word, one label at a time; never arrive by default.
 
 Never do: sarcasm, moralizing, "the truth about…", scoring Outlets,
 promising neutrality as *absence of perspective* — Prisme's neutrality is

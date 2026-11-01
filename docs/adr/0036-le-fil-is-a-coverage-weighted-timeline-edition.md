@@ -74,3 +74,9 @@ API; 408 hourly checkpoints over 18 days of archive):
   half-life) ship with this ADR.
 - Amended by ADR-0037: « 7 jours » leaves the picker the day it joined
   — the gradient is En direct, Le fil, Aujourd'hui.
+- Amended by ADR-0041: the key gains a second, never-resetting founding
+  clock (18 h half-life) that bounds even a loudly covered Story — max
+  top-3 residence 85 h → 44 h — and the « Le fil » name retires: the
+  sort becomes Brûlant, the home (ADR-0039), in the Nouveau / Brûlant /
+  Top picker. The measured bracket (12–24 h) and the fallback names are
+  recorded there as re-decidable, graded decisions.
