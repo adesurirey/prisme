@@ -1,27 +1,43 @@
-// One-off backtest (free, no API): replay the proposed « Le fil » key over
-// the data/ archive at hourly checkpoints — in-window Coverage, halved every
-// `h` hours since the Story's newest in-window Article — for h ∈ {3, 6, 12},
-// against the two live Editions (« Aujourd'hui », « En direct ») ranked by
-// their production keys. Prints the volatility/residence/overlap numbers the
-// half-life choice needs (the grading tool for Le fil's V0). Run:
-// pnpm backtest:feed
+// Backtest (free, no API): replay the À la une sorts over the data/
+// archive at hourly checkpoints and print the volatility/residence/
+// overlap numbers the ranking constants need (spec #158's grading
+// harness — the same measure-before-moving discipline that set the 6 h
+// silence half-life). Rows: the production Top (in-window Coverage) and
+// Nouveau (latest-first) orders; the pre-#158 silence-only grid (Le fil
+// h ∈ {3, 6, 12} — h = 6 was the production Le fil); the double-decay
+// Brûlant grid (founding half-lives τ ∈ {12, 18, 24, 48} h, silence at
+// the production 6 h), with the shipped production key (★) computed by
+// the real rankStoriesFeed — whatever constants it carries. The ranked
+// sorts are measured capped at RANKED_CAP (25), Nouveau uncapped; a cap
+// column shows the length after the slice. Run: pnpm backtest:feed
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { Story } from '@prisme/domain';
 import {
   articlesInWindow,
+  FEED_FOUNDING_HALF_LIFE_MS,
+  FEED_HALF_LIFE_MS,
   foundingInstant,
   parseInstant,
+  rankStoriesFeed,
   rankStoriesInWindow,
   rankStoriesLatestFirst,
   reportingOutletIds,
 } from '@prisme/domain';
-import { DAY_WINDOW_MS, LATEST_WINDOW_MS } from './ranking.js';
+import { DAY_WINDOW_MS, LATEST_WINDOW_MS, RANKED_CAP } from './ranking.js';
 
 const dir = join(import.meta.dirname, '../../data/stories');
-const HALF_LIVES_H = [3, 6, 12];
+const SILENCE_HALF_LIVES_H = [3, 6, 12]; // the pre-#158 Le fil grid
+const FOUNDING_HALF_LIVES_H = [12, 18, 24, 48]; // the Brûlant grid
+const PROD_TAU_H = FEED_FOUNDING_HALF_LIFE_MS / 3_600_000;
+// The shipped production key: graded by the real rankStoriesFeed, so a
+// constant change shows up here without touching this file.
+const PROD_LABEL = `Brûlant τ=${PROD_TAU_H}h ★`;
 const HOUR = 3_600_000;
-const TOP = 20;
+const TOP = RANKED_CAP;
+const GAP = 10 * HOUR; // the returning-visit gap the spec measures
+const TOP_LABEL = 'Top (prod)';
+const NOUVEAU_LABEL = `Nouveau ${LATEST_WINDOW_MS / HOUR}h`;
 
 const stories: Story[] = readdirSync(dir)
   .filter((f) => f.endsWith('.json'))
@@ -39,66 +55,139 @@ const start = Math.ceil((first + DAY_WINDOW_MS) / HOUR) * HOUR;
 const checkpoints: number[] = [];
 for (let t = start; t <= last; t += HOUR) checkpoints.push(t);
 
-/** The Le fil key: Coverage in the day window × 2^(−silent hours / h),
- * tie-broken newest desc, founding desc, id asc — fully deterministic. */
-function feedKey(outlets: number, newest: number, h: number, t: number) {
+/** The pre-#158 silence-only key: Coverage in the day window ×
+ * 2^(−silent hours / h), tie-broken newest desc, founding desc, id asc. */
+function silenceKey(outlets: number, newest: number, h: number, t: number) {
   return outlets * 2 ** (-(t - newest) / (h * HOUR));
 }
 
-interface Ranking {
-  ids: string[];
-}
-
-interface Feeds {
-  day: Ranking;
-  latest: Ranking;
-  feed: Map<number, Ranking>;
-}
-
-function at(t: number): Feeds {
-  const now = new Date(t);
-  // Production membership for « Aujourd'hui » — Le fil re-ranks this pool.
-  const pool = stories.filter(
-    (s) => articlesInWindow(s.articles, DAY_WINDOW_MS, now).length > 0,
+/** The Brûlant key at silence 6 h (production) and founding half-life
+ * `tau`: Coverage × silence decay × founding decay, same tie-breaks. */
+function brulantKey(
+  outlets: number,
+  newest: number,
+  founding: number,
+  tau: number,
+  t: number,
+) {
+  return (
+    outlets *
+    2 ** (-(t - newest) / FEED_HALF_LIFE_MS) *
+    2 ** (-(t - founding) / (tau * HOUR))
   );
-  const day = rankStoriesInWindow(pool, DAY_WINDOW_MS, now).map((s) => s.id);
-  const latest = rankStoriesLatestFirst(
-    pool.filter((s) => {
-      const founding = foundingInstant(s);
-      return (
-        founding != null && founding >= t - LATEST_WINDOW_MS && founding <= t
+}
+
+/** One variant row: its label, whether the 25 cap slices it, and its
+ * ranked Story ids at checkpoint `t` (uncapped — measures slice). */
+interface Variant {
+  label: string;
+  capped: boolean;
+  rank: (t: number) => string[];
+}
+
+const variants: Variant[] = [
+  {
+    label: TOP_LABEL,
+    capped: true,
+    rank: (t) => {
+      const now = new Date(t);
+      const pool = stories.filter(
+        (s) => articlesInWindow(s.articles, DAY_WINDOW_MS, now).length > 0,
       );
-    }),
-  ).map((s) => s.id);
-  const per = stories.map((s) => {
-    const inWindow = articlesInWindow(s.articles, DAY_WINDOW_MS, now);
-    if (inWindow.length === 0) return null;
-    const newest = Math.max(
-      ...inWindow.map((a) => parseInstant(a.publishedAt) ?? 0),
-    );
-    return {
-      s,
-      outlets: reportingOutletIds(inWindow).size,
-      newest,
-      founding: foundingInstant(s) ?? 0,
+      return rankStoriesInWindow(pool, DAY_WINDOW_MS, now).map((s) => s.id);
+    },
+  },
+  {
+    label: NOUVEAU_LABEL,
+    capped: false,
+    rank: (t) =>
+      rankStoriesLatestFirst(
+        stories.filter((s) => {
+          const founding = foundingInstant(s);
+          return (
+            founding != null &&
+            founding >= t - LATEST_WINDOW_MS &&
+            founding <= t
+          );
+        }),
+      ).map((s) => s.id),
+  },
+  ...SILENCE_HALF_LIVES_H.map((h) => {
+    const rank = (t: number): string[] => {
+      const now = new Date(t);
+      return perStory(now)
+        .sort(
+          (a, b) =>
+            silenceKey(b.outlets, b.newest, h, t) -
+              silenceKey(a.outlets, a.newest, h, t) ||
+            b.newest - a.newest ||
+            b.founding - a.founding ||
+            a.id.localeCompare(b.id),
+        )
+        .map((x) => x.id);
     };
+    return { label: `Le fil h=${h}`, capped: true, rank };
+  }),
+  ...FOUNDING_HALF_LIVES_H.map((tau) => {
+    const shipped = tau === PROD_TAU_H;
+    const rank = (t: number): string[] => {
+      const now = new Date(t);
+      // The shipped row runs the production key itself — the graded
+      // code is the code that builds the site.
+      if (shipped) {
+        const pool = stories.filter(
+          (s) => articlesInWindow(s.articles, DAY_WINDOW_MS, now).length > 0,
+        );
+        return rankStoriesFeed(pool, DAY_WINDOW_MS, now).map((s) => s.id);
+      }
+      return perStory(now)
+        .sort(
+          (a, b) =>
+            brulantKey(b.outlets, b.newest, b.founding, tau, t) -
+              brulantKey(a.outlets, a.newest, a.founding, tau, t) ||
+            b.newest - a.newest ||
+            b.founding - a.founding ||
+            a.id.localeCompare(b.id),
+        )
+        .map((x) => x.id);
+    };
+    return {
+      label: `Brûlant τ=${tau}h${shipped ? ' ★' : ''}`,
+      capped: true,
+      rank,
+    };
+  }),
+];
+if (!FOUNDING_HALF_LIVES_H.includes(PROD_TAU_H))
+  variants.push({
+    label: PROD_LABEL,
+    capped: true,
+    rank: (t) => {
+      const now = new Date(t);
+      const pool = stories.filter(
+        (s) => articlesInWindow(s.articles, DAY_WINDOW_MS, now).length > 0,
+      );
+      return rankStoriesFeed(pool, DAY_WINDOW_MS, now).map((s) => s.id);
+    },
   });
-  const feed = new Map<number, Ranking>();
-  for (const h of HALF_LIVES_H) {
-    const ranked = per
-      .filter((x): x is NonNullable<typeof x> => x != null)
-      .sort(
-        (a, b) =>
-          feedKey(b.outlets, b.newest, h, t) -
-            feedKey(a.outlets, a.newest, h, t) ||
-          b.newest - a.newest ||
-          b.founding - a.founding ||
-          a.s.id.localeCompare(b.s.id),
-      )
-      .map((x) => x.s.id);
-    feed.set(h, { ids: ranked });
-  }
-  return { day: { ids: day }, latest: { ids: latest }, feed };
+
+/** The day-pool key terms per Story at `now` (pool members only). */
+function perStory(now: Date) {
+  return stories
+    .map((s) => {
+      const inWindow = articlesInWindow(s.articles, DAY_WINDOW_MS, now);
+      if (inWindow.length === 0) return null;
+      const newest = Math.max(
+        ...inWindow.map((a) => parseInstant(a.publishedAt) ?? 0),
+      );
+      return {
+        id: s.id,
+        outlets: reportingOutletIds(inWindow).size,
+        newest,
+        founding: foundingInstant(s) ?? 0,
+      };
+    })
+    .filter((x): x is NonNullable<typeof x> => x != null);
 }
 
 /** Rolling per-Statistic accumulator, keyed by label. */
@@ -106,13 +195,14 @@ const stats = new Map<
   string,
   {
     lengths: number[];
+    cappedLengths: number[];
     top1Changes: number;
     steps: number;
-    top1Runs: number[];
     top3Runs: number[]; // longest top-3 residence per Story, in hours
     churn: number[];
-    overlapDay: number[];
-    overlapLatest: number[];
+    newAtGap: number[];
+    overlapTop: number[];
+    overlapNouveau: number[];
     distinctTop: Set<string>;
   }
 >();
@@ -121,13 +211,14 @@ const stat = (label: string) => {
   if (s == null) {
     s = {
       lengths: [],
+      cappedLengths: [],
       top1Changes: 0,
       steps: 0,
-      top1Runs: [],
       top3Runs: [],
       churn: [],
-      overlapDay: [],
-      overlapLatest: [],
+      newAtGap: [],
+      overlapTop: [],
+      overlapNouveau: [],
       distinctTop: new Set(),
     };
     stats.set(label, s);
@@ -141,7 +232,9 @@ function median(xs: number[]): number {
   return sorted[Math.floor(sorted.length / 2)];
 }
 
-let previous: Feeds | undefined;
+let previous: Map<string, string[]> | undefined;
+// The per-checkpoint rankings, for the 10 h-gap measure.
+const byCheckpoint = new Map<number, Map<string, string[]>>();
 // Consecutive top-3 run per Story, per label, cut into longest runs.
 const currentRuns = new Map<string, Map<string, number>>();
 const bump = (label: string, ids: string[], rank: number) => {
@@ -153,49 +246,43 @@ const bump = (label: string, ids: string[], rank: number) => {
 };
 
 for (const t of checkpoints) {
-  const feeds = at(t);
-  const labels: [string, string[]][] = [
-    ['Aujourd’hui', feeds.day.ids],
-    ['En direct', feeds.latest.ids],
-    ...HALF_LIVES_H.map(
-      (h) => [`Le fil h=${h}`, feeds.feed.get(h)!.ids] as [string, string[]],
-    ),
-  ];
-  for (const [label, ids] of labels) {
+  const feeds = new Map(variants.map((v) => [v.label, v.rank(t)]));
+  byCheckpoint.set(t, feeds);
+  for (const { label, capped } of variants) {
     const s = stat(label);
+    const ids = feeds.get(label)!;
+    const top = ids.slice(0, TOP);
     s.lengths.push(ids.length);
-    s.distinctTop = new Set([...s.distinctTop, ...ids.slice(0, TOP)]);
+    s.cappedLengths.push(capped ? top.length : Number.NaN);
+    s.distinctTop = new Set([...s.distinctTop, ...top]);
     if (previous != null) {
       s.steps++;
-      const prevIds = labelsPrev(previous, label);
+      const prevIds = previous.get(label)!;
       if (prevIds[0] !== ids[0]) s.top1Changes++;
       const prevTop = new Set(prevIds.slice(0, TOP));
-      const churn = ids.slice(0, TOP).filter((id) => !prevTop.has(id)).length;
+      const churn = top.filter((id) => !prevTop.has(id)).length;
       s.churn.push((churn / TOP) * 100);
+    }
+    const atGap = byCheckpoint.get(t - GAP)?.get(label);
+    if (atGap != null) {
+      const before = new Set(atGap.slice(0, TOP));
+      s.newAtGap.push(top.filter((id) => !before.has(id)).length);
     }
     bump(label, ids, 1);
     bump(label, ids, 2);
     bump(label, ids, 3);
   }
-  // Le fil's overlap with the two live Editions (top-20).
-  for (const h of HALF_LIVES_H) {
-    const s = stat(`Le fil h=${h}`);
-    const top = feeds.feed.get(h)!.ids.slice(0, TOP);
-    s.overlapDay.push(
-      top.filter((id) => feeds.day.ids.slice(0, TOP).includes(id)).length,
-    );
-    s.overlapLatest.push(
-      top.filter((id) => feeds.latest.ids.includes(id)).length,
-    );
+  // Each variant's overlap with the two anchor orders (top-25).
+  const topTop = feeds.get(TOP_LABEL)!.slice(0, TOP);
+  const nouveauAll = new Set(feeds.get(NOUVEAU_LABEL)!);
+  for (const { label } of variants) {
+    if (label === TOP_LABEL || label === NOUVEAU_LABEL) continue;
+    const s = stat(label);
+    const top = feeds.get(label)!.slice(0, TOP);
+    s.overlapTop.push(top.filter((id) => topTop.includes(id)).length);
+    s.overlapNouveau.push(top.filter((id) => nouveauAll.has(id)).length);
   }
   previous = feeds;
-}
-
-function labelsPrev(prev: Feeds, label: string): string[] {
-  if (label === 'Aujourd’hui') return prev.day.ids;
-  if (label === 'En direct') return prev.latest.ids;
-  const h = Number(label.split('=')[1]);
-  return prev.feed.get(h)!.ids;
 }
 
 // Cut the top-3 run counters into longest-residence-per-Story lists.
@@ -204,30 +291,30 @@ for (const [label, runs] of currentRuns) {
 }
 
 const fmt = (xs: number[]) => median(xs).toFixed(1);
+const fmtOpt = (xs: number[]) =>
+  xs.length === 0 ? '—' : median(xs).toFixed(1);
 console.log(
-  `${checkpoints.length} hourly checkpoints over ${new Date(first).toISOString().slice(0, 10)} → ${new Date(last).toISOString().slice(0, 10)}\n`,
+  `${checkpoints.length} hourly checkpoints over ${new Date(first).toISOString().slice(0, 10)} → ${new Date(last).toISOString().slice(0, 10)}; ` +
+    `cap = ${RANKED_CAP}, visit gap = ${GAP / HOUR} h, ★ = the shipped production key\n`,
 );
 console.log(
-  '                    len(med)  top1chg%  top3res med/max(h)  churn@20%(med)  ov.day@20  ov.direct@20  distinct@20',
+  '                      len(med)  len@cap  top1chg%  top3res med/max(h)  churn@25%(1h)  new@10h/25  ov.top@25  ov.nouveau@25  distinct@25',
 );
-for (const label of [
-  'Aujourd’hui',
-  'En direct',
-  ...HALF_LIVES_H.map((h) => `Le fil h=${h}`),
-]) {
+for (const { label } of variants) {
   const s = stats.get(label)!;
   const top3 = `${median(s.top3Runs)} / ${Math.max(...s.top3Runs, 0)}`;
+  const lenAtCap = Number.isNaN(median(s.cappedLengths))
+    ? '—'
+    : median(s.cappedLengths).toFixed(0);
   console.log(
-    `${label.padEnd(20)}${fmt(s.lengths).padStart(9)}${((s.top1Changes / Math.max(s.steps, 1)) * 100).toFixed(0).padStart(10)}${top3.padStart(17)}${fmt(s.churn).padStart(15)}${fmt(s.overlapDay).padStart(11)}${fmt(s.overlapLatest).padStart(14)}${s.distinctTop.size.toString().padStart(13)}`,
+    `${label.padEnd(22)}${fmt(s.lengths).padStart(9)}${lenAtCap.padStart(9)}${((s.top1Changes / Math.max(s.steps, 1)) * 100).toFixed(0).padStart(10)}${top3.padStart(17)}${fmt(s.churn).padStart(15)}${fmt(s.newAtGap).padStart(12)}${fmtOpt(s.overlapTop).padStart(11)}${fmtOpt(s.overlapNouveau).padStart(15)}${s.distinctTop.size.toString().padStart(13)}`,
   );
 }
 
-// A taste of the h=6 reading: last day's top 8 at four hours.
+// A taste of the shipped key: last day's top 8 at two hours — outlets,
+// silence, founding age (the two clocks side by side).
 const lastDay = new Date(last);
-for (const [label, hour] of [
-  ['Le fil h=6', 8],
-  ['Le fil h=6', 20],
-] as [string, number][]) {
+for (const hour of [8, 20]) {
   const t = Date.UTC(
     lastDay.getUTCFullYear(),
     lastDay.getUTCMonth(),
@@ -235,18 +322,22 @@ for (const [label, hour] of [
     hour,
   );
   if (t >= last) continue;
-  const feeds = at(t);
-  console.log(`\n${label} at ${new Date(t).toISOString().slice(11, 16)} UTC`);
+  const ids = byCheckpoint.get(t)?.get(PROD_LABEL);
+  if (ids == null) continue;
   const now = new Date(t);
-  for (const id of feeds.feed.get(6)!.ids.slice(0, 8)) {
+  console.log(
+    `\n${PROD_LABEL} at ${new Date(t).toISOString().slice(11, 16)} UTC`,
+  );
+  for (const id of ids.slice(0, 8)) {
     const s = stories.find((x) => x.id === id)!;
     const inWindow = articlesInWindow(s.articles, DAY_WINDOW_MS, now);
     const outlets = reportingOutletIds(inWindow).size;
     const newest = Math.max(
       ...inWindow.map((a) => parseInstant(a.publishedAt) ?? 0),
     );
+    const founding = foundingInstant(s) ?? t;
     console.log(
-      `  ${outlets} outlets, last ${((t - newest) / HOUR).toFixed(1)}h ago — ${s.title}`,
+      `  ${outlets} outlets, silent ${((t - newest) / HOUR).toFixed(1)}h, founded ${((t - founding) / HOUR).toFixed(1)}h ago — ${s.title}`,
     );
   }
 }
