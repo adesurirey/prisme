@@ -20,9 +20,9 @@ import {
 
 const SITE = window.location.origin;
 const indexUrl = `${SITE}/`;
-const feedUrl = `${SITE}/le-fil/`;
-const liveUrl = `${SITE}/en-direct/`;
-const homeUrls = [indexUrl, feedUrl, liveUrl];
+const nouveauUrl = `${SITE}/nouveau/`;
+const topUrl = `${SITE}/top/`;
+const homeUrls = [indexUrl, nouveauUrl, topUrl];
 
 describe('shouldUseBack', () => {
   it('matches a referrer that is the index', () => {
@@ -101,15 +101,15 @@ describe('parseHomeUrls', () => {
 });
 
 describe('referrerHome', () => {
-  it('recognizes the « Le fil » edition', () => {
-    expect(referrerHome(feedUrl, homeUrls)).toBe(feedUrl);
+  it('recognizes the « Nouveau » sort', () => {
+    expect(referrerHome(nouveauUrl, homeUrls)).toBe(nouveauUrl);
   });
 
-  it('recognizes the live edition (ADR-0029)', () => {
-    expect(referrerHome(liveUrl, homeUrls)).toBe(liveUrl);
+  it('recognizes the « Top » sort', () => {
+    expect(referrerHome(topUrl, homeUrls)).toBe(topUrl);
   });
 
-  it('recognizes la Une', () => {
+  it('recognizes the home', () => {
     expect(referrerHome(indexUrl, homeUrls)).toBe(indexUrl);
   });
 
@@ -177,38 +177,38 @@ describe('installBackLink', () => {
     expect(spy).not.toHaveBeenCalled();
   });
 
-  it('retargets the link for a reader arriving from « Le fil », label unchanged', () => {
-    const spy = page(feedUrl);
-    // Target and href become the edition the reader came from — every
+  it('retargets the link for a reader arriving from « Nouveau », label unchanged', () => {
+    const spy = page(nouveauUrl);
+    // Target and href become the sort page the reader came from — every
     // (history.back, fallback href, middle-click) keeps the same promise
     // — while the label stays « À la une »: it names the page, the
-    // select names the window (ADR-0028).
+    // select names the sort (ADR-0028).
     const link = document.getElementById('back')! as HTMLAnchorElement;
     expect(link.textContent).toBe('À la une');
-    expect(link.getAttribute('href')).toBe(feedUrl);
+    expect(link.getAttribute('href')).toBe(nouveauUrl);
     click();
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
-  it('retargets the link for a reader arriving from « En direct » (ADR-0029)', () => {
-    const spy = page(liveUrl);
+  it('retargets the link for a reader arriving from « Top »', () => {
+    const spy = page(topUrl);
     const link = document.getElementById('back')! as HTMLAnchorElement;
-    expect(link.getAttribute('href')).toBe(liveUrl);
+    expect(link.getAttribute('href')).toBe(topUrl);
     click();
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
-  it('falls back to a plain follow for a live-edition arrival with no history', () => {
-    const spy = page(liveUrl);
+  it('falls back to a plain follow for a Nouveau arrival with no history', () => {
+    const spy = page(nouveauUrl);
     const link = document.getElementById('back')! as HTMLAnchorElement;
     // href was retargeted at install time, but with no history entry the
-    // click must follow the link (to « En direct »), not call back()
+    // click must follow the link (to « Nouveau »), not call back()
     vi.spyOn(window.history, 'length', 'get').mockReturnValue(1);
     const event = new MouseEvent('click', { bubbles: true, cancelable: true });
     link.dispatchEvent(event);
     expect(spy).not.toHaveBeenCalled();
     expect(event.defaultPrevented).toBe(false);
-    expect(link.href).toBe(liveUrl);
+    expect(link.href).toBe(nouveauUrl);
   });
 
   it('ignores a link with no home URLs', () => {

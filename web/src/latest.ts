@@ -1,17 +1,18 @@
 /**
- * The « En direct » edition's copy (issue #137, ADR-0029): the window's
- * temporal anchor and the empty-state line. One module so the header
- * anchor and the empty state cannot drift apart — the empty state must
- * name the same window the anchor promises, plus the last collection
- * time, because an empty page on an hourly-built static site reads as
- * news, not as breakage, only if it says when collection last ran.
+ * The « Nouveau » sort's copy (issue #137, ADR-0029, widened by
+ * ADR-0040): the window's temporal anchor and the empty-state line.
+ * One module so the header anchor and the empty state cannot drift
+ * apart — the empty state must name the same window the anchor
+ * promises, plus the last collection time, because an empty page on
+ * an hourly-built static site reads as news, not as breakage, only if
+ * it says when collection last ran.
  */
 import { formatParisDate } from './paris-date';
 
-/** The live window's temporal anchor: the rolling last 12 hours
+/** The Nouveau window's temporal anchor: the rolling last 24 hours
  * (pipeline/src/ranking.ts's LATEST_WINDOW_MS — the copy mirrors the
  * pipeline constant). */
-export const LATEST_WINDOW_LABEL = '12 dernières heures';
+export const LATEST_WINDOW_LABEL = '24 dernières heures';
 
 /** The footer-line clock — « 20 h 45 », thin no-break spaces around the
  * h (docs/brand.md). The same format every edition's count line uses. */

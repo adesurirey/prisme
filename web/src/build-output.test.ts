@@ -7,11 +7,15 @@
  * data/: the archive shifts under every hourly run, and tests must not
  * (PRISME_DATA_DIR, data.ts — test infrastructure only). The fixture is a
  * faithful Edition artifact: windows consistent with builtAt,
- * latestStories a subset of the day list, feedStories the day pool
- * re-ranked by the feed key (ADR-0036).
+ * latestStories (Nouveau) a subset of the day list, feedStories (Brûlant)
+ * the day pool re-ranked by the double-decay feed key, stories (Top) the
+ * Coverage key (ADR-0036, re-sorted by spec #158 — both ranked sorts
+ * capped at 25 in production, ADR-0038; the fixture holds 3 Stories, so
+ * its pages render under the cap and the count lines tell the artifact's
+ * truth).
  *
  * The suite builds twice: the fixture as committed, and a derived copy
- * with an empty « En direct » window for the empty-state assertions.
+ * with an empty Nouveau window for the empty-state assertions.
  */
 import { execSync } from 'node:child_process';
 import {
@@ -65,7 +69,7 @@ beforeAll(async () => {
   fixtureDist = path.join(WEB_DIR, 'dist-fixture');
   await rename(path.join(WEB_DIR, 'dist'), fixtureDist);
 
-  // Build 2: a derived copy with an empty « En direct » window — the
+  // Build 2: a derived copy with an empty Nouveau window — the
   // empty state is the one branch the committed fixture cannot show.
   const derived = path.join(
     await mkdtemp(path.join(tmpdir(), 'prisme-fixture-')),
@@ -117,21 +121,28 @@ function expectAnchorVisible(html: string, label: string): void {
   expect(klass!).not.toContain('sm:block');
 }
 
-/** The editions select's options, in shipped order (ADR-0028/0029 as
- * amended by ADR-0036/0037: chronology-first — En direct, Le fil,
- * Aujourd'hui). */
-function optionsOf(html: string): { value: string; selected: boolean }[] {
-  return [...html.matchAll(/<option value="([^"]*)"([^>]*)>/g)].map((m) => ({
+/** The sorts select's options, in shipped order (ADR-0028/0029 as
+ * re-sorted by spec #158 / ADR-0041: chronology-first — Nouveau, Brûlant,
+ * Top; Brûlant is the home and the preselected sort on it). */
+function optionsOf(html: string): {
+  value: string;
+  selected: boolean;
+  label: string;
+}[] {
+  return [
+    ...html.matchAll(/<option value="([^"]*)"([^>]*)>([^<]*)<\/option>/g),
+  ].map((m) => ({
     value: m[1],
     selected: m[2].includes('selected'),
+    label: m[3].trim(),
   }));
 }
 
 function expectPickerOrder(html: string): void {
-  expect(optionsOf(html).map((o) => o.value)).toEqual([
-    '/en-direct/',
-    '/le-fil/',
-    '/',
+  expect(optionsOf(html).map((o) => [o.value, o.label])).toEqual([
+    ['/nouveau/', 'Nouveau'],
+    ['/', 'Brûlant'],
+    ['/top/', 'Top'],
   ]);
 }
 
@@ -257,100 +268,97 @@ describe('page head tags', () => {
   });
 });
 
-describe('the editions picker (ADR-0028, as amended by ADR-0029)', () => {
-  it("reads chronology-first on every edition: En direct, Le fil, Aujourd'hui", async () => {
-    for (const page of [
-      'index.html',
-      'en-direct/index.html',
-      'le-fil/index.html',
-    ]) {
+describe('the sorts picker (ADR-0028, as re-sorted by ADR-0041)', () => {
+  it('reads chronology-first on every page: Nouveau, Brûlant, Top', async () => {
+    for (const page of ['index.html', 'nouveau/index.html', 'top/index.html']) {
       expectPickerOrder(await readDist(page));
     }
   });
 
-  it("arrives preselected on the page's own window, with noscript links to the others", async () => {
+  it("arrives preselected on the page's own sort, with noscript links to the others", async () => {
     const home = await readDist('index.html');
-    const live = await readDist('en-direct/index.html');
-    const fil = await readDist('le-fil/index.html');
+    const nouveau = await readDist('nouveau/index.html');
+    const top = await readDist('top/index.html');
     expect(home).toContain('<option value="/" selected>');
-    expect(noscriptHrefs(home)).toEqual(['/en-direct/', '/le-fil/']);
-    expect(live).toContain('<option value="/en-direct/" selected>');
-    expect(noscriptHrefs(live)).toEqual(['/le-fil/', '/']);
-    expect(fil).toContain('<option value="/le-fil/" selected>');
-    expect(noscriptHrefs(fil)).toEqual(['/en-direct/', '/']);
+    expect(noscriptHrefs(home)).toEqual(['/nouveau/', '/top/']);
+    expect(nouveau).toContain('<option value="/nouveau/" selected>');
+    expect(noscriptHrefs(nouveau)).toEqual(['/', '/top/']);
+    expect(top).toContain('<option value="/top/" selected>');
+    expect(noscriptHrefs(top)).toEqual(['/nouveau/', '/']);
   });
 
   it('shows the temporal anchors on every screen size (ADR-0029)', async () => {
-    const homeAnchor = `${formatParisDate(builtAt, {
+    const topAnchor = `${formatParisDate(builtAt, {
       weekday: 'long',
       day: 'numeric',
       month: 'short',
     })} ${formatParisDate(builtAt, { year: 'numeric' })}`;
-    expectAnchorVisible(await readDist('index.html'), homeAnchor);
+    // Brûlant carries the pool's anchor (the same 24 hours as Top and
+    // Nouveau: what differs is the order); Top keeps the day-date
+    // anchor; Nouveau names its founding window (ADR-0040).
+    expectAnchorVisible(await readDist('index.html'), '24 dernières heures');
     expectAnchorVisible(
-      await readDist('en-direct/index.html'),
-      '12 dernières heures',
-    );
-    expectAnchorVisible(
-      await readDist('le-fil/index.html'),
+      await readDist('nouveau/index.html'),
       '24 dernières heures',
     );
+    expectAnchorVisible(await readDist('top/index.html'), topAnchor);
   });
 });
 
-describe('« En direct » edition (issue #137, ADR-0029)', () => {
+describe('« Nouveau » sort (issue #137, ADR-0029, widened by ADR-0040)', () => {
   it("prerenders latest-first with la Une's anatomy: hero, cards, load-more, count line", async () => {
-    const html = await readDist('en-direct/index.html');
-    // One h1 naming the surface; the window is the select's setting.
+    const html = await readDist('nouveau/index.html');
+    // One h1 naming the surface; the sort is the select's setting.
     expect(html).toMatch(/<h1[^>]*>\s*À la une\s*<\/h1>/);
-    expect(html).not.toMatch(/<h1[^>]*>\s*En direct\s*<\/h1>/);
+    expect(html).not.toMatch(/<h1[^>]*>\s*Nouveau\s*<\/h1>/);
     // The stories ship in the artifact's latest-first order — founding
-    // instant descending — hero first, cards after.
+    // instant descending — hero first, cards after. The count line
+    // renders the artifact's length; the web layer never re-caps.
     const ids = [...html.matchAll(/data-story-id="([^"]*)"/g)].map((m) => m[1]);
     expect(ids).toEqual(edition.latestStories.map((s) => s.id));
     expect(html).toContain('data-load-more');
-    expect(html).toContain('2 sujets — dernier point à 20\u202Fh\u202F45');
+    expect(html).toContain(
+      `${edition.latestStories.length} sujets — dernier point à 20\u202Fh\u202F45`,
+    );
   });
 
-  it('is noindexed with a canonical, like every windowed edition (ADR-0028)', async () => {
-    const html = await readDist('en-direct/index.html');
+  it('is noindexed with a canonical, like every alternate sort (ADR-0028)', async () => {
+    const html = await readDist('nouveau/index.html');
     expect(html).toContain(
-      '<link rel="canonical" href="https://leprisme.info/en-direct/">',
+      '<link rel="canonical" href="https://leprisme.info/nouveau/">',
     );
     // Meta noindex with crawl allowed — a robots.txt disallow would hide
     // the page from the very crawler that must read the noindex.
     expect(html).toContain('<meta name="robots" content="noindex"');
   });
 
-  it('stays out of the sitemap with « Le fil » (ADR-0028)', async () => {
+  it('stays out of the sitemap with « Top » (ADR-0028)', async () => {
     const sitemap = await readDist('sitemap-0.xml');
-    expect(sitemap).not.toContain(
-      '<loc>https://leprisme.info/en-direct/</loc>',
-    );
-    expect(sitemap).not.toContain('<loc>https://leprisme.info/le-fil/</loc>');
+    expect(sitemap).not.toContain('<loc>https://leprisme.info/nouveau/</loc>');
+    expect(sitemap).not.toContain('<loc>https://leprisme.info/top/</loc>');
     expect(sitemap).toContain('<loc>https://leprisme.info/</loc>');
   });
 
   it('wires the badge script through the same code path as la Une', async () => {
     const home = await readDist('index.html');
-    const live = await readDist('en-direct/index.html');
-    const fil = await readDist('le-fil/index.html');
-    // The shared glue: a chunk hash home, « En direct » and « Le fil »
-    // all ship and the Méthode page doesn't — identical bundled code,
-    // not a copy (ADR-0029 extended to Le fil by ADR-0036).
+    const nouveau = await readDist('nouveau/index.html');
+    const top = await readDist('top/index.html');
+    // The shared glue: a chunk hash home, Nouveau and Top all ship and
+    // the Méthode page doesn't — identical bundled code, not a copy
+    // (ADR-0029, extended to every sort page by ADR-0036/0041).
     const homeHashes = new Set(chunkHashes(home));
-    const liveHashes = new Set(chunkHashes(live));
-    const filHashes = new Set(chunkHashes(fil));
-    const weekHashes = new Set(
+    const nouveauHashes = new Set(chunkHashes(nouveau));
+    const topHashes = new Set(chunkHashes(top));
+    const methodeHashes = new Set(
       chunkHashes(await readDist('methode/index.html')),
     );
     const shared = [...homeHashes].filter(
-      (h) => liveHashes.has(h) && filHashes.has(h) && !weekHashes.has(h),
+      (h) => nouveauHashes.has(h) && topHashes.has(h) && !methodeHashes.has(h),
     );
     expect(shared).toHaveLength(1);
     // That glue leads to the trending module — the baseline key and the
     // badge slot are in the page's chunk graph.
-    const texts = await scriptChunkTexts(live);
+    const texts = await scriptChunkTexts(nouveau);
     const joined = texts.join('\n');
     expect(joined).toContain('prisme.seenStories');
     expect(joined).toContain('data-trending-slot');
@@ -359,7 +367,7 @@ describe('« En direct » edition (issue #137, ADR-0029)', () => {
   it('renders the empty state naming the window and the last collection time', async () => {
     // The derived empty-window build (emptyDist, build 2 of beforeAll).
     const html = await readFile(
-      path.join(emptyDist, 'en-direct', 'index.html'),
+      path.join(emptyDist, 'nouveau', 'index.html'),
       'utf8',
     );
     expect(html).toContain(latestEmptyLine(builtAt));
@@ -371,62 +379,87 @@ describe('« En direct » edition (issue #137, ADR-0029)', () => {
   });
 });
 
-describe('« Le fil » edition (ADR-0036)', () => {
-  it("prerenders the feed key's order with la Une's anatomy: hero, cards, load-more, count line", async () => {
-    const html = await readDist('le-fil/index.html');
-    // One h1 naming the surface; the window is the select's setting.
+describe('« Top » sort (ADR-0041)', () => {
+  it("prerenders the Coverage key's order with la Une's anatomy: hero, cards, load-more, count line", async () => {
+    const html = await readDist('top/index.html');
+    // One h1 naming the surface; the sort is the select's setting.
     expect(html).toMatch(/<h1[^>]*>\s*À la une\s*<\/h1>/);
-    expect(html).not.toMatch(/<h1[^>]*>\s*Le fil\s*<\/h1>/);
-    // The stories ship in the artifact's feed order — highest weight
-    // first — hero first, cards after.
+    expect(html).not.toMatch(/<h1[^>]*>\s*Top\s*<\/h1>/);
+    // The stories ship in the artifact's Coverage order — most reporting
+    // Outlets first — hero first, cards after; the count line renders
+    // the artifact's length, never a web-layer cap.
     const ids = [...html.matchAll(/data-story-id="([^"]*)"/g)].map((m) => m[1]);
-    expect(ids).toEqual(edition.feedStories.map((s) => s.id));
+    expect(ids).toEqual(edition.stories.map((s) => s.id));
     expect(html).toContain('data-load-more');
     expect(html).toContain(
-      `${edition.feedStories.length} sujets — dernier point à 20\u202Fh\u202F45`,
+      `${edition.stories.length} sujets — dernier point à 20\u202Fh\u202F45`,
     );
   });
 
-  it('is noindexed with a canonical, like every windowed edition (ADR-0028)', async () => {
-    const html = await readDist('le-fil/index.html');
+  it('is noindexed with a canonical, like every alternate sort (ADR-0028)', async () => {
+    const html = await readDist('top/index.html');
     expect(html).toContain(
-      '<link rel="canonical" href="https://leprisme.info/le-fil/">',
+      '<link rel="canonical" href="https://leprisme.info/top/">',
     );
     expect(html).toContain('<meta name="robots" content="noindex"');
   });
 
   it('ships the founding time on its cards — every timeline edition', async () => {
-    const fil = await readDist('le-fil/index.html');
-    await expectCardFoundingTime(fil, edition.feedStories);
+    const top = await readDist('top/index.html');
+    await expectCardFoundingTime(top, edition.stories);
   });
 });
 
-describe('« 7 jours » is gone (ADR-0037)', () => {
-  it('builds no /7-jours/ page', async () => {
+describe('« En direct » and « Le fil » are gone (ADR-0041)', () => {
+  it('builds no /en-direct/, /le-fil/ or /7-jours/ page', async () => {
+    await expect(readDist('en-direct/index.html')).rejects.toThrow();
+    await expect(readDist('le-fil/index.html')).rejects.toThrow();
     await expect(readDist('7-jours/index.html')).rejects.toThrow();
   });
 
-  it("opens on « À la une » with the select on « Aujourd'hui » (ADR-0028)", async () => {
+  it('no longer names them anywhere on the shipped pages', async () => {
+    for (const page of ['index.html', 'nouveau/index.html', 'top/index.html']) {
+      const html = await readDist(page);
+      expect(html).not.toContain('En direct');
+      expect(html).not.toContain('Le fil');
+      expect(html).not.toContain("Aujourd'hui");
+    }
+  });
+});
+
+describe('the home is Brûlant (spec #158, ADR-0039)', () => {
+  it('opens on « À la une » with the select on « Brûlant » (ADR-0028)', async () => {
     const home = await readDist('index.html');
-    // The h1 names the surface on every edition; the window is the
-    // select's preselected value.
+    // The h1 names the surface on every sort; the sort is the select's
+    // preselected value.
     expect(home).toMatch(/<h1[^>]*>\s*À la une\s*<\/h1>/);
-    expect(home).not.toMatch(/<h1[^>]*>\s*Aujourd'hui\s*<\/h1>/);
+    expect(home).not.toMatch(/<h1[^>]*>\s*Brûlant\s*<\/h1>/);
     expect(home).toContain('data-edition-switcher');
-    // « Nouveau » is gone entirely (ADR-0029): no pill hook anywhere.
+    // The per-reader pill is gone entirely (ADR-0029): no hook anywhere.
     expect(home).not.toContain('data-new-pill');
+  });
+
+  it("prerenders the artifact's feedStories order — the only indexed ordering", async () => {
+    const home = await readDist('index.html');
+    const ids = [...home.matchAll(/data-story-id="([^"]*)"/g)].map((m) => m[1]);
+    expect(ids).toEqual(edition.feedStories.map((s) => s.id));
+    expect(home).toContain(
+      `${edition.feedStories.length} sujets — dernier point à 20\u202Fh\u202F45`,
+    );
+    // Indexed: no noindex tag, unlike the alternate sorts.
+    expect(home).not.toContain('name="robots"');
   });
 });
 
 describe('card founding time (issue #136, ADR-0029)', () => {
-  it('ships the founding time after the Coverage count on the index cards', async () => {
+  it('ships the founding time after the Coverage count on the home cards', async () => {
     const home = await readDist('index.html');
-    await expectCardFoundingTime(home, edition.stories);
+    await expectCardFoundingTime(home, edition.feedStories);
   });
 
-  it('ships it on the « En direct » cards — the timeline edition', async () => {
-    const live = await readDist('en-direct/index.html');
-    await expectCardFoundingTime(live, edition.latestStories);
+  it('ships it on the « Nouveau » cards — the timeline sort', async () => {
+    const nouveau = await readDist('nouveau/index.html');
+    await expectCardFoundingTime(nouveau, edition.latestStories);
   });
 });
 
@@ -467,11 +500,14 @@ describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () =
     expect(sitemap).toMatch(/<loc>https:\/\/leprisme.info\/20\d\d-\d\d-\d\d\//);
   });
 
-  it('noindexes the windowed editions and leaves the home indexable (ADR-0028)', async () => {
+  it('noindexes the alternate sorts and leaves the home indexable (ADR-0028)', async () => {
     const home = await readDist('index.html');
     // Meta noindex with crawl allowed — a robots.txt disallow would
     // hide the page from the very crawler that must read the noindex.
-    expect(await readDist('le-fil/index.html')).toContain(
+    expect(await readDist('nouveau/index.html')).toContain(
+      '<meta name="robots" content="noindex"',
+    );
+    expect(await readDist('top/index.html')).toContain(
       '<meta name="robots" content="noindex"',
     );
     expect(home).not.toContain('name="robots"');

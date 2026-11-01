@@ -1,28 +1,28 @@
 ---
 /**
- * The editions header, shared by every edition page (ADR-0028, amended by
- * ADR-0029): « À la une » names the surface and is the h1 on all of them —
- * the window (En direct, Le fil, Aujourd'hui) is a
+ * The sorts header, shared by every sort page (ADR-0028, amended by
+ * ADR-0029 and re-sorted by ADR-0041): « À la une » names the surface
+ * and is the h1 on all of them — the sort (Nouveau, Brûlant, Top) is a
  * *setting of that one page*, switched by a native <select> rather
- * than a row of links: four labels don't fit a 360px phone next to
+ * than a row of links: three labels don't fit a 360px phone next to
  * the h1, and the platform picker is the bulletproof pattern — touch
  * target, wheel/bottom-sheet and screen-reader pop-up semantics come
  * free, no ARIA to mis-wire. It wears the back-link recipe — 13px
  * muted text, the chevron in that same color via the shared span — so
  * it reads as a quiet control, not a second title (selects, unlike
  * text inputs, don't trigger iOS's small-font zoom). A fixed short
- * list, so it
- * auto-submits on change (edition-switcher.ts); without JS the select
- * is inert and the <noscript> links take over — they exist for
- * humans, not crawlers (the windowed editions are noindexed,
- * ADR-0028).
+ * list, so it auto-submits on change (edition-switcher.ts); without JS
+ * the select is inert and the <noscript> links take over — they exist
+ * for humans, not crawlers (the alternate sorts are noindexed,
+ * ADR-0028/0039).
  *
- * The EDITIONS order is chronology-first (ADR-0029, amended by
- * ADR-0036/0037): En direct (pure chronology), Le fil (chronology
- * weighted by Coverage), Aujourd'hui (pure Coverage) — the gradient
- * from "when" to "how much".
+ * The EDITIONS order is chronology-first (ADR-0029, as re-sorted by
+ * ADR-0041): Nouveau (pure chronology), Brûlant (chronology weighted
+ * by Coverage and age), Top (pure Coverage) — the gradient from
+ * "when" to "how much". Code keys carry the spec #158 sort names
+ * (new/hot/top); Brûlant is the home and the default (ADR-0039).
  *
- * The `aside` slot carries the right side of the row: the edition's
+ * The `aside` slot carries the right side of the row: the sort's
  * temporal anchor. It shows on every screen size — the small-screen
  * hiding was lifted when the « Nouveau » pill it made room for was
  * removed (ADR-0029); the pages style the anchor themselves.
@@ -30,21 +30,20 @@
 import { withBase } from '../data';
 
 interface Props {
-  /** The page's own edition: the select arrives preselected on it. */
-  edition: 'live' | 'feed' | 'today';
+  /** The page's own sort: the select arrives preselected on it. */
+  edition: 'new' | 'hot' | 'top';
 }
 
 const { edition } = Astro.props;
 
-/** The shipped editions — the select's options and the noscript
- *  fallback links, chronology-first (ADR-0029, amended by ADR-0036 and
- *  ADR-0037: En direct is pure chronology, « Le fil » mixes chronology
- *  and Coverage, « Aujourd'hui » is pure Coverage — the week window is
- *  gone). */
+/** The shipped sorts — the select's options and the noscript fallback
+ *  links, chronology-first (ADR-0029, as re-sorted by ADR-0041: Nouveau
+ *  is pure chronology, Brûlant mixes chronology and Coverage on two
+ *  decay clocks, Top is pure Coverage). */
 const EDITIONS = [
-  { key: 'live', label: 'En direct', href: withBase('/en-direct/') },
-  { key: 'feed', label: 'Le fil', href: withBase('/le-fil/') },
-  { key: 'today', label: "Aujourd'hui", href: withBase('/') },
+  { key: 'new', label: 'Nouveau', href: withBase('/nouveau/') },
+  { key: 'hot', label: 'Brûlant', href: withBase('/') },
+  { key: 'top', label: 'Top', href: withBase('/top/') },
 ] as const;
 
 const current = EDITIONS.find((e) => e.key === edition);
@@ -71,7 +70,7 @@ const current = EDITIONS.find((e) => e.key === edition);
         type="button"
         data-edition-switcher-face
         aria-haspopup="listbox"
-        aria-label={`Édition : ${current?.label}`}
+        aria-label={`Tri : ${current?.label}`}
         class="inline-flex cursor-pointer items-center gap-1.5 text-[13px] text-muted transition-colors hover:text-ink"
       >
         {current?.label}

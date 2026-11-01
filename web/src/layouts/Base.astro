@@ -25,10 +25,10 @@ interface Props {
   /** True on the 404 page: it serves for every unknown URL, so no
    *  canonical/og:url — pointing at /404/ would be wrong. */
   noCanonical?: boolean;
-  /** True on the windowed editions (ADR-0028): near-duplicates of la
-   *  Une, withdrawn from the index. Crawling stays allowed (robots.txt
-   *  untouched) so the crawler can actually read the noindex; the
-   *  sitemap excludes them too. */
+  /** True on the alternate sorts (ADR-0028, ADR-0039): near-duplicates
+   *  of the home, withdrawn from the index. Crawling stays allowed
+   *  (robots.txt untouched) so the crawler can actually read the
+   *  noindex; the sitemap excludes them too. */
   noindex?: boolean;
 }
 

@@ -1,10 +1,11 @@
 /**
- * The per-reader badge page wiring (ADR-0029, ADR-0031): one code path for every
- * edition that carries it — la Une, « En direct » and « Le fil » (pages
- * without it stay badge-free and never write the baseline).
- * Pages ship a one-line module script calling installTrendingPage();
- * the cards themselves carry data-story-id/data-summarized-at
- * (StoryCard, StoryHero) and trending.ts decides.
+ * The per-reader badge page wiring (ADR-0029, ADR-0031): one code path for
+ * every sort page that carries it — the home (Brûlant), « Nouveau » and
+ * « Top » (pages without it stay badge-free and never write the
+ * baseline). Pages ship a one-line module script calling
+ * installTrendingPage(); the cards themselves carry
+ * data-story-id/data-summarized-at (StoryCard, StoryHero) and
+ * trending.ts decides.
  */
 import { installTrending, SEEN_KEY, SESSION_KEY } from './trending';
 
