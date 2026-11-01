@@ -6,8 +6,9 @@
 // Nouveau (latest-first) orders; the pre-#158 silence-only grid (Le fil
 // h ∈ {3, 6, 12} — h = 6 was the production Le fil); the double-decay
 // Brûlant grid (founding half-lives τ ∈ {12, 18, 24, 48} h, silence at
-// the production 6 h), with the shipped production key (★) computed by
-// the real rankStoriesFeed — whatever constants it carries. The ranked
+// the production 6 h; the production τ joins the grid when it differs),
+// the shipped production key (★) computed by the real rankStoriesFeed —
+// whatever constants it carries. The ranked
 // sorts are measured capped at RANKED_CAP (25), Nouveau uncapped; a cap
 // column shows the length after the slice. Run: pnpm backtest:feed
 import { readdirSync, readFileSync } from 'node:fs';
@@ -28,10 +29,15 @@ import { DAY_WINDOW_MS, LATEST_WINDOW_MS, RANKED_CAP } from './ranking.js';
 
 const dir = join(import.meta.dirname, '../../data/stories');
 const SILENCE_HALF_LIVES_H = [3, 6, 12]; // the pre-#158 Le fil grid
-const FOUNDING_HALF_LIVES_H = [12, 18, 24, 48]; // the Brûlant grid
 const PROD_TAU_H = FEED_FOUNDING_HALF_LIFE_MS / 3_600_000;
-// The shipped production key: graded by the real rankStoriesFeed, so a
-// constant change shows up here without touching this file.
+// The Brûlant grid: the measured τ values plus the production one, so
+// the shipped key is always a graded row — and its ★ rank below runs
+// the real rankStoriesFeed, so a constant change shows up here without
+// touching this file.
+const FOUNDING_HALF_LIVES_H = [...new Set([12, 18, 24, 48, PROD_TAU_H])].sort(
+  (a, b) => a - b,
+);
+// The shipped key's ★ row label; the taste printout below reuses it.
 const PROD_LABEL = `Brûlant τ=${PROD_TAU_H}h ★`;
 const HOUR = 3_600_000;
 const TOP = RANKED_CAP;
@@ -152,24 +158,12 @@ const variants: Variant[] = [
         .map((x) => x.id);
     };
     return {
-      label: `Brûlant τ=${tau}h${shipped ? ' ★' : ''}`,
+      label: shipped ? PROD_LABEL : `Brûlant τ=${tau}h`,
       capped: true,
       rank,
     };
   }),
 ];
-if (!FOUNDING_HALF_LIVES_H.includes(PROD_TAU_H))
-  variants.push({
-    label: PROD_LABEL,
-    capped: true,
-    rank: (t) => {
-      const now = new Date(t);
-      const pool = stories.filter(
-        (s) => articlesInWindow(s.articles, DAY_WINDOW_MS, now).length > 0,
-      );
-      return rankStoriesFeed(pool, DAY_WINDOW_MS, now).map((s) => s.id);
-    },
-  });
 
 /** The day-pool key terms per Story at `now` (pool members only). */
 function perStory(now: Date) {
