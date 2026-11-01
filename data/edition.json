@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-01T01:01:15.332Z",
+  "builtAt": "2026-11-01T02:01:12.786Z",
   "latestStories": [
     {
       "id": "9e77fe5b6e1a",
@@ -251,6 +251,59 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 13,
       "summarizedAt": "2026-11-01T01:01:15.332Z"
+    },
+    {
+      "id": "7113a9237bde",
+      "slug": "un-accident-entre-un-bus-et-un-camion-en-egypte-fait-dix-morts",
+      "title": "Un accident entre un bus et un camion en Égypte fait dix morts",
+      "createdAt": "2026-11-01T02:01:12.786Z",
+      "storyDay": "2026-10-31",
+      "articles": [
+        {
+          "id": "25b1e5514794",
+          "outletId": "bfmtv",
+          "headline": "Un accident de bus en Égypte fait dix morts et 24 blessés",
+          "url": "https://www.bfmtv.com/international/afrique/egypte/un-accident-de-bus-en-egypte-fait-dix-morts-et-24-blesses_AD-202610310392.html",
+          "publishedAt": "2026-10-31T22:18:19.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/cX1r130X0lQk8xg6umdfTgpzB8Q=/0x106:2048x1258/800x0/images/Rafah-2227635.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "e85f37826036",
+          "outletId": "cnews",
+          "headline": "Egypte : une collision entre un bus et un camion fait 10 morts",
+          "url": "https://www.cnews.fr/monde/2026-10-31/egypte-une-collision-entre-un-bus-et-un-camion-fait-10-morts-1945435",
+          "publishedAt": "2026-10-31T18:48:32.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/afp_3_6ae632020b383.jpg?itok=aWVbqqxO",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "7113a9237bde",
+      "titledArticleCount": 2,
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Un accident de la route impliquant un minibus et un poids lourd s'est produit ce samedi sur une autoroute à l'ouest du Caire.",
+          "La collision a entraîné la mort de dix personnes et fait 24 blessés."
+        ],
+        "droite": [
+          "Dix personnes ont perdu la vie et 24 autres ont été blessées dans une collision entre un minibus et un poids lourd sur une autoroute à l'ouest du Caire.",
+          "Le ministère de la Santé précise que dix blessés se trouvent dans un état critique près de la Ville du 6-Octobre, dans la province de Guizeh.",
+          "Les autorités rappellent la fréquence de ces drames routiers en Égypte, souvent imputés à des conduites dangereuses et à un mauvais entretien."
+        ]
+      },
+      "differences": [
+        "Le camp centre se limite à une brève factuelle sur le bilan humain et le lieu de la collision.",
+        "Le camp droite développe le contexte sécuritaire en insistant sur la récurrence des drames routiers et les causes attribuées par les autorités égyptiennes."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2,
+      "summarizedAt": "2026-11-01T02:01:12.786Z"
     },
     {
       "id": "b3227b093e62",
@@ -1536,407 +1589,6 @@
         "La gauche adopte un traitement centré sur la résolution de la crise, en mettant en avant l'appel de José Mourinho à clore l'incident après les explications du joueur.",
         "Le centre livre un compte-rendu factuel et exhaustif de la sanction télévisuelle et de la réaction de soutien de l'entraîneur portugais.",
         "La droite se focalise strictement sur l'application de la censure sportive par la Chine en lien direct avec l'affront politique commis par le joueur."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 5,
-      "summarizedAt": "2026-10-31T16:01:13.995Z"
-    },
-    {
-      "id": "122b053938d8",
-      "slug": "france-football-va-porter-plainte-apres-des-paris-suspects-sur",
-      "title": "France Football porte plainte après des paris suspects sur le Ballon d'or 2026",
-      "createdAt": "2026-10-31T14:01:15.404Z",
-      "storyDay": "2026-10-31",
-      "articles": [
-        {
-          "id": "5e3c8b166c9d",
-          "outletId": "le-parisien",
-          "headline": "Ballon d'or 2026 : paris suspects, soupçons de fuite et de délit d’initiés, le mythique trophée dans la tourmente",
-          "url": "https://www.leparisien.fr/sports/football/ballon-dor-2026-paris-suspects-soupcons-de-fuite-et-de-delit-dinities-le-mythique-trophee-dans-la-tourmente-31-10-2026-YDYKNSMKWBBRXBZIGJHK4OTRNM.php",
-          "publishedAt": "2026-10-31T19:01:21.568Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "fb8a03645f50",
-          "outletId": "franceinfo",
-          "headline": "Ballon d'or 2026 : le groupe Amaury, propriétaire de France Football, va déposer plainte après des soupçons de fuites de résultats et de paris frauduleux",
-          "url": "https://www.franceinfo.fr/sports/foot/ballon-d-or/ballon-d-or-2026-le-groupe-amaury-proprietaire-de-france-football-va-deposer-plainte-apres-des-soupcons-de-fuites-de-resultats-et-de-paris-frauduleux_8261981.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-31T15:57:25.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/8-1yFOlA5HU2d83tDMlh051Hotk/0x80:1024x656/432x243/filters:format(jpg)/2026/10/31/6ae60f736e55d317477031.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "207dd5aa0337",
-          "outletId": "le-parisien",
-          "headline": "Ballon d'or 2026 : la direction de France Football va porter plainte après des paris suspects",
-          "url": "https://www.leparisien.fr/sports/football/ballon-dor-2026-la-direction-de-france-football-va-porter-plainte-apres-des-paris-suspects-31-10-2026-6YYC6OMT4NCGTFM65NVCMLA2GU.php",
-          "publishedAt": "2026-10-31T14:01:15.404Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "6fe035fb4786",
-          "outletId": "le-figaro",
-          "headline": "Ballon d’Or : «L’intégrité de cette récompense est une priorité absolue», France Football va porter plainte après des paris suspects",
-          "url": "https://www.lefigaro.fr/sports/football/ballon-d-or-l-integrite-de-cette-recompense-est-une-priorite-absolue-france-football-va-porter-plainte-apres-des-paris-suspects-20261031",
-          "publishedAt": "2026-10-31T13:54:12.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/31/76b8f43d2a7256410696d7f83575ea93f5aceaf56c552a61ba27e71fb065a4cf.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "9aaee84382b1",
-      "titledArticleCount": 4,
-      "section": "sport",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le groupe Amaury annonce le dépôt d'une plainte suite à la détection de paris frauduleux concernant l'édition 2026 du Ballon d'Or.",
-          "Des anomalies de paris ont été identifiées spécifiquement sur les cinq premiers joueurs du classement du trophée.",
-          "La direction qualifie ces allégations de fuites et de paris suspects d'extrêmement sérieuses."
-        ],
-        "centre": [
-          "France Football engage des poursuites judiciaires après des mouvements de paris suspects et des soupçons de délit d'initiés sur le Ballon d'Or 2026.",
-          "Le prestigieux trophée se trouve plongé dans la tourmente à la suite de ces révélations de fuites sur les résultats.",
-          "Les investigations portent sur des paris anormaux enregistrés concernant le top 5 du classement final."
-        ],
-        "droite": [
-          "France Football confirme qu'un dépôt de plainte est en cours pour traiter les soupçons de fuites et de paris frauduleux sur l'élection.",
-          "Le groupe affirme que l'intégrité de la récompense constitue une priorité absolue à la veille de la cérémonie de lundi.",
-          "L'annonce de cette action judiciaire fait suite à la mise en lumière de paris suspects sur les cinq premiers du classement."
-        ]
-      },
-      "differences": [
-        "Le camp gauche, représenté par franceinfo, se focalise sur l'annonce institutionnelle du groupe Amaury et l'ampleur des fraudes détectées.",
-        "Le camp centre, à travers Le Parisien, insiste sur l'impact de la tourmente et le délit d'initiés présumé qui entachent le trophée.",
-        "Le camp droite, via Le Figaro, met en avant la défense des valeurs morales de la récompense en citant directement le souci d'intégrité de l'organisateur."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-10-31T19:01:21.568Z"
-    },
-    {
-      "id": "c9b5ba3c984f",
-      "slug": "cent-quinze-bateaux-prennent-le-depart-de-la-route-du-rhum-par",
-      "title": "Cent quinze bateaux prennent le départ de la Route du Rhum par une météo idéale",
-      "createdAt": "2026-11-01T01:01:15.332Z",
-      "storyDay": "2026-10-31",
-      "articles": [
-        {
-          "id": "f094e76a90cd",
-          "outletId": "tf1-info",
-          "headline": "Route du Rhum, top départ : 115 bateaux prennent le large ce dimanche avec une météo idéale",
-          "url": "https://www.tf1info.fr/sport/course-route-du-rhum-top-depart-115-bateaux-prennent-le-large-dimanche-avec-une-meteo-ideale-2473155.html",
-          "publishedAt": "2026-10-31T21:16:34.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/route-du-rhum-saint-malo-2026-cdbefc-1@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "5c576f92ce8f",
-          "outletId": "la-croix",
-          "headline": "Route du Rhum : Francis Joyon, 70 ans et toujours du vent dans les voiles",
-          "url": "https://www.la-croix.com/sport/route-du-rhum-francis-joyon-70-ans-et-toujours-du-vent-dans-les-voiles-20261031",
-          "publishedAt": "2026-10-31T13:34:46.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/30/2575692-le-navigateur-breton-de-70-ans-francis-joyon-prend.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        }
-      ],
-      "topicId": "c9b5ba3c984f",
-      "titledArticleCount": 2,
-      "section": "sport",
-      "everInEdition": true,
-      "summaries": {
-        "centre": [
-          "La 13e édition de la Route du Rhum s'élance avec un marin de 70 ans engagé en catégorie Vintage Multi.",
-          "Le skipper Francis Joyon privilégie la sobriété et l'autonomie face à une course au large dominée par la technologie."
-        ],
-        "droite": [
-          "Cent quinze bateaux prennent le départ de la Route du Rhum depuis Saint-Malo avec des conditions météorologiques idéales.",
-          "La flotte est répartie en six catégories de multicoques et monocoques pour ce sprint transatlantique."
-        ]
-      },
-      "differences": [
-        "La Croix met en avant un portrait humain axé sur la sobriété et le choix singulier d'un vétéran de la course.",
-        "TF1 Info se focalise sur les aspects logistiques de l'événement, soulignant le nombre de participants et les conditions de course."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 2,
-      "summarizedAt": "2026-11-01T01:01:15.332Z"
-    },
-    {
-      "id": "35062f08a2b4",
-      "slug": "la-mairie-de-paris-saisit-la-justice-apres-la-decouverte-de",
-      "title": "La mairie de Paris saisit la justice après la découverte de tags faisant la promotion de la remigration",
-      "createdAt": "2026-10-31T15:01:20.468Z",
-      "storyDay": "2026-10-31",
-      "articles": [
-        {
-          "id": "a3172a7832cc",
-          "outletId": "bfmtv",
-          "headline": "À Paris, des tags \"remigration\" ont été découverts, la justice a été saisie",
-          "url": "https://www.bfmtv.com/police-justice/video-a-paris-des-tags-remigration-ont-ete-decouverts-la-justice-a-ete-saisie_VN-202610310341.html",
-          "publishedAt": "2026-10-31T18:29:41.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/t9It6NjRNXQvXHs2zfZfAvKyJ3I=/0x0:1280x720/800x0/images/A-Paris-des-tags-remigration-ont-ete-decouverts-la-justice-a-ete-saisie-2375622.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "5cb2b3cdf0f1",
-          "outletId": "le-monde",
-          "headline": "Des tags « Remigration » découverts à Paris, Emmanuel Grégoire annonce les signaler à la justice",
-          "url": "https://www.lemonde.fr/societe/article/2026/10/31/des-tags-remigration-decouverts-a-paris-emmanuel-gregoire-annonce-les-signaler-a-la-justice_6803712_3224.html",
-          "publishedAt": "2026-10-31T15:07:28.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/09/07/250/0/3000/1500/644/322/60/0/882b2d9_upload-1-czkuxeohewln-frame-1276.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "180b55800cbc",
-          "outletId": "liberation",
-          "headline": "Paris : des tags «remigration» retrouvés dans les rues de la capitale, Emmanuel Grégoire saisit la justice",
-          "url": "https://www.liberation.fr/politique/paris-des-tags-remigration-retrouves-dans-les-rues-de-la-capitale-emmanuel-gregoire-saisit-la-justice-20261031_MZUT22YVZZGFXKSEWDBJZODFUM/",
-          "publishedAt": "2026-10-31T15:06:44.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "23db9f8fca7c",
-          "outletId": "le-parisien",
-          "headline": "Paris : des tags faisant la promotion de la « remigration » découverts sur des façades de commerces, Emmanuel Grégoire annonce porter plainte",
-          "url": "https://www.leparisien.fr/paris-75/paris-des-tags-faisant-la-promotion-de-la-remigration-decouverts-sur-des-facades-de-commerces-emmanuel-gregoire-annonce-porter-plainte-31-10-2026-KRZWVXRCFBGAHHK7ZN4NZUYN2A.php",
-          "publishedAt": "2026-10-31T15:01:20.468Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "57573828837c",
-          "outletId": "cnews",
-          "headline": "Paris : le maire saisit la justice après la découverte de tags «remigration»",
-          "url": "https://www.cnews.fr/france/2026-10-31/paris-le-maire-saisit-la-justice-apres-la-decouverte-de-tags-remigration-1945276",
-          "publishedAt": "2026-10-31T14:59:16.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_sk1ew_6ae5f50d67dc3.jpg?itok=2be_Qy7O",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "7320d185d947",
-          "outletId": "franceinfo",
-          "headline": "La mairie de Paris saisit la justice après la découverte de tags \"remigration\" sur des façades de commerces",
-          "url": "https://www.franceinfo.fr/societe/immigration/la-mairie-de-paris-saisit-la-justice-apres-la-decouverte-de-tags-remigration-sur-des-facades-de-commerces_8261918.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-31T14:50:35.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/rYNSpXuazOrg-LtVfpy7PB7yu2o/0x313:6000x3688/432x243/filters:format(jpg)/2026/10/31/6ae6002276c0d417023267.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "22a78db8452d",
-          "outletId": "tf1-info",
-          "headline": "Paris : des tags \"remigration\" découverts sur des commerces, Emmanuel Grégoire saisit la justice",
-          "url": "https://www.tf1info.fr/justice-faits-divers/paris-des-tags-remigration-decouverts-sur-des-commerces-emmanuel-gregoire-saisit-la-justice-2473114.html",
-          "publishedAt": "2026-10-31T14:42:10.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/emmanuel-gregoire-sorbonne-chapel-paris-2026-9bacee-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "838c9be86320",
-          "outletId": "20-minutes",
-          "headline": "« Paris ne cédera rien face au racisme » : Emmanuel Grégoire porte plainte après la découverte de tags « remigration »",
-          "url": "https://www.20minutes.fr/societe/4259194-20261031-paris-cedera-rien-face-racisme-emmanuel-gregoire-porte-plainte-apres-decouverte-tags-remigration?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-31T14:40:11.000Z",
-          "imageUrl": "https://img.20mn.fr/4592rga0R-WWvLbObVwE-Sk/1200x768_emmanuel-gregoire-maire-de-paris-derouda-10201-credit-franck-derouda-sipa-2608260904",
-          "frontPage": true,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "333358df93ba",
-          "outletId": "la-croix",
-          "headline": "Des tags « remigration » découverts à Paris, la mairie saisit la justice",
-          "url": "https://www.la-croix.com/politique/des-tags-remigration-decouverts-a-paris-la-mairie-saisit-la-justice-20261031",
-          "publishedAt": "2026-10-31T13:49:38.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/31/2577140-le-maire-de-paris-emmanuel-gregoire-annonce-depose.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "2fdd080ad36b",
-          "outletId": "humanite",
-          "headline": "Des tags racistes sur les façades de commerces à Paris",
-          "url": "https://www.humanite.fr/-/-/des-tags-racistes-sur-les-facades-de-commerces-a-paris",
-          "publishedAt": "2026-10-31T13:34:24.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "dae58446911e",
-          "outletId": "bfmtv",
-          "headline": "\"Nous ne laisserons pas cette haine s'installer\": des tags faisant la promotion de la \"remigration\" découverts à Paris, Emmanuel Grégoire annonce saisir la justice",
-          "url": "https://www.bfmtv.com/paris/nous-ne-laisserons-pas-cette-haine-s-installer-des-tags-faisant-la-promotion-de-la-remigration-decouverts-a-paris-emmanuel-gregoire-annonce-saisir-la-justice_AN-202610310255.html",
-          "publishedAt": "2026-10-31T13:28:35.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/KBfbA0Yne4IR_p9ZOnEwR8ZeMQY=/0x36:768x468/800x0/images/Le-maire-de-Paris-Emmanuel-Gregoire-a-Paris-le-18-mai-2026-2349076.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        }
-      ],
-      "topicId": "35062f08a2b4",
-      "titledArticleCount": 10,
-      "section": "society",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le maire socialiste de Paris Emmanuel Grégoire a saisi la justice après la découverte de tags sur des commerces du 1ᵉʳ arrondissement.",
-          "Les inscriptions ont été signalées au titre de l'article 40 du code de procédure pénale et une plainte a été déposée.",
-          "La municipalité a fait intervenir ses équipes de la propreté pour effacer rapidement les messages incriminés.",
-          "Les médias de gauche rappellent que le terme « remigration » est un projet raciste et xénophobe porté par l'extrême droite."
-        ],
-        "centre": [
-          "Emmanuel Grégoire a annoncé sur le réseau social X avoir saisi la procureure de la République et porté plainte.",
-          "Des tags faisant la promotion de la remigration ont été découverts sur des façades de commerces parisiens.",
-          "La mairie de Paris qualifie ces inscriptions d'incitation à la haine raciale et a procédé à leur nettoyage.",
-          "Certains articles replacent l'affaire dans un contexte tendu marqué par l'attentat raciste de Trappes."
-        ],
-        "droite": [
-          "Emmanuel Grégoire a saisi la justice et déposé plainte après la découverte de tags racistes et xénophobes.",
-          "Les inscriptions promotionnelles sur la remigration ont été repérées sur les façades de divers commerces de la capitale.",
-          "Les équipes de la propreté de la Ville de Paris ont été mobilisées pour supprimer ces messages de la voie publique.",
-          "Les médias de droite précisent que le maire de Paris a dénoncé un projet politique de l'extrême droite et une haine intolérable."
-        ]
-      },
-      "differences": [
-        "La gauche insiste lourdement sur la qualification politique et idéologique des inscriptions, désignant explicitement le projet raciste de l'extrême droite.",
-        "Le centre privilégie un compte rendu factuel des actions de la municipalité parisienne tout en intégrant parfois le contexte sécuritaire récent.",
-        "La droite met en avant les réactions personnelles du maire de Paris et la qualification pénale des faits tout en soulignant la nature xénophobe des tags."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 10,
-      "summarizedAt": "2026-10-31T16:01:13.995Z"
-    },
-    {
-      "id": "1dca9a0fc10f",
-      "slug": "tadej-pogacar-revele-avoir-eu-trois-vertebres-fracturees-apres",
-      "title": "Tadej Pogačar révèle avoir eu trois vertèbres fracturées après sa chute en Espagne",
-      "createdAt": "2026-10-31T15:01:20.468Z",
-      "storyDay": "2026-10-31",
-      "articles": [
-        {
-          "id": "34f982d19610",
-          "outletId": "cnews",
-          "headline": "«Je suis juste heureux d'être en vie»: après sa chute grave à la Vuelta, Tadej Pogacar se confie",
-          "url": "https://www.cnews.fr/sport/2026-10-31/je-suis-juste-heureux-detre-en-vie-apres-sa-chute-grave-la-vuelta-tadej-pogacar-se",
-          "publishedAt": "2026-10-31T16:39:47.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/afp_2_6ae60e72defbe.jpg?itok=Blm92oDG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "e568d4e97afa",
-          "outletId": "le-parisien",
-          "headline": "« Juste heureux d’être en vie » : avec trois vertèbres fracturées, la blessure de Tadej Pogacar était plus grave qu’imaginée",
-          "url": "https://www.leparisien.fr/sports/cyclisme/juste-heureux-detre-en-vie-avec-trois-vertebres-fracturees-la-blessure-de-tadej-pogacar-etait-plus-grave-quimaginee-31-10-2026-7QTOEJQJL5FLBHLWNCCAXW7PNY.php",
-          "publishedAt": "2026-10-31T16:01:13.995Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "8c2aac5d874e",
-          "outletId": "europe-1",
-          "headline": "«Je suis juste content d'être en vie», Tadej Pogačar révèle avoir eu trois vertèbres fracturées après sa chute à la Vuelta",
-          "url": "https://www.europe1.fr/sport/je-suis-juste-content-detre-en-vie-tadej-pogacar-revele-avoir-eu-trois-vertebres-fracturees-apres-sa-chute-a-la-vuelta-1197879?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-31T14:56:08.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/31/15/075_fernandezdevelascosanz-uaeemira241210_npbjy_1_6ae6016b25b5f.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "a459b808299d",
-          "outletId": "le-figaro",
-          "headline": "Cyclisme: «Je suis juste heureux d’être en vie», Pogacar révèle avoir eu «trois vertèbres cassées»",
-          "url": "https://www.lefigaro.fr/sports/cyclisme/cyclisme-je-suis-juste-heureux-d-etre-en-vie-pogacar-revele-avoir-eu-trois-vertebres-cassees-20261031",
-          "publishedAt": "2026-10-31T14:34:57.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/31/aad7ca7e82f590bb1e74506abb3190a9c922e3097fe71d64ea220f85a805f5fc.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "076c103511da",
-          "outletId": "huffpost",
-          "headline": "Pogacar « heureux d’être en vie » après sa lourde chute en Espagne, bien plus grave qu’annoncée",
-          "url": "https://www.huffingtonpost.fr/sport/article/pogacar-heureux-d-etre-en-vie-apres-sa-lourde-chute-en-espagne-bien-plus-grave-qu-annoncee_349208.html",
-          "publishedAt": "2026-10-31T14:30:02.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/31/49/0/3248/1827/0/0/60/0/f81f698_upload-1-urhwyttelxwq-afp-20260827-c6nc7j8-v1-highres-cyclingespvuelta.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "47d309ca8ada",
-          "outletId": "franceinfo",
-          "headline": "\"Je suis juste content d'être en vie et d'être debout\" : Tadej Pogacar révèle que sa blessure était plus sévère que le diagnostic initial",
-          "url": "https://www.franceinfo.fr/sports/cyclisme/tadej-pogacar/je-suis-juste-content-d-etre-en-vie-et-d-etre-debout-tadej-pogacar-revele-que-sa-blessure-etait-plus-severe-que-le-diagnostic-initial_8261822.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-31T13:16:35.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/NStFzRR1kA69K-ZcH5GoH45Qfjw/0x0:6372x3584/432x243/filters:format(jpg)/2026/10/31/6ae5e3377d458689897439.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        }
-      ],
-      "topicId": "1dca9a0fc10f",
-      "titledArticleCount": 5,
-      "section": "sport",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Tadej Pogačar s'est confié sur sa santé physique et mentale à la suite d'une grave chute survenue en août lors du Tour d'Espagne.",
-          "Le coureur slovène a estimé qu'il était « heureux d’être en vie » après un accident dont les conséquences se sont avérées beaucoup plus graves que le diagnostic initial."
-        ],
-        "centre": [
-          "Tadej Pogačar a révélé que sa blessure subie lors de sa chute en Espagne était bien plus grave que prévu, impliquant trois vertèbres fracturées.",
-          "Le coureur s'est déclaré « juste heureux d’être en vie » dans un entretien accordé au site The Athletic."
-        ],
-        "droite": [
-          "Tadej Pogačar est sorti du silence deux mois après sa lourde chute sur la Vuelta dans un entretien accordé à The Athletic.",
-          "Un nouveau scanner réalisé en Slovénie a révélé que les vertèbres C7, T1 et T2 étaient cassées, portant à trois le nombre de fractures vertébrales.",
-          "Le champion de vingt-huit ans a confié être « juste content d'être en vie » après avoir pris conscience de la gravité réelle de son accident."
-        ]
-      },
-      "differences": [
-        "La gauche met l'accent sur les confidences du coureur concernant sa santé mentale et physique après l'épreuve vécue en Espagne.",
-        "Le centre rapporte de manière synthétique et factuelle les déclarations de Tadej Pogačar sur la gravité de ses fractures.",
-        "La droite détaille précisément le parcours médical du champion, mentionnant les vertèbres touchées et les circonstances de son entretien."
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 5,
@@ -5666,6 +5318,109 @@
       "summarizedAt": "2026-10-31T21:01:19.437Z"
     },
     {
+      "id": "f3f9686ac00c",
+      "slug": "christian-mbilli-affronte-canelo-dans-un-combat-historique-pour",
+      "title": "Boxe : Christian Mbilli s'incline face à la légende Canelo Alvarez",
+      "createdAt": "2026-10-31T07:01:19.001Z",
+      "storyDay": "2026-10-31",
+      "articles": [
+        {
+          "id": "e147465a042d",
+          "outletId": "20-minutes",
+          "headline": "Boxe : Le Français Mbilli battu par le roi mexicain « Canelo »",
+          "url": "https://www.20minutes.fr/sport/boxe/4259261-20261101-boxe-francais-mbilli-battu-roi-mexicain-canelo?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-01T01:05:00.000Z",
+          "imageUrl": "https://img.20mn.fr/4f9ajG56T_CtFjDocKx2uCk/1200x768_saul-canelo-alvarez-a-droite-du-mexique-frappe-christian-mbilli-de-france-lors-de-leur-championnat-du-monde-wbc-des-poids-super-moyens-au-venue-arena-de-riyad-en-arabie-saoudite-le-dimanche-1er-novembre-2026-ap-photo-correction-supprimer-la-signature-du-photographe-aqx104-26304852529363-correction-supprimer-la-signature-du-photographe-2611010049",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "3c1098610db7",
+          "outletId": "le-figaro",
+          "headline": "Boxe : pas de miracle pour le Français Mbilli, maîtrisé par la légende Canelo",
+          "url": "https://www.lefigaro.fr/sports/autres-sports/boxe-pas-de-miracle-pour-le-francais-mbilli-maitrise-par-la-legende-canelo-20261031",
+          "publishedAt": "2026-10-31T22:55:44.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/31/cc8b45a49cdabb82a81aa5f18ad73d655c7839cca66a9678baa75222c954fd59.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "97915fa86c0f",
+          "outletId": "le-figaro",
+          "headline": "EN DIRECT - Boxe : le combat d’une vie pour le Français Mbilli face à la légende Canelo",
+          "url": "https://www.lefigaro.fr/sports/boxe/en-direct-boxe-le-combat-d-une-vie-pour-le-francais-mbilli-face-a-la-legende-canelo-20261031",
+          "publishedAt": "2026-10-31T21:52:02.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/31/0b5148139a14d711e006b02ff92d6313debc273cbe64e1790ca6913ec2c0427b.jpg",
+          "frontPage": false,
+          "kind": "live",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "dfcd15070fdd",
+          "outletId": "ouest-france",
+          "headline": "Christian Mbilli - Canelo Alvarez. Horaire, favori, diffusion… Tout savoir sur le combat du Franco-Camerounais",
+          "url": "https://www.ouest-france.fr/sport/boxe/boxe-christian-mbilli-se-mesure-a-la-legende-canelo-enjeu-favori-diffusion-tout-savoir-sur-le-combat-du-francais-6e547d4a-d471-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-31T13:00:08.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjA3MTkxOGEyOGM1YTg4NjYzMzVjNzg5NzU4ZjMyYTI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2e811f492b25d3de9207e699776257bf04f9e8487b99655006532153672f4cec",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "04b27b9752a4",
+          "outletId": "le-parisien",
+          "headline": "Mbilli-Canelo : adversaire légendaire, ceinture en jeu… Pourquoi ce match va marquer l’histoire de la boxe en France",
+          "url": "https://www.leparisien.fr/sports/mbilli-canelo-adversaire-legendaire-ceinture-en-jeu-pourquoi-ce-match-va-marquer-lhistoire-de-la-boxe-en-france-31-10-2026-ZHXNXJ76SBC3TLLG5WBKYXLRBI.php",
+          "publishedAt": "2026-10-31T07:01:19.001Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "26b95568edff",
+          "outletId": "ouest-france",
+          "headline": "TÉMOIGNAGE. « Il déteste la neige, il aime les bons restaurants » : Christian Mbilli l’homme derrière les gants de boxe",
+          "url": "https://www.ouest-france.fr/sport/boxe/boxe-avant-son-combat-contre-canelo-noe-cloutier-raconte-nous-christian-mbilli-619ed99a-d482-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-31T06:58:32.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYzIyNGUwYWU0ZmIzNGJiMDY4OTEyYjNkYjk1NTA1N2M?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=5e8aff0fd54bef7305d983b6fa9fa5e2d74270ee2e550cd13878dba4474a57f7",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "f3f9686ac00c",
+      "titledArticleCount": 5,
+      "section": "sport",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Le Franco-Camerounais Christian Mbilli défend sa ceinture mondiale WBC des super-moyens face à Saul Alvarez à Riyad.",
+          "Ce championnat du monde est présenté comme un événement historique pour la boxe française.",
+          "La presse revient sur le parcours et la personnalité du boxeur avant son affrontement face au champion mexicain."
+        ],
+        "droite": [
+          "Christian Mbilli a subi une défaite logique face au Mexicain Saúl Canelo Alvarez à Riyad.",
+          "L'icône mexicaine de 36 ans a nettement dominé le combat pour conserver sa suprématie chez les super-moyens.",
+          "Le Français échoue dans sa quête d'exploit mondial après avoir affronté le champion en titre."
+        ]
+      },
+      "differences": [
+        "Le centre mise sur l'attente et l'enjeu historique du combat en dressant le portrait du boxeur franco-camerounais avant l'affrontement.",
+        "La droite relate l'issue sportive du championnat en constatant la défaite nette du boxeur français face à la maîtrise du champion mexicain."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-10-31T23:01:17.048Z"
+    },
+    {
       "id": "f25d75810c79",
       "slug": "le-royaume-uni-se-dit-ouvert-a-des-excuses-officielles",
       "title": "Royaume-Uni : le Premier ministre se dit ouvert à des excuses officielles de l'État concernant l'esclavage",
@@ -6393,97 +6148,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 6,
       "summarizedAt": "2026-10-31T19:01:21.568Z"
-    },
-    {
-      "id": "f3f9686ac00c",
-      "slug": "christian-mbilli-affronte-canelo-dans-un-combat-historique-pour",
-      "title": "Boxe : Christian Mbilli s'incline face à la légende Canelo Alvarez",
-      "createdAt": "2026-10-31T07:01:19.001Z",
-      "storyDay": "2026-10-31",
-      "articles": [
-        {
-          "id": "3c1098610db7",
-          "outletId": "le-figaro",
-          "headline": "Boxe : pas de miracle pour le Français Mbilli, maîtrisé par la légende Canelo",
-          "url": "https://www.lefigaro.fr/sports/autres-sports/boxe-pas-de-miracle-pour-le-francais-mbilli-maitrise-par-la-legende-canelo-20261031",
-          "publishedAt": "2026-10-31T22:55:44.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/31/cc8b45a49cdabb82a81aa5f18ad73d655c7839cca66a9678baa75222c954fd59.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "97915fa86c0f",
-          "outletId": "le-figaro",
-          "headline": "EN DIRECT - Boxe : le combat d’une vie pour le Français Mbilli face à la légende Canelo",
-          "url": "https://www.lefigaro.fr/sports/boxe/en-direct-boxe-le-combat-d-une-vie-pour-le-francais-mbilli-face-a-la-legende-canelo-20261031",
-          "publishedAt": "2026-10-31T21:52:02.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/31/0b5148139a14d711e006b02ff92d6313debc273cbe64e1790ca6913ec2c0427b.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "dfcd15070fdd",
-          "outletId": "ouest-france",
-          "headline": "Christian Mbilli - Canelo Alvarez. Horaire, favori, diffusion… Tout savoir sur le combat du Franco-Camerounais",
-          "url": "https://www.ouest-france.fr/sport/boxe/boxe-christian-mbilli-se-mesure-a-la-legende-canelo-enjeu-favori-diffusion-tout-savoir-sur-le-combat-du-francais-6e547d4a-d471-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-31T13:00:08.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjA3MTkxOGEyOGM1YTg4NjYzMzVjNzg5NzU4ZjMyYTI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2e811f492b25d3de9207e699776257bf04f9e8487b99655006532153672f4cec",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "04b27b9752a4",
-          "outletId": "le-parisien",
-          "headline": "Mbilli-Canelo : adversaire légendaire, ceinture en jeu… Pourquoi ce match va marquer l’histoire de la boxe en France",
-          "url": "https://www.leparisien.fr/sports/mbilli-canelo-adversaire-legendaire-ceinture-en-jeu-pourquoi-ce-match-va-marquer-lhistoire-de-la-boxe-en-france-31-10-2026-ZHXNXJ76SBC3TLLG5WBKYXLRBI.php",
-          "publishedAt": "2026-10-31T07:01:19.001Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "26b95568edff",
-          "outletId": "ouest-france",
-          "headline": "TÉMOIGNAGE. « Il déteste la neige, il aime les bons restaurants » : Christian Mbilli l’homme derrière les gants de boxe",
-          "url": "https://www.ouest-france.fr/sport/boxe/boxe-avant-son-combat-contre-canelo-noe-cloutier-raconte-nous-christian-mbilli-619ed99a-d482-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-31T06:58:32.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYzIyNGUwYWU0ZmIzNGJiMDY4OTEyYjNkYjk1NTA1N2M?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=5e8aff0fd54bef7305d983b6fa9fa5e2d74270ee2e550cd13878dba4474a57f7",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "f3f9686ac00c",
-      "titledArticleCount": 5,
-      "section": "sport",
-      "everInEdition": true,
-      "summaries": {
-        "centre": [
-          "Le Franco-Camerounais Christian Mbilli défend sa ceinture mondiale WBC des super-moyens face à Saul Alvarez à Riyad.",
-          "Ce championnat du monde est présenté comme un événement historique pour la boxe française.",
-          "La presse revient sur le parcours et la personnalité du boxeur avant son affrontement face au champion mexicain."
-        ],
-        "droite": [
-          "Christian Mbilli a subi une défaite logique face au Mexicain Saúl Canelo Alvarez à Riyad.",
-          "L'icône mexicaine de 36 ans a nettement dominé le combat pour conserver sa suprématie chez les super-moyens.",
-          "Le Français échoue dans sa quête d'exploit mondial après avoir affronté le champion en titre."
-        ]
-      },
-      "differences": [
-        "Le centre mise sur l'attente et l'enjeu historique du combat en dressant le portrait du boxeur franco-camerounais avant l'affrontement.",
-        "La droite relate l'issue sportive du championnat en constatant la défaite nette du boxeur français face à la maîtrise du champion mexicain."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 5,
-      "summarizedAt": "2026-10-31T23:01:17.048Z"
     },
     {
       "id": "1dca9a0fc10f",
@@ -7713,6 +7377,59 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 3,
       "summarizedAt": "2026-10-31T22:01:18.342Z"
+    },
+    {
+      "id": "7113a9237bde",
+      "slug": "un-accident-entre-un-bus-et-un-camion-en-egypte-fait-dix-morts",
+      "title": "Un accident entre un bus et un camion en Égypte fait dix morts",
+      "createdAt": "2026-11-01T02:01:12.786Z",
+      "storyDay": "2026-10-31",
+      "articles": [
+        {
+          "id": "25b1e5514794",
+          "outletId": "bfmtv",
+          "headline": "Un accident de bus en Égypte fait dix morts et 24 blessés",
+          "url": "https://www.bfmtv.com/international/afrique/egypte/un-accident-de-bus-en-egypte-fait-dix-morts-et-24-blesses_AD-202610310392.html",
+          "publishedAt": "2026-10-31T22:18:19.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/cX1r130X0lQk8xg6umdfTgpzB8Q=/0x106:2048x1258/800x0/images/Rafah-2227635.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "e85f37826036",
+          "outletId": "cnews",
+          "headline": "Egypte : une collision entre un bus et un camion fait 10 morts",
+          "url": "https://www.cnews.fr/monde/2026-10-31/egypte-une-collision-entre-un-bus-et-un-camion-fait-10-morts-1945435",
+          "publishedAt": "2026-10-31T18:48:32.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/afp_3_6ae632020b383.jpg?itok=aWVbqqxO",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "7113a9237bde",
+      "titledArticleCount": 2,
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Un accident de la route impliquant un minibus et un poids lourd s'est produit ce samedi sur une autoroute à l'ouest du Caire.",
+          "La collision a entraîné la mort de dix personnes et fait 24 blessés."
+        ],
+        "droite": [
+          "Dix personnes ont perdu la vie et 24 autres ont été blessées dans une collision entre un minibus et un poids lourd sur une autoroute à l'ouest du Caire.",
+          "Le ministère de la Santé précise que dix blessés se trouvent dans un état critique près de la Ville du 6-Octobre, dans la province de Guizeh.",
+          "Les autorités rappellent la fréquence de ces drames routiers en Égypte, souvent imputés à des conduites dangereuses et à un mauvais entretien."
+        ]
+      },
+      "differences": [
+        "Le camp centre se limite à une brève factuelle sur le bilan humain et le lieu de la collision.",
+        "Le camp droite développe le contexte sécuritaire en insistant sur la récurrence des drames routiers et les causes attribuées par les autorités égyptiennes."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2,
+      "summarizedAt": "2026-11-01T02:01:12.786Z"
     },
     {
       "id": "c9b5ba3c984f",
@@ -10145,132 +9862,6 @@
       "summarizedAt": "2026-10-31T15:01:20.468Z"
     },
     {
-      "id": "9f72a3efd525",
-      "slug": "le-paris-saint-germain-s-impose-largement-face-au-havre-grace-a",
-      "title": "Le Paris Saint-Germain s'impose face au Havre avec un triplé d'Achraf Hakimi : Luis Enrique encense son latéral droit",
-      "createdAt": "2026-10-31T00:01:17.394Z",
-      "storyDay": "2026-10-30",
-      "articles": [
-        {
-          "id": "6082ed14026b",
-          "outletId": "france-24",
-          "headline": "Le PSG enchaîne une 9e victoire consécutive grâce à un triplé d’Achraf Hakimi",
-          "url": "https://www.france24.com/fr/%C3%A9missions/sports/20261031-psg-encha%C3%AEne-9e-victoire-cons%C3%A9cutive-gr%C3%A2ce-tripl%C3%A9-d-achraf-hakimi",
-          "publishedAt": "2026-10-31T10:20:09.000Z",
-          "imageUrl": "https://s.france24.com/media/display/8ef6341c-d4d0-11f1-93dd-695cb59fade5/w:1024/p:16x9/000-D4YG3ZQ.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "23b22713014a",
-          "outletId": "le-parisien",
-          "headline": "Ballon signé par les copains, triplé et remplacement… Le récit de la soirée mémorable d’Achraf Hakimi au Havre",
-          "url": "https://www.leparisien.fr/sports/football/ligue-1/ballon-signe-par-les-copains-triple-et-remplacement-le-recit-de-la-soiree-memorable-dachraf-hakimi-au-havre-31-10-2026-ACWUWTG4D5GBTHFHGB563PT2UI.php",
-          "publishedAt": "2026-10-31T01:01:15.335Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "4b017b70253d",
-          "outletId": "ouest-france",
-          "headline": "PSG. Après la victoire au Havre, Luis Enrique rentre encore un peu plus dans l’histoire du club parisien",
-          "url": "https://www.ouest-france.fr/sport/football/paris-sg/psg-apres-la-victoire-au-havre-luis-enrique-rentre-encore-un-peu-plus-dans-lhistoire-du-club-parisien-4a6bb3aa-d4b0-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-30T22:45:44.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjMxYTJkYjFkNWQ2ZWY5MGRmOWU5YzBhZDE3OTFmZjc?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=3acde80b2582c488f301e64c51718a03608580a1947eb231a285f1454ea4d210",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "82c0512c41f9",
-          "outletId": "le-figaro",
-          "headline": "Ligue 1 : avec un Hakimi déchaîné, le PSG dévore la lanterne rouge havraise",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-1/ligue-1-avec-un-hakimi-dechaine-le-psg-devore-la-lanterne-rouge-havraise-20261030",
-          "publishedAt": "2026-10-30T21:33:55.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/30/5baa87b6d134c8b78430480a95bc584e25809a75d0832d44ed23429d07256bb2.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "9d30106fafdd",
-          "outletId": "le-figaro",
-          "headline": "Le Havre-PSG : Hakimi vitesse Mach 3, Godts prend ses marques, le HAC boit la tasse… Les tops et flops",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-1/le-havre-psg-hakimi-vitesse-mach-3-godts-prend-ses-marques-le-hac-boit-la-tasse-les-tops-et-flops-20261030",
-          "publishedAt": "2026-10-30T21:31:26.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/10/30/0840cec92756a106aaca674ca3890b9109aff725f6cfc5af438dfc2c6be9088a.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "0380df44521c",
-          "outletId": "le-figaro",
-          "headline": "PSG : pourquoi Luis Enrique a conspué Achraf Hakimi après son but",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-1/psg-pourquoi-luis-enrique-a-conspue-achraf-hakimi-apres-son-but-20261030",
-          "publishedAt": "2026-10-30T21:26:48.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/1935x1329_crop/2026/10/30/e7874c228240be0988ca86d09ea9a7359880af46d44e937aee7952119cf60bc4.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "daeb9293d401",
-          "outletId": "le-figaro",
-          "headline": "PSG : «C’est le meilleur latéral droit du monde», Luis Enrique s’enflamme pour Achraf Hakimi après son triplé",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-1/psg-c-est-le-meilleur-lateral-droit-du-monde-luis-enrique-s-enflamme-pour-achraf-hakimi-apres-son-triple-20261030",
-          "publishedAt": "2026-10-30T21:23:56.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/1420x1006_crop/2026/10/30/f99f44308164055b52d6047e187e746d295cbcf59ae98bedc941e52eaacf4180.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "9e8577c9e4c4",
-          "outletId": "20-minutes",
-          "headline": "Le Havre - PSG : Paris éparpille Le Havre façon puzzle grâce à un Achraf Hakimi de gala",
-          "url": "https://www.20minutes.fr/sport/football/ligue-1/4259031-20261030-direct-havre-psg-ogre-parisien-trop-fort-havrais-encore-victoire-saison-suivez-match-18h45?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-30T16:32:36.000Z",
-          "imageUrl": "https://img.20mn.fr/4vzYB267SVmQAQX2i4qiTyk/1200x768_achraf-hakimi-a-inscrit-un-double-face-au-havre",
-          "frontPage": false,
-          "kind": "live",
-          "section": "sport",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "9f72a3efd525",
-      "titledArticleCount": 7,
-      "section": "sport",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le Paris Saint-Germain s'est imposé largement sur la pelouse du Havre avec un score de un à cinq.",
-          "Le défenseur marocain Achraf Hakimi a réalisé une performance exceptionnelle en inscrivant un triplé."
-        ],
-        "centre": [
-          "Achraf Hakimi a brillé face au Havre en réalisant un triplé mémorable et en obtenant un ballon signé par ses coéquipiers.",
-          "Luis Enrique est devenu l'entraîneur avec le plus de succès dans l'histoire du club parisien après cette victoire en Ligue 1."
-        ],
-        "droite": [
-          "Le Paris Saint-Germain a surclassé la lanterne rouge havraise sur le score de cinq buts à un lors de la neuvième journée de Ligue 1.",
-          "Achraf Hakimi a été qualifié de « meilleur latéral droit du monde » par Luis Enrique après son triplé et ses deux passes décisives.",
-          "L'entraîneur parisien a également recadré son joueur durant la rencontre en raison de son attitude envers les arbitres."
-        ]
-      },
-      "differences": [
-        "Le camp gauche se contente d'une relation factuelle et minimale de la victoire parisienne et de la performance d'Achraf Hakimi au Havre.",
-        "Le camp centre met en avant la performance historique du joueur ainsi que le record de victoires battu par l'entraîneur Luis Enrique.",
-        "Le camp droite adopte un traitement journalistique très détaillé, multipliant les angles analytiques sur le match, les notes des joueurs et les consignes strictes de l'entraîneur."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 7,
-      "summarizedAt": "2026-10-31T01:01:15.335Z"
-    },
-    {
       "id": "3a7f91280e8e",
       "slug": "donald-trump-evoque-les-elections-de-mi-mandat-aux-etats-unis",
       "title": "Donald Trump évoque les élections de mi-mandat aux États-Unis et l'enjeu des midterms de 2026",
@@ -10460,6 +10051,132 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 4,
       "summarizedAt": "2026-10-31T06:01:15.785Z"
+    },
+    {
+      "id": "9f72a3efd525",
+      "slug": "le-paris-saint-germain-s-impose-largement-face-au-havre-grace-a",
+      "title": "Le Paris Saint-Germain s'impose face au Havre avec un triplé d'Achraf Hakimi : Luis Enrique encense son latéral droit",
+      "createdAt": "2026-10-31T00:01:17.394Z",
+      "storyDay": "2026-10-30",
+      "articles": [
+        {
+          "id": "6082ed14026b",
+          "outletId": "france-24",
+          "headline": "Le PSG enchaîne une 9e victoire consécutive grâce à un triplé d’Achraf Hakimi",
+          "url": "https://www.france24.com/fr/%C3%A9missions/sports/20261031-psg-encha%C3%AEne-9e-victoire-cons%C3%A9cutive-gr%C3%A2ce-tripl%C3%A9-d-achraf-hakimi",
+          "publishedAt": "2026-10-31T10:20:09.000Z",
+          "imageUrl": "https://s.france24.com/media/display/8ef6341c-d4d0-11f1-93dd-695cb59fade5/w:1024/p:16x9/000-D4YG3ZQ.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "23b22713014a",
+          "outletId": "le-parisien",
+          "headline": "Ballon signé par les copains, triplé et remplacement… Le récit de la soirée mémorable d’Achraf Hakimi au Havre",
+          "url": "https://www.leparisien.fr/sports/football/ligue-1/ballon-signe-par-les-copains-triple-et-remplacement-le-recit-de-la-soiree-memorable-dachraf-hakimi-au-havre-31-10-2026-ACWUWTG4D5GBTHFHGB563PT2UI.php",
+          "publishedAt": "2026-10-31T01:01:15.335Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "4b017b70253d",
+          "outletId": "ouest-france",
+          "headline": "PSG. Après la victoire au Havre, Luis Enrique rentre encore un peu plus dans l’histoire du club parisien",
+          "url": "https://www.ouest-france.fr/sport/football/paris-sg/psg-apres-la-victoire-au-havre-luis-enrique-rentre-encore-un-peu-plus-dans-lhistoire-du-club-parisien-4a6bb3aa-d4b0-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-30T22:45:44.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjMxYTJkYjFkNWQ2ZWY5MGRmOWU5YzBhZDE3OTFmZjc?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=3acde80b2582c488f301e64c51718a03608580a1947eb231a285f1454ea4d210",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "82c0512c41f9",
+          "outletId": "le-figaro",
+          "headline": "Ligue 1 : avec un Hakimi déchaîné, le PSG dévore la lanterne rouge havraise",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-1/ligue-1-avec-un-hakimi-dechaine-le-psg-devore-la-lanterne-rouge-havraise-20261030",
+          "publishedAt": "2026-10-30T21:33:55.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/30/5baa87b6d134c8b78430480a95bc584e25809a75d0832d44ed23429d07256bb2.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "9d30106fafdd",
+          "outletId": "le-figaro",
+          "headline": "Le Havre-PSG : Hakimi vitesse Mach 3, Godts prend ses marques, le HAC boit la tasse… Les tops et flops",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-1/le-havre-psg-hakimi-vitesse-mach-3-godts-prend-ses-marques-le-hac-boit-la-tasse-les-tops-et-flops-20261030",
+          "publishedAt": "2026-10-30T21:31:26.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/10/30/0840cec92756a106aaca674ca3890b9109aff725f6cfc5af438dfc2c6be9088a.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "0380df44521c",
+          "outletId": "le-figaro",
+          "headline": "PSG : pourquoi Luis Enrique a conspué Achraf Hakimi après son but",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-1/psg-pourquoi-luis-enrique-a-conspue-achraf-hakimi-apres-son-but-20261030",
+          "publishedAt": "2026-10-30T21:26:48.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/1935x1329_crop/2026/10/30/e7874c228240be0988ca86d09ea9a7359880af46d44e937aee7952119cf60bc4.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "daeb9293d401",
+          "outletId": "le-figaro",
+          "headline": "PSG : «C’est le meilleur latéral droit du monde», Luis Enrique s’enflamme pour Achraf Hakimi après son triplé",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-1/psg-c-est-le-meilleur-lateral-droit-du-monde-luis-enrique-s-enflamme-pour-achraf-hakimi-apres-son-triple-20261030",
+          "publishedAt": "2026-10-30T21:23:56.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/1420x1006_crop/2026/10/30/f99f44308164055b52d6047e187e746d295cbcf59ae98bedc941e52eaacf4180.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "9e8577c9e4c4",
+          "outletId": "20-minutes",
+          "headline": "Le Havre - PSG : Paris éparpille Le Havre façon puzzle grâce à un Achraf Hakimi de gala",
+          "url": "https://www.20minutes.fr/sport/football/ligue-1/4259031-20261030-direct-havre-psg-ogre-parisien-trop-fort-havrais-encore-victoire-saison-suivez-match-18h45?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-30T16:32:36.000Z",
+          "imageUrl": "https://img.20mn.fr/4vzYB267SVmQAQX2i4qiTyk/1200x768_achraf-hakimi-a-inscrit-un-double-face-au-havre",
+          "frontPage": false,
+          "kind": "live",
+          "section": "sport",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "9f72a3efd525",
+      "titledArticleCount": 7,
+      "section": "sport",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le Paris Saint-Germain s'est imposé largement sur la pelouse du Havre avec un score de un à cinq.",
+          "Le défenseur marocain Achraf Hakimi a réalisé une performance exceptionnelle en inscrivant un triplé."
+        ],
+        "centre": [
+          "Achraf Hakimi a brillé face au Havre en réalisant un triplé mémorable et en obtenant un ballon signé par ses coéquipiers.",
+          "Luis Enrique est devenu l'entraîneur avec le plus de succès dans l'histoire du club parisien après cette victoire en Ligue 1."
+        ],
+        "droite": [
+          "Le Paris Saint-Germain a surclassé la lanterne rouge havraise sur le score de cinq buts à un lors de la neuvième journée de Ligue 1.",
+          "Achraf Hakimi a été qualifié de « meilleur latéral droit du monde » par Luis Enrique après son triplé et ses deux passes décisives.",
+          "L'entraîneur parisien a également recadré son joueur durant la rencontre en raison de son attitude envers les arbitres."
+        ]
+      },
+      "differences": [
+        "Le camp gauche se contente d'une relation factuelle et minimale de la victoire parisienne et de la performance d'Achraf Hakimi au Havre.",
+        "Le camp centre met en avant la performance historique du joueur ainsi que le record de victoires battu par l'entraîneur Luis Enrique.",
+        "Le camp droite adopte un traitement journalistique très détaillé, multipliant les angles analytiques sur le match, les notes des joueurs et les consignes strictes de l'entraîneur."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 7,
+      "summarizedAt": "2026-10-31T01:01:15.335Z"
     }
   ],
   "stories": [
@@ -15695,6 +15412,109 @@
       "summarizedAt": "2026-10-31T16:01:13.995Z"
     },
     {
+      "id": "f3f9686ac00c",
+      "slug": "christian-mbilli-affronte-canelo-dans-un-combat-historique-pour",
+      "title": "Boxe : Christian Mbilli s'incline face à la légende Canelo Alvarez",
+      "createdAt": "2026-10-31T07:01:19.001Z",
+      "storyDay": "2026-10-31",
+      "articles": [
+        {
+          "id": "e147465a042d",
+          "outletId": "20-minutes",
+          "headline": "Boxe : Le Français Mbilli battu par le roi mexicain « Canelo »",
+          "url": "https://www.20minutes.fr/sport/boxe/4259261-20261101-boxe-francais-mbilli-battu-roi-mexicain-canelo?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-01T01:05:00.000Z",
+          "imageUrl": "https://img.20mn.fr/4f9ajG56T_CtFjDocKx2uCk/1200x768_saul-canelo-alvarez-a-droite-du-mexique-frappe-christian-mbilli-de-france-lors-de-leur-championnat-du-monde-wbc-des-poids-super-moyens-au-venue-arena-de-riyad-en-arabie-saoudite-le-dimanche-1er-novembre-2026-ap-photo-correction-supprimer-la-signature-du-photographe-aqx104-26304852529363-correction-supprimer-la-signature-du-photographe-2611010049",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "3c1098610db7",
+          "outletId": "le-figaro",
+          "headline": "Boxe : pas de miracle pour le Français Mbilli, maîtrisé par la légende Canelo",
+          "url": "https://www.lefigaro.fr/sports/autres-sports/boxe-pas-de-miracle-pour-le-francais-mbilli-maitrise-par-la-legende-canelo-20261031",
+          "publishedAt": "2026-10-31T22:55:44.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/31/cc8b45a49cdabb82a81aa5f18ad73d655c7839cca66a9678baa75222c954fd59.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "97915fa86c0f",
+          "outletId": "le-figaro",
+          "headline": "EN DIRECT - Boxe : le combat d’une vie pour le Français Mbilli face à la légende Canelo",
+          "url": "https://www.lefigaro.fr/sports/boxe/en-direct-boxe-le-combat-d-une-vie-pour-le-francais-mbilli-face-a-la-legende-canelo-20261031",
+          "publishedAt": "2026-10-31T21:52:02.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/31/0b5148139a14d711e006b02ff92d6313debc273cbe64e1790ca6913ec2c0427b.jpg",
+          "frontPage": false,
+          "kind": "live",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "dfcd15070fdd",
+          "outletId": "ouest-france",
+          "headline": "Christian Mbilli - Canelo Alvarez. Horaire, favori, diffusion… Tout savoir sur le combat du Franco-Camerounais",
+          "url": "https://www.ouest-france.fr/sport/boxe/boxe-christian-mbilli-se-mesure-a-la-legende-canelo-enjeu-favori-diffusion-tout-savoir-sur-le-combat-du-francais-6e547d4a-d471-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-31T13:00:08.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjA3MTkxOGEyOGM1YTg4NjYzMzVjNzg5NzU4ZjMyYTI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2e811f492b25d3de9207e699776257bf04f9e8487b99655006532153672f4cec",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "04b27b9752a4",
+          "outletId": "le-parisien",
+          "headline": "Mbilli-Canelo : adversaire légendaire, ceinture en jeu… Pourquoi ce match va marquer l’histoire de la boxe en France",
+          "url": "https://www.leparisien.fr/sports/mbilli-canelo-adversaire-legendaire-ceinture-en-jeu-pourquoi-ce-match-va-marquer-lhistoire-de-la-boxe-en-france-31-10-2026-ZHXNXJ76SBC3TLLG5WBKYXLRBI.php",
+          "publishedAt": "2026-10-31T07:01:19.001Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "26b95568edff",
+          "outletId": "ouest-france",
+          "headline": "TÉMOIGNAGE. « Il déteste la neige, il aime les bons restaurants » : Christian Mbilli l’homme derrière les gants de boxe",
+          "url": "https://www.ouest-france.fr/sport/boxe/boxe-avant-son-combat-contre-canelo-noe-cloutier-raconte-nous-christian-mbilli-619ed99a-d482-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-31T06:58:32.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYzIyNGUwYWU0ZmIzNGJiMDY4OTEyYjNkYjk1NTA1N2M?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=5e8aff0fd54bef7305d983b6fa9fa5e2d74270ee2e550cd13878dba4474a57f7",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "f3f9686ac00c",
+      "titledArticleCount": 5,
+      "section": "sport",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Le Franco-Camerounais Christian Mbilli défend sa ceinture mondiale WBC des super-moyens face à Saul Alvarez à Riyad.",
+          "Ce championnat du monde est présenté comme un événement historique pour la boxe française.",
+          "La presse revient sur le parcours et la personnalité du boxeur avant son affrontement face au champion mexicain."
+        ],
+        "droite": [
+          "Christian Mbilli a subi une défaite logique face au Mexicain Saúl Canelo Alvarez à Riyad.",
+          "L'icône mexicaine de 36 ans a nettement dominé le combat pour conserver sa suprématie chez les super-moyens.",
+          "Le Français échoue dans sa quête d'exploit mondial après avoir affronté le champion en titre."
+        ]
+      },
+      "differences": [
+        "Le centre mise sur l'attente et l'enjeu historique du combat en dressant le portrait du boxeur franco-camerounais avant l'affrontement.",
+        "La droite relate l'issue sportive du championnat en constatant la défaite nette du boxeur français face à la maîtrise du champion mexicain."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-10-31T23:01:17.048Z"
+    },
+    {
       "id": "5b12ad431ca6",
       "slug": "le-pilote-isack-hadjar-est-convoque-par-les-commissaires-apres",
       "title": "Le pilote Isack Hadjar reçoit un avertissement après une altercation au Grand Prix du Mexique",
@@ -15930,97 +15750,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 3,
       "summarizedAt": "2026-11-01T01:01:15.332Z"
-    },
-    {
-      "id": "f3f9686ac00c",
-      "slug": "christian-mbilli-affronte-canelo-dans-un-combat-historique-pour",
-      "title": "Boxe : Christian Mbilli s'incline face à la légende Canelo Alvarez",
-      "createdAt": "2026-10-31T07:01:19.001Z",
-      "storyDay": "2026-10-31",
-      "articles": [
-        {
-          "id": "3c1098610db7",
-          "outletId": "le-figaro",
-          "headline": "Boxe : pas de miracle pour le Français Mbilli, maîtrisé par la légende Canelo",
-          "url": "https://www.lefigaro.fr/sports/autres-sports/boxe-pas-de-miracle-pour-le-francais-mbilli-maitrise-par-la-legende-canelo-20261031",
-          "publishedAt": "2026-10-31T22:55:44.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/31/cc8b45a49cdabb82a81aa5f18ad73d655c7839cca66a9678baa75222c954fd59.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "97915fa86c0f",
-          "outletId": "le-figaro",
-          "headline": "EN DIRECT - Boxe : le combat d’une vie pour le Français Mbilli face à la légende Canelo",
-          "url": "https://www.lefigaro.fr/sports/boxe/en-direct-boxe-le-combat-d-une-vie-pour-le-francais-mbilli-face-a-la-legende-canelo-20261031",
-          "publishedAt": "2026-10-31T21:52:02.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/31/0b5148139a14d711e006b02ff92d6313debc273cbe64e1790ca6913ec2c0427b.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "dfcd15070fdd",
-          "outletId": "ouest-france",
-          "headline": "Christian Mbilli - Canelo Alvarez. Horaire, favori, diffusion… Tout savoir sur le combat du Franco-Camerounais",
-          "url": "https://www.ouest-france.fr/sport/boxe/boxe-christian-mbilli-se-mesure-a-la-legende-canelo-enjeu-favori-diffusion-tout-savoir-sur-le-combat-du-francais-6e547d4a-d471-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-31T13:00:08.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjA3MTkxOGEyOGM1YTg4NjYzMzVjNzg5NzU4ZjMyYTI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2e811f492b25d3de9207e699776257bf04f9e8487b99655006532153672f4cec",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "04b27b9752a4",
-          "outletId": "le-parisien",
-          "headline": "Mbilli-Canelo : adversaire légendaire, ceinture en jeu… Pourquoi ce match va marquer l’histoire de la boxe en France",
-          "url": "https://www.leparisien.fr/sports/mbilli-canelo-adversaire-legendaire-ceinture-en-jeu-pourquoi-ce-match-va-marquer-lhistoire-de-la-boxe-en-france-31-10-2026-ZHXNXJ76SBC3TLLG5WBKYXLRBI.php",
-          "publishedAt": "2026-10-31T07:01:19.001Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "26b95568edff",
-          "outletId": "ouest-france",
-          "headline": "TÉMOIGNAGE. « Il déteste la neige, il aime les bons restaurants » : Christian Mbilli l’homme derrière les gants de boxe",
-          "url": "https://www.ouest-france.fr/sport/boxe/boxe-avant-son-combat-contre-canelo-noe-cloutier-raconte-nous-christian-mbilli-619ed99a-d482-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-31T06:58:32.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwYzIyNGUwYWU0ZmIzNGJiMDY4OTEyYjNkYjk1NTA1N2M?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=5e8aff0fd54bef7305d983b6fa9fa5e2d74270ee2e550cd13878dba4474a57f7",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "f3f9686ac00c",
-      "titledArticleCount": 5,
-      "section": "sport",
-      "everInEdition": true,
-      "summaries": {
-        "centre": [
-          "Le Franco-Camerounais Christian Mbilli défend sa ceinture mondiale WBC des super-moyens face à Saul Alvarez à Riyad.",
-          "Ce championnat du monde est présenté comme un événement historique pour la boxe française.",
-          "La presse revient sur le parcours et la personnalité du boxeur avant son affrontement face au champion mexicain."
-        ],
-        "droite": [
-          "Christian Mbilli a subi une défaite logique face au Mexicain Saúl Canelo Alvarez à Riyad.",
-          "L'icône mexicaine de 36 ans a nettement dominé le combat pour conserver sa suprématie chez les super-moyens.",
-          "Le Français échoue dans sa quête d'exploit mondial après avoir affronté le champion en titre."
-        ]
-      },
-      "differences": [
-        "Le centre mise sur l'attente et l'enjeu historique du combat en dressant le portrait du boxeur franco-camerounais avant l'affrontement.",
-        "La droite relate l'issue sportive du championnat en constatant la défaite nette du boxeur français face à la maîtrise du champion mexicain."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 5,
-      "summarizedAt": "2026-10-31T23:01:17.048Z"
     },
     {
       "id": "25b1d6520b99",
@@ -18280,6 +18009,59 @@
       "summarizedAt": "2026-10-30T19:01:22.535Z"
     },
     {
+      "id": "7113a9237bde",
+      "slug": "un-accident-entre-un-bus-et-un-camion-en-egypte-fait-dix-morts",
+      "title": "Un accident entre un bus et un camion en Égypte fait dix morts",
+      "createdAt": "2026-11-01T02:01:12.786Z",
+      "storyDay": "2026-10-31",
+      "articles": [
+        {
+          "id": "25b1e5514794",
+          "outletId": "bfmtv",
+          "headline": "Un accident de bus en Égypte fait dix morts et 24 blessés",
+          "url": "https://www.bfmtv.com/international/afrique/egypte/un-accident-de-bus-en-egypte-fait-dix-morts-et-24-blesses_AD-202610310392.html",
+          "publishedAt": "2026-10-31T22:18:19.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/cX1r130X0lQk8xg6umdfTgpzB8Q=/0x106:2048x1258/800x0/images/Rafah-2227635.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "e85f37826036",
+          "outletId": "cnews",
+          "headline": "Egypte : une collision entre un bus et un camion fait 10 morts",
+          "url": "https://www.cnews.fr/monde/2026-10-31/egypte-une-collision-entre-un-bus-et-un-camion-fait-10-morts-1945435",
+          "publishedAt": "2026-10-31T18:48:32.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/afp_3_6ae632020b383.jpg?itok=aWVbqqxO",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "7113a9237bde",
+      "titledArticleCount": 2,
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "centre": [
+          "Un accident de la route impliquant un minibus et un poids lourd s'est produit ce samedi sur une autoroute à l'ouest du Caire.",
+          "La collision a entraîné la mort de dix personnes et fait 24 blessés."
+        ],
+        "droite": [
+          "Dix personnes ont perdu la vie et 24 autres ont été blessées dans une collision entre un minibus et un poids lourd sur une autoroute à l'ouest du Caire.",
+          "Le ministère de la Santé précise que dix blessés se trouvent dans un état critique près de la Ville du 6-Octobre, dans la province de Guizeh.",
+          "Les autorités rappellent la fréquence de ces drames routiers en Égypte, souvent imputés à des conduites dangereuses et à un mauvais entretien."
+        ]
+      },
+      "differences": [
+        "Le camp centre se limite à une brève factuelle sur le bilan humain et le lieu de la collision.",
+        "Le camp droite développe le contexte sécuritaire en insistant sur la récurrence des drames routiers et les causes attribuées par les autorités égyptiennes."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 2,
+      "summarizedAt": "2026-11-01T02:01:12.786Z"
+    },
+    {
       "id": "c9b5ba3c984f",
       "slug": "cent-quinze-bateaux-prennent-le-depart-de-la-route-du-rhum-par",
       "title": "Cent quinze bateaux prennent le départ de la Route du Rhum par une météo idéale",
@@ -18664,132 +18446,6 @@
       "summarizedAt": "2026-10-31T15:01:20.468Z"
     },
     {
-      "id": "9f72a3efd525",
-      "slug": "le-paris-saint-germain-s-impose-largement-face-au-havre-grace-a",
-      "title": "Le Paris Saint-Germain s'impose face au Havre avec un triplé d'Achraf Hakimi : Luis Enrique encense son latéral droit",
-      "createdAt": "2026-10-31T00:01:17.394Z",
-      "storyDay": "2026-10-30",
-      "articles": [
-        {
-          "id": "6082ed14026b",
-          "outletId": "france-24",
-          "headline": "Le PSG enchaîne une 9e victoire consécutive grâce à un triplé d’Achraf Hakimi",
-          "url": "https://www.france24.com/fr/%C3%A9missions/sports/20261031-psg-encha%C3%AEne-9e-victoire-cons%C3%A9cutive-gr%C3%A2ce-tripl%C3%A9-d-achraf-hakimi",
-          "publishedAt": "2026-10-31T10:20:09.000Z",
-          "imageUrl": "https://s.france24.com/media/display/8ef6341c-d4d0-11f1-93dd-695cb59fade5/w:1024/p:16x9/000-D4YG3ZQ.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "23b22713014a",
-          "outletId": "le-parisien",
-          "headline": "Ballon signé par les copains, triplé et remplacement… Le récit de la soirée mémorable d’Achraf Hakimi au Havre",
-          "url": "https://www.leparisien.fr/sports/football/ligue-1/ballon-signe-par-les-copains-triple-et-remplacement-le-recit-de-la-soiree-memorable-dachraf-hakimi-au-havre-31-10-2026-ACWUWTG4D5GBTHFHGB563PT2UI.php",
-          "publishedAt": "2026-10-31T01:01:15.335Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "4b017b70253d",
-          "outletId": "ouest-france",
-          "headline": "PSG. Après la victoire au Havre, Luis Enrique rentre encore un peu plus dans l’histoire du club parisien",
-          "url": "https://www.ouest-france.fr/sport/football/paris-sg/psg-apres-la-victoire-au-havre-luis-enrique-rentre-encore-un-peu-plus-dans-lhistoire-du-club-parisien-4a6bb3aa-d4b0-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-10-30T22:45:44.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjMxYTJkYjFkNWQ2ZWY5MGRmOWU5YzBhZDE3OTFmZjc?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=3acde80b2582c488f301e64c51718a03608580a1947eb231a285f1454ea4d210",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "82c0512c41f9",
-          "outletId": "le-figaro",
-          "headline": "Ligue 1 : avec un Hakimi déchaîné, le PSG dévore la lanterne rouge havraise",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-1/ligue-1-avec-un-hakimi-dechaine-le-psg-devore-la-lanterne-rouge-havraise-20261030",
-          "publishedAt": "2026-10-30T21:33:55.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/30/5baa87b6d134c8b78430480a95bc584e25809a75d0832d44ed23429d07256bb2.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "9d30106fafdd",
-          "outletId": "le-figaro",
-          "headline": "Le Havre-PSG : Hakimi vitesse Mach 3, Godts prend ses marques, le HAC boit la tasse… Les tops et flops",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-1/le-havre-psg-hakimi-vitesse-mach-3-godts-prend-ses-marques-le-hac-boit-la-tasse-les-tops-et-flops-20261030",
-          "publishedAt": "2026-10-30T21:31:26.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/10/30/0840cec92756a106aaca674ca3890b9109aff725f6cfc5af438dfc2c6be9088a.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "0380df44521c",
-          "outletId": "le-figaro",
-          "headline": "PSG : pourquoi Luis Enrique a conspué Achraf Hakimi après son but",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-1/psg-pourquoi-luis-enrique-a-conspue-achraf-hakimi-apres-son-but-20261030",
-          "publishedAt": "2026-10-30T21:26:48.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/1935x1329_crop/2026/10/30/e7874c228240be0988ca86d09ea9a7359880af46d44e937aee7952119cf60bc4.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "daeb9293d401",
-          "outletId": "le-figaro",
-          "headline": "PSG : «C’est le meilleur latéral droit du monde», Luis Enrique s’enflamme pour Achraf Hakimi après son triplé",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-1/psg-c-est-le-meilleur-lateral-droit-du-monde-luis-enrique-s-enflamme-pour-achraf-hakimi-apres-son-triple-20261030",
-          "publishedAt": "2026-10-30T21:23:56.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/1420x1006_crop/2026/10/30/f99f44308164055b52d6047e187e746d295cbcf59ae98bedc941e52eaacf4180.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "9e8577c9e4c4",
-          "outletId": "20-minutes",
-          "headline": "Le Havre - PSG : Paris éparpille Le Havre façon puzzle grâce à un Achraf Hakimi de gala",
-          "url": "https://www.20minutes.fr/sport/football/ligue-1/4259031-20261030-direct-havre-psg-ogre-parisien-trop-fort-havrais-encore-victoire-saison-suivez-match-18h45?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-10-30T16:32:36.000Z",
-          "imageUrl": "https://img.20mn.fr/4vzYB267SVmQAQX2i4qiTyk/1200x768_achraf-hakimi-a-inscrit-un-double-face-au-havre",
-          "frontPage": false,
-          "kind": "live",
-          "section": "sport",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "9f72a3efd525",
-      "titledArticleCount": 7,
-      "section": "sport",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le Paris Saint-Germain s'est imposé largement sur la pelouse du Havre avec un score de un à cinq.",
-          "Le défenseur marocain Achraf Hakimi a réalisé une performance exceptionnelle en inscrivant un triplé."
-        ],
-        "centre": [
-          "Achraf Hakimi a brillé face au Havre en réalisant un triplé mémorable et en obtenant un ballon signé par ses coéquipiers.",
-          "Luis Enrique est devenu l'entraîneur avec le plus de succès dans l'histoire du club parisien après cette victoire en Ligue 1."
-        ],
-        "droite": [
-          "Le Paris Saint-Germain a surclassé la lanterne rouge havraise sur le score de cinq buts à un lors de la neuvième journée de Ligue 1.",
-          "Achraf Hakimi a été qualifié de « meilleur latéral droit du monde » par Luis Enrique après son triplé et ses deux passes décisives.",
-          "L'entraîneur parisien a également recadré son joueur durant la rencontre en raison de son attitude envers les arbitres."
-        ]
-      },
-      "differences": [
-        "Le camp gauche se contente d'une relation factuelle et minimale de la victoire parisienne et de la performance d'Achraf Hakimi au Havre.",
-        "Le camp centre met en avant la performance historique du joueur ainsi que le record de victoires battu par l'entraîneur Luis Enrique.",
-        "Le camp droite adopte un traitement journalistique très détaillé, multipliant les angles analytiques sur le match, les notes des joueurs et les consignes strictes de l'entraîneur."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 7,
-      "summarizedAt": "2026-10-31T01:01:15.335Z"
-    },
-    {
       "id": "3a7f91280e8e",
       "slug": "donald-trump-evoque-les-elections-de-mi-mandat-aux-etats-unis",
       "title": "Donald Trump évoque les élections de mi-mandat aux États-Unis et l'enjeu des midterms de 2026",
@@ -18979,6 +18635,132 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 4,
       "summarizedAt": "2026-10-31T06:01:15.785Z"
+    },
+    {
+      "id": "9f72a3efd525",
+      "slug": "le-paris-saint-germain-s-impose-largement-face-au-havre-grace-a",
+      "title": "Le Paris Saint-Germain s'impose face au Havre avec un triplé d'Achraf Hakimi : Luis Enrique encense son latéral droit",
+      "createdAt": "2026-10-31T00:01:17.394Z",
+      "storyDay": "2026-10-30",
+      "articles": [
+        {
+          "id": "6082ed14026b",
+          "outletId": "france-24",
+          "headline": "Le PSG enchaîne une 9e victoire consécutive grâce à un triplé d’Achraf Hakimi",
+          "url": "https://www.france24.com/fr/%C3%A9missions/sports/20261031-psg-encha%C3%AEne-9e-victoire-cons%C3%A9cutive-gr%C3%A2ce-tripl%C3%A9-d-achraf-hakimi",
+          "publishedAt": "2026-10-31T10:20:09.000Z",
+          "imageUrl": "https://s.france24.com/media/display/8ef6341c-d4d0-11f1-93dd-695cb59fade5/w:1024/p:16x9/000-D4YG3ZQ.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "23b22713014a",
+          "outletId": "le-parisien",
+          "headline": "Ballon signé par les copains, triplé et remplacement… Le récit de la soirée mémorable d’Achraf Hakimi au Havre",
+          "url": "https://www.leparisien.fr/sports/football/ligue-1/ballon-signe-par-les-copains-triple-et-remplacement-le-recit-de-la-soiree-memorable-dachraf-hakimi-au-havre-31-10-2026-ACWUWTG4D5GBTHFHGB563PT2UI.php",
+          "publishedAt": "2026-10-31T01:01:15.335Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "4b017b70253d",
+          "outletId": "ouest-france",
+          "headline": "PSG. Après la victoire au Havre, Luis Enrique rentre encore un peu plus dans l’histoire du club parisien",
+          "url": "https://www.ouest-france.fr/sport/football/paris-sg/psg-apres-la-victoire-au-havre-luis-enrique-rentre-encore-un-peu-plus-dans-lhistoire-du-club-parisien-4a6bb3aa-d4b0-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-10-30T22:45:44.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjEwZjMxYTJkYjFkNWQ2ZWY5MGRmOWU5YzBhZDE3OTFmZjc?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=3acde80b2582c488f301e64c51718a03608580a1947eb231a285f1454ea4d210",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "82c0512c41f9",
+          "outletId": "le-figaro",
+          "headline": "Ligue 1 : avec un Hakimi déchaîné, le PSG dévore la lanterne rouge havraise",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-1/ligue-1-avec-un-hakimi-dechaine-le-psg-devore-la-lanterne-rouge-havraise-20261030",
+          "publishedAt": "2026-10-30T21:33:55.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/10/30/5baa87b6d134c8b78430480a95bc584e25809a75d0832d44ed23429d07256bb2.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "9d30106fafdd",
+          "outletId": "le-figaro",
+          "headline": "Le Havre-PSG : Hakimi vitesse Mach 3, Godts prend ses marques, le HAC boit la tasse… Les tops et flops",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-1/le-havre-psg-hakimi-vitesse-mach-3-godts-prend-ses-marques-le-hac-boit-la-tasse-les-tops-et-flops-20261030",
+          "publishedAt": "2026-10-30T21:31:26.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/10/30/0840cec92756a106aaca674ca3890b9109aff725f6cfc5af438dfc2c6be9088a.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "0380df44521c",
+          "outletId": "le-figaro",
+          "headline": "PSG : pourquoi Luis Enrique a conspué Achraf Hakimi après son but",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-1/psg-pourquoi-luis-enrique-a-conspue-achraf-hakimi-apres-son-but-20261030",
+          "publishedAt": "2026-10-30T21:26:48.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/1935x1329_crop/2026/10/30/e7874c228240be0988ca86d09ea9a7359880af46d44e937aee7952119cf60bc4.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "daeb9293d401",
+          "outletId": "le-figaro",
+          "headline": "PSG : «C’est le meilleur latéral droit du monde», Luis Enrique s’enflamme pour Achraf Hakimi après son triplé",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-1/psg-c-est-le-meilleur-lateral-droit-du-monde-luis-enrique-s-enflamme-pour-achraf-hakimi-apres-son-triple-20261030",
+          "publishedAt": "2026-10-30T21:23:56.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/1420x1006_crop/2026/10/30/f99f44308164055b52d6047e187e746d295cbcf59ae98bedc941e52eaacf4180.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "9e8577c9e4c4",
+          "outletId": "20-minutes",
+          "headline": "Le Havre - PSG : Paris éparpille Le Havre façon puzzle grâce à un Achraf Hakimi de gala",
+          "url": "https://www.20minutes.fr/sport/football/ligue-1/4259031-20261030-direct-havre-psg-ogre-parisien-trop-fort-havrais-encore-victoire-saison-suivez-match-18h45?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-10-30T16:32:36.000Z",
+          "imageUrl": "https://img.20mn.fr/4vzYB267SVmQAQX2i4qiTyk/1200x768_achraf-hakimi-a-inscrit-un-double-face-au-havre",
+          "frontPage": false,
+          "kind": "live",
+          "section": "sport",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "9f72a3efd525",
+      "titledArticleCount": 7,
+      "section": "sport",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le Paris Saint-Germain s'est imposé largement sur la pelouse du Havre avec un score de un à cinq.",
+          "Le défenseur marocain Achraf Hakimi a réalisé une performance exceptionnelle en inscrivant un triplé."
+        ],
+        "centre": [
+          "Achraf Hakimi a brillé face au Havre en réalisant un triplé mémorable et en obtenant un ballon signé par ses coéquipiers.",
+          "Luis Enrique est devenu l'entraîneur avec le plus de succès dans l'histoire du club parisien après cette victoire en Ligue 1."
+        ],
+        "droite": [
+          "Le Paris Saint-Germain a surclassé la lanterne rouge havraise sur le score de cinq buts à un lors de la neuvième journée de Ligue 1.",
+          "Achraf Hakimi a été qualifié de « meilleur latéral droit du monde » par Luis Enrique après son triplé et ses deux passes décisives.",
+          "L'entraîneur parisien a également recadré son joueur durant la rencontre en raison de son attitude envers les arbitres."
+        ]
+      },
+      "differences": [
+        "Le camp gauche se contente d'une relation factuelle et minimale de la victoire parisienne et de la performance d'Achraf Hakimi au Havre.",
+        "Le camp centre met en avant la performance historique du joueur ainsi que le record de victoires battu par l'entraîneur Luis Enrique.",
+        "Le camp droite adopte un traitement journalistique très détaillé, multipliant les angles analytiques sur le match, les notes des joueurs et les consignes strictes de l'entraîneur."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 7,
+      "summarizedAt": "2026-10-31T01:01:15.335Z"
     }
   ]
 }
