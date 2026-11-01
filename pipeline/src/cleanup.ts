@@ -8,11 +8,15 @@ import { isLive } from './liveness.ts';
  * or the founding + 72h ceiling, whichever is earlier; a Story frozen
  * with a 13-hour-old Article exists) and never entered the Edition
  * (`everInEdition` false or absent — treated as false, no backward
- * compatibility; a frozen Story that ranks into a window is stamped, see
- * edition-history.ts). Live Stories — in or below the Edition cut — are
- * never deleted, so they can return on a later build with stable id and
- * slug. Pure decision: input Stories and a clock, output the slugs to
- * delete; deterministic over the same state.
+ * compatibility; a frozen Story that ranks into a capped sort is
+ * stamped, see edition-history.ts). Under spec #158 "entered the
+ * Edition" means ranked into capped Brûlant or Top — never Nouveau, so
+ * a frozen Story below both caps is deleted even as a pool member: only
+ * capped members are linked, and only linked Stories are protected.
+ * Live Stories — in or below the caps — are never deleted, so they can
+ * return on a later build with stable id and slug. Pure decision: input
+ * Stories and a clock, output the slugs to delete; deterministic over
+ * the same state.
  *
  * Safe today because the only internal link to a Story page comes from the
  * current Edition and no sitemap exists — if either changes, revisit.
