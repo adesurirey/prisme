@@ -40,15 +40,15 @@ export default defineConfig({
   base: '/',
   redirects,
   // Sitemap (robots.txt points at /sitemap-index.xml): every built Story,
-  // the home Edition and the classement page, since old day pages have no
-  // inlinks once they roll off the homepage. The windowed editions stay
-  // out: they are noindexed near-duplicates of la Une (ADR-0028) —
-  // append each new edition's path here when it ships.
+  // the home Edition (Brûlant) and the classement page, since old day pages
+  // have no inlinks once they roll off the homepage. The alternate sorts
+  // stay out: they are noindexed near-duplicates of the home (ADR-0028,
+  // ADR-0039) — append each new sort's path here when it ships.
   integrations: [
     react(),
     sitemap({
       filter: (page) =>
-        !['/en-direct/', '/le-fil/'].includes(new URL(page).pathname),
+        !['/nouveau/', '/top/'].includes(new URL(page).pathname),
     }),
   ],
   vite: {

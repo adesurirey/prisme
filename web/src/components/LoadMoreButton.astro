@@ -1,12 +1,13 @@
 ---
 /**
- * The "Afficher plus de sujets" button (ADR-0022), shared by the Edition
- * pages (la Une, « En direct », « Le fil ») so its markup and copy live in one
+ * The "Afficher plus de sujets" button (ADR-0022), shared by the sort
+ * pages (the home, « Nouveau », « Top ») so its markup and copy live in one
  * place. Everything is in the static HTML; the tail beyond the first
  * batch is hidden by CSS from first paint (html.js rule in global.css)
  * and revealed per click by load-more.ts, which unhides this button only
  * when there is a tail to reveal. Without JS the button stays hidden and
- * every Story is visible.
+ * every Story is visible. The ranked sorts cap at 25 (ADR-0038), which
+ * the cap-25 page renders as the initial batch plus one click.
  *
  * The button carries its own wiring (the script below): every page that
  * renders it gets installLoadMore, and pages without it never ship the

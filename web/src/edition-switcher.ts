@@ -1,7 +1,7 @@
 /**
- * The edition switcher's wiring (ADR-0028): the face button opens the
+ * The sort switcher's wiring (ADR-0028): the face button opens the
  * native picker of the visually hidden select (showPicker); a change
- * navigates to the selected edition's URL — location.assign keeps the
+ * navigates to the selected sort's URL — location.assign keeps the
  * current page in history, so a switch is one back-tap undoable.
  *
  * Pre-showPicker browsers (Safari ≤ 15, Chrome ≤ 98) cannot open a

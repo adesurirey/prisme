@@ -3,88 +3,103 @@ import EditionHeader from '../components/EditionHeader.astro';
 import LoadMoreButton from '../components/LoadMoreButton.astro';
 import StoryCard from '../components/StoryCard';
 import StoryHero from '../components/StoryHero.astro';
-import { loadEdition, loadOutlets } from '../data';
+import { loadEdition, loadFeedStories, loadOutlets } from '../data';
 import { formatParisClock } from '../latest';
 import Base from '../layouts/Base.astro';
 import { LOAD_MORE_INITIAL } from '../load-more';
-import { formatParisDate } from '../paris-date';
 
+/**
+ * Brûlant (spec #158, ADR-0039/0041) — the home and the default sort of
+ * « À la une », the only indexed page: the 24-hour pool (every Story
+ * with an Article in the rolling last 24 hours) re-ranked by the
+ * domain's double-decay feed key — a Story weighs the Outlets covering
+ * it in the window, halved every six hours since its newest Article and
+ * every eighteen hours since its founding — so coverage makes a Story
+ * last, silence and age sink it, and none squats the top for days. The
+ * pipeline caps the window at 25 Stories (RANKED_CAP, ADR-0038); the
+ * count line renders the artifact's length — the web layer never
+ * re-caps.
+ *
+ * Per-reader signal (ADR-0029, as amended by ADR-0031): the trending
+ * script runs here through the same code path as every sort page
+ * (trending-page.ts) — the badge means "grew since your last visit",
+ * and a visit to any of the three feeds the same merged baseline.
+ *
+ * Header (ADR-0028): the shared sorts header — h1 « À la une », select
+ * preselected on « Brûlant ». The temporal anchor names the pool's
+ * window — the same 24 hours as Top and Nouveau; what differs is the
+ * order, which the anchor leaves to the reading.
+ */
+const stories = await loadFeedStories();
 const edition = await loadEdition();
 const outlets = loadOutlets();
 
 const built = new Date(edition.builtAt);
 
-// The edition's day, Paris clock — "mercredi 15 oct. 2026" — anchors the
-// header row above the hero card: the Edition is a day's reading, and the
-// date names the day the pipeline last ran (same formatter as every
-// build-time date, paris-date.ts). The anchor shows on every screen size
-// (ADR-0029 lifted the small-screen hiding — it only ever existed to
-// make room for the « Nouveau » pill).
-const dayLabel = formatParisDate(built, {
-  weekday: 'long',
-  day: 'numeric',
-  month: 'short',
-});
-
-const yearLabel = formatParisDate(built, { year: 'numeric' });
-
-// The edition's last update, Paris clock — shown in the page's footer
-// line (same shared clock as every edition, latest.ts).
+// The footer line's last update, Paris clock — same thin no-break spaces
+// as every page's count line.
 const updatedTime = formatParisClock(built);
+
+// SEO: the mission wording names the mechanism (brand brief: say what we
+// show) — a Story rises when Outlets report it, sinks when they fall
+// silent, and cools as it ages; the window never leaves the last 24
+// hours.
+const description =
+  'Les sujets des dernières 24 heures dans la presse française, remontés quand les médias en parlent et relégués quand ils se taisent ou que le temps passe — actualisés à chaque collecte horaire.';
 ---
 
-<Base title="Prisme — Revue de presse">
+<Base title="Prisme — Revue de presse" description={description}>
   <section class="pt-10 pb-6">
-    {/* The editions header (ADR-0028): « À la une » names the surface as
-        the h1 on every edition; the window is the select's setting, with
-        « Aujourd'hui » preselected here. The day label anchors the
-        edition to its build day (same formatter as every build-time
-        date, paris-date.ts) and shows on every screen size (ADR-0029). */}
-    <EditionHeader edition="today">
-      <p class="text-[13px] text-muted first-letter:uppercase" slot="aside">{`${dayLabel} ${yearLabel}`}</p>
+    {/* The sorts header: « À la une » is the h1, the select arrives
+        preselected on « Brûlant » — the default sort. The temporal
+        anchor names the pool's window and shows on every screen size
+        (ADR-0029 lifted the small-screen hiding). */}
+    <EditionHeader edition="hot">
+      <p class="text-[13px] text-muted" slot="aside">24 dernières heures</p>
     </EditionHeader>
   </section>
 
-  <section aria-label="Sujets du jour">
+  <section aria-label="Sujets brûlants">
     {
-      edition.stories.map((story, index) =>
-        // The Edition's first Story leads in the hero variant (Story
-        // page header style, full-width legend bar); the rest stay cards.
-        index === 0 ? (
-          <StoryHero story={story} outlets={outlets} />
-        ) : (
-          <StoryCard
-            story={story}
-            outlets={outlets}
-            // Tail beyond the first batch: hidden by CSS before first
-            // paint (html.js rule in global.css), revealed per click by
-            // load-more.ts. Without JS the marker is inert — all visible.
-            tail={index >= LOAD_MORE_INITIAL}
-          />
-        ),
+      stories.length === 0 ? (
+        // The day pool empty (a quiet archive's night): same honesty as
+        // every empty state — what happened, when collection last ran.
+        <p class="py-8 text-center text-[14px] text-muted">
+          Aucun sujet couvert dans les dernières 24 heures — dernière
+          collecte à {updatedTime}.
+        </p>
+      ) : (
+        <>
+          {stories.map((story, index) =>
+            // The highest-weighted Story leads in the hero variant, like
+            // every page's first; the rest stay cards in Brûlant order.
+            index === 0 ? (
+              <StoryHero story={story} outlets={outlets} />
+            ) : (
+              <StoryCard
+                story={story}
+                outlets={outlets}
+                tail={index >= LOAD_MORE_INITIAL}
+              />
+            ),
+          )}
+          <LoadMoreButton />
+          {/* The count line mirrors every sort page's — sujet count and
+              last update; the window itself is named by the header
+              anchor. */}
+          <p class="mt-5 text-center text-[12px] text-faint">
+            {stories.length} sujets — dernier point à {updatedTime}
+          </p>
+        </>
       )
     }
-    {/* "Afficher plus de sujets" (ADR-0022): the shared button —
-        everything is in the HTML; the tail beyond LOAD_MORE_INITIAL is
-        hidden by CSS from first paint and revealed per click. Without
-        JS, all Stories simply stay visible. */}
-    <LoadMoreButton />
-    {/* Tight under the last card — <main>'s pb-16 and the footer's py-8
-        carry the bottom whitespace. */}
-    <p class="mt-5 text-center text-[12px] text-faint">
-      {edition.stories.length} sujets — dernier point à {updatedTime}
-    </p>
   </section>
 
 </Base>
-{/* "Faits nouveaux" (per-visitor trending, ADR-0029 as amended by
-   ADR-0031): the cards ship data-story-id/data-summarized-at; this
-   module script compares each pass's recorded instant to the reader's
-   last sight of the Story (localStorage) and reveals badges. Shared
-   with « En direct » and « Le fil » (trending-page.ts) —
-   load-more wires itself from LoadMoreButton. */}
+{/* "Faits nouveaux" (per-visitor trending, ADR-0029): the shared page
+   wiring — same code path as « Nouveau » and « Top ». */}
 <script>
-  import { installTrendingPage } from "../trending-page";
+  import { installTrendingPage } from '../trending-page';
 
   installTrendingPage();
 </script>

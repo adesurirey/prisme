@@ -49,7 +49,7 @@ describe('markTrending', () => {
     };
     // c entered the Edition and was re-summarized since the last visit —
     // absence is not change: the badge means "you saw this Story before,
-    // its résumé changed since" (newness is En direct's job, ADR-0029).
+    // its résumé changed since" (newness is Nouveau's job, ADR-0029).
     const { trendingIds } = markTrending(
       [{ id: 'c', summarizedAt: NOW - MINUTE }],
       NOW,

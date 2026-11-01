@@ -13,23 +13,26 @@ import Base from '../layouts/Base.astro';
 import { LOAD_MORE_INITIAL } from '../load-more';
 
 /**
- * « En direct » (issue #137, ADR-0029): the live edition — every Story
- * founded in the rolling last 12 hours, ranked latest-first (founding
- * instant desc), uncapped: the window is the cap. Anatomically la Une's
- * mirror — hero for the first (latest) Story, Story cards, load-more,
- * count line — but the one edition whose question is "when", not "how
- * much", so the ranking is the domain's latest-first key, never Coverage.
+ * Nouveau (issue #137, ADR-0029, widened by ADR-0040, renamed by
+ * ADR-0041): the chronological sort — every Story founded in the
+ * rolling last 24 hours, ranked latest-first (founding instant desc),
+ * uncapped: the window is the cap, and the one page where scrolling to
+ * the end means having missed nothing — the ranked sorts cap at 25
+ * (ADR-0038), Nouveau carries the tail. Anatomically la Une's mirror —
+ * hero for the first (latest) Story, Story cards, load-more, count
+ * line — but the one sort whose question is "when", not "how much", so
+ * the ranking is the domain's latest-first key, never Coverage.
  *
  * Per-reader signal (ADR-0029): the trending script runs here through the
- * same code path as la Une (trending-page.ts) — the badge means "grew
- * since your last visit", and a visit to either page feeds the same
- * merged baseline.
+ * same code path as every sort page (trending-page.ts) — the badge means
+ * "grew since your last visit", and a visit to any of the three feeds
+ * the same merged baseline.
  *
- * Header and indexation (ADR-0028 as amended by ADR-0029): the shared
- * editions header — h1 « À la une », select preselected on « En direct »,
+ * Header and indexation (ADR-0028 as amended by ADR-0039): the shared
+ * sorts header — h1 « À la une », select preselected on « Nouveau »,
  * first entry of the chronology-first picker — and a meta noindex: the
- * hourly-churning subset must never compete with la Une in search
- * (ADR-0028), and it stays out of the sitemap with « Le fil ».
+ * hourly-churning subset must never compete with the home in search
+ * (ADR-0028), and it stays out of the sitemap with « Top ».
  */
 const stories = await loadLatestStories();
 const edition = await loadEdition();
@@ -38,39 +41,38 @@ const outlets = loadOutlets();
 const built = new Date(edition.builtAt);
 
 // The footer line's last update, Paris clock — same thin no-break spaces
-// as every edition's count line.
+// as every page's count line.
 const updatedTime = formatParisClock(built);
 
-// SEO: the mission wording for the live scale — the window is the list
-// (brand brief: say what we show); the window length interpolates the
-// same constant the anchor and empty state use.
+// SEO: the mission wording for the chronological scale — the window is
+// the list (brand brief: say what we show); the window length
+// interpolates the same constant the anchor and empty state use.
 const description = `Ce qui vient de se passer dans la presse française : les derniers sujets fondés dans les ${LATEST_WINDOW_LABEL}, chacun couvert de gauche à droite — actualisés à chaque collecte horaire.`;
 ---
 
 <Base
-  title="Prisme — En direct"
+  title="Prisme — Nouveau"
   description={description}
   noindex
   jsonLd={{
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'En direct',
+    name: 'Nouveau',
     description,
     inLanguage: 'fr',
   }}
 >
   <section class="pt-10 pb-6">
-    {/* The editions header: « À la une » is the h1, the select arrives
-        preselected on « En direct ». The temporal anchor names the window
+    {/* The sorts header: « À la une » is the h1, the select arrives
+        preselected on « Nouveau ». The temporal anchor names the window
         and shows on every screen size — the anchors' small-screen hiding
-        is lifted everywhere (ADR-0029): it only ever existed to make
-        room for the « Nouveau » pill. */}
-    <EditionHeader edition="live">
+        is lifted everywhere (ADR-0029). */}
+    <EditionHeader edition="new">
       <p class="text-[13px] text-muted" slot="aside">{LATEST_WINDOW_LABEL}</p>
     </EditionHeader>
   </section>
 
-  <section aria-label="Sujets en direct">
+  <section aria-label="Sujets nouveaux">
     {
       stories.length === 0 ? (
         // Nothing founded inside the window since the last build: the
@@ -84,7 +86,7 @@ const description = `Ce qui vient de se passer dans la presse française : les d
         <>
           {stories.map((story, index) =>
             // The latest Story leads in the hero variant, like every
-            // edition's first; the rest stay cards in founding order.
+            // page's first; the rest stay cards in founding order.
             index === 0 ? (
               <StoryHero story={story} outlets={outlets} />
             ) : (
@@ -96,8 +98,9 @@ const description = `Ce qui vient de se passer dans la presse française : les d
             ),
           )}
           <LoadMoreButton />
-          {/* The count line mirrors la Une's — sujet count and last
-              update; the window itself is named by the header anchor. */}
+          {/* The count line mirrors every sort page's — sujet count and
+              last update; the window itself is named by the header
+              anchor. */}
           <p class="mt-5 text-center text-[12px] text-faint">
             {stories.length} sujets — dernier point à {updatedTime}
           </p>
@@ -107,7 +110,7 @@ const description = `Ce qui vient de se passer dans la presse française : les d
   </section>
 </Base>
 {/* "Faits nouveaux" (per-visitor trending, ADR-0029): the shared page
-   wiring — same code path as la Une and « Le fil ». */}
+   wiring — same code path as the home and « Top ». */}
 <script>
   import { installTrendingPage } from '../trending-page';
 

@@ -1,0 +1,131 @@
+---
+import EditionHeader from '../components/EditionHeader.astro';
+import LoadMoreButton from '../components/LoadMoreButton.astro';
+import StoryCard from '../components/StoryCard';
+import StoryHero from '../components/StoryHero.astro';
+import { loadEdition, loadOutlets } from '../data';
+import { formatParisClock } from '../latest';
+import Base from '../layouts/Base.astro';
+import { LOAD_MORE_INITIAL } from '../load-more';
+import { formatParisDate } from '../paris-date';
+
+/**
+ * Top (spec #158, ADR-0041) — the coverage sort, « Aujourd'hui »'s
+ * mechanism under the new vocabulary: the last 24 hours over all
+ * Stories (frozen included), ranked by the in-window Coverage key —
+ * how many Outlets treat each Story. The pipeline caps the window at
+ * 25 Stories (RANKED_CAP, ADR-0038); the count line renders the
+ * artifact's length — the web layer never re-caps.
+ *
+ * Per-reader signal (ADR-0029): the trending script runs here through
+ * the same code path as every sort page (trending-page.ts) — the badge
+ * means "grew since your last visit", and a visit to any of the three
+ * feeds the same merged baseline.
+ *
+ * Header and indexation (ADR-0028 as amended by ADR-0039): the shared
+ * sorts header — h1 « À la une », select preselected on « Top », last
+ * entry of the chronology-first picker — and a meta noindex: the
+ * near-duplicate ordering must never compete with the home in search
+ * (ADR-0028), and it stays out of the sitemap with « Nouveau ».
+ */
+const edition = await loadEdition();
+const outlets = loadOutlets();
+
+const built = new Date(edition.builtAt);
+
+// The edition's day, Paris clock — "mercredi 15 oct. 2026" — anchors the
+// header row above the hero card: the Edition is a day's reading, and the
+// date names the day the pipeline last ran (same formatter as every
+// build-time date, paris-date.ts). The anchor shows on every screen size
+// (ADR-0029 lifted the small-screen hiding).
+const dayLabel = formatParisDate(built, {
+  weekday: 'long',
+  day: 'numeric',
+  month: 'short',
+});
+
+const yearLabel = formatParisDate(built, { year: 'numeric' });
+
+// The edition's last update, Paris clock — shown in the page's footer
+// line (same shared clock as every page, latest.ts).
+const updatedTime = formatParisClock(built);
+
+// SEO: the mission wording names the mechanism (brand brief: say what we
+// show) — the day ranked by where the press's weight lies.
+const description =
+  'Les sujets les plus couverts de la presse française : les dernières 24 heures classées par le nombre de médias qui traitent chaque sujet — actualisés à chaque collecte horaire.';
+---
+
+<Base
+  title="Prisme — Top"
+  description={description}
+  noindex
+  jsonLd={{
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Top',
+    description,
+    inLanguage: 'fr',
+  }}
+>
+  <section class="pt-10 pb-6">
+    {/* The sorts header (ADR-0028): « À la une » names the surface as
+        the h1 on every page; the sort is the select's setting, with
+        « Top » preselected here. The day label anchors the edition to
+        its build day and shows on every screen size (ADR-0029). */}
+    <EditionHeader edition="top">
+      <p class="text-[13px] text-muted first-letter:uppercase" slot="aside">{`${dayLabel} ${yearLabel}`}</p>
+    </EditionHeader>
+  </section>
+
+  <section aria-label="Sujets du jour">
+    {
+      edition.stories.length === 0 ? (
+        // The day window empty (a quiet archive's night): same honesty
+        // as every empty state — what happened, when collection last
+        // ran.
+        <p class="py-8 text-center text-[14px] text-muted">
+          Aucun sujet couvert dans les dernières 24 heures — dernière
+          collecte à {updatedTime}.
+        </p>
+      ) : (
+        <>
+          {edition.stories.map((story, index) =>
+            // The most-covered Story leads in the hero variant (Story
+            // page header style, full-width legend bar); the rest stay
+            // cards.
+            index === 0 ? (
+              <StoryHero story={story} outlets={outlets} />
+            ) : (
+              <StoryCard
+                story={story}
+                outlets={outlets}
+                // Tail beyond the first batch: hidden by CSS before first
+                // paint (html.js rule in global.css), revealed per click
+                // by load-more.ts. Without JS the marker is inert — all
+                // visible.
+                tail={index >= LOAD_MORE_INITIAL}
+              />
+            ),
+          )}
+          <LoadMoreButton />
+          {/* Tight under the last card — <main>'s pb-16 and the
+              footer's py-8 carry the bottom whitespace. The count line
+              renders the artifact's length; the web layer never
+              re-caps. */}
+          <p class="mt-5 text-center text-[12px] text-faint">
+            {edition.stories.length} sujets — dernier point à {updatedTime}
+          </p>
+        </>
+      )
+    }
+  </section>
+
+</Base>
+{/* "Faits nouveaux" (per-visitor trending, ADR-0029): the shared page
+   wiring — same code path as the home and « Nouveau ». */}
+<script>
+  import { installTrendingPage } from '../trending-page';
+
+  installTrendingPage();
+</script>

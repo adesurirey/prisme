@@ -10,7 +10,7 @@
  * the last remnant, is gone). A Story absent from the reader's baseline
  * never badges, whatever happened to it: the badge means "you saw this
  * Story before, its résumé changed since", never "this is new" (newness
- * is the En direct page's job, ADR-0029). The signal is per-user,
+ * is the Nouveau sort's job, ADR-0029). The signal is per-user,
  * client-side (localStorage); the prerendered HTML carries each card's
  * story id and summarizedAt as data attributes and the script below
  * decides.
@@ -46,7 +46,7 @@ const SESSION_VERSION = 3;
  * Baseline retention horizon: entries older than this are pruned on the
  * next visit's merge write. A bound on localStorage growth, never an
  * eligibility rule (ADR-0031) — summarizedAt comparisons stay exact at
- * any age, but the oldest window the signal runs on is Aujourd'hui's
+ * any age, but the oldest window the signal runs on is the day pool's
  * 24 h, so a week-old entry is dead weight either way.
  */
 export const BASELINE_RETENTION_MS = 7 * 24 * 3_600_000;
@@ -114,7 +114,7 @@ export function markTrending(
   // Eligibility, in page order: seen before, and the pipeline rewrote
   // the Summaries after that sight. Absence from the baseline is not
   // change — a Story the reader never saw gets no badge here (that is
-  // En direct's job); neither does a Story with no summarizedAt.
+  // Nouveau's job); neither does a Story with no summarizedAt.
   const trendingIds = current.flatMap((story) => {
     if (story.summarizedAt == null) return [];
     const entry = seen?.stories[story.id];

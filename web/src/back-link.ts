@@ -42,14 +42,14 @@ export function backOnClick(
   return true;
 }
 
-/** The list of home URLs (la Une, « Le fil », « En direct », …) each
+/** The list of home URLs (the home, « Nouveau », « Top », …) each
  * link compares its referrer against, as a JSON array. */
 export const HOME_URLS_ATTR = 'data-home-urls';
 
 /** Pure test: which home the referrer is, first match wins — or null
  * (any other page, external, empty). The back link retargets itself to
- * the home the reader actually came from: « Le fil », « En direct »,
- * la Une. */
+ * the home the reader actually came from: « Nouveau », « Top », the
+ * home. */
 export function referrerHome(
   referrer: string,
   homeUrls: string[],
@@ -81,13 +81,13 @@ export function parseHomeUrls(raw: string | undefined): string[] {
  * anything else follows the href.
  *
  * Edition-aware (issue #128, ADR-0029): the link carries every home URL
- * it could have come from (data-home-urls, JSON array — la Une, « Le
- * fil », « En direct »). When the referrer matches one, the link
+ * it could have come from (data-home-urls, JSON array — the home,
+ * « Nouveau », « Top"). When the referrer matches one, the link
  * retargets itself — href and back target become that home — so both the
  * history.back() path and every fallback (middle-click, new tab, no
- * history) keep the same promise: back to the edition they came from.
+ * history) keep the same promise: back to the sort page they came from.
  * The label never changes: « À la une » names the page, the select names
- * the window (ADR-0028).
+ * the sort (ADR-0028).
  */
 export function installBackLink(doc: Document, win: Window): void {
   for (const link of doc.querySelectorAll<HTMLAnchorElement>(

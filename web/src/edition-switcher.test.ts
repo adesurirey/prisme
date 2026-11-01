@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { installEditionSwitcher } from './edition-switcher';
 
 /**
- * The edition switcher (ADR-0028): a change on the select navigates to
+ * The sort switcher (ADR-0028): a change on the select navigates to
  * the selected option's value; everything else — touch target, picker
  * UI, keyboard — is the platform's.
  */
@@ -15,22 +15,22 @@ describe('installEditionSwitcher', () => {
 
   function mount() {
     document.body.innerHTML = `
-      <select data-edition-switcher aria-label="Choisir l'édition">
-        <option value="/">Aujourd'hui</option>
-        <option value="/le-fil/">Le fil</option>
+      <select data-edition-switcher aria-label="Choisir le tri">
+        <option value="/nouveau/">Nouveau</option>
+        <option value="/">Brûlant</option>
       </select>`;
     return document.querySelector<HTMLSelectElement>(
       '[data-edition-switcher]',
     )!;
   }
 
-  it('navigates to the selected edition on change', () => {
+  it('navigates to the selected sort on change', () => {
     const select = mount();
     const win = { location: { assign: vi.fn() } };
     installEditionSwitcher(document, win as unknown as Window);
-    select.value = '/le-fil/';
+    select.value = '/nouveau/';
     select.dispatchEvent(new Event('change'));
-    expect(win.location.assign).toHaveBeenCalledWith('/le-fil/');
+    expect(win.location.assign).toHaveBeenCalledWith('/nouveau/');
   });
 
   it('does nothing until the reader changes the selection', () => {
@@ -51,10 +51,10 @@ describe('installEditionSwitcher', () => {
 
   it('opens the native picker from the face button', () => {
     document.body.innerHTML = `
-      <button type="button" data-edition-switcher-face>Le fil</button>
+      <button type="button" data-edition-switcher-face>Brûlant</button>
       <select data-edition-switcher class="sr-only" tabindex="-1" aria-hidden="true">
-        <option value="/">Aujourd'hui</option>
-        <option value="/le-fil/" selected>Le fil</option>
+        <option value="/nouveau/">Nouveau</option>
+        <option value="/" selected>Brûlant</option>
       </select>`;
     const select = document.querySelector<HTMLSelectElement>(
       '[data-edition-switcher]',
@@ -75,9 +75,9 @@ describe('installEditionSwitcher', () => {
 
   it('falls back to the transparent overlay without showPicker', () => {
     document.body.innerHTML = `
-      <button type="button" data-edition-switcher-face>Le fil</button>
+      <button type="button" data-edition-switcher-face>Brûlant</button>
       <select data-edition-switcher class="sr-only" tabindex="-1" aria-hidden="true">
-        <option value="/">Aujourd'hui</option>
+        <option value="/nouveau/">Nouveau</option>
       </select>`;
     const select = document.querySelector<HTMLSelectElement>(
       '[data-edition-switcher]',
@@ -92,9 +92,9 @@ describe('installEditionSwitcher', () => {
 
   it('keeps working when the picker refuses to open', () => {
     document.body.innerHTML = `
-      <button type="button" data-edition-switcher-face>Le fil</button>
+      <button type="button" data-edition-switcher-face>Brûlant</button>
       <select data-edition-switcher class="sr-only" tabindex="-1" aria-hidden="true">
-        <option value="/">Aujourd'hui</option>
+        <option value="/nouveau/">Nouveau</option>
       </select>`;
     const select = document.querySelector<HTMLSelectElement>(
       '[data-edition-switcher]',

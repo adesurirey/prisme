@@ -41,9 +41,10 @@ export async function loadEdition(): Promise<Edition> {
 }
 
 /**
- * The « Le fil » window of the Edition artifact (ADR-0036): every Story
- * with an Article in the rolling last 24 hours — « Aujourd'hui »'s pool,
- * re-ranked by the coverage-weighted feed key (rankStoriesFeed). The
+ * The Brûlant window of the Edition artifact (ADR-0036, extended and
+ * renamed by ADR-0041): every Story with an Article in the rolling
+ * last 24 hours, re-ranked by the double-decay feed key
+ * (rankStoriesFeed) and capped at 25 by the pipeline (ADR-0038). The
  * pipeline always writes the key; the reader requires it.
  */
 export async function loadFeedStories(): Promise<Story[]> {
@@ -52,9 +53,10 @@ export async function loadFeedStories(): Promise<Story[]> {
 }
 
 /**
- * The « En direct » window of the Edition artifact (ADR-0029): every Story
- * founded within the rolling last 12 hours, ranked latest-first. The
- * pipeline always writes the key; the reader requires it.
+ * The Nouveau window of the Edition artifact (ADR-0029, widened by
+ * ADR-0040): every Story founded within the rolling last 24 hours,
+ * ranked latest-first, uncapped. The pipeline always writes the key;
+ * the reader requires it.
  */
 export async function loadLatestStories(): Promise<Story[]> {
   const edition = await loadEdition();
