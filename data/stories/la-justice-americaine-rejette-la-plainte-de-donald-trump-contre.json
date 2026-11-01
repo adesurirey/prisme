@@ -6,6 +6,18 @@
   "storyDay": "2026-10-31",
   "articles": [
     {
+      "id": "3778ac94b142",
+      "outletId": "le-monde",
+      "headline": "La justice rejette la plainte en diffamation de Donald Trump contre le « Wall Street Journal » au sujet d’une lettre à Jeffrey Epstein",
+      "url": "https://www.lemonde.fr/international/article/2026/11/01/lettre-a-jeffrey-epstein-la-justice-rejette-la-plainte-en-diffamation-de-donald-trump-contre-le-wall-street-journal_6803834_3210.html",
+      "publishedAt": "2026-11-01T00:34:34.000Z",
+      "imageUrl": "https://img.lemde.fr/2025/09/08/904/0/5417/2708/644/322/60/0/c5b1888_ftp-import-images-1-thssccswsax2-f319d3a79a2248e289159c90c211976c-0-08071a9aed664f73bfe2931bc0b7bf69.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
       "id": "60215926b12e",
       "outletId": "rfi",
       "headline": "Affaire Epstein: la justice américaine rejette une plainte de Trump contre le «Wall Street Journal»",
@@ -29,24 +41,30 @@
     }
   ],
   "topicId": "9e77fe5b6e1a",
-  "titledArticleCount": 2,
-  "section": "politics",
+  "titledArticleCount": 3,
+  "section": "society",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "La justice américaine a débouté Donald Trump de son action en diffamation visant le Wall Street Journal.",
+      "Le litige portait sur un courrier intime de 2003 attribué au milliardaire républicain et destiné au criminel sexuel Jeffrey Epstein.",
+      "Le juge fédéral a estimé que les journalistes avaient mené une enquête sérieuse et publié de bonne foi."
+    ],
     "centre": [
-      "Un magistrat fédéral a débouté Donald Trump le samedi 31 octobre.",
-      "La plainte en diffamation visait le quotidien après la publication d'un article concernant une missive de 2003 adressée à Jeffrey Epstein."
+      "Un juge fédéral a rejeté la plainte en diffamation déposée par Donald Trump contre le Wall Street Journal.",
+      "L'affaire concernait la publication d'un article imputant au républicain une lettre datée de 2003 adressée à Jeffrey Epstein."
     ],
     "droite": [
-      "La justice fédérale américaine a débouté Donald Trump de son action en diffamation contre le quotidien.",
-      "Le litige portait sur un article de presse imputant au président américain la rédaction d'un courrier au contenu déplacé adressé au financier en 2003."
+      "La plainte déposée par Donald Trump contre le Wall Street Journal a été rejetée par la justice américaine.",
+      "Le quotidien avait publié un article imputant au dirigeant républicain un courrier de nature salace adressé en 2003 au financier Jeffrey Epstein."
     ]
   },
   "differences": [
-    "Le camp centre relate l'événement en insistant sur la décision de la justice fédérale concernant une plainte en diffamation.",
-    "Le camp droite rapporte la même décision judiciaire en qualifiant explicitement de « salace » la lettre attribuée à Donald Trump."
+    "Le Monde insiste sur les motivations du magistrat, qui exonère les journalistes de toute faute en raison de la rigueur de leur enquête.",
+    "RFI adopte un format factuel et concis pour relater le rejet de la procédure judiciaire par un magistrat fédéral.",
+    "Le Figaro met en avant l'origine de la procédure en rappelant la nature du courrier litigieux attribué à Donald Trump."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-10-31T22:01:18.342Z"
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-11-01T01:01:15.332Z"
 }
