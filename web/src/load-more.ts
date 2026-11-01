@@ -1,7 +1,10 @@
 /**
- * "Afficher plus de sujets" (ADR-0022): the Edition is uncapped, so the front
- * page renders every Story in the static HTML and hides all but the first
- * batch. Progressive enhancement: without JavaScript — or for a crawler —
+ * "Afficher plus de sujets" (ADR-0022, its pools capped by spec #158):
+ * Brûlant and Top cap at 25 Stories (RANKED_CAP) — 25 renders as the
+ * initial batch plus one click — while Nouveau stays uncapped, the
+ * window is the cap; each sort page renders every Story it has in the
+ * static HTML and hides all but the first batch. Progressive
+ * enhancement: without JavaScript — or for a crawler —
  * every Story is visible in the initial HTML; the script only ever reveals
  * the tail batch by batch. Hiding itself is CSS, not this module:
  * `html.js [data-load-more-tail]` (global.css) applies before first paint
