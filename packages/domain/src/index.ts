@@ -236,25 +236,30 @@ export interface TopicRegistry {
 }
 
 /** The current selection of top Stories Prisme publishes: the three
- * rolling windows of ADR-0027 (as amended by ADR-0029, 0036 and 0037),
- * re-derived at every build over all Stories — frozen ones included. */
+ * rolling windows of ADR-0027 (as amended by ADR-0029, 0036, 0037 and
+ * the À la une re-sort of spec #158), re-derived at every build over all
+ * Stories — frozen ones included. The field names predate spec #158's
+ * Nouveau / Brûlant / Top vocabulary and stay until the surface rename. */
 export interface Edition {
   /** ISO 8601 build time. */
   builtAt: string;
-  /** « En direct » (`/en-direct/`): every Story whose founding instant
-   * (ADR-0026, the earliest Article publication time) falls within the
-   * rolling last 12 hours before builtAt, ranked latest-first
-   * (rankStoriesLatestFirst), uncapped and unfloored — the window is the
-   * cap. Always a subset of `stories` by construction (ADR-0029). */
+  /** Nouveau — every Story whose founding instant (ADR-0026, the
+   * earliest Article publication time) falls within the rolling last
+   * 24 hours before builtAt (spec #158, widening ADR-0029/0035's 12
+   * hours), ranked latest-first (rankStoriesLatestFirst), uncapped —
+   * the window is the cap. Always a subset of `stories`' pool by
+   * construction (ADR-0029). */
   latestStories: Story[];
-  /** « Le fil » (`/le-fil/`): every Story with at least one Article in
-   * the rolling last 24 hours — « Aujourd'hui »'s pool, re-ranked — by
-   * the coverage-weighted feed key (rankStoriesFeed): in-window
-   * Coverage halved every FEED_HALF_LIFE_MS since the newest in-window
-   * Article, uncapped and unfloored (ADR-0036). */
+  /** Brûlant — the 24-hour pool re-ranked by the coverage-weighted key
+   * (rankStoriesFeed): in-window Coverage halved every
+   * FEED_HALF_LIFE_MS since the newest in-window Article, then halved
+   * every FEED_FOUNDING_HALF_LIFE_MS since the founding instant — a
+   * clock that never resets (spec #158, extending ADR-0036). Capped at
+   * 25 (spec #158). */
   feedStories: Story[];
-  /** « Aujourd'hui » (the home): the last-24-hours window, ranked by
-   * Coverage counted inside the window, uncapped (ADR-0022, ADR-0027). */
+  /** Top — the last-24-hours pool, ranked by Coverage counted inside
+   * the window (ADR-0027), capped at 25 (spec #158, ending
+   * ADR-0022's uncapped rule). */
   stories: Story[];
 }
 

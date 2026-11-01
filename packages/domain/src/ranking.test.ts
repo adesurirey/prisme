@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { Article, Story } from './index.ts';
 import {
+  FEED_FOUNDING_HALF_LIFE_MS,
   FEED_HALF_LIFE_MS,
   rankStoriesFeed,
   rankStoriesLatestFirst,
@@ -149,12 +150,13 @@ describe('rankStoriesLatestFirst', () => {
 });
 
 /**
- * The « Le fil » ranking key (ADR-0036): in-window Coverage — distinct
- * reporting Outlets (Opinion included, ADR-0011) — times an exponential
- * decay, halved every FEED_HALF_LIFE_MS since the Story's newest
- * in-window Article; ties fall to newest desc, founding desc, id asc.
- * The window where "when" and "how much" both decide: a widely covered
- * Story outlasts a fresh scoop, silence sinks it.
+ * The Brûlant ranking key (spec #158, extending ADR-0036's « Le fil »
+ * key): in-window Coverage — distinct reporting Outlets (Opinion
+ * included, ADR-0011) — times an exponential silence decay, halved every
+ * FEED_HALF_LIFE_MS since the newest in-window Article, times an
+ * exponential founding decay, halved every FEED_FOUNDING_HALF_LIFE_MS
+ * since the founding instant — a clock that never resets. Ties fall to
+ * newest desc, founding desc, id asc.
  */
 describe('rankStoriesFeed', () => {
   const NOW = new Date('2026-10-06T10:00:00Z');
@@ -245,6 +247,83 @@ describe('rankStoriesFeed', () => {
       }),
     ]);
     expect(feed([flat, reporting])).toEqual(['reporting', 'flat']);
+  });
+
+  it('adds the founding clock: an old-but-covered Story sinks below a fresh less-covered one', () => {
+    // The counter-example of the silence-only key (spec #158): 'squatter'
+    // was founded 20 h ago, carries four reporting Outlets and was heard
+    // from again half an hour ago — under ADR-0036's key it outweighs the
+    // three-Outlet scoop (3.8 vs 2.7) and squats the top while coverage
+    // keeps flowing. The founding clock (× 2^(−20/18) ≈ 0.46) sinks it
+    // below the scoop (1.7 vs 2.6): however loud the coverage, weight
+    // decays with the Story's age.
+    const squatter = story('squatter', [
+      article('sq-old', { outletId: 'a', publishedAt: '2026-10-05T14:00:00Z' }),
+      ...['b', 'c', 'd'].map((o) =>
+        article(`sq-${o}`, {
+          outletId: o,
+          publishedAt: '2026-10-06T09:30:00Z',
+        }),
+      ),
+    ]);
+    const scoop = story('scoop', [
+      article('sc-a', { publishedAt: '2026-10-06T09:00:00Z' }),
+      article('sc-b', { outletId: 'b', publishedAt: '2026-10-06T09:00:00Z' }),
+      article('sc-c', { outletId: 'c', publishedAt: '2026-10-06T09:00:00Z' }),
+    ]);
+    expect(feed([scoop, squatter])).toEqual(['scoop', 'squatter']);
+  });
+
+  it('never resets the founding clock on new coverage — it runs from the founding, not the newest Article', () => {
+    // The silence clock resets on every new in-window Article; the
+    // founding clock does not. 'still' reports again one minute ago
+    // (silence ≈ 0, weight 4.0 under the silence-only key) — founded
+    // 20 h ago it still weighs 1.9, under the fresh scoop's 2.6.
+    const still = story('still', [
+      article('st-old', { outletId: 'a', publishedAt: '2026-10-05T14:00:00Z' }),
+      ...['b', 'c', 'd'].map((o) =>
+        article(`st-${o}`, {
+          outletId: o,
+          publishedAt: '2026-10-06T09:59:00Z',
+        }),
+      ),
+    ]);
+    const scoop = story('scoop', [
+      article('sc-a', { publishedAt: '2026-10-06T09:00:00Z' }),
+      article('sc-b', { outletId: 'b', publishedAt: '2026-10-06T09:00:00Z' }),
+      article('sc-c', { outletId: 'c', publishedAt: '2026-10-06T09:00:00Z' }),
+    ]);
+    expect(feed([scoop, still])).toEqual(['scoop', 'still']);
+  });
+
+  it('halves the founding factor exactly at FEED_FOUNDING_HALF_LIFE_MS', () => {
+    expect(FEED_FOUNDING_HALF_LIFE_MS).toBe(18 * 3_600_000); // spec #158
+    // Four Outlets, silent for nothing, founded two founding half-lives
+    // ago (36 h — the founding Article itself outside the window) weigh
+    // 4 × 2^(−2) = 1 — exactly the weight of a fresh one-Outlet Story;
+    // the tie falls to founding desc. One hour younger (35 h) and the
+    // aged Story passes the scoop again: 4 × 2^(−35/18) ≈ 1.04 > 1.
+    const aged = (id: string, founding: string) =>
+      story(id, [
+        article(`${id}-old`, { outletId: 'a', publishedAt: founding }),
+        ...['a', 'b', 'c', 'd'].map((o) =>
+          article(`${id}-${o}`, {
+            outletId: o,
+            publishedAt: NOW.toISOString(),
+          }),
+        ),
+      ]);
+    const fresh = story('fresh', [
+      article('f', { publishedAt: NOW.toISOString() }),
+    ]);
+    expect(feed([aged('aged', '2026-10-04T22:00:00Z'), fresh])).toEqual([
+      'fresh',
+      'aged',
+    ]);
+    expect(feed([aged('younger', '2026-10-04T23:00:00Z'), fresh])).toEqual([
+      'younger',
+      'fresh',
+    ]);
   });
 
   it('keeps a total order: a Story with no Article in the window sorts last', () => {
