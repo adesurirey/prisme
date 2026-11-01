@@ -86,28 +86,41 @@ export function rankStoriesInWindow(
   );
 }
 
-/** The « Le fil » half-life (ADR-0036): every FEED_HALF_LIFE_MS without
- * a new in-window Article halves a Story's weight — the one knob that
- * tunes the feed between « En direct » (short) and « Aujourd'hui »
- * (long). Measured over 18 days of archive (backtest:feed): at 6 h the
- * lead turns over every ~6 h and the top-20 shares 16/20 with
- * « Aujourd'hui » and 9/20 with « En direct » — the measured middle. */
+/** The silence half-life (ADR-0036, Brûlant's first clock since spec
+ * #158): every FEED_HALF_LIFE_MS without a new in-window Article halves
+ * a Story's weight — the knob that tunes the feed between a short-lived
+ * thread and a day-long one. Measured over 18 days of archive
+ * (backtest:feed): at 6 h the lead turns over every ~6 h and the top-20
+ * shares 16/20 with the Coverage key — the measured middle. */
 export const FEED_HALF_LIFE_MS = 6 * 60 * 60 * 1000;
 
+/** The founding half-life (spec #158, Brûlant's second clock): every
+ * FEED_FOUNDING_HALF_LIFE_MS since the Story's founding instant
+ * (ADR-0026) halves its weight, whatever the coverage flow — the
+ * Hacker-News gravity clock, and unlike FEED_HALF_LIFE_MS it never
+ * resets. Measured over 18 days of archive (backtest:feed): it cuts the
+ * max top-3 residence from 85 h to 44 h while coverage keeps flowing;
+ * 12/24/48 h were measured alongside and stay re-gradable by the free
+ * replay tool. */
+export const FEED_FOUNDING_HALF_LIFE_MS = 18 * 60 * 60 * 1000;
+
 /**
- * The « Le fil » ranking key (ADR-0036) — the window where "when" and
- * "how much" both decide: each Story weighs its in-window Coverage —
- * distinct reporting Outlets with at least one Article in the window
- * (Opinion included, ADR-0011), the same basis as rankStoriesInWindow —
- * times an exponential decay, halved every FEED_HALF_LIFE_MS since the
- * Story's newest in-window Article: coverage makes a Story last,
- * silence sinks it. Ties fall to the newest in-window Article desc,
- * then the founding instant desc (ADR-0026), then id asc — fully
- * deterministic across builds. Membership (« Aujourd'hui »'s pool: at
- * least one Article, any kind, inside the window) lives with the
- * Edition assembly (pipeline, assembleEdition); the key itself is
- * total — a Story with no Article in the window weighs nothing and
- * sorts last, deterministically.
+ * The Brûlant ranking key (spec #158, extending ADR-0036's « Le fil »
+ * key) — the window where "when" and "how much" both decide, on two
+ * clocks: each Story weighs its in-window Coverage — distinct reporting
+ * Outlets with at least one Article in the window (Opinion included,
+ * ADR-0011), the same basis as rankStoriesInWindow — times an
+ * exponential silence decay, halved every FEED_HALF_LIFE_MS since the
+ * Story's newest in-window Article, times an exponential founding
+ * decay, halved every FEED_FOUNDING_HALF_LIFE_MS since the founding
+ * instant (ADR-0026) — a clock that never resets, so however loud the
+ * coverage, a Story's weight decays with its age and none squats the
+ * top for days. Ties fall to the newest in-window Article desc, then
+ * the founding instant desc, then id asc — fully deterministic across
+ * builds. Membership (the day pool: at least one Article, any kind,
+ * inside the window) lives with the Edition assembly (pipeline,
+ * assembleEdition); the key itself is total — a Story with no Article
+ * in the window weighs nothing and sorts last, deterministically.
  */
 export function rankStoriesFeed(
   stories: Story[],
@@ -122,17 +135,23 @@ export function rankStoriesFeed(
   for (const story of stories) {
     // articlesInWindow already dropped unparseable instants, so every
     // Date.parse below is a real instant; an empty window leaves
-    // newest at 0, whose age dwarfs any half-life — weight 0.
+    // newest at 0, whose age dwarfs any half-life — weight 0. The
+    // founding (the earliest dated Article) never exceeds the newest
+    // in-window Article, so the founding factor never exceeds 1.
     const articles = articlesInWindow(story.articles, windowMs, now);
     const newest = Math.max(
       0,
       ...articles.map((a) => Date.parse(a.publishedAt)),
     );
     const outlets = reportingOutletIds(articles).size;
+    const founding = foundingInstant(story) ?? 0;
     key.set(story, {
-      score: outlets * 2 ** (-(t - newest) / FEED_HALF_LIFE_MS),
+      score:
+        outlets *
+        2 ** (-(t - newest) / FEED_HALF_LIFE_MS) *
+        2 ** (-(t - founding) / FEED_FOUNDING_HALF_LIFE_MS),
       newest,
-      founding: foundingInstant(story) ?? 0,
+      founding,
     });
   }
   return [...stories].sort(
