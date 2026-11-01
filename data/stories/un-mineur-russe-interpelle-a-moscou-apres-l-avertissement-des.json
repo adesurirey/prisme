@@ -6,13 +6,46 @@
   "storyDay": "2026-11-01",
   "articles": [
     {
+      "id": "d5a961a97f1b",
+      "outletId": "le-parisien",
+      "headline": "Un attentat déjoué dans un parc de Moscou : un adolescent russe arrêté grâce à des photos d’armes publiées sur TikTok",
+      "url": "https://www.leparisien.fr/international/un-attentat-dejoue-dans-un-parc-de-moscou-un-adolescent-russe-arrete-grace-a-des-photos-darmes-publiees-sur-tiktok-01-11-2026-RJTJJAK6VBHQLFHVLW5PNX6ZFE.php",
+      "publishedAt": "2026-11-01T18:01:15.590Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "752d6d0fbfff",
+      "outletId": "cnews",
+      "headline": "Menace d'attentat à Moscou : un mineur russe interpellé après une alerte des Etats-Unis",
+      "url": "https://www.cnews.fr/monde/2026-11-01/menace-dattentat-moscou-un-mineur-russe-interpelle-apres-une-alerte-des-etats-unis",
+      "publishedAt": "2026-11-01T16:12:07.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_tm5ni_6ae760a3d49f2.jpg?h=9d2190ab&itok=7Rc7_SYq",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "634e2174c250",
+      "outletId": "tf1-info",
+      "headline": "Menace d'attentat à Moscou : un mineur russe interpellé après l'alerte des États-Unis",
+      "url": "https://www.tf1info.fr/international/russie-menace-d-attentat-a-moscou-un-mineur-russe-interpelle-apres-l-alerte-des-etats-unis-2473222.html",
+      "publishedAt": "2026-11-01T16:03:57.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/683/russie-moscou-place-rouge-16-03-24-79f936-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "8484b6e79c95",
       "outletId": "le-figaro",
       "headline": "Moscou : un jeune Russe interpellé après l'avertissement des États-Unis sur un possible attentat",
       "url": "https://www.lefigaro.fr/international/moscou-un-jeune-russe-interpelle-apres-l-avertissement-des-etats-unis-sur-un-possible-attentat-20261101",
       "publishedAt": "2026-11-01T15:59:14.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/01/0dc74e5eb2fe8c9630ab742ede747603573465e6394582b42180873b15e51b57.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -41,23 +74,25 @@
     }
   ],
   "topicId": "767add4955de",
-  "titledArticleCount": 3,
+  "titledArticleCount": 6,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Le Service fédéral de sécurité russe a communiqué dimanche 1er novembre au sujet de l'arrestation d'un adolescent en lien avec une alerte terroriste américaine."
+      "Le FSB a arrêté un adolescent russe à la suite d'un signalement de l'ambassade américaine concernant un projet d'attaque dans un parc de la capitale.",
+      "L'enquête a progressé grâce à la diffusion de clichés montrant le suspect armé sur la plateforme TikTok.",
+      "TF1 Info rappelle que les États-Unis avaient déjà émis un avertissement comparable avant l'attaque meurtrière du Crocus City Hall en 2024."
     ],
     "droite": [
-      "Le FSB a procédé à l'interpellation d'un mineur russe à la suite d'un signalement transmis par les autorités américaines concernant le musée-réserve de Tsaritsyno à Moscou.",
-      "Les enquêteurs russes ont découvert sur le téléphone du suspect des clichés d'armes, des connexions avec une mouvance néonazie ainsi que des consultations sur des massacres."
+      "Un adolescent russe a été appréhendé par le FSB à la suite d'une alerte transmise par l'ambassade américaine concernant le musée-réserve de Tsaritsyno.",
+      "Les investigations ont révélé la présence de photographies du suspect en tenue tactique sur les réseaux sociaux, ainsi que des indices suggérant son intérêt pour la mouvance néonazie et des tueries de masse."
     ]
   },
   "differences": [
-    "Le camp centre propose une brève dépêche strictement limitée à l'annonce officielle du FSB concernant l'arrestation.",
-    "Le camp droite développe amplement le récit en détaillant, selon les éléments de l'enquête, le profil et les motivations présumées de l'adolescent interpellé."
+    "Le centre met en avant la coopération internationale et l'efficacité de la prévention en rappelant l'antécédent de l'attentat du Crocus City Hall.",
+    "La droite insiste particulièrement sur le profil inquiétant du suspect en détaillant ses connexions néonazies et ses recherches sur les tueries de masse."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-01T16:01:15.871Z"
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-01T18:01:15.590Z"
 }
