@@ -49,3 +49,6 @@ for crossing the ceiling this reframing lifts.
   h); `everInEdition` stamping and the Summaries budget are untouched.
 - No wipe: the window applies at build; the next edition carries it.
   GLOSSARY's Edition and En direct entries are updated by this ADR.
+- Amended by ADR-0040: the window doubles to 24 h, so the thread covers
+  exactly what the ranked sorts' cap (ADR-0038) cuts — the ranking and
+  the uncapped rule stand as decided here.

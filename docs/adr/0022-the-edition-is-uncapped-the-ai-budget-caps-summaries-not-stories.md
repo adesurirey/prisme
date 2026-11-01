@@ -91,3 +91,6 @@ Stories 21+ from search engines (no sitemap exists).
   from a re-measured dashboard, not a code rework.
 - Amended by ADR-0037: the « 7 jours » significance floor is gone with
   the edition that carried it — the Edition stays uncapped, as decided.
+- Amended by ADR-0038: the ranked sorts (Brûlant, Top) are capped at 25
+  again — a scannability decision, not a budget one; Nouveau carries
+  everything, and the Summaries budget above is untouched.

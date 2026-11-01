@@ -88,16 +88,24 @@ The part of the news a Story belongs to: Politique, International, Économie, So
 _Avoid_: Category, rubric, topic
 
 **Edition**:
-A rolling window over all Stories — frozen ones included — re-ranked at every build. « Aujourd'hui » (the home) is the last 24 hours, uncapped (ADR-0022), ranked by Coverage counted inside the window; « Le fil » (`/le-fil/`) re-ranks that same 24-hour pool by the coverage-weighted feed key — in-window Coverage halved every six hours since the Story's newest in-window Article (ADR-0036); « En direct » (`/en-direct/`) is the exception: the last 12 hours by founding instant, ranked latest-first (ADR-0029, widened by ADR-0035; the week window is gone, ADR-0037). A Story stays on la Une while Outlets keep reporting it inside the window, then sinks and disappears — by decay, never by a clock (ADR-0027). Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
+A rolling window over all Stories — frozen ones included — re-ranked at every build. À la une offers it as three sorts (ADR-0041): Nouveau (`/nouveau/`) is the last 24 hours by founding instant, ranked latest-first, uncapped — the window is the cap; Brûlant (`/`, the home and only indexed page, ADR-0039) re-ranks that same 24-hour pool by the double-decay feed key, capped at 25 Stories (ADR-0038); Top (`/top/`) ranks the pool by Coverage counted inside the window, capped at 25. A Story stays while Outlets keep reporting it inside the window, then sinks and disappears — by decay, never by a clock (ADR-0027). Summaries are rationed to the top-ranked Stories, never visibility (ADR-0022).
 _Avoid_: Issue, digest, daily, run
 
-**En direct**:
-The latest-first Edition window: every Story whose founding Article falls within the last 12 hours, newest first, uncapped — the chronological thread of the news, the page where one reads the sequence of events over the last hours (ADR-0029, widened by ADR-0035). Replaces the per-reader « Nouveau » marker (ADR-0020).
+**À la une**:
+The page the Editions live on — the h1 on every sort page, whatever the select is set to. The sort (Nouveau, Brûlant, Top) is a setting of that one page, never a second page name; back links always say « À la une » (ADR-0028, amended by ADR-0039).
+_Avoid_: Home page, dashboard, the window names as page titles
+
+**Nouveau**:
+The chronological sort of À la une: every Story whose founding Article falls within the last 24 hours, newest first, uncapped — the window is the cap, the one list where scrolling to the end means having missed nothing (ADR-0029, widened to 24 h by ADR-0040; renamed by ADR-0041). Successor of « En direct » and of the per-reader « Nouveau » marker (ADR-0020).
 _Avoid_: Live feed, newsfeed, breaking news
 
-**Le fil**:
-The coverage-weighted timeline Edition: every Story with an Article in the last 24 hours — « Aujourd'hui »'s pool — ranked by in-window Coverage halved every six hours since the newest in-window Article: coverage makes a Story last, silence sinks it (ADR-0036). Not personalized — every reader sees the same fil.
-_Avoid_: newsfeed, personalized feed, algo feed
+**Brûlant**:
+The default sort of À la une and the home page: the last-24-hours pool — every Story with an Article in the window — re-ranked by in-window Coverage halved every six hours since the Story's newest in-window Article, then halved every eighteen hours since its founding (ADR-0036, its key extended and its name « Le fil » retired by ADR-0041), capped at the 25 best-ranked Stories (ADR-0038). Coverage makes a Story last, silence and age sink it.
+_Avoid_: newsfeed, personalized feed, algo feed, hot list
+
+**Top**:
+The coverage sort of À la une: the last-24-hours pool ranked by in-window Coverage alone — how many Outlets treat each Story — capped at 25 (ADR-0038; renamed by ADR-0041 as the successor of « Aujourd'hui »). Where the press's weight lies, independent of recency inside the window.
+_Avoid_: Ranking, leaderboard, most-read
 
 **Story day**:
 The one Publication day (Europe/Paris) a Story belongs to — the day of its founding Article, fixed when the Story is created. It keys the Story's URL, its archive page and the Episode age window; which Articles may join is governed by the Ingestion window, not by the day (ADR-0026, ADR-0027).
