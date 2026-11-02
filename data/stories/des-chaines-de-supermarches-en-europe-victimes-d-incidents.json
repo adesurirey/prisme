@@ -1,10 +1,54 @@
 {
   "id": "4a8a366af4eb",
   "slug": "des-chaines-de-supermarches-en-europe-victimes-d-incidents",
-  "title": "Europe : de nouvelles cyberattaques ciblent des milliers de réfrigérateurs de supermarchés",
+  "title": "Europe : de nouvelles cyberattaques ciblent les réfrigérateurs de supermarchés dans plusieurs pays",
   "createdAt": "2026-11-02T12:01:20.772Z",
   "storyDay": "2026-11-02",
   "articles": [
+    {
+      "id": "1de8d607dd61",
+      "outletId": "france-24",
+      "headline": "Ce que l'on sait du piratage des réfrigérateurs de supermarchés en Europe",
+      "url": "https://www.france24.com/fr/europe/20261102-ce-que-sait-piratage-r%C3%A9frig%C3%A9rateurs-supermarch%C3%A9s-europe",
+      "publishedAt": "2026-11-02T20:10:09.000Z",
+      "imageUrl": "https://s.france24.com/media/display/05ef4c26-d6e7-11f1-8541-bf1914cabd52/w:1024/p:16x9/AP26306457417754.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "42376931a964",
+      "outletId": "lobs",
+      "headline": "Ce que l’on sait de la cyberattaque contre des réfrigérateurs dans plusieurs supermarchés en Europe",
+      "url": "https://www.nouvelobs.com/economie/20261102.OBS119792/ce-que-l-on-sait-de-la-cyberattaque-contre-des-refrigerateurs-dans-plusieurs-supermarches-en-europe.html",
+      "publishedAt": "2026-11-02T19:53:10.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/11/02/0/0/5554/3702/0/0/60/0/860efc2_upload-1-ysjp8qok3lg3-000-d66w7cq-1.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "4be946ef31ec",
+      "outletId": "huffpost",
+      "headline": "Une nouvelle cyberattaque frappe des réfrigérateurs de supermarchés, dans huit pays d’Europe",
+      "url": "https://www.huffingtonpost.fr/international/article/une-nouvelle-cyberattaque-frappe-des-refrigerateurs-de-supermarches-dans-huit-pays-d-europe_350759.html",
+      "publishedAt": "2026-11-02T18:48:52.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/11/02/0/0/6000/3375/0/0/60/0/f188d35_upload-1-2nhz2pweelu7-afp-20261102-d66n244-v1-highres-swedencybercrimesupermarketsretailfoodinternet.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "1a87cfccdf66",
+      "outletId": "cnews",
+      "headline": "Des congélateurs de supermarchés à nouveau visés à travers l'Europe par une cyberattaque",
+      "url": "https://www.cnews.fr/monde/2026-11-02/des-congelateurs-de-supermarches-nouveau-vises-travers-leurope-par-une",
+      "publishedAt": "2026-11-02T17:49:02.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/franki-chamaki-ivfp_yxzuyq-unsplash-taille1200_6ae8c17151c96.jpg?h=7cd585da&itok=JGlOhzUI",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
     {
       "id": "50eca3230d9d",
       "outletId": "tf1-info",
@@ -34,7 +78,7 @@
       "url": "https://www.lemonde.fr/international/article/2026/11/02/des-cyberattaques-contre-des-refrigerateurs-et-des-congelateurs-visent-plusieurs-supermarches-en-europe_6805296_3210.html",
       "publishedAt": "2026-11-02T17:02:40.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/02/1136/0/6000/3000/644/322/60/0/4a61c7c_ftp-1-6omov40kw5r1-afp-d66n24h.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -164,33 +208,35 @@
     }
   ],
   "topicId": "4a8a366af4eb",
-  "titledArticleCount": 14,
+  "titledArticleCount": 18,
   "section": "science",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Plusieurs supermarchés en Suède et en Belgique ont subi un piratage de leurs installations frigorifiques dans la nuit de dimanche à lundi 2 novembre, entraînant une hausse soudaine des températures.",
-      "Cette attaque informatique rappelle les incidents similaires constatés en France à la mi-octobre et aux États-Unis.",
-      "L'impact de cet épisode reste jugé mesuré à ce stade selon franceinfo, bien que des denrées alimentaires aient été gâchées."
+      "Plusieurs dizaines de supermarchés dans au moins huit pays européens ont subi une cyberattaque contre leurs réfrigérateurs le lundi 2 novembre.",
+      "Les enseignes touchées utilisent du matériel fourni par le même prestataire danois, Danfoss, que lors de l'incident précédent en France.",
+      "En Belgique, les magasins Carrefour, Delhaize, Ikea, Intermarché et Colruyt font partie des structures ciblées par cette remontée brutale des températures.",
+      "Le journal Libération signale également des répercussions de ces piratages informatiques en Suède et aux Etats-Unis."
     ],
     "centre": [
-      "Une nouvelle cyberattaque a touché des réfrigérateurs et congélateurs connectés à Internet dans sept pays européens, dont la Belgique, la Suède, la Finlande, l'Estonie, le Luxembourg et l'Irlande.",
-      "Le prestataire danois Danfoss est de nouveau mis en cause, le mode opératoire rappelant l'attaque qui avait frappé des magasins en France au mois d'octobre.",
-      "Le commissaire européen à l'Agriculture, Christophe Hansen, dénonce des « cyberattaques répétées extrêmement préoccupantes » constituant une tentative de perturber la chaîne d'approvisionnement.",
-      "Plusieurs enseignes comme Carrefour, Ikea, Colruyt ou Delhaize figurent parmi les magasins dont les températures des frigos ont augmenté, provoquant des pertes de marchandises."
+      "Une série de cyberattaques a visé les installations frigorifiques de supermarchés en Belgique, au Luxembourg, en Suède, en Estonie, en Finlande et en Irlande dans la nuit du 1er au 2 novembre.",
+      "Le mode opératoire présente de fortes similitudes avec l'attaque du 12 octobre dernier en France, exploitant des failles basiques sur des équipements non mis à jour.",
+      "La Commission européenne, par la voix du commissaire Christophe Hansen, dénonce des actes extrêmement préoccupants visant à perturber l'approvisionnement alimentaire.",
+      "Les incidents ont provoqué la détérioration de tonnes de marchandises et des pertes financières importantes pour les enseignes concernées."
     ],
     "droite": [
-      "Des milliers de réfrigérateurs de supermarchés ont été piratés ce lundi 2 novembre dans plusieurs pays européens, notamment en Belgique, en Suède et au Luxembourg.",
-      "Cette cyberattaque présente des similitudes avec celle qui avait visé la France le 12 octobre dernier.",
-      "Le commissaire européen à l'Agriculture qualifie l'événement d'« avertissement que nous devons prendre au sérieux » face à la répétition de ces attaques."
+      "Des congélateurs de supermarchés situés dans sept pays européens ont été mis hors service par des attaques informatiques le lundi 2 novembre.",
+      "Le prestataire danois Danfoss est de nouveau identifié au cœur de cette offensive numérique qui fait suite à celle du 12 octobre en France.",
+      "Les autorités s'alarment de ces perturbations qui menacent la chaîne alimentaire et engendrent des préjudices se chiffrant en millions d'euros pour les franchises.",
+      "Le journal Le Figaro relaye la réaction de l'Union européenne qui qualifie ces intrusions de cyberattaques répétées extrêmement préoccupantes."
     ]
   },
   "differences": [
-    "La gauche insiste sur la dimension internationale du phénomène en mentionnant les précédents américains et se concentre sur les conséquences logistiques en Suède et en Belgique.",
-    "Le centre dresse un panorama exhaustif des pays touchés et relaie largement les déclarations officielles de l'Union européenne sur la sécurité de la chaîne d'approvisionnement.",
-    "La droite met en avant l'ampleur des dégâts à travers le nombre de frigos touchés et insiste sur la gravité des avertissements institutionnels européens."
+    "La gauche privilégie une couverture factuelle et territorialisée en listant précisément les enseignes touchées comme Carrefour ou Ikea, tout en pointant l'implication d'un prestataire commun.",
+    "Le centre adopte une perspective institutionnelle et globale en insistant sur la menace géopolitique et les déclarations de l'Union européenne concernant la chaîne d'approvisionnement.",
+    "La droite dramatise l'impact financier de l'offensive en évaluant les pertes en millions d'euros tout en soulignant l'inquiétude grandissante des autorités face à ces actes répétés."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 14,
-  "summarizedAt": "2026-11-02T18:02:43.496Z"
+  "summarizedArticleCount": 18,
+  "summarizedAt": "2026-11-02T23:01:20.272Z"
 }
