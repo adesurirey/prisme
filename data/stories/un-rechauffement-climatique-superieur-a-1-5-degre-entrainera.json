@@ -6,6 +6,29 @@
   "storyDay": "2026-11-02",
   "articles": [
     {
+      "id": "23fd2206df15",
+      "outletId": "le-figaro",
+      "headline": "En faisant fondre glaciers, pôles et permafrost, le réchauffement climatique aura de redoutables conséquences dès +1,5°C",
+      "url": "https://www.lefigaro.fr/sciences/crues-eau-potable-climat-ou-biodiversite-en-faisant-fondre-glaciers-poles-et-permafrost-le-rechauffement-aura-de-redoutables-consequences-des-1-50c-20261102",
+      "publishedAt": "2026-11-02T05:35:55.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/2829x1592_crop/2026/11/02/b6038a2d161accc33c9466971611cf97c350e7420f5039ece3ddbc56d0ff321f.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
+    {
+      "id": "aec083bc88a0",
+      "outletId": "franceinfo",
+      "headline": "La planète s'approche du seuil de 1,5°C de réchauffement, un niveau critique pour les banquises et les glaciers",
+      "url": "https://www.franceinfo.fr/environnement/crise-climatique/la-planete-s-approche-du-seuil-de-1-5-c-de-rechauffement-un-niveau-critique-pour-les-banquises-et-les-glaciers_8263031.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-02T05:16:37.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/X8HzPbaw6GaNbw6X_2E3nX5op3g/0x39:1024x615/432x243/filters:format(jpg)/2026/11/01/6ae78047cf4df105005790.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "4862e104c942",
       "outletId": "le-parisien",
       "headline": "Fonte des glaciers et de la banquise, dégel du permafrost, montée du niveau des mers : les conséquences dévastatrices au-delà de 1,5° de réchauffement",
@@ -29,24 +52,28 @@
     }
   ],
   "topicId": "640335cbc4d6",
-  "titledArticleCount": 2,
+  "titledArticleCount": 4,
   "section": "science",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "franceinfo rapporte qu'un rapport de l'ONU prévient d'impacts à large échelle et souvent irréversibles avant la COP31 prévue du 9 novembre en Turquie.",
+      "Le média souligne que la planète s'approche du seuil de 1,5°C, devenu un niveau critique pour les banquises et les glaciers."
+    ],
     "centre": [
-      "Le Parisien rapporte que le dépassement du seuil de 1,5 degré de réchauffement climatique provoquera des dégâts majeurs comme la fonte des glaciers, de la banquise et du permafrost.",
-      "Le journal souligne que ces évolutions climatiques entraîneront une montée inéluctable du niveau des mers et des conséquences dévastatrices à l'échelle mondiale."
+      "Le Parisien détaille les conséquences dévastatrices au-delà de 1,5° de réchauffement incluant la fonte des glaciers, de la banquise, le dégel du permafrost et la montée du niveau des mers."
     ],
     "droite": [
-      "Le Figaro indique que l'ONU a publié deux rapports alarmants sur les conséquences du réchauffement planétaire.",
-      "Le quotidien relève que le réchauffement atteint déjà 1,37 degré par rapport à l'ère préindustrielle et qu'au-delà de 1,5 degré, les glaciers et la banquise subiront des dégâts « irréversibles »."
+      "Le Figaro indique que le réchauffement climatique atteint déjà 1,37°C par rapport à l'ère préindustrielle selon deux rapports alarmants de l'ONU.",
+      "Le quotidien souligne qu'une hausse des températures mondiales, même brève, aura des conséquences redoutables et des dégâts irréversibles sur la cryosphère dès +1,5°C."
     ]
   },
   "differences": [
-    "Le camp centre insiste globalement sur la chaîne des conséquences physiques globales de la hausse des températures, du permafrost aux océans.",
-    "Le camp droite focalise son traitement sur les seuils chiffrés précis de l'ONU et qualifie explicitement la gravité des dégâts à venir."
+    "Le camp gauche privilégie l'échéance diplomatique imminente de la COP31 en Turquie pour contextualiser les avertissements de l'ONU sur la fonte des glaces.",
+    "Le camp centre se focalise sur une énumération technique et directe des transformations physiques du globe, de la fonte de la banquise jusqu'à la montée des mers.",
+    "Le camp droite insiste sur le seuil actuel précis de 1,37°C mesuré avant l'ère préindustrielle pour appuyer le caractère imminent des dégâts irréversibles."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-11-02T01:01:16.442Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-02T06:01:19.100Z"
 }
