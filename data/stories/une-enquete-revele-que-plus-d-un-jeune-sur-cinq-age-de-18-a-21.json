@@ -6,13 +6,24 @@
   "storyDay": "2026-11-02",
   "articles": [
     {
+      "id": "bb0c2fc36c74",
+      "outletId": "bfmtv",
+      "headline": "Près de deux jeunes sur trois ont déjà été victimes: une enquête dresse l'état des lieux des violences sexuelles à l'adolescence",
+      "url": "https://www.bfmtv.com/societe/pres-de-deux-jeunes-sur-trois-ont-deja-ete-victime-une-enquete-dresse-l-etat-des-lieux-des-violences-sexuelles-a-l-adolescence_AV-202611020747.html",
+      "publishedAt": "2026-11-02T17:05:15.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/HX_qCeEbwm7cvJ4XpXUg9dvs03o=/0x87:2048x1239/800x0/images/x-2286611.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "cb2b1866d97d",
       "outletId": "ouest-france",
       "headline": "La vie affective des ados décryptée : « Plus d’un jeune sur cinq déclare avoir subi un viol », révèle une étude",
       "url": "https://www.ouest-france.fr/faits-divers/violence-sexuelle/viol/la-vie-affective-des-ados-decryptee-plus-dun-jeune-sur-cinq-declare-avoir-subi-un-viol-revele-une-etude-2557c1f6-d6ab-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-02T16:52:07.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOWZjYjFiYWQ3NDI3YjdmYTBiN2JkYTQ4MzYyYTgxYzI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=cde0738056f1663d8c667e0fd19dde7e86ec39ece2fc5ef89a2b2d30067faadb",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -75,5 +86,31 @@
   "topicId": "bb3b77813a3b",
   "titledArticleCount": 6,
   "section": "society",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "L'association Contre les violences sur mineurs a publié une étude montrant que 63 % des 18-21 ans ont subi au moins une violence sexuelle au cours de leur vie.",
+      "Plus de 37 % des répondants de cette tranche d'âge déclarent avoir déjà eu un acte sexuel sans en avoir envie.",
+      "Plus d'un jeune sur cinq âgé de 18 à 21 ans rapporte avoir subi des faits relevant du viol selon ces travaux."
+    ],
+    "centre": [
+      "Une enquête épidémiologique nommée Vavisa 2026, menée auprès de 2 556 jeunes par l'association Contre les violences sur mineurs, analyse la vie affective et les violences sexuelles.",
+      "Les résultats indiquent que 63 % des 18-21 ans et 47 % des 15-17 ans ont déjà subi au moins une violence sexuelle.",
+      "Plus d'un jeune sur cinq déclare avoir subi un viol, soulignant l'ampleur des contraintes et des pressions subies.",
+      "L'étude met en lumière la précocité des faits, les violences numériques, la sextorsion et l'inceste."
+    ],
+    "droite": [
+      "Une enquête inédite intitulée Vavisa s'est appuyée sur un questionnaire anonyme auprès de 2 269 jeunes de 18 à 21 ans.",
+      "Plus d'un jeune sur cinq dans cette tranche d'âge rapporte avoir subi des faits relevant du viol, selon ces données.",
+      "TF1 Info précise qu'environ 22 % des sondés mentionnent des violences sexuelles après des menaces ou soumissions, ainsi que des situations d'inceste."
+    ]
+  },
+  "differences": [
+    "La gauche privilégie l'analyse politique et sociale de l'ampleur des agressions en insistant sur la proportion des actes subis sans consentement.",
+    "Le centre dresse un panorama large et détaillé des statistiques de l'enquête Vavisa en insistant sur la diversité des violences, incluant le numérique et l'inceste.",
+    "La droite adopte un angle factuel en se concentrant sur la méthodologie de l'enquête anonyme et les taux précis de violences rapportés par les jeunes."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-02T18:02:43.496Z"
 }

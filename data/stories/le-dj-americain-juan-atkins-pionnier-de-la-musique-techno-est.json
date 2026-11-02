@@ -6,6 +6,17 @@
   "storyDay": "2026-11-02",
   "articles": [
     {
+      "id": "960211ad7d66",
+      "outletId": "le-figaro",
+      "headline": "Mort à 64 ans de l’Américain Juan Atkins, pionnier de la techno",
+      "url": "https://www.lefigaro.fr/musique/mort-a-64-ans-de-l-americain-juan-atkins-pionnier-de-la-techno-20261102",
+      "publishedAt": "2026-11-02T17:16:20.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/11/02/ef3c2bf6722583463c13b5c1f2bea3ad2fb88e305f36109b7deb3d30c1f5bf55.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
       "id": "60d58318b152",
       "outletId": "le-monde",
       "headline": "Juan Atkins, un des pères fondateurs de la musique techno, est mort",
@@ -75,5 +86,30 @@
   "topicId": "70b6f6e5d640",
   "titledArticleCount": 6,
   "section": "culture",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le musicien américain Juan Atkins, fondateur de la techno originaire de Detroit, est mort le 1er novembre à l'âge de 64 ans.",
+      "Il s'est éteint à Mexico le 31 octobre lors d'une tournée, selon Le Monde.",
+      "La maire de Detroit, Mary Sheffield, a salué un artiste dont le son est né dans les caves de la ville avant de résonner sur tous les continents, rapporte franceinfo."
+    ],
+    "centre": [
+      "Le DJ et producteur américain Juan Atkins est mort à l'âge de 64 ans à Mexico, où il devait se produire en concert.",
+      "Il est reconnu comme une figure majeure et un père fondateur de la musique techno de Detroit, illustré notamment par ses projets Cybotron et Model 500.",
+      "La presse anglophone salue un artiste ayant transformé durablement le paysage musical mondial."
+    ],
+    "droite": [
+      "Le pionnier de la techno Juan Atkins est mort à l'âge de 64 ans.",
+      "Originaire de Detroit, il a profondément marqué l'histoire de la musique électronique dès les années 1980.",
+      "Il luttait contre des complications en lien avec un diabète."
+    ]
+  },
+  "differences": [
+    "La gauche met en avant l'hommage institutionnel de la maire de Detroit et précise le lieu exact du décès à Mexico.",
+    "Le centre insiste sur sa stature internationale de pionnier à travers ses divers projets musicaux et les hommages de la presse anglophone.",
+    "La droite rappelle son rôle historique dans les années 1980 et mentionne les complications liées à son diabète."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-02T18:02:43.496Z"
 }
