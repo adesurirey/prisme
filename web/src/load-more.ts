@@ -1,8 +1,9 @@
 /**
  * "Afficher plus de sujets" (ADR-0022, its pools capped by spec #158):
- * Brûlant and Top cap at 25 Stories (RANKED_CAP) — 25 renders as the
- * initial batch plus one click — while Nouveau stays uncapped, the
- * window is the cap; each sort page renders every Story it has in the
+ * the batch is the cap — 25, mirroring the pipeline's RANKED_CAP — so
+ * Brûlant and Top render whole in the initial batch and the button
+ * only ever serves Nouveau, the one uncapped sort (the window is the
+ * cap); each sort page renders every Story it has in the
  * static HTML and hides all but the first batch. Progressive
  * enhancement: without JavaScript — or for a crawler —
  * every Story is visible in the initial HTML; the script only ever reveals
@@ -12,16 +13,18 @@
  * is never a reveal flash on load. The counted pool is the
  * `[data-story-id]` roots in DOM order — the hero carries one too, except
  * when it renders without an image (StoryHero), in which case the batch is
- * simply 20 cards either way.
+ * simply 25 cards either way.
  *
  * Images in hidden cards are `loading="lazy"` (StoryImage), so hiding costs
  * nothing on the network until revealed.
  */
 
-/** Stories visible before the first click (ADR-0022's pagination batch). */
-export const LOAD_MORE_INITIAL = 20;
-/** Additional Stories revealed per click. */
-export const LOAD_MORE_STEP = 20;
+/** Stories visible before the first click — the batch mirrors the
+ * pipeline's RANKED_CAP (25), so the capped sorts render whole. */
+export const LOAD_MORE_INITIAL = 25;
+/** Additional Stories revealed per click — the same batch size, so
+ * Nouveau's uncapped tail turns over one cap-sized page per click. */
+export const LOAD_MORE_STEP = 25;
 
 /**
  * How many Stories are visible after `clicks` clicks of the button, for an

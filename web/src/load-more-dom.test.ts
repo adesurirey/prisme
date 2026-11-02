@@ -58,8 +58,8 @@ describe('installLoadMore — progress counter and fill', () => {
     const doc = page(45);
     installLoadMore(doc);
     const button = doc.querySelector('[data-load-more]') as any;
-    expect(button.__count.textContent).toBe('(20/45)');
-    expect(button.__fill.style.width).toBe(`${(20 / 45) * 100}%`);
+    expect(button.__count.textContent).toBe('(25/45)');
+    expect(button.__fill.style.width).toBe(`${(25 / 45) * 100}%`);
   });
 });
 
@@ -70,11 +70,11 @@ describe('installLoadMore', () => {
     beforeEach(() => {
       doc = page(45);
     });
-    it('hides cards 20+ and shows the button', () => {
+    it('hides cards 25+ and shows the button', () => {
       installLoadMore(doc);
       const cards = doc.querySelectorAll<HTMLElement>('[data-story-id]');
-      expect((cards[19] as any)._revealed).toBeFalsy();
-      expect((cards[20] as any)._revealed).toBe(false);
+      expect((cards[24] as any)._revealed).toBeFalsy();
+      expect((cards[25] as any)._revealed).toBe(false);
       expect(
         (doc.querySelector('[data-load-more]') as HTMLButtonElement).hidden,
       ).toBe(false);

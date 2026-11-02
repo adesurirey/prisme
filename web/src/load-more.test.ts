@@ -8,13 +8,18 @@ describe('visibleCount', () => {
 
   it('reveals one step per click', () => {
     expect(visibleCount(100, 1)).toBe(LOAD_MORE_INITIAL + LOAD_MORE_STEP);
-    expect(visibleCount(100, 3)).toBe(80);
+    expect(visibleCount(100, 2)).toBe(75);
   });
 
   it('never exceeds the total (the button disappears at the end)', () => {
-    expect(visibleCount(45, 1)).toBe(40);
-    expect(visibleCount(45, 2)).toBe(45);
-    expect(visibleCount(45, 9)).toBe(45);
+    expect(visibleCount(60, 1)).toBe(50);
+    expect(visibleCount(60, 2)).toBe(60);
+    expect(visibleCount(60, 9)).toBe(60);
+  });
+
+  it('shows a capped sort whole — no tail, no click', () => {
+    expect(visibleCount(25, 0)).toBe(25);
+    expect(visibleCount(25, 1)).toBe(25);
   });
 
   it('shows everything when the Edition is smaller than the batch', () => {

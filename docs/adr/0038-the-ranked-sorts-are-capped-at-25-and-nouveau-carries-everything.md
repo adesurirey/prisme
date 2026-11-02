@@ -32,8 +32,9 @@ archive; cap = 25; the same table ADR-0041 grades the key with):
 - **Brûlant and Top slice at RANKED_CAP = 25** (`pipeline/src/ranking.ts`):
   the cap cuts each key's order, it never re-decides membership. Always
   active — the pool never fell below 31 Stories over 19 days of archive.
-  25 renders as the load-more initial batch plus one click; the button
-  mechanics are unchanged (ADR-0022's).
+  The load-more batch aligns with the cap (25), so the capped pages
+  render whole — no button; only Nouveau's uncapped tail paginates
+  (ADR-0022's mechanics).
 - **Nouveau carries everything**: uncapped as before — the window is the
   cap (ADR-0029/0035), so the one page where scrolling to the end means
   having missed nothing still exists.
