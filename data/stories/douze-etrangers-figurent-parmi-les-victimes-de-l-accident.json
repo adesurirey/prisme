@@ -6,6 +6,17 @@
   "storyDay": "2026-11-01",
   "articles": [
     {
+      "id": "28d49cf4f69e",
+      "outletId": "le-figaro",
+      "headline": "Accident ferroviaire en Espagne : 4 Américains, 1 Française et 1 Canadien parmi les victimes",
+      "url": "https://www.lefigaro.fr/international/accident-ferroviaire-en-espagne-4-americains-1-francaise-et-1-canadien-parmi-les-victimes-20261102",
+      "publishedAt": "2026-11-02T02:11:41.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/02/b1e2ec1ec9aeff3469c542bde20963c307ca32f31fbae21cd919c4777aab8fc1.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "f6d8ff83d798",
       "outletId": "le-parisien",
       "headline": "12 étrangers, dont une Française et quatre Américains, parmi les victimes de l’accident ferroviaire d’Urda, en Espagne",
@@ -29,21 +40,24 @@
     }
   ],
   "topicId": "678b94e3c14a",
-  "titledArticleCount": 2,
-  "section": "world",
+  "titledArticleCount": 3,
+  "section": "misc",
   "everInEdition": true,
   "summaries": {
     "centre": [
-      "Soixante-neuf personnes ont péri dans la collision de deux trains survenue le mercredi 28 octobre à Urda, en Espagne.",
-      "Le bilan humain dénombre douze victimes de nationalité étrangère, incluant une ressortissante française et quatre Américains.",
-      "La catastrophe survient à un mois des élections législatives anticipées, plaçant le chef du gouvernement Pedro Sánchez en position de vulnérabilité.",
-      "Le drame ravive les polémiques concernant l'état des infrastructures ferroviaires et la gestion des services publics."
+      "Le Parisien dénombre douze nationalités étrangères impliquées dans la catastrophe d'Urda, incluant une ressortissante française et quatre citoyens américains.",
+      "La Croix rapporte que la collision ferroviaire du 28 octobre perturbe la campagne des législatives anticipées et ravive la controverse sur l'entretien des infrastructures."
+    ],
+    "droite": [
+      "Le Figaro précise le bilan des victimes étrangères à Urda, recensant quatre Américains, un Canadien et une Française.",
+      "Le quotidien rappelle qu'il s'agit du second drame ferroviaire en Espagne sur l'année, après l'accident en Andalousie qui a fait 46 morts en janvier."
     ]
   },
   "differences": [
-    "Le centre met en avant la double dimension dramatique et politique de la catastrophe d'Urda, combinant le décompte international des victimes avec l'impact électoral direct sur Pedro Sánchez et la contestation des services publics."
+    "Le camp du centre met l'accent sur les répercussions politiques de la tragédie pour Pedro Sanchez et sur le bilan global des victimes étrangères.",
+    "Le camp de la droite focalise son traitement sur le décompte précis des nationalités touchées et replace l'événement dans la récurrence des défaillances ferroviaires de l'année."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-11-02T02:01:21.254Z"
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-11-02T03:01:16.278Z"
 }
