@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-02T08:01:17.483Z",
+  "builtAt": "2026-11-02T09:01:16.183Z",
   "latestStories": [
     {
       "id": "ea3999c23631",
@@ -26,7 +26,7 @@
           "url": "https://www.ouest-france.fr/sport/formule-1/f1-cest-un-manque-de-respect-la-colere-du-patron-de-ferrari-apres-lincident-entre-leclerc-et-hamilton-a-mexico-3cae2776-d68f-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-02T07:57:54.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTNmYTk5Mzk0ODM5YjEyNTliYTBkZTUxY2FmMWNkOTI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=f4d60627b5203142c2bb7ea218e03bca4a3febe21ac8e82f1baa565c06e338ff",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -320,7 +320,7 @@
           "url": "https://www.lefigaro.fr/sciences/crues-eau-potable-climat-ou-biodiversite-en-faisant-fondre-glaciers-poles-et-permafrost-le-rechauffement-aura-de-redoutables-consequences-des-1-50c-20261102",
           "publishedAt": "2026-11-02T05:35:55.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/2829x1592_crop/2026/11/02/b6038a2d161accc33c9466971611cf97c350e7420f5039ece3ddbc56d0ff321f.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "science",
           "everFrontPage": true
@@ -384,6 +384,52 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 4,
       "summarizedAt": "2026-11-02T06:01:19.100Z"
+    },
+    {
+      "id": "72b0a1ccb626",
+      "slug": "le-traitement-anti-obesite-wegovy-arrive-en-comprime-dans-les",
+      "title": "Le traitement anti-obésité Wegovy arrive en comprimé dans les pharmacies françaises",
+      "createdAt": "2026-11-02T09:01:16.183Z",
+      "storyDay": "2026-11-02",
+      "articles": [
+        {
+          "id": "e3af8c4ba87a",
+          "outletId": "huffpost",
+          "headline": "Le traitement anti-obésité Wegovy en comprimé arrive dans les pharmacies ce lundi, voici ce qu’il faut savoir",
+          "url": "https://www.huffingtonpost.fr/sante/article/le-traitement-anti-obesite-wegovy-en-comprime-arrive-dans-les-pharmacies-ce-lundi-voici-ce-qu-il-faut-savoir_350232.html",
+          "publishedAt": "2026-11-02T08:24:03.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/05/04/53/0/1024/576/0/0/60/0/d57b0f1_upload-1-f2danpbw0bih-afp-20260416-hl-tdurand-3132577-v2-midres-medicationwegovyobesityweightlossillu.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "289aae27883f",
+          "outletId": "le-point",
+          "headline": "Prix, efficacité, précaution à prendre… tout savoir sur l’arrivée de Wegovy version comprimé",
+          "url": "https://www.lepoint.fr/sante/prix-efficacite-precaution-a-prendre-tout-savoir-sur-larrivee-de-wegovy-version-comprime-ZYFNS4ZZTZEONI3OUJTPFCB7CI/",
+          "publishedAt": "2026-11-02T06:51:42.000Z",
+          "imageUrl": "https://www.lepoint.fr/resizer/v2/Y4PVNWRVEFE6DMNCSHHNIWR4E4.webp?auth=610205803626f69dde07b05b070ed7b362153be1efe7969aa78019bad4daa819&smart=true&width=1200&height=900",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "7208d319097d",
+          "outletId": "le-monde",
+          "headline": "Le Wegovy, médicament antiobésité, arrive en comprimé dans les pharmacies françaises",
+          "url": "https://www.lemonde.fr/sante/article/2026/11/02/marche-des-medicaments-antiobesite-le-wegovy-arrive-en-comprime-dans-les-pharmacies-francaises_6804738_1651302.html",
+          "publishedAt": "2026-11-02T00:25:21.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/01/873/0/4518/2259/644/322/60/0/bba59aa_upload-1-tpjyffsr4wc3-2026-08-04t170510z-1902743099-rc2yomau6gna-rtrmadp-3-novo-nordisk-results.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "topicId": "72b0a1ccb626",
+      "titledArticleCount": 3,
+      "section": "society",
+      "everInEdition": true
     },
     {
       "id": "f4ffbac59c02",
@@ -784,6 +830,27 @@
       "storyDay": "2026-11-01",
       "articles": [
         {
+          "id": "54952b567292",
+          "outletId": "liberation",
+          "headline": "Jean-Luc Mélenchon annule son passage au «20 heures» de TF1, la chaîne assure que l’interview «n’était déjà plus d’actualité»",
+          "url": "https://www.liberation.fr/politique/jean-luc-melenchon-annule-son-passage-au-20-heures-de-tf1-la-chaine-assure-que-linterview-netait-deja-plus-dactualite-20261102_PM3K4MOEUREPFODWLIJQ4KATEE/",
+          "publishedAt": "2026-11-02T08:51:34.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "524c5db97e5d",
+          "outletId": "le-jdd",
+          "headline": "«Calomnies racistes» : outré par l’interview de Philippe sur TF1, Mélenchon annule son passage au «20 heures»",
+          "url": "https://www.lejdd.fr/politique/calomnies-racistes-outre-par-linterview-de-philippe-sur-tf1-melenchon-annule-son-passage-au-20-heures-187560",
+          "publishedAt": "2026-11-02T08:23:18.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/02/09/sipa_01312105_000010.jpg?VersionId=U85kiUFXW0HPHYrqg8aQVlllwCLv1uHZ",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
           "id": "0de5e21a63eb",
           "outletId": "franceinfo",
           "headline": "Jean-Luc Mélenchon annonce annuler un passage au \"20 heures\" de TF1 à la suite d'une interview d'Edouard Philippe",
@@ -843,32 +910,32 @@
         }
       ],
       "topicId": "911b3c6bd319",
-      "titledArticleCount": 5,
+      "titledArticleCount": 7,
       "section": "politics",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Jean-Luc Mélenchon a annulé sa participation au journal de 20 heures de TF1 prévu pour la semaine prochaine après l'intervention d'Édouard Philippe.",
-          "Le chef de file de La France insoumise accuse la chaîne de complaisance et reproche au maire du Havre d'avoir tenu un discours dégoûtant sur l'immigration sans être interrompu par la journaliste Anne-Claire Coudray.",
-          "Il qualifie ces prises de parole de « calomnies racistes » à propos des violences survenues en marge des manifestations du 17 octobre et de l'intégration."
+          "Jean-Luc Mélenchon a annulé sa participation prévue au journal télévisé de 20 heures de TF1 pour protester contre l'interview d'Édouard Philippe.",
+          "Le leader de La France insoumise qualifie de \"discours dégoûtant\" et de \"calomnies racistes\" les propos tenus par le maire du Havre sur l'immigration et les violences urbaines.",
+          "Il reproche en outre à la présentatrice Anne-Claire Coudray de ne pas avoir interrompu le candidat d'Horizons lors de cet entretien."
         ],
         "centre": [
-          "Jean-Luc Mélenchon a décidé de boycotter TF1 à la suite de l'entretien accordé par Édouard Philippe à Anne-Claire Coudray.",
-          "Le candidat insoumis à l'élection présidentielle de 2027 estime que l'ancien Premier ministre a pu dérouler un propos inacceptable sur l'immigration et l'intégration sans la moindre contradiction de la part de la chaîne."
+          "Jean-Luc Mélenchon a pris la décision de boycotter TF1 après la diffusion de l'interview d'Édouard Philippe au journal de 20 heures.",
+          "Le tribun insoumis reproche à la chaîne d'avoir offert une tribune complaisante à l'ancien Premier ministre pour \"dérouler un discours dégoûtant\" sur l'immigration."
         ],
         "droite": [
-          "Jean-Luc Mélenchon a renoncé à se rendre sur le plateau du journal télévisé de TF1 en signe de protestation contre l'entretien d'Édouard Philippe mené par Anne-Claire Coudray.",
-          "Le tribun insoumis a vertement critiqué la chaîne et le maire du Havre, affirmant que la présentatrice avait repris à son compte des « calomnies racistes »."
+          "Jean-Luc Mélenchon a fait savoir qu'il renonçait à se rendre sur le plateau du journal télévisé de TF1 à la suite du passage d'Édouard Philippe.",
+          "Le JDD et Le Figaro soulignent que le responsable politique justifie cette annulation par son indignation face aux propos reliant immigration et violences urbaines, qu'il qualifie de \"calomnies racistes\"."
         ]
       },
       "differences": [
-        "La gauche insiste lourdement sur la nature jugée raciste des propos tenus par Édouard Philippe et sur la complicité supposée de la chaîne.",
-        "Le centre qualifie la décision de boycott par un angle plus neutre, soulignant l'absence de contradiction lors de l'interview sur l'immigration.",
-        "La droite met en avant le refus de Jean-Luc Mélenchon d'affronter le débat télévisé tout en reprenant ses accusations directes contre la présentatrice."
+        "La gauche met l'accent sur la complicité supposée de la chaîne et de sa présentatrice, accusées d'avoir validé sans contradictoire les propos d'Édouard Philippe.",
+        "Le centre retient la décision radicale du boycott médiatique et l'accusation d'une interview jugée complaisante par le dirigeant insoumis.",
+        "La droite qualifie l'annulation de \"dérobade\" et met en avant la virulence des termes employés par Jean-Luc Mélenchon pour disqualifier l'intervention d'Édouard Philippe."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-11-02T06:01:19.100Z"
+      "summarizedArticleCount": 7,
+      "summarizedAt": "2026-11-02T09:01:16.183Z"
     },
     {
       "id": "47d5253b4b18",
@@ -1023,7 +1090,7 @@
           "url": "https://www.lefigaro.fr/international/floride-un-jet-prive-s-ecrase-et-explose-dans-un-quartier-residentiel-9-morts-20261101",
           "publishedAt": "2026-11-01T21:43:29.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/1523x856_crop/2026/11/01/31cdb4104ce698e8c8da721d3f5c760a327334ed937a97a7c5bf0c59e0fa5ede.png",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -1135,6 +1202,17 @@
       "storyDay": "2026-11-01",
       "articles": [
         {
+          "id": "1c8226cfbda1",
+          "outletId": "bfmtv",
+          "headline": "Présidentielle: malgré le refus d'Édouard Philippe, Gabriel Attal pense la primaire \"inéluctable\"",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-malgre-le-refus-d-edouard-philippe-gabriel-attal-pense-la-primaire-ineluctable_AD-202611020365.html",
+          "publishedAt": "2026-11-02T08:51:49.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/LreJ1pEH8hjndGfAiEjMi7-jZiM=/0x24:2048x1176/800x0/images/Le-patron-de-Renaissance-Gabriel-Attal-le-29-septembre-2026-a-Paris-2361664.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
           "id": "ed2a254b17e7",
           "outletId": "le-parisien",
           "headline": "Présidentielle 2027 : « Au final, la primaire aura lieu », estime Gabriel Attal après le refus d’Édouard Philippe",
@@ -1152,7 +1230,7 @@
           "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-malgre-le-refus-d-edouard-philippe-gabriel-attal-pense-la-primaire-ineluctable-20261102",
           "publishedAt": "2026-11-02T07:56:04.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/02/3c5b9f2253d3af73aead213225dbf0c4183a313a12efad716b91090b63f91443.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -1164,7 +1242,7 @@
           "url": "https://www.ouest-france.fr/elections/presidentielle/presidentielle-2027-gabriel-attal-juge-la-primaire-ineluctable-malgre-le-refus-dedouard-philippe-475faffe-d690-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-02T07:53:01.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMGYwYTViMGQ5ZWQwZjE5MzczMTY5OWY4Mzg3ODMwZDg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=44df432d33b89a8eb3c4a6b4d5897fd462b69b87ef453a04160faf1ace1a4fa9",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -1286,7 +1364,7 @@
           "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-edouard-philippe-rejette-la-primaire-des-democrates-proposee-par-gabriel-attal-20261101",
           "publishedAt": "2026-11-01T20:43:54.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/01/c0ed0863e54f47a8aed59106ea3672c4740ec0190b2e0191348495ead5228708.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -2936,6 +3014,17 @@
       "storyDay": "2026-11-01",
       "articles": [
         {
+          "id": "6f7da31f0f75",
+          "outletId": "bfmtv",
+          "headline": "Guerre en Iran: Donald Trump menace de \"donner un coup de massue\", Téhéran promet une guerre \"plus longue que la précédente\"",
+          "url": "https://www.bfmtv.com/international/moyen-orient/iran/video-guerre-en-iran-donald-trump-menace-de-donner-un-coup-de-massue-teheran-promet-une-guerre-plus-longue-que-la-precedente_VN-202611020366.html",
+          "publishedAt": "2026-11-02T08:51:28.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Nb3WkmEA4axJJHHUCk2nMQy9zvg=/0x0:1280x720/800x0/images/Guerre-en-Iran-Donald-Trump-menace-de-donner-un-coup-de-massue-Teheran-promet-une-guerre-plus-longue-que-la-precedente-2376198.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
           "id": "f1c25a064d33",
           "outletId": "liberation",
           "headline": "Face aux menaces de Trump, l’Iran avertit qu’une nouvelle guerre pourrait être «plus longue»",
@@ -3671,7 +3760,7 @@
           "url": "https://www.ouest-france.fr/societe/justice/petite-martyre-de-la10-inass-tuee-a-4-ans-attend-justice-ab50853a-d62a-11f1-9ffa-07ff3c370e50?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-02T07:45:55.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYzJkMzYzMDAyYTcxZTU0NWYwZmFkOWQ0NzAyODZhZjQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2970b84ef957160b6f96215e79703fc4bd25f1d77e6679d1d38c70706869247c",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -4362,181 +4451,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 3,
       "summarizedAt": "2026-11-01T23:01:14.034Z"
-    },
-    {
-      "id": "b07ea7ee6e62",
-      "slug": "les-bulgares-elisent-leur-president-lors-d-un-second-tour-sous",
-      "title": "Iliana Iotova remporte l'élection présidentielle en Bulgarie sur fond de tensions avec la Russie",
-      "createdAt": "2026-11-01T11:01:16.039Z",
-      "storyDay": "2026-11-01",
-      "articles": [
-        {
-          "id": "48f79a713b2e",
-          "outletId": "la-croix",
-          "headline": "Présidentielle en Bulgarie : victoire de Iliana Iotova, la candidate favorable au dialogue avec Moscou",
-          "url": "https://www.la-croix.com/presidentielle-en-bulgarie-un-duel-serre-sur-fond-de-tensions-en-mer-noire-20261031",
-          "publishedAt": "2026-11-02T06:21:00.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/11/01/2577687-la-presidente-sortante-iliana-iotova-vote-au-secon.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "9cd803d0f690",
-          "outletId": "20-minutes",
-          "headline": "Favorable au dialogue avec Moscou, Iliana Iotova élue présidente de la Bulgarie",
-          "url": "https://www.20minutes.fr/monde/ukraine/4259403-20261102-favorable-dialogue-moscou-iliana-iotova-elue-presidente-bulgarie?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-02T01:04:57.000Z",
-          "imageUrl": "https://img.20mn.fr/CxVMZwl7QpGSCCnPtYFW2Sk/1200x768_260123-sofia-23-janvier-2026-xinhua-iliana-iotova-revient-au-batiment-presidentiel-de-sofia-en-bulgarie-le-23-janvier-2026-la-cour-constitutionnelle-de-la-republique-de-bulgarie-a-approuve-vendredi-la-demission-du-president-rumen-radev-qu-il-a-presentee-mardi-a-indique-la-cour-sur-son-site-internet-selon-la-constitution-bulgare-la-vice-presidente-iliana-iotova-assumera-la-presidence-pour-le-reste-du-mandat-qui-expire-en-janvier-2027-le-bureau-de-presse-du-president-bulgare-document-publie-via-xinhua-lin-hao-chinenouvelle-chine010300-credit-chine-nouvelle-sipa-2601241101",
-          "frontPage": true,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "18afa5c7610c",
-          "outletId": "rfi",
-          "headline": "Bulgarie: la présidente sortante Iliana Iotova remporte l'élection présidentielle",
-          "url": "https://www.rfi.fr/fr/europe/20261101-bulgarie-la-pr%C3%A9sidente-sortante-iliana-iotova-remporte-l-%C3%A9lection-pr%C3%A9sidentielle",
-          "publishedAt": "2026-11-01T21:34:51.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/6c65d242-d63b-11f1-a2b2-1beafce15fea/w:1024/p:16x9/2026-11-01T195717Z-1021646608-RC27FOAYHO6T-RTRMADP-3-BULGARIA-ELECTION-PRESIDENT.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "38ca69e28416",
-          "outletId": "le-monde",
-          "headline": "Présidentielle en Bulgarie : Iliana Iotova remporte l’élection, selon plusieurs sondages à la sortie des urnes",
-          "url": "https://www.lemonde.fr/international/article/2026/11/01/presidentielle-en-bulgarie-iliana-iotova-remporte-l-election-selon-plusieurs-sondages-a-la-sortie-des-urnes_6804603_3210.html",
-          "publishedAt": "2026-11-01T19:07:41.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/01/455/0/5463/2731/644/322/60/0/a7022f0_ftp-1-kfdaqfzgxvsb-afp-d6373nq.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "87e652728da5",
-          "outletId": "ouest-france",
-          "headline": "Bulgarie : partisane du dialogue avec Moscou, Iliana Iotova, remporte la présidentielle",
-          "url": "https://www.ouest-france.fr/europe/bulgarie/bulgarie-partisane-du-dialogue-avec-moscou-iliana-iotova-remporte-la-presidentielle-eae9faba-d61f-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-01T18:48:57.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExN2UxMzYyOTFlMDljZmMyMGJkOTYxYTYyZGJjZGQzYzU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=94971c103e3c7f9b9820855bc3e31ec0b89101f7983871e95e8a867d3837f282",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "c77009018d73",
-          "outletId": "le-figaro",
-          "headline": "Bulgarie : Iliana Iotova, partisane du dialogue avec Moscou, remporte la présidentielle",
-          "url": "https://www.lefigaro.fr/international/bulgarie-iliana-iotova-partisane-du-dialogue-avec-moscou-remporte-la-presidentielle-20261101",
-          "publishedAt": "2026-11-01T18:25:18.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/01/e32ac80db48cca65902f2e34509af007ecf5d11feba166d5f585af7d8159cbae.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "53c7b93c9df9",
-          "outletId": "rfi",
-          "headline": "En Bulgarie, une élection présidentielle sur fond de tensions en mer Noire et de guerre en Ukraine",
-          "url": "https://www.rfi.fr/fr/europe/20261101-en-bulgarie-une-%C3%A9lection-pr%C3%A9sidentielle-sur-fond-de-tensions-en-mer-noire-et-de-guerre-en-ukraine",
-          "publishedAt": "2026-11-01T13:35:33.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/f8d08e92-d5f6-11f1-a49d-d18c5759e759/w:1024/p:16x9/AP26305238388217.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "8f44e4af7db0",
-          "outletId": "liberation",
-          "headline": "Présidentielle en Bulgarie : un duel serré sur fond de tensions avec la Russie en mer Noire",
-          "url": "https://www.liberation.fr/international/europe/presidentielle-en-bulgarie-un-duel-serre-sur-fond-de-tensions-avec-la-russie-en-mer-noire-20261101_PWOECFDJYVEDXCP7XGL4URBHZM/",
-          "publishedAt": "2026-11-01T12:06:35.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "e6fec1b2c926",
-          "outletId": "france-24",
-          "headline": "Présidentielle en Bulgarie : un duel serré, catalyseur de divisions sur les relations à la Russie",
-          "url": "https://www.france24.com/fr/europe/20261101-pr%C3%A9sidentielle-en-bulgarie-un-duel-serr%C3%A9-sur-fond-de-tensions-en-mer-noire",
-          "publishedAt": "2026-11-01T11:39:55.000Z",
-          "imageUrl": "https://s.france24.com/media/display/f544bbe4-d5e8-11f1-846b-1beafce15fea/w:1024/p:16x9/c06a5f6ba51f959ef207dced74fc685896e1daf3.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "b3a14bc419b5",
-          "outletId": "lexpress",
-          "headline": "Bulgarie : entre Moscou et Bruxelles, une présidentielle à la croisée des chemins",
-          "url": "https://www.lexpress.fr/monde/europe/bulgarie-entre-moscou-et-bruxelles-une-presidentielle-a-la-croisee-des-chemins-US23C7AF5NFTVARAEDMZCXIGI4/",
-          "publishedAt": "2026-11-01T10:27:20.000Z",
-          "imageUrl": "https://www.lexpress.fr/resizer/v2/3NWG44ZTORGJRFAKSV42T4Y5TE.JPG?auth=4982bb009c95a1b4cbc991b22e42576e757139c4d0677ce049bcb783c62f1576&smart=true&width=5500&height=3663",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "ddb0024c8bf4",
-          "outletId": "le-figaro",
-          "headline": "Les Bulgares élisent leur président, sur fond de tensions sécuritaires en mer Noire",
-          "url": "https://www.lefigaro.fr/international/les-bulgares-elisent-leur-president-sur-fond-de-tensions-securitaires-en-mer-noire-20261101",
-          "publishedAt": "2026-11-01T09:45:38.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2986x1679_crop/2026/11/01/172a89d22c024247257bae4a34e2d83faae467dc1456a986640e1ee02cf608be.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "c30fb940ad16",
-          "outletId": "le-monde",
-          "headline": "En Bulgarie, le second tour de l’élection présidentielle est ouvert, duel serré en vue sur fond de tensions avec la Russie",
-          "url": "https://www.lemonde.fr/international/article/2026/11/01/en-bulgarie-le-second-tour-de-l-election-presidentielle-s-ouvre-dimanche-avec-un-duel-serre-sur-fond-de-tensions-avec-la-russie_6804128_3210.html",
-          "publishedAt": "2026-11-01T08:42:19.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/01/25/0/5218/2609/644/322/60/0/3303159_ftp-1-hmsl8bfhee2r-ea65d8bba7264a12b402063c6501afac-1-bce5c7aef3484f218855358bae8d3eb0.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "b07ea7ee6e62",
-      "titledArticleCount": 10,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "La présidente sortante Iliana Iotova est arrivée en tête au premier tour de l'élection présidentielle avec trente-cinq pour cent des voix.",
-          "Elle affronte au second tour Andrey Gyurov, l'ancien Premier ministre intérimaire soutenu par l'opposition pro-occidentale.",
-          "Le scrutin se déroule dans un climat de duel serré et sur fond de tensions avec la Russie en mer Noire."
-        ],
-        "centre": [
-          "La présidente sortante Iliana Iotova a remporté l'élection présidentielle en Bulgarie selon les sondages à la sortie des urnes.",
-          "Elle est partisane d'un dialogue avec Moscou pour mettre fin à la guerre en Ukraine.",
-          "Déjà présidente par intérim, elle devient la première femme élue à la présidence du pays pour une fonction essentiellement honorifique.",
-          "Le scrutin s'est tenu dans un contexte de menaces sécuritaires régionales et de faible participation au premier tour."
-        ],
-        "droite": [
-          "Iliana Iotova a remporté la présidentielle bulgare avec un score estimé entre cinquante virgule sept et cinquante-deux virgule cinq pour cent des voix.",
-          "Elle devance son rival Andrey Gyurov, ancien Premier ministre par intérim soutenu par l'opposition pro-occidentale.",
-          "Les deux candidats présentaient des visions opposées sur la guerre en Ukraine et les relations avec la Russie, sur fond de tensions accrues en mer Noire."
-        ]
-      },
-      "differences": [
-        "La gauche met l'accent sur le caractère serré du duel électoral et les scores précis du premier tour face à l'adversaire pro-occidental.",
-        "Le centre insiste sur la victoire de la présidente sortante et le profil institutionnel du scrutin dans un contexte de tensions sécuritaires en mer Noire.",
-        "La droite souligne l'écart de voix avec le candidat de l'opposition et centre son analyse sur l'opposition des visions géopolitiques entre Moscou et l'Occident."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 10,
-      "summarizedAt": "2026-11-01T22:01:16.825Z"
     }
   ],
   "feedStories": [
@@ -4547,6 +4461,17 @@
       "createdAt": "2026-11-01T21:01:24.228Z",
       "storyDay": "2026-11-01",
       "articles": [
+        {
+          "id": "1c8226cfbda1",
+          "outletId": "bfmtv",
+          "headline": "Présidentielle: malgré le refus d'Édouard Philippe, Gabriel Attal pense la primaire \"inéluctable\"",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-malgre-le-refus-d-edouard-philippe-gabriel-attal-pense-la-primaire-ineluctable_AD-202611020365.html",
+          "publishedAt": "2026-11-02T08:51:49.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/LreJ1pEH8hjndGfAiEjMi7-jZiM=/0x24:2048x1176/800x0/images/Le-patron-de-Renaissance-Gabriel-Attal-le-29-septembre-2026-a-Paris-2361664.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
         {
           "id": "ed2a254b17e7",
           "outletId": "le-parisien",
@@ -4565,7 +4490,7 @@
           "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-malgre-le-refus-d-edouard-philippe-gabriel-attal-pense-la-primaire-ineluctable-20261102",
           "publishedAt": "2026-11-02T07:56:04.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/02/3c5b9f2253d3af73aead213225dbf0c4183a313a12efad716b91090b63f91443.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -4577,7 +4502,7 @@
           "url": "https://www.ouest-france.fr/elections/presidentielle/presidentielle-2027-gabriel-attal-juge-la-primaire-ineluctable-malgre-le-refus-dedouard-philippe-475faffe-d690-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-02T07:53:01.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMGYwYTViMGQ5ZWQwZjE5MzczMTY5OWY4Mzg3ODMwZDg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=44df432d33b89a8eb3c4a6b4d5897fd462b69b87ef453a04160faf1ace1a4fa9",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -4699,7 +4624,7 @@
           "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-edouard-philippe-rejette-la-primaire-des-democrates-proposee-par-gabriel-attal-20261101",
           "publishedAt": "2026-11-01T20:43:54.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/01/c0ed0863e54f47a8aed59106ea3672c4740ec0190b2e0191348495ead5228708.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -5155,7 +5080,7 @@
           "url": "https://www.ouest-france.fr/societe/justice/petite-martyre-de-la10-inass-tuee-a-4-ans-attend-justice-ab50853a-d62a-11f1-9ffa-07ff3c370e50?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-02T07:45:55.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYzJkMzYzMDAyYTcxZTU0NWYwZmFkOWQ0NzAyODZhZjQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2970b84ef957160b6f96215e79703fc4bd25f1d77e6679d1d38c70706869247c",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -5846,7 +5771,7 @@
           "url": "https://www.lefigaro.fr/international/floride-un-jet-prive-s-ecrase-et-explose-dans-un-quartier-residentiel-9-morts-20261101",
           "publishedAt": "2026-11-01T21:43:29.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/1523x856_crop/2026/11/01/31cdb4104ce698e8c8da721d3f5c760a327334ed937a97a7c5bf0c59e0fa5ede.png",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -6069,6 +5994,121 @@
       "summarizedAt": "2026-11-02T07:01:21.544Z"
     },
     {
+      "id": "911b3c6bd319",
+      "slug": "jean-luc-melenchon-annule-sa-participation-au-journal-televise",
+      "title": "Jean-Luc Mélenchon annule sa participation au journal de TF1 après l'interview d'Édouard Philippe",
+      "createdAt": "2026-11-02T01:01:16.442Z",
+      "storyDay": "2026-11-01",
+      "articles": [
+        {
+          "id": "54952b567292",
+          "outletId": "liberation",
+          "headline": "Jean-Luc Mélenchon annule son passage au «20 heures» de TF1, la chaîne assure que l’interview «n’était déjà plus d’actualité»",
+          "url": "https://www.liberation.fr/politique/jean-luc-melenchon-annule-son-passage-au-20-heures-de-tf1-la-chaine-assure-que-linterview-netait-deja-plus-dactualite-20261102_PM3K4MOEUREPFODWLIJQ4KATEE/",
+          "publishedAt": "2026-11-02T08:51:34.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "524c5db97e5d",
+          "outletId": "le-jdd",
+          "headline": "«Calomnies racistes» : outré par l’interview de Philippe sur TF1, Mélenchon annule son passage au «20 heures»",
+          "url": "https://www.lejdd.fr/politique/calomnies-racistes-outre-par-linterview-de-philippe-sur-tf1-melenchon-annule-son-passage-au-20-heures-187560",
+          "publishedAt": "2026-11-02T08:23:18.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/02/09/sipa_01312105_000010.jpg?VersionId=U85kiUFXW0HPHYrqg8aQVlllwCLv1uHZ",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "0de5e21a63eb",
+          "outletId": "franceinfo",
+          "headline": "Jean-Luc Mélenchon annonce annuler un passage au \"20 heures\" de TF1 à la suite d'une interview d'Edouard Philippe",
+          "url": "https://www.franceinfo.fr/elections/presidentielle/jean-luc-melenchon-annonce-annuler-un-passage-au-20-heures-de-tf1-a-la-suite-d-une-interview-d-edouard-philippe_8263556.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-02T07:34:12.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/q5CLHadVBRJHKXyF5bAFlJOs2dA/0x53:1024x629/432x243/filters:format(jpg)/2026/11/02/6ae83c7272481985846448.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "d75ba226b702",
+          "outletId": "huffpost",
+          "headline": "Après des propos d’Édouard Philippe sur l’immigration, Mélenchon annule sa venue au JT de TF1 et dénonce des « calomnies racistes »",
+          "url": "https://www.huffingtonpost.fr/politique/article/apres-des-propos-d-edouard-philippe-sur-l-immigration-melenchon-annule-sa-venue-au-jt-de-tf1-et-denonce-des-calomnies-racistes_350132.html",
+          "publishedAt": "2026-11-02T05:45:08.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/08/27/8/0/1200/675/0/0/60/0/4175794_upload-1-3hxrzz3sacmb-afp-20260827-c6n77m8-v1-midres-franceeconomylabourunionsmedef.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c86fece15cf2",
+          "outletId": "20-minutes",
+          "headline": "Présidentielle 2027 : Accusant TF1 de ménager Édouard Philippe sur le racisme, Mélenchon annule son 20H",
+          "url": "https://www.20minutes.fr/politique/4259410-20261102-presidentielle-2027-accusant-tf1-menager-edouard-philippe-racisme-melenchon-annule-20h?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-02T04:10:44.000Z",
+          "imageUrl": "https://img.20mn.fr/4kEPGvhTRwiwC3wbqf7R_yk/1200x768_october-24-2026-paris-a-union-demonstration-against-the-high-cost-of-living-and-in-support-of-the-blockades-at-high-schools-and-universities-the-route-authorized-by-the-prefecture-running-from-porte-d-italie-to-porte-de-vincennes-is-unprecedented-and-was-decided-against-the-wishes-of-the-unions-this-follows-numerous-incidents-of-looting-at-stores-that-took-place-the-previous-week-24-octobre-2026-paris-le-candidat-lfi-aux-election-presidentielles-jean-luc-melenchon-est-presnet-a-la-manifestation-syndicale-contre-la-vie-chere-et-en-soutien-aux-blocus-de-lycees-et-d-universites-le-trajet-autorise-par-la-prefecture-partant-de-porte-d-italie-a-porte-de-vincennes-est-inedit-et-a-ete-decide-contre-la-volonte-des-syndicats-cela-fait-suite-aux-nombreux-pillages-de-magasins-qui-ont-lieu-la-semaine-precedente-arnaud-cesar-vilette-sipa-press-vilettearnaud-vilette2673-credit-arnaud-cesar-vilette-sipa-2610241949",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "7e03a9270264",
+          "outletId": "le-figaro",
+          "headline": "«Calomnies racistes» : fâché contre TF1 et l'interview d’Édouard Philippe, Jean-Luc Mélenchon annule un passage au «20 heures»",
+          "url": "https://tvmag.lefigaro.fr/programme-tv/actu-tele/calomnies-racistes-fache-contre-tf1-et-l-interview-d-edouard-philippe-jean-luc-melenchon-annule-un-passage-au-20-heures-20261101",
+          "publishedAt": "2026-11-01T22:53:36.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/01/8490dc4f84c9d93233344f2f35a0bd63ee72202aa536ef9c1a725ad99575e9a1.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "c6ff1d7a4e06",
+          "outletId": "ouest-france",
+          "headline": "Jean-Luc Mélenchon va boycotter TF1 après l’interview selon lui complaisante d’Edouard Philippe au 20 h ce dimanche",
+          "url": "https://www.ouest-france.fr/politique/jean-luc-melenchon/jean-luc-melenchon-va-boycotter-tf1-apres-une-interview-selon-lui-complaisante-dedouard-philippe-diffusee-ce-dimanche-56b0bd4c-d639-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-01T21:40:23.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYzJjMWQzMDFjOTQ3ZmJmMGQ0NmJkYmU3MzRmZWQwNTA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ee7c9f8796ecf2c4ca94e1a7386153323d7233444c4225fb7fe8c864ebc71836",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "911b3c6bd319",
+      "titledArticleCount": 7,
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Jean-Luc Mélenchon a annulé sa participation prévue au journal télévisé de 20 heures de TF1 pour protester contre l'interview d'Édouard Philippe.",
+          "Le leader de La France insoumise qualifie de \"discours dégoûtant\" et de \"calomnies racistes\" les propos tenus par le maire du Havre sur l'immigration et les violences urbaines.",
+          "Il reproche en outre à la présentatrice Anne-Claire Coudray de ne pas avoir interrompu le candidat d'Horizons lors de cet entretien."
+        ],
+        "centre": [
+          "Jean-Luc Mélenchon a pris la décision de boycotter TF1 après la diffusion de l'interview d'Édouard Philippe au journal de 20 heures.",
+          "Le tribun insoumis reproche à la chaîne d'avoir offert une tribune complaisante à l'ancien Premier ministre pour \"dérouler un discours dégoûtant\" sur l'immigration."
+        ],
+        "droite": [
+          "Jean-Luc Mélenchon a fait savoir qu'il renonçait à se rendre sur le plateau du journal télévisé de TF1 à la suite du passage d'Édouard Philippe.",
+          "Le JDD et Le Figaro soulignent que le responsable politique justifie cette annulation par son indignation face aux propos reliant immigration et violences urbaines, qu'il qualifie de \"calomnies racistes\"."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur la complicité supposée de la chaîne et de sa présentatrice, accusées d'avoir validé sans contradictoire les propos d'Édouard Philippe.",
+        "Le centre retient la décision radicale du boycott médiatique et l'accusation d'une interview jugée complaisante par le dirigeant insoumis.",
+        "La droite qualifie l'annulation de \"dérobade\" et met en avant la virulence des termes employés par Jean-Luc Mélenchon pour disqualifier l'intervention d'Édouard Philippe."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 7,
+      "summarizedAt": "2026-11-02T09:01:16.183Z"
+    },
+    {
       "id": "0c83f2aa1a5b",
       "slug": "violette-dorange-impliquee-dans-une-collision-lors-de-la-route",
       "title": "Violette Dorange annonce une escale après une collision lors de la Route du Rhum",
@@ -6202,6 +6242,17 @@
       "storyDay": "2026-11-01",
       "articles": [
         {
+          "id": "6f7da31f0f75",
+          "outletId": "bfmtv",
+          "headline": "Guerre en Iran: Donald Trump menace de \"donner un coup de massue\", Téhéran promet une guerre \"plus longue que la précédente\"",
+          "url": "https://www.bfmtv.com/international/moyen-orient/iran/video-guerre-en-iran-donald-trump-menace-de-donner-un-coup-de-massue-teheran-promet-une-guerre-plus-longue-que-la-precedente_VN-202611020366.html",
+          "publishedAt": "2026-11-02T08:51:28.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Nb3WkmEA4axJJHHUCk2nMQy9zvg=/0x0:1280x720/800x0/images/Guerre-en-Iran-Donald-Trump-menace-de-donner-un-coup-de-massue-Teheran-promet-une-guerre-plus-longue-que-la-precedente-2376198.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
           "id": "f1c25a064d33",
           "outletId": "liberation",
           "headline": "Face aux menaces de Trump, l’Iran avertit qu’une nouvelle guerre pourrait être «plus longue»",
@@ -6322,100 +6373,6 @@
       "summarizedAt": "2026-11-02T08:01:17.483Z"
     },
     {
-      "id": "911b3c6bd319",
-      "slug": "jean-luc-melenchon-annule-sa-participation-au-journal-televise",
-      "title": "Jean-Luc Mélenchon annule sa participation au journal de TF1 après l'interview d'Édouard Philippe",
-      "createdAt": "2026-11-02T01:01:16.442Z",
-      "storyDay": "2026-11-01",
-      "articles": [
-        {
-          "id": "0de5e21a63eb",
-          "outletId": "franceinfo",
-          "headline": "Jean-Luc Mélenchon annonce annuler un passage au \"20 heures\" de TF1 à la suite d'une interview d'Edouard Philippe",
-          "url": "https://www.franceinfo.fr/elections/presidentielle/jean-luc-melenchon-annonce-annuler-un-passage-au-20-heures-de-tf1-a-la-suite-d-une-interview-d-edouard-philippe_8263556.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-02T07:34:12.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/q5CLHadVBRJHKXyF5bAFlJOs2dA/0x53:1024x629/432x243/filters:format(jpg)/2026/11/02/6ae83c7272481985846448.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "d75ba226b702",
-          "outletId": "huffpost",
-          "headline": "Après des propos d’Édouard Philippe sur l’immigration, Mélenchon annule sa venue au JT de TF1 et dénonce des « calomnies racistes »",
-          "url": "https://www.huffingtonpost.fr/politique/article/apres-des-propos-d-edouard-philippe-sur-l-immigration-melenchon-annule-sa-venue-au-jt-de-tf1-et-denonce-des-calomnies-racistes_350132.html",
-          "publishedAt": "2026-11-02T05:45:08.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/08/27/8/0/1200/675/0/0/60/0/4175794_upload-1-3hxrzz3sacmb-afp-20260827-c6n77m8-v1-midres-franceeconomylabourunionsmedef.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "c86fece15cf2",
-          "outletId": "20-minutes",
-          "headline": "Présidentielle 2027 : Accusant TF1 de ménager Édouard Philippe sur le racisme, Mélenchon annule son 20H",
-          "url": "https://www.20minutes.fr/politique/4259410-20261102-presidentielle-2027-accusant-tf1-menager-edouard-philippe-racisme-melenchon-annule-20h?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-02T04:10:44.000Z",
-          "imageUrl": "https://img.20mn.fr/4kEPGvhTRwiwC3wbqf7R_yk/1200x768_october-24-2026-paris-a-union-demonstration-against-the-high-cost-of-living-and-in-support-of-the-blockades-at-high-schools-and-universities-the-route-authorized-by-the-prefecture-running-from-porte-d-italie-to-porte-de-vincennes-is-unprecedented-and-was-decided-against-the-wishes-of-the-unions-this-follows-numerous-incidents-of-looting-at-stores-that-took-place-the-previous-week-24-octobre-2026-paris-le-candidat-lfi-aux-election-presidentielles-jean-luc-melenchon-est-presnet-a-la-manifestation-syndicale-contre-la-vie-chere-et-en-soutien-aux-blocus-de-lycees-et-d-universites-le-trajet-autorise-par-la-prefecture-partant-de-porte-d-italie-a-porte-de-vincennes-est-inedit-et-a-ete-decide-contre-la-volonte-des-syndicats-cela-fait-suite-aux-nombreux-pillages-de-magasins-qui-ont-lieu-la-semaine-precedente-arnaud-cesar-vilette-sipa-press-vilettearnaud-vilette2673-credit-arnaud-cesar-vilette-sipa-2610241949",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "7e03a9270264",
-          "outletId": "le-figaro",
-          "headline": "«Calomnies racistes» : fâché contre TF1 et l'interview d’Édouard Philippe, Jean-Luc Mélenchon annule un passage au «20 heures»",
-          "url": "https://tvmag.lefigaro.fr/programme-tv/actu-tele/calomnies-racistes-fache-contre-tf1-et-l-interview-d-edouard-philippe-jean-luc-melenchon-annule-un-passage-au-20-heures-20261101",
-          "publishedAt": "2026-11-01T22:53:36.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/01/8490dc4f84c9d93233344f2f35a0bd63ee72202aa536ef9c1a725ad99575e9a1.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "c6ff1d7a4e06",
-          "outletId": "ouest-france",
-          "headline": "Jean-Luc Mélenchon va boycotter TF1 après l’interview selon lui complaisante d’Edouard Philippe au 20 h ce dimanche",
-          "url": "https://www.ouest-france.fr/politique/jean-luc-melenchon/jean-luc-melenchon-va-boycotter-tf1-apres-une-interview-selon-lui-complaisante-dedouard-philippe-diffusee-ce-dimanche-56b0bd4c-d639-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-01T21:40:23.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYzJjMWQzMDFjOTQ3ZmJmMGQ0NmJkYmU3MzRmZWQwNTA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ee7c9f8796ecf2c4ca94e1a7386153323d7233444c4225fb7fe8c864ebc71836",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "911b3c6bd319",
-      "titledArticleCount": 5,
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Jean-Luc Mélenchon a annulé sa participation au journal de 20 heures de TF1 prévu pour la semaine prochaine après l'intervention d'Édouard Philippe.",
-          "Le chef de file de La France insoumise accuse la chaîne de complaisance et reproche au maire du Havre d'avoir tenu un discours dégoûtant sur l'immigration sans être interrompu par la journaliste Anne-Claire Coudray.",
-          "Il qualifie ces prises de parole de « calomnies racistes » à propos des violences survenues en marge des manifestations du 17 octobre et de l'intégration."
-        ],
-        "centre": [
-          "Jean-Luc Mélenchon a décidé de boycotter TF1 à la suite de l'entretien accordé par Édouard Philippe à Anne-Claire Coudray.",
-          "Le candidat insoumis à l'élection présidentielle de 2027 estime que l'ancien Premier ministre a pu dérouler un propos inacceptable sur l'immigration et l'intégration sans la moindre contradiction de la part de la chaîne."
-        ],
-        "droite": [
-          "Jean-Luc Mélenchon a renoncé à se rendre sur le plateau du journal télévisé de TF1 en signe de protestation contre l'entretien d'Édouard Philippe mené par Anne-Claire Coudray.",
-          "Le tribun insoumis a vertement critiqué la chaîne et le maire du Havre, affirmant que la présentatrice avait repris à son compte des « calomnies racistes »."
-        ]
-      },
-      "differences": [
-        "La gauche insiste lourdement sur la nature jugée raciste des propos tenus par Édouard Philippe et sur la complicité supposée de la chaîne.",
-        "Le centre qualifie la décision de boycott par un angle plus neutre, soulignant l'absence de contradiction lors de l'interview sur l'immigration.",
-        "La droite met en avant le refus de Jean-Luc Mélenchon d'affronter le débat télévisé tout en reprenant ses accusations directes contre la présentatrice."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-11-02T06:01:19.100Z"
-    },
-    {
       "id": "b07ea7ee6e62",
       "slug": "les-bulgares-elisent-leur-president-lors-d-un-second-tour-sous",
       "title": "Iliana Iotova remporte l'élection présidentielle en Bulgarie sur fond de tensions avec la Russie",
@@ -6463,7 +6420,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/11/01/presidentielle-en-bulgarie-iliana-iotova-remporte-l-election-selon-plusieurs-sondages-a-la-sortie-des-urnes_6804603_3210.html",
           "publishedAt": "2026-11-01T19:07:41.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/01/455/0/5463/2731/644/322/60/0/a7022f0_ftp-1-kfdaqfzgxvsb-afp-d6373nq.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -6691,7 +6648,7 @@
           "url": "https://www.ouest-france.fr/sport/formule-1/f1-cest-un-manque-de-respect-la-colere-du-patron-de-ferrari-apres-lincident-entre-leclerc-et-hamilton-a-mexico-3cae2776-d68f-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-02T07:57:54.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTNmYTk5Mzk0ODM5YjEyNTliYTBkZTUxY2FmMWNkOTI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=f4d60627b5203142c2bb7ea218e03bca4a3febe21ac8e82f1baa565c06e338ff",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -6812,6 +6769,52 @@
       "summarizedAt": "2026-11-02T08:01:17.483Z"
     },
     {
+      "id": "72b0a1ccb626",
+      "slug": "le-traitement-anti-obesite-wegovy-arrive-en-comprime-dans-les",
+      "title": "Le traitement anti-obésité Wegovy arrive en comprimé dans les pharmacies françaises",
+      "createdAt": "2026-11-02T09:01:16.183Z",
+      "storyDay": "2026-11-02",
+      "articles": [
+        {
+          "id": "e3af8c4ba87a",
+          "outletId": "huffpost",
+          "headline": "Le traitement anti-obésité Wegovy en comprimé arrive dans les pharmacies ce lundi, voici ce qu’il faut savoir",
+          "url": "https://www.huffingtonpost.fr/sante/article/le-traitement-anti-obesite-wegovy-en-comprime-arrive-dans-les-pharmacies-ce-lundi-voici-ce-qu-il-faut-savoir_350232.html",
+          "publishedAt": "2026-11-02T08:24:03.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/05/04/53/0/1024/576/0/0/60/0/d57b0f1_upload-1-f2danpbw0bih-afp-20260416-hl-tdurand-3132577-v2-midres-medicationwegovyobesityweightlossillu.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "289aae27883f",
+          "outletId": "le-point",
+          "headline": "Prix, efficacité, précaution à prendre… tout savoir sur l’arrivée de Wegovy version comprimé",
+          "url": "https://www.lepoint.fr/sante/prix-efficacite-precaution-a-prendre-tout-savoir-sur-larrivee-de-wegovy-version-comprime-ZYFNS4ZZTZEONI3OUJTPFCB7CI/",
+          "publishedAt": "2026-11-02T06:51:42.000Z",
+          "imageUrl": "https://www.lepoint.fr/resizer/v2/Y4PVNWRVEFE6DMNCSHHNIWR4E4.webp?auth=610205803626f69dde07b05b070ed7b362153be1efe7969aa78019bad4daa819&smart=true&width=1200&height=900",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "7208d319097d",
+          "outletId": "le-monde",
+          "headline": "Le Wegovy, médicament antiobésité, arrive en comprimé dans les pharmacies françaises",
+          "url": "https://www.lemonde.fr/sante/article/2026/11/02/marche-des-medicaments-antiobesite-le-wegovy-arrive-en-comprime-dans-les-pharmacies-francaises_6804738_1651302.html",
+          "publishedAt": "2026-11-02T00:25:21.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/01/873/0/4518/2259/644/322/60/0/bba59aa_upload-1-tpjyffsr4wc3-2026-08-04t170510z-1902743099-rc2yomau6gna-rtrmadp-3-novo-nordisk-results.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "topicId": "72b0a1ccb626",
+      "titledArticleCount": 3,
+      "section": "society",
+      "everInEdition": true
+    },
+    {
       "id": "34a2b5696093",
       "slug": "un-tribunal-a-paris-juge-une-officine-soupconnee-de-fraude",
       "title": "Un tribunal à Paris juge une officine soupçonnée de fraude fiscale dans le cadre des Dubaï Papers",
@@ -6888,6 +6891,17 @@
       "createdAt": "2026-10-31T14:01:15.404Z",
       "storyDay": "2026-10-31",
       "articles": [
+        {
+          "id": "6ba959d3c9d9",
+          "outletId": "le-parisien",
+          "headline": "« On doit pouvoir être vus » : pour la manifestation du 5 novembre à Paris, les syndicats veulent défiler entre Bastille et Concorde",
+          "url": "https://www.leparisien.fr/economie/on-doit-pouvoir-etre-vus-pour-la-manifestation-du-5-novembre-a-paris-les-syndicats-veulent-defiler-entre-bastille-et-concorde-02-11-2026-TQXWFJIHOFD2ZKSDKV7ZHDFRIE.php",
+          "publishedAt": "2026-11-02T09:01:16.183Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
         {
           "id": "cf12c6b59a5a",
           "outletId": "liberation",
@@ -7048,7 +7062,7 @@
           "url": "https://www.lemonde.fr/societe/article/2026/11/01/mouvement-lyceen-les-incertitudes-de-la-rentree-scolaire-alors-que-la-jeunesse-mobilisee-veut-maintenir-la-pression_6804533_3224.html",
           "publishedAt": "2026-11-01T17:56:39.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/31/522/0/2953/1476/644/322/60/0/02f3d08_upload-1-oxiirimlh7xm-a7r7478.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "society",
           "everFrontPage": true
@@ -7506,7 +7520,7 @@
           "url": "https://www.lefigaro.fr/sciences/crues-eau-potable-climat-ou-biodiversite-en-faisant-fondre-glaciers-poles-et-permafrost-le-rechauffement-aura-de-redoutables-consequences-des-1-50c-20261102",
           "publishedAt": "2026-11-02T05:35:55.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/2829x1592_crop/2026/11/02/b6038a2d161accc33c9466971611cf97c350e7420f5039ece3ddbc56d0ff321f.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "science",
           "everFrontPage": true
@@ -8432,67 +8446,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 18,
       "summarizedAt": "2026-11-02T07:01:21.544Z"
-    },
-    {
-      "id": "47d5253b4b18",
-      "slug": "un-camp-de-la-guerilla-colombienne-est-bombarde-au-venezuela-et",
-      "title": "Un camp de la guérilla colombienne est bombardé au Venezuela et le bilan atteint dix-neuf morts",
-      "createdAt": "2026-11-02T01:01:16.442Z",
-      "storyDay": "2026-11-01",
-      "articles": [
-        {
-          "id": "4a0cd3692910",
-          "outletId": "le-parisien",
-          "headline": "« Des gens de la CIA et du FBI nous ont aidés » : avec l’aide des États-Unis, le Venezuela tue 19 guérilleros de l’ELN",
-          "url": "https://www.leparisien.fr/international/venezuela/des-gens-de-la-cia-et-du-fbi-nous-ont-aides-avec-laide-des-etats-unis-le-venezuela-tue-19-guerilleros-de-leln-02-11-2026-APTST5T7X5G55N4IUYBHS43CXE.php",
-          "publishedAt": "2026-11-02T03:01:16.278Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "ff4ddf0aa995",
-          "outletId": "ouest-france",
-          "headline": "Bombardement d’un camp de l’ELN au Venezuela : le bilan monte à 19 morts",
-          "url": "https://www.ouest-france.fr/monde/venezuela/bombardement-dun-camp-de-leln-au-venezuela-le-bilan-monte-a-19-morts-9502cb76-d648-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-02T00:19:30.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMmY2MzYzOTc2OTMxZGI3MWY5YTA4NDhlMjFhNTE5MmE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1772770c9f248ade4d9ede7ee8294afaa1392c0550e437877ee184e6a1768f1e",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "b54f798f0130",
-          "outletId": "rfi",
-          "headline": "Venezuela: l'armée derrière le bombardement d'un camp de la guérilla colombienne sur son territoire?",
-          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261101-venezuela-l-arm%C3%A9e-derri%C3%A8re-le-bombardement-d-un-camp-de-la-gu%C3%A9rilla-colombienne-sur-son-territoire",
-          "publishedAt": "2026-11-01T20:51:57.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/785874ac-d635-11f1-a924-695cb59fade5/w:1024/p:16x9/000-Mvd6612702.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "47d5253b4b18",
-      "titledArticleCount": 3,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "centre": [
-          "L'armée vénézuélienne a mené un bombardement contre un campement de la guérilla colombienne de l'ELN dans l'État d'Apure à la frontière.",
-          "Le bilan s'établit à dix-neuf morts selon les dénombrements effectués après l'attaque survenue vendredi 30 octobre 2026.",
-          "L'opération a bénéficié de l'aide technique de la CIA et du FBI d'après les rapports sur les forces engagées.",
-          "L'ONG Fundaredes souligne qu'il s'agit d'une frappe inédite contre ce groupe armé, alors qu'elle dénonce habituellement la protection de Caracas envers ces guérillas."
-        ]
-      },
-      "differences": [
-        "Les médias du centre adoptent un angle factuel en mettant en avant le bilan de dix-neuf morts et l'intervention militaire vénézuélienne, tout en soulignant avec RFI le caractère inédit de cette frappe frontalière documentée par une ONG locale."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 3,
-      "summarizedAt": "2026-11-02T03:01:16.278Z"
     }
   ],
   "stories": [
@@ -8503,6 +8456,17 @@
       "createdAt": "2026-11-01T21:01:24.228Z",
       "storyDay": "2026-11-01",
       "articles": [
+        {
+          "id": "1c8226cfbda1",
+          "outletId": "bfmtv",
+          "headline": "Présidentielle: malgré le refus d'Édouard Philippe, Gabriel Attal pense la primaire \"inéluctable\"",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-malgre-le-refus-d-edouard-philippe-gabriel-attal-pense-la-primaire-ineluctable_AD-202611020365.html",
+          "publishedAt": "2026-11-02T08:51:49.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/LreJ1pEH8hjndGfAiEjMi7-jZiM=/0x24:2048x1176/800x0/images/Le-patron-de-Renaissance-Gabriel-Attal-le-29-septembre-2026-a-Paris-2361664.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
         {
           "id": "ed2a254b17e7",
           "outletId": "le-parisien",
@@ -8521,7 +8485,7 @@
           "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-malgre-le-refus-d-edouard-philippe-gabriel-attal-pense-la-primaire-ineluctable-20261102",
           "publishedAt": "2026-11-02T07:56:04.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/02/3c5b9f2253d3af73aead213225dbf0c4183a313a12efad716b91090b63f91443.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -8533,7 +8497,7 @@
           "url": "https://www.ouest-france.fr/elections/presidentielle/presidentielle-2027-gabriel-attal-juge-la-primaire-ineluctable-malgre-le-refus-dedouard-philippe-475faffe-d690-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-02T07:53:01.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMGYwYTViMGQ5ZWQwZjE5MzczMTY5OWY4Mzg3ODMwZDg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=44df432d33b89a8eb3c4a6b4d5897fd462b69b87ef453a04160faf1ace1a4fa9",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -8655,7 +8619,7 @@
           "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-edouard-philippe-rejette-la-primaire-des-democrates-proposee-par-gabriel-attal-20261101",
           "publishedAt": "2026-11-01T20:43:54.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/01/c0ed0863e54f47a8aed59106ea3672c4740ec0190b2e0191348495ead5228708.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -9583,7 +9547,7 @@
           "url": "https://www.ouest-france.fr/societe/justice/petite-martyre-de-la10-inass-tuee-a-4-ans-attend-justice-ab50853a-d62a-11f1-9ffa-07ff3c370e50?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-02T07:45:55.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYzJkMzYzMDAyYTcxZTU0NWYwZmFkOWQ0NzAyODZhZjQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2970b84ef957160b6f96215e79703fc4bd25f1d77e6679d1d38c70706869247c",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -9819,6 +9783,17 @@
       "storyDay": "2026-10-31",
       "articles": [
         {
+          "id": "6ba959d3c9d9",
+          "outletId": "le-parisien",
+          "headline": "« On doit pouvoir être vus » : pour la manifestation du 5 novembre à Paris, les syndicats veulent défiler entre Bastille et Concorde",
+          "url": "https://www.leparisien.fr/economie/on-doit-pouvoir-etre-vus-pour-la-manifestation-du-5-novembre-a-paris-les-syndicats-veulent-defiler-entre-bastille-et-concorde-02-11-2026-TQXWFJIHOFD2ZKSDKV7ZHDFRIE.php",
+          "publishedAt": "2026-11-02T09:01:16.183Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
           "id": "cf12c6b59a5a",
           "outletId": "liberation",
           "headline": "EN DIRECT – Crise lycéenne : une rentrée des vacances de la Toussaint marquée par des blocages «résiduels», selon Edouard Geffray",
@@ -9978,7 +9953,7 @@
           "url": "https://www.lemonde.fr/societe/article/2026/11/01/mouvement-lyceen-les-incertitudes-de-la-rentree-scolaire-alors-que-la-jeunesse-mobilisee-veut-maintenir-la-pression_6804533_3224.html",
           "publishedAt": "2026-11-01T17:56:39.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/31/522/0/2953/1476/644/322/60/0/02f3d08_upload-1-oxiirimlh7xm-a7r7478.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "society",
           "everFrontPage": true
@@ -10521,7 +10496,7 @@
           "url": "https://www.lefigaro.fr/international/floride-un-jet-prive-s-ecrase-et-explose-dans-un-quartier-residentiel-9-morts-20261101",
           "publishedAt": "2026-11-01T21:43:29.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/1523x856_crop/2026/11/01/31cdb4104ce698e8c8da721d3f5c760a327334ed937a97a7c5bf0c59e0fa5ede.png",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -10895,7 +10870,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/11/01/presidentielle-en-bulgarie-iliana-iotova-remporte-l-election-selon-plusieurs-sondages-a-la-sortie-des-urnes_6804603_3210.html",
           "publishedAt": "2026-11-01T19:07:41.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/01/455/0/5463/2731/644/322/60/0/a7022f0_ftp-1-kfdaqfzgxvsb-afp-d6373nq.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -11021,257 +10996,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 10,
       "summarizedAt": "2026-11-01T22:01:16.825Z"
-    },
-    {
-      "id": "01b539d2a645",
-      "slug": "la-coree-du-nord-vole-6-milliards-de-dollars-de-cryptomonnaies",
-      "title": "Piratage de Binance : le FBI accuse la Corée du Nord du vol de 6,3 milliards de dollars et la plateforme rouvre ses retraits",
-      "createdAt": "2026-11-01T03:01:23.048Z",
-      "storyDay": "2026-10-31",
-      "articles": [
-        {
-          "id": "52928824a6ee",
-          "outletId": "rfi",
-          "headline": "Cryptomonnaies: qui sont les hackers nord-coréens soupçonnés d'avoir piraté Binance?",
-          "url": "https://www.rfi.fr/fr/asie-pacifique/20261101-cryptomonnaies-qui-sont-les-hackers-nord-cor%C3%A9ens-soup%C3%A7onn%C3%A9s-d-avoir-pirat%C3%A9-binance",
-          "publishedAt": "2026-11-01T13:38:36.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/4c79f68c-a0de-11ef-8e78-005056bfb2b6/w:1024/p:16x9/Hacker-photo-illustration.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "95b925f64670",
-          "outletId": "ouest-france",
-          "headline": "6,3 milliards de dollars dérobés à Binance : trois questions sur le plus grand vol de cryptomonnaies de l’histoire",
-          "url": "https://www.ouest-france.fr/societe/cyberattaque/6-3-milliards-de-dollars-derobes-a-binance-trois-questions-sur-le-plus-grand-vol-de-cryptomonnaies-de-lhistoire-31a72b46-d5e7-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-01T13:15:59.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMmI4Y2ZiZTk0YmNhMDAwMzYxNTdmYTdhYWRhODE5MTY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=070ccbf5c2c3e7d2e5d9c1b2adced52a1b8e7c05952a5274d5d01246865fdc25",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "7f402cdda7f6",
-          "outletId": "cnews",
-          "headline": "Vol de 6,3 milliards de dollars de cryptomonnaies : comment Binance va assurer la restitution des sommes volées à ses clients",
-          "url": "https://www.cnews.fr/vie-numerique/2026-11-01/vol-de-63-milliards-de-dollars-de-cryptomonnaies-comment-binance-va",
-          "publishedAt": "2026-11-01T12:13:53.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-27t145741z_1217147951_rc27jx99ilqc_rtrmadp_3_cryptocurrency-binance-russia-taille1200_6ae444b6bf94a-taille1200_6ae719168167c.jpg?itok=2ZOaVu01",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "c96eaed67eb8",
-          "outletId": "le-monde",
-          "headline": "Piratage de la plateforme de cryptomonnaies Binance : la plateforme annonce rouvrir les retraits, le FBI accuse la Corée du Nord du « casse du siècle »",
-          "url": "https://www.lemonde.fr/pixels/article/2026/11/01/piratage-de-la-plateforme-de-cryptomonnaies-binance-la-plateforme-annonce-rouvrir-les-retraits-le-fbi-accuse-la-coree-du-nord-du-casse-du-siecle_6803867_4408997.html",
-          "publishedAt": "2026-11-01T10:04:17.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/30/342/0/4000/2000/644/322/60/0/2be4f59_ftp-1-pajpzgomupyl-2026-10-30t080034z-1706611026-rc2jdoa5uy82-rtrmadp-3-fintech-crypto-binance-hack.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "d900713221de",
-          "outletId": "franceinfo",
-          "headline": "La plateforme de cryptomonnaies Binance annonce une reprise des retraits, après un piratage commis par des hackers de Corée du Nord selon les accusations du FBI.",
-          "url": "https://www.franceinfo.fr/economie/bitcoin/la-plateforme-de-cryptomonnaies-binance-annonce-une-reprise-des-retraits-apres-un-piratage-commis-par-des-hackers-de-coree-du-nord-selon-les-accusations-du-fbi_8262545.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-01T09:32:53.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/UgHLS73MCSyRAeIVsKtzOD7OKGE/0x234:4500x2765/432x243/filters:format(jpg)/2026/11/01/6ae706fb009b4403473265.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "c73f2aeb8f22",
-          "outletId": "bfmtv",
-          "headline": "6,3 milliards de dollars d'actifs numériques dérobés: la plateforme Binance annonce la reprise progressive des retraits pour ses clients, trois jours après le braquage numérique massif mené par la Corée du Nord selon le FBI",
-          "url": "https://www.bfmtv.com/crypto/6-3-milliards-de-dollars-d-actifs-numeriques-derobes-la-plateforme-binance-annonce-la-reprise-progressive-des-retraits-pour-ses-clients-trois-jours-apres-le-braquage-numerique-massif-mene-par-la-coree-du-nord-selon-le-fbi_AD-202611010191.html",
-          "publishedAt": "2026-11-01T09:16:00.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/4c6gTgp6JhmROf2iIIzM1_lU8tM=/0x105:2048x1257/800x0/images/Binance-2375142.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "64b8477d0462",
-          "outletId": "la-croix",
-          "headline": "Vol de cryptomonnaies chez Binance : reprise des retraits, le FBI accuse la Corée du Nord",
-          "url": "https://www.la-croix.com/le-fbi-accuse-la-coree-du-nord-du-casse-du-siecle-chez-binance-20261101",
-          "publishedAt": "2026-11-01T08:52:03.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2025/01/28/1959525-binance-revendique-sur-son-site-internet-plus-de-2.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "331116319827",
-          "outletId": "tf1-info",
-          "headline": "\"Casse du siècle\" chez le géant des cryptomonnaies : le FBI accuse la Corée du Nord, les retraits reprennent",
-          "url": "https://www.tf1info.fr/international/casse-du-siecle-chez-le-geant-des-cryptomonnaies-binance-le-fbi-accuse-la-coree-du-nord-les-retraits-reprennent-2473177.html",
-          "publishedAt": "2026-11-01T08:33:26.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/681/la-plateforme-de-cryptomonnaies-binance-2026-8af13a-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "3f40689a5733",
-          "outletId": "liberation",
-          "headline": "Cyberattaque de Binance : le FBI accuse la Corée du Nord, Donald Trump met en doute",
-          "url": "https://www.liberation.fr/international/amerique/cyberattaque-de-binance-le-fbi-accuse-la-coree-du-nord-donald-trump-met-en-doute-20261101_PKHXTEFUXZAZ3IDG6QG5PE5IYU/",
-          "publishedAt": "2026-11-01T08:05:24.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "ba1989cb83f5",
-          "outletId": "cnews",
-          "headline": "Cyberattaque massive contre Binance : le FBI accuse la Corée du Nord du «casse du siècle»",
-          "url": "https://www.cnews.fr/monde/2026-11-01/cyberattaque-massive-contre-binance-le-fbi-accuse-la-coree-du-nord-du-casse-du",
-          "publishedAt": "2026-11-01T07:53:48.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/091_i1793524818816-taille1200_6ae6e24055183.jpg?itok=bR9Eist0",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "047748ca951d",
-          "outletId": "le-figaro",
-          "headline": "Piratage de cryptomonnaies : Binance annonce la reprise des retraits ce dimanche",
-          "url": "https://www.lefigaro.fr/secteur/high-tech/piratage-de-cryptomonnaies-binance-annonce-la-reprise-des-retraits-ce-dimanche-20261101",
-          "publishedAt": "2026-11-01T07:01:46.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/01/7108280dd11d07d0f54506509c4fe5fb9b768765c234b74e916d9c15ee269351.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "f1d9fe96a156",
-          "outletId": "le-parisien",
-          "headline": "« Casse du siècle » chez Binance : le FBI accuse la Corée du Nord du vol record de 6,3 milliards de dollars",
-          "url": "https://www.leparisien.fr/international/casse-du-siecle-chez-binance-le-fbi-accuse-la-coree-du-nord-du-vol-record-de-63-milliards-de-dollars-01-11-2026-I3BN6NBSKJBENHBB2TMW62VAKY.php",
-          "publishedAt": "2026-11-01T07:01:10.566Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "511c220b4e2c",
-          "outletId": "bfmtv",
-          "headline": "Le FBI accuse la Corée du Nord du vol de plus de 6 milliards de dollars de cryptomonnaies à Binance",
-          "url": "https://www.bfmtv.com/crypto/le-fbi-accuse-la-coree-du-nord-du-vol-de-plus-de-6-milliards-de-dollars-de-cryptomonnaies-a-binance_AN-202611010133.html",
-          "publishedAt": "2026-11-01T06:26:47.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/84B1l3hNnNvpC1YuLVNVRC90P2U=/0x36:768x468/800x0/images/Binance-revendique-sur-son-site-internet-plus-de-250-millions-d-utilisateurs-2022674.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "e5dac74638b6",
-          "outletId": "europe-1",
-          "headline": "Le FBI accuse la Corée du Nord du «casse du siècle» chez Binance",
-          "url": "https://www.europe1.fr/international/le-fbi-accuse-la-coree-du-nord-du-casse-du-siecle-chez-binance-1199334?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-01T05:45:38.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/01/06/091_i1793524818816_1_6ae6d4467c728.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "70aa26204c8c",
-          "outletId": "le-monde",
-          "headline": "Piratage de la plateforme de cryptomonnaies Binance : le FBI accuse la Corée du Nord du « casse du siècle »",
-          "url": "https://www.lemonde.fr/pixels/article/2026/11/01/piratage-de-la-plateforme-de-cryptomonnaies-binance-le-fbi-accuse-la-coree-du-nord-du-casse-du-siecle_6803867_4408996.html",
-          "publishedAt": "2026-11-01T02:30:17.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/30/342/0/4000/2000/644/322/60/0/2be4f59_ftp-1-pajpzgomupyl-2026-10-30t080034z-1706611026-rc2jdoa5uy82-rtrmadp-3-fintech-crypto-binance-hack.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "7a769183d8fc",
-          "outletId": "20-minutes",
-          "headline": "Casse du siècle… Le FBI accuse la Corée du Nord d’un vol record chez Binance",
-          "url": "https://www.20minutes.fr/monde/coree_du_nord/4259263-20261101-casse-siecle-fbi-accuse-coree-nord-vol-record-chez-binance?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-01T02:22:05.000Z",
-          "imageUrl": "https://img.20mn.fr/p4b36GasRhmz9V-q-rY6Lik/1200x768_un-logo-binance-apparait-sur-un-fond-numerique-affichant-un-code-binaire-sur-cette-illustration-photo-representant-une-cyberattaque-contre-le-plus-grand-echange-de-cryptomonnaies-au-monde-binance-a-signale-une-faille-de-securite-dont-l-impact-est-estime-a-6-3-milliards-de-dollars-avec-environ-3-milliards-de-dollars-d-actifs-concernes-geles-cette-illustration-photo-a-ete-prise-le-30-octobre-2026-yassine-mahjoub-sipa-mahjoubyassine-by2f1203-credit-yassine-mahjoub-sipa-2610302003",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "dbf509a1d278",
-          "outletId": "france-24",
-          "headline": "Piratage de la plateforme de cryptomonnaies Binance : le FBI accuse la Corée du Nord",
-          "url": "https://www.france24.com/fr/%C3%A9co-tech/20261101-piratage-de-la-plateforme-de-cryptomonnaies-binance-le-fbi-accuse-la-cor%C3%A9e-du-nord",
-          "publishedAt": "2026-11-01T00:33:53.000Z",
-          "imageUrl": "https://s.france24.com/media/display/995d11ae-d508-11f1-97b9-bf1914cabd52/w:1024/p:16x9/Part-GTY-1496426886-1-1-2.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "a51f2e47d522",
-          "outletId": "le-figaro",
-          "headline": "Le FBI accuse la Corée du Nord du vol de 6 milliards de dollars de cryptomonnaies à Binance",
-          "url": "https://www.lefigaro.fr/international/le-fbi-accuse-la-coree-du-nord-du-vol-de-6-milliards-de-dollars-de-cryptomonnaies-a-binance-20261101",
-          "publishedAt": "2026-10-31T23:48:29.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/01/2a15add1b380bb6e44289d963d00dd23c449be0078005c7eadef2ae48ac8a185.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "75717a9d0945",
-          "outletId": "le-figaro",
-          "headline": "Après son piratage record, Binance prévoit de réautoriser les retraits dimanche",
-          "url": "https://www.lefigaro.fr/secteur/high-tech/piratage-de-cryptomonnaies-binance-prevoit-de-reautoriser-les-retraits-dimanche-20261031",
-          "publishedAt": "2026-10-31T21:28:35.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/31/26efe37d3dab47625864e2e6fdae52d76ba12bfbf03f032da56e12920c6ce4b7.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "386242e5af4e",
-      "titledArticleCount": 19,
-      "section": "economy",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le FBI désigne le groupe TraderTraitor, affilié à Pyongyang, comme l'auteur du vol de 6,3 milliards de dollars chez Binance.",
-          "La plateforme de cryptomonnaies annonce la reprise progressive des retraits par étapes.",
-          "Le président américain Donald Trump émet des doutes concernant l'implication de la Corée du Nord dans cette cyberattaque."
-        ],
-        "centre": [
-          "La plateforme d'échange Binance subit le plus grand vol de cryptomonnaies de l'histoire, estimé à 6,3 milliards de dollars.",
-          "Le FBI attribue ce piratage massif à des pirates informatiques nord-coréens et au groupe TraderTraitor.",
-          "Binance annonce la reprise progressive des retraits pour ses clients et certains experts s'interrogent sur l'implication de l'intelligence artificielle."
-        ],
-        "droite": [
-          "Binance est victime d'un piratage historique qualifié de « casse du siècle », avec un préjudice de 6,3 milliards de dollars.",
-          "Le FBI accuse formellement la Corée du Nord et le groupe TraderTraitor d'être à l'origine de ce vol d'actifs virtuels.",
-          "La plateforme annonce couvrir 90% des pertes de ses clients grâce à sa trésorerie et réautorise les retraits."
-        ]
-      },
-      "differences": [
-        "La gauche met l'accent sur les accusations du FBI et la mise en doute immédiate de ces conclusions par Donald Trump.",
-        "Le centre dresse le bilan factuel de l'attaque record et de la reprise technique des services de la plateforme sans mentionner de polémique politique.",
-        "La droite insiste sur l'ampleur financière du « casse du siècle » tout en valorisant la gestion de crise de l'entreprise et son remboursement des clients."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 19,
-      "summarizedAt": "2026-11-01T14:01:15.159Z"
     },
     {
       "id": "b8326c8c5c47",
@@ -11694,179 +11418,6 @@
       "summarizedAt": "2026-11-02T06:01:19.100Z"
     },
     {
-      "id": "32e6dc6156d2",
-      "slug": "le-ministere-de-l-interieur-recense-entre-320-000-et-500-000",
-      "title": "Mobilisation du 31 octobre : le ministère de l'Intérieur recense jusqu'à 500 000 manifestants et 779 interpellations",
-      "createdAt": "2026-11-01T11:01:16.039Z",
-      "storyDay": "2026-11-01",
-      "articles": [
-        {
-          "id": "c2802986247b",
-          "outletId": "bfmtv",
-          "headline": "31 octobre: \"Je me félicite du bilan\" de cette journée, \"c'est une réussite de ce mouvement social\", estime Marine Tondelier, candidate \"EELV\" à l'élection présidentielle",
-          "url": "https://www.bfmtv.com/politique/europe-ecologie-les-verts/video-31-octobre-je-me-felicite-du-bilan-de-cette-journee-c-est-une-reussite-de-ce-mouvement-social-estime-marine-tondelier-candidate-eelv-a-l-election-presidentielle_VN-202611010435.html",
-          "publishedAt": "2026-11-01T22:15:24.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/pgPPPNe406CTbaI-leA3Lx4B0qg=/0x0:1280x720/800x0/images/31-octobre-Je-me-felicite-du-bilan-de-cette-journee-c-est-une-reussite-de-ce-mouvement-social-estime-Marine-Tondelier-candidate-EELV-a-l-election-presidentielle-2375938.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "20e60beeb58a",
-          "outletId": "humanite",
-          "headline": "500 000 manifestants malgré les entraves, des vidéos qui accusent les CRS de couvrir des milices d’extrême droite à Montpellier… Ce qu’il ne fallait pas manquer ce week-end",
-          "url": "https://www.humanite.fr/societe/manifestation/500-000-manifestants-malgre-les-entraves-des-videos-qui-accusent-les-crs-de-couvrir-des-milices-dextreme-droite-a-montpellier-ce-quil-ne-fallait-pas-manquer-ce-week-en",
-          "publishedAt": "2026-11-01T18:04:23.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/WhatsApp-Image-2026-10-31-at-16.49.58.webp?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "d5f44ee56aad",
-          "outletId": "le-figaro",
-          "headline": "Manifestations du 31 octobre : 779 interpellations en France, 116 forces de l’ordre blessées et 36 commerces dégradés",
-          "url": "https://www.lefigaro.fr/actualite-france/manifestations-du-31-octobre-779-interpellations-en-france-116-forces-de-l-ordre-blessees-et-36-commerces-degrades-20261101",
-          "publishedAt": "2026-11-01T13:26:37.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/01/1d451eb01ebdb87642c4f7509e2e36d113ae50acfdd8d6fed7376b3b5cd084f5.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "9320fceda5ff",
-          "outletId": "le-monde",
-          "headline": "Manifestations du 31 octobre : revivez la journée de mobilisation en France contre la vie chère",
-          "url": "https://www.lemonde.fr/societe/live/2026/11/01/en-direct-manifestations-en-france-enquete-ouverte-apres-le-jet-d-un-cocktail-molotov-sur-des-gendarmes-a-paris-appel-au-blocus-lance-par-trois-organisations-lyceennes-et-etudiantes_6803391_3224.html",
-          "publishedAt": "2026-11-01T12:12:27.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/31/815/0/4885/2442/644/322/60/0/0061203_ftp-1-gf7tyzvyfwqq-2026-10-31t163407z-149457501-rc2feoacyn0u-rtrmadp-3-france-protest.JPG",
-          "frontPage": false,
-          "kind": "live",
-          "section": "society"
-        },
-        {
-          "id": "d074a53a3c8d",
-          "outletId": "france-24",
-          "headline": "Acte III des manifestations : entre 320 000 et 500 000 manifestants",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261101-acte-iii-des-manifestations-entre-320-000-et-500-000-manifestants",
-          "publishedAt": "2026-11-01T10:55:40.000Z",
-          "imageUrl": "https://s.france24.com/media/display/3f09e90c-d5d5-11f1-b028-bf1914cabd52/w:1024/p:16x9/FR-20261101-100123-100313-CS.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "0d94f8000327",
-          "outletId": "le-figaro",
-          "headline": "Manifestations du 31 octobre : 20 commerces dégradés samedi",
-          "url": "https://www.lefigaro.fr/conjoncture/manifestations-du-31-octobre-20-commerces-degrades-samedi-20261101",
-          "publishedAt": "2026-11-01T10:55:13.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/01/1314277576f98d32aeaf1ccfcd8e9a8086052532af58ed65ed2303fc570796f7.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "ba36b11ac186",
-          "outletId": "20-minutes",
-          "headline": "EN DIRECT Colère sociale : 779 personnes interpellées samedi, une mobilisation « en baisse » selon le ministère de l'Intérieur...",
-          "url": "https://www.20minutes.fr/societe/4259308-20261101-mobilisation-sociale-appel-blocage-lycees-lundi?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-01T10:50:34.000Z",
-          "imageUrl": "https://img.20mn.fr/jQM0ksIdSWCRPExK4RokpCk/1200x768_un-manifestant-tient-une-pancarte-sur-laquelle-on-peut-lire-ceux-qui-sement-le-mepris-recoltent-la-colere-lors-d-une-manifestation-a-paris-en-france-le-31-octobre-2026-la-manifestation-s-inscrivait-dans-le-cadre-d-une-journee-nationale-de-manifestations-contre-la-hausse-du-cout-de-la-vie-et-les-inegalites-organisee-par-le-mouvement-des-gilets-jaunes-les-syndicats-et-des-organisations-d-etudiants-des-lycees-et-des-universites-les-autorites-ont-deploye-une-force-de-securite-exceptionnelle-mobilisant-70-000-policiers-et-gendarmes-dans-tout-le-pays-sur-un-ton-alarmiste-les-autorites-ont-exprime-la-crainte-d-une-repetition-des-troubles-du-17-octobre-alors-que-l-acte-iii-des-manifestations-contre-la-hausse-du-cout-de-la-vie-coincidait-avec-les-fetes-d-halloween-la-france-a-ete-secouee-par-la-colere-generalisee-de-l-opinion-publique-face-a-la-hausse-du-cout-de-la-vie-et-a-l-aggravation-des-inegalites-paris-france-le-31-octobre-2026-alfred-photos-a0159-credit-alfred-yaghobzadeh-sipa-2611011206",
-          "frontPage": true,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "edfaae1614ee",
-          "outletId": "franceinfo",
-          "headline": "Mobilisation sociale : 20 commerces ont été dégradés le 31 octobre, un chiffre en baisse par rapport aux précédents week-ends de manifestations",
-          "url": "https://www.franceinfo.fr/economie/greve/direct-mobilisation-sociale-la-jeunesse-ne-lache-pas-declare-la-porte-parole-de-l-union-etudiante-au-lendemain-des-manifestations-du-31-octobre_8262449.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-01T10:27:23.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/Pj8EfeCwOOQxQYDloUzEvXnUQzs/0x312:6000x3687/432x243/filters:format(jpg)/2026/11/01/6ae713c8dc88c849984707.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "d7fcfa4a677a",
-          "outletId": "bfmtv",
-          "headline": "Manifestations du 31 octobre: entre 320.000 et 500.000 participants, 565 personnes ont été interpellées en France",
-          "url": "https://www.bfmtv.com/police-justice/video-manifestations-du-31-octobre-entre-320-000-et-500-000-participants-565-personnes-ont-ete-interpellees-en-france_VN-202611010178.html",
-          "publishedAt": "2026-11-01T08:34:36.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/NaZYVPVZrtmuULDYrmG8jaSRRKA=/0x0:1280x720/800x0/images/Manifestations-du-31-octobre-entre-320-000-et-500-000-participants-565-personnes-ont-ete-interpellees-en-France-2375726.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "356d05712333",
-          "outletId": "europe-1",
-          "headline": "«Je me retrouve le crâne fracassé» : à Bordeaux, des restaurateurs victimes des violences en marge de la mobilisation du 31 octobre",
-          "url": "https://www.europe1.fr/societe/je-me-retrouve-le-crane-fracasse-a-bordeaux-des-restaurateurs-victimes-des-violences-en-marge-de-la-mobilisation-du-31-octobre-1199556?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-01T08:17:17.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/01/08/000_d62798g_1_6ae6ee4e2c3fe.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "1002ad5bba6f",
-          "outletId": "europe-1",
-          "headline": "Acte III à Marseille : violences en fin de manifestation",
-          "url": "https://www.europe1.fr/societe/acte-iii-a-marseille-violences-en-fin-de-manifestation-1199559?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-01T07:30:12.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/01/08/000_d62c2a9_1_6ae6ee660a64c.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "025f76074317",
-          "outletId": "europe-1",
-          "headline": "Mobilisation du 31 octobre : à Lyon, un défilé calme mais des heurts en fin de cortège, la mobilisation se poursuit",
-          "url": "https://www.europe1.fr/societe/mobilisation-du-31-octobre-a-lyon-un-defile-calme-mais-des-heurts-en-fin-de-cortege-la-mobilisation-se-poursuit-1199373?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-01T07:12:30.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/01/07/089_mei-fra-alsh-lfspa-20261031-0013_1_6ae6d9ea160d8.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        }
-      ],
-      "topicId": "1e52bac1f877",
-      "titledArticleCount": 12,
-      "section": "society",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "L'Humanité recense 500 000 manifestants et relaie des accusations visant les CRS à Montpellier",
-          "Le Monde et franceinfo signalent des appels à de nouveaux blocages scolaires et lycéens pour la semaine",
-          "20 Minutes comptabilise 779 interpellations lors de cette journée de mobilisation contre la vie chère"
-        ],
-        "centre": [
-          "Le ministère de l'Intérieur dénombre entre 320 000 et 500 000 participants selon les estimations",
-          "BFMTV et France 24 rapportent une journée globalement calme malgré des heurts en fin de cortège",
-          "Marine Tondelier salue la réussite de ce mouvement social et la multiplication des appels à la grève"
-        ],
-        "droite": [
-          "Le Figaro fait état de 779 interpellations, 116 membres des forces de l'ordre blessés et 36 commerces dégradés",
-          "Europe 1 détaille les violences et les dégradations survenues en fin de manifestation à Bordeaux, Marseille et Lyon",
-          "Le Figaro précise que 20 commerces ont été touchés par des dégradations, un chiffre en baisse par rapport aux mobilisations précédentes"
-        ]
-      },
-      "differences": [
-        "La gauche met en avant l'ampleur de la mobilisation populaire et les accusations de violences policières, tout en annonçant les prochains mots d'ordre de blocage.",
-        "Le centre adopte une approche chiffrée nuancée entre les estimations syndicales et gouvernementales, en soulignant le contraste entre des cortèges calmes et des heurts localisés.",
-        "La droite focalise son traitement sur les violences urbaines en fin de cortège, les interpellations massives et les dégâts matériels subis par les commerçants dans plusieurs grandes villes."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 12,
-      "summarizedAt": "2026-11-01T23:01:14.034Z"
-    },
-    {
       "id": "785c4b296f01",
       "slug": "kylian-mbappe-brille-avec-le-real-madrid-a-santander-apres-la",
       "title": "Kylian Mbappé brille avec le Real Madrid à Santander après la polémique sur Mao Zedong en Chine",
@@ -12016,190 +11567,6 @@
       "summarizedAt": "2026-11-01T19:01:14.528Z"
     },
     {
-      "id": "c0ac4e413c96",
-      "slug": "gabby-williams-remporte-le-titre-wnba-et-le-trophee-de-mvp-avec",
-      "title": "La Française Gabby Williams remporte le titre WNBA et le trophée de MVP avec les Golden State Valkyries",
-      "createdAt": "2026-11-01T08:01:19.944Z",
-      "storyDay": "2026-11-01",
-      "articles": [
-        {
-          "id": "ae1d820727bd",
-          "outletId": "le-parisien",
-          "headline": "« C’est la meilleure joueuse du monde, et de loin » : Gabby Williams, la basketteuse française en or sacrée championne WNBA",
-          "url": "https://www.leparisien.fr/sports/basket/cest-la-meilleure-joueuse-du-monde-et-de-loin-gabby-williams-la-basketteuse-francaise-en-or-sacree-championne-wnba-01-11-2026-S3Q4NESTEJGWXD7BEDPGUFFNQ4.php",
-          "publishedAt": "2026-11-01T18:01:15.590Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "bd7c8abfca02",
-          "outletId": "humanite",
-          "headline": "Basket : la Française Gabby Williams soulève le trophée de la WNBA avec le titre de meilleure joueuse",
-          "url": "https://www.humanite.fr/sports/basket/basket-la-francaise-gabby-williams-souleve-le-trophee-de-la-wnba-avec-le-titre-de-meilleure-joueuse",
-          "publishedAt": "2026-11-01T10:42:30.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/p4-FdJ-Gabby-Williams_LUN.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "b8a0f65098a1",
-          "outletId": "liberation",
-          "headline": "«Elle est la meilleure joueuse du monde en ce moment, et de loin» : héroïque, Gabby Williams s’adjuge son premier titre WNBA",
-          "url": "https://www.liberation.fr/sports/elle-est-la-meilleure-joueuse-du-monde-en-ce-moment-et-de-loin-heroique-gabby-williams-sadjuge-son-premier-titre-wnba-20261101_7XEPWA4FYJA7DGR6VZH6H3HCNQ/",
-          "publishedAt": "2026-11-01T10:01:02.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "7065b82184f2",
-          "outletId": "cnews",
-          "headline": "«J’espère que les Français sont fiers» : la magnifique performance de Gabby Williams sacrée championne de WNBA",
-          "url": "https://www.cnews.fr/sport/2026-11-01/jespere-que-les-francais-sont-fiers-la-magnifique-performance-de-gabby-williams-0",
-          "publishedAt": "2026-11-01T09:10:51.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/basket_wnba_gabby_williams_titre_6ae6f5f43c340.jpg?h=2f8af413&itok=cQnqCHYk",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "e20e9862572a",
-          "outletId": "le-parisien",
-          "headline": "« J’espère que les Français sont fiers » : Gabby Williams intenable et deux autres Françaises remportent le titre en WNBA",
-          "url": "https://www.leparisien.fr/sports/basket/jespere-que-les-francais-sont-fiers-gabby-williams-intenable-et-deux-autres-francaises-remportent-le-titre-en-wnba-01-11-2026-47GM6PRAKNCSTP3RKVVGBFH3KA.php",
-          "publishedAt": "2026-11-01T09:01:18.613Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "53ee791d3905",
-          "outletId": "le-figaro",
-          "headline": "Basket : phénoménale, la Française Gabby Williams remporte le titre WNBA",
-          "url": "https://www.lefigaro.fr/sports/basket/basket-phenomenale-la-francaise-gabby-williams-remporte-le-titre-wnba-20261101",
-          "publishedAt": "2026-11-01T08:45:04.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2242_crop/2026/11/01/7fbe07760134e5322b1059759b38fc6100551589d64e75350fe0f7b5a9a003cd.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "59384a2b4ab8",
-          "outletId": "europe-1",
-          "headline": "Basket : la Française Gabby Williams, phénoménale, remporte le titre de WNBA",
-          "url": "https://www.europe1.fr/sport/basket-la-francaise-gabby-williams-phenomenale-remporte-le-titre-de-wnba-1199676?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-01T08:33:59.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/01/09/063_2302939975_1_6ae6fa6f57e76.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "1770f3e79eb3",
-          "outletId": "france-24",
-          "headline": "Gabby Williams remporte le titre de WNBA et se hisse au sommet du basket nord-américain",
-          "url": "https://www.france24.com/fr/sports/20261101-gabby-williams-remporte-le-titre-de-wbna-et-se-hisse-au-sommet-du-basket-nord-am%C3%A9ricain",
-          "publishedAt": "2026-11-01T08:33:56.000Z",
-          "imageUrl": "https://s.france24.com/media/display/a2cb3a26-d5d6-11f1-9436-a575454bc579/w:1024/p:16x9/AP26305154943816.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "ea4fb48d6117",
-          "outletId": "franceinfo",
-          "headline": "Phénoménale, Gabby Williams offre le sacre WNBA aux Golden State Valkyries et décroche le titre de MVP des finales",
-          "url": "https://www.franceinfo.fr/sports/basket/wnba/phenomenale-gabby-williams-offre-le-sacre-wnba-aux-golden-state-valkyries-et-decroche-le-titre-de-mvp-des-finales_8262467.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-01T08:18:25.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/qtH173c5ubW-19wWQWwIjkBgqwo/0x0:4734x2662/432x243/filters:format(jpg)/2026/11/01/6ae6f50f1b7f4453004341.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "acd00d78f1f1",
-          "outletId": "huffpost",
-          "headline": "Héroïque, la Française Gabby Williams remporte la WNBA avec les Valkyries",
-          "url": "https://www.huffingtonpost.fr/sport/article/heroique-la-francaise-gabby-williams-remporte-la-wnba-avec-les-valkyries_349538.html",
-          "publishedAt": "2026-11-01T07:49:41.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/01/0/0/4734/2662/0/0/60/0/338530e_upload-1-u881foohw02z-afp-20261101-2302927581-v1-highres-2026wnbafinalsgameseven.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "6f9e2705ca4a",
-          "outletId": "ouest-france",
-          "headline": "Basket. Phénoménale en finale, la Française Gabby Williams sacrée championne WNBA et MVP !",
-          "url": "https://www.ouest-france.fr/sport/basket/basket-ball-phenomenale-en-finale-la-francaise-gabby-williams-decroche-son-premier-titre-de-wnba-cbeb506e-d5c0-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-01T07:36:47.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMjY5MDE2NzliODYwZDliZDNkODU3NDdjMTA1MjAzMGM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=b83550c574bd506d4af11460af848993b10803a263521af45c2b72ccc2505222",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "db14f0ef9629",
-          "outletId": "le-monde",
-          "headline": "Gabby Williams brille aux finales de la WNBA et offre un premier titre aux Golden State Valkyries : « J’espère que les Français sont fiers »",
-          "url": "https://www.lemonde.fr/sport/article/2026/11/01/gabby-williams-brille-en-finale-de-la-wnba-et-offre-un-premier-titre-aux-golden-state-valkyries-j-espere-que-les-francais-sont-fiers_6804123_3242.html",
-          "publishedAt": "2026-11-01T07:05:30.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/01/248/0/5127/2563/644/322/60/0/04d981d_ftp-1-jimfv3bjtjkp-2302926800.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "1d164373ffab",
-          "outletId": "20-minutes",
-          "headline": "Basket : Gabby Williams remercie l’équipe de France après son titre en WNBA",
-          "url": "https://www.20minutes.fr/sport/4259278-20261101-basket-gabby-williams-remercie-equipe-france-apres-titre-wnba?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-01T06:25:22.000Z",
-          "imageUrl": "https://img.20mn.fr/bpR_dIhNQ7mIb4IM176G8Ck/1200x768_l-attaquante-des-golden-state-valkyries-gabby-williams-tient-son-trophee-de-meilleure-joueuse-apres-avoir-battu-le-dream-d-atlanta-lors-du-septieme-match-de-la-finale-de-basket-ball-de-la-wnba-le-samedi-31-octobre-2026-a-san-francisco-ap-photo-tony-avelar-cagh149-26305114485992-2611010412",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "c0ac4e413c96",
-      "titledArticleCount": 11,
-      "section": "sport",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "La basketteuse Gabby Williams a remporté le titre WNBA et le trophée de MVP avec les Golden State Valkyries au terme du match 7 contre l'Atlanta Dream.",
-          "La capitaine de l'équipe de France, âgée de 30 ans, est qualifiée de meilleure joueuse du monde et saluée pour sa performance héroïque.",
-          "La presse de gauche met en avant ses remerciements à l'équipe de France et sa déclaration « J’espère que les Français sont fiers »."
-        ],
-        "centre": [
-          "Gabby Williams a mené les Golden State Valkyries à la victoire 68-63 contre l'Atlanta Dream lors du septième match décisif de la WNBA.",
-          "La joueuse franco-américaine a inscrit 30 points et décroché le titre de meilleure joueuse de la finale disputée à San Francisco.",
-          "Plusieurs titres soulignent qu'il s'agit d'une première historique pour une Française et associent d'autres joueuses tricolores au sacre."
-        ],
-        "droite": [
-          "Gabby Williams et les Golden State Valkyries ont battu Atlanta 68-63 pour s'emparer du trophée WNBA.",
-          "La Française a inscrit 28 points en seconde mi-temps, totalisant 30 unités, et a établi un record en finale de WNBA.",
-          "La presse de droite qualifie sa prestation de phénoménale et reprend ses propos déclarant adorer ces moments sous haute tension."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur le rôle de capitaine de l'équipe de France de Gabby Williams et ses liens avec le basket tricolore.",
-        "Le centre privilégie le récit factuel de l'exploit sportif historique, insistant sur le score serré et les autres Françaises titrées.",
-        "La droite met en avant la performance statistique brute, qualifiant la joueuse de phénoménale pour son record de points en seconde mi-temps."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 11,
-      "summarizedAt": "2026-11-01T11:01:16.039Z"
-    },
-    {
       "id": "c1e520bef55c",
       "slug": "la-police-bloque-l-acces-au-tribunal-constitutionnel-en-pologne",
       "title": "La police bloque l'accès au Tribunal constitutionnel en Pologne et suscite de vives tensions politiques",
@@ -12327,12 +11694,138 @@
       "summarizedAt": "2026-11-01T18:01:15.590Z"
     },
     {
+      "id": "911b3c6bd319",
+      "slug": "jean-luc-melenchon-annule-sa-participation-au-journal-televise",
+      "title": "Jean-Luc Mélenchon annule sa participation au journal de TF1 après l'interview d'Édouard Philippe",
+      "createdAt": "2026-11-02T01:01:16.442Z",
+      "storyDay": "2026-11-01",
+      "articles": [
+        {
+          "id": "54952b567292",
+          "outletId": "liberation",
+          "headline": "Jean-Luc Mélenchon annule son passage au «20 heures» de TF1, la chaîne assure que l’interview «n’était déjà plus d’actualité»",
+          "url": "https://www.liberation.fr/politique/jean-luc-melenchon-annule-son-passage-au-20-heures-de-tf1-la-chaine-assure-que-linterview-netait-deja-plus-dactualite-20261102_PM3K4MOEUREPFODWLIJQ4KATEE/",
+          "publishedAt": "2026-11-02T08:51:34.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "524c5db97e5d",
+          "outletId": "le-jdd",
+          "headline": "«Calomnies racistes» : outré par l’interview de Philippe sur TF1, Mélenchon annule son passage au «20 heures»",
+          "url": "https://www.lejdd.fr/politique/calomnies-racistes-outre-par-linterview-de-philippe-sur-tf1-melenchon-annule-son-passage-au-20-heures-187560",
+          "publishedAt": "2026-11-02T08:23:18.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/02/09/sipa_01312105_000010.jpg?VersionId=U85kiUFXW0HPHYrqg8aQVlllwCLv1uHZ",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "0de5e21a63eb",
+          "outletId": "franceinfo",
+          "headline": "Jean-Luc Mélenchon annonce annuler un passage au \"20 heures\" de TF1 à la suite d'une interview d'Edouard Philippe",
+          "url": "https://www.franceinfo.fr/elections/presidentielle/jean-luc-melenchon-annonce-annuler-un-passage-au-20-heures-de-tf1-a-la-suite-d-une-interview-d-edouard-philippe_8263556.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-02T07:34:12.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/q5CLHadVBRJHKXyF5bAFlJOs2dA/0x53:1024x629/432x243/filters:format(jpg)/2026/11/02/6ae83c7272481985846448.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "d75ba226b702",
+          "outletId": "huffpost",
+          "headline": "Après des propos d’Édouard Philippe sur l’immigration, Mélenchon annule sa venue au JT de TF1 et dénonce des « calomnies racistes »",
+          "url": "https://www.huffingtonpost.fr/politique/article/apres-des-propos-d-edouard-philippe-sur-l-immigration-melenchon-annule-sa-venue-au-jt-de-tf1-et-denonce-des-calomnies-racistes_350132.html",
+          "publishedAt": "2026-11-02T05:45:08.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/08/27/8/0/1200/675/0/0/60/0/4175794_upload-1-3hxrzz3sacmb-afp-20260827-c6n77m8-v1-midres-franceeconomylabourunionsmedef.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c86fece15cf2",
+          "outletId": "20-minutes",
+          "headline": "Présidentielle 2027 : Accusant TF1 de ménager Édouard Philippe sur le racisme, Mélenchon annule son 20H",
+          "url": "https://www.20minutes.fr/politique/4259410-20261102-presidentielle-2027-accusant-tf1-menager-edouard-philippe-racisme-melenchon-annule-20h?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-02T04:10:44.000Z",
+          "imageUrl": "https://img.20mn.fr/4kEPGvhTRwiwC3wbqf7R_yk/1200x768_october-24-2026-paris-a-union-demonstration-against-the-high-cost-of-living-and-in-support-of-the-blockades-at-high-schools-and-universities-the-route-authorized-by-the-prefecture-running-from-porte-d-italie-to-porte-de-vincennes-is-unprecedented-and-was-decided-against-the-wishes-of-the-unions-this-follows-numerous-incidents-of-looting-at-stores-that-took-place-the-previous-week-24-octobre-2026-paris-le-candidat-lfi-aux-election-presidentielles-jean-luc-melenchon-est-presnet-a-la-manifestation-syndicale-contre-la-vie-chere-et-en-soutien-aux-blocus-de-lycees-et-d-universites-le-trajet-autorise-par-la-prefecture-partant-de-porte-d-italie-a-porte-de-vincennes-est-inedit-et-a-ete-decide-contre-la-volonte-des-syndicats-cela-fait-suite-aux-nombreux-pillages-de-magasins-qui-ont-lieu-la-semaine-precedente-arnaud-cesar-vilette-sipa-press-vilettearnaud-vilette2673-credit-arnaud-cesar-vilette-sipa-2610241949",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "7e03a9270264",
+          "outletId": "le-figaro",
+          "headline": "«Calomnies racistes» : fâché contre TF1 et l'interview d’Édouard Philippe, Jean-Luc Mélenchon annule un passage au «20 heures»",
+          "url": "https://tvmag.lefigaro.fr/programme-tv/actu-tele/calomnies-racistes-fache-contre-tf1-et-l-interview-d-edouard-philippe-jean-luc-melenchon-annule-un-passage-au-20-heures-20261101",
+          "publishedAt": "2026-11-01T22:53:36.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/01/8490dc4f84c9d93233344f2f35a0bd63ee72202aa536ef9c1a725ad99575e9a1.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "c6ff1d7a4e06",
+          "outletId": "ouest-france",
+          "headline": "Jean-Luc Mélenchon va boycotter TF1 après l’interview selon lui complaisante d’Edouard Philippe au 20 h ce dimanche",
+          "url": "https://www.ouest-france.fr/politique/jean-luc-melenchon/jean-luc-melenchon-va-boycotter-tf1-apres-une-interview-selon-lui-complaisante-dedouard-philippe-diffusee-ce-dimanche-56b0bd4c-d639-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-01T21:40:23.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYzJjMWQzMDFjOTQ3ZmJmMGQ0NmJkYmU3MzRmZWQwNTA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ee7c9f8796ecf2c4ca94e1a7386153323d7233444c4225fb7fe8c864ebc71836",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "911b3c6bd319",
+      "titledArticleCount": 7,
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Jean-Luc Mélenchon a annulé sa participation prévue au journal télévisé de 20 heures de TF1 pour protester contre l'interview d'Édouard Philippe.",
+          "Le leader de La France insoumise qualifie de \"discours dégoûtant\" et de \"calomnies racistes\" les propos tenus par le maire du Havre sur l'immigration et les violences urbaines.",
+          "Il reproche en outre à la présentatrice Anne-Claire Coudray de ne pas avoir interrompu le candidat d'Horizons lors de cet entretien."
+        ],
+        "centre": [
+          "Jean-Luc Mélenchon a pris la décision de boycotter TF1 après la diffusion de l'interview d'Édouard Philippe au journal de 20 heures.",
+          "Le tribun insoumis reproche à la chaîne d'avoir offert une tribune complaisante à l'ancien Premier ministre pour \"dérouler un discours dégoûtant\" sur l'immigration."
+        ],
+        "droite": [
+          "Jean-Luc Mélenchon a fait savoir qu'il renonçait à se rendre sur le plateau du journal télévisé de TF1 à la suite du passage d'Édouard Philippe.",
+          "Le JDD et Le Figaro soulignent que le responsable politique justifie cette annulation par son indignation face aux propos reliant immigration et violences urbaines, qu'il qualifie de \"calomnies racistes\"."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur la complicité supposée de la chaîne et de sa présentatrice, accusées d'avoir validé sans contradictoire les propos d'Édouard Philippe.",
+        "Le centre retient la décision radicale du boycott médiatique et l'accusation d'une interview jugée complaisante par le dirigeant insoumis.",
+        "La droite qualifie l'annulation de \"dérobade\" et met en avant la virulence des termes employés par Jean-Luc Mélenchon pour disqualifier l'intervention d'Édouard Philippe."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 7,
+      "summarizedAt": "2026-11-02T09:01:16.183Z"
+    },
+    {
       "id": "df92e98f7ab8",
       "slug": "donald-trump-menace-de-reprendre-les-bombardements-en-iran",
       "title": "Donald Trump menace de reprendre les bombardements et de porter un coup de massue à l'Iran",
       "createdAt": "2026-11-02T03:01:16.278Z",
       "storyDay": "2026-11-01",
       "articles": [
+        {
+          "id": "6f7da31f0f75",
+          "outletId": "bfmtv",
+          "headline": "Guerre en Iran: Donald Trump menace de \"donner un coup de massue\", Téhéran promet une guerre \"plus longue que la précédente\"",
+          "url": "https://www.bfmtv.com/international/moyen-orient/iran/video-guerre-en-iran-donald-trump-menace-de-donner-un-coup-de-massue-teheran-promet-une-guerre-plus-longue-que-la-precedente_VN-202611020366.html",
+          "publishedAt": "2026-11-02T08:51:28.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Nb3WkmEA4axJJHHUCk2nMQy9zvg=/0x0:1280x720/800x0/images/Guerre-en-Iran-Donald-Trump-menace-de-donner-un-coup-de-massue-Teheran-promet-une-guerre-plus-longue-que-la-precedente-2376198.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
         {
           "id": "f1c25a064d33",
           "outletId": "liberation",
@@ -12572,6 +12065,179 @@
       "summarizedAt": "2026-11-02T07:01:21.544Z"
     },
     {
+      "id": "32e6dc6156d2",
+      "slug": "le-ministere-de-l-interieur-recense-entre-320-000-et-500-000",
+      "title": "Mobilisation du 31 octobre : le ministère de l'Intérieur recense jusqu'à 500 000 manifestants et 779 interpellations",
+      "createdAt": "2026-11-01T11:01:16.039Z",
+      "storyDay": "2026-11-01",
+      "articles": [
+        {
+          "id": "c2802986247b",
+          "outletId": "bfmtv",
+          "headline": "31 octobre: \"Je me félicite du bilan\" de cette journée, \"c'est une réussite de ce mouvement social\", estime Marine Tondelier, candidate \"EELV\" à l'élection présidentielle",
+          "url": "https://www.bfmtv.com/politique/europe-ecologie-les-verts/video-31-octobre-je-me-felicite-du-bilan-de-cette-journee-c-est-une-reussite-de-ce-mouvement-social-estime-marine-tondelier-candidate-eelv-a-l-election-presidentielle_VN-202611010435.html",
+          "publishedAt": "2026-11-01T22:15:24.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/pgPPPNe406CTbaI-leA3Lx4B0qg=/0x0:1280x720/800x0/images/31-octobre-Je-me-felicite-du-bilan-de-cette-journee-c-est-une-reussite-de-ce-mouvement-social-estime-Marine-Tondelier-candidate-EELV-a-l-election-presidentielle-2375938.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "20e60beeb58a",
+          "outletId": "humanite",
+          "headline": "500 000 manifestants malgré les entraves, des vidéos qui accusent les CRS de couvrir des milices d’extrême droite à Montpellier… Ce qu’il ne fallait pas manquer ce week-end",
+          "url": "https://www.humanite.fr/societe/manifestation/500-000-manifestants-malgre-les-entraves-des-videos-qui-accusent-les-crs-de-couvrir-des-milices-dextreme-droite-a-montpellier-ce-quil-ne-fallait-pas-manquer-ce-week-en",
+          "publishedAt": "2026-11-01T18:04:23.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/WhatsApp-Image-2026-10-31-at-16.49.58.webp?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "d5f44ee56aad",
+          "outletId": "le-figaro",
+          "headline": "Manifestations du 31 octobre : 779 interpellations en France, 116 forces de l’ordre blessées et 36 commerces dégradés",
+          "url": "https://www.lefigaro.fr/actualite-france/manifestations-du-31-octobre-779-interpellations-en-france-116-forces-de-l-ordre-blessees-et-36-commerces-degrades-20261101",
+          "publishedAt": "2026-11-01T13:26:37.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/01/1d451eb01ebdb87642c4f7509e2e36d113ae50acfdd8d6fed7376b3b5cd084f5.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "9320fceda5ff",
+          "outletId": "le-monde",
+          "headline": "Manifestations du 31 octobre : revivez la journée de mobilisation en France contre la vie chère",
+          "url": "https://www.lemonde.fr/societe/live/2026/11/01/en-direct-manifestations-en-france-enquete-ouverte-apres-le-jet-d-un-cocktail-molotov-sur-des-gendarmes-a-paris-appel-au-blocus-lance-par-trois-organisations-lyceennes-et-etudiantes_6803391_3224.html",
+          "publishedAt": "2026-11-01T12:12:27.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/31/815/0/4885/2442/644/322/60/0/0061203_ftp-1-gf7tyzvyfwqq-2026-10-31t163407z-149457501-rc2feoacyn0u-rtrmadp-3-france-protest.JPG",
+          "frontPage": false,
+          "kind": "live",
+          "section": "society"
+        },
+        {
+          "id": "d074a53a3c8d",
+          "outletId": "france-24",
+          "headline": "Acte III des manifestations : entre 320 000 et 500 000 manifestants",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261101-acte-iii-des-manifestations-entre-320-000-et-500-000-manifestants",
+          "publishedAt": "2026-11-01T10:55:40.000Z",
+          "imageUrl": "https://s.france24.com/media/display/3f09e90c-d5d5-11f1-b028-bf1914cabd52/w:1024/p:16x9/FR-20261101-100123-100313-CS.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "0d94f8000327",
+          "outletId": "le-figaro",
+          "headline": "Manifestations du 31 octobre : 20 commerces dégradés samedi",
+          "url": "https://www.lefigaro.fr/conjoncture/manifestations-du-31-octobre-20-commerces-degrades-samedi-20261101",
+          "publishedAt": "2026-11-01T10:55:13.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/01/1314277576f98d32aeaf1ccfcd8e9a8086052532af58ed65ed2303fc570796f7.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "ba36b11ac186",
+          "outletId": "20-minutes",
+          "headline": "EN DIRECT Colère sociale : 779 personnes interpellées samedi, une mobilisation « en baisse » selon le ministère de l'Intérieur...",
+          "url": "https://www.20minutes.fr/societe/4259308-20261101-mobilisation-sociale-appel-blocage-lycees-lundi?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-01T10:50:34.000Z",
+          "imageUrl": "https://img.20mn.fr/jQM0ksIdSWCRPExK4RokpCk/1200x768_un-manifestant-tient-une-pancarte-sur-laquelle-on-peut-lire-ceux-qui-sement-le-mepris-recoltent-la-colere-lors-d-une-manifestation-a-paris-en-france-le-31-octobre-2026-la-manifestation-s-inscrivait-dans-le-cadre-d-une-journee-nationale-de-manifestations-contre-la-hausse-du-cout-de-la-vie-et-les-inegalites-organisee-par-le-mouvement-des-gilets-jaunes-les-syndicats-et-des-organisations-d-etudiants-des-lycees-et-des-universites-les-autorites-ont-deploye-une-force-de-securite-exceptionnelle-mobilisant-70-000-policiers-et-gendarmes-dans-tout-le-pays-sur-un-ton-alarmiste-les-autorites-ont-exprime-la-crainte-d-une-repetition-des-troubles-du-17-octobre-alors-que-l-acte-iii-des-manifestations-contre-la-hausse-du-cout-de-la-vie-coincidait-avec-les-fetes-d-halloween-la-france-a-ete-secouee-par-la-colere-generalisee-de-l-opinion-publique-face-a-la-hausse-du-cout-de-la-vie-et-a-l-aggravation-des-inegalites-paris-france-le-31-octobre-2026-alfred-photos-a0159-credit-alfred-yaghobzadeh-sipa-2611011206",
+          "frontPage": true,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "edfaae1614ee",
+          "outletId": "franceinfo",
+          "headline": "Mobilisation sociale : 20 commerces ont été dégradés le 31 octobre, un chiffre en baisse par rapport aux précédents week-ends de manifestations",
+          "url": "https://www.franceinfo.fr/economie/greve/direct-mobilisation-sociale-la-jeunesse-ne-lache-pas-declare-la-porte-parole-de-l-union-etudiante-au-lendemain-des-manifestations-du-31-octobre_8262449.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-01T10:27:23.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/Pj8EfeCwOOQxQYDloUzEvXnUQzs/0x312:6000x3687/432x243/filters:format(jpg)/2026/11/01/6ae713c8dc88c849984707.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "d7fcfa4a677a",
+          "outletId": "bfmtv",
+          "headline": "Manifestations du 31 octobre: entre 320.000 et 500.000 participants, 565 personnes ont été interpellées en France",
+          "url": "https://www.bfmtv.com/police-justice/video-manifestations-du-31-octobre-entre-320-000-et-500-000-participants-565-personnes-ont-ete-interpellees-en-france_VN-202611010178.html",
+          "publishedAt": "2026-11-01T08:34:36.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/NaZYVPVZrtmuULDYrmG8jaSRRKA=/0x0:1280x720/800x0/images/Manifestations-du-31-octobre-entre-320-000-et-500-000-participants-565-personnes-ont-ete-interpellees-en-France-2375726.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "356d05712333",
+          "outletId": "europe-1",
+          "headline": "«Je me retrouve le crâne fracassé» : à Bordeaux, des restaurateurs victimes des violences en marge de la mobilisation du 31 octobre",
+          "url": "https://www.europe1.fr/societe/je-me-retrouve-le-crane-fracasse-a-bordeaux-des-restaurateurs-victimes-des-violences-en-marge-de-la-mobilisation-du-31-octobre-1199556?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-01T08:17:17.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/01/08/000_d62798g_1_6ae6ee4e2c3fe.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "1002ad5bba6f",
+          "outletId": "europe-1",
+          "headline": "Acte III à Marseille : violences en fin de manifestation",
+          "url": "https://www.europe1.fr/societe/acte-iii-a-marseille-violences-en-fin-de-manifestation-1199559?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-01T07:30:12.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/01/08/000_d62c2a9_1_6ae6ee660a64c.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "025f76074317",
+          "outletId": "europe-1",
+          "headline": "Mobilisation du 31 octobre : à Lyon, un défilé calme mais des heurts en fin de cortège, la mobilisation se poursuit",
+          "url": "https://www.europe1.fr/societe/mobilisation-du-31-octobre-a-lyon-un-defile-calme-mais-des-heurts-en-fin-de-cortege-la-mobilisation-se-poursuit-1199373?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-01T07:12:30.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/01/07/089_mei-fra-alsh-lfspa-20261031-0013_1_6ae6d9ea160d8.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        }
+      ],
+      "topicId": "1e52bac1f877",
+      "titledArticleCount": 12,
+      "section": "society",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "L'Humanité recense 500 000 manifestants et relaie des accusations visant les CRS à Montpellier",
+          "Le Monde et franceinfo signalent des appels à de nouveaux blocages scolaires et lycéens pour la semaine",
+          "20 Minutes comptabilise 779 interpellations lors de cette journée de mobilisation contre la vie chère"
+        ],
+        "centre": [
+          "Le ministère de l'Intérieur dénombre entre 320 000 et 500 000 participants selon les estimations",
+          "BFMTV et France 24 rapportent une journée globalement calme malgré des heurts en fin de cortège",
+          "Marine Tondelier salue la réussite de ce mouvement social et la multiplication des appels à la grève"
+        ],
+        "droite": [
+          "Le Figaro fait état de 779 interpellations, 116 membres des forces de l'ordre blessés et 36 commerces dégradés",
+          "Europe 1 détaille les violences et les dégradations survenues en fin de manifestation à Bordeaux, Marseille et Lyon",
+          "Le Figaro précise que 20 commerces ont été touchés par des dégradations, un chiffre en baisse par rapport aux mobilisations précédentes"
+        ]
+      },
+      "differences": [
+        "La gauche met en avant l'ampleur de la mobilisation populaire et les accusations de violences policières, tout en annonçant les prochains mots d'ordre de blocage.",
+        "Le centre adopte une approche chiffrée nuancée entre les estimations syndicales et gouvernementales, en soulignant le contraste entre des cortèges calmes et des heurts localisés.",
+        "La droite focalise son traitement sur les violences urbaines en fin de cortège, les interpellations massives et les dégâts matériels subis par les commerçants dans plusieurs grandes villes."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 12,
+      "summarizedAt": "2026-11-01T23:01:14.034Z"
+    },
+    {
       "id": "7710c0c28688",
       "slug": "la-championne-d-europe-d-athletisme-ciara-mageean-meurt-a-34-ans",
       "title": "L'ancienne championne d'Europe Ciara Mageean est morte à l'âge de 34 ans",
@@ -12687,268 +12353,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 7,
       "summarizedAt": "2026-11-01T18:01:15.590Z"
-    },
-    {
-      "id": "f241bd776d46",
-      "slug": "leclerc-baisse-le-prix-du-gazole-de-21-centimes-des-le-1er",
-      "title": "E. Leclerc et plusieurs distributeurs baissent le prix du gazole de 21 centimes après le déblocage des stocks stratégiques",
-      "createdAt": "2026-10-31T19:01:21.568Z",
-      "storyDay": "2026-10-31",
-      "articles": [
-        {
-          "id": "85a6c3eeb5dc",
-          "outletId": "bfmtv",
-          "headline": "\"Les distributeurs jouent le jeu\": Serge Papin assure que \"plus de la moitié des stations ont baissé les prix\" du gazole",
-          "url": "https://www.bfmtv.com/economie/entreprises/les-distributeurs-jouent-le-jeu-serge-papin-assure-que-plus-de-la-moitie-des-stations-ont-baisse-les-prix-du-gazole_AV-202611020312.html",
-          "publishedAt": "2026-11-02T07:55:35.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/xeTLImRlxNVvJ5W7aX9SQ8ckBxg=/0x212:2048x1364/800x0/images/Le-ministre-francais-du-Commerce-Serge-Papin-quitte-le-palais-de-l-Elysee-a-Paris-apres-le-Conseil-des-ministres-hebdomadaire-le-1er-juillet-2026-2326024.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "09a9f0e8b21b",
-          "outletId": "bfmtv",
-          "headline": "Baisse du prix du gazole: \"C'est un pas positif, mais ce n'est pas suffisant\", affirme Raphaël Glucksmann, candidat PS-Place publique à la présidentielle",
-          "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-baisse-du-prix-du-gazole-c-est-un-pas-positif-mais-ce-n-est-pas-suffisant-affirme-raphael-glucksmann-candidat-ps-place-publique-a-la-presidentielle_VN-202611020302.html",
-          "publishedAt": "2026-11-02T07:48:14.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/NLCg7vPAwYGxBucyhhZ2IOsZ-N4=/0x0:1280x720/800x0/images/Baisse-du-prix-du-gazole-C-est-un-pas-positif-mais-ce-n-est-pas-suffisant-affirme-Raphael-Glucksmann-candidat-PS-Place-publique-a-la-presidentielle-2376150.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "4fc782fee1a0",
-          "outletId": "bfmtv",
-          "headline": "Après la libération des stocks stratégiques, le prix du gazole baisse sensiblement à la pompe",
-          "url": "https://www.bfmtv.com/replay-emissions/premiere-edition-6h-8h30/video-apres-la-liberation-des-stocks-strategiques-le-prix-du-gazole-baisse-sensiblement-a-la-pompe_VN-202611020189.html",
-          "publishedAt": "2026-11-02T06:43:45.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/WcHalFkZirS-KYMR8tUw3be9xcc=/0x0:1280x720/800x0/images/Apres-la-liberation-des-stocks-strategiques-le-prix-du-gazole-baisse-sensiblement-a-la-pompe-2376051.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "12e428f3915a",
-          "outletId": "bfmtv",
-          "headline": "\"C'est trop cher encore\": après la libération de stocks stratégiques, le prix du gazole diminue dans de nombreuses stations, une baisse suffisante?",
-          "url": "https://www.bfmtv.com/replay-emissions/bfm-premiere/video-c-est-trop-cher-encore-apres-la-liberation-de-stocks-strategiques-le-prix-du-gazole-diminue-dans-de-nombreuses-stations-une-baisse-suffisante_VN-202611020083.html",
-          "publishedAt": "2026-11-02T05:13:33.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/VX4cdUTrFx3WoJVgCcg3fG0-UEE=/0x0:1280x720/800x0/images/C-est-trop-cher-encore-apres-la-liberation-de-stocks-strategiques-le-prix-du-gazole-diminue-dans-de-nombreuses-stations-une-baisse-suffisante-2375972.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "02e2eb0e0f09",
-          "outletId": "rfi",
-          "headline": "France: comment la libération de stocks stratégiques de diesel fait baisser les prix",
-          "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261101-france-comment-la-lib%C3%A9ration-de-stocks-strat%C3%A9giques-de-diesel-fait-baisser-les-prix",
-          "publishedAt": "2026-11-01T23:23:10.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/ad234278-d646-11f1-a30f-d18c5759e759/w:1024/p:16x9/iStock-1409050723.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "ccdbdd36c04a",
-          "outletId": "tf1-info",
-          "headline": "Baisse des prix : à la recherche du carburant le moins cher",
-          "url": "https://www.tf1info.fr/conso/videos/video-baisse-des-prix-a-la-recherche-du-carburant-le-moins-cher-56527-2473265.html",
-          "publishedAt": "2026-11-01T20:10:18.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/baisse-des-prix-a-la-recherche-du-carburant-le-moins-cher-98363c-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "091e7798b0eb",
-          "outletId": "le-parisien",
-          "headline": "Prix des carburants : la baisse du gazole commence... mais avec une certaine « disparité »",
-          "url": "https://www.leparisien.fr/economie/prix-des-carburants-la-baisse-du-gazole-commence-mais-avec-une-certaine-disparite-01-11-2026-CBTP6QR2WRGFTFW235ETZVABAQ.php",
-          "publishedAt": "2026-11-01T16:01:15.871Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "57e082cbaed3",
-          "outletId": "bfmtv",
-          "headline": "Les prix du gazole vont-ils vraiment baisser dans toutes les stations? Le gouvernement va réunir mardi les distributeurs de carburants à Bercy pour s’assurer que le déblocage des stocks stratégiques se répercute bien à la pompe",
-          "url": "https://www.bfmtv.com/economie/entreprises/energie/les-prix-du-gazole-vont-ils-vraiment-baisser-dans-toutes-les-stations-le-gouvernement-va-reunir-mardi-les-distributeurs-de-carburants-a-bercy-pour-s-assurer-que-le-deblocage-des-stocks-strategiques-se-repercute-bien-a-la-pompe_AD-202611010317.html",
-          "publishedAt": "2026-11-01T15:48:42.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/_MWbGF8F49WHu8bzcl93GQsy0qI=/0x40:768x472/800x0/images/Depuis-que-le-litre-de-gazole-a-franchi-la-barre-des-2-euros-en-mars-les-Francais-ont-tendance-a-delaisser-leur-voiture-et-trouvent-d-autres-solutions-pour-se-deplacer-2360030.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "b5868f573599",
-          "outletId": "bfmtv",
-          "headline": "\"On a des écarts de prix qui sont insupportables\": alors que le prix du gazole commence à baisser à la pompe, les stations indépendantes dénoncent la priorité accordée aux grands distributeurs dans le déstockage des réserves stratégiques",
-          "url": "https://www.bfmtv.com/economie/entreprises/energie/on-a-des-ecarts-de-prix-qui-sont-insupportables-alors-que-le-prix-du-gazole-commence-a-baisser-a-la-pompe-les-stations-independantes-denoncent-la-priorite-accordee-aux-grands-distributeurs-dans-le-destockage-des-reserves-strategiques_AD-202611010314.html",
-          "publishedAt": "2026-11-01T15:43:59.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/YkO1zAFKr6t-Uyu1RKY0ecoWVh4=/4x3:1252x705/800x0/images/-192483.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "962fe39c311b",
-          "outletId": "tf1-info",
-          "headline": "Jusqu'à 21 centimes : baisse générale des carburants",
-          "url": "https://www.tf1info.fr/conso/videos/video-jusqu-a-21-centimes-baisse-generale-des-carburants-87350-2473210.html",
-          "publishedAt": "2026-11-01T13:10:22.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/jusqu-a-21-centimes-baisse-generale-des-carburants-ba4c4e-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "206372cf7235",
-          "outletId": "cnews",
-          "headline": "Prix des carburants : après TotalEnergies, Leclerc baisse aussi le prix du gazole à partir du 1er novembre",
-          "url": "https://www.cnews.fr/france/2026-11-01/prix-des-carburants-apres-totalenergies-leclerc-baisse-aussi-le-prix-du-gazole",
-          "publishedAt": "2026-11-01T11:00:30.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/design_sans_titre_2_6ae6187560763.jpg?itok=NWWbKHPU",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "dac5600bfa8f",
-          "outletId": "bfmtv",
-          "headline": "E.Leclerc annonce \"21 centimes d'euro par litre\" dès dimanche, Coopérative U promet \"jusqu'à 21 centimes\" selon les stations: après Totalénergies, les deux distributeurs vont aussi baisser le prix du gazole grâce au déblocage des stocks stratégiques",
-          "url": "https://www.bfmtv.com/economie/entreprises/energie/e-leclerc-annonce-21-centimes-d-euro-par-litre-des-dimanche-cooperative-u-promet-jusqu-a-21-centimes-selon-les-stations-apres-totalenergies-les-deux-distributeurs-vont-aussi-baisser-le-prix-du-gazole-grace-au-deblocage-des-stocks-strategiques_AD-202611010209.html",
-          "publishedAt": "2026-11-01T10:17:14.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/SHEY6F8vaYzbLxdVhwD89voNWJI=/0x40:768x472/800x0/images/Sur-le-prix-du-gazole-le-gouvernement-espere-un-effet-immediat-de-la-liberation-de-stocks-strategiques-2374419.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "1dec67b15c55",
-          "outletId": "la-croix",
-          "headline": "Comment le déblocage de stocks stratégiques fait baisser le prix du diesel",
-          "url": "https://www.la-croix.com/economie/comment-le-deblocage-de-stocks-strategiques-fait-baisser-le-prix-du-diesel-20261101",
-          "publishedAt": "2026-11-01T08:21:15.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/11/01/2576549-totalenergies-et-eleclerc-ont-annonce-dimanche-1er.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "f6c38e1c82d2",
-          "outletId": "20-minutes",
-          "headline": "Carburant : E. Leclerc baisse à partir de ce dimanche le prix du gazole dans ses stations",
-          "url": "https://www.20minutes.fr/economie/4259281-20261101-carburant-e-leclerc-baisse-partir-dimanche-prix-gazole-stations?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-01T07:22:57.000Z",
-          "imageUrl": "https://img.20mn.fr/I0wTA_VbR3eyGwcC9EbKGyk/1200x768_le-prix-du-carburant-repart-a-la-hausse-dans-les-stations-service-e-leclerc-plus-de-2-le-litre-archive-nice-france-28-12-2025-syspeo-sys-a007-credit-syspeo-sipa-2608262132",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "022205dd6997",
-          "outletId": "le-figaro",
-          "headline": "Carburants : après TotalEnergies, E. Leclerc baisse également le prix du gazole",
-          "url": "https://www.lefigaro.fr/conso/carburants-apres-totalenergies-e-leclerc-baisse-egalement-le-prix-du-gazole-20261031",
-          "publishedAt": "2026-10-31T22:34:39.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/31/455659c1f375da67b6d063ef76490b7bab50233bd4736485a47d2b57da8cc13e.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "7aa8585070eb",
-          "outletId": "tf1-info",
-          "headline": "Prix du carburant : E.Leclerc baisse à son tour le tarif du gazole à partir de ce dimanche",
-          "url": "https://www.tf1info.fr/conso/prix-du-carburant-e-leclerc-baisse-a-son-tour-le-tarif-du-gazole-a-partir-de-ce-dimanche-2473141.html",
-          "publishedAt": "2026-10-31T20:50:15.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/681/crise-carburants-france-2026-09-24-prix-gazole-0d6b7a-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "d327eb95914f",
-          "outletId": "le-parisien",
-          "headline": "Prix des carburants : Leclerc promet une baisse massive des tarifs du gazole dès dimanche",
-          "url": "https://www.leparisien.fr/economie/consommation/prix-des-carburants-leclerc-promet-une-baisse-massive-des-tarifs-du-gazole-des-dimanche-31-10-2026-ZJ6PUZVOHZGQJES573KAOMFIXU.php",
-          "publishedAt": "2026-10-31T19:01:21.568Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "823bd2c38a46",
-          "outletId": "franceinfo",
-          "headline": "E. Leclerc baisse également le prix du gazole, après TotalEnergies",
-          "url": "https://www.franceinfo.fr/economie/transports/prix-des-carburants/e-leclerc-baisse-egalement-le-prix-du-gazole-apres-totalenergies_8262119.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-10-31T18:43:33.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/KOjcVf4BzrljYEjsZtn81-smMt8/0x52:1024x628/432x243/filters:format(jpg)/2026/10/31/6ae636c7bfd61345770814.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "7f69538f200d",
-          "outletId": "europe-1",
-          "headline": "Gazole : E. Leclerc annonce une baisse de 21 centimes le litre dès dimanche",
-          "url": "https://www.europe1.fr/societe/gazole-e-leclerc-annonce-une-baisse-de-21-centimes-le-litre-des-dimanche-1198200?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-10-31T18:15:09.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/10/31/19/080_hl_mthomasset_3304739_1_6ae62ff0b9247.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "b028813b6326",
-          "outletId": "cnews",
-          "headline": "Prix des carburants : Leclerc annonce baisser le prix du gazole de 21 centimes dès le 1er novembre",
-          "url": "https://www.cnews.fr/france/2026-10-31/prix-des-carburants-leclerc-annonce-baisser-le-prix-du-gazole-de-21-centimes-des",
-          "publishedAt": "2026-10-31T17:06:30.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/design_sans_titre_2_6ae6187560763.jpg?itok=NWWbKHPU",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        }
-      ],
-      "topicId": "a13153bef56f",
-      "titledArticleCount": 18,
-      "section": "economy",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le gouvernement a autorise le deblocage de 10 millions de barils de reserves de gazole pour trois mois.",
-          "L'enseigne E. Leclerc applique une reduction de 21 centimes par litre sur le gazole dans l'ensemble de ses 742 stations-service.",
-          "Cette baisse des prix represente une economie d'un peu plus de 10 euros pour un plein de 50 litres."
-        ],
-        "centre": [
-          "Le deblocage des stocks strategiques de gazole par le gouvernement vise a soulager le pouvoir d'achat des automobilistes.",
-          "Une baisse de prix materialisee par une reduction de 12 a 18 centimes etait initialement anticipee.",
-          "Les enseignes E. Leclerc et Cooperative U ont annonce une diminution des tarifs pouvant atteindre 21 centimes par litre.",
-          "Les autorites convoint les distributeurs a Bercy pour examiner l'impact concret de ces mesures sur les prix a la pompe."
-        ],
-        "droite": [
-          "Le gouvernement a procede au deblocage de stocks strategiques pour faire baisser les prix du gazole.",
-          "TotalEnergies et E. Leclerc ont activement baisse leurs tarifs de 21 centimes par litre sur le gazole.",
-          "La reduction depasse la fourchette initiale de 12 a 18 centimes esperee par l'executif.",
-          "Certaines stations-service font face a des tensions d'approvisionnement malgre ces mesures."
-        ]
-      },
-      "differences": [
-        "La gauche met l'accent sur le gain economique direct pour le pouvoir d'achat des menages suite a la baisse tarifaire.",
-        "Le centre insiste sur l'action gouvernementale et la concertation a venir avec les distributeurs pour verifier la repercussion des mesures.",
-        "La droite souligne le depassement des objectifs initiaux de baisse des prix et les initiatives des groupes prives."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 18,
-      "summarizedAt": "2026-11-02T07:01:21.544Z"
     },
     {
       "id": "367ed413b8ab",
@@ -13582,6 +12986,360 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 18,
       "summarizedAt": "2026-11-01T18:01:15.590Z"
+    },
+    {
+      "id": "cced844d240e",
+      "slug": "un-avocat-des-victimes-demande-une-enquete-sur-les-finances-de",
+      "title": "Un avocat des victimes demande une enquête sur les finances de la commune après l'incendie de Crans-Montana",
+      "createdAt": "2026-11-01T16:01:15.871Z",
+      "storyDay": "2026-11-01",
+      "articles": [
+        {
+          "id": "afcbecfed8b1",
+          "outletId": "tf1-info",
+          "headline": "Incendie de Crans-Montana : un avocat demande une enquête sur la gestion de la commune",
+          "url": "https://www.tf1info.fr/justice-faits-divers/incendie-de-crans-montana-un-avocat-demande-une-enquete-sur-la-gestion-de-la-commune-2473225.html",
+          "publishedAt": "2026-11-01T16:48:05.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/memorial-incendie-crans-montana-2026-1aff9c-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "45fb3383432e",
+          "outletId": "le-parisien",
+          "headline": "Drame de Crans-Montana : un avocat des victimes demande une enquête sur les finances de la commune",
+          "url": "https://www.leparisien.fr/faits-divers/drame-de-crans-montana-un-avocat-des-victimes-demande-une-enquete-sur-les-finances-de-la-commune-01-11-2026-J7EZETG45JGSNH3CMFHRAEO2NE.php",
+          "publishedAt": "2026-11-01T16:01:15.871Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "42afbb0c9809",
+          "outletId": "cnews",
+          "headline": "Incendie de Crans-Montana : une enquête réclamée sur les finances communales soulève de nouvelles zones d'ombre",
+          "url": "https://www.cnews.fr/monde/2026-11-01/incendie-de-crans-montana-une-enquete-reclamee-sur-les-finances-communales-souleve",
+          "publishedAt": "2026-11-01T15:21:56.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/afp_6ae74acb2d952.jpg?itok=BmwNshlV",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "6bb9f932c750",
+          "outletId": "20-minutes",
+          "headline": "Incendie de Crans Montana : Un avocat des victimes demande une enquête sur les finances de la ville",
+          "url": "https://www.20minutes.fr/societe/4259339-20261101-incendie-crans-montana-avocat-victimes-demande-enquete-finances-ville?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-01T15:09:32.000Z",
+          "imageUrl": "https://img.20mn.fr/8w0W_AnYSWCm9OPnfY16nCk/1200x768_l-un-des-avocats-des-plaignants-sebastien-fanti-s-adresse-a-des-journalistes-lors-d-une-audition-des-proprietaires-du-bar-le-constellation-a-crans-montana-dans-le-cadre-de-l-enquete-sur-un-incendie-devastateur-survenu-le-nouvel-an-qui-a-tue-41-personnes-pour-la-plupart-des-adolescents-et-en-a-blesse-115-autres-a-sion-le-5-juin-2026-photo-de-fabrice-coffrini-afp",
+          "frontPage": true,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "1e2f5f6e49e6",
+          "outletId": "le-figaro",
+          "headline": "Incendie de Crans-Montana : un avocat demande une enquête sur les finances communales",
+          "url": "https://www.lefigaro.fr/international/incendie-de-crans-montana-un-avocat-demande-une-enquete-sur-les-finances-communales-20261101",
+          "publishedAt": "2026-11-01T15:02:24.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/01/7297630fb56d0926802488a42dd85c219f773fd8ddda3beef1fa689779a6504e.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "ca95b9c86632",
+          "outletId": "bfmtv",
+          "headline": "Incendie de Crans-Montana: un avocat demande une enquête sur les finances de la commune et sa mise sous tutelle partielle",
+          "url": "https://www.bfmtv.com/international/europe/suisse/incendie-de-crans-montana-un-avocat-demande-une-enquete-sur-les-finances-de-la-commune-et-sa-mise-sous-tutelle-partielle_AD-202611010299.html",
+          "publishedAt": "2026-11-01T14:48:56.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/rxoYFPZTlY9_GupxOexQC2aVGds=/0x106:2048x1258/800x0/images/Le-village-de-Crans-Montana-en-Suisse-est-sous-le-choc-apres-l-incendie-du-bar-le-Constellation-2209468.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "cced844d240e",
+      "titledArticleCount": 5,
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "L'avocat Sébastien Fanti a demandé l'ouverture d'une enquête sur les finances de la commune suisse de Crans-Montana.",
+          "La démarche vise à évaluer la capacité de la municipalité à assumer les répercussions financières du drame."
+        ],
+        "centre": [
+          "Maître Sébastien Fanti a saisi le Conseil d'État valaisan d'une plainte concernant la gestion financière de Crans-Montana.",
+          "La requête met en cause la prévention et la gestion des risques par la commune après l'incendie tragique."
+        ],
+        "droite": [
+          "Une enquête officielle et une mise sous régie partielle de la commune suisse ont été exigées par l'avocat des victimes.",
+          "Le président de la commune figure parmi les 17 personnes poursuivies par le parquet pour homicide et blessures par négligence."
+        ]
+      },
+      "differences": [
+        "Le camp gauche se concentre strictement sur l'annonce de la démarche de l'avocat et l'évaluation de la solidité financière locale.",
+        "Le camp centre expose les motifs précis de la plainte déposée auprès des autorités valaisannes sans mentionner les poursuites pénales en cours.",
+        "Le camp droite élargit le récit en soulignant les zones d'ombre financières et en rappelant la mise en cause pénale du président de la commune."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-11-01T16:01:15.871Z"
+    },
+    {
+      "id": "01b539d2a645",
+      "slug": "la-coree-du-nord-vole-6-milliards-de-dollars-de-cryptomonnaies",
+      "title": "Piratage de Binance : le FBI accuse la Corée du Nord du vol de 6,3 milliards de dollars et la plateforme rouvre ses retraits",
+      "createdAt": "2026-11-01T03:01:23.048Z",
+      "storyDay": "2026-10-31",
+      "articles": [
+        {
+          "id": "52928824a6ee",
+          "outletId": "rfi",
+          "headline": "Cryptomonnaies: qui sont les hackers nord-coréens soupçonnés d'avoir piraté Binance?",
+          "url": "https://www.rfi.fr/fr/asie-pacifique/20261101-cryptomonnaies-qui-sont-les-hackers-nord-cor%C3%A9ens-soup%C3%A7onn%C3%A9s-d-avoir-pirat%C3%A9-binance",
+          "publishedAt": "2026-11-01T13:38:36.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/4c79f68c-a0de-11ef-8e78-005056bfb2b6/w:1024/p:16x9/Hacker-photo-illustration.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "95b925f64670",
+          "outletId": "ouest-france",
+          "headline": "6,3 milliards de dollars dérobés à Binance : trois questions sur le plus grand vol de cryptomonnaies de l’histoire",
+          "url": "https://www.ouest-france.fr/societe/cyberattaque/6-3-milliards-de-dollars-derobes-a-binance-trois-questions-sur-le-plus-grand-vol-de-cryptomonnaies-de-lhistoire-31a72b46-d5e7-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-01T13:15:59.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMmI4Y2ZiZTk0YmNhMDAwMzYxNTdmYTdhYWRhODE5MTY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=070ccbf5c2c3e7d2e5d9c1b2adced52a1b8e7c05952a5274d5d01246865fdc25",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "7f402cdda7f6",
+          "outletId": "cnews",
+          "headline": "Vol de 6,3 milliards de dollars de cryptomonnaies : comment Binance va assurer la restitution des sommes volées à ses clients",
+          "url": "https://www.cnews.fr/vie-numerique/2026-11-01/vol-de-63-milliards-de-dollars-de-cryptomonnaies-comment-binance-va",
+          "publishedAt": "2026-11-01T12:13:53.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-27t145741z_1217147951_rc27jx99ilqc_rtrmadp_3_cryptocurrency-binance-russia-taille1200_6ae444b6bf94a-taille1200_6ae719168167c.jpg?itok=2ZOaVu01",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "c96eaed67eb8",
+          "outletId": "le-monde",
+          "headline": "Piratage de la plateforme de cryptomonnaies Binance : la plateforme annonce rouvrir les retraits, le FBI accuse la Corée du Nord du « casse du siècle »",
+          "url": "https://www.lemonde.fr/pixels/article/2026/11/01/piratage-de-la-plateforme-de-cryptomonnaies-binance-la-plateforme-annonce-rouvrir-les-retraits-le-fbi-accuse-la-coree-du-nord-du-casse-du-siecle_6803867_4408997.html",
+          "publishedAt": "2026-11-01T10:04:17.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/30/342/0/4000/2000/644/322/60/0/2be4f59_ftp-1-pajpzgomupyl-2026-10-30t080034z-1706611026-rc2jdoa5uy82-rtrmadp-3-fintech-crypto-binance-hack.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "d900713221de",
+          "outletId": "franceinfo",
+          "headline": "La plateforme de cryptomonnaies Binance annonce une reprise des retraits, après un piratage commis par des hackers de Corée du Nord selon les accusations du FBI.",
+          "url": "https://www.franceinfo.fr/economie/bitcoin/la-plateforme-de-cryptomonnaies-binance-annonce-une-reprise-des-retraits-apres-un-piratage-commis-par-des-hackers-de-coree-du-nord-selon-les-accusations-du-fbi_8262545.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-01T09:32:53.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/UgHLS73MCSyRAeIVsKtzOD7OKGE/0x234:4500x2765/432x243/filters:format(jpg)/2026/11/01/6ae706fb009b4403473265.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "c73f2aeb8f22",
+          "outletId": "bfmtv",
+          "headline": "6,3 milliards de dollars d'actifs numériques dérobés: la plateforme Binance annonce la reprise progressive des retraits pour ses clients, trois jours après le braquage numérique massif mené par la Corée du Nord selon le FBI",
+          "url": "https://www.bfmtv.com/crypto/6-3-milliards-de-dollars-d-actifs-numeriques-derobes-la-plateforme-binance-annonce-la-reprise-progressive-des-retraits-pour-ses-clients-trois-jours-apres-le-braquage-numerique-massif-mene-par-la-coree-du-nord-selon-le-fbi_AD-202611010191.html",
+          "publishedAt": "2026-11-01T09:16:00.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/4c6gTgp6JhmROf2iIIzM1_lU8tM=/0x105:2048x1257/800x0/images/Binance-2375142.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "64b8477d0462",
+          "outletId": "la-croix",
+          "headline": "Vol de cryptomonnaies chez Binance : reprise des retraits, le FBI accuse la Corée du Nord",
+          "url": "https://www.la-croix.com/le-fbi-accuse-la-coree-du-nord-du-casse-du-siecle-chez-binance-20261101",
+          "publishedAt": "2026-11-01T08:52:03.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2025/01/28/1959525-binance-revendique-sur-son-site-internet-plus-de-2.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "331116319827",
+          "outletId": "tf1-info",
+          "headline": "\"Casse du siècle\" chez le géant des cryptomonnaies : le FBI accuse la Corée du Nord, les retraits reprennent",
+          "url": "https://www.tf1info.fr/international/casse-du-siecle-chez-le-geant-des-cryptomonnaies-binance-le-fbi-accuse-la-coree-du-nord-les-retraits-reprennent-2473177.html",
+          "publishedAt": "2026-11-01T08:33:26.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/681/la-plateforme-de-cryptomonnaies-binance-2026-8af13a-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "3f40689a5733",
+          "outletId": "liberation",
+          "headline": "Cyberattaque de Binance : le FBI accuse la Corée du Nord, Donald Trump met en doute",
+          "url": "https://www.liberation.fr/international/amerique/cyberattaque-de-binance-le-fbi-accuse-la-coree-du-nord-donald-trump-met-en-doute-20261101_PKHXTEFUXZAZ3IDG6QG5PE5IYU/",
+          "publishedAt": "2026-11-01T08:05:24.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "ba1989cb83f5",
+          "outletId": "cnews",
+          "headline": "Cyberattaque massive contre Binance : le FBI accuse la Corée du Nord du «casse du siècle»",
+          "url": "https://www.cnews.fr/monde/2026-11-01/cyberattaque-massive-contre-binance-le-fbi-accuse-la-coree-du-nord-du-casse-du",
+          "publishedAt": "2026-11-01T07:53:48.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/091_i1793524818816-taille1200_6ae6e24055183.jpg?itok=bR9Eist0",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "047748ca951d",
+          "outletId": "le-figaro",
+          "headline": "Piratage de cryptomonnaies : Binance annonce la reprise des retraits ce dimanche",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/piratage-de-cryptomonnaies-binance-annonce-la-reprise-des-retraits-ce-dimanche-20261101",
+          "publishedAt": "2026-11-01T07:01:46.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/01/7108280dd11d07d0f54506509c4fe5fb9b768765c234b74e916d9c15ee269351.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "f1d9fe96a156",
+          "outletId": "le-parisien",
+          "headline": "« Casse du siècle » chez Binance : le FBI accuse la Corée du Nord du vol record de 6,3 milliards de dollars",
+          "url": "https://www.leparisien.fr/international/casse-du-siecle-chez-binance-le-fbi-accuse-la-coree-du-nord-du-vol-record-de-63-milliards-de-dollars-01-11-2026-I3BN6NBSKJBENHBB2TMW62VAKY.php",
+          "publishedAt": "2026-11-01T07:01:10.566Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "511c220b4e2c",
+          "outletId": "bfmtv",
+          "headline": "Le FBI accuse la Corée du Nord du vol de plus de 6 milliards de dollars de cryptomonnaies à Binance",
+          "url": "https://www.bfmtv.com/crypto/le-fbi-accuse-la-coree-du-nord-du-vol-de-plus-de-6-milliards-de-dollars-de-cryptomonnaies-a-binance_AN-202611010133.html",
+          "publishedAt": "2026-11-01T06:26:47.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/84B1l3hNnNvpC1YuLVNVRC90P2U=/0x36:768x468/800x0/images/Binance-revendique-sur-son-site-internet-plus-de-250-millions-d-utilisateurs-2022674.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "e5dac74638b6",
+          "outletId": "europe-1",
+          "headline": "Le FBI accuse la Corée du Nord du «casse du siècle» chez Binance",
+          "url": "https://www.europe1.fr/international/le-fbi-accuse-la-coree-du-nord-du-casse-du-siecle-chez-binance-1199334?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-01T05:45:38.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/01/06/091_i1793524818816_1_6ae6d4467c728.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "70aa26204c8c",
+          "outletId": "le-monde",
+          "headline": "Piratage de la plateforme de cryptomonnaies Binance : le FBI accuse la Corée du Nord du « casse du siècle »",
+          "url": "https://www.lemonde.fr/pixels/article/2026/11/01/piratage-de-la-plateforme-de-cryptomonnaies-binance-le-fbi-accuse-la-coree-du-nord-du-casse-du-siecle_6803867_4408996.html",
+          "publishedAt": "2026-11-01T02:30:17.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/30/342/0/4000/2000/644/322/60/0/2be4f59_ftp-1-pajpzgomupyl-2026-10-30t080034z-1706611026-rc2jdoa5uy82-rtrmadp-3-fintech-crypto-binance-hack.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "7a769183d8fc",
+          "outletId": "20-minutes",
+          "headline": "Casse du siècle… Le FBI accuse la Corée du Nord d’un vol record chez Binance",
+          "url": "https://www.20minutes.fr/monde/coree_du_nord/4259263-20261101-casse-siecle-fbi-accuse-coree-nord-vol-record-chez-binance?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-01T02:22:05.000Z",
+          "imageUrl": "https://img.20mn.fr/p4b36GasRhmz9V-q-rY6Lik/1200x768_un-logo-binance-apparait-sur-un-fond-numerique-affichant-un-code-binaire-sur-cette-illustration-photo-representant-une-cyberattaque-contre-le-plus-grand-echange-de-cryptomonnaies-au-monde-binance-a-signale-une-faille-de-securite-dont-l-impact-est-estime-a-6-3-milliards-de-dollars-avec-environ-3-milliards-de-dollars-d-actifs-concernes-geles-cette-illustration-photo-a-ete-prise-le-30-octobre-2026-yassine-mahjoub-sipa-mahjoubyassine-by2f1203-credit-yassine-mahjoub-sipa-2610302003",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "dbf509a1d278",
+          "outletId": "france-24",
+          "headline": "Piratage de la plateforme de cryptomonnaies Binance : le FBI accuse la Corée du Nord",
+          "url": "https://www.france24.com/fr/%C3%A9co-tech/20261101-piratage-de-la-plateforme-de-cryptomonnaies-binance-le-fbi-accuse-la-cor%C3%A9e-du-nord",
+          "publishedAt": "2026-11-01T00:33:53.000Z",
+          "imageUrl": "https://s.france24.com/media/display/995d11ae-d508-11f1-97b9-bf1914cabd52/w:1024/p:16x9/Part-GTY-1496426886-1-1-2.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "a51f2e47d522",
+          "outletId": "le-figaro",
+          "headline": "Le FBI accuse la Corée du Nord du vol de 6 milliards de dollars de cryptomonnaies à Binance",
+          "url": "https://www.lefigaro.fr/international/le-fbi-accuse-la-coree-du-nord-du-vol-de-6-milliards-de-dollars-de-cryptomonnaies-a-binance-20261101",
+          "publishedAt": "2026-10-31T23:48:29.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/01/2a15add1b380bb6e44289d963d00dd23c449be0078005c7eadef2ae48ac8a185.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "75717a9d0945",
+          "outletId": "le-figaro",
+          "headline": "Après son piratage record, Binance prévoit de réautoriser les retraits dimanche",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/piratage-de-cryptomonnaies-binance-prevoit-de-reautoriser-les-retraits-dimanche-20261031",
+          "publishedAt": "2026-10-31T21:28:35.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/31/26efe37d3dab47625864e2e6fdae52d76ba12bfbf03f032da56e12920c6ce4b7.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "386242e5af4e",
+      "titledArticleCount": 19,
+      "section": "economy",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le FBI désigne le groupe TraderTraitor, affilié à Pyongyang, comme l'auteur du vol de 6,3 milliards de dollars chez Binance.",
+          "La plateforme de cryptomonnaies annonce la reprise progressive des retraits par étapes.",
+          "Le président américain Donald Trump émet des doutes concernant l'implication de la Corée du Nord dans cette cyberattaque."
+        ],
+        "centre": [
+          "La plateforme d'échange Binance subit le plus grand vol de cryptomonnaies de l'histoire, estimé à 6,3 milliards de dollars.",
+          "Le FBI attribue ce piratage massif à des pirates informatiques nord-coréens et au groupe TraderTraitor.",
+          "Binance annonce la reprise progressive des retraits pour ses clients et certains experts s'interrogent sur l'implication de l'intelligence artificielle."
+        ],
+        "droite": [
+          "Binance est victime d'un piratage historique qualifié de « casse du siècle », avec un préjudice de 6,3 milliards de dollars.",
+          "Le FBI accuse formellement la Corée du Nord et le groupe TraderTraitor d'être à l'origine de ce vol d'actifs virtuels.",
+          "La plateforme annonce couvrir 90% des pertes de ses clients grâce à sa trésorerie et réautorise les retraits."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur les accusations du FBI et la mise en doute immédiate de ces conclusions par Donald Trump.",
+        "Le centre dresse le bilan factuel de l'attaque record et de la reprise technique des services de la plateforme sans mentionner de polémique politique.",
+        "La droite insiste sur l'ampleur financière du « casse du siècle » tout en valorisant la gestion de crise de l'entreprise et son remboursement des clients."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 19,
+      "summarizedAt": "2026-11-01T14:01:15.159Z"
     }
   ]
 }
