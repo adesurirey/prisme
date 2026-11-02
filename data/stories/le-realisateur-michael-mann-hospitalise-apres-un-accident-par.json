@@ -6,6 +6,27 @@
   "storyDay": "2026-11-01",
   "articles": [
     {
+      "id": "82a11c7b9b97",
+      "outletId": "liberation",
+      "headline": "Le cinéaste Michael Mann s’est accidentellement tiré dessus lors d’un entraînement",
+      "url": "https://www.liberation.fr/culture/cinema/le-cineaste-michael-mann-sest-accidentellement-tire-dessus-lors-dun-entrainement-20261102_L6ZWYP7XPNBKXHRNZYVWQTZOWY/",
+      "publishedAt": "2026-11-02T10:00:55.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
+      "id": "966e99e10213",
+      "outletId": "franceinfo",
+      "headline": "Le réalisateur américain Michael Mann accidentellement blessé par balle dans un stand de tir à Los Angeles",
+      "url": "https://www.franceinfo.fr/culture/cinema/le-realisateur-americain-michael-mann-accidentellement-blesse-par-balle-dans-un-stand-de-tir-a-los-angeles_8263643.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-02T08:31:03.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/ptaMPNWQJ7lcQci8diNS0W0xcgI/0x0:6000x3375/432x243/filters:format(jpg)/2026/11/02/6ae8474a8cea9190665283.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "01447378bdf7",
       "outletId": "20-minutes",
       "headline": "États-Unis : Le réalisateur américain Michael Mann se blesse accidentellement par balle",
@@ -75,24 +96,31 @@
     }
   ],
   "topicId": "bdfb3c71c198",
-  "titledArticleCount": 5,
+  "titledArticleCount": 8,
   "section": "culture",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le réalisateur Michael Mann a été blessé à la jambe le 31 octobre lors d'un accident survenu dans un stand de tir à Los Angeles.",
+      "Le coup de feu est parti de manière accidentelle alors que le cinéaste, âgé de 83 ans et décrit comme un tireur sportif expérimenté, rangeait son arme.",
+      "L'information est relayée par des publications allant de Libération à 20 Minutes."
+    ],
     "centre": [
-      "Le réalisateur de Heat et Collatéral, âgé de 83 ans, a été blessé à la jambe par arme à feu sur un stand de tir à Los Angeles.",
-      "Transporté à l'hôpital dans un état stable, il souffre d'une blessure qualifiée de superficielle selon les autorités et les secours."
+      "Le cinéaste américain Michael Mann a été hospitalisé à Los Angeles après s'être accidentellement tiré une balle dans la jambe.",
+      "L'accident s'est produit dans un stand de tir et a nécessité une intervention des secours, le réalisateur de Heat se trouvant dans un état stable avec une blessure jugée superficielle."
     ],
     "droite": [
-      "Le cinéaste américain Michael Mann a été hospitalisé après un accident survenu sur un stand de tir en Californie.",
-      "L'incident s'est produit lors de la manipulation de son arme, entraînant une blessure à la jambe jugée superficielle par son entourage."
+      "Le réalisateur Michael Mann, âgé de 83 ans, a été hospitalisé en urgence à la suite d'un accident par arme à feu survenu dans un stand de tir en Californie.",
+      "Le cinéaste a été touché à la jambe alors qu'il tentait de ranger son arme dans son étui, selon des précisions apportées par des médias américains cités par CNews.",
+      "Ses proches ont qualifié sa blessure de superficielle tandis que TF1 Info rapportait un état stable."
     ]
   },
   "differences": [
-    "Les médias du centre privilégient un compte-rendu synthétique centré sur l'état de santé stable du réalisateur et les informations communiquées par les secours.",
-    "Les médias de droite adoptent un angle plus narratif en détaillant les circonstances précises de l'incident survenu en Californie lors du rangement de l'arme."
+    "La gauche insiste sur le profil aguerri du cinéaste en tant que tireur sportif et replace précisément l'incident au moment du rangement de l'arme.",
+    "Le centre livre un récit factuel et synthétique centré sur l'hospitalisation et l'état stable du réalisateur sans détails superflus.",
+    "La droite dramatise l'événement en évoquant un transport d'urgence à l'hôpital tout en intégrant des précisions de la presse américaine sur le déroulement exact de la manipulation de l'arme."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-01T21:01:24.228Z"
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-02T11:01:19.126Z"
 }

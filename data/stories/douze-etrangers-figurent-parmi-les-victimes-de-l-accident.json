@@ -6,6 +6,29 @@
   "storyDay": "2026-11-01",
   "articles": [
     {
+      "id": "75739128256a",
+      "outletId": "franceinfo",
+      "headline": "Les autorités espagnoles recensent 12 victimes étrangères parmi les 69 personnes tuées dans l'accident ferroviaire d'Urda",
+      "url": "https://www.franceinfo.fr/monde/espagne/accident-de-trains-pres-de-tolede/les-autorites-espagnolrecensent-12-victimes-etrangeres-parmi-les-69-personnes-tuees-dans-l-accident-ferroviaire-d-urda_8263664.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-02T08:51:14.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/C3I1kYbza1Yg68ioIpdBrUIBsT4/0x0:1024x576/432x243/filters:format(jpg)/2026/11/02/6ae84cc5d2458393477963.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "ed04ebffbb3f",
+      "outletId": "20-minutes",
+      "headline": "Collision de trains en Espagne : Une Française, quatre Américains… L’accident a fait 12 victimes étrangères",
+      "url": "https://www.20minutes.fr/monde/espagne/4259587-20261102-collision-trains-espagne-francaise-quatre-americains-accident-fait-12-victimes-etrangeres?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-02T08:03:58.000Z",
+      "imageUrl": "https://img.20mn.fr/s-Oqsv7FQcKpQqWo50CMhSk/1200x768_les-services-d-urgence-viennent-en-aide-aux-victimes-sur-les-lieux-d-une-collision-entre-deux-trains-a-urda-en-espagne-le-mercredi-28-octobre-2026-cordon-press-cordon-sipa-02309-credit-cordon-press-sipa-2610291839",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "2de259b54cff",
       "outletId": "tf1-info",
       "headline": "Accident de trains en Espagne : 12 victimes étrangères parmi les 69 morts, dont une Française et quatre Américains",
@@ -73,26 +96,32 @@
     }
   ],
   "topicId": "678b94e3c14a",
-  "titledArticleCount": 6,
+  "titledArticleCount": 8,
   "section": "misc",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Soixante-neuf personnes ont péri dans la collision de trains survenue à Urda, selon un bilan établi quatre jours après le drame.",
+      "Douze ressortissants étrangers figurent parmi les victimes identifiées par les experts médico-légaux et la police.",
+      "La liste des défunts recensés inclut notamment une Française et quatre Américains, tandis que trois dépouilles restent non identifiées."
+    ],
     "centre": [
-      "La collision entre deux trains à Urda, près de Tolède, a causé la mort de 69 personnes et fait des dizaines de blessés le mercredi 28 octobre.",
-      "Douze des victimes décédées sont de nationalité étrangère, incluant une ressortissante française et quatre citoyens américains parmi neuf nationalités représentées.",
-      "Le journal La Croix souligne que le drame fragilise le Premier ministre Pedro Sanchez à l'approche des élections législatives anticipées et ravive la contestation sur les infrastructures publiques."
+      "La catastrophe ferroviaire d'Urda a fait 69 morts, dont 12 victimes de nationalité étrangère représentant neuf pays différents.",
+      "Le Quai d'Orsay a confirmé la mort d'une ressortissante française et adressé ses condoléances à sa famille.",
+      "La collision frontale bouleverse la campagne des élections législatives anticipées et ravive les critiques sur l'état des infrastructures publiques, selon La Croix."
     ],
     "droite": [
-      "Les autorités ont confirmé que douze étrangers figurent parmi les 69 victimes du terrible accident ferroviaire survenu à Urda le 28 octobre, dont une ressortissante française et quatre Américains selon les identifications des experts médicaux.",
-      "Le Quai d'Orsay a exprimé sa vive émotion suite au décès de la victime française et a affirmé être en lien constant avec sa famille.",
-      "Le Figaro rappelle qu'il s'agit du deuxième accident ferroviaire de l'année en Espagne après une catastrophe similaire en janvier en Andalousie."
+      "Soixante-neuf passagers ont perdu la vie dans l'accident ferroviaire d'Urda, près de Tolède, qui marque le deuxième drame du genre en Espagne cette année.",
+      "Parmi les 66 victimes désormais identifiées par les experts médicaux, 12 sont de nationalité étrangère, incluant une Française, quatre Américains et un Canadien.",
+      "Les autorités ont précisé que les autres nationalités touchées sont japonaise, tunisienne, portugaise, mexicaine, tchèque et argentine."
     ]
   },
   "differences": [
-    "Le camp centre adopte une approche institutionnelle et politique en insistant sur le bilan humain global et les répercussions électorales pour le gouvernement de Pedro Sanchez.",
-    "Le camp droite se focalise principalement sur les détails médico-légaux de l'identification des victimes étrangères et les déclarations officielles du Quai d'Orsay."
+    "La gauche se concentre strictement sur le bilan humain, l'identification médico-légale des corps et la nationalité des victimes.",
+    "Le centre élargit la couverture en associant le drame humain aux répercussions politiques immédiates sur la campagne législative et la gestion des services publics.",
+    "La droite détaille précisément la liste exhaustive des nationalités étrangères touchées tout en resituant l'événement dans le contexte de la sécurité ferroviaire nationale."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6,
-  "summarizedAt": "2026-11-02T08:01:17.483Z"
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-02T11:01:19.126Z"
 }
