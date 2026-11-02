@@ -6,6 +6,41 @@
   "storyDay": "2026-11-02",
   "articles": [
     {
+      "id": "800c5d1dbacb",
+      "outletId": "ouest-france",
+      "headline": "Crise budgétaire en Belgique : le Premier ministre remet sa démission au Roi, qui n’a pas encore tranché",
+      "url": "https://www.ouest-france.fr/europe/belgique/crise-budgetaire-en-belgique-le-premier-ministre-remet-sa-demission-au-roi-qui-na-pas-encore-tranche-6cbaaba0-d6ae-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-02T11:39:10.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExM2YzYWM4ZDEyMTA0NzQ2MzlkODRhMDkwNWYxMTNiODE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=91a6c792c451bf7e802ff8da9d541ae9ea78721360014906981c89ff0cb0f461",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "617eb590e82c",
+      "outletId": "courrier-international",
+      "headline": "En Belgique, le Premier ministre remet sa démission, le roi temporise",
+      "url": "https://www.courrierinternational.com/article/politique-en-belgique-le-premier-ministre-remet-sa-demission-le-roi-temporise_284128",
+      "publishedAt": "2026-11-02T11:32:46.000Z",
+      "imageUrl": "https://focus.courrierinternational.com/2025/10/23/0/0/3616/2416/644/0/60/0/8b693f4_ftp-import-images-1-qiw7zjotym2t-2025-10-23t212810z-2080883236-rc2xhhazuykw-rtrmadp-3-eu-summit.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "7db6c2e409fc",
+      "outletId": "le-monde",
+      "headline": "Belgique : le premier ministre, Bart De Wever, présente sa démission au roi sur fond de blocage budgétaire au Parlement",
+      "url": "https://www.lemonde.fr/international/article/2026/11/02/belgique-le-premier-ministre-bart-de-wever-presente-sa-demission-au-roi-sur-fond-de-blocage-budgetaire_6805239_3210.html",
+      "publishedAt": "2026-11-02T11:24:15.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/02/567/0/6810/3405/644/322/60/0/7d56abc_upload-1-xilvpfja8akm-000-d3xb8jp.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "fa1347b095b2",
       "outletId": "le-figaro",
       "headline": "Belgique : le premier ministre Bart De Wever a remis sa démission au Roi après le blocage budgétaire",
@@ -16,6 +51,16 @@
       "kind": "news",
       "section": "world",
       "everFrontPage": true
+    },
+    {
+      "id": "097a3c78ed16",
+      "outletId": "liberation",
+      "headline": "Belgique : le Premier ministre a remis sa démission au roi sur fond de blocage budgétaire",
+      "url": "https://www.liberation.fr/international/europe/belgique-le-premier-ministre-a-remis-sa-demission-au-roi-sous-fond-de-blocage-budgetaire-20261102_F3K462RPBFDVNA3IMDEVY56E5M/",
+      "publishedAt": "2026-11-02T10:58:58.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "9bf000954154",
@@ -30,7 +75,31 @@
     }
   ],
   "topicId": "e43ad3ccc7fa",
-  "titledArticleCount": 2,
+  "titledArticleCount": 6,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le chef du gouvernement belge Bart De Wever a présenté sa démission lundi 2 novembre au roi en raison d'une impasse sur le budget 2027.",
+      "L'exécutif repose sur une coalition de cinq partis de centre droit qui ne parviennent pas à s'entendre.",
+      "Le souverain a suspendu sa décision et entame des consultations avec les présidents des différentes formations politiques."
+    ],
+    "centre": [
+      "Le premier ministre belge Bart De Wever a soumis sa démission au roi Philippe ce lundi 2 novembre après une confrontation au Parlement.",
+      "Le blocage persiste autour de la question budgétaire au sein de la coalition gouvernementale de cinq partis.",
+      "Le monarque n'a pas tranché immédiatement et prévoit une nouvelle rencontre avec le chef du gouvernement ce vendredi 6 novembre."
+    ],
+    "droite": [
+      "Le premier ministre belge Bart De Wever a remis sa démission au roi après un blocage budgétaire au sein de sa coalition.",
+      "Le souverain n'a pas accepté cette démission pour l'instant et le chef du gouvernement sera reçu à nouveau."
+    ]
+  },
+  "differences": [
+    "La gauche précise explicitement l'horizon temporel du budget bloqué pour 2027 ainsi que la couleur politique de la coalition gouvernementale.",
+    "Le centre livre un récit factuel et standard de la séquence institutionnelle entre le chef du gouvernement et le Palais royal.",
+    "La droite se concentre sur l'échec immédiat de la coalition au pouvoir et le refus temporaire du roi d'entériner la démission."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-02T12:01:20.772Z"
 }
