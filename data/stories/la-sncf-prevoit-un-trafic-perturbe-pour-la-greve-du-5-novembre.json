@@ -6,6 +6,29 @@
   "storyDay": "2026-11-03",
   "articles": [
     {
+      "id": "ce79441d80ec",
+      "outletId": "franceinfo",
+      "headline": "Grève du 5 novembre : la SNCF prévoit quelques perturbations jeudi, la RATP table sur un trafic normal en Ile-de-France",
+      "url": "https://www.franceinfo.fr/economie/greve/greve-du-5-novembre-la-sncf-prevoit-quelques-perturbations-jeudi-la-ratp-table-sur-un-trafic-normal-en-ile-de-france_8266229.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-03T16:46:49.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/L9hlItcfGudi3bUJ1uAwTwW16l8/0x0:8258x4645/432x243/filters:format(jpg)/2026/11/03/6aea0feecde6d212419091.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "e53f7ede7550",
+      "outletId": "le-monde",
+      "headline": "Grève du 5 novembre : la SNCF prévoit un trafic « perturbé » ; la RATP table sur un trafic « normal » sur ses métros, bus et tramway, à l’exception du RER B",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/03/greve-du-5-novembre-la-sncf-prevoit-un-trafic-perturbe-la-ratp-table-sur-un-trafic-normal-sur-ses-metros-bus-et-tramway-a-l-exception-du-rer-b_6805620_3235.html",
+      "publishedAt": "2026-11-03T16:44:40.000Z",
+      "imageUrl": "https://img.lemde.fr/2025/12/02/1008/0/8923/4461/644/322/60/0/560e072_upload-1-lxmel0pqqey6-080-hl-ebroncard-2976668.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
       "id": "7b649ab636e9",
       "outletId": "le-parisien",
       "headline": "Grève du 5 novembre : RER, métro, Transilien… Voici les prévisions de trafic en Île-de-France",
@@ -74,26 +97,33 @@
     }
   ],
   "topicId": "6700ddd0b583",
-  "titledArticleCount": 6,
+  "titledArticleCount": 8,
   "section": "society",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "La SNCF annonce un trafic perturbé pour la journée de mobilisation nationale du 5 novembre.",
+      "La RATP prévoit de son côté un trafic normal en Île-de-France, hormis sur le RER B.",
+      "Les prévisions détaillées ligne par ligne seront publiées le mercredi précédant la grève."
+    ],
     "centre": [
-      "La SNCF anticipe un trafic légèrement perturbé pour les liaisons TGV lors de la journée de mobilisation du 5 novembre.",
-      "Les perturbations seront plus marquées sur les réseaux TER, Intercités et en Île-de-France avec les RER, métros et Transilien.",
-      "BFMTV souligne que cette grève pour le pouvoir d'achat rassemble pour la première fois salariés du privé, fonctionnaires et retraités."
+      "Les syndicats appellent à une grève interprofessionnelle le jeudi 5 novembre pour les salaires, les services publics, l'emploi et l'industrie.",
+      "La SNCF anticipe des perturbations sur les liaisons Intercités, TER, ainsi que sur les trains et RER en Île-de-France.",
+      "Le trafic des TGV sera quant à lui seulement légèrement perturbé selon les prévisions de l'entreprise ferroviaire.",
+      "La RATP table sur un fonctionnement normal de son réseau de métros, bus et tramways pour cette journée d'action."
     ],
     "droite": [
-      "Le Figaro rappelle que cette grève intersyndicale du 5 novembre fait suite aux mobilisations des 17 et 24 octobre pour les salaires, les services publics et l'emploi.",
-      "Europe 1 précise que les prévisions ligne par ligne seront détaillées par la SNCF dès le mercredi précédant le mouvement.",
-      "TF1 Info et Europe 1 reprennent les termes exacts de la SNCF qualifiant le trafic TGV de \"légèrement perturbé\" et les autres lignes de \"perturbées\"."
+      "Une intersyndicale appelle à la grève et à des manifestations le jeudi 5 novembre afin d'accroître la pression sur le gouvernement.",
+      "La mobilisation vise à défendre les salaires, les services publics, l'emploi et l'industrie après des journées d'action en octobre.",
+      "La SNCF prévient que le trafic sera perturbé sur la plupart des lignes régionales et franciliennes, mais moins touché sur les TGV."
     ]
   },
   "differences": [
-    "Le centre met l'accent sur la diversité des profils mobilisés, incluant salariés, fonctionnaires et retraités, tout en détaillant l'impact sur les transports parisiens et nationaux.",
-    "La droite privilégie une perspective syndicale et politique en insistant sur la volonté d'accentuer la pression sur le gouvernement pour les salaires et l'emploi après les actions d'octobre."
+    "La gauche met principalement l'accent sur les prévisions contrastées entre la SNCF et la RATP pour la journée de mobilisation.",
+    "Le centre détaille précisément les prévisions de transport ligne par ligne et l'élargissement de la grève aux salariés du privé, fonctionnaires et retraités.",
+    "La droite insiste particulièrement sur les motivations syndicales visant à accentuer la pression politique sur le gouvernement après les mouvements d'octobre."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6,
-  "summarizedAt": "2026-11-03T16:01:41.255Z"
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-03T17:01:24.231Z"
 }
