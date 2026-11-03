@@ -114,6 +114,15 @@ const jsonLd = {
   mainEntityOfPage: Astro.url,
   publisher: { '@type': 'Organization', name: 'Prisme', url: Astro.site?.href },
 };
+
+// Indexation follows permanence (ADR-0042): only a Story that entered
+// the Edition (everInEdition, sticky — ADR-0005 as amended by issue #75)
+// keeps its page forever; every other Story page is a transient the
+// end-of-run cleanup deletes, so it ships noindex. The stamp flips the
+// moment the Story ranks into capped Brûlant or Top (spec #158), and
+// the next build renders this page indexable — the same moment the home
+// first links it. The sitemap filter (astro.config.mjs) reads the same
+// flag.
 ---
 
 <Base
@@ -123,6 +132,7 @@ const jsonLd = {
   ogType="article"
   publishedTime={published.toISOString()}
   jsonLd={jsonLd}
+  noindex={story.everInEdition !== true}
 >
   <article class="pt-10">
     <BackToIndex backLink />

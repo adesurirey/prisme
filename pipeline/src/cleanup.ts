@@ -18,8 +18,11 @@ import { isLive } from './liveness.ts';
  * Stories and a clock, output the slugs to delete; deterministic over
  * the same state.
  *
- * Safe today because the only internal link to a Story page comes from the
- * current Edition and no sitemap exists — if either changes, revisit.
+ * Safe because indexation follows everInEdition (ADR-0042): a
+ * not-yet-in-Edition Story page ships noindex and stays out of the
+ * sitemap, and no indexed page links it — the home links only capped
+ * Brûlant/Top members (spec #158), Nouveau is noindexed (ADR-0039) —
+ * so deleting the file 404s a URL that was never indexed.
  */
 export function slugsToDelete(stories: Story[], now: Date): Set<string> {
   const deleted = new Set<string>();

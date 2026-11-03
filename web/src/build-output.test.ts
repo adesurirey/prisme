@@ -7,7 +7,10 @@
  * data/: the archive shifts under every hourly run, and tests must not
  * (PRISME_DATA_DIR, data.ts — test infrastructure only). The fixture is a
  * faithful Edition artifact: windows consistent with builtAt,
- * latestStories (Nouveau) a subset of the day list, feedStories (Brûlant)
+ * latestStories (Nouveau) a subset of the day list plus one Story
+ * playing the cut tail (ADR-0042 — in-window Articles, in neither
+ * ranked list, unstamped: the 26th Story of a 26-Story pool, a state
+ * the under-cap fixture cannot show faithfully), feedStories (Brûlant)
  * the day pool re-ranked by the double-decay feed key, stories (Top) the
  * Coverage key (ADR-0036, re-sorted by spec #158 — both ranked sorts
  * capped at 25 in production, ADR-0038; the fixture holds 3 Stories, so
@@ -498,6 +501,30 @@ describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () =
     expect(sitemap).toContain('<loc>https://leprisme.info/methode/</loc>');
     // At least one Story URL under its own day.
     expect(sitemap).toMatch(/<loc>https:\/\/leprisme.info\/20\d\d-\d\d-\d\d\//);
+  });
+
+  it('indexes only once-in-Edition Story pages — the cut tail is noindexed and unsitemapped (ADR-0042)', async () => {
+    // The fixture's cut tail: a live Story with in-window Articles that
+    // never ranked into the capped sorts, so no everInEdition stamp —
+    // linked from Nouveau (uncapped), never from the home.
+    const doomed = edition.latestStories.find((s) => s.everInEdition !== true)!;
+    expect(doomed).toBeDefined();
+    const sitemap = await readDist('sitemap-0.xml');
+    expect(sitemap).not.toContain(
+      `<loc>https://leprisme.info/${doomed.storyDay}/${doomed.slug}/</loc>`,
+    );
+    expect(
+      await readDist(`${doomed.storyDay}/${doomed.slug}/index.html`),
+    ).toContain('<meta name="robots" content="noindex"');
+    // A once-in-Edition Story: permanent page (ADR-0005), sitemapped and
+    // indexable.
+    const ranked = edition.stories[0]!;
+    expect(sitemap).toContain(
+      `<loc>https://leprisme.info/${ranked.storyDay}/${ranked.slug}/</loc>`,
+    );
+    expect(
+      await readDist(`${ranked.storyDay}/${ranked.slug}/index.html`),
+    ).not.toContain('name="robots"');
   });
 
   it('noindexes the alternate sorts and leaves the home indexable (ADR-0028)', async () => {
