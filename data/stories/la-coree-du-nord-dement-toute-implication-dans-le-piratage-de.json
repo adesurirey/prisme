@@ -6,6 +6,17 @@
   "storyDay": "2026-11-02",
   "articles": [
     {
+      "id": "1e433506f812",
+      "outletId": "bfmtv",
+      "headline": "Accusée par le FBI d'avoir volé 6 milliards de dollars de cryptomonnaies à Binance, la Corée du Nord dément et fustige une \"grave provocation politique\"",
+      "url": "https://www.bfmtv.com/crypto/accusee-par-le-fbi-d-avoir-vole-6-milliards-de-dollars-de-cryptomonnaies-a-binance-la-coree-du-nord-dement-et-fustige-une-grave-provocation-politique_AD-202611030116.html",
+      "publishedAt": "2026-11-03T05:33:32.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/4c6gTgp6JhmROf2iIIzM1_lU8tM=/0x105:2048x1257/800x0/images/Binance-2375142.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "a7cda74b13bd",
       "outletId": "le-monde",
       "headline": "Cryptomonnaies : la Corée du Nord nie être impliquée dans le piratage de la plateforme Binance, rejetant les accusations du FBI",
@@ -65,5 +76,28 @@
   "topicId": "386242e5af4e",
   "titledArticleCount": 5,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le groupe de pirates TraderTraitor est pointé du doigt par la police fédérale américaine pour un vol de 6,3 milliards de dollars d'actifs numériques sur Binance.",
+      "Kim Yo Jong qualifie les accusations américaines de grave provocation politique et rejette toute implication de Pyongyang."
+    ],
+    "centre": [
+      "Le FBI impute à la Corée du Nord un vol record de 6 milliards de dollars de cryptomonnaies sur la plateforme Binance.",
+      "Kim Yo Jong qualifie cette intervention du FBI de grave provocation politique et balaie une rhétorique absurde.",
+      "Pyongyang nie vigoureusement toute participation à cette cyberattaque."
+    ],
+    "droite": [
+      "La Corée du Nord récuse formellement les accusations du FBI concernant le piratage de Binance.",
+      "Kim Yo Jong dénonce une rhétorique absurde et une grave provocation politique."
+    ]
+  },
+  "differences": [
+    "La gauche, représentée par Le Monde, détaille précisément le mode opératoire en nommant le groupe de pirates TraderTraitor impliqué dans le vol de cryptomonnaies.",
+    "Le centre adopte une couverture homogène et factuelle en insistant sur l'ampleur du vol record de 6 milliards de dollars et la réplique officielle de Pyongyang.",
+    "La droite, par la voix du Figaro, se focalise principalement sur la riposte diplomatique de Kim Yo Jong face aux accusations du FBI."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-03T06:01:14.190Z"
 }
