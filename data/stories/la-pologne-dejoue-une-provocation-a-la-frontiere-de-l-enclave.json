@@ -6,6 +6,17 @@
   "storyDay": "2026-11-03",
   "articles": [
     {
+      "id": "0bab7741900f",
+      "outletId": "le-parisien",
+      "headline": "Donald Tusk affirme que la Pologne a déjoué dans la nuit une provocation près de l’enclave russe de Kaliningrad",
+      "url": "https://www.leparisien.fr/international/donald-tusk-affirme-que-la-pologne-a-dejoue-dans-la-nuit-une-provocation-pres-de-lenclave-russe-de-kaliningrad-03-11-2026-ONGTVVAB6NCJHPURYDIC656SLE.php",
+      "publishedAt": "2026-11-03T16:01:41.255Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "73f8703388b4",
       "outletId": "france-24",
       "headline": "La Pologne affirme avoir déjoué une possible provocation à la frontière russe avec Kaliningrad",
@@ -23,7 +34,7 @@
       "url": "https://www.lefigaro.fr/international/donald-tusk-affirme-que-la-pologne-a-dejoue-une-possible-provocation-a-la-frontiere-avec-l-enclave-russe-de-kaliningrad-20261103",
       "publishedAt": "2026-11-03T13:51:21.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/03/17efea0a5e9da3a2778d31fed9df1cb91ed5e9e60af2e29429f67ace4a87f513.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -52,7 +63,30 @@
     }
   ],
   "topicId": "7377c9ee05c7",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le Premier ministre Donald Tusk a déclaré que la Pologne avait déjoué une tentative de provocation à la frontière de l'enclave russe de Kaliningrad.",
+      "Les gardes-frontières polonais ont repéré une activité suspecte dans le nord du pays durant la nuit."
+    ],
+    "centre": [
+      "Donald Tusk a affirmé que les autorités polonaises avaient empêché une possible provocation nocturne près de Kaliningrad.",
+      "Une vaste opération de sécurité a été déployée par la Pologne avec des militaires, des gardes-frontières et des services spéciaux face aux risques de sabotage.",
+      "Les services de renseignement n'ont pas encore confirmé l'implication de la Russie dans cette tentative."
+    ],
+    "droite": [
+      "Le chef du gouvernement Donald Tusk a indiqué qu'une activité suspecte avait été signalée peu après minuit dans le nord du territoire polonais.",
+      "Les autorités ont rapporté qu'une possible provocation à la frontière de Kaliningrad avait été tenue en échec, sans préciser pour l'heure la nature exacte de l'incident."
+    ]
+  },
+  "differences": [
+    "La gauche se concentre strictement sur l'annonce du Premier ministre et l'observation de l'activité suspecte par les gardes-frontières.",
+    "Le centre élargit le compte-rendu en décrivant le déploiement d'une opération de sécurité d'envergure et l'incertitude quant à l'implication russe.",
+    "La droite adopte un angle centré sur le déroulement temporel de l'alerte nocturne tout en soulignant l'absence de précisions sur la nature des faits."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-03T16:01:41.255Z"
 }
