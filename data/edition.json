@@ -1,6 +1,42 @@
 {
-  "builtAt": "2026-11-03T02:01:20.684Z",
+  "builtAt": "2026-11-03T03:01:18.308Z",
   "latestStories": [
+    {
+      "id": "1391e05261da",
+      "slug": "les-etats-unis-menent-des-frappes-contre-l-ile-iranienne-de",
+      "title": "Les États-Unis mènent des frappes contre l'île iranienne de Qeshm à la veille des midterms",
+      "createdAt": "2026-11-03T03:01:18.308Z",
+      "storyDay": "2026-11-03",
+      "articles": [
+        {
+          "id": "3df6be9c9478",
+          "outletId": "le-parisien",
+          "headline": "À la veille des midterms, les États-Unis ont mené des frappes contre l’île iranienne de Qeshm, interrogeant sur leur stratégie",
+          "url": "https://www.leparisien.fr/international/iran/les-etats-unis-ont-mene-des-frappes-contre-lile-iranienne-de-qeshm-03-11-2026-5C2P3HBA5JC4HJSSGFGSCGYR6M.php",
+          "publishedAt": "2026-11-03T03:01:18.308Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "b5c5076efaec",
+          "outletId": "le-figaro",
+          "headline": "Les États-Unis ont mené des frappes contre l'île iranienne de Qeshm, selon le Wall Street Journal",
+          "url": "https://www.lefigaro.fr/international/les-etats-unis-ont-mene-des-frappes-contre-l-ile-iranienne-de-qeshm-selon-le-wall-street-journal-20261103",
+          "publishedAt": "2026-11-03T02:22:26.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/03/8d87d895e186983941a6a31f82f23886240bc5b1f154744f4398bd5b46d7fe31.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "1391e05261da",
+      "titledArticleCount": 2,
+      "section": "world",
+      "everInEdition": true
+    },
     {
       "id": "e0ee67f1dbdf",
       "slug": "washington-annonce-des-negociations-entre-moscou-et-kiev-a-abou",
@@ -239,7 +275,7 @@
           "url": "https://www.lefigaro.fr/international/midterms-2026-la-cour-supreme-rejette-un-enieme-recours-de-trump-pour-obliger-la-californie-a-isoler-20-000-bulletins-20261103",
           "publishedAt": "2026-11-03T00:00:45.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/03/127f282ff586856d1deb72e6d0534d0c4c41d0aa55efcd4d94cc129d68ca34f2.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -468,6 +504,81 @@
       "topicId": "a33bb0fdd2f6",
       "titledArticleCount": 6,
       "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le scrutin législatif du 27 octobre n'a permis de dégager aucune majorité nette à la Knesset.",
+          "Le Likoud de Benyamin Nétanyahou totalise 53 sièges tandis que le bloc d'opposition emmené par Gadi Eisenkot en recueille 48.",
+          "Benyamin Nétanyahou plaide pour la constitution d'un gouvernement élargi sous sa direction tout en excluant les partis arabes.",
+          "Le bloc d'opposition se réunit pour tenter de rassembler une majorité de 61 députés."
+        ],
+        "centre": [
+          "Les élections législatives du 27 octobre n'ont attribué de majorité claire à aucun camp à la Knesset.",
+          "Le Premier ministre sortant Benyamin Nétanyahou revendique la direction du prochain exécutif et réclame une large coalition.",
+          "Le bloc d'opposition s'organise pour bâtir une majorité alternative sous la direction du centriste Gadi Eisenkot.",
+          "Le Figaro précise que le Likoud souhaite exclure les partis arabes qu'il accuse de soutenir le terrorisme."
+        ],
+        "droite": [
+          "Le parti du Premier ministre, le Likoud, a remporté le plus grand nombre de sièges lors des législatives.",
+          "Benyamin Nétanyahou appelle à la formation d'un large gouvernement national placé sous sa direction.",
+          "Le Likoud entend exclure de toute coalition les partis arabes qui ont réalisé un score record.",
+          "Le parti accuse ces formations arabes de soutenir le terrorisme et de nier l'existence de l'État juif."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur l'impasse institutionnelle en détaillant le décompte exact des 53 sièges de la coalition sortante et des 48 sièges de l'opposition.",
+        "Le centre adopte une approche factuelle globale en exposant simultanément la revendication de Benyamin Nétanyahou et l'offensive de l'opposition menée par Gadi Eisenkot.",
+        "La droite centre son traitement sur la victoire du Likoud et relaie explicitement les accusations du parti contre les partis arabes pour justifier leur exclusion."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-11-03T03:01:18.308Z"
+    },
+    {
+      "id": "b3fe1ac517d0",
+      "slug": "la-justice-requiert-de-la-prison-contre-des-ultras-brestois",
+      "title": "La justice requiert de la prison contre des ultras brestois lors du procès d'un guet-apens contre des supporters lensois",
+      "createdAt": "2026-11-03T03:01:18.308Z",
+      "storyDay": "2026-11-02",
+      "articles": [
+        {
+          "id": "c690264fe3a7",
+          "outletId": "le-monde",
+          "headline": "Procès du guet-apens hooligan à Brest : « On se demande comment il n’y a pas eu dix morts »",
+          "url": "https://www.lemonde.fr/sport/article/2026/11/03/proces-du-guet-apens-hooligan-a-brest-on-se-demande-comment-il-n-y-a-pas-eu-dix-morts_6805354_3242.html",
+          "publishedAt": "2026-11-03T02:19:45.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/02/236/0/2835/1417/644/322/60/0/667e9eb_upload-1-fccs2jcejqep-maxnewsspecialtwo190723.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "44a7668c3c7f",
+          "outletId": "bfmtv",
+          "headline": "Ligue 1: prison requise contre des ultras brestois pour un guet-apens tendu à des supporters lensois",
+          "url": "https://rmcsport.bfmtv.com/football/ligue-1/ligue-1-prison-requise-contre-des-ultras-brestois-pour-un-guet-apens-tendu-a-des-supporters-lensois_AV-202611020972.html",
+          "publishedAt": "2026-11-02T21:27:09.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/b0mku1FQpnoX11Y4QXB3ggtUMD0=/0x106:2048x1258/800x0/images/Les-supporters-brestois-lors-du-match-contre-le-PSV-Eindhoven-1-0-Ligue-des-champions-le-10-decembre-2024-2023150.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "4fd28c75d189",
+          "outletId": "le-figaro",
+          "headline": "Foot : prison requise contre des ultras brestois après le guet-apens tendu à des Lensois",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-1/foot-prison-requise-contre-des-ultras-brestois-apres-le-guet-apens-tendu-a-des-lensois-20261102",
+          "publishedAt": "2026-11-02T19:16:01.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/02/1f91c96491aab2b0d67b8aae8f3ae094a3f70fb75b4acd5b48f3bdf584e02169.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "b3fe1ac517d0",
+      "titledArticleCount": 3,
+      "section": "misc",
       "everInEdition": true
     },
     {
@@ -781,6 +892,40 @@
       "titledArticleCount": 3,
       "section": "culture",
       "everInEdition": true
+    },
+    {
+      "id": "108f6b76e096",
+      "slug": "l-amerique-fait-face-a-l-explosion-du-cout-de-la-vie-et-du-b-uf",
+      "title": "L'Amérique fait face à l'explosion du coût de la vie et du bœuf à l'approche des midterms",
+      "createdAt": "2026-11-03T03:01:18.308Z",
+      "storyDay": "2026-11-02",
+      "articles": [
+        {
+          "id": "9007cf61590e",
+          "outletId": "rfi",
+          "headline": "Midterms: le coût du bœuf aux Etats-Unis influe sur tous les maillons de la chaîne de consommation",
+          "url": "https://www.rfi.fr/fr/podcasts/reportage-international/20261102-midterms-le-co%C3%BBt-du-b%C5%93uf-aux-etats-unis-influe-sur-tous-les-maillons-de-la-cha%C3%AEne-de-consommation",
+          "publishedAt": "2026-11-02T23:11:24.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/852f2ff0-d706-11f1-98cc-695cb59fade5/w:1024/p:16x9/WhatsApp-Image-2026-10-31-at-18-27-14.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "ad47b474cfd5",
+          "outletId": "europe-1",
+          "headline": "Midterms : l'Amérique face à l'explosion du coût de la vie",
+          "url": "https://www.europe1.fr/international/midterms-lamerique-face-a-lexplosion-du-cout-de-la-vie-1202775?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-02T17:00:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/02/12/053_ar-20261031135614_kinq1_nuu04487_135609186_1_6ae8800b5d2f3.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "108f6b76e096",
+      "titledArticleCount": 2,
+      "section": "politics"
     },
     {
       "id": "e3dbd24a7278",
@@ -4600,7 +4745,35 @@
       "topicId": "a33bb0fdd2f6",
       "titledArticleCount": 6,
       "section": "world",
-      "everInEdition": true
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le scrutin législatif du 27 octobre n'a permis de dégager aucune majorité nette à la Knesset.",
+          "Le Likoud de Benyamin Nétanyahou totalise 53 sièges tandis que le bloc d'opposition emmené par Gadi Eisenkot en recueille 48.",
+          "Benyamin Nétanyahou plaide pour la constitution d'un gouvernement élargi sous sa direction tout en excluant les partis arabes.",
+          "Le bloc d'opposition se réunit pour tenter de rassembler une majorité de 61 députés."
+        ],
+        "centre": [
+          "Les élections législatives du 27 octobre n'ont attribué de majorité claire à aucun camp à la Knesset.",
+          "Le Premier ministre sortant Benyamin Nétanyahou revendique la direction du prochain exécutif et réclame une large coalition.",
+          "Le bloc d'opposition s'organise pour bâtir une majorité alternative sous la direction du centriste Gadi Eisenkot.",
+          "Le Figaro précise que le Likoud souhaite exclure les partis arabes qu'il accuse de soutenir le terrorisme."
+        ],
+        "droite": [
+          "Le parti du Premier ministre, le Likoud, a remporté le plus grand nombre de sièges lors des législatives.",
+          "Benyamin Nétanyahou appelle à la formation d'un large gouvernement national placé sous sa direction.",
+          "Le Likoud entend exclure de toute coalition les partis arabes qui ont réalisé un score record.",
+          "Le parti accuse ces formations arabes de soutenir le terrorisme et de nier l'existence de l'État juif."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur l'impasse institutionnelle en détaillant le décompte exact des 53 sièges de la coalition sortante et des 48 sièges de l'opposition.",
+        "Le centre adopte une approche factuelle globale en exposant simultanément la revendication de Benyamin Nétanyahou et l'offensive de l'opposition menée par Gadi Eisenkot.",
+        "La droite centre son traitement sur la victoire du Likoud et relaie explicitement les accusations du parti contre les partis arabes pour justifier leur exclusion."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-11-03T03:01:18.308Z"
     },
     {
       "id": "c9edd91f6e28",
@@ -5619,6 +5792,89 @@
       "summarizedAt": "2026-11-02T18:02:43.496Z"
     },
     {
+      "id": "b3fe1ac517d0",
+      "slug": "la-justice-requiert-de-la-prison-contre-des-ultras-brestois",
+      "title": "La justice requiert de la prison contre des ultras brestois lors du procès d'un guet-apens contre des supporters lensois",
+      "createdAt": "2026-11-03T03:01:18.308Z",
+      "storyDay": "2026-11-02",
+      "articles": [
+        {
+          "id": "c690264fe3a7",
+          "outletId": "le-monde",
+          "headline": "Procès du guet-apens hooligan à Brest : « On se demande comment il n’y a pas eu dix morts »",
+          "url": "https://www.lemonde.fr/sport/article/2026/11/03/proces-du-guet-apens-hooligan-a-brest-on-se-demande-comment-il-n-y-a-pas-eu-dix-morts_6805354_3242.html",
+          "publishedAt": "2026-11-03T02:19:45.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/02/236/0/2835/1417/644/322/60/0/667e9eb_upload-1-fccs2jcejqep-maxnewsspecialtwo190723.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "44a7668c3c7f",
+          "outletId": "bfmtv",
+          "headline": "Ligue 1: prison requise contre des ultras brestois pour un guet-apens tendu à des supporters lensois",
+          "url": "https://rmcsport.bfmtv.com/football/ligue-1/ligue-1-prison-requise-contre-des-ultras-brestois-pour-un-guet-apens-tendu-a-des-supporters-lensois_AV-202611020972.html",
+          "publishedAt": "2026-11-02T21:27:09.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/b0mku1FQpnoX11Y4QXB3ggtUMD0=/0x106:2048x1258/800x0/images/Les-supporters-brestois-lors-du-match-contre-le-PSV-Eindhoven-1-0-Ligue-des-champions-le-10-decembre-2024-2023150.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "4fd28c75d189",
+          "outletId": "le-figaro",
+          "headline": "Foot : prison requise contre des ultras brestois après le guet-apens tendu à des Lensois",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-1/foot-prison-requise-contre-des-ultras-brestois-apres-le-guet-apens-tendu-a-des-lensois-20261102",
+          "publishedAt": "2026-11-02T19:16:01.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/02/1f91c96491aab2b0d67b8aae8f3ae094a3f70fb75b4acd5b48f3bdf584e02169.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "b3fe1ac517d0",
+      "titledArticleCount": 3,
+      "section": "misc",
+      "everInEdition": true
+    },
+    {
+      "id": "1391e05261da",
+      "slug": "les-etats-unis-menent-des-frappes-contre-l-ile-iranienne-de",
+      "title": "Les États-Unis mènent des frappes contre l'île iranienne de Qeshm à la veille des midterms",
+      "createdAt": "2026-11-03T03:01:18.308Z",
+      "storyDay": "2026-11-03",
+      "articles": [
+        {
+          "id": "3df6be9c9478",
+          "outletId": "le-parisien",
+          "headline": "À la veille des midterms, les États-Unis ont mené des frappes contre l’île iranienne de Qeshm, interrogeant sur leur stratégie",
+          "url": "https://www.leparisien.fr/international/iran/les-etats-unis-ont-mene-des-frappes-contre-lile-iranienne-de-qeshm-03-11-2026-5C2P3HBA5JC4HJSSGFGSCGYR6M.php",
+          "publishedAt": "2026-11-03T03:01:18.308Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "b5c5076efaec",
+          "outletId": "le-figaro",
+          "headline": "Les États-Unis ont mené des frappes contre l'île iranienne de Qeshm, selon le Wall Street Journal",
+          "url": "https://www.lefigaro.fr/international/les-etats-unis-ont-mene-des-frappes-contre-l-ile-iranienne-de-qeshm-selon-le-wall-street-journal-20261103",
+          "publishedAt": "2026-11-03T02:22:26.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/03/8d87d895e186983941a6a31f82f23886240bc5b1f154744f4398bd5b46d7fe31.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "1391e05261da",
+      "titledArticleCount": 2,
+      "section": "world",
+      "everInEdition": true
+    },
+    {
       "id": "33920dc033c4",
       "slug": "philippe-vasset-remporte-le-prix-medicis-pour-son-roman-dans",
       "title": "Philippe Vasset remporte le prix Médicis pour son roman Dans les grandes lignes",
@@ -5792,221 +6048,6 @@
       "summarizedAt": "2026-11-02T17:01:22.894Z"
     },
     {
-      "id": "df92e98f7ab8",
-      "slug": "donald-trump-menace-de-reprendre-les-bombardements-en-iran",
-      "title": "Donald Trump menace de donner un coup de massue à l'Iran tout en évoquant un possible accord",
-      "createdAt": "2026-11-02T03:01:16.278Z",
-      "storyDay": "2026-11-01",
-      "articles": [
-        {
-          "id": "d67da368c0d9",
-          "outletId": "20-minutes",
-          "headline": "Guerre en Iran : Trump affirme qu’un accord avec Téhéran « pourrait arriver », le prix du pétrole recule",
-          "url": "https://www.20minutes.fr/monde/etats-unis/4259861-20261103-guerre-iran-trump-affirme-accord-teheran-pourrait-arriver-prix-petrole-recule?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-03T00:01:25.000Z",
-          "imageUrl": "https://img.20mn.fr/dKvAE-lEQh6jmGPRwHQIKSk/1200x768_le-president-donald-trump-prend-la-parole-dans-le-bureau-ovale-de-la-maison-blanche-le-mardi-20-octobre-2026-a-washington-sous-l-ecoute-du-vice-president-jd-vance-ap-photo-jacquelyn-martin-dcje307-26293660464895-2610202022",
-          "frontPage": true,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "f85aaec81a21",
-          "outletId": "france-24",
-          "headline": "Donald Trump change de ton et assure qu'un accord avec l'Iran \"pourrait arriver\"",
-          "url": "https://www.france24.com/fr/moyen-orient/20261102-moyen-orient-donald-trump-accord-avec-l-iran-pourrait-arriver-detroit-d-ormuz-petrole",
-          "publishedAt": "2026-11-02T22:56:40.000Z",
-          "imageUrl": "https://s.france24.com/media/display/4efcfe3a-d710-11f1-8d01-a575454bc579/w:1024/p:16x9/AP26306798200871.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "be836d02bdd4",
-          "outletId": "le-figaro",
-          "headline": "États-Unis : Donald Trump annonce qu’un accord avec l’Iran «pourrait arriver»",
-          "url": "https://www.lefigaro.fr/international/etats-unis-donald-trump-annonce-qu-un-accord-avec-l-iran-pourrait-arriver-20261102",
-          "publishedAt": "2026-11-02T21:18:59.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2058x1372_crop/2026/11/02/2c31f3828ae72f77e4926ca3d74256f822abeae889505e962542ad2974bda90b.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "89142b4f5b2c",
-          "outletId": "le-monde",
-          "headline": "EN DIRECT, midterms 2026 : « L’Iran veut un accord aussi rapidement que possible », assure Donald Trump",
-          "url": "https://www.lemonde.fr/international/live/2026/11/02/en-direct-midterms-2026-l-iran-veut-un-accord-aussi-rapidement-que-possible-assure-donald-trump_6801590_3210.html",
-          "publishedAt": "2026-11-02T21:13:47.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/02/468/0/5619/2809/644/322/60/0/4ce1557_ftp-1-rpqoqnigefh9-afp-d68668j.jpg",
-          "frontPage": true,
-          "kind": "live",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "fff11f220e11",
-          "outletId": "tf1-info",
-          "headline": "Détroit d'Ormuz, \"guerre plus longue que la précédente\"… L'Iran répond aux nouvelles menaces de Trump",
-          "url": "https://www.tf1info.fr/international/detroit-d-ormuz-guerre-plus-longue-que-la-precedente-l-iran-repond-aux-nouvelles-menaces-de-donald-trump-2473358.html",
-          "publishedAt": "2026-11-02T11:45:45.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/navires-bloques-detroit-d-ormuz-e4e434-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "1e4941be26bc",
-          "outletId": "bfmtv",
-          "headline": "Guerre au Moyen-Orient: en plein meeting, Donald Trump menace de \"donner un coup de massue\" à l'Iran",
-          "url": "https://www.bfmtv.com/international/amerique-nord/etats-unis/video-guerre-au-moyen-orient-en-plein-meeting-donald-trump-menace-de-donner-un-coup-de-massue-a-l-iran_VN-202611020454.html",
-          "publishedAt": "2026-11-02T10:40:14.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/bkWnjT6-7_42xNnQgOOP3eAswUw=/0x0:1280x720/800x0/images/Guerre-au-Moyen-Orient-en-plein-meeting-Donald-Trump-menace-de-donner-un-coup-de-massue-a-l-Iran-2376268.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "fb0d2fea6a25",
-          "outletId": "france-24",
-          "headline": "Iran : le président Trump avertit devoir \"à un moment, donner un coup de massue\" à Téhéran",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261102-iran-le-pr%C3%A9sident-trump-avertit-devoir-%C3%A0-un-moment-donner-un-coup-de-massue-%C3%A0-t%C3%A9h%C3%A9ran",
-          "publishedAt": "2026-11-02T10:11:14.000Z",
-          "imageUrl": "https://s.france24.com/media/display/20bc1428-d6a4-11f1-b04e-695cb59fade5/w:1024/p:16x9/FR-20261102-091713-091834-CS.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "6f7da31f0f75",
-          "outletId": "bfmtv",
-          "headline": "Guerre en Iran: Donald Trump menace de \"donner un coup de massue\", Téhéran promet une guerre \"plus longue que la précédente\"",
-          "url": "https://www.bfmtv.com/international/moyen-orient/iran/video-guerre-en-iran-donald-trump-menace-de-donner-un-coup-de-massue-teheran-promet-une-guerre-plus-longue-que-la-precedente_VN-202611020366.html",
-          "publishedAt": "2026-11-02T08:51:28.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Nb3WkmEA4axJJHHUCk2nMQy9zvg=/0x0:1280x720/800x0/images/Guerre-en-Iran-Donald-Trump-menace-de-donner-un-coup-de-massue-Teheran-promet-une-guerre-plus-longue-que-la-precedente-2376198.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "f1c25a064d33",
-          "outletId": "liberation",
-          "headline": "Face aux menaces de Trump, l’Iran avertit qu’une nouvelle guerre pourrait être «plus longue»",
-          "url": "https://www.liberation.fr/international/moyen-orient/face-aux-menaces-de-trump-liran-avertit-quune-nouvelle-guerre-pourrait-etre-plus-longue-20261102_VZESAWDVUBCJHDCM5Z5E6PXDBE/",
-          "publishedAt": "2026-11-02T07:40:14.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "63561f92012c",
-          "outletId": "le-figaro",
-          "headline": "Après les menaces de Donald Trump, l'Iran avertit qu'une nouvelle guerre pourrait être «plus longue»",
-          "url": "https://www.lefigaro.fr/international/apres-les-menaces-de-trump-l-iran-avertit-qu-une-nouvelle-guerre-pourrait-etre-plus-longue-20261102",
-          "publishedAt": "2026-11-02T06:45:45.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/02/7fad776f2709f9840bc2fd3a8fc188719aec52d39ca619e01bfdc71dd53f9508.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "901c67203623",
-          "outletId": "franceinfo",
-          "headline": "Donald Trump avertit que les Etats-Unis devront, \"à un moment, donner un coup de massue\" à l'Iran",
-          "url": "https://www.franceinfo.fr/monde/iran/guerre-entre-les-etats-unis-israel-et-l-iran/donald-trump-avertit-que-les-etats-unis-devront-a-un-moment-donner-un-coup-de-massue-a-l-iran_8263538.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-02T06:44:16.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/DQEDw0RrEuwhc2NDW2L1sQocNmw/0x53:1024x629/432x243/filters:format(jpg)/2026/11/02/6ae8311760e87270387642.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "e2fe0cf14865",
-          "outletId": "cnews",
-          "headline": "Donald Trump avertit que les États-Unis devront «donner un coup de massue» à l'Iran «à un moment»",
-          "url": "https://www.cnews.fr/monde/2026-11-02/donald-trump-avertit-que-les-etats-unis-devront-donner-un-coup-de-massue-liran-un",
-          "publishedAt": "2026-11-02T06:14:23.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-01t220653z_593980035_rc28foal6h2e_rtrmadp_3_usa-trump-taille1200_6ae82340464ba.jpg?h=ed3b323a&itok=0STa5nL2",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "e9ab9e3ee75f",
-          "outletId": "bfmtv",
-          "headline": "\"Il va falloir qu'on leur donne un coup de massue\": Donald Trump menace de reprendre les frappes sur l'Iran",
-          "url": "https://www.bfmtv.com/replay-emissions/premiere-edition-6h-8h30/video-il-va-falloir-qu-on-leur-donne-un-coup-de-massue-donald-trump-menace-de-reprendre-les-frappes-sur-l-iran_VN-202611020085.html",
-          "publishedAt": "2026-11-02T05:15:33.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/sQJm4BogLFZtzN7RnxaiBiK6FsY=/0x0:1280x720/800x0/images/Il-va-falloir-qu-on-leur-donne-un-coup-de-massue-Donald-Trump-menace-de-reprendre-les-frappes-sur-l-Iran-2375973.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "f8f7d4ac77d1",
-          "outletId": "le-parisien",
-          "headline": "« Nous allons devoir leur donner un coup de massue » : Donald Trump menace de reprendre fortement les attaques sur l’Iran",
-          "url": "https://www.leparisien.fr/international/etats-unis/nous-allons-devoir-leur-donner-un-coup-de-massue-donald-trump-menace-de-reprendre-fortement-les-attaques-sur-liran-02-11-2026-73G2WEQLMVAATOIOTIU46W5BIE.php",
-          "publishedAt": "2026-11-02T03:01:16.278Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "d997af94b277",
-          "outletId": "20-minutes",
-          "headline": "Guerre au Moyen-Orient : Se disant jusqu’à présent « gentil », Trump veut « donner un coup de massue » à l’Iran",
-          "url": "https://www.20minutes.fr/monde/etats-unis/4259408-20261102-guerre-moyen-orient-disant-jusqu-present-gentil-trump-veut-donner-coup-massue-iran?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-02T02:56:46.000Z",
-          "imageUrl": "https://img.20mn.fr/LHNMafHkSd-Cn4cQgMJngik/1200x768_le-president-donald-trump-part-apres-avoir-pris-la-parole-lors-d-un-rassemblement-de-campagne-au-five-flags-event-center-le-dimanche-1er-novembre-2026-a-dubuque-dans-l-iowa-ap-photo-jacquelyn-martin-iapu791-26305863211272-2611020100",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "19135c2d7f05",
-          "outletId": "franceinfo",
-          "headline": "\"On peut faire ça en 10 minutes\" : Donald Trump menace de reprendre les bombardements en Iran",
-          "url": "https://www.franceinfo.fr/monde/iran/frappes-americaines-en-iran/on-peut-faire-ca-en-10-minutes-donald-trump-menace-de-reprendre-les-bombardements-en-iran-avant-les-elections-de-mi-mandat_8262815.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-01T15:17:00.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/EWyeDWJ7WhRbIGH9T9y2o5LOFl0/0x0:1920x1080/432x243/filters:format(jpg)/2026/11/01/6ae73d67eda4a251878991.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "d3d73c524b08",
-      "titledArticleCount": 15,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Donald Trump a menacé ce week-end de porter un « coup de massue » au régime de Téhéran en ciblant un ou deux sites.",
-          "L'Iran a réagi en avertissant qu'une reprise des hostilités déboucherait sur une guerre « plus longue » que la précédente."
-        ],
-        "centre": [
-          "Le président américain Donald Trump a multiplié les menaces d'offensives aériennes contre des sites iraniens, évoquant des frappes potentielles après les élections de mi-mandat.",
-          "Face à ces déclarations, l'Iran a menacé de riposter et d'allonger le conflit, tout en se disant disposé à rouvrir le détroit d'Ormuz sous conditions.",
-          "Donald Trump a ensuite infléchi sa position en affirmant qu'un accord avec Téhéran restait envisageable, les marchés pétroliers réagissant à ces tensions."
-        ],
-        "droite": [
-          "Donald Trump a brandi la menace d'un « coup de massue » militaire et de frappes contre les derniers sites nucléaires iraniens non neutralisés.",
-          "L'exécutif iranien a rétorqué qu'un tel embrasement provoquerait une confrontation bien plus longue que par le passé.",
-          "Le président américain a finalement assuré qu'un accord diplomatique restait possible, affirmant que Téhéran cherchait à négocier rapidement."
-        ]
-      },
-      "differences": [
-        "La gauche se concentre exclusivement sur la confrontation verbale entre les menaces américaines et les mises en garde iraniennes concernant une guerre prolongée.",
-        "Le centre offre un panorama complet des soubresauts diplomatiques, intégrant les pressions israéliennes, les réactions de Téhéran sur le détroit d'Ormuz et le revirement de Trump sur un éventuel accord.",
-        "La droite met l'accent sur la fermeté militaire initiale de l'administration américaine avant d'embrayer sur l'ouverture soudaine de Donald Trump en faveur d'un compromis rapide."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 15,
-      "summarizedAt": "2026-11-03T00:01:23.813Z"
-    },
-    {
       "id": "334ec8b126ac",
       "slug": "la-gauche-critique-le-camp-d-edouard-philippe-apres-ses-propos",
       "title": "La gauche critique le camp d'Edouard Philippe après ses propos sur l'immigration",
@@ -6090,7 +6131,7 @@
           "url": "https://www.lefigaro.fr/international/midterms-2026-la-cour-supreme-rejette-un-enieme-recours-de-trump-pour-obliger-la-californie-a-isoler-20-000-bulletins-20261103",
           "publishedAt": "2026-11-03T00:00:45.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/03/127f282ff586856d1deb72e6d0534d0c4c41d0aa55efcd4d94cc129d68ca34f2.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -6348,6 +6389,221 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 10,
       "summarizedAt": "2026-11-02T17:01:22.894Z"
+    },
+    {
+      "id": "df92e98f7ab8",
+      "slug": "donald-trump-menace-de-reprendre-les-bombardements-en-iran",
+      "title": "Donald Trump menace de donner un coup de massue à l'Iran tout en évoquant un possible accord",
+      "createdAt": "2026-11-02T03:01:16.278Z",
+      "storyDay": "2026-11-01",
+      "articles": [
+        {
+          "id": "d67da368c0d9",
+          "outletId": "20-minutes",
+          "headline": "Guerre en Iran : Trump affirme qu’un accord avec Téhéran « pourrait arriver », le prix du pétrole recule",
+          "url": "https://www.20minutes.fr/monde/etats-unis/4259861-20261103-guerre-iran-trump-affirme-accord-teheran-pourrait-arriver-prix-petrole-recule?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-03T00:01:25.000Z",
+          "imageUrl": "https://img.20mn.fr/dKvAE-lEQh6jmGPRwHQIKSk/1200x768_le-president-donald-trump-prend-la-parole-dans-le-bureau-ovale-de-la-maison-blanche-le-mardi-20-octobre-2026-a-washington-sous-l-ecoute-du-vice-president-jd-vance-ap-photo-jacquelyn-martin-dcje307-26293660464895-2610202022",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "f85aaec81a21",
+          "outletId": "france-24",
+          "headline": "Donald Trump change de ton et assure qu'un accord avec l'Iran \"pourrait arriver\"",
+          "url": "https://www.france24.com/fr/moyen-orient/20261102-moyen-orient-donald-trump-accord-avec-l-iran-pourrait-arriver-detroit-d-ormuz-petrole",
+          "publishedAt": "2026-11-02T22:56:40.000Z",
+          "imageUrl": "https://s.france24.com/media/display/4efcfe3a-d710-11f1-8d01-a575454bc579/w:1024/p:16x9/AP26306798200871.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "be836d02bdd4",
+          "outletId": "le-figaro",
+          "headline": "États-Unis : Donald Trump annonce qu’un accord avec l’Iran «pourrait arriver»",
+          "url": "https://www.lefigaro.fr/international/etats-unis-donald-trump-annonce-qu-un-accord-avec-l-iran-pourrait-arriver-20261102",
+          "publishedAt": "2026-11-02T21:18:59.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2058x1372_crop/2026/11/02/2c31f3828ae72f77e4926ca3d74256f822abeae889505e962542ad2974bda90b.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "89142b4f5b2c",
+          "outletId": "le-monde",
+          "headline": "EN DIRECT, midterms 2026 : « L’Iran veut un accord aussi rapidement que possible », assure Donald Trump",
+          "url": "https://www.lemonde.fr/international/live/2026/11/02/en-direct-midterms-2026-l-iran-veut-un-accord-aussi-rapidement-que-possible-assure-donald-trump_6801590_3210.html",
+          "publishedAt": "2026-11-02T21:13:47.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/02/468/0/5619/2809/644/322/60/0/4ce1557_ftp-1-rpqoqnigefh9-afp-d68668j.jpg",
+          "frontPage": true,
+          "kind": "live",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "fff11f220e11",
+          "outletId": "tf1-info",
+          "headline": "Détroit d'Ormuz, \"guerre plus longue que la précédente\"… L'Iran répond aux nouvelles menaces de Trump",
+          "url": "https://www.tf1info.fr/international/detroit-d-ormuz-guerre-plus-longue-que-la-precedente-l-iran-repond-aux-nouvelles-menaces-de-donald-trump-2473358.html",
+          "publishedAt": "2026-11-02T11:45:45.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/navires-bloques-detroit-d-ormuz-e4e434-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "1e4941be26bc",
+          "outletId": "bfmtv",
+          "headline": "Guerre au Moyen-Orient: en plein meeting, Donald Trump menace de \"donner un coup de massue\" à l'Iran",
+          "url": "https://www.bfmtv.com/international/amerique-nord/etats-unis/video-guerre-au-moyen-orient-en-plein-meeting-donald-trump-menace-de-donner-un-coup-de-massue-a-l-iran_VN-202611020454.html",
+          "publishedAt": "2026-11-02T10:40:14.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/bkWnjT6-7_42xNnQgOOP3eAswUw=/0x0:1280x720/800x0/images/Guerre-au-Moyen-Orient-en-plein-meeting-Donald-Trump-menace-de-donner-un-coup-de-massue-a-l-Iran-2376268.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "fb0d2fea6a25",
+          "outletId": "france-24",
+          "headline": "Iran : le président Trump avertit devoir \"à un moment, donner un coup de massue\" à Téhéran",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261102-iran-le-pr%C3%A9sident-trump-avertit-devoir-%C3%A0-un-moment-donner-un-coup-de-massue-%C3%A0-t%C3%A9h%C3%A9ran",
+          "publishedAt": "2026-11-02T10:11:14.000Z",
+          "imageUrl": "https://s.france24.com/media/display/20bc1428-d6a4-11f1-b04e-695cb59fade5/w:1024/p:16x9/FR-20261102-091713-091834-CS.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "6f7da31f0f75",
+          "outletId": "bfmtv",
+          "headline": "Guerre en Iran: Donald Trump menace de \"donner un coup de massue\", Téhéran promet une guerre \"plus longue que la précédente\"",
+          "url": "https://www.bfmtv.com/international/moyen-orient/iran/video-guerre-en-iran-donald-trump-menace-de-donner-un-coup-de-massue-teheran-promet-une-guerre-plus-longue-que-la-precedente_VN-202611020366.html",
+          "publishedAt": "2026-11-02T08:51:28.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Nb3WkmEA4axJJHHUCk2nMQy9zvg=/0x0:1280x720/800x0/images/Guerre-en-Iran-Donald-Trump-menace-de-donner-un-coup-de-massue-Teheran-promet-une-guerre-plus-longue-que-la-precedente-2376198.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "f1c25a064d33",
+          "outletId": "liberation",
+          "headline": "Face aux menaces de Trump, l’Iran avertit qu’une nouvelle guerre pourrait être «plus longue»",
+          "url": "https://www.liberation.fr/international/moyen-orient/face-aux-menaces-de-trump-liran-avertit-quune-nouvelle-guerre-pourrait-etre-plus-longue-20261102_VZESAWDVUBCJHDCM5Z5E6PXDBE/",
+          "publishedAt": "2026-11-02T07:40:14.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "63561f92012c",
+          "outletId": "le-figaro",
+          "headline": "Après les menaces de Donald Trump, l'Iran avertit qu'une nouvelle guerre pourrait être «plus longue»",
+          "url": "https://www.lefigaro.fr/international/apres-les-menaces-de-trump-l-iran-avertit-qu-une-nouvelle-guerre-pourrait-etre-plus-longue-20261102",
+          "publishedAt": "2026-11-02T06:45:45.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/02/7fad776f2709f9840bc2fd3a8fc188719aec52d39ca619e01bfdc71dd53f9508.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "901c67203623",
+          "outletId": "franceinfo",
+          "headline": "Donald Trump avertit que les Etats-Unis devront, \"à un moment, donner un coup de massue\" à l'Iran",
+          "url": "https://www.franceinfo.fr/monde/iran/guerre-entre-les-etats-unis-israel-et-l-iran/donald-trump-avertit-que-les-etats-unis-devront-a-un-moment-donner-un-coup-de-massue-a-l-iran_8263538.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-02T06:44:16.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/DQEDw0RrEuwhc2NDW2L1sQocNmw/0x53:1024x629/432x243/filters:format(jpg)/2026/11/02/6ae8311760e87270387642.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "e2fe0cf14865",
+          "outletId": "cnews",
+          "headline": "Donald Trump avertit que les États-Unis devront «donner un coup de massue» à l'Iran «à un moment»",
+          "url": "https://www.cnews.fr/monde/2026-11-02/donald-trump-avertit-que-les-etats-unis-devront-donner-un-coup-de-massue-liran-un",
+          "publishedAt": "2026-11-02T06:14:23.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-01t220653z_593980035_rc28foal6h2e_rtrmadp_3_usa-trump-taille1200_6ae82340464ba.jpg?h=ed3b323a&itok=0STa5nL2",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "e9ab9e3ee75f",
+          "outletId": "bfmtv",
+          "headline": "\"Il va falloir qu'on leur donne un coup de massue\": Donald Trump menace de reprendre les frappes sur l'Iran",
+          "url": "https://www.bfmtv.com/replay-emissions/premiere-edition-6h-8h30/video-il-va-falloir-qu-on-leur-donne-un-coup-de-massue-donald-trump-menace-de-reprendre-les-frappes-sur-l-iran_VN-202611020085.html",
+          "publishedAt": "2026-11-02T05:15:33.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/sQJm4BogLFZtzN7RnxaiBiK6FsY=/0x0:1280x720/800x0/images/Il-va-falloir-qu-on-leur-donne-un-coup-de-massue-Donald-Trump-menace-de-reprendre-les-frappes-sur-l-Iran-2375973.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "f8f7d4ac77d1",
+          "outletId": "le-parisien",
+          "headline": "« Nous allons devoir leur donner un coup de massue » : Donald Trump menace de reprendre fortement les attaques sur l’Iran",
+          "url": "https://www.leparisien.fr/international/etats-unis/nous-allons-devoir-leur-donner-un-coup-de-massue-donald-trump-menace-de-reprendre-fortement-les-attaques-sur-liran-02-11-2026-73G2WEQLMVAATOIOTIU46W5BIE.php",
+          "publishedAt": "2026-11-02T03:01:16.278Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "d997af94b277",
+          "outletId": "20-minutes",
+          "headline": "Guerre au Moyen-Orient : Se disant jusqu’à présent « gentil », Trump veut « donner un coup de massue » à l’Iran",
+          "url": "https://www.20minutes.fr/monde/etats-unis/4259408-20261102-guerre-moyen-orient-disant-jusqu-present-gentil-trump-veut-donner-coup-massue-iran?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-02T02:56:46.000Z",
+          "imageUrl": "https://img.20mn.fr/LHNMafHkSd-Cn4cQgMJngik/1200x768_le-president-donald-trump-part-apres-avoir-pris-la-parole-lors-d-un-rassemblement-de-campagne-au-five-flags-event-center-le-dimanche-1er-novembre-2026-a-dubuque-dans-l-iowa-ap-photo-jacquelyn-martin-iapu791-26305863211272-2611020100",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "19135c2d7f05",
+          "outletId": "franceinfo",
+          "headline": "\"On peut faire ça en 10 minutes\" : Donald Trump menace de reprendre les bombardements en Iran",
+          "url": "https://www.franceinfo.fr/monde/iran/frappes-americaines-en-iran/on-peut-faire-ca-en-10-minutes-donald-trump-menace-de-reprendre-les-bombardements-en-iran-avant-les-elections-de-mi-mandat_8262815.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-01T15:17:00.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/EWyeDWJ7WhRbIGH9T9y2o5LOFl0/0x0:1920x1080/432x243/filters:format(jpg)/2026/11/01/6ae73d67eda4a251878991.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "d3d73c524b08",
+      "titledArticleCount": 15,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Donald Trump a menacé ce week-end de porter un « coup de massue » au régime de Téhéran en ciblant un ou deux sites.",
+          "L'Iran a réagi en avertissant qu'une reprise des hostilités déboucherait sur une guerre « plus longue » que la précédente."
+        ],
+        "centre": [
+          "Le président américain Donald Trump a multiplié les menaces d'offensives aériennes contre des sites iraniens, évoquant des frappes potentielles après les élections de mi-mandat.",
+          "Face à ces déclarations, l'Iran a menacé de riposter et d'allonger le conflit, tout en se disant disposé à rouvrir le détroit d'Ormuz sous conditions.",
+          "Donald Trump a ensuite infléchi sa position en affirmant qu'un accord avec Téhéran restait envisageable, les marchés pétroliers réagissant à ces tensions."
+        ],
+        "droite": [
+          "Donald Trump a brandi la menace d'un « coup de massue » militaire et de frappes contre les derniers sites nucléaires iraniens non neutralisés.",
+          "L'exécutif iranien a rétorqué qu'un tel embrasement provoquerait une confrontation bien plus longue que par le passé.",
+          "Le président américain a finalement assuré qu'un accord diplomatique restait possible, affirmant que Téhéran cherchait à négocier rapidement."
+        ]
+      },
+      "differences": [
+        "La gauche se concentre exclusivement sur la confrontation verbale entre les menaces américaines et les mises en garde iraniennes concernant une guerre prolongée.",
+        "Le centre offre un panorama complet des soubresauts diplomatiques, intégrant les pressions israéliennes, les réactions de Téhéran sur le détroit d'Ormuz et le revirement de Trump sur un éventuel accord.",
+        "La droite met l'accent sur la fermeté militaire initiale de l'administration américaine avant d'embrayer sur l'ouverture soudaine de Donald Trump en faveur d'un compromis rapide."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 15,
+      "summarizedAt": "2026-11-03T00:01:23.813Z"
     },
     {
       "id": "d66789f42bf1",
@@ -7085,247 +7341,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 25,
       "summarizedAt": "2026-11-02T23:01:20.272Z"
-    },
-    {
-      "id": "70b6f6e5d640",
-      "slug": "le-dj-americain-juan-atkins-pionnier-de-la-musique-techno-est",
-      "title": "Le DJ américain Juan Atkins, pionnier de la techno, meurt à l'âge de 64 ans",
-      "createdAt": "2026-11-02T15:01:27.783Z",
-      "storyDay": "2026-11-02",
-      "articles": [
-        {
-          "id": "960211ad7d66",
-          "outletId": "le-figaro",
-          "headline": "Mort à 64 ans de l’Américain Juan Atkins, pionnier de la techno",
-          "url": "https://www.lefigaro.fr/musique/mort-a-64-ans-de-l-americain-juan-atkins-pionnier-de-la-techno-20261102",
-          "publishedAt": "2026-11-02T17:16:20.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/11/02/ef3c2bf6722583463c13b5c1f2bea3ad2fb88e305f36109b7deb3d30c1f5bf55.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "60d58318b152",
-          "outletId": "le-monde",
-          "headline": "Juan Atkins, un des pères fondateurs de la musique techno, est mort",
-          "url": "https://www.lemonde.fr/disparitions/article/2026/11/02/juan-atkins-un-des-peres-fondateurs-de-la-musique-techno-est-mort_6805286_3382.html",
-          "publishedAt": "2026-11-02T16:05:41.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/02/1422/0/3319/1659/644/322/60/0/436a56e_upload-1-eaqoas6rvugh-gettyimages-558237153.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture",
-          "everFrontPage": true
-        },
-        {
-          "id": "31736ff9dc78",
-          "outletId": "courrier-international",
-          "headline": "Mort de Juan Atkins, celui “qui a imaginé la musique techno avant tout le monde”",
-          "url": "https://www.courrierinternational.com/article/musique-mort-de-juan-atkins-celui-qui-a-imagine-la-musique-techno-avant-tout-le-monde_284116",
-          "publishedAt": "2026-11-02T14:53:03.000Z",
-          "imageUrl": "https://focus.courrierinternational.com/2026/11/02/0/0/860/519/644/0/60/0/d751160_upload-1-tsjlix8xgcfi-juan-atkins-860x519-copie.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "24a2ebb33e26",
-          "outletId": "liberation",
-          "headline": "Mort de Juan Atkins, père fondateur de la techno",
-          "url": "https://www.liberation.fr/culture/musique/mort-de-juan-atkins-pere-fondateur-de-la-techno-20261101_NMPXUNVMHNGEFFVBR6KZIVVS4E/",
-          "publishedAt": "2026-11-02T14:45:33.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "4d2b1f024111",
-          "outletId": "rfi",
-          "headline": "Mort du producteur américain Juan Atkins, figure majeure de la techno de Détroit",
-          "url": "https://www.rfi.fr/fr/musique/20261102-mort-du-producteur-am%C3%A9ricain-juan-atkins-figure-majeure-de-la-techno-de-d%C3%A9troit",
-          "publishedAt": "2026-11-02T14:42:44.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/351757ee-d6cb-11f1-b50c-1beafce15fea/w:1024/p:16x9/GettyImages-851234690.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "9648185bdc9d",
-          "outletId": "bfmtv",
-          "headline": "Mort du DJ américain Juan Atkins, pionnier de la musique techno",
-          "url": "https://www.bfmtv.com/culture/musique/mort-du-dj-americain-juan-atkins-pionnier-de-la-musique-techno_AD-202611020588.html",
-          "publishedAt": "2026-11-02T14:07:08.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/OiLjDmft0zePm2xSbtdSjEwJHqA=/4x51:852x528/800x0/images/Juan-Atknis-2376445.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "d2aa43062edc",
-          "outletId": "franceinfo",
-          "headline": "Le DJ américain Juan Atkins, pionnier de la musique techno, est mort à l'âge de 64 ans",
-          "url": "https://www.franceinfo.fr/culture/musique/le-dj-americain-juan-atkins-pionnier-de-la-musique-techno-est-mort-a-l-age-de-64-ans_8264009.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-02T13:29:42.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/4MD5q88hF7TNaV-LZLhfI7DXaag/0x0:4200x2362/432x243/filters:format(jpg)/2026/11/02/6ae87edcdf10c111190360.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        }
-      ],
-      "topicId": "70b6f6e5d640",
-      "titledArticleCount": 6,
-      "section": "culture",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le musicien américain Juan Atkins, fondateur de la techno originaire de Detroit, est mort le 1er novembre à l'âge de 64 ans.",
-          "Il s'est éteint à Mexico le 31 octobre lors d'une tournée, selon Le Monde.",
-          "La maire de Detroit, Mary Sheffield, a salué un artiste dont le son est né dans les caves de la ville avant de résonner sur tous les continents, rapporte franceinfo."
-        ],
-        "centre": [
-          "Le DJ et producteur américain Juan Atkins est mort à l'âge de 64 ans à Mexico, où il devait se produire en concert.",
-          "Il est reconnu comme une figure majeure et un père fondateur de la musique techno de Detroit, illustré notamment par ses projets Cybotron et Model 500.",
-          "La presse anglophone salue un artiste ayant transformé durablement le paysage musical mondial."
-        ],
-        "droite": [
-          "Le pionnier de la techno Juan Atkins est mort à l'âge de 64 ans.",
-          "Originaire de Detroit, il a profondément marqué l'histoire de la musique électronique dès les années 1980.",
-          "Il luttait contre des complications en lien avec un diabète."
-        ]
-      },
-      "differences": [
-        "La gauche met en avant l'hommage institutionnel de la maire de Detroit et précise le lieu exact du décès à Mexico.",
-        "Le centre insiste sur sa stature internationale de pionnier à travers ses divers projets musicaux et les hommages de la presse anglophone.",
-        "La droite rappelle son rôle historique dans les années 1980 et mentionne les complications liées à son diabète."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 7,
-      "summarizedAt": "2026-11-02T18:02:43.496Z"
-    },
-    {
-      "id": "e43ad3ccc7fa",
-      "slug": "le-premier-ministre-belge-bart-de-wever-remet-sa-demission-au",
-      "title": "Le premier ministre belge Bart De Wever remet sa démission au roi sur fond de blocage budgétaire",
-      "createdAt": "2026-11-02T11:01:19.126Z",
-      "storyDay": "2026-11-02",
-      "articles": [
-        {
-          "id": "813d84786bcd",
-          "outletId": "humanite",
-          "headline": "Belgique : empêché de faire les poches des citoyens, le premier ministre Bart De Wever démissionne",
-          "url": "https://www.humanite.fr/monde/bart-de-wever/belgique-empeche-de-faire-les-poches-des-citoyens-le-premier-ministre-bart-de-wever-demissionne",
-          "publishedAt": "2026-11-02T16:37:55.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/Bart-De-Wever-porte-sa-demission-au-palais.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "0dcaa3196feb",
-          "outletId": "lexpress",
-          "headline": "Belgique : le Premier ministre remet sa démission au roi sur fond de blocage budgétaire",
-          "url": "https://www.lexpress.fr/monde/europe/belgique-le-premier-ministre-remet-sa-demission-au-roi-sur-fond-de-blocage-budgetaire-2CKK6NB7PJCGVFC5FCXXPHUW2U/",
-          "publishedAt": "2026-11-02T15:02:10.000Z",
-          "imageUrl": "https://www.lexpress.fr/resizer/v2/CVHBA3P3XJCDJNPMXF54RQ6M7I.jpg?auth=53b221b4ef36d9c3cb6b44fdc8966e83537e9eaddc0c582212581856964a86a1&smart=true&width=3000&height=2000",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "800c5d1dbacb",
-          "outletId": "ouest-france",
-          "headline": "Crise budgétaire en Belgique : le Premier ministre remet sa démission au Roi, qui n’a pas encore tranché",
-          "url": "https://www.ouest-france.fr/europe/belgique/crise-budgetaire-en-belgique-le-premier-ministre-remet-sa-demission-au-roi-qui-na-pas-encore-tranche-6cbaaba0-d6ae-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-02T11:39:10.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExM2YzYWM4ZDEyMTA0NzQ2MzlkODRhMDkwNWYxMTNiODE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=91a6c792c451bf7e802ff8da9d541ae9ea78721360014906981c89ff0cb0f461",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "617eb590e82c",
-          "outletId": "courrier-international",
-          "headline": "En Belgique, le Premier ministre remet sa démission, le roi temporise",
-          "url": "https://www.courrierinternational.com/article/politique-en-belgique-le-premier-ministre-remet-sa-demission-le-roi-temporise_284128",
-          "publishedAt": "2026-11-02T11:32:46.000Z",
-          "imageUrl": "https://focus.courrierinternational.com/2025/10/23/0/0/3616/2416/644/0/60/0/8b693f4_ftp-import-images-1-qiw7zjotym2t-2025-10-23t212810z-2080883236-rc2xhhazuykw-rtrmadp-3-eu-summit.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "7db6c2e409fc",
-          "outletId": "le-monde",
-          "headline": "Belgique : le premier ministre, Bart De Wever, présente sa démission au roi sur fond de blocage budgétaire au Parlement",
-          "url": "https://www.lemonde.fr/international/article/2026/11/02/belgique-le-premier-ministre-bart-de-wever-presente-sa-demission-au-roi-sur-fond-de-blocage-budgetaire_6805239_3210.html",
-          "publishedAt": "2026-11-02T11:24:15.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/02/567/0/6810/3405/644/322/60/0/7d56abc_upload-1-xilvpfja8akm-000-d3xb8jp.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "fa1347b095b2",
-          "outletId": "le-figaro",
-          "headline": "Belgique : le premier ministre Bart De Wever a remis sa démission au Roi après le blocage budgétaire",
-          "url": "https://www.lefigaro.fr/international/belgique-le-premier-ministre-bart-de-wever-a-remis-sa-demission-au-roi-apres-le-blocage-budgetaire-20261102",
-          "publishedAt": "2026-11-02T10:59:38.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2584x1723_crop/2026/11/02/93801d8e264f9c496b1e2d40628abac7d669f9ab987c5affc45ef7a83f6195e5.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "097a3c78ed16",
-          "outletId": "liberation",
-          "headline": "Belgique : le Premier ministre a remis sa démission au roi sur fond de blocage budgétaire",
-          "url": "https://www.liberation.fr/international/europe/belgique-le-premier-ministre-a-remis-sa-demission-au-roi-sous-fond-de-blocage-budgetaire-20261102_F3K462RPBFDVNA3IMDEVY56E5M/",
-          "publishedAt": "2026-11-02T10:58:58.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "9bf000954154",
-          "outletId": "la-croix",
-          "headline": "Belgique : le premier ministre a remis sa démission au roi sur fond de blocage budgétaire",
-          "url": "https://www.la-croix.com/international/belgique-le-premier-ministre-a-remis-sa-demission-au-roi-sur-fond-de-blocage-budgetaire-20261102",
-          "publishedAt": "2026-11-02T10:43:41.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/11/02/2578323-le-premier-ministre-belge-bart-de-wever-a-remis-sa.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "e43ad3ccc7fa",
-      "titledArticleCount": 8,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le premier ministre Bart De Wever a présenté sa démission au roi suite à l'échec de sa coalition à s'accorder sur un budget d'environ dix milliards d'euros.",
-          "L'Humanité souligne que les syndicats proposaient vingt et un milliards de recettes alternatives en taxant les plus fortunés, tandis que Libération précise que la coalition de centre droit menée par Bart De Wever n'a pas su s'entendre sur le budget 2027.",
-          "Le roi n'a pas immédiatement accepté cette démission et doit mener des consultations avec les présidents des différents partis."
-        ],
-        "centre": [
-          "Le premier ministre belge Bart De Wever a remis sa démission au roi Philippe le lundi 2 novembre en raison d'un blocage persistant au sein de sa coalition gouvernementale de cinq partis concernant le budget.",
-          "Le souverain a suspendu sa décision et n'a pas encore tranché, prévoyant de recevoir de nouveau le chef du gouvernement le vendredi 6 novembre après des discussions avec les chefs de parti de la majorité."
-        ],
-        "droite": [
-          "Le premier ministre belge Bart De Wever a présenté sa démission au Roi ce lundi après un blocage budgétaire persistant au sein de sa coalition gouvernementale.",
-          "Le souverain n'a pas accepté cette démission pour l'instant."
-        ]
-      },
-      "differences": [
-        "La gauche met l'accent sur le contenu social des alternatives budgétaires en évoquant les propositions des syndicats et la fiscalité des plus fortunés.",
-        "Le centre privilégie une description institutionnelle détaillée des démarches du roi Philippe et du calendrier des consultations politiques.",
-        "La droite propose un traitement factuel concis centré sur l'acte politique de démission et la réponse du souverain."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 8,
-      "summarizedAt": "2026-11-02T17:01:22.894Z"
     }
   ],
   "stories": [
@@ -11321,6 +11336,154 @@
       "summarizedAt": "2026-11-02T17:01:22.894Z"
     },
     {
+      "id": "c3d8495051c6",
+      "slug": "l-explorateur-britannique-karl-bushby-accueilli-en-heros-dans",
+      "title": "L'aventurier Karl Bushby rentre dans sa ville natale après un tour du monde à pied de 28 ans",
+      "createdAt": "2026-11-02T12:01:20.772Z",
+      "storyDay": "2026-11-02",
+      "articles": [
+        {
+          "id": "788840db2a22",
+          "outletId": "le-figaro",
+          "headline": "Royaume-Uni : les images du retour de Karl Bushby dans sa ville natale après 28 ans de marche à travers le monde",
+          "url": "https://www.lefigaro.fr/international/royaume-uni-les-images-du-retour-de-karl-bushby-dans-sa-ville-natale-apres-28-ans-de-marche-a-travers-le-monde-20261102",
+          "publishedAt": "2026-11-02T16:57:37.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/02/08ecf631e3cc380447f9c7c7dde65c3fce27b10409a0b2a849d3662d27434270.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "d7fc3555065a",
+          "outletId": "courrier-international",
+          "headline": "“Le monde à ses pieds” : le Britannique Karl Bushby accueilli en héros après 28 ans de marche autour du monde",
+          "url": "https://www.courrierinternational.com/une/une-du-jour-le-monde-a-ses-pieds-le-britannique-karl-bushby-accueilli-en-heros-apres-28-ans-de-marche-autour-du-monde_284130",
+          "publishedAt": "2026-11-02T16:30:08.000Z",
+          "imageUrl": "https://focus.courrierinternational.com/2026/11/02/0/0/764/966/644/0/60/0/61d975c_upload-1-ckajp0a5ory7-hull-daily-mail-2-novembre.png",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "e669e92d05c4",
+          "outletId": "bfmtv",
+          "headline": "50.000 km à pied en 28 ans: l'aventurier Karl Bushby achève son tour du monde et rentre chez lui en héros",
+          "url": "https://www.bfmtv.com/international/video-50-000-km-a-pied-en-28-ans-l-aventurier-karl-bushby-acheve-son-tour-du-monde-et-rentre-chez-lui-en-heros_VN-202611020707.html",
+          "publishedAt": "2026-11-02T16:27:00.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/-1ts_RGJH3QBGH2ZdecuOng79TM=/0x0:1280x720/800x0/images/50-000-km-a-pied-en-28-ans-l-aventurier-Karl-Bushby-acheve-son-tour-du-monde-et-rentre-chez-lui-en-heros-2376532.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "15e4bda31bb8",
+          "outletId": "france-24",
+          "headline": "Royaume-Uni : Il rentre enfin chez lui après 28 ans de marche autour du monde",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261102-royaume-uni-il-rentre-enfin-chez-lui-apr%C3%A8s-28-ans-de-marche-autour-du-monde",
+          "publishedAt": "2026-11-02T16:00:06.000Z",
+          "imageUrl": "https://s.france24.com/media/display/c96311d6-d6d5-11f1-8ae8-bf1914cabd52/w:1024/p:16x9/minia-amrche.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "80fe48e19281",
+          "outletId": "huffpost",
+          "headline": "L’aventurier britannique Karl Bushby a enfin bouclé son tour du monde à pied, au bout de 28 ans",
+          "url": "https://www.huffingtonpost.fr/international/article/l-aventurier-britannique-karl-bushby-a-enfin-boucle-son-tour-du-monde-a-pied-au-bout-de-28-ans_350596.html",
+          "publishedAt": "2026-11-02T15:19:10.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/02/0/0/8256/4644/0/0/60/0/ba14e08_upload-1-kqq8ur67phye-afp-20261102-d66u62a-v2-highres-topshotbritaintraveladventure.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "a46081591a96",
+          "outletId": "europe-1",
+          "headline": "Un aventurier britannique accueilli en héros après 28 ans de marche autour du monde",
+          "url": "https://www.europe1.fr/maison/un-aventurier-britannique-accueilli-en-heros-apres-28-ans-de-marche-autour-du-monde-1203003?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-02T13:55:16.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/02/15/020_2303129839_1_6ae89919a5a07.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "719370932f30",
+          "outletId": "rfi",
+          "headline": "Le Britannique Karl Bushby de retour à Hull, sa ville natale, après un tour du monde à pied de 28 ans",
+          "url": "https://www.rfi.fr/fr/europe/20261102-le-britannique-karl-bushby-de-retour-%C3%A0-hull-sa-ville-natale-apr%C3%A8s-un-tour-du-monde-%C3%A0-pied-de-28-ans",
+          "publishedAt": "2026-11-02T13:02:25.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/40c4052a-d6b1-11f1-9364-d18c5759e759/w:1024/p:16x9/2026-11-02T112456Z-1233341951-RC2MFOA9BQAC-RTRMADP-3-PEOPLE-KARL-BUSHBY-GLOBAL-WALK.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "4c8ced039964",
+          "outletId": "le-parisien",
+          "headline": "« Bienvenue à la maison » : l’explorateur britannique Karl Bushby accueilli en héros dans sa ville natale, après un tour du monde à pied de 28 ans",
+          "url": "https://www.leparisien.fr/international/royaume-uni/bienvenue-a-la-maison-lexplorateur-britannique-karl-bushby-accueilli-en-heros-dans-sa-ville-natale-apres-un-tour-du-monde-a-pied-de-28-ans-02-11-2026-53Z4CDM6INBPJPEO4WDBRAXE3I.php",
+          "publishedAt": "2026-11-02T12:01:20.772Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "ad27433746ca",
+          "outletId": "liberation",
+          "headline": "Le tour du monde en 10 228 jours : l’aventurier britannique Karl Bushby accueilli en héros dans sa ville natale après 28 ans de marche",
+          "url": "https://www.liberation.fr/international/europe/le-tour-du-monde-en-10-228-jours-laventurier-britannique-karl-bushby-accueilli-en-heros-dans-sa-ville-natale-apres-28-ans-de-marche-20261102_SSSD2BABZBDY3BIN2TZILAJMJ4/",
+          "publishedAt": "2026-11-02T11:25:09.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "1456854b4e0a",
+          "outletId": "humanite",
+          "headline": "L’aventurier britannique Karl Bushby, enfin de retour chez lui après 28 ans de tour du monde à pied",
+          "url": "https://www.humanite.fr/monde/chili/laventurier-britannique-karl-bushby-enfin-de-retour-chez-lui-apres-28-ans-de-tour-du-monde-a-pied",
+          "publishedAt": "2026-11-02T10:00:00.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/p4-homme-jour-Karl-Bushby_M.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "c3d8495051c6",
+      "titledArticleCount": 10,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "L'aventurier Karl Bushby a regagné sa ville natale de Hull après un périple de 28 ans à pied à travers 29 pays.",
+          "L'ancien parachutiste de 57 ans a parcouru environ 50 000 kilomètres depuis son départ du Chili en 1998.",
+          "Libération précise qu'il avait entamé ce tour du monde à l'âge de 29 ans à la suite de l'échec de son mariage."
+        ],
+        "centre": [
+          "Le Britannique Karl Bushby a achevé un tour du monde à pied de 28 ans en arrivant dans sa ville de Hull.",
+          "Il a parcouru 50 000 kilomètres en partant de la pointe sud du Chili en 1998 sans utiliser le moindre transport.",
+          "Une foule de plusieurs centaines de personnes lui a réservé un accueil triomphal et en héros."
+        ],
+        "droite": [
+          "L'aventurier Karl Bushby a retrouvé sa ville natale de Hull après une marche ininterrompue de 28 ans autour du globe.",
+          "L'ancien militaire de 57 ans s'était fixé pour règles de ne recourir à aucun moyen de transport et de ne pas rentrer avant la fin.",
+          "Europe 1 et Le Figaro soulignent l'accueil chaleureux reçu par la population pour ce retour historique."
+        ]
+      },
+      "differences": [
+        "La presse de gauche contextualise le départ de l'explorateur en 1998 à la suite de l'échec de son mariage et insiste sur l'ampleur géographique avec 29 pays traversés.",
+        "La presse centriste met en avant l'émotion populaire et l'accueil en héros réservé à Karl Bushby par des centaines de personnes dans sa ville portuaire de Hull.",
+        "La presse de droite insiste sur les règles strictes que s'était imposées l'ancien parachutiste tout au long de ses 50 000 kilomètres parcourus sans aucun transport."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 10,
+      "summarizedAt": "2026-11-02T17:01:22.894Z"
+    },
+    {
       "id": "df92e98f7ab8",
       "slug": "donald-trump-menace-de-reprendre-les-bombardements-en-iran",
       "title": "Donald Trump menace de donner un coup de massue à l'Iran tout en évoquant un possible accord",
@@ -11534,154 +11697,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 15,
       "summarizedAt": "2026-11-03T00:01:23.813Z"
-    },
-    {
-      "id": "c3d8495051c6",
-      "slug": "l-explorateur-britannique-karl-bushby-accueilli-en-heros-dans",
-      "title": "L'aventurier Karl Bushby rentre dans sa ville natale après un tour du monde à pied de 28 ans",
-      "createdAt": "2026-11-02T12:01:20.772Z",
-      "storyDay": "2026-11-02",
-      "articles": [
-        {
-          "id": "788840db2a22",
-          "outletId": "le-figaro",
-          "headline": "Royaume-Uni : les images du retour de Karl Bushby dans sa ville natale après 28 ans de marche à travers le monde",
-          "url": "https://www.lefigaro.fr/international/royaume-uni-les-images-du-retour-de-karl-bushby-dans-sa-ville-natale-apres-28-ans-de-marche-a-travers-le-monde-20261102",
-          "publishedAt": "2026-11-02T16:57:37.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/02/08ecf631e3cc380447f9c7c7dde65c3fce27b10409a0b2a849d3662d27434270.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "d7fc3555065a",
-          "outletId": "courrier-international",
-          "headline": "“Le monde à ses pieds” : le Britannique Karl Bushby accueilli en héros après 28 ans de marche autour du monde",
-          "url": "https://www.courrierinternational.com/une/une-du-jour-le-monde-a-ses-pieds-le-britannique-karl-bushby-accueilli-en-heros-apres-28-ans-de-marche-autour-du-monde_284130",
-          "publishedAt": "2026-11-02T16:30:08.000Z",
-          "imageUrl": "https://focus.courrierinternational.com/2026/11/02/0/0/764/966/644/0/60/0/61d975c_upload-1-ckajp0a5ory7-hull-daily-mail-2-novembre.png",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "e669e92d05c4",
-          "outletId": "bfmtv",
-          "headline": "50.000 km à pied en 28 ans: l'aventurier Karl Bushby achève son tour du monde et rentre chez lui en héros",
-          "url": "https://www.bfmtv.com/international/video-50-000-km-a-pied-en-28-ans-l-aventurier-karl-bushby-acheve-son-tour-du-monde-et-rentre-chez-lui-en-heros_VN-202611020707.html",
-          "publishedAt": "2026-11-02T16:27:00.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/-1ts_RGJH3QBGH2ZdecuOng79TM=/0x0:1280x720/800x0/images/50-000-km-a-pied-en-28-ans-l-aventurier-Karl-Bushby-acheve-son-tour-du-monde-et-rentre-chez-lui-en-heros-2376532.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "15e4bda31bb8",
-          "outletId": "france-24",
-          "headline": "Royaume-Uni : Il rentre enfin chez lui après 28 ans de marche autour du monde",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261102-royaume-uni-il-rentre-enfin-chez-lui-apr%C3%A8s-28-ans-de-marche-autour-du-monde",
-          "publishedAt": "2026-11-02T16:00:06.000Z",
-          "imageUrl": "https://s.france24.com/media/display/c96311d6-d6d5-11f1-8ae8-bf1914cabd52/w:1024/p:16x9/minia-amrche.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "80fe48e19281",
-          "outletId": "huffpost",
-          "headline": "L’aventurier britannique Karl Bushby a enfin bouclé son tour du monde à pied, au bout de 28 ans",
-          "url": "https://www.huffingtonpost.fr/international/article/l-aventurier-britannique-karl-bushby-a-enfin-boucle-son-tour-du-monde-a-pied-au-bout-de-28-ans_350596.html",
-          "publishedAt": "2026-11-02T15:19:10.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/02/0/0/8256/4644/0/0/60/0/ba14e08_upload-1-kqq8ur67phye-afp-20261102-d66u62a-v2-highres-topshotbritaintraveladventure.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "a46081591a96",
-          "outletId": "europe-1",
-          "headline": "Un aventurier britannique accueilli en héros après 28 ans de marche autour du monde",
-          "url": "https://www.europe1.fr/maison/un-aventurier-britannique-accueilli-en-heros-apres-28-ans-de-marche-autour-du-monde-1203003?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-02T13:55:16.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/02/15/020_2303129839_1_6ae89919a5a07.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "719370932f30",
-          "outletId": "rfi",
-          "headline": "Le Britannique Karl Bushby de retour à Hull, sa ville natale, après un tour du monde à pied de 28 ans",
-          "url": "https://www.rfi.fr/fr/europe/20261102-le-britannique-karl-bushby-de-retour-%C3%A0-hull-sa-ville-natale-apr%C3%A8s-un-tour-du-monde-%C3%A0-pied-de-28-ans",
-          "publishedAt": "2026-11-02T13:02:25.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/40c4052a-d6b1-11f1-9364-d18c5759e759/w:1024/p:16x9/2026-11-02T112456Z-1233341951-RC2MFOA9BQAC-RTRMADP-3-PEOPLE-KARL-BUSHBY-GLOBAL-WALK.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "4c8ced039964",
-          "outletId": "le-parisien",
-          "headline": "« Bienvenue à la maison » : l’explorateur britannique Karl Bushby accueilli en héros dans sa ville natale, après un tour du monde à pied de 28 ans",
-          "url": "https://www.leparisien.fr/international/royaume-uni/bienvenue-a-la-maison-lexplorateur-britannique-karl-bushby-accueilli-en-heros-dans-sa-ville-natale-apres-un-tour-du-monde-a-pied-de-28-ans-02-11-2026-53Z4CDM6INBPJPEO4WDBRAXE3I.php",
-          "publishedAt": "2026-11-02T12:01:20.772Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "ad27433746ca",
-          "outletId": "liberation",
-          "headline": "Le tour du monde en 10 228 jours : l’aventurier britannique Karl Bushby accueilli en héros dans sa ville natale après 28 ans de marche",
-          "url": "https://www.liberation.fr/international/europe/le-tour-du-monde-en-10-228-jours-laventurier-britannique-karl-bushby-accueilli-en-heros-dans-sa-ville-natale-apres-28-ans-de-marche-20261102_SSSD2BABZBDY3BIN2TZILAJMJ4/",
-          "publishedAt": "2026-11-02T11:25:09.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "1456854b4e0a",
-          "outletId": "humanite",
-          "headline": "L’aventurier britannique Karl Bushby, enfin de retour chez lui après 28 ans de tour du monde à pied",
-          "url": "https://www.humanite.fr/monde/chili/laventurier-britannique-karl-bushby-enfin-de-retour-chez-lui-apres-28-ans-de-tour-du-monde-a-pied",
-          "publishedAt": "2026-11-02T10:00:00.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/p4-homme-jour-Karl-Bushby_M.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "c3d8495051c6",
-      "titledArticleCount": 10,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "L'aventurier Karl Bushby a regagné sa ville natale de Hull après un périple de 28 ans à pied à travers 29 pays.",
-          "L'ancien parachutiste de 57 ans a parcouru environ 50 000 kilomètres depuis son départ du Chili en 1998.",
-          "Libération précise qu'il avait entamé ce tour du monde à l'âge de 29 ans à la suite de l'échec de son mariage."
-        ],
-        "centre": [
-          "Le Britannique Karl Bushby a achevé un tour du monde à pied de 28 ans en arrivant dans sa ville de Hull.",
-          "Il a parcouru 50 000 kilomètres en partant de la pointe sud du Chili en 1998 sans utiliser le moindre transport.",
-          "Une foule de plusieurs centaines de personnes lui a réservé un accueil triomphal et en héros."
-        ],
-        "droite": [
-          "L'aventurier Karl Bushby a retrouvé sa ville natale de Hull après une marche ininterrompue de 28 ans autour du globe.",
-          "L'ancien militaire de 57 ans s'était fixé pour règles de ne recourir à aucun moyen de transport et de ne pas rentrer avant la fin.",
-          "Europe 1 et Le Figaro soulignent l'accueil chaleureux reçu par la population pour ce retour historique."
-        ]
-      },
-      "differences": [
-        "La presse de gauche contextualise le départ de l'explorateur en 1998 à la suite de l'échec de son mariage et insiste sur l'ampleur géographique avec 29 pays traversés.",
-        "La presse centriste met en avant l'émotion populaire et l'accueil en héros réservé à Karl Bushby par des centaines de personnes dans sa ville portuaire de Hull.",
-        "La presse de droite insiste sur les règles strictes que s'était imposées l'ancien parachutiste tout au long de ses 50 000 kilomètres parcourus sans aucun transport."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 10,
-      "summarizedAt": "2026-11-02T17:01:22.894Z"
     },
     {
       "id": "ca1c118cdc5f",
@@ -13190,131 +13205,113 @@
       "summarizedAt": "2026-11-02T12:01:20.772Z"
     },
     {
-      "id": "367ed413b8ab",
-      "slug": "douze-etrangers-figurent-parmi-les-victimes-de-l-accident",
-      "title": "Douze étrangers figurent parmi les victimes de l'accident ferroviaire en Espagne",
-      "createdAt": "2026-11-02T02:01:21.254Z",
-      "storyDay": "2026-11-01",
+      "id": "a14ac239179c",
+      "slug": "benyamin-netanyahou-reclame-un-gouvernement-elargi-tandis-que-l",
+      "title": "Benyamin Nétanyahou réclame un gouvernement élargi tandis que l'opposition tente de bâtir une majorité",
+      "createdAt": "2026-11-02T22:01:19.148Z",
+      "storyDay": "2026-11-02",
       "articles": [
         {
-          "id": "75739128256a",
-          "outletId": "franceinfo",
-          "headline": "Les autorités espagnoles recensent 12 victimes étrangères parmi les 69 personnes tuées dans l'accident ferroviaire d'Urda",
-          "url": "https://www.franceinfo.fr/monde/espagne/accident-de-trains-pres-de-tolede/les-autorites-espagnolrecensent-12-victimes-etrangeres-parmi-les-69-personnes-tuees-dans-l-accident-ferroviaire-d-urda_8263664.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-02T08:51:14.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/C3I1kYbza1Yg68ioIpdBrUIBsT4/0x0:1024x576/432x243/filters:format(jpg)/2026/11/02/6ae84cc5d2458393477963.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "ed04ebffbb3f",
-          "outletId": "20-minutes",
-          "headline": "Collision de trains en Espagne : Une Française, quatre Américains… L’accident a fait 12 victimes étrangères",
-          "url": "https://www.20minutes.fr/monde/espagne/4259587-20261102-collision-trains-espagne-francaise-quatre-americains-accident-fait-12-victimes-etrangeres?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-02T08:03:58.000Z",
-          "imageUrl": "https://img.20mn.fr/s-Oqsv7FQcKpQqWo50CMhSk/1200x768_les-services-d-urgence-viennent-en-aide-aux-victimes-sur-les-lieux-d-une-collision-entre-deux-trains-a-urda-en-espagne-le-mercredi-28-octobre-2026-cordon-press-cordon-sipa-02309-credit-cordon-press-sipa-2610291839",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "2de259b54cff",
-          "outletId": "tf1-info",
-          "headline": "Accident de trains en Espagne : 12 victimes étrangères parmi les 69 morts, dont une Française et quatre Américains",
-          "url": "https://www.tf1info.fr/international/accident-de-trains-en-espagne-12-victimes-etrangeres-parmi-les-69-morts-dont-une-francaise-et-quatre-americains-2473295.html",
-          "publishedAt": "2026-11-02T07:12:49.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/697/accident-train-espagne-urda-5877f6-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "952a9e95187d",
-          "outletId": "cnews",
-          "headline": "Collision de trains en Espagne : 12 étrangers, dont une Française, parmi les victimes",
-          "url": "https://www.cnews.fr/monde/2026-11-02/collision-de-trains-en-espagne-12-etrangers-dont-une-francaise-parmi-les-victimes",
-          "publishedAt": "2026-11-02T06:49:02.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-28t173059z_1006445597_rc2hcoa1suyd_rtrmadp_3_spain-accident-taille1200_6ae82c2e6bb1a.jpg?itok=Uv7PJvJG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "1168ff9738a3",
-          "outletId": "bfmtv",
-          "headline": "Collision de trains en Espagne: 12 victimes sont étrangères, dont une Française et quatre Américains",
-          "url": "https://www.bfmtv.com/international/europe/espagne/collision-de-trains-en-espagne-12-victimes-sont-etrangeres-dont-une-francaise-et-quatre-americains_AD-202611020116.html",
-          "publishedAt": "2026-11-02T05:40:42.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/XEF-_2Yv5y7om73l3SWeLNjlnT4=/0x106:2048x1258/800x0/images/Collision-entre-deux-trains-en-Espagne-le-28-octobre-2026-2373657.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "28d49cf4f69e",
-          "outletId": "le-figaro",
-          "headline": "Accident ferroviaire en Espagne : 4 Américains, 1 Française et 1 Canadien parmi les victimes",
-          "url": "https://www.lefigaro.fr/international/accident-ferroviaire-en-espagne-4-americains-1-francaise-et-1-canadien-parmi-les-victimes-20261102",
-          "publishedAt": "2026-11-02T02:11:41.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/02/b1e2ec1ec9aeff3469c542bde20963c307ca32f31fbae21cd919c4777aab8fc1.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "f6d8ff83d798",
+          "id": "cbe99009861d",
           "outletId": "le-parisien",
-          "headline": "12 étrangers, dont une Française et quatre Américains, parmi les victimes de l’accident ferroviaire d’Urda, en Espagne",
-          "url": "https://www.leparisien.fr/international/espagne/12-etrangers-dont-une-francaise-et-quatre-americains-parmi-les-victimes-de-laccident-ferroviaire-durda-en-espagne-02-11-2026-ASN2DWX4NNCMLKJIVPBS3MK2WA.php",
-          "publishedAt": "2026-11-02T02:01:21.254Z",
+          "headline": "Israël : le bloc d’opposition se réunit pour former une majorité, Netanyahou plaide pour « un gouvernement élargi »",
+          "url": "https://www.leparisien.fr/international/israel/israel-le-bloc-dopposition-se-reunit-pour-former-une-majorite-netanyahou-plaide-pour-un-gouvernement-elargi-02-11-2026-3RPXP5PCWVBWTA26QT5CKAZ644.php",
+          "publishedAt": "2026-11-02T22:01:19.148Z",
           "frontPage": false,
           "datedAtCollection": true,
           "kind": "news",
-          "section": "misc"
+          "section": "world"
         },
         {
-          "id": "f5cd8384e2b5",
-          "outletId": "la-croix",
-          "headline": "Accident ferroviaire en Espagne : Pedro Sanchez fragilisé à un mois des législatives",
-          "url": "https://www.la-croix.com/international/accident-ferroviaire-en-espagne-pedro-sanchez-fragilise-a-un-mois-des-legislatives-20261101",
-          "publishedAt": "2026-11-01T14:40:10.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/11/01/25776832-des-employes-de-la-compagnie-iryo-observent-une-mi.jpg",
+          "id": "9a2c688a65fd",
+          "outletId": "rfi",
+          "headline": "Israël: le bloc d'opposition se réunit, Netanyahu revendique de mener le prochain gouvernement",
+          "url": "https://www.rfi.fr/fr/moyen-orient/20261102-isra%C3%ABl-le-bloc-d-opposition-se-r%C3%A9unit-netanyahu-revendique-de-mener-le-prochain-gouvernement",
+          "publishedAt": "2026-11-02T21:57:43.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/54bf4b92-d707-11f1-a1f1-d18c5759e759/w:1024/p:16x9/combo-gadi-eisenkot-benyamin-netanyahu-oct26.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "world"
+        },
+        {
+          "id": "80c22f453f0b",
+          "outletId": "ouest-france",
+          "headline": "En Israël le bloc d’opposition se réunit, Netanyahou revendique de mener le prochain gouvernement",
+          "url": "https://www.ouest-france.fr/monde/israel/en-israel-le-bloc-dopposition-se-reunit-netanyahou-revendique-de-mener-le-prochain-gouvernement-cc09d5d6-d703-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-02T21:48:01.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMTRlOTM2YjBlYTc4OTJiZjZhYjZiNDI5MzhhNjU3NDE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=07c373667aea4b01b0bf0168dc3c6aba12bf90242877ebc3f41db30399c3873e",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "5817447c5324",
+          "outletId": "le-figaro",
+          "headline": "Israël : Netanyahou appelle à un «large gouvernement national» sous sa direction",
+          "url": "https://www.lefigaro.fr/flash-actu/israel-netanyahou-appelle-a-un-large-gouvernement-national-sous-sa-direction-20261102",
+          "publishedAt": "2026-11-02T20:41:55.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2038_crop/2026/11/02/362fa6dd588e519af65346afd19fd1cf72f71adac980740a4a94ec641a779923.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "8d072b3a15b4",
+          "outletId": "franceinfo",
+          "headline": "Après les législatives en Israël, Benyamin Nétanyahou appelle à la formation d'une large coalition gouvernementale sous sa direction et sans les partis arabes",
+          "url": "https://www.franceinfo.fr/monde/israel/elections-legislatives-en-israel/apres-les-legislatives-en-israel-benyamin-netanyahou-appelle-a-la-formation-d-une-large-coalition-gouvernementale-sous-sa-direction-et-sans-les-partis-arabes_8264693.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-02T20:01:04.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/tO7aXTDdtkr_X0ZCvqsyMNsCmV8/0x0:1024x576/432x243/filters:format(jpg)/2026/11/02/6ae8e999407c9711342677.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "ce33ffb8905b",
+          "outletId": "le-monde",
+          "headline": "Législatives en Israël : Benyamin Nétanyahou appelle à une large coalition, sous sa direction et sans les partis arabes ; l’opposition doit se réunir pour tenter de constituer une majorité",
+          "url": "https://www.lemonde.fr/international/article/2026/11/02/legislatives-en-israel-benyamin-netanyahou-appelle-a-une-large-coalition-sous-sa-direction-et-sans-les-partis-arabes-l-opposition-doit-se-reunir-pour-tenter-de-constituer-une-majorite_6805316_3210.html",
+          "publishedAt": "2026-11-02T19:37:32.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/28/480/0/5760/2880/644/322/60/0/565418d_upload-1-0xzvstmrp08w-lgeai-qg-netanyahou-55.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
         }
       ],
-      "topicId": "678b94e3c14a",
-      "titledArticleCount": 8,
-      "section": "misc",
+      "topicId": "a33bb0fdd2f6",
+      "titledArticleCount": 6,
+      "section": "world",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Soixante-neuf personnes ont péri dans la collision de trains survenue à Urda, selon un bilan établi quatre jours après le drame.",
-          "Douze ressortissants étrangers figurent parmi les victimes identifiées par les experts médico-légaux et la police.",
-          "La liste des défunts recensés inclut notamment une Française et quatre Américains, tandis que trois dépouilles restent non identifiées."
+          "Le scrutin législatif du 27 octobre n'a permis de dégager aucune majorité nette à la Knesset.",
+          "Le Likoud de Benyamin Nétanyahou totalise 53 sièges tandis que le bloc d'opposition emmené par Gadi Eisenkot en recueille 48.",
+          "Benyamin Nétanyahou plaide pour la constitution d'un gouvernement élargi sous sa direction tout en excluant les partis arabes.",
+          "Le bloc d'opposition se réunit pour tenter de rassembler une majorité de 61 députés."
         ],
         "centre": [
-          "La catastrophe ferroviaire d'Urda a fait 69 morts, dont 12 victimes de nationalité étrangère représentant neuf pays différents.",
-          "Le Quai d'Orsay a confirmé la mort d'une ressortissante française et adressé ses condoléances à sa famille.",
-          "La collision frontale bouleverse la campagne des élections législatives anticipées et ravive les critiques sur l'état des infrastructures publiques, selon La Croix."
+          "Les élections législatives du 27 octobre n'ont attribué de majorité claire à aucun camp à la Knesset.",
+          "Le Premier ministre sortant Benyamin Nétanyahou revendique la direction du prochain exécutif et réclame une large coalition.",
+          "Le bloc d'opposition s'organise pour bâtir une majorité alternative sous la direction du centriste Gadi Eisenkot.",
+          "Le Figaro précise que le Likoud souhaite exclure les partis arabes qu'il accuse de soutenir le terrorisme."
         ],
         "droite": [
-          "Soixante-neuf passagers ont perdu la vie dans l'accident ferroviaire d'Urda, près de Tolède, qui marque le deuxième drame du genre en Espagne cette année.",
-          "Parmi les 66 victimes désormais identifiées par les experts médicaux, 12 sont de nationalité étrangère, incluant une Française, quatre Américains et un Canadien.",
-          "Les autorités ont précisé que les autres nationalités touchées sont japonaise, tunisienne, portugaise, mexicaine, tchèque et argentine."
+          "Le parti du Premier ministre, le Likoud, a remporté le plus grand nombre de sièges lors des législatives.",
+          "Benyamin Nétanyahou appelle à la formation d'un large gouvernement national placé sous sa direction.",
+          "Le Likoud entend exclure de toute coalition les partis arabes qui ont réalisé un score record.",
+          "Le parti accuse ces formations arabes de soutenir le terrorisme et de nier l'existence de l'État juif."
         ]
       },
       "differences": [
-        "La gauche se concentre strictement sur le bilan humain, l'identification médico-légale des corps et la nationalité des victimes.",
-        "Le centre élargit la couverture en associant le drame humain aux répercussions politiques immédiates sur la campagne législative et la gestion des services publics.",
-        "La droite détaille précisément la liste exhaustive des nationalités étrangères touchées tout en resituant l'événement dans le contexte de la sécurité ferroviaire nationale."
+        "La gauche met l'accent sur l'impasse institutionnelle en détaillant le décompte exact des 53 sièges de la coalition sortante et des 48 sièges de l'opposition.",
+        "Le centre adopte une approche factuelle globale en exposant simultanément la revendication de Benyamin Nétanyahou et l'offensive de l'opposition menée par Gadi Eisenkot.",
+        "La droite centre son traitement sur la victoire du Likoud et relaie explicitement les accusations du parti contre les partis arabes pour justifier leur exclusion."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 8,
-      "summarizedAt": "2026-11-02T11:01:19.126Z"
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-11-03T03:01:18.308Z"
     }
   ]
 }
