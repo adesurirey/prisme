@@ -12,9 +12,10 @@
       "url": "https://www.lemonde.fr/international/article/2026/11/03/aux-etats-unis-un-enfant-est-mort-de-la-rougeole-dans-l-etat-de-new-york-pour-la-premiere-fois-en-trente-ans_6805561_3210.html",
       "publishedAt": "2026-11-03T09:55:19.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/20/490/0/5886/2943/644/322/60/0/1fc7d38_ftp-1-kouru04ldkj6-41c31b6ff036430182f2251dd3f88e7e-0-cf6e95a784774a4aa70940ad6aeefaae.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "society"
+      "section": "society",
+      "everFrontPage": true
     },
     {
       "id": "1181267c1e9f",
@@ -63,5 +64,30 @@
   "topicId": "d758c63dd6f2",
   "titledArticleCount": 5,
   "section": "society",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Un décès infantile lié à la rougeole a été enregistré dans l'État de New York, une première depuis trois décennies.",
+      "Le drame s'est produit dans le comté de Lewis, situé à proximité de la frontière canadienne.",
+      "Les autorités locales font face à une progression de la défiance envers la vaccination, ce qui a motivé la déclaration d'un état d'urgence en octobre.",
+      "La victime s'ajoute à cinq autres décès recensés dans l'État voisin de Pennsylvanie depuis le début de l'année."
+    ],
+    "centre": [
+      "Un premier décès par la rougeole en trente ans a endeuillé l'État de New York.",
+      "Une autorité locale a déclaré « J'ai le cœur brisé » à la suite de cette tragédie sanitaire."
+    ],
+    "droite": [
+      "Un enfant est mort de la rougeole dans l'État de New York, marquant le premier cas mortel en trente ans dans cette région proche du Canada.",
+      "Les services sanitaires ont exprimé leur émotion en déclarant « J'ai le cœur brisé » face à ce drame.",
+      "Près de 5 000 cas confirmés de cette maladie grave et contagieuse ont été dénombrés à l'échelle des États-Unis depuis le début de l'année."
+    ]
+  },
+  "differences": [
+    "Le camp de gauche met l'accent sur le contexte sanitaire général en mentionnant la déclaration d'état d'urgence et le cumul des décès au niveau régional.",
+    "Le camp du centre se focalise sur l'impact émotionnel du drame en reprenant la citation poignante d'une autorité locale.",
+    "Le camp de droite complète le récit du décès new-yorkais par des données chiffrées globales sur l'épidémie au niveau national."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-03T11:01:21.285Z"
 }
