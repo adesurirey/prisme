@@ -6,15 +6,26 @@
   "storyDay": "2026-11-04",
   "articles": [
     {
+      "id": "caa8569efa05",
+      "outletId": "liberation",
+      "headline": "Football : Carlo Molinari, l’ancien président emblématique du FC Metz, est mort",
+      "url": "https://www.liberation.fr/sports/football/football-carlo-molinari-lancien-president-emblematique-du-fc-metz-est-mort-20261104_LZK32TY57JENHJUBZDOA3ZRKFA/",
+      "publishedAt": "2026-11-04T17:53:55.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "ac3114ecb757",
       "outletId": "le-monde",
       "headline": "Carlo Molinari, ancien président emblématique du FC Metz, est mort",
       "url": "https://www.lemonde.fr/sport/article/2026/11/04/carlo-molinari-ancien-president-emblematique-du-fc-metz-est-mort_6806369_3242.html",
       "publishedAt": "2026-11-04T16:58:50.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/04/70/0/2048/1024/644/322/60/0/9d8c2a0_upload-1-dubajs7c1e6n-000-app2001012002073.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "sport"
+      "section": "sport",
+      "everFrontPage": true
     },
     {
       "id": "9f32d288e410",
@@ -23,6 +34,18 @@
       "url": "https://www.lefigaro.fr/sports/football/un-monument-dans-ma-vie-michel-platini-rend-hommage-a-carlo-molinari-20261104",
       "publishedAt": "2026-11-04T16:50:44.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/206759992cb542e9a8a99eab3595879dc51a229f8749ea064b25eb11d20c9d2c.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
+      "id": "7241d8d14483",
+      "outletId": "20-minutes",
+      "headline": "Carlo Molinari, emblématique président du FC Metz entre 1967 et 2009, est mort à 93 ans",
+      "url": "https://www.20minutes.fr/sport/football/4260425-20261104-carlo-molinari-emblematique-president-fc-metz-entre-1967-2009-mort-93-ans?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-04T16:47:32.000Z",
+      "imageUrl": "https://img.20mn.fr/Wwz8oBs-TQqY66PWh6o9uSk/1200x768_le-president-de-metz-carlo-molinari-regarde-le-match-de-football-de-ligue-2-entre-le-fc-metz-et-le-r-c-lens-au-stade-saint-symphorien-de-metz-en-france-le-23-02-09-2009",
       "frontPage": true,
       "kind": "news",
       "section": "sport",
@@ -74,32 +97,32 @@
     }
   ],
   "topicId": "4ed50a165ebf",
-  "titledArticleCount": 6,
+  "titledArticleCount": 8,
   "section": "sport",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le FC Metz a officialisé le décès de son ancien dirigeant Carlo Molinari à l'âge de 93 ans.",
-      "Le dirigeant a passé plus de trente ans à la tête de la formation mosellan entre 1967 et 2009.",
-      "Les Grenats saluent la mémoire de l'artisan des heures les plus marquantes de l'histoire du club."
+      "Le FC Metz a annoncé le décès à l'âge de 93 ans de Carlo Molinari, figure historique et dirigeant du club de 1967 à 2009.",
+      "Le Monde rappelle ses origines de fils d'immigrés italiens et salue l'artisan des périodes marquantes du club.",
+      "Plusieurs grands noms du football français ont rendu hommage à cette figure du sport lorrain."
     ],
     "centre": [
-      "Carlo Molinari, figure historique du FC Metz, est décédé mercredi à l'âge de 93 ans.",
-      "L'ancien président a dirigé le club mosellan durant plus de trois décennies.",
-      "Le club et le football français saluent unanimement un dirigeant exceptionnel et attachant."
+      "Carlo Molinari, président emblématique du FC Metz pendant plus de trente ans, est mort à l'âge de 93 ans.",
+      "Les médias soulignent son rôle central dans les plus beaux succès des Grenats et sa personnalité attachante.",
+      "Le club mosellan a officialisé la disparition de cet acteur majeur du football français."
     ],
     "droite": [
-      "Carlo Molinari, président emblématique du FC Metz, est mort à l'âge de 93 ans.",
-      "Le dirigeant laisse une ville et un club de football totalement orphelins.",
-      "Michel Platini a rendu un vibrant hommage à l'ancien dirigeant, le qualifiant de « monument dans ma vie »."
+      "Le dirigeant historique du FC Metz, Carlo Molinari, est décédé à l'âge de 93 ans.",
+      "Michel Platini a exprimé sa vive émotion suite à la disparition de cette figure qu'il qualifie de monument dans sa vie.",
+      "Le décès de cette personnalité marquante laisse la ville et son club de football orphelins."
     ]
   },
   "differences": [
-    "La gauche rappelle avec précision les mandats successifs du président et son rôle d'artisan de l'histoire du club.",
-    "Le centre insiste sur la personnalité attachante et exceptionnelle de la figure historique du football mosellan.",
-    "La droite se distingue en plaçant en avant l'hommage très personnel et émuf de Michel Platini."
+    "La gauche met en avant la longévité exceptionnelle de ce dirigeant issu de l'immigration ainsi que les hommages unanimes du milieu du football.",
+    "Le centre dresse le portrait chaleureux d'un président profondément amoureux du football et indissociable des grandes heures du club lorrain.",
+    "La droite personnalise fortement l'hommage à travers la figure de Michel Platini, qualifiant le dirigeant disparu de véritable monument."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6,
-  "summarizedAt": "2026-11-04T17:01:25.411Z"
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-04T18:01:17.480Z"
 }
