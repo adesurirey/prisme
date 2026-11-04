@@ -1,13 +1,35 @@
 {
-  "builtAt": "2026-11-04T08:01:18.616Z",
+  "builtAt": "2026-11-04T09:01:22.034Z",
   "latestStories": [
     {
       "id": "132b5084b08b",
       "slug": "elon-musk-ironise-sur-la-deroute-electorale-des-republicains",
-      "title": "Elon Musk ironise sur la déroute électorale des Républicains après les midterms",
+      "title": "Elon Musk ironise sur la déroute électorale des Républicains après les midterms 2026",
       "createdAt": "2026-11-04T08:01:18.616Z",
       "storyDay": "2026-11-04",
       "articles": [
+        {
+          "id": "6b5c658ac206",
+          "outletId": "le-parisien",
+          "headline": "Midterms 2026 : après avoir injecté des sommes record, Elon Musk ironise sur la défaite électorale des républicains",
+          "url": "https://www.leparisien.fr/international/etats-unis/elections-americaines/midterms-2026-apres-avoir-injecte-des-sommes-record-elon-musk-ironise-sur-la-defaite-electorale-des-republicains-04-11-2026-FUJAITEMWZB5DCLSYHMKFJBFXY.php",
+          "publishedAt": "2026-11-04T09:01:22.034Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c03f11130b3f",
+          "outletId": "franceinfo",
+          "headline": "Elon Musk, après avoir injecté des sommes record, ironise sur la défaite électorale des républicains lors des midterms 2026",
+          "url": "https://www.franceinfo.fr/monde/usa/midterms-2018/elon-musk-apres-avoir-injecte-des-sommes-record-ironise-sur-la-defaite-electorale-des-republicains-lors-des-midterms-2026_8267321.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-04T08:15:00.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/CdDMWxlhBSOI7iKLWCfwCy077hQ/0x0:8256x4644/432x243/filters:format(jpg)/2026/11/04/6aeae91973ec3937307987.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
         {
           "id": "668072cc180f",
           "outletId": "bfmtv",
@@ -44,9 +66,34 @@
         }
       ],
       "topicId": "132b5084b08b",
-      "titledArticleCount": 3,
+      "titledArticleCount": 5,
       "section": "politics",
-      "everInEdition": true
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le multimilliardaire Elon Musk a échoué lors des midterms 2026 malgré une contribution financière avoisinant 445 millions de dollars en faveur du Parti républicain.",
+          "L'Humanité qualifie le fondateur de Tesla de « multimilliardaire fasciste » à la suite de cette défaite historique de son camp politique.",
+          "Le milliardaire a tourné en dérision ses revers électoraux sur X en évoquant ironiquement ses « lasers spatiaux »."
+        ],
+        "centre": [
+          "Elon Musk a réagi avec ironie sur X à la défaite des Républicains lors des élections de mi-mandat 2026.",
+          "Le milliardaire américain avait pourtant injecté des sommes record, estimées à 446 millions de dollars, pour soutenir les candidats de Donald Trump.",
+          "BFMTV précise que le patron de SpaceX a ironisé sur ses prétendus « lasers spatiaux » qui n'auraient pas fonctionné pour influencer le scrutin."
+        ],
+        "droite": [
+          "Elon Musk a ironisé mercredi sur la déroute électorale des Républicains lors des midterms 2026 après avoir consacré des centaines de millions de dollars à leur campagne.",
+          "Le Figaro rapporte que le patron de SpaceX a tourné en dérision ses revers, dont l'échec de Ken Paxton au Texas.",
+          "Le milliardaire a publié sur X la boutade suivante : « L’ingérence de mes lasers spatiaux dans les élections n’a pas fonctionné cette fois »."
+        ]
+      },
+      "differences": [
+        "La gauche qualifie sévèrement le milliardaire de « fasciste » en insistant sur le coût faramineux de ses ingérences politiques.",
+        "Le centre adopte un ton factuel et neutre en se concentrant sur les montants investis et la blague du milliardaire sur les réseaux sociaux.",
+        "La droite se focalise sur l'autodérision du patron de SpaceX en citant directement ses propos humoristiques sur ses revers électoraux."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-11-04T09:01:22.034Z"
     },
     {
       "id": "0ed34d823218",
@@ -235,9 +282,10 @@
           "url": "https://www.lemonde.fr/sport/article/2026/11/04/route-du-rhum-l-ocean-fifty-elvest-de-matthieu-perraut-a-chavire_6806116_3242.html",
           "publishedAt": "2026-11-04T06:49:58.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/01/445/0/5341/2670/644/322/60/0/66e765f_ftp-1-ubz7hxjkmfxl-afp-d63l9qx.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
-          "section": "sport"
+          "section": "sport",
+          "everFrontPage": true
         },
         {
           "id": "be8b747a8d16",
@@ -679,6 +727,17 @@
       "createdAt": "2026-11-03T21:01:26.553Z",
       "storyDay": "2026-11-03",
       "articles": [
+        {
+          "id": "b495a1b25463",
+          "outletId": "bfmtv",
+          "headline": "Attentat raciste de Trappes: le suspect, Kévin Tessier, a fait une tentative de suicide en détention",
+          "url": "https://www.bfmtv.com/police-justice/video-attentat-raciste-de-trappes-le-suspect-kevin-tessier-a-fait-une-tentative-de-suicide-en-detention_VN-202611040379.html",
+          "publishedAt": "2026-11-04T08:55:05.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/01o_XndEmFjrvh63UrX0V8zmW6U=/0x0:1280x720/800x0/images/Attentat-raciste-de-Trappes-le-suspect-Kevin-Tessier-a-fait-une-tentative-de-suicide-en-detention-2377783.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
         {
           "id": "3d21bdfc6825",
           "outletId": "huffpost",
@@ -2359,7 +2418,7 @@
           "url": "https://www.20minutes.fr/societe/4260108-20261103-greve-5-novembre-sncf-prevoit-deja-perturbations-assez-peu-reseau-tgv?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-03T16:29:37.000Z",
           "imageUrl": "https://img.20mn.fr/gYwvlBaWTqGzIAjZrqW2ISk/1200x768_un-tgv-inoui-nouvelle-generation-tgv-m-en-provenance-de-marseille-saint-charles-passe-en-gare-de-vert-de-maisons-et-file-vers-paris-france-30-10-2026-levequepatrick-261030-02-009-credit-patrick-leveque-sipa-2610311138",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -2586,7 +2645,7 @@
           "url": "https://www.20minutes.fr/economie/4260089-20261103-epargne-plafond-livret-va-etre-augmente-jusqu-peut-etre-30-000-euros-annonce-lecornu?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-03T15:45:31.000Z",
           "imageUrl": "https://img.20mn.fr/J_A2_vuiQtqZo3RmeK_xLik/1200x768_tirelire-en-forme-de-petit-cochon-rose-sur-un-carnet-de-la-caisse-d-epargne-france-4-fevrier-2023-07gilemichel-sipa-34465-credit-gile-michel-sipa-2302061728",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -2735,7 +2794,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/11/03/midterms-2026-donald-trump-revele-a-fox-news-que-l-aide-militaire-a-israel-sera-coupee-a-la-fin-de-l-annee_6805657_3210.html",
           "publishedAt": "2026-11-03T19:30:07.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/28/480/0/5760/2880/644/322/60/0/56161a3_upload-1-ug56efapw7ud-lgeai-elections-colonies-3.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -3315,759 +3374,6 @@
       "topicId": "4a8a366af4eb",
       "titledArticleCount": 4,
       "section": "science"
-    },
-    {
-      "id": "32b2c14dacec",
-      "slug": "l-attaquant-jesus-de-miguel-meurt-des-suites-d-un-choc-sur-le",
-      "title": "Le footballeur espagnol Jesus de Miguel meurt des suites d'un choc sur le terrain : le monde du football en deuil",
-      "createdAt": "2026-11-03T09:01:20.588Z",
-      "storyDay": "2026-11-03",
-      "articles": [
-        {
-          "id": "f226856d6ae5",
-          "outletId": "le-parisien",
-          "headline": "Mort de Jesús de Miguel : maillot floqué en l’honneur du footballeur décédé sur le dos, l’hommage d’Alex Baena",
-          "url": "https://www.leparisien.fr/sports/football/ligue-des-champions/mort-de-jesus-de-miguel-maillot-floque-en-lhonneur-du-footballeur-decede-sur-le-dos-lhommage-dalex-baena-03-11-2026-DAZO3FGMXNAWHNWLLI3XIC5DLM.php",
-          "publishedAt": "2026-11-03T21:01:26.553Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "cc7cba1437b4",
-          "outletId": "tf1-info",
-          "headline": "Violent choc en plein match : émotion après la mort d'un footballeur",
-          "url": "https://www.tf1info.fr/sport/videos/video-violent-choc-en-plein-match-emotion-apres-la-mort-d-un-footballeur-3669-2473704.html",
-          "publishedAt": "2026-11-03T20:05:12.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/violent-choc-en-plein-match-emotion-apres-la-mort-d-un-footballeur-0c8528-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "2b065fbfc316",
-          "outletId": "le-parisien",
-          "headline": "Décès de Jesús de Miguel : « Nous sommes tous endeuillés », Luis Enrique rend hommage au footballeur",
-          "url": "https://www.leparisien.fr/sports/football/psg/deces-de-jesus-de-miguel-nous-sommes-tous-endeuilles-luis-enrique-rend-hommage-au-footballeur-03-11-2026-5LAC6NLR2JHGDA62473IIXY3HI.php",
-          "publishedAt": "2026-11-03T20:01:20.368Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "d07b1809cf7f",
-          "outletId": "bfmtv",
-          "headline": "L'attaquant du CD Tenerife, Jesus de Miguel, est mort après un violent choc lors d'un match de foot",
-          "url": "https://www.bfmtv.com/societe/video-l-attaquant-du-cd-tenerife-jesus-de-miguel-est-mort-apres-un-violent-choc-lors-d-un-match-de-foot_VN-202611030864.html",
-          "publishedAt": "2026-11-03T19:07:04.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/6h7FPHnMKiRdzuS7mn69_YmcXsE=/0x0:1280x720/800x0/images/L-attaquant-du-CD-Tenerife-Jesus-de-Miguel-est-mort-apres-un-violent-choc-lors-d-un-match-de-foot-2377365.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "5f6e21e2b7ab",
-          "outletId": "le-parisien",
-          "headline": "Décès du footballeur Jesús de Miguel : un homonyme du gardien responsable du choc victime d’une vague de cyberharcèlement",
-          "url": "https://www.leparisien.fr/sports/football/deces-du-footballeur-jesus-de-miguel-un-homonyme-du-gardien-responsable-du-choc-victime-dune-vague-de-cyberharcelement-03-11-2026-HTJYZ2XBZRCL7JLOUVTKFN3I7Q.php",
-          "publishedAt": "2026-11-03T18:01:31.897Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "6523b170aa6d",
-          "outletId": "bfmtv",
-          "headline": "Mort de Jesus de Miguel: qu’est-ce que la \"commotio cordis\", très probable cause du décès de l’attaquant de Tenerife?",
-          "url": "https://rmcsport.bfmtv.com/football/liga/mort-de-jesus-de-miguel-qu-est-ce-que-la-commotio-cordis-tres-probable-cause-du-deces-de-l-attaquant-de-tenerife_AV-202611030796.html",
-          "publishedAt": "2026-11-03T17:50:23.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/hmvrydMbVrV0DoHqhI1t8ttr_zY=/0x152:2048x1304/800x0/images/L-attaquant-espagnol-Jesus-de-Miguel-evacue-sur-civiere-lors-du-match-Tenerife-FC-Andorre-le-2-novembre-2026-2377298.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "4658e34c18f2",
-          "outletId": "rfi",
-          "headline": "Que risque Jesús Owono, international équato-guinéen, à l'origine du choc fatal face à Jesús de Miguel?",
-          "url": "https://www.rfi.fr/fr/afrique-foot/20261103-que-risque-jes%C3%BAs-owono-international-%C3%A9quato-guin%C3%A9en-%C3%A0-l-origine-du-choc-fatal-face-%C3%A0-jes%C3%BAs-de-miguel",
-          "publishedAt": "2026-11-03T17:21:09.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/85142aac-d7a6-11f1-9c45-695cb59fade5/w:1024/p:16x9/000-89D34P8.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "6bd7364d7f17",
-          "outletId": "le-parisien",
-          "headline": "Mort de Jesús de Miguel : enquête, responsabilité pénale du gardien… Après la sidération du drame, le temps des questions",
-          "url": "https://www.leparisien.fr/sports/football/mort-de-jesus-de-miguel-enquete-role-du-gardien-apres-la-sideration-du-drame-le-temps-des-questions-03-11-2026-D7G7FIQAJ5BNVGPPSBSQIAP2DM.php",
-          "publishedAt": "2026-11-03T17:01:24.231Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "a6f8d19d6813",
-          "outletId": "le-figaro",
-          "headline": "Décès de Jesús de Miguel : un homonyme du gardien de but victime d’insultes racistes",
-          "url": "https://www.lefigaro.fr/sports/football/espagne/foot-le-mauvais-owono-victime-d-insultes-racistes-apres-le-deces-de-jesus-de-miguel-20261103",
-          "publishedAt": "2026-11-03T17:00:06.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/11/03/8e7953ac3256e49ee61c497643c5ee75f95cec8e5a2944840372349326dc2fff.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "4a63444520d2",
-          "outletId": "courrier-international",
-          "headline": "L’Espagne choquée par la mort du joueur Jesús de Miguel, heurté par un gardien",
-          "url": "https://www.courrierinternational.com/article/football-l-espagne-choquee-par-la-mort-du-joueur-jesus-de-miguel-heurte-par-un-gardien_284859",
-          "publishedAt": "2026-11-03T16:32:52.000Z",
-          "imageUrl": "https://focus.courrierinternational.com/2026/11/03/0/0/3632/2402/644/0/60/0/0ad2d47_ftp-1-cltabem6lmaf-2026-11-03t103821z-1807463298-rc2qfoarx0i6-rtrmadp-3-soccer-spain.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "4efa57b27678",
-          "outletId": "cnews",
-          "headline": "Mort de Jesus de Miguel : que risque le gardien Jesus Owono après l’ouverture d’une enquête pour «homicide involontaire» ?",
-          "url": "https://www.cnews.fr/sport/2026-11-03/mort-de-jesus-de-miguel-que-risque-le-gardien-jesus-owono-apres-louverture-dune",
-          "publishedAt": "2026-11-03T16:15:02.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/football_jesus_owono_mort_jesus_de_miguel_sanction_6aea05348bdaf.jpg?h=ac4aeeb9&itok=UNUAlUyj",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "a29349350b68",
-          "outletId": "le-parisien",
-          "headline": "« Il est très affecté » : Jesús Owono, un gardien au centre d’un drame après sa terrible faute qui a coûté la vie de Jesús de Miguel",
-          "url": "https://www.leparisien.fr/sports/football/il-est-tres-affecte-jesus-owono-un-gardien-au-centre-dun-drame-apres-sa-terrible-faute-qui-a-coute-la-vie-de-jesus-de-miguel-03-11-2026-HCZH6ZC54RHY3AXGFWGESQVKDI.php",
-          "publishedAt": "2026-11-03T14:01:20.376Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "dca0e2418618",
-          "outletId": "le-figaro",
-          "headline": "Mort de Jesus de Miguel : la police ouvre une enquête pour homicide involontaire",
-          "url": "https://www.lefigaro.fr/sports/football/deces-de-jesus-de-miguel-la-police-ouvre-une-enquete-pour-homicide-involontaire-20261103",
-          "publishedAt": "2026-11-03T13:42:34.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/03/0788006e24ba9c22d8472dae2afabe3dbabaddd2c0f02e417c9e0f3a9da12398.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "6215bf1df6c3",
-          "outletId": "le-parisien",
-          "headline": "Mbappé, Hakimi, Pedri, Arbeloa, Casillas… le monde du football rend hommage à Jesús de Miguel, mort à 30 ans",
-          "url": "https://www.leparisien.fr/sports/football/mbappe-hakimi-pedri-arbeloa-casillas-le-monde-du-football-rend-hommage-a-jesus-de-miguel-mort-a-30-ans-03-11-2026-KYTFIFWCMZCTPNCXS2ZSIO7M3Y.php",
-          "publishedAt": "2026-11-03T12:01:24.716Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "109f470e8e22",
-          "outletId": "ouest-france",
-          "headline": "Football. Après la mort de Jesus de Miguel, la fédération espagnole suspend tous les matches prévus ce mardi 3 novembre",
-          "url": "https://www.ouest-france.fr/sport/football/football-apres-la-mort-de-jesus-de-miguel-la-federation-espagnole-suspend-tous-les-matches-prevus-ce-mardi-3-novembre-bc17224c-d775-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-03T11:51:05.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNDA3ZDdkZWM0MjNmN2Y3ZDBlYTVjOTUzMjA1MDBiYWQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=bcf966e44fd0b42e3025c324b149d893bad86a6a6bab0e1909335fde512f50c8",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "1f3bf9f535d2",
-          "outletId": "20-minutes",
-          "headline": "Espagne : Qui était Jesus de Miguel, quelle sanction pour le gardien… La mort du joueur de Tenerife en questions",
-          "url": "https://www.20minutes.fr/sport/football/liga/4260000-20261103-espagne-jesus-miguel-sanction-gardien-mort-joueur-tenerife-questions?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-03T11:33:34.000Z",
-          "imageUrl": "https://img.20mn.fr/k3QAQZFPQxuQTIY_9fallCk/1200x768_l-attaquant-de-tenerife-jesus-de-miguel-est-mort-a-30-ans-apres-un-choc-subi-en-plein-match-de-d2-espagnole-le-3-novembre-2026",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "d45b90ee786e",
-          "outletId": "le-parisien",
-          "headline": "« Humble, travailleur, tu rendais les autres heureux » : qui était Jesús de Miguel, le footballeur décédé après un choc en Espagne ?",
-          "url": "https://www.leparisien.fr/sports/football/humble-travailleur-tu-rendais-les-autres-heureux-qui-etait-jesus-de-miguel-decede-apres-un-choc-en-2e-division-espagnole-03-11-2026-CR2XLPAK2JCGVNX2MYJVWJAJ3E.php",
-          "publishedAt": "2026-11-03T11:01:21.285Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "c9067490b416",
-          "outletId": "europe-1",
-          "headline": "Football : l'attaquant de Tenerife Jesus de Miguel est mort des suites d'un choc sur le terrain",
-          "url": "https://www.europe1.fr/sport/football-lattaquant-de-tenerife-jesus-de-miguel-est-mort-des-suites-dun-choc-sur-le-terrain-1205180?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-03T10:55:18.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/11/000_d69g8kg_1_6ae9bf53c5df0.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "8685fd269958",
-          "outletId": "ouest-france",
-          "headline": "Mbappé, Piqué, le Stade Rennais… Le monde du football réagit à la mort de l’attaquant espagnol Jesus de Miguel",
-          "url": "https://www.ouest-france.fr/sport/football/espagne/mbappe-pique-le-stade-rennais-le-monde-du-football-reagit-a-la-mort-de-lattaquant-espagnol-jesus-de-miguel-27746dfc-d770-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-03T10:53:40.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExN2YzZDNlZDJhMWUzMDI2OWY5NTI4OGVjZWJlMDg2MDI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=3c3034f9af1121587be5aabe3548f566c0b0105dee8deca30d184be90f33a871",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "26d60d19a390",
-          "outletId": "le-figaro",
-          "headline": "«Une perte irréparable», «Je le ressens de tout mon cœur»… Le football espagnol en deuil après la mort de Jesús de Miguel",
-          "url": "https://www.lefigaro.fr/sports/football/espagne/une-perte-irreparable-je-le-ressens-de-tout-mon-coeur-le-football-espagnol-en-deuil-apres-la-mort-de-jesus-de-miguel-20261103",
-          "publishedAt": "2026-11-03T10:49:23.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/03/c2f5a4e3c0c628cb701aa6da6df67480babd5763027f42a89e6ecb8e95d18897.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "2189eb2d7e90",
-          "outletId": "le-figaro",
-          "headline": "Père de famille, footballeur engagé, héros de Tenerife… Qui était Jesus de Miguel, l’attaquant décédé après un terrible choc sur le terrain ?",
-          "url": "https://www.lefigaro.fr/sports/football/espagne/pere-de-famille-footballeur-engage-heros-de-tenerife-qui-etait-jesus-de-miguel-l-attaquant-decede-en-espagne-20261103",
-          "publishedAt": "2026-11-03T10:46:19.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1998_crop/2026/11/03/eaebff4b1061644710fa449e26c63ade548ca8839a2ef3454f516b52f7e6db99.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "f07232f184f6",
-          "outletId": "huffpost",
-          "headline": "Le footballeur espagnol de 2ème division, Jesús de Miguel, est mort à la suite d’un choc sur le terrain",
-          "url": "https://www.huffingtonpost.fr/sport/article/le-footballeur-espagnol-de-2eme-division-jesus-de-miguel-est-mort-a-la-suite-d-un-choc-sur-le-terrain_351256.html",
-          "publishedAt": "2026-11-03T10:32:09.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/03/75/0/1599/899/0/0/60/0/fab90ad_upload-1-4e6yxw6vkuxs-2026-11-03t000000z-1491623210-mt1imgosp00074jzkc-rtrmadp-3-imago-images-sports.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "402274e711ef",
-          "outletId": "cnews",
-          "headline": "Espagne : l'attaquant de Tenerife est décédé après un violent choc avec un gardien de but",
-          "url": "https://www.cnews.fr/sport/2026-11-03/espagne-lattaquant-de-tenerife-est-decede-apres-un-violent-choc-avec-un-gardien-de",
-          "publishedAt": "2026-11-03T10:11:24.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/football_tenerife_jesus_de_miguel_de_ce_s_6ae9b072b068a.jpg?h=3db112a8&itok=-PQwqCIx",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "940134ab7181",
-          "outletId": "le-parisien",
-          "headline": "Le footballeur espagnol Jesús de Miguel, gravement blessé lundi soir après un choc avec le gardien adverse, est décédé",
-          "url": "https://www.leparisien.fr/sports/football/le-footballeur-espagnol-jesus-de-miguel-gravement-blesse-lundi-soir-apres-un-choc-avec-le-gardien-adverse-est-decede-03-11-2026-A7LJTINXXBEAZCQ4YB3U6KIOAI.php",
-          "publishedAt": "2026-11-03T10:01:25.649Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "4608568952d8",
-          "outletId": "tf1-info",
-          "headline": "Football : l'attaquant espagnol Jesús de Miguel meurt à 30 ans après un violent choc avec le gardien adverse",
-          "url": "https://www.tf1info.fr/sport/football-l-attaquant-espagnol-jesus-de-miguel-meurt-a-30-ans-apres-un-violent-choc-avec-le-gardien-adverse-2473568.html",
-          "publishedAt": "2026-11-03T10:01:20.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/tenerife-mort-football-jesus-de-miguel-439abc-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "29d2c010750d",
-          "outletId": "le-monde",
-          "headline": "En Espagne, le footballeur espagnol Jesus de Miguel meurt des suites d’un choc sur le terrain avec le gardien de l’équipe adverse",
-          "url": "https://www.lemonde.fr/sport/article/2026/11/03/en-espagne-un-footballeur-espagnol-meurt-des-suites-d-un-choc-sur-le-terrain_6805554_3242.html",
-          "publishedAt": "2026-11-03T09:27:26.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/03/0/0/1694/847/644/322/60/0/638588b_upload-1-cya1hu13nhut-886794681-2369147937185759-8744872861278603462-n.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "189f7a66b935",
-          "outletId": "liberation",
-          "headline": "Espagne : le footballeur de Tenerife Jesus de Miguel meurt après un choc violent sur le terrain",
-          "url": "https://www.liberation.fr/sports/football/espagne-le-footballeur-de-tenerife-jesus-de-miguel-meurt-apres-un-choc-violent-sur-le-terrain-20261103_OCXI3DYMIJEPREK766GHV7BNRU/",
-          "publishedAt": "2026-11-03T09:25:25.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "abc5ffa01072",
-          "outletId": "rfi",
-          "headline": "Football: un joueur de deuxième division espagnole décède des suites d'un choc sur le terrain",
-          "url": "https://www.rfi.fr/fr/sports/20261103-football-un-joueur-de-deuxi%C3%A8me-division-espagnole-d%C3%A9c%C3%A8de-des-suites-d-un-choc-sur-le-terrain",
-          "publishedAt": "2026-11-03T09:23:30.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/6d514ad8-d767-11f1-9d98-bf1914cabd52/w:1024/p:16x9/Capture-d-%C3%A9cran-2026-11-03-101521.png",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "8ab3d5f9bc3f",
-          "outletId": "franceinfo",
-          "headline": "Jesus de Miguel, joueur du club espagnol de Tenerife, est mort après un choc lors d'une rencontre de deuxième division",
-          "url": "https://www.franceinfo.fr/sports/foot/jesus-de-miguel-joueur-du-club-espagnol-de-tenerife-est-decede-apres-un-choc-lors-d-une-rencontre_8265461.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T09:22:19.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/cFBCTCwSoDzyimMH8cewA4euVXg/0x107:2048x1259/432x243/filters:format(jpg)/2026/11/03/6ae9a2a309f0d319087759.png",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "5495976de019",
-          "outletId": "le-figaro",
-          "headline": "Foot : l’attaquant de Tenerife Jesus de Miguel meurt des suites d’un choc sur le terrain",
-          "url": "https://www.lefigaro.fr/sports/football/espagne/foot-l-attaquant-de-tenerife-jesus-de-miguel-meurt-des-suites-d-un-choc-sur-le-terrain-20261103",
-          "publishedAt": "2026-11-03T08:58:45.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2480x1395_crop/2026/11/03/4b23e0c3e3b06eaef68680bbe85f36bf2f632460b913654a5aaa08a4fc5bc241.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "1c388ab40206",
-          "outletId": "ouest-france",
-          "headline": "L’attaquant espagnol Jesus de Miguel est mort des suites d’un choc sur le terrain, le monde du football en deuil",
-          "url": "https://www.ouest-france.fr/sport/football/espagne/lattaquant-espagnol-jesus-de-miguel-est-mort-des-suites-dun-choc-sur-le-terrain-le-monde-du-football-en-deuil-440d2c36-d763-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-03T08:58:33.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYmExNGJjMmUzYWJjOWJhZjQ1ZjljMjdiNjIzNTYzNTI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=a07a6581f0986221489f6d046867c35ec4c0bc1c4acb8cf4bb0e6357be90352d",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "32b2c14dacec",
-      "titledArticleCount": 30,
-      "section": "sport",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "L'attaquant du CD Tenerife, Jesús de Miguel, est décédé à 30 ans à l'hôpital après un violent choc aérien avec le gardien du FC Andorre, Jesús Owono, survenu lors d'une rencontre de deuxième division espagnole.",
-          "Le monde du football et plusieurs personnalités ont exprimé leur vive émotion et rendu de nombreux hommages au joueur suite à ce drame."
-        ],
-        "centre": [
-          "Le footballeur espagnol Jesús de Miguel est mort à l'âge de 30 ans des suites d'un arrêt cardio-respiratoire provoqué par un violent contact avec le gardien Jesús Owono lors du match opposant le CD Tenerife au FC Andorre.",
-          "Une enquête pour homicide involontaire a été ouverte par la police nationale espagnole concernant l'action du portier, tandis qu'un homonyme de ce dernier subit une violente vague de cyberharcèlement sur les réseaux sociaux.",
-          "De multiples hommages nationaux et internationaux affluent de la part d'acteurs majeurs du football et d'instances comme l'UEFA, qui a prévu une minute de silence."
-        ],
-        "droite": [
-          "Jesús de Miguel, attaquant de Tenerife, est mort à 30 ans des suites de ses blessures après une collision violente avec le gardien andorran Jesús Owono en match de D2 espagnole.",
-          "Les autorités locales ont ouvert une procédure judiciaire pour homicide involontaire afin de faire toute la lumière sur la responsabilité du gardien du FC Andorre.",
-          "Le Figaro rapporte qu'un homonyme du gardien incriminé est la cible d'insultes racistes et de menaces en raison de la confusion sur les réseaux sociaux."
-        ]
-      },
-      "differences": [
-        "La gauche se concentre essentiellement sur l'aspect dramatique de la disparition du joueur et sur l'hommage unanime du monde sportif.",
-        "Le centre livre un compte rendu exhaustif des faits, détaillant à la fois les causes médicales probables, les procédures judiciaires et le contrecoup numérique de l'affaire.",
-        "La droite insiste particulièrement sur les suites judiciaires de l'enquête pour homicide involontaire et met en lumière, par l'intermédiaire du Figaro, les dérives du cyberharcèlement et les insultes racistes subies par un homonyme."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 30,
-      "summarizedAt": "2026-11-03T21:01:26.553Z"
-    },
-    {
-      "id": "1a0f50b4708e",
-      "slug": "le-gouvernement-annonce-une-baisse-du-prix-du-gazole-dans-6-000",
-      "title": "Le gouvernement annonce une baisse du prix du gazole dans 6 000 stations-service",
-      "createdAt": "2026-11-03T12:01:24.716Z",
-      "storyDay": "2026-11-03",
-      "articles": [
-        {
-          "id": "326afe5b35c7",
-          "outletId": "le-parisien",
-          "headline": "Baisse des prix du gazole : jusqu’à quand les automobilistes vont pouvoir en profiter ?",
-          "url": "https://www.leparisien.fr/economie/consommation/baisse-des-prix-du-gazole-jusqua-quand-les-automobilistes-vont-pouvoir-en-profiter-03-11-2026-TZGODULRPFBIHFFXNH6SCJ3D6I.php",
-          "publishedAt": "2026-11-03T17:01:24.231Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "dfef5e075edf",
-          "outletId": "20-minutes",
-          "headline": "Prix du carburant : Six stations sur dix ont répercuté une (petite) baisse du prix du gazole, selon le gouvernement",
-          "url": "https://www.20minutes.fr/societe/4260074-20261103-prix-carburant-six-stations-dix-repercute-petite-baisse-prix-gazole-selon-gouvernement?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-03T15:06:06.000Z",
-          "imageUrl": "https://img.20mn.fr/ecPNV5qOTmO5pS9lxh70bSk/1200x768_des-photographies-illustratives-montrent-des-affichages-des-prix-du-carburant-et-des-pompes-a-essence-dans-les-stations-service-e-leclerc-en-france-mettant-en-evidence-l-evolution-des-prix-de-l-essence-et-du-diesel-2-novembre-2026-greuezfrancois-sipa-03565-credit-francois-greuez-sipa-2611021359",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "ce3a61587ce6",
-          "outletId": "le-parisien",
-          "headline": "Carburants : baisse des prix entamée pour 6 000 stations-service, « ça va continuer » assure le ministre Serge Papin",
-          "url": "https://www.leparisien.fr/economie/carburants-baisse-des-prix-entamee-pour-6-000-stations-service-ca-va-continuer-assure-le-ministre-serge-papin-03-11-2026-3LN3YAVSF5C65NDJP7AKEQDTLA.php",
-          "publishedAt": "2026-11-03T12:01:24.716Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "05ac5497277b",
-          "outletId": "franceinfo",
-          "headline": "Après le déstockage des réserves stratégiques, la baisse des prix des carburants amorcée dans 6 000 stations-service, selon le gouvernement",
-          "url": "https://www.franceinfo.fr/economie/automobile/essence/apres-le-destockage-des-reserves-strategiques-la-baisse-des-prix-des-carburants-amorcee-dans-6-000-stations-service-selon-le-gouvernement_8265662.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T11:10:25.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/uGmMajEhDdN0yfvBit8Zcl31-Zw/0x97:1024x673/432x243/filters:format(jpg)/2026/11/03/6ae9c10236f7b479898192.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "1b83ccf8c046",
-          "outletId": "tf1-info",
-          "headline": "Baisse du prix du gazole dans \"6.000 stations\" : \"Ce qu'on fait est historique\", estime Roland Lescure",
-          "url": "https://www.tf1info.fr/societe/video-baisse-des-prix-des-carburants-gazole-dans-6-000-stations-ce-qu-on-fait-est-historique-estime-roland-lescure-2473586.html",
-          "publishedAt": "2026-11-03T11:01:13.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/baisse-des-prix-des-carburants-dans-6-000-stations-ce-qu-on-fait-est-historique-estime-roland-lescure-da6c4f-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "02bc7fdc24f6",
-          "outletId": "le-figaro",
-          "headline": "Carburants : 6000 stations sur les 10.000 que compte le pays ont déjà baissé le prix du gazole, se félicite Serge Papin",
-          "url": "https://www.lefigaro.fr/conso/carburants-6000-stations-sur-les-10-000-que-compte-le-pays-ont-deja-baisse-le-prix-du-gazole-se-felicite-serge-papin-20261103",
-          "publishedAt": "2026-11-03T10:35:11.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/03/0985d82bb8366b52d78387cdea5470d11047f7f39943c3a16f1ace784186567d.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "1a3e9fa4940d",
-          "outletId": "europe-1",
-          "headline": "Crise des carburants : les prix ont amorcé leur baisse, mais pour les gros rouleurs, «ce n'est pas assez»",
-          "url": "https://www.europe1.fr/societe/crise-des-carburants-les-prix-ont-amorce-leur-baisse-mais-pour-les-gros-rouleurs-ce-nest-pas-assez-1204658?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-03T08:27:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/08/080_hl_stenani_3370031_1_6ae98b2737c36.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        }
-      ],
-      "topicId": "a13153bef56f",
-      "titledArticleCount": 7,
-      "section": "economy",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le gouvernement indique que six stations sur dix appliquent une baisse moyenne de 12 centimes sur le gazole routier, le fioul domestique et le gasoil non routier.",
-          "Cette réduction des tarifs fait suite à la mise sur le marché de stocks stratégiques de carburant."
-        ],
-        "centre": [
-          "Les autorités annoncent une baisse des prix du gazole touchant 6 000 stations-service sur les 10 000 que compte le pays.",
-          "Le ministre Serge Papin assure que cette diminution des tarifs va se poursuivre pour les automobilistes."
-        ],
-        "droite": [
-          "Les ministres Serge Papin et Roland Lescure qualifient l'opération d'historique après la libération de dix millions de barils issus des stocks stratégiques.",
-          "Le prix du gazole a reculé de 12 centimes en moyenne, et de plus de 15 centimes dans 4 000 stations selon les données officielles.",
-          "Europe 1 relève toutefois le scepticisme de certains automobilistes lyonnais et des gros rouleurs qui jugent le geste insuffisant face à une mesure limitée à trois mois."
-        ]
-      },
-      "differences": [
-        "La gauche met principalement l'accent sur l'étendue concrète du déstockage des réserves stratégiques et sa portée sur les différents types de carburants.",
-        "Le centre privilégie une approche institutionnelle et factuelle centrée sur les déclarations gouvernementales et le nombre précis de stations concernées.",
-        "La droite adopte un ton plus triomphant sur le caractère historique de la mesure ministérielle, tout en intégrant des réactions contrastées d'automobilistes qui doutent de la pérennité du dispositif."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 7,
-      "summarizedAt": "2026-11-03T19:01:23.572Z"
-    },
-    {
-      "id": "a84fbc1dc8bd",
-      "slug": "le-gouvernement-confirme-l-entree-en-vigueur-de-la-loi-sur-l",
-      "title": "Le gouvernement confirme l'entrée en vigueur de la loi sur l'aide à mourir en janvier 2027",
-      "createdAt": "2026-11-03T09:01:20.588Z",
-      "storyDay": "2026-11-03",
-      "articles": [
-        {
-          "id": "05346d7058f9",
-          "outletId": "le-monde",
-          "headline": "Fin de vie : l’aide à mourir entrera en vigueur en janvier 2027, confirme la ministre de la santé Stéphanie Rist",
-          "url": "https://www.lemonde.fr/societe/article/2026/11/03/fin-de-vie-l-aide-a-mourir-entrera-en-vigueur-en-janvier-2027-confirme-la-ministre-de-la-sante-stephanie-rist_6805555_3224.html",
-          "publishedAt": "2026-11-03T09:28:31.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/28/403/0/4836/2418/644/322/60/0/44d13ff_ftp-1-m0wu0s1sydks-afp-d4nc86n.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "799a5b24aec3",
-          "outletId": "le-parisien",
-          "headline": "Aide à mourir : la loi s’appliquera en janvier « comme prévu », selon le gouvernement",
-          "url": "https://www.leparisien.fr/societe/aide-a-mourir-la-loi-sappliquera-en-janvier-comme-prevu-selon-le-gouvernement-03-11-2026-XZRJDTLTMBDOVEEDINO7G6BQ6M.php",
-          "publishedAt": "2026-11-03T09:01:20.588Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "73db72544ce7",
-          "outletId": "le-figaro",
-          "headline": "Aide à mourir : la ministre de la Santé confirme l’entrée en vigueur de la loi en janvier 2027",
-          "url": "https://www.lefigaro.fr/actualite-france/aide-a-mourir-la-ministre-de-la-sante-confirme-l-entree-en-vigueur-de-la-loi-en-janvier-2027-20261103",
-          "publishedAt": "2026-11-03T08:26:12.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/03/31454d70e4620a1b263151788c833b0151c85ba95053df095b44d9c70421a4cf.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        }
-      ],
-      "topicId": "a84fbc1dc8bd",
-      "titledArticleCount": 3,
-      "section": "society",
-      "everInEdition": true
-    },
-    {
-      "id": "5bfa1f825bee",
-      "slug": "le-groupe-gifi-est-place-en-redressement-judiciaire-avec-6000",
-      "title": "Le groupe GiFi est placé en redressement judiciaire : 6000 emplois menacés en France",
-      "createdAt": "2026-11-03T09:01:20.588Z",
-      "storyDay": "2026-11-03",
-      "articles": [
-        {
-          "id": "bf86fb15c105",
-          "outletId": "tf1-info",
-          "headline": "Nicolas ose : En redressement, GiFi a besoin d'une idée de génie",
-          "url": "https://www.tf1info.fr/economie/videos/video-nicolas-ose-en-redressement-gifi-a-besoin-d-une-idee-de-genie-6778-2473766.html",
-          "publishedAt": "2026-11-04T07:55:15.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/nicolas-ose-en-redressement-gifi-a-besoin-d-une-idee-de-genie-20e816-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "1e349039341b",
-          "outletId": "franceinfo",
-          "headline": "Concurrence accrue, direction instable, finances dans le rouge... Pourquoi Gifi, placée en redressement judiciaire, se retrouve en grande difficulté",
-          "url": "https://www.franceinfo.fr/economie/concurrence-accrue-direction-instable-finances-dans-le-rouge-pourquoi-gifi-placee-en-redressement-judiciaire-se-retrouve-en-grande-difficulte_8265626.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T18:02:56.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/bonuue0hdNDShrlivjsD-b0Fyvo/0x95:1024x671/432x243/filters:format(jpg)/2026/11/03/6aea16e82b007299856427.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "15f2ca2f2862",
-          "outletId": "franceinfo",
-          "headline": "Après le placement en redressement judiciaire du groupe Gifi, les 6 000 salariés sont inquiets",
-          "url": "https://www.franceinfo.fr/economie/apres-le-placement-en-redressement-judiciaire-du-groupe-gifi-les-6-000-salaries-sont-inquiets_8265887.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T16:03:50.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/VnjblzWpDYg_HGueNwTgyGE2PGE/0x0:1459x820/432x243/filters:format(jpg)/2026/11/03/6ae9df95aebcc589455965.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "1d98a5705303",
-          "outletId": "huffpost",
-          "headline": "Le groupe GiFi à son tour placé en redressement judiciaire",
-          "url": "https://www.huffingtonpost.fr/france/article/le-groupe-gifi-a-son-tour-place-en-redressement-judiciaire_351221.html",
-          "publishedAt": "2026-11-03T09:28:56.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/03/714/0/5976/3361/0/0/60/0/a731e44_upload-1-1eol95edhoie-afp-20261008-hl-gdziedzic-3329819-v2-highres-francetoulousegifi.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "d8826cf0bb06",
-          "outletId": "la-croix",
-          "headline": "Gifi : l’enseigne de vente d’objets à petit prix placé en redressement judiciaire",
-          "url": "https://www.la-croix.com/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103",
-          "publishedAt": "2026-11-03T09:11:19.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/20/2567944-apres-de-graves-difficultes-et-une-valse-des-dirig.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "3210ae417c2b",
-          "outletId": "le-figaro",
-          "headline": "«Il n’a pas su se réinventer» : en redressement judiciaire, Gifi est menacé d’être vendu à la découpe",
-          "url": "https://www.lefigaro.fr/societes/il-n-a-pas-su-se-reinventer-au-bord-de-la-faillite-gifi-est-menace-d-etre-vendu-a-la-decoupe-20261019",
-          "publishedAt": "2026-11-03T09:05:59.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/19/aa4055978f07a16ceacaf460f281dab0443a2ff37ae6ae343cd6bde2f17c1efc.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "ec7786f49697",
-          "outletId": "le-parisien",
-          "headline": "Le groupe GiFi, en grande difficulté financière, placé en redressement judiciaire",
-          "url": "https://www.leparisien.fr/economie/le-groupe-gifi-en-grande-difficulte-financiere-place-en-redressement-judiciaire-03-11-2026-SD5VISPGGRD47KNRPHYHPZIDGY.php",
-          "publishedAt": "2026-11-03T09:01:20.588Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "bc0376acc9bc",
-          "outletId": "le-figaro",
-          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire, 6000 emplois menacés en France",
-          "url": "https://www.lefigaro.fr/societes/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103",
-          "publishedAt": "2026-11-03T08:49:49.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/03/38d2e41db5787871407e28ecaf81a84de22f2fe0a0601f9b6cfee37ba7232c07.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "0c445849cd2d",
-          "outletId": "le-monde",
-          "headline": "Le groupe GiFi placé en redressement judiciaire à sa demande, 6 000 emplois menacés en France",
-          "url": "https://www.lemonde.fr/economie/article/2026/11/03/le-groupe-gifi-place-en-redressement-judiciaire-a-sa-demande-6-000-emplois-menaces-en-france_6805546_3234.html",
-          "publishedAt": "2026-11-03T08:46:18.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/03/478/0/5734/2867/644/322/60/0/60a5920_upload-1-15izcx19spv2-000-c96k2vb.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "f7a8413a2018",
-          "outletId": "ouest-france",
-          "headline": "Le groupe Gifi placé en redressement judiciaire par le tribunal de commerce de Toulouse",
-          "url": "https://www.ouest-france.fr/economie/entreprises/le-groupe-gifi-a-ete-place-en-redressement-judiciaire-fd6092ca-d760-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-03T08:42:02.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTgyYjEwNzAyMDAyNzJjN2RiYTEwNDM0MWEzOGFhYTQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=eff7525f2795ae95258eb29a3fda5a540159b04812fe26ab1002a6926d3ca178",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "c639c45597ce",
-          "outletId": "europe-1",
-          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire",
-          "url": "https://www.europe1.fr/economie/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-1204823?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-03T08:34:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/09/080_hl_gdziedzic_3369781_1_6ae99caa2b5f3.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "de656855b6c7",
-          "outletId": "franceinfo",
-          "headline": "Le groupe Gifi est placé en redressement judiciaire",
-          "url": "https://www.franceinfo.fr/economie/le-groupe-gifi-est-place-en-redressement-judiciaire_8265437.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T08:33:24.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/mynWyNWQF5SF7sq0WOd3vH235ok/0x106:1024x682/432x243/filters:format(jpg)/2026/11/03/6ae99c1f459b6474691632.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "3455458218a3",
-          "outletId": "tf1-info",
-          "headline": "L'enseigne GiFi, en grande difficulté, placée en redressement judiciaire",
-          "url": "https://www.tf1info.fr/economie/l-enseigne-gifi-en-grande-difficulte-placee-en-redressement-judiciaire-par-le-tribunal-2473546.html",
-          "publishedAt": "2026-11-03T08:26:32.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/652/gifi-enseigne-aee1a7-1@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "4d9c9a2ca287",
-          "outletId": "liberation",
-          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire",
-          "url": "https://www.liberation.fr/economie/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103_BWOUCCF3ANB67L6PPKPWP3MTAM/",
-          "publishedAt": "2026-11-03T08:25:06.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "df33bd13a74e",
-          "outletId": "bfmtv",
-          "headline": "Un fiasco informatique, la concurrence d'Action... L'enseigne GiFi est placée en redressement judiciaire",
-          "url": "https://www.bfmtv.com/economie/entreprises/accumulant-les-difficultes-l-enseigne-gi-fi-placee-en-redressement-judiciaire_AD-202611030331.html",
-          "publishedAt": "2026-11-03T08:17:53.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/uWh7eXBkft0s4nhwE7dHicGeDK4=/0x106:2048x1258/800x0/images/Une-personne-se-dirige-vers-l-entree-d-un-magasin-Gifi-a-Lesneven-en-Bretagne-France-le-2-decembre-2025-2367934.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        }
-      ],
-      "topicId": "5bfa1f825bee",
-      "titledArticleCount": 15,
-      "section": "economy",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le tribunal de commerce de Toulouse a prononcé le redressement judiciaire du groupe GiFi à la demande de sa direction.",
-          "La procédure vise officiellement à protéger un maximum de salariés parmi les 6 000 employés en France.",
-          "Le nouveau président du directoire a indiqué aux salariés que la décision n'entraînera aucune conséquence immédiate sur l'emploi."
-        ],
-        "centre": [
-          "Le groupe GiFi a été placé en redressement judiciaire par le tribunal de commerce de Toulouse, qui a fixé une période d'observation de six mois.",
-          "Une nouvelle audience a été programmée au 8 janvier afin d'évaluer les capacités financières de l'entreprise pour la poursuite de son activité.",
-          "Les difficultés du groupe s'expliquent notamment par une concurrence accrue, une instabilité de la direction, un fiasco informatique survenu en 2023 et la pression d'enseignes concurrentes comme Action."
-        ],
-        "droite": [
-          "Le tribunal de commerce de Toulouse a placé l'enseigne GiFi en redressement judiciaire et a ouvert une période d'observation de six mois.",
-          "Une audience est prévue le 8 janvier pour faire le point sur la situation financière de l'entreprise et l'avenir des 6 000 salariés en France.",
-          "Nicolas Doze souligne sur TF1 Info que le manque de cash et de trésorerie constitue la principale raison de cette chute."
-        ]
-      },
-      "differences": [
-        "La gauche met principalement l'accent sur la démarche volontaire de la direction et la volonté affichée de préserver l'emploi des salariés menacés.",
-        "Le centre dresse un panorama large et détaillé des causes structurelles de la crise, allant des difficultés financières aux erreurs informatiques et à la concurrence des plateformes internet et des discounters.",
-        "La droite se focalise sur les aspects économiques et procéduraux de la décision du tribunal de commerce, tout en pointant, par la voix de Nicolas Doze sur TF1 Info, le manque de trésorerie de l'enseigne."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 15,
-      "summarizedAt": "2026-11-04T08:01:18.616Z"
     }
   ],
   "feedStories": [
@@ -4208,6 +3514,166 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 9,
       "summarizedAt": "2026-11-04T08:01:18.616Z"
+    },
+    {
+      "id": "4d6b032228d9",
+      "slug": "le-suspect-de-l-attentat-de-trappes-fait-une-tentative-de",
+      "title": "Attentat raciste de Trappes : le suspect Kévin Tessier tente de se suicider en détention",
+      "createdAt": "2026-11-03T21:01:26.553Z",
+      "storyDay": "2026-11-03",
+      "articles": [
+        {
+          "id": "b495a1b25463",
+          "outletId": "bfmtv",
+          "headline": "Attentat raciste de Trappes: le suspect, Kévin Tessier, a fait une tentative de suicide en détention",
+          "url": "https://www.bfmtv.com/police-justice/video-attentat-raciste-de-trappes-le-suspect-kevin-tessier-a-fait-une-tentative-de-suicide-en-detention_VN-202611040379.html",
+          "publishedAt": "2026-11-04T08:55:05.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/01o_XndEmFjrvh63UrX0V8zmW6U=/0x0:1280x720/800x0/images/Attentat-raciste-de-Trappes-le-suspect-Kevin-Tessier-a-fait-une-tentative-de-suicide-en-detention-2377783.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "3d21bdfc6825",
+          "outletId": "huffpost",
+          "headline": "Kevin T, suspect de l’attentat raciste à Trappes, a tenté de se suicider en prison, ses jours ne sont pas en danger",
+          "url": "https://www.huffingtonpost.fr/france/article/kevin-t-suspect-de-l-attentat-raciste-a-trappes-a-tente-de-se-suicider-en-prison-ses-jours-ne-sont-pas-en-danger_351749.html",
+          "publishedAt": "2026-11-04T07:18:35.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/25/495/0/6600/3712/0/0/60/0/d3f39cd_upload-1-2jp0dpp4do0i-afp-20261023-d47r7ug-v3-highres-francecrimeinvestigationspolice.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "97cfd9d84766",
+          "outletId": "20-minutes",
+          "headline": "Attentat raciste à Trappes : Le suspect Kévin T. aurait tenté de se suicider en prison",
+          "url": "https://www.20minutes.fr/societe/4260208-20261104-attentat-raciste-trappes-suspect-kevin-tente-suicider-prison?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-04T03:30:38.000Z",
+          "imageUrl": "https://img.20mn.fr/JSYqAreBRnGfAs4LwkmslSk/1200x768_la-prison-de-conde-sur-sarthe-est-adaptee-a-l-accueil-de-detenus-condamnes-a-de-longues-peines-le-centre-penitentiaire-possede-des-dispositifs-de-surete-perfectionnes-il-est-envisage-qu-il-accueille-prochainement-des-narcotrafiquants-importants-siccolipatrick-sipa1713-credit-siccoli-patrick-sipa-2502211335",
+          "frontPage": true,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "42d190e353aa",
+          "outletId": "tf1-info",
+          "headline": "Attentat raciste de Trappes : le suspect, Kévin Tessier, a tenté de se suicider en détention",
+          "url": "https://www.tf1info.fr/justice-faits-divers/attentat-raciste-de-trappes-le-suspect-kevin-tessier-a-tente-de-se-suicider-en-detention-2473730.html",
+          "publishedAt": "2026-11-03T21:47:46.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/682/fusillade-trappes-23-octobre-2026-fd2ffa-2@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "5656c8acc0d8",
+          "outletId": "cnews",
+          "headline": "Attentat dans les Yvelines : le suspect Kévin Tessier a fait une tentative de suicide en détention",
+          "url": "https://www.cnews.fr/france/2026-11-03/attentat-dans-les-yvelines-le-suspect-kevin-tessier-fait-une-tentative-de-suicide",
+          "publishedAt": "2026-11-03T21:44:28.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/votre_texte_de_paragraphe_82_6aea4bfbcc781.png?itok=3iMRNG-A",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "ed6e3f3eb7ae",
+          "outletId": "ouest-france",
+          "headline": "Attentat raciste de Trappes : le suspect, Kévin Tessier, tente de se suicider en cellule",
+          "url": "https://www.ouest-france.fr/faits-divers/attentat/attentat-raciste-de-trappes-le-suspect-kevin-tessier-tente-de-se-suicider-en-cellule-selon-une-info-de-bfmtv-30b0a476-d7ca-11f1-b736-5b9907ef0b5a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-03T21:22:46.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYjFlOTA2YzRhOTZhZTc0NDhiMDQ3YWUwZmI4OTdlMzA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=3b0c1333bc583451b285eb1c0e71ee186138bf3e928e560d210d4a7f4ce81ab6",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "31bd9affc6d8",
+          "outletId": "franceinfo",
+          "headline": "Attentat raciste dans les Yvelines : le suspect Kevin Tessier a tenté de se suicider en détention",
+          "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/attentat-raciste-dans-les-yvelines-le-suspect-kevin-tessier-a-tente-de-se-suicider-en-detention_8266586.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-03T21:07:03.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/lcIOa8thZGBEaB9FDy1FPvRkfDI/0x625:6000x4000/432x243/filters:format(jpg)/2026/11/03/6aea4cb9a8d97549687317.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "cd8d3e37930c",
+          "outletId": "le-parisien",
+          "headline": "Attentat raciste de Trappes : le suspect Kévin T. a tenté de mettre fin à ses jours en détention",
+          "url": "https://www.leparisien.fr/faits-divers/attentat-raciste-de-trappes-le-suspect-kevin-t-a-tente-de-mettre-fin-a-ses-jours-en-detention-03-11-2026-GRT72ZBZENBKFG6HY66QT5POFE.php",
+          "publishedAt": "2026-11-03T21:01:26.553Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "26f865385e89",
+          "outletId": "le-figaro",
+          "headline": "Attentat de Trappes : le suspect, Kevin T., a fait une tentative de suicide en prison",
+          "url": "https://www.lefigaro.fr/faits-divers/attentat-de-trappes-le-suspect-kevin-t-a-fait-une-tentative-de-suicide-en-prison-20261103",
+          "publishedAt": "2026-11-03T21:00:11.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/03/df3530a0c60da30ca6153dd2742f01ebe998b05045cba292be6bbeea1a53e9ff.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "d64efb5a845e",
+          "outletId": "liberation",
+          "headline": "Attentat des Yvelines : Kévin T., le tireur présumé, a fait une tentative de suicide en détention",
+          "url": "https://www.liberation.fr/societe/police-justice/attentat-des-yvelines-kevin-t-le-tireur-presume-a-fait-une-tentative-de-suicide-en-detention-20261103_IVWJZXNQTZC2REQS2OIDPKNJKE/",
+          "publishedAt": "2026-11-03T20:59:35.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "0eed33e4e741",
+          "outletId": "bfmtv",
+          "headline": "INFO BFMTV. Attentat raciste de Trappes: le suspect, Kévin Tessier, a fait une tentative de suicide en détention",
+          "url": "https://www.bfmtv.com/police-justice/info-bfmtv-attentat-raciste-de-trappes-le-suspect-kevin-tessier-a-fait-une-tentative-de-suicide-en-detention_AN-202611030920.html",
+          "publishedAt": "2026-11-03T20:33:48.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/3tru7OobfJ3E9gp3inQbx3T_4IE=/0x0:1920x1080/800x0/images/Des-policiers-procedent-a-des-actes-d-investigation-dans-une-station-service-apres-l-attentat-raciste-a-Trappes-qui-fait-un-mort-et-plusieurs-blesses-le-23-octobre-2372228.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "1560e3262942",
+      "titledArticleCount": 9,
+      "section": "misc",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Kévin T., le tireur présumé de l'attentat commis à Trappes et La Verrière, a tenté de se suicider en détention.",
+          "Il a été brièvement hospitalisé avant de regagner sa cellule et est désormais hors de danger."
+        ],
+        "centre": [
+          "Kévin Tessier, le suspect de l'attentat raciste de Trappes du 23 octobre 2026, a fait une tentative de suicide par pendaison en prison.",
+          "Pris en charge rapidement par les secours, ses jours ne sont pas en danger et son pronostic vital n'a pas été engagé.",
+          "Selon franceinfo, il a tenté de mettre fin à ses jours lundi après-midi et a été hospitalisé plusieurs heures."
+        ],
+        "droite": [
+          "Le suspect de l'attentat raciste de Trappes, Kévin Tessier, a fait une tentative de suicide par pendaison en détention.",
+          "Ses avocats estiment que cet acte « soulève des interrogations légitimes quant à son état psychologique » et nécessite une évaluation médicale approfondie.",
+          "Il a pu regagner sa cellule le jour même après une prise en charge médicale, son pronostic vital n'étant pas engagé."
+        ]
+      },
+      "differences": [
+        "La gauche se concentre strictement sur l'information brute de la tentative de suicide et de l'état de santé du suspect en nommant le mis en cause par son initiale.",
+        "Le centre livre un récit factuel et détaillé des faits en adoptant le nom complet du suspect et en précisant la chronologie de sa prise en charge.",
+        "La droite met en avant les déclarations des avocats de Kévin Tessier pour insister sur les interrogations concernant son état psychologique."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 9,
+      "summarizedAt": "2026-11-04T04:01:15.564Z"
     },
     {
       "id": "2c56958b5559",
@@ -4917,161 +4383,23 @@
       "summarizedAt": "2026-11-03T23:01:23.991Z"
     },
     {
-      "id": "4d6b032228d9",
-      "slug": "le-suspect-de-l-attentat-de-trappes-fait-une-tentative-de",
-      "title": "Attentat raciste de Trappes : le suspect Kévin Tessier tente de se suicider en détention",
-      "createdAt": "2026-11-03T21:01:26.553Z",
-      "storyDay": "2026-11-03",
-      "articles": [
-        {
-          "id": "3d21bdfc6825",
-          "outletId": "huffpost",
-          "headline": "Kevin T, suspect de l’attentat raciste à Trappes, a tenté de se suicider en prison, ses jours ne sont pas en danger",
-          "url": "https://www.huffingtonpost.fr/france/article/kevin-t-suspect-de-l-attentat-raciste-a-trappes-a-tente-de-se-suicider-en-prison-ses-jours-ne-sont-pas-en-danger_351749.html",
-          "publishedAt": "2026-11-04T07:18:35.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/25/495/0/6600/3712/0/0/60/0/d3f39cd_upload-1-2jp0dpp4do0i-afp-20261023-d47r7ug-v3-highres-francecrimeinvestigationspolice.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "97cfd9d84766",
-          "outletId": "20-minutes",
-          "headline": "Attentat raciste à Trappes : Le suspect Kévin T. aurait tenté de se suicider en prison",
-          "url": "https://www.20minutes.fr/societe/4260208-20261104-attentat-raciste-trappes-suspect-kevin-tente-suicider-prison?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-04T03:30:38.000Z",
-          "imageUrl": "https://img.20mn.fr/JSYqAreBRnGfAs4LwkmslSk/1200x768_la-prison-de-conde-sur-sarthe-est-adaptee-a-l-accueil-de-detenus-condamnes-a-de-longues-peines-le-centre-penitentiaire-possede-des-dispositifs-de-surete-perfectionnes-il-est-envisage-qu-il-accueille-prochainement-des-narcotrafiquants-importants-siccolipatrick-sipa1713-credit-siccoli-patrick-sipa-2502211335",
-          "frontPage": true,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "42d190e353aa",
-          "outletId": "tf1-info",
-          "headline": "Attentat raciste de Trappes : le suspect, Kévin Tessier, a tenté de se suicider en détention",
-          "url": "https://www.tf1info.fr/justice-faits-divers/attentat-raciste-de-trappes-le-suspect-kevin-tessier-a-tente-de-se-suicider-en-detention-2473730.html",
-          "publishedAt": "2026-11-03T21:47:46.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/fusillade-trappes-23-octobre-2026-fd2ffa-2@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "5656c8acc0d8",
-          "outletId": "cnews",
-          "headline": "Attentat dans les Yvelines : le suspect Kévin Tessier a fait une tentative de suicide en détention",
-          "url": "https://www.cnews.fr/france/2026-11-03/attentat-dans-les-yvelines-le-suspect-kevin-tessier-fait-une-tentative-de-suicide",
-          "publishedAt": "2026-11-03T21:44:28.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/votre_texte_de_paragraphe_82_6aea4bfbcc781.png?itok=3iMRNG-A",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "ed6e3f3eb7ae",
-          "outletId": "ouest-france",
-          "headline": "Attentat raciste de Trappes : le suspect, Kévin Tessier, tente de se suicider en cellule",
-          "url": "https://www.ouest-france.fr/faits-divers/attentat/attentat-raciste-de-trappes-le-suspect-kevin-tessier-tente-de-se-suicider-en-cellule-selon-une-info-de-bfmtv-30b0a476-d7ca-11f1-b736-5b9907ef0b5a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-03T21:22:46.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYjFlOTA2YzRhOTZhZTc0NDhiMDQ3YWUwZmI4OTdlMzA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=3b0c1333bc583451b285eb1c0e71ee186138bf3e928e560d210d4a7f4ce81ab6",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "31bd9affc6d8",
-          "outletId": "franceinfo",
-          "headline": "Attentat raciste dans les Yvelines : le suspect Kevin Tessier a tenté de se suicider en détention",
-          "url": "https://www.franceinfo.fr/faits-divers/terrorisme/attentat-raciste-a-trappes/attentat-raciste-dans-les-yvelines-le-suspect-kevin-tessier-a-tente-de-se-suicider-en-detention_8266586.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T21:07:03.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/lcIOa8thZGBEaB9FDy1FPvRkfDI/0x625:6000x4000/432x243/filters:format(jpg)/2026/11/03/6aea4cb9a8d97549687317.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "cd8d3e37930c",
-          "outletId": "le-parisien",
-          "headline": "Attentat raciste de Trappes : le suspect Kévin T. a tenté de mettre fin à ses jours en détention",
-          "url": "https://www.leparisien.fr/faits-divers/attentat-raciste-de-trappes-le-suspect-kevin-t-a-tente-de-mettre-fin-a-ses-jours-en-detention-03-11-2026-GRT72ZBZENBKFG6HY66QT5POFE.php",
-          "publishedAt": "2026-11-03T21:01:26.553Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "26f865385e89",
-          "outletId": "le-figaro",
-          "headline": "Attentat de Trappes : le suspect, Kevin T., a fait une tentative de suicide en prison",
-          "url": "https://www.lefigaro.fr/faits-divers/attentat-de-trappes-le-suspect-kevin-t-a-fait-une-tentative-de-suicide-en-prison-20261103",
-          "publishedAt": "2026-11-03T21:00:11.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/03/df3530a0c60da30ca6153dd2742f01ebe998b05045cba292be6bbeea1a53e9ff.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "d64efb5a845e",
-          "outletId": "liberation",
-          "headline": "Attentat des Yvelines : Kévin T., le tireur présumé, a fait une tentative de suicide en détention",
-          "url": "https://www.liberation.fr/societe/police-justice/attentat-des-yvelines-kevin-t-le-tireur-presume-a-fait-une-tentative-de-suicide-en-detention-20261103_IVWJZXNQTZC2REQS2OIDPKNJKE/",
-          "publishedAt": "2026-11-03T20:59:35.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "0eed33e4e741",
-          "outletId": "bfmtv",
-          "headline": "INFO BFMTV. Attentat raciste de Trappes: le suspect, Kévin Tessier, a fait une tentative de suicide en détention",
-          "url": "https://www.bfmtv.com/police-justice/info-bfmtv-attentat-raciste-de-trappes-le-suspect-kevin-tessier-a-fait-une-tentative-de-suicide-en-detention_AN-202611030920.html",
-          "publishedAt": "2026-11-03T20:33:48.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/3tru7OobfJ3E9gp3inQbx3T_4IE=/0x0:1920x1080/800x0/images/Des-policiers-procedent-a-des-actes-d-investigation-dans-une-station-service-apres-l-attentat-raciste-a-Trappes-qui-fait-un-mort-et-plusieurs-blesses-le-23-octobre-2372228.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "topicId": "1560e3262942",
-      "titledArticleCount": 9,
-      "section": "misc",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Kévin T., le tireur présumé de l'attentat commis à Trappes et La Verrière, a tenté de se suicider en détention.",
-          "Il a été brièvement hospitalisé avant de regagner sa cellule et est désormais hors de danger."
-        ],
-        "centre": [
-          "Kévin Tessier, le suspect de l'attentat raciste de Trappes du 23 octobre 2026, a fait une tentative de suicide par pendaison en prison.",
-          "Pris en charge rapidement par les secours, ses jours ne sont pas en danger et son pronostic vital n'a pas été engagé.",
-          "Selon franceinfo, il a tenté de mettre fin à ses jours lundi après-midi et a été hospitalisé plusieurs heures."
-        ],
-        "droite": [
-          "Le suspect de l'attentat raciste de Trappes, Kévin Tessier, a fait une tentative de suicide par pendaison en détention.",
-          "Ses avocats estiment que cet acte « soulève des interrogations légitimes quant à son état psychologique » et nécessite une évaluation médicale approfondie.",
-          "Il a pu regagner sa cellule le jour même après une prise en charge médicale, son pronostic vital n'étant pas engagé."
-        ]
-      },
-      "differences": [
-        "La gauche se concentre strictement sur l'information brute de la tentative de suicide et de l'état de santé du suspect en nommant le mis en cause par son initiale.",
-        "Le centre livre un récit factuel et détaillé des faits en adoptant le nom complet du suspect et en précisant la chronologie de sa prise en charge.",
-        "La droite met en avant les déclarations des avocats de Kévin Tessier pour insister sur les interrogations concernant son état psychologique."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 9,
-      "summarizedAt": "2026-11-04T04:01:15.564Z"
-    },
-    {
       "id": "e3dbd24a7278",
       "slug": "donald-trump-qualifie-les-midterms-de-2026-de-plus-importantes",
       "title": "Midterms 2026 : les démocrates remportent le Sénat et la Chambre des représentants face au camp de Donald Trump",
       "createdAt": "2026-11-02T21:01:24.804Z",
       "storyDay": "2026-11-02",
       "articles": [
+        {
+          "id": "63da886b17de",
+          "outletId": "le-jdd",
+          "headline": "Midterms aux États-Unis : les démocrates prennent le contrôle de la Chambre et du Sénat",
+          "url": "https://www.lejdd.fr/International/midterms-aux-etats-unis-les-democrates-prennent-le-controle-de-la-chambre-et-du-senat-187737",
+          "publishedAt": "2026-11-04T08:46:47.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/04/09/sipa_ap23071789_000003.jpg?VersionId=CO5.GlE1gPHDFJ.MCum1tNAsRjuZ57dl",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
         {
           "id": "cfde7c85730c",
           "outletId": "le-parisien",
@@ -5135,7 +4463,7 @@
           "url": "https://www.lefigaro.fr/conjoncture/midterms-2026-le-dollar-et-les-bourses-d-asie-trebuchent-face-a-la-vague-democrate-20261104",
           "publishedAt": "2026-11-04T07:49:35.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/0bcd657f07f3b3af87d7cfce616810da1497535cd68ec66d275c2b67f39f9fb2.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -6088,7 +5416,7 @@
           "url": "https://www.lemonde.fr/international/live/2026/11/04/en-direct-midterms-2026-les-democrates-remportent-la-majorite-des-sieges-au-senat-les-republicains-en-difficulte-a-la-chambre-des-representants_6805528_3210.html",
           "publishedAt": "2026-11-04T04:44:18.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/04/684/0/8192/4096/644/322/60/0/bd1996f_ftp-1-rcybikpwttph-2303416235.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "live",
           "section": "politics",
           "everFrontPage": true
@@ -6896,6 +6224,100 @@
       "summarizedAt": "2026-11-04T08:01:18.616Z"
     },
     {
+      "id": "132b5084b08b",
+      "slug": "elon-musk-ironise-sur-la-deroute-electorale-des-republicains",
+      "title": "Elon Musk ironise sur la déroute électorale des Républicains après les midterms 2026",
+      "createdAt": "2026-11-04T08:01:18.616Z",
+      "storyDay": "2026-11-04",
+      "articles": [
+        {
+          "id": "6b5c658ac206",
+          "outletId": "le-parisien",
+          "headline": "Midterms 2026 : après avoir injecté des sommes record, Elon Musk ironise sur la défaite électorale des républicains",
+          "url": "https://www.leparisien.fr/international/etats-unis/elections-americaines/midterms-2026-apres-avoir-injecte-des-sommes-record-elon-musk-ironise-sur-la-defaite-electorale-des-republicains-04-11-2026-FUJAITEMWZB5DCLSYHMKFJBFXY.php",
+          "publishedAt": "2026-11-04T09:01:22.034Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c03f11130b3f",
+          "outletId": "franceinfo",
+          "headline": "Elon Musk, après avoir injecté des sommes record, ironise sur la défaite électorale des républicains lors des midterms 2026",
+          "url": "https://www.franceinfo.fr/monde/usa/midterms-2018/elon-musk-apres-avoir-injecte-des-sommes-record-ironise-sur-la-defaite-electorale-des-republicains-lors-des-midterms-2026_8267321.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-04T08:15:00.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/CdDMWxlhBSOI7iKLWCfwCy077hQ/0x0:8256x4644/432x243/filters:format(jpg)/2026/11/04/6aeae91973ec3937307987.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "668072cc180f",
+          "outletId": "bfmtv",
+          "headline": "\"Mes lasers spatiaux n'ont pas fonctionné cette fois\": Elon Musk sarcastique après la déroute électorale de Trump (malgré 446 millions de dollars dépensés pour les Républicains)",
+          "url": "https://www.bfmtv.com/economie/mes-lasers-spatiaux-n-ont-pas-fonctionne-cette-fois-elon-musk-sarcastique-apres-la-deroute-electorale-de-trump-malgre-446-millions-de-dollars-depenses-pour-les-republicains_AD-202611040329.html",
+          "publishedAt": "2026-11-04T07:59:37.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/kNvBfMDAJs2kg9sz1R184Mof_5k=/0x106:2048x1258/800x0/images/Elon-Musk-2361350.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "8f2368d9102a",
+          "outletId": "le-figaro",
+          "headline": "Midterms 2026 : «L’ingérence de mes lasers spatiaux dans les élections n’a pas fonctionné cette fois», ironise Elon Musk sur la déroute des républicains",
+          "url": "https://www.lefigaro.fr/international/midterms-2026-l-ingerence-de-mes-lasers-spatiaux-dans-les-elections-n-a-pas-fonctionne-cette-fois-ironise-elon-musk-sur-la-deroute-des-republicains-20261104",
+          "publishedAt": "2026-11-04T07:51:43.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/057d654af10bbed186fa5dadfcac06f52ab81c1fb9d29354b93a44bfe2680b7f.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "e0124e286ede",
+          "outletId": "humanite",
+          "headline": "« Mes lasers spatiaux destinés à interférer dans les élections n’ont pas fonctionné » : battu, Elon Musk ironise sur les élections",
+          "url": "https://www.humanite.fr/-/-/mes-lasers-spatiaux-destines-a-interferer-dans-les-elections-nont-pas-fonctionne-battu-elon-musk-minimise-le-reel",
+          "publishedAt": "2026-11-04T07:45:50.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "politics"
+        }
+      ],
+      "topicId": "132b5084b08b",
+      "titledArticleCount": 5,
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le multimilliardaire Elon Musk a échoué lors des midterms 2026 malgré une contribution financière avoisinant 445 millions de dollars en faveur du Parti républicain.",
+          "L'Humanité qualifie le fondateur de Tesla de « multimilliardaire fasciste » à la suite de cette défaite historique de son camp politique.",
+          "Le milliardaire a tourné en dérision ses revers électoraux sur X en évoquant ironiquement ses « lasers spatiaux »."
+        ],
+        "centre": [
+          "Elon Musk a réagi avec ironie sur X à la défaite des Républicains lors des élections de mi-mandat 2026.",
+          "Le milliardaire américain avait pourtant injecté des sommes record, estimées à 446 millions de dollars, pour soutenir les candidats de Donald Trump.",
+          "BFMTV précise que le patron de SpaceX a ironisé sur ses prétendus « lasers spatiaux » qui n'auraient pas fonctionné pour influencer le scrutin."
+        ],
+        "droite": [
+          "Elon Musk a ironisé mercredi sur la déroute électorale des Républicains lors des midterms 2026 après avoir consacré des centaines de millions de dollars à leur campagne.",
+          "Le Figaro rapporte que le patron de SpaceX a tourné en dérision ses revers, dont l'échec de Ken Paxton au Texas.",
+          "Le milliardaire a publié sur X la boutade suivante : « L’ingérence de mes lasers spatiaux dans les élections n’a pas fonctionné cette fois »."
+        ]
+      },
+      "differences": [
+        "La gauche qualifie sévèrement le milliardaire de « fasciste » en insistant sur le coût faramineux de ses ingérences politiques.",
+        "Le centre adopte un ton factuel et neutre en se concentrant sur les montants investis et la blague du milliardaire sur les réseaux sociaux.",
+        "La droite se focalise sur l'autodérision du patron de SpaceX en citant directement ses propos humoristiques sur ses revers électoraux."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-11-04T09:01:22.034Z"
+    },
+    {
       "id": "bb9b6bb1e132",
       "slug": "laurent-nunez-assume-un-echec-devant-la-commission-d-enquete",
       "title": "Laurent Nuñez assume un échec devant la commission d'enquête sur les violences du 17 octobre",
@@ -7200,212 +6622,6 @@
       "summarizedAt": "2026-11-04T08:01:18.616Z"
     },
     {
-      "id": "5bfa1f825bee",
-      "slug": "le-groupe-gifi-est-place-en-redressement-judiciaire-avec-6000",
-      "title": "Le groupe GiFi est placé en redressement judiciaire : 6000 emplois menacés en France",
-      "createdAt": "2026-11-03T09:01:20.588Z",
-      "storyDay": "2026-11-03",
-      "articles": [
-        {
-          "id": "bf86fb15c105",
-          "outletId": "tf1-info",
-          "headline": "Nicolas ose : En redressement, GiFi a besoin d'une idée de génie",
-          "url": "https://www.tf1info.fr/economie/videos/video-nicolas-ose-en-redressement-gifi-a-besoin-d-une-idee-de-genie-6778-2473766.html",
-          "publishedAt": "2026-11-04T07:55:15.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/nicolas-ose-en-redressement-gifi-a-besoin-d-une-idee-de-genie-20e816-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "1e349039341b",
-          "outletId": "franceinfo",
-          "headline": "Concurrence accrue, direction instable, finances dans le rouge... Pourquoi Gifi, placée en redressement judiciaire, se retrouve en grande difficulté",
-          "url": "https://www.franceinfo.fr/economie/concurrence-accrue-direction-instable-finances-dans-le-rouge-pourquoi-gifi-placee-en-redressement-judiciaire-se-retrouve-en-grande-difficulte_8265626.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T18:02:56.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/bonuue0hdNDShrlivjsD-b0Fyvo/0x95:1024x671/432x243/filters:format(jpg)/2026/11/03/6aea16e82b007299856427.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "15f2ca2f2862",
-          "outletId": "franceinfo",
-          "headline": "Après le placement en redressement judiciaire du groupe Gifi, les 6 000 salariés sont inquiets",
-          "url": "https://www.franceinfo.fr/economie/apres-le-placement-en-redressement-judiciaire-du-groupe-gifi-les-6-000-salaries-sont-inquiets_8265887.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T16:03:50.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/VnjblzWpDYg_HGueNwTgyGE2PGE/0x0:1459x820/432x243/filters:format(jpg)/2026/11/03/6ae9df95aebcc589455965.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "1d98a5705303",
-          "outletId": "huffpost",
-          "headline": "Le groupe GiFi à son tour placé en redressement judiciaire",
-          "url": "https://www.huffingtonpost.fr/france/article/le-groupe-gifi-a-son-tour-place-en-redressement-judiciaire_351221.html",
-          "publishedAt": "2026-11-03T09:28:56.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/03/714/0/5976/3361/0/0/60/0/a731e44_upload-1-1eol95edhoie-afp-20261008-hl-gdziedzic-3329819-v2-highres-francetoulousegifi.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "d8826cf0bb06",
-          "outletId": "la-croix",
-          "headline": "Gifi : l’enseigne de vente d’objets à petit prix placé en redressement judiciaire",
-          "url": "https://www.la-croix.com/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103",
-          "publishedAt": "2026-11-03T09:11:19.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/20/2567944-apres-de-graves-difficultes-et-une-valse-des-dirig.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "3210ae417c2b",
-          "outletId": "le-figaro",
-          "headline": "«Il n’a pas su se réinventer» : en redressement judiciaire, Gifi est menacé d’être vendu à la découpe",
-          "url": "https://www.lefigaro.fr/societes/il-n-a-pas-su-se-reinventer-au-bord-de-la-faillite-gifi-est-menace-d-etre-vendu-a-la-decoupe-20261019",
-          "publishedAt": "2026-11-03T09:05:59.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/19/aa4055978f07a16ceacaf460f281dab0443a2ff37ae6ae343cd6bde2f17c1efc.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "ec7786f49697",
-          "outletId": "le-parisien",
-          "headline": "Le groupe GiFi, en grande difficulté financière, placé en redressement judiciaire",
-          "url": "https://www.leparisien.fr/economie/le-groupe-gifi-en-grande-difficulte-financiere-place-en-redressement-judiciaire-03-11-2026-SD5VISPGGRD47KNRPHYHPZIDGY.php",
-          "publishedAt": "2026-11-03T09:01:20.588Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "bc0376acc9bc",
-          "outletId": "le-figaro",
-          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire, 6000 emplois menacés en France",
-          "url": "https://www.lefigaro.fr/societes/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103",
-          "publishedAt": "2026-11-03T08:49:49.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/03/38d2e41db5787871407e28ecaf81a84de22f2fe0a0601f9b6cfee37ba7232c07.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "0c445849cd2d",
-          "outletId": "le-monde",
-          "headline": "Le groupe GiFi placé en redressement judiciaire à sa demande, 6 000 emplois menacés en France",
-          "url": "https://www.lemonde.fr/economie/article/2026/11/03/le-groupe-gifi-place-en-redressement-judiciaire-a-sa-demande-6-000-emplois-menaces-en-france_6805546_3234.html",
-          "publishedAt": "2026-11-03T08:46:18.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/03/478/0/5734/2867/644/322/60/0/60a5920_upload-1-15izcx19spv2-000-c96k2vb.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "f7a8413a2018",
-          "outletId": "ouest-france",
-          "headline": "Le groupe Gifi placé en redressement judiciaire par le tribunal de commerce de Toulouse",
-          "url": "https://www.ouest-france.fr/economie/entreprises/le-groupe-gifi-a-ete-place-en-redressement-judiciaire-fd6092ca-d760-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-03T08:42:02.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTgyYjEwNzAyMDAyNzJjN2RiYTEwNDM0MWEzOGFhYTQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=eff7525f2795ae95258eb29a3fda5a540159b04812fe26ab1002a6926d3ca178",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "c639c45597ce",
-          "outletId": "europe-1",
-          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire",
-          "url": "https://www.europe1.fr/economie/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-1204823?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-03T08:34:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/09/080_hl_gdziedzic_3369781_1_6ae99caa2b5f3.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "de656855b6c7",
-          "outletId": "franceinfo",
-          "headline": "Le groupe Gifi est placé en redressement judiciaire",
-          "url": "https://www.franceinfo.fr/economie/le-groupe-gifi-est-place-en-redressement-judiciaire_8265437.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T08:33:24.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/mynWyNWQF5SF7sq0WOd3vH235ok/0x106:1024x682/432x243/filters:format(jpg)/2026/11/03/6ae99c1f459b6474691632.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "3455458218a3",
-          "outletId": "tf1-info",
-          "headline": "L'enseigne GiFi, en grande difficulté, placée en redressement judiciaire",
-          "url": "https://www.tf1info.fr/economie/l-enseigne-gifi-en-grande-difficulte-placee-en-redressement-judiciaire-par-le-tribunal-2473546.html",
-          "publishedAt": "2026-11-03T08:26:32.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/652/gifi-enseigne-aee1a7-1@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "4d9c9a2ca287",
-          "outletId": "liberation",
-          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire",
-          "url": "https://www.liberation.fr/economie/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103_BWOUCCF3ANB67L6PPKPWP3MTAM/",
-          "publishedAt": "2026-11-03T08:25:06.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "df33bd13a74e",
-          "outletId": "bfmtv",
-          "headline": "Un fiasco informatique, la concurrence d'Action... L'enseigne GiFi est placée en redressement judiciaire",
-          "url": "https://www.bfmtv.com/economie/entreprises/accumulant-les-difficultes-l-enseigne-gi-fi-placee-en-redressement-judiciaire_AD-202611030331.html",
-          "publishedAt": "2026-11-03T08:17:53.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/uWh7eXBkft0s4nhwE7dHicGeDK4=/0x106:2048x1258/800x0/images/Une-personne-se-dirige-vers-l-entree-d-un-magasin-Gifi-a-Lesneven-en-Bretagne-France-le-2-decembre-2025-2367934.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        }
-      ],
-      "topicId": "5bfa1f825bee",
-      "titledArticleCount": 15,
-      "section": "economy",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le tribunal de commerce de Toulouse a prononcé le redressement judiciaire du groupe GiFi à la demande de sa direction.",
-          "La procédure vise officiellement à protéger un maximum de salariés parmi les 6 000 employés en France.",
-          "Le nouveau président du directoire a indiqué aux salariés que la décision n'entraînera aucune conséquence immédiate sur l'emploi."
-        ],
-        "centre": [
-          "Le groupe GiFi a été placé en redressement judiciaire par le tribunal de commerce de Toulouse, qui a fixé une période d'observation de six mois.",
-          "Une nouvelle audience a été programmée au 8 janvier afin d'évaluer les capacités financières de l'entreprise pour la poursuite de son activité.",
-          "Les difficultés du groupe s'expliquent notamment par une concurrence accrue, une instabilité de la direction, un fiasco informatique survenu en 2023 et la pression d'enseignes concurrentes comme Action."
-        ],
-        "droite": [
-          "Le tribunal de commerce de Toulouse a placé l'enseigne GiFi en redressement judiciaire et a ouvert une période d'observation de six mois.",
-          "Une audience est prévue le 8 janvier pour faire le point sur la situation financière de l'entreprise et l'avenir des 6 000 salariés en France.",
-          "Nicolas Doze souligne sur TF1 Info que le manque de cash et de trésorerie constitue la principale raison de cette chute."
-        ]
-      },
-      "differences": [
-        "La gauche met principalement l'accent sur la démarche volontaire de la direction et la volonté affichée de préserver l'emploi des salariés menacés.",
-        "Le centre dresse un panorama large et détaillé des causes structurelles de la crise, allant des difficultés financières aux erreurs informatiques et à la concurrence des plateformes internet et des discounters.",
-        "La droite se focalise sur les aspects économiques et procéduraux de la décision du tribunal de commerce, tout en pointant, par la voix de Nicolas Doze sur TF1 Info, le manque de trésorerie de l'enseigne."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 15,
-      "summarizedAt": "2026-11-04T08:01:18.616Z"
-    },
-    {
       "id": "c1842eb75b81",
       "slug": "le-ministre-des-transports-espagnol-demissionne-apres-la",
       "title": "Le ministre des Transports espagnol démissionne après la collision ferroviaire meurtrière",
@@ -7611,53 +6827,6 @@
       "summarizedAt": "2026-11-04T00:01:24.314Z"
     },
     {
-      "id": "132b5084b08b",
-      "slug": "elon-musk-ironise-sur-la-deroute-electorale-des-republicains",
-      "title": "Elon Musk ironise sur la déroute électorale des Républicains après les midterms",
-      "createdAt": "2026-11-04T08:01:18.616Z",
-      "storyDay": "2026-11-04",
-      "articles": [
-        {
-          "id": "668072cc180f",
-          "outletId": "bfmtv",
-          "headline": "\"Mes lasers spatiaux n'ont pas fonctionné cette fois\": Elon Musk sarcastique après la déroute électorale de Trump (malgré 446 millions de dollars dépensés pour les Républicains)",
-          "url": "https://www.bfmtv.com/economie/mes-lasers-spatiaux-n-ont-pas-fonctionne-cette-fois-elon-musk-sarcastique-apres-la-deroute-electorale-de-trump-malgre-446-millions-de-dollars-depenses-pour-les-republicains_AD-202611040329.html",
-          "publishedAt": "2026-11-04T07:59:37.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/kNvBfMDAJs2kg9sz1R184Mof_5k=/0x106:2048x1258/800x0/images/Elon-Musk-2361350.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "8f2368d9102a",
-          "outletId": "le-figaro",
-          "headline": "Midterms 2026 : «L’ingérence de mes lasers spatiaux dans les élections n’a pas fonctionné cette fois», ironise Elon Musk sur la déroute des républicains",
-          "url": "https://www.lefigaro.fr/international/midterms-2026-l-ingerence-de-mes-lasers-spatiaux-dans-les-elections-n-a-pas-fonctionne-cette-fois-ironise-elon-musk-sur-la-deroute-des-republicains-20261104",
-          "publishedAt": "2026-11-04T07:51:43.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/057d654af10bbed186fa5dadfcac06f52ab81c1fb9d29354b93a44bfe2680b7f.JPG",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "e0124e286ede",
-          "outletId": "humanite",
-          "headline": "« Mes lasers spatiaux destinés à interférer dans les élections n’ont pas fonctionné » : battu, Elon Musk ironise sur les élections",
-          "url": "https://www.humanite.fr/-/-/mes-lasers-spatiaux-destines-a-interferer-dans-les-elections-nont-pas-fonctionne-battu-elon-musk-minimise-le-reel",
-          "publishedAt": "2026-11-04T07:45:50.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
-          "frontPage": false,
-          "kind": "opinion",
-          "section": "politics"
-        }
-      ],
-      "topicId": "132b5084b08b",
-      "titledArticleCount": 3,
-      "section": "politics",
-      "everInEdition": true
-    },
-    {
       "id": "ca423ea9a0cb",
       "slug": "charlotte-gainsbourg-et-cecile-de-france-jouent-dans-le-film-l",
       "title": "Charlotte Gainsbourg et Cécile de France jouent dans le film L'Affaire Marie-Claire sur la pénalisation de l'avortement",
@@ -7757,9 +6926,10 @@
           "url": "https://www.lemonde.fr/sport/article/2026/11/04/route-du-rhum-l-ocean-fifty-elvest-de-matthieu-perraut-a-chavire_6806116_3242.html",
           "publishedAt": "2026-11-04T06:49:58.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/01/445/0/5341/2670/644/322/60/0/66e765f_ftp-1-ubz7hxjkmfxl-afp-d63l9qx.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
-          "section": "sport"
+          "section": "sport",
+          "everFrontPage": true
         },
         {
           "id": "be8b747a8d16",
@@ -7927,6 +7097,212 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 5,
       "summarizedAt": "2026-11-04T06:01:19.234Z"
+    },
+    {
+      "id": "5bfa1f825bee",
+      "slug": "le-groupe-gifi-est-place-en-redressement-judiciaire-avec-6000",
+      "title": "Le groupe GiFi est placé en redressement judiciaire : 6000 emplois menacés en France",
+      "createdAt": "2026-11-03T09:01:20.588Z",
+      "storyDay": "2026-11-03",
+      "articles": [
+        {
+          "id": "bf86fb15c105",
+          "outletId": "tf1-info",
+          "headline": "Nicolas ose : En redressement, GiFi a besoin d'une idée de génie",
+          "url": "https://www.tf1info.fr/economie/videos/video-nicolas-ose-en-redressement-gifi-a-besoin-d-une-idee-de-genie-6778-2473766.html",
+          "publishedAt": "2026-11-04T07:55:15.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/576/nicolas-ose-en-redressement-gifi-a-besoin-d-une-idee-de-genie-20e816-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "1e349039341b",
+          "outletId": "franceinfo",
+          "headline": "Concurrence accrue, direction instable, finances dans le rouge... Pourquoi Gifi, placée en redressement judiciaire, se retrouve en grande difficulté",
+          "url": "https://www.franceinfo.fr/economie/concurrence-accrue-direction-instable-finances-dans-le-rouge-pourquoi-gifi-placee-en-redressement-judiciaire-se-retrouve-en-grande-difficulte_8265626.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-03T18:02:56.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/bonuue0hdNDShrlivjsD-b0Fyvo/0x95:1024x671/432x243/filters:format(jpg)/2026/11/03/6aea16e82b007299856427.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "15f2ca2f2862",
+          "outletId": "franceinfo",
+          "headline": "Après le placement en redressement judiciaire du groupe Gifi, les 6 000 salariés sont inquiets",
+          "url": "https://www.franceinfo.fr/economie/apres-le-placement-en-redressement-judiciaire-du-groupe-gifi-les-6-000-salaries-sont-inquiets_8265887.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-03T16:03:50.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/VnjblzWpDYg_HGueNwTgyGE2PGE/0x0:1459x820/432x243/filters:format(jpg)/2026/11/03/6ae9df95aebcc589455965.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "1d98a5705303",
+          "outletId": "huffpost",
+          "headline": "Le groupe GiFi à son tour placé en redressement judiciaire",
+          "url": "https://www.huffingtonpost.fr/france/article/le-groupe-gifi-a-son-tour-place-en-redressement-judiciaire_351221.html",
+          "publishedAt": "2026-11-03T09:28:56.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/03/714/0/5976/3361/0/0/60/0/a731e44_upload-1-1eol95edhoie-afp-20261008-hl-gdziedzic-3329819-v2-highres-francetoulousegifi.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "d8826cf0bb06",
+          "outletId": "la-croix",
+          "headline": "Gifi : l’enseigne de vente d’objets à petit prix placé en redressement judiciaire",
+          "url": "https://www.la-croix.com/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103",
+          "publishedAt": "2026-11-03T09:11:19.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/20/2567944-apres-de-graves-difficultes-et-une-valse-des-dirig.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "3210ae417c2b",
+          "outletId": "le-figaro",
+          "headline": "«Il n’a pas su se réinventer» : en redressement judiciaire, Gifi est menacé d’être vendu à la découpe",
+          "url": "https://www.lefigaro.fr/societes/il-n-a-pas-su-se-reinventer-au-bord-de-la-faillite-gifi-est-menace-d-etre-vendu-a-la-decoupe-20261019",
+          "publishedAt": "2026-11-03T09:05:59.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/19/aa4055978f07a16ceacaf460f281dab0443a2ff37ae6ae343cd6bde2f17c1efc.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "ec7786f49697",
+          "outletId": "le-parisien",
+          "headline": "Le groupe GiFi, en grande difficulté financière, placé en redressement judiciaire",
+          "url": "https://www.leparisien.fr/economie/le-groupe-gifi-en-grande-difficulte-financiere-place-en-redressement-judiciaire-03-11-2026-SD5VISPGGRD47KNRPHYHPZIDGY.php",
+          "publishedAt": "2026-11-03T09:01:20.588Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "bc0376acc9bc",
+          "outletId": "le-figaro",
+          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire, 6000 emplois menacés en France",
+          "url": "https://www.lefigaro.fr/societes/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103",
+          "publishedAt": "2026-11-03T08:49:49.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/03/38d2e41db5787871407e28ecaf81a84de22f2fe0a0601f9b6cfee37ba7232c07.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "0c445849cd2d",
+          "outletId": "le-monde",
+          "headline": "Le groupe GiFi placé en redressement judiciaire à sa demande, 6 000 emplois menacés en France",
+          "url": "https://www.lemonde.fr/economie/article/2026/11/03/le-groupe-gifi-place-en-redressement-judiciaire-a-sa-demande-6-000-emplois-menaces-en-france_6805546_3234.html",
+          "publishedAt": "2026-11-03T08:46:18.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/03/478/0/5734/2867/644/322/60/0/60a5920_upload-1-15izcx19spv2-000-c96k2vb.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "f7a8413a2018",
+          "outletId": "ouest-france",
+          "headline": "Le groupe Gifi placé en redressement judiciaire par le tribunal de commerce de Toulouse",
+          "url": "https://www.ouest-france.fr/economie/entreprises/le-groupe-gifi-a-ete-place-en-redressement-judiciaire-fd6092ca-d760-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-03T08:42:02.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTgyYjEwNzAyMDAyNzJjN2RiYTEwNDM0MWEzOGFhYTQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=eff7525f2795ae95258eb29a3fda5a540159b04812fe26ab1002a6926d3ca178",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "c639c45597ce",
+          "outletId": "europe-1",
+          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire",
+          "url": "https://www.europe1.fr/economie/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-1204823?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-03T08:34:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/09/080_hl_gdziedzic_3369781_1_6ae99caa2b5f3.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "de656855b6c7",
+          "outletId": "franceinfo",
+          "headline": "Le groupe Gifi est placé en redressement judiciaire",
+          "url": "https://www.franceinfo.fr/economie/le-groupe-gifi-est-place-en-redressement-judiciaire_8265437.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-03T08:33:24.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/mynWyNWQF5SF7sq0WOd3vH235ok/0x106:1024x682/432x243/filters:format(jpg)/2026/11/03/6ae99c1f459b6474691632.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "3455458218a3",
+          "outletId": "tf1-info",
+          "headline": "L'enseigne GiFi, en grande difficulté, placée en redressement judiciaire",
+          "url": "https://www.tf1info.fr/economie/l-enseigne-gifi-en-grande-difficulte-placee-en-redressement-judiciaire-par-le-tribunal-2473546.html",
+          "publishedAt": "2026-11-03T08:26:32.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/652/gifi-enseigne-aee1a7-1@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "4d9c9a2ca287",
+          "outletId": "liberation",
+          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire",
+          "url": "https://www.liberation.fr/economie/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103_BWOUCCF3ANB67L6PPKPWP3MTAM/",
+          "publishedAt": "2026-11-03T08:25:06.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "df33bd13a74e",
+          "outletId": "bfmtv",
+          "headline": "Un fiasco informatique, la concurrence d'Action... L'enseigne GiFi est placée en redressement judiciaire",
+          "url": "https://www.bfmtv.com/economie/entreprises/accumulant-les-difficultes-l-enseigne-gi-fi-placee-en-redressement-judiciaire_AD-202611030331.html",
+          "publishedAt": "2026-11-03T08:17:53.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/uWh7eXBkft0s4nhwE7dHicGeDK4=/0x106:2048x1258/800x0/images/Une-personne-se-dirige-vers-l-entree-d-un-magasin-Gifi-a-Lesneven-en-Bretagne-France-le-2-decembre-2025-2367934.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "topicId": "5bfa1f825bee",
+      "titledArticleCount": 15,
+      "section": "economy",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le tribunal de commerce de Toulouse a prononcé le redressement judiciaire du groupe GiFi à la demande de sa direction.",
+          "La procédure vise officiellement à protéger un maximum de salariés parmi les 6 000 employés en France.",
+          "Le nouveau président du directoire a indiqué aux salariés que la décision n'entraînera aucune conséquence immédiate sur l'emploi."
+        ],
+        "centre": [
+          "Le groupe GiFi a été placé en redressement judiciaire par le tribunal de commerce de Toulouse, qui a fixé une période d'observation de six mois.",
+          "Une nouvelle audience a été programmée au 8 janvier afin d'évaluer les capacités financières de l'entreprise pour la poursuite de son activité.",
+          "Les difficultés du groupe s'expliquent notamment par une concurrence accrue, une instabilité de la direction, un fiasco informatique survenu en 2023 et la pression d'enseignes concurrentes comme Action."
+        ],
+        "droite": [
+          "Le tribunal de commerce de Toulouse a placé l'enseigne GiFi en redressement judiciaire et a ouvert une période d'observation de six mois.",
+          "Une audience est prévue le 8 janvier pour faire le point sur la situation financière de l'entreprise et l'avenir des 6 000 salariés en France.",
+          "Nicolas Doze souligne sur TF1 Info que le manque de cash et de trésorerie constitue la principale raison de cette chute."
+        ]
+      },
+      "differences": [
+        "La gauche met principalement l'accent sur la démarche volontaire de la direction et la volonté affichée de préserver l'emploi des salariés menacés.",
+        "Le centre dresse un panorama large et détaillé des causes structurelles de la crise, allant des difficultés financières aux erreurs informatiques et à la concurrence des plateformes internet et des discounters.",
+        "La droite se focalise sur les aspects économiques et procéduraux de la décision du tribunal de commerce, tout en pointant, par la voix de Nicolas Doze sur TF1 Info, le manque de trésorerie de l'enseigne."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 15,
+      "summarizedAt": "2026-11-04T08:01:18.616Z"
     },
     {
       "id": "64549a1da2e0",
@@ -8146,7 +7522,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/11/03/midterms-2026-donald-trump-revele-a-fox-news-que-l-aide-militaire-a-israel-sera-coupee-a-la-fin-de-l-annee_6805657_3210.html",
           "publishedAt": "2026-11-03T19:30:07.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/28/480/0/5760/2880/644/322/60/0/56161a3_upload-1-ug56efapw7ud-lgeai-elections-colonies-3.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -8729,7 +8105,7 @@
           "url": "https://www.20minutes.fr/economie/4260089-20261103-epargne-plafond-livret-va-etre-augmente-jusqu-peut-etre-30-000-euros-annonce-lecornu?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-03T15:45:31.000Z",
           "imageUrl": "https://img.20mn.fr/J_A2_vuiQtqZo3RmeK_xLik/1200x768_tirelire-en-forme-de-petit-cochon-rose-sur-un-carnet-de-la-caisse-d-epargne-france-4-fevrier-2023-07gilemichel-sipa-34465-credit-gile-michel-sipa-2302061728",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -9196,7 +8572,7 @@
           "url": "https://www.20minutes.fr/societe/4260108-20261103-greve-5-novembre-sncf-prevoit-deja-perturbations-assez-peu-reseau-tgv?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-03T16:29:37.000Z",
           "imageUrl": "https://img.20mn.fr/gYwvlBaWTqGzIAjZrqW2ISk/1200x768_un-tgv-inoui-nouvelle-generation-tgv-m-en-provenance-de-marseille-saint-charles-passe-en-gare-de-vert-de-maisons-et-file-vers-paris-france-30-10-2026-levequepatrick-261030-02-009-credit-patrick-leveque-sipa-2610311138",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -9515,6 +8891,17 @@
       "storyDay": "2026-11-02",
       "articles": [
         {
+          "id": "63da886b17de",
+          "outletId": "le-jdd",
+          "headline": "Midterms aux États-Unis : les démocrates prennent le contrôle de la Chambre et du Sénat",
+          "url": "https://www.lejdd.fr/International/midterms-aux-etats-unis-les-democrates-prennent-le-controle-de-la-chambre-et-du-senat-187737",
+          "publishedAt": "2026-11-04T08:46:47.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/04/09/sipa_ap23071789_000003.jpg?VersionId=CO5.GlE1gPHDFJ.MCum1tNAsRjuZ57dl",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
           "id": "cfde7c85730c",
           "outletId": "le-parisien",
           "headline": "Midterms 2026 : Texas, Caroline du Sud, Maine, Iowa… Ces États où les démocrates ont créé la surprise",
@@ -9577,7 +8964,7 @@
           "url": "https://www.lefigaro.fr/conjoncture/midterms-2026-le-dollar-et-les-bourses-d-asie-trebuchent-face-a-la-vague-democrate-20261104",
           "publishedAt": "2026-11-04T07:49:35.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/0bcd657f07f3b3af87d7cfce616810da1497535cd68ec66d275c2b67f39f9fb2.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -10530,7 +9917,7 @@
           "url": "https://www.lemonde.fr/international/live/2026/11/04/en-direct-midterms-2026-les-democrates-remportent-la-majorite-des-sieges-au-senat-les-republicains-en-difficulte-a-la-chambre-des-representants_6805528_3210.html",
           "publishedAt": "2026-11-04T04:44:18.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/04/684/0/8192/4096/644/322/60/0/bd1996f_ftp-1-rcybikpwttph-2303416235.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "live",
           "section": "politics",
           "everFrontPage": true
@@ -12758,7 +12145,7 @@
           "url": "https://www.20minutes.fr/economie/4260089-20261103-epargne-plafond-livret-va-etre-augmente-jusqu-peut-etre-30-000-euros-annonce-lecornu?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-03T15:45:31.000Z",
           "imageUrl": "https://img.20mn.fr/J_A2_vuiQtqZo3RmeK_xLik/1200x768_tirelire-en-forme-de-petit-cochon-rose-sur-un-carnet-de-la-caisse-d-epargne-france-4-fevrier-2023-07gilemichel-sipa-34465-credit-gile-michel-sipa-2302061728",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -12838,212 +12225,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 13,
       "summarizedAt": "2026-11-03T19:01:23.572Z"
-    },
-    {
-      "id": "5bfa1f825bee",
-      "slug": "le-groupe-gifi-est-place-en-redressement-judiciaire-avec-6000",
-      "title": "Le groupe GiFi est placé en redressement judiciaire : 6000 emplois menacés en France",
-      "createdAt": "2026-11-03T09:01:20.588Z",
-      "storyDay": "2026-11-03",
-      "articles": [
-        {
-          "id": "bf86fb15c105",
-          "outletId": "tf1-info",
-          "headline": "Nicolas ose : En redressement, GiFi a besoin d'une idée de génie",
-          "url": "https://www.tf1info.fr/economie/videos/video-nicolas-ose-en-redressement-gifi-a-besoin-d-une-idee-de-genie-6778-2473766.html",
-          "publishedAt": "2026-11-04T07:55:15.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/nicolas-ose-en-redressement-gifi-a-besoin-d-une-idee-de-genie-20e816-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "1e349039341b",
-          "outletId": "franceinfo",
-          "headline": "Concurrence accrue, direction instable, finances dans le rouge... Pourquoi Gifi, placée en redressement judiciaire, se retrouve en grande difficulté",
-          "url": "https://www.franceinfo.fr/economie/concurrence-accrue-direction-instable-finances-dans-le-rouge-pourquoi-gifi-placee-en-redressement-judiciaire-se-retrouve-en-grande-difficulte_8265626.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T18:02:56.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/bonuue0hdNDShrlivjsD-b0Fyvo/0x95:1024x671/432x243/filters:format(jpg)/2026/11/03/6aea16e82b007299856427.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "15f2ca2f2862",
-          "outletId": "franceinfo",
-          "headline": "Après le placement en redressement judiciaire du groupe Gifi, les 6 000 salariés sont inquiets",
-          "url": "https://www.franceinfo.fr/economie/apres-le-placement-en-redressement-judiciaire-du-groupe-gifi-les-6-000-salaries-sont-inquiets_8265887.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T16:03:50.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/VnjblzWpDYg_HGueNwTgyGE2PGE/0x0:1459x820/432x243/filters:format(jpg)/2026/11/03/6ae9df95aebcc589455965.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "1d98a5705303",
-          "outletId": "huffpost",
-          "headline": "Le groupe GiFi à son tour placé en redressement judiciaire",
-          "url": "https://www.huffingtonpost.fr/france/article/le-groupe-gifi-a-son-tour-place-en-redressement-judiciaire_351221.html",
-          "publishedAt": "2026-11-03T09:28:56.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/03/714/0/5976/3361/0/0/60/0/a731e44_upload-1-1eol95edhoie-afp-20261008-hl-gdziedzic-3329819-v2-highres-francetoulousegifi.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "d8826cf0bb06",
-          "outletId": "la-croix",
-          "headline": "Gifi : l’enseigne de vente d’objets à petit prix placé en redressement judiciaire",
-          "url": "https://www.la-croix.com/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103",
-          "publishedAt": "2026-11-03T09:11:19.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/20/2567944-apres-de-graves-difficultes-et-une-valse-des-dirig.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "3210ae417c2b",
-          "outletId": "le-figaro",
-          "headline": "«Il n’a pas su se réinventer» : en redressement judiciaire, Gifi est menacé d’être vendu à la découpe",
-          "url": "https://www.lefigaro.fr/societes/il-n-a-pas-su-se-reinventer-au-bord-de-la-faillite-gifi-est-menace-d-etre-vendu-a-la-decoupe-20261019",
-          "publishedAt": "2026-11-03T09:05:59.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/19/aa4055978f07a16ceacaf460f281dab0443a2ff37ae6ae343cd6bde2f17c1efc.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "ec7786f49697",
-          "outletId": "le-parisien",
-          "headline": "Le groupe GiFi, en grande difficulté financière, placé en redressement judiciaire",
-          "url": "https://www.leparisien.fr/economie/le-groupe-gifi-en-grande-difficulte-financiere-place-en-redressement-judiciaire-03-11-2026-SD5VISPGGRD47KNRPHYHPZIDGY.php",
-          "publishedAt": "2026-11-03T09:01:20.588Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "bc0376acc9bc",
-          "outletId": "le-figaro",
-          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire, 6000 emplois menacés en France",
-          "url": "https://www.lefigaro.fr/societes/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103",
-          "publishedAt": "2026-11-03T08:49:49.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/03/38d2e41db5787871407e28ecaf81a84de22f2fe0a0601f9b6cfee37ba7232c07.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "0c445849cd2d",
-          "outletId": "le-monde",
-          "headline": "Le groupe GiFi placé en redressement judiciaire à sa demande, 6 000 emplois menacés en France",
-          "url": "https://www.lemonde.fr/economie/article/2026/11/03/le-groupe-gifi-place-en-redressement-judiciaire-a-sa-demande-6-000-emplois-menaces-en-france_6805546_3234.html",
-          "publishedAt": "2026-11-03T08:46:18.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/03/478/0/5734/2867/644/322/60/0/60a5920_upload-1-15izcx19spv2-000-c96k2vb.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "f7a8413a2018",
-          "outletId": "ouest-france",
-          "headline": "Le groupe Gifi placé en redressement judiciaire par le tribunal de commerce de Toulouse",
-          "url": "https://www.ouest-france.fr/economie/entreprises/le-groupe-gifi-a-ete-place-en-redressement-judiciaire-fd6092ca-d760-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-03T08:42:02.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTgyYjEwNzAyMDAyNzJjN2RiYTEwNDM0MWEzOGFhYTQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=eff7525f2795ae95258eb29a3fda5a540159b04812fe26ab1002a6926d3ca178",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "c639c45597ce",
-          "outletId": "europe-1",
-          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire",
-          "url": "https://www.europe1.fr/economie/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-1204823?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-03T08:34:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/09/080_hl_gdziedzic_3369781_1_6ae99caa2b5f3.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "de656855b6c7",
-          "outletId": "franceinfo",
-          "headline": "Le groupe Gifi est placé en redressement judiciaire",
-          "url": "https://www.franceinfo.fr/economie/le-groupe-gifi-est-place-en-redressement-judiciaire_8265437.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T08:33:24.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/mynWyNWQF5SF7sq0WOd3vH235ok/0x106:1024x682/432x243/filters:format(jpg)/2026/11/03/6ae99c1f459b6474691632.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "3455458218a3",
-          "outletId": "tf1-info",
-          "headline": "L'enseigne GiFi, en grande difficulté, placée en redressement judiciaire",
-          "url": "https://www.tf1info.fr/economie/l-enseigne-gifi-en-grande-difficulte-placee-en-redressement-judiciaire-par-le-tribunal-2473546.html",
-          "publishedAt": "2026-11-03T08:26:32.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/652/gifi-enseigne-aee1a7-1@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "4d9c9a2ca287",
-          "outletId": "liberation",
-          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire",
-          "url": "https://www.liberation.fr/economie/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103_BWOUCCF3ANB67L6PPKPWP3MTAM/",
-          "publishedAt": "2026-11-03T08:25:06.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "df33bd13a74e",
-          "outletId": "bfmtv",
-          "headline": "Un fiasco informatique, la concurrence d'Action... L'enseigne GiFi est placée en redressement judiciaire",
-          "url": "https://www.bfmtv.com/economie/entreprises/accumulant-les-difficultes-l-enseigne-gi-fi-placee-en-redressement-judiciaire_AD-202611030331.html",
-          "publishedAt": "2026-11-03T08:17:53.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/uWh7eXBkft0s4nhwE7dHicGeDK4=/0x106:2048x1258/800x0/images/Une-personne-se-dirige-vers-l-entree-d-un-magasin-Gifi-a-Lesneven-en-Bretagne-France-le-2-decembre-2025-2367934.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        }
-      ],
-      "topicId": "5bfa1f825bee",
-      "titledArticleCount": 15,
-      "section": "economy",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le tribunal de commerce de Toulouse a prononcé le redressement judiciaire du groupe GiFi à la demande de sa direction.",
-          "La procédure vise officiellement à protéger un maximum de salariés parmi les 6 000 employés en France.",
-          "Le nouveau président du directoire a indiqué aux salariés que la décision n'entraînera aucune conséquence immédiate sur l'emploi."
-        ],
-        "centre": [
-          "Le groupe GiFi a été placé en redressement judiciaire par le tribunal de commerce de Toulouse, qui a fixé une période d'observation de six mois.",
-          "Une nouvelle audience a été programmée au 8 janvier afin d'évaluer les capacités financières de l'entreprise pour la poursuite de son activité.",
-          "Les difficultés du groupe s'expliquent notamment par une concurrence accrue, une instabilité de la direction, un fiasco informatique survenu en 2023 et la pression d'enseignes concurrentes comme Action."
-        ],
-        "droite": [
-          "Le tribunal de commerce de Toulouse a placé l'enseigne GiFi en redressement judiciaire et a ouvert une période d'observation de six mois.",
-          "Une audience est prévue le 8 janvier pour faire le point sur la situation financière de l'entreprise et l'avenir des 6 000 salariés en France.",
-          "Nicolas Doze souligne sur TF1 Info que le manque de cash et de trésorerie constitue la principale raison de cette chute."
-        ]
-      },
-      "differences": [
-        "La gauche met principalement l'accent sur la démarche volontaire de la direction et la volonté affichée de préserver l'emploi des salariés menacés.",
-        "Le centre dresse un panorama large et détaillé des causes structurelles de la crise, allant des difficultés financières aux erreurs informatiques et à la concurrence des plateformes internet et des discounters.",
-        "La droite se focalise sur les aspects économiques et procéduraux de la décision du tribunal de commerce, tout en pointant, par la voix de Nicolas Doze sur TF1 Info, le manque de trésorerie de l'enseigne."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 15,
-      "summarizedAt": "2026-11-04T08:01:18.616Z"
     },
     {
       "id": "7126784ee857",
@@ -13482,6 +12663,17 @@
       "storyDay": "2026-11-03",
       "articles": [
         {
+          "id": "b495a1b25463",
+          "outletId": "bfmtv",
+          "headline": "Attentat raciste de Trappes: le suspect, Kévin Tessier, a fait une tentative de suicide en détention",
+          "url": "https://www.bfmtv.com/police-justice/video-attentat-raciste-de-trappes-le-suspect-kevin-tessier-a-fait-une-tentative-de-suicide-en-detention_VN-202611040379.html",
+          "publishedAt": "2026-11-04T08:55:05.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/01o_XndEmFjrvh63UrX0V8zmW6U=/0x0:1280x720/800x0/images/Attentat-raciste-de-Trappes-le-suspect-Kevin-Tessier-a-fait-une-tentative-de-suicide-en-detention-2377783.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
           "id": "3d21bdfc6825",
           "outletId": "huffpost",
           "headline": "Kevin T, suspect de l’attentat raciste à Trappes, a tenté de se suicider en prison, ses jours ne sont pas en danger",
@@ -13864,7 +13056,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/11/03/midterms-2026-donald-trump-revele-a-fox-news-que-l-aide-militaire-a-israel-sera-coupee-a-la-fin-de-l-annee_6805657_3210.html",
           "publishedAt": "2026-11-03T19:30:07.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/28/480/0/5760/2880/644/322/60/0/56161a3_upload-1-ug56efapw7ud-lgeai-elections-colonies-3.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -14146,7 +13338,7 @@
           "url": "https://www.20minutes.fr/societe/4260108-20261103-greve-5-novembre-sncf-prevoit-deja-perturbations-assez-peu-reseau-tgv?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-03T16:29:37.000Z",
           "imageUrl": "https://img.20mn.fr/gYwvlBaWTqGzIAjZrqW2ISk/1200x768_un-tgv-inoui-nouvelle-generation-tgv-m-en-provenance-de-marseille-saint-charles-passe-en-gare-de-vert-de-maisons-et-file-vers-paris-france-30-10-2026-levequepatrick-261030-02-009-credit-patrick-leveque-sipa-2610311138",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -14893,119 +14085,304 @@
       "summarizedAt": "2026-11-03T22:01:21.787Z"
     },
     {
-      "id": "1a0f50b4708e",
-      "slug": "le-gouvernement-annonce-une-baisse-du-prix-du-gazole-dans-6-000",
-      "title": "Le gouvernement annonce une baisse du prix du gazole dans 6 000 stations-service",
-      "createdAt": "2026-11-03T12:01:24.716Z",
+      "id": "132b5084b08b",
+      "slug": "elon-musk-ironise-sur-la-deroute-electorale-des-republicains",
+      "title": "Elon Musk ironise sur la déroute électorale des Républicains après les midterms 2026",
+      "createdAt": "2026-11-04T08:01:18.616Z",
+      "storyDay": "2026-11-04",
+      "articles": [
+        {
+          "id": "6b5c658ac206",
+          "outletId": "le-parisien",
+          "headline": "Midterms 2026 : après avoir injecté des sommes record, Elon Musk ironise sur la défaite électorale des républicains",
+          "url": "https://www.leparisien.fr/international/etats-unis/elections-americaines/midterms-2026-apres-avoir-injecte-des-sommes-record-elon-musk-ironise-sur-la-defaite-electorale-des-republicains-04-11-2026-FUJAITEMWZB5DCLSYHMKFJBFXY.php",
+          "publishedAt": "2026-11-04T09:01:22.034Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c03f11130b3f",
+          "outletId": "franceinfo",
+          "headline": "Elon Musk, après avoir injecté des sommes record, ironise sur la défaite électorale des républicains lors des midterms 2026",
+          "url": "https://www.franceinfo.fr/monde/usa/midterms-2018/elon-musk-apres-avoir-injecte-des-sommes-record-ironise-sur-la-defaite-electorale-des-republicains-lors-des-midterms-2026_8267321.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-04T08:15:00.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/CdDMWxlhBSOI7iKLWCfwCy077hQ/0x0:8256x4644/432x243/filters:format(jpg)/2026/11/04/6aeae91973ec3937307987.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "668072cc180f",
+          "outletId": "bfmtv",
+          "headline": "\"Mes lasers spatiaux n'ont pas fonctionné cette fois\": Elon Musk sarcastique après la déroute électorale de Trump (malgré 446 millions de dollars dépensés pour les Républicains)",
+          "url": "https://www.bfmtv.com/economie/mes-lasers-spatiaux-n-ont-pas-fonctionne-cette-fois-elon-musk-sarcastique-apres-la-deroute-electorale-de-trump-malgre-446-millions-de-dollars-depenses-pour-les-republicains_AD-202611040329.html",
+          "publishedAt": "2026-11-04T07:59:37.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/kNvBfMDAJs2kg9sz1R184Mof_5k=/0x106:2048x1258/800x0/images/Elon-Musk-2361350.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "8f2368d9102a",
+          "outletId": "le-figaro",
+          "headline": "Midterms 2026 : «L’ingérence de mes lasers spatiaux dans les élections n’a pas fonctionné cette fois», ironise Elon Musk sur la déroute des républicains",
+          "url": "https://www.lefigaro.fr/international/midterms-2026-l-ingerence-de-mes-lasers-spatiaux-dans-les-elections-n-a-pas-fonctionne-cette-fois-ironise-elon-musk-sur-la-deroute-des-republicains-20261104",
+          "publishedAt": "2026-11-04T07:51:43.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/057d654af10bbed186fa5dadfcac06f52ab81c1fb9d29354b93a44bfe2680b7f.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "e0124e286ede",
+          "outletId": "humanite",
+          "headline": "« Mes lasers spatiaux destinés à interférer dans les élections n’ont pas fonctionné » : battu, Elon Musk ironise sur les élections",
+          "url": "https://www.humanite.fr/-/-/mes-lasers-spatiaux-destines-a-interferer-dans-les-elections-nont-pas-fonctionne-battu-elon-musk-minimise-le-reel",
+          "publishedAt": "2026-11-04T07:45:50.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "politics"
+        }
+      ],
+      "topicId": "132b5084b08b",
+      "titledArticleCount": 5,
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le multimilliardaire Elon Musk a échoué lors des midterms 2026 malgré une contribution financière avoisinant 445 millions de dollars en faveur du Parti républicain.",
+          "L'Humanité qualifie le fondateur de Tesla de « multimilliardaire fasciste » à la suite de cette défaite historique de son camp politique.",
+          "Le milliardaire a tourné en dérision ses revers électoraux sur X en évoquant ironiquement ses « lasers spatiaux »."
+        ],
+        "centre": [
+          "Elon Musk a réagi avec ironie sur X à la défaite des Républicains lors des élections de mi-mandat 2026.",
+          "Le milliardaire américain avait pourtant injecté des sommes record, estimées à 446 millions de dollars, pour soutenir les candidats de Donald Trump.",
+          "BFMTV précise que le patron de SpaceX a ironisé sur ses prétendus « lasers spatiaux » qui n'auraient pas fonctionné pour influencer le scrutin."
+        ],
+        "droite": [
+          "Elon Musk a ironisé mercredi sur la déroute électorale des Républicains lors des midterms 2026 après avoir consacré des centaines de millions de dollars à leur campagne.",
+          "Le Figaro rapporte que le patron de SpaceX a tourné en dérision ses revers, dont l'échec de Ken Paxton au Texas.",
+          "Le milliardaire a publié sur X la boutade suivante : « L’ingérence de mes lasers spatiaux dans les élections n’a pas fonctionné cette fois »."
+        ]
+      },
+      "differences": [
+        "La gauche qualifie sévèrement le milliardaire de « fasciste » en insistant sur le coût faramineux de ses ingérences politiques.",
+        "Le centre adopte un ton factuel et neutre en se concentrant sur les montants investis et la blague du milliardaire sur les réseaux sociaux.",
+        "La droite se focalise sur l'autodérision du patron de SpaceX en citant directement ses propos humoristiques sur ses revers électoraux."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-11-04T09:01:22.034Z"
+    },
+    {
+      "id": "5bfa1f825bee",
+      "slug": "le-groupe-gifi-est-place-en-redressement-judiciaire-avec-6000",
+      "title": "Le groupe GiFi est placé en redressement judiciaire : 6000 emplois menacés en France",
+      "createdAt": "2026-11-03T09:01:20.588Z",
       "storyDay": "2026-11-03",
       "articles": [
         {
-          "id": "326afe5b35c7",
-          "outletId": "le-parisien",
-          "headline": "Baisse des prix du gazole : jusqu’à quand les automobilistes vont pouvoir en profiter ?",
-          "url": "https://www.leparisien.fr/economie/consommation/baisse-des-prix-du-gazole-jusqua-quand-les-automobilistes-vont-pouvoir-en-profiter-03-11-2026-TZGODULRPFBIHFFXNH6SCJ3D6I.php",
-          "publishedAt": "2026-11-03T17:01:24.231Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "dfef5e075edf",
-          "outletId": "20-minutes",
-          "headline": "Prix du carburant : Six stations sur dix ont répercuté une (petite) baisse du prix du gazole, selon le gouvernement",
-          "url": "https://www.20minutes.fr/societe/4260074-20261103-prix-carburant-six-stations-dix-repercute-petite-baisse-prix-gazole-selon-gouvernement?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-03T15:06:06.000Z",
-          "imageUrl": "https://img.20mn.fr/ecPNV5qOTmO5pS9lxh70bSk/1200x768_des-photographies-illustratives-montrent-des-affichages-des-prix-du-carburant-et-des-pompes-a-essence-dans-les-stations-service-e-leclerc-en-france-mettant-en-evidence-l-evolution-des-prix-de-l-essence-et-du-diesel-2-novembre-2026-greuezfrancois-sipa-03565-credit-francois-greuez-sipa-2611021359",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        },
-        {
-          "id": "ce3a61587ce6",
-          "outletId": "le-parisien",
-          "headline": "Carburants : baisse des prix entamée pour 6 000 stations-service, « ça va continuer » assure le ministre Serge Papin",
-          "url": "https://www.leparisien.fr/economie/carburants-baisse-des-prix-entamee-pour-6-000-stations-service-ca-va-continuer-assure-le-ministre-serge-papin-03-11-2026-3LN3YAVSF5C65NDJP7AKEQDTLA.php",
-          "publishedAt": "2026-11-03T12:01:24.716Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "05ac5497277b",
-          "outletId": "franceinfo",
-          "headline": "Après le déstockage des réserves stratégiques, la baisse des prix des carburants amorcée dans 6 000 stations-service, selon le gouvernement",
-          "url": "https://www.franceinfo.fr/economie/automobile/essence/apres-le-destockage-des-reserves-strategiques-la-baisse-des-prix-des-carburants-amorcee-dans-6-000-stations-service-selon-le-gouvernement_8265662.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T11:10:25.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/uGmMajEhDdN0yfvBit8Zcl31-Zw/0x97:1024x673/432x243/filters:format(jpg)/2026/11/03/6ae9c10236f7b479898192.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "1b83ccf8c046",
+          "id": "bf86fb15c105",
           "outletId": "tf1-info",
-          "headline": "Baisse du prix du gazole dans \"6.000 stations\" : \"Ce qu'on fait est historique\", estime Roland Lescure",
-          "url": "https://www.tf1info.fr/societe/video-baisse-des-prix-des-carburants-gazole-dans-6-000-stations-ce-qu-on-fait-est-historique-estime-roland-lescure-2473586.html",
-          "publishedAt": "2026-11-03T11:01:13.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/baisse-des-prix-des-carburants-dans-6-000-stations-ce-qu-on-fait-est-historique-estime-roland-lescure-da6c4f-0@1x.jpeg",
+          "headline": "Nicolas ose : En redressement, GiFi a besoin d'une idée de génie",
+          "url": "https://www.tf1info.fr/economie/videos/video-nicolas-ose-en-redressement-gifi-a-besoin-d-une-idee-de-genie-6778-2473766.html",
+          "publishedAt": "2026-11-04T07:55:15.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/576/nicolas-ose-en-redressement-gifi-a-besoin-d-une-idee-de-genie-20e816-0@1x.jpeg",
           "frontPage": false,
           "kind": "news",
           "section": "economy"
         },
         {
-          "id": "02bc7fdc24f6",
+          "id": "1e349039341b",
+          "outletId": "franceinfo",
+          "headline": "Concurrence accrue, direction instable, finances dans le rouge... Pourquoi Gifi, placée en redressement judiciaire, se retrouve en grande difficulté",
+          "url": "https://www.franceinfo.fr/economie/concurrence-accrue-direction-instable-finances-dans-le-rouge-pourquoi-gifi-placee-en-redressement-judiciaire-se-retrouve-en-grande-difficulte_8265626.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-03T18:02:56.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/bonuue0hdNDShrlivjsD-b0Fyvo/0x95:1024x671/432x243/filters:format(jpg)/2026/11/03/6aea16e82b007299856427.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "15f2ca2f2862",
+          "outletId": "franceinfo",
+          "headline": "Après le placement en redressement judiciaire du groupe Gifi, les 6 000 salariés sont inquiets",
+          "url": "https://www.franceinfo.fr/economie/apres-le-placement-en-redressement-judiciaire-du-groupe-gifi-les-6-000-salaries-sont-inquiets_8265887.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-03T16:03:50.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/VnjblzWpDYg_HGueNwTgyGE2PGE/0x0:1459x820/432x243/filters:format(jpg)/2026/11/03/6ae9df95aebcc589455965.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "1d98a5705303",
+          "outletId": "huffpost",
+          "headline": "Le groupe GiFi à son tour placé en redressement judiciaire",
+          "url": "https://www.huffingtonpost.fr/france/article/le-groupe-gifi-a-son-tour-place-en-redressement-judiciaire_351221.html",
+          "publishedAt": "2026-11-03T09:28:56.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/03/714/0/5976/3361/0/0/60/0/a731e44_upload-1-1eol95edhoie-afp-20261008-hl-gdziedzic-3329819-v2-highres-francetoulousegifi.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "d8826cf0bb06",
+          "outletId": "la-croix",
+          "headline": "Gifi : l’enseigne de vente d’objets à petit prix placé en redressement judiciaire",
+          "url": "https://www.la-croix.com/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103",
+          "publishedAt": "2026-11-03T09:11:19.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/10/20/2567944-apres-de-graves-difficultes-et-une-valse-des-dirig.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "3210ae417c2b",
           "outletId": "le-figaro",
-          "headline": "Carburants : 6000 stations sur les 10.000 que compte le pays ont déjà baissé le prix du gazole, se félicite Serge Papin",
-          "url": "https://www.lefigaro.fr/conso/carburants-6000-stations-sur-les-10-000-que-compte-le-pays-ont-deja-baisse-le-prix-du-gazole-se-felicite-serge-papin-20261103",
-          "publishedAt": "2026-11-03T10:35:11.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/03/0985d82bb8366b52d78387cdea5470d11047f7f39943c3a16f1ace784186567d.jpg",
+          "headline": "«Il n’a pas su se réinventer» : en redressement judiciaire, Gifi est menacé d’être vendu à la découpe",
+          "url": "https://www.lefigaro.fr/societes/il-n-a-pas-su-se-reinventer-au-bord-de-la-faillite-gifi-est-menace-d-etre-vendu-a-la-decoupe-20261019",
+          "publishedAt": "2026-11-03T09:05:59.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/19/aa4055978f07a16ceacaf460f281dab0443a2ff37ae6ae343cd6bde2f17c1efc.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
         },
         {
-          "id": "1a3e9fa4940d",
+          "id": "ec7786f49697",
+          "outletId": "le-parisien",
+          "headline": "Le groupe GiFi, en grande difficulté financière, placé en redressement judiciaire",
+          "url": "https://www.leparisien.fr/economie/le-groupe-gifi-en-grande-difficulte-financiere-place-en-redressement-judiciaire-03-11-2026-SD5VISPGGRD47KNRPHYHPZIDGY.php",
+          "publishedAt": "2026-11-03T09:01:20.588Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "bc0376acc9bc",
+          "outletId": "le-figaro",
+          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire, 6000 emplois menacés en France",
+          "url": "https://www.lefigaro.fr/societes/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103",
+          "publishedAt": "2026-11-03T08:49:49.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/03/38d2e41db5787871407e28ecaf81a84de22f2fe0a0601f9b6cfee37ba7232c07.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "0c445849cd2d",
+          "outletId": "le-monde",
+          "headline": "Le groupe GiFi placé en redressement judiciaire à sa demande, 6 000 emplois menacés en France",
+          "url": "https://www.lemonde.fr/economie/article/2026/11/03/le-groupe-gifi-place-en-redressement-judiciaire-a-sa-demande-6-000-emplois-menaces-en-france_6805546_3234.html",
+          "publishedAt": "2026-11-03T08:46:18.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/03/478/0/5734/2867/644/322/60/0/60a5920_upload-1-15izcx19spv2-000-c96k2vb.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "f7a8413a2018",
+          "outletId": "ouest-france",
+          "headline": "Le groupe Gifi placé en redressement judiciaire par le tribunal de commerce de Toulouse",
+          "url": "https://www.ouest-france.fr/economie/entreprises/le-groupe-gifi-a-ete-place-en-redressement-judiciaire-fd6092ca-d760-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-03T08:42:02.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTgyYjEwNzAyMDAyNzJjN2RiYTEwNDM0MWEzOGFhYTQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=eff7525f2795ae95258eb29a3fda5a540159b04812fe26ab1002a6926d3ca178",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "c639c45597ce",
           "outletId": "europe-1",
-          "headline": "Crise des carburants : les prix ont amorcé leur baisse, mais pour les gros rouleurs, «ce n'est pas assez»",
-          "url": "https://www.europe1.fr/societe/crise-des-carburants-les-prix-ont-amorce-leur-baisse-mais-pour-les-gros-rouleurs-ce-nest-pas-assez-1204658?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-03T08:27:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/08/080_hl_stenani_3370031_1_6ae98b2737c36.jpg",
+          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire",
+          "url": "https://www.europe1.fr/economie/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-1204823?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-03T08:34:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/09/080_hl_gdziedzic_3369781_1_6ae99caa2b5f3.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "de656855b6c7",
+          "outletId": "franceinfo",
+          "headline": "Le groupe Gifi est placé en redressement judiciaire",
+          "url": "https://www.franceinfo.fr/economie/le-groupe-gifi-est-place-en-redressement-judiciaire_8265437.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-03T08:33:24.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/mynWyNWQF5SF7sq0WOd3vH235ok/0x106:1024x682/432x243/filters:format(jpg)/2026/11/03/6ae99c1f459b6474691632.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "3455458218a3",
+          "outletId": "tf1-info",
+          "headline": "L'enseigne GiFi, en grande difficulté, placée en redressement judiciaire",
+          "url": "https://www.tf1info.fr/economie/l-enseigne-gifi-en-grande-difficulte-placee-en-redressement-judiciaire-par-le-tribunal-2473546.html",
+          "publishedAt": "2026-11-03T08:26:32.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/652/gifi-enseigne-aee1a7-1@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "4d9c9a2ca287",
+          "outletId": "liberation",
+          "headline": "En grande difficulté, le groupe GiFi placé en redressement judiciaire",
+          "url": "https://www.liberation.fr/economie/en-grande-difficulte-le-groupe-gifi-place-en-redressement-judiciaire-20261103_BWOUCCF3ANB67L6PPKPWP3MTAM/",
+          "publishedAt": "2026-11-03T08:25:06.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "df33bd13a74e",
+          "outletId": "bfmtv",
+          "headline": "Un fiasco informatique, la concurrence d'Action... L'enseigne GiFi est placée en redressement judiciaire",
+          "url": "https://www.bfmtv.com/economie/entreprises/accumulant-les-difficultes-l-enseigne-gi-fi-placee-en-redressement-judiciaire_AD-202611030331.html",
+          "publishedAt": "2026-11-03T08:17:53.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/uWh7eXBkft0s4nhwE7dHicGeDK4=/0x106:2048x1258/800x0/images/Une-personne-se-dirige-vers-l-entree-d-un-magasin-Gifi-a-Lesneven-en-Bretagne-France-le-2-decembre-2025-2367934.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "economy"
         }
       ],
-      "topicId": "a13153bef56f",
-      "titledArticleCount": 7,
+      "topicId": "5bfa1f825bee",
+      "titledArticleCount": 15,
       "section": "economy",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Le gouvernement indique que six stations sur dix appliquent une baisse moyenne de 12 centimes sur le gazole routier, le fioul domestique et le gasoil non routier.",
-          "Cette réduction des tarifs fait suite à la mise sur le marché de stocks stratégiques de carburant."
+          "Le tribunal de commerce de Toulouse a prononcé le redressement judiciaire du groupe GiFi à la demande de sa direction.",
+          "La procédure vise officiellement à protéger un maximum de salariés parmi les 6 000 employés en France.",
+          "Le nouveau président du directoire a indiqué aux salariés que la décision n'entraînera aucune conséquence immédiate sur l'emploi."
         ],
         "centre": [
-          "Les autorités annoncent une baisse des prix du gazole touchant 6 000 stations-service sur les 10 000 que compte le pays.",
-          "Le ministre Serge Papin assure que cette diminution des tarifs va se poursuivre pour les automobilistes."
+          "Le groupe GiFi a été placé en redressement judiciaire par le tribunal de commerce de Toulouse, qui a fixé une période d'observation de six mois.",
+          "Une nouvelle audience a été programmée au 8 janvier afin d'évaluer les capacités financières de l'entreprise pour la poursuite de son activité.",
+          "Les difficultés du groupe s'expliquent notamment par une concurrence accrue, une instabilité de la direction, un fiasco informatique survenu en 2023 et la pression d'enseignes concurrentes comme Action."
         ],
         "droite": [
-          "Les ministres Serge Papin et Roland Lescure qualifient l'opération d'historique après la libération de dix millions de barils issus des stocks stratégiques.",
-          "Le prix du gazole a reculé de 12 centimes en moyenne, et de plus de 15 centimes dans 4 000 stations selon les données officielles.",
-          "Europe 1 relève toutefois le scepticisme de certains automobilistes lyonnais et des gros rouleurs qui jugent le geste insuffisant face à une mesure limitée à trois mois."
+          "Le tribunal de commerce de Toulouse a placé l'enseigne GiFi en redressement judiciaire et a ouvert une période d'observation de six mois.",
+          "Une audience est prévue le 8 janvier pour faire le point sur la situation financière de l'entreprise et l'avenir des 6 000 salariés en France.",
+          "Nicolas Doze souligne sur TF1 Info que le manque de cash et de trésorerie constitue la principale raison de cette chute."
         ]
       },
       "differences": [
-        "La gauche met principalement l'accent sur l'étendue concrète du déstockage des réserves stratégiques et sa portée sur les différents types de carburants.",
-        "Le centre privilégie une approche institutionnelle et factuelle centrée sur les déclarations gouvernementales et le nombre précis de stations concernées.",
-        "La droite adopte un ton plus triomphant sur le caractère historique de la mesure ministérielle, tout en intégrant des réactions contrastées d'automobilistes qui doutent de la pérennité du dispositif."
+        "La gauche met principalement l'accent sur la démarche volontaire de la direction et la volonté affichée de préserver l'emploi des salariés menacés.",
+        "Le centre dresse un panorama large et détaillé des causes structurelles de la crise, allant des difficultés financières aux erreurs informatiques et à la concurrence des plateformes internet et des discounters.",
+        "La droite se focalise sur les aspects économiques et procéduraux de la décision du tribunal de commerce, tout en pointant, par la voix de Nicolas Doze sur TF1 Info, le manque de trésorerie de l'enseigne."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 7,
-      "summarizedAt": "2026-11-03T19:01:23.572Z"
+      "summarizedArticleCount": 15,
+      "summarizedAt": "2026-11-04T08:01:18.616Z"
     },
     {
       "id": "ca423ea9a0cb",
@@ -15276,6 +14653,121 @@
       "summarizedAt": "2026-11-04T00:01:24.314Z"
     },
     {
+      "id": "1a0f50b4708e",
+      "slug": "le-gouvernement-annonce-une-baisse-du-prix-du-gazole-dans-6-000",
+      "title": "Le gouvernement annonce une baisse du prix du gazole dans 6 000 stations-service",
+      "createdAt": "2026-11-03T12:01:24.716Z",
+      "storyDay": "2026-11-03",
+      "articles": [
+        {
+          "id": "326afe5b35c7",
+          "outletId": "le-parisien",
+          "headline": "Baisse des prix du gazole : jusqu’à quand les automobilistes vont pouvoir en profiter ?",
+          "url": "https://www.leparisien.fr/economie/consommation/baisse-des-prix-du-gazole-jusqua-quand-les-automobilistes-vont-pouvoir-en-profiter-03-11-2026-TZGODULRPFBIHFFXNH6SCJ3D6I.php",
+          "publishedAt": "2026-11-03T17:01:24.231Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "dfef5e075edf",
+          "outletId": "20-minutes",
+          "headline": "Prix du carburant : Six stations sur dix ont répercuté une (petite) baisse du prix du gazole, selon le gouvernement",
+          "url": "https://www.20minutes.fr/societe/4260074-20261103-prix-carburant-six-stations-dix-repercute-petite-baisse-prix-gazole-selon-gouvernement?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-03T15:06:06.000Z",
+          "imageUrl": "https://img.20mn.fr/ecPNV5qOTmO5pS9lxh70bSk/1200x768_des-photographies-illustratives-montrent-des-affichages-des-prix-du-carburant-et-des-pompes-a-essence-dans-les-stations-service-e-leclerc-en-france-mettant-en-evidence-l-evolution-des-prix-de-l-essence-et-du-diesel-2-novembre-2026-greuezfrancois-sipa-03565-credit-francois-greuez-sipa-2611021359",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "ce3a61587ce6",
+          "outletId": "le-parisien",
+          "headline": "Carburants : baisse des prix entamée pour 6 000 stations-service, « ça va continuer » assure le ministre Serge Papin",
+          "url": "https://www.leparisien.fr/economie/carburants-baisse-des-prix-entamee-pour-6-000-stations-service-ca-va-continuer-assure-le-ministre-serge-papin-03-11-2026-3LN3YAVSF5C65NDJP7AKEQDTLA.php",
+          "publishedAt": "2026-11-03T12:01:24.716Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "05ac5497277b",
+          "outletId": "franceinfo",
+          "headline": "Après le déstockage des réserves stratégiques, la baisse des prix des carburants amorcée dans 6 000 stations-service, selon le gouvernement",
+          "url": "https://www.franceinfo.fr/economie/automobile/essence/apres-le-destockage-des-reserves-strategiques-la-baisse-des-prix-des-carburants-amorcee-dans-6-000-stations-service-selon-le-gouvernement_8265662.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-03T11:10:25.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/uGmMajEhDdN0yfvBit8Zcl31-Zw/0x97:1024x673/432x243/filters:format(jpg)/2026/11/03/6ae9c10236f7b479898192.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "1b83ccf8c046",
+          "outletId": "tf1-info",
+          "headline": "Baisse du prix du gazole dans \"6.000 stations\" : \"Ce qu'on fait est historique\", estime Roland Lescure",
+          "url": "https://www.tf1info.fr/societe/video-baisse-des-prix-des-carburants-gazole-dans-6-000-stations-ce-qu-on-fait-est-historique-estime-roland-lescure-2473586.html",
+          "publishedAt": "2026-11-03T11:01:13.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/576/baisse-des-prix-des-carburants-dans-6-000-stations-ce-qu-on-fait-est-historique-estime-roland-lescure-da6c4f-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "02bc7fdc24f6",
+          "outletId": "le-figaro",
+          "headline": "Carburants : 6000 stations sur les 10.000 que compte le pays ont déjà baissé le prix du gazole, se félicite Serge Papin",
+          "url": "https://www.lefigaro.fr/conso/carburants-6000-stations-sur-les-10-000-que-compte-le-pays-ont-deja-baisse-le-prix-du-gazole-se-felicite-serge-papin-20261103",
+          "publishedAt": "2026-11-03T10:35:11.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/03/0985d82bb8366b52d78387cdea5470d11047f7f39943c3a16f1ace784186567d.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "1a3e9fa4940d",
+          "outletId": "europe-1",
+          "headline": "Crise des carburants : les prix ont amorcé leur baisse, mais pour les gros rouleurs, «ce n'est pas assez»",
+          "url": "https://www.europe1.fr/societe/crise-des-carburants-les-prix-ont-amorce-leur-baisse-mais-pour-les-gros-rouleurs-ce-nest-pas-assez-1204658?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-03T08:27:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/08/080_hl_stenani_3370031_1_6ae98b2737c36.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "topicId": "a13153bef56f",
+      "titledArticleCount": 7,
+      "section": "economy",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le gouvernement indique que six stations sur dix appliquent une baisse moyenne de 12 centimes sur le gazole routier, le fioul domestique et le gasoil non routier.",
+          "Cette réduction des tarifs fait suite à la mise sur le marché de stocks stratégiques de carburant."
+        ],
+        "centre": [
+          "Les autorités annoncent une baisse des prix du gazole touchant 6 000 stations-service sur les 10 000 que compte le pays.",
+          "Le ministre Serge Papin assure que cette diminution des tarifs va se poursuivre pour les automobilistes."
+        ],
+        "droite": [
+          "Les ministres Serge Papin et Roland Lescure qualifient l'opération d'historique après la libération de dix millions de barils issus des stocks stratégiques.",
+          "Le prix du gazole a reculé de 12 centimes en moyenne, et de plus de 15 centimes dans 4 000 stations selon les données officielles.",
+          "Europe 1 relève toutefois le scepticisme de certains automobilistes lyonnais et des gros rouleurs qui jugent le geste insuffisant face à une mesure limitée à trois mois."
+        ]
+      },
+      "differences": [
+        "La gauche met principalement l'accent sur l'étendue concrète du déstockage des réserves stratégiques et sa portée sur les différents types de carburants.",
+        "Le centre privilégie une approche institutionnelle et factuelle centrée sur les déclarations gouvernementales et le nombre précis de stations concernées.",
+        "La droite adopte un ton plus triomphant sur le caractère historique de la mesure ministérielle, tout en intégrant des réactions contrastées d'automobilistes qui doutent de la pérennité du dispositif."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 7,
+      "summarizedAt": "2026-11-03T19:01:23.572Z"
+    },
+    {
       "id": "58ab385638d1",
       "slug": "plusieurs-dizaines-de-kilos-d-or-derobes-lors-du-braquage-d-une",
       "title": "Besançon : une usine de joaillerie victime d'un braquage, plusieurs dizaines de kilos d'or dérobés",
@@ -15391,9 +14883,10 @@
           "url": "https://www.lemonde.fr/sport/article/2026/11/04/route-du-rhum-l-ocean-fifty-elvest-de-matthieu-perraut-a-chavire_6806116_3242.html",
           "publishedAt": "2026-11-04T06:49:58.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/01/445/0/5341/2670/644/322/60/0/66e765f_ftp-1-ubz7hxjkmfxl-afp-d63l9qx.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
-          "section": "sport"
+          "section": "sport",
+          "everFrontPage": true
         },
         {
           "id": "be8b747a8d16",
@@ -15459,413 +14952,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 4,
       "summarizedAt": "2026-11-04T07:01:17.984Z"
-    },
-    {
-      "id": "246703530c6b",
-      "slug": "le-proces-des-parents-de-l-enfant-martyre-de-l-a10-s-ouvre",
-      "title": "Procès de la petite martyre de l'A10 : les parents jugés 39 ans après la mort d'Inass Touloub",
-      "createdAt": "2026-11-01T19:01:14.528Z",
-      "storyDay": "2026-11-01",
-      "articles": [
-        {
-          "id": "412dfea35c9c",
-          "outletId": "le-point",
-          "headline": "Procès de la petite martyre de l’A10 : « C’est le seul enfant dans ma carrière que j’ai vu dans cet état… »",
-          "url": "https://www.lepoint.fr/societe/proces-de-la-petite-martyre-de-la10-cest-le-seul-enfant-dans-ma-carriere-que-jai-vu-dans-cet-etat-CIWRYZGGURGBDHLWRQS5BEDULE/",
-          "publishedAt": "2026-11-04T05:30:00.000Z",
-          "imageUrl": "https://www.lepoint.fr/resizer/v2/LQOQ6BLDNNKZVE7RKFIMQ6UGDA.jpg?auth=9fe96094c2a0ffe0750d95b1a2944421bcb74bac8f39f11685b63e266a4c6013&smart=true&width=1200&height=900",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "1c203795acdc",
-          "outletId": "franceinfo",
-          "headline": "\"C'est le seul enfant que j'ai vu dans cet état\" : au procès des parents de \"la petite martyre de l'A10\", le calvaire d'Inass Touloub se dessine",
-          "url": "https://www.franceinfo.fr/faits-divers/martyre-de-l-a10/c-est-le-seul-enfant-que-j-ai-vu-dans-cet-etat-au-proces-des-parents-de-la-petite-martyre-de-l-a10-le-calvaire-d-inass-touloub-se-dessine_8266418.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-04T05:03:30.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/DTXkZ3WO-gWnRMhLg5FwTMD6GJE/0x0:2048x1152/432x243/filters:format(jpg)/2026/11/03/6aea38f957e81141507453.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "74ac9271114e",
-          "outletId": "liberation",
-          "headline": "Au procès de «l’inconnue de l’A10», l’enfant dans la couverture bleue et l’enquête impossible",
-          "url": "https://www.liberation.fr/societe/police-justice/au-proces-de-linconnue-de-la10-les-images-de-lenfant-dans-la-couverture-bleue-et-lenquete-impossible-20261103_5N2T3FV6URC4NMCBI2X2EXOHRQ/",
-          "publishedAt": "2026-11-03T19:47:52.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "ecf68eb83049",
-          "outletId": "20-minutes",
-          "headline": "Martyre de l'A10 : « Vite, c’est pas une poupée »… L’émotion à vif de ceux qui ont découvert le corps martyrisé d’Inass",
-          "url": "https://www.20minutes.fr/justice/4259849-20261103-martyre-a10-vite-poupee-emotion-vif-ceux-decouvert-corps-martyrise-inass?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-03T15:45:37.000Z",
-          "imageUrl": "https://img.20mn.fr/4soyRBpLRbeNS9KhT42wgSk/1200x768_le-11-aout-1987-le-corps-d-une-fillette-de-4-ans-portant-des-marques-de-torture-a-ete-retrouve-mort-au-bord-de-l-a10-pres-de-blois-mais-pendant-plus-de-trois-decennies-les-enqueteurs-ont-peine-a-mettre-un-nom-sur-cette-victime-inass-touloub",
-          "frontPage": true,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "d6c1e3a40392",
-          "outletId": "le-parisien",
-          "headline": "« C’est pas vrai » : jugés aux assises 39 ans après, les parents de « la petite martyre de l’A10 » nient tout",
-          "url": "https://www.leparisien.fr/faits-divers/cest-pas-vrai-les-parents-de-linconnue-de-la10-nient-tout-03-11-2026-KIWGGENPSJAQFG6EGZBLQEFCTY.php",
-          "publishedAt": "2026-11-03T07:01:24.276Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "009a05754e6e",
-          "outletId": "le-point",
-          "headline": "Au procès de la martyre de l’A10 : « Il y a une justice, c’est ici qu’elle va passer, pas dans la rue ! »",
-          "url": "https://www.lepoint.fr/societe/au-proces-de-la-martyre-de-la10-il-y-a-une-justice-cest-ici-quelle-va-passer-pas-dans-la-rue-ZMJCEWMFRVBBJEXEZOVVUGDUSQ/",
-          "publishedAt": "2026-11-03T06:46:49.000Z",
-          "imageUrl": "https://www.lepoint.fr/resizer/v2/HLWUKTKBURKW5AFJVFCAFPJ7BU.jpg?auth=138ef342f20c8d0d999418b22cb283d794bc63231d5e81f48e7a2ec5b6465cdc&smart=true&width=1200&height=900",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "43642998b03a",
-          "outletId": "franceinfo",
-          "headline": "\"Des fois, j'ai des trous de mémoire\" : au premier jour de leur procès, l'état de santé des parents de la \"martyre de l'A10\" au cœur des débats",
-          "url": "https://www.franceinfo.fr/faits-divers/martyre-de-l-a10/des-fois-j-ai-des-trous-de-memoire-au-premier-jour-de-leur-proces-l-etat-de-sante-des-parents-de-la-martyre-de-l-a10-au-c-ur-des-debats_8264537.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T05:01:07.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/uNXmIQOfW9htAjQicp3jISFZYkw/0x150:1600x1050/432x243/filters:format(jpg)/2026/11/02/6ae8ccdd1fa4d606725891.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "ab22ad430c65",
-          "outletId": "le-monde",
-          "headline": "Au premier jour du procès de « la petite inconnue de l’A10 » : « Monsieur, vous m’entendez ? » « Madame, vous êtes là ? »",
-          "url": "https://www.lemonde.fr/societe/article/2026/11/03/au-premier-jour-du-proces-de-la-petite-inconnue-de-l-a10-monsieur-vous-m-entendez-madame-vous-etes-la_6805486_3224.html",
-          "publishedAt": "2026-11-03T04:00:08.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/02/642/0/7704/3852/644/322/60/0/66da241_ftp-1-wdm6e2ebdgpi-afp-d66r2dz.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "0426b3ae43d7",
-          "outletId": "huffpost",
-          "headline": "Au procès de la mort de la « martyre de l’A10 », une première journée houleuse",
-          "url": "https://www.huffingtonpost.fr/france/article/au-proces-de-la-mort-de-la-martyre-de-l-a10-une-premiere-journee-houleuse_350858.html",
-          "publishedAt": "2026-11-02T21:12:55.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/02/0/0/5831/3279/0/0/60/0/554df3f_upload-1-060wihjgkyg9-afp-20261102-d66n3fg-v1-highres-francejusticecrimechildren.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "6526afd809b2",
-          "outletId": "tf1-info",
-          "headline": "Martyre de l'A10 : vive émotion à l'ouverture du procès",
-          "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-martyre-de-l-a10-vive-emotion-a-l-ouverture-du-proces-66226-2473493.html",
-          "publishedAt": "2026-11-02T21:10:22.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/martyre-de-l-a10-vive-emotion-a-l-ouverture-du-proces-5665a7-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "f85f6b83dc10",
-          "outletId": "20-minutes",
-          "headline": "Petite martyre de l’A10 : « Je vais essayer de venir et assumer »… La mémoire fuyante des parents d’Inass Touloub",
-          "url": "https://www.20minutes.fr/justice/4259840-20261102-petite-martyre-a10-vais-essayer-venir-assumer-memoire-fuyante-parents-inass-touloub?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-02T20:46:00.000Z",
-          "imageUrl": "https://img.20mn.fr/dS4_mGHXQZ-X-DX8N-ZxsSk/1200x768_illustration-aquarelle-d-une-vue-rapprochee-du-visage-d-un-enfant-aux-yeux-fermes-tenu-par-les-deux-mains-d-un-enqueteur-montrant-une-photo-d-inass-touloub-une-fillette-de-quatre-ans-retrouvee-mutilee-au-bord-de-l-autoroute-a10-pres-de-suevres-dans-le-loir-et-cher-en-france-le-11-aout-1987-l-illustration-evoque-l-affaire-non-resolue-depuis-longtemps-identifiee-des-decennies-plus-tard-grace-a-l-adn-et-le-proces-de-ses-parents-39-ans-apres-les-faits-illustration-a-l-aquarelle-en-gros-plan-du-visage-d-un-enfant-aux-yeux-fermes-tenu-par-les-mains-d-un-enqueteur-qui-montre-une-photo-d-inass-touloub-fillette-de-quatre-ans-retrouvee-mutilee-au-bord-de-l-autoroute-a10-pres-de-suevres-dans-le-loir-et-cher-en-france-le-11-aout-1987-l-illustration-evoque-cette-affaire-longtemps-classee-sans-suite-identifiee-des-decennies-plus-tard-grace-a-l-adn-et-le-processus-des-parents-39-ans-apres-les-faits-zziigg-martyre-de-l-a10-inass-touloub-credit-zziigg-sipa-2610310120",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "2bde208c600e",
-          "outletId": "le-parisien",
-          "headline": "[REDIFF] Les parents de « la petite martyre de l’A10 » jugés 39 ans après sa mort",
-          "url": "https://www.leparisien.fr/podcasts/code-source/rediff-les-parents-de-la-petite-martyre-de-la10-juges-39-ans-apres-sa-mort-02-11-2026-IZ4FDPG24NBLBELELCU264DSFU.php",
-          "publishedAt": "2026-11-02T18:02:43.496Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "79045883bb37",
-          "outletId": "le-figaro",
-          "headline": "«Ils ont menti sur moi, c’est pas vrai» : 39 ans après, les premiers mots des parents de «la martyre de l’A10» face aux juges",
-          "url": "https://www.lefigaro.fr/faits-divers/ils-ont-menti-sur-moi-c-est-pas-vrai-39-ans-apres-les-premiers-mots-des-parents-de-la-martyre-de-l-a10-face-aux-juges-20261102",
-          "publishedAt": "2026-11-02T17:27:59.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/02/8a33f913f73c206b5cd0145c635ece9d750512c36449e2c9162965d790802e92.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "df5c404f9d4d",
-          "outletId": "europe-1",
-          "headline": "Procès de la «martyre de l'A10» : la mère de la fillette prise à partie par des manifestants à Blois",
-          "url": "https://www.europe1.fr/police-justice/proces-de-la-martyre-de-la10-la-mere-de-la-fillette-prise-a-partie-par-des-manifestants-a-blois-1203060?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-02T14:32:47.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/02/15/000_d66n3cx_1_6ae8a02027b52.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "75094708e7e2",
-          "outletId": "bfmtv",
-          "headline": "Le procès de la \"petite martyre de l'A10\" s'ouvre, 39 ans après les faits",
-          "url": "https://www.bfmtv.com/police-justice/video-le-proces-de-la-petite-martyre-de-l-a10-s-ouvre-39-ans-apres-les-faits_VN-202611020466.html",
-          "publishedAt": "2026-11-02T10:59:31.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/8aB6-1HEF9yXZz8cwAhctFOHGUo=/0x0:1280x720/800x0/images/Le-proces-de-la-petite-martyre-de-l-A10-s-ouvre-39-ans-apres-les-faits-2376275.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "8b0826b88ffa",
-          "outletId": "ouest-france",
-          "headline": "« Redonner un peu de dignité à cette fillette » : petite martyre de l’A10, Inass, tuée il y a 39 ans, attend justice",
-          "url": "https://www.ouest-france.fr/societe/justice/petite-martyre-de-la10-inass-tuee-a-4-ans-attend-justice-ab50853a-d62a-11f1-9ffa-07ff3c370e50?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-02T07:45:55.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYzJkMzYzMDAyYTcxZTU0NWYwZmFkOWQ0NzAyODZhZjQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2970b84ef957160b6f96215e79703fc4bd25f1d77e6679d1d38c70706869247c",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "1eeef744f5c4",
-          "outletId": "le-figaro",
-          "headline": "«J’entre dans la chambre et je ressens que quelque chose d’horrible est arrivé» : la martyre de l’A10, trente ans de mystère et un secret de famille",
-          "url": "https://www.lefigaro.fr/faits-divers/j-entre-dans-la-chambre-et-je-ressens-que-quelque-chose-d-horrible-est-arrive-la-martyre-de-l-a10-trente-ans-de-mystere-et-un-secret-de-famille-20261021",
-          "publishedAt": "2026-11-02T06:40:04.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/1391x782_crop/2026/11/02/fcadef4444b31ff7232f0cbf5a2f64e0e918d6185e10dc99ec0c4af74093b28c.png",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "6a58cd88d009",
-          "outletId": "le-point",
-          "headline": "Procès de la martyre de l’A10 : « Des enquêteurs ont longtemps gardé la photo de la petite Inass dans leur portefeuille… »",
-          "url": "https://www.lepoint.fr/societe/proces-de-la-martyre-de-la10-des-enqueteurs-ont-longtemps-garde-la-photo-de-la-petite-inass-dans-LW7VHGPL7RGWJHTOJNBWOEQMR4/",
-          "publishedAt": "2026-11-02T06:30:00.000Z",
-          "imageUrl": "https://www.lepoint.fr/resizer/v2/F3HBJJAKLFCX3A6N2QYB6EB5YY.jpg?auth=462ab3c094c5a323f6ad027529841dde61b9bb118a5e626bbe19bc8cd309d131&smart=true&width=1200&height=900",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "f95c20574c4a",
-          "outletId": "ouest-france",
-          "headline": "« Un dossier très présent » : quand l’enquête sur la petite martyre de l’A10 hantait la section de recherches d’Orléans",
-          "url": "https://www.ouest-france.fr/societe/justice/un-dossier-tres-present-quand-lenquete-sur-la-petite-martyre-de-la10-hantait-la-section-de-recherches-dorleans-48f0633e-c93b-11f1-ad87-e24a1a2986e9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-02T06:00:45.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZTI0YjM5NjRhODc2ZjBmYzQ0NzNjZGYzZDQ1M2VhN2I?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=8be1ee581371553b52eb957a5255967941658ec7be1f98de90d04e9d42228de2",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "49ea339893c8",
-          "outletId": "tf1-info",
-          "headline": "\"Comment on en arrive à un tel degré de barbarie ?\" : un village partie civile au procès des parents de la \"martyre de l'A10\"",
-          "url": "https://www.tf1info.fr/justice-faits-divers/video-reportage-suevres-comment-on-en-arrive-a-un-tel-degre-de-barbarie-un-village-partie-civile-au-proces-des-parents-de-la-martyre-de-l-a10-2473230.html",
-          "publishedAt": "2026-11-02T05:30:00.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/960/540/capjta-martyre-a10-39bcb0-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "77c9a25586f0",
-          "outletId": "bfmtv",
-          "headline": "\"Inass a quatre ans pour l'éternité\": le procès de la petite martyre de l'A10 s'ouvre, 39 ans après les faits",
-          "url": "https://www.bfmtv.com/police-justice/inass-a-quatre-ans-pour-l-eternite-le-proces-de-la-petite-martyre-de-l-a10-s-ouvre-39-ans-apres-les-faits_AN-202611020042.html",
-          "publishedAt": "2026-11-02T05:30:00.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/EehRa8QIlon9ZMlmPv92ZAHqg3s=/0x40:768x472/800x0/images/Une-reconstitution-de-scene-de-crime-avec-une-photo-d-Inass-Touloub-afin-de-denoncer-l-absence-de-proces-apres-sa-mort-realisee-par-l-association-Mouv-Enfants-a-Blois-le-24-juillet-2025-2232513.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "1fea7e329814",
-          "outletId": "huffpost",
-          "headline": "Trente-neuf ans après sa mort, les parents de « la petite martyre de l’A10 » comparaissent enfin devant la justice",
-          "url": "https://www.huffingtonpost.fr/france/article/trente-neuf-ans-apres-sa-mort-les-parents-de-la-petite-martyre-de-l-a10-comparaissent-enfin-devant-la-justice_350033.html",
-          "publishedAt": "2026-11-02T05:20:05.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/02/428/0/8192/4608/0/0/60/0/896c1e6_upload-1-lipnkzqp08yl-afp-20261029-d4km9zq-v1-highres-filesfrancejusticetrialchildren.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "b56cac697e53",
-          "outletId": "bfmtv",
-          "headline": "\"Martyre de l'A10\": 39 ans après les faits, les parents de la fillette tuée en 1987 jugés à partir de ce lundi",
-          "url": "https://www.bfmtv.com/replay-emissions/bfm-premiere/video-martyre-de-l-a10-39-ans-apres-les-faits-les-parents-de-la-fillette-tuee-en-1987-juges-a-partir-de-ce-lundi_VN-202611020089.html",
-          "publishedAt": "2026-11-02T05:17:36.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/ZOdEENMtYwIttvZtN8bVOLYBlvo=/0x0:1280x720/800x0/images/Martyre-de-l-A10-39-ans-apres-les-faits-les-parents-de-la-fillette-tuee-en-1987-juges-a-partir-de-ce-lundi-2375974.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "0ae82c418a6f",
-          "outletId": "cnews",
-          "headline": "Martyre de l'A10 : l'un des plus vieux cold cases français jugé ce lundi, après la mort d'Inass Touloub, 4 ans, en 1987",
-          "url": "https://www.cnews.fr/faits-divers/2026-11-02/martyre-de-la10-lun-des-plus-vieux-cold-cases-francais-juge-ce-lundi-apres",
-          "publishedAt": "2026-11-02T05:08:05.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_d4pr7t3-taille1200_6ae734049acda.jpg?itok=klO7483w",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "2eccf98e6f07",
-          "outletId": "franceinfo",
-          "headline": "De la découverte du corps d'une fillette anonyme au procès de ses parents, près de quarante ans d'enquête sur \"la petite martyre de l'A10\"",
-          "url": "https://www.franceinfo.fr/faits-divers/martyre-de-l-a10/recit-de-la-decouverte-du-corps-d-une-fillette-anonyme-au-proces-de-ses-parents-pres-de-quarante-ans-d-enquete-sur-la-petite-martyre-de-l-a10_8240227.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-02T05:06:39.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/wzUl4x6-Le_Zy0Piyt6S5tJsbR0/0x0:3840x2160/432x243/filters:format(jpg)/2026/10/27/6ae0aa116bbce864474981.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "f4bb9141f46f",
-          "outletId": "la-croix",
-          "headline": "« La petite martyre de l’A10 » : un long mystère et un procès, 39 ans après",
-          "url": "https://www.la-croix.com/societe/la-petite-martyre-de-l-a10-un-long-mystere-et-un-proces-39-ans-apres-20261030",
-          "publishedAt": "2026-11-02T05:03:09.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/10/30/2576698-le-proces-de-l-affaire-de-la-petite-martyre-de-la1.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "c74d9b07a0c7",
-          "outletId": "liberation",
-          "headline": "Affaire de «la petite martyre de l’A10» : aux assises du Loir-et-Cher, l’épilogue de quatre décennies de mystère",
-          "url": "https://www.liberation.fr/societe/police-justice/affaire-de-la-petite-martyre-de-la10-aux-assises-du-loir-et-cher-lepilogue-de-quatre-decennies-de-mystere-20261102_GJJZVMDBPBEZFFB5HSQNGDXMW4/",
-          "publishedAt": "2026-11-02T04:50:00.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "fa3d82111d30",
-          "outletId": "tf1-info",
-          "headline": "Martyre de l'A10 : un procès 40 ans après",
-          "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-martyre-de-l-a10-un-proces-40-ans-apres-79354-2473257.html",
-          "publishedAt": "2026-11-01T19:50:17.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/martyre-de-l-a10-un-proces-40-ans-apres-815b4f-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "3ae9e1e925bd",
-          "outletId": "ouest-france",
-          "headline": "Inass, l’enfant martyre de l’A10 : ses parents jugés à partir de ce lundi, plus de 30 ans après la découverte du corps",
-          "url": "https://www.ouest-france.fr/societe/justice/inass-lenfant-martyre-de-la10-ses-parents-juges-a-partir-de-ce-lundi-plus-de-30-ans-apres-la-decouverte-du-corps-c3eb9a00-cec1-11f1-a953-ed5fcc297d72?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-01T17:33:16.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMWQzNWEyYTFmNTc5ZTcxZmFjOWM4MzkyZDczZGQ1YTk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9ffdc3dd80247a6478aaa3c0c821f3a17d7f81151eb5b8f66ff1509849994b88",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "dbaa9264a576",
-          "outletId": "lobs",
-          "headline": "« Elle est devenue notre enfant » : Inass, la petite martyre de l’A10, adoptée par tout un village",
-          "url": "https://www.nouvelobs.com/societe/20261101.OBS119759/elle-est-devenue-notre-enfant-inass-la-petite-martyre-de-l-a10-adoptee-par-tout-un-village.html",
-          "publishedAt": "2026-11-01T16:00:13.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "fc5b40cd5dab",
-          "outletId": "le-point",
-          "headline": "Procès de la martyre de l’A10 : « On l’a adoptée, c’est la petite du village »",
-          "url": "https://www.lepoint.fr/societe/proces-de-la-martyre-de-la10-on-la-adoptee-cest-la-petite-du-village-43QU2BOWKNDABPPENTUUPBUJRQ/",
-          "publishedAt": "2026-11-01T16:00:00.000Z",
-          "imageUrl": "https://www.lepoint.fr/resizer/v2/YB6RSOYB5BJVJKWRXCMZCG426I.jpg?auth=092072e0b3527c9604a8979fefa79ad383e444a8e10ee091a012bb9c2ff87a4b&smart=true&width=1200&height=900",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "e8dd5bca39fa",
-          "outletId": "le-monde",
-          "headline": "« L’inconnue de l’A10 » : de l’abandon d’une enfant suppliciée au procès de ses parents, trois décennies de secret de famille",
-          "url": "https://www.lemonde.fr/societe/article/2026/11/01/l-inconnue-de-l-a10-de-l-abandon-d-une-enfant-suppliciee-au-proces-de-ses-parents-trois-decennies-de-secret-de-famille_6804513_3224.html",
-          "publishedAt": "2026-11-01T15:57:52.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/01/38/0/4252/2126/644/322/60/0/8680c9d_upload-1-mm4lito1nfii-le-monde.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "af3f8a8ec2e5",
-          "outletId": "20-minutes",
-          "headline": "Martyre de l’A10 : « Cela fait 31 ans que j’attends que vous veniez »… Comment les parents ont fini par être identifiés",
-          "url": "https://www.20minutes.fr/justice/4252634-20261101-martyre-a10-fait-31-ans-attends-veniez-comment-parents-fini-etre-identifies?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-01T12:02:36.000Z",
-          "imageUrl": "https://img.20mn.fr/JOZAAlCSQ1eaXfO-NYESQCk/1200x768_appelle-petite-martyre-a10-pres-quarante-ans-corps-fillette-quatre-ans-retrouve-bord-autoroute-loir-cher-pendant-31-ans-identite-demeuree-mystere-jusq",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "246703530c6b",
-      "titledArticleCount": 33,
-      "section": "misc",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le procès d'Ahmed Touloub et Halima El Bakhti s'ouvre à la cour d'assises du Loir-et-Cher à Blois, trente-neuf ans après la découverte du corps d'Inass Touloub le long de l'A10.",
-          "Les accusés comparaissent pour « torture et actes de barbarie ayant entraîné la mort sans intention de la donner » et « complicité », après des décennies où l'enfant est restée anonyme.",
-          "Les images de la fillette dans sa couverture bleue ont été projetées, tandis que le village de Suèvres et des associations de protection de l'enfance se sont constitués parties civiles."
-        ],
-        "centre": [
-          "Le procès des parents d'Inass Touloub s'ouvre à Blois, trente-neuf ans après la découverte du corps de la fillette de 4 ans au bord de l'autoroute A10 en 1987.",
-          "Les accusés, âgés de plus de 70 ans et identifiés tardivement en 2018 grâce à l'ADN d'un membre de la fratrie, nient leur responsabilité face aux juges.",
-          "Les audiences débutent dans une forte tension, marquée par le rejet de la constitution de partie civile de la commune de Suèvres et une expertise psychiatrique demandée pour le père."
-        ],
-        "droite": [
-          "Le procès des parents de la petite Inass Touloub s'ouvre à Blois, constituant l'épilogue de l'un des plus anciens cold cases français, trente-neuf ans après les faits.",
-          "La première journée d'audience a été agitée par de vives tensions et des incidents aux abords du tribunal, où Halima El Bakhti a été prise à partie par des manifestants du collectif Mouv'Enfants.",
-          "Les accusés ont adopté une attitude peu loquace et retranchée derrière une mémoire défaillante, niant les faits face à des témoins et des enquêteurs marqués par la violence de la découverte en 1987."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur le long combat pour redonner une identité à la victime et sur l'investissement mémoriel de la commune de Suèvres, tout en soulignant le silence persistant des accusés aux assises.",
-        "Le centre adopte une approche chronologique axée sur la résolution tardive de ce cold case et la fragilité apparente des septuagénaires lors de leur comparution.",
-        "La droite met particulièrement en lumière le climat de tension et les incidents survenus aux abords du tribunal à l'encontre de la mère, tout en insistant sur le caractère exceptionnel et la longue attente de ce procès."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 33,
-      "summarizedAt": "2026-11-04T06:01:19.234Z"
     }
   ]
 }
