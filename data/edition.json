@@ -1,6 +1,41 @@
 {
-  "builtAt": "2026-11-04T06:01:19.234Z",
+  "builtAt": "2026-11-04T07:01:17.984Z",
   "latestStories": [
+    {
+      "id": "0ed34d823218",
+      "slug": "jordan-bardella-publie-son-nouveau-livre-politique-intitule",
+      "title": "Jordan Bardella publie son nouveau livre politique intitulé Gouverner",
+      "createdAt": "2026-11-04T07:01:17.984Z",
+      "storyDay": "2026-11-04",
+      "articles": [
+        {
+          "id": "9af62e07fdae",
+          "outletId": "humanite",
+          "headline": "« Gouverner » de Jordan Bardella : 300 pages cousues de mensonges et de faux-semblants",
+          "url": "https://www.humanite.fr/politique/extreme-droite/gouverner-de-jordan-bardella-300-pages-cousues-de-mensonges-et-de-faux-semblants",
+          "publishedAt": "2026-11-04T07:00:00.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/p10-bardella_MER.jpg?w=1200",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "politics"
+        },
+        {
+          "id": "cef5192d0073",
+          "outletId": "bfmtv",
+          "headline": "Présidentielle, accusations d'antisémitisme, critique de la classe politique, Marine Le Pen... Ce que contient le nouveau livre de Jordan Bardella",
+          "url": "https://www.bfmtv.com/politique/front-national/presidentielle-accusations-d-antisemitisme-critique-de-la-classe-politique-marine-le-pen-ce-que-contient-le-nouveau-livre-de-jordan-bardella_AN-202611040060.html",
+          "publishedAt": "2026-11-04T07:00:00.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Wv1JnnkoBFe101DJ9cU5hA_Ym6o=/0x106:2048x1258/800x0/images/Jordan-Bardella-a-Orleans-le-25-octobre-2026-2377317.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "0ed34d823218",
+      "titledArticleCount": 2,
+      "section": "politics",
+      "everInEdition": true
+    },
     {
       "id": "40809262b87a",
       "slug": "la-justice-bresilienne-interdit-a-meta-d-utiliser-des-contenus",
@@ -39,10 +74,21 @@
     {
       "id": "fe65bb9c822e",
       "slug": "le-navigateur-matthieu-perraut-a-chavire-pendant-la-route-du",
-      "title": "Le navigateur Matthieu Perraut a chaviré pendant la Route du Rhum et attend les secours",
+      "title": "Route du Rhum : le navigateur Matthieu Perraut a chaviré et attend les secours",
       "createdAt": "2026-11-04T02:01:19.067Z",
       "storyDay": "2026-11-04",
       "articles": [
+        {
+          "id": "03fdd1cd03f9",
+          "outletId": "le-monde",
+          "headline": "Route du Rhum : l’Ocean Fifty « Elvest » de Matthieu Perraut a chaviré",
+          "url": "https://www.lemonde.fr/sport/article/2026/11/04/route-du-rhum-l-ocean-fifty-elvest-de-matthieu-perraut-a-chavire_6806116_3242.html",
+          "publishedAt": "2026-11-04T06:49:58.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/01/445/0/5341/2670/644/322/60/0/66e765f_ftp-1-ubz7hxjkmfxl-afp-d63l9qx.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
         {
           "id": "be8b747a8d16",
           "outletId": "le-parisien",
@@ -80,9 +126,33 @@
         }
       ],
       "topicId": "fe65bb9c822e",
-      "titledArticleCount": 3,
+      "titledArticleCount": 4,
       "section": "sport",
-      "everInEdition": true
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le navigateur Matthieu Perraut a chaviré sur son Ocean Fifty « Elvest » et attend l'intervention des secours.",
+          "La direction de la course confirme que le skipper se porte bien malgré cet accident maritime.",
+          "Plusieurs autres marins, dont Jérémie Beyou et Charles Caudrelier, ont également été contraints à l'abandon.",
+          "Ces incidents surviennent dans le cadre de la Route du Rhum reliant Saint-Malo à Pointe-à-Pitre."
+        ],
+        "centre": [
+          "Le skipper Matthieu Perraut a connu un chavirage au cours de la Route du Rhum.",
+          "Les autorités de la course assurent que le navigateur va bien et patiente en attendant les secours."
+        ],
+        "droite": [
+          "Matthieu Perraut a chaviré à bord de son Ocean Fifty Elvest durant la course de la Route du Rhum.",
+          "L'incident s'est produit mardi soir à environ 400 milles au nord des Açores."
+        ]
+      },
+      "differences": [
+        "La gauche contextualise amplement l'événement en l'associant à la série d'abandons majeurs survenus dans la course.",
+        "Le centre livre un compte-rendu minimaliste centré uniquement sur la survie et l'attente des secours du skipper.",
+        "La droite privilégie les précisions topographiques et nautiques en localisant précisément le lieu du chavirage."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 4,
+      "summarizedAt": "2026-11-04T07:01:17.984Z"
     },
     {
       "id": "eadf0a49216a",
@@ -169,7 +239,7 @@
           "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-retailleau-estime-qu-il-faudra-une-primaire-sans-doute-en-debut-d-annee-20261104",
           "publishedAt": "2026-11-03T23:50:17.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/98ce26dc5aa062db204e38fbc40f6547d961cddb90c5d796fbd9cca18401183a.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -922,6 +992,82 @@
       "everInEdition": true
     },
     {
+      "id": "1c0868fd1644",
+      "slug": "des-syndicats-et-associations-de-sept-pays-europeens-appellent",
+      "title": "Des syndicats et associations de sept pays européens appellent à manifester contre la vie chère en novembre",
+      "createdAt": "2026-11-04T07:01:17.984Z",
+      "storyDay": "2026-11-03",
+      "articles": [
+        {
+          "id": "4689280d5b33",
+          "outletId": "franceinfo",
+          "headline": "Des associations et syndicats de sept pays européens appellent à manifester contre la vie chère les 20, 21 et 22 novembre",
+          "url": "https://www.franceinfo.fr/societe/manifestations/des-associations-et-syndicats-de-sept-pays-europeens-appellent-a-manifester-contre-la-vie-chere-les-20-21-et-22-novembre_8266649.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-03T22:54:33.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/4jz7382dY17SS9rku1LxPaoDDrA/0x106:1024x682/432x243/filters:format(jpg)/2026/11/03/6aea65ec164c5801183544.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "2253c670327e",
+          "outletId": "20-minutes",
+          "headline": "Vie chère : Des syndicats et associations appellent à manifester dans sept pays européens fin novembre",
+          "url": "https://www.20minutes.fr/societe/4260181-20261103-vie-chere-syndicats-associations-appellent-manifester-sept-pays-europeens-fin-novembre?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-03T21:37:36.000Z",
+          "imageUrl": "https://img.20mn.fr/goeyjF_-Tgm9MZloTTkRgCk/1200x768_actualite-politique-faits-divers-3-11-2026-lyon-manifestation-etudiante-et-inter-fac-partie-de-la-place-jean-jaures-jusqu-a-la-manufacture-des-tabacs-et-l-universite-jean-moulin-lyon-3-contre-la-vie-chere-la-precarite-etudiante-le-manque-de-professeurs-et-les-conditions-scolaires-neirdaprod-p0009-credit-adrien-pittore-sipa-2611031842",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "4faf0c1a23a8",
+          "outletId": "le-monde",
+          "headline": "Des syndicats et associations de sept pays européens appellent à manifester contre la vie chère fin novembre",
+          "url": "https://www.lemonde.fr/international/article/2026/11/03/des-syndicats-et-associations-de-sept-pays-europeens-appellent-a-manifester-contre-la-vie-chere-fin-novembre_6805665_3210.html",
+          "publishedAt": "2026-11-03T20:48:27.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/30/110/0/8256/4128/644/322/60/0/da61012_ftp-1-tii7u4yu6ot1-afp-d4xa43p.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "4d6d03c83291",
+          "outletId": "la-croix",
+          "headline": "Vie chère : associations et syndicats de sept pays européens appellent à manifester",
+          "url": "https://www.la-croix.com/societe/vie-chere-associations-et-syndicats-de-sept-pays-europeens-appellent-a-manifester-20261103",
+          "publishedAt": "2026-11-03T18:25:43.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/11/03/2579832-des-associations-et-syndicats-de-sept-pays-europee.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "topicId": "1c0868fd1644",
+      "titledArticleCount": 4,
+      "section": "economy",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Des syndicats et associations de sept pays européens prévoient des manifestations coordonnées les 20, 21 et 22 novembre pour protester contre la vie chère.",
+          "Les organisateurs réclament en priorité une garantie du droit au logement, des contrôles sur les tarifs de l'énergie et de l'alimentation, ainsi qu'une hausse générale des salaires.",
+          "Le mouvement implique des délégations issues de France, d'Espagne, d'Italie, du Royaume-Uni, du Portugal, de Grèce et de Belgique, qui espèrent mobiliser des millions de manifestants."
+        ],
+        "centre": [
+          "Face à la crise du pouvoir d'achat, des syndicats et associations de sept nations européennes ont lancé un appel à manifester depuis Paris.",
+          "Les actions de rue sont planifiées pour les 20, 21 et 22 novembre prochains afin de rassembler des millions de personnes à travers l'Europe."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur le contenu précis des revendications sociales, citant en détail les mesures exigées en matière de salaires et de régulation des prix de l'énergie et de l'alimentation.",
+        "Le centre adopte une perspective institutionnelle et géographique en soulignant le cadre de l'annonce faite depuis Paris et l'ampleur internationale du mouvement face à la crise globale."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 4,
+      "summarizedAt": "2026-11-04T07:01:17.984Z"
+    },
+    {
       "id": "96163bf4f6c8",
       "slug": "canal-arretera-groland-le-12-decembre-apres-34-ans-de-diffusion",
       "title": "Canal+ arrêtera Groland le 12 décembre après 34 ans de diffusion",
@@ -1240,6 +1386,17 @@
       "createdAt": "2026-11-03T22:01:21.787Z",
       "storyDay": "2026-11-03",
       "articles": [
+        {
+          "id": "61589835db66",
+          "outletId": "la-croix",
+          "headline": "Ligue des champions : victoire écrasante du PSG contre Villarreal",
+          "url": "https://www.la-croix.com/ligue-des-champions-le-paris-sg-en-balade-a-villarreal-20261103",
+          "publishedAt": "2026-11-04T06:22:36.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/11/03/2579989-le-milieu-du-psg-joao-neves-apres-la-victoire-cont.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
         {
           "id": "6fff6540da8d",
           "outletId": "le-monde",
@@ -1588,7 +1745,7 @@
           "url": "https://www.20minutes.fr/faits_divers/4260112-20261103-besancon-entre-20-50-kg-or-voles-commando-braqueurs-chez-joaillier?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-03T17:32:54.000Z",
           "imageUrl": "https://img.20mn.fr/72wl_NyOSR27yycbYGxwPCk/1200x768_illustrations-photographiques-de-lingots-d-or-greuez-francois-0g4a7647-credit-francois-greuez-sipa-2605131656",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -3836,12 +3993,489 @@
   ],
   "feedStories": [
     {
+      "id": "d0b47b44ba54",
+      "slug": "le-psg-ecrase-villarreal-en-ligue-des-champions-et-enchaine-un",
+      "title": "Le PSG écrase Villarreal 6-0 et enchaîne un quatrième succès en Ligue des champions",
+      "createdAt": "2026-11-03T22:01:21.787Z",
+      "storyDay": "2026-11-03",
+      "articles": [
+        {
+          "id": "61589835db66",
+          "outletId": "la-croix",
+          "headline": "Ligue des champions : victoire écrasante du PSG contre Villarreal",
+          "url": "https://www.la-croix.com/ligue-des-champions-le-paris-sg-en-balade-a-villarreal-20261103",
+          "publishedAt": "2026-11-04T06:22:36.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/11/03/2579989-le-milieu-du-psg-joao-neves-apres-la-victoire-cont.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "6fff6540da8d",
+          "outletId": "le-monde",
+          "headline": "Villarreal-PSG : une nouvelle démonstration des Parisiens, favoris à leur propre succession en Ligue des champions",
+          "url": "https://www.lemonde.fr/sport/article/2026/11/04/villarreal-psg-une-nouvelle-demonstration-des-parisiens-plus-que-jamais-favoris-a-leur-propre-succession-en-ligue-des-champions_6805802_3242.html",
+          "publishedAt": "2026-11-04T01:13:31.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/03/106/0/6940/3470/644/322/60/0/bda06aa_ftp-1-b5utf91o0woz-8b1d42a3cb5541378017f01b0a1835d2-0-ac84f7d7e1fa4c3abab5574c118c7d2f.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "73ffe0a4bb16",
+          "outletId": "bfmtv",
+          "headline": "Villarreal 0-6 PSG : Paris fait peur à ses adversaires ? “Je ne pense pas, mais on met beaucoup de pression”, analyse Neves",
+          "url": "https://rmcsport.bfmtv.com/football/ligue-des-champions/video-villarreal-0-6-psg-paris-fait-peur-a-ses-adversaires-je-ne-pense-pas-mais-on-met-beaucoup-de-pression-analyse-neves_VN-202611031012.html",
+          "publishedAt": "2026-11-03T23:05:56.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/9FZIVGKHxLU6mk6j_DNdDqDdvWQ=/0x0:1280x720/800x0/images/Villarreal-0-6-PSG-Paris-fait-peur-a-ses-adversaires-Je-ne-pense-pas-mais-on-met-beaucoup-de-pression-analyse-Neves-2377513.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "dce755796074",
+          "outletId": "le-figaro",
+          "headline": "Villarreal-PSG : une armada parisienne inarrêtable, Fabián Ruiz comme à la maison, le «Sous-marin jaune» s’est sabordé... Les tops et flops",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-des-champions/villarreal-psg-une-armada-parisienne-inarretable-fabian-ruiz-comme-a-la-maison-le-sous-marin-jaune-s-est-saborde-les-tops-et-flops-20261103",
+          "publishedAt": "2026-11-03T22:54:49.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/03/c6acb6b23eb3508a684c0a80fdecabed55192f6c3090bf86af65a47d0a9cd7ee.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "5a199f5ad8d5",
+          "outletId": "bfmtv",
+          "headline": "Villarreal 0-6 PSG : “On sait que c’est difficile de gagner trois LDC de suite, mais on va essayer”, lance Ruiz",
+          "url": "https://rmcsport.bfmtv.com/football/ligue-des-champions/video-villarreal-0-6-psg-on-sait-que-c-est-difficile-de-gagner-trois-ldc-de-suite-mais-on-va-essayer-lance-ruiz_VN-202611031001.html",
+          "publishedAt": "2026-11-03T22:44:56.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/yEuhYPAqwGOFY5t8Tv-VthZOEUA=/0x0:1280x720/800x0/images/Villarreal-0-6-PSG-On-sait-que-c-est-difficile-de-gagner-trois-LDC-de-suite-mais-on-va-essayer-lance-Ruiz-2377503.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "753d5fb1af6f",
+          "outletId": "ouest-france",
+          "headline": "Ligue des champions. Le festival du PSG, Lille cale, la remontada de Manchester… Ce qu’il faut retenir de la 4e journée",
+          "url": "https://www.ouest-france.fr/sport/football/ligue-des-champions/ligue-des-champions-le-festival-du-psg-lille-cale-la-remontada-de-manchester-ce-quil-faut-retenir-de-la-4e-journee-7330b3bc-d7c1-11f1-b736-5b9907ef0b5a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-03T22:39:14.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMzE3ZWNkMDY0OTJjMzdjZGVmZjg3OGMyOWQ3ZjI1MGU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1f47cd6da72ee2f7833e4661e8ea8eb1a1b340341a78fbd046ec8c5543322da9",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "a570377798b9",
+          "outletId": "le-monde",
+          "headline": "Ligue des champions : le résumé du festival offensif du PSG face à Villarreal et du match nul frustrant de Lille face à Bodo Glimt",
+          "url": "https://www.lemonde.fr/sport/article/2026/11/03/ligue-des-champions-le-resume-du-festival-offensif-du-psg-face-a-villarreal-et-du-match-nul-frustrant-de-lille-face-a-bodo-glimt_6805702_3242.html",
+          "publishedAt": "2026-11-03T22:26:34.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/03/152/0/2122/1061/644/322/60/0/75b824d_ftp-1-uc6ptdaqkhd7-afp-d6by76e.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "46c1866ed263",
+          "outletId": "france-24",
+          "headline": "Ligue des champions : le PSG en démonstration, Manchester United renversant",
+          "url": "https://www.france24.com/fr/sports/20261103-ligue-des-champions-le-psg-en-d%C3%A9monstration-manchester-united-renversant",
+          "publishedAt": "2026-11-03T22:25:59.000Z",
+          "imageUrl": "https://s.france24.com/media/display/8b454364-d7d5-11f1-a7a7-d18c5759e759/w:1024/p:16x9/337081b463b9443a9bcbde765994bef0ac7bd684.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "8e190836aa57",
+          "outletId": "huffpost",
+          "headline": "Villarreal-PSG : les joueurs parisiens battent deux records de rapidité en Ligue des champions",
+          "url": "https://www.huffingtonpost.fr/sport/article/villarreal-psg-les-joueurs-parisiens-battent-deux-records-de-rapidite-en-ligue-des-champions_351419.html",
+          "publishedAt": "2026-11-03T22:23:15.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/03/10/0/1200/675/0/0/60/0/1257a05_upload-1-niuad5o0h3wo-afp-20261103-d6bx93h-v2-midres-topshotfbleurc1villarrealpsg.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "26b88354d7f4",
+          "outletId": "rfi",
+          "headline": "Ligue de champions: le PSG se balade à Villarreal, Barcelone renoue avec la victoire",
+          "url": "https://www.rfi.fr/fr/sports/20261103-ligue-de-champions-le-psg-se-balade-%C3%A0-villarreal-barcelone-renoue-avec-la-victoire",
+          "publishedAt": "2026-11-03T22:01:33.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/1637e438-d7cf-11f1-a343-695cb59fade5/w:1024/p:16x9/000-D6C36TU.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "30dcf778aa76",
+          "outletId": "le-parisien",
+          "headline": "Villarreal-PSG : les stats folles du début de match historique des Parisiens en Ligue des champions",
+          "url": "https://www.leparisien.fr/sports/football/ligue-des-champions/villarreal-psg-les-stats-folles-du-debut-de-match-historique-des-parisiens-en-ligue-des-champions-03-11-2026-L6IZD3Y2CVAK5DT5W4LUV6JQBY.php",
+          "publishedAt": "2026-11-03T22:01:21.787Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "289b817daa38",
+          "outletId": "ouest-france",
+          "headline": "Ligue des champions. Le PSG fait pleuvoir les records, après son succès à Villarreal",
+          "url": "https://www.ouest-france.fr/sport/football/paris-sg/ligue-des-champions-le-psg-fait-pleuvoir-les-records-apres-son-succes-a-villarreal-c81307e4-d7c7-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-03T22:00:59.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNGNkYzYwNDA0Y2FkNDBkMTMyOTAwNzkxY2RmODAwMGY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=845c01b4a176054ad86c0527a43a6b75b076147b7ba16d13619c7231265caca8",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "e9a42c57befc",
+          "outletId": "le-figaro",
+          "headline": "Ligue des champions : en démonstration, le PSG coule le «Sous-marin jaune» en Espagne",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-des-champions/ligue-des-champions-en-demonstration-le-psg-coule-le-sous-marin-jaune-en-espagne-20261103",
+          "publishedAt": "2026-11-03T22:00:10.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/03/5b25658f0c4700181bbb4e59af1615018fef126d4c0c638374d9e6f756ed6a63.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "c3e30226e066",
+          "outletId": "franceinfo",
+          "headline": "Le PSG écrase Villarreal et n'en finit plus d'impressionner en Ligue des champions",
+          "url": "https://www.franceinfo.fr/sports/foot/ligue-des-champions/le-psg-ecrase-villarreal-et-n-en-finit-plus-d-impressionner-en-ligue-des-champions_8266508.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-03T21:54:50.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/q9MIodEhlihENcbyixJJ0TpB_lk/0x0:4058x2282/432x243/filters:format(jpg)/2026/11/03/6aea4b7410748403150308.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "e284e0fd1448",
+          "outletId": "europe-1",
+          "headline": "Ligue des champions: le PSG écrase Villarreal 6-0 et enchaîne un quatrième succès",
+          "url": "https://www.europe1.fr/sport/ligue-des-champions-le-psg-ecrase-villarreal-6-0-et-enchaine-un-quatrieme-succes-1206407?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-03T21:54:27.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/22/000_d6c639a_1_6aea585858947.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "a4e65f23bb1b",
+          "outletId": "cnews",
+          "headline": "Ligue des champions : le PSG atomise Villarreal (6-0), Lille décroche un premier point à Bodo/Glimt (0-0)",
+          "url": "https://www.cnews.fr/sport/2026-11-03/ligue-des-champions-le-psg-atomise-villarreal-6-0-lille-decroche-un-premier-point",
+          "publishedAt": "2026-11-03T21:53:04.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-03t202320z_1390623693_up1emb31kmuc4_rtrmadp_3_soccer-champions-vil-psg-taille1200_6aea56d0c6972.jpg?h=50594e55&itok=ManPhrdi",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "e235d059cc5f",
+          "outletId": "le-figaro",
+          "headline": "Ligue des champions : injouable, le PSG établit un impressionnant record",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-des-champions/ligue-des-champions-injouable-le-psg-etablit-un-impressionnant-record-video-20261103",
+          "publishedAt": "2026-11-03T20:39:26.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/03/63c91ef757bcca13ccdde747da42534f7a82c9b094527d0f0e79d71a70fb4df7.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "48c997def8ec",
+          "outletId": "20-minutes",
+          "headline": "EN DIRECT Villarreal - PSG : Le PSG colle un set à Villarreal et continue son parcours sans faute... Suivez le match avec nous",
+          "url": "https://www.20minutes.fr/sport/football/ligue_des_champions/4260081-20261103-direct-villarreal-psg-paris-mission-quatre-suite-sous-marin-jaune-suivez-match?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-03T17:32:36.000Z",
+          "imageUrl": "https://img.20mn.fr/ZjmUuvvZSIKHnQU8AOhXjyk/1200x768_fabian-ruiz-du-psg-celebre-apres-avoir-marque-le-cinquieme-but-de-son-equipe-lors-du-match-de-football-de-la-phase-d-ouverture-de-la-ligue-des-champions-entre-villarreal-et-le-paris-saint-germain-a-villarreal-en-espagne-le-mardi-3-novembre-2026-ap-photo-alberto-saiz-xdb133-26307765664837-2611032217",
+          "frontPage": true,
+          "kind": "live",
+          "section": "sport",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "8ec9fe60a54e",
+      "titledArticleCount": 15,
+      "section": "sport",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le Paris Saint-Germain s'est imposé sur le score de 6 à 0 sur la pelouse de Villarreal lors de la quatrième journée de Ligue des champions.",
+          "Les joueurs de Luis Enrique ont validé un début de rencontre historique en inscrivant quatre buts très rapidement.",
+          "Cette victoire permet aux Parisiens d'entrer dans l'histoire de la compétition en battant deux records de rapidité."
+        ],
+        "centre": [
+          "Le PSG a écrasé Villarreal 6-0 en Espagne, enchaînant un quatrième succès consécutif pour occuper la tête de la phase de ligue de la Ligue des champions.",
+          "Les Parisiens ont fait la différence dès le premier quart d'heure avec quatre buts inscrits par Joao Neves, Désiré Doué, Senny Mayulu et Fabián Ruiz.",
+          "Fabián Ruiz a aggravé la marque en seconde période en inscrivant un doublé, avant que le jeune David Boly ne conclue le score.",
+          "En parallèle, le club français de Lille a été tenu en échec sur la pelouse des Norvégiens de Bodo/Glimt sur un score de 0-0."
+        ],
+        "droite": [
+          "Le Paris Saint-Germain a surclassé Villarreal sur le score sans appel de 6 à 0 lors de la quatrième journée de Ligue des champions.",
+          "La formation parisienne a plié la rencontre dès le premier quart d'heure en marquant quatre buts par l'intermédiaire de Joao Neves, Désiré Doué, Senny Mayulu et Fabián Ruiz.",
+          "Fabián Ruiz a inscrit un doublé en seconde période et le jeune David Boly a parachevé le succès des visiteurs.",
+          "Ce quatrième succès d'affilée permet aux Parisiens de conforter leur première place en Ligue des champions tout en établissant un nouveau record d'invincibilité."
+        ]
+      },
+      "differences": [
+        "Le camp de gauche met l'accent sur la performance historique des joueurs et les records de rapidité battus au cours de la rencontre.",
+        "Le camp central livre un compte rendu détaillé de la physionomie du match, des buteurs successifs et mentionne en parallèle la performance de l'autre club français engagé, Lille.",
+        "Le camp de droite insiste sur la démonstration de force de l'armada parisienne, qualifiant l'adversaire de « Sous-marin jaune » coulé en Espagne et soulignant l'établissement d'un impressionnant record d'invincibilité."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 15,
+      "summarizedAt": "2026-11-03T23:01:23.991Z"
+    },
+    {
       "id": "e3dbd24a7278",
       "slug": "donald-trump-qualifie-les-midterms-de-2026-de-plus-importantes",
       "title": "Midterms 2026 : les démocrates remportent le Sénat et la Chambre des représentants face au camp de Donald Trump",
       "createdAt": "2026-11-02T21:01:24.804Z",
       "storyDay": "2026-11-02",
       "articles": [
+        {
+          "id": "2f5c96cf1fbd",
+          "outletId": "le-parisien",
+          "headline": "Midterms 2026 : Donald Trump reconnaît le rôle de la guerre en Iran dans la défaite des Républicains",
+          "url": "https://www.leparisien.fr/international/etats-unis/elections-americaines/midterms-2026-donald-trump-reconnait-le-role-de-la-guerre-en-iran-dans-la-defaite-des-republicains-04-11-2026-7KB7DOF2FVBVTGPTBPRNKQCUAU.php",
+          "publishedAt": "2026-11-04T07:01:17.984Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "cdc631f19c0a",
+          "outletId": "le-parisien",
+          "headline": "Dossiers Epstein, Iran, ICE : vainqueurs aux midterms, les démocrates veulent « demander des comptes » à Donald Trump",
+          "url": "https://www.leparisien.fr/international/etats-unis/elections-americaines/dossiers-epstein-iran-ice-vainqueurs-aux-midterms-les-democrates-veulent-demander-des-comptes-a-donald-trump-04-11-2026-BMXAL2SATBDHVBI5R57C6GPLH4.php",
+          "publishedAt": "2026-11-04T07:01:17.984Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "1be3b3b1f612",
+          "outletId": "rfi",
+          "headline": "Midterms aux États-Unis: Trump dit «accepter les résultats» mais refuse toute défaite personnelle",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261104-midterms-aux-%C3%A9tats-unis-trump-dit-accepter-les-r%C3%A9sultats-mais-refuse-toute-d%C3%A9faite-personnelle",
+          "publishedAt": "2026-11-04T06:59:25.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/28f08a5a-d81d-11f1-bef0-1beafce15fea/w:1024/p:16x9/AP26306730345034.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "276b13aa987c",
+          "outletId": "franceinfo",
+          "headline": "Victoire démocrate au Sénat, Donald Trump promet d'accepter les résultats... Les premiers enseignements des midterms 2026 aux Etats-Unis",
+          "url": "https://www.franceinfo.fr/monde/usa/midterms-2018/victoire-democrate-au-senat-donald-trump-promet-d-accepter-les-resultats-les-premiers-enseignements-des-midterms-2026-aux-etats-unis_8266958.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-04T06:53:53.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/qk0YeZYpy0Uxu3bQidFt6wn1wU8/0x0:9494x5340/432x243/filters:format(jpg)/2026/11/04/6aeab63b90b59793925055.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "83d304b99bd3",
+          "outletId": "humanite",
+          "headline": "« Michigan, nous l’avons fait ! », revendique Abdul El-Sayed",
+          "url": "https://www.humanite.fr/-/-/michigan-nous-lavons-fait-revendique-abdul-el-sayed",
+          "publishedAt": "2026-11-04T06:52:11.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "8d6bb0420aaa",
+          "outletId": "le-figaro",
+          "headline": "Midterms 2026 : l’Amérique inflige une répudiation à Donald Trump, les démocrates s’offrent une vaste victoire",
+          "url": "https://www.lefigaro.fr/international/midterms-2026-l-amerique-inflige-une-repudiation-a-donald-trump-les-democrates-s-offrent-une-vaste-victoire-20261104",
+          "publishedAt": "2026-11-04T06:50:06.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/04/335b69e1e746c939207be99819627d649760370b64110505766b4d9213da0021.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "e1dd38697cdc",
+          "outletId": "liberation",
+          "headline": "Déroute pour Donald Trump aux midterms, consultations post-électorales en Israël, mouvement social en France… L’actu de ce mercredi 4 novembre au matin",
+          "url": "https://www.liberation.fr/international/europe/deroute-pour-donald-trump-aux-midterms-consultations-post-electorales-en-israel-mouvement-social-en-france-lactu-de-ce-mercredi-4-novembre-au-matin-20261104_EOTKQYVQWBCIBFK725IV7TE3NQ/",
+          "publishedAt": "2026-11-04T06:48:27.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "5906d8abf42e",
+          "outletId": "ouest-france",
+          "headline": "REPORTAGE. Midterms 2026 : en Géorgie, les démocrates signent une double victoire pour « tenir tête à Donald Trump »",
+          "url": "https://www.ouest-france.fr/monde/etats-unis/elections-americaines/reportage-midterms-2026-en-georgie-les-democrates-signent-une-double-victoire-pour-tenir-tete-a-donald-trump-8b08d4ac-d7e3-11f1-b736-5b9907ef0b5a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-04T06:45:57.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMWUyMzNmOGM3ZDNlMGJkZmQ0YjY0ZGY0Zjg3YzU0NDY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=e7070f8bed83cd6eba413edf31e80934020f4e4edb98b2d6d1e298f3085f835b",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "f0013516ba5a",
+          "outletId": "tf1-info",
+          "headline": "\"Je n'aime pas le voir comme une défaite pour moi\" : Trump reconnaît les résultats des midterms et le rôle de la guerre en Iran",
+          "url": "https://www.tf1info.fr/international/etats-unis-je-n-aime-pas-le-voir-comme-une-defaite-pour-moi-trump-reconnait-les-resultats-des-midterms-2026-et-le-role-de-la-guerre-en-iran-2473737.html",
+          "publishedAt": "2026-11-04T06:42:21.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/682/donald-trump-rally-octobre-2026-ea4f19-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "ef2aeae84cbf",
+          "outletId": "huffpost",
+          "headline": "Midterms : Trump reconnaît la défaite des républicains et c’est la faute de tout le monde (sauf la sienne)",
+          "url": "https://www.huffingtonpost.fr/international/article/midterms-trump-reconnait-la-defaite-des-republicains-et-c-est-la-faute-de-tout-le-monde-sauf-la-sienne_351683.html",
+          "publishedAt": "2026-11-04T06:41:19.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2025/01/15/43/0/1024/576/0/0/60/0/620c402_sirius-fs-upload-1-gabbmylv5kq6-1736944198312-000-pz9q9.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "708843dc1098",
+          "outletId": "ouest-france",
+          "headline": "Midterms 2026 : Donald Trump reconnaît le « bon boulot » des démocrates après leur victoire sans appel au Congrès",
+          "url": "https://www.ouest-france.fr/monde/etats-unis/elections-americaines/midterms-2026-donald-trump-reconnait-le-bon-boulot-des-democrates-apres-leur-victoire-sans-appel-au-congres-7ad0e118-d80d-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-04T06:39:22.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZTBhMDc5ZGY5ZjFiZTgxNTBiNjhlZDkwOGM5MGE5M2Y?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ed1590344e3cd3ec3b9a83e0fc0969c259a2715f985ee6a116622605d4015de9",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "08993bb98d9f",
+          "outletId": "bfmtv",
+          "headline": "Texas, Kansas, Iowa... Ces États qui ont basculé aux mains des démocrates lors des élections de mi-mandat aux États-Unis",
+          "url": "https://www.bfmtv.com/international/amerique-nord/etats-unis/texas-kansas-iowa-ces-etats-qui-ont-bascule-aux-mains-des-democrates-lors-des-elections-de-mi-mandat-aux-etats-unis_AV-202611040197.html",
+          "publishedAt": "2026-11-04T06:37:34.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/WDiNF0BfI84RQnjgCYFGMICPUaU=/0x106:2048x1258/800x0/images/Le-Senat-americain-a-Washington-1370863.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "b3fa659b3af1",
+          "outletId": "cnews",
+          "headline": "Élections de mi-mandat aux États-Unis : le Kansas a élu un candidat démocrate, une première depuis 1932",
+          "url": "https://www.cnews.fr/monde/2026-11-04/elections-de-mi-mandat-aux-etats-unis-le-kansas-elu-un-candidat-democrate-une",
+          "publishedAt": "2026-11-04T06:33:33.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-04t053723z_516570738_rc2tgoa0679m_rtrmadp_3_usa-election-kansas-taille1200_6aeac7565a1e6.jpg?itok=amfF-Srw",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "8c660dae4300",
+          "outletId": "challenges",
+          "headline": "Certains revers font plus mal que d’autres : les midterms, un camouflet pour Donald Trump, les démocrates au nirvana",
+          "url": " https://www.challenges.fr/monde/certains-revers-font-plus-mal-que-dautres-les-midterms-un-camouflet-pour-donald-trump-les-democrates-au-nirvana_646799 ",
+          "publishedAt": "2026-11-04T06:30:00.000Z",
+          "imageUrl": "https://www.challenges.fr/_ipx/f_jpg&s_1200x630&enlarge_true/cha%2Fstatic%2F2026-11%2F64190.HR_0.jpg%3FVersionId%3D36dfyFLbZpiOt_7QjTjwdJUizyCwidJl",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "5fb39fb1b8ed",
+          "outletId": "liberation",
+          "headline": "Midterms 2026 : tsunami démocrate et crépuscule de Donald Trump",
+          "url": "https://www.liberation.fr/international/amerique/midterms-2026-tsunami-democrate-et-crepuscule-de-donald-trump-20261104_DNZLKIB4CVGNTJMC76ZRQVF6UQ/",
+          "publishedAt": "2026-11-04T06:17:02.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "475a22eb5ccf",
+          "outletId": "humanite",
+          "headline": "Pour la première fois depuis 1932, le Kansas envoie un démocrate au Sénat",
+          "url": "https://www.humanite.fr/-/-/pour-la-premiere-fois-depuis-1932-le-kansas-envoie-un-democrate-au-senat",
+          "publishedAt": "2026-11-04T06:09:46.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c6df1f929c08",
+          "outletId": "lobs",
+          "headline": "En direct - « Midterms » 2026 : les démocrates obtiennent la majorité des sièges au Sénat",
+          "url": "https://www.nouvelobs.com/monde/20261104.OBS119828/en-direct-midterms-2026-les-democrates-obtiennent-la-majorite-des-sieges-au-senat.html",
+          "publishedAt": "2026-11-04T06:08:25.000Z",
+          "imageUrl": "https://focus.nouvelobs.com/2026/11/04/0/0/1023/682/0/0/60/0/fb86495_ftp-1-nhlgmflq5ckn-2303426604-1024.jpg",
+          "frontPage": false,
+          "kind": "live",
+          "section": "world"
+        },
+        {
+          "id": "de3d1f720f91",
+          "outletId": "humanite",
+          "headline": "« Félicitations aux démocrates », reconnaît Trump, qui revendique son « pouvoir de veto »",
+          "url": "https://www.humanite.fr/-/-/felicitations-aux-democrates-reconnait-trump",
+          "publishedAt": "2026-11-04T06:07:04.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "85be5c0d4fe6",
+          "outletId": "europe-1",
+          "headline": "Midterms 2026 : les démocrates obtiennent la majorité au Sénat et prennent le contrôle total du Congrès",
+          "url": "https://www.europe1.fr/international/midterms-2026-les-democrates-obtiennent-la-majorite-au-senat-et-prennent-le-controle-total-du-congres-1207133?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-04T06:06:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/04/06/053_ar-20261104122923_kinq1_dsc09543_122839244_1_6aeacb4f926dd.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "ee21a07b9cca",
+          "outletId": "humanite",
+          "headline": "Pour Téhéran, les États-Uniens ont dit « non à la guerre »",
+          "url": "https://www.humanite.fr/-/-/pour-teheran-les-etats-uniens-ont-dit-non-a-la-guerre",
+          "publishedAt": "2026-11-04T06:02:18.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "743479b62d0c",
+          "outletId": "humanite",
+          "headline": "Les démocrates ont pris le contrôle du Sénat et sont en passe d’obtenir la majorité à la Chambre des représentants",
+          "url": "https://www.humanite.fr/-/-/les-democrates-ont-pris-le-controle-du-senat-et-sont-en-passe-dobtenir-la-majorite-a-la-chambre-des-representants",
+          "publishedAt": "2026-11-04T06:01:44.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
         {
           "id": "46949d8183c9",
           "outletId": "le-parisien",
@@ -3904,7 +4538,7 @@
           "url": "https://www.ouest-france.fr/monde/etats-unis/elections-americaines/midterms-2026-suivez-les-resultats-des-elections-americaines-de-mi-mandat-avec-nos-cartes-en-temps-reel-d7e49444-d7d6-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-04T05:59:24.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZjc5NGU2YmRhNmU4NzA0YzhlOTRjM2E4M2M5MzFmOWY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d4f32f8540ec9ee82c161803fac9c2fa26672c15bda0d805baf396a3e388e97d",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "live",
           "section": "world",
           "everFrontPage": true
@@ -3994,9 +4628,10 @@
           "url": "https://www.lefigaro.fr/international/midterms-2026-une-gouverneure-noire-un-senateur-ouvertement-gay-les-premieres-historiques-du-scrutin-20261104",
           "publishedAt": "2026-11-04T05:51:09.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/1918x1079_crop/2026/11/04/71ccf21fba041295a01816f7a8c367ede2dadc940980709cf800188986cdb415.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
-          "section": "politics"
+          "section": "politics",
+          "everFrontPage": true
         },
         {
           "id": "f2ed058add52",
@@ -4007,6 +4642,17 @@
           "frontPage": false,
           "kind": "news",
           "section": "world"
+        },
+        {
+          "id": "1eb611ce34d5",
+          "outletId": "europe-1",
+          "headline": "Midterms 2026 : le Kansas envoie un démocrate au Sénat, une première depuis 1932",
+          "url": "https://www.europe1.fr/international/midterms-2026-le-kansas-envoie-un-democrate-au-senat-une-premiere-depuis-1932-1207100?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-04T05:47:52.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/04/06/000_d6cw6rf_1_6aeac8361f7c3.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
         },
         {
           "id": "94d8aee0cb62",
@@ -4131,6 +4777,17 @@
           "everFrontPage": true
         },
         {
+          "id": "7bcf5ce234f5",
+          "outletId": "cnews",
+          "headline": "Elections de mi-mandat aux Etats-Unis : tout savoir sur le démocrate James Talarico, auteur d'une victoire historique au Texas",
+          "url": "https://www.cnews.fr/monde/2026-11-04/elections-de-mi-mandat-aux-etats-unis-tout-savoir-sur-le-democrate-james-talarico",
+          "publishedAt": "2026-11-04T05:15:32.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-03t024352z_372765215_rc21goatoujg_rtrmadp_3_usa-election-texas-talarico-taille1200_6ae992769e185.jpg?h=2ea404ed&itok=KSwkLoZ7",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
           "id": "99bdf66f29be",
           "outletId": "courrier-international",
           "headline": "“Vague bleue” aux “midterms” : les démocrates reprennent le contrôle du Congrès",
@@ -4151,6 +4808,17 @@
           "frontPage": false,
           "kind": "live",
           "section": "world"
+        },
+        {
+          "id": "980b0ce8e1a8",
+          "outletId": "huffpost",
+          "headline": "Au Texas, le démocrate James Talarico l’emporte pour le Sénat et ce n’est pas la seule énorme surprise",
+          "url": "https://www.huffingtonpost.fr/international/article/au-texas-james-talarico-reussit-l-exploit-que-les-democrates-attendaient-depuis-38-ans-aux-midterms-2026_351650.html",
+          "publishedAt": "2026-11-04T05:02:35.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/04/287/0/5515/3102/0/0/60/0/dab0a9f_upload-1-3mudx6rs6mb6-afp-20261103-d68f2ty-v1-highres-776586270.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
         },
         {
           "id": "475c897c7f0e",
@@ -4681,7 +5349,7 @@
           "url": "https://www.lefigaro.fr/international/retrouver-un-certain-equilibre-en-virginie-des-electeurs-confient-leurs-inquietudes-et-leurs-espoirs-le-jour-du-vote-des-midterms-20261103",
           "publishedAt": "2026-11-03T18:10:50.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x1688_crop/2026/11/03/ebe2549e898e0af4ae3f18535080aa2d81a904bcbc23cc327f4c642cb6931c3f.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -4860,7 +5528,7 @@
           "url": "https://www.20minutes.fr/monde/etats-unis/4259880-20261104-direct-midterms-2026-maison-blanche-tente-exonerer-trump-defaite-annonce?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-03T06:04:29.000Z",
           "imageUrl": "https://img.20mn.fr/7lJMsNuITGqzkiNzoMhynyk/1200x768_des-personnes-participent-aux-elections-de-mi-mandat-dans-un-bureau-de-vote-de-l-arrondissement-du-queens-a-new-york-dans-l-etat-de-new-york-le-3-novembre-2026-le-jour-des-elections-de-mi-mandat-aura-lieu-le-3-novembre-avec-435-sieges-a-pourvoir-a-la-chambre-des-representants-des-etats-unis-aux-gouverneurs-aux-representants-de-l-etat-et-environ-un-tiers-des-sieges-du-senat-americain-photo-d-anthony-behar-sipa-usa-74735429-2611031639",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "live",
           "section": "world",
           "everFrontPage": true
@@ -5406,238 +6074,87 @@
       "summarizedAt": "2026-11-04T04:01:15.564Z"
     },
     {
-      "id": "d0b47b44ba54",
-      "slug": "le-psg-ecrase-villarreal-en-ligue-des-champions-et-enchaine-un",
-      "title": "Le PSG écrase Villarreal 6-0 et enchaîne un quatrième succès en Ligue des champions",
-      "createdAt": "2026-11-03T22:01:21.787Z",
-      "storyDay": "2026-11-03",
+      "id": "fe65bb9c822e",
+      "slug": "le-navigateur-matthieu-perraut-a-chavire-pendant-la-route-du",
+      "title": "Route du Rhum : le navigateur Matthieu Perraut a chaviré et attend les secours",
+      "createdAt": "2026-11-04T02:01:19.067Z",
+      "storyDay": "2026-11-04",
       "articles": [
         {
-          "id": "6fff6540da8d",
+          "id": "03fdd1cd03f9",
           "outletId": "le-monde",
-          "headline": "Villarreal-PSG : une nouvelle démonstration des Parisiens, favoris à leur propre succession en Ligue des champions",
-          "url": "https://www.lemonde.fr/sport/article/2026/11/04/villarreal-psg-une-nouvelle-demonstration-des-parisiens-plus-que-jamais-favoris-a-leur-propre-succession-en-ligue-des-champions_6805802_3242.html",
-          "publishedAt": "2026-11-04T01:13:31.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/03/106/0/6940/3470/644/322/60/0/bda06aa_ftp-1-b5utf91o0woz-8b1d42a3cb5541378017f01b0a1835d2-0-ac84f7d7e1fa4c3abab5574c118c7d2f.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "73ffe0a4bb16",
-          "outletId": "bfmtv",
-          "headline": "Villarreal 0-6 PSG : Paris fait peur à ses adversaires ? “Je ne pense pas, mais on met beaucoup de pression”, analyse Neves",
-          "url": "https://rmcsport.bfmtv.com/football/ligue-des-champions/video-villarreal-0-6-psg-paris-fait-peur-a-ses-adversaires-je-ne-pense-pas-mais-on-met-beaucoup-de-pression-analyse-neves_VN-202611031012.html",
-          "publishedAt": "2026-11-03T23:05:56.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/9FZIVGKHxLU6mk6j_DNdDqDdvWQ=/0x0:1280x720/800x0/images/Villarreal-0-6-PSG-Paris-fait-peur-a-ses-adversaires-Je-ne-pense-pas-mais-on-met-beaucoup-de-pression-analyse-Neves-2377513.jpg",
+          "headline": "Route du Rhum : l’Ocean Fifty « Elvest » de Matthieu Perraut a chaviré",
+          "url": "https://www.lemonde.fr/sport/article/2026/11/04/route-du-rhum-l-ocean-fifty-elvest-de-matthieu-perraut-a-chavire_6806116_3242.html",
+          "publishedAt": "2026-11-04T06:49:58.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/01/445/0/5341/2670/644/322/60/0/66e765f_ftp-1-ubz7hxjkmfxl-afp-d63l9qx.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "sport"
         },
         {
-          "id": "dce755796074",
-          "outletId": "le-figaro",
-          "headline": "Villarreal-PSG : une armada parisienne inarrêtable, Fabián Ruiz comme à la maison, le «Sous-marin jaune» s’est sabordé... Les tops et flops",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-des-champions/villarreal-psg-une-armada-parisienne-inarretable-fabian-ruiz-comme-a-la-maison-le-sous-marin-jaune-s-est-saborde-les-tops-et-flops-20261103",
-          "publishedAt": "2026-11-03T22:54:49.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/03/c6acb6b23eb3508a684c0a80fdecabed55192f6c3090bf86af65a47d0a9cd7ee.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "5a199f5ad8d5",
-          "outletId": "bfmtv",
-          "headline": "Villarreal 0-6 PSG : “On sait que c’est difficile de gagner trois LDC de suite, mais on va essayer”, lance Ruiz",
-          "url": "https://rmcsport.bfmtv.com/football/ligue-des-champions/video-villarreal-0-6-psg-on-sait-que-c-est-difficile-de-gagner-trois-ldc-de-suite-mais-on-va-essayer-lance-ruiz_VN-202611031001.html",
-          "publishedAt": "2026-11-03T22:44:56.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/yEuhYPAqwGOFY5t8Tv-VthZOEUA=/0x0:1280x720/800x0/images/Villarreal-0-6-PSG-On-sait-que-c-est-difficile-de-gagner-trois-LDC-de-suite-mais-on-va-essayer-lance-Ruiz-2377503.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "753d5fb1af6f",
-          "outletId": "ouest-france",
-          "headline": "Ligue des champions. Le festival du PSG, Lille cale, la remontada de Manchester… Ce qu’il faut retenir de la 4e journée",
-          "url": "https://www.ouest-france.fr/sport/football/ligue-des-champions/ligue-des-champions-le-festival-du-psg-lille-cale-la-remontada-de-manchester-ce-quil-faut-retenir-de-la-4e-journee-7330b3bc-d7c1-11f1-b736-5b9907ef0b5a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-03T22:39:14.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMzE3ZWNkMDY0OTJjMzdjZGVmZjg3OGMyOWQ3ZjI1MGU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1f47cd6da72ee2f7833e4661e8ea8eb1a1b340341a78fbd046ec8c5543322da9",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "a570377798b9",
-          "outletId": "le-monde",
-          "headline": "Ligue des champions : le résumé du festival offensif du PSG face à Villarreal et du match nul frustrant de Lille face à Bodo Glimt",
-          "url": "https://www.lemonde.fr/sport/article/2026/11/03/ligue-des-champions-le-resume-du-festival-offensif-du-psg-face-a-villarreal-et-du-match-nul-frustrant-de-lille-face-a-bodo-glimt_6805702_3242.html",
-          "publishedAt": "2026-11-03T22:26:34.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/03/152/0/2122/1061/644/322/60/0/75b824d_ftp-1-uc6ptdaqkhd7-afp-d6by76e.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "46c1866ed263",
-          "outletId": "france-24",
-          "headline": "Ligue des champions : le PSG en démonstration, Manchester United renversant",
-          "url": "https://www.france24.com/fr/sports/20261103-ligue-des-champions-le-psg-en-d%C3%A9monstration-manchester-united-renversant",
-          "publishedAt": "2026-11-03T22:25:59.000Z",
-          "imageUrl": "https://s.france24.com/media/display/8b454364-d7d5-11f1-a7a7-d18c5759e759/w:1024/p:16x9/337081b463b9443a9bcbde765994bef0ac7bd684.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "8e190836aa57",
-          "outletId": "huffpost",
-          "headline": "Villarreal-PSG : les joueurs parisiens battent deux records de rapidité en Ligue des champions",
-          "url": "https://www.huffingtonpost.fr/sport/article/villarreal-psg-les-joueurs-parisiens-battent-deux-records-de-rapidite-en-ligue-des-champions_351419.html",
-          "publishedAt": "2026-11-03T22:23:15.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/03/10/0/1200/675/0/0/60/0/1257a05_upload-1-niuad5o0h3wo-afp-20261103-d6bx93h-v2-midres-topshotfbleurc1villarrealpsg.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "26b88354d7f4",
-          "outletId": "rfi",
-          "headline": "Ligue de champions: le PSG se balade à Villarreal, Barcelone renoue avec la victoire",
-          "url": "https://www.rfi.fr/fr/sports/20261103-ligue-de-champions-le-psg-se-balade-%C3%A0-villarreal-barcelone-renoue-avec-la-victoire",
-          "publishedAt": "2026-11-03T22:01:33.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/1637e438-d7cf-11f1-a343-695cb59fade5/w:1024/p:16x9/000-D6C36TU.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "30dcf778aa76",
+          "id": "be8b747a8d16",
           "outletId": "le-parisien",
-          "headline": "Villarreal-PSG : les stats folles du début de match historique des Parisiens en Ligue des champions",
-          "url": "https://www.leparisien.fr/sports/football/ligue-des-champions/villarreal-psg-les-stats-folles-du-debut-de-match-historique-des-parisiens-en-ligue-des-champions-03-11-2026-L6IZD3Y2CVAK5DT5W4LUV6JQBY.php",
-          "publishedAt": "2026-11-03T22:01:21.787Z",
+          "headline": "« Il va bien et attend les secours » : le navigateur Matthieu Perraut a chaviré pendant la Route du Rhum",
+          "url": "https://www.leparisien.fr/sports/voile/il-va-bien-et-attend-les-secours-le-navigateur-matthieu-perraut-a-chavire-pendant-la-route-du-rhum-04-11-2026-7DZYDTAMI5HZFE7C2WD6ZSA72I.php",
+          "publishedAt": "2026-11-04T02:01:19.067Z",
           "frontPage": false,
           "datedAtCollection": true,
           "kind": "news",
           "section": "sport"
         },
         {
-          "id": "289b817daa38",
-          "outletId": "ouest-france",
-          "headline": "Ligue des champions. Le PSG fait pleuvoir les records, après son succès à Villarreal",
-          "url": "https://www.ouest-france.fr/sport/football/paris-sg/ligue-des-champions-le-psg-fait-pleuvoir-les-records-apres-son-succes-a-villarreal-c81307e4-d7c7-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-03T22:00:59.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNGNkYzYwNDA0Y2FkNDBkMTMyOTAwNzkxY2RmODAwMGY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=845c01b4a176054ad86c0527a43a6b75b076147b7ba16d13619c7231265caca8",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "e9a42c57befc",
-          "outletId": "le-figaro",
-          "headline": "Ligue des champions : en démonstration, le PSG coule le «Sous-marin jaune» en Espagne",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-des-champions/ligue-des-champions-en-demonstration-le-psg-coule-le-sous-marin-jaune-en-espagne-20261103",
-          "publishedAt": "2026-11-03T22:00:10.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/03/5b25658f0c4700181bbb4e59af1615018fef126d4c0c638374d9e6f756ed6a63.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "c3e30226e066",
-          "outletId": "franceinfo",
-          "headline": "Le PSG écrase Villarreal et n'en finit plus d'impressionner en Ligue des champions",
-          "url": "https://www.franceinfo.fr/sports/foot/ligue-des-champions/le-psg-ecrase-villarreal-et-n-en-finit-plus-d-impressionner-en-ligue-des-champions_8266508.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T21:54:50.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/q9MIodEhlihENcbyixJJ0TpB_lk/0x0:4058x2282/432x243/filters:format(jpg)/2026/11/03/6aea4b7410748403150308.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "e284e0fd1448",
-          "outletId": "europe-1",
-          "headline": "Ligue des champions: le PSG écrase Villarreal 6-0 et enchaîne un quatrième succès",
-          "url": "https://www.europe1.fr/sport/ligue-des-champions-le-psg-ecrase-villarreal-6-0-et-enchaine-un-quatrieme-succes-1206407?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-03T21:54:27.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/22/000_d6c639a_1_6aea585858947.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "a4e65f23bb1b",
-          "outletId": "cnews",
-          "headline": "Ligue des champions : le PSG atomise Villarreal (6-0), Lille décroche un premier point à Bodo/Glimt (0-0)",
-          "url": "https://www.cnews.fr/sport/2026-11-03/ligue-des-champions-le-psg-atomise-villarreal-6-0-lille-decroche-un-premier-point",
-          "publishedAt": "2026-11-03T21:53:04.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-03t202320z_1390623693_up1emb31kmuc4_rtrmadp_3_soccer-champions-vil-psg-taille1200_6aea56d0c6972.jpg?h=50594e55&itok=ManPhrdi",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "e235d059cc5f",
-          "outletId": "le-figaro",
-          "headline": "Ligue des champions : injouable, le PSG établit un impressionnant record",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-des-champions/ligue-des-champions-injouable-le-psg-etablit-un-impressionnant-record-video-20261103",
-          "publishedAt": "2026-11-03T20:39:26.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/03/63c91ef757bcca13ccdde747da42534f7a82c9b094527d0f0e79d71a70fb4df7.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "48c997def8ec",
+          "id": "1a136aceca8e",
           "outletId": "20-minutes",
-          "headline": "EN DIRECT Villarreal - PSG : Le PSG colle un set à Villarreal et continue son parcours sans faute... Suivez le match avec nous",
-          "url": "https://www.20minutes.fr/sport/football/ligue_des_champions/4260081-20261103-direct-villarreal-psg-paris-mission-quatre-suite-sous-marin-jaune-suivez-match?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-03T17:32:36.000Z",
-          "imageUrl": "https://img.20mn.fr/ZjmUuvvZSIKHnQU8AOhXjyk/1200x768_fabian-ruiz-du-psg-celebre-apres-avoir-marque-le-cinquieme-but-de-son-equipe-lors-du-match-de-football-de-la-phase-d-ouverture-de-la-ligue-des-champions-entre-villarreal-et-le-paris-saint-germain-a-villarreal-en-espagne-le-mardi-3-novembre-2026-ap-photo-alberto-saiz-xdb133-26307765664837-2611032217",
+          "headline": "Route du Rhum : Le skipper Matthieu Perraut a chaviré, les secours attendus",
+          "url": "https://www.20minutes.fr/sport/4260202-20261104-route-rhum-skipper-matthieu-perraut-chavire-secours-attendus?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-04T01:05:47.000Z",
+          "imageUrl": "https://img.20mn.fr/BBmqK8u4S6KHIk9LF9ADcSk/1200x768_les-concurrents-prennent-le-depart-de-la-route-du-rhum-destination-guadeloupe-2026-au-large-de-la-pointe-du-grouin-les-115-skippers-ont-pris-le-large-pour-la-13e-edition-de-la-celebre-course-transatlantique-en-solitaire-entre-saint-malo-et-pointe-a-pitre-en-guadeloupe-pointe-du-grouin-cancale-france-1er-novembre-2026-david-jean-marc-sipa-02993-credit-jean-marc-david-sipa-2611020813",
           "frontPage": true,
-          "kind": "live",
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "b1ae6e813fd0",
+          "outletId": "le-figaro",
+          "headline": "Route du Rhum : Matthieu Perraut a chaviré",
+          "url": "https://www.lefigaro.fr/sports/voile/route-du-rhum/route-du-rhum-matthieu-perraut-a-chavire-20261104",
+          "publishedAt": "2026-11-03T23:31:09.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/04/20ade6fbff5dad8b5647fa4a462873c134d8c6eee25fc5c1094b511794548caf.jpg",
+          "frontPage": false,
+          "kind": "news",
           "section": "sport",
           "everFrontPage": true
         }
       ],
-      "topicId": "8ec9fe60a54e",
-      "titledArticleCount": 15,
+      "topicId": "fe65bb9c822e",
+      "titledArticleCount": 4,
       "section": "sport",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Le Paris Saint-Germain s'est imposé sur le score de 6 à 0 sur la pelouse de Villarreal lors de la quatrième journée de Ligue des champions.",
-          "Les joueurs de Luis Enrique ont validé un début de rencontre historique en inscrivant quatre buts très rapidement.",
-          "Cette victoire permet aux Parisiens d'entrer dans l'histoire de la compétition en battant deux records de rapidité."
+          "Le navigateur Matthieu Perraut a chaviré sur son Ocean Fifty « Elvest » et attend l'intervention des secours.",
+          "La direction de la course confirme que le skipper se porte bien malgré cet accident maritime.",
+          "Plusieurs autres marins, dont Jérémie Beyou et Charles Caudrelier, ont également été contraints à l'abandon.",
+          "Ces incidents surviennent dans le cadre de la Route du Rhum reliant Saint-Malo à Pointe-à-Pitre."
         ],
         "centre": [
-          "Le PSG a écrasé Villarreal 6-0 en Espagne, enchaînant un quatrième succès consécutif pour occuper la tête de la phase de ligue de la Ligue des champions.",
-          "Les Parisiens ont fait la différence dès le premier quart d'heure avec quatre buts inscrits par Joao Neves, Désiré Doué, Senny Mayulu et Fabián Ruiz.",
-          "Fabián Ruiz a aggravé la marque en seconde période en inscrivant un doublé, avant que le jeune David Boly ne conclue le score.",
-          "En parallèle, le club français de Lille a été tenu en échec sur la pelouse des Norvégiens de Bodo/Glimt sur un score de 0-0."
+          "Le skipper Matthieu Perraut a connu un chavirage au cours de la Route du Rhum.",
+          "Les autorités de la course assurent que le navigateur va bien et patiente en attendant les secours."
         ],
         "droite": [
-          "Le Paris Saint-Germain a surclassé Villarreal sur le score sans appel de 6 à 0 lors de la quatrième journée de Ligue des champions.",
-          "La formation parisienne a plié la rencontre dès le premier quart d'heure en marquant quatre buts par l'intermédiaire de Joao Neves, Désiré Doué, Senny Mayulu et Fabián Ruiz.",
-          "Fabián Ruiz a inscrit un doublé en seconde période et le jeune David Boly a parachevé le succès des visiteurs.",
-          "Ce quatrième succès d'affilée permet aux Parisiens de conforter leur première place en Ligue des champions tout en établissant un nouveau record d'invincibilité."
+          "Matthieu Perraut a chaviré à bord de son Ocean Fifty Elvest durant la course de la Route du Rhum.",
+          "L'incident s'est produit mardi soir à environ 400 milles au nord des Açores."
         ]
       },
       "differences": [
-        "Le camp de gauche met l'accent sur la performance historique des joueurs et les records de rapidité battus au cours de la rencontre.",
-        "Le camp central livre un compte rendu détaillé de la physionomie du match, des buteurs successifs et mentionne en parallèle la performance de l'autre club français engagé, Lille.",
-        "Le camp de droite insiste sur la démonstration de force de l'armada parisienne, qualifiant l'adversaire de « Sous-marin jaune » coulé en Espagne et soulignant l'établissement d'un impressionnant record d'invincibilité."
+        "La gauche contextualise amplement l'événement en l'associant à la série d'abandons majeurs survenus dans la course.",
+        "Le centre livre un compte-rendu minimaliste centré uniquement sur la survie et l'attente des secours du skipper.",
+        "La droite privilégie les précisions topographiques et nautiques en localisant précisément le lieu du chavirage."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 15,
-      "summarizedAt": "2026-11-03T23:01:23.991Z"
+      "summarizedArticleCount": 4,
+      "summarizedAt": "2026-11-04T07:01:17.984Z"
     },
     {
       "id": "2c56958b5559",
@@ -6289,7 +6806,7 @@
           "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-retailleau-estime-qu-il-faudra-une-primaire-sans-doute-en-debut-d-annee-20261104",
           "publishedAt": "2026-11-03T23:50:17.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/98ce26dc5aa062db204e38fbc40f6547d961cddb90c5d796fbd9cca18401183a.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -6648,6 +7165,41 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 10,
       "summarizedAt": "2026-11-03T23:01:23.991Z"
+    },
+    {
+      "id": "0ed34d823218",
+      "slug": "jordan-bardella-publie-son-nouveau-livre-politique-intitule",
+      "title": "Jordan Bardella publie son nouveau livre politique intitulé Gouverner",
+      "createdAt": "2026-11-04T07:01:17.984Z",
+      "storyDay": "2026-11-04",
+      "articles": [
+        {
+          "id": "9af62e07fdae",
+          "outletId": "humanite",
+          "headline": "« Gouverner » de Jordan Bardella : 300 pages cousues de mensonges et de faux-semblants",
+          "url": "https://www.humanite.fr/politique/extreme-droite/gouverner-de-jordan-bardella-300-pages-cousues-de-mensonges-et-de-faux-semblants",
+          "publishedAt": "2026-11-04T07:00:00.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/p10-bardella_MER.jpg?w=1200",
+          "frontPage": false,
+          "kind": "opinion",
+          "section": "politics"
+        },
+        {
+          "id": "cef5192d0073",
+          "outletId": "bfmtv",
+          "headline": "Présidentielle, accusations d'antisémitisme, critique de la classe politique, Marine Le Pen... Ce que contient le nouveau livre de Jordan Bardella",
+          "url": "https://www.bfmtv.com/politique/front-national/presidentielle-accusations-d-antisemitisme-critique-de-la-classe-politique-marine-le-pen-ce-que-contient-le-nouveau-livre-de-jordan-bardella_AN-202611040060.html",
+          "publishedAt": "2026-11-04T07:00:00.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Wv1JnnkoBFe101DJ9cU5hA_Ym6o=/0x106:2048x1258/800x0/images/Jordan-Bardella-a-Orleans-le-25-octobre-2026-2377317.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "0ed34d823218",
+      "titledArticleCount": 2,
+      "section": "politics",
+      "everInEdition": true
     },
     {
       "id": "32b2c14dacec",
@@ -7682,54 +8234,6 @@
       "summarizedAt": "2026-11-04T00:01:24.314Z"
     },
     {
-      "id": "fe65bb9c822e",
-      "slug": "le-navigateur-matthieu-perraut-a-chavire-pendant-la-route-du",
-      "title": "Le navigateur Matthieu Perraut a chaviré pendant la Route du Rhum et attend les secours",
-      "createdAt": "2026-11-04T02:01:19.067Z",
-      "storyDay": "2026-11-04",
-      "articles": [
-        {
-          "id": "be8b747a8d16",
-          "outletId": "le-parisien",
-          "headline": "« Il va bien et attend les secours » : le navigateur Matthieu Perraut a chaviré pendant la Route du Rhum",
-          "url": "https://www.leparisien.fr/sports/voile/il-va-bien-et-attend-les-secours-le-navigateur-matthieu-perraut-a-chavire-pendant-la-route-du-rhum-04-11-2026-7DZYDTAMI5HZFE7C2WD6ZSA72I.php",
-          "publishedAt": "2026-11-04T02:01:19.067Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "1a136aceca8e",
-          "outletId": "20-minutes",
-          "headline": "Route du Rhum : Le skipper Matthieu Perraut a chaviré, les secours attendus",
-          "url": "https://www.20minutes.fr/sport/4260202-20261104-route-rhum-skipper-matthieu-perraut-chavire-secours-attendus?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-04T01:05:47.000Z",
-          "imageUrl": "https://img.20mn.fr/BBmqK8u4S6KHIk9LF9ADcSk/1200x768_les-concurrents-prennent-le-depart-de-la-route-du-rhum-destination-guadeloupe-2026-au-large-de-la-pointe-du-grouin-les-115-skippers-ont-pris-le-large-pour-la-13e-edition-de-la-celebre-course-transatlantique-en-solitaire-entre-saint-malo-et-pointe-a-pitre-en-guadeloupe-pointe-du-grouin-cancale-france-1er-novembre-2026-david-jean-marc-sipa-02993-credit-jean-marc-david-sipa-2611020813",
-          "frontPage": true,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "b1ae6e813fd0",
-          "outletId": "le-figaro",
-          "headline": "Route du Rhum : Matthieu Perraut a chaviré",
-          "url": "https://www.lefigaro.fr/sports/voile/route-du-rhum/route-du-rhum-matthieu-perraut-a-chavire-20261104",
-          "publishedAt": "2026-11-03T23:31:09.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/04/20ade6fbff5dad8b5647fa4a462873c134d8c6eee25fc5c1094b511794548caf.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "fe65bb9c822e",
-      "titledArticleCount": 3,
-      "section": "sport",
-      "everInEdition": true
-    },
-    {
       "id": "a89437c2bdc3",
       "slug": "esteban-ocon-est-officiellement-ecarte-par-haas-pour-la-suite",
       "title": "Le Français Esteban Ocon est écarté par Haas pour la suite de la saison de Formule 1",
@@ -8055,6 +8559,82 @@
       "summarizedAt": "2026-11-03T10:01:25.649Z"
     },
     {
+      "id": "1c0868fd1644",
+      "slug": "des-syndicats-et-associations-de-sept-pays-europeens-appellent",
+      "title": "Des syndicats et associations de sept pays européens appellent à manifester contre la vie chère en novembre",
+      "createdAt": "2026-11-04T07:01:17.984Z",
+      "storyDay": "2026-11-03",
+      "articles": [
+        {
+          "id": "4689280d5b33",
+          "outletId": "franceinfo",
+          "headline": "Des associations et syndicats de sept pays européens appellent à manifester contre la vie chère les 20, 21 et 22 novembre",
+          "url": "https://www.franceinfo.fr/societe/manifestations/des-associations-et-syndicats-de-sept-pays-europeens-appellent-a-manifester-contre-la-vie-chere-les-20-21-et-22-novembre_8266649.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-03T22:54:33.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/4jz7382dY17SS9rku1LxPaoDDrA/0x106:1024x682/432x243/filters:format(jpg)/2026/11/03/6aea65ec164c5801183544.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "2253c670327e",
+          "outletId": "20-minutes",
+          "headline": "Vie chère : Des syndicats et associations appellent à manifester dans sept pays européens fin novembre",
+          "url": "https://www.20minutes.fr/societe/4260181-20261103-vie-chere-syndicats-associations-appellent-manifester-sept-pays-europeens-fin-novembre?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-03T21:37:36.000Z",
+          "imageUrl": "https://img.20mn.fr/goeyjF_-Tgm9MZloTTkRgCk/1200x768_actualite-politique-faits-divers-3-11-2026-lyon-manifestation-etudiante-et-inter-fac-partie-de-la-place-jean-jaures-jusqu-a-la-manufacture-des-tabacs-et-l-universite-jean-moulin-lyon-3-contre-la-vie-chere-la-precarite-etudiante-le-manque-de-professeurs-et-les-conditions-scolaires-neirdaprod-p0009-credit-adrien-pittore-sipa-2611031842",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "4faf0c1a23a8",
+          "outletId": "le-monde",
+          "headline": "Des syndicats et associations de sept pays européens appellent à manifester contre la vie chère fin novembre",
+          "url": "https://www.lemonde.fr/international/article/2026/11/03/des-syndicats-et-associations-de-sept-pays-europeens-appellent-a-manifester-contre-la-vie-chere-fin-novembre_6805665_3210.html",
+          "publishedAt": "2026-11-03T20:48:27.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/30/110/0/8256/4128/644/322/60/0/da61012_ftp-1-tii7u4yu6ot1-afp-d4xa43p.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "4d6d03c83291",
+          "outletId": "la-croix",
+          "headline": "Vie chère : associations et syndicats de sept pays européens appellent à manifester",
+          "url": "https://www.la-croix.com/societe/vie-chere-associations-et-syndicats-de-sept-pays-europeens-appellent-a-manifester-20261103",
+          "publishedAt": "2026-11-03T18:25:43.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/11/03/2579832-des-associations-et-syndicats-de-sept-pays-europee.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "topicId": "1c0868fd1644",
+      "titledArticleCount": 4,
+      "section": "economy",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Des syndicats et associations de sept pays européens prévoient des manifestations coordonnées les 20, 21 et 22 novembre pour protester contre la vie chère.",
+          "Les organisateurs réclament en priorité une garantie du droit au logement, des contrôles sur les tarifs de l'énergie et de l'alimentation, ainsi qu'une hausse générale des salaires.",
+          "Le mouvement implique des délégations issues de France, d'Espagne, d'Italie, du Royaume-Uni, du Portugal, de Grèce et de Belgique, qui espèrent mobiliser des millions de manifestants."
+        ],
+        "centre": [
+          "Face à la crise du pouvoir d'achat, des syndicats et associations de sept nations européennes ont lancé un appel à manifester depuis Paris.",
+          "Les actions de rue sont planifiées pour les 20, 21 et 22 novembre prochains afin de rassembler des millions de personnes à travers l'Europe."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur le contenu précis des revendications sociales, citant en détail les mesures exigées en matière de salaires et de régulation des prix de l'énergie et de l'alimentation.",
+        "Le centre adopte une perspective institutionnelle et géographique en soulignant le cadre de l'annonce faite depuis Paris et l'ampleur internationale du mouvement face à la crise globale."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 4,
+      "summarizedAt": "2026-11-04T07:01:17.984Z"
+    },
+    {
       "id": "ca423ea9a0cb",
       "slug": "charlotte-gainsbourg-et-cecile-de-france-jouent-dans-le-film-l",
       "title": "Charlotte Gainsbourg et Cécile de France jouent dans le film L'Affaire Marie-Claire",
@@ -8270,7 +8850,7 @@
           "url": "https://www.20minutes.fr/faits_divers/4260112-20261103-besancon-entre-20-50-kg-or-voles-commando-braqueurs-chez-joaillier?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-03T17:32:54.000Z",
           "imageUrl": "https://img.20mn.fr/72wl_NyOSR27yycbYGxwPCk/1200x768_illustrations-photographiques-de-lingots-d-or-greuez-francois-0g4a7647-credit-francois-greuez-sipa-2605131656",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -8313,522 +8893,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 5,
       "summarizedAt": "2026-11-04T06:01:19.234Z"
-    },
-    {
-      "id": "bd0f29a15efd",
-      "slug": "la-police-demantele-le-campement-pour-le-logement-a-madrid",
-      "title": "La police démantèle le campement pour le droit au logement à la Puerta del Sol à Madrid",
-      "createdAt": "2026-11-03T13:01:20.778Z",
-      "storyDay": "2026-11-03",
-      "articles": [
-        {
-          "id": "de427c173919",
-          "outletId": "huffpost",
-          "headline": "Le gigantesque campement de la Puerta del Sol évacué à Madrid sur fond de crise du logement",
-          "url": "https://www.huffingtonpost.fr/international/video/le-gigantesque-campement-de-la-puerta-del-sol-evacue-a-madrid-sur-fond-de-crise-du-logement_351287.html",
-          "publishedAt": "2026-11-03T20:00:08.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/03/654/0/7282/4096/0/0/60/0/ba25b16_upload-1-5dczksrwxjtk-afp-20261103-d6989pw-v1-highres-spainhousingprotestrealestate.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "47d0ddbc399f",
-          "outletId": "20-minutes",
-          "headline": "« Une surprise au milieu de la nuit »… À Madrid, le camp de la Puerta del Sol évacué par la police",
-          "url": "https://www.20minutes.fr/monde/espagne/4259936-20261103-surprise-milieu-nuit-madrid-camp-puerta-del-sol-evacue-police?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-03T15:17:23.000Z",
-          "imageUrl": "https://img.20mn.fr/cKDst9t2Shef-EFEHCOmPSk/1200x768_le-camp-installe-depuis-la-fin-du-mois-de-decembre-a-la-puerta-del-sol-a-ete-evacue-dans-la-nuit-de-lundi-a-mardi-a-madrid-la-place-est-fermee-le-temps-du-nettoyage",
-          "frontPage": true,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "44b427489dc7",
-          "outletId": "courrier-international",
-          "headline": "À Madrid, le campement de la Puerta del Sol “appartient désormais au passé”",
-          "url": "https://www.courrierinternational.com/article/espagne-a-madrid-le-campement-de-la-puerta-del-sol-appartient-desormais-au-passe_284847",
-          "publishedAt": "2026-11-03T12:57:52.000Z",
-          "imageUrl": "https://focus.courrierinternational.com/2026/11/03/0/0/5000/3335/644/0/60/0/1329f9c_ftp-1-mvqlliz0scie-2026-11-03t081011z-215696645-rc27goa2xhdp-rtrmadp-3-spain-housing-protest.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "044c40e95a4b",
-          "outletId": "humanite",
-          "headline": "Démantèlement du campement pour le logement à Madrid : les organisateurs dénoncent « une intervention policière violente »",
-          "url": "https://www.humanite.fr/monde/acces-au-logement/demantelement-du-campement-pour-le-logement-a-madrid-les-organisateurs-denoncent-une-intervention-policiere-violente",
-          "publishedAt": "2026-11-03T11:47:22.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/Madrid.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "cf0624f01197",
-          "outletId": "le-monde",
-          "headline": "A Madrid, le campement pour le droit au logement installé depuis plusieurs semaines a été démantelé",
-          "url": "https://www.lemonde.fr/international/article/2026/11/03/a-madrid-le-campement-pour-le-droit-au-logement-installe-depuis-plusieurs-semaines-a-ete-demantele_6805572_3210.html",
-          "publishedAt": "2026-11-03T11:30:04.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/03/607/0/7282/3641/644/322/60/0/1ee1720_ftp-1-aunb2gpmpfkh-afp-d6989pw.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "bd0f29a15efd",
-      "titledArticleCount": 5,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "La police espagnole a évacué en pleine nuit le campement installé sur la Puerta del Sol à Madrid pour protester contre la crise du logement et l'expulsion de Maricarmen Abascal.",
-          "Les organisateurs et militants qualifient cette intervention des forces de l'ordre d'opération violente.",
-          "Cette mobilisation fait suite au décès d'une retraitée expulsée et a provoqué des répercussions politiques majeures, dont des élections législatives anticipées et une grève générale."
-        ],
-        "centre": [
-          "Les dernières tentes du campement protestataire dressé depuis plus d'un mois sur la place madrilène ont été démontées par la police lors d'une opération nocturne.",
-          "Le mouvement était né pour manifester contre la crise immobilière qui frappe la capitale espagnole."
-        ]
-      },
-      "differences": [
-        "La gauche met l'accent sur les origines sociales dramatiques du mouvement, les accusations de violence policière et ses conséquences politiques nationales.",
-        "Le centre adopte un ton factuel et descriptif, se focalisant sur le déroulement temporel de l'évacuation nocturne et la durée de l'occupation de la place."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 5,
-      "summarizedAt": "2026-11-04T00:01:24.314Z"
-    },
-    {
-      "id": "7126784ee857",
-      "slug": "une-mere-d-eleve-agresse-la-directrice-et-une-enseignante-d-une",
-      "title": "Nice : une mère d'élève fichée pour radicalisation agresse une directrice et une enseignante dans une école maternelle",
-      "createdAt": "2026-11-02T15:01:27.783Z",
-      "storyDay": "2026-11-02",
-      "articles": [
-        {
-          "id": "1076e1aa9524",
-          "outletId": "tf1-info",
-          "headline": "Séquestration à Nice : garde à vue de la suspecte prolongée",
-          "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-sequestration-a-nice-garde-a-vue-de-la-suspecte-prolongee-87443-2473711.html",
-          "publishedAt": "2026-11-03T20:10:12.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/sequestration-a-nice-garde-a-vue-de-la-suspecte-prolongee-e54764-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "9e82392689d3",
-          "outletId": "20-minutes",
-          "headline": "Profil inquiétant, OQTF, enquête… Ce que l’on sait sur l’agression dans une école à Nice",
-          "url": "https://www.20minutes.fr/faits_divers/4260168-20261103-profil-inquietant-oqtf-enquete-sait-agression-ecole-nice?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-03T19:50:38.000Z",
-          "imageUrl": "https://img.20mn.fr/8NbF1J9jThaW9fsQQziVUik/1200x768_des-policiers-francais-montent-la-garde-devant-l-ecole-maternelle-clement-roassal-ou-une-femme-de-36-ans-a-ete-arretee-et-placee-en-garde-a-vue-pour-avoir-pretendument-agresse-le-directeur-et-un-enseignant-a-nice-dans-le-sud-est-de-la-france-le-2-novembre-2026-photo-de-valery-hache-afp",
-          "frontPage": true,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "4da975143cd3",
-          "outletId": "liberation",
-          "headline": "Mère fichée, arme non-chargée, accusations d’agressions sexuelles… Ce que l’on sait de la séquestration qui a eu lieu dans une école à Nice lundi",
-          "url": "https://www.liberation.fr/societe/police-justice/agression-dans-une-ecole-a-nice-la-mere-etait-fichee-pour-radicalisation-islamiste-20261103_B4VHSJAQHZHSJJ3WRML2WVOFRI/",
-          "publishedAt": "2026-11-03T19:16:32.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "5d414826c2f5",
-          "outletId": "la-croix",
-          "headline": "Agression à Nice : la femme arrêtée était en situation irrégulière et fichée pour radicalisation",
-          "url": "https://www.la-croix.com/societe/agression-a-nice-la-femme-arretee-etait-en-situation-irreguliere-et-fichee-pour-radicalisation-20261103",
-          "publishedAt": "2026-11-03T16:46:53.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/11/03/2579612-l-ecole-clement-roassal-a-nice-dont-la-directrice-.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "abaf7a446685",
-          "outletId": "le-jdd",
-          "headline": "Agression dans une école maternelle à Nice : la mère d'élèves fichée pour radicalisation islamiste",
-          "url": "https://www.lejdd.fr/Societe/agression-dans-une-ecole-maternelle-a-nice-la-mere-deleves-fichee-pour-radicalisation-islamiste-187698",
-          "publishedAt": "2026-11-03T16:29:13.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/03/16/000_d6726j2.jpg?VersionId=hv.owBmNd.po6pNZnFJ2KQ1STxGE2KzR",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "c3f5e6721725",
-          "outletId": "huffpost",
-          "headline": "Nice : ce que l’on sait de la double agression par une mère d’élèves dans une école maternelle",
-          "url": "https://www.huffingtonpost.fr/france/article/nice-ce-que-l-on-sait-de-la-double-agression-par-une-mere-d-eleves-dans-une-ecole-maternelle-clx1_350792.html",
-          "publishedAt": "2026-11-03T15:29:33.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/02/577/0/5711/3212/0/0/60/0/f7c6a74_upload-1-9sk2xoab4usa-afp-20261102-d6786fq-v1-highres-franceeducationassault.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "3243b46c7d93",
-          "outletId": "le-monde",
-          "headline": "Agression dans une école à Nice : l’autrice était en situation irrégulière et assignée à résidence, annonce Laurent Nuñez",
-          "url": "https://www.lemonde.fr/societe/article/2026/11/03/agression-dans-une-ecole-a-nice-la-mere-d-eleve-etait-en-situation-irreguliere-et-assignee-a-residence-annonce-laurent-nunez_6805601_3224.html",
-          "publishedAt": "2026-11-03T14:41:15.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/02/952/0/5711/2855/644/322/60/0/62edb63_ftp-1-9cmumh1dlq76-afp-d6786fq.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "f909653c37a8",
-          "outletId": "le-parisien",
-          "headline": "Nice : la mère de famille en garde à vue après l’agression d’une directrice d’école et d’une enseignante a fait l’objet d’un suivi pour radicalisation",
-          "url": "https://www.leparisien.fr/faits-divers/la-mere-de-famille-soupconnee-davoir-agresse-une-directrice-decole-et-une-enseignante-a-nice-a-fait-lobjet-dun-suivi-pour-radicalisation-03-11-2026-BYBSO4E6URFFNCD6KPYKNPTBJY.php",
-          "publishedAt": "2026-11-03T14:01:20.376Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "5633d42a5e29",
-          "outletId": "20-minutes",
-          "headline": "Nice : La femme qui a agressé deux enseignantes était sous le coup d’une OQTF et suivie pour radicalisation islamiste",
-          "url": "https://www.20minutes.fr/faits_divers/4260054-20261103-nice-mere-eleve-agresse-deux-enseignantes-suivie-radicalisation-islamiste?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-03T13:58:40.000Z",
-          "imageUrl": "https://img.20mn.fr/wm25TupgRxSBxIo1pS7IZSk/1200x768_brigade-anticriminalite-de-la-police-nationale-alli-images-dsc-9890-credit-mourad-allili-sipa-2610061847",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "10d74ef93eec",
-          "outletId": "ouest-france",
-          "headline": "Agression dans une école maternelle à Nice : la mère de famille suspectée est fichée pour radicalisation islamiste",
-          "url": "https://www.ouest-france.fr/societe/faits-divers/agression-dans-une-ecole-maternelle-a-nice-la-mere-de-famille-est-fichee-pour-radicalisation-islamiste-65ad5b78-d77b-11f1-b736-5b9907ef0b5a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-03T13:51:48.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZTU1OTVmMmZkOTdmYmM1NzcyNWViMjZjOTgzYjcwMTg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2d07004670e135f7ab486ce020dab91dbf5f935f8d135fb35aa2d5b4f4ea92cb",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "32f20f99d0c1",
-          "outletId": "le-figaro",
-          "headline": "Suspecte fichée pour radicalisation islamiste, arme recherchée : ce que l’on sait après la violente agression dans une école maternelle de Nice",
-          "url": "https://www.lefigaro.fr/nice/suspecte-suivie-pour-radicalisation-arme-recherchee-ce-que-l-on-sait-apres-la-violente-agression-dans-une-ecole-maternelle-de-nice-20261103",
-          "publishedAt": "2026-11-03T13:47:50.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/03/d16748a126876675545fe1a396ab47881478b76811368e5bfaf1151d37e79426.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "a39eb15a84cf",
-          "outletId": "franceinfo",
-          "headline": "La mère d'élève soupçonnée d'avoir agressé une directrice d'école à Nice est sous OQTF et avait été suivie pour radicalisation islamiste",
-          "url": "https://www.franceinfo.fr/faits-divers/la-mere-d-eleve-soupconnee-d-avoir-agresse-une-directrice-d-ecole-a-nice-est-sous-oqtf-et-avait-ete-suivie-pour-radicalisation_8265902.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-03T13:36:58.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/TYAQVDFqRNe5t8w0xw_lifnokQk/0x301:5784x3554/432x243/filters:format(jpg)/2026/11/03/6ae9e152111e7399261149.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "09500aa5de39",
-          "outletId": "tf1-info",
-          "headline": "Agression à la maternelle : l’inquiétude des parents",
-          "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-agression-a-la-maternelle-l-inquietude-des-parents-67546-2473635.html",
-          "publishedAt": "2026-11-03T13:10:22.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/agression-a-la-maternelle-l-inquietude-des-parents-66b904-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "b8a2b7e11ac3",
-          "outletId": "le-jdd",
-          "headline": "Scène de terreur dans une école à Nice : une mère d'élèves sous OQTF menace à l'arme de poing des membres du personnel",
-          "url": "https://www.lejdd.fr/Societe/scene-de-terreur-dans-une-ecole-a-nice-une-mere-deleves-sous-oqtf-menace-a-larme-de-poing-des-membres-du-personnel-187644",
-          "publishedAt": "2026-11-03T09:05:13.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/03/09/000_d67c6uy.jpg?VersionId=7mgxLgYMq5_G4fF19JK0.a0d90Us1KzC",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "3d3c72b0d82c",
-          "outletId": "le-parisien",
-          "headline": "Nice : le ministre de l’Éducation se rendra à l’école où une directrice et une enseignante ont été agressées « en fin de semaine »",
-          "url": "https://www.leparisien.fr/faits-divers/nice-le-ministre-de-leducation-se-rendra-a-lecole-ou-une-directrice-et-une-enseignante-ont-ete-agressees-en-fin-de-semaine-03-11-2026-JCDLEKB32JH3BI3IVYNKA2UDYM.php",
-          "publishedAt": "2026-11-03T07:01:24.276Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "d102b91bc40a",
-          "outletId": "bfmtv",
-          "headline": "Une enquête ouverte pour \"tentative de meurtre\" après l'agression d'une enseignante et d'une directrice dans une école à Nice",
-          "url": "https://www.bfmtv.com/replay-emissions/bfm-premiere/video-une-enquete-ouverte-pour-tentative-de-meurtre-apres-l-agression-d-une-enseignante-et-d-une-directrice-dans-une-ecole-a-nice_VN-202611030129.html",
-          "publishedAt": "2026-11-03T05:38:31.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/T_LTy2maZYGXFkVQ32CQTMd8tYU=/0x0:1280x720/800x0/images/Une-enquete-ouverte-pour-tentative-de-meurtre-apres-l-agression-d-une-enseignante-et-d-une-directrice-dans-une-ecole-a-Nice-2376810.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "63c08dae5918",
-          "outletId": "tf1-info",
-          "headline": "Agression dans une école maternelle à Nice : enquête ouverte pour tentative de me*rtre",
-          "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-agression-dans-une-ecole-maternelle-a-nice-enquete-ouverte-pour-tentative-de-me-rtre-15111-2473495.html",
-          "publishedAt": "2026-11-02T21:15:11.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/agression-dans-une-ecole-maternelle-a-nice-enquete-ouverte-pour-tentative-de-me-rtre-fe980a-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "5adc6f09127e",
-          "outletId": "le-parisien",
-          "headline": "Nice : arme pointée sur les victimes, coups... Enquête ouverte après l’agression violente d’une directrice d’école et d’une enseignante",
-          "url": "https://www.leparisien.fr/faits-divers/agression-dune-directrice-decole-et-dune-enseignante-a-nice-une-enquete-ouverte-pour-tentative-de-meurtre-02-11-2026-E4EE32EP7RGWLGNMF3FUZK4EZQ.php",
-          "publishedAt": "2026-11-02T21:01:24.804Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "9fc2702eee2b",
-          "outletId": "tf1-info",
-          "headline": "\"J'étais terrifiée\" : les parents d'élèves sous le choc après l'agression d'une directrice et d'une institutrice à Nice",
-          "url": "https://www.tf1info.fr/justice-faits-divers/video-reportage-j-etais-terrifiee-les-parents-d-eleves-sous-le-choc-apres-l-agression-d-une-directrice-et-d-une-institutrice-a-nice-2473467.html",
-          "publishedAt": "2026-11-02T20:29:27.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/journalistes-ecole-maternelle-nice-2-novembre-2026-914b99-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "df6b000f1330",
-          "outletId": "bfmtv",
-          "headline": "Nice: une mère d’élève a été interpellée pour tentative de meurtre après avoir agressé la directrice et une institutrice d’une école maternelle",
-          "url": "https://www.bfmtv.com/police-justice/video-nice-une-mere-d-eleve-a-ete-interpellee-pour-tentative-de-meurtre-apres-avoir-agresse-la-directrice-et-une-institutrice-d-une-ecole-maternelle_VN-202611020929.html",
-          "publishedAt": "2026-11-02T20:25:37.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/TUOG5JPe7pcgm7eMTxb75asGIkc=/0x0:1280x720/800x0/images/Nice-une-mere-d-eleve-a-ete-interpellee-pour-tentative-de-meurtre-apres-avoir-agresse-la-directrice-et-une-institutrice-d-une-ecole-maternelle-2376688.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "723ead5387ea",
-          "outletId": "huffpost",
-          "headline": "Nice : ce que l’on sait d’une double agression par une mère d’élèves dans une école maternelle",
-          "url": "https://www.huffingtonpost.fr/france/article/nice-ce-que-l-on-sait-d-une-double-agression-par-une-mere-d-eleves-dans-une-ecole-maternelle_350792.html",
-          "publishedAt": "2026-11-02T20:18:56.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/02/577/0/5711/3212/0/0/60/0/f7c6a74_upload-1-9sk2xoab4usa-afp-20261102-d6786fq-v1-highres-franceeducationassault.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "47b6d672a433",
-          "outletId": "le-monde",
-          "headline": "Agression d’une directrice d’école et d’une enseignante à Nice par une mère d’élève : une enquête ouverte pour « tentative de meurtre »",
-          "url": "https://www.lemonde.fr/societe/article/2026/11/02/agression-d-une-directrice-d-ecole-et-d-une-enseignante-a-nice-par-une-mere-d-eleve-une-enquete-ouverte-pour-tentative-de-meurtre_6805317_3224.html",
-          "publishedAt": "2026-11-02T19:41:29.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/02/483/0/5801/2900/644/322/60/0/93ee229_ftp-1-qmz5bwauvb9f-afp-d67c6v9.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "ecabaff4c0b0",
-          "outletId": "tf1-info",
-          "headline": "Une directrice d'école séquestrée à Nice",
-          "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-une-directrice-d-ecole-sequestree-a-nice-2374-2473469.html",
-          "publishedAt": "2026-11-02T19:35:14.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/une-directrice-d-ecole-sequestree-a-nice-17fe17-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "594339371e77",
-          "outletId": "europe-1",
-          "headline": "Agression d'une directrice d'école et d'une enseignante à Nice : une enquête ouverte pour «tentative de meurtre»",
-          "url": "https://www.europe1.fr/police-justice/agression-dune-directrice-decole-et-dune-enseignante-a-nice-une-enquete-ouverte-pour-tentative-de-meurtre-1203558?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-02T19:11:01.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Police/bastien_ohier_hans_lucas_hans_lucas_via_afp_699203074bba1.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "5b2f9f7faac8",
-          "outletId": "tf1-info",
-          "headline": "Nice : une mère d'élève interpellée après avoir agressé la directrice d'une école et frappé une institutrice",
-          "url": "https://www.tf1info.fr/justice-faits-divers/nice-une-mere-d-eleve-interpellee-apres-avoir-sequestre-la-directrice-d-une-ecole-et-frappe-une-institutrice-2473454.html",
-          "publishedAt": "2026-11-02T17:31:21.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/ecole-maternelle-nice-agression-directrice-novembre-2026-007d3b-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "8476c75dbf4b",
-          "outletId": "la-croix",
-          "headline": "Nice : une directrice et une institutrice de maternelle agressées par une mère d’élève",
-          "url": "https://www.la-croix.com/societe/nice-une-directrice-et-une-institutrice-de-maternelle-agressees-par-une-mere-d-eleve-20261102",
-          "publishedAt": "2026-11-02T16:55:34.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/11/02/2578710-la-police-s-est-rendue-dans-lecole-maternelle-clem.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "8372726f9ec0",
-          "outletId": "franceinfo",
-          "headline": "A Nice, une femme interpellée après avoir agressé la directrice d'une école maternelle et une institutrice",
-          "url": "https://www.franceinfo.fr/faits-divers/a-nice-une-femme-interpellee-apres-avoir-agresse-la-directrice-d-une-ecole-maternelle-et-une-institutrice_8264156.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-02T16:39:15.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/pYsqovI3IsPX8dXGiFoA4yNDVVs/28x0:1073x588/432x243/filters:format(jpg)/2026/11/02/6ae893a2d2bd4534057693.png",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "1c26913518f6",
-          "outletId": "cnews",
-          "headline": "Nice : une mère de famille armée interpellée après avoir forcé une directrice d’école et une enseignante à jouer à la roulette russe",
-          "url": "https://www.cnews.fr/faits-divers/2026-11-02/nice-une-mere-de-famille-armee-interpellee-apres-avoir-force-une-directrice",
-          "publishedAt": "2026-11-02T16:37:01.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/capture_d_e_cran_2026-11-02_a_16.42.21_6ae8af6b22c4a.png?h=167dcf4d&itok=avqZDAlm",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "df2320e089a0",
-          "outletId": "le-parisien",
-          "headline": "Nice : à l’école Clément-Roassal, une mère de 36 ans agresse la directrice et une institutrice, Éric Ciotti se rend sur place",
-          "url": "https://www.leparisien.fr/faits-divers/nice-a-lecole-clement-roassal-une-mere-de-36-ans-agresse-la-directrice-et-une-institutrice-eric-ciotti-se-rend-sur-place-02-11-2026-IURJIDKGIFHKFJ35DOOFDIDQ3A.php",
-          "publishedAt": "2026-11-02T15:01:27.783Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "1e1e80dc8f3d",
-          "outletId": "le-figaro",
-          "headline": "Nice : la directrice et une institutrice d’une école maternelle agressées à l’arme de poing",
-          "url": "https://www.lefigaro.fr/nice/nice-la-directrice-et-une-institutrice-d-une-ecole-maternelle-agressees-a-l-arme-de-poing-20261102",
-          "publishedAt": "2026-11-02T14:53:51.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1997_crop/2026/11/02/8b7f9d6bfc1db7dd1e446c2f10c637ed4018367c4f1844c92e91561a545ad1e8.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "7e36b0b568b3",
-          "outletId": "ouest-france",
-          "headline": "La directrice et une enseignante d’une école maternelle agressées à Nice, une mère d’élève placée en garde à vue",
-          "url": "https://www.ouest-france.fr/faits-divers/agression/la-directrice-et-une-enseignante-dune-ecole-maternelle-agressees-a-nice-une-mere-deleve-placee-en-garde-a-vue-ed1bb1f6-d6c5-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-02T14:38:19.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMDg2MzE0ZDA5NjllY2IyMzhjMTRhM2M5YWEzYmM2NGM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=a14e8590daf4312863e87e9fe18d8f408c86da18f023ccbad9165ead701d6a23",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "84ddbe0f4969",
-          "outletId": "europe-1",
-          "headline": "Nice : une directrice d'école maternelle séquestrée et menacée avec une arme par une mère d'élèves",
-          "url": "https://www.europe1.fr/faits-divers/nice-une-directrice-decole-maternelle-sequestree-et-menacee-avec-une-arme-par-une-mere-deleves-1203063?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-02T14:32:53.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/02/15/080_hl_jmbarrere_3206593_1_6ae8a1c5a3650.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "b981fd458475",
-          "outletId": "bfmtv",
-          "headline": "Une mère de famille interpellée après l'agression d'une directrice et d'une enseignante de maternelle à Nice, Édouard Geffray fustige un acte \"intolérable\"",
-          "url": "https://www.bfmtv.com/cote-d-azur/une-femme-interpellee-apres-l-agression-d-une-directrice-et-une-institutrice-de-maternelle-a-nice_AN-202611020572.html",
-          "publishedAt": "2026-11-02T13:57:00.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Ig97PGZfn6whsREuS4HnNn9z5dc=/23x91:775x514/800x0/images/-149641.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "6c7fa60dbaa8",
-          "outletId": "20-minutes",
-          "headline": "Nice : Arme et « roulette russe »… Une mère d’élève agresse la directrice et une enseignante d’une école maternelle",
-          "url": "https://www.20minutes.fr/faits_divers/4259713-20261102-nice-arme-roulette-russe-mere-eleve-agresse-directrice-enseignante-ecole-maternelle?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-02T13:55:08.000Z",
-          "imageUrl": "https://img.20mn.fr/G0Adxn2iTq6jp_vINT06MSk/1200x768_eric-ciotti-maire-de-nice-a-pris-un-arrete-de-peril-pour-un-immeuble-totalement-insalubre-de-7-etages-4-bis-rue-saint-philippe-a-une-trentaine-de-metres-de-la-promenade-des-anglais-a-nice-depuis-plus-personne-ne-peut-y-acceder-dans-un-etat-deplorable-l-endroit-etait-aussi-frequente-par-des-trafiquants-de-drogue-et-des-squatteurs-les-locataires-ont-ete-reloges-en-urgence-jusqu-a-29-personnes-evacuees-et-13-ont-dormi-dans-un-gymnase-nicois-nice-france-30-04-2026-syspeo-sys-b035-credit-syspeo-sipa-2605021559",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "a3b7405bf82e",
-          "outletId": "liberation",
-          "headline": "La mère d’une élève de maternelle agresse la directrice et une institutrice d’une école de Nice",
-          "url": "https://www.liberation.fr/societe/police-justice/la-mere-dune-eleve-de-maternelle-agresse-la-directrice-et-une-institutrice-dune-ecole-de-nice-20261102_RP4TZU7PUZFTNL6UVTPURNO4II/",
-          "publishedAt": "2026-11-02T13:47:35.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "topicId": "7126784ee857",
-      "titledArticleCount": 35,
-      "section": "misc",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Une femme de trente-six ans a été placée en garde à vue après avoir agressé la directrice et une enseignante de l'école maternelle Clément Roassal à Nice.",
-          "La suspecte est visée par une obligation de quitter le territoire français et faisait l'objet d'un suivi pour radicalisation.",
-          "Les investigations indiquent qu'elle a utilisé une arme non chargée lors de l'incident et évoquent des accusations portées contre l'établissement."
-        ],
-        "centre": [
-          "Une mère d'élève a été interpellée à Nice après avoir menacé avec une arme et frappé la directrice ainsi qu'une institutrice d'une école maternelle.",
-          "Le profil de la mise en cause met en lumière une situation irrégulière depuis deux mille dix-neuf, une OQTF et un signalement pour radicalisation.",
-          "Les autorités locales et nationales, dont le ministre de l'Intérieur Laurent Nuñez, ont vivement condamné cette agression."
-        ],
-        "droite": [
-          "Une mère de famille a été placée en garde à vue pour tentative de meurtre après avoir séquestré et menacé le personnel de l'école maternelle Clément Roassal à Nice.",
-          "Plusieurs sources confirment que la suspecte est fichée pour radicalisation islamiste et sous le coup d'une obligation de quitter le territoire.",
-          "Le maire Éric Ciotti s'est rendu sur place pour dénoncer une violence qualifiée d'inouïe au sein d'un établissement scolaire."
-        ]
-      },
-      "differences": [
-        "La gauche privilégie un compte rendu factuel centré sur le déroulement précis des faits et l'accumulation des données biographiques de la suspecte.",
-        "Le centre met l'accent sur la dimension institutionnelle de l'événement, en relayant les réactions des ministres et les mesures de sécurisation prises autour de l'école.",
-        "La droite insiste particulièrement sur la qualification pénale de tentative de meurtre et sur le profil radicalisé de l'agresseuse en situation irrégulière."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 35,
-      "summarizedAt": "2026-11-04T01:01:27.175Z"
     }
   ],
   "stories": [
@@ -8839,6 +8903,238 @@
       "createdAt": "2026-11-02T21:01:24.804Z",
       "storyDay": "2026-11-02",
       "articles": [
+        {
+          "id": "2f5c96cf1fbd",
+          "outletId": "le-parisien",
+          "headline": "Midterms 2026 : Donald Trump reconnaît le rôle de la guerre en Iran dans la défaite des Républicains",
+          "url": "https://www.leparisien.fr/international/etats-unis/elections-americaines/midterms-2026-donald-trump-reconnait-le-role-de-la-guerre-en-iran-dans-la-defaite-des-republicains-04-11-2026-7KB7DOF2FVBVTGPTBPRNKQCUAU.php",
+          "publishedAt": "2026-11-04T07:01:17.984Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "cdc631f19c0a",
+          "outletId": "le-parisien",
+          "headline": "Dossiers Epstein, Iran, ICE : vainqueurs aux midterms, les démocrates veulent « demander des comptes » à Donald Trump",
+          "url": "https://www.leparisien.fr/international/etats-unis/elections-americaines/dossiers-epstein-iran-ice-vainqueurs-aux-midterms-les-democrates-veulent-demander-des-comptes-a-donald-trump-04-11-2026-BMXAL2SATBDHVBI5R57C6GPLH4.php",
+          "publishedAt": "2026-11-04T07:01:17.984Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "1be3b3b1f612",
+          "outletId": "rfi",
+          "headline": "Midterms aux États-Unis: Trump dit «accepter les résultats» mais refuse toute défaite personnelle",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261104-midterms-aux-%C3%A9tats-unis-trump-dit-accepter-les-r%C3%A9sultats-mais-refuse-toute-d%C3%A9faite-personnelle",
+          "publishedAt": "2026-11-04T06:59:25.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/28f08a5a-d81d-11f1-bef0-1beafce15fea/w:1024/p:16x9/AP26306730345034.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "276b13aa987c",
+          "outletId": "franceinfo",
+          "headline": "Victoire démocrate au Sénat, Donald Trump promet d'accepter les résultats... Les premiers enseignements des midterms 2026 aux Etats-Unis",
+          "url": "https://www.franceinfo.fr/monde/usa/midterms-2018/victoire-democrate-au-senat-donald-trump-promet-d-accepter-les-resultats-les-premiers-enseignements-des-midterms-2026-aux-etats-unis_8266958.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-04T06:53:53.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/qk0YeZYpy0Uxu3bQidFt6wn1wU8/0x0:9494x5340/432x243/filters:format(jpg)/2026/11/04/6aeab63b90b59793925055.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "83d304b99bd3",
+          "outletId": "humanite",
+          "headline": "« Michigan, nous l’avons fait ! », revendique Abdul El-Sayed",
+          "url": "https://www.humanite.fr/-/-/michigan-nous-lavons-fait-revendique-abdul-el-sayed",
+          "publishedAt": "2026-11-04T06:52:11.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "8d6bb0420aaa",
+          "outletId": "le-figaro",
+          "headline": "Midterms 2026 : l’Amérique inflige une répudiation à Donald Trump, les démocrates s’offrent une vaste victoire",
+          "url": "https://www.lefigaro.fr/international/midterms-2026-l-amerique-inflige-une-repudiation-a-donald-trump-les-democrates-s-offrent-une-vaste-victoire-20261104",
+          "publishedAt": "2026-11-04T06:50:06.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/04/335b69e1e746c939207be99819627d649760370b64110505766b4d9213da0021.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "e1dd38697cdc",
+          "outletId": "liberation",
+          "headline": "Déroute pour Donald Trump aux midterms, consultations post-électorales en Israël, mouvement social en France… L’actu de ce mercredi 4 novembre au matin",
+          "url": "https://www.liberation.fr/international/europe/deroute-pour-donald-trump-aux-midterms-consultations-post-electorales-en-israel-mouvement-social-en-france-lactu-de-ce-mercredi-4-novembre-au-matin-20261104_EOTKQYVQWBCIBFK725IV7TE3NQ/",
+          "publishedAt": "2026-11-04T06:48:27.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "5906d8abf42e",
+          "outletId": "ouest-france",
+          "headline": "REPORTAGE. Midterms 2026 : en Géorgie, les démocrates signent une double victoire pour « tenir tête à Donald Trump »",
+          "url": "https://www.ouest-france.fr/monde/etats-unis/elections-americaines/reportage-midterms-2026-en-georgie-les-democrates-signent-une-double-victoire-pour-tenir-tete-a-donald-trump-8b08d4ac-d7e3-11f1-b736-5b9907ef0b5a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-04T06:45:57.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMWUyMzNmOGM3ZDNlMGJkZmQ0YjY0ZGY0Zjg3YzU0NDY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=e7070f8bed83cd6eba413edf31e80934020f4e4edb98b2d6d1e298f3085f835b",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "f0013516ba5a",
+          "outletId": "tf1-info",
+          "headline": "\"Je n'aime pas le voir comme une défaite pour moi\" : Trump reconnaît les résultats des midterms et le rôle de la guerre en Iran",
+          "url": "https://www.tf1info.fr/international/etats-unis-je-n-aime-pas-le-voir-comme-une-defaite-pour-moi-trump-reconnait-les-resultats-des-midterms-2026-et-le-role-de-la-guerre-en-iran-2473737.html",
+          "publishedAt": "2026-11-04T06:42:21.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/682/donald-trump-rally-octobre-2026-ea4f19-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "ef2aeae84cbf",
+          "outletId": "huffpost",
+          "headline": "Midterms : Trump reconnaît la défaite des républicains et c’est la faute de tout le monde (sauf la sienne)",
+          "url": "https://www.huffingtonpost.fr/international/article/midterms-trump-reconnait-la-defaite-des-republicains-et-c-est-la-faute-de-tout-le-monde-sauf-la-sienne_351683.html",
+          "publishedAt": "2026-11-04T06:41:19.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2025/01/15/43/0/1024/576/0/0/60/0/620c402_sirius-fs-upload-1-gabbmylv5kq6-1736944198312-000-pz9q9.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "708843dc1098",
+          "outletId": "ouest-france",
+          "headline": "Midterms 2026 : Donald Trump reconnaît le « bon boulot » des démocrates après leur victoire sans appel au Congrès",
+          "url": "https://www.ouest-france.fr/monde/etats-unis/elections-americaines/midterms-2026-donald-trump-reconnait-le-bon-boulot-des-democrates-apres-leur-victoire-sans-appel-au-congres-7ad0e118-d80d-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-04T06:39:22.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZTBhMDc5ZGY5ZjFiZTgxNTBiNjhlZDkwOGM5MGE5M2Y?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ed1590344e3cd3ec3b9a83e0fc0969c259a2715f985ee6a116622605d4015de9",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "08993bb98d9f",
+          "outletId": "bfmtv",
+          "headline": "Texas, Kansas, Iowa... Ces États qui ont basculé aux mains des démocrates lors des élections de mi-mandat aux États-Unis",
+          "url": "https://www.bfmtv.com/international/amerique-nord/etats-unis/texas-kansas-iowa-ces-etats-qui-ont-bascule-aux-mains-des-democrates-lors-des-elections-de-mi-mandat-aux-etats-unis_AV-202611040197.html",
+          "publishedAt": "2026-11-04T06:37:34.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/WDiNF0BfI84RQnjgCYFGMICPUaU=/0x106:2048x1258/800x0/images/Le-Senat-americain-a-Washington-1370863.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "b3fa659b3af1",
+          "outletId": "cnews",
+          "headline": "Élections de mi-mandat aux États-Unis : le Kansas a élu un candidat démocrate, une première depuis 1932",
+          "url": "https://www.cnews.fr/monde/2026-11-04/elections-de-mi-mandat-aux-etats-unis-le-kansas-elu-un-candidat-democrate-une",
+          "publishedAt": "2026-11-04T06:33:33.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-04t053723z_516570738_rc2tgoa0679m_rtrmadp_3_usa-election-kansas-taille1200_6aeac7565a1e6.jpg?itok=amfF-Srw",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "8c660dae4300",
+          "outletId": "challenges",
+          "headline": "Certains revers font plus mal que d’autres : les midterms, un camouflet pour Donald Trump, les démocrates au nirvana",
+          "url": " https://www.challenges.fr/monde/certains-revers-font-plus-mal-que-dautres-les-midterms-un-camouflet-pour-donald-trump-les-democrates-au-nirvana_646799 ",
+          "publishedAt": "2026-11-04T06:30:00.000Z",
+          "imageUrl": "https://www.challenges.fr/_ipx/f_jpg&s_1200x630&enlarge_true/cha%2Fstatic%2F2026-11%2F64190.HR_0.jpg%3FVersionId%3D36dfyFLbZpiOt_7QjTjwdJUizyCwidJl",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "5fb39fb1b8ed",
+          "outletId": "liberation",
+          "headline": "Midterms 2026 : tsunami démocrate et crépuscule de Donald Trump",
+          "url": "https://www.liberation.fr/international/amerique/midterms-2026-tsunami-democrate-et-crepuscule-de-donald-trump-20261104_DNZLKIB4CVGNTJMC76ZRQVF6UQ/",
+          "publishedAt": "2026-11-04T06:17:02.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "475a22eb5ccf",
+          "outletId": "humanite",
+          "headline": "Pour la première fois depuis 1932, le Kansas envoie un démocrate au Sénat",
+          "url": "https://www.humanite.fr/-/-/pour-la-premiere-fois-depuis-1932-le-kansas-envoie-un-democrate-au-senat",
+          "publishedAt": "2026-11-04T06:09:46.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c6df1f929c08",
+          "outletId": "lobs",
+          "headline": "En direct - « Midterms » 2026 : les démocrates obtiennent la majorité des sièges au Sénat",
+          "url": "https://www.nouvelobs.com/monde/20261104.OBS119828/en-direct-midterms-2026-les-democrates-obtiennent-la-majorite-des-sieges-au-senat.html",
+          "publishedAt": "2026-11-04T06:08:25.000Z",
+          "imageUrl": "https://focus.nouvelobs.com/2026/11/04/0/0/1023/682/0/0/60/0/fb86495_ftp-1-nhlgmflq5ckn-2303426604-1024.jpg",
+          "frontPage": false,
+          "kind": "live",
+          "section": "world"
+        },
+        {
+          "id": "de3d1f720f91",
+          "outletId": "humanite",
+          "headline": "« Félicitations aux démocrates », reconnaît Trump, qui revendique son « pouvoir de veto »",
+          "url": "https://www.humanite.fr/-/-/felicitations-aux-democrates-reconnait-trump",
+          "publishedAt": "2026-11-04T06:07:04.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "85be5c0d4fe6",
+          "outletId": "europe-1",
+          "headline": "Midterms 2026 : les démocrates obtiennent la majorité au Sénat et prennent le contrôle total du Congrès",
+          "url": "https://www.europe1.fr/international/midterms-2026-les-democrates-obtiennent-la-majorite-au-senat-et-prennent-le-controle-total-du-congres-1207133?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-04T06:06:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/04/06/053_ar-20261104122923_kinq1_dsc09543_122839244_1_6aeacb4f926dd.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "ee21a07b9cca",
+          "outletId": "humanite",
+          "headline": "Pour Téhéran, les États-Uniens ont dit « non à la guerre »",
+          "url": "https://www.humanite.fr/-/-/pour-teheran-les-etats-uniens-ont-dit-non-a-la-guerre",
+          "publishedAt": "2026-11-04T06:02:18.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "743479b62d0c",
+          "outletId": "humanite",
+          "headline": "Les démocrates ont pris le contrôle du Sénat et sont en passe d’obtenir la majorité à la Chambre des représentants",
+          "url": "https://www.humanite.fr/-/-/les-democrates-ont-pris-le-controle-du-senat-et-sont-en-passe-dobtenir-la-majorite-a-la-chambre-des-representants",
+          "publishedAt": "2026-11-04T06:01:44.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
         {
           "id": "46949d8183c9",
           "outletId": "le-parisien",
@@ -8901,7 +9197,7 @@
           "url": "https://www.ouest-france.fr/monde/etats-unis/elections-americaines/midterms-2026-suivez-les-resultats-des-elections-americaines-de-mi-mandat-avec-nos-cartes-en-temps-reel-d7e49444-d7d6-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-04T05:59:24.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZjc5NGU2YmRhNmU4NzA0YzhlOTRjM2E4M2M5MzFmOWY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d4f32f8540ec9ee82c161803fac9c2fa26672c15bda0d805baf396a3e388e97d",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "live",
           "section": "world",
           "everFrontPage": true
@@ -8991,9 +9287,10 @@
           "url": "https://www.lefigaro.fr/international/midterms-2026-une-gouverneure-noire-un-senateur-ouvertement-gay-les-premieres-historiques-du-scrutin-20261104",
           "publishedAt": "2026-11-04T05:51:09.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/1918x1079_crop/2026/11/04/71ccf21fba041295a01816f7a8c367ede2dadc940980709cf800188986cdb415.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
-          "section": "politics"
+          "section": "politics",
+          "everFrontPage": true
         },
         {
           "id": "f2ed058add52",
@@ -9004,6 +9301,17 @@
           "frontPage": false,
           "kind": "news",
           "section": "world"
+        },
+        {
+          "id": "1eb611ce34d5",
+          "outletId": "europe-1",
+          "headline": "Midterms 2026 : le Kansas envoie un démocrate au Sénat, une première depuis 1932",
+          "url": "https://www.europe1.fr/international/midterms-2026-le-kansas-envoie-un-democrate-au-senat-une-premiere-depuis-1932-1207100?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-04T05:47:52.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/04/06/000_d6cw6rf_1_6aeac8361f7c3.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
         },
         {
           "id": "94d8aee0cb62",
@@ -9128,6 +9436,17 @@
           "everFrontPage": true
         },
         {
+          "id": "7bcf5ce234f5",
+          "outletId": "cnews",
+          "headline": "Elections de mi-mandat aux Etats-Unis : tout savoir sur le démocrate James Talarico, auteur d'une victoire historique au Texas",
+          "url": "https://www.cnews.fr/monde/2026-11-04/elections-de-mi-mandat-aux-etats-unis-tout-savoir-sur-le-democrate-james-talarico",
+          "publishedAt": "2026-11-04T05:15:32.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-03t024352z_372765215_rc21goatoujg_rtrmadp_3_usa-election-texas-talarico-taille1200_6ae992769e185.jpg?h=2ea404ed&itok=KSwkLoZ7",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
           "id": "99bdf66f29be",
           "outletId": "courrier-international",
           "headline": "“Vague bleue” aux “midterms” : les démocrates reprennent le contrôle du Congrès",
@@ -9148,6 +9467,17 @@
           "frontPage": false,
           "kind": "live",
           "section": "world"
+        },
+        {
+          "id": "980b0ce8e1a8",
+          "outletId": "huffpost",
+          "headline": "Au Texas, le démocrate James Talarico l’emporte pour le Sénat et ce n’est pas la seule énorme surprise",
+          "url": "https://www.huffingtonpost.fr/international/article/au-texas-james-talarico-reussit-l-exploit-que-les-democrates-attendaient-depuis-38-ans-aux-midterms-2026_351650.html",
+          "publishedAt": "2026-11-04T05:02:35.000Z",
+          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/04/287/0/5515/3102/0/0/60/0/dab0a9f_upload-1-3mudx6rs6mb6-afp-20261103-d68f2ty-v1-highres-776586270.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
         },
         {
           "id": "475c897c7f0e",
@@ -9678,7 +10008,7 @@
           "url": "https://www.lefigaro.fr/international/retrouver-un-certain-equilibre-en-virginie-des-electeurs-confient-leurs-inquietudes-et-leurs-espoirs-le-jour-du-vote-des-midterms-20261103",
           "publishedAt": "2026-11-03T18:10:50.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x1688_crop/2026/11/03/ebe2549e898e0af4ae3f18535080aa2d81a904bcbc23cc327f4c642cb6931c3f.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -9857,7 +10187,7 @@
           "url": "https://www.20minutes.fr/monde/etats-unis/4259880-20261104-direct-midterms-2026-maison-blanche-tente-exonerer-trump-defaite-annonce?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-03T06:04:29.000Z",
           "imageUrl": "https://img.20mn.fr/7lJMsNuITGqzkiNzoMhynyk/1200x768_des-personnes-participent-aux-elections-de-mi-mandat-dans-un-bureau-de-vote-de-l-arrondissement-du-queens-a-new-york-dans-l-etat-de-new-york-le-3-novembre-2026-le-jour-des-elections-de-mi-mandat-aura-lieu-le-3-novembre-avec-435-sieges-a-pourvoir-a-la-chambre-des-representants-des-etats-unis-aux-gouverneurs-aux-representants-de-l-etat-et-environ-un-tiers-des-sieges-du-senat-americain-photo-d-anthony-behar-sipa-usa-74735429-2611031639",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "live",
           "section": "world",
           "everFrontPage": true
@@ -11107,6 +11437,17 @@
       "createdAt": "2026-11-03T22:01:21.787Z",
       "storyDay": "2026-11-03",
       "articles": [
+        {
+          "id": "61589835db66",
+          "outletId": "la-croix",
+          "headline": "Ligue des champions : victoire écrasante du PSG contre Villarreal",
+          "url": "https://www.la-croix.com/ligue-des-champions-le-paris-sg-en-balade-a-villarreal-20261103",
+          "publishedAt": "2026-11-04T06:22:36.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/11/03/2579989-le-milieu-du-psg-joao-neves-apres-la-victoire-cont.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
         {
           "id": "6fff6540da8d",
           "outletId": "le-monde",
@@ -13978,7 +14319,7 @@
           "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-retailleau-estime-qu-il-faudra-une-primaire-sans-doute-en-debut-d-annee-20261104",
           "publishedAt": "2026-11-03T23:50:17.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/98ce26dc5aa062db204e38fbc40f6547d961cddb90c5d796fbd9cca18401183a.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -14130,224 +14471,6 @@
       "summarizedAt": "2026-11-03T23:01:23.991Z"
     },
     {
-      "id": "ca1c118cdc5f",
-      "slug": "des-frappes-russes-font-18-a-24-morts-dans-le-sud-est-de-l",
-      "title": "Des frappes russes font 26 morts dans l'oblast de Zaporijia en Ukraine",
-      "createdAt": "2026-11-02T19:01:25.970Z",
-      "storyDay": "2026-11-02",
-      "articles": [
-        {
-          "id": "04e5fc701839",
-          "outletId": "le-monde",
-          "headline": "EN DIRECT, guerre en Ukraine : au moins 33 morts au lendemain d’une attaque russe contre un centre de distribution d’aide humanitaire dans la région de Zaporijia",
-          "url": "https://www.lemonde.fr/international/live/2026/11/03/en-direct-guerre-en-ukraine-au-moins-33-morts-au-lendemain-d-une-attaque-russe-contre-un-centre-de-distribution-d-aide-humanitaire-dans-la-region-de-zaporijia_6803934_3210.html",
-          "publishedAt": "2026-11-03T21:53:32.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/03/0/0/5808/2904/644/322/60/0/ae45251_ftp-1-4niwhdn14zid-c46e4adee61e4f3f9efabb0aa1728079-1-147cc7eb9ada47fea80579dbecd04e1e.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "faac886c07dd",
-          "outletId": "20-minutes",
-          "headline": "Guerre en Ukraine : L’attaque russe vire au carnage, de nouvelles négociations de paix annoncées",
-          "url": "https://www.20minutes.fr/monde/ukraine/4260133-20261103-guerre-ukraine-attaque-russe-vire-carnage-nouvelles-negociations-paix-annoncees?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-03T18:46:31.000Z",
-          "imageUrl": "https://img.20mn.fr/JojIBfhMSeCQ971AXiXHhCk/1200x768_les-sauveteurs-transportent-le-corps-d-une-personne-tuee-par-une-frappe-aerienne-russe-sur-l-ecole-souterraine-de-komyshuvakha-dans-la-region-de-zaporizhzhia-en-ukraine-le-lundi-2-novembre-2026-photo-ap-mal102-26307420061207-2611031306",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "b68a1e51e4b1",
-          "outletId": "france-24",
-          "headline": "Guerre en Ukraine : \"l'un des plus grands massacres perpétrés par les Russes\"",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261103-guerre-en-ukraine-l-un-des-plus-grands-massacres-perp%C3%A9tr%C3%A9s-par-les-russes",
-          "publishedAt": "2026-11-03T17:16:11.000Z",
-          "imageUrl": "https://s.france24.com/media/display/bf92aa78-d7a6-11f1-8c2a-bf1914cabd52/w:1024/p:16x9/FR-20261103-170642-170825-CS.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "3edfe0e4922a",
-          "outletId": "france-24",
-          "headline": "Ukraine : au moins 33 personnes meurent dans des frappes russes sur un centre humanitaire",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261103-ukraine-au-moins-33-personnes-meurent-dans-des-frappes-russes-sur-un-centre-humanitaire",
-          "publishedAt": "2026-11-03T16:46:45.000Z",
-          "imageUrl": "https://s.france24.com/media/display/d33091be-d7a4-11f1-b0a7-a575454bc579/w:1024/p:16x9/Ukraine-frappes-centre-humantaire-10.png",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "ff98f9fa654a",
-          "outletId": "rfi",
-          "headline": "Guerre en Ukraine: 29 morts dans une frappe russe, Kiev accuse Moscou de torpiller les espoirs de paix",
-          "url": "https://www.rfi.fr/fr/europe/20261103-guerre-en-ukraine-29-morts-dans-une-frappe-russe-kiev-accuse-moscou-de-torpiller-les-espoirs-de-paix",
-          "publishedAt": "2026-11-03T07:35:08.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/b2f9573a-d756-11f1-8447-bf1914cabd52/w:1024/p:16x9/000-D67X6ZQ.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "12642ee74e5e",
-          "outletId": "ouest-france",
-          "headline": "Guerre en Ukraine : 29 morts dans des frappes russes, 493 drones ukrainiens interceptés par Moscou… Le point sur la nuit",
-          "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-26-morts-dans-des-frappes-fin-de-tout-espoir-de-progres-de-paix-pour-kiev-le-point-sur-la-nuit-9be1c5f0-d701-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-03T06:14:34.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExODg2OTk5NTI3MTJmOTkwYjQ1Mjg0MTNhNDA4OGQ0ZWE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9e1d90c68e6c6ac9bd0eaa9290e2e38ec8a227cd27556caeab459c515620c5ad",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "18e5214750d4",
-          "outletId": "bfmtv",
-          "headline": "Guerre en Ukraine: 26 morts dans des frappes russes, Volodymyr Zelensky accuse Moscou d'anéantir \"tout espoir de progrès vers la paix\"",
-          "url": "https://www.bfmtv.com/international/europe/ukraine/guerre-en-ukraine-26-morts-dans-des-frappes-russes-volodymyr-zelensky-accuse-moscou-d-aneantir-tout-espoir-de-progres-vers-la-paix_AD-202611021021.html",
-          "publishedAt": "2026-11-02T22:34:08.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/eZroU086IfVJBDu7YXUig4rktNA=/0x160:2048x1312/800x0/images/Des-policiers-et-secouristes-portent-une-personne-retrouvee-sous-les-decombres-apres-des-frappes-russes-dans-la-ville-de-Komyshuvakha-en-Ukraine-le-2-novembre-2026-2376725.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "fe56dea503df",
-          "outletId": "ouest-france",
-          "headline": "Guerre en Ukraine : des frappes russes dans le Sud-Est font au moins 26 morts, annonce Volodymyr Zelensky",
-          "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-des-frappes-russes-dans-le-sud-est-font-au-moins-18-morts-annonce-volodymyr-zelensky-750ebf9e-d6e5-11f1-84f3-5611f158a658?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-02T21:16:55.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYmVkMTRjYzQzNjQzNGI5ZjdiZGM1ZmQzYmFlYzFlZGY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2bc9cc892faf2b44473e984f93a678f5bb7b2e76f3f553a4afe0b38c7f094a17",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "49f6bc32e45e",
-          "outletId": "france-24",
-          "headline": "En Ukraine, des frappes russes pendant une distribution d'aide humanitaire font 26 morts",
-          "url": "https://www.france24.com/fr/europe/20261102-en-ukraine-des-frappes-russes-pendant-une-distribution-d-aide-humanitaire-font-26-morts",
-          "publishedAt": "2026-11-02T21:07:54.000Z",
-          "imageUrl": "https://s.france24.com/media/display/77d61602-d701-11f1-8594-d18c5759e759/w:1024/p:16x9/c83c0482d49f8575fc0b65f32d551aa79b4d413b.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "8941c55d36c9",
-          "outletId": "le-parisien",
-          "headline": "Des frappes russes font 18 morts dans un village du sud-est de l’Ukraine, annonce le président Volodymyr Zelensky",
-          "url": "https://www.leparisien.fr/international/des-frappes-russes-font-18-morts-dans-un-village-du-sud-est-de-lukraine-annonce-le-president-volodymyr-zelensky-02-11-2026-6KQFULZHMFEIXCOIBBUVKG6LBQ.php",
-          "publishedAt": "2026-11-02T19:01:25.970Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "955504896746",
-          "outletId": "20-minutes",
-          "headline": "Guerre en Ukraine : La Russie recule un peu mais frappe très fort",
-          "url": "https://www.20minutes.fr/monde/ukraine/4259695-20261102-guerre-ukraine-russie-recule-peu-frappe-tres-fort?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-02T18:43:13.000Z",
-          "imageUrl": "https://img.20mn.fr/Yt_2rE6fTbW1XuF4kJIe-Sk/1200x768_le-president-russe-vladimir-poutine-commandant-en-chef-supreme-des-forces-armees-russes-preside-une-reunion-avec-de-hauts-responsables-de-l-etat-major-general-et-des-commandants-de-groupes-de-forces-militaires-lors-d-une-visite-a-un-poste-de-commandement-des-forces-conjointes-en-russie-le-16-octobre-2026-photo-du-president-russe-officielle-apa-images-apa-images-11572441-credit-apa-images-sipa-2610181643",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "430d91fa756d",
-          "outletId": "tf1-info",
-          "headline": "Guerre en Ukraine : 18 morts après des frappes russes dans un village du sud-est du pays",
-          "url": "https://www.tf1info.fr/international/guerre-en-ukraine-18-morts-apres-des-frappes-russes-dans-un-village-du-sud-est-du-pays-komychouvakha-2473463.html",
-          "publishedAt": "2026-11-02T18:39:04.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/684/pompier-incendie-batiment-endommage-kyiv-27-10-26-fa0f52-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "c6515e605213",
-          "outletId": "franceinfo",
-          "headline": "Des frappes russes font 18 morts en Ukraine au lendemain de la fin d'un cessez-le-feu à Olechky, Volodymyr Zelensky dénonce l'anéantissement de \"tout espoir de progrès vers la paix\"",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/des-frappes-russes-font-18-morts-en-ukraine-au-lendemain-de-la-fin-d-un-cessez-le-feu-a-olechky-volodymyr-zelensky-denonce-l-aneantissement-de-tout-espoir-de-progres-vers-la-paix_8264639.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-02T18:32:20.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/r1LV6og5mRscpQWX2fPk_u_wPuk/0x12:1024x588/432x243/filters:format(jpg)/2026/11/02/6ae8d2989b787638278313.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "626bec77f996",
-          "outletId": "liberation",
-          "headline": "«Absolument horrible» : 24 personnes tuées dans le bombardement du village ukrainien de Komyshuvakha",
-          "url": "https://www.liberation.fr/international/europe/absolument-horrible-24-personnes-tuees-dans-le-bombardement-du-village-ukrainien-de-komyshuvakha-20261102_6NMF4M5RORAIDMAAPIEIWM4PC4/",
-          "publishedAt": "2026-11-02T18:14:23.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "6e26772619f2",
-          "outletId": "le-figaro",
-          "headline": "Ukraine : des bombardements russes font dix-huit morts dans un village, selon Zelensky",
-          "url": "https://www.lefigaro.fr/international/ukraine-des-bombardements-russes-font-dix-huit-morts-dans-un-village-selon-zelensky-20261102",
-          "publishedAt": "2026-11-02T17:47:26.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2034_crop/2026/11/02/a358b80b290aaff84e8faf1b79ad4c3b6176936396faa7485cda27e2ef486281.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "f3e72d862082",
-          "outletId": "le-monde",
-          "headline": "EN DIRECT, guerre en Ukraine : 24 personnes ont été tuées par des bombardements russes dans l’oblast de Zaporijia, selon les services de secours",
-          "url": "https://www.lemonde.fr/international/live/2026/11/02/en-direct-guerre-en-ukraine-dix-huit-personnes-ont-ete-tuees-par-des-bombardements-russes-dans-l-oblast-de-zaporijia-annonce-volodymyr-zelensky_6803934_3210.html",
-          "publishedAt": "2026-11-02T17:30:57.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/26/407/0/4886/2443/644/322/60/0/93f9949_ftp-1-li7gcml1c8iw-2026-10-26t105104z-645590980-rc2vaoadli1l-rtrmadp-3-ukraine-crisis-attack-zaporizhzhia.JPG",
-          "frontPage": false,
-          "kind": "live",
-          "section": "world",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "5ad9726a87f5",
-      "titledArticleCount": 13,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Des frappes russes ont touché le village de Komyshuvakha dans l'oblast de Zaporijia le 2 novembre, faisant 24 morts selon les services de secours.",
-          "Le bombardement a visé une école transformée en centre de distribution d'aide humanitaire, subissant une double frappe destructrice.",
-          "Le président ukrainien Volodymyr Zelensky a dénoncé l'anéantissement de tout espoir de progrès vers la paix après la fin de la trêve à Olechky."
-        ],
-        "centre": [
-          "Plusieurs frappes russes ont ciblé une école servant de centre humanitaire à Komyshuvakha, dans la région de Zaporijia, faisant entre 18 et 33 morts selon les sources et les moments de publication.",
-          "Le président ukrainien Volodymyr Zelensky a accusé Moscou d'avoir recours à une double frappe qualifiée de crime de guerre et d'anéantir tout espoir de paix."
-        ],
-        "droite": [
-          "L'armée russe a bombardé à plusieurs reprises le village de Komychouvakha, dans l'oblast de Zaporijia, touchant une école où les habitants venaient chercher de l'aide.",
-          "Le président ukrainien Volodymyr Zelensky a annoncé un bilan provisoire de dix-huit morts à la suite de ces frappes."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur le caractère horrible du bombardement en mentionnant le contexte de la fin de l'opération humanitaire à Olechky.",
-        "Le centre rapporte les faits en adoptant un volume important de publications aux bilans fluctuants et met l'avant les accusations de crimes de guerre portées par Kiev.",
-        "La droite privilégie un traitement factuel centré sur le bilan humain minimal de dix-huit morts et le lieu visé sans insister sur les commentaires géopolitiques."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 13,
-      "summarizedAt": "2026-11-03T17:01:24.231Z"
-    },
-    {
       "id": "bd0f29a15efd",
       "slug": "la-police-demantele-le-campement-pour-le-logement-a-madrid",
       "title": "La police démantèle le campement pour le droit au logement à la Puerta del Sol à Madrid",
@@ -14435,6 +14558,89 @@
       "summarizedAt": "2026-11-04T00:01:24.314Z"
     },
     {
+      "id": "fe65bb9c822e",
+      "slug": "le-navigateur-matthieu-perraut-a-chavire-pendant-la-route-du",
+      "title": "Route du Rhum : le navigateur Matthieu Perraut a chaviré et attend les secours",
+      "createdAt": "2026-11-04T02:01:19.067Z",
+      "storyDay": "2026-11-04",
+      "articles": [
+        {
+          "id": "03fdd1cd03f9",
+          "outletId": "le-monde",
+          "headline": "Route du Rhum : l’Ocean Fifty « Elvest » de Matthieu Perraut a chaviré",
+          "url": "https://www.lemonde.fr/sport/article/2026/11/04/route-du-rhum-l-ocean-fifty-elvest-de-matthieu-perraut-a-chavire_6806116_3242.html",
+          "publishedAt": "2026-11-04T06:49:58.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/01/445/0/5341/2670/644/322/60/0/66e765f_ftp-1-ubz7hxjkmfxl-afp-d63l9qx.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "be8b747a8d16",
+          "outletId": "le-parisien",
+          "headline": "« Il va bien et attend les secours » : le navigateur Matthieu Perraut a chaviré pendant la Route du Rhum",
+          "url": "https://www.leparisien.fr/sports/voile/il-va-bien-et-attend-les-secours-le-navigateur-matthieu-perraut-a-chavire-pendant-la-route-du-rhum-04-11-2026-7DZYDTAMI5HZFE7C2WD6ZSA72I.php",
+          "publishedAt": "2026-11-04T02:01:19.067Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "1a136aceca8e",
+          "outletId": "20-minutes",
+          "headline": "Route du Rhum : Le skipper Matthieu Perraut a chaviré, les secours attendus",
+          "url": "https://www.20minutes.fr/sport/4260202-20261104-route-rhum-skipper-matthieu-perraut-chavire-secours-attendus?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-04T01:05:47.000Z",
+          "imageUrl": "https://img.20mn.fr/BBmqK8u4S6KHIk9LF9ADcSk/1200x768_les-concurrents-prennent-le-depart-de-la-route-du-rhum-destination-guadeloupe-2026-au-large-de-la-pointe-du-grouin-les-115-skippers-ont-pris-le-large-pour-la-13e-edition-de-la-celebre-course-transatlantique-en-solitaire-entre-saint-malo-et-pointe-a-pitre-en-guadeloupe-pointe-du-grouin-cancale-france-1er-novembre-2026-david-jean-marc-sipa-02993-credit-jean-marc-david-sipa-2611020813",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "b1ae6e813fd0",
+          "outletId": "le-figaro",
+          "headline": "Route du Rhum : Matthieu Perraut a chaviré",
+          "url": "https://www.lefigaro.fr/sports/voile/route-du-rhum/route-du-rhum-matthieu-perraut-a-chavire-20261104",
+          "publishedAt": "2026-11-03T23:31:09.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/04/20ade6fbff5dad8b5647fa4a462873c134d8c6eee25fc5c1094b511794548caf.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "fe65bb9c822e",
+      "titledArticleCount": 4,
+      "section": "sport",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le navigateur Matthieu Perraut a chaviré sur son Ocean Fifty « Elvest » et attend l'intervention des secours.",
+          "La direction de la course confirme que le skipper se porte bien malgré cet accident maritime.",
+          "Plusieurs autres marins, dont Jérémie Beyou et Charles Caudrelier, ont également été contraints à l'abandon.",
+          "Ces incidents surviennent dans le cadre de la Route du Rhum reliant Saint-Malo à Pointe-à-Pitre."
+        ],
+        "centre": [
+          "Le skipper Matthieu Perraut a connu un chavirage au cours de la Route du Rhum.",
+          "Les autorités de la course assurent que le navigateur va bien et patiente en attendant les secours."
+        ],
+        "droite": [
+          "Matthieu Perraut a chaviré à bord de son Ocean Fifty Elvest durant la course de la Route du Rhum.",
+          "L'incident s'est produit mardi soir à environ 400 milles au nord des Açores."
+        ]
+      },
+      "differences": [
+        "La gauche contextualise amplement l'événement en l'associant à la série d'abandons majeurs survenus dans la course.",
+        "Le centre livre un compte-rendu minimaliste centré uniquement sur la survie et l'attente des secours du skipper.",
+        "La droite privilégie les précisions topographiques et nautiques en localisant précisément le lieu du chavirage."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 4,
+      "summarizedAt": "2026-11-04T07:01:17.984Z"
+    },
+    {
       "id": "ca423ea9a0cb",
       "slug": "charlotte-gainsbourg-et-cecile-de-france-jouent-dans-le-film-l",
       "title": "Charlotte Gainsbourg et Cécile de France jouent dans le film L'Affaire Marie-Claire",
@@ -14509,95 +14715,80 @@
       "summarizedAt": "2026-11-04T06:01:19.234Z"
     },
     {
-      "id": "58ab385638d1",
-      "slug": "plusieurs-dizaines-de-kilos-d-or-derobes-lors-du-braquage-d-une",
-      "title": "Besançon : une usine de joaillerie victime d'un braquage, plusieurs dizaines de kilos d'or dérobés",
-      "createdAt": "2026-11-03T18:01:31.897Z",
+      "id": "1c0868fd1644",
+      "slug": "des-syndicats-et-associations-de-sept-pays-europeens-appellent",
+      "title": "Des syndicats et associations de sept pays européens appellent à manifester contre la vie chère en novembre",
+      "createdAt": "2026-11-04T07:01:17.984Z",
       "storyDay": "2026-11-03",
       "articles": [
         {
-          "id": "37f2a9047070",
-          "outletId": "tf1-info",
-          "headline": "\"Les voleurs avaient mis un gyrophare sur leur véhicule\" : une entreprise de joaillerie dévalisée de son or à Besançon",
-          "url": "https://www.tf1info.fr/justice-faits-divers/reportage-les-voleurs-avaient-mis-un-gyrophare-sur-leur-vehicule-une-entreprise-de-joaillerie-devalisee-de-son-or-a-besancon-2473705.html",
-          "publishedAt": "2026-11-03T21:09:14.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/960/540/capjta-bijouterie-braquee-d36d54-0@1x.jpeg",
+          "id": "4689280d5b33",
+          "outletId": "franceinfo",
+          "headline": "Des associations et syndicats de sept pays européens appellent à manifester contre la vie chère les 20, 21 et 22 novembre",
+          "url": "https://www.franceinfo.fr/societe/manifestations/des-associations-et-syndicats-de-sept-pays-europeens-appellent-a-manifester-contre-la-vie-chere-les-20-21-et-22-novembre_8266649.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-03T22:54:33.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/4jz7382dY17SS9rku1LxPaoDDrA/0x106:1024x682/432x243/filters:format(jpg)/2026/11/03/6aea65ec164c5801183544.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "misc"
+          "section": "economy"
         },
         {
-          "id": "ef0d33d217e3",
-          "outletId": "tf1-info",
-          "headline": "Violent braquage : une entreprise de joaillerie vidée de son or",
-          "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-violent-braquage-une-entreprise-de-joaillerie-videe-de-son-or-29765-2473706.html",
-          "publishedAt": "2026-11-03T20:05:11.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/violent-braquage-une-entreprise-de-joaillerie-videe-de-son-or-c9f4c3-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "6bbf9adb5d5d",
-          "outletId": "le-parisien",
-          "headline": "Doubs : une usine de joaillerie braquée à Besançon, plusieurs dizaines de kilos d’or envolés",
-          "url": "https://www.leparisien.fr/faits-divers/doubs-une-usine-de-joaillerie-braquee-a-besancon-plusieurs-dizaines-de-kilos-dor-envoles-03-11-2026-WCJDQRU7QFCAFGUMA2FDVM5KMU.php",
-          "publishedAt": "2026-11-03T18:01:31.897Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "9d18aeaea4f1",
+          "id": "2253c670327e",
           "outletId": "20-minutes",
-          "headline": "Besançon : Entre 20 et 50 kg d’or volés par un commando de braqueurs chez un joaillier",
-          "url": "https://www.20minutes.fr/faits_divers/4260112-20261103-besancon-entre-20-50-kg-or-voles-commando-braqueurs-chez-joaillier?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-03T17:32:54.000Z",
-          "imageUrl": "https://img.20mn.fr/72wl_NyOSR27yycbYGxwPCk/1200x768_illustrations-photographiques-de-lingots-d-or-greuez-francois-0g4a7647-credit-francois-greuez-sipa-2605131656",
+          "headline": "Vie chère : Des syndicats et associations appellent à manifester dans sept pays européens fin novembre",
+          "url": "https://www.20minutes.fr/societe/4260181-20261103-vie-chere-syndicats-associations-appellent-manifester-sept-pays-europeens-fin-novembre?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-03T21:37:36.000Z",
+          "imageUrl": "https://img.20mn.fr/goeyjF_-Tgm9MZloTTkRgCk/1200x768_actualite-politique-faits-divers-3-11-2026-lyon-manifestation-etudiante-et-inter-fac-partie-de-la-place-jean-jaures-jusqu-a-la-manufacture-des-tabacs-et-l-universite-jean-moulin-lyon-3-contre-la-vie-chere-la-precarite-etudiante-le-manque-de-professeurs-et-les-conditions-scolaires-neirdaprod-p0009-credit-adrien-pittore-sipa-2611031842",
           "frontPage": true,
           "kind": "news",
-          "section": "misc",
+          "section": "economy",
           "everFrontPage": true
         },
         {
-          "id": "4ffc3ed79018",
-          "outletId": "le-figaro",
-          "headline": "Besançon : une usine de joaillerie victime d’un vol à main armée, plusieurs dizaines de kilos d’or dérobés",
-          "url": "https://www.lefigaro.fr/faits-divers/besancon-une-usine-de-joaillerie-victime-d-un-vol-a-main-armee-plusieurs-dizaines-de-kilos-d-or-derobes-20261103",
-          "publishedAt": "2026-11-03T16:48:57.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/03/8b1d169ce6663ffd60181202f527db7bcbbefeae415b9fc44098ea80110b2ae4.jpg",
+          "id": "4faf0c1a23a8",
+          "outletId": "le-monde",
+          "headline": "Des syndicats et associations de sept pays européens appellent à manifester contre la vie chère fin novembre",
+          "url": "https://www.lemonde.fr/international/article/2026/11/03/des-syndicats-et-associations-de-sept-pays-europeens-appellent-a-manifester-contre-la-vie-chere-fin-novembre_6805665_3210.html",
+          "publishedAt": "2026-11-03T20:48:27.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/10/30/110/0/8256/4128/644/322/60/0/da61012_ftp-1-tii7u4yu6ot1-afp-d4xa43p.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "misc"
+          "section": "economy"
+        },
+        {
+          "id": "4d6d03c83291",
+          "outletId": "la-croix",
+          "headline": "Vie chère : associations et syndicats de sept pays européens appellent à manifester",
+          "url": "https://www.la-croix.com/societe/vie-chere-associations-et-syndicats-de-sept-pays-europeens-appellent-a-manifester-20261103",
+          "publishedAt": "2026-11-03T18:25:43.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/11/03/2579832-des-associations-et-syndicats-de-sept-pays-europee.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
         }
       ],
-      "topicId": "58ab385638d1",
-      "titledArticleCount": 5,
-      "section": "misc",
+      "topicId": "1c0868fd1644",
+      "titledArticleCount": 4,
+      "section": "economy",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Un commando de cinq individus armés et déguisés en faux policiers a attaqué une société d'usinage de précision pour la joaillerie à Besançon.",
-          "Les malfaiteurs sont repartis avec une quantité importante d'or, estimée entre 20 et 50 kilogrammes."
+          "Des syndicats et associations de sept pays européens prévoient des manifestations coordonnées les 20, 21 et 22 novembre pour protester contre la vie chère.",
+          "Les organisateurs réclament en priorité une garantie du droit au logement, des contrôles sur les tarifs de l'énergie et de l'alimentation, ainsi qu'une hausse générale des salaires.",
+          "Le mouvement implique des délégations issues de France, d'Espagne, d'Italie, du Royaume-Uni, du Portugal, de Grèce et de Belgique, qui espèrent mobiliser des millions de manifestants."
         ],
         "centre": [
-          "Une entreprise de joaillerie située à Besançon a été la cible d'un braquage violent mené par plusieurs individus.",
-          "Le préjudice s'élève à plusieurs dizaines de kilos d'or dérobés, tandis que les enquêtes ont été confiées au parquet national anticriminalité organisée."
-        ],
-        "droite": [
-          "Une usine de joaillerie de Besançon a subi un vol à main armée au cours duquel un employé a été frappé par un commando.",
-          "Les braqueurs, équipés de gilets pare-balles et de faux gyrophares, ont semé des clous sur la route pour couvrir leur fuite et crever les pneus d'un véhicule de police."
+          "Face à la crise du pouvoir d'achat, des syndicats et associations de sept nations européennes ont lancé un appel à manifester depuis Paris.",
+          "Les actions de rue sont planifiées pour les 20, 21 et 22 novembre prochains afin de rassembler des millions de personnes à travers l'Europe."
         ]
       },
       "differences": [
-        "La gauche insiste sur le mode opératoire des criminels déguisés en forces de l'ordre au sein d'une société d'usinage.",
-        "Le centre livre un compte-rendu factuel axé sur le volume du butin et la saisine du parquet national anticriminalité organisée.",
-        "La droite met en avant la violence physique contre le personnel ainsi que les détails tactiques de la fuite avec des clous sur la chaussée."
+        "La gauche met l'accent sur le contenu précis des revendications sociales, citant en détail les mesures exigées en matière de salaires et de régulation des prix de l'énergie et de l'alimentation.",
+        "Le centre adopte une perspective institutionnelle et géographique en soulignant le cadre de l'annonce faite depuis Paris et l'ampleur internationale du mouvement face à la crise globale."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 5,
-      "summarizedAt": "2026-11-04T06:01:19.234Z"
+      "summarizedArticleCount": 4,
+      "summarizedAt": "2026-11-04T07:01:17.984Z"
     }
   ]
 }
