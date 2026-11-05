@@ -9,8 +9,11 @@
  * 2.5 Flash-Lite is legacy-restricted for new projects (Google docs), so the
  * pinned model is the current Flash-Lite generation. A malformed response or
  * a retryable failure is retried once — a 429 waits ~45 s first, because
- * per-minute free-tier quotas reset on that timescale (issue #40) — and then
- * throws: a failed Grouping call fails the build (ADR-0005, as amended),
+ * per-minute free-tier quotas reset on that timescale (issue #40) — except a
+ * 503 UNAVAILABLE (Google-side "high demand", 2026-11-05 outage), which
+ * rides out the demand spike on an exponential schedule. When the retries
+ * are spent it throws: a failed Grouping call fails the build (ADR-0005, as
+ * amended),
  * because the old degrade-to-singletons path corrupted the archive
  * permanently (456 singletons from one 429 on 2026-10-08).
  */
@@ -224,7 +227,15 @@ const RETRYABLE = RETRYABLE_STATUS;
  * Grouping makes one call per build — the wait is affordable.
  */
 export const RATE_LIMIT_BACKOFF_MS = 45_000;
-/** Other retryable hiccups (5xx, network) keep the short retry pause. */
+/** 503 UNAVAILABLE is Google-side capacity, not our quota ("the model is
+ * experiencing high demand", 2026-11-05 outage): demand spikes outlast the
+ * plain 1 s retry, so 503 gets its own exponential schedule — one wait per
+ * retry, ~2.6 min worst case across three retries (2026-11-05 mitigation).
+ * Still bounded: a sustained outage exhausts the schedule and fails the
+ * build (ADR-0005, as amended). */
+export const UNAVAILABLE_BACKOFF_MS = [5_000, 30_000, 120_000] as const;
+/** Other retryable hiccups (5xx besides 503, network) keep the short retry
+ * pause. */
 const PLAIN_RETRY_MS = 1_000;
 
 /** Injectable for tests; production sleeps for real. */
@@ -273,7 +284,13 @@ export function geminiGroupingModel(
         generationConfig: groupingGenerationConfig(),
       };
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
-      for (let attempt = 1; attempt <= 2; attempt++) {
+      // Retry policy (module header has the table): one retry for every
+      // failure mode, spent once across kinds, except 503, which walks its
+      // own schedule — counted separately so a 429 first doesn't truncate
+      // it.
+      let retrySpent = false;
+      let demandRetries = 0;
+      for (;;) {
         try {
           const response = await fetch(url, {
             method: 'POST',
@@ -286,7 +303,20 @@ export function geminiGroupingModel(
           });
           if (!response.ok) {
             const text = await response.text();
-            if (RETRYABLE.has(response.status) && attempt === 1) {
+            if (
+              response.status === 503 &&
+              demandRetries < UNAVAILABLE_BACKOFF_MS.length
+            ) {
+              await sleep(UNAVAILABLE_BACKOFF_MS[demandRetries]!);
+              demandRetries++;
+              continue;
+            }
+            if (
+              response.status !== 503 &&
+              !retrySpent &&
+              RETRYABLE.has(response.status)
+            ) {
+              retrySpent = true;
               await sleep(
                 response.status === 429
                   ? RATE_LIMIT_BACKOFF_MS
@@ -295,7 +325,7 @@ export function geminiGroupingModel(
               continue;
             }
             // 401/403 and the like are config errors: fail fast, no retry.
-            // Anything still failing after the retry throws: a failed
+            // Anything still failing after its retries throws: a failed
             // Grouping call fails the build (ADR-0005, as amended).
             const error = new Error(
               `${label} HTTP ${response.status}: ${text.slice(0, 200)}`,
@@ -350,7 +380,8 @@ export function geminiGroupingModel(
             .join('');
           const parsed = parseGroupingResponse(text);
           if (!parsed) {
-            if (attempt === 1) {
+            if (!retrySpent) {
+              retrySpent = true;
               console.warn(
                 `${label}: unparseable response (chars=${text.length}), retrying once`,
               );
@@ -366,18 +397,19 @@ export function geminiGroupingModel(
           return parsed;
         } catch (error) {
           const e = error as Error & { fatal?: boolean };
-          if (attempt === 2 || e.fatal) {
+          if (e.fatal || retrySpent) {
             if (e instanceof Error && !e.message.startsWith(label)) {
               throw new Error(`${label} ${e.message}`);
             }
             throw error;
           }
-          // A network hiccup gets the same one retry as a 5xx.
+          // A network hiccup gets the same one retry as a 5xx — then the
+          // spent flag makes the next failure terminal, so the loop cannot
+          // spin forever.
+          retrySpent = true;
           await sleep(PLAIN_RETRY_MS);
         }
       }
-      // Unreachable: both attempts either return or throw.
-      throw new Error(`${label}: exhausted retries`);
     },
   };
 }

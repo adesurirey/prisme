@@ -4,6 +4,7 @@ import {
   groupingPrompt,
   parseGroupingResponse,
   RATE_LIMIT_BACKOFF_MS,
+  UNAVAILABLE_BACKOFF_MS,
 } from './gemini.ts';
 
 describe('groupingPrompt (ADR-0018)', () => {
@@ -183,15 +184,19 @@ describe('geminiModel failure policy (issue #40)', () => {
   };
 
   function stubFetch(
-    responses: {
-      status: number;
-      body: unknown;
-    }[],
+    responses: (
+      | {
+          status: number;
+          body: unknown;
+        }
+      | { reject: Error }
+    )[],
   ): { calls: number } {
     let calls = 0;
     globalThis.fetch = (async () => {
       const r = responses[Math.min(calls, responses.length - 1)]!;
       calls++;
+      if ('reject' in r) throw r.reject;
       return {
         ok: r.status === 200,
         status: r.status,
@@ -266,6 +271,63 @@ describe('geminiModel failure policy (issue #40)', () => {
       'HTTP 429',
     );
     expect(fetchCalls.calls).toBe(2);
+  });
+
+  it('a 503 rides out the demand spike on the exponential schedule, then succeeds', async () => {
+    expect(UNAVAILABLE_BACKOFF_MS).toEqual([5_000, 30_000, 120_000]);
+    const fetchCalls = stubFetch([
+      { status: 503, body: {} },
+      { status: 503, body: {} },
+      { status: 503, body: {} },
+      { status: 200, body: OK_BODY },
+    ]);
+    const proposal = await model().group({ stories: [], articles: [] });
+    expect(proposal.newStories).toHaveLength(1);
+    expect(fetchCalls.calls).toBe(4);
+    expect(sleeps).toEqual([5_000, 30_000, 120_000]);
+  });
+
+  it('a 503 still failing after the full schedule throws — the build fails', async () => {
+    const fetchCalls = stubFetch([{ status: 503, body: {} }]);
+    await expect(model().group({ stories: [], articles: [] })).rejects.toThrow(
+      'HTTP 503',
+    );
+    expect(fetchCalls.calls).toBe(4);
+    expect(sleeps).toEqual([5_000, 30_000, 120_000]);
+  });
+
+  it('a 429 followed by 503s still gets the full demand schedule', async () => {
+    const fetchCalls = stubFetch([
+      { status: 429, body: {} },
+      { status: 503, body: {} },
+      { status: 503, body: {} },
+      { status: 503, body: {} },
+      { status: 200, body: OK_BODY },
+    ]);
+    const proposal = await model().group({ stories: [], articles: [] });
+    expect(proposal.newStories).toHaveLength(1);
+    expect(fetchCalls.calls).toBe(5);
+    expect(sleeps).toEqual([45_000, 5_000, 30_000, 120_000]);
+  });
+
+  it('a network error retries once after 1 s, then succeeds', async () => {
+    const fetchCalls = stubFetch([
+      { reject: new Error('fetch failed') },
+      { status: 200, body: OK_BODY },
+    ]);
+    const proposal = await model().group({ stories: [], articles: [] });
+    expect(proposal.newStories).toHaveLength(1);
+    expect(fetchCalls.calls).toBe(2);
+    expect(sleeps).toEqual([1_000]);
+  });
+
+  it('consecutive network errors throw after the one retry — the build fails', async () => {
+    const fetchCalls = stubFetch([{ reject: new Error('fetch failed') }]);
+    await expect(model().group({ stories: [], articles: [] })).rejects.toThrow(
+      'Flash-Lite fetch failed',
+    );
+    expect(fetchCalls.calls).toBe(2);
+    expect(sleeps).toEqual([1_000]);
   });
 
   it('a non-retryable 4xx throws immediately, with no sleep', async () => {
