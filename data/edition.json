@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-05T00:01:22.406Z",
+  "builtAt": "2026-11-05T01:01:15.675Z",
   "latestStories": [
     {
       "id": "62fc17bfe595",
@@ -55,6 +55,18 @@
       "createdAt": "2026-11-05T00:01:22.406Z",
       "storyDay": "2026-11-04",
       "articles": [
+        {
+          "id": "d9286da46795",
+          "outletId": "20-minutes",
+          "headline": "Budget 2027 : Coup dur pour Lecornu, le projet de loi rejeté à l’unanimité à l’Assemblée",
+          "url": "https://www.20minutes.fr/politique/assemblee_nationale/4260480-20261105-budget-2027-coup-dur-lecornu-projet-loi-rejete-unanimite-assemblee?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-05T00:37:41.000Z",
+          "imageUrl": "https://img.20mn.fr/6PQRzGTyTTqWdI_RpLugBSk/1200x768_sebastien-lecornu-premier-ministre-francais-lors-d-une-session-hebdomadaire-de-questions-au-gouvernement-a-l-assemblee-nationale-la-chambre-basse-du-parlement-francais-a-paris-le-3-novembre-2026-accorsini-jeanne-qag-001-credit-jeanne-accorsini-sipa-2611031902",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
         {
           "id": "9fb1d67a4fbc",
           "outletId": "le-figaro",
@@ -3149,10 +3161,21 @@
     {
       "id": "52fd972c2b6e",
       "slug": "une-cyberattaque-touche-des-chambres-froides-et-des",
-      "title": "Une cyberattaque touche des chambres froides et des réfrigérateurs de l'Établissement français du sang",
+      "title": "Une cyberattaque cible les chambres froides de l'Établissement français du sang",
       "createdAt": "2026-11-04T14:01:17.640Z",
       "storyDay": "2026-11-04",
       "articles": [
+        {
+          "id": "4af055618a56",
+          "outletId": "courrier-international",
+          "headline": "L’Établissement français du sang a été également visé par une cyberattaque",
+          "url": "https://www.courrierinternational.com/article/piratage-l-etablissement-francais-du-sang-a-ete-egalement-vise-par-une-cyberattaque_285175",
+          "publishedAt": "2026-11-04T18:27:52.000Z",
+          "imageUrl": "https://focus.courrierinternational.com/2026/11/04/0/0/5000/3333/644/0/60/0/b701355_upload-1-oyirnabr6pab-080-hl-ddorko-3037882.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
         {
           "id": "055ed0165544",
           "outletId": "rfi",
@@ -3209,6 +3232,18 @@
           "section": "society"
         },
         {
+          "id": "70c49058f730",
+          "outletId": "le-figaro",
+          "headline": "Après les supermarchés, l’Établissement français du sang victime d’une cyberattaque, ses chambres froides prises pour cible",
+          "url": "https://www.lefigaro.fr/social/apres-les-supermarches-l-etablissement-francais-du-sang-victime-d-une-cyberattaque-ses-chambres-froides-prises-pour-cible-20261104",
+          "publishedAt": "2026-11-04T10:25:28.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/d062583c61aadfe2a96e9b891244f9c64e7e87bec24bccfb34ababd5675761d3.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
           "id": "c4090056cdcc",
           "outletId": "20-minutes",
           "headline": "Cyberattaque : De -30 à 110 °C… Les réfrigérateurs du don du sang piratés à leur tour",
@@ -3222,33 +3257,37 @@
         }
       ],
       "topicId": "52fd972c2b6e",
-      "titledArticleCount": 6,
+      "titledArticleCount": 8,
       "section": "society",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "L'Établissement français du sang a subi une cyberattaque visant ses chambres froides gérées par un prestataire sur trois sites.",
-          "Les autorités et l'EFS confirment l'absence de pertes de produits sanguins ainsi qu'aucun impact sanitaire.",
-          "Selon Le Canard enchaîné, la température des stockages de plasma a été reprogrammée à distance pour passer de -30 °C à 110 °C."
+          "L'Établissement français du sang a confirmé qu'un prestataire gérant ses chambres froides a subi un incident de cybersécurité dans la nuit de dimanche à lundi.",
+          "Trois sites de l'EFS ont été touchés par un dérèglement de leurs équipements frigorifiques, rapidement maîtrisé sans aucune perte de produits sanguins.",
+          "Le ministère de la Santé doit établir un bilan officiel de la situation après avoir recueilli les informations techniques nécessaires.",
+          "Selon \"Le Canard enchaîné\", les pirates ont tenté de faire monter la température des réfrigérateurs jusqu'à 110 °C."
         ],
         "centre": [
-          "Une intrusion informatique a touché ce lundi les installations frigorifiques de l'Établissement français du sang.",
-          "Le ministère de la Santé et l'EFS ont validé l'absence de répercussion sanitaire sur les échantillons conservés.",
-          "Le Monde indique que l'éventuel lien avec des attaques similaires visant la grande distribution en France et en Europe reste à déterminer."
+          "Un incident de cybersécurité a visé un prestataire d'équipements frigorifiques de l'Établissement français du sang le lundi 2 novembre 2026.",
+          "L'attaque a provoqué le dérèglement de chambres froides sur trois sites de l'EFS, sans entraîner d'impact sanitaire ni de perte d'échantillons selon les autorités.",
+          "Le ministère de la Santé a confirmé l'incident, qui s'ajoute à une série d'attaques similaires ayant touché l'Europe.",
+          "La question reste ouverte quant à un éventuel lien avec les attaques subies par la grande distribution en France et en Europe."
         ],
         "droite": [
-          "Dans la nuit de dimanche à lundi, un prestataire de l'Établissement français du sang a été la cible d'un piratage informatique.",
-          "TF1 Info rapporte, en citant Le Canard enchaîné, que les systèmes de réfrigération du plasma à -30 °C ont failli atteindre 110 °C."
+          "Des équipements frigorifiques de l'Établissement français du sang ont été la cible d'une cyberattaque le mardi 3 novembre, orchestrée par le prestataire Coolworld.",
+          "L'intrusion informatique a modifié à distance les températures de trois sites de l'EFS pour atteindre des seuils extrêmes allant jusqu'à 110 °C.",
+          "Cette attaque fait suite à des actes malveillants similaires ayant récemment frappé des supermarchés en France et en Europe.",
+          "Malgré la violence de la tentative de sabotage sur le plasma stocké à -30 °C, aucun impact sanitaire ou produit sanguin n'a été perdu."
         ]
       },
       "differences": [
-        "La gauche met l'accent sur l'ampleur technique du sabotage thermique révélé par la presse satirique tout en rassurant sur l'absence de conséquences sanitaires.",
-        "Le centre privilégie une approche institutionnelle et factuelle en insistant sur les déclarations rassurantes des autorités tout en interrogeant la piste d'une coordination européenne.",
-        "La droite se concentre principalement sur la spectaculaire mesure technique du détournement de température des stocks de plasma."
+        "La gauche insiste sur l'absence totale de perte de produits sanguins et sur l'attente d'un bilan officiel du ministère.",
+        "Le centre contextualise l'attaque de l'EFS en la rattachant à une vague d'incidents informatiques similaires en Europe.",
+        "La droite dramatise l'ampleur technique en soulignant l'écart thermique extrême provoqué par le piratage sur le plasma."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 6,
-      "summarizedAt": "2026-11-04T14:01:17.640Z"
+      "summarizedArticleCount": 8,
+      "summarizedAt": "2026-11-05T01:01:15.675Z"
     },
     {
       "id": "81c792f9aadf",
@@ -3269,12 +3308,34 @@
           "section": "politics"
         },
         {
+          "id": "2459c952d8f2",
+          "outletId": "franceinfo",
+          "headline": "La journée de mobilisation du 5 novembre \"classée à risque\" par le renseignement territorial, 70 000 policiers et gendarmes mobilisés",
+          "url": "https://www.franceinfo.fr/societe/manifestations/mobilisation-du-5-novembre-une-journee-classee-a-risque-par-le-renseignement-territorial_8267621.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-04T19:07:03.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/rq6VCseEl1sxk3XsLDtGyOCvtvo/0x0:1024x576/432x243/filters:format(jpg)/2026/11/04/6aeb7a04c5e1a791302479.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
           "id": "e8915c182d1a",
           "outletId": "tf1-info",
           "headline": "Manifestations du 5 novembre : 70.000 policiers et gendarmes mobilisés, un risque que les cortèges \"dégénèrent\"",
           "url": "https://www.tf1info.fr/justice-faits-divers/manifestations-du-5-novembre-70-000-policiers-et-gendarmes-mobilises-un-risque-que-les-corteges-degenerent-pour-laurent-nunez-2473900.html",
           "publishedAt": "2026-11-04T19:06:10.000Z",
           "imageUrl": "https://photos.tf1info.fr/images/1024/683/laurent-nunez-conference-presse-paris-23-octobre-2026-8a4b14-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "0f3bcd33e0af",
+          "outletId": "cnews",
+          "headline": "Manifestations du 5 novembre : «70.000 policiers et gendarmes», parcours modifiés... Ce qu'il faut retenir des annonces de Laurent Nuñez",
+          "url": "https://www.cnews.fr/france/2026-11-04/manifestations-du-5-novembre-70000-policiers-et-gendarmes-parcours-modifies-ce",
+          "publishedAt": "2026-11-04T18:38:47.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-26t131256z_2123590907_rc2zaoaih0bc_rtrmadp_3_france-protests-taille1200_6aeb76bd38049.jpg?h=7f05d224&itok=LcskucQu",
           "frontPage": false,
           "kind": "news",
           "section": "politics"
@@ -3459,6 +3520,146 @@
     }
   ],
   "feedStories": [
+    {
+      "id": "09062cab2e04",
+      "slug": "l-assemblee-nationale-rejette-a-l-unanimite-le-projet-de-loi-de",
+      "title": "L'Assemblée nationale rejette à l'unanimité le projet de loi de finances 2027 en première lecture",
+      "createdAt": "2026-11-05T00:01:22.406Z",
+      "storyDay": "2026-11-04",
+      "articles": [
+        {
+          "id": "d9286da46795",
+          "outletId": "20-minutes",
+          "headline": "Budget 2027 : Coup dur pour Lecornu, le projet de loi rejeté à l’unanimité à l’Assemblée",
+          "url": "https://www.20minutes.fr/politique/assemblee_nationale/4260480-20261105-budget-2027-coup-dur-lecornu-projet-loi-rejete-unanimite-assemblee?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-05T00:37:41.000Z",
+          "imageUrl": "https://img.20mn.fr/6PQRzGTyTTqWdI_RpLugBSk/1200x768_sebastien-lecornu-premier-ministre-francais-lors-d-une-session-hebdomadaire-de-questions-au-gouvernement-a-l-assemblee-nationale-la-chambre-basse-du-parlement-francais-a-paris-le-3-novembre-2026-accorsini-jeanne-qag-001-credit-jeanne-accorsini-sipa-2611031902",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "9fb1d67a4fbc",
+          "outletId": "le-figaro",
+          "headline": "Budget 2027 : après le rejet du projet de loi de finances à l’Assemblée, quelles sont les prochaines étapes ?",
+          "url": "https://www.lefigaro.fr/politique/budget-2027-apres-le-rejet-du-projet-de-loi-de-finances-a-l-assemblee-quelles-sont-les-prochaines-etapes-20261105",
+          "publishedAt": "2026-11-04T23:53:50.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/05/c0211561508067a713375c9a386dbaa4c62189486eebe195b28b2a249621aed6.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "1386573ec554",
+          "outletId": "ouest-france",
+          "headline": "Budget 2027 : l’Assemblée nationale rejette, à l’unanimité, en première lecture le projet du gouvernement",
+          "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/budget-2027-lassemblee-nationale-rejette-a-lunanimite-en-premiere-lecture-le-projet-du-gouvernement-3c52a04e-d8a2-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-04T23:23:30.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZmJmZGIyYjVhZTg0NjQ4MjUyMGYzOTI1YWRkNzg5YzI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=8efaf88b32f4e3886046e3de2058c8d137c25614cc9171c05414a2a48dd98aa2",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "6383311ce738",
+          "outletId": "france-24",
+          "headline": "L'Assemblée nationale rejette, à l'unanimité, en première lecture le budget de l'État 2027",
+          "url": "https://www.france24.com/fr/france/20261104-assemblee-nationale-rejette-unanimite-en-premiere-lecture-budget-etat-2027-pib-finances",
+          "publishedAt": "2026-11-04T23:16:53.000Z",
+          "imageUrl": "https://s.france24.com/media/display/35756e2a-c75c-11f1-9a51-3774aeac812a/w:1024/p:16x9/000-D36K4T2.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "260e06721a42",
+          "outletId": "le-monde",
+          "headline": "Budget 2027 : le projet de loi de finances rejeté à l’unanimité par l’Assemblée nationale en première lecture",
+          "url": "https://www.lemonde.fr/politique/article/2026/11/04/budget-2027-l-assemblee-nationale-rejette-en-premiere-lecture-a-l-unanimite-le-projet-de-loi-de-finances_6806468_823448.html",
+          "publishedAt": "2026-11-04T22:53:12.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/04/633/0/7599/3799/644/322/60/0/783a363_ftp-1-h3mvtc6tzkyv-afp-d6gc2cl.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "a8f9e768e2ef",
+          "outletId": "tf1-info",
+          "headline": "Budget 2027 : l'Assemblée nationale rejette, à l'unanimité, la copie budgétaire modifiée",
+          "url": "https://www.tf1info.fr/politique/budget-2027-l-assemblee-nationale-rejette-a-l-unanimite-la-copie-budgetaire-modifiee-en-premiere-lecture-2473951.html",
+          "publishedAt": "2026-11-04T22:37:24.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/682/assemblee-nationale-27-octobre-2025-13689b-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "5409d758c390",
+          "outletId": "liberation",
+          "headline": "Budget 2027 : l’Assemblée nationale rejette à l’unanimité une copie budgétaire distordue et périmée",
+          "url": "https://www.liberation.fr/economie/budget-2027-a-lassemblee-nationale-le-rejet-attendu-dune-copie-budgetaire-distordue-et-perimee-20261104_D42ACMWWHBBZ5C45PUSPCKO6LI/",
+          "publishedAt": "2026-11-04T22:29:14.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "3a32ef726966",
+          "outletId": "le-figaro",
+          "headline": "Budget : le projet de loi de finances unanimement rejeté en première lecture à l’Assemblée",
+          "url": "https://www.lefigaro.fr/politique/budget-le-projet-de-loi-de-finances-unanimement-rejete-en-premiere-lecture-a-l-assemblee-20261104",
+          "publishedAt": "2026-11-04T22:28:02.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2997x1686_crop/2026/11/04/2e72f6cfbc2de776cec5f3b6e36a3cf1c348e64441f459ae38aab97379c30faa.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "30b3cf21c933",
+          "outletId": "bfmtv",
+          "headline": "Budget 2027: l'Assemblée nationale rejette en première lecture à l'unanimité la partie \"recettes\" du projet de loi de finances",
+          "url": "https://www.bfmtv.com/politique/parlement/budget-2027-l-assemblee-nationale-rejette-en-premiere-lecture-a-l-unanimite-la-partie-recettes-du-projet-de-loi-de-finance_AD-202611040991.html",
+          "publishedAt": "2026-11-04T22:25:16.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/zPnMHki_s5RB0_Vbre0amwxqqjw=/0x40:768x472/800x0/images/Un-hemicycle-de-l-Assemblee-nationale-quasi-deserte-pour-l-ouverture-du-debat-budgetaire-de-la-Securite-sociale-a-Paris-le-20-octobre-2026-2371057.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "09062cab2e04",
+      "titledArticleCount": 8,
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "L'Assemblée nationale a rejeté à l'unanimité la partie recettes du projet de loi de finances 2027 le mercredi 4 novembre 2026.",
+          "Le texte gouvernemental a été qualifié de distordu et périmé après trois semaines d'examen dans l'hémicycle.",
+          "Le Sénat s'emparera du projet de loi de finances initial à partir du 20 novembre."
+        ],
+        "centre": [
+          "Les 458 votants de l'Assemblée nationale ont rejeté à l'unanimité la partie recettes du projet de loi de finances 2027 en première lecture.",
+          "Le texte rejeté comportait de profondes modifications de la copie gouvernementale initiale.",
+          "Le Sénat examinera le projet de loi de finances dans sa version initiale dès le mois de novembre."
+        ],
+        "droite": [
+          "L'Assemblée nationale a rejeté unanimement le projet de loi de finances 2027 à l'issue de plus de deux semaines de débats.",
+          "Le texte initial du gouvernement va désormais poursuivre sa trajectoire d'examen au Sénat.",
+          "Le gouvernement étudie l'éventualité d'un recours au 49.3 ou à des ordonnances en l'absence de compromis."
+        ]
+      },
+      "differences": [
+        "La gauche qualifie sévèrement le texte initial de distordu et périmé tout en confirmant le calendrier d'examen sénatorial dès novembre.",
+        "Le centre détaille précisément le déroulement du vote unanime des 458 députés et la transmission de la version initiale vers la chambre haute.",
+        "La droite met l'accent sur les perspectives institutionnelles à venir au Sénat et évoque l'hypothèse d'un recours gouvernemental au 49.3."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 8,
+      "summarizedAt": "2026-11-05T00:01:22.406Z"
+    },
     {
       "id": "183700968fa9",
       "slug": "lens-subit-la-pire-defaite-de-son-histoire-en-s-inclinant-9-1",
@@ -3689,134 +3890,6 @@
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 17,
-      "summarizedAt": "2026-11-05T00:01:22.406Z"
-    },
-    {
-      "id": "09062cab2e04",
-      "slug": "l-assemblee-nationale-rejette-a-l-unanimite-le-projet-de-loi-de",
-      "title": "L'Assemblée nationale rejette à l'unanimité le projet de loi de finances 2027 en première lecture",
-      "createdAt": "2026-11-05T00:01:22.406Z",
-      "storyDay": "2026-11-04",
-      "articles": [
-        {
-          "id": "9fb1d67a4fbc",
-          "outletId": "le-figaro",
-          "headline": "Budget 2027 : après le rejet du projet de loi de finances à l’Assemblée, quelles sont les prochaines étapes ?",
-          "url": "https://www.lefigaro.fr/politique/budget-2027-apres-le-rejet-du-projet-de-loi-de-finances-a-l-assemblee-quelles-sont-les-prochaines-etapes-20261105",
-          "publishedAt": "2026-11-04T23:53:50.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/05/c0211561508067a713375c9a386dbaa4c62189486eebe195b28b2a249621aed6.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "1386573ec554",
-          "outletId": "ouest-france",
-          "headline": "Budget 2027 : l’Assemblée nationale rejette, à l’unanimité, en première lecture le projet du gouvernement",
-          "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/budget-2027-lassemblee-nationale-rejette-a-lunanimite-en-premiere-lecture-le-projet-du-gouvernement-3c52a04e-d8a2-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-04T23:23:30.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZmJmZGIyYjVhZTg0NjQ4MjUyMGYzOTI1YWRkNzg5YzI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=8efaf88b32f4e3886046e3de2058c8d137c25614cc9171c05414a2a48dd98aa2",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "6383311ce738",
-          "outletId": "france-24",
-          "headline": "L'Assemblée nationale rejette, à l'unanimité, en première lecture le budget de l'État 2027",
-          "url": "https://www.france24.com/fr/france/20261104-assemblee-nationale-rejette-unanimite-en-premiere-lecture-budget-etat-2027-pib-finances",
-          "publishedAt": "2026-11-04T23:16:53.000Z",
-          "imageUrl": "https://s.france24.com/media/display/35756e2a-c75c-11f1-9a51-3774aeac812a/w:1024/p:16x9/000-D36K4T2.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "260e06721a42",
-          "outletId": "le-monde",
-          "headline": "Budget 2027 : le projet de loi de finances rejeté à l’unanimité par l’Assemblée nationale en première lecture",
-          "url": "https://www.lemonde.fr/politique/article/2026/11/04/budget-2027-l-assemblee-nationale-rejette-en-premiere-lecture-a-l-unanimite-le-projet-de-loi-de-finances_6806468_823448.html",
-          "publishedAt": "2026-11-04T22:53:12.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/04/633/0/7599/3799/644/322/60/0/783a363_ftp-1-h3mvtc6tzkyv-afp-d6gc2cl.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "a8f9e768e2ef",
-          "outletId": "tf1-info",
-          "headline": "Budget 2027 : l'Assemblée nationale rejette, à l'unanimité, la copie budgétaire modifiée",
-          "url": "https://www.tf1info.fr/politique/budget-2027-l-assemblee-nationale-rejette-a-l-unanimite-la-copie-budgetaire-modifiee-en-premiere-lecture-2473951.html",
-          "publishedAt": "2026-11-04T22:37:24.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/assemblee-nationale-27-octobre-2025-13689b-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "5409d758c390",
-          "outletId": "liberation",
-          "headline": "Budget 2027 : l’Assemblée nationale rejette à l’unanimité une copie budgétaire distordue et périmée",
-          "url": "https://www.liberation.fr/economie/budget-2027-a-lassemblee-nationale-le-rejet-attendu-dune-copie-budgetaire-distordue-et-perimee-20261104_D42ACMWWHBBZ5C45PUSPCKO6LI/",
-          "publishedAt": "2026-11-04T22:29:14.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "3a32ef726966",
-          "outletId": "le-figaro",
-          "headline": "Budget : le projet de loi de finances unanimement rejeté en première lecture à l’Assemblée",
-          "url": "https://www.lefigaro.fr/politique/budget-le-projet-de-loi-de-finances-unanimement-rejete-en-premiere-lecture-a-l-assemblee-20261104",
-          "publishedAt": "2026-11-04T22:28:02.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2997x1686_crop/2026/11/04/2e72f6cfbc2de776cec5f3b6e36a3cf1c348e64441f459ae38aab97379c30faa.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "30b3cf21c933",
-          "outletId": "bfmtv",
-          "headline": "Budget 2027: l'Assemblée nationale rejette en première lecture à l'unanimité la partie \"recettes\" du projet de loi de finances",
-          "url": "https://www.bfmtv.com/politique/parlement/budget-2027-l-assemblee-nationale-rejette-en-premiere-lecture-a-l-unanimite-la-partie-recettes-du-projet-de-loi-de-finance_AD-202611040991.html",
-          "publishedAt": "2026-11-04T22:25:16.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/zPnMHki_s5RB0_Vbre0amwxqqjw=/0x40:768x472/800x0/images/Un-hemicycle-de-l-Assemblee-nationale-quasi-deserte-pour-l-ouverture-du-debat-budgetaire-de-la-Securite-sociale-a-Paris-le-20-octobre-2026-2371057.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "09062cab2e04",
-      "titledArticleCount": 8,
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "L'Assemblée nationale a rejeté à l'unanimité la partie recettes du projet de loi de finances 2027 le mercredi 4 novembre 2026.",
-          "Le texte gouvernemental a été qualifié de distordu et périmé après trois semaines d'examen dans l'hémicycle.",
-          "Le Sénat s'emparera du projet de loi de finances initial à partir du 20 novembre."
-        ],
-        "centre": [
-          "Les 458 votants de l'Assemblée nationale ont rejeté à l'unanimité la partie recettes du projet de loi de finances 2027 en première lecture.",
-          "Le texte rejeté comportait de profondes modifications de la copie gouvernementale initiale.",
-          "Le Sénat examinera le projet de loi de finances dans sa version initiale dès le mois de novembre."
-        ],
-        "droite": [
-          "L'Assemblée nationale a rejeté unanimement le projet de loi de finances 2027 à l'issue de plus de deux semaines de débats.",
-          "Le texte initial du gouvernement va désormais poursuivre sa trajectoire d'examen au Sénat.",
-          "Le gouvernement étudie l'éventualité d'un recours au 49.3 ou à des ordonnances en l'absence de compromis."
-        ]
-      },
-      "differences": [
-        "La gauche qualifie sévèrement le texte initial de distordu et périmé tout en confirmant le calendrier d'examen sénatorial dès novembre.",
-        "Le centre détaille précisément le déroulement du vote unanime des 458 députés et la transmission de la version initiale vers la chambre haute.",
-        "La droite met l'accent sur les perspectives institutionnelles à venir au Sénat et évoque l'hypothèse d'un recours gouvernemental au 49.3."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 8,
       "summarizedAt": "2026-11-05T00:01:22.406Z"
     },
     {
@@ -4974,6 +5047,200 @@
       "summarizedAt": "2026-11-05T00:01:22.406Z"
     },
     {
+      "id": "81c792f9aadf",
+      "slug": "le-ministere-de-l-interieur-mobilise-les-forces-de-l-ordre-face",
+      "title": "Manifestations du 5 novembre : Laurent Nuñez annonce la mobilisation de 70 000 forces de l'ordre face aux risques de débordements",
+      "createdAt": "2026-11-04T13:01:18.413Z",
+      "storyDay": "2026-11-04",
+      "articles": [
+        {
+          "id": "face641c2bdb",
+          "outletId": "le-parisien",
+          "headline": "Manifestations du 5 novembre : 70 000 gendarmes et policiers seront mobilisés, annonce Laurent Nuñez",
+          "url": "https://www.leparisien.fr/faits-divers/manifestations-du-5-novembre-70-000-gendarmes-et-policiers-seront-mobilises-annonce-laurent-nunez-04-11-2026-YAOQR7SBZRCVTE35JGTBXYVIIA.php",
+          "publishedAt": "2026-11-04T20:01:16.036Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "2459c952d8f2",
+          "outletId": "franceinfo",
+          "headline": "La journée de mobilisation du 5 novembre \"classée à risque\" par le renseignement territorial, 70 000 policiers et gendarmes mobilisés",
+          "url": "https://www.franceinfo.fr/societe/manifestations/mobilisation-du-5-novembre-une-journee-classee-a-risque-par-le-renseignement-territorial_8267621.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-04T19:07:03.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/rq6VCseEl1sxk3XsLDtGyOCvtvo/0x0:1024x576/432x243/filters:format(jpg)/2026/11/04/6aeb7a04c5e1a791302479.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "e8915c182d1a",
+          "outletId": "tf1-info",
+          "headline": "Manifestations du 5 novembre : 70.000 policiers et gendarmes mobilisés, un risque que les cortèges \"dégénèrent\"",
+          "url": "https://www.tf1info.fr/justice-faits-divers/manifestations-du-5-novembre-70-000-policiers-et-gendarmes-mobilises-un-risque-que-les-corteges-degenerent-pour-laurent-nunez-2473900.html",
+          "publishedAt": "2026-11-04T19:06:10.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/laurent-nunez-conference-presse-paris-23-octobre-2026-8a4b14-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "0f3bcd33e0af",
+          "outletId": "cnews",
+          "headline": "Manifestations du 5 novembre : «70.000 policiers et gendarmes», parcours modifiés... Ce qu'il faut retenir des annonces de Laurent Nuñez",
+          "url": "https://www.cnews.fr/france/2026-11-04/manifestations-du-5-novembre-70000-policiers-et-gendarmes-parcours-modifies-ce",
+          "publishedAt": "2026-11-04T18:38:47.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-26t131256z_2123590907_rc2zaoaih0bc_rtrmadp_3_france-protests-taille1200_6aeb76bd38049.jpg?h=7f05d224&itok=LcskucQu",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "223c01308b93",
+          "outletId": "le-figaro",
+          "headline": "Manifestations du 5 novembre : 70.000 policiers et gendarmes mobilisés, déclare Nuñez",
+          "url": "https://www.lefigaro.fr/flash-actu/manifestations-du-5-novembre-70-000-policiers-et-gendarmes-mobilises-declare-nunez-20261104",
+          "publishedAt": "2026-11-04T18:37:57.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/04/099d4c4bda2b1327164bcf167d2713818761ae694fda92fe0123a971fe4cc247.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "69b698583c85",
+          "outletId": "le-monde",
+          "headline": "Manifestation du 5 novembre : Laurent Nuñez annonce 70 000 policiers et gendarmes déployés et prévient qu’aucun « débordement ne sera toléré »",
+          "url": "https://www.lemonde.fr/politique/article/2026/11/04/manifestation-du-5-novembre-laurent-nunez-annonce-70-000-policiers-et-gendarmes-deployes-et-previent-qu-aucun-debordement-ne-sera-tolere_6806412_823448.html",
+          "publishedAt": "2026-11-04T17:58:30.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/03/726/0/8000/4000/644/322/60/0/a19359d_upload-1-pdkyft83clvy-jmug261103003.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "8dc850d8a4f0",
+          "outletId": "europe-1",
+          "headline": "Manifestations du 5 novembre : Laurent Nuñez annonce 70.000 policiers et gendarmes mobilisés en France",
+          "url": "https://www.europe1.fr/societe/manifestations-du-5-novembre-laurent-nunez-annonce-70000-policiers-et-gendarmes-mobilises-en-france-1208543?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-04T17:57:53.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/04/19/075_pinto-hearingo261103_npouo_1_6aeb72b9f2012.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "54a5f0248a46",
+          "outletId": "bfmtv",
+          "headline": "Mobilisation du 5 novembre: Laurent Nuñez, ministre de l’Intérieur, annonce avoir mis en place “le même dispositif de sécurité que le 31 octobre” avec 70.000 forces de l'ordre déployées",
+          "url": "https://www.bfmtv.com/politique/video-mobilisation-du-5-novembre-laurent-nunez-ministre-de-l-interieur-annonce-avoir-mis-en-place-le-meme-dispositif-de-securite-que-le-31-octobre-avec-70-000-forces-de-l-ordre-deployees_VN-202611040806.html",
+          "publishedAt": "2026-11-04T17:56:32.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/tk-QU54tX0RIjPQnHI6PadUXwk8=/0x0:1280x720/800x0/images/Mobilisation-du-5-novembre-Laurent-Nunez-ministre-de-l-Interieur-annonce-avoir-mis-en-place-le-meme-dispositif-de-securite-que-le-31-octobre-avec-70-000-forces-de-l-ordre-deployees-2378068.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "db9afe772851",
+          "outletId": "bfmtv",
+          "headline": "Mobilisation du 5 novembre: “La mission première des forces de sécurité intérieure sera de faire en sorte que les cortèges se déroulent de manière pacifique”, explique Laurent Nuñez, ministre de l’Intérieur",
+          "url": "https://www.bfmtv.com/politique/video-mobilisation-du-5-novembre-la-mission-premiere-des-forces-de-securite-interieure-sera-de-faire-en-sorte-que-les-corteges-se-deroulent-de-maniere-pacifique-explique-laurent-nunez-ministre-de-l-interieur_VN-202611040800.html",
+          "publishedAt": "2026-11-04T17:55:16.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/u9uEocrjiP173qF_BRxrhz3_Jdo=/0x0:1280x720/800x0/images/Mobilisation-du-5-novembre-La-mission-premiere-des-forces-de-securite-interieure-sera-de-faire-en-sorte-que-les-corteges-se-deroulent-de-maniere-pacifique-explique-Laurent-Nunez-ministre-de-l-Interieur-2378063.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "2282018a4d9b",
+          "outletId": "bfmtv",
+          "headline": "Mobilisation du 5 novembre: Laurent Nuñez, ministre de l’Intérieur, déclare “avoir une prévision d’un peu plus de 220 actions de voie publique”",
+          "url": "https://www.bfmtv.com/politique/video-mobilisation-du-5-novembre-laurent-nunez-ministre-de-l-interieur-declare-avoir-une-prevision-d-un-peu-plus-de-220-actions-de-voie-publique_VN-202611040796.html",
+          "publishedAt": "2026-11-04T17:49:55.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/pNzXoOw35XfrxrTfIZnRklmRGmQ=/0x0:1280x720/800x0/images/Mobilisation-du-5-novembre-Laurent-Nunez-ministre-de-l-Interieur-declare-avoir-une-prevision-d-un-peu-plus-de-220-actions-de-voie-publique-2378059.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "bfb8153fabdd",
+          "outletId": "le-jdd",
+          "headline": "INFO JDD. RAID, drones, couvre-feux… Le plan de l’Intérieur pour prévenir de nouvelles émeutes le 5 novembre",
+          "url": "https://www.lejdd.fr/Societe/info-jdd-raid-drones-couvre-feux-le-plan-de-linterieur-pour-prevenir-de-nouvelles-emeutes-le-5-novembre-187812",
+          "publishedAt": "2026-11-04T14:54:22.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/04/15/080_hl_rmacri_3356272.jpg?VersionId=q0NIT7niuW.XdvqSkOtFLvGXAeti11RT",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "d63b52c8b77d",
+          "outletId": "humanite",
+          "headline": "5 novembre : vers une grève monstre et une mobilisation massive ?",
+          "url": "https://www.humanite.fr/social-et-economie/greves/5-novembre-vers-une-greve-monstre-et-une-mobilisation-massive",
+          "publishedAt": "2026-11-04T14:17:25.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/5-novembre-minia.webp?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "d3b0722770fc",
+          "outletId": "le-figaro",
+          "headline": "EN DIRECT - Mobilisation du 5 novembre : de 500.000 à 700.000 manifestants attendus ce jeudi en régions",
+          "url": "https://www.lefigaro.fr/actualite-france/manifestation-5-novembre-greve-mobilisation-etudiants-syndicats-et-gilets-jaunes-en-lutte-contre-la-vie-chere-20261104",
+          "publishedAt": "2026-11-04T12:43:02.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/04/b733195517863ff3812bddb3f7840c87c0b493b5016d5285452963be8eab8cf4.jpg",
+          "frontPage": true,
+          "kind": "live",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "95011cdbe22b",
+          "outletId": "europe-1",
+          "headline": "INFO EUROPE 1 - «La paralysie du pays est recherchée » : jusqu'à un million de manifestants attendus jeudi, les autorités craignent des débordements à grande échelle",
+          "url": "https://www.europe1.fr/societe/info-europe-1-la-paralysie-du-pays-est-recherchee-jusqua-un-million-de-manifestants-attendus-jeudi-les-autorites-craignent-des-debordements-a-grande-echelle-1206047?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-04T05:25:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/19/080_hl_bpavan_3358615_1_6aea25e7c2c55.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        }
+      ],
+      "topicId": "1e52bac1f877",
+      "titledArticleCount": 12,
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "L'Humanité met en avant l'appel unitaire de l'intersyndicale à une mobilisation massive et à une grève interprofessionnelle pour le 5 novembre.",
+          "Le journal souligne les motifs de colère des salariés du public et du privé, de la jeunesse et des retraités face au choc d'inflation et au budget d'austérité du gouvernement."
+        ],
+        "centre": [
+          "Le ministre de l'Intérieur Laurent Nuñez annonce le déploiement de 70 000 policiers et gendarmes pour la journée de manifestations du 5 novembre, soit le même dispositif que le 31 octobre.",
+          "Les autorités prévoient un peu plus de 220 actions de voie publique et affirment vouloir garantir un déroulement pacifique des cortèges tout en prévenant qu'aucun débordement ne sera toléré.",
+          "Un sondage Elabe pour BFMTV indique que près de six Français sur dix soutiennent le mouvement et jugent légitimes les revendications des manifestants."
+        ],
+        "droite": [
+          "Les médias de droite rapportent la mobilisation de 70 000 forces de l'ordre et le maintien du dispositif du 31 octobre, incluant des unités d'élite comme le RAID et le GIGN, des blindés Centaure et des drones.",
+          "Le ministre de l'Intérieur promet une réponse d'une extrême fermeté face aux risques de violences, ciblant notamment les black blocs, les cortèges sauvages et les pillages.",
+          "Europe 1 et Le Figaro évoquent des estimations allant de 500 000 à un million de manifestants en France, faisant redouter aux autorités une convergence des luttes et une paralysie du pays."
+        ]
+      },
+      "differences": [
+        "La gauche aborde le mouvement sous l'angle social des revendications salariales et de la lutte contre l'austérité gouvernementale.",
+        "Le centre centre son traitement sur les annonces sécuritaires de l'exécutif, l'évaluation chiffrée des actions et l'état de l'opinion publique.",
+        "La droite focalise son attention sur le plan de maintien de l'ordre, l'arsenal répressif déployé et le risque de débordements de grande ampleur."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 12,
+      "summarizedAt": "2026-11-04T20:01:16.036Z"
+    },
+    {
       "id": "62fc17bfe595",
       "slug": "le-numero-deux-du-gouvernement-bavarois-hubert-aiwanger-est",
       "title": "Le numéro deux du gouvernement bavarois Hubert Aiwanger est retrouvé mort dans un hôtel de Berlin",
@@ -5591,178 +5858,6 @@
       "summarizedAt": "2026-11-04T18:01:17.480Z"
     },
     {
-      "id": "81c792f9aadf",
-      "slug": "le-ministere-de-l-interieur-mobilise-les-forces-de-l-ordre-face",
-      "title": "Manifestations du 5 novembre : Laurent Nuñez annonce la mobilisation de 70 000 forces de l'ordre face aux risques de débordements",
-      "createdAt": "2026-11-04T13:01:18.413Z",
-      "storyDay": "2026-11-04",
-      "articles": [
-        {
-          "id": "face641c2bdb",
-          "outletId": "le-parisien",
-          "headline": "Manifestations du 5 novembre : 70 000 gendarmes et policiers seront mobilisés, annonce Laurent Nuñez",
-          "url": "https://www.leparisien.fr/faits-divers/manifestations-du-5-novembre-70-000-gendarmes-et-policiers-seront-mobilises-annonce-laurent-nunez-04-11-2026-YAOQR7SBZRCVTE35JGTBXYVIIA.php",
-          "publishedAt": "2026-11-04T20:01:16.036Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "e8915c182d1a",
-          "outletId": "tf1-info",
-          "headline": "Manifestations du 5 novembre : 70.000 policiers et gendarmes mobilisés, un risque que les cortèges \"dégénèrent\"",
-          "url": "https://www.tf1info.fr/justice-faits-divers/manifestations-du-5-novembre-70-000-policiers-et-gendarmes-mobilises-un-risque-que-les-corteges-degenerent-pour-laurent-nunez-2473900.html",
-          "publishedAt": "2026-11-04T19:06:10.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/laurent-nunez-conference-presse-paris-23-octobre-2026-8a4b14-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "223c01308b93",
-          "outletId": "le-figaro",
-          "headline": "Manifestations du 5 novembre : 70.000 policiers et gendarmes mobilisés, déclare Nuñez",
-          "url": "https://www.lefigaro.fr/flash-actu/manifestations-du-5-novembre-70-000-policiers-et-gendarmes-mobilises-declare-nunez-20261104",
-          "publishedAt": "2026-11-04T18:37:57.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/04/099d4c4bda2b1327164bcf167d2713818761ae694fda92fe0123a971fe4cc247.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "69b698583c85",
-          "outletId": "le-monde",
-          "headline": "Manifestation du 5 novembre : Laurent Nuñez annonce 70 000 policiers et gendarmes déployés et prévient qu’aucun « débordement ne sera toléré »",
-          "url": "https://www.lemonde.fr/politique/article/2026/11/04/manifestation-du-5-novembre-laurent-nunez-annonce-70-000-policiers-et-gendarmes-deployes-et-previent-qu-aucun-debordement-ne-sera-tolere_6806412_823448.html",
-          "publishedAt": "2026-11-04T17:58:30.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/03/726/0/8000/4000/644/322/60/0/a19359d_upload-1-pdkyft83clvy-jmug261103003.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "8dc850d8a4f0",
-          "outletId": "europe-1",
-          "headline": "Manifestations du 5 novembre : Laurent Nuñez annonce 70.000 policiers et gendarmes mobilisés en France",
-          "url": "https://www.europe1.fr/societe/manifestations-du-5-novembre-laurent-nunez-annonce-70000-policiers-et-gendarmes-mobilises-en-france-1208543?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-04T17:57:53.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/04/19/075_pinto-hearingo261103_npouo_1_6aeb72b9f2012.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "54a5f0248a46",
-          "outletId": "bfmtv",
-          "headline": "Mobilisation du 5 novembre: Laurent Nuñez, ministre de l’Intérieur, annonce avoir mis en place “le même dispositif de sécurité que le 31 octobre” avec 70.000 forces de l'ordre déployées",
-          "url": "https://www.bfmtv.com/politique/video-mobilisation-du-5-novembre-laurent-nunez-ministre-de-l-interieur-annonce-avoir-mis-en-place-le-meme-dispositif-de-securite-que-le-31-octobre-avec-70-000-forces-de-l-ordre-deployees_VN-202611040806.html",
-          "publishedAt": "2026-11-04T17:56:32.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/tk-QU54tX0RIjPQnHI6PadUXwk8=/0x0:1280x720/800x0/images/Mobilisation-du-5-novembre-Laurent-Nunez-ministre-de-l-Interieur-annonce-avoir-mis-en-place-le-meme-dispositif-de-securite-que-le-31-octobre-avec-70-000-forces-de-l-ordre-deployees-2378068.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "db9afe772851",
-          "outletId": "bfmtv",
-          "headline": "Mobilisation du 5 novembre: “La mission première des forces de sécurité intérieure sera de faire en sorte que les cortèges se déroulent de manière pacifique”, explique Laurent Nuñez, ministre de l’Intérieur",
-          "url": "https://www.bfmtv.com/politique/video-mobilisation-du-5-novembre-la-mission-premiere-des-forces-de-securite-interieure-sera-de-faire-en-sorte-que-les-corteges-se-deroulent-de-maniere-pacifique-explique-laurent-nunez-ministre-de-l-interieur_VN-202611040800.html",
-          "publishedAt": "2026-11-04T17:55:16.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/u9uEocrjiP173qF_BRxrhz3_Jdo=/0x0:1280x720/800x0/images/Mobilisation-du-5-novembre-La-mission-premiere-des-forces-de-securite-interieure-sera-de-faire-en-sorte-que-les-corteges-se-deroulent-de-maniere-pacifique-explique-Laurent-Nunez-ministre-de-l-Interieur-2378063.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "2282018a4d9b",
-          "outletId": "bfmtv",
-          "headline": "Mobilisation du 5 novembre: Laurent Nuñez, ministre de l’Intérieur, déclare “avoir une prévision d’un peu plus de 220 actions de voie publique”",
-          "url": "https://www.bfmtv.com/politique/video-mobilisation-du-5-novembre-laurent-nunez-ministre-de-l-interieur-declare-avoir-une-prevision-d-un-peu-plus-de-220-actions-de-voie-publique_VN-202611040796.html",
-          "publishedAt": "2026-11-04T17:49:55.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/pNzXoOw35XfrxrTfIZnRklmRGmQ=/0x0:1280x720/800x0/images/Mobilisation-du-5-novembre-Laurent-Nunez-ministre-de-l-Interieur-declare-avoir-une-prevision-d-un-peu-plus-de-220-actions-de-voie-publique-2378059.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "bfb8153fabdd",
-          "outletId": "le-jdd",
-          "headline": "INFO JDD. RAID, drones, couvre-feux… Le plan de l’Intérieur pour prévenir de nouvelles émeutes le 5 novembre",
-          "url": "https://www.lejdd.fr/Societe/info-jdd-raid-drones-couvre-feux-le-plan-de-linterieur-pour-prevenir-de-nouvelles-emeutes-le-5-novembre-187812",
-          "publishedAt": "2026-11-04T14:54:22.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/04/15/080_hl_rmacri_3356272.jpg?VersionId=q0NIT7niuW.XdvqSkOtFLvGXAeti11RT",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "d63b52c8b77d",
-          "outletId": "humanite",
-          "headline": "5 novembre : vers une grève monstre et une mobilisation massive ?",
-          "url": "https://www.humanite.fr/social-et-economie/greves/5-novembre-vers-une-greve-monstre-et-une-mobilisation-massive",
-          "publishedAt": "2026-11-04T14:17:25.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/5-novembre-minia.webp?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "d3b0722770fc",
-          "outletId": "le-figaro",
-          "headline": "EN DIRECT - Mobilisation du 5 novembre : de 500.000 à 700.000 manifestants attendus ce jeudi en régions",
-          "url": "https://www.lefigaro.fr/actualite-france/manifestation-5-novembre-greve-mobilisation-etudiants-syndicats-et-gilets-jaunes-en-lutte-contre-la-vie-chere-20261104",
-          "publishedAt": "2026-11-04T12:43:02.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/04/b733195517863ff3812bddb3f7840c87c0b493b5016d5285452963be8eab8cf4.jpg",
-          "frontPage": true,
-          "kind": "live",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "95011cdbe22b",
-          "outletId": "europe-1",
-          "headline": "INFO EUROPE 1 - «La paralysie du pays est recherchée » : jusqu'à un million de manifestants attendus jeudi, les autorités craignent des débordements à grande échelle",
-          "url": "https://www.europe1.fr/societe/info-europe-1-la-paralysie-du-pays-est-recherchee-jusqua-un-million-de-manifestants-attendus-jeudi-les-autorites-craignent-des-debordements-a-grande-echelle-1206047?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-04T05:25:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/19/080_hl_bpavan_3358615_1_6aea25e7c2c55.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        }
-      ],
-      "topicId": "1e52bac1f877",
-      "titledArticleCount": 12,
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "L'Humanité met en avant l'appel unitaire de l'intersyndicale à une mobilisation massive et à une grève interprofessionnelle pour le 5 novembre.",
-          "Le journal souligne les motifs de colère des salariés du public et du privé, de la jeunesse et des retraités face au choc d'inflation et au budget d'austérité du gouvernement."
-        ],
-        "centre": [
-          "Le ministre de l'Intérieur Laurent Nuñez annonce le déploiement de 70 000 policiers et gendarmes pour la journée de manifestations du 5 novembre, soit le même dispositif que le 31 octobre.",
-          "Les autorités prévoient un peu plus de 220 actions de voie publique et affirment vouloir garantir un déroulement pacifique des cortèges tout en prévenant qu'aucun débordement ne sera toléré.",
-          "Un sondage Elabe pour BFMTV indique que près de six Français sur dix soutiennent le mouvement et jugent légitimes les revendications des manifestants."
-        ],
-        "droite": [
-          "Les médias de droite rapportent la mobilisation de 70 000 forces de l'ordre et le maintien du dispositif du 31 octobre, incluant des unités d'élite comme le RAID et le GIGN, des blindés Centaure et des drones.",
-          "Le ministre de l'Intérieur promet une réponse d'une extrême fermeté face aux risques de violences, ciblant notamment les black blocs, les cortèges sauvages et les pillages.",
-          "Europe 1 et Le Figaro évoquent des estimations allant de 500 000 à un million de manifestants en France, faisant redouter aux autorités une convergence des luttes et une paralysie du pays."
-        ]
-      },
-      "differences": [
-        "La gauche aborde le mouvement sous l'angle social des revendications salariales et de la lutte contre l'austérité gouvernementale.",
-        "Le centre centre son traitement sur les annonces sécuritaires de l'exécutif, l'évaluation chiffrée des actions et l'état de l'opinion publique.",
-        "La droite focalise son attention sur le plan de maintien de l'ordre, l'arsenal répressif déployé et le risque de débordements de grande ampleur."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 12,
-      "summarizedAt": "2026-11-04T20:01:16.036Z"
-    },
-    {
       "id": "3129dbe9d70c",
       "slug": "benyamin-netanyahou-evoque-de-graves-soupcons-d-ingerence",
       "title": "Benyamin Nétanyahou évoque de graves soupçons d'ingérence étrangère lors des législatives en Israël",
@@ -5923,6 +6018,137 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 6,
       "summarizedAt": "2026-11-04T17:01:25.411Z"
+    },
+    {
+      "id": "52fd972c2b6e",
+      "slug": "une-cyberattaque-touche-des-chambres-froides-et-des",
+      "title": "Une cyberattaque cible les chambres froides de l'Établissement français du sang",
+      "createdAt": "2026-11-04T14:01:17.640Z",
+      "storyDay": "2026-11-04",
+      "articles": [
+        {
+          "id": "4af055618a56",
+          "outletId": "courrier-international",
+          "headline": "L’Établissement français du sang a été également visé par une cyberattaque",
+          "url": "https://www.courrierinternational.com/article/piratage-l-etablissement-francais-du-sang-a-ete-egalement-vise-par-une-cyberattaque_285175",
+          "publishedAt": "2026-11-04T18:27:52.000Z",
+          "imageUrl": "https://focus.courrierinternational.com/2026/11/04/0/0/5000/3333/644/0/60/0/b701355_upload-1-oyirnabr6pab-080-hl-ddorko-3037882.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "055ed0165544",
+          "outletId": "rfi",
+          "headline": "France: des chambres froides de l'Établissement français du sang victimes d'une cyberattaque",
+          "url": "https://www.rfi.fr/fr/france/20261104-france-des-chambres-froides-de-l-%C3%A9tablissement-fran%C3%A7ais-du-sang-victimes-d-une-cyberattaque",
+          "publishedAt": "2026-11-04T13:26:50.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/a6d50020-d851-11f1-a768-1beafce15fea/w:1024/p:16x9/000-32DK22T.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "13062ab28af0",
+          "outletId": "le-monde",
+          "headline": "Des réfrigérateurs de l’Etablissement français du sang à leur tour victimes d’une cyberattaque",
+          "url": "https://www.lemonde.fr/pixels/article/2026/11/04/des-frigos-de-l-etablissement-francais-du-sang-a-leur-tour-victimes-d-une-cyberattaque_6806228_4408996.html",
+          "publishedAt": "2026-11-04T13:18:16.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/04/472/0/4256/2128/644/322/60/0/6b5c2dd_upload-1-4riqhdue76d2-000-vc9ob.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "b9ea6750a0fe",
+          "outletId": "franceinfo",
+          "headline": "Une cyberattaque touche des chambres froides utilisées par l'Etablissement français du sang, \"sans impact\" sur les échantillons conservés",
+          "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/une-cyberattaque-touche-des-installations-frigorifiques-utilisees-par-l-etablissement-francais-du-sang-sans-impact-sur-les-echantillons-conserves_8267426.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-04T13:13:28.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/vQE6F1tm6_GFkP9Z127pyKVDqDc/0x435:4300x2854/432x243/filters:format(jpg)/2026/11/04/6aeb026b197dd449954689.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "9b3283e67974",
+          "outletId": "tf1-info",
+          "headline": "De -30°C à +110°C : des systèmes de réfrigération de l'Établissement français du sang visés par une cyberattaque",
+          "url": "https://www.tf1info.fr/sante/de-30-c-a-110-c-des-systemes-de-refrigeration-de-l-etablissement-francais-du-sang-efs-vises-par-une-cyberattaque-2473828.html",
+          "publishedAt": "2026-11-04T13:05:48.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/540/don-du-sang-efs-5aecee-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "830a86740e0e",
+          "outletId": "liberation",
+          "headline": "Des chambres froides de l’Établissement français du sang ciblées par une cyberattaque",
+          "url": "https://www.liberation.fr/societe/sante/des-chambres-froides-de-letablissement-francais-du-sang-ciblees-par-une-cyberattaque-20261104_PM37SM4DFFFLHOHZNEQGFRTAGM/",
+          "publishedAt": "2026-11-04T13:02:32.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "70c49058f730",
+          "outletId": "le-figaro",
+          "headline": "Après les supermarchés, l’Établissement français du sang victime d’une cyberattaque, ses chambres froides prises pour cible",
+          "url": "https://www.lefigaro.fr/social/apres-les-supermarches-l-etablissement-francais-du-sang-victime-d-une-cyberattaque-ses-chambres-froides-prises-pour-cible-20261104",
+          "publishedAt": "2026-11-04T10:25:28.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/d062583c61aadfe2a96e9b891244f9c64e7e87bec24bccfb34ababd5675761d3.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "c4090056cdcc",
+          "outletId": "20-minutes",
+          "headline": "Cyberattaque : De -30 à 110 °C… Les réfrigérateurs du don du sang piratés à leur tour",
+          "url": "https://www.20minutes.fr/societe/4260219-20261104-cyberattaque-30-110-refrigerateurs-don-sang-pirates-tour?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-04T06:41:16.000Z",
+          "imageUrl": "https://img.20mn.fr/gyOMFtmWSBS2kyLInXeotSk/1200x768_la-societe",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "52fd972c2b6e",
+      "titledArticleCount": 8,
+      "section": "society",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "L'Établissement français du sang a confirmé qu'un prestataire gérant ses chambres froides a subi un incident de cybersécurité dans la nuit de dimanche à lundi.",
+          "Trois sites de l'EFS ont été touchés par un dérèglement de leurs équipements frigorifiques, rapidement maîtrisé sans aucune perte de produits sanguins.",
+          "Le ministère de la Santé doit établir un bilan officiel de la situation après avoir recueilli les informations techniques nécessaires.",
+          "Selon \"Le Canard enchaîné\", les pirates ont tenté de faire monter la température des réfrigérateurs jusqu'à 110 °C."
+        ],
+        "centre": [
+          "Un incident de cybersécurité a visé un prestataire d'équipements frigorifiques de l'Établissement français du sang le lundi 2 novembre 2026.",
+          "L'attaque a provoqué le dérèglement de chambres froides sur trois sites de l'EFS, sans entraîner d'impact sanitaire ni de perte d'échantillons selon les autorités.",
+          "Le ministère de la Santé a confirmé l'incident, qui s'ajoute à une série d'attaques similaires ayant touché l'Europe.",
+          "La question reste ouverte quant à un éventuel lien avec les attaques subies par la grande distribution en France et en Europe."
+        ],
+        "droite": [
+          "Des équipements frigorifiques de l'Établissement français du sang ont été la cible d'une cyberattaque le mardi 3 novembre, orchestrée par le prestataire Coolworld.",
+          "L'intrusion informatique a modifié à distance les températures de trois sites de l'EFS pour atteindre des seuils extrêmes allant jusqu'à 110 °C.",
+          "Cette attaque fait suite à des actes malveillants similaires ayant récemment frappé des supermarchés en France et en Europe.",
+          "Malgré la violence de la tentative de sabotage sur le plasma stocké à -30 °C, aucun impact sanitaire ou produit sanguin n'a été perdu."
+        ]
+      },
+      "differences": [
+        "La gauche insiste sur l'absence totale de perte de produits sanguins et sur l'attente d'un bilan officiel du ministère.",
+        "Le centre contextualise l'attaque de l'EFS en la rattachant à une vague d'incidents informatiques similaires en Europe.",
+        "La droite dramatise l'ampleur technique en soulignant l'écart thermique extrême provoqué par le piratage sur le plasma."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 8,
+      "summarizedAt": "2026-11-05T01:01:15.675Z"
     },
     {
       "id": "b11557d4cc05",
@@ -9771,53 +9997,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 11,
       "summarizedAt": "2026-11-04T12:01:19.657Z"
-    },
-    {
-      "id": "35e7889c62c3",
-      "slug": "une-femme-de-57-ans-tuee-par-balles-dans-l-oise-et-son-beau",
-      "title": "Une femme de 57 ans tuée par balles dans l'Oise et son beau-frère interpellé",
-      "createdAt": "2026-11-04T18:01:17.480Z",
-      "storyDay": "2026-11-04",
-      "articles": [
-        {
-          "id": "95f113f6ab9c",
-          "outletId": "le-parisien",
-          "headline": "« Au moins deux tirs de fusil » : une femme de 57 ans tuée devant un cimetière de l’Oise, son beau-frère suspecté",
-          "url": "https://www.leparisien.fr/oise-60/au-moins-deux-tirs-de-fusil-une-femme-de-57-ans-tuee-devant-un-cimetiere-de-loise-son-beau-frere-suspecte-04-11-2026-XXWQP3XNEBDPHBSLKUTAYTQL7U.php",
-          "publishedAt": "2026-11-04T18:01:17.480Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "bcb10ca79fed",
-          "outletId": "le-figaro",
-          "headline": "Oise : un homme arrêté après le meurtre de sa belle-sœur",
-          "url": "https://www.lefigaro.fr/faits-divers/oise-un-homme-arrete-apres-le-meurtre-de-sa-belle-soeur-20261104",
-          "publishedAt": "2026-11-04T17:54:10.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1497_crop/2026/11/04/8616b78a627ce0c55015ac36b2a769213a5e74dd6298f22ff563265cab4dffed.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "ac29e12c6e89",
-          "outletId": "franceinfo",
-          "headline": "Dans l'Oise, une femme de 57 ans tuée par balles, son beau-frère placé en garde à vue",
-          "url": "https://www.franceinfo.fr/faits-divers/dans-l-oise-une-femme-de-57-ans-tuee-par-balles-son-beau-frere-place-en-garde-a-vue_8268101.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-04T16:58:23.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/cZID8XF7JcRYgpH24du4U6fX-Tg/0x126:1600x1026/432x243/filters:format(jpg)/2026/11/04/6aeb64146f647792952288.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "topicId": "35e7889c62c3",
-      "titledArticleCount": 3,
-      "section": "misc",
-      "everInEdition": true
     }
   ],
   "stories": [
@@ -13980,6 +14159,200 @@
       "summarizedAt": "2026-11-05T00:01:22.406Z"
     },
     {
+      "id": "81c792f9aadf",
+      "slug": "le-ministere-de-l-interieur-mobilise-les-forces-de-l-ordre-face",
+      "title": "Manifestations du 5 novembre : Laurent Nuñez annonce la mobilisation de 70 000 forces de l'ordre face aux risques de débordements",
+      "createdAt": "2026-11-04T13:01:18.413Z",
+      "storyDay": "2026-11-04",
+      "articles": [
+        {
+          "id": "face641c2bdb",
+          "outletId": "le-parisien",
+          "headline": "Manifestations du 5 novembre : 70 000 gendarmes et policiers seront mobilisés, annonce Laurent Nuñez",
+          "url": "https://www.leparisien.fr/faits-divers/manifestations-du-5-novembre-70-000-gendarmes-et-policiers-seront-mobilises-annonce-laurent-nunez-04-11-2026-YAOQR7SBZRCVTE35JGTBXYVIIA.php",
+          "publishedAt": "2026-11-04T20:01:16.036Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "2459c952d8f2",
+          "outletId": "franceinfo",
+          "headline": "La journée de mobilisation du 5 novembre \"classée à risque\" par le renseignement territorial, 70 000 policiers et gendarmes mobilisés",
+          "url": "https://www.franceinfo.fr/societe/manifestations/mobilisation-du-5-novembre-une-journee-classee-a-risque-par-le-renseignement-territorial_8267621.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-04T19:07:03.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/rq6VCseEl1sxk3XsLDtGyOCvtvo/0x0:1024x576/432x243/filters:format(jpg)/2026/11/04/6aeb7a04c5e1a791302479.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "e8915c182d1a",
+          "outletId": "tf1-info",
+          "headline": "Manifestations du 5 novembre : 70.000 policiers et gendarmes mobilisés, un risque que les cortèges \"dégénèrent\"",
+          "url": "https://www.tf1info.fr/justice-faits-divers/manifestations-du-5-novembre-70-000-policiers-et-gendarmes-mobilises-un-risque-que-les-corteges-degenerent-pour-laurent-nunez-2473900.html",
+          "publishedAt": "2026-11-04T19:06:10.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/laurent-nunez-conference-presse-paris-23-octobre-2026-8a4b14-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "0f3bcd33e0af",
+          "outletId": "cnews",
+          "headline": "Manifestations du 5 novembre : «70.000 policiers et gendarmes», parcours modifiés... Ce qu'il faut retenir des annonces de Laurent Nuñez",
+          "url": "https://www.cnews.fr/france/2026-11-04/manifestations-du-5-novembre-70000-policiers-et-gendarmes-parcours-modifies-ce",
+          "publishedAt": "2026-11-04T18:38:47.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-26t131256z_2123590907_rc2zaoaih0bc_rtrmadp_3_france-protests-taille1200_6aeb76bd38049.jpg?h=7f05d224&itok=LcskucQu",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "223c01308b93",
+          "outletId": "le-figaro",
+          "headline": "Manifestations du 5 novembre : 70.000 policiers et gendarmes mobilisés, déclare Nuñez",
+          "url": "https://www.lefigaro.fr/flash-actu/manifestations-du-5-novembre-70-000-policiers-et-gendarmes-mobilises-declare-nunez-20261104",
+          "publishedAt": "2026-11-04T18:37:57.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/04/099d4c4bda2b1327164bcf167d2713818761ae694fda92fe0123a971fe4cc247.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "69b698583c85",
+          "outletId": "le-monde",
+          "headline": "Manifestation du 5 novembre : Laurent Nuñez annonce 70 000 policiers et gendarmes déployés et prévient qu’aucun « débordement ne sera toléré »",
+          "url": "https://www.lemonde.fr/politique/article/2026/11/04/manifestation-du-5-novembre-laurent-nunez-annonce-70-000-policiers-et-gendarmes-deployes-et-previent-qu-aucun-debordement-ne-sera-tolere_6806412_823448.html",
+          "publishedAt": "2026-11-04T17:58:30.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/03/726/0/8000/4000/644/322/60/0/a19359d_upload-1-pdkyft83clvy-jmug261103003.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "8dc850d8a4f0",
+          "outletId": "europe-1",
+          "headline": "Manifestations du 5 novembre : Laurent Nuñez annonce 70.000 policiers et gendarmes mobilisés en France",
+          "url": "https://www.europe1.fr/societe/manifestations-du-5-novembre-laurent-nunez-annonce-70000-policiers-et-gendarmes-mobilises-en-france-1208543?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-04T17:57:53.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/04/19/075_pinto-hearingo261103_npouo_1_6aeb72b9f2012.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "54a5f0248a46",
+          "outletId": "bfmtv",
+          "headline": "Mobilisation du 5 novembre: Laurent Nuñez, ministre de l’Intérieur, annonce avoir mis en place “le même dispositif de sécurité que le 31 octobre” avec 70.000 forces de l'ordre déployées",
+          "url": "https://www.bfmtv.com/politique/video-mobilisation-du-5-novembre-laurent-nunez-ministre-de-l-interieur-annonce-avoir-mis-en-place-le-meme-dispositif-de-securite-que-le-31-octobre-avec-70-000-forces-de-l-ordre-deployees_VN-202611040806.html",
+          "publishedAt": "2026-11-04T17:56:32.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/tk-QU54tX0RIjPQnHI6PadUXwk8=/0x0:1280x720/800x0/images/Mobilisation-du-5-novembre-Laurent-Nunez-ministre-de-l-Interieur-annonce-avoir-mis-en-place-le-meme-dispositif-de-securite-que-le-31-octobre-avec-70-000-forces-de-l-ordre-deployees-2378068.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "db9afe772851",
+          "outletId": "bfmtv",
+          "headline": "Mobilisation du 5 novembre: “La mission première des forces de sécurité intérieure sera de faire en sorte que les cortèges se déroulent de manière pacifique”, explique Laurent Nuñez, ministre de l’Intérieur",
+          "url": "https://www.bfmtv.com/politique/video-mobilisation-du-5-novembre-la-mission-premiere-des-forces-de-securite-interieure-sera-de-faire-en-sorte-que-les-corteges-se-deroulent-de-maniere-pacifique-explique-laurent-nunez-ministre-de-l-interieur_VN-202611040800.html",
+          "publishedAt": "2026-11-04T17:55:16.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/u9uEocrjiP173qF_BRxrhz3_Jdo=/0x0:1280x720/800x0/images/Mobilisation-du-5-novembre-La-mission-premiere-des-forces-de-securite-interieure-sera-de-faire-en-sorte-que-les-corteges-se-deroulent-de-maniere-pacifique-explique-Laurent-Nunez-ministre-de-l-Interieur-2378063.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "2282018a4d9b",
+          "outletId": "bfmtv",
+          "headline": "Mobilisation du 5 novembre: Laurent Nuñez, ministre de l’Intérieur, déclare “avoir une prévision d’un peu plus de 220 actions de voie publique”",
+          "url": "https://www.bfmtv.com/politique/video-mobilisation-du-5-novembre-laurent-nunez-ministre-de-l-interieur-declare-avoir-une-prevision-d-un-peu-plus-de-220-actions-de-voie-publique_VN-202611040796.html",
+          "publishedAt": "2026-11-04T17:49:55.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/pNzXoOw35XfrxrTfIZnRklmRGmQ=/0x0:1280x720/800x0/images/Mobilisation-du-5-novembre-Laurent-Nunez-ministre-de-l-Interieur-declare-avoir-une-prevision-d-un-peu-plus-de-220-actions-de-voie-publique-2378059.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "bfb8153fabdd",
+          "outletId": "le-jdd",
+          "headline": "INFO JDD. RAID, drones, couvre-feux… Le plan de l’Intérieur pour prévenir de nouvelles émeutes le 5 novembre",
+          "url": "https://www.lejdd.fr/Societe/info-jdd-raid-drones-couvre-feux-le-plan-de-linterieur-pour-prevenir-de-nouvelles-emeutes-le-5-novembre-187812",
+          "publishedAt": "2026-11-04T14:54:22.000Z",
+          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/04/15/080_hl_rmacri_3356272.jpg?VersionId=q0NIT7niuW.XdvqSkOtFLvGXAeti11RT",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "d63b52c8b77d",
+          "outletId": "humanite",
+          "headline": "5 novembre : vers une grève monstre et une mobilisation massive ?",
+          "url": "https://www.humanite.fr/social-et-economie/greves/5-novembre-vers-une-greve-monstre-et-une-mobilisation-massive",
+          "publishedAt": "2026-11-04T14:17:25.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/5-novembre-minia.webp?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "d3b0722770fc",
+          "outletId": "le-figaro",
+          "headline": "EN DIRECT - Mobilisation du 5 novembre : de 500.000 à 700.000 manifestants attendus ce jeudi en régions",
+          "url": "https://www.lefigaro.fr/actualite-france/manifestation-5-novembre-greve-mobilisation-etudiants-syndicats-et-gilets-jaunes-en-lutte-contre-la-vie-chere-20261104",
+          "publishedAt": "2026-11-04T12:43:02.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/04/b733195517863ff3812bddb3f7840c87c0b493b5016d5285452963be8eab8cf4.jpg",
+          "frontPage": true,
+          "kind": "live",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "95011cdbe22b",
+          "outletId": "europe-1",
+          "headline": "INFO EUROPE 1 - «La paralysie du pays est recherchée » : jusqu'à un million de manifestants attendus jeudi, les autorités craignent des débordements à grande échelle",
+          "url": "https://www.europe1.fr/societe/info-europe-1-la-paralysie-du-pays-est-recherchee-jusqua-un-million-de-manifestants-attendus-jeudi-les-autorites-craignent-des-debordements-a-grande-echelle-1206047?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-04T05:25:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/19/080_hl_bpavan_3358615_1_6aea25e7c2c55.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        }
+      ],
+      "topicId": "1e52bac1f877",
+      "titledArticleCount": 12,
+      "section": "politics",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "L'Humanité met en avant l'appel unitaire de l'intersyndicale à une mobilisation massive et à une grève interprofessionnelle pour le 5 novembre.",
+          "Le journal souligne les motifs de colère des salariés du public et du privé, de la jeunesse et des retraités face au choc d'inflation et au budget d'austérité du gouvernement."
+        ],
+        "centre": [
+          "Le ministre de l'Intérieur Laurent Nuñez annonce le déploiement de 70 000 policiers et gendarmes pour la journée de manifestations du 5 novembre, soit le même dispositif que le 31 octobre.",
+          "Les autorités prévoient un peu plus de 220 actions de voie publique et affirment vouloir garantir un déroulement pacifique des cortèges tout en prévenant qu'aucun débordement ne sera toléré.",
+          "Un sondage Elabe pour BFMTV indique que près de six Français sur dix soutiennent le mouvement et jugent légitimes les revendications des manifestants."
+        ],
+        "droite": [
+          "Les médias de droite rapportent la mobilisation de 70 000 forces de l'ordre et le maintien du dispositif du 31 octobre, incluant des unités d'élite comme le RAID et le GIGN, des blindés Centaure et des drones.",
+          "Le ministre de l'Intérieur promet une réponse d'une extrême fermeté face aux risques de violences, ciblant notamment les black blocs, les cortèges sauvages et les pillages.",
+          "Europe 1 et Le Figaro évoquent des estimations allant de 500 000 à un million de manifestants en France, faisant redouter aux autorités une convergence des luttes et une paralysie du pays."
+        ]
+      },
+      "differences": [
+        "La gauche aborde le mouvement sous l'angle social des revendications salariales et de la lutte contre l'austérité gouvernementale.",
+        "Le centre centre son traitement sur les annonces sécuritaires de l'exécutif, l'évaluation chiffrée des actions et l'état de l'opinion publique.",
+        "La droite focalise son attention sur le plan de maintien de l'ordre, l'arsenal répressif déployé et le risque de débordements de grande ampleur."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 12,
+      "summarizedAt": "2026-11-04T20:01:16.036Z"
+    },
+    {
       "id": "4550990477c2",
       "slug": "la-justice-renvoie-l-assaillant-de-dominique-bernard-aux-assises",
       "title": "La justice renvoie l'assaillant de Dominique Bernard aux assises",
@@ -14505,176 +14878,144 @@
       "summarizedAt": "2026-11-04T22:01:17.713Z"
     },
     {
-      "id": "81c792f9aadf",
-      "slug": "le-ministere-de-l-interieur-mobilise-les-forces-de-l-ordre-face",
-      "title": "Manifestations du 5 novembre : Laurent Nuñez annonce la mobilisation de 70 000 forces de l'ordre face aux risques de débordements",
-      "createdAt": "2026-11-04T13:01:18.413Z",
+      "id": "09062cab2e04",
+      "slug": "l-assemblee-nationale-rejette-a-l-unanimite-le-projet-de-loi-de",
+      "title": "L'Assemblée nationale rejette à l'unanimité le projet de loi de finances 2027 en première lecture",
+      "createdAt": "2026-11-05T00:01:22.406Z",
       "storyDay": "2026-11-04",
       "articles": [
         {
-          "id": "face641c2bdb",
-          "outletId": "le-parisien",
-          "headline": "Manifestations du 5 novembre : 70 000 gendarmes et policiers seront mobilisés, annonce Laurent Nuñez",
-          "url": "https://www.leparisien.fr/faits-divers/manifestations-du-5-novembre-70-000-gendarmes-et-policiers-seront-mobilises-annonce-laurent-nunez-04-11-2026-YAOQR7SBZRCVTE35JGTBXYVIIA.php",
-          "publishedAt": "2026-11-04T20:01:16.036Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "e8915c182d1a",
-          "outletId": "tf1-info",
-          "headline": "Manifestations du 5 novembre : 70.000 policiers et gendarmes mobilisés, un risque que les cortèges \"dégénèrent\"",
-          "url": "https://www.tf1info.fr/justice-faits-divers/manifestations-du-5-novembre-70-000-policiers-et-gendarmes-mobilises-un-risque-que-les-corteges-degenerent-pour-laurent-nunez-2473900.html",
-          "publishedAt": "2026-11-04T19:06:10.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/laurent-nunez-conference-presse-paris-23-octobre-2026-8a4b14-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "223c01308b93",
-          "outletId": "le-figaro",
-          "headline": "Manifestations du 5 novembre : 70.000 policiers et gendarmes mobilisés, déclare Nuñez",
-          "url": "https://www.lefigaro.fr/flash-actu/manifestations-du-5-novembre-70-000-policiers-et-gendarmes-mobilises-declare-nunez-20261104",
-          "publishedAt": "2026-11-04T18:37:57.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/04/099d4c4bda2b1327164bcf167d2713818761ae694fda92fe0123a971fe4cc247.jpg",
+          "id": "d9286da46795",
+          "outletId": "20-minutes",
+          "headline": "Budget 2027 : Coup dur pour Lecornu, le projet de loi rejeté à l’unanimité à l’Assemblée",
+          "url": "https://www.20minutes.fr/politique/assemblee_nationale/4260480-20261105-budget-2027-coup-dur-lecornu-projet-loi-rejete-unanimite-assemblee?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-05T00:37:41.000Z",
+          "imageUrl": "https://img.20mn.fr/6PQRzGTyTTqWdI_RpLugBSk/1200x768_sebastien-lecornu-premier-ministre-francais-lors-d-une-session-hebdomadaire-de-questions-au-gouvernement-a-l-assemblee-nationale-la-chambre-basse-du-parlement-francais-a-paris-le-3-novembre-2026-accorsini-jeanne-qag-001-credit-jeanne-accorsini-sipa-2611031902",
           "frontPage": true,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
         },
         {
-          "id": "69b698583c85",
+          "id": "9fb1d67a4fbc",
+          "outletId": "le-figaro",
+          "headline": "Budget 2027 : après le rejet du projet de loi de finances à l’Assemblée, quelles sont les prochaines étapes ?",
+          "url": "https://www.lefigaro.fr/politique/budget-2027-apres-le-rejet-du-projet-de-loi-de-finances-a-l-assemblee-quelles-sont-les-prochaines-etapes-20261105",
+          "publishedAt": "2026-11-04T23:53:50.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/05/c0211561508067a713375c9a386dbaa4c62189486eebe195b28b2a249621aed6.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "1386573ec554",
+          "outletId": "ouest-france",
+          "headline": "Budget 2027 : l’Assemblée nationale rejette, à l’unanimité, en première lecture le projet du gouvernement",
+          "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/budget-2027-lassemblee-nationale-rejette-a-lunanimite-en-premiere-lecture-le-projet-du-gouvernement-3c52a04e-d8a2-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-04T23:23:30.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZmJmZGIyYjVhZTg0NjQ4MjUyMGYzOTI1YWRkNzg5YzI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=8efaf88b32f4e3886046e3de2058c8d137c25614cc9171c05414a2a48dd98aa2",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "6383311ce738",
+          "outletId": "france-24",
+          "headline": "L'Assemblée nationale rejette, à l'unanimité, en première lecture le budget de l'État 2027",
+          "url": "https://www.france24.com/fr/france/20261104-assemblee-nationale-rejette-unanimite-en-premiere-lecture-budget-etat-2027-pib-finances",
+          "publishedAt": "2026-11-04T23:16:53.000Z",
+          "imageUrl": "https://s.france24.com/media/display/35756e2a-c75c-11f1-9a51-3774aeac812a/w:1024/p:16x9/000-D36K4T2.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "260e06721a42",
           "outletId": "le-monde",
-          "headline": "Manifestation du 5 novembre : Laurent Nuñez annonce 70 000 policiers et gendarmes déployés et prévient qu’aucun « débordement ne sera toléré »",
-          "url": "https://www.lemonde.fr/politique/article/2026/11/04/manifestation-du-5-novembre-laurent-nunez-annonce-70-000-policiers-et-gendarmes-deployes-et-previent-qu-aucun-debordement-ne-sera-tolere_6806412_823448.html",
-          "publishedAt": "2026-11-04T17:58:30.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/03/726/0/8000/4000/644/322/60/0/a19359d_upload-1-pdkyft83clvy-jmug261103003.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "8dc850d8a4f0",
-          "outletId": "europe-1",
-          "headline": "Manifestations du 5 novembre : Laurent Nuñez annonce 70.000 policiers et gendarmes mobilisés en France",
-          "url": "https://www.europe1.fr/societe/manifestations-du-5-novembre-laurent-nunez-annonce-70000-policiers-et-gendarmes-mobilises-en-france-1208543?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-04T17:57:53.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/04/19/075_pinto-hearingo261103_npouo_1_6aeb72b9f2012.jpg",
+          "headline": "Budget 2027 : le projet de loi de finances rejeté à l’unanimité par l’Assemblée nationale en première lecture",
+          "url": "https://www.lemonde.fr/politique/article/2026/11/04/budget-2027-l-assemblee-nationale-rejette-en-premiere-lecture-a-l-unanimite-le-projet-de-loi-de-finances_6806468_823448.html",
+          "publishedAt": "2026-11-04T22:53:12.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/04/633/0/7599/3799/644/322/60/0/783a363_ftp-1-h3mvtc6tzkyv-afp-d6gc2cl.jpg",
           "frontPage": false,
           "kind": "news",
           "section": "politics"
         },
         {
-          "id": "54a5f0248a46",
-          "outletId": "bfmtv",
-          "headline": "Mobilisation du 5 novembre: Laurent Nuñez, ministre de l’Intérieur, annonce avoir mis en place “le même dispositif de sécurité que le 31 octobre” avec 70.000 forces de l'ordre déployées",
-          "url": "https://www.bfmtv.com/politique/video-mobilisation-du-5-novembre-laurent-nunez-ministre-de-l-interieur-annonce-avoir-mis-en-place-le-meme-dispositif-de-securite-que-le-31-octobre-avec-70-000-forces-de-l-ordre-deployees_VN-202611040806.html",
-          "publishedAt": "2026-11-04T17:56:32.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/tk-QU54tX0RIjPQnHI6PadUXwk8=/0x0:1280x720/800x0/images/Mobilisation-du-5-novembre-Laurent-Nunez-ministre-de-l-Interieur-annonce-avoir-mis-en-place-le-meme-dispositif-de-securite-que-le-31-octobre-avec-70-000-forces-de-l-ordre-deployees-2378068.jpg",
+          "id": "a8f9e768e2ef",
+          "outletId": "tf1-info",
+          "headline": "Budget 2027 : l'Assemblée nationale rejette, à l'unanimité, la copie budgétaire modifiée",
+          "url": "https://www.tf1info.fr/politique/budget-2027-l-assemblee-nationale-rejette-a-l-unanimite-la-copie-budgetaire-modifiee-en-premiere-lecture-2473951.html",
+          "publishedAt": "2026-11-04T22:37:24.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/682/assemblee-nationale-27-octobre-2025-13689b-0@1x.jpeg",
           "frontPage": false,
           "kind": "news",
           "section": "politics"
         },
         {
-          "id": "db9afe772851",
-          "outletId": "bfmtv",
-          "headline": "Mobilisation du 5 novembre: “La mission première des forces de sécurité intérieure sera de faire en sorte que les cortèges se déroulent de manière pacifique”, explique Laurent Nuñez, ministre de l’Intérieur",
-          "url": "https://www.bfmtv.com/politique/video-mobilisation-du-5-novembre-la-mission-premiere-des-forces-de-securite-interieure-sera-de-faire-en-sorte-que-les-corteges-se-deroulent-de-maniere-pacifique-explique-laurent-nunez-ministre-de-l-interieur_VN-202611040800.html",
-          "publishedAt": "2026-11-04T17:55:16.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/u9uEocrjiP173qF_BRxrhz3_Jdo=/0x0:1280x720/800x0/images/Mobilisation-du-5-novembre-La-mission-premiere-des-forces-de-securite-interieure-sera-de-faire-en-sorte-que-les-corteges-se-deroulent-de-maniere-pacifique-explique-Laurent-Nunez-ministre-de-l-Interieur-2378063.jpg",
+          "id": "5409d758c390",
+          "outletId": "liberation",
+          "headline": "Budget 2027 : l’Assemblée nationale rejette à l’unanimité une copie budgétaire distordue et périmée",
+          "url": "https://www.liberation.fr/economie/budget-2027-a-lassemblee-nationale-le-rejet-attendu-dune-copie-budgetaire-distordue-et-perimee-20261104_D42ACMWWHBBZ5C45PUSPCKO6LI/",
+          "publishedAt": "2026-11-04T22:29:14.000Z",
           "frontPage": false,
           "kind": "news",
           "section": "politics"
         },
         {
-          "id": "2282018a4d9b",
-          "outletId": "bfmtv",
-          "headline": "Mobilisation du 5 novembre: Laurent Nuñez, ministre de l’Intérieur, déclare “avoir une prévision d’un peu plus de 220 actions de voie publique”",
-          "url": "https://www.bfmtv.com/politique/video-mobilisation-du-5-novembre-laurent-nunez-ministre-de-l-interieur-declare-avoir-une-prevision-d-un-peu-plus-de-220-actions-de-voie-publique_VN-202611040796.html",
-          "publishedAt": "2026-11-04T17:49:55.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/pNzXoOw35XfrxrTfIZnRklmRGmQ=/0x0:1280x720/800x0/images/Mobilisation-du-5-novembre-Laurent-Nunez-ministre-de-l-Interieur-declare-avoir-une-prevision-d-un-peu-plus-de-220-actions-de-voie-publique-2378059.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "bfb8153fabdd",
-          "outletId": "le-jdd",
-          "headline": "INFO JDD. RAID, drones, couvre-feux… Le plan de l’Intérieur pour prévenir de nouvelles émeutes le 5 novembre",
-          "url": "https://www.lejdd.fr/Societe/info-jdd-raid-drones-couvre-feux-le-plan-de-linterieur-pour-prevenir-de-nouvelles-emeutes-le-5-novembre-187812",
-          "publishedAt": "2026-11-04T14:54:22.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/04/15/080_hl_rmacri_3356272.jpg?VersionId=q0NIT7niuW.XdvqSkOtFLvGXAeti11RT",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "d63b52c8b77d",
-          "outletId": "humanite",
-          "headline": "5 novembre : vers une grève monstre et une mobilisation massive ?",
-          "url": "https://www.humanite.fr/social-et-economie/greves/5-novembre-vers-une-greve-monstre-et-une-mobilisation-massive",
-          "publishedAt": "2026-11-04T14:17:25.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/5-novembre-minia.webp?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "d3b0722770fc",
+          "id": "3a32ef726966",
           "outletId": "le-figaro",
-          "headline": "EN DIRECT - Mobilisation du 5 novembre : de 500.000 à 700.000 manifestants attendus ce jeudi en régions",
-          "url": "https://www.lefigaro.fr/actualite-france/manifestation-5-novembre-greve-mobilisation-etudiants-syndicats-et-gilets-jaunes-en-lutte-contre-la-vie-chere-20261104",
-          "publishedAt": "2026-11-04T12:43:02.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/04/b733195517863ff3812bddb3f7840c87c0b493b5016d5285452963be8eab8cf4.jpg",
+          "headline": "Budget : le projet de loi de finances unanimement rejeté en première lecture à l’Assemblée",
+          "url": "https://www.lefigaro.fr/politique/budget-le-projet-de-loi-de-finances-unanimement-rejete-en-premiere-lecture-a-l-assemblee-20261104",
+          "publishedAt": "2026-11-04T22:28:02.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2997x1686_crop/2026/11/04/2e72f6cfbc2de776cec5f3b6e36a3cf1c348e64441f459ae38aab97379c30faa.jpg",
           "frontPage": true,
-          "kind": "live",
+          "kind": "news",
           "section": "politics",
           "everFrontPage": true
         },
         {
-          "id": "95011cdbe22b",
-          "outletId": "europe-1",
-          "headline": "INFO EUROPE 1 - «La paralysie du pays est recherchée » : jusqu'à un million de manifestants attendus jeudi, les autorités craignent des débordements à grande échelle",
-          "url": "https://www.europe1.fr/societe/info-europe-1-la-paralysie-du-pays-est-recherchee-jusqua-un-million-de-manifestants-attendus-jeudi-les-autorites-craignent-des-debordements-a-grande-echelle-1206047?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-04T05:25:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/03/19/080_hl_bpavan_3358615_1_6aea25e7c2c55.jpg",
+          "id": "30b3cf21c933",
+          "outletId": "bfmtv",
+          "headline": "Budget 2027: l'Assemblée nationale rejette en première lecture à l'unanimité la partie \"recettes\" du projet de loi de finances",
+          "url": "https://www.bfmtv.com/politique/parlement/budget-2027-l-assemblee-nationale-rejette-en-premiere-lecture-a-l-unanimite-la-partie-recettes-du-projet-de-loi-de-finance_AD-202611040991.html",
+          "publishedAt": "2026-11-04T22:25:16.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/zPnMHki_s5RB0_Vbre0amwxqqjw=/0x40:768x472/800x0/images/Un-hemicycle-de-l-Assemblee-nationale-quasi-deserte-pour-l-ouverture-du-debat-budgetaire-de-la-Securite-sociale-a-Paris-le-20-octobre-2026-2371057.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "society"
+          "section": "politics"
         }
       ],
-      "topicId": "1e52bac1f877",
-      "titledArticleCount": 12,
+      "topicId": "09062cab2e04",
+      "titledArticleCount": 8,
       "section": "politics",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "L'Humanité met en avant l'appel unitaire de l'intersyndicale à une mobilisation massive et à une grève interprofessionnelle pour le 5 novembre.",
-          "Le journal souligne les motifs de colère des salariés du public et du privé, de la jeunesse et des retraités face au choc d'inflation et au budget d'austérité du gouvernement."
+          "L'Assemblée nationale a rejeté à l'unanimité la partie recettes du projet de loi de finances 2027 le mercredi 4 novembre 2026.",
+          "Le texte gouvernemental a été qualifié de distordu et périmé après trois semaines d'examen dans l'hémicycle.",
+          "Le Sénat s'emparera du projet de loi de finances initial à partir du 20 novembre."
         ],
         "centre": [
-          "Le ministre de l'Intérieur Laurent Nuñez annonce le déploiement de 70 000 policiers et gendarmes pour la journée de manifestations du 5 novembre, soit le même dispositif que le 31 octobre.",
-          "Les autorités prévoient un peu plus de 220 actions de voie publique et affirment vouloir garantir un déroulement pacifique des cortèges tout en prévenant qu'aucun débordement ne sera toléré.",
-          "Un sondage Elabe pour BFMTV indique que près de six Français sur dix soutiennent le mouvement et jugent légitimes les revendications des manifestants."
+          "Les 458 votants de l'Assemblée nationale ont rejeté à l'unanimité la partie recettes du projet de loi de finances 2027 en première lecture.",
+          "Le texte rejeté comportait de profondes modifications de la copie gouvernementale initiale.",
+          "Le Sénat examinera le projet de loi de finances dans sa version initiale dès le mois de novembre."
         ],
         "droite": [
-          "Les médias de droite rapportent la mobilisation de 70 000 forces de l'ordre et le maintien du dispositif du 31 octobre, incluant des unités d'élite comme le RAID et le GIGN, des blindés Centaure et des drones.",
-          "Le ministre de l'Intérieur promet une réponse d'une extrême fermeté face aux risques de violences, ciblant notamment les black blocs, les cortèges sauvages et les pillages.",
-          "Europe 1 et Le Figaro évoquent des estimations allant de 500 000 à un million de manifestants en France, faisant redouter aux autorités une convergence des luttes et une paralysie du pays."
+          "L'Assemblée nationale a rejeté unanimement le projet de loi de finances 2027 à l'issue de plus de deux semaines de débats.",
+          "Le texte initial du gouvernement va désormais poursuivre sa trajectoire d'examen au Sénat.",
+          "Le gouvernement étudie l'éventualité d'un recours au 49.3 ou à des ordonnances en l'absence de compromis."
         ]
       },
       "differences": [
-        "La gauche aborde le mouvement sous l'angle social des revendications salariales et de la lutte contre l'austérité gouvernementale.",
-        "Le centre centre son traitement sur les annonces sécuritaires de l'exécutif, l'évaluation chiffrée des actions et l'état de l'opinion publique.",
-        "La droite focalise son attention sur le plan de maintien de l'ordre, l'arsenal répressif déployé et le risque de débordements de grande ampleur."
+        "La gauche qualifie sévèrement le texte initial de distordu et périmé tout en confirmant le calendrier d'examen sénatorial dès novembre.",
+        "Le centre détaille précisément le déroulement du vote unanime des 458 députés et la transmission de la version initiale vers la chambre haute.",
+        "La droite met l'accent sur les perspectives institutionnelles à venir au Sénat et évoque l'hypothèse d'un recours gouvernemental au 49.3."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 12,
-      "summarizedAt": "2026-11-04T20:01:16.036Z"
+      "summarizedArticleCount": 8,
+      "summarizedAt": "2026-11-05T00:01:22.406Z"
     },
     {
       "id": "9d62c8c9ccd9",
@@ -14840,132 +15181,135 @@
       "summarizedAt": "2026-11-04T15:01:25.383Z"
     },
     {
-      "id": "09062cab2e04",
-      "slug": "l-assemblee-nationale-rejette-a-l-unanimite-le-projet-de-loi-de",
-      "title": "L'Assemblée nationale rejette à l'unanimité le projet de loi de finances 2027 en première lecture",
-      "createdAt": "2026-11-05T00:01:22.406Z",
+      "id": "52fd972c2b6e",
+      "slug": "une-cyberattaque-touche-des-chambres-froides-et-des",
+      "title": "Une cyberattaque cible les chambres froides de l'Établissement français du sang",
+      "createdAt": "2026-11-04T14:01:17.640Z",
       "storyDay": "2026-11-04",
       "articles": [
         {
-          "id": "9fb1d67a4fbc",
-          "outletId": "le-figaro",
-          "headline": "Budget 2027 : après le rejet du projet de loi de finances à l’Assemblée, quelles sont les prochaines étapes ?",
-          "url": "https://www.lefigaro.fr/politique/budget-2027-apres-le-rejet-du-projet-de-loi-de-finances-a-l-assemblee-quelles-sont-les-prochaines-etapes-20261105",
-          "publishedAt": "2026-11-04T23:53:50.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/05/c0211561508067a713375c9a386dbaa4c62189486eebe195b28b2a249621aed6.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "1386573ec554",
-          "outletId": "ouest-france",
-          "headline": "Budget 2027 : l’Assemblée nationale rejette, à l’unanimité, en première lecture le projet du gouvernement",
-          "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/budget-2027-lassemblee-nationale-rejette-a-lunanimite-en-premiere-lecture-le-projet-du-gouvernement-3c52a04e-d8a2-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-04T23:23:30.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZmJmZGIyYjVhZTg0NjQ4MjUyMGYzOTI1YWRkNzg5YzI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=8efaf88b32f4e3886046e3de2058c8d137c25614cc9171c05414a2a48dd98aa2",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "6383311ce738",
-          "outletId": "france-24",
-          "headline": "L'Assemblée nationale rejette, à l'unanimité, en première lecture le budget de l'État 2027",
-          "url": "https://www.france24.com/fr/france/20261104-assemblee-nationale-rejette-unanimite-en-premiere-lecture-budget-etat-2027-pib-finances",
-          "publishedAt": "2026-11-04T23:16:53.000Z",
-          "imageUrl": "https://s.france24.com/media/display/35756e2a-c75c-11f1-9a51-3774aeac812a/w:1024/p:16x9/000-D36K4T2.jpg",
+          "id": "4af055618a56",
+          "outletId": "courrier-international",
+          "headline": "L’Établissement français du sang a été également visé par une cyberattaque",
+          "url": "https://www.courrierinternational.com/article/piratage-l-etablissement-francais-du-sang-a-ete-egalement-vise-par-une-cyberattaque_285175",
+          "publishedAt": "2026-11-04T18:27:52.000Z",
+          "imageUrl": "https://focus.courrierinternational.com/2026/11/04/0/0/5000/3333/644/0/60/0/b701355_upload-1-oyirnabr6pab-080-hl-ddorko-3037882.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "politics"
+          "section": "society"
         },
         {
-          "id": "260e06721a42",
+          "id": "055ed0165544",
+          "outletId": "rfi",
+          "headline": "France: des chambres froides de l'Établissement français du sang victimes d'une cyberattaque",
+          "url": "https://www.rfi.fr/fr/france/20261104-france-des-chambres-froides-de-l-%C3%A9tablissement-fran%C3%A7ais-du-sang-victimes-d-une-cyberattaque",
+          "publishedAt": "2026-11-04T13:26:50.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/a6d50020-d851-11f1-a768-1beafce15fea/w:1024/p:16x9/000-32DK22T.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "13062ab28af0",
           "outletId": "le-monde",
-          "headline": "Budget 2027 : le projet de loi de finances rejeté à l’unanimité par l’Assemblée nationale en première lecture",
-          "url": "https://www.lemonde.fr/politique/article/2026/11/04/budget-2027-l-assemblee-nationale-rejette-en-premiere-lecture-a-l-unanimite-le-projet-de-loi-de-finances_6806468_823448.html",
-          "publishedAt": "2026-11-04T22:53:12.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/04/633/0/7599/3799/644/322/60/0/783a363_ftp-1-h3mvtc6tzkyv-afp-d6gc2cl.jpg",
+          "headline": "Des réfrigérateurs de l’Etablissement français du sang à leur tour victimes d’une cyberattaque",
+          "url": "https://www.lemonde.fr/pixels/article/2026/11/04/des-frigos-de-l-etablissement-francais-du-sang-a-leur-tour-victimes-d-une-cyberattaque_6806228_4408996.html",
+          "publishedAt": "2026-11-04T13:18:16.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/04/472/0/4256/2128/644/322/60/0/6b5c2dd_upload-1-4riqhdue76d2-000-vc9ob.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "a8f9e768e2ef",
-          "outletId": "tf1-info",
-          "headline": "Budget 2027 : l'Assemblée nationale rejette, à l'unanimité, la copie budgétaire modifiée",
-          "url": "https://www.tf1info.fr/politique/budget-2027-l-assemblee-nationale-rejette-a-l-unanimite-la-copie-budgetaire-modifiee-en-premiere-lecture-2473951.html",
-          "publishedAt": "2026-11-04T22:37:24.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/assemblee-nationale-27-octobre-2025-13689b-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "5409d758c390",
-          "outletId": "liberation",
-          "headline": "Budget 2027 : l’Assemblée nationale rejette à l’unanimité une copie budgétaire distordue et périmée",
-          "url": "https://www.liberation.fr/economie/budget-2027-a-lassemblee-nationale-le-rejet-attendu-dune-copie-budgetaire-distordue-et-perimee-20261104_D42ACMWWHBBZ5C45PUSPCKO6LI/",
-          "publishedAt": "2026-11-04T22:29:14.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "3a32ef726966",
-          "outletId": "le-figaro",
-          "headline": "Budget : le projet de loi de finances unanimement rejeté en première lecture à l’Assemblée",
-          "url": "https://www.lefigaro.fr/politique/budget-le-projet-de-loi-de-finances-unanimement-rejete-en-premiere-lecture-a-l-assemblee-20261104",
-          "publishedAt": "2026-11-04T22:28:02.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2997x1686_crop/2026/11/04/2e72f6cfbc2de776cec5f3b6e36a3cf1c348e64441f459ae38aab97379c30faa.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
+          "section": "society",
           "everFrontPage": true
         },
         {
-          "id": "30b3cf21c933",
-          "outletId": "bfmtv",
-          "headline": "Budget 2027: l'Assemblée nationale rejette en première lecture à l'unanimité la partie \"recettes\" du projet de loi de finances",
-          "url": "https://www.bfmtv.com/politique/parlement/budget-2027-l-assemblee-nationale-rejette-en-premiere-lecture-a-l-unanimite-la-partie-recettes-du-projet-de-loi-de-finance_AD-202611040991.html",
-          "publishedAt": "2026-11-04T22:25:16.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/zPnMHki_s5RB0_Vbre0amwxqqjw=/0x40:768x472/800x0/images/Un-hemicycle-de-l-Assemblee-nationale-quasi-deserte-pour-l-ouverture-du-debat-budgetaire-de-la-Securite-sociale-a-Paris-le-20-octobre-2026-2371057.jpg",
+          "id": "b9ea6750a0fe",
+          "outletId": "franceinfo",
+          "headline": "Une cyberattaque touche des chambres froides utilisées par l'Etablissement français du sang, \"sans impact\" sur les échantillons conservés",
+          "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/une-cyberattaque-touche-des-installations-frigorifiques-utilisees-par-l-etablissement-francais-du-sang-sans-impact-sur-les-echantillons-conserves_8267426.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-04T13:13:28.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/vQE6F1tm6_GFkP9Z127pyKVDqDc/0x435:4300x2854/432x243/filters:format(jpg)/2026/11/04/6aeb026b197dd449954689.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "politics"
+          "section": "society"
+        },
+        {
+          "id": "9b3283e67974",
+          "outletId": "tf1-info",
+          "headline": "De -30°C à +110°C : des systèmes de réfrigération de l'Établissement français du sang visés par une cyberattaque",
+          "url": "https://www.tf1info.fr/sante/de-30-c-a-110-c-des-systemes-de-refrigeration-de-l-etablissement-francais-du-sang-efs-vises-par-une-cyberattaque-2473828.html",
+          "publishedAt": "2026-11-04T13:05:48.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/540/don-du-sang-efs-5aecee-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "830a86740e0e",
+          "outletId": "liberation",
+          "headline": "Des chambres froides de l’Établissement français du sang ciblées par une cyberattaque",
+          "url": "https://www.liberation.fr/societe/sante/des-chambres-froides-de-letablissement-francais-du-sang-ciblees-par-une-cyberattaque-20261104_PM37SM4DFFFLHOHZNEQGFRTAGM/",
+          "publishedAt": "2026-11-04T13:02:32.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "70c49058f730",
+          "outletId": "le-figaro",
+          "headline": "Après les supermarchés, l’Établissement français du sang victime d’une cyberattaque, ses chambres froides prises pour cible",
+          "url": "https://www.lefigaro.fr/social/apres-les-supermarches-l-etablissement-francais-du-sang-victime-d-une-cyberattaque-ses-chambres-froides-prises-pour-cible-20261104",
+          "publishedAt": "2026-11-04T10:25:28.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/d062583c61aadfe2a96e9b891244f9c64e7e87bec24bccfb34ababd5675761d3.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
+        },
+        {
+          "id": "c4090056cdcc",
+          "outletId": "20-minutes",
+          "headline": "Cyberattaque : De -30 à 110 °C… Les réfrigérateurs du don du sang piratés à leur tour",
+          "url": "https://www.20minutes.fr/societe/4260219-20261104-cyberattaque-30-110-refrigerateurs-don-sang-pirates-tour?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-04T06:41:16.000Z",
+          "imageUrl": "https://img.20mn.fr/gyOMFtmWSBS2kyLInXeotSk/1200x768_la-societe",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society",
+          "everFrontPage": true
         }
       ],
-      "topicId": "09062cab2e04",
+      "topicId": "52fd972c2b6e",
       "titledArticleCount": 8,
-      "section": "politics",
+      "section": "society",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "L'Assemblée nationale a rejeté à l'unanimité la partie recettes du projet de loi de finances 2027 le mercredi 4 novembre 2026.",
-          "Le texte gouvernemental a été qualifié de distordu et périmé après trois semaines d'examen dans l'hémicycle.",
-          "Le Sénat s'emparera du projet de loi de finances initial à partir du 20 novembre."
+          "L'Établissement français du sang a confirmé qu'un prestataire gérant ses chambres froides a subi un incident de cybersécurité dans la nuit de dimanche à lundi.",
+          "Trois sites de l'EFS ont été touchés par un dérèglement de leurs équipements frigorifiques, rapidement maîtrisé sans aucune perte de produits sanguins.",
+          "Le ministère de la Santé doit établir un bilan officiel de la situation après avoir recueilli les informations techniques nécessaires.",
+          "Selon \"Le Canard enchaîné\", les pirates ont tenté de faire monter la température des réfrigérateurs jusqu'à 110 °C."
         ],
         "centre": [
-          "Les 458 votants de l'Assemblée nationale ont rejeté à l'unanimité la partie recettes du projet de loi de finances 2027 en première lecture.",
-          "Le texte rejeté comportait de profondes modifications de la copie gouvernementale initiale.",
-          "Le Sénat examinera le projet de loi de finances dans sa version initiale dès le mois de novembre."
+          "Un incident de cybersécurité a visé un prestataire d'équipements frigorifiques de l'Établissement français du sang le lundi 2 novembre 2026.",
+          "L'attaque a provoqué le dérèglement de chambres froides sur trois sites de l'EFS, sans entraîner d'impact sanitaire ni de perte d'échantillons selon les autorités.",
+          "Le ministère de la Santé a confirmé l'incident, qui s'ajoute à une série d'attaques similaires ayant touché l'Europe.",
+          "La question reste ouverte quant à un éventuel lien avec les attaques subies par la grande distribution en France et en Europe."
         ],
         "droite": [
-          "L'Assemblée nationale a rejeté unanimement le projet de loi de finances 2027 à l'issue de plus de deux semaines de débats.",
-          "Le texte initial du gouvernement va désormais poursuivre sa trajectoire d'examen au Sénat.",
-          "Le gouvernement étudie l'éventualité d'un recours au 49.3 ou à des ordonnances en l'absence de compromis."
+          "Des équipements frigorifiques de l'Établissement français du sang ont été la cible d'une cyberattaque le mardi 3 novembre, orchestrée par le prestataire Coolworld.",
+          "L'intrusion informatique a modifié à distance les températures de trois sites de l'EFS pour atteindre des seuils extrêmes allant jusqu'à 110 °C.",
+          "Cette attaque fait suite à des actes malveillants similaires ayant récemment frappé des supermarchés en France et en Europe.",
+          "Malgré la violence de la tentative de sabotage sur le plasma stocké à -30 °C, aucun impact sanitaire ou produit sanguin n'a été perdu."
         ]
       },
       "differences": [
-        "La gauche qualifie sévèrement le texte initial de distordu et périmé tout en confirmant le calendrier d'examen sénatorial dès novembre.",
-        "Le centre détaille précisément le déroulement du vote unanime des 458 députés et la transmission de la version initiale vers la chambre haute.",
-        "La droite met l'accent sur les perspectives institutionnelles à venir au Sénat et évoque l'hypothèse d'un recours gouvernemental au 49.3."
+        "La gauche insiste sur l'absence totale de perte de produits sanguins et sur l'attente d'un bilan officiel du ministère.",
+        "Le centre contextualise l'attaque de l'EFS en la rattachant à une vague d'incidents informatiques similaires en Europe.",
+        "La droite dramatise l'ampleur technique en soulignant l'écart thermique extrême provoqué par le piratage sur le plasma."
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 8,
-      "summarizedAt": "2026-11-05T00:01:22.406Z"
+      "summarizedAt": "2026-11-05T01:01:15.675Z"
     },
     {
       "id": "4ed50a165ebf",
@@ -15690,110 +16034,6 @@
       "summarizedAt": "2026-11-04T09:01:22.034Z"
     },
     {
-      "id": "52fd972c2b6e",
-      "slug": "une-cyberattaque-touche-des-chambres-froides-et-des",
-      "title": "Une cyberattaque touche des chambres froides et des réfrigérateurs de l'Établissement français du sang",
-      "createdAt": "2026-11-04T14:01:17.640Z",
-      "storyDay": "2026-11-04",
-      "articles": [
-        {
-          "id": "055ed0165544",
-          "outletId": "rfi",
-          "headline": "France: des chambres froides de l'Établissement français du sang victimes d'une cyberattaque",
-          "url": "https://www.rfi.fr/fr/france/20261104-france-des-chambres-froides-de-l-%C3%A9tablissement-fran%C3%A7ais-du-sang-victimes-d-une-cyberattaque",
-          "publishedAt": "2026-11-04T13:26:50.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/a6d50020-d851-11f1-a768-1beafce15fea/w:1024/p:16x9/000-32DK22T.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "13062ab28af0",
-          "outletId": "le-monde",
-          "headline": "Des réfrigérateurs de l’Etablissement français du sang à leur tour victimes d’une cyberattaque",
-          "url": "https://www.lemonde.fr/pixels/article/2026/11/04/des-frigos-de-l-etablissement-francais-du-sang-a-leur-tour-victimes-d-une-cyberattaque_6806228_4408996.html",
-          "publishedAt": "2026-11-04T13:18:16.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/04/472/0/4256/2128/644/322/60/0/6b5c2dd_upload-1-4riqhdue76d2-000-vc9ob.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "b9ea6750a0fe",
-          "outletId": "franceinfo",
-          "headline": "Une cyberattaque touche des chambres froides utilisées par l'Etablissement français du sang, \"sans impact\" sur les échantillons conservés",
-          "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/une-cyberattaque-touche-des-installations-frigorifiques-utilisees-par-l-etablissement-francais-du-sang-sans-impact-sur-les-echantillons-conserves_8267426.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-04T13:13:28.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/vQE6F1tm6_GFkP9Z127pyKVDqDc/0x435:4300x2854/432x243/filters:format(jpg)/2026/11/04/6aeb026b197dd449954689.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "9b3283e67974",
-          "outletId": "tf1-info",
-          "headline": "De -30°C à +110°C : des systèmes de réfrigération de l'Établissement français du sang visés par une cyberattaque",
-          "url": "https://www.tf1info.fr/sante/de-30-c-a-110-c-des-systemes-de-refrigeration-de-l-etablissement-francais-du-sang-efs-vises-par-une-cyberattaque-2473828.html",
-          "publishedAt": "2026-11-04T13:05:48.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/540/don-du-sang-efs-5aecee-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "830a86740e0e",
-          "outletId": "liberation",
-          "headline": "Des chambres froides de l’Établissement français du sang ciblées par une cyberattaque",
-          "url": "https://www.liberation.fr/societe/sante/des-chambres-froides-de-letablissement-francais-du-sang-ciblees-par-une-cyberattaque-20261104_PM37SM4DFFFLHOHZNEQGFRTAGM/",
-          "publishedAt": "2026-11-04T13:02:32.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "c4090056cdcc",
-          "outletId": "20-minutes",
-          "headline": "Cyberattaque : De -30 à 110 °C… Les réfrigérateurs du don du sang piratés à leur tour",
-          "url": "https://www.20minutes.fr/societe/4260219-20261104-cyberattaque-30-110-refrigerateurs-don-sang-pirates-tour?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-04T06:41:16.000Z",
-          "imageUrl": "https://img.20mn.fr/gyOMFtmWSBS2kyLInXeotSk/1200x768_la-societe",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "52fd972c2b6e",
-      "titledArticleCount": 6,
-      "section": "society",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "L'Établissement français du sang a subi une cyberattaque visant ses chambres froides gérées par un prestataire sur trois sites.",
-          "Les autorités et l'EFS confirment l'absence de pertes de produits sanguins ainsi qu'aucun impact sanitaire.",
-          "Selon Le Canard enchaîné, la température des stockages de plasma a été reprogrammée à distance pour passer de -30 °C à 110 °C."
-        ],
-        "centre": [
-          "Une intrusion informatique a touché ce lundi les installations frigorifiques de l'Établissement français du sang.",
-          "Le ministère de la Santé et l'EFS ont validé l'absence de répercussion sanitaire sur les échantillons conservés.",
-          "Le Monde indique que l'éventuel lien avec des attaques similaires visant la grande distribution en France et en Europe reste à déterminer."
-        ],
-        "droite": [
-          "Dans la nuit de dimanche à lundi, un prestataire de l'Établissement français du sang a été la cible d'un piratage informatique.",
-          "TF1 Info rapporte, en citant Le Canard enchaîné, que les systèmes de réfrigération du plasma à -30 °C ont failli atteindre 110 °C."
-        ]
-      },
-      "differences": [
-        "La gauche met l'accent sur l'ampleur technique du sabotage thermique révélé par la presse satirique tout en rassurant sur l'absence de conséquences sanitaires.",
-        "Le centre privilégie une approche institutionnelle et factuelle en insistant sur les déclarations rassurantes des autorités tout en interrogeant la piste d'une coordination européenne.",
-        "La droite se concentre principalement sur la spectaculaire mesure technique du détournement de température des stocks de plasma."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 6,
-      "summarizedAt": "2026-11-04T14:01:17.640Z"
-    },
-    {
       "id": "7bd9c7568dc0",
       "slug": "edouard-philippe-propose-a-jean-luc-melenchon-un-debat-sur-l",
       "title": "Édouard Philippe propose un débat sur l'immigration et l'intégration à Jean-Luc Mélenchon",
@@ -15879,137 +16119,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 5,
       "summarizedAt": "2026-11-04T17:01:25.411Z"
-    },
-    {
-      "id": "01781bc7591e",
-      "slug": "bruno-retailleau-milite-pour-une-primaire-de-la-droite-et-du",
-      "title": "Présidentielle 2027 : Bruno Retailleau milite pour une primaire de la droite et du centre en début d'année",
-      "createdAt": "2026-11-04T00:01:24.314Z",
-      "storyDay": "2026-11-04",
-      "articles": [
-        {
-          "id": "22eb928e971c",
-          "outletId": "cnews",
-          "headline": "Présidentielle 2027 : «Il faudra une primaire en début d’année», juge Bruno Retailleau",
-          "url": "https://www.cnews.fr/france/2026-11-04/presidentielle-2027-il-faudra-une-primaire-en-debut-dannee-juge-bruno-retailleau",
-          "publishedAt": "2026-11-04T06:56:00.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/075_pinto-meetingo261022_npir5-taille1200_6aead25818f99.jpg?h=6b23fa53&itok=et6RAkPN",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "e3eca99c4895",
-          "outletId": "le-monde",
-          "headline": "Présidentielle 2027 : Bruno Retailleau juge qu’il faudra une primaire en début d’année",
-          "url": "https://www.lemonde.fr/politique/article/2026/11/04/presidentielle-2027-bruno-retailleau-juge-qu-il-faudra-une-primaire-en-debut-d-annee_6806114_823448.html",
-          "publishedAt": "2026-11-04T06:31:24.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/10/21/560/0/6720/3360/644/322/60/0/9559ee1_upload-1-9tkzjij2qzfa-cbi1349030.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "7f0e35deb1d1",
-          "outletId": "ouest-france",
-          "headline": "Présidentielle 2027 : Bruno Retailleau relance l’idée d’une primaire à droite et au centre",
-          "url": "https://www.ouest-france.fr/elections/presidentielle/presidentielle-2027-bruno-retailleau-relance-lidee-dune-primaire-a-droite-et-au-centre-3a72fa0a-d7ec-11f1-b736-5b9907ef0b5a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-04T01:55:14.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNWUxY2RhZGEwMmZjODYwZTBlNTNhNTE3M2IxMTAxN2E?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9967b77de297808dcbbe4b1edb79b35cdc77a6b348e5561070ca277df25af337",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "7e3050fb52a8",
-          "outletId": "20-minutes",
-          "headline": "Présidentielle 2027 : Retailleau estime qu’il « faudra une primaire sans doute en début d’année »",
-          "url": "https://www.20minutes.fr/politique/4260190-20261104-presidentielle-2027-retailleau-estime-faudra-primaire-doute-debut-annee?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-04T00:36:12.000Z",
-          "imageUrl": "https://img.20mn.fr/9JBXK0PHT0u9SomLk_Yc-Sk/1200x768_sortie-et-prise-de-parole-de-bruno-retailleau-pour-les-republicains-apres-la-reunion-du-premier-ministre-sebastien-lecornu-le-jeudi-22-octobre-2026-a-matignon-pour-evoquer-le-deroule-des-violences-du-samedi-17-octobre-2026-et-la-securisation-des-prochaines-manifestations-et-de-la-campagne-presidentielle-2027-paris-france-22-10-2026-speech-of-bruno-retailleau-for-les-republicains-after-the-french-prime-minister-sebastien-lecornu-s-meeting-on-thursday-22-october-2026-at-matignon-to-discuss-the-events-surrounding-the-violence-on-saturday-17-october-2026-and-security-arrangements-for-upcoming-demonstrations-and-the-presidential-campaign-2027-paris-france-22-10-2026-harsin-sortiepartispolitiquesreunionlecornu049-credit-isa-harsin-sipa-2610222325",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "4920de6518fe",
-          "outletId": "le-parisien",
-          "headline": "« Sinon j’irai jusqu’au bout » : Bruno Retailleau milite désormais pour une primaire de la droite et du centre",
-          "url": "https://www.leparisien.fr/elections/presidentielle/sinon-jirai-jusquau-bout-bruno-retailleau-milite-desormais-pour-une-primaire-de-la-droite-et-du-centre-04-11-2026-ABWVERGWPVG2JFBA5MY5D7PVGU.php",
-          "publishedAt": "2026-11-04T00:01:24.314Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "3a8da9d7a8f4",
-          "outletId": "le-figaro",
-          "headline": "Présidentielle 2027 : Retailleau estime qu’il «faudra une primaire sans doute en début d’année»",
-          "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/presidentielle-2027-retailleau-estime-qu-il-faudra-une-primaire-sans-doute-en-debut-d-annee-20261104",
-          "publishedAt": "2026-11-03T23:50:17.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/04/98ce26dc5aa062db204e38fbc40f6547d961cddb90c5d796fbd9cca18401183a.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "58df92d52b26",
-          "outletId": "bfmtv",
-          "headline": "Pouvoir d'achat, écologie et État régalien: Bruno Retailleau propose trois débats à David Lisnard, Gabriel Attal et Édouard Philippe",
-          "url": "https://www.bfmtv.com/politique/elections/presidentielle/pouvoir-d-achat-ecologie-et-etat-regalien-bruno-retailleau-propose-trois-debats-a-david-lisnard-gabriel-attal-et-edouard-philippe_AV-202611031023.html",
-          "publishedAt": "2026-11-03T23:30:50.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/w6x8ESWko3MjShWCrABWk4KaTE0=/0x0:1920x1080/800x0/images/Bruno-Retailleau-candidat-a-l-election-presidentielle-de-2027-sur-le-plateau-de-BFMTV-le-3-novembre-2027-2377405.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "ea779db9a7f6",
-          "outletId": "bfmtv",
-          "headline": "2027: \"Il faudra une primaire en début d'année\", estime Bruno Retailleau, candidat LR à la présidentielle",
-          "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-2027-il-faudra-une-primaire-en-debut-d-annee-estime-bruno-retailleau-candidat-lr-a-la-presidentielle_VN-202611031014.html",
-          "publishedAt": "2026-11-03T23:10:14.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/nK3bCG2kXeIAbfM-EzyxkNvztx0=/0x0:1280x720/800x0/images/2027-Il-faudra-une-primaire-en-debut-d-annee-estime-Bruno-Retailleau-candidat-LR-a-la-presidentielle-2377515.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "c65483501222",
-      "titledArticleCount": 8,
-      "section": "politics",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Bruno Retailleau a déclaré sur BFMTV qu'il faudrait organiser une primaire de la droite et du centre « sans doute en début d'année » pour la présidentielle 2027.",
-          "Le candidat Les Républicains, initialement réticent à l'idée d'une primaire en raison de l'opposition d'Edouard Philippe, accentue désormais la pression pour imposer ce scrutin.",
-          "Les médias de centre gauche soulignent que Bruno Retailleau espère ainsi contourner le blocage d'Edouard Philippe, actuel favori des sondages."
-        ],
-        "centre": [
-          "Bruno Retailleau a relancé l'idée d'une primaire de la droite et du centre pour la présidentielle 2027 lors de son intervention sur BFMTV.",
-          "Le candidat Les Républicains affirme qu'Edouard Philippe sera contraint d'accepter ce processus de désignation en début d'année malgré son refus persistant.",
-          "Bruno Retailleau a également proposé l'organisation de trois débats préalables face à David Lisnard, Gabriel Attal et Edouard Philippe pour exposer leurs divergences.",
-          "Le Parisien rapporte l'avertissement du candidat LR qui prévient qu'il ira « jusqu'au bout » de sa démarche en cas de rejet."
-        ],
-        "droite": [
-          "Bruno Retailleau a estimé mardi qu'une primaire de la droite et du centre devra se tenir « en début d'année » pour l'élection présidentielle 2027.",
-          "Le candidat des Républicains, en baisse dans les enquêtes d'opinion d'après Le Figaro, juge que les sondages ne suffisent plus pour départager les prétendants.",
-          "La droite met en avant la nécessité d'imposer ce scrutin face au refus catégorique d'Edouard Philippe, qualifié de contraint d'accepter."
-        ]
-      },
-      "differences": [
-        "Le centre gauche insiste sur le revirement stratégique de Bruno Retailleau, qui contournait auparavant l'obstacle en raison du refus d'Edouard Philippe.",
-        "Le centre détaille les propositions programmatiques de Bruno Retailleau, notamment les trois débats réclamés face à ses rivaux potentiels.",
-        "La droite met en avant la chute du candidat dans les sondages pour expliquer sa volonté pressante d'organiser un scrutin départageant la famille politique."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 8,
-      "summarizedAt": "2026-11-04T08:01:18.616Z"
     },
     {
       "id": "a1fab3c55a17",
@@ -16516,6 +16625,102 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 12,
       "summarizedAt": "2026-11-04T14:01:17.640Z"
+    },
+    {
+      "id": "fe65bb9c822e",
+      "slug": "le-navigateur-matthieu-perraut-a-chavire-pendant-la-route-du",
+      "title": "Route du Rhum : le navigateur Matthieu Perraut a chaviré et attend les secours",
+      "createdAt": "2026-11-04T02:01:19.067Z",
+      "storyDay": "2026-11-04",
+      "articles": [
+        {
+          "id": "9121b99cd7b9",
+          "outletId": "ouest-france",
+          "headline": "Route du Rhum. Où en est le sauvetage de Matthieu Perraut après son chavirage ?",
+          "url": "https://www.ouest-france.fr/route-du-rhum/route-du-rhum-ou-en-est-le-sauvetage-de-matthieu-perraut-apres-son-chavirage-00f9111e-d842-11f1-a1e1-ae8104d72c9a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-04T11:54:55.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOWY0MGQ5MGU4M2I5N2ZjNjk0NGE2NDBjMGZhYzdmMWQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=e45ab08fc907cb3d4b1d5df357bf54d2f922a9b0548434c79aca479d311b3fd7",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "03fdd1cd03f9",
+          "outletId": "le-monde",
+          "headline": "Route du Rhum : l’Ocean Fifty « Elvest » de Matthieu Perraut a chaviré",
+          "url": "https://www.lemonde.fr/sport/article/2026/11/04/route-du-rhum-l-ocean-fifty-elvest-de-matthieu-perraut-a-chavire_6806116_3242.html",
+          "publishedAt": "2026-11-04T06:49:58.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/01/445/0/5341/2670/644/322/60/0/66e765f_ftp-1-ubz7hxjkmfxl-afp-d63l9qx.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "be8b747a8d16",
+          "outletId": "le-parisien",
+          "headline": "« Il va bien et attend les secours » : le navigateur Matthieu Perraut a chaviré pendant la Route du Rhum",
+          "url": "https://www.leparisien.fr/sports/voile/il-va-bien-et-attend-les-secours-le-navigateur-matthieu-perraut-a-chavire-pendant-la-route-du-rhum-04-11-2026-7DZYDTAMI5HZFE7C2WD6ZSA72I.php",
+          "publishedAt": "2026-11-04T02:01:19.067Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "1a136aceca8e",
+          "outletId": "20-minutes",
+          "headline": "Route du Rhum : Le skipper Matthieu Perraut a chaviré, les secours attendus",
+          "url": "https://www.20minutes.fr/sport/4260202-20261104-route-rhum-skipper-matthieu-perraut-chavire-secours-attendus?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-04T01:05:47.000Z",
+          "imageUrl": "https://img.20mn.fr/BBmqK8u4S6KHIk9LF9ADcSk/1200x768_les-concurrents-prennent-le-depart-de-la-route-du-rhum-destination-guadeloupe-2026-au-large-de-la-pointe-du-grouin-les-115-skippers-ont-pris-le-large-pour-la-13e-edition-de-la-celebre-course-transatlantique-en-solitaire-entre-saint-malo-et-pointe-a-pitre-en-guadeloupe-pointe-du-grouin-cancale-france-1er-novembre-2026-david-jean-marc-sipa-02993-credit-jean-marc-david-sipa-2611020813",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "b1ae6e813fd0",
+          "outletId": "le-figaro",
+          "headline": "Route du Rhum : Matthieu Perraut a chaviré",
+          "url": "https://www.lefigaro.fr/sports/voile/route-du-rhum/route-du-rhum-matthieu-perraut-a-chavire-20261104",
+          "publishedAt": "2026-11-03T23:31:09.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/04/20ade6fbff5dad8b5647fa4a462873c134d8c6eee25fc5c1094b511794548caf.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "fe65bb9c822e",
+      "titledArticleCount": 5,
+      "section": "sport",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le navigateur Matthieu Perraut va bien après le chavirage de son Ocean Fifty Elvest mardi soir.",
+          "Le skipper attend l'arrivée des secours organisée par la direction de course.",
+          "Plusieurs abandons ont déjà touché la course, dont ceux de Jérémie Beyou et Charles Caudrelier."
+        ],
+        "centre": [
+          "Le skipper Matthieu Perraut a chaviré mardi soir à bord de son Ocean Fifty Elvest lors de la Route du Rhum.",
+          "Il se porte bien selon la direction de course et attend l'intervention du bateau de sauvetage Mérida prévue ce jeudi 5 novembre.",
+          "Ouest-France précise la chronologie exacte du sauvetage de Matthieu Perraut."
+        ],
+        "droite": [
+          "Matthieu Perraut a chaviré mardi soir à 400 milles au nord des Açores pendant la Route du Rhum.",
+          "Le marin se trouve à bord de son Ocean Fifty Elvest et attend l'assistance des secours."
+        ]
+      },
+      "differences": [
+        "La gauche contextualise le chavirage de Matthieu Perraut en rappelant l'ensemble des abandons survenus en début de course.",
+        "Le centre détaille les opérations et le calendrier précis du sauvetage du skipper.",
+        "La droite se focalise strictement sur la position géographique et l'événement technique du chavirage."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-11-04T12:01:19.657Z"
     }
   ]
 }
