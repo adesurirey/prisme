@@ -101,6 +101,30 @@ jobs:
           path: .cache/refusals.json
           key: refusals-${{ github.run_id }}
 
+      # Classification checkpoint on failure (2026-11-05 outage): Classify
+      # runs before Group and pays OpenRouter per fresh Article, but the
+      # cache only reached the repo when the whole run succeeded — a failed
+      # hourly run lost its classifications with the workspace, so every
+      # retry re-classified (and re-paid) the same growing backlog of
+      # Articles. Checkpointing data/classifications.json on failure makes
+      # each hour's spend durable. It is a pure id → kind/section map,
+      # ADR-0003-safe, written before Grouping — valid whatever killed the
+      # rest of the run — and already pruned to the current feed window. A
+      # failure during Classify itself leaves it unchanged (saveCache runs
+      # after classifyNewArticles), so the diff guard commits nothing.
+      - name: Checkpoint classifications on failure
+        if: failure()
+        run: |
+          git config user.name "prisme-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/classifications.json
+          if git diff --cached --quiet; then
+            echo "No classification changes to checkpoint"
+          else
+            git commit -m "data: checkpoint classifications ($(date -u +%FT%TZ))"
+            git push
+          fi
+
       - name: Commit data
         run: |
           git config user.name "prisme-bot"
