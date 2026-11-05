@@ -6,6 +6,17 @@
   "storyDay": "2026-11-04",
   "articles": [
     {
+      "id": "58e3ef27bbc1",
+      "outletId": "le-monde",
+      "headline": "En Allemagne, le numéro deux du gouvernement régional de Bavière retrouvé mort à son hôtel à Berlin",
+      "url": "https://www.lemonde.fr/international/article/2026/11/05/en-allemagne-le-numero-deux-du-gouvernement-regional-de-baviere-retrouve-mort-a-son-hotel-a-berlin_6806602_3210.html",
+      "publishedAt": "2026-11-05T03:05:04.000Z",
+      "imageUrl": "https://img.lemde.fr/2023/09/07/455/0/5195/2597/644/322/60/0/f87908a_2023-09-07t114351z-1563528127-rc2m33a9zqzx-rtrmadp-3-germany-politics-bavaria-aiwanger.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "5f502fef01c4",
       "outletId": "le-parisien",
       "headline": "Un important homme politique allemand, accusé de sympathies nazies dans le passé, retrouvé mort dans un hôtel de Berlin",
@@ -41,7 +52,30 @@
     }
   ],
   "topicId": "62fc17bfe595",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le dirigeant des Électeurs libres et vice-ministre-président de Bavière Hubert Aiwanger est décédé à Berlin à l'âge de 55 ans.",
+      "Son corps a été découvert dans une chambre d'hôtel de la capitale allemande et les autorités judiciaires ont diligenté une enquête."
+    ],
+    "centre": [
+      "Le ministre bavarois de l'Économie Hubert Aiwanger a succombé à l'âge de 55 ans dans un établissement hôtelier berlinois.",
+      "La police et le parquet mènent des investigations pour déterminer les causes exactes de la mort de cet homme politique marqué par des controverses passées.",
+      "Le Monde note que la cause du décès du président du parti ultraconservateur Freie Wähler demeure inconnue à ce stade."
+    ],
+    "droite": [
+      "Hubert Aiwanger, numéro deux de l'exécutif bavarois, a été retrouvé sans vie dans un hôtel berlinois à l'âge de 55 ans.",
+      "Une enquête a été ouverte par le parquet et les services de police afin de faire lumière sur les circonstances de sa mort."
+    ]
+  },
+  "differences": [
+    "La gauche se focalise strictement sur l'identité institutionnelle du défunt et l'ouverture de l'enquête policière sans s'attarder sur son parcours idéologique.",
+    "Le centre choisit de rappeler le passé sulfureux de l'élu bavarois et ses sympathies nazies supposées tout en rapportant le décès.",
+    "La droite adopte un ton strictement factuel et neutre en se limitant aux fonctions officielles occupées par Hubert Aiwanger et aux démarches judiciaires en cours."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-05T04:01:14.185Z"
 }

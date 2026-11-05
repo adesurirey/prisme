@@ -45,7 +45,7 @@
       "url": "https://www.lemonde.fr/politique/article/2026/11/04/parcoursup-sebastien-lecornu-annonce-une-premiere-reunion-lundi-pour-reformer-la-plateforme-d-orientation-sur-fond-de-mobilisation-lyceenne_6806420_823448.html",
       "publishedAt": "2026-11-04T18:17:38.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/04/0/0/3844/1922/644/322/60/0/60ede73_ftp-1-aoia4pb7h7qh-afp-d6fc677.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -54,5 +54,26 @@
   "topicId": "2c3804c8eb4a",
   "titledArticleCount": 4,
   "section": "society",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le premier ministre Sébastien Lecornu a officialisé une première réunion de travail pour le lundi suivant.",
+      "Ces concertations intègrent directement les lycéens et les enseignants aux côtés des ministres concernés.",
+      "Le calendrier prévoit de premières recommandations dès le mois de novembre pour une évolution de la plateforme fixée à 2027.",
+      "Cette annonce intervient dans un contexte de contestation et de mobilisation menée par les élèves."
+    ],
+    "droite": [
+      "Sébastien Lecornu a officialisé la tenue d'une réunion de travail fixée au lundi suivant devant le Sénat.",
+      "Ce comité de réforme associe les ministres aux lycéens et aux enseignants pour engager la modification de l'outil d'orientation post-bac.",
+      "L'exécutif vise la production de premières recommandations dès le mois de novembre en se montrant ouvert au débat.",
+      "Cette initiative ministérielle répond directement au mécontentement et au mouvement de contestation initié par la jeunesse."
+    ]
+  },
+  "differences": [
+    "La gauche met en avant l'échéance programmée de 2027 pour la transformation de la plateforme et l'implication des professeurs dans les discussions.",
+    "La droite insiste sur le cadre institutionnel de l'annonce faite devant le Sénat et qualifie explicitement le mouvement de contestation comme une cristallisation de la colère."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-05T04:01:14.185Z"
 }
