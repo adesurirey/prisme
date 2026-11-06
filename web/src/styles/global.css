@@ -13,6 +13,10 @@
   --line: rgba(17, 17, 20, 0.08);
   --line-strong: rgba(17, 17, 20, 0.18);
   --ink: #1b1b1f;
+  /* Long-form prose (static pages): one step below ink, so reading text
+   * stays clearly apart from chrome (muted) without full-ink starkness
+   * across long paragraphs. */
+  --prose: #52525b;
   --muted: #6f6f76;
   --faint: #a1a1aa;
 
@@ -48,6 +52,7 @@
     --line: rgba(255, 255, 255, 0.09);
     --line-strong: rgba(255, 255, 255, 0.22);
     --ink: #e6e6ea;
+    --prose: #c9c9d0;
     --muted: #9b9ba3;
     --faint: #6c6c75;
 
@@ -75,6 +80,7 @@
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
   --color-ink: var(--ink);
+  --color-prose: var(--prose);
   --color-muted: var(--muted);
   --color-faint: var(--faint);
   --color-gauche: var(--gauche);
