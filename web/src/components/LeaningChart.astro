@@ -51,16 +51,14 @@ const zones = leaningChartZones(outlets, logoLookup(logoAssets));
               <li class="contents">
                 <a
                   href={`#${outlet.id}`}
-                  class="flex h-12 w-32 shrink-0 items-center justify-center rounded-lg bg-white px-2.5 shadow-[0_1px_2px_0_rgb(0_0_0/0.04)] ring-1 ring-black/5 transition-colors hover:ring-line-strong sm:w-auto sm:justify-self-stretch"
+                  class="flex h-12 grow basis-32 items-center justify-center rounded-lg bg-white px-2.5 shadow-[0_1px_2px_0_rgb(0_0_0/0.04)] ring-1 ring-black/5 transition-colors hover:ring-line-strong sm:grow-0 sm:basis-auto"
                   title={outlet.name}
                 >
                   {logoSrc ? (
                     <img
                       src={logoSrc}
                       alt={outlet.name}
-                      class="max-h-7 w-auto max-w-[118px] object-contain"
-                      width={118}
-                      height={28}
+                      class="h-8 w-26 max-w-full object-contain"
                       loading="lazy"
                       decoding="async"
                     />
@@ -78,8 +76,7 @@ const zones = leaningChartZones(outlets, logoLookup(logoAssets));
     }
   </ol>
   <p class="mt-3 text-[13px] leading-relaxed text-muted">
-    Chaque vignette renvoie à la fiche du média plus bas. Les logos sont la
-    propriété de leurs propriétaires ; ils ne sont affichés ici que pour les
-    identifier.
+    Chaque vignette renvoie à la fiche du média plus bas. Les logos sont des
+    marques déposées.
   </p>
 </nav>
