@@ -10,8 +10,8 @@ import {
   outlets,
 } from '@prisme/domain';
 import BackToIndex from '../components/BackToIndex.astro';
+import ChartTabs from '../components/ChartTabs.astro';
 import InlineLink from '../components/InlineLink.astro';
-import LeaningChart from '../components/LeaningChart.astro';
 import PageToc from '../components/PageToc.astro';
 import PaywallBadge from '../components/PaywallBadge';
 import SiteBadge from '../components/SiteBadge.astro';
@@ -96,7 +96,7 @@ const jsonLd = {
       <InlineLink href={withBase('/methode/')}>« Comment fonctionne Prisme »</InlineLink>.
     </p>
 
-    <LeaningChart />
+    <ChartTabs />
 
     <PageToc
       entries={[

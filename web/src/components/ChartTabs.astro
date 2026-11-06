@@ -1,0 +1,67 @@
+---
+import LeaningChart from './LeaningChart.astro';
+import LeaningReachChart from './LeaningReachChart.astro';
+
+/**
+ * The classement page's chart tabs: the two charts — the by-Leaning
+ * column chart (default) and the Leaning × Reach quadrant — rendered
+ * into the HTML at once, with a segmented control styled like the
+ * navbar's reading toggle (the shadcn "Navbar Segmented Control"
+ * pattern, global.css `.chart-tabs`): solid track, sliding --surface
+ * card, no Leaning color — these tabs switch a view, not a tendance.
+ * Selected styling derives from the `aria-selected` attribute and the
+ * container's `data-chart-tab` attribute, so the toggle script never
+ * touches classes. The small title above the control (the PageToc
+ * « Sur cette page » pattern) introduces what the tabs switch — and
+ * doubles as the tablist's accessible name via aria-labelledby. The
+ * toggle logic lives in src/chart-tabs.ts (tested); the inline script
+ * only wires it up.
+ */
+---
+
+<div data-chart-tabs class="chart-tabs mt-10">
+  <p id="chart-tabs-label" class="text-[13px] font-semibold text-ink">
+    Aperçu du classement
+  </p>
+  <div
+    role="tablist"
+    aria-labelledby="chart-tabs-label"
+    class="flex w-fit rounded-lg bg-hover p-0.5 mb-5 mt-3"
+  >
+    <button
+      type="button"
+      role="tab"
+      data-chart-tab="columns"
+      id="chart-tab-columns"
+      aria-controls="chart-panel-columns"
+      aria-selected="true"
+    >
+      Par tendance
+    </button>
+    <button
+      type="button"
+      role="tab"
+      data-chart-tab="audience"
+      id="chart-tab-audience"
+      aria-controls="chart-panel-audience"
+      aria-selected="false"
+    >
+      Par audience
+    </button>
+  </div>
+
+  <div role="tabpanel" id="chart-panel-columns" aria-labelledby="chart-tab-columns">
+    <LeaningChart />
+  </div>
+  <div role="tabpanel" id="chart-panel-audience" aria-labelledby="chart-tab-audience" hidden>
+    <LeaningReachChart />
+  </div>
+</div>
+
+<script>
+  import { initChartTabs } from '../chart-tabs';
+
+  document
+    .querySelectorAll('[data-chart-tabs]')
+    .forEach((root) => initChartTabs(root));
+</script>

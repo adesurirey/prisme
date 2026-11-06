@@ -1,12 +1,16 @@
 ---
 import { coverageGroup, LEANING_LABELS, outlets } from '@prisme/domain';
-import { leaningChartZones, logoLookup } from '../leaning-chart';
+import {
+  leaningChartZones,
+  outletLogoLookup,
+  PLATE_CAPTION,
+} from '../leaning-chart';
 
 /**
  * The classement page's illustration: every Outlet's logo on a plate, set
  * in its Leaning's column, left to right. The placement logic lives in
- * src/lib/leaning-chart.ts (shared with the OG-card generator); this file
- * is only markup.
+ * src/leaning-chart.ts (shared with the quadrant chart); this file is
+ * only markup.
  *
  * Zones are tinted by Coverage group — the site's public three-camp
  * language (the page's own text explains that centre gauche counts with
@@ -16,18 +20,11 @@ import { leaningChartZones, logoLookup } from '../leaning-chart';
  * chip, never a broken image (see assets/outlets/SOURCES.md).
  */
 
-// The logo directory is the manifest: <outlet-id>.svg|png, no registry.
-// ?url keeps SVGs as separate assets so plates hotlink one cached file.
-const logoAssets = import.meta.glob('../assets/outlets/*.{svg,png}', {
-  eager: true,
-  query: '?url',
-  import: 'default',
-}) as Record<string, string>;
-
-const zones = leaningChartZones(outlets, logoLookup(logoAssets));
+const logoFor = outletLogoLookup();
+const zones = leaningChartZones(outlets, logoFor);
 ---
 
-<nav aria-label="Le classement des médias, de gauche à droite" class="mt-8">
+<nav aria-label="Le classement des médias, de gauche à droite">
   <ol class="flex flex-col gap-2.5 sm:grid sm:grid-cols-5 sm:gap-3">
     {
       zones.map((zone) => (
@@ -51,7 +48,7 @@ const zones = leaningChartZones(outlets, logoLookup(logoAssets));
               <li class="contents">
                 <a
                   href={`#${outlet.id}`}
-                  class="flex h-12 grow basis-32 items-center justify-center rounded-lg bg-white px-2.5 shadow-[0_1px_2px_0_rgb(0_0_0/0.04)] ring-1 ring-black/5 transition-colors hover:ring-line-strong dark:bg-zinc-50 sm:grow-0 sm:basis-auto"
+                  class="flex h-12 grow basis-32 items-center justify-center rounded-lg bg-white px-2.5 shadow-[0_1px_2px_0_rgb(0_0_0/0.04)] ring-1 ring-black/5 transition-colors hover:ring-line-strong dark:bg-zinc-50 dark:hover:ring-zinc-400 sm:grow-0 sm:basis-auto"
                   title={outlet.name}
                 >
                   {logoSrc ? (
@@ -76,7 +73,6 @@ const zones = leaningChartZones(outlets, logoLookup(logoAssets));
     }
   </ol>
   <p class="mt-3 text-[13px] leading-relaxed text-muted">
-    Chaque vignette renvoie à la fiche du média plus bas. Les logos sont des
-    marques déposées.
+    {PLATE_CAPTION}
   </p>
 </nav>

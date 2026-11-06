@@ -282,6 +282,72 @@ html[data-mode="exposure"] .mode-toggle::before {
 }
 
 /*
+ * The classement page's chart tabs (ChartTabs.astro): the same shadcn
+ * "Navbar Segmented Control" pattern as the reading toggle above, applied
+ * to a page-level control — the reader asked for exactly this style. The
+ * solid --toggle-track and --surface card keep their contrast in dark
+ * mode, where the translucent track + --canvas pill this replaces were
+ * both near-invisible. The card follows the container's data-chart-tab
+ * attribute (chart-tabs.ts writes it alongside aria-selected); the
+ * Leaning colors stay reserved for the Coverage groups.
+ *
+ * Unlike the navbar toggle, the grid is the [role="tablist"] child, not
+ * the container: the container also holds the two tabpanels, which must
+ * stay outside the segmented control's columns and in normal flow.
+ */
+.chart-tabs [role="tablist"] {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 28px; /* same touch target as the reading toggle (issue #89) */
+  padding: 2px;
+  border-radius: var(--radius-md);
+  background: var(--toggle-track);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.chart-tabs [role="tablist"]::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  width: calc(50% - 2px);
+  border-radius: calc(var(--radius-md) - 2px);
+  background: var(--surface);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: transform 200ms ease-out;
+}
+
+.chart-tabs[data-chart-tab="audience"] [role="tablist"]::before {
+  transform: translateX(100%);
+}
+
+.chart-tabs [role="tab"] {
+  position: relative;
+  z-index: 1;
+  padding: 0 12px;
+  border-radius: calc(var(--radius-md) - 2px);
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  /* Constant weight — same rule as the reading toggle: the checked label
+   * differs by color only, so switching never shifts the layout. */
+  font-weight: 500;
+}
+
+.chart-tabs [role="tab"]:hover {
+  color: var(--ink);
+}
+
+.chart-tabs [role="tab"][aria-selected="true"] {
+  color: var(--ink);
+}
+
+/*
  * Whisper caption: the fading hint shown under the toggle for the first
  * four switches (mode-toggle.ts counts them). Mobile-first: anchored to
  * the toggle's right edge (which already sits at the header's 20px
