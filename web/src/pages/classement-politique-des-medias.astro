@@ -167,30 +167,23 @@ const jsonLd = {
         Certains médias manquent à l’appel. Pour chacun, la raison de l’exclusion,
         vérifiée à la date indiquée.
       </p>
-      <ul class="mt-4 flex max-w-3xl flex-col divide-y divide-line border-y border-line">
+      <ul class="mt-4 flex max-w-3xl flex-col gap-6">
         {
           excludedOutlets.map((excluded) => (
-            <li class="py-4">
+            <li>
               <p class="text-[16px] font-medium text-ink">{excluded.name}</p>
               <p class="mt-1 text-[16px] leading-relaxed text-prose">{excluded.publicReason}</p>
-              <p class="mt-1 text-[16px] text-muted">
-                Vérifié le {formatParisDate(new Date(excluded.checkedAt), {
-                  day: 'numeric',
-                  month: 'long',
-                  year: 'numeric',
-                })}
-              </p>
             </li>
           ))
         }
       </ul>
     </section>
 
-    <section id="media-par-media" class="mt-12">
+    <section id="media-par-media" class="mt-10">
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Média par média</h2>
       {
         leaningOrder.map((leaning) => (
-          <div id={leaning} class="mt-8 first:mt-6">
+          <div id={leaning} class="mt-10 first-of-type:mt-6">
             <h3 class="flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5 text-[16px]">
               <span
                 aria-hidden="true"
@@ -206,9 +199,9 @@ const jsonLd = {
                 {leaning === 'centre-droite' && ' — compte avec la droite'}
               </span>
             </h3>
-            <ul class="mt-1 divide-y divide-line">
+            <ul class="mt-5 flex flex-col gap-5">
               {perLeaning(leaning).map((outlet) => (
-                <li class="py-4">
+                <li>
                   <h4 class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
                     <span class="text-[16px] font-medium text-ink">
                       {outlet.name}
@@ -219,7 +212,7 @@ const jsonLd = {
                   <p class="mt-1 text-[16px] leading-relaxed text-prose">
                     {outlet.leaningNote}
                   </p>
-                  <details class="group mt-1.5">
+                  <details class="group mt-2">
                     <summary class="inline-flex cursor-pointer list-none items-center gap-1.5 text-[13px] text-muted transition-colors hover:text-muted [&::-webkit-details-marker]:hidden">
                       <svg
                         aria-hidden="true"
