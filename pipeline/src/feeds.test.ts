@@ -235,6 +235,56 @@ describe('parseFeed', () => {
 
     expect(parseFeed(xml).updatedAt).toBe('');
   });
+
+  it('dates SPIP feeds from dc:date when pubDate is absent (Le Monde diplomatique, issue #166)', () => {
+    // Real shapes from https://www.monde-diplomatique.fr/rss/ : the date is
+    // <dc:date> (ISO 8601), and the description mixes a real chapô with
+    // XML-escaped tag links the teaser must shed.
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+      <rss version="2.0"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:content="http://purl.org/rss/1.0/modules/content/">
+        <channel>
+          <title>Le Monde diplomatique</title>
+          <item>
+            <title>Les démocrates, maîtres du Capitole</title>
+            <link>https://www.monde-diplomatique.fr/carnet/2026-11-06-Les-democrates</link>
+            <dc:date>2026-11-06T17:55:43Z</dc:date>
+            <description>La vague est plus forte que prévu. Tous les États indécis ont basculé (…)
+ / &lt;a href=&#034;https://www.monde-diplomatique.fr/index/sujet/politique&#034;&gt;Politique&lt;/a&gt;, &lt;a href=&#034;https://www.monde-diplomatique.fr/index/sujet/elections&#034;&gt;Élections&lt;/a&gt;
+            </description>
+          </item>
+        </channel>
+      </rss>`;
+
+    const { items } = parseFeed(xml);
+
+    expect(items[0].publishedAt).toBe('2026-11-06T17:55:43.000Z');
+    expect(items[0].datedAtCollection).toBeUndefined();
+    // teaserFrom strips the tag links but keeps their labels (existing
+    // behaviour shared with other feeds that embed HTML in descriptions).
+    expect(items[0].teaser).toBe(
+      'La vague est plus forte que prévu. Tous les États indécis ont basculé (…) / Politique , Élections',
+    );
+  });
+
+  it('prefers pubDate when both pubDate and dc:date exist', () => {
+    const xml = `<?xml version="1.0"?>
+      <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <channel>
+          <item>
+            <title>Titre</title>
+            <link>https://exemple.fr/titre</link>
+            <pubDate>Mon, 06 Oct 2025 10:00:00 +0200</pubDate>
+            <dc:date>2025-10-06T05:00:00Z</dc:date>
+          </item>
+        </channel>
+      </rss>`;
+
+    const { items } = parseFeed(xml);
+
+    expect(items[0].publishedAt).toBe('2025-10-06T08:00:00.000Z');
+  });
 });
 
 describe('parseFeed — Undated Articles (ADR-0007, collection-time stamping)', () => {
