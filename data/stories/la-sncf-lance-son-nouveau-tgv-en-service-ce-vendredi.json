@@ -6,6 +6,17 @@
   "storyDay": "2026-11-06",
   "articles": [
     {
+      "id": "f549b66ed67a",
+      "outletId": "rfi",
+      "headline": "TGV M: comment la SNCF veut défendre sa place face à la concurrence en Europe",
+      "url": "https://www.rfi.fr/fr/podcasts/aujourd-hui-l-%C3%A9conomie/20261106-tgv-m-nouveau-train-sncf-concurrence-internationale",
+      "publishedAt": "2026-11-06T07:41:21.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/5e560a2e-edf8-11ee-b278-005056a97e36/w:1024/p:16x9/000_33XL3H7.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "c53732c91ed1",
       "outletId": "le-parisien",
       "headline": "Plus de sièges et de confort, bar cathédrale, batterie de secours… La SNCF lance (enfin) son nouveau TGV ce vendredi",
@@ -13,6 +24,27 @@
       "publishedAt": "2026-11-06T07:01:18.912Z",
       "frontPage": false,
       "datedAtCollection": true,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "80db0ebff87e",
+      "outletId": "liberation",
+      "headline": "Le nouveau TGV M enfin sur les rails",
+      "url": "https://www.liberation.fr/economie/transports/le-nouveau-tgv-enfin-sur-les-rails-20261106_LSRKYQEE5RHBJPAJBP5PQPXKRM/",
+      "publishedAt": "2026-11-06T06:20:14.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "7b8111fda318",
+      "outletId": "la-croix",
+      "headline": "400 innovations, deux ans de retard : le TGV M, vitrine et talon d’Achille de l’économie française",
+      "url": "https://www.la-croix.com/economie/400-innovations-deux-ans-de-retard-le-tgv-m-vitrine-et-talon-d-achille-de-leconomie-francaise-20261105",
+      "publishedAt": "2026-11-06T05:29:19.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/11/05/2581821-le-nouveau-tgv-m-annonce-une-consommation-d-electr.jpg",
+      "frontPage": false,
       "kind": "news",
       "section": "economy"
     },
@@ -30,7 +62,27 @@
     }
   ],
   "topicId": "559e456e7daf",
-  "titledArticleCount": 2,
+  "titledArticleCount": 5,
   "section": "economy",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le TGV M entre en service ce vendredi 6 novembre sur l'axe reliant Paris à Marseille.",
+      "Fabriquées par Alstom, ces nouvelles rames affichent des ambitions écologiques, modulaires et économiques.",
+      "Ce lancement intervient avec un retard important par rapport au calendrier initial prévu en 2024."
+    ],
+    "centre": [
+      "La SNCF met en service la cinquième génération de train à grande vitesse avec un investissement de 4,6 milliards d'euros auprès d'Alstom.",
+      "Le projet vise à consolider les parts de marché face à la concurrence européenne, à optimiser la rentabilité et à stimuler l'exportation.",
+      "Les nouvelles rames intègrent 400 innovations technologiques pour accroître la capacité d'accueil, le confort et l'adaptation climatique.",
+      "Le déploiement commercial débute ce vendredi sur la liaison Paris-Marseille avant un remplacement progressif de la flotte sur dix ans."
+    ]
+  },
+  "differences": [
+    "La gauche insiste principalement sur le retard accumulé par rapport aux prévisions initiales de 2024 tout en soulignant les promesses écologiques et modulaires des nouvelles rames.",
+    "Le centre met l'accent sur la stratégie industrielle, l'investissement financier massif de 4,6 milliards d'euros et la nécessité de faire face à la concurrence européenne."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-06T08:01:17.024Z"
 }
