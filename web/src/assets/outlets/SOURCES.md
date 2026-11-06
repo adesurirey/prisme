@@ -36,7 +36,7 @@ only (nominative use), like the page's disclaimer says.
 | Libération | `liberation.svg` | [Wikimedia Commons — File:Logo liberation.svg](https://commons.wikimedia.org/wiki/File:Logo_liberation.svg) | |
 | L'Humanité | `humanite.svg` | [Wikimedia Commons — File:Logo L'Humanité.svg](https://commons.wikimedia.org/wiki/File:Logo_L%27Humanit%C3%A9.svg) | |
 | France 24 | `france-24.svg` | [Wikimedia Commons — File:France 24 logo (2013).svg](https://commons.wikimedia.org/wiki/File:France_24_logo_(2013).svg) | |
-| Mediapart | `mediapart.svg` | [Wikimedia Commons — File:Mediapart wordmark.svg](https://commons.wikimedia.org/wiki/File:Mediapart_wordmark.svg) | |
+| Mediapart | `mediapart.svg` | [Wikipédia — Fichier:Mediapart logo.svg](https://fr.wikipedia.org/wiki/Fichier:Mediapart_logo.svg) | |
 | Ouest-France | `ouest-france.svg` | [Wikimedia Commons — File:Ouest-France logo.svg](https://commons.wikimedia.org/wiki/File:Ouest-France_logo.svg) | |
 | RFI | `rfi.svg` | [Wikimedia Commons — File:Rfi logo.svg](https://commons.wikimedia.org/wiki/File:Rfi_logo.svg) | |
 | Slate.fr | `slate-fr.png` | [Wikimedia Commons — File:Slate new logo.png](https://commons.wikimedia.org/wiki/File:Slate_new_logo.png) | same wordmark as Slate.fr's header |

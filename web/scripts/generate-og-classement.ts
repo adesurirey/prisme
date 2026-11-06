@@ -7,11 +7,12 @@
  *
  *   pnpm --filter @prisme/web generate:og-classement
  *
- * Design follows og-default.png: light card, ink title, muted footer. Zones
- * tint with the three camp colors (the site's public language), logos sit on
- * white plates so black wordmarks survive the light canvas. Each logo is
- * pre-rasterized by sharp at ~2× its slot before embedding, so the final
- * render keeps crisp edges.
+ * Design follows the reviewer's direction: no title, no URL, no
+ * branding — the chart itself fills the whole 1200×630 card as a single
+ * poster image. Zones tint with the three camp colors (the site's public
+ * language), logos sit on white plates so black wordmarks survive the light
+ * canvas. Each logo is pre-rasterized by sharp at ~2× its slot before
+ * embedding, so the final render keeps crisp edges.
  */
 
 import { readdirSync } from 'node:fs';
@@ -33,18 +34,17 @@ const CANVAS = '#fcfcfc';
 const CAMP_COLORS = { gauche: '#e0415e', centre: '#dfa414', droite: '#2e7ce4' };
 const SANS = "-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif";
 
-/** Card layout, tuned around the tallest zone (centre: 9 outlets). */
+/** Card layout — full bleed, tuned around the tallest zone (centre: 9
+ *  outlets, 5 plate rows). */
 const LAYOUT = {
-  margin: 56,
-  titleY: 108,
-  titleSize: 46,
-  zonesY: 168,
-  zonesHeight: 386,
-  zoneGap: 14,
-  zoneLabelSize: 21,
-  plate: { w: 92, h: 58, gapX: 8, gapY: 8, padTop: 52 },
-  logo: { w: 76, h: 34 },
-  footerY: 574,
+  /** Full-bleed poster: no outer margin, zones run edge to edge. */
+  margin: 0,
+  zonesY: 0,
+  zonesHeight: 630,
+  zoneGap: 6,
+  zoneLabelSize: 24,
+  plate: { w: 106, h: 92, gapX: 10, gapY: 14, padTop: 84 },
+  logo: { w: 88, h: 44 },
 };
 
 /** Fit each logo into its slot: SVGs render at density, PNGs as-is,
@@ -88,7 +88,6 @@ async function cardSvg(): Promise<string> {
   const parts: string[] = [
     `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}">`,
     `<rect width="${WIDTH}" height="${HEIGHT}" fill="${CANVAS}"/>`,
-    `<text x="${LAYOUT.margin}" y="${LAYOUT.titleY}" font-family="${SANS}" font-size="${LAYOUT.titleSize}" font-weight="700" fill="${INK}">Classement politique des médias</text>`,
   ];
 
   for (let zi = 0; zi < zones.length; zi++) {
@@ -97,21 +96,24 @@ async function cardSvg(): Promise<string> {
     const x = LAYOUT.margin + zi * (zoneW + LAYOUT.zoneGap);
     const y = LAYOUT.zonesY;
     parts.push(
-      `<rect x="${x}" y="${y}" width="${zoneW}" height="${LAYOUT.zonesHeight}" rx="14" fill="${camp}" fill-opacity="0.06"/>`,
-      `<circle cx="${x + 16}" cy="${y + 27}" r="5" fill="${camp}"/>`,
-      `<text x="${x + 28}" y="${y + 34}" font-family="${SANS}" font-size="${LAYOUT.zoneLabelSize}" font-weight="600" fill="${INK}">${LEANING_LABELS[zone.leaning]}</text>`,
-      `<text x="${x + zoneW - 14}" y="${y + 34}" font-family="${SANS}" font-size="${LAYOUT.zoneLabelSize}" fill="${MUTED}" text-anchor="end">${zone.entries.length}</text>`,
+      `<rect x="${x}" y="${y}" width="${zoneW}" height="${LAYOUT.zonesHeight}" fill="${camp}" fill-opacity="0.06"/>`,
+      `<circle cx="${x + 20}" cy="${y + 38}" r="6" fill="${camp}"/>`,
+      `<text x="${x + 34}" y="${y + 47}" font-family="${SANS}" font-size="${LAYOUT.zoneLabelSize}" font-weight="600" fill="${INK}">${LEANING_LABELS[zone.leaning]}</text>`,
+      `<text x="${x + zoneW - 20}" y="${y + 47}" font-family="${SANS}" font-size="${LAYOUT.zoneLabelSize}" fill="${MUTED}" text-anchor="end">${zone.entries.length}</text>`,
     );
 
     for (let ei = 0; ei < zone.entries.length; ei++) {
       const { outlet, logoSrc: file } = zone.entries[ei];
       const col = ei % 2;
       const row = Math.floor(ei / 2);
-      const px = x + 10 + col * (LAYOUT.plate.w + LAYOUT.plate.gapX);
+      const px =
+        x +
+        (zoneW - (2 * LAYOUT.plate.w + LAYOUT.plate.gapX)) / 2 +
+        col * (LAYOUT.plate.w + LAYOUT.plate.gapX);
       const py =
         y + LAYOUT.plate.padTop + row * (LAYOUT.plate.h + LAYOUT.plate.gapY);
       parts.push(
-        `<rect x="${px}" y="${py}" width="${LAYOUT.plate.w}" height="${LAYOUT.plate.h}" rx="8" fill="#ffffff" stroke="#e4e4e7"/>`,
+        `<rect x="${px}" y="${py}" width="${LAYOUT.plate.w}" height="${LAYOUT.plate.h}" rx="10" fill="#ffffff" stroke="#e4e4e7"/>`,
       );
       if (file) {
         const { href, w, h } = await logoDataUri(file);
@@ -120,16 +122,13 @@ async function cardSvg(): Promise<string> {
         );
       } else {
         parts.push(
-          `<text x="${px + LAYOUT.plate.w / 2}" y="${py + LAYOUT.plate.h / 2 + 6}" font-family="${SANS}" font-size="15" font-weight="600" fill="${INK}" text-anchor="middle">${outlet.name}</text>`,
+          `<text x="${px + LAYOUT.plate.w / 2}" y="${py + LAYOUT.plate.h / 2 + 8}" font-family="${SANS}" font-size="17" font-weight="600" fill="${INK}" text-anchor="middle">${outlet.name}</text>`,
         );
       }
     }
   }
 
-  parts.push(
-    `<text x="${LAYOUT.margin}" y="${LAYOUT.footerY}" font-family="${SANS}" font-size="30" font-weight="600" fill="${MUTED}">leprisme.info</text>`,
-    `</svg>`,
-  );
+  parts.push(`</svg>`);
   return parts.join('\n');
 }
 
