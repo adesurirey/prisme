@@ -29,7 +29,6 @@ const WIDTH = 1200;
 const HEIGHT = 630;
 
 const INK = '#1b1b1f';
-const MUTED = '#6c6c75';
 const CANVAS = '#fcfcfc';
 const CAMP_COLORS = { gauche: '#e0415e', centre: '#dfa414', droite: '#2e7ce4' };
 const SANS = "-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif";
@@ -99,7 +98,6 @@ async function cardSvg(): Promise<string> {
       `<rect x="${x}" y="${y}" width="${zoneW}" height="${LAYOUT.zonesHeight}" rx="12" fill="${camp}" fill-opacity="0.06"/>`,
       `<circle cx="${x + 20}" cy="${y + 38}" r="6" fill="${camp}"/>`,
       `<text x="${x + 34}" y="${y + 47}" font-family="${SANS}" font-size="${LAYOUT.zoneLabelSize}" font-weight="600" fill="${INK}">${LEANING_LABELS[zone.leaning]}</text>`,
-      `<text x="${x + zoneW - 20}" y="${y + 47}" font-family="${SANS}" font-size="${LAYOUT.zoneLabelSize}" fill="${MUTED}" text-anchor="end">${zone.entries.length}</text>`,
     );
 
     for (let ei = 0; ei < zone.entries.length; ei++) {
