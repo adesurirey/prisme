@@ -1,0 +1,52 @@
+---
+// The in-page table of contents for the long static pages (methode,
+// classement): a short « Sur cette page » list of anchors under the intro.
+// Static markup, no JS — plain anchor jumps; targets clear the sticky
+// header via the `article [id]` scroll-margin rule (global.css). Labels
+// and nesting are caller-owned copy: methode lists its sections flat, the
+// classement page nests its five tendances under « Média par média ».
+// Entries wear the back-link grammar (muted, hover to ink), not the prose
+// underline — a list of underlined links reads as noise.
+interface TocChild {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  entries: { label: string; href: string; children?: TocChild[] }[];
+}
+
+const { entries } = Astro.props;
+---
+
+<nav aria-label="Sur cette page" class="mt-10">
+  <p class="text-[13px] font-semibold text-ink">Sur cette page</p>
+  <ul class="mt-3 space-y-1.5 text-[14px] leading-relaxed">
+    {
+      entries.map((entry) => (
+        <li>
+          <a
+            href={entry.href}
+            class="text-muted transition-colors hover:text-ink"
+          >
+            {entry.label}
+          </a>
+          {entry.children && (
+            <ul class="mt-1 ml-4 space-y-1">
+              {entry.children.map((child) => (
+                <li>
+                  <a
+                    href={child.href}
+                    class="text-muted transition-colors hover:text-ink"
+                  >
+                    {child.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</nav>

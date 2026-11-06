@@ -584,3 +584,34 @@ describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () =
     expect(html).toContain('À la une');
   });
 });
+
+describe('in-page anchors (PageToc « Sur cette page »)', () => {
+  // Every same-page anchor (`href="#…"`) must land on an id in the same
+  // document — a table of contents that points nowhere is worse than none.
+  const deadAnchors = async (page: string) => {
+    const html = await readDist(page);
+    const ids = new Set([...html.matchAll(/ id="([^"]+)"/g)].map((m) => m[1]));
+    return [...html.matchAll(/href="#([^"]+)"/g)]
+      .map((m) => m[1])
+      .filter((hash) => !ids.has(hash));
+  };
+
+  it('ships the « Sur cette page » nav on both long static pages', async () => {
+    const methode = await readDist('methode/index.html');
+    expect(methode).toContain('aria-label="Sur cette page"');
+    const classement = await readDist(
+      'classement-politique-des-medias/index.html',
+    );
+    expect(classement).toContain('aria-label="Sur cette page"');
+  });
+
+  it('resolves every anchor on the methode page', async () => {
+    expect(await deadAnchors('methode/index.html')).toEqual([]);
+  });
+
+  it('resolves every anchor on the classement page', async () => {
+    expect(
+      await deadAnchors('classement-politique-des-medias/index.html'),
+    ).toEqual([]);
+  });
+});

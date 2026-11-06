@@ -10,6 +10,7 @@ import {
 } from '@prisme/domain';
 import BackToIndex from '../components/BackToIndex.astro';
 import InlineLink from '../components/InlineLink.astro';
+import PageToc from '../components/PageToc.astro';
 import PaywallBadge from '../components/PaywallBadge';
 import SiteBadge from '../components/SiteBadge.astro';
 import { withBase } from '../data';
@@ -55,7 +56,35 @@ const description =
       <InlineLink href={withBase('/methode/')}>« Comment fonctionne Prisme »</InlineLink>.
     </p>
 
-    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
+    <PageToc
+      entries={[
+        {
+          label: 'Le bord appartient au média, pas à l’article',
+          href: '#le-bord-appartient-au-media',
+        },
+        {
+          label: 'La sélection n’est pas équilibrée — et c’est voulu',
+          href: '#selection-non-equilibree',
+        },
+        { label: 'Les médias exclus', href: '#les-medias-exclus' },
+        {
+          label: 'Média par média',
+          href: '#media-par-media',
+          children: leaningOrder.map((leaning) => {
+            const n = perLeaning(leaning).length;
+            return {
+              label: `${LEANING_LABELS[leaning]} (${n} média${n > 1 ? 's' : ''})`,
+              href: `#${leaning}`,
+            };
+          }),
+        },
+      ]}
+    />
+
+    <section
+      id="le-bord-appartient-au-media"
+      class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted"
+    >
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">
         Le bord appartient au média, pas à l’article
       </h2>
@@ -75,7 +104,10 @@ const description =
       </p>
     </section>
 
-    <section class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted">
+    <section
+      id="selection-non-equilibree"
+      class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted"
+    >
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">
         La sélection n’est pas équilibrée — et c’est voulu
       </h2>
@@ -94,7 +126,7 @@ const description =
       </p>
     </section>
 
-    <section class="mt-10">
+    <section id="les-medias-exclus" class="mt-10">
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Les médias exclus</h2>
       <p class="mt-2 text-[16px] leading-relaxed text-muted">
         Certains médias manquent à l’appel. Pour chacun, la raison de l’exclusion,
@@ -119,11 +151,11 @@ const description =
       </ul>
     </section>
 
-    <section class="mt-12">
+    <section id="media-par-media" class="mt-12">
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Média par média</h2>
       {
         leaningOrder.map((leaning) => (
-          <div class="mt-8 first:mt-6">
+          <div id={leaning} class="mt-8 first:mt-6">
             <h3 class="flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5 text-[16px]">
               <span
                 aria-hidden="true"

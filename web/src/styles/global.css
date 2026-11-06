@@ -134,6 +134,16 @@ html.js [data-load-more-tail]:not([data-revealed]) {
 }
 
 /*
+ * In-page anchors (PageToc, cross-page deep links like /methode/#angle-mort)
+ * land below the sticky header (h-14 = 3.5rem) with a little air, instead of
+ * hiding the target heading under it. Scoped to the article content so id'd
+ * widgets outside it (mode toggle, radiogroups) are untouched.
+ */
+article [id] {
+  scroll-margin-top: calc(3.5rem + 1.25rem);
+}
+
+/*
  * Disclosure reveal (ArticleList follow-ups): the list is prerendered
  * with the `hidden` attribute; when it becomes visible, @starting-style
  * provides the pre-transition state so it fades and slides in. Pure CSS,

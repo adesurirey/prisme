@@ -2,6 +2,7 @@
 import { LEANING_LABELS, type Leaning, outlets } from '@prisme/domain';
 import BackToIndex from '../components/BackToIndex.astro';
 import InlineLink from '../components/InlineLink.astro';
+import PageToc from '../components/PageToc.astro';
 import { withBase } from '../data';
 import { LATEST_WINDOW_LABEL } from '../latest';
 import Base from '../layouts/Base.astro';
@@ -32,6 +33,25 @@ const description =
       D'où vient l'actualité montrée sur Prisme, comment les sujets se forment, ce que
       les modèles de langage voient — et ce qu'ils ne lisent jamais.
     </p>
+
+    <PageToc
+      entries={[
+        { label: 'Ce que Prisme montre', href: '#ce-que-prisme-montre' },
+        {
+          label: 'Comment les sujets se forment',
+          href: '#comment-les-sujets-se-forment',
+        },
+        {
+          label: 'Le bord politique appartient au média',
+          href: '#le-bord-politique-appartient-au-media',
+        },
+        { label: "L'angle mort", href: '#angle-mort' },
+        {
+          label: 'Ce que Prisme ne fait pas',
+          href: '#ce-que-prisme-ne-fait-pas',
+        },
+      ]}
+    />
 
     <section
       id="ce-que-prisme-montre"
