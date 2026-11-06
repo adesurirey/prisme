@@ -1,7 +1,6 @@
 import type { Story } from '@prisme/domain';
 import {
   articlesInWindow,
-  FEED_HALF_LIFE_MS,
   foundingInstant,
   rankStories,
   rankStoriesFeed,

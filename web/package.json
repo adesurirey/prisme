@@ -11,7 +11,8 @@
     "astro": "astro",
     "test": "vitest run",
     "generate:icons": "tsx scripts/generate-icons.ts",
-    "generate:og-image": "tsx scripts/generate-og-image.ts"
+    "generate:og-image": "tsx scripts/generate-og-image.ts",
+    "generate:og-classement": "tsx scripts/generate-og-classement.ts"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.0",

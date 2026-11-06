@@ -11,6 +11,7 @@ import {
 } from '@prisme/domain';
 import BackToIndex from '../components/BackToIndex.astro';
 import InlineLink from '../components/InlineLink.astro';
+import LeaningChart from '../components/LeaningChart.astro';
 import PageToc from '../components/PageToc.astro';
 import PaywallBadge from '../components/PaywallBadge';
 import SiteBadge from '../components/SiteBadge.astro';
@@ -64,6 +65,10 @@ const jsonLd = {
 <Base
   title="Classement politique des médias français : de gauche à droite"
   description={description}
+  ogImage={new URL(
+    withBase('/og-classement.png'),
+    Astro.site ?? new URL('https://leprisme.info'),
+  ).href}
   jsonLd={jsonLd}
 >
   <article class="pt-10">
@@ -90,6 +95,8 @@ const jsonLd = {
       l’écriture des synthèses — voir la page
       <InlineLink href={withBase('/methode/')}>« Comment fonctionne Prisme »</InlineLink>.
     </p>
+
+    <LeaningChart />
 
     <PageToc
       entries={[
@@ -201,7 +208,7 @@ const jsonLd = {
             <ul class="mt-5 flex flex-col gap-7">
               {perLeaning(leaning).map((outlet) => (
                 <li>
-                  <h4 class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+                  <h4 id={outlet.id} class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
                     <span class="text-[16px] font-medium text-ink">
                       {outlet.name}
                     </span>
