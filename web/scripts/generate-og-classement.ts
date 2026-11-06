@@ -8,8 +8,8 @@
  *   pnpm --filter @prisme/web generate:og-classement
  *
  * Design follows the reviewer's direction: no title, no URL, no
- * branding — the chart itself fills the whole 1200×630 card as a single
- * poster image. Zones tint with the three camp colors (the site's public
+ * branding — the chart itself is the whole 1200×630 card, with a thin
+ * margin so the five columns breathe. Zones tint with the three camp colors (the site's public
  * language), logos sit on white plates so black wordmarks survive the light
  * canvas. Each logo is pre-rasterized by sharp at ~2× its slot before
  * embedding, so the final render keeps crisp edges.
@@ -34,17 +34,17 @@ const CANVAS = '#fcfcfc';
 const CAMP_COLORS = { gauche: '#e0415e', centre: '#dfa414', droite: '#2e7ce4' };
 const SANS = "-apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif";
 
-/** Card layout — full bleed, tuned around the tallest zone (centre: 9
- *  outlets, 5 plate rows). */
+/** Card layout — the chart fills the card with a little air around it,
+ *  so the five columns read as columns; tuned around the tallest zone
+ *  (centre: 9 outlets, 5 plate rows). */
 const LAYOUT = {
-  /** Full-bleed poster: no outer margin, zones run edge to edge. */
-  margin: 0,
-  zonesY: 0,
-  zonesHeight: 630,
-  zoneGap: 6,
+  margin: 24,
+  zonesY: 24,
+  zonesHeight: 582,
+  zoneGap: 10,
   zoneLabelSize: 24,
-  plate: { w: 106, h: 92, gapX: 10, gapY: 14, padTop: 84 },
-  logo: { w: 88, h: 44 },
+  plate: { w: 102, h: 88, gapX: 8, gapY: 12, padTop: 78 },
+  logo: { w: 84, h: 42 },
 };
 
 /** Fit each logo into its slot: SVGs render at density, PNGs as-is,
@@ -96,7 +96,7 @@ async function cardSvg(): Promise<string> {
     const x = LAYOUT.margin + zi * (zoneW + LAYOUT.zoneGap);
     const y = LAYOUT.zonesY;
     parts.push(
-      `<rect x="${x}" y="${y}" width="${zoneW}" height="${LAYOUT.zonesHeight}" fill="${camp}" fill-opacity="0.06"/>`,
+      `<rect x="${x}" y="${y}" width="${zoneW}" height="${LAYOUT.zonesHeight}" rx="12" fill="${camp}" fill-opacity="0.06"/>`,
       `<circle cx="${x + 20}" cy="${y + 38}" r="6" fill="${camp}"/>`,
       `<text x="${x + 34}" y="${y + 47}" font-family="${SANS}" font-size="${LAYOUT.zoneLabelSize}" font-weight="600" fill="${INK}">${LEANING_LABELS[zone.leaning]}</text>`,
       `<text x="${x + zoneW - 20}" y="${y + 47}" font-family="${SANS}" font-size="${LAYOUT.zoneLabelSize}" fill="${MUTED}" text-anchor="end">${zone.entries.length}</text>`,
