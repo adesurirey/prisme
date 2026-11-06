@@ -52,7 +52,7 @@ const LAYOUT = {
 
 async function ogImageSvg(): Promise<string> {
   const svg = await readFile(ASSET, 'utf8');
-  const [x, y, w, h] = svg
+  const [, , w] = svg
     .match(/viewBox="([^"]+)"/)![1]
     .split(' ')
     .map(Number);
