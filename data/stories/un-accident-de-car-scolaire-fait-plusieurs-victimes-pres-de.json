@@ -1,10 +1,54 @@
 {
   "id": "1ce2979c38b0",
   "slug": "un-accident-de-car-scolaire-fait-plusieurs-victimes-pres-de",
-  "title": "Un accident de car scolaire fait deux morts et seize blessés près de Bourg-en-Bresse dans l'Ain",
+  "title": "Accident de car dans l'Ain : deux morts et 16 blessés",
   "createdAt": "2026-11-06T09:01:22.041Z",
   "storyDay": "2026-11-06",
   "articles": [
+    {
+      "id": "28a2d5e41259",
+      "outletId": "le-parisien",
+      "headline": "« Il a commencé à accélérer, puis à freiner. Il n’était pas bien » : le chauffeur du car accidenté dans l’Ain victime d’un malaise ?",
+      "url": "https://www.leparisien.fr/faits-divers/il-a-commence-a-accelerer-puis-a-freiner-il-netait-pas-bien-le-chauffeur-du-car-accidente-dans-lain-victime-dun-malaise-06-11-2026-WBDQQPY6KRCKTEQH67I5LVS7VQ.php",
+      "publishedAt": "2026-11-06T14:01:18.014Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "710c256b0b61",
+      "outletId": "tf1-info",
+      "headline": "\"Très touché par ce qui est arrivé\" : l'émotion du ministre Philippe Tabarot après le dramatique accident de car dans l'Ain",
+      "url": "https://www.tf1info.fr/justice-faits-divers/tres-touche-par-ce-qui-est-arrive-l-emotion-du-ministre-philippe-tabarot-apres-le-dramatique-accident-de-car-dans-l-ain-2474298.html",
+      "publishedAt": "2026-11-06T13:40:16.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/un-grand-traumatisme-les-mots-de-philippe-tabarot-apres-l-accident-de-car-dans-l-ain-90e282-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "a581f4719460",
+      "outletId": "france-24",
+      "headline": "Accident de car dans l'Ain : deux morts dont une enfant de 7 ans",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261106-accident-de-car-dans-l-ain-deux-morts-dont-une-enfant-de-7-ans",
+      "publishedAt": "2026-11-06T13:31:58.000Z",
+      "imageUrl": "https://s.france24.com/media/display/bf8b2af0-d9e5-11f1-89d9-695cb59fade5/w:1024/p:16x9/FR-20261106-133320-133538-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "ba733dacb21d",
+      "outletId": "tf1-info",
+      "headline": "Accident de car : deux jeunes de sept et 18 ans tués",
+      "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-accident-de-car-deux-jeunes-de-sept-et-18-ans-tues-8474-2474323.html",
+      "publishedAt": "2026-11-06T13:25:18.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/accident-de-car-deux-jeunes-de-sept-et-18-ans-tues-7bec8f-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "67882ae899a5",
       "outletId": "bfmtv",
@@ -34,6 +78,17 @@
       "url": "https://www.bfmtv.com/police-justice/video-accident-de-car-dans-l-ain-le-ministre-des-transports-s-est-rendu-sur-place_VN-202611060519.html",
       "publishedAt": "2026-11-06T12:50:00.000Z",
       "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/gepFo-HaWbRbWWfi98-mqW0fnFo=/0x0:1280x720/800x0/images/Accident-de-car-dans-l-Ain-le-ministre-des-Transports-s-est-rendu-sur-place-2379233.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "6239cb3e1851",
+      "outletId": "cnews",
+      "headline": "Accident de car près de Bourg-en-Bresse : deux morts, véhicule en «très bon état» avant le drame... Ce que l'on sait",
+      "url": "https://www.cnews.fr/france/2026-11-06/accident-de-car-pres-de-bourg-en-bresse-deux-morts-vehicule-en-tres-bon-etat",
+      "publishedAt": "2026-11-06T12:49:45.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-06t103450z_32173864_rc2aioacwe68_rtrmadp_3_france-accident-taille1200_6aedc32e8f61a.jpg?h=1483d620&itok=UQSmCUn6",
       "frontPage": false,
       "kind": "news",
       "section": "misc"
@@ -244,9 +299,10 @@
       "url": "https://www.lejdd.fr/Societe/accident-de-car-dans-lain-deux-personnes-decedees-philippe-tabarot-se-rend-sur-place-187953",
       "publishedAt": "2026-11-06T10:32:33.000Z",
       "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/06/11/080_hl_jmbarrere_3243497.jpg?VersionId=Zy6AGt1H6ATMVn9UhKmCqiLEX0.p2ieO",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "misc"
+      "section": "misc",
+      "everFrontPage": true
     },
     {
       "id": "27cd1ac09b3e",
@@ -594,32 +650,32 @@
     }
   ],
   "topicId": "1ce2979c38b0",
-  "titledArticleCount": 43,
+  "titledArticleCount": 58,
   "section": "misc",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Un car interurbain transportant 43 personnes, dont 15 mineurs, a quitté la route et percuté un arbre à Lent, près de Bourg-en-Bresse.",
-      "Le drame a causé la mort de deux jeunes passagers, dont un mineur, et a fait de nombreux blessés graves, avec des sources évoquant un bilan provisoire de 70 blessés.",
-      "Le ministre des Transports, Philippe Tabarot, est attendu sur place tandis qu'une enquête pour homicide routier a été ouverte."
+      "Un autocar assurant la liaison entre Lyon et Bourg-en-Bresse a fait une sortie de route ce vendredi matin dans la commune de Lent, transportant 43 personnes dont 15 mineurs.",
+      "Le bilan provisoire fait état de deux morts, de nombreux blessés graves et de dizaines de personnes impliquées selon plusieurs sources concordantes.",
+      "Le ministre des Transports s'est rendu sur place tandis que la municipalité a activé son plan communal de sauvegarde pour accueillir les impliqués à la salle des fêtes."
     ],
     "centre": [
-      "Un car de ligne régionale circulant entre Lyon et Bourg-en-Bresse a fait une sortie de route et heurté un arbre dans un fossé à Lent.",
-      "L'accident a provoqué la mort de deux personnes, dont un mineur, et fait 16 blessés, dont trois ou quatre en urgence absolue.",
-      "Soixante-dix personnes sont impliquées selon le maire, entraînant l'activation d'une cellule de crise et la mise en place d'un soutien psychologique incluant une chienne d'assistance."
+      "Un car interurbain est sorti de route à Lent dans l'Ain, faisant deux morts, une fillette de 7 ans et un jeune homme de 18 ans, ainsi que 16 blessés dont quatre en urgence absolue.",
+      "Le chauffeur du véhicule a été hospitalisé sans avoir pu être entendu, tandis que les tests d'alcoolémie et de stupéfiants se sont révélés négatifs selon les annonces ministérielles.",
+      "Une enquête de flagrance pour homicide et blessures routières aggravées a été confiée à la gendarmerie de Lyon pour déterminer les causes de cet accident qualifié de drame absolu par le maire."
     ],
     "droite": [
-      "Un autocar a quitté la chaussée et heurté un arbre sur la départementale D22 à Lent, au sud de Bourg-en-Bresse, faisant deux morts et 16 blessés selon un premier bilan.",
-      "Le maire Yves Cristin a indiqué que deux personnes étaient initialement en arrêt cardiorespiratoire et que 70 personnes étaient impliquées.",
-      "Le ministre des Transports Philippe Tabarot s'est rendu sur les lieux de l'accident où deux hélicoptères ont été mobilisés."
+      "Un car régional transportant 43 passagers dont quinze mineurs a percuté une ligne d'arbres après une sortie de route sur la départementale menant à Bourg-en-Bresse.",
+      "Le drame a coûté la vie à un jeune de 18 ans et à une fillette de 7 ans, et a blessé seize autres personnes dont trois en urgence absolue.",
+      "Le ministre des Transports Philippe Tabarot s'est rendu sur les lieux de l'accident pour constater la situation aux côtés des services de secours mobilisés."
     ]
   },
   "differences": [
-    "La gauche insiste particulièrement sur la composition des passagers en soulignant la présence de mineurs à bord d'un transport scolaire et chiffre l'impact global à 70 victimes potentielles.",
-    "Le centre adopte un traitement factuel en privilégiant l'évolution du bilan officiel de la préfecture, les détails techniques de l'intervention et l'accompagnement psychologique des victimes.",
-    "La droite met en avant le bilan humain immédiat fourni par les autorités locales et le maire, tout en soulignant rapidement la visite sur place du ministre des Transports Philippe Tabarot."
+    "La gauche met l'accent sur le transport scolaire et le volume élevé de personnes impliquées, en insistant sur la mobilisation d'urgence de la commune.",
+    "Le centre détaille précisément l'identité des victimes et l'avancée de l'enquête judiciaire ainsi que les déclarations du ministre des Transports et du maire.",
+    "La droite privilégie un récit factuel axé sur le bilan précis des victimes, les circonstances matérielles du choc contre les arbres et le déplacement ministériel."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 43,
-  "summarizedAt": "2026-11-06T12:01:20.524Z"
+  "summarizedArticleCount": 58,
+  "summarizedAt": "2026-11-06T14:01:18.014Z"
 }
