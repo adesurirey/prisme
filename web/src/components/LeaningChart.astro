@@ -1,0 +1,85 @@
+---
+import { coverageGroup, LEANING_LABELS, outlets } from '@prisme/domain';
+import { leaningChartZones, logoLookup } from '../leaning-chart';
+
+/**
+ * The classement page's illustration: every Outlet's logo on a plate, set
+ * in its Leaning's column, left to right. The placement logic lives in
+ * src/lib/leaning-chart.ts (shared with the OG-card generator); this file
+ * is only markup.
+ *
+ * Zones are tinted by Coverage group — the site's public three-camp
+ * language (the page's own text explains that centre gauche counts with
+ * the gauche) — and every plate links to the Outlet's entry in the
+ * « Média par média » list below, making the chart a visual table of
+ * contents. Logos without a file at the quality bar render as a name
+ * chip, never a broken image (see assets/outlets/SOURCES.md).
+ */
+
+// The logo directory is the manifest: <outlet-id>.svg|png, no registry.
+// ?url keeps SVGs as separate assets so plates hotlink one cached file.
+const logoAssets = import.meta.glob('../assets/outlets/*.{svg,png}', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+}) as Record<string, string>;
+
+const zones = leaningChartZones(outlets, logoLookup(logoAssets));
+---
+
+<nav aria-label="Le classement des médias, de gauche à droite" class="mt-8">
+  <ol class="flex flex-col gap-2.5 sm:grid sm:grid-cols-5 sm:gap-3">
+    {
+      zones.map((zone) => (
+        <li
+          class="rounded-xl border border-line p-3 sm:p-3.5"
+          style={`background: color-mix(in srgb, var(--${coverageGroup(zone.leaning)}) 6%, transparent)`}
+        >
+          <p class="flex items-baseline gap-x-2 text-[13px] leading-none">
+            <span
+              aria-hidden="true"
+              class="inline-block size-2.5 translate-y-[-1px] self-center rounded-full"
+              style={`background: var(--${coverageGroup(zone.leaning)})`}
+            />
+            <span class="whitespace-nowrap font-semibold text-ink">
+              {LEANING_LABELS[zone.leaning]}
+            </span>
+            <span class="text-muted">{zone.entries.length}</span>
+          </p>
+          <ul class="mt-3 flex flex-wrap content-start gap-2 sm:flex-col sm:gap-1.5">
+            {zone.entries.map(({ outlet, logoSrc }) => (
+              <li class="contents">
+                <a
+                  href={`#${outlet.id}`}
+                  class="flex h-12 w-32 shrink-0 items-center justify-center rounded-lg bg-white px-2.5 shadow-[0_1px_2px_0_rgb(0_0_0/0.04)] ring-1 ring-black/5 transition-colors hover:ring-line-strong sm:w-auto sm:justify-self-stretch"
+                  title={outlet.name}
+                >
+                  {logoSrc ? (
+                    <img
+                      src={logoSrc}
+                      alt={outlet.name}
+                      class="max-h-7 w-auto max-w-[118px] object-contain"
+                      width={118}
+                      height={28}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <span class="px-1 text-center text-[13px] font-medium text-ink">
+                      {outlet.name}
+                    </span>
+                  )}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))
+    }
+  </ol>
+  <p class="mt-3 text-[13px] leading-relaxed text-muted">
+    Chaque vignette renvoie à la fiche du média plus bas. Les logos sont la
+    propriété de leurs propriétaires ; ils ne sont affichés ici que pour les
+    identifier.
+  </p>
+</nav>
