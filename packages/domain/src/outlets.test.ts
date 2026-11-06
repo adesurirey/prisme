@@ -188,7 +188,7 @@ describe('outlet config', () => {
     expect(lopinion!.leaning).toBe('centre-droite');
     expect(lopinion!.feeds.latest).toBe('https://www.lopinion.fr/index.rss');
     for (const outlet of [challenges!, lopinion!]) {
-      expect(outlet.feedChecks[0]!.checkedAt).toBe('2026-10-10');
+      expect(outlet.feedChecks[0]!.checkedAt).toBe(OUTLETS_CHECKED_AT);
       expect(excludedOutlets.map((excluded) => excluded.id)).not.toContain(
         outlet.id,
       );
@@ -206,7 +206,7 @@ describe('outlet config', () => {
     expect(slate!.leaning).toBe('centre-gauche');
     expect(slate!.paywall).toBe('none');
     expect(slate!.feeds.latest).toBe('https://slate.fr/rss.xml');
-    expect(slate!.feedChecks[0]!.checkedAt).toBe('2026-10-10');
+    expect(slate!.feedChecks[0]!.checkedAt).toBe(OUTLETS_CHECKED_AT);
     expect(slate!.feedChecks[0]!.status).toBe(200);
     expect(slate!.tdm.reserved).toBe(false);
     // Audience argument consigné sur #73 : podcasts certifiés ACPM (1er
@@ -229,7 +229,7 @@ describe('outlet config', () => {
     expect(blast!.feeds.latest).toBe(
       'https://api.blast-info.fr/rss_articles.xml',
     );
-    expect(blast!.feedChecks[0]!.checkedAt).toBe('2026-10-10');
+    expect(blast!.feedChecks[0]!.checkedAt).toBe(OUTLETS_CHECKED_AT);
     expect(blast!.feedChecks[0]!.status).toBe(200);
     expect(blast!.tdm.reserved).toBe(false);
     // Audience argument consigné sur #71 : no ACPM certification — sworn
@@ -306,7 +306,7 @@ describe('outlet config', () => {
     // The general news feed lives on the rss. subdomain (declared in the site
     // HTML); the usual /rss and /feed paths 404.
     expect(atlantico!.feeds.latest).toBe('https://rss.atlantico.fr');
-    expect(atlantico!.feedChecks[0]!.checkedAt).toBe('2026-10-10');
+    expect(atlantico!.feedChecks[0]!.checkedAt).toBe(OUTLETS_CHECKED_AT);
     expect(atlantico!.feedChecks[0]!.status).toBe(200);
     expect(atlantico!.feedChecks[0]!.images).toBe('all');
     expect(atlantico!.tdm.reserved).toBe(false);
@@ -322,16 +322,42 @@ describe('outlet config', () => {
     expect(causeur!.leaning).toBe('droite');
     expect(causeur!.paywall).toBe('partial');
     expect(causeur!.feeds.latest).toBe('https://www.causeur.fr/feed');
-    expect(causeur!.feedChecks[0]!.checkedAt).toBe('2026-10-10');
+    expect(causeur!.feedChecks[0]!.checkedAt).toBe(OUTLETS_CHECKED_AT);
     expect(causeur!.feedChecks[0]!.status).toBe(200);
     expect(causeur!.feedChecks[0]!.images).toBe('none');
     expect(causeur!.tdm.reserved).toBe(false);
     expect(causeur!.readership.evidence).toMatch(/Semrush/);
     for (const outlet of [atlantico!, causeur!]) {
-      expect(outlet.feedChecks[0]!.checkedAt).toBe('2026-10-10');
+      expect(outlet.feedChecks[0]!.checkedAt).toBe(OUTLETS_CHECKED_AT);
       expect(excludedOutlets.map((excluded) => excluded.id)).not.toContain(
         outlet.id,
       );
     }
+  });
+
+  it('adds Le Monde diplomatique (Gauche) to the Edition (issue #166)', () => {
+    const diplo = outlets.find((outlet) => outlet.id === 'monde-diplomatique');
+    expect(diplo, 'the Diplo enters the Edition').toBeDefined();
+    expect(diplo!.name).toBe('Le Monde diplomatique');
+    // Hors panel FrIdéo: the placement rests on the other sources (Wikipédia,
+    // MBFC « Left »), with Lucide's « Centre-gauche » written as disagreement.
+    expect(diplo!.leaning).toBe('gauche');
+    expect(diplo!.paywall).toBe('partial');
+    // The site's only feed (SPIP): dates come as dc:date — the parser learned
+    // that field in the companion fix(pipeline) commit.
+    expect(diplo!.feeds.latest).toBe('https://www.monde-diplomatique.fr/rss/');
+    expect(diplo!.feedChecks[0]!.checkedAt).toBe(OUTLETS_CHECKED_AT);
+    expect(diplo!.feedChecks[0]!.status).toBe(200);
+    expect(diplo!.feedChecks[0]!.images).toBe('none');
+    expect(diplo!.tdm.reserved).toBe(false);
+    // Audience argument consigné sur #166 : both print and web are ACPM
+    // certified — 137 541 ex. France payée (DSH 2025-2026) and a unified web
+    // certificate (478 865 visits, September 2026). No estimate needed.
+    expect(diplo!.reach.source).toBe('ACPM');
+    expect(diplo!.reach.value).toBe(478_865);
+    expect(diplo!.reach.estimated).toBeUndefined();
+    expect(excludedOutlets.map((excluded) => excluded.id)).not.toContain(
+      'monde-diplomatique',
+    );
   });
 });

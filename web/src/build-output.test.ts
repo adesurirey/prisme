@@ -34,7 +34,7 @@ import {
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import type { Story } from '@prisme/domain';
-import { foundingInstant } from '@prisme/domain';
+import { foundingInstant, OUTLETS_CHECKED_AT } from '@prisme/domain';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { formatStoryDate } from './article-date';
 import { loadEdition } from './data';
@@ -586,9 +586,12 @@ describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () =
     );
     expect(classement).toContain('"@type":"WebPage"');
     expect(classement).toContain('"datePublished":"2026-10-07');
-    expect(classement).toContain('"dateModified":"2026-10-10');
+    // The freshness stamp is the shared verification day — read from the
+    // domain constant instead of a literal that would drift at every
+    // re-verification of the Outlets.
+    expect(classement).toContain(`"dateModified":"${OUTLETS_CHECKED_AT}`);
     expect(classement).toContain('Mis à jour le');
-    expect(classement).toContain('datetime="2026-10-10');
+    expect(classement).toContain(`datetime="${OUTLETS_CHECKED_AT}`);
   });
 
   it('ships the branded French 404 page', async () => {
