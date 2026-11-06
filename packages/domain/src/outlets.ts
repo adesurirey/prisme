@@ -125,8 +125,11 @@ export interface ExcludedOutlet {
   checkedAt: string;
 }
 
-/** Everything re-verified the same day (feed checks and TDM probes). */
-const CHECKED = '2026-10-10';
+/** Everything re-verified the same day (feed checks and TDM probes).
+ *  Also the « Mis à jour le » date of the classement page (web): the page
+ *  renders this config, so its freshness is exactly this verification day —
+ *  one fact, one home. */
+export const OUTLETS_CHECKED_AT = '2026-10-10';
 
 /** The Outlets of the Edition, grouped by Leaning. The perimeter is open (issue #10). */
 export const outlets: OutletConfig[] = [
@@ -175,7 +178,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.nouvelobs.com/rss.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 200,
         covers: '~6 jours',
@@ -185,7 +188,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -233,7 +236,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.huffingtonpost.fr/rss/all_headline.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 20,
         covers: '~6 h',
@@ -243,7 +246,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -309,7 +312,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 50,
         covers: '~9 h',
@@ -319,7 +322,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404, la page répond depuis le serveur de Libération malgré DataDome).',
     },
   },
@@ -368,7 +371,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.mediapart.fr/articles/feed',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 10,
         covers: '~12 h',
@@ -377,7 +380,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -426,7 +429,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://api.blast-info.fr/rss_articles.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 100,
         covers: '~3 mois',
@@ -436,7 +439,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Robots.txt entièrement ouvert, pas de tdmrep.json, aucun en-tête tdm-reservation.',
     },
   },
@@ -484,7 +487,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.humanite.fr/feed',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 20,
         covers: '~2 h',
@@ -494,7 +497,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -564,7 +567,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'une',
         url: 'https://www.lemonde.fr/rss/une.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 16,
         covers: '~15 h',
@@ -573,7 +576,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.lemonde.fr/rss/en_continu.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 60,
         covers: '~27 h',
@@ -582,7 +585,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: null,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: "Indéterminé : lemonde.fr/.well-known/tdmrep.json répond 402 « Accès restreint » ; aucune réservation n'a pu être lue.",
     },
   },
@@ -639,7 +642,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://slate.fr/rss.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 22,
         covers: '~126 jours',
@@ -649,7 +652,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -697,7 +700,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.francetvinfo.fr/titres.rss',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 33,
         covers: '~24 h',
@@ -706,7 +709,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: true,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Réservation publiée (tdm-reservation: 1, tdm-policy sur franceinfo.fr).',
     },
   },
@@ -762,7 +765,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'une',
         url: 'https://www.20minutes.fr/feeds/rss-une.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 30,
         covers: '~6 jours',
@@ -772,7 +775,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -825,7 +828,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'une',
         url: 'https://www.ouest-france.fr/rss/une',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 10,
         covers: '~30 min',
@@ -834,7 +837,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.ouest-france.fr/rss-en-continu.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 10,
         covers: '~30 min',
@@ -844,7 +847,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: true,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Réservation publiée pour « / » (tdm-reservation: 1) ; « /shopping/ » et « /tourisme/ » ne sont pas réservés.',
     },
   },
@@ -900,7 +903,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.bfmtv.com/rss/news-24-7/',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 30,
         covers: '~13 h',
@@ -909,7 +912,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: null,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Indéterminé : la sonde sur bfmtv.com est bloquée par un pare-feu (403).',
     },
   },
@@ -965,7 +968,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://feeds.leparisien.fr/leparisien/rss',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 100,
         covers: '',
@@ -975,7 +978,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: true,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Réservation publiée (tdm-reservation: 1) avec une politique par agent (GPTBot, ClaudeBot…).',
     },
   },
@@ -1031,7 +1034,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.rfi.fr/fr/rss',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 23,
         covers: '~14 h',
@@ -1040,7 +1043,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: true,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Réservation publiée (tdm-reservation: 1) ; une sonde de contrôle peut être filtrée par le pare-feu du site (403 observé une fois).',
     },
   },
@@ -1096,7 +1099,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.france24.com/fr/rss',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 24,
         covers: '~4 h',
@@ -1105,7 +1108,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: true,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Réservation publiée (tdm-reservation: 1) ; une sonde de contrôle peut être filtrée par le pare-feu du site (403 observé une fois).',
     },
   },
@@ -1161,7 +1164,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.courrierinternational.com/feed/all/rss.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 20,
         covers: '~6 h',
@@ -1170,7 +1173,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -1219,7 +1222,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.lexpress.fr/rss/alaune.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 100,
         covers: '~5,5 jours',
@@ -1229,7 +1232,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -1285,7 +1288,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.la-croix.com/rss',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 50,
         covers: '~25 h',
@@ -1295,7 +1298,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -1352,7 +1355,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.challenges.fr/rss.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 50,
         covers: '~3 j',
@@ -1362,7 +1365,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: true,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Réservation publiée : /.well-known/tdmrep.json redirige vers /tdmrep.json, qui publie tdm-reservation: 1 pour tout le site. Le site bloque par ailleurs GPTBot, CCBot et PerplexityBot (vérifié le 2026-10-10) : un blocage anti-IA, distinct de la réservation TDM.',
     },
   },
@@ -1412,7 +1415,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.tf1info.fr/feeds/rss-une.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 100,
         covers: '~3 jours',
@@ -1422,7 +1425,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: true,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Réservation publiée (tdm-reservation: 1, tdm-policy sur tf1info.fr).',
     },
   },
@@ -1480,7 +1483,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.lepoint.fr/arc/outboundfeeds/rss/?outputType=xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 100,
         covers: '~2 j',
@@ -1490,7 +1493,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: null,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Indéterminé : la sonde sur lepoint.fr est bloquée par un anti-bot (403), le flux de syndication seul répond.',
     },
   },
@@ -1547,7 +1550,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.lopinion.fr/index.rss',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 250,
         covers: '~9 j',
@@ -1557,7 +1560,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404). Le site bloque GPTBot, CCBot et PerplexityBot (vérifié le 2026-10-10) : un blocage anti-IA, pas une réservation TDM.',
     },
   },
@@ -1628,7 +1631,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'une',
         url: 'https://www.lefigaro.fr/rss/figaro_actualites.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 19,
         covers: '~9 h',
@@ -1637,7 +1640,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.lefigaro.fr/rss/figaro_flash-actu.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 20,
         covers: '~3 h',
@@ -1646,7 +1649,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: true,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Réservation publiée (tdm-reservation: 1).',
     },
   },
@@ -1704,7 +1707,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.cnews.fr/rss.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 100,
         covers: '~28 h',
@@ -1713,7 +1716,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -1779,7 +1782,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.europe1.fr/rss.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 50,
         covers: '~21 h',
@@ -1788,7 +1791,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -1849,7 +1852,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'une',
         url: 'https://www.lejdd.fr/rss/a-la-une.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 9,
         covers: '~11 h',
@@ -1859,7 +1862,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.lejdd.fr/rss.xml',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 50,
         covers: '~1,5 jour',
@@ -1869,7 +1872,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -1919,7 +1922,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.valeursactuelles.com/feed',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 10,
         covers: '~5 h',
@@ -1929,7 +1932,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -1987,7 +1990,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://rss.atlantico.fr',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 15,
         covers: '~1,1 j',
@@ -1997,7 +2000,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404, redirections suivies).',
     },
   },
@@ -2054,7 +2057,7 @@ export const outlets: OutletConfig[] = [
       {
         kind: 'latest',
         url: 'https://www.causeur.fr/feed',
-        checkedAt: CHECKED,
+        checkedAt: OUTLETS_CHECKED_AT,
         status: 200,
         items: 10,
         covers: '~1,7 j',
@@ -2064,7 +2067,7 @@ export const outlets: OutletConfig[] = [
     ],
     tdm: {
       reserved: false,
-      checkedAt: CHECKED,
+      checkedAt: OUTLETS_CHECKED_AT,
       note: 'Pas de tdmrep.json (404).',
     },
   },
@@ -2088,7 +2091,7 @@ export const excludedOutlets: ExcludedOutlet[] = [
       'Flux RSS bloqués : lesechos.fr/rss/* répond 403 (une, actualités, rubriques), vérifié le 2026-10-10.',
     publicReason:
       'Les Échos refuse l’accès à la liste de ses articles à nos programmes de collecte. Nous l’ajouterons dès que ce blocage sera levé.',
-    checkedAt: CHECKED,
+    checkedAt: OUTLETS_CHECKED_AT,
   },
   {
     id: 'fdesouche',
@@ -2097,7 +2100,7 @@ export const excludedOutlets: ExcludedOutlet[] = [
       "Agrégateur de liens, pas un média de source primaire : agréger ses articles compterait deux fois la couverture des médias déjà présents (examen préalable de l'issue #80, flux vérifié le 2026-10-10).",
     publicReason:
       'Fdesouche n’est pas un média : c’est un site qui renvoie vers des articles d’autres médias. Les compter reviendrait à compter deux fois les mêmes articles.',
-    checkedAt: CHECKED,
+    checkedAt: OUTLETS_CHECKED_AT,
   },
 ];
 

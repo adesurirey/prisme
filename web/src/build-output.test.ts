@@ -577,6 +577,20 @@ describe('SEO head tags (robots, sitemap, canonical, OG/Twitter, JSON-LD)', () =
     expect(html).toContain('"@type":"WebSite"');
   });
 
+  it('dates the classement page twice — visible stamp + WebPage JSON-LD', async () => {
+    // Google's snippet date annotation (“10 oct. 2026” under the result)
+    // trusts the structured date only when the page also shows one, so the
+    // page emits both from the same hand-maintained constants.
+    const classement = await readDist(
+      'classement-politique-des-medias/index.html',
+    );
+    expect(classement).toContain('"@type":"WebPage"');
+    expect(classement).toContain('"datePublished":"2026-10-07');
+    expect(classement).toContain('"dateModified":"2026-10-10');
+    expect(classement).toContain('Mis à jour le');
+    expect(classement).toContain('datetime="2026-10-10');
+  });
+
   it('ships the branded French 404 page', async () => {
     const html = await readDist('404.html');
     expect(html).toContain("Cette page n'existe pas");

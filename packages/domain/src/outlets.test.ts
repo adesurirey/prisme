@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import {
   excludedOutlets,
+  OUTLETS_CHECKED_AT,
   type OutletConfig,
   outlets,
   publicOutlets,
@@ -19,6 +20,18 @@ describe('outlet config', () => {
     for (const id of ids) expect(id).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/);
     for (const excluded of excludedOutlets)
       expect(ids).not.toContain(excluded.id);
+  });
+
+  it('dates every Outlet TDM probe from the single OUTLETS_CHECKED_AT day', () => {
+    // One fact, one home: every Outlet's TDM verification stamp is the
+    // same day, and the classement page's « Mis à jour le » reads that
+    // constant — a stray literal here would silently desynchronize the
+    // page's freshness stamp. Excluded outlets are exempt on purpose:
+    // each exclusion keeps its own per-exclusion verified date.
+    const stamped = outlets.map((outlet) => outlet.tdm.checkedAt);
+    expect(stamped.length).toBeGreaterThan(0);
+    for (const checkedAt of stamped)
+      expect(checkedAt, checkedAt).toBe(OUTLETS_CHECKED_AT);
   });
 
   it('gives every excluded Outlet a plain-French reader reason', () => {

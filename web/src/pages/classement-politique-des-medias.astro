@@ -5,6 +5,7 @@ import {
   LEANING_LABELS,
   type Leaning,
   leaningOrder,
+  OUTLETS_CHECKED_AT,
   type OutletConfig,
   outlets,
 } from '@prisme/domain';
@@ -29,17 +30,51 @@ const tdmLabel = (tdm: OutletConfig['tdm']): string =>
 
 const description =
   'Où se situe chaque média français, de gauche à droite ? Le classement politique de la presse, média par média, avec ses sources : Le Figaro, Libération, Le Monde…';
+
+// Date annotations for the search-engine snippet date (shown under the
+// result, like “10 oct. 2026”):
+// - dateModified = the config's OUTLETS_CHECKED_AT — the page renders the
+//   Outlet config, so its freshness is the config's verification day; it
+//   follows automatically whenever the config is re-verified (add-outlet
+//   flow, leaning re-checks).
+// - datePublished = first ship of the page, hand-maintained (no other
+//   home records it).
+// Emitted twice so the crawler can cross-check: the visible
+// « Mis à jour le … » line below and the WebPage JSON-LD (Google only
+// trusts the structured date when the page also shows one).
+const PAGE_PUBLISHED_AT = '2026-10-07T10:53:42+02:00';
+const pageUpdatedAt = formatParisDate(new Date(OUTLETS_CHECKED_AT), {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Classement politique des médias français : de gauche à droite',
+  description,
+  inLanguage: 'fr',
+  datePublished: PAGE_PUBLISHED_AT,
+  dateModified: OUTLETS_CHECKED_AT,
+  mainEntityOfPage: Astro.url,
+};
 ---
 
 <Base
   title="Classement politique des médias français : de gauche à droite"
   description={description}
+  jsonLd={jsonLd}
 >
   <article class="pt-10">
     <BackToIndex />
     <h1 class="text-[26px] font-semibold leading-snug tracking-[-0.02em]">
       Classement politique des médias
     </h1>
+    <p class="mt-2 text-[13px] text-muted">
+      Mis à jour le
+      <time datetime={OUTLETS_CHECKED_AT}>{pageUpdatedAt}</time>
+    </p>
     <p class="mt-4 text-[16px] leading-relaxed text-muted">
       Prisme regroupe les articles de {outlets.length} médias français. Chaque média est
       classé à la main sur cinq tendances — {LEANING_LABELS.gauche.toLowerCase()},
