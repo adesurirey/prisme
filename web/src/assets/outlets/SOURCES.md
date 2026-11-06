@@ -28,6 +28,7 @@ only (nominative use), like the page's disclaimer says.
 | Le Figaro | `le-figaro.svg` | [Wikipédia — Fichier:Le Figaro logo.svg](https://fr.wikipedia.org/wiki/Fichier:Le_Figaro_logo.svg) | |
 | Le Huffington Post | `huffpost.svg` | [Wikimedia Commons — File:HuffPost.svg](https://commons.wikimedia.org/wiki/File:HuffPost.svg) | |
 | Le JDD | `le-jdd.svg` | [Wikimedia Commons — File:Le Journal du dimanche logo.svg](https://commons.wikimedia.org/wiki/File:Le_Journal_du_dimanche_logo.svg) | |
+| Le Monde diplomatique | `monde-diplomatique.svg` | [Wikipédia — Fichier:Le monde diplomatique logo.svg](https://fr.wikipedia.org/wiki/Fichier:Le_monde_diplomatique_logo.svg) | |
 | Le Monde | `le-monde.svg` | [Wikimedia Commons — File:Le Monde.svg](https://commons.wikimedia.org/wiki/File:Le_Monde.svg) | |
 | L'Obs | `lobs.svg` | [Wikimedia Commons — File:Obs 2014 logo.svg](https://commons.wikimedia.org/wiki/File:Obs_2014_logo.svg) | |
 | L'Opinion | `lopinion.svg` | [Wikimedia Commons — File:L-opinion.svg](https://commons.wikimedia.org/wiki/File:L-opinion.svg) | |

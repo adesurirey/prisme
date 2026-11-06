@@ -189,7 +189,9 @@ function parseRssItem(item: any, now: Date): ParsedItem | undefined {
     {
       headline: bareHeadline,
       url: decodeEntities(text(item.link)),
-      publishedAt: isoDate(item.pubDate),
+      // SPIP feeds (Le Monde diplomatique) carry dc:date only; RFC 822
+      // pubDate wins when both exist.
+      publishedAt: isoDate(item.pubDate ?? item['dc:date']),
       teaser: teaserFrom(item.description, bareHeadline, source),
       imageUrl: rssImageUrl(item),
     },
