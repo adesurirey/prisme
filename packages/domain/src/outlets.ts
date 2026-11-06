@@ -1766,7 +1766,7 @@ export const outlets: OutletConfig[] = [
       },
     ],
     leaningNote:
-      "Placé à Droite pour la station actuelle (post-2021), avec désaccord documenté : Arnaud Lagardère dément toute « volonté idéologique » et la station défend son virage par ses audiences (Puremédias, 2025) ; la presse spécialisée et Wikipédia documentent ce virage. Europe 1 n'est pas couvert par FrIdéo. Avant 2021, la station était classée au centre : le classement vaut pour la ligne actuelle.",
+      "Placé à Droite pour la station actuelle (post-2021), avec désaccord documenté : Arnaud Lagardère dément toute « volonté idéologique » et la station défend son virage par ses audiences (Puremédias, 2025) ; la presse spécialisée et Wikipédia documentent ce virage. Europe 1 n'est pas couvert par FrIdéo. Avant 2021, la station était classée au centre : le classement vaut pour la ligne actuelle.",
     readership: {
       evidence:
         "75e rang des sites web ACPM, 4,7 M de visites en août 2026 (Europe1.fr) ; radio généraliste écoutée par 2,65 millions d'auditeurs par jour (vague Médiamétrie citée par Puremédias).",
