@@ -75,7 +75,7 @@ const jsonLd = {
       Mis à jour le
       <time datetime={OUTLETS_CHECKED_AT}>{pageUpdatedAt}</time>
     </p>
-    <p class="mt-4 text-[16px] leading-relaxed text-muted">
+    <p class="mt-4 text-[16px] leading-relaxed">
       Prisme regroupe les articles de {outlets.length} médias français. Chaque média est
       classé à la main sur cinq tendances — {LEANING_LABELS.gauche.toLowerCase()},
       {LEANING_LABELS['centre-gauche'].toLowerCase()}, {LEANING_LABELS.centre.toLowerCase()},
@@ -84,7 +84,7 @@ const jsonLd = {
       gauche compte avec la gauche, le centre droit avec la droite ; c’est la langue des
       légendes, des barres de couverture et des synthèses.
     </p>
-    <p class="mt-4 text-[16px] leading-relaxed text-muted">
+    <p class="mt-4 text-[16px] leading-relaxed">
       Cette page dit d’où vient chaque classement, média par média, avec ses sources et
       ses désaccords. Pour le reste — la collecte des articles, la formation des sujets,
       l’écriture des synthèses — voir la page
@@ -118,7 +118,7 @@ const jsonLd = {
 
     <section
       id="le-bord-appartient-au-media"
-      class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted"
+      class="mt-10 space-y-4 text-[16px] leading-relaxed"
     >
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">
         Le bord appartient au média, pas à l’article
@@ -141,7 +141,7 @@ const jsonLd = {
 
     <section
       id="selection-non-equilibree"
-      class="mt-10 space-y-4 text-[16px] leading-relaxed text-muted"
+      class="mt-10 space-y-4 text-[16px] leading-relaxed"
     >
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">
         La sélection n’est pas équilibrée — et c’est voulu
@@ -163,7 +163,7 @@ const jsonLd = {
 
     <section id="les-medias-exclus" class="mt-10">
       <h2 class="text-[16px] font-semibold text-ink sm:text-[18px]">Les médias exclus</h2>
-      <p class="mt-2 text-[16px] leading-relaxed text-muted">
+      <p class="mt-2 text-[16px] leading-relaxed">
         Certains médias manquent à l’appel. Pour chacun, la raison de l’exclusion,
         vérifiée à la date indiquée.
       </p>
@@ -172,7 +172,7 @@ const jsonLd = {
           excludedOutlets.map((excluded) => (
             <li class="py-4">
               <p class="text-[16px] font-medium text-ink">{excluded.name}</p>
-              <p class="mt-1 text-[16px] leading-relaxed text-muted">{excluded.publicReason}</p>
+              <p class="mt-1 text-[16px] leading-relaxed">{excluded.publicReason}</p>
               <p class="mt-1 text-[16px] text-muted">
                 Vérifié le {formatParisDate(new Date(excluded.checkedAt), {
                   day: 'numeric',
@@ -216,7 +216,7 @@ const jsonLd = {
                     <SiteBadge href={outlet.site} />
                     <PaywallBadge paywall={outlet.paywall} />
                   </h4>
-                  <p class="mt-1 text-[16px] leading-relaxed text-muted">
+                  <p class="mt-1 text-[16px] leading-relaxed">
                     {outlet.leaningNote}
                   </p>
                   <details class="group mt-1.5">
@@ -234,7 +234,7 @@ const jsonLd = {
                       <ul class="flex flex-col gap-3">
                         {outlet.leaningSources.map((source) => (
                           <li>
-                            <p class="text-[16px] leading-relaxed text-muted">
+                            <p class="text-[16px] leading-relaxed">
                               <InlineLink href={source.url}>
                                 {source.title}
                               </InlineLink>
@@ -243,13 +243,13 @@ const jsonLd = {
                                 {source.date ? `, ${source.date}` : ''}
                               </span>
                             </p>
-                            <p class="mt-0.5 text-[16px] leading-relaxed text-muted">
+                            <p class="mt-0.5 text-[16px] leading-relaxed">
                               {source.takeaway}
                             </p>
                           </li>
                         ))}
                       </ul>
-                      <p class="text-[16px] leading-relaxed text-muted">
+                      <p class="text-[16px] leading-relaxed">
                         Audience :{' '}
                         {outlet.readership.url ? (
                           <InlineLink href={outlet.readership.url}>
@@ -259,7 +259,7 @@ const jsonLd = {
                           outlet.readership.evidence
                         )}
                       </p>
-                      <p class="text-[16px] leading-relaxed text-muted">
+                      <p class="text-[16px] leading-relaxed">
                         Texte et données (TDM) : {tdmLabel(outlet.tdm)} — vérifié le
                         {formatParisDate(new Date(outlet.tdm.checkedAt), {
                           day: 'numeric',
