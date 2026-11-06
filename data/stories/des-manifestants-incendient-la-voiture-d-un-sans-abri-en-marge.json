@@ -6,6 +6,17 @@
   "storyDay": "2026-11-05",
   "articles": [
     {
+      "id": "b6e22397a87f",
+      "outletId": "bfmtv",
+      "headline": "\"La seule chose qui me restait\": à Lyon, une voiture brûlée lors de la manifestation appartenait à un sans-abri",
+      "url": "https://www.bfmtv.com/societe/manifestations/la-seule-chose-qui-me-restait-a-lyon-une-voiture-brulee-lors-de-la-manifestation-appartenait-a-un-sans-abri_AD-202611060120.html",
+      "publishedAt": "2026-11-06T05:20:23.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/d_GeGXwza94D2tyKBAbl4FHX8ME=/0x0:1920x1080/800x0/images/Manifestation-Lyon-2378911.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "3f458cb60b25",
       "outletId": "tf1-info",
       "headline": "\"J'ai tout perdu\" : à Lyon, la seule voiture brûlée dans la manifestation appartenait... à un SDF",
@@ -23,31 +34,37 @@
       "url": "https://www.20minutes.fr/societe/4260740-20261105-manifestation-5-novembre-lyon-tout-perdu-manifestants-incendient-voiture-sdf?at_medium=display&at_campaign=149",
       "publishedAt": "2026-11-05T16:54:04.000Z",
       "imageUrl": "https://img.20mn.fr/JQMa44VtRMienvSXMMjoyyk/1200x768_une-voiture-brule-lors-d-une-manifestation-pour-des-salaires-plus-eleves-et-en-soutien-au-mouvement-de-protestation-des-lyceens-a-lyon-en-france-le-jeudi-5-novembre-2026-ap-photo-laurent-cipriani-ena125-26309484540607-2611051432",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
     }
   ],
   "topicId": "b633c9274f2a",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "society",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Une voiture BMW appartenant à un sans-abri a été incendiée sur l'avenue Berthelot lors de la manifestation du 5 novembre à Lyon.",
-      "La victime, une personne en situation de précarité, a déclaré avoir tout perdu dans cet incendie de véhicule."
+      "Une voiture de marque BMW, appartenant à Fateh, une personne en situation de précarité, a été incendiée sur l'avenue Berthelot lors de la manifestation du 5 novembre à Lyon.",
+      "Le propriétaire déplore avoir \"tout perdu\" à la suite de cet acte commis en marge du cortège."
+    ],
+    "centre": [
+      "Une voiture a brûlé lors de la manifestation du 5 novembre à Lyon, sur l'avenue Berthelot.",
+      "Le véhicule appartenait à Fateh, un sans-abri de 50 ans qui déclare avoir \"tout perdu\".",
+      "Il a pu récupérer ses papiers dans le coffre avec l'aide d'étudiants et de jeunes présents dans le cortège."
     ],
     "droite": [
-      "La seule voiture brûlée lors de la manifestation de jeudi à Lyon appartenait à Fateh, un sans-abri de 50 ans.",
-      "L'homme a indiqué avoir tout perdu, à l'exception de ses papiers sauvés du coffre grâce au soutien d'une dizaine de jeunes manifestants."
+      "La seule voiture incendiée lors de la manifestation du jeudi 5 novembre à Lyon appartenait à Fateh, un sans-abri âgé de 50 ans.",
+      "L'homme affirme avoir \"tout perdu\", à l'exception de ses papiers d'identité sauvés du coffre grâce au soutien d'une dizaine de jeunes manifestants."
     ]
   },
   "differences": [
-    "Le centre gauche insiste sur le profil précaire de la victime et la perte totale du véhicule sur l'avenue Berthelot.",
-    "Le centre droit humanise le drame en nommant la victime et en soulignant l'intervention de manifestants pour sauver ses papiers."
+    "Les médias de gauche mettent en avant la situation de précarité de la victime et la destruction de son véhicule de marque BMW sur l'avenue Berthelot.",
+    "Les médias du centre adoptent un ton factuel et soulignent l'intervention solidaire des étudiants du cortège pour sauver les papiers du sans-abri.",
+    "Les médias de droite insistent sur le caractère unique du véhicule brûlé lors de la manifestation et mettent en avant l'aide apportée par les jeunes manifestants."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-11-06T01:01:16.295Z"
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-11-06T06:01:17.877Z"
 }

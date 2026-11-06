@@ -1,10 +1,21 @@
 {
   "id": "ff34c7aea375",
   "slug": "une-commission-publique-valide-le-projet-d-arc-de-triomphe-de",
-  "title": "Une commission publique valide le projet d'arc de triomphe de Donald Trump à Washington",
+  "title": "Une commission publique valide le projet d'arc de triomphe de Donald Trump à Washington malgré une décision de justice",
   "createdAt": "2026-11-06T05:01:16.162Z",
   "storyDay": "2026-11-06",
   "articles": [
+    {
+      "id": "91f9892ab125",
+      "outletId": "bfmtv",
+      "headline": "États-Unis: le projet d'arc de triomphe de Donald Trump bloqué par un juge fédéral",
+      "url": "https://www.bfmtv.com/international/amerique-nord/etats-unis/video-etats-unis-le-projet-d-arc-de-triomphe-de-donald-trump-bloque-par-un-juge-federal_VN-202611060155.html",
+      "publishedAt": "2026-11-06T05:50:50.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/QKe1wZ6CaqZOx4LrEjUwyIypi9g=/0x0:1280x720/800x0/images/Etats-Unis-le-projet-d-arc-de-triomphe-de-Donald-Trump-bloque-par-un-juge-federal-2378936.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "aa61d74dd190",
       "outletId": "le-parisien",
@@ -23,9 +34,10 @@
       "url": "https://www.lemonde.fr/international/article/2026/11/06/l-immense-arc-de-triomphe-souhaite-par-donald-trump-a-washington-valide-par-une-commission-publique_6807717_3210.html",
       "publishedAt": "2026-11-06T04:57:10.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/18/332/0/3979/1989/644/322/60/0/c7486ac_ftp-1-jcmzkqrlmo77-dc2ab24e296e423faa7982a0155510c1-0-412adb2f4f394101a6184efe1a3c9085.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "world"
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "6068558aab49",
@@ -34,37 +46,36 @@
       "url": "https://www.lefigaro.fr/international/a-washington-un-premier-feu-vert-pour-le-gigantesque-arc-de-triomphe-voulu-par-trump-20261106",
       "publishedAt": "2026-11-06T04:35:43.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/06/4c22db883273c74d38f97958a1934841fecb1000330d26e7dfec71a2179926a7.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
     }
   ],
   "topicId": "ff34c7aea375",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "La Commission nationale de planification de la capitale a donné son feu vert au projet d'arc de triomphe de Donald Trump à Washington.",
-      "Le monument prévu doit s'élever à 76 mètres de hauteur.",
-      "Cette validation intervient malgré les procédures judiciaires actuellement en cours contre le projet."
+      "Le Monde rapporte que la Commission nationale de planification de a capitale a validé l'arche monumentale de 76 mètres de haut voulue par Donald Trump à Washington.",
+      "Le projet a franchi une étape décisive malgré des recours en justice en cours."
     ],
     "centre": [
-      "Une commission publique américaine a validé la construction de l'arc de triomphe voulu par Donald Trump à Washington.",
-      "Le projet architectural prévoit une structure monumentale haute de plus de 76 mètres, inspirée du modèle parisien."
+      "BFMTV indique qu'un juge fédéral américain a bloqué dans la nuit le projet de construction d'un gigantesque arc de triomphe à Washington voulu par Donald Trump.",
+      "Le Parisien et Le Monde annoncent que la commission publique a validé le projet malgré cette décision de justice et les contestations."
     ],
     "droite": [
-      "Le projet d'immense arc de triomphe porté par Donald Trump à Washington a reçu un premier feu vert officiel.",
-      "L'arche monumentale projetée par le président américain doit dépasser les 76 mètres de haut, surpassant ainsi l'Arc de triomphe de Paris."
+      "Le Figaro annonce que le projet d'arc de triomphe de Donald Trump a obtenu un premier feu vert à Washington.",
+      "L'arche doit dépasser 76 mètres de haut, ce qui est nettement plus que l'Arc de triomphe à Paris dont elle est inspirée."
     ]
   },
   "differences": [
-    "Le camp gauche insiste sur le franchissement d'une étape malgré les contestations judiciaires en cours.",
-    "Le camp centre se focalise sur la décision administrative de la commission publique sans mentionner les recours.",
-    "Le camp droite souligne l'ampleur du projet présidentiel en le comparant directement à la structure parisienne."
+    "Le camp gauche met l'accent sur la confrontation entre la validation de la commission publique et les recours en justice en cours.",
+    "Le camp centre met en avant la contradiction immédiate entre le feu vert d'une commission d'urbanisme et la décision de blocage d'un juge fédéral.",
+    "Le camp droite se concentre sur les aspects architecturaux et la dimension monumentale du projet en le comparant directement à son modèle parisien."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-06T05:01:16.162Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-06T06:01:17.877Z"
 }
