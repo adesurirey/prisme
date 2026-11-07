@@ -6,6 +6,28 @@
   "storyDay": "2026-11-07",
   "articles": [
     {
+      "id": "f03aba22b4bd",
+      "outletId": "europe-1",
+      "headline": "Vortex polaire : tout ce qu'il faut savoir sur ce phénomène qui pourrait favoriser le froid en France",
+      "url": "https://www.europe1.fr/societe/vortex-polaire-tout-ce-quil-faut-savoir-sur-ce-phenomene-qui-pourrait-favoriser-le-froid-en-france-1215140?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-07T13:12:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/07/10/pexels-noe-garde-2150865147-35649472_1_6aeef0b93ca7d.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "19f32fa28984",
+      "outletId": "rfi",
+      "headline": "Climat: le vortex polaire précocement perturbé, la faute à El Niño?",
+      "url": "https://www.rfi.fr/fr/environnement/20261107-climat-le-vortex-polaire-pr%C3%A9cocement-perturb%C3%A9-la-faute-%C3%A0-el-ni%C3%B1o",
+      "publishedAt": "2026-11-07T12:54:25.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/42b8dc00-1176-11ea-853b-005056bf7c53/w:1024/p:16x9/sb10067261c-001_0.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "bea28dbbf69f",
       "outletId": "cnews",
       "headline": "Météo : d'importantes vagues de froid attendues en Europe dans les prochaines semaines",
@@ -39,7 +61,29 @@
     }
   ],
   "topicId": "1ee421d51210",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "science",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Libération signale un dérèglement du phénomène polaire dans l'hémisphère nord analysé vendredi 6 novembre.",
+      "Le quotidien mentionne une hausse des vents puissants situés au-dessus de l'Arctique."
+    ],
+    "centre": [
+      "RFI indique que des météorologues ont constaté une perturbation exceptionnellement précoce du vortex polaire.",
+      "BFMTV précise qu'il s'agit d'un vaste phénomène de vents très puissants circulant entre 10 et 50 kilomètres d'altitude au-dessus de l'Arctique durant l'hiver."
+    ],
+    "droite": [
+      "Europe 1 rapporte une perturbation particulièrement précoce observée en ce début novembre 2026 au-dessus de l'Arctique, tout en soulignant qu'aucun impact direct ne peut encore être certifié pour la France.",
+      "CNews évoque de potentielles vagues de froid en Europe et dans l'hémisphère nord en raison d'une précocité inédite du phénomène stratosphérique."
+    ]
+  },
+  "differences": [
+    "La gauche se focalise sur l'analyse technique du dérèglement atmosphérique et la hausse des vents arctiques.",
+    "Le centre met l'accent sur le caractère exceptionnellement précoce de la perturbation et l'incertitude quant à ses répercussions climatiques.",
+    "La droite insiste de manière plus alarmiste sur le risque direct de vagues de froid en Europe et en France."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-07T14:01:20.562Z"
 }

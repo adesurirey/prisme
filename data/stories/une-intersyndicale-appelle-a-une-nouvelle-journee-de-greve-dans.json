@@ -6,6 +6,29 @@
   "storyDay": "2026-11-07",
   "articles": [
     {
+      "id": "0fde4ef7b502",
+      "outletId": "le-figaro",
+      "headline": "« Le gouvernement commence à reculer » : nouvel appel à la grève dans l'éducation et l'enseignement supérieur le 10 novembre",
+      "url": "https://www.lefigaro.fr/actualite-france/le-gouvernement-commence-a-reculer-nouvel-appel-a-la-greve-dans-l-education-et-l-enseignement-superieur-le-10-novembre-20261107",
+      "publishedAt": "2026-11-07T13:50:28.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/07/b5d8264e22757c86f63dafc5d70813009b37b12ec804b7d0e57315d5a5011b13.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
+      "id": "b48b100625f7",
+      "outletId": "huffpost",
+      "headline": "Sans attendre l’issue de la conférence sociale, les syndicats de l’enseignement appellent à une nouvelle journée de grève",
+      "url": "https://www.huffingtonpost.fr/france/article/sans-attendre-l-issue-de-la-conference-sociale-les-syndicats-de-l-enseignement-appellent-a-une-nouvelle-journee-de-greve_353168.html",
+      "publishedAt": "2026-11-07T13:33:25.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2025/11/23/167/0/6048/3402/0/0/60/0/62f9d62_upload-1-iu5v00bpyove-afp-20251106-hl-mcohen-2946336-v1-highres-francesenategovernment.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "00dadf78525b",
       "outletId": "le-parisien",
       "headline": "Une intersyndicale de lycéens, étudiants et enseignants appelle à la grève dans l’éducation mardi 10 novembre",
@@ -40,7 +63,31 @@
     }
   ],
   "topicId": "1e52bac1f877",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "society",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "L'intersyndicale de l'enseignement et de la jeunesse appelle à une nouvelle journée de grève le 10 novembre.",
+      "Le Huffpoint note que cette action intervient avant l'issue de la conférence sociale et lors de manifestations massives.",
+      "L'Humanité salue la réussite de la mobilisation du 5 novembre et estime que le mouvement prend l'avantage sur le gouvernement.",
+      "Franceinfo précise que les personnels et la jeunesse appellent à amplifier la mobilisation dans l'Éducation nationale."
+    ],
+    "centre": [
+      "Une intersyndicale regroupant lycéens, étudiants et enseignants appelle à la grève pour le mardi 10 novembre dans l'éducation."
+    ],
+    "droite": [
+      "Le Figaro rapporte que l'intersyndicale appelle à la grève le 10 novembre dans l'éducation et l'enseignement supérieur.",
+      "Le communiqué des organisations lycéennes, étudiantes et d'enseignants estime que c'est le moment d'amplifier la mobilisation.",
+      "Le journal indique que le gouvernement commence à reculer face à la contestation."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la dynamique victorieuse des mobilisations précédentes et sur la pression exercée sur le gouvernement.",
+    "Le centre adopte un ton strictement informatif en relayant sobrement l'appel intersyndical sans commentaire particulier.",
+    "La droite souligne la volonté des syndicats d'amplifier le mouvement tout en concédant que l'exécutif montre des signes de recul."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-07T14:01:20.562Z"
 }
