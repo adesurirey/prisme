@@ -1,10 +1,21 @@
 {
   "id": "dfbc5e46559b",
   "slug": "le-psg-mene-face-a-troyes-grace-a-un-but-d-illia-zabarnyi",
-  "title": "Le PSG mène face à Troyes grâce à un but d'Illia Zabarnyi",
+  "title": "Le PSG s'impose face à Troyes grâce à un but d'Illia Zabarnyi",
   "createdAt": "2026-11-07T21:01:15.369Z",
   "storyDay": "2026-11-07",
   "articles": [
+    {
+      "id": "f5c0c205ab87",
+      "outletId": "le-figaro",
+      "headline": "PSG-Troyes : Mayulu joker de luxe, le Parc célèbre son Virage Auteuil, Torres en berne… Les tops et flops",
+      "url": "https://www.lefigaro.fr/sports/football/ligue-1/psg-troyes-mayulu-joker-de-luxe-le-virage-auteuil-celebre-par-le-parc-torres-en-berne-les-tops-et-flops-20261107",
+      "publishedAt": "2026-11-07T22:38:17.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/11/07/309e50b45fb123eac8fdf0c33f351cf3efcdf8ae3a0b4260d47af1ab62ac4252.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
     {
       "id": "3f3a20db9db1",
       "outletId": "ouest-france",
@@ -24,10 +35,21 @@
       "url": "https://www.lefigaro.fr/sports/football/ligue-1/ligue-1-11e-succes-de-rang-pour-le-psg-tranquille-face-a-troyes-20261107",
       "publishedAt": "2026-11-07T21:56:49.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2146_crop/2026/11/07/e07d8127201cf7a60a83ab3b67ebd8fd748d6ef6bf4ce40c97a2541aa7909def.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
+    },
+    {
+      "id": "7915fffee3c8",
+      "outletId": "franceinfo",
+      "headline": "Le PSG assure le service minimum contre Troyes et signe un septième succès d'affilée en Ligue 1",
+      "url": "https://www.franceinfo.fr/sports/foot/psg/le-psg-assure-le-service-minimum-contre-troyes-et-signe-un-septieme-succes-d-affilee-en-ligue-1_8272742.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-07T21:56:29.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/cWbQ5xlxlet4EcVX_b__ibXIu0w/0x128:2458x1510/432x243/filters:format(jpg)/2026/11/07/6aef98b5559f2928373786.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
     },
     {
       "id": "e0875d8f8d2d",
@@ -88,7 +110,30 @@
     }
   ],
   "topicId": "dfbc5e46559b",
-  "titledArticleCount": 7,
+  "titledArticleCount": 9,
   "section": "sport",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le Paris Saint-Germain remporte une courte victoire face à l'Estac Troyes grâce à un but inscrit de la tête par Illia Zabarnyi.",
+      "Le club parisien assure l'essentiel et valide un septième succès consécutif en Ligue 1, lui garantissant de conserver la tête du classement."
+    ],
+    "centre": [
+      "Le Paris Saint-Germain s'impose sur le score d'un but à zéro contre l'Estac Troyes lors de la dixième journée de Ligue 1.",
+      "La formation parisienne consolide sa première place au classement général et enchaîne une onzième victoire d'affilée toutes compétitions confondues malgré une prestation jugée peu inspirée offensivement.",
+      "Illia Zabarnyi débloque la situation pour son équipe en marquant de la tête face à un adversaire accrocheur."
+    ],
+    "droite": [
+      "Le Paris Saint-Germain s'impose au Parc des Princes face à l'Estac Troyes lors de la dixième journée de Ligue 1 et signe son onzième succès consécutif.",
+      "La rédaction du Figaro souligne le rôle de Mayulu comme joker de luxe, le manque de réussite de Torres ainsi que la célébration des trente-cinq ans du Virage Auteuil par les supporters."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur le service minimum réalisé par le club parisien pour conserver sa première place au classement général à l'issue de la dixième journée.",
+    "Le centre insiste sur la domination globale des Parisiens et sur la difficulté à s'imposer face à un adversaire particulièrement accrocheur malgré l'enchaînement des victoires.",
+    "La droite privilégie un traitement détaillé des temps forts du match, de la composition d'équipe alignée par Luis Enrique et des animations festives en tribunes pour l'anniversaire du Virage Auteuil."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 9,
+  "summarizedAt": "2026-11-07T23:01:23.466Z"
 }
