@@ -1,10 +1,21 @@
 {
   "id": "31dbf62d9df5",
   "slug": "un-suspect-est-presente-a-un-juge-apres-l-agression-au-couteau",
-  "title": "Un suspect est présenté à un juge après l'agression au couteau d'un lycéen à La Courneuve",
+  "title": "Le suspect de l'agression au couteau d'un lycéen à La Courneuve est présenté à un juge d'instruction pour tentative d'homicide volontaire",
   "createdAt": "2026-11-07T15:01:17.942Z",
   "storyDay": "2026-11-07",
   "articles": [
+    {
+      "id": "6e3bf2efe160",
+      "outletId": "franceinfo",
+      "headline": "Le lycéen de La Courneuve soupçonné d'avoir poignardé l'un de ses camarades va être présenté à un juge pour \"tentative d'homicide volontaire\"",
+      "url": "https://www.franceinfo.fr/france/ile-de-france/seine-saint-denis/le-lyceen-de-la-courneuve-soupconne-d-avoir-poignarde-l-un-de-ses-camarades-va-etre-presente-a-un-juge-pour-tentative-d-homicide-volontaire_8272439.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-07T15:16:55.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/UY2zi_WVSxjW6VxNcszAzqPtnXU/0x0:1024x576/432x243/filters:format(jpg)/2026/11/07/6aef3d2ee1501432567327.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "658554fd5f3f",
       "outletId": "le-parisien",
@@ -40,7 +51,31 @@
     }
   ],
   "topicId": "31dbf62d9df5",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "misc",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le suspect de l'agression au couteau d'un lycéen à La Courneuve a été déféré au parquet de Bobigny.",
+      "Le jeune homme a passé 48 heures en garde à vue avant d'être présenté à un juge d'instruction."
+    ],
+    "centre": [
+      "Le suspect âgé de 20 ans a été déféré ce samedi matin au terme de sa garde à vue.",
+      "Il est présenté à un juge d'instruction pour tentative d'homicide volontaire et le parquet requiert son placement en détention provisoire.",
+      "Le mis en cause conteste toute intention homicide selon les informations de BFMTV."
+    ],
+    "droite": [
+      "Le jeune homme de 20 ans soupçonné d'avoir poignardé un élève de 16 ans du lycée professionnel Denis Papin a été déféré au parquet de Bobigny.",
+      "La victime, blessée de plusieurs coups de couteau dont un au thorax, a pu quitter les urgences le jour même.",
+      "Le suspect avait reconnu les faits lors de sa garde à vue."
+    ]
+  },
+  "differences": [
+    "Le camp gauche livre un compte-rendu strictement factuel et minimaliste centré sur la procédure judiciaire sans s'attarder sur le profil des impliqués.",
+    "Le camp centre détaille les aspects juridiques de la procédure et précise la position du suspect qui conteste l'intention homicide.",
+    "Le camp droite adopte un angle factuel plus détaillé en fournissant des précisions sur l'établissement scolaire, les blessures de la victime et les aveux initiaux du suspect."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-07T16:01:14.670Z"
 }

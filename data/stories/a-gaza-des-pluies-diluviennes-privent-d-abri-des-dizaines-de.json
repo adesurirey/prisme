@@ -6,6 +6,28 @@
   "storyDay": "2026-11-07",
   "articles": [
     {
+      "id": "01c2dc5ee380",
+      "outletId": "france-24",
+      "headline": "Gaza : des pluies diluviennes privent d'abri des milliers de déplacés",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261107-gaza-des-pluies-diluviennes-privent-d-abri-des-dizaines-de-milliers-de-d%C3%A9plac%C3%A9s",
+      "publishedAt": "2026-11-07T15:19:02.000Z",
+      "imageUrl": "https://s.france24.com/media/display/67e76000-dabe-11f1-ad3f-a575454bc579/w:1024/p:16x9/2026-11-07T073723Z-649989226-RC2VIOADFLCC-RTRMADP-3-ISRAEL-PALESTINIANS-GAZA.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "ef1d0e4bb911",
+      "outletId": "bfmtv",
+      "headline": "Des pluies diluviennes s'abattent sur la bande de Gaza, des milliers de déplacés privés d'abri et plusieurs blessés",
+      "url": "https://www.bfmtv.com/international/moyen-orient/palestine/des-pluies-diluviennes-s-abattent-sur-la-bande-de-gaza-des-milliers-de-deplaces-prives-d-abri-et-plusieurs-blesses_AN-202611070368.html",
+      "publishedAt": "2026-11-07T15:03:01.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/1GAhLgaSl0cTBT0MoyplcX8UgZY=/0x106:2048x1258/800x0/images/Des-pluies-diluviennes-s-abattent-sur-la-bande-de-Gaza-des-milliers-de-deplacees-privees-d-abri-et-plusieurs-blesses-2379877.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "898db750d3e8",
       "outletId": "liberation",
       "headline": "A Gaza, des pluies diluviennes privent d’abri des dizaines de milliers de déplacés",
@@ -33,14 +55,37 @@
       "url": "https://www.lefigaro.fr/international/a-gaza-des-dizaines-de-milliers-de-refugies-prives-d-abris-apres-des-pluies-diluviennes-20261107",
       "publishedAt": "2026-11-07T14:44:06.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/07/366cc1e27822d1f776a3feb69077651405c095df65a16d26223f46195a029db6.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
     }
   ],
   "topicId": "bc25affe16a9",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "De fortes intempéries dans l'enclave palestinienne ont submergé un grand nombre d'abris de fortune pour les personnes déplacées.",
+      "La société civile locale alerte sur la menace de crises sanitaires et qualifie la situation de catastrophe humanitaire."
+    ],
+    "centre": [
+      "Des dizaines de milliers de tentes ont été inondées dans la bande de Gaza en raison de précipitations massives.",
+      "La Défense civile fait état d'un volume considérable d'appels d'urgence reçus au cours de la nuit.",
+      "Les autorités locales signalent plusieurs blessés parmi les populations touchées par ces intempéries."
+    ],
+    "droite": [
+      "Une vague de pluies diluviennes a ravagé les campements de réfugiés dans le territoire palestinien.",
+      "Environ 70 000 tentes de déplacés ont subi des inondations d'après les services civils."
+    ]
+  },
+  "differences": [
+    "La gauche insiste en premier lieu sur la gravité de la crise humanitaire et les risques sanitaires imminents soulignés par les associations.",
+    "Le centre livre un compte rendu factuel axé sur l'ampleur immédiate des dégâts matériels et le volume des interventions d'urgence.",
+    "La droite met en avant le bilan chiffré des abris détruits en reprenant les données communiquées par les autorités locales."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-07T16:01:14.670Z"
 }
