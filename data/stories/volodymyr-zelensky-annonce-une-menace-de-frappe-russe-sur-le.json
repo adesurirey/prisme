@@ -6,6 +6,17 @@
   "storyDay": "2026-11-06",
   "articles": [
     {
+      "id": "1c4449a25694",
+      "outletId": "le-parisien",
+      "headline": "Guerre en Ukraine : la Russie frappe à nouveau un pont et des infrastructures énergétiques à Kiev et dans sa région",
+      "url": "https://www.leparisien.fr/international/ukraine/guerre-en-ukraine-la-russie-frappe-a-nouveau-un-pont-et-des-infrastructures-energetiques-a-kiev-et-dans-sa-region-07-11-2026-3OQI4LGT4JBLFE4M7XIBZ4BIBU.php",
+      "publishedAt": "2026-11-07T08:01:20.375Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "2e5e1e72d31b",
       "outletId": "tf1-info",
       "headline": "Guerre en Ukraine : des frappes russes endommagent un pont routier et des infrastructures énergétiques à Kiev",
@@ -52,7 +63,26 @@
     }
   ],
   "topicId": "5ad9726a87f5",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "Le président ukrainien Volodymyr Zelensky a annoncé disposer de renseignements concernant une frappe russe imminente visant le secteur énergétique et les ponts traversant le Dniepr.",
+      "De récentes attaques russes ont endommagé des infrastructures énergétiques et un pont routier à Kiev et dans sa région, faisant au moins cinq blessés selon les autorités.",
+      "Une rencontre trilatérale est programmée les 10 et 11 novembre à Abou Dhabi entre des représentants de Kiev, de Washington et de Moscou."
+    ],
+    "droite": [
+      "Volodymyr Zelensky a mis en garde contre de nouvelles attaques russes planifiées contre les infrastructures vitales et les ponts du pays.",
+      "Les bombardements récents de Moscou ont provoqué de graves dommages sur le réseau électrique et les installations ukrainiennes, accentuant les craintes d'un hiver difficile à Kiev.",
+      "Le journal Le Figaro souligne la vulnérabilité accrue de la capitale face à l'intensité des frappes aériennes russes."
+    ]
+  },
+  "differences": [
+    "Les médias du centre privilégient un traitement factuel en combinant les déclarations sécuritaires de Volodymyr Zelensky avec l'annonce d'une prochaine réunion trilatérale à Abou Dhabi.",
+    "Les médias de droite axent leur couverture sur les conséquences concrètes des bombardements et sur la menace persistante pesant sur l'approvisionnement énergétique ukrainien à l'approche de l'hiver."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-07T08:01:20.375Z"
 }

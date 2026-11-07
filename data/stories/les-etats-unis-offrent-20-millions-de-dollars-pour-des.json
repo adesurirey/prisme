@@ -6,6 +6,28 @@
   "storyDay": "2026-11-07",
   "articles": [
     {
+      "id": "bc249a452762",
+      "outletId": "le-figaro",
+      "headline": "Les États-Unis offrent 20 millions de dollars et «un possible déménagement» contre des informations sur le programme nucléaire iranien",
+      "url": "https://www.lefigaro.fr/international/les-etats-unis-offrent-20-millions-de-dollars-et-un-possible-demenagement-contre-des-informations-sur-le-programme-nucleaire-iranien-20261107",
+      "publishedAt": "2026-11-07T07:42:51.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2131_crop/2026/11/07/b146489788b4b6f151c216b44d941385b5734a7ffd81212cdc46a6fbfb90929f.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "0cecc2b40db2",
+      "outletId": "cnews",
+      "headline": "Guerre au Moyen-Orient : installations, équipements... Les États-Unis offrent 20 millions de dollars pour toute information sur le nucléaire iranien",
+      "url": "https://www.cnews.fr/monde/2026-11-07/guerre-au-moyen-orient-installations-equipements-les-etats-unis-offrent-20",
+      "publishedAt": "2026-11-07T07:32:14.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_b8uz79g_1_6aeecd91dc19c.jpg?itok=39FDiWnE",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "33214d2e4858",
       "outletId": "ouest-france",
       "headline": "Les États-Unis offrent 20 millions de dollars pour des informations sur le programme nucléaire iranien",
@@ -43,7 +65,32 @@
     }
   ],
   "topicId": "605127ceb483",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le commandement militaire américain pour le Moyen-Orient propose 20 millions de dollars et un déménagement potentiel.",
+      "L'offre vise à obtenir des renseignements sur les équipements, les installations et le personnel du programme nucléaire iranien.",
+      "L'annonce a été officialisée par Washington un vendredi."
+    ],
+    "centre": [
+      "Les États-Unis ont promis le 6 novembre 2026 une récompense financière de 20 millions de dollars.",
+      "La somme s'accompagne d'un possible déménagement pour les informateurs.",
+      "La mesure concerne les informations relatives au programme nucléaire de Téhéran."
+    ],
+    "droite": [
+      "Le Centcom offre 20 millions de dollars et un possible déménagement pour tout renseignement sur le nucléaire iranien.",
+      "La récompense s'adresse à ceux qui détiennent des données sur le personnel, le matériel ou les infrastructures.",
+      "Donald Trump a réaffirmé sa volonté d'empêcher l'Iran de se doter de l'arme nucléaire."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur les aspects techniques des renseignements recherchés par le commandement américain.",
+    "Le centre livre un compte-rendu factuel et synthétique de l'annonce américaine en reprenant la date exacte.",
+    "La droite contextualise l'offre financière en rappelant les déclarations et la ligne politique de Donald Trump sur le dossier iranien."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-07T08:01:20.375Z"
 }
