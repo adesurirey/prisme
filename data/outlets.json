@@ -98,6 +98,22 @@
     }
   },
   {
+    "id": "monde-diplomatique",
+    "name": "Le Monde diplomatique",
+    "leaning": "gauche",
+    "paywall": "partial",
+    "site": "https://www.monde-diplomatique.fr",
+    "feeds": {
+      "latest": "https://www.monde-diplomatique.fr/rss/"
+    },
+    "reach": {
+      "value": 478865,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-09"
+    }
+  },
+  {
     "id": "le-monde",
     "name": "Le Monde",
     "leaning": "centre-gauche",
