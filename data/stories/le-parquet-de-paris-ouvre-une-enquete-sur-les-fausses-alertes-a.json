@@ -1,10 +1,54 @@
 {
   "id": "6a45c9acf2cf",
   "slug": "le-parquet-de-paris-ouvre-une-enquete-sur-les-fausses-alertes-a",
-  "title": "Le parquet de Paris ouvre une enquête sur les fausses alertes à la bombe visant des avions et recherche un lien avec des puissances étrangères",
+  "title": "Le parquet de Paris ouvre une enquête sur les fausses alertes à la bombe visant des avions avec un lien éventuel avec des puissances étrangères",
   "createdAt": "2026-11-07T16:01:14.670Z",
   "storyDay": "2026-11-07",
   "articles": [
+    {
+      "id": "c73d097cdeeb",
+      "outletId": "le-parisien",
+      "headline": "Alertes à la bombe visant des avions : enquête ouverte du parquet de Paris sur un « lien éventuel avec des puissances étrangères »",
+      "url": "https://www.leparisien.fr/economie/alertes-a-la-bombe-visant-des-avions-enquete-ouverte-du-parquet-de-paris-sur-un-lien-eventuel-avec-des-puissances-etrangeres-07-11-2026-ZWWGYL25E5CHHDRT4H2QBVJBJQ.php",
+      "publishedAt": "2026-11-07T18:01:21.680Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "8982d1674d3f",
+      "outletId": "france-24",
+      "headline": "Fausses alertes à la bombe : enquête ouverte en France sur un \"lien avec des puissances étrangères\"",
+      "url": "https://www.france24.com/fr/europe/20261107-fausses-alertes-%C3%A0-la-bombe-enqu%C3%AAte-ouverte-en-france-sur-un-lien-avec-des-puissances-%C3%A9trang%C3%A8res",
+      "publishedAt": "2026-11-07T17:48:40.000Z",
+      "imageUrl": "https://s.france24.com/media/display/670fbe6a-dad3-11f1-b3c6-695cb59fade5/w:1024/p:16x9/2026-11-05T120310Z-981107119-RC2NHOAEQZJ0-RTRMADP-3-EUROPE-FLIGHTS-FRANCE.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "b139e502bf70",
+      "outletId": "huffpost",
+      "headline": "Après les alertes à la bombe sur des vols d’avions, le parquet de Paris ouvre une enquête",
+      "url": "https://www.huffingtonpost.fr/france/article/apres-les-alertes-a-la-bombe-sur-des-vols-d-avions-le-parquet-de-paris-ouvre-une-enquete_353300.html",
+      "publishedAt": "2026-11-07T16:41:16.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/11/07/268/0/5138/2890/0/0/60/0/043d5c0_upload-1-305wltiqo2my-afp-20261105-d6j234h-v1-highres-franceaviationsecurity.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "9695e0ef60ef",
+      "outletId": "la-croix",
+      "headline": "Fausses alertes à la bombe : le parquet de Paris enquête sur un lien avec des « puissances étrangères »",
+      "url": "https://www.la-croix.com/societe/fausses-alertes-a-la-bombe-le-parquet-de-paris-enquete-sur-un-lien-avec-des-puissances-etrangeres-20261107",
+      "publishedAt": "2026-11-07T16:18:37.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/11/07/2583683-le-parquet-de-paris-a-ouvert-une-enquete-sur-les-f.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "764cb09c63ed",
       "outletId": "ouest-france",
@@ -12,7 +56,7 @@
       "url": "https://www.ouest-france.fr/economie/transports/avion/alertes-a-la-bombe-visant-des-avions-une-enquete-notamment-sur-un-possible-lien-avec-des-puissances-etrangeres-83239e2a-dac2-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-07T15:56:06.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTg2NzE5MzM3MTZiODYwODk3NDc2OWZhZWFjYWQ0Y2U?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2a03831fc54d0615c30c24a27fb4c2324ddacc25cc0538ca132b313716e59d74",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -47,9 +91,10 @@
       "url": "https://www.lemonde.fr/societe/article/2026/11/07/alertes-a-la-bombe-visant-des-avions-une-enquete-ouverte-par-le-parquet-de-paris-notamment-sur-un-lien-eventuel-avec-des-puissances-etrangeres_6808294_3224.html",
       "publishedAt": "2026-11-07T15:43:47.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/05/604/0/7243/3621/644/322/60/0/69c322b_ftp-1-p7logxxfbs3b-afp-d6k837e.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "misc"
+      "section": "misc",
+      "everFrontPage": true
     },
     {
       "id": "a2f79301b55b",
@@ -75,30 +120,31 @@
     }
   ],
   "topicId": "c0db12e0c24b",
-  "titledArticleCount": 6,
+  "titledArticleCount": 10,
   "section": "misc",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le parquet de Paris s'est saisi d'une enquête suite à des dizaines d'alertes à la bombe visant des vols commerciaux depuis le début de la semaine.",
-      "Les investigations visent à identifier les expéditeurs des courriels malveillants simulant des périls graves pour les appareils survolant le territoire français.",
-      "Les autorités judiciaires examinent l'hypothèse d'une implication potentielle de puissances étrangères dans ces actes."
+      "Le parquet de Paris a saisi la justice suite à la série d'alertes à la bombe ayant frappé des vols commerciaux.",
+      "Les investigations cherchent à identifier les expéditeurs des courriels malveillants et à vérifier une implication potentielle de gouvernements étrangers.",
+      "Ces menaces ont perturbé plusieurs dizaines d'appareils en circulation à travers l'Europe depuis le début de la semaine."
     ],
     "centre": [
-      "Une enquête a été lancée par le parquet de Paris concernant de fausses alertes à la bombe touchant des avions en vol au-dessus de la France.",
-      "Les autorités recherchent les auteurs de ces messages électroniques et étudient un éventuel lien avec des puissances étrangères."
+      "Une enquête judiciaire a été formellement lancée par le parquet de Paris pour identifier l'origine des fausses alertes visant des aéronefs.",
+      "Les autorités ciblent les auteurs des messages électroniques tout en examinant la piste d'une coordination ou d'un appui par des puissances étrangères.",
+      "Le dispositif d'investigation se concentre sur des dizaines de vols civils touchés sur le territoire français et européen."
     ],
     "droite": [
-      "Le parquet de Paris a officiellement ouvert une procédure judiciaire pour identifier les responsables de fausses alertes à la bombe sur des avions en transit.",
-      "L'enquête se penche sur la piste d'une coordination ou d'une influence possible de puissances étrangères derrière ces messages d'alerte."
+      "Le parquet de Paris a ouvert des investigations après les alertes à la bombe ayant ciblé des avions en vol au-dessus de la France.",
+      "Les services spécialisés cherchent à remonter jusqu'aux auteurs des courriels et étudient l'hypothèse d'un lien avec des puissances étrangères."
     ]
   },
   "differences": [
-    "Le camp gauche insiste sur l'ampleur du phénomène en précisant le volume des vols concernés depuis le début de la semaine et détaille la qualification juridique des messages.",
-    "Le camp centre adopte une formulation synthétique et factuelle, se limitant à relayer l'annonce officielle du parquet et l'existence de la piste étrangère.",
-    "Le camp droite met en avant la nature récurrente et ciblée de ces actes de malveillance en insistant directement sur l'ouverture de l'enquête."
+    "Les médias de gauche adoptent une formulation sobre et directe en insistant sur la répétition des incidents à l'échelle européenne et l'origine des courriels.",
+    "Les médias du centre privilégient un traitement factuel et homogène en reprenant systématiquement les termes exacts du communiqué du parquet concernant la piste étrangère.",
+    "Les médias de droite axent leur couverture sur la menace directe visant l'espace aérien national et les aspects techniques de l'enquête menée par les autorités."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6,
-  "summarizedAt": "2026-11-07T16:01:14.670Z"
+  "summarizedArticleCount": 10,
+  "summarizedAt": "2026-11-07T18:01:21.680Z"
 }
