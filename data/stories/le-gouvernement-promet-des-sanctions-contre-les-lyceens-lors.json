@@ -1,7 +1,7 @@
 {
   "id": "7ca4557d31a9",
   "slug": "le-gouvernement-promet-des-sanctions-contre-les-lyceens-lors",
-  "title": "Le gouvernement promet des sanctions contre les lycéens lors des blocages d'accès aux salles de cours",
+  "title": "Mouvement lycéen : le gouvernement promet des sanctions face aux blocages et aux violences dans les établissements",
   "createdAt": "2026-11-06T23:01:20.966Z",
   "storyDay": "2026-11-06",
   "articles": [
@@ -17,6 +17,18 @@
       "section": "society"
     },
     {
+      "id": "427e945de9cf",
+      "outletId": "le-figaro",
+      "headline": "Lycées : 41 établissements bloqués, des violences et 154 interpellations, selon Laurent Nuñez",
+      "url": "https://www.lefigaro.fr/actualite-france/en-direct-colere-sociale-apres-la-forte-mobilisation-de-jeudi-de-nouvelles-actions-attendues-des-samedi-20261106",
+      "publishedAt": "2026-11-06T22:53:59.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/06/3e0e02e57f5bb35ccb3f46dd4e1ae8ea0441e66ea40c43d8cfc7500b693ebfee.jpg",
+      "frontPage": true,
+      "kind": "live",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "ad3700319e7c",
       "outletId": "20-minutes",
       "headline": "Colère de lycéens : Le ministre promet des sanctions quand les accès aux cours sont bloqués",
@@ -27,6 +39,17 @@
       "kind": "news",
       "section": "society",
       "everFrontPage": true
+    },
+    {
+      "id": "53c7f013a6d7",
+      "outletId": "lobs",
+      "headline": "Mobilisation lycéenne : une vingtaine d’établissements bloqués ce vendredi, Geffray promet des « sanctions »",
+      "url": "https://www.nouvelobs.com/societe/20261106.OBS119895/mobilisation-lyceenne-une-vingtaine-d-etablissements-bloques-ce-vendredi-geffray-promet-des-sanctions.html",
+      "publishedAt": "2026-11-06T14:33:27.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/11/06/3/0/8368/5578/0/0/60/0/5be71d2_upload-1-kapa6j5b0u4l-080-hl-gpacheco-3375836.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "711f6e4e0537",
@@ -41,7 +64,30 @@
     }
   ],
   "topicId": "7ca4557d31a9",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "society",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le ministre de l’Éducation nationale, Édouard Geffray, a qualifié d’illégales les actions menées dans une vingtaine d’établissements et a brandi la menace de sanctions disciplinaires.",
+      "L’Humanité précise que ces propos ont été tenus par le ministre lors d’un déplacement dans un lycée jugé prioritaire pour les travaux."
+    ],
+    "centre": [
+      "Le gouvernement a averti que les blocages de lycées empêchant l’accès aux salles de cours sont illégaux.",
+      "Le ministre de l’Éducation nationale a promis des sanctions face aux perturbations constatées dans plusieurs établissements."
+    ],
+    "droite": [
+      "Le Figaro fait état de 41 établissements bloqués et de 154 interpellations en lien avec des violences selon Laurent Nuñez.",
+      "Sébastien Lecornu a annoncé l’organisation d’une conférence sociale le lundi suivant avec les syndicats et le patronat.",
+      "Le journal relaye que les organisations de jeunesse et les gilets jaunes prévoient de nouvelles actions pour l’Acte IV de leur mouvement."
+    ]
+  },
+  "differences": [
+    "La gauche chiffre précisément la mobilisation à une vingtaine d'établissements et focalise son récit sur la menace ministérielle de sanctions brandie lors d’un déplacement.",
+    "Le centre se focalise strictement sur la doctrine gouvernementale qualifiant l’entrave aux cours d’illégale et sur la promesse de sanctions.",
+    "La droite privilégie un angle sécuritaire chiffré en mettant en avant le nombre d’établissements bloqués et d’interpellations communiqués par Laurent Nuñez, tout en élargissant le spectre au contexte social global et aux appels à manifester."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-07T05:01:18.199Z"
 }
