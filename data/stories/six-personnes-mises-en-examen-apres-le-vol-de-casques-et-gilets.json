@@ -1,10 +1,21 @@
 {
   "id": "176479e2b474",
   "slug": "six-personnes-mises-en-examen-apres-le-vol-de-casques-et-gilets",
-  "title": "Six personnes, dont trois mineurs, sont mises en examen après le vol de casques et gilets pare-balles à la gendarmerie mobile de Brest",
+  "title": "Six personnes sont mises en examen après le vol de matériel à la gendarmerie mobile de Brest",
   "createdAt": "2026-11-08T17:01:20.352Z",
   "storyDay": "2026-11-08",
   "articles": [
+    {
+      "id": "0125ffcd667a",
+      "outletId": "bfmtv",
+      "headline": "Six personnes, dont trois mineures, mises en examen après le cambriolage d'une gendarmerie à Brest",
+      "url": "https://www.bfmtv.com/finistere/six-personnes-dont-trois-mineures-mises-en-examen-apres-le-cambriolage-d-une-gendarmerie-a-brest_AD-202611080412.html",
+      "publishedAt": "2026-11-08T20:49:50.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/nzTM5Ni5r7AF32JFaykNN81wzcM=/0x105:2048x1257/800x0/images/GENDARMERIE-2199687.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "9dea56a10fef",
       "outletId": "le-figaro",
@@ -53,7 +64,25 @@
     }
   ],
   "topicId": "176479e2b474",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "misc",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "Six individus, incluant trois mineurs âgés de 15 à 34 ans, ont été mis en examen après le cambriolage d'une gendarmerie mobile à Brest survenu dans la nuit du 7 au 8 octobre.",
+      "La quasi-totalité du matériel dérobé, comprenant des équipements de protection, a été récupérée par les enquêteurs lors des interpellations menées dans le Finistère et le Morbihan."
+    ],
+    "droite": [
+      "Six personnes, dont trois mineurs, ont été mises en examen pour le cambriolage de la gendarmerie de Brest commis par ruse et escalade dans la nuit du 7 au 8 octobre.",
+      "Les dispositifs de sécurité ont empêché le vol d'armes à feu, tandis que la quasi-totalité des gilets pare-balles, casques et conteneurs lacrymogènes a été retrouvée.",
+      "Plusieurs des suspects interpellés possèdent des antécédents judiciaires pour vols aggravés et infractions liées aux stupéfiants."
+    ]
+  },
+  "differences": [
+    "Le centre livre un résumé factuel concis sur l'interpellation des six suspects et la récupération du matériel dérobé à la gendarmerie de Brest.",
+    "La droite détaille davantage le mode opératoire des cambrioleurs, la nature exacte du matériel dérobé et les antécédents judiciaires de plusieurs mis en cause."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-08T21:01:16.095Z"
 }
