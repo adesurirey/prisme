@@ -6,6 +6,29 @@
   "storyDay": "2026-11-07",
   "articles": [
     {
+      "id": "33c9b015be3c",
+      "outletId": "ouest-france",
+      "headline": "Cinq morts à Gaza à la suite de pluies diluviennes",
+      "url": "https://www.ouest-france.fr/monde/gaza/cinq-morts-a-gaza-a-la-suite-de-pluies-diluviennes-2d5bc388-dbbb-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-08T21:41:20.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExM2E4NDU5ZTk1MTBlZTFjNGJhM2VkNThkZjczNjUxYzM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=b3af976e50d3e703753a378fe757e767b8a2d16ecf38a34519865204bcd1896b",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "c2f7b25b79ed",
+      "outletId": "rfi",
+      "headline": "Gaza: des pluies torrentielles inondent les camps de déplacés, 70 000 personnes affectées",
+      "url": "https://www.rfi.fr/fr/moyen-orient/20261108-gaza-des-pluies-torrentielles-inondent-les-camps-de-d%C3%A9plac%C3%A9s-70-000-personnes-affect%C3%A9es",
+      "publishedAt": "2026-11-08T21:36:26.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/4c306866-dbb3-11f1-ae84-d18c5759e759/w:1024/p:16x9/AP26311702201775.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "e71a1789cb3b",
       "outletId": "franceinfo",
       "headline": "Dans la bande de Gaza, des dizaines de milliers de déplacés privés d'abri à cause de pluies diluviennes",
@@ -112,25 +135,27 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Environ 70 000 tentes ont été envahies par les eaux dans la bande de Gaza à la suite d'intempéries majeures.",
-      "La société civile palestinienne alerte sur le danger imminent d'épidémies et sur la situation critique dans cette région dévastée par la guerre."
+      "De fortes intempéries ont provoqué l'inondation d'environ 70 000 tentes de déplacés dans la bande de Gaza, détruisant leurs abris.",
+      "Ces inondations ont fait plusieurs blessés et accentuent la détresse humanitaire, sur fond de témoignages recueillis sur place selon lesquels « nous vivons cette épreuve chaque hiver ».",
+      "La société civile palestinienne alerte sur le risque imminent de propagation de maladies au sein de cette enclave ravagée par la guerre."
     ],
     "centre": [
-      "Des précipitations exceptionnelles ont submergé des dizaines de milliers de tentes, laissant des milliers de personnes sans abri et faisant plusieurs blessés.",
-      "Les services de la Défense civile locale font état de plus de 1 500 interventions d'urgence en une seule nuit face aux inondations.",
-      "Les chiffres officiels du bureau de presse du gouvernement de Gaza font mention de 70 000 tentes touchées dès le premier jour des intempéries."
+      "Des pluies diluviennes ont frappé la bande de Gaza ce week-end, causant la mort d'au moins cinq personnes, dont trois enfants.",
+      "Les intempéries ont inondé 70 000 tentes et affecté 70 000 personnes déplacées, selon les autorités locales et le bureau de presse du Hamas.",
+      "La Défense civile a enregistré plus de 1 500 appels d'urgence en une seule nuit face à cette situation humanitaire catastrophique."
     ],
     "droite": [
-      "Des intempéries d'une forte intensité ont provoqué l'inondation d'environ 70 000 tentes destinées aux réfugiés gazaouis.",
-      "Les données concernant l'étendue des dégâts proviennent des autorités civiles administrées par le Hamas."
+      "De violentes précipitations se sont abattues sur l'enclave palestinienne, inondant environ 70 000 tentes.",
+      "Cette catastrophe climatique prive de nouveau des dizaines de milliers de réfugiés d'abris de fortune.",
+      "Ces données sur les dégâts proviennent des autorités civiles placées sous le contrôle du Hamas."
     ]
   },
   "differences": [
-    "La gauche insiste sur le contexte humanitaire global de l'enclave et relaie les alertes sanitaires des coalitions associatives palestiniennes.",
-    "Le centre se focalise sur l'urgence immédiate en quantifiant précisément les dégâts matériels, les bilans de blessés et le volume des appels de détresse reçus par les secouristes.",
-    "La droite met en avant l'ampleur matérielle des inondations tout en prenant soin d'attribuer explicitement le bilan des tentes touchées aux autorités sous contrôle du Hamas."
+    "La gauche met l'accent sur le témoignage humain de la souffrance récurrente et alerte spécifiquement sur le péril sanitaire à venir dans l'enclave.",
+    "Le centre dresse un bilan chiffré et immédiat des pertes en vies humaines, des appels d'urgence et de l'ampleur géographique des inondations.",
+    "La droite se focalise strictement sur les dégâts matériels subis par les réfugiés tout en prenant soin de préciser l'origine gouvernementale des chiffres."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 7,
-  "summarizedAt": "2026-11-08T13:01:16.911Z"
+  "summarizedArticleCount": 11,
+  "summarizedAt": "2026-11-08T22:01:20.665Z"
 }
