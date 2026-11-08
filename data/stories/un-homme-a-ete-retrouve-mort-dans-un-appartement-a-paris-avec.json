@@ -6,6 +6,29 @@
   "storyDay": "2026-11-08",
   "articles": [
     {
+      "id": "3db833d5efe0",
+      "outletId": "ouest-france",
+      "headline": "Un homme retrouvé mort dans un appartement à Paris, la gorge en partie tranchée",
+      "url": "https://www.ouest-france.fr/societe/faits-divers/un-homme-retrouve-mort-dans-un-appartement-a-paris-la-gorge-en-partie-tranchee-8d806a98-db57-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-08T10:19:43.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNDQ4NDc2NzAyNzdkOGE2YWQ3NGRkMWExODI1YTZlOGE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ac43edf7b4a4bf9b2a81fb8f5ec169f90866d151c5955d3eea934740687ec699",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
+      "id": "5cf0d1881d89",
+      "outletId": "cnews",
+      "headline": "Paris : un homme retrouvé mort la gorge tranchée dans un appartement du 14e arrondissement",
+      "url": "https://www.cnews.fr/faits-divers/2026-11-08/paris-un-homme-retrouve-mort-la-gorge-tranchee-dans-un-appartement-du-14e",
+      "publishedAt": "2026-11-08T10:16:09.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_1br0qq_2_-taille1200_6af04782ab2e8.jpg?h=e2560e7f&itok=MzJ3h2SE",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "0cc76d887e11",
       "outletId": "le-parisien",
       "headline": "Un homme retrouvé mort dans un appartement à Paris, la gorge en partie tranchée",
@@ -23,7 +46,7 @@
       "url": "https://www.lefigaro.fr/faits-divers/paris-un-homme-retrouve-mort-dans-un-appartement-du-14e-arrondissement-la-gorge-en-partie-tranchee-20261108",
       "publishedAt": "2026-11-08T09:37:26.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/08/f97f95655d1414d6cc8521b60045180cfefa0f8c48861e693be6bda306d54496.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -41,7 +64,24 @@
     }
   ],
   "topicId": "d86c9443e963",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "misc",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "Un homme a été découvert sans vie samedi soir dans un logement de la capitale, présentant une gorge en partie tranchée.",
+      "L'alerte a été déclenchée par un résident de l'immeuble après avoir remarqué qu'une porte de voisin restait ouverte depuis deux heures."
+    ],
+    "droite": [
+      "Un homme a été trouvé mort ce samedi vers 21h dans une chambre du 14e arrondissement de Paris avec la gorge en partie tranchée.",
+      "La victime gisait sur un lit, cachée sous une couette, et portait de multiples blessures au visage ainsi que des plaies d'égorgement."
+    ]
+  },
+  "differences": [
+    "Les médias du centre se limitent à relayer l'annonce générale de la découverte macabre et l'alerte donnée par un voisin dans la capitale.",
+    "Les médias de droite détaillent de manière plus précise la scène de crime, mentionnant le 14e arrondissement, la position du corps sous une couette et les blessures faciales."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-08T11:01:21.241Z"
 }

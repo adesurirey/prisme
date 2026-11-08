@@ -6,6 +6,39 @@
   "storyDay": "2026-11-08",
   "articles": [
     {
+      "id": "f6ff5f77ab66",
+      "outletId": "le-figaro",
+      "headline": "Des centaines de milliers d'Ukrainiens sans électricité après des frappes russes",
+      "url": "https://www.lefigaro.fr/international/des-centaines-de-milliers-d-ukrainiens-sans-electricite-apres-des-frappes-russes-20261108",
+      "publishedAt": "2026-11-08T10:27:27.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2120_crop/2026/11/08/cecf031d6dd0f1431f907ae559530608f2b7c1e39367a6ef7086f26e19195557.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "b23569c967ff",
+      "outletId": "franceinfo",
+      "headline": "Des centaines de milliers d'Ukrainiens se trouvent sans électricité après des frappes russes",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/des-centaines-de-milliers-d-ukrainiens-se-trouvent-sans-electricite-apres-des-frappes-russes_8273186.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-08T10:13:48.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/rLP8iNV9y9dvjTuFBb1SNzNh8Ds/0x105:1024x681/432x243/filters:format(jpg)/2026/11/08/6af04afd9ed6b794206062.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "71acc4a12e24",
+      "outletId": "tf1-info",
+      "headline": "Guerre en Ukraine : des centaines de milliers de personnes sans électricité après des frappes russes",
+      "url": "https://www.tf1info.fr/international/guerre-en-ukraine-russie-poutine-zelensky-des-centaines-de-milliers-de-personnes-sans-electricite-apres-des-frappes-russes-2474577.html",
+      "publishedAt": "2026-11-08T10:09:13.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/682/coupure-d-electricite-kyiv-2026-6b7d6d-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "8b570506a887",
       "outletId": "le-parisien",
       "headline": "Guerre en Ukraine : 600 000 habitants sans électricité à l’est du pays, dans la région de Dnipropetrovsk",
@@ -28,6 +61,17 @@
       "section": "world"
     },
     {
+      "id": "cf7deec84e54",
+      "outletId": "cnews",
+      "headline": "Guerre en Ukraine : plusieurs centaines de milliers de personnes privées d'électricité après des frappes russes",
+      "url": "https://www.cnews.fr/monde/2026-11-08/guerre-en-ukraine-plusieurs-centaines-de-milliers-de-personnes-privees",
+      "publishedAt": "2026-11-08T09:16:45.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/dnipo_6af0384787824.jpg?itok=ZvXPIzIp",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "cee0e6f49f26",
       "outletId": "bfmtv",
       "headline": "Guerre en Ukraine: plus de 600.000 personnes privées d'électricité après une attaque russe",
@@ -40,7 +84,29 @@
     }
   ],
   "topicId": "5ad9726a87f5",
-  "titledArticleCount": 3,
+  "titledArticleCount": 7,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Des frappes nocturnes russes ont touché les infrastructures énergétiques dans les régions de Dnipropetrovsk et Kharkiv.",
+      "Ces attaques surviennent après une offensive similaire menée la veille."
+    ],
+    "centre": [
+      "Environ 600 000 habitants se trouvent privés d'électricité dans l'est de l'Ukraine, en particulier dans l'oblast de Dnipropetrovsk.",
+      "Les autorités locales précisent que les hôpitaux et les services essentiels fonctionnent actuellement à l'aide de générateurs."
+    ],
+    "droite": [
+      "Plus de 600 000 usagers sont affectés par des coupures de courant massives suite à des bombardements russes nocturnes.",
+      "Le fournisseur DTEK signale que les réparations sont entravées par de nouvelles frappes, tandis que Volodymyr Zelensky dénonce l'attitude de Moscou avant de futures négociations."
+    ]
+  },
+  "differences": [
+    "Le camp de gauche se focalise sobrement sur la localisation géographique des infrastructures touchées lors des attaques nocturnes successives.",
+    "Le camp du centre met en avant le volume chiffré des populations touchées et le recours aux générateurs pour maintenir les services critiques.",
+    "Le camp de droite insiste sur l'ampleur stratégique des dégâts, les difficultés d'intervention du gestionnaire DTEK et la réaction politique de Volodymyr Zelensky."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-08T11:01:21.241Z"
 }
