@@ -1,10 +1,32 @@
 {
   "id": "57e9bc6f7ff0",
   "slug": "le-domicile-d-un-policier-a-ete-incendie-dans-le-gers",
-  "title": "Le domicile d'un policier a été incendié dans le Gers",
+  "title": "Le domicile d'un policier incendié dans le Gers : Laurent Nuñez dénonce un acte criminel intolérable",
   "createdAt": "2026-11-08T12:01:18.878Z",
   "storyDay": "2026-11-08",
   "articles": [
+    {
+      "id": "7a9d46c4008e",
+      "outletId": "le-parisien",
+      "headline": "« Un acte criminel intolérable » : le domicile d’un policier incendié dans le Gers",
+      "url": "https://www.leparisien.fr/gers-32/un-acte-criminel-intolerable-le-domicile-dun-policier-incendie-dans-le-gers-08-11-2026-H3NI4XGF4NCXJAKHB5CYHNRSX4.php",
+      "publishedAt": "2026-11-08T13:01:16.911Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "09a0365145e1",
+      "outletId": "cnews",
+      "headline": "Gers : le domicile d’un policier d'Auch incendié, la piste criminelle privilégiée",
+      "url": "https://www.cnews.fr/faits-divers/2026-11-08/gers-le-domicile-dun-policier-dauch-incendie-la-piste-criminelle",
+      "publishedAt": "2026-11-08T12:40:41.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_8x629u-taille1200_6af06212c952d.jpg?h=a7650045&itok=dPgyS6lq",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "b74106a44e15",
       "outletId": "europe-1",
@@ -23,9 +45,10 @@
       "url": "https://www.lemonde.fr/societe/article/2026/11/08/le-domicile-d-un-policier-d-auch-dans-le-gers-incendie-laurent-nunez-denonce-un-acte-criminel-intolerable_6808426_3224.html",
       "publishedAt": "2026-11-08T11:27:28.000Z",
       "imageUrl": "https://img.lemde.fr/2024/10/24/0/0/2250/1125/644/322/60/0/6ecd7dc_1729771573543-frame-125.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "misc"
+      "section": "misc",
+      "everFrontPage": true
     },
     {
       "id": "593b8b99d4a1",
@@ -63,25 +86,32 @@
     }
   ],
   "topicId": "57e9bc6f7ff0",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "misc",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le domicile d'un policier a été détruit par un incendie samedi à Auch, dans le Gers.",
-      "Le ministre de l'Intérieur Laurent Nuñez qualifie l'événement d'acte criminel lié à la profession de la victime."
+      "Le domicile d'un policier a été détruit par un incendie le 7 novembre à Auch, dans le Gers.",
+      "Le ministre de l'Intérieur Laurent Nuñez a qualifié l'événement « d'acte criminel intolérable ».",
+      "L'exécutif estime que la victime a été ciblée en raison de son appartenance aux forces de l'ordre."
+    ],
+    "centre": [
+      "La maison d'un agent de police située à Auch, dans le Gers, a subi un incendie volontaire.",
+      "Le ministre de l'Intérieur Laurent Nuñez a dénoncé un acte criminel lié à la profession de la victime.",
+      "Les autorités ont assuré que tous les moyens seront mis en œuvre pour retrouver les auteurs."
     ],
     "droite": [
-      "Une habitation appartenant à un membre des forces de l'ordre a été incendiée à Auch.",
-      "Des indices matériels, dont un parpaing et un bidon de fuel, confirment la piste criminelle selon les premiers éléments.",
-      "Le ministre de l'Intérieur dénonce une attaque ciblée contre l'agent en raison de son métier."
+      "Le logement d'un fonctionnaire de police d'Auch a été ravagé par les flammes le samedi matin.",
+      "L'origine criminelle ne fait aucun doute selon les premiers éléments, avec la découverte d'un parpaing ayant brisé une fenêtre et d'un bidon de fuel.",
+      "Laurent Nuñez a pris la parole sur le réseau social X pour condamner cette attaque ciblée contre un membre des forces de l'ordre."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur les déclarations officielles du ministre de l'Intérieur qualifiant l'incendie d'acte criminel lié à la profession.",
-    "La droite détaille en outre les indices matériels découverts sur place, comme le parpaing et le bidon de fuel, tout en reprenant les propos ministériels."
+    "Les médias de gauche privilégient un rappel factuel concis du drame en mettant principalement en avant les déclarations officielles du ministère.",
+    "Les médias du centre adoptent une approche informative standard centrée sur la qualification ministérielle de l'attaque et la volonté ministérielle d'interpeller les coupables.",
+    "Les médias de droite détaillent de surcroît avec précision les indices matériels de l'enquête, notamment l'utilisation d'un parpaing et d'un bidon de carburant."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-08T12:01:18.878Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-08T13:01:16.911Z"
 }
