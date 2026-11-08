@@ -6,6 +6,28 @@
   "storyDay": "2026-11-08",
   "articles": [
     {
+      "id": "d3f012ef0093",
+      "outletId": "le-jdd",
+      "headline": "«Cela a trop duré» : Laurent Wauquiez souhaite un candidat unique de la droite «avant Noël»",
+      "url": "https://www.lejdd.fr/politique/cela-a-trop-dure-laurent-wauquiez-souhaite-un-candidat-unique-de-la-droite-avant-noel-188157",
+      "publishedAt": "2026-11-08T16:50:25.000Z",
+      "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/08/16/080_hl_xbouzas_3336447.jpg?VersionId=hHj2tl7vJ37nwkYu1OBr3ya9ZzfI3O1D",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "451764c3e717",
+      "outletId": "tf1-info",
+      "headline": "Présidentielle 2027 : Laurent Wauquiez réclame un candidat unique à droite \"avant Noël\"",
+      "url": "https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-2027-laurent-wauquiez-reclame-un-candidat-unique-a-droite-avant-noel-2474624.html",
+      "publishedAt": "2026-11-08T16:14:00.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/741/480/laurent-wauquiez-2344-d63d73-1@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "dcdf777df728",
       "outletId": "europe-1",
       "headline": "Présidentielle 2027 : Laurent Wauquiez réclame un «candidat unique» de la droite «avant Noël»",
@@ -34,7 +56,7 @@
       "url": "https://www.lefigaro.fr/politique/laurent-wauquiez-reclame-un-candidat-unique-de-la-droite-avant-noel-20261108",
       "publishedAt": "2026-11-08T14:39:14.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/08/1121007ae53dd38ae23f46f209fffbce13393a6a8c635afc1ab775be981d2d8d.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -52,7 +74,31 @@
     }
   ],
   "topicId": "c65483501222",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "politics",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le chef des députés Les Républicains insiste pour que la droite se dote d'un candidat unique avant la fin de l'année 2027.",
+      "Il suggère plusieurs méthodes pour départager les prétendants, évoquant l'organisation d'une primaire.",
+      "Il propose également d'alterner une série de cinq débats suivie d'un sondage ou la tenue d'un conclave."
+    ],
+    "centre": [
+      "Le patron des députés Les Républicains exige la désignation d'un candidat unique et la fixation d'un programme commun avant Noël.",
+      "Il invite les candidats déclarés de la droite à se réunir dans les quinze prochains jours pour fixer une méthode de arbitrage."
+    ],
+    "droite": [
+      "Laurent Wauquiez appelle son camp à s'entendre sur un dispositif de désignation pour présenter un unique représentant avant le début de l'année prochaine.",
+      "Le chef de file des députés Les Républicains écarte toute idée d'ajouter une candidature supplémentaire au processus.",
+      "Il enjoint tous les candidats déclarés à se rencontrer dans un délai de quinze jours pour acter la méthode de sélection."
+    ]
+  },
+  "differences": [
+    "Le camp de gauche met en avant les propositions concrètes de méthode de départage, telles que la primaire ou le conclave.",
+    "Le camp du centre insiste sur l'urgence calendaire et l'injonction faite aux prétendants de se réunir sous quinzaine.",
+    "Le camp de droite souligne la fermeté du cadrage politique en écartant toute candidature supplémentaire et en exigeant un programme unique."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-08T17:01:20.352Z"
 }
