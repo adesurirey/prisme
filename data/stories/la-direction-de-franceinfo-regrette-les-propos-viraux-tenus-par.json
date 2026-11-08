@@ -1,10 +1,20 @@
 {
   "id": "4cfbffcc3af4",
   "slug": "la-direction-de-franceinfo-regrette-les-propos-viraux-tenus-par",
-  "title": "La direction de franceinfo regrette les propos viraux tenus par un enfant de huit ans lors d'une manifestation",
+  "title": "La direction de franceinfo exprime ses regrets après les propos viraux tenus par un enfant lors d'une manifestation",
   "createdAt": "2026-11-08T09:01:15.516Z",
   "storyDay": "2026-11-08",
   "articles": [
+    {
+      "id": "232d3fb1b47f",
+      "outletId": "liberation",
+      "headline": "Mobilisation sociale : Franceinfo regrette d’avoir donné la parole en direct à un enfant de huit ans insultant Emmanuel Macron",
+      "url": "https://www.liberation.fr/economie/medias/mobilisation-sociale-franceinfo-regrette-davoir-donne-la-parole-en-direct-a-un-enfant-de-huit-ans-insultant-emmanuel-macron-20261108_4HBK6NXVLRFYJNSSPFXXS43PXQ/",
+      "publishedAt": "2026-11-08T11:58:50.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
     {
       "id": "0e9304ac0775",
       "outletId": "le-figaro",
@@ -52,7 +62,31 @@
     }
   ],
   "topicId": "4cfbffcc3af4",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "politics",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "La direction de franceinfo a présenté ses excuses après la diffusion en direct d'un garçon de huit ans tenant des propos injurieux envers Emmanuel Macron et les forces de l'ordre.",
+      "La séquence, filmée lors du cortège parisien de la mobilisation sociale, a rapidement circulé sur les réseaux sociaux en devenant virale.",
+      "La chaîne publique a réagi le soir même pour condamner la situation."
+    ],
+    "centre": [
+      "Un enfant prénommé Marcel, âgé de huit ans, a ciblé Emmanuel Macron avec des insultes virulentes lors du défilé parisien du 7 novembre.",
+      "Cet incident survenu en direct sur franceinfo a placé la chaîne publique dans une position délicate."
+    ],
+    "droite": [
+      "Une journaliste de franceinfo a tendu le micro à un garçon de huit ans et à son père lors du défilé parisien contre la vie chère.",
+      "L'enfant a proféré des insultes grossières à l'encontre d'Emmanuel Macron et des policiers, provoquant une vive polémique.",
+      "Face au retentissement de la séquence, la direction de la chaîne a exprimé ses regrets."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la réaction rapide de la chaîne publique et le caractère viral de la séquence sans insister sur la nature des injures.",
+    "Le centre se focalise sur l'embarras immédiat de la chaîne publique face aux propos tenus par l'enfant en direct.",
+    "La droite insiste lourdement sur la vulgarité des insultes proférées contre le chef de l'État et les forces de l'ordre en contextualisant la manifestation."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-08T12:01:18.878Z"
 }
