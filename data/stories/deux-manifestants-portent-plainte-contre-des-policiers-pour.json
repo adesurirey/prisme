@@ -1,10 +1,20 @@
 {
   "id": "f54f4af8c4cd",
   "slug": "deux-manifestants-portent-plainte-contre-des-policiers-pour",
-  "title": "Deux manifestants portent plainte contre des policiers pour violences et agression sexuelle à Paris",
+  "title": "Deux manifestants portent plainte contre des policiers pour violences aggravées et agression sexuelle à Paris après la mobilisation du 31 octobre",
   "createdAt": "2026-11-08T17:01:20.352Z",
   "storyDay": "2026-11-08",
   "articles": [
+    {
+      "id": "2742044db4c6",
+      "outletId": "liberation",
+      "headline": "«Ça va être fun, y a pas de caméra dans la bagnole» : deux plaintes déposées à Paris contre des policiers pour violences et agression sexuelle",
+      "url": "https://www.liberation.fr/societe/police-justice/ca-va-etre-fun-y-a-pas-de-camera-dans-la-bagnole-deux-plaintes-deposees-a-paris-contre-des-policiers-pour-violences-et-agression-sexuelle-20261108_XZ3J375KE5H7HFIU7PTNLZNOLI/",
+      "publishedAt": "2026-11-08T17:52:28.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "7645a1b5de48",
       "outletId": "le-parisien",
@@ -23,7 +33,7 @@
       "url": "https://www.ouest-france.fr/societe/manifestation/manifestation-du-31-octobre-plaintes-de-deux-manifestants-contre-des-policiers-pour-violences-et-agression-sexuelle-a282eba8-db8b-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-08T16:30:23.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNGI4YTBkYmFiY2Y2NThhNjM4NzhmYWMyMmU2NDQ3YjE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d8c764ca6968a0a6f1e7de22e0b7e0a776916a48c1bf5bc32ffa7ed444e8307c",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -52,7 +62,26 @@
     }
   ],
   "topicId": "f54f4af8c4cd",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "misc",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Deux manifestants arrêtés le 31 octobre à Paris portent plainte pour violences et agression sexuelle commises par des policiers.",
+      "Les plaignants contestent les accusations de violences portées contre eux et décrivent des brutalités subies lors de l'arrestation et en commissariat.",
+      "L'Humanité précise que les plaintes ont été déposées le mercredi 4 novembre et évoque des actes précis comme l'interrogatoire nu."
+    ],
+    "centre": [
+      "Deux manifestants interpellés en marge de la mobilisation du 31 octobre à Paris ont déposé plainte contre des policiers.",
+      "Les forces de l'ordre sont visées par des accusations de violences aggravées et d'agression sexuelle.",
+      "Les manifestants plaignants étaient initialement accusés d'avoir frappé des membres des forces de l'ordre."
+    ]
+  },
+  "differences": [
+    "La gauche insiste sur la gravité des sévices décrits et détaille les conditions des interpellations en citant des faits précis.",
+    "Le centre adopte une approche factuelle et équilibrée en rappelant simultanément la procédure des manifestants et les accusations initiales les visant."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-08T18:01:20.194Z"
 }
