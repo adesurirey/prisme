@@ -6,6 +6,17 @@
   "storyDay": "2026-11-07",
   "articles": [
     {
+      "id": "1b8567513b06",
+      "outletId": "cnews",
+      "headline": "Formule 1 : la grille de départ du Grand Prix du Brésil",
+      "url": "https://www.cnews.fr/sport/2026-11-08/formule-1-la-grille-de-depart-du-grand-prix-du-bresil-1949984",
+      "publishedAt": "2026-11-08T07:03:44.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-07t202734z_1588656093_up1emb71jiewr_rtrmadp_3_motor-f1-brazil-taille1200_6af01c58e75f6.jpg?itok=TJWcg33Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "2d35075c6608",
       "outletId": "le-parisien",
       "headline": "Formule 1, GP du Brésil : la grille de départ avec Lando Norris en pole position",
@@ -65,5 +76,23 @@
   "topicId": "8e5c73ed7d2f",
   "titledArticleCount": 5,
   "section": "sport",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "centre": [
+      "Lando Norris a signé la pole position du Grand Prix du Brésil à l'issue de qualifications dantesques marquées par de nombreuses pénalités.",
+      "Le pilote McLaren s'élancera en première position devant Kimi Antonelli lors de cette course dominicale."
+    ],
+    "droite": [
+      "Lando Norris a décroché la pole position du Grand Prix du Brésil à São Paulo au terme de qualifications perturbées par des averses diluviennes et une heure d'interruption.",
+      "La grille de départ subit de lourdes modifications en raison de multiples pénalités infligées à des pilotes comme George Russell, Charles Leclerc, Lewis Hamilton ou Max Verstappen pour des changements d'éléments moteurs.",
+      "Le journal CNews publie la grille de départ complète de la course."
+    ]
+  },
+  "differences": [
+    "Les médias du centre relatent l'événement en mettant brièvement en avant la pole position de Lando Norris et le contexte des qualifications et des pénalités.",
+    "Les médias de droite détaillent amplement les conditions météorologiques difficiles à São Paulo ainsi que la cascade de pénalités techniques qui bouleversent la grille de départ."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-08T08:01:20.807Z"
 }
