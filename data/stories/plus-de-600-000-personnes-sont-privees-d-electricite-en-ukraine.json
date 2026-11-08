@@ -6,15 +6,27 @@
   "storyDay": "2026-11-08",
   "articles": [
     {
+      "id": "24efa7fc1c05",
+      "outletId": "bfmtv",
+      "headline": "Plus de 600.000 personnes privées de courant après des frappes russes en Ukraine",
+      "url": "https://www.bfmtv.com/international/asie/russie/video-plus-de-600-000-personnes-privees-de-courant-apres-des-frappes-russes-en-ukraine_VN-202611080252.html",
+      "publishedAt": "2026-11-08T12:19:09.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/gMiQ-VhtNWK51BRAFrXqEyfNaYU=/0x0:1280x720/800x0/images/Plus-de-600-000-personnes-privees-de-courant-apres-des-frappes-russes-en-Ukraine-2380274.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "f6ff5f77ab66",
       "outletId": "le-figaro",
       "headline": "Des centaines de milliers d'Ukrainiens sans électricité après des frappes russes",
       "url": "https://www.lefigaro.fr/international/des-centaines-de-milliers-d-ukrainiens-sans-electricite-apres-des-frappes-russes-20261108",
       "publishedAt": "2026-11-08T10:27:27.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2120_crop/2026/11/08/cecf031d6dd0f1431f907ae559530608f2b7c1e39367a6ef7086f26e19195557.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "world"
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "b23569c967ff",
@@ -96,29 +108,30 @@
     }
   ],
   "topicId": "5ad9726a87f5",
-  "titledArticleCount": 7,
+  "titledArticleCount": 9,
   "section": "world",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Des frappes nocturnes russes ont touché les infrastructures énergétiques dans les régions de Dnipropetrovsk et Kharkiv.",
-      "Ces attaques surviennent après une offensive similaire menée la veille."
+      "Des frappes russes nocturnes ont ciblé les infrastructures énergétiques de Dnipropetrovsk et Kharkiv dans la nuit de samedi à dimanche.",
+      "Des centaines de milliers d'habitants se retrouvent privés d'électricité à la suite de ces attaques répétées survenues deux jours d'affilée."
     ],
     "centre": [
-      "Environ 600 000 habitants se trouvent privés d'électricité dans l'est de l'Ukraine, en particulier dans l'oblast de Dnipropetrovsk.",
-      "Les autorités locales précisent que les hôpitaux et les services essentiels fonctionnent actuellement à l'aide de générateurs."
+      "Plus de 600 000 personnes sont privées d'électricité ce dimanche 8 novembre à la suite d'attaques russes.",
+      "Les bombardements ont touché les infrastructures énergétiques dans les régions de Dnipropetrovsk et de Kharkiv."
     ],
     "droite": [
-      "Plus de 600 000 usagers sont affectés par des coupures de courant massives suite à des bombardements russes nocturnes.",
-      "Le fournisseur DTEK signale que les réparations sont entravées par de nouvelles frappes, tandis que Volodymyr Zelensky dénonce l'attitude de Moscou avant de futures négociations."
+      "Plus de 600 000 usagers sont privés d'électricité dans les régions de Dnipropetrovsk et Kharkiv après des frappes russes nocturnes.",
+      "Selon le groupe énergétique DTEK, les installations importantes ont été endommagées et les réparations sont compliquées par de nouvelles attaques, tandis que les hôpitaux fonctionnent sur générateurs.",
+      "TF1 Info ajoute que Volodymyr Zelensky a fustigé l'attitude de Moscou en amont de nouvelles négociations prévues la semaine prochaine."
     ]
   },
   "differences": [
-    "Le camp de gauche se focalise sobrement sur la localisation géographique des infrastructures touchées lors des attaques nocturnes successives.",
-    "Le camp du centre met en avant le volume chiffré des populations touchées et le recours aux générateurs pour maintenir les services critiques.",
-    "Le camp de droite insiste sur l'ampleur stratégique des dégâts, les difficultés d'intervention du gestionnaire DTEK et la réaction politique de Volodymyr Zelensky."
+    "La gauche met l'accent sur la répétition des attaques nocturnes contre les réseaux énergétiques de plusieurs régions, qualifiant la situation d'urgente pour les habitants.",
+    "Le centre se focalise sur le bilan chiffré précis de plus de 600 000 foyers touchés et localise précisément les zones frappées à l'est du pays.",
+    "La droite détaille les difficultés techniques des réparations rapportées par l'opérateur DTEK et l'utilisation de générateurs pour les hôpitaux, tout en intégrant les déclarations de Volodymyr Zelensky et le contexte diplomatique."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 7,
-  "summarizedAt": "2026-11-08T11:01:21.241Z"
+  "summarizedArticleCount": 9,
+  "summarizedAt": "2026-11-08T14:01:17.656Z"
 }

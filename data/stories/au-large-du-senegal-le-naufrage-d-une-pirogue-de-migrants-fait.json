@@ -1,10 +1,21 @@
 {
   "id": "1e67ff4471ae",
   "slug": "au-large-du-senegal-le-naufrage-d-une-pirogue-de-migrants-fait",
-  "title": "Au large du Sénégal, le naufrage d'une pirogue de migrants fait au moins 21 morts",
+  "title": "Le naufrage d'une pirogue de migrants au large du Sénégal fait au moins 21 morts",
   "createdAt": "2026-11-08T13:01:16.911Z",
   "storyDay": "2026-11-08",
   "articles": [
+    {
+      "id": "b8355929da89",
+      "outletId": "rfi",
+      "headline": "Sénégal: le naufrage d’une pirogue de migrants a fait au moins 21 morts",
+      "url": "https://www.rfi.fr/fr/afrique/20261108-s%C3%A9n%C3%A9gal-le-naufrage-d-une-pirogue-de-migrants-a-fait-au-moins-21-morts",
+      "publishedAt": "2026-11-08T13:43:15.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/a33ff0e8-62ff-11ee-9052-005056a90321/w:1024/p:16x9/AP23277347978200.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "418effe647b0",
       "outletId": "liberation",
@@ -14,6 +25,17 @@
       "frontPage": false,
       "kind": "news",
       "section": "society"
+    },
+    {
+      "id": "6662c1b4cfa3",
+      "outletId": "france-24",
+      "headline": "Au large du Sénégal, au moins 21 personnes sont mortes dans le naufrage d'une pirogue de migrants",
+      "url": "https://www.france24.com/fr/afrique/20261108-au-large-du-s%C3%A9n%C3%A9gal-au-moins-21-personnes-sont-mortes-dans-le-naufrage-d-une-pirogue-de-migrants",
+      "publishedAt": "2026-11-08T12:26:00.000Z",
+      "imageUrl": "https://s.france24.com/media/display/8db004c0-db6f-11f1-9c7c-a575454bc579/w:1024/p:16x9/c9e8d80cbfc13f8f43d3833c67fbf17f6e5ccb25.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "bcbca16377cf",
@@ -50,7 +72,26 @@
     }
   ],
   "topicId": "1e67ff4471ae",
-  "titledArticleCount": 4,
-  "section": "society",
-  "everInEdition": true
+  "titledArticleCount": 6,
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Une embarcation transportant des migrants a chaviré au large du Sénégal, provoquant la mort d'au moins vingt et une personnes.",
+      "L'Obs précise que la gendarmerie sénégalaise a intercepté cent quarante-deux individus en situation irrégulière près de Dakar.",
+      "Les articles rappellent la dangerosité de la route atlantique vers l'Europe, empruntée sur des embarcations surchargées et vétustes."
+    ],
+    "centre": [
+      "Le naufrage d'une pirogue de migrants au large de Kébémer a causé le décès d'au moins vingt et une personnes.",
+      "Le ministère de l'Intérieur indique qu'un seul rescapé a été découvert par les services de secours.",
+      "Les autorités poursuivent les opérations de recherche pour retrouver d'éventuels survivants dans cette zone."
+    ]
+  },
+  "differences": [
+    "La gauche élargit la perspective du drame en soulignant l'ampleur générale de la crise migratoire maritime et en signalant une autre interception au large de Dakar.",
+    "Le centre focalise son traitement sur le bilan précis du naufrage, les opérations de recherche en cours et les informations communiquées par les autorités sénégalaises."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-08T14:01:17.656Z"
 }

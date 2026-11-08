@@ -6,6 +6,18 @@
   "storyDay": "2026-11-08",
   "articles": [
     {
+      "id": "1652883dd580",
+      "outletId": "ouest-france",
+      "headline": "Incendie : des départs de feu au Conseil départemental de Charente, la piste criminelle privilégiée",
+      "url": "https://www.ouest-france.fr/faits-divers/incendie/incendie-des-departs-de-feu-au-conseil-departemental-de-charente-la-piste-criminelle-privilegiee-131031a0-db78-11f1-a45f-49114163a350?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-08T13:45:46.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMTI5YjE2Y2I5NWU3OTkyMzQ0MDEyYjUzODgxN2ViMzg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ae20c4c73b17d4c6b10c6d005a73dcbe5c5759544797cbbbf11740b3aee4e020",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "bfd09344c902",
       "outletId": "le-monde",
       "headline": "En Charente, une enquête ouverte à la suite d’un incendie au conseil départemental",
@@ -66,5 +78,27 @@
   "topicId": "bdbccaa1a8ea",
   "titledArticleCount": 5,
   "section": "misc",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Une enquête a été ouverte après un incendie maîtrisé par les pompiers dans des locaux du Conseil départemental de Charente à Angoulême.",
+      "La préfecture privilégie l'origine criminelle du sinistre après la découverte de plusieurs foyers distincts dans une salle de la maison des solidarités."
+    ],
+    "centre": [
+      "La préfecture a annoncé l'ouverture d'une enquête suite à un incendie survenu dans les locaux du Conseil départemental de Charente à Angoulême.",
+      "L'origine du feu est qualifiée de criminelle après la constatation de départs de feu multiples."
+    ],
+    "droite": [
+      "Seize pompiers ont été mobilisés à Angoulême pour éteindre un incendie présentant au moins deux départs de feu distincts au conseil départemental de Charente.",
+      "Une enquête a été ouverte par les autorités qui privilégient la piste criminelle pour cet événement survenu un dimanche à l'aube."
+    ]
+  },
+  "differences": [
+    "Le camp de gauche met en avant l'action des secours et localise précisément les foyers d'incendie dans la maison des solidarités.",
+    "Le camp du centre adopte une approche strictement institutionnelle en reprenant les communiqués de la préfecture sur l'ouverture de l'enquête.",
+    "Le camp de droite insiste sur les aspects opérationnels de l'intervention en quantifiant précisément les moyens humains déployés par les pompiers."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-08T14:01:17.656Z"
 }
