@@ -6,13 +6,47 @@
   "storyDay": "2026-11-08",
   "articles": [
     {
+      "id": "0048e0eb68d2",
+      "outletId": "franceinfo",
+      "headline": "Un séisme de magnitude 5,7 dans le centre du Japon fait plusieurs blessés",
+      "url": "https://www.franceinfo.fr/monde/japon/un-seisme-de-magnitude-5-7-dans-le-centre-du-japon-fait-plusieurs-blesses_8273036.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-08T06:45:47.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/ZPK5SItvy6TseTpUB0upYadBow0/0x30:1024x606/432x243/filters:format(jpg)/2026/11/08/6af018e7aa39f072621171.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "6c041cc1e69c",
+      "outletId": "le-monde",
+      "headline": "Au Japon, un séisme de magnitude 5,7 fait plusieurs blessés",
+      "url": "https://www.lemonde.fr/planete/article/2026/11/08/au-japon-un-seisme-de-magnitude-5-7-fait-plusieurs-blesses_6808408_3244.html",
+      "publishedAt": "2026-11-08T06:25:19.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/08/239/0/3000/1500/644/322/60/0/540affa_ftp-1-kzoexlyqzp1o-afp-d6th2cq.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "907b1dad1113",
+      "outletId": "cnews",
+      "headline": "Japon : un séisme de magnitude 5,7 dans le centre fait plusieurs blessés",
+      "url": "https://www.cnews.fr/monde/2026-11-08/japon-un-seisme-de-magnitude-57-dans-le-centre-fait-plusieurs-blesses-1949930",
+      "publishedAt": "2026-11-08T05:20:41.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/053_ar-20261108045646_kinq1_001dsc_0330_045630750-taille1200_6af0085b393d9.jpg?h=45f0233a&itok=xRAxZkjZ",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "e9784ae13858",
       "outletId": "le-figaro",
       "headline": "Un séisme de magnitude 5,7 dans le centre du Japon fait plusieurs blessés",
       "url": "https://www.lefigaro.fr/international/un-seisme-de-magnitude-5-7-dans-le-centre-du-japon-fait-plusieurs-blesses-20261108",
       "publishedAt": "2026-11-08T04:25:59.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1682_crop/2026/11/08/89fee231dff787b10f71805f11451d7a72e94342fc025a002909bf7b4a2178eb.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -36,14 +70,38 @@
       "url": "https://www.ouest-france.fr/monde/japon/un-seisme-de-magnitude-5-7-touche-le-centre-du-japon-et-fait-plusieurs-blesses-3fc9318e-db27-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-08T04:06:48.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNDhhZWZkMDY3ODRkNGUwZWUwZjBjNjk1YzY0NWRhNTU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=3713067491e07ebd66b86a0789a55fb7feb902ff8faca6c64748515f24ed5b86",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
     }
   ],
   "topicId": "3fef539c7a64",
-  "titledArticleCount": 3,
+  "titledArticleCount": 6,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Un séisme de magnitude 5,7 a frappé le centre du Japon dans la nuit, localisé dans l'ouest de la préfecture de Shizuoka à environ 200 kilomètres de Tokyo.",
+      "Le tremblement de terre a fait plus d'une vingtaine de blessés, dont une femme âgée de 90 ans.",
+      "Le contexte géologique national a été rappelé, soulignant que le pays subit environ 18 % des séismes mondiaux en raison de sa position à la jonction de quatre plaques tectoniques."
+    ],
+    "centre": [
+      "Un séisme de magnitude 5,7 a secoué le centre du Japon, provoquant d'importants dégâts matériels.",
+      "Une vingtaine de personnes ont été blessées lors de cet événement sismique."
+    ],
+    "droite": [
+      "Un séisme de magnitude 5,7 est survenu à 40 kilomètres de profondeur dans l'ouest de la préfecture de Shizuoka, à 200 kilomètres de Tokyo, aux premières heures du dimanche 8 novembre.",
+      "L'Agence météorologique japonaise a confirmé l'événement, qui a entraîné des dégâts matériels et des perturbations dans les transports.",
+      "Les médias locaux, dont le journal Chunichi Shimbun et la chaîne Tokai TV, ont fait état d'au moins 24 blessés répartis entre la préfecture de Shizuoka et la préfecture voisine d'Aichi."
+    ]
+  },
+  "differences": [
+    "La gauche privilégie une approche contextuelle en rappelant la vulnérabilité structurelle du Japon face aux plaques tectoniques tout en documentant les profils des blessés.",
+    "Le centre livre un compte-rendu synthétique axé sur l'ampleur des dégâts matériels et le nombre de victimes.",
+    "La droite propose un suivi minutieux et chiffré en s'appuyant sur les données de l'Agence météorologique japonaise et des médias locaux."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-08T07:01:27.618Z"
 }
