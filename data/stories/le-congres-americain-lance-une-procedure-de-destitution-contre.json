@@ -6,6 +6,38 @@
   "storyDay": "2026-11-09",
   "articles": [
     {
+      "id": "fd33aff54937",
+      "outletId": "liberation",
+      "headline": "Etats-Unis : le ministre de la Défense visé par une procédure de destitution lancée au Congrès par un élu républicain",
+      "url": "https://www.liberation.fr/international/amerique/etats-unis-le-ministre-de-la-defense-vise-par-une-procedure-de-destitution-lancee-au-congres-par-un-elu-republicain-20261109_4Z6ELZJHVVCI7JAZBPMZBEGEXE/",
+      "publishedAt": "2026-11-09T20:50:06.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "e71a417693ae",
+      "outletId": "le-monde",
+      "headline": "Pete Hegseth, secrétaire à la défense de Donald Trump, visé par une procédure de destitution déclenchée par un élu républicain",
+      "url": "https://www.lemonde.fr/international/article/2026/11/09/pete-hegseth-secretaire-a-la-defense-de-donald-trump-vise-par-une-procedure-de-destitution-declenchee-par-un-elu-republicain_6808699_3210.html",
+      "publishedAt": "2026-11-09T20:33:13.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/09/403/0/4828/2414/644/322/60/0/222f98a_upload-1-ed00bnermr37-000-a9gz2g6.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "964218fcb336",
+      "outletId": "france-24",
+      "headline": "Le ministre américain de la Défense Pete Hegseth visé par une procédure de destitution",
+      "url": "https://www.france24.com/fr/am%C3%A9riques/20261109-%C3%A9tats-unis-ministre-d%C3%A9fense-pete-hegseth-vis%C3%A9-proc%C3%A9dure-destitution",
+      "publishedAt": "2026-11-09T20:28:53.000Z",
+      "imageUrl": "https://s.france24.com/media/display/3193d7d8-c644-11f1-b677-3774aeac812a/w:1024/p:16x9/AP26279700094442.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "2626dbe5637e",
       "outletId": "ouest-france",
       "headline": "Une procédure de destitution lancée au Congrès contre Pete Hegseth, le ministre américain de la Défense",
@@ -43,7 +75,31 @@
     }
   ],
   "topicId": "5f5662c22f32",
-  "titledArticleCount": 3,
+  "titledArticleCount": 6,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le député républicain Thomas Massie a déposé une résolution visant le ministre de la Défense Pete Hegseth pour sa gestion de la guerre en Iran.",
+      "Cette procédure d'impeachment pourrait être votée rapidement par la Chambre des représentants en raison de l'hostilité de certains élus républicains et de la percée démocrate aux midterms.",
+      "La destitution de Pete Hegseth par le Sénat apparaît toutefois improbable en raison de la majorité des deux tiers requise."
+    ],
+    "centre": [
+      "Thomas Massie a engagé une procédure de mise en accusation contre le ministre de la Défense Pete Hegseth en raison de sa conduite du conflit en Iran.",
+      "Fragilisé par la progression démocrate lors des élections de mi-mandat, le membre du cabinet de Donald Trump fait face à l'opposition de députés de son propre camp.",
+      "La résolution portée par le représentant républicain doit faire l'objet d'un vote à la Chambre des représentants au cours de la semaine."
+    ],
+    "droite": [
+      "Le représentant républicain Thomas Massie a initié une procédure d'impeachment à l'encontre du ministre américain de la Défense Pete Hegseth.",
+      "Cette démarche menée au Congrès émane d'un critique récurrent du président Donald Trump au sein de l'hémicycle."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur les chances de succès à la Chambre et l'obstacle du Sénat, tout en mentionnant le contexte politique des midterms.",
+    "Le centre insiste principalement sur les motivations de la procédure liées à la gestion de la guerre en Iran et sur la fragilité politique du ministre.",
+    "La droite adopte un angle factuel et minimaliste en se focalisant sur l'initiative du député Thomas Massie contre Pete Hegseth sans spéculer sur l'issue de la procédure."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-09T21:01:18.771Z"
 }

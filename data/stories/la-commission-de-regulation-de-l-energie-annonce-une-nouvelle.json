@@ -6,6 +6,29 @@
   "storyDay": "2026-11-09",
   "articles": [
     {
+      "id": "42820bb6a8b0",
+      "outletId": "humanite",
+      "headline": "Gaz : le prix de référence augmente encore de 5,8 % au 1er décembre, la hausse du SMIC sera donc « absorbée » selon Ian Brossat",
+      "url": "https://www.humanite.fr/-/-/gaz-le-prix-de-reference-augmente-encore-de-58-au-1er-decembre-la-hausse-du-smic-sera-donc-absorbee-selon-ian-brossat",
+      "publishedAt": "2026-11-09T15:46:39.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "bbcfc5f2ea50",
+      "outletId": "20-minutes",
+      "headline": "Vie chère : Le prix de référence du gaz augmentera (encore) de 5,8 % en décembre",
+      "url": "https://www.20minutes.fr/economie/4261706-20261109-vie-chere-prix-reference-gaz-augmentera-encore-5-8-decembre?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-09T15:22:11.000Z",
+      "imageUrl": "https://img.20mn.fr/2uRILtQWTkqH1qXXpAeMiyk/1200x768_photo-illustration-flambee-des-factures-de-gaz-07allilimages-dsc-4091-credit-mourad-allili-sipa-2604151449",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "265b6c705ba7",
       "outletId": "le-parisien",
       "headline": "Prix du gaz : les tarifs vont encore augmenter au 1er décembre",
@@ -64,26 +87,31 @@
     }
   ],
   "topicId": "ffc67dcde703",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "economy",
   "everInEdition": true,
   "summaries": {
+    "gauche": [
+      "Le prix repère de vente de gaz augmentera de 5,8 % au 1er décembre pour atteindre 206,26 euros TTC le mégawattheure en moyenne.",
+      "L'Humanité souligne que cette hausse va absorber entièrement la revalorisation du SMIC."
+    ],
     "centre": [
-      "La Commission de régulation de l'énergie officialise une augmentation de 5,8% du prix de référence du gaz applicable au premier décembre.",
-      "Cette mise à jour tarifaire représente un impact financier évalué à 16 euros toutes taxes comprises par mois en moyenne pour les abonnés concernés.",
-      "L'institution précise que cette évolution mensuelle consécutive est la conséquence directe des mouvements haussiers constatés sur les marchés gaziers."
+      "Le prix de référence du gaz progressera de 5,8 % au 1er décembre, constituant la quatrième hausse mensuelle consécutive.",
+      "Ouest-France évalue l'impact moyen à 16 euros TTC supplémentaires sur les factures pour les foyers concernés.",
+      "Le Parisien et BFMTV rapportent que cette augmentation découle de la remontée des cours sur les marchés en octobre."
     ],
     "droite": [
-      "Le tarif de référence du gaz enregistrera une hausse de 5,8% au premier décembre, s'établissant comme la quatrième augmentation mensuelle d'affilée selon le régulateur.",
-      "La présidente de la Commission de régulation de l'énergie, Emmanuelle Wargon, indique que la France subit un cours international en important 95% de sa ressource.",
-      "Cette situation reflète la contraction de l'offre consécutive à la crise survenue dans le détroit d'Ormuz."
+      "La Commission de régulation de l'énergie confirme une augmentation de 5,8 % du prix de référence du gaz au 1er décembre.",
+      "Europe 1 précise qu'il s'agit de la quatrième hausse mensuelle d'affilée, après des augmentations de 5,6 % en septembre, 6,3 % en octobre et 6,6 % en novembre.",
+      "La présidente de la CRE Emmanuelle Wargon attribue cette tendance aux tensions sur les marchés internationaux et à la baisse de l'offre liée à la crise dans le détroit d'Ormuz."
     ]
   },
   "differences": [
-    "Les médias du centre privilégient une approche purement utilitaire en détaillant l'impact chiffré concret sur la facture mensuelle des ménages.",
-    "Les médias de droite adoptent une perspective macroéconomique en insistant sur la récurrence des hausses mensuelles et en relayant l'explication géopolitique internationale."
+    "La gauche ancre la hausse du gaz dans l'actualité sociale en insistant sur son impact direct et négatif sur le pouvoir d'achat et le SMIC.",
+    "Le centre adopte un traitement purement factuel et utilitaire en détaillant l'impact chiffré sur les factures des ménages et la chronologie des hausses tarifaires.",
+    "La droite contextualise l'inflation en relayant les explications techniques du régulateur sur les marchés internationaux et la situation géopolitique."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-09T15:01:26.174Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-09T21:01:18.771Z"
 }
