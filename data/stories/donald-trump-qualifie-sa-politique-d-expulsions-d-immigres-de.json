@@ -6,6 +6,39 @@
   "storyDay": "2026-11-08",
   "articles": [
     {
+      "id": "78963752eb84",
+      "outletId": "franceinfo",
+      "headline": "Donald Trump reconnaît une politique d'expulsions d'immigrés \"trop dure\"",
+      "url": "https://www.franceinfo.fr/monde/usa/presidentielle/donald-trump/donald-trump-reconnait-une-politique-d-expulsions-d-immigres-trop-dure_8274197.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-09T08:36:16.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/Q9vFpJ73udtsfgnRDKsWP6gW9k0/0x0:1024x576/432x243/filters:format(jpg)/2026/11/09/6af1853045332432412694.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "63b7bf2059d5",
+      "outletId": "huffpost",
+      "headline": "Trump reconnaît avoir été « trop dur » sur l’immigration (mais un changement de cap semble peu probable)",
+      "url": "https://www.huffingtonpost.fr/international/article/trump-reconnait-avoir-ete-trop-dur-sur-l-immigration-mais-un-changement-de-cap-semble-peu-probable_354257.html",
+      "publishedAt": "2026-11-09T08:28:13.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/11/182/0/4423/2487/0/0/60/0/4e7b140_upload-1-bnzzlyss6k4j-afp-20261010-d2vp4e3-v1-highres-donaldtrumpparticipatesinarallyintennessee.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "86cb8befd01d",
+      "outletId": "france-24",
+      "headline": "Trump reconnaît une politique d'expulsions des immigrés \"trop dure\" après sa déroute électorale",
+      "url": "https://www.france24.com/fr/am%C3%A9riques/20261109-trump-reconna%C3%AEt-politique-expulsions-immigr%C3%A9s-trop-dure-apr%C3%A8s-d%C3%A9route-%C3%A9lectorale-%C3%A9tats-unis",
+      "publishedAt": "2026-11-09T08:13:49.000Z",
+      "imageUrl": "https://s.france24.com/media/display/d373e164-dc11-11f1-a96a-d18c5759e759/w:1024/p:16x9/AP26313093851055.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "cd91ee8c26bf",
       "outletId": "tf1-info",
       "headline": "Après sa déroute aux midterms, Trump reconnaît une politique d'expulsions d'immigrés \"trop dure\"",
@@ -121,7 +154,31 @@
     }
   ],
   "topicId": "1b74e8561c2b",
-  "titledArticleCount": 10,
+  "titledArticleCount": 13,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Donald Trump a qualifié sa politique migratoire de \"trop dure\" lors d'une interview télévisée sur CBS.",
+      "Cette déclaration fait suite à la défaite des républicains et à la mobilisation des électeurs hispaniques lors des élections de mi-mandat.",
+      "Libération et Le HuffPost soulignent qu'un changement concret de cap politique reste peu probable de la part de l'administration."
+    ],
+    "centre": [
+      "Donald Trump a reconnu une politique d'expulsions d'immigrés \"trop dure\" à la suite de la déroute du camp républicain aux élections de mi-mandat.",
+      "Le président américain n'a fourni aucune précision quant à une éventuelle modification de son approche sur ce dossier.",
+      "France 24 relève que cette prise de distance intervient alors même que Stephen Miller, artisan des expulsions massives, vient d'être nommé à un poste stratégique."
+    ],
+    "droite": [
+      "Donald Trump a reconnu devant la presse que sa politique de lutte contre l'immigration et d'expulsion des immigrés avait été \"trop dure\".",
+      "Le président américain concède que cette sévérité a pu l'ペnaliser et aller trop loin lors de la large défaite des midterms le 3 novembre."
+    ]
+  },
+  "differences": [
+    "La gauche insiste sur l'absence de véritable changement de cap politique à venir et analyse le vote des électeurs hispaniques contre Donald Trump.",
+    "Le centre contextualise la déclaration de Donald Trump en la liant directement à la défaite des républicains et à ses contradictions internes avec ses nominations.",
+    "La droite se concentre sur le constat d'échec électoral des midterms pour expliquer la reconnaissance tardive des excès de la politique migratoire."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 13,
+  "summarizedAt": "2026-11-09T09:01:20.671Z"
 }
