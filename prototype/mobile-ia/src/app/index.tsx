@@ -18,7 +18,7 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView as SafeAreaBottom } from 'react-native-safe-area-context';
-import { SORTS, type SortKey, sortOf } from '@/data';
+import { builtAt, SORTS, type SortKey, sortOf } from '@/data';
 import { usePalette } from '@/tokens';
 import { PrismeHeader, Segmented, StoryList } from '@/ui';
 
@@ -35,7 +35,9 @@ export default function Home() {
   const [variant, setVariant] = useState<VariantKey>('A');
   const [sort, setSort] = useState<SortKey>('brulant');
   const [refreshing, setRefreshing] = useState(false);
-  const [updatedAt, setUpdatedAt] = useState(() => new Date());
+  // Deterministic first stamp (fixture builtAt) so the web preview's
+  // server-rendered shell hydrates cleanly; refresh sets the wall clock.
+  const [updatedAt, setUpdatedAt] = useState(() => new Date(builtAt));
   const w = Dimensions.get('window').width;
 
   const active = sortOf(sort);
