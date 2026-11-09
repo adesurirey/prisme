@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-08T23:01:16.569Z",
+  "builtAt": "2026-11-09T00:01:20.897Z",
   "latestStories": [
     {
       "id": "97cccdbf9a27",
@@ -83,9 +83,10 @@
           "url": "https://www.lemonde.fr/international/article/2026/11/08/donald-trump-estime-maintenant-que-la-politique-americaine-d-expulsions-d-immigres-a-ete-trop-dure_6808473_3210.html",
           "publishedAt": "2026-11-08T22:49:11.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/07/119/0/5437/2718/644/322/60/0/0014c5f_ftp-1-71i47qhpf9s9-2303906772.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
-          "section": "world"
+          "section": "world",
+          "everFrontPage": true
         },
         {
           "id": "e1d147f49a24",
@@ -105,7 +106,7 @@
           "url": "https://www.ouest-france.fr/monde/etats-unis/donald-trump/donald-trump-reconnait-une-politique-dexpulsions-dimmigres-trop-dure-8bf976b0-dbb6-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-08T21:22:54.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZmFhNWVkZmNiMGE0OTFjZDAxMWE4N2FiMzY4YzIxOGI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=de2a0e16edbf00cf996ec7f1ac053c429e9688194b87c33efe428517df6eb3f0",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -124,6 +125,42 @@
       ],
       "topicId": "1b74e8561c2b",
       "titledArticleCount": 4,
+      "section": "world",
+      "everInEdition": true
+    },
+    {
+      "id": "0837a71d131b",
+      "slug": "le-pape-leon-xiv-rencontre-javier-milei-en-argentine-lors-de-sa",
+      "title": "Le pape Léon XIV rencontre Javier Milei en Argentine lors de sa tournée en Amérique du Sud",
+      "createdAt": "2026-11-09T00:01:20.897Z",
+      "storyDay": "2026-11-08",
+      "articles": [
+        {
+          "id": "0f89fc4f5e4f",
+          "outletId": "ouest-france",
+          "headline": "Face à Javier Milei, le pape appelle à mettre « l’économie au service de la personne » et à « chercher des compromis »",
+          "url": "https://www.ouest-france.fr/societe/religions/pape-leon-xiv/face-a-javier-milei-le-pape-appelle-a-mettre-leconomie-au-service-de-la-personne-et-a-chercher-des-compromis-1a71d70e-dbc4-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-08T23:54:53.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNzEyMDAwY2I2ZTNjODRlNTE5MGZlMGI2NDg2YzIyYWM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d01f0a0a55ac7f0c0a6bb53f6f2c0446fe6e2b132bd1a013f8b34732cf7dbb6c",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "67f2ec566040",
+          "outletId": "europe-1",
+          "headline": "Le pape Léon XIV arrive en Argentine, deuxième étape de sa tournée en Amérique du Sud",
+          "url": "https://www.europe1.fr/international/le-pape-leon-xiv-arrive-en-argentine-deuxieme-etape-de-sa-tournee-en-amerique-du-sud-1218380?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-08T21:14:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/08/22/020_2304176461_1_6af0eac938ad0.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "e57adda18ce5",
+      "titledArticleCount": 2,
       "section": "world",
       "everInEdition": true
     },
@@ -152,7 +189,7 @@
           "url": "https://www.ouest-france.fr/sport/football/monaco/ligue-1-une-dedicace-a-un-ami-apres-paris-brunner-un-monegasque-signe-une-nouvelle-celebration-polemique-ee42648a-dbb6-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-08T21:31:31.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExY2RiMjI5NmYyYTU1MzBjNTc3Y2FlODcwOWUwMzIzMjk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=22d162c9425a12b970eea20d9d5b2088fcefa84e76c318e9fbe1652bdcd392f5",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -990,6 +1027,64 @@
         }
       ],
       "topicId": "be9d8c6526b2",
+      "titledArticleCount": 4,
+      "section": "sport",
+      "everInEdition": true
+    },
+    {
+      "id": "ae1bfc8f55f5",
+      "slug": "l-om-bat-le-rc-lens-au-stade-bollaert-en-ligue-1",
+      "title": "L'OM bat le RC Lens au stade Bollaert en Ligue 1",
+      "createdAt": "2026-11-09T00:01:20.897Z",
+      "storyDay": "2026-11-08",
+      "articles": [
+        {
+          "id": "ffdca79383e7",
+          "outletId": "le-figaro",
+          "headline": "Ligue 1 : l’OM enfonce Lens et regarde vers le haut du classement",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-1/ligue-1-l-om-enfonce-lens-et-regarde-vers-le-haut-du-classement-20261108",
+          "publishedAt": "2026-11-08T21:39:44.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2662x1814_crop/2026/11/08/bb3ab735133409a1cf153eecbd771a84b028512bc47ca198989cd2c4610e2ae1.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "c99d7df6828c",
+          "outletId": "franceinfo",
+          "headline": "Victorieux à Bollaert, l'OM enfonce le RC Lens quatre jours après son naufrage contre Côme",
+          "url": "https://www.franceinfo.fr/sports/foot/ligue-1/victorieux-a-bollaert-l-om-enfonce-le-rc-lens-quatre-jours-apres-son-naufrage-contre-come_8273783.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-08T21:39:41.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/I7JzlV-_lUtfnPhQXLtqezQWUnU/0x0:4515x2539/432x243/filters:format(jpg)/2026/11/08/6af0e5a3e8b8d346408998.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "5b1ea9eab755",
+          "outletId": "bfmtv",
+          "headline": "Lens-OM: l'énorme boulette lensoise pour l'ouverture du score, scénario catastrophe après l'humiliation face à Côme",
+          "url": "https://rmcsport.bfmtv.com/football/ligue-1/lens-om-l-enorme-boulette-lensoise-pour-l-ouverture-du-score-scenario-catastrophe-apres-l-humiliation-face-a-come_AV-202611080408.html",
+          "publishedAt": "2026-11-08T20:01:06.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/7jKeh7fuyX2eVgFtw_pTqGZ7HQ0=/0x212:2048x1364/800x0/images/L-entraineur-de-Lens-Yannick-Cahuzac-8-novembre-2026-2380402.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "33335dc60351",
+          "outletId": "20-minutes",
+          "headline": "EN DIRECT Lens-OM : Udol pas verni, les Marseillais pas loin de se faire surpendrre",
+          "url": "https://www.20minutes.fr/sport/football/4261272-20261108-direct-lens-om-apres-9-buts-encaisses-c1-sang-or-doivent-revanche-public?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-08T18:02:36.000Z",
+          "imageUrl": "https://img.20mn.fr/_soBQzliSsOK2nBy_QjqRik/1200x768_florian-thauvin-et-les-lensois-affrontent-une-equipe-marseillaise-en-pleine-renaissance-dimanche-soir",
+          "frontPage": true,
+          "kind": "live",
+          "section": "sport",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "ae1bfc8f55f5",
       "titledArticleCount": 4,
       "section": "sport",
       "everInEdition": true
@@ -2346,10 +2441,44 @@
     {
       "id": "1e67ff4471ae",
       "slug": "au-large-du-senegal-le-naufrage-d-une-pirogue-de-migrants-fait",
-      "title": "Le naufrage d'une pirogue de migrants au large du Sénégal fait au moins 21 morts",
+      "title": "Le naufrage d'une pirogue de migrants au large du Sénégal fait au moins 35 morts",
       "createdAt": "2026-11-08T13:01:16.911Z",
       "storyDay": "2026-11-08",
       "articles": [
+        {
+          "id": "33356ba00278",
+          "outletId": "le-parisien",
+          "headline": "Au large du Sénégal, une pirogue fait naufrage, provoquant la mort d’au moins 35 migrants",
+          "url": "https://www.leparisien.fr/international/au-large-du-senegal-une-pirogue-fait-naufrage-provoquant-la-mort-dau-moins-35-migrants-09-11-2026-5EDPR33ONBEQ5LZGOXJFHRMJEE.php",
+          "publishedAt": "2026-11-09T00:01:20.897Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "01dba5d19d90",
+          "outletId": "ouest-france",
+          "headline": "Au moins 35 morts au Sénégal dans le naufrage d’une pirogue de migrants",
+          "url": "https://www.ouest-france.fr/monde/senegal/au-moins-35-morts-au-senegal-dans-le-naufrage-dune-pirogue-de-migrants-e28aea26-dbc6-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-08T23:17:20.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMTQyZjgzMjEwODM5YTQ2MTZmMjgzOTkwMGZhNjlkZTU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=035d00338a51c7e6964271ff6e337cb83527e01773c6f6759ae5405ff300e92a",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "19aac9abed6d",
+          "outletId": "le-figaro",
+          "headline": "Sénégal: au moins 35 morts dans le naufrage d'une pirogue de migrants",
+          "url": "https://www.lefigaro.fr/international/senegal-au-moins-35-morts-dans-le-naufrage-d-une-pirogue-de-migrants-20261109",
+          "publishedAt": "2026-11-08T23:01:38.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/09/87cfcb2e36a0a5e81cca3632f71c7b0b15e13bd60fd1f253d8d6a6e417f3d867.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
         {
           "id": "00740e2e59fa",
           "outletId": "le-monde",
@@ -2439,28 +2568,34 @@
         }
       ],
       "topicId": "1e67ff4471ae",
-      "titledArticleCount": 8,
+      "titledArticleCount": 11,
       "section": "world",
       "everInEdition": true,
       "summaries": {
         "gauche": [
-          "Le gouvernement sénégalais a annoncé un bilan d'une vingtaine de morts après qu'une embarcation transportant des migrants a fait naufrage au large de Kébémer, dans le nord-ouest du pays.",
-          "Ce nouveau drame s'inscrit dans le cadre des traversées clandestines vers l'Europe via la route périlleuse de l'Atlantique, à bord d'embarcations surchargées.",
-          "L'Obs signale en outre que la gendarmerie sénégalaise a intercepté 142 migrants clandestins au large de Dakar."
+          "Le naufrage d'une embarcation de migrants au large de Kébémer, dans le nord-ouest du Sénégal, a provoqué la mort d'au moins 21 personnes.",
+          "Le gouvernement sénégalais a officialisé ce bilan provisoire un samedi, tandis que les opérations de recherche se poursuivent pour retrouver d'éventuels survivants.",
+          "Ce drame s'ajoute aux milliers de décès recensés sur la route de l'Atlantique et des Canaries, empruntée par des embarcations surchargées et vétustes.",
+          "L'Obs signale en parallèle l'interception de 142 migrants clandestins au large de Dakar par la gendarmerie sénégalaise."
         ],
         "centre": [
-          "Un naufrage survenu au large de Kébémer, sur la côte nord-ouest du Sénégal, a causé la mort d'au moins 21 personnes selon les autorités.",
-          "Les recherches se poursuivent activement pour retrouver d'éventuels survivants de cette embarcation clandestine.",
-          "Le ministère de l'Intérieur a indiqué qu'un seul rescapé avait été secouru à la suite de ce drame sur la route migratoire atlantique."
+          "Une pirogue transportant des migrants a fait naufrage au large du Sénégal, causant la mort d'au moins 21 à 35 personnes selon les bilans provisoires actualisés.",
+          "Les secouristes et les autorités locales poursuivent les recherches en mer pour retrouver d'éventuels survivants après ce drame survenu au large de Kébémer.",
+          "La route maritime de l'Atlantique vers l'Europe continue d'être le théâtre de tragédies à répétition en raison de la vétusté des embarcations."
+        ],
+        "droite": [
+          "Le naufrage d'une embarcation de migrants au large des côtes sénégalaises a entraîné la mort d'au moins 35 personnes.",
+          "Ce nouveau drame migratoire met en lumière les risques persistants de la traversée clandestine vers l'Europe par la voie maritime atlantique."
         ]
       },
       "differences": [
-        "La gauche insiste sur le contexte général dramatique des routes migratoires vers l'Europe et intègre des informations complémentaires sur d'autres interceptions de migrants en mer.",
-        "Le centre se focalise précisément sur le bilan chiffré des autorités, les opérations de recherche en cours et la situation du seul rescapé retrouvé."
+        "La gauche chiffre le bilan à au moins 21 morts en se focalisant sur le drame humain et structurel de la route migratoire atlantique.",
+        "Le centre oscille entre 21 et 35 morts selon l'évolution des bilans des autorités et met l'accent sur l'urgence des opérations de secours en mer.",
+        "La droite retient directement le bilan le plus élevé de 35 décès en traitant l'événement sous l'angle de la catastrophe migratoire au large du Sénégal."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 8,
-      "summarizedAt": "2026-11-08T19:01:20.724Z"
+      "summarizedArticleCount": 11,
+      "summarizedAt": "2026-11-09T00:01:20.897Z"
     },
     {
       "id": "bdbccaa1a8ea",
@@ -3771,6 +3906,165 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 13,
       "summarizedAt": "2026-11-08T13:01:16.911Z"
+    },
+    {
+      "id": "1e67ff4471ae",
+      "slug": "au-large-du-senegal-le-naufrage-d-une-pirogue-de-migrants-fait",
+      "title": "Le naufrage d'une pirogue de migrants au large du Sénégal fait au moins 35 morts",
+      "createdAt": "2026-11-08T13:01:16.911Z",
+      "storyDay": "2026-11-08",
+      "articles": [
+        {
+          "id": "33356ba00278",
+          "outletId": "le-parisien",
+          "headline": "Au large du Sénégal, une pirogue fait naufrage, provoquant la mort d’au moins 35 migrants",
+          "url": "https://www.leparisien.fr/international/au-large-du-senegal-une-pirogue-fait-naufrage-provoquant-la-mort-dau-moins-35-migrants-09-11-2026-5EDPR33ONBEQ5LZGOXJFHRMJEE.php",
+          "publishedAt": "2026-11-09T00:01:20.897Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "01dba5d19d90",
+          "outletId": "ouest-france",
+          "headline": "Au moins 35 morts au Sénégal dans le naufrage d’une pirogue de migrants",
+          "url": "https://www.ouest-france.fr/monde/senegal/au-moins-35-morts-au-senegal-dans-le-naufrage-dune-pirogue-de-migrants-e28aea26-dbc6-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-08T23:17:20.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMTQyZjgzMjEwODM5YTQ2MTZmMjgzOTkwMGZhNjlkZTU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=035d00338a51c7e6964271ff6e337cb83527e01773c6f6759ae5405ff300e92a",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "19aac9abed6d",
+          "outletId": "le-figaro",
+          "headline": "Sénégal: au moins 35 morts dans le naufrage d'une pirogue de migrants",
+          "url": "https://www.lefigaro.fr/international/senegal-au-moins-35-morts-dans-le-naufrage-d-une-pirogue-de-migrants-20261109",
+          "publishedAt": "2026-11-08T23:01:38.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/09/87cfcb2e36a0a5e81cca3632f71c7b0b15e13bd60fd1f253d8d6a6e417f3d867.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "00740e2e59fa",
+          "outletId": "le-monde",
+          "headline": "Sénégal : au moins 34 morts dans le naufrage d’une pirogue de migrants",
+          "url": "https://www.lemonde.fr/afrique/article/2026/11/08/senegal-au-moins-34-morts-dans-le-naufrage-d-une-pirogue-de-migrants_6808424_3213.html",
+          "publishedAt": "2026-11-08T18:54:52.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/08/500/0/6000/3000/644/322/60/0/48a2b16_upload-1-jsjw1sfry2ut-2025-07-01t222856z-1746893655-rc2vdfaidnhr-rtrmadp-3-migration-senegal-gambia-pirogue.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "b8355929da89",
+          "outletId": "rfi",
+          "headline": "Sénégal: le naufrage d’une pirogue de migrants a fait au moins 21 morts",
+          "url": "https://www.rfi.fr/fr/afrique/20261108-s%C3%A9n%C3%A9gal-le-naufrage-d-une-pirogue-de-migrants-a-fait-au-moins-21-morts",
+          "publishedAt": "2026-11-08T13:43:15.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/a33ff0e8-62ff-11ee-9052-005056a90321/w:1024/p:16x9/AP23277347978200.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "1ba78173a2d8",
+          "outletId": "humanite",
+          "headline": "Sénégal : au moins 21 personnes meurent lors du naufrage d’une pirogue transportant des migrants",
+          "url": "https://www.humanite.fr/monde/accueil-des-migrants/senegal-au-moins-21-personnes-meurent-lors-du-naufrage-dune-pirogue-transportant-des-migrants",
+          "publishedAt": "2026-11-08T13:30:00.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/000_D66A9G3.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "418effe647b0",
+          "outletId": "liberation",
+          "headline": "Au large du Sénégal, une pirogue fait naufrage, au moins 21 morts",
+          "url": "https://www.liberation.fr/international/afrique/au-large-du-senegal-une-pirogue-fait-naufrage-au-moins-21-morts-20261108_L7XTUALPAFCO5D6E4IPYUUL2VA/",
+          "publishedAt": "2026-11-08T12:48:14.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "6662c1b4cfa3",
+          "outletId": "france-24",
+          "headline": "Au large du Sénégal, au moins 21 personnes sont mortes dans le naufrage d'une pirogue de migrants",
+          "url": "https://www.france24.com/fr/afrique/20261108-au-large-du-s%C3%A9n%C3%A9gal-au-moins-21-personnes-sont-mortes-dans-le-naufrage-d-une-pirogue-de-migrants",
+          "publishedAt": "2026-11-08T12:26:00.000Z",
+          "imageUrl": "https://s.france24.com/media/display/8db004c0-db6f-11f1-9c7c-a575454bc579/w:1024/p:16x9/c9e8d80cbfc13f8f43d3833c67fbf17f6e5ccb25.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "bcbca16377cf",
+          "outletId": "lobs",
+          "headline": "Sénégal : le naufrage d’une pirogue de migrants fait au moins 21 morts",
+          "url": "https://www.nouvelobs.com/monde/20261108.OBS119957/senegal-le-naufrage-d-une-pirogue-de-migrants-fait-au-moins-21-morts.html",
+          "publishedAt": "2026-11-08T12:24:20.000Z",
+          "imageUrl": "https://focus.nouvelobs.com/2026/11/08/0/1/1021/681/0/0/60/0/7f2673e_upload-1-aeyfrsuep7j4-senegal-2023-afp-000-33pv3xz.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "790ab203db32",
+          "outletId": "le-monde",
+          "headline": "Sénégal : 21 morts dans le naufrage d’une pirogue de migrants",
+          "url": "https://www.lemonde.fr/afrique/article/2026/11/08/senegal-21-morts-dans-le-naufrage-d-une-pirogue-de-migrants_6808424_3212.html",
+          "publishedAt": "2026-11-08T11:23:00.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/08/500/0/6000/3000/644/322/60/0/48a2b16_upload-1-jsjw1sfry2ut-2025-07-01t222856z-1746893655-rc2vdfaidnhr-rtrmadp-3-migration-senegal-gambia-pirogue.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "e395d53968c6",
+          "outletId": "franceinfo",
+          "headline": "Au large du Sénégal, 21 personnes sont mortes dans le naufrage d'une pirogue de migrants",
+          "url": "https://www.franceinfo.fr/monde/afrique/senegal/au-large-du-senegal-21-personnes-sont-mortes-dans-le-naufrage-d-une-pirogue-de-migrants_8273174.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-08T10:01:52.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/tCpkSLAY-3nPXW6wKHgNZ1r8i2c/0x437:4200x2800/432x243/filters:format(jpg)/2026/11/08/6af046d6379ea647615467.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "1e67ff4471ae",
+      "titledArticleCount": 11,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le naufrage d'une embarcation de migrants au large de Kébémer, dans le nord-ouest du Sénégal, a provoqué la mort d'au moins 21 personnes.",
+          "Le gouvernement sénégalais a officialisé ce bilan provisoire un samedi, tandis que les opérations de recherche se poursuivent pour retrouver d'éventuels survivants.",
+          "Ce drame s'ajoute aux milliers de décès recensés sur la route de l'Atlantique et des Canaries, empruntée par des embarcations surchargées et vétustes.",
+          "L'Obs signale en parallèle l'interception de 142 migrants clandestins au large de Dakar par la gendarmerie sénégalaise."
+        ],
+        "centre": [
+          "Une pirogue transportant des migrants a fait naufrage au large du Sénégal, causant la mort d'au moins 21 à 35 personnes selon les bilans provisoires actualisés.",
+          "Les secouristes et les autorités locales poursuivent les recherches en mer pour retrouver d'éventuels survivants après ce drame survenu au large de Kébémer.",
+          "La route maritime de l'Atlantique vers l'Europe continue d'être le théâtre de tragédies à répétition en raison de la vétusté des embarcations."
+        ],
+        "droite": [
+          "Le naufrage d'une embarcation de migrants au large des côtes sénégalaises a entraîné la mort d'au moins 35 personnes.",
+          "Ce nouveau drame migratoire met en lumière les risques persistants de la traversée clandestine vers l'Europe par la voie maritime atlantique."
+        ]
+      },
+      "differences": [
+        "La gauche chiffre le bilan à au moins 21 morts en se focalisant sur le drame humain et structurel de la route migratoire atlantique.",
+        "Le centre oscille entre 21 et 35 morts selon l'évolution des bilans des autorités et met l'accent sur l'urgence des opérations de secours en mer.",
+        "La droite retient directement le bilan le plus élevé de 35 décès en traitant l'événement sous l'angle de la catastrophe migratoire au large du Sénégal."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 11,
+      "summarizedAt": "2026-11-09T00:01:20.897Z"
     },
     {
       "id": "40017fa5c619",
@@ -5662,9 +5956,10 @@
           "url": "https://www.lemonde.fr/international/article/2026/11/08/donald-trump-estime-maintenant-que-la-politique-americaine-d-expulsions-d-immigres-a-ete-trop-dure_6808473_3210.html",
           "publishedAt": "2026-11-08T22:49:11.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/07/119/0/5437/2718/644/322/60/0/0014c5f_ftp-1-71i47qhpf9s9-2303906772.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
-          "section": "world"
+          "section": "world",
+          "everFrontPage": true
         },
         {
           "id": "e1d147f49a24",
@@ -5684,7 +5979,7 @@
           "url": "https://www.ouest-france.fr/monde/etats-unis/donald-trump/donald-trump-reconnait-une-politique-dexpulsions-dimmigres-trop-dure-8bf976b0-dbb6-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-08T21:22:54.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZmFhNWVkZmNiMGE0OTFjZDAxMWE4N2FiMzY4YzIxOGI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=de2a0e16edbf00cf996ec7f1ac053c429e9688194b87c33efe428517df6eb3f0",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -6441,6 +6736,64 @@
       "everInEdition": true
     },
     {
+      "id": "ae1bfc8f55f5",
+      "slug": "l-om-bat-le-rc-lens-au-stade-bollaert-en-ligue-1",
+      "title": "L'OM bat le RC Lens au stade Bollaert en Ligue 1",
+      "createdAt": "2026-11-09T00:01:20.897Z",
+      "storyDay": "2026-11-08",
+      "articles": [
+        {
+          "id": "ffdca79383e7",
+          "outletId": "le-figaro",
+          "headline": "Ligue 1 : l’OM enfonce Lens et regarde vers le haut du classement",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-1/ligue-1-l-om-enfonce-lens-et-regarde-vers-le-haut-du-classement-20261108",
+          "publishedAt": "2026-11-08T21:39:44.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2662x1814_crop/2026/11/08/bb3ab735133409a1cf153eecbd771a84b028512bc47ca198989cd2c4610e2ae1.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "c99d7df6828c",
+          "outletId": "franceinfo",
+          "headline": "Victorieux à Bollaert, l'OM enfonce le RC Lens quatre jours après son naufrage contre Côme",
+          "url": "https://www.franceinfo.fr/sports/foot/ligue-1/victorieux-a-bollaert-l-om-enfonce-le-rc-lens-quatre-jours-apres-son-naufrage-contre-come_8273783.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-08T21:39:41.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/I7JzlV-_lUtfnPhQXLtqezQWUnU/0x0:4515x2539/432x243/filters:format(jpg)/2026/11/08/6af0e5a3e8b8d346408998.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "5b1ea9eab755",
+          "outletId": "bfmtv",
+          "headline": "Lens-OM: l'énorme boulette lensoise pour l'ouverture du score, scénario catastrophe après l'humiliation face à Côme",
+          "url": "https://rmcsport.bfmtv.com/football/ligue-1/lens-om-l-enorme-boulette-lensoise-pour-l-ouverture-du-score-scenario-catastrophe-apres-l-humiliation-face-a-come_AV-202611080408.html",
+          "publishedAt": "2026-11-08T20:01:06.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/7jKeh7fuyX2eVgFtw_pTqGZ7HQ0=/0x212:2048x1364/800x0/images/L-entraineur-de-Lens-Yannick-Cahuzac-8-novembre-2026-2380402.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "33335dc60351",
+          "outletId": "20-minutes",
+          "headline": "EN DIRECT Lens-OM : Udol pas verni, les Marseillais pas loin de se faire surpendrre",
+          "url": "https://www.20minutes.fr/sport/football/4261272-20261108-direct-lens-om-apres-9-buts-encaisses-c1-sang-or-doivent-revanche-public?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-08T18:02:36.000Z",
+          "imageUrl": "https://img.20mn.fr/_soBQzliSsOK2nBy_QjqRik/1200x768_florian-thauvin-et-les-lensois-affrontent-une-equipe-marseillaise-en-pleine-renaissance-dimanche-soir",
+          "frontPage": true,
+          "kind": "live",
+          "section": "sport",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "ae1bfc8f55f5",
+      "titledArticleCount": 4,
+      "section": "sport",
+      "everInEdition": true
+    },
+    {
       "id": "0e6d0d80da1d",
       "slug": "laurent-wauquiez-reclame-un-candidat-unique-de-la-droite-avant",
       "title": "Présidentielle 2027 : Laurent Wauquiez réclame un candidat unique de la droite avant Noël",
@@ -6554,125 +6907,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 6,
       "summarizedAt": "2026-11-08T17:01:20.352Z"
-    },
-    {
-      "id": "1e67ff4471ae",
-      "slug": "au-large-du-senegal-le-naufrage-d-une-pirogue-de-migrants-fait",
-      "title": "Le naufrage d'une pirogue de migrants au large du Sénégal fait au moins 21 morts",
-      "createdAt": "2026-11-08T13:01:16.911Z",
-      "storyDay": "2026-11-08",
-      "articles": [
-        {
-          "id": "00740e2e59fa",
-          "outletId": "le-monde",
-          "headline": "Sénégal : au moins 34 morts dans le naufrage d’une pirogue de migrants",
-          "url": "https://www.lemonde.fr/afrique/article/2026/11/08/senegal-au-moins-34-morts-dans-le-naufrage-d-une-pirogue-de-migrants_6808424_3213.html",
-          "publishedAt": "2026-11-08T18:54:52.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/08/500/0/6000/3000/644/322/60/0/48a2b16_upload-1-jsjw1sfry2ut-2025-07-01t222856z-1746893655-rc2vdfaidnhr-rtrmadp-3-migration-senegal-gambia-pirogue.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "b8355929da89",
-          "outletId": "rfi",
-          "headline": "Sénégal: le naufrage d’une pirogue de migrants a fait au moins 21 morts",
-          "url": "https://www.rfi.fr/fr/afrique/20261108-s%C3%A9n%C3%A9gal-le-naufrage-d-une-pirogue-de-migrants-a-fait-au-moins-21-morts",
-          "publishedAt": "2026-11-08T13:43:15.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/a33ff0e8-62ff-11ee-9052-005056a90321/w:1024/p:16x9/AP23277347978200.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "1ba78173a2d8",
-          "outletId": "humanite",
-          "headline": "Sénégal : au moins 21 personnes meurent lors du naufrage d’une pirogue transportant des migrants",
-          "url": "https://www.humanite.fr/monde/accueil-des-migrants/senegal-au-moins-21-personnes-meurent-lors-du-naufrage-dune-pirogue-transportant-des-migrants",
-          "publishedAt": "2026-11-08T13:30:00.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/000_D66A9G3.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "418effe647b0",
-          "outletId": "liberation",
-          "headline": "Au large du Sénégal, une pirogue fait naufrage, au moins 21 morts",
-          "url": "https://www.liberation.fr/international/afrique/au-large-du-senegal-une-pirogue-fait-naufrage-au-moins-21-morts-20261108_L7XTUALPAFCO5D6E4IPYUUL2VA/",
-          "publishedAt": "2026-11-08T12:48:14.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "6662c1b4cfa3",
-          "outletId": "france-24",
-          "headline": "Au large du Sénégal, au moins 21 personnes sont mortes dans le naufrage d'une pirogue de migrants",
-          "url": "https://www.france24.com/fr/afrique/20261108-au-large-du-s%C3%A9n%C3%A9gal-au-moins-21-personnes-sont-mortes-dans-le-naufrage-d-une-pirogue-de-migrants",
-          "publishedAt": "2026-11-08T12:26:00.000Z",
-          "imageUrl": "https://s.france24.com/media/display/8db004c0-db6f-11f1-9c7c-a575454bc579/w:1024/p:16x9/c9e8d80cbfc13f8f43d3833c67fbf17f6e5ccb25.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "bcbca16377cf",
-          "outletId": "lobs",
-          "headline": "Sénégal : le naufrage d’une pirogue de migrants fait au moins 21 morts",
-          "url": "https://www.nouvelobs.com/monde/20261108.OBS119957/senegal-le-naufrage-d-une-pirogue-de-migrants-fait-au-moins-21-morts.html",
-          "publishedAt": "2026-11-08T12:24:20.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/11/08/0/1/1021/681/0/0/60/0/7f2673e_upload-1-aeyfrsuep7j4-senegal-2023-afp-000-33pv3xz.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "790ab203db32",
-          "outletId": "le-monde",
-          "headline": "Sénégal : 21 morts dans le naufrage d’une pirogue de migrants",
-          "url": "https://www.lemonde.fr/afrique/article/2026/11/08/senegal-21-morts-dans-le-naufrage-d-une-pirogue-de-migrants_6808424_3212.html",
-          "publishedAt": "2026-11-08T11:23:00.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/08/500/0/6000/3000/644/322/60/0/48a2b16_upload-1-jsjw1sfry2ut-2025-07-01t222856z-1746893655-rc2vdfaidnhr-rtrmadp-3-migration-senegal-gambia-pirogue.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "e395d53968c6",
-          "outletId": "franceinfo",
-          "headline": "Au large du Sénégal, 21 personnes sont mortes dans le naufrage d'une pirogue de migrants",
-          "url": "https://www.franceinfo.fr/monde/afrique/senegal/au-large-du-senegal-21-personnes-sont-mortes-dans-le-naufrage-d-une-pirogue-de-migrants_8273174.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-08T10:01:52.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/tCpkSLAY-3nPXW6wKHgNZ1r8i2c/0x437:4200x2800/432x243/filters:format(jpg)/2026/11/08/6af046d6379ea647615467.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "1e67ff4471ae",
-      "titledArticleCount": 8,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le gouvernement sénégalais a annoncé un bilan d'une vingtaine de morts après qu'une embarcation transportant des migrants a fait naufrage au large de Kébémer, dans le nord-ouest du pays.",
-          "Ce nouveau drame s'inscrit dans le cadre des traversées clandestines vers l'Europe via la route périlleuse de l'Atlantique, à bord d'embarcations surchargées.",
-          "L'Obs signale en outre que la gendarmerie sénégalaise a intercepté 142 migrants clandestins au large de Dakar."
-        ],
-        "centre": [
-          "Un naufrage survenu au large de Kébémer, sur la côte nord-ouest du Sénégal, a causé la mort d'au moins 21 personnes selon les autorités.",
-          "Les recherches se poursuivent activement pour retrouver d'éventuels survivants de cette embarcation clandestine.",
-          "Le ministère de l'Intérieur a indiqué qu'un seul rescapé avait été secouru à la suite de ce drame sur la route migratoire atlantique."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur le contexte général dramatique des routes migratoires vers l'Europe et intègre des informations complémentaires sur d'autres interceptions de migrants en mer.",
-        "Le centre se focalise précisément sur le bilan chiffré des autorités, les opérations de recherche en cours et la situation du seul rescapé retrouvé."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 8,
-      "summarizedAt": "2026-11-08T19:01:20.724Z"
     },
     {
       "id": "d86c9443e963",
@@ -7289,7 +7523,7 @@
           "url": "https://www.ouest-france.fr/sport/football/monaco/ligue-1-une-dedicace-a-un-ami-apres-paris-brunner-un-monegasque-signe-une-nouvelle-celebration-polemique-ee42648a-dbb6-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-08T21:31:31.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExY2RiMjI5NmYyYTU1MzBjNTc3Y2FlODcwOWUwMzIzMjk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=22d162c9425a12b970eea20d9d5b2088fcefa84e76c318e9fbe1652bdcd392f5",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -7417,148 +7651,39 @@
       "everInEdition": true
     },
     {
-      "id": "f54f4af8c4cd",
-      "slug": "deux-manifestants-portent-plainte-contre-des-policiers-pour",
-      "title": "Deux manifestants portent plainte contre des policiers pour violences aggravées et agression sexuelle à Paris après la mobilisation du 31 octobre",
-      "createdAt": "2026-11-08T17:01:20.352Z",
+      "id": "0837a71d131b",
+      "slug": "le-pape-leon-xiv-rencontre-javier-milei-en-argentine-lors-de-sa",
+      "title": "Le pape Léon XIV rencontre Javier Milei en Argentine lors de sa tournée en Amérique du Sud",
+      "createdAt": "2026-11-09T00:01:20.897Z",
       "storyDay": "2026-11-08",
       "articles": [
         {
-          "id": "2742044db4c6",
-          "outletId": "liberation",
-          "headline": "«Ça va être fun, y a pas de caméra dans la bagnole» : deux plaintes déposées à Paris contre des policiers pour violences et agression sexuelle",
-          "url": "https://www.liberation.fr/societe/police-justice/ca-va-etre-fun-y-a-pas-de-camera-dans-la-bagnole-deux-plaintes-deposees-a-paris-contre-des-policiers-pour-violences-et-agression-sexuelle-20261108_XZ3J375KE5H7HFIU7PTNLZNOLI/",
-          "publishedAt": "2026-11-08T17:52:28.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "7645a1b5de48",
-          "outletId": "le-parisien",
-          "headline": "Deux manifestants portent plainte contre des policiers pour violences et agression sexuelle à Paris",
-          "url": "https://www.leparisien.fr/faits-divers/deux-manifestants-portent-plainte-contre-des-policiers-pour-violences-et-agression-sexuelle-a-paris-08-11-2026-HH6BL5J44VDPVA7AKOI4WXN2SI.php",
-          "publishedAt": "2026-11-08T17:01:20.352Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "83f42d69527c",
+          "id": "0f89fc4f5e4f",
           "outletId": "ouest-france",
-          "headline": "Manifestation du 31 octobre : plaintes de deux manifestants contre des policiers pour violences et agression sexuelle",
-          "url": "https://www.ouest-france.fr/societe/manifestation/manifestation-du-31-octobre-plaintes-de-deux-manifestants-contre-des-policiers-pour-violences-et-agression-sexuelle-a282eba8-db8b-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-08T16:30:23.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNGI4YTBkYmFiY2Y2NThhNjM4NzhmYWMyMmU2NDQ3YjE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d8c764ca6968a0a6f1e7de22e0b7e0a776916a48c1bf5bc32ffa7ed444e8307c",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "75afe76ac50a",
-          "outletId": "humanite",
-          "headline": "Testicules serrés, interrogatoire totalement nu… Deux manifestants portent plainte contre des policiers pour violences et agression sexuelle en marge de la manifestation du 31 octobre",
-          "url": "https://www.humanite.fr/societe/mouvement-lyceen/testicules-serres-interrogatoire-totalement-nu-deux-manifestants-portent-plainte-contre-des-policiers-pour-violences-et-agression-sexuelle-en-marge-de-la-manifestation-du-31-octobre",
-          "publishedAt": "2026-11-08T16:03:05.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/000_D4ZY6KA.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "d155bf0819c4",
-          "outletId": "lobs",
-          "headline": "Deux plaintes contre des policiers pour violences aggravées et agression sexuelle, après la mobilisation du 31 octobre",
-          "url": "https://www.nouvelobs.com/social/20261108.OBS119962/deux-plaintes-contre-des-policiers-pour-violences-aggravees-et-agression-sexuelle-apres-la-mobilisation-du-31-octobre.html",
-          "publishedAt": "2026-11-08T15:03:43.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/11/08/0/0/1024/682/0/0/60/0/3fa8c85_upload-1-wkrll7jtpr6o-080-hl-pcockpit-3357686.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "topicId": "f54f4af8c4cd",
-      "titledArticleCount": 5,
-      "section": "misc",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Deux manifestants arrêtés le 31 octobre à Paris portent plainte pour violences et agression sexuelle commises par des policiers.",
-          "Les plaignants contestent les accusations de violences portées contre eux et décrivent des brutalités subies lors de l'arrestation et en commissariat.",
-          "L'Humanité précise que les plaintes ont été déposées le mercredi 4 novembre et évoque des actes précis comme l'interrogatoire nu."
-        ],
-        "centre": [
-          "Deux manifestants interpellés en marge de la mobilisation du 31 octobre à Paris ont déposé plainte contre des policiers.",
-          "Les forces de l'ordre sont visées par des accusations de violences aggravées et d'agression sexuelle.",
-          "Les manifestants plaignants étaient initialement accusés d'avoir frappé des membres des forces de l'ordre."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur la gravité des sévices décrits et détaille les conditions des interpellations en citant des faits précis.",
-        "Le centre adopte une approche factuelle et équilibrée en rappelant simultanément la procédure des manifestants et les accusations initiales les visant."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 5,
-      "summarizedAt": "2026-11-08T18:01:20.194Z"
-    },
-    {
-      "id": "e52753153876",
-      "slug": "les-trois-policiers-impliques-dans-l-affaire-michel-zecler-sont",
-      "title": "Les trois policiers impliqués dans l'affaire Michel Zecler jugés devant une cour criminelle",
-      "createdAt": "2026-11-08T18:01:20.194Z",
-      "storyDay": "2026-11-08",
-      "articles": [
-        {
-          "id": "1e942ce39940",
-          "outletId": "humanite",
-          "headline": "« J’ai été traité de ”sale nègre” » : on fait le point sur l’affaire Michel Zecler, dont le procès des policiers agresseurs s’ouvre ce lundi",
-          "url": "https://www.humanite.fr/politique/igpn/jai-ete-traite-de-sale-negre-on-fait-le-point-sur-laffaire-michel-zecler-dont-le-proces-des-policiers-agresseurs-souvre-ce-lundi",
-          "publishedAt": "2026-11-08T18:37:52.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/der-zecler_LUN.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "a3b0f3b2b52c",
-          "outletId": "le-point",
-          "headline": "Affaire Zecler : violences, faux en écriture publique… Ce qui attend les trois policiers devant la cour criminelle",
-          "url": "https://www.lepoint.fr/societe/affaire-zecler-violences-faux-en-ecriture-publique-ce-qui-attend-les-trois-policiers-devant-la-cour-LHESSJH3MRGYRKZHENWYRIABDE/",
-          "publishedAt": "2026-11-08T17:30:00.000Z",
-          "imageUrl": "https://www.lepoint.fr/resizer/v2/N2UHJU6IE5AGVHNH2IGUOCH6IM.jpg?auth=8a72f8755074b6a8997519176c806a43a8383362ff58911ced1dae8d1269c361&smart=true&width=1200&height=900",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "c6bd813b8fa6",
-          "outletId": "mediapart",
-          "headline": "Six ans après, les policiers qui ont tabassé Michel Zecler jugés devant une cour criminelle",
-          "url": "https://www.mediapart.fr/journal/france/081126/six-ans-apres-les-policiers-qui-ont-tabasse-michel-zecler-juges-devant-une-cour-criminelle",
-          "publishedAt": "2026-11-08T17:05:00.000Z",
-          "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/11/06/261105-img-zecler-policiers-proce-s.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "bcfc1414a5a3",
-          "outletId": "le-monde",
-          "headline": "L’affaire Michel Zecler, emblématique des violences policières, devant la justice",
-          "url": "https://www.lemonde.fr/societe/article/2026/11/08/l-affaire-michel-zecler-emblematique-des-violences-policieres-devant-la-justice_6808454_3224.html",
-          "publishedAt": "2026-11-08T17:00:02.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/06/709/0/4252/2126/644/322/60/0/0c064c3_upload-1-50n231b2z55q-unnamed.jpg",
+          "headline": "Face à Javier Milei, le pape appelle à mettre « l’économie au service de la personne » et à « chercher des compromis »",
+          "url": "https://www.ouest-france.fr/societe/religions/pape-leon-xiv/face-a-javier-milei-le-pape-appelle-a-mettre-leconomie-au-service-de-la-personne-et-a-chercher-des-compromis-1a71d70e-dbc4-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-08T23:54:53.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNzEyMDAwY2I2ZTNjODRlNTE5MGZlMGI2NDg2YzIyYWM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d01f0a0a55ac7f0c0a6bb53f6f2c0446fe6e2b132bd1a013f8b34732cf7dbb6c",
           "frontPage": true,
           "kind": "news",
-          "section": "misc",
+          "section": "world",
           "everFrontPage": true
+        },
+        {
+          "id": "67f2ec566040",
+          "outletId": "europe-1",
+          "headline": "Le pape Léon XIV arrive en Argentine, deuxième étape de sa tournée en Amérique du Sud",
+          "url": "https://www.europe1.fr/international/le-pape-leon-xiv-arrive-en-argentine-deuxieme-etape-de-sa-tournee-en-amerique-du-sud-1218380?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-08T21:14:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/08/22/020_2304176461_1_6af0eac938ad0.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
         }
       ],
-      "topicId": "e52753153876",
-      "titledArticleCount": 4,
-      "section": "misc",
+      "topicId": "e57adda18ce5",
+      "titledArticleCount": 2,
+      "section": "world",
       "everInEdition": true
     }
   ],
@@ -9778,6 +9903,165 @@
       "summarizedAt": "2026-11-08T19:01:20.724Z"
     },
     {
+      "id": "1e67ff4471ae",
+      "slug": "au-large-du-senegal-le-naufrage-d-une-pirogue-de-migrants-fait",
+      "title": "Le naufrage d'une pirogue de migrants au large du Sénégal fait au moins 35 morts",
+      "createdAt": "2026-11-08T13:01:16.911Z",
+      "storyDay": "2026-11-08",
+      "articles": [
+        {
+          "id": "33356ba00278",
+          "outletId": "le-parisien",
+          "headline": "Au large du Sénégal, une pirogue fait naufrage, provoquant la mort d’au moins 35 migrants",
+          "url": "https://www.leparisien.fr/international/au-large-du-senegal-une-pirogue-fait-naufrage-provoquant-la-mort-dau-moins-35-migrants-09-11-2026-5EDPR33ONBEQ5LZGOXJFHRMJEE.php",
+          "publishedAt": "2026-11-09T00:01:20.897Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "01dba5d19d90",
+          "outletId": "ouest-france",
+          "headline": "Au moins 35 morts au Sénégal dans le naufrage d’une pirogue de migrants",
+          "url": "https://www.ouest-france.fr/monde/senegal/au-moins-35-morts-au-senegal-dans-le-naufrage-dune-pirogue-de-migrants-e28aea26-dbc6-11f1-81f5-8e32b0872d76?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-08T23:17:20.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMTQyZjgzMjEwODM5YTQ2MTZmMjgzOTkwMGZhNjlkZTU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=035d00338a51c7e6964271ff6e337cb83527e01773c6f6759ae5405ff300e92a",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "19aac9abed6d",
+          "outletId": "le-figaro",
+          "headline": "Sénégal: au moins 35 morts dans le naufrage d'une pirogue de migrants",
+          "url": "https://www.lefigaro.fr/international/senegal-au-moins-35-morts-dans-le-naufrage-d-une-pirogue-de-migrants-20261109",
+          "publishedAt": "2026-11-08T23:01:38.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/09/87cfcb2e36a0a5e81cca3632f71c7b0b15e13bd60fd1f253d8d6a6e417f3d867.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "00740e2e59fa",
+          "outletId": "le-monde",
+          "headline": "Sénégal : au moins 34 morts dans le naufrage d’une pirogue de migrants",
+          "url": "https://www.lemonde.fr/afrique/article/2026/11/08/senegal-au-moins-34-morts-dans-le-naufrage-d-une-pirogue-de-migrants_6808424_3213.html",
+          "publishedAt": "2026-11-08T18:54:52.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/08/500/0/6000/3000/644/322/60/0/48a2b16_upload-1-jsjw1sfry2ut-2025-07-01t222856z-1746893655-rc2vdfaidnhr-rtrmadp-3-migration-senegal-gambia-pirogue.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "b8355929da89",
+          "outletId": "rfi",
+          "headline": "Sénégal: le naufrage d’une pirogue de migrants a fait au moins 21 morts",
+          "url": "https://www.rfi.fr/fr/afrique/20261108-s%C3%A9n%C3%A9gal-le-naufrage-d-une-pirogue-de-migrants-a-fait-au-moins-21-morts",
+          "publishedAt": "2026-11-08T13:43:15.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/a33ff0e8-62ff-11ee-9052-005056a90321/w:1024/p:16x9/AP23277347978200.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "1ba78173a2d8",
+          "outletId": "humanite",
+          "headline": "Sénégal : au moins 21 personnes meurent lors du naufrage d’une pirogue transportant des migrants",
+          "url": "https://www.humanite.fr/monde/accueil-des-migrants/senegal-au-moins-21-personnes-meurent-lors-du-naufrage-dune-pirogue-transportant-des-migrants",
+          "publishedAt": "2026-11-08T13:30:00.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/000_D66A9G3.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "418effe647b0",
+          "outletId": "liberation",
+          "headline": "Au large du Sénégal, une pirogue fait naufrage, au moins 21 morts",
+          "url": "https://www.liberation.fr/international/afrique/au-large-du-senegal-une-pirogue-fait-naufrage-au-moins-21-morts-20261108_L7XTUALPAFCO5D6E4IPYUUL2VA/",
+          "publishedAt": "2026-11-08T12:48:14.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "6662c1b4cfa3",
+          "outletId": "france-24",
+          "headline": "Au large du Sénégal, au moins 21 personnes sont mortes dans le naufrage d'une pirogue de migrants",
+          "url": "https://www.france24.com/fr/afrique/20261108-au-large-du-s%C3%A9n%C3%A9gal-au-moins-21-personnes-sont-mortes-dans-le-naufrage-d-une-pirogue-de-migrants",
+          "publishedAt": "2026-11-08T12:26:00.000Z",
+          "imageUrl": "https://s.france24.com/media/display/8db004c0-db6f-11f1-9c7c-a575454bc579/w:1024/p:16x9/c9e8d80cbfc13f8f43d3833c67fbf17f6e5ccb25.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "bcbca16377cf",
+          "outletId": "lobs",
+          "headline": "Sénégal : le naufrage d’une pirogue de migrants fait au moins 21 morts",
+          "url": "https://www.nouvelobs.com/monde/20261108.OBS119957/senegal-le-naufrage-d-une-pirogue-de-migrants-fait-au-moins-21-morts.html",
+          "publishedAt": "2026-11-08T12:24:20.000Z",
+          "imageUrl": "https://focus.nouvelobs.com/2026/11/08/0/1/1021/681/0/0/60/0/7f2673e_upload-1-aeyfrsuep7j4-senegal-2023-afp-000-33pv3xz.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "790ab203db32",
+          "outletId": "le-monde",
+          "headline": "Sénégal : 21 morts dans le naufrage d’une pirogue de migrants",
+          "url": "https://www.lemonde.fr/afrique/article/2026/11/08/senegal-21-morts-dans-le-naufrage-d-une-pirogue-de-migrants_6808424_3212.html",
+          "publishedAt": "2026-11-08T11:23:00.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/08/500/0/6000/3000/644/322/60/0/48a2b16_upload-1-jsjw1sfry2ut-2025-07-01t222856z-1746893655-rc2vdfaidnhr-rtrmadp-3-migration-senegal-gambia-pirogue.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "e395d53968c6",
+          "outletId": "franceinfo",
+          "headline": "Au large du Sénégal, 21 personnes sont mortes dans le naufrage d'une pirogue de migrants",
+          "url": "https://www.franceinfo.fr/monde/afrique/senegal/au-large-du-senegal-21-personnes-sont-mortes-dans-le-naufrage-d-une-pirogue-de-migrants_8273174.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-08T10:01:52.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/tCpkSLAY-3nPXW6wKHgNZ1r8i2c/0x437:4200x2800/432x243/filters:format(jpg)/2026/11/08/6af046d6379ea647615467.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "1e67ff4471ae",
+      "titledArticleCount": 11,
+      "section": "world",
+      "everInEdition": true,
+      "summaries": {
+        "gauche": [
+          "Le naufrage d'une embarcation de migrants au large de Kébémer, dans le nord-ouest du Sénégal, a provoqué la mort d'au moins 21 personnes.",
+          "Le gouvernement sénégalais a officialisé ce bilan provisoire un samedi, tandis que les opérations de recherche se poursuivent pour retrouver d'éventuels survivants.",
+          "Ce drame s'ajoute aux milliers de décès recensés sur la route de l'Atlantique et des Canaries, empruntée par des embarcations surchargées et vétustes.",
+          "L'Obs signale en parallèle l'interception de 142 migrants clandestins au large de Dakar par la gendarmerie sénégalaise."
+        ],
+        "centre": [
+          "Une pirogue transportant des migrants a fait naufrage au large du Sénégal, causant la mort d'au moins 21 à 35 personnes selon les bilans provisoires actualisés.",
+          "Les secouristes et les autorités locales poursuivent les recherches en mer pour retrouver d'éventuels survivants après ce drame survenu au large de Kébémer.",
+          "La route maritime de l'Atlantique vers l'Europe continue d'être le théâtre de tragédies à répétition en raison de la vétusté des embarcations."
+        ],
+        "droite": [
+          "Le naufrage d'une embarcation de migrants au large des côtes sénégalaises a entraîné la mort d'au moins 35 personnes.",
+          "Ce nouveau drame migratoire met en lumière les risques persistants de la traversée clandestine vers l'Europe par la voie maritime atlantique."
+        ]
+      },
+      "differences": [
+        "La gauche chiffre le bilan à au moins 21 morts en se focalisant sur le drame humain et structurel de la route migratoire atlantique.",
+        "Le centre oscille entre 21 et 35 morts selon l'évolution des bilans des autorités et met l'accent sur l'urgence des opérations de secours en mer.",
+        "La droite retient directement le bilan le plus élevé de 35 décès en traitant l'événement sous l'angle de la catastrophe migratoire au large du Sénégal."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 11,
+      "summarizedAt": "2026-11-09T00:01:20.897Z"
+    },
+    {
       "id": "57e9bc6f7ff0",
       "slug": "le-domicile-d-un-policier-a-ete-incendie-dans-le-gers",
       "title": "Le domicile d'un policier incendié dans le Gers, Laurent Nuñez dénonce un acte criminel",
@@ -11953,125 +12237,6 @@
       ],
       "promptVersion": "sum-7",
       "summarizedArticleCount": 10,
-      "summarizedAt": "2026-11-08T19:01:20.724Z"
-    },
-    {
-      "id": "1e67ff4471ae",
-      "slug": "au-large-du-senegal-le-naufrage-d-une-pirogue-de-migrants-fait",
-      "title": "Le naufrage d'une pirogue de migrants au large du Sénégal fait au moins 21 morts",
-      "createdAt": "2026-11-08T13:01:16.911Z",
-      "storyDay": "2026-11-08",
-      "articles": [
-        {
-          "id": "00740e2e59fa",
-          "outletId": "le-monde",
-          "headline": "Sénégal : au moins 34 morts dans le naufrage d’une pirogue de migrants",
-          "url": "https://www.lemonde.fr/afrique/article/2026/11/08/senegal-au-moins-34-morts-dans-le-naufrage-d-une-pirogue-de-migrants_6808424_3213.html",
-          "publishedAt": "2026-11-08T18:54:52.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/08/500/0/6000/3000/644/322/60/0/48a2b16_upload-1-jsjw1sfry2ut-2025-07-01t222856z-1746893655-rc2vdfaidnhr-rtrmadp-3-migration-senegal-gambia-pirogue.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "b8355929da89",
-          "outletId": "rfi",
-          "headline": "Sénégal: le naufrage d’une pirogue de migrants a fait au moins 21 morts",
-          "url": "https://www.rfi.fr/fr/afrique/20261108-s%C3%A9n%C3%A9gal-le-naufrage-d-une-pirogue-de-migrants-a-fait-au-moins-21-morts",
-          "publishedAt": "2026-11-08T13:43:15.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/a33ff0e8-62ff-11ee-9052-005056a90321/w:1024/p:16x9/AP23277347978200.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "1ba78173a2d8",
-          "outletId": "humanite",
-          "headline": "Sénégal : au moins 21 personnes meurent lors du naufrage d’une pirogue transportant des migrants",
-          "url": "https://www.humanite.fr/monde/accueil-des-migrants/senegal-au-moins-21-personnes-meurent-lors-du-naufrage-dune-pirogue-transportant-des-migrants",
-          "publishedAt": "2026-11-08T13:30:00.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/000_D66A9G3.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "418effe647b0",
-          "outletId": "liberation",
-          "headline": "Au large du Sénégal, une pirogue fait naufrage, au moins 21 morts",
-          "url": "https://www.liberation.fr/international/afrique/au-large-du-senegal-une-pirogue-fait-naufrage-au-moins-21-morts-20261108_L7XTUALPAFCO5D6E4IPYUUL2VA/",
-          "publishedAt": "2026-11-08T12:48:14.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "6662c1b4cfa3",
-          "outletId": "france-24",
-          "headline": "Au large du Sénégal, au moins 21 personnes sont mortes dans le naufrage d'une pirogue de migrants",
-          "url": "https://www.france24.com/fr/afrique/20261108-au-large-du-s%C3%A9n%C3%A9gal-au-moins-21-personnes-sont-mortes-dans-le-naufrage-d-une-pirogue-de-migrants",
-          "publishedAt": "2026-11-08T12:26:00.000Z",
-          "imageUrl": "https://s.france24.com/media/display/8db004c0-db6f-11f1-9c7c-a575454bc579/w:1024/p:16x9/c9e8d80cbfc13f8f43d3833c67fbf17f6e5ccb25.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "bcbca16377cf",
-          "outletId": "lobs",
-          "headline": "Sénégal : le naufrage d’une pirogue de migrants fait au moins 21 morts",
-          "url": "https://www.nouvelobs.com/monde/20261108.OBS119957/senegal-le-naufrage-d-une-pirogue-de-migrants-fait-au-moins-21-morts.html",
-          "publishedAt": "2026-11-08T12:24:20.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/11/08/0/1/1021/681/0/0/60/0/7f2673e_upload-1-aeyfrsuep7j4-senegal-2023-afp-000-33pv3xz.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "790ab203db32",
-          "outletId": "le-monde",
-          "headline": "Sénégal : 21 morts dans le naufrage d’une pirogue de migrants",
-          "url": "https://www.lemonde.fr/afrique/article/2026/11/08/senegal-21-morts-dans-le-naufrage-d-une-pirogue-de-migrants_6808424_3212.html",
-          "publishedAt": "2026-11-08T11:23:00.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/08/500/0/6000/3000/644/322/60/0/48a2b16_upload-1-jsjw1sfry2ut-2025-07-01t222856z-1746893655-rc2vdfaidnhr-rtrmadp-3-migration-senegal-gambia-pirogue.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "e395d53968c6",
-          "outletId": "franceinfo",
-          "headline": "Au large du Sénégal, 21 personnes sont mortes dans le naufrage d'une pirogue de migrants",
-          "url": "https://www.franceinfo.fr/monde/afrique/senegal/au-large-du-senegal-21-personnes-sont-mortes-dans-le-naufrage-d-une-pirogue-de-migrants_8273174.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-08T10:01:52.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/tCpkSLAY-3nPXW6wKHgNZ1r8i2c/0x437:4200x2800/432x243/filters:format(jpg)/2026/11/08/6af046d6379ea647615467.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "1e67ff4471ae",
-      "titledArticleCount": 8,
-      "section": "world",
-      "everInEdition": true,
-      "summaries": {
-        "gauche": [
-          "Le gouvernement sénégalais a annoncé un bilan d'une vingtaine de morts après qu'une embarcation transportant des migrants a fait naufrage au large de Kébémer, dans le nord-ouest du pays.",
-          "Ce nouveau drame s'inscrit dans le cadre des traversées clandestines vers l'Europe via la route périlleuse de l'Atlantique, à bord d'embarcations surchargées.",
-          "L'Obs signale en outre que la gendarmerie sénégalaise a intercepté 142 migrants clandestins au large de Dakar."
-        ],
-        "centre": [
-          "Un naufrage survenu au large de Kébémer, sur la côte nord-ouest du Sénégal, a causé la mort d'au moins 21 personnes selon les autorités.",
-          "Les recherches se poursuivent activement pour retrouver d'éventuels survivants de cette embarcation clandestine.",
-          "Le ministère de l'Intérieur a indiqué qu'un seul rescapé avait été secouru à la suite de ce drame sur la route migratoire atlantique."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur le contexte général dramatique des routes migratoires vers l'Europe et intègre des informations complémentaires sur d'autres interceptions de migrants en mer.",
-        "Le centre se focalise précisément sur le bilan chiffré des autorités, les opérations de recherche en cours et la situation du seul rescapé retrouvé."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 8,
       "summarizedAt": "2026-11-08T19:01:20.724Z"
     },
     {
