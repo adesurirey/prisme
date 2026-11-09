@@ -28,6 +28,17 @@
       "section": "politics"
     },
     {
+      "id": "a1194216b74e",
+      "outletId": "huffpost",
+      "headline": "Le Pen s’invite à la télé américaine pour nier toute discrimination en France (contre l’évidence)",
+      "url": "https://www.huffingtonpost.fr/politique/article/le-pen-s-invite-a-la-tele-americaine-pour-nier-toute-discrimination-en-france-contre-l-evidence_354324.html",
+      "publishedAt": "2026-11-09T09:42:12.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/09/28/51/0/4359/2451/0/0/60/0/9041643_upload-1-2yypdazb522m-afp-20260928-c9jx2cp-v1-highres-france2027politicselectioneconomyconstructionho.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "b2eb39554178",
       "outletId": "20-minutes",
       "headline": "Présidentielle 2027 : Pour Marine Le Pen, la France est « le pays le moins raciste au monde »",
@@ -57,7 +68,7 @@
       "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/il-n-y-a-pas-de-discrimination-la-france-est-le-pays-le-moins-raciste-au-monde-soutient-marine-le-pen-20261109",
       "publishedAt": "2026-11-09T08:33:25.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/09/ca23cff035220a2f87824e076fe8293bf5b99a6198f1b6467e134c1ad2fc02f3.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -66,5 +77,24 @@
   "topicId": "bec6556f789e",
   "titledArticleCount": 5,
   "section": "politics",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Marine Le Pen a affirmé lors d'un entretien sur la chaîne américaine CBS que la France est « le pays le moins raciste au monde » et qu'il n'y a « pas de discriminations ».",
+      "La candidate du Rassemblement national a également déclaré que la France « ne peut plus importer des chômeurs » depuis d'autres pays et a mis en cause l'impact de l'immigration sur la société.",
+      "Le HuffPost a souligné que ces propos interviennent deux semaines après l'attaque meurtrière raciste à Trappes, qualifiant les déclarations de la candidate de contraires à l'évidence."
+    ],
+    "droite": [
+      "Marine Le Pen a déclaré sur la chaîne américaine CBS que la France est le pays « le moins raciste » au monde et qu'« il n'y a pas de discrimination ».",
+      "La candidate du Rassemblement national a rejeté l'idée de l'existence d'un racisme systémique en France lors de son intervention dans l'émission américaine « 60 Minutes ».",
+      "Elle a également affirmé depuis Paris qu'elle ne permettrait pas de laisser dire que la France est devenue extrémiste."
+    ]
+  },
+  "differences": [
+    "La gauche insiste sur le décalage de ces déclarations avec la réalité, mentionnant l'attaque raciste de Trappes pour contredire frontalement les propos de Marine Le Pen.",
+    "La droite adopte un compte rendu plus neutre des propos tenus par Marine Le Pen sur la chaîne CBS, en mettant en avant son rejet du racisme systémique et de l'étiquette extrémiste."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-09T14:01:18.317Z"
 }

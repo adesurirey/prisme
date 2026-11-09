@@ -1,10 +1,33 @@
 {
   "id": "f435267da2de",
   "slug": "un-proviseur-blesse-a-la-tete-par-un-projectile-pres-de-bordeaux",
-  "title": "Un proviseur blessé à la tête par un projectile près de Bordeaux",
+  "title": "Un proviseur est blessé à la tête par un projectile près de Bordeaux lors de mouvements lycéens",
   "createdAt": "2026-11-09T11:01:24.607Z",
   "storyDay": "2026-11-09",
   "articles": [
+    {
+      "id": "130373182096",
+      "outletId": "ouest-france",
+      "headline": "Proviseur blessé par un projectile près de Bordeaux : jeunes encagoulés, pavés… Ce que l’on sait",
+      "url": "https://www.ouest-france.fr/education/ecole/proviseur-blesse-par-un-projectile-pres-de-bordeaux-jeunes-encagoules-paves-ce-que-lon-sait-793eafc0-dc2b-11f1-a45f-49114163a350?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-09T13:51:37.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZWY3ZGUxYzg2Y2M3MjM1MzBhM2Q1NTQ0NjE5MjIwZGU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1b87711d02f5adfda2c762139bb724361e929b008ad14f7f224b973b137297b5",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
+      "id": "94b3e790dcab",
+      "outletId": "cnews",
+      "headline": "Bègles : le proviseur d'un lycée blessé à la tête par des jeunes cagoulés",
+      "url": "https://www.cnews.fr/faits-divers/2026-11-09/begles-le-proviseur-dun-lycee-blesse-la-tete-par-des-jeunes-cagoules",
+      "publishedAt": "2026-11-09T13:24:57.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_8x629t-taille1200_6af1bca5ec79f.jpg?h=b325ea90&itok=m5vvsOu6",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "73e7577c331c",
       "outletId": "le-parisien",
@@ -63,7 +86,32 @@
     }
   ],
   "topicId": "f435267da2de",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "misc",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le proviseur du lycée professionnel Émile-Combes à Bègles a été hospitalisé après avoir été atteint à la tête par un projectile lors de heurts.",
+      "Une quinzaine d'individus cagoulés ont incendié des poubelles devant l'établissement scolaire ce lundi matin.",
+      "Quatre interpellations ont été réalisées et le rectorat de Bordeaux va déposer plainte selon les informations disponibles."
+    ],
+    "centre": [
+      "Le chef d'établissement du lycée professionnel Émile-Combes à Bègles a reçu un projectile à la tête lors de tensions ce lundi matin.",
+      "Un groupe d'une quinzaine de jeunes cagoulés a incendié des poubelles et tenté de bloquer l'accès aux parkings.",
+      "La victime a été prise en charge à l'hôpital tandis que l'établissement a fermé ses portes pour la journée."
+    ],
+    "droite": [
+      "Le proviseur du lycée professionnel Émile-Combes à Bègles a été blessé à la tête par un jet de projectile ce lundi matin.",
+      "Des lycéens et une quinzaine d'individus cagoulés ont orchestré une tentative de blocage marquée par des incendies de poubelles.",
+      "Deux fonctionnaires de police ont également été blessés durant les interventions et quatre personnes ont été interpellées."
+    ]
+  },
+  "differences": [
+    "La gauche privilégie une approche institutionnelle en insistant sur le dépôt de plainte du rectorat et qualifie la situation de scène chaotique.",
+    "Le centre livre un compte-rendu factuel et centré sur le déroulement des faits sans accentuation partisane particulière.",
+    "La droite insiste davantage sur la violence des incidents en mentionnant explicitement les policiers blessés et le contexte des blocus lycéens."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-09T14:01:18.317Z"
 }
