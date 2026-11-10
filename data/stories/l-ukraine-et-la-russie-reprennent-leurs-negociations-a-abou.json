@@ -6,6 +6,17 @@
   "storyDay": "2026-11-09",
   "articles": [
     {
+      "id": "43ca9ad95687",
+      "outletId": "la-croix",
+      "headline": "Guerre en Ukraine : pourparlers entre Kiev et Moscou ; Zelensky attendu au Danemark",
+      "url": "https://www.la-croix.com/international/ukraine-russie-jour-1721-point-conflit-ukrainien-poutine-aujourdhui-20261110",
+      "publishedAt": "2026-11-10T09:50:08.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/11/10/2585699-des-frappes-russes-ont-touche-la-zone-residentiell.jpg",
+      "frontPage": false,
+      "kind": "live",
+      "section": "world"
+    },
+    {
       "id": "2cc5ff89c2f3",
       "outletId": "le-parisien",
       "headline": "Guerre en Ukraine : réunion entre Kiev, l’UE, l’Otan et les émissaires américains avant la reprise des négociations directes à Abou Dhabi",
@@ -114,7 +125,7 @@
       "url": "https://www.lefigaro.fr/international/faute-de-courage-politique-l-europe-releguee-au-second-role-dans-les-negociations-sur-l-ukraine-a-abu-dhabi-20261109",
       "publishedAt": "2026-11-09T19:40:39.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/11/09/bc15c24311edac516a6aa371b04dc7d86bee4f4e4245df0456bd19560310c0db.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "opinion",
       "section": "world",
       "everFrontPage": true
@@ -134,5 +145,29 @@
   "topicId": "5ad9726a87f5",
   "titledArticleCount": 11,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Les discussions directes entre Kiev et Moscou reprennent à Abou Dhabi sous l'égide des États-Unis après une interruption de plus de huit mois.",
+      "Le chef de cabinet de Volodymyr Zelensky, Kyrylo Boudanov, indique que la délégation ukrainienne accordera une grande attention à la dimension humanitaire.",
+      "Un responsable américain estime que Russes et Ukrainiens ont fait preuve d'un peu de souplesse en privé lors de ces pourparlers."
+    ],
+    "centre": [
+      "Des négociations directes entre l'Ukraine et la Russie débutent à Abou Dhabi sous médiation américaine pour deux jours.",
+      "Le président ukrainien Volodymyr Zelensky est attendu au Danemark pour s'entretenir avec les dirigeants nordiques.",
+      "Ces pourparlers, suspendus depuis plus de huit mois après le déclenchement de la guerre en Iran, doivent notamment aborder le cas de la région de Donetsk et les échanges de prisonniers."
+    ],
+    "droite": [
+      "Moscou et Kiev participent à des négociations tripartites avec Washington organisées à Abou Dhabi.",
+      "Des tribunes et analyses soulignent que l'Europe est absente de la table des négociations et reléguée au second rôle face à Vladimir Poutine, Donald Trump et Volodymyr Zelensky."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la reprise des discussions humanitaires et la souplesse affichée par les belligérants.",
+    "Le centre livre un suivi en direct centré sur le déroulement diplomatique, les médiateurs américains et l'agenda des dirigeants.",
+    "La droite privilégie l'analyse critique en déplorant l'éviction de l'Europe des pourparlers menés par Washington et Moscou."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 12,
+  "summarizedAt": "2026-11-10T10:01:19.212Z"
 }
