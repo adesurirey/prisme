@@ -6,6 +6,17 @@
   "storyDay": "2026-11-10",
   "articles": [
     {
+      "id": "52d0a9be66b0",
+      "outletId": "slate-fr",
+      "headline": "Bonne nouvelle: les émissions mondiales de carbone vont diminuer en 2026 et c'est grâce à la guerre en Iran",
+      "url": "https://www.slate.fr/sciences/emissions-mondiales-carbone-diminution-ormuz-energie-fossile-renouvelable-guerre-iran",
+      "publishedAt": "2026-11-10T19:55:01.000Z",
+      "imageUrl": "https://cdn.slate.fr/uploads/store/story_273985/original_273985.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "d6d0434edac0",
       "outletId": "franceinfo",
       "headline": "Le rapport du Global Carbon Project prévoit un record d'émissions de gaz à effet de serre, mais repère aussi des signes encourageants",
@@ -51,7 +62,32 @@
     }
   ],
   "topicId": "bfa4ab3cfa8e",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "science",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le rapport du Global Carbon Project annonce une baisse de 0,4% des émissions mondiales de dioxyde de carbone pour l'année 2026.",
+      "Libération et Slate.fr soulignent que la guerre en Iran et les perturbations dans le détroit d'Ormuz entraînent une hausse des prix et une chute de la consommation de pétrole.",
+      "Franceinfo met en avant le développement des énergies renouvelables tout en rappelant que la déforestation reste massive."
+    ],
+    "centre": [
+      "Le bilan annuel du Global Carbon Budget publié le mardi 10 novembre indique que la baisse mondiale des émissions de gaz à effet de serre reste très fragile.",
+      "La quantité de dioxyde de carbone relâchée dans l'atmosphère devrait diminuer de 0,4 % cette année.",
+      "Cette réduction est attribuée à l'essor des énergies renouvelables et à la baisse de la consommation d'énergies fossiles provoquée par la crise dans le golfe Persique."
+    ],
+    "droite": [
+      "Le Global Carbon Project prévoit une légère baisse des émissions de CO2 d'origine fossile pour l'année 2026.",
+      "TF1 Info rapporte que cette diminution s'explique par le développement des énergies renouvelables et par les répercussions du conflit au Moyen-Orient.",
+      "Le média met en garde contre la crainte d'un « effet rebond » dès l'année prochaine."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur l'impact direct du conflit en Iran et de la chute de la consommation de pétrole, tout en reconnaissant les progrès des énergies renouvelables et la persistance de la déforestation.",
+    "Le centre adopte une perspective strictement axée sur la fragilité globale de la baisse des émissions de gaz à effet de serre mesurée par le bilan annuel, en combinant facteurs énergétiques et géopolitiques.",
+    "La droite focalise son traitement sur la baisse des émissions fossiles liée au conflit au Moyen-Orient et aux énergies renouvelables, tout en introduisant une incertitude prospective avec la menace d'un effet rebond."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-10T20:01:21.688Z"
 }

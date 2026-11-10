@@ -12,9 +12,10 @@
       "url": "https://www.lemonde.fr/economie/article/2026/11/10/nvidia-le-scandale-d-espionnage-fait-chuter-de-plus-de-6-a-wall-street-l-entreprise-americaine-qui-perd-sa-place-de-deuxieme-capitalisation-mondiale_6808895_3234.html",
       "publishedAt": "2026-11-10T18:43:56.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/09/54/0/3151/1575/644/322/60/0/ed53a5e_ftp-1-3e1vfpbxee3h-2026-11-09t135831z-473954590-rc2h6oa6ede1-rtrmadp-3-nvidia-probe-ceo.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "economy"
+      "section": "economy",
+      "everFrontPage": true
     },
     {
       "id": "128ee769d6ca",
@@ -23,9 +24,10 @@
       "url": "https://www.lefigaro.fr/secteur/high-tech/nvidia-chute-de-plus-de-6-a-wall-street-cede-sa-deuxieme-place-de-capitalisation-mondiale-a-microsoft-20261110",
       "publishedAt": "2026-11-10T18:06:18.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/10/2dcd9f96abf9398420b057aaa210633a22f36025bb7534697db2c8fb07676f28.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "economy"
+      "section": "economy",
+      "everFrontPage": true
     },
     {
       "id": "1c32c80be116",
@@ -134,25 +136,30 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Donald Trump s'est porté garant de la bonne foi de Jensen Huang dans l'affaire d'espionnage le liant à une femme soupçonnée d'agir pour la Chine.",
-      "Le Monde analyse que ce scandale dévoile la réalité de la guerre froide technologique entre Washington et Pékin, à travers la liaison reconnue du patron de Nvidia avec une femme d'affaires chinoise."
+      "Le scandale d'espionnage impliquant Jensen Huang a provoqué une chute de plus de 6 % de l'action Nvidia à Wall Street, effaçant plus de 400 milliards de dollars de capitalisation boursière.",
+      "L'affaire révèle la face cachée de la guerre froide technologique entre les États-Unis et la Chine, selon une analyse du Monde.",
+      "Donald Trump s'est porté garant de la bonne foi du patron de Nvidia, affirmant qu'il ignorait tout des activités d'espionnage de sa maîtresse.",
+      "Le géant de l'intelligence artificielle fait face à des répercussions industrielles majeures alors que son avenir se joue à Washington."
     ],
     "centre": [
-      "Les liens étroits entre Jensen Huang et Donald Trump, incluant des voyages en Chine et le financement de la Maison-Blanche, font l'objet d'un examen minutieux sur fond de soupçons d'espionnage.",
-      "Le scandale d'espionnage menaçant l'avenir professionnel de Jensen Huang suscite de vives inquiétudes au sein de toute l'industrie de l'intelligence artificielle.",
-      "Le renseignement américain soupçonne le patron de Nvidia d'avoir été espionné par Pékin par le biais d'une relation extraconjugale avec une ressortissante chinoise."
+      "Le scandale d'espionnage visant Jensen Huang pèse lourdement sur l'industrie de l'intelligence artificielle et ébranle la gouvernance de Nvidia.",
+      "Les services de renseignement américains soupçonnent Alice Huang, une femme d'affaires chinoise et compagne du PDG, d'avoir agi pour le compte de Pékin.",
+      "Les liens étroits entre Jensen Huang et Donald Trump, incluant un soutien politique affiché et des déplacements conjoints en Chine, font l'objet d'une attention accrue.",
+      "L'avenir du dirigeant et du fabricant de puces se joue désormais à Washington selon les experts du secteur."
     ],
     "droite": [
-      "Les services de renseignement américains enquêtent sur une liaison entre Jensen Huang et une ressortissante chinoise qui aurait agi pour le compte de Pékin.",
-      "Cette affaire d'espionnage fait peser des menaces directes sur la gouvernance de l'entreprise Nvidia et son dirigeant."
+      "Jensen Huang, le PDG de Nvidia, est visé par une enquête des services de renseignement américains pour une affaire d'espionnage chinois présumé.",
+      "Alice Huang, ancienne dirigeante de Megaspeed et compagne du patron de Nvidia, est soupçonnée d'avoir été recrutée par Pékin pour approcher le géant de la tech.",
+      "L'affaire a entraîné une chute boursière de l'action Nvidia à Wall Street, privant brièvement l'entreprise de sa deuxième place mondiale au profit de Microsoft.",
+      "La Maison-Blanche suit de près cette liaison extraconjugale qui inquiète les autorités et menace la stabilité du leader mondial des puces d'intelligence artificielle."
     ]
   },
   "differences": [
-    "Le camp gauche privilégie le prisme géopolitique de la guerre froide technologique et la mise en cause politique de Donald Trump, en s'appuyant sur des tribunes d'analyse.",
-    "Le camp centre adopte une couverture factuelle et économique globale, insistant sur l'inquiétude générale de l'industrie de l'intelligence artificielle et sur les relations financières et politiques entre le patron de Nvidia et l'administration américaine.",
-    "Le camp droite focalise son traitement sur les risques directs que fait peser l'enquête des services de renseignement américains sur la gouvernance interne de l'entreprise Nvidia."
+    "La gauche met l'accent sur les répercussions géopolitiques de la guerre froide technologique et relaie l'intervention de Donald Trump pour défendre le patron de Nvidia.",
+    "Le centre analyse en détail l'impact systémique de la crise sur l'industrie de l'intelligence artificielle et scrute les connexions politiques entre Jensen Huang et l'administration américaine.",
+    "La droite se concentre sur le portrait d'Alice Huang et les détails de l'enquête menée par les services de renseignement américains tout en soulignant la sanction boursière subie par l'entreprise."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-10T15:01:36.953Z"
+  "summarizedArticleCount": 11,
+  "summarizedAt": "2026-11-10T20:01:21.688Z"
 }
