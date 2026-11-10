@@ -6,6 +6,16 @@
   "storyDay": "2026-11-09",
   "articles": [
     {
+      "id": "029330b605c2",
+      "outletId": "liberation",
+      "headline": "Mort de la résistante Solange Alexandre, ancienne cheffe de maquis et lieutenant FFI",
+      "url": "https://www.liberation.fr/societe/mort-de-la-resistante-solange-alexandre-ancienne-cheffe-de-maquis-et-lieutenant-ffi-20261110_HGFJ7TVQA5BPDOBLOLUMQ4AQOY/",
+      "publishedAt": "2026-11-10T07:57:58.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "3b001854f79c",
       "outletId": "le-figaro",
       "headline": "Décès à 104 ans de la résistante française Solange Alexandre",
@@ -54,7 +64,32 @@
     }
   ],
   "topicId": "a804853f042c",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "society",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Solange Alexandre, alias « Corlay », est décédée dans la nuit du 7 au 8 novembre à l'âge de 104 ans.",
+      "Elle avait débuté comme agent de renseignement pour les Alliés avant de fonder le maquis « Pas-de-Bœuf » en 1944.",
+      "Elle a commandé un groupe d'une trentaine d'hommes et a participé aux combats pour la libération de la Touraine, terminant le conflit avec le grade de lieutenante FFI."
+    ],
+    "centre": [
+      "La résistante centenaire Solange Alexandre est morte dimanche au Mans à l'âge de 104 ans.",
+      "L'information a été officialisée par le président du Conseil départemental de la Sarthe, Frédéric Beauchef.",
+      "Engagée dès ses 18 ans, elle a dirigé des résistants en Sarthe et en Touraine, laissant l'image d'une figure inspirante."
+    ],
+    "droite": [
+      "Solange Alexandre est morte à l'âge de 104 ans après avoir été une figure active de la Résistance.",
+      "Elle a exercé les fonctions de cheffe de maquis en Touraine à la tête d'une troupe hétéroclite d'une trentaine de combattants.",
+      "Son unité regroupait notamment des réfractaires du STO, des évadés du mur de l'Atlantique ainsi que des volontaires étrangers."
+    ]
+  },
+  "differences": [
+    "La gauche insiste sur le parcours militaire précis de la résistante, mentionnant son nom de code « Corlay », son rôle de renseignement et son grade de lieutenante FFI.",
+    "Le centre privilégie l'hommage local en ancrant la disparition de la centenaire dans son département d'origine, en s'appuyant sur l'annonce institutionnelle du président du Conseil départemental de la Sarthe.",
+    "La droite met en avant la composition singulière de la troupe qu'elle commandait, détaillant les profils hétérogènes des hommes placés sous ses ordres au sein du maquis."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-10T08:01:18.266Z"
 }
