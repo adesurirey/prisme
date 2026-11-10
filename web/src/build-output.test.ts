@@ -19,6 +19,13 @@
  *
  * The suite builds twice: the fixture as committed, and a derived copy
  * with an empty Nouveau window for the empty-state assertions.
+ *
+ * It also runs the app-artifact publish step (ADR-0043, issue #176) —
+ * scripts/publish-app-artifact.mjs, the very script edition.yml runs —
+ * against the freshly built output: edition.json and outlets.json must
+ * ship byte-identical, and the rest of data/ must never land in dist.
+ * The fixture carries decoy classifications.json and topics.json in the
+ * real files' shapes so a copy-everything regression fails here.
  */
 import { execSync } from 'node:child_process';
 import {
@@ -65,6 +72,14 @@ beforeAll(async () => {
   // Build 1: the fixture as committed — renamed out of Astro's default
   // dist/ so build 2 can take that path.
   execSync('node_modules/.bin/astro build', {
+    cwd: WEB_DIR,
+    stdio: 'pipe',
+    env,
+  });
+  // The CI publish step (edition.yml, ADR-0043, issue #176): the very
+  // script CI runs, against the same freshly built output dir, reading
+  // the same PRISME_DATA_DIR the build just consumed.
+  execSync('node scripts/publish-app-artifact.mjs', {
     cwd: WEB_DIR,
     stdio: 'pipe',
     env,
@@ -630,5 +645,61 @@ describe('in-page anchors (PageToc « Sur cette page »)', () => {
     expect(
       await deadAnchors('classement-politique-des-medias/index.html'),
     ).toEqual([]);
+  });
+});
+
+describe('the app data artifact (ADR-0043, issue #176)', () => {
+  it('publishes edition.json and outlets.json byte-identical into the build output', async () => {
+    // "No transformation, no second shape" (ADR-0043): the shipped files
+    // are the pipeline's own — byte-identity is the whole copy contract,
+    // and since the pages render from that same fixture data, the JSON
+    // the app fetches is the Edition the HTML was rendered from.
+    for (const name of ['edition.json', 'outlets.json']) {
+      const shipped = await readFile(path.join(fixtureDist, name));
+      const source = await readFile(path.join(FIXTURE_DIR, name));
+      expect(shipped.equals(source)).toBe(true);
+    }
+  });
+
+  it('ships outlets.json in the public Outlet shape — nothing more', async () => {
+    // The app types the files with @prisme/domain unchanged (ADR-0043):
+    // identity, feeds and the sourced Reach figure — sources, notes and
+    // checks stay in the domain module.
+    const outlets = JSON.parse(await readDist('outlets.json'));
+    expect(outlets.length).toBeGreaterThan(0);
+    for (const outlet of outlets) {
+      expect(Object.keys(outlet).sort()).toEqual([
+        'feeds',
+        'id',
+        'leaning',
+        'name',
+        'paywall',
+        'reach',
+        'site',
+      ]);
+    }
+  });
+
+  it('never publishes the rest of data/ (issue #176)', async () => {
+    // The decoys stand in for the real internal files (same names, same
+    // shapes), stories/ ships in the fixture as in production — a
+    // copy-everything regression fails here. redirects.json is the one
+    // forbidden file the fixture lacks: the build consumes it itself
+    // (Astro emits the stub pages) and a fixture registry would change
+    // the build — the allowlist keeps the raw registry out of dist.
+    for (const name of [
+      'classifications.json',
+      'topics.json',
+      'redirects.json',
+    ]) {
+      await expect(stat(path.join(fixtureDist, name))).rejects.toThrow();
+    }
+    await expect(stat(path.join(fixtureDist, 'stories'))).rejects.toThrow();
+    // Astro ships no root-level JSON of its own, so the whole guarantee
+    // in one line: the output root holds exactly the two published files.
+    const rootJson = (await readdir(fixtureDist)).filter((name) =>
+      name.endsWith('.json'),
+    );
+    expect(rootJson.sort()).toEqual(['edition.json', 'outlets.json']);
   });
 });
