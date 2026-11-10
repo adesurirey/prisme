@@ -6,6 +6,28 @@
   "storyDay": "2026-11-10",
   "articles": [
     {
+      "id": "4a5a084e068e",
+      "outletId": "franceinfo",
+      "headline": "Le parquet de Paris ouvre une enquête après la cyberattaque ayant touché des chambres froides de l'Etablissement français du sang",
+      "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/le-parquet-de-paris-ouvre-une-enquete-apres-la-cyberattaque-ayant-touche-des-chambres-froides-de-l-etablissement-francais-du-sang_8277005.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-10T22:52:29.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/fRrCRCU45TDsakY52lH0A0N3sSE/0x73:1024x649/432x243/filters:format(jpg)/2026/11/10/6af3a00df34c4609063547.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "cfafca5bae66",
+      "outletId": "tf1-info",
+      "headline": "Cyberattaque des chambres froides de l'Établissement français du sang : une enquête ouverte par le parquet de Paris",
+      "url": "https://www.tf1info.fr/justice-faits-divers/cyberattaque-des-chambres-froides-de-l-etablissement-francais-du-sang-une-enquete-ouverte-par-le-parquet-de-paris-2475130.html",
+      "publishedAt": "2026-11-10T22:30:07.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/960/540/capjta-sang-cyberattaque-57f64f-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "cfc5c1749d11",
       "outletId": "le-parisien",
       "headline": "Une enquête ouverte après la cyberattaque des chambres froides de l’Établissement français du sang : pas de lien avec l’Iran à ce stade",
@@ -62,31 +84,31 @@
     }
   ],
   "topicId": "52fd972c2b6e",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "misc",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le parquet de Paris lance des investigations à la suite d'une cyberattaque perpétrée au début du mois de novembre contre un prestataire de l'Établissement français du sang.",
-      "Des pirates informatiques ont modifié à distance la température de plusieurs chambres froides sans provoquer de conséquences sur la santé.",
-      "L'enquête sur cette intrusion numérique a été confiée conjointement à l'Office anti-cybercriminalité et à la Direction générale de la sécurité intérieure."
+      "Le parquet de Paris a saisi l'Ofac et la DGSI après la modification à distance de la température de chambres froides d'un prestataire de l'EFS.",
+      "Cet incident survenu début novembre n'a eu aucune conséquence sur la santé publique selon l'Établissement français du sang."
     ],
     "centre": [
-      "Une enquête préliminaire a été ouverte par le ministère public pour atteinte à un système de traitement automatisé de données après le piratage informatique visant des équipements de réfrigération de l'Établissement français du sang.",
-      "Les investigations en cours ne permettent pas d'établir, pour le moment, de passerelle entre cette cyberattaque et l'affaire des réfrigérateurs connectés attribuée à l'Iran."
+      "Une procédure judiciaire a été lancée pour atteinte à un système informatique après le piratage d'équipements de conservation du sang.",
+      "Les autorités judiciaires n'établissent aucun lien avéré à ce stade avec l'attaque informatique visant des réfrigérateurs et attribuée à l'Iran.",
+      "L'attaque s'est produite au début du mois de novembre et n'a entraîné aucun dommage sanitaire d'après l'établissement."
     ],
     "droite": [
-      "Le parquet de Paris a officiellement saisi la section cybercriminalité d'une enquête pour infiltration informatique au préjudice de l'Établissement français du sang.",
-      "L'attaque s'est produite précisément le mardi 3 novembre, ciblant des dispositifs frigorifiques qui conservaient des prélèvements sanguins.",
-      "L'affaire implique l'intervention de l'Ofac et de la DGSI, tandis qu'aucun lien n'est établi à ce stade avec les cyberattaques liées aux frigos connectés et imputées à l'Iran."
+      "La section cybercriminalité du parquet de Paris mène les investigations conjointement avec la DGSI et l'Office anti-cybercriminalité.",
+      "Les investigations portent sur une infraction d'atteinte à un système de traitement automatisé de données visant des équipements frigorifiques.",
+      "L'événement a touché le 3 novembre des installations contenant des stocks de dons et des échantillons sanguins, sans répercussion sanitaire."
     ]
   },
   "differences": [
-    "La gauche privilégie une approche technique en insistant sur l'absence d'impact sanitaire des modifications de température opérées chez le prestataire.",
-    "Le centre se focalise sur l'ouverture procédurale de l'enquête par le ministère public et sur l'absence de corrélation avérée avec le dossier iranien.",
-    "La droite détaille précisément la chronologie des faits au 3 novembre et met en avant la co-saisine de la DGSI et de l'Ofac par le parquet."
+    "La gauche privilégie un compte-rendu factuel axé sur l'intervention technique à distance sur les équipements et l'absence de conséquence sanitaire.",
+    "Le centre insiste particulièrement sur l'absence de connexion avérée à ce stade avec l'affaire des frigos connectés liée à l'Iran.",
+    "La droite met en avant la chronologie précise de l'intrusion du 3 novembre et détaille l'implication des services spécialisés de renseignement."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-10T22:01:26.098Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-10T23:01:33.646Z"
 }

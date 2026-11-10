@@ -6,6 +6,39 @@
   "storyDay": "2026-11-10",
   "articles": [
     {
+      "id": "40feeac62b66",
+      "outletId": "bfmtv",
+      "headline": "Un militaire américain soupçonné d'espionnage pour le compte de la Russie arrêté au Royaume-Uni",
+      "url": "https://www.bfmtv.com/international/europe/angleterre/un-militaire-americain-soupconne-d-espionnage-pour-le-compte-de-la-russie-arrete-au-royaume-uni_AD-202611101009.html",
+      "publishedAt": "2026-11-10T22:56:55.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Y9cXplY9vmZroSUktxUT2dIQHMU=/0x50:1920x1130/800x0/images/Soldat-Etats-Unis-illustration-2215539.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "f6caf0d8def2",
+      "outletId": "france-24",
+      "headline": "Le Royaume-Uni arrête un militaire américain soupçonné d'espionnage au profit de la Russie",
+      "url": "https://www.france24.com/fr/europe/20261110-royaume-uni-arrete-militaire-americain-soup%C3%A7onne-espionnage-russie",
+      "publishedAt": "2026-11-10T22:46:05.000Z",
+      "imageUrl": "https://s.france24.com/media/display/3007de5c-dd58-11f1-96d8-f71d22e7fea9/w:1024/p:16x9/AP26312349679429.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "749df4f8b388",
+      "outletId": "cnews",
+      "headline": "Un militaire américain, soupçonné d'espionnage pour la Russie, arrêté en Angleterre",
+      "url": "https://www.cnews.fr/monde/2026-11-10/un-militaire-americain-soupconne-despionnage-pour-la-russie-arrete-en-angleterre",
+      "publishedAt": "2026-11-10T21:57:00.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/075_widak-kosiniak250913_npnac-taille1200_6af3932ad784d.jpg?itok=qjoOYatq",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "9d7796ec4a61",
       "outletId": "ouest-france",
       "headline": "Une « enquête d’envergure » : un militaire américain arrêté au Royaume-Uni, soupçonné d’espionnage pour la Russie",
@@ -53,7 +86,30 @@
     }
   ],
   "topicId": "3a853474f679",
-  "titledArticleCount": 4,
+  "titledArticleCount": 7,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "La police antiterroriste britannique a interpellé un militaire américain de 41 ans mardi dans le Gloucestershire, sous l'accusation d'espionnage pour le compte de Moscou.",
+      "L'information est relayée dans le cadre d'un direct sur la guerre en Ukraine, qui mentionne en parallèle des pourparlers russo-ukrainiens aux Émirats arabes unis avec une médiation des États-Unis."
+    ],
+    "centre": [
+      "Un soldat américain de 41 ans a été arrêté par les forces antiterroristes britanniques dans le sud-ouest de l'Angleterre pour des faits d'espionnage au profit de la Russie.",
+      "L'opération s'appuie sur une enquête d'envergure menée conjointement entre les autorités du Royaume-Uni et les services américains."
+    ],
+    "droite": [
+      "Un militaire de l'armée de terre américaine âgé de 41 ans a été interpellé près de Gloucester pour avoir transmis des informations aux services de renseignement russes.",
+      "Le directeur du FBI, Kash Patel, a qualifié cette intervention d'« arrestation importante », menée en lien avec le renseignement intérieur britannique, le MI5, et l'armée américaine.",
+      "L'individu a été placé en garde à vue à Londres tandis que les enquêteurs procédaient à des perquisitions dans le Gloucestershire."
+    ]
+  },
+  "differences": [
+    "La gauche intègre l'événement dans le suivi global du conflit ukrainien en y associant des actualités diplomatiques.",
+    "Le centre livre un compte-rendu factuel axé principalement sur les données communiquées par la police antiterroriste britannique.",
+    "La droite détaille davantage les aspects opérationnels de l'enquête en citant nommément le directeur du FBI et le service de renseignement MI5."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-10T23:01:33.646Z"
 }
