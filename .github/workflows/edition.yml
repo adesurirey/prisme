@@ -141,6 +141,15 @@ jobs:
       # deployed HTML and the committed JSON never disagree.
       - run: pnpm --filter @prisme/web build
 
+      # The app's API is the static site (ADR-0043, issue #176): publish
+      # the pipeline JSON the mobile app fetches alongside the HTML it
+      # belongs with — same build, same commit. The script's allowlist
+      # keeps classifications.json, topics.json, redirects.json and
+      # stories/ out of the artifact; the fixture build-output tests run
+      # this same script and assert exactly that.
+      - name: Publish app data artifact
+        run: node web/scripts/publish-app-artifact.mjs web/dist
+
       - uses: actions/configure-pages@v5
         with:
           enablement: true

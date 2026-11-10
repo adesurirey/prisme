@@ -1,0 +1,493 @@
+[
+  {
+    "id": "lobs",
+    "name": "L'Obs",
+    "leaning": "gauche",
+    "paywall": "partial",
+    "site": "https://www.nouvelobs.com",
+    "feeds": {
+      "latest": "https://www.nouvelobs.com/rss.xml"
+    },
+    "reach": {
+      "value": 10500000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "huffpost",
+    "name": "Le HuffPost",
+    "leaning": "gauche",
+    "paywall": "none",
+    "site": "https://www.huffingtonpost.fr",
+    "feeds": {
+      "latest": "https://www.huffingtonpost.fr/rss/all_headline.xml"
+    },
+    "reach": {
+      "value": 17900000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "liberation",
+    "name": "Libération",
+    "leaning": "gauche",
+    "paywall": "partial",
+    "site": "https://www.liberation.fr",
+    "feeds": {
+      "latest": "https://www.liberation.fr/arc/outboundfeeds/rss/?outputType=xml"
+    },
+    "reach": {
+      "value": 15900000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "mediapart",
+    "name": "Mediapart",
+    "leaning": "gauche",
+    "paywall": "full",
+    "site": "https://www.mediapart.fr",
+    "feeds": {
+      "latest": "https://www.mediapart.fr/articles/feed"
+    },
+    "reach": {
+      "value": 5500000,
+      "unit": "visits",
+      "source": "Semrush",
+      "asOf": "2026-08",
+      "estimated": true
+    }
+  },
+  {
+    "id": "blast",
+    "name": "Blast",
+    "leaning": "gauche",
+    "paywall": "none",
+    "site": "https://www.blast-info.fr",
+    "feeds": {
+      "latest": "https://api.blast-info.fr/rss_articles.xml"
+    },
+    "reach": {
+      "value": 360000,
+      "unit": "visits",
+      "source": "Semrush",
+      "asOf": "2026-08",
+      "estimated": true
+    }
+  },
+  {
+    "id": "humanite",
+    "name": "L'Humanité",
+    "leaning": "gauche",
+    "paywall": "none",
+    "site": "https://www.humanite.fr",
+    "feeds": {
+      "latest": "https://www.humanite.fr/feed"
+    },
+    "reach": {
+      "value": 3300000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "monde-diplomatique",
+    "name": "Le Monde diplomatique",
+    "leaning": "gauche",
+    "paywall": "partial",
+    "site": "https://www.monde-diplomatique.fr",
+    "feeds": {
+      "latest": "https://www.monde-diplomatique.fr/rss/"
+    },
+    "reach": {
+      "value": 478865,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-09"
+    }
+  },
+  {
+    "id": "le-monde",
+    "name": "Le Monde",
+    "leaning": "centre-gauche",
+    "paywall": "partial",
+    "site": "https://www.lemonde.fr",
+    "feeds": {
+      "une": "https://www.lemonde.fr/rss/une.xml",
+      "latest": "https://www.lemonde.fr/rss/en_continu.xml"
+    },
+    "reach": {
+      "value": 95500000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "slate-fr",
+    "name": "Slate.fr",
+    "leaning": "centre-gauche",
+    "paywall": "none",
+    "site": "https://www.slate.fr",
+    "feeds": {
+      "latest": "https://slate.fr/rss.xml"
+    },
+    "reach": {
+      "value": 6026098,
+      "unit": "visits",
+      "source": "Hypestat (miroir Semrush)",
+      "asOf": "2026-03",
+      "estimated": true
+    }
+  },
+  {
+    "id": "franceinfo",
+    "name": "franceinfo",
+    "leaning": "centre-gauche",
+    "paywall": "none",
+    "site": "https://www.francetvinfo.fr",
+    "feeds": {
+      "latest": "https://www.francetvinfo.fr/titres.rss"
+    },
+    "reach": {
+      "value": 136500000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "20-minutes",
+    "name": "20 Minutes",
+    "leaning": "centre-gauche",
+    "paywall": "none",
+    "site": "https://www.20minutes.fr",
+    "feeds": {
+      "une": "https://www.20minutes.fr/feeds/rss-une.xml"
+    },
+    "reach": {
+      "value": 90300000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "ouest-france",
+    "name": "Ouest-France",
+    "leaning": "centre",
+    "paywall": "partial",
+    "site": "https://www.ouest-france.fr",
+    "feeds": {
+      "une": "https://www.ouest-france.fr/rss/une",
+      "latest": "https://www.ouest-france.fr/rss-en-continu.xml"
+    },
+    "reach": {
+      "value": 185500000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "bfmtv",
+    "name": "BFMTV",
+    "leaning": "centre",
+    "paywall": "none",
+    "site": "https://www.bfmtv.com",
+    "feeds": {
+      "latest": "https://www.bfmtv.com/rss/news-24-7/"
+    },
+    "reach": {
+      "value": 118700000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "le-parisien",
+    "name": "Le Parisien",
+    "leaning": "centre",
+    "paywall": "partial",
+    "site": "https://www.leparisien.fr",
+    "feeds": {
+      "latest": "https://feeds.leparisien.fr/leparisien/rss"
+    },
+    "reach": {
+      "value": 61900000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "rfi",
+    "name": "RFI",
+    "leaning": "centre",
+    "paywall": "none",
+    "site": "https://www.rfi.fr",
+    "feeds": {
+      "latest": "https://www.rfi.fr/fr/rss"
+    },
+    "reach": {
+      "value": 13600000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "france-24",
+    "name": "France 24",
+    "leaning": "centre",
+    "paywall": "none",
+    "site": "https://www.france24.com",
+    "feeds": {
+      "latest": "https://www.france24.com/fr/rss"
+    },
+    "reach": {
+      "value": 9500000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "courrier-international",
+    "name": "Courrier international",
+    "leaning": "centre",
+    "paywall": "partial",
+    "site": "https://www.courrierinternational.com",
+    "feeds": {
+      "latest": "https://www.courrierinternational.com/feed/all/rss.xml"
+    },
+    "reach": {
+      "value": 7900000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "lexpress",
+    "name": "L'Express",
+    "leaning": "centre",
+    "paywall": "partial",
+    "site": "https://www.lexpress.fr",
+    "feeds": {
+      "latest": "https://www.lexpress.fr/rss/alaune.xml"
+    },
+    "reach": {
+      "value": 6700000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "la-croix",
+    "name": "La Croix",
+    "leaning": "centre",
+    "paywall": "partial",
+    "site": "https://www.la-croix.com",
+    "feeds": {
+      "latest": "https://www.la-croix.com/rss"
+    },
+    "reach": {
+      "value": 3500000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "challenges",
+    "name": "Challenges",
+    "leaning": "centre",
+    "paywall": "partial",
+    "site": "https://www.challenges.fr",
+    "feeds": {
+      "latest": "https://www.challenges.fr/rss.xml"
+    },
+    "reach": {
+      "value": 4186317,
+      "unit": "visits",
+      "asOf": "2026-09",
+      "source": "ACPM"
+    }
+  },
+  {
+    "id": "tf1-info",
+    "name": "TF1 Info",
+    "leaning": "centre-droite",
+    "paywall": "none",
+    "site": "https://www.tf1info.fr",
+    "feeds": {
+      "latest": "https://www.tf1info.fr/feeds/rss-une.xml"
+    },
+    "reach": {
+      "value": 11960000,
+      "unit": "visits",
+      "source": "Semrush",
+      "asOf": "2026-08",
+      "estimated": true
+    }
+  },
+  {
+    "id": "le-point",
+    "name": "Le Point",
+    "leaning": "centre-droite",
+    "paywall": "partial",
+    "site": "https://www.lepoint.fr",
+    "feeds": {
+      "latest": "https://www.lepoint.fr/arc/outboundfeeds/rss/?outputType=xml"
+    },
+    "reach": {
+      "value": 8589980,
+      "unit": "visits",
+      "asOf": "2026-09",
+      "source": "ACPM"
+    }
+  },
+  {
+    "id": "lopinion",
+    "name": "L'Opinion",
+    "leaning": "centre-droite",
+    "paywall": "partial",
+    "site": "https://www.lopinion.fr",
+    "feeds": {
+      "latest": "https://www.lopinion.fr/index.rss"
+    },
+    "reach": {
+      "value": 1251374,
+      "unit": "visits",
+      "asOf": "2026-09",
+      "source": "ACPM"
+    }
+  },
+  {
+    "id": "le-figaro",
+    "name": "Le Figaro",
+    "leaning": "droite",
+    "paywall": "partial",
+    "site": "https://www.lefigaro.fr",
+    "feeds": {
+      "une": "https://www.lefigaro.fr/rss/figaro_actualites.xml",
+      "latest": "https://www.lefigaro.fr/rss/figaro_flash-actu.xml"
+    },
+    "reach": {
+      "value": 125900000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "cnews",
+    "name": "CNews",
+    "leaning": "droite",
+    "paywall": "none",
+    "site": "https://www.cnews.fr",
+    "feeds": {
+      "latest": "https://www.cnews.fr/rss.xml"
+    },
+    "reach": {
+      "value": 30200000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "europe-1",
+    "name": "Europe 1",
+    "leaning": "droite",
+    "paywall": "none",
+    "site": "https://www.europe1.fr",
+    "feeds": {
+      "latest": "https://www.europe1.fr/rss.xml"
+    },
+    "reach": {
+      "value": 4700000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "le-jdd",
+    "name": "Le JDD",
+    "leaning": "droite",
+    "paywall": "partial",
+    "site": "https://www.lejdd.fr",
+    "feeds": {
+      "une": "https://www.lejdd.fr/rss/a-la-une.xml",
+      "latest": "https://www.lejdd.fr/rss.xml"
+    },
+    "reach": {
+      "value": 3400000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "valeurs-actuelles",
+    "name": "Valeurs actuelles",
+    "leaning": "droite",
+    "paywall": "partial",
+    "site": "https://www.valeursactuelles.com",
+    "feeds": {
+      "latest": "https://www.valeursactuelles.com/feed"
+    },
+    "reach": {
+      "value": 1053388,
+      "unit": "visits",
+      "asOf": "2026-01",
+      "source": "Hypestat (miroir Semrush)",
+      "estimated": true
+    }
+  },
+  {
+    "id": "atlantico",
+    "name": "Atlantico",
+    "leaning": "droite",
+    "paywall": "partial",
+    "site": "https://www.atlantico.fr",
+    "feeds": {
+      "latest": "https://rss.atlantico.fr"
+    },
+    "reach": {
+      "value": 374450,
+      "unit": "visits",
+      "source": "Semrush",
+      "asOf": "2026-08",
+      "estimated": true
+    }
+  },
+  {
+    "id": "causeur",
+    "name": "Causeur",
+    "leaning": "droite",
+    "paywall": "partial",
+    "site": "https://www.causeur.fr",
+    "feeds": {
+      "latest": "https://www.causeur.fr/feed"
+    },
+    "reach": {
+      "value": 315089,
+      "unit": "visits",
+      "source": "Hypestat (miroir Semrush)",
+      "asOf": "2025-09",
+      "estimated": true
+    }
+  }
+]
