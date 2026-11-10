@@ -57,7 +57,7 @@
       "url": "https://www.lefigaro.fr/faits-divers/soupcons-de-traite-de-femmes-visant-al-fayed-des-perquisitions-et-constatations-menees-au-ritz-et-villa-windsor-a-paris-20261110",
       "publishedAt": "2026-11-10T12:22:48.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/10/aa63e925f1e9dd21800682ac691edae453f079f707dae32df8dc267f86a1cf45.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -66,5 +66,31 @@
   "topicId": "237bfb3aa31c",
   "titledArticleCount": 5,
   "section": "misc",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le parquet de Paris confirme des perquisitions et des gardes à vue menées mi-octobre jusqu'à Saint-Tropez dans l'enquête ouverte à l'été 2025.",
+      "L'investigation vise des faits de traite d'êtres humains en bande organisée, de proxénétisme et de viols liés à Mohamed Al-Fayed.",
+      "Le Monde précise que le milliardaire égyptien est mort en 2023 sans avoir jamais été poursuivi en dépit de multiples plaintes.",
+      "Le Royaume-Uni mène des enquêtes conjointes et la police britannique a déjà reçu 163 signalements de violences ou d'exploitation sexuelles."
+    ],
+    "centre": [
+      "La police a procédé à des perquisitions et constatations dans deux adresses parisiennes emblématiques associées à Mohamed Al-Fayed.",
+      "Les opérations ciblent le Ritz et la villa Windsor dans le cadre de l'enquête française sur un réseau présumé de traite de femmes.",
+      "Ces investigations visent à faire la lumière sur un système d'exploitation sexuelle qui aurait profité au milliardaire décédé."
+    ],
+    "droite": [
+      "Des perquisitions et constatations ont été menées mi-octobre au Ritz et à la villa Windsor à Paris.",
+      "Ces opérations constituent une étape importante dans les investigations lancées à l'été 2025 pour soupçons de traite de femmes.",
+      "L'enquête vise également à identifier d'éventuels complices de Mohamed Al-Fayed et de son frère Salah."
+    ]
+  },
+  "differences": [
+    "La gauche élargit la focale sur le volume global des plaintes en France et au Royaume-Uni ainsi que sur la qualification criminelle des faits.",
+    "Le centre privilégie un récit factuel centré sur le déroulement des perquisitions dans les lieux parisiens emblématiques liés au milliardaire.",
+    "La droite insiste sur l'importance procédurière de ces perquisitions de mi-octobre et sur la recherche d'éventuels complices, incluant le frère Salah."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-10T17:01:27.521Z"
 }

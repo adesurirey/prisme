@@ -34,7 +34,7 @@
       "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-le-rn-a-obtenu-un-preaccord-de-plus-10-millions-d-euros-de-la-part-de-deux-banques-europeennes-20261110",
       "publishedAt": "2026-11-10T14:01:01.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/10/d71f1b9f3ee310d21120ffbc70c3a48ae8c98184d3da85b0f6f0701ae0e72336.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -65,5 +65,27 @@
   "topicId": "359e18504551",
   "titledArticleCount": 5,
   "section": "politics",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le parti anticipe un besoin supérieur à 10 millions d'euros pour la campagne de Marine Le Pen.",
+      "Une décision définitive des deux établissements prêteurs est attendue avant la fin du mois de novembre."
+    ],
+    "centre": [
+      "Le Rassemblement national s'assure un préaccord bancaire portant sur un montant supérieur à 10 millions d'euros.",
+      "Cette enveloppe financière est destinée à couvrir les dépenses liées à l'élection présidentielle de 2027."
+    ],
+    "droite": [
+      "Le parti nationaliste a validé un préaccord auprès de deux banques européennes pour un montant de 10,6 millions d'euros.",
+      "Le trésorier Kevin Pfeffer souligne la reconnaissance de la crédibilité du dossier par ces créanciers."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur l'échéance du mois de novembre pour l'obtention définitive des fonds.",
+    "Le centre se concentre sur l'aspect informatif du montage financier et l'origine européenne des banques.",
+    "La droite insiste sur les difficultés historiques du parti à se financer et valorise la crédibilité du dossier validé."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-10T17:01:27.521Z"
 }
