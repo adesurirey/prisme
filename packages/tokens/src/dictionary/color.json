@@ -1,0 +1,131 @@
+{
+  "$description": "Prisme color tokens — the single source of truth for web (global.css imports the generated src/tokens.css) and mobile (the generated src/tokens.ts palettes). Linear-like: monochrome chrome, hairlines, and color reserved for what it means (the three Leanings). Light and dark both follow the system. Rationale lives here, not in the generated files.",
+  "light": {
+    "$type": "color",
+    "$description": "Light theme — the base palette.",
+    "canvas": {
+      "$value": "#fcfcfc",
+      "$description": "Page canvas, near-white."
+    },
+    "surface": {
+      "$value": "#ffffff",
+      "$description": "Card and raised surfaces."
+    },
+    "line": {
+      "$value": "rgba(17, 17, 20, 0.08)",
+      "$description": "Hairline borders."
+    },
+    "lineStrong": {
+      "$value": "rgba(17, 17, 20, 0.18)",
+      "$description": "Strong hairlines and focus outlines."
+    },
+    "ink": {
+      "$value": "#1b1b1f",
+      "$description": "Primary text and chrome."
+    },
+    "prose": {
+      "$value": "#52525b",
+      "$description": "Long-form prose (static pages): one step below ink, so reading text stays clearly apart from chrome (muted) without full-ink starkness across long paragraphs."
+    },
+    "muted": {
+      "$value": "#6f6f76",
+      "$description": "Secondary text."
+    },
+    "faint": {
+      "$value": "#a1a1aa",
+      "$description": "Tertiary text, placeholders."
+    },
+    "gauche": {
+      "$value": "#e0415e",
+      "$description": "Left Coverage group (docs/brand.md, Visual identity)."
+    },
+    "centre": {
+      "$value": "#dfa414",
+      "$description": "Centre Coverage group. Lightness architecture: the centre gold is clearly lighter than the two darker ends, so adjacent segments separate at any bar height. Only the three group colors exist: a Leaning dot is colored by its Coverage group, its label carries the granular band."
+    },
+    "droite": {
+      "$value": "#2e7ce4",
+      "$description": "Right Coverage group."
+    },
+    "onLeaning": {
+      "$value": "#ffffff",
+      "$description": "Active tab label on the saturated Leaning pills (light theme)."
+    },
+    "toggleTrack": {
+      "$value": "#f0f0f2",
+      "$description": "The reading toggle's track (issue #89, Primer SegmentedControl): a flat, solid gray — quiet, but enough for the knob to read against."
+    },
+    "trending": {
+      "$value": "#0d9488",
+      "$description": "The one color outside the Leaning palette: the Trending Story badge (« Faits nouveaux », ADR-0014). Sarcelle is calm but unmistakably set apart from rouge, or and droite. Light theme darkens it for readability on the near-white canvas."
+    },
+    "hover": {
+      "$value": "rgba(17, 17, 20, 0.02)",
+      "$description": "Hover wash."
+    }
+  },
+  "dark": {
+    "$type": "color",
+    "$description": "Dark theme — the prefers-color-scheme: dark palette.",
+    "canvas": {
+      "$value": "#0e0e10",
+      "$description": "Page canvas."
+    },
+    "surface": {
+      "$value": "#151517",
+      "$description": "Card and raised surfaces."
+    },
+    "line": {
+      "$value": "rgba(255, 255, 255, 0.09)",
+      "$description": "Hairline borders."
+    },
+    "lineStrong": {
+      "$value": "rgba(255, 255, 255, 0.22)",
+      "$description": "Strong hairlines and focus outlines."
+    },
+    "ink": {
+      "$value": "#e6e6ea",
+      "$description": "Primary text and chrome."
+    },
+    "prose": {
+      "$value": "#c9c9d0",
+      "$description": "Long-form prose (static pages)."
+    },
+    "muted": {
+      "$value": "#9b9ba3",
+      "$description": "Secondary text."
+    },
+    "faint": {
+      "$value": "#6c6c75",
+      "$description": "Tertiary text, placeholders."
+    },
+    "gauche": {
+      "$value": "#f28498",
+      "$description": "Left Coverage group, pastel on the dark canvas."
+    },
+    "centre": {
+      "$value": "#f6c65b",
+      "$description": "Centre Coverage group."
+    },
+    "droite": {
+      "$value": "#63a8ea",
+      "$description": "Right Coverage group."
+    },
+    "onLeaning": {
+      "$value": "#1b1b1f",
+      "$description": "Active tab label on the pastel Leaning pills: dark text for contrast (white on these pastels fails WCAG 4.5:1 badly)."
+    },
+    "toggleTrack": {
+      "$value": "#26262b",
+      "$description": "Reading toggle track, dark-theme value."
+    },
+    "trending": {
+      "$value": "#2dd4bf",
+      "$description": "Trending Story badge (ADR-0014), vivid on the dark canvas."
+    },
+    "hover": {
+      "$value": "rgba(255, 255, 255, 0.025)",
+      "$description": "Hover wash."
+    }
+  }
+}

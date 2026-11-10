@@ -1,0 +1,25 @@
+{
+  "name": "@prisme/tokens",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "src/tokens.ts",
+  "types": "src/tokens.ts",
+  "exports": {
+    ".": "./src/tokens.ts",
+    "./tokens.css": "./src/tokens.css"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "generate": "tsx scripts/generate-tokens.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "style-dictionary": "^5.8.0"
+  }
+}
