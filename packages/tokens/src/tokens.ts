@@ -1,0 +1,101 @@
+/*
+ * GENERATED FILE — do not edit by hand. The source of truth is the DTCG
+ * dictionary in packages/tokens/src/dictionary/color.json; regenerate
+ * with:
+ *
+ *   pnpm --filter @prisme/tokens generate
+ *
+ * src/sync.test.ts goes red whenever this file and the dictionary drift
+ * apart (issue #178): edit the dictionary, then regenerate.
+ */
+
+/*
+ * Prisme color tokens — the single source of truth for web (global.css imports the generated src/tokens.css) and mobile (the generated src/tokens.ts palettes). Linear-like: monochrome chrome, hairlines, and color reserved for what it means (the three Leanings). Light and dark both follow the system. Rationale lives here, not in the generated files.
+ */
+
+/** Every Prisme color token as a plain color string (hex or rgba()). */
+export type Palette = {
+  readonly canvas: string;
+  readonly surface: string;
+  readonly line: string;
+  readonly lineStrong: string;
+  readonly ink: string;
+  readonly prose: string;
+  readonly muted: string;
+  readonly faint: string;
+  readonly gauche: string;
+  readonly centre: string;
+  readonly droite: string;
+  readonly onLeaning: string;
+  readonly toggleTrack: string;
+  readonly trending: string;
+  readonly hover: string;
+};
+
+/** Light theme — the light group of the dictionary. */
+export const light: Palette = {
+  /** Page canvas, near-white. */
+  canvas: '#fcfcfc',
+  /** Card and raised surfaces. */
+  surface: '#ffffff',
+  /** Hairline borders. */
+  line: 'rgba(17, 17, 20, 0.08)',
+  /** Strong hairlines and focus outlines. */
+  lineStrong: 'rgba(17, 17, 20, 0.18)',
+  /** Primary text and chrome. */
+  ink: '#1b1b1f',
+  /** Long-form prose (static pages): one step below ink, so reading text stays clearly apart from chrome (muted) without full-ink starkness across long paragraphs. */
+  prose: '#52525b',
+  /** Secondary text. */
+  muted: '#6f6f76',
+  /** Tertiary text, placeholders. */
+  faint: '#a1a1aa',
+  /** Left Coverage group (docs/brand.md, Visual identity). */
+  gauche: '#e0415e',
+  /** Centre Coverage group. Lightness architecture: the centre gold is clearly lighter than the two darker ends, so adjacent segments separate at any bar height. Only the three group colors exist: a Leaning dot is colored by its Coverage group, its label carries the granular band. */
+  centre: '#dfa414',
+  /** Right Coverage group. */
+  droite: '#2e7ce4',
+  /** Active tab label on the saturated Leaning pills (light theme). */
+  onLeaning: '#ffffff',
+  /** The reading toggle's track (issue #89, Primer SegmentedControl): a flat, solid gray — quiet, but enough for the knob to read against. */
+  toggleTrack: '#f0f0f2',
+  /** The one color outside the Leaning palette: the Trending Story badge (« Faits nouveaux », ADR-0014). Sarcelle is calm but unmistakably set apart from rouge, or and droite. Light theme darkens it for readability on the near-white canvas. */
+  trending: '#0d9488',
+  /** Hover wash. */
+  hover: 'rgba(17, 17, 20, 0.02)',
+};
+
+/** Dark theme — the dark group of the dictionary. */
+export const dark: Palette = {
+  /** Page canvas. */
+  canvas: '#0e0e10',
+  /** Card and raised surfaces. */
+  surface: '#151517',
+  /** Hairline borders. */
+  line: 'rgba(255, 255, 255, 0.09)',
+  /** Strong hairlines and focus outlines. */
+  lineStrong: 'rgba(255, 255, 255, 0.22)',
+  /** Primary text and chrome. */
+  ink: '#e6e6ea',
+  /** Long-form prose (static pages). */
+  prose: '#c9c9d0',
+  /** Secondary text. */
+  muted: '#9b9ba3',
+  /** Tertiary text, placeholders. */
+  faint: '#6c6c75',
+  /** Left Coverage group, pastel on the dark canvas. */
+  gauche: '#f28498',
+  /** Centre Coverage group. */
+  centre: '#f6c65b',
+  /** Right Coverage group. */
+  droite: '#63a8ea',
+  /** Active tab label on the pastel Leaning pills: dark text for contrast (white on these pastels fails WCAG 4.5:1 badly). */
+  onLeaning: '#1b1b1f',
+  /** Reading toggle track, dark-theme value. */
+  toggleTrack: '#26262b',
+  /** Trending Story badge (ADR-0014), vivid on the dark canvas. */
+  trending: '#2dd4bf',
+  /** Hover wash. */
+  hover: 'rgba(255, 255, 255, 0.025)',
+};

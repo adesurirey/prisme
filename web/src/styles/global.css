@@ -1,77 +1,17 @@
 @import "tailwindcss";
+@import "@prisme/tokens/tokens.css";
 
 /*
  * Prisme design tokens — Linear-like: monochrome chrome, hairlines,
  * and color reserved for what it means (the three Leanings).
  * Light and dark follow the system via prefers-color-scheme.
+ * The token values live in the DTCG dictionary of @prisme/tokens
+ * (packages/tokens/src/dictionary/color.json), generated into the
+ * imported tokens.css — the rationale comments live with the dictionary
+ * and are re-emitted as comments in both artifacts.
  */
 :root {
   color-scheme: light dark;
-
-  --canvas: #fcfcfc;
-  --surface: #ffffff;
-  --line: rgba(17, 17, 20, 0.08);
-  --line-strong: rgba(17, 17, 20, 0.18);
-  --ink: #1b1b1f;
-  /* Long-form prose (static pages): one step below ink, so reading text
-   * stays clearly apart from chrome (muted) without full-ink starkness
-   * across long paragraphs. */
-  --prose: #52525b;
-  --muted: #6f6f76;
-  --faint: #a1a1aa;
-
-  /* Lightness architecture: the centre gold is clearly lighter than the
-   * two darker ends, so adjacent segments separate at any bar height
-   * (docs/brand.md, Visual identity). Only the three group colors exist:
-   * a Leaning dot is colored by its Coverage group, its label carries the
-   * granular band. */
-  --gauche: #e0415e;
-  --centre: #dfa414;
-  --droite: #2e7ce4;
-
-  /* Active tab label on the saturated Leaning pills (light theme). */
-  --on-leaning: #ffffff;
-
-  /* The reading toggle's track (issue #89, Primer SegmentedControl): a
-   * flat, solid gray — quiet, but enough for the knob to read against. */
-  --toggle-track: #f0f0f2;
-
-  /* The one color outside the Leaning palette: the Trending Story badge
-   * ("Faits nouveaux", ADR-0014). Sarcelle is calm but unmistakably set apart
-   * from rouge, or and droite. Light theme darkens it for readability on
-   * the near-white canvas. */
-  --trending: #0d9488;
-
-  --hover: rgba(17, 17, 20, 0.02);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --canvas: #0e0e10;
-    --surface: #151517;
-    --line: rgba(255, 255, 255, 0.09);
-    --line-strong: rgba(255, 255, 255, 0.22);
-    --ink: #e6e6ea;
-    --prose: #c9c9d0;
-    --muted: #9b9ba3;
-    --faint: #6c6c75;
-
-    --gauche: #f28498;
-    --centre: #f6c65b;
-    --droite: #63a8ea;
-
-    /* Active tab label on the pastel Leaning pills: dark text for contrast
-     * (white on these pastels fails WCAG 4.5:1 badly). */
-    --on-leaning: #1b1b1f;
-
-    /* Reading toggle track, dark-theme value. */
-    --toggle-track: #26262b;
-
-    /* Trending Story badge (ADR-0014), vivid on the dark canvas. */
-    --trending: #2dd4bf;
-
-    --hover: rgba(255, 255, 255, 0.025);
-  }
 }
 
 @theme inline {
