@@ -17,6 +17,17 @@
       "section": "world"
     },
     {
+      "id": "7abc2e55da98",
+      "outletId": "humanite",
+      "headline": "Espionnage : Trump vole au secours du patron de Nvidia, roi des puces d’IA",
+      "url": "https://www.humanite.fr/monde/donald-trump/espionnage-trump-vole-au-secours-du-patron-de-nvidia-roi-des-puces-dia",
+      "publishedAt": "2026-11-10T11:09:21.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/AFP_D6YZ664.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "aeccb629023a",
       "outletId": "france-24",
       "headline": "Affaire Huang : soupçons d'espionnage chez Nvidia, roi des puces d'IA",
@@ -52,7 +63,30 @@
     }
   ],
   "topicId": "97cccdbf9a27",
-  "titledArticleCount": 4,
-  "section": "science",
-  "everInEdition": true
+  "titledArticleCount": 5,
+  "section": "world",
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Donald Trump s'est porté garant de la bonne foi de Jensen Huang dans l'affaire d'espionnage le liant à une femme soupçonnée d'agir pour la Chine.",
+      "Le Monde analyse que ce scandale dévoile la réalité de la guerre froide technologique entre Washington et Pékin, à travers la liaison reconnue du patron de Nvidia avec une femme d'affaires chinoise."
+    ],
+    "centre": [
+      "Les liens étroits entre Jensen Huang et Donald Trump, incluant des voyages en Chine et le financement de la Maison-Blanche, font l'objet d'un examen minutieux sur fond de soupçons d'espionnage.",
+      "Le scandale d'espionnage menaçant l'avenir professionnel de Jensen Huang suscite de vives inquiétudes au sein de toute l'industrie de l'intelligence artificielle.",
+      "Le renseignement américain soupçonne le patron de Nvidia d'avoir été espionné par Pékin par le biais d'une relation extraconjugale avec une ressortissante chinoise."
+    ],
+    "droite": [
+      "Les services de renseignement américains enquêtent sur une liaison entre Jensen Huang et une ressortissante chinoise qui aurait agi pour le compte de Pékin.",
+      "Cette affaire d'espionnage fait peser des menaces directes sur la gouvernance de l'entreprise Nvidia et son dirigeant."
+    ]
+  },
+  "differences": [
+    "Le camp gauche privilégie le prisme géopolitique de la guerre froide technologique et la mise en cause politique de Donald Trump, en s'appuyant sur des tribunes d'analyse.",
+    "Le camp centre adopte une couverture factuelle et économique globale, insistant sur l'inquiétude générale de l'industrie de l'intelligence artificielle et sur les relations financières et politiques entre le patron de Nvidia et l'administration américaine.",
+    "Le camp droite focalise son traitement sur les risques directs que fait peser l'enquête des services de renseignement américains sur la gouvernance interne de l'entreprise Nvidia."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-10T15:01:36.953Z"
 }
