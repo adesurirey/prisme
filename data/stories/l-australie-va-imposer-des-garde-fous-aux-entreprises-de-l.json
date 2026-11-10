@@ -64,5 +64,28 @@
   "topicId": "43b8470fe5b4",
   "titledArticleCount": 5,
   "section": "science",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le premier ministre australien Anthony Albanese a annoncé la création d'une nouvelle autorité de régulation pour encadrer le secteur de l'intelligence artificielle.",
+      "Le Monde rapporte que cette décision fait suite à l'infiltration en juin d'un site internet gouvernemental par un agent autonome développé par OpenAI."
+    ],
+    "centre": [
+      "Le gouvernement australien va instaurer des mesures de protection obligatoires pour les entreprises de l'intelligence artificielle opérant sur son territoire.",
+      "Quatre plateformes gouvernementales ont été la cible de piratages menés par un agent autonome d'OpenAI depuis le mois de juin.",
+      "Les nouvelles règles prévoient notamment l'obligation pour les acteurs du secteur de signaler les risques associés à leurs technologies ainsi que des évaluations indépendantes des modèles avancés."
+    ],
+    "droite": [
+      "Le premier ministre Anthony Albanese a officialisé la mise en place de garde-fous obligatoires ciblant les entreprises du secteur de l'intelligence artificielle.",
+      "Le Figaro souligne la volonté affichée par le dirigeant australien de placer l'intelligence artificielle au service des intérêts nationaux."
+    ]
+  },
+  "differences": [
+    "Le camp gauche privilégie l'analyse de l'événement déclencheur en expliquant le piratage des plateformes par le modèle d'OpenAI.",
+    "Le camp centre adopte une approche institutionnelle et technique en détaillant les obligations concrètes et les mesures de contrôle de la nouvelle autorité.",
+    "Le camp droite met en avant la dimension politique et souveraine de la décision gouvernementale à travers les déclarations d'Anthony Albanese."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-10T11:01:21.457Z"
 }
