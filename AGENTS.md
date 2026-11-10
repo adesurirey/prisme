@@ -44,7 +44,7 @@ pnpm monorepo. Run everything from the repo root:
 
 - `pnpm edition` — run the pipeline: fetch all Outlet feeds and write the archive under `data/` (see ADR-0002). Same command locally and in CI. In CI, the hourly trigger is an external cron-job.org job POSTing to the `workflow_dispatch` API (`.github/workflows/edition.yml`, `schedule:` kept commented out as fallback — GitHub's scheduler dropped most hourly slots).
 - `pnpm verify` — re-check the Outlet config evidence: feed status, item count, time covered, image presence, TDM reservations (feeds and TDM probes only; prints stats).
-- `pnpm test` — all packages (vitest, pipeline).
+- `pnpm test` — all packages (vitest for domain/pipeline/web, jest-expo for `mobile`).
 - `pnpm typecheck` — all packages (tsc + astro check).
 - `pnpm --filter @prisme/web build` — build the static site (needs `data/` to exist; run `pnpm edition` first).
 - `pnpm benchmark:export` / `pnpm benchmark:grade` — sample headline+teaser pairs for hand labeling, then grade the decision models against the labels (grade needs `OPENROUTER_API_KEY` in env).
@@ -52,11 +52,11 @@ pnpm monorepo. Run everything from the repo root:
 - `pnpm replay:topics` — **paid** (live Membership calls): replay the archive through the production topic resolution (`resolveTopics`) and print every check with its verdict; grades the Topic mechanism and compares Membership models (`docs/research/topics-model-comparison.md`), raw transcripts in `.benchmark/topics/`.
 - `pnpm merge-stories <base-slug> <absorbed-slug>` — manual merge when the Grouping model split a Story you judge should be one: the Base (first argument) survives whole — slug, id, title, Summaries, Topic — and the absorbed Story gives it its Articles and dies; the next edition run re-summarizes the merged set. Free, no API. Refuses cross-day and frozen-base merges unless `--force`; writes a redirect entry in `data/redirects.json` for the dead URL when the absorbed Story ever ranked into the Edition; `--dry-run` prints the plan, `--yes` skips the confirm; never commits (prints the git command).
 
-Packages: `packages/domain` (shared types and the sourced Outlet config), `pipeline` (collector, `tsx`), `web` (Astro + React).
+Packages: `packages/domain` (shared types and the sourced Outlet config), `pipeline` (collector, `tsx`), `web` (Astro + React), `mobile` (Expo + React Native app, jest-expo).
 
 ### Tests
 
-Add tests for changes to `packages/domain` (typed config, domain types) and `pipeline` (collector logic) — vitest, colocated. UI copy tweaks in `web` don't need tests; layout or component logic does. Run `pnpm test` before committing.
+Add tests for changes to `packages/domain` (typed config, domain types) and `pipeline` (collector logic) — vitest, colocated. `mobile` tests colocate the same way under jest-expo + @testing-library/react-native (vitest cannot run RN). UI copy tweaks in `web` don't need tests; layout or component logic does. Run `pnpm test` before committing.
 
 ### Hard rules from the ADRs
 
