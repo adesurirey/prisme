@@ -2,6 +2,8 @@ packages:
   - packages/*
   - pipeline
   - web
+  - mobile
 allowBuilds:
+  '@parcel/watcher': true
   esbuild: true
   sharp: true

@@ -7,7 +7,13 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["**", "!data", "!docs/research", "!web/src/assets/outlets"]
+    "includes": [
+      "**",
+      "!data",
+      "!docs/research",
+      "!web/src/assets/outlets",
+      "!mobile/assets"
+    ]
   },
   "formatter": {
     "enabled": true,
