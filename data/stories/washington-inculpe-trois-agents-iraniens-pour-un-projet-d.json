@@ -36,7 +36,7 @@
       "url": "https://www.lefigaro.fr/international/incident-pres-de-la-base-aerienne-de-fairford-en-angleterre-washington-inculpe-trois-agents-iraniens-20261110",
       "publishedAt": "2026-11-10T22:58:56.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/10/126115cd6a307000ddf81dcaca70040837761a9a833533a3d95e8b14fba39bcf.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -56,5 +56,30 @@
   "topicId": "c03c47128b13",
   "titledArticleCount": 4,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "La justice américaine a inculpé trois « agents iraniens » pour des attaques et tentatives en Europe.",
+      "L'un des mis en cause est un membre présumé des Brigades du Hezbollah actuellement incarcéré aux États-Unis.",
+      "Le projet d'attentat visait spécifiquement la base aérienne de Fairford en Angleterre, employée par l'armée américaine pour des frappes contre l'Iran."
+    ],
+    "centre": [
+      "Le département de la justice des États-Unis a annoncé mardi l'inculpation de trois « agents iraniens ».",
+      "L'affaire concerne un « projet d'attentat » déjoué en septembre contre la base britannique de Fairford.",
+      "Cette base est utilisée par l'armée américaine pour mener des opérations de frappe en Iran.",
+      "L'un des suspects visés est un responsable présumé des Brigades du Hezbollah déjà détenu sur le sol américain."
+    ],
+    "droite": [
+      "La justice des États-Unis a prononcé l'inculpation de trois « agents iraniens ».",
+      "Les faits font suite à un signalement de « trois véhicules suspects » et à l'intervention de la police le 27 septembre près de la base aérienne de Fairford, située dans le sud-ouest de l'Angleterre."
+    ]
+  },
+  "differences": [
+    "La gauche insiste sur le profil international des cibles visées en Europe et sur le rôle d'un responsable des Brigades du Hezbollah.",
+    "Le centre met en avant l'annonce officielle du ministère américain de la justice et explicite le lien stratégique de la base de Fairford avec les frappes contre l'Iran.",
+    "La droite privilégie le déroulement factuel de l'incident local en Angleterre, en rappelant l'intervention de la police consécutive au signalement des véhicules suspects."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-11T02:01:28.902Z"
 }

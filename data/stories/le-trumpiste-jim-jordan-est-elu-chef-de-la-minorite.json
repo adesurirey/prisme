@@ -6,6 +6,18 @@
   "storyDay": "2026-11-10",
   "articles": [
     {
+      "id": "0a880c02885f",
+      "outletId": "20-minutes",
+      "headline": "Etats-Unis : Proche de Trump, le conservateur Jim Jordan prend la tête des représentants républicains",
+      "url": "https://www.20minutes.fr/monde/etats-unis/4262087-20261111-etats-unis-proche-trump-conservateur-jim-jordan-prend-tete-representants-republicains?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-11T00:59:33.000Z",
+      "imageUrl": "https://img.20mn.fr/UQKcI2jBTw644-aeGu8Svik/1200x768_le-representant-jim-jordan-r-ohio-s-entretient-avec-des-journalistes-apres-son-election-en-tant-que-leader-republicain-de-la-chambre-alors-que-le-representant-tom-emmer-r-minn-et-la-representante-lisa-mc-clain-r-michigan-ecoutent-le-mardi-10-novembre-2026-sur-la-colline-du-capitole-a-washington-ap-photo-jacquelyn-martin-dcjm520-26314801252851-2611102317",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "b144c17e87b8",
       "outletId": "ouest-france",
       "headline": "États-Unis : le conservateur Jim Jordan élu chef des députés républicains, en minorité à la Chambre des représentants",
@@ -53,7 +65,32 @@
     }
   ],
   "topicId": "56eb73f81ba2",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "world",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Jim Jordan, élu de l'Ohio et figure de l'aile dure des républicains, a pris la tête de la minorité à la Chambre des représentants.",
+      "Le nouveau chef des députés républicains est un proche de Donald Trump qui prône l'austérité budgétaire.",
+      "Il défend également une politique migratoire particulièrement stricte."
+    ],
+    "centre": [
+      "Jim Jordan a été désigné chef de la prochaine minorité républicaine à la Chambre américaine des représentants.",
+      "L'élu de l'Ohio promet une ligne de rupture après la déroute de son camp aux élections de mi-mandat.",
+      "Au Sénat, où les républicains ont également perdu la majorité, John Thune a été réélu à leur tête."
+    ],
+    "droite": [
+      "Le député républicain Jim Jordan a été élu à la tête de son groupe à la Chambre des représentants.",
+      "Ancien coach universitaire de lutte, il plaide pour la réduction du rôle de l'État fédéral et l'austérité.",
+      "Il soutient également une lutte ferme contre l'immigration."
+    ]
+  },
+  "differences": [
+    "La gauche insiste fortement sur la proximité idéologique entre Jim Jordan et Donald Trump ainsi que sur son positionnement très conservateur.",
+    "Le centre met en avant la dimension stratégique de cette élection, soulignant la volonté de rupture après la défaite électorale des républicains.",
+    "La droite privilégie le parcours biographique de l'élu et ses propositions programmatiques axées sur la réduction du rôle de l'État et l'austérité budgétaire."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-11T02:01:28.902Z"
 }
