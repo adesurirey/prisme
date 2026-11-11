@@ -308,5 +308,30 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le journal Le Monde relate le rassemblement d'un million de jeunes à Buenos Aires autour du pape Léon XIV.",
+      "Le souverain pontife a mis en garde contre le « succès, l'apparence et le plaisir effréné », qualifiés d'idoles modernes.",
+      "Il a également évoqué son opération du poumon subie en octobre pour illustrer la persévérance pastorale."
+    ],
+    "centre": [
+      "Le pape Léon XIV a réuni un million de jeunes lors d'une veillée au Monument des Espagnols à Buenos Aires.",
+      "Il a exhorté la jeunesse argentine à résister aux idoles contemporaines telles que la réussite et l'apparence.",
+      "Cet événement marque la fin de sa tournée de trois jours en Argentine avant son départ pour le Pérou."
+    ],
+    "droite": [
+      "Le Figaro rapporte que le pape Léon XIV a prononcé un discours devant un million de jeunes à Buenos Aires.",
+      "Le souverain pontife a dénoncé le « succès à tout prix, l'argent, l'obsession de l'apparence et la quête effrénée du plaisir ».",
+      "Il a renouvelé son appel à la sainteté avant de quitter l'Argentine pour entamer la dernière étape de son voyage au Pérou."
+    ]
+  },
+  "differences": [
+    "Le camp de gauche met l'accent sur la dimension personnelle et humaine du souverain pontife en rappelant son évocation de sa récente opération pulmonaire.",
+    "Le camp du centre adopte une couverture factuelle et généraliste en insistant principalement sur le déroulement logistique de la tournée en Argentine et le départ vers le Pérou.",
+    "Le camp de droite choisit un angle plus moral et spirituel en reprenant en détail les expressions précises du pape contre les dérives matérialistes et son appel explicite à la sainteté."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-11T17:01:58.672Z"
 }
