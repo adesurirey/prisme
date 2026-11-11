@@ -6,11 +6,34 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "f9e14d67e87e",
+      "outletId": "ouest-france",
+      "headline": "Route du Rhum. L’état de grâce de Corentin Horeau, vainqueur en Imoca",
+      "url": "https://www.ouest-france.fr/route-du-rhum/route-du-rhum-letat-de-grace-de-corentin-horeau-vainqueur-en-imoca-3dd950ce-dddf-11f1-86b6-0a2fbb1d8ed9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-11T17:09:18.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNjc2NDc0ODU2YTNkYWU3MjdhMDAyNjQ4MjZhNGEzNDg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=84f3feca9b03e5099d6aaa97dc42fbf3292cdf32008d9406d37174d3847076f3",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
       "id": "1ea172d7cc85",
       "outletId": "liberation",
       "headline": "Route du rhum : Bourgnon et Horeau, la victoire bord à bord d’un duo d’amis",
       "url": "https://www.liberation.fr/sports/route-du-rhum-bourgnon-et-horeau-la-victoire-bord-a-bord-dun-duo-damis-20261111_SBWP3RZ6X5HRVI7D6RMYGXTKLQ/",
       "publishedAt": "2026-11-11T12:41:32.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
+      "id": "db7a105491ac",
+      "outletId": "humanite",
+      "headline": "À 24 ans, Basile Bourgnon remporte la Route du Rhum dès sa première participation",
+      "url": "https://www.humanite.fr/sports/route-du-rhum/a-24-ans-basile-bourgnon-remporte-la-route-du-rhum-des-sa-premiere-participation",
+      "publishedAt": "2026-11-11T12:30:00.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/rdr2026-2610271603-banque-image-video-basile-bou-haute-definition.jpg?w=1200",
       "frontPage": false,
       "kind": "news",
       "section": "sport"
@@ -146,56 +169,6 @@
   "summarizedArticleCount": 10,
   "summarizedAt": "2026-11-11T13:01:31.076Z",
   "activity": [
-    {
-      "start": 1794315600000,
-      "end": 1794319200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794319200000,
-      "end": 1794322800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794322800000,
-      "end": 1794326400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794326400000,
-      "end": 1794330000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794330000000,
-      "end": 1794333600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794333600000,
       "end": 1794337200000,
@@ -380,11 +353,61 @@
       "start": 1794398400000,
       "end": 1794402000000,
       "counts": {
-        "gauche": 1,
+        "gauche": 2,
         "centre": 1,
         "droite": 0
       },
-      "total": 2
+      "total": 3
+    },
+    {
+      "start": 1794402000000,
+      "end": 1794405600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794405600000,
+      "end": 1794409200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794409200000,
+      "end": 1794412800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794412800000,
+      "end": 1794416400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794416400000,
+      "end": 1794420000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ]
 }

@@ -6,6 +6,17 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "3e5709e3c633",
+      "outletId": "rfi",
+      "headline": "France: polémique sur les commémorations du 11-Novembre dans les établissements scolaires",
+      "url": "https://www.rfi.fr/fr/france/20261111-france-pol%C3%A9mique-sur-les-comm%C3%A9morations-du-11-novembre-dans-les-%C3%A9tablissements-scolaires",
+      "publishedAt": "2026-11-11T16:10:19.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/475ce66e-131c-11ea-ba47-005056a99247/w:1024/p:16x9/2018-11-07t163104z_692128567_rc12b754c480_rtrmadp_3_ww1-century-france_0.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "5df41b72cb66",
       "outletId": "lobs",
       "headline": "« Très regrettable » : quelle est cette polémique sur les commémorations du 11-Novembre qui scandalise le gouvernement ?",
@@ -54,7 +65,7 @@
       "headline": "11 Novembre à l'école : faut-il sanctionner les enseignants qui ont appelé au boycott ?",
       "url": "https://www.lefigaro.fr/11-novembre-a-l-ecole-faut-il-sanctionner-les-enseignants-qui-ont-appele-au-boycott-20261111",
       "publishedAt": "2026-11-11T10:32:19.000Z",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "opinion",
       "section": "society",
       "everFrontPage": true
@@ -66,7 +77,7 @@
       "url": "https://www.lefigaro.fr/actualite-france/commemoration-du-11-novembre-a-l-ecole-une-polemique-tres-regrettable-estime-alice-rufo-20261111",
       "publishedAt": "2026-11-11T10:28:05.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/11/6eb41ffd011c1b4f32b70754147102c06d03907b54dce5de02757fec948971ec.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -188,46 +199,6 @@
   "section": "society",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794315600000,
-      "end": 1794319200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794319200000,
-      "end": 1794322800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794322800000,
-      "end": 1794326400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794326400000,
-      "end": 1794330000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794330000000,
       "end": 1794333600000,
@@ -427,6 +398,46 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794402000000,
+      "end": 1794405600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794405600000,
+      "end": 1794409200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794409200000,
+      "end": 1794412800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794412800000,
+      "end": 1794416400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {

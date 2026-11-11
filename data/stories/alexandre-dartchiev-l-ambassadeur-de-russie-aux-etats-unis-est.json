@@ -6,6 +6,41 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "34798e3f9bd3",
+      "outletId": "le-monde",
+      "headline": "Alexandre Dartchiev, l’ambassadeur russe aux Etats-Unis, est mort « soudainement » à 66 ans",
+      "url": "https://www.lemonde.fr/international/article/2026/11/11/alexandre-dartchiev-l-ambassadeur-russe-aux-etats-unis-est-mort-soudainement-a-66-ans_6809012_3210.html",
+      "publishedAt": "2026-11-11T17:56:15.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/11/43/0/2417/1208/644/322/60/0/c27bca4_ftp-1-xyxqxs2bsqmo-2026-11-11t164533z-485515734-rc2ccbamplok-rtrmadp-3-russia-usa-ambassador.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "db72148f5e98",
+      "outletId": "ouest-france",
+      "headline": "L’ambassadeur russe aux États-Unis est mort « soudainement » à l’âge de 66 ans",
+      "url": "https://www.ouest-france.fr/europe/russie/lambassadeur-russe-aux-etats-unis-est-mort-soudainement-a-lage-de-66-ans-e0bb8e32-ddef-11f1-a62b-776e3051b0df?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-11T17:19:42.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNmQ0ZDNkMTI3NWVkODAzZjA0NWQwZmFmM2VkNTBiMGI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=46bda9f50d01a6c444569cefea20d330d77ecf82277decd1e11d24b7223ce552",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "4167ee1dab92",
+      "outletId": "tf1-info",
+      "headline": "La Russie annonce la mort \"soudaine\" de son ambassadeur aux États-Unis",
+      "url": "https://www.tf1info.fr/international/la-russie-annonce-la-mort-soudaine-a-66-ans-de-son-ambassadeur-aux-etats-unis-2475293.html",
+      "publishedAt": "2026-11-11T17:08:29.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/682/ambassade-russe-washington-11-mai-2025-c244e2-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "bd11e2c1d135",
       "outletId": "le-parisien",
       "headline": "L’ambassadeur de la Russie aux États-Unis est mort « soudainement » à l’âge de 66 ans",
@@ -53,7 +88,7 @@
     }
   ],
   "topicId": "6b99ca1270b6",
-  "titledArticleCount": 4,
+  "titledArticleCount": 7,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -291,11 +326,36 @@
       "start": 1794416400000,
       "end": 1794420000000,
       "counts": {
-        "gauche": 0,
-        "centre": 1,
-        "droite": 0
+        "gauche": 1,
+        "centre": 2,
+        "droite": 1
       },
-      "total": 1
+      "total": 4
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le diplomate russe Alexandre Dartchiev est décédé brusquement à l'âge de 66 ans.",
+      "Il occupait le poste d'ambassadeur aux États-Unis depuis mars 2025.",
+      "Le parcours du défunt comprenait une participation active au réchauffement des relations diplomatiques entre Moscou et Washington."
+    ],
+    "centre": [
+      "Le ministère russe des Affaires étrangères a officialisé la disparition d'Alexandre Dartchiev, survenue le mercredi 11 novembre à 66 ans.",
+      "Les autorités russes n'ont communiqué aucune précision concernant les circonstances ni l'endroit exact de son trépas.",
+      "Le diplomate avait pris ses fonctions à la tête de l'ambassade à Washington au début du mois de mars 2025."
+    ],
+    "droite": [
+      "Le décès soudain d'Alexandre Dartchiev, ambassadeur de Russie aux États-Unis âgé de 66 ans, a été annoncé par Moscou.",
+      "Le Kremlin a omis de fournir des indications sur les motifs et les lieux précis de la mort de ce représentant officiel.",
+      "Nommé en mars 2025 à Washington, le diplomate s'était illustré dans les efforts de rapprochement bilatéral."
+    ]
+  },
+  "differences": [
+    "Le camp gauche met l'accent sur le rôle diplomatique d'Alexandre Dartchiev et sa contribution au dialogue entre les deux superpuissances.",
+    "Le camp centre adopte une approche strictement factuelle en reprenant l'annonce officielle tout en soulignant l'absence de détails de Moscou sur les causes du décès.",
+    "Le camp droite insiste particulièrement sur le silence du Kremlin concernant les circonstances exactes de la disparition de ce haut représentant en poste depuis mars 2025."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-11T18:01:31.656Z"
 }

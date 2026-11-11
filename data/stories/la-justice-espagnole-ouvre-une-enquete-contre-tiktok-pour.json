@@ -6,6 +6,29 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "ce932c064c92",
+      "outletId": "le-parisien",
+      "headline": "Espagne : une enquête ouverte pour diffusion présumée de contenus pédophiles sur TikTok",
+      "url": "https://www.leparisien.fr/international/espagne-une-enquete-ouverte-pour-diffusion-presumee-de-contenus-pedophiles-sur-tiktok-11-11-2026-YE7PU2F6FNEWJIU6VUN4OIS5NY.php",
+      "publishedAt": "2026-11-11T18:01:31.656Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "9cd46b4e8539",
+      "outletId": "ouest-france",
+      "headline": "Le réseau social TikTok visé par une enquête en Espagne pour la diffusion présumée de contenus pédopornographiques",
+      "url": "https://www.ouest-france.fr/high-tech/tiktok/le-reseau-social-tiktok-vise-par-une-enquete-en-espagne-pour-la-diffusion-presumee-de-contenus-pedopornographiques-36713c18-dde2-11f1-86b6-0a2fbb1d8ed9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-11T16:52:56.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMjgyYTY4Yjk0MWQ5YjYyNGVlY2QwNzFmMjgzYWMyZWU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=2ee5407c84a73cb657f4bbcfe4be59f5783757dd769714faebe98846e5abf75a",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "909cfdf38979",
       "outletId": "20-minutes",
       "headline": "TikTok : Ouverture d’une enquête en Espagne pour diffusion de contenus pédopornographiques",
@@ -42,30 +65,10 @@
     }
   ],
   "topicId": "224fce66248f",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794330000000,
-      "end": 1794333600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794333600000,
-      "end": 1794337200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794337200000,
       "end": 1794340800000,
@@ -281,10 +284,55 @@
       "end": 1794416400000,
       "counts": {
         "gauche": 2,
-        "centre": 0,
+        "centre": 1,
         "droite": 1
       },
-      "total": 3
+      "total": 4
+    },
+    {
+      "start": 1794416400000,
+      "end": 1794420000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794420000000,
+      "end": 1794423600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le parquet espagnol a ordonné l'ouverture d'une investigation visant la plateforme après une plainte déposée par l'association Maldita.es.",
+      "L'organisation signale avoir recensé plus de 1 000 vidéos d'agressions sexuelles contre des enfants totalisant 48 millions de vues.",
+      "Une infime partie de ces publications explicites aurait été supprimée par le réseau social malgré les signalements effectués."
+    ],
+    "centre": [
+      "La justice espagnole a ouvert une procédure judiciaire contre le réseau social TikTok suite à des signalements pour diffusion de contenus pédopornographiques.",
+      "L'association Maldita.es est à l'origine de la plainte après avoir découvert plus de 1 000 séquences d'abus sexuels sur mineurs.",
+      "Les investigations diligentées par le parquet visent la production et la diffusion de ces infractions ainsi que la corruption de mineurs."
+    ],
+    "droite": [
+      "Le parquet espagnol a ordonné l'ouverture d'une enquête judiciaire visant la plateforme TikTok pour diffusion de contenus pédophiles.",
+      "L'association Maldita.es a publié une investigation chiffrant à plus de 1 000 le nombre de vidéos explicites d'agressions d'enfants hébergées.",
+      "Les investigations portent sur les délits d'abus sexuels sur mineurs et de corruption de mineurs sur le réseau social."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur le volume d'audience des vidéos et les défailliances de modération signalées par l'association.",
+    "Le centre adopte un compte rendu institutionnel centré sur la décision du parquet et la qualification juridique des infractions visées.",
+    "La droite privilégie l'impact quantitatif des révélations en reprenant en titre le nombre de vues cumulées par les publications."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-11T18:01:31.656Z"
 }
