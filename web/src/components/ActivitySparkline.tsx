@@ -1,4 +1,4 @@
-import type { ActivityBin } from '../story-activity';
+import type { ActivityBin } from '@prisme/domain';
 import { activityAriaLabel } from '../story-activity';
 
 /**

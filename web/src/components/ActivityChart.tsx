@@ -1,6 +1,5 @@
-import type { CoverageGroup } from '@prisme/domain';
+import type { ActivityBin, CoverageGroup } from '@prisme/domain';
 import { coverageOrder } from '@prisme/domain';
-import type { ActivityBin } from '../story-activity';
 import {
   activityAriaLabel,
   activitySpanLabel,

@@ -1,8 +1,8 @@
 // @vitest-environment jsdom
 
+import type { ActivityBin } from '@prisme/domain';
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import type { ActivityBin } from '../story-activity';
 import ActivitySparkline from './ActivitySparkline';
 
 /**

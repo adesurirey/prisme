@@ -1,4 +1,5 @@
 import type { RedirectEntry, RedirectRegistry, Story } from '@prisme/domain';
+import { outlets } from '@prisme/domain';
 
 /**
  * The manual merge (merge-stories.ts): the Base Story survives whole — its
@@ -10,6 +11,10 @@ import type { RedirectEntry, RedirectRegistry, Story } from '@prisme/domain';
  * I/O (story files, edition.json, the redirect registry).
  */
 import { isLive } from './liveness.ts';
+import { storyActivityBins } from './story-activity.ts';
+
+/** The bins are per the Outlets' Leanings — the same map the edition run uses. */
+const outletById = new Map(outlets.map((o) => [o.id, o]));
 
 export interface MergeStoriesOptions {
   now: Date;
@@ -78,9 +83,15 @@ export function mergeStories(
     );
   }
 
+  const articles = [...incoming].sort(byNewestFirst).concat(base.articles);
   const merged: Story = {
     ...base,
-    articles: [...incoming].sort(byNewestFirst).concat(base.articles),
+    articles,
+    // The activity bins are a pure function of the Articles: re-embed over
+    // the merged set right away — the Base's stale bins would chart without
+    // the absorbed Articles, and a frozen Base's file is never rewritten by
+    // a build (ADR-0005), so no later run would fix them either.
+    activity: storyActivityBins(articles, outletById),
   };
 
   // A redirect only matters for a URL that was ever published (issue #75:

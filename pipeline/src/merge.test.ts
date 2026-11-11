@@ -1,6 +1,11 @@
 import type { Story } from '@prisme/domain';
+import { outlets } from '@prisme/domain';
 import { describe, expect, it } from 'vitest';
 import { mergeRedirectRegistry, mergeStories } from './merge.ts';
+import { storyActivityBins } from './story-activity.ts';
+
+/** The same map mergeStories uses — outlets from the typed domain config. */
+const OUTLET_BY_ID = new Map(outlets.map((o) => [o.id, o]));
 
 const NOW = new Date('2026-10-18T12:00:00Z');
 
@@ -124,6 +129,16 @@ describe('mergeStories', () => {
       'abs-new-2',
       'base-id-a1',
     ]);
+    // The merged file is written as-is: its activity bins cover the
+    // absorbed Articles too (issue #186) — a frozen Base's file is never
+    // rewritten by a build, so the merge itself must leave honest bins.
+    expect(result.merged.activity).toEqual(
+      storyActivityBins(result.merged.articles, OUTLET_BY_ID),
+    );
+    const bins = result.merged.activity!;
+    expect(bins.reduce((sum, bin) => sum + bin.total, 0)).toBe(
+      result.merged.articles.length,
+    );
   });
 
   it('drops absorbed Articles already in the Base and warns', () => {
