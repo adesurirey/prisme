@@ -6,6 +6,49 @@
   "storyDay": "2026-11-09",
   "articles": [
     {
+      "id": "33b32751b207",
+      "outletId": "france-24",
+      "headline": "Donald Trump se félicite de l'échec d'une procédure de destitution contre Pete Hegseth",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261111-donald-trump-se-f%C3%A9licite-de-l-%C3%A9chec-d-une-proc%C3%A9dure-de-destitution-contre-pete-hegseth",
+      "publishedAt": "2026-11-11T09:34:49.000Z",
+      "imageUrl": "https://s.france24.com/media/display/0821febc-ddae-11f1-82d6-5f54d898a954/w:1024/p:16x9/FR-20261111-091249-091804-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "9ab4b499e666",
+      "outletId": "lobs",
+      "headline": "Pete Hegseth, chef du Pentagone américain, échappe à une tentative de destitution",
+      "url": "https://www.nouvelobs.com/monde/20261111.OBS120037/pete-hegseth-chef-du-pentagone-americain-echappe-a-une-tentative-de-destitution.html",
+      "publishedAt": "2026-11-11T09:31:24.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "ee07f6924fb2",
+      "outletId": "la-croix",
+      "headline": "États-Unis : la procédure de destitution contre Hegseth torpillée par les députés républicains",
+      "url": "https://www.la-croix.com/fragilise-le-chef-du-pentagone-va-donner-une-conference-de-presse-20261110",
+      "publishedAt": "2026-11-11T09:12:53.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/11/11/2586414-le-capitole-de-washington-siege-du-congres-america.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "c547b9f4ebc6",
+      "outletId": "lexpress",
+      "headline": "Destitution : Pete Hegseth, sauvé par les républicains, obtient un sursis",
+      "url": "https://www.lexpress.fr/monde/amerique/destitution-aux-etats-unis-pete-hegseth-sauve-par-les-republicains-obtient-un-sursis-7RTS4SOU3FFHVDINCNFVKCPKPQ/",
+      "publishedAt": "2026-11-11T09:04:58.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/CQIT36744VG7NPPTGYDBJ7UA5Y.JPG?auth=cdd95a5894601526dfe25678ea5ed8c1803f2b6c81e35216e2a78927f3b97745&smart=true&width=6500&height=4333",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "29841be2af76",
       "outletId": "lopinion",
       "headline": "Etats-Unis : Pete Hegseth, secrétaire américain à la Défense, échappe à la destitution",
@@ -730,6 +773,26 @@
         "droite": 1
       },
       "total": 1
+    },
+    {
+      "start": 1794384000000,
+      "end": 1794387600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794387600000,
+      "end": 1794391200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 3,
+        "droite": 0
+      },
+      "total": 4
     }
   ]
 }

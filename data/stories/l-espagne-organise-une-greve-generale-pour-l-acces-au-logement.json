@@ -6,6 +6,40 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "a7116b1c535f",
+      "outletId": "franceinfo",
+      "headline": "\"Quoi de mieux pour faire passer le message que de paralyser le pays ?\" : en Espagne, une grève générale pour dénoncer la crise du logement",
+      "url": "https://www.franceinfo.fr/economie/pouvoir-achat/logement/reportage-quoi-de-mieux-pour-faire-passer-le-message-que-de-paralyser-le-pays-en-espagne-une-greve-generale-pour-denoncer-la-crise-du-logement_8277602.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-11T11:39:36.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/htCgwhvQCCVRX-2953jij_cq5zI/0x0:6783x3815/432x243/filters:format(jpg)/2026/11/11/6af44ab8a6d67088441950.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "fa37e0fdeed8",
+      "outletId": "le-monde",
+      "headline": "En Espagne, une grève générale pour défendre l’accès au logement et le pouvoir d’achat",
+      "url": "https://www.lemonde.fr/international/article/2026/11/11/en-espagne-une-greve-generale-pour-defendre-l-acces-au-logement-et-le-pouvoir-d-achat_6808962_3210.html",
+      "publishedAt": "2026-11-11T11:21:02.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/11/740/0/5500/2750/644/322/60/0/98f1013_ftp-1-tqdta35sh1k4-2026-11-11t095939z-2076100673-rc2kloawwzpo-rtrmadp-3-spain-strike-madrid.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "c78c16e5a18b",
+      "outletId": "le-figaro",
+      "headline": "Crise du logement, pouvoir d’achat : l’Espagne appelée à une grève générale à trois semaines des élections, une première depuis 2012",
+      "url": "https://www.lefigaro.fr/conjoncture/crise-du-logement-pouvoir-d-achat-l-espagne-appelee-a-une-greve-generale-a-trois-semaines-des-elections-une-premiere-depuis-2012-20261111",
+      "publishedAt": "2026-11-11T10:00:23.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/11/63c79501eab3cee6c0c898be519a94415cc9ab659c7ba6d57ce58d9c9aa722bb.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "54132985f8f0",
       "outletId": "le-parisien",
       "headline": "Logement, pouvoir d’achat : en Espagne, les salariés appelés à la grève générale, une première depuis 2012",
@@ -52,30 +86,10 @@
     }
   ],
   "topicId": "af486c5dbdda",
-  "titledArticleCount": 4,
+  "titledArticleCount": 7,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794304800000,
-      "end": 1794308400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794308400000,
-      "end": 1794312000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794312000000,
       "end": 1794315600000,
@@ -295,6 +309,51 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794391200000,
+      "end": 1794394800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
+    },
+    {
+      "start": 1794394800000,
+      "end": 1794398400000,
+      "counts": {
+        "gauche": 2,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Les Espagnols se mobilisent à l'appel des syndicats et du syndicat des locataires pour une grève générale de 24 heures et des défilés prévus en fin d'après-midi.",
+      "Le mouvement vise à dénoncer la flambée du prix des loyers et la dégradation du pouvoir d'achat à dix-huit jours des élections législatives anticipées du 29 novembre.",
+      "Cette grève inédite depuis 2012 dans le pays sert de baromètre pour mesurer le mécontentement social et la défense d'une vie digne."
+    ],
+    "centre": [
+      "Les salariés espagnols sont appelés à cesser le travail ce mercredi dans tout le pays lors d'une grève générale pour défendre l'accès au logement.",
+      "Cette mobilisation d'ampleur intervient à quelques jours des élections législatives anticipées fixées au 29 novembre.",
+      "Il s'agit d'un mouvement d'arrêt de travail d'une telle ampleur qui n'avait pas eu lieu en Espagne depuis l'année 2012."
+    ],
+    "droite": [
+      "Les syndicats appellent les travailleurs espagnols à cesser le travail ce mercredi pour exiger des actions immédiates face à l'envolée des loyers.",
+      "La grève générale met également en avant la dégradation globale du pouvoir d'achat au sein de la population.",
+      "Ce mouvement social inédit depuis 2012 se déroule à moins de trois semaines de la tenue des élections législatives anticipées."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la colère citoyenne menée par les locataires et les syndicats, tout en soulignant le paradoxe d'un mouvement qui n'embarrasse pas le gouvernement.",
+    "Le centre insiste principalement sur le caractère historique de la mobilisation en rappelant qu'il s'agit d'une grève générale inédite depuis 2012.",
+    "La droite focalise son angle sur la pression exercée par les syndicats à trois semaines des législatives pour exiger des mesures concrètes sur les loyers."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-11T12:01:28.293Z"
 }

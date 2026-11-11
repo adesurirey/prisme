@@ -6,6 +6,50 @@
   "storyDay": "2026-11-09",
   "articles": [
     {
+      "id": "7b212782a60e",
+      "outletId": "le-parisien",
+      "headline": "Pourparlers entre l’Ukraine et la Russie : Kiev demande la fin des hostilités avant des discussions sur la sécurité en Europe",
+      "url": "https://www.leparisien.fr/international/ukraine/pourparlers-entre-lukraine-et-la-russie-kiev-demande-la-fin-des-hostilites-avant-des-discussions-sur-la-securite-en-europe-11-11-2026-AGOGV3NWOVEPVEDN7SQS4EIZRI.php",
+      "publishedAt": "2026-11-11T12:01:28.293Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "7fb8a19a63ad",
+      "outletId": "rfi",
+      "headline": "Ukraine-Russie: fin annoncée des pourparlers sous médiation américaine à Abou Dhabi",
+      "url": "https://www.rfi.fr/fr/europe/20261111-ukraine-russie-fin-annonc%C3%A9e-pourparlers-sous-m%C3%A9diation-am%C3%A9ricaine-%C3%A0-abou-dhabi",
+      "publishedAt": "2026-11-11T11:25:12.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/a7565896-ddb0-11f1-88b6-3f371022a770/w:1024/p:16x9/2026-11-11T052858Z-377438266-RC2WKOAMCZ0K-RTRMADP-3-UKRAINE-CRISIS-TALKS-ABU-DHABI.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "ed26f9ab8e68",
+      "outletId": "france-24",
+      "headline": "Guerre en Ukraine : une négociation sous égide américaine",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261111-guerre-en-ukraine-une-n%C3%A9gociation-sous-%C3%A9gide-am%C3%A9ricaine",
+      "publishedAt": "2026-11-11T09:37:35.000Z",
+      "imageUrl": "https://s.france24.com/media/display/5af107d8-ddad-11f1-9420-29048b396e03/w:1024/p:16x9/FR-20261111-090153-090427-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "87946d5963a4",
+      "outletId": "le-figaro",
+      "headline": "À Abu Dhabi, les pourparlers entre Kiev et Moscou reprennent sous médiation américaine",
+      "url": "https://www.lefigaro.fr/international/a-abu-dhabi-les-pourparlers-entre-kiev-et-moscou-reprennent-sous-mediation-americaine-20261111",
+      "publishedAt": "2026-11-11T09:20:36.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1688_crop/2026/11/11/8cc992baefb8ede8811d70c2101f96bcdf2df380aa05ad34fb47d6fb49f367f9.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "4c28058a7528",
       "outletId": "20-minutes",
       "headline": "EN DIRECT Guerre en Ukraine : Fin des pourparlers entre Kiev et Moscou après seulement deux heures…",
@@ -80,7 +124,7 @@
       "url": "https://www.lemonde.fr/international/article/2026/11/11/guerre-en-ukraine-a-abu-dhabi-les-pourparlers-russo-ukrainiens-condamnes-a-l-impasse_6808927_3210.html",
       "publishedAt": "2026-11-11T04:30:13.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/10/460/0/5420/2710/644/322/60/0/1455409_ftp-1-jogdpjoj0hrr-afp-d72n8zq.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -846,6 +890,46 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794387600000,
+      "end": 1794391200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 1
+      },
+      "total": 2
+    },
+    {
+      "start": 1794391200000,
+      "end": 1794394800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794394800000,
+      "end": 1794398400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1794398400000,
+      "end": 1794402000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ]
 }
