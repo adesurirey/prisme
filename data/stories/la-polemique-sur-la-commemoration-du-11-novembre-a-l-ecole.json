@@ -6,6 +6,28 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "cb472a89dae6",
+      "outletId": "le-figaro",
+      "headline": "11 Novembre à l'école : faut-il sanctionner les enseignants qui ont appelé au boycott ?",
+      "url": "https://www.lefigaro.fr/11-novembre-a-l-ecole-faut-il-sanctionner-les-enseignants-qui-ont-appele-au-boycott-20261111",
+      "publishedAt": "2026-11-11T10:32:19.000Z",
+      "frontPage": true,
+      "kind": "opinion",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
+      "id": "c0ec611c83c8",
+      "outletId": "france-24",
+      "headline": "Cérémonies du 11-Novembre : une polémique s'invite dans l'hommage national",
+      "url": "https://www.france24.com/fr/france/20261111-ceremonies-du-11-novembre-une-polemique-hommage-national-education-histoire",
+      "publishedAt": "2026-11-11T08:38:54.000Z",
+      "imageUrl": "https://s.france24.com/media/display/50797b34-dda6-11f1-8ffb-f71d22e7fea9/w:1024/p:16x9/000-C9DY6Z2.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "8f9938f55522",
       "outletId": "ouest-france",
       "headline": "Commémoration du 11 novembre à l’école : la ministre des Anciens combattants juge la polémique « très regrettable »",
@@ -16,6 +38,17 @@
       "kind": "news",
       "section": "society",
       "everFrontPage": true
+    },
+    {
+      "id": "4d5647a90422",
+      "outletId": "europe-1",
+      "headline": "11-Novembre : «L'école est un lieu de partage de la mémoire absolument majeur», assure Catherine Vautrin",
+      "url": "https://www.europe1.fr/politique/11-novembre-lecole-est-un-lieu-de-partage-de-la-memoire-absolument-majeur-assure-catherine-vautrin-1224668?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-11T07:48:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/11/09/vautrin_8h16_6af420da2b852.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "2d4800ecfe92",
@@ -40,6 +73,27 @@
       "section": "society"
     },
     {
+      "id": "3347cae3107e",
+      "outletId": "liberation",
+      "headline": "11 Novembre à l’école : entre occasion pédagogique et crainte de «militarisation» de l’enseignement, de premières cérémonies en rangs dispersés",
+      "url": "https://www.liberation.fr/societe/education/11-novembre-a-lecole-entre-occasion-pedagogique-et-crainte-de-militarisation-de-lenseignement-des-premieres-ceremonies-en-rangs-disperses-20261110_672ZZK5XPVER3BBDKCNLGUS63U/",
+      "publishedAt": "2026-11-11T07:34:38.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "98116cde39b8",
+      "outletId": "le-jdd",
+      "headline": "11-Novembre : «Il ne peut pas y avoir de paix sans mémoire combattante», souligne Serge Barcellini",
+      "url": "https://www.lejdd.fr/Societe/11-novembre-il-ne-peut-pas-y-avoir-de-paix-sans-memoire-combattante-souligne-serge-barcellini-188340",
+      "publishedAt": "2026-11-11T07:11:26.000Z",
+      "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/10/15/080_hl_hcampos_2573833.jpg?VersionId=IGCOhQ9bSZ_NME5_i6FoxlHLJH6iIdew",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "9647deeb7085",
       "outletId": "franceinfo",
       "headline": "Cérémonie du 11-Novembre : la ministre déléguée aux Armées juge \"très regrettable\" la polémique autour de la commémoration de l'armistice à l'école",
@@ -52,40 +106,10 @@
     }
   ],
   "topicId": "a3aba914ac3b",
-  "titledArticleCount": 4,
+  "titledArticleCount": 9,
   "section": "society",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794297600000,
-      "end": 1794301200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794301200000,
-      "end": 1794304800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794304800000,
-      "end": 1794308400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794308400000,
       "end": 1794312000000,
@@ -290,11 +314,65 @@
       "start": 1794380400000,
       "end": 1794384000000,
       "counts": {
-        "gauche": 1,
+        "gauche": 2,
         "centre": 2,
+        "droite": 3
+      },
+      "total": 7
+    },
+    {
+      "start": 1794384000000,
+      "end": 1794387600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1794387600000,
+      "end": 1794391200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794391200000,
+      "end": 1794394800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
         "droite": 1
       },
-      "total": 4
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "La circulaire du ministère de l'Education signée Edouard Geffray impose une cérémonie des morts pour la France dès le CM1.",
+      "La mesure divise la communauté éducative entre opportunité pédagogique et crainte de militarisation."
+    ],
+    "centre": [
+      "Les commémorations du 11-Novembre donnent lieu à des débats sur l'organisation de cérémonies dans les écoles à partir du CM1.",
+      "Le gouvernement, par la voix d'Alice Rufo et Catherine Vautrin, qualifie de très regrettable le boycott prôné par certains syndicats enseignants.",
+      "Les ministres rappellent que l'école doit demeurer un lieu fondamental de partage de la mémoire et de célébration de la paix."
+    ],
+    "droite": [
+      "Plusieurs syndicats d'enseignants appellent au boycott des cérémonies en invoquant une militarisation de l'école.",
+      "Catherine Vautrin affirme sur CNews et Europe 1 que l'école est un lieu de partage de la mémoire absolument majeur.",
+      "Le JDD souligne l'importance de la transmission de la mémoire combattante à travers l'analyse de Serge Barcellini, président du Souvenir Français, tandis que Le Figaro s'interroge sur l'opportunité de sanctionner les grévistes."
+    ]
+  },
+  "differences": [
+    "La gauche aborde la question sous l'angle des divisions pédagogiques de la communauté éducative face à la circulaire de l'Éducation nationale.",
+    "Le centre focalise son traitement sur la défense ministérielle du devoir de mémoire et la condamnation unanime des appels au boycott syndical.",
+    "La droite met en avant la dénonciation de la contestation enseignante tout en intégrant des tribunes et analyses spécialisées sur l'impératif de la mémoire combattante."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 9,
+  "summarizedAt": "2026-11-11T11:01:25.817Z"
 }
