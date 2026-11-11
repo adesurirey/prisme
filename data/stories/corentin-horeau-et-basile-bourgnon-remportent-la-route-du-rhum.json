@@ -6,6 +6,16 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "1ea172d7cc85",
+      "outletId": "liberation",
+      "headline": "Route du rhum : Bourgnon et Horeau, la victoire bord à bord d’un duo d’amis",
+      "url": "https://www.liberation.fr/sports/route-du-rhum-bourgnon-et-horeau-la-victoire-bord-a-bord-dun-duo-damis-20261111_SBWP3RZ6X5HRVI7D6RMYGXTKLQ/",
+      "publishedAt": "2026-11-11T12:41:32.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "e7cf1dad15ce",
       "outletId": "le-parisien",
       "headline": "« Il y a une part de destin, peut-être de providence » : Basile Bourgnon, héros de la Route du rhum et digne héritier de son père",
@@ -108,34 +118,33 @@
     }
   ],
   "topicId": "743b8265d4d1",
-  "titledArticleCount": 8,
+  "titledArticleCount": 10,
   "section": "sport",
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Basile Bourgnon a remporté la course dans la catégorie des multicoques Ocean Fifty.",
-      "Il succède ainsi à son père Laurent Bourgnon, double vainqueur de la transat en 1994 et 1998.",
-      "Corentin Horeau s'est imposé dans la catégorie Imoca en franchissant la ligne en Guadeloupe avec deux minutes d'avance."
+      "Corentin Horeau et Basile Bourgnon ont franchi la ligne d'arrivée quasiment ensemble à Pointe-à-Pitre le 11 novembre, remportant la Route du Rhum dans leurs catégories respectives en battant des records.",
+      "Basile Bourgnon s'impose en Ocean Fifty et succède à son père Laurent, double lauréat de la course en 1994 et 1998.",
+      "Corentin Horeau réalise une victoire en Imoca au terme d'une navigation bord à bord saluée par ses pairs."
     ],
     "centre": [
-      "Corentin Horeau et Basile Bourgnon ont remporté la Route du Rhum à quelques dizaines de secondes d'écart à Pointe-à-Pitre.",
-      "Corentin Horeau s'impose en Imoca en explosant le record de l'épreuve pour sa première participation.",
-      "Basile Bourgnon l'emporte en Ocean Fifty, marchant ainsi dans les traces de son père Laurent."
+      "Basile Bourgnon et Corentin Horeau ont remporté la Route du Rhum à quelques secondes d'intervalle dans les catégories Ocean Fifty et Imoca.",
+      "Basile Bourgnon s'impose en Ocean Fifty 28 ans après les victoires de son père Laurent.",
+      "Corentin Horeau remporte la catégorie Imoca en pulvérisant le précédent record de la traversée."
     ],
     "droite": [
-      "Corentin Horeau et Basile Bourgnon se sont imposés respectivement en Imoca et en Ocean Fifty.",
-      "Les deux vainqueurs sont arrivés quasiment en même temps en Guadeloupe, séparés seulement de deux minutes.",
-      "Basile Bourgnon s'est imposé dans sa catégorie vingt-huit ans après la dernière victoire de son père Laurent."
+      "Corentin Horeau en Imoca et Basile Bourgnon en Ocean Fifty ont remporté la Route du Rhum en arrivant quasiment en même temps à Pointe-à-Pitre.",
+      "Les deux skippers ont franchi la ligne d'arrivée séparés de seulement deux minutes, signant des performances remarquées dans leurs catégories respectives."
     ]
   },
   "differences": [
-    "La gauche met principalement l'accent sur la filiation familiale de Basile Bourgnon et sa victoire en multicoques, tout en mentionnant le succès concomitant de Corentin Horeau en Imoca.",
-    "Le centre dresse un compte rendu sportif global des deux victoires en soulignant la performance chronométrique, le record battu par Corentin Horeau et la dimension complice de leur arrivée conjointe.",
-    "La droite insiste particulièrement sur la quasi-simultanéité de l'arrivée des deux marins, séparés par un écart infime de deux minutes sur la ligne d'arrivée."
+    "La presse de gauche met l'accent sur l'aspect humain d'une victoire partagée entre amis et souligne la dimension mémorielle de la lignée familiale pour Bourgnon.",
+    "La presse du centre adopte un angle factuel et sportif détaillé, en insistant sur la chronologie précise des arrivées et la performance technique des records battus.",
+    "La presse de droite privilégie un récit centré sur le suspense de l'arrivée en simultané et l'écart infime de deux minutes entre les deux vainqueurs."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 8,
-  "summarizedAt": "2026-11-11T11:01:25.817Z",
+  "summarizedArticleCount": 10,
+  "summarizedAt": "2026-11-11T13:01:31.076Z",
   "activity": [
     {
       "start": 1794315600000,
@@ -371,11 +380,11 @@
       "start": 1794398400000,
       "end": 1794402000000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 2
     }
   ]
 }

@@ -6,6 +6,17 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "4e51a4455c3d",
+      "outletId": "cnews",
+      "headline": "Brésil : Meta condamnée à une amende de 1,2 million d’euros pour traitement inégal entre Lula et Flavio Bolsonaro",
+      "url": "https://www.cnews.fr/monde/2026-11-11/bresil-meta-condamnee-une-amende-de-12-million-deuros-pour-traitement-inegal-entre",
+      "publishedAt": "2026-11-11T11:59:46.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-11t014638z_1029329440_rc2bloazf3nf_rtrmadp_3_brazil-election-meta-plataforms-taille1200_6af44cbe1c58a.jpg?h=21bc9b15&itok=UVj9tlMA",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "090e053861bf",
       "outletId": "la-croix",
       "headline": "Présidentielle au Brésil : amende contre Meta pour traitement inégal entre Lula et Bolsonaro",
@@ -91,57 +102,29 @@
   "everInEdition": true,
   "summaries": {
     "gauche": [
-      "Le tribunal électoral du Brésil a sanctionné Meta d'une amende de 1,2 million d'euros pour traitement inéquitable entre Lula et Flavio Bolsonaro.",
-      "L'équipe du président brésilien avait dénoncé une manipulation algorithmique de la part du groupe américain au profit de la droite lors de la campagne."
+      "Le Tribunal supérieur électoral a condamné Meta à une amende de 7,5 millions de réais, soit environ 1,2 million d'euros.",
+      "La sanction a été prononcée pour non-respect de l'égalité de traitement entre Lula et Flavio Bolsonaro durant la campagne présidentielle.",
+      "L'équipe de Lula avait dénoncé une manipulation algorithmique de la part du groupe."
     ],
     "centre": [
-      "Meta a écopé d'une amende de 7,5 millions de réais, soit environ 1,2 million d'euros, prononcée par la justice brésilienne.",
-      "La sanction fait suite au non-respect de l'égalité de traitement entre Lula et Flavio Bolsonaro durant l'élection présidentielle."
+      "La justice brésilienne a sanctionné Meta d'une amende d'environ 1,2 million d'euros pour traitement inégal entre Lula et Bolsonaro.",
+      "La décision a été prise par le Tribunal supérieur électoral suite à la campagne présidentielle.",
+      "La maison mère de Facebook, Instagram et WhatsApp est visée par cette amende."
     ],
     "droite": [
-      "Le tribunal électoral brésilien a condamné Meta à une amende d'1,2 million d'euros pour gestion inéquitable des candidats Lula et Bolsonaro.",
-      "La juridiction n'a cependant pas validé l'hypothèse d'une ingérence délibérée de l'entreprise au bénéfice du candidat de droite."
+      "Meta a écopé d'une amende de 1,2 million d'euros de la part de la justice brésilienne pour traitement inégal.",
+      "Le Tribunal supérieur électoral n'a toutefois pas retenu l'accusation d'ingérence délibérée formulée par l'équipe de campagne."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur les accusations de manipulation algorithmique formulées par l'équipe présidentielle contre la maison mère de Facebook.",
-    "Le centre livre un compte-rendu factuel et standard de la sanction financière infligée par le Tribunal supérieur électoral sans s'attarder sur les intentions supposées.",
-    "La droite insiste sur le fait que la justice n'a pas retenu d'ingérence délibérée de la plateforme au profit de son camp."
+    "La gauche met l'accent sur les accusations initiales de manipulation algorithmique formulées par l'équipe de Lula à l'encontre de Meta.",
+    "Le centre livre un compte-rendu factuel et synthétique de la sanction financière infligée par le Tribunal supérieur électoral.",
+    "La droite insiste sur le fait que la justice n'a pas retenu l'hypothèse d'une ingérence délibérée de la plateforme au profit de son candidat."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6,
-  "summarizedAt": "2026-11-11T07:01:28.239Z",
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-11T13:01:31.076Z",
   "activity": [
-    {
-      "start": 1794301200000,
-      "end": 1794304800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794304800000,
-      "end": 1794308400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794308400000,
-      "end": 1794312000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794312000000,
       "end": 1794315600000,
@@ -349,6 +332,36 @@
         "gauche": 0,
         "centre": 1,
         "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1794387600000,
+      "end": 1794391200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794391200000,
+      "end": 1794394800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794394800000,
+      "end": 1794398400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
       },
       "total": 1
     }

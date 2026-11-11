@@ -6,6 +6,17 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "c2c6796e84f9",
+      "outletId": "france-24",
+      "headline": "Un match solidaire pour la libération de Christophe Gleizes, détenu depuis 500 jours",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261111-un-match-solidaire-pour-la-lib%C3%A9ration-de-christophe-gleizes-d%C3%A9tenu-depuis-500-jours",
+      "publishedAt": "2026-11-11T12:07:09.000Z",
+      "imageUrl": "https://s.france24.com/media/display/62ac1ef8-ddc7-11f1-955d-3f371022a770/w:1024/p:16x9/FR-20261111-121223-121423-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "a7b148cf6184",
       "outletId": "huffpost",
       "headline": "Au 500e jour de détention de Christophe Gleizes en Algérie, sa famille lance plusieurs appels dans les médias",
@@ -248,16 +259,6 @@
   "summarizedAt": "2026-11-11T12:01:28.293Z",
   "activity": [
     {
-      "start": 1794312000000,
-      "end": 1794315600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
       "start": 1794315600000,
       "end": 1794319200000,
       "counts": {
@@ -486,6 +487,16 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794398400000,
+      "end": 1794402000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ]
 }
