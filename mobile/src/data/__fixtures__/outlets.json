@@ -1,0 +1,52 @@
+[
+  {
+    "id": "lobs",
+    "name": "L'Obs",
+    "leaning": "gauche",
+    "paywall": "partial",
+    "site": "https://www.nouvelobs.com",
+    "feeds": {
+      "latest": "https://www.nouvelobs.com/rss.xml"
+    },
+    "reach": {
+      "value": 10500000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "le-monde",
+    "name": "Le Monde",
+    "leaning": "centre-gauche",
+    "paywall": "partial",
+    "site": "https://www.lemonde.fr",
+    "feeds": {
+      "une": "https://www.lemonde.fr/rss/une.xml",
+      "latest": "https://www.lemonde.fr/rss/en_continu.xml"
+    },
+    "reach": {
+      "value": 95500000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  },
+  {
+    "id": "le-figaro",
+    "name": "Le Figaro",
+    "leaning": "droite",
+    "paywall": "partial",
+    "site": "https://www.lefigaro.fr",
+    "feeds": {
+      "une": "https://www.lefigaro.fr/rss/figaro_actualites.xml",
+      "latest": "https://www.lefigaro.fr/rss/figaro_flash-actu.xml"
+    },
+    "reach": {
+      "value": 125900000,
+      "unit": "visits",
+      "source": "ACPM",
+      "asOf": "2026-08"
+    }
+  }
+]
