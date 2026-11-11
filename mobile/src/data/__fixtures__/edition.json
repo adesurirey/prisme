@@ -1,0 +1,330 @@
+{
+  "builtAt": "2026-11-11T13:01:30.000Z",
+  "latestStories": [
+    {
+      "id": "9f8e7d6c5b4a",
+      "slug": "cyclone-veda-antilles",
+      "title": "Le cyclone Veda approche des Antilles françaises",
+      "createdAt": "2026-11-11T05:00:00.000Z",
+      "storyDay": "2026-11-11",
+      "articles": [
+        {
+          "id": "8d7c6b5a4938",
+          "outletId": "le-monde",
+          "headline": "Cyclone Veda : la Guadeloupe passe en vigilance rouge",
+          "url": "https://www.lemonde.fr/environment/article/2026/11/11/cyclone-veda-antilles-vigilance_6400001.html",
+          "publishedAt": "2026-11-11T06:30:00.000Z",
+          "frontPage": true,
+          "kind": "live",
+          "section": "world"
+        },
+        {
+          "id": "7c6b5a493827",
+          "outletId": "le-figaro",
+          "headline": "Cyclone Veda : les vols annulés vers les Antilles",
+          "url": "https://www.lefigaro.fr/actualite-france/cyclone-veda-antilles-vols-annules-20261111",
+          "publishedAt": "2026-11-11T08:10:00.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "section": "world",
+      "titledArticleCount": 2,
+      "everInEdition": true
+    },
+    {
+      "id": "b0a1d2e3f4a5",
+      "slug": "budget-2027-en-commission",
+      "title": "Le budget 2027 arrive en commission à l'Assemblée",
+      "createdAt": "2026-11-10T08:15:00.000Z",
+      "storyDay": "2026-11-10",
+      "articles": [
+        {
+          "id": "1a2b3c4d5e6f",
+          "outletId": "lobs",
+          "headline": "Budget 2027 : le texte arrive en commission, premiers arbitrages en vue",
+          "url": "https://www.nouvelobs.com/politique/budget-2027-commission-20261110",
+          "publishedAt": "2026-11-10T09:20:00.000Z",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "2b3c4d5e6f70",
+          "outletId": "le-monde",
+          "headline": "Budget : ce qui change dans le texte examiné en commission",
+          "url": "https://www.lemonde.fr/politique/article/2026/11/10/budget-commission_6400000.html",
+          "publishedAt": "2026-11-10T11:05:00.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "3c4d5e6f7080",
+          "outletId": "le-figaro",
+          "headline": "Budget 2027 : la majorité s'arc-boute sur la réduction de la dépense",
+          "url": "https://www.lefigaro.fr/politique/budget-2027-commission-20261110",
+          "publishedAt": "2026-11-11T07:40:00.000Z",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "section": "politics",
+      "summaries": {
+        "gauche": [
+          "La commission entame l'examen du budget 2027, marqué par un arbitrage sur les crédits de la protection sociale."
+        ],
+        "centre": [
+          "Le texte arrive en commission avec un calendrier resserré et plusieurs articles sensibles encore ouverts."
+        ],
+        "droite": [
+          "La majorité défend une trajectoire de réduction de la dépense que l'opposition juge insuffisante."
+        ]
+      },
+      "differences": [
+        "La gauche insiste sur les coupes sociales, la droite sur le niveau global de la dépense.",
+        "Le centre met en avant le calendrier parlementaire, peu commenté ailleurs.",
+        "Seul Le Figaro souligne l'engagement de la majorité sur une règle d'or budgétaire."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedAt": "2026-11-11T12:48:02.000Z",
+      "summarizedArticleCount": 3,
+      "titledArticleCount": 3,
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794268800000,
+          "end": 1794355200000,
+          "counts": { "gauche": 1, "centre": 1, "droite": 0 },
+          "total": 2
+        },
+        {
+          "start": 1794355200000,
+          "end": 1794441600000,
+          "counts": { "gauche": 0, "centre": 0, "droite": 1 },
+          "total": 1
+        }
+      ]
+    }
+  ],
+  "feedStories": [
+    {
+      "id": "b0a1d2e3f4a5",
+      "slug": "budget-2027-en-commission",
+      "title": "Le budget 2027 arrive en commission à l'Assemblée",
+      "createdAt": "2026-11-10T08:15:00.000Z",
+      "storyDay": "2026-11-10",
+      "articles": [
+        {
+          "id": "1a2b3c4d5e6f",
+          "outletId": "lobs",
+          "headline": "Budget 2027 : le texte arrive en commission, premiers arbitrages en vue",
+          "url": "https://www.nouvelobs.com/politique/budget-2027-commission-20261110",
+          "publishedAt": "2026-11-10T09:20:00.000Z",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "2b3c4d5e6f70",
+          "outletId": "le-monde",
+          "headline": "Budget : ce qui change dans le texte examiné en commission",
+          "url": "https://www.lemonde.fr/politique/article/2026/11/10/budget-commission_6400000.html",
+          "publishedAt": "2026-11-10T11:05:00.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "3c4d5e6f7080",
+          "outletId": "le-figaro",
+          "headline": "Budget 2027 : la majorité s'arc-boute sur la réduction de la dépense",
+          "url": "https://www.lefigaro.fr/politique/budget-2027-commission-20261110",
+          "publishedAt": "2026-11-11T07:40:00.000Z",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "section": "politics",
+      "summaries": {
+        "gauche": [
+          "La commission entame l'examen du budget 2027, marqué par un arbitrage sur les crédits de la protection sociale."
+        ],
+        "centre": [
+          "Le texte arrive en commission avec un calendrier resserré et plusieurs articles sensibles encore ouverts."
+        ],
+        "droite": [
+          "La majorité défend une trajectoire de réduction de la dépense que l'opposition juge insuffisante."
+        ]
+      },
+      "differences": [
+        "La gauche insiste sur les coupes sociales, la droite sur le niveau global de la dépense.",
+        "Le centre met en avant le calendrier parlementaire, peu commenté ailleurs.",
+        "Seul Le Figaro souligne l'engagement de la majorité sur une règle d'or budgétaire."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedAt": "2026-11-11T12:48:02.000Z",
+      "summarizedArticleCount": 3,
+      "titledArticleCount": 3,
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794268800000,
+          "end": 1794355200000,
+          "counts": { "gauche": 1, "centre": 1, "droite": 0 },
+          "total": 2
+        },
+        {
+          "start": 1794355200000,
+          "end": 1794441600000,
+          "counts": { "gauche": 0, "centre": 0, "droite": 1 },
+          "total": 1
+        }
+      ]
+    },
+    {
+      "id": "9f8e7d6c5b4a",
+      "slug": "cyclone-veda-antilles",
+      "title": "Le cyclone Veda approche des Antilles françaises",
+      "createdAt": "2026-11-11T05:00:00.000Z",
+      "storyDay": "2026-11-11",
+      "articles": [
+        {
+          "id": "8d7c6b5a4938",
+          "outletId": "le-monde",
+          "headline": "Cyclone Veda : la Guadeloupe passe en vigilance rouge",
+          "url": "https://www.lemonde.fr/environment/article/2026/11/11/cyclone-veda-antilles-vigilance_6400001.html",
+          "publishedAt": "2026-11-11T06:30:00.000Z",
+          "frontPage": true,
+          "kind": "live",
+          "section": "world"
+        },
+        {
+          "id": "7c6b5a493827",
+          "outletId": "le-figaro",
+          "headline": "Cyclone Veda : les vols annulés vers les Antilles",
+          "url": "https://www.lefigaro.fr/actualite-france/cyclone-veda-antilles-vols-annules-20261111",
+          "publishedAt": "2026-11-11T08:10:00.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "section": "world",
+      "titledArticleCount": 2,
+      "everInEdition": true
+    }
+  ],
+  "stories": [
+    {
+      "id": "b0a1d2e3f4a5",
+      "slug": "budget-2027-en-commission",
+      "title": "Le budget 2027 arrive en commission à l'Assemblée",
+      "createdAt": "2026-11-10T08:15:00.000Z",
+      "storyDay": "2026-11-10",
+      "articles": [
+        {
+          "id": "1a2b3c4d5e6f",
+          "outletId": "lobs",
+          "headline": "Budget 2027 : le texte arrive en commission, premiers arbitrages en vue",
+          "url": "https://www.nouvelobs.com/politique/budget-2027-commission-20261110",
+          "publishedAt": "2026-11-10T09:20:00.000Z",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "2b3c4d5e6f70",
+          "outletId": "le-monde",
+          "headline": "Budget : ce qui change dans le texte examiné en commission",
+          "url": "https://www.lemonde.fr/politique/article/2026/11/10/budget-commission_6400000.html",
+          "publishedAt": "2026-11-10T11:05:00.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "3c4d5e6f7080",
+          "outletId": "le-figaro",
+          "headline": "Budget 2027 : la majorité s'arc-boute sur la réduction de la dépense",
+          "url": "https://www.lefigaro.fr/politique/budget-2027-commission-20261110",
+          "publishedAt": "2026-11-11T07:40:00.000Z",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "section": "politics",
+      "summaries": {
+        "gauche": [
+          "La commission entame l'examen du budget 2027, marqué par un arbitrage sur les crédits de la protection sociale."
+        ],
+        "centre": [
+          "Le texte arrive en commission avec un calendrier resserré et plusieurs articles sensibles encore ouverts."
+        ],
+        "droite": [
+          "La majorité défend une trajectoire de réduction de la dépense que l'opposition juge insuffisante."
+        ]
+      },
+      "differences": [
+        "La gauche insiste sur les coupes sociales, la droite sur le niveau global de la dépense.",
+        "Le centre met en avant le calendrier parlementaire, peu commenté ailleurs.",
+        "Seul Le Figaro souligne l'engagement de la majorité sur une règle d'or budgétaire."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedAt": "2026-11-11T12:48:02.000Z",
+      "summarizedArticleCount": 3,
+      "titledArticleCount": 3,
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794268800000,
+          "end": 1794355200000,
+          "counts": { "gauche": 1, "centre": 1, "droite": 0 },
+          "total": 2
+        },
+        {
+          "start": 1794355200000,
+          "end": 1794441600000,
+          "counts": { "gauche": 0, "centre": 0, "droite": 1 },
+          "total": 1
+        }
+      ]
+    },
+    {
+      "id": "9f8e7d6c5b4a",
+      "slug": "cyclone-veda-antilles",
+      "title": "Le cyclone Veda approche des Antilles françaises",
+      "createdAt": "2026-11-11T05:00:00.000Z",
+      "storyDay": "2026-11-11",
+      "articles": [
+        {
+          "id": "8d7c6b5a4938",
+          "outletId": "le-monde",
+          "headline": "Cyclone Veda : la Guadeloupe passe en vigilance rouge",
+          "url": "https://www.lemonde.fr/environment/article/2026/11/11/cyclone-veda-antilles-vigilance_6400001.html",
+          "publishedAt": "2026-11-11T06:30:00.000Z",
+          "frontPage": true,
+          "kind": "live",
+          "section": "world"
+        },
+        {
+          "id": "7c6b5a493827",
+          "outletId": "le-figaro",
+          "headline": "Cyclone Veda : les vols annulés vers les Antilles",
+          "url": "https://www.lefigaro.fr/actualite-france/cyclone-veda-antilles-vols-annules-20261111",
+          "publishedAt": "2026-11-11T08:10:00.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "section": "world",
+      "titledArticleCount": 2,
+      "everInEdition": true
+    }
+  ]
+}

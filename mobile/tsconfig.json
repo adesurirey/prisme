@@ -3,6 +3,10 @@
   "compilerOptions": {
     "strict": true,
     "types": ["jest"],
+    "allowImportingTsExtensions": true,
+    // ^ @prisme/domain ships raw TS with .ts-extension self-imports
+    //   (same as pipeline's tsconfig); tsc walks them when mobile imports
+    //   the package.
     "paths": {
       "@/*": ["./src/*"],
       "@/assets/*": ["./assets/*"]
