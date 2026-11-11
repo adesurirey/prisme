@@ -6,6 +6,41 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "0ef1a67ee838",
+      "outletId": "le-parisien",
+      "headline": "« J’ai prouvé que tout le monde avait tort » : un militant fait dépénaliser l’homosexualité à Trinité-et-Tobago",
+      "url": "https://www.leparisien.fr/international/jai-prouve-que-tout-le-monde-avait-tort-un-militant-fait-depenaliser-lhomosexualite-a-trinite-et-tobago-11-11-2026-TTDIBD3QWZH2JCREW24S6W37Q4.php",
+      "publishedAt": "2026-11-11T05:01:28.279Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "7f63899d190a",
+      "outletId": "le-figaro",
+      "headline": "Trinité-et-Tobago : l'homosexualité dépénalisée par la justice",
+      "url": "https://www.lefigaro.fr/international/trinite-et-tobago-l-homosexualite-depenalisee-par-la-justice-20261111",
+      "publishedAt": "2026-11-11T04:31:56.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1788_crop/2026/11/11/32b10e31167d4d3b301a595078333cf7dd9994ed8c95e01b12d2174bf19791e2.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
+      "id": "28945196a593",
+      "outletId": "ouest-france",
+      "headline": "La justice dépénalise l’homosexualité à Trinité-et-Tobago",
+      "url": "https://www.ouest-france.fr/societe/lgbt/la-justice-depenalise-lhomosexualite-a-trinite-et-tobago-8495b9b0-dd82-11f1-86b6-0a2fbb1d8ed9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-11T04:26:05.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOWRhMjI3NzA1MGU5YzAxNzFmY2JlN2UwMTZiY2E1OTE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=7aa50bf79ba782629ed5bf07069cf34001fe3765423a3290825e4a9126a5539e",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
       "id": "3a74bb4a997c",
       "outletId": "20-minutes",
       "headline": "La justice dépénalise l’homosexualité à Trinité-et-Tobago",
@@ -24,13 +59,37 @@
       "url": "https://www.lemonde.fr/international/article/2026/11/11/trinite-et-tobago-la-justice-depenalise-l-homosexualite_6808920_3210.html",
       "publishedAt": "2026-11-11T03:33:48.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/11/278/0/3840/1920/644/322/60/0/eb9555d_upload-1-1uoq5wrdsvxe-2018-04-13t173952z-1887933921-rc1c77ac0750-rtrmadp-3-trinidadtobago-judiciary-lgbt.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "society"
+      "section": "society",
+      "everFrontPage": true
     }
   ],
   "topicId": "b234a82f3d2e",
-  "titledArticleCount": 2,
+  "titledArticleCount": 5,
   "section": "society",
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "La plus haute instance judiciaire du pays a invalidé des textes répressifs issus de la période coloniale britannique.",
+      "Ces dispositions prévoyaient des peines de deux à cinq ans d'emprisonnement pour des infractions qualifiées de sodomie ou d'indécence grave."
+    ],
+    "centre": [
+      "La dépénalisation de l'homosexualité a été obtenue grâce à un combat judiciaire mené durant près de dix ans.",
+      "Cette évolution historique fait suite à un recours porté par un militant des droits des personnes LGBT+.",
+      "La plus haute juridiction de cet État a déclaré contraires à la loi fondamentale les mesures pénales héritées de la domination britannique."
+    ],
+    "droite": [
+      "La plus haute juridiction de l'État a prononcé l'annulation des textes criminalisant les relations homosexuelles.",
+      "Cette décision judiciaire fait suite à une longue procédure de près d'une décennie impulsée par un défenseur des droits des personnes LGBT+ de cet archipel."
+    ]
+  },
+  "differences": [
+    "Le camp de gauche met l'accent sur la nature rétrograde des lois coloniales abolies et le détail des sanctions pénales encourues par les condamnés.",
+    "Le camp du centre met en avant le parcours personnel du militant à l'origine de cette victoire judiciaire de grande ampleur.",
+    "Le camp de droite valorise la dimension institutionnelle de la décision en insistant sur le rôle de la plus haute juridiction de l'État."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-11T05:01:28.279Z"
 }
