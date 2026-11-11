@@ -8,6 +8,7 @@
  * committed or rendered. These types never carry it.
  */
 
+import type { ActivityBin } from './activity.ts';
 import type { Reach } from './outlets.ts';
 
 /**
@@ -210,6 +211,11 @@ export interface Story {
    * birth — the founding Story's own id when it founds its Topic. Absent
    * on Stories born before Topics existed: no retro-assignment. */
   topicId?: string;
+  /** The Story's coverage-chronology bins (ADR-0032), pipeline-computed
+   *  each run and embedded in the artifact (issue #186, ADR-0043): the web
+   *  page and the app render them, never re-derive them. Absent on Stories
+   *  without datable Articles. */
+  activity?: ActivityBin[];
 }
 
 /** One Topic in the registry (ADR-0024): a thread of Episodes founded by one
@@ -263,6 +269,9 @@ export interface Edition {
   stories: Story[];
 }
 
+// The coverage-chronology bin shape (ADR-0032) — pipeline-computed, embedded
+// on the Story (issue #186).
+export * from './activity.ts';
 // The Story cover rule: which Article's image represents the Story, scored
 // on URL quality and freshness — no Leaning involved.
 export * from './cover.ts';

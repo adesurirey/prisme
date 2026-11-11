@@ -46,3 +46,11 @@ it at build time with zero client JS, identical for every reader.
   looked", the chart answers "how did this Story unfold").
 - Every Story page carries the chart; the badge's growth gate (ADR-0027
   pipeline, ADR-0029 client) is untouched.
+- Amended by issue #186 (2026-11-10, ADR-0043 era): the binning math moved
+  from `web/src/story-activity.ts` to `pipeline/src/story-activity.ts` —
+  the pipeline computes each Story's bins at edition time and embeds them
+  on the Story (`activity`, Story file and edition.json entry alike), and
+  the Story page renders the embedded bins; the render-side labels
+  (stamps, titles, aria lines) stay web-side for now. The chart is
+  unchanged: the binning is clock-free, so the embedded bins equal the
+  build-time ones by construction.

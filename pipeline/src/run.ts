@@ -31,6 +31,7 @@ import {
   mergeRefusals,
   saveRefusalCache,
 } from './refusal-cache.ts';
+import { storyActivityBins } from './story-activity.ts';
 import {
   SUMMARIES_BUDGET,
   SUMMARIES_PROMPT_VERSION,
@@ -199,6 +200,21 @@ export async function runEdition(): Promise<Edition> {
     new Set([...ranked.hot, ...ranked.top].map((s) => s.id)),
     now,
   );
+
+  // Story activity bins (issue #186, ADR-0032/0043): each Story's coverage
+  // chronology is computed here, at edition time, and embedded on the
+  // Story — Story file and edition.json entry alike — exactly as the web
+  // build used to compute it at page-render time (the binning is pure and
+  // clock-free, so the values are identical by construction). The web page
+  // and the app render the embedded bins; neither re-derives the math.
+  // Every live and frozen Story gets fresh bins in memory; a Story whose
+  // file is not rewritten this run keeps its last written bins — identical,
+  // Articles being append-only (the manual merge recomputes its own,
+  // merge.ts).
+  for (const story of editionHistory.stories) {
+    story.activity = storyActivityBins(story.articles, outletById);
+  }
+
   // Re-map the ranked windows onto the reconciled Stories by id: the flags
   // above may replace flag-changed Stories with new objects, and the
   // Summaries step below mutates the Edition Stories in place — they must
