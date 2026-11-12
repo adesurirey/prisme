@@ -1,10 +1,34 @@
 {
   "id": "d8240e9f9b6b",
   "slug": "un-immeuble-s-effondre-a-new-york-et-fait-au-moins-un-mort",
-  "title": "Un immeuble s'effondre à New York et fait au moins un mort",
+  "title": "Un immeuble s'effondre dans le quartier de Brooklyn à New York et fait au moins un mort",
   "createdAt": "2026-11-12T01:01:24.822Z",
   "storyDay": "2026-11-11",
   "articles": [
+    {
+      "id": "f603853ef093",
+      "outletId": "le-monde",
+      "headline": "A New York, au moins deux morts dans l’effondrement d’un immeuble de Brooklyn",
+      "url": "https://www.lemonde.fr/international/article/2026/11/12/a-new-york-au-moins-deux-morts-dans-l-effondrement-d-un-immeuble-de-brooklyn_6809041_3210.html",
+      "publishedAt": "2026-11-12T02:41:29.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/12/30/0/5616/2808/644/322/60/0/16d8286_ftp-1-ufywnv14p8pp-2026-11-12t000754z-1050707073-rc2zloagvdzq-rtrmadp-3-new-york-building.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
+      "id": "9146b6b7eae9",
+      "outletId": "20-minutes",
+      "headline": "États-Unis : Au moins un mort dans l’effondrement d’un immeuble à New York",
+      "url": "https://www.20minutes.fr/monde/etats-unis/4262261-20261112-etats-unis-moins-mort-effondrement-immeuble-new-york?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-12T02:25:48.000Z",
+      "imageUrl": "https://img.20mn.fr/l1mw1Im7SsWYwe4pphKlyyk/1200x768_les-premiers-intervenants-travaillent-sur-les-lieux-apres-l-effondrement-d-un-batiment-dans-le-quartier-de-brooklyn-a-new-york-le-mercredi-11-novembre-2026-photo-ap-ryan-murphy-nbp101-26316062708217-2611120246",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
     {
       "id": "e14b682222e7",
       "outletId": "le-parisien",
@@ -41,20 +65,10 @@
     }
   ],
   "topicId": "d8240e9f9b6b",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794362400000,
-      "end": 1794366000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794366000000,
       "end": 1794369600000,
@@ -284,6 +298,34 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794448800000,
+      "end": 1794452400000,
+      "counts": {
+        "gauche": 2,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le Monde fait état de deux morts et dix-sept blessés, dont sept enfants, dans le quartier de Brooklyn.",
+      "20 Minutes annonce au moins un mort et quatre blessés graves hospitalisés après des extractions de gravats."
+    ],
+    "centre": [
+      "Une personne a péri et plusieurs ont été secourues sous les décombres d'un bâtiment à Brooklyn.",
+      "Ouest-France précise que l'effondrement partiel est survenu près d'un chantier dans le secteur de Flatbush.",
+      "BFMTV indique que les opérations de secours se poursuivent pour établir un bilan définitif."
+    ]
+  },
+  "differences": [
+    "Le camp gauche retient en priorité le bilan humain le plus lourd et l'âge des victimes blessées.",
+    "Le camp centre livre des détails géographiques précis sur le lieu du sinistre et l'action des secours en cours."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-12T03:01:36.739Z"
 }

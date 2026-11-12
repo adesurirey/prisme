@@ -1,10 +1,22 @@
 {
   "id": "97b8142868e4",
   "slug": "un-responsable-des-colons-israeliens-est-refoule-a-son-arrivee",
-  "title": "Un responsable des colons israéliens est refoulé à son arrivée en France",
+  "title": "Un responsable des colons israéliens en Cisjordanie est refoulé à son arrivée en France",
   "createdAt": "2026-11-11T23:01:27.831Z",
   "storyDay": "2026-11-11",
   "articles": [
+    {
+      "id": "043501decabd",
+      "outletId": "le-monde",
+      "headline": "Un représentant des colonies juives en Cisjordanie refoulé à son arrivée en France, Israël dénonce une mesure « inacceptable »",
+      "url": "https://www.lemonde.fr/international/article/2026/11/12/un-representant-des-colonies-juives-en-cisjordanie-refoule-a-son-arrivee-en-france-israel-denonce-une-mesure-inacceptable_6809040_3210.html",
+      "publishedAt": "2026-11-12T02:36:03.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/12/169/0/8192/4096/644/322/60/0/3340a9e_upload-1-9d6ijmcs0i04-000-a8bm2tq.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
     {
       "id": "d47e5358c71f",
       "outletId": "le-parisien",
@@ -40,29 +52,9 @@
     }
   ],
   "topicId": "97b8142868e4",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "world",
   "activity": [
-    {
-      "start": 1794358800000,
-      "end": 1794362400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794362400000,
-      "end": 1794366000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794366000000,
       "end": 1794369600000,
@@ -282,7 +274,51 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794445200000,
+      "end": 1794448800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794448800000,
+      "end": 1794452400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le responsable des colonies de Cisjordanie Yossi Dagan a été interdit d'entrée sur le territoire français lors de son arrivée.",
+      "Le ministère israélien des Affaires étrangères a qualifié cette mesure d'« inacceptable » et annoncé une demande d'explications auprès de Paris.",
+      "Cette interdiction survient dans un contexte de tensions diplomatiques persistantes entre l'Etat hébreu et les gouvernements européens."
+    ],
+    "centre": [
+      "Yossi Dagan, dirigeant des colonies juives en Cisjordanie, s'est vu refuser l'accès au territoire français par le Quai d'Orsay.",
+      "La diplomatie française motive cette décision par son implication directe dans la politique de colonisation en Cisjordanie.",
+      "Le gouvernement israélien a vivement réagi en dénonçant une décision « inacceptable » et en promettant d'examiner les suites."
+    ],
+    "droite": [
+      "Yossi Dagan, figure des colonies juives en Cisjordanie, a été refoulé à son arrivée en France en raison de son action dans la colonisation.",
+      "Le ministère des Affaires étrangères en Israël a vertement contesté cette interdiction qu'il juge « inacceptable », tout en réclamant des explications."
+    ]
+  },
+  "differences": [
+    "Le camp gauche privilégie une mise en contexte géopolitique large en insistant sur la dégradation des relations diplomatiques entre l'Etat hébreu et l'Europe.",
+    "Le camp centre adopte une approche institutionnelle équilibrée en détaillant précisément les justifications administratives du Quai d'Orsay et la riposte israélienne.",
+    "Le camp droite se focalise strictement sur l'événement factuel brut en mettant en exergue la vive protestation du ministère israélien face au refoulement."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-12T03:01:36.739Z"
 }
