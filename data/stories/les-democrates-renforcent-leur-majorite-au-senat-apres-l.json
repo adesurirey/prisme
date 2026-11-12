@@ -1,10 +1,22 @@
 {
   "id": "8ead14ea4f16",
   "slug": "les-democrates-renforcent-leur-majorite-au-senat-apres-l",
-  "title": "Les démocrates renforcent leur majorité au Sénat après l'élection de Scott Colom au Mississippi",
+  "title": "États-Unis : le démocrate Scott Colom remporte un nouveau siège au Sénat et devient le premier sénateur noir du Mississippi",
   "createdAt": "2026-11-12T00:01:25.246Z",
   "storyDay": "2026-11-12",
   "articles": [
+    {
+      "id": "28c6d1af1252",
+      "outletId": "le-monde",
+      "headline": "Midterms 2026 : le démocrate Scott Colom devient le premier sénateur noir du Mississippi depuis près de 150 ans",
+      "url": "https://www.lemonde.fr/international/article/2026/11/12/midterms-2026-le-democrate-scott-colom-devient-le-premier-senateur-noir-du-mississippi-depuis-pres-de-150-ans_6809036_3210.html",
+      "publishedAt": "2026-11-12T01:04:56.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/11/1441/0/8639/4319/644/322/60/0/7dab032_ftp-1-gwputwkfrvkj-a528e64a6b034e4b9f9d307d5eddc51e-1-4a1ed685b0094b72854c221cebb207b5.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
     {
       "id": "254b0ea2703d",
       "outletId": "rfi",
@@ -52,20 +64,10 @@
     }
   ],
   "topicId": "3a7f91280e8e",
-  "titledArticleCount": 4,
-  "section": "world",
+  "titledArticleCount": 5,
+  "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794358800000,
-      "end": 1794362400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794362400000,
       "end": 1794366000000,
@@ -295,19 +297,35 @@
         "droite": 0
       },
       "total": 3
+    },
+    {
+      "start": 1794445200000,
+      "end": 1794448800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
+    "gauche": [
+      "Le procureur de district Scott Colom, démocrate âgé de 43 ans, a battu de justesse la sénatrice républicaine sortante Cindy Hyde-Smith dans le Mississippi.",
+      "Il devient le premier sénateur noir à représenter cet État du Sud depuis près de 150 ans.",
+      "Aucun démocrate n'avait occupé ce siège au Sénat américain depuis l'année 1989."
+    ],
     "centre": [
-      "Le candidat démocrate Scott Colom a remporté un siège de sénateur au Mississippi face à Cindy Hyde-Smith.",
-      "Il devient le premier sénateur noir élu dans cet État depuis près d'un siècle et demi.",
-      "Cette victoire permet aux démocrates d'accroître leur avance au Sénat américain à l'issue des midterms."
+      "Le candidat démocrate Scott Colom a remporté un siège au Sénat américain dans le Mississippi face à la sortante républicaine Cindy Hyde-Smith.",
+      "Cette victoire historique consacre le premier sénateur noir élu dans cet État depuis près d'un siècle et demi.",
+      "Ce nouveau succès démocrate lors des élections de mi-mandat permet au parti de renforcer sa majorité au Congrès."
     ]
   },
   "differences": [
-    "Le camp du centre met en avant la portée historique de l'élection de Scott Colom au Mississippi et ses conséquences sur la majorité démocrate au Congrès après les élections de mi-mandat."
+    "La gauche met l'accent sur la dimension historique et le symbole politique de cette élection dans un État traditionnellement conservateur.",
+    "Le centre insiste sur l'impact de ce nouveau succès pour les démocrates et sur le renforcement de leur majorité au Congrès après les élections de mi-mandat."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-12T01:01:24.822Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-12T02:01:24.688Z"
 }

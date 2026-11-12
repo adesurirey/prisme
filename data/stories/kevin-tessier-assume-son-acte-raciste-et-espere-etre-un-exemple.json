@@ -1,7 +1,7 @@
 {
   "id": "0230a454b8f5",
   "slug": "kevin-tessier-assume-son-acte-raciste-et-espere-etre-un-exemple",
-  "title": "Kevin Tessier assume son acte raciste et espère être un exemple lors de sa garde à vue après l'attentat de Trappes",
+  "title": "Attentat raciste de Trappes : Kevin Tessier assume ses actes et espère devenir un exemple pour les Français",
   "createdAt": "2026-11-11T22:01:28.750Z",
   "storyDay": "2026-11-11",
   "articles": [
@@ -29,6 +29,30 @@
       "section": "misc"
     },
     {
+      "id": "417876336d7f",
+      "outletId": "20-minutes",
+      "headline": "Attentat raciste à Trappes : Le terroriste dit avoir agi « pour la France »",
+      "url": "https://www.20minutes.fr/faits_divers/4262224-20261111-attentat-raciste-trappes-terroriste-dit-avoir-agi-france?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-11T18:22:17.000Z",
+      "imageUrl": "https://img.20mn.fr/tDqytKlRQ4OBOG7vDJ_hyik/1200x768_a-person-projects-a-text-reading-racism-and-islamophobia-kill-during-a-gathering-on-october-26-2026-in-toulouse-in-the-south-of-france-an-event-organized-by-the-assemblee-des-quartiers-31-against-racism-and-islamophobia-following-the-attack-in-trappes-une-personne-projette-un-texte-qui-dit-le-racisme-et-l-islamophobie-tuent-lors-d-un-rassemblement-le-26-octobre-2026-a-toulouse-dans-le-sud-de-la-france-a-l-appel-de-l-assemblee-des-quartiers-31-contre-le-racisme-et-l-islamophobie-suite-a-l-attentat-de-trappes-scheiber-rassemblement-contre-racisme-et-islamophobie-12-credit-fred-scheiber-sipa-2610270823",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
+      "id": "853d9ffab4f7",
+      "outletId": "le-figaro",
+      "headline": "«J’agis pour la France»: l'auteur de l'attentat raciste des Yvelines dit avoir agi par patriotisme",
+      "url": "https://www.lefigaro.fr/faits-divers/j-agis-pour-la-france-l-auteur-de-l-attentat-raciste-des-yvelines-dit-avoir-agi-par-patriotisme-20261111",
+      "publishedAt": "2026-11-11T18:04:12.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/1280x720_crop/2026/11/11/7233dcd27d59d17c05e06b9ba80a315a24289fe8948c21328f138d7fab5e97bf.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "11a251a38124",
       "outletId": "le-figaro",
       "headline": "«Je suis mort depuis mes 5 ans» : les lettres retrouvées dans la cellule du suspect de l’attentat de Trappes après sa tentative de suicide",
@@ -54,7 +78,7 @@
     }
   ],
   "topicId": "0230a454b8f5",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "misc",
   "everInEdition": true,
   "activity": [
@@ -262,11 +286,11 @@
       "start": 1794420000000,
       "end": 1794423600000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 0,
-        "droite": 0
+        "droite": 1
       },
-      "total": 0
+      "total": 2
     },
     {
       "start": 1794423600000,
@@ -298,5 +322,25 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le suspect de l'attentat de Trappes, Kevin Tessier, a tenu des propos qualifiés de glaçants durant sa garde à vue.",
+      "Il a affirmé devant les enquêteurs avoir agi « pour la France » et espérer devenir un « exemple ».",
+      "Les articles mettent en avant les déclarations assumées et ouvertement racistes du terroriste lors de ses auditions."
+    ],
+    "droite": [
+      "Kevin Tessier a reconnu en garde à vue avoir ciblé ses victimes en fonction de leur ethnie ou de leur religion.",
+      "Il a justifié son acte terroriste par le patriotisme, déclarant aux enquêteurs : « J’agis pour la France ».",
+      "Le Figaro rapporte des lettres manuscrites retrouvées dans sa cellule après une tentative de suicide, illustrant son instabilité.",
+      "Les enquêteurs décrivent un comportement à la fois détaché, provocant et confus, menant à un passage en unité psychiatrique."
+    ]
+  },
+  "differences": [
+    "La gauche se concentre sur le caractère glaçant et les revendications ouvertement racistes de Kevin Tessier lors de sa garde à vue.",
+    "La droite privilégie une enquête détaillée sur la psychologie du suspect, ses lettres de cellule, sa tentative de suicide et sa froide détermination."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-12T02:01:24.688Z"
 }
