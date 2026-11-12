@@ -6,6 +6,18 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "ed024ff04da6",
+      "outletId": "20-minutes",
+      "headline": "Nvidia : Sa fille, Tim Cook… Qui pour remplacer Jensen Huang ?",
+      "url": "https://www.20minutes.fr/economie/4262526-20261112-nvidia-fille-tim-cook-remplacer-jensen-huang?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-12T21:20:33.000Z",
+      "imageUrl": "https://img.20mn.fr/sZztMEWoTcC-LapodXmWYSk/1200x768_21-octobre-2026-berlin-jensen-huang-cofondateur-et-pdg-de-nvidia-prend-la-parole-lors-du-gtc-berlin-le-fabricant-de-puces-americain-a-tenu-sa-conference-sur-l-ia-du-20-au-22-octobre-2026-photo-soeren-stache-dpa-ur-newsml-dpa-com-20090101-261026-99-66999-soeren-stache-dpa-sipa-2610261040",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "ff7f11bd495c",
       "outletId": "liberation",
       "headline": "Rendez-vous galants, montages financiers, rumeurs d’espionnage... Le récit de la chute de Jensen Huang, patron de Nvidia",
@@ -48,6 +60,17 @@
       "kind": "opinion",
       "section": "economy",
       "everFrontPage": true
+    },
+    {
+      "id": "50c083afc857",
+      "outletId": "cnews",
+      "headline": "Scandale Nvidia : Alice Huang, la Chinoise soupçonnée d'espionnage, interdite de séjour à Singapour",
+      "url": "https://www.cnews.fr/monde/2026-11-12/scandale-nvidia-alice-huang-la-chinoise-soupconnee-despionnage-interdite-de-sejour",
+      "publishedAt": "2026-11-12T18:42:00.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_d7a89g3-taille1200_6af605792fb1f.jpg?h=d16b7bb6&itok=669lZZrr",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "b4b275288cdf",
@@ -676,9 +699,9 @@
       "counts": {
         "gauche": 0,
         "centre": 0,
-        "droite": 1
+        "droite": 2
       },
-      "total": 1
+      "total": 2
     },
     {
       "start": 1794510000000,
@@ -689,6 +712,26 @@
         "droite": 1
       },
       "total": 4
+    },
+    {
+      "start": 1794513600000,
+      "end": 1794517200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794517200000,
+      "end": 1794520800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
