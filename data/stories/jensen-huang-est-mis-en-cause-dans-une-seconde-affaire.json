@@ -6,6 +6,40 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "631a4c3dc68e",
+      "outletId": "le-figaro",
+      "headline": "Affaire Nvidia : le conseil d’administration envisagerait d’évincer Jensen Huang, selon des médias américains",
+      "url": "https://www.lefigaro.fr/secteur/high-tech/affaire-nvidia-le-conseil-d-administration-envisagerait-d-evincer-jensen-huang-selon-des-medias-americains-20261112",
+      "publishedAt": "2026-11-12T05:51:48.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/2817x1708_crop/2026/11/12/771977ede6dd7116e3ba0883a0d0629e056bdf0a433ebc8fd66651f870fed944.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
+      "id": "334fd7e21c9e",
+      "outletId": "bfmtv",
+      "headline": "Jensen Huang sur le point d'être évincé? Le conseil d'administration de Nvidia se réunit pour trancher après la révélation d'une nouvelle liaison",
+      "url": "https://www.bfmtv.com/economie/entreprises/jensen-huang-sur-le-point-d-etre-evince-le-conseil-d-administration-de-nvidia-se-reunit-pour-trancher-apres-la-revelation-d-une-nouvelle-liaison_AV-202611120143.html",
+      "publishedAt": "2026-11-12T05:35:50.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/DsPeA4_hSUJHDiFmDDuzGqqYs_w=/0x107:2048x1259/800x0/images/Jensen-Huang-2321200.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "f0ad771559f6",
+      "outletId": "europe-1",
+      "headline": "Nvidia s'apprête à limoger son dirigeant Jensen Huang, selon des médias américains",
+      "url": "https://www.europe1.fr/international/nvidia-sapprete-a-limoger-son-dirigeant-jensen-huang-selon-des-medias-americains-1227053?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-12T05:24:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/12/06/000_d6yy8g6_1_6af54fb2df4e4.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "cc0952bcb0b3",
       "outletId": "le-parisien",
       "headline": "Fortes secousses aux États-Unis : Nvidia s’apprête à limoger son PDG, l’action chute en Bourse",
@@ -63,20 +97,10 @@
     }
   ],
   "topicId": "97cccdbf9a27",
-  "titledArticleCount": 5,
+  "titledArticleCount": 8,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794373200000,
-      "end": 1794376800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794376800000,
       "end": 1794380400000,
@@ -306,25 +330,42 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794459600000,
+      "end": 1794463200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 2
+      },
+      "total": 3
     }
   ],
   "summaries": {
     "gauche": [
-      "Le conseil d'administration du géant des puces électroniques Nvidia s'apprête à révoquer son fondateur et patron Jensen Huang.",
-      "Le dirigeant est mis en cause pour une liaison avec une Chinoise soupçonnée d'espionnage au profit de Pékin.",
-      "L'enquête révèle également une seconde affaire sentimentale impliquant Jensen Huang et une salariée de l'entreprise."
+      "Le conseil d'administration du géant des semi-conducteurs Nvidia s'apprête à révoquer son cofondateur et PDG Jensen Huang.",
+      "Le dirigeant est mis en cause pour une liaison avec une ressortissante chinoise soupçonnée d'espionnage.",
+      "Le Wall Street Journal révèle qu'une seconde affaire sentimentale avec une salariée est reprochée à Jensen Huang."
     ],
     "centre": [
-      "Le conseil d'administration du leader mondial des microprocesseurs Nvidia se réunit d'urgence pour statuer sur l'avenir de son PDG Jensen Huang.",
-      "Le patron est sous le coup de révélations concernant une liaison avec une espionne chinoise présumée, déclenchant une onde de choc boursière et une chute de l'action.",
-      "Cette affaire d'adultère se transforme en crise de sécurité nationale mêlant les États-Unis et la Chine, tandis que le nom de Donald Trump est associé au scandale."
+      "Le conseil d'administration de Nvidia se réunit d'urgence pour statuer sur l'avenir de Jensen Huang.",
+      "Le dirigeant est fragilisé par des révélations concernant une relation avec une femme soupçonnée d'espionnage pour Pékin et une nouvelle liaison avec une subordonnée.",
+      "L'action du géant technologique, capitalisé à plus de 4 000 milliards de dollars, chute lourdement en Bourse avec un décrochage de près de 8 %.",
+      "L'affaire prend la tournure d'un scandale de sécurité nationale aux États-Unis, tout en suscitant un vif écho en Chine."
+    ],
+    "droite": [
+      "Le conseil d'administration de Nvidia envisage d'évincer le cofondateur et PDG Jensen Huang à la suite de plusieurs polémiques.",
+      "Le dirigeant est mis en cause après la révélation d'une liaison avec une femme soupçonnée d'espionnage au profit de la Chine.",
+      "L'action du géant américain des puces électroniques a chuté de près de 8 % dans les échanges électroniques d'après-séance."
     ]
   },
   "differences": [
-    "Le camp gauche centre son traitement sur la menace interne et les accusations d'inconduite personnelle pesant sur le fondateur de Nvidia, en soulignant l'accumulation des révélations intimes et professionnelles.",
-    "Le camp centre élargit immédiatement la portée de l'affaire aux répercussions économiques mondiales, à la chute boursière et aux implications géopolitiques majeures entre Washington et Pékin."
+    "Le camp de gauche met l'accent sur les accusations multiples visant la vie privée du patron de Nvidia et l'accumulation de fautes professionnelles en révélant une seconde relation avec une salariée.",
+    "Le camp du centre adopte une perspective macroéconomique et géopolitique en insistant sur la chute de l'action en Bourse et la transformation d'une affaire d'adultère en un enjeu de sécurité nationale.",
+    "Le camp de droite se focalise sur l'imminence de la décision du conseil d'administration et la sanction boursière immédiate qui frappe le géant des puces électroniques."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-12T04:01:25.228Z"
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-12T06:01:37.727Z"
 }
