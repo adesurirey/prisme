@@ -1,10 +1,55 @@
 {
   "id": "09e8de35615d",
   "slug": "un-sondage-indique-que-les-deux-tiers-des-francais-veulent-lier",
-  "title": "Un sondage indique que les deux tiers des Français veulent lier les minima sociaux au mérite",
+  "title": "Sondage sur la pauvreté : 63 % des Français estiment que la solidarité doit se mériter",
   "createdAt": "2026-11-12T03:01:36.739Z",
   "storyDay": "2026-11-12",
   "articles": [
+    {
+      "id": "45d2bee42dea",
+      "outletId": "la-croix",
+      "headline": "Pauvreté : les Français partagés entre solidarité et méfiance à l’égard des plus démunis",
+      "url": "https://www.la-croix.com/societe/pauvrete-les-francais-partages-entre-solidarite-et-mefiance-a-l-egard-des-plus-demunis-20261112",
+      "publishedAt": "2026-11-12T06:47:07.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/11/11/2586976-le-secours-catholique-publie-le-12-novembre-2026-u.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "9468e45b2730",
+      "outletId": "le-figaro",
+      "headline": "Pauvreté : pour 63% des Français, la solidarité doit se mériter, selon un sondage",
+      "url": "https://www.lefigaro.fr/conjoncture/pauvrete-pour-63-des-francais-la-solidarite-doit-se-meriter-selon-un-sondage-20261112",
+      "publishedAt": "2026-11-12T06:24:31.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/12/c8c830ce92f42cde315f68258238e2598e173c008523f8723e8b455834ff2a54.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
+      "id": "f64103def808",
+      "outletId": "tf1-info",
+      "headline": "Pauvreté : 63 % des Français estiment que la solidarité doit se mériter",
+      "url": "https://www.tf1info.fr/societe/pauvrete-63-des-francais-estiment-que-la-solidarite-doit-se-meriter-selon-un-sondage-2475353.html",
+      "publishedAt": "2026-11-12T06:23:52.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/684/secours-catholique-2131-db5259-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "3cf2f3349611",
+      "outletId": "cnews",
+      "headline": "63% des Français pensent que les minimas sociaux «découragent de travailler», selon un sondage",
+      "url": "https://www.cnews.fr/france/2026-11-12/63-des-francais-pensent-que-les-minimas-sociaux-decouragent-de-travailler-selon",
+      "publishedAt": "2026-11-12T06:18:39.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_jmbarrere_2729788_1_6aa06c6397d28_6af55a20102d8.jpg?itok=PzT3Iv7U",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
     {
       "id": "ee95810e7ae1",
       "outletId": "bfmtv",
@@ -41,20 +86,10 @@
     }
   ],
   "topicId": "09e8de35615d",
-  "titledArticleCount": 3,
+  "titledArticleCount": 7,
   "section": "society",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794376800000,
-      "end": 1794380400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794380400000,
       "end": 1794384000000,
@@ -284,6 +319,35 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794463200000,
+      "end": 1794466800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 3
+      },
+      "total": 4
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Un sondage OpinionWay pour le Secours catholique révèle que 63 % des Français estiment que la solidarité doit se mériter.",
+      "Le rapport met en évidence une ambivalence entre la perception de la pauvreté comme un défi collectif et la mise en cause de la responsabilité individuelle.",
+      "Plus de huit Français sur dix jugent les minima sociaux indispensables, bien que les aides soient perçues comme mal réparties."
+    ],
+    "droite": [
+      "Le rapport annuel du Secours catholique indique que 63 % des Français pensent que la solidarité doit se mériter.",
+      "CNews souligne que 63 % des personnes interrogées estiment que les minimas sociaux découragent de travailler.",
+      "Le Figaro replace ce sondage à la veille de la présidentielle et face aux réalités vécues par le million de bénéficiaires accompagnés en 2025."
+    ]
+  },
+  "differences": [
+    "Le camp centre insiste principalement sur l'ambivalence du rapport des Français entre la nécessité d'une solidarité collective et la méfiance envers les bénéficiaires.",
+    "Le camp droite met en avant les aspects restrictifs et critiques du sondage, en insistant sur le fait que la solidarité doit se mériter et que les aides peuvent décourager l'activité."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-12T07:01:29.315Z"
 }
