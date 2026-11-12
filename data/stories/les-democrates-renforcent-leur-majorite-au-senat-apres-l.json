@@ -6,6 +6,17 @@
   "storyDay": "2026-11-12",
   "articles": [
     {
+      "id": "7cd27025aef2",
+      "outletId": "lexpress",
+      "headline": "Midterms : la déroute des républicains se confirme dans le Mississippi",
+      "url": "https://www.lexpress.fr/monde/amerique/midterms-la-deroute-des-republicains-se-confirme-dans-le-mississippi-EW5L6MCNURHWHMYEN4BFR42EBA/",
+      "publishedAt": "2026-11-12T07:03:29.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/NLPBPPERCFCOTCF6XMNO4PBHBQ.JPG?auth=e21af1dfdb3f58e1b9d553ad204cdb0c245458d4b9a1e6614b469f50e0daa1ad&smart=true&width=5000&height=3334",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "127e73021399",
       "outletId": "tf1-info",
       "headline": "Exploit du démocrate Scott Colom, qui devient le premier sénateur noir du Mississippi depuis près de 150 ans",
@@ -131,20 +142,10 @@
     }
   ],
   "topicId": "3a7f91280e8e",
-  "titledArticleCount": 9,
+  "titledArticleCount": 12,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794380400000,
-      "end": 1794384000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794384000000,
       "end": 1794387600000,
@@ -374,32 +375,41 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1794466800000,
+      "end": 1794470400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le démocrate Scott Colom a remporté le siège de sénateur du Mississippi en battant la républicaine sortante Cindy Hyde-Smith.",
-      "Il devient le premier Noir élu au Sénat fédéral par cet État depuis plus de 140 ans.",
-      "Cette victoire met fin à une longue absence de représentant démocrate du Mississippi au Sénat depuis le début des années 1980."
+      "Le candidat démocrate Scott Colom a battu la sénatrice républicaine sortante Cindy Hyde-Smith dans le Mississippi.",
+      "Scott Colom devient le premier sénateur noir élu au Congrès par cet État depuis la fin du XIXe siècle.",
+      "Cette victoire permet aux démocrates de s'emparer d'un bastion traditionnellement conservateur."
     ],
     "centre": [
-      "Le démocrate Scott Colom a remporté un siège au Sénat américain dans le Mississippi, selon les projections des médias.",
-      "Il s'est imposé de justesse face à la sénatrice républicaine sortante Cindy Hyde-Smith dans cet État traditionnellement conservateur.",
-      "Il devient ainsi le premier sénateur noir à être élu dans cet État du Sud depuis près de 150 ans.",
-      "Cette victoire permet aux démocrates de renforcer leur majorité au Congrès après les élections de mi-mandat."
+      "Le démocrate Scott Colom a remporté de justesse un siège de sénateur dans le Mississippi lors des élections de mi-mandat.",
+      "Il s'agit du premier sénateur noir de cet État sudiste depuis près de 150 ans.",
+      "Ce succès inattendu dans un fief républicain permet au camp démocrate de renforcer sa majorité au Congrès."
     ],
     "droite": [
-      "Le candidat démocrate Scott Colom a remporté la victoire au Sénat dans le Mississippi.",
-      "Cette victoire historique s'est déroulée dans un État du Sud traditionnellement acquis aux républicains.",
-      "L'élection de Scott Colom marque l'arrivée du premier sénateur noir dans cet État depuis la Reconstruction à la fin du XIXe siècle."
+      "Le démocrate Scott Colom a décroché un siège de sénateur dans le Mississippi, État traditionnellement acquis aux républicains.",
+      "Cette victoire historique consacre le premier sénateur noir de l'État depuis la Reconstruction du XIXe siècle.",
+      "Ce succès démocrate accentue la mauvaise posture des républicains lors de ces élections de mi-mandat."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la dimension historique et sociale de l'élection en insistant sur le symbole de la rupture raciale et politique de longue date dans le Mississippi.",
-    "Le centre adopte un angle factuel et institutionnel, soulignant la victoire sur le fil de Scott Colom face à Cindy Hyde-Smith et l'impact de ce siège sur la majorité démocrate au Congrès.",
-    "La droite qualifie la victoire d'historique dans un fief républicain en insistant principalement sur le fait inédit depuis la Reconstruction qu'un sénateur noir soit élu dans cet État du Sud."
+    "La gauche met particulièrement l'accent sur la défaite de la sénatrice sortante Cindy Hyde-Smith et ancre l'événement dans une chronologie séculaire depuis le XIXe siècle.",
+    "Le centre dresse le portrait de Scott Colom comme un procureur de district de 43 ans et insiste sur l'impact de ce gain pour la majorité démocrate à l'échelle fédérale.",
+    "La droite qualifie l'événement d'exploit historique pour les démocrates tout en soulignant la perte d'un bastion républicain imprenable lors des midterms."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 9,
-  "summarizedAt": "2026-11-12T06:01:37.727Z"
+  "summarizedArticleCount": 12,
+  "summarizedAt": "2026-11-12T08:01:30.597Z"
 }

@@ -6,6 +6,28 @@
   "storyDay": "2026-11-11",
   "articles": [
     {
+      "id": "bb932e6f5fd8",
+      "outletId": "le-figaro",
+      "headline": "Boutiques vandalisées, poubelles incendiées… En Espagne, des heurts entre manifestants et police après une mobilisation pour le droit au logement",
+      "url": "https://www.lefigaro.fr/international/boutiques-vandalisees-poubelles-incendiees-en-espagne-des-heurts-entre-manifestants-et-police-apres-une-mobilisation-pour-le-droit-au-logement-20261112",
+      "publishedAt": "2026-11-12T07:20:31.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/12/b1737bfef8e4563ca46f5101a7e721e4caa521ca01ad6ecad3b2d3cd3c22e1e4.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "fd0c5f51e3ae",
+      "outletId": "cnews",
+      "headline": "Espagne : violents affrontements entre manifestants pour le droit au logement et police à Madrid et Barcelone",
+      "url": "https://www.cnews.fr/monde/2026-11-12/espagne-violents-affrontements-entre-manifestants-pour-le-droit-au-logement-et",
+      "publishedAt": "2026-11-12T05:52:15.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-11t202027z_596701614_rc2uloaxuguq_rtrmadp_3_spain-strike-barcelona-taille1200_6af54bdd16d91.jpg?itok=-MAfh0_m",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "7220f4724441",
       "outletId": "bfmtv",
       "headline": "Espagne: des heurts entre manifestants et forces de l'ordre lors de mobilisations massives pour le droit au logement et le pouvoir d'achat",
@@ -67,7 +89,7 @@
       "url": "https://www.20minutes.fr/monde/espagne/4262230-20261111-espagne-dizaines-milliers-manifestants-cloture-journee-greve-generale-logement?at_medium=display&at_campaign=149",
       "publishedAt": "2026-11-11T20:27:47.000Z",
       "imageUrl": "https://img.20mn.fr/pSc2d9nJQx6iftLKdOl6ayk/1200x768_11-novembre-2026-11-novembre-2026-malaga-poursuivre-les-piquets-d-information-et-les-manifestations-dans-les-rues-de-la-ville-de-malaga-a-l-occasion-de-la-greve-generale-en-faveur-du-probleme-du-logement-en-espagne-image-de-credit-lorenzo-carnero-zuma-press-wire-20261111-zap-c161-061-zeus-2611111709",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -467,7 +489,27 @@
       "counts": {
         "gauche": 0,
         "centre": 1,
+        "droite": 1
+      },
+      "total": 2
+    },
+    {
+      "start": 1794463200000,
+      "end": 1794466800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
         "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794466800000,
+      "end": 1794470400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
       },
       "total": 1
     }
