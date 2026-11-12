@@ -295,5 +295,22 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Trois jeunes individus ont perdu la vie à Tours lors d'une collision impliquant un unique véhicule."
+    ],
+    "droite": [
+      "Un drame de la route survenu à Tours a entraîné le décès de trois passagers âgés de 17, 18 et 19 ans.",
+      "La voiture a violemment percuté un arbre en fin de soirée, selon les informations rapportées par les secours.",
+      "La conductrice, âgée de 19 ans, a subi des blessures légères et a été admise au centre hospitalier universitaire Trousseau."
+    ]
+  },
+  "differences": [
+    "Le centre se limite à une mention succincte du décès de trois jeunes dans un accident de voiture à Tours.",
+    "La droite détaille l'événement en précisant l'âge des victimes, l'heure exacte de la collision nocturne, l'impact contre un arbre et la prise en charge médicale de la conductrice légèrement blessée."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-12T12:01:36.819Z"
 }
