@@ -1,10 +1,33 @@
 {
   "id": "8ead14ea4f16",
   "slug": "les-democrates-renforcent-leur-majorite-au-senat-apres-l",
-  "title": "Les démocrates renforcent leur majorité au Sénat après l'élection d'un sénateur noir au Mississippi",
+  "title": "Les démocrates renforcent leur majorité au Sénat après l'élection de Scott Colom au Mississippi",
   "createdAt": "2026-11-12T00:01:25.246Z",
   "storyDay": "2026-11-12",
   "articles": [
+    {
+      "id": "254b0ea2703d",
+      "outletId": "rfi",
+      "headline": "États-Unis: le démocrate Scott Colom devient le premier sénateur noir du Mississippi depuis 150 ans",
+      "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261112-%C3%A9tats-unis-le-d%C3%A9mocrate-scott-colom-devient-le-premier-s%C3%A9nateur-noir-du-mississippi-depuis-150-ans",
+      "publishedAt": "2026-11-12T00:14:07.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/4bf6b938-de2c-11f1-97a3-29048b396e03/w:1024/p:16x9/2026-11-04T061009Z-400192983-RC2NGOAD05HX-RTRMADP-3-USA-ELECTION-MISSISSIPPI.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "2d7842ef72e7",
+      "outletId": "ouest-france",
+      "headline": "Les démocrates remportent un nouveau siège au Sénat avec la victoire de Scott Colom dans le Mississippi",
+      "url": "https://www.ouest-france.fr/monde/etats-unis/elections-americaines/les-democrates-remportent-un-nouveau-siege-au-senat-avec-la-victoire-de-scott-colom-dans-le-mississippi-6772015e-de27-11f1-a62b-776e3051b0df?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-12T00:06:22.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZTM1NzgzNDhjNjljNmQ3M2Q2ZDI2Mzc3OTQxMThjMGY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1f1c8194eef1a613f63eb9847b378199fa348981e2d75c54c4099cee5e8593df",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
     {
       "id": "4ab48b9ebb3d",
       "outletId": "le-parisien",
@@ -29,8 +52,8 @@
     }
   ],
   "topicId": "3a7f91280e8e",
-  "titledArticleCount": 2,
-  "section": "politics",
+  "titledArticleCount": 4,
+  "section": "world",
   "everInEdition": true,
   "activity": [
     {
@@ -268,10 +291,23 @@
       "end": 1794445200000,
       "counts": {
         "gauche": 0,
-        "centre": 1,
+        "centre": 3,
         "droite": 0
       },
-      "total": 1
+      "total": 3
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Le candidat démocrate Scott Colom a remporté un siège de sénateur au Mississippi face à Cindy Hyde-Smith.",
+      "Il devient le premier sénateur noir élu dans cet État depuis près d'un siècle et demi.",
+      "Cette victoire permet aux démocrates d'accroître leur avance au Sénat américain à l'issue des midterms."
+    ]
+  },
+  "differences": [
+    "Le camp du centre met en avant la portée historique de l'élection de Scott Colom au Mississippi et ses conséquences sur la majorité démocrate au Congrès après les élections de mi-mandat."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-12T01:01:24.822Z"
 }
