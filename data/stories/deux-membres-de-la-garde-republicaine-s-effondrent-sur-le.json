@@ -296,5 +296,24 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Deux militaires de la Garde républicaine ont subi des malaises vagaux sur le perron du palais présidentiel.",
+      "L'incident s'est produit mercredi 11 novembre lors de la venue du chef de l'État slovaque Peter Pellegrini.",
+      "L'Élysée a communiqué pour donner des nouvelles rassurantes sur l'état de santé des deux agents concernés."
+    ],
+    "droite": [
+      "Deux membres de la garde d'honneur se sont effondrés successivement à proximité immédiate d'Emmanuel Macron.",
+      "La scène s'est déroulée en plein air sur le parvis de l'Élysée lors d'une cérémonie officielle d'accueil.",
+      "Les malaises sont survenus sous les yeux du président français et de son homologue slovaque en visite."
+    ]
+  },
+  "differences": [
+    "Les médias de gauche contextualisent l'incident en précisant la nature médicale des faits et les informations communiquées par l'Élysée.",
+    "Les médias de droite axent leur traitement sur la chronologie visuelle des malaises successifs survenus en présence des chefs d'État."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-12T20:01:22.282Z"
 }

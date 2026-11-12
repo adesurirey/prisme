@@ -284,5 +284,23 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Quatre individus armés ont pris pour cible la bijouterie De Beers située rue de la Paix, dans le deuxième arrondissement de Paris.",
+      "Les malfaiteurs sont parvenus à s'enfuir et font l'objet d'une recherche active par les forces de l'ordre."
+    ],
+    "droite": [
+      "Quatre individus équipés d'armes longues de type kalashnikov ont braqué la diamanterie De Beers, située près de la Place Vendôme.",
+      "Les suspects ont commis leur acte à bord de deux puissants scooters avant de prendre la fuite.",
+      "Le préjudice provisoire est estimé à plus d'un million d'euros selon Europe 1."
+    ]
+  },
+  "differences": [
+    "Le camp centre relate le braquage de manière succincte en s'en tenant aux faits essentiels de l'attaque et de la fuite des suspects.",
+    "Le camp droite apporte des précisions matérielles importantes en mentionnant l'utilisation de kalashnikovs et de scooters, ainsi qu'une estimation chiffrée du préjudice."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-11-12T20:01:22.282Z"
 }
