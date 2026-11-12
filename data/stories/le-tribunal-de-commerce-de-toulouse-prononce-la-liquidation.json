@@ -1,10 +1,22 @@
 {
   "id": "1fb38d60f1e0",
   "slug": "le-tribunal-de-commerce-de-toulouse-prononce-la-liquidation",
-  "title": "Le tribunal de commerce de Toulouse prononce la liquidation judiciaire de l'usine Fibre Excellence à Saint-Gaudens et entraîne le licenciement de 300 salariés",
+  "title": "Le tribunal de commerce de Toulouse prononce la liquidation judiciaire de l'usine Fibre Excellence à Saint-Gaudens",
   "createdAt": "2026-11-12T09:01:29.578Z",
   "storyDay": "2026-11-12",
   "articles": [
+    {
+      "id": "4b13de85d4b9",
+      "outletId": "le-monde",
+      "headline": "A Toulouse, la liquidation judiciaire de l’usine de pâte à papier Fibre Excellence définitivement entérinée ; 300 salariés vont être licenciés",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/12/a-toulouse-la-liquidation-judiciaire-de-l-usine-de-pate-a-papier-fibre-excellence-de-saint-gaudens-definitivement-enterinee-300-salaries-vont-etre-licencies_6809080_3234.html",
+      "publishedAt": "2026-11-12T09:24:37.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/12/1138/0/8029/4014/644/322/60/0/46e4758_upload-1-rchloyx1pmve-000-d6r47cq-1.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
     {
       "id": "93c5454e022b",
       "outletId": "le-parisien",
@@ -23,7 +35,7 @@
       "url": "https://www.lefigaro.fr/societes/fibre-excellence-a-saint-gaudens-le-tribunal-de-commerce-de-toulouse-prononce-la-cessation-d-activite-de-l-usine-20261112",
       "publishedAt": "2026-11-12T08:42:23.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/12/6d40e7b400c091d976f5db79193075de01e1206aee2cf2825972acf4ee03ad78.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -51,7 +63,7 @@
     }
   ],
   "topicId": "1fb38d60f1e0",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "economy",
   "everInEdition": true,
   "activity": [
@@ -289,11 +301,36 @@
       "start": 1794474000000,
       "end": 1794477600000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le tribunal de commerce de Toulouse a prononcé la cessation d'activité de l'usine de Saint-Gaudens, faute d'offre de reprise.",
+      "Le site de l'ex-numéro un de la pâte à papier était déjà placé sous le régime de liquidation judiciaire depuis le mois de juillet."
+    ],
+    "centre": [
+      "La liquidation judiciaire de l'usine Fibre Excellence à Saint-Gaudens a été définitivement entérinée par la justice.",
+      "Quelque trois cents salariés du site industriel haut-garonnais et du siège social vont être licenciés.",
+      "Un nouveau projet industriel est espéré dans le courant de l'année 2027, porté conjointement par un groupe portugais et la région Occitanie.",
+      "Cette décision judiciaire marque la fermeture du dernier fabricant français de pâte à papier, après le site de Tarascon."
+    ],
+    "droite": [
+      "Le tribunal de commerce de Toulouse a prononcé la cessation d'activité de l'usine Fibre Excellence à Saint-Gaudens.",
+      "L'intégralité des trois cents salariés du site et du siège de Labège, près de Toulouse, devra être licenciée.",
+      "L'entreprise occupait la place de leader de la pâte à papier en France."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur l'absence d'offre de reprise et le statut de l'entreprise déjà placée sous le régime de liquidation depuis juillet.",
+    "Le centre dresse un panorama plus large en mentionnant la fin du dernier fabricant français de pâte à papier et l'espoir d'un projet de reprise porté par la région en 2027.",
+    "La droite privilégie un angle factuel et centré sur le bilan économique de l'ex-leader de la pâte à papier et le lieu d'implantation du siège social à Labège."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-12T10:01:25.136Z"
 }
