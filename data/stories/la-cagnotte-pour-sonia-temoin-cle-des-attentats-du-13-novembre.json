@@ -6,6 +6,17 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "b8d93d3b6260",
+      "outletId": "le-parisien",
+      "headline": "« Merci infiniment » : la cagnotte pour aider Sonia, témoin clé des attentats du 13 novembre, dépasse les 500 000 euros",
+      "url": "https://www.leparisien.fr/faits-divers/merci-infiniment-la-cagnotte-pour-aider-sonia-temoin-cle-des-attentats-du-13-novembre-depasse-les-500-000-euros-13-11-2026-PVLR4WKTCVCOVK3QPL5A7WT63I.php",
+      "publishedAt": "2026-11-13T18:01:29.371Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "f0821f7cdc1f",
       "outletId": "ouest-france",
       "headline": "La cagnotte en faveur de Sonia, l’héroïne des attentats du 13-Novembre qui vit désormais cachée, a dépassé les 500 000 €",
@@ -41,40 +52,10 @@
     }
   ],
   "topicId": "88e34489b72e",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794499200000,
-      "end": 1794502800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794502800000,
-      "end": 1794506400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794506400000,
-      "end": 1794510000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794510000000,
       "end": 1794513600000,
@@ -284,25 +265,55 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1794585600000,
+      "end": 1794589200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794589200000,
+      "end": 1794592800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794592800000,
+      "end": 1794596400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "centre": [
-      "La cagnotte solidaire ouverte pour Sonia, témoin clé des attentats du 13-Novembre, franchit le seuil des 500 000 euros avant sa clôture.",
-      "Cette femme, qui vit sous protection policière stricte et a vu son existence bouleversée, a pu apurer ses dettes grâce à cette collecte.",
-      "Son témoignage décisif en novembre 2015 avait permis aux forces de l'ordre de localiser le coordinateur des attaques Abdelhamid Abaaoud et ses complices à Saint-Denis."
+      "La cagnotte solidaire ouverte pour Sonia, témoin clé des attentats du 13-Novembre, a dépassé la barre des 500 000 euros.",
+      "L'héroïne, qui vit cachée et sous protection policière, a pu rembourser ses dettes grâce à cette collecte avant sa clôture.",
+      "Son témoignage décisif avait permis de localiser Abdelhamid Abaaoud, coordinateur des tueries de 2015."
     ],
     "droite": [
-      "La cagnotte en ligne destinée à Sonia, témoin protégé des attaques du 13-Novembre, atteint la somme de 500 000 euros à la date anniversaire du drame.",
-      "L'initiative fait suite à la diffusion sur France 2 d'un documentaire mettant en lumière son acte de bravoure et le changement radical de sa vie.",
-      "Le 16 novembre 2015, son signalement aux forces de l'ordre avait rendu possible l'identification d'Abdelhamid Abaaoud et de deux de ses acolytes en fuite."
+      "La collecte en ligne ouverte pour Sonia, témoin-clé des attentats du 13-Novembre, atteint les 500 000 euros à la veille de sa clôture.",
+      "Cette cagnotte se termine 11 ans jour pour jour après les attaques les plus meurtrières de l'histoire de France.",
+      "Le documentaire diffusé sur France 2 a rappelé son acte de bravoure du 16 novembre 2015, qui a bouleversé sa vie et nécessité un changement d'identité."
     ]
   },
   "differences": [
-    "Le centre contextualise l'information en insistant sur l'utilisation concrète des fonds pour rembourser les dettes de Sonia et sur sa protection policière.",
-    "La droite met en avant le rôle de la diffusion d'un documentaire télévisé dans le succès de la collecte et rappelle précisément la chronologie des repérages d'Abdelhamid Abaaoud."
+    "Le camp centre se focalise sur l'aspect solidaire et concret de la cagnotte en soulignant le remboursement des dettes de Sonia.",
+    "Le camp droite contextualise davantage l'événement en rappelant l'onzième anniversaire des attentats et la diffusion du documentaire sur France 2."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-13T16:01:36.177Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-13T18:01:29.371Z"
 }

@@ -1,10 +1,22 @@
 {
   "id": "a4aad956e3c9",
   "slug": "la-police-espagnole-arrete-une-porte-parole-neonazie-qui",
-  "title": "La police espagnole arrête une porte-parole néonazie qui projetait une attaque à Paris",
+  "title": "La police espagnole arrête une néonazie qui projetait une attaque à Paris",
   "createdAt": "2026-11-13T15:01:33.347Z",
   "storyDay": "2026-11-13",
   "articles": [
+    {
+      "id": "8e9a35c0d7e8",
+      "outletId": "20-minutes",
+      "headline": "Une néonazie espagnole qui voulait commettre un attentat à Paris arrêtée",
+      "url": "https://www.20minutes.fr/faits_divers/4262771-20261113-neonazie-espagnole-voulait-commettre-attentat-paris-arretee?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-13T17:23:32.000Z",
+      "imageUrl": "https://img.20mn.fr/LiW9X3caRIiGf1i9dG3W5yk/1200x768_isabel-peralta-fait-un-salut-nazi-devant-l-ambassade-du-maroc-en-espagne-fin-juillet-2026",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
     {
       "id": "9e435d0aad7b",
       "outletId": "le-parisien",
@@ -29,30 +41,10 @@
     }
   ],
   "topicId": "a4aad956e3c9",
-  "titledArticleCount": 2,
-  "section": "world",
+  "titledArticleCount": 3,
+  "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794499200000,
-      "end": 1794502800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794502800000,
-      "end": 1794506400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794506400000,
       "end": 1794510000000,
@@ -272,6 +264,45 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794585600000,
+      "end": 1794589200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794589200000,
+      "end": 1794592800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Isabel Peralta, figure du groupuscule espagnol Núcleo Nacional, a été interpellée par les forces de l'ordre.",
+      "L'enquête indique qu'elle projetaît une fusillade dans la capitale française au cours du mois d'octobre.",
+      "Un important arsenal d'armes a été saisi au domicile de cette militante d'extrême droite."
+    ],
+    "centre": [
+      "La police espagnole a procédé au démantèlement d'une structure néonazie active dans le pays.",
+      "La porte-parole de cette organisation envisageait de commettre un attentat armé à Paris.",
+      "Les investigations ont permis la découverte de nombreux équipements militaires et de symboles hitlériens chez la suspecte."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur le profil militant de la suspecte et la menace terroriste directe qu'elle représentait pour Paris.",
+    "Le centre privilégie l'angle de l'opération policière internationale et l'arsenal saisi lors du démantèlement du groupuscule."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-11-13T18:01:29.371Z"
 }
