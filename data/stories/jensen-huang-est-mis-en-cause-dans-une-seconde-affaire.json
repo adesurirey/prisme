@@ -1,10 +1,30 @@
 {
   "id": "5857ae4994ae",
   "slug": "jensen-huang-est-mis-en-cause-dans-une-seconde-affaire",
-  "title": "Affaire Nvidia : le conseil d'administration démet le PDG Jensen Huang de ses fonctions",
+  "title": "Le conseil d'administration de Nvidia démet le PDG Jensen Huang de ses fonctions après des révélations",
   "createdAt": "2026-11-12T00:01:25.246Z",
   "storyDay": "2026-11-11",
   "articles": [
+    {
+      "id": "6046830ba0ab",
+      "outletId": "liberation",
+      "headline": "Scandale Nvidia : on décrypte la chute de Jensen Huang en direct à 15 heures",
+      "url": "https://www.liberation.fr/economie/scandale-nvidia-on-decrypte-la-chute-de-jensen-huang-en-direct-a-15-heures-20261113_KLGFART42RFVXFGOG6MD4I4EXY/",
+      "publishedAt": "2026-11-13T12:35:27.000Z",
+      "frontPage": false,
+      "kind": "live",
+      "section": "science"
+    },
+    {
+      "id": "ec420a74ad10",
+      "outletId": "liberation",
+      "headline": "Scandale Nvidia : l’administration Trump dans la tourmente, le secrétaire au Commerce témoignera au Congrès",
+      "url": "https://www.liberation.fr/international/amerique/scandale-nvidia-ladministration-trump-dans-la-tourmente-le-secretaire-au-commerce-temoignera-au-congres-20261113_QBSDRIA375FIXH25EGQPEZUG64/",
+      "publishedAt": "2026-11-13T12:20:23.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
     {
       "id": "8408087bcbaf",
       "outletId": "tf1-info",
@@ -15,6 +35,17 @@
       "frontPage": false,
       "kind": "news",
       "section": "economy"
+    },
+    {
+      "id": "280ba151543c",
+      "outletId": "cnews",
+      "headline": "Scandale Nvidia : l'ex-PDG, Jensen Huang, convoqué devant le Sénat américain",
+      "url": "https://www.cnews.fr/monde/2026-11-13/scandale-nvidia-lex-pdg-jensen-huang-convoque-devant-le-senat-americain-1953341",
+      "publishedAt": "2026-11-13T10:06:03.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-12t135606z_194641723_rc2sklahuvw0_rtrmadp_3_nvidia-ceo_6af6d730b9129.jpg?h=62682ae9&itok=ftekHWCf",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
     },
     {
       "id": "7515509986f6",
@@ -134,7 +165,7 @@
       "url": "https://www.lefigaro.fr/secteur/high-tech/la-perte-de-jensen-huang-est-un-veritable-coup-dur-la-chute-du-patron-de-nvidia-provoque-un-seisme-sur-la-planete-ia-20261112",
       "publishedAt": "2026-11-12T18:41:51.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/2967x1668_crop/2026/11/12/fa58f67e0abf0ccd39867088732da973db042bcd318a1a88ac37243cd0c06206.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -454,7 +485,7 @@
     }
   ],
   "topicId": "97cccdbf9a27",
-  "titledArticleCount": 33,
+  "titledArticleCount": 43,
   "section": "economy",
   "everInEdition": true,
   "activity": [
@@ -914,36 +945,54 @@
       "counts": {
         "gauche": 0,
         "centre": 0,
-        "droite": 1
+        "droite": 2
       },
-      "total": 1
+      "total": 2
+    },
+    {
+      "start": 1794567600000,
+      "end": 1794571200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794571200000,
+      "end": 1794574800000,
+      "counts": {
+        "gauche": 2,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "Le conseil d'administration a contraint le cofondateur et PDG Jensen Huang à la démission le jeudi 12 novembre.",
-      "Le départ de Jensen Huang fait suite à des révélations sur ses relations extraconjugales, dont une avec Alice Huang, une femme d'affaires soupçonnée d'espionnage pour la Chine.",
-      "L'affaire provoque des ondes de choc politiques et économiques, ravivant les tensions géopolitiques entre Pékin et Washington autour de l'intelligence artificielle."
+      "Le conseil d'administration de Nvidia a démis Jensen Huang de ses fonctions de PDG après la révélation de sa liaison avec une femme soupçonnée d'espionnage pour la Chine.",
+      "L'affaire provoque de fortes turbulences politiques aux États-Unis, poussant le Congrès à convoquer des auditions avec le secrétaire au Commerce Howard Lutnick.",
+      "Les tribunes et analyses de ce camp estiment que cette démission dépasse la simple affaire privée et pèse lourdement sur la géopolitique technologique et l'administration Trump."
     ],
     "centre": [
-      "Jensen Huang a quitté la tête de Nvidia après 33 ans de direction, emporté par un double scandale conjugal et des soupçons d'espionnage chinois.",
-      "L'action du géant des puces électroniques et l'ensemble des valeurs technologiques liées à l'intelligence artificielle ont été sévèrement chahutées à Wall Street.",
-      "Donald Trump a publiquement appelé à nommer Tim Cook, l'actuel patron d'Apple, pour succéder à Jensen Huang à la tête de Nvidia.",
-      "Le conseil d'administration a désigné la directrice financière Colette Kress pour assurer l'intérim pendant la recherche d'un nouveau dirigeant permanent."
+      "Jensen Huang a quitté la tête de Nvidia à la suite d'un double scandale extraconjugal, incluant des liens avec une femme d'affaires chinoise visée par des enquêtes d'espionnage.",
+      "La Bourse de Wall Street a immédiatement réagi à cette annonce par une chute prononcée de l'action Nvidia et des valeurs technologiques liées à l'intelligence artificielle.",
+      "Le président Donald Trump est intervenu publiquement pour suggérer la nomination de Tim Cook, le patron d'Apple, afin de succéder au dirigeant déchu."
     ],
     "droite": [
-      "Le conseil d'administration a démis de ses fonctions Jensen Huang, figure historique et charismatique à la tête de Nvidia depuis sa création.",
-      "L'éviction du PDG plonge l'entreprise et ses partenaires dans la tourmente, illustrant les vulnérabilités de la filière stratégique des semi-conducteurs.",
-      "À Taïwan, île natale de Jensen Huang, l'annonce de son départ suscite un profond sentiment de choc, de tristesse et de désarroi.",
-      "Donald Trump est intervenu sur son réseau social Truth Social pour recommander de confier la direction de l'entreprise à Tim Cook."
+      "Le cofondateur de Nvidia Jensen Huang a été évincé par son conseil d'administration après des révélations sur sa vie privée et des soupçons d'ingérence chinoise.",
+      "Le Sénat américain a formellement convoqué l'ancien PDG et le gouvernement pour évaluer les risques pesant sur la sécurité nationale et la protection des technologies sensibles.",
+      "Le gouvernement de Singapour a annoncé avoir interdit de séjour Alice Huang, la femme liée au scandale, pour avoir fourni des déclarations inexactes lors d'une enquête locale."
     ]
   },
   "differences": [
-    "La gauche insiste lourdement sur la dimension géopolitique du scandale et les connexions d'espionnage avec la Chine, qualifiant l'événement d'incident diplomatique majeur.",
-    "Le centre privilégie l'analyse des répercussions boursières, des failles de gouvernance du 'syndrome de l'homme providentiel' et des pistes de succession politique.",
-    "La droite met l'accent sur le drame humain et le choc émotionnel provoqué par la chute du cofondateur, tout en soulignant la fragilité stratégique de la tech mondiale."
+    "La gauche privilégie une approche géopolitique et critique, insistant sur les répercussions systémiques de l'affaire et les fragilités de l'administration américaine.",
+    "Le centre adopte un traitement centré sur l'actualité économique brute, documentant heure par heure l'impact boursier, la succession managériale et les déclarations de Donald Trump.",
+    "La droite focalise son angle éditorial sur la sécurité nationale américaine et les implications réglementaires de l'espionnage technologique."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 33,
-  "summarizedAt": "2026-11-12T20:01:22.282Z"
+  "summarizedArticleCount": 43,
+  "summarizedAt": "2026-11-13T13:01:30.419Z"
 }
