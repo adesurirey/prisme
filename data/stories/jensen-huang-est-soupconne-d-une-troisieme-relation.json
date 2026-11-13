@@ -1,10 +1,21 @@
 {
   "id": "e6d92a5f1593",
   "slug": "jensen-huang-est-soupconne-d-une-troisieme-relation",
-  "title": "Jensen Huang est soupçonné d’une troisième relation extraconjugale avec une salariée",
+  "title": "Jensen Huang est soupçonné d'une troisième relation extraconjugale avec une salariée",
   "createdAt": "2026-11-13T08:01:28.549Z",
   "storyDay": "2026-11-13",
   "articles": [
+    {
+      "id": "2dcd6eb8c026",
+      "outletId": "franceinfo",
+      "headline": "Jensen Huang, désormais ex-patron de Nvidia, convoqué pour témoigner devant le Sénat américain en décembre",
+      "url": "https://www.franceinfo.fr/internet/intelligence-artificielle/l-ancien-patron-de-nvidia-convoque-pour-temoigner-devant-le-senat-americain-en-decembre_8280839.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-13T10:46:02.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/2psyE91EnjZVhs0CnhzmIy0L4QM/0x53:1024x629/432x243/filters:format(jpg)/2026/11/13/6af6e6f60f86d872727081.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
     {
       "id": "6395ded09949",
       "outletId": "le-parisien",
@@ -41,30 +52,10 @@
     }
   ],
   "topicId": "97cccdbf9a27",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794474000000,
-      "end": 1794477600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794477600000,
-      "end": 1794481200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794481200000,
       "end": 1794484800000,
@@ -284,22 +275,50 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794560400000,
+      "end": 1794564000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794564000000,
+      "end": 1794567600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
+    "gauche": [
+      "Jensen Huang, l'ancien dirigeant de Nvidia, a été contraint de quitter ses fonctions à la suite de scandales intimes.",
+      "Il est convoqué pour une audition devant le Sénat américain prévue en décembre.",
+      "Les révélations incluent notamment une liaison avec une ressortissante chinoise soupçonnée d'activités d'espionnage."
+    ],
     "centre": [
-      "Le Parisien rapporte de nouvelles révélations sur un troisième adultère présumé impliquant Jensen Huang, l'ancien dirigeant de Nvidia, et une employée de l'entreprise."
+      "Jensen Huang fait face à des allégations concernant une troisième liaison extraconjugale au sein de son entreprise.",
+      "Ces nouvelles informations ciblent une relation présumée entre l'ancien PDG de Nvidia et une salariée du groupe."
     ],
     "droite": [
-      "Le Figaro précise que Jensen Huang a démissionné de son poste de PDG de Nvidia ce jeudi, alors qu'il est visé par des accusations concernant une liaison avec Alice Huang, soupçonnée d'espionnage pour la Chine.",
-      "CNews indique que Reuters révèle l'existence d'une troisième relation intime entre le dirigeant et une salariée, violant le code de conduite du groupe, et mentionne l'intérim assuré par Colette Kress."
+      "Jensen Huang a démissionné de la direction de Nvidia à la suite de plusieurs affaires impliquant ses relations personnelles.",
+      "La presse de droite met en lumière les accusations d'espionnage visant sa liaison identifiée comme Alice Huang, tandis que Pékin dément ces allégations.",
+      "Selon Reuters, une troisième salariée serait concernée par ces liaisons contraires au code de conduite de l'entreprise."
     ]
   },
   "differences": [
-    "Le centre se concentre sur les révélations factuelles entourant la vie privée et les nouvelles liaisons présumées de Jensen Huang.",
-    "La droite met en avant les conséquences politiques et managériales, soulignant la démission du PDG, l'intérim de Colette Kress et les soupçons d'espionnage chinois liés au dossier."
+    "La gauche met l'accent sur la dimension institutionnelle et la convocation du dirigeant au Sénat américain ainsi que sur les soupçons d'espionnage.",
+    "Le centre se focalise exclusivement sur les nouvelles révélations d'ordre privé et l'implication d'une nouvelle salariée.",
+    "La droite dresse un récit détaillé des enquêtes et des démentis officiels venus de Chine tout en soulignant la violation du code de conduite de l'entreprise."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-13T08:01:28.549Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-13T11:01:32.772Z"
 }

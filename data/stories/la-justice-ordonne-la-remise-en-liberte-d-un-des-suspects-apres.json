@@ -1,10 +1,21 @@
 {
   "id": "cd7dc2856384",
   "slug": "la-justice-ordonne-la-remise-en-liberte-d-un-des-suspects-apres",
-  "title": "La justice ordonne la remise en liberté d'un des suspects après la mort de Quentin Deranque à Lyon",
+  "title": "La justice ordonne la remise en liberté d'un des suspects dans l'enquête sur la mort de Quentin Deranque à Lyon",
   "createdAt": "2026-11-13T04:01:22.006Z",
   "storyDay": "2026-11-12",
   "articles": [
+    {
+      "id": "bfff450b638e",
+      "outletId": "le-jdd",
+      "headline": "Mort de Quentin Deranque : un suspect remis en liberté malgré son inculpation pour homicide volontaire",
+      "url": "https://www.lejdd.fr/Societe/mort-de-quentin-deranque-un-suspect-remis-en-liberte-malgre-son-inculpation-pour-homicide-volontaire-188553",
+      "publishedAt": "2026-11-13T10:15:46.000Z",
+      "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/13/10/000_a2eu6wf.jpg?VersionId=8ItAQPwedMcB6tm8F9te3Z3JwFdFlDaH",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "a264d78ef314",
       "outletId": "bfmtv",
@@ -75,30 +86,10 @@
     }
   ],
   "topicId": "cd7dc2856384",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794474000000,
-      "end": 1794477600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794477600000,
-      "end": 1794481200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794481200000,
       "end": 1794484800000,
@@ -318,28 +309,51 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794560400000,
+      "end": 1794564000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794564000000,
+      "end": 1794567600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Un individu mis en examen pour homicide volontaire après la mort de Quentin Deranque a été libéré sous contrôle judiciaire à Lyon.",
-      "Le parquet de Lyon conteste cette décision et va déposer un référé-liberté pour replacer le suspect en détention provisoire."
+      "Un homme de 27 ans mis en examen pour homicide volontaire dans l'affaire du meurtre de Quentin Deranque a été libéré sous contrôle judiciaire.",
+      "Le procureur Thierry Dran a annoncé que le parquet de Lyon allait déposer un référé-liberté pour replacer cet individu en détention provisoire.",
+      "Quentin Deranque a été tué le 12 février à Lyon par des agresseurs cagoulés."
     ],
     "centre": [
-      "Un homme né en 1999 mis en examen dans l'enquête sur l'agression mortelle de Quentin Deranque a été remis en liberté sous contrôle judiciaire.",
-      "La victime avait été battue à mort par plusieurs individus cagoulés en février dernier à Lyon."
+      "Un des neuf suspects poursuivis pour la mort de Quentin Deranque a bénéficié d'une remise en liberté sous contrôle judiciaire.",
+      "Le parquet de Lyon conteste cette décision et a décidé de faire appel pour contrecarrer la libération de cet homme né en 1999.",
+      "La victime avait été battue à mort le 12 février à Lyon par plusieurs individus cagoulés."
     ],
     "droite": [
-      "Guillaume A., âgé de 27 ans et poursuivi notamment pour meurtre, a obtenu sa remise en liberté sous contrôle judiciaire par la justice.",
-      "Le parquet a immédiatement fait appel de cette décision concernant ce suspect qui avait reconnu sa participation aux violences du 12 février sans admettre avoir frappé le militant identitaire."
+      "Guillaume A., âgé de 27 ans et poursuivi notamment pour meurtre, a obtenu sa libération après plusieurs mois de détention provisoire.",
+      "L'intéressé avait reconnu sa participation aux violences du 12 février dernier tout en contestant avoir frappé le militant identitaire Quentin Deranque.",
+      "Le parquet de Lyon s'oppose à cette remise en liberté et a immédiatement fait appel de la décision judiciaire."
     ]
   },
   "differences": [
-    "Le camp de gauche met en avant la procédure judiciaire en cours en insistant sur l'action immédiate du parquet pour contester la libération du suspect.",
-    "Le camp du centre adopte une tonalité strictement factuelle en rappelant le contexte de l'agression commise par des individus cagoulés en février à Lyon.",
-    "Le camp de droite individualise le suspect en le nommant, précise sa qualification judiciaire initiale pour meurtre et mentionne ses aveux partiels sur sa participation aux violences."
+    "Le camp de gauche met en avant l'action judiciaire immédiate du parquet de Lyon qui dépose un référé-liberté pour conter la libération du mis en examen.",
+    "Le camp du centre adopte un traitement factuel centré sur l'annonce de la remise en liberté sous contrôle judiciaire et la contestation systématique du parquet.",
+    "Le camp de droite personnalise l'affaire en nommant Guillaume A., précise son rôle contesté dans les violences et qualifie la victime de militant identitaire."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-13T07:01:34.068Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-13T11:01:32.772Z"
 }
