@@ -6,6 +6,28 @@
   "storyDay": "2026-11-12",
   "articles": [
     {
+      "id": "95c462ec774c",
+      "outletId": "courrier-international",
+      "headline": "De nouvelles frappes israéliennes contre l’hôpital Nasser de Gaza font au moins six morts",
+      "url": "https://www.courrierinternational.com/article/moyen-orient-de-nouvelles-frappes-israeliennes-contre-l-hopital-nasser-de-gaza-font-au-moins-six-morts_286740",
+      "publishedAt": "2026-11-12T14:58:03.000Z",
+      "imageUrl": "https://focus.courrierinternational.com/2026/11/12/0/0/5472/3648/644/0/60/0/038386e_ftp-1-vxgwm01t1j52-afp-d7968nb.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "751f315697fc",
+      "outletId": "rfi",
+      "headline": "Gaza: une frappe israélienne sur l'hôpital Nasser à Khan Younès fait six morts",
+      "url": "https://www.rfi.fr/fr/moyen-orient/20261112-gaza-une-frappe-isra%C3%A9lienne-fait-six-morts-dans-le-sud-de-l-enclave",
+      "publishedAt": "2026-11-12T10:29:18.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/191970a0-de81-11f1-b6e8-695cb59fade5/w:1024/p:16x9/AP26316309789008.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "e3499b75c8f9",
       "outletId": "le-parisien",
       "headline": "Gaza : au moins six morts et vingt blessés lors d’une frappe israélienne sur l’hôpital Nasser à Khan Younès",
@@ -29,60 +51,10 @@
     }
   ],
   "topicId": "c408e4989e34",
-  "titledArticleCount": 2,
+  "titledArticleCount": 4,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794391200000,
-      "end": 1794394800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794394800000,
-      "end": 1794398400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794398400000,
-      "end": 1794402000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794402000000,
-      "end": 1794405600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794405600000,
-      "end": 1794409200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794409200000,
       "end": 1794412800000,
@@ -272,6 +244,73 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794477600000,
+      "end": 1794481200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1794481200000,
+      "end": 1794484800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794484800000,
+      "end": 1794488400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794488400000,
+      "end": 1794492000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794492000000,
+      "end": 1794495600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Une frappe menée par l'armée israélienne sur l'hôpital Nasser à Khan Younès a fait au moins six morts et vingt blessés.",
+      "L'opération militaire a été officiellement confirmée par l'État israélien dans la bande de Gaza."
+    ],
+    "centre": [
+      "Un bombardement israélien a ciblé l'établissement de santé de l'hôpital Nasser à Khan Younès, causant la mort d'au moins six individus et blessant vingt autres personnes.",
+      "Tsahal a justifié son intervention en affirmant avoir visé un haut responsable du Hamas au sein de l'infrastructure médicale."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur le bilan humain de l'attaque en zone hospitalière et la confirmation de l'opération par l'armée.",
+    "Le centre détaille la frappe sur l'établissement de santé de Khan Younès tout en intégrant la justification militaire israélienne visant un responsable du Hamas."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-13T03:01:24.122Z"
 }
