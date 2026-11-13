@@ -6,6 +6,38 @@
   "storyDay": "2026-11-12",
   "articles": [
     {
+      "id": "a4096c71b65c",
+      "outletId": "le-parisien",
+      "headline": "Panne géante chez Microsoft : Outlook, Orange… Pourquoi c’est si dangereux d’être dépendant d’un seul service",
+      "url": "https://www.leparisien.fr/high-tech/panne-geante-chez-microsoft-outlook-orange-pourquoi-cest-si-dangereux-detre-dependant-dun-seul-service-13-11-2026-PQB5SE77XFDCTF7MC3VCPVSWCU.php",
+      "publishedAt": "2026-11-13T19:01:25.829Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "18f08e89319e",
+      "outletId": "liberation",
+      "headline": "La panne de Microsoft a fait chauffer les téléphones et ressortir les fax dans les entreprises",
+      "url": "https://www.liberation.fr/economie/economie-numerique/la-panne-de-microsoft-a-fait-chauffer-les-telephones-et-ressortir-les-fax-dans-les-entreprises-20261113_GLHEPZPDXRFBNPLA4M3G26UD5M/",
+      "publishedAt": "2026-11-13T18:45:55.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "d75d9d814946",
+      "outletId": "bfmtv",
+      "headline": "Après une panne géante dans 74 pays, Microsoft se dit \"profondément désolé\"",
+      "url": "https://www.bfmtv.com/tech/apres-une-panne-geante-dans-74-pays-microsoft-se-dit-profondement-desole_AD-202611130763.html",
+      "publishedAt": "2026-11-13T18:15:00.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/DO1bNXUYzBkyfzBpZqn0EmNTB_0=/0x107:2048x1259/800x0/images/Microsoft-2125324.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "0f60506cc6d9",
       "outletId": "europe-1",
       "headline": "Panne de Microsoft : le rétablissement progresse, la firme se dit être « profondément désolé »",
@@ -26,6 +58,29 @@
       "frontPage": false,
       "kind": "news",
       "section": "science"
+    },
+    {
+      "id": "7f8a1d16f5ba",
+      "outletId": "courrier-international",
+      "headline": "La panne de Microsoft perturbe le système de santé au Royaume-Uni : “difficile de faire notre travail”",
+      "url": "https://www.courrierinternational.com/article/societe-la-panne-de-microsoft-perturbe-le-systeme-de-sante-au-royaume-uni-difficile-de-faire-notre-travail_287038",
+      "publishedAt": "2026-11-13T16:40:04.000Z",
+      "imageUrl": "https://focus.courrierinternational.com/2026/11/04/0/0/6000/4000/644/0/60/0/82a5815_ftp-1-1xh6cbqrvee2-2026-11-04t172030z-1680358231-rc24hoamrbfu-rtrmadp-3-health-ebola-congo-britain.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "75ed16d16afa",
+      "outletId": "le-figaro",
+      "headline": "Panne chez Microsoft : le récit de 24 heures de pagaille dans les entreprises, les hôpitaux et les gouvernements du monde entier",
+      "url": "https://www.lefigaro.fr/secteur/high-tech/panne-chez-microsoft-le-recit-de-24-heures-de-pagaille-dans-les-entreprises-les-hopitaux-et-les-gouvernements-du-monde-entier-20261113",
+      "publishedAt": "2026-11-13T16:14:11.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/2981x1677_crop/2026/11/13/6945f569e7077484ff18b1d7082aaf21c66fb21e3aeda6048d84bb8a59f25709.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
     },
     {
       "id": "640338df6dfc",
@@ -327,7 +382,7 @@
       "url": "https://www.ouest-france.fr/high-tech/microsoft/microsoft-365-outlook-teams-ce-que-lon-sait-de-la-panne-mondiale-qui-touche-les-messageries-informatiques-bbb822ce-df27-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-13T06:58:57.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExM2ZlNjZkM2U4YzljMmEyMjJiM2JkZDZlNTMwZGUwNGY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=f766d39641b629a2840d11f409bcdc3f3c9afc33160eb7a1362f69859aed090c",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -553,26 +608,6 @@
   "everInEdition": true,
   "activity": [
     {
-      "start": 1794506400000,
-      "end": 1794510000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794510000000,
-      "end": 1794513600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
       "start": 1794513600000,
       "end": 1794517200000,
       "counts": {
@@ -777,10 +812,10 @@
       "end": 1794589200000,
       "counts": {
         "gauche": 0,
-        "centre": 0,
-        "droite": 0
+        "centre": 1,
+        "droite": 1
       },
-      "total": 0
+      "total": 2
     },
     {
       "start": 1794589200000,
@@ -791,31 +826,51 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1794592800000,
+      "end": 1794596400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 2
+    },
+    {
+      "start": 1794596400000,
+      "end": 1794600000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Une panne mondiale paralyse la messagerie Outlook, Teams et l'assistant Copilot de Microsoft dans 74 pays.",
-      "La firme américaine écarte l'hypothèse d'une cyberattaque mais admet que les mesures correctives ne fonctionnent pas comme prévu.",
-      "Le problème est attribué à une charge élevée sur l'infrastructure, sans calendrier précis pour un retour à la normale."
+      "La panne géante de Microsoft a touché 74 pays, affectant la messagerie Outlook, la plateforme Teams et les appels.",
+      "Les entreprises et les travailleurs ont dû recourir à des solutions alternatives ou à des technologies anciennes comme les fax face au blocage des outils informatiques.",
+      "Libération souligne que l'entreprise n'est pas parvenue à résoudre rapidement le problème causé par une « charge élevée » sur son infrastructure."
     ],
     "centre": [
-      "Une panne mondiale d'envergure touche les services de Microsoft 365, incluant Outlook, Teams et plusieurs outils d'intelligence artificielle.",
-      "Microsoft exclut toute action malveillante ou cyberattaque à l'origine de cet incident qui affecte des dizaines de milliers d'utilisateurs.",
-      "Le géant de la tech indique travailler sans relâche et commence à observer des résultats positifs pour stabiliser le service."
+      "Une panne mondiale a touché Microsoft 365, privant des millions d'utilisateurs d'Outlook, Teams et Copilot dans 74 pays.",
+      "Microsoft a écarté toute cyberattaque ou action malveillante, attribuant les dysfonctionnements à une surcharge de ses infrastructures.",
+      "Le secteur de la santé, notamment au Royaume-Uni, et de nombreux services publics ont subi des retards et des reports d'activités."
     ],
     "droite": [
-      "Une panne géante paralyse durablement Microsoft 365 et ses logiciels phares comme Outlook et Teams à travers le monde.",
-      "L'entreprise américaine confirme qu'il ne s'agit pas d'une cyberattaque tout en reconnaissant que ses premières réparations échouent.",
-      "Les perturbations entraînent des conséquences en cascade pour de nombreuses entreprises et organisations."
+      "Microsoft a fait état de progrès dans le rétablissement de ses logiciels en ligne en Europe et en Amérique du Nord après une panne mondiale.",
+      "Le Figaro détaille 24 heures de pagaille dans les entreprises, les hôpitaux et les gouvernements, contraints de revenir au téléphone ou au papier.",
+      "Les équipes du géant américain ont reconnu que les premières mesures de réparation n'ont pas fonctionné comme prévu."
     ]
   },
   "differences": [
-    "La gauche insiste particulièrement sur l'ampleur internationale de la crise dans 74 pays et sur l'incapacité technique avouée de Microsoft à résoudre rapidement le problème.",
-    "Le centre adopte un traitement factuel centré sur le suivi en direct des annonces officielles de Microsoft et l'évolution progressive de la stabilisation du service.",
-    "La droite met en avant les répercussions pratiques concrètes de la panne en soulignant la dépendance critique des organisations face aux outils du géant américain."
+    "La gauche insiste sur la vulnérabilité des organisations face au tout-numérique en mettant en avant le retour contraint aux technologies obsolètes comme le fax.",
+    "Le centre dresse un panorama factuel de l'incident mondial, de son étendue géographique dans 74 pays et des justifications techniques apportées par l'entreprise.",
+    "La droite met en avant la chronologie des perturbations et insiste sur les difficultés rencontrées par Microsoft pour rétablir ses services malgré l'urgence de la situation."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 37,
-  "summarizedAt": "2026-11-13T11:01:32.772Z"
+  "summarizedArticleCount": 53,
+  "summarizedAt": "2026-11-13T19:01:25.829Z"
 }

@@ -1,10 +1,21 @@
 {
   "id": "c27989e49314",
   "slug": "marine-le-pen-se-dit-prete-a-rencontrer-volodymyr-zelensky-et",
-  "title": "Marine Le Pen se dit prête à rencontrer Volodymyr Zelensky et propose Bruxelles",
+  "title": "Marine Le Pen se dit prête à rencontrer Volodymyr Zelensky à Bruxelles",
   "createdAt": "2026-11-13T18:01:29.371Z",
   "storyDay": "2026-11-13",
   "articles": [
+    {
+      "id": "4ebc223c6f90",
+      "outletId": "franceinfo",
+      "headline": "Marine Le Pen se dit prête à rencontrer le président ukrainien Volodymyr Zelensky à Bruxelles",
+      "url": "https://www.franceinfo.fr/politique/marine-le-pen/si-je-peux-le-rencontrer-a-bruxelles-je-le-dirai-a-l-ambassadeur-d-ukraine-marine-le-pen-se-dit-prete-a-echanger-avec-volodymyr-zelensky_8281529.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-13T18:29:43.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/_bttZ5-qBe7o3KVLxIoXociZ0es/0x26:1024x602/432x243/filters:format(jpg)/2026/11/13/6af74ee18e839084486683.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
     {
       "id": "c7a334ba7a77",
       "outletId": "bfmtv",
@@ -53,20 +64,10 @@
     }
   ],
   "topicId": "c27989e49314",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794506400000,
-      "end": 1794510000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794510000000,
       "end": 1794513600000,
@@ -296,30 +297,41 @@
         "droite": 2
       },
       "total": 3
+    },
+    {
+      "start": 1794592800000,
+      "end": 1794596400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le journal 20 Minutes indique que la responsable politique envisage un entretien avec le dirigeant ukrainien à Bruxelles.",
-      "La couverture se focalise sur les développements en direct de la situation militaire et diplomatique en Ukraine."
+      "Marine Le Pen s'est déclarée favorable à un entretien avec Volodymyr Zelensky lors d'un déplacement à Bruxelles.",
+      "La dirigeante du Rassemblement national souhaite aborder la question du financement de l'aide à l'Ukraine avec le président ukrainien.",
+      "Elle a rappelé son intention de limiter dans le temps le soutien financier français à Kiev en cas de victoire présidentielle."
     ],
     "centre": [
-      "La candidate du Rassemblement national exprime son intention d'échanger avec Volodymyr Zelensky dans la capitale européenne.",
-      "L'entretien envisagé doit porter spécifiquement sur les questions de financement de l'État ukrainien en guerre.",
-      "La responsable politique confirme son intention de prolonger les aides financières pendant une période de six mois."
+      "Marine Le Pen envisage une entrevue avec le président ukrainien Volodymyr Zelensky dans la capitale européenne.",
+      "L'objectif de cette discussion proposée par la responsable politique est d'aborder la problématique du financement de l'effort de guerre.",
+      "Elle a confirmé sa position de maintenir l'aide financière à l'Ukraine pendant une période initiale de six mois si elle accède au pouvoir."
     ],
     "droite": [
-      "La dirigeante du Rassemblement national se déclare ouverte à un échange direct avec le président ukrainien.",
-      "Le lieu de la réunion est fixé à Bruxelles afin de concorder avec la thématique budgétaire et européenne.",
-      "TF1 Info rappelle que cette main tendue intervient après des annonces d'arrêt des subventions et des critiques sur la maîtrise des dossiers."
+      "Marine Le Pen a manifesté son ouverture à une rencontre avec le président ukrainien Volodymyr Zelensky à Bruxelles.",
+      "La discussion proposée doit porter sur le financement de l'Ukraine, un sujet qui agite l'Union européenne selon la candidate.",
+      "TF1 Info rappelle que cette main tendue intervient après des déclarations sur l'arrêt total de l'aide financière à Kiev et les critiques formulées par le dirigeant ukrainien."
     ]
   },
   "differences": [
-    "La gauche traite l'événement à travers un suivi en direct du conflit, en mentionnant sobrement la proposition de rencontre sans s'attarder sur les polémiques.",
-    "Le centre privilégie l'analyse des contradictions programmatiques de la candidate sur l'aide financière tout en rapportant sa volonté de dialogue.",
-    "La droite met en avant l'ouverture diplomatique de la candidate tout en contextualisant la proposition par rapport aux tensions et aux critiques passées de Kiev."
+    "La gauche se concentre strictement sur l'annonce de la rencontre et le rappel des conditions restrictives posées par Marine Le Pen sur l'aide à Kiev.",
+    "Le centre adopte un ton neutre en exposant les modalités pratiques de la visite et les arguments budgétaires avancés par la candidate.",
+    "La droite contextualise davantage l'initiative en soulignant le revirement de la candidate et en intégrant les tensions antérieures avec Volodymyr Zelensky."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-13T18:01:29.371Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-13T19:01:25.829Z"
 }

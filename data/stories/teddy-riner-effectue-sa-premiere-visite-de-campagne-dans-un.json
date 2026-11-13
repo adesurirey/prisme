@@ -6,13 +6,24 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "63de107dd663",
+      "outletId": "bfmtv",
+      "headline": "\"J'adore Teddy Riner en tant que sportif, là il a changé de monde, je pense qu'il a été mal conseillé\", analyse Philippe Ballard, député RN",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-j-adore-teddy-riner-en-tant-que-sportif-la-il-a-change-de-monde-je-pense-qu-il-a-ete-mal-conseille-analyse-philippe-ballard-depute-rn_VN-202611130798.html",
+      "publishedAt": "2026-11-13T18:51:33.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/5YKV_Sju0fZ5_yXI807Q9IKJR5k=/0x0:1280x720/800x0/images/J-adore-Teddy-Riner-en-tant-que-sportif-la-il-a-change-de-monde-je-pense-qu-il-a-ete-mal-conseille-analyse-Philippe-Ballard-depute-RN-2383773.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "d89173a8f951",
       "outletId": "le-figaro",
       "headline": "EN DIRECT - Présidentielle 2027 : «J’ai écouté, j’ai noté», affirme Teddy Riner après sa visite d’un hôpital",
       "url": "https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-teddy-riner-david-lisnard-edouard-philippe-sondage-campagne-20261113",
       "publishedAt": "2026-11-13T16:53:03.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/13/be8da30c84aa5e2212e4381119b78ba521c5042dc97bd786a066585c44a709db.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "live",
       "section": "politics",
       "everFrontPage": true
@@ -42,30 +53,10 @@
     }
   ],
   "topicId": "8ba7f9fd8e5f",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794502800000,
-      "end": 1794506400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794506400000,
-      "end": 1794510000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794510000000,
       "end": 1794513600000,
@@ -285,23 +276,50 @@
         "droite": 1
       },
       "total": 1
+    },
+    {
+      "start": 1794589200000,
+      "end": 1794592800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794592800000,
+      "end": 1794596400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Teddy Riner a choisi l'hôpital Delafontaine de Saint-Denis pour effectuer son tout premier déplacement de campagne ce vendredi.",
-      "Le nouveau candidat à la présidentielle a indiqué vouloir écouter les soignants afin de pouvoir ensuite travailler sur son programme."
+      "Teddy Riner a choisi l'hôpital Delafontaine de Saint-Denis pour effectuer son premier déplacement de campagne pour la présidentielle 2027.",
+      "Le candidat a déclaré vouloir écouter les soignants pour nourrir son programme."
+    ],
+    "centre": [
+      "Teddy Riner a réalisé sa première visite de campagne à l'hôpital Delafontaine de Saint-Denis pour aller à la rencontre des soignants.",
+      "Le député RN Philippe Ballard a estimé que le sportif avait été « mal conseillé » pour son entrée en politique.",
+      "Le candidat affirme avoir beaucoup appris et vouloir poursuivre le travail sur son programme."
     ],
     "droite": [
-      "Le judoka et candidat à l'élection présidentielle Teddy Riner a réalisé vendredi sa première visite de campagne dans un établissement hospitalier à Saint-Denis.",
-      "L'athlète a affirmé s'être concentré sur l'écoute des professionnels de santé avant que le temps de la réflexion ne vienne pour son programme, sans répondre aux journalistes présents."
+      "Le candidat à la présidentielle Teddy Riner a visité l'hôpital Delafontaine à Saint-Denis pour son premier déplacement officiel.",
+      "Il a affirmé avoir écouté et noté les revendications des professionnels de santé avant le temps de la réflexion.",
+      "Le Figaro aborde en parallèle la primaire de la droite et du centre et la position d'Édouard Philippe."
     ]
   },
   "differences": [
-    "La gauche met en avant le choix symbolique de la localisation à Saint-Denis pour cette première initiative de campagne axée sur l'élaboration du programme.",
-    "La droite insiste sur le profil sportif du candidat et sa volonté affichée d'écouter le personnel médical tout en éludant les questions de la presse."
+    "La gauche (20 Minutes) se focalise strictement sur l'événement factuel du déplacement du candidat dans un hôpital de Saint-Denis pour préparer son programme.",
+    "Le centre (BFMTV) intègre des réactions politiques critiques d'élus d'autres formations sur la stratégie de campagne du candidat.",
+    "La droite (Le Figaro, Europe 1) contextualise la visite du candidat tout en y associant des enjeux électoraux et des déclarations plus larges sur l'échéance présidentielle."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-13T17:01:46.739Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-13T19:01:25.829Z"
 }
