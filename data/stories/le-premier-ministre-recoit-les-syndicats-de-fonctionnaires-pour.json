@@ -6,6 +6,17 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "ac091707bc93",
+      "outletId": "huffpost",
+      "headline": "Le front syndical grossit pour le 17 novembre après une « réunion pour rien » avec Lecornu",
+      "url": "https://www.huffingtonpost.fr/politique/article/le-front-syndical-grossit-pour-le-17-novembre-apres-une-reunion-pour-rien-avec-lecornu_357392.html",
+      "publishedAt": "2026-11-13T16:32:43.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/11/13/332/0/5000/2812/0/0/60/0/c79237c_upload-1-6qcwngc3vs7v-afp-20261107-hl-vdubois-3378713-v1-highres-francesocialstrikeandprotestparis.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "40eb696aaeb5",
       "outletId": "bfmtv",
       "headline": "\"Nous appelons les agents de la fonction publique à faire du mardi 17 novembre prochain, une nouvelle et puissante journée de grève et de manifestation\", déclare Sophie Binet, secrétaire générale de la CGT",
@@ -22,6 +33,17 @@
       "headline": "Les syndicats de fonctionnaires sortent remontés de Matignon et maintiennent l’appel à la grève le 17 novembre",
       "url": "https://www.mediapart.fr/journal/fil-dactualites/131126/les-syndicats-de-fonctionnaires-sortent-remontes-de-matignon-et-maintiennent-l-appel-la-greve-le",
       "publishedAt": "2026-11-13T15:21:08.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "907e7adb80a7",
+      "outletId": "lobs",
+      "headline": "« Une réunion pour rien » : Sophie Binet fustige les annonces de Lecornu après le rendez-vous à Matignon sur la fonction publique",
+      "url": "https://www.nouvelobs.com/social/20261113.OBS120102/une-reunion-pour-rien-sophie-binet-fustige-les-annonces-de-lecornu-apres-le-rendez-vous-a-matignon-sur-la-fonction-publique.html",
+      "publishedAt": "2026-11-13T15:07:39.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/11/09/0/0/1023/682/0/0/60/0/9da6849_ftp-1-x48vur00l4r0-afp-d6wg8v2-1024.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "politics"
@@ -76,7 +98,7 @@
       "url": "https://www.lemonde.fr/politique/article/2026/11/13/mobilisations-sociales-sebastien-lecornu-ouvre-une-discussion-d-un-mois-avec-les-syndicats_6809324_823448.html",
       "publishedAt": "2026-11-13T12:43:02.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/09/324/0/3893/1946/644/322/60/0/88cb2d1_ftp-1-h2v5ltgn7cei-2026-11-09t114531z-1411999275-rc2bkoa2hjui-rtrmadp-3-france-protest.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -207,16 +229,6 @@
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794499200000,
-      "end": 1794502800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794502800000,
       "end": 1794506400000,
@@ -441,11 +453,21 @@
       "start": 1794582000000,
       "end": 1794585600000,
       "counts": {
-        "gauche": 1,
+        "gauche": 2,
         "centre": 1,
         "droite": 1
       },
-      "total": 3
+      "total": 4
+    },
+    {
+      "start": 1794585600000,
+      "end": 1794589200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {

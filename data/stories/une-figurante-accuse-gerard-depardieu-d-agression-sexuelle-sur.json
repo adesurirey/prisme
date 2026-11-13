@@ -6,6 +6,17 @@
   "storyDay": "2026-11-12",
   "articles": [
     {
+      "id": "028b57e5c88d",
+      "outletId": "lobs",
+      "headline": "Depardieu renonce à son appel juste avant son procès pour agressions sexuelles",
+      "url": "https://www.nouvelobs.com/justice/20261113.OBS120103/depardieu-renonce-a-son-appel-juste-avant-son-proces-pour-agressions-sexuelles.html",
+      "publishedAt": "2026-11-13T15:49:44.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/11/13/0/0/5211/3474/0/0/60/0/18ab2ee_upload-1-59uevhn5vstm-000-d7bm3g3.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "0bf51ddf5d02",
       "outletId": "tf1-info",
       "headline": "Agressions sexuelles : Gérard Depardieu renonce à son appel, sa condamnation définitive",
@@ -50,7 +61,7 @@
     }
   ],
   "topicId": "d39ca8504578",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "misc",
   "everInEdition": true,
   "activity": [
@@ -303,27 +314,68 @@
         "droite": 1
       },
       "total": 1
+    },
+    {
+      "start": 1794571200000,
+      "end": 1794574800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794574800000,
+      "end": 1794578400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794578400000,
+      "end": 1794582000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794582000000,
+      "end": 1794585600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Libération met en avant de nouvelles révélations de Mediapart et du Média concernant des images tournées en 2011 sur le film Turf.",
-      "Le journal détaille une séquence où Gérard Depardieu touche les fesses et l'entrejambe d'une figurante qui tente de repousser sa main."
+      "L'acteur renonce à son procès en appel, rendant définitive sa condamnation pour agressions sexuelles commises sur le tournage des « Volets verts ».",
+      "Des images révélées par Mediapart et le Média documentent une agression sexuelle commise en 2011 sur le tournage du film « Turf »."
     ],
     "centre": [
-      "Le Parisien diffuse les images et le témoignage d'une figurante affirmant avoir cherché à se débarrasser de l'acteur lors d'un tournage en 2011."
+      "Gérard Depardieu se désiste de son procès en appel, confirmant sa condamnation à dix-huit mois de prison avec sursis pour agressions sexuelles.",
+      "Une figurante témoigne d'une agression subie sur le tournage du film « Turf » en 2011, appuyée par la diffusion d'images."
     ],
     "droite": [
-      "TF1 Info indique que le comédien renonce à son procès en appel, rendant définitive sa condamnation à dix-huit mois de prison avec sursis pour agressions sexuelles sur le tournage des \"Volets verts\" en 2021.",
-      "Le Figaro précise que Gérard Depardieu ne se présentera pas à l'ouverture de son procès en appel et rappelle son désistement en avril concernant ses poursuites contre France Télévisions."
+      "La star déchue du cinéma français renonce à comparaître à l'ouverture de son procès en appel pour agressions sexuelles.",
+      "L'acteur avait déjà abandonné en avril ses poursuites contre France Télévisions concernant un numéro de « Complément d'Enquête »."
     ]
   },
   "differences": [
-    "La gauche focalise son traitement sur la publication d'images inédites issues d'un tournage ancien, qualifiant directement les gestes de violences sexuelles.",
-    "Le centre privilégie l'angle humain en donnant la parole à une figurante qui témoigne directement de son agression et commente la diffusion des images.",
-    "La droite se concentre sur les aspects judiciaires et procéduraux de l'affaire, en soulignant le désistement de l'acteur et la définitivité de sa peine."
+    "La gauche met fortement l'accent sur la révélation de nouvelles images d'archives accablantes concernant un tournage de 2011.",
+    "Le centre se focalise principalement sur l'aspect judiciaire du dossier, soulignant le caractère définitif de la peine avec sursis.",
+    "La droite privilégie le profil personnel de la star et ses précédents désistements judiciaires face aux médias."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-13T12:01:23.040Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-13T17:01:46.739Z"
 }
