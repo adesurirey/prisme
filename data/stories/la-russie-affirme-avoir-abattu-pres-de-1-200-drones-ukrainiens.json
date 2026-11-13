@@ -1,10 +1,21 @@
 {
   "id": "14cf3bc5ac9d",
   "slug": "la-russie-affirme-avoir-abattu-pres-de-1-200-drones-ukrainiens",
-  "title": "La Russie affirme avoir abattu près de 1 200 drones ukrainiens dans la nuit",
+  "title": "La Russie affirme avoir abattu près de 1200 drones ukrainiens lors d'une attaque nocturne faisant quatre morts",
   "createdAt": "2026-11-13T08:01:28.549Z",
   "storyDay": "2026-11-13",
   "articles": [
+    {
+      "id": "6a0e7c83ab08",
+      "outletId": "bfmtv",
+      "headline": "Près de 1.200 drones abattus: quatre morts en Russie lors d'une vaste attaque ukrainienne",
+      "url": "https://www.bfmtv.com/international/asie/russie/pres-de-1-200-drones-abattus-quatre-morts-en-russie-lors-d-une-vaste-attaque-ukrainienne_AD-202611130347.html",
+      "publishedAt": "2026-11-13T08:20:14.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/UlZWkbVqJdJhqXnNNhAL8EU7NpM=/0x186:2000x1311/800x0/images/Une-attaque-de-drones-ukrainiens-a-fait-deux-morts-a-Belgorod-en-Russie-le-25-octobre-2026-Photo-d-illustration-2372092.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "6e19d7201a68",
       "outletId": "le-parisien",
@@ -40,7 +51,7 @@
     }
   ],
   "topicId": "5ad9726a87f5",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -279,10 +290,33 @@
       "end": 1794560400000,
       "counts": {
         "gauche": 0,
-        "centre": 1,
+        "centre": 2,
         "droite": 0
       },
-      "total": 1
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "La Russie fait état de l'interception de 1198 drones ukrainiens lors d'une offensive nocturne entre jeudi et vendredi.",
+      "Quatre personnes ont péri dans cette frappe survenue dans la région de Volgograd.",
+      "Il s'agit de l'une des opérations aériennes de plus grande ampleur menées contre le territoire russe depuis le déclenchement du conflit en février 2022."
+    ],
+    "centre": [
+      "Moscou annonce avoir abattu entre près de 1200 et près de 2000 drones ukrainiens lors d'une vaste attaque nocturne.",
+      "Le bilan humain s'établit à quatre morts, marquant l'une des actions militaires les plus massives de Kiev depuis 2022."
+    ],
+    "droite": [
+      "Les autorités russes rapportent l'abattage de 1198 drones ukrainiens au cours d'une offensive nocturne ayant fait quatre morts.",
+      "Cette opération survient au lendemain de pourparlers à Moscou entre Vladimir Poutine et des émissaires américains, suivis d'entretiens à Dublin avec Volodymyr Zelensky."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur les précisions temporelles de l'offensive et le bilan humain localisé dans la région de Volgograd.",
+    "Le centre se focalise sur l'ampleur inédite de l'attaque en soulignant le chiffre record des appareils neutralisés.",
+    "La droite contextualise l'événement en le liant directement à la séquence diplomatique menée par les émissaires américains entre Moscou et Kiev."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-13T09:01:36.411Z"
 }
