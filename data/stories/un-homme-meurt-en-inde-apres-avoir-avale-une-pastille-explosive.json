@@ -23,7 +23,7 @@
       "url": "https://www.lefigaro.fr/international/inde-un-homme-meurt-apres-avoir-avale-une-pastille-explosive-utilisee-pour-tuer-les-sangliers-20261113",
       "publishedAt": "2026-11-13T08:57:28.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1999_crop/2026/11/13/6e3613ef0a8a1d41d9972dcce3ade223d097252009f0375a0151f909709a267f.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -285,5 +285,23 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Un homme est décédé en Inde après avoir ingéré un dispositif explosif destiné aux sangliers.",
+      "Les enquêteurs étudient la piste d'un meurtre, d'une erreur ou d'une mauvaise plaisanterie."
+    ],
+    "droite": [
+      "Rajendra Barautiya, un homme de 35 ans issu d'une communauté tribale du Madhya Pradesh, est mort après avoir avalé un bonbon piégé.",
+      "Deux individus ont été appréhendés et inculpés d'homicide volontaire par les forces de l'ordre locales.",
+      "Les investigations se poursuivent pour établir s'il s'agit d'un acte prémédité, d'une simple erreur ou d'une plaisanterie macabre."
+    ]
+  },
+  "differences": [
+    "Le camp centre propose un résumé concis s'interrogeant sur la qualification pénale de l'acte.",
+    "Le camp droite détaille précisément l'identité de la victime, sa provenance géographique et l'arrestation des deux suspects."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-11-13T10:01:24.684Z"
 }

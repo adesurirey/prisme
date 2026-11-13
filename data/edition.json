@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-13T09:01:36.411Z",
+  "builtAt": "2026-11-13T10:01:24.684Z",
   "latestStories": [
     {
       "id": "3f78f1ae1d88",
@@ -26,7 +26,7 @@
           "url": "https://www.lefigaro.fr/international/inde-un-homme-meurt-apres-avoir-avale-une-pastille-explosive-utilisee-pour-tuer-les-sangliers-20261113",
           "publishedAt": "2026-11-13T08:57:28.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x1999_crop/2026/11/13/6e3613ef0a8a1d41d9972dcce3ade223d097252009f0375a0151f909709a267f.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -288,7 +288,371 @@
           },
           "total": 1
         }
-      ]
+      ],
+      "summaries": {
+        "centre": [
+          "Un homme est décédé en Inde après avoir ingéré un dispositif explosif destiné aux sangliers.",
+          "Les enquêteurs étudient la piste d'un meurtre, d'une erreur ou d'une mauvaise plaisanterie."
+        ],
+        "droite": [
+          "Rajendra Barautiya, un homme de 35 ans issu d'une communauté tribale du Madhya Pradesh, est mort après avoir avalé un bonbon piégé.",
+          "Deux individus ont été appréhendés et inculpés d'homicide volontaire par les forces de l'ordre locales.",
+          "Les investigations se poursuivent pour établir s'il s'agit d'un acte prémédité, d'une simple erreur ou d'une plaisanterie macabre."
+        ]
+      },
+      "differences": [
+        "Le camp centre propose un résumé concis s'interrogeant sur la qualification pénale de l'acte.",
+        "Le camp droite détaille précisément l'identité de la victime, sa provenance géographique et l'arrestation des deux suspects."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-11-13T10:01:24.684Z"
+    },
+    {
+      "id": "a1f600d54173",
+      "slug": "l-insee-confirme-que-l-inflation-atteint-3-4-sur-un-an-en",
+      "title": "L'Insee confirme que l'inflation atteint 3,4% sur un an en octobre en France",
+      "createdAt": "2026-11-13T10:01:24.684Z",
+      "storyDay": "2026-11-13",
+      "articles": [
+        {
+          "id": "0a933d884df7",
+          "outletId": "tf1-info",
+          "headline": "L'inflation atteint 3,4% sur un an en octobre, au plus haut depuis 2024",
+          "url": "https://www.tf1info.fr/conso/l-inflation-atteint-3-4-sur-un-an-en-octobre-au-plus-haut-depuis-2024-insee-france-2475642.html",
+          "publishedAt": "2026-11-13T09:58:42.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/665/prix-alimentaires-inflation-crise-a2cc54-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "3d00fdeb0266",
+          "outletId": "cnews",
+          "headline": "France : l'inflation a atteint 3,4% sur un an, selon l'Insee",
+          "url": "https://www.cnews.fr/france/2026-11-13/france-linflation-atteint-34-sur-un-selon-linsee-1953311",
+          "publishedAt": "2026-11-13T09:46:20.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-07t154442z_662131997_rc23joaz0lit_rtrmadp_3_france-protest-taille1200_6af6ca38588e9.jpg?h=350a7e03&itok=3dKRDywr",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "b9ba70ff02ee",
+          "outletId": "franceinfo",
+          "headline": "L'inflation en France a atteint 3,4% sur un an en octobre, à son plus haut niveau depuis janvier 2024",
+          "url": "https://www.franceinfo.fr/economie/inflation/l-inflation-en-france-a-atteint-3-4-sur-un-an-en-octobre_8280635.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-13T09:27:05.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/daivCf4Km23qY3ivHBh7hAjAkuA/0x106:1024x682/432x243/filters:format(jpg)/2026/11/13/6af6c16dac9e5252696624.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "109924b00309",
+          "outletId": "le-figaro",
+          "headline": "L'inflation a bien atteint 3,4 % sur un an en octobre, selon l'Insee",
+          "url": "https://www.lefigaro.fr/conso/l-inflation-a-bien-atteint-3-4-sur-un-an-en-octobre-selon-l-insee-20261113",
+          "publishedAt": "2026-11-13T09:21:24.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/13/646bfa57b647ceaebac885d13efa230fc3aae7f3136b352bf989414cc20029ed.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "73c5e1375bda",
+          "outletId": "bfmtv",
+          "headline": "Au plus haut depuis près de 3 ans: l'Insee confirme que l'inflation a atteint 3,4% sur un an en octobre",
+          "url": "https://www.bfmtv.com/economie/economie-social/au-plus-haut-depuis-pres-de-3-ans-l-insee-confirme-que-l-inflation-a-atteint-3-4-sur-un-an-en-octobre_AD-202611130394.html",
+          "publishedAt": "2026-11-13T09:09:01.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Dih4QtiqPmSmrIEEvH0QRBP9PrI=/0x106:2048x1258/800x0/images/inflation-1646982.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "9451d53c3f41",
+          "outletId": "europe-1",
+          "headline": "L'inflation a bien atteint 3,4 % sur un an en octobre en France, selon l'Insee",
+          "url": "https://www.europe1.fr/economie/linflation-a-bien-atteint-34-sur-un-an-en-octobre-en-france-selon-linsee-1229999?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-13T08:15:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/inflation/caddie_inflation_jean-fran_ois_fort_hans_lucas_hans_lucas_via_afp_699577b47500d.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "topicId": "a1f600d54173",
+      "titledArticleCount": 6,
+      "section": "economy",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794477600000,
+          "end": 1794481200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794481200000,
+          "end": 1794484800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794484800000,
+          "end": 1794488400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794488400000,
+          "end": 1794492000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794492000000,
+          "end": 1794495600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794495600000,
+          "end": 1794499200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794499200000,
+          "end": 1794502800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794502800000,
+          "end": 1794506400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794506400000,
+          "end": 1794510000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794510000000,
+          "end": 1794513600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794513600000,
+          "end": 1794517200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794517200000,
+          "end": 1794520800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794520800000,
+          "end": 1794524400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794524400000,
+          "end": 1794528000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794528000000,
+          "end": 1794531600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794531600000,
+          "end": 1794535200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794535200000,
+          "end": 1794538800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794538800000,
+          "end": 1794542400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794542400000,
+          "end": 1794546000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794546000000,
+          "end": 1794549600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794549600000,
+          "end": 1794553200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794553200000,
+          "end": 1794556800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794556800000,
+          "end": 1794560400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1794560400000,
+          "end": 1794564000000,
+          "counts": {
+            "gauche": 1,
+            "centre": 1,
+            "droite": 3
+          },
+          "total": 5
+        }
+      ],
+      "summaries": {
+        "gauche": [
+          "L'Insee a validé le chiffre d'une inflation à 3,4% sur un an pour le mois d'octobre en France.",
+          "Cette progression marquée des prix constitue le niveau le plus élevé enregistré depuis janvier 2024.",
+          "La hausse est principalement attribuée à l'envolée des tarifs dans le secteur de l'énergie, conformément aux prévisions initiales."
+        ],
+        "centre": [
+          "Les données définitives de l'Insee confirment une inflation établie à 3,4% sur un an en octobre.",
+          "L'indicateur atteint ainsi son sommet depuis près de trois ans, porté principalement par la dynamique des prix énergétiques."
+        ],
+        "droite": [
+          "L'Insee a entériné une hausse des prix de 3,4% sur un an en octobre, un seuil inédit depuis janvier 2024.",
+          "La flambée est alimentée par les augmentations de l'énergie, notamment le gaz avec une hausse de 27,1% et les produits pétroliers à 38,5%.",
+          "Le contexte social est marqué par des manifestations contre la vie chère depuis la mi-octobre, sur fond de pressions géopolitiques."
+        ]
+      },
+      "differences": [
+        "Le camp gauche se limite à acter les données brutes de l'Insee et l'impact de l'énergie sans mentionner le contexte social.",
+        "Le camp centre adopte une formulation synthétique en mettant l'accent sur la durée de la tendance, mesurée sur près de trois ans.",
+        "Le camp droite détaille avec précision les pourcentages par type d'énergie et associe l'inflation au mouvement social de protestation contre la vie chère."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-11-13T10:01:24.684Z"
     },
     {
       "id": "14cf3bc5ac9d",
@@ -2464,7 +2828,7 @@
           "url": "https://www.lemonde.fr/societe/article/2026/11/13/proces-de-l-interpellation-violente-de-michel-zecler-par-des-policiers-depuis-l-agression-il-a-perdu-cette-lumiere-cette-faculte-a-aller-de-l-avant_6809266_3224.html",
           "publishedAt": "2026-11-13T04:00:28.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/09/322/0/5391/2695/644/322/60/0/5f434ad_ftp-1-b9wa3cdvqnui-afp-d6wg8uk.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -3065,7 +3429,7 @@
           "url": "https://www.ouest-france.fr/high-tech/microsoft/une-panne-mondiale-touche-la-messagerie-outlook-de-microsoft-bed52906-df3c-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-13T08:43:21.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNDUzODEzMmU4MzAwYTllYTU5ODkwNDM3NGE5NjA5ZTM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=e0299a4cb6567177538e23399727ace0ff1b6d78d5833f7899e73813c16d37a9",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "science",
           "everFrontPage": true
@@ -5887,6 +6251,283 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 5,
       "summarizedAt": "2026-11-12T22:01:25.282Z"
+    },
+    {
+      "id": "c3f9313a3185",
+      "slug": "le-salon-made-in-france-reunit-des-industriels-et-des",
+      "title": "Le salon Made in France réunit des industriels et des responsables politiques autour de l'emploi et de la production locale",
+      "createdAt": "2026-11-13T10:01:24.684Z",
+      "storyDay": "2026-11-12",
+      "articles": [
+        {
+          "id": "f4139cd39146",
+          "outletId": "europe-1",
+          "headline": "Au salon Made in France, ces industriels qui tentent d'allier rentabilité, production locale et prix serrés",
+          "url": "https://www.europe1.fr/economie/au-salon-made-in-france-ces-industriels-qui-tentent-dallier-rentabilite-production-locale-et-prix-serres-1230140?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-13T08:50:30.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/13/09/080_hl_hchatel_3156225_1_6af6cea314c53.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "c7ef59794bac",
+          "outletId": "humanite",
+          "headline": "Présidentielle 2027 : Au salon du Made in France, Fabien Roussel veut booster l’emploi et l’industrie par la commande publique",
+          "url": "https://www.humanite.fr/politique/fabien-roussel/presidentielle-2027-au-salon-du-made-in-france-fabien-roussel-veut-booster-lemploi-et-lindustrie-par-la-commande-publique",
+          "publishedAt": "2026-11-12T18:10:29.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/2026_11_12_ROUSSEL_MADEINFRANCE_28.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "c3f9313a3185",
+      "titledArticleCount": 2,
+      "section": "politics",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794474000000,
+          "end": 1794477600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794477600000,
+          "end": 1794481200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794481200000,
+          "end": 1794484800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794484800000,
+          "end": 1794488400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794488400000,
+          "end": 1794492000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794492000000,
+          "end": 1794495600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794495600000,
+          "end": 1794499200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794499200000,
+          "end": 1794502800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794502800000,
+          "end": 1794506400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794506400000,
+          "end": 1794510000000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1794510000000,
+          "end": 1794513600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794513600000,
+          "end": 1794517200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794517200000,
+          "end": 1794520800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794520800000,
+          "end": 1794524400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794524400000,
+          "end": 1794528000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794528000000,
+          "end": 1794531600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794531600000,
+          "end": 1794535200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794535200000,
+          "end": 1794538800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794538800000,
+          "end": 1794542400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794542400000,
+          "end": 1794546000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794546000000,
+          "end": 1794549600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794549600000,
+          "end": 1794553200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794553200000,
+          "end": 1794556800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794556800000,
+          "end": 1794560400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        }
+      ]
     },
     {
       "id": "2771a373e39e",
@@ -11708,950 +12349,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 6,
       "summarizedAt": "2026-11-13T02:01:37.305Z"
-    },
-    {
-      "id": "99fe08e876aa",
-      "slug": "trois-jeunes-decedent-dans-un-accident-de-voiture-a-tours",
-      "title": "Trois jeunes décèdent dans un accident de voiture à Tours",
-      "createdAt": "2026-11-12T10:01:25.136Z",
-      "storyDay": "2026-11-12",
-      "articles": [
-        {
-          "id": "73b9c762bc7f",
-          "outletId": "le-parisien",
-          "headline": "Tours : trois jeunes, dont un mineur, sont décédés dans un accident de voiture",
-          "url": "https://www.leparisien.fr/indre-et-loire-37/tours-trois-jeunes-dont-un-mineur-sont-decedes-dans-un-accident-de-voiture-12-11-2026-GXDPR2B47BC2TFSDHK2AGISSGU.php",
-          "publishedAt": "2026-11-12T10:01:25.136Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "c34a479e6a83",
-          "outletId": "europe-1",
-          "headline": "Tours : trois morts dont un mineur dans un accident de voiture",
-          "url": "https://www.europe1.fr/faits-divers/tours-trois-morts-dont-un-mineur-dans-un-accident-de-voiture-1227644?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-12T09:55:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Pompiers/romain_longieras_hans_lucas_hans_lucas_via_afp_696a665573bad.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "95ae93b7d9bb",
-          "outletId": "le-figaro",
-          "headline": "Tours : trois morts, dont un mineur, après un accident de voiture",
-          "url": "https://www.lefigaro.fr/faits-divers/tours-trois-morts-dont-un-mineur-apres-un-accident-de-voiture-20261112",
-          "publishedAt": "2026-11-12T09:35:16.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/12/27a4c2231ce93e397167cc9b355e60efe8adcee3a08e46de399f0c5bf184a11d.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "852d08245f2a",
-          "outletId": "tf1-info",
-          "headline": "Tours : trois jeunes âgés de 17, 18 et 19 ans décèdent dans un grave accident de voiture",
-          "url": "https://www.tf1info.fr/justice-faits-divers/tours-trois-jeunes-ages-de-17-18-et-19-ans-decedent-dans-un-grave-accident-de-voiture-2475399.html",
-          "publishedAt": "2026-11-12T09:26:28.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/768/pompiers-illustration-2026-e44c93-1@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "topicId": "99fe08e876aa",
-      "titledArticleCount": 4,
-      "section": "misc",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794394800000,
-          "end": 1794398400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794398400000,
-          "end": 1794402000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794402000000,
-          "end": 1794405600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794405600000,
-          "end": 1794409200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794409200000,
-          "end": 1794412800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794412800000,
-          "end": 1794416400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794416400000,
-          "end": 1794420000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794420000000,
-          "end": 1794423600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794423600000,
-          "end": 1794427200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794427200000,
-          "end": 1794430800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794430800000,
-          "end": 1794434400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794434400000,
-          "end": 1794438000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794438000000,
-          "end": 1794441600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794441600000,
-          "end": 1794445200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794445200000,
-          "end": 1794448800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794448800000,
-          "end": 1794452400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794452400000,
-          "end": 1794456000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794456000000,
-          "end": 1794459600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794459600000,
-          "end": 1794463200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794463200000,
-          "end": 1794466800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794466800000,
-          "end": 1794470400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794470400000,
-          "end": 1794474000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794474000000,
-          "end": 1794477600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 3
-          },
-          "total": 3
-        },
-        {
-          "start": 1794477600000,
-          "end": 1794481200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "centre": [
-          "Trois jeunes individus ont perdu la vie à Tours lors d'une collision impliquant un unique véhicule."
-        ],
-        "droite": [
-          "Un drame de la route survenu à Tours a entraîné le décès de trois passagers âgés de 17, 18 et 19 ans.",
-          "La voiture a violemment percuté un arbre en fin de soirée, selon les informations rapportées par les secours.",
-          "La conductrice, âgée de 19 ans, a subi des blessures légères et a été admise au centre hospitalier universitaire Trousseau."
-        ]
-      },
-      "differences": [
-        "Le centre se limite à une mention succincte du décès de trois jeunes dans un accident de voiture à Tours.",
-        "La droite détaille l'événement en précisant l'âge des victimes, l'heure exacte de la collision nocturne, l'impact contre un arbre et la prise en charge médicale de la conductrice légèrement blessée."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-11-12T12:01:36.819Z"
-    },
-    {
-      "id": "8a5c0fc482cd",
-      "slug": "une-alerte-a-la-bombe-perturbe-la-gare-de-calais",
-      "title": "Une alerte à la bombe perturbe la gare de Calais",
-      "createdAt": "2026-11-12T10:01:25.136Z",
-      "storyDay": "2026-11-12",
-      "articles": [
-        {
-          "id": "c645bd0a0ec6",
-          "outletId": "le-figaro",
-          "headline": "Une alerte à la bombe en cours en gare de Calais, la préfecture appelle à la prudence",
-          "url": "https://www.lefigaro.fr/actualite-france/une-alerte-a-la-bombe-en-cours-en-gare-de-calais-la-prefecture-appelle-a-la-prudence-20261112",
-          "publishedAt": "2026-11-12T09:59:32.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/12/75ef31030d25d3ca5e8b1f73189b7e4fa420fa5705243b552ff6de586436bb8e.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "e0e5760cadf1",
-          "outletId": "bfmtv",
-          "headline": "Alerte à la bombe en gare de Calais, la préfecture appelle à la prudence",
-          "url": "https://www.bfmtv.com/grand-littoral/alerte-a-la-bombe-en-gare-de-calais-la-prefecture-appelle-a-la-prudence_AN-202611120426.html",
-          "publishedAt": "2026-11-12T09:56:36.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/6iyPq3MrOBVhPYHKgtKKYWsPyX4=/0x41:768x473/800x0/images/Un-TGV-roule-en-direction-de-Paris-le-2-juin-2021-a-la-gare-de-Neuville-Vitasse-dans-le-Pas-de-Calais-1040934.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "2fbc50c4de06",
-          "outletId": "ouest-france",
-          "headline": "Une alerte à la bombe en cours à la gare de Calais, le trafic des trains perturbé",
-          "url": "https://www.ouest-france.fr/hauts-de-france/calais-62100/une-alerte-a-la-bombe-en-cours-a-la-gare-de-calais-le-trafic-des-trains-perturbe-191612d8-de78-11f1-86b6-0a2fbb1d8ed9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-12T09:11:46.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYTZkYzcwOWY2OWE0MmYzN2RmNWQyNWYxNDI2OGIzNWM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9e91bcaeda7c7e63ed1fd449f1893ff8a830bb411158ebf8c225cdfcdfff2035",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "8a5c0fc482cd",
-      "titledArticleCount": 3,
-      "section": "misc",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794391200000,
-          "end": 1794394800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794394800000,
-          "end": 1794398400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794398400000,
-          "end": 1794402000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794402000000,
-          "end": 1794405600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794405600000,
-          "end": 1794409200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794409200000,
-          "end": 1794412800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794412800000,
-          "end": 1794416400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794416400000,
-          "end": 1794420000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794420000000,
-          "end": 1794423600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794423600000,
-          "end": 1794427200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794427200000,
-          "end": 1794430800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794430800000,
-          "end": 1794434400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794434400000,
-          "end": 1794438000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794438000000,
-          "end": 1794441600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794441600000,
-          "end": 1794445200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794445200000,
-          "end": 1794448800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794448800000,
-          "end": 1794452400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794452400000,
-          "end": 1794456000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794456000000,
-          "end": 1794459600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794459600000,
-          "end": 1794463200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794463200000,
-          "end": 1794466800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794466800000,
-          "end": 1794470400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794470400000,
-          "end": 1794474000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794474000000,
-          "end": 1794477600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 2,
-            "droite": 1
-          },
-          "total": 3
-        }
-      ],
-      "summaries": {
-        "centre": [
-          "Une opération de levée de doute a débuté jeudi matin à la suite d'une alerte à la bombe à la gare de Calais-Fréthun.",
-          "La préfecture du Pas-de-Calais demande à la population de faire preuve de prudence face à cet événement.",
-          "Le trafic ferroviaire est totalement interrompu entre les gares de Calais et de Boulogne."
-        ],
-        "droite": [
-          "La préfecture du Pas-de-Calais a signalé via le réseau social X qu'une alerte à la bombe perturbait la gare de Calais.",
-          "Les autorités préfectorales appellent à la prudence suite à cet incident en cours.",
-          "Le Figaro indique que cette situation est susceptible d'entraîner d'importantes perturbations sur l'ensemble du trafic ferroviaire."
-        ]
-      },
-      "differences": [
-        "Les médias du centre se concentrent sur les conséquences pratiques immédiates en nommant précisément la gare de Calais-Fréthun et l'interruption concrète du trafic entre Calais et Boulogne.",
-        "La droite privilégie une approche institutionnelle en relayant directement l'appel à la prudence de la préfecture sur le réseau X et en envisageant les répercussions potentielles sur le réseau ferroviaire."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 3,
-      "summarizedAt": "2026-11-12T20:01:22.282Z"
-    },
-    {
-      "id": "78c1b027fbff",
-      "slug": "deux-membres-de-la-garde-republicaine-s-effondrent-sur-le",
-      "title": "Deux membres de la garde républicaine s’effondrent sur le parvis de l’Élysée près d’Emmanuel Macron",
-      "createdAt": "2026-11-12T14:01:30.935Z",
-      "storyDay": "2026-11-12",
-      "articles": [
-        {
-          "id": "b829033bdacf",
-          "outletId": "le-figaro",
-          "headline": "Deux membres de la garde républicaine s’écroulent coup sur coup près d’Emmanuel Macron sur le parvis de l’Élysée",
-          "url": "https://www.lefigaro.fr/politique/deux-membres-de-la-garde-republicaine-s-ecroulent-coup-sur-coup-pres-d-emmanuel-macron-sur-le-parvis-de-l-elysee-20261112",
-          "publishedAt": "2026-11-12T12:44:21.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/12/b778f121c4e04fce6a878f8e9ebfe0456f3e3595362a6cda0bbad9c4fffef1ce.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "b231acc9d456",
-          "outletId": "le-jdd",
-          "headline": "Élysée : deux gardes d’honneur s’effondrent à côté d’Emmanuel Macron pendant la visite du président slovaque",
-          "url": "https://www.lejdd.fr/politique/elysee-deux-gardes-dhonneur-seffondrent-a-cote-demmanuel-macron-pendant-la-visite-du-president-slovaque-188448",
-          "publishedAt": "2026-11-12T11:08:39.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/12/09/080_hl_xbouzas_3183873.jpg?VersionId=bdOrlvpiG9iNpG8dplskWVPmY2DBq2Ue",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "a4767c2751d8",
-          "outletId": "20-minutes",
-          "headline": "Élysée : Deux membres de la garde républicaine s’effondrent devant Emmanuel Macron",
-          "url": "https://www.20minutes.fr/societe/4262327-20261112-elysee-deux-membres-garde-republicaine-effondrent-devant-emmanuel-macron?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-12T10:35:09.000Z",
-          "imageUrl": "https://img.20mn.fr/vPQR4DAdRZeZwx4fFvZieyk/1200x768_sur-les-images-de-la-television-slovaque-on-voit-un-premier-garde-tomber-en-arriere-avant-de-chuter-au-sol",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "52729ba7f3d4",
-          "outletId": "huffpost",
-          "headline": "Au côté de Macron, deux membres de la Garde républicaine victimes de malaises vagaux",
-          "url": "https://www.huffingtonpost.fr/france/article/au-cote-de-macron-deux-membres-de-la-garde-republicaine-victimes-de-malaises-vagaux_356435.html",
-          "publishedAt": "2026-11-12T09:08:02.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/12/171/0/6109/3436/0/0/60/0/88fdc4a_upload-1-riezcduwzy1k-afp-20261111-d77k6yg-v2-highres-topshotfranceslovakiapoliticsdiplomacy.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "78c1b027fbff",
-      "titledArticleCount": 4,
-      "section": "politics",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794402000000,
-          "end": 1794405600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794405600000,
-          "end": 1794409200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794409200000,
-          "end": 1794412800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794412800000,
-          "end": 1794416400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794416400000,
-          "end": 1794420000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794420000000,
-          "end": 1794423600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794423600000,
-          "end": 1794427200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794427200000,
-          "end": 1794430800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794430800000,
-          "end": 1794434400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794434400000,
-          "end": 1794438000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794438000000,
-          "end": 1794441600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794441600000,
-          "end": 1794445200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794445200000,
-          "end": 1794448800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794448800000,
-          "end": 1794452400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794452400000,
-          "end": 1794456000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794456000000,
-          "end": 1794459600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794459600000,
-          "end": 1794463200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794463200000,
-          "end": 1794466800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794466800000,
-          "end": 1794470400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794470400000,
-          "end": 1794474000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794474000000,
-          "end": 1794477600000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794477600000,
-          "end": 1794481200000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794481200000,
-          "end": 1794484800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1794484800000,
-          "end": 1794488400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Deux militaires de la Garde républicaine ont subi des malaises vagaux sur le perron du palais présidentiel.",
-          "L'incident s'est produit mercredi 11 novembre lors de la venue du chef de l'État slovaque Peter Pellegrini.",
-          "L'Élysée a communiqué pour donner des nouvelles rassurantes sur l'état de santé des deux agents concernés."
-        ],
-        "droite": [
-          "Deux membres de la garde d'honneur se sont effondrés successivement à proximité immédiate d'Emmanuel Macron.",
-          "La scène s'est déroulée en plein air sur le parvis de l'Élysée lors d'une cérémonie officielle d'accueil.",
-          "Les malaises sont survenus sous les yeux du président français et de son homologue slovaque en visite."
-        ]
-      },
-      "differences": [
-        "Les médias de gauche contextualisent l'incident en précisant la nature médicale des faits et les informations communiquées par l'Élysée.",
-        "Les médias de droite axent leur traitement sur la chronologie visuelle des malaises successifs survenus en présence des chefs d'État."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-11-12T20:01:22.282Z"
     }
   ],
   "feedStories": [
@@ -12680,7 +12377,7 @@
           "url": "https://www.ouest-france.fr/high-tech/microsoft/une-panne-mondiale-touche-la-messagerie-outlook-de-microsoft-bed52906-df3c-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-13T08:43:21.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNDUzODEzMmU4MzAwYTllYTU5ODkwNDM3NGE5NjA5ZTM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=e0299a4cb6567177538e23399727ace0ff1b6d78d5833f7899e73813c16d37a9",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "science",
           "everFrontPage": true
@@ -13209,6 +12906,352 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 24,
       "summarizedAt": "2026-11-13T09:01:36.411Z"
+    },
+    {
+      "id": "a1f600d54173",
+      "slug": "l-insee-confirme-que-l-inflation-atteint-3-4-sur-un-an-en",
+      "title": "L'Insee confirme que l'inflation atteint 3,4% sur un an en octobre en France",
+      "createdAt": "2026-11-13T10:01:24.684Z",
+      "storyDay": "2026-11-13",
+      "articles": [
+        {
+          "id": "0a933d884df7",
+          "outletId": "tf1-info",
+          "headline": "L'inflation atteint 3,4% sur un an en octobre, au plus haut depuis 2024",
+          "url": "https://www.tf1info.fr/conso/l-inflation-atteint-3-4-sur-un-an-en-octobre-au-plus-haut-depuis-2024-insee-france-2475642.html",
+          "publishedAt": "2026-11-13T09:58:42.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/665/prix-alimentaires-inflation-crise-a2cc54-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "3d00fdeb0266",
+          "outletId": "cnews",
+          "headline": "France : l'inflation a atteint 3,4% sur un an, selon l'Insee",
+          "url": "https://www.cnews.fr/france/2026-11-13/france-linflation-atteint-34-sur-un-selon-linsee-1953311",
+          "publishedAt": "2026-11-13T09:46:20.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-07t154442z_662131997_rc23joaz0lit_rtrmadp_3_france-protest-taille1200_6af6ca38588e9.jpg?h=350a7e03&itok=3dKRDywr",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "b9ba70ff02ee",
+          "outletId": "franceinfo",
+          "headline": "L'inflation en France a atteint 3,4% sur un an en octobre, à son plus haut niveau depuis janvier 2024",
+          "url": "https://www.franceinfo.fr/economie/inflation/l-inflation-en-france-a-atteint-3-4-sur-un-an-en-octobre_8280635.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-13T09:27:05.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/daivCf4Km23qY3ivHBh7hAjAkuA/0x106:1024x682/432x243/filters:format(jpg)/2026/11/13/6af6c16dac9e5252696624.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "109924b00309",
+          "outletId": "le-figaro",
+          "headline": "L'inflation a bien atteint 3,4 % sur un an en octobre, selon l'Insee",
+          "url": "https://www.lefigaro.fr/conso/l-inflation-a-bien-atteint-3-4-sur-un-an-en-octobre-selon-l-insee-20261113",
+          "publishedAt": "2026-11-13T09:21:24.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/13/646bfa57b647ceaebac885d13efa230fc3aae7f3136b352bf989414cc20029ed.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "73c5e1375bda",
+          "outletId": "bfmtv",
+          "headline": "Au plus haut depuis près de 3 ans: l'Insee confirme que l'inflation a atteint 3,4% sur un an en octobre",
+          "url": "https://www.bfmtv.com/economie/economie-social/au-plus-haut-depuis-pres-de-3-ans-l-insee-confirme-que-l-inflation-a-atteint-3-4-sur-un-an-en-octobre_AD-202611130394.html",
+          "publishedAt": "2026-11-13T09:09:01.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Dih4QtiqPmSmrIEEvH0QRBP9PrI=/0x106:2048x1258/800x0/images/inflation-1646982.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "9451d53c3f41",
+          "outletId": "europe-1",
+          "headline": "L'inflation a bien atteint 3,4 % sur un an en octobre en France, selon l'Insee",
+          "url": "https://www.europe1.fr/economie/linflation-a-bien-atteint-34-sur-un-an-en-octobre-en-france-selon-linsee-1229999?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-13T08:15:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/inflation/caddie_inflation_jean-fran_ois_fort_hans_lucas_hans_lucas_via_afp_699577b47500d.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "topicId": "a1f600d54173",
+      "titledArticleCount": 6,
+      "section": "economy",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794477600000,
+          "end": 1794481200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794481200000,
+          "end": 1794484800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794484800000,
+          "end": 1794488400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794488400000,
+          "end": 1794492000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794492000000,
+          "end": 1794495600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794495600000,
+          "end": 1794499200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794499200000,
+          "end": 1794502800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794502800000,
+          "end": 1794506400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794506400000,
+          "end": 1794510000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794510000000,
+          "end": 1794513600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794513600000,
+          "end": 1794517200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794517200000,
+          "end": 1794520800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794520800000,
+          "end": 1794524400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794524400000,
+          "end": 1794528000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794528000000,
+          "end": 1794531600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794531600000,
+          "end": 1794535200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794535200000,
+          "end": 1794538800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794538800000,
+          "end": 1794542400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794542400000,
+          "end": 1794546000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794546000000,
+          "end": 1794549600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794549600000,
+          "end": 1794553200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794553200000,
+          "end": 1794556800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794556800000,
+          "end": 1794560400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1794560400000,
+          "end": 1794564000000,
+          "counts": {
+            "gauche": 1,
+            "centre": 1,
+            "droite": 3
+          },
+          "total": 5
+        }
+      ],
+      "summaries": {
+        "gauche": [
+          "L'Insee a validé le chiffre d'une inflation à 3,4% sur un an pour le mois d'octobre en France.",
+          "Cette progression marquée des prix constitue le niveau le plus élevé enregistré depuis janvier 2024.",
+          "La hausse est principalement attribuée à l'envolée des tarifs dans le secteur de l'énergie, conformément aux prévisions initiales."
+        ],
+        "centre": [
+          "Les données définitives de l'Insee confirment une inflation établie à 3,4% sur un an en octobre.",
+          "L'indicateur atteint ainsi son sommet depuis près de trois ans, porté principalement par la dynamique des prix énergétiques."
+        ],
+        "droite": [
+          "L'Insee a entériné une hausse des prix de 3,4% sur un an en octobre, un seuil inédit depuis janvier 2024.",
+          "La flambée est alimentée par les augmentations de l'énergie, notamment le gaz avec une hausse de 27,1% et les produits pétroliers à 38,5%.",
+          "Le contexte social est marqué par des manifestations contre la vie chère depuis la mi-octobre, sur fond de pressions géopolitiques."
+        ]
+      },
+      "differences": [
+        "Le camp gauche se limite à acter les données brutes de l'Insee et l'impact de l'énergie sans mentionner le contexte social.",
+        "Le camp centre adopte une formulation synthétique en mettant l'accent sur la durée de la tendance, mesurée sur près de trois ans.",
+        "Le camp droite détaille avec précision les pourcentages par type d'énergie et associe l'inflation au mouvement social de protestation contre la vie chère."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-11-13T10:01:24.684Z"
     },
     {
       "id": "0888de152780",
@@ -15814,7 +15857,7 @@
           "url": "https://www.lefigaro.fr/international/inde-un-homme-meurt-apres-avoir-avale-une-pastille-explosive-utilisee-pour-tuer-les-sangliers-20261113",
           "publishedAt": "2026-11-13T08:57:28.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x1999_crop/2026/11/13/6e3613ef0a8a1d41d9972dcce3ade223d097252009f0375a0151f909709a267f.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "misc",
           "everFrontPage": true
@@ -16076,7 +16119,25 @@
           },
           "total": 1
         }
-      ]
+      ],
+      "summaries": {
+        "centre": [
+          "Un homme est décédé en Inde après avoir ingéré un dispositif explosif destiné aux sangliers.",
+          "Les enquêteurs étudient la piste d'un meurtre, d'une erreur ou d'une mauvaise plaisanterie."
+        ],
+        "droite": [
+          "Rajendra Barautiya, un homme de 35 ans issu d'une communauté tribale du Madhya Pradesh, est mort après avoir avalé un bonbon piégé.",
+          "Deux individus ont été appréhendés et inculpés d'homicide volontaire par les forces de l'ordre locales.",
+          "Les investigations se poursuivent pour établir s'il s'agit d'un acte prémédité, d'une simple erreur ou d'une plaisanterie macabre."
+        ]
+      },
+      "differences": [
+        "Le camp centre propose un résumé concis s'interrogeant sur la qualification pénale de l'acte.",
+        "Le camp droite détaille précisément l'identité de la victime, sa provenance géographique et l'arrestation des deux suspects."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-11-13T10:01:24.684Z"
     },
     {
       "id": "cd7dc2856384",
@@ -16841,7 +16902,7 @@
           "url": "https://www.lefigaro.fr/secteur/high-tech/la-perte-de-jensen-huang-est-un-veritable-coup-dur-la-chute-du-patron-de-nvidia-provoque-un-seisme-sur-la-planete-ia-20261112",
           "publishedAt": "2026-11-12T18:41:51.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/2967x1668_crop/2026/11/12/fa58f67e0abf0ccd39867088732da973db042bcd318a1a88ac37243cd0c06206.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "science",
           "everFrontPage": true
@@ -20242,6 +20303,283 @@
       "summarizedAt": "2026-11-13T03:01:24.122Z"
     },
     {
+      "id": "c3f9313a3185",
+      "slug": "le-salon-made-in-france-reunit-des-industriels-et-des",
+      "title": "Le salon Made in France réunit des industriels et des responsables politiques autour de l'emploi et de la production locale",
+      "createdAt": "2026-11-13T10:01:24.684Z",
+      "storyDay": "2026-11-12",
+      "articles": [
+        {
+          "id": "f4139cd39146",
+          "outletId": "europe-1",
+          "headline": "Au salon Made in France, ces industriels qui tentent d'allier rentabilité, production locale et prix serrés",
+          "url": "https://www.europe1.fr/economie/au-salon-made-in-france-ces-industriels-qui-tentent-dallier-rentabilite-production-locale-et-prix-serres-1230140?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-13T08:50:30.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/13/09/080_hl_hchatel_3156225_1_6af6cea314c53.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "c7ef59794bac",
+          "outletId": "humanite",
+          "headline": "Présidentielle 2027 : Au salon du Made in France, Fabien Roussel veut booster l’emploi et l’industrie par la commande publique",
+          "url": "https://www.humanite.fr/politique/fabien-roussel/presidentielle-2027-au-salon-du-made-in-france-fabien-roussel-veut-booster-lemploi-et-lindustrie-par-la-commande-publique",
+          "publishedAt": "2026-11-12T18:10:29.000Z",
+          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/2026_11_12_ROUSSEL_MADEINFRANCE_28.jpg?w=1200",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        }
+      ],
+      "topicId": "c3f9313a3185",
+      "titledArticleCount": 2,
+      "section": "politics",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794474000000,
+          "end": 1794477600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794477600000,
+          "end": 1794481200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794481200000,
+          "end": 1794484800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794484800000,
+          "end": 1794488400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794488400000,
+          "end": 1794492000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794492000000,
+          "end": 1794495600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794495600000,
+          "end": 1794499200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794499200000,
+          "end": 1794502800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794502800000,
+          "end": 1794506400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794506400000,
+          "end": 1794510000000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1794510000000,
+          "end": 1794513600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794513600000,
+          "end": 1794517200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794517200000,
+          "end": 1794520800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794520800000,
+          "end": 1794524400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794524400000,
+          "end": 1794528000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794528000000,
+          "end": 1794531600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794531600000,
+          "end": 1794535200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794535200000,
+          "end": 1794538800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794538800000,
+          "end": 1794542400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794542400000,
+          "end": 1794546000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794546000000,
+          "end": 1794549600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794549600000,
+          "end": 1794553200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794553200000,
+          "end": 1794556800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794556800000,
+          "end": 1794560400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        }
+      ]
+    },
+    {
       "id": "f6279066d4d4",
       "slug": "la-malaisie-enquete-sur-une-filiale-de-megaspeed-impliquant",
       "title": "La Malaisie enquête sur une filiale de Megaspeed impliquant Nvidia",
@@ -21758,675 +22096,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 5,
       "summarizedAt": "2026-11-12T22:01:25.282Z"
-    },
-    {
-      "id": "16bc5c3873dc",
-      "slug": "le-proces-de-l-agression-de-michel-zecler-se-poursuit-avec-le",
-      "title": "Le procès de l'agression de Michel Zecler se poursuit avec le témoignage de Stomy Bugsy",
-      "createdAt": "2026-11-13T05:01:23.284Z",
-      "storyDay": "2026-11-13",
-      "articles": [
-        {
-          "id": "4528ca0ab7c7",
-          "outletId": "le-monde",
-          "headline": "Procès de l’interpellation violente de Michel Zecler par des policiers : « Depuis l’agression, il a perdu cette lumière, cette faculté à aller de l’avant »",
-          "url": "https://www.lemonde.fr/societe/article/2026/11/13/proces-de-l-interpellation-violente-de-michel-zecler-par-des-policiers-depuis-l-agression-il-a-perdu-cette-lumiere-cette-faculte-a-aller-de-l-avant_6809266_3224.html",
-          "publishedAt": "2026-11-13T04:00:28.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/09/322/0/5391/2695/644/322/60/0/5f434ad_ftp-1-b9wa3cdvqnui-afp-d6wg8uk.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "3063f60c3fa7",
-          "outletId": "huffpost",
-          "headline": "Au procès de Michel Zecler, Stomy Bugsy ému aux larmes raconte ce que son ami a perdu depuis 2020",
-          "url": "https://www.huffingtonpost.fr/france/article/au-proces-de-michel-zecler-stomy-bugsy-emu-aux-larmes-raconte-ce-que-son-ami-a-perdu-depuis-2020_356897.html",
-          "publishedAt": "2026-11-12T23:06:20.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/12/74/0/5100/2868/0/0/60/0/1221dc5_upload-1-hczfl8ov2zob-afp-20261109-d6vu4fl-v1-highres-francepoliceassaulttrial.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "topicId": "e52753153876",
-      "titledArticleCount": 2,
-      "section": "misc",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794459600000,
-          "end": 1794463200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794463200000,
-          "end": 1794466800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794466800000,
-          "end": 1794470400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794470400000,
-          "end": 1794474000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794474000000,
-          "end": 1794477600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794477600000,
-          "end": 1794481200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794481200000,
-          "end": 1794484800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794484800000,
-          "end": 1794488400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794488400000,
-          "end": 1794492000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794492000000,
-          "end": 1794495600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794495600000,
-          "end": 1794499200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794499200000,
-          "end": 1794502800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794502800000,
-          "end": 1794506400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794506400000,
-          "end": 1794510000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794510000000,
-          "end": 1794513600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794513600000,
-          "end": 1794517200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794517200000,
-          "end": 1794520800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794520800000,
-          "end": 1794524400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794524400000,
-          "end": 1794528000000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794528000000,
-          "end": 1794531600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794531600000,
-          "end": 1794535200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794535200000,
-          "end": 1794538800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794538800000,
-          "end": 1794542400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794542400000,
-          "end": 1794546000000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ]
-    },
-    {
-      "id": "ffe6ce5d23ea",
-      "slug": "jordan-bardella-porte-plainte-pour-faux-et-usage-de-faux-apres",
-      "title": "Jordan Bardella porte plainte pour faux et usage de faux après des accusations d'antisémitisme",
-      "createdAt": "2026-11-12T12:01:36.819Z",
-      "storyDay": "2026-11-12",
-      "articles": [
-        {
-          "id": "c782d970e400",
-          "outletId": "lobs",
-          "headline": "Accusé d’antisémitisme, Bardella porte plainte pour faux et usage de faux contre Mediapart",
-          "url": "https://www.nouvelobs.com/politique/20261112.OBS120080/accuse-d-antisemitisme-bardella-porte-plainte-pour-faux-et-usage-de-faux-contre-mediapart.html",
-          "publishedAt": "2026-11-12T16:45:29.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/11/12/0/0/1023/682/0/0/60/0/81e7659_ftp-1-4pl4e45of9um-afp-d79n9g3-1024.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "eae4381b0814",
-          "outletId": "le-jdd",
-          "headline": "Accusations d'antisémitisme : Jordan Bardella porte plainte pour faux et usage de faux",
-          "url": "https://www.lejdd.fr/politique/accusations-dantisemitisme-jordan-bardella-porte-plainte-pour-faux-et-usage-de-faux-188499",
-          "publishedAt": "2026-11-12T15:19:58.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/12/14/000_d3pk6cl.jpg?VersionId=7e_gGukcZ.1I1l.2jIkIeHHIaeJeOfF2",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "6945234da6a9",
-          "outletId": "huffpost",
-          "headline": "Jordan Bardella a bien porté plainte pour faux et usage de faux contre « Mediapart »",
-          "url": "https://www.huffingtonpost.fr/politique/article/jordan-bardella-a-bien-porte-plainte-pour-faux-et-usage-de-faux-contre-mediapart_356601.html",
-          "publishedAt": "2026-11-12T13:38:41.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/12/8/0/5976/3361/0/0/60/0/9a2ba6c_upload-1-qh7qb08p6tr4-afp-20261026-hl-bohier-3359705-v1-highres-francepoliticsmeetingrnorleans.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "0040f935808a",
-          "outletId": "le-parisien",
-          "headline": "Accusations d’antisémitisme : Jordan Bardella a porté plainte pour faux et usage de faux, indique le parquet de Paris",
-          "url": "https://www.leparisien.fr/politique/accusations-dantisemitisme-jordan-bardella-a-porte-plainte-pour-faux-et-usage-de-faux-indique-le-parquet-de-paris-12-11-2026-2KW4MF7QVFGJNI272GXWQPOXLQ.php",
-          "publishedAt": "2026-11-12T12:01:36.819Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "a118f83c7353",
-          "outletId": "le-figaro",
-          "headline": "Jordan Bardella a porté plainte pour faux et usage de faux après les accusations d’antisémitisme",
-          "url": "https://www.lefigaro.fr/politique/jordan-bardella-porte-plainte-pour-faux-et-usage-de-faux-apres-les-accusations-d-antisemitisme-20261112",
-          "publishedAt": "2026-11-12T11:54:40.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2780x1564_crop/2026/11/12/4a7db05f1b1e92759581c3e137d199722473cf108628352487524f1cb874b5d2.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "ae58f0f055e2",
-          "outletId": "europe-1",
-          "headline": "Accusations d'antisémitisme : Jordan Bardella a porté plainte pour faux et usage de faux",
-          "url": "https://www.europe1.fr/police-justice/accusations-dantisemitisme-jordan-bardella-a-porte-plainte-pour-faux-et-usage-de-faux-1227923?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-12T11:52:19.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/12/12/000_d3pk6cl_1_6af5a84d4f714.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "9701b50f9bfd",
-          "outletId": "ouest-france",
-          "headline": "Accusations d’antisémitisme : Jordan Bardella a porté plainte pour faux et usages de faux",
-          "url": "https://www.ouest-france.fr/politique/jordan-bardella/accusations-dantisemitisme-jordan-bardella-a-porte-plainte-pour-faux-et-usages-de-faux-27b4530c-de8e-11f1-86b6-0a2fbb1d8ed9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-12T11:51:42.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNTBjYTIzMGMwOWYxN2EzMGFhYTVlNTlmMzgwNzRlNjk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=31cf9f1f1bc22d27d2d820c76ea8984a76d2c0c1f26fcb96bab262eb9e8ecc80",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "b83510215edb",
-          "outletId": "bfmtv",
-          "headline": "Écrits antisémites: Jordan Bardella a porté plainte pour \"faux et usage de faux\" après les révélations de Médiapart",
-          "url": "https://www.bfmtv.com/politique/front-national/ecrits-antisemites-jordan-bardella-a-porte-plainte-pour-faux-et-usage-de-faux-apres-les-revelations-de-mediapart_AD-202611120506.html",
-          "publishedAt": "2026-11-12T11:51:36.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/IwBrPX6xoK3esHLI6Qem9IU78kU=/0x0:2048x1152/800x0/images/Jordan-Bardella-a-Varsovie-le-19-juin-2026-2315804.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "954047d08da5",
-          "outletId": "tf1-info",
-          "headline": "Accusations d'antisémitisme : Jordan Bardella porte plainte contre X pour faux et usage de faux",
-          "url": "https://www.tf1info.fr/politique/accusations-d-antisemitisme-jordan-bardella-porte-plainte-contre-x-pour-faux-et-usage-de-faux-2475455.html",
-          "publishedAt": "2026-11-12T11:51:17.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/jordan-bardella-conference-de-presse-2026-121d3e-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "515d4fcf6753",
-          "outletId": "france-24",
-          "headline": "Accusations d'antisémitisme : Jordan Bardella a porté plainte pour faux et usage de faux",
-          "url": "https://www.france24.com/fr/france/20261112-france-accusations-antisemitisme-jordan-bardella-a-porte-plainte-pour-faux-et-usage-de-faux",
-          "publishedAt": "2026-11-12T11:51:13.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "ffe6ce5d23ea",
-      "titledArticleCount": 10,
-      "section": "politics",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794416400000,
-          "end": 1794420000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794420000000,
-          "end": 1794423600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794423600000,
-          "end": 1794427200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794427200000,
-          "end": 1794430800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794430800000,
-          "end": 1794434400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794434400000,
-          "end": 1794438000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794438000000,
-          "end": 1794441600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794441600000,
-          "end": 1794445200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794445200000,
-          "end": 1794448800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794448800000,
-          "end": 1794452400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794452400000,
-          "end": 1794456000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794456000000,
-          "end": 1794459600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794459600000,
-          "end": 1794463200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794463200000,
-          "end": 1794466800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794466800000,
-          "end": 1794470400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794470400000,
-          "end": 1794474000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794474000000,
-          "end": 1794477600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794477600000,
-          "end": 1794481200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794481200000,
-          "end": 1794484800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 3,
-            "droite": 3
-          },
-          "total": 6
-        },
-        {
-          "start": 1794484800000,
-          "end": 1794488400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794488400000,
-          "end": 1794492000000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794492000000,
-          "end": 1794495600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794495600000,
-          "end": 1794499200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1794499200000,
-          "end": 1794502800000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Le média Mediapart a publié des messages de jeunesse datant de 2013 impliquant Jordan Bardella dans des propos antisémites.",
-          "Le président du Rassemblement national a réagi en déposant une plainte contre le média d'investigation pour faux et usage de faux.",
-          "Cette nouvelle action judiciaire s'ajoute à une première plainte pour diffamation déjà engagée par le dirigeant politique."
-        ],
-        "centre": [
-          "Le parquet de Paris a confirmé que Jordan Bardella a déposé une plainte contre X pour faux et usage de faux.",
-          "La procédure judiciaire fait suite aux révélations de Mediapart concernant des écrits de jeunesse attribués au responsable politique.",
-          "Le dirigeant du Rassemblement national conteste formellement être l'auteur de ces messages à caractère antisémite."
-        ],
-        "droite": [
-          "Jordan Bardella a formellement contesté l'authenticité de textes antisémites diffusés par le site d'investigation Mediapart.",
-          "Le président du Rassemblement national a déposé une plainte contre X pour faux et usage de faux auprès du parquet de Paris.",
-          "Cette démarche judiciaire complète une procédure en diffamation engagée en amont contre le média."
-        ]
-      },
-      "differences": [
-        "La gauche met principalement l'accent sur les révélations initiales de Mediapart et l'existence d'écrits compromettants attribués au dirigeant d'extrême droite.",
-        "Le centre adopte un angle institutionnel en relayant l'information du parquet de Paris tout en rappelant la contestation du responsable politique.",
-        "La droite insiste particulièrement sur le démenti ferme de Jordan Bardella et l'offensive judiciaire menée en parallèle contre les méthodes de Mediapart."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 10,
-      "summarizedAt": "2026-11-12T23:01:25.923Z"
     }
   ],
   "stories": [
@@ -22455,7 +22124,7 @@
           "url": "https://www.ouest-france.fr/high-tech/microsoft/une-panne-mondiale-touche-la-messagerie-outlook-de-microsoft-bed52906-df3c-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-13T08:43:21.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNDUzODEzMmU4MzAwYTllYTU5ODkwNDM3NGE5NjA5ZTM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=e0299a4cb6567177538e23399727ace0ff1b6d78d5833f7899e73813c16d37a9",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "science",
           "everFrontPage": true
@@ -23098,7 +22767,7 @@
           "url": "https://www.lefigaro.fr/secteur/high-tech/la-perte-de-jensen-huang-est-un-veritable-coup-dur-la-chute-du-patron-de-nvidia-provoque-un-seisme-sur-la-planete-ia-20261112",
           "publishedAt": "2026-11-12T18:41:51.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/2967x1668_crop/2026/11/12/fa58f67e0abf0ccd39867088732da973db042bcd318a1a88ac37243cd0c06206.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "science",
           "everFrontPage": true
@@ -26574,6 +26243,352 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 6,
       "summarizedAt": "2026-11-12T14:01:30.935Z"
+    },
+    {
+      "id": "a1f600d54173",
+      "slug": "l-insee-confirme-que-l-inflation-atteint-3-4-sur-un-an-en",
+      "title": "L'Insee confirme que l'inflation atteint 3,4% sur un an en octobre en France",
+      "createdAt": "2026-11-13T10:01:24.684Z",
+      "storyDay": "2026-11-13",
+      "articles": [
+        {
+          "id": "0a933d884df7",
+          "outletId": "tf1-info",
+          "headline": "L'inflation atteint 3,4% sur un an en octobre, au plus haut depuis 2024",
+          "url": "https://www.tf1info.fr/conso/l-inflation-atteint-3-4-sur-un-an-en-octobre-au-plus-haut-depuis-2024-insee-france-2475642.html",
+          "publishedAt": "2026-11-13T09:58:42.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/665/prix-alimentaires-inflation-crise-a2cc54-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "3d00fdeb0266",
+          "outletId": "cnews",
+          "headline": "France : l'inflation a atteint 3,4% sur un an, selon l'Insee",
+          "url": "https://www.cnews.fr/france/2026-11-13/france-linflation-atteint-34-sur-un-selon-linsee-1953311",
+          "publishedAt": "2026-11-13T09:46:20.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-07t154442z_662131997_rc23joaz0lit_rtrmadp_3_france-protest-taille1200_6af6ca38588e9.jpg?h=350a7e03&itok=3dKRDywr",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "b9ba70ff02ee",
+          "outletId": "franceinfo",
+          "headline": "L'inflation en France a atteint 3,4% sur un an en octobre, à son plus haut niveau depuis janvier 2024",
+          "url": "https://www.franceinfo.fr/economie/inflation/l-inflation-en-france-a-atteint-3-4-sur-un-an-en-octobre_8280635.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-13T09:27:05.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/daivCf4Km23qY3ivHBh7hAjAkuA/0x106:1024x682/432x243/filters:format(jpg)/2026/11/13/6af6c16dac9e5252696624.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "109924b00309",
+          "outletId": "le-figaro",
+          "headline": "L'inflation a bien atteint 3,4 % sur un an en octobre, selon l'Insee",
+          "url": "https://www.lefigaro.fr/conso/l-inflation-a-bien-atteint-3-4-sur-un-an-en-octobre-selon-l-insee-20261113",
+          "publishedAt": "2026-11-13T09:21:24.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/13/646bfa57b647ceaebac885d13efa230fc3aae7f3136b352bf989414cc20029ed.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "economy",
+          "everFrontPage": true
+        },
+        {
+          "id": "73c5e1375bda",
+          "outletId": "bfmtv",
+          "headline": "Au plus haut depuis près de 3 ans: l'Insee confirme que l'inflation a atteint 3,4% sur un an en octobre",
+          "url": "https://www.bfmtv.com/economie/economie-social/au-plus-haut-depuis-pres-de-3-ans-l-insee-confirme-que-l-inflation-a-atteint-3-4-sur-un-an-en-octobre_AD-202611130394.html",
+          "publishedAt": "2026-11-13T09:09:01.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Dih4QtiqPmSmrIEEvH0QRBP9PrI=/0x106:2048x1258/800x0/images/inflation-1646982.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        },
+        {
+          "id": "9451d53c3f41",
+          "outletId": "europe-1",
+          "headline": "L'inflation a bien atteint 3,4 % sur un an en octobre en France, selon l'Insee",
+          "url": "https://www.europe1.fr/economie/linflation-a-bien-atteint-34-sur-un-an-en-octobre-en-france-selon-linsee-1229999?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-13T08:15:00.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/inflation/caddie_inflation_jean-fran_ois_fort_hans_lucas_hans_lucas_via_afp_699577b47500d.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "economy"
+        }
+      ],
+      "topicId": "a1f600d54173",
+      "titledArticleCount": 6,
+      "section": "economy",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794477600000,
+          "end": 1794481200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794481200000,
+          "end": 1794484800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794484800000,
+          "end": 1794488400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794488400000,
+          "end": 1794492000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794492000000,
+          "end": 1794495600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794495600000,
+          "end": 1794499200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794499200000,
+          "end": 1794502800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794502800000,
+          "end": 1794506400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794506400000,
+          "end": 1794510000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794510000000,
+          "end": 1794513600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794513600000,
+          "end": 1794517200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794517200000,
+          "end": 1794520800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794520800000,
+          "end": 1794524400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794524400000,
+          "end": 1794528000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794528000000,
+          "end": 1794531600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794531600000,
+          "end": 1794535200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794535200000,
+          "end": 1794538800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794538800000,
+          "end": 1794542400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794542400000,
+          "end": 1794546000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794546000000,
+          "end": 1794549600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794549600000,
+          "end": 1794553200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794553200000,
+          "end": 1794556800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794556800000,
+          "end": 1794560400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1794560400000,
+          "end": 1794564000000,
+          "counts": {
+            "gauche": 1,
+            "centre": 1,
+            "droite": 3
+          },
+          "total": 5
+        }
+      ],
+      "summaries": {
+        "gauche": [
+          "L'Insee a validé le chiffre d'une inflation à 3,4% sur un an pour le mois d'octobre en France.",
+          "Cette progression marquée des prix constitue le niveau le plus élevé enregistré depuis janvier 2024.",
+          "La hausse est principalement attribuée à l'envolée des tarifs dans le secteur de l'énergie, conformément aux prévisions initiales."
+        ],
+        "centre": [
+          "Les données définitives de l'Insee confirment une inflation établie à 3,4% sur un an en octobre.",
+          "L'indicateur atteint ainsi son sommet depuis près de trois ans, porté principalement par la dynamique des prix énergétiques."
+        ],
+        "droite": [
+          "L'Insee a entériné une hausse des prix de 3,4% sur un an en octobre, un seuil inédit depuis janvier 2024.",
+          "La flambée est alimentée par les augmentations de l'énergie, notamment le gaz avec une hausse de 27,1% et les produits pétroliers à 38,5%.",
+          "Le contexte social est marqué par des manifestations contre la vie chère depuis la mi-octobre, sur fond de pressions géopolitiques."
+        ]
+      },
+      "differences": [
+        "Le camp gauche se limite à acter les données brutes de l'Insee et l'impact de l'énergie sans mentionner le contexte social.",
+        "Le camp centre adopte une formulation synthétique en mettant l'accent sur la durée de la tendance, mesurée sur près de trois ans.",
+        "Le camp droite détaille avec précision les pourcentages par type d'énergie et associe l'inflation au mouvement social de protestation contre la vie chère."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-11-13T10:01:24.684Z"
     },
     {
       "id": "61379705c03d",
@@ -31583,641 +31598,6 @@
       "summarizedAt": "2026-11-13T04:01:22.006Z"
     },
     {
-      "id": "78c1b027fbff",
-      "slug": "deux-membres-de-la-garde-republicaine-s-effondrent-sur-le",
-      "title": "Deux membres de la garde républicaine s’effondrent sur le parvis de l’Élysée près d’Emmanuel Macron",
-      "createdAt": "2026-11-12T14:01:30.935Z",
-      "storyDay": "2026-11-12",
-      "articles": [
-        {
-          "id": "b829033bdacf",
-          "outletId": "le-figaro",
-          "headline": "Deux membres de la garde républicaine s’écroulent coup sur coup près d’Emmanuel Macron sur le parvis de l’Élysée",
-          "url": "https://www.lefigaro.fr/politique/deux-membres-de-la-garde-republicaine-s-ecroulent-coup-sur-coup-pres-d-emmanuel-macron-sur-le-parvis-de-l-elysee-20261112",
-          "publishedAt": "2026-11-12T12:44:21.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/12/b778f121c4e04fce6a878f8e9ebfe0456f3e3595362a6cda0bbad9c4fffef1ce.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "b231acc9d456",
-          "outletId": "le-jdd",
-          "headline": "Élysée : deux gardes d’honneur s’effondrent à côté d’Emmanuel Macron pendant la visite du président slovaque",
-          "url": "https://www.lejdd.fr/politique/elysee-deux-gardes-dhonneur-seffondrent-a-cote-demmanuel-macron-pendant-la-visite-du-president-slovaque-188448",
-          "publishedAt": "2026-11-12T11:08:39.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/12/09/080_hl_xbouzas_3183873.jpg?VersionId=bdOrlvpiG9iNpG8dplskWVPmY2DBq2Ue",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "a4767c2751d8",
-          "outletId": "20-minutes",
-          "headline": "Élysée : Deux membres de la garde républicaine s’effondrent devant Emmanuel Macron",
-          "url": "https://www.20minutes.fr/societe/4262327-20261112-elysee-deux-membres-garde-republicaine-effondrent-devant-emmanuel-macron?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-12T10:35:09.000Z",
-          "imageUrl": "https://img.20mn.fr/vPQR4DAdRZeZwx4fFvZieyk/1200x768_sur-les-images-de-la-television-slovaque-on-voit-un-premier-garde-tomber-en-arriere-avant-de-chuter-au-sol",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "52729ba7f3d4",
-          "outletId": "huffpost",
-          "headline": "Au côté de Macron, deux membres de la Garde républicaine victimes de malaises vagaux",
-          "url": "https://www.huffingtonpost.fr/france/article/au-cote-de-macron-deux-membres-de-la-garde-republicaine-victimes-de-malaises-vagaux_356435.html",
-          "publishedAt": "2026-11-12T09:08:02.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/11/12/171/0/6109/3436/0/0/60/0/88fdc4a_upload-1-riezcduwzy1k-afp-20261111-d77k6yg-v2-highres-topshotfranceslovakiapoliticsdiplomacy.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "78c1b027fbff",
-      "titledArticleCount": 4,
-      "section": "politics",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794402000000,
-          "end": 1794405600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794405600000,
-          "end": 1794409200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794409200000,
-          "end": 1794412800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794412800000,
-          "end": 1794416400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794416400000,
-          "end": 1794420000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794420000000,
-          "end": 1794423600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794423600000,
-          "end": 1794427200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794427200000,
-          "end": 1794430800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794430800000,
-          "end": 1794434400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794434400000,
-          "end": 1794438000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794438000000,
-          "end": 1794441600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794441600000,
-          "end": 1794445200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794445200000,
-          "end": 1794448800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794448800000,
-          "end": 1794452400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794452400000,
-          "end": 1794456000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794456000000,
-          "end": 1794459600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794459600000,
-          "end": 1794463200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794463200000,
-          "end": 1794466800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794466800000,
-          "end": 1794470400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794470400000,
-          "end": 1794474000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794474000000,
-          "end": 1794477600000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794477600000,
-          "end": 1794481200000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794481200000,
-          "end": 1794484800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1794484800000,
-          "end": 1794488400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Deux militaires de la Garde républicaine ont subi des malaises vagaux sur le perron du palais présidentiel.",
-          "L'incident s'est produit mercredi 11 novembre lors de la venue du chef de l'État slovaque Peter Pellegrini.",
-          "L'Élysée a communiqué pour donner des nouvelles rassurantes sur l'état de santé des deux agents concernés."
-        ],
-        "droite": [
-          "Deux membres de la garde d'honneur se sont effondrés successivement à proximité immédiate d'Emmanuel Macron.",
-          "La scène s'est déroulée en plein air sur le parvis de l'Élysée lors d'une cérémonie officielle d'accueil.",
-          "Les malaises sont survenus sous les yeux du président français et de son homologue slovaque en visite."
-        ]
-      },
-      "differences": [
-        "Les médias de gauche contextualisent l'incident en précisant la nature médicale des faits et les informations communiquées par l'Élysée.",
-        "Les médias de droite axent leur traitement sur la chronologie visuelle des malaises successifs survenus en présence des chefs d'État."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-11-12T20:01:22.282Z"
-    },
-    {
-      "id": "99fe08e876aa",
-      "slug": "trois-jeunes-decedent-dans-un-accident-de-voiture-a-tours",
-      "title": "Trois jeunes décèdent dans un accident de voiture à Tours",
-      "createdAt": "2026-11-12T10:01:25.136Z",
-      "storyDay": "2026-11-12",
-      "articles": [
-        {
-          "id": "73b9c762bc7f",
-          "outletId": "le-parisien",
-          "headline": "Tours : trois jeunes, dont un mineur, sont décédés dans un accident de voiture",
-          "url": "https://www.leparisien.fr/indre-et-loire-37/tours-trois-jeunes-dont-un-mineur-sont-decedes-dans-un-accident-de-voiture-12-11-2026-GXDPR2B47BC2TFSDHK2AGISSGU.php",
-          "publishedAt": "2026-11-12T10:01:25.136Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "c34a479e6a83",
-          "outletId": "europe-1",
-          "headline": "Tours : trois morts dont un mineur dans un accident de voiture",
-          "url": "https://www.europe1.fr/faits-divers/tours-trois-morts-dont-un-mineur-dans-un-accident-de-voiture-1227644?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-12T09:55:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Pompiers/romain_longieras_hans_lucas_hans_lucas_via_afp_696a665573bad.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "95ae93b7d9bb",
-          "outletId": "le-figaro",
-          "headline": "Tours : trois morts, dont un mineur, après un accident de voiture",
-          "url": "https://www.lefigaro.fr/faits-divers/tours-trois-morts-dont-un-mineur-apres-un-accident-de-voiture-20261112",
-          "publishedAt": "2026-11-12T09:35:16.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/12/27a4c2231ce93e397167cc9b355e60efe8adcee3a08e46de399f0c5bf184a11d.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "852d08245f2a",
-          "outletId": "tf1-info",
-          "headline": "Tours : trois jeunes âgés de 17, 18 et 19 ans décèdent dans un grave accident de voiture",
-          "url": "https://www.tf1info.fr/justice-faits-divers/tours-trois-jeunes-ages-de-17-18-et-19-ans-decedent-dans-un-grave-accident-de-voiture-2475399.html",
-          "publishedAt": "2026-11-12T09:26:28.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/768/pompiers-illustration-2026-e44c93-1@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "topicId": "99fe08e876aa",
-      "titledArticleCount": 4,
-      "section": "misc",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794394800000,
-          "end": 1794398400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794398400000,
-          "end": 1794402000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794402000000,
-          "end": 1794405600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794405600000,
-          "end": 1794409200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794409200000,
-          "end": 1794412800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794412800000,
-          "end": 1794416400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794416400000,
-          "end": 1794420000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794420000000,
-          "end": 1794423600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794423600000,
-          "end": 1794427200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794427200000,
-          "end": 1794430800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794430800000,
-          "end": 1794434400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794434400000,
-          "end": 1794438000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794438000000,
-          "end": 1794441600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794441600000,
-          "end": 1794445200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794445200000,
-          "end": 1794448800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794448800000,
-          "end": 1794452400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794452400000,
-          "end": 1794456000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794456000000,
-          "end": 1794459600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794459600000,
-          "end": 1794463200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794463200000,
-          "end": 1794466800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794466800000,
-          "end": 1794470400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794470400000,
-          "end": 1794474000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794474000000,
-          "end": 1794477600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 3
-          },
-          "total": 3
-        },
-        {
-          "start": 1794477600000,
-          "end": 1794481200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "centre": [
-          "Trois jeunes individus ont perdu la vie à Tours lors d'une collision impliquant un unique véhicule."
-        ],
-        "droite": [
-          "Un drame de la route survenu à Tours a entraîné le décès de trois passagers âgés de 17, 18 et 19 ans.",
-          "La voiture a violemment percuté un arbre en fin de soirée, selon les informations rapportées par les secours.",
-          "La conductrice, âgée de 19 ans, a subi des blessures légères et a été admise au centre hospitalier universitaire Trousseau."
-        ]
-      },
-      "differences": [
-        "Le centre se limite à une mention succincte du décès de trois jeunes dans un accident de voiture à Tours.",
-        "La droite détaille l'événement en précisant l'âge des victimes, l'heure exacte de la collision nocturne, l'impact contre un arbre et la prise en charge médicale de la conductrice légèrement blessée."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-11-12T12:01:36.819Z"
-    },
-    {
       "id": "1bff09ef2aea",
       "slug": "au-perou-le-pape-leon-xiv-rencontre-des-victimes-d-abus-au-sein",
       "title": "Au Pérou, le pape Léon XIV rencontre des victimes d'abus au sein de l'Église et demande réparation",
@@ -32521,6 +31901,313 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 3,
       "summarizedAt": "2026-11-13T09:01:36.411Z"
+    },
+    {
+      "id": "3f78f1ae1d88",
+      "slug": "un-homme-meurt-en-inde-apres-avoir-avale-une-pastille-explosive",
+      "title": "Un homme meurt en Inde après avoir avalé une pastille explosive destinée aux sangliers",
+      "createdAt": "2026-11-13T09:01:36.411Z",
+      "storyDay": "2026-11-13",
+      "articles": [
+        {
+          "id": "afa673853de8",
+          "outletId": "le-parisien",
+          "headline": "« Erreur », « plaisanterie » ou meurtre ? Un homme tué après avoir avalé un bonbon explosif pour sangliers en Inde",
+          "url": "https://www.leparisien.fr/faits-divers/erreur-plaisanterie-ou-meurtre-un-homme-tue-apres-avoir-avale-un-bonbon-explosif-pour-sangliers-en-inde-13-11-2026-DC65H7QSONC6LODNFAVQB2ZBOI.php",
+          "publishedAt": "2026-11-13T09:01:36.411Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "fb7b049749ce",
+          "outletId": "le-figaro",
+          "headline": "Inde : un homme meurt après avoir avalé une pastille explosive utilisée pour tuer les sangliers",
+          "url": "https://www.lefigaro.fr/international/inde-un-homme-meurt-apres-avoir-avale-une-pastille-explosive-utilisee-pour-tuer-les-sangliers-20261113",
+          "publishedAt": "2026-11-13T08:57:28.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1999_crop/2026/11/13/6e3613ef0a8a1d41d9972dcce3ade223d097252009f0375a0151f909709a267f.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "fbeeb211858f",
+          "outletId": "cnews",
+          "headline": "Inde : un homme décède après avoir ingéré un «bonbon» qui cachait une pastille explosive",
+          "url": "https://www.cnews.fr/monde/2026-11-13/inde-un-homme-decede-apres-avoir-ingere-un-bonbon-qui-cachait-une-pastille",
+          "publishedAt": "2026-11-13T08:46:57.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_d6h4328-taille1200_6af6b095baf39.jpg?h=70189460&itok=1VTctNjJ",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "3f78f1ae1d88",
+      "titledArticleCount": 3,
+      "section": "misc",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794477600000,
+          "end": 1794481200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794481200000,
+          "end": 1794484800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794484800000,
+          "end": 1794488400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794488400000,
+          "end": 1794492000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794492000000,
+          "end": 1794495600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794495600000,
+          "end": 1794499200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794499200000,
+          "end": 1794502800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794502800000,
+          "end": 1794506400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794506400000,
+          "end": 1794510000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794510000000,
+          "end": 1794513600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794513600000,
+          "end": 1794517200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794517200000,
+          "end": 1794520800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794520800000,
+          "end": 1794524400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794524400000,
+          "end": 1794528000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794528000000,
+          "end": 1794531600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794531600000,
+          "end": 1794535200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794535200000,
+          "end": 1794538800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794538800000,
+          "end": 1794542400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794542400000,
+          "end": 1794546000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794546000000,
+          "end": 1794549600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794549600000,
+          "end": 1794553200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794553200000,
+          "end": 1794556800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794556800000,
+          "end": 1794560400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 2
+          },
+          "total": 2
+        },
+        {
+          "start": 1794560400000,
+          "end": 1794564000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        }
+      ],
+      "summaries": {
+        "centre": [
+          "Un homme est décédé en Inde après avoir ingéré un dispositif explosif destiné aux sangliers.",
+          "Les enquêteurs étudient la piste d'un meurtre, d'une erreur ou d'une mauvaise plaisanterie."
+        ],
+        "droite": [
+          "Rajendra Barautiya, un homme de 35 ans issu d'une communauté tribale du Madhya Pradesh, est mort après avoir avalé un bonbon piégé.",
+          "Deux individus ont été appréhendés et inculpés d'homicide volontaire par les forces de l'ordre locales.",
+          "Les investigations se poursuivent pour établir s'il s'agit d'un acte prémédité, d'une simple erreur ou d'une plaisanterie macabre."
+        ]
+      },
+      "differences": [
+        "Le camp centre propose un résumé concis s'interrogeant sur la qualification pénale de l'acte.",
+        "Le camp droite détaille précisément l'identité de la victime, sa provenance géographique et l'arrestation des deux suspects."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-11-13T10:01:24.684Z"
     }
   ]
 }
