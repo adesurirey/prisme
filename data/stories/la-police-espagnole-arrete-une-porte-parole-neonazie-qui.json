@@ -6,6 +6,18 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "b64f42d7ef7b",
+      "outletId": "le-figaro",
+      "headline": "Elle projetait d’aller «tirer» lors des manifestations à Paris : la porte-parole d’un groupuscule néonazi espagnol arrêtée, des armes retrouvées à son domicile",
+      "url": "https://www.lefigaro.fr/international/elle-projetait-d-aller-tirer-lors-des-manifestations-a-paris-la-porte-parole-d-un-groupuscule-neonazi-espagnol-arretee-des-armes-retrouvees-a-son-domicile-20261113",
+      "publishedAt": "2026-11-13T22:31:26.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2170_crop/2026/11/13/86b3e70b5e14ab254628c0afb6ba8423b3f9a014131e90a30ab604125e205260.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "a43e0e669a2d",
       "outletId": "liberation",
       "headline": "«Avec trois chargeurs, j’en tue 60» : une néonazie espagnole arrêtée après avoir projeté une fusillade à Paris",
@@ -51,20 +63,10 @@
     }
   ],
   "topicId": "a4aad956e3c9",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794520800000,
-      "end": 1794524400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794524400000,
       "end": 1794528000000,
@@ -294,24 +296,41 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794607200000,
+      "end": 1794610800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "La police espagnole a interpellé Isabel Peralta, figure du groupuscule d'extrême droite Núcleo Nacional, après la découverte d'un arsenal à son domicile.",
-      "Le quotidien El País révèle que la suspecte envisageait de mener une fusillade dans la capitale française, évoquant des messages où elle se vantait de tuer soixante personnes.",
-      "Des objets nazis ont également été saisis lors de l'opération menée par les autorités espagnoles."
+      "Isabel Peralta, porte-parole du groupe Núcleo Nacional, a été interpellée en Espagne après que les autorités ont découvert un arsenal d'armes et des objets nazis à son domicile.",
+      "Le quotidien El País révèle qu'elle projetait de perpétrer une fusillade à Paris et se vantait dans des conversations en disant «avec trois chargeurs, j'en tue 60».",
+      "Le HuffPost précise que ce projet d'attaque avec des armes à feu était envisagé pour la mi-octobre dans la capitale française."
     ],
     "centre": [
-      "Un groupuscule d'extrême droite espagnol a été démantelé à la suite d'une enquête du journal El País.",
-      "La porte-parole de cette organisation, Isabel Peralta, projetait de commettre une attaque par armes à feu à Paris au cours du mois d'octobre."
+      "La police espagnole a arrêté Isabel Peralta, figure de proue du groupuscule d'extrême droite Núcleo Nacional.",
+      "L'enquête démontre qu'elle planifiait de commettre une attaque armée à Paris, ce qui a mené au démantèlement de son organisation.",
+      "Le Parisien souligne que les perquisitions ont permis de saisir de nombreuses armes ainsi que des croix gammées."
+    ],
+    "droite": [
+      "Isabel Peralta, âgée de 24 ans et porte-parole d'un groupuscule néonazi espagnol, a été interpellée par les forces de l'ordre.",
+      "Des armes ont été saisies à son domicile alors qu'elle s'apprêtait à se rendre dans la capitale française pour ouvrir le feu lors de rassemblements.",
+      "Le Figaro rappelle que la suspecte s'était déjà illustrée l'été dernier en effectuant un salut nazi pendant un rassemblement à Madrid."
     ]
   },
   "differences": [
-    "La gauche insiste lourdement sur la dangerosité idéologique de la suspecte en relayant ses propos menaçants et la saisie d'objets nazis.",
-    "Le centre adopte un ton plus neutre et factuel en se concentrant sur le démantèlement du groupuscule et la nature du projet d'attentat."
+    "La gauche met l'accent sur la menace précise et les propos violents de la suspecte en citant directement ses déclarations menaçantes révélées par la presse.",
+    "Le centre adopte un angle factuel centré sur le démantèlement du groupuscule d'extrême droite et la saisie de l'arsenal nazi.",
+    "La droite insiste sur le profil radical de l'individu et rappelle ses antécédents de militante extrémiste."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-13T22:01:44.777Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-13T23:01:21.307Z"
 }
