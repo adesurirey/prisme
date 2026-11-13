@@ -1,10 +1,21 @@
 {
   "id": "3e2067b870ea",
   "slug": "le-premier-ministre-recoit-les-syndicats-de-fonctionnaires-pour",
-  "title": "Le Premier ministre reçoit les syndicats de fonctionnaires pour négocier sur les salaires",
+  "title": "Le Premier ministre reçoit les syndicats de fonctionnaires sous la menace d’un appel à la grève",
   "createdAt": "2026-11-13T07:01:34.068Z",
   "storyDay": "2026-11-13",
   "articles": [
+    {
+      "id": "bf893145ff7a",
+      "outletId": "le-parisien",
+      "headline": "Manifestation du 14 novembre à Paris : 30 000 à 60 000 personnes attendues pour un parcours entre République et Nation",
+      "url": "https://www.leparisien.fr/paris-75/manifestation-du-14-novembre-a-paris-30-000-a-60-000-personnes-attendues-pour-un-parcours-entre-republique-et-nation-13-11-2026-G6U6VAUGOVE7ZLU4WUO4JTO3OY.php",
+      "publishedAt": "2026-11-13T08:01:28.549Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "politics"
+    },
     {
       "id": "b9ee0fba0c7f",
       "outletId": "franceinfo",
@@ -30,30 +41,10 @@
     }
   ],
   "topicId": "1e52bac1f877",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794466800000,
-      "end": 1794470400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794470400000,
-      "end": 1794474000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794474000000,
       "end": 1794477600000,
@@ -273,6 +264,50 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1794553200000,
+      "end": 1794556800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794556800000,
+      "end": 1794560400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le Premier ministre reçoit les syndicats de la fonction publique vendredi matin à Matignon.",
+      "Les organisations syndicales réclament de meilleures rémunérations après l'absence de revalorisation pour les agents publics.",
+      "Une grève interprofessionnelle et de la fonction publique est annoncée pour le 17 novembre."
+    ],
+    "centre": [
+      "Le chef du gouvernement s'entretient avec les syndicats de fonctionnaires sous la pression d'un appel à la grève.",
+      "Une mobilisation est prévue le 14 novembre à Paris avec un parcours entre les places de la République et de la Nation, attirant entre 30 000 et 60 000 manifestants."
+    ],
+    "droite": [
+      "Le Premier ministre rencontre les syndicats de la fonction publique afin d'aborder la question des salaires.",
+      "L'exécutif maintient son refus d'une augmentation générale et prolonge le gel du point d'indice pour la quatrième année consécutive, tel que décidé dès juillet.",
+      "Le Figaro relaie l'appel à un « acte V » de mobilisation sociale prévu dès le samedi."
+    ]
+  },
+  "differences": [
+    "La gauche met en avant l'urgence des revendications salariales des agents publics face à la crise sociale tout en annonçant la mobilisation du 17 novembre.",
+    "Le centre se focalise sur les aspects pratiques et logistiques des manifestations parisiennes ainsi que sur le rapport de force politique immédiat à Matignon.",
+    "La droite insiste sur la fermeté de l'exécutif face aux syndicats en rappelant les arbitrages budgétaires passés, tout en qualifiant le mouvement social d'« acte V »."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-11-13T08:01:28.549Z"
 }

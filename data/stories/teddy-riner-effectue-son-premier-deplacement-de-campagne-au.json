@@ -6,6 +6,27 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "3ea6c80916e3",
+      "outletId": "liberation",
+      "headline": "Teddy Riner fera son premier déplacement de campagne au salon du «Made in France»",
+      "url": "https://www.liberation.fr/politique/elections/teddy-riner-fera-son-premier-deplacement-de-campagne-au-salon-du-made-in-france-20261113_JRWNH5A7QRASRKMAFXWLDPTRNI/",
+      "publishedAt": "2026-11-13T07:52:52.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "819a90dffb22",
+      "outletId": "franceinfo",
+      "headline": "Teddy Riner va effectuer son premier déplacement de campagne samedi au Salon Made in France, à Paris",
+      "url": "https://www.franceinfo.fr/elections/teddy-riner-va-effectuer-son-premier-deplacement-de-campagne-samedi-au-salon-made-in-france-a-paris_8280578.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-13T07:15:07.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/mUFaUPymFxtMR9D3I0kLgWFBWps/0x0:1024x576/432x243/filters:format(jpg)/2026/11/13/6af6b6896581b984449952.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "113f37438391",
       "outletId": "le-parisien",
       "headline": "Présidentielle 2027 : Teddy Riner effectuera son premier déplacement au salon du Made in France ce samedi",
@@ -40,7 +61,7 @@
     }
   ],
   "topicId": "8ba7f9fd8e5f",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "politics",
   "everInEdition": true,
   "activity": [
@@ -278,28 +299,36 @@
       "start": 1794553200000,
       "end": 1794556800000,
       "counts": {
-        "gauche": 0,
+        "gauche": 2,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 3
     }
   ],
   "summaries": {
+    "gauche": [
+      "Le judoka Teddy Riner effectue sa première sortie de campagne électorale au salon du «Made in France» à Paris.",
+      "Cette candidature surprise à l'élection présidentielle a été officialisée au début de la semaine par le sportif.",
+      "Le quintuple champion olympique revendique une position politique qui n'est «ni de droite ni de gauche» selon franceinfo."
+    ],
     "centre": [
-      "Le candidat à l'élection présidentielle de 2027 Teddy Riner réalisera samedi son premier déplacement officiel sur le terrain.",
-      "Le judoka se rendra à partir de 14 heures au salon du Made in France, situé porte de Versailles."
+      "Le candidat à la présidentielle 2027 Teddy Riner se rendra samedi au salon du Made in France pour son premier déplacement.",
+      "Le sportif a officialisé sa course vers la magistrature suprême à la surprise générale en début de semaine.",
+      "BFMTV précise que l'événement aura lieu précisément samedi 14 novembre."
     ],
     "droite": [
-      "Le sportif Teddy Riner effectuera son premier déplacement de campagne samedi au salon Made in France.",
-      "Cette visite inaugurale intervient après l'annonce surprise de sa candidature le 9 novembre dernier."
+      "Le néo-candidat Teddy Riner inaugure ses déplacements de campagne au salon Made in France.",
+      "TF1 Info indique que le judoka se rendra porte de Versailles samedi 14 novembre à 14h.",
+      "Cette candidature à l'élection présidentielle de 2027 a été déclarée le 9 novembre."
     ]
   },
   "differences": [
-    "Le camp du centre met l'accent sur l'aspect programmatique et pratique de l'événement en précisant l'horaire exact et le lieu du déplacement.",
-    "Le camp de droite qualifie explicitement Teddy Riner de « néo-candidat » et rappelle la surprise de sa déclaration du 9 novembre pour contextualiser sa démarche."
+    "La gauche insiste sur le positionnement transpartisan revendiqué par le candidat, qui se veut « ni de droite ni de gauche ».",
+    "Le centre livre un traitement factuel centré sur l'annonce de la candidature et la confirmation des informations logistiques du déplacement.",
+    "La droite privilégie les détails programmés et l'agenda précis de ce premier événement de campagne porte de Versailles."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-13T07:01:34.068Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-13T08:01:28.549Z"
 }
