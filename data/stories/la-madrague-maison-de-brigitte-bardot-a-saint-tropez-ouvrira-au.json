@@ -1,10 +1,22 @@
 {
   "id": "16a9715d1d90",
   "slug": "la-madrague-maison-de-brigitte-bardot-a-saint-tropez-ouvrira-au",
-  "title": "La Madrague, maison de Brigitte Bardot à Saint-Tropez, ouvrira au public l'été prochain",
+  "title": "La maison de Brigitte Bardot à Saint-Tropez ouvre au public l'été prochain",
   "createdAt": "2026-11-13T20:01:34.716Z",
   "storyDay": "2026-11-13",
   "articles": [
+    {
+      "id": "a984ac9eb14c",
+      "outletId": "20-minutes",
+      "headline": "Brigitte Bardot : La Madrague sera ouverte au public à partir de l’été prochain",
+      "url": "https://www.20minutes.fr/arts-stars/culture/4262793-20261113-brigitte-bardot-madrague-ouverte-public-partir-prochain?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-13T20:54:01.000Z",
+      "imageUrl": "https://img.20mn.fr/Rg3PZuEWTj2NqQUIoaWAkSk/1200x768_cette-photographie-montre-une-vue-de-la-maison-la-madrague-propriete-de-la-defunte-actrice-francaise-brigitte-bardot-a-saint-tropez-dans-le-sud-est-de-la-france-la-legende-du-cinema-francais-brigitte-bardot-est-decedee-a-91-ans-a-appris-l-afp-aupres-de-la-fondation-bardot-le-28-decembre-2025-saint-tropez-france-06-01-2026-03vulaurent-20260106vuok-0033-credit-laurent-vu-sipa-2601061858",
+      "frontPage": true,
+      "kind": "news",
+      "section": "culture",
+      "everFrontPage": true
+    },
     {
       "id": "5e565c7c0623",
       "outletId": "ouest-france",
@@ -42,20 +54,10 @@
     }
   ],
   "topicId": "16a9715d1d90",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "culture",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794513600000,
-      "end": 1794517200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794517200000,
       "end": 1794520800000,
@@ -285,6 +287,38 @@
         "droite": 1
       },
       "total": 3
+    },
+    {
+      "start": 1794600000000,
+      "end": 1794603600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "La maison de La Madrague à Saint-Tropez ouvrira au public à partir de l'été 2027 sur réservation et en petits groupes.",
+      "La propriété avait été donnée par l'actrice à sa fondation dès 1992, tandis que les modalités précises d'accueil restent encore à définir."
+    ],
+    "centre": [
+      "La Fondation Bardot a officialisé l'ouverture au public de la célèbre demeure de Saint-Tropez pour l'été 2027.",
+      "La propriété constituait le lieu de vie de l'ancienne actrice jusqu'à son décès survenu le 28 décembre 2025."
+    ],
+    "droite": [
+      "La demeure historique de Saint-Tropez où l'actrice a vécu durant environ 70 ans sera accessible aux visiteurs dès l'été 2027 sur réservation et en petits groupes.",
+      "La Fondation Brigitte Bardot assure que les lieux seront montrés « dans son jus » et conservés intacts, comme si l'icône était simplement absente."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur les aspects pratiques et logistiques de l'ouverture ainsi que sur l'historique du don de la villa à la fondation.",
+    "Le centre privilégie une approche institutionnelle et chronologique en rappelant le rôle de la Fondation Bardot et la date du décès de l'actrice.",
+    "La droite adopte un angle patrimonial et immersif en insistant sur la préservation des lieux « dans son jus » et sur l'ancienneté de la résidence de l'icône."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-13T21:01:26.990Z"
 }
