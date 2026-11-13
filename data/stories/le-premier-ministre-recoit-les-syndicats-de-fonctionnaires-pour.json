@@ -1,10 +1,20 @@
 {
   "id": "3e2067b870ea",
   "slug": "le-premier-ministre-recoit-les-syndicats-de-fonctionnaires-pour",
-  "title": "Le Premier ministre reçoit les syndicats de fonctionnaires pour aborder les salaires sous la menace d'un appel à la grève",
+  "title": "Le Premier ministre reçoit les syndicats de fonctionnaires sous la menace d’un appel à la grève",
   "createdAt": "2026-11-13T07:01:34.068Z",
   "storyDay": "2026-11-13",
   "articles": [
+    {
+      "id": "dd32b2163b44",
+      "outletId": "liberation",
+      "headline": "Parcours, dispositif policier, mobilisation : à quoi s’attendre pour les manifestations de ce samedi 14 novembre ?",
+      "url": "https://www.liberation.fr/economie/social/mouvement-social-les-differentes-mobilisations-prevues-ce-samedi-14-novembre-20261112_XMJHHCIKYFHGFHIQFQMLUNN5PM/",
+      "publishedAt": "2026-11-13T11:34:34.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
     {
       "id": "a25ff6a31461",
       "outletId": "franceinfo",
@@ -84,30 +94,10 @@
     }
   ],
   "topicId": "1e52bac1f877",
-  "titledArticleCount": 6,
+  "titledArticleCount": 8,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794477600000,
-      "end": 1794481200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794481200000,
-      "end": 1794484800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794484800000,
       "end": 1794488400000,
@@ -327,31 +317,51 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794564000000,
+      "end": 1794567600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794567600000,
+      "end": 1794571200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le Premier ministre Sébastien Lecornu rencontre les syndicats de la fonction publique dans un climat de tension salariale.",
-      "La CGT fustige le traitement des agents publics, jugé comme le pire de l'histoire sociale, tandis qu'une intersynergie appelle à manifester le 17 novembre.",
-      "Le gouvernement reste opposé à tout dégel du point d'indice après avoir privilégié le Smic."
+      "Plusieurs organisations syndicales, associations et gilets jaunes appellent à des manifestations communes et à la convergence des colères ce samedi 14 novembre.",
+      "Les syndicats de la fonction publique se mobilisent pour exiger une revalorisation du point d'indice et préparent une grève spécifique le 17 novembre.",
+      "Le gouvernement fait face à la contestation des agents publics après l'annonce d'un coup de pouce au smic qui ne les concerne pas."
     ],
     "centre": [
-      "Sébastien Lecornu reçoit les syndicats de la fonction publique à Matignon pour négocier sur le pouvoir d'achat et les salaires.",
-      "Sophie Binet qualifie les agents publics de mal traités à l'entrée de cette réunion sous la menace d'un appel à la grève.",
-      "Des notes du renseignement prévoient entre 30.000 et 60.000 manifestants pour les mobilisations du week-end à Paris."
+      "Le Premier ministre Sébastien Lecornu reçoit les organisations syndicales de la fonction publique à Matignon ce vendredi 13 novembre.",
+      "Les agents publics réclament une revalorisation de leur rémunération de base via le dégel du point d'indice, dénonçant un traitement défavorable de la part de l'exécutif.",
+      "Les notes des services de renseignement anticipent la participation de 30.000 à 60.000 personnes aux cortèges parisiens prévus ce samedi 14 novembre entre République et Nation."
     ],
     "droite": [
-      "Les syndicats de fonctionnaires sont reçus par Sébastien Lecornu afin de réclamer des hausses de rémunération.",
-      "Le gouvernement maintient son gel du point d'indice pour la quatrième année consécutive et exclut toute augmentation générale.",
-      "Les mobilisations sociales se poursuivent avec un appel à un acte V des manifestations ce samedi."
+      "Les syndicats de fonctionnaires sont reçus par Sébastien Lecornu pour négocier de meilleures rémunérations sous la menace d'un nouvel appel à la grève.",
+      "L'exécutif maintient sa position arrêtée dès le mois de juillet d'exclure toute augmentation générale et de geler le point d'indice pour la quatrième année consécutive.",
+      "L'intersyndicale appelle à un acte V de la colère sociale ce samedi pour amplifier la contestation dans la rue."
     ]
   },
   "differences": [
-    "La gauche insiste sur l'impasse des négociations face à un Premier ministre qu'elle qualifie de rétif et met en avant la convergence vers la journée de grève du 17 novembre.",
-    "Le centre adopte un format de suivi direct centré sur les déclarations chiffrées des notes du renseignement et les propos des syndicalistes à l'entrée de Matignon.",
-    "La droite met en avant la fermeté de l'exécutif face aux revendications salariales en rappelant le gel durable du point d'indice et replace la contestation dans une séquence de manifestations répétées."
+    "La gauche met l'accent sur la convergence des luttes syndicales et sociales et insiste sur l'exclusion des fonctionnaires des récentes mesures salariales.",
+    "Le centre adopte un angle factuel et institutionnel, détaillant le déroulement des rencontres à Matignon, les estimations chiffrées des services de police et les parcours des manifestations.",
+    "La droite insiste sur le rapport de force politique en soulignant le gel persistant du point d'indice décidé dès l'été et la menace directe d'un nouvel acte de contestation."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6,
-  "summarizedAt": "2026-11-13T09:01:36.411Z"
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-13T12:01:23.040Z"
 }

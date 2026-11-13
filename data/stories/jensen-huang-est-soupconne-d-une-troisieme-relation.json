@@ -1,10 +1,22 @@
 {
   "id": "e6d92a5f1593",
   "slug": "jensen-huang-est-soupconne-d-une-troisieme-relation",
-  "title": "Jensen Huang est soupçonné d'une troisième relation extraconjugale avec une salariée",
+  "title": "Jensen Huang est soupçonné d’une troisième relation extraconjugale avec une salariée",
   "createdAt": "2026-11-13T08:01:28.549Z",
   "storyDay": "2026-11-13",
   "articles": [
+    {
+      "id": "6f26d1cd36b6",
+      "outletId": "le-figaro",
+      "headline": "L’ex-patron de Nvidia Jensen Huang soupçonné d’une troisième relation extraconjugale, avec une autre employée",
+      "url": "https://www.lefigaro.fr/secteur/high-tech/l-ex-patron-de-nvidia-jensen-huang-soupconne-d-une-troisieme-relation-extraconjugale-avec-une-autre-employee-20261113",
+      "publishedAt": "2026-11-13T11:39:18.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/13/f9f1113fa51a70b4ff09383699f48e68a5200e37997a3de7e4f0bfe17d827b95.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
     {
       "id": "2dcd6eb8c026",
       "outletId": "franceinfo",
@@ -52,20 +64,10 @@
     }
   ],
   "topicId": "97cccdbf9a27",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794481200000,
-      "end": 1794484800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794484800000,
       "end": 1794488400000,
@@ -295,30 +297,40 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794567600000,
+      "end": 1794571200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Jensen Huang, l'ancien dirigeant de Nvidia, a été contraint de quitter ses fonctions à la suite de scandales intimes.",
-      "Il est convoqué pour une audition devant le Sénat américain prévue en décembre.",
-      "Les révélations incluent notamment une liaison avec une ressortissante chinoise soupçonnée d'activités d'espionnage."
+      "Jensen Huang a démissionné de ses fonctions de PDG de Nvidia à la suite de révélations sur ses liaisons extraconjugales.",
+      "Le dirigeant fait l'objet d'une convocation devant le Sénat américain prévue en décembre prochain.",
+      "Une des relations du patron déchu concerne une ressortissante chinoise soupçonnée d'activités d'espionnage."
     ],
     "centre": [
-      "Jensen Huang fait face à des allégations concernant une troisième liaison extraconjugale au sein de son entreprise.",
-      "Ces nouvelles informations ciblent une relation présumée entre l'ancien PDG de Nvidia et une salariée du groupe."
+      "Jensen Huang fait face à de nouvelles révélations médiatiques évoquant une troisième liaison au sein de l'entreprise Nvidia."
     ],
     "droite": [
-      "Jensen Huang a démissionné de la direction de Nvidia à la suite de plusieurs affaires impliquant ses relations personnelles.",
-      "La presse de droite met en lumière les accusations d'espionnage visant sa liaison identifiée comme Alice Huang, tandis que Pékin dément ces allégations.",
-      "Selon Reuters, une troisième salariée serait concernée par ces liaisons contraires au code de conduite de l'entreprise."
+      "Jensen Huang a quitté la tête de Nvidia après des informations faisant état d'une troisième relation intime avec une employée du groupe.",
+      "L'agence Reuters indique que le dirigeant aurait également entretenu des liaisons avec Kimberly Powell et une femme prénommée Alice Huang.",
+      "Les services américains ciblent Alice Huang en raison de soupçons d'espionnage pour le compte de la Chine, ce que Pékin dément.",
+      "Le code de conduite de l'entreprise interdit formellement les relations personnelles entre collaborateurs pour éviter tout conflit d'intérêts."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la dimension institutionnelle et la convocation du dirigeant au Sénat américain ainsi que sur les soupçons d'espionnage.",
-    "Le centre se focalise exclusivement sur les nouvelles révélations d'ordre privé et l'implication d'une nouvelle salariée.",
-    "La droite dresse un récit détaillé des enquêtes et des démentis officiels venus de Chine tout en soulignant la violation du code de conduite de l'entreprise."
+    "La gauche met l'accent sur les conséquences politiques et institutionnelles de la démission avec la convocation au Sénat américain.",
+    "Le centre se focalise strictement sur les détails de la vie privée du dirigeant et les nouvelles accusations d'adultère.",
+    "La droite détaille l'ensemble des liaisons reprochées à l'homme d'affaires ainsi que les accusations d'espionnage impliquant Pékin."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-13T11:01:32.772Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-13T12:01:23.040Z"
 }
