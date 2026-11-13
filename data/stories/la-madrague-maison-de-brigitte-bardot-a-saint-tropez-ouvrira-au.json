@@ -6,6 +6,16 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "20b5a86f5f5c",
+      "outletId": "liberation",
+      "headline": "La Madrague de Brigitte Bardot à Saint-Tropez ouvrira au public à partir de l’été prochain",
+      "url": "https://www.liberation.fr/societe/la-madrague-de-brigitte-bardot-a-saint-tropez-ouvrira-au-public-a-partir-de-lete-prochain-20261113_3AU76CB7YJGKFPB3VQZBPPNR7U/",
+      "publishedAt": "2026-11-13T20:58:40.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
       "id": "a984ac9eb14c",
       "outletId": "20-minutes",
       "headline": "Brigitte Bardot : La Madrague sera ouverte au public à partir de l’été prochain",
@@ -24,7 +34,7 @@
       "url": "https://www.ouest-france.fr/cinema/brigitte-bardot/la-madrague-celebre-demeure-de-brigitte-bardot-a-saint-tropez-sera-ouverte-au-public-a-partir-de-lete-prochain-1792d852-df99-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-13T19:56:03.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExM2MwMjYwMTQwODcwM2FmY2MyZDI4ZWNiMjVkZWE2Yjc?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=02d4d49f5d2504ecae3ee004021f477e51bbbfc262b11af0aa72a1b225f5a469",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "culture",
       "everFrontPage": true
@@ -54,7 +64,7 @@
     }
   ],
   "topicId": "16a9715d1d90",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "culture",
   "everInEdition": true,
   "activity": [
@@ -292,33 +302,36 @@
       "start": 1794600000000,
       "end": 1794603600000,
       "counts": {
-        "gauche": 1,
+        "gauche": 2,
         "centre": 0,
         "droite": 0
       },
-      "total": 1
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "La maison de La Madrague à Saint-Tropez ouvrira au public à partir de l'été 2027 sur réservation et en petits groupes.",
-      "La propriété avait été donnée par l'actrice à sa fondation dès 1992, tandis que les modalités précises d'accueil restent encore à définir."
+      "La maison de La Madrague à Saint-Tropez sera ouverte au public à l'été 2027 par la Fondation Bardot.",
+      "Les visites de cette ancienne demeure de pêcheur se dérouleront par petits groupes et sur réservation.",
+      "Le Monde indique que les modalités exactes d'accueil des visiteurs restent à définir.",
+      "L'actrice avait fait don de la propriété à sa fondation dès 1992."
     ],
     "centre": [
-      "La Fondation Bardot a officialisé l'ouverture au public de la célèbre demeure de Saint-Tropez pour l'été 2027.",
-      "La propriété constituait le lieu de vie de l'ancienne actrice jusqu'à son décès survenu le 28 décembre 2025."
+      "La Fondation Bardot a confirmé l'ouverture de La Madrague à Saint-Tropez pour l'été 2027.",
+      "Cette propriété emblématique était le lieu de vie de Brigitte Bardot jusqu'à son décès survenu le 28 décembre 2025."
     ],
     "droite": [
-      "La demeure historique de Saint-Tropez où l'actrice a vécu durant environ 70 ans sera accessible aux visiteurs dès l'été 2027 sur réservation et en petits groupes.",
-      "La Fondation Brigitte Bardot assure que les lieux seront montrés « dans son jus » et conservés intacts, comme si l'icône était simplement absente."
+      "La Madrague ouvrira ses portes aux visiteurs dès l'été 2027 selon l'annonce de la Fondation Brigitte Bardot.",
+      "La demeure sera accessible dans son jus et conservée intacte telle que l'icône l'a laissée après près de 70 ans de présence.",
+      "L'acquisition de la propriété par l'actrice remonte à l'année 1958."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur les aspects pratiques et logistiques de l'ouverture ainsi que sur l'historique du don de la villa à la fondation.",
-    "Le centre privilégie une approche institutionnelle et chronologique en rappelant le rôle de la Fondation Bardot et la date du décès de l'actrice.",
-    "La droite adopte un angle patrimonial et immersif en insistant sur la préservation des lieux « dans son jus » et sur l'ancienneté de la résidence de l'icône."
+    "La gauche adopte un ton informatif centré sur les modalités pratiques de la visite et l'historique du don à la fondation.",
+    "Le centre livre un compte-rendu factuel et synthétique de l'annonce officielle en rappelant la date du décès de la star.",
+    "La droite privilégie une approche patrimoniale et descriptive en insistant sur l'état intact de la maison et son authenticité."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-13T21:01:26.990Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-13T22:01:44.777Z"
 }

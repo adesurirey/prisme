@@ -6,6 +6,16 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "a43e0e669a2d",
+      "outletId": "liberation",
+      "headline": "«Avec trois chargeurs, j’en tue 60» : une néonazie espagnole arrêtée après avoir projeté une fusillade à Paris",
+      "url": "https://www.liberation.fr/societe/police-justice/avec-trois-chargeurs-jen-tue-60-une-neonazie-espagnole-arretee-apres-avoir-projete-une-fusillade-a-paris-20261113_SFV2SO5C7ZE6JEQPFU3RIRCDXI/",
+      "publishedAt": "2026-11-13T21:09:57.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "8e9a35c0d7e8",
       "outletId": "20-minutes",
       "headline": "Une néonazie espagnole qui voulait commettre un attentat à Paris arrêtée",
@@ -41,50 +51,10 @@
     }
   ],
   "topicId": "a4aad956e3c9",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794506400000,
-      "end": 1794510000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794510000000,
-      "end": 1794513600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794513600000,
-      "end": 1794517200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794517200000,
-      "end": 1794520800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794520800000,
       "end": 1794524400000,
@@ -284,25 +254,64 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794592800000,
+      "end": 1794596400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794596400000,
+      "end": 1794600000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794600000000,
+      "end": 1794603600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794603600000,
+      "end": 1794607200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Isabel Peralta, figure du groupuscule espagnol Núcleo Nacional, a été interpellée par les forces de l'ordre.",
-      "L'enquête indique qu'elle projetaît une fusillade dans la capitale française au cours du mois d'octobre.",
-      "Un important arsenal d'armes a été saisi au domicile de cette militante d'extrême droite."
+      "La police espagnole a interpellé Isabel Peralta, figure du groupuscule d'extrême droite Núcleo Nacional, après la découverte d'un arsenal à son domicile.",
+      "Le quotidien El País révèle que la suspecte envisageait de mener une fusillade dans la capitale française, évoquant des messages où elle se vantait de tuer soixante personnes.",
+      "Des objets nazis ont également été saisis lors de l'opération menée par les autorités espagnoles."
     ],
     "centre": [
-      "La police espagnole a procédé au démantèlement d'une structure néonazie active dans le pays.",
-      "La porte-parole de cette organisation envisageait de commettre un attentat armé à Paris.",
-      "Les investigations ont permis la découverte de nombreux équipements militaires et de symboles hitlériens chez la suspecte."
+      "Un groupuscule d'extrême droite espagnol a été démantelé à la suite d'une enquête du journal El País.",
+      "La porte-parole de cette organisation, Isabel Peralta, projetait de commettre une attaque par armes à feu à Paris au cours du mois d'octobre."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur le profil militant de la suspecte et la menace terroriste directe qu'elle représentait pour Paris.",
-    "Le centre privilégie l'angle de l'opération policière internationale et l'arsenal saisi lors du démantèlement du groupuscule."
+    "La gauche insiste lourdement sur la dangerosité idéologique de la suspecte en relayant ses propos menaçants et la saisie d'objets nazis.",
+    "Le centre adopte un ton plus neutre et factuel en se concentrant sur le démantèlement du groupuscule et la nature du projet d'attentat."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-13T18:01:29.371Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-13T22:01:44.777Z"
 }
