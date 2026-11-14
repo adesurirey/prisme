@@ -308,5 +308,30 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Un adolescent de 15 ans a succombé après avoir été fauché par une automobile lors d'une compétition automobile clandestine à Gerzat, dans l'agglomération de Clermont-Ferrand.",
+      "Le drame est survenu au cours de la nuit du vendredi au samedi.",
+      "Une procédure judiciaire pour homicide routier aggravé a été initiée par la justice.",
+      "Le conducteur impliqué dans la collision a pris la fuite et demeure activement recherché par les forces de l'ordre selon le parquet de Clermont-Ferrand."
+    ],
+    "centre": [
+      "Un jeune de 15 ans est mort après avoir été heurté par une voiture au cours d'un rassemblement automobile illégal dans le Puy-de-Dôme.",
+      "L'accident mortel s'est produit durant la nuit de vendredi à samedi près de Clermont-Ferrand.",
+      "Le chauffeur responsable de l'impact a pris la fuite et fait l'objet de recherches par la police d'après le parquet clermontois."
+    ],
+    "droite": [
+      "Un spectateur âgé de 15 ans a trouvé la mort près de Clermont-Ferrand lors d'une course automobile clandestine.",
+      "L'adolescent a été percuté mortellement par un automobiliste durant la nuit de vendredi à samedi."
+    ]
+  },
+  "differences": [
+    "La gauche insiste sur les suites judiciaires immédiates en mentionnant l'ouverture d'une enquête pour homicide routier aggravé.",
+    "Le centre met l'accent sur les circonstances de l'accident et précise que le conducteur responsable est en fuite et recherché par le parquet.",
+    "La droite privilégie un récit centré sur le déroulement des faits en qualifiant la victime de jeune spectateur d'une course sauvage."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-14T11:01:25.678Z"
 }
