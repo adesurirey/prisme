@@ -17,6 +17,17 @@
       "section": "society"
     },
     {
+      "id": "c6a32f4d3767",
+      "outletId": "cnews",
+      "headline": "Rennes : le plus grand lycée de Bretagne fermé quelques jours après des débordements",
+      "url": "https://www.cnews.fr/france/2026-11-14/rennes-le-plus-grand-lycee-de-bretagne-ferme-quelques-jours-apres-des",
+      "publishedAt": "2026-11-14T07:58:19.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/renneslyc_e_6af80da7394f3.jpg?itok=juW9xOb0",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "8969cc7c2fad",
       "outletId": "le-figaro",
       "headline": "Rennes : le plus grand lycée de Bretagne fermé une semaine après des débordements",
@@ -41,7 +52,7 @@
     }
   ],
   "topicId": "73bc3d1e6e4e",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "society",
   "everInEdition": true,
   "activity": [
@@ -271,9 +282,9 @@
       "counts": {
         "gauche": 0,
         "centre": 0,
-        "droite": 0
+        "droite": 1
       },
-      "total": 0
+      "total": 1
     },
     {
       "start": 1794643200000,
@@ -285,5 +296,27 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le lycée Bréquigny à Rennes ferme ses portes du 16 au 20 novembre suite à des dégradations.",
+      "Un groupe incluant des élèves a saccagé des portes, des vitres et un bureau avec des extincteurs selon le rectorat."
+    ],
+    "centre": [
+      "Le plus grand établissement scolaire de Bretagne bascule en enseignement à distance pour une semaine.",
+      "La direction réagit à de graves débordements et actes de vandalisme survenus le 12 novembre."
+    ],
+    "droite": [
+      "Le lycée Bréquigny de Rennes interrompt l'accueil physique de ses trois mille élèves et étudiants jusqu'au 20 novembre.",
+      "La décision fait suite à des intrusions et des destructions matérielles commises en marge d'un mouvement lycéen."
+    ]
+  },
+  "differences": [
+    "La gauche privilégie un compte-rendu laconique basé strictement sur le communiqué du rectorat concernant les dégradations matérielles.",
+    "Le centre met l'accent sur l'ampleur inédite de la fermeture administrative visant le plus grand établissement breton.",
+    "La droite insiste sur le contexte d'agitation lycéenne et le volume des effectifs pénalisés par le passage au distanciel."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-14T10:01:28.807Z"
 }

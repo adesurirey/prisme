@@ -6,6 +6,51 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "b90bd65a40e5",
+      "outletId": "europe-1",
+      "headline": "En direct - Manifestations du 14 novembre : une convergence inédite de revendications attendue ce samedi en France",
+      "url": "https://www.europe1.fr/societe/en-direct-manifestations-du-14-novembre-une-convergence-inedite-de-revendications-attendue-ce-samedi-en-france-1232735?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-14T09:54:35.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/14/10/080_hl_smaouche_3377416_1_6af82f5935573.jpg",
+      "frontPage": false,
+      "kind": "live",
+      "section": "politics"
+    },
+    {
+      "id": "39f2cf7e6c22",
+      "outletId": "humanite",
+      "headline": "Plus de 300 manifestations partout en France aujourd’hui encore",
+      "url": "https://www.humanite.fr/-/-/plus-de-300-manifestations-aujourdhui-encore",
+      "publishedAt": "2026-11-14T09:29:02.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2024/04/9.jpg?w=672",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "21f5e8397101",
+      "outletId": "rfi",
+      "headline": "Mobilisation en France: un «acte V» du mouvement social ce samedi avec des revendications variées",
+      "url": "https://www.rfi.fr/fr/france/20261114-mobilisation-en-france-un-acte-v-du-mouvement-social-ce-samedi-avec-des-revendications-vari%C3%A9es",
+      "publishedAt": "2026-11-14T08:32:56.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/22fe4c8a-e002-11f1-9b6e-3f371022a770/w:1024/p:16x9/2026-11-10T160818Z-7703711-RC21LOAI1F7C-RTRMADP-3-FRANCE-PROTEST.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "135e85000805",
+      "outletId": "20-minutes",
+      "headline": "EN DIRECT Manifestation du 14 novembre : 70.000 policiers et gendarmes mobilisés pour l’acte V, jusqu’à 60.000 manifestants attendus à Paris…",
+      "url": "https://www.20minutes.fr/societe/4262788-20261114-direct-manifestation-14-novembre-70-000-policiers-gendarmes-mobilises-acte-v-jusqu-60-000-manifestants-attendus-paris?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-14T08:31:09.000Z",
+      "imageUrl": "https://img.20mn.fr/G1EMM4ehQamBm0QmNnuofSk/1200x768_manifestation-de-soutien-au-mouvement-lyceen-et-pour-protester-contre-la-vie-chere-a-l-appel-notamment-des-gilets-jaunes-ce-samedi-7-novembre-2026-entre-la-place-de-la-republique-et-la-place-de-la-nation-a-paris-une-membre-de-la-coordination-lyceenne-avec-un-megaphone-dans-le-cortege-paris-france-le-7-novembre-2026-photographie-de-chang-martin-sipa-press-une-manifestation-en-soutien-au-mouvement-lyceen-et-pour-protester-contre-la-vie-chere-reclamee-notamment-par-les-gilets-jaunes-aura-lieu-ce-samedi-7-novembre-2026-entre-la-place-de-la-republique-et-la-place-de-la-nation-a-paris-paris-france-17-octobre-2026-photographie-de-chang-martin-sipa-press-chang-martin-2026-11-07-chang-martin-r62-6406-credit-chang-martin-sipa-2611081755",
+      "frontPage": true,
+      "kind": "live",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
       "id": "1d0780b97e71",
       "outletId": "le-parisien",
       "headline": "DIRECT. Colère sociale : plusieurs manifestations prévues ce samedi en France, 70 000 policiers et gendarmes mobilisés",
@@ -14,6 +59,17 @@
       "frontPage": false,
       "datedAtCollection": true,
       "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "2124da7c16c7",
+      "outletId": "france-24",
+      "headline": "Manifestations du 14 novembre en direct : des revendications variées pour l'acte V du mouvement social",
+      "url": "https://www.france24.com/fr/france/20261114-manifestations-du-14-novembre-en-direct-des-revendications-diverses-en-amont-de-l-acte-v",
+      "publishedAt": "2026-11-14T06:55:23.000Z",
+      "imageUrl": "https://s.france24.com/media/display/0bd7ebca-dff7-11f1-ae57-29048b396e03/w:1024/p:16x9/000-D6TJ4YN.jpg",
+      "frontPage": false,
+      "kind": "live",
       "section": "society"
     },
     {
@@ -120,20 +176,10 @@
     }
   ],
   "topicId": "1e52bac1f877",
-  "titledArticleCount": 10,
+  "titledArticleCount": 15,
   "section": "society",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794556800000,
-      "end": 1794560400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794560400000,
       "end": 1794564000000,
@@ -349,10 +395,10 @@
       "end": 1794639600000,
       "counts": {
         "gauche": 3,
-        "centre": 0,
+        "centre": 1,
         "droite": 2
       },
-      "total": 5
+      "total": 6
     },
     {
       "start": 1794639600000,
@@ -363,6 +409,26 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794643200000,
+      "end": 1794646800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 2
+    },
+    {
+      "start": 1794646800000,
+      "end": 1794650400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 2
     }
   ],
   "summaries": {
