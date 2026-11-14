@@ -6,6 +6,28 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "e71df986a23b",
+      "outletId": "tf1-info",
+      "headline": "Les États-Unis officialisent la tenue d'un sommet inédit entre Trump, Xi et Poutine en Chine, l'Iran au programme des discussions",
+      "url": "https://www.tf1info.fr/international/les-etats-unis-officialisent-la-tenue-d-un-sommet-inedit-entre-trump-xi-et-poutine-en-chine-2475803.html",
+      "publishedAt": "2026-11-14T07:56:50.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/682/donald-trump-rally-octobre-2026-ea4f19-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "70e968354efe",
+      "outletId": "franceinfo",
+      "headline": "Donald Trump, Xi Jinping et Vladimir Poutine se réuniront jeudi en Chine, annonce la Maison Blanche",
+      "url": "https://www.franceinfo.fr/monde/usa/donald-trump-xi-jinping-et-vladimir-poutine-se-reuniront-jeudi-en-chine-annonce-la-maison-blanche_8282168.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-14T07:04:41.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/QjWlh_dgnVR1JfZmJ03rCCJ4Ys8/0x59:1024x635/432x243/filters:format(jpg)/2026/11/14/6af807ae58c0f758597297.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "9153b39147a1",
       "outletId": "bfmtv",
       "headline": "Arme nucléaire, Iran, Nvidia... Sommet inédit entre Donald Trump, Xi Jinping et Vladimir Poutine jeudi en Chine",
@@ -45,9 +67,10 @@
       "url": "https://www.lemonde.fr/international/live/2026/11/14/en-direct-guerre-en-ukraine-des-discussions-sur-l-ukraine-ne-sont-pas-prevues-lors-de-la-rencontre-trilaterale-entre-trump-poutine-et-xi-annoncee-par-la-maison-blanche_6808609_3210.html",
       "publishedAt": "2026-11-14T04:13:22.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/12/599/0/8032/4016/644/322/60/0/6e58794_ftp-1-rza51vphq93f-f31b7c1d8b23407a94f603903b45b4cc-0-f93a68b12fec45cc8283cc8cfcef6ab0.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "live",
-      "section": "world"
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "d314cb8a5005",
@@ -98,30 +121,10 @@
     }
   ],
   "topicId": "5bbaf2c64efc",
-  "titledArticleCount": 8,
+  "titledArticleCount": 10,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794549600000,
-      "end": 1794553200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794553200000,
-      "end": 1794556800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794556800000,
       "end": 1794560400000,
@@ -341,31 +344,52 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794636000000,
+      "end": 1794639600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794639600000,
+      "end": 1794643200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "La Maison Blanche a officialisé une réunion trilatérale inédite entre Donald Trump, Vladimir Poutine et Xi Jinping prévue le jeudi 19 novembre.",
-      "Cette rencontre doit se dérouler à Shenzhen, en Chine, en marge du sommet de l'Apec.",
-      "Selon un responsable américain anonyme cité par Le Monde, les discussions aborderont le désarmement nucléaire et l'Iran, mais excluront le dossier ukrainien."
+      "La Maison Blanche a officialisé la tenue d'un sommet trilatéral entre Donald Trump, Xi Jinping et Vladimir Poutine prévu jeudi en Chine.",
+      "Cette rencontre inédite doit se dérouler en marge de la réunion de l'APEC à Shenzhen, selon les informations relayées.",
+      "D'après un responsable américain anonyme, les discussions porteront sur le désarmement nucléaire et l'Iran, tandis que le dossier ukrainien ne sera pas abordé.",
+      "Ni Pékin ni Moscou n'avaient encore confirmé officiellement cet événement au moment des annonces."
     ],
     "centre": [
-      "La Maison Blanche a confirmé la tenue d'un sommet exceptionnel entre Donald Trump, Vladimir Poutine et Xi Jinping en Chine.",
-      "L'événement est programmé pour le jeudi 19 novembre à Shenzhen, à l'occasion du sommet de la Coopération économique Asie-Pacifique.",
-      "Le programme officiel des entretiens inclut notamment la réduction des arsenaux nucléaires mondiaux et la situation en Iran."
+      "La Maison Blanche a annoncé qu'une rencontre trilatérale entre Donald Trump, Vladimir Poutine et Xi Jinping se tiendra jeudi en Chine.",
+      "Le sommet est organisé en marge de la réunion de la Coopération économique Asie-Pacifique à Shenzhen.",
+      "Les sujets au programme incluent la question de la réduction des armes nucléaires et le dossier de l'Iran.",
+      "Le dossier ukrainien est exclu des discussions prévues entre les trois dirigeants."
     ],
     "droite": [
-      "Le président américain Donald Trump s'entretiendra avec ses homologues chinois Xi Jinping et russe Vladimir Poutine.",
-      "La réunion est fixée au jeudi à Shenzhen, en Chine.",
-      "Ce sommet trilatéral se tiendra en marge du déroulement du sommet de la Coopération économique Asie-Pacifique."
+      "Donald Trump doit s'entretenir avec Xi Jinping et Vladimir Poutine lors d'une rencontre trilatérale en Chine.",
+      "Ce sommet est programmé pour jeudi en marge du sommet de la Coopération économique Asie-Pacifique à Shenzhen, d'après l'annonce de la Maison Blanche."
     ]
   },
   "differences": [
-    "La gauche détaille précisément le contenu des discussions à venir, en soulignant l'exclusion notable du dossier ukrainien selon des sources diplomatiques américaines.",
-    "Le centre livre de multiples brèves sur l'organisation de l'événement en insistant sur le cadre institutionnel du sommet de l'Apec à Shenzhen.",
-    "La droite se focalise sur l'annonce de l'agenda des rencontres bilatérales et multilatérales de Donald Trump en Chine sans mentionner d'éventuelles restrictions sur les sujets abordés."
+    "La gauche met en avant l'absence de confirmation initiale de la part de Pékin et de Moscou ainsi que l'exclusion du dossier ukrainien selon des sources anonymes.",
+    "Le centre dresse une liste précise des thèmes abordés, combinant le nucléaire, l'Iran et l'exclusion de l'Ukraine tout en situant géographiquement l'événement.",
+    "La droite se focalise sobrement sur l'annonce institutionnelle du sommet par la Maison Blanche sans détailler les aspects secondaires des négociations."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 8,
-  "summarizedAt": "2026-11-14T06:01:18.110Z"
+  "summarizedArticleCount": 10,
+  "summarizedAt": "2026-11-14T08:01:13.691Z"
 }

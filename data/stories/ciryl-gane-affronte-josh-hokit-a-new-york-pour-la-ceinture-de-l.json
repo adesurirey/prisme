@@ -6,6 +6,17 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "821d6dccdc4f",
+      "outletId": "rfi",
+      "headline": "MMA: Cyril Gane est-il condamné à devoir prouver sa valeur?",
+      "url": "https://www.rfi.fr/fr/sports/20261114-mma-cyril-gane-est-il-condamn%C3%A9-%C3%A0-devoir-prouver-sa-valeur",
+      "publishedAt": "2026-11-14T07:53:09.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/d7ec2486-dfa9-11f1-8e02-695cb59fade5/w:1024/p:16x9/AP26166264909328.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "a2dd3cd8927b",
       "outletId": "le-parisien",
       "headline": "« Je me suis toujours senti champion » : Ciryl Gane face à Josh Hokit à New York, le vrai combat pour la ceinture de l’UFC ?",
@@ -23,7 +34,7 @@
       "url": "https://www.ouest-france.fr/sport/mma/ciryl-gane/mma-nfl-transphobie-et-racisme-trois-choses-a-savoir-sur-josh-hokit-futur-adversaire-de-ciryl-gane-a-lufc-a5689c78-dc30-11f1-a45f-49114163a350?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-14T07:00:25.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMjBmMjFlOTExM2NlZGVmYTg1YWVhMzE0NGFkNWY1MjM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=10595b298e89450a7d71f6f6042462fd5163ee7e7bb53ee89100afff98326ddd",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -35,7 +46,7 @@
       "url": "https://www.ouest-france.fr/sport/mma/ciryl-gane/mma-il-y-a-toujours-une-defiance-qui-entoure-sa-carriere-ciryl-gane-un-roi-en-quete-de-legitimite-6b8371e8-ded5-11f1-86b6-0a2fbb1d8ed9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-14T06:19:18.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNDFlNzVhOTkxMDFkOGMyMDlhZDg4YTM5MDZkYWQ5YmY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=93da842a4b04ab5c34f6b8bb1f6db030437694030ab3c199d64560e03f7ab64b",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -53,7 +64,7 @@
     }
   ],
   "topicId": "437e0bc59d30",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "sport",
   "everInEdition": true,
   "activity": [
@@ -292,10 +303,29 @@
       "end": 1794643200000,
       "counts": {
         "gauche": 0,
-        "centre": 2,
+        "centre": 3,
         "droite": 0
       },
-      "total": 2
+      "total": 3
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Ciryl Gane défend sa ceinture de champion des poids lourds de l'UFC face à Josh Hokit au Madison Square Garden de New York dans la nuit de samedi à dimanche.",
+      "Malgré son statut de champion incontesté, le Français reste confronté aux critiques sur sa légitimité, son manque de domination et les doutes qui entourent son parcours.",
+      "Son adversaire américain, Josh Hokit, est un ancien espoir de football américain et un lutteur invaincu en MMA depuis 2023, également connu pour ses provocations."
+    ],
+    "droite": [
+      "Le Français Ciryl Gane dispute sa première défense de titre en tant que champion incontesté des poids lourds de l'UFC face à l'Américain Josh Hokit lors de l'UFC 334 à New York.",
+      "Surnmé « Bon Gamin », le combattant de 36 ans part grand favori de cet affrontement très attendu au Madison Square Garden après être devenu le premier Français champion incontesté de l'organisation.",
+      "Son adversaire de 28 ans, surnommé « The Incredible Hok », s'est illustré par un parcours sportif débuté dans le football américain et la lutte avant de passer professionnel en MMA."
+    ]
+  },
+  "differences": [
+    "Le camp centre insiste sur les critiques, le manque de domination et les doutes persistants qui entourent la légitimité du champion français malgré son titre.",
+    "Le camp droite se focalise sur l'enjeu sportif immédiat de l'UFC 334, le statut de grand favori de Ciryl Gane et le parcours athlétique de son adversaire."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-14T08:01:13.691Z"
 }
