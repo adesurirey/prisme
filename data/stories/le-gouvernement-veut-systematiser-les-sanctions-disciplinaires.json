@@ -6,6 +6,17 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "5ca52e59842f",
+      "outletId": "franceinfo",
+      "headline": "Le gouvernement veut systématiser les sanctions disciplinaires contre les élèves impliqués dans les blocages de lycées",
+      "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/le-gouvernement-veut-systematiser-les-sanctions-disciplinaires-contre-les-eleves-impliques-dans-les-blocages-de-lycees_8281724.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-13T22:54:13.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/3w3uvxAoByIM4temJQC7w7qq-2k/0x0:1024x576/432x243/filters:format(jpg)/2026/11/13/6af7918ca76cf741812578.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "4184940aa08d",
       "outletId": "cnews",
       "headline": "Blocus des lycées : le gouvernement veut systématiser les sanctions disciplinaires à l'encontre des participants",
@@ -73,30 +84,10 @@
     }
   ],
   "topicId": "7ca4557d31a9",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "society",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794517200000,
-      "end": 1794520800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794520800000,
-      "end": 1794524400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794524400000,
       "end": 1794528000000,
@@ -316,30 +307,50 @@
         "droite": 1
       },
       "total": 1
+    },
+    {
+      "start": 1794603600000,
+      "end": 1794607200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794607200000,
+      "end": 1794610800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le gouvernement a transmis un télégramme aux recteurs et préfets pour systématiser les sanctions disciplinaires contre les participants aux blocages lycéens.",
-      "Le dispositif vise les élèves mais aussi les membres du personnel de l'éducation nationale impliqués dans les dégradations et la déstabilisation des établissements.",
-      "Les sanctions ciblent spécifiquement les appels à la violence, les dégradations de biens, les blocages d'accès et les violences verbales ou physiques envers le personnel."
+      "Le gouvernement a adressé un télégramme aux recteurs et préfets afin de systématiser les sanctions disciplinaires contre les élèves et les membres du personnel participant aux blocages.",
+      "Les ministres concernés ciblent en particulier les actes de dégradation, les violences verbales ou physiques et les appels à la violence.",
+      "Face aux perturbations dans les établissements, l'exécutif prévoit la possibilité d'interdire l'accès aux lycées concernés pendant la durée de la procédure."
     ],
     "centre": [
-      "Laurent Nuñez et Édouard Geffray ont adressé un télégramme aux recteurs et préfets afin de systématiser les sanctions disciplinaires contre les auteurs de violences lors des blocages de lycées.",
-      "Cette directive fait suite à la multiplication des blocages dans les lycées constatée depuis la mi-septembre.",
-      "Les consignes visent à mettre un terme définitif aux perturbations et aux actes de violence au sein des établissements."
+      "Les ministres de l'Intérieur et de l'Éducation nationale ont envoyé un télégramme aux autorités déconcentrées pour durcir la réponse face aux blocages lycéens.",
+      "Le dispositif vise à systématiser les sanctions disciplinaires contre les auteurs de violences et de dégradations dans les établissements scolaires."
     ],
     "droite": [
-      "Le gouvernement annonce des sanctions systématiques contre les élèves bloquant les cours et des poursuites judiciaires pour les auteurs de violences dans les lycées.",
-      "Le Premier ministre évoque l'existence de complicités actives ou passives au sein même des personnels de l'éducation nationale."
+      "Le gouvernement demande aux préfets et aux recteurs une application systématique des sanctions disciplinaires et une interpellation des fauteurs de troubles.",
+      "CNews précise que les ministres ordonnent une présence très matinale des forces de l'ordre devant les lycées bloqués.",
+      "Causeur rapporte que l'exécutif accuse certains membres du personnel de l'Éducation nationale de complicité active ou passive dans ces violences."
     ]
   },
   "differences": [
-    "La gauche insiste en détail sur le contenu technique des consignes administratives et les catégories d'actes réprimés, visant à la fois les élèves et les personnels.",
-    "Le centre adopte un angle institutionnel et factuel en relayant le télégramme ministériel face à la répétition des blocages.",
-    "La droite met en avant la fermeté de l'exécutif face aux perturbations et pointe explicitement la responsabilité de certains membres du personnel soupçonnés de complicité."
+    "La gauche se concentre strictement sur le contenu technique et administratif du télégramme gouvernemental en listant les mesures et les motifs de sanction.",
+    "Le centre adopte une approche informative neutre en insistant sur la volonté conjointe de l'Intérieur et de l'Éducation nationale de mettre fin aux violences.",
+    "La droite durcit le ton en mettant l'accent sur l'interpellation systématique, la présence policière matinale et la mise en cause de la complicité de certains personnels."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-13T19:01:25.829Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-14T00:01:28.756Z"
 }
