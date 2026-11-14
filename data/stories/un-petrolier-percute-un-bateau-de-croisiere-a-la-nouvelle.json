@@ -6,6 +6,17 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "6b43daae4325",
+      "outletId": "le-monde",
+      "headline": "Un navire-citerne percute un bateau de croisière à La Nouvelle-Orléans, aucun blessé grave",
+      "url": "https://www.lemonde.fr/international/article/2026/11/14/un-navire-citerne-percute-un-bateau-de-croisiere-a-la-nouvelle-orleans-aucun-blesse-grave_6809455_3210.html",
+      "publishedAt": "2026-11-14T00:35:34.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/13/0/0/4096/2048/644/322/60/0/391ef5e_ftp-1-odjiz3lt1vpq-07111035b3cf4c5db9d75b72e3859525-0-dbbd6e1e18784bb898b020f42cce4be3.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "81398cf39b85",
       "outletId": "franceinfo",
       "headline": "Un porte-conteneurs et un bateau de croisière sont entrés en collision dans le port de La Nouvelle-Orléans",
@@ -41,30 +52,10 @@
     }
   ],
   "topicId": "ce8df549c04e",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794524400000,
-      "end": 1794528000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794528000000,
-      "end": 1794531600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794531600000,
       "end": 1794535200000,
@@ -284,6 +275,47 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794610800000,
+      "end": 1794614400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794614400000,
+      "end": 1794618000000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Un navire-citerne a heurté un bateau de croisière sur le Mississippi à La Nouvelle-Orléans.",
+      "Douze personnes ont été repêchées et 32 ont été hospitalisées, sans blessé grave recensé.",
+      "L'impact est survènu alors que l'embarcation de la compagnie American Cruise Lines était amarrée avec ses passagers.",
+      "Les autorités portuaires précisent que le bilan précis des blessés et l'origine de l'accident restent à confirmer."
+    ],
+    "centre": [
+      "Un pétrolier a percuté un bateau de croisière transportant plus d'une centaine de passagers à La Nouvelle-Orléans.",
+      "L'incident s'est produit à la mi-journée le vendredi 13 novembre sur le Mississippi, impliquant le navire Atlantic Asphalt.",
+      "Le bateau de croisière a été partiellement submergé lors de la collision.",
+      "Des opérations de secours et de sauvetage d'envergure sont actuellement en cours sur place."
+    ]
+  },
+  "differences": [
+    "Le camp gauche se focalise sur le bilan humain précis des hospitalisations et des repêchages en s'appuyant sur les déclarations institutionnelles.",
+    "Le camp centre met en avant le déroulement matériel de la collision, la présence de nombreux passagers à bord et le caractère partiel de la submersion du navire."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-14T01:01:20.668Z"
 }
