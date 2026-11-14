@@ -6,6 +6,27 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "8a2752dc221b",
+      "outletId": "le-monde",
+      "headline": "Présidentielle 2027 : Gérard Larcher invite les candidats de la droite et du centre à une réunion pour arrêter une « méthode de départage »",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/14/presidentielle-2027-gerard-larcher-invite-les-candidats-de-la-droite-et-du-centre-a-une-reunion-pour-arreter-une-methode-de-departage_6810460_823448.html",
+      "publishedAt": "2026-11-14T18:16:35.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/21/0/0/6000/3000/644/322/60/0/6d292e3_upload-1-2e6enr1tnnje-cbi1349081.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "bd7f37bba78c",
+      "outletId": "liberation",
+      "headline": "Primaire à droite : au tour de Gérard Larcher de demander une réunion entre candidats",
+      "url": "https://www.liberation.fr/politique/primaire-a-droite-au-tour-de-gerard-larcher-de-demander-une-reunion-entre-candidats-20261114_GEGE46CXONGIDOR67OIMO4SHYE/",
+      "publishedAt": "2026-11-14T18:11:55.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "59056c21dce9",
       "outletId": "europe-1",
       "headline": "Présidentielle 2027 : Gérard Larcher propose une réunion rapidement aux candidats de droite et du centre pour arrêter «une méthode de départage»",
@@ -41,20 +62,10 @@
     }
   ],
   "topicId": "84339d0cec45",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794592800000,
-      "end": 1794596400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794596400000,
       "end": 1794600000000,
@@ -284,6 +295,42 @@
         "droite": 2
       },
       "total": 3
+    },
+    {
+      "start": 1794679200000,
+      "end": 1794682800000,
+      "counts": {
+        "gauche": 2,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le président du Sénat Gérard Larcher a convié les prétendants de la droite et du centre à une réunion rapide pour définir une « méthode de départage ».",
+      "L'objectif affiché de cette initiative est d'aboutir à une candidature unique en vue de l'élection présidentielle de 2027.",
+      "Le périmètre de cette invitation exclut expressément des personnalités comme Éric Zemmour et Raphaël Glucksmann, d'après l'entourage du sénateur."
+    ],
+    "centre": [
+      "Gérard Larcher a pris l'initiative de convier l'ensemble des candidats de la droite et du centre à une réunion de concertation.",
+      "La rencontre a pour but de fixer les modalités d'une « méthode de départage » afin de désigner un représentant unique pour 2027.",
+      "Cette démarche intervient alors que la pression s'accroît sur les différents prétendants de l'arc conservateur et centriste."
+    ],
+    "droite": [
+      "Gérard Larcher a adressé une proposition de rassemblement aux différents candidats de la droite et du centre pour organiser un départage.",
+      "La réunion doit permettre de s'accorder sur une « méthode de départage » et sur une « communauté de valeurs » d'ici le début de l'année prochaine.",
+      "Le projet vise à départager des figures telles que Bruno Retailleau, David Lisnard, Gabriel Attal et Édouard Philippe.",
+      "Édouard Philippe, qui figure en bonne position dans les sondages, s'est jusqu'à présent montré réfractaire à l'idée d'une primaire."
+    ]
+  },
+  "differences": [
+    "La gauche insiste sur le caractère sélectif et stratégique du périmètre de la réunion en soulignant les exclusions de figures politiques.",
+    "Le centre met l'accent sur la démarche unitaire et la volonté de structurer l'offre politique pour 2027 sans mentionner de tensions internes.",
+    "La droite se focalise sur les enjeux tactiques du départage et relève explicitement les réticences d'Édouard Philippe face à l'hypothèse d'une primaire."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-14T19:01:30.340Z"
 }
