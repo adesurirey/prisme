@@ -6,6 +6,40 @@
   "storyDay": "2026-11-12",
   "articles": [
     {
+      "id": "e3c3491be137",
+      "outletId": "20-minutes",
+      "headline": "Panne mondiale chez Microsoft : Le service est désormais complètement rétabli",
+      "url": "https://www.20minutes.fr/high-tech/4262875-20261114-panne-mondiale-chez-microsoft-service-desormais-completement-retabli?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-14T16:18:06.000Z",
+      "imageUrl": "https://img.20mn.fr/M-vLZthHSbyPVS1i1fUVBSk/1200x768_applications-web-microsoft-365-outlook-sur-un-ecran-microsoft-office-est-une-suite-bureautique-creee-par-microsoft-allil-images-l1130618-credit-mourad-allili-sipa-2611131554",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
+    {
+      "id": "b59fc5b92d07",
+      "outletId": "europe-1",
+      "headline": "Microsoft annonce avoir complètement «rétabli le service» après sa panne mondiale",
+      "url": "https://www.europe1.fr/international/microsoft-annonce-avoir-completement-retabli-le-service-apres-sa-panne-mondiale-1233288?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-14T15:58:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/14/16/080_hl_rmilani_3302890_1_6ab66e03f23d8_6af88248bd847.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "29949a4e1ec4",
+      "outletId": "lopinion",
+      "headline": "Panne mondiale d'Outlook : Microsoft annonce la fin de l'incident",
+      "url": "https://www.lopinion.fr/economie/panne-mondiale-doutlook-microsoft-annonce-la-fin-de-lincident",
+      "publishedAt": "2026-11-14T14:06:12.000Z",
+      "imageUrl": "https://beymedias.brightspotcdn.com/b2/4d/a4eba1154d3aab6d13b84e68b79b/sipa-01316309-000003.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "e1c6e929ff00",
       "outletId": "le-parisien",
       "headline": "Panne d’Outlook : Microsoft annonce un rétablissement complet de ses services et alerte sur des mails malveillants",
@@ -23,7 +57,7 @@
       "url": "https://www.lefigaro.fr/secteur/high-tech/outlook-teams-copilot-microsoft-annonce-la-fin-de-la-panne-mondiale-apres-plus-de-24-heures-de-perturbations-20261114",
       "publishedAt": "2026-11-14T11:57:38.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/11/14/49eeb33691a4d0b1bd1dfbcc68fce0ecd6ad67023838212ed868f2c4c6252c01.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -1173,31 +1207,64 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794664800000,
+      "end": 1794668400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
+    },
+    {
+      "start": 1794668400000,
+      "end": 1794672000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
+    },
+    {
+      "start": 1794672000000,
+      "end": 1794675600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "La panne géante de Microsoft a touché 74 pays, affectant la messagerie Outlook, la plateforme Teams et les appels.",
-      "Les entreprises et les travailleurs ont dû recourir à des solutions alternatives ou à des technologies anciennes comme les fax face au blocage des outils informatiques.",
-      "Libération souligne que l'entreprise n'est pas parvenue à résoudre rapidement le problème causé par une « charge élevée » sur son infrastructure."
+      "Une panne mondiale a touché Microsoft, affectant la messagerie Outlook et la plateforme Teams dans 74 pays pendant plus de 24 heures.",
+      "Le géant américain a écarté l'hypothèse d'une cyberattaque, expliquant l'incident par une charge élevée sur ses infrastructures.",
+      "L'événement a entraîné un retour aux outils traditionnels comme le téléphone ou le fax dans de nombreuses entreprises et services publics.",
+      "Plusieurs médias soulignent les questions soulevées par cette dépendance massive envers quelques géants du numérique."
     ],
     "centre": [
-      "Une panne mondiale a touché Microsoft 365, privant des millions d'utilisateurs d'Outlook, Teams et Copilot dans 74 pays.",
-      "Microsoft a écarté toute cyberattaque ou action malveillante, attribuant les dysfonctionnements à une surcharge de ses infrastructures.",
-      "Le secteur de la santé, notamment au Royaume-Uni, et de nombreux services publics ont subi des retards et des reports d'activités."
+      "Une panne informatique mondiale a paralysé les services de Microsoft, notamment Outlook, Teams et Copilot, dans 74 pays.",
+      "Microsoft a présenté ses excuses, a écarté la piste d'une cyberattaque et a évoqué une surcharge de ses serveurs.",
+      "Après des difficultés initiales où les mesures correctives n'ont pas fonctionné comme prévu, l'entreprise a annoncé le rétablissement progressif puis total de ses services.",
+      "La panne a touché divers secteurs, des entreprises aux services de santé au Royaume-Uni, tout en provoquant des réactions humoristiques sur les réseaux sociaux."
     ],
     "droite": [
-      "Microsoft a fait état de progrès dans le rétablissement de ses logiciels en ligne en Europe et en Amérique du Nord après une panne mondiale.",
-      "Le Figaro détaille 24 heures de pagaille dans les entreprises, les hôpitaux et les gouvernements, contraints de revenir au téléphone ou au papier.",
-      "Les équipes du géant américain ont reconnu que les premières mesures de réparation n'ont pas fonctionné comme prévu."
+      "Une panne mondiale d'une durée de plus de 24 heures a paralysé les logiciels de Microsoft, incluant Outlook, Teams et Copilot dans de nombreuses entreprises et administrations.",
+      "Microsoft a exclu toute cyberattaque, attribuant la perturbation à une surcharge de ses serveurs et à des problèmes techniques.",
+      "L'entreprise a annoncé ce samedi le rétablissement complet de l'ensemble de ses services après des perturbations dans 74 pays.",
+      "L'incident a rappelé les risques de la dépendance numérique des organisations, certains médias évoquant des pertes financières estimées entre 300 et 500 millions de dollars."
     ]
   },
   "differences": [
-    "La gauche insiste sur la vulnérabilité des organisations face au tout-numérique en mettant en avant le retour contraint aux technologies obsolètes comme le fax.",
-    "Le centre dresse un panorama factuel de l'incident mondial, de son étendue géographique dans 74 pays et des justifications techniques apportées par l'entreprise.",
-    "La droite met en avant la chronologie des perturbations et insiste sur les difficultés rencontrées par Microsoft pour rétablir ses services malgré l'urgence de la situation."
+    "La gauche insiste particulièrement sur la question politique et critique de la dépendance aux géants du numérique.",
+    "Le centre livre un suivi factuel et chronologique détaillé des annonces de l'entreprise et de l'évolution du rétablissement des services.",
+    "La droite met en avant les conséquences économiques et opérationnelles pour les entreprises et les administrations, tout en évoquant les estimations de pertes financières."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 53,
-  "summarizedAt": "2026-11-13T19:01:25.829Z"
+  "summarizedArticleCount": 69,
+  "summarizedAt": "2026-11-14T17:01:32.554Z"
 }
