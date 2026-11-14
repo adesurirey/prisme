@@ -6,6 +6,17 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "93946c79fda2",
+      "outletId": "huffpost",
+      "headline": "La première édition de l’Eurovision Asie a bien compris les codes de notre version européenne",
+      "url": "https://www.huffingtonpost.fr/divertissement/article/la-premiere-edition-de-l-eurovision-asiatique-a-bien-compris-les-codes-de-notre-version-europeenne_358118.html",
+      "publishedAt": "2026-11-14T20:36:37.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/11/14/98/0/4000/2250/0/0/60/0/727aace_upload-1-iibq3bqyxxem-afp-20261114-d7gl3lq-v1-highres-thailandeurovisionmusictelevision.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
       "id": "389ca3a7a035",
       "outletId": "20-minutes",
       "headline": "Eurovision Asie : Les Philippines remportent le premier concours",
@@ -53,30 +64,10 @@
     }
   ],
   "topicId": "05a574b9decf",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "culture",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794596400000,
-      "end": 1794600000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794600000000,
-      "end": 1794603600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794603600000,
       "end": 1794607200000,
@@ -296,28 +287,50 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794682800000,
+      "end": 1794686400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794686400000,
+      "end": 1794690000000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "La chanteuse Carmelle a offert la victoire aux Philippines lors de la première édition de l'Eurovision Asie qui s'est tenue le 14 novembre à Bangkok avec le titre « Sobra-Sobra ».",
-      "Le concours asiatique se distingue de la version européenne en étant piloté par des chaînes de télévision privées et en interdisant aux spectateurs de voter pour leur propre pays."
+      "La première édition de l'Eurovision Asie s'est déroulée le samedi 14 novembre à Bangkok et a été remportée par les Philippines grâce à la chanteuse Carmelle et son titre « Sobra-Sobra ».",
+      "Le HuffPost souligne que cet événement transpose fidèlement le format européen sur le sol asiatique.",
+      "Franceinfo précise que le concours est piloté par des chaînes privées et interdit le vote pour son propre pays."
     ],
     "centre": [
-      "Les Philippines et la chanteuse Carmelle, âgée de 19 ans, ont remporté la première édition de l'Eurovision d'Asie à Bangkok.",
-      "Le résultat a été déterminé par les votes des téléspectateurs, les jurys des onze nations participantes et le public en ligne."
+      "Le concours inaugural de l'Eurovision Asie s'est conclu le 14 novembre à Bangkok par la victoire des Philippines.",
+      "La jeune artiste Carmelle a triomphé parmi les onze pays en lice avec sa chanson « Sobra-Sobra ».",
+      "Ouest-France indique que le classement final combine les votes des téléspectateurs, du jury des onze nations et du public en ligne."
     ],
     "droite": [
-      "La pop star philippine Carmelle a gagné le tout premier concours Eurovision d'Asie qui a eu lieu ce samedi à Bangkok en Thaïlande.",
-      "L'artiste de 19 ans s'est imposée parmi les onze participants lors d'un spectacle combinant célébrités locales et candidats insolites."
+      "La première édition de l'Eurovision Song Contest Asia a eu lieu le samedi à Bangkok, en Thaïlande.",
+      "La chanteuse philippine Carmelle, âgée de 19 ans, a remporté la victoire face à onze participants au terme d'un spectacle d'envergure."
     ]
   },
   "differences": [
-    "La gauche insiste sur les spécificités d'organisation du concours asiatique, géré par des chaînes privées sans vote national possible.",
-    "Le centre dresse le portrait chiffré et institutionnel du vainqueur en listant l'ensemble des jurys et du public qui ont validé le titre.",
-    "La droite met l'accent sur le profil de la jeune lauréate qualifiée de pop star et sur le caractère spectaculaire et hétérogène de l'émission."
+    "La gauche adopte un angle analytique en décortiquant les règles du scrutin et le fonctionnement des diffuseurs privés.",
+    "Le centre livre un compte-rendu synthétique centré sur la communion des votes du public, des jurys et du web.",
+    "La droite privilégie un format resserré et descriptif qui insiste sur le profil juvénile de la lauréate et l'envergure visuelle du spectacle."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-14T19:01:30.340Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-14T23:01:23.303Z"
 }
