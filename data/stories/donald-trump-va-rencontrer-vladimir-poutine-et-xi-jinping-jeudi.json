@@ -6,15 +6,27 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "d314cb8a5005",
+      "outletId": "france-24",
+      "headline": "Donald Trump, Xi Jinping et Vladimir Poutine vont se rencontrer jeudi en Chine",
+      "url": "https://www.france24.com/fr/asie-pacifique/20261114-donald-trump-xi-jinping-vladimir-poutine-vont-se-rencontrer-jeudi-chine",
+      "publishedAt": "2026-11-14T02:15:28.000Z",
+      "imageUrl": "https://s.france24.com/media/display/d6e9de44-dfd0-11f1-a098-5f54d898a954/w:1024/p:16x9/AP26267449248594.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "744ab0234487",
       "outletId": "le-monde",
       "headline": "La Maison Blanche annonce une rencontre trilatérale entre Donald Trump, Vladimir Poutine et Xi Jinping, jeudi en Chine",
       "url": "https://www.lemonde.fr/international/article/2026/11/14/la-maison-blanche-annonce-une-rencontre-trilaterale-entre-donald-trump-vladimir-poutine-et-xi-jinping-jeudi-en-chine_6809488_3210.html",
       "publishedAt": "2026-11-14T01:49:53.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/12/777/0/6395/3197/644/322/60/0/dbd03f3_ftp-1-rnrtf0xqviyw-2026-11-12t044435z-1814496472-rc2j7oa0ksia-rtrmadp-3-apec-summit-shenzhen.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "world"
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "1bd161149d89",
@@ -42,20 +54,10 @@
     }
   ],
   "topicId": "5bbaf2c64efc",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794535200000,
-      "end": 1794538800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794538800000,
       "end": 1794542400000,
@@ -285,6 +287,40 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794621600000,
+      "end": 1794625200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le Monde annonce une réunion trilatérale entre Donald Trump, Vladimir Poutine et Xi Jinping prévue jeudi en Chine.",
+      "Les discussions, organisées en marge du sommet de l'APEC à Shenzhen, se concentreront sur le désarmement nucléaire et le dossier iranien.",
+      "L'Ukraine est exclue de l'ordre du jour selon les déclarations d'un responsable américain anonyme."
+    ],
+    "centre": [
+      "Donald Trump, Xi Jinping et Vladimir Poutine se réuniront jeudi à Shenzhen, en Chine, en marge du sommet de l'Apec.",
+      "Les pourparlers aborderont les questions liées au nucléaire ainsi qu'à l'Iran, tandis que le dossier ukrainien devrait être ignoré.",
+      "La Maison Blanche a officialisé la tenue de cette rencontre entre les trois dirigeants."
+    ],
+    "droite": [
+      "Donald Trump s'entretiendra avec Xi Jinping et Vladimir Poutine ce jeudi à Shenzhen.",
+      "La réunion des dirigeants américain, chinois et russe se déroulera en marge du sommet de la Coopération économique Asie-Pacifique (Apec)."
+    ]
+  },
+  "differences": [
+    "Le camp de gauche met en avant les révélations de la Maison Blanche et détaille précisément l'agenda des discussions en s'appuyant sur des sources anonymes.",
+    "Le camp centré adopte une approche informative globale en insistant sur le cadre officiel de la Maison Blanche et la localisation précise de l'événement à Shenzhen.",
+    "Le camp de droite se focalise sobrement sur l'annonce de la rencontre entre les trois dirigeants en marge de l'Apec sans mentionner les détails des sujets abordés."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-14T03:01:25.425Z"
 }
