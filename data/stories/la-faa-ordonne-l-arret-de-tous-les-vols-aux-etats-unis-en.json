@@ -6,6 +6,50 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "7745fc7e4c20",
+      "outletId": "tf1-info",
+      "headline": "États-Unis : 6 000 vols annulés",
+      "url": "https://www.tf1info.fr/international/videos/video-etats-unis-6-000-vols-annules-60696-2475839.html",
+      "publishedAt": "2026-11-14T12:50:21.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/etats-unis-6-000-vols-annules-d38fc0-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "6c8507cfa1c5",
+      "outletId": "rfi",
+      "headline": "Que sait-on de la suspension totale des vols de vendredi aux États-Unis?",
+      "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261114-que-sait-on-de-la-suspension-totale-des-vols-de-vendredi-aux-%C3%A9tats-unis",
+      "publishedAt": "2026-11-14T12:01:41.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/0558402a-e01e-11f1-8012-3f371022a770/w:1024/p:16x9/2026-11-14T003857Z-316857412-RC2BNOAK82WC-RTRMADP-3-USA-FAA-GROUND-STOP.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "42fb9a27552f",
+      "outletId": "franceinfo",
+      "headline": "Panne du système de communication, centaines de milliers de passagers touchés… Ce que l'on sait de la suspension massive et rarissime des vols aux Etats-Unis",
+      "url": "https://www.franceinfo.fr/monde/usa/panne-du-systeme-de-communication-centaines-de-milliers-de-passagers-touches-ce-que-l-on-sait-de-la-suspension-massive-et-rarissime-des-vols-aux-etats-unis_8282207.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-14T11:58:12.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/7vEV_ibLA2yVspHpNr___Wy_nI8/0x322:3088x2059/432x243/filters:format(jpg)/2026/11/14/6af8190e3c3b2960562574.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "5ca56028cb04",
+      "outletId": "france-24",
+      "headline": "États-Unis : reprise du trafic aérien après une panne du contrôle aérien",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261114-%C3%A9tats-unis-reprise-du-trafic-a%C3%A9rien-apr%C3%A8s-une-panne-du-contr%C3%B4le-a%C3%A9rien",
+      "publishedAt": "2026-11-14T10:02:55.000Z",
+      "imageUrl": "https://s.france24.com/media/display/a5329e3a-e00d-11f1-a430-5f54d898a954/w:1024/p:16x9/FR-20261114-080222-080421-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "a1baecf1d760",
       "outletId": "le-parisien",
       "headline": "Vols suspendus aux États-Unis : le trafic aérien encore très perturbé ce samedi, plus de 3 000 vols annulés ou retardés",
@@ -360,7 +404,7 @@
       "url": "https://www.20minutes.fr/monde/etats-unis/4262797-20261113-etats-unis-faa-suspend-tous-vols-pays-jusqu-nouvel-ordre?at_medium=display&at_campaign=149",
       "publishedAt": "2026-11-13T21:50:15.000Z",
       "imageUrl": "https://img.20mn.fr/i_ivbDi5QZ6cZywY7T9gPik/1200x768_un-avion-de-united-airlines-survole-l-autoroute-a-peage-du-new-jersey-alors-qu-il-s-apprete-a-atterrir-sur-la-piste-29-de-l-aeroport-international-liberty-de-newark-sopa-images-11092026-phh-newark-01-credit-brian-hennessy-sopa-images-sipa-2611100740",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -458,26 +502,6 @@
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794567600000,
-      "end": 1794571200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794571200000,
-      "end": 1794574800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794574800000,
       "end": 1794578400000,
@@ -693,10 +717,30 @@
       "end": 1794654000000,
       "counts": {
         "gauche": 0,
-        "centre": 1,
+        "centre": 2,
+        "droite": 0
+      },
+      "total": 2
+    },
+    {
+      "start": 1794654000000,
+      "end": 1794657600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794657600000,
+      "end": 1794661200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 1
+      },
+      "total": 2
     }
   ],
   "summaries": {
