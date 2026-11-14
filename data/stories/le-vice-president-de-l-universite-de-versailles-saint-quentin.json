@@ -6,6 +6,17 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "722d03254c3f",
+      "outletId": "cnews",
+      "headline": "Île-de-France : un vice-président d'université agressé à l'arme blanche dans son bureau",
+      "url": "https://www.cnews.fr/france/2026-11-14/ile-de-france-un-vice-president-duniversite-agresse-larme-blanche-dans-son-bureau",
+      "publishedAt": "2026-11-14T06:09:37.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_8x629u-taille1200_6af7fb7921856.jpg?itok=zVwFjeyf",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "a30c72547570",
       "outletId": "bfmtv",
       "headline": "Le vice-président de l'université de Versailles-Saint-Quentin-en-Yvelines agressé à l'arme blanche dans son bureau",
@@ -89,16 +100,6 @@
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794549600000,
-      "end": 1794553200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794553200000,
       "end": 1794556800000,
@@ -328,28 +329,40 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794636000000,
+      "end": 1794639600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le vice-président d'une université en Île-de-France a subi une agression à l'arme blanche vendredi peu avant 20 heures.",
-      "La victime est blessée mais ses jours ne sont pas en danger."
+      "Le vice-président d'une université d'Île-de-France a subi une agression à l'arme blanche vendredi peu avant vingt heures.",
+      "La victime est grièvement blessée mais son pronostic vital n'est pas engagé selon franceinfo."
     ],
     "centre": [
-      "Le ministre de l'Enseignement supérieur, Philippe Baptiste, a qualifié l'agression de l'université de Versailles-Saint-Quentin-en-Yvelines d'acte d'une extrême gravité.",
-      "Le vice-président agressé dans son bureau souffre de blessures à la tête et à la main, sans pronostic vital engagé."
+      "Le ministre de l'Enseignement supérieur Philippe Baptiste a condamné l'agression du vice-président de l'université de Versailles-Saint-Quentin-en-Yvelines.",
+      "La victime a été touchée à la tête et à la main dans son bureau sans que ses jours ne soient en danger.",
+      "Le ministère n'a communiqué aucune information précise concernant les motivations ou l'identité des auteurs."
     ],
     "droite": [
-      "Un responsable d'université a été agressé à l'arme blanche dans son bureau selon le ministre de l'Enseignement supérieur.",
-      "Le message ministériel ne précise ni les circonstances de l'agression ni l'identité des auteurs."
+      "Le ministre Philippe Baptiste a qualifié d'acte d'une extrême gravité l'agression à l'arme blanche commise contre un responsable universitaire.",
+      "Le ministre a exprimé son soutien à la victime ainsi qu'à ses proches et ses collègues.",
+      "Le Figaro précise que le ministre n'a fourni aucun détail sur les circonstances des faits ni sur le ou les agresseurs."
     ]
   },
   "differences": [
-    "La gauche insiste sur le lieu exact et l'horaire précis de l'attaque en Île-de-France.",
-    "Le centre met en avant la réaction ministérielle et les détails médicaux précis concernant les blessures.",
-    "La droite se focalise sur les informations institutionnelles délivrées par le ministre tout en soulignant l'absence de précisions sur les circonstances."
+    "Le camp gauche se focalise strictement sur l'horaire de l'événement et l'état de santé de la victime rapportés par franceinfo.",
+    "Le camp centre met en avant l'identification précise de l'établissement concerné et la localisation des blessures subies par le vice-président.",
+    "Le camp droite insiste sur la condamnation ministérielle et l'absence de précisions sur les auteurs soulignée par Le Figaro."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6,
-  "summarizedAt": "2026-11-14T00:01:28.756Z"
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-14T07:01:34.116Z"
 }
