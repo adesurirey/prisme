@@ -6,6 +6,28 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "60b9746fc750",
+      "outletId": "bfmtv",
+      "headline": "Un homme placé en garde à vue après la découverte du corps de son ex-conjointe dans les Ardennes",
+      "url": "https://www.bfmtv.com/police-justice/un-homme-place-en-garde-a-vue-apres-la-decouverte-du-corps-de-son-ex-conjointe-dans-les-ardennes_AD-202611140273.html",
+      "publishedAt": "2026-11-14T14:41:00.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/ugNfNtkJcv1xIzQuF99cgNVZSNQ=/0x0:1248x702/800x0/images/Vehicule-de-police-illustration-405910.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "4a2bde72a1e1",
+      "outletId": "cnews",
+      "headline": "Ardennes : un homme en garde à vue après l'homicide de son ex-conjointe",
+      "url": "https://www.cnews.fr/faits-divers/2026-11-14/ardennes-un-homme-en-garde-vue-apres-lhomicide-de-son-ex-conjointe-1954050",
+      "publishedAt": "2026-11-14T14:03:59.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_9a05w-taille1200_6af85de8aaf8a.jpg?itok=NHnGU_0U",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "2703412b4451",
       "outletId": "le-parisien",
       "headline": "Ardennes : le corps inanimé d’une femme retrouvé dans une cave, son ex-conjoint en garde à vue",
@@ -34,7 +56,7 @@
       "url": "https://www.ouest-france.fr/faits-divers/feminicide/ardennes-un-homme-en-garde-a-vue-apres-lhomicide-de-son-ex-conjointe-venue-recuperer-des-affaires-9338a6ec-e027-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-14T13:22:18.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZTkzN2YzZGU0ZDIzNzI1OWQwYzBkMjE1ZWM2OTI2NWY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=7a665a234c72ea3bf6d2ee45db820c7b28b8c71cf72ea8dd0392a83e58b6d38e",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -52,7 +74,7 @@
     }
   ],
   "topicId": "53f61e709f45",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "misc",
   "everInEdition": true,
   "activity": [
@@ -291,29 +313,29 @@
       "end": 1794668400000,
       "counts": {
         "gauche": 0,
-        "centre": 1,
-        "droite": 0
+        "centre": 2,
+        "droite": 1
       },
-      "total": 1
+      "total": 3
     }
   ],
   "summaries": {
     "centre": [
-      "Le corps sans vie d'une femme a été découvert dans une cave à Charleville-Mézières dans les Ardennes.",
-      "L'ex-conjoint de la victime a été placé en garde à vue après les faits.",
-      "L'homme aurait lui-même prévenu les secours et reconnu avoir tué son ancienne compagne venue récupérer ses affaires."
+      "Le corps sans vie d'une femme a été découvert dans une cave à Charleville-Mézières.",
+      "Une enquête a été ouverte pour homicide volontaire par ex-conjoint.",
+      "L'ex-compagnon de la victime a été placé en garde à vue."
     ],
     "droite": [
-      "Une enquête pour homicide volontaire par ex-conjoint a été ouverte à Charleville-Mézières suite à la découverte d'un corps vendredi soir.",
-      "Le suspect, âgé d'une quarantaine d'années, a été interpellé et placé en garde à vue.",
-      "La victime, née en 1970, a été tuée alors qu'elle venait récupérer des affaires dans un immeuble des Ardennes."
+      "Un quadragénaire a été placé en garde à vue après la découverte du corps de son ex-conjointe dans un immeuble des Ardennes.",
+      "Le suspect a lui-même appelé les secours pour avouer le meurtre commis l'après-midi même.",
+      "La victime, née en 1970, a été retrouvée dans une cave de Charleville-Mézières selon les précisions de la procureure de la République."
     ]
   },
   "differences": [
-    "Les médias du centre privilégient un récit factuel axé sur le déroulement des faits, mentionnant l'appel du suspect aux secours et le contexte de la récupération d'affaires.",
-    "Les médias de droite adoptent un angle institutionnel et judiciaire, mettant en avant l'ouverture de l'enquête par le parquet et la qualification précise d'homicide volontaire par ex-conjoint."
+    "Les médias du centre proposent un résumé concis des faits essentiels, se limitant à l'annonce de la découverte du corps et au placement en garde à vue du suspect.",
+    "Les médias de droite adoptent un format plus détaillé en livrant les circonstances précises de l'interpellation, incluant l'appel aux secours du suspect et les déclarations officielles du parquet."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-14T14:01:20.631Z"
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-14T15:01:25.652Z"
 }
