@@ -6,6 +6,29 @@
   "storyDay": "2026-11-12",
   "articles": [
     {
+      "id": "b0ae71b27870",
+      "outletId": "le-figaro",
+      "headline": "Outlook, Teams, Copilot… Microsoft annonce la fin de la panne mondiale après plus de 24 heures de perturbations",
+      "url": "https://www.lefigaro.fr/secteur/high-tech/outlook-teams-copilot-microsoft-annonce-la-fin-de-la-panne-mondiale-apres-plus-de-24-heures-de-perturbations-20261114",
+      "publishedAt": "2026-11-14T11:57:38.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/11/14/49eeb33691a4d0b1bd1dfbcc68fce0ecd6ad67023838212ed868f2c4c6252c01.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
+    {
+      "id": "83d4ae5ecfaf",
+      "outletId": "franceinfo",
+      "headline": "Microsoft annonce le rétablissement total de ses services après la panne mondiale survenue jeudi",
+      "url": "https://www.franceinfo.fr/internet/panne-informatique-mondiale/microsoft-annonce-le-retablissement-total-de-ses-services-apres-la-panne-mondiale-survenue-jeudi_8282405.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-14T11:40:27.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/F8ffafQj8ro7TyFgw5nUqrvF2fs/0x18:1024x594/432x243/filters:format(jpg)/2026/11/14/6af847c0ea645527696746.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "7de48a3bf138",
       "outletId": "france-24",
       "headline": "Les services de Microsoft sont quasiment rétablis, l'entreprise se dit \"profondément désolée\"",
@@ -122,7 +145,7 @@
       "url": "https://www.lemonde.fr/economie/article/2026/11/13/la-panne-de-microsoft-alerte-entreprises-et-salaries-sur-leur-dependance-aux-outils-numeriques-on-a-tous-un-peu-ete-dans-le-meme-bateau-que-nos-clients_6809369_3234.html",
       "publishedAt": "2026-11-13T17:48:12.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/13/245/0/3122/1561/644/322/60/0/b2cf6a8_upload-1-zce6safwf4nq-000-d7cu846.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -1069,6 +1092,56 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794639600000,
+      "end": 1794643200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794643200000,
+      "end": 1794646800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794646800000,
+      "end": 1794650400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794650400000,
+      "end": 1794654000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794654000000,
+      "end": 1794657600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 2
     }
   ],
   "summaries": {
