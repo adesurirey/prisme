@@ -6,6 +6,30 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "bec3cf5634fd",
+      "outletId": "le-monde",
+      "headline": "Porté par un Antoine Dupont omniprésent, le XV de France, héroïque, se défait de l’Afrique du Sud",
+      "url": "https://www.lemonde.fr/sport/article/2026/11/14/porte-par-un-antoine-dupont-omnipresent-le-xv-de-france-heroique-se-defait-de-l-afrique-du-sud_6809521_3242.html",
+      "publishedAt": "2026-11-14T02:58:42.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/13/364/0/5661/2830/644/322/60/0/1f5149e_ftp-1-ihihy2hr560a-76dbbeae7af540c6929013241f31bd34-0-96421635a7ac46a9832d61fcaead9ac4.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
+      "id": "44d12c41d997",
+      "outletId": "le-figaro",
+      "headline": "France-Afrique du Sud : «Nous avons mal joué», regrette le sélectionneur des Springboks",
+      "url": "https://www.lefigaro.fr/sports/rugby/xv-de-france/france-afrique-du-sud-nous-avons-mal-joue-regrette-le-selectionneur-des-springboks-20261114",
+      "publishedAt": "2026-11-14T02:04:26.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/14/a60db068bb304dc27466826977f38faf0525c48041ae46bb27e69c9c70027c0e.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
       "id": "ccc158bb362a",
       "outletId": "le-parisien",
       "headline": "France-Afrique du Sud (21-19) : Dupont « a joué un peu tous les postes aujourd’hui, il a sorti le match », salue Fabien Galthié",
@@ -103,7 +127,7 @@
       "url": "https://www.lemonde.fr/sport/article/2026/11/13/france-afrique-du-sud-le-resume-de-la-victoire-sur-le-fil-des-bleus-face-aux-springboks_6809393_3242.html",
       "publishedAt": "2026-11-13T22:52:51.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/13/20/0/5102/2551/644/322/60/0/e2d7028_ftp-1-1ei1cdbajkah-afp-d7fg2ba.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -181,16 +205,6 @@
   "section": "sport",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794535200000,
-      "end": 1794538800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794538800000,
       "end": 1794542400000,
@@ -420,6 +434,16 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794621600000,
+      "end": 1794625200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 2
     }
   ],
   "summaries": {
