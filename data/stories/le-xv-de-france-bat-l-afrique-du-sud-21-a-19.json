@@ -6,6 +6,18 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "4d0105ccc983",
+      "outletId": "le-figaro",
+      "headline": "XV de France : en vidéo, le résumé de l’exploit des Bleus face à l’Afrique du Sud",
+      "url": "https://www.lefigaro.fr/sports/rugby/xv-de-france/xv-de-france-en-video-le-resume-de-l-exploit-des-bleus-face-a-l-afrique-du-sud-20261114",
+      "publishedAt": "2026-11-14T04:50:00.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/14/b5d495332865a1f78f0ff3011a60c9c9d473b1800ad2f96b6ba670bfc085b0dc.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
       "id": "bec3cf5634fd",
       "outletId": "le-monde",
       "headline": "Porté par un Antoine Dupont omniprésent, le XV de France, héroïque, se défait de l’Afrique du Sud",
@@ -81,7 +93,7 @@
       "url": "https://www.ouest-france.fr/sport/rugby/equipe-de-france/france-afrique-du-sud-cetait-incroyablement-fort-et-puissant-les-bleus-a-lunisson-apres-leur-exploit-e6709daa-dfb0-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-13T23:11:06.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNmQ0MGI2YTlkNmNiN2FhYzZlOTY3YmYxYTQ5MWUzYjk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=90bf0e04536c6199174d540761fac3f2e640c98126f1c048768db2d6abc07ab4",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -201,30 +213,10 @@
     }
   ],
   "topicId": "f6a6c2e5491e",
-  "titledArticleCount": 14,
+  "titledArticleCount": 18,
   "section": "sport",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794538800000,
-      "end": 1794542400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794542400000,
-      "end": 1794546000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794546000000,
       "end": 1794549600000,
@@ -444,31 +436,51 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1794625200000,
+      "end": 1794628800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794628800000,
+      "end": 1794632400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le XV de France s'est imposé 21 à 19 face à l'Afrique du Sud au Stade de France lors de la 5e journée du Championnat des nations.",
-      "Malgré les blessures de plusieurs cadres et de nombreux ouvreurs, les Bleus ont résisté au retour des champions du monde sud-africains.",
-      "Cette victoire de prestige sur le fil permet à l'équipe de France de conforter sa première place dans sa poule."
+      "Le XV de France s'est imposé 21 à 19 face à l'Afrique du Sud au Stade de France lors de la cinquième journée du Championnat des nations.",
+      "Portés par un Antoine Dupont omniprésent à un poste inédit, les Bleus ont résisté au retour des doubles champions du monde en titre après une première mi-temps flamboyante.",
+      "Cette victoire de référence, obtenue malgré de nombreuses blessures, permet à l'équipe de France de conforter sa première place dans sa poule."
     ],
     "centre": [
-      "Les Bleus ont battu les doubles champions du monde sud-africains 21 à 19 au Stade de France en Championnat des nations.",
-      "Portée par une première mi-temps flamboyante, l'équipe de France a tenu bon malgré une fin de match sous pression et de multiples blessures.",
-      "Ce succès probant constitue la performance la plus marquante du XV de France depuis la Coupe du monde 2023."
+      "Les Bleus ont battu les Springboks sur le score de 21 à 19 au Stade de France, signant leur succès le plus marquant depuis le Mondial 2023.",
+      "Fabien Galthié a salué la performance d'Antoine Dupont, titularisé pour la première fois à la charnière aux côtés de Maxime Lucu.",
+      "Solidaires et courageux malgré les absences de plusieurs cadres, les joueurs français ont conservé jusqu'au bout l'avantage acquis avant la pause."
     ],
     "droite": [
-      "Le XV de France a dominé l'Afrique du Sud 21 à 19 au Stade de France, consolidant sa première place dans le Championnat des nations.",
-      "Privé de plusieurs titulaires habituels, le sélectionneur Fabien Galthié a notamment aligné Antoine Dupont au poste d'ouvreur.",
-      "Après une large domination en première période, les Bleus ont arraché la victoire grâce à un engagement total et une défense héroïque jusqu'au dernier plaquage de Louis Bielle-Biarrey."
+      "Le XV de France a battu l'Afrique du Sud 21 à 19 au Stade de France dans le cadre du Championnat des nations.",
+      "La défense héroïque et la vitesse de Louis Bielle-Biarrey et Nelson Grandidier ont permis aux Bleus de préserver leur avance en seconde période.",
+      "Le sélectionneur sud-africain Rassie Erasmus a reconnu des erreurs tout en regrettant certaines décisions arbitrales après cette rencontre irrespirable."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la performance de référence face à la bête noire sud-africaine et insiste sur la résilience de l'équipe malgré les absences.",
-    "Le centre privilégie le récit d'un exploit mémorable et d'un succès majeur qui confirme la dynamique tricolore depuis le Mondial 2023.",
-    "La droite détaille la composition tactique inédite décidée par Fabien Galthié, tout en décrivant avec emphase une fin de rencontre irrespirable."
+    "Le camp de gauche met en avant la dimension collective et l'impact de cette victoire dans la course à la finale de la compétition.",
+    "Le camp du centre insiste sur la performance individuelle marquante d'Antoine Dupont et sur le symbole de ce succès face à la bête noire sud-africaine.",
+    "Le camp de droite privilégie le récit haletant d'un match sous tension, soulignant la solidité défensive des Bleus et les réactions du camp adverse."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 14,
-  "summarizedAt": "2026-11-14T00:01:28.756Z"
+  "summarizedArticleCount": 18,
+  "summarizedAt": "2026-11-14T05:01:23.950Z"
 }

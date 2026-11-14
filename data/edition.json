@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-14T04:01:24.931Z",
+  "builtAt": "2026-11-14T05:01:23.950Z",
   "latestStories": [
     {
       "id": "5bbaf2c64efc",
@@ -50,7 +50,7 @@
           "url": "https://www.ouest-france.fr/monde/etats-unis/donald-trump/donald-trump-va-rencontrer-vladimir-poutine-et-xi-jinping-en-chine-2db65086-dfc2-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-14T00:35:25.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMWE3NTk3N2MwZTNjZjU3MmVhMzUzM2M5NDU3YWY1MmI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=fc7edc477068aa318f7e96d8cc19dbc7ec6be0e7d413342834752a7fda130082",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -330,10 +330,21 @@
     {
       "id": "582f3db54868",
       "slug": "spacex-renonce-a-recuperer-le-premier-etage-de-sa-megafusee",
-      "title": "SpaceX renonce à récupérer le premier étage de sa mégafusée Starship après son décollage",
+      "title": "SpaceX renonce à récupérer le premier étage de sa mégafusée Starship",
       "createdAt": "2026-11-14T00:01:28.756Z",
       "storyDay": "2026-11-14",
       "articles": [
+        {
+          "id": "33343cd438f4",
+          "outletId": "courrier-international",
+          "headline": "SpaceX échoue à récupérer en un seul vol les deux étages de sa fusée Starship",
+          "url": "https://www.courrierinternational.com/article/espace-spacex-echoue-a-recuperer-en-un-seul-vol-les-deux-etages-de-sa-fusee-starship_287171",
+          "publishedAt": "2026-11-14T04:48:02.000Z",
+          "imageUrl": "https://focus.courrierinternational.com/2026/11/14/0/0/5568/3712/644/0/60/0/feb286d_ftp-1-bu50rwiu9sv4-2026-11-14t012408z-750862810-rc2anoa0o8fl-rtrmadp-3-space-spacex-starship.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
         {
           "id": "8e9b32c3cad6",
           "outletId": "ouest-france",
@@ -341,7 +352,7 @@
           "url": "https://www.ouest-france.fr/sciences/espace/la-megafusee-starship-decolle-et-renonce-a-recuperer-le-premier-etage-en-raison-dun-probleme-technique-ae9635c0-dfb5-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-13T23:08:20.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNGUyMzYyODRlN2IwMDY5YmVlMWI0MTQ5MmJkOTM4Nzg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=39ec643e6109ae96fa4b849e36c1b78b0bc4f796d34fa234a21badff9efba27b",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "science",
           "everFrontPage": true
@@ -360,60 +371,10 @@
         }
       ],
       "topicId": "582f3db54868",
-      "titledArticleCount": 2,
+      "titledArticleCount": 3,
       "section": "science",
       "everInEdition": true,
       "activity": [
-        {
-          "start": 1794528000000,
-          "end": 1794531600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794531600000,
-          "end": 1794535200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794535200000,
-          "end": 1794538800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794538800000,
-          "end": 1794542400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794542400000,
-          "end": 1794546000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
         {
           "start": 1794546000000,
           "end": 1794549600000,
@@ -603,6 +564,56 @@
             "droite": 1
           },
           "total": 2
+        },
+        {
+          "start": 1794614400000,
+          "end": 1794618000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794618000000,
+          "end": 1794621600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794621600000,
+          "end": 1794625200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794625200000,
+          "end": 1794628800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794628800000,
+          "end": 1794632400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
         }
       ]
     },
@@ -1710,7 +1721,7 @@
           "url": "https://www.ouest-france.fr/economie/aeronautique/les-decollages-davions-totalement-suspendus-aux-etats-unis-en-raison-de-circonstances-exceptionnelles-bb3af52a-dfa8-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-13T21:41:20.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExODBiNmExYzk2NmQ1ZGU3OTZkOTQwYzlmMzUzMWUwYzA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d8148098ad51bb436b4fb6f39290982f0f1a326a2e80f775bf69c9fa0e24d070",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -3939,7 +3950,7 @@
           "url": "https://www.lefigaro.fr/actualite-france/rennes-le-plus-grand-lycee-de-bretagne-ferme-une-semaine-apres-des-debordements-20261114",
           "publishedAt": "2026-11-14T00:29:25.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x1996_crop/2026/11/14/b37cb2495e9633cb89e550fe8149126d9ca9b92e36146a57c36b2f3eccbc2a7c.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "society",
           "everFrontPage": true
@@ -4251,7 +4262,7 @@
           "url": "https://www.lemonde.fr/culture/article/2026/11/13/la-madrague-maison-mythique-de-brigitte-bardot-a-saint-tropez-ouvrira-ses-portes-au-public-des-l-ete-prochain_6809382_3246.html",
           "publishedAt": "2026-11-13T19:49:02.000Z",
           "imageUrl": "https://img.lemde.fr/2025/12/28/504/0/6048/3024/644/322/60/0/81d3675_ftp-1-4hazhmzf8ot7-5760946-01-06.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "culture",
           "everFrontPage": true
@@ -5160,6 +5171,18 @@
       "storyDay": "2026-11-13",
       "articles": [
         {
+          "id": "4d0105ccc983",
+          "outletId": "le-figaro",
+          "headline": "XV de France : en vidéo, le résumé de l’exploit des Bleus face à l’Afrique du Sud",
+          "url": "https://www.lefigaro.fr/sports/rugby/xv-de-france/xv-de-france-en-video-le-resume-de-l-exploit-des-bleus-face-a-l-afrique-du-sud-20261114",
+          "publishedAt": "2026-11-14T04:50:00.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/14/b5d495332865a1f78f0ff3011a60c9c9d473b1800ad2f96b6ba670bfc085b0dc.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
           "id": "bec3cf5634fd",
           "outletId": "le-monde",
           "headline": "Porté par un Antoine Dupont omniprésent, le XV de France, héroïque, se défait de l’Afrique du Sud",
@@ -5235,7 +5258,7 @@
           "url": "https://www.ouest-france.fr/sport/rugby/equipe-de-france/france-afrique-du-sud-cetait-incroyablement-fort-et-puissant-les-bleus-a-lunisson-apres-leur-exploit-e6709daa-dfb0-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-13T23:11:06.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNmQ0MGI2YTlkNmNiN2FhYzZlOTY3YmYxYTQ5MWUzYjk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=90bf0e04536c6199174d540761fac3f2e640c98126f1c048768db2d6abc07ab4",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -5355,30 +5378,10 @@
         }
       ],
       "topicId": "f6a6c2e5491e",
-      "titledArticleCount": 14,
+      "titledArticleCount": 18,
       "section": "sport",
       "everInEdition": true,
       "activity": [
-        {
-          "start": 1794538800000,
-          "end": 1794542400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794542400000,
-          "end": 1794546000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
         {
           "start": 1794546000000,
           "end": 1794549600000,
@@ -5598,33 +5601,53 @@
             "droite": 1
           },
           "total": 2
+        },
+        {
+          "start": 1794625200000,
+          "end": 1794628800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794628800000,
+          "end": 1794632400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
         }
       ],
       "summaries": {
         "gauche": [
-          "Le XV de France s'est imposé 21 à 19 face à l'Afrique du Sud au Stade de France lors de la 5e journée du Championnat des nations.",
-          "Malgré les blessures de plusieurs cadres et de nombreux ouvreurs, les Bleus ont résisté au retour des champions du monde sud-africains.",
-          "Cette victoire de prestige sur le fil permet à l'équipe de France de conforter sa première place dans sa poule."
+          "Le XV de France s'est imposé 21 à 19 face à l'Afrique du Sud au Stade de France lors de la cinquième journée du Championnat des nations.",
+          "Portés par un Antoine Dupont omniprésent à un poste inédit, les Bleus ont résisté au retour des doubles champions du monde en titre après une première mi-temps flamboyante.",
+          "Cette victoire de référence, obtenue malgré de nombreuses blessures, permet à l'équipe de France de conforter sa première place dans sa poule."
         ],
         "centre": [
-          "Les Bleus ont battu les doubles champions du monde sud-africains 21 à 19 au Stade de France en Championnat des nations.",
-          "Portée par une première mi-temps flamboyante, l'équipe de France a tenu bon malgré une fin de match sous pression et de multiples blessures.",
-          "Ce succès probant constitue la performance la plus marquante du XV de France depuis la Coupe du monde 2023."
+          "Les Bleus ont battu les Springboks sur le score de 21 à 19 au Stade de France, signant leur succès le plus marquant depuis le Mondial 2023.",
+          "Fabien Galthié a salué la performance d'Antoine Dupont, titularisé pour la première fois à la charnière aux côtés de Maxime Lucu.",
+          "Solidaires et courageux malgré les absences de plusieurs cadres, les joueurs français ont conservé jusqu'au bout l'avantage acquis avant la pause."
         ],
         "droite": [
-          "Le XV de France a dominé l'Afrique du Sud 21 à 19 au Stade de France, consolidant sa première place dans le Championnat des nations.",
-          "Privé de plusieurs titulaires habituels, le sélectionneur Fabien Galthié a notamment aligné Antoine Dupont au poste d'ouvreur.",
-          "Après une large domination en première période, les Bleus ont arraché la victoire grâce à un engagement total et une défense héroïque jusqu'au dernier plaquage de Louis Bielle-Biarrey."
+          "Le XV de France a battu l'Afrique du Sud 21 à 19 au Stade de France dans le cadre du Championnat des nations.",
+          "La défense héroïque et la vitesse de Louis Bielle-Biarrey et Nelson Grandidier ont permis aux Bleus de préserver leur avance en seconde période.",
+          "Le sélectionneur sud-africain Rassie Erasmus a reconnu des erreurs tout en regrettant certaines décisions arbitrales après cette rencontre irrespirable."
         ]
       },
       "differences": [
-        "La gauche met l'accent sur la performance de référence face à la bête noire sud-africaine et insiste sur la résilience de l'équipe malgré les absences.",
-        "Le centre privilégie le récit d'un exploit mémorable et d'un succès majeur qui confirme la dynamique tricolore depuis le Mondial 2023.",
-        "La droite détaille la composition tactique inédite décidée par Fabien Galthié, tout en décrivant avec emphase une fin de rencontre irrespirable."
+        "Le camp de gauche met en avant la dimension collective et l'impact de cette victoire dans la course à la finale de la compétition.",
+        "Le camp du centre insiste sur la performance individuelle marquante d'Antoine Dupont et sur le symbole de ce succès face à la bête noire sud-africaine.",
+        "Le camp de droite privilégie le récit haletant d'un match sous tension, soulignant la solidité défensive des Bleus et les réactions du camp adverse."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 14,
-      "summarizedAt": "2026-11-14T00:01:28.756Z"
+      "summarizedArticleCount": 18,
+      "summarizedAt": "2026-11-14T05:01:23.950Z"
     },
     {
       "id": "a25c7e517c13",
@@ -6228,7 +6251,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/11/13/le-burkina-faso-annonce-lancer-des-mandats-d-arret-contre-des-journalistes-et-des-activistes-en-exil-pour-des-faits-de-terrorisme_6809388_3210.html",
           "publishedAt": "2026-11-13T21:51:13.000Z",
           "imageUrl": "https://img.lemde.fr/2026/10/21/552/0/3973/1986/644/322/60/0/255543a_ftp-1-rzni2fugbyhl-f2566b1d357a43788ac434fda6ad169b-0-d7bace231df248138ae60cc84f540141.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -11302,1297 +11325,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 18,
       "summarizedAt": "2026-11-13T16:01:36.177Z"
-    },
-    {
-      "id": "61379705c03d",
-      "slug": "teddy-riner-effectue-son-premier-deplacement-de-campagne-au",
-      "title": "Présidentielle 2027 : Teddy Riner effectue son premier déplacement de campagne au salon du Made in France",
-      "createdAt": "2026-11-13T07:01:34.068Z",
-      "storyDay": "2026-11-13",
-      "articles": [
-        {
-          "id": "77be1f0ff194",
-          "outletId": "bfmtv",
-          "headline": "2027 : Teddy Riner entre en campagne - 13/11",
-          "url": "https://www.bfmtv.com/replay-emissions/bfm-grand-soir/video-2027-teddy-riner-entre-en-campagne-13-11_VN-202611130911.html",
-          "publishedAt": "2026-11-13T23:03:51.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/0cEoAwCj9iOoWxJLdXMm_a7Gitk=/0x0:1280x720/800x0/images/2027-Teddy-Riner-entre-en-campagne-13-11-2383871.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "1fc9a36b3f04",
-          "outletId": "rfi",
-          "headline": "Présidentielle 2027: pour son premier déplacement de campagne, Teddy Riner met l'accent sur la santé",
-          "url": "https://www.rfi.fr/fr/france/20261113-pr%C3%A9sidentielle-2027-pour-son-premier-d%C3%A9placement-de-campagne-teddy-riner-met-l-accent-sur-la-sant%C3%A9",
-          "publishedAt": "2026-11-13T23:02:53.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/375e4994-dfb4-11f1-b4b7-5f54d898a954/w:1024/p:16x9/000-D7DQ2P9.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "d17e0907b35f",
-          "outletId": "ouest-france",
-          "headline": "Présidentielle : le candidat Teddy Riner lance sa campagne à l’hôpital ce vendredi, avant le salon du Made in France",
-          "url": "https://www.ouest-france.fr/elections/presidentielle/presidentielle-le-candidat-teddy-riner-lance-sa-campagne-a-lhopital-ce-vendredi-avant-le-salon-du-made-in-france-cf93aacc-df43-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-13T13:00:39.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNTIyNTQ1YjE2ZTEzYWU1Y2QxNDBiZDJkYjhmYzNkZDQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=7468f69d3f8544f1e18d86ce42a7f896aea1101ea9ae4bedc2a8f894943f0d49",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "bc323e5dc70a",
-          "outletId": "bfmtv",
-          "headline": "\"Ni de droite ni de gauche égal pas de gauche\": Jean-Luc Mélenchon réagit à la candidature de Teddy Riner à la présidentielle 2027",
-          "url": "https://www.bfmtv.com/politique/la-france-insoumise/ni-de-droite-ni-de-gauche-egal-pas-de-gauche-jean-luc-melenchon-reagit-a-la-candidature-de-teddy-riner-a-la-presidentielle-2027_AV-202611130515.html",
-          "publishedAt": "2026-11-13T12:30:32.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/UHBv9dvnCgXfWkOjWt03u60lreo=/0x40:768x472/800x0/images/Le-candidat-LFI-a-la-presidentielle-Jean-Luc-Melenchon-prononce-un-discours-lors-d-une-ceremonie-devant-un-monument-dedie-aux-morts-de-la-Premiere-Guerre-mondiale-a-Gentioux-Pigerolles-le-11-novembre-2026-dans-la-Creuse-2382199.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "496c7250f495",
-          "outletId": "europe-1",
-          "headline": "Présidentielle 2027 : Teddy Riner fera son premier déplacement de campagne au salon du «Made in France»",
-          "url": "https://www.europe1.fr/politique/presidentielle-2027-teddy-riner-fera-son-premier-deplacement-de-campagne-au-salon-du-made-in-france-1229987?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-13T08:12:10.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/13/09/000_49ed3yv_1_6af6c5622a78e.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "3ea6c80916e3",
-          "outletId": "liberation",
-          "headline": "Teddy Riner fera son premier déplacement de campagne au salon du «Made in France»",
-          "url": "https://www.liberation.fr/politique/elections/teddy-riner-fera-son-premier-deplacement-de-campagne-au-salon-du-made-in-france-20261113_JRWNH5A7QRASRKMAFXWLDPTRNI/",
-          "publishedAt": "2026-11-13T07:52:52.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "819a90dffb22",
-          "outletId": "franceinfo",
-          "headline": "Teddy Riner va effectuer son premier déplacement de campagne samedi au Salon Made in France, à Paris",
-          "url": "https://www.franceinfo.fr/elections/teddy-riner-va-effectuer-son-premier-deplacement-de-campagne-samedi-au-salon-made-in-france-a-paris_8280578.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-13T07:15:07.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/mUFaUPymFxtMR9D3I0kLgWFBWps/0x0:1024x576/432x243/filters:format(jpg)/2026/11/13/6af6b6896581b984449952.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "113f37438391",
-          "outletId": "le-parisien",
-          "headline": "Présidentielle 2027 : Teddy Riner effectuera son premier déplacement au salon du Made in France ce samedi",
-          "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-teddy-riner-effectuera-son-premier-deplacement-au-salon-du-made-in-france-ce-samedi-13-11-2026-4DZ6FLGT4VCBLLJ74OEG6GJA2U.php",
-          "publishedAt": "2026-11-13T07:01:34.068Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "6344ebf6e1c4",
-          "outletId": "tf1-info",
-          "headline": "Présidentielle : le néo-candidat Teddy Riner fera son premier déplacement de campagne samedi au salon Made in France",
-          "url": "https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-le-neo-candidat-teddy-riner-fera-son-premier-deplacement-de-campagne-au-salon-made-in-france-samedi-14-novembre-2026-2475590.html",
-          "publishedAt": "2026-11-13T06:53:38.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/teddy-riner-elysee-2026-b319b4-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "f258612c7e13",
-          "outletId": "bfmtv",
-          "headline": "INFO BFMTV. Présidentielle 2027: Teddy Riner fera son premier déplacement de campagne samedi au salon du Made in France",
-          "url": "https://www.bfmtv.com/politique/elections/presidentielle/info-bfmtv-presidentielle-2027-teddy-riner-fera-son-premier-deplacement-de-campagne-samedi-au-salon-du-made-in-france_AN-202611130109.html",
-          "publishedAt": "2026-11-13T04:47:50.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/RLahVGo7jgbjlK9UCPGbrtl4Jj4=/6x95:2038x1238/800x0/images/Teddy-Riner-lors-du-match-de-NFL-a-Paris-le-25-octobre-2026-2381291.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        }
-      ],
-      "topicId": "8ba7f9fd8e5f",
-      "titledArticleCount": 10,
-      "section": "politics",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794528000000,
-          "end": 1794531600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794531600000,
-          "end": 1794535200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794535200000,
-          "end": 1794538800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794538800000,
-          "end": 1794542400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794542400000,
-          "end": 1794546000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794546000000,
-          "end": 1794549600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794549600000,
-          "end": 1794553200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1794553200000,
-          "end": 1794556800000,
-          "counts": {
-            "gauche": 2,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 3
-        },
-        {
-          "start": 1794556800000,
-          "end": 1794560400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1794560400000,
-          "end": 1794564000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794564000000,
-          "end": 1794567600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794567600000,
-          "end": 1794571200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794571200000,
-          "end": 1794574800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794574800000,
-          "end": 1794578400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794578400000,
-          "end": 1794582000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794582000000,
-          "end": 1794585600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794585600000,
-          "end": 1794589200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794589200000,
-          "end": 1794592800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794592800000,
-          "end": 1794596400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794596400000,
-          "end": 1794600000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794600000000,
-          "end": 1794603600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794603600000,
-          "end": 1794607200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794607200000,
-          "end": 1794610800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794610800000,
-          "end": 1794614400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 2,
-            "droite": 0
-          },
-          "total": 2
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Le judoka Teddy Riner effectue son premier déplacement de campagne le 14 novembre au salon du Made in France à Paris.",
-          "L'ancien champion olympique a surpris la classe politique en annonçant sa candidature à l'élection présidentielle de 2027 au début de la semaine."
-        ],
-        "centre": [
-          "Le quintuple champion olympique Teddy Riner a entamé ses visites de terrain par un hôpital en Seine-Saint-Denis pour placer la santé au coeur de ses priorités.",
-          "Le candidat s'est ensuite rendu au salon du Made in France à la porte de Versailles à Paris.",
-          "Jean-Luc Mélenchon a réagi depuis le salon en estimant que le candidat devrait se méfier de ses conseillers après sa visite dans un établissement de santé."
-        ],
-        "droite": [
-          "Teddy Riner a officialisé son premier déplacement de campagne au salon du Made in France programmé le samedi 14 novembre.",
-          "Le quintuple champion olympique a motivé sa décision de briguer l'Élysée par le constat d'un pays uni puis divisé après les Jeux olympiques de Paris 2024."
-        ]
-      },
-      "differences": [
-        "La gauche se concentre exclusivement sur l'annonce surprise de la candidature et la visite du salon du Made in France sans mentionner les autres étapes du candidat.",
-        "Le centre détaille précisément l'agenda complet du candidat en insistant sur la visite initiale à l'hôpital en Seine-Saint-Denis avant le salon parisien.",
-        "La droite met en avant les motivations personnelles du champion quant au rassemblement national issu des Jeux olympiques pour légitimer sa démarche."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 10,
-      "summarizedAt": "2026-11-14T04:01:24.931Z"
-    },
-    {
-      "id": "f6279066d4d4",
-      "slug": "la-malaisie-enquete-sur-une-filiale-de-megaspeed-impliquant",
-      "title": "La Malaisie enquête sur une filiale de Megaspeed impliquant Nvidia",
-      "createdAt": "2026-11-13T05:01:23.284Z",
-      "storyDay": "2026-11-13",
-      "articles": [
-        {
-          "id": "bc49a349994e",
-          "outletId": "le-parisien",
-          "headline": "« Une grave infraction » ? La Malaisie ouvre enquête sur une filiale de Megaspeed, pouvant éclabousser Nvidia",
-          "url": "https://www.leparisien.fr/international/une-grave-infraction-la-malaisie-ouvre-enquete-sur-une-filiale-de-megaspeed-pouvant-eclabousser-nvidia-13-11-2026-XKKWL3QRB5EZDCZNNFXBJQJPCA.php",
-          "publishedAt": "2026-11-13T05:01:23.284Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "economy"
-        },
-        {
-          "id": "3cbc1f1af9d8",
-          "outletId": "le-figaro",
-          "headline": "Affaire Nvidia : la Malaisie annonce enquêter sur une filiale de Megaspeed concernant un éventuel détournement de puces d’IA",
-          "url": "https://www.lefigaro.fr/secteur/high-tech/affaire-nvidia-la-malaisie-annonce-enqueter-sur-une-filiale-de-megaspeed-concernant-un-eventuel-detournement-de-puces-d-ia-20261113",
-          "publishedAt": "2026-11-13T04:37:05.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/13/cd44836580f42cd5577d8d0c70890ff8c55ffa85080f6707ff9b9e683b11fccb.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "economy",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "97cccdbf9a27",
-      "titledArticleCount": 2,
-      "section": "economy",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794463200000,
-          "end": 1794466800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794466800000,
-          "end": 1794470400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794470400000,
-          "end": 1794474000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794474000000,
-          "end": 1794477600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794477600000,
-          "end": 1794481200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794481200000,
-          "end": 1794484800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794484800000,
-          "end": 1794488400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794488400000,
-          "end": 1794492000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794492000000,
-          "end": 1794495600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794495600000,
-          "end": 1794499200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794499200000,
-          "end": 1794502800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794502800000,
-          "end": 1794506400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794506400000,
-          "end": 1794510000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794510000000,
-          "end": 1794513600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794513600000,
-          "end": 1794517200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794517200000,
-          "end": 1794520800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794520800000,
-          "end": 1794524400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794524400000,
-          "end": 1794528000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794528000000,
-          "end": 1794531600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794531600000,
-          "end": 1794535200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794535200000,
-          "end": 1794538800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794538800000,
-          "end": 1794542400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794542400000,
-          "end": 1794546000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1794546000000,
-          "end": 1794549600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ]
-    },
-    {
-      "id": "b0399bb4459b",
-      "slug": "antoine-dupont-porte-le-numero-10-pour-le-match-du-xv-de-france",
-      "title": "Antoine Dupont porte le numéro 10 pour le match du XV de France contre l'Afrique du Sud",
-      "createdAt": "2026-11-13T05:01:23.284Z",
-      "storyDay": "2026-11-13",
-      "articles": [
-        {
-          "id": "44620f709acf",
-          "outletId": "le-parisien",
-          "headline": "France-Afrique du Sud : « Il est nécessaire d’avoir peur »… Contre les Springboks, les Bleus face à leur plus grand défi",
-          "url": "https://www.leparisien.fr/sports/rugby/xv-de-france/france-afrique-du-sud-il-est-necessaire-davoir-peur-contre-les-springboks-les-bleus-face-a-leur-plus-grand-defi-13-11-2026-PJFMDIQ3UJFKTOLFDPTU4L2Q54.php",
-          "publishedAt": "2026-11-13T05:01:23.284Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "d13ba8644fee",
-          "outletId": "europe-1",
-          "headline": "XV de France : pourquoi Antoine Dupont portera le numéro 10 face à l'Afrique du Sud ?",
-          "url": "https://www.europe1.fr/sport/xv-de-france-pourquoi-antoine-dupont-portera-le-numero-10-face-a-lafrique-du-sud-1225346?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-13T04:30:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/11/13/000_d6t36af_1_6af463a6884b6.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        }
-      ],
-      "topicId": "f6a6c2e5491e",
-      "titledArticleCount": 2,
-      "section": "sport",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794463200000,
-          "end": 1794466800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794466800000,
-          "end": 1794470400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794470400000,
-          "end": 1794474000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794474000000,
-          "end": 1794477600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794477600000,
-          "end": 1794481200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794481200000,
-          "end": 1794484800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794484800000,
-          "end": 1794488400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794488400000,
-          "end": 1794492000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794492000000,
-          "end": 1794495600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794495600000,
-          "end": 1794499200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794499200000,
-          "end": 1794502800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794502800000,
-          "end": 1794506400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794506400000,
-          "end": 1794510000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794510000000,
-          "end": 1794513600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794513600000,
-          "end": 1794517200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794517200000,
-          "end": 1794520800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794520800000,
-          "end": 1794524400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794524400000,
-          "end": 1794528000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794528000000,
-          "end": 1794531600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794531600000,
-          "end": 1794535200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794535200000,
-          "end": 1794538800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794538800000,
-          "end": 1794542400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794542400000,
-          "end": 1794546000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1794546000000,
-          "end": 1794549600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ]
-    },
-    {
-      "id": "c27989e49314",
-      "slug": "marine-le-pen-se-dit-prete-a-rencontrer-volodymyr-zelensky-et",
-      "title": "Marine Le Pen se dit prête à rencontrer Volodymyr Zelensky à Bruxelles",
-      "createdAt": "2026-11-13T18:01:29.371Z",
-      "storyDay": "2026-11-13",
-      "articles": [
-        {
-          "id": "acb9302c2ac2",
-          "outletId": "cnews",
-          "headline": "Guerre en Ukraine : Marine Le Pen se dit prête à rencontrer Volodymyr Zelensky à Bruxelles",
-          "url": "https://www.cnews.fr/monde/2026-11-13/guerre-en-ukraine-marine-le-pen-se-dit-prete-rencontrer-volodymyr-zelensky",
-          "publishedAt": "2026-11-13T19:53:00.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-13t110825z_1468534110_rc23vha3gd6l_rtrmadp_3_france-politics-lepen-pensions_6af7557e8ed64.jpg?itok=Rlg2yJWl",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "4ebc223c6f90",
-          "outletId": "franceinfo",
-          "headline": "Marine Le Pen se dit prête à rencontrer le président ukrainien Volodymyr Zelensky à Bruxelles",
-          "url": "https://www.franceinfo.fr/politique/marine-le-pen/si-je-peux-le-rencontrer-a-bruxelles-je-le-dirai-a-l-ambassadeur-d-ukraine-marine-le-pen-se-dit-prete-a-echanger-avec-volodymyr-zelensky_8281529.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-13T18:29:43.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/_bttZ5-qBe7o3KVLxIoXociZ0es/0x26:1024x602/432x243/filters:format(jpg)/2026/11/13/6af74ee18e839084486683.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "c7a334ba7a77",
-          "outletId": "bfmtv",
-          "headline": "Marine Le Pen se dit prête à une rencontre avec Volodymyr Zelensky et propose qu'elle ait lieu à Bruxelles",
-          "url": "https://www.bfmtv.com/international/europe/ukraine/marine-le-pen-se-dit-prete-a-une-rencontre-avec-volodymyr-zelensky-et-propose-qu-elle-ait-lieu-a-bruxelles_AD-202611130723.html",
-          "publishedAt": "2026-11-13T17:43:05.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/od2Aei_QCoRvyFB6KdlYOnjF9DM=/0x40:768x472/800x0/images/Marine-Le-Pen-le-12-octobre-2026-a-Moissac-dans-le-Tarn-et-Garonne-2371332.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "99646eef62cf",
-          "outletId": "tf1-info",
-          "headline": "Marine Le Pen prête à rencontrer Volodymyr Zelensky pour discuter de l'aide financière à l'Ukraine",
-          "url": "https://www.tf1info.fr/politique/elections/presidentielle/marine-le-pen-prete-a-rencontrer-volodymyr-zelensky-pour-discuter-de-l-aide-financiere-a-l-ukraine-2475755.html",
-          "publishedAt": "2026-11-13T17:38:54.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/marine-le-pen-zelensky-ada9bd-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "dadaa835cf28",
-          "outletId": "le-figaro",
-          "headline": "Marine Le Pen ouverte à une rencontre avec Volodymyr Zelensky, qu’elle propose d’organiser à Bruxelles",
-          "url": "https://www.lefigaro.fr/politique/marine-le-pen-ouverte-a-une-rencontre-avec-volodymyr-zelensky-qu-elle-propose-d-organiser-a-bruxelles-20261113",
-          "publishedAt": "2026-11-13T17:02:27.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/13/9502d8880de4415c78032d604fefb082e7209bb30fbaae4ff4fada4af29c2487.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "85905049e012",
-          "outletId": "20-minutes",
-          "headline": "EN DIRECT Guerre en Ukraine : Marine Le Pen se dit prête à rencontrer Zelensky et propose de le faire à Bruxelles…",
-          "url": "https://www.20minutes.fr/monde/ukraine/4262555-20261113-direct-guerre-ukraine-jared-kushner-optimiste-malgre-importantes-divergences-entre-kiev-moscou?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-13T04:09:22.000Z",
-          "imageUrl": "https://img.20mn.fr/2LpFaESFQP61Fm4wTG9WCyk/1200x768_volodymyr-zelensky-le-president-volodymyr-zelenskyj-au-sommet-de-l-ue-a-dublin-le-12-novembre-2026-visite-de-travail-du-president-de-l-ukraine-en-irlande-pour-participer-au-9e-sommet-de-la-communaute-politique-europeenne-service-de-presse-du-president-de-l-ukraine-via-632730052-service-de-presse-du-president-de-l-ukraine-dpa-sipa-2611130931",
-          "frontPage": true,
-          "kind": "live",
-          "section": "world",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "c27989e49314",
-      "titledArticleCount": 5,
-      "section": "politics",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794513600000,
-          "end": 1794517200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794517200000,
-          "end": 1794520800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794520800000,
-          "end": 1794524400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794524400000,
-          "end": 1794528000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794528000000,
-          "end": 1794531600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794531600000,
-          "end": 1794535200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794535200000,
-          "end": 1794538800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794538800000,
-          "end": 1794542400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794542400000,
-          "end": 1794546000000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794546000000,
-          "end": 1794549600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794549600000,
-          "end": 1794553200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794553200000,
-          "end": 1794556800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794556800000,
-          "end": 1794560400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794560400000,
-          "end": 1794564000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794564000000,
-          "end": 1794567600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794567600000,
-          "end": 1794571200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794571200000,
-          "end": 1794574800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794574800000,
-          "end": 1794578400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794578400000,
-          "end": 1794582000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794582000000,
-          "end": 1794585600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794585600000,
-          "end": 1794589200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794589200000,
-          "end": 1794592800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 2
-          },
-          "total": 3
-        },
-        {
-          "start": 1794592800000,
-          "end": 1794596400000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794596400000,
-          "end": 1794600000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Marine Le Pen s'est déclarée favorable à un entretien avec Volodymyr Zelensky lors d'un déplacement à Bruxelles.",
-          "La dirigeante du Rassemblement national souhaite aborder la question du financement de l'aide à l'Ukraine avec le président ukrainien.",
-          "Elle a rappelé son intention de limiter dans le temps le soutien financier français à Kiev en cas de victoire présidentielle."
-        ],
-        "centre": [
-          "Marine Le Pen envisage une entrevue avec le président ukrainien Volodymyr Zelensky dans la capitale européenne.",
-          "L'objectif de cette discussion proposée par la responsable politique est d'aborder la problématique du financement de l'effort de guerre.",
-          "Elle a confirmé sa position de maintenir l'aide financière à l'Ukraine pendant une période initiale de six mois si elle accède au pouvoir."
-        ],
-        "droite": [
-          "Marine Le Pen a manifesté son ouverture à une rencontre avec le président ukrainien Volodymyr Zelensky à Bruxelles.",
-          "La discussion proposée doit porter sur le financement de l'Ukraine, un sujet qui agite l'Union européenne selon la candidate.",
-          "TF1 Info rappelle que cette main tendue intervient après des déclarations sur l'arrêt total de l'aide financière à Kiev et les critiques formulées par le dirigeant ukrainien."
-        ]
-      },
-      "differences": [
-        "La gauche se concentre strictement sur l'annonce de la rencontre et le rappel des conditions restrictives posées par Marine Le Pen sur l'aide à Kiev.",
-        "Le centre adopte un ton neutre en exposant les modalités pratiques de la visite et les arguments budgétaires avancés par la candidate.",
-        "La droite contextualise davantage l'initiative en soulignant le revirement de la candidate et en intégrant les tensions antérieures avec Volodymyr Zelensky."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 5,
-      "summarizedAt": "2026-11-13T19:01:25.829Z"
     }
   ],
   "feedStories": [
@@ -12747,7 +11479,7 @@
           "url": "https://www.ouest-france.fr/economie/aeronautique/les-decollages-davions-totalement-suspendus-aux-etats-unis-en-raison-de-circonstances-exceptionnelles-bb3af52a-dfa8-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-13T21:41:20.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExODBiNmExYzk2NmQ1ZGU3OTZkOTQwYzlmMzUzMWUwYzA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d8148098ad51bb436b4fb6f39290982f0f1a326a2e80f775bf69c9fa0e24d070",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -13075,6 +11807,18 @@
       "storyDay": "2026-11-13",
       "articles": [
         {
+          "id": "4d0105ccc983",
+          "outletId": "le-figaro",
+          "headline": "XV de France : en vidéo, le résumé de l’exploit des Bleus face à l’Afrique du Sud",
+          "url": "https://www.lefigaro.fr/sports/rugby/xv-de-france/xv-de-france-en-video-le-resume-de-l-exploit-des-bleus-face-a-l-afrique-du-sud-20261114",
+          "publishedAt": "2026-11-14T04:50:00.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/14/b5d495332865a1f78f0ff3011a60c9c9d473b1800ad2f96b6ba670bfc085b0dc.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
           "id": "bec3cf5634fd",
           "outletId": "le-monde",
           "headline": "Porté par un Antoine Dupont omniprésent, le XV de France, héroïque, se défait de l’Afrique du Sud",
@@ -13150,7 +11894,7 @@
           "url": "https://www.ouest-france.fr/sport/rugby/equipe-de-france/france-afrique-du-sud-cetait-incroyablement-fort-et-puissant-les-bleus-a-lunisson-apres-leur-exploit-e6709daa-dfb0-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-13T23:11:06.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNmQ0MGI2YTlkNmNiN2FhYzZlOTY3YmYxYTQ5MWUzYjk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=90bf0e04536c6199174d540761fac3f2e640c98126f1c048768db2d6abc07ab4",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -13270,30 +12014,10 @@
         }
       ],
       "topicId": "f6a6c2e5491e",
-      "titledArticleCount": 14,
+      "titledArticleCount": 18,
       "section": "sport",
       "everInEdition": true,
       "activity": [
-        {
-          "start": 1794538800000,
-          "end": 1794542400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794542400000,
-          "end": 1794546000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
         {
           "start": 1794546000000,
           "end": 1794549600000,
@@ -13513,33 +12237,53 @@
             "droite": 1
           },
           "total": 2
+        },
+        {
+          "start": 1794625200000,
+          "end": 1794628800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794628800000,
+          "end": 1794632400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
         }
       ],
       "summaries": {
         "gauche": [
-          "Le XV de France s'est imposé 21 à 19 face à l'Afrique du Sud au Stade de France lors de la 5e journée du Championnat des nations.",
-          "Malgré les blessures de plusieurs cadres et de nombreux ouvreurs, les Bleus ont résisté au retour des champions du monde sud-africains.",
-          "Cette victoire de prestige sur le fil permet à l'équipe de France de conforter sa première place dans sa poule."
+          "Le XV de France s'est imposé 21 à 19 face à l'Afrique du Sud au Stade de France lors de la cinquième journée du Championnat des nations.",
+          "Portés par un Antoine Dupont omniprésent à un poste inédit, les Bleus ont résisté au retour des doubles champions du monde en titre après une première mi-temps flamboyante.",
+          "Cette victoire de référence, obtenue malgré de nombreuses blessures, permet à l'équipe de France de conforter sa première place dans sa poule."
         ],
         "centre": [
-          "Les Bleus ont battu les doubles champions du monde sud-africains 21 à 19 au Stade de France en Championnat des nations.",
-          "Portée par une première mi-temps flamboyante, l'équipe de France a tenu bon malgré une fin de match sous pression et de multiples blessures.",
-          "Ce succès probant constitue la performance la plus marquante du XV de France depuis la Coupe du monde 2023."
+          "Les Bleus ont battu les Springboks sur le score de 21 à 19 au Stade de France, signant leur succès le plus marquant depuis le Mondial 2023.",
+          "Fabien Galthié a salué la performance d'Antoine Dupont, titularisé pour la première fois à la charnière aux côtés de Maxime Lucu.",
+          "Solidaires et courageux malgré les absences de plusieurs cadres, les joueurs français ont conservé jusqu'au bout l'avantage acquis avant la pause."
         ],
         "droite": [
-          "Le XV de France a dominé l'Afrique du Sud 21 à 19 au Stade de France, consolidant sa première place dans le Championnat des nations.",
-          "Privé de plusieurs titulaires habituels, le sélectionneur Fabien Galthié a notamment aligné Antoine Dupont au poste d'ouvreur.",
-          "Après une large domination en première période, les Bleus ont arraché la victoire grâce à un engagement total et une défense héroïque jusqu'au dernier plaquage de Louis Bielle-Biarrey."
+          "Le XV de France a battu l'Afrique du Sud 21 à 19 au Stade de France dans le cadre du Championnat des nations.",
+          "La défense héroïque et la vitesse de Louis Bielle-Biarrey et Nelson Grandidier ont permis aux Bleus de préserver leur avance en seconde période.",
+          "Le sélectionneur sud-africain Rassie Erasmus a reconnu des erreurs tout en regrettant certaines décisions arbitrales après cette rencontre irrespirable."
         ]
       },
       "differences": [
-        "La gauche met l'accent sur la performance de référence face à la bête noire sud-africaine et insiste sur la résilience de l'équipe malgré les absences.",
-        "Le centre privilégie le récit d'un exploit mémorable et d'un succès majeur qui confirme la dynamique tricolore depuis le Mondial 2023.",
-        "La droite détaille la composition tactique inédite décidée par Fabien Galthié, tout en décrivant avec emphase une fin de rencontre irrespirable."
+        "Le camp de gauche met en avant la dimension collective et l'impact de cette victoire dans la course à la finale de la compétition.",
+        "Le camp du centre insiste sur la performance individuelle marquante d'Antoine Dupont et sur le symbole de ce succès face à la bête noire sud-africaine.",
+        "Le camp de droite privilégie le récit haletant d'un match sous tension, soulignant la solidité défensive des Bleus et les réactions du camp adverse."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 14,
-      "summarizedAt": "2026-11-14T00:01:28.756Z"
+      "summarizedArticleCount": 18,
+      "summarizedAt": "2026-11-14T05:01:23.950Z"
     },
     {
       "id": "5bbaf2c64efc",
@@ -13590,7 +12334,7 @@
           "url": "https://www.ouest-france.fr/monde/etats-unis/donald-trump/donald-trump-va-rencontrer-vladimir-poutine-et-xi-jinping-en-chine-2db65086-dfc2-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-14T00:35:25.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMWE3NTk3N2MwZTNjZjU3MmVhMzUzM2M5NDU3YWY1MmI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=fc7edc477068aa318f7e96d8cc19dbc7ec6be0e7d413342834752a7fda130082",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -13866,6 +12610,296 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 4,
       "summarizedAt": "2026-11-14T03:01:25.425Z"
+    },
+    {
+      "id": "582f3db54868",
+      "slug": "spacex-renonce-a-recuperer-le-premier-etage-de-sa-megafusee",
+      "title": "SpaceX renonce à récupérer le premier étage de sa mégafusée Starship",
+      "createdAt": "2026-11-14T00:01:28.756Z",
+      "storyDay": "2026-11-14",
+      "articles": [
+        {
+          "id": "33343cd438f4",
+          "outletId": "courrier-international",
+          "headline": "SpaceX échoue à récupérer en un seul vol les deux étages de sa fusée Starship",
+          "url": "https://www.courrierinternational.com/article/espace-spacex-echoue-a-recuperer-en-un-seul-vol-les-deux-etages-de-sa-fusee-starship_287171",
+          "publishedAt": "2026-11-14T04:48:02.000Z",
+          "imageUrl": "https://focus.courrierinternational.com/2026/11/14/0/0/5568/3712/644/0/60/0/feb286d_ftp-1-bu50rwiu9sv4-2026-11-14t012408z-750862810-rc2anoa0o8fl-rtrmadp-3-space-spacex-starship.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "8e9b32c3cad6",
+          "outletId": "ouest-france",
+          "headline": "La mégafusée Starship décolle, et renonce à récupérer le premier étage en raison d’un problème technique",
+          "url": "https://www.ouest-france.fr/sciences/espace/la-megafusee-starship-decolle-et-renonce-a-recuperer-le-premier-etage-en-raison-dun-probleme-technique-ae9635c0-dfb5-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-13T23:08:20.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNGUyMzYyODRlN2IwMDY5YmVlMWI0MTQ5MmJkOTM4Nzg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=39ec643e6109ae96fa4b849e36c1b78b0bc4f796d34fa234a21badff9efba27b",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        },
+        {
+          "id": "2ea46c3a7533",
+          "outletId": "le-figaro",
+          "headline": "En raison d’un problème technique, SpaceX renonce à récupérer le premier étage de sa mégafusée Starship",
+          "url": "https://www.lefigaro.fr/sciences/en-raison-d-un-probleme-technique-spacex-renonce-a-recuperer-le-premier-etage-de-sa-megafusee-starship-20261114",
+          "publishedAt": "2026-11-13T23:06:42.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/13/e1da09f0540ea6d4559323d69d1ecfb28305b4a2298173725ae580f9562f6ab7.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "582f3db54868",
+      "titledArticleCount": 3,
+      "section": "science",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794546000000,
+          "end": 1794549600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794549600000,
+          "end": 1794553200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794553200000,
+          "end": 1794556800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794556800000,
+          "end": 1794560400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794560400000,
+          "end": 1794564000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794564000000,
+          "end": 1794567600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794567600000,
+          "end": 1794571200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794571200000,
+          "end": 1794574800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794574800000,
+          "end": 1794578400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794578400000,
+          "end": 1794582000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794582000000,
+          "end": 1794585600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794585600000,
+          "end": 1794589200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794589200000,
+          "end": 1794592800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794592800000,
+          "end": 1794596400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794596400000,
+          "end": 1794600000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794600000000,
+          "end": 1794603600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794603600000,
+          "end": 1794607200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794607200000,
+          "end": 1794610800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794610800000,
+          "end": 1794614400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 1
+          },
+          "total": 2
+        },
+        {
+          "start": 1794614400000,
+          "end": 1794618000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794618000000,
+          "end": 1794621600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794621600000,
+          "end": 1794625200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794625200000,
+          "end": 1794628800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794628800000,
+          "end": 1794632400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        }
+      ]
     },
     {
       "id": "72ef541b1f5f",
@@ -18504,7 +17538,7 @@
           "url": "https://www.lemonde.fr/culture/article/2026/11/13/la-madrague-maison-mythique-de-brigitte-bardot-a-saint-tropez-ouvrira-ses-portes-au-public-des-l-ete-prochain_6809382_3246.html",
           "publishedAt": "2026-11-13T19:49:02.000Z",
           "imageUrl": "https://img.lemde.fr/2025/12/28/504/0/6048/3024/644/322/60/0/81d3675_ftp-1-4hazhmzf8ot7-5760946-01-06.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "culture",
           "everFrontPage": true
@@ -21615,7 +20649,7 @@
           "url": "https://www.lefigaro.fr/actualite-france/rennes-le-plus-grand-lycee-de-bretagne-ferme-une-semaine-apres-des-debordements-20261114",
           "publishedAt": "2026-11-14T00:29:25.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x1996_crop/2026/11/14/b37cb2495e9633cb89e550fe8149126d9ca9b92e36146a57c36b2f3eccbc2a7c.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "society",
           "everFrontPage": true
@@ -21874,294 +20908,6 @@
             "gauche": 0,
             "centre": 0,
             "droite": 1
-          },
-          "total": 1
-        }
-      ]
-    },
-    {
-      "id": "98e443996268",
-      "slug": "la-conductrice-de-19-ans-est-mise-en-examen-pour-homicide",
-      "title": "La conductrice de 19 ans est mise en examen pour homicide routier après la mort de trois jeunes à Tours",
-      "createdAt": "2026-11-13T21:01:26.990Z",
-      "storyDay": "2026-11-13",
-      "articles": [
-        {
-          "id": "ac1f4cb13906",
-          "outletId": "le-parisien",
-          "headline": "Mort de trois jeunes à Tours : la conductrice de 19 ans mise en examen pour homicide routier",
-          "url": "https://www.leparisien.fr/faits-divers/mort-de-trois-jeunes-a-tours-la-conductrice-de-19-ans-mise-en-examen-pour-homicide-routier-13-11-2026-UHDLRNVDTVCRJBIS2M4RHJBPGQ.php",
-          "publishedAt": "2026-11-13T21:01:26.990Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "beb843b6a6b1",
-          "outletId": "bfmtv",
-          "headline": "Accident de la route à Tours: la conductrice de 19 ans mise en examen pour homicide routier après la mort de trois jeunes",
-          "url": "https://www.bfmtv.com/police-justice/accident-de-la-route-a-tours-la-conductrice-de-19-ans-mise-en-examen-pour-homicide-routier-apres-la-mort-de-trois-jeunes_AD-202611130854.html",
-          "publishedAt": "2026-11-13T20:35:14.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/DgEl8Ey3cf2qLrQTpfgiYOYHa0w=/55x32:2327x1310/800x0/images/-71998.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "258f6b1394b6",
-          "outletId": "le-figaro",
-          "headline": "Tours : une conductrice de 19 ans mise en examen pour homicide routier après la mort de trois jeunes",
-          "url": "https://www.lefigaro.fr/flash-actu/tours-une-conductrice-de-19-ans-mise-en-examen-pour-homicide-routier-apres-la-mort-de-trois-jeunes-20261113",
-          "publishedAt": "2026-11-13T19:28:42.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/13/d5f506ca5f15a0f6ae1bf89b2fe5f828e43c957fddf31998654a81149a730ff1.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "topicId": "99fe08e876aa",
-      "titledArticleCount": 3,
-      "section": "misc",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794520800000,
-          "end": 1794524400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794524400000,
-          "end": 1794528000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794528000000,
-          "end": 1794531600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794531600000,
-          "end": 1794535200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794535200000,
-          "end": 1794538800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794538800000,
-          "end": 1794542400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794542400000,
-          "end": 1794546000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794546000000,
-          "end": 1794549600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794549600000,
-          "end": 1794553200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794553200000,
-          "end": 1794556800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794556800000,
-          "end": 1794560400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794560400000,
-          "end": 1794564000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794564000000,
-          "end": 1794567600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794567600000,
-          "end": 1794571200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794571200000,
-          "end": 1794574800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794574800000,
-          "end": 1794578400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794578400000,
-          "end": 1794582000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794582000000,
-          "end": 1794585600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794585600000,
-          "end": 1794589200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794589200000,
-          "end": 1794592800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794592800000,
-          "end": 1794596400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794596400000,
-          "end": 1794600000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1794600000000,
-          "end": 1794603600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794603600000,
-          "end": 1794607200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
           },
           "total": 1
         }
@@ -23297,7 +22043,7 @@
           "url": "https://www.ouest-france.fr/economie/aeronautique/les-decollages-davions-totalement-suspendus-aux-etats-unis-en-raison-de-circonstances-exceptionnelles-bb3af52a-dfa8-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-13T21:41:20.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExODBiNmExYzk2NmQ1ZGU3OTZkOTQwYzlmMzUzMWUwYzA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d8148098ad51bb436b4fb6f39290982f0f1a326a2e80f775bf69c9fa0e24d070",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -24133,6 +22879,18 @@
       "storyDay": "2026-11-13",
       "articles": [
         {
+          "id": "4d0105ccc983",
+          "outletId": "le-figaro",
+          "headline": "XV de France : en vidéo, le résumé de l’exploit des Bleus face à l’Afrique du Sud",
+          "url": "https://www.lefigaro.fr/sports/rugby/xv-de-france/xv-de-france-en-video-le-resume-de-l-exploit-des-bleus-face-a-l-afrique-du-sud-20261114",
+          "publishedAt": "2026-11-14T04:50:00.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/14/b5d495332865a1f78f0ff3011a60c9c9d473b1800ad2f96b6ba670bfc085b0dc.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
           "id": "bec3cf5634fd",
           "outletId": "le-monde",
           "headline": "Porté par un Antoine Dupont omniprésent, le XV de France, héroïque, se défait de l’Afrique du Sud",
@@ -24208,7 +22966,7 @@
           "url": "https://www.ouest-france.fr/sport/rugby/equipe-de-france/france-afrique-du-sud-cetait-incroyablement-fort-et-puissant-les-bleus-a-lunisson-apres-leur-exploit-e6709daa-dfb0-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-13T23:11:06.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNmQ0MGI2YTlkNmNiN2FhYzZlOTY3YmYxYTQ5MWUzYjk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=90bf0e04536c6199174d540761fac3f2e640c98126f1c048768db2d6abc07ab4",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -24328,30 +23086,10 @@
         }
       ],
       "topicId": "f6a6c2e5491e",
-      "titledArticleCount": 14,
+      "titledArticleCount": 18,
       "section": "sport",
       "everInEdition": true,
       "activity": [
-        {
-          "start": 1794538800000,
-          "end": 1794542400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794542400000,
-          "end": 1794546000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
         {
           "start": 1794546000000,
           "end": 1794549600000,
@@ -24571,33 +23309,53 @@
             "droite": 1
           },
           "total": 2
+        },
+        {
+          "start": 1794625200000,
+          "end": 1794628800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794628800000,
+          "end": 1794632400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
         }
       ],
       "summaries": {
         "gauche": [
-          "Le XV de France s'est imposé 21 à 19 face à l'Afrique du Sud au Stade de France lors de la 5e journée du Championnat des nations.",
-          "Malgré les blessures de plusieurs cadres et de nombreux ouvreurs, les Bleus ont résisté au retour des champions du monde sud-africains.",
-          "Cette victoire de prestige sur le fil permet à l'équipe de France de conforter sa première place dans sa poule."
+          "Le XV de France s'est imposé 21 à 19 face à l'Afrique du Sud au Stade de France lors de la cinquième journée du Championnat des nations.",
+          "Portés par un Antoine Dupont omniprésent à un poste inédit, les Bleus ont résisté au retour des doubles champions du monde en titre après une première mi-temps flamboyante.",
+          "Cette victoire de référence, obtenue malgré de nombreuses blessures, permet à l'équipe de France de conforter sa première place dans sa poule."
         ],
         "centre": [
-          "Les Bleus ont battu les doubles champions du monde sud-africains 21 à 19 au Stade de France en Championnat des nations.",
-          "Portée par une première mi-temps flamboyante, l'équipe de France a tenu bon malgré une fin de match sous pression et de multiples blessures.",
-          "Ce succès probant constitue la performance la plus marquante du XV de France depuis la Coupe du monde 2023."
+          "Les Bleus ont battu les Springboks sur le score de 21 à 19 au Stade de France, signant leur succès le plus marquant depuis le Mondial 2023.",
+          "Fabien Galthié a salué la performance d'Antoine Dupont, titularisé pour la première fois à la charnière aux côtés de Maxime Lucu.",
+          "Solidaires et courageux malgré les absences de plusieurs cadres, les joueurs français ont conservé jusqu'au bout l'avantage acquis avant la pause."
         ],
         "droite": [
-          "Le XV de France a dominé l'Afrique du Sud 21 à 19 au Stade de France, consolidant sa première place dans le Championnat des nations.",
-          "Privé de plusieurs titulaires habituels, le sélectionneur Fabien Galthié a notamment aligné Antoine Dupont au poste d'ouvreur.",
-          "Après une large domination en première période, les Bleus ont arraché la victoire grâce à un engagement total et une défense héroïque jusqu'au dernier plaquage de Louis Bielle-Biarrey."
+          "Le XV de France a battu l'Afrique du Sud 21 à 19 au Stade de France dans le cadre du Championnat des nations.",
+          "La défense héroïque et la vitesse de Louis Bielle-Biarrey et Nelson Grandidier ont permis aux Bleus de préserver leur avance en seconde période.",
+          "Le sélectionneur sud-africain Rassie Erasmus a reconnu des erreurs tout en regrettant certaines décisions arbitrales après cette rencontre irrespirable."
         ]
       },
       "differences": [
-        "La gauche met l'accent sur la performance de référence face à la bête noire sud-africaine et insiste sur la résilience de l'équipe malgré les absences.",
-        "Le centre privilégie le récit d'un exploit mémorable et d'un succès majeur qui confirme la dynamique tricolore depuis le Mondial 2023.",
-        "La droite détaille la composition tactique inédite décidée par Fabien Galthié, tout en décrivant avec emphase une fin de rencontre irrespirable."
+        "Le camp de gauche met en avant la dimension collective et l'impact de cette victoire dans la course à la finale de la compétition.",
+        "Le camp du centre insiste sur la performance individuelle marquante d'Antoine Dupont et sur le symbole de ce succès face à la bête noire sud-africaine.",
+        "Le camp de droite privilégie le récit haletant d'un match sous tension, soulignant la solidité défensive des Bleus et les réactions du camp adverse."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 14,
-      "summarizedAt": "2026-11-14T00:01:28.756Z"
+      "summarizedArticleCount": 18,
+      "summarizedAt": "2026-11-14T05:01:23.950Z"
     },
     {
       "id": "f47528894ae0",
@@ -28848,354 +27606,6 @@
       "summarizedAt": "2026-11-13T22:01:44.777Z"
     },
     {
-      "id": "c27989e49314",
-      "slug": "marine-le-pen-se-dit-prete-a-rencontrer-volodymyr-zelensky-et",
-      "title": "Marine Le Pen se dit prête à rencontrer Volodymyr Zelensky à Bruxelles",
-      "createdAt": "2026-11-13T18:01:29.371Z",
-      "storyDay": "2026-11-13",
-      "articles": [
-        {
-          "id": "acb9302c2ac2",
-          "outletId": "cnews",
-          "headline": "Guerre en Ukraine : Marine Le Pen se dit prête à rencontrer Volodymyr Zelensky à Bruxelles",
-          "url": "https://www.cnews.fr/monde/2026-11-13/guerre-en-ukraine-marine-le-pen-se-dit-prete-rencontrer-volodymyr-zelensky",
-          "publishedAt": "2026-11-13T19:53:00.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-13t110825z_1468534110_rc23vha3gd6l_rtrmadp_3_france-politics-lepen-pensions_6af7557e8ed64.jpg?itok=Rlg2yJWl",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "4ebc223c6f90",
-          "outletId": "franceinfo",
-          "headline": "Marine Le Pen se dit prête à rencontrer le président ukrainien Volodymyr Zelensky à Bruxelles",
-          "url": "https://www.franceinfo.fr/politique/marine-le-pen/si-je-peux-le-rencontrer-a-bruxelles-je-le-dirai-a-l-ambassadeur-d-ukraine-marine-le-pen-se-dit-prete-a-echanger-avec-volodymyr-zelensky_8281529.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-13T18:29:43.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/_bttZ5-qBe7o3KVLxIoXociZ0es/0x26:1024x602/432x243/filters:format(jpg)/2026/11/13/6af74ee18e839084486683.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "c7a334ba7a77",
-          "outletId": "bfmtv",
-          "headline": "Marine Le Pen se dit prête à une rencontre avec Volodymyr Zelensky et propose qu'elle ait lieu à Bruxelles",
-          "url": "https://www.bfmtv.com/international/europe/ukraine/marine-le-pen-se-dit-prete-a-une-rencontre-avec-volodymyr-zelensky-et-propose-qu-elle-ait-lieu-a-bruxelles_AD-202611130723.html",
-          "publishedAt": "2026-11-13T17:43:05.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/od2Aei_QCoRvyFB6KdlYOnjF9DM=/0x40:768x472/800x0/images/Marine-Le-Pen-le-12-octobre-2026-a-Moissac-dans-le-Tarn-et-Garonne-2371332.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "99646eef62cf",
-          "outletId": "tf1-info",
-          "headline": "Marine Le Pen prête à rencontrer Volodymyr Zelensky pour discuter de l'aide financière à l'Ukraine",
-          "url": "https://www.tf1info.fr/politique/elections/presidentielle/marine-le-pen-prete-a-rencontrer-volodymyr-zelensky-pour-discuter-de-l-aide-financiere-a-l-ukraine-2475755.html",
-          "publishedAt": "2026-11-13T17:38:54.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/576/marine-le-pen-zelensky-ada9bd-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "dadaa835cf28",
-          "outletId": "le-figaro",
-          "headline": "Marine Le Pen ouverte à une rencontre avec Volodymyr Zelensky, qu’elle propose d’organiser à Bruxelles",
-          "url": "https://www.lefigaro.fr/politique/marine-le-pen-ouverte-a-une-rencontre-avec-volodymyr-zelensky-qu-elle-propose-d-organiser-a-bruxelles-20261113",
-          "publishedAt": "2026-11-13T17:02:27.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/13/9502d8880de4415c78032d604fefb082e7209bb30fbaae4ff4fada4af29c2487.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "85905049e012",
-          "outletId": "20-minutes",
-          "headline": "EN DIRECT Guerre en Ukraine : Marine Le Pen se dit prête à rencontrer Zelensky et propose de le faire à Bruxelles…",
-          "url": "https://www.20minutes.fr/monde/ukraine/4262555-20261113-direct-guerre-ukraine-jared-kushner-optimiste-malgre-importantes-divergences-entre-kiev-moscou?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-13T04:09:22.000Z",
-          "imageUrl": "https://img.20mn.fr/2LpFaESFQP61Fm4wTG9WCyk/1200x768_volodymyr-zelensky-le-president-volodymyr-zelenskyj-au-sommet-de-l-ue-a-dublin-le-12-novembre-2026-visite-de-travail-du-president-de-l-ukraine-en-irlande-pour-participer-au-9e-sommet-de-la-communaute-politique-europeenne-service-de-presse-du-president-de-l-ukraine-via-632730052-service-de-presse-du-president-de-l-ukraine-dpa-sipa-2611130931",
-          "frontPage": true,
-          "kind": "live",
-          "section": "world",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "c27989e49314",
-      "titledArticleCount": 5,
-      "section": "politics",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794513600000,
-          "end": 1794517200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794517200000,
-          "end": 1794520800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794520800000,
-          "end": 1794524400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794524400000,
-          "end": 1794528000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794528000000,
-          "end": 1794531600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794531600000,
-          "end": 1794535200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794535200000,
-          "end": 1794538800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794538800000,
-          "end": 1794542400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794542400000,
-          "end": 1794546000000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794546000000,
-          "end": 1794549600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794549600000,
-          "end": 1794553200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794553200000,
-          "end": 1794556800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794556800000,
-          "end": 1794560400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794560400000,
-          "end": 1794564000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794564000000,
-          "end": 1794567600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794567600000,
-          "end": 1794571200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794571200000,
-          "end": 1794574800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794574800000,
-          "end": 1794578400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794578400000,
-          "end": 1794582000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794582000000,
-          "end": 1794585600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794585600000,
-          "end": 1794589200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794589200000,
-          "end": 1794592800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 2
-          },
-          "total": 3
-        },
-        {
-          "start": 1794592800000,
-          "end": 1794596400000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794596400000,
-          "end": 1794600000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Marine Le Pen s'est déclarée favorable à un entretien avec Volodymyr Zelensky lors d'un déplacement à Bruxelles.",
-          "La dirigeante du Rassemblement national souhaite aborder la question du financement de l'aide à l'Ukraine avec le président ukrainien.",
-          "Elle a rappelé son intention de limiter dans le temps le soutien financier français à Kiev en cas de victoire présidentielle."
-        ],
-        "centre": [
-          "Marine Le Pen envisage une entrevue avec le président ukrainien Volodymyr Zelensky dans la capitale européenne.",
-          "L'objectif de cette discussion proposée par la responsable politique est d'aborder la problématique du financement de l'effort de guerre.",
-          "Elle a confirmé sa position de maintenir l'aide financière à l'Ukraine pendant une période initiale de six mois si elle accède au pouvoir."
-        ],
-        "droite": [
-          "Marine Le Pen a manifesté son ouverture à une rencontre avec le président ukrainien Volodymyr Zelensky à Bruxelles.",
-          "La discussion proposée doit porter sur le financement de l'Ukraine, un sujet qui agite l'Union européenne selon la candidate.",
-          "TF1 Info rappelle que cette main tendue intervient après des déclarations sur l'arrêt total de l'aide financière à Kiev et les critiques formulées par le dirigeant ukrainien."
-        ]
-      },
-      "differences": [
-        "La gauche se concentre strictement sur l'annonce de la rencontre et le rappel des conditions restrictives posées par Marine Le Pen sur l'aide à Kiev.",
-        "Le centre adopte un ton neutre en exposant les modalités pratiques de la visite et les arguments budgétaires avancés par la candidate.",
-        "La droite contextualise davantage l'initiative en soulignant le revirement de la candidate et en intégrant les tensions antérieures avec Volodymyr Zelensky."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 5,
-      "summarizedAt": "2026-11-13T19:01:25.829Z"
-    },
-    {
       "id": "14cf3bc5ac9d",
       "slug": "la-russie-affirme-avoir-abattu-pres-de-1-200-drones-ukrainiens",
       "title": "La Russie affirme avoir abattu près de 1 200 drones ukrainiens lors d'une attaque nocturne",
@@ -30941,7 +29351,7 @@
           "url": "https://www.lemonde.fr/culture/article/2026/11/13/la-madrague-maison-mythique-de-brigitte-bardot-a-saint-tropez-ouvrira-ses-portes-au-public-des-l-ete-prochain_6809382_3246.html",
           "publishedAt": "2026-11-13T19:49:02.000Z",
           "imageUrl": "https://img.lemde.fr/2025/12/28/504/0/6048/3024/644/322/60/0/81d3675_ftp-1-4hazhmzf8ot7-5760946-01-06.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "culture",
           "everFrontPage": true
@@ -31587,6 +29997,354 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 7,
       "summarizedAt": "2026-11-13T21:01:26.990Z"
+    },
+    {
+      "id": "c27989e49314",
+      "slug": "marine-le-pen-se-dit-prete-a-rencontrer-volodymyr-zelensky-et",
+      "title": "Marine Le Pen se dit prête à rencontrer Volodymyr Zelensky à Bruxelles",
+      "createdAt": "2026-11-13T18:01:29.371Z",
+      "storyDay": "2026-11-13",
+      "articles": [
+        {
+          "id": "acb9302c2ac2",
+          "outletId": "cnews",
+          "headline": "Guerre en Ukraine : Marine Le Pen se dit prête à rencontrer Volodymyr Zelensky à Bruxelles",
+          "url": "https://www.cnews.fr/monde/2026-11-13/guerre-en-ukraine-marine-le-pen-se-dit-prete-rencontrer-volodymyr-zelensky",
+          "publishedAt": "2026-11-13T19:53:00.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-13t110825z_1468534110_rc23vha3gd6l_rtrmadp_3_france-politics-lepen-pensions_6af7557e8ed64.jpg?itok=Rlg2yJWl",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "4ebc223c6f90",
+          "outletId": "franceinfo",
+          "headline": "Marine Le Pen se dit prête à rencontrer le président ukrainien Volodymyr Zelensky à Bruxelles",
+          "url": "https://www.franceinfo.fr/politique/marine-le-pen/si-je-peux-le-rencontrer-a-bruxelles-je-le-dirai-a-l-ambassadeur-d-ukraine-marine-le-pen-se-dit-prete-a-echanger-avec-volodymyr-zelensky_8281529.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-13T18:29:43.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/_bttZ5-qBe7o3KVLxIoXociZ0es/0x26:1024x602/432x243/filters:format(jpg)/2026/11/13/6af74ee18e839084486683.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c7a334ba7a77",
+          "outletId": "bfmtv",
+          "headline": "Marine Le Pen se dit prête à une rencontre avec Volodymyr Zelensky et propose qu'elle ait lieu à Bruxelles",
+          "url": "https://www.bfmtv.com/international/europe/ukraine/marine-le-pen-se-dit-prete-a-une-rencontre-avec-volodymyr-zelensky-et-propose-qu-elle-ait-lieu-a-bruxelles_AD-202611130723.html",
+          "publishedAt": "2026-11-13T17:43:05.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/od2Aei_QCoRvyFB6KdlYOnjF9DM=/0x40:768x472/800x0/images/Marine-Le-Pen-le-12-octobre-2026-a-Moissac-dans-le-Tarn-et-Garonne-2371332.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "99646eef62cf",
+          "outletId": "tf1-info",
+          "headline": "Marine Le Pen prête à rencontrer Volodymyr Zelensky pour discuter de l'aide financière à l'Ukraine",
+          "url": "https://www.tf1info.fr/politique/elections/presidentielle/marine-le-pen-prete-a-rencontrer-volodymyr-zelensky-pour-discuter-de-l-aide-financiere-a-l-ukraine-2475755.html",
+          "publishedAt": "2026-11-13T17:38:54.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/576/marine-le-pen-zelensky-ada9bd-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "dadaa835cf28",
+          "outletId": "le-figaro",
+          "headline": "Marine Le Pen ouverte à une rencontre avec Volodymyr Zelensky, qu’elle propose d’organiser à Bruxelles",
+          "url": "https://www.lefigaro.fr/politique/marine-le-pen-ouverte-a-une-rencontre-avec-volodymyr-zelensky-qu-elle-propose-d-organiser-a-bruxelles-20261113",
+          "publishedAt": "2026-11-13T17:02:27.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/13/9502d8880de4415c78032d604fefb082e7209bb30fbaae4ff4fada4af29c2487.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "85905049e012",
+          "outletId": "20-minutes",
+          "headline": "EN DIRECT Guerre en Ukraine : Marine Le Pen se dit prête à rencontrer Zelensky et propose de le faire à Bruxelles…",
+          "url": "https://www.20minutes.fr/monde/ukraine/4262555-20261113-direct-guerre-ukraine-jared-kushner-optimiste-malgre-importantes-divergences-entre-kiev-moscou?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-13T04:09:22.000Z",
+          "imageUrl": "https://img.20mn.fr/2LpFaESFQP61Fm4wTG9WCyk/1200x768_volodymyr-zelensky-le-president-volodymyr-zelenskyj-au-sommet-de-l-ue-a-dublin-le-12-novembre-2026-visite-de-travail-du-president-de-l-ukraine-en-irlande-pour-participer-au-9e-sommet-de-la-communaute-politique-europeenne-service-de-presse-du-president-de-l-ukraine-via-632730052-service-de-presse-du-president-de-l-ukraine-dpa-sipa-2611130931",
+          "frontPage": false,
+          "kind": "live",
+          "section": "world",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "c27989e49314",
+      "titledArticleCount": 5,
+      "section": "politics",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794513600000,
+          "end": 1794517200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794517200000,
+          "end": 1794520800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794520800000,
+          "end": 1794524400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794524400000,
+          "end": 1794528000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794528000000,
+          "end": 1794531600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794531600000,
+          "end": 1794535200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794535200000,
+          "end": 1794538800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794538800000,
+          "end": 1794542400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794542400000,
+          "end": 1794546000000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1794546000000,
+          "end": 1794549600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794549600000,
+          "end": 1794553200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794553200000,
+          "end": 1794556800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794556800000,
+          "end": 1794560400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794560400000,
+          "end": 1794564000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794564000000,
+          "end": 1794567600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794567600000,
+          "end": 1794571200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794571200000,
+          "end": 1794574800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794574800000,
+          "end": 1794578400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794578400000,
+          "end": 1794582000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794582000000,
+          "end": 1794585600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794585600000,
+          "end": 1794589200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794589200000,
+          "end": 1794592800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 2
+          },
+          "total": 3
+        },
+        {
+          "start": 1794592800000,
+          "end": 1794596400000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1794596400000,
+          "end": 1794600000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        }
+      ],
+      "summaries": {
+        "gauche": [
+          "Marine Le Pen s'est déclarée favorable à un entretien avec Volodymyr Zelensky lors d'un déplacement à Bruxelles.",
+          "La dirigeante du Rassemblement national souhaite aborder la question du financement de l'aide à l'Ukraine avec le président ukrainien.",
+          "Elle a rappelé son intention de limiter dans le temps le soutien financier français à Kiev en cas de victoire présidentielle."
+        ],
+        "centre": [
+          "Marine Le Pen envisage une entrevue avec le président ukrainien Volodymyr Zelensky dans la capitale européenne.",
+          "L'objectif de cette discussion proposée par la responsable politique est d'aborder la problématique du financement de l'effort de guerre.",
+          "Elle a confirmé sa position de maintenir l'aide financière à l'Ukraine pendant une période initiale de six mois si elle accède au pouvoir."
+        ],
+        "droite": [
+          "Marine Le Pen a manifesté son ouverture à une rencontre avec le président ukrainien Volodymyr Zelensky à Bruxelles.",
+          "La discussion proposée doit porter sur le financement de l'Ukraine, un sujet qui agite l'Union européenne selon la candidate.",
+          "TF1 Info rappelle que cette main tendue intervient après des déclarations sur l'arrêt total de l'aide financière à Kiev et les critiques formulées par le dirigeant ukrainien."
+        ]
+      },
+      "differences": [
+        "La gauche se concentre strictement sur l'annonce de la rencontre et le rappel des conditions restrictives posées par Marine Le Pen sur l'aide à Kiev.",
+        "Le centre adopte un ton neutre en exposant les modalités pratiques de la visite et les arguments budgétaires avancés par la candidate.",
+        "La droite contextualise davantage l'initiative en soulignant le revirement de la candidate et en intégrant les tensions antérieures avec Volodymyr Zelensky."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-11-13T19:01:25.829Z"
     },
     {
       "id": "d8240e9f9b6b",
@@ -33103,7 +31861,7 @@
           "url": "https://www.ouest-france.fr/monde/etats-unis/donald-trump/donald-trump-va-rencontrer-vladimir-poutine-et-xi-jinping-en-chine-2db65086-dfc2-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
           "publishedAt": "2026-11-14T00:35:25.000Z",
           "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMWE3NTk3N2MwZTNjZjU3MmVhMzUzM2M5NDU3YWY1MmI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=fc7edc477068aa318f7e96d8cc19dbc7ec6be0e7d413342834752a7fda130082",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
