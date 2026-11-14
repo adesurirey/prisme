@@ -6,6 +6,29 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "5ed7b251f36f",
+      "outletId": "france-24",
+      "headline": "La cyberattaque d'une filiale de La Poste entraîne un vol de données touchant 22 millions de personnes",
+      "url": "https://www.france24.com/fr/france/20261114-la-cyberattaque-d-une-filiale-de-la-poste-entra%C3%AEne-un-vol-de-donn%C3%A9es-touchant-22-millions-de-personnes",
+      "publishedAt": "2026-11-14T20:50:52.000Z",
+      "imageUrl": "https://s.france24.com/media/display/c5181990-e068-11f1-b53d-5f54d898a954/w:1024/p:16x9/000-C3K727T.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "25eb228499e2",
+      "outletId": "le-monde",
+      "headline": "Cyberattaque : Maileva, filiale du groupe La Poste, annonce un vol de données touchant 22 millions de personnes",
+      "url": "https://www.lemonde.fr/pixels/article/2026/11/14/cyberattaque-maileva-filiale-du-groupe-la-poste-annonce-un-vol-de-donnees-touchant-22-millions-de-personnes_6810545_4408996.html",
+      "publishedAt": "2026-11-14T20:05:18.000Z",
+      "imageUrl": "https://img.lemde.fr/2025/08/23/344/0/2765/1382/644/322/60/0/d8b6869_ftp-import-images-1-w7ux9s3j1l8c-5694781-01-06.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "6063a4e06b2c",
       "outletId": "le-parisien",
       "headline": "Cyberattaque : la plate-forme Maileva, du groupe La Poste, annonce un vol de données touchant 22 millions de personnes",
@@ -74,6 +97,17 @@
       "section": "economy"
     },
     {
+      "id": "3cb8b5b696aa",
+      "outletId": "cnews",
+      "headline": "Cyberattaque : le plate-forme Maileva, appartenant au groupe La Poste, annonce un vol de données touchant 22 millions de personnes",
+      "url": "https://www.cnews.fr/france/2026-11-14/cyberattaque-le-plate-forme-maileva-appartenant-au-groupe-la-poste-annonce-un-vol",
+      "publishedAt": "2026-11-14T19:24:49.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_mthomasset_3144009_1_6af8b6a3081ae.jpg?itok=g163QJRY",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "b6cf1dd0d1a8",
       "outletId": "bfmtv",
       "headline": "La plateforme Maileva du groupe La Poste victime d'un vol de données touchant 22 millions de personnes",
@@ -86,7 +120,7 @@
     }
   ],
   "topicId": "bedc339c7bf5",
-  "titledArticleCount": 7,
+  "titledArticleCount": 10,
   "section": "economy",
   "everInEdition": true,
   "activity": [
@@ -316,44 +350,41 @@
       "counts": {
         "gauche": 1,
         "centre": 2,
-        "droite": 3
+        "droite": 4
       },
-      "total": 6
+      "total": 7
     },
     {
       "start": 1794686400000,
       "end": 1794690000000,
       "counts": {
-        "gauche": 0,
-        "centre": 1,
+        "gauche": 1,
+        "centre": 2,
         "droite": 0
       },
-      "total": 1
+      "total": 3
     }
   ],
   "summaries": {
     "gauche": [
-      "La filiale Maileva du groupe La Poste a subi une cyberattaque mi-septembre entraînant une fuite de données personnelles.",
-      "L'incident informatique concerne les coordonnées de vingt-deux millions de personnes.",
-      "La direction a saisi la Commission nationale de l'informatique et des libertés, déposé plainte et une enquête judiciaire est ouverte."
+      "La plateforme Maileva, appartenant au groupe La Poste, a subi un piratage informatique mi-septembre entraînant le vol des coordonnées de 22 millions de personnes.",
+      "La direction a notifié la Commission nationale de l'informatique et des libertés et a déposé plainte, tandis qu'une enquête judiciaire a été ouverte."
     ],
     "centre": [
-      "Une cyberattaque a touché la plate-forme professionnelle Maileva du groupe La Poste.",
-      "Le vol de données informatiques authentifié par l'entreprise touche vingt-deux millions d'usagers.",
-      "L'événement est qualifié par l'entreprise et la presse comme l'une des fuites de données les plus importantes survenues en France."
+      "Une cyberattaque menée mi-septembre contre la filiale Maileva du groupe La Poste a conduit à la fuite des coordonnées de 22 millions de personnes.",
+      "La Poste a officialisé la nouvelle samedi à l'AFP, indiquant qu'une plainte avait été déposée et qu'une enquête judiciaire était en cours."
     ],
     "droite": [
-      "La cyberattaque subie par Maileva, filiale de gestion de courriers professionnels de La Poste, a compromis les coordonnées de vingt-deux millions d'individus.",
-      "L'attaque s'est produite au cours du mois de septembre.",
-      "La filiale a notifié l'incident à la Commission nationale de l'informatique et des libertés et une procédure judiciaire est en cours."
+      "La filiale de La Poste Maileva, spécialisée dans la gestion de courriers professionnels, a été la cible d'une cyberattaque mi-septembre.",
+      "Le vol de données concerne 22 millions de personnes, ce que La Poste qualifie de « l'une des plus importantes fuites de données en France », selon des informations relayées par des sites spécialisés."
     ]
   },
   "differences": [
-    "Le camp gauche privilégie un compte rendu factuel et technique centré sur la saisine des autorités administratives et judiciaires par l'entreprise.",
-    "Le camp centre adopte une couverture synthétique et grand public en soulignant immédiatement l'ampleur nationale du volume de données dérobées.",
-    "Le camp droite précise la nature de l'activité professionnelle de la filiale touchée et intègre des éléments d'analyse externe qualifiant l'événement d'historique en France."
+    "La gauche met l'accent sur les aspects procéduraux de l'affaire, notamment le dépôt de plainte et la saisine des autorités compétentes.",
+    "Le centre livre un compte rendu factuel et standard de l'annonce faite par le groupe La Poste à l'agence France-Presse.",
+    "La droite insiste sur l'ampleur exceptionnelle du sinistre en reprenant l'expression de fuite historique et en détaillant la nature de l'activité professionnelle de la filiale."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 7,
-  "summarizedAt": "2026-11-14T20:01:24.769Z"
+  "summarizedArticleCount": 10,
+  "summarizedAt": "2026-11-14T21:01:26.406Z"
 }

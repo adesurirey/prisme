@@ -6,6 +6,17 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "003c740f08a6",
+      "outletId": "le-monde",
+      "headline": "Michel Destot, ancien maire PS de Grenoble et député de l’Isère, est mort",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/11/14/michel-destot-ancien-maire-ps-de-grenoble-et-depute-de-l-isere-est-mort_6810610_3382.html",
+      "publishedAt": "2026-11-14T20:53:07.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/14/351/0/4212/2106/644/322/60/0/7f890ce_ftp-1-w0ui4cg5yomj-afp-d7h33kf.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "aa861b1433ab",
       "outletId": "bfmtv",
       "headline": "L'ancien maire socialiste de Grenoble et député de l'Isère Michel Destot est mort à l'âge de 80 ans",
@@ -41,20 +52,10 @@
     }
   ],
   "topicId": "913e646ddb0e",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794600000000,
-      "end": 1794603600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794603600000,
       "end": 1794607200000,
@@ -284,6 +285,42 @@
         "droite": 2
       },
       "total": 3
+    },
+    {
+      "start": 1794686400000,
+      "end": 1794690000000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "L'ancien maire socialiste de Grenoble et député Michel Destot est mort à l'âge de 80 ans.",
+      "Il a dirigé la municipalité grenobloise pendant trois mandats consécutifs entre 1995 et 2014.",
+      "Il a également exercé les fonctions de député de l'Isère de 1988 à 2017 et de conseiller général.",
+      "François Hollande a salué un homme politique qui ne tolérait ni le sectarisme ni la facilité."
+    ],
+    "centre": [
+      "Décès de l'ancien maire socialiste de Grenoble Michel Destot à l'âge de 80 ans.",
+      "Il a accompli trois mandats à la tête de la ville de 1995 à 2014 et fut député de 1988 à 2017.",
+      "François Hollande a salué sur le réseau social X un homme cherchant à unir autour de grandes causes."
+    ],
+    "droite": [
+      "L'ancien maire socialiste de Grenoble Michel Destot est décédé à l'âge de 80 ans.",
+      "Il a administré la municipalité grenobloise durant près de deux décennies, de 1995 à 2014.",
+      "La municipalité de Grenoble a rendu hommage à une figure de l'histoire locale de cette ville de l'Isère."
+    ]
+  },
+  "differences": [
+    "La gauche met en avant la longue carrière parlementaire de Michel Destot et rapporte l'hommage personnel de François Hollande.",
+    "Le centre insiste sur sa trajectoire institutionnelle globale et cite précisément les déclarations de François Hollande sur sa volonté d'union.",
+    "La droite privilégie l'angle local en soulignant la longévité de son mandat municipal et en reprenant l'hommage officiel de la municipalité."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-14T21:01:26.406Z"
 }

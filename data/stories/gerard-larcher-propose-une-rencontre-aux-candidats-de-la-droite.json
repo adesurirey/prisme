@@ -6,6 +6,29 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "d073bd57c294",
+      "outletId": "cnews",
+      "headline": "Présidentielle 2027 : Gérard Larcher veut réunir les candidats de la droite et du centre, la pression monte sur Édouard Philippe",
+      "url": "https://www.cnews.fr/france/2026-11-14/presidentielle-2027-gerard-larcher-veut-reunir-les-candidats-de-la-droite-et-du",
+      "publishedAt": "2026-11-14T20:34:58.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_c9y28k3-2_6af8c2895da6a.jpg?itok=3fGz3r4n",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "55e640d7551f",
+      "outletId": "20-minutes",
+      "headline": "Présidentielle 2027 : Gérard Larcher appelle les candidats de la droite et du centre à se rassembler",
+      "url": "https://www.20minutes.fr/politique/4262893-20261114-presidentielle-2027-gerard-larcher-appelle-candidats-droite-centre-rassembler?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-14T18:56:26.000Z",
+      "imageUrl": "https://img.20mn.fr/OFy3EoPjTmK7ao92XfGRVik/1200x768_gerard-larcher-catherine-vautrin-ministre-des-armees-et-des-anciens-combattants-ceremonie-de-depot-de-gerbe-devant-la-statue-de-georges-clemenceau-a-paris-a-l-occasion-du-108eme-anniversaire-de-l-armistice-du-11-novembre-1918-le-11-novembre-2026-wreath-laying-ceremony-in-front-of-the-statue-of-georges-clemenceau-in-paris-marking-the-108th-anniversary-of-the-armistice-of-november-11-1918-on-november-11-2026-sipa-sipa0029-credit-christian-liewig-pool-sipa-2611111345",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "8a2752dc221b",
       "outletId": "le-monde",
       "headline": "Présidentielle 2027 : Gérard Larcher invite les candidats de la droite et du centre à une réunion pour arrêter une « méthode de départage »",
@@ -62,30 +85,10 @@
     }
   ],
   "topicId": "84339d0cec45",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794596400000,
-      "end": 1794600000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794600000000,
-      "end": 1794603600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794603600000,
       "end": 1794607200000,
@@ -300,37 +303,56 @@
       "start": 1794679200000,
       "end": 1794682800000,
       "counts": {
-        "gauche": 2,
+        "gauche": 3,
         "centre": 0,
         "droite": 0
       },
-      "total": 2
+      "total": 3
+    },
+    {
+      "start": 1794682800000,
+      "end": 1794686400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794686400000,
+      "end": 1794690000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le président du Sénat Gérard Larcher a convié les prétendants de la droite et du centre à une réunion rapide pour définir une « méthode de départage ».",
-      "L'objectif affiché de cette initiative est d'aboutir à une candidature unique en vue de l'élection présidentielle de 2027.",
-      "Le périmètre de cette invitation exclut expressément des personnalités comme Éric Zemmour et Raphaël Glucksmann, d'après l'entourage du sénateur."
+      "Le président LR du Sénat Gérard Larcher invite les candidats de la droite et de son centre à une réunion urgente pour établir une méthode de départage en vue d'une candidature unique.",
+      "Cette initiative fait peser une pression accrue sur Édouard Philippe, qui refuse obstinément l'organisation d'une primaire.",
+      "Le périmètre de cette rencontre écarte explicitement Éric Zemmour et Raphaël Glucksmann, d'après l'entourage du président de la chambre haute."
     ],
     "centre": [
-      "Gérard Larcher a pris l'initiative de convier l'ensemble des candidats de la droite et du centre à une réunion de concertation.",
-      "La rencontre a pour but de fixer les modalités d'une « méthode de départage » afin de désigner un représentant unique pour 2027.",
-      "Cette démarche intervient alors que la pression s'accroît sur les différents prétendants de l'arc conservateur et centriste."
+      "Le président du Sénat Gérard Larcher a proposé de réunir les prétendants de la droite et du centre afin de fixer une méthode de départage.",
+      "L'objectif de cette démarche est de désigner une candidature unique pour l'élection présidentielle dès le début de l'année prochaine.",
+      "Cette initiative cible directement des personnalités comme Édouard Philippe, Bruno Retailleau, David Lisnard et Gabriel Attal."
     ],
     "droite": [
-      "Gérard Larcher a adressé une proposition de rassemblement aux différents candidats de la droite et du centre pour organiser un départage.",
-      "La réunion doit permettre de s'accorder sur une « méthode de départage » et sur une « communauté de valeurs » d'ici le début de l'année prochaine.",
-      "Le projet vise à départager des figures telles que Bruno Retailleau, David Lisnard, Gabriel Attal et Édouard Philippe.",
-      "Édouard Philippe, qui figure en bonne position dans les sondages, s'est jusqu'à présent montré réfractaire à l'idée d'une primaire."
+      "Gérard Larcher a pris l'initiative de convier les candidats de la droite et du centre au Palais du Luxembourg pour bâtir une « méthode de départage ».",
+      "Le président du Sénat cherche à contrer la perspective d'un second tour figé entre Marine Le Pen et Jean-Luc Mélenchon en unissant son camp.",
+      "La démarche accentue la pression sur Édouard Philippe, placé en tête des sondages mais opposé au principe d'une primaire."
     ]
   },
   "differences": [
-    "La gauche insiste sur le caractère sélectif et stratégique du périmètre de la réunion en soulignant les exclusions de figures politiques.",
-    "Le centre met l'accent sur la démarche unitaire et la volonté de structurer l'offre politique pour 2027 sans mentionner de tensions internes.",
-    "La droite se focalise sur les enjeux tactiques du départage et relève explicitement les réticences d'Édouard Philippe face à l'hypothèse d'une primaire."
+    "La gauche insiste sur l'exclusion de personnalités comme Éric Zemmour et Raphaël Glucksmann pour circonscrire strictement l'appel à son propre espace politique.",
+    "Le centre se concentre sur l'échéance de début 2027 fixée pour aboutir à un choix unique, en décrivant la réunion comme une étape technique de rassemblement.",
+    "La droite dramatise l'enjeu présidentiel en soulignant la volonté de faire barrage au duel entre Marine Le Pen et Jean-Luc Mélenchon tout en ciblant Édouard Philippe."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-14T19:01:30.340Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-14T21:01:26.406Z"
 }

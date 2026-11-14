@@ -6,6 +6,28 @@
   "storyDay": "2026-11-13",
   "articles": [
     {
+      "id": "103956bb9630",
+      "outletId": "franceinfo",
+      "headline": "\"Quand j'ai tout payé, il ne me reste plus grand chose\" : pour le cinquième samedi de mobilisation contre la vie chère, des manifestants toujours déterminés",
+      "url": "https://www.franceinfo.fr/societe/manifestations/cinquieme-samedi-de-mobilisation-contre-la-vie-chere-des-manifestants-toujours-determines_8282834.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-14T20:10:34.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/f50kKDLJDk2zR8YOGxbPidacZDQ/0x81:4080x2376/432x243/filters:format(jpg)/2026/11/14/6af8c038a4d28839193263.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "f642245f65bf",
+      "outletId": "franceinfo",
+      "headline": "Manifestations du 14 novembre : 106 000 personnes ont défilé en France selon l'Intérieur, 200 000 d'après les organisateurs",
+      "url": "https://www.franceinfo.fr/societe/manifestations/manifestations-du-14-novembre-106-000-personnes-ont-defile-en-france-selon-l-interieur-200-000-d-apres-les-organisateurs_8282837.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-14T19:56:35.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/kjpyQd0971TsUdTJcdIvWG6NVSc/0x26:4769x2708/432x243/filters:format(jpg)/2026/11/14/6af8bc7a20234653561338.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "07e1df3f8ae6",
       "outletId": "le-parisien",
       "headline": "Manifestations : 106 000 personnes ont défilé en France selon l’Intérieur, 200 000 d’après les organisateurs",
@@ -34,7 +56,7 @@
       "url": "https://www.ouest-france.fr/societe/manifestation/une-mobilisation-en-baisse-ce-samedi-14-novembre-106-000-manifestants-selon-le-ministere-200-000-selon-les-syndicats-8f2eebc8-e050-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-14T18:52:58.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZGY5MGJlODgxYjY5MmFmYzMwOWZkYmI1MDY4MGQyNjE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=7100ff3a12b16c546f73f42cc18e2ac275b10278e64f4475d0c21e0d5486a166",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -680,8 +702,18 @@
       "start": 1794682800000,
       "end": 1794686400000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
+        "droite": 0
+      },
+      "total": 2
+    },
+    {
+      "start": 1794686400000,
+      "end": 1794690000000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
         "droite": 0
       },
       "total": 1
