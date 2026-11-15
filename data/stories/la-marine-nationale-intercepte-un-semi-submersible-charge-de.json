@@ -6,6 +6,28 @@
   "storyDay": "2026-11-15",
   "articles": [
     {
+      "id": "0e41ddb02619",
+      "outletId": "tf1-info",
+      "headline": "Cocaïne : l'opération coup de poing de la Marine",
+      "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-cocaine-l-operation-coup-de-poing-de-la-marine-46609-2475993.html",
+      "publishedAt": "2026-11-15T19:45:22.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/cocaine-l-operation-coup-de-poing-de-la-marine-f02ba7-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "7b57c5a3b910",
+      "outletId": "tf1-info",
+      "headline": "L'opération coup de poing de la Marine en pleine mer",
+      "url": "https://www.tf1info.fr/international/videos/video-l-operation-coup-de-poing-de-la-marine-en-pleine-mer-74197-2475996.html",
+      "publishedAt": "2026-11-15T19:45:11.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/l-operation-coup-de-poing-de-la-marine-en-pleine-mer-fc93a5-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "a38b1506338e",
       "outletId": "bfmtv",
       "headline": "Hélicoptère embarqué, avion de patrouille maritime américain: un semi-submersible chargé de plusieurs tonnes de cocaïne intercepté dans l'Atlantique",
@@ -63,20 +85,10 @@
     }
   ],
   "topicId": "85aeedd5e243",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794682800000,
-      "end": 1794686400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794686400000,
       "end": 1794690000000,
@@ -306,31 +318,41 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794769200000,
+      "end": 1794772800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 2
+      },
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "La Marine nationale a arraisonné un semi-submersible transportant plusieurs tonnes de cocaïne dans l'océan Atlantique.",
-      "Trois suspects ont tenté de fuir en se jetant à l'eau avant d'être récupérés par les forces de l'ordre.",
-      "Un quatrième individu a été arrêté à bord du bâtiment avant qu'il ne coule suite à un sabordage."
+      "La Marine nationale a arraisonné un semi-submersible dans l'océan Atlantique transportant plusieurs tonnes de cocaïne.",
+      "Trois occupants ont sauté à l'eau lors de l'approche de la frégate avant d'être récupérés.",
+      "Le quatrième suspect est resté à bord et a sabordé l'embarcation qui a ensuite sombré."
     ],
     "centre": [
-      "La Marine nationale française a mené une opération inédite dans l'océan Atlantique en interceptant un semi-submersible transportant plusieurs tonnes de cocaïne.",
-      "L'intervention a bénéficié du concours décisif d'un hélicoptère embarqué et d'un avion de patrouille maritime américain.",
-      "Quatre individus ont été interpellés au cours de cette saisie spectaculaire réalisée en haute mer."
+      "La Marine nationale française a saisi une importante quantité de cocaïne en interceptant un semi-submersible dans l'Atlantique au large de la Martinique.",
+      "L'opération inédite a bénéficié du soutien d'un hélicoptère embarqué et d'un avion de patrouille maritime américain.",
+      "Quatre individus ont été interpellés et placés en garde à vue à Fort-de-France, tandis que le navire a coulé après avoir été sabordé."
     ],
     "droite": [
-      "Le ministère des Armées et la préfecture de la Martinique ont officialisé cette intervention réalisée en haute mer sur une embarcation sans pavillon.",
-      "L'opération conjointe a permis de repêcher 146 kilogrammes de stupéfiants tandis que plusieurs autres tonnes ont sombré avec le navire.",
-      "Quatre personnes ont été arrêtées lors de cette saisie inédite menée avec l'appui technique des États-Unis."
+      "Une opération menée au large de la Martinique par la Marine nationale a permis d'intercepter un semi-submersible artisanal sans pavillon transportant plusieurs tonnes de cocaïne.",
+      "Seuls 146 kilogrammes de drogue ont pu être repêchés en mer, le reste ayant coulé avec l'embarcation sabordée.",
+      "Quatre personnes ont été arrêtées à l'issue de cette intervention réalisée en haute mer avec l'appui d'un avion américain."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur le déroulement tactique de l'intervention et le sabordage du submersible.",
-    "Le centre insiste sur le caractère inédit de l'opération et la coopération internationale engagée en haute mer.",
-    "La droite détaille précisément les volumes de drogue saisis et coulés ainsi que le cadre institutionnel de l'annonce par les autorités."
+    "Le camp gauche privilégie un récit factuel et détaillé du déroulement de l'intervention à bord, insistant sur l'action des suspects qui se sont jetés à l'eau et sur le sabordage du navire.",
+    "Le camp centre met en avant le caractère spectaculaire et inédit de cette saisie conjointe, soulignant la coopération internationale et l'utilisation de moyens aériens sophistiqués.",
+    "Le camp droite insiste sur le volume important de stupéfiants transportés par rapport à la faible quantité effectivement saisie en raison du sabordage de l'embarcation."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-15T19:01:31.170Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-15T20:01:25.160Z"
 }

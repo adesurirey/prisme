@@ -6,6 +6,17 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "12c011f2b15e",
+      "outletId": "bfmtv",
+      "headline": "Agression des journalistes de BFMTV à Lyon: “Cette violence est devenue ordinaire, et c’est une honte absolue”, dénonce Jean-François Copé, maire LR de Meaux",
+      "url": "https://www.bfmtv.com/replay-emissions/le-grand-oral-2027/video-agression-des-journalistes-de-bfmtv-a-lyon-cette-violence-est-devenue-ordinaire-et-c-est-une-honte-absolue-denonce-jean-francois-cope-maire-lr-de-meaux_VN-202611150347.html",
+      "publishedAt": "2026-11-15T18:03:09.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/NvIdzsDOLrvW9z6Olg02af9IHL0=/0x0:1280x720/800x0/images/Agression-des-journalistes-de-BFMTV-a-Lyon-Cette-violence-est-devenue-ordinaire-et-c-est-une-honte-absolue-denonce-Jean-Francois-Cope-maire-LR-de-Meaux-2384372.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "8adfd962b702",
       "outletId": "20-minutes",
       "headline": "Lyon : « Volonté de lynchage », aucune interpellation… Ce que l’on sait de l’agression des journalistes de BFMTV",
@@ -35,7 +46,7 @@
       "url": "https://www.lemonde.fr/societe/article/2026/11/15/apres-l-agression-de-journalistes-de-bfm-tv-a-lyon-une-enquete-a-ete-ouverte-pour-violences-en-reunion_6811026_3224.html",
       "publishedAt": "2026-11-15T15:30:19.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/14/500/0/6000/3000/644/322/60/0/6863c3e_ftp-1-cd70vu3jqyax-afp-d7gv23f.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -136,7 +147,7 @@
       "url": "https://www.20minutes.fr/societe/4262924-20261115-colere-sociale-volonte-lynchage-equipe-bfmtv-agressee-manifestants?at_medium=display&at_campaign=149",
       "publishedAt": "2026-11-15T06:30:36.000Z",
       "imageUrl": "https://img.20mn.fr/RcTfzTGPRoGiI6QRoXazcQ/1200x768_illustration-micro-et-camera-de-la-chaine-d-information-bfmtv",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -453,6 +464,26 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794762000000,
+      "end": 1794765600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794765600000,
+      "end": 1794769200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
