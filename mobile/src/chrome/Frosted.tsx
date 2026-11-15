@@ -1,14 +1,21 @@
 /**
- * The frosted background of the sticky header (issue #180): iOS 26's
- * Liquid Glass, kept very transparent — a clear-reading glass with a
- * light canvas tint, no bottom hairline. Below iOS 26 a soft
- * `BlurView`; Android 12+ gets real blur with a translucent fallback
- * for anything older.
+ * The scroll-edge frost of the sticky header (issue #196): one blur
+ * layer, cleared toward its bottom edge by a canvas wash — no panel, no
+ * border, no shadow; the content simply blurs and melts into the list,
+ * Photos-style. GlassView is for glass *objects* (the pills) — a full-
+ * width bar in Liquid Glass reads as a card with a rim and a shadow,
+ * which is exactly what a scroll edge must not be.
  */
 
 import { BlurView } from 'expo-blur';
-import { GlassView, isLiquidGlassAvailable } from 'expo-glass-effect';
-import { Platform, useColorScheme, type ViewProps } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import {
+  Platform,
+  StyleSheet,
+  useColorScheme,
+  View,
+  type ViewProps,
+} from 'react-native';
 
 import { useTheme } from '@/theme';
 
@@ -16,34 +23,38 @@ export function Frosted(props: ViewProps) {
   const theme = useTheme();
   const tint = useColorScheme() === 'dark' ? 'dark' : 'light';
 
-  if (Platform.OS === 'ios' && isLiquidGlassAvailable()) {
-    return (
-      <GlassView
-        glassEffectStyle="regular"
-        tintColor={`${theme.canvas}24`}
-        {...props}
-      />
-    );
-  }
-
-  if (Platform.OS === 'ios') {
-    return (
-      <BlurView intensity={28} tint={tint} style={props.style}>
-        {props.children}
-      </BlurView>
-    );
-  }
-
-  // Android: expo-blur gives real blur on 12+; on older versions it
-  // renders translucent, which is the accepted fallback.
+  // A backdrop, never a touch target: the list scrolls and taps through.
   return (
-    <BlurView
-      intensity={24}
-      tint={tint}
-      experimentalBlurMethod="dimezisBlurView"
-      style={[{ backgroundColor: `${theme.canvas}b3` }, props.style]}
+    <View
+      {...props}
+      pointerEvents="none"
+      style={[StyleSheet.absoluteFill, props.style]}
     >
-      {props.children}
-    </BlurView>
+      <BlurView
+        intensity={55}
+        tint={tint}
+        experimentalBlurMethod={
+          Platform.OS === 'android' ? 'dimezisBlurView' : undefined
+        }
+        style={[
+          StyleSheet.absoluteFill,
+          // expo-blur renders translucent where device blur is missing
+          // (pre-Android 12): the accepted fallback (issue #180 salvage).
+          Platform.OS === 'android' && { backgroundColor: `${theme.canvas}b3` },
+        ]}
+      />
+      {/* The wash: the blur's hard bottom edge dissolves into the canvas,
+          so the frost has no silhouette — it just fades. */}
+      <LinearGradient
+        colors={[
+          `${theme.canvas}00`,
+          `${theme.canvas}59`,
+          `${theme.canvas}d9`,
+          `${theme.canvas}ff`,
+        ]}
+        locations={[0.42, 0.72, 0.93, 1]}
+        style={StyleSheet.absoluteFill}
+      />
+    </View>
   );
 }

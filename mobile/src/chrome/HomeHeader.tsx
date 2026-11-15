@@ -10,7 +10,6 @@
  * renders but stays inert until 5d wires the drawer.
  */
 
-import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -54,35 +53,29 @@ export function HomeHeader({ builtAt }: { builtAt: string }) {
 
   return (
     <View pointerEvents="box-none" style={styles.overlay}>
-      <Frosted>
-        <View style={[styles.bar, { paddingTop: insets.top + 6 }]}>
-          <View style={styles.titles}>
-            <Text style={[styles.title, { color: theme.ink }]}>À la une</Text>
-            <Text style={[styles.stamp, { color: theme.muted }]}>
-              {latestPointStamp(builtAt)}
-            </Text>
-          </View>
-          <View style={styles.pills}>
-            {/* Same 38pt height as the burger — the Photos pair. */}
-            <ModeButton style={styles.pill} />
-            <GlassPill
-              accessibilityLabel="Menu"
-              testID="burger-button"
-              disabled
-              onPress={() => undefined}
-              style={styles.burger}
-            >
-              <BurgerIcon />
-            </GlassPill>
-          </View>
+      {/* The scroll-edge frost — a backdrop layer behind the bar. */}
+      <Frosted />
+      <View style={[styles.bar, { paddingTop: insets.top + 6 }]}>
+        <View style={styles.titles}>
+          <Text style={[styles.title, { color: theme.ink }]}>À la une</Text>
+          <Text style={[styles.stamp, { color: theme.muted }]}>
+            {latestPointStamp(builtAt)}
+          </Text>
         </View>
-      </Frosted>
-      {/* The fade below the bar — a gradient extension of the glass tint. */}
-      <LinearGradient
-        pointerEvents="none"
-        colors={[`${theme.canvas}24`, `${theme.canvas}00`]}
-        style={styles.fade}
-      />
+        <View style={styles.pills}>
+          {/* Same 38pt height as the burger — the Photos pair. */}
+          <ModeButton style={styles.pill} />
+          <GlassPill
+            accessibilityLabel="Menu"
+            testID="burger-button"
+            disabled
+            onPress={() => undefined}
+            style={styles.burger}
+          >
+            <BurgerIcon />
+          </GlassPill>
+        </View>
+      </View>
     </View>
   );
 }
@@ -93,6 +86,8 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
+    // The melt zone: frost extends below the bar and washes out there.
+    paddingBottom: 34,
   },
   bar: {
     flexDirection: 'row',
@@ -134,8 +129,5 @@ const styles = StyleSheet.create({
     width: 18,
     height: 2,
     borderRadius: 999,
-  },
-  fade: {
-    height: 20,
   },
 });
