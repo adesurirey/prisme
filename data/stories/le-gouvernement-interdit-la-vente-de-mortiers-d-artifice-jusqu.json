@@ -1,10 +1,22 @@
 {
   "id": "9c6c5e058a9d",
   "slug": "le-gouvernement-interdit-la-vente-de-mortiers-d-artifice-jusqu",
-  "title": "Le gouvernement interdit la vente de mortiers d’artifice jusqu’au 27 novembre",
+  "title": "Le gouvernement interdit la vente de mortiers d'artifice jusqu'au 27 novembre",
   "createdAt": "2026-11-15T01:01:27.264Z",
   "storyDay": "2026-11-15",
   "articles": [
+    {
+      "id": "f3a823f8f5eb",
+      "outletId": "le-figaro",
+      "headline": "Le gouvernement interdit la vente de mortiers d'artifice jusqu'au 27 novembre",
+      "url": "https://www.lefigaro.fr/actualite-france/le-gouvernement-interdit-la-vente-de-mortiers-d-artifice-jusqu-au-27-novembre-20261115",
+      "publishedAt": "2026-11-15T01:33:40.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/15/a23a2bd20a2c456e22e42a1e4c94e13b4fc63d4a70440957a2d64063a8dfd02d.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
     {
       "id": "3303b7caeb67",
       "outletId": "le-monde",
@@ -30,20 +42,10 @@
     }
   ],
   "topicId": "9c6c5e058a9d",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794618000000,
-      "end": 1794621600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794621600000,
       "end": 1794625200000,
@@ -273,6 +275,16 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794704400000,
+      "end": 1794708000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ]
 }
