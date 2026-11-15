@@ -1,10 +1,43 @@
 {
   "id": "bedc339c7bf5",
   "slug": "la-poste-annonce-un-vol-de-donnees-de-22-millions-de-personnes",
-  "title": "Cyberattaque : Maileva annonce un vol de données touchant 22 millions de personnes",
+  "title": "Cyberattaque contre la plateforme Maileva du groupe La Poste : un vol de données touche 22 millions de personnes",
   "createdAt": "2026-11-14T20:01:24.769Z",
   "storyDay": "2026-11-14",
   "articles": [
+    {
+      "id": "8a82415c17cb",
+      "outletId": "tf1-info",
+      "headline": "Cyberattaque massive contre une filiale de La Poste : ce que l'on sait du vol des données de 22 millions de personnes",
+      "url": "https://www.tf1info.fr/justice-faits-divers/maileva-cyberattaque-massive-contre-une-filiale-de-la-poste-ce-que-l-on-sait-du-vol-des-donnees-de-22-millions-de-personnes-2475941.html",
+      "publishedAt": "2026-11-15T15:46:54.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/682/logo-la-poste-1-bf980c-1@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "78793e293831",
+      "outletId": "franceinfo",
+      "headline": "\"Des courriers ont pu être lus\" : ce que l'on sait de la cyberattaque contre Maileva, filiale de La Poste, qui a conduit au vol de données de 22 millions de personnes",
+      "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/des-courriers-ont-pu-etre-lus-ce-que-l-on-sait-de-la-cyberattaque-contre-maileva-filiale-de-la-poste-qui-a-conduit-au-vol-de-donnees-de-22-millions-de-personnes_8283266.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-15T14:33:41.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/FAZFENkHMwPNWKWKL1qcQjCqPPY/0x346:4800x3046/432x243/filters:format(jpg)/2026/11/15/6af9702d6f859398427749.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "d5a87f4915c4",
+      "outletId": "europe-1",
+      "headline": "Cyberattaque d'une filiale de La Poste : enquête confiée à la Brigade cybercriminalité",
+      "url": "https://www.europe1.fr/police-justice/cyberattaque-dune-filiale-de-la-poste-enquete-confiee-a-la-brigade-cybercriminalite-1235340?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-15T14:06:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/15/15/credits_philip_dulian_dpa_dpa_picture-alliance_via_afp_69e9f24fcc62e_6ad9c65575aaa_6af8b8a49a4aa_6af9c03b605e5.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "d46f8a566f11",
       "outletId": "humanite",
@@ -275,30 +308,10 @@
     }
   ],
   "topicId": "bedc339c7bf5",
-  "titledArticleCount": 20,
+  "titledArticleCount": 27,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794664800000,
-      "end": 1794668400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794668400000,
-      "end": 1794672000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794672000000,
       "end": 1794675600000,
@@ -518,30 +531,51 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794751200000,
+      "end": 1794754800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 2
+    },
+    {
+      "start": 1794754800000,
+      "end": 1794758400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Maileva, filiale du groupe La Poste, a subi mi-septembre une cyberattaque entraînant le vol des données de 22 millions de personnes.",
-      "L'entreprise a déposé plainte et une enquête judiciaire est actuellement en cours."
+      "Maileva, filiale de Docaposte et du groupe La Poste, a subi un piratage en septembre ayant compromis les coordonnées de vingt-deux millions d'utilisateurs.",
+      "Le parquet de Paris et la Commission nationale de l'informatique et des libertés ont été saisis tandis qu'une procédure judiciaire a été ouverte.",
+      "Cette fuite massive est qualifiée par les observateurs de l'une des plus importantes violations de données jamais enregistrées en France."
     ],
     "centre": [
-      "Une cyberattaque d'envergure majeure a touché mi-septembre la plateforme Maileva, filiale du groupe La Poste.",
-      "Le vol de données concerne les noms, prénoms et adresses postales de 22 millions de personnes, constituant l'une des plus importantes fuites recensées en France.",
-      "L'entreprise a notifié la Commission nationale de l'informatique et des libertés, déposé plainte et fait l'objet d'une enquête judiciaire."
+      "La plateforme Maileva, spécialisée dans la transmission de courriers professionnels pour les entreprises, a confirmé un vol massif de données personnelles.",
+      "L'attaque informatique, survenue mi-septembre, a exposé les noms, prénoms et adresses postales de vingt-deux millions de personnes.",
+      "La direction a notifié la Cnil et déposé plainte, alors qu'une enquête judiciaire est en cours pour identifier l'origine de la compromission."
     ],
     "droite": [
-      "La plateforme Maileva, spécialisée dans l'envoi de courriers professionnels pour les entreprises et filiale de Docaposte au sein du groupe La Poste, a été victime d'une cyberattaque mi-septembre.",
-      "Cette violation expose les coordonnées de 22 millions de personnes et est qualifiée par l'entreprise de « l'une des plus importantes fuites de données en France ».",
-      "La société a saisi la Commission nationale de l'informatique et des libertés, déposé plainte et une enquête judiciaire est en cours."
+      "La Brigade de lutte contre la cybercriminalité a été saisie par le parquet de Paris pour mener les investigations sur ce piratage informatique.",
+      "Les informations dérobées concernent les destinataires des courriers gérés par Maileva, incluant bulletins de paie et factures.",
+      "Le groupe La Poste collabore avec les autorités pour évaluer l'ampleur de cette fuite classée parmi les plus graves du pays."
     ]
   },
   "differences": [
-    "La gauche livre un compte-rendu factuel et synthétique centré sur le dépôt de plainte et l'ouverture de l'enquête judiciaire.",
-    "Le centre livre un récit factuel détaillé soulignant l'ampleur historique du piratage et l'implication des autorités de contrôle.",
-    "La droite insiste particulièrement sur la nature des activités professionnelles de l'entreprise ciblée et qualifie explicitement l'événement d'attaque d'envergure nationale."
+    "La gauche insiste sur l'ampleur inédite de la violation et sur la nécessité d'informer rapidement les millions de citoyens dont les informations personnelles ont été exposées.",
+    "Le centre adopte une approche technique et pratique en détaillant la nature des documents professionnels gérés par la plateforme et les risques potentiels de fraudes.",
+    "La droite privilégie l'angle sécuritaire et judiciaire en mettant en avant l'implication immédiate de la Brigade de lutte contre la cybercriminalité et les procédures légales en cours."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 20,
-  "summarizedAt": "2026-11-15T11:01:24.775Z"
+  "summarizedArticleCount": 27,
+  "summarizedAt": "2026-11-15T16:01:26.798Z"
 }

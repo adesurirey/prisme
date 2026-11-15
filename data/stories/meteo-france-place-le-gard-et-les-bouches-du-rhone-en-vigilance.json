@@ -1,10 +1,21 @@
 {
   "id": "31813dee7e99",
   "slug": "meteo-france-place-le-gard-et-les-bouches-du-rhone-en-vigilance",
-  "title": "Le Gard, l'Hérault et les Bouches-du-Rhône en vigilance orange pour pluie et inondation",
+  "title": "Le Gard, l'Hérault et les Bouches-du-Rhône placés en vigilance orange pour pluie et inondation",
   "createdAt": "2026-11-14T11:01:25.678Z",
   "storyDay": "2026-11-14",
   "articles": [
+    {
+      "id": "88a00d335c61",
+      "outletId": "huffpost",
+      "headline": "Hérault : routes submergées, véhicules abandonnés... les images des inondations",
+      "url": "https://www.huffingtonpost.fr/environnement/video/herault-routes-submergees-vehicules-abandonnes-les-images-des-inondations_358415.html",
+      "publishedAt": "2026-11-15T15:36:19.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/11/15/0/0/1920/1080/0/0/60/0/33b02ea_upload-1-n9xy93hbzb4o-herault-st.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "c13e08ae2079",
       "outletId": "tf1-info",
@@ -15,6 +26,40 @@
       "frontPage": false,
       "kind": "news",
       "section": "misc"
+    },
+    {
+      "id": "b8a8941cbb16",
+      "outletId": "franceinfo",
+      "headline": "\"On voyait que l'eau était en train de monter\" : des automobilistes racontent leur nuit piégés par les intempéries dans l'Hérault",
+      "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/herault-apres-les-violents-orages-des-automobilistes-temoignent-de-leur-nuit-pieges-par-les-eaux_8283527.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-15T12:36:55.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/C8U4GmDer27Kf4jaaBPuKaVZEmM/25x0:1579x874/432x243/filters:format(jpg)/2026/11/15/6af9a6c13734b606803800.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "3b17a9c122ec",
+      "outletId": "cnews",
+      "headline": "Routes submergées, voitures bloquées... Les images impressionnantes des inondations dans l'Hérault (vidéos)",
+      "url": "https://www.cnews.fr/france/2026-11-15/routes-submergees-voitures-bloquees-les-images-impressionnantes-des-inondations",
+      "publishedAt": "2026-11-15T11:52:00.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/inondationsheraultbis_6af99c23b419e.png?itok=4rJCT_4o",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "b5b57534caba",
+      "outletId": "20-minutes",
+      "headline": "Intempéries dans l’Hérault : Automobilistes bloqués, routes fermées… Les images impressionnantes des inondations",
+      "url": "https://www.20minutes.fr/societe/4262943-20261115-intemperies-automobilistes-bloques-routes-fermees-images-impressionnantes-inondations-herault?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-15T11:37:50.000Z",
+      "imageUrl": "https://img.20mn.fr/p0iwlks3QqO6d2NXq7Offik/1200x768_aujourd-hui-les-intemperies-associees-a-la-tempete-nils-ont-provoque-le-debordement-des-rivieres-du-lot-et-garonne-declenchant-des-alertes-d-inondation-orange-et-rouge-dans-le-departement-alors-que-le-niveau-de-l-eau-augmente-rapidement-la-garonne-a-atteint-des-niveaux-particulierement-eleves-a-proximite-de-villes-telles-que-tonneins-et-marmande-plusieurs-routes-risquant-d-etre-submergees-et-des-fermetures-ayant-deja-ete-signalees-dans-les-zones-de-faible-altitude-les-autorites-locales-exhortent-les-habitants-a-eviter-les-routes-inondees-et-a-se-tenir-informes-de-l-evolution-des-conditions-en-raison-des-fortes-pluies-et-du-vent-qui-continuent-de-sevir-dans-la-region-louisantonin-lg7199-credit-antonin-louis-sipa-2602120820",
+      "frontPage": true,
+      "kind": "news",
+      "section": "other",
+      "everFrontPage": true
     },
     {
       "id": "6cbcf4e860d6",
@@ -210,7 +255,7 @@
     }
   ],
   "topicId": "31813dee7e99",
-  "titledArticleCount": 15,
+  "titledArticleCount": 22,
   "section": "science",
   "everInEdition": true,
   "activity": [
@@ -478,6 +523,26 @@
       "start": 1794740400000,
       "end": 1794744000000,
       "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 2
+    },
+    {
+      "start": 1794744000000,
+      "end": 1794747600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 2
+    },
+    {
+      "start": 1794747600000,
+      "end": 1794751200000,
+      "counts": {
         "gauche": 0,
         "centre": 0,
         "droite": 0
@@ -485,39 +550,51 @@
       "total": 0
     },
     {
-      "start": 1794744000000,
-      "end": 1794747600000,
+      "start": 1794751200000,
+      "end": 1794754800000,
       "counts": {
         "gauche": 0,
         "centre": 0,
-        "droite": 1
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794754800000,
+      "end": 1794758400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
       },
       "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le Gard et les Bouches-du-Rhône ont été placés en vigilance orange pluie-inondation pour la nuit de samedi à dimanche.",
-      "Les autorités ont mis en garde contre des risques de ruissellements et des phénomènes tourbillonnaires.",
-      "Une femme de 73 ans est portée disparue à Candillargues dans l'Hérault après de fortes intempéries et une centaine d'interventions des sapeurs-pompiers."
+      "Le Gard et les Bouches-du-Rhône ont été placés en vigilance orange par Météo-France pour un épisode d'orages et de fortes pluies.",
+      "Les autorités ont relevé des risques de ruissellements et de potentiels phénomènes tourbillonnaires de type trombe marine.",
+      "Dans l'Hérault, les pompiers ont mené plus d'une centaine de mises en sécurité de personnes bloquées dans leur véhicule avec des routes submergées."
     ],
     "centre": [
-      "Le Gard, l'Hérault et les Bouches-du-Rhône ont subi des précipitations intenses nécessitant le placement en vigilance orange par Météo-France.",
-      "Il est tombé l'équivalent de deux mois de pluie à Montpellier au cours de la nuit, provoquant des inondations sur les routes et le blocage de véhicules.",
-      "Une septuagénaire est portée disparue à Candillargues dans l'Hérault et la vigilance orange a été levée dimanche matin."
+      "L'Hérault, le Gard et les Bouches-du-Rhône ont été placés en vigilance orange par Météo-France en raison de précipitations intenses.",
+      "Il est tombé l'équivalent de deux mois de pluie en une seule nuit dans l'agglomération de Montpellier, un niveau record pour cette période de l'année.",
+      "Une femme de 73 ans portée disparue à Candillargues après avoir été emportée par les eaux a été retrouvée saine et sauve par les secours.",
+      "La vigilance orange pluie-inondation a finalement été levée dans le courant de la matinée de dimanche par Météo-France."
     ],
     "droite": [
-      "De très fortes pluies se sont abattues sur l'Hérault et le Gard, plaçant ces départements en vigilance orange pluie-inondation.",
-      "L'équivalent de deux mois et demi de pluie est tombé en une nuit à Montpellier, submergeant les routes et bloquant plusieurs voitures.",
-      "Les cumuls attendus dépassaient 100 à 150 mm sous des orages peu mobiles."
+      "Météo-France a placé le Gard et les Bouches-du-Rhône en vigilance orange pluie-inondation pour une dégradation attendue dès le samedi soir.",
+      "L'Hérault a connu des cumuls exceptionnels avec jusqu'à 190 mm relevés à l'aéroport de Montpellier-Fréjorgues selon les données de CNews.",
+      "De nombreuses routes ont été coupées entre Lattes et Le Grau-du-Roi en raison de la montée rapide des eaux.",
+      "Le Figaro souligne qu'il est tombé l'équivalent de deux mois et demi de pluie en une seule nuit sur Montpellier."
     ]
   },
   "differences": [
-    "La gauche met principalement l'accent sur les alertes préventives des services météorologiques et la disparition inquiétante d'une habitante dans l'Hérault.",
-    "Le centre insiste sur l'intensité exceptionnelle des cumuls d'eau mesurés à Montpellier et l'évolution de la vigilance jusqu'à sa levée matinale.",
-    "La droite privilégie un angle visuel et factuel centré sur la violence des intempéries nocturnes et les images spectaculaires des inondations dans l'Hérault."
+    "La gauche privilégie l'alerte institutionnelle de Météo-France et les interventions d'urgence face aux risques de ruissellements.",
+    "Le centre insiste sur les cumuls records enregistrés à Montpellier et sur le soulagement après la découverte saine et sauve de la septuagénaire disparue.",
+    "La droite met en avant les relevés pluviométriques précis de Météo-France et illustre l'événement par les axes routiers coupés entre l'Hérault et le Gard."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 15,
-  "summarizedAt": "2026-11-15T09:01:20.652Z"
+  "summarizedArticleCount": 22,
+  "summarizedAt": "2026-11-15T16:01:26.798Z"
 }
