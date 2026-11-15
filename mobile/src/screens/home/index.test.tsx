@@ -16,6 +16,13 @@ import { Home } from './index';
 // the network down — the app still renders the Edition.
 const realFetch = globalThis.fetch;
 
+// The 5a navigation seam: a row tap pushes the story route (#195).
+const mockPush = jest.fn();
+
+jest.mock('expo-router', () => ({
+  useRouter: () => ({ push: mockPush }),
+}));
+
 beforeAll(async () => {
   const dir = editionCacheDirectory();
   dir.create({ intermediates: true, idempotent: true });
@@ -59,5 +66,16 @@ describe('Home', () => {
       ).toBeTruthy(),
     );
     expect(screen.getByText('Mis à jour le 11 novembre à 14h01')).toBeTruthy();
+  });
+
+  it('pushes the story route when a Brûlant row is tapped (#195)', async () => {
+    await render(<Home />);
+
+    fireEvent.press(
+      screen.getByRole('button', {
+        name: "Le budget 2027 arrive en commission à l'Assemblée",
+      }),
+    );
+    expect(mockPush).toHaveBeenCalledWith('/story/b0a1d2e3f4a5');
   });
 });

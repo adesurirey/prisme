@@ -1,7 +1,9 @@
 import type { Story } from '@prisme/domain';
+import { useRouter } from 'expo-router';
 import {
   ActivityIndicator,
   FlatList,
+  Pressable,
   RefreshControl,
   ScrollView,
   StyleSheet,
@@ -13,7 +15,8 @@ import { useEdition } from '@/data/use-edition';
 // The data-layer proof surface (issue #179): the Edition client drives the
 // home — disk cache rendered instantly, revalidated in the background,
 // pull-to-refresh forcing a round, the builtAt honesty stamp. The real
-// sort screens (1:1 web parity) land in #181 on the same hook.
+// sort screens (1:1 web parity) land in #181 on the same hook. Rows are
+// raw title buttons pushing the story route (#195) — chrome is 5b–5e.
 
 /** The « mis à jour » stamp — the rendered artifact's own build instant,
  *  shown in Paris time like every Prisme date. */
@@ -36,6 +39,7 @@ function updateStamp(builtAt: string): string {
 
 export function Home() {
   const { phase, refreshing, refresh } = useEdition();
+  const router = useRouter();
 
   if (phase.status === 'loading') {
     return (
@@ -76,7 +80,14 @@ export function Home() {
           <Text style={styles.stamp}>{updateStamp(builtAt)}</Text>
         </View>
       }
-      renderItem={({ item }) => <Text style={styles.story}>{item.title}</Text>}
+      renderItem={({ item }) => (
+        <Pressable
+          accessibilityRole="button"
+          onPress={() => router.push(`/story/${item.id}`)}
+        >
+          <Text style={styles.story}>{item.title}</Text>
+        </Pressable>
+      )}
     />
   );
 }
