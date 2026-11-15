@@ -1,10 +1,22 @@
 {
   "id": "88184d272960",
   "slug": "trois-personnes-interpellees-apres-la-decouverte-d-un-corps",
-  "title": "Trois personnes interpellées après la découverte d'un corps dans un garage en Seine-Saint-Denis",
+  "title": "Trois personnes sont interpellées après la découverte d'un corps sans vie dans un garage en Seine-Saint-Denis",
   "createdAt": "2026-11-15T13:01:26.595Z",
   "storyDay": "2026-11-15",
   "articles": [
+    {
+      "id": "225002bd995b",
+      "outletId": "ouest-france",
+      "headline": "Seine-Saint-Denis : trois personnes arrêtées après la découverte du corps d’une femme dans un garage automobile",
+      "url": "https://www.ouest-france.fr/societe/faits-divers/seine-saint-denis-trois-personnes-arretees-apres-la-decouverte-du-corps-dune-femme-dans-un-garage-automobile-1bf4d914-e0f6-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-15T13:21:09.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExN2U3YWNlNjk4ZDM0MGVjNTFiMGUyZjczNTU4OGQ5MzM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ad9d1e3e2d88410e95c5adadd7dd8100ebe31b3033deae98873bd3e2e0989f52",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
     {
       "id": "cd4d25a3f037",
       "outletId": "le-figaro",
@@ -16,6 +28,17 @@
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
+    },
+    {
+      "id": "3a0bfc81f60b",
+      "outletId": "cnews",
+      "headline": "Seine-Saint-Denis : le corps d'une femme découvert dans une camionnette, trois personnes dont un garagiste en garde à vue",
+      "url": "https://www.cnews.fr/faits-divers/2026-11-15/seine-saint-denis-le-corps-dune-femme-decouvert-dans-une-camionnette-trois",
+      "publishedAt": "2026-11-15T12:49:51.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_par7762226_1_6af99aa090549.jpg?h=1483d620&itok=L3CLx_06",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "c6309828cee4",
@@ -51,20 +74,10 @@
     }
   ],
   "topicId": "88184d272960",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794661200000,
-      "end": 1794664800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794664800000,
       "end": 1794668400000,
@@ -291,9 +304,44 @@
       "counts": {
         "gauche": 1,
         "centre": 0,
-        "droite": 2
+        "droite": 3
       },
-      "total": 3
+      "total": 4
+    },
+    {
+      "start": 1794747600000,
+      "end": 1794751200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "La police a découvert le corps d'une femme de 50 ans dans un atelier de La Courneuve samedi soir.",
+      "Le parquet de Bobigny indique que la victime était portée disparue depuis plusieurs jours.",
+      "L'alerte a été donnée par les enfants de la victime qui n'avaient plus de nouvelles de leur mère depuis mardi."
+    ],
+    "centre": [
+      "Trois personnes ont été interpellées et placées en garde à vue suite à la découverte du corps d'une femme.",
+      "La victime a été retrouvée sans vie samedi soir dans une camionnette à La Courneuve, en Seine-Saint-Denis.",
+      "La victime a pu être identifiée par les enquêteurs."
+    ],
+    "droite": [
+      "Trois personnes, dont un garagiste, sont en garde à vue après la découverte d'un cadavre dans une camionnette à La Courneuve.",
+      "Une femme a prévenu la police samedi vers 22 heures en affirmant que son mari aurait commis un meurtre.",
+      "Les premiers éléments suggèrent un différend entre le garagiste et une cliente qui aurait dégénéré."
+    ]
+  },
+  "differences": [
+    "La gauche privilégie l'angle de la disparition signalée par les proches et l'âge de la victime.",
+    "Le centre se concentre sur les aspects factuels immédiats de l'intervention policière et l'identification de la victime.",
+    "La droite insiste sur le signalement initial par l'épouse du suspect et l'hypothèse d'un différend entre le garagiste et une cliente."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-15T14:01:23.104Z"
 }

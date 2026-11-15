@@ -6,6 +6,28 @@
   "storyDay": "2026-11-15",
   "articles": [
     {
+      "id": "7b82ef1851e7",
+      "outletId": "humanite",
+      "headline": "Explosions à Bahreïn : l’Iran revendique une attaque contre une base aérienne américaine",
+      "url": "https://www.humanite.fr/monde/bahrein/explosions-a-bahrein-liran-revendique-une-attaque-contre-une-base-aerienne-americaine",
+      "publishedAt": "2026-11-15T13:15:56.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/iran-missiles.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "b53cd323aecc",
+      "outletId": "france-24",
+      "headline": "L'Iran revendique une attaque contre un site militaire américain à Bahreïn",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261115-l-iran-revendique-une-attaque-contre-un-site-militaire-am%C3%A9ricain-%C3%A0-bahre%C3%AFn",
+      "publishedAt": "2026-11-15T12:46:56.000Z",
+      "imageUrl": "https://s.france24.com/media/display/66c7827e-e0f2-11f1-b02e-695cb59fade5/w:1024/p:16x9/capture-baaaba20.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "3d46fb89b138",
       "outletId": "le-parisien",
       "headline": "Bahreïn : l’Iran vise avec des drones une base américaine, l’armée assure avoir intercepté toutes les attaques",
@@ -85,20 +107,10 @@
     }
   ],
   "topicId": "fe97a1afeb31",
-  "titledArticleCount": 6,
+  "titledArticleCount": 9,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794661200000,
-      "end": 1794664800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794664800000,
       "end": 1794668400000,
@@ -324,7 +336,17 @@
       "end": 1794747600000,
       "counts": {
         "gauche": 0,
-        "centre": 1,
+        "centre": 2,
+        "droite": 0
+      },
+      "total": 2
+    },
+    {
+      "start": 1794747600000,
+      "end": 1794751200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
         "droite": 0
       },
       "total": 1
@@ -332,29 +354,28 @@
   ],
   "summaries": {
     "gauche": [
-      "Les Gardiens de la révolution ont mené une attaque de drones le dimanche 15 novembre contre une base militaire des États-Unis à Bahreïn.",
-      "Libération précise que les autorités locales affirment avoir intercepté tous les appareils avant leur impact.",
-      "20 Minutes ajoute que l'attaque a ciblé la petite base aérienne d'hélicoptères d'Al-Riffa avec six drones.",
-      "Le Monde rappelle qu'une précédente frappe avait visé un système de radar américain dans ce même pays insulaire le vendredi précédent."
+      "L'Iran a revendiqué une attaque de drones menée ce dimanche contre une base aérienne américaine à Bahreïn.",
+      "Les Gardiens de la révolution ont spécifiquement ciblé la petite base d’hélicoptères d’Al-Riffa avec six appareils.",
+      "Les autorités locales de Bahreïn affirment avoir intercepté tous les vecteurs avant qu'ils n'atteignent leurs cibles.",
+      "Le Monde souligne qu'il s'agit de la deuxième frappe iranienne en trois jours dans ce pays du Golfe."
     ],
     "centre": [
-      "Les Gardiens de la Révolution ont revendiqué des frappes de drones menées dimanche matin contre une base militaire américaine située à Bahreïn.",
-      "France 24 indique qu'il s'agit de la deuxième action iranienne en trois jours dans cet État insulaire, confirmant une reprise des tensions.",
-      "20 Minutes mentionne l'utilisation de six drones pour cibler la base d'hélicoptères d'Al-Riffa.",
-      "CNews rapporte que des explosions et des sirènes d'alarme ont retenti, les autorités appelant la population à se mettre en sûreté."
+      "Les Gardiens de la Révolution iraniens ont revendiqué des frappes de drones sur un site militaire américain à Bahreïn.",
+      "L'opération a visé une installation militaire et des radars, constituant la deuxième attaque du genre en trois jours dans le pays.",
+      "L'armée de Bahreïn assure avoir intercepté l'ensemble des attaques menées contre le territoire."
     ],
     "droite": [
-      "L'armée iranienne a affirmé avoir visé la base d'hélicoptères d'Al-Riffa à Bahreïn à l'aide de six drones.",
-      "Des séries d'explosions ont été entendues dimanche matin à 4h et 6h30, poussant les autorités à diffuser des consignes d'alerte pour la population.",
-      "CNews souligne que ce pays du Golfe est régulièrement pris pour cible depuis le début du conflit au Moyen-Orient."
+      "Des explosions ont retenti à Bahreïn après une attaque de drones revendiquée par l'Iran contre une base militaire américaine.",
+      "Les autorités ont déclenché des sirènes d'alarme et demandé à la population de rejoindre des abris sûrs.",
+      "L'armée iranienne aurait précisément ciblé la base d'hélicoptères d'Al-Riffa avec six drones selon les précisions du Figaro."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la chronologie des attaques successives rapportées par Le Monde et sur la réaction d'interception défensive relevée par Libération.",
-    "Le centre insiste sur le contexte global de la reprise des tensions régionales et détaille le déroulement pratique de l'alerte à la population.",
-    "La droite privilégie une mise en scène immersive de l'événement en insistant sur le climat d'insécurité nocturne et les témoignages locaux d'explosions."
+    "La gauche met l'accent sur la récurrence des tensions régionales en rappelant la succession rapide des frappes dans le Golfe.",
+    "Le centre privilégie une couverture factuelle centrée sur les déclarations des belligérants et les démentis de l'armée locale.",
+    "La droite insiste sur le climat d'insécurité immédiat en décrivant le déclenchement des sirènes et les consignes de sécurité adressées à la population."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6,
-  "summarizedAt": "2026-11-15T11:01:24.775Z"
+  "summarizedArticleCount": 9,
+  "summarizedAt": "2026-11-15T14:01:23.104Z"
 }
