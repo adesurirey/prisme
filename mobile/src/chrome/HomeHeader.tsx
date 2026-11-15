@@ -86,8 +86,6 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    // The melt zone: frost extends below the bar and washes out there.
-    paddingBottom: 34,
   },
   bar: {
     flexDirection: 'row',
