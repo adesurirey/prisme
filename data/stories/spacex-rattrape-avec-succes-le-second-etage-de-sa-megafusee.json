@@ -1,10 +1,42 @@
 {
   "id": "8463ebd430ee",
   "slug": "spacex-rattrape-avec-succes-le-second-etage-de-sa-megafusee",
-  "title": "SpaceX parvient à rattraper le second étage de sa mégafusée Starship après un vol, une première",
+  "title": "SpaceX parvient à rattraper l'étage supérieur de sa mégafusée Starship",
   "createdAt": "2026-11-14T22:01:21.031Z",
   "storyDay": "2026-11-14",
   "articles": [
+    {
+      "id": "0c09cd1964ba",
+      "outletId": "franceinfo",
+      "headline": "SpaceX parvient pour la première fois à récupérer l'étage supérieur de sa mégafusée Starship",
+      "url": "https://www.franceinfo.fr/sciences/espace/spacex-parvient-pour-la-premiere-fois-a-recuperer-l-etage-superieur-de-sa-megafusee-starship_8283233.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-15T10:24:22.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/drarzhGaQdJlwBF2xynXdfX-rxo/0x0:1024x576/432x243/filters:format(jpg)/2026/11/15/6af97feaf1fdc612028173.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "84beb292412b",
+      "outletId": "france-24",
+      "headline": "Starship : SpaceX réussit pour la première fois à récupérer l'étage supérieur",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261115-starship-spacex-r%C3%A9ussit-pour-la-premi%C3%A8re-fois-%C3%A0-r%C3%A9cup%C3%A9rer-l-%C3%A9tage-sup%C3%A9rieur",
+      "publishedAt": "2026-11-15T09:47:54.000Z",
+      "imageUrl": "https://s.france24.com/media/display/fc16f108-e0d8-11f1-9d3b-29048b396e03/w:1024/p:16x9/AP26319029418186.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "e56452acfc39",
+      "outletId": "liberation",
+      "headline": "SpaceX réussit pour la première fois à récupérer l’étage supérieur de «Starship»",
+      "url": "https://www.liberation.fr/sciences/espace/spacex-reussit-pour-la-premiere-fois-a-recuperer-letage-superieur-de-starship-20261115_JOFBITPBVVEE5KCJCMJZ6WH45M/",
+      "publishedAt": "2026-11-15T09:17:00.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
     {
       "id": "53423ad931e4",
       "outletId": "lexpress",
@@ -46,7 +78,7 @@
       "url": "https://www.lemonde.fr/sciences/article/2026/11/15/spacex-parvient-a-recuperer-l-etage-superieur-de-sa-megafusee-starship-apres-14-orbites_6810742_1650684.html",
       "publishedAt": "2026-11-15T00:26:48.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/14/370/0/4444/2222/644/322/60/0/f4f237f_ftp-1-3nu28t2twfnj-2026-11-14t212533z-1148285033-rc2xnoaknnxi-rtrmadp-3-space-spacex-starship.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -132,30 +164,10 @@
     }
   ],
   "topicId": "582f3db54868",
-  "titledArticleCount": 9,
+  "titledArticleCount": 14,
   "section": "science",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794646800000,
-      "end": 1794650400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794650400000,
-      "end": 1794654000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794654000000,
       "end": 1794657600000,
@@ -375,33 +387,51 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794733200000,
+      "end": 1794736800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 2
+    },
+    {
+      "start": 1794736800000,
+      "end": 1794740400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "L'entreprise SpaceX a réussi à récupérer l'étage supérieur de la mégafusée Starship au terme d'un vol spatial d'une vingtaine d'heures.",
-      "La récupération de ce composant s'est effectuée au moyen des immenses bras métalliques de la base spatiale située au Texas.",
-      "La Nasa a salué cette opération comme une avancée significative en vue des futures missions lunaires américaines.",
-      "Le retour du premier étage du lanceur a en revanche échoué pour des motifs indéterminés selon Le Monde."
+      "SpaceX a réussi à ramener en un seul morceau la partie haute de sa fusée Starship après environ vingt-quatre heures en orbite et quatorze orbites autour de la Terre.",
+      "Le premier étage du lanceur n'a pas pu être récupéré en raison d'un problème technique survenu lors du vol test mené au Texas.",
+      "Cette manœuvre techn complexe représente une étape importante pour le retour des Américains sur la Lune ainsi que pour la conception de futurs voyages vers Mars."
     ],
     "centre": [
-      "SpaceX a capturé pour la première fois le second étage de sa fusée Starship au moyen de bras mécaniques géants.",
-      "L'opération s'est déroulée à la base spatiale texane après plus de vingt-deux heures de vol en orbite terrestre.",
-      "Cette prouesse technique majeure rapproche l'entreprise d'Elon Musk de son objectif de réutilisation totale du lanceur lourd.",
-      "Le système est également destiné à transporter des infrastructures informatiques et à desservir Mars."
+      "La société d'Elon Musk a réussi pour la première fois à récupérer l'étage supérieur de sa mégafusée après un vol spatial.",
+      "L'engin spatial a rejoint la base texane et a été intercepté en vol par d'immenses bras métalliques après plus de vingt-deux heures.",
+      "Cette prouesse technique rapproche le programme Starship d'une réutilisabilité totale, rendant les lancements nettement moins onéreux."
     ],
     "droite": [
-      "La société SpaceX a récupéré avec succès le second étage de sa fusée Starship après environ quatorze orbites terrestres.",
-      "La manœuvre a été exécutée par les bras métalliques de la base spatiale au Texas sous les applaudissements des salariés.",
-      "L'événement représente une étape majeure dans le développement du système de transport lourd réutilisable vers la Lune et Mars."
+      "L'entreprise américaine SpaceX a rattrapé pour la première fois le second étage de sa mégafusée Starship au terme d'un vol test.",
+      "L'engin de plus de cinquante mètres de haut a bouclé environ quatorze orbites avant de rejoindre la base spatiale au Texas.",
+      "La manœuvre n'avait jamais été tentée avec un étage supérieur ayant voyagé en orbite, constituant une avancée majeure pour de futurs voyages vers la Lune, Mars et le déploiement de datacenters."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la collaboration avec la Nasa et l'échec parallèle du premier étage rapporté par Le Monde.",
-    "Le centre livre un compte-rendu technique direct de la manœuvre de capture par les bras mécaniques au Texas.",
-    "La droite insiste sur le caractère spectaculaire de la prouesse et l'ambiance enthousiaste des équipes sur place."
+    "La gauche insiste particulièrement sur l'objectif politique et géopolitique du vol en citant le retour des États-Unis sur la Lune.",
+    "Le centre privilégie la dimension industrielle du projet en insistant sur l'objectif d'une fusée entièrement réutilisable et économique.",
+    "La droite détaille minutieusement la complexité technique de la manœuvre spatiale et l'ensemble des destinations visées par le programme."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 9,
-  "summarizedAt": "2026-11-15T07:01:28.140Z"
+  "summarizedArticleCount": 14,
+  "summarizedAt": "2026-11-15T11:01:24.775Z"
 }

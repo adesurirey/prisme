@@ -1,10 +1,32 @@
 {
   "id": "bedc339c7bf5",
   "slug": "la-poste-annonce-un-vol-de-donnees-de-22-millions-de-personnes",
-  "title": "Cyberattaque : Maileva, filiale du groupe La Poste, annonce un vol de données touchant 22 millions de personnes",
+  "title": "Cyberattaque : Maileva annonce un vol de données touchant 22 millions de personnes",
   "createdAt": "2026-11-14T20:01:24.769Z",
   "storyDay": "2026-11-14",
   "articles": [
+    {
+      "id": "eb8d8a0171b6",
+      "outletId": "le-point",
+      "headline": "Cyberattaque chez Maileva : trois questions après la fuite géante de données de la filiale de La Poste",
+      "url": "https://www.lepoint.fr/high-tech-internet/cyberattaque-chez-maileva-trois-questions-apres-la-fuite-geante-de-donnees-de-la-filiale-de-la-poste-622I5AY4PFEFLMUASHB7QHKSRE/",
+      "publishedAt": "2026-11-15T10:43:47.000Z",
+      "imageUrl": "https://www.lepoint.fr/resizer/v2/3BYJR54SLRDIVIOEHVUUHLIESQ.jpg?auth=6ce2500ecfb20e07aaf76da7c1e9a33e638fcadb91fc380454919a60a5173321&smart=true&width=1200&height=900",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "4f4f0b114bd2",
+      "outletId": "tf1-info",
+      "headline": "Vol massif de données dans une filiale de La Poste : 22 millions de personnes concernées par la cyberattaque",
+      "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-vol-massif-de-donnees-dans-une-filiale-de-la-poste-22-millions-de-personnes-concernees-par-la-cyberattaque-53695-2475935.html",
+      "publishedAt": "2026-11-15T09:45:12.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/vol-massif-de-donnees-dans-une-filiale-de-la-poste-22-millions-de-personnes-concernees-par-la-cyberattaque-60ec03-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
     {
       "id": "b4f12fc9b268",
       "outletId": "la-croix",
@@ -15,6 +37,17 @@
       "frontPage": false,
       "kind": "news",
       "section": "science"
+    },
+    {
+      "id": "9ed7961ab70f",
+      "outletId": "lobs",
+      "headline": "Les données de millions de personnes volées lors d’une cyberattaque contre une filiale du groupe La Poste : ce que l’on sait",
+      "url": "https://www.nouvelobs.com/economie/20261115.OBS120145/les-donnees-de-millions-de-personnes-volees-lors-d-une-cyberattaque-contre-une-filiale-du-groupe-la-poste-ce-que-l-on-sait.html",
+      "publishedAt": "2026-11-15T08:48:50.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/11/15/0/0/1024/682/0/0/60/0/c8b6ac3_upload-1-j00jzibokb6t-000-c3k727t-1.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "82da54fd4096",
@@ -146,7 +179,7 @@
       "url": "https://www.lefigaro.fr/secteur/high-tech/victime-d-une-cyberattaque-maileva-une-filiale-de-la-poste-annonce-un-vol-de-donnees-concernant-22-millions-de-personnes-20261114",
       "publishedAt": "2026-11-14T19:31:33.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/14/b114c2e6f3d49c7144b3f2b4cb01b0c6912ba631627b3dd116059252c7f72534.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -197,20 +230,10 @@
     }
   ],
   "topicId": "bedc339c7bf5",
-  "titledArticleCount": 14,
+  "titledArticleCount": 20,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794650400000,
-      "end": 1794654000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794654000000,
       "end": 1794657600000,
@@ -425,11 +448,11 @@
       "start": 1794729600000,
       "end": 1794733200000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 0,
         "droite": 0
       },
-      "total": 0
+      "total": 1
     },
     {
       "start": 1794733200000,
@@ -437,34 +460,43 @@
       "counts": {
         "gauche": 0,
         "centre": 1,
-        "droite": 0
+        "droite": 1
+      },
+      "total": 2
+    },
+    {
+      "start": 1794736800000,
+      "end": 1794740400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
       },
       "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "La plateforme Maileva, filiale de Docaposte et du groupe La Poste, a subi une cyberattaque mi-septembre provoquant une fuite massive de données.",
-      "Le vol d'informations concerne les noms, prénoms et adresses postales de 22 millions de personnes, selon les constats des sources spécialisées.",
-      "L'entreprise a saisi la Commission nationale de l'informatique et des libertés, a porté plainte et fait l'objet d'une enquête judiciaire en cours."
+      "Maileva, filiale du groupe La Poste, a subi mi-septembre une cyberattaque entraînant le vol des données de 22 millions de personnes.",
+      "L'entreprise a déposé plainte et une enquête judiciaire est actuellement en cours."
     ],
     "centre": [
-      "La société Maileva, appartenant au groupe La Poste, a communiqué sur un piratage informatique survenu mi-septembre et touchant 22 millions d'individus.",
-      "L'incident a entraîné la dérobade de coordonnées personnelles à grande échelle, qualifiée de l'une des fuites les plus importantes en France.",
-      "La direction indique avoir procédé aux signalements réglementaires auprès de la CNIL et enclenché des démarches judiciaires."
+      "Une cyberattaque d'envergure majeure a touché mi-septembre la plateforme Maileva, filiale du groupe La Poste.",
+      "Le vol de données concerne les noms, prénoms et adresses postales de 22 millions de personnes, constituant l'une des plus importantes fuites recensées en France.",
+      "L'entreprise a notifié la Commission nationale de l'informatique et des libertés, déposé plainte et fait l'objet d'une enquête judiciaire."
     ],
     "droite": [
-      "La filiale du groupe La Poste spécialisée dans la gestion de courriers professionnels, Maileva, a annoncé une cyberattaque ayant frappé 22 millions de clients.",
-      "L'événement est décrit comme l'une des plus graves fuites de données du pays, confirmée par les plateformes spécialisées FrenchBreaches et cyberattaque.org.",
-      "La direction a déposé plainte, saisi la CNIL et fait face à une enquête judiciaire pour identifier l'origine de cette intrusion informatique d'ampleur."
+      "La plateforme Maileva, spécialisée dans l'envoi de courriers professionnels pour les entreprises et filiale de Docaposte au sein du groupe La Poste, a été victime d'une cyberattaque mi-septembre.",
+      "Cette violation expose les coordonnées de 22 millions de personnes et est qualifiée par l'entreprise de « l'une des plus importantes fuites de données en France ».",
+      "La société a saisi la Commission nationale de l'informatique et des libertés, déposé plainte et une enquête judiciaire est en cours."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur l'appartenance de la cible à Docaposte et détaille précisément la nature des données dérobées comme les adresses postales.",
-    "Le centre livre un compte rendu factuel et synthétique de l'annonce du groupe La Poste sans s'attarder sur les spécificités techniques de l'entreprise visée.",
-    "La droite insiste sur le profil de l'entreprise touchée, spécialisée dans les courriers professionnels, et cite explicitement les sites spécialisés à l'origine des révélations."
+    "La gauche livre un compte-rendu factuel et synthétique centré sur le dépôt de plainte et l'ouverture de l'enquête judiciaire.",
+    "Le centre livre un récit factuel détaillé soulignant l'ampleur historique du piratage et l'implication des autorités de contrôle.",
+    "La droite insiste particulièrement sur la nature des activités professionnelles de l'entreprise ciblée et qualifie explicitement l'événement d'attaque d'envergure nationale."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 14,
-  "summarizedAt": "2026-11-14T23:01:23.303Z"
+  "summarizedArticleCount": 20,
+  "summarizedAt": "2026-11-15T11:01:24.775Z"
 }
