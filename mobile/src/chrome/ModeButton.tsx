@@ -19,8 +19,17 @@
 
 import { TrueSheet } from '@lodev09/react-native-true-sheet';
 import * as Haptics from 'expo-haptics';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import Animated, {
+  FadeInDown,
+  FadeOutUp,
+  useAnimatedStyle,
+  useSharedValue,
+  withSequence,
+  withSpring,
+  withTiming,
+} from 'react-native-reanimated';
 
 import {
   flipMode,
@@ -53,26 +62,52 @@ export function ModeButton({ style }: { style?: ModeButtonStyle }) {
   const sheet = useRef<TrueSheet>(null);
   const current = MODES.find((m) => m.mode === mode) ?? MODES[0];
 
+  // The glass flip (issue #196): a spring pulse on the pill and the
+  // short label rolling up — the flip reads as a change, not a swap.
+  // The pulse answers the reader's flip, never the app opening. Deep
+  // press-in, fast stiff spring back — a pop, not a squish.
+  const pulse = useSharedValue(1);
+  const pulseStyle = useAnimatedStyle(() => ({
+    transform: [{ scale: pulse.value }],
+  }));
+  const renderedMode = useRef(mode);
+  useEffect(() => {
+    if (renderedMode.current === mode) return;
+    renderedMode.current = mode;
+    pulse.value = withSequence(
+      withTiming(0.85, { duration: 70 }),
+      withSpring(1, { damping: 17, stiffness: 420 }),
+    );
+  }, [mode, pulse]);
+
   return (
     <>
-      <GlassPill
-        accessibilityLabel={`Lecture des barres : ${current.label}. Choisir la lecture.`}
-        testID="mode-button"
-        onPress={() => void sheet.current?.present()}
-        onLongPress={() => {
-          // Fire-and-forget: a dead haptic never blocks the flip.
-          void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(
-            () => undefined,
-          );
-          setMode(flipMode(mode));
-        }}
-        style={style}
-      >
-        {/* The fixed width keeps « Couv. » and « Expo. » the same pill. */}
-        <GlassPillText style={styles.short}>
-          {modeShortLabel(mode)}
-        </GlassPillText>
-      </GlassPill>
+      <Animated.View style={pulseStyle}>
+        <GlassPill
+          accessibilityLabel={`Lecture des barres : ${current.label}. Choisir la lecture.`}
+          testID="mode-button"
+          onPress={() => void sheet.current?.present()}
+          onLongPress={() => {
+            // Fire-and-forget: a dead haptic never blocks the flip.
+            void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(
+              () => undefined,
+            );
+            setMode(flipMode(mode));
+          }}
+          style={style}
+        >
+          {/* The fixed width keeps « Couv. » and « Expo. » the same pill. */}
+          <Animated.View
+            key={mode}
+            entering={FadeInDown.duration(130)}
+            exiting={FadeOutUp.duration(85)}
+          >
+            <GlassPillText style={styles.short}>
+              {modeShortLabel(mode)}
+            </GlassPillText>
+          </Animated.View>
+        </GlassPill>
+      </Animated.View>
 
       <TrueSheet ref={sheet} detents={['auto']} grabber>
         <View style={styles.sheet}>

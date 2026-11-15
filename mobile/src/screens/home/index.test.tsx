@@ -29,6 +29,12 @@ jest.mock('@lodev09/react-native-true-sheet', () => ({
   TrueSheet: require('@/chrome/true-sheet.mock').MockTrueSheet,
 }));
 
+// The flip animation is Reanimated; Jest gets its mock (issue #196).
+jest.mock(
+  'react-native-reanimated',
+  () => require('@/test/reanimated-mock').reanimatedMock,
+);
+
 jest.mock('expo-haptics', () => ({
   impactAsync: jest.fn(async () => undefined),
   ImpactFeedbackStyle: { Light: 'light', Medium: 'medium', Heavy: 'heavy' },
