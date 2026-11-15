@@ -1,7 +1,13 @@
 import { renderHook, waitFor } from '@testing-library/react-native';
 import type { ReactNode } from 'react';
 
-import { MODE_STORAGE_KEY, ModeProvider, useMode } from './mode';
+import {
+  flipMode,
+  MODE_STORAGE_KEY,
+  ModeProvider,
+  modeShortLabel,
+  useMode,
+} from './mode';
 
 /** A plain-object stand-in for AsyncStorage the provider can be given. */
 function memoryStorage(initial: Record<string, string> = {}) {
@@ -70,5 +76,25 @@ describe('useMode (issue #180)', () => {
 
     result.current.setMode('exposure');
     await waitFor(() => expect(result.current.mode).toBe('exposure'));
+  });
+});
+
+describe('modeShortLabel (issue #196)', () => {
+  test('the mode pill reads « Couv. » in Couverture', () => {
+    expect(modeShortLabel('coverage')).toBe('Couv.');
+  });
+
+  test('the mode pill reads « Expo. » in Exposition', () => {
+    expect(modeShortLabel('exposure')).toBe('Expo.');
+  });
+});
+
+describe('flipMode (issue #196)', () => {
+  test('a long-press on Couverture flips to Exposition', () => {
+    expect(flipMode('coverage')).toBe('exposure');
+  });
+
+  test('a long-press on Exposition flips to Couverture', () => {
+    expect(flipMode('exposure')).toBe('coverage');
   });
 });

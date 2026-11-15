@@ -6,19 +6,33 @@
 
 import { GlassView, isLiquidGlassAvailable } from 'expo-glass-effect';
 import type { ReactNode } from 'react';
-import { Platform, Pressable, StyleSheet, Text } from 'react-native';
+import {
+  Platform,
+  Pressable,
+  type StyleProp,
+  StyleSheet,
+  Text,
+  type TextStyle,
+  type ViewStyle,
+} from 'react-native';
 
 import { useTheme } from '@/theme';
 
 export function GlassPill({
   onPress,
+  onLongPress,
   accessibilityLabel,
   testID,
+  disabled,
+  style,
   children,
 }: {
   onPress: () => void;
+  onLongPress?: () => void;
   accessibilityLabel: string;
   testID?: string;
+  disabled?: boolean;
+  style?: StyleProp<ViewStyle>;
   children: ReactNode;
 }) {
   const glass = Platform.OS === 'ios' && isLiquidGlassAvailable();
@@ -28,10 +42,12 @@ export function GlassPill({
       <Pressable
         accessibilityLabel={accessibilityLabel}
         accessibilityRole="button"
+        disabled={disabled}
         onPress={onPress}
+        onLongPress={onLongPress}
         testID={testID}
       >
-        <GlassView glassEffectStyle="regular" style={styles.pill}>
+        <GlassView glassEffectStyle="regular" style={[styles.pill, style]}>
           {children}
         </GlassView>
       </Pressable>
@@ -42,11 +58,14 @@ export function GlassPill({
     <Pressable
       accessibilityLabel={accessibilityLabel}
       accessibilityRole="button"
+      disabled={disabled}
       onPress={onPress}
+      onLongPress={onLongPress}
       testID={testID}
       style={({ pressed }) => [
         styles.pill,
         styles.pillFallback,
+        style,
         { opacity: pressed ? 0.7 : 1 },
       ]}
     >
@@ -55,9 +74,17 @@ export function GlassPill({
   );
 }
 
-export function GlassPillText({ children }: { children: ReactNode }) {
+export function GlassPillText({
+  children,
+  style,
+}: {
+  children: ReactNode;
+  style?: StyleProp<TextStyle>;
+}) {
   const theme = useTheme();
-  return <Text style={[styles.text, { color: theme.ink }]}>{children}</Text>;
+  return (
+    <Text style={[styles.text, { color: theme.ink }, style]}>{children}</Text>
+  );
 }
 
 const styles = StyleSheet.create({

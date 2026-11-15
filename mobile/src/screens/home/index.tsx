@@ -10,36 +10,23 @@ import {
   Text,
   View,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+import { HOME_HEADER_BAR_HEIGHT, HomeHeader } from '@/chrome/HomeHeader';
 import { useEdition } from '@/data/use-edition';
+import { useTheme } from '@/theme';
 
 // The data-layer proof surface (issue #179): the Edition client drives the
 // home — disk cache rendered instantly, revalidated in the background,
-// pull-to-refresh forcing a round, the builtAt honesty stamp. The real
-// sort screens (1:1 web parity) land in #181 on the same hook. Rows are
-// raw title buttons pushing the story route (#195) — chrome is 5b–5e.
-
-/** The « mis à jour » stamp — the rendered artifact's own build instant,
- *  shown in Paris time like every Prisme date. */
-function updateStamp(builtAt: string): string {
-  const instant = new Date(builtAt);
-  const day = new Intl.DateTimeFormat('fr-FR', {
-    timeZone: 'Europe/Paris',
-    day: 'numeric',
-    month: 'long',
-  }).format(instant);
-  const clock = new Intl.DateTimeFormat('fr-FR', {
-    timeZone: 'Europe/Paris',
-    hour: '2-digit',
-    minute: '2-digit',
-  })
-    .format(instant)
-    .replace(':', 'h');
-  return `Mis à jour le ${day} à ${clock}`;
-}
+// pull-to-refresh forcing a round. The fixed header (issue #196) carries
+// « À la une », the stamp and the pills; rows are raw title buttons
+// pushing the story route (#195); cards land in #181.
 
 export function Home() {
   const { phase, refreshing, refresh } = useEdition();
   const router = useRouter();
+  const theme = useTheme();
+  const insets = useSafeAreaInsets();
 
   if (phase.status === 'loading') {
     return (
@@ -52,7 +39,7 @@ export function Home() {
   if (phase.status === 'error') {
     return (
       <ScrollView
-        style={styles.container}
+        style={[styles.container, { backgroundColor: theme.canvas }]}
         contentContainerStyle={[styles.center, styles.gap]}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={refresh} />
@@ -67,35 +54,37 @@ export function Home() {
 
   const { edition, builtAt } = phase.snapshot;
   return (
-    <FlatList
-      style={styles.container}
-      testID="stories"
-      data={edition.feedStories}
-      keyExtractor={(story: Story) => story.id}
-      refreshing={refreshing}
-      onRefresh={refresh}
-      ListHeaderComponent={
-        <View style={styles.header}>
-          <Text style={styles.title}>Prisme</Text>
-          <Text style={styles.stamp}>{updateStamp(builtAt)}</Text>
-        </View>
-      }
-      renderItem={({ item }) => (
-        <Pressable
-          accessibilityRole="button"
-          onPress={() => router.push(`/story/${item.id}`)}
-        >
-          <Text style={styles.story}>{item.title}</Text>
-        </Pressable>
-      )}
-    />
+    <View style={[styles.container, { backgroundColor: theme.canvas }]}>
+      <FlatList
+        testID="stories"
+        data={edition.feedStories}
+        keyExtractor={(story: Story) => story.id}
+        refreshing={refreshing}
+        onRefresh={refresh}
+        contentContainerStyle={{
+          // The first row starts below the fixed bar; further rows
+          // scroll under the glass.
+          paddingTop: insets.top + HOME_HEADER_BAR_HEIGHT + 8,
+        }}
+        renderItem={({ item }) => (
+          <Pressable
+            accessibilityRole="button"
+            onPress={() => router.push(`/story/${item.id}`)}
+          >
+            <Text style={[styles.story, { color: theme.ink }]}>
+              {item.title}
+            </Text>
+          </Pressable>
+        )}
+      />
+      <HomeHeader builtAt={builtAt} />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
   },
   center: {
     alignItems: 'center',
@@ -103,20 +92,6 @@ const styles = StyleSheet.create({
   },
   gap: {
     gap: 12,
-  },
-  header: {
-    paddingHorizontal: 20,
-    paddingTop: 24,
-    paddingBottom: 16,
-  },
-  title: {
-    fontSize: 32,
-    fontWeight: '700',
-  },
-  stamp: {
-    marginTop: 4,
-    fontSize: 13,
-    color: '#555',
   },
   story: {
     paddingHorizontal: 20,

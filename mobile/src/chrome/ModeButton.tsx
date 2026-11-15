@@ -1,22 +1,33 @@
 /**
- * The reading-mode button and its sheet (issue #180): one global
+ * The reading-mode pill and its sheet (issue #196): one global
  * Couverture/Exposition mode (mode.tsx), explained where it is chosen.
  * The two explanations are the web's own sentences (mode-toggle.ts) —
  * one reading, one vocabulary, both surfaces.
  *
- * The trigger is a Liquid Glass pill (iOS 26). The sheet is a plain RN
- * Modal: on @expo/ui 58.0.28, content hosted in the native BottomSheet
- * — RN pressables and native ListItems alike — receives no touches
- * (expo/expo #48131 and friends), so nothing in it could be selected.
- * A Modal gives the same bottom-sheet feel with working rows; revisit
- * @expo/ui when its sheet touch dispatch is fixed.
+ * The pill shows the short reading (« Couv. » / « Expo. », a stable
+ * width — the Photos « Sélect. » pattern) on the salvaged GlassPill.
+ * A tap presents the true-sheet; a long-press anywhere on the pill
+ * flips the reading directly, with a haptic and no sheet.
+ *
+ * The sheet is @lodev09/react-native-true-sheet: it presents
+ * UISheetPresentationController, so the detents, the grabber and
+ * Liquid Glass on iOS 26 come from the system (no backgroundColor —
+ * without one, iOS 26 renders the glass and older iOS the system
+ * material). It replaced @expo/ui's BottomSheet: on 58.0.28 its
+ * content receives no touches (expo/expo #48131).
  */
 
-import { useState } from 'react';
-import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { TrueSheet } from '@lodev09/react-native-true-sheet';
+import * as Haptics from 'expo-haptics';
+import { useRef } from 'react';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { type ReadingMode, useMode } from '@/mode/mode';
+import {
+  flipMode,
+  modeShortLabel,
+  type ReadingMode,
+  useMode,
+} from '@/mode/mode';
 import { useTheme } from '@/theme';
 
 import { GlassPill, GlassPillText } from './GlassPill';
@@ -35,9 +46,8 @@ const MODES: Array<{ mode: ReadingMode; label: string }> = [
 
 export function ModeButton() {
   const theme = useTheme();
-  const insets = useSafeAreaInsets();
   const { mode, setMode } = useMode();
-  const [sheetOpen, setSheetOpen] = useState(false);
+  const sheet = useRef<TrueSheet>(null);
   const current = MODES.find((m) => m.mode === mode) ?? MODES[0];
 
   return (
@@ -45,102 +55,82 @@ export function ModeButton() {
       <GlassPill
         accessibilityLabel={`Lecture des barres : ${current.label}. Choisir la lecture.`}
         testID="mode-button"
-        onPress={() => setSheetOpen(true)}
+        onPress={() => void sheet.current?.present()}
+        onLongPress={() => {
+          // Fire-and-forget: a dead haptic never blocks the flip.
+          void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(
+            () => undefined,
+          );
+          setMode(flipMode(mode));
+        }}
       >
-        <GlassPillText>{current.label}</GlassPillText>
+        {/* The fixed width keeps « Couv. » and « Expo. » the same pill. */}
+        <GlassPillText style={styles.short}>
+          {modeShortLabel(mode)}
+        </GlassPillText>
       </GlassPill>
 
-      <Modal
-        visible={sheetOpen}
-        animationType="slide"
-        transparent
-        onRequestClose={() => setSheetOpen(false)}
-      >
-        <Pressable
-          accessibilityLabel="Fermer le choix de lecture"
-          style={styles.backdrop}
-          testID="mode-sheet-backdrop"
-          onPress={() => setSheetOpen(false)}
-        >
-          <Pressable
-            style={[
-              styles.sheet,
-              {
-                backgroundColor: theme.surface,
-                paddingBottom: insets.bottom + 16,
-              },
-            ]}
-            testID="mode-sheet"
-            onPress={() => undefined}
-          >
-            <View
-              style={[styles.grabber, { backgroundColor: theme.lineStrong }]}
-            />
-            <Text style={[styles.sheetTitle, { color: theme.ink }]}>
-              Lecture des barres
-            </Text>
-            {MODES.map(({ mode: candidate, label }) => (
-              <Pressable
-                key={candidate}
-                accessibilityRole="radio"
-                accessibilityState={{ selected: candidate === mode }}
-                testID={`mode-row-${candidate}`}
-                onPress={() => {
-                  setMode(candidate);
-                  setSheetOpen(false);
-                }}
-                style={({ pressed }) => [
-                  styles.row,
-                  {
-                    backgroundColor:
-                      candidate === mode
-                        ? theme.toggleTrack
-                        : pressed
-                          ? theme.hover
-                          : 'transparent',
-                  },
-                ]}
-              >
-                <Text style={[styles.rowLabel, { color: theme.ink }]}>
-                  {label}
-                </Text>
-                <Text style={[styles.rowDescription, { color: theme.muted }]}>
-                  {modeDescription(candidate)}
-                </Text>
-                {candidate === mode && (
-                  <Text style={[styles.rowCheck, { color: theme.ink }]}>✓</Text>
-                )}
-              </Pressable>
-            ))}
-          </Pressable>
-        </Pressable>
-      </Modal>
+      <TrueSheet ref={sheet} detents={['auto']} grabber>
+        {/* No background of our own: iOS 26 renders Liquid Glass, older iOS the
+            system material, Android the M3 surface — all from the system. */}
+        <View style={styles.sheet}>
+          <Text style={[styles.title, { color: theme.ink }]}>
+            Lecture des barres
+          </Text>
+          {MODES.map(({ mode: candidate, label }) => (
+            <Pressable
+              key={candidate}
+              accessibilityRole="radio"
+              accessibilityState={{ selected: candidate === mode }}
+              testID={`mode-row-${candidate}`}
+              onPress={() => {
+                setMode(candidate);
+                void sheet.current?.dismiss();
+              }}
+              style={({ pressed }) => [
+                styles.row,
+                {
+                  backgroundColor:
+                    candidate === mode
+                      ? theme.toggleTrack
+                      : pressed
+                        ? theme.hover
+                        : 'transparent',
+                },
+              ]}
+            >
+              <Text style={[styles.rowLabel, { color: theme.ink }]}>
+                {label}
+              </Text>
+              <Text style={[styles.rowDescription, { color: theme.muted }]}>
+                {modeDescription(candidate)}
+              </Text>
+              {candidate === mode && (
+                <Text style={[styles.rowCheck, { color: theme.ink }]}>✓</Text>
+              )}
+            </Pressable>
+          ))}
+          <Text style={[styles.tip, { color: theme.faint }]}>
+            Appui long : basculer directement.
+          </Text>
+        </View>
+      </TrueSheet>
     </>
   );
 }
 
 const styles = StyleSheet.create({
-  backdrop: {
-    flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.35)',
-    justifyContent: 'flex-end',
+  short: {
+    minWidth: 44,
+    textAlign: 'center',
   },
   sheet: {
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
     paddingHorizontal: 20,
-    paddingTop: 8,
+    paddingTop: 12,
+    paddingBottom: 24,
     gap: 4,
   },
-  grabber: {
-    alignSelf: 'center',
-    width: 36,
-    height: 5,
-    borderRadius: 999,
-    marginTop: 4,
-    marginBottom: 8,
-  },
-  sheetTitle: {
+  title: {
     fontSize: 15,
     fontWeight: '700',
     paddingVertical: 4,
@@ -165,5 +155,10 @@ const styles = StyleSheet.create({
     top: 14,
     fontSize: 16,
     fontWeight: '700',
+  },
+  tip: {
+    fontSize: 13,
+    textAlign: 'center',
+    paddingTop: 10,
   },
 });

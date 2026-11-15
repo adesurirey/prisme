@@ -29,6 +29,18 @@ export interface ModeStorage {
   setItem(key: string, value: string): Promise<void>;
 }
 
+/** The pill's short reading, one per mode — a stable width, the Photos
+ *  « Sélect. » pattern (issue #196): the full names live in the sheet and
+ *  the accessibility label, the pill carries the abbreviations. */
+export function modeShortLabel(mode: ReadingMode): string {
+  return mode === 'coverage' ? 'Couv.' : 'Expo.';
+}
+
+/** The other reading — the long-press's direct flip (issue #196). */
+export function flipMode(mode: ReadingMode): ReadingMode {
+  return mode === 'coverage' ? 'exposure' : 'coverage';
+}
+
 /** Read the persisted mode. A broken storage never breaks the app. */
 export function storedMode(storage: ModeStorage): Promise<ReadingMode> {
   return storage

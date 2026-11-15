@@ -5,10 +5,11 @@ import {
   waitFor,
 } from '@testing-library/react-native';
 import { File } from 'expo-file-system';
-
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import fixtureEdition from '@/data/__fixtures__/edition.json';
 import fixtureOutlets from '@/data/__fixtures__/outlets.json';
 import { editionCacheDirectory } from '@/data/runtime';
+import { ModeProvider } from '@/mode/mode';
 
 import { Home } from './index';
 
@@ -21,6 +22,16 @@ const mockPush = jest.fn();
 
 jest.mock('expo-router', () => ({
   useRouter: () => ({ push: mockPush }),
+}));
+
+// The header's mode pill pulls the native sheet and haptics (issue #196).
+jest.mock('@lodev09/react-native-true-sheet', () => ({
+  TrueSheet: require('@/chrome/true-sheet.mock').MockTrueSheet,
+}));
+
+jest.mock('expo-haptics', () => ({
+  impactAsync: jest.fn(async () => undefined),
+  ImpactFeedbackStyle: { Light: 'light', Medium: 'medium', Heavy: 'heavy' },
 }));
 
 beforeAll(async () => {
@@ -38,15 +49,30 @@ afterAll(() => {
   globalThis.fetch = realFetch;
 });
 
+// The home renders the chrome (issue #196): the mode pill needs the
+// ModeProvider, the bar the safe-area insets.
+function renderHome() {
+  return render(
+    <ModeProvider>
+      <SafeAreaProvider
+        initialMetrics={{
+          insets: { top: 59, bottom: 34, left: 0, right: 0 },
+          frame: { x: 0, y: 0, width: 393, height: 852 },
+        }}
+      >
+        <Home />
+      </SafeAreaProvider>
+    </ModeProvider>,
+  );
+}
+
 describe('Home', () => {
   it('renders the fixture Edition from the disk cache with no network', async () => {
-    await render(<Home />);
+    await renderHome();
 
-    expect(screen.getByText('Prisme')).toBeTruthy();
+    expect(screen.getByText('À la une')).toBeTruthy();
     // The honesty stamp: the cached artifact's own builtAt, in Paris time.
-    expect(
-      await screen.findByText('Mis à jour le 11 novembre à 14h01'),
-    ).toBeTruthy();
+    expect(await screen.findByText('Dernier point à 14h01')).toBeTruthy();
     expect(
       screen.getByText("Le budget 2027 arrive en commission à l'Assemblée"),
     ).toBeTruthy();
@@ -56,20 +82,20 @@ describe('Home', () => {
   });
 
   it('keeps the rendered Edition when pull-to-refresh fails offline', async () => {
-    await render(<Home />);
+    await renderHome();
 
-    await screen.findByText('Mis à jour le 11 novembre à 14h01');
+    await screen.findByText('Dernier point à 14h01');
     fireEvent(screen.getByTestId('stories'), 'refresh');
     await waitFor(() =>
       expect(
         screen.getByText("Le budget 2027 arrive en commission à l'Assemblée"),
       ).toBeTruthy(),
     );
-    expect(screen.getByText('Mis à jour le 11 novembre à 14h01')).toBeTruthy();
+    expect(screen.getByText('Dernier point à 14h01')).toBeTruthy();
   });
 
   it('pushes the story route when a Brûlant row is tapped (#195)', async () => {
-    await render(<Home />);
+    await renderHome();
 
     fireEvent.press(
       screen.getByRole('button', {
