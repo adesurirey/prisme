@@ -126,7 +126,7 @@ export function ModeButton({ style }: { style?: ModeButtonStyle }) {
 
 const styles = StyleSheet.create({
   short: {
-    minWidth: 44,
+    minWidth: 52,
     textAlign: 'center',
   },
   sheet: {

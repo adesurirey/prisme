@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(128, 128, 138, 0.18)',
   },
   text: {
-    fontSize: 13,
+    fontSize: 17,
     fontWeight: '600',
   },
 });

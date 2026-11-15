@@ -1,80 +1,60 @@
 /**
- * The home header (issue #196): a fixed Frosted bar — « À la une » and
- * the « Dernier point » stamp on the left, the mode pill and the inert
- * burger pill on the right — fading out at its bottom edge with a
- * gradient extension of the glass (expo-linear-gradient). The list
- * scrolls under the glass, Photos-style; the bar exists only on home.
- *
- * The stamp is the artifact's own builtAt, Paris time — the same clock
- * the web shows, reworded for the header's single line. The burger
- * renders but stays inert until 5d wires the drawer.
+ * The home chrome (issue #196): the pills — mode, then the inert
+ * burger — pinned top-right in a totally transparent overlay. The
+ * « À la une » title and the « Dernier point » stamp are not chrome:
+ * they live in the scroll content (the home list's header component),
+ * so they sit at the same spot on open and scroll away with it.
  */
 
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useTheme } from '@/theme';
 
-import { Frosted } from './Frosted';
 import { GlassPill } from './GlassPill';
 import { ModeButton } from './ModeButton';
 
-/** The bar's height below the top inset — the list's first-row offset. */
-export const HOME_HEADER_BAR_HEIGHT = 78;
+/** The title block's height below its top padding — title, gap, stamp.
+ *  Shared with the home screen so the pills center on the same block
+ *  the content renders. */
+export const HOME_TITLE_BLOCK_HEIGHT = 56;
 
-/** The « Dernier point » stamp — the rendered artifact's build instant,
- *  in Paris time like every Prisme date (the clock half of the old
- *  « Mis à jour » stamp, reworded for the header line). */
-export function latestPointStamp(builtAt: string): string {
-  const clock = new Intl.DateTimeFormat('fr-FR', {
-    timeZone: 'Europe/Paris',
-    hour: '2-digit',
-    minute: '2-digit',
-  })
-    .format(new Date(builtAt))
-    .replace(':', 'h');
-  return `Dernier point à ${clock}`;
-}
+/** The title block's top padding — where « À la une » starts. */
+export const HOME_TITLE_TOP_PADDING = 6;
 
 function BurgerIcon() {
   const theme = useTheme();
+  // Two bars — the Gemini-style menu mark, quieter than the classic three.
   return (
     <View style={styles.burgerIcon}>
-      <View style={[styles.burgerBar, { backgroundColor: theme.ink }]} />
       <View style={[styles.burgerBar, { backgroundColor: theme.ink }]} />
       <View style={[styles.burgerBar, { backgroundColor: theme.ink }]} />
     </View>
   );
 }
 
-export function HomeHeader({ builtAt }: { builtAt: string }) {
-  const theme = useTheme();
+export function HomeHeader() {
   const insets = useSafeAreaInsets();
 
   return (
-    <View pointerEvents="box-none" style={styles.overlay}>
-      {/* The scroll-edge frost — a backdrop layer behind the bar. */}
-      <Frosted />
-      <View style={[styles.bar, { paddingTop: insets.top + 6 }]}>
-        <View style={styles.titles}>
-          <Text style={[styles.title, { color: theme.ink }]}>À la une</Text>
-          <Text style={[styles.stamp, { color: theme.muted }]}>
-            {latestPointStamp(builtAt)}
-          </Text>
-        </View>
-        <View style={styles.pills}>
-          {/* Same 38pt height as the burger — the Photos pair. */}
-          <ModeButton style={styles.pill} />
-          <GlassPill
-            accessibilityLabel="Menu"
-            testID="burger-button"
-            disabled
-            onPress={() => undefined}
-            style={styles.burger}
-          >
-            <BurgerIcon />
-          </GlassPill>
-        </View>
+    <View
+      pointerEvents="box-none"
+      style={[styles.overlay, { top: insets.top + HOME_TITLE_TOP_PADDING }]}
+    >
+      {/* Same row as the title block, right-aligned — the pills center
+          on the title exactly where the old bar put them. */}
+      <View style={styles.pills}>
+        {/* Same 38pt height as the burger — the Photos pair. */}
+        <ModeButton style={styles.pill} />
+        <GlassPill
+          accessibilityLabel="Menu"
+          testID="burger-button"
+          disabled
+          onPress={() => undefined}
+          style={styles.burger}
+        >
+          <BurgerIcon />
+        </GlassPill>
       </View>
     </View>
   );
@@ -83,48 +63,32 @@ export function HomeHeader({ builtAt }: { builtAt: string }) {
 const styles = StyleSheet.create({
   overlay: {
     position: 'absolute',
-    top: 0,
     left: 0,
     right: 0,
-  },
-  bar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 20,
-    paddingBottom: 10,
-  },
-  titles: {
-    flexShrink: 1,
-  },
-  title: {
-    fontSize: 30,
-    fontWeight: '700',
-    letterSpacing: -0.5,
-  },
-  stamp: {
-    marginTop: 2,
-    fontSize: 13,
-    fontWeight: '600',
+    alignItems: 'flex-end',
   },
   pills: {
     flexDirection: 'row',
     alignItems: 'center',
+    // Centered on the title line only, not the whole title+stamp block —
+    // the Photos pair rides at the title's cap level, not below it.
+    height: 36,
+    paddingRight: 20,
     gap: 10,
   },
   pill: {
-    height: 38,
+    height: 44,
   },
   burger: {
-    width: 38,
-    height: 38,
+    width: 44,
+    height: 44,
     paddingHorizontal: 0,
   },
   burgerIcon: {
-    gap: 4,
+    gap: 6,
   },
   burgerBar: {
-    width: 18,
+    width: 20,
     height: 2,
     borderRadius: 999,
   },

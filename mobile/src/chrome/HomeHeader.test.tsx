@@ -15,37 +15,30 @@ jest.mock('expo-haptics', () => ({
   ImpactFeedbackStyle: { Light: 'light', Medium: 'medium', Heavy: 'heavy' },
 }));
 
-// Deterministic insets — the bar's top padding is the top inset + a lead.
+// Deterministic insets — the pills row hangs below the top inset.
 const INSETS = {
   insets: { top: 59, bottom: 34, left: 0, right: 0 },
   frame: { x: 0, y: 0, width: 393, height: 852 },
 };
 
-function renderHeader(builtAt = '2025-11-11T13:01:00Z') {
+function renderHeader() {
   return render(
     <ModeProvider>
       <SafeAreaProvider initialMetrics={INSETS}>
-        <HomeHeader builtAt={builtAt} />
+        <HomeHeader />
       </SafeAreaProvider>
     </ModeProvider>,
   );
 }
 
 describe('HomeHeader (issue #196)', () => {
-  test('names the page « À la une »', async () => {
+  test('carries no title — « À la une » is list content', async () => {
     await renderHeader();
 
-    expect(screen.getByText('À la une')).toBeTruthy();
+    expect(screen.queryByText('À la une')).toBeNull();
   });
 
-  test('the stamp reads the artifact builtAt in Paris time', async () => {
-    await renderHeader('2025-11-11T13:01:00Z');
-
-    // 13:01 UTC is 14:01 in November's CET.
-    expect(screen.getByText('Dernier point à 14h01')).toBeTruthy();
-  });
-
-  test('the mode pill sits in the bar', async () => {
+  test('the mode pill sits in the overlay', async () => {
     await renderHeader();
 
     expect(screen.getByTestId('mode-button')).toBeTruthy();

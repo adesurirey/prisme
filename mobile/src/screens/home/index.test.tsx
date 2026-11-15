@@ -72,7 +72,7 @@ describe('Home', () => {
 
     expect(screen.getByText('À la une')).toBeTruthy();
     // The honesty stamp: the cached artifact's own builtAt, in Paris time.
-    expect(await screen.findByText('Dernier point à 14h01')).toBeTruthy();
+    expect(await screen.findByText('Dernier point à 14h')).toBeTruthy();
     expect(
       screen.getByText("Le budget 2027 arrive en commission à l'Assemblée"),
     ).toBeTruthy();
@@ -84,14 +84,14 @@ describe('Home', () => {
   it('keeps the rendered Edition when pull-to-refresh fails offline', async () => {
     await renderHome();
 
-    await screen.findByText('Dernier point à 14h01');
+    await screen.findByText('Dernier point à 14h');
     fireEvent(screen.getByTestId('stories'), 'refresh');
     await waitFor(() =>
       expect(
         screen.getByText("Le budget 2027 arrive en commission à l'Assemblée"),
       ).toBeTruthy(),
     );
-    expect(screen.getByText('Dernier point à 14h01')).toBeTruthy();
+    expect(screen.getByText('Dernier point à 14h')).toBeTruthy();
   });
 
   it('pushes the story route when a Brûlant row is tapped (#195)', async () => {

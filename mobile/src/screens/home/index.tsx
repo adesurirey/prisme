@@ -12,15 +12,35 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { HOME_HEADER_BAR_HEIGHT, HomeHeader } from '@/chrome/HomeHeader';
+import {
+  HOME_TITLE_BLOCK_HEIGHT,
+  HOME_TITLE_TOP_PADDING,
+  HomeHeader,
+} from '@/chrome/HomeHeader';
 import { useEdition } from '@/data/use-edition';
 import { useTheme } from '@/theme';
 
 // The data-layer proof surface (issue #179): the Edition client drives the
 // home — disk cache rendered instantly, revalidated in the background,
-// pull-to-refresh forcing a round. The fixed header (issue #196) carries
-// « À la une », the stamp and the pills; rows are raw title buttons
-// pushing the story route (#195); cards land in #181.
+// pull-to-refresh forcing a round. The title and stamp are list content
+// (issue #196): they render at the same spot on open and scroll away with
+// the stories; only the pills float. Rows are raw title buttons pushing
+// the story route (#195); cards land in #181.
+
+/** The « Dernier point » stamp — the rendered artifact's build instant,
+ *  hour only, in Paris time like every Prisme date: the point is hourly,
+ *  the minutes are noise. */
+export function latestPointStamp(builtAt: string): string {
+  const clock = new Intl.DateTimeFormat('fr-FR', {
+    timeZone: 'Europe/Paris',
+    hour: '2-digit',
+    minute: '2-digit',
+  })
+    .format(new Date(builtAt))
+    .replace(':', 'h')
+    .replace(/h\d+$/, 'h');
+  return `Dernier point à ${clock}`;
+}
 
 export function Home() {
   const { phase, refreshing, refresh } = useEdition();
@@ -62,11 +82,18 @@ export function Home() {
         refreshing={refreshing}
         onRefresh={refresh}
         contentContainerStyle={{
-          // The first row's padding tucks into the frost's melt zone, so
-          // scrolling smokes the rows under the bar without ever hiding
-          // a readable line at rest.
-          paddingTop: insets.top + HOME_HEADER_BAR_HEIGHT - 16,
+          // The title block sits where the old bar had it; it is list
+          // content and scrolls away with the stories (issue #196).
+          paddingTop: insets.top + HOME_TITLE_TOP_PADDING,
         }}
+        ListHeaderComponent={
+          <View style={styles.titleBlock}>
+            <Text style={[styles.title, { color: theme.ink }]}>À la une</Text>
+            <Text style={[styles.stamp, { color: theme.muted }]}>
+              {latestPointStamp(builtAt)}
+            </Text>
+          </View>
+        }
         renderItem={({ item }) => (
           <Pressable
             accessibilityRole="button"
@@ -78,7 +105,8 @@ export function Home() {
           </Pressable>
         )}
       />
-      <HomeHeader builtAt={builtAt} />
+      {/* The pills only — a totally transparent overlay (issue #196). */}
+      <HomeHeader />
     </View>
   );
 }
@@ -93,6 +121,21 @@ const styles = StyleSheet.create({
   },
   gap: {
     gap: 12,
+  },
+  titleBlock: {
+    height: HOME_TITLE_BLOCK_HEIGHT,
+    marginBottom: 12,
+    paddingHorizontal: 20,
+  },
+  title: {
+    fontSize: 30,
+    fontWeight: '700',
+    letterSpacing: -0.5,
+  },
+  stamp: {
+    marginTop: 2,
+    fontSize: 16,
+    fontWeight: '600',
   },
   story: {
     paddingHorizontal: 20,
