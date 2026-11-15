@@ -6,6 +6,17 @@
   "storyDay": "2026-11-15",
   "articles": [
     {
+      "id": "a4de08a4d054",
+      "outletId": "cnews",
+      "headline": "Ardèche : un homme de 22 ans mis en examen pour le meurtre d'un commerçant",
+      "url": "https://www.cnews.fr/faits-divers/2026-11-15/ardeche-un-homme-de-22-ans-mis-en-examen-pour-le-meurtre-dun-commercant",
+      "publishedAt": "2026-11-15T22:08:00.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/adobestock_129062045_1_6afa280657975.jpeg?h=1483d620&itok=6UKkfy-Y",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "0f07125ade88",
       "outletId": "20-minutes",
       "headline": "Ardèche : Un homme de 22 ans mis en examen et écroué après le meurtre d'un commerçant",
@@ -75,20 +86,10 @@
     }
   ],
   "topicId": "e2ca918b88d3",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794693600000,
-      "end": 1794697200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794697200000,
       "end": 1794700800000,
@@ -318,25 +319,39 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794780000000,
+      "end": 1794783600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
+    "gauche": [
+      "Un homme de 22 ans a été mis en examen et placé en détention provisoire à la suite de la mort d'un commerçant de 55 ans.",
+      "Le drame s'est déroulé à Largentière, en Ardèche, après que la victime a pris en chasse l'auteur d'un vol de téléphone."
+    ],
     "centre": [
-      "Un suspect de 22 ans a été mis en examen et placé en détention provisoire à la suite de la mort d'un artisan de 55 ans à Largentière, en Ardèche.",
-      "La victime a été mortellement poignardée vendredi après-midi alors qu'elle tentait de rattraper l'auteur d'un vol de téléphone à l'arraché.",
-      "L'agresseur présumé a pris la fuite avant d'être rapidement interpellé, identifié et placé en garde à vue."
+      "Un suspect de 22 ans a été mis en examen et écroué pour le meurtre d'un artisan de 55 ans à Largentière.",
+      "BFMTV précise que la victime s'appelait Christophe B. et a été poignardée à mort en pleine rue après un vol à l'arraché."
     ],
     "droite": [
-      "Un homme de 22 ans a été mis en examen et écroué pour le meurtre d'un commerçant de 55 ans survenu à Largentière, en Ardèche.",
-      "Le drame s'est noué vendredi lorsque la victime a pris en chasse le voleur du téléphone de sa sœur et a été poignardée à mort.",
-      "La procureure d'Avignon a précisé que le mis en examen est poursuivi des chefs d'homicide volontaire et de vol avec violences."
+      "Un homme de 22 ans a été mis en examen et écroué pour le meurtre d'un commerçant de 55 ans en Ardèche.",
+      "La procureure d'Avignon a indiqué que la victime a été tuée à l'arme blanche en pourchassant le voleur du téléphone de sa sœur.",
+      "Europe 1 précise que les chefs retenus sont homicide volontaire et vol avec violences."
     ]
   },
   "differences": [
-    "Le camp centre privilégie une narration factuelle en insistant sur le profil d'artisan de la victime et le déroulement de l'agression en pleine rue.",
-    "Le camp droite met en avant les qualifications juridiques précises communiquées par la justice et le lien familial impliqué dans le vol initial du téléphone."
+    "Les médias de gauche adoptent une formulation sobre centrée sur les faits judiciaires et l'âge du suspect.",
+    "Les médias du centre mettent en avant l'identité professionnelle de la victime, le qualifiant notamment d'artisan poignardé en pleine rue.",
+    "Les médias de droite insistent sur le déroulement précis des faits en reprenant les communiqués de la procureure d'Avignon et les qualifications juridiques."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-15T21:01:24.742Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-15T23:01:29.559Z"
 }
