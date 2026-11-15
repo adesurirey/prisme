@@ -1,10 +1,32 @@
 {
   "id": "75bfadb45515",
   "slug": "un-homme-de-19-ans-tue-par-balles-dans-un-parking-a-toulouse",
-  "title": "Un homme de 19 ans tué par balles dans un parking à Toulouse",
+  "title": "Un homme de 19 ans tué par balles sur le parking d'un bowling à Toulouse",
   "createdAt": "2026-11-15T11:01:24.775Z",
   "storyDay": "2026-11-15",
   "articles": [
+    {
+      "id": "acf69681cb7a",
+      "outletId": "cnews",
+      "headline": "Toulouse : un homme de 19 ans connu pour trafic de stupéfiants tué par balles sur le parking d'un bowling",
+      "url": "https://www.cnews.fr/faits-divers/2026-11-15/toulouse-un-homme-de-19-ans-connu-pour-trafic-de-stupefiants-tue-par-balles",
+      "publishedAt": "2026-11-15T11:36:45.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_par8075277-taille1200_6af9952455c49.jpg?h=45717a93&itok=RAMYU7L0",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "4ca2aa0834ee",
+      "outletId": "bfmtv",
+      "headline": "\"Narchomicide\" à Toulouse: un homme de 19 ans, connu pour trafic de stupéfiants, meurt après avoir été blessé par balles",
+      "url": "https://www.bfmtv.com/police-justice/narchomicide-a-toulouse-un-homme-de-19-ans-connu-pour-trafic-de-stupefiants-meurt-apres-avoir-ete-blesse-par-balles_AD-202611150211.html",
+      "publishedAt": "2026-11-15T11:36:41.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Q6gsysXap1LiTjH5A3uMnOybaMw=/0x106:2048x1258/800x0/images/Un-vehicule-de-la-police-nationale-image-d-illustration-2115589.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "e92ad23a887e",
       "outletId": "le-parisien",
@@ -15,6 +37,18 @@
       "datedAtCollection": true,
       "kind": "news",
       "section": "misc"
+    },
+    {
+      "id": "2c1d6c5a3b95",
+      "outletId": "le-figaro",
+      "headline": "Toulouse : un homme de 19 ans connu pour trafic de stupéfiants tué par balles",
+      "url": "https://www.lefigaro.fr/faits-divers/toulouse-un-homme-de-19-ans-connu-pour-trafic-de-stupefiants-tue-par-balles-20261115",
+      "publishedAt": "2026-11-15T11:00:46.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1685_crop/2026/11/15/c1d5ab6f84a8409f1bf7560dc256c6db0a4641c1d82188c5663b3fef80c1ef65.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
     },
     {
       "id": "0ba53ff8445c",
@@ -40,7 +74,7 @@
     }
   ],
   "topicId": "75bfadb45515",
-  "titledArticleCount": 3,
+  "titledArticleCount": 6,
   "section": "misc",
   "everInEdition": true,
   "activity": [
@@ -279,10 +313,32 @@
       "end": 1794744000000,
       "counts": {
         "gauche": 0,
-        "centre": 1,
-        "droite": 0
+        "centre": 2,
+        "droite": 2
       },
-      "total": 1
+      "total": 4
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Un jeune homme âgé de dix-neuf ans a succombé à ses blessures par projectile dans le secteur de Montaudran à Toulouse.",
+      "Le ministère public a confirmé qu'une procédure judiciaire pour homicide volontaire a été initiée et que la victime figurait dans les fichiers pour des affaires de stupéfiants."
+    ],
+    "centre": [
+      "Dans la nuit du samedi au dimanche à Toulouse, un individu de dix-neuf ans a été abattu par armes à feu sur le terrain de stationnement d'un bowling.",
+      "Le parquet a souligné que le défunt présentait des antécédents judiciaires liés aux stupéfiants, tandis que TF1 Info précise qu'il s'agit du cinquième «narchomicide» recensé dans la commune cette année et que deux suspects demeurent introuvables."
+    ],
+    "droite": [
+      "Un individu de dix-neuf ans a été mortellement blessé par balles alors qu'il se trouvait à l'arrière d'un véhicule stationné devant un établissement de loisirs toulousain.",
+      "Les investigations ont révélé que la victime était connue des services de police pour trafic de stupéfiants, tandis que deux agresseurs à pied ont réussi à s'échapper en voiture."
+    ]
+  },
+  "differences": [
+    "La gauche privilégie un traitement factuel centré sur la qualification pénale de l'homicide et la localisation précise des faits dans le quartier toulousain.",
+    "Le centre met en avant la notion de «narchomicide» et contextualise l'événement en le rattachant aux statistiques criminelles locales de l'année en cours.",
+    "La droite adopte une approche sécuritaire en insistant sur le profil judiciaire de la victime et le mode opératoire des fuyards."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-15T12:01:21.312Z"
 }

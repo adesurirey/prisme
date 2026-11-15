@@ -6,6 +6,17 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "d6ccd603d3bb",
+      "outletId": "tf1-info",
+      "headline": "Hongrie : plus de 17 millions d'euros découverts, un ancien ministre d'Orban dans le viseur des enquêteurs anticorruption",
+      "url": "https://www.tf1info.fr/international/video-tf1-hongrie-plus-de-17-millions-d-euros-decouverts-un-ancien-ministre-d-orban-dans-le-viseur-des-enqueteurs-anticorruption-2475900.html",
+      "publishedAt": "2026-11-15T11:11:53.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/960/540/pres-de-18-millions-d-euros-decouverts-en-hongrie-nov-2026-813e54-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "71684ce4f4a0",
       "outletId": "france-24",
       "headline": "Hongrie : 17,7 millions d'euros saisis dans une enquête visant un ancien ministre",
@@ -66,16 +77,6 @@
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794654000000,
-      "end": 1794657600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794657600000,
       "end": 1794661200000,
@@ -305,6 +306,41 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794740400000,
+      "end": 1794744000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "L'agence anticorruption hongroise a saisi 17 millions d'euros en liquide, en partie enterrés dans une forêt.",
+      "L'opération cible un ancien ministre lié à l'élite déchue de Viktor Orbán."
+    ],
+    "centre": [
+      "L'agence anticorruption hongroise a saisi 17,7 millions d'euros en liquide lors d'une opération menée à Budapest et dans trois comtés.",
+      "L'enquête vise Miklos Sesztak, ancien ministre du Développement national sous Viktor Orban, soupçonné de pots-de-vin sur l'achat de bus d'occasion par une entreprise publique.",
+      "Une partie de l'argent liquide découvert était dissimulée et enterrée dans des forêts."
+    ],
+    "droite": [
+      "Plus de 17 millions d'euros en liquide ont été découverts et saisis par l'agence anticorruption en Hongrie.",
+      "L'opération, baptisée « Opération purgatoire », a nécessité 12 agents, 5 compteuses de billets et 8 heures de travail.",
+      "La cible est un ancien ministre de Viktor Orbán soupçonné de corruption.",
+      "Le Premier ministre Péter Magyar a fait de la lutte anticorruption sa priorité et s'est félicité de cette saisie record."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la chute de l'ancienne élite d'Orbán et la victoire de la nouvelle agence anticorruption.",
+    "Le centre détaille les accusations précises de pots-de-vin concernant l'achat de bus d'occasion par une entreprise publique.",
+    "La droite insiste sur l'ampleur logistique de la saisie, l'intitulé de l'opération et la communication politique du nouveau Premier ministre Péter Magyar."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-15T12:01:21.312Z"
 }

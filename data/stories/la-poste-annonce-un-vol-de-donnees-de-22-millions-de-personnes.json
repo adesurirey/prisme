@@ -6,6 +6,18 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "877b0027e12c",
+      "outletId": "le-figaro",
+      "headline": "Cyberattaque chez Maileva, filiale de La Poste : ce que l’on sait du vol des données personnelles de 22 millions de personnes",
+      "url": "https://www.lefigaro.fr/secteur/high-tech/cyberattaque-chez-maileva-filiale-de-la-poste-ce-que-l-on-sait-du-vol-des-donnees-personnelles-d-un-tiers-de-la-population-francaise-20261115",
+      "publishedAt": "2026-11-15T11:09:44.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/2996x1686_crop/2026/11/15/b614874a5f03c2c2070fb7bfd6b3ca1251089829860d55f93d7648d2d7a452e4.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "eb8d8a0171b6",
       "outletId": "le-point",
       "headline": "Cyberattaque chez Maileva : trois questions après la fuite géante de données de la filiale de La Poste",
@@ -179,7 +191,7 @@
       "url": "https://www.lefigaro.fr/secteur/high-tech/victime-d-une-cyberattaque-maileva-une-filiale-de-la-poste-annonce-un-vol-de-donnees-concernant-22-millions-de-personnes-20261114",
       "publishedAt": "2026-11-14T19:31:33.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/14/b114c2e6f3d49c7144b3f2b4cb01b0c6912ba631627b3dd116059252c7f72534.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -234,16 +246,6 @@
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794654000000,
-      "end": 1794657600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794657600000,
       "end": 1794661200000,
@@ -467,6 +469,16 @@
     {
       "start": 1794736800000,
       "end": 1794740400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
+    },
+    {
+      "start": 1794740400000,
+      "end": 1794744000000,
       "counts": {
         "gauche": 0,
         "centre": 0,
