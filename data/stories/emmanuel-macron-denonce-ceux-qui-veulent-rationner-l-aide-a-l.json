@@ -6,6 +6,28 @@
   "storyDay": "2026-11-14",
   "articles": [
     {
+      "id": "c621e9c9e3dd",
+      "outletId": "franceinfo",
+      "headline": "Le président veut \"maintenir l'Ukraine en situation de donner des coups\", alors que \"les Américains s'occupent de l'enfoncer\", affirme l'entourage d'Emmanuel Macron",
+      "url": "https://www.franceinfo.fr/politique/emmanuel-macron/le-president-veut-maintenir-l-ukraine-en-situation-de-donner-des-coups-alors-que-les-americains-s-occupent-de-l-enfoncer-affirme-l-entourage-d-emmanuel-macron_8283194.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-15T06:37:50.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/vF9yHXcI9dFSryemKfVFM8SzGcQ/0x456:5351x3466/432x243/filters:format(jpg)/2026/11/15/6af95094b19c7363664118.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "19387825b44b",
+      "outletId": "bfmtv",
+      "headline": "\"Elle joue contre la France\": Emmanuel Macron estime que \"si Marine Le Pen décide de tout couper à l’Ukraine, elle nous isolera en Europe\"",
+      "url": "https://www.bfmtv.com/politique/elysee/elle-joue-contre-la-france-emmanuel-macron-estime-que-si-marine-le-pen-decide-de-tout-couper-a-l-ukraine-elle-nous-isolera-en-europe_AV-202611150092.html",
+      "publishedAt": "2026-11-15T06:14:44.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/YXKSGX_4KcH1yW6zNF0nG0b0QQU=/0x39:768x471/800x0/images/Emmanuel-Macron-devant-l-assemblee-generale-des-Nations-unies-a-New-York-le-22-septembre-2026-2352729.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "943cfc57e523",
       "outletId": "bfmtv",
       "headline": "Emmanuel Macron estime que \"ceux qui veulent rationner\" l'aide à Kiev veulent \"obliger\" les Ukrainiens \"à une paix injuste\"",
@@ -114,7 +136,7 @@
       "url": "https://www.lefigaro.fr/international/emmanuel-macron-affirme-que-ceux-qui-veulent-rationner-l-aide-a-l-ukraine-veulent-l-obliger-a-une-paix-injuste-20261114",
       "publishedAt": "2026-11-14T19:07:58.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/14/d7e4980e6d65a20edbbc61f6a1eea17ca4a0f2f80994ea32b081498ce5ea7acf.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -132,20 +154,10 @@
     }
   ],
   "topicId": "d8310916452e",
-  "titledArticleCount": 10,
+  "titledArticleCount": 13,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794636000000,
-      "end": 1794639600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794639600000,
       "end": 1794643200000,
@@ -375,31 +387,41 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794722400000,
+      "end": 1794726000000,
+      "counts": {
+        "gauche": 1,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "Emmanuel Macron a publié une mise en garde sur le réseau social X concernant la diminution du soutien militaire et financier à l'Ukraine.",
-      "Le chef de l'État cible directement la position de Marine Le Pen qui envisage de cesser l'aide financière à Kiev en cas de victoire.",
-      "Les médias de gauche soulignent que cette réduction des moyens exposerait l'Europe à une vulnérabilité durable selon l'exécutif."
+      "Le chef de l'État a publié une longue tribune sur sa vision de la guerre en Ukraine, mettant en garde contre toute réduction du soutien à Kiev.",
+      "Le président cible en particulier la position de Marine Le Pen qui envisage de cesser l'aide financière à l'Ukraine au bout de six mois si elle accède au pouvoir.",
+      "La presse de gauche rapporte la crainte d'une vulnérabilisation durable de l'Europe face à la Russie si les alliés occidentaux optent pour un rationnement des moyens ukrainiens."
     ],
     "centre": [
-      "Le président de la République a déclaré dans un message solennel que rationner l'aide à Kiev équivaut à imposer une paix injuste.",
-      "Emmanuel Macron estime que cette restriction budgétaire constitue la « recette pour la guerre d'après » pour la sécurité continentale.",
-      "Plusieurs titres rapportent que cette prise de position intervient au sortir du 9e sommet de la Communauté politique européenne à Dublin."
+      "Dans un message solennel publié sur le réseau social X, Emmanuel Macron affirme que rationner l'aide à l'Ukraine équivaut à la préparer à une « paix injuste ».",
+      "Le locataire de l'Élysée prévient que diminuer l'assistance militaire et financière à Kiev constitue « la recette pour la guerre d'après ».",
+      "L'exécutif pointe du doigt le projet de la candidate du Rassemblement national, qualifiant sa proposition de couper les vivres à l'Ukraine de décision qui isolera la France sur la scène européenne."
     ],
     "droite": [
-      "Emmanuel Macron a affirmé dans une publication sur X que les partisans d'un rationnement de l'aide à Kiev favorisent une paix injuste.",
-      "Le président français insiste sur le fait que les enjeux du conflit ukrainien concernent directement la sécurité de la France et de l'Europe.",
-      "Le Figaro et CNews soulignent l'appel du chef de l'État demandant aux Européens d'exposer clairement aux Russes leur vision de l'après-guerre."
+      "Au sortir du neuvième sommet de la Communauté politique européenne à Dublin, Emmanuel Macron a mis en garde ses concitoyens contre le risque d'un affaiblissement de Kiev.",
+      "Le président de la République insiste sur le fait que ce qui se joue actuellement sur le front ukrainien concerne directement la sécurité nationale de la France.",
+      "La droite met en avant l'appel du chef de l'État invitant les Européens à signifier clairement aux autorités russes leur vision de l'architecture de sécurité pour l'après-guerre."
     ]
   },
   "differences": [
-    "La gauche ancre principalement l'événement dans le débat de politique intérieure en ciblant explicitement la proposition de Marine Le Pen.",
-    "Le centre privilégie l'analyse géopolitique en reprenant les formules solennelles du chef de l'État sur la sécurité européenne.",
-    "La droite met en avant la dimension stratégique et diplomatique du message présidentiel concernant la vision européenne de l'après-guerre face à la Russie."
+    "La gauche contextualise la sortie présidentielle à travers le prisme de la critique frontale visant le programme diplomatique de Marine Le Pen et insiste sur les risques de déstabilisation institutionnelle européenne.",
+    "Le centre accorde une attention quasi exclusive aux formulations chocs de la publication présidentielle sur X, relayant l'intégralité des avertissements du chef de l'État sur la sécurité continentale.",
+    "La droite privilégie l'analyse géopolitique de la séquence en rattachant les propos présidentiels aux conclusions diplomatiques du sommet de Dublin et à la relation stratégique avec Moscou."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 10,
-  "summarizedAt": "2026-11-14T22:01:21.031Z"
+  "summarizedArticleCount": 13,
+  "summarizedAt": "2026-11-15T07:01:28.140Z"
 }

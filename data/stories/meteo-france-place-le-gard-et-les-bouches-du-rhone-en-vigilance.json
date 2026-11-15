@@ -12,7 +12,7 @@
       "url": "https://www.ouest-france.fr/meteo/fin-de-la-vigilance-orange-dans-le-sud-est-apres-de-fortes-pluies-autour-de-montpellier-1b25e14e-e0b6-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-15T05:40:57.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTZlZTMxZWVhOGQwZTZlMzlhMjhlM2IxNTZkMjFhNWY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=4bc87f50fb7ef5cc92bc0ef8db39f7184cc96e9a787c52fa683d61f0a81c0e14",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -24,6 +24,17 @@
       "url": "https://www.bfmtv.com/meteo/inondations/video-herault-il-est-tombe-l-equivalent-de-deux-mois-de-pluie-en-quelques-heures-seulement_VN-202611150077.html",
       "publishedAt": "2026-11-15T05:24:01.000Z",
       "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Yv5q3YBcIkZs5UrLSadbWjI5_ag=/0x0:1280x720/800x0/images/Herault-il-est-tombe-l-equivalent-de-deux-mois-de-pluie-en-quelques-heures-seulement-2384192.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "5ad55166663b",
+      "outletId": "huffpost",
+      "headline": "Météo : la vigilance orange pour pluie-inondation signe le retour des perturbations en France (et ce n’est que le début)",
+      "url": "https://www.huffingtonpost.fr/france/article/avec-ces-vigilances-les-perturbations-sont-de-retour-en-france-et-ce-n-est-que-le-debut_357788.html",
+      "publishedAt": "2026-11-14T16:02:01.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/11/14/304/0/5280/2970/0/0/60/0/f3eb8e0_upload-1-oyb0a4qxoiag-pexels-matreding-12384900.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "science"
@@ -240,11 +251,11 @@
       "start": 1794672000000,
       "end": 1794675600000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 0,
         "droite": 0
       },
-      "total": 0
+      "total": 1
     },
     {
       "start": 1794675600000,
