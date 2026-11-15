@@ -1,10 +1,22 @@
 {
   "id": "69d4119f7b96",
   "slug": "le-camp-gouvernemental-masse-des-renforts-autour-d-aden-menacee",
-  "title": "Le camp gouvernemental masse des renforts autour d'Aden menacée par les Houthis",
+  "title": "Le camp gouvernemental masse des renforts autour d'Aden, menacée par les Houthis",
   "createdAt": "2026-11-15T20:01:25.160Z",
   "storyDay": "2026-11-15",
   "articles": [
+    {
+      "id": "0831b451bfff",
+      "outletId": "le-monde",
+      "headline": "Au Yémen, le camp gouvernemental redéploie des renforts autour d’Aden, menacée par les houthistes",
+      "url": "https://www.lemonde.fr/international/article/2026/11/15/au-yemen-le-camp-gouvernemental-redeploie-des-renforts-autour-d-aden-menacee-par-les-houthistes_6811027_3211.html",
+      "publishedAt": "2026-11-15T20:16:11.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/13/115/0/3672/1836/644/322/60/0/00ebbb2_ftp-1-12z7ngo9pnue-2026-11-13t161552z-916091977-rc20noa79hbc-rtrmadp-3-ian-crisis-yemen-aden.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
     {
       "id": "b32d1f5043a8",
       "outletId": "liberation",
@@ -39,20 +51,10 @@
     }
   ],
   "topicId": "69d4119f7b96",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794686400000,
-      "end": 1794690000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794690000000,
       "end": 1794693600000,
@@ -282,6 +284,34 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794772800000,
+      "end": 1794776400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Les forces loyales au pouvoir en exil renforcent le dispositif militaire protégeant Aden face à l'avancée des combattants houthistes.",
+      "Le redéploiement militaire gouvernemental depuis Bab Al-Mandab risque de consolider l'emprise rebelle sur ce détroit maritime stratégique.",
+      "L'exécutif internationalement reconnu s'est établi dans la capitale provisoire après la prise de Sanaa et du nord du territoire en 2014."
+    ],
+    "centre": [
+      "L'armée yéménite positionne des troupes additionnelles dans les environs d'Aden pour parer la progression des Houthis.",
+      "Les rebelles chiites se trouvent à environ soixante kilomètres de la ville portuaire suite à une percée dans le gouvernorat de Lahj."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur les répercussions géostratégiques de ce mouvement de troupes pour le contrôle du détroit de Bab Al-Mandab.",
+    "Le centre privilégie la dimension tactique et géographique du conflit en détaillant la distance séparant les belligérants de la capitale provisoire."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-15T21:01:24.742Z"
 }

@@ -6,6 +6,17 @@
   "storyDay": "2026-11-15",
   "articles": [
     {
+      "id": "04f62306d9bc",
+      "outletId": "cnews",
+      "headline": "Football : à 46 ans et dix ans après son dernier match, Ronaldinho a rejoué en troisième division italienne",
+      "url": "https://www.cnews.fr/sport/2026-11-15/football-46-ans-et-dix-ans-apres-son-dernier-match-ronaldinho-rejoue-en-troisieme",
+      "publishedAt": "2026-11-15T20:39:00.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-15t174616z_1883827097_up1embf1dd3mz_rtrmadp_3_soccer-italy-rav-for-taille1200_6af9fbf9859f5.jpg?h=7933c8cc&itok=sET8y8-J",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "a44630c9665f",
       "outletId": "huffpost",
       "headline": "11 ans après sa retraite, Ronaldinho rejoue en match professionnel et ça lui a donné une sacrée idée",
@@ -73,20 +84,10 @@
     }
   ],
   "topicId": "da05029239ec",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "sport",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794686400000,
-      "end": 1794690000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794690000000,
       "end": 1794693600000,
@@ -316,31 +317,38 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794772800000,
+      "end": 1794776400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le Brésilien Ronaldinho est sorti d'une retraite sportive de onze ans pour disputer 46 minutes en match officiel avec le club de Ravenne en troisième division italienne.",
-      "L'ancien Ballon d'or 2005 et champion du monde 2002 a déclaré vouloir vivre un moment spécial à travers ce retour sur les terrains.",
-      "La presse de ce camp qualifie cet événement de démarche à la fois marketing et sportive pour une formation qui vise la Serie A."
+      "Le Brésilien Ronaldinho est sorti d'une retraite de onze ans pour disputer une rencontre officielle avec le club italien de Ravenne en troisième division.",
+      "Le Ballon d'or 2005 a joué quarante-cinq minutes lors de ce match, une expérience qui lui a permis de renouer avec le terrain et d'évoquer l'éventualité d'un retour."
     ],
     "centre": [
-      "Ronaldinho a rechaussé les crampons à 46 ans sous les couleurs de Ravenne, un club engagé en troisième série italienne.",
-      "Il n'avait plus disputé de rencontre officielle depuis septembre 2015, date marquant la fin de sa carrière professionnelle.",
-      "Le joueur n'exclut pas totalement de poursuivre l'aventure pour le reste de la saison avec cette équipe ambitieuse."
+      "Onze ans après avoir arrêté sa carrière, Ronaldinho a refoulé les terrains lors d'un match officiel sous les couleurs de Ravenne en Serie C.",
+      "L'ancien international brésilien a disputé une mi-temps de cette rencontre de troisième division italienne et n'écarte pas l'idée de rejouer."
     ],
     "droite": [
-      "La légende brésilienne a effectué un retour remarqué en disputant 45 minutes de jeu face à Forli en troisième division italienne.",
-      "Europe 1 évoque un joli coup de communication tout en soulignant le plaisir pris par le joueur sur la pelouse.",
-      "La question de savoir s'il s'agit d'une simple pige ou d'un engagement pour toute la saison reste ouverte."
+      "À l'âge de 46 ans, Ronaldinho a fait son retour à la compétition en disputant la première mi-temps d'un match de troisième division italienne avec Ravenne.",
+      "La rencontre s'est déroulée devant 6 800 spectateurs dans un stade doté d'une tribune provisoire baptisée R10, combinant opération de communication et plaisir personnel pour l'ancienne star."
     ]
   },
   "differences": [
-    "Le camp gauche insiste sur la dimension hybride de l'événement, qualifié d'opération autant marketing que sportive pour un club visant l'élite.",
-    "Le camp centre livre un compte-rendu factuel axé sur la chronologie de sa retraite rompue et ses perspectives futures avec le club de Ravenne.",
-    "Le camp droite adopte un ton plus narratif en qualifiant l'événement de coup de communication tout en s'interrogeant sur la durée de cette pige."
+    "La gauche insiste principalement sur la durée de la retraite de l'ancien joueur et sur ses interrogations concernant la suite à donner à cette pige.",
+    "Le centre livre un compte-rendu factuel axé sur la durée exacte de son temps de jeu et sur son avenir sportif incertain avec le club.",
+    "La droite met en avant les aspects logistiques et marketing de l'événement, notamment l'affluence au stade et la tribune temporaire R10."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-15T19:01:31.170Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-15T21:01:24.742Z"
 }

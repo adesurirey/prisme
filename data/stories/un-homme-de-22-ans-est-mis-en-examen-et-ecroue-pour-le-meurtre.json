@@ -1,10 +1,32 @@
 {
   "id": "59eec0d53d66",
   "slug": "un-homme-de-22-ans-est-mis-en-examen-et-ecroue-pour-le-meurtre",
-  "title": "Un homme de 22 ans est mis en examen et écroué pour le meurtre d'un commerçant en Ardèche",
+  "title": "Un artisan tué en Ardèche : un homme de 22 ans mis en examen et écroué",
   "createdAt": "2026-11-15T20:01:25.160Z",
   "storyDay": "2026-11-15",
   "articles": [
+    {
+      "id": "25f5b5bcb35c",
+      "outletId": "le-parisien",
+      "headline": "Commerçant tué en Ardèche après un vol à l’arraché : un homme de 22 ans mis en examen et écroué",
+      "url": "https://www.leparisien.fr/faits-divers/commercant-tue-en-ardeche-apres-un-vol-a-larrache-un-homme-de-22-ans-mis-en-examen-et-ecroue-15-11-2026-RZ5RN3IAHRAKTAIK4BQBWF2CYA.php",
+      "publishedAt": "2026-11-15T21:01:24.742Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "0c5b90776cca",
+      "outletId": "tf1-info",
+      "headline": "Tué pour un téléphone portable : un homme de 22 ans mis en examen pour le meurtre d'un commerçant en Ardèche",
+      "url": "https://www.tf1info.fr/justice-faits-divers/tue-pour-un-telephone-portable-un-homme-de-22-ans-mis-en-examen-pour-le-meurtre-d-un-commercant-en-ardeche-2475991.html",
+      "publishedAt": "2026-11-15T20:44:52.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/680/illus-gendarmes-gendarmerie-794387-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "da5ac1c5443b",
       "outletId": "le-figaro",
@@ -41,30 +63,10 @@
     }
   ],
   "topicId": "e2ca918b88d3",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794686400000,
-      "end": 1794690000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794690000000,
-      "end": 1794693600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794693600000,
       "end": 1794697200000,
@@ -284,6 +286,45 @@
         "droite": 2
       },
       "total": 3
+    },
+    {
+      "start": 1794772800000,
+      "end": 1794776400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
+    },
+    {
+      "start": 1794776400000,
+      "end": 1794780000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Un suspect de 22 ans a été mis en examen et placé en détention provisoire à la suite de la mort d'un artisan de 55 ans à Largentière, en Ardèche.",
+      "La victime a été mortellement poignardée vendredi après-midi alors qu'elle tentait de rattraper l'auteur d'un vol de téléphone à l'arraché.",
+      "L'agresseur présumé a pris la fuite avant d'être rapidement interpellé, identifié et placé en garde à vue."
+    ],
+    "droite": [
+      "Un homme de 22 ans a été mis en examen et écroué pour le meurtre d'un commerçant de 55 ans survenu à Largentière, en Ardèche.",
+      "Le drame s'est noué vendredi lorsque la victime a pris en chasse le voleur du téléphone de sa sœur et a été poignardée à mort.",
+      "La procureure d'Avignon a précisé que le mis en examen est poursuivi des chefs d'homicide volontaire et de vol avec violences."
+    ]
+  },
+  "differences": [
+    "Le camp centre privilégie une narration factuelle en insistant sur le profil d'artisan de la victime et le déroulement de l'agression en pleine rue.",
+    "Le camp droite met en avant les qualifications juridiques précises communiquées par la justice et le lien familial impliqué dans le vol initial du téléphone."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-15T21:01:24.742Z"
 }
