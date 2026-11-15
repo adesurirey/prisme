@@ -1,10 +1,44 @@
 {
   "id": "374d37cb972d",
   "slug": "soixante-dix-mille-forces-de-l-ordre-sont-mobilisees-en-france",
-  "title": "Entre 106.000 et 200.000 manifestants défilent en France pour l'acte V contre la vie chère",
+  "title": "Entre 106 000 et 200 000 manifestants défilent en France pour l'acte V contre la vie chère",
   "createdAt": "2026-11-14T07:01:34.116Z",
   "storyDay": "2026-11-13",
   "articles": [
+    {
+      "id": "3c336e2cde4b",
+      "outletId": "rfi",
+      "headline": "Mouvement social en France: un «acte V» marqué par une affluence un peu moindre",
+      "url": "https://www.rfi.fr/fr/france/20261115-mouvement-social-en-france-un-acte-v-marqu%C3%A9-par-une-affluence-un-peu-moindre",
+      "publishedAt": "2026-11-15T00:02:20.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/b26970b6-e07a-11f1-9ee0-5f54d898a954/w:1024/p:16x9/2026-11-14T154842Z-1728763676-RC2QNOANOSF3-RTRMADP-3-FRANCE-PROTEST.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "986ccff411df",
+      "outletId": "le-monde",
+      "headline": "Manifestations du 14 novembre : à Paris comme à Lyon, des cortèges hétéroclites mais déterminés",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/15/manifestations-du-14-novembre-a-paris-comme-a-lyon-des-corteges-heteroclites-mais-determines_6810709_3224.html",
+      "publishedAt": "2026-11-14T23:39:08.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/14/225/0/6000/3000/644/322/60/0/115180b_ftp-1-f95h7ylsqwgj-afp-d7gg2ke.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "8e5022d867cd",
+      "outletId": "france-24",
+      "headline": "Acte V du mouvement social : des revendications variées, une affluence en baisse",
+      "url": "https://www.france24.com/fr/france/20261114-acte-v-du-mouvement-social-des-revendications-vari%C3%A9es-une-affluence-en-baisse",
+      "publishedAt": "2026-11-14T21:43:20.000Z",
+      "imageUrl": "https://s.france24.com/media/display/a840c416-e072-11f1-b800-f71d22e7fea9/w:1024/p:16x9/2026-11-14T161721Z-1217346689-RC2SNOASVFNM-RTRMADP-3-FRANCE-PROTEST.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
     {
       "id": "c73d1a293291",
       "outletId": "le-figaro",
@@ -388,7 +422,7 @@
     }
   ],
   "topicId": "1e52bac1f877",
-  "titledArticleCount": 29,
+  "titledArticleCount": 37,
   "section": "politics",
   "everInEdition": true,
   "activity": [
@@ -751,34 +785,74 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1794690000000,
+      "end": 1794693600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1794693600000,
+      "end": 1794697200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794697200000,
+      "end": 1794700800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1794700800000,
+      "end": 1794704400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "La mobilisation contre la vie chère connaît un recul pour son cinquième samedi consécutif, avec une participation estimée entre 106 000 et 200 000 personnes en France.",
-      "L'intersyndicale jeune revendique 100 000 manifestants à Paris, tandis que le ministère de l'Intérieur en dénombre 24 000 dans la capitale.",
-      "Le cortège parisien relie la place de la République à celle de la Nation en passant par la Bastille, s'inscrivant dans une convergence des luttes aux revendications multiples.",
-      "Des incidents émaillent la journée, notamment en Loire-Atlantique où des manifestants pénètrent dans une zone interdite du centre-ville, entraînant vingt-neuf interpellations."
+      "Le mouvement social contre la vie chère a connu son acte V le 14 novembre avec une mobilisation recensée entre 106 000 et 200 000 participants à travers la France.",
+      "Les cortèges ont convergé à Paris de la place de la République vers celle de la Nation en passant par Bastille, rassemblant des manifestants déterminés malgré une baisse globale des chiffres.",
+      "Les revendications ont englobé la lutte contre la vie chère, l'opposition au projet de loi sur le « permis de tuer » des forces de l'ordre, ainsi que la défense des salaires, de l'éducation et de la protection de l'enfance.",
+      "Quelques incidents et interpellations ont émaillé les rassemblements en province, notamment à Marseille et en Loire-Atlantique, dans un contexte de forte présence policière."
     ],
     "centre": [
-      "Près de 106 000 manifestants défilent en France pour l'acte V contre la vie chère selon le ministère de l'Intérieur, face aux syndicats qui revendiquent 200 000 participants.",
-      "Un dispositif de sécurité massif comprenant 70 000 policiers et gendarmes est déployé pour faire face à une cinquantaine de cortèges et actions prévus à travers le pays.",
-      "La RATP ferme 21 stations de métro à Paris dès la matinée en prévision des rassemblements entre la place de la République et la place de la Nation.",
-      "Le mouvement social rassemble des revendications hétérogènes allant du pouvoir d'achat aux conditions d'éducation en passant par la protection des enfants."
+      "La cinquième journée de mobilisation contre la vie chère s'est tenue le samedi 14 novembre avec une affluence en baisse par rapport aux semaines précédentes.",
+      "Le ministère de l'Intérieur a dénombré 106 000 manifestants dans le pays, tandis que l'intersyndicale jeune a évalué le total à 200 000 personnes, dont 100 000 à Paris.",
+      "Les cortèges ont réuni des revendications hétérogènes allant du pouvoir d'achat à l'opposition au « permis de tuer » des forces de l'ordre, en passant par l'éducation et la protection des mineurs.",
+      "Le dispositif de sécurité comprenait 70 000 policiers et gendarmes, et la journée a été marquée par la fermeture de 21 stations de métro parisiennes ainsi que quelques heurts en fin de parcours."
     ],
     "droite": [
-      "Le ministère de l'Intérieur comptabilise 106 000 manifestants en France pour ce cinquième samedi de mobilisation, contre 200 000 selon les chiffres syndicaux.",
-      "Les autorités déploient 70 000 forces de l'ordre pour encadrer les cortèges, anticipant des troubles graves à l'ordre public.",
-      "La préfecture de police de Paris fait fermer 21 stations de métro dès 11 heures pour sécuriser le parcours reliant la place de la République à la Nation.",
-      "Le Figaro souligne l'existence de risques élevés de débordements tandis qu'Europe 1 et CNews insistent sur la convergence inédite des revendications."
+      "L'acte V du mouvement social contre la vie chère a rassemblé le 14 novembre des cortèges en perte de vitesse, avec 106 000 manifestants selon les autorités et 200 000 d'après l'intersyndicale.",
+      "À Paris, la manifestation s'est élancée de la place de la République vers la place de la Nation avec un parcours sécurisé et des stations de métro fermées par la RATP.",
+      "Le mouvement a mêlé de multiples revendications, incluant l'opposition au « permis de tuer », la défense des salaires, des moyens pour l'enseignement et la protection de l'enfance.",
+      "Les services de l'État ont déployé 70 000 policiers et gendarmes face à des risques de troubles graves à l'ordre public, des affrontements ayant éclaté place de la Nation en fin de parcours."
     ]
   },
   "differences": [
-    "La gauche met en avant la convergence des luttes et donne une visibilité équivalente aux estimations syndicales et gouvernementales, tout en insistant sur le contenu social des revendications.",
-    "Le centre adopte un traitement factuel centré sur l'opposition entre les chiffres de l'Intérieur et ceux des syndicats, tout en accordant une large place aux aspects logistiques et sécuritaires.",
-    "La droite insiste fortement sur le dispositif répressif et les risques de troubles à l'ordre public, Le Figaro soulignant le caractère à hauts risques de la journée tandis que CNews détaille les perturbations dans les transports."
+    "La gauche insiste sur la convergence des luttes et la détermination persistante des manifestants malgré le reflux des chiffres, tout en détaillant les actions locales.",
+    "Le centre adopte un ton factuel et neutre en confrontant systématiquement les chiffres de la police et des syndicats et en soulignant l'encadrement strict des transports parisiens.",
+    "La droite met particulièrement l'accent sur la baisse de régime du mouvement et anticipe les risques de troubles à l'ordre public justifiant le maintien d'un dispositif sécuritaire massif."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 29,
-  "summarizedAt": "2026-11-14T19:01:30.340Z"
+  "summarizedArticleCount": 37,
+  "summarizedAt": "2026-11-15T01:01:27.264Z"
 }
