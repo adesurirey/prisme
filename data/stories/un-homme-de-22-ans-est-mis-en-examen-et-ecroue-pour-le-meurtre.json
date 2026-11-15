@@ -6,6 +6,18 @@
   "storyDay": "2026-11-15",
   "articles": [
     {
+      "id": "0f07125ade88",
+      "outletId": "20-minutes",
+      "headline": "Ardèche : Un homme de 22 ans mis en examen et écroué après le meurtre d'un commerçant",
+      "url": "https://www.20minutes.fr/faits_divers/4262993-20261115-ardeche-homme-22-ans-mis-examen-ecroue-apres-meurtre-commercant?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-15T21:33:11.000Z",
+      "imageUrl": "https://img.20mn.fr/8e8Je_u-RGaTkUj8myPDrik/1200x768_illustration-photographique-gendarmerie-nationale-alain-robert-sipa-39137-credit-mourad-allili-sipa-2512191847",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "25f5b5bcb35c",
       "outletId": "le-parisien",
       "headline": "Commerçant tué en Ardèche après un vol à l’arraché : un homme de 22 ans mis en examen et écroué",
@@ -34,7 +46,7 @@
       "url": "https://www.lefigaro.fr/faits-divers/poursuivi-pour-avoir-tue-un-commercant-en-ardeche-un-homme-de-22-ans-mis-en-examen-et-ecroue-20261115",
       "publishedAt": "2026-11-15T19:42:27.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/15/c67d94641479688e5c95db17d9ae1d0b4686ac8393aba64875f3b20fec5ae144.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -301,11 +313,11 @@
       "start": 1794776400000,
       "end": 1794780000000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 2
     }
   ],
   "summaries": {
