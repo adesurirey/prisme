@@ -1,10 +1,22 @@
 {
   "id": "31813dee7e99",
   "slug": "meteo-france-place-le-gard-et-les-bouches-du-rhone-en-vigilance",
-  "title": "Météo-France place le Gard, l'Hérault et les Bouches-du-Rhône en vigilance orange pour pluie et inondation",
+  "title": "Le Gard, l'Hérault et les Bouches-du-Rhône en vigilance orange pour pluie et inondation",
   "createdAt": "2026-11-14T11:01:25.678Z",
   "storyDay": "2026-11-14",
   "articles": [
+    {
+      "id": "6d388de5fc2e",
+      "outletId": "le-figaro",
+      "headline": "«L’équivalent de deux mois et demi de pluie en une nuit» : les images impressionnantes des inondations dans l’Hérault",
+      "url": "https://www.lefigaro.fr/meteo/l-equivalent-de-deux-mois-et-demi-de-pluie-en-une-nuit-les-images-impressionnantes-des-inondations-dans-l-herault-20261115",
+      "publishedAt": "2026-11-15T08:39:37.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/11/15/b475cc0dd1211a6581c1f79b8a7c8719b8c58e13079e970d15816c70efaefff4.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
     {
       "id": "20111349e5be",
       "outletId": "le-parisien",
@@ -13,6 +25,17 @@
       "publishedAt": "2026-11-15T08:01:37.166Z",
       "frontPage": false,
       "datedAtCollection": true,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "723865599dda",
+      "outletId": "franceinfo",
+      "headline": "Une septuagénaire portée disparue à Candillargues après les intempéries dans l'Hérault",
+      "url": "https://www.franceinfo.fr/faits-divers/une-septuagenaire-disparue-a-candillargues-apres-les-intemperies-dans-l-herault_8283239.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-15T07:59:32.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/uaCUyCUq_GjR3WXl0kgr-fBsDKc/0x109:4314x2536/432x243/filters:format(jpg)/2026/11/15/6af9672c9081f339877999.jpg",
+      "frontPage": false,
       "kind": "news",
       "section": "misc"
     },
@@ -154,7 +177,7 @@
     }
   ],
   "topicId": "31813dee7e99",
-  "titledArticleCount": 11,
+  "titledArticleCount": 15,
   "section": "science",
   "everInEdition": true,
   "activity": [
@@ -382,11 +405,11 @@
       "start": 1794726000000,
       "end": 1794729600000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 0,
         "droite": 0
       },
-      "total": 0
+      "total": 1
     },
     {
       "start": 1794729600000,
@@ -394,33 +417,34 @@
       "counts": {
         "gauche": 0,
         "centre": 1,
-        "droite": 0
+        "droite": 1
       },
-      "total": 1
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "Le Gard et les Bouches-du-Rhône ont été placés en vigilance orange pluie-inondation dès samedi 20 heures par Météo-France.",
-      "Les instituts météorologiques ont mis en garde contre des risques de ruissellements ainsi que de possibles phénomènes tourbillonnaires.",
-      "L'agence n'a pas exclu d'aggraver le niveau d'alerte pour d'autres départements riverains face à l'intensification des orages."
+      "Le Gard et les Bouches-du-Rhône ont été placés en vigilance orange pluie-inondation pour la nuit de samedi à dimanche.",
+      "Les autorités ont mis en garde contre des risques de ruissellements et des phénomènes tourbillonnaires.",
+      "Une femme de 73 ans est portée disparue à Candillargues dans l'Hérault après de fortes intempéries et une centaine d'interventions des sapeurs-pompiers."
     ],
     "centre": [
-      "Météo-France a étendu sa vigilance orange pluie-inondation à trois départements du pourtour méditerranéen dont l'Hérault.",
-      "Montpellier a subi des précipitations exceptionnelles au cours de la nuit, enregistrant l'équivalent de deux mois de pluie.",
-      "Les autorités ont levé la vigilance orange dimanche matin après l'accalmie des intempéries dans le Sud-Est."
+      "Le Gard, l'Hérault et les Bouches-du-Rhône ont subi des précipitations intenses nécessitant le placement en vigilance orange par Météo-France.",
+      "Il est tombé l'équivalent de deux mois de pluie à Montpellier au cours de la nuit, provoquant des inondations sur les routes et le blocage de véhicules.",
+      "Une septuagénaire est portée disparue à Candillargues dans l'Hérault et la vigilance orange a été levée dimanche matin."
     ],
     "droite": [
-      "Le Gard et les Bouches-du-Rhône ont fait l'objet d'une vigilance orange pour pluie-inondation déclenchée samedi à 20 heures.",
-      "Météo-France a souligné un épisode pluvio-orageux nécessitant une attention particulière en raison de cumuls supérieurs à 100 ou 150 millimètres attendus sur de courtes durées."
+      "De très fortes pluies se sont abattues sur l'Hérault et le Gard, plaçant ces départements en vigilance orange pluie-inondation.",
+      "L'équivalent de deux mois et demi de pluie est tombé en une nuit à Montpellier, submergeant les routes et bloquant plusieurs voitures.",
+      "Les cumuls attendus dépassaient 100 à 150 mm sous des orages peu mobiles."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la prévention immédiate et la menace d'extension de l'alerte à d'autres secteurs.",
-    "Le centre insiste sur la chronologie complète de l'événement, de la menace initiale jusqu'à la levée de l'alerte après les records de précipitations à Montpellier.",
-    "La droite se focalise sur les aspects techniques de l'alerte émise par Météo-France et les seuils de précipitations prévus."
+    "La gauche met principalement l'accent sur les alertes préventives des services météorologiques et la disparition inquiétante d'une habitante dans l'Hérault.",
+    "Le centre insiste sur l'intensité exceptionnelle des cumuls d'eau mesurés à Montpellier et l'évolution de la vigilance jusqu'à sa levée matinale.",
+    "La droite privilégie un angle visuel et factuel centré sur la violence des intempéries nocturnes et les images spectaculaires des inondations dans l'Hérault."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 11,
-  "summarizedAt": "2026-11-15T06:01:26.909Z"
+  "summarizedArticleCount": 15,
+  "summarizedAt": "2026-11-15T09:01:20.652Z"
 }
