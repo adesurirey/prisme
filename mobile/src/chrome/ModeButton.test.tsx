@@ -72,7 +72,7 @@ describe('ModeButton (issue #196)', () => {
   test('the long-press tip is part of the sheet', async () => {
     await renderButton();
 
-    expect(screen.getByText('Appui long : basculer directement.')).toBeTruthy();
+    expect(screen.getByText('Appui long : basculer directement')).toBeTruthy();
   });
 
   test('a tap presents the sheet and flips nothing', async () => {

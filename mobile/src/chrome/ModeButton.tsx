@@ -75,8 +75,6 @@ export function ModeButton({ style }: { style?: ModeButtonStyle }) {
       </GlassPill>
 
       <TrueSheet ref={sheet} detents={['auto']} grabber>
-        {/* No background of our own: iOS 26 renders Liquid Glass, older iOS the
-            system material, Android the M3 surface — all from the system. */}
         <View style={styles.sheet}>
           <Text style={[styles.title, { color: theme.ink }]}>
             Lecture des barres
@@ -96,7 +94,7 @@ export function ModeButton({ style }: { style?: ModeButtonStyle }) {
                 {
                   backgroundColor:
                     candidate === mode
-                      ? theme.toggleTrack
+                      ? theme.canvas
                       : pressed
                         ? theme.hover
                         : 'transparent',
@@ -106,7 +104,7 @@ export function ModeButton({ style }: { style?: ModeButtonStyle }) {
               <Text style={[styles.rowLabel, { color: theme.ink }]}>
                 {label}
               </Text>
-              <Text style={[styles.rowDescription, { color: theme.muted }]}>
+              <Text style={[styles.rowDescription, { color: theme.prose }]}>
                 {/* The web toggle's own whisper sentences, one reading each. */}
                 {modeDescription(candidate)}
               </Text>
@@ -115,8 +113,8 @@ export function ModeButton({ style }: { style?: ModeButtonStyle }) {
               )}
             </Pressable>
           ))}
-          <Text style={[styles.tip, { color: theme.faint }]}>
-            Appui long : basculer directement.
+          <Text style={[styles.tip, { color: theme.muted }]}>
+            Appui long : basculer directement
           </Text>
         </View>
       </TrueSheet>
@@ -130,42 +128,43 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   sheet: {
-    paddingHorizontal: 20,
-    paddingTop: 20,
-    paddingBottom: 32,
-    gap: 10,
+    paddingHorizontal: 10,
+    paddingTop: 24,
+    paddingBottom: 16,
+    gap: 6,
   },
   title: {
-    fontSize: 19,
+    fontSize: 24,
     fontWeight: '700',
     letterSpacing: -0.3,
-    marginBottom: 6,
+    marginBottom: 8,
+    marginHorizontal: 16,
   },
   row: {
-    borderRadius: 14,
-    paddingVertical: 14,
+    borderRadius: 28,
+    paddingVertical: 16,
     paddingHorizontal: 16,
-    gap: 4,
+    gap: 6,
   },
   rowLabel: {
-    fontSize: 17,
+    fontSize: 18,
     fontWeight: '600',
   },
   rowDescription: {
-    fontSize: 13,
-    lineHeight: 19,
-    maxWidth: 300,
+    fontSize: 16,
+    lineHeight: 21,
+    maxWidth: 320,
   },
   rowCheck: {
     position: 'absolute',
     right: 16,
-    top: 16,
-    fontSize: 16,
+    top: 18,
+    fontSize: 18,
     fontWeight: '700',
   },
   tip: {
-    fontSize: 13,
+    fontSize: 16,
     textAlign: 'center',
-    paddingTop: 14,
+    paddingTop: 16,
   },
 });
