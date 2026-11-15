@@ -20,7 +20,7 @@ export function Frosted(props: ViewProps) {
     return (
       <GlassView
         glassEffectStyle="regular"
-        tintColor={`${theme.canvas}52`}
+        tintColor={`${theme.canvas}24`}
         {...props}
       />
     );

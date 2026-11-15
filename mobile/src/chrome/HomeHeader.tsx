@@ -63,7 +63,8 @@ export function HomeHeader({ builtAt }: { builtAt: string }) {
             </Text>
           </View>
           <View style={styles.pills}>
-            <ModeButton />
+            {/* Same 38pt height as the burger — the Photos pair. */}
+            <ModeButton style={styles.pill} />
             <GlassPill
               accessibilityLabel="Menu"
               testID="burger-button"
@@ -79,7 +80,7 @@ export function HomeHeader({ builtAt }: { builtAt: string }) {
       {/* The fade below the bar — a gradient extension of the glass tint. */}
       <LinearGradient
         pointerEvents="none"
-        colors={[`${theme.canvas}52`, `${theme.canvas}00`]}
+        colors={[`${theme.canvas}24`, `${theme.canvas}00`]}
         style={styles.fade}
       />
     </View>
@@ -117,6 +118,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
+  },
+  pill: {
+    height: 38,
   },
   burger: {
     width: 38,

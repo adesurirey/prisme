@@ -62,9 +62,9 @@ export function Home() {
         refreshing={refreshing}
         onRefresh={refresh}
         contentContainerStyle={{
-          // The first row starts below the fixed bar; further rows
-          // scroll under the glass.
-          paddingTop: insets.top + HOME_HEADER_BAR_HEIGHT + 8,
+          // The first row rides under the glass (Photos-style): the bar
+          // has live content to blur; further rows stream under it.
+          paddingTop: insets.top + HOME_HEADER_BAR_HEIGHT - 28,
         }}
         renderItem={({ item }) => (
           <Pressable

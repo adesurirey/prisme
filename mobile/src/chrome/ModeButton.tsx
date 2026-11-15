@@ -32,6 +32,9 @@ import { useTheme } from '@/theme';
 
 import { GlassPill, GlassPillText } from './GlassPill';
 
+/** Extra pill styling from the host bar (the shared 38pt height). */
+type ModeButtonStyle = Parameters<typeof GlassPill>[0]['style'];
+
 /** What a reading does — parity with the web's modeDescription. */
 export function modeDescription(mode: ReadingMode): string {
   return mode === 'coverage'
@@ -44,7 +47,7 @@ const MODES: Array<{ mode: ReadingMode; label: string }> = [
   { mode: 'exposure', label: 'Exposition' },
 ];
 
-export function ModeButton() {
+export function ModeButton({ style }: { style?: ModeButtonStyle }) {
   const theme = useTheme();
   const { mode, setMode } = useMode();
   const sheet = useRef<TrueSheet>(null);
@@ -63,6 +66,7 @@ export function ModeButton() {
           );
           setMode(flipMode(mode));
         }}
+        style={style}
       >
         {/* The fixed width keeps « Couv. » and « Expo. » the same pill. */}
         <GlassPillText style={styles.short}>
@@ -103,6 +107,7 @@ export function ModeButton() {
                 {label}
               </Text>
               <Text style={[styles.rowDescription, { color: theme.muted }]}>
+                {/* The web toggle's own whisper sentences, one reading each. */}
                 {modeDescription(candidate)}
               </Text>
               {candidate === mode && (
@@ -126,39 +131,41 @@ const styles = StyleSheet.create({
   },
   sheet: {
     paddingHorizontal: 20,
-    paddingTop: 12,
-    paddingBottom: 24,
-    gap: 4,
+    paddingTop: 20,
+    paddingBottom: 32,
+    gap: 10,
   },
   title: {
-    fontSize: 15,
+    fontSize: 19,
     fontWeight: '700',
-    paddingVertical: 4,
+    letterSpacing: -0.3,
+    marginBottom: 6,
   },
   row: {
-    borderRadius: 12,
-    padding: 14,
-    gap: 2,
+    borderRadius: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    gap: 4,
   },
   rowLabel: {
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: '600',
   },
   rowDescription: {
     fontSize: 13,
-    lineHeight: 18,
+    lineHeight: 19,
     maxWidth: 300,
   },
   rowCheck: {
     position: 'absolute',
-    right: 14,
-    top: 14,
+    right: 16,
+    top: 16,
     fontSize: 16,
     fontWeight: '700',
   },
   tip: {
     fontSize: 13,
     textAlign: 'center',
-    paddingTop: 10,
+    paddingTop: 14,
   },
 });
