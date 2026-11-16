@@ -6,6 +6,18 @@
   "storyDay": "2026-11-16",
   "articles": [
     {
+      "id": "551aa2156ab7",
+      "outletId": "le-figaro",
+      "headline": "L’interdiction temporaire de la vente de mortiers peut-elle vraiment limiter leur accès ?",
+      "url": "https://www.lefigaro.fr/actualite-france/l-interdiction-de-la-vente-de-mortiers-peut-elle-vraiment-limiter-leur-acces-20261116",
+      "publishedAt": "2026-11-16T13:59:47.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/16/b02cd46e212330ea0760b47207e049472c0cbc2e7f3674397d2ce249369ae2ab.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
       "id": "93ecb5d33096",
       "outletId": "le-parisien",
       "headline": "« Ils ne servent plus à faire la fête » : que sont les mortiers d’artifice, ces engins interdits à la vente temporairement par le gouvernement ?",
@@ -29,20 +41,10 @@
     }
   ],
   "topicId": "9c6c5e058a9d",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794747600000,
-      "end": 1794751200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794751200000,
       "end": 1794754800000,
@@ -270,6 +272,16 @@
         "gauche": 0,
         "centre": 1,
         "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1794834000000,
+      "end": 1794837600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
       },
       "total": 1
     }

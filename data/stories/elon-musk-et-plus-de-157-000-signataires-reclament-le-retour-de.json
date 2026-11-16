@@ -12,7 +12,7 @@
       "url": "https://www.lefigaro.fr/secteur/high-tech/l-incroyable-scenario-d-un-possible-retour-de-jensen-huang-a-la-tete-de-nvidia-20261116",
       "publishedAt": "2026-11-16T18:23:36.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/11/16/c7f019ab2225fd761c46ce6f4300827559a93bd41f867cda3de70364b18d35a5.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -24,6 +24,17 @@
       "url": "https://www.courrierinternational.com/article/tech-jensen-huang-fait-campagne-pour-retrouver-sa-place-a-la-tete-de-nvidia_287546",
       "publishedAt": "2026-11-16T16:13:34.000Z",
       "imageUrl": "https://focus.courrierinternational.com/2026/11/15/0/0/3558/2372/644/0/60/0/a24fe16_ftp-1-g8qnrwvm7psq-2026-11-15t113515z-1912996520-rc2138a1muys-rtrmadp-3-nvidia-ceo.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "122daedb1d09",
+      "outletId": "lopinion",
+      "headline": "Nvidia : la Silicon Valley se mobilise pour faire revenir Jensen Huang",
+      "url": "https://www.lopinion.fr/economie/nvidia-la-silicon-valley-se-mobilise-pour-faire-revenir-jensen-huang",
+      "publishedAt": "2026-11-16T12:06:23.000Z",
+      "imageUrl": "https://beymedias.brightspotcdn.com/52/3e/05c2bcd2438386914f67c70b8d2e/sipa-ap23042290-000007.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "economy"
@@ -266,9 +277,9 @@
       "counts": {
         "gauche": 0,
         "centre": 0,
-        "droite": 0
+        "droite": 1
       },
-      "total": 0
+      "total": 1
     },
     {
       "start": 1794834000000,
@@ -330,5 +341,30 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Plus de 164 000 personnes ont signé une pétition pour exiger le retour de Jensen Huang à la tête de Nvidia malgré les scandales.",
+      "Une pétition adressée à l'entreprise rassemble 157 000 signataires, dont 7 500 salariés et des figures de la tech comme Elon Musk, qui réclament la réintégration de l'ancien dirigeant.",
+      "Les signataires demandent le maintien en poste de Jensen Huang le temps qu'il se défende face aux allégations de relations extraconjugales responsables de sa démission."
+    ],
+    "centre": [
+      "Jensen Huang mène une campagne active pour retrouver la direction de Nvidia, appuyé par une pétition de plus de 180 000 soutiens et de grandes figures de la tech.",
+      "Le ministre des Finances Scott Bessent suggère toutefois à l'entreprise de recruter son futur patron hors de la structure, tandis que le secrétaire du Trésor exige des enquêtes sur les ventes en Asie et un remaniement radical.",
+      "Un collectif mené par Elon Musk et Tim Sweeney a publié une lettre ouverte défendant le droit du dirigeant à une procédure équitable plutôt qu'à un tribunal populaire, tout en cherchant l'appui de Donald Trump."
+    ],
+    "droite": [
+      "Elon Musk et plusieurs dirigeants majeurs de la tech américaine orchestrent une intense opération de lobbying auprès de Washington et des actionnaires.",
+      "Cette mobilisation vise à obtenir la réintégration de Jensen Huang à la suite de sa démission surprise.",
+      "Le mouvement de soutien tente de contrer les doutes persistants suscités par des accusations d'espionnage visant le fabricant de puces."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur l'ampleur de la contestation populaire et salariale face au scandale personnel à l'origine de la chute du dirigeant.",
+    "Le centre insiste sur les manœuvres politiques en coulisses, la recherche de soutiens institutionnels et l'opposition ouverte entre la Silicon Valley et l'administration américaine.",
+    "La droite privilégie le récit d'une opération de lobbying menée par les grands patrons de la tech face aux soupçons d'espionnage."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-16T23:01:37.548Z"
 }

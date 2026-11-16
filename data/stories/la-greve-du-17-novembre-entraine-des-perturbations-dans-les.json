@@ -6,6 +6,17 @@
   "storyDay": "2026-11-16",
   "articles": [
     {
+      "id": "04e077c31f84",
+      "outletId": "bfmtv",
+      "headline": "\"Le gouvernement se met le doigt dans l'œil\" s'il anticipe une mobilisation moindre ce mardi, tacle Sophie Binet",
+      "url": "https://www.bfmtv.com/societe/manifestations/le-gouvernement-se-met-le-doigt-dans-l-il-s-il-anticipe-une-mobilisation-moindre-ce-mardi-tacle-sophie-binet_AD-202611160979.html",
+      "publishedAt": "2026-11-16T22:51:55.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/rjQcscohFDZJFzVwmz_CIG_-HOI=/0x0:1920x1080/800x0/images/Sophie-Binet-secretaire-generale-de-la-CGT-sur-le-plateau-de-BFMTV-le-16-novembre-2026-2385114.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "c0c705f6f2e1",
       "outletId": "europe-1",
       "headline": "Transports : trains et ports perturbés mardi par un appel à la grève",
@@ -23,6 +34,28 @@
       "url": "https://www.cnews.fr/france/2026-11-16/greve-du-17-novembre-tgv-rer-stations-de-metro-quoi-sattendre-dans-les-transports",
       "publishedAt": "2026-11-16T21:30:27.000Z",
       "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_mthomasset_3384402_1_6afb73809308b.jpg?h=e1ea678a&itok=JTefUw1q",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "36c675e92bf1",
+      "outletId": "bfmtv",
+      "headline": "\"Les grèves ça paie toujours\": Sophie Binet, secrétaire générale de la CGT, plaide pour \"un maximum de grèves\" le 17 novembre",
+      "url": "https://www.bfmtv.com/societe/manifestations/les-greves-ca-paie-toujours-sophie-binet-secretaire-generale-de-la-cgt-plaide-pour-un-maximum-de-greves-le-17-novembre_AV-202611160929.html",
+      "publishedAt": "2026-11-16T21:29:26.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/UDPaD4bQLemu0cgaBrE9-2iEh5Q=/0x0:1920x1080/800x0/images/La-secretaire-generale-de-la-CGT-Sophie-Binet-invite-sur-le-plateau-de-BFMTV-ce-lund-16-novembre-2385064.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "150014434b6d",
+      "outletId": "franceinfo",
+      "headline": "Les agents des services publics \"ont vraiment besoin d'être reconnus et revalorisés\", souligne la CFDT Education avant la mobilisation du 17 novembre",
+      "url": "https://www.franceinfo.fr/economie/transports/mobilisation-du-17-novembre/les-agents-des-services-publics-ont-vraiment-besoin-d-etre-reconnus-et-revalorises-souligne-la-cfdt-education-avant-la-mobilisation-du-17-novembre_8285489.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-16T21:07:45.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/7TkkRPwkDfixiCTJDTjMRa3suV8/0x73:1024x649/432x243/filters:format(jpg)/2026/06/22/6a3900c4d625a078539995.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "society"
@@ -78,7 +111,7 @@
       "url": "https://www.lefigaro.fr/social/greve-du-17-novembre-transports-manifestations-a-quoi-faut-il-s-attendre-pour-cette-nouvelle-journee-de-mobilisation-20261116",
       "publishedAt": "2026-11-16T18:38:37.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/16/aa6d234352e0b388341c95e3c4bed5b08b87128f2dfd003b501e82cbb392d211.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -123,7 +156,7 @@
       "url": "https://www.lefigaro.fr/social/greve-du-17-novembre-a-paris-la-manifestation-ira-de-la-place-de-la-nation-a-la-place-d-italie-20261116",
       "publishedAt": "2026-11-16T17:14:21.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/16/9fa3b76a604c04e3756a1b5e2fbbc4e00c300c5eab6a71a72ddd6c3421e6d058.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -156,16 +189,6 @@
   "section": "society",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794780000000,
-      "end": 1794783600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794783600000,
       "end": 1794787200000,
@@ -390,11 +413,21 @@
       "start": 1794862800000,
       "end": 1794866400000,
       "counts": {
-        "gauche": 0,
-        "centre": 0,
+        "gauche": 1,
+        "centre": 1,
         "droite": 2
       },
-      "total": 2
+      "total": 4
+    },
+    {
+      "start": 1794866400000,
+      "end": 1794870000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
