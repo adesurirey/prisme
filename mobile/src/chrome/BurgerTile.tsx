@@ -101,9 +101,12 @@ const styles = StyleSheet.create({
   },
   wordmarkRow: {
     // The pill's own height — the wordmark centers on the burger's
-    // exact line (see WORDMARK_ROW_OFFSET above).
+    // exact line (see WORDMARK_ROW_OFFSET above). The column's main
+    // axis is vertical: justifyContent centers the wordmark on that
+    // line; alignItems would have centered it across the tile — the
+    // previous pass's mistake.
     height: 44,
-    alignItems: 'center',
+    justifyContent: 'center',
     paddingHorizontal: 24,
   },
   rows: {
