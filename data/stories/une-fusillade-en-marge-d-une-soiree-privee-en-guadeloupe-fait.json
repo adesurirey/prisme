@@ -6,6 +6,30 @@
   "storyDay": "2026-11-15",
   "articles": [
     {
+      "id": "2b7e16e1261f",
+      "outletId": "20-minutes",
+      "headline": "Guadeloupe : Une fusillade lors d’une soirée privée fait un mort",
+      "url": "https://www.20minutes.fr/faits_divers/4263008-20261116-guadeloupe-fusillade-lors-soiree-privee-fait-mort?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-16T01:27:15.000Z",
+      "imageUrl": "https://img.20mn.fr/tZeRErdWTbWv0TGXOl2ifCk/1200x768_motard-de-la-police-nationale-controle-routier-de-3h-a-5h-du-matin-controle-de-vitesse-taux-d-alcoolemie-presence-de-stupefiants-chez-les-automobilistes-sortant-des-etablissements-de-nuit-sur-la-promenade-des-anglais-nice-france-14-04-2024-syspeo-sys-b042-credit-syspeo-sipa-2404141919",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
+      "id": "98f004938299",
+      "outletId": "le-figaro",
+      "headline": "Guadeloupe : un mort et quatre blessés dans des tirs en marge d'une soirée",
+      "url": "https://www.lefigaro.fr/international/guadeloupe-un-mort-et-quatre-blesses-dans-des-tirs-en-marge-d-une-soiree-20261116",
+      "publishedAt": "2026-11-16T01:12:51.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/1532x1022_crop/2026/11/16/d49a18d61e01337aa25a2ee97b1183f06df751c1a9e6941a3f372271bd2d2b52.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "f1e938d0c581",
       "outletId": "ouest-france",
       "headline": "Guadeloupe : un mort et quatre blessés dans des tirs en marge d’une soirée",
@@ -85,20 +109,10 @@
     }
   ],
   "topicId": "88393b5b1d9a",
-  "titledArticleCount": 7,
+  "titledArticleCount": 9,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794704400000,
-      "end": 1794708000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794708000000,
       "end": 1794711600000,
@@ -328,29 +342,41 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794790800000,
+      "end": 1794794400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "Une fusillade s'est produite aux Abymes lors d'une fête privée rassemblant environ trois cents participants dans une villa.",
-      "Les coups de feu ont fait un mort et plusieurs blessés au cours de la nuit du samedi quatorze novembre."
+      "Une fusillade a éclaté aux Abymes lors d'une fête privée réunissant 300 personnes, faisant un mort et plusieurs blessés.",
+      "Le pronostic vital d'une des victimes hospitalisées est engagé, selon la procureure de la République de Pointe-à-Pitre.",
+      "Des tirs en rafale ont visé la foule aux abords de l'événement dans la nuit de samedi."
     ],
     "centre": [
-      "Un mort et quatre blessés ont été recensés à la suite de tirs survenus aux Abymes en marge d'une célébration privée.",
-      "L'agression armée s'est déroulée dans la nuit de samedi à dimanche, selon les informations confirmées par les autorités locales et le centre hospitalier universitaire."
+      "Une personne a été tuée et quatre ont été blessées lors de tirs survenus en marge d'une soirée privée aux Abymes, en Guadeloupe.",
+      "Le drame s'est produit dans la nuit de samedi à dimanche, peu après que les organisateurs ont décidé d'interrompre l'événement.",
+      "Les autorités locales et le CHU ont confirmé le bilan humain de cette fusillade."
     ],
     "droite": [
-      "Un drame a éclaté vers trois heures du matin aux Abymes, lorsqu'une fusillade a éclaté aux abords d'une villa louée pour une réunion festive.",
-      "D'après une source policière, la confrontation trouve son origine dans un différend entre convives ayant poussé les organisateurs à interrompre l'événement.",
-      "Le bilan dressé par la procureure de la République de Pointe-à-Pitre, Caroline Calbo, fait état d'un décès et de trois blessés, dont un pronostic vital engagé, tandis que la police mentionne quatre victimes."
+      "Une soirée privée organisée dans une villa des Abymes s'est achevée tragiquement vers trois heures du matin à la suite d'un différend entre participants.",
+      "Trois individus auraient ouvert le feu, tuant une personne et en blessant quatre autres selon une source policière.",
+      "La procureure de la République Caroline Calbo a confirmé le décès et fait état de plusieurs blessés, dont un en urgence absolue."
     ]
   },
   "differences": [
-    "La gauche privilégie un compte rendu synthétique et direct mettant en relief l'ampleur de la concentration humaine présente lors de l'événement.",
-    "Le centre livre un exposé strictement factuel calqué sur les bilans officiels fournis par les services de secours et les autorités sanitaires.",
-    "La droite adopte un traitement plus circonstancié en détaillant le déroulement chronologique, l'origine du différend entre participants et en nommant la procureure de la République."
+    "La gauche met l'accent sur le déroulement précis de l'attaque en évoquant des tirs en rafale sur la foule et en soulignant l'ampleur du rassemblement initial.",
+    "Le centre adopte une couverture factuelle standard en insistant sur le bilan global de l'attaque et l'intervention des autorités et des secours sanitaires.",
+    "La droite détaille l'origine du drame en mentionnant le différend interne qui a conduit à l'interruption de la fête et cite nommément la procureure de Pointe-à-Pitre."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 7,
-  "summarizedAt": "2026-11-16T01:01:28.834Z"
+  "summarizedArticleCount": 9,
+  "summarizedAt": "2026-11-16T02:01:29.223Z"
 }
