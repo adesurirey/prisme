@@ -11,6 +11,7 @@
 
 import type { SegmentedControlProps } from '@react-native-segmented-control/segmented-control';
 import SegmentedControlPkg from '@react-native-segmented-control/segmented-control';
+import { BlurView } from 'expo-blur';
 import type { ComponentType } from 'react';
 import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 
@@ -34,17 +35,30 @@ export function SortSwitcher({
 
   if (Platform.OS === 'ios') {
     return (
-      <SegmentedControl
-        testID="sort-switcher"
-        values={SORTS.map((sort) => sort.label)}
-        selectedIndex={index}
-        style={styles.control}
-        // Same type as the header pills (GlassPillText): 17pt, semibold.
-        // Colors stay native — iOS 26's glass control owns them.
-        fontStyle={{ fontSize: 17, fontWeight: '600' }}
-        activeFontStyle={{ fontSize: 17, fontWeight: '600' }}
-        onChange={(event) => onSwitch(event.nativeEvent.selectedSegmentIndex)}
-      />
+      // The Photos treatment: the glass control rides on a chrome
+      // material capsule. Bare glass melts into a white canvas and
+      // lets list text read straight through it — the material pops
+      // the control over the scroll (owner's call, reversing the 5c
+      // « no background of its own » line).
+      <View style={styles.shell}>
+        <BlurView
+          intensity={80}
+          tint="systemChromeMaterial"
+          pointerEvents="none"
+          style={styles.material}
+        />
+        <SegmentedControl
+          testID="sort-switcher"
+          values={SORTS.map((sort) => sort.label)}
+          selectedIndex={index}
+          style={styles.control}
+          // Same size as the header pills (GlassPillText); regular
+          // weight, like Photos' labels. Colors stay native.
+          fontStyle={{ fontSize: 17 }}
+          activeFontStyle={{ fontSize: 17 }}
+          onChange={(event) => onSwitch(event.nativeEvent.selectedSegmentIndex)}
+        />
+      </View>
     );
   }
 
@@ -66,10 +80,10 @@ export function SortSwitcher({
         >
           <Text
             style={{
-              // Same type as the header pills (GlassPillText).
+              // Same size as the header pills (GlassPillText), regular
+              // weight like Photos' labels.
               color: segment === index ? theme.ink : theme.muted,
               fontSize: 17,
-              fontWeight: '600',
             }}
           >
             {sort.label}
@@ -81,6 +95,15 @@ export function SortSwitcher({
 }
 
 const styles = StyleSheet.create({
+  // The capsule shell clips the material to the control's shape; the
+  // material sits behind, the control in flow on top.
+  shell: {
+    borderRadius: 999,
+    overflow: 'hidden',
+  },
+  material: {
+    ...StyleSheet.absoluteFill,
+  },
   // Same height as the header pills (44). The frame is respected
   // exactly by iOS 26's glass control (measured on the simulator);
   // its selected pill is inset ~2pt inside the track — native
@@ -96,7 +119,9 @@ const styles = StyleSheet.create({
     gap: 6,
     padding: 4,
     borderRadius: 999,
-    backgroundColor: 'rgba(128, 128, 138, 0.18)',
+    // More opaque than the first pass — the track must pop over the
+    // scrolling list, not whisper under it.
+    backgroundColor: 'rgba(128, 128, 138, 0.3)',
   },
   androidSegment: {
     justifyContent: 'center',
