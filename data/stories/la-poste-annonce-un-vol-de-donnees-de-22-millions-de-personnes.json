@@ -17,12 +17,34 @@
       "section": "misc"
     },
     {
+      "id": "00bfb960aa27",
+      "outletId": "tf1-info",
+      "headline": "La Poste piratée : vos données ont-elles fuités ?",
+      "url": "https://www.tf1info.fr/societe/videos/video-la-poste-piratee-vos-donnees-ont-elles-fuites-4357-2476002.html",
+      "publishedAt": "2026-11-15T20:10:21.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/la-poste-piratee-vos-donnees-ont-elles-fuites-30b871-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "544812f2f5c3",
       "outletId": "tf1-info",
       "headline": "\"Des attaques peuvent être conduites\" : quels risques pour les clients après le vol de données d'une filiale de La Poste ?",
       "url": "https://www.tf1info.fr/justice-faits-divers/video-tf1-des-attaques-peuvent-etre-conduites-quels-risques-pour-les-clients-apres-le-vol-de-donnees-d-une-filiale-de-la-poste-2475950.html",
       "publishedAt": "2026-11-15T17:45:55.000Z",
       "imageUrl": "https://photos.tf1info.fr/images/720/480/piratage-informatique-illus-b4aeb1-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "504099f2e940",
+      "outletId": "lobs",
+      "headline": "Manifestations contre la vie chère, vol de données après le piratage d’une filiale de La Poste… Les cinq infos du week-end",
+      "url": "https://www.nouvelobs.com/monde/20261115.OBS120169/manifestations-contre-la-vie-chere-vol-de-donnees-apres-le-piratage-d-une-filiale-de-la-poste-les-cinq-infos-du-week-end.html",
+      "publishedAt": "2026-11-15T17:45:01.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/11/15/238/0/5712/3808/0/0/60/0/2ab2457_upload-1-qw75feqil5f8-089-mei-fra-alsh-lfnp2-261114-0051.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "economy"
@@ -37,6 +59,17 @@
       "frontPage": false,
       "kind": "news",
       "section": "economy"
+    },
+    {
+      "id": "87cc8690fa65",
+      "outletId": "humanite",
+      "headline": "Les cortèges du 14 novembre contre la vie chère, 22 millions de personnes piratées chez une filiale de La Poste, des milliers d’avions cloués au sol aux États-Unis… Ce qu’il ne fallait pas manquer ce week-end",
+      "url": "https://www.humanite.fr/politique/la-poste/les-corteges-du-14-novembre-contre-la-vie-chere-22-millions-de-personnes-piratees-chez-une-filiale-de-la-poste-des-milliers-davions-cloues-au-sol-aux-etats-unis-ce-qu",
+      "publishedAt": "2026-11-15T16:56:31.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-14-at-13.19.07.jpeg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "68a39cff7e95",
@@ -365,7 +398,7 @@
     }
   ],
   "topicId": "bedc339c7bf5",
-  "titledArticleCount": 27,
+  "titledArticleCount": 35,
   "section": "economy",
   "everInEdition": true,
   "activity": [
@@ -583,21 +616,21 @@
       "start": 1794758400000,
       "end": 1794762000000,
       "counts": {
-        "gauche": 2,
+        "gauche": 3,
         "centre": 0,
         "droite": 0
       },
-      "total": 2
+      "total": 3
     },
     {
       "start": 1794762000000,
       "end": 1794765600000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
         "droite": 1
       },
-      "total": 2
+      "total": 3
     },
     {
       "start": 1794765600000,
@@ -625,9 +658,9 @@
       "counts": {
         "gauche": 0,
         "centre": 0,
-        "droite": 0
+        "droite": 1
       },
-      "total": 0
+      "total": 1
     },
     {
       "start": 1794776400000,
@@ -642,27 +675,27 @@
   ],
   "summaries": {
     "gauche": [
-      "Maileva, filiale de Docaposte et du groupe La Poste, a subi un piratage en septembre ayant compromis les coordonnées de vingt-deux millions d'utilisateurs.",
-      "Le parquet de Paris et la Commission nationale de l'informatique et des libertés ont été saisis tandis qu'une procédure judiciaire a été ouverte.",
-      "Cette fuite massive est qualifiée par les observateurs de l'une des plus importantes violations de données jamais enregistrées en France."
+      "La plateforme Maileva, filiale de Docaposte et du groupe La Poste, a subi un piratage informatique mi-septembre.",
+      "Le vol de données concerne les coordonnées de 22 millions de personnes, selon les annonces officielles.",
+      "Une plainte a été déposée auprès de la Commission nationale de l'informatique et des libertés et une enquête judiciaire est en cours."
     ],
     "centre": [
-      "La plateforme Maileva, spécialisée dans la transmission de courriers professionnels pour les entreprises, a confirmé un vol massif de données personnelles.",
-      "L'attaque informatique, survenue mi-septembre, a exposé les noms, prénoms et adresses postales de vingt-deux millions de personnes.",
-      "La direction a notifié la Cnil et déposé plainte, alors qu'une enquête judiciaire est en cours pour identifier l'origine de la compromission."
+      "Le parquet de Paris a confié l'enquête sur la cyberattaque de Maileva à la brigade de lutte contre la cybercriminalité.",
+      "La fuite de données touche 22 millions de personnes et est qualifiée de l'une des plus importantes de l'histoire en France.",
+      "La Poste indique que les noms, prénoms et adresses postales des destinataires clients des entreprises utilisatrices ont été exposés."
     ],
     "droite": [
-      "La Brigade de lutte contre la cybercriminalité a été saisie par le parquet de Paris pour mener les investigations sur ce piratage informatique.",
-      "Les informations dérobées concernent les destinataires des courriers gérés par Maileva, incluant bulletins de paie et factures.",
-      "Le groupe La Poste collabore avec les autorités pour évaluer l'ampleur de cette fuite classée parmi les plus graves du pays."
+      "Maileva, spécialisée dans l'envoi de courriers professionnels pour les entreprises, a confirmé un vol massif de données personnelles.",
+      "Les sites spécialisés FrenchBreaches et cyberattaque.org ont révélé cette violation d'ampleur historique.",
+      "Les investigations ouvertes portent sur l'infraction d'atteinte à un système de traitement automatisé de données."
     ]
   },
   "differences": [
-    "La gauche insiste sur l'ampleur inédite de la violation et sur la nécessité d'informer rapidement les millions de citoyens dont les informations personnelles ont été exposées.",
-    "Le centre adopte une approche technique et pratique en détaillant la nature des documents professionnels gérés par la plateforme et les risques potentiels de fraudes.",
-    "La droite privilégie l'angle sécuritaire et judiciaire en mettant en avant l'implication immédiate de la Brigade de lutte contre la cybercriminalité et les procédures légales en cours."
+    "La gauche intègre l'affaire de la cyberattaque de Maileva dans ses sélections globales des actualités du week-end aux côtés des mouvements sociaux.",
+    "Le centre traite l'événement sous un angle factuel et institutionnel, en détaillant les procédures judiciaires en cours et l'action de la brigade spécialisée.",
+    "La droite met en avant l'origine des révélations issues de plateformes spécialisées et détaille la nature professionnelle des services fournis par l'entreprise ciblée."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 27,
-  "summarizedAt": "2026-11-15T16:01:26.798Z"
+  "summarizedArticleCount": 35,
+  "summarizedAt": "2026-11-16T00:01:28.831Z"
 }
