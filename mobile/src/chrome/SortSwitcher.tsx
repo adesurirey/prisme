@@ -39,6 +39,10 @@ export function SortSwitcher({
         values={SORTS.map((sort) => sort.label)}
         selectedIndex={index}
         style={styles.control}
+        // Same type as the header pills (GlassPillText): 17pt, semibold.
+        // Colors stay native — iOS 26's glass control owns them.
+        fontStyle={{ fontSize: 17, fontWeight: '600' }}
+        activeFontStyle={{ fontSize: 17, fontWeight: '600' }}
         onChange={(event) => onSwitch(event.nativeEvent.selectedSegmentIndex)}
       />
     );
@@ -62,7 +66,10 @@ export function SortSwitcher({
         >
           <Text
             style={{
+              // Same type as the header pills (GlassPillText).
               color: segment === index ? theme.ink : theme.muted,
+              fontSize: 17,
+              fontWeight: '600',
             }}
           >
             {sort.label}
@@ -74,20 +81,24 @@ export function SortSwitcher({
 }
 
 const styles = StyleSheet.create({
+  // Same height as the header pills (44).
   control: {
-    width: 248,
+    width: 280,
+    height: 44,
   },
   androidRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    height: 44,
     gap: 6,
     padding: 4,
     borderRadius: 999,
     backgroundColor: 'rgba(128, 128, 138, 0.18)',
   },
   androidSegment: {
-    paddingHorizontal: 18,
-    paddingVertical: 7,
+    justifyContent: 'center',
+    paddingHorizontal: 20,
+    height: 36,
     borderRadius: 999,
   },
 });
