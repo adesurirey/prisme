@@ -42,7 +42,7 @@ export function SortSwitcher({
       // « no background of its own » line).
       <View style={styles.shell}>
         <BlurView
-          intensity={80}
+          intensity={40}
           tint="systemChromeMaterial"
           pointerEvents="none"
           style={styles.material}
