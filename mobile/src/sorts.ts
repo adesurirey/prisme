@@ -2,11 +2,12 @@
  * The three sorts of « À la une » (issue #195, ADR-0028/0041): the
  * artifact ships each pool precomputed — the app maps, never re-derives
  * (the Edition is a render contract, ADR-0043). Fixed order Top | Brûlant
- * | Tous; Brûlant stays the default (ADR-0039, restated in the #180
+ * | Nouveau; Brûlant stays the default (ADR-0039, restated in the #180
  * grilling). Coverage-first order: Top (pure Coverage), Brûlant
- * (chronology weighted by Coverage on two decay clocks), Tous (pure
- * chronology — the ex-« Nouveau », renamed label only, the sort key
- * stays English).
+ * (chronology weighted by Coverage on two decay clocks), Nouveau (pure
+ * chronology — the label came back after a « Tous » detour: the
+ * documented vocabulary (GLOSSARY, brand, web) says Nouveau, decided
+ * at the #197 review).
  */
 
 import type { Edition, Story } from '@prisme/domain';
@@ -16,11 +17,11 @@ export interface Sort {
   label: string;
 }
 
-/** The shipped sorts, Top | Brûlant | Tous. */
+/** The shipped sorts, Top | Brûlant | Nouveau. */
 export const SORTS: readonly Sort[] = [
   { key: 'top', label: 'Top' },
   { key: 'brulant', label: 'Brûlant' },
-  { key: 'nouveau', label: 'Tous' },
+  { key: 'nouveau', label: 'Nouveau' },
 ] as const;
 
 /** The default sort — Brûlant, the home reading (ADR-0039); index 1. */

@@ -20,12 +20,12 @@ function renderSwitcher() {
 // The rendered labels, in order — the mock's Text children.
 function renderedLabels(): string[] {
   return screen
-    .getAllByText(/^(Top|Brûlant|Tous)$/)
+    .getAllByText(/^(Top|Brûlant|Nouveau)$/)
     .map((label) => label.props.children);
 }
 
 describe('SortSwitcher (issue #197)', () => {
-  test('renders the sorts in order — Top | Brûlant | Tous', async () => {
+  test('renders the sorts in order — Top | Brûlant | Nouveau', async () => {
     await renderSwitcher();
 
     expect(renderedLabels()).toEqual(SORTS.map((sort) => sort.label));
@@ -62,7 +62,7 @@ describe('SortSwitcher (issue #197)', () => {
 
       // Same labels, same order — the pill on the selected segment is
       // the fallback's selected mark.
-      expect(renderedLabels()).toEqual(['Top', 'Brûlant', 'Tous']);
+      expect(renderedLabels()).toEqual(['Top', 'Brûlant', 'Nouveau']);
       expect(
         screen.getByTestId('sort-segment-1').props.accessibilityState,
       ).toEqual({ selected: true });

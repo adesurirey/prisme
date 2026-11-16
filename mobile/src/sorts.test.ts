@@ -9,7 +9,7 @@ function theEdition(): Edition {
 }
 
 describe('the sorts of « À la une » (issue #195)', () => {
-  test('Top | Brûlant | Tous — the #195 order', () => {
+  test('Top | Brûlant | Nouveau — the #195 order', () => {
     expect(SORTS.map((sort) => sort.key)).toEqual([
       'top',
       'brulant',
@@ -29,7 +29,11 @@ describe('the sorts of « À la une » (issue #195)', () => {
     expect(lists.top).toBe(theEdition().stories);
   });
 
-  test('the labels are the reader-facing French names — Nouveau is « Tous »', () => {
-    expect(SORTS.map((sort) => sort.label)).toEqual(['Top', 'Brûlant', 'Tous']);
+  test('the labels are the reader-facing French names — the documented vocabulary', () => {
+    expect(SORTS.map((sort) => sort.label)).toEqual([
+      'Top',
+      'Brûlant',
+      'Nouveau',
+    ]);
   });
 });

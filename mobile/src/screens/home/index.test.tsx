@@ -114,7 +114,7 @@ describe('Home', () => {
   });
 
   // The row order, read from the rendered titles (issue #197): the
-  // fixture's Brûlant/Top pool and its Tous pool differ in order only.
+  // fixture's Brûlant/Top pool and its Nouveau pool differ in order only.
   function rowOrder(): string[] {
     return screen
       .getAllByText(/^(Le budget 2027|Le cyclone Veda)/)
@@ -138,7 +138,7 @@ describe('Home', () => {
     await screen.findByText('Dernier point à 14h');
 
     await fireEvent.press(screen.getByTestId('sort-segment-2'));
-    // Tous — pure chronology: the fixture's latestStories order.
+    // Nouveau — pure chronology: the fixture's latestStories order.
     expect(rowOrder()).toEqual(['cyclone', 'budget']);
 
     await fireEvent.press(screen.getByTestId('sort-segment-0'));
