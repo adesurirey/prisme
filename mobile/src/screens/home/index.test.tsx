@@ -5,6 +5,7 @@ import {
   waitFor,
 } from '@testing-library/react-native';
 import { File } from 'expo-file-system';
+import { FlatList } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import fixtureEdition from '@/data/__fixtures__/edition.json';
 import fixtureOutlets from '@/data/__fixtures__/outlets.json';
@@ -109,5 +110,52 @@ describe('Home', () => {
       }),
     );
     expect(mockPush).toHaveBeenCalledWith('/story/b0a1d2e3f4a5');
+  });
+
+  // The row order, read from the rendered titles (issue #197): the
+  // fixture's Brûlant/Top pool and its Tous pool differ in order only.
+  function rowOrder(): string[] {
+    return screen
+      .getAllByText(/^(Le budget 2027|Le cyclone Veda)/)
+      .map((title) =>
+        title.props.children.startsWith('Le budget') ? 'budget' : 'cyclone',
+      );
+  }
+
+  it('floats the switcher with Brûlant selected at launch (#197)', async () => {
+    await renderHome();
+
+    await screen.findByText('Dernier point à 14h');
+    expect(rowOrder()).toEqual(['budget', 'cyclone']);
+    expect(
+      screen.getByTestId('sort-segment-1').props.accessibilityState,
+    ).toEqual({ selected: true });
+  });
+
+  it('tapping a sort swaps the rows in place (#197)', async () => {
+    await renderHome();
+    await screen.findByText('Dernier point à 14h');
+
+    await fireEvent.press(screen.getByTestId('sort-segment-2'));
+    // Tous — pure chronology: the fixture's latestStories order.
+    expect(rowOrder()).toEqual(['cyclone', 'budget']);
+
+    await fireEvent.press(screen.getByTestId('sort-segment-0'));
+    // Top — the fixture's stories pool: budget back on top.
+    expect(rowOrder()).toEqual(['budget', 'cyclone']);
+  });
+
+  it('lands the switched list at its top (#197)', async () => {
+    const scrollToOffset = jest.spyOn(FlatList.prototype, 'scrollToOffset');
+    await renderHome();
+    await screen.findByText('Dernier point à 14h');
+    scrollToOffset.mockClear();
+
+    await fireEvent.press(screen.getByTestId('sort-segment-2'));
+
+    expect(scrollToOffset).toHaveBeenCalledWith({
+      offset: 0,
+      animated: false,
+    });
   });
 });

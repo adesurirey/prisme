@@ -1,5 +1,6 @@
 import type { Story } from '@prisme/domain';
 import { useRouter } from 'expo-router';
+import { useRef, useState } from 'react';
 import {
   ActivityIndicator,
   FlatList,
@@ -17,7 +18,9 @@ import {
   HOME_TITLE_TOP_PADDING,
   HomeHeader,
 } from '@/chrome/HomeHeader';
+import { SortSwitcher } from '@/chrome/SortSwitcher';
 import { useEdition } from '@/data/use-edition';
+import { DEFAULT_SORT_INDEX, SORTS, sortLists } from '@/sorts';
 import { useTheme } from '@/theme';
 
 // The data-layer proof surface (issue #179): the Edition client drives the
@@ -47,6 +50,14 @@ export function Home() {
   const router = useRouter();
   const theme = useTheme();
   const insets = useSafeAreaInsets();
+  // The active sort — Brûlant at launch (issue #197); a tap swaps the
+  // list in place and the landed list resets to its top.
+  const [sortIndex, setSortIndex] = useState(DEFAULT_SORT_INDEX);
+  const listRef = useRef<FlatList<Story>>(null);
+  const switchSort = (index: number) => {
+    setSortIndex(index);
+    listRef.current?.scrollToOffset({ offset: 0, animated: false });
+  };
 
   if (phase.status === 'loading') {
     return (
@@ -73,11 +84,13 @@ export function Home() {
   }
 
   const { edition, builtAt } = phase.snapshot;
+  const lists = sortLists(edition);
   return (
     <View style={[styles.container, { backgroundColor: theme.canvas }]}>
       <FlatList
+        ref={listRef}
         testID="stories"
-        data={edition.feedStories}
+        data={lists[SORTS[sortIndex].key]}
         keyExtractor={(story: Story) => story.id}
         refreshing={refreshing}
         onRefresh={refresh}
@@ -85,6 +98,8 @@ export function Home() {
           // The title block sits where the old bar had it; it is list
           // content and scrolls away with the stories (issue #196).
           paddingTop: insets.top + HOME_TITLE_TOP_PADDING,
+          // The last row must clear the floating switcher (issue #197).
+          paddingBottom: insets.bottom + 72,
         }}
         ListHeaderComponent={
           <View style={styles.titleBlock}>
@@ -107,6 +122,14 @@ export function Home() {
       />
       {/* The pills only — a totally transparent overlay (issue #196). */}
       <HomeHeader />
+      {/* The sort switcher, pinned above the bottom safe area, floating
+          over the list with no background of its own (issue #197). */}
+      <View
+        pointerEvents="box-none"
+        style={[styles.switcher, { bottom: insets.bottom + 12 }]}
+      >
+        <SortSwitcher index={sortIndex} onSwitch={switchSort} />
+      </View>
     </View>
   );
 }
@@ -141,6 +164,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 14,
     fontSize: 17,
+  },
+  switcher: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    alignItems: 'center',
   },
   message: {
     fontSize: 16,
