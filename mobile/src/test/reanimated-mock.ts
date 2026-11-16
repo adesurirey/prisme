@@ -31,6 +31,22 @@ export const reanimatedMock = {
   useSharedValue: <T>(initial: T): SharedValue<T> => ({ value: initial }),
   useAnimatedStyle: () => ({}),
 
+  // The interpolation the drawer's page-card style uses (issue #198):
+  // piecewise-linear with clamping at the input ends.
+  interpolate: (value: number, input: number[], output: number[]): number => {
+    if (value <= input[0]) return output[0];
+    const last = input.length - 1;
+    if (value >= input[last]) return output[last];
+    for (let i = 1; i < input.length; i++) {
+      if (value < input[i]) {
+        const t = (value - input[i - 1]) / (input[i] - input[i - 1]);
+        return output[i - 1] + t * (output[i] - output[i - 1]);
+      }
+    }
+    return output[last];
+  },
+  Extrapolation: { CLAMP: 'clamp', EXTEND: 'extend', IDENTITY: 'identity' },
+
   withSequence: (...steps: unknown[]) => steps.at(-1),
   withSpring: (toValue: number) => toValue,
   withTiming: (toValue: number) => toValue,

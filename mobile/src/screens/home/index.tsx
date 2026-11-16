@@ -13,12 +13,17 @@ import {
   Text,
   View,
 } from 'react-native';
-import { Drawer } from 'react-native-drawer-layout';
+import { Drawer, useDrawerProgress } from 'react-native-drawer-layout';
 import type {
   PagerViewOnPageSelectedEvent,
   PageScrollStateChangedNativeEvent,
 } from 'react-native-pager-view';
 import PagerView from 'react-native-pager-view';
+import Reanimated, {
+  Extrapolation,
+  interpolate,
+  useAnimatedStyle,
+} from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 // Native-driven onScroll on a FlatList requires the Animated wrapper.
@@ -54,6 +59,10 @@ import { useTheme } from '@/theme';
 // the standalone right-hand drawer, back type — the page slides aside
 // over the dimmed tile. Only the home: story and static pushes stay
 // untouched above it.
+
+// The corner radius the sliding page rounds to while the tile is
+// open — the card edge of the ChatGPT model (issue #198).
+const PAGE_CARD_RADIUS = 24;
 
 /** The « Dernier point » stamp — the rendered artifact's build instant,
  *  hour only, in Paris time like every Prisme date: the point is hourly,
@@ -96,6 +105,30 @@ export function Home() {
     );
     return () => subscription.remove();
   }, [menuOpen]);
+
+  // The sliding page reads as a card (issue #198, the ChatGPT model):
+  // as the drawer opens, the page's leading edge rounds off and casts
+  // a soft shadow onto the tile — full-bleed again when closed. The
+  // dim rides the page (the library draws it over the content only),
+  // so the tile beneath stays bright like the model.
+  const progress = useDrawerProgress();
+  const pageCard = useAnimatedStyle(() => {
+    const radius = interpolate(
+      progress.value,
+      [0, 1],
+      [0, PAGE_CARD_RADIUS],
+      Extrapolation.CLAMP,
+    );
+    return {
+      borderRadius: radius,
+      shadowOpacity: interpolate(
+        progress.value,
+        [0, 1],
+        [0, 0.18],
+        Extrapolation.CLAMP,
+      ),
+    };
+  });
   const pagerRef = useRef<PagerView>(null);
   // One list per page — the landed page's list is what the reset
   // scrolls; the pager keeps the neighbours mounted natively.
@@ -182,7 +215,14 @@ export function Home() {
   // The home — extracted so the drawer wraps it whole, chrome
   // included: the pills ride the page as it slides aside (issue #198).
   const home = (
-    <View style={[styles.container, { backgroundColor: theme.canvas }]}>
+    <Reanimated.View
+      style={[
+        styles.container,
+        styles.pageCard,
+        pageCard,
+        { backgroundColor: theme.canvas },
+      ]}
+    >
       <PagerView
         ref={pagerRef}
         style={styles.pager}
@@ -258,7 +298,7 @@ export function Home() {
       >
         <SortSwitcher index={sortIndex} onSwitch={switchSort} />
       </View>
-    </View>
+    </Reanimated.View>
   );
   return (
     <Drawer
@@ -287,6 +327,15 @@ export function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  // The card treatment of the sliding page (issue #198): the radius
+  // and shadow opacity animate with the drawer progress (pageCard);
+  // overflow clips the pager and overlays to the rounding edge.
+  pageCard: {
+    overflow: 'hidden',
+    shadowColor: '#000',
+    shadowOffset: { width: 3, height: 0 },
+    shadowRadius: 24,
   },
   pager: {
     flex: 1,

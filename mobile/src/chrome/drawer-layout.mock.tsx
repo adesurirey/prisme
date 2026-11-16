@@ -5,8 +5,9 @@
  * renders the same contract in a plain View and records the latest
  * props, where tests assert the pinned shape (right, back, 78 %, dim).
  * The native pan, the scrim press and the dim live natively; they are
- * device-verified, not unit-tested. Wired in package.json's
- * moduleNameMapper.
+ * device-verified, not unit-tested. `useDrawerProgress` rests at 0 —
+ * the page-card rounding the home derives from it collapses to zero.
+ * Wired in package.json's moduleNameMapper.
  */
 
 import type { ReactNode } from 'react';
@@ -41,3 +42,7 @@ export function MockDrawer(props: MockDrawerProps) {
 }
 
 export const Drawer = MockDrawer;
+
+/** The progress shared value, closed — the home's animated page-card
+ * style reads it; in Jest the Reanimated mock collapses that style. */
+export const useDrawerProgress = (): { value: number } => ({ value: 0 });
