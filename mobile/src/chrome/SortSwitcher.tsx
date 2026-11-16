@@ -43,11 +43,6 @@ export function SortSwitcher({
 
   if (Platform.OS === 'ios') {
     return (
-      // The Photos treatment: the glass control rides on a chrome
-      // material capsule. Bare glass melts into a white canvas and
-      // lets list text read straight through it — the material pops
-      // the control over the scroll (owner's call, reversing the 5c
-      // « no background of its own » line).
       <View style={styles.shell}>
         <BlurView
           intensity={25}
@@ -60,15 +55,14 @@ export function SortSwitcher({
           values={SORTS.map((sort) => sort.label)}
           selectedIndex={index}
           style={styles.control}
+          // The control's own track background paints over our blur
+          // material (an inner capsule edge, visible in dark) — the
+          // material is the track.
+          backgroundColor="transparent"
           // Same size as the header pills (GlassPillText); regular
           // weight, like Photos' labels. Colors stay native.
           fontStyle={{ fontSize: 17 }}
           activeFontStyle={{ fontSize: 17 }}
-          // Photos' selected pill, translucent over the glass (the
-          // prop maps to setSelectedSegmentTintColor): a gray in light
-          // (darker than the track), a white veil in dark (lighter
-          // than the track — never undefined: nil hands the pill to
-          // the app's blue system tint, simulator-checked).
           tintColor={
             scheme === 'dark'
               ? 'rgba(255, 255, 255, 0.2)'
@@ -119,7 +113,6 @@ const styles = StyleSheet.create({
   shell: {
     borderRadius: 999,
     paddingHorizontal: 0,
-    paddingVertical: 5,
     overflow: 'hidden',
   },
   material: {
