@@ -3,6 +3,23 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { BurgerTile } from './BurgerTile';
 
+// The tile imports the header's geometry constants (the wordmark's
+// alignment), which pull in ModeButton's native sheet and haptics
+// (issue #196) — Jest gets the established stand-ins.
+jest.mock('@lodev09/react-native-true-sheet', () => ({
+  TrueSheet: require('@/chrome/true-sheet.mock').MockTrueSheet,
+}));
+
+jest.mock(
+  'react-native-reanimated',
+  () => require('@/test/reanimated-mock').reanimatedMock,
+);
+
+jest.mock('expo-haptics', () => ({
+  impactAsync: jest.fn(async () => undefined),
+  ImpactFeedbackStyle: { Light: 'light', Medium: 'medium', Heavy: 'heavy' },
+}));
+
 // The tile pushes the static routes (issue #195 routes) through the
 // router — the seam is the push call itself, no navigation runtime.
 const mockPush = jest.fn();

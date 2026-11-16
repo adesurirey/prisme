@@ -12,7 +12,15 @@ import { SymbolView } from 'expo-symbols';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '@/theme';
+import { HOME_TITLE_TOP_PADDING } from './HomeHeader';
 import { PrismeWordmark } from './PrismeWordmark';
+
+// The wordmark rides the same line as the page's burger pill (issue
+// #198, the ChatGPT model): the header's pills row is 36pt high and
+// centers its 44pt pills, so that center sits at
+// insets.top + HOME_TITLE_TOP_PADDING + 18. The wordmark row is the
+// pill's own 44pt and starts 4pt higher to share the exact center.
+const WORDMARK_ROW_OFFSET = HOME_TITLE_TOP_PADDING - 4;
 
 const TILES = [
   {
@@ -41,12 +49,12 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
         styles.tile,
         {
           backgroundColor: theme.tile,
-          paddingTop: insets.top + 24,
+          paddingTop: insets.top + WORDMARK_ROW_OFFSET,
           paddingBottom: insets.bottom + 24,
         },
       ]}
     >
-      <View style={styles.wordmark}>
+      <View style={styles.wordmarkRow}>
         {/* The title of the tile — sized like the ChatGPT model's header
             title, well above the nav-scale default (issue #198). */}
         <PrismeWordmark color={theme.ink} width={140} />
@@ -91,7 +99,11 @@ const styles = StyleSheet.create({
   tile: {
     flex: 1,
   },
-  wordmark: {
+  wordmarkRow: {
+    // The pill's own height — the wordmark centers on the burger's
+    // exact line (see WORDMARK_ROW_OFFSET above).
+    height: 44,
+    alignItems: 'center',
     paddingHorizontal: 24,
   },
   rows: {
