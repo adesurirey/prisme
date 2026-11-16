@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-16T03:01:39.884Z",
+  "builtAt": "2026-11-16T04:01:29.113Z",
   "latestStories": [
     {
       "id": "7fc9e89b5e29",
@@ -26,7 +26,7 @@
           "url": "https://www.lefigaro.fr/international/honduras-une-caravane-d-une-centaine-de-personnes-part-vers-les-etats-unis-20261116",
           "publishedAt": "2026-11-16T00:08:06.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/16/cac3de4b1ce48c765baaf2811af5fcb12ea1e061ef0e65c30ade3d511f801056.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -854,6 +854,18 @@
       "storyDay": "2026-11-15",
       "articles": [
         {
+          "id": "84f64b2db0fd",
+          "outletId": "le-monde",
+          "headline": "Coup dur pour Amazon avec la perte de 40 satellites due à l’échec de la fusée Vulcan",
+          "url": "https://www.lemonde.fr/sciences/article/2026/11/16/coup-dur-pour-amazon-avec-la-perte-de-40-satellites-due-a-l-echec-de-la-fusee-vulcan_6811204_1650684.html",
+          "publishedAt": "2026-11-16T03:11:01.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/01/21/829/0/4501/2250/644/322/60/0/1d3c0f5_ftp-1-ietuiidxf7ho-2026-01-21t191050z-673613364-rc2fudas4uvp-rtrmadp-3-space-blue-origin-satellites.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        },
+        {
           "id": "0f9c5018095b",
           "outletId": "le-parisien",
           "headline": "« Nous n’avons pas été à la hauteur » : Amazon perd 40 satellites dans l’espace après l’échec d’une fusée Vulcan",
@@ -878,40 +890,10 @@
         }
       ],
       "topicId": "2a6c5a5aff80",
-      "titledArticleCount": 2,
+      "titledArticleCount": 3,
       "section": "science",
       "everInEdition": true,
       "activity": [
-        {
-          "start": 1794704400000,
-          "end": 1794708000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794708000000,
-          "end": 1794711600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794711600000,
-          "end": 1794715200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
         {
           "start": 1794715200000,
           "end": 1794718800000,
@@ -1115,6 +1097,325 @@
         {
           "start": 1794787200000,
           "end": 1794790800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1794790800000,
+          "end": 1794794400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794794400000,
+          "end": 1794798000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794798000000,
+          "end": 1794801600000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        }
+      ]
+    },
+    {
+      "id": "22233715ec35",
+      "slug": "l-algerie-menace-le-maroc-et-vise-les-fabricants-de-drogue-a-la",
+      "title": "L’Algérie menace le Maroc et vise les fabricants de drogue à la source",
+      "createdAt": "2026-11-16T04:01:29.113Z",
+      "storyDay": "2026-11-15",
+      "articles": [
+        {
+          "id": "5b6011a99a4a",
+          "outletId": "le-parisien",
+          "headline": "« L’armée est en première ligne » : l’Algérie vise le Maroc et menace de s’en prendre aux fabricants de drogue à la « source »",
+          "url": "https://www.leparisien.fr/faits-divers/larmee-est-en-premiere-ligne-lalgerie-vise-le-maroc-et-menace-de-sen-prendre-aux-fabricants-de-drogue-a-la-source-16-11-2026-O5B7WCQKT5CQHJZMJA6IW6COZY.php",
+          "publishedAt": "2026-11-16T04:01:29.113Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "16418d659dc2",
+          "outletId": "20-minutes",
+          "headline": "Les yeux rivés sur le Maroc, l’Algérie hausse le ton contre la drogue",
+          "url": "https://www.20minutes.fr/monde/maroc/4263013-20261116-yeux-rives-maroc-algerie-hausse-contre-drogue?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-16T03:34:56.000Z",
+          "imageUrl": "https://img.20mn.fr/ZJwUCCKdQ3GegYxm19zPjSk/1200x768_alger-algerie-20-juillet-2026-le-president-algerien-abdelmadjid-tebboune-a-officiellement-accueilli-le-premier-ministre-espagnol-pedro-sanchez-a-la-presidence-de-la-republique-lundi-alors-que-le-dirigeant-espagnol-entamait-une-visite-de-travail-et-d-amitie-en-algerie-la-reception-officielle-marque-le-debut-des-discussions-bilaterales-visant-a-renforcer-la-cooperation-et-les-relations-entre-les-deux-pays-pp-agency-sipa-12978-credit-pp-agency-sipa-2607201707",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "ee9d7f77bee3",
+          "outletId": "le-figaro",
+          "headline": "L'Algérie menace de s'en prendre aux fabricants de drogue à la «source»",
+          "url": "https://www.lefigaro.fr/flash-actu/l-algerie-menace-de-s-en-prendre-aux-fabricants-de-drogue-a-la-source-20261115",
+          "publishedAt": "2026-11-15T22:01:48.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/15/03e26d31c0dac0c5ccfb89023556d53af246c8217270219dce1cad2e070b487a.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "22233715ec35",
+      "titledArticleCount": 3,
+      "section": "world",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794718800000,
+          "end": 1794722400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794722400000,
+          "end": 1794726000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794726000000,
+          "end": 1794729600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794729600000,
+          "end": 1794733200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794733200000,
+          "end": 1794736800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794736800000,
+          "end": 1794740400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794740400000,
+          "end": 1794744000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794744000000,
+          "end": 1794747600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794747600000,
+          "end": 1794751200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794751200000,
+          "end": 1794754800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794754800000,
+          "end": 1794758400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794758400000,
+          "end": 1794762000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794762000000,
+          "end": 1794765600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794765600000,
+          "end": 1794769200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794769200000,
+          "end": 1794772800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794772800000,
+          "end": 1794776400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794776400000,
+          "end": 1794780000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794780000000,
+          "end": 1794783600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1794783600000,
+          "end": 1794787200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794787200000,
+          "end": 1794790800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794790800000,
+          "end": 1794794400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794794400000,
+          "end": 1794798000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794798000000,
+          "end": 1794801600000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1794801600000,
+          "end": 1794805200000,
           "counts": {
             "gauche": 0,
             "centre": 1,
@@ -2291,7 +2592,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/11/15/gaza-royaume-uni-italie-australie-et-canada-appellent-israel-a-permettre-un-acces-humanitaire-immediat-et-sans-entrave-dans-le-territoire-palestinien_6811057_3210.html",
           "publishedAt": "2026-11-15T21:01:00.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/15/450/0/5410/2705/644/322/60/0/5e49415_ftp-1-nnth1yr5p5fy-afp-d7j844f.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -3872,7 +4173,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/11/15/au-yemen-le-camp-gouvernemental-redeploie-des-renforts-autour-d-aden-menacee-par-les-houthistes_6811027_3211.html",
           "publishedAt": "2026-11-15T20:16:11.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/13/115/0/3672/1836/644/322/60/0/00ebbb2_ftp-1-12z7ngo9pnue-2026-11-13t161552z-916091977-rc20noa79hbc-rtrmadp-3-ian-crisis-yemen-aden.JPG",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -11074,7 +11375,7 @@
           "url": "https://www.20minutes.fr/politique/4262935-20261115-finances-publiques-revalorisations-smic-bas-salaires-couteront-plus-milliard-euros?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-15T09:38:56.000Z",
           "imageUrl": "https://img.20mn.fr/lYnq_ML6RkmMHMlA4Kk0Ryk/1200x768_le-jeune-ministre-francais-des-comptes-publics-david-amiel-prend-la-parole-lors-d-une-conference-de-presse-a-l-issue-de-la-reunion-hebdomadaire-du-cabinet-au-palais-de-l-elysee-a-paris-france-le-04-11-2026-jee-crcomi-20-credit-j-e-e-sipa-2611052122",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
@@ -11378,7 +11679,7 @@
           "url": "https://www.lefigaro.fr/sports/football/ligue-des-nations/france-turquie-le-rappel-a-l-ordre-de-konate-la-joie-touchante-de-kroupi-toutes-les-reactions-des-bleus-20261116",
           "publishedAt": "2026-11-16T01:20:14.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/11/16/8a9b26f2d8437b6e7345d2a9a1cb8cdead77f9b7082b2ce2c1a2be7779a4b75c.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -13350,653 +13651,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 9,
       "summarizedAt": "2026-11-15T14:01:23.104Z"
-    },
-    {
-      "id": "19784fa83629",
-      "slug": "gta-vi-sort-le-19-novembre",
-      "title": "GTA VI sort le 19 novembre",
-      "createdAt": "2026-11-15T05:01:21.771Z",
-      "storyDay": "2026-11-15",
-      "articles": [
-        {
-          "id": "33c1610bde44",
-          "outletId": "le-figaro",
-          "headline": "«Un phénomène de société dont on va parler pendant des années» : GTA 6 s’apprête à cannibaliser Netflix, TikTok et toute l’industrie du divertissement",
-          "url": "https://www.lefigaro.fr/secteur/high-tech/un-phenomene-de-societe-dont-on-va-parler-pendant-des-annees-gta-6-s-apprete-a-cannibaliser-netflix-tiktok-et-toute-l-industrie-du-divertissement-20261115",
-          "publishedAt": "2026-11-15T17:25:18.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/11/13/57e62e4fd48cd92928b93976d8e6b51c4cc6095958844a1aa75d372b7f819c88.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture",
-          "everFrontPage": true
-        },
-        {
-          "id": "53d2aadf6850",
-          "outletId": "le-monde",
-          "headline": "« GTA Online » : à quelques jours de la sortie de « GTA VI », les joueurs du mode en ligne se préparent à « la dernière danse »",
-          "url": "https://www.lemonde.fr/pixels/article/2026/11/15/a-quelques-jours-de-la-sortie-de-gta-vi-les-joueurs-de-gta-online-entre-nostalgie-et-excitation-chaque-moment-passe-en-jeu-est-peut-etre-le-dernier_6811016_4408996.html",
-          "publishedAt": "2026-11-15T12:54:55.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/13/106/0/3379/1689/644/322/60/0/9b4352d_upload-1-d1ijzskuzxby-capture-d-ecran-79.png",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "072ea9148236",
-          "outletId": "europe-1",
-          "headline": "Développement, reports, carte, personnages... Tout ce qu'il faut savoir sur GTA VI avant sa sortie",
-          "url": "https://www.europe1.fr/culture/developpement-reports-carte-personnages-tout-ce-quil-faut-savoir-sur-gta-vi-avant-sa-sortie-1231286?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-15T05:00:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/13/18/jason_and_lucia_robbery_with_logo_landscape_1_6a82e9933650c_6af74e35b43ac.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "a917f0af05ad",
-          "outletId": "courrier-international",
-          "headline": "“Grand Theft Auto VI” sort le 19 novembre : attendez-vous à des absences au bureau !",
-          "url": "https://www.courrierinternational.com/article/jeux-video-grand-theft-auto-vi-sort-le-19-novembre-attendez-vous-a-des-absences-au-bureau_285467",
-          "publishedAt": "2026-11-15T04:00:09.000Z",
-          "imageUrl": "https://focus.courrierinternational.com/2026/11/13/0/0/7808/5208/644/0/60/0/aea9311_upload-1-cenfp22sqoun-gettyimages-2302743425.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        }
-      ],
-      "topicId": "19784fa83629",
-      "titledArticleCount": 4,
-      "section": "culture",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794679200000,
-          "end": 1794682800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794682800000,
-          "end": 1794686400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794686400000,
-          "end": 1794690000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794690000000,
-          "end": 1794693600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794693600000,
-          "end": 1794697200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794697200000,
-          "end": 1794700800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794700800000,
-          "end": 1794704400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794704400000,
-          "end": 1794708000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794708000000,
-          "end": 1794711600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794711600000,
-          "end": 1794715200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794715200000,
-          "end": 1794718800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794718800000,
-          "end": 1794722400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1794722400000,
-          "end": 1794726000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794726000000,
-          "end": 1794729600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794729600000,
-          "end": 1794733200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794733200000,
-          "end": 1794736800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794736800000,
-          "end": 1794740400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794740400000,
-          "end": 1794744000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794744000000,
-          "end": 1794747600000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794747600000,
-          "end": 1794751200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794751200000,
-          "end": 1794754800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794754800000,
-          "end": 1794758400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794758400000,
-          "end": 1794762000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794762000000,
-          "end": 1794765600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        }
-      ]
-    },
-    {
-      "id": "9b3586d9bcd1",
-      "slug": "macron-appelle-a-l-unite-avant-l-election-du-secretaire-general",
-      "title": "Emmanuel Macron appelle à l'unité avant l'élection du secrétaire général de la Francophonie",
-      "createdAt": "2026-11-15T05:01:21.771Z",
-      "storyDay": "2026-11-15",
-      "articles": [
-        {
-          "id": "b352a4ea0b27",
-          "outletId": "liberation",
-          "headline": "Sommet de la francophonie : à Phnom Penh, une succession sous tension",
-          "url": "https://www.liberation.fr/international/sommet-de-la-francophonie-a-phnom-penh-une-succession-sous-tension-20261115_NRACYD5AQNDZLBE2EBXZQXC7Z4/",
-          "publishedAt": "2026-11-15T18:24:44.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "dac7430e15cf",
-          "outletId": "franceinfo",
-          "headline": "Au Cambodge, Emmanuel Macron appelle à l'\"unité\" de l'Organisation internationale de la francophonie, secouée par une rivalité entre la RDC et le Rwanda",
-          "url": "https://www.franceinfo.fr/culture/patrimoine/francophonie/au-cambodge-emmanuel-macron-appelle-a-l-unite-de-l-organisation-internationale-de-la-francophonie-secouee-par-une-rivalite-entre-la-rdc-et-le-rwanda_8283593.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-15T17:48:41.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/-1IG2Yljxs6gL3AMCCaksN8HMoQ/0x0:5982x3364/432x243/filters:format(jpg)/2026/11/15/6af9c13b18c1b839628953.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "064ff4b1bd03",
-          "outletId": "rfi",
-          "headline": "Francophonie: à Phnom Penh, dernières tractations avant la désignation du prochain secrétaire général",
-          "url": "https://www.rfi.fr/fr/asie-pacifique/20261115-francophonie-%C3%A0-phnom-penh-derni%C3%A8res-tractations-avant-la-d%C3%A9signation-du-prochain-secr%C3%A9taire-g%C3%A9n%C3%A9ral",
-          "publishedAt": "2026-11-15T15:17:18.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/9bc748a0-e107-11f1-a1b1-f71d22e7fea9/w:1024/p:16x9/OIF-CAMBODGE-KAGAME-TOUADERA-TSHISEKEDI.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "fef8cb8a7ac2",
-          "outletId": "20-minutes",
-          "headline": "Sommet de la Francophonie : Macron prône « le consensus » face aux tensions entre la RDC et le Rwanda",
-          "url": "https://www.20minutes.fr/monde/4262949-20261115-macron-prone-consensus-ouverture-sommet-francophonie-face-tensions-entre-rdc-rwanda?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-15T13:45:58.000Z",
-          "imageUrl": "https://img.20mn.fr/s7HQsMPTTymyQ4roIRu1gik/1200x768_le-president-francais-emmanuel-macron-fait-un-geste-lors-d-un-discours-lors-de-la-ceremonie-d-ouverture-du-sommet-francotech-a-phnom-penh-au-cambodge-le-dimanche-15-novembre-2026-photo-ap-heng-sinith-hs119-26319459197138-2611151351",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "e408561da96b",
-          "outletId": "le-figaro",
-          "headline": "Francophonie : Macron appelle à l'«unité» et au «consensus», avant l'élection du secrétaire général",
-          "url": "https://www.lefigaro.fr/flash-actu/francophonie-macron-appelle-a-l-unite-et-au-consensus-avant-l-election-du-secretaire-general-20261115",
-          "publishedAt": "2026-11-15T03:46:44.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1974_crop/2026/11/15/39fdb5dc32f4f008de5b4d633df24e1cf3fc9fd6fb7c14dde15e7d5ca89be4d6.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "5f33ff5f5aff",
-          "outletId": "ouest-france",
-          "headline": "Francophonie : Emmanuel Macron appelle à l’« unité » et au « consensus », avant l’élection du secrétaire général",
-          "url": "https://www.ouest-france.fr/politique/emmanuel-macron/francophonie-emmanuel-macron-appelle-a-l-unite-et-au-consensus-avant-lelection-du-secretaire-general-15061488-e0a6-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-15T03:45:18.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYzY1NjA0ZmM3NzJhOTUwMDljNmMwZDYzZWEzMGI1OGE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=66599f9083385af5c8e8ac9a34fef2e77498f3dc125c9ca760e829586c8c7d72",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "9b3586d9bcd1",
-      "titledArticleCount": 6,
-      "section": "world",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794682800000,
-          "end": 1794686400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794686400000,
-          "end": 1794690000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794690000000,
-          "end": 1794693600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794693600000,
-          "end": 1794697200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794697200000,
-          "end": 1794700800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794700800000,
-          "end": 1794704400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794704400000,
-          "end": 1794708000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794708000000,
-          "end": 1794711600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794711600000,
-          "end": 1794715200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 1
-          },
-          "total": 2
-        },
-        {
-          "start": 1794715200000,
-          "end": 1794718800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794718800000,
-          "end": 1794722400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794722400000,
-          "end": 1794726000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794726000000,
-          "end": 1794729600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794729600000,
-          "end": 1794733200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794733200000,
-          "end": 1794736800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794736800000,
-          "end": 1794740400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794740400000,
-          "end": 1794744000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794744000000,
-          "end": 1794747600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794747600000,
-          "end": 1794751200000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794751200000,
-          "end": 1794754800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794754800000,
-          "end": 1794758400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794758400000,
-          "end": 1794762000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794762000000,
-          "end": 1794765600000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794765600000,
-          "end": 1794769200000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Le sommet de Phnom Penh s'ouvre sur fond de tensions politiques entre le Rwanda et la RDC pour la succession à la tête de l'Organisation internationale de la francophonie.",
-          "Les initiatives de compromis portées par la France peinent à aboutir à la veille de la désignation du nouveau secrétaire général prévue le lundi 16 novembre.",
-          "Emmanuel Macron a plaidé pour préserver l'unité de l'institution face aux rivalités entre les deux États africains qui relèguent les enjeux de la langue française au second plan."
-        ],
-        "centre": [
-          "Le XXe sommet de l'OIF à Phnom Penh se tient sous tension en raison de la rivalité entre la RDC et le Rwanda pour le poste de secrétaire général.",
-          "Emmanuel Macron a multiplié les échanges, notamment avec le président rwandais Paul Kagame, pour promouvoir le consensus et l'unité de l'organisation.",
-          "Kigali maintient la candidature de Louise Mushikiwabo, tandis que la RDC envisage un report de voix en cas de vote lors du huis clos."
-        ],
-        "droite": [
-          "Le président français a ouvert le XXe sommet de l'OIF au Cambodge en appelant à l'« unité » et au « consensus » avant l'élection du secrétaire général.",
-          "L'élargissement et l'ouverture de l'organisation exigent de bâtir un accord pour préserver l'union de l'institution selon les déclarations présidentielles."
-        ]
-      },
-      "differences": [
-        "La gauche insiste en priorité sur la succession sous tension et l'échec des compromis français face aux rivalités entre le Rwanda et la RDC.",
-        "Le centre détaille les tractations diplomatiques en cours à Phnom Penh, incluant les calculs des délégations et le rôle des différents acteurs étatiques.",
-        "La droite focalise son traitement sur les déclarations officielles d'Emmanuel Macron en faveur de l'unité et du consensus pour faire face aux tensions de l'OIF."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 6,
-      "summarizedAt": "2026-11-15T20:01:25.160Z"
     }
   ],
   "feedStories": [
@@ -14430,7 +14084,7 @@
           "url": "https://www.lefigaro.fr/sports/football/ligue-des-nations/france-turquie-le-rappel-a-l-ordre-de-konate-la-joie-touchante-de-kroupi-toutes-les-reactions-des-bleus-20261116",
           "publishedAt": "2026-11-16T01:20:14.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/11/16/8a9b26f2d8437b6e7345d2a9a1cb8cdead77f9b7082b2ce2c1a2be7779a4b75c.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -16428,7 +16082,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/11/15/au-yemen-le-camp-gouvernemental-redeploie-des-renforts-autour-d-aden-menacee-par-les-houthistes_6811027_3211.html",
           "publishedAt": "2026-11-15T20:16:11.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/13/115/0/3672/1836/644/322/60/0/00ebbb2_ftp-1-12z7ngo9pnue-2026-11-13t161552z-916091977-rc20noa79hbc-rtrmadp-3-ian-crisis-yemen-aden.JPG",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -18437,6 +18091,585 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 6,
       "summarizedAt": "2026-11-15T23:01:29.559Z"
+    },
+    {
+      "id": "22233715ec35",
+      "slug": "l-algerie-menace-le-maroc-et-vise-les-fabricants-de-drogue-a-la",
+      "title": "L’Algérie menace le Maroc et vise les fabricants de drogue à la source",
+      "createdAt": "2026-11-16T04:01:29.113Z",
+      "storyDay": "2026-11-15",
+      "articles": [
+        {
+          "id": "5b6011a99a4a",
+          "outletId": "le-parisien",
+          "headline": "« L’armée est en première ligne » : l’Algérie vise le Maroc et menace de s’en prendre aux fabricants de drogue à la « source »",
+          "url": "https://www.leparisien.fr/faits-divers/larmee-est-en-premiere-ligne-lalgerie-vise-le-maroc-et-menace-de-sen-prendre-aux-fabricants-de-drogue-a-la-source-16-11-2026-O5B7WCQKT5CQHJZMJA6IW6COZY.php",
+          "publishedAt": "2026-11-16T04:01:29.113Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "16418d659dc2",
+          "outletId": "20-minutes",
+          "headline": "Les yeux rivés sur le Maroc, l’Algérie hausse le ton contre la drogue",
+          "url": "https://www.20minutes.fr/monde/maroc/4263013-20261116-yeux-rives-maroc-algerie-hausse-contre-drogue?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-16T03:34:56.000Z",
+          "imageUrl": "https://img.20mn.fr/ZJwUCCKdQ3GegYxm19zPjSk/1200x768_alger-algerie-20-juillet-2026-le-president-algerien-abdelmadjid-tebboune-a-officiellement-accueilli-le-premier-ministre-espagnol-pedro-sanchez-a-la-presidence-de-la-republique-lundi-alors-que-le-dirigeant-espagnol-entamait-une-visite-de-travail-et-d-amitie-en-algerie-la-reception-officielle-marque-le-debut-des-discussions-bilaterales-visant-a-renforcer-la-cooperation-et-les-relations-entre-les-deux-pays-pp-agency-sipa-12978-credit-pp-agency-sipa-2607201707",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "ee9d7f77bee3",
+          "outletId": "le-figaro",
+          "headline": "L'Algérie menace de s'en prendre aux fabricants de drogue à la «source»",
+          "url": "https://www.lefigaro.fr/flash-actu/l-algerie-menace-de-s-en-prendre-aux-fabricants-de-drogue-a-la-source-20261115",
+          "publishedAt": "2026-11-15T22:01:48.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/15/03e26d31c0dac0c5ccfb89023556d53af246c8217270219dce1cad2e070b487a.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        }
+      ],
+      "topicId": "22233715ec35",
+      "titledArticleCount": 3,
+      "section": "world",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794718800000,
+          "end": 1794722400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794722400000,
+          "end": 1794726000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794726000000,
+          "end": 1794729600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794729600000,
+          "end": 1794733200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794733200000,
+          "end": 1794736800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794736800000,
+          "end": 1794740400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794740400000,
+          "end": 1794744000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794744000000,
+          "end": 1794747600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794747600000,
+          "end": 1794751200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794751200000,
+          "end": 1794754800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794754800000,
+          "end": 1794758400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794758400000,
+          "end": 1794762000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794762000000,
+          "end": 1794765600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794765600000,
+          "end": 1794769200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794769200000,
+          "end": 1794772800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794772800000,
+          "end": 1794776400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794776400000,
+          "end": 1794780000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794780000000,
+          "end": 1794783600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1794783600000,
+          "end": 1794787200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794787200000,
+          "end": 1794790800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794790800000,
+          "end": 1794794400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794794400000,
+          "end": 1794798000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794798000000,
+          "end": 1794801600000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1794801600000,
+          "end": 1794805200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        }
+      ]
+    },
+    {
+      "id": "2a6c5a5aff80",
+      "slug": "amazon-perd-40-satellites-dans-l-espace-apres-l-echec-de-la",
+      "title": "Amazon perd 40 satellites dans l'espace après l'échec de la fusée Vulcan",
+      "createdAt": "2026-11-16T00:01:28.831Z",
+      "storyDay": "2026-11-15",
+      "articles": [
+        {
+          "id": "84f64b2db0fd",
+          "outletId": "le-monde",
+          "headline": "Coup dur pour Amazon avec la perte de 40 satellites due à l’échec de la fusée Vulcan",
+          "url": "https://www.lemonde.fr/sciences/article/2026/11/16/coup-dur-pour-amazon-avec-la-perte-de-40-satellites-due-a-l-echec-de-la-fusee-vulcan_6811204_1650684.html",
+          "publishedAt": "2026-11-16T03:11:01.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/01/21/829/0/4501/2250/644/322/60/0/1d3c0f5_ftp-1-ietuiidxf7ho-2026-01-21t191050z-673613364-rc2fudas4uvp-rtrmadp-3-space-blue-origin-satellites.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        },
+        {
+          "id": "0f9c5018095b",
+          "outletId": "le-parisien",
+          "headline": "« Nous n’avons pas été à la hauteur » : Amazon perd 40 satellites dans l’espace après l’échec d’une fusée Vulcan",
+          "url": "https://www.leparisien.fr/sciences/nous-navons-pas-ete-a-la-hauteur-amazon-perd-40-satellites-dans-lespace-apres-lechec-dune-fusee-vulcan-16-11-2026-LI6HAZDTQFAGLBMKJYO3LIONTE.php",
+          "publishedAt": "2026-11-16T00:01:28.831Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "4ffa0a75a0f4",
+          "outletId": "le-figaro",
+          "headline": "«Nous n’avons pas été à la hauteur» : Amazon perd 40 satellites après une défaillance de la fusée Vulcan lors de son lancement",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/nous-n-avons-pas-ete-a-la-hauteur-amazon-perd-40-satellites-apres-une-defaillance-de-la-fusee-vulcan-lors-de-son-lancement-20261115",
+          "publishedAt": "2026-11-15T22:23:57.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1848_crop/2026/11/15/207c81cd49a3cdde68095a8aa96cc1e6585b35e8a5623455da5ed10e9cb42b67.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "2a6c5a5aff80",
+      "titledArticleCount": 3,
+      "section": "science",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1794715200000,
+          "end": 1794718800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794718800000,
+          "end": 1794722400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794722400000,
+          "end": 1794726000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794726000000,
+          "end": 1794729600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794729600000,
+          "end": 1794733200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794733200000,
+          "end": 1794736800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794736800000,
+          "end": 1794740400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794740400000,
+          "end": 1794744000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794744000000,
+          "end": 1794747600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794747600000,
+          "end": 1794751200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794751200000,
+          "end": 1794754800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794754800000,
+          "end": 1794758400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794758400000,
+          "end": 1794762000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794762000000,
+          "end": 1794765600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794765600000,
+          "end": 1794769200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794769200000,
+          "end": 1794772800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794772800000,
+          "end": 1794776400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794776400000,
+          "end": 1794780000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794780000000,
+          "end": 1794783600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1794783600000,
+          "end": 1794787200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794787200000,
+          "end": 1794790800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1794790800000,
+          "end": 1794794400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794794400000,
+          "end": 1794798000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1794798000000,
+          "end": 1794801600000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        }
+      ]
     },
     {
       "id": "d4573614daba",
@@ -22167,7 +22400,7 @@
           "url": "https://www.lefigaro.fr/international/honduras-une-caravane-d-une-centaine-de-personnes-part-vers-les-etats-unis-20261116",
           "publishedAt": "2026-11-16T00:08:06.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/16/cac3de4b1ce48c765baaf2811af5fcb12ea1e061ef0e65c30ade3d511f801056.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -22445,7 +22678,7 @@
           "url": "https://www.lemonde.fr/international/article/2026/11/15/gaza-royaume-uni-italie-australie-et-canada-appellent-israel-a-permettre-un-acces-humanitaire-immediat-et-sans-entrave-dans-le-territoire-palestinien_6811057_3210.html",
           "publishedAt": "2026-11-15T21:01:00.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/15/450/0/5410/2705/644/322/60/0/5e49415_ftp-1-nnth1yr5p5fy-afp-d7j844f.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
           "section": "world",
           "everFrontPage": true
@@ -22708,841 +22941,6 @@
           "total": 1
         }
       ]
-    },
-    {
-      "id": "d8310916452e",
-      "slug": "emmanuel-macron-denonce-ceux-qui-veulent-rationner-l-aide-a-l",
-      "title": "Emmanuel Macron dénonce ceux qui veulent rationner l'aide à l'Ukraine",
-      "createdAt": "2026-11-14T21:01:26.406Z",
-      "storyDay": "2026-11-14",
-      "articles": [
-        {
-          "id": "8b4def46925a",
-          "outletId": "bfmtv",
-          "headline": "Guerre en Ukraine: \"Si le président de la République n'avait pas ruiné notre pays en 10 ans, il resterait des marges de manœuvre pour continuer l'aide financière\", déclare Marine Le Pen, candidate RN à la présidentielle",
-          "url": "https://www.bfmtv.com/politique/video-guerre-en-ukraine-si-le-president-de-la-republique-n-avait-pas-ruine-notre-pays-en-10-ans-il-resterait-des-marges-de-man-uvre-pour-continuer-l-aide-financiere-declare-marine-le-pen-candidate-rn-a-la-presidentielle_VN-202611150426.html",
-          "publishedAt": "2026-11-15T21:58:20.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/-Yp2fBUELiAOzTeNiWPszdL4l6A=/0x0:1280x720/800x0/images/Guerre-en-Ukraine-Si-le-president-de-la-Republique-n-avait-pas-ruine-notre-pays-en-10-ans-il-resterait-des-marges-de-manoeuvre-pour-continuer-l-aide-financiere-declare-Marine-Le-Pen-candidate-RN-a-la-presidentielle-2384433.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "0332e0cf8863",
-          "outletId": "le-jdd",
-          "headline": "«S’il n’avait pas ruiné notre pays…» : attaquée sur l’Ukraine, Marine Le Pen renvoie Emmanuel Macron à son bilan",
-          "url": "https://www.lejdd.fr/International/sil-navait-pas-ruine-notre-pays-attaquee-sur-lukraine-marine-le-pen-renvoie-emmanuel-macron-a-son-bilan-188790",
-          "publishedAt": "2026-11-15T16:33:51.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/15/17/montage-macron-le-pen.jpg?VersionId=_GnqAlVWszBsisufW_.ROPmi123Uenil",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "747e9ac1f655",
-          "outletId": "le-monde",
-          "headline": "Guerre en Ukraine : Emmanuel Macron s’en prend « à ceux qui veulent rationner les moyens » de Kiev ; Marine Le Pen le renvoie à « sa propre turpitude »",
-          "url": "https://www.lemonde.fr/international/article/2026/11/15/guerre-en-ukraine-emmanuel-macron-s-en-prend-a-ceux-qui-veulent-rationner-les-moyens-de-kiev-marine-le-pen-le-renvoie-a-sa-propre-turpitude_6811019_3210.html",
-          "publishedAt": "2026-11-15T13:22:32.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/12/337/0/4052/2026/644/322/60/0/7233495_ftp-1-opnl0qflmago-9508dec139874825832f095206ec3481-0-ae56cb967fb24b748a55fdad2f68a484.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "31c955331501",
-          "outletId": "20-minutes",
-          "headline": "Présidentielle : Le Pen « isolera » la France si elle cesse de soutenir l’Ukraine, met en garde l’entourage de Macron",
-          "url": "https://www.20minutes.fr/politique/4262942-20261115-presidentielle-pen-isolera-france-si-cesse-soutenir-ukraine-met-garde-entourage-macron?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-15T11:05:50.000Z",
-          "imageUrl": "https://img.20mn.fr/lVPvxL5nQ-WuaS5T21zAlSk/1200x768_le-president-ukrainien-volodymyr-zelenskyy-et-le-president-francais-emmanuel-macron-se-rencontrent-lors-du-sommet-de-la-communaute-politique-europeenne-epc-a-dublin-le-jeudi-12-novembre-2026-ap-photo-virginia-mayo-fas218-26316632616279-2611121836",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "cc2d67c158c0",
-          "outletId": "ouest-france",
-          "headline": "Ukraine : Marine Le Pen « isolera » la France en Europe si elle est élue, met en garde l’entourage d’Emmanuel Macron",
-          "url": "https://www.ouest-france.fr/europe/ukraine/ukraine-marine-le-pen-isolera-la-france-en-europe-si-elle-est-elue-met-en-garde-lentourage-demmanuel-macron-5ea2f1da-e0e0-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-15T10:59:07.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZmQ4NzQxODM2ZTUyMDk3NjQ4Y2RlN2M4YzliN2U3M2U?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1d085e73922488c1ebb20be01ecfe59a53dbc89bcc916e300c4dfd2fb883fd1f",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "eaa6fa9b5e25",
-          "outletId": "tf1-info",
-          "headline": "Emmanuel Macron dénonce \"ceux qui veulent rationner les moyens de l'Ukraine\" et \"l'obliger à une paix injuste\"",
-          "url": "https://www.tf1info.fr/international/emmanuel-macron-denonce-ceux-qui-veulent-rationner-les-moyens-de-l-ukraine-et-l-obliger-a-une-paix-injuste-avec-la-russie-2475927.html",
-          "publishedAt": "2026-11-15T09:42:06.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/emmanuel-macron-phnom-penh-15-novembre-2026-e02371-1@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "1068172a3f5d",
-          "outletId": "lobs",
-          "headline": "Emmanuel Macron dénonce « ceux qui veulent rationner » l’aide l’Ukraine et « l’obliger à une paix injuste »",
-          "url": "https://www.nouvelobs.com/politique/20261115.OBS120149/emmanuel-macron-denonce-ceux-qui-veulent-rationner-l-aide-l-ukraine-et-l-obliger-a-une-paix-injuste.html",
-          "publishedAt": "2026-11-15T09:40:06.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/11/15/0/0/4999/3333/0/0/60/0/ac5e2d0_upload-1-s10jx0myohzw-080-hl-quentindegroeve-3383292.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "8675e017f178",
-          "outletId": "franceinfo",
-          "headline": "Présidentielle 2027 : l'entourage d'Emmanuel Macron étrille les candidats qui veulent baisser l'aide financière à l'Ukraine, dont Marine Le Pen",
-          "url": "https://www.franceinfo.fr/elections/direct-presidentielle-2027-l-entourage-d-emmanuel-macron-etrille-les-candidats-qui-veulent-baisser-l-aide-financiere-a-l-ukraine-dont-marine-le-pen_8283293.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-15T09:35:36.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/RcJgPxb2Cc_qOqyzFDnvI2gzgpk/0x0:1024x576/432x243/filters:format(jpg)/2026/11/15/6af9784749478135935355.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "c621e9c9e3dd",
-          "outletId": "franceinfo",
-          "headline": "Le président veut \"maintenir l'Ukraine en situation de donner des coups\", alors que \"les Américains s'occupent de l'enfoncer\", affirme l'entourage d'Emmanuel Macron",
-          "url": "https://www.franceinfo.fr/politique/emmanuel-macron/le-president-veut-maintenir-l-ukraine-en-situation-de-donner-des-coups-alors-que-les-americains-s-occupent-de-l-enfoncer-affirme-l-entourage-d-emmanuel-macron_8283194.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-15T06:37:50.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/vF9yHXcI9dFSryemKfVFM8SzGcQ/0x456:5351x3466/432x243/filters:format(jpg)/2026/11/15/6af95094b19c7363664118.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "19387825b44b",
-          "outletId": "bfmtv",
-          "headline": "\"Elle joue contre la France\": Emmanuel Macron estime que \"si Marine Le Pen décide de tout couper à l’Ukraine, elle nous isolera en Europe\"",
-          "url": "https://www.bfmtv.com/politique/elysee/elle-joue-contre-la-france-emmanuel-macron-estime-que-si-marine-le-pen-decide-de-tout-couper-a-l-ukraine-elle-nous-isolera-en-europe_AV-202611150092.html",
-          "publishedAt": "2026-11-15T06:14:44.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/YXKSGX_4KcH1yW6zNF0nG0b0QQU=/0x39:768x471/800x0/images/Emmanuel-Macron-devant-l-assemblee-generale-des-Nations-unies-a-New-York-le-22-septembre-2026-2352729.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "943cfc57e523",
-          "outletId": "bfmtv",
-          "headline": "Emmanuel Macron estime que \"ceux qui veulent rationner\" l'aide à Kiev veulent \"obliger\" les Ukrainiens \"à une paix injuste\"",
-          "url": "https://www.bfmtv.com/politique/video-emmanuel-macron-estime-que-ceux-qui-veulent-rationner-l-aide-a-kiev-veulent-obliger-les-ukrainiens-a-une-paix-injuste_VN-202611150070.html",
-          "publishedAt": "2026-11-15T05:13:04.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/66C-Ver_gbgiiycB-WTeNz5w_tE=/0x0:1280x720/800x0/images/Emmanuel-Macron-estime-que-ceux-qui-veulent-rationner-l-aide-a-Kiev-veulent-obliger-les-Ukrainiens-a-une-paix-injuste-2384186.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "68aa3d875237",
-          "outletId": "huffpost",
-          "headline": "Dans son long texte sur la guerre en Ukraine, Emmanuel Macron s’adresse surtout à Marine Le Pen",
-          "url": "https://www.huffingtonpost.fr/france/article/dans-son-long-texte-sur-la-guerre-en-ukraine-emmanuel-macron-s-adresse-surtout-a-marine-le-pen_358184.html",
-          "publishedAt": "2026-11-14T21:03:07.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/10/22/72/0/5041/2835/0/0/60/0/b5ca840_upload-1-l2i1tgm75eni-afp-20261021-d3xh849-v2-highres-qatarfrancepoliticsdiplomacyeconomy.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "11ee0932ae76",
-          "outletId": "le-parisien",
-          "headline": "Guerre en Ukraine : Emmanuel Macron affirme que « ceux qui veulent rationner » l’aide à Kiev souhaitent « l’obliger à une paix injuste »",
-          "url": "https://www.leparisien.fr/international/ukraine/guerre-en-ukraine-emmanuel-macron-affirme-que-ceux-qui-veulent-rationner-laide-a-kiev-veulent-lobliger-a-une-paix-injuste-14-11-2026-5O3DEXH2VFFBRCGTIM7ZQB6ROE.php",
-          "publishedAt": "2026-11-14T21:01:26.406Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "48110febf445",
-          "outletId": "cnews",
-          "headline": "Guerre en Ukraine : Emmanuel Macron affirme que «ceux qui veulent rationner» l'aide à Kiev veulent «l'obliger à une paix injuste»",
-          "url": "https://www.cnews.fr/monde/2026-11-14/guerre-en-ukraine-emmanuel-macron-affirme-que-ceux-qui-veulent-rationner-laide",
-          "publishedAt": "2026-11-14T20:55:00.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-10-22t110628z_845549976_rc2a8oaxyurp_rtrmadp_3_france-protest_1_6af8c7e14793f.jpg?h=2ea89795&itok=QPcbbjLq",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "dd3ceb7b0e7e",
-          "outletId": "france-24",
-          "headline": "Macron dénonce \"ceux qui veulent rationner\" l’aide à l’Ukraine et \"l’obliger à une paix injuste\"",
-          "url": "https://www.france24.com/fr/france/20261114-macron-d%C3%A9nonce-ceux-qui-veulent-rationner-l-aide-%C3%A0-l-ukraine-et-l-obliger-%C3%A0-une-paix-injuste",
-          "publishedAt": "2026-11-14T20:02:07.000Z",
-          "imageUrl": "https://s.france24.com/media/display/b003a0ce-ce6b-11f1-a0f5-23d55109f116/w:1024/p:16x9/AP26295395173953-1.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "4ab19d336a49",
-          "outletId": "20-minutes",
-          "headline": "Ukraine : Emmanuel Macron alerte sur les dangers d’une « paix injuste » après les déclarations de Marine Le Pen",
-          "url": "https://www.20minutes.fr/monde/ukraine/4262895-20261114-ukraine-emmanuel-macron-alerte-dangers-paix-injuste-apres-declarations-marine-pen?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-14T19:49:16.000Z",
-          "imageUrl": "https://img.20mn.fr/CniucYbkTD24rxzTHbyo-Sk/1200x768_credit-obligatoire-photo-de-l-agence-de-presse-dts-germany-shutterstock-17272847ck-reunion-de-la-communaute-politique-europeenne-epg-emmanuel-macron-reunion-de-la-communaute-politique-europeenne-epg-centre-des-congres-de-dublin-dublin-irlande-12-novembre-2026-shutterstock-editorial-european-political-community-17272847ck-2611130750",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "db1f0a9addf8",
-          "outletId": "le-monde",
-          "headline": "EN DIRECT, guerre en Ukraine : Emmanuel Macron dénonce « ceux qui veulent rationner » l’aide à Kiev et « l’obliger à une paix injuste »",
-          "url": "https://www.lemonde.fr/international/live/2026/11/14/en-direct-guerre-en-ukraine-emmanuel-macron-denonce-ceux-qui-veulent-rationner-l-aide-a-kiev-et-l-obliger-a-une-paix-injuste_6808609_3210.html",
-          "publishedAt": "2026-11-14T19:33:34.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/12/340/0/4088/2044/644/322/60/0/d7fea01_ftp-1-nzzwjxdu3i42-1167ccbd7c8d41058d02eb9f695e4415-0-bd210e0515be40319792d25e97e6c80f.jpg",
-          "frontPage": false,
-          "kind": "live",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "f08130867f4b",
-          "outletId": "franceinfo",
-          "headline": "Emmanuel Macron affirme que \"ceux qui veulent rationner\" l'aide à l'Ukraine veulent \"l'obliger à une paix injuste\"",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/emmanuel-macron-affirme-que-ceux-qui-veulent-rationner-l-aide-a-l-ukraine-veulent-l-obliger-a-une-paix-injuste_8282819.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-14T19:31:20.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/okvxqkQX8MYl5fOMptq47nD0SIA/0x0:4452x2504/432x243/filters:format(jpg)/2026/11/14/6af8b6d12a35b449101827.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "8a9440e51913",
-          "outletId": "ouest-france",
-          "headline": "« C’est la recette pour la guerre d’après » : Emmanuel Macron dénonce « ceux qui veulent rationner » l’aide à l’Ukraine",
-          "url": "https://www.ouest-france.fr/politique/emmanuel-macron/cest-la-recette-pour-la-guerre-dapres-emmanuel-macron-denonce-ceux-qui-veulent-rationner-laide-a-lukraine-9e160776-e045-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-14T19:28:35.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExM2I5ODk0MThjNDVkZmZmMzE2OWU0OTcyZGVlZjBiZDg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=78ee1e60740c50fc45578b744da8248b3415e6947f1ab39bf56b9064495e14db",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "e2d73d142571",
-          "outletId": "le-figaro",
-          "headline": "Emmanuel Macron affirme que «ceux qui veulent rationner» l’aide à l’Ukraine veulent «l’obliger à une paix injuste»",
-          "url": "https://www.lefigaro.fr/international/emmanuel-macron-affirme-que-ceux-qui-veulent-rationner-l-aide-a-l-ukraine-veulent-l-obliger-a-une-paix-injuste-20261114",
-          "publishedAt": "2026-11-14T19:07:58.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/14/d7e4980e6d65a20edbbc61f6a1eea17ca4a0f2f80994ea32b081498ce5ea7acf.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "dd81ea812efe",
-          "outletId": "bfmtv",
-          "headline": "Guerre en Ukraine: Emmanuel Macron estime que \"ceux qui veulent rationner\" l'aide à Kiev veulent \"obliger\" les Ukrainiens \"à une paix injuste\"",
-          "url": "https://www.bfmtv.com/politique/elysee/guerre-en-ukraine-emmanuel-macron-estime-que-ceux-qui-veulent-rationner-l-aide-a-kiev-veulent-obliger-les-ukrainiens-a-une-paix-injuste_AD-202611140339.html",
-          "publishedAt": "2026-11-14T19:00:25.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/YXKSGX_4KcH1yW6zNF0nG0b0QQU=/0x39:768x471/800x0/images/Emmanuel-Macron-devant-l-assemblee-generale-des-Nations-unies-a-New-York-le-22-septembre-2026-2352729.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "d8310916452e",
-      "titledArticleCount": 17,
-      "section": "world",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794682800000,
-          "end": 1794686400000,
-          "counts": {
-            "gauche": 3,
-            "centre": 2,
-            "droite": 1
-          },
-          "total": 6
-        },
-        {
-          "start": 1794686400000,
-          "end": 1794690000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 1
-          },
-          "total": 2
-        },
-        {
-          "start": 1794690000000,
-          "end": 1794693600000,
-          "counts": {
-            "gauche": 1,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 2
-        },
-        {
-          "start": 1794693600000,
-          "end": 1794697200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794697200000,
-          "end": 1794700800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794700800000,
-          "end": 1794704400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794704400000,
-          "end": 1794708000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794708000000,
-          "end": 1794711600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794711600000,
-          "end": 1794715200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794715200000,
-          "end": 1794718800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794718800000,
-          "end": 1794722400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794722400000,
-          "end": 1794726000000,
-          "counts": {
-            "gauche": 1,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 2
-        },
-        {
-          "start": 1794726000000,
-          "end": 1794729600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794729600000,
-          "end": 1794733200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794733200000,
-          "end": 1794736800000,
-          "counts": {
-            "gauche": 2,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 3
-        },
-        {
-          "start": 1794736800000,
-          "end": 1794740400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794740400000,
-          "end": 1794744000000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794744000000,
-          "end": 1794747600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794747600000,
-          "end": 1794751200000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1794751200000,
-          "end": 1794754800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794754800000,
-          "end": 1794758400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794758400000,
-          "end": 1794762000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1794762000000,
-          "end": 1794765600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794765600000,
-          "end": 1794769200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794769200000,
-          "end": 1794772800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794772800000,
-          "end": 1794776400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794776400000,
-          "end": 1794780000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Le chef de l'État a publié un message solennel sur le réseau social X pour dénoncer ceux qui souhaitent restreindre l'aide militaire et financière destinée à Kiev.",
-          "La gauche pointe l'opposition directe d'Emmanuel Macron contre Marine Le Pen, qui prévoit de cesser le soutien à l'Ukraine si elle accède à la présidence.",
-          "Plusieurs analyses soulignent le risque d'une « vulnérabilisation durable » de l'Europe face à la Russie si les livraisons d'armements venaient à baisser."
-        ],
-        "centre": [
-          "Emmanuel Macron a estimé sur X que « rationner les moyens de l'Ukraine » constitue « la recette pour la guerre d'après » et mène à une « paix injuste ».",
-          "L'entourage présidentiel a qualifié la position de Marine Le Pen d'« antipatriotique et irréaliste », estimant qu'elle « isolera » la France en Europe.",
-          "Le président insiste sur la nécessité de maintenir Kiev en position de force alors que les États-Unis jouent un rôle ambigu de médiation."
-        ],
-        "droite": [
-          "Emmanuel Macron a mis en garde, au sortir du neuvième sommet de la Communauté politique européenne à Dublin, contre la perspective d'un rationnement de l'aide.",
-          "Le chef de l'État affirme que la sécurité des Français est directement liée au soutien apporté à l'Ukraine face à Moscou.",
-          "La droite met en avant la nécessité pour les Européens d'afficher une vision claire de l'après-guerre face aux ambitions russes."
-        ]
-      },
-      "differences": [
-        "La gauche cible principalement la dimension programmatique du débat face au Rassemblement national en qualifiant la position adverse de menace pour la sécurité européenne.",
-        "Le centre insiste largement sur la riposte politique de l'exécutif en relayant en détail les déclarations de l'entourage présidentiel contre Marine Le Pen et les États-Unis.",
-        "La droite ancre le sujet dans l'actualité diplomatique internationale en insistant sur les enjeux stratégiques européens de l'après-guerre."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 17,
-      "summarizedAt": "2026-11-15T11:01:24.775Z"
-    },
-    {
-      "id": "2db5f0e445a7",
-      "slug": "le-proviseur-du-lycee-paul-eluard-a-saint-denis-quitte-ses",
-      "title": "Le proviseur du lycée Paul-Éluard à Saint-Denis quitte ses fonctions après des tensions",
-      "createdAt": "2026-11-16T00:01:28.831Z",
-      "storyDay": "2026-11-15",
-      "articles": [
-        {
-          "id": "3d260a7abdb8",
-          "outletId": "le-figaro",
-          "headline": "Saint-Denis : le proviseur du lycée Paul-Éluard placé en «autorisation d’absence» après des menaces",
-          "url": "https://www.lefigaro.fr/actualite-france/saint-denis-le-proviseur-du-lycee-paul-eluard-place-en-autorisation-d-absence-apres-des-menaces-20261116",
-          "publishedAt": "2026-11-15T23:01:43.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/15/59503aecf652ef276e043d4a320a6923a0dd4b21332a43911f50e3ee64a24d8f.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "society",
-          "everFrontPage": true
-        },
-        {
-          "id": "c077901b61ab",
-          "outletId": "humanite",
-          "headline": "Mouvement lycéen : le proviseur du lycée Paul-Éluard à Saint-Denis qui avait fait entrer la BAC dans son établissement démissionne",
-          "url": "https://www.humanite.fr/societe/mouvement-lyceen/mouvement-lyceen-le-proviseur-du-lycee-paul-eluard-a-saint-denis-demissionne-sous-la-pression-des-parents-et-enseignants",
-          "publishedAt": "2026-11-15T17:13:41.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/PAUL-ELUARD-1.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "3c90a282d59a",
-          "outletId": "liberation",
-          "headline": "Le proviseur du lycée Paul-Eluard de Saint-Denis quitte ses fonctions, poussé vers la sortie par les élèves et le personnel",
-          "url": "https://www.liberation.fr/societe/education/le-proviseur-du-lycee-paul-eluard-quitte-ses-fonctions-pousse-vers-la-sortie-par-les-eleves-et-le-personnel-20261115_ZIJ2VYPAWJE37GME5A63CJ4CGI/",
-          "publishedAt": "2026-11-15T17:10:44.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        }
-      ],
-      "topicId": "2db5f0e445a7",
-      "titledArticleCount": 3,
-      "section": "society",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1794700800000,
-          "end": 1794704400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794704400000,
-          "end": 1794708000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794708000000,
-          "end": 1794711600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794711600000,
-          "end": 1794715200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794715200000,
-          "end": 1794718800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794718800000,
-          "end": 1794722400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794722400000,
-          "end": 1794726000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794726000000,
-          "end": 1794729600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794729600000,
-          "end": 1794733200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794733200000,
-          "end": 1794736800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794736800000,
-          "end": 1794740400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794740400000,
-          "end": 1794744000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794744000000,
-          "end": 1794747600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794747600000,
-          "end": 1794751200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794751200000,
-          "end": 1794754800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794754800000,
-          "end": 1794758400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794758400000,
-          "end": 1794762000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794762000000,
-          "end": 1794765600000,
-          "counts": {
-            "gauche": 2,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 2
-        },
-        {
-          "start": 1794765600000,
-          "end": 1794769200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794769200000,
-          "end": 1794772800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794772800000,
-          "end": 1794776400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794776400000,
-          "end": 1794780000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794780000000,
-          "end": 1794783600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1794783600000,
-          "end": 1794787200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        }
-      ]
     }
   ],
   "stories": [
@@ -23572,7 +22970,7 @@
           "url": "https://www.lefigaro.fr/sports/football/ligue-des-nations/france-turquie-le-rappel-a-l-ordre-de-konate-la-joie-touchante-de-kroupi-toutes-les-reactions-des-bleus-20261116",
           "publishedAt": "2026-11-16T01:20:14.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/11/16/8a9b26f2d8437b6e7345d2a9a1cb8cdead77f9b7082b2ce2c1a2be7779a4b75c.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -28274,7 +27672,7 @@
           "url": "https://www.20minutes.fr/politique/4262935-20261115-finances-publiques-revalorisations-smic-bas-salaires-couteront-plus-milliard-euros?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-15T09:38:56.000Z",
           "imageUrl": "https://img.20mn.fr/lYnq_ML6RkmMHMlA4Kk0Ryk/1200x768_le-jeune-ministre-francais-des-comptes-publics-david-amiel-prend-la-parole-lors-d-une-conference-de-presse-a-l-issue-de-la-reunion-hebdomadaire-du-cabinet-au-palais-de-l-elysee-a-paris-france-le-04-11-2026-jee-crcomi-20-credit-j-e-e-sipa-2611052122",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "economy",
           "everFrontPage": true
