@@ -267,7 +267,9 @@ describe('Home', () => {
         drawerPosition: 'right',
         drawerType: 'back',
         drawerStyle: { width: '78%' },
-        overlayStyle: { backgroundColor: 'rgba(0, 0, 0, 0.35)' },
+        // The scrim stays tappable but invisible — the separation is
+        // the tile's own (darker) color and the page's shadow.
+        overlayStyle: { backgroundColor: 'transparent' },
       });
       // The wordmark and the two static-route rows ride in the tile.
       expect(screen.getByLabelText('Prisme')).toBeTruthy();

@@ -40,7 +40,7 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
       style={[
         styles.tile,
         {
-          backgroundColor: theme.canvas,
+          backgroundColor: theme.tile,
           paddingTop: insets.top + 24,
           paddingBottom: insets.bottom + 24,
         },

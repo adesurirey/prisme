@@ -83,13 +83,14 @@ export function latestPointStamp(builtAt: string): string {
 
 /**
  * The sliding page's card treatment (issue #198, the ChatGPT model):
- * as the tile opens, the page's leading edge rounds off and casts a
- * soft shadow onto the tile — full-bleed again when closed. Reads the
- * drawer's progress context, so it mounts strictly inside <Drawer> —
- * the home's own body sits above that provider, which is exactly where
- * the first attempt's hook call crashed. The dim rides the page (the
- * library draws it over the content only), so the tile beneath stays
- * bright like the model.
+ * the tile waits behind the page — darker than it by its own token —
+ * and as the drawer opens the page's leading edge rounds off and casts
+ * a soft drop shadow onto the tile. Full-bleed again when closed. Two
+ * surfaces, because iOS clips a view's shadow to its own bounds: the
+ * outer surface carries the shadow (unmasked, so it draws) and the
+ * inner one carries the mask that clips the content to the rounding.
+ * Reads the drawer's progress context, so it mounts strictly inside
+ * <Drawer> — the home's own body sits above that provider.
  */
 function PageCard({
   style,
@@ -99,26 +100,35 @@ function PageCard({
   children: ReactNode;
 }) {
   const progress = useDrawerProgress();
-  const card = useAnimatedStyle(() => {
-    const radius = interpolate(
+  const shadow = useAnimatedStyle(() => ({
+    borderRadius: interpolate(
       progress.value,
       [0, 1],
       [0, PAGE_CARD_RADIUS],
       Extrapolation.CLAMP,
-    );
-    return {
-      borderRadius: radius,
-      shadowOpacity: interpolate(
-        progress.value,
-        [0, 1],
-        [0, 0.18],
-        Extrapolation.CLAMP,
-      ),
-    };
-  });
+    ),
+    shadowOpacity: interpolate(
+      progress.value,
+      [0, 1],
+      [0, 0.18],
+      Extrapolation.CLAMP,
+    ),
+  }));
+  const mask = useAnimatedStyle(() => ({
+    borderRadius: interpolate(
+      progress.value,
+      [0, 1],
+      [0, PAGE_CARD_RADIUS],
+      Extrapolation.CLAMP,
+    ),
+  }));
   return (
-    <Reanimated.View style={[styles.container, styles.pageCard, card, style]}>
-      {children}
+    <Reanimated.View
+      style={[styles.container, styles.pageCardShadow, shadow, style]}
+    >
+      <Reanimated.View style={[styles.container, styles.pageCardMask, mask]}>
+        {children}
+      </Reanimated.View>
     </Reanimated.View>
   );
 }
@@ -318,11 +328,13 @@ export function Home() {
       open={menuOpen}
       onOpen={() => setMenuOpen(true)}
       onClose={() => setMenuOpen(false)}
-      // The ChatGPT feel (issue #198): the tile slides in from the
-      // right beneath the page, which slides aside over the dim.
+      // The ChatGPT feel (issue #198): the tile always sits behind the
+      // page — darker than it by its own token — and the page slides
+      // aside to reveal it. The scrim stays tappable but invisible: the
+      // separation is the tile's color and the page's shadow, no dim.
       drawerPosition="right"
       drawerType="back"
-      overlayStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.35)' }}
+      overlayStyle={{ backgroundColor: 'transparent' }}
       drawerStyle={{ width: '78%' }}
       // Edge-open only: a swipe from the right edge opens the tile;
       // once open, the pan owns the whole width (swipe-to-close) and
@@ -341,14 +353,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  // The card treatment of the sliding page (issue #198): the radius
-  // and shadow opacity animate with the drawer progress (pageCard);
-  // overflow clips the pager and overlays to the rounding edge.
-  pageCard: {
-    overflow: 'hidden',
+  // The card treatment of the sliding page (issue #198): the shadow
+  // lives on the outer, unmasked surface (iOS clips a masked view's
+  // shadow) and the mask on the inner one; the radius animates on both
+  // so the shadow follows the rounding edge.
+  pageCardShadow: {
     shadowColor: '#000',
     shadowOffset: { width: 3, height: 0 },
     shadowRadius: 24,
+  },
+  pageCardMask: {
+    overflow: 'hidden',
   },
   pager: {
     flex: 1,
