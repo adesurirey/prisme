@@ -13,7 +13,14 @@ import type { SegmentedControlProps } from '@react-native-segmented-control/segm
 import SegmentedControlPkg from '@react-native-segmented-control/segmented-control';
 import { BlurView } from 'expo-blur';
 import type { ComponentType } from 'react';
-import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
+import {
+  Platform,
+  Pressable,
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+} from 'react-native';
 
 import { SORTS } from '@/sorts';
 import { useTheme } from '@/theme';
@@ -32,6 +39,7 @@ export function SortSwitcher({
   onSwitch: (index: number) => void;
 }) {
   const theme = useTheme();
+  const scheme = useColorScheme();
 
   if (Platform.OS === 'ios') {
     return (
@@ -42,7 +50,7 @@ export function SortSwitcher({
       // « no background of its own » line).
       <View style={styles.shell}>
         <BlurView
-          intensity={40}
+          intensity={25}
           tint="systemChromeMaterial"
           pointerEvents="none"
           style={styles.material}
@@ -56,6 +64,16 @@ export function SortSwitcher({
           // weight, like Photos' labels. Colors stay native.
           fontStyle={{ fontSize: 17 }}
           activeFontStyle={{ fontSize: 17 }}
+          // Photos' selected pill, translucent over the glass (the
+          // prop maps to setSelectedSegmentTintColor): a gray in light
+          // (darker than the track), a white veil in dark (lighter
+          // than the track — never undefined: nil hands the pill to
+          // the app's blue system tint, simulator-checked).
+          tintColor={
+            scheme === 'dark'
+              ? 'rgba(255, 255, 255, 0.2)'
+              : 'rgba(118, 118, 128, 0.25)'
+          }
           onChange={(event) => onSwitch(event.nativeEvent.selectedSegmentIndex)}
         />
       </View>
@@ -119,8 +137,6 @@ const styles = StyleSheet.create({
     gap: 6,
     padding: 4,
     borderRadius: 999,
-    // More opaque than the first pass — the track must pop over the
-    // scrolling list, not whisper under it.
     backgroundColor: 'rgba(128, 128, 138, 0.3)',
   },
   androidSegment: {
