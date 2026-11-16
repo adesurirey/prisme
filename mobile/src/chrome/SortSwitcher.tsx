@@ -55,7 +55,9 @@ export function SortSwitcher({
           onPress={() => onSwitch(segment)}
           style={[
             styles.androidSegment,
-            segment === index && styles.androidPill,
+            // The selected pill is a raised surface from the palette —
+            // hardcoded white reads nowhere in dark mode (review P1).
+            segment === index && { backgroundColor: theme.surface },
           ]}
         >
           <Text
@@ -87,8 +89,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     paddingVertical: 7,
     borderRadius: 999,
-  },
-  androidPill: {
-    backgroundColor: 'rgba(255, 255, 255, 0.85)',
   },
 });
