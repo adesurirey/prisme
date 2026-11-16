@@ -113,10 +113,13 @@ export function SortSwitcher({
 }
 
 const styles = StyleSheet.create({
-  // The capsule shell clips the material to the control's shape; the
-  // material sits behind, the control in flow on top.
+  // The capsule shell clips the material to the control's shape and
+  // carries the Photos-proportion vertical padding — the frosted
+  // track runs taller than the control, pill floating inside it.
   shell: {
     borderRadius: 999,
+    paddingHorizontal: 0,
+    paddingVertical: 5,
     overflow: 'hidden',
   },
   material: {
@@ -127,7 +130,7 @@ const styles = StyleSheet.create({
   // its selected pill is inset ~2pt inside the track — native
   // behavior, same as Photos.
   control: {
-    width: 285,
+    width: 250,
     height: 44,
   },
   androidRow: {
