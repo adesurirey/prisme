@@ -6,6 +6,27 @@
   "storyDay": "2026-11-16",
   "articles": [
     {
+      "id": "35ae0a06e930",
+      "outletId": "liberation",
+      "headline": "L’Ukraine a frappé le pont stratégique qui relie la Russie à la Crimée annexée par Moscou",
+      "url": "https://www.liberation.fr/international/europe/lukraine-a-frappe-le-pont-strategique-qui-relie-la-russie-a-la-crimee-annexee-par-moscou-20261116_36D6AM2VFBFMTAQEUU5XJ6SAWM/",
+      "publishedAt": "2026-11-16T11:44:50.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "65bb7eb6abc3",
+      "outletId": "france-24",
+      "headline": "Frappes ukrainiennes en Russie : le pont de Crimée touché",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261116-frappes-ukrainiennes-en-russie-le-pont-de-crim%C3%A9e-touch%C3%A9",
+      "publishedAt": "2026-11-16T11:35:48.000Z",
+      "imageUrl": "https://s.france24.com/media/display/3c690d70-e1ad-11f1-9a03-f71d22e7fea9/w:1024/p:16x9/FR-20261116-093408-093822-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "b7af3ca4b874",
       "outletId": "bfmtv",
       "headline": "Guerre en Ukraine: Kiev frappe le pont de Kertch, reliant la Russie à la Crimée annexée par Moscou",
@@ -83,30 +104,10 @@
     }
   ],
   "topicId": "4f61b3a6f07e",
-  "titledArticleCount": 7,
+  "titledArticleCount": 9,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794736800000,
-      "end": 1794740400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794740400000,
-      "end": 1794744000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794744000000,
       "end": 1794747600000,
@@ -326,30 +327,49 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1794823200000,
+      "end": 1794826800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794826800000,
+      "end": 1794830400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "L'Ukraine a mené une frappe contre le pont reliant la Russie à la Crimée.",
-      "Le ministère de la Défense russe a affirmé avoir intercepté 1 336 drones ukrainiens dans plusieurs régions, dont celle de Moscou, ainsi qu'au-dessus de la mer Noire et de la mer d'Azov."
+      "L'Ukraine a pris pour cible le pont stratégique reliant la Russie continentale à la Crimée, une infrastructure essentielle pour l'approvisionnement des troupes.",
+      "Les forces aériennes ukrainiennes ont également mené une attaque d'envergure en lançant plus de 600 drones dans la région de Moscou."
     ],
     "centre": [
-      "Une frappe ukrainienne a touché le pont de Kertch, ce qui a restreint la circulation sur cet axe stratégique entre la Russie et la Crimée annexée.",
-      "Le maire de Moscou a indiqué qu'environ 600 drones ont été lancés vers la capitale dans la nuit et que la plupart ont été interceptés.",
-      "Le gouverneur local nommé par Moscou et les autorités ont confirmé les restrictions de trafic sur l'ouvrage."
+      "Kiev a mené une frappe contre le pont de Kertch, restreignant la circulation sur cet ouvrage stratégique reliant le territoire russe à la péninsule de Crimée.",
+      "Le ministère russe de la Défense a affirmé avoir intercepté 1 336 drones ukrainiens au cours d'une même nuit dans plusieurs régions.",
+      "Ces attaques surviennent alors que la Russie poursuit ses bombardements massifs contre les infrastructures énergétiques ukrainiennes à l'approche de l'hiver."
     ],
     "droite": [
-      "Le pont de Kertch, qui relie la Russie à la Crimée, a été visé et endommagé par une frappe ukrainienne.",
-      "Le trafic routier et ferroviaire sur cette liaison stratégique a subi des perturbations.",
-      "TF1 Info ajoute que la défense aérienne russe a intercepté de nombreux drones ukrainiens."
+      "Le pont de Kertch, infrastructure essentielle reliant la Russie à la Crimée, a été visé par des bombardements ukrainiens qui perturbent le trafic ferroviaire et routier.",
+      "Les autorités russes ont rapporté l'interception nocturne de 1 336 drones ukrainiens à travers le pays."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur le volume massif de drones interceptés selon Moscou, s'appuyant sur les données de franceinfo.",
-    "Le centre adopte un traitement factuel centré à la fois sur les dégâts du pont de Kertch et sur l'attaque de drones visant la région de Moscou.",
-    "La droite se focalise en priorité sur l'attaque du pont de Kertch et les perturbations du trafic, TF1 Info se distinguant par la mention du bilan chiffré des drones abattus."
+    "Le camp gauche met un accent particulier sur la portée stratégique de l'infrastructure visée tout en détaillant l'ampleur des attaques de drones menées vers la capitale.",
+    "Le camp centre adopte une couverture factuelle globale en insistant simultanément sur l'attaque du pont, le volume exceptionnel de drones abattus selon Moscou et les frappes russes en retour sur le réseau énergétique.",
+    "Le camp droite souligne l'impact concret des restrictions de circulation sur le pont tout en mettant en avant le symbole que représente cet ouvrage pour Vladimir Poutine."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 7,
-  "summarizedAt": "2026-11-16T10:01:26.155Z"
+  "summarizedArticleCount": 9,
+  "summarizedAt": "2026-11-16T12:01:30.335Z"
 }
