@@ -56,8 +56,9 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
     >
       <View style={styles.wordmarkRow}>
         {/* The title of the tile — sized like the ChatGPT model's header
-            title, well above the nav-scale default (issue #198). */}
-        <PrismeWordmark color={theme.ink} width={140} />
+            title, well above the nav-scale default (issue #198); the
+            140 was dialed back 15% on simulator feedback. */}
+        <PrismeWordmark color={theme.ink} width={119} />
       </View>
       <View style={styles.rows}>
         {TILES.map((tile) => (
