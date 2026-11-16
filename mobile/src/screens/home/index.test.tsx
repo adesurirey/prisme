@@ -6,8 +6,9 @@ import {
   waitFor,
 } from '@testing-library/react-native';
 import { File } from 'expo-file-system';
-import { FlatList } from 'react-native';
+import { BackHandler, FlatList } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { mockDrawerMethods } from '@/chrome/drawer-layout.mock';
 import { mockPagerMethods } from '@/chrome/pager-view.mock';
 import fixtureEdition from '@/data/__fixtures__/edition.json';
 import fixtureOutlets from '@/data/__fixtures__/outlets.json';
@@ -235,6 +236,112 @@ describe('Home', () => {
     expect(scrollToOffset).toHaveBeenCalledWith({
       offset: 0,
       animated: false,
+    });
+  });
+
+  describe('the burger tile (#198)', () => {
+    // The tile tests share the prelude: the home rendered and settled,
+    // then the burger opens the tile (the flush — the burger's setState
+    // lands with the act, the drawer re-renders open).
+    async function openTile() {
+      await renderHome();
+      await screen.findByText('Dernier point à 14h');
+      await act(async () => {
+        fireEvent.press(screen.getByTestId('burger-button'));
+      });
+    }
+
+    // Each test spies BackHandler to watch the back seam — restore, or
+    // the next test's spy inherits the previous one's recorded calls.
+    afterEach(() => {
+      jest.restoreAllMocks();
+      mockDrawerMethods.props = null;
+    });
+
+    it('the burger opens the tile with the pinned drawer shape', async () => {
+      await openTile();
+
+      expect(screen.getByTestId('drawer-tile')).toBeTruthy();
+      expect(mockDrawerMethods.props).toMatchObject({
+        open: true,
+        drawerPosition: 'right',
+        drawerType: 'back',
+        drawerStyle: { width: '78%' },
+        overlayStyle: { backgroundColor: 'rgba(0, 0, 0, 0.35)' },
+      });
+      // The wordmark and the two static-route rows ride in the tile.
+      expect(screen.getByLabelText('Prisme')).toBeTruthy();
+      expect(
+        screen.getByRole('button', {
+          name: 'Classement politique des médias',
+        }),
+      ).toBeTruthy();
+      expect(
+        screen.getByRole('button', { name: 'Comment ça marche' }),
+      ).toBeTruthy();
+    });
+
+    it('a tile row pushes its route and closes the tile', async () => {
+      await openTile();
+
+      await act(async () => {
+        fireEvent.press(
+          screen.getByRole('button', { name: 'Comment ça marche' }),
+        );
+      });
+
+      expect(mockPush).toHaveBeenCalledWith('/methode');
+      expect(screen.queryByTestId('drawer-tile')).toBeNull();
+    });
+
+    it('home state survives open and close', async () => {
+      const addEventListener = jest.spyOn(BackHandler, 'addEventListener');
+      await renderHome();
+      await screen.findByText('Dernier point à 14h');
+
+      // Switch to Nouveau, then round-trip the tile over it (close via
+      // the Android back seam — the path the drawer itself wires).
+      await fireEvent.press(screen.getByTestId('sort-segment-2'));
+      // The pager's pageSelected echo lands the sort over the bridge —
+      // a task after the jump; flush it before the drawer round-trip.
+      await act(async () => {
+        await new Promise((resolve) => setTimeout(resolve, 0));
+      });
+      await act(async () => {
+        fireEvent.press(screen.getByTestId('burger-button'));
+      });
+      const handler = addEventListener.mock.calls.at(-1)?.[1];
+      await act(async () => {
+        handler?.({ type: 'hardwareBackPress', timeStamp: 0 });
+      });
+      expect(screen.queryByTestId('drawer-tile')).toBeNull();
+
+      // The landed sort is untouched by the drawer round-trip.
+      expect(
+        screen.getByTestId('sort-segment-2').props.accessibilityState,
+      ).toEqual({ selected: true });
+      expect(rowOrder()).toEqual(['cyclone', 'budget']);
+    });
+
+    it('Android back closes the tile, and only the open tile owns the back press', async () => {
+      const addEventListener = jest.spyOn(BackHandler, 'addEventListener');
+      await openTile();
+
+      // Exactly one hardwareBackPress subscription exists — the open
+      // tile's. The closed home beneath claims none.
+      const calls = addEventListener.mock.calls.filter(
+        ([event]) => event === 'hardwareBackPress',
+      );
+      expect(calls).toHaveLength(1);
+      const [event, handler] = calls[0];
+
+      let handled: boolean | undefined;
+      await act(async () => {
+        handled = handler({ type: 'hardwareBackPress', timeStamp: 0 });
+      });
+      // True: the tile consumes the press, no route pops beneath it.
+      expect(handled).toBe(true);
+      expect(screen.queryByTestId('drawer-tile')).toBeNull();
     });
   });
 });

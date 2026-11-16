@@ -1,9 +1,10 @@
 import type { Story } from '@prisme/domain';
 import { useRouter } from 'expo-router';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   ActivityIndicator,
   Animated,
+  BackHandler,
   FlatList,
   Pressable,
   RefreshControl,
@@ -12,6 +13,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import { Drawer } from 'react-native-drawer-layout';
 import type {
   PagerViewOnPageSelectedEvent,
   PageScrollStateChangedNativeEvent,
@@ -26,6 +28,7 @@ const AnimatedFlatList = Animated.createAnimatedComponent(
   FlatList,
 ) as unknown as typeof FlatList;
 
+import { BurgerTile } from '@/chrome/BurgerTile';
 import {
   HOME_TITLE_BLOCK_HEIGHT,
   HOME_TITLE_TOP_PADDING,
@@ -47,6 +50,10 @@ import { useTheme } from '@/theme';
 // the pages, and the landed page resets to its top only once the pager
 // settles idle — the spike #192 landmine (scroll-to-top mid-settle
 // yanks the page under the finger).
+// The burger tile is the drawer (issue #198): the loaded home wraps in
+// the standalone right-hand drawer, back type — the page slides aside
+// over the dimmed tile. Only the home: story and static pushes stay
+// untouched above it.
 
 /** The « Dernier point » stamp — the rendered artifact's build instant,
  *  hour only, in Paris time like every Prisme date: the point is hourly,
@@ -71,6 +78,24 @@ export function Home() {
   // The active sort — Brûlant at launch (issue #197); taps and swipes
   // both land here, through the pager's pageSelected echo.
   const [sortIndex, setSortIndex] = useState(DEFAULT_SORT_INDEX);
+  // The tile's open state — controlled, so the burger and every close
+  // path (scrim, swipe, Android back) land in the one setState.
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // The standalone drawer has no back seam of its own — that lives in
+  // the drawer navigator Prisme doesn't use (issue #198): while the
+  // tile is open, Android back closes it instead of popping the route.
+  useEffect(() => {
+    if (!menuOpen) return;
+    const subscription = BackHandler.addEventListener(
+      'hardwareBackPress',
+      () => {
+        setMenuOpen(false);
+        return true;
+      },
+    );
+    return () => subscription.remove();
+  }, [menuOpen]);
   const pagerRef = useRef<PagerView>(null);
   // One list per page — the landed page's list is what the reset
   // scrolls; the pager keeps the neighbours mounted natively.
@@ -154,7 +179,9 @@ export function Home() {
 
   const { edition, builtAt } = phase.snapshot;
   const lists = sortLists(edition);
-  return (
+  // The home — extracted so the drawer wraps it whole, chrome
+  // included: the pills ride the page as it slides aside (issue #198).
+  const home = (
     <View style={[styles.container, { backgroundColor: theme.canvas }]}>
       <PagerView
         ref={pagerRef}
@@ -222,7 +249,7 @@ export function Home() {
         </View>
       </Animated.View>
       {/* The pills only — a totally transparent overlay (issue #196). */}
-      <HomeHeader />
+      <HomeHeader onOpenMenu={() => setMenuOpen(true)} />
       {/* The sort switcher, pinned above the bottom safe area, floating
           over the list with no background of its own (issue #197). */}
       <View
@@ -232,6 +259,28 @@ export function Home() {
         <SortSwitcher index={sortIndex} onSwitch={switchSort} />
       </View>
     </View>
+  );
+  return (
+    <Drawer
+      open={menuOpen}
+      onOpen={() => setMenuOpen(true)}
+      onClose={() => setMenuOpen(false)}
+      // The ChatGPT feel (issue #198): the tile slides in from the
+      // right beneath the page, which slides aside over the dim.
+      drawerPosition="right"
+      drawerType="back"
+      overlayStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.35)' }}
+      drawerStyle={{ width: '78%' }}
+      // Edge-open only: a swipe from the right edge opens the tile;
+      // once open, the pan owns the whole width (swipe-to-close) and
+      // the pager is unreachable beneath the scrim.
+      swipeEdgeWidth={40}
+      renderDrawerContent={() => (
+        <BurgerTile onClose={() => setMenuOpen(false)} />
+      )}
+    >
+      {home}
+    </Drawer>
   );
 }
 

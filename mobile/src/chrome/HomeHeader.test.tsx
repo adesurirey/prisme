@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react-native';
+import { fireEvent, render, screen } from '@testing-library/react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ModeProvider } from '@/mode/mode';
 
@@ -27,11 +27,11 @@ const INSETS = {
   frame: { x: 0, y: 0, width: 393, height: 852 },
 };
 
-function renderHeader() {
+function renderHeader(props: { onOpenMenu?: () => void } = {}) {
   return render(
     <ModeProvider>
       <SafeAreaProvider initialMetrics={INSETS}>
-        <HomeHeader />
+        <HomeHeader onOpenMenu={props.onOpenMenu} />
       </SafeAreaProvider>
     </ModeProvider>,
   );
@@ -50,11 +50,13 @@ describe('HomeHeader (issue #196)', () => {
     expect(screen.getByTestId('mode-button')).toBeTruthy();
   });
 
-  test('the burger pill renders inert — 5d wires it', async () => {
-    await renderHeader();
+  test('the burger pill opens the tile (#198)', async () => {
+    const onOpenMenu = jest.fn();
+    await renderHeader({ onOpenMenu });
 
     const burger = screen.getByTestId('burger-button');
-    expect(burger).toBeTruthy();
-    expect(burger.props.accessibilityState?.disabled).toBe(true);
+    expect(burger.props.accessibilityState?.disabled).toBe(false);
+    fireEvent.press(burger);
+    expect(onOpenMenu).toHaveBeenCalledTimes(1);
   });
 });

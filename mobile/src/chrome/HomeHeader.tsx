@@ -1,9 +1,10 @@
 /**
- * The home chrome (issue #196): the pills — mode, then the inert
- * burger — pinned top-right in a totally transparent overlay. The
- * « À la une » title and the « Dernier point » stamp are not chrome:
- * they live in the scroll content (the home list's header component),
- * so they sit at the same spot on open and scroll away with it.
+ * The home chrome (issue #196): the pills — mode, then the burger —
+ * pinned top-right in a totally transparent overlay. The « À la une »
+ * title and the « Dernier point » stamp are not chrome: they live in
+ * the scroll content (the home list's header component), so they sit
+ * at the same spot on open and scroll away with it. The burger opens
+ * the drawer tile (issue #198).
  */
 
 import { StyleSheet, View } from 'react-native';
@@ -33,7 +34,7 @@ function BurgerIcon() {
   );
 }
 
-export function HomeHeader() {
+export function HomeHeader({ onOpenMenu }: { onOpenMenu?: () => void }) {
   const insets = useSafeAreaInsets();
 
   return (
@@ -49,8 +50,8 @@ export function HomeHeader() {
         <GlassPill
           accessibilityLabel="Menu"
           testID="burger-button"
-          disabled
-          onPress={() => undefined}
+          disabled={!onOpenMenu}
+          onPress={() => onOpenMenu?.()}
           style={styles.burger}
         >
           <BurgerIcon />
