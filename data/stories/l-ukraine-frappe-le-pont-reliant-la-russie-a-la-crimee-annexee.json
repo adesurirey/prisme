@@ -1,10 +1,32 @@
 {
   "id": "4f61b3a6f07e",
   "slug": "l-ukraine-frappe-le-pont-reliant-la-russie-a-la-crimee-annexee",
-  "title": "L'Ukraine frappe le pont reliant la Russie à la Crimée et lance des drones sur la région de Moscou",
+  "title": "L'Ukraine frappe le pont de Kertch et lance des drones sur la région de Moscou",
   "createdAt": "2026-11-16T08:06:26.691Z",
   "storyDay": "2026-11-16",
   "articles": [
+    {
+      "id": "b7af3ca4b874",
+      "outletId": "bfmtv",
+      "headline": "Guerre en Ukraine: Kiev frappe le pont de Kertch, reliant la Russie à la Crimée annexée par Moscou",
+      "url": "https://www.bfmtv.com/international/europe/ukraine/video-guerre-en-ukraine-kiev-frappe-le-pont-de-kertch-reliant-la-russie-a-la-crimee-annexee-par-moscou_VN-202611160386.html",
+      "publishedAt": "2026-11-16T09:44:41.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/MMW57z-Z0nhWjEq-CtUS6zxIhJw=/0x0:1280x720/800x0/images/Guerre-en-Ukraine-Kiev-frappe-le-pont-de-Kertch-reliant-la-Russie-a-la-Crimee-annexee-par-Moscou-2384697.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "0968174b145c",
+      "outletId": "tf1-info",
+      "headline": "Le pont de Kertch reliant la Russie à la Crimée bombardé par l'Ukraine",
+      "url": "https://www.tf1info.fr/international/guerre-ukraine-russie-le-pont-de-kertch-reliant-la-russie-a-la-crimee-bombarde-par-l-ukraine-2476057.html",
+      "publishedAt": "2026-11-16T09:34:16.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/683/pont-crimee-2-45a6d4-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "077b610fcb61",
       "outletId": "franceinfo",
@@ -61,20 +83,10 @@
     }
   ],
   "topicId": "4f61b3a6f07e",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794733200000,
-      "end": 1794736800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794736800000,
       "end": 1794740400000,
@@ -304,6 +316,40 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794819600000,
+      "end": 1794823200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 1
+      },
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "L'Ukraine a mené une frappe contre le pont reliant la Russie à la Crimée.",
+      "Le ministère de la Défense russe a affirmé avoir intercepté 1 336 drones ukrainiens dans plusieurs régions, dont celle de Moscou, ainsi qu'au-dessus de la mer Noire et de la mer d'Azov."
+    ],
+    "centre": [
+      "Une frappe ukrainienne a touché le pont de Kertch, ce qui a restreint la circulation sur cet axe stratégique entre la Russie et la Crimée annexée.",
+      "Le maire de Moscou a indiqué qu'environ 600 drones ont été lancés vers la capitale dans la nuit et que la plupart ont été interceptés.",
+      "Le gouverneur local nommé par Moscou et les autorités ont confirmé les restrictions de trafic sur l'ouvrage."
+    ],
+    "droite": [
+      "Le pont de Kertch, qui relie la Russie à la Crimée, a été visé et endommagé par une frappe ukrainienne.",
+      "Le trafic routier et ferroviaire sur cette liaison stratégique a subi des perturbations.",
+      "TF1 Info ajoute que la défense aérienne russe a intercepté de nombreux drones ukrainiens."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur le volume massif de drones interceptés selon Moscou, s'appuyant sur les données de franceinfo.",
+    "Le centre adopte un traitement factuel centré à la fois sur les dégâts du pont de Kertch et sur l'attaque de drones visant la région de Moscou.",
+    "La droite se focalise en priorité sur l'attaque du pont de Kertch et les perturbations du trafic, TF1 Info se distinguant par la mention du bilan chiffré des drones abattus."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-16T10:01:26.155Z"
 }
