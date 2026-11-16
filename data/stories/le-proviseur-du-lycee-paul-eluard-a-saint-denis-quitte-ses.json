@@ -6,6 +6,17 @@
   "storyDay": "2026-11-15",
   "articles": [
     {
+      "id": "bc50ccc00cf4",
+      "outletId": "lobs",
+      "headline": "Colère des lycéens : pourquoi le proviseur de Paul Eluard a-t-il quitté ses fonctions ?",
+      "url": "https://www.nouvelobs.com/societe/20261116.OBS120174/colere-des-lyceens-pourquoi-le-proviseur-de-paul-eluard-a-t-il-quitte-ses-fonctions.html",
+      "publishedAt": "2026-11-16T10:26:27.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/11/16/0/0/7450/4967/0/0/60/0/fca182b_upload-1-3vedy98oihmk-illu-paul-eluard.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "bbe57f8661da",
       "outletId": "bfmtv",
       "headline": "Le proviseur du lycée Paul Éluard, à Saint-Denis, placé en \"autorisation spéciale d’absence\" après des menaces",
@@ -66,26 +77,6 @@
   "section": "society",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794733200000,
-      "end": 1794736800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794736800000,
-      "end": 1794740400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794740400000,
       "end": 1794744000000,
@@ -305,6 +296,50 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794819600000,
+      "end": 1794823200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794823200000,
+      "end": 1794826800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le proviseur du lycée Paul-Éluard à Saint-Denis, Xavier Artaud, a quitté ses fonctions un mois après l'intervention de la police dans son établissement.",
+      "Son départ fait suite à une grève reconductible et aux mobilisations des enseignants, des élèves et des parents qui réclamaient son départ.",
+      "Les contestataires lui reprochaient d'avoir autorisé des policiers de la BAC à pénétrer dans l'établissement le 15 octobre pour interpeller un élève."
+    ],
+    "centre": [
+      "Le proviseur du lycée Paul-Éluard de Saint-Denis a été placé en autorisation spéciale d'absence à la suite de menaces.",
+      "Cette mesure intervient après des tensions liées aux mobilisations lycéennes et à une intervention des forces de l'ordre le 15 octobre."
+    ],
+    "droite": [
+      "Le rectorat de l'académie de Créteil a accordé une autorisation d'absence au proviseur du lycée Paul-Éluard pour assurer sa protection après des menaces.",
+      "Le recteur Jean-François Chanet appelle à l'apaisement et à la reprise du dialogue entre le personnel et le ministère de l'Éducation.",
+      "Le départ temporaire du chef d'établissement, contesté pour l'intervention policière du 15 octobre, est salué comme une victoire par les enseignants."
+    ]
+  },
+  "differences": [
+    "La gauche présente le départ du proviseur comme une démission obtenue de haute lutte par la mobilisation collective contre l'intervention de la police.",
+    "Le centre se focalise sur la mesure administrative d'éloignement prise en urgence par le rectorat pour faire face aux menaces.",
+    "La droite insiste sur la protection nécessaire du proviseur face aux menaces tout en mentionnant la contestation interne liée à l'intervention des forces de l'ordre."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-16T11:01:30.123Z"
 }
