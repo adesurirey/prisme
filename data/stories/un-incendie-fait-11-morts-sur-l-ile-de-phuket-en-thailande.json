@@ -318,5 +318,30 @@
       },
       "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Un incendie s'est déclaré en pleine nuit un lundi dans une maison de quatre étages abritant des commerces sur l'île de Phuket en Thaïlande.",
+      "Le drame a fait 11 morts et 16 blessés selon un bilan provisoire.",
+      "Les causes exactes de l'incendie ne sont pas encore connues."
+    ],
+    "centre": [
+      "Un incendie s'est déclaré tôt lundi matin dans un immeuble de quatre étages à usages multiples sur l'île touristique de Phuket.",
+      "Le bilan fait état de 11 morts et de 16 blessés parmi les occupants.",
+      "Des citoyens thaïlandais et des ressortissants birmans figurent parmi les victimes recensées."
+    ],
+    "droite": [
+      "Un violent incendie a frappé une habitation de quatre étages comportant des commerces et un restaurant dans la zone de Patong à Phuket.",
+      "L'intervention de la police locale a permis d'établir un bilan provisoire de 11 personnes tuées et 16 blessées.",
+      "Le sinistre s'est déclaré durant la nuit de dimanche à lundi dans un secteur très fréquenté par les touristes français."
+    ]
+  },
+  "differences": [
+    "La gauche se concentre strictement sur le bilan humain et l'absence d'éléments précis concernant l'origine du sinistre.",
+    "Le centre livre les faits bruts sur l'incident nocturne tout en intégrant des précisions sur les nationalités des victimes.",
+    "La droite accentue la dimension dramatique et touristique de l'événement en détaillant l'heure précise du départ de feu et la typologie du bâtiment."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-16T15:01:33.525Z"
 }
