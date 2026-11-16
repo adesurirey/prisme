@@ -1,6 +1,6 @@
 import type { Story } from '@prisme/domain';
 import { useRouter } from 'expo-router';
-import { useEffect, useRef, useState } from 'react';
+import { type ReactNode, useEffect, useRef, useState } from 'react';
 import {
   ActivityIndicator,
   Animated,
@@ -9,9 +9,11 @@ import {
   Pressable,
   RefreshControl,
   ScrollView,
+  type StyleProp,
   StyleSheet,
   Text,
   View,
+  type ViewStyle,
 } from 'react-native';
 import { Drawer, useDrawerProgress } from 'react-native-drawer-layout';
 import type {
@@ -79,6 +81,48 @@ export function latestPointStamp(builtAt: string): string {
   return `Dernier point à ${clock}`;
 }
 
+/**
+ * The sliding page's card treatment (issue #198, the ChatGPT model):
+ * as the tile opens, the page's leading edge rounds off and casts a
+ * soft shadow onto the tile — full-bleed again when closed. Reads the
+ * drawer's progress context, so it mounts strictly inside <Drawer> —
+ * the home's own body sits above that provider, which is exactly where
+ * the first attempt's hook call crashed. The dim rides the page (the
+ * library draws it over the content only), so the tile beneath stays
+ * bright like the model.
+ */
+function PageCard({
+  style,
+  children,
+}: {
+  style?: StyleProp<ViewStyle>;
+  children: ReactNode;
+}) {
+  const progress = useDrawerProgress();
+  const card = useAnimatedStyle(() => {
+    const radius = interpolate(
+      progress.value,
+      [0, 1],
+      [0, PAGE_CARD_RADIUS],
+      Extrapolation.CLAMP,
+    );
+    return {
+      borderRadius: radius,
+      shadowOpacity: interpolate(
+        progress.value,
+        [0, 1],
+        [0, 0.18],
+        Extrapolation.CLAMP,
+      ),
+    };
+  });
+  return (
+    <Reanimated.View style={[styles.container, styles.pageCard, card, style]}>
+      {children}
+    </Reanimated.View>
+  );
+}
+
 export function Home() {
   const { phase, refreshing, refresh } = useEdition();
   const router = useRouter();
@@ -105,30 +149,6 @@ export function Home() {
     );
     return () => subscription.remove();
   }, [menuOpen]);
-
-  // The sliding page reads as a card (issue #198, the ChatGPT model):
-  // as the drawer opens, the page's leading edge rounds off and casts
-  // a soft shadow onto the tile — full-bleed again when closed. The
-  // dim rides the page (the library draws it over the content only),
-  // so the tile beneath stays bright like the model.
-  const progress = useDrawerProgress();
-  const pageCard = useAnimatedStyle(() => {
-    const radius = interpolate(
-      progress.value,
-      [0, 1],
-      [0, PAGE_CARD_RADIUS],
-      Extrapolation.CLAMP,
-    );
-    return {
-      borderRadius: radius,
-      shadowOpacity: interpolate(
-        progress.value,
-        [0, 1],
-        [0, 0.18],
-        Extrapolation.CLAMP,
-      ),
-    };
-  });
   const pagerRef = useRef<PagerView>(null);
   // One list per page — the landed page's list is what the reset
   // scrolls; the pager keeps the neighbours mounted natively.
@@ -215,14 +235,7 @@ export function Home() {
   // The home — extracted so the drawer wraps it whole, chrome
   // included: the pills ride the page as it slides aside (issue #198).
   const home = (
-    <Reanimated.View
-      style={[
-        styles.container,
-        styles.pageCard,
-        pageCard,
-        { backgroundColor: theme.canvas },
-      ]}
-    >
+    <View style={styles.container}>
       <PagerView
         ref={pagerRef}
         style={styles.pager}
@@ -298,7 +311,7 @@ export function Home() {
       >
         <SortSwitcher index={sortIndex} onSwitch={switchSort} />
       </View>
-    </Reanimated.View>
+    </View>
   );
   return (
     <Drawer
@@ -319,7 +332,7 @@ export function Home() {
         <BurgerTile onClose={() => setMenuOpen(false)} />
       )}
     >
-      {home}
+      <PageCard style={{ backgroundColor: theme.canvas }}>{home}</PageCard>
     </Drawer>
   );
 }
