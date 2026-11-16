@@ -133,6 +133,18 @@ describe('Home', () => {
     ).toEqual({ selected: true });
   });
 
+  it('keeps one shared « À la une » block across sorts (#197)', async () => {
+    await renderHome();
+    await screen.findByText('Dernier point à 14h');
+
+    // The title is not per-page content anymore: one instance, above
+    // the pager, untouched by a sort switch.
+    expect(screen.getAllByText('À la une')).toHaveLength(1);
+    await fireEvent.press(screen.getByTestId('sort-segment-2'));
+    expect(screen.getAllByText('À la une')).toHaveLength(1);
+    expect(screen.getByText('Dernier point à 14h')).toBeTruthy();
+  });
+
   it('tapping a sort swaps the rows in place (#197)', async () => {
     await renderHome();
     await screen.findByText('Dernier point à 14h');

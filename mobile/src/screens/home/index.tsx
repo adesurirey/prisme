@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import { useRef, useState } from 'react';
 import {
   ActivityIndicator,
+  Animated,
   FlatList,
   Pressable,
   RefreshControl,
@@ -17,6 +18,13 @@ import type {
 } from 'react-native-pager-view';
 import PagerView from 'react-native-pager-view';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+// Native-driven onScroll on a FlatList requires the Animated wrapper.
+// createAnimatedComponent drops the generic — cast the result back so
+// pages, refs and renderItem keep their Story typing.
+const AnimatedFlatList = Animated.createAnimatedComponent(
+  FlatList,
+) as unknown as typeof FlatList;
 
 import {
   HOME_TITLE_BLOCK_HEIGHT,
@@ -69,6 +77,11 @@ export function Home() {
   const listRefs = useRef<Array<FlatList<Story> | null>>([]);
   const scrollState = useRef<'idle' | 'dragging' | 'settling'>('idle');
   const pendingReset = useRef<number | null>(null);
+  // The shared title block: one instance above the pager, translating
+  // with the ACTIVE page's scroll — fixed during sort switches, gone
+  // on scroll down, like list content (issue #197).
+  const titleY = useRef(new Animated.Value(0)).current;
+  const scrollOffsets = useRef<Array<number>>([0, 0, 0]);
 
   const resetToTop = (index: number) => {
     if (scrollState.current === 'idle') {
@@ -90,7 +103,19 @@ export function Home() {
     const index = event.nativeEvent.position;
     setSortIndex(index);
     resetToTop(index);
+    // The landed page's scroll owns the shared title now.
+    titleY.setValue(scrollOffsets.current[index]);
   };
+
+  // titleY holds the active page's raw scroll offset (native-driven);
+  // the overlay renders it inverted.
+  const handleScroll = (index: number) =>
+    Animated.event([{ nativeEvent: { contentOffset: { y: titleY } } }], {
+      useNativeDriver: true,
+      listener: (event: { nativeEvent: { contentOffset: { y: number } } }) => {
+        scrollOffsets.current[index] = event.nativeEvent.contentOffset.y;
+      },
+    });
 
   const handleScrollStateChanged = (
     event: PageScrollStateChangedNativeEvent,
@@ -139,7 +164,7 @@ export function Home() {
         onPageScrollStateChanged={handleScrollStateChanged}
       >
         {SORTS.map((sort, index) => (
-          <FlatList
+          <AnimatedFlatList
             key={sort.key}
             ref={(ref) => {
               listRefs.current[index] = ref;
@@ -150,22 +175,19 @@ export function Home() {
             refreshing={refreshing}
             onRefresh={refresh}
             contentContainerStyle={{
-              // The title block sits where the old bar had it; it is list
-              // content and scrolls away with the stories (issue #196).
-              paddingTop: insets.top + HOME_TITLE_TOP_PADDING,
+              // The title block is a shared overlay above the pager
+              // (issue #197); the content starts right below where it
+              // sits at rest, so scroll math stays identical.
+              paddingTop:
+                insets.top +
+                HOME_TITLE_TOP_PADDING +
+                HOME_TITLE_BLOCK_HEIGHT +
+                12,
               // The last row must clear the floating switcher (issue #197).
               paddingBottom: insets.bottom + 72,
             }}
-            ListHeaderComponent={
-              <View style={styles.titleBlock}>
-                <Text style={[styles.title, { color: theme.ink }]}>
-                  À la une
-                </Text>
-                <Text style={[styles.stamp, { color: theme.muted }]}>
-                  {latestPointStamp(builtAt)}
-                </Text>
-              </View>
-            }
+            onScroll={handleScroll(index)}
+            scrollEventThrottle={16}
             renderItem={({ item }) => (
               <Pressable
                 accessibilityRole="button"
@@ -179,6 +201,26 @@ export function Home() {
           />
         ))}
       </PagerView>
+      {/* The shared title block (issue #197): one instance for every
+          sort — fixed while swiping between pages, riding the active
+          page's scroll down like list content. */}
+      <Animated.View
+        pointerEvents="none"
+        style={[
+          styles.titleOverlay,
+          {
+            paddingTop: insets.top + HOME_TITLE_TOP_PADDING,
+            transform: [{ translateY: Animated.multiply(titleY, -1) }],
+          },
+        ]}
+      >
+        <View style={styles.titleBlock}>
+          <Text style={[styles.title, { color: theme.ink }]}>À la une</Text>
+          <Text style={[styles.stamp, { color: theme.muted }]}>
+            {latestPointStamp(builtAt)}
+          </Text>
+        </View>
+      </Animated.View>
       {/* The pills only — a totally transparent overlay (issue #196). */}
       <HomeHeader />
       {/* The sort switcher, pinned above the bottom safe area, floating
@@ -209,8 +251,13 @@ const styles = StyleSheet.create({
   },
   titleBlock: {
     height: HOME_TITLE_BLOCK_HEIGHT,
-    marginBottom: 12,
     paddingHorizontal: 20,
+  },
+  titleOverlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
   },
   title: {
     fontSize: 30,
