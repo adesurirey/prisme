@@ -63,8 +63,9 @@ import { useTheme } from '@/theme';
 // untouched above it.
 
 // The corner radius the sliding page rounds to while the tile is
-// open — the card edge of the ChatGPT model (issue #198).
-const PAGE_CARD_RADIUS = 24;
+// open — the card edge of the ChatGPT model (issue #198), measured
+// off the reference: the arc eats a third of the visible strip.
+const PAGE_CARD_RADIUS = 48;
 
 /** The « Dernier point » stamp — the rendered artifact's build instant,
  *  hour only, in Paris time like every Prisme date: the point is hourly,
@@ -110,7 +111,7 @@ function PageCard({
     shadowOpacity: interpolate(
       progress.value,
       [0, 1],
-      [0, 0.18],
+      [0, 0.12],
       Extrapolation.CLAMP,
     ),
   }));
@@ -359,8 +360,8 @@ const styles = StyleSheet.create({
   // so the shadow follows the rounding edge.
   pageCardShadow: {
     shadowColor: '#000',
-    shadowOffset: { width: 3, height: 0 },
-    shadowRadius: 24,
+    shadowOffset: { width: 2, height: 0 },
+    shadowRadius: 40,
   },
   pageCardMask: {
     overflow: 'hidden',
