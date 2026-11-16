@@ -81,9 +81,12 @@ export function SortSwitcher({
 }
 
 const styles = StyleSheet.create({
-  // Same height as the header pills (44).
+  // Same height as the header pills (44). The frame is respected
+  // exactly by iOS 26's glass control (measured on the simulator);
+  // its selected pill is inset ~2pt inside the track — native
+  // behavior, same as Photos.
   control: {
-    width: 280,
+    width: 285,
     height: 44,
   },
   androidRow: {
