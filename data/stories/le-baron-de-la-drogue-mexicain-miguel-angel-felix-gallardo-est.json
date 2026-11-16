@@ -6,6 +6,18 @@
   "storyDay": "2026-11-15",
   "articles": [
     {
+      "id": "6a50a1dd979f",
+      "outletId": "le-monde",
+      "headline": "Miguel Angel Félix Gallardo, l’un des narcotrafiquants mexicains les plus puissants, est mort après trente-sept ans passés en prison",
+      "url": "https://www.lemonde.fr/disparitions/article/2026/11/16/miguel-angel-felix-gallardo-l-un-des-narcotrafiquants-mexicains-les-plus-reputes-est-mort-apres-trente-sept-ans-passes-en-prison_6811303_3382.html",
+      "publishedAt": "2026-11-16T04:17:11.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/15/36/0/2200/1100/644/322/60/0/55f7694_ftp-1-scm3ypk313c1-afp-d7jm9zv.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "610e2ca9ad33",
       "outletId": "ouest-france",
       "headline": "Mort de Félix Gallardo, le « parrain » du narcotrafic mexicain, après 37 ans en prison",
@@ -68,26 +80,6 @@
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794711600000,
-      "end": 1794715200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794715200000,
-      "end": 1794718800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794718800000,
       "end": 1794722400000,
@@ -307,6 +299,51 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794798000000,
+      "end": 1794801600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794801600000,
+      "end": 1794805200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le narcotrafiquant Miguel Ángel Félix Gallardo est décédé à l'âge de 80 ans dans un hôpital après trente-sept années d'incarcération au Mexique.",
+      "Il purgeait des peines totalisant soixante-dix-sept ans de prison pour avoir fondé les cartels modernes mexicains.",
+      "Son parcours criminel notoire avait inspiré l'œuvre audiovisuelle populaire Narcos : Mexico."
+    ],
+    "centre": [
+      "Miguel Ángel Félix Gallardo, surnommé le parrain et le chef des chefs du narcotrafic mexicain, est mort à l'hôpital à l'âge de 80 ans.",
+      "Il était incarcéré depuis 37 années pour des condamnations liées au trafic de stupéfiants et à des assassinats.",
+      "Il est reconnu comme l'artisan historique à l'origine de l'émergence des grands cartels du Mexique."
+    ],
+    "droite": [
+      "Le chef historique des cartels de la drogue mexicains, Miguel Ángel Félix Gallardo, est décédé en milieu hospitalier.",
+      "Il avait été transféré d'urgence depuis son centre pénitentiaire deux jours avant sa mort pour y recevoir des soins.",
+      "Il était détenu depuis 1989 et purgeait une longue peine sous le surnom célèbre du chef des chefs."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la dimension culturelle et criminelle globale du personnage en rappelant sa notoriété internationale et son passage dans la série Narcos.",
+    "Le centre insiste sur les qualifications judiciaires exactes de sa détention, mentionnant explicitement les motifs de narcotrafic et d'assassinat derrière son surnom de parrain.",
+    "La droite privilégie le récit factuel de son hospitalisation en urgence survenue deux jours avant son décès pour souligner la fin de cette figure historique incarcérée depuis 1989."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-16T05:01:24.062Z"
 }
