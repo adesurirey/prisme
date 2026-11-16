@@ -114,6 +114,11 @@ function PageCard({
       [0, 0.16],
       Extrapolation.CLAMP,
     ),
+    // The whole page washes as the tile opens (the ChatGPT model): the
+    // content fades toward the shared canvas, so the page reads lighter
+    // than the layer beneath it — surface and page share one color and
+    // only the wash separates them.
+    opacity: interpolate(progress.value, [0, 1], [1, 0.8]),
   }));
   const mask = useAnimatedStyle(() => ({
     borderRadius: interpolate(

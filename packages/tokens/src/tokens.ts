@@ -17,7 +17,6 @@
 export type Palette = {
   readonly canvas: string;
   readonly surface: string;
-  readonly tile: string;
   readonly line: string;
   readonly lineStrong: string;
   readonly ink: string;
@@ -39,8 +38,6 @@ export const light: Palette = {
   canvas: '#fcfcfc',
   /** Card and raised surfaces. */
   surface: '#ffffff',
-  /** The burger tile's recessed background (issue #198): one visible step below the page canvas — the tile waits behind the page, and the sliding page reads as the card on top of it, no dim needed. */
-  tile: '#f4f4f5',
   /** Hairline borders. */
   line: 'rgba(17, 17, 20, 0.08)',
   /** Strong hairlines and focus outlines. */
@@ -75,8 +72,6 @@ export const dark: Palette = {
   canvas: '#0e0e10',
   /** Card and raised surfaces. */
   surface: '#151517',
-  /** The burger tile's background (issue #198): in dark themes surfaces lift by lightening, so the tile sits a step above the canvas — enough for the sliding page's shadow to read against it, which a deeper-than-canvas tile swallowed. */
-  tile: '#17171a',
   /** Hairline borders. */
   line: 'rgba(255, 255, 255, 0.09)',
   /** Strong hairlines and focus outlines. */

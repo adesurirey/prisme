@@ -48,7 +48,7 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
       style={[
         styles.tile,
         {
-          backgroundColor: theme.tile,
+          backgroundColor: theme.canvas,
           paddingTop: insets.top + WORDMARK_ROW_OFFSET,
           paddingBottom: insets.bottom + 24,
         },

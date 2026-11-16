@@ -11,10 +11,6 @@
       "$value": "#ffffff",
       "$description": "Card and raised surfaces."
     },
-    "tile": {
-      "$value": "#f4f4f5",
-      "$description": "The burger tile's recessed background (issue #198): one visible step below the page canvas — the tile waits behind the page, and the sliding page reads as the card on top of it, no dim needed."
-    },
     "line": {
       "$value": "rgba(17, 17, 20, 0.08)",
       "$description": "Hairline borders."
@@ -78,10 +74,6 @@
     "surface": {
       "$value": "#151517",
       "$description": "Card and raised surfaces."
-    },
-    "tile": {
-      "$value": "#17171a",
-      "$description": "The burger tile's background (issue #198): in dark themes surfaces lift by lightening, so the tile sits a step above the canvas — enough for the sliding page's shadow to read against it, which a deeper-than-canvas tile swallowed."
     },
     "line": {
       "$value": "rgba(255, 255, 255, 0.09)",
