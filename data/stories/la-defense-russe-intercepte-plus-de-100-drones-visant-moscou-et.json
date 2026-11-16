@@ -6,6 +6,18 @@
   "storyDay": "2026-11-16",
   "articles": [
     {
+      "id": "d9453fcada6f",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, guerre en Ukraine : près de 200 drones neutralisés à l’approche de Moscou, selon le maire de la capitale russe",
+      "url": "https://www.lemonde.fr/international/live/2026/11/16/en-direct-guerre-en-ukraine-pres-de-200-drones-neutralises-a-l-approche-de-moscou-selon-le-maire-de-la-capitale-russe_6810982_3210.html",
+      "publishedAt": "2026-11-16T05:52:21.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/12/129/0/4509/2254/644/322/60/0/6fad87a_ftp-1-g3ysxr48fsre-afp-d78t8t3.jpg",
+      "frontPage": true,
+      "kind": "live",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "163587323191",
       "outletId": "20-minutes",
       "headline": "EN DIRECT Guerre en Ukraine : Plus de 100 drones visant Moscou interceptés dans la nuit…",
@@ -36,27 +48,17 @@
       "url": "https://www.lefigaro.fr/international/russie-plus-de-100-drones-visant-moscou-interceptes-20261116",
       "publishedAt": "2026-11-16T04:05:49.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/16/751bb531f1d4d04265fc5f99053f888d08cbb83c192be5312ac565762b54a73d.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
     }
   ],
   "topicId": "5ad9726a87f5",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794718800000,
-      "end": 1794722400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794722400000,
       "end": 1794726000000,
@@ -286,6 +288,16 @@
         "droite": 1
       },
       "total": 3
+    },
+    {
+      "start": 1794805200000,
+      "end": 1794808800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ]
 }
