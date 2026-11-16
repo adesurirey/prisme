@@ -6,6 +6,17 @@
   "storyDay": "2026-11-15",
   "articles": [
     {
+      "id": "fa52bb2a0302",
+      "outletId": "le-figaro",
+      "headline": "Cap-Vert : le président sortant José Maria Neves, réélu pour un second mandat, promet de continuer à «promouvoir les libertés»",
+      "url": "https://www.lefigaro.fr/international/cap-vert-le-president-sortant-jose-maria-neves-reelu-pour-un-second-mandat-promet-de-continuer-a-promouvoir-les-libertes-20261116",
+      "publishedAt": "2026-11-16T07:08:17.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/1438x959_crop/2026/11/16/eef4403654f640cd3fb422c79298e5fba017879bb4343920f680bc390354a1ee.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "7864803608d7",
       "outletId": "rfi",
       "headline": "Présidentielle au Cap-Vert: José María Neves rempile pour un second mandat de cinq ans",
@@ -68,36 +79,6 @@
   "titledArticleCount": 5,
   "section": "world",
   "activity": [
-    {
-      "start": 1794718800000,
-      "end": 1794722400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794722400000,
-      "end": 1794726000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794726000000,
-      "end": 1794729600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794729600000,
       "end": 1794733200000,
@@ -307,7 +288,63 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794805200000,
+      "end": 1794808800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794808800000,
+      "end": 1794812400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794812400000,
+      "end": 1794816000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Le président sortant José María Neves a remporté la présidentielle du Cap-Vert dès le premier tour avec plus de 63 % des suffrages.",
+      "Le chef de l'État bénéficie de l'appui du Parti africain pour l'indépendance du Cap-Vert, vainqueur des élections législatives de mai.",
+      "L'archipel lusophone se distingue par sa stabilité démocratique reconnue."
+    ],
+    "centre": [
+      "José María Neves a été réélu pour un second mandat de cinq ans dès le premier tour avec un score supérieur à 63 % des voix.",
+      "Sa principale opposante, l'avocate Joana Rosa Amado, a admis sa défaite après avoir obtenu 31,4 % des suffrages.",
+      "Le dirigeant réélu s'est engagé à poursuivre la promotion des libertés et à œuvrer pour une croissance inclusive.",
+      "L'archipel d'Afrique de l'Ouest fait face à des défis économiques malgré une croissance dynamique."
+    ],
+    "droite": [
+      "Le président sortant José Maria Neves a décroché un second mandat présidentiel dès le premier tour.",
+      "Il est soutenu par le Parti africain pour l'indépendance du Cap-Vert, formation de gauche victorieuse des législatives en mai.",
+      "Le dirigeant réélu a affirmé sa volonté de continuer à « promouvoir les libertés »."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la stabilité démocratique de l'archipel et l'ancrage politique du vainqueur soutenu par son parti.",
+    "Le centre détaille les scores précis des candidats, la défaite concédée par la principale opposante et les promesses programmatiques du président.",
+    "La droite se focalise sur l'identité politique du président réélu et reprend textuellement son engagement à « promouvoir les libertés »."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-16T08:06:26.691Z"
 }
