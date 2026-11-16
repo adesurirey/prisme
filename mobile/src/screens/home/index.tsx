@@ -111,7 +111,7 @@ function PageCard({
     shadowOpacity: interpolate(
       progress.value,
       [0, 1],
-      [0, 0.12],
+      [0, 0.16],
       Extrapolation.CLAMP,
     ),
   }));
@@ -360,8 +360,8 @@ const styles = StyleSheet.create({
   // so the shadow follows the rounding edge.
   pageCardShadow: {
     shadowColor: '#000',
-    shadowOffset: { width: 2, height: 0 },
-    shadowRadius: 40,
+    shadowOffset: { width: 3, height: 0 },
+    shadowRadius: 32,
   },
   pageCardMask: {
     overflow: 'hidden',
