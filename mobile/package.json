@@ -17,6 +17,7 @@
     "moduleNameMapper": {
       "@react-native-async-storage/async-storage": "<rootDir>/node_modules/@react-native-async-storage/async-storage/jest/async-storage-mock",
       "@react-native-segmented-control/segmented-control": "<rootDir>/src/chrome/segmented-control.mock.tsx",
+      "react-native-pager-view": "<rootDir>/src/chrome/pager-view.mock.tsx",
       "^@/assets/(.*)$": "<rootDir>/assets/$1",
       "^@/(.*)$": "<rootDir>/src/$1"
     },
@@ -45,6 +46,7 @@
     "react": "19.3.0",
     "react-native": "0.88.1",
     "react-native-gesture-handler": "~3.3.0",
+    "react-native-pager-view": "9.0.7",
     "react-native-reanimated": "4.7.1",
     "react-native-safe-area-context": "~5.11.1",
     "react-native-screens": "~4.30.1",

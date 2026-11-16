@@ -1,4 +1,5 @@
 import {
+  act,
   fireEvent,
   render,
   screen,
@@ -7,11 +8,11 @@ import {
 import { File } from 'expo-file-system';
 import { FlatList } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { mockPagerMethods } from '@/chrome/pager-view.mock';
 import fixtureEdition from '@/data/__fixtures__/edition.json';
 import fixtureOutlets from '@/data/__fixtures__/outlets.json';
 import { editionCacheDirectory } from '@/data/runtime';
 import { ModeProvider } from '@/mode/mode';
-
 import { Home } from './index';
 
 // The offline proof (issue #179): the disk cache seeded with the fixture,
@@ -92,7 +93,7 @@ describe('Home', () => {
     await renderHome();
 
     await screen.findByText('Dernier point à 14h');
-    fireEvent(screen.getByTestId('stories'), 'refresh');
+    fireEvent(screen.getByTestId('stories-brulant'), 'refresh');
     await waitFor(() =>
       expect(
         screen.getByText("Le budget 2027 arrive en commission à l'Assemblée"),
@@ -152,6 +153,72 @@ describe('Home', () => {
     scrollToOffset.mockClear();
 
     await fireEvent.press(screen.getByTestId('sort-segment-2'));
+    // The pager's pageSelected echo arrives over the bridge, a task
+    // after the jump — the reset rides it (one path for taps/swipes).
+    await act(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 0));
+    });
+
+    expect(scrollToOffset).toHaveBeenCalledWith({
+      offset: 0,
+      animated: false,
+    });
+  });
+
+  it('a tap drives the pager to that sort page (#197)', async () => {
+    await renderHome();
+    await screen.findByText('Dernier point à 14h');
+    mockPagerMethods.setPageWithoutAnimation.mockClear();
+
+    await fireEvent.press(screen.getByTestId('sort-segment-2'));
+
+    expect(mockPagerMethods.setPageWithoutAnimation).toHaveBeenCalledWith(2);
+  });
+
+  it('a landing swipe swaps the rows and pairs the control (#197)', async () => {
+    await renderHome();
+    await screen.findByText('Dernier point à 14h');
+
+    // The native event a swipe emits when page 2 becomes selected —
+    // the mock lands the pager there and notifies the app.
+    await act(async () => {
+      mockPagerMethods.emitPageSelected?.({ nativeEvent: { position: 2 } });
+    });
+
+    expect(rowOrder()).toEqual(['cyclone', 'budget']);
+    expect(
+      screen.getByTestId('sort-segment-2').props.accessibilityState,
+    ).toEqual({ selected: true });
+    expect(
+      screen.getByTestId('sort-segment-1').props.accessibilityState,
+    ).toEqual({ selected: false });
+  });
+
+  it('the landed page resets only once the pager settles idle (#197)', async () => {
+    const scrollToOffset = jest.spyOn(FlatList.prototype, 'scrollToOffset');
+    await renderHome();
+    await screen.findByText('Dernier point à 14h');
+    scrollToOffset.mockClear();
+
+    // The spike's event order: the finger lifts (dragging → settling),
+    // the page lands, then the pager goes idle.
+    await act(async () => {
+      mockPagerMethods.emitStateChanged?.({
+        nativeEvent: { pageScrollState: 'dragging' },
+      });
+      mockPagerMethods.emitStateChanged?.({
+        nativeEvent: { pageScrollState: 'settling' },
+      });
+      mockPagerMethods.emitPageSelected?.({ nativeEvent: { position: 2 } });
+    });
+    // Mid-settle: no yank.
+    expect(scrollToOffset).not.toHaveBeenCalled();
+
+    await act(async () => {
+      mockPagerMethods.emitStateChanged?.({
+        nativeEvent: { pageScrollState: 'idle' },
+      });
+    });
 
     expect(scrollToOffset).toHaveBeenCalledWith({
       offset: 0,
