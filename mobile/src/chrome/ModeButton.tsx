@@ -19,6 +19,7 @@
 
 import { TrueSheet } from '@lodev09/react-native-true-sheet';
 import * as Haptics from 'expo-haptics';
+import { Check } from 'lucide-react-native';
 import { useEffect, useRef } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import Animated, {
@@ -144,7 +145,11 @@ export function ModeButton({ style }: { style?: ModeButtonStyle }) {
                 {modeDescription(candidate)}
               </Text>
               {candidate === mode && (
-                <Text style={[styles.rowCheck, { color: theme.ink }]}>✓</Text>
+                // The selected row's check — the lucide icon the rest of
+                // the chrome speaks (issue #199), no text glyph.
+                <View style={styles.rowCheck}>
+                  <Check size={18} strokeWidth={2} color={theme.ink} />
+                </View>
               )}
             </Pressable>
           ))}
@@ -194,8 +199,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 16,
     top: 18,
-    fontSize: 18,
-    fontWeight: '700',
   },
   tip: {
     fontSize: 16,
