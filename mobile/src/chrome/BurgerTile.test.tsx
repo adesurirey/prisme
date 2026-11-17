@@ -85,13 +85,9 @@ describe('BurgerTile (issue #198)', () => {
     expect(onClose).toHaveBeenCalledTimes(2);
   });
 
-  test('the icons carry a plain-text fallback (jest sees the fallback path)', async () => {
-    await renderTile();
-
-    // The SymbolView mock resolves to the fallback — the glyphs Android
-    // renders where SF Symbols do not exist.
-
-    expect(screen.getByText(/≡/)).toBeTruthy();
-    expect(screen.getByText(/\?/)).toBeTruthy();
-  });
+  // The plain-text-fallback test died with the unified icon language
+  // (lucide-react-native, user decision on #199): there is no fallback
+  // seam to pin — the rows above already prove the icons render inside
+  // the tappable rows; the look itself is simulator-verified, like the
+  // rest of the chrome on this branch.
 });

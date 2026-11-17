@@ -10,14 +10,15 @@
  * carries it as the `message`: RN 0.88's Android chooser reads only
  * `message`/`title`, so a `url`-only share opens the chooser empty.
  *
- * The icons are SF Symbols through expo-symbols; Android has no SF
- * Symbols, so a plain-text glyph rides in the library's own `fallback`
- * — the burger tile's pattern (issue #198).
+ * The icons are lucide-react-native — the unified icon language both
+ * platforms share (user decision on #199, amending the #198
+ * plain-text-fallback note): typed per-icon components, tinted
+ * `theme.ink` like every other surface — no SF Symbols, no fallback
+ * glyphs.
  */
 
-import { SymbolView } from 'expo-symbols';
-import type { ReactNode } from 'react';
-import { Platform, Share, StyleSheet, Text, View } from 'react-native';
+import { ChevronLeft, Share2 } from 'lucide-react-native';
+import { Platform, Share, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useTheme } from '@/theme';
@@ -26,21 +27,14 @@ import { GlassPill } from './GlassPill';
 import { HOME_TITLE_TOP_PADDING } from './HomeHeader';
 import { ModeButton } from './ModeButton';
 
-function PillIcon({ symbol, glyph }: { symbol: string; glyph: string }) {
+function BackIcon() {
   const theme = useTheme();
-  return (
-    <SymbolView
-      name={symbol as never}
-      size={20}
-      weight="semibold"
-      tintColor={theme.ink}
-      fallback={
-        <View style={styles.glyphBox}>
-          <Text style={[styles.glyph, { color: theme.ink }]}>{glyph}</Text>
-        </View>
-      }
-    />
-  );
+  return <ChevronLeft size={20} strokeWidth={2} color={theme.ink} />;
+}
+
+function ShareIcon() {
+  const theme = useTheme();
+  return <Share2 size={20} strokeWidth={2} color={theme.ink} />;
 }
 
 export function StoryHeader({
@@ -76,7 +70,7 @@ export function StoryHeader({
           onPress={onBack}
           style={styles.square}
         >
-          <PillIcon symbol="chevron.left" glyph="‹" />
+          <BackIcon />
         </GlassPill>
       </View>
       <View
@@ -94,7 +88,7 @@ export function StoryHeader({
           onPress={share}
           style={styles.square}
         >
-          <PillIcon symbol="square.and.arrow.up" glyph="↑" />
+          <ShareIcon />
         </GlassPill>
       </View>
     </>
@@ -124,16 +118,5 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
     paddingHorizontal: 0,
-  },
-  glyphBox: {
-    width: 20,
-    height: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  glyph: {
-    fontSize: 17,
-    fontWeight: '600',
-    lineHeight: 20,
   },
 });

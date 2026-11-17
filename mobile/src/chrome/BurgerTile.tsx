@@ -1,10 +1,10 @@
 /**
  * The burger tile's content (issue #198): the Prisme wordmark on top,
  * then one row per static route — a tap closes the drawer and pushes
- * the route. The icons are SF Symbols through expo-symbols; Android
- * has no SF Symbols, so a plain-text glyph rides in the library's own
- * `fallback` (a string name never resolves on Android — Material
- * glyphs stay out, the ticket pins the plain text). The content
+ * the route. The icons are lucide-react-native — the unified icon
+ * language both platforms share (user decision on #199, amending this
+ * ticket's plain-text-fallback note): typed per-icon components,
+ * tinted `theme.ink`, no SF Symbols and no fallback glyphs.
  * appears with the drawer's own progress: it zooms in from 90% and
  * fades, one step behind the page sliding away — the model's sense of
  * depth. The scale lives on an inner wrapper, never on the root that
@@ -13,7 +13,7 @@
  */
 
 import { useRouter } from 'expo-router';
-import { SymbolView } from 'expo-symbols';
+import { ChartColumn, CircleHelp } from 'lucide-react-native';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useDrawerProgress } from 'react-native-drawer-layout';
 import Reanimated, {
@@ -38,14 +38,12 @@ const TILES = [
     route: '/classement',
     label: 'Classement politique des médias',
     // The spectrum chart the page will draw (#183).
-    symbol: 'chart.bar.fill',
-    glyph: '≡',
+    Icon: ChartColumn,
   },
   {
     route: '/methode',
     label: 'Comment ça marche',
-    symbol: 'questionmark.circle',
-    glyph: '?',
+    Icon: CircleHelp,
   },
 ] as const;
 
@@ -117,19 +115,7 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
               }}
               style={styles.row}
             >
-              <SymbolView
-                name={tile.symbol}
-                size={20}
-                weight="semibold"
-                tintColor={theme.ink}
-                fallback={
-                  <View style={styles.glyphBox}>
-                    <Text style={[styles.glyph, { color: theme.ink }]}>
-                      {tile.glyph}
-                    </Text>
-                  </View>
-                }
-              />
+              <tile.Icon size={20} strokeWidth={2} color={theme.ink} />
               <Text style={[styles.label, { color: theme.ink }]}>
                 {tile.label}
               </Text>
@@ -175,16 +161,5 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 17,
     fontWeight: '600',
-  },
-  glyphBox: {
-    width: 20,
-    height: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  glyph: {
-    fontSize: 17,
-    fontWeight: '600',
-    lineHeight: 20,
   },
 });

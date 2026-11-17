@@ -19,12 +19,12 @@
       "@react-native-segmented-control/segmented-control": "<rootDir>/src/chrome/segmented-control.mock.tsx",
       "react-native-pager-view": "<rootDir>/src/chrome/pager-view.mock.tsx",
       "react-native-drawer-layout": "<rootDir>/src/chrome/drawer-layout.mock.tsx",
-      "expo-symbols": "<rootDir>/src/chrome/symbols.mock.tsx",
+      "lucide-react-native": "<rootDir>/node_modules/lucide-react-native/dist/cjs/lucide-react-native.js",
       "^@/assets/(.*)$": "<rootDir>/assets/$1",
       "^@/(.*)$": "<rootDir>/src/$1"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!(.pnpm/)?((jest-)?react-native|@react-native(-community)?|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|react-native-svg))"
+      "node_modules/(?!(.pnpm/)?((jest-)?react-native|@react-native(-community)?|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|react-native-svg|lucide-react-native))"
     ]
   },
   "dependencies": {
@@ -44,8 +44,8 @@
     "expo-router": "~58.0.30",
     "expo-splash-screen": "~58.0.13",
     "expo-status-bar": "~58.0.4",
-    "expo-symbols": "~58.0.5",
     "expo-web-browser": "~58.0.8",
+    "lucide-react-native": "^1.73.0",
     "react": "19.3.0",
     "react-native": "0.88.1",
     "react-native-drawer-layout": "~4.2.13",
