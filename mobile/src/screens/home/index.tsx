@@ -63,7 +63,7 @@ import { useTheme } from '@/theme';
 // The corner radius the sliding page rounds to while the tile is
 // open — the card edge of the ChatGPT model (issue #198), measured
 // off the reference: the arc eats a third of the visible strip.
-const PAGE_CARD_RADIUS = 48;
+const PAGE_CARD_RADIUS = 62;
 
 // How far the light-reflection wash goes at full open (issue #198):
 // the content never disappears, it recedes into the paper.
@@ -126,14 +126,6 @@ function PageCard({
       Extrapolation.CLAMP,
     ),
   }));
-  const mask = useAnimatedStyle(() => ({
-    borderRadius: interpolate(
-      progress.value,
-      [0, 1],
-      [0, PAGE_CARD_RADIUS],
-      Extrapolation.CLAMP,
-    ),
-  }));
   // The light-reflection wash (issue #198): a sheet of the card's own
   // surface fading in over the content — text and images recede into
   // the paper without the card ever going translucent. Inside the
@@ -156,7 +148,7 @@ function PageCard({
         { backgroundColor: background },
       ]}
     >
-      <Reanimated.View style={[styles.container, styles.pageCardMask, mask]}>
+      <Reanimated.View style={[styles.container, styles.pageCardMask]}>
         {children}
         <Reanimated.View
           pointerEvents="none"
@@ -386,6 +378,7 @@ export function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    borderRadius: PAGE_CARD_RADIUS,
   },
   // The card treatment of the sliding page (issue #198): the shadow
   // lives on the outer, unmasked surface (iOS clips a masked view's
