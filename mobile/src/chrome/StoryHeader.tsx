@@ -83,8 +83,10 @@ export function StoryHeader({
         pointerEvents="box-none"
         style={[styles.edge, styles.rightEdge, { top }]}
       >
-        {/* Same 44pt pills as the home pair — the Photos pair. */}
-        <ModeButton style={styles.square} />
+        {/* The mode pill rides at its home size — height only, the
+            intrinsic width: the square would clip « Couv. » into a
+            circle (simulator feedback, issue #199). */}
+        <ModeButton style={styles.pill} />
         <GlassPill
           accessibilityLabel="Partager"
           testID="share-button"
@@ -114,6 +116,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     paddingRight: 20,
     gap: 10,
+  },
+  pill: {
+    height: 44,
   },
   square: {
     width: 44,
