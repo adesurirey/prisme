@@ -102,13 +102,13 @@ function PageCard({
   children: ReactNode;
 }) {
   const progress = useDrawerProgress();
+  // Paint props only on the outer surface: Reanimated skips committing
+  // animated paint styles to the shadow tree (the library's own FIXME),
+  // so an animated borderRadius here left UIKit drawing the shadow from
+  // a radius-0 square path — the corner ghost. The radius lives as a
+  // static style instead (committed once, path always rounded); only
+  // the shadow and wash intensities animate.
   const shadow = useAnimatedStyle(() => ({
-    borderRadius: interpolate(
-      progress.value,
-      [0, 1],
-      [0, PAGE_CARD_RADIUS],
-      Extrapolation.CLAMP,
-    ),
     shadowOpacity: interpolate(
       progress.value,
       [0, 1],
@@ -370,6 +370,9 @@ const styles = StyleSheet.create({
   // shadow) and the mask on the inner one; the radius animates on both
   // so the shadow follows the rounding edge.
   pageCardShadow: {
+    // Static radius: the shadow path reads it from the committed style
+    // and stays rounded for good — see the note on the animated style.
+    borderRadius: PAGE_CARD_RADIUS,
     shadowColor: '#000',
     shadowOffset: { width: 3, height: 0 },
     shadowRadius: 32,
