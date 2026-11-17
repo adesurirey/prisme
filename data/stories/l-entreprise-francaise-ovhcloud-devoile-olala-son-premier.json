@@ -1,10 +1,43 @@
 {
   "id": "1239241c40b5",
   "slug": "l-entreprise-francaise-ovhcloud-devoile-olala-son-premier",
-  "title": "L'entreprise française OVHcloud dévoile Olala, son premier modèle d'intelligence artificielle ouvert",
+  "title": "L'entreprise française OVHcloud lance Olala, son premier modèle ouvert d'intelligence artificielle",
   "createdAt": "2026-11-17T08:01:34.438Z",
   "storyDay": "2026-11-17",
   "articles": [
+    {
+      "id": "da969bec64aa",
+      "outletId": "challenges",
+      "headline": "OVHcloud prend le train de l’IA : le fleuron français de l’informatique à distance dévoile son premier modèle « Olala »",
+      "url": " https://www.challenges.fr/entreprise/tech-numerique/ovhcloud-prend-le-train-de-lia-le-fleuron-francais-de-linformatique-a-distance-devoile-son-premier-modele-olala_647013 ",
+      "publishedAt": "2026-11-17T09:43:00.000Z",
+      "imageUrl": "https://www.challenges.fr/_ipx/f_jpg&s_1200x630&enlarge_true/cha%2Fstatic%2F2026-11%2F64751.HR_1.jpg%3FVersionId%3DlASAt3nvd4sE2RYcIIyyYB76YOxN3SU1",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "8c19e80383c3",
+      "outletId": "la-croix",
+      "headline": "Intelligence artificielle : l’entreprise française OVHcloud lance son propre modèle",
+      "url": "https://www.la-croix.com/economie/intelligence-artificielle-l-entreprise-francaise-ovhcloud-lance-son-propre-modele-20261117",
+      "publishedAt": "2026-11-17T09:29:20.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/11/17/2591151-la-start-up-francaise-ovhcloud-lance-olala-son-pro.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "37edc1d89783",
+      "outletId": "le-monde",
+      "headline": "Olala, le premier modèle d’IA de l’entreprise française OVHcloud",
+      "url": "https://www.lemonde.fr/pixels/article/2026/11/17/l-entreprise-francaise-ovhcloud-devoile-son-premier-modele-d-ia-baptise-olala_6812932_4408996.html",
+      "publishedAt": "2026-11-17T09:12:33.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/17/625/0/7488/3744/644/322/60/0/91b1442_ftp-1-mz6zii9qq1bn-afp-d7p42zq.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
     {
       "id": "7b57694449c3",
       "outletId": "le-parisien",
@@ -29,20 +62,10 @@
     }
   ],
   "topicId": "1239241c40b5",
-  "titledArticleCount": 2,
+  "titledArticleCount": 5,
   "section": "science",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794819600000,
-      "end": 1794823200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794823200000,
       "end": 1794826800000,
@@ -272,6 +295,39 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794906000000,
+      "end": 1794909600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 2,
+        "droite": 0
+      },
+      "total": 3
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "L'entreprise française OVHcloud entre dans le secteur de l'intelligence artificielle avec le lancement de son premier modèle ouvert baptisé « Olala ».",
+      "La firme doit s'imposer face à une concurrence intense dominée par de puissants acteurs américains et chinois."
+    ],
+    "centre": [
+      "Le fournisseur français de services cloud a annoncé le lancement de son modèle d'intelligence artificielle nommé « Olala ».",
+      "Le fondateur Octave Klaba ambitionne de concurrencer les acteurs majeurs du secteur depuis Paris sans avoir recours à une levée de fonds.",
+      "Le modèle sera mis à disposition des entreprises dès ce jeudi sur la plateforme Hugging Face."
+    ],
+    "droite": [
+      "L'entreprise française d'informatique à distance OVHcloud a dévoilé son modèle ouvert d'intelligence artificielle baptisé « Olala ».",
+      "La structure s'appuie sur son infrastructure cloud pour proposer ce nouveau produit accessible sur Hugging Face."
+    ]
+  },
+  "differences": [
+    "La gauche insiste particulièrement sur la difficulté pour l'entreprise française de s'imposer au milieu de la domination des géants américains et des acteurs chinois à bas coûts.",
+    "Le centre met en avant la stratégie financière d'Octave Klaba qui refuse toute levée de fonds pour rivaliser avec les mastodontes du secteur.",
+    "La droite privilégie une approche technique en soulignant l'utilisation directe de l'infrastructure cloud d'OVHcloud et l'hébergement du modèle sur la plateforme Hugging Face."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-17T13:01:33.062Z"
 }
