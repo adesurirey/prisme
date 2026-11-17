@@ -6,6 +6,17 @@
   "storyDay": "2026-11-16",
   "articles": [
     {
+      "id": "2f7494379e1f",
+      "outletId": "tf1-info",
+      "headline": "États-Unis : des banques américaines touchées par des bugs massifs",
+      "url": "https://www.tf1info.fr/economie/etats-unis-des-banques-americaines-touchees-par-des-bugs-massifs-pas-de-cyberattaque-selon-jpmorgan-chase-2476274.html",
+      "publishedAt": "2026-11-16T23:27:39.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/682/banque-americaine-panne-applications-2026-0ba19a-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "dbaad451c83a",
       "outletId": "ouest-france",
       "headline": "Aux États-Unis, plusieurs grandes applications bancaires touchées par des bugs informatiques",
@@ -40,30 +51,10 @@
     }
   ],
   "topicId": "ff0fe3aa114e",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794780000000,
-      "end": 1794783600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794783600000,
-      "end": 1794787200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794787200000,
       "end": 1794790800000,
@@ -283,6 +274,49 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794866400000,
+      "end": 1794870000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794870000000,
+      "end": 1794873600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Plusieurs applications bancaires américaines de premier plan, dont JPMorgan Chase, Bank of America et l'outil Zelle, ont subi des bugs massifs.",
+      "Un porte-parole de JPMorgan Chase a attribué ces dysfonctionnements à un problème technique."
+    ],
+    "centre": [
+      "Des utilisateurs de JPMorgan Chase, Bank of America et du service de paiement Zelle ont signalé des dysfonctionnements massifs.",
+      "Les réseaux sociaux ont véhiculé des inquiétudes concernant un éventuel piratage.",
+      "Un porte-parole de Chase a qualifié l'incident de problème technique et a assuré que les fonds et l'accès des clients restent préservés."
+    ],
+    "droite": [
+      "Plusieurs établissements bancaires américains, parmi lesquels JPMorgan Chase, Bank of America et Wells Fargo, ont été touchés par une panne informatique.",
+      "JPMorgan Chase a indiqué qu'aucun élément n'indique une cyberattaque."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur l'ampleur institutionnelle des bugs en listant les transferts d'argent de Zelle.",
+    "Le centre insiste sur l'impact direct auprès des utilisateurs et mentionne les craintes de piratage nées sur les réseaux sociaux.",
+    "La droite se focalise sur les plus grandes banques concernées et évacue rapidement l'hypothèse d'une cyberattaque."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-17T00:01:34.557Z"
 }
