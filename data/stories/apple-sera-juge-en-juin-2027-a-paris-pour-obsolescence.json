@@ -6,6 +6,60 @@
   "storyDay": "2026-11-17",
   "articles": [
     {
+      "id": "52e8ede06ca5",
+      "outletId": "franceinfo",
+      "headline": "Apple jugé en juin 2027 à Paris pour avoir organisé l'obsolescence programmée de ses iPhone",
+      "url": "https://www.franceinfo.fr/internet/apple-juge-en-juin-2027-a-paris-pour-avoir-organise-l-obsolescence-programmee-de-ses-iphone_8286095.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-17T07:25:54.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/NldA5b8kcrqNfEk24MPs2NWkG0s/0x0:5000x2812/432x243/filters:format(jpg)/2026/11/17/6afbff979afd2961492904.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "cda292fc69f9",
+      "outletId": "huffpost",
+      "headline": "L’obsolescence programmée d’Apple au cœur d’un procès inédit en 2027 en France",
+      "url": "https://www.huffingtonpost.fr/france/article/l-obsolescence-programmee-d-apple-au-c-ur-d-un-proces-inedit-en-2027-en-france_359603.html",
+      "publishedAt": "2026-11-17T07:19:14.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2022/08/19/157/0/3015/1695/0/0/60/0/264b20b_1660891167600-2022-08-01t181554z-1325164873-rc2tnv9780nv-rtrmadp-3-apple-lawsuit-france.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "aacbbbb2f40c",
+      "outletId": "liberation",
+      "headline": "Obsolescence programmée des iPhone : Apple sera jugé à Paris en 2027",
+      "url": "https://www.liberation.fr/economie/economie-numerique/obsolescence-programmee-des-iphone-apple-sera-juge-a-paris-en-2027-20261117_HPM7WKFK4FFQHL4GUWTGVVTGNQ/",
+      "publishedAt": "2026-11-17T06:56:34.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "a6f87f413788",
+      "outletId": "tf1-info",
+      "headline": "\"Première historique\" : soupçonné d'avoir organisé l'obsolescence programmée de ses iPhone, Apple sera jugé en 2027",
+      "url": "https://www.tf1info.fr/justice-faits-divers/premiere-historique-soupconne-d-avoir-organise-l-obsolescence-programmee-de-certains-iphone-apple-sera-juge-en-2027-2476285.html",
+      "publishedAt": "2026-11-17T06:39:56.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/575/iphone-12-apple-unsplash-346875-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "ea55308bc469",
+      "outletId": "cnews",
+      "headline": "Apple : le géant américain jugé en juin 2027 à Paris pour avoir organisé l'obsolescence programmée de ses iPhone",
+      "url": "https://www.cnews.fr/vie-numerique/2026-11-17/apple-le-geant-americain-juge-en-juin-2027-paris-pour-avoir-organise",
+      "publishedAt": "2026-11-17T06:31:34.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/075_raa-appleinc260227_npfjo-taille1200_6afbee306a3aa.jpg?h=f692311e&itok=iwYo_zt0",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "10979b9df9b4",
       "outletId": "le-parisien",
       "headline": "Apple sera jugé en juin 2027 à Paris pour avoir organisé l’obsolescence programmée de ses iPhone",
@@ -23,7 +77,7 @@
       "url": "https://www.lefigaro.fr/secteur/high-tech/obsolescence-programmee-des-iphone-apple-sera-juge-en-juin-2027-a-paris-une-premiere-20261117",
       "publishedAt": "2026-11-17T05:53:13.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/17/190ad60c9f0ee0e0e3715ff621e11426ebcf4ce999e52339ad47e556e4401aad.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -35,26 +89,17 @@
       "url": "https://www.lemonde.fr/pixels/article/2026/11/17/le-proces-d-apple-pour-obsolescence-programmee-s-ouvrira-en-juin-2027_6812904_4408996.html",
       "publishedAt": "2026-11-17T05:00:22.000Z",
       "imageUrl": "https://img.lemde.fr/2016/03/18/83/0/1000/500/644/322/60/0/94257c5_28352-lpw7jt.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "economy"
+      "section": "economy",
+      "everFrontPage": true
     }
   ],
   "topicId": "46a311eb831d",
-  "titledArticleCount": 3,
+  "titledArticleCount": 8,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794812400000,
-      "end": 1794816000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794816000000,
       "end": 1794819600000,
@@ -279,11 +324,45 @@
       "start": 1794895200000,
       "end": 1794898800000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
+        "droite": 2
+      },
+      "total": 4
+    },
+    {
+      "start": 1794898800000,
+      "end": 1794902400000,
+      "counts": {
+        "gauche": 2,
+        "centre": 0,
         "droite": 0
       },
-      "total": 1
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le fabricant technologique Apple comparaitra en juin 2027 devant la justice à Paris à la suite d'une plainte de l'association \"Halte à l'obsolescence programmée\".",
+      "La marque californienne fait face à un procès inédit en France concernant des accusations d'entrave au reconditionnement et aux réparations en dehors de son réseau officiel.",
+      "Le tribunal judiciaire examinera notamment le blocage par verrouillage logiciel des pièces détachées, ce qui pourrait valoir une lourde amende au groupe américain."
+    ],
+    "centre": [
+      "Le tribunal de Paris jugera Apple en juin 2027 pour des soupçons d'organisation de l'obsolescence programmée sur plusieurs générations d'iPhone.",
+      "La multinationale réfute l'ensemble des allégations formulées à son encontre dans le cadre de cette procédure judiciaire programmée sur quatre jours."
+    ],
+    "droite": [
+      "Les entités Apple Inc et Apple International devront comparaître à partir du 17 juin 2027 à Paris pour des pratiques d'obsolescence programmée.",
+      "Le groupe américain est poursuivi pour avoir mis en place des restrictions logicielles limitant la réparation des appareils afin de stimuler l'achat de smartphones neufs.",
+      "Alors que la firme conteste fermement les faits, la presse conservatrice souligne le caractère historique de cette première procédure en France."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur l'action pionnière de l'association militante et sur l'entrave technique au reconditionnement.",
+    "Le centre livre un compte-rendu strictement factuel et synthétique de la date d'audience et de la position de défense du fabricant.",
+    "La droite insiste sur la dimension spectaculaire et inédite de ce procès pour l'industrie technologique tout en détaillant les entités visées par le parquet."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-17T08:01:34.438Z"
 }
