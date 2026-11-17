@@ -11,6 +11,7 @@ import fixtureEdition from '@/data/__fixtures__/edition.json';
 import fixtureOutlets from '@/data/__fixtures__/outlets.json';
 import { editionCacheDirectory } from '@/data/runtime';
 import { ModeProvider } from '@/mode/mode';
+import { collectMarkers, type MarkerNode } from '@/test/tree';
 import { Story } from './index';
 
 // The offline proof (issue #179): the disk cache seeded with the fixture,
@@ -128,5 +129,17 @@ describe('the story screen (issue #199)', () => {
     } finally {
       share.mockRestore();
     }
+  });
+
+  test('the chrome renders above the content — the pills win hit-testing', async () => {
+    const { toJSON } = await render(storyTree('b0a1d2e3f4a5'));
+
+    // RN presses land on the topmost later sibling: the header must
+    // render AFTER the screen's body, or the pills go dead (the
+    // simulator-found bug on the static pages, issue #199).
+    const markers = collectMarkers(toJSON() as MarkerNode);
+    expect(markers.indexOf('back-button')).toBeGreaterThan(
+      markers.indexOf('story-body'),
+    );
   });
 });

@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react-native';
 import { Share } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ModeProvider } from '@/mode/mode';
+import { collectMarkers, type MarkerNode } from '@/test/tree';
 import { Classement } from './index';
 
 // The router pops the chrome (issue #195's push; the story's seam).
@@ -70,5 +71,17 @@ describe('the Classement screen (issue #199)', () => {
 
     fireEvent.press(screen.getByTestId('back-button'));
     expect(mockBack).toHaveBeenCalledTimes(1);
+  });
+
+  test('the chrome renders above the content — the pills win hit-testing', async () => {
+    const { toJSON } = await renderClassement();
+
+    // RN presses land on the topmost later sibling: the header must
+    // render AFTER the scroll's content, or the pills go dead (the
+    // simulator-found bug, issue #199).
+    const markers = collectMarkers(toJSON() as MarkerNode);
+    expect(markers.indexOf('back-button')).toBeGreaterThan(
+      markers.indexOf('Classement politique des médias'),
+    );
   });
 });

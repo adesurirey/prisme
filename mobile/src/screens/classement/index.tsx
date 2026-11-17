@@ -32,10 +32,6 @@ export function Classement() {
 
   return (
     <View style={[styles.container, { backgroundColor: theme.canvas }]}>
-      <ScreenHeader
-        onBack={() => router.back()}
-        shareUrl={CLASSEMENT_WEB_URL}
-      />
       <ScrollView
         contentContainerStyle={[
           styles.content,
@@ -59,6 +55,13 @@ export function Classement() {
           </Text>
         ))}
       </ScrollView>
+      {/* The chrome renders last — RN hit-tests later siblings first,
+          so the pills win presses over the scroll beneath them (the
+          home's own ordering, issue #196). */}
+      <ScreenHeader
+        onBack={() => router.back()}
+        shareUrl={CLASSEMENT_WEB_URL}
+      />
     </View>
   );
 }

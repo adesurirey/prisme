@@ -26,14 +26,17 @@ export function Story({ id }: { id: string }) {
 
   return (
     <View style={[styles.container, { backgroundColor: theme.canvas }]}>
-      <ScreenHeader onBack={() => router.back()} shareUrl={shareUrl} mode />
       {/* The body is #182 — the placeholder keeps the route's 5a text. */}
-      <View style={styles.body}>
+      <View style={styles.body} testID="story-body">
         <Text style={[styles.placeholder, { color: theme.prose }]}>
           Le récit s'écrira ici — le corps de page arrive avec #182.
         </Text>
         <Text style={[styles.id, { color: theme.prose }]}>{id}</Text>
       </View>
+      {/* The chrome renders last — RN hit-tests later siblings first,
+          so the pills win presses over the body beneath them (the
+          home's own ordering, issue #196). */}
+      <ScreenHeader onBack={() => router.back()} shareUrl={shareUrl} mode />
     </View>
   );
 }
