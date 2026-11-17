@@ -109,7 +109,10 @@ function PageCard({
   // so an animated borderRadius here left UIKit drawing the shadow from
   // a radius-0 square path — the corner ghost. The radius lives as a
   // static style instead (committed once, path always rounded); only
-  // the shadow and wash intensities animate.
+  // the shadow intensity animates. The card itself is opaque: its
+  // lightness comes from the surface token, never from an opacity wash
+  // — a translucent card shows the drawer through it, which is not the
+  // model.
   const shadow = useAnimatedStyle(() => ({
     shadowOpacity: interpolate(
       progress.value,
@@ -117,11 +120,6 @@ function PageCard({
       [0, 0.16],
       Extrapolation.CLAMP,
     ),
-    // The whole page washes as the tile opens (the ChatGPT model): the
-    // content fades toward the shared canvas, so the page reads lighter
-    // than the layer beneath it — surface and page share one color and
-    // only the wash separates them.
-    opacity: interpolate(progress.value, [0, 1], [1, 0.6]),
   }));
   const mask = useAnimatedStyle(() => ({
     borderRadius: interpolate(
@@ -358,7 +356,7 @@ export function Home() {
         <BurgerTile onClose={() => setMenuOpen(false)} />
       )}
     >
-      <PageCard background={theme.canvas}>{home}</PageCard>
+      <PageCard background={theme.surface}>{home}</PageCard>
     </Drawer>
   );
 }
