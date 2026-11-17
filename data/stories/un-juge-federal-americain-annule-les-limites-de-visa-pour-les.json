@@ -6,6 +6,17 @@
   "storyDay": "2026-11-16",
   "articles": [
     {
+      "id": "07c491426391",
+      "outletId": "france-24",
+      "headline": "États-Unis : un juge annule les limites de visa pour étudiants et journalistes, Trump fait appel",
+      "url": "https://www.france24.com/fr/am%C3%A9riques/20261117-etats-unis-juge-federal-annule-limites-visa-etudiants-journalistes-etrangers-donal-trump-appel",
+      "publishedAt": "2026-11-17T00:02:25.000Z",
+      "imageUrl": "https://s.france24.com/media/display/c246dcf8-e219-11f1-a4d4-3f371022a770/w:1024/p:16x9/AP26320528463458.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "8d34f4d0c4f2",
       "outletId": "le-monde",
       "headline": "Un juge fédéral américain annule les limites de séjour des étudiants et des journalistes étrangers imposées par Donald Trump",
@@ -42,30 +53,10 @@
     }
   ],
   "topicId": "3ef971d87ec4",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794783600000,
-      "end": 1794787200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794787200000,
-      "end": 1794790800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794790800000,
       "end": 1794794400000,
@@ -285,6 +276,47 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1794870000000,
+      "end": 1794873600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794873600000,
+      "end": 1794877200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le Monde rappelle que la réglementation invalidée limitait les visas étudiants à quatre ans et ceux des journalistes à environ huit mois."
+    ],
+    "centre": [
+      "Un juge fédéral américain a invalidé lundi la réglementation de l'administration Trump limitant la durée de séjour des étudiants et journalistes étrangers.",
+      "Le tribunal fédéral a jugé cette mesure « arbitraire ».",
+      "Le gouvernement américain a immédiatement interjeté appel de cette décision."
+    ],
+    "droite": [
+      "Le juge fédéral de Boston a rendu sa décision lundi en annulant la réglementation publiée en juillet au Federal Register."
+    ]
+  },
+  "differences": [
+    "La gauche met en avant le détail concret des restrictions initiales imposées par l'administration Trump en juillet 2026.",
+    "Le centre livre un compte rendu factuel et synthétique de la décision judiciaire tout en mentionnant immédiatement l'appel formé par l'exécutif.",
+    "La droite focalise son analyse sur l'origine géographique et institutionnelle de la décision en précisant le rôle du tribunal fédéral de Boston."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-17T02:01:24.332Z"
 }

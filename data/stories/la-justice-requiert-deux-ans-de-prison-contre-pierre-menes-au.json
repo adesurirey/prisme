@@ -1,10 +1,22 @@
 {
   "id": "d9c14581948a",
   "slug": "la-justice-requiert-deux-ans-de-prison-contre-pierre-menes-au",
-  "title": "La justice requiert deux ans de prison contre Pierre Ménès au procès pour harcèlement et agressions sexuelles",
+  "title": "Pierre Ménès fait face à la justice au procès pour harcèlement et agressions sexuelles où deux ans de prison sont requis",
   "createdAt": "2026-11-17T00:01:34.557Z",
   "storyDay": "2026-11-16",
   "articles": [
+    {
+      "id": "98c72e7a1590",
+      "outletId": "le-monde",
+      "headline": "Deux ans de prison requis contre Pierre Ménès, jugé pour agressions sexuelles et harcèlement moral",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/17/deux-ans-de-prison-requis-contre-pierre-menes-juge-pour-agressions-sexuelles-et-harcelement-moral_6812755_3224.html",
+      "publishedAt": "2026-11-17T00:19:49.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/16/140/0/6894/3447/644/322/60/0/f7b6f2d_ftp-1-s1l5dkefygta-afp-d7ll2aa.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
     {
       "id": "8e0889c417c7",
       "outletId": "le-figaro",
@@ -51,30 +63,10 @@
     }
   ],
   "topicId": "d9c14581948a",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794783600000,
-      "end": 1794787200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794787200000,
-      "end": 1794790800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794790800000,
       "end": 1794794400000,
@@ -294,25 +286,45 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1794870000000,
+      "end": 1794873600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794873600000,
+      "end": 1794877200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le procès de Pierre Ménès s'est ouvert à Nanterre pour harcèlement et agressions sexuelles visant trois femmes.",
-      "Le HuffPost met en lumière le témoignage d'une ancienne habilleuse de Canal évoquant la « toute-puissance » du consultant.",
-      "L'Humanité rappelle que cette affaire fait suite au documentaire de Marie Portolano dénonçant le sexisme dans les rédactions sportives."
+      "Le procès de Pierre Ménès s'est ouvert à Nanterre pour harcèlement et agressions sexuelles visant trois femmes, dont la journaliste Marie Portolano.",
+      "Une ancienne habilleuse de Canal+ a témoigné de la « toute-puissance » du consultant au sein de la rédaction sportive.",
+      "L'ancien chroniqueur a justifié ses agissements par le climat de l'époque, affirmant que « on ne m’a jamais donné de limites »."
     ],
     "droite": [
-      "Le tribunal examine les accusations de harcèlement et d'agressions sexuelles visant l'ancien chroniqueur Pierre Ménès.",
-      "La procureure de la République a requis une peine de deux ans de prison, dont un an ferme, à son encontre.",
-      "Le réquisitoire exige également le prononcé d'une amende de 20.000 euros en insistant sur la « gravité » des faits."
+      "Le procès de l'ancien chroniqueur de Canal+ s'est tenu devant le tribunal correctionnel pour des accusations d'agressions sexuelles et de harcèlement.",
+      "La magistrate a requis une peine de deux ans de prison, assortie d'un an ferme et de 20.000 euros d'amende.",
+      "L'ex-journaliste a rejeté les accusations de violence sexuelle en plaidant « une autre époque » et une ambiance qualifiée de « potache »."
     ]
   },
   "differences": [
-    "La gauche privilégie une mise en contexte sociétale en insistant sur le sexisme dans les milieux sportifs et les témoignages de victimes.",
-    "La droite centre son compte-rendu sur le déroulement strict de l'audience judiciaire et le quantum des peines requises par le parquet."
+    "La gauche met l'accent sur les témoignages des victimes et le système de domination au sein du Canal Football Club révélé par Marie Portolano.",
+    "La droite privilégie le déroulement judiciaire strict en plaçant au premier plan les réquisitions du parquet et la défense du prévenu."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-17T00:01:34.557Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-17T02:01:24.332Z"
 }
