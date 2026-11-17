@@ -23,9 +23,10 @@
       "url": "https://www.lemonde.fr/economie-francaise/article/2026/11/17/carburant-une-baisse-du-prix-dans-plus-de-90-des-stations-service-selon-mathieu-lefevre_6812943_1656968.html",
       "publishedAt": "2026-11-17T09:58:12.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/17/845/0/5387/2693/644/322/60/0/ef5dce6_upload-1-o7ryxff7r33r-000-c9x98bl.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "economy"
+      "section": "economy",
+      "everFrontPage": true
     },
     {
       "id": "bccce75600f3",
@@ -328,5 +329,29 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le gouvernement annonce une baisse des tarifs des carburants dans plus de 90 % des stations-service à la suite du déblocage des stocks stratégiques.",
+      "La vente à prix coûtant des barils de gazole issus des réserves nationales a débuté le 1er novembre pour une durée de trois mois.",
+      "Les réductions atteignent en moyenne plus de 20 centimes sur le diesel et environ 10 centimes sur l'essence selon Mathieu Lefèvre, ministre délégué à la Transition écologique."
+    ],
+    "centre": [
+      "Le ministre délégué à la Transition écologique, Mathieu Lefèvre, confirme une baisse des prix des carburants dans plus de 90 % des stations-service.",
+      "Cette diminution résulte d'une opération de vente à prix coûtant de barils de gazole provenant des stocks stratégiques, étalée sur une période de trois mois."
+    ],
+    "droite": [
+      "Mathieu Lefèvre annonce que plus de 90 % des stations-service répercutent la baisse des prix du carburant consécutive au déblocage des stocks stratégiques de gazole.",
+      "Le litre de sans-plomb 95 passe sous la barre des 2 euros pour la première fois en trois mois, bien que certains automobilistes estiment que cela « reste trop élevé, ce n'est pas significatif ».",
+      "Les réductions s'élèvent en moyenne à environ 21 centimes pour le diesel et près de 10 centimes pour l'essence, les tarifs s'affichant à 2,16 euros pour le gazole et entre 2,07 et 2,11 euros pour le 95."
+    ]
+  },
+  "differences": [
+    "Le camp gauche met l'accent sur les aspects administratifs et calendaires de la mesure gouvernementale de déblocage des réserves sur trois mois.",
+    "Le centre livre un compte-rendu strictement institutionnel et factuel des déclarations ministérielles relatives à l'étendue de la baisse dans les stations.",
+    "La droite intègre des précisions chiffrées détaillées sur les tarifs constatés à la pompe et recueille le témoignage mitigé d'automobilistes jugeant la baisse insuffisante."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-17T11:01:33.718Z"
 }
