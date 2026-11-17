@@ -6,6 +6,29 @@
   "storyDay": "2026-11-17",
   "articles": [
     {
+      "id": "dc15b4420af4",
+      "outletId": "le-monde",
+      "headline": "Le directeur de la prison d’Aix-Luynes en garde à vue pour détention d’images pédocriminelles",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/17/le-directeur-de-la-prison-d-aix-luynes-en-garde-a-vue-pour-detention-d-images-pedocriminelles_6812999_3224.html",
+      "publishedAt": "2026-11-17T15:50:41.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/17/716/0/5780/2890/644/322/60/0/9002ebe_upload-1-sovy2yiy9ykl-000-926u6yq.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
+      "id": "3ffac116e692",
+      "outletId": "franceinfo",
+      "headline": "Le directeur de la prison d'Aix-Luynes placé en garde à vue pour détention d'images pédopornographiques",
+      "url": "https://www.franceinfo.fr/societe/prisons/le-directeur-de-la-prison-d-aix-luynes-place-en-garde-a-vue-pour-detention-d-images-pedopornographiques_8286707.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-17T15:23:29.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/xUgyTc1JyysYduQbfcbIIqAMLbY/0x260:5000x3072/432x243/filters:format(jpg)/2026/11/17/6afc70ec0d402486184854.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "05b7adaafaee",
       "outletId": "le-parisien",
       "headline": "Le directeur de la prison d’Aix-Luynes en garde à vue, soupçonné de détenir des images pédopornographiques",
@@ -51,7 +74,7 @@
     }
   ],
   "topicId": "5c8cf1493935",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "misc",
   "everInEdition": true,
   "activity": [
@@ -289,11 +312,34 @@
       "start": 1794927600000,
       "end": 1794931200000,
       "counts": {
-        "gauche": 0,
+        "gauche": 2,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 3
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le chef d'établissement du centre pénitentiaire d'Aix-Luynes a été placé en garde à vue pour des soupçons de possession de contenus pédopriminels.",
+      "Le ministère de la Justice a prononcé une suspension conservatoire à l'encontre du fonctionnaire et a initié une procédure de révocation conditionnée par la vérification des faits.",
+      "Une perquisition visant du matériel informatique a été menée le matin du mardi 17 novembre au sein de la prison."
+    ],
+    "centre": [
+      "Le directeur de la prison d'Aix-Luynes a été placé en garde à vue pour détention de fichiers pédopornographiques.",
+      "Le fonctionnaire, nommé à la tête du centre pénitentiaire à l'été 2025, fait l'objet d'une suspension immédiate à titre conservatoire décidée par le ministère de la Justice."
+    ],
+    "droite": [
+      "Le responsable de l'établissement pénitentiaire d'Aix-Luynes demeure présumé innocent alors que sa garde à vue se poursuit.",
+      "L'Office des mineurs a été saisi de l'enquête et une perquisition s'est déroulée mardi matin dans l'enceinte de la prison."
+    ]
+  },
+  "differences": [
+    "La gauche insiste particulièrement sur les actes d'enquête concrets en soulignant la perquisition menée directement dans l'enceinte de la prison.",
+    "Le centre livre un compte-rendu synthétique et direct axé principalement sur la mesure administrative de suspension et la fonction de l'intéressé.",
+    "La droite privilégie le rappel de la présomption d'innocence tout en précisant l'implication de l'Ofmin dans le dossier."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-17T16:01:43.529Z"
 }

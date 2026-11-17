@@ -6,6 +6,38 @@
   "storyDay": "2026-11-17",
   "articles": [
     {
+      "id": "9fef84c79462",
+      "outletId": "tf1-info",
+      "headline": "\"Il faut voir ce qu'ils sont prêts à nous lâcher\" : Jean-Luc Mélenchon prépare son rendez-vous avec les grands patrons Bernard Arnault et Patrick Pouyanné",
+      "url": "https://www.tf1info.fr/politique/elections/presidentielle/video-il-faut-voir-ce-qu-ils-sont-prets-a-nous-lacher-jean-luc-melenchon-prepare-son-entretien-avec-les-grands-patrons-bernard-arnault-et-patrick-pouyanne-2476451.html",
+      "publishedAt": "2026-11-17T15:36:17.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/il-faut-voir-ce-qu-ils-sont-prets-a-nous-lacher-jean-luc-melenchon-prepare-son-entretien-avec-les-grands-patrons-bernard-arnault-et-patrick-c5075d-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "a6688dcb82cb",
+      "outletId": "liberation",
+      "headline": "Un dîner chez Drouant ce mardi entre Jean-Luc Mélenchon, Bernard Arnault et Patrick Pouyanné : «Ça me fait plaisir de les voir»",
+      "url": "https://www.liberation.fr/politique/un-diner-chez-drouant-ce-mardi-entre-jean-luc-melenchon-bernard-arnault-et-patrick-pouyanne-20261117_HKHJG34XLZFVXCQJIBE7THWFQQ/",
+      "publishedAt": "2026-11-17T15:04:42.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "6d4594af6fff",
+      "outletId": "tf1-info",
+      "headline": "\"Il faut voir ce qu'ils sont prêts à nous lâcher\" : Jean-Luc Mélenchon prépare son entretien avec les grands patrons Bernard Arnault et Patrick Pouyanné",
+      "url": "https://www.tf1info.fr/politique/elections/presidentielle/videos/video-il-faut-voir-ce-qu-ils-sont-prets-a-nous-lacher-jean-luc-melenchon-prepare-son-entretien-avec-les-grands-patrons-bernard-arnault-et-patrick-pouyanne-98904-2476452.html",
+      "publishedAt": "2026-11-17T14:55:09.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/il-faut-voir-ce-qu-ils-sont-prets-a-nous-lacher-jean-luc-melenchon-prepare-son-entretien-avec-les-grands-patrons-bernard-arnault-et-patrick-c5075d-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "975669095329",
       "outletId": "causeur",
       "headline": "Bernard Arnault, Patrick Pouyanné : ces patrons qui dînent avec Mélenchon",
@@ -51,20 +83,10 @@
     }
   ],
   "topicId": "41338a46c826",
-  "titledArticleCount": 4,
+  "titledArticleCount": 7,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794841200000,
-      "end": 1794844800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794844800000,
       "end": 1794848400000,
@@ -291,9 +313,38 @@
       "counts": {
         "gauche": 0,
         "centre": 0,
+        "droite": 2
+      },
+      "total": 2
+    },
+    {
+      "start": 1794927600000,
+      "end": 1794931200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
         "droite": 1
       },
-      "total": 1
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Jean-Luc Mélenchon participe à un dîner au restaurant Drouant avec Bernard Arnault et Patrick Pouyanné, à l'invitation de l'association Entreprise & Cité.",
+      "Le candidat insoumis assume cette rencontre en déclarant « ça me fait plaisir de les voir », tandis que son entourage relativise l'événement.",
+      "Ce cercle de grands patrons avait déjà reçu Marine Le Pen au mois d'avril."
+    ],
+    "droite": [
+      "Jean-Luc Mélenchon s'apprête à dîner à huis clos avec plusieurs grands patrons, dont Bernard Arnault et Patrick Pouyanné, à l'invitation du club Entreprise & Cité.",
+      "L'événement suscite l'attention en raison de l'animosité affichée par le candidat insoumis envers ces grandes fortunes et ses projets de taxation des hauts patrimoines.",
+      "Le candidat s'interroge publiquement sur ce que ces dirigeants « sont prêts à nous lâcher » avant de se rendre à la rencontre."
+    ]
+  },
+  "differences": [
+    "La gauche insiste sur le cadre mondain de l'invitation patronale et la démarche d'ouverture du candidat, tout en rappelant que ses rivaux politiques ont participé aux mêmes dîners.",
+    "La droite souligne la contradiction entre le discours enflammé du candidat insoumis contre les milliardaires et sa participation à un dîner à huis clos avec les principaux concernés."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-17T16:01:43.529Z"
 }

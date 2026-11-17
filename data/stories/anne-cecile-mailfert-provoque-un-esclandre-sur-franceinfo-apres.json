@@ -6,6 +6,28 @@
   "storyDay": "2026-11-17",
   "articles": [
     {
+      "id": "8cae72e2928c",
+      "outletId": "liberation",
+      "headline": "Pourquoi Franceinfo a-t-elle précisé en direct le nom du compagnon d’Anne-Cécile Mailfert, présidente de la Fondation des femmes ?",
+      "url": "https://www.liberation.fr/checknews/pourquoi-franceinfo-a-t-elle-precise-en-direct-le-nom-du-compagnon-danne-cecile-mailfert-presidente-de-la-fondation-des-femmes-20261117_H3ZK5JQ7NBD5LKBVMLWXRAMAIA/",
+      "publishedAt": "2026-11-17T15:54:24.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
+      "id": "be84d4dfb253",
+      "outletId": "20-minutes",
+      "headline": "« Je suis une femme et ça n’est pas neutre »… Taxée de « compagne de », Anne-Cécile Mailfert s’est sentie blessée",
+      "url": "https://www.20minutes.fr/societe/4263571-20261117-femme-ca-neutre-taxee-compagne-anne-cecile-mailfert-sentie-blessee?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-17T15:35:47.000Z",
+      "imageUrl": "https://img.20mn.fr/tFLlN8K-SWW7kcpwiOkjXyk/1200x768_anne-cecile-mailfert-presidente-de-la-fondation-des-femmes-les-organisations-de-la-coalition-feministe-et-des-droits-de-l-enfant-pour-une-loi-cadre-globale-contre-les-violences-sexuelles-ont-tenu-une-conference-de-presse-ce-vendredi-matin-a-cette-occasion-la-coalition-a-rendu-un-nouvel-hommage-a-lyhanna-et-a-annonce-deux-dates-d-action-le-lundi-15-juin-sur-la-place-vendome-en-face-du-ministere-de-la-justice-et-une-marche-le-samedi-4-juillet-paris-france-le-12-juin-2026-cezardgabrielle-confpresse-04-credit-gabrielle-cezard-sipa-sipa-2606121449",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
       "id": "53c6421ab9d4",
       "outletId": "le-figaro",
       "headline": "«J’ai été choquée» : Anne-Cécile Mailfert réagit pour la première fois depuis son esclandre à franceinfo",
@@ -87,20 +109,10 @@
     }
   ],
   "topicId": "2666df80127c",
-  "titledArticleCount": 7,
+  "titledArticleCount": 9,
   "section": "culture",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794841200000,
-      "end": 1794844800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794844800000,
       "end": 1794848400000,
@@ -330,6 +342,34 @@
         "droite": 2
       },
       "total": 3
+    },
+    {
+      "start": 1794927600000,
+      "end": 1794931200000,
+      "counts": {
+        "gauche": 2,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "La présidente de la Fondation des femmes Anne-Cécile Mailfert a exprimé sa colère après que franceinfo a mentionné en direct sa relation avec Stéphane Sitbon-Gomez, numéro 2 de France Télévisions.",
+      "La direction de la chaîne a reconnu qu'elle aurait dû prévenir l'intéressée avant l'émission, tout en invoquant un engagement pris auprès des syndicats fin 2025 pour assurer la transparence.",
+      "De nombreuses personnalités politiques, de Jean-Luc Mélenchon à Yaël Braun-Pivet, ont réagi à cette séquence qui a provoqué un vif malaise et renvoyé la militante à sa position de compagne."
+    ],
+    "droite": [
+      "Invitée pour évoquer l'affaire Depardieu, Anne-Cécile Mailfert a provoqué un esclandre en direct sur franceinfo et a qualifié la situation de « scène lunaire », affirmant qu'elle avait été « choquée ».",
+      "La présentatrice a justifié cette mention par une charte déontologique, tandis que Le Figaro qualifie la réaction de la militante de violente, rapportant qu'elle aurait lancé « Vous êtes des malades »."
+    ]
+  },
+  "differences": [
+    "Le camp de gauche met l'accent sur le malaise de la séquence, le soutien politique reçu par la militante et la maladresse reconnue par la direction de la chaîne.",
+    "Le camp de droite braque les projecteurs sur la violence de l'esclandre en plateau et les propos tenus par Anne-Cécile Mailfert en réaction à l'application de la charte déontologique."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 9,
+  "summarizedAt": "2026-11-17T16:01:43.529Z"
 }

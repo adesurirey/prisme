@@ -6,6 +6,16 @@
   "storyDay": "2026-11-16",
   "articles": [
     {
+      "id": "a25043ba57da",
+      "outletId": "valeurs-actuelles",
+      "headline": "« On l’efface de nos tablettes pour les repas » : Jean-Luc Mélenchon répond à Pierre Perret et appelle à ne plus l’écouter",
+      "url": "https://www.valeursactuelles.com/politique/on-lefface-de-nos-tablettes-pour-les-repas-jean-luc-melenchon-repond-a-pierre-perret-et-appelle-a-ne-plus-lecouter",
+      "publishedAt": "2026-11-17T14:23:58.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "8b0dc9edf474",
       "outletId": "liberation",
       "headline": "«Comment a-t-il pu en arriver là ?» : Jean-Luc Mélenchon dit sa «peine» après la chanson de Pierre Perret «les Antisémites»",
@@ -301,9 +311,28 @@
       "counts": {
         "gauche": 2,
         "centre": 0,
-        "droite": 0
+        "droite": 1
       },
-      "total": 2
+      "total": 3
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Jean-Luc Mélenchon a exprimé sa « peine » et son « ahurissement » après la sortie de la chanson « Les Antisémites » dans le nouvel album de Pierre Perret.",
+      "Le texte du chanteur de quatre-vingt-douze ans cible directement La France insoumise ainsi que l'eurodéputée Rima Hassan.",
+      "La presse de gauche qualifie la chanson d'équivoque et évoque un contenu raciste visant le mouvement politique."
+    ],
+    "droite": [
+      "Jean-Luc Mélenchon a répondu à Pierre Perret suite à sa chanson parue dans son nouvel album et a appelé à ne plus l'écouter en le rayant des repas.",
+      "Le chanteur de quatre-vingt-douze ans dépeint le chef de file des Insoumis comme un « vieux militant total chtarbé » dans son titre « Les Antisémites ».",
+      "Plusieurs figures de La France insoumise sont visées par ces nouvelles moqueries, notamment Rima Hassan et ses « trous d’air dans le keffieh »."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la dimension doloriste et l'incompréhension de Jean-Luc Mélenchon face aux attaques d'une figure culturelle qu'elle qualifie de raciste.",
+    "La droite insiste sur le caractère caustique et incisif des paroles visant les Insoumis, tout en soulignant l'appel de Jean-Luc Mélenchon au boycott du chanteur."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-17T16:01:43.529Z"
 }

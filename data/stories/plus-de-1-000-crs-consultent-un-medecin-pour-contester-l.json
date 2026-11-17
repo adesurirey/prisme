@@ -6,13 +6,23 @@
   "storyDay": "2026-11-17",
   "articles": [
     {
+      "id": "014a1d00b64c",
+      "outletId": "liberation",
+      "headline": "Mobilisation sociale : les CRS vont chez le médecin pour contourner l’interdiction de faire grève",
+      "url": "https://www.liberation.fr/societe/police-justice/mobilisation-sociale-les-crs-vont-chez-le-medecin-pour-contourner-linterdiction-de-faire-greve-20261117_FCLBL2G475F7RIKBHOE2YB7WQU/",
+      "publishedAt": "2026-11-17T15:17:39.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "8a2bacf650d8",
       "outletId": "ouest-france",
       "headline": "Interdits de grève, des centaines de CRS vont chez le médecin pour ne pas être mobilisés sur le maintien de l’ordre",
       "url": "https://www.ouest-france.fr/societe/police/interdits-de-greve-des-centaines-de-crs-vont-chez-le-medecin-pour-ne-pas-etre-mobilises-sur-le-maintien-de-lordre-5c11b9c8-e285-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-17T14:34:29.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMmViNzdkMmNhNjQxYTk1ZjcxOGY3NDdlNTEwMjBmMmM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=82e9c2a3dbf1ee2910ab422b1797ad6211219ddc2f0af6d7409a8cb20604ff5b",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -144,7 +154,7 @@
       "url": "https://www.lefigaro.fr/marseille/les-collegues-ont-peur-et-sont-a-bout-apres-des-mobilisations-violentes-marseille-fait-face-a-une-penurie-de-crs-20261117",
       "publishedAt": "2026-11-17T12:16:05.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/17/04798b6ee4a35acf72e08139ffbcd133f8d440631417f69c811434cfdf2b8902.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -166,16 +176,6 @@
   "section": "society",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794841200000,
-      "end": 1794844800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794844800000,
       "end": 1794848400000,
@@ -405,6 +405,16 @@
         "droite": 0
       },
       "total": 3
+    },
+    {
+      "start": 1794927600000,
+      "end": 1794931200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
