@@ -6,6 +6,18 @@
   "storyDay": "2026-11-17",
   "articles": [
     {
+      "id": "4ac02bdf1f2c",
+      "outletId": "le-monde",
+      "headline": "L’évocation de la vie privée de la militante Anne-Cécile Mailfert en direct sur Franceinfo vire au débat politique ; la chaîne présente des excuses et plaide la transparence",
+      "url": "https://www.lemonde.fr/actualite-medias/article/2026/11/17/l-evocation-de-la-vie-privee-de-la-militante-anne-cecile-mailfert-en-direct-sur-franceinfo-vire-au-debat-politique-la-chaine-presente-des-excuses-et-plaide-la-transparence_6813039_3236.html",
+      "publishedAt": "2026-11-17T19:53:35.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/17/90/0/5380/2690/644/322/60/0/af1f0e5_upload-1-0pfe9fdaia6u-000-9be4ld.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "culture",
+      "everFrontPage": true
+    },
+    {
       "id": "88942b912198",
       "outletId": "le-parisien",
       "headline": "« À vouloir laver plus blanc que blanc, voilà le résultat » : l’affaire Anne-Cécile Mailfert embarrasse France Télévisions",
@@ -23,7 +35,7 @@
       "url": "https://tvmag.lefigaro.fr/programme-tv/actu-tele/on-me-reduit-a-mon-mari-le-coup-de-gueule-de-carla-bruno-solidaire-de-anne-cecile-mailfert-apres-son-esclandre-20261117",
       "publishedAt": "2026-11-17T18:52:08.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/17/03565065d86a4d8751f885f2d507381a18d1645fdb575fba5998f23eb2a98a6b.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "culture",
       "everFrontPage": true
@@ -57,7 +69,7 @@
       "url": "https://tvmag.lefigaro.fr/programme-tv/actu-tele/j-ai-ete-choquee-anne-cecile-mailfert-reagit-pour-la-premiere-fois-depuis-son-esclandre-a-franceinfo-20261117",
       "publishedAt": "2026-11-17T14:59:28.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/17/76ec9e9f3ee468400ef5f1cff0af5725dfe127686f132e939b0072564f709381.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "culture",
       "everFrontPage": true
@@ -69,7 +81,7 @@
       "url": "https://www.lefigaro.fr/medias/pourquoi-franceinfo-a-precise-les-liens-conjugaux-entre-la-militante-feministe-anne-cecile-mailfert-et-un-patron-de-france-televisions-20261117",
       "publishedAt": "2026-11-17T14:34:43.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/17/d8656b817f74370bcf2797011545483beb15c8745a173b412febddf4b43a3d4f.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "culture",
       "everFrontPage": true
@@ -132,7 +144,7 @@
     }
   ],
   "topicId": "2666df80127c",
-  "titledArticleCount": 9,
+  "titledArticleCount": 12,
   "section": "culture",
   "everInEdition": true,
   "activity": [
@@ -370,29 +382,36 @@
       "start": 1794942000000,
       "end": 1794945600000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "La présidente de la Fondation des femmes Anne-Cécile Mailfert a exprimé sa colère après que franceinfo a mentionné en direct sa relation avec Stéphane Sitbon-Gomez, numéro 2 de France Télévisions.",
-      "La direction de la chaîne a reconnu qu'elle aurait dû prévenir l'intéressée avant l'émission, tout en invoquant un engagement pris auprès des syndicats fin 2025 pour assurer la transparence.",
-      "De nombreuses personnalités politiques, de Jean-Luc Mélenchon à Yaël Braun-Pivet, ont réagi à cette séquence qui a provoqué un vif malaise et renvoyé la militante à sa position de compagne."
+      "La présidente de la Fondation des femmes, Anne-Cécile Mailfert, a exprimé sa colère sur franceinfo après qu'une journaliste a mentionné en direct qu'elle partage la vie de Stéphane Sitbon-Gomez, numéro 2 de France Télévisions.",
+      "La direction de la chaîne a reconnu qu'elle aurait dû prévenir l'intéressée avant l'émission, tout en expliquant s'être engagée auprès des syndicats à appliquer cette transparence.",
+      "De nombreuses personnalités politiques ont réagi à cette séquence qui a provoqué des vagues d'indignation et de larges discussions sur la place des femmes.",
+      "Le journal L'Humanité évoque une maladresse et une indélicatesse ayant provoqué le malaise en renvoyant la militante à sa simple position de compagne."
+    ],
+    "centre": [
+      "Le Parisien rapporte que l'affaire Anne-Cécile Mailfert embarrasse profondément France Télévisions en raison de la volonté de la chaîne d'appliquer une transparence absolue.",
+      "La mention à l'antenne du lien conjugal entre la militante et un dirigeant du groupe public a immédiatement provoqué un débat politique et médiatique."
     ],
     "droite": [
-      "Invitée pour évoquer l'affaire Depardieu, Anne-Cécile Mailfert a provoqué un esclandre en direct sur franceinfo et a qualifié la situation de « scène lunaire », affirmant qu'elle avait été « choquée ».",
-      "La présentatrice a justifié cette mention par une charte déontologique, tandis que Le Figaro qualifie la réaction de la militante de violente, rapportant qu'elle aurait lancé « Vous êtes des malades »."
+      "Anne-Cécile Mailfert a provoqué un esclandre sur le plateau de franceinfo en s'indignant d'être présentée comme la compagne du numéro 2 de France Télévisions.",
+      "Le Figaro précise que la présentatrice a invoqué une charte déontologique pour justifier cette mention en direct de ses liens conjugaux.",
+      "La chanteuse Carla Bruni a publiquement apporté son soutien à la militante en se déclarant solidaire de son agacement face à cette réduction à sa vie personnelle."
     ]
   },
   "differences": [
-    "Le camp de gauche met l'accent sur le malaise de la séquence, le soutien politique reçu par la militante et la maladresse reconnue par la direction de la chaîne.",
-    "Le camp de droite braque les projecteurs sur la violence de l'esclandre en plateau et les propos tenus par Anne-Cécile Mailfert en réaction à l'application de la charte déontologique."
+    "La gauche insiste sur la maladresse de la chaîne et le soutien politique apporté à la militante féministe, tout en interrogeant la pertinence de rappeler son lien conjugal.",
+    "Le centre pointe l'embarras organisationnel de France Télévisions face à l'application excessive de ses règles de transparence déontologique.",
+    "La droite se focalise sur l'esclandre de la militante en direct sur le plateau et relaie le soutien de personnalités comme Carla Bruni à son agacement."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 9,
-  "summarizedAt": "2026-11-17T16:01:43.529Z"
+  "summarizedArticleCount": 12,
+  "summarizedAt": "2026-11-17T20:01:32.457Z"
 }
