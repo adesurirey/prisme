@@ -65,6 +65,10 @@ import { useTheme } from '@/theme';
 // off the reference: the arc eats a third of the visible strip.
 const PAGE_CARD_RADIUS = 48;
 
+// How far the light-reflection wash goes at full open (issue #198):
+// the content never disappears, it recedes into the paper.
+const PAGE_WASH_MAX = 0.4;
+
 /** The « Dernier point » stamp — the rendered artifact's build instant,
  *  hour only, in Paris time like every Prisme date: the point is hourly,
  *  the minutes are noise. */
@@ -84,8 +88,9 @@ export function latestPointStamp(builtAt: string): string {
  * The sliding page's card treatment (issue #198, the ChatGPT model):
  * the tile waits behind the page — darker than it by its own token —
  * and as the drawer opens the page's leading edge rounds off, casts a
- * soft drop shadow onto the tile and washes slightly lighter. Full-
- * bleed again when closed. Two surfaces, each with one job, and one
+ * soft drop shadow onto the tile and washes its content lighter — a
+ * sheet of the card's own surface fading in over everything, opaque
+ * card beneath, no see-through. Full-bleed again when closed. Two surfaces, each with one job, and one
  * RN constraint that pins the split: a shadow only renders from the
  * shadow view's own opaque background plus a radius committed to the
  * shadow tree — an animated radius never commits (the first ghost),
@@ -129,6 +134,19 @@ function PageCard({
       Extrapolation.CLAMP,
     ),
   }));
+  // The light-reflection wash (issue #198): a sheet of the card's own
+  // surface fading in over the content — text and images recede into
+  // the paper without the card ever going translucent. Inside the
+  // mask, so the rounding clips it; pointer-none, so the closed page
+  // stays fully interactive.
+  const wash = useAnimatedStyle(() => ({
+    opacity: interpolate(
+      progress.value,
+      [0, 1],
+      [0, PAGE_WASH_MAX],
+      Extrapolation.CLAMP,
+    ),
+  }));
   return (
     <Reanimated.View
       style={[
@@ -140,6 +158,10 @@ function PageCard({
     >
       <Reanimated.View style={[styles.container, styles.pageCardMask, mask]}>
         {children}
+        <Reanimated.View
+          pointerEvents="none"
+          style={[styles.pageCardWash, { backgroundColor: background }, wash]}
+        />
       </Reanimated.View>
     </Reanimated.View>
   );
@@ -379,6 +401,9 @@ const styles = StyleSheet.create({
   },
   pageCardMask: {
     overflow: 'hidden',
+  },
+  pageCardWash: {
+    ...StyleSheet.absoluteFill,
   },
   pager: {
     flex: 1,
