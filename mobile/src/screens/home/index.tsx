@@ -85,14 +85,16 @@ export function latestPointStamp(builtAt: string): string {
  * the tile waits behind the page — darker than it by its own token —
  * and as the drawer opens the page's leading edge rounds off, casts a
  * soft drop shadow onto the tile and washes slightly lighter. Full-
- * bleed again when closed. Two surfaces, each with one job: the outer
- * casts the shadow — transparent, because a background there gave iOS
- * a square layer to shadow from, and its stale square corner peeked
- * out behind the rounded curve; from the subtree's alpha instead, the
- * shadow follows the rounding exactly. The inner one is the card
- * itself — the masked canvas surface the content paints onto. Reads
- * the drawer's progress context, so it mounts strictly inside
- * <Drawer> — the home's own body sits above that provider.
+ * bleed again when closed. Two surfaces, each with one job, and one
+ * RN constraint that pins the split: a shadow only renders from the
+ * shadow view's own opaque background plus a radius committed to the
+ * shadow tree — an animated radius never commits (the first ghost),
+ * and a transparent caster alpha-composites its native subtree into
+ * square artifacts (the second). So the outer carries the opaque
+ * canvas background, the static radius and the shadow; the inner mask
+ * clips the content to the animated rounding. Reads the drawer's
+ * progress context, so it mounts strictly inside <Drawer> — the
+ * home's own body sits above that provider.
  */
 function PageCard({
   background,
@@ -130,15 +132,15 @@ function PageCard({
     ),
   }));
   return (
-    <Reanimated.View style={[styles.container, styles.pageCardShadow, shadow]}>
-      <Reanimated.View
-        style={[
-          styles.container,
-          styles.pageCardMask,
-          mask,
-          { backgroundColor: background },
-        ]}
-      >
+    <Reanimated.View
+      style={[
+        styles.container,
+        styles.pageCardShadow,
+        shadow,
+        { backgroundColor: background },
+      ]}
+    >
+      <Reanimated.View style={[styles.container, styles.pageCardMask, mask]}>
         {children}
       </Reanimated.View>
     </Reanimated.View>
