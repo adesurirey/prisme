@@ -1,38 +1,15 @@
 /**
- * The story route placeholder (issue #195): pushed full-screen over
- * the home, header hidden — the native edge-swipe and the Android
- * back pop it. The body is #182; the chrome (back, mode, share) is
- * 5e (#199).
+ * The story route (issue #195): pushed full-screen over the home,
+ * header hidden — the native edge-swipe and the Android back pop it.
+ * The screen carries the chrome (back, mode, share — issue #199); the
+ * body is #182.
  */
 
 import { useLocalSearchParams } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { useTheme } from '@/theme';
+import { Story } from '@/screens/story';
 
-export default function Story() {
+export default function StoryRoute() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const theme = useTheme();
-  const insets = useSafeAreaInsets();
-
-  return (
-    <View
-      style={[
-        styles.container,
-        { backgroundColor: theme.canvas, paddingTop: insets.top + 16 },
-      ]}
-    >
-      <Text style={[styles.placeholder, { color: theme.prose }]}>
-        Le récit s'écrira ici — le corps de page arrive avec #182.
-      </Text>
-      <Text style={[styles.id, { color: theme.prose }]}>{id}</Text>
-    </View>
-  );
+  return <Story id={id} />;
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, paddingHorizontal: 20, gap: 8 },
-  placeholder: { fontSize: 16, lineHeight: 26 },
-  id: { fontSize: 12, opacity: 0.5 },
-});
