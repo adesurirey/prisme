@@ -65,6 +65,16 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
           Extrapolation.CLAMP,
         ),
       },
+      // The rise: the zoom pivots on the bottom-right corner, so the
+      // content reads as growing out of it, upward (issue #198).
+      {
+        translateY: interpolate(
+          progress.value,
+          [0, 1],
+          [14, 0],
+          Extrapolation.CLAMP,
+        ),
+      },
     ],
   }));
 
@@ -129,6 +139,9 @@ const styles = StyleSheet.create({
   },
   tileContent: {
     flex: 1,
+    // The zoom pivots on the tile's bottom-right corner — the corner
+    // nearest the card's rounded edge — instead of the flat center.
+    transformOrigin: '100% 100% 0',
   },
   wordmarkRow: {
     // The pill's own height — the wordmark centers on the burger's
