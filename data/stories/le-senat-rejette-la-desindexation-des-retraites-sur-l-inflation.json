@@ -23,7 +23,7 @@
       "url": "https://www.lefigaro.fr/social/budget-de-la-secu-le-senat-retablit-la-reforme-des-retraites-et-rejette-la-desindexation-des-pensions-20261117",
       "publishedAt": "2026-11-17T10:49:07.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/17/7fccc7563519c209445896c11240a2ab2ffc9b250f1f7be8fa4346017a257b37.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -308,5 +308,24 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Le Sénat a rejeté à l'unanimité le projet gouvernemental de désindexer partiellement sur l'inflation les pensions supérieures à 1260 euros dans le PLFSS pour 2027.",
+      "La majorité sénatoriale a écarté la mesure en jugeant insupportable de pénaliser deux tiers des retraités.",
+      "Un compromis a été négocié entre le Sénat et le gouvernement pour envisager en contrepartie une suppression totale de l'abattement fiscal de 10% des retraités.",
+      "Les sénateurs ont également annulé la suspension de la réforme des retraites d'Élisabeth Borne contre l'avis du gouvernement."
+    ],
+    "droite": [
+      "La majorité sénatoriale a supprimé la désindexation des pensions de retraite prévue pour 2027 et a rétabli la réforme de 2023 portée par Élisabeth Borne.",
+      "Le Sénat a validé ce rejet budgétaire tout en promettant de faire contribuer les retraités par la suppression de leur abattement fiscal de 10% sur l'impôt sur le revenu."
+    ]
+  },
+  "differences": [
+    "Le centre insiste particulièrement sur le rejet unificateur de la mesure gouvernementale en reprenant la critique d'une pénalisation injuste des retraités.",
+    "La droite centre son analyse sur la dimension strictement budgétaire et programmatique en articulant le retour de la réforme de 2023 avec la contrepartie fiscale exigée des retraités."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-17T15:01:41.554Z"
 }
