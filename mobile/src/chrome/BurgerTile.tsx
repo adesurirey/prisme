@@ -55,23 +55,31 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
   const insets = useSafeAreaInsets();
   const progress = useDrawerProgress();
   const appear = useAnimatedStyle(() => ({
-    opacity: interpolate(progress.value, [0, 1], [0, 1], Extrapolation.CLAMP),
+    // Short travel on purpose: the content settles into place from just
+    // past its own edge — a long fade/rise reads as arriving from
+    // nowhere (issue #198).
+    opacity: interpolate(
+      progress.value,
+      [0, 1],
+      [0.25, 1],
+      Extrapolation.CLAMP,
+    ),
     transform: [
       {
         scale: interpolate(
           progress.value,
           [0, 1],
-          [0.96, 1],
+          [0.98, 1],
           Extrapolation.CLAMP,
         ),
       },
-      // The rise: the zoom pivots on the bottom-right corner, so the
-      // content reads as growing out of it, upward (issue #198).
+      // The rise: the zoom pivots on the tile's bottom-left corner, so
+      // the content reads as growing out of it, upward (issue #198).
       {
         translateY: interpolate(
           progress.value,
           [0, 1],
-          [14, 0],
+          [6, 0],
           Extrapolation.CLAMP,
         ),
       },
@@ -141,7 +149,7 @@ const styles = StyleSheet.create({
     flex: 1,
     // The zoom pivots on the tile's bottom-right corner — the corner
     // nearest the card's rounded edge — instead of the flat center.
-    transformOrigin: '100% 100% 0',
+    transformOrigin: '0 100% 0',
   },
   wordmarkRow: {
     // The pill's own height — the wordmark centers on the burger's
