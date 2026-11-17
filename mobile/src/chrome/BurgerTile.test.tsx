@@ -1,4 +1,5 @@
 import { act, fireEvent, render, screen } from '@testing-library/react-native';
+import { Platform, Share } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { BurgerTile } from './BurgerTile';
@@ -35,6 +36,7 @@ const INSETS = {
 };
 
 async function renderTile() {
+  jest.clearAllMocks();
   const onClose = jest.fn();
   // RTL v14's render is async — awaited before any screen query.
   await render(
@@ -56,7 +58,7 @@ describe('BurgerTile (issue #198)', () => {
     await renderTile();
 
     expect(
-      screen.getByRole('button', { name: 'Classement politique des médias' }),
+      screen.getByRole('button', { name: 'Classement des médias' }),
     ).toBeTruthy();
     expect(
       screen.getByRole('button', { name: 'Comment ça marche' }),
@@ -70,7 +72,7 @@ describe('BurgerTile (issue #198)', () => {
     // act, and overlapping act scopes corrupt the next test's render.
     await act(async () => {
       fireEvent.press(
-        screen.getByRole('button', { name: 'Classement politique des médias' }),
+        screen.getByRole('button', { name: 'Classement des médias' }),
       );
     });
     expect(mockPush).toHaveBeenCalledWith('/classement');
@@ -83,6 +85,28 @@ describe('BurgerTile (issue #198)', () => {
     });
     expect(mockPush).toHaveBeenCalledWith('/methode');
     expect(onClose).toHaveBeenCalledTimes(2);
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  test('the share pill shares leprisme.info and stays on the tile', async () => {
+    const shareSpy = jest
+      .spyOn(Share, 'share')
+      .mockResolvedValue({
+        action: Share.sharedAction,
+        activityType: undefined,
+      });
+    const { onClose } = await renderTile();
+
+    await act(async () => {
+      fireEvent.press(screen.getByTestId('share-site-button'));
+    });
+    expect(shareSpy).toHaveBeenCalledWith({ url: 'https://leprisme.info' });
+    // Sharing doesn't navigate: the drawer stays open.
+    expect(onClose).not.toHaveBeenCalled();
+    expect(mockPush).not.toHaveBeenCalled();
   });
 
   // The plain-text-fallback test died with the unified icon language

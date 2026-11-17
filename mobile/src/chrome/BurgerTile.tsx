@@ -13,8 +13,19 @@
  */
 
 import { useRouter } from 'expo-router';
-import { ChartColumn, CircleHelp } from 'lucide-react-native';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import {
+  ChartColumn,
+  CircleHelp,
+  Share as ShareIcon,
+} from 'lucide-react-native';
+import {
+  Platform,
+  Pressable,
+  Share,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import { useDrawerProgress } from 'react-native-drawer-layout';
 import Reanimated, {
   Extrapolation,
@@ -23,6 +34,7 @@ import Reanimated, {
 } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '@/theme';
+import { GlassPill } from './GlassPill';
 import { HOME_TITLE_TOP_PADDING } from './HomeHeader';
 import { PrismeWordmark } from './PrismeWordmark';
 
@@ -32,6 +44,9 @@ import { PrismeWordmark } from './PrismeWordmark';
 // insets.top + HOME_TITLE_TOP_PADDING + 18. The wordmark row is the
 // pill's own 44pt and starts 4pt higher to share the exact center.
 const WORDMARK_ROW_OFFSET = HOME_TITLE_TOP_PADDING - 4;
+
+// The site the tile shares — the brand's front door, not a route.
+const SITE_URL = 'https://leprisme.info';
 
 const TILES = [
   {
@@ -52,6 +67,13 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
   const theme = useTheme();
   const insets = useSafeAreaInsets();
   const progress = useDrawerProgress();
+  const share = () => {
+    // Fire-and-forget, same seam as the screen headers: a dismissal
+    // still resolves, a failure never crashes the tile.
+    void Share.share(
+      Platform.OS === 'android' ? { message: SITE_URL } : { url: SITE_URL },
+    ).catch(() => undefined);
+  };
   const appear = useAnimatedStyle(() => ({
     // Short travel on purpose: the content settles into place from just
     // past its own edge — a long fade/rise reads as arriving from
@@ -101,6 +123,16 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
               title, well above the nav-scale default (issue #198); the
               140 was dialed back 15% on simulator feedback. */}
           <PrismeWordmark color={theme.ink} width={119} />
+          {/* The share pill rides the wordmark's line, top right —
+              the same glass square as the screens' header pills. */}
+          <GlassPill
+            accessibilityLabel="Partager leprisme.info"
+            testID="share-site-button"
+            onPress={share}
+            style={styles.sharePill}
+          >
+            <ShareIcon size={20} strokeWidth={2} color={theme.ink} />
+          </GlassPill>
         </View>
         <View style={styles.rows}>
           {TILES.map((tile) => (
@@ -147,8 +179,17 @@ const styles = StyleSheet.create({
     // line; alignItems would have centered it across the tile — the
     // previous pass's mistake.
     height: 44,
-    justifyContent: 'center',
+    // Row now: the wordmark left, the share pill right, both on the
+    // burger pill's exact center line.
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     paddingHorizontal: 24,
+  },
+  sharePill: {
+    width: 44,
+    height: 44,
+    paddingHorizontal: 0,
   },
   rows: {
     marginTop: 36,
