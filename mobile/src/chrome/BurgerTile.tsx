@@ -36,7 +36,7 @@ const WORDMARK_ROW_OFFSET = HOME_TITLE_TOP_PADDING - 4;
 const TILES = [
   {
     route: '/classement',
-    label: 'Classement politique des médias',
+    label: 'Classement des médias',
     // The spectrum chart the page will draw (#183).
     Icon: ChartColumn,
   },
@@ -116,7 +116,10 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
               style={styles.row}
             >
               <tile.Icon size={20} strokeWidth={2} color={theme.ink} />
-              <Text style={[styles.label, { color: theme.ink }]}>
+              <Text
+                numberOfLines={1}
+                style={[styles.label, { color: theme.ink }]}
+              >
                 {tile.label}
               </Text>
             </Pressable>
@@ -159,6 +162,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   label: {
+    // flex: 1 caps the label to the row's remaining width (past the
+    // icon), so long labels ellipsize instead of pushing past the
+    // tile's edge; numberOfLines adds the ellipsis.
+    flex: 1,
     fontSize: 17,
     fontWeight: '600',
   },
