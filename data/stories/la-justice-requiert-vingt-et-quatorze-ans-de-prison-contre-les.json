@@ -6,6 +6,28 @@
   "storyDay": "2026-11-16",
   "articles": [
     {
+      "id": "2276c1e1158b",
+      "outletId": "le-monde",
+      "headline": "Au procès des parents de l’« inconnue de l’A10 », un réquisitoire sobre, subtil et pédagogue",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/16/au-proces-des-parents-de-l-inconnue-de-l-a10-un-requisitoire-sobre-subtil-et-pedagogue_6812394_3224.html",
+      "publishedAt": "2026-11-16T20:19:08.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/02/898/0/5390/2695/644/322/60/0/f1952a5_ftp-1-jhfunmbca7vd-afp-d64t9hz.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
+      "id": "60001a5b1cb6",
+      "outletId": "liberation",
+      "headline": "«Rappelez-vous le vertige qui nous a tous saisis» : au procès de la «petite inconnue de l’A10», vingt ans et quatorze ans de réclusion requis contre la mère et le père",
+      "url": "https://www.liberation.fr/societe/police-justice/proces-de-la-petite-inconnue-de-la10-20-ans-de-prison-requis-contre-la-mere-dinass-touloub-et-14-ans-contre-son-pere-20261116_E2ZVBXVRHFDJ7EZL7YD7UDVU2M/",
+      "publishedAt": "2026-11-16T19:42:16.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "9013b9a3f7c5",
       "outletId": "franceinfo",
       "headline": "\"On a massacré son innocence\" : au procès de \"la petite martyre de l'A10\", vingt ans et quatorze ans de prison requis contre la mère et le père d'Inass Touloub",
@@ -52,30 +74,10 @@
     }
   ],
   "topicId": "2679d8db192a",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794769200000,
-      "end": 1794772800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794772800000,
-      "end": 1794776400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794776400000,
       "end": 1794780000000,
@@ -295,6 +297,44 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794855600000,
+      "end": 1794859200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1794859200000,
+      "end": 1794862800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le ministère public a réclamé vingt ans de réclusion contre Halima El Bakhti et quatorze ans contre Ahmed Touloub devant la cour d'assises du Loir-et-Cher.",
+      "Les avocats généraux ont insisté sur l'anéantissement du droit de grandir et du destin de la fillette de 4 ans dont le corps avait été découvert en août 1987.",
+      "Le verdict de ce procès concernant la mort d'Inass Touloub doit être prononcé ce mardi."
+    ],
+    "centre": [
+      "La justice a requis vingt ans de prison à l'encontre de la mère et quatorze ans contre le père lors de ce procès se déroulant à Blois.",
+      "Le réquisitoire a été qualifié de sobre, subtil et pédagogue par Le Monde, tandis que le verdict est attendu ce mardi 17 novembre."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la charge émotionnelle de l'affaire en citant les formules marquantes des avocats généraux sur l'innocence brisée de la victime.",
+    "Le centre adopte un ton plus distant et descriptif en se focalisant sur le déroulement institutionnel du procès et la qualification précise des peines."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-17T04:01:32.933Z"
 }

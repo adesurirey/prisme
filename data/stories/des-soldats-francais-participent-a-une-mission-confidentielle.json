@@ -1,7 +1,7 @@
 {
   "id": "5d49bf6ecc33",
   "slug": "des-soldats-francais-participent-a-une-mission-confidentielle",
-  "title": "Des soldats français participent à une mission confidentielle en Ukraine",
+  "title": "Des soldats français participent en Ukraine à une mission confidentielle baptisée Volia",
   "createdAt": "2026-11-16T15:01:33.525Z",
   "storyDay": "2026-11-16",
   "articles": [
@@ -16,6 +16,17 @@
       "kind": "news",
       "section": "world",
       "everFrontPage": true
+    },
+    {
+      "id": "2b8ea4b3899e",
+      "outletId": "rfi",
+      "headline": "Soldats français en Ukraine: «Cela va sans doute amplifier la réaction de propagande de la Russie»",
+      "url": "https://www.rfi.fr/fr/europe/20261116-soldats-fran%C3%A7ais-en-ukraine-cela-va-sans-doute-amplifier-la-r%C3%A9action-de-propagande-de-la-russie",
+      "publishedAt": "2026-11-16T17:58:48.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/7ddcea68-e1e1-11f1-94a2-3f371022a770/w:1024/p:16x9/000-D7BD6Z6.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "5a8511447370",
@@ -97,7 +108,7 @@
     }
   ],
   "topicId": "5d49bf6ecc33",
-  "titledArticleCount": 7,
+  "titledArticleCount": 9,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -326,10 +337,10 @@
       "end": 1794852000000,
       "counts": {
         "gauche": 1,
-        "centre": 0,
+        "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 2
     },
     {
       "start": 1794852000000,
@@ -344,24 +355,27 @@
   ],
   "summaries": {
     "gauche": [
-      "La présence de militaires français sur le territoire ukrainien a été révélée ce lundi.",
-      "Ces troupes ont pour mission principale d'assurer la formation des forces armées locales."
+      "Des militaires français sont présents en Ukraine depuis l'été 2026 dans le cadre de l'opération confidentielle Volia.",
+      "La mission de ces soldats consiste à former les forces ukrainiennes et à assurer l'entretien du matériel livré par Paris.",
+      "Mediapart souligne que l'exécutif a continué de contourner le Parlement en engageant cette intervention sans information préalable."
     ],
     "centre": [
-      "Des soldats français participent depuis l'été à une mission de soutien confidentielle nommée \"Volia\".",
-      "Le dispositif est dirigé par un général français et se concentre sur l'entretien du matériel militaire ukrainien sans prendre part aux combats."
+      "Des soldats français participent à la mission confidentielle Volia en Ukraine pour dispenser des formations et entretenir les équipements de pointe.",
+      "Cette présence militaire, active depuis l'été 2026, est menée par des troupes au statut non belligérant selon RFI et France 24.",
+      "Le Kremlin réagit à ces révélations tandis que le rôle de la France en soutien à Kiev est mis en lumière."
     ],
     "droite": [
-      "L'opération de soutien militaire française en Ukraine a été mise en lumière par des révélations récentes.",
-      "Ces interventions sur le terrain se déroulent en dépit des démentis officiels de Paris."
+      "Des soldats français sont déployés sur le territoire ukrainien depuis le mois d'août dans le cadre de l'opération Volia.",
+      "Cette mission de soutien et de formation intervient en dépit des démentis formulés par Paris.",
+      "Le Figaro et Le JDD rapportent ces informations révélées initialement par RFI sur l'engagement militaire français en Ukraine."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la nature pédagogique et l'encadrement des troupes ukrainiennes par les militaires français.",
-    "Le centre détaille les aspects opérationnels et logistiques de la mission confidentielle \"Volia\" en insistant sur son absence de rôle combattant.",
-    "La droite insiste sur le caractère secret de l'opération et pointe le décalage avec les démentis officiels de Paris."
+    "La gauche met l'accent sur le manque de transparence institutionnelle et reproche à l'exécutif d'avoir contourné le Parlement.",
+    "Le centre adopte un angle purement factuel et géopolitique, détaillant les aspects logistiques de la mission et la réaction du Kremlin.",
+    "La droite se focalise sur la révélation de cette présence militaire cachée et pointe l'écart avec les démentis officiels de Paris."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 7,
-  "summarizedAt": "2026-11-16T22:01:37.900Z"
+  "summarizedArticleCount": 9,
+  "summarizedAt": "2026-11-17T04:01:32.933Z"
 }
