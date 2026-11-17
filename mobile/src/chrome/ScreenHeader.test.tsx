@@ -3,7 +3,7 @@ import { Platform, Share } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ModeProvider } from '@/mode/mode';
 
-import { StoryHeader } from './StoryHeader';
+import { ScreenHeader } from './ScreenHeader';
 
 // The mode pill pulls the native sheet and haptics (issue #196).
 jest.mock('@lodev09/react-native-true-sheet', () => ({
@@ -32,14 +32,15 @@ const INSETS = {
 const URL = 'https://leprisme.info/2026-11-10/budget-2027-en-commission/';
 
 function renderHeader(
-  props: { shareUrl?: string | null; onBack?: () => void } = {},
+  props: { shareUrl?: string | null; onBack?: () => void; mode?: boolean } = {},
 ) {
   return render(
     <ModeProvider>
       <SafeAreaProvider initialMetrics={INSETS}>
-        <StoryHeader
+        <ScreenHeader
           onBack={props.onBack ?? (() => undefined)}
           shareUrl={props.shareUrl === undefined ? URL : props.shareUrl}
+          mode={props.mode === undefined ? true : props.mode}
         />
       </SafeAreaProvider>
     </ModeProvider>,
@@ -63,7 +64,7 @@ function testIDOrder(root: PillNode | PillNode[] | null): string[] {
   return ids;
 }
 
-describe('StoryHeader (issue #199)', () => {
+describe('ScreenHeader (issue #199)', () => {
   test('the back pill fires the pop', async () => {
     const onBack = jest.fn();
     await renderHeader({ onBack });
@@ -126,5 +127,25 @@ describe('StoryHeader (issue #199)', () => {
     expect(order.indexOf('mode-button')).toBeLessThan(
       order.indexOf('share-button'),
     );
+  });
+
+  test('without mode, the pill stays home — back and share only (the static pages)', async () => {
+    const onBack = jest.fn();
+    const share = jest
+      .spyOn(Share, 'share')
+      .mockResolvedValue({ action: 'sharedAction', activityType: undefined });
+    try {
+      await renderHeader({ mode: false, onBack });
+
+      expect(screen.queryByTestId('mode-button')).toBeNull();
+
+      fireEvent.press(screen.getByTestId('back-button'));
+      expect(onBack).toHaveBeenCalledTimes(1);
+
+      fireEvent.press(screen.getByTestId('share-button'));
+      expect(share).toHaveBeenCalledWith({ url: URL });
+    } finally {
+      share.mockRestore();
+    }
   });
 });

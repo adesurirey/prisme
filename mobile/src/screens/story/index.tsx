@@ -10,7 +10,7 @@
 import { useRouter } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
 
-import { StoryHeader } from '@/chrome/StoryHeader';
+import { ScreenHeader } from '@/chrome/ScreenHeader';
 import { findStory, storyWebUrl } from '@/data/story';
 import { useEdition } from '@/data/use-edition';
 import { useTheme } from '@/theme';
@@ -26,7 +26,7 @@ export function Story({ id }: { id: string }) {
 
   return (
     <View style={[styles.container, { backgroundColor: theme.canvas }]}>
-      <StoryHeader onBack={() => router.back()} shareUrl={shareUrl} />
+      <ScreenHeader onBack={() => router.back()} shareUrl={shareUrl} mode />
       {/* The body is #182 — the placeholder keeps the route's 5a text. */}
       <View style={styles.body}>
         <Text style={[styles.placeholder, { color: theme.prose }]}>

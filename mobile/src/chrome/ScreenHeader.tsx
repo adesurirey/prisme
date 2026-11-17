@@ -1,5 +1,5 @@
 /**
- * The story screen's chrome (issue #199): the back pill top-left — the
+ * The screen chrome (issue #199): the back pill top-left — the
  * native edge-swipe and the Android back already pop the route (5a) —
  * and top-right the mode pill, then the share pill: the mode keeps the
  * position it holds on the home header (the grilling decision), and the
@@ -17,7 +17,7 @@
  * glyphs.
  */
 
-import { ChevronLeft, Share2 } from 'lucide-react-native';
+import { ChevronLeft, Share as LucideShare } from 'lucide-react-native';
 import { Platform, Share, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -34,17 +34,21 @@ function BackIcon() {
 
 function ShareIcon() {
   const theme = useTheme();
-  return <Share2 size={20} strokeWidth={2} color={theme.ink} />;
+  return <LucideShare size={20} strokeWidth={2} color={theme.ink} />;
 }
 
-export function StoryHeader({
+export function ScreenHeader({
   onBack,
   shareUrl,
+  mode = false,
 }: {
   onBack: () => void;
-  /** The story's public page URL; null while no Story resolved — the
-   *  pill is disabled (the chrome renders before the data lands). */
+  /** The page's public URL; null while nothing resolves — the pill is
+   *  disabled (the chrome renders before the data lands). */
   shareUrl: string | null;
+  /** The reading-mode pill — the story screen only (issue #199): on
+   *  the static pages nothing on screen reads the mode. */
+  mode?: boolean;
 }) {
   const insets = useSafeAreaInsets();
   const top = insets.top + HOME_TITLE_TOP_PADDING;
@@ -79,8 +83,9 @@ export function StoryHeader({
       >
         {/* The mode pill rides at its home size — height only, the
             intrinsic width: the square would clip « Couv. » into a
-            circle (simulator feedback, issue #199). */}
-        <ModeButton style={styles.pill} />
+            circle (simulator feedback, issue #199). The story screen
+            alone opts in. */}
+        {mode && <ModeButton style={styles.pill} />}
         <GlassPill
           accessibilityLabel="Partager"
           testID="share-button"
