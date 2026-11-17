@@ -9,11 +9,9 @@ import {
   Pressable,
   RefreshControl,
   ScrollView,
-  type StyleProp,
   StyleSheet,
   Text,
   View,
-  type ViewStyle,
 } from 'react-native';
 import { Drawer, useDrawerProgress } from 'react-native-drawer-layout';
 import type {
@@ -85,19 +83,22 @@ export function latestPointStamp(builtAt: string): string {
 /**
  * The sliding page's card treatment (issue #198, the ChatGPT model):
  * the tile waits behind the page — darker than it by its own token —
- * and as the drawer opens the page's leading edge rounds off and casts
- * a soft drop shadow onto the tile. Full-bleed again when closed. Two
- * surfaces, because iOS clips a view's shadow to its own bounds: the
- * outer surface carries the shadow (unmasked, so it draws) and the
- * inner one carries the mask that clips the content to the rounding.
- * Reads the drawer's progress context, so it mounts strictly inside
+ * and as the drawer opens the page's leading edge rounds off, casts a
+ * soft drop shadow onto the tile and washes slightly lighter. Full-
+ * bleed again when closed. Two surfaces, each with one job: the outer
+ * casts the shadow — transparent, because a background there gave iOS
+ * a square layer to shadow from, and its stale square corner peeked
+ * out behind the rounded curve; from the subtree's alpha instead, the
+ * shadow follows the rounding exactly. The inner one is the card
+ * itself — the masked canvas surface the content paints onto. Reads
+ * the drawer's progress context, so it mounts strictly inside
  * <Drawer> — the home's own body sits above that provider.
  */
 function PageCard({
-  style,
+  background,
   children,
 }: {
-  style?: StyleProp<ViewStyle>;
+  background: string;
   children: ReactNode;
 }) {
   const progress = useDrawerProgress();
@@ -118,7 +119,7 @@ function PageCard({
     // content fades toward the shared canvas, so the page reads lighter
     // than the layer beneath it — surface and page share one color and
     // only the wash separates them.
-    opacity: interpolate(progress.value, [0, 1], [1, 0.8]),
+    opacity: interpolate(progress.value, [0, 1], [1, 0.6]),
   }));
   const mask = useAnimatedStyle(() => ({
     borderRadius: interpolate(
@@ -129,10 +130,15 @@ function PageCard({
     ),
   }));
   return (
-    <Reanimated.View
-      style={[styles.container, styles.pageCardShadow, shadow, style]}
-    >
-      <Reanimated.View style={[styles.container, styles.pageCardMask, mask]}>
+    <Reanimated.View style={[styles.container, styles.pageCardShadow, shadow]}>
+      <Reanimated.View
+        style={[
+          styles.container,
+          styles.pageCardMask,
+          mask,
+          { backgroundColor: background },
+        ]}
+      >
         {children}
       </Reanimated.View>
     </Reanimated.View>
@@ -350,7 +356,7 @@ export function Home() {
         <BurgerTile onClose={() => setMenuOpen(false)} />
       )}
     >
-      <PageCard style={{ backgroundColor: theme.canvas }}>{home}</PageCard>
+      <PageCard background={theme.canvas}>{home}</PageCard>
     </Drawer>
   );
 }
