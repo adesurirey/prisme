@@ -6,6 +6,29 @@
   "storyDay": "2026-11-17",
   "articles": [
     {
+      "id": "20d8138f38e4",
+      "outletId": "le-figaro",
+      "headline": "Réforme des retraites de Marine Le Pen : un départ à 62 ans en trompe-l’œil",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/programmes/reforme-des-retraites-de-marine-le-pen-un-depart-a-62-ans-en-trompe-l-oeil-20261117",
+      "publishedAt": "2026-11-17T18:55:40.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1997_crop/2026/11/17/05671b5b2349dba5765e7d85b9fbb343e15bfa44fa6a6da0ce7ce0067ca688f7.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "da199ca762a1",
+      "outletId": "france-24",
+      "headline": "France : Le Pen promet d'abaisser l'âge de départ à la retraite si elle entre à l'Elysée",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261117-france-le-pen-promet-d-abaisser-l-%C3%A2ge-de-d%C3%A9part-%C3%A0-la-retraite-si-elle-entre-%C3%A0-l-elys%C3%A9e",
+      "publishedAt": "2026-11-17T16:25:32.000Z",
+      "imageUrl": "https://s.france24.com/media/display/e095f520-e2a2-11f1-b2fb-ff16da94d1fe/w:1024/p:16x9/FR-20261117-160337-160607-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "a8ca241a4e9f",
       "outletId": "le-jdd",
       "headline": "Âge de départ, capitalisation, financement… Tout ce qu’il faut savoir sur la réforme des retraites de Marine Le Pen",
@@ -113,7 +136,7 @@
       "url": "https://www.lemonde.fr/politique/article/2026/11/17/presidentielle-2027-marine-le-pen-presente-sa-reforme-des-retraites-et-promet-que-des-centaines-de-milliers-de-travailleurs-partiront-plus-tot-qu-avec-la-reforme-borne_6812963_823448.html",
       "publishedAt": "2026-11-17T11:32:16.000Z",
       "imageUrl": "https://img.lemde.fr/2026/10/26/699/398/2602/1301/644/322/60/0/e0c154f_upload-1-qt0b3nkqbv7w-meetingrn-orleans-asurp-204863.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -267,7 +290,7 @@
       "url": "https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-detaille-ce-mardi-son-projet-de-reforme-des-retraites-20261117",
       "publishedAt": "2026-11-17T06:10:28.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/17/72e60752849fc8332994e4e82d88dbf73586394bf7d21b5cd40824a456570c3d.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "live",
       "section": "politics",
       "everFrontPage": true
@@ -334,36 +357,6 @@
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794844800000,
-      "end": 1794848400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794848400000,
-      "end": 1794852000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794852000000,
-      "end": 1794855600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794855600000,
       "end": 1794859200000,
@@ -573,6 +566,36 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1794931200000,
+      "end": 1794934800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1794934800000,
+      "end": 1794938400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794938400000,
+      "end": 1794942000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
