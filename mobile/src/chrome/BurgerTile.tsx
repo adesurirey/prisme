@@ -4,12 +4,23 @@
  * the route. The icons are SF Symbols through expo-symbols; Android
  * has no SF Symbols, so a plain-text glyph rides in the library's own
  * `fallback` (a string name never resolves on Android — Material
- * glyphs stay out, the ticket pins the plain text).
+ * glyphs stay out, the ticket pins the plain text). The content
+ * appears with the drawer's own progress: it zooms in from 90% and
+ * fades, one step behind the page sliding away — the model's sense of
+ * depth. The scale lives on an inner wrapper, never on the root that
+ * paints the canvas: the library's drawer container is hardcoded
+ * white, and a scaled root would flash a white frame around it.
  */
 
 import { useRouter } from 'expo-router';
 import { SymbolView } from 'expo-symbols';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { useDrawerProgress } from 'react-native-drawer-layout';
+import Reanimated, {
+  Extrapolation,
+  interpolate,
+  useAnimatedStyle,
+} from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '@/theme';
 import { HOME_TITLE_TOP_PADDING } from './HomeHeader';
@@ -42,6 +53,20 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
   const router = useRouter();
   const theme = useTheme();
   const insets = useSafeAreaInsets();
+  const progress = useDrawerProgress();
+  const appear = useAnimatedStyle(() => ({
+    opacity: interpolate(progress.value, [0, 1], [0, 1], Extrapolation.CLAMP),
+    transform: [
+      {
+        scale: interpolate(
+          progress.value,
+          [0, 1],
+          [0.96, 1],
+          Extrapolation.CLAMP,
+        ),
+      },
+    ],
+  }));
 
   return (
     <View
@@ -54,50 +79,55 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
         },
       ]}
     >
-      <View style={styles.wordmarkRow}>
-        {/* The title of the tile — sized like the ChatGPT model's header
-            title, well above the nav-scale default (issue #198); the
-            140 was dialed back 15% on simulator feedback. */}
-        <PrismeWordmark color={theme.ink} width={119} />
-      </View>
-      <View style={styles.rows}>
-        {TILES.map((tile) => (
-          <Pressable
-            key={tile.route}
-            accessibilityRole="button"
-            // The glyph rides in the icon, not the announced name.
-            accessibilityLabel={tile.label}
-            onPress={() => {
-              onClose();
-              router.push(tile.route);
-            }}
-            style={styles.row}
-          >
-            <SymbolView
-              name={tile.symbol}
-              size={20}
-              weight="semibold"
-              tintColor={theme.ink}
-              fallback={
-                <View style={styles.glyphBox}>
-                  <Text style={[styles.glyph, { color: theme.ink }]}>
-                    {tile.glyph}
-                  </Text>
-                </View>
-              }
-            />
-            <Text style={[styles.label, { color: theme.ink }]}>
-              {tile.label}
-            </Text>
-          </Pressable>
-        ))}
-      </View>
+      <Reanimated.View style={[styles.tileContent, appear]}>
+        <View style={styles.wordmarkRow}>
+          {/* The title of the tile — sized like the ChatGPT model's header
+              title, well above the nav-scale default (issue #198); the
+              140 was dialed back 15% on simulator feedback. */}
+          <PrismeWordmark color={theme.ink} width={119} />
+        </View>
+        <View style={styles.rows}>
+          {TILES.map((tile) => (
+            <Pressable
+              key={tile.route}
+              accessibilityRole="button"
+              // The glyph rides in the icon, not the announced name.
+              accessibilityLabel={tile.label}
+              onPress={() => {
+                onClose();
+                router.push(tile.route);
+              }}
+              style={styles.row}
+            >
+              <SymbolView
+                name={tile.symbol}
+                size={20}
+                weight="semibold"
+                tintColor={theme.ink}
+                fallback={
+                  <View style={styles.glyphBox}>
+                    <Text style={[styles.glyph, { color: theme.ink }]}>
+                      {tile.glyph}
+                    </Text>
+                  </View>
+                }
+              />
+              <Text style={[styles.label, { color: theme.ink }]}>
+                {tile.label}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
+      </Reanimated.View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   tile: {
+    flex: 1,
+  },
+  tileContent: {
     flex: 1,
   },
   wordmarkRow: {
