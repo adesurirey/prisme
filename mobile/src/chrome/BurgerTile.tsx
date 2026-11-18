@@ -78,12 +78,7 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
     // Short travel on purpose: the content settles into place from just
     // past its own edge — a long fade/rise reads as arriving from
     // nowhere (issue #198).
-    opacity: interpolate(
-      progress.value,
-      [0, 1],
-      [0.25, 1],
-      Extrapolation.CLAMP,
-    ),
+    opacity: interpolate(progress.value, [0, 1], [0.7, 1], Extrapolation.CLAMP),
     transform: [
       {
         scale: interpolate(
@@ -99,7 +94,7 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
         translateY: interpolate(
           progress.value,
           [0, 1],
-          [6, 0],
+          [2, 0],
           Extrapolation.CLAMP,
         ),
       },
