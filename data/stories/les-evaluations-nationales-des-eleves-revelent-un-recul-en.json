@@ -1,10 +1,43 @@
 {
   "id": "09495330e44d",
   "slug": "les-evaluations-nationales-des-eleves-revelent-un-recul-en",
-  "title": "Les évaluations nationales des élèves révèlent un recul en français et une stagnation en mathématiques",
+  "title": "Les évaluations nationales révèlent un recul du niveau en français et une stagnation en mathématiques",
   "createdAt": "2026-11-18T09:01:44.886Z",
   "storyDay": "2026-11-18",
   "articles": [
+    {
+      "id": "64d2e10beeaf",
+      "outletId": "cnews",
+      "headline": "Éducation : le niveau de français des élèves continue de baisser, selon les résultats des évaluations nationales",
+      "url": "https://www.cnews.fr/france/2026-11-18/education-le-niveau-de-francais-des-eleves-continue-de-baisser-selon-les",
+      "publishedAt": "2026-11-18T09:46:49.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/adobestock_187754218-taille1200_6afd647b746bf.jpg?h=82613abb&itok=-eJxMXhd",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "dc8e285995dd",
+      "outletId": "tf1-info",
+      "headline": "Éducation : recul en primaire, difficultés en seconde... une baisse du niveau de français observée lors des évaluations nationales",
+      "url": "https://www.tf1info.fr/education/education-recul-en-primaire-difficultes-en-seconde-une-baisse-du-niveau-de-francais-observee-lors-des-evaluations-nationales-2476571.html",
+      "publishedAt": "2026-11-18T09:09:21.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/705/480/eleves-couloir-ecole-ae83f9-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "a864c096351f",
+      "outletId": "huffpost",
+      "headline": "« Pas à la hauteur » : ce que l’on sait des résultats des évaluations nationales à l’école et au collège",
+      "url": "https://www.huffingtonpost.fr/france/article/pas-a-la-hauteur-ce-que-l-on-sait-des-resultats-des-evaluations-nationales-a-l-ecole-et-au-college_360365.html",
+      "publishedAt": "2026-11-18T09:02:28.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/11/18/0/0/4000/2250/0/0/60/0/80e21b1_upload-1-6fjbctde8h5u-afp-20251205-hl-mdelaty-2981128-v1-highres-franceeducationclassroomstudentsmidd.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
     {
       "id": "d7f35a53ab54",
       "outletId": "le-parisien",
@@ -44,7 +77,7 @@
       "url": "https://www.ouest-france.fr/education/ecole/difficultes-en-francais-satisfaction-en-maths-les-evaluations-nationales-de-rentree-des-eleves-rendent-leur-verdict-cd0a9ee8-e31f-11f1-9a72-32f9104dab1b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-18T08:13:54.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExY2EwM2ZhNTkxZGEyNzRlN2M3NTI4MjMxYjI2MjRiMzA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d5a828532f499a0542e17a6fc2111efa6abc60523f4eb5c37d3ab7d5adb5090e",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -118,7 +151,7 @@
     }
   ],
   "topicId": "09495330e44d",
-  "titledArticleCount": 10,
+  "titledArticleCount": 13,
   "section": "society",
   "everInEdition": true,
   "activity": [
@@ -356,11 +389,36 @@
       "start": 1794992400000,
       "end": 1794996000000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
-        "droite": 0
+        "droite": 2
       },
-      "total": 1
+      "total": 4
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le ministère de l'Éducation nationale a publié les résultats des évaluations menées du CP à la première année de CAP, mettant en évidence un recul généralisé en français.",
+      "Le HuffPost et Libération estiment que ces résultats ne sont pas à la hauteur des attentes, tandis que Le Monde relève des fragilités persistantes malgré une stabilité sur un an.",
+      "Le niveau en mathématiques se montre globalement stable, voire à la hausse selon Libération, contrastant avec la baisse observée en français."
+    ],
+    "centre": [
+      "Les évaluations nationales de rentrée, organisées par le ministère de l'Éducation nationale, pointent une dégradation des compétences en français du CE1 jusqu'au lycée.",
+      "Le Parisien qualifie les résultats de plutôt stables par rapport à l'année précédente, alors que d'autres titres comme Ouest-France et La Croix soulignent la persistance de difficultés en français.",
+      "Le niveau en mathématiques fait figure de point de satisfaction ou de résistance, se maintenant globalement à l'échelle nationale."
+    ],
+    "droite": [
+      "Les résultats des évaluations nationales communiqués par le ministère confirment un recul continu du niveau de français pour de multiples niveaux scolaires.",
+      "Le Figaro et Le Point insistent sur le décrochage persistant des élèves en orthographe, lecture et écriture depuis les tests instaurés en 2017.",
+      "La stagnation ou le maintien du niveau en mathématiques est souligné en contrepoint de la baisse constatée en français."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la sévérité du constat, qualifiant la situation de résultat insuffisant pour le système éducatif.",
+    "Le centre met en balance la stabilité globale des résultats d'une année sur l'autre et la réalité d'un recul persistant en français.",
+    "La droite privilégie l'idée d'un décrochage structurel et continu des élèves, s'appuyant sur l'historique des évaluations depuis 2017."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 13,
+  "summarizedAt": "2026-11-18T10:01:28.499Z"
 }
