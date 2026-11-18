@@ -6,11 +6,34 @@
   "storyDay": "2026-11-17",
   "articles": [
     {
+      "id": "9d18dd79aace",
+      "outletId": "le-monde",
+      "headline": "Les grands patrons entre séduction et effroi : le récit d’un dîner mémorable avec Jean-Luc Mélenchon",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/18/les-grands-patrons-entre-seduction-et-effroi-le-recit-d-un-diner-memorable-avec-jean-luc-melenchon_6813208_3234.html",
+      "publishedAt": "2026-11-18T20:24:02.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/13/258/0/6000/3000/644/322/60/0/6bc80a1_upload-1-ykovpx6qoyup-cbi1356143.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "77ef1511c908",
       "outletId": "liberation",
       "headline": "«C’était courtois, ils se sont bien marrés et c’était intéressant» : récit du dîner entre Jean-Luc Mélenchon et les grands patrons",
       "url": "https://www.liberation.fr/politique/cetait-courtois-ils-se-sont-bien-marres-et-cetait-interessant-recit-du-diner-entre-jean-luc-melenchon-et-les-grands-patrons-20261118_DV4MCKQXPFB3ZLNZGPC4MJ3QUU/",
       "publishedAt": "2026-11-18T17:51:48.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "fdee30405002",
+      "outletId": "france-24",
+      "headline": "\"Nous allons devoir faire avec eux\" : Mélenchon et le dîner avec les grands patrons",
+      "url": "https://www.france24.com/fr/info-en-continu/20261118-nous-allons-devoir-faire-avec-eux-m%C3%A9lenchon-et-le-d%C3%AEner-avec-les-grands-patrons",
+      "publishedAt": "2026-11-18T17:09:31.000Z",
+      "imageUrl": "https://s.france24.com/media/display/d2015b5a-e372-11f1-a074-7908c4e1a3c7/w:1024/p:16x9/9c02607ed019a4949c6cd09ad25d0a4512ce40e5.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "politics"
@@ -126,7 +149,7 @@
     }
   ],
   "topicId": "41338a46c826",
-  "titledArticleCount": 9,
+  "titledArticleCount": 13,
   "section": "politics",
   "everInEdition": true,
   "activity": [
@@ -455,6 +478,36 @@
       "end": 1795024800000,
       "counts": {
         "gauche": 1,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 2
+    },
+    {
+      "start": 1795024800000,
+      "end": 1795028400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795028400000,
+      "end": 1795032000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795032000000,
+      "end": 1795035600000,
+      "counts": {
+        "gauche": 1,
         "centre": 0,
         "droite": 0
       },
@@ -463,21 +516,25 @@
   ],
   "summaries": {
     "gauche": [
-      "Jean-Luc Mélenchon a participé à un dîner au restaurant Drouant à l'invitation du club Entreprise & Cité.",
-      "La rencontre a réuni treize dirigeants du CAC 40, dont Bernard Arnault et Patrick Pouyanné.",
-      "Le candidat a déclaré au sujet de ce rendez-vous : « Ça me fait plaisir de les voir » et « Il faut voir ce qu'ils sont prêts à nous lâcher »."
+      "Jean-Luc Mélenchon a participé à un dîner de deux heures avec treize dirigeants du CAC 40, dont Bernard Arnault et Patrick Pouyanné, à l'invitation du club Entreprise & Cité.",
+      "La rencontre s'est déroulée dans une atmosphère qualifiée de courtoise, le candidat insoumis ayant exposé son projet économique tout en affirmant vouloir faire face aux grands patrons.",
+      "Libération a épinglé une fausse information de Sonia Mabrouk sur BFM TV concernant le lieu fastueux de ce rendez-vous."
+    ],
+    "centre": [
+      "Treize dirigeants économiques, incluant Bernard Arnault, ont partagé un dîner avec Jean-Luc Mélenchon dans un climat pragmatique malgré l'opposition politique.",
+      "Le candidat de La France insoumise a engagé ce dialogue inattendu en estimant qu'il faudra compter avec ces grands patrons en vue de la présidentielle."
     ],
     "droite": [
-      "Treize dirigeants de grandes entreprises ont convié Jean-Luc Mélenchon à un dîner à huis clos organisé par le club Entreprise & Cité.",
-      "La discussion entre le candidat insoumis et des figures patronales telles que Bernard Arnault et Patrick Pouyanné s'est déroulée dans une ambiance cordiale.",
-      "Malgré des échanges jugés intéressants, les désaccords de fond persistent entre le responsable politique et les grands patrons."
+      "Jean-Luc Mélenchon a tenu une réunion à huis clos avec des figures majeures du patronat français, parmi lesquelles Bernard Arnault et Patrick Pouyanné.",
+      "Si les discussions ont été jugées cordiales et intéressantes par Le Figaro, les divergences de fond entre le candidat et ses hôtes demeurent profondes."
     ]
   },
   "differences": [
-    "La gauche met en avant la démarche volontaire du candidat et sa volonté d'âpre négociation face aux grandes fortunes.",
-    "La droite insiste sur le caractère paradoxal et inédit de cette confrontation cordiale malgré les divergences idéologiques."
+    "La gauche insiste sur le caractère courtois et pragmatique du dîner tout en réfutant les polémiques sur le choix du lieu de réception.",
+    "Le centre met l'accent sur le paradoxe de cette rencontre entre un pourfendeur des ultra-riches et les plus grandes fortunes du pays.",
+    "La droite souligne l'aspect insolite de ce tête-à-tête tout en insistant sur la persistance des désaccords de fond entre le candidat et les dirigeants."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 9,
-  "summarizedAt": "2026-11-18T08:01:39.142Z"
+  "summarizedArticleCount": 13,
+  "summarizedAt": "2026-11-18T21:01:36.342Z"
 }
