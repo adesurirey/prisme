@@ -6,6 +6,30 @@
   "storyDay": "2026-11-17",
   "articles": [
     {
+      "id": "c1e5d2ee5eb7",
+      "outletId": "le-figaro",
+      "headline": "L’éditorial d’Yves Thréard : « Une primaire de la droite et du centre contre l’inéluctable défaite »",
+      "url": "https://www.lefigaro.fr/vox/politique/l-editorial-d-yves-threard-une-primaire-de-la-droite-et-du-centre-contre-l-ineluctable-defaite-20261118",
+      "publishedAt": "2026-11-18T19:56:09.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/1822x1026_crop/2026/11/18/06005705223729441274b3e61de85a6a49db5840714dc7d9cc36221dbabd6ac4.jpg",
+      "frontPage": true,
+      "kind": "opinion",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "e657ceea03c3",
+      "outletId": "le-figaro",
+      "headline": "Guillaume Tabard : «La primaire de la droite et du centre, nouveau prétexte à la division»",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/guillaume-tabard-la-primaire-de-la-droite-et-du-centre-nouveau-pretexte-a-la-division-20261118",
+      "publishedAt": "2026-11-18T19:56:08.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/2519x1417_crop/2026/11/18/388148de0bee2e1c04e2d2ed12a56b04d6d4624c268398675a9971a40476098f.jpg",
+      "frontPage": true,
+      "kind": "opinion",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "d130ce8617d3",
       "outletId": "le-parisien",
       "headline": "Présidentielle 2027 : Lisnard et Retailleau appellent Philippe à rejoindre la primaire… mais se divisent sur la participation de Zemmour",
@@ -144,7 +168,7 @@
       "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-edouard-philippe-a-la-traine-dans-les-sondages-presente-son-projet-a-date-20261118",
       "publishedAt": "2026-11-18T07:57:29.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/18/48f05af8afc81f50ee1f86a4dcf0a61392dc20ec82cfca5e27393fcf9d798c58.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -760,9 +784,9 @@
       "counts": {
         "gauche": 0,
         "centre": 1,
-        "droite": 0
+        "droite": 2
       },
-      "total": 1
+      "total": 3
     }
   ],
   "summaries": {
