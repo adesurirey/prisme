@@ -308,5 +308,30 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Un Antonov An-12 s'est écrasé dans une zone non habitée de la région de Kemerovo en Sibérie.",
+      "Le vol régulier de cet appareil de transport militaire a coûté la vie à dix-neuf personnes.",
+      "Le ministère de la Défense russe a communiqué sur les circonstances de cette catastrophe aérienne."
+    ],
+    "centre": [
+      "Dix-neuf personnes ont péri dans le crash d'un avion de transport militaire An-12 en Sibérie.",
+      "L'accident s'est produit le mardi 17 novembre dans la région de Kemerovo en Sibérie occidentale.",
+      "Une défaillance technique est envisagée pour expliquer la cause de cette tragédie aérienne."
+    ],
+    "droite": [
+      "Un avion militaire s'est écrasé le mardi 17 novembre dans la région de Kemerovo, au sud de la Russie.",
+      "Le drame s'est produit près du village de Yagunovo.",
+      "Dix-neuf personnes ont perdu la vie dans cette catastrophe aérienne."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur les précisions du ministère russe de la Défense concernant la zone inhabitée du crash.",
+    "Le centre détaille l'appareil impliqué et l'hypothèse d'une panne technique à l'origine du drame.",
+    "La droite privilégie une approche factuelle centrée sur le lieu exact de la chute de l'appareil près de Yagunovo."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-18T18:01:24.812Z"
 }
