@@ -1,10 +1,20 @@
 {
   "id": "0da134769a3f",
   "slug": "des-policiers-organisent-une-manifestation-surprise-devant-le",
-  "title": "Des policiers organisent une manifestation surprise devant le ministère de l'Intérieur",
+  "title": "Des dizaines de policiers organisent une manifestation surprise devant le ministère de l'Intérieur",
   "createdAt": "2026-11-18T12:01:35.748Z",
   "storyDay": "2026-11-18",
   "articles": [
+    {
+      "id": "c1e5523614b1",
+      "outletId": "liberation",
+      "headline": "Des policiers en colère manifestent devant le ministère de l’Intérieur à l’appel du syndicat d’extrême droite Alliance",
+      "url": "https://www.liberation.fr/societe/police-justice/des-policiers-en-colere-manifestent-devant-le-ministere-de-linterieur-a-lappel-du-syndicat-dextreme-droite-alliance-20261118_HR5RSIDEKVDZ5I64L2EK57SU3A/",
+      "publishedAt": "2026-11-18T12:08:30.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
     {
       "id": "32ded06d8f0b",
       "outletId": "le-parisien",
@@ -15,6 +25,17 @@
       "datedAtCollection": true,
       "kind": "news",
       "section": "politics"
+    },
+    {
+      "id": "6e6f5dff12b5",
+      "outletId": "bfmtv",
+      "headline": "Policiers en colère: \"On doit se battre pour obtenir gain de cause\", déplore Fabien Vanhemelryck (Alliance Police Nationale)",
+      "url": "https://www.bfmtv.com/police-justice/video-policiers-en-colere-on-doit-se-battre-pour-obtenir-gain-de-cause-deplore-fabien-vanhemelryck-alliance-police-nationale_VN-202611180564.html",
+      "publishedAt": "2026-11-18T11:47:36.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/R6QGkiyjAtCvtdpE5EnD67gR-Tg=/0x0:1280x720/800x0/images/Policiers-en-colere-On-doit-se-battre-pour-obtenir-gain-de-cause-deplore-Fabien-Vanhemelryck-Alliance-Police-Nationale-2386176.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
     },
     {
       "id": "4ce3bf7bf555",
@@ -41,7 +62,7 @@
     }
   ],
   "topicId": "0da134769a3f",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "politics",
   "everInEdition": true,
   "activity": [
@@ -270,20 +291,20 @@
       "end": 1795003200000,
       "counts": {
         "gauche": 0,
-        "centre": 0,
+        "centre": 1,
         "droite": 1
       },
-      "total": 1
+      "total": 2
     },
     {
       "start": 1795003200000,
       "end": 1795006800000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 2
     }
   ]
 }
