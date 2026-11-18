@@ -6,6 +6,17 @@
   "storyDay": "2026-11-18",
   "articles": [
     {
+      "id": "3221cec47593",
+      "outletId": "tf1-info",
+      "headline": "Un tableau de Kandinsky vendu à prix record chez Christie's",
+      "url": "https://www.tf1info.fr/culture/un-tableau-de-kandinsky-vendu-a-prix-record-chez-christie-s-2476604.html",
+      "publishedAt": "2026-11-18T10:17:52.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/720/480/christie-s-rockefeller-plaza-a942cd-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
       "id": "a66e6909046f",
       "outletId": "le-parisien",
       "headline": "Record aux enchères pour un tableau du peintre Vassily Kandinsky vendu 85,8 millions de dollars",
@@ -52,30 +63,10 @@
     }
   ],
   "topicId": "03487f112b53",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "culture",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794906000000,
-      "end": 1794909600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794909600000,
-      "end": 1794913200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794913200000,
       "end": 1794916800000,
@@ -295,6 +286,51 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1794992400000,
+      "end": 1794996000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1794996000000,
+      "end": 1794999600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le tableau Betonte Ecken de Vassily Kandinsky a atteint la somme record de 85 millions de dollars chez Christie's à New York.",
+      "Cette adjudication surpasse largement la marque précédente de 41,9 millions d'euros obtenue en 2023.",
+      "Le Monde rappelle que l'artiste était un pionnier de l'art abstrait d'origine russe."
+    ],
+    "centre": [
+      "L'œuvre de Vassily Kandinsky intitulée Betonte Ecken a été vendue aux enchères à New York.",
+      "La maison Christie's a cédé le tableau pour un montant total de 85,8 millions de dollars.",
+      "Ce résultat historique pulvérise l'ancien record détenu par une autre création du peintre."
+    ],
+    "droite": [
+      "Le tableau Betonte Ecken, réalisé entre 1922 et 1923, a été vendu aux enchères à New York.",
+      "La vente organisée par Christie's a atteint le montant record de 85,8 millions de dollars.",
+      "Cette transaction historique permet à l'œuvre de pulvériser le précédent record de l'artiste."
+    ]
+  },
+  "differences": [
+    "La gauche met en perspective l'évolution de la cote de l'artiste en rappelant le montant du record établi en 2023.",
+    "Le centre livre un compte-rendu factuel et synthétique centré sur le montant exact de la transaction chez Christie's.",
+    "La droite insiste sur le caractère spectaculaire de la vente en soulignant la date de création de l'œuvre et l'ampleur de la performance financière."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-18T11:01:33.319Z"
 }

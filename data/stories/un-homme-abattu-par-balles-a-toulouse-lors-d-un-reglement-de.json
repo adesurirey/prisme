@@ -6,6 +6,18 @@
   "storyDay": "2026-11-18",
   "articles": [
     {
+      "id": "20845fbf9099",
+      "outletId": "le-monde",
+      "headline": "A Toulouse, un homme tué par balles, deuxième narchomicide en trois jours",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/18/a-toulouse-un-homme-tue-par-balles-deuxieme-narchomicide-en-trois-jours_6813113_3224.html",
+      "publishedAt": "2026-11-18T10:46:57.000Z",
+      "imageUrl": "https://img.lemde.fr/2024/10/24/121/0/2250/1125/644/322/60/0/fb05b64_1729786778193-frame-157.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "516d75f159c2",
       "outletId": "le-parisien",
       "headline": "Toulouse : un homme abattu par balles, deuxième règlement de compte mortel en trois jours",
@@ -34,7 +46,7 @@
       "url": "https://www.ouest-france.fr/faits-divers/fusillade/sixieme-narchomicide-de-lannee-a-toulouse-un-homme-tue-par-balles-dans-un-reglement-de-compte-92bd4722-e32e-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-18T09:40:18.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNTRhMTEzMTUwMWFlODZkYmZjY2QzNWRiOGJlYzJlMjA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1172dab3b29b6d639f643e9a88d65757ec410151ac3ce8ed6f75a0dcb4200e29",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -325,11 +337,11 @@
       "start": 1794996000000,
       "end": 1794999600000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 2
     }
   ],
   "summaries": {
