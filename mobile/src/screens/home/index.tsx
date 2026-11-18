@@ -46,9 +46,9 @@ import { useTheme } from '@/theme';
 
 // The data-layer proof surface (issue #179): the Edition client drives the
 // home — disk cache rendered instantly, revalidated in the background,
-// pull-to-refresh forcing a round. The title and stamp are list content
-// (issue #196): they render at the same spot on open and scroll away with
-// the stories; only the pills float. Rows are raw title buttons pushing
+// pull-to-refresh forcing a round. The title and stamp are fixed chrome
+// now (amending #196): pinned in HomeHeader over a melting frost, and
+// the lists scroll under it. Rows are raw title buttons pushing
 // the story route (#195); cards land in #181.
 // The sorts are pages of one pager (issue #197, amended by the challenge
 // comment): a tap on the switcher stays the primary jump, a swipe walks
@@ -191,11 +191,6 @@ export function Home() {
   const listRefs = useRef<Array<FlatList<Story> | null>>([]);
   const scrollState = useRef<'idle' | 'dragging' | 'settling'>('idle');
   const pendingReset = useRef<number | null>(null);
-  // The shared title block: one instance above the pager, translating
-  // with the ACTIVE page's scroll — fixed during sort switches, gone
-  // on scroll down, like list content (issue #197).
-  const titleY = useRef(new Animated.Value(0)).current;
-  const scrollOffsets = useRef<Array<number>>([0, 0, 0]);
 
   const resetToTop = (index: number) => {
     if (scrollState.current === 'idle') {
@@ -217,19 +212,7 @@ export function Home() {
     const index = event.nativeEvent.position;
     setSortIndex(index);
     resetToTop(index);
-    // The landed page's scroll owns the shared title now.
-    titleY.setValue(scrollOffsets.current[index]);
   };
-
-  // titleY holds the active page's raw scroll offset (native-driven);
-  // the overlay renders it inverted.
-  const handleScroll = (index: number) =>
-    Animated.event([{ nativeEvent: { contentOffset: { y: titleY } } }], {
-      useNativeDriver: true,
-      listener: (event: { nativeEvent: { contentOffset: { y: number } } }) => {
-        scrollOffsets.current[index] = event.nativeEvent.contentOffset.y;
-      },
-    });
 
   const handleScrollStateChanged = (
     event: PageScrollStateChangedNativeEvent,
@@ -291,9 +274,9 @@ export function Home() {
             refreshing={refreshing}
             onRefresh={refresh}
             contentContainerStyle={{
-              // The title block is a shared overlay above the pager
-              // (issue #197); the content starts right below where it
-              // sits at rest, so scroll math stays identical.
+              // The fixed header sits here at rest (amending #196/#197);
+              // the content starts right below it and scrolls under the
+              // frost — the geometry is unchanged.
               paddingTop:
                 insets.top +
                 HOME_TITLE_TOP_PADDING +
@@ -302,8 +285,6 @@ export function Home() {
               // The last row must clear the floating switcher (issue #197).
               paddingBottom: insets.bottom + 72,
             }}
-            onScroll={handleScroll(index)}
-            scrollEventThrottle={16}
             renderItem={({ item }) => (
               <Pressable
                 accessibilityRole="button"
@@ -317,28 +298,13 @@ export function Home() {
           />
         ))}
       </PagerView>
-      {/* The shared title block (issue #197): one instance for every
-          sort — fixed while swiping between pages, riding the active
-          page's scroll down like list content. */}
-      <Animated.View
-        pointerEvents="none"
-        style={[
-          styles.titleOverlay,
-          {
-            paddingTop: insets.top + HOME_TITLE_TOP_PADDING,
-            transform: [{ translateY: Animated.multiply(titleY, -1) }],
-          },
-        ]}
-      >
-        <View style={styles.titleBlock}>
-          <Text style={[styles.title, { color: theme.ink }]}>À la une</Text>
-          <Text style={[styles.stamp, { color: theme.muted }]}>
-            {latestPointStamp(builtAt)}
-          </Text>
-        </View>
-      </Animated.View>
-      {/* The pills only — a totally transparent overlay (issue #196). */}
-      <HomeHeader onOpenMenu={() => setMenuOpen(true)} />
+      {/* The fixed header (amending #196/#197): title, stamp and pills
+          pinned over the frost that melts below the title block — the
+          lists scroll under it, and its text stays legible over theirs. */}
+      <HomeHeader
+        stamp={latestPointStamp(builtAt)}
+        onOpenMenu={() => setMenuOpen(true)}
+      />
       {/* The sort switcher, pinned above the bottom safe area, floating
           over the list with no background of its own (issue #197). */}
       <View
@@ -407,26 +373,6 @@ const styles = StyleSheet.create({
   },
   gap: {
     gap: 12,
-  },
-  titleBlock: {
-    height: HOME_TITLE_BLOCK_HEIGHT,
-    paddingHorizontal: 20,
-  },
-  titleOverlay: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-  },
-  title: {
-    fontSize: 30,
-    fontWeight: '700',
-    letterSpacing: -0.5,
-  },
-  stamp: {
-    marginTop: 2,
-    fontSize: 16,
-    fontWeight: '600',
   },
   story: {
     paddingHorizontal: 20,

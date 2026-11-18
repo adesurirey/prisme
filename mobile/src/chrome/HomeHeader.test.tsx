@@ -27,21 +27,31 @@ const INSETS = {
   frame: { x: 0, y: 0, width: 393, height: 852 },
 };
 
-function renderHeader(props: { onOpenMenu?: () => void } = {}) {
+function renderHeader(props: { stamp?: string; onOpenMenu?: () => void } = {}) {
   return render(
     <ModeProvider>
       <SafeAreaProvider initialMetrics={INSETS}>
-        <HomeHeader onOpenMenu={props.onOpenMenu} />
+        <HomeHeader stamp={props.stamp} onOpenMenu={props.onOpenMenu} />
       </SafeAreaProvider>
     </ModeProvider>,
   );
 }
 
-describe('HomeHeader (issue #196)', () => {
-  test('carries no title — « À la une » is list content', async () => {
+describe('HomeHeader (issue #196, amended)', () => {
+  test('carries the fixed « À la une » title and the stamp', async () => {
+    await renderHeader({ stamp: 'Dernier point à 14h' });
+
+    // The title block moved in from the scroll content (amending #196):
+    // fixed chrome over the frost, not list content anymore.
+    expect(screen.getByText('À la une')).toBeTruthy();
+    expect(screen.getByText('Dernier point à 14h')).toBeTruthy();
+  });
+
+  test('renders no stamp line when the caller has none', async () => {
     await renderHeader();
 
-    expect(screen.queryByText('À la une')).toBeNull();
+    expect(screen.getByText('À la une')).toBeTruthy();
+    expect(screen.queryByText(/Dernier point/)).toBeNull();
   });
 
   test('the mode pill sits in the overlay', async () => {

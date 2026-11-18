@@ -21,7 +21,7 @@ export function Frosted(props: ViewProps) {
       style={[StyleSheet.absoluteFill, props.style]}
     >
       <BlurView
-        intensity={5}
+        intensity={15}
         tint="systemUltraThinMaterial"
         blurMethod={Platform.OS === 'android' ? 'dimezisBlurView' : undefined}
         style={[

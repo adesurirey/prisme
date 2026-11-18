@@ -275,7 +275,7 @@ describe('Home', () => {
       expect(screen.getByLabelText('Prisme')).toBeTruthy();
       expect(
         screen.getByRole('button', {
-          name: 'Classement politique des médias',
+          name: 'Classement des médias',
         }),
       ).toBeTruthy();
       expect(
