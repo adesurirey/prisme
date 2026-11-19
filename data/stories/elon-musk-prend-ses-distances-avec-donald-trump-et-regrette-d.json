@@ -1,10 +1,32 @@
 {
   "id": "30972846a1c5",
   "slug": "elon-musk-prend-ses-distances-avec-donald-trump-et-regrette-d",
-  "title": "Elon Musk prend ses distances avec Donald Trump et regrette d'avoir dépensé autant d'argent pour les midterms",
+  "title": "Elon Musk se sent un peu idiot d'avoir dépensé autant d'argent pour les midterms",
   "createdAt": "2026-11-19T03:01:41.416Z",
   "storyDay": "2026-11-19",
   "articles": [
+    {
+      "id": "d761666697a5",
+      "outletId": "bfmtv",
+      "headline": "Il a dépensé près d’un demi-milliard de dollars pour soutenir des candidats républicains, dont la plupart ont perdu: Elon Musk se dit \"un peu idiot\" et affirme \"ne pas être MAGA\"",
+      "url": "https://www.bfmtv.com/economie/international/il-a-depense-pres-d-un-demi-milliard-de-dollars-pour-soutenir-des-candidats-republicains-dont-la-plupart-ont-perdu-elon-musk-se-dit-un-peu-idiot-et-affirme-ne-pas-etre-maga_AD-202611190137.html",
+      "publishedAt": "2026-11-19T05:22:56.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/kNvBfMDAJs2kg9sz1R184Mof_5k=/0x106:2048x1258/800x0/images/Elon-Musk-2361350.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "15bc8d8fa2f4",
+      "outletId": "huffpost",
+      "headline": "Après la défaite des républicains aux midterms, Elon Musk se sent « un peu bête » d’avoir autant dépensé",
+      "url": "https://www.huffingtonpost.fr/international/article/apres-la-defaite-des-republicains-aux-midterms-elon-musk-se-sent-un-peu-bete-d-avoir-autant-depense_360923.html",
+      "publishedAt": "2026-11-19T05:10:07.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/06/11/172/0/3254/1830/0/0/60/0/bb8cbd6_upload-1-9llg20nzaen7-2026-05-15t103542z-1355699746-rc24zka8y6me-rtrmadp-3-britain-ofcom-x.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "dc4479a9307a",
       "outletId": "le-monde",
@@ -41,20 +63,10 @@
     }
   ],
   "topicId": "30972846a1c5",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794978000000,
-      "end": 1794981600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794981600000,
       "end": 1794985200000,
@@ -284,6 +296,40 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795064400000,
+      "end": 1795068000000,
+      "counts": {
+        "gauche": 1,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le milliardaire a investi près de 500 millions de dollars dans les élections de mi-mandat.",
+      "Il confie se sentir « un peu bête » après les échecs électoraux des candidats républicains.",
+      "Il prend ses distances avec la ligne politique de Donald Trump et le mouvement MAGA."
+    ],
+    "centre": [
+      "Elon Musk reconnaît avoir gaspillé près d'un demi-milliard de dollars pour soutenir des candidats battus aux midterms.",
+      "Il affirme se sentir « un peu idiot » et assure ne pas adhérer au mouvement MAGA.",
+      "Le chef d'entreprise se définit comme idéologiquement « assez modéré » et évoque sa volonté d'obtenir « un certain équilibre des pouvoirs »."
+    ],
+    "droite": [
+      "Le patron de Tesla et SpaceX regrette les montants abyssaux engagés pour les midterms.",
+      "Il admet publiquement se sentir « un peu idiot » face à la défaite de la majorité des candidats qu'il soutenait."
+    ]
+  },
+  "differences": [
+    "La gauche insiste en premier lieu sur la défaite des républicains et le rejet explicite du trumpisme.",
+    "Le centre détaille les montants colossaux investis par le milliardaire et ses justifications idéologiques sur l'équilibre des pouvoirs.",
+    "La droite se focalise strictement sur les regrets financiers du patron de Tesla et ses aveux de maladresse politique."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-19T06:01:36.347Z"
 }

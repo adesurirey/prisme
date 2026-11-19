@@ -6,13 +6,47 @@
   "storyDay": "2026-11-17",
   "articles": [
     {
+      "id": "457e8c66df7c",
+      "outletId": "humanite",
+      "headline": "GTA 6 : 2 milliards de dollars de budget, 15 millions de précommandes… Les chiffres fous de la saga de jeux vidéo la plus vendue au monde",
+      "url": "https://www.humanite.fr/culture-et-savoir/jeu-video/gta-6-2-milliards-de-dollars-de-budget-15-millions-de-precommandes-les-chiffres-fous-de-la-saga-de-jeux-video-la-plus-vendue-au-monde",
+      "publishedAt": "2026-11-19T06:00:00.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/2026-11-17T224527Z_230550109_RC2YPOA79M30_RTRMADP_3_GAMING-GTA-2.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
+      "id": "d3ff767b5ad2",
+      "outletId": "bfmtv",
+      "headline": "\"C'est bluffant\": Sébastien, infirmier, a joué toute la nuit à GTA VI",
+      "url": "https://www.bfmtv.com/culture/video-c-est-bluffant-sebastien-infirmier-a-joue-toute-la-nuit-a-gta-vi_VN-202611190158.html",
+      "publishedAt": "2026-11-19T05:40:31.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Fb6IU4SErsCVjgSgX4PKt6CvZT8=/0x0:1280x720/800x0/images/C-est-bluffant-Sebastien-infirmier-a-joue-toute-la-nuit-a-GTA-VI-2386538.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
+      "id": "c9c4927c392e",
+      "outletId": "le-figaro",
+      "headline": "Ventes de consoles, dividendes juteux, retour des joueurs… Comment l’onde de choc GTA 6 pourrait doper une industrie du jeu vidéo en berne",
+      "url": "https://www.lefigaro.fr/secteur/high-tech/ventes-de-consoles-dividendes-juteux-retour-des-joueurs-comment-l-onde-de-choc-gta-6-pourrait-doper-une-industrie-du-jeu-video-en-berne-20261119",
+      "publishedAt": "2026-11-19T05:30:00.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x1688_crop/2026/11/18/1e43bf00da453243158b3d2b577d835e5bd41afe647d8b9b53972cecf5ca698c.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "f2d0a09a8f7f",
       "outletId": "ouest-france",
       "headline": "Pourquoi la sortie du jeu vidéo « Grand Theft Auto VI », dit « GTA VI », est-elle aussi attendue ce jeudi ?",
       "url": "https://www.ouest-france.fr/gaming/jeux-video/pourquoi-la-sortie-du-jeu-video-grand-theft-auto-vi-dit-gta-vi-est-elle-aussi-attendue-ce-jeudi-fe07d97e-dde9-11f1-86b6-0a2fbb1d8ed9?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-19T05:00:21.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYTBkMGZhZTZjN2E1Mzg2MWYzZTdjYmU5MzkyNDUwMzM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=a7919f2715a71c292441c3ba6b3de482b088207a83fdc8a060529aa621ef8a12",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "culture",
       "everFrontPage": true
@@ -146,7 +180,7 @@
       "url": "https://www.lefigaro.fr/secteur/high-tech/gta-6-ahurissant-de-realisme-bande-son-exceptionnelle-narration-hollywoodienne-nos-premieres-impressions-sur-le-jeu-video-evenement-20261118",
       "publishedAt": "2026-11-18T19:41:40.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1688_crop/2026/11/18/97d9556ad5926800c3f9c93a0df05d9551aa20a48b179dfd112aeb9d1caa6e07.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "opinion",
       "section": "culture",
       "everFrontPage": true
@@ -258,7 +292,7 @@
       "url": "https://www.lemonde.fr/pixels/article/2026/11/18/gta-vi-dans-ses-tests-la-presse-internationale-dithyrambique_6813139_4408996.html",
       "publishedAt": "2026-11-18T13:48:34.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/18/489/0/5867/2933/644/322/60/0/5f26d90_ftp-1-gfxuzn5aqc0j-afp-d7uy3kb.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "culture",
       "everFrontPage": true
@@ -794,7 +828,17 @@
       "end": 1795068000000,
       "counts": {
         "gauche": 0,
-        "centre": 1,
+        "centre": 2,
+        "droite": 1
+      },
+      "total": 3
+    },
+    {
+      "start": 1795068000000,
+      "end": 1795071600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
         "droite": 0
       },
       "total": 1
