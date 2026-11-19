@@ -34,7 +34,7 @@
       "url": "https://www.ouest-france.fr/faits-divers/incendie/un-mort-et-une-trentaine-de-blesses-dans-lincendie-dun-immeuble-a-fontenay-sous-bois-62357c8e-e44e-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-19T19:57:37.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYWQ0MTk0YzFlNzgzNmQxYzljYWI5ZGRiYzRmNDc3NmQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=824c12f38b500238ad19c433132f3dd06303aff36c6ecb95a4510c611cec2c8f",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -56,6 +56,17 @@
       "outletId": "cnews",
       "headline": "Fontenay-sous-Bois : un mort et une trentaine de blessés dans le violent incendie d’un immeuble",
       "url": "https://www.cnews.fr/france/2026-11-19/fontenay-sous-bois-un-mort-et-une-trentaine-de-blesses-dans-le-violent-incendie",
+      "publishedAt": "2026-11-19T19:24:26.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_d82t7br-taille2500_6aff57c8abe98.jpg?itok=RRltn_PC",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "74b5eafd6f9b",
+      "outletId": "cnews",
+      "headline": "Fontenay-sous-Bois : un mort et au moins huit blessés dans le violent incendie d’un immeuble",
+      "url": "https://www.cnews.fr/france/2026-11-19/fontenay-sous-bois-un-mort-et-au-moins-huit-blesses-dans-le-violent-incendie-dun",
       "publishedAt": "2026-11-19T19:24:26.000Z",
       "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_d82t7br-taille2500_6aff57c8abe98.jpg?itok=RRltn_PC",
       "frontPage": false,
@@ -338,9 +349,9 @@
       "counts": {
         "gauche": 0,
         "centre": 2,
-        "droite": 3
+        "droite": 4
       },
-      "total": 5
+      "total": 6
     },
     {
       "start": 1795118400000,

@@ -6,6 +6,28 @@
   "storyDay": "2026-11-19",
   "articles": [
     {
+      "id": "f7c6708014b8",
+      "outletId": "rfi",
+      "headline": "France: enquête ouverte sur des fuites du ministère de l'Intérieur en faveur du Rassemblement national",
+      "url": "https://www.rfi.fr/fr/france/20261119-france-enqu%C3%AAte-ouverte-sur-des-fuites-du-minist%C3%A8re-de-l-int%C3%A9rieur-en-faveur-du-rassemblement-national",
+      "publishedAt": "2026-11-19T21:18:22.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/0777260e-e45c-11f1-a6ff-e56ab3dc0809/w:1024/p:16x9/000-9QL2XA.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "cb524782c825",
+      "outletId": "le-monde",
+      "headline": "Enquête sur des fuites vers le RN : le préfet Hugues Moutouh convoqué par Laurent Nuñez vendredi",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/19/enquete-sur-des-fuites-vers-le-rn-le-prefet-hugues-moutouh-convoque-par-laurent-nunez-vendredi_6813380_3224.html",
+      "publishedAt": "2026-11-19T21:01:10.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/19/0/0/6541/3270/644/322/60/0/f3fd76b_upload-1-9jhbe3avcc05-000-d82e9we.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "538980bb9d89",
       "outletId": "huffpost",
       "headline": "Ce que l’on sait de cette (nouvelle) perquisition au siège du RN, soupçonné d’avoir bénéficié de fuites de Beauvau",
@@ -196,20 +218,10 @@
     }
   ],
   "topicId": "c5c12ea1f405",
-  "titledArticleCount": 14,
+  "titledArticleCount": 19,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795035600000,
-      "end": 1795039200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795039200000,
       "end": 1795042800000,
@@ -439,32 +451,40 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1795122000000,
+      "end": 1795125600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "Le parquet de Paris a ouvert fin juillet une information judiciaire pour violation du secret professionnel et violation du secret de l'enquête visant le préfet Hugues Moutouh.",
-      "Le siège du Rassemblement national et le ministère de l'Intérieur ont fait l'objet de perquisitions menées par l'Inspection générale de la police nationale.",
-      "L'enquête cherche à déterminer si le haut fonctionnaire a transmis des documents sensibles au parti d'extrême droite concernant notamment des affaires de détournements de fonds.",
-      "Libération indique que ces investigations découlent de pièces découvertes dans le bureau de Frédéric Chatillon, un proche de Marine Le Pen."
+      "La justice et l'Inspection générale de la police nationale ont mené des perquisitions au siège du Rassemblement national et au ministère de l'Intérieur dans le cadre d'une enquête pour violation du secret professionnel.",
+      "L'enquête vise à déterminer si un ancien haut fonctionnaire de Beauvau, devenu préfet, a transmis des informations confidentielles au parti d'extrême droite concernant des procédures judiciaires en cours.",
+      "Des éléments saisis chez un proche de Marine Le Pen auraient déclenché ces investigations, tandis que des médias soulignent la présence inattendue d'un procureur lors des descentes policières."
     ],
     "centre": [
-      "Une information judiciaire a été ouverte le 27 juillet suite à une procédure incidente transmise par le parquet européen.",
-      "Le siège du Rassemblement national a été perquisitionné le 9 novembre dans le cadre d'investigations sur de présumées fuites d'informations.",
-      "Les soupçons se portent sur un préfet et ancien secrétaire général du ministère de l'Intérieur qui aurait renseigné le parti politique sur des dossiers en cours.",
-      "Le porte-parole du RN Thomas Ménagé a affirmé ne disposer d'aucun élément concernant cette affaire."
+      "Une information judiciaire a été ouverte à Paris pour violation du secret professionnel et de l'enquête, conduisant à des perquisitions au siège du Rassemblement national et au ministère de l'Intérieur.",
+      "Les investigations ciblent un ancien secrétaire général de Beauvau, l'actuel préfet Hugues Moutouh, soupçonné d'avoir fourni des renseignements aux dirigeants frontistes.",
+      "Le ministre de l'Intérieur a convoqué le haut fonctionnaire mis en cause, tandis que les responsables du parti d'extrême droite se refusent pour l'instant à tout commentaire."
     ],
     "droite": [
-      "Des juges d'instruction ont mené une perquisition au siège du Rassemblement national dans le cadre d'une enquête sur des soupçons de violation du secret professionnel.",
-      "Cette procédure judiciaire constitue une instruction incidente consécutive à des investigations menées initialement par le parquet européen."
+      "Une instruction judiciaire a été initiée à la suite d'une procédure incidente menée par le parquet européen, visant de potentiels agissements au sein de l'appareil sécuritaire.",
+      "Les magistrats instructeurs ont ciblé le siège du Rassemblement national lors d'une perquisition liée à des soupçons de fuites documentaires."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur le parcours sulfureux des protagonistes, les liens avec l'entourage de Marine Le Pen et l'implication présumée du préfet Hugues Moutouh comme taupe.",
-    "Le centre adopte un angle factuel et institutionnel centré sur le déroulement chronologique des perquisitions et les qualifications juridiques de l'enquête.",
-    "La droite se limite à rapporter sobrement la perquisition en soulignant l'origine procédurale de l'enquête issue d'une instruction incidente du parquet européen."
+    "La gauche insiste lourdement sur la nature politique et l'idéologie du parti d'extrême droite tout en détaillant les ramifications sulfureuses de l'affaire chez les proches de Marine Le Pen.",
+    "Le centre adopte un angle strictement institutionnel et procédural, se concentrant sur le déroulement chronologique de l'information judiciaire et la situation administrative du préfet mis en cause.",
+    "La droite privilégie une approche technique en mettant en avant l'origine procédurale de l'enquête et son lien avec les investigations menées par le parquet européen."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 14,
-  "summarizedAt": "2026-11-19T19:01:34.971Z"
+  "summarizedArticleCount": 19,
+  "summarizedAt": "2026-11-19T22:01:33.901Z"
 }
