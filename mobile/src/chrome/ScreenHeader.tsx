@@ -15,8 +15,13 @@
  * fallback glyphs.
  */
 
-import { ChevronLeft, Share as LucideShare } from 'lucide-react-native';
-import { StyleSheet, View } from 'react-native';
+import {
+  ArrowLeft,
+  ChevronLeft,
+  Share as LucideShare,
+  Share2,
+} from 'lucide-react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useTheme } from '@/theme';
@@ -28,12 +33,18 @@ import { shareLink } from './share';
 
 function BackIcon() {
   const theme = useTheme();
-  return <ChevronLeft size={20} strokeWidth={2} color={theme.ink} />;
+  // Material's arrow back on Android — the chevron is iOS's idiom;
+  // lucide's shared stroke language on both (issue #199).
+  const Glyph = Platform.OS === 'android' ? ArrowLeft : ChevronLeft;
+  return <Glyph size={20} strokeWidth={2} color={theme.ink} />;
 }
 
 function ShareIcon() {
   const theme = useTheme();
-  return <LucideShare size={20} strokeWidth={2} color={theme.ink} />;
+  // Material's connected-dots share on Android; lucide's Share is the
+  // iOS sheet glyph.
+  const Glyph = Platform.OS === 'android' ? Share2 : LucideShare;
+  return <Glyph size={20} strokeWidth={2} color={theme.ink} />;
 }
 
 export function ScreenHeader({

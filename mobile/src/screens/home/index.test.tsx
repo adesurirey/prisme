@@ -267,8 +267,10 @@ describe('Home', () => {
         drawerPosition: 'right',
         drawerType: 'back',
         drawerStyle: { width: '78%' },
-        // The scrim stays tappable but invisible — the separation is
-        // the page's wash and shadow over the shared canvas.
+        // The scrim stays tappable but invisible on both platforms —
+        // in this back-type drawer a dim renders OVER the page card.
+        // The separation is the page's wash plus the cast shadow over
+        // the shared canvas (Android's elevation carries the shadow).
         overlayStyle: { backgroundColor: 'transparent' },
       });
       // The wordmark and the two static-route rows ride in the tile.

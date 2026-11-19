@@ -15,12 +15,8 @@
  */
 
 import { useRouter } from 'expo-router';
-import {
-  ChartColumn,
-  CircleHelp,
-  Share as ShareIcon,
-} from 'lucide-react-native';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { ChartColumn, CircleHelp, Share, Share2 } from 'lucide-react-native';
+import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useDrawerProgress } from 'react-native-drawer-layout';
 import Reanimated, {
   Extrapolation,
@@ -63,6 +59,9 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
   const theme = useTheme();
   const insets = useSafeAreaInsets();
   const progress = useDrawerProgress();
+  // Material's connected-dots share on Android; lucide's Share is the
+  // iOS sheet glyph — same stroke language, platform-picked (#199).
+  const ShareGlyph = Platform.OS === 'android' ? Share2 : Share;
   const appear = useAnimatedStyle(() => ({
     // Short travel on purpose: the content settles into place from just
     // past its own edge — a long fade/rise reads as arriving from
@@ -115,7 +114,7 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
             onPress={() => shareLink(SITE_URL)}
             style={styles.sharePill}
           >
-            <ShareIcon size={20} strokeWidth={2} color={theme.ink} />
+            <ShareGlyph size={20} strokeWidth={2} color={theme.ink} />
           </GlassPill>
         </View>
         <View style={styles.rows}>
@@ -125,6 +124,9 @@ export function BurgerTile({ onClose }: { onClose: () => void }) {
               accessibilityRole="button"
               // The glyph rides in the icon, not the announced name.
               accessibilityLabel={tile.label}
+              // The rectangular row ripple — the pressed state Android
+              // lists speak, same as the story list.
+              android_ripple={{ color: theme.line }}
               onPress={() => {
                 onClose();
                 router.push(tile.route);

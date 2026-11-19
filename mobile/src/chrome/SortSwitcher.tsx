@@ -5,7 +5,11 @@
  * iOS 26 glasses the real UISegmentedControl automatically, and
  * wrapping it in a GlassView double-glasses it. Android gets a simple
  * custom control — three pressables and a selected pill, no JS fake
- * of the iOS look. The labels come straight from SORTS (issue #195);
+ * of the iOS look — on a solid surface with a hairline (translucent
+ * tracks read as broken once the list prints through) and the
+ * selected segment a filled ink pill with canvas text, the filled
+ * selection Android 16 itself uses. The labels come straight from
+ * SORTS (issue #195);
  * taps report the segment's index and the Home owns the sort state.
  */
 
@@ -75,7 +79,12 @@ export function SortSwitcher({
   }
 
   return (
-    <View style={styles.androidRow}>
+    <View
+      style={[
+        styles.androidRow,
+        { backgroundColor: theme.surface, borderColor: theme.line },
+      ]}
+    >
       {SORTS.map((sort, segment) => (
         <Pressable
           key={sort.key}
@@ -83,18 +92,20 @@ export function SortSwitcher({
           accessibilityRole="button"
           accessibilityState={{ selected: segment === index }}
           onPress={() => onSwitch(segment)}
+          android_ripple={{ color: theme.line }}
           style={[
             styles.androidSegment,
-            // The selected pill is a raised surface from the palette —
-            // hardcoded white reads nowhere in dark mode (review P1).
-            segment === index && { backgroundColor: theme.surface },
+            // The selected pill is filled ink with canvas text — the
+            // Material filled-selection step; a raised surface read as
+            // nowhere against the same-white track (review P1).
+            segment === index && { backgroundColor: theme.ink },
           ]}
         >
           <Text
             style={{
               // Same size as the header pills (GlassPillText), regular
               // weight like Photos' labels.
-              color: segment === index ? theme.ink : theme.muted,
+              color: segment === index ? theme.canvas : theme.muted,
               fontSize: 17,
             }}
           >
@@ -133,7 +144,10 @@ const styles = StyleSheet.create({
     gap: 6,
     padding: 4,
     borderRadius: 999,
-    backgroundColor: 'rgba(128, 128, 138, 0.3)',
+    borderWidth: 1,
+    // The segments' background ripple square-corners at the track's
+    // ends — the track itself clips them to the pill shape.
+    overflow: 'hidden',
   },
   androidSegment: {
     justifyContent: 'center',

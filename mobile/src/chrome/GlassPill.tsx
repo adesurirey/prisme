@@ -1,7 +1,10 @@
 /**
  * A Liquid Glass pill button (iOS 26) — the shape of the header's mode
- * trigger and the story modal's close button. Below iOS 26 and on
- * Android, a translucent pill carries the same affordance.
+ * trigger and the story modal's close button. Below iOS 26, a
+ * translucent pill carries the same affordance. Android: an opaque
+ * surface pill with a hairline and the ripple — translucent controls
+ * read as broken when list content floats beneath them, and Material
+ * raises its touchables on solid surfaces.
  */
 
 import { GlassView, isLiquidGlassAvailable } from 'expo-glass-effect';
@@ -13,6 +16,7 @@ import {
   StyleSheet,
   Text,
   type TextStyle,
+  View,
   type ViewStyle,
 } from 'react-native';
 
@@ -35,6 +39,7 @@ export function GlassPill({
   style?: StyleProp<ViewStyle>;
   children: ReactNode;
 }) {
+  const theme = useTheme();
   const glass = Platform.OS === 'ios' && isLiquidGlassAvailable();
   const pressableProps = {
     accessibilityLabel,
@@ -55,18 +60,28 @@ export function GlassPill({
     );
   }
 
+  // The clip wrapper: RN's ripple drawable ignores the view's own
+  // rounded outline — its square corners overflow the pill. The
+  // capsule wrapper's overflow hidden clips the ripple to the shape.
   return (
-    <Pressable
-      {...pressableProps}
-      style={({ pressed }) => [
-        styles.pill,
-        styles.pillFallback,
-        style,
-        { opacity: pressed ? 0.7 : 1 },
-      ]}
-    >
-      {children}
-    </Pressable>
+    <View style={styles.rippleClip}>
+      <Pressable
+        {...pressableProps}
+        android_ripple={{ color: theme.line }}
+        style={({ pressed }) => [
+          styles.pill,
+          style,
+          {
+            backgroundColor: theme.surface,
+            borderWidth: 1,
+            borderColor: theme.line,
+            opacity: pressed ? 0.7 : 1,
+          },
+        ]}
+      >
+        {children}
+      </Pressable>
+    </View>
   );
 }
 
@@ -91,8 +106,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  pillFallback: {
-    backgroundColor: 'rgba(128, 128, 138, 0.18)',
+  rippleClip: {
+    borderRadius: 999,
+    overflow: 'hidden',
   },
   text: {
     fontSize: 17,

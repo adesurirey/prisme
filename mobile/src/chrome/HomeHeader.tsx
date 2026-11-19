@@ -16,7 +16,7 @@
 import MaskedViewPkg from '@react-native-masked-view/masked-view';
 import { LinearGradient } from 'expo-linear-gradient';
 import type { ComponentType, ReactElement } from 'react';
-import { StyleSheet, Text, View, type ViewProps } from 'react-native';
+import { Platform, StyleSheet, Text, View, type ViewProps } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useTheme } from '@/theme';
@@ -40,8 +40,10 @@ export const HOME_TITLE_BLOCK_HEIGHT = 56;
 export const HOME_TITLE_TOP_PADDING = 6;
 
 // How far the frost keeps melting below the title block — the ramp
-// from full material under the text down to none.
-const HOME_FROST_FADE = 24;
+// from full material under the text down to none. Android's solid
+// canvas reads as a shelf edge over the material's own 24pt ramp —
+// it melts more than twice as far before meeting the list.
+const HOME_FROST_FADE = Platform.OS === 'android' ? 56 : 24;
 
 function BurgerIcon() {
   const theme = useTheme();

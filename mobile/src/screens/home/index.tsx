@@ -102,17 +102,24 @@ export function latestPointStamp(builtAt: string): string {
  * alpha-composites its native subtree into square artifacts (the
  * second). So the outer carries the opaque canvas background, the
  * static radius and the shadow; the inner mask clips the content to
- * the same rounding. Reads the drawer's
+ * the same rounding. Android's half of the same story is `elevation`:
+ * also committed only as a static style, and only while the drawer is
+ * open — an always-on elevation shadowed the fullscreen card's
+ * rounded corners against the window even at rest. Reads the drawer's
  * progress context, so it mounts strictly inside <Drawer> — the
  * home's own body sits above that provider.
  */
 function PageCard({
   background,
   wash,
+  elevated,
   children,
 }: {
   background: string;
   wash: string;
+  /** The drawer's open state — the elevation flips with it (Android
+   *  casts the sliding card onto the tile; at rest nothing casts). */
+  elevated: boolean;
   children: ReactNode;
 }) {
   const progress = useDrawerProgress();
@@ -152,7 +159,7 @@ function PageCard({
         styles.container,
         styles.pageCardShadow,
         shadow,
-        { backgroundColor: background },
+        { backgroundColor: background, elevation: elevated ? 16 : 0 },
       ]}
     >
       <Reanimated.View style={[styles.container, styles.pageCardMask]}>
@@ -295,6 +302,9 @@ export function Home() {
             renderItem={({ item }) => (
               <Pressable
                 accessibilityRole="button"
+                // Material's touch feedback: the rectangular row ripple
+                // is the pressed state Android lists speak.
+                android_ripple={{ color: theme.line }}
                 onPress={() => router.push(`/story/${item.id}`)}
               >
                 <Text style={[styles.story, { color: theme.ink }]}>
@@ -330,8 +340,11 @@ export function Home() {
       // The ChatGPT feel (issue #198): the tile always sits behind the
       // page on the same canvas — the page slides aside to reveal it,
       // washing lighter over it so the tile reads darker behind. The
-      // scrim stays tappable but invisible: the separation is the
-      // page's wash and shadow, no dim.
+      // scrim stays tappable but invisible on both platforms — in this
+      // back-type drawer it renders OVER the page card, so a real dim
+      // reads as a shadow laid on the card (and drowns the card's
+      // elevation shadow). The separation is the wash plus the cast
+      // shadow: Android's elevation is what was missing.
       drawerPosition="right"
       drawerType="back"
       overlayStyle={{ backgroundColor: 'transparent' }}
@@ -344,7 +357,11 @@ export function Home() {
         <BurgerTile onClose={() => setMenuOpen(false)} />
       )}
     >
-      <PageCard background={theme.canvas} wash={theme.surface}>
+      <PageCard
+        background={theme.canvas}
+        wash={theme.surface}
+        elevated={menuOpen}
+      >
         {home}
       </PageCard>
     </Drawer>
@@ -363,6 +380,8 @@ const styles = StyleSheet.create({
   pageCardShadow: {
     // Static radius: the shadow path reads it from the committed style
     // — an animated radius never commits (see the note in PageCard).
+    // The iOS shadow* props carry the animated lift; Android's
+    // elevation joins separately, gated on the drawer's open state.
     borderRadius: PAGE_CARD_RADIUS,
     shadowColor: '#000',
     shadowOffset: { width: 3, height: 0 },

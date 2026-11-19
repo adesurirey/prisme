@@ -4,6 +4,11 @@
  * material — with no fade attempt at all. GlassView is for glass
  * *objects* (the pills); a full-width bar in Liquid Glass reads as a
  * card with a rim and a shadow, which a scroll edge must not be.
+ *
+ * Android: Material has no translucent chrome — a top bar is a solid
+ * surface — and the BlurView renders nothing inside the header's melt
+ * mask anyway (content printed straight through the title). A
+ * canvas-colored bar stands in; the melt mask fades it out unchanged.
  */
 
 import { BlurView } from 'expo-blur';
@@ -14,6 +19,20 @@ import { useTheme } from '@/theme';
 export function Frosted(props: ViewProps) {
   const theme = useTheme();
 
+  if (Platform.OS === 'android') {
+    return (
+      <View
+        {...props}
+        pointerEvents="none"
+        style={[
+          StyleSheet.absoluteFill,
+          props.style,
+          { backgroundColor: theme.canvas },
+        ]}
+      />
+    );
+  }
+
   return (
     <View
       {...props}
@@ -23,13 +42,7 @@ export function Frosted(props: ViewProps) {
       <BlurView
         intensity={15}
         tint="systemUltraThinMaterial"
-        blurMethod={Platform.OS === 'android' ? 'dimezisBlurView' : undefined}
-        style={[
-          StyleSheet.absoluteFill,
-          // expo-blur renders translucent where device blur is missing
-          // (pre-Android 12): the accepted fallback.
-          Platform.OS === 'android' && { backgroundColor: `${theme.canvas}b3` },
-        ]}
+        style={StyleSheet.absoluteFill}
       />
     </View>
   );
