@@ -1,10 +1,33 @@
 {
   "id": "541123e3246d",
   "slug": "trois-femmes-francaises-condamnees-a-des-peines-de-prison-pour",
-  "title": "Trois femmes françaises condamnées à des peines de prison pour avoir rejoint l'organisation Etat islamique",
+  "title": "Trois femmes françaises condamnées à des peines de cinq à douze ans de prison pour avoir rejoint l'organisation Etat islamique",
   "createdAt": "2026-11-18T22:01:26.884Z",
   "storyDay": "2026-11-18",
   "articles": [
+    {
+      "id": "2216149730e1",
+      "outletId": "franceinfo",
+      "headline": "Trois \"revenantes\" françaises condamnées à des peines de cinq à douze ans de prison pour avoir rejoint l'organisation Etat islamique en Syrie",
+      "url": "https://www.franceinfo.fr/monde/proche-orient/offensive-jihadiste-en-irak/trois-revenantes-francaises-condamnees-a-des-peines-de-cinq-a-douze-ans-de-prison-pour-avoir-rejoint-l-organisation-etat-islamique-en-syrie_8289047.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-18T22:50:36.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/Kjpf0rsQPNKRZXcDy44aAUBHAtU/0x53:1024x629/432x243/filters:format(jpg)/2026/11/18/6afe2a92568b0220860319.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "50302263d118",
+      "outletId": "20-minutes",
+      "headline": "Daesh : Deux ex-épouses d’un vétéran du djihad Adrien Guihal condamnées à neuf et cinq ans de prison",
+      "url": "https://www.20minutes.fr/justice/4263976-20261118-daesh-deux-ex-epouses-veteran-djihad-adrien-guihal-condamnees-neuf-cinq-ans-prison?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-18T22:24:01.000Z",
+      "imageUrl": "https://img.20mn.fr/9cWRgplnSseAI23iBhaQWik/1200x768_illustration-du-palais-de-justice-cour-d-appel-de-paris-france-paris-dolidzesabrina-d0106-credit-sabrina-dolidze-sipa-2611161810",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
     {
       "id": "12e7ad5d2f4c",
       "outletId": "le-parisien",
@@ -41,7 +64,7 @@
     }
   ],
   "topicId": "541123e3246d",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "misc",
   "everInEdition": true,
   "activity": [
@@ -279,11 +302,30 @@
       "start": 1795039200000,
       "end": 1795042800000,
       "counts": {
-        "gauche": 0,
+        "gauche": 2,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 3
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "La cour d'assises spéciale de Paris a prononcé des peines de cinq à douze ans de prison contre trois Françaises revenues de Syrie.",
+      "Deux des condamnées sont les anciennes épouses d'Adrien Guihal, haut cadre de l'organisation État islamique impliqué dans les attentats de 2016.",
+      "Le procès s'est conclu par la condamnation de ces trois femmes pour leur adhésion au groupe terroriste."
+    ],
+    "centre": [
+      "Trois femmes qualifiées de « revenantes » ont été condamnées par la justice française à des peines allant de cinq à douze ans de prison ferme.",
+      "Le procès, qui s'est ouvert le 9 novembre devant la cour d'assises spéciale de Paris, visait notamment deux ex-épouses du jihadiste Adrien Guihal.",
+      "Une troisième accusée, présentée comme une ancienne militaire, s'est vue infliger la peine la plus lourde de douze ans de réclusion criminelle."
+    ]
+  },
+  "differences": [
+    "Le camp gauche privilégie une mise en récit sobre centrée sur le profil des accusées et leur lien avec un haut cadre terroriste hautement médiatisé.",
+    "Le camp centre adopte un angle factuel et détaillé, en insistant sur le profil de l'ancienne militaire pour souligner la diversité des parcours au sein du groupe jihadiste."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-19T00:01:37.474Z"
 }

@@ -1,10 +1,21 @@
 {
   "id": "a7637394196e",
   "slug": "la-peluche-du-loup-de-la-publicite-d-intermarche-ne-sera-pas",
-  "title": "La peluche du loup de la publicité d'Intermarché ne sera pas disponible pour Noël",
+  "title": "La peluche du loup d'Intermarché ne sera pas disponible pour Noël",
   "createdAt": "2026-11-18T20:01:34.345Z",
   "storyDay": "2026-11-18",
   "articles": [
+    {
+      "id": "ef823df1a819",
+      "outletId": "tf1-info",
+      "headline": "Il n'y aura finalement pas de loup d'Intermarché sous le sapin cette année",
+      "url": "https://www.tf1info.fr/conso/il-n-y-aura-finalement-pas-de-loup-d-intermarche-sous-le-sapin-cette-annee-noel-2476764.html",
+      "publishedAt": "2026-11-18T22:11:46.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/360/480/intermarche-loup-fetes-valence-2025-c471e2-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
     {
       "id": "98deae851a64",
       "outletId": "europe-1",
@@ -84,20 +95,10 @@
     }
   ],
   "topicId": "a7637394196e",
-  "titledArticleCount": 6,
+  "titledArticleCount": 8,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794952800000,
-      "end": 1794956400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794956400000,
       "end": 1794960000000,
@@ -327,31 +328,40 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1795039200000,
+      "end": 1795042800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le président du groupe Les Mousquetaires, Thierry Cotillard, a annoncé que la peluche du loup d'Intermarché ne serait pas commercialisée à temps pour Noël.",
-      "La production des peluches a dû être relancée en raison d'alertes soulevées lors des contrôles qualité concernant la conformité des produits.",
-      "Le Huffington Post précise que cette communication directe a été faite par le dirigeant pour donner des nouvelles des personnages de la publicité diffusée l'an dernier."
+      "Le groupe Les Mousquetaires a annoncé que la peluche représentant le loup de sa publicité de Noël ne sera pas commercialisée à temps pour les fêtes.",
+      "Le président du groupement, Thierry Cotillard, a expliqué que des alertes lors des contrôles qualité ont conduit à relancer la production du produit."
     ],
     "centre": [
-      "La peluche du loup d'Intermarché, personnage issu de la publicité populaire de fin d'année, ne sera pas disponible sous le sapin pour les fêtes de Noël.",
-      "Un léger retard a été pris à la suite de problèmes de conformité détectés lors des contrôles qualité sur la fabrication des articles.",
-      "D'après Ouest-France, la production a été relancée et la mise en place des précommandes a été fixée au 5 décembre."
+      "La peluche du loup d'Intermarché, personnage central de la publicité des fêtes de fin d'année, ne pourra pas être placée sous le sapin.",
+      "Des contrôles qualité ont révélé un défaut de conformité, obligeant l'enseigne à repousser la mise en rayon des peluches en attendant une nouvelle fabrication.",
+      "Les précommandes de la peluche seront finalement ouvertes le 5 décembre prochain."
     ],
     "droite": [
-      "La célèbre peluche du loup d'Intermarché ne sera finalement pas commercialisée pour Noël, tandis que les autres animaux de la forêt seront bien présents.",
-      "Thierry Cotillard a indiqué dans une vidéo que certains articles ne respectaient pas les critères de qualité et que le cahier des charges n'avait pas été suivi par l'un des fournisseurs.",
-      "Malgré cette absence pour les fêtes, une très grosse surprise a été annoncée par l'enseigne de grande distribution selon CNews."
+      "La peluche du loup d'Intermarché ne sera pas disponible pour Noël en raison de problèmes de conformité détectés lors de contrôles qualité.",
+      "Le président Thierry Cotillard a mis en cause un fournisseur n'ayant pas respecté le cahier des charges, affirmant que la sécurité des enfants prime sur les objectifs commerciaux.",
+      "Une \"très grosse surprise\" et une disponibilité en précommande dès le 5 décembre sont annoncées, tandis que les autres animaux de la forêt restent commercialisés."
     ]
   },
   "differences": [
-    "La presse de gauche met l'accent sur l'annonce officielle du dirigeant Thierry Cotillard et l'échec de la mise en vente à temps pour les fêtes.",
-    "La presse du centre adopte un ton informatif en détaillant les aspects logistiques, notamment la date des précommandes et les contrôles de conformité.",
-    "La presse de droite insiste sur le maintien des autres peluches de la forêt et relaie l'annonce d'une future grosse surprise par l'enseigne."
+    "La gauche privilégie un compte rendu sobre et direct de la mauvaise nouvelle annoncée par la direction du groupe.",
+    "Le centre insiste sur l'aspect pratique et calendaire du retard, en détaillant les dates de précommande et l'impact sur les cadeaux de fin d'année.",
+    "La droite insiste sur la justification managériale du patron d'Intermarché en reprenant ses citations sur la sécurité des enfants et en y ajoutant des annonces marketing."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6,
-  "summarizedAt": "2026-11-18T21:01:36.342Z"
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-19T00:01:37.474Z"
 }
