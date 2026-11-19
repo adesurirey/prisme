@@ -6,6 +6,28 @@
   "storyDay": "2026-11-17",
   "articles": [
     {
+      "id": "58522869a7ee",
+      "outletId": "le-point",
+      "headline": "Procès Zecler : « Ces policiers méritent d’aller en prison », soutient l’avocate générale",
+      "url": "https://www.lepoint.fr/societe/proces-zecler-ces-policiers-meritent-daller-en-prison-soutient-lavocate-generale-FB7FISHVPJAIBOEB6C3N7ACHHQ/",
+      "publishedAt": "2026-11-19T15:00:00.000Z",
+      "imageUrl": "https://www.lepoint.fr/resizer/v2/3P76VQRTOVO6NAMTDVNE5Q7R5U.jpg?auth=4e4ee2746058e8f233d41e2b713cf310492d5f8fc53d86f4ad8969f843c58785&smart=true&width=1200&height=900",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "00d3ba9217b2",
+      "outletId": "rfi",
+      "headline": "France: quatre à six ans de prison ferme requis contre les policiers jugés pour l'agression de Michel Zecler",
+      "url": "https://www.rfi.fr/fr/france/20261119-france-quatre-%C3%A0-six-ans-de-prison-ferme-requis-contre-les-policiers-jug%C3%A9s-pour-l-agression-de-michel-zecler",
+      "publishedAt": "2026-11-19T14:48:54.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/c9af811c-dd4a-11f1-8958-f71d22e7fea9/w:1024/p:16x9/000-D6WU463.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "512be55d2f36",
       "outletId": "le-figaro",
       "headline": "Procès Zecler : 4 à 6 ans de prison ferme requis à l’encontre des trois policiers jugés pour l'agression du producteur",
@@ -46,7 +68,7 @@
       "url": "https://www.lemonde.fr/societe/article/2026/11/19/proces-de-l-interpellation-violente-de-michel-zecler-jusqu-a-cinq-ans-de-prison-ferme-requis-contre-les-trois-policiers-assortis-d-une-interdiction-definitive-d-exercer_6813291_3224.html",
       "publishedAt": "2026-11-19T11:53:25.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/09/177/0/4785/2392/644/322/60/0/6139138_ftp-1-px3oamalp4jb-afp-d6vr8rc.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -91,7 +113,7 @@
       "url": "https://www.ouest-france.fr/societe/justice/ces-gardiens-de-la-paix-ont-trouble-la-paix-publique-au-proces-zecler-de-4-a-6-ans-requis-contre-les-policiers-b20713e6-e3e8-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-19T11:30:29.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYWE3NDVlYmEyNDQ5NDkzNzhlYjM4MWYyNDI5YzhkZGQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=cff29c190e878e42dcf8e53822d36983920c15d4b518a70661f13aa6be530803",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -768,6 +790,26 @@
     {
       "start": 1795093200000,
       "end": 1795096800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
+    },
+    {
+      "start": 1795096800000,
+      "end": 1795100400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1795100400000,
+      "end": 1795104000000,
       "counts": {
         "gauche": 0,
         "centre": 0,
