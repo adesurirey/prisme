@@ -6,6 +6,17 @@
   "storyDay": "2026-11-19",
   "articles": [
     {
+      "id": "b1c9cc34c1c7",
+      "outletId": "cnews",
+      "headline": "«Je vais t'égorger à la Samuel Paty» : garde à vue prolongée pour l'adolescent qui a menacé de mort un professeur à Paris",
+      "url": "https://www.cnews.fr/faits-divers/2026-11-19/je-vais-tegorger-la-samuel-paty-garde-vue-prolongee-pour-ladolescent-qui",
+      "publishedAt": "2026-11-19T19:06:10.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_par7698233_1_-taille1200_6afdf963cb747.jpg?h=42268a34&itok=riUKyhVr",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "0b24f1273563",
       "outletId": "le-parisien",
       "headline": "« Je vais t’égorger à la Samuel Paty » : garde à vue prolongée pour l’adolescent qui avait menacé un professeur d’histoire en visio",
@@ -45,7 +56,7 @@
       "url": "https://www.ouest-france.fr/societe/faits-divers/professeur-menace-de-mort-comme-samuel-paty-un-adolescent-en-garde-a-vue-f9d03d58-e445-11f1-9a72-32f9104dab1b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-19T18:28:29.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTg1MDQyYmVmODhiYWNlZGU0NGQyMTZkZjg5YmYzNWE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=c42c7e753ea642e6d1d152fbe5e8c810c0616694669128438d8e60035185cbb8",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -303,9 +314,9 @@
       "counts": {
         "gauche": 0,
         "centre": 1,
-        "droite": 0
+        "droite": 1
       },
-      "total": 1
+      "total": 2
     }
   ],
   "summaries": {

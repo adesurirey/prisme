@@ -1,10 +1,45 @@
 {
   "id": "3b7e780e9c9c",
   "slug": "un-incendie-dans-un-immeuble-a-fontenay-sous-bois-a-fait-un",
-  "title": "Un incendie dans un immeuble à Fontenay-sous-Bois a fait un mort et plusieurs blessés",
+  "title": "Un incendie dans un immeuble à Fontenay-sous-Bois fait un mort et une trentaine de blessés",
   "createdAt": "2026-11-19T19:01:34.971Z",
   "storyDay": "2026-11-19",
   "articles": [
+    {
+      "id": "2be8713eda85",
+      "outletId": "ouest-france",
+      "headline": "Un mort et une trentaine de blessés dans l’incendie d’un immeuble à Fontenay-sous-Bois",
+      "url": "https://www.ouest-france.fr/faits-divers/incendie/un-mort-et-une-trentaine-de-blesses-dans-lincendie-dun-immeuble-a-fontenay-sous-bois-62357c8e-e44e-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-19T19:57:37.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYWQ0MTk0YzFlNzgzNmQxYzljYWI5ZGRiYzRmNDc3NmQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=824c12f38b500238ad19c433132f3dd06303aff36c6ecb95a4510c611cec2c8f",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
+      "id": "c3f431407452",
+      "outletId": "le-figaro",
+      "headline": "Val-de-Marne : un mort dans un violent incendie à Fontenay-sous-Bois, trois pompiers évacués en «urgence absolue»",
+      "url": "https://www.lefigaro.fr/faits-divers/val-de-marne-un-mort-dans-un-violent-incendie-a-fontenay-sous-bois-trois-pompiers-evacues-en-urgence-absolue-20261119",
+      "publishedAt": "2026-11-19T19:51:43.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/19/3cd8b2ac23124c30d7ad0ae07eefc17b688d223b982494037c55e275f9039435.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
+      "id": "b2e4ad47f509",
+      "outletId": "cnews",
+      "headline": "Fontenay-sous-Bois : un mort et une trentaine de blessés dans l’impressionnant incendie d’un immeuble",
+      "url": "https://www.cnews.fr/france/2026-11-19/fontenay-sous-bois-un-mort-et-une-trentaine-de-blesses-dans-limpressionnant",
+      "publishedAt": "2026-11-19T19:24:26.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_par8021890-taille1200_6aff4c7105719.jpg?h=7706cde3&itok=aHpNZRxB",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "f699864a741f",
       "outletId": "le-parisien",
@@ -40,7 +75,7 @@
     }
   ],
   "topicId": "3b7e780e9c9c",
-  "titledArticleCount": 3,
+  "titledArticleCount": 6,
   "section": "misc",
   "everInEdition": true,
   "activity": [
@@ -279,10 +314,10 @@
       "end": 1795118400000,
       "counts": {
         "gauche": 0,
-        "centre": 1,
-        "droite": 0
+        "centre": 2,
+        "droite": 2
       },
-      "total": 1
+      "total": 4
     }
   ]
 }

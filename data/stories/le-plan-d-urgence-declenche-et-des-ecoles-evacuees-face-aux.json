@@ -339,5 +339,32 @@
       },
       "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le département du Pas-de-Calais subit d'importantes inondations à la suite de fortes précipitations.",
+      "Le plan d'urgence Orsec est activé par les autorités face à la montée des eaux.",
+      "Météo-France place six départements en vigilance orange en raison des cumuls de pluie.",
+      "Un bassin de rétention déborde à Bréxent-Énocq, entraînant l'évacuation d'une école avec 17 élèves mis en sécurité."
+    ],
+    "centre": [
+      "Les habitants de Bréxent-Énocq font face à des inondations après des chutes de pluie équivalentes à plus d'un mois de précipitations en quelques jours.",
+      "Le plan d'urgence Orsec est déclenché et des écoles sont évacuées dans le département.",
+      "Une vingtaine de communes sont touchées par les crues dans le Pas-de-Calais, ravivant chez les riverains le souvenir de l'hiver 2023-2024.",
+      "Les pompiers interviennent pour mettre les élèves en sécurité, notamment dans les établissements cernés par les eaux."
+    ],
+    "droite": [
+      "Le plan d'urgence est activé dans le Pas-de-Calais à la suite d'inondations provoquées par des cumuls massifs de pluie.",
+      "Deux écoles sont évacuées selon la préfecture, qui confirme que tous les élèves sont en sécurité.",
+      "Une vingtaine de communes et une trentaine de routes départementales restent impactées par la montée des eaux."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur les alertes météorologiques nationales et le détail de l'évacuation de l'école de Bréxent-Énocq.",
+    "Le centre insiste sur le sentiment de déjà-vu des habitants face à des crues rappelant l'hiver précédent et détaille l'ampleur des précipitations.",
+    "La droite adopte un angle institutionnel axé sur les données de la préfecture concernant le nombre de communes touchées et les routes départementales coupées."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-19T20:01:32.429Z"
 }
