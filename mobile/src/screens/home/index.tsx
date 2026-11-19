@@ -86,11 +86,15 @@ export function latestPointStamp(builtAt: string): string {
 
 /**
  * The sliding page's card treatment (issue #198, the ChatGPT model):
- * the tile waits behind the page — darker than it by its own token —
- * and as the drawer opens the page's leading edge rounds off, casts a
- * soft drop shadow onto the tile and washes its content lighter — a
- * sheet of the card's own surface fading in over everything, opaque
- * card beneath, no see-through. Full-bleed again when closed. Two
+ * the tile waits behind the page on the same canvas — and as the
+ * drawer opens the page's leading edge rounds off, casts a soft drop
+ * shadow onto the tile and washes lighter — a sheet of the surface
+ * token fading in over everything, so the page reads a step lighter
+ * than the tile behind it, opaque card beneath, no see-through. The
+ * base is the shared canvas on purpose: the palette's canvas→surface
+ * step is invisible in light (~3% luminance) but stark in dark (~70%),
+ * so a surface-painted page read as a different screen, not a lifted
+ * one. Full-bleed again when closed. Two
  * surfaces, each with one job, and one RN constraint that pins the
  * split: a shadow only renders from the shadow view's own opaque
  * background plus a radius committed to the shadow tree — an animated
@@ -104,9 +108,11 @@ export function latestPointStamp(builtAt: string): string {
  */
 function PageCard({
   background,
+  wash,
   children,
 }: {
   background: string;
+  wash: string;
   children: ReactNode;
 }) {
   const progress = useDrawerProgress();
@@ -115,10 +121,9 @@ function PageCard({
   // so an animated borderRadius here left UIKit drawing the shadow from
   // a radius-0 square path — the corner ghost. The radius lives as a
   // static style instead (committed once, path always rounded); only
-  // the shadow intensity animates. The card itself is opaque: its
-  // lightness comes from the surface token, never from an opacity wash
-  // — a translucent card shows the drawer through it, which is not the
-  // model.
+  // the shadow intensity animates. The card itself is opaque canvas;
+  // the open-state lift is the surface sheet layered over it — never a
+  // translucent card, which would show the drawer through.
   const shadow = useAnimatedStyle(() => ({
     shadowOpacity: interpolate(
       progress.value,
@@ -127,12 +132,13 @@ function PageCard({
       Extrapolation.CLAMP,
     ),
   }));
-  // The light-reflection wash (issue #198): a sheet of the card's own
-  // surface fading in over the content — text and images recede into
-  // the paper without the card ever going translucent. Inside the
+  // The light-reflection wash (issue #198): a sheet of the surface
+  // token fading in over the page — the card lifts a step lighter than
+  // the tile's shared canvas and text and images recede into the
+  // paper, the base never going translucent. Inside the
   // mask, so the rounding clips it; pointer-none, so the closed page
   // stays fully interactive.
-  const wash = useAnimatedStyle(() => ({
+  const washStyle = useAnimatedStyle(() => ({
     opacity: interpolate(
       progress.value,
       [0, 1],
@@ -153,7 +159,7 @@ function PageCard({
         {children}
         <Reanimated.View
           pointerEvents="none"
-          style={[styles.pageCardWash, { backgroundColor: background }, wash]}
+          style={[styles.pageCardWash, { backgroundColor: wash }, washStyle]}
         />
       </Reanimated.View>
     </Reanimated.View>
@@ -322,9 +328,10 @@ export function Home() {
       onOpen={() => setMenuOpen(true)}
       onClose={() => setMenuOpen(false)}
       // The ChatGPT feel (issue #198): the tile always sits behind the
-      // page — darker than it by its own token — and the page slides
-      // aside to reveal it. The scrim stays tappable but invisible: the
-      // separation is the tile's color and the page's shadow, no dim.
+      // page on the same canvas — the page slides aside to reveal it,
+      // washing lighter over it so the tile reads darker behind. The
+      // scrim stays tappable but invisible: the separation is the
+      // page's wash and shadow, no dim.
       drawerPosition="right"
       drawerType="back"
       overlayStyle={{ backgroundColor: 'transparent' }}
@@ -337,7 +344,9 @@ export function Home() {
         <BurgerTile onClose={() => setMenuOpen(false)} />
       )}
     >
-      <PageCard background={theme.surface}>{home}</PageCard>
+      <PageCard background={theme.canvas} wash={theme.surface}>
+        {home}
+      </PageCard>
     </Drawer>
   );
 }

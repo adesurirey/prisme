@@ -268,7 +268,7 @@ describe('Home', () => {
         drawerType: 'back',
         drawerStyle: { width: '78%' },
         // The scrim stays tappable but invisible — the separation is
-        // the tile's own (darker) color and the page's shadow.
+        // the page's wash and shadow over the shared canvas.
         overlayStyle: { backgroundColor: 'transparent' },
       });
       // The wordmark and the two static-route rows ride in the tile.
