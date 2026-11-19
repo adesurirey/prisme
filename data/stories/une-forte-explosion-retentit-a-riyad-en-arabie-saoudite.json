@@ -1,10 +1,44 @@
 {
   "id": "4047fefb8cd3",
   "slug": "une-forte-explosion-retentit-a-riyad-en-arabie-saoudite",
-  "title": "Une forte explosion retentit à Riyad en Arabie saoudite",
+  "title": "Une forte explosion retentit à Riyad en Arabie saoudite après une nouvelle attaque",
   "createdAt": "2026-11-19T04:01:28.443Z",
   "storyDay": "2026-11-19",
   "articles": [
+    {
+      "id": "0326cf97c3df",
+      "outletId": "le-figaro",
+      "headline": "Arabie saoudite : nouvelle attaque autour du quartier financier de Riyad",
+      "url": "https://www.lefigaro.fr/international/arabie-saoudite-nouvelle-attaque-autour-du-quartier-financier-de-riyad-20261119",
+      "publishedAt": "2026-11-19T07:53:55.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/19/368c9345757f35c98dd3717cb558fd3cab9d8c2a13c524032604238092b63af9.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "a5edb83db66c",
+      "outletId": "le-monde",
+      "headline": "Arabie saoudite : le quartier financier de Riyad de nouveau attaqué, la tour du fonds souverain endommagée",
+      "url": "https://www.lemonde.fr/international/article/2026/11/19/arabie-saoudite-le-quartier-financier-de-riyad-de-nouveau-attaque-la-tour-du-fonds-souverain-endommagee_6813250_3210.html",
+      "publishedAt": "2026-11-19T07:23:48.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/16/150/0/2412/1206/644/322/60/0/a9abb93_ftp-1-csrcv1c7fken-2026-10-16t120015z-391827927-rc2a4oaimp85-rtrmadp-3-iran-risis-saudi-riyadh.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "e3756e8b387d",
+      "outletId": "rfi",
+      "headline": "Arabie saoudite: Riyad visée par un missile houthi, la tour du géant Aramco endommagée",
+      "url": "https://www.rfi.fr/fr/moyen-orient/20261119-arabie-saoudite-riyad-vis%C3%A9e-missile-houthi-tour-aramco-endommag%C3%A9e",
+      "publishedAt": "2026-11-19T06:37:27.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/b8ca1da2-e3e0-11f1-a0a9-7908c4e1a3c7/w:1024/p:16x9/000-36YZ84L.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "23e5a669d0a3",
       "outletId": "le-parisien",
@@ -30,40 +64,10 @@
     }
   ],
   "topicId": "4047fefb8cd3",
-  "titledArticleCount": 2,
+  "titledArticleCount": 5,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794978000000,
-      "end": 1794981600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794981600000,
-      "end": 1794985200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1794985200000,
-      "end": 1794988800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794988800000,
       "end": 1794992400000,
@@ -273,6 +277,36 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795064400000,
+      "end": 1795068000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795068000000,
+      "end": 1795071600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1795071600000,
+      "end": 1795075200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 2
     }
   ]
 }
