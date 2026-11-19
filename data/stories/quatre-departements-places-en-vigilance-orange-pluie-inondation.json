@@ -6,6 +6,49 @@
   "storyDay": "2026-11-19",
   "articles": [
     {
+      "id": "2a965b86751b",
+      "outletId": "le-monde",
+      "headline": "Pluie-inondation : la Somme, le Pas-de-Calais, la Seine-Maritime et les Landes placés en vigilance orange",
+      "url": "https://www.lemonde.fr/planete/article/2026/11/19/pluie-inondation-la-somme-le-pas-de-calais-la-seine-maritime-et-les-landes-places-en-vigilance-orange_6813246_3244.html",
+      "publishedAt": "2026-11-19T06:56:51.000Z",
+      "imageUrl": "https://img.lemde.fr/2025/06/26/250/0/3000/1500/644/322/60/0/c1cab47_upload-1-hj8nftwqvgfj-frame-17.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "eec54e6bc9c3",
+      "outletId": "liberation",
+      "headline": "Intempéries : cinq départements placés en vigilance orange pluie-innondation et/ou crues",
+      "url": "https://www.liberation.fr/environnement/climat/intemperies-cinq-departements-places-en-vigilance-orange-pluie-innondation-etou-crues-20261119_MVNLG23MRZDV3JAPNXNFNH4QAY/",
+      "publishedAt": "2026-11-19T06:56:15.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "d00a475237e7",
+      "outletId": "cnews",
+      "headline": "Pluie-inondation : voici les 4 départements placés en vigilance orange ce jeudi",
+      "url": "https://www.cnews.fr/france/2026-11-19/pluie-inondation-voici-les-4-departements-places-en-vigilance-orange-ce-jeudi",
+      "publishedAt": "2026-11-19T06:15:30.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_1rb53o_3_-taille1200_6afdc49d3e56b.jpg?itok=IMEZW2IF",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "9258c096fd50",
+      "outletId": "europe-1",
+      "headline": "Météo-France place quatre départements en vigilance orange pluie-inondation",
+      "url": "https://www.europe1.fr/meteo/meteo-france-place-quatre-departements-en-vigilance-orange-pluie-inondation-1240071?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-19T06:13:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/M%C3%A9t%C3%A9o/080_hl_qtop_2538578_1_698b1d5550987.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "bccd91deced3",
       "outletId": "le-parisien",
       "headline": "Pluie-inondations : quatre départements en vigilance orange ce jeudi matin",
@@ -40,7 +83,7 @@
     }
   ],
   "topicId": "53cec85ea1ab",
-  "titledArticleCount": 3,
+  "titledArticleCount": 7,
   "section": "science",
   "everInEdition": true,
   "activity": [
@@ -278,11 +321,36 @@
       "start": 1795068000000,
       "end": 1795071600000,
       "counts": {
-        "gauche": 0,
+        "gauche": 2,
         "centre": 2,
-        "droite": 0
+        "droite": 2
       },
-      "total": 2
+      "total": 6
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "La Somme, le Pas-de-Calais, la Seine-Maritime et les Landes sont placés en vigilance orange par Météo France.",
+      "Vigicrues signale en outre une vigilance orange crues touchant le Pas-de-Calais et la Haute-Corse selon Le Monde.",
+      "Libération recense un total de cinq départements concernés par les alertes pluie-inondation et crues."
+    ],
+    "centre": [
+      "Quatre départements font l'objet d'une vigilance orange aux inondations et aux pluies.",
+      "Le département des Landes est intégré au dispositif d'alerte orange de Météo France dès midi.",
+      "La Seine-Maritime, la Somme et le Pas-de-Calais subissent des précipitations marquées dans le quart nord-ouest."
+    ],
+    "droite": [
+      "Quatre départements du territoire sont placés sous surveillance orange pour les risques de pluie et d'inondation.",
+      "Les cumuls de précipitations ont atteint des seuils mesurés entre 20 et 60 millimètres selon les zones touchées.",
+      "Le Pas-de-Calais fait l'objet d'une vigilance spécifique pour les crues avec une vingtaine d'habitations impactées."
+    ]
+  },
+  "differences": [
+    "La gauche met en avant l'élargissement du bilan à cinq départements en combinant les alertes pluie-inondation et les vigilances crues.",
+    "Le centre livre un suivi factuel et direct des bulletins météorologiques en insistant sur la géographie des zones touchées dans le quart nord-ouest.",
+    "La droite détaille précisément les volumes de précipitations mesurés en millimètres et l'impact local direct sur les habitations."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-19T07:01:36.537Z"
 }
