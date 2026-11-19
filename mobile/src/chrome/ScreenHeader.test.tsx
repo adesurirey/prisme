@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react-native';
 import { Platform, Share } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ModeProvider } from '@/mode/mode';
+import { collectMarkers, type MarkerNode } from '@/test/tree';
 
 import { ScreenHeader } from './ScreenHeader';
 
@@ -45,23 +46,6 @@ function renderHeader(
       </SafeAreaProvider>
     </ModeProvider>,
   );
-}
-
-/** Depth-first testID walk — the pills order is chrome behavior (the
- *  grilling decision: the mode keeps its home position). */
-type PillNode = { props?: { testID?: string }; children?: PillNode[] };
-
-function testIDOrder(root: PillNode | PillNode[] | null): string[] {
-  const ids: string[] = [];
-  const walk = (node: PillNode | PillNode[] | null) => {
-    if (node == null || typeof node !== 'object') return;
-    for (const child of Array.isArray(node) ? node : [node]) {
-      if (child.props?.testID != null) ids.push(child.props.testID);
-      walk(child.children ?? []);
-    }
-  };
-  walk(root);
-  return ids;
 }
 
 describe('ScreenHeader (issue #199)', () => {
@@ -122,7 +106,8 @@ describe('ScreenHeader (issue #199)', () => {
   test('the mode pill rides before the share pill — the home position kept', async () => {
     const { toJSON } = await renderHeader();
 
-    const order = testIDOrder(toJSON() as PillNode);
+    // Marker order is chrome behavior: the mode keeps its home position.
+    const order = collectMarkers(toJSON() as MarkerNode);
     expect(order).toContain('mode-button');
     expect(order.indexOf('mode-button')).toBeLessThan(
       order.indexOf('share-button'),

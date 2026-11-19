@@ -1,20 +1,13 @@
 /**
- * The Méthode screen (issue #199): the screen chrome — back and share,
- * no mode pill (nothing on the page reads the mode) — over the
- * placeholder prose (the page itself is #183). Same clearance under
- * the floating pills as the Classement screen.
+ * The Méthode screen (issue #199): the shared static-page frame — back
+ * and share chrome over the placeholder prose (the page itself is
+ * #183); the share offers the page's public URL.
  */
 
 import { useRouter } from 'expo-router';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import {
-  HOME_TITLE_BLOCK_HEIGHT,
-  HOME_TITLE_TOP_PADDING,
-} from '@/chrome/HomeHeader';
-import { ScreenHeader } from '@/chrome/ScreenHeader';
+
 import { METHODE_WEB_URL } from '@/data/pages';
-import { useTheme } from '@/theme';
+import { Prose, StaticPage } from '@/screens/static-page';
 
 const PARAGRAPHS = [
   'Prisme est un prototype : il montre chaque jour ce que les grands médias français mettent à la une, groupe ces unes par sujet, et décrit comment l\u2019information se répartit entre elles.',
@@ -26,48 +19,15 @@ const PARAGRAPHS = [
 
 export function Methode() {
   const router = useRouter();
-  const theme = useTheme();
-  const insets = useSafeAreaInsets();
-
   return (
-    <View style={[styles.container, { backgroundColor: theme.canvas }]}>
-      <ScrollView
-        contentContainerStyle={[
-          styles.content,
-          {
-            // Below the floating pills — the home list's own clearance.
-            paddingTop:
-              insets.top +
-              HOME_TITLE_TOP_PADDING +
-              HOME_TITLE_BLOCK_HEIGHT +
-              12,
-            paddingBottom: insets.bottom + 32,
-          },
-        ]}
-      >
-        <Text style={[styles.title, { color: theme.ink }]}>Méthode</Text>
-        {PARAGRAPHS.map((paragraph) => (
-          <Text key={paragraph} style={[styles.prose, { color: theme.prose }]}>
-            {paragraph}
-          </Text>
-        ))}
-      </ScrollView>
-      {/* The chrome renders last — RN hit-tests later siblings first,
-          so the pills win presses over the scroll beneath them (the
-          home's own ordering, issue #196). */}
-      <ScreenHeader onBack={() => router.back()} shareUrl={METHODE_WEB_URL} />
-    </View>
+    <StaticPage
+      title="Méthode"
+      shareUrl={METHODE_WEB_URL}
+      onBack={() => router.back()}
+    >
+      {PARAGRAPHS.map((paragraph) => (
+        <Prose key={paragraph}>{paragraph}</Prose>
+      ))}
+    </StaticPage>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1 },
-  content: { paddingHorizontal: 20, gap: 14 },
-  title: {
-    fontSize: 26,
-    fontWeight: '800',
-    letterSpacing: -0.3,
-    marginVertical: 18,
-  },
-  prose: { fontSize: 16, lineHeight: 26 },
-});

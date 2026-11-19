@@ -92,12 +92,10 @@ describe('BurgerTile (issue #198)', () => {
   });
 
   test('the share pill shares leprisme.info and stays on the tile', async () => {
-    const shareSpy = jest
-      .spyOn(Share, 'share')
-      .mockResolvedValue({
-        action: Share.sharedAction,
-        activityType: undefined,
-      });
+    const shareSpy = jest.spyOn(Share, 'share').mockResolvedValue({
+      action: Share.sharedAction,
+      activityType: undefined,
+    });
     const { onClose } = await renderTile();
 
     await act(async () => {
@@ -108,10 +106,4 @@ describe('BurgerTile (issue #198)', () => {
     expect(onClose).not.toHaveBeenCalled();
     expect(mockPush).not.toHaveBeenCalled();
   });
-
-  // The plain-text-fallback test died with the unified icon language
-  // (lucide-react-native, user decision on #199): there is no fallback
-  // seam to pin — the rows above already prove the icons render inside
-  // the tappable rows; the look itself is simulator-verified, like the
-  // rest of the chrome on this branch.
 });

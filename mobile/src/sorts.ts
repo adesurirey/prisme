@@ -2,12 +2,10 @@
  * The three sorts of « À la une » (issue #195, ADR-0028/0041): the
  * artifact ships each pool precomputed — the app maps, never re-derives
  * (the Edition is a render contract, ADR-0043). Fixed order Top | Brûlant
- * | Nouveau; Brûlant stays the default (ADR-0039, restated in the #180
- * grilling). Coverage-first order: Top (pure Coverage), Brûlant
- * (chronology weighted by Coverage on two decay clocks), Nouveau (pure
- * chronology — the label came back after a « Tous » detour: the
- * documented vocabulary (GLOSSARY, brand, web) says Nouveau, decided
- * at the #197 review).
+ * | Nouveau; Brûlant stays the default (ADR-0039). Coverage-first
+ * order: Top (pure Coverage), Brûlant (chronology weighted by Coverage
+ * on two decay clocks), Nouveau (pure chronology — the documented
+ * vocabulary: GLOSSARY, brand, web).
  */
 
 import type { Edition, Story } from '@prisme/domain';

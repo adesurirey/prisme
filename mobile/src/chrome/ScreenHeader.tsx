@@ -2,23 +2,21 @@
  * The screen chrome (issue #199): the back pill top-left — the
  * native edge-swipe and the Android back already pop the route (5a) —
  * and top-right the mode pill, then the share pill: the mode keeps the
- * position it holds on the home header (the grilling decision), and the
- * same global Couverture/Exposition mode rides through `useMode`.
+ * position it holds on the home header, and the same global
+ * Couverture/Exposition mode rides through `useMode`.
  *
  * The share pill offers the story's public page — the URL the screen
- * builds from the Edition snapshot. iOS shares the URL itself; Android
- * carries it as the `message`: RN 0.88's Android chooser reads only
- * `message`/`title`, so a `url`-only share opens the chooser empty.
+ * builds from the Edition snapshot (the share seam itself lives in
+ * share.ts).
  *
  * The icons are lucide-react-native — the unified icon language both
- * platforms share (user decision on #199, amending the #198
- * plain-text-fallback note): typed per-icon components, tinted
- * `theme.ink` like every other surface — no SF Symbols, no fallback
- * glyphs.
+ * platforms share (user decision on #199): typed per-icon components,
+ * tinted `theme.ink` like every other surface — no SF Symbols, no
+ * fallback glyphs.
  */
 
 import { ChevronLeft, Share as LucideShare } from 'lucide-react-native';
-import { Platform, Share, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useTheme } from '@/theme';
@@ -26,6 +24,7 @@ import { useTheme } from '@/theme';
 import { GlassPill } from './GlassPill';
 import { HOME_TITLE_TOP_PADDING } from './HomeHeader';
 import { ModeButton } from './ModeButton';
+import { shareLink } from './share';
 
 function BackIcon() {
   const theme = useTheme();
@@ -54,12 +53,7 @@ export function ScreenHeader({
   const top = insets.top + HOME_TITLE_TOP_PADDING;
 
   const share = () => {
-    if (shareUrl == null) return;
-    // Fire-and-forget: a dismissal still resolves; a failure never
-    // crashes the screen.
-    void Share.share(
-      Platform.OS === 'android' ? { message: shareUrl } : { url: shareUrl },
-    ).catch(() => undefined);
+    if (shareUrl != null) shareLink(shareUrl);
   };
 
   return (

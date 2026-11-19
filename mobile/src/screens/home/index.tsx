@@ -90,14 +90,15 @@ export function latestPointStamp(builtAt: string): string {
  * and as the drawer opens the page's leading edge rounds off, casts a
  * soft drop shadow onto the tile and washes its content lighter — a
  * sheet of the card's own surface fading in over everything, opaque
- * card beneath, no see-through. Full-bleed again when closed. Two surfaces, each with one job, and one
- * RN constraint that pins the split: a shadow only renders from the
- * shadow view's own opaque background plus a radius committed to the
- * shadow tree — an animated radius never commits (the first ghost),
- * and a transparent caster alpha-composites its native subtree into
- * square artifacts (the second). So the outer carries the opaque
- * canvas background, the static radius and the shadow; the inner mask
- * clips the content to the animated rounding. Reads the drawer's
+ * card beneath, no see-through. Full-bleed again when closed. Two
+ * surfaces, each with one job, and one RN constraint that pins the
+ * split: a shadow only renders from the shadow view's own opaque
+ * background plus a radius committed to the shadow tree — an animated
+ * radius never commits (the first ghost), and a transparent caster
+ * alpha-composites its native subtree into square artifacts (the
+ * second). So the outer carries the opaque canvas background, the
+ * static radius and the shadow; the inner mask clips the content to
+ * the same rounding. Reads the drawer's
  * progress context, so it mounts strictly inside <Drawer> — the
  * home's own body sits above that provider.
  */
@@ -348,11 +349,11 @@ const styles = StyleSheet.create({
   },
   // The card treatment of the sliding page (issue #198): the shadow
   // lives on the outer, unmasked surface (iOS clips a masked view's
-  // shadow) and the mask on the inner one; the radius animates on both
-  // so the shadow follows the rounding edge.
+  // shadow) and the mask clips the content on the inner one; both
+  // carry the same static radius — see the note in PageCard.
   pageCardShadow: {
     // Static radius: the shadow path reads it from the committed style
-    // and stays rounded for good — see the note on the animated style.
+    // — an animated radius never commits (see the note in PageCard).
     borderRadius: PAGE_CARD_RADIUS,
     shadowColor: '#000',
     shadowOffset: { width: 3, height: 0 },

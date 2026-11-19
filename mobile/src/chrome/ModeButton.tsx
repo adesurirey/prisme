@@ -145,13 +145,13 @@ export function ModeButton({ style }: { style?: ModeButtonStyle }) {
                 {modeDescription(candidate)}
               </Text>
               {candidate === mode && (
-                // The selected row's check — the lucide icon the rest of
-                // the chrome speaks (issue #199), no text glyph. A check
-                // on purpose, not a checkbox misfire: this sheet is the
-                // system's own (UISheetPresentationController), and the
-                // trailing checkmark is iOS's single-selection idiom;
-                // the radio semantics live in the row's accessibility
-                // role below.
+                // The selected row's check — the lucide icon the rest
+                // of the chrome speaks (issue #199), no text glyph. A
+                // trailing checkmark, not a checkbox: the sheet is the
+                // system's own (UISheetPresentationController), the
+                // checkmark is iOS's single-selection idiom, and the
+                // radio semantics live in the row's accessibility
+                // role.
                 <View style={styles.rowCheck}>
                   <Check size={18} strokeWidth={2} color={theme.ink} />
                 </View>

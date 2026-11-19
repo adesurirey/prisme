@@ -36,17 +36,18 @@ export function GlassPill({
   children: ReactNode;
 }) {
   const glass = Platform.OS === 'ios' && isLiquidGlassAvailable();
+  const pressableProps = {
+    accessibilityLabel,
+    accessibilityRole: 'button' as const,
+    disabled,
+    onPress,
+    onLongPress,
+    testID,
+  };
 
   if (glass) {
     return (
-      <Pressable
-        accessibilityLabel={accessibilityLabel}
-        accessibilityRole="button"
-        disabled={disabled}
-        onPress={onPress}
-        onLongPress={onLongPress}
-        testID={testID}
-      >
+      <Pressable {...pressableProps}>
         <GlassView glassEffectStyle="regular" style={[styles.pill, style]}>
           {children}
         </GlassView>
@@ -56,12 +57,7 @@ export function GlassPill({
 
   return (
     <Pressable
-      accessibilityLabel={accessibilityLabel}
-      accessibilityRole="button"
-      disabled={disabled}
-      onPress={onPress}
-      onLongPress={onLongPress}
-      testID={testID}
+      {...pressableProps}
       style={({ pressed }) => [
         styles.pill,
         styles.pillFallback,

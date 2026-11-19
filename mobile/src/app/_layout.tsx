@@ -22,8 +22,8 @@ export default function RootLayout() {
       <ThemeProvider value={theme}>
         <StatusBar style="auto" />
         {/* Burger-only navigation (issue #195): the root Stack owns every
-            route — no tab bar anywhere. Chrome lands in 5b–5e; the native
-            header stays hidden until then. */}
+            route — no tab bar anywhere, and the native header stays
+            hidden behind the custom chrome. */}
         <Stack screenOptions={{ headerShown: false }}>
           <Stack.Screen name="index" />
           <Stack.Screen name="classement" />
