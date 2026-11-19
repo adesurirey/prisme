@@ -1,10 +1,22 @@
 {
   "id": "b85ef4e289fa",
   "slug": "une-tornade-frappe-le-village-de-bourguignons-dans-l-aube-et",
-  "title": "Une tornade frappe le village de Bourguignons dans l'Aube et endommage soixante habitations",
+  "title": "Une tornade frappe le village de Bourguignons dans l'Aube et endommage 60 habitations",
   "createdAt": "2026-11-19T20:01:32.429Z",
   "storyDay": "2026-11-19",
   "articles": [
+    {
+      "id": "368058c84a87",
+      "outletId": "le-figaro",
+      "headline": "Aube : un petit village frappé par une tornade, 60 habitations endommagées",
+      "url": "https://www.lefigaro.fr/flash-actu/aube-un-petit-village-frappe-par-une-tornade-60-habitations-endommagees-20261119",
+      "publishedAt": "2026-11-19T20:52:50.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/19/4ff2ccd8cf45aada7f0b85ab42716d3c65368da84c0cee6dcd8b9cdfb0a35baa.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
     {
       "id": "4f670b235caf",
       "outletId": "tf1-info",
@@ -30,20 +42,10 @@
     }
   ],
   "topicId": "b85ef4e289fa",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795032000000,
-      "end": 1795035600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795035600000,
       "end": 1795039200000,
@@ -273,6 +275,16 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1795118400000,
+      "end": 1795122000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ]
 }

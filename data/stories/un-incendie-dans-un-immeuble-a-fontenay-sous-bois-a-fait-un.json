@@ -6,6 +6,28 @@
   "storyDay": "2026-11-19",
   "articles": [
     {
+      "id": "c328c608b72b",
+      "outletId": "tf1-info",
+      "headline": "Incendie dans un immeuble : un mort et des pompiers intoxiqués",
+      "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-incendie-dans-un-immeuble-un-mort-et-des-pompiers-intoxiques-70973-2477012.html",
+      "publishedAt": "2026-11-19T20:55:17.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/incendie-dans-un-immeuble-un-mort-et-des-pompiers-intoxiques-1-4a90d9-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "66427b359c49",
+      "outletId": "tf1-info",
+      "headline": "Val-de-Marne : au moins un m0rt dans un incendie à Fontenay-sous-Bois",
+      "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-val-de-marne-au-moins-un-m0rt-dans-un-incendie-a-fontenay-sous-bois-80314-2477010.html",
+      "publishedAt": "2026-11-19T20:55:11.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/val-de-marne-au-moins-un-m0rt-dans-un-incendie-a-fontenay-sous-bois-cafebb-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "2be8713eda85",
       "outletId": "ouest-france",
       "headline": "Un mort et une trentaine de blessés dans l’incendie d’un immeuble à Fontenay-sous-Bois",
@@ -28,6 +50,17 @@
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
+    },
+    {
+      "id": "1725bf1b1d88",
+      "outletId": "cnews",
+      "headline": "Fontenay-sous-Bois : un mort et une trentaine de blessés dans le violent incendie d’un immeuble",
+      "url": "https://www.cnews.fr/france/2026-11-19/fontenay-sous-bois-un-mort-et-une-trentaine-de-blesses-dans-le-violent-incendie",
+      "publishedAt": "2026-11-19T19:24:26.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_d82t7br-taille2500_6aff57c8abe98.jpg?itok=RRltn_PC",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "b2e4ad47f509",
@@ -75,20 +108,10 @@
     }
   ],
   "topicId": "3b7e780e9c9c",
-  "titledArticleCount": 6,
+  "titledArticleCount": 9,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795032000000,
-      "end": 1795035600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795035600000,
       "end": 1795039200000,
@@ -315,9 +338,38 @@
       "counts": {
         "gauche": 0,
         "centre": 2,
+        "droite": 3
+      },
+      "total": 5
+    },
+    {
+      "start": 1795118400000,
+      "end": 1795122000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
         "droite": 2
       },
-      "total": 4
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Un incendie mortel s'est déclaré vers 17 heures au onzième étage d'une tour de dix-huit étages située dans le quartier des Larris à Fontenay-sous-Bois.",
+      "Le bilan provisoire fait état d'un décès et d'environ trente blessés, tandis que cent trente sapeurs-pompiers ont été mobilisés.",
+      "Les habitants des étages supérieurs sont restés confinés chez eux tandis que les niveaux inférieurs ont été évacués par les secours."
+    ],
+    "droite": [
+      "Un violent incendie a touché un immeuble HLM du quartier des Larris à Fontenay-sous-Bois, faisant un mort et une trentaine de blessés selon le maire de la commune.",
+      "Plus de cent trente sapeurs-pompiers ont été déployés pour maîtriser les flammes qui se sont propagées depuis le onzième étage.",
+      "Trois sapeurs-pompiers ont été évacués en urgence absolue ou hospitalisés dans un état grave sans que leur pronostic vital ne soit engagé."
+    ]
+  },
+  "differences": [
+    "Les médias du centre mettent l'accent sur le déroulement précis des opérations de secours et la chronologie de l'intervention dans la tour du Val-de-Marne.",
+    "Les médias de droite insistent davantage sur la gravité du bilan humain en reprenant les chiffres communiqués par le maire et en soulignant la situation critique des pompiers blessés."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 9,
+  "summarizedAt": "2026-11-19T21:01:35.461Z"
 }

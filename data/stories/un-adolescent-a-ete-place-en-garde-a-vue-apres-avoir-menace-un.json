@@ -1,10 +1,21 @@
 {
   "id": "8c55efdf728f",
   "slug": "un-adolescent-a-ete-place-en-garde-a-vue-apres-avoir-menace-un",
-  "title": "Un adolescent a été placé en garde à vue après avoir menacé un professeur de mort en référence à Samuel Paty",
+  "title": "Un adolescent est placé en garde à vue après avoir menacé de mort un professeur en référence à Samuel Paty",
   "createdAt": "2026-11-19T19:01:34.971Z",
   "storyDay": "2026-11-19",
   "articles": [
+    {
+      "id": "d2451d90ed5f",
+      "outletId": "tf1-info",
+      "headline": "Enseignant menacé de mort \"à la Samuel Paty\" : le suspect de seize ans s'est rendu",
+      "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-enseignant-menace-de-mort-a-la-samuel-paty-le-suspect-de-seize-ans-s-est-rendu-28860-2477005.html",
+      "publishedAt": "2026-11-19T20:30:23.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/enseignant-menace-de-mort-a-la-samuel-paty-le-suspect-de-seize-ans-s-est-rendu-b8bd02-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
     {
       "id": "b1c9cc34c1c7",
       "outletId": "cnews",
@@ -74,20 +85,10 @@
     }
   ],
   "topicId": "0ba9a5ef4980",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795032000000,
-      "end": 1795035600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795035600000,
       "end": 1795039200000,
@@ -317,30 +318,43 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1795118400000,
+      "end": 1795122000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Un enseignant du lycée Edgar-Quinet à Paris a déposé plainte après avoir subi des menaces de mort le 13 novembre lors d'un cours en visio.",
-      "Le suspect s'est rendu aux autorités après avoir proféré des menaces en faisant référence à l'attentat contre Samuel Paty."
+      "Un enseignant d'histoire-géographie du lycée Edgar-Quinet à Paris a été visé par des menaces de mort le vendredi 13 novembre.",
+      "Les faits ont eu lieu lors d'un cours virtuel, l'auteur ayant obtenu le lien de visioconférence.",
+      "Le suspect est un homme qui s'est rendu à la justice et dont le dépôt de plainte a enclenché les poursuites."
     ],
     "centre": [
-      "Un adolescent de 16 ans, déscolarisé, a été interpellé et placé en garde à vue après avoir proféré des menaces de mort contre un professeur d'histoire.",
-      "L'individu a réussi à s'introduire dans un cours en ligne pour menacer l'enseignant en déclarant « Je vais t’égorger à la Samuel Paty ».",
-      "La garde à vue du suspect a été prolongée pour permettre l'exploitation des supports saisis lors de la perquisition de son domicile."
+      "Un adolescent de seize ans, déscolarisé et résidant dans l'Ain, s'est rendu à la gendarmerie pour se dénoncer.",
+      "Il a reconnu avoir proféré des menaces de mort en plein cours en ligne à l'encontre d'un professeur d'histoire-géographie du lycée parisien Edgar-Quinet.",
+      "Sa garde à vue a été prolongée afin de permettre des perquisitions et l'exploitation de supports numériques saisis.",
+      "Une enquête a été ouverte pour menaces de mort et apologie du terrorisme."
     ],
     "droite": [
-      "Un adolescent sans antécédent judiciaire a été placé en garde à vue après avoir menacé un professeur d'histoire-géographie.",
-      "Le suspect reconnaît les faits qui lui sont reprochés, selon le communiqué de la procureure de Bourg-en-Bresse Karine Malara.",
-      "La prolongation de la garde à vue vise notamment à analyser les supports numériques saisis lors d'une perquisition."
+      "Un mineur de seize ans s'est présenté de lui-même aux autorités le dimanche 15 novembre, deux jours après les faits.",
+      "L'individu extérieur à l'établissement a menacé l'enseignant en déclarant « Je vais t'égorger à la Samuel Paty ».",
+      "La procureure de Bourg-en-Bresse a indiqué que le suspect ne présentait pas d'antécédent judiciaire et reconnaissait les faits.",
+      "La perquisition de son domicile et l'analyse de ses supports numériques ont motivé la prolongation de sa garde à vue."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur le dépôt de plainte de l'enseignant agressé et la reddition du suspect.",
-    "Le centre privilégie un récit détaillé des faits en insistant sur le profil du suspect et le déroulement des menaces lors du cours virtuel.",
-    "La droite se concentre sur les déclarations judiciaires du parquet et l'exploitation des preuves numériques saisies au domicile."
+    "La gauche privilégie un compte rendu factuel et sobre axé sur le dépôt de plainte de l'enseignant et la chronologie des faits.",
+    "Le centre détaille précisément l'enquête en cours, l'identité géographique du suspect et les démarches procédurales de sa garde à vue.",
+    "La droite dramatise l'événement en mettant immédiatement en avant la citation explicite des menaces et l'implication de la procureure de Bourg-en-Bresse."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-19T19:01:34.971Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-19T21:01:35.461Z"
 }
