@@ -6,6 +6,40 @@
   "storyDay": "2026-11-16",
   "articles": [
     {
+      "id": "c23d81b44e1e",
+      "outletId": "le-parisien",
+      "headline": "En Chine, photo historique de Xi Jinping, Donald Trump et Vladimir Poutine ensemble, qui débutent leur rencontre",
+      "url": "https://www.leparisien.fr/international/en-chine-photo-historique-de-xi-jinping-donald-trump-et-vladimir-poutine-ensemble-qui-debutent-leur-rencontre-19-11-2026-QZEEZZHF3FH2PL7ERCABMYOS2I.php",
+      "publishedAt": "2026-11-19T03:01:41.416Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "7f69d79a578d",
+      "outletId": "le-figaro",
+      "headline": "EN DIRECT - À Shenzhen, Donald Trump, Xi Jinping et Vladimir Poutine se retrouvent pour un face-à-face inédit",
+      "url": "https://www.lefigaro.fr/international/en-direct-a-shenzhen-donald-trump-xi-jinping-et-vladimir-poutine-se-retrouvent-pour-un-face-a-face-inedit-20261119",
+      "publishedAt": "2026-11-19T02:55:03.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2004_crop/2026/11/19/9c628da211502a91757344701998ba07636e0cfd76b06502c3d624da83dc00a0.jpg",
+      "frontPage": true,
+      "kind": "live",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "f5cbe20bb4a2",
+      "outletId": "france-24",
+      "headline": "Shenzhen : une rencontre tripartite \"pas comparable avec Yalta\", selon Pascal Boniface",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261119-shenzhen-une-rencontre-tripartite-pas-comparable-avec-yalta-selon-pascal-boniface",
+      "publishedAt": "2026-11-19T02:27:24.000Z",
+      "imageUrl": "https://s.france24.com/media/display/b58415d0-e39a-11f1-ba8f-1ba7ddfab527/w:1024/p:16x9/FR-20261118-220412-221311-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "3248933ef657",
       "outletId": "le-figaro",
       "headline": "Sanae Takaichi a échangé avec Vladimir Poutine en marge du sommet de l'Apec",
@@ -724,7 +758,7 @@
       "url": "https://www.lefigaro.fr/international/a-shenzhen-un-sommet-xi-trump-poutine-historique-et-la-crainte-d-un-nouveau-yalta-20261117",
       "publishedAt": "2026-11-17T20:00:00.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/11/17/32dd41a7552de70f4f1c9394ea55e9c2d10e990d25593f547b6de3f14c12f707.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -1071,10 +1105,10 @@
       "end": 1795129200000,
       "counts": {
         "gauche": 0,
-        "centre": 3,
-        "droite": 1
+        "centre": 5,
+        "droite": 2
       },
-      "total": 4
+      "total": 7
     }
   ],
   "summaries": {
