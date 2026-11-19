@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "EXPO_UNSTABLE_MCP_SERVER=1 expo start",
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "typecheck": "tsc --noEmit",
     "test": "jest"
   },
@@ -15,31 +15,53 @@
     "preset": "jest-expo",
     "testTimeout": 20000,
     "moduleNameMapper": {
+      "@react-native-async-storage/async-storage": "<rootDir>/node_modules/@react-native-async-storage/async-storage/jest/async-storage-mock",
+      "@react-native-segmented-control/segmented-control": "<rootDir>/src/chrome/segmented-control.mock.tsx",
+      "react-native-pager-view": "<rootDir>/src/chrome/pager-view.mock.tsx",
+      "react-native-drawer-layout": "<rootDir>/src/chrome/drawer-layout.mock.tsx",
+      "lucide-react-native": "<rootDir>/node_modules/lucide-react-native/dist/cjs/lucide-react-native.js",
       "^@/assets/(.*)$": "<rootDir>/assets/$1",
       "^@/(.*)$": "<rootDir>/src/$1"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!(.pnpm/)?((jest-)?react-native|@react-native(-community)?|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|react-native-svg))"
+      "node_modules/(?!(.pnpm/)?((jest-)?react-native|@react-native(-community)?|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|react-native-svg|lucide-react-native))"
     ]
   },
   "dependencies": {
+    "@lodev09/react-native-true-sheet": "^4.1.0",
     "@prisme/domain": "workspace:*",
+    "@prisme/tokens": "workspace:*",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@react-native-masked-view/masked-view": "0.3.2",
+    "@react-native-segmented-control/segmented-control": "2.5.7",
     "expo": "~58.0.23",
+    "expo-blur": "~58.0.6",
     "expo-constants": "~58.0.15",
     "expo-file-system": "~58.0.13",
+    "expo-glass-effect": "~58.0.5",
+    "expo-haptics": "~58.0.8",
+    "expo-linear-gradient": "~58.0.4",
     "expo-linking": "~58.0.16",
     "expo-router": "~58.0.30",
     "expo-splash-screen": "~58.0.13",
     "expo-status-bar": "~58.0.4",
+    "lucide-react-native": "^1.73.0",
     "react": "19.3.0",
     "react-native": "0.88.1",
+    "react-native-drawer-layout": "~4.2.13",
+    "react-native-gesture-handler": "~3.3.0",
+    "react-native-pager-view": "9.0.7",
+    "react-native-reanimated": "4.7.1",
     "react-native-safe-area-context": "~5.11.1",
-    "react-native-screens": "~4.30.1"
+    "react-native-screens": "~4.30.1",
+    "react-native-svg": "15.16.0",
+    "react-native-worklets": "0.13.0"
   },
   "devDependencies": {
     "@testing-library/react-native": "^14.1.0",
     "@types/jest": "30.0.0",
     "@types/react": "~19.3.0",
+    "babel-preset-expo": "^58.0.25",
     "expo-mcp": "~0.2.4",
     "jest": "~30.5.2",
     "jest-expo": "~58.0.14",

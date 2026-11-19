@@ -1,20 +1,47 @@
 import {
+  act,
   fireEvent,
   render,
   screen,
   waitFor,
 } from '@testing-library/react-native';
 import { File } from 'expo-file-system';
-
+import { BackHandler, FlatList } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { mockDrawerMethods } from '@/chrome/drawer-layout.mock';
+import { mockPagerMethods } from '@/chrome/pager-view.mock';
 import fixtureEdition from '@/data/__fixtures__/edition.json';
 import fixtureOutlets from '@/data/__fixtures__/outlets.json';
 import { editionCacheDirectory } from '@/data/runtime';
-
+import { ModeProvider } from '@/mode/mode';
 import { Home } from './index';
 
 // The offline proof (issue #179): the disk cache seeded with the fixture,
 // the network down — the app still renders the Edition.
 const realFetch = globalThis.fetch;
+
+// The 5a navigation seam: a row tap pushes the story route (#195).
+const mockPush = jest.fn();
+
+jest.mock('expo-router', () => ({
+  useRouter: () => ({ push: mockPush }),
+}));
+
+// The header's mode pill pulls the native sheet and haptics (issue #196).
+jest.mock('@lodev09/react-native-true-sheet', () => ({
+  TrueSheet: require('@/chrome/true-sheet.mock').MockTrueSheet,
+}));
+
+// The flip animation is Reanimated; Jest gets its mock (issue #196).
+jest.mock(
+  'react-native-reanimated',
+  () => require('@/test/reanimated-mock').reanimatedMock,
+);
+
+jest.mock('expo-haptics', () => ({
+  impactAsync: jest.fn(async () => undefined),
+  ImpactFeedbackStyle: { Light: 'light', Medium: 'medium', Heavy: 'heavy' },
+}));
 
 beforeAll(async () => {
   const dir = editionCacheDirectory();
@@ -31,15 +58,30 @@ afterAll(() => {
   globalThis.fetch = realFetch;
 });
 
+// The home renders the chrome (issue #196): the mode pill needs the
+// ModeProvider, the bar the safe-area insets.
+function renderHome() {
+  return render(
+    <ModeProvider>
+      <SafeAreaProvider
+        initialMetrics={{
+          insets: { top: 59, bottom: 34, left: 0, right: 0 },
+          frame: { x: 0, y: 0, width: 393, height: 852 },
+        }}
+      >
+        <Home />
+      </SafeAreaProvider>
+    </ModeProvider>,
+  );
+}
+
 describe('Home', () => {
   it('renders the fixture Edition from the disk cache with no network', async () => {
-    await render(<Home />);
+    await renderHome();
 
-    expect(screen.getByText('Prisme')).toBeTruthy();
+    expect(screen.getByText('À la une')).toBeTruthy();
     // The honesty stamp: the cached artifact's own builtAt, in Paris time.
-    expect(
-      await screen.findByText('Mis à jour le 11 novembre à 14h01'),
-    ).toBeTruthy();
+    expect(await screen.findByText('Dernier point à 14h')).toBeTruthy();
     expect(
       screen.getByText("Le budget 2027 arrive en commission à l'Assemblée"),
     ).toBeTruthy();
@@ -49,15 +91,261 @@ describe('Home', () => {
   });
 
   it('keeps the rendered Edition when pull-to-refresh fails offline', async () => {
-    await render(<Home />);
+    await renderHome();
 
-    await screen.findByText('Mis à jour le 11 novembre à 14h01');
-    fireEvent(screen.getByTestId('stories'), 'refresh');
+    await screen.findByText('Dernier point à 14h');
+    fireEvent(screen.getByTestId('stories-brulant'), 'refresh');
     await waitFor(() =>
       expect(
         screen.getByText("Le budget 2027 arrive en commission à l'Assemblée"),
       ).toBeTruthy(),
     );
-    expect(screen.getByText('Mis à jour le 11 novembre à 14h01')).toBeTruthy();
+    expect(screen.getByText('Dernier point à 14h')).toBeTruthy();
+  });
+
+  it('pushes the story route when a Brûlant row is tapped (#195)', async () => {
+    await renderHome();
+
+    fireEvent.press(
+      screen.getByRole('button', {
+        name: "Le budget 2027 arrive en commission à l'Assemblée",
+      }),
+    );
+    expect(mockPush).toHaveBeenCalledWith('/story/b0a1d2e3f4a5');
+  });
+
+  // The row order, read from the rendered titles (issue #197): the
+  // fixture's Brûlant/Top pool and its Nouveau pool differ in order only.
+  function rowOrder(): string[] {
+    return screen
+      .getAllByText(/^(Le budget 2027|Le cyclone Veda)/)
+      .map((title) =>
+        title.props.children.startsWith('Le budget') ? 'budget' : 'cyclone',
+      );
+  }
+
+  it('floats the switcher with Brûlant selected at launch (#197)', async () => {
+    await renderHome();
+
+    await screen.findByText('Dernier point à 14h');
+    expect(rowOrder()).toEqual(['budget', 'cyclone']);
+    expect(
+      screen.getByTestId('sort-segment-1').props.accessibilityState,
+    ).toEqual({ selected: true });
+  });
+
+  it('keeps one shared « À la une » block across sorts (#197)', async () => {
+    await renderHome();
+    await screen.findByText('Dernier point à 14h');
+
+    // The title is not per-page content anymore: one instance, above
+    // the pager, untouched by a sort switch.
+    expect(screen.getAllByText('À la une')).toHaveLength(1);
+    await fireEvent.press(screen.getByTestId('sort-segment-2'));
+    expect(screen.getAllByText('À la une')).toHaveLength(1);
+    expect(screen.getByText('Dernier point à 14h')).toBeTruthy();
+  });
+
+  it('tapping a sort swaps the rows in place (#197)', async () => {
+    await renderHome();
+    await screen.findByText('Dernier point à 14h');
+
+    await fireEvent.press(screen.getByTestId('sort-segment-2'));
+    // Nouveau — pure chronology: the fixture's latestStories order.
+    expect(rowOrder()).toEqual(['cyclone', 'budget']);
+
+    await fireEvent.press(screen.getByTestId('sort-segment-0'));
+    // Top — the fixture's stories pool: budget back on top.
+    expect(rowOrder()).toEqual(['budget', 'cyclone']);
+  });
+
+  it('lands the switched list at its top (#197)', async () => {
+    const scrollToOffset = jest.spyOn(FlatList.prototype, 'scrollToOffset');
+    await renderHome();
+    await screen.findByText('Dernier point à 14h');
+    scrollToOffset.mockClear();
+
+    await fireEvent.press(screen.getByTestId('sort-segment-2'));
+    // The pager's pageSelected echo arrives over the bridge, a task
+    // after the jump — the reset rides it (one path for taps/swipes).
+    await act(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 0));
+    });
+
+    expect(scrollToOffset).toHaveBeenCalledWith({
+      offset: 0,
+      animated: false,
+    });
+  });
+
+  it('a tap drives the pager to that sort page (#197)', async () => {
+    await renderHome();
+    await screen.findByText('Dernier point à 14h');
+    mockPagerMethods.setPageWithoutAnimation.mockClear();
+
+    await fireEvent.press(screen.getByTestId('sort-segment-2'));
+
+    expect(mockPagerMethods.setPageWithoutAnimation).toHaveBeenCalledWith(2);
+  });
+
+  it('a landing swipe swaps the rows and pairs the control (#197)', async () => {
+    await renderHome();
+    await screen.findByText('Dernier point à 14h');
+
+    // The native event a swipe emits when page 2 becomes selected —
+    // the mock lands the pager there and notifies the app.
+    await act(async () => {
+      mockPagerMethods.emitPageSelected?.({ nativeEvent: { position: 2 } });
+    });
+
+    expect(rowOrder()).toEqual(['cyclone', 'budget']);
+    expect(
+      screen.getByTestId('sort-segment-2').props.accessibilityState,
+    ).toEqual({ selected: true });
+    expect(
+      screen.getByTestId('sort-segment-1').props.accessibilityState,
+    ).toEqual({ selected: false });
+  });
+
+  it('the landed page resets only once the pager settles idle (#197)', async () => {
+    const scrollToOffset = jest.spyOn(FlatList.prototype, 'scrollToOffset');
+    await renderHome();
+    await screen.findByText('Dernier point à 14h');
+    scrollToOffset.mockClear();
+
+    // The spike's event order: the finger lifts (dragging → settling),
+    // the page lands, then the pager goes idle.
+    await act(async () => {
+      mockPagerMethods.emitStateChanged?.({
+        nativeEvent: { pageScrollState: 'dragging' },
+      });
+      mockPagerMethods.emitStateChanged?.({
+        nativeEvent: { pageScrollState: 'settling' },
+      });
+      mockPagerMethods.emitPageSelected?.({ nativeEvent: { position: 2 } });
+    });
+    // Mid-settle: no yank.
+    expect(scrollToOffset).not.toHaveBeenCalled();
+
+    await act(async () => {
+      mockPagerMethods.emitStateChanged?.({
+        nativeEvent: { pageScrollState: 'idle' },
+      });
+    });
+
+    expect(scrollToOffset).toHaveBeenCalledWith({
+      offset: 0,
+      animated: false,
+    });
+  });
+
+  describe('the burger tile (#198)', () => {
+    // The tile tests share the prelude: the home rendered and settled,
+    // then the burger opens the tile (the flush — the burger's setState
+    // lands with the act, the drawer re-renders open).
+    async function openTile() {
+      await renderHome();
+      await screen.findByText('Dernier point à 14h');
+      await act(async () => {
+        fireEvent.press(screen.getByTestId('burger-button'));
+      });
+    }
+
+    // Each test spies BackHandler to watch the back seam — restore, or
+    // the next test's spy inherits the previous one's recorded calls.
+    afterEach(() => {
+      jest.restoreAllMocks();
+      mockDrawerMethods.props = null;
+    });
+
+    it('the burger opens the tile with the pinned drawer shape', async () => {
+      await openTile();
+
+      expect(screen.getByTestId('drawer-tile')).toBeTruthy();
+      expect(mockDrawerMethods.props).toMatchObject({
+        open: true,
+        drawerPosition: 'right',
+        drawerType: 'back',
+        drawerStyle: { width: '78%' },
+        // The scrim stays tappable but invisible on both platforms —
+        // in this back-type drawer a dim renders OVER the page card.
+        // The separation is the page's wash plus the cast shadow over
+        // the shared canvas (Android's elevation carries the shadow).
+        overlayStyle: { backgroundColor: 'transparent' },
+      });
+      // The wordmark and the two static-route rows ride in the tile.
+      expect(screen.getByLabelText('Prisme')).toBeTruthy();
+      expect(
+        screen.getByRole('button', {
+          name: 'Classement des médias',
+        }),
+      ).toBeTruthy();
+      expect(
+        screen.getByRole('button', { name: 'Comment ça marche' }),
+      ).toBeTruthy();
+    });
+
+    it('a tile row pushes its route and closes the tile', async () => {
+      await openTile();
+
+      await act(async () => {
+        fireEvent.press(
+          screen.getByRole('button', { name: 'Comment ça marche' }),
+        );
+      });
+
+      expect(mockPush).toHaveBeenCalledWith('/methode');
+      expect(screen.queryByTestId('drawer-tile')).toBeNull();
+    });
+
+    it('home state survives open and close', async () => {
+      const addEventListener = jest.spyOn(BackHandler, 'addEventListener');
+      await renderHome();
+      await screen.findByText('Dernier point à 14h');
+
+      // Switch to Nouveau, then round-trip the tile over it (close via
+      // the Android back seam — the path the drawer itself wires).
+      await fireEvent.press(screen.getByTestId('sort-segment-2'));
+      // The pager's pageSelected echo lands the sort over the bridge —
+      // a task after the jump; flush it before the drawer round-trip.
+      await act(async () => {
+        await new Promise((resolve) => setTimeout(resolve, 0));
+      });
+      await act(async () => {
+        fireEvent.press(screen.getByTestId('burger-button'));
+      });
+      const handler = addEventListener.mock.calls.at(-1)?.[1];
+      await act(async () => {
+        handler?.({ type: 'hardwareBackPress', timeStamp: 0 });
+      });
+      expect(screen.queryByTestId('drawer-tile')).toBeNull();
+
+      // The landed sort is untouched by the drawer round-trip.
+      expect(
+        screen.getByTestId('sort-segment-2').props.accessibilityState,
+      ).toEqual({ selected: true });
+      expect(rowOrder()).toEqual(['cyclone', 'budget']);
+    });
+
+    it('Android back closes the tile, and only the open tile owns the back press', async () => {
+      const addEventListener = jest.spyOn(BackHandler, 'addEventListener');
+      await openTile();
+
+      // Exactly one hardwareBackPress subscription exists — the open
+      // tile's. The closed home beneath claims none.
+      const calls = addEventListener.mock.calls.filter(
+        ([event]) => event === 'hardwareBackPress',
+      );
+      expect(calls).toHaveLength(1);
+      const [event, handler] = calls[0];
+
+      let handled: boolean | undefined;
+      await act(async () => {
+        handled = handler({ type: 'hardwareBackPress', timeStamp: 0 });
+      });
+      // True: the tile consumes the press, no route pops beneath it.
+      expect(handled).toBe(true);
+      expect(screen.queryByTestId('drawer-tile')).toBeNull();
+    });
   });
 });
