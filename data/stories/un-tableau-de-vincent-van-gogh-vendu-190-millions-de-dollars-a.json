@@ -1,10 +1,34 @@
 {
   "id": "7fbd21959a3d",
   "slug": "un-tableau-de-vincent-van-gogh-vendu-190-millions-de-dollars-a",
-  "title": "Un tableau de Vincent Van Gogh vendu 190 millions de dollars à New York",
+  "title": "Un tableau de Vincent Van Gogh vendu 190,4 millions de dollars à New York, un record pour le peintre",
   "createdAt": "2026-11-19T00:01:37.474Z",
   "storyDay": "2026-11-19",
   "articles": [
+    {
+      "id": "39dddcefefea",
+      "outletId": "ouest-france",
+      "headline": "190,4 millions de dollars pour un Van Gogh, un record aux enchères",
+      "url": "https://www.ouest-france.fr/culture/190-4-millions-de-dollars-pour-un-van-gogh-un-record-aux-encheres-ec623516-e3ac-11f1-9a72-32f9104dab1b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-19T00:45:51.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMmZkNGMxMDI4NjBhZmEyNWVhMWNhNzhkMzg0ZmUwMWQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ce4b65558c4aa8cd0dcc608b3cf3bd3f9dff71e8bc55247aeedc3924c581dfc1",
+      "frontPage": true,
+      "kind": "news",
+      "section": "culture",
+      "everFrontPage": true
+    },
+    {
+      "id": "9797c6dbf7be",
+      "outletId": "le-monde",
+      "headline": "Le tableau de Van Gogh « Châtaigniers en fleurs » vendu 190,4 millions de dollars, un record pour le peintre",
+      "url": "https://www.lemonde.fr/culture/article/2026/11/19/le-tableau-de-van-gogh-chataigniers-en-fleurs-vendu-190-4-millions-de-dollars-un-record-pour-le-peintre_6813214_3246.html",
+      "publishedAt": "2026-11-19T00:09:23.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/06/333/0/4000/2000/644/322/60/0/a0eaa6a_ftp-1-4lqarvh9ofrp-2026-11-06t170506z-287560873-rc2dioaj8ik4-rtrmadp-3-art-auction.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "culture",
+      "everFrontPage": true
+    },
     {
       "id": "f3c153a30b16",
       "outletId": "le-parisien",
@@ -13,6 +37,17 @@
       "publishedAt": "2026-11-19T00:01:37.474Z",
       "frontPage": false,
       "datedAtCollection": true,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
+      "id": "0636c4912057",
+      "outletId": "france-24",
+      "headline": "\"Châtaigniers en fleurs\" de Van Gogh vendu 190,4 millions de dollars, un record pour le peintre",
+      "url": "https://www.france24.com/fr/culture/20261118-ch%C3%A2taigniers-en-fleurs-de-van-gogh-vendu-190-4-millions-de-dollars-un-record-pour-le-peintre",
+      "publishedAt": "2026-11-18T23:53:28.000Z",
+      "imageUrl": "https://s.france24.com/media/display/e4eeeb06-e200-11f1-9f50-3f371022a770/w:1024/p:16x9/4ae06c8b80d502141ca2f74b09b170945b3c2dcf.jpg",
+      "frontPage": false,
       "kind": "news",
       "section": "culture"
     },
@@ -30,7 +65,7 @@
     }
   ],
   "topicId": "7fbd21959a3d",
-  "titledArticleCount": 2,
+  "titledArticleCount": 5,
   "section": "culture",
   "everInEdition": true,
   "activity": [
@@ -259,20 +294,43 @@
       "end": 1795046400000,
       "counts": {
         "gauche": 0,
-        "centre": 0,
+        "centre": 1,
         "droite": 1
       },
-      "total": 1
+      "total": 2
     },
     {
       "start": 1795046400000,
       "end": 1795050000000,
       "counts": {
-        "gauche": 0,
-        "centre": 1,
+        "gauche": 1,
+        "centre": 2,
         "droite": 0
       },
-      "total": 1
+      "total": 3
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le tableau \"Châtaigniers en fleurs\" de Vincent van Gogh a été adjugé à 190,4 millions de dollars à New York.",
+      "Le Monde précise qu'un accord avait été trouvé la veille avec une famille qui contestait la vente de l'œuvre en raison de son acquisition sous le régime nazi."
+    ],
+    "centre": [
+      "L'œuvre \"Châtaigniers en fleurs\" a été vendue 190,4 millions de dollars chez Sotheby’s à New York, constituant un record aux enchères pour le peintre.",
+      "Le tableau se classe au quatrième rang des ventes les plus élevées de l'histoire des enchères.",
+      "France 24 mentionne un accord conclu avec les héritiers d'un ancien propriétaire juif qui s'opposaient initialement à la mise en vente."
+    ],
+    "droite": [
+      "Le tableau \"Châtaigniers en fleurs\" de Vincent van Gogh a été vendu 190,4 millions de dollars à New York chez Sotheby’s, établissant un record pour l'artiste.",
+      "La maison de ventes avait annoncé la veille un accord avec les héritiers d’un ancien propriétaire juif qui s'opposaient à la transaction."
+    ]
+  },
+  "differences": [
+    "La gauche met en avant le contexte juridique et familial de la vente en signalant la contestation liée au régime nazi.",
+    "Le centre se focalise principalement sur la dimension financière et le classement de l'œuvre dans l'histoire des enchères, en mentionnant l'accord avec les héritiers de manière secondaire.",
+    "La droite adopte une approche factuelle combinant le montant record de la transaction et la résolution préalable du litige avec les héritiers."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-19T01:01:28.400Z"
 }

@@ -51,6 +51,17 @@
       "section": "world"
     },
     {
+      "id": "3d48cee88b9d",
+      "outletId": "france-24",
+      "headline": "Pont de Crimée attaqué : vrais dégâts, fausses vidéos",
+      "url": "https://www.france24.com/fr/%C3%A9missions/info-ou-intox/20261118-pont-de-crim%C3%A9e-attaqu%C3%A9-vrais-d%C3%A9g%C3%A2ts-fausses-vid%C3%A9os",
+      "publishedAt": "2026-11-18T22:03:19.000Z",
+      "imageUrl": "https://s.france24.com/media/display/983f4e18-e39a-11f1-9d1c-6d75ed565170/w:1024/p:16x9/FRAN261118-2222-Live-CS2222.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "dbff3cab04e5",
       "outletId": "le-parisien",
       "headline": "« Détruire 25 ans de Poutinisme » : pourquoi l'Ukraine a ciblé le pont de Crimée ?",
@@ -385,7 +396,7 @@
     }
   ],
   "topicId": "4f61b3a6f07e",
-  "titledArticleCount": 28,
+  "titledArticleCount": 35,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -414,10 +425,10 @@
       "end": 1795042800000,
       "counts": {
         "gauche": 1,
-        "centre": 3,
+        "centre": 4,
         "droite": 1
       },
-      "total": 5
+      "total": 6
     },
     {
       "start": 1795042800000,
@@ -432,25 +443,27 @@
   ],
   "summaries": {
     "gauche": [
-      "L'arche et la section routière du pont de Kertch ont été détruites par des frappes de Kiev, constituant une humiliation pour Vladimir Poutine au moment où il se rend en Chine pour rencontrer Xi Jinping et Donald Trump.",
-      "L'Ukraine a intensifié son offensive dans la région annexée en coupant l'accès à la Russie, menant des attaques en plein cœur de la capitale ukrainienne dans la nuit."
+      "L'Ukraine a partiellement détruit le pont de Kertch reliant la Russie à la Crimée lors d'une opération nocturne menée avec des drones.",
+      "Cette attaque d'envergure est présentée comme un revers politique et une humiliation pour Vladimir Poutine.",
+      "Des frappes ukrainiennes ont également visé la région de Moscou avec des centaines d'appareils, tandis que la Russie a riposté en bombardant Kiev."
     ],
     "centre": [
-      "L'Ukraine a sévèrement endommagé le pont de Crimée lors d'une opération qualifiée de \"sans précédent\" par Volodymyr Zelensky en réponse aux frappes russes.",
-      "La Russie a simultanément lancé des centaines de drones sur la région de Moscou et frappé deux ponts majeurs à Kiev, provoquant un chaos routier avant un sommet en Chine.",
-      "Le ministère russe de la Défense affirme avoir abattu un nombre record de plus de 1300 drones ukrainiens à travers une vingtaine de régions dans la nuit."
+      "Le pont de Crimée a été frappé à plusieurs reprises par l'Ukraine, entraînant l'effondrement d'une partie de sa structure routière.",
+      "Volodymyr Zelensky a qualifié cette action d'opération sans précédent, menée en réponse aux bombardements russes sur les infrastructures ukrainiennes.",
+      "Le ministère russe de la Défense a affirmé avoir intercepté des milliers de drones au cours de la même période, notamment au-dessus de Moscou et de la Crimée."
     ],
     "droite": [
-      "L'Ukraine a infligé de sérieux dommages au pont de Kertch, une infrastructure emblématique reliant la Russie à la Crimée, tandis que le trafic ferroviaire a rapidement repris.",
-      "Le ministère russe de la Défense a annoncé avoir intercepté 1441 drones ukrainiens au cours d'une des attaques les plus ambitieuses visant Moscou, Belgorod et la Crimée."
+      "L'Ukraine a mené des frappes destructrices contre le pont de Crimée, infrastructure stratégique et symbole politique pour Moscou.",
+      "Le ministère russe de la Défense a annoncé avoir abattu plus d'un millier de drones ukrainiens au cours d'une vaste offensive aérienne touchant plusieurs régions, dont Moscou.",
+      "Ces attaques surviennent à la veille d'un sommet diplomatique international réunissant Vladimir Poutine, Donald Trump et Xi Jinping en Chine."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la dimension humiliante de l'attaque pour Vladimir Poutine à la veille d'une rencontre internationale.",
-    "Le centre dresse le bilan croisé des frappes ukrainiennes massives et des bombardements russes sur Kiev dans un format de suivi en direct.",
-    "La droite insiste particulièrement sur le volume record des drones interceptés par la défense aérienne russe selon Moscou."
+    "La gauche met l'accent sur la dimension humiliante de l'attaque pour Vladimir Poutine et sur l'impact des drones ukrainiens.",
+    "Le centre adopte une approche factuelle en détaillant l'enchaînement des frappes croisées entre Kiev et Moscou ainsi que les déclarations officielles.",
+    "La droite insiste particulièrement sur l'ampleur quantitative des drones interceptés par la Russie et replace l'événement dans le contexte diplomatique."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 28,
-  "summarizedAt": "2026-11-18T08:01:39.142Z"
+  "summarizedArticleCount": 35,
+  "summarizedAt": "2026-11-19T01:01:28.400Z"
 }
