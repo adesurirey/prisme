@@ -6,6 +6,17 @@
   "storyDay": "2026-11-19",
   "articles": [
     {
+      "id": "3572ec79a3f1",
+      "outletId": "huffpost",
+      "headline": "Peres Jepchirchir, championne du monde du marathon, reconnaît s’être dopée à l’EPO",
+      "url": "https://www.huffingtonpost.fr/sport/article/peres-jepchirchir-championne-du-monde-du-marathon-suspendue-apres-s-etre-dopee-a-l-epo_361220.html",
+      "publishedAt": "2026-11-19T10:57:42.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/11/19/28/0/1024/576/0/0/60/0/ca23504_upload-1-f7pj4h2o90j2-gettyimages-2234693506.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "62cad6280929",
       "outletId": "le-parisien",
       "headline": "La Kényane Peres Jepchirchir, championne du monde en titre du marathon, suspendue 3 ans pour dopage",
@@ -51,20 +62,10 @@
     }
   ],
   "topicId": "fa8b1b45b1cc",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "sport",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1794996000000,
-      "end": 1794999600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1794999600000,
       "end": 1795003200000,
@@ -294,6 +295,41 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795082400000,
+      "end": 1795086000000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "La Kényane Peres Jepchirchir a écopé d'une suspension de trois ans prononcée par l'Unité d'intégrité de l'athlétisme après un contrôle positif à l'EPO.",
+      "Le HuffPost précise que sa victoire obtenue lors du marathon de Sydney de 2026 a été officiellement annulée suite à ces faits.",
+      "La championne olympique de Tokyo en 2021 a reconnu sa violation des règles antidopage dès le jeudi.",
+      "L'athlète âgée de 33 ans avait été testée avant sa victoire acquise fin août sur l'épreuve de Sydney."
+    ],
+    "centre": [
+      "Peres Jepchirchir, détentrice du titre mondial du marathon, a reçu une sanction de suspension longue de trois ans.",
+      "L'Unité d'intégrité de l'athlétisme a officialisé cette décision après le contrôle positif de la sportive kényane."
+    ],
+    "droite": [
+      "L'athlète kényane Peres Jepchirchir a été suspendue pour une durée de trois années par l'Unité d'intégrité de l'athlétisme.",
+      "La championne olympique de l'épreuve à Tokyo en 2021 a reconnu avoir transgressé la réglementation antidopage.",
+      "TF1 Info rappelle qu'elle a subi un contrôle positif à l'EPO avant de reconnaître les faits reprochés."
+    ]
+  },
+  "differences": [
+    "Le camp de gauche met en avant l'annulation concrète du titre à Sydney et les aveux immédiats de la coureuse kényane, en soulignant précisément le produit détecté.",
+    "Le camp central livre un compte-rendu laconique axé principalement sur la sanction administrative et le statut mondial de la marathonienne.",
+    "Le camp de droite insiste sur le palmarès olympique antérieur de l'athlète et formalise l'aveu explicite d'une infraction aux règles antidopage."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-19T11:01:36.116Z"
 }
