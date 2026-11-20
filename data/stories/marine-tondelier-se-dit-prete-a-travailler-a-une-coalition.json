@@ -6,6 +6,28 @@
   "storyDay": "2026-11-18",
   "articles": [
     {
+      "id": "0c87d45a0ec0",
+      "outletId": "liberation",
+      "headline": "Présidentielle : depuis Lyon, Marine Tondelier attend «les pas» de Jean-Luc Mélenchon en direction des écologistes",
+      "url": "https://www.liberation.fr/politique/elections/presidentielle-depuis-lyon-marine-tondelier-attend-les-pas-de-jean-luc-melenchon-en-direction-des-ecologistes-20261120_RWMA5LDG25HUJCM5Q4RBDIC2S4/",
+      "publishedAt": "2026-11-20T13:56:00.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "2955cfe7b0ac",
+      "outletId": "le-monde",
+      "headline": "Présidentielle 2027 : Marine Tondelier estime que la balle est dans le camp de Jean-Luc Mélenchon",
+      "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/20/presidentielle-2027-marine-tondelier-estime-que-la-balle-est-dans-le-camp-de-jean-luc-melenchon_6813644_6205049.html",
+      "publishedAt": "2026-11-20T13:51:08.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/20/684/0/8192/4096/644/322/60/0/d2717fc_ftp-1-rbjbmzfr2dfq-afp-d8626bz.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "7bbc76727503",
       "outletId": "tf1-info",
       "headline": "\"Peut-être pas une addition gagnante\" : Christophe Barbier analyse les conséquences à gauche du rapprochement Marine Tondelier-LFI",
@@ -1064,6 +1086,16 @@
         "droite": 1
       },
       "total": 1
+    },
+    {
+      "start": 1795179600000,
+      "end": 1795183200000,
+      "counts": {
+        "gauche": 2,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 2
     }
   ],
   "summaries": {

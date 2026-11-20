@@ -6,13 +6,35 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "6c4b48541ecb",
+      "outletId": "bfmtv",
+      "headline": "Cargo échoué dans les Landes: pourquoi les conditions météorologiques \"très mauvaises\" rendent l'opération de remorquage complexe",
+      "url": "https://www.bfmtv.com/police-justice/faits-divers/cargo-echoue-dans-les-landes-pourquoi-les-conditions-meteorologiques-tres-mauvaises-rendent-l-operation-de-remorquage-complexe_AD-202611200608.html",
+      "publishedAt": "2026-11-20T13:59:28.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/4nbXpjOI2kAJGIyKZUc2ozcDw9g=/0x0:768x432/800x0/images/Le-Miro-G-un-cargo-battant-pavillon-maltais-echoue-au-large-de-Lit-et-Mixe-dans-les-Landes-le-20-novembre-2026-2387619.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "bf1b000e4beb",
+      "outletId": "tf1-info",
+      "headline": "Vents violents : un cargo s’échoue dans les Landes",
+      "url": "https://www.tf1info.fr/regions/videos/video-vents-violents-un-cargo-s-echoue-dans-les-landes-72534-2477144.html",
+      "publishedAt": "2026-11-20T13:05:16.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/vents-violents-un-cargo-s-echoue-dans-les-landes-6dd897-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "cee0abd968d7",
       "outletId": "le-monde",
       "headline": "Cargo échoué sur le littoral des Landes : le remorquage du bateau, pour éviter qu’il ne chavire, s’annonce compliqué en raison de la météo",
       "url": "https://www.lemonde.fr/societe/article/2026/11/20/cargo-echoue-sur-le-littoral-des-landes-le-remorquage-du-bateau-pour-eviter-qu-il-ne-chavire-s-annonce-complique-en-raison-de-la-meteo_6813591_3225.html",
       "publishedAt": "2026-11-20T12:14:07.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/20/312/0/3744/1872/644/322/60/0/0e456d9_ftp-1-ocnqnizqtcvf-2026-11-20t120337z-1714115212-rc2nroa8ofcm-rtrmadp-3-france-ship.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -235,16 +257,6 @@
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795093200000,
-      "end": 1795096800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795096800000,
       "end": 1795100400000,
@@ -472,6 +484,16 @@
         "gauche": 2,
         "centre": 0,
         "droite": 0
+      },
+      "total": 2
+    },
+    {
+      "start": 1795179600000,
+      "end": 1795183200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 1
       },
       "total": 2
     }
