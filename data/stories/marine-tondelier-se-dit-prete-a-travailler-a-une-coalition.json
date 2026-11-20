@@ -6,6 +6,17 @@
   "storyDay": "2026-11-18",
   "articles": [
     {
+      "id": "8f7df7c8ef86",
+      "outletId": "mediapart",
+      "headline": "Sous pression, Marine Tondelier se dit prête à se retirer en faveur de Jean-Luc Mélenchon",
+      "url": "https://www.mediapart.fr/journal/politique/201126/sous-pression-marine-tondelier-se-dit-prete-se-retirer-en-faveur-de-jean-luc-melenchon",
+      "publishedAt": "2026-11-20T07:47:49.000Z",
+      "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/11/20/261120-img-sous-pression-marine-tondelier-se-dit-prete-se-retirer-en-faveur-de-jean-luc-melenchon.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "7cbeb2ce6b8f",
       "outletId": "le-figaro",
       "headline": "Présidentielle 2027 : «Ça devrait pouvoir se faire», Mélenchon salue l’offre faite par Tondelier de discuter d’une «coalition»",
@@ -63,6 +74,18 @@
       "everFrontPage": true
     },
     {
+      "id": "a3e5b7baea68",
+      "outletId": "le-figaro",
+      "headline": "« C’est la fin des Écologistes » : la drôle de main tendue de Marine Tondelier à Jean-Luc Mélenchon",
+      "url": "https://www.lefigaro.fr/politique/c-est-la-fin-des-ecologistes-marine-tondelier-tend-la-main-a-jean-luc-melenchon-20261119",
+      "publishedAt": "2026-11-19T19:29:49.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/19/aa9810419e7e6499e329e408cd35cc56a7ca157df5582d9f10c910f3126caea8.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "3e65467fa02d",
       "outletId": "le-parisien",
       "headline": "Présidentielle 2027 : l’alliance avec Marine Tondelier « devrait pouvoir se faire », estime Jean-Luc Mélenchon",
@@ -70,6 +93,16 @@
       "publishedAt": "2026-11-19T19:01:34.971Z",
       "frontPage": false,
       "datedAtCollection": true,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "333b2f25cec9",
+      "outletId": "lobs",
+      "headline": "« Pour rester cheffe, elle suit ses députés » : les dessous de l’annonce de Tondelier sur l’alliance avec Mélenchon",
+      "url": "https://www.nouvelobs.com/politique/20261119.OBS120280/pour-rester-cheffe-elle-suit-ses-deputes-les-dessous-de-l-annonce-de-tondelier-sur-l-alliance-avec-melenchon.html",
+      "publishedAt": "2026-11-19T18:54:40.000Z",
+      "frontPage": false,
       "kind": "news",
       "section": "politics"
     },
@@ -835,11 +868,11 @@
       "start": 1795111200000,
       "end": 1795114800000,
       "counts": {
-        "gauche": 2,
+        "gauche": 3,
         "centre": 0,
         "droite": 0
       },
-      "total": 2
+      "total": 3
     },
     {
       "start": 1795114800000,
@@ -847,9 +880,9 @@
       "counts": {
         "gauche": 0,
         "centre": 2,
-        "droite": 0
+        "droite": 1
       },
-      "total": 2
+      "total": 3
     },
     {
       "start": 1795118400000,
@@ -958,6 +991,16 @@
         "gauche": 0,
         "centre": 0,
         "droite": 1
+      },
+      "total": 1
+    },
+    {
+      "start": 1795158000000,
+      "end": 1795161600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
       },
       "total": 1
     }

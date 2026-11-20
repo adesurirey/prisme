@@ -6,6 +6,41 @@
   "storyDay": "2026-11-19",
   "articles": [
     {
+      "id": "aad9c13058f9",
+      "outletId": "ouest-france",
+      "headline": "A partir de ce vendredi, un découvert bancaire pourrait vous êtes refusé si la banque vous juge insolvable",
+      "url": "https://www.ouest-france.fr/economie/banques-finance/le-20-novembre-le-decouvert-bancaire-devient-un-credit-a-la-consommation-comme-un-autre-fc96b6b6-e1d9-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-20T07:50:40.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExODNiMTJlNjg1NzM4MjFhY2ExZjIzY2I3MmYxYzY0MGQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=14cb30de35d14eb35669b9d867034bb6647d0bfd7d1c722fd21a5bfd211441b7",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
+      "id": "2cc3293eb4a0",
+      "outletId": "humanite",
+      "headline": "Découverts bancaires en dessous de 200 euros : ce qui change ce 20 novembre",
+      "url": "https://www.humanite.fr/vie-quotidienne/vos-droits/decouverts-bancaires-ce-qui-va-changer-au-20-novembre",
+      "publishedAt": "2026-11-20T07:28:30.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/09/iStock-2207273382-1.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "541841f17586",
+      "outletId": "le-monde",
+      "headline": "Les découverts bancaires de moins de 200 euros désormais considérés comme des crédits à la consommation",
+      "url": "https://www.lemonde.fr/argent/article/2026/11/20/les-decouverts-bancaires-de-moins-de-200-euros-desormais-consideres-comme-des-credits-a-la-consommation_6813600_1657007.html",
+      "publishedAt": "2026-11-20T07:26:00.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/05/26/125/0/1500/750/644/322/60/0/e745c71_upload-1-kwnaa26i32a1-me-dia-7.png",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "7cb1103deef1",
       "outletId": "liberation",
       "headline": "Découverts bancaires : quels changements avec les nouvelles règles mises en place à partir de ce vendredi 20 novembre ?",
@@ -71,30 +106,10 @@
     }
   ],
   "topicId": "8955a60c079a",
-  "titledArticleCount": 6,
+  "titledArticleCount": 9,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795068000000,
-      "end": 1795071600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795071600000,
-      "end": 1795075200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795075200000,
       "end": 1795078800000,
@@ -314,24 +329,45 @@
         "droite": 0
       },
       "total": 3
+    },
+    {
+      "start": 1795154400000,
+      "end": 1795158000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795158000000,
+      "end": 1795161600000,
+      "counts": {
+        "gauche": 2,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 3
     }
   ],
   "summaries": {
     "gauche": [
-      "À partir de ce vendredi 20 novembre, de nouvelles règles européennes encadrent les découverts bancaires et les mini-crédits, suscitant l'inquiétude des ménages confrontés à des dépenses imprévues.",
-      "La Fédération bancaire française a précisé que les découverts de moins de 200 euros ne sont plus automatiques et nécessitent désormais une étude préalable des banques.",
-      "Les banques doivent obligatoirement analyser la solvabilité de leurs clients pour ces petits montants, alignant ces facilités sur les conditions plus restrictives des crédits à la consommation."
+      "La directive européenne CCD2 impose aux banques d'analyser la solvabilité de leurs clients avant d'accorder un découvert, y compris pour les montants inférieurs à 200 euros.",
+      "L'association Que Choisir salue une avancée pour la protection des usagers face à ces règles plus contraignantes.",
+      "Libération souligne que ces nouvelles conditions pourraient inquiéter les ménages modestes qui dépendent de ces petits crédits pour des dépenses imprévues."
     ],
     "centre": [
-      "Une réglementation européenne entrée en vigueur ce vendredi 20 novembre modifie les conditions d'attribution des autorisations de découvert bancaire.",
-      "Les banques françaises peuvent désormais procéder à une évaluation minutieuse des revenus des clients, y compris pour les demandes inférieures à 200 euros."
+      "À partir de ce vendredi, l'application de la directive européenne CCD2 assimile les découverts bancaires de moins de 200 euros à des crédits à la consommation.",
+      "Les banques procèdent désormais à un examen minutieux des revenus et de la solvabilité des clients avant toute autorisation de découvert.",
+      "Cette évolution réglementaire vise à clarifier la situation du paiement fractionné et des facilités de caisse sans pour autant les interdire."
     ]
   },
   "differences": [
-    "La gauche insiste sur la précarité des ménages face à ces restrictions plus contraignantes, en soulignant l'inquiétude que génère la fin des petits découverts automatiques.",
-    "Le centre adopte un angle technique et informatif, en mettant l'accent sur l'application de la réglementation européenne et sur les vérifications de revenus désormais possibles pour les banques."
+    "La gauche insiste sur la protection des consommateurs face à de nouvelles contraintes et se fait l'écho de l'inquiétude des ménages face à ces restrictions.",
+    "Le centre adopte un angle technique et informatif en détaillant les modifications juridiques de la directive européenne et les nouvelles obligations des banques."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6,
-  "summarizedAt": "2026-11-20T06:01:30.872Z"
+  "summarizedArticleCount": 9,
+  "summarizedAt": "2026-11-20T08:01:34.515Z"
 }

@@ -6,6 +6,17 @@
   "storyDay": "2026-11-19",
   "articles": [
     {
+      "id": "ca03fa8c6444",
+      "outletId": "bfmtv",
+      "headline": "Le village de Bourguignons (Aube) traversé par une tornade",
+      "url": "https://www.bfmtv.com/meteo/video-le-village-de-bourguignons-aube-traverse-par-une-tornade_VN-202611200319.html",
+      "publishedAt": "2026-11-20T07:35:05.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/HMiWUbaz5Q6Hc77ope7KsVurEpM=/0x0:1280x720/800x0/images/Le-village-de-Bourguignons-Aube-traverse-par-une-tornade-2387437.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "39883ee8b84e",
       "outletId": "huffpost",
       "headline": "Une tornade frappe un village de 250 habitants dans l’Aube et endommage 60 maisons",
@@ -53,30 +64,10 @@
     }
   ],
   "topicId": "b85ef4e289fa",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795068000000,
-      "end": 1795071600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795071600000,
-      "end": 1795075200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795075200000,
       "end": 1795078800000,
@@ -296,6 +287,51 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795154400000,
+      "end": 1795158000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795158000000,
+      "end": 1795161600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le village de Bourguignons a subi le passage d'une tornade jeudi 19 novembre.",
+      "Soixante habitations ont subi des dégradations matérielles et plusieurs axes de circulation ont été entravés.",
+      "La préfecture ne recense aucun blessé parmi les deux cent cinquante résidents."
+    ],
+    "centre": [
+      "Une tornade a traversé la commune de Bourguignons dans l'Aube en fin d'après-midi.",
+      "Le phénomène climatique a détérioré soixante habitations, provoquant l'arrachage de toitures et l'effondrement de bâtiments.",
+      "Aucune victime n'est à déplorer selon les autorités locales."
+    ],
+    "droite": [
+      "Soixante habitations ont été endommagées dans la commune de Bourguignons par une tornade survenue jeudi après-midi.",
+      "Les dégâts matériels recensés incluent des toitures arrachées, des tuiles envolées et un pignon effondré.",
+      "Deux axes routiers ont été fermés à la circulation et aucun blessé n'est à déplorer d'après la préfecture."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la faible démographie de la commune touchée pour souligner la vulnérabilité de son territoire.",
+    "Le centre livre un compte-rendu factuel et synthétique axé principalement sur l'ampleur des dégâts matériels constatés.",
+    "La droite détaille précisément la nature des destructions matérielles tout en adoptant un ton centré sur les mesures de sécurité routière."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-20T08:01:34.515Z"
 }

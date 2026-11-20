@@ -6,6 +6,17 @@
   "storyDay": "2026-11-19",
   "articles": [
     {
+      "id": "7fce2a1e771d",
+      "outletId": "le-point",
+      "headline": "Tondelier-Mélenchon : du « roi du cimetière » à l’empereur de la gamelle",
+      "url": "https://www.lepoint.fr/debats/tondelier-melenchon-du-roi-du-cimetiere-a-lempereur-de-la-gamelle-HCW7MHAJTFGCNB67A4OETFZZ6M/",
+      "publishedAt": "2026-11-20T06:48:58.000Z",
+      "imageUrl": "https://www.lepoint.fr/resizer/v2/3APG2FCFUVIRBEKDZYE3RZUP6Q.jpg?auth=bf8001b0c68b0a85bd262bda14aca87501273484353ba3d49c21af4841b7bdd0&smart=true&width=1200&height=900",
+      "frontPage": false,
+      "kind": "opinion",
+      "section": "politics"
+    },
+    {
       "id": "2e03f1741ea3",
       "outletId": "liberation",
       "headline": "Main tendue de Tondelier à Mélenchon : Jadot annonce son départ des Ecologistes",
@@ -70,6 +81,18 @@
       "frontPage": false,
       "kind": "news",
       "section": "politics"
+    },
+    {
+      "id": "78ad00bed7e6",
+      "outletId": "le-monde",
+      "headline": "Présidentielle 2027 : le PS stoppe les discussions avec Les Ecologistes après le rapprochement entre Marine Tondelier et Jean-Luc Mélenchon",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/20/presidentielle-2027-le-parti-socialiste-stoppe-les-discussions-avec-les-ecologistes-apres-le-ralliement-de-tondelier-a-melenchon_6813548_823448.html",
+      "publishedAt": "2026-11-20T04:00:07.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/19/372/0/6000/3000/644/322/60/0/53e5fa1_ftp-1-0hmlcqfgwdsk-afp-d7zh8a8.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
     },
     {
       "id": "e5cd83035ccd",
@@ -147,7 +170,7 @@
       "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-yannick-jadot-annonce-quitter-les-ecologistes-apres-la-main-tendue-de-tondelier-a-melenchon-20261119",
       "publishedAt": "2026-11-19T22:47:40.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2002_crop/2026/11/19/37856f2c728c1c461acf476d3ad8bf250f08fd601734f22678fa25573daa4bdd.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -449,11 +472,11 @@
       "start": 1795147200000,
       "end": 1795150800000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 0,
         "droite": 0
       },
-      "total": 0
+      "total": 1
     },
     {
       "start": 1795150800000,
@@ -471,9 +494,9 @@
       "counts": {
         "gauche": 1,
         "centre": 0,
-        "droite": 1
+        "droite": 2
       },
-      "total": 2
+      "total": 3
     }
   ],
   "summaries": {
