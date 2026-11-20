@@ -1,10 +1,32 @@
 {
   "id": "15dcb94507c8",
   "slug": "la-russie-touche-deux-ponts-a-kiev-avec-des-missiles-balistiques",
-  "title": "Trois personnes sont tuées et deux ponts endommagés à Kiev par des frappes russes",
+  "title": "Des frappes russes sur Kiev font trois morts et endommagent deux ponts",
   "createdAt": "2026-11-20T05:01:26.868Z",
   "storyDay": "2026-11-20",
   "articles": [
+    {
+      "id": "7264c860409b",
+      "outletId": "europe-1",
+      "headline": "Frappes russes sur l'Ukraine : trois morts, deux ponts endommagés à Kiev",
+      "url": "https://www.europe1.fr/international/frappes-russes-sur-lukraine-trois-morts-deux-ponts-endommages-a-kiev-1240891?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-20T08:38:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/20/09/080_hl_vnguyen_3310664_1_6b00046483c29.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "c372ed8f8100",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, guerre en Ukraine : des frappes russes sur Kiev font trois morts, une usine chimique ciblée en Russie... Les dernières informations",
+      "url": "https://www.lemonde.fr/international/live/2026/11/20/en-direct-guerre-en-ukraine-des-frappes-russes-sur-kiev-une-usine-chimique-ciblee-en-russie-les-dernieres-informations_6810982_3210.html",
+      "publishedAt": "2026-11-20T08:20:33.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/20/524/0/5725/2862/644/322/60/0/d0d42d9_ftp-1-fr871wywwmjs-afp-d83g99e.jpg",
+      "frontPage": false,
+      "kind": "live",
+      "section": "world"
+    },
     {
       "id": "de9479990d0a",
       "outletId": "le-parisien",
@@ -131,7 +153,7 @@
     }
   ],
   "topicId": "d27ac3e592ca",
-  "titledArticleCount": 9,
+  "titledArticleCount": 13,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -369,34 +391,36 @@
       "start": 1795161600000,
       "end": 1795165200000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
-        "droite": 0
+        "droite": 1
       },
-      "total": 1
+      "total": 3
     }
   ],
   "summaries": {
     "gauche": [
-      "Des frappes de missiles balistiques et de bombardements russes ont causé la mort de trois personnes à Kiev et endommagé plusieurs ponts de la capitale.",
-      "Ces attaques constituent une riposte de Vladimir Poutine après la destruction récente du pont de Crimée par l'armée ukrainienne.",
-      "Les bombardements ont également touché des infrastructures énergétiques à travers le pays."
+      "De violentes frappes russes ont touché Kiev et plusieurs régions d'Ukraine, provoquant la mort de trois personnes et faisant plusieurs blessés.",
+      "Ces bombardements massifs interviennent en représailles aux récentes attaques ukrainiennes menées contre un pont stratégique russe.",
+      "Le maire Vitali Klitschko a confirmé que des missiles balistiques et des drones ont endommagé des infrastructures de transport dans la capitale."
     ],
     "centre": [
-      "Des frappes de missiles balistiques et de drones menées par la Russie ont fait au moins trois morts à Kiev et endommagé des ponts de la capitale.",
-      "Ces bombardements surviennent au lendemain des menaces de représailles de Vladimir Poutine formulées après la destruction du pont de Crimée.",
-      "Les alliés occidentaux de l'Ukraine ont réaffirmé leur soutien à Kiev face à cette nouvelle vague d'attaques."
+      "Des attaques de missiles balistiques et de drones sur Kiev ont causé la mort de trois individus et blessé d'autres habitants.",
+      "Les autorités locales rapportent que trois ponts de la capitale ont été touchés, entraînant des dégâts matériels importants sur deux d'entre eux.",
+      "Les médias soulignent que cette offensive russe fait suite aux menaces proférées par Vladimir Poutine après la destruction du pont de Crimée."
     ],
     "droite": [
-      "Des tirs de missiles balistiques russes ont touché la ville de Kiev, entraînant des dégâts sur plusieurs ponts de la capitale selon le maire Vitali Klitschko."
+      "Une série de frappes russes combinant missiles balistiques et drones a frappé Kiev, faisant trois morts et deux blessés.",
+      "L'administration militaire et le maire Vitali Klitschko ont confirmé que plusieurs ponts majeurs de la capitale, dont le pont Podilsko-Voskresensky et le pont Darnytsky, ont été endommagés.",
+      "Cette offensive est présentée comme la riposte directe de Vladimir Poutine aux opérations ukrainiennes contre les liaisons vers la Crimée."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la dimension stratégique et punitive des frappes en insistant explicitement sur la riposte orchestrée par le Kremlin après l'attaque du pont de Crimée.",
-    "Le centre adopte une couverture en direct qui conjugue le bilan humain immédiat à Kiev et la dimension géopolitique globale, en soulignant le contexte des menaces de représailles de Vladimir Poutine.",
-    "La droite se focalise principalement sur les dégâts matériels précis constatés dans la capitale ukrainienne et reprend les déclarations locales de Vitali Klitschko."
+    "La gauche met particulièrement l'accent sur le contexte des représailles russes qualifiées de douloureuses, tout en insistant sur l'impact humain et matériel de ces bombardements massifs.",
+    "Le centre adopte un format de suivi en direct très factuel, se concentrant sur le bilan humain immédiat, les dégâts subis par les ponts de Kiev et les déclarations officielles du maire.",
+    "La droite privilégie un angle centré sur la précision technique des dégâts matériels en nommant explicitement les ponts touchés et en soulignant la dimension stratégique de la riposte russe."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 9,
-  "summarizedAt": "2026-11-20T07:01:33.877Z"
+  "summarizedArticleCount": 13,
+  "summarizedAt": "2026-11-20T09:01:36.669Z"
 }

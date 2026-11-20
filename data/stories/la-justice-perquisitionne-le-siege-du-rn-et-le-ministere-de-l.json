@@ -6,6 +6,28 @@
   "storyDay": "2026-11-19",
   "articles": [
     {
+      "id": "fcadfa105f3f",
+      "outletId": "tf1-info",
+      "headline": "Enquête sur des fuites vers le RN impliquant un préfet : \"Si les faits sont avérés, ils sont très graves\", estime Laurent Nuñez",
+      "url": "https://www.tf1info.fr/justice-faits-divers/enquete-sur-des-fuites-vers-le-rn-impliquant-un-prefet-si-les-faits-sont-averes-ils-sont-tres-graves-estime-laurent-nunez-2477074.html",
+      "publishedAt": "2026-11-20T08:32:44.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/683/laurent-nunez-conference-presse-paris-23-octobre-2026-8a4b14-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "40d68a7bc767",
+      "outletId": "franceinfo",
+      "headline": "\"Des rumeurs et des accusations sans fondement\", réagit Jean-Philippe Tanguy dans l'affaire du préfet soupçonné d'avoir renseigné le RN sur des affaires en cours",
+      "url": "https://www.franceinfo.fr/politique/front-national/des-rumeurs-et-des-accusations-sans-fondement-reagit-jean-philippe-tanguy-dans-l-affaire-du-prefet-soupconne-d-avoir-renseigne-le-rn-sur-des-affaires-en-cours_8291828.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-20T08:04:55.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/o_ZXOFAfrp-YP2OQi5OzXaaO5ag/0x0:1920x1080/432x243/filters:format(jpg)/2026/11/20/6afffa52062b4913957809.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "3bfc0a96bebd",
       "outletId": "tf1-info",
       "headline": "Enquête sur des fuites d'un préfet vers le RN : \"Il y a une information judiciaire, je n'ai pas à la commenter\", réagit Laurent Jacobelli sur TF1",
@@ -265,9 +287,10 @@
       "url": "https://www.lefigaro.fr/actualite-france/soupcons-de-violation-du-secret-professionnel-des-juges-d-instruction-ont-perquisitionne-le-siege-du-rn-20261119",
       "publishedAt": "2026-11-19T16:25:31.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/19/ea98c64f13c4eb239e2c5368da73e3664866f1c8933db48b1b612185a77b94b5.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "politics"
+      "section": "politics",
+      "everFrontPage": true
     },
     {
       "id": "4966a8424784",
@@ -310,16 +333,6 @@
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795075200000,
-      "end": 1795078800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795078800000,
       "end": 1795082400000,
@@ -549,6 +562,16 @@
         "droite": 1
       },
       "total": 5
+    },
+    {
+      "start": 1795161600000,
+      "end": 1795165200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 2
     }
   ],
   "summaries": {

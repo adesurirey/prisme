@@ -6,6 +6,28 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "f9d31c2a5481",
+      "outletId": "humanite",
+      "headline": "Un consortium français crée une peau artificielle prête à la greffe : une première mondiale",
+      "url": "https://www.humanite.fr/sciences/cellules-souches/un-consortium-francais-cree-une-peau-artificielle-prete-a-la-greffe-une-premiere-mondiale",
+      "publishedAt": "2026-11-20T08:00:00.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/10/sante-1-1.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "58a9795c139c",
+      "outletId": "cnews",
+      "headline": "«Une avancée 100% française» : Urgo crée une peau artificielle prête à être greffée",
+      "url": "https://www.cnews.fr/sante/2026-11-20/une-avancee-100-francaise-urgo-cree-une-peau-artificielle-prete-etre-greffee",
+      "publishedAt": "2026-11-20T07:57:23.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_33432m9-taille1200_6afff4d92d043.jpg?h=1375a97a&itok=NLcxrxjZ",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "105da214aa52",
       "outletId": "tf1-info",
       "headline": "\"Un exploit technologique\" : une peau artificielle créée pour la première fois dans un laboratoire français",
@@ -56,27 +78,17 @@
       "url": "https://www.lefigaro.fr/societes/un-truc-de-dingue-urgo-cree-une-peau-artificielle-prete-a-etre-greffee-20261120",
       "publishedAt": "2026-11-20T05:51:01.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/1600x1067_crop/2026/11/19/878c7c459b873901b2bc37bea29113fa384c35860799f705990f550f70257341.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
     }
   ],
   "topicId": "8cdd3a077231",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "science",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795075200000,
-      "end": 1795078800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795078800000,
       "end": 1795082400000,
@@ -303,9 +315,44 @@
       "counts": {
         "gauche": 0,
         "centre": 0,
-        "droite": 1
+        "droite": 2
+      },
+      "total": 2
+    },
+    {
+      "start": 1795161600000,
+      "end": 1795165200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Un consortium français formé d'acteurs publics et privés a créé en laboratoire une peau artificielle prête pour la greffe, une première mondiale selon une annonce du vendredi 20 novembre.",
+      "L'expérimentation doit encore faire ses preuves à travers des essais cliniques pour confirmer cette avancée qualifiée de potentielle révolution médicale.",
+      "Le groupe Urgo souligne que cette innovation permettra de remplacer l'autogreffe qui nécessite actuellement plusieurs interventions chirurgicales."
+    ],
+    "centre": [
+      "Le groupe Urgo et des partenaires français ont réussi à produire en laboratoire une peau artificielle et universelle spécifiquement conçue pour soigner les grands brûlés.",
+      "L'annonce précise que cette première mondiale est le fruit d'une collaboration entre des acteurs publics et privés, avec une commercialisation envisagée à l'horizon 2040.",
+      "Les médias rappellent que le dispositif nécessite encore des essais cliniques avant d'être validé pour une utilisation médicale."
+    ],
+    "droite": [
+      "Le groupe Urgo, associé à des partenaires du consortium dont le CNRS, l'Établissement français du sang et Dassault Systèmes, a développé de la peau artificielle prête à greffer.",
+      "Le président Guirec Le Lous qualifie cette réalisation d'exploit technologique et de première mondiale pour le secteur de la cicatrisation.",
+      "Cette innovation française est présentée comme l'un des faits marquants du prochain sommet Choose France."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la dimension collaborative du consortium public-privé et sur l'intérêt médical direct pour remplacer les autogreffes.",
+    "Le centre insiste sur l'application concrète du traitement pour les grands brûlés et mentionne l'horizon temporel lointain de commercialisation en 2040.",
+    "La droite valorise le caractère national de l'innovation technologique en citant précisément les partenaires industriels et institutionnels du projet."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-20T09:01:36.669Z"
 }
