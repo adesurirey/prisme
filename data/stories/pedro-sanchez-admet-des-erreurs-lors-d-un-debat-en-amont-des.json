@@ -6,6 +6,28 @@
   "storyDay": "2026-11-19",
   "articles": [
     {
+      "id": "421e6b6e20b1",
+      "outletId": "france-24",
+      "headline": "Espagne : attaqué sur son bilan par son rival conservateur, Sánchez admet des \"erreurs\"",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261120-espagne-attaqu%C3%A9-sur-son-bilan-par-son-rival-conservateur-s%C3%A1nchez-admet-des-erreurs",
+      "publishedAt": "2026-11-20T10:53:01.000Z",
+      "imageUrl": "https://s.france24.com/media/display/b50d7436-e4ce-11f1-b6b8-6b451f569414/w:1024/p:16x9/FR-20261120-111057-111233-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "0a901eedbe4f",
+      "outletId": "rfi",
+      "headline": "Espagne: lors d'un débat tendu avec Alberto Nuñez Feijoo, Pedro Sanchez reconnaît des «erreurs»",
+      "url": "https://www.rfi.fr/fr/europe/20261120-espagne-lors-d-un-d%C3%A9bat-tendu-avec-alberto-nu%C3%B1ez-feijoo-pedro-sanchez-reconna%C3%AEt-des-erreurs",
+      "publishedAt": "2026-11-20T10:12:24.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/b78410ce-e4c6-11f1-a2aa-1bac47ab2f5d/w:1024/p:16x9/AP26323746593101.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "f02fb438753d",
       "outletId": "le-monde",
       "headline": "En Espagne, à dix jours des élections législatives, Pedro Sanchez admet des « erreurs »",
@@ -52,29 +74,9 @@
     }
   ],
   "topicId": "1441655c2672",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "world",
   "activity": [
-    {
-      "start": 1795078800000,
-      "end": 1795082400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795082400000,
-      "end": 1795086000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795086000000,
       "end": 1795089600000,
@@ -294,6 +296,26 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795165200000,
+      "end": 1795168800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795168800000,
+      "end": 1795172400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 2,
+        "droite": 0
+      },
+      "total": 2
     }
   ],
   "everInEdition": true

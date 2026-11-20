@@ -6,6 +6,29 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "cee0abd968d7",
+      "outletId": "le-monde",
+      "headline": "Cargo échoué sur le littoral des Landes : le remorquage du bateau, pour éviter qu’il ne chavire, s’annonce compliqué en raison de la météo",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/20/cargo-echoue-sur-le-littoral-des-landes-le-remorquage-du-bateau-pour-eviter-qu-il-ne-chavire-s-annonce-complique-en-raison-de-la-meteo_6813591_3225.html",
+      "publishedAt": "2026-11-20T12:14:07.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/20/312/0/3744/1872/644/322/60/0/0e456d9_ftp-1-ocnqnizqtcvf-2026-11-20t120337z-1714115212-rc2nroa8ofcm-rtrmadp-3-france-ship.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
+      "id": "3ccfe534df5c",
+      "outletId": "franceinfo",
+      "headline": "Intervention empêchée par la houle, 19 marins hélitreuillés, risque de chavirement... Ce que l'on sait du cargo de 169 mètres échoué dans les Landes",
+      "url": "https://france3-regions.franceinfo.fr/nouvelle-aquitaine/landes/mont-de-marsan/intervention-empechee-par-la-houle-19-marins-helitreuilles-risque-de-chavirement-ce-que-l-on-sait-du-cargo-de-169-metres-echoue-dans-les-landes-3453030.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-20T12:05:15.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/AUdRmlJkn35W78zbRjeWygD4r4k/432x243/filters:format(jpg)/2026/11/20/6b0032dde78b7722320107.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "213f56af2334",
       "outletId": "tf1-info",
       "headline": "Vents violents, marins secourus, risques de pollution... Ce que l'on sait sur le cargo échoué sur le littoral des Landes",
@@ -179,7 +202,7 @@
       "url": "https://www.lemonde.fr/societe/article/2026/11/20/un-cargo-s-echoue-sur-le-littoral-des-landes-l-evacuation-de-son-equipage-ordonnee_6813591_3224.html",
       "publishedAt": "2026-11-20T05:25:39.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/20/88/0/2048/1024/644/322/60/0/9d16235_upload-1-iqrybirmaum3-hxic1saxmaa88bn.jpeg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -212,46 +235,6 @@
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795078800000,
-      "end": 1795082400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795082400000,
-      "end": 1795086000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795086000000,
-      "end": 1795089600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795089600000,
-      "end": 1795093200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795093200000,
       "end": 1795096800000,
@@ -451,6 +434,46 @@
         "droite": 1
       },
       "total": 3
+    },
+    {
+      "start": 1795165200000,
+      "end": 1795168800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795168800000,
+      "end": 1795172400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795172400000,
+      "end": 1795176000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795176000000,
+      "end": 1795179600000,
+      "counts": {
+        "gauche": 2,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 2
     }
   ],
   "summaries": {
