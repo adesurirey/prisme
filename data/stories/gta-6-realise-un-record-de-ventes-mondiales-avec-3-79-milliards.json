@@ -1,10 +1,42 @@
 {
   "id": "125e2fd7a857",
   "slug": "gta-6-realise-un-record-de-ventes-mondiales-avec-3-79-milliards",
-  "title": "GTA 6 réalise un record de ventes mondiales avec 3,79 milliards de dollars en 24 heures",
+  "title": "GTA VI réalise un lancement record avec 3,79 milliards de dollars de ventes en 24 heures",
   "createdAt": "2026-11-20T20:01:26.856Z",
   "storyDay": "2026-11-20",
   "articles": [
+    {
+      "id": "8691aecf46e1",
+      "outletId": "liberation",
+      "headline": "GTA VI a été vendu à 32,5 millions d’exemplaires, générant 3,79 milliards de dollars le jour de sa sortie",
+      "url": "https://www.liberation.fr/culture/jeux-video/gta-vi-a-ete-vendu-a-325-millions-dexemplaires-generant-379-milliards-de-dollars-le-jour-de-sa-sortie-20261120_YAPSE5MSI5FRDILZLHJ2ENSWPU/",
+      "publishedAt": "2026-11-20T20:35:31.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
+      "id": "774ef6c5754d",
+      "outletId": "franceinfo",
+      "headline": "Les ventes de \"GTA VI\" ont généré 3,79 milliards de dollars le jour de sa sortie, selon l'éditeur du jeu vidéo",
+      "url": "https://www.franceinfo.fr/culture/jeux-video/gta-vi/les-ventes-de-gta-vi-ont-atteint-3-79-milliards-de-dollars-le-jour-de-sa-sortie-selon-l-editeur-du-jeu-video_8292920.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-20T20:30:34.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/eugdg3gsyLm-l5sPyO9wTN-UJ2Q/0x53:1024x629/432x243/filters:format(jpg)/2026/11/20/6b00a6923b7e1023553155.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "4b62bc6cf807",
+      "outletId": "bfmtv",
+      "headline": "Près de 3,8 milliards de dollars en seulement 24 heures: GTA 6 réalise un lancement \"record\" et rapporte presque cinq fois plus que GTA 5 à sa sortie",
+      "url": "https://www.bfmtv.com/tech/gaming/pres-de-3-8-milliards-de-dollars-en-seulement-24-heures-gta-vi-realise-un-lancement-record-et-rapporte-presque-cinq-fois-plus-que-gta-v-a-sa-sortie_AD-202611200899.html",
+      "publishedAt": "2026-11-20T20:03:14.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/gQ7nnkzFCfpNlZLGcUWQtX-k1jE=/0x0:2048x1152/800x0/images/Grand-Theft-Auto-6-2077155.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
     {
       "id": "bee8b10e91eb",
       "outletId": "le-parisien",
@@ -41,7 +73,7 @@
     }
   ],
   "topicId": "db125f2ac703",
-  "titledArticleCount": 3,
+  "titledArticleCount": 6,
   "section": "culture",
   "everInEdition": true,
   "activity": [
@@ -279,11 +311,35 @@
       "start": 1795204800000,
       "end": 1795208400000,
       "counts": {
-        "gauche": 0,
-        "centre": 1,
+        "gauche": 2,
+        "centre": 2,
         "droite": 0
       },
-      "total": 1
+      "total": 4
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le jeu vidéo GTA VI a réalisé un lancement historique avec 3,79 milliards de dollars de ventes en 24 heures selon l'éditeur Rockstar Games.",
+      "Ce chiffre d'affaires record englobe les pré-commandes et représente 32,5 millions d'exemplaires vendus.",
+      "Les ventes de ce nouvel opus sont cinq fois supérieures à celles de GTA V en 2013."
+    ],
+    "centre": [
+      "Rockstar Games annonce un lancement record pour GTA VI avec 3,79 milliards de dollars de ventes en 24 heures.",
+      "Le volume des ventes est presque cinq fois plus élevé que celui atteint par GTA V lors de sa sortie en 2013."
+    ],
+    "droite": [
+      "GTA VI a généré 3,79 milliards de dollars de ventes en 24 heures et vendu 32,5 millions de copies à travers le monde.",
+      "Le président et fondateur de Rockstar Games, Sam Houser, a exprimé sa gratitude face à cet accueil mondial.",
+      "Ce lancement record représente près de cinq fois les résultats de GTA V obtenus en 2013."
+    ]
+  },
+  "differences": [
+    "La presse de gauche met l'accent sur le volume précis des exemplaires écoulés pour illustrer l'ampleur du record.",
+    "La presse du centre livre un compte-rendu synthétique et direct du chiffre d'affaires record sans s'attarder sur d'autres détails.",
+    "La presse de droite intègre les déclarations du fondateur de Rockstar Games pour souligner l'aspect événementiel et mondial du lancement."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-20T21:01:31.337Z"
 }
