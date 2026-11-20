@@ -23,7 +23,7 @@
       "url": "https://www.ouest-france.fr/societe/faits-divers/un-homme-tente-de-mettre-le-feu-a-une-station-service-a-soissons-sept-bouteilles-de-gaz-allumees-a1cdb6ba-e4bf-11f1-afa7-9a0bb82a33d1?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-20T13:15:18.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExY2IyZmM5YTY4NGY3NjkyNDAzNjc2NGVkNDllODQ0MTU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ae215dd70d6ec62d1b6765240e452c2a4c13354998044e5d8188470789292cfb",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -329,5 +329,29 @@
       "total": 1
     }
   ],
-  "everInEdition": true
+  "everInEdition": true,
+  "summaries": {
+    "gauche": [
+      "Un individu a été placé en garde à vue à Soissons après avoir manipulé des bouteilles de gaz dans une station-service.",
+      "Le parquet de Soissons a communiqué sur cette intervention policière survenue dans l'Aisne."
+    ],
+    "centre": [
+      "Un homme a été interpellé de nuit à Soissons après avoir ouvert sept bouteilles de gaz dans une station-service.",
+      "L'individu a été placé en garde à vue pour tentative de destruction par moyens dangereux et apologie du terrorisme.",
+      "Le parquet national antiterroriste a été avisé de cette tentative d'explosion signalée par un riverain."
+    ],
+    "droite": [
+      "Un homme a été interpellé à Soissons avec un briquet et une cigarette allumée alors qu'il ouvrait sept bouteilles de gaz dans une station-service TotalEnergies.",
+      "Le suspect criait « Allah Akbar » au moment de son interpellation par les forces de l'ordre.",
+      "Selon Europe 1, l'individu est défavorablement connu des services de police mais inconnu des services de renseignement."
+    ]
+  },
+  "differences": [
+    "La presse de gauche se focalise strictement sur le cadre judiciaire de la garde à vue prononcée à Soissons en relayant le communiqué officiel du parquet.",
+    "La presse du centre adopte un traitement factuel centré sur l'intervention policière suite à l'alerte d'un riverain et sur la qualification pénale des faits.",
+    "La presse de droite met en avant les propos islamistes tenus par le suspect, les détails précis de sa tentative et son profil policier."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-20T15:01:36.120Z"
 }
