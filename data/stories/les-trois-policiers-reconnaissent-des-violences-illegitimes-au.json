@@ -6,6 +6,18 @@
   "storyDay": "2026-11-17",
   "articles": [
     {
+      "id": "34fbedad0c41",
+      "outletId": "le-monde",
+      "headline": "« Si l’on accepte que trois policiers mentent, le lien social est rompu » : prison ferme requise au procès de l’interpellation violente de Michel Zecler",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/20/si-l-on-accepte-que-trois-policiers-mentent-le-lien-social-est-rompu-prison-ferme-requise-au-proces-de-l-interpellation-violente-de-michel-zecler_6813386_3224.html",
+      "publishedAt": "2026-11-19T23:06:36.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/19/181/0/5250/2625/644/322/60/0/2db0668_upload-1-cob8s7xzhyhi-000-d7yv4g3.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
       "id": "275c2d1e03d6",
       "outletId": "le-parisien",
       "headline": "« Violence disproportionnée » : l’accusation requiert 4 à 6 ans contre les policiers dans le procès de Michel Zecler",
@@ -23,6 +35,17 @@
       "url": "https://www.la-croix.com/societe/au-proces-zecler-un-requisitoire-severe-pour-denoncer-une-trahison-de-l-ordre-social-20261119",
       "publishedAt": "2026-11-19T18:43:53.000Z",
       "imageUrl": "https://i.la-croix.com/x/2026/11/19/2593977-le-producteur-de-musique-michel-zecler-a-g-a-cote-.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "84f9c47d88a1",
+      "outletId": "france-24",
+      "headline": "Au procès Zecler, prison ferme requise contre les policiers, qui se défendent de tout racisme",
+      "url": "https://www.france24.com/fr/france/20261119-au-proc%C3%A8s-zecler-prison-ferme-requise-contre-les-policiers-qui-se-d%C3%A9fendent-de-tout-racisme",
+      "publishedAt": "2026-11-19T18:14:26.000Z",
+      "imageUrl": "https://s.france24.com/media/display/0daede70-e445-11f1-aa9e-13439ca2fe89/w:1024/p:16x9/6eafad5bb555456f4505bd99516b8a173e5764e7.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "misc"
@@ -404,10 +427,20 @@
       "end": 1795129200000,
       "counts": {
         "gauche": 7,
-        "centre": 8,
+        "centre": 9,
         "droite": 2
       },
-      "total": 17
+      "total": 18
+    },
+    {
+      "start": 1795129200000,
+      "end": 1795215600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
