@@ -1,10 +1,30 @@
 {
   "id": "8955a60c079a",
   "slug": "la-banque-applique-de-nouvelles-regles-pour-l-autorisation-de",
-  "title": "La banque applique de nouvelles règles pour l'autorisation de découvert",
+  "title": "De nouvelles règles encadrent l'autorisation de découvert bancaire",
   "createdAt": "2026-11-20T05:01:26.868Z",
   "storyDay": "2026-11-19",
   "articles": [
+    {
+      "id": "7cb1103deef1",
+      "outletId": "liberation",
+      "headline": "Découverts bancaires : quels changements avec les nouvelles règles mises en place à partir de ce vendredi 20 novembre ?",
+      "url": "https://www.liberation.fr/economie/conso/decouverts-bancaires-quels-changements-avec-les-nouvelles-regles-mises-en-place-a-partir-de-ce-vendredi-20-novembre-20261119_NOQBCRPIAJG6TGFTAB3LQ7EPHU/",
+      "publishedAt": "2026-11-20T05:53:00.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "44f8d319840f",
+      "outletId": "liberation",
+      "headline": "Les petits découverts bancaires bientôt soumis à de nouvelles règles plus contraignantes",
+      "url": "https://www.liberation.fr/economie/les-petits-decouverts-bancaires-bientot-soumis-a-de-nouvelles-regles-plus-contraignantes-20261016_WP6QCWUPBZDMVHCOU2DXNWD3TQ/",
+      "publishedAt": "2026-11-20T05:17:00.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
     {
       "id": "2b97c03ddec8",
       "outletId": "le-parisien",
@@ -51,7 +71,7 @@
     }
   ],
   "topicId": "8955a60c079a",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "economy",
   "everInEdition": true,
   "activity": [
@@ -289,11 +309,29 @@
       "start": 1795150800000,
       "end": 1795154400000,
       "counts": {
-        "gauche": 0,
+        "gauche": 2,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 3
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "À partir de ce vendredi 20 novembre, de nouvelles règles européennes encadrent les découverts bancaires et les mini-crédits, suscitant l'inquiétude des ménages confrontés à des dépenses imprévues.",
+      "La Fédération bancaire française a précisé que les découverts de moins de 200 euros ne sont plus automatiques et nécessitent désormais une étude préalable des banques.",
+      "Les banques doivent obligatoirement analyser la solvabilité de leurs clients pour ces petits montants, alignant ces facilités sur les conditions plus restrictives des crédits à la consommation."
+    ],
+    "centre": [
+      "Une réglementation européenne entrée en vigueur ce vendredi 20 novembre modifie les conditions d'attribution des autorisations de découvert bancaire.",
+      "Les banques françaises peuvent désormais procéder à une évaluation minutieuse des revenus des clients, y compris pour les demandes inférieures à 200 euros."
+    ]
+  },
+  "differences": [
+    "La gauche insiste sur la précarité des ménages face à ces restrictions plus contraignantes, en soulignant l'inquiétude que génère la fin des petits découverts automatiques.",
+    "Le centre adopte un angle technique et informatif, en mettant l'accent sur l'application de la réglementation européenne et sur les vérifications de revenus désormais possibles pour les banques."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-20T06:01:30.872Z"
 }
