@@ -307,5 +307,27 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Donald Trump a menacé lors d'une conférence de presse de taxer les entreprises américaines bâtissant des infrastructures numériques hors des frontières.",
+      "Le président américain a également enjoint Nvidia à réintégrer son dirigeant Jensen Huang."
+    ],
+    "centre": [
+      "Donald Trump a brandi la menace de taxes massives à l'encontre des firmes technologiques américaines investissant dans des centres de données à l'étranger.",
+      "Le chef de l'État a justifié cette position depuis la Maison-Blanche pour éviter que la Chine ne récupère ces infrastructures stratégiques."
+    ],
+    "droite": [
+      "Donald Trump a profité d'une prise de parole sur l'intelligence artificielle pour promettre des sanctions massives contre les géants de la tech.",
+      "Le président des États-Unis a affirmé qu'il interdirait formellement l'implantation de centres de données américains hors du territoire national."
+    ]
+  },
+  "differences": [
+    "La gauche met en avant la mesure punitive ciblée et l'injonction spécifique visant l'entreprise Nvidia.",
+    "Le centre insiste sur la justification géopolitique du président américain face à la concurrence de la Chine.",
+    "La droite se focalise sur la fermeté de l'interdiction présidentielle concernant l'intelligence artificielle et l'usage de sanctions financières massives."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-21T14:01:27.303Z"
 }
