@@ -6,6 +6,17 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "3ae84166c9ad",
+      "outletId": "europe-1",
+      "headline": "Un mathématicien annonce la résolution d'un des plus célèbres problèmes du monde avec l'aide de l'IA",
+      "url": "https://www.europe1.fr/international/un-mathematicien-annonce-la-resolution-dun-des-plus-celebres-problemes-du-monde-avec-laide-de-lia-1241785?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-21T15:41:23.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/21/15/075_golba-anthropi261119_npze8_1_6b01a721890f4.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "0eb939bd1d47",
       "outletId": "huffpost",
       "headline": "Hypothèse de Riemann : le chercheur Levent Alpöge dit avoir résolu ce célèbre problème grâce à l’IA",
@@ -45,7 +56,7 @@
       "url": "https://www.lemonde.fr/sciences/article/2026/11/21/la-probable-resolution-de-l-hypothese-de-riemann-par-une-intelligence-artificielle-marque-une-bascule-pour-les-mathematiques_6813962_1650684.html",
       "publishedAt": "2026-11-21T09:30:00.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/21/470/0/2699/1349/644/322/60/0/abd41ca_upload-1-4kpjjkn64ufn-bal-3137506.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -134,16 +145,6 @@
   "section": "science",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795186800000,
-      "end": 1795190400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795190400000,
       "end": 1795194000000,
@@ -371,6 +372,16 @@
         "gauche": 1,
         "centre": 0,
         "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1795273200000,
+      "end": 1795276800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
       },
       "total": 1
     }

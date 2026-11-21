@@ -6,6 +6,28 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "b7e06cc9eaf9",
+      "outletId": "france-24",
+      "headline": "Verdict au procès de Michel Zecler : l'espoir d'une \"jurisprudence\"",
+      "url": "https://www.france24.com/fr/%C3%A9missions/une-semaine-en-france/20261121-verdict-au-proc%C3%A8s-de-michel-zecler-l-espoir-d-une-jurisprudence",
+      "publishedAt": "2026-11-21T15:29:45.000Z",
+      "imageUrl": "https://s.france24.com/media/display/c5d1feda-e5b5-11f1-bd95-13439ca2fe89/w:1024/p:16x9/Francais-2026-11-21T13-20-23-510Z.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "918931c8cdf4",
+      "outletId": "tf1-info",
+      "headline": "Procès Zecler : de la prison ferme pour les policiers",
+      "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-proces-zecler-de-la-prison-ferme-pour-les-policiers-3546-2477319.html",
+      "publishedAt": "2026-11-21T14:00:16.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/proces-zecler-de-la-prison-ferme-pour-les-policiers-1-709277-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "1e807bc6452b",
       "outletId": "lopinion",
       "headline": "Passage à tabac de Michel Zecler : des peines de un à deux ans de prison ferme pour les trois policiers condamnés",
@@ -119,6 +141,17 @@
       "outletId": "mediapart",
       "headline": "Affaire Zecler: la justice reconnaît enfin le racisme des policiers",
       "url": "https://www.mediapart.fr/journal/france/201126/affaire-zecler-la-justice-reconnait-enfin-le-racisme-des-policiers",
+      "publishedAt": "2026-11-20T22:42:39.000Z",
+      "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/11/20/261120-img-verdict-zecler.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "4ceed5c99367",
+      "outletId": "mediapart",
+      "headline": "Affaire Michel Zecler: la justice reconnaît enfin le racisme des policiers",
+      "url": "https://www.mediapart.fr/journal/france/201126/affaire-michel-zecler-la-justice-reconnait-enfin-le-racisme-des-policiers",
       "publishedAt": "2026-11-20T22:42:39.000Z",
       "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/11/20/261120-img-verdict-zecler.jpg",
       "frontPage": false,
@@ -411,56 +444,6 @@
   "everInEdition": true,
   "activity": [
     {
-      "start": 1795172400000,
-      "end": 1795176000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795176000000,
-      "end": 1795179600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795179600000,
-      "end": 1795183200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795183200000,
-      "end": 1795186800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795186800000,
-      "end": 1795190400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
       "start": 1795190400000,
       "end": 1795194000000,
       "counts": {
@@ -524,11 +507,11 @@
       "start": 1795212000000,
       "end": 1795215600000,
       "counts": {
-        "gauche": 2,
+        "gauche": 3,
         "centre": 6,
         "droite": 2
       },
-      "total": 10
+      "total": 11
     },
     {
       "start": 1795215600000,
@@ -649,6 +632,56 @@
         "droite": 1
       },
       "total": 3
+    },
+    {
+      "start": 1795258800000,
+      "end": 1795262400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795262400000,
+      "end": 1795266000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795266000000,
+      "end": 1795269600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795269600000,
+      "end": 1795273200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
+    },
+    {
+      "start": 1795273200000,
+      "end": 1795276800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
