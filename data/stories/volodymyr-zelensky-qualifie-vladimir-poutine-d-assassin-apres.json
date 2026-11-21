@@ -6,6 +6,17 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "e80b6e339216",
+      "outletId": "le-parisien",
+      "headline": "Guerre en Ukraine : « c’est un assassin », la réponse de Volodymyr Zelensky à Donald Trump sur Vladimir Poutine",
+      "url": "https://www.leparisien.fr/international/ukraine/guerre-en-ukraine-cest-un-assassin-la-reponse-de-volodymyr-zelensky-a-donald-trump-sur-vladimir-poutine-21-11-2026-FIZH224JVRBFBD5OGFJ2ONNIUE.php",
+      "publishedAt": "2026-11-21T11:01:30.436Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "df75bec52e22",
       "outletId": "bfmtv",
       "headline": "Guerre en Ukraine: Volodymyr Zelensky qualifie Vladimir Poutine d'\"assassin\" en réponse à Donald Trump qui assure être \"ami\" avec le président russe",
@@ -67,66 +78,6 @@
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795154400000,
-      "end": 1795158000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795158000000,
-      "end": 1795161600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795161600000,
-      "end": 1795165200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795165200000,
-      "end": 1795168800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795168800000,
-      "end": 1795172400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795172400000,
-      "end": 1795176000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795176000000,
       "end": 1795179600000,
@@ -306,6 +257,85 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795240800000,
+      "end": 1795244400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795244400000,
+      "end": 1795248000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795248000000,
+      "end": 1795251600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795251600000,
+      "end": 1795255200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795255200000,
+      "end": 1795258800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795258800000,
+      "end": 1795262400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Volodymyr Zelensky a qualifié Vladimir Poutine d'« assassin » dans une interview à CNN.",
+      "cette sortie fait suite aux déclarations de Donald Trump affirmant être l'« ami » du président russe.",
+      "Donald Trump avait également évoqué une volonté de Vladimir Poutine de trouver une issue diplomatique au conflit ukrainien."
+    ],
+    "droite": [
+      "Volodymyr Zelensky a vertement répliqué à Donald Trump en qualifiant Vladimir Poutine d'« assassin ».",
+      "le président ukrainien a souligné que pour l'Ukraine et la majorité du monde, le dirigeant russe reste un « ennemi ».",
+      "Donald Trump a soutenu que Vladimir Poutine lui avait fait part de son souhait de conclure la guerre en Ukraine par des voies diplomatiques."
+    ]
+  },
+  "differences": [
+    "La presse du centre se focalise sur l'opposition frontale entre Volodymyr Zelensky et les déclarations amicales de Donald Trump envers Vladimir Poutine.",
+    "La presse de droite insiste longuement sur la teneur des propos de Donald Trump concernant la perspective d'une résolution diplomatique du conflit tout en rapportant la réplique cinglante de Volodymyr Zelensky."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-21T11:01:30.436Z"
 }
