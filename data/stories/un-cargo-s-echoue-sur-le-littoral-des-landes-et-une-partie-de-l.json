@@ -6,6 +6,29 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "ae2c8c088d0b",
+      "outletId": "ouest-france",
+      "headline": "Le remorquage du cargo échoué dans les Landes pourrait prendre plusieurs jours, voire davantage",
+      "url": "https://www.ouest-france.fr/mer/le-remorquage-du-cargo-echoue-dans-les-landes-pourrait-prendre-plusieurs-jours-voire-davantage-7e51a148-e5c7-11f1-bd4e-6f30b8f49e21?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-21T17:58:55.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZjA0ZmNmODNmOTdmN2NlZjQ3MWU1ZDY0MTBmMWVjZjg?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9a47ed088e81860250b7b435cf0951ea2ec48af3e05df4eb1c7150414d9aa11a",
+      "frontPage": true,
+      "kind": "news",
+      "section": "misc",
+      "everFrontPage": true
+    },
+    {
+      "id": "2f13b6d383a0",
+      "outletId": "europe-1",
+      "headline": "Landes : pourquoi le remorquage du cargo échoué sur une plage pourrait prendre du temps",
+      "url": "https://www.europe1.fr/societe/landes-pourquoi-le-remorquage-du-cargo-echoue-sur-une-plage-pourrait-prendre-du-temps-1241806?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-21T17:31:11.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/21/17/080_hl_vtournier_3396621_1_6b01c0fbce76a.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "34b6e52d9b41",
       "outletId": "tf1-info",
       "headline": "\"Est-ce qu'ils vont réussir à l'enlever ?\" : dégager le cargo échoué dans les Landes, une opération qui s'annonce périlleuse",
@@ -67,7 +90,7 @@
       "url": "https://www.lemonde.fr/planete/article/2026/11/21/le-remorquage-du-cargo-miro-g-echoue-au-large-des-landes-pourrait-durer-plusieurs-jours_6814014_3244.html",
       "publishedAt": "2026-11-21T12:57:06.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/20/486/0/5828/2914/644/322/60/0/2a34d9f_ftp-1-cs9gkkp6ld0a-afp-d84l4xp.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -762,6 +785,36 @@
         "droite": 1
       },
       "total": 3
+    },
+    {
+      "start": 1795273200000,
+      "end": 1795276800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795276800000,
+      "end": 1795280400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795280400000,
+      "end": 1795284000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 1
+      },
+      "total": 2
     }
   ],
   "summaries": {
