@@ -6,6 +6,28 @@
   "storyDay": "2026-11-21",
   "articles": [
     {
+      "id": "a37cabd8b153",
+      "outletId": "bfmtv",
+      "headline": "Présidentielle 2027: François Ruffin annonce retirer sa candidature",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-francois-ruffin-annonce-retirer-sa-candidature_VN-202611210397.html",
+      "publishedAt": "2026-11-21T18:25:45.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/FTk9YZg3ZA954gPh5BEzr6uOni4=/0x0:1280x720/800x0/images/Presidentielle-2027-Francois-Ruffin-annonce-retirer-sa-candidature-2388264.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "dc709154782a",
+      "outletId": "humanite",
+      "headline": "Présidentielle 2027 : François Ruffin renonce à sa candidature",
+      "url": "https://www.humanite.fr/politique/election-presidentielle/presidentielle-2027-francois-ruffin-renonce-a-sa-candidature",
+      "publishedAt": "2026-11-21T18:16:40.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/imago0470246603h.jpg?w=1200",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "6922628a9111",
       "outletId": "le-parisien",
       "headline": "Présidentielle 2027 : François Ruffin retire sa candidature prenant « acte de l’impasse » de sa campagne",
@@ -17,12 +39,34 @@
       "section": "politics"
     },
     {
+      "id": "f9cb3723a6a3",
+      "outletId": "rfi",
+      "headline": "Présidentielle 2027: François Ruffin jette l'éponge, faute de primaire de toute la gauche",
+      "url": "https://www.rfi.fr/fr/france/20261121-pr%C3%A9sidentielle-2027-fran%C3%A7ois-ruffin-jette-l-%C3%A9ponge-faute-de-primaire-de-toute-la-gauche",
+      "publishedAt": "2026-11-21T18:00:47.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/0d63ab68-e5d4-11f1-8e37-ebb478925cf0/w:1024/p:16x9/000-D8987WG.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "f0dd71264a5d",
       "outletId": "huffpost",
       "headline": "François Ruffin retire sa candidature à la présidentielle 2027 face à « l’impasse » à gauche",
       "url": "https://www.huffingtonpost.fr/politique/article/francois-ruffin-retire-sa-candidature-a-la-presidentielle-2027-face-a-l-impasse-a-gauche_362441.html",
       "publishedAt": "2026-11-21T17:57:51.000Z",
       "imageUrl": "https://focus.huffingtonpost.fr/2026/11/21/522/0/5000/2812/0/0/60/0/09eeb69_upload-1-20o7pfcjduoy-afp-20260717-hl-jcmilhet-3236365-v1-highres-francefrancoisruffincandidatemeetin.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "bab5736e0938",
+      "outletId": "lexpress",
+      "headline": "Présidentielle 2027 : François Ruffin renonce à sa candidature, faute d'avoir réussi à rassembler la gauche",
+      "url": "https://www.lexpress.fr/politique/lfi/presidentielle-2027-francois-ruffin-renonce-a-sa-candidature-faute-davoir-reussi-a-rassembler-la-RNO2Q3GKMRCM3BRAEUXDLBU65Q/",
+      "publishedAt": "2026-11-21T17:57:09.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/7SP5UWKPQJDCRFV7UNWNTOYSXY.jpg?auth=f95affa26edaf86c4fddf38f8a4962e9a5f0e48882cd0effa2406b58d8b87830&smart=true&width=4800&height=3200",
       "frontPage": false,
       "kind": "news",
       "section": "politics"
@@ -112,7 +156,7 @@
       "url": "https://www.ouest-france.fr/elections/presidentielle/presidentielle-2027-francois-ruffin-retire-sa-candidature-2e91a6fc-e5cd-11f1-bd4e-6f30b8f49e21?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-21T17:08:06.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMTM1YzYzZWYyZmZlMGU1MWZiY2Y0OTdjZjk5M2QyMWU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=70216ccb5f29b9e050991dc9e6768407f1ce526520fd1fc2abef0940a3891c16",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -141,7 +185,7 @@
     }
   ],
   "topicId": "eeff3a61c816",
-  "titledArticleCount": 12,
+  "titledArticleCount": 16,
   "section": "politics",
   "everInEdition": true,
   "activity": [
@@ -370,46 +414,46 @@
       "end": 1795284000000,
       "counts": {
         "gauche": 5,
-        "centre": 3,
+        "centre": 4,
         "droite": 3
       },
-      "total": 11
+      "total": 12
     },
     {
       "start": 1795284000000,
       "end": 1795287600000,
       "counts": {
-        "gauche": 0,
-        "centre": 1,
+        "gauche": 1,
+        "centre": 3,
         "droite": 0
       },
-      "total": 1
+      "total": 4
     }
   ],
   "summaries": {
     "gauche": [
-      "François Ruffin a annoncé le retrait de sa candidature à l'élection présidentielle de 2027 en raison d'une « impasse » stratégique.",
-      "L'ex-député de La France insoumise a justifié sa décision par son échec à imposer l'organisation d'une « grande primaire » de toute la gauche.",
-      "Il a souhaité « bon courage et bonne campagne » aux autres candidats de gauche sans en nommer aucun, tout en refusant d'accorder son soutien pour l'instant.",
-      "Plusieurs titres soulignent qu'il motive aussi son renoncement par la nécessité de faire barrage au Rassemblement national."
+      "François Ruffin a annoncé samedi retirer sa candidature à l'élection présidentielle de 2027.",
+      "Il a pris « acte de l'impasse » de sa campagne, n'ayant pas réussi à imposer l'organisation d'une « grande primaire » de toute la gauche.",
+      "Le député de la Somme souhaite « bonne campagne » aux « candidats de gauche encore en lice » sans les nommer et n'apporte son soutien à personne.",
+      "Certains titres soulignent que ce retrait intervient également face au risque de voir le Rassemblement national accéder au pouvoir."
     ],
     "centre": [
-      "Le député de la Somme François Ruffin a officialisé le retrait de sa course à l'Élysée à cinq mois de l'échéance.",
-      "Il a pris « acte de l’impasse » de sa dynamique électorale, n'étant pas parvenu à fédérer la gauche autour d'une primaire.",
-      "Il s'est abstenu de parrainer un quelconque concurrent à ce stade de la compétition."
+      "François Ruffin a officialisé le retrait de sa candidature à l'élection présidentielle de 2027 dans un communiqué publié sur X.",
+      "Il invoque « l'impasse » de sa démarche, faute d'avoir pu concrétiser son projet de primaire rassemblant toute la gauche.",
+      "L'ex-insoumis n'accorde son parrainage ou son soutien à aucun des prétendants et formule des vœux de bon courage aux candidats de gauche restants."
     ],
     "droite": [
-      "François Ruffin a acté l'échec de sa tentative présidentielle pour 2027 à travers un communiqué publié sur le réseau social X.",
-      "Le député ex-insoumis a adressé ses vœux de « bonne campagne » aux prétendants de gauche encore en lice sans accorder de consigne de vote.",
-      "L'Opinion analyse ce retrait comme l'aboutissement d'une trajectoire de « grand solitaire » pénalisée par les figures dominantes de Marine Le Pen et Jean-Luc Mélenchon."
+      "Le député François Ruffin a jeté l'éponge et mis un terme à sa campagne pour l'élection présidentielle de 2027.",
+      "Dans son communiqué, il ne donne aucune consigne de vote ni de soutien à un autre responsable politique de gauche.",
+      "La presse de droite analyse ce retrait comme « un échec » personnel face à une campagne dominée par d'autres figures et pointe son incapacité à s'imposer dans les intentions de vote."
     ]
   },
   "differences": [
-    "La gauche insiste sur la dimension collective du projet et la menace de l'extrême droite, tout en valorisant la démarche d'union par la primaire.",
-    "Le centre livre un compte-rendu factuel et synthétique du communiqué, se focalisant sur les motifs techniques de l'impasse politique.",
-    "La droite contextualise ce retrait comme l'échec personnel d'un « solitaire » éclipsé par les dynamiques de Jean-Luc Mélenchon et de Marine Le Pen."
+    "La gauche met l'accent sur les justifications programmatiques et stratégiques du candidat, notamment l'absence de primaire unitaire et la menace du Rassemblement national.",
+    "Le centre adopte un traitement factuel centré sur l'annonce du communiqué et l'échec de la dynamique de rassemblement.",
+    "La droite qualifie ouvertement la séquence d'« échec » personnel et analyse l'isolement politique du député face aux autres forces en présence."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 12,
-  "summarizedAt": "2026-11-21T18:01:24.667Z"
+  "summarizedArticleCount": 16,
+  "summarizedAt": "2026-11-21T19:01:30.982Z"
 }

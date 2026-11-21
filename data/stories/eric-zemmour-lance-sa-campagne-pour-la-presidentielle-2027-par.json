@@ -6,6 +6,29 @@
   "storyDay": "2026-11-21",
   "articles": [
     {
+      "id": "bae522269217",
+      "outletId": "bfmtv",
+      "headline": "Présidentielle 2027: Éric Zemmour s'érige en \"candidat de la liberté de parler\" pour son premier meeting de campagne",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-eric-zemmour-s-erige-en-candidat-de-la-liberte-de-parler-pour-son-premier-meeting-de-campagne_AD-202611210407.html",
+      "publishedAt": "2026-11-21T18:56:36.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/OYRoB0NLtO7cwd_xIo3q7GCUp6U=/0x0:2048x1152/800x0/images/Eric-Zemmour-au-Zenith-de-Toulon-ce-samedi-21-novembre-2026-2388266.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "a5f3324888d8",
+      "outletId": "le-figaro",
+      "headline": "Présidentielle 2027 : en meeting à Toulon, Éric Zemmour cherche un élan en «candidat de la liberté»",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-en-meeting-a-toulon-eric-zemmour-cherche-un-elan-en-candidat-de-la-liberte-20261121",
+      "publishedAt": "2026-11-21T18:46:24.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/21/83b76d410514684b8bc349980372c1f274d2b981ea3f7d623c9a4ce7b432a510.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "e9af803c28fc",
       "outletId": "20-minutes",
       "headline": "EN DIRECT Présidentielle 2027 : Eric Zemmour essaye de lancer sa campagne à Toulon...",
@@ -64,40 +87,10 @@
     }
   ],
   "topicId": "6030126ec4f8",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795190400000,
-      "end": 1795194000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795194000000,
-      "end": 1795197600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795197600000,
-      "end": 1795201200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795201200000,
       "end": 1795204800000,
@@ -307,28 +300,60 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795276800000,
+      "end": 1795280400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795280400000,
+      "end": 1795284000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795284000000,
+      "end": 1795287600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 1
+      },
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "Éric Zemmour organise son premier meeting de campagne au Zénith de Toulon ce samedi 21 novembre 2026 pour tenter de lancer sa dynamique en vue de l'élection présidentielle de 2027.",
-      "L'événement se déroule en présence de Sarah Knafo, figure majeure du parti Reconquête."
+      "Le candidat du parti Reconquête organise son premier meeting de campagne au Zénith de Toulon ce samedi.",
+      "L'événement débute à 15h30 en présence de la figure politique Sarah Knafo."
     ],
     "centre": [
-      "Éric Zemmour officialise son entrée en campagne pour la présidentielle de 2027 à l'occasion d'un premier meeting organisé dans le Var.",
-      "La presse observe le défi du candidat d'extrême droite qui tente de mobiliser à nouveau, cinq ans après avoir recueilli 7 % des voix au premier tour en 2022, dans un contexte d'isolement croissant."
+      "Éric Zemmour officialise sa campagne pour l'élection présidentielle de 2027 en se présentant comme le « candidat de la liberté de parler ».",
+      "Il dénonce un « vent liberticide » et un « totalitarisme d'atmosphère » lors de son intervention au Zénith de Toulon.",
+      "Ouest-France rappelle qu'il avait recueilli 7 % des voix au premier tour en 2022 et fait face à un isolement croissant."
     ],
     "droite": [
-      "Éric Zemmour tient son premier grand meeting de campagne au Zénith de Toulon, onze jours après avoir officialisé sa candidature à l'élection présidentielle de 2027.",
-      "Le président de Reconquête espère retrouver la ferveur de la campagne de 2022, en s'appuyant sur une terre favorable où il avait doublé son score national avec près de 14 % des voix."
+      "Le président de Reconquête tient son premier grand meeting de campagne au Zénith de Toulon, onze jours après avoir officialisé sa candidature.",
+      "Il élargit ses bases programmatiques au-delà de l'immigration et défend une « primaire de droite » selon Le Figaro.",
+      "Europe 1 souligne qu'il cherche à retrouver la ferveur de 2022 dans le Var, où il avait obtenu près de 14 % des voix."
     ]
   },
   "differences": [
-    "La gauche traite l'événement comme une tentative de lancement incertaine en se focalisant sur le déroulement strict du rassemblement à Toulon.",
-    "Le centre analyse l'événement sous l'angle du défi politique, en soulignant le contexte d'isolement et la stagnation potentielle de son image depuis 2022.",
-    "La droite adopte un ton mobilisateur et met en avant la ferveur militante ainsi que l'ancrage local favorable du candidat dans le Var."
+    "La gauche se limite strictement à relayer l'agenda horaire et logistique du rassemblement politique.",
+    "Le centre contextualise l'événement en mettant en avant les déclarations polémiques du candidat sur les libertés publiques et son score électoral passé.",
+    "La droite adopte un ton de reportage de campagne axé sur la stratégie programmatique, la recherche d'un nouvel élan et la nostalgie de la ferveur de 2022."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-21T17:01:36.206Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-21T19:01:30.982Z"
 }
