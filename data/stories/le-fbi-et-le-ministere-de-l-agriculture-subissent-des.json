@@ -6,6 +6,17 @@
   "storyDay": "2026-11-21",
   "articles": [
     {
+      "id": "d5e7e48fd805",
+      "outletId": "bfmtv",
+      "headline": "Le FBI et le ministère de l'Agriculture ont été piratés selon plusieurs médias américains (c'est la deuxième fois pour la police fédérale)",
+      "url": "https://www.bfmtv.com/tech/cybersecurite/le-fbi-et-le-ministere-de-l-agriculture-ont-ete-pirates-selon-plusieurs-medias-americains-c-est-la-deuxieme-fois-pour-la-police-federale_AD-202611210302.html",
+      "publishedAt": "2026-11-21T11:38:34.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/WMUOorFPMHhvPQ4c3nGxuMlrnDA=/8x0:2040x1143/800x0/images/hacker-piratage-2385391.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "471cc6143ccf",
       "outletId": "le-figaro",
       "headline": "Le FBI de nouveau victime d’un piratage informatique, selon CNN",
@@ -51,20 +62,10 @@
     }
   ],
   "topicId": "36dd329e83e0",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795172400000,
-      "end": 1795176000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795176000000,
       "end": 1795179600000,
@@ -294,6 +295,35 @@
         "droite": 1
       },
       "total": 1
+    },
+    {
+      "start": 1795258800000,
+      "end": 1795262400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Le ministère de l'Agriculture et le FBI ont subi des cyberattaques selon plusieurs médias américains.",
+      "Le FBI est touché pour la seconde fois par une telle intrusion informatique.",
+      "Ces incidents surviennent après le limogeage du responsable de la cybersécurité par la Maison Blanche sur fond de pannes technologiques en série."
+    ],
+    "droite": [
+      "Le National Crime Information Center du FBI a été la cible d'un piratage informatique rapporté par CNN.",
+      "Le ministère de l'Agriculture et la police fédérale ont tous deux été victimes de ces attaques.",
+      "Ces intrusions interviennent quelques jours après d'importantes pannes technologiques ayant touché des secteurs stratégiques et l'agence NSA."
+    ]
+  },
+  "differences": [
+    "Les médias du centre lient directement les piratages aux pannes technologiques nationales et aux décisions de la Maison Blanche concernant la cybersécurité.",
+    "Les médias de droite détaillent précisément les services visés, comme le fichier du FBI rapporté par CNN, tout en contextualisant l'événement avec les pannes des infrastructures stratégiques du pays."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-21T12:01:30.285Z"
 }
