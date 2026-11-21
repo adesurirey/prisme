@@ -6,6 +6,17 @@
   "storyDay": "2026-11-21",
   "articles": [
     {
+      "id": "ce32a6af09ec",
+      "outletId": "europe-1",
+      "headline": "Harcèlement et suicide de Camélia : ses proches déposent une nouvelle plainte",
+      "url": "https://www.europe1.fr/police-justice/harcelement-et-suicide-de-camelia-ses-proches-deposent-une-nouvelle-plainte-1241791?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-21T16:22:25.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Justice/080_hl_smarty_1920219_1_69a02f9dec69b.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "3e674c42fe95",
       "outletId": "liberation",
       "headline": "Suicide de Camélia : après un premier classement sans suite, la famille de la lycéenne dépose une nouvelle plainte",
@@ -22,7 +33,7 @@
       "url": "https://www.lefigaro.fr/faits-divers/harcelement-et-suicide-de-camelia-en-seine-et-marne-ses-proches-deposent-une-nouvelle-plainte-avec-constitution-de-partie-civile-20261121",
       "publishedAt": "2026-11-21T14:41:38.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/21/042e1dd6dbed16c7fe83c9a89c68f0d4cb9489d44cb4000f6fbcf034a18a5844.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -40,30 +51,10 @@
     }
   ],
   "topicId": "b68a745f8dfe",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "misc",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795186800000,
-      "end": 1795190400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795190400000,
-      "end": 1795194000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795194000000,
       "end": 1795197600000,
@@ -283,6 +274,48 @@
         "droite": 1
       },
       "total": 3
+    },
+    {
+      "start": 1795273200000,
+      "end": 1795276800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795276800000,
+      "end": 1795280400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "La famille de la lycéenne de terminale Camélia a déposé une nouvelle plainte après un classement sans suite.",
+      "L'avocat Moad Nefati a confirmé que cette démarche vise à obtenir la saisine d'un juge d'instruction."
+    ],
+    "centre": [
+      "Les proches de Camélia, décédée en janvier après un entretien avec son proviseur, ont déposé une nouvelle plainte.",
+      "La constitution de partie civile vise le proviseur pour homicide involontaire ainsi qu'une jeune majeure, cinq mineures et X pour harcèlement scolaire."
+    ],
+    "droite": [
+      "La mère et les deux oncles de Camélia ont relancé l'enquête sur le harcèlement scolaire dénoncé par la lycéenne de Mitry-Mory.",
+      "Le Figaro précise que la plainte avec constitution de partie civile cible le proviseur et plusieurs élèves, tandis qu'Europe 1 rappelle la forte mobilisation de centaines de personnes devant l'établissement."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur le précédent classement sans suite et l'espoir d'obtenir un juge d'instruction.",
+    "Le centre détaille les chefs d'accusation précis, incluant l'homicide involontaire et le harcèlement scolaire visant nommément plusieurs personnes.",
+    "La droite insiste sur le contexte émotionnel du drame à Mitry-Mory, le Figaro précisant les qualifications juridiques exactes de la plainte."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-21T17:01:36.206Z"
 }

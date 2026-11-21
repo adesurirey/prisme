@@ -6,6 +6,29 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "2bce82fd800a",
+      "outletId": "france-24",
+      "headline": "Climat : les négociations s'enlisent à la COP31, sans compromis en vue",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261121-climat-les-n%C3%A9gociations-s-enlisent-%C3%A0-la-cop31-sans-compromis-en-vue",
+      "publishedAt": "2026-11-21T16:36:13.000Z",
+      "imageUrl": "https://s.france24.com/media/display/f2067f90-e5c8-11f1-8fd4-1bac47ab2f5d/w:1024/p:16x9/FR-20261121-160319-160918-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "da0b617367fb",
+      "outletId": "ouest-france",
+      "headline": "Cop31 : l’urgence climatique se heurte aux mauvaises volontés",
+      "url": "https://www.ouest-france.fr/environnement/cop21/cop31-lurgence-climatique-se-heurte-aux-mauvaises-volontes-0d631168-e5ba-11f1-afa7-9a0bb82a33d1?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-21T16:21:48.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZTJjY2I5YTJmM2U5MjY5NzlhMzFkMTI4YmU0NmZmN2U?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=96434eb6b6faa4b41e88cb37a32d602e1890e1a80fee912b238c6331dba8eb4c",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "9d23588a10c3",
       "outletId": "bfmtv",
       "headline": "COP31: la présidence turque appelle tous les pays à agir \"de manière responsable\" pour trouver \"un compromis\"",
@@ -141,7 +164,7 @@
     }
   ],
   "topicId": "cb43dba63057",
-  "titledArticleCount": 10,
+  "titledArticleCount": 14,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -454,30 +477,42 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795276800000,
+      "end": 1795280400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 2,
+        "droite": 0
+      },
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "Les négociations de la COP31 à Antalya se poursuivent au-delà de l'échéance initiale en raison de désaccords persistants sur les textes les plus disputés.",
-      "Une douzaine de pays, dont la France, exigent que la décision finale mentionne explicitement «une transition claire hors des énergies fossiles».",
-      "Le projet de texte diffusé jeudi est critiqué pour son absence de référence aux énergies fossiles et à l'obligation d'une électricité propre."
+      "La trent et unième conférence mondiale sur le climat à Antalya dépasse sa date de clôture théorique sans parvenir à un accord entre les près de deux cents pays représentés.",
+      "Les discussions s'étirent en longueur en raison de désaccords persistants sur la question cruciale du financement de la transition et de l'inscription explicite de la sortie des énergies fossiles.",
+      "Le projet de texte initial diffusé ne contient aucune mention des énergies fossiles ni d'exigence sur une électricité propre, ce qui pousse de nombreuses délégations à réclamer des modifications."
     ],
     "centre": [
-      "La COP31 organisée en Turquie dépasse sa date butoir officielle, les délégués de près de 200 pays s'efforçant d'arracher des compromis.",
-      "Les discussions achoppent principalement sur les questions financières et la place des énergies fossiles dans le texte final.",
-      "Le président de la COP, le Turc Murat Kurum, reconnaît que les participants sont proches du but sans y être tout à fait parvenus pendant que les pressions s'intensifient."
+      "Les négociations de la COP31 en Turquie se prolongent au-delà du délai prévu de vendredi soir, aucun consensus n'ayant été trouvé par les délégations.",
+      "La présidence turque exhorte l'ensemble des pays à agir de manière responsable pour aboutir à un compromis sur les points les plus épineux.",
+      "Une douzaine de pays, dont la France, exigent que la décision finale intègre une transition claire hors des énergies fossiles.",
+      "Le départ de certains participants souligne la fatigue des négociateurs alors qu'une nouvelle proposition de texte est attendue."
     ],
     "droite": [
-      "La réunion annuelle sur le climat en Turquie joue les prolongations en raison d'intenses tractations dans la dernière ligne droite.",
-      "Une coalition d'une douzaine de pays comprenant la France, le Panama et la Côte d'Ivoire exige l'inclusion d'une transition explicite hors des énergies fossiles dans la décision finale."
+      "La grande réunion annuelle sur le climat en Turquie joue les prolongations en raison de blocages persistants lors de la dernière ligne droite.",
+      "Une douzaine de pays, incluant la France, le Panama et la Côte d'Ivoire, exigent que la décision finale mentionne explicitement une transition claire hors des énergies fossiles.",
+      "Le sort des énergies fossiles et les modalités de financement demeurent au cœur des débats tendus entre les délégations internationales."
     ]
   },
   "differences": [
-    "Le camp gauche insiste particulièrement sur le contenu précis des textes manquants et la revendication d'une sortie explicite des énergies fossiles portée par la France.",
-    "Le camp centre adopte une perspective chronologique et logistique en insistant sur le dépassement des délais, le suspense et l'ensemble des points critiques comme la finance.",
-    "Le camp droite se focalise principalement sur la dynamique tendue des tractations diplomatiques et l'offensive de dernière minute menée par la France et ses alliés."
+    "La gauche met l'accent sur les lacunes du projet initial et les pressions des ONG pour infléchir le texte final.",
+    "Le centre adopte un angle factuel et institutionnel, soulignant les appels à la responsabilité de la présidence turque et l'incertitude du calendrier.",
+    "La droite se focalise sur les exigences formelles d'un groupe de pays, parmi lesquels figure la France, pour imposer une mention claire sur les énergies fossiles."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 10,
-  "summarizedAt": "2026-11-21T11:01:30.436Z"
+  "summarizedArticleCount": 14,
+  "summarizedAt": "2026-11-21T17:01:36.206Z"
 }
