@@ -6,12 +6,45 @@
   "storyDay": "2026-11-19",
   "articles": [
     {
+      "id": "6a8251e4673c",
+      "outletId": "rfi",
+      "headline": "France: le silence du RN interroge après la révélation par la presse de fuites du ministère de l'Intérieur",
+      "url": "https://www.rfi.fr/fr/france/20261120-france-le-silence-du-rn-interroge-apr%C3%A8s-la-r%C3%A9v%C3%A9lation-par-la-presse-de-fuites-du-minist%C3%A8re-de-l-int%C3%A9rieur",
+      "publishedAt": "2026-11-20T22:24:04.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/cda20f42-e52e-11f1-b2d1-6b451f569414/w:1024/p:16x9/AP26324376917186.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "5b303182f2b6",
+      "outletId": "tf1-info",
+      "headline": "Fuites d'informations confidentielles : un préfet au service du RN ?",
+      "url": "https://www.tf1info.fr/justice-faits-divers/videos/video-fuites-d-informations-confidentielles-un-prefet-au-service-du-rn-79801-2477256.html",
+      "publishedAt": "2026-11-20T21:25:16.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/fuites-d-informations-confidentielles-un-prefet-au-service-du-rn-e84006-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "20e485929b1d",
       "outletId": "france-24",
       "headline": "Fuites au ministère de l'Intérieur : comment le RN a progressivement séduit les hauts fonctionnaires",
       "url": "https://www.france24.com/fr/france/20261120-fuites-au-minist%C3%A8re-de-l-int%C3%A9rieur-comment-le-rn-a-progressivement-s%C3%A9duit-les-hauts-fonctionnaires",
       "publishedAt": "2026-11-20T17:12:25.000Z",
       "imageUrl": "https://s.france24.com/media/display/ed281fb0-e4ec-11f1-b121-6b451f569414/w:1024/p:16x9/000-9QL2XA.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "e0bd6ebfbaf3",
+      "outletId": "lopinion",
+      "headline": "Affaire RN-préfet Moutouh : l’infiltration présumée de l’appareil d’Etat par les réseaux d’extrême droite au cœur de l’enquête",
+      "url": "https://www.lopinion.fr/politique/affaire-rn-prefet-moutouh-linfiltration-presumee-de-lappareil-detat-par-les-reseaux-dextreme-droite-au-cœur-de-lenquete",
+      "publishedAt": "2026-11-20T15:47:29.000Z",
+      "imageUrl": "https://beymedias.brightspotcdn.com/bd/0f/9e9832c54ba78df02fd8ccae50bd/sipa-01136498-000009.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "politics"
@@ -744,9 +777,9 @@
       "counts": {
         "gauche": 0,
         "centre": 0,
-        "droite": 0
+        "droite": 1
       },
-      "total": 0
+      "total": 1
     },
     {
       "start": 1795190400000,
@@ -761,6 +794,56 @@
     {
       "start": 1795194000000,
       "end": 1795197600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1795197600000,
+      "end": 1795201200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795201200000,
+      "end": 1795204800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795204800000,
+      "end": 1795208400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795208400000,
+      "end": 1795212000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
+    },
+    {
+      "start": 1795212000000,
+      "end": 1795215600000,
       "counts": {
         "gauche": 0,
         "centre": 1,
