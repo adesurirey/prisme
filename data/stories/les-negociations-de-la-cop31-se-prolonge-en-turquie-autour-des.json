@@ -6,6 +6,49 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "7647eca75837",
+      "outletId": "france-24",
+      "headline": "Climat : la COP31 en Turquie devient la plus longue de l'histoire",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261122-climat-la-cop31-en-turquie-devient-la-plus-longue-de-l-histoire",
+      "publishedAt": "2026-11-22T12:38:21.000Z",
+      "imageUrl": "https://s.france24.com/media/display/9c78808c-e668-11f1-b76c-6b451f569414/w:1024/p:16x9/FR-20261122-110104-110319-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "19b912de8be0",
+      "outletId": "le-point",
+      "headline": "COP31 en Turquie : les énergies fossiles au cœur de l’échec des négociations",
+      "url": "https://www.lepoint.fr/monde/cop31-en-turquie-pourquoi-les-negociations-ont-echoue-YCRPDHERDVHXPEEVCVOTSAGGEY/",
+      "publishedAt": "2026-11-22T12:24:30.000Z",
+      "imageUrl": "https://www.lepoint.fr/resizer/v2/MEXT7IIIT5MYTDQZI7GHU7DKN4.jpg?auth=6422887ef2abbdfeef6b9dc8b309de0d00c6a4ccdfc8cc813eaa1b3bdf2bbc59&smart=true&width=1200&height=900",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "a628f49ef974",
+      "outletId": "rfi",
+      "headline": "COP31: faute de consensus, la présidence turque annonce le rejet de la proposition d'accord final",
+      "url": "https://www.rfi.fr/fr/environnement/20261122-cop31-faute-de-consensus-la-pr%C3%A9sidence-turque-annonce-le-rejet-de-la-proposition-d-accord-final",
+      "publishedAt": "2026-11-22T12:10:22.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/d0cdd4c6-e664-11f1-a82e-6b451f569414/w:1024/p:16x9/000-D8AC3ZV.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "eefd94527175",
+      "outletId": "liberation",
+      "headline": "COP31 : l’UE et ses membres «s’opposent» à l’adoption de la décision finale, sans sortie des énergies fossiles",
+      "url": "https://www.liberation.fr/environnement/climat/cop31-la-france-denonce-un-projet-de-texte-qui-nous-ramenerait-en-arriere-sans-sortie-des-energies-fossiles-20261122_OLT6XUDZDFFKNBW754OHFUAAOU/",
+      "publishedAt": "2026-11-22T11:59:54.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "26f1dd2f99b0",
       "outletId": "le-figaro",
       "headline": "COP31: l’Union européenne s’oppose frontalement à l’adoption de la décision finale",
@@ -29,6 +72,17 @@
       "section": "world"
     },
     {
+      "id": "d52c9ffb2075",
+      "outletId": "bfmtv",
+      "headline": "La COP31 en Turquie devient la plus longue de l'histoire en l'absence d'accord",
+      "url": "https://www.bfmtv.com/environnement/climat/la-cop31-en-turquie-devient-la-plus-longue-de-l-histoire-en-l-absence-d-accord_AD-202611220236.html",
+      "publishedAt": "2026-11-22T11:38:02.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/AGinY35Op_Nn7wKOfw1zu6jrr2k=/0x2:2048x1154/800x0/images/COP31-2387698.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "ce3fdee834d0",
       "outletId": "le-monde",
       "headline": "Climat : l’UE et ses membres « s’opposent » à l’adoption de la décision finale proposée à la COP31",
@@ -39,6 +93,17 @@
       "kind": "news",
       "section": "world",
       "everFrontPage": true
+    },
+    {
+      "id": "61f4b9d682d3",
+      "outletId": "france-24",
+      "headline": "Climat : la COP31 au bord de l'impasse, au moment décisif",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261122-climat-la-cop31-au-bord-de-l-impasse-au-moment-d%C3%A9cisif",
+      "publishedAt": "2026-11-22T11:17:35.000Z",
+      "imageUrl": "https://s.france24.com/media/display/c270c256-e661-11f1-adfc-6b451f569414/w:1024/p:16x9/FR-20261122-100121-100330-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
     },
     {
       "id": "77c21244cc89",
@@ -203,7 +268,7 @@
       "url": "https://www.lefigaro.fr/international/cop31-nouveau-projet-de-decision-finale-toujours-sans-mention-des-energies-fossiles-20261122",
       "publishedAt": "2026-11-22T03:16:19.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/22/56fca0e849b8f57f23174a24ecf224a614b859044cfa126ae814068de525bfac.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -417,36 +482,36 @@
       "start": 1795302000000,
       "end": 1795388400000,
       "counts": {
-        "gauche": 7,
-        "centre": 6,
-        "droite": 5
+        "gauche": 8,
+        "centre": 10,
+        "droite": 6
       },
-      "total": 18
+      "total": 24
     }
   ],
   "summaries": {
     "gauche": [
-      "La COP31 à Antalya se prolonge au-delà de son terme initial en raison d'un blocage persistant sur les textes finaux.",
-      "Le projet de décision examiné ne comporte aucune mention explicite de la sortie des énergies fossiles ni de précisions sur une électricité propre.",
-      "L'Humanité rapporte que les discussions piétinent également sur le financement de la transition climatique."
+      "La COP31 à Antalya dépasse sa date limite officielle sans accord en raison de divergences persistantes sur la sortie des énergies fossiles et sur les financements.",
+      "Le Libération et franceinfo soulignent l'opposition ferme de l'Union européenne à un projet de décision finale jugé insuffisant car dépourvu d'engagements clairs contre le charbon, le pétrole et le gaz.",
+      "La France, par la voix de sa ministre Monique Barbut, qualifie de « recul inacceptable » une proposition de compromis qui « nous ramène en arrière »."
     ],
     "centre": [
-      "Les négociations de la COP31 se poursuivent en Turquie après l'expiration de l'échéance officielle fixée au 20 novembre.",
-      "Le nouveau texte de compromis présenté par la présidence turco-australienne suscite de vives tensions en raison de l'absence de référence aux énergies fossiles.",
-      "La ministre française de la Transition écologique, Monique Barbut, dénonce une proposition qui « nous ramène en arrière » et qualifie ce recul d'« inacceptable »."
+      "Les négociations de la COP31 en Turquie se prolongent de près de 44 heures, devenant la plus longue conférence de l'histoire en l'absence de consensus.",
+      "La présidence turque a officiellement annoncé le rejet d'une proposition de compromis soumise aux quelque 200 délégations présentes à Antalya.",
+      "Les discussions achoppent principalement sur l'absence de mention explicite de la sortie des énergies fossiles et sur les questions de financement, poussant certains délégués à quitter les lieux."
     ],
     "droite": [
-      "La COP31 qui se tient à Antalya joue les prolongations face à l'absence d'accord entre les quelque 200 délégations présentes.",
-      "Le Figaro et CNews soulignent que le projet de décision finale ne mentionne pas explicitement les énergies fossiles, principales causes du changement climatique, et se contente d'évoquer l'électrification.",
-      "Europe 1 et Le Figaro rapportent que la France, aux côtés d'une douzaine de pays, exige l'insertion d'« une transition claire hors des énergies fossiles »."
+      "La COP31 s'achève à Antalya sans accord global après deux jours de prolongations, plombée par le blocage autour des énergies fossiles.",
+      "L'Union européenne et plusieurs pays, dont la France, s'opposent frontalement à la décision finale, le Figaro relevant qu'une douzaine d'États exigeaient une transition claire hors des fossiles.",
+      "CNews précise que le projet préparé par les présidences turque et australienne se contente d'une simple allusion au résultat de la COP28 tout en appelant à l'électrification."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur l'enlisement social et financier des discussions tout en soulignant l'absence totale de mesures concrètes contre le charbon, le pétrole et le gaz.",
-    "Le centre focalise son traitement sur la bronca diplomatique menée par la France et sa ministre Monique Barbut contre le texte de compromis.",
-    "La droite insiste particulièrement sur les omissions techniques du projet final, ciblant l'évitement du terme « énergies fossiles » au profit d'une simple allusion à l'électrification."
+    "La gauche met l'accent sur la menace d'un retour en arrière environnemental et relaie l'opposition frontale de l'Union européenne et de la France face à l'absence d'engagements climatiques précis.",
+    "Le centre adopte un angle chronologique et factuel, insistant sur le record de longévité des négociations, l'enlisement général et les difficultés logistiques des délégations à Antalya.",
+    "La droite insiste sur l'échec politique des négociations et détaille les aspects techniques du texte de compromis, tout en soulignant la fronde menée par la France et l'Europe contre les présidences turque et australienne."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 27,
-  "summarizedAt": "2026-11-22T09:01:25.138Z"
+  "summarizedArticleCount": 40,
+  "summarizedAt": "2026-11-22T13:01:22.472Z"
 }
