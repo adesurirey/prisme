@@ -1,10 +1,22 @@
 {
   "id": "fec15d3a4554",
   "slug": "max-verstappen-remporte-le-grand-prix-de-las-vegas",
-  "title": "Max Verstappen remporte un Grand Prix de Las Vegas complètement fou",
+  "title": "Max Verstappen remporte un Grand Prix de Las Vegas marqué par de nombreux changements de leaders",
   "createdAt": "2026-11-22T07:01:25.493Z",
   "storyDay": "2026-11-22",
   "articles": [
+    {
+      "id": "d6c8cd2f39c8",
+      "outletId": "le-monde",
+      "headline": "Max Verstappen remporte un Grand Prix de Las Vegas survolté : 35 changements de leaders et du suspense jusqu’au dernier virage",
+      "url": "https://www.lemonde.fr/sport/article/2026/11/22/max-verstappen-remporte-un-grand-prix-de-las-vegas-survolte-35-changements-de-leaders-et-du-suspense-jusqu-au-dernier-virage_6814198_3242.html",
+      "publishedAt": "2026-11-22T08:30:45.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/22/236/0/5983/2991/644/322/60/0/7ff2f87_ftp-1-0ctvdndwcq4a-33c98a729ece41cd8c30eface34e2c75-0-852bfd39b9c54580a072f211774404c4.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
     {
       "id": "bd184e068f73",
       "outletId": "le-parisien",
@@ -46,27 +58,17 @@
       "url": "https://www.lefigaro.fr/sports/formule-1/formule-1-verstappen-triomphe-d-un-grand-prix-fou-a-las-vegas-les-mclaren-arrachent-le-podium-20261122",
       "publishedAt": "2026-11-22T06:17:01.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2020_crop/2026/11/22/efb9e279a565494604dbee827f3476c96711d883f89d080dde467ca8ccd37113.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
     }
   ],
   "topicId": "fec15d3a4554",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "sport",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795248000000,
-      "end": 1795251600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795251600000,
       "end": 1795255200000,
@@ -296,6 +298,41 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795334400000,
+      "end": 1795338000000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le pilote Red Bull Max Verstappen s'est adjugé la victoire lors du Grand Prix de Las Vegas au terme d'une épreuve jugée survoltée par Le Monde.",
+      "La course a atteint un niveau d'intensité rare avec un record de 352 dépassements et 35 changements de leaders.",
+      "Le suspense pour la première place s'est prolongé jusqu'au dernier virage de la compétition."
+    ],
+    "centre": [
+      "Max Verstappen a triomphé au terme d'une course qualifiée de folle et surréaliste par les rédactions centristes.",
+      "Le Grand Prix s'est distingué par sa forte spectaculaire et un peloton resté très rapproché durant une grande partie de l'épreuve.",
+      "Le pilote français Pierre Gasly a su tirer son épingle du jeu en décrochant la cinquième place à l'arrivée."
+    ],
+    "droite": [
+      "Parti en pole position, Max Verstappen a remporté le Grand Prix de Las Vegas sur le tracé urbain du Strip.",
+      "Le podium a été complété par les deux pilotes McLaren, Lando Norris et Oscar Piastri.",
+      "La course a cumulé les rebondissements avec des dizaines de changements de leader et une gestion d'énergie décisive."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la dimension exceptionnelle des statistiques sportives avec les records de dépassements et de changements de tête.",
+    "Le centre privilégie le récit d'un spectacle hors norme et met en valeur la performance du Français Pierre Gasly dans le top 5.",
+    "La droite insiste sur la maîtrise tactique du vainqueur parti en pole position et détaille la composition complète du podium avec les pilotes McLaren."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-22T09:01:25.138Z"
 }
