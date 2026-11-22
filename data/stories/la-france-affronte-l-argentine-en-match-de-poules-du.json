@@ -6,6 +6,18 @@
   "storyDay": "2026-11-21",
   "articles": [
     {
+      "id": "ba694087fa9e",
+      "outletId": "le-monde",
+      "headline": "Championnat des nations : le XV de France écarte l’Argentine et donne rendez-vous aux Springboks pour des retrouvailles musclées en finale",
+      "url": "https://www.lemonde.fr/sport/article/2026/11/22/championnat-des-nations-le-xv-de-france-ecarte-l-argentine-et-donne-rendez-vous-aux-springboks-pour-des-retrouvailles-musclees-en-finale_6814075_3242.html",
+      "publishedAt": "2026-11-22T01:42:59.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/21/143/0/3192/1596/644/322/60/0/3dea399_ftp-1-g3iufhueisee-afp-d89n2zb.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
       "id": "a0fe7029a150",
       "outletId": "le-parisien",
       "headline": "« On a relevé un challenge incroyablement difficile » : Galthié s’extasie après la qualif’ pour la finale du Championnat des Nations",
@@ -69,9 +81,10 @@
       "url": "https://www.lefigaro.fr/sports/rugby/xv-de-france/france-argentine-en-video-le-resume-de-la-victoire-fleuve-des-bleus-20261121",
       "publishedAt": "2026-11-21T22:52:29.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/21/e9e0cffb3c2f7c453dfd629aa89ffb3136946901e74464243694c4e21196bddc.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "sport"
+      "section": "sport",
+      "everFrontPage": true
     },
     {
       "id": "f43c795e2069",
@@ -92,7 +105,7 @@
       "url": "https://www.lemonde.fr/sport/article/2026/11/21/france-argentine-les-bleus-balaient-les-pumas-et-retrouveront-l-afrique-du-sud-en-finale-du-championnat-des-nations-rugby_6814070_3242.html",
       "publishedAt": "2026-11-21T22:27:08.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/21/180/0/3297/1648/644/322/60/0/22295f6_ftp-1-fiyo4swgmxih-afp-d89q6m3.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -427,11 +440,11 @@
       "start": 1795309200000,
       "end": 1795312800000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 2
     }
   ],
   "summaries": {
