@@ -6,6 +6,17 @@
   "storyDay": "2026-11-21",
   "articles": [
     {
+      "id": "f76d97ff164e",
+      "outletId": "cnews",
+      "headline": "Finlande : ce que l'on sait de l'attaque de drones contre un cargo russe en mer Baltique",
+      "url": "https://www.cnews.fr/monde/2026-11-22/finlande-ce-que-lon-sait-de-lattaque-de-drones-contre-un-cargo-russe-en-mer",
+      "publishedAt": "2026-11-22T13:09:59.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-22t105503z_1621234714_rc2ysoaq07wz_rtrmadp_3_ukraine-crisis-russia-vessel-taille1200_6b02cfb919ac7.jpg?itok=2CUV1y6D",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "41c7b2616dc0",
       "outletId": "france-24",
       "headline": "La Finlande fait état d'une attaque de drone ukrainien contre un cargo russe en mer Baltique",
@@ -142,7 +153,7 @@
     }
   ],
   "topicId": "2a5514b23d71",
-  "titledArticleCount": 10,
+  "titledArticleCount": 13,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -385,31 +396,50 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795348800000,
+      "end": 1795352400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795352400000,
+      "end": 1795356000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le ministère de la Défense finlandais a détecté le 21 novembre une attaque de drone contre un cargo russe dans le golfe de Finlande, sans en préciser l'origine.",
-      "Le journal qualifie la situation avec la citation 'La guerre s'étend jusqu'à nos portes'."
+      "Le ministère de la Défense finlandais a détecté une attaque de drone contre un cargo russe dans le golfe de Finlande, sans préciser son origine.",
+      "Le journal souligne l'inquiétude locale avec la citation « La guerre s'étend jusqu'à nos portes »."
     ],
     "centre": [
-      "L'armée finlandaise a détecté une attaque de drone contre le cargo russe Sparta II en mer Baltique, provoquant des dégâts et un incendie.",
-      "La Finlande signale également la violation potentielle de son espace aérien par un hélicoptère russe et évoque un lien possible entre les deux incidents.",
-      "Le Premier ministre finlandais a réaffirmé le droit de l'Ukraine à se défendre contre la Russie.",
-      "Le ministère de la Défense a tenu informés ses alliés au sein de l'Otan de ces développements."
+      "L'armée finlandaise a détecté une attaque de drone contre le cargo russe Sparta II dans le golfe de Finlande, provoquant un incendie à bord et la dérive du navire dans les eaux territoriales finlandaises.",
+      "Le Premier ministre finlandais Petteri Orpo a déclaré que « l'Ukraine a le droit de se défendre contre l'agresseur », tandis que Kiev n'a pas revendiqué l'attaque.",
+      "La Finlande signale également la violation potentielle de son espace aérien par un hélicoptère russe et évoque un possible lien avec l'incident maritime."
     ],
     "droite": [
-      "Les forces de défense finlandaises ont détecté le 21 novembre une attaque de drone visant un cargo russe à l'ouest de Suursaari dans les eaux internationales.",
-      "Le navire visé a subi d'importants dommages et a pris feu lors de cet incident en mer Baltique.",
-      "La presse de ce camp relève le sentiment d'inquiétude en citant la formule 'La guerre s'étend jusqu'à nos portes'."
+      "Les forces armées finlandaises ont détecté le 21 novembre une attaque de deux drones contre le cargo russe Sparta II dans les eaux internationales du golfe de Finlande, près de l'île de Gogland.",
+      "Le navire a pris feu et dérivé vers les eaux finlandaises, tandis qu'un porte-parole militaire estime que l'Ukraine est probablement à l'origine de l'opération non revendiquée.",
+      "TF1 Info (centre droit) met l'accent sur la déclaration selon laquelle « la guerre s'étend jusqu'à nos portes »."
     ]
   },
   "differences": [
-    "La gauche adopte un format factuel et concis en se focalisant sur le constat du ministère de la Défense finlandais et le sentiment d'insécurité aux portes de l'Europe.",
-    "Le centre livre un récit détaillé et multifactoriel en reliant l'attaque du navire aux tensions régionales, aux violations d'espace aérien par un hélicoptère et aux déclarations politiques sur le droit ukrainien.",
-    "La droite privilégie un angle centré sur le déroulement précis des opérations militaires en mer et la localisation exacte de l'attaque en eaux internationales."
+    "La gauche adopte un angle concis centré sur l'alerte ministérielle finlandaise et l'inquiétude sécuritaire immédiate.",
+    "Le centre privilégie un récit géopolitique large associant l'attaque maritime aux déclarations du Premier ministre finlandais et à l'incident aérien russe connexe.",
+    "La droite propose un compte rendu technique et détaillé des faits, Le Figaro insistant sur les coordonnées géographiques exactes tandis que TF1 Info (centre droit) dramatise l'événement en couverture."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 10,
-  "summarizedAt": "2026-11-22T05:01:25.984Z"
+  "summarizedArticleCount": 13,
+  "summarizedAt": "2026-11-22T15:01:22.504Z"
 }
