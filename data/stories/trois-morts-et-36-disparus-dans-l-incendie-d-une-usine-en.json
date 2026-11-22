@@ -6,6 +6,17 @@
   "storyDay": "2026-11-22",
   "articles": [
     {
+      "id": "de6b6865add3",
+      "outletId": "tf1-info",
+      "headline": "Indonésie : au moins 3 morts et 36 disparus dans l'incendie d'une usine de bonbons",
+      "url": "https://www.tf1info.fr/international/indonesie-au-moins-3-morts-et-36-disparus-dans-l-incendie-d-une-usine-de-bonbons-2477395.html",
+      "publishedAt": "2026-11-22T06:26:40.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/682/incendie-usine-confiserie-serang-2026-59aaee-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "11e8d60216fe",
       "outletId": "cnews",
       "headline": "Indonésie : au moins 3 morts et 36 disparus après un incendie dans une usine",
@@ -23,7 +34,7 @@
       "url": "https://www.lefigaro.fr/international/indonesie-39-disparus-apres-un-incendie-dans-une-usine-20261122",
       "publishedAt": "2026-11-22T03:57:36.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/22/3a03bb11529d62c8916a379c47218e1142eb0b05c00dff5ba574d34bbe20aee8.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -54,20 +65,10 @@
     }
   ],
   "topicId": "462c113f6913",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795240800000,
-      "end": 1795244400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795244400000,
       "end": 1795248000000,
@@ -297,29 +298,40 @@
         "droite": 1
       },
       "total": 1
+    },
+    {
+      "start": 1795327200000,
+      "end": 1795330800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Un incendie s'est déclaré samedi après-midi dans une usine de bonbons située près de la capitale indonésienne, Jakarta.",
-      "Le bilan provisoire fait état de trois personnes décédées et de 36 autres toujours recherchées par les secours."
+      "Un incendie s'est déclaré samedi après-midi dans une usine de bonbons située près de la capitale Jakarta.",
+      "Le drame a causé la mort d'au moins trois personnes et les secours recherchent activement trente-six individus portés disparus."
     ],
     "centre": [
-      "Un sinistre a touché une usine située à l'ouest de Jakarta, en Indonésie, dans la journée de samedi.",
-      "Les autorités recensent au moins trois morts et 36 disparus, tandis que l'origine du feu demeure indéterminée."
+      "Un incendie s'est déclaré samedi 21 novembre dans une usine de confiseries située à l'ouest de Jakarta, impliquant environ soixante personnes sur place.",
+      "Le bilan provisoire fait état d'au moins trois victimes décédées et de trente-six personnes portées disparues.",
+      "Les causes exactes de ce sinistre demeurent pour l'instant indéterminées."
     ],
     "droite": [
-      "Une usine de confiseries appartenant à la société PT Fonua Agung Mulia, installée dans le district de Serang à une cinquantaine de kilomètres de Jakarta, a été ravagée par les flammes.",
-      "Le drame a provoqué la mort d'au moins trois individus, tandis que 36 autres demeurent portés disparus et que quatre blessés ont dû être hospitalisés.",
-      "Les opérations de secours se poursuivent malgré les difficultés persistantes liées au feu encore actif à certains endroits, et une enquête a été ouverte pour déterminer l'origine du sinistre."
+      "Un feu s'est déclaré samedi après-midi dans l'établissement de l'entreprise de confiseries PT Fonua Agung Mulia, implanté dans le district de Serang à une cinquantaine de kilomètres à l'ouest de Jakarta.",
+      "Le bilan officiel s'établit à au moins trois morts, trente-six disparus et quatre blessés pris en charge par les centres de santé.",
+      "Les opérations de secours se poursuivent malgré les difficultés rencontrées sur place en raison du feu toujours actif dimanche matin, tandis que l'origine du sinistre fait l'objet d'une enquête."
     ]
   },
   "differences": [
-    "La gauche livre un compte-rendu laconique se focalisant strictement sur le bilan humain et la localisation générale de l'usine près de la capitale.",
-    "Le centre adopte un traitement factuel similaire mais insiste sur l'incertitude planant autour des causes exactes du départ de feu.",
-    "La droite propose un suivi détaillé incluant le nom de l'entreprise, les difficultés d'intervention des secours sur un site encore fumant et l'ouverture d'une enquête."
+    "La gauche se concentre sur l'essentiel du drame humain avec concision en qualifiant directement l'établissement d'usine de bonbons.",
+    "Le centre livre un résumé factuel standard des pertes humaines et des données géographiques sans s'attarder sur les détails techniques de l'enquête.",
+    "La droite détaille précisément l'identité de l'entreprise concernée, le nom du district, le nombre de blessés et les difficultés opérationnelles des secours entravés par les foyers persistants."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-22T06:01:22.853Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-22T07:01:25.493Z"
 }
