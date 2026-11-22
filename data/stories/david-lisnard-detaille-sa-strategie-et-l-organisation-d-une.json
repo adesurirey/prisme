@@ -6,6 +6,28 @@
   "storyDay": "2026-11-21",
   "articles": [
     {
+      "id": "dd5096807b42",
+      "outletId": "le-figaro",
+      "headline": "Primaire de la droite et du centre : les limites fixées par Larcher et la ligne soutenue par Lisnard aiguisent les craintes d’une impasse",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/primaire-de-la-droite-et-du-centre-les-limites-fixees-par-larcher-et-la-ligne-soutenue-par-lisnard-aiguisent-les-craintes-d-une-impasse-20261122",
+      "publishedAt": "2026-11-22T07:33:12.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/22/4d21cc36ae684f463dd98b5d5cd9a81d4f0a3cc5d0a9a037e02ffaf3b34a7f49.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "c326cbaf4c62",
+      "outletId": "liberation",
+      "headline": "Pour David Lisnard, la primaire de la droite et du centre est un «moyen d’éliminer les macronistes»",
+      "url": "https://www.liberation.fr/politique/pour-david-lisnard-la-primaire-de-la-droite-et-du-centre-est-un-moyen-deliminer-les-macronistes-20261122_WJGV3ANEVZECXAV225UMW4JK4Q/",
+      "publishedAt": "2026-11-22T07:29:05.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "5c168ed5df53",
       "outletId": "le-figaro",
       "headline": "EN DIRECT - Présidentielle 2027 : David Lisnard voit une primaire comme «un moyen d’exclure les macronistes»",
@@ -124,16 +146,6 @@
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795244400000,
-      "end": 1795248000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795248000000,
       "end": 1795251600000,
@@ -363,6 +375,16 @@
         "droite": 1
       },
       "total": 1
+    },
+    {
+      "start": 1795330800000,
+      "end": 1795334400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 2
     }
   ],
   "summaries": {
