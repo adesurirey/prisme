@@ -6,6 +6,18 @@
   "storyDay": "2026-11-22",
   "articles": [
     {
+      "id": "13e9533680fb",
+      "outletId": "le-monde",
+      "headline": "Emmanuel Macron envisage de réunir le Congrès à Versailles pour faire adopter une « règle d’or » budgétaire, une procédure inédite à plus d’un titre",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/22/emmanuel-macron-envisage-de-reunir-le-congres-a-versailles-pour-faire-adopter-une-regle-d-or-budgetaire-une-procedure-inedite-a-plus-d-un-titre_6814241_823448.html",
+      "publishedAt": "2026-11-22T18:53:29.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/20/685/0/8224/4112/644/322/60/0/89a33ab_ftp-1-hyq7xa9dlnpy-fc7bfbcae4c940e39632aeaa7af41623-0-8763e9e7f5f246debf04bf9f02eda2aa.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
       "id": "d35cc8fac981",
       "outletId": "le-monde",
       "headline": "L’idée d’une « règle d’or » budgétaire dans la Constitution soutenue par Marine Le Pen et Thierry Breton, critiquée par Gabriel Zucman",
@@ -35,7 +47,7 @@
       "url": "https://www.lefigaro.fr/politique/budget-emmanuel-macron-envisagerait-un-congres-sur-la-regle-d-or-droite-et-rn-sont-favorables-mais-critiques-20261122",
       "publishedAt": "2026-11-22T17:12:47.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/22/55dcd32211e85e512a70f6684b0f832c16ec765290c816c05cf2a8378efcdbc5.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -223,16 +235,6 @@
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795284000000,
-      "end": 1795287600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795287600000,
       "end": 1795291200000,
@@ -462,6 +464,16 @@
         "droite": 2
       },
       "total": 4
+    },
+    {
+      "start": 1795370400000,
+      "end": 1795374000000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
