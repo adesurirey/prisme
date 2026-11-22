@@ -1,10 +1,32 @@
 {
   "id": "45110fc36aa8",
   "slug": "le-chu-de-guadeloupe-victime-d-une-cyberattaque-de-grande",
-  "title": "Le CHU de Guadeloupe victime d'une cyberattaque de grande ampleur",
+  "title": "Le CHU de Guadeloupe subit une cyberattaque de grande ampleur",
   "createdAt": "2026-11-22T22:01:31.699Z",
   "storyDay": "2026-11-22",
   "articles": [
+    {
+      "id": "36cd075691d3",
+      "outletId": "rfi",
+      "headline": "Le CHU de Guadeloupe victime d'une «cyberattaque de grande ampleur»",
+      "url": "https://www.rfi.fr/fr/france/20261122-le-chu-de-guadeloupe-victime-d-une-cyberattaque-de-grande-ampleur",
+      "publishedAt": "2026-11-22T22:31:01.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/0516acf0-2372-11ec-81e8-005056a90284/w:1024/p:16x9/000_9M94VC.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "c75e28ce7f1e",
+      "outletId": "tf1-info",
+      "headline": "Une \"cyberattaque de grande ampleur\" touche le CHU de Guadeloupe",
+      "url": "https://www.tf1info.fr/justice-faits-divers/une-cyberattaque-de-grande-ampleur-touche-le-chu-de-la-guadeloupe-2477494.html",
+      "publishedAt": "2026-11-22T22:04:08.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/683/centre-hospitalier-universitaire-guadeloupe-2026-6b6250-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
     {
       "id": "9804bbaae2ce",
       "outletId": "ouest-france",
@@ -42,20 +64,10 @@
     }
   ],
   "topicId": "45110fc36aa8",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "society",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795298400000,
-      "end": 1795302000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795302000000,
       "end": 1795305600000,
@@ -285,6 +297,40 @@
         "droite": 0
       },
       "total": 3
+    },
+    {
+      "start": 1795384800000,
+      "end": 1795388400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 1
+      },
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le CHU de Guadeloupe a subi une « cyberattaque de grande ampleur » ayant lourdement touché le système d'information et la téléphonie.",
+      "Le directeur Eric Guyadier a annoncé le déclenchement du plan blanc et la déprogrammation des activités sur une semaine pour prioriser les urgences.",
+      "Une cellule de crise a été activée et l'établissement anticipe plusieurs jours de perturbations tout en sécurisant ses outils."
+    ],
+    "centre": [
+      "Le CHU de la Guadeloupe a été la cible d'une « cyberattaque de grande ampleur » survenue dans la nuit de samedi 21 novembre.",
+      "Le plan blanc a été immédiatement déclenché au sein de l'établissement alors que celui-ci menait un transfert vers un nouveau site.",
+      "L'activité médicale non urgente a dû être déprogrammée afin de maintenir la prise en charge des patients présents."
+    ],
+    "droite": [
+      "Le centre hospitalier universitaire de la Guadeloupe subit une « cyberattaque de grande ampleur » depuis le samedi 21 novembre.",
+      "Les autorités sanitaires ont diffusé un appel urgent demandant à la population d'éviter de se rendre aux urgences."
+    ]
+  },
+  "differences": [
+    "La gauche insiste lourdement sur la durée des perturbations à venir et l'organisation interne de l'hôpital pour sécuriser les outils.",
+    "Le centre se focalise sur la chronologie exacte de l'attaque et la coïncidence avec le déménagement de l'hôpital vers son nouveau site.",
+    "La droite met en avant l'appel direct des autorités intimant aux patients d'éviter de se présenter aux urgences."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-22T23:01:36.987Z"
 }

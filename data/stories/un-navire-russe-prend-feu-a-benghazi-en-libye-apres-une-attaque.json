@@ -1,10 +1,22 @@
 {
   "id": "f55109603553",
   "slug": "un-navire-russe-prend-feu-a-benghazi-en-libye-apres-une-attaque",
-  "title": "Un navire russe prend feu à Benghazi en Libye après une attaque de drones",
+  "title": "Deux navires, dont un russe, sont visés par des attaques de drones à Benghazi en Libye",
   "createdAt": "2026-11-22T19:01:22.574Z",
   "storyDay": "2026-11-22",
   "articles": [
+    {
+      "id": "40dd080d469b",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, guerre en Ukraine : deux navires, dont un russe, ciblés par des attaques de drones à Benghazi, en Libye, selon les autorités locales",
+      "url": "https://www.lemonde.fr/international/live/2026/11/22/en-direct-guerre-en-ukraine-deux-navires-dont-un-russe-cibles-par-des-attaques-de-drones-a-benghazi-en-libye-selon-les-autorites-locales_6814183_3210.html",
+      "publishedAt": "2026-11-22T22:57:04.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/22/560/0/8860/4430/644/322/60/0/938b18c_ftp-1-hjzwzpxuwplr-d7873c82d905412eb8c8b8568050f431-1-ef271e4bc28c4fc8874ba6567deb0a91.jpg",
+      "frontPage": true,
+      "kind": "live",
+      "section": "world",
+      "everFrontPage": true
+    },
     {
       "id": "e713978e16e9",
       "outletId": "france-24",
@@ -17,13 +29,24 @@
       "section": "world"
     },
     {
+      "id": "a7ed66876e77",
+      "outletId": "rfi",
+      "headline": "Est de la Libye: deux navires, dont un russe, attaqués près de Benghazi",
+      "url": "https://www.rfi.fr/fr/afrique/20261122-libye-deux-navires-dont-un-russe-attaqu%C3%A9s-pr%C3%A8s-de-benghazi",
+      "publishedAt": "2026-11-22T19:32:31.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/4765da50-e6c6-11f1-8f4b-13439ca2fe89/w:1024/p:16x9/2026-11-22T160827Z-357781676-RC24TOAQ71IP-RTRMADP-3-LIBYA-PORT-EXPLOSION.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "0b6411606d37",
       "outletId": "le-monde",
       "headline": "EN DIRECT, guerre en Ukraine : un cargo russe en feu à Benghazi, les autorités de l’est de la Libye suspectent une attaque de drones",
       "url": "https://www.lemonde.fr/international/live/2026/11/22/en-direct-guerre-en-ukraine-un-cargo-russe-en-feu-a-benghazi-les-autorites-de-l-est-de-la-libye-suspectent-une-attaque-de-drones_6814183_3210.html",
       "publishedAt": "2026-11-22T18:43:43.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/22/560/0/8860/4430/644/322/60/0/938b18c_ftp-1-hjzwzpxuwplr-d7873c82d905412eb8c8b8568050f431-1-ef271e4bc28c4fc8874ba6567deb0a91.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "live",
       "section": "world",
       "everFrontPage": true
@@ -42,20 +65,10 @@
     }
   ],
   "topicId": "f55109603553",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795298400000,
-      "end": 1795302000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795302000000,
       "end": 1795305600000,
@@ -261,10 +274,10 @@
       "end": 1795377600000,
       "counts": {
         "gauche": 0,
-        "centre": 0,
+        "centre": 1,
         "droite": 0
       },
-      "total": 0
+      "total": 1
     },
     {
       "start": 1795377600000,
@@ -285,6 +298,40 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795384800000,
+      "end": 1795388400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Deux bateaux, dont un navire russe, ont subis des frappes de drones à Benghazi selon les autorités de l'est libyen.",
+      "Le premier navire visé était en escale de ravitaillement dans la base navale avant de reprendre la route vers la Russie.",
+      "Un second bâtiment a été touché au large de la ville quelques heures plus tard dans la même journée de dimanche."
+    ],
+    "centre": [
+      "Un incendie et une explosion ont touché un bateau russe dans la base navale de Benghazi suite à une frappe de drones maritimes.",
+      "Une source médicale indique qu'au moins dix personnes de nationalités russe et libyenne ont été blessées lors de cet événement.",
+      "Un second navire a été frappé dans la soirée au large de cette même ville côtière libyenne."
+    ],
+    "droite": [
+      "Les autorités locales signalent qu'un navire russe présent dans la base navale de Benghazi a probablement été la cible d'une attaque de drones.",
+      "Un incident marqué par une violente explosion est survenu à bord du bateau dans le port de la ville."
+    ]
+  },
+  "differences": [
+    "La gauche insiste sur le cumul des deux attaques successives et le contexte ukrainien.",
+    "Le centre détaille les bilans humains fournis par les sources médicales et l'utilisation de drones maritimes.",
+    "La droite se focalise prudemment sur le premier incident au port en reprenant le caractère probable de l'attaque."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-22T23:01:36.987Z"
 }

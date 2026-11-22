@@ -1,10 +1,21 @@
 {
   "id": "b42a44b5edd0",
   "slug": "le-joueur-du-psg-desire-doue-est-victime-d-une-tentative-de",
-  "title": "Désiré Doué victime d'une tentative de cambriolage dans les Yvelines",
+  "title": "Désiré Doué subit une tentative de cambriolage dans les Yvelines après sa blessure avec le PSG",
   "createdAt": "2026-11-22T20:01:27.794Z",
   "storyDay": "2026-11-22",
   "articles": [
+    {
+      "id": "5b23fa2d15cb",
+      "outletId": "cnews",
+      "headline": "Football : Désiré Doué victime d'une tentative de cambriolage à son domicile",
+      "url": "https://www.cnews.fr/sport/2026-11-22/football-desire-doue-victime-dune-tentative-de-cambriolage-son-domicile-1959392",
+      "publishedAt": "2026-11-22T22:07:59.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/votre_texte_de_paragraphe_7_6b0366c63422b.png?h=46ee26fc&itok=L0ssCprx",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
     {
       "id": "d4f03004387b",
       "outletId": "europe-1",
@@ -53,20 +64,10 @@
     }
   ],
   "topicId": "b42a44b5edd0",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "sport",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795298400000,
-      "end": 1795302000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795302000000,
       "end": 1795305600000,
@@ -296,26 +297,35 @@
         "droite": 1
       },
       "total": 1
+    },
+    {
+      "start": 1795384800000,
+      "end": 1795388400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "centre": [
-      "Le domicile de Désiré Doué à Orgeval dans les Yvelines a été visé par une tentative de cambriolage ce samedi 21 novembre.",
-      "Trois ou quatre individus ont tenté d'entrer par effraction en escaladant le portail de la propriété.",
-      "Les faits se sont déroulés alors que le joueur venait de subir une rupture du ligament croisé antérieur du genou droit lors du match contre l'OGC Nice."
+      "L'attaquant du PSG Désiré Doué a subi une rupture du ligament croisé antérieur du genou droit lors du match contre l'OGC Nice.",
+      "Le domicile du joueur situé à Orgeval dans les Yvelines a fait l'objet d'une tentative d'effraction le même soir.",
+      "Trois jeunes individus ont été interceptés par les gendarmes alors qu'ils tentaient d'escalader le portail de la propriété."
     ],
     "droite": [
-      "Quatre personnes ont tenté de cambrioler le domicile de l'attaquant du PSG Désiré Doué à Orgeval, dans les Yvelines.",
-      "Un premier groupe s'est présenté en soirée pour prendre des photographies avant qu'un groupe plus large n'escalade le portail.",
-      "La compagne du joueur a mis les intrus en fuite par l'arrière de la propriété.",
-      "Le joueur se trouvait à Nice où il a été gravement blessé au genou droit lors de la même rencontre."
+      "Désiré Doué s'est gravement blessé face à l'OGC Nice, subissant une rupture du ligament croisé antérieur.",
+      "Dans la même soirée, son domicile d'Orgeval dans les Yvelines a été visé par une tentative de cambriolage impliquant plusieurs individus.",
+      "Un premier groupe s'est présenté en amont pour prendre des photographies avant que quatre suspects ne pénètrent dans la propriété et soient mis en fuite par la compagne du joueur."
     ]
   },
   "differences": [
-    "Le centre associe immédiatement la tentative de cambriolage à la grave blessure du joueur survenue le même jour à Nice.",
-    "La droite détaille précisément le déroulement des faits, notamment les repérages en soirée et l'intervention de la compagne pour mettre les intrus en fuite."
+    "Le centre privilégie un récit factuel et direct centré sur l'intervention des forces de l'ordre au domicile du joueur.",
+    "La droite détaille l'chronologie précise des faits, insistant sur la double incursion des suspects et l'intervention de la compagne pour mettre fin à l'intrusion."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-22T22:01:31.699Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-22T23:01:36.987Z"
 }
