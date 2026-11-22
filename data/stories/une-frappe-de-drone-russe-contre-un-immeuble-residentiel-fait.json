@@ -6,6 +6,17 @@
   "storyDay": "2026-11-22",
   "articles": [
     {
+      "id": "23554da0afa8",
+      "outletId": "rfi",
+      "headline": "Ukraine: six morts lors de frappes russes dans la région de Kiev",
+      "url": "https://www.rfi.fr/fr/europe/20261122-ukraine-six-morts-lors-de-frappes-russes-dans-la-r%C3%A9gion-de-kiev",
+      "publishedAt": "2026-11-22T19:13:08.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/36f11050-e6a7-11f1-b4f6-e56ab3dc0809/w:1024/p:16x9/AP26326269093758.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "11211a0add5b",
       "outletId": "france-24",
       "headline": "Ukraine : au moins deux morts après une frappe de drone russe contre un immeuble résidentiel",
@@ -41,40 +52,10 @@
     }
   ],
   "topicId": "e287584c7af0",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795280400000,
-      "end": 1795284000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795284000000,
-      "end": 1795287600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795287600000,
-      "end": 1795291200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795291200000,
       "end": 1795294800000,
@@ -284,25 +265,54 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795366800000,
+      "end": 1795370400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795370400000,
+      "end": 1795374000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795374000000,
+      "end": 1795377600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Un drone russe a touché un immeuble de cinq étages à Dymer, localité située au nord de Kiev.",
-      "Le bilan provisoire fait état de deux morts et de onze personnes portées disparues.",
-      "Les équipes de secours poursuivent activement leur intervention sur place."
+      "Un drone russe a ciblé un immeuble résidentiel de cinq étages à Dymer, au nord de Kiev, faisant au moins deux morts et onze disparus selon les secours.",
+      "Les opérations de secours se poursuivent sur les lieux de l'attaque."
     ],
     "centre": [
-      "Une frappe de drone russe a atteint un immeuble résidentiel dans l'oblast de Kiev un dimanche matin.",
-      "Le président ukrainien Volodymyr Zelensky et les autorités locales ont confirmé la mort d'au moins deux personnes.",
-      "Environ une dizaine d'habitants pourraient se trouver bloqués sous les décombres de l'édifice."
+      "Une série de frappes de drones russes dans la région de Kiev a provoqué la mort d'au moins deux à six personnes selon les bilans et fait des dizaines de blessés.",
+      "Le président Volodymyr Zelensky et les autorités locales ont confirmé l'attaque sur un immeuble d'habitation au milieu d'une nouvelle offensive de Moscou.",
+      "Un immeuble de cinq étages a été détruit au début de la journée, laissant craindre de nombreuses personnes piégées sous les décombres."
     ]
   },
   "differences": [
-    "La gauche localise précisément l'impact à Dymer et chiffre précisément à onze les disparus.",
-    "Le centre se concentre sur les déclarations du président ukrainien concernant l'ensemble de la région de Kiev."
+    "Le camp gauche se concentre spécifiquement sur l'attaque localisée à Dymer et le travail en cours des secours pour retrouver les onze personnes portées disparues.",
+    "Le camp centre adopte une perspective plus large sur l'offensive de Moscou dans toute la région de Kiev, soulignant les bilans humains contradictoires et l'intervention des autorités locales."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-22T19:01:22.574Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-22T22:01:31.699Z"
 }

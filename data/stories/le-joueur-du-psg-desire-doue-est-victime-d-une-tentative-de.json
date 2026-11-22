@@ -6,6 +6,17 @@
   "storyDay": "2026-11-22",
   "articles": [
     {
+      "id": "d4f03004387b",
+      "outletId": "europe-1",
+      "headline": "Tentative de cambriolage au domicile de l'attaquant du PSG Désiré Doué",
+      "url": "https://www.europe1.fr/faits-divers/tentative-de-cambriolage-au-domicile-de-lattaquant-du-psg-desire-doue-1242370?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-22T21:10:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/22/22/000_d8am464_1_6b035a0945da2.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "a2fbebec1f21",
       "outletId": "ouest-france",
       "headline": "PSG. Gravement blessé contre Nice, Désiré Doué a aussi dû faire face à une tentative de cambriolage de son domicile",
@@ -42,20 +53,10 @@
     }
   ],
   "topicId": "b42a44b5edd0",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "sport",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795294800000,
-      "end": 1795298400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795298400000,
       "end": 1795302000000,
@@ -285,6 +286,36 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1795381200000,
+      "end": 1795384800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Le domicile de Désiré Doué à Orgeval dans les Yvelines a été visé par une tentative de cambriolage ce samedi 21 novembre.",
+      "Trois ou quatre individus ont tenté d'entrer par effraction en escaladant le portail de la propriété.",
+      "Les faits se sont déroulés alors que le joueur venait de subir une rupture du ligament croisé antérieur du genou droit lors du match contre l'OGC Nice."
+    ],
+    "droite": [
+      "Quatre personnes ont tenté de cambrioler le domicile de l'attaquant du PSG Désiré Doué à Orgeval, dans les Yvelines.",
+      "Un premier groupe s'est présenté en soirée pour prendre des photographies avant qu'un groupe plus large n'escalade le portail.",
+      "La compagne du joueur a mis les intrus en fuite par l'arrière de la propriété.",
+      "Le joueur se trouvait à Nice où il a été gravement blessé au genou droit lors de la même rencontre."
+    ]
+  },
+  "differences": [
+    "Le centre associe immédiatement la tentative de cambriolage à la grave blessure du joueur survenue le même jour à Nice.",
+    "La droite détaille précisément le déroulement des faits, notamment les repérages en soirée et l'intervention de la compagne pour mettre les intrus en fuite."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-22T22:01:31.699Z"
 }

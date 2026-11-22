@@ -6,6 +6,18 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "6ba36dd35d23",
+      "outletId": "le-monde",
+      "headline": "A la COP31, la communauté internationale s’est fracturée sur la sortie des énergies fossiles et le financement de l’adaptation",
+      "url": "https://www.lemonde.fr/planete/article/2026/11/22/a-la-cop31-la-communaute-internationale-sort-dechiree-face-au-manque-d-ambition-sur-la-sortie-des-energies-fossiles-et-les-transferts-financiers_6814242_3244.html",
+      "publishedAt": "2026-11-22T19:08:00.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/22/58/0/2278/1139/644/322/60/0/fbea2a7_ftp-1-bdaf97jsqzbc-57411e6726b849d9b1e218144a872fde-0-ba16f37da3ba4f61a533ba75f2833014.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "6b7d46611637",
       "outletId": "franceinfo",
       "headline": "COP31 : le sommet pour le climat s’achève à Antalya sans accord final, de nombreux pays restant divisés sur la question des énergies fossiles",
@@ -33,7 +45,7 @@
       "url": "https://www.ouest-france.fr/environnement/cop21/en-turquie-la-cop-31-echoue-sur-la-question-de-labandon-des-energies-fossiles-de1759c2-e682-11f1-afa7-9a0bb82a33d1?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-22T18:16:48.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYTZlMTE2ZDA1MDFkYjI1MDcwYmJiMzk2OGU4NzE4MWE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=c99c86f5bd27d51b01ddf23a21ffe3f7c21688781ed595cc084efb58f1f6039b",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -827,11 +839,11 @@
       "start": 1795302000000,
       "end": 1795388400000,
       "counts": {
-        "gauche": 16,
+        "gauche": 17,
         "centre": 28,
         "droite": 11
       },
-      "total": 55
+      "total": 56
     }
   ],
   "summaries": {
