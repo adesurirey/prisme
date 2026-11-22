@@ -6,6 +6,51 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "7a76364b7efb",
+      "outletId": "le-parisien",
+      "headline": "« Un échec » : en Turquie, l’impasse sur les énergies fossiles condamne la COP31",
+      "url": "https://www.leparisien.fr/environnement/climat/un-echec-en-turquie-limpasse-sur-les-energies-fossiles-condamne-la-cop31-22-11-2026-F2WMO6SWBNHLNNGBPG3WEDTD4E.php",
+      "publishedAt": "2026-11-22T18:01:23.426Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "54fd0ef5b282",
+      "outletId": "franceinfo",
+      "headline": "L'absence d'accord à l'issue de la COP 31 est \"frustrant\", réagit Laurence Tubiana, présidente de la Fondation européenne pour le climat",
+      "url": "https://www.franceinfo.fr/environnement/crise-climatique/cop-climat/l-absence-d-accord-a-l-issue-de-la-cop-31-est-frustrant-reagit-laurence-tubiana-presidente-de-la-fondation-europeenne-pour-le-climat_8295074.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-22T17:16:53.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/A5e5Ww0bnjEAvzjpjPa9cf2Zk-Y/0x0:1280x720/432x243/filters:format(jpg)/2022/08/31/phpUL7SJg.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "f8e6632a2152",
+      "outletId": "le-monde",
+      "headline": "La COP31 s’achève sur un échec, sans accord devant la division des pays sur les énergies fossiles",
+      "url": "https://www.lemonde.fr/climat/article/2026/11/22/la-cop31-s-acheve-sur-un-echec-sans-accord-devant-la-division-des-pays-sur-les-energies-fossiles_6814199_1652613.html",
+      "publishedAt": "2026-11-22T17:11:49.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/22/165/0/2803/1401/644/322/60/0/5289506_ftp-1-ek202bqq2pqs-3792d361fabb4fecb2415873fc099424-0-5bd4a13d39904f6186ed418e2f6ba2cf.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
+      "id": "fe75a475f8cc",
+      "outletId": "la-croix",
+      "headline": "Échec de la COP31 : les dinosaures font de la résistance",
+      "url": "https://www.la-croix.com/a-vif/echec-de-la-cop31-les-dinosaures-font-de-la-resistance-20261122",
+      "publishedAt": "2026-11-22T16:54:03.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/09/30/25491802-jerome-chapuis-directeur-de-la-croix.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
       "id": "7f8416f58d4d",
       "outletId": "ouest-france",
       "headline": "La Cop31 s’achève sans accord : 2009, 2024… Ces autres fois où la conférence sur le climat a débouché sur une impasse",
@@ -126,6 +171,18 @@
       "frontPage": false,
       "kind": "news",
       "section": "world"
+    },
+    {
+      "id": "7d114c37d496",
+      "outletId": "20-minutes",
+      "headline": "COP31 : Aucun accord n'a été trouvé au terme de la plus longue COP de l'histoire",
+      "url": "https://www.20minutes.fr/planete/cop/4264769-20261122-cop31-aucun-accord-trouve-terme-plus-longue-cop-histoire?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-22T14:24:35.000Z",
+      "imageUrl": "https://img.20mn.fr/DPm2EXKyRNKdCXTJskJpZSk/1200x768_21-novembre-2026-turquie-antalya-des-personnes-se-tiennent-devant-les-panneaux-cop31-la-conference-mondiale-sur-le-climat-cop31-a-fait-des-heures-supplementaires-les-difficiles-negociations-se-sont-poursuivies-samedi-photo-martina-herzog-dpa-ur-newsml-dpa-com-20090101-261121-99-350863-martina-herzog-dpa-sipa-2611211541",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
     },
     {
       "id": "3a42876ed2d6",
@@ -311,7 +368,7 @@
       "url": "https://www.lemonde.fr/climat/article/2026/11/22/climat-l-ue-et-ses-membres-s-opposent-a-l-adoption-de-la-decision-finale-proposee-a-la-cop31_6814199_1652613.html",
       "publishedAt": "2026-11-22T11:32:54.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/22/187/0/5832/2916/644/322/60/0/16dbaee_ftp-1-v2roqf7lcqfo-afp-d8a74zq.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -704,11 +761,11 @@
       "start": 1795302000000,
       "end": 1795388400000,
       "counts": {
-        "gauche": 10,
-        "centre": 25,
+        "gauche": 13,
+        "centre": 27,
         "droite": 9
       },
-      "total": 44
+      "total": 49
     }
   ],
   "summaries": {

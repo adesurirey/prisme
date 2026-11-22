@@ -6,6 +6,17 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "59e7161d4938",
+      "outletId": "tf1-info",
+      "headline": "Cargo échoué dans les Landes : les autorités maritimes espèrent une fenêtre météo mardi pour le remettre à flot",
+      "url": "https://www.tf1info.fr/meteo/video-tf1-cargo-echoue-dans-les-landes-les-autorites-maritimes-esperent-une-fenetre-meteo-mardi-pour-le-remettre-a-flot-2477421.html",
+      "publishedAt": "2026-11-22T16:30:01.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/960/540/le-cargo-miro-g-echoue-sur-la-cote-landais-22-nov-2026-40a9da-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "67ef814bf12b",
       "outletId": "bfmtv",
       "headline": "Cargo échoué dans les Landes: pourquoi le remorquage pourrait prendre plusieurs jours",
@@ -548,34 +559,34 @@
       "counts": {
         "gauche": 0,
         "centre": 2,
-        "droite": 0
+        "droite": 1
       },
-      "total": 2
+      "total": 3
     }
   ],
   "summaries": {
     "gauche": [
-      "Le vraquier maltais Miro G s'est échoué dans la nuit sur la plage de Lit-et-Mixe sans faire de blessé selon L'Obs et Libération.",
-      "Dix-neuf marins ont été hélitreuillés vers un centre d'hébergement tandis que trois autres sont restés à bord du navire d'après Le Monde et franceinfo.",
-      "L'opération de remorquage menée par le bateau Abeille Bretagne pourrait durer plusieurs jours en raison de faibles fonds marins et de fortes houles."
+      "Le vraquier battant pavillon maltais Miro G s'est échoué sur la plage de Lit-et-Mixe dans la nuit de jeudi à vendredi.",
+      "Dix-neuf marins ont été hélitreuillés vers un centre d'hébergement tandis que trois autres sont restés à bord pour sécuriser le navire.",
+      "Le remorquage du navire de 169 mètres s'annonce complexe et pourrait prendre plusieurs jours en raison d'une météo capricieuse et d'une forte houle."
     ],
     "centre": [
-      "Un cargo de 169 mètres sous pavillon maltais s'est échoué sur le littoral des Landes à la suite de vents violents et d'une forte houle.",
-      "Une partie de l'équipage a été évacuée par hélicoptère tandis que le capitaine et deux adjoints sont restés à bord avec des experts.",
-      "Les équipes préparent le déséchouement pour éviter que le navire ne chavire, une opération rendue complexe par les conditions météorologiques."
+      "Le cargo Miro-G s'est échoué sur la côte landaise à Lit-et-Mixe en raison de vents violents et de la houle.",
+      "Une première opération a permis d'hélitreuiller 19 marins, puis onze personnes supplémentaires ont été évacuées par sécurité.",
+      "Le remorqueur Abeille Bretagne a été dépêché sur zone, mais le déséchouement est rendu difficile par les faibles fonds marins et des contraintes techniques."
     ],
     "droite": [
-      "Le cargo Miro G s'est échoué sur la côte landaise à Lit-et-Mixe après des difficultés de manœuvre liées à des vents de 48 nœuds.",
-      "Le dispositif ORSEC maritime a été activé au niveau 3 et un hélicoptère a évacué une partie des marins.",
-      "Le Figaro et Europe 1 soulignent l'intervention rapide des secours tandis que CNews insiste sur la dérive incontrôlée du navire."
+      "Le cargo Miro-G, long de 169 mètres et battant pavillon maltais, s'est échoué sur une plage de Lit-et-Mixe sous l'effet de vents violents.",
+      "Les marins ont été évacués par hélicoptère, et l'ensemble de l'équipage ainsi que les experts ont finalement été mis en sécurité.",
+      "Les autorités maritimes estiment que le remorquage sera une opération périlleuse nécessitant d'alléger le navire avant de profiter d'une fenêtre météo favorable."
     ]
   },
   "differences": [
-    "La gauche privilégie un suivi chronologique détaillé des opérations d'évacuation des marins et met l'accent sur les difficultés techniques et les délais prolongés du remorquage.",
-    "Le centre adopte un format factuel et direct centré sur le déroulement des secours, l'évaluation des risques de pollution et la complexité des manœuvres de déséchouement.",
-    "La droite insiste immédiatement sur l'alerte des services maritimes, l'activation du niveau 3 du dispositif ORSEC et les conditions météorologiques extrêmes ayant provoqué la dérive."
+    "La gauche met l'accent sur les aspects humains et logistiques de l'évacuation de l'équipage, tout en insistant sur la menace climatique et maritime qui pèse sur le littoral.",
+    "La presse du centre adopte un format de suivi direct très factuel, détaillant heure par heure les contraintes techniques du remorqueur et les manœuvres de la préfecture.",
+    "La droite insiste particulièrement sur le caractère spectaculaire de l'événement en soulignant l'afflux de curieux sur les plages et la menace directe de la houle sur la coque du navire."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 37,
-  "summarizedAt": "2026-11-21T17:01:36.206Z"
+  "summarizedArticleCount": 47,
+  "summarizedAt": "2026-11-22T18:01:23.426Z"
 }
