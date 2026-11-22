@@ -6,13 +6,35 @@
   "storyDay": "2026-11-20",
   "articles": [
     {
+      "id": "f891456961c8",
+      "outletId": "rfi",
+      "headline": "COP31: une nuit de négociations, un nouveau texte, mais toujours pas de mention des énergies fossiles",
+      "url": "https://www.rfi.fr/fr/environnement/20261122-cop31-une-nuit-de-n%C3%A9gociations-un-nouveau-texte-mais-toujours-pas-de-mention-des-%C3%A9nergies-fossiles",
+      "publishedAt": "2026-11-22T05:17:50.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/9d864214-e633-11f1-bb0e-e56ab3dc0809/w:1024/p:16x9/AP26325798691497.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "8cb570ab78d8",
+      "outletId": "courrier-international",
+      "headline": "À la Cop31, “une seconde nuit de prolongation” en quête d’un accord",
+      "url": "https://www.courrierinternational.com/article/climat-a-la-cop31-une-seconde-nuit-de-prolongation-en-quete-d-un-accord_289149",
+      "publishedAt": "2026-11-22T04:55:06.000Z",
+      "imageUrl": "https://focus.courrierinternational.com/2026/11/21/0/0/2019/1346/644/0/60/0/1612dde_ftp-1-xexuuhgozbh6-2026-11-21t223420z-455261525-rc2msoa63o2l-rtrmadp-3-climate-cop31.JPG",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "0fed98bddbed",
       "outletId": "ouest-france",
       "headline": "Cop31 : au bord de l’impasse, un nouveau texte final proposé mais sans mention des énergies fossiles",
       "url": "https://www.ouest-france.fr/environnement/cop21/cop31-au-bord-de-limpasse-un-nouveau-texte-final-propose-mais-sans-mention-des-energies-fossiles-6c1643a6-e623-11f1-bd4e-6f30b8f49e21?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-22T03:36:23.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZWM2OWQyNDAzNTYwZTZhZWExYjY1Mjc4YzJiZjZjZmI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=e7c195fdb855f61c47f429b1b0d535a9f001b92a326c2203caba94049d416523",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -643,6 +665,26 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1795320000000,
+      "end": 1795323600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1795323600000,
+      "end": 1795327200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
