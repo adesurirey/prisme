@@ -6,6 +6,17 @@
   "storyDay": "2026-11-22",
   "articles": [
     {
+      "id": "f1bc5b0eb1a3",
+      "outletId": "tf1-info",
+      "headline": "Propos racistes et photo de salut nazi dans une école de la police en Seine-et-Marne : ce que l'on sait",
+      "url": "https://www.tf1info.fr/justice-faits-divers/video-propos-racistes-et-photo-de-salut-nazi-dans-une-ecole-de-la-police-en-seine-et-marne-ce-que-l-on-sait-2477587.html",
+      "publishedAt": "2026-11-23T11:24:59.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/des-conversations-entre-policiers-font-scandale-ce-que-l-on-sait-dc2cb2-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "e06adfaea349",
       "outletId": "lobs",
       "headline": "Propos racistes et salut nazi dans une école de police en Seine-et-Marne : ce que l’on sait",
@@ -140,20 +151,10 @@
     }
   ],
   "topicId": "1eac2aa5bfad",
-  "titledArticleCount": 10,
+  "titledArticleCount": 13,
   "section": "society",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795345200000,
-      "end": 1795348800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795348800000,
       "end": 1795352400000,
@@ -383,31 +384,41 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795431600000,
+      "end": 1795435200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le parquet de Fontainebleau a été saisi par la direction générale de la police nationale après des révélations sur des discussions en ligne entre élèves officiers de l'École nationale supérieure de la police à Cannes-Écluse.",
-      "Des dessins racistes, des saluts nazis et des propos sexistes ont circulé dans ces boucles privées au sein de la 31e promotion.",
-      "Libération souligne que l'école n'avait prononcé aucune sanction initiale malgré les alertes."
+      "La direction générale de la police nationale a saisi la justice à la suite des révélations du journal Le Parisien concernant des messages racistes et un salut nazi au sein de l'École nationale supérieure de la police de Cannes-Écluse.",
+      "Plusieurs élèves s'étaient signalés auprès de leur hiérarchie il y a trois mois, mais aucune sanction n'avait alors été prononcée par l'établissement.",
+      "Les conversations en ligne incriminées mettent en cause de futurs officiers de la 31e promotion, évoquant également des contenus sexistes et des caricatures."
     ],
     "centre": [
-      "Le patron de la police nationale a saisi la justice suite à la publication d'une enquête du Parisien concernant l'École nationale supérieure de la police de Cannes-Écluse en Seine-et-Marne.",
-      "Une enquête administrative menée par l'IGPN et une enquête judiciaire ont été ouvertes après la diffusion de messages racistes et d'une photo de salut nazi entre élèves-officiers.",
-      "Un élève a d'ores et déjà été suspendu à la suite de ces signalements."
+      "Le patron de la police nationale a saisi le parquet de Fontainebleau après la diffusion de messages racistes, de caricatures et d'une photo de salut nazi au sein de l'ENSP de Cannes-Écluse.",
+      "Une enquête administrative a été ouverte en parallèle des investigations judiciaires concernant ces élèves-officiers.",
+      "Un élève a été suspendu à la suite de ces signalements."
     ],
     "droite": [
-      "La direction générale de la police nationale a effectué un signalement au parquet de Fontainebleau après la diffusion de contenus racistes et d'un salut nazi au sein de l'ENSP de Cannes-Écluse.",
-      "Les investigations, confirmées par une source proche du dossier, ciblent des conversations privées entre futurs officiers de police de la 31e promotion.",
-      "Une enquête administrative a également été menée par l'IGPN, aboutissant à des propositions de sanctions en plus de la suspension d'un élève."
+      "La direction générale de la police nationale a saisi la justice après la diffusion de messages racistes et d'une photo de salut nazi dans des discussions privées entre élèves de la 31e promotion de l'ENSP de Cannes-Écluse.",
+      "L'Inspection générale de la police nationale a mené une enquête administrative et des sanctions ont été proposées par les autorités.",
+      "Un élève a été suspendu à ce stade des investigations, dont les résultats ne font aucun doute selon une source proche du dossier."
     ]
   },
   "differences": [
-    "La gauche insiste sur la gravité des faits en associant le racisme au sexisme et pointe l'absence de sanction initiale de la part de l'école.",
-    "Le centre adopte un format factuel et synthétique centré sur la saisine de la justice par la direction générale de la police et l'ouverture des enquêtes.",
-    "La droite met en avant la rapidité des suites administratives et judiciaires ainsi que le détail précis des investigations menées par l'IGPN."
+    "La gauche insiste sur l'inertie initiale de la hiérarchie en soulignant l'absence de sanctions malgré des signalements tardifs, qualifiant le phénomène de racisme décomplexé.",
+    "Le centre livre un compte-rendu factuel et synthétique des saisines judiciaires et administratives en se concentrant sur les mesures prises par la direction.",
+    "La droite met en avant la rapidité de la réaction institutionnelle et la certitude des enquêteurs quant aux faits reprochés aux futurs officiers."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 10,
-  "summarizedAt": "2026-11-23T08:01:38.029Z"
+  "summarizedArticleCount": 13,
+  "summarizedAt": "2026-11-23T12:01:29.804Z"
 }
