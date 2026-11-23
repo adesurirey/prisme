@@ -6,6 +6,17 @@
   "storyDay": "2026-11-22",
   "articles": [
     {
+      "id": "9b2d3477a7d7",
+      "outletId": "le-monde",
+      "headline": "Dans le Pas-de-Calais, la Canche amorce sa décrue, mais le risque de débordements perdure selon Vigicrues",
+      "url": "https://www.lemonde.fr/planete/article/2026/11/23/dans-le-pas-de-calais-la-canche-amorce-sa-decrue-mais-le-risque-de-debordements-perdure-selon-vigicrues_6814357_3244.html",
+      "publishedAt": "2026-11-23T06:55:56.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/19/503/0/6036/3018/644/322/60/0/4d4b042_ftp-1-2ghnoaiapvwv-afp-d7zm3g3.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
       "id": "49c7865233b9",
       "outletId": "bfmtv",
       "headline": "Inondations dans le Pas-de-Calais: la Canche a amorcé sa décrue mais reste placée en vigilance orange",
@@ -23,7 +34,7 @@
       "url": "https://www.ouest-france.fr/meteo/intemperies/meteo-le-pas-de-calais-reste-en-vigilance-orange-crues-ce-lundi-la-corse-toujours-concernee-par-de-forts-vents-81aaa4d0-e6fc-11f1-afa7-9a0bb82a33d1?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-23T05:37:46.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTNmODBiZGZhZjYzYjFkNjAyYTFjZTA1MTUzNTg4NmY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=f0637f84a4369fbceeaed288edd22857feda90e22f19fffb8838615e5ed68755",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -371,6 +382,16 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1795413600000,
+      "end": 1795417200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {

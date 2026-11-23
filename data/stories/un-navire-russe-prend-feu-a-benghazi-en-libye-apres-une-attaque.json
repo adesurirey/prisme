@@ -6,6 +6,17 @@
   "storyDay": "2026-11-22",
   "articles": [
     {
+      "id": "4210122d7358",
+      "outletId": "bfmtv",
+      "headline": "Deux navires, dont un russe, attaqués dans un port de Libye",
+      "url": "https://www.bfmtv.com/international/asie/russie/video-deux-navires-dont-un-russe-attaques-dans-un-port-de-libye_VN-202611230214.html",
+      "publishedAt": "2026-11-23T06:56:45.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/HeZn8HyYBC87tF-r42B8rwOI61o=/0x0:1280x720/800x0/images/Deux-navires-dont-un-russe-attaques-dans-un-port-de-Libye-2388721.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "9d72c9e83042",
       "outletId": "bfmtv",
       "headline": "Deux navires, dont un russe, attaqués dans un port de Libye, l'ONU demande une enquête",
@@ -76,20 +87,10 @@
     }
   ],
   "topicId": "f55109603553",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795327200000,
-      "end": 1795330800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795330800000,
       "end": 1795334400000,
@@ -319,30 +320,41 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795413600000,
+      "end": 1795417200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Deux bateaux, dont un navire russe, ont subis des frappes de drones à Benghazi selon les autorités de l'est libyen.",
-      "Le premier navire visé était en escale de ravitaillement dans la base navale avant de reprendre la route vers la Russie.",
-      "Un second bâtiment a été touché au large de la ville quelques heures plus tard dans la même journée de dimanche."
+      "Les autorités de l'est de la Libye ont signalé deux attaques de drones distinctes contre des navires au large de Benghazi.",
+      "Un premier bateau russe a été touché dans la base navale, suivi d'une seconde frappe sur un autre navire dans la même zone portuaire.",
+      "Le premier navire visé effectuait une escale de ravitaillement en carburant et en vivres en route vers la Russie."
     ],
     "centre": [
-      "Un incendie et une explosion ont touché un bateau russe dans la base navale de Benghazi suite à une frappe de drones maritimes.",
-      "Une source médicale indique qu'au moins dix personnes de nationalités russe et libyenne ont été blessées lors de cet événement.",
-      "Un second navire a été frappé dans la soirée au large de cette même ville côtière libyenne."
+      "Deux navires, dont un bâtiment russe, ont été pris pour cible par des attaques de drones dans le port de Benghazi en Libye.",
+      "L'ONU a réclamé l'ouverture d'une enquête officielle suite à ces frappes maritimes.",
+      "Des sources médicales font état d'au moins dix blessés, incluant des ressortissants russes et libyens, au sein de la base navale.",
+      "Ces incidents surviennent dans un contexte d'intensification des frappes ukrainiennes à longue portée contre la Russie."
     ],
     "droite": [
-      "Les autorités locales signalent qu'un navire russe présent dans la base navale de Benghazi a probablement été la cible d'une attaque de drones.",
-      "Un incident marqué par une violente explosion est survenu à bord du bateau dans le port de la ville."
+      "Un navire russe a subi une explosion dans le port de Benghazi à la suite d'une attaque vraisemblablement menée par des drones.",
+      "Les autorités locales confirment que le bateau se trouvait dans la base navale au moment des faits."
     ]
   },
   "differences": [
-    "La gauche insiste sur le cumul des deux attaques successives et le contexte ukrainien.",
-    "Le centre détaille les bilans humains fournis par les sources médicales et l'utilisation de drones maritimes.",
-    "La droite se focalise prudemment sur le premier incident au port en reprenant le caractère probable de l'attaque."
+    "La gauche met l'accent sur la chronologie des deux frappes successives et sur les détails logistiques de l'escale du navire russe.",
+    "Le centre élargit le spectre factuel en insistant sur le bilan des blessés, la demande d'enquête de l'ONU et le contexte géopolitique ukrainien.",
+    "La droite se focalise sobrement sur l'explosion du navire russe et la probabilité d'une attaque de drones selon les autorités locales."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-22T23:01:36.987Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-23T07:01:30.033Z"
 }
