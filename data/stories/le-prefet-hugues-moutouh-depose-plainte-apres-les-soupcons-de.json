@@ -1,10 +1,33 @@
 {
   "id": "cc68c73bb33b",
   "slug": "le-prefet-hugues-moutouh-depose-plainte-apres-les-soupcons-de",
-  "title": "Le préfet Hugues Moutouh dépose plainte après les soupçons de fuites vers le RN",
+  "title": "Soupçons de fuites vers le RN : le préfet Hugues Moutouh dénonce un lynchage médiatique et annonce porter plainte",
   "createdAt": "2026-11-23T07:01:30.033Z",
   "storyDay": "2026-11-23",
   "articles": [
+    {
+      "id": "196c40672d6d",
+      "outletId": "le-parisien",
+      "headline": "Soupçons de fuites vers le RN : le préfet Hugues Moutouh dénonce « un lynchage médiatique commandé » et annonce vouloir porter plainte",
+      "url": "https://www.leparisien.fr/politique/soupcons-de-fuites-vers-le-rn-le-prefet-hugues-moutouh-denonce-un-lynchage-mediatique-commande-et-annonce-vouloir-porter-plainte-23-11-2026-G7QEOLYKQRBERIB4ZFWX4R3Q6M.php",
+      "publishedAt": "2026-11-23T08:01:38.029Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "4e06be1d4528",
+      "outletId": "ouest-france",
+      "headline": "Soupçons de fuite vers le RN : le préfet Hugues Moutouh annonce qu’il va déposer plainte",
+      "url": "https://www.ouest-france.fr/politique/rassemblement-national/soupcons-de-fuite-vers-le-rn-le-prefet-hugues-moutouh-annonce-quil-va-deposer-plainte-3c37c144-e70b-11f1-afa7-9a0bb82a33d1?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-23T07:23:07.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExY2QyZTdkOTA2MTgzMjdhNmJjYTVhYzM3ZDE2ZmI3YTA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=c805398d683a319e8702801e9cc6189608f3a959321efa30057d2fb90c07d145",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
     {
       "id": "83a46ccb1681",
       "outletId": "le-figaro",
@@ -30,30 +53,10 @@
     }
   ],
   "topicId": "c5c12ea1f405",
-  "titledArticleCount": 2,
+  "titledArticleCount": 4,
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795330800000,
-      "end": 1795334400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795334400000,
-      "end": 1795338000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795338000000,
       "end": 1795341600000,
@@ -273,6 +276,45 @@
         "droite": 2
       },
       "total": 2
+    },
+    {
+      "start": 1795417200000,
+      "end": 1795420800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1795420800000,
+      "end": 1795424400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "centre": [
+      "Le préfet Hugues Moutouh a indiqué sur Europe 1 son intention de déposer plainte après des soupçons de fuites d'informations vers le Rassemblement national.",
+      "Visé par ces accusations concernant des enquêtes visant le parti, le haut fonctionnaire a demandé à être relevé de ses fonctions.",
+      "Il a qualifié les accusations de « lynchage médiatique commandé » et engage des poursuites pour violation du secret de l'enquête, recel et complicité."
+    ],
+    "droite": [
+      "Le préfet du Centre-Val de Loire Hugues Moutouh a annoncé sur Europe 1 qu'il allait porter plainte pour violation du secret de l'enquête.",
+      "Mis en cause pour avoir transmis des données sur des investigations touchant le Rassemblement national, il dénonce un « lynchage médiatique ».",
+      "Affirmant vouloir savoir « qui veut sa tête », le représentant de l'État assure qu'il va se battre et n'a jamais fait de politique dans ses fonctions."
+    ]
+  },
+  "differences": [
+    "Le centre contextualise l'affaire en rappelant la demande du haut fonctionnaire d'être relevé de ses fonctions et les motifs précis de sa plainte.",
+    "La droite adopte un angle plus combatif en mettant en avant les déclarations offensives du préfet et son intention explicite de démasquer ses détracteurs."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-23T08:01:38.029Z"
 }

@@ -6,6 +6,28 @@
   "storyDay": "2026-11-22",
   "articles": [
     {
+      "id": "aa02e836e311",
+      "outletId": "europe-1",
+      "headline": "Règle d'or budgétaire : «Il faut vraiment avoir honte de rien», lance François-Xavier Bellamy à Emmanuel Macron",
+      "url": "https://www.europe1.fr/politique/regle-dor-budgetaire-il-faut-vraiment-avoir-honte-de-rien-lance-francois-xavier-bellamy-a-emmanuel-macron-1242586?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-23T07:58:24.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/23/08/untitled_26_6b03ee361a700.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "bdba200185c5",
+      "outletId": "huffpost",
+      "headline": "Une « règle d’or » budgétaire ? Macron confirme y songer, mais scrute ces facteurs précis",
+      "url": "https://www.huffingtonpost.fr/politique/article/une-regle-d-or-budgetaire-macron-confirme-y-songer-mais-scrute-un-facteur-precis_363299.html",
+      "publishedAt": "2026-11-23T07:46:12.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/10/06/0/0/4615/2595/0/0/60/0/746527b_upload-1-xsnsdv5htkxa-afp-20261006-hl-bohier-3322867-v1-highres-francebeninpoliticsdiplomacyparis.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "ecc72b5bab64",
       "outletId": "le-parisien",
       "headline": "Emmanuel Macron confie que l’adoption d’une règle d’or budgétaire « peut être une idée à explorer »",
@@ -34,7 +56,7 @@
       "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/quest-ce-que-la-regle-dor-cet-outil-budgetaire-quemmanuel-macron-souhaiterait-inscrire-dans-la-constitution-1c9619b8-e660-11f1-afa7-9a0bb82a33d1?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-23T06:40:17.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNTc4ZmMwNjY1ZjEwMjhkNmIwNGNjNGUxNmYzM2NiZjM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=38b018a9be092fc15293273fe24bc23607d3cc7c54ea19d9eb2bd68e76043b35",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -57,7 +79,7 @@
       "url": "https://www.ouest-france.fr/politique/emmanuel-macron/ladoption-dune-regle-dor-budgetaire-est-une-idee-a-explorer-confirme-emmanuel-macron-0d1ee3be-e707-11f1-afa7-9a0bb82a33d1?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-23T06:38:12.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOThkZTdhOWYyNDQxZGM3MjBlZDcwZGEwZGE0ODlkNDY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=3502c29ff3ce727d5836795445bcfbcf7ff4d9e1fd35e80d486ef4a303cac4a6",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -591,11 +613,11 @@
       "start": 1795417200000,
       "end": 1795420800000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
-        "droite": 0
+        "droite": 1
       },
-      "total": 1
+      "total": 3
     }
   ],
   "summaries": {
