@@ -1,10 +1,22 @@
 {
   "id": "cb43dba63057",
   "slug": "les-negociations-de-la-cop31-se-prolonge-en-turquie-autour-des",
-  "title": "La COP31 s'achève sans accord en Turquie après un échec sur les énergies fossiles",
+  "title": "La COP31 s'achève sans accord à Antalya après un échec sur les énergies fossiles",
   "createdAt": "2026-11-20T17:01:34.774Z",
   "storyDay": "2026-11-20",
   "articles": [
+    {
+      "id": "1cc6b2e2e396",
+      "outletId": "20-minutes",
+      "headline": "« Scandaleux »… Colère après l’échec de la COP31 sur les énergies fossiles",
+      "url": "https://www.20minutes.fr/monde/etats-unis/4264844-20261123-scandaleux-colere-apres-echec-cop31-energies-fossiles?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-23T03:26:30.000Z",
+      "imageUrl": "https://img.20mn.fr/8RlwUHUSROe7SMohB4_mbSk/1200x768_tatarstan-russie-5-avril-2020-une-citrouille-a-huile-pres-de-yamashi-dans-le-district-d-almetyevsk-en-republique-du-tatarstan-en-russie-yegor-aleyev-tass-sipa-etats-unis-29607511-df-2004060902",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
     {
       "id": "8beeff3c5540",
       "outletId": "rfi",
@@ -833,7 +845,7 @@
     }
   ],
   "topicId": "cb43dba63057",
-  "titledArticleCount": 60,
+  "titledArticleCount": 75,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -866,31 +878,41 @@
         "droite": 12
       },
       "total": 58
+    },
+    {
+      "start": 1795388400000,
+      "end": 1795474800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "La COP31 s'est achevée sans accord à Antalya, en Turquie, après deux semaines de négociations et des dizaines d'heures de prolongations.",
-      "Les discussions ont échoué en raison de l'absence de toute mention explicite sur la sortie des énergies fossiles dans le projet de décision finale.",
-      "Le ministre irlandais Darragh O'Brien, au nom des pays européens, a fustigé un sommet ignorant les causes climatiques, tandis que certains participants ont dénoncé des négociations « prises en otage par des États pétroliers »."
+      "La COP31 à Antalya s'est achevée sans accord sur une déclaration finale, après de longues prolongations.",
+      "L'échec est attribué au refus de la présidence turque d'inclure une mention explicite sur la sortie des énergies fossiles.",
+      "Plusieurs pays, dont les États membres de l'Union européenne, ont rejeté le projet de texte final jugé insuffisant."
     ],
     "centre": [
-      "La 31e Conférence des Parties sur le climat s'est terminée sur un échec dimanche 22 novembre 2026 à Antalya, en Turquie, devenant la plus longue de l'histoire.",
-      "Le président de la COP31, Murat Kurum, a acté l'absence d'accord après le rejet par l'Union européenne et plusieurs pays d'un projet de compromis final élaboré par la Turquie et l'Australie.",
-      "Le texte proposait seulement une allusion à l'électrification et à la transition décidée lors de la COP28, sans appeler explicitement à abandonner le charbon, le pétrole et le gaz."
+      "La COP31 s'est conclue le 22 novembre à Antalya sans adoption d'un accord-cadre après deux semaines de négociations.",
+      "Le projet de décision finale présenté par la Turquie et l'Australie a été rejeté par l'Union européenne en raison de l'absence de référence aux énergies fossiles.",
+      "De nombreux délégués et observateurs ont exprimé leur frustration face à cette impasse diplomatique qui prolonge les divisions climatiques."
     ],
     "droite": [
-      "La COP31 s'est conclue officiellement sans décision finale à Antalya après plus de 49 heures de prolongations.",
-      "L'Union européenne et plusieurs délégations ont rejeté le projet de compromis rédigé par la Turquie et l'Australie, car il omettait de mentionner explicitement les énergies fossiles.",
-      "La ministre française de la Transition écologique, Monique Barbut, a qualifié ce texte de recul « inacceptable » qui « nous ramène en arrière »."
+      "La COP31 en Turquie est devenue la plus longue conférence de l'ONU sur le climat de l'histoire, s'achevant après plus de 49 heures de prolongations.",
+      "Le sommet s'est soldé par un échec total faute de consensus entre les 200 pays participants sur le projet de décision finale.",
+      "L'Union européenne s'est opposée frontalement au texte de compromis préparé par la Turquie et l'Australie, dénonçant l'omission des énergies fossiles."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur la responsabilité des États pétroliers et qualifie la situation de « retour en arrière » ou de « prise d'otages ».",
-    "Le centre adopte un ton strictement factuel et chronologique pour relater l'enlisement des négociations, l'échec des prolongations et les arbitrages techniques des textes.",
-    "La droite centre son analyse sur le rejet frontal de l'Union européenne et relaie en priorité les déclarations de fermeté de la France face au compromis turco-australien."
+    "La gauche met l'accent sur la responsabilité des lobbys et qualifie la situation de fiasco historique face à l'urgence climatique.",
+    "Le centre adopte un ton informatif et factuel en relatant le déroulement des négociations et les blocages diplomatiques successifs.",
+    "La droite insiste particulièrement sur la durée record de la conférence et le rejet ferme de l'Union européenne face à la présidence turque."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 60,
-  "summarizedAt": "2026-11-22T17:01:24.423Z"
+  "summarizedArticleCount": 75,
+  "summarizedAt": "2026-11-23T04:01:39.170Z"
 }
