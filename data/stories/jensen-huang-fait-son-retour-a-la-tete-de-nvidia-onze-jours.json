@@ -6,6 +6,18 @@
   "storyDay": "2026-11-23",
   "articles": [
     {
+      "id": "ba8f0996db1f",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, Jensen Huang réintégré chez Nvidia à la surprise générale : le dirigeant accueilli sous les applaudissements de centaines de salariés ; Wall Street clôture en très forte hausse",
+      "url": "https://www.lemonde.fr/international/live/2026/11/24/en-direct-jensen-huang-reintegre-chez-nvidia-a-la-surprise-generale-le-dirigeant-accueilli-sous-les-applaudissements-de-centaines-de-salaries-wall-street-cloture-en-tres-forte-hausse_6814407_3210.html",
+      "publishedAt": "2026-11-23T23:46:27.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/23/264/0/3165/1582/644/322/60/0/6102372_ftp-1-dq3bogtjjvfb-2026-11-23t170601z-1582719674-rc2ttoaqzmb6-rtrmadp-3-nvidia-ceo.JPG",
+      "frontPage": true,
+      "kind": "live",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "02195a82d5dd",
       "outletId": "huffpost",
       "headline": "Après avoir obtenu le retour de Jensen Huang chez Nvidia, Trump multiplie les outrances",
@@ -76,7 +88,7 @@
       "url": "https://www.lemonde.fr/international/live/2026/11/23/en-direct-jensen-huang-reintegre-chez-nvidia-a-la-surprise-generale-le-dirigeant-accueilli-sous-les-applaudissements-de-centaines-de-salaries_6814407_3210.html",
       "publishedAt": "2026-11-23T19:37:41.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/23/264/0/3165/1582/644/322/60/0/6102372_ftp-1-dq3bogtjjvfb-2026-11-23t170601z-1582719674-rc2ttoaqzmb6-rtrmadp-3-nvidia-ceo.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "live",
       "section": "economy",
       "everFrontPage": true
@@ -288,36 +300,6 @@
   "everInEdition": true,
   "activity": [
     {
-      "start": 1795381200000,
-      "end": 1795384800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795384800000,
-      "end": 1795388400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795388400000,
-      "end": 1795392000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
       "start": 1795392000000,
       "end": 1795395600000,
       "counts": {
@@ -526,6 +508,36 @@
         "droite": 1
       },
       "total": 4
+    },
+    {
+      "start": 1795467600000,
+      "end": 1795471200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795471200000,
+      "end": 1795474800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795474800000,
+      "end": 1795478400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ]
 }

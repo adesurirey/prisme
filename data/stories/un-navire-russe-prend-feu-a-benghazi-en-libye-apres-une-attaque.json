@@ -6,6 +6,39 @@
   "storyDay": "2026-11-22",
   "articles": [
     {
+      "id": "a004e6c46d46",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, guerre en Ukraine : la Libye réclame des explications à Kiev après les attaques contre des navires russes près de Benghazi",
+      "url": "https://www.lemonde.fr/international/live/2026/11/23/en-direct-guerre-en-ukraine-la-libye-reclame-des-explications-a-kiev-apres-les-attaques-contre-des-navires-russes-pres-de-benghazi_6814183_3210.html",
+      "publishedAt": "2026-11-23T22:33:15.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/23/42/0/1423/711/644/322/60/0/e355873_ftp-1-tw6vk2m5ph3h-2026-11-23t165313z-922884251-rc2ktoanq5i6-rtrmadp-3-ukraine-crisis-ships.JPG",
+      "frontPage": false,
+      "kind": "live",
+      "section": "world"
+    },
+    {
+      "id": "c8d1345a48ac",
+      "outletId": "rfi",
+      "headline": "L'attaque ukrainienne au large de Benghazi ravive la tension entre les belligérants libyens",
+      "url": "https://www.rfi.fr/fr/afrique/20261123-l-attaque-ukrainienne-en-large-de-benghazi-ravive-la-tension-entre-les-bellig%C3%A9rants-libyens",
+      "publishedAt": "2026-11-23T21:16:48.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/c95037ee-e730-11f1-8e5e-1bac47ab2f5d/w:1024/p:16x9/AP26327310059538.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "80de303510ba",
+      "outletId": "france-24",
+      "headline": "L'attaque ukrainienne à Benghazi attise les tensions en Libye et en Méditerranée",
+      "url": "https://www.france24.com/fr/%C3%A9missions/info-ou-intox/20261123-l-attaque-ukrainienne-%C3%A0-benghazi-attise-les-tensions-en-libye-et-en-m%C3%A9diterran%C3%A9e",
+      "publishedAt": "2026-11-23T21:00:13.000Z",
+      "imageUrl": "https://s.france24.com/media/display/403c9ef8-e77f-11f1-9e77-6b451f569414/w:1024/p:16x9/capture-b1124d1e.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "dc6d61c56bbe",
       "outletId": "le-figaro",
       "headline": "En ciblant deux navires sur la côte libyenne, l’Ukraine porte un coup spectaculaire à la Russie",
@@ -356,7 +389,7 @@
     }
   ],
   "topicId": "f55109603553",
-  "titledArticleCount": 25,
+  "titledArticleCount": 34,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -639,31 +672,63 @@
         "droite": 1
       },
       "total": 1
+    },
+    {
+      "start": 1795464000000,
+      "end": 1795467600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795467600000,
+      "end": 1795471200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 2,
+        "droite": 0
+      },
+      "total": 2
+    },
+    {
+      "start": 1795471200000,
+      "end": 1795474800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Volodymyr Zelensky a officialisé l'implication de Kiev dans les frappes de drones sous-marins ayant visé la corvette Merkury et le cargo MV Angara près de Benghazi.",
-      "Le Monde et RFI ont également documenté les frappes russes meurtrières dans la région de Kiev, qui ont fait au moins quinze morts.",
-      "Libération a précisé que la corvette Merkury figurait parmi les navires les plus récents de la flotte russe."
+      "Le président Volodymyr Zelensky a officiellement revendiqué l'utilisation de sept drones navals pour frapper une corvette et un cargo russes dans le port libyen de Benghazi.",
+      "Libération précise que la corvette coulée est le « Merkury », l'un des navires les plus récents de la flotte russe, touchant également le cargo MV Angara.",
+      "Les autorités de l'est de la Libye ont saisi l'ONU en déposant une plainte formelle pour dénoncer une violation de leur souveraineté territoriale.",
+      "Ces frappes en Afrique du Nord s'accompagnent d'un bilan lourd en Ukraine, où des bombardements russes ont fait au moins 15 morts dans la région de Kiev."
     ],
     "centre": [
-      "Le président ukrainien a revendiqué l'utilisation de sept drones maritimes de fabrication locale contre deux navires russes au large de la Libye.",
-      "L'Organisation des Nations unies avait exigé l'ouverture d'une enquête officielle quelques heures avant cette revendication.",
-      "Plusieurs médias ont souligné la portée exceptionnelle de cette opération militaire menée à plus de mille kilomètres de Kiev."
+      "Volodymyr Zelensky a revendiqué des attaques menées à l'aide de drones maritimes contre deux navires russes au large de Benghazi, marquant une extension inédite du conflit en Méditerranée.",
+      "Les autorités de l'est libyen ont exigé des explications et réclamé l'ouverture d'une enquête officielle de l'ONU sur la présence de forces ukrainiennes.",
+      "L'opération, qualifiée d'exemplaire par Kiev, cherche à frapper la logistique militaire de Moscou à plus de 1000 kilomètres des frontières ukrainiennes.",
+      "Des images diffusées sur les réseaux sociaux ont montré une corvette russe en feu, tandis que TF1 Info relève des interrogations locales sur l'origine exacte du départ des drones."
     ],
     "droite": [
-      "Le Figaro a confirmé la destruction de la corvette russe au large des côtes libyennes grâce au déploiement de sept drones de fabrication ukrainienne.",
-      "TF1 Info a qualifié l'opération d'exemplaire tout en rappelant que l'Ukraine subit des bombardements quotidiens de la part de Moscou.",
-      "Les rédactions de ce camp ont insisté sur la profondeur inédite de cette incursion militaire en mer Méditerranée."
+      "Le Figaro qualifie l'opération de « coup spectaculaire » porté par l'Ukraine à la Russie à travers le ciblage d'une corvette et d'un cargo sur les côtes libyennes.",
+      "Kiev a confirmé l'utilisation de sept drones maritimes de fabrication ukrainienne lors de cet assaut inédit au large de Benghazi.",
+      "Le journal souligne que cette offensive inédite confirme une extension géographique notable du conflit en dehors du théâtre ukrainien traditionnel."
     ]
   },
   "differences": [
-    "La gauche insiste sur les pertes humaines concomitantes subies en Ukraine et détaille précisément l'identité des navires visés, comme la corvette Merkury.",
-    "Le centre adopte un angle factuel et institutionnel en mettant en balance l'action ukrainienne et la demande d'enquête formulée par l'ONU.",
-    "La droite privilégie le récit de la performance militaire en qualifiant l'opération d'exemplaire et en détaillant l'armement technologique employé."
+    "La gauche ancre l'événement dans le double théâtre des opérations en insistant sur les bilans humains meurtriers des frappes subies simultanément en Ukraine.",
+    "Le centre adopte une couverture factuelle globale en privilégiant les enjeux géopolitiques internationaux, les réactions de l'ONU et les tensions diplomatiques régionales en Libye.",
+    "La droite dramatise l'événement en mettant l'accent sur la dimension spectaculaire et inédite de la projection de puissance ukrainienne en Afrique du Nord."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 25,
-  "summarizedAt": "2026-11-23T13:01:35.212Z"
+  "summarizedArticleCount": 34,
+  "summarizedAt": "2026-11-24T00:01:33.149Z"
 }

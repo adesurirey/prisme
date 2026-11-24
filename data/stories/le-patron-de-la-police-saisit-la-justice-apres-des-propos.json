@@ -6,6 +6,29 @@
   "storyDay": "2026-11-22",
   "articles": [
     {
+      "id": "25661866455d",
+      "outletId": "ouest-france",
+      "headline": "Salut nazi, propos racistes… Ce que l’on sait des soupçons qui pèsent sur des élèves officiers de l’école de police",
+      "url": "https://www.ouest-france.fr/societe/police/salut-nazi-propos-racistes-ce-que-lon-sait-des-soupcons-qui-pesent-sur-des-eleves-officiers-de-lecole-de-police-e52a0de0-e736-11f1-afa7-9a0bb82a33d1?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-23T23:13:21.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExY2MzOTk5YmI0ZjY0Mjc4ZTk3NDRiZGEyMmQ0OGIzYmQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=eee687faa84d33b17643eaef351da3add625de378762767b2cb851297e6de347",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
+    {
+      "id": "a0d6888cd60b",
+      "outletId": "le-figaro",
+      "headline": "Propos racistes, salut nazi, agression sexuelle : une enquête ouverte après des dénonciations croisées entre élèves d'une école de police de Seine-et-Marne",
+      "url": "https://www.lefigaro.fr/actualite-france/propos-racistes-salut-nazi-agression-sexuelle-une-enquete-ouverte-apres-des-denonciations-croisees-entre-eleves-d-une-ecole-de-police-de-seine-et-marne-20261123",
+      "publishedAt": "2026-11-23T21:15:24.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/23/3f4b29a5679950c2eb9b04844f08c71f17643d7da43f0eca072b20fcdee9b72f.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "6b4945bfa20c",
       "outletId": "le-parisien",
       "headline": "Affaire du salut nazi et de racisme à l’école des officiers de police : le seul élève suspendu est… le lanceur d’alerte",
@@ -23,7 +46,7 @@
       "url": "https://www.lemonde.fr/societe/article/2026/11/23/une-enquete-ouverte-dans-une-ecole-de-police-de-seine-et-marne-apres-des-accusations-de-racisme-de-salut-nazi-et-d-agression-sexuelle_6814447_3224.html",
       "publishedAt": "2026-11-23T20:12:35.000Z",
       "imageUrl": "https://img.lemde.fr/2026/09/07/184/0/3000/1500/644/322/60/0/3600db1_upload-1-zejgujgkq429-frame-1280.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -484,6 +507,26 @@
     {
       "start": 1795467600000,
       "end": 1795471200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 1
+      },
+      "total": 2
+    },
+    {
+      "start": 1795471200000,
+      "end": 1795474800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795474800000,
+      "end": 1795478400000,
       "counts": {
         "gauche": 0,
         "centre": 1,

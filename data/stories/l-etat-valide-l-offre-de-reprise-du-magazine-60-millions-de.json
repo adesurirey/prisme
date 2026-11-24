@@ -6,6 +6,17 @@
   "storyDay": "2026-11-23",
   "articles": [
     {
+      "id": "a49914bbaea6",
+      "outletId": "la-croix",
+      "headline": "60 millions de consommateurs : accord de reprise par Xavier Niel",
+      "url": "https://www.la-croix.com/60-millions-de-consommateurs-accord-de-reprise-par-xavier-niel-20261123",
+      "publishedAt": "2026-11-23T21:30:10.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/11/23/2596988-l-offre-de-reprise-du-magazine-60-millions-de-cons.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "adcbceb0712a",
       "outletId": "le-figaro",
       "headline": "L’offre de reprise du magazine 60 millions de consommateurs par Xavier Niel acceptée par l’État",
@@ -65,16 +76,6 @@
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795381200000,
-      "end": 1795384800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795384800000,
       "end": 1795388400000,
@@ -302,6 +303,16 @@
         "gauche": 0,
         "centre": 0,
         "droite": 1
+      },
+      "total": 1
+    },
+    {
+      "start": 1795467600000,
+      "end": 1795471200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
       },
       "total": 1
     }
