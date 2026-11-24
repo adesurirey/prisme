@@ -297,5 +297,24 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Six députés de La France insoumise déposent une plainte conjointe après avoir reçu des courriers haineux.",
+      "Ces lettres anonymes comportent des menaces de mort explicites ainsi que des symboles nazis tels que des croix gammées.",
+      "Les parlementaires ciblés pointent du doigt l'inertie des autorités face à la recrudescence de ces agressions."
+    ],
+    "centre": [
+      "Plusieurs parlementaires insoumis ont annoncé le dépôt prochain d'une plainte commune au commissariat.",
+      "Les enveloppes reçues font référence au groupuscule d'extrême droite GUD et affichent des croix gammées.",
+      "Le parti déplore la banalisation de ces actes d'intimidation qui touchent régulièrement ses élus."
+    ]
+  },
+  "differences": [
+    "Le camp gauche insiste sur le sentiment d'abandon des élus face aux autorités et qualifie les messages de courriers haineux.",
+    "Le camp centre met en avant la démarche procédurale des députés et précise la nature explicite des menaces avec la mention du GUD."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-24T21:01:24.814Z"
 }

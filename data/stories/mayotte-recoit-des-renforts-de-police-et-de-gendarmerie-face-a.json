@@ -23,7 +23,7 @@
       "url": "https://www.lemonde.fr/societe/article/2026/11/24/mayotte-80-gendarmes-et-20-policiers-supplementaires-face-a-la-recrudescence-des-violences_6814757_3224.html",
       "publishedAt": "2026-11-24T12:01:53.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/24/688/0/8256/4128/644/322/60/0/3c6a515_upload-1-jycurip51ygz-000-34jm4qy.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -274,5 +274,22 @@
       },
       "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le Monde rapporte l'envoi d'un escadron supplémentaire de forces de l'ordre à Mayotte suite à une flambée de tensions.",
+      "Le quotidien mentionne l'arrivée imminente de 80 gendarmes et 20 policiers dans le département d'outre-mer."
+    ],
+    "droite": [
+      "Europe 1 annonce l'arrivée prochaine de 80 gendarmes et 20 policiers supplémentaires venus de La Réunion pour faire face à la recrudescence des violences.",
+      "Le maire LR de Mamoudzou, Ambdilwahedou Soumaïla, précise que le gouvernement s'est engagé à maintenir les cinq escadrons de gendarmerie déjà présents après une réunion à Matignon."
+    ]
+  },
+  "differences": [
+    "Le Monde adopte un ton sobre et concis en se focalisant uniquement sur l'annonce globale des renforts face aux tensions.",
+    "Europe 1 détaille précisément les déclarations du maire de Mamoudzou et les engagements pris lors de la réunion avec le Premier ministre."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 2,
+  "summarizedAt": "2026-11-24T21:01:24.814Z"
 }
