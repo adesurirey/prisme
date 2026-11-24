@@ -23,7 +23,7 @@
       "url": "https://www.lefigaro.fr/actualite-france/dans-son-journal-spirituel-le-pape-francois-revele-ses-combats-contre-le-diable-qui-lui-est-apparu-a-plusieurs-reprises-20261124",
       "publishedAt": "2026-11-24T06:59:08.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1688_crop/2026/11/23/1a3eeb09a94f795354e5a826c1281d5e15e75954c346f0b3bb99c94d2d13623a.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "society",
       "everFrontPage": true
@@ -284,5 +284,29 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le cardinal Fernandez a rassemblé les notes personnelles du pape François dans un ouvrage intitulé Le Journal spirituel du pape François.",
+      "Le souverain pontife y consigne durant trente ans ses états d'âme, ses doutes et ses crises, évoquant notamment le fait d'avoir vu les portes de l'enfer.",
+      "L'ouvrage paraît ce mardi dans des dizaines de pays à travers le monde."
+    ],
+    "centre": [
+      "Le défunt pape François relate dans son journal intime avoir été confronté au diable à trois reprises au cours de sa vie.",
+      "Le texte mentionne en particulier un puissant râle de sa voix perçu par le souverain pontife."
+    ],
+    "droite": [
+      "Un livre publié ce mardi dans le monde entier dévoile les notes personnelles et le journal spirituel du pape François.",
+      "Le texte retrace ses luttes contre le diable qui lui est apparu à plusieurs reprises avant et pendant son pontificat.",
+      "L'ouvrage met en lumière sa face sombre et ses aveux sur le fait d'avoir été un Jorge arrogant, autosuffisant, cynique et menteur avec lui-même."
+    ]
+  },
+  "differences": [
+    "Libération met l'accent sur la dimension introspective et littéraire des carnets du pape, en insistant sur la publication mondiale de cet ouvrage rétrospectif et ses tourments existentiels.",
+    "Le Parisien choisit de focaliser son traitement sur le registre spectaculaire et surnaturel des écrits pontificaux en extrayant la confrontation directe avec le diable.",
+    "Le Figaro privilégie une approche analytique en qualifiant les notes de journal spirituel et en détaillant l'introspection du pontife sur ses propres travers psychologiques."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-11-24T13:01:34.085Z"
 }

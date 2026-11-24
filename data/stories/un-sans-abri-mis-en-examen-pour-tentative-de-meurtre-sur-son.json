@@ -12,7 +12,7 @@
       "url": "https://www.20minutes.fr/faits_divers/faits-divers-paris/4265235-20261124-paris-suspect-meurtres-seine-tente-tuer-codetenu?at_medium=display&at_campaign=149",
       "publishedAt": "2026-11-24T00:18:02.000Z",
       "imageUrl": "https://img.20mn.fr/3TBbiBzlTOOA5v7iqbllYSk/1200x768_illustration-of-the-baumettes-prison-center-in-marseille-southern-france-on-november-8-2024-couloir-de-prison-avec-des-cellules-de-prison-illustration-du-centre-penitentiaire-des-baumettes-prison-de-marseille-prison-des-baumettes-a-marseille-vendredi-8-novembre-2024-alainrobert-1y8a5989-credit-alain-robert-sipa-2411091252",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
@@ -285,5 +285,21 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Monji H., soupçonné du meurtre de quatre hommes à Choisy-le-Roi, fait l'objet d'une mise en examen pour une tentative d'homicide sur son codétenu."
+    ],
+    "droite": [
+      "Monji H., mis en examen pour la tentative d'étranglement de son codétenu à la prison de la Santé, est par ailleurs soupçonné d'avoir tué quatre individus durant l'été 2025 en bord de Seine.",
+      "Le suspect a reconnu les faits en audition, évoquant notamment des « nuages qui envahissaient son esprit » pour expliquer son passage à l'acte."
+    ]
+  },
+  "differences": [
+    "La gauche se limite à rapporter sobrement la nouvelle mise en examen de Monji H. pour tentative de meurtre en détention.",
+    "La droite détaille le déroulement de l'agression survenue à la prison de la Santé le 17 octobre 2025 et mentionne les explications psychiatriques confuses avancées par le suspect lors de ses auditions."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-11-24T13:01:34.085Z"
 }
