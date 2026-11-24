@@ -1,10 +1,43 @@
 {
   "id": "2f0f72ef5ed2",
   "slug": "singapour-collabore-avec-washington-et-place-l-entreprise",
-  "title": "Singapour place l'entreprise Megaspeed sur liste noire en collaboration avec Washington",
+  "title": "Les États-Unis placent l'entreprise singapourienne Megaspeed sur liste noire dans le cadre du scandale des puces Nvidia",
   "createdAt": "2026-11-24T05:01:26.968Z",
   "storyDay": "2026-11-23",
   "articles": [
+    {
+      "id": "07855ec19d5d",
+      "outletId": "tf1-info",
+      "headline": "Scandale Nvidia : l'entreprise singapourienne Megaspeed placée sur liste noire par les États-Unis",
+      "url": "https://www.tf1info.fr/high-tech/scandale-nvidia-l-entreprise-singapourienne-megaspeed-placee-sur-liste-noire-par-les-etats-unis-2477747.html",
+      "publishedAt": "2026-11-24T06:58:27.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/683/jensen-huang-nvidia-tokyo-2026-f3dce6-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "bd24cfdd32a5",
+      "outletId": "franceinfo",
+      "headline": "Le gouvernement américain place sur liste noire l'entreprise singapourienne au cœur du scandale Nvidia",
+      "url": "https://www.franceinfo.fr/internet/nvidia/le-gouvernement-americain-place-sur-liste-noire-l-entreprise-singapourienne-au-c-ur-du-scandale-nvidia_8297025.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-24T06:38:57.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/G2pm86UjZQJWzuJ3e7372MErhEU/0x0:5367x3018/432x243/filters:format(jpg)/2026/11/24/6b0528bd76d6c682951383.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "91bd6846df20",
+      "outletId": "france-24",
+      "headline": "Washington durcit la lutte contre la contrebande de puces vers la Chine, Nvidia rassure les bourses",
+      "url": "https://www.france24.com/fr/am%C3%A9riques/20261124-washington-durcit-la-lutte-contre-la-contrebande-de-puces-vers-la-chine-nvidia-rassure-les-bourses",
+      "publishedAt": "2026-11-24T06:30:26.000Z",
+      "imageUrl": "https://s.france24.com/media/display/3ac0d42e-e759-11f1-a65e-13439ca2fe89/w:1024/p:16x9/4e5126fae01fbecbad8001fdb313f07cbc13e60d.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
     {
       "id": "c866c4b89bfc",
       "outletId": "bfmtv",
@@ -41,20 +74,10 @@
     }
   ],
   "topicId": "2f0f72ef5ed2",
-  "titledArticleCount": 3,
-  "section": "world",
+  "titledArticleCount": 6,
+  "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795413600000,
-      "end": 1795417200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795417200000,
       "end": 1795420800000,
@@ -284,6 +307,40 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795500000000,
+      "end": 1795503600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 1,
+        "droite": 1
+      },
+      "total": 3
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le gouvernement américain a placé l'entreprise Megaspeed et ses filiales sur une liste noire pour risque de détournement de puces informatiques de pointe.",
+      "La décision fait suite aux soupçons de fourniture de matériel technologique américain non autorisé vers la Chine."
+    ],
+    "centre": [
+      "Les États-Unis ont sanctionné la société singapourienne Megaspeed en l'inscrivant sur une liste noire pour contournement de l'embargo sur les puces Nvidia.",
+      "Singapour a officialisé sa coopération avec Washington après le ciblage de sept entités suspectées de contrebande vers la Chine.",
+      "Jensen Huang a fait son retour à la tête de Nvidia, insufflant un vent d'optimisme sur les marchés financiers malgré le scandale."
+    ],
+    "droite": [
+      "Washington a alourdi les restrictions sur l'exportation de semi-conducteurs avancés après la mise en cause de l'entreprise Megaspeed.",
+      "Le scandale implique une liaison entre le dirigeant de Nvidia et la femme d'affaires Alice Huang, soupçonnée d'espionnage.",
+      "Singapour collabore avec les autorités américaines pour bloquer la fuite de puces électroniques vers le marché chinois."
+    ]
+  },
+  "differences": [
+    "Le camp gauche se focalise strictement sur la mesure administrative de restriction commerciale prise par Washington sans mentionner le volet personnel.",
+    "Le camp centre adopte une couverture économique large associant les sanctions contre la contrebande, la réaction de Singapour et le retour en fonction de Jensen Huang chez Nvidia.",
+    "Le camp droite met en avant le renforcement des règles d'exportation et souligne la dimension personnelle et d'espionnage liée au scandale de la direction de Nvidia."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-24T07:01:37.511Z"
 }
