@@ -6,6 +6,17 @@
   "storyDay": "2026-11-24",
   "articles": [
     {
+      "id": "36346375bea5",
+      "outletId": "bfmtv",
+      "headline": "Présidentielle: Édouard Philippe se dit ouvert à un débat avec David Lisnard, mais s'oppose toujours à une primaire de la droite et du centre",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-edouard-philippe-se-dit-ouvert-a-un-debat-avec-david-lisnard-mais-s-oppose-toujours-a-une-primaire-de-la-droite-et-du-centre_AD-202611241034.html",
+      "publishedAt": "2026-11-24T23:00:27.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/1xuegDldl_bSxJ3u5t9yL3tvDH0=/0x106:2048x1258/800x0/images/David-Lisnard-et-Edouard-Philippe-le-6-juin-2026-a-Taverny-2388739.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "e5447eb71323",
       "outletId": "le-parisien",
       "headline": "« Son objectif, ce n’est pas de rassembler la droite » : Édouard Philippe propose un débat à David Lisnard",
@@ -68,16 +79,6 @@
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795474800000,
-      "end": 1795478400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795478400000,
       "end": 1795482000000,
@@ -307,6 +308,41 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795561200000,
+      "end": 1795564800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Edouard Philippe a proposé un débat télévisé à David Lisnard avant la mi-décembre.",
+      "Le candidat Horizons reproche au maire de Cannes son manque d'étanchéité avec l'extrême droite.",
+      "L'ancien Premier ministre estime posséder davantage de points communs avec Gabriel Attal et Bruno Retailleau qu'avec son rival."
+    ],
+    "centre": [
+      "Edouard Philippe a rejeté l'idée d'une primaire de la droite et du centre.",
+      "Le maire du Havre a formulé une proposition de débat télévisé sur le fond à l'adresse de David Lisnard.",
+      "L'ancien Premier ministre pointe des désaccords profonds sur la ligne politique avec le maire de Cannes."
+    ],
+    "droite": [
+      "Invité sur LCI, Edouard Philippe a écarté toute participation à une primaire de la droite et du centre.",
+      "Le candidat Horizons a officialisé sa proposition de débat télévisé face à David Lisnard.",
+      "Le candidat à l'élection présidentielle accuse son opposant d'entretenir une frontière poreuse avec la droite nationaliste."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur les soupçons d'indulgence envers l'extrême droite et les convergences soulignées par Edouard Philippe avec Gabriel Attal et Bruno Retailleau.",
+    "Le centre privilégie l'aspect stratégique de la séquence, en insistant sur le refus de la primaire et l'offre d'un débat thématique formulée par le candidat d'Horizons.",
+    "La droite se focalise sur la confrontation programmatique et la dénonciation par Edouard Philippe d'une porosité politique jugée problématique avec la droite nationaliste."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-24T23:01:35.685Z"
 }
