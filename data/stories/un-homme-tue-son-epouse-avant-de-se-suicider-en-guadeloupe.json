@@ -6,6 +6,17 @@
   "storyDay": "2026-11-25",
   "articles": [
     {
+      "id": "2c6e645a6fc2",
+      "outletId": "cnews",
+      "headline": "Guadeloupe : un sexagénaire tue son épouse, avant de se suicider",
+      "url": "https://www.cnews.fr/faits-divers/2026-11-25/guadeloupe-un-sexagenaire-tue-son-epouse-avant-de-se-suicider-1960802",
+      "publishedAt": "2026-11-25T10:37:59.000Z",
+      "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/000_1me3n7-taille1200_6b069ebddec0a.jpg?h=e5b1ee37&itok=HdmHyKp1",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "500beb5452a5",
       "outletId": "le-parisien",
       "headline": "Guadeloupe : un homme de 63 ans tue sa femme avant de se suicider",
@@ -315,28 +326,34 @@
       "counts": {
         "gauche": 0,
         "centre": 1,
-        "droite": 0
+        "droite": 1
       },
-      "total": 1
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "Un homme de 63 ans a abattu son épouse de 65 ans à leur domicile de Saint-François en Guadeloupe.",
-      "Le drame s'est produit ce mardi 24 novembre, quelques jours après la séparation du couple.",
-      "La procureure de Pointe-à-Pitre indique que l'auteur ne supportait pas cette rupture avant de se suicider."
+      "Un homme de 63 ans a tué sa conjointe de 65 ans à Saint-François en Guadeloupe le 24 novembre avant de se suicider.",
+      "Le parquet de Pointe-à-Pitre indique que le meurtrier ne supportait pas la séparation intervenue quelques jours auparavant.",
+      "Une enquête pour assassinat a été ouverte par les autorités judiciaires locales."
     ],
     "centre": [
-      "Un sexagénaire guadeloupéen a tué sa femme mardi 24 novembre avant de mettre fin à ses jours.",
-      "Les faits se sont déroulés peu de temps après la décision du couple de se séparer.",
-      "L'homme s'est suicidé immédiatement après avoir commis le féminicide."
+      "Un homicide conjugal suivi d'un suicide a eu lieu le 24 novembre dans la commune de Saint-François en Guadeloupe.",
+      "La procureure de la République Caroline Calbo précise que le mari de 63 ans refusait la séparation récente d'avec sa femme de 65 ans.",
+      "Ce drame porte le nombre total de décès de ce type en Guadeloupe à 40 depuis le début de l'année selon les sources de presse."
+    ],
+    "droite": [
+      "Un homme de 63 ans a abattu son épouse de 65 ans au domicile familial de Saint-François avant de mettre fin à ses jours.",
+      "La procureure Caroline Calbo a confirmé l'ouverture d'une enquête pour assassinat suite à ce drame lié au refus d'une séparation récente.",
+      "Les premiers éléments de l'enquête locale précisent que les faits se sont produits précisément dans la section de May."
     ]
   },
   "differences": [
-    "La gauche contextualise le drame en reprenant les précisions du parquet sur l'âge des victimes et la localisation exacte à Saint-François.",
-    "Le centre livre un compte-rendu factuel concis centré sur le déroulement chronologique de l'homicide et du suicide."
+    "La gauche qualifie les faits de féminicide dès l'accroche en privilégiant un angle sociétal centré sur les violences faites aux femmes.",
+    "Le centre adopte un traitement factuel en privilégiant les déclarations du parquet de Pointe-à-Pitre sur le déroulement précis des faits.",
+    "La droite privilégie un récit factuel détaillé en insistant sur les précisions géographiques locales et le mobile judiciaire de l'enquête."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-25T07:01:25.762Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-25T11:01:39.122Z"
 }
