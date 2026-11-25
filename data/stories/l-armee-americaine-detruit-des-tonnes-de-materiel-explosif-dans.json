@@ -6,6 +6,18 @@
   "storyDay": "2026-11-24",
   "articles": [
     {
+      "id": "d359493d52db",
+      "outletId": "le-figaro",
+      "headline": "Aux États-Unis, le nuage de plomb qui effraie l’Iowa avant l’explosion d’un stock de munitions",
+      "url": "https://www.lefigaro.fr/international/aux-etats-unis-le-nuage-de-plomb-qui-effraie-l-iowa-avant-l-explosion-d-un-stock-de-munitions-20261125",
+      "publishedAt": "2026-11-25T01:39:33.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/25/823cd3533c557029048ee679aca30fb0d529d66c4c116a2ee5b815858d1944ec.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "world",
+      "everFrontPage": true
+    },
+    {
       "id": "6613babd78fc",
       "outletId": "le-monde",
       "headline": "Dans l’Iowa, des évacuations avant la destruction de matériel explosif vieillissant malgré le risque d’exposition au plomb",
@@ -41,7 +53,7 @@
     }
   ],
   "topicId": "0cd71b5265c8",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -281,27 +293,33 @@
       "counts": {
         "gauche": 1,
         "centre": 0,
-        "droite": 0
+        "droite": 1
       },
-      "total": 1
+      "total": 2
     }
   ],
   "summaries": {
     "gauche": [
-      "Quatre tonnes de matériel explosif vieillissant doivent être détruites dans une usine de munitions de l'armée américaine dans l'Iowa.",
-      "Cette opération provoque un tollé en raison des risques d'exposition au plomb pour les populations locales.",
-      "Slate.fr indique que cette détonation de déchets toxiques d'azoture de plomb engendre des évacuations de riverains et des fermetures d'écoles face au nuage potentiellement dangereux."
+      "Plus de quatre tonnes de matériel explosif vieillissant doivent être détruites par l'armée américaine dans une usine de munitions de l'Iowa.",
+      "L'opération présente des risques sanitaires d'exposition au plomb pour les habitants des environs, entraînant des évacuations et des fermetures d'écoles.",
+      "La situation suscite un tollé général et des inquiétudes quant au nuage potentiellement dangereux qui pourrait traverser plusieurs communes."
     ],
     "centre": [
-      "L'armée américaine procède à la destruction de près de cinq tonnes d'azoture de plomb instables et dégradées réparties dans 68 fûts.",
-      "L'opération se déroule dans une usine de munitions située dans l'Iowa."
+      "Près de cinq tonnes d'azoture de plomb instables et dégradées, réparties dans 68 fûts, vont être détruites par l'armée américaine dans l'Iowa.",
+      "Cette opération programmée dans une usine de munitions locale soulève des inquiétudes légitimes en raison des risques sanitaires."
+    ],
+    "droite": [
+      "L'armée américaine prévoit de détruire un stock de produits chimiques instables dans l'Iowa.",
+      "L'opération provoque de vives inquiétudes et un tollé dans la population face au risque d'un nuage de plomb.",
+      "Donald Trump s'est mêlé de cette affaire qui suscite de fortes tensions aux États-Unis."
     ]
   },
   "differences": [
-    "La gauche insiste fortement sur le tollé provoqué par les risques sanitaires et la menace du nuage toxique pour les habitants, en évoquant des fermetures d'écoles.",
-    "Le centre adopte un ton strictement factuel et descriptif en se focalisant sur les aspects techniques de l'opération de destruction menée par l'armée."
+    "La gauche met l'accent sur la menace directe pour les riverains, en insistant sur les évacuations, la fermeture des écoles et le danger du nuage toxique.",
+    "Le centre adopte une approche technique et factuelle en détaillant précisément la quantité et la nature exacte des explosifs traités par l'armée.",
+    "La droite se focalise sur l'impact politique de la crise en mentionnant l'intervention de Donald Trump au milieu des inquiétudes de la population."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-25T02:01:31.806Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-25T04:01:28.752Z"
 }

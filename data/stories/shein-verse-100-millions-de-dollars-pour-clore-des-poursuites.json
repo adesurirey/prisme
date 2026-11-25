@@ -6,6 +6,18 @@
   "storyDay": "2026-11-25",
   "articles": [
     {
+      "id": "d2a6e9b9eba5",
+      "outletId": "ouest-france",
+      "headline": "Shein va verser 100 millions de dollars pour solder des poursuites aux États-Unis",
+      "url": "https://www.ouest-france.fr/economie/entreprises/shein/shein-va-verser-100-millions-de-dollars-pour-solder-des-poursuites-aux-etats-unis-7ed3c8ee-e86a-11f1-9b33-2f81462d3339?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "publishedAt": "2026-11-25T03:38:03.000Z",
+      "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZGM1YTdmNWE4NjA5ZDlmOTVhYWU0NzQzY2RlN2M2YWM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=ecd2f2a534fd72d375c71d0d35461263ed52ece67f04497a27edda9aee011b23",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "c93600de5a5e",
       "outletId": "20-minutes",
       "headline": "Shein lâche 100 millions de dollars pour clore des poursuites aux États-Unis",
@@ -30,30 +42,10 @@
     }
   ],
   "topicId": "dc04a0404ff1",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795485600000,
-      "end": 1795489200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795489200000,
-      "end": 1795492800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795492800000,
       "end": 1795496400000,
@@ -273,25 +265,51 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795572000000,
+      "end": 1795575600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795575600000,
+      "end": 1795579200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le géant chinois Shein s'accorde avec l'Agence de protection des consommateurs américaine pour un règlement de 100 millions de dollars.",
-      "Cette transaction financière permet à la plateforme de commerce en ligne d'éteindre des poursuites judiciaires outre-Atlantique.",
-      "Les autorités américaines ciblaient spécifiquement les manquements logistiques de l'entreprise, incluant des retards constants, des articles payés mais jamais expédiés et l'inefficacité du service après-vente."
+      "Le géant de la vente en ligne a accepté de payer 100 millions de dollars aux autorités américaines pour clore des actions en justice.",
+      "L'Agence fédérale de protection des consommateurs mettait en cause de graves manquements logistiques et relationnels.",
+      "Les griefs visaient en particulier les retards répétés de livraison, les absences d'envoi et l'inefficacité du support client."
+    ],
+    "centre": [
+      "La plateforme asiatique de commerce électronique verse une amende transactionnelle de 100 millions de dollars aux États-Unis.",
+      "Cette somme permet d'éteindre des poursuites judiciaires initiées par les autorités pour tromperie et manquement aux services.",
+      "Les reproches officiels incluaient des retards de livraison persistants, des commandes jamais reçues et un service après-vente défaillant."
     ],
     "droite": [
-      "La plateforme de e-commerce Shein règle 100 millions de dollars pour mettre fin à des poursuites judiciaires aux États-Unis.",
-      "L'Agence de protection des consommateurs reprochait à la firme d'origine chinoise des défaillances graves dans sa chaîne logistique, telles que des retards répétés et des commandes non honorées.",
-      "Le montant versé solde également les griefs formulés à l'encontre de l'inadéquation du service client."
+      "L'entreprise chinoise règle 100 millions de dollars afin d'apurer des poursuites judiciaires menées sur le sol américain.",
+      "L'Agence de protection des consommateurs ciblait notamment des retards chroniques d'acheminement et des articles payés mais non reçus.",
+      "Le règlement met un terme aux accusations visant la qualité du service client et les pratiques de la plateforme."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur l'origine du groupe et la sanction de ses pratiques commerciales par une agence fédérale américaine.",
-    "La droite adopte une approche strictement factuelle en listant les manquements opérationnels de la plateforme et le montant de la transaction."
+    "Le camp de gauche emploie un vocabulaire axé sur la contrainte subie par l'entreprise avec le verbe lâcher et insiste sur les défaillances concrètes pour le consommateur.",
+    "Le camp du centre utilise un terme neutre pour désigner le versement et détaille précisément la nature des accusations portées par l'agence fédérale.",
+    "Le camp de droite qualifie l'acteur économique par son origine géographique et met l'accent sur la volonté de solder les comptes judiciaires."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 2,
-  "summarizedAt": "2026-11-25T02:01:31.806Z"
+  "summarizedArticleCount": 3,
+  "summarizedAt": "2026-11-25T04:01:28.752Z"
 }
