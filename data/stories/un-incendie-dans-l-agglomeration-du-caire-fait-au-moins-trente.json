@@ -6,6 +6,28 @@
   "storyDay": "2026-11-25",
   "articles": [
     {
+      "id": "eaf49ca3b830",
+      "outletId": "le-parisien",
+      "headline": "Égypte : au moins 30 morts dans un incendie sur une autoroute de l’agglomération du Caire",
+      "url": "https://www.leparisien.fr/international/egypte-au-moins-30-morts-dans-un-incendie-sur-une-autoroute-de-lagglomeration-du-caire-25-11-2026-F3UFPVOEJVCX7LHUMAHPMMWALU.php",
+      "publishedAt": "2026-11-25T22:01:28.337Z",
+      "frontPage": false,
+      "datedAtCollection": true,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "d591e233a0f2",
+      "outletId": "europe-1",
+      "headline": "Égypte : au moins 30 morts dans un incendie dans l'agglomération du Caire",
+      "url": "https://www.europe1.fr/international/egypte-au-moins-30-morts-dans-un-incendie-dans-lagglomeration-du-caire-1245010?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-25T21:15:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/25/21/000_d8md3wf_1_6b0749068c76e.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "cb0e7a867dfb",
       "outletId": "le-figaro",
       "headline": "Égypte : au moins 30 morts dans un incendie dans l'agglomération du Caire",
@@ -40,40 +62,10 @@
     }
   ],
   "topicId": "a3914d342014",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795550400000,
-      "end": 1795554000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795554000000,
-      "end": 1795557600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795557600000,
-      "end": 1795561200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795561200000,
       "end": 1795564800000,
@@ -283,23 +275,60 @@
         "droite": 1
       },
       "total": 3
+    },
+    {
+      "start": 1795636800000,
+      "end": 1795640400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795640400000,
+      "end": 1795644000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
+    },
+    {
+      "start": 1795644000000,
+      "end": 1795647600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Un incendie meurtrier a frappé un secteur fortement urbanisé de la métropole égyptienne, faisant un bilan d'au moins trente victimes fatales.",
-      "Le drame proviendrait du basculement d'un véhicule de transport de carburant dans cette zone de la capitale."
+      "Un incendie dramatique a fait au moins trente victimes dans une zone urbaine très peuplée de la capitale égyptienne.",
+      "Le sinistre a été provoqué par le renversement d'un camion transportant du carburant."
+    ],
+    "centre": [
+      "Un accident impliquant un camion-citerne chargé de carburant sur une autoroute a provoqué un violent incendie dans la banlieue du Caire.",
+      "Le bilan provisoire communiqué par le ministère de la Santé fait état d'au moins trente morts.",
+      "Des images vidéo attestent de l'ampleur du sinistre et d'épais nuages de fumée noire s'élevant du secteur."
     ],
     "droite": [
-      "Le bilan d'un sinistre destructeur dans la région métropolitaine égyptienne s'établit à trente décès au minimum.",
-      "Environ quarante véhicules de secours ont été acheminés sur les lieux, tandis qu'au moins quinze blessés ont été acheminés vers des structures hospitalières d'après un rapport ministériel."
+      "Le bilan de l'incendie survenu à Gizeh s'établit à trente morts et quinze blessés selon les autorités sanitaires.",
+      "Quarante ambulances ont été mobilisées pour porter secours aux victimes et transporter les blessés vers les structures hospitalières.",
+      "Le feu s'est déclaré sur une route très fréquentée après qu'un poids lourd transportant du carburant s'est renversé, touchant également plusieurs véhicules de transport en commun."
     ]
   },
   "differences": [
-    "La gauche met en lumière la cause accidentelle initiale avec l'implication d'un camion-citerne dans une zone densément peuplée.",
-    "La droite privilégie les données chiffrées officielles en insistant sur le déploiement massif des secours et le nombre de blessés hospitalisés."
+    "La gauche met l'accent sur la forte densité de population de la zone touchée par le drame.",
+    "Le centre se concentre sur les faits bruts et la diffusion d'images vidéo illustrant l'ampleur de la catastrophe.",
+    "La droite insiste particulièrement sur la mobilisation des services de secours, citant précisément le nombre d'ambulances et de blessés."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-25T20:01:44.962Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-25T22:01:28.337Z"
 }
