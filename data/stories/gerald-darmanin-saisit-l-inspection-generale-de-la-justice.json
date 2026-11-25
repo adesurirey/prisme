@@ -23,9 +23,10 @@
       "url": "https://www.lemonde.fr/societe/article/2026/11/25/procureur-present-lors-d-une-perquisition-au-rn-gerald-darmanin-annonce-saisir-l-inspection-generale-de-la-justice-pour-faire-toute-la-lumiere_6815060_3224.html",
       "publishedAt": "2026-11-25T07:55:22.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/25/473/0/5682/2841/644/322/60/0/2badbd9_upload-1-hhirgrvhqsj8-000-d3xq3mc.jpg",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
-      "section": "politics"
+      "section": "politics",
+      "everFrontPage": true
     },
     {
       "id": "a262ab0720e5",
@@ -317,5 +318,27 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le ministre de la Justice Gérald Darmanin a saisi l'Inspection générale de la justice après la présence surprise du procureur adjoint Christian de Rocquigny au siège du Rassemblement national.",
+      "Le magistrat a été épinglé pour un « défaut de loyauté » après avoir omis d'avertir sa hiérarchie de sa rencontre avec un cadre du parti d'extrême droite lors d'une perquisition."
+    ],
+    "centre": [
+      "Gérald Darmanin a sollicité l'Inspection générale de la justice à la suite de la découverte du procureur Christian de Rocquigny dans les locaux du Rassemblement national pendant une perquisition.",
+      "Le magistrat du parquet de Paris effectuait une visite à un eurodéputé sans en avoir informé sa hiérarchie, provoquant l'intervention du garde des Sceaux."
+    ],
+    "droite": [
+      "Gérald Darmanin a saisi l'Inspection générale de la justice concernant la présence du procureur Christian de Rocquigny au siège du Rassemblement national.",
+      "Cette visite a eu lieu lors d'une perquisition menée dans le cadre d'une enquête judiciaire sur de présumées fuites d'informations provenant du ministère de l'Intérieur."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur le manquement déontologique qualifié de « défaut de loyauté » par le ministre et pointe explicitement l'absence d'information de la hiérarchie judiciaire.",
+    "Le centre adopte un angle purement factuel sur la saisine de l'Inspection générale de la justice en insistant sur la coïncidence de cette présence lors d'une perquisition.",
+    "La droite contextualise l'incident en rappelant l'information judiciaire en cours pour violation du secret professionnel concernant des fuites présumées du ministère de l'Intérieur."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-25T09:01:32.670Z"
 }

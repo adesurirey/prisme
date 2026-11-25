@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-25T08:01:40.933Z",
+  "builtAt": "2026-11-25T09:01:32.670Z",
   "latestStories": [
     {
       "id": "cc2edabb8108",
@@ -26,9 +26,10 @@
           "url": "https://www.lemonde.fr/societe/article/2026/11/25/procureur-present-lors-d-une-perquisition-au-rn-gerald-darmanin-annonce-saisir-l-inspection-generale-de-la-justice-pour-faire-toute-la-lumiere_6815060_3224.html",
           "publishedAt": "2026-11-25T07:55:22.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/25/473/0/5682/2841/644/322/60/0/2badbd9_upload-1-hhirgrvhqsj8-000-d3xq3mc.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
-          "section": "politics"
+          "section": "politics",
+          "everFrontPage": true
         },
         {
           "id": "a262ab0720e5",
@@ -320,7 +321,29 @@
           },
           "total": 1
         }
-      ]
+      ],
+      "summaries": {
+        "gauche": [
+          "Le ministre de la Justice Gérald Darmanin a saisi l'Inspection générale de la justice après la présence surprise du procureur adjoint Christian de Rocquigny au siège du Rassemblement national.",
+          "Le magistrat a été épinglé pour un « défaut de loyauté » après avoir omis d'avertir sa hiérarchie de sa rencontre avec un cadre du parti d'extrême droite lors d'une perquisition."
+        ],
+        "centre": [
+          "Gérald Darmanin a sollicité l'Inspection générale de la justice à la suite de la découverte du procureur Christian de Rocquigny dans les locaux du Rassemblement national pendant une perquisition.",
+          "Le magistrat du parquet de Paris effectuait une visite à un eurodéputé sans en avoir informé sa hiérarchie, provoquant l'intervention du garde des Sceaux."
+        ],
+        "droite": [
+          "Gérald Darmanin a saisi l'Inspection générale de la justice concernant la présence du procureur Christian de Rocquigny au siège du Rassemblement national.",
+          "Cette visite a eu lieu lors d'une perquisition menée dans le cadre d'une enquête judiciaire sur de présumées fuites d'informations provenant du ministère de l'Intérieur."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur le manquement déontologique qualifié de « défaut de loyauté » par le ministre et pointe explicitement l'absence d'information de la hiérarchie judiciaire.",
+        "Le centre adopte un angle purement factuel sur la saisine de l'Inspection générale de la justice en insistant sur la coïncidence de cette présence lors d'une perquisition.",
+        "La droite contextualise l'incident en rappelant l'information judiciaire en cours pour violation du secret professionnel concernant des fuites présumées du ministère de l'Intérieur."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-11-25T09:01:32.670Z"
     },
     {
       "id": "9e11dea832df",
@@ -4619,7 +4642,7 @@
           "url": "https://www.lefigaro.fr/elections/presidentielles/un-desaccord-manifeste-sur-la-ligne-politique-plutot-qu-une-primaire-edouard-philippe-propose-un-debat-a-david-lisnard-20261124",
           "publishedAt": "2026-11-24T21:22:13.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/1921x1040_crop/2026/11/24/15af42d9de1928b1469d64e7116f95ea3b3999a93b58cd70530a510d43715ef8.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -4949,10 +4972,44 @@
     {
       "id": "86aa73d1078c",
       "slug": "vingt-personnes-sont-retenues-en-otage-dans-un-supermarche-a",
-      "title": "Une prise d’otages est en cours dans un supermarché de Carthagène en Colombie",
+      "title": "Colombie : les otages retenus dans un supermarché à Carthagène ont été libérés par la police",
       "createdAt": "2026-11-25T02:01:31.806Z",
       "storyDay": "2026-11-24",
       "articles": [
+        {
+          "id": "4862e087d090",
+          "outletId": "bfmtv",
+          "headline": "Colombie: les otages libérés après un assaut de la police, un des preneurs d'otages tué",
+          "url": "https://www.bfmtv.com/international/amerique-latine/colombie/video-colombie-les-otages-liberes-apres-un-assaut-de-la-police-un-des-preneurs-d-otages-tue_VN-202611250388.html",
+          "publishedAt": "2026-11-25T08:49:40.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/konNTrPQalPab1NhOQr_oTZLLE8=/0x0:1280x720/800x0/images/Colombie-les-otages-liberes-apres-un-assaut-de-la-police-un-des-preneurs-d-otages-tue-2390241.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "75273dcf6099",
+          "outletId": "ouest-france",
+          "headline": "Prise d’otages en Colombie : toutes les personnes ont été libérées après un assaut mené par la police et l’armée",
+          "url": "https://www.ouest-france.fr/monde/colombie/prise-dotages-en-colombie-toujours-une-vingtaine-de-clients-retenus-le-president-sur-place-27feaeae-e882-11f1-9b33-2f81462d3339?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-25T08:48:30.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZjA2MDI3ZTY0MDcxOTUyYmEyYzE3NTgxMWExYThiMDU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=61398ed483ca20f88417b2e608f17ae90dc1aba06dc48c065747ca7c7088f074",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "317ebc8b129d",
+          "outletId": "cnews",
+          "headline": "Colombie : braquage raté, président sur place... Ce que l'on sait de la prise d'otages dans un supermarché",
+          "url": "https://www.cnews.fr/france/2026-11-25/colombie-braquage-rate-president-sur-place-ce-que-lon-sait-de-la-prise-dotages",
+          "publishedAt": "2026-11-25T08:14:51.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-24t165936z_505671828_rc25uoaxizzj_rtrmadp_3_colombia-hostages-taille1200_6b0695fdb347f.jpg?itok=FK3J8FEx",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
         {
           "id": "f948cb5afede",
           "outletId": "le-parisien",
@@ -5079,20 +5136,10 @@
         }
       ],
       "topicId": "86aa73d1078c",
-      "titledArticleCount": 11,
+      "titledArticleCount": 14,
       "section": "world",
       "everInEdition": true,
       "activity": [
-        {
-          "start": 1795507200000,
-          "end": 1795510800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
         {
           "start": 1795510800000,
           "end": 1795514400000,
@@ -5322,35 +5369,46 @@
             "droite": 0
           },
           "total": 1
+        },
+        {
+          "start": 1795593600000,
+          "end": 1795597200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 2,
+            "droite": 1
+          },
+          "total": 3
         }
       ],
       "summaries": {
         "gauche": [
-          "Une trentaine de clients d'un supermarché de Carthagène sont séquestrés depuis mardi par des malfaiteurs après l'échec du braquage d'un fourgon blindé.",
-          "Le chef de l'Etat Abelardo de la Espriella s'est rendu sur place et a affirmé que l'acte relève de la criminalité de droit commun, tout en écartant un lien avec des groupes armés récents.",
-          "Une quinzaine de personnes ont pu être libérées tandis que les forces de l'ordre maintiennent le bouclage du site.",
-          "Le journal Libération qualifie explicitement le président d'extrême droite, tandis que Le Monde rappelle la concomitance de l'événement avec l'anniversaire d'un accord de paix historique."
+          "Le président d'extrême droite Abelardo de la Espriella s'est rendu sur place à Carthagène pour superviser la libération partielle de dix otages sur trente.",
+          "La prise d'otages découle d'un braquage raté de fourgon blindé mené par des hommes armés dans un supermarché.",
+          "Le chef de l'État a explicitement écarté tout lien avec des groupes armés auteurs d'attentats récents, qualifiant l'acte de criminalité de droit commun.",
+          "Le journal Le Monde rappelle que l'attaque coïncide avec le dixième anniversaire des accords de paix avec la guérilla des Farc."
         ],
         "centre": [
-          "Une prise d'otages est en cours dans un supermarché de Carthagène en Colombie après un braquage raté.",
-          "Une vingtaine ou une trentaine de personnes sont retenues par des hommes armés, tandis que les forces de l'ordre et des tireurs d'élite encerclent le bâtiment.",
-          "Le président Abelardo de la Espriella est présent sur les lieux pour superviser les opérations de libération des otages.",
-          "Un premier bilan fait état d'une dizaine à une quinzaine de personnes libérées."
+          "Les otages retenus dans un supermarché à Carthagène ont tous été libérés à l'issue d'un assaut mené par la police et l'armée.",
+          "Le président Abelardo de la Espriella est intervenu sur les lieux des opérations pour superviser le déroulement de la crise.",
+          "L'opération s'est soldée par la mort d'un des preneurs d'otages, qualifiée par le chef de l'État d'intervention absolument impeccable.",
+          "La prise d'otages fait suite à une tentative de braquage ratée d'un véhicule blindé dans cette ville touristique colombienne."
         ],
         "droite": [
-          "Des hommes armés retranchés dans un supermarché de Carthagène retiennent entre quinze et vingt personnes à la suite d'un braquage raté.",
-          "Dix otages ont été libérés par les forces de l'ordre qui encerclent le magasin et y ont déployé des renforts militaires.",
-          "CNews précise que les assaillants réclament près de deux millions de dollars ainsi que des véhicules blindés."
+          "Une trentaine de personnes ont été prises en otage dans un supermarché de Carthagène à la suite d'un braquage raté.",
+          "Les forces de l'ordre ont donné l'assaut, permettant la libération des otages et la mort d'un des malfaiteurs.",
+          "Le président Abelardo de la Espriella s'est rendu sur place et a salué une opération policière impeccable.",
+          "Les assaillants avaient initialement réclamé près de deux millions de dollars et des véhicules blindés selon les autorités locales."
         ]
       },
       "differences": [
-        "La gauche insiste sur le profil politique du chef de l'Etat et replace l'événement dans le contexte des tensions sécuritaires et des commémorations nationales du pays.",
-        "Le centre livre un compte rendu factuel et centré sur le déroulement des opérations de secours et la présence de l'exécutif sur place.",
-        "La droite privilégie le récit haletant de l'événement en insistant sur la chronologie du braquage raté et les exigences financières des malfaiteurs."
+        "La gauche insiste sur le profil politique du président d'extrême droite et replace l'événement dans le contexte sécuritaire et historique du pays.",
+        "Le centre se concentre sur le déroulement factuel de l'assaut des forces de l'ordre et la libération complète des otages sous l'égide présidentielle.",
+        "La droite accorde une visibilité accrue aux détails spectaculaires du braquage et aux exigences financières des malfaiteurs."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 11,
-      "summarizedAt": "2026-11-25T07:01:25.762Z"
+      "summarizedArticleCount": 14,
+      "summarizedAt": "2026-11-25T09:01:32.670Z"
     },
     {
       "id": "5e6af75bae3b",
@@ -7042,23 +7100,26 @@
       ],
       "summaries": {
         "gauche": [
-          "Le dirigeant américain Donald Trump est intervenu personnellement auprès des administrateurs pour imposer le retour de Jensen Huang.",
-          "Le conseil d'administration a cédé aux pressions politiques pour réintégrer le PDG malgré les révélations."
+          "Jensen Huang a fait son retour à la tête de Nvidia et s'est exprimé auprès des salariés au lendemain d'une baisse de l'action en Bourse.",
+          "Le dirigeant a contredit Donald Trump concernant l'implication du président dans sa réintégration, alors que Le Hufflink souligne les pressions exercées par la Maison-Blanche auprès du conseil d'administration."
+        ],
+        "centre": [
+          "Jensen Huang retrouve ses fonctions de PDG chez Nvidia après des allégations d'inconduite.",
+          "Le retour du dirigeant s'accompagne d'excuses publiques auprès des salariés, d'un suivi thérapeutique et de révélations sur les coulisses de sa réintégration."
         ],
         "droite": [
-          "Jensen Huang a fait amende honorable auprès de ses collaborateurs tout en reconnaissant suivre une thérapie.",
-          "Le chef d'entreprise revient aux commandes de Nvidia onze jours après son départ, porté par l'appui public de Donald Trump.",
-          "L'industriel de la tech doit encore faire face à des auditions parlementaires sur des accusations d'espionnage et d'adultère.",
-          "La chute boursière initiale de plus de 10 % met en lumière la fragilité de la gouvernance de l'entreprise face aux crises."
+          "Jensen Huang a présenté ses excuses aux salariés de Nvidia et suivi une thérapie suite à des manquements au code de conduite.",
+          "Malgré son retour soutenu par Donald Trump, le patron reste sous la menace d'une audition devant le Sénat américain et la commission des affaires bancaires dans le cadre d'une enquête pour espionnage."
         ]
       },
       "differences": [
-        "Le camp de gauche met en avant l'ingérence politique directe de Donald Trump dans les affaires internes de l'entreprise.",
-        "Le camp de droite insiste sur le parcours judiciaire et politique tourmenté du dirigeant tout en détaillant l'impact financier du scandale sur le cours boursier."
+        "La gauche met l'accent sur la confrontation entre Jensen Huang et Donald Trump concernant les ingérences politiques dans la gouvernance de Nvidia.",
+        "Le centre se concentre sur les aspects internes de la crise managériale, détaillant les excuses du PDG et les mesures thérapeutiques prises après les révélations du Parisien.",
+        "La droite insiste sur la fragilité de la position du patron malgré son retour, en mettant en avant les auditions parlementaires à venir et les soupçons d'espionnage."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-11-25T06:01:42.166Z"
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-11-25T09:01:32.670Z"
     },
     {
       "id": "b49396188b53",
@@ -8495,435 +8556,199 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 2,
       "summarizedAt": "2026-11-24T21:01:24.814Z"
-    },
+    }
+  ],
+  "feedStories": [
     {
-      "id": "b3b284fed94a",
-      "slug": "la-justice-ordonne-un-proces-pour-meurtre-contre-le-policier",
-      "title": "La justice ordonne un procès pour meurtre contre le policier impliqué dans la mort de Nahel Merzouk",
-      "createdAt": "2026-11-24T11:01:30.328Z",
+      "id": "86aa73d1078c",
+      "slug": "vingt-personnes-sont-retenues-en-otage-dans-un-supermarche-a",
+      "title": "Colombie : les otages retenus dans un supermarché à Carthagène ont été libérés par la police",
+      "createdAt": "2026-11-25T02:01:31.806Z",
       "storyDay": "2026-11-24",
       "articles": [
         {
-          "id": "ca2c8aa987c7",
-          "outletId": "liberation",
-          "headline": "«C’est une victoire importante» : la mère de Nahel Merzouk «soulagée» des poursuites pour meurtre contre le policier à l’origine des tirs",
-          "url": "https://www.liberation.fr/societe/police-justice/cest-une-victoire-importante-la-mere-de-nahel-merzouk-soulagee-des-poursuites-pour-meurtre-contre-le-policier-a-lorigine-des-tirs-20261124_REQX5SS6RNEBNNGY4FTTO23K7M/",
-          "publishedAt": "2026-11-24T20:16:54.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "0573cad1398c",
-          "outletId": "franceinfo",
-          "headline": "Mort de Nahel Merzouk en 2023 : quatre questions après la décision de juger le policier auteur du tir pour meurtre",
-          "url": "https://www.franceinfo.fr/faits-divers/adolescent-tue-par-un-policier-a-nanterre/mort-de-nahel-merzouk-en-2023-quatre-questions-apres-la-decision-de-juger-le-policier-auteur-du-tir-pour-meurtre_8297382.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-24T17:52:03.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/hKPPkKoGAPCX_OQzqKP8aJctxMY/0x0:1024x576/432x243/filters:format(jpg)/2026/11/24/6b058dc1b9a18128800599.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "d89904fa3c67",
-          "outletId": "europe-1",
-          "headline": "«Ça va avoir des conséquences» : un syndicaliste policier s'inquiète de la décision de la cour d'appel de Versailles sur l'affaire Nahel",
-          "url": "https://www.europe1.fr/police-justice/ca-va-avoir-des-consequences-un-syndicaliste-policier-sinquiete-de-la-decision-de-la-cour-dappel-de-versailles-sur-laffaire-nahel-1243999?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-24T17:15:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/24/17/sg1_2_6b05b722a7ddf.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "fdcc0bb823d2",
-          "outletId": "france-24",
-          "headline": "Mort de Nahel : la réaction de la famille après le pourvoi en cassation du policier mis en cause",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261124-mort-de-nahel-la-r%C3%A9action-de-la-famille-apr%C3%A8s-le-pourvoi-en-cassation-du-policier-mis-en-cause",
-          "publishedAt": "2026-11-24T17:07:43.000Z",
-          "imageUrl": "https://s.france24.com/media/display/9ad78336-e825-11f1-a210-29d00e23de9a/w:1024/p:16x9/Reax-famille-Nahel-10.png",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "e2b1d2639150",
-          "outletId": "europe-1",
-          "headline": "Le policier renvoyé en procès pour meurtre dans l'affaire Nahel : son avocat déplore un «manque de courage judiciaire»",
-          "url": "https://www.europe1.fr/police-justice/le-policier-renvoye-en-proces-pour-meurtre-dans-laffaire-nahel-son-avocat-deplore-un-manque-de-courage-judiciaire-1243981?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-24T17:00:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/24/16/pp2_avocat_1_6b05b4141f9b4.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "e038d0bfad96",
-          "outletId": "europe-1",
-          "headline": "Affaire Nahel : l'avocat du policier dénonce la décision «totalement consternante» de la cour d'appel de Versailles",
-          "url": "https://www.europe1.fr/police-justice/affaire-nahel-lavocat-du-policier-denonce-la-decision-totalement-consternante-de-la-cour-dappel-de-versailles-1243978?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-24T16:44:40.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/24/16/avocat_1pp_1_6b05afdcba93b.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "7176b1a6e7f0",
-          "outletId": "le-jdd",
-          "headline": "Procès pour meurtre contre le policier dans l'affaire Nahel : «C'est une décision très difficile à entendre»",
-          "url": "https://www.lejdd.fr/Societe/proces-pour-meurtre-contre-le-policier-dans-laffaire-nahel-cest-une-decision-tres-difficile-a-entendre-189561",
-          "publishedAt": "2026-11-24T15:41:04.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/24/15/capture-decran-2026-11-24-a-15.50.30.jpg?VersionId=hEK5vI9hcaF0oPq8d3DsNaqZWtr249ig",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "b59af61d843c",
+          "id": "4862e087d090",
           "outletId": "bfmtv",
-          "headline": "Mort de Nahel: un procès pour meurtre ordonné contre le policier",
-          "url": "https://www.bfmtv.com/police-justice/video-mort-de-nahel-un-proces-pour-meurtre-ordonne-contre-le-policier_VN-202611240500.html",
-          "publishedAt": "2026-11-24T10:50:19.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/VRKjrrWTXl4On-QPUtUtmW0qzo8=/0x0:1280x720/800x0/images/Mort-de-Nahel-un-proces-pour-meurtre-ordonne-contre-le-policier-2389610.jpg",
+          "headline": "Colombie: les otages libérés après un assaut de la police, un des preneurs d'otages tué",
+          "url": "https://www.bfmtv.com/international/amerique-latine/colombie/video-colombie-les-otages-liberes-apres-un-assaut-de-la-police-un-des-preneurs-d-otages-tue_VN-202611250388.html",
+          "publishedAt": "2026-11-25T08:49:40.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/konNTrPQalPab1NhOQr_oTZLLE8=/0x0:1280x720/800x0/images/Colombie-les-otages-liberes-apres-un-assaut-de-la-police-un-des-preneurs-d-otages-tue-2390241.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "misc"
+          "section": "world"
         },
         {
-          "id": "b8fd08982344",
-          "outletId": "lobs",
-          "headline": "Mort de Nahel Merzouk : la justice ordonne un procès pour meurtre à l’encontre du policier",
-          "url": "https://www.nouvelobs.com/societe/20261124.OBS120401/mort-de-nahel-merzouk-la-justice-ordonne-un-proces-pour-meurtre-a-l-encontre-du-policier.html",
-          "publishedAt": "2026-11-24T10:46:37.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/11/24/0/0/6192/4128/0/0/60/0/8854211_upload-1-du55y8afuhqy-illu-nahel.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "e0ece8b13aa7",
-          "outletId": "mediapart",
-          "headline": "Le policier qui a tué Nahel Merzouk doit bien être jugé pour meurtre",
-          "url": "https://www.mediapart.fr/journal/france/241126/le-policier-qui-tue-nahel-merzouk-doit-bien-etre-juge-pour-meurtre",
-          "publishedAt": "2026-11-24T10:46:30.000Z",
-          "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/11/24/261124-img-le-policier-qui-tue-nahel-merzouk-doit-bien-etre-juge-pour-meurtre.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "dc5b72d5a72b",
+          "id": "75273dcf6099",
           "outletId": "ouest-france",
-          "headline": "Mort de Nahel : la justice ordonne un procès pour meurtre, le policier qui a tiré veut se pourvoir en cassation",
-          "url": "https://www.ouest-france.fr/societe/justice/mort-de-nahel-la-justice-ordonne-un-proces-pour-meurtre-a-lencontre-du-policier-qui-a-tire-sur-ladolescent-ee79b4ac-e7d8-11f1-9b33-2f81462d3339?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-24T10:36:28.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMjg2MDU2NmM2NTIxNWUwZDI4NzQzN2YyNTBlZDgxYmM?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=4fee4b22c26f117fead7e1eff1a9fe415beda8e3d074bb8cb444e54d67da17ec",
-          "frontPage": false,
+          "headline": "Prise d’otages en Colombie : toutes les personnes ont été libérées après un assaut mené par la police et l’armée",
+          "url": "https://www.ouest-france.fr/monde/colombie/prise-dotages-en-colombie-toujours-une-vingtaine-de-clients-retenus-le-president-sur-place-27feaeae-e882-11f1-9b33-2f81462d3339?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-25T08:48:30.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZjA2MDI3ZTY0MDcxOTUyYmEyYzE3NTgxMWExYThiMDU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=61398ed483ca20f88417b2e608f17ae90dc1aba06dc48c065747ca7c7088f074",
+          "frontPage": true,
           "kind": "news",
-          "section": "misc",
+          "section": "world",
           "everFrontPage": true
         },
         {
-          "id": "0952e0d9dc72",
-          "outletId": "la-croix",
-          "headline": "Mort de Nahel Merzouk : la cour d’appel ordonne un procès pour meurtre à l’encontre du policier",
-          "url": "https://www.la-croix.com/societe/mort-de-nahel-merzouk-la-cour-d-appel-ordonne-un-proces-pour-meurtre-a-lencontre-du-policier-20261124",
-          "publishedAt": "2026-11-24T10:15:05.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/11/24/2597273-la-cour-d-appel-de-versailles-a-ordonne-mardi-24-n.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "ab48972cbda9",
-          "outletId": "bfmtv",
-          "headline": "\"La famille se réjouit de la décision\": 3 ans après la mort de Nahel, la justice ordonne un procès contre le policier",
-          "url": "https://www.bfmtv.com/police-justice/video-la-famille-se-rejouit-de-la-decision-3-ans-apres-la-mort-de-nahel-la-justice-ordonne-un-proces-contre-le-policier_VN-202611240470.html",
-          "publishedAt": "2026-11-24T10:03:39.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/1FEZF5T0-V9Ek6FTEH_t3Iy7y3c=/0x0:1280x720/800x0/images/La-famille-se-rejouit-de-la-decision-3-ans-apres-la-mort-de-Nahel-la-justice-ordonne-un-proces-contre-le-policier-2389580.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "f003ec275b0d",
-          "outletId": "le-figaro",
-          "headline": "Mort de Nahel : la justice ordonne un procès pour meurtre à l’encontre du policier",
-          "url": "https://www.lefigaro.fr/faits-divers/mort-de-nahel-la-justice-ordonne-un-proces-pour-meurtre-a-l-encontre-du-policier-20261124",
-          "publishedAt": "2026-11-24T09:35:35.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/24/fb66c4d098749c585601528778d64865cc47f281eecc67406d76207d7d62ba07.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "ad16bdf48a3c",
-          "outletId": "franceinfo",
-          "headline": "Mort de Nahel Merzouk en 2023 : la cour d'appel de Versailles confirme le renvoi du policier devant les assises pour meurtre",
-          "url": "https://www.franceinfo.fr/faits-divers/adolescent-tue-par-un-policier-a-nanterre/mort-de-nahel-merzouk-en-2023-la-cour-d-appel-de-versailles-confirme-le-renvoi-du-policier-devant-les-assises-pour-meurtre_8295785.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-24T09:30:26.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/LRaxdN2JtLv5bfvsF-4J4r29Csk/0x106:1024x682/432x243/filters:format(jpg)/2026/11/23/6b0453f97e072399704835.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "d817d71edc13",
-          "outletId": "humanite",
-          "headline": "Mort de Nahel Merzouk : le policier sera jugé pour meurtre devant la cour d’assises des Hauts-de-Seine",
-          "url": "https://www.humanite.fr/societe/justice/mort-de-nahel-merzouk-le-policier-sera-t-il-juge-pour-meurtre-la-justice-tranche-ce-mardi",
-          "publishedAt": "2026-11-24T09:18:03.000Z",
-          "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/ABACA_1005021_008.jpg?w=1200",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "73c962853976",
-          "outletId": "huffpost",
-          "headline": "Mort de Nahel Merzouk : le policier accusé d’avoir tué l’adolescent de 17 ans sera jugé pour meurtre",
-          "url": "https://www.huffingtonpost.fr/france/article/mort-de-nahel-merzouk-le-policier-accuse-d-avoir-tue-l-adolescent-de-17-ans-sera-juge-pour-meurtre_364190.html",
-          "publishedAt": "2026-11-24T09:04:42.000Z",
-          "imageUrl": "https://focus.huffingtonpost.fr/2026/06/19/53/0/1024/576/0/0/60/0/f6b450e_upload-1-lke5lxnhjlmx-afp-20260514-hl-vdubois-3160330-v1-midres-francejusticemarchfornahelnanterre.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "4ebf31a1e49f",
-          "outletId": "le-jdd",
-          "headline": "Mort de Nahel : la justice ordonne un procès pour meurtre contre le policier",
-          "url": "https://www.lejdd.fr/Societe/mort-de-nahel-la-justice-ordonne-un-proces-pour-meurtre-contre-le-policier-189510",
-          "publishedAt": "2026-11-24T08:58:44.000Z",
-          "imageUrl": "https://resize-lejdd.lanmedia.fr/var/jdd/public/styles/paysage/public/media/image/2026/11/24/09/080_hl_vdubois_3160331.jpg?VersionId=LdzmezAYOohAV_xmCqncm4L5m4neQwSy",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "cb0a474d8144",
-          "outletId": "le-monde",
-          "headline": "Mort de Nahel : la cour d’appel de Versailles ordonne un procès pour meurtre à l’encontre du policier",
-          "url": "https://www.lemonde.fr/societe/article/2026/11/24/mort-de-nahel-la-cour-d-appel-de-versailles-ordonne-un-proces-pour-meurtre-a-l-encontre-du-policier_6814726_3224.html",
-          "publishedAt": "2026-11-24T08:55:19.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/24/546/0/6548/3274/644/322/60/0/a5ced4f_upload-1-7x7flfsdclka-000-a47p89k.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "6fd40bab815f",
-          "outletId": "liberation",
-          "headline": "Mort de Nahel Merzouk : la cour d’appel de Versailles ordonne un procès pour meurtre contre le policier qui l’a tué",
-          "url": "https://www.liberation.fr/societe/police-justice/mort-de-nahel-merzouk-la-cour-dappel-de-versailles-ordonne-un-proces-pour-meurtre-contre-le-policier-qui-la-tue-20261124_HLTCW73RNRDUPJOWTA4ET4ZAEY/",
-          "publishedAt": "2026-11-24T08:49:26.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "d50026222e6f",
-          "outletId": "rfi",
-          "headline": "Mort de Nahel Merzouk en 2023: en appel, la justice française ordonne un procès pour meurtre à l'encontre du policier",
-          "url": "https://www.rfi.fr/fr/france/20261124-mort-de-nahel-en-2023-en-appel-la-justice-fran%C3%A7aise-ordonne-un-proc%C3%A8s-pour-meurtre-%C3%A0-l-encontre-du-policier",
-          "publishedAt": "2026-11-24T08:42:24.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/32d4cee4-18b7-11f1-bca3-005056a97e36/w:1024/p:16x9/Screenshot-2026-03-05-at-17-59-41-Mort-de-Nahel-ce-que-r%C3%A9v%C3%A8lent-les-premiers-%C3%A9l%C3%A9ments-de-l-enqu%C3%AAte-France-24.png",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "9d7a766fb281",
-          "outletId": "20-minutes",
-          "headline": "Mort de Nahel Merzouk : La justice confirme en appel que le policier sera jugé pour meurtre",
-          "url": "https://www.20minutes.fr/justice/4265284-20261124-mort-nahel-merzouk-justice-ordonne-appel-proces-meurtre-encontre-policier?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-24T08:42:13.000Z",
-          "imageUrl": "https://img.20mn.fr/kqT7IjXtRJqGOGr46_aOHyk/1200x768_demonstrators-hold-up-a-poster-bearing-nahel-merzouk-s-portrait-and-the-words-justice-and-truth-as-they-participate-to-a-march-as-part-of-the-international-day-against-racism-and-fascism-in-strasbourg-eastern-france-on-march-22-2025-des-manifestants-brandissent-une-affiche-avec-le-portrait-de-nahel-merzouk-avec-les-mots-justice-et-verite-alors-qu-ils-participent-a-une-marche-dans-le-cadre-de-la-journee-internationale-contre-le-racisme-et-le-fascisme-a-strasbourg-dans-l-est-de-la-france-le-22-mars-2025-utzantonin-utz1969-credit-antonin-utz-sipa-2503221959",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "ef576f6dcabe",
+          "id": "317ebc8b129d",
           "outletId": "cnews",
-          "headline": "Mort de Nahel : la justice ordonne un procès pour meurtre à l'encontre du policier, le syndicat Alliance dénonce une décision «incompréhensible»",
-          "url": "https://www.cnews.fr/faits-divers/2026-11-24/mort-de-nahel-la-justice-ordonne-un-proces-pour-meurtre-lencontre-du",
-          "publishedAt": "2026-11-24T08:35:49.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_1qn8ah-taille1200_6aff001f97420-taille1200_6b054c794101c.jpg?itok=p0tzmZy-",
+          "headline": "Colombie : braquage raté, président sur place... Ce que l'on sait de la prise d'otages dans un supermarché",
+          "url": "https://www.cnews.fr/france/2026-11-25/colombie-braquage-rate-president-sur-place-ce-que-lon-sait-de-la-prise-dotages",
+          "publishedAt": "2026-11-25T08:14:51.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-24t165936z_505671828_rc25uoaxizzj_rtrmadp_3_colombia-hostages-taille1200_6b0695fdb347f.jpg?itok=FK3J8FEx",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "f948cb5afede",
+          "outletId": "le-parisien",
+          "headline": "Prise d’otages dans un supermarché en Colombie : 20 personnes détenues par des hommes armés, le président sur place",
+          "url": "https://www.leparisien.fr/international/prise-dotages-dans-un-supermarche-en-colombie-20-personnes-detenues-par-des-hommes-armes-le-president-sur-place-25-11-2026-M6UWAKCN4JHQ7EWJATURNW5XLU.php",
+          "publishedAt": "2026-11-25T07:01:25.762Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "b6d872fd0e07",
+          "outletId": "la-croix",
+          "headline": "Prise d’otages Colombie : intervention des forces de l’ordre, le président sur place",
+          "url": "https://www.la-croix.com/prise-d-otages-dans-un-supermarche-en-colombie-l-armee-a-la-rescousse-20261125",
+          "publishedAt": "2026-11-25T06:50:48.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/11/25/2598164-des-soldats-deployes-a-cathagene-le-24-novembre-20.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "651b7bc0bbee",
+          "outletId": "tf1-info",
+          "headline": "Colombie : prise d'otages en cours dans un supermarché de Carthagène après un braquage raté",
+          "url": "https://www.tf1info.fr/international/direct-colombie-prise-d-otages-en-cours-dans-un-supermarche-de-carthagene-apres-un-braquage-rate-2477982.html",
+          "publishedAt": "2026-11-25T06:49:03.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/682/police-colombienne-cartagene-24-novembre-2026-560783-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "6f8d46cbf025",
+          "outletId": "liberation",
+          "headline": "Prise d’otages en Colombie après un braquage raté : 10 personnes sur 30 libérées, le président d’extrême droite sur place",
+          "url": "https://www.liberation.fr/international/amerique/prise-dotages-en-colombie-apres-un-braquage-rate-10-personnes-sur-30-liberees-le-president-dextreme-droite-sur-place-20261125_OZZ3PUOE3BAV3AELKK2ERPWK7A/",
+          "publishedAt": "2026-11-25T06:31:40.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "6d37b56f8faa",
+          "outletId": "franceinfo",
+          "headline": "Une vingtaine de personnes retenues dans une prise d'otages en Colombie, le président sur place",
+          "url": "https://www.franceinfo.fr/monde/ameriques/une-vingtaine-de-personnes-retenues-dans-une-prise-d-otages-en-colombie-le-president-sur-place_8298720.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-25T06:30:57.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/qQ_SquyjfL-FOoAsk9VzlCj-tbI/0x417:4000x2667/432x243/filters:format(jpg)/2026/11/25/6b067ede3ff42070711341.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "0830d143cf79",
+          "outletId": "le-monde",
+          "headline": "En Colombie, le président et l’armée à Carthagène pour une prise d’otages en cours dans un supermarché",
+          "url": "https://www.lemonde.fr/international/article/2026/11/25/en-colombie-le-president-et-l-armee-a-carthagenes-pour-une-prise-d-otages-en-cours-dans-un-supermarche_6814815_3211.html",
+          "publishedAt": "2026-11-25T04:52:04.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/24/87/0/3908/1954/644/322/60/0/0a2de76_ftp-1-dorodl20rinm-afp-d8hw69g.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "9b48e8cd0183",
+          "outletId": "le-figaro",
+          "headline": "Colombie : dix personnes libérées après une prise d’otages dans un supermarché de Carthagène",
+          "url": "https://www.lefigaro.fr/international/colombie-dix-personnes-liberees-apres-une-prise-d-otages-dans-un-supermarche-de-carthagene-20261125",
+          "publishedAt": "2026-11-25T02:12:58.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/25/92d9b981d495e30db3f1c8a36bd825ade3b4fb1ca970c783b59f40162c7dc732.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "981815426819",
+          "outletId": "cnews",
+          "headline": "Colombie : 20 personnes retenues en otage dans un magasin après un braquage raté à Carthagène",
+          "url": "https://www.cnews.fr/monde/2026-11-24/colombie-20-personnes-retenues-en-otage-dans-un-magasin-apres-un-braquage-rate",
+          "publishedAt": "2026-11-24T22:07:41.000Z",
+          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-24t165936z_505671828_rc25uoaxizzj_rtrmadp_3_colombia-hostages-taille1200_6b06041f16dd8.jpg?h=f77520ee&itok=4DMsr6Np",
           "frontPage": false,
           "kind": "news",
           "section": "misc"
         },
         {
-          "id": "46c146788314",
+          "id": "ecf62d778287",
+          "outletId": "20-minutes",
+          "headline": "Colombie : Une prise d’otages en cours dans un supermarché de la ville touristique de Carthagène",
+          "url": "https://www.20minutes.fr/monde/4265502-20261124-colombie-prise-otages-cours-supermarche-ville-touristique-carthagene?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-24T19:15:19.000Z",
+          "imageUrl": "https://img.20mn.fr/07sZ1RZATf63-b90LmkI3Ck/1200x768_260104-bogota-4-janvier-2026-xinhua-un-membre-de-l-unite-de-neutralisation-des-bombes-de-la-police-colombienne-travaille-devant-l-ambassade-des-etats-unis-a-bogota-en-colombie-le-3-janvier-2026-photo-d-andres-moreno-xinhua-andres-moreno-chinenouvelle-chine03127-credit-chine-nouvelle-sipa-2601041237",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "3028869787d6",
+          "outletId": "le-monde",
+          "headline": "En Colombie, prise d’otages lors du braquage d’un supermarché à Carthagène, au lendemain d’un attentat à la voiture piégée à Villavicencio",
+          "url": "https://www.lemonde.fr/international/article/2026/11/24/en-colombie-prise-d-otages-lors-du-braquage-d-un-supermarche-a-carthagene-au-lendemain-d-un-attentat-a-la-voiture-piegee-a-villavicencio_6814815_3211.html",
+          "publishedAt": "2026-11-24T17:53:27.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/24/456/0/5472/2736/644/322/60/0/ccf3a40_ftp-1-glgpcbk1rsde-2026-11-24t151037z-52219646-rc2buoaccdbi-rtrmadp-3-colombia-violence.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "7f1ea7585a52",
           "outletId": "france-24",
-          "headline": "Mort de Nahel Merzouk : la justice ordonne un procès pour meurtre à l'encontre du policier",
-          "url": "https://www.france24.com/fr/france/20261124-mort-nahel-merzouk-justice-ordonne-proc%C3%A8s-pour-meurtre-policier",
-          "publishedAt": "2026-11-24T08:29:01.000Z",
+          "headline": "Colombie : une prise d'otages est en cours dans la ville touristique de Carthagène",
+          "url": "https://www.france24.com/fr/am%C3%A9riques/20261124-colombie-prise-otages-cours-ville-touristique-carthag%C3%A8ne",
+          "publishedAt": "2026-11-24T17:17:36.000Z",
+          "imageUrl": "https://s.france24.com/media/display/0002202a-e841-11f1-b0e2-29d00e23de9a/w:1024/p:16x9/000-D8HP763.jpg",
           "frontPage": false,
           "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "fc47561a8af5",
-          "outletId": "europe-1",
-          "headline": "Mort de Nahel : la justice ordonne un procès pour meurtre à l'encontre du policier",
-          "url": "https://www.europe1.fr/police-justice/mort-de-nahel-la-justice-ordonne-un-proces-pour-meurtre-a-lencontre-du-policier-1243498?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-24T08:22:00.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Justice/loic_venance_afp_69725cae7128a.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
+          "section": "world"
         }
       ],
-      "topicId": "b3b284fed94a",
-      "titledArticleCount": 25,
-      "section": "misc",
+      "topicId": "86aa73d1078c",
+      "titledArticleCount": 14,
+      "section": "world",
       "everInEdition": true,
       "activity": [
-        {
-          "start": 1795467600000,
-          "end": 1795471200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795471200000,
-          "end": 1795474800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795474800000,
-          "end": 1795478400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795478400000,
-          "end": 1795482000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795482000000,
-          "end": 1795485600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795485600000,
-          "end": 1795489200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795489200000,
-          "end": 1795492800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795492800000,
-          "end": 1795496400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795496400000,
-          "end": 1795500000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795500000000,
-          "end": 1795503600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795503600000,
-          "end": 1795507200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795507200000,
-          "end": 1795510800000,
-          "counts": {
-            "gauche": 3,
-            "centre": 2,
-            "droite": 3
-          },
-          "total": 8
-        },
         {
           "start": 1795510800000,
           "end": 1795514400000,
           "counts": {
-            "gauche": 3,
+            "gauche": 0,
             "centre": 0,
-            "droite": 1
+            "droite": 0
           },
-          "total": 4
+          "total": 0
         },
         {
           "start": 1795514400000,
           "end": 1795518000000,
           "counts": {
-            "gauche": 2,
-            "centre": 4,
+            "gauche": 0,
+            "centre": 0,
             "droite": 0
           },
-          "total": 6
+          "total": 0
         },
         {
           "start": 1795518000000,
@@ -8971,9 +8796,9 @@
           "counts": {
             "gauche": 0,
             "centre": 0,
-            "droite": 1
+            "droite": 0
           },
-          "total": 1
+          "total": 0
         },
         {
           "start": 1795536000000,
@@ -8981,9 +8806,9 @@
           "counts": {
             "gauche": 0,
             "centre": 0,
-            "droite": 1
+            "droite": 0
           },
-          "total": 1
+          "total": 0
         },
         {
           "start": 1795539600000,
@@ -8991,9 +8816,9 @@
           "counts": {
             "gauche": 1,
             "centre": 1,
-            "droite": 2
+            "droite": 0
           },
-          "total": 4
+          "total": 2
         },
         {
           "start": 1795543200000,
@@ -9009,6 +8834,16 @@
           "start": 1795546800000,
           "end": 1795550400000,
           "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795550400000,
+          "end": 1795554000000,
+          "counts": {
             "gauche": 0,
             "centre": 0,
             "droite": 0
@@ -9016,45 +8851,155 @@
           "total": 0
         },
         {
-          "start": 1795550400000,
-          "end": 1795554000000,
+          "start": 1795554000000,
+          "end": 1795557600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795557600000,
+          "end": 1795561200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1795561200000,
+          "end": 1795564800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795564800000,
+          "end": 1795568400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795568400000,
+          "end": 1795572000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795572000000,
+          "end": 1795575600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1795575600000,
+          "end": 1795579200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795579200000,
+          "end": 1795582800000,
           "counts": {
             "gauche": 1,
             "centre": 0,
             "droite": 0
           },
           "total": 1
+        },
+        {
+          "start": 1795582800000,
+          "end": 1795586400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795586400000,
+          "end": 1795590000000,
+          "counts": {
+            "gauche": 2,
+            "centre": 1,
+            "droite": 1
+          },
+          "total": 4
+        },
+        {
+          "start": 1795590000000,
+          "end": 1795593600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795593600000,
+          "end": 1795597200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 2,
+            "droite": 1
+          },
+          "total": 3
         }
       ],
       "summaries": {
         "gauche": [
-          "La cour d'appel de Versailles a ordonné que le policier Florian Menesplier soit jugé devant la cour d'assises des Hauts-de-Seine pour meurtre, trois ans après la mort de Nahel Merzouk.",
-          "Cette décision fait suite à l'annulation par la Cour de cassation d'un précédent arrêt qui avait requalifié les faits en violences ayant entraîné la mort sans intention de la donner.",
-          "Mounia Merzouk, la mère de la victime, a exprimé son soulagement face à cette avancée judiciaire tout en rappelant que le combat reste inachevé.",
-          "Plusieurs titres de gauche rappellent que le drame du 27 juin 2023 à Nanterre est devenu un symbole des violences policières après un refus d'obtempérer."
+          "Le président d'extrême droite Abelardo de la Espriella s'est rendu sur place à Carthagène pour superviser la libération partielle de dix otages sur trente.",
+          "La prise d'otages découle d'un braquage raté de fourgon blindé mené par des hommes armés dans un supermarché.",
+          "Le chef de l'État a explicitement écarté tout lien avec des groupes armés auteurs d'attentats récents, qualifiant l'acte de criminalité de droit commun.",
+          "Le journal Le Monde rappelle que l'attaque coïncide avec le dixième anniversaire des accords de paix avec la guérilla des Farc."
         ],
         "centre": [
-          "La justice a confirmé en appel le renvoi du fonctionnaire de police pour meurtre concernant la mort de Nahel Merzouk, survenue lors d'un contrôle routier en juin 2023.",
-          "La défense du policier a immédiatement annoncé son intention de former un nouveau pourvoi en cassation contre cette ordonnance de la cour d'appel de Versailles.",
-          "L'arrêt écarte le fait justificatif invoqué par les avocats et retient l'existence de charges suffisantes au vu de la distance et de la zone du corps touchée."
+          "Les otages retenus dans un supermarché à Carthagène ont tous été libérés à l'issue d'un assaut mené par la police et l'armée.",
+          "Le président Abelardo de la Espriella est intervenu sur les lieux des opérations pour superviser le déroulement de la crise.",
+          "L'opération s'est soldée par la mort d'un des preneurs d'otages, qualifiée par le chef de l'État d'intervention absolument impeccable.",
+          "La prise d'otages fait suite à une tentative de braquage ratée d'un véhicule blindé dans cette ville touristique colombienne."
         ],
         "droite": [
-          "La cour d'appel de Versailles a décidé de renvoyer le policier Florian M. devant la cour d'assises pour meurtre, provoquant de vives réactions syndicales et professionnelles.",
-          "Les syndicats de police, à l'instar d'Alliance, et les représentants professionnels déplorent une décision jugée incompréhensible et difficile à entendre pour les agents.",
-          "L'avocat de la défense, Laurent-Franck Liénard, a vertement critiqué un « consternant manque de courage judiciaire » et confirmé un pourvoi en cassation."
+          "Une trentaine de personnes ont été prises en otage dans un supermarché de Carthagène à la suite d'un braquage raté.",
+          "Les forces de l'ordre ont donné l'assaut, permettant la libération des otages et la mort d'un des malfaiteurs.",
+          "Le président Abelardo de la Espriella s'est rendu sur place et a salué une opération policière impeccable.",
+          "Les assaillants avaient initialement réclamé près de deux millions de dollars et des véhicules blindés selon les autorités locales."
         ]
       },
       "differences": [
-        "La gauche insiste sur le caractère symbolique de l'affaire et relaie le soulagement de la famille, tout en qualifiant les faits d'homicide volontaire.",
-        "Le centre adopte un ton strictement factuel et neutre sur la chronologie judiciaire, se concentrant sur les recours en cassation et la régularité de la procédure.",
-        "La droite accorde une large place aux réactions indignées des syndicats policiers et de la défense, qualifiant le jugement de signal négatif pour le terrain."
+        "La gauche insiste sur le profil politique du président d'extrême droite et replace l'événement dans le contexte sécuritaire et historique du pays.",
+        "Le centre se concentre sur le déroulement factuel de l'assaut des forces de l'ordre et la libération complète des otages sous l'égide présidentielle.",
+        "La droite accorde une visibilité accrue aux détails spectaculaires du braquage et aux exigences financières des malfaiteurs."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 25,
-      "summarizedAt": "2026-11-25T00:01:35.882Z"
-    }
-  ],
-  "feedStories": [
+      "summarizedArticleCount": 14,
+      "summarizedAt": "2026-11-25T09:01:32.670Z"
+    },
     {
       "id": "cc2edabb8108",
       "slug": "gerald-darmanin-saisit-l-inspection-generale-de-la-justice",
@@ -9080,9 +9025,10 @@
           "url": "https://www.lemonde.fr/societe/article/2026/11/25/procureur-present-lors-d-une-perquisition-au-rn-gerald-darmanin-annonce-saisir-l-inspection-generale-de-la-justice-pour-faire-toute-la-lumiere_6815060_3224.html",
           "publishedAt": "2026-11-25T07:55:22.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/25/473/0/5682/2841/644/322/60/0/2badbd9_upload-1-hhirgrvhqsj8-000-d3xq3mc.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
-          "section": "politics"
+          "section": "politics",
+          "everFrontPage": true
         },
         {
           "id": "a262ab0720e5",
@@ -9374,7 +9320,29 @@
           },
           "total": 1
         }
-      ]
+      ],
+      "summaries": {
+        "gauche": [
+          "Le ministre de la Justice Gérald Darmanin a saisi l'Inspection générale de la justice après la présence surprise du procureur adjoint Christian de Rocquigny au siège du Rassemblement national.",
+          "Le magistrat a été épinglé pour un « défaut de loyauté » après avoir omis d'avertir sa hiérarchie de sa rencontre avec un cadre du parti d'extrême droite lors d'une perquisition."
+        ],
+        "centre": [
+          "Gérald Darmanin a sollicité l'Inspection générale de la justice à la suite de la découverte du procureur Christian de Rocquigny dans les locaux du Rassemblement national pendant une perquisition.",
+          "Le magistrat du parquet de Paris effectuait une visite à un eurodéputé sans en avoir informé sa hiérarchie, provoquant l'intervention du garde des Sceaux."
+        ],
+        "droite": [
+          "Gérald Darmanin a saisi l'Inspection générale de la justice concernant la présence du procureur Christian de Rocquigny au siège du Rassemblement national.",
+          "Cette visite a eu lieu lors d'une perquisition menée dans le cadre d'une enquête judiciaire sur de présumées fuites d'informations provenant du ministère de l'Intérieur."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur le manquement déontologique qualifié de « défaut de loyauté » par le ministre et pointe explicitement l'absence d'information de la hiérarchie judiciaire.",
+        "Le centre adopte un angle purement factuel sur la saisine de l'Inspection générale de la justice en insistant sur la coïncidence de cette présence lors d'une perquisition.",
+        "La droite contextualise l'incident en rappelant l'information judiciaire en cours pour violation du secret professionnel concernant des fuites présumées du ministère de l'Intérieur."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-11-25T09:01:32.670Z"
     },
     {
       "id": "c41e3deed4ad",
@@ -10173,412 +10141,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 6,
       "summarizedAt": "2026-11-25T08:01:40.933Z"
-    },
-    {
-      "id": "86aa73d1078c",
-      "slug": "vingt-personnes-sont-retenues-en-otage-dans-un-supermarche-a",
-      "title": "Une prise d’otages est en cours dans un supermarché de Carthagène en Colombie",
-      "createdAt": "2026-11-25T02:01:31.806Z",
-      "storyDay": "2026-11-24",
-      "articles": [
-        {
-          "id": "f948cb5afede",
-          "outletId": "le-parisien",
-          "headline": "Prise d’otages dans un supermarché en Colombie : 20 personnes détenues par des hommes armés, le président sur place",
-          "url": "https://www.leparisien.fr/international/prise-dotages-dans-un-supermarche-en-colombie-20-personnes-detenues-par-des-hommes-armes-le-president-sur-place-25-11-2026-M6UWAKCN4JHQ7EWJATURNW5XLU.php",
-          "publishedAt": "2026-11-25T07:01:25.762Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "b6d872fd0e07",
-          "outletId": "la-croix",
-          "headline": "Prise d’otages Colombie : intervention des forces de l’ordre, le président sur place",
-          "url": "https://www.la-croix.com/prise-d-otages-dans-un-supermarche-en-colombie-l-armee-a-la-rescousse-20261125",
-          "publishedAt": "2026-11-25T06:50:48.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/11/25/2598164-des-soldats-deployes-a-cathagene-le-24-novembre-20.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "651b7bc0bbee",
-          "outletId": "tf1-info",
-          "headline": "Colombie : prise d'otages en cours dans un supermarché de Carthagène après un braquage raté",
-          "url": "https://www.tf1info.fr/international/direct-colombie-prise-d-otages-en-cours-dans-un-supermarche-de-carthagene-apres-un-braquage-rate-2477982.html",
-          "publishedAt": "2026-11-25T06:49:03.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/police-colombienne-cartagene-24-novembre-2026-560783-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "6f8d46cbf025",
-          "outletId": "liberation",
-          "headline": "Prise d’otages en Colombie après un braquage raté : 10 personnes sur 30 libérées, le président d’extrême droite sur place",
-          "url": "https://www.liberation.fr/international/amerique/prise-dotages-en-colombie-apres-un-braquage-rate-10-personnes-sur-30-liberees-le-president-dextreme-droite-sur-place-20261125_OZZ3PUOE3BAV3AELKK2ERPWK7A/",
-          "publishedAt": "2026-11-25T06:31:40.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "6d37b56f8faa",
-          "outletId": "franceinfo",
-          "headline": "Une vingtaine de personnes retenues dans une prise d'otages en Colombie, le président sur place",
-          "url": "https://www.franceinfo.fr/monde/ameriques/une-vingtaine-de-personnes-retenues-dans-une-prise-d-otages-en-colombie-le-president-sur-place_8298720.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-25T06:30:57.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/qQ_SquyjfL-FOoAsk9VzlCj-tbI/0x417:4000x2667/432x243/filters:format(jpg)/2026/11/25/6b067ede3ff42070711341.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "0830d143cf79",
-          "outletId": "le-monde",
-          "headline": "En Colombie, le président et l’armée à Carthagène pour une prise d’otages en cours dans un supermarché",
-          "url": "https://www.lemonde.fr/international/article/2026/11/25/en-colombie-le-president-et-l-armee-a-carthagenes-pour-une-prise-d-otages-en-cours-dans-un-supermarche_6814815_3211.html",
-          "publishedAt": "2026-11-25T04:52:04.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/24/87/0/3908/1954/644/322/60/0/0a2de76_ftp-1-dorodl20rinm-afp-d8hw69g.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "9b48e8cd0183",
-          "outletId": "le-figaro",
-          "headline": "Colombie : dix personnes libérées après une prise d’otages dans un supermarché de Carthagène",
-          "url": "https://www.lefigaro.fr/international/colombie-dix-personnes-liberees-apres-une-prise-d-otages-dans-un-supermarche-de-carthagene-20261125",
-          "publishedAt": "2026-11-25T02:12:58.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/25/92d9b981d495e30db3f1c8a36bd825ade3b4fb1ca970c783b59f40162c7dc732.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "981815426819",
-          "outletId": "cnews",
-          "headline": "Colombie : 20 personnes retenues en otage dans un magasin après un braquage raté à Carthagène",
-          "url": "https://www.cnews.fr/monde/2026-11-24/colombie-20-personnes-retenues-en-otage-dans-un-magasin-apres-un-braquage-rate",
-          "publishedAt": "2026-11-24T22:07:41.000Z",
-          "imageUrl": "https://www.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-24t165936z_505671828_rc25uoaxizzj_rtrmadp_3_colombia-hostages-taille1200_6b06041f16dd8.jpg?h=f77520ee&itok=4DMsr6Np",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "ecf62d778287",
-          "outletId": "20-minutes",
-          "headline": "Colombie : Une prise d’otages en cours dans un supermarché de la ville touristique de Carthagène",
-          "url": "https://www.20minutes.fr/monde/4265502-20261124-colombie-prise-otages-cours-supermarche-ville-touristique-carthagene?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-24T19:15:19.000Z",
-          "imageUrl": "https://img.20mn.fr/07sZ1RZATf63-b90LmkI3Ck/1200x768_260104-bogota-4-janvier-2026-xinhua-un-membre-de-l-unite-de-neutralisation-des-bombes-de-la-police-colombienne-travaille-devant-l-ambassade-des-etats-unis-a-bogota-en-colombie-le-3-janvier-2026-photo-d-andres-moreno-xinhua-andres-moreno-chinenouvelle-chine03127-credit-chine-nouvelle-sipa-2601041237",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "3028869787d6",
-          "outletId": "le-monde",
-          "headline": "En Colombie, prise d’otages lors du braquage d’un supermarché à Carthagène, au lendemain d’un attentat à la voiture piégée à Villavicencio",
-          "url": "https://www.lemonde.fr/international/article/2026/11/24/en-colombie-prise-d-otages-lors-du-braquage-d-un-supermarche-a-carthagene-au-lendemain-d-un-attentat-a-la-voiture-piegee-a-villavicencio_6814815_3211.html",
-          "publishedAt": "2026-11-24T17:53:27.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/24/456/0/5472/2736/644/322/60/0/ccf3a40_ftp-1-glgpcbk1rsde-2026-11-24t151037z-52219646-rc2buoaccdbi-rtrmadp-3-colombia-violence.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        },
-        {
-          "id": "7f1ea7585a52",
-          "outletId": "france-24",
-          "headline": "Colombie : une prise d'otages est en cours dans la ville touristique de Carthagène",
-          "url": "https://www.france24.com/fr/am%C3%A9riques/20261124-colombie-prise-otages-cours-ville-touristique-carthag%C3%A8ne",
-          "publishedAt": "2026-11-24T17:17:36.000Z",
-          "imageUrl": "https://s.france24.com/media/display/0002202a-e841-11f1-b0e2-29d00e23de9a/w:1024/p:16x9/000-D8HP763.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world"
-        }
-      ],
-      "topicId": "86aa73d1078c",
-      "titledArticleCount": 11,
-      "section": "world",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1795507200000,
-          "end": 1795510800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795510800000,
-          "end": 1795514400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795514400000,
-          "end": 1795518000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795518000000,
-          "end": 1795521600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795521600000,
-          "end": 1795525200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795525200000,
-          "end": 1795528800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795528800000,
-          "end": 1795532400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795532400000,
-          "end": 1795536000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795536000000,
-          "end": 1795539600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795539600000,
-          "end": 1795543200000,
-          "counts": {
-            "gauche": 1,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 2
-        },
-        {
-          "start": 1795543200000,
-          "end": 1795546800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795546800000,
-          "end": 1795550400000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795550400000,
-          "end": 1795554000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795554000000,
-          "end": 1795557600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795557600000,
-          "end": 1795561200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795561200000,
-          "end": 1795564800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795564800000,
-          "end": 1795568400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795568400000,
-          "end": 1795572000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795572000000,
-          "end": 1795575600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795575600000,
-          "end": 1795579200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795579200000,
-          "end": 1795582800000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795582800000,
-          "end": 1795586400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795586400000,
-          "end": 1795590000000,
-          "counts": {
-            "gauche": 2,
-            "centre": 1,
-            "droite": 1
-          },
-          "total": 4
-        },
-        {
-          "start": 1795590000000,
-          "end": 1795593600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Une trentaine de clients d'un supermarché de Carthagène sont séquestrés depuis mardi par des malfaiteurs après l'échec du braquage d'un fourgon blindé.",
-          "Le chef de l'Etat Abelardo de la Espriella s'est rendu sur place et a affirmé que l'acte relève de la criminalité de droit commun, tout en écartant un lien avec des groupes armés récents.",
-          "Une quinzaine de personnes ont pu être libérées tandis que les forces de l'ordre maintiennent le bouclage du site.",
-          "Le journal Libération qualifie explicitement le président d'extrême droite, tandis que Le Monde rappelle la concomitance de l'événement avec l'anniversaire d'un accord de paix historique."
-        ],
-        "centre": [
-          "Une prise d'otages est en cours dans un supermarché de Carthagène en Colombie après un braquage raté.",
-          "Une vingtaine ou une trentaine de personnes sont retenues par des hommes armés, tandis que les forces de l'ordre et des tireurs d'élite encerclent le bâtiment.",
-          "Le président Abelardo de la Espriella est présent sur les lieux pour superviser les opérations de libération des otages.",
-          "Un premier bilan fait état d'une dizaine à une quinzaine de personnes libérées."
-        ],
-        "droite": [
-          "Des hommes armés retranchés dans un supermarché de Carthagène retiennent entre quinze et vingt personnes à la suite d'un braquage raté.",
-          "Dix otages ont été libérés par les forces de l'ordre qui encerclent le magasin et y ont déployé des renforts militaires.",
-          "CNews précise que les assaillants réclament près de deux millions de dollars ainsi que des véhicules blindés."
-        ]
-      },
-      "differences": [
-        "La gauche insiste sur le profil politique du chef de l'Etat et replace l'événement dans le contexte des tensions sécuritaires et des commémorations nationales du pays.",
-        "Le centre livre un compte rendu factuel et centré sur le déroulement des opérations de secours et la présence de l'exécutif sur place.",
-        "La droite privilégie le récit haletant de l'événement en insistant sur la chronologie du braquage raté et les exigences financières des malfaiteurs."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 11,
-      "summarizedAt": "2026-11-25T07:01:25.762Z"
     },
     {
       "id": "1a1a90dff3a3",
@@ -12274,23 +11836,26 @@
       ],
       "summaries": {
         "gauche": [
-          "Le dirigeant américain Donald Trump est intervenu personnellement auprès des administrateurs pour imposer le retour de Jensen Huang.",
-          "Le conseil d'administration a cédé aux pressions politiques pour réintégrer le PDG malgré les révélations."
+          "Jensen Huang a fait son retour à la tête de Nvidia et s'est exprimé auprès des salariés au lendemain d'une baisse de l'action en Bourse.",
+          "Le dirigeant a contredit Donald Trump concernant l'implication du président dans sa réintégration, alors que Le Hufflink souligne les pressions exercées par la Maison-Blanche auprès du conseil d'administration."
+        ],
+        "centre": [
+          "Jensen Huang retrouve ses fonctions de PDG chez Nvidia après des allégations d'inconduite.",
+          "Le retour du dirigeant s'accompagne d'excuses publiques auprès des salariés, d'un suivi thérapeutique et de révélations sur les coulisses de sa réintégration."
         ],
         "droite": [
-          "Jensen Huang a fait amende honorable auprès de ses collaborateurs tout en reconnaissant suivre une thérapie.",
-          "Le chef d'entreprise revient aux commandes de Nvidia onze jours après son départ, porté par l'appui public de Donald Trump.",
-          "L'industriel de la tech doit encore faire face à des auditions parlementaires sur des accusations d'espionnage et d'adultère.",
-          "La chute boursière initiale de plus de 10 % met en lumière la fragilité de la gouvernance de l'entreprise face aux crises."
+          "Jensen Huang a présenté ses excuses aux salariés de Nvidia et suivi une thérapie suite à des manquements au code de conduite.",
+          "Malgré son retour soutenu par Donald Trump, le patron reste sous la menace d'une audition devant le Sénat américain et la commission des affaires bancaires dans le cadre d'une enquête pour espionnage."
         ]
       },
       "differences": [
-        "Le camp de gauche met en avant l'ingérence politique directe de Donald Trump dans les affaires internes de l'entreprise.",
-        "Le camp de droite insiste sur le parcours judiciaire et politique tourmenté du dirigeant tout en détaillant l'impact financier du scandale sur le cours boursier."
+        "La gauche met l'accent sur la confrontation entre Jensen Huang et Donald Trump concernant les ingérences politiques dans la gouvernance de Nvidia.",
+        "Le centre se concentre sur les aspects internes de la crise managériale, détaillant les excuses du PDG et les mesures thérapeutiques prises après les révélations du Parisien.",
+        "La droite insiste sur la fragilité de la position du patron malgré son retour, en mettant en avant les auditions parlementaires à venir et les soupçons d'espionnage."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-11-25T06:01:42.166Z"
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-11-25T09:01:32.670Z"
     },
     {
       "id": "59d782c77db0",
@@ -13989,6 +13554,687 @@
       "summarizedAt": "2026-11-25T07:01:25.762Z"
     },
     {
+      "id": "a66843f61e21",
+      "slug": "deux-enfants-de-2-et-4-ans-secourus-dans-une-cave-ou-ils",
+      "title": "Deux enfants de 2 et 4 ans secourus dans une cave où ils vivaient enfermés dans les Yvelines",
+      "createdAt": "2026-11-25T07:01:25.762Z",
+      "storyDay": "2026-11-24",
+      "articles": [
+        {
+          "id": "2c636ce8fad8",
+          "outletId": "cnews",
+          "headline": "Meulan-en-Yvelines : deux enfants de 2 et 4 ans, qui vivaient enfermés dans une cave, secourus par la police",
+          "url": "https://www.cnews.fr/france/2026-11-25/meulan-en-yvelines-deux-enfants-de-2-et-4-ans-qui-vivaient-enfermes-dans-une-cave",
+          "publishedAt": "2026-11-25T06:02:26.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_42ju764-taille1200_6b0670bd3b513.jpg?itok=x6cYkjVu",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "c7cb707639a6",
+          "outletId": "20-minutes",
+          "headline": "Yvelines : Deux enfants de deux et quatre ans secourus dans une cave fermée où ils vivaient",
+          "url": "https://www.20minutes.fr/faits_divers/4265546-20261125-yvelines-deux-enfants-deux-quatre-ans-secourus-cave-fermee-vivaient?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-25T05:31:28.000Z",
+          "imageUrl": "https://img.20mn.fr/eEmpBnR_TsmcVu0cMSxGFSk/1200x768_illustration-de-la-police-nationale-francaise-lors-d-une-manifestation-de-syndicats-et-de-fonctionnaires-a-montpellier-dans-le-sud-de-la-france-le-29-septembre-2026-illustration-de-la-police-nationale-lors-d-une-manifestation-des-syndicats-et-fonctionnaires-a-montpellier-le-mardi-29-septembre-2026-alain-robert-1j6a5097-credit-alain-robert-sipa-2609300741",
+          "frontPage": true,
+          "kind": "news",
+          "section": "misc",
+          "everFrontPage": true
+        },
+        {
+          "id": "5e5daff7abaa",
+          "outletId": "europe-1",
+          "headline": "Yvelines : deux enfants de 2 et 4 ans découverts enfermés dans la cave de leur domicile",
+          "url": "https://www.europe1.fr/faits-divers/yvelines-deux-enfants-de-2-et-4-ans-decouverts-enfermes-dans-la-cave-de-leur-domicile-1244155?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "publishedAt": "2026-11-24T20:50:08.000Z",
+          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Police/policier_municipal_credits_riccardo_milani_hans_lucas_hans_lucas_via_afp_69c3c3d4678e7.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "a66843f61e21",
+      "titledArticleCount": 3,
+      "section": "misc",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1795503600000,
+          "end": 1795507200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795507200000,
+          "end": 1795510800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795510800000,
+          "end": 1795514400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795514400000,
+          "end": 1795518000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795518000000,
+          "end": 1795521600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795521600000,
+          "end": 1795525200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795525200000,
+          "end": 1795528800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795528800000,
+          "end": 1795532400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795532400000,
+          "end": 1795536000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795536000000,
+          "end": 1795539600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795539600000,
+          "end": 1795543200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795543200000,
+          "end": 1795546800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795546800000,
+          "end": 1795550400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795550400000,
+          "end": 1795554000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1795554000000,
+          "end": 1795557600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795557600000,
+          "end": 1795561200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795561200000,
+          "end": 1795564800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795564800000,
+          "end": 1795568400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795568400000,
+          "end": 1795572000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795572000000,
+          "end": 1795575600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795575600000,
+          "end": 1795579200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795579200000,
+          "end": 1795582800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795582800000,
+          "end": 1795586400000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795586400000,
+          "end": 1795590000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        }
+      ],
+      "summaries": {
+        "gauche": [
+          "La police a secouru deux enfants de deux et quatre ans, retrouvés en pleurs dans la cave fermée d'un pavillon à Meulan-en-Yvelines.",
+          "L'intervention des forces de l'ordre a été déclenchée par l'appel d'une voisine signalant la situation."
+        ],
+        "droite": [
+          "Deux enfants de deux et quatre ans ont été découverts et mis en sécurité par la police dans la cave de leur domicile à Meulan-en-Yvelines, après le signalement d'une voisine.",
+          "Les victimes, qualifiées de « glacées » et très légèrement vêtues, ont été confiées à l'Aide sociale à l'enfance tandis que leur mère a été placée en garde à vue.",
+          "L'espace où ils vivaient enfermés de l'extérieur comportait un matelas et un chauffage d'appoint."
+        ]
+      },
+      "differences": [
+        "Les médias de gauche relatent sobrement l'intervention policière et le signalement initial à partir de l'article de 20 Minutes.",
+        "Les médias de droite détaillent de surcroît l'état physique des victimes, l'implication de l'Aide sociale à l'enfance et le placement en garde à vue de la mère."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 3,
+      "summarizedAt": "2026-11-25T07:01:25.762Z"
+    },
+    {
+      "id": "01cd9e6cc12a",
+      "slug": "edouard-philippe-propose-un-debat-televise-a-david-lisnard-dans",
+      "title": "Édouard Philippe propose un débat télévisé à David Lisnard dans la perspective de la présidentielle de 2027",
+      "createdAt": "2026-11-24T22:01:23.717Z",
+      "storyDay": "2026-11-24",
+      "articles": [
+        {
+          "id": "79054f7ad6e5",
+          "outletId": "bfmtv",
+          "headline": "Philippe dénonce l'ambiguïté de Lisnard sur le RN - 24/11",
+          "url": "https://www.bfmtv.com/replay-emissions/bfm-grand-soir/video-philippe-denonce-l-ambiguite-de-lisnard-sur-le-rn-24-11_VN-202611250126.html",
+          "publishedAt": "2026-11-25T00:55:01.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/bJwuKt-ic4mDr1F0JWk1SCrP4u4=/0x0:1280x720/800x0/images/Philippe-denonce-l-ambiguite-de-Lisnard-sur-le-RN-24-11-2390042.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "36346375bea5",
+          "outletId": "bfmtv",
+          "headline": "Présidentielle: Édouard Philippe se dit ouvert à un débat avec David Lisnard, mais s'oppose toujours à une primaire de la droite et du centre",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-edouard-philippe-se-dit-ouvert-a-un-debat-avec-david-lisnard-mais-s-oppose-toujours-a-une-primaire-de-la-droite-et-du-centre_AD-202611241034.html",
+          "publishedAt": "2026-11-24T23:00:27.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/1xuegDldl_bSxJ3u5t9yL3tvDH0=/0x106:2048x1258/800x0/images/David-Lisnard-et-Edouard-Philippe-le-6-juin-2026-a-Taverny-2388739.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "e5447eb71323",
+          "outletId": "le-parisien",
+          "headline": "« Son objectif, ce n’est pas de rassembler la droite » : Édouard Philippe propose un débat à David Lisnard",
+          "url": "https://www.leparisien.fr/elections/presidentielle/son-objectif-ce-nest-pas-de-rassembler-la-droite-philippe-propose-un-debat-a-lisnard-24-11-2026-BK5ODLZ7UBDPVCVVLGJFLJRW5U.php",
+          "publishedAt": "2026-11-24T22:01:23.717Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "9ef9f0dccf16",
+          "outletId": "le-figaro",
+          "headline": "«Un désaccord manifeste sur la ligne politique» : plutôt qu’une primaire, Édouard Philippe propose un débat à David Lisnard",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/un-desaccord-manifeste-sur-la-ligne-politique-plutot-qu-une-primaire-edouard-philippe-propose-un-debat-a-david-lisnard-20261124",
+          "publishedAt": "2026-11-24T21:22:13.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/1921x1040_crop/2026/11/24/15af42d9de1928b1469d64e7116f95ea3b3999a93b58cd70530a510d43715ef8.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "e0f9088a9948",
+          "outletId": "tf1-info",
+          "headline": "Présidentielle 2027 : sur LCI, Édouard Philippe \"propose un débat à la télévision sur le fond\" à David Lisnard",
+          "url": "https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-2027-sur-lci-edouard-philippe-propose-un-debat-a-la-television-sur-le-fond-a-david-lisnard-2477964.html",
+          "publishedAt": "2026-11-24T21:20:52.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/546/edouard-philippe-lci-24-novembre-2026-2027-e05fb1-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "72198d38fc53",
+          "outletId": "franceinfo",
+          "headline": "Edouard Philippe propose un débat télévisé avant mi-décembre à David Lisnard, qu'il soupçonne de ne pas être \"étanche\" avec l'extrême droite",
+          "url": "https://www.franceinfo.fr/elections/edouard-philippe-propose-un-debat-televise-avant-mi-decembre-a-david-lisnard-qu-il-soupconn-de-ne-pas-etre-etanche-avec-l-extreme-droite_8298417.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-24T21:02:56.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/mDRw5lHmXvGWN9Wtk3Xv6UqNtyw/0x0:4491x2526/432x243/filters:format(jpg)/2026/11/24/6b05f8db528bd197991784.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "4760c87ca9cb",
+          "outletId": "le-figaro",
+          "headline": "Présidentielle 2027 : le camp d’Édouard Philippe pointe le « flou » de David Lisnard face à « l’extrême droite »",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-le-camp-d-edouard-philippe-pointe-le-flou-de-david-lisnard-face-a-l-extreme-droite-20261124",
+          "publishedAt": "2026-11-24T19:30:00.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/11/24/bf0bfbf6322891324d7e19fc53b4834a8f3f4f4f22865f2086ebdf94149bca7f.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "32070df611f2",
+          "outletId": "le-monde",
+          "headline": "Présidentielle 2027 : Edouard Philippe souhaite un débat télévisé avec David Lisnard, qu’il soupçonne de ne pas être « étanche » vis-à-vis de l’extrême droite",
+          "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/24/edouard-philippe-a-vote-pour-david-lisnard-a-la-presidence-de-l-amf-mais-fustige-sa-posture-dans-la-course-a-l-elysee_6814832_6205049.html",
+          "publishedAt": "2026-11-24T17:43:11.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/24/182/0/5857/2928/644/322/60/0/6788e2d_ftp-1-mmjruyjyhoya-2026-11-24t122408z-10560996-rc2buoapbbnt-rtrmadp-3-france-politics.JPG",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        }
+      ],
+      "topicId": "10117730a528",
+      "titledArticleCount": 7,
+      "section": "politics",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1795482000000,
+          "end": 1795485600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795485600000,
+          "end": 1795489200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795489200000,
+          "end": 1795492800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795492800000,
+          "end": 1795496400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795496400000,
+          "end": 1795500000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795500000000,
+          "end": 1795503600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795503600000,
+          "end": 1795507200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795507200000,
+          "end": 1795510800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795510800000,
+          "end": 1795514400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795514400000,
+          "end": 1795518000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795518000000,
+          "end": 1795521600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795521600000,
+          "end": 1795525200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795525200000,
+          "end": 1795528800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795528800000,
+          "end": 1795532400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795532400000,
+          "end": 1795536000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795536000000,
+          "end": 1795539600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795539600000,
+          "end": 1795543200000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795543200000,
+          "end": 1795546800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795546800000,
+          "end": 1795550400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1795550400000,
+          "end": 1795554000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795554000000,
+          "end": 1795557600000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 2
+          },
+          "total": 3
+        },
+        {
+          "start": 1795557600000,
+          "end": 1795561200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795561200000,
+          "end": 1795564800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795564800000,
+          "end": 1795568400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        }
+      ],
+      "summaries": {
+        "gauche": [
+          "Edouard Philippe a propose a David Lisnard un debat televise avant la mi-decembre dans la perspective de l'election presidentielle de 2027.",
+          "Le candidat d'Horizons refuse toujours de participer a une primaire de la droite et du centre.",
+          "Il soupconne le maire de Cannes de ne pas etre etanche vis-a-vis de l'extreme droite et de vouloir travailler avec la droite extreme.",
+          "Le Monde note que David Lisnard s'engage a continuer a defendre les mairies s'il etait elu a l'Elysee."
+        ],
+        "centre": [
+          "Edouard Philippe s'est dit ouvert a un debat televise avec David Lisnard tout en ecartant l'idee d'une primaire.",
+          "Le maire du Havre accuse son rival d'entretenir de l'ambiguite concernant le Rassemblement national.",
+          "Le Parisien souligne que l'objectif d'Edouard Philippe n'est pas de rassembler la droite.",
+          "Les articles mettent en avant la montee en puissance de David Lisnard dans les sondages."
+        ],
+        "droite": [
+          "Le Figaro rapporte qu'Edouard Philippe propose un debat sur le fond a David Lisnard plutot qu'une primaire.",
+          "Le candidat Horizons accuse le maire de Cannes d'avoir une frontiere poreuse avec la droite nationaliste.",
+          "Le camp d'Edouard Philippe pointe le flou de son adversaire face a l'extreme droite.",
+          "TF1 Info rappelle que David Lisnard connait une pleine ascension dans les sondages pour 2027."
+        ]
+      },
+      "differences": [
+        "Les medias de gauche insistent sur les soupçons d'etancheite avec l'extreme droite et les divergences strategiques du maire de Cannes.",
+        "Les medias du centre se focalisent sur le refus de la primaire et la proposition de confrontation televisee entre les deux candidats.",
+        "Les medias de droite soulignent l'accusation de frontiere poreuse avec la droite nationaliste et la riposte face a la percee du candidat de Nouvelle Energie."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 8,
+      "summarizedAt": "2026-11-25T01:01:25.244Z"
+    },
+    {
       "id": "b3b284fed94a",
       "slug": "la-justice-ordonne-un-proces-pour-meurtre-contre-le-policier",
       "title": "La justice ordonne un procès pour meurtre contre le policier impliqué dans la mort de Nahel Merzouk",
@@ -14544,687 +14790,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 25,
       "summarizedAt": "2026-11-25T00:01:35.882Z"
-    },
-    {
-      "id": "a66843f61e21",
-      "slug": "deux-enfants-de-2-et-4-ans-secourus-dans-une-cave-ou-ils",
-      "title": "Deux enfants de 2 et 4 ans secourus dans une cave où ils vivaient enfermés dans les Yvelines",
-      "createdAt": "2026-11-25T07:01:25.762Z",
-      "storyDay": "2026-11-24",
-      "articles": [
-        {
-          "id": "2c636ce8fad8",
-          "outletId": "cnews",
-          "headline": "Meulan-en-Yvelines : deux enfants de 2 et 4 ans, qui vivaient enfermés dans une cave, secourus par la police",
-          "url": "https://www.cnews.fr/france/2026-11-25/meulan-en-yvelines-deux-enfants-de-2-et-4-ans-qui-vivaient-enfermes-dans-une-cave",
-          "publishedAt": "2026-11-25T06:02:26.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/000_42ju764-taille1200_6b0670bd3b513.jpg?itok=x6cYkjVu",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "c7cb707639a6",
-          "outletId": "20-minutes",
-          "headline": "Yvelines : Deux enfants de deux et quatre ans secourus dans une cave fermée où ils vivaient",
-          "url": "https://www.20minutes.fr/faits_divers/4265546-20261125-yvelines-deux-enfants-deux-quatre-ans-secourus-cave-fermee-vivaient?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-25T05:31:28.000Z",
-          "imageUrl": "https://img.20mn.fr/eEmpBnR_TsmcVu0cMSxGFSk/1200x768_illustration-de-la-police-nationale-francaise-lors-d-une-manifestation-de-syndicats-et-de-fonctionnaires-a-montpellier-dans-le-sud-de-la-france-le-29-septembre-2026-illustration-de-la-police-nationale-lors-d-une-manifestation-des-syndicats-et-fonctionnaires-a-montpellier-le-mardi-29-septembre-2026-alain-robert-1j6a5097-credit-alain-robert-sipa-2609300741",
-          "frontPage": true,
-          "kind": "news",
-          "section": "misc",
-          "everFrontPage": true
-        },
-        {
-          "id": "5e5daff7abaa",
-          "outletId": "europe-1",
-          "headline": "Yvelines : deux enfants de 2 et 4 ans découverts enfermés dans la cave de leur domicile",
-          "url": "https://www.europe1.fr/faits-divers/yvelines-deux-enfants-de-2-et-4-ans-decouverts-enfermes-dans-la-cave-de-leur-domicile-1244155?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
-          "publishedAt": "2026-11-24T20:50:08.000Z",
-          "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/Police/policier_municipal_credits_riccardo_milani_hans_lucas_hans_lucas_via_afp_69c3c3d4678e7.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "topicId": "a66843f61e21",
-      "titledArticleCount": 3,
-      "section": "misc",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1795503600000,
-          "end": 1795507200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795507200000,
-          "end": 1795510800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795510800000,
-          "end": 1795514400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795514400000,
-          "end": 1795518000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795518000000,
-          "end": 1795521600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795521600000,
-          "end": 1795525200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795525200000,
-          "end": 1795528800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795528800000,
-          "end": 1795532400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795532400000,
-          "end": 1795536000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795536000000,
-          "end": 1795539600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795539600000,
-          "end": 1795543200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795543200000,
-          "end": 1795546800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795546800000,
-          "end": 1795550400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795550400000,
-          "end": 1795554000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795554000000,
-          "end": 1795557600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795557600000,
-          "end": 1795561200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795561200000,
-          "end": 1795564800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795564800000,
-          "end": 1795568400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795568400000,
-          "end": 1795572000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795572000000,
-          "end": 1795575600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795575600000,
-          "end": 1795579200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795579200000,
-          "end": 1795582800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795582800000,
-          "end": 1795586400000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795586400000,
-          "end": 1795590000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "La police a secouru deux enfants de deux et quatre ans, retrouvés en pleurs dans la cave fermée d'un pavillon à Meulan-en-Yvelines.",
-          "L'intervention des forces de l'ordre a été déclenchée par l'appel d'une voisine signalant la situation."
-        ],
-        "droite": [
-          "Deux enfants de deux et quatre ans ont été découverts et mis en sécurité par la police dans la cave de leur domicile à Meulan-en-Yvelines, après le signalement d'une voisine.",
-          "Les victimes, qualifiées de « glacées » et très légèrement vêtues, ont été confiées à l'Aide sociale à l'enfance tandis que leur mère a été placée en garde à vue.",
-          "L'espace où ils vivaient enfermés de l'extérieur comportait un matelas et un chauffage d'appoint."
-        ]
-      },
-      "differences": [
-        "Les médias de gauche relatent sobrement l'intervention policière et le signalement initial à partir de l'article de 20 Minutes.",
-        "Les médias de droite détaillent de surcroît l'état physique des victimes, l'implication de l'Aide sociale à l'enfance et le placement en garde à vue de la mère."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 3,
-      "summarizedAt": "2026-11-25T07:01:25.762Z"
-    },
-    {
-      "id": "01cd9e6cc12a",
-      "slug": "edouard-philippe-propose-un-debat-televise-a-david-lisnard-dans",
-      "title": "Édouard Philippe propose un débat télévisé à David Lisnard dans la perspective de la présidentielle de 2027",
-      "createdAt": "2026-11-24T22:01:23.717Z",
-      "storyDay": "2026-11-24",
-      "articles": [
-        {
-          "id": "79054f7ad6e5",
-          "outletId": "bfmtv",
-          "headline": "Philippe dénonce l'ambiguïté de Lisnard sur le RN - 24/11",
-          "url": "https://www.bfmtv.com/replay-emissions/bfm-grand-soir/video-philippe-denonce-l-ambiguite-de-lisnard-sur-le-rn-24-11_VN-202611250126.html",
-          "publishedAt": "2026-11-25T00:55:01.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/bJwuKt-ic4mDr1F0JWk1SCrP4u4=/0x0:1280x720/800x0/images/Philippe-denonce-l-ambiguite-de-Lisnard-sur-le-RN-24-11-2390042.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "36346375bea5",
-          "outletId": "bfmtv",
-          "headline": "Présidentielle: Édouard Philippe se dit ouvert à un débat avec David Lisnard, mais s'oppose toujours à une primaire de la droite et du centre",
-          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-edouard-philippe-se-dit-ouvert-a-un-debat-avec-david-lisnard-mais-s-oppose-toujours-a-une-primaire-de-la-droite-et-du-centre_AD-202611241034.html",
-          "publishedAt": "2026-11-24T23:00:27.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/1xuegDldl_bSxJ3u5t9yL3tvDH0=/0x106:2048x1258/800x0/images/David-Lisnard-et-Edouard-Philippe-le-6-juin-2026-a-Taverny-2388739.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "e5447eb71323",
-          "outletId": "le-parisien",
-          "headline": "« Son objectif, ce n’est pas de rassembler la droite » : Édouard Philippe propose un débat à David Lisnard",
-          "url": "https://www.leparisien.fr/elections/presidentielle/son-objectif-ce-nest-pas-de-rassembler-la-droite-philippe-propose-un-debat-a-lisnard-24-11-2026-BK5ODLZ7UBDPVCVVLGJFLJRW5U.php",
-          "publishedAt": "2026-11-24T22:01:23.717Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "9ef9f0dccf16",
-          "outletId": "le-figaro",
-          "headline": "«Un désaccord manifeste sur la ligne politique» : plutôt qu’une primaire, Édouard Philippe propose un débat à David Lisnard",
-          "url": "https://www.lefigaro.fr/elections/presidentielles/un-desaccord-manifeste-sur-la-ligne-politique-plutot-qu-une-primaire-edouard-philippe-propose-un-debat-a-david-lisnard-20261124",
-          "publishedAt": "2026-11-24T21:22:13.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/1921x1040_crop/2026/11/24/15af42d9de1928b1469d64e7116f95ea3b3999a93b58cd70530a510d43715ef8.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "e0f9088a9948",
-          "outletId": "tf1-info",
-          "headline": "Présidentielle 2027 : sur LCI, Édouard Philippe \"propose un débat à la télévision sur le fond\" à David Lisnard",
-          "url": "https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-2027-sur-lci-edouard-philippe-propose-un-debat-a-la-television-sur-le-fond-a-david-lisnard-2477964.html",
-          "publishedAt": "2026-11-24T21:20:52.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/546/edouard-philippe-lci-24-novembre-2026-2027-e05fb1-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "72198d38fc53",
-          "outletId": "franceinfo",
-          "headline": "Edouard Philippe propose un débat télévisé avant mi-décembre à David Lisnard, qu'il soupçonne de ne pas être \"étanche\" avec l'extrême droite",
-          "url": "https://www.franceinfo.fr/elections/edouard-philippe-propose-un-debat-televise-avant-mi-decembre-a-david-lisnard-qu-il-soupconn-de-ne-pas-etre-etanche-avec-l-extreme-droite_8298417.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-24T21:02:56.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/mDRw5lHmXvGWN9Wtk3Xv6UqNtyw/0x0:4491x2526/432x243/filters:format(jpg)/2026/11/24/6b05f8db528bd197991784.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "4760c87ca9cb",
-          "outletId": "le-figaro",
-          "headline": "Présidentielle 2027 : le camp d’Édouard Philippe pointe le « flou » de David Lisnard face à « l’extrême droite »",
-          "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-le-camp-d-edouard-philippe-pointe-le-flou-de-david-lisnard-face-a-l-extreme-droite-20261124",
-          "publishedAt": "2026-11-24T19:30:00.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/11/24/bf0bfbf6322891324d7e19fc53b4834a8f3f4f4f22865f2086ebdf94149bca7f.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "32070df611f2",
-          "outletId": "le-monde",
-          "headline": "Présidentielle 2027 : Edouard Philippe souhaite un débat télévisé avec David Lisnard, qu’il soupçonne de ne pas être « étanche » vis-à-vis de l’extrême droite",
-          "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/11/24/edouard-philippe-a-vote-pour-david-lisnard-a-la-presidence-de-l-amf-mais-fustige-sa-posture-dans-la-course-a-l-elysee_6814832_6205049.html",
-          "publishedAt": "2026-11-24T17:43:11.000Z",
-          "imageUrl": "https://img.lemde.fr/2026/11/24/182/0/5857/2928/644/322/60/0/6788e2d_ftp-1-mmjruyjyhoya-2026-11-24t122408z-10560996-rc2buoapbbnt-rtrmadp-3-france-politics.JPG",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "10117730a528",
-      "titledArticleCount": 7,
-      "section": "politics",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1795482000000,
-          "end": 1795485600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795485600000,
-          "end": 1795489200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795489200000,
-          "end": 1795492800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795492800000,
-          "end": 1795496400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795496400000,
-          "end": 1795500000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795500000000,
-          "end": 1795503600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795503600000,
-          "end": 1795507200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795507200000,
-          "end": 1795510800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795510800000,
-          "end": 1795514400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795514400000,
-          "end": 1795518000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795518000000,
-          "end": 1795521600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795521600000,
-          "end": 1795525200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795525200000,
-          "end": 1795528800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795528800000,
-          "end": 1795532400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795532400000,
-          "end": 1795536000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795536000000,
-          "end": 1795539600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795539600000,
-          "end": 1795543200000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795543200000,
-          "end": 1795546800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795546800000,
-          "end": 1795550400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795550400000,
-          "end": 1795554000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795554000000,
-          "end": 1795557600000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 2
-          },
-          "total": 3
-        },
-        {
-          "start": 1795557600000,
-          "end": 1795561200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795561200000,
-          "end": 1795564800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795564800000,
-          "end": 1795568400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Edouard Philippe a propose a David Lisnard un debat televise avant la mi-decembre dans la perspective de l'election presidentielle de 2027.",
-          "Le candidat d'Horizons refuse toujours de participer a une primaire de la droite et du centre.",
-          "Il soupconne le maire de Cannes de ne pas etre etanche vis-a-vis de l'extreme droite et de vouloir travailler avec la droite extreme.",
-          "Le Monde note que David Lisnard s'engage a continuer a defendre les mairies s'il etait elu a l'Elysee."
-        ],
-        "centre": [
-          "Edouard Philippe s'est dit ouvert a un debat televise avec David Lisnard tout en ecartant l'idee d'une primaire.",
-          "Le maire du Havre accuse son rival d'entretenir de l'ambiguite concernant le Rassemblement national.",
-          "Le Parisien souligne que l'objectif d'Edouard Philippe n'est pas de rassembler la droite.",
-          "Les articles mettent en avant la montee en puissance de David Lisnard dans les sondages."
-        ],
-        "droite": [
-          "Le Figaro rapporte qu'Edouard Philippe propose un debat sur le fond a David Lisnard plutot qu'une primaire.",
-          "Le candidat Horizons accuse le maire de Cannes d'avoir une frontiere poreuse avec la droite nationaliste.",
-          "Le camp d'Edouard Philippe pointe le flou de son adversaire face a l'extreme droite.",
-          "TF1 Info rappelle que David Lisnard connait une pleine ascension dans les sondages pour 2027."
-        ]
-      },
-      "differences": [
-        "Les medias de gauche insistent sur les soupçons d'etancheite avec l'extreme droite et les divergences strategiques du maire de Cannes.",
-        "Les medias du centre se focalisent sur le refus de la primaire et la proposition de confrontation televisee entre les deux candidats.",
-        "Les medias de droite soulignent l'accusation de frontiere poreuse avec la droite nationaliste et la riposte face a la percee du candidat de Nouvelle Energie."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 8,
-      "summarizedAt": "2026-11-25T01:01:25.244Z"
     },
     {
       "id": "dc04a0404ff1",
@@ -17815,6 +17380,461 @@
   ],
   "stories": [
     {
+      "id": "c41e3deed4ad",
+      "slug": "nicolas-sarkozy-et-carla-bruni-sont-renvoyes-en-proces-pour-la",
+      "title": "Nicolas Sarkozy et Carla Bruni sont renvoyés en procès pour association de malfaiteurs dans l'affaire de la fausse rétractation de Ziad Takieddine",
+      "createdAt": "2026-11-24T13:01:34.085Z",
+      "storyDay": "2026-11-24",
+      "articles": [
+        {
+          "id": "7cfe44b8c27e",
+          "outletId": "mediapart",
+          "headline": "Un procès pour Nicolas Sarkozy, Carla Bruni et Michèle Marchand: la charge des juges dans l’affaire de la fausse rétractation de Ziad Takieddine",
+          "url": "https://www.mediapart.fr/journal/france/251126/un-proces-pour-nicolas-sarkozy-carla-bruni-et-michele-marchand-la-charge-des-juges-dans-l-affaire-de-la-fa",
+          "publishedAt": "2026-11-25T07:13:06.000Z",
+          "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/11/25/261125-img-un-proces-pour-nicolas-sarkozy-carla-bruni-et-michele-marchand-la-charge-des-juges-dans-l-affaire-de-la-fausse-retractation-1.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "29db457c9946",
+          "outletId": "franceinfo",
+          "headline": "Nicolas Sarkozy, Carla Bruni, Mimi Marchand… Qui sont les principaux protagonistes de l'affaire de la fausse rétractation de Ziad Takieddine ?",
+          "url": "https://www.franceinfo.fr/politique/affaire/financement-de-la-campagne-de-sarkozy/nicolas-sarkozy-carla-bruni-mimi-marchand-qui-sont-les-principaux-protagonistes-de-l-affaire-de-la-fausse-retractation-de-ziad-takieddine_8297730.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-24T18:10:39.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/xQt74EZ3mVX4ldir4h8m7GySMi8/0x18:1024x594/432x243/filters:format(jpg)/2026/11/24/6b058bd854448361721958.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "d1c83e363fa6",
+          "outletId": "causeur",
+          "headline": "Nicolas Sarkozy et Carla Bruni renvoyés en procès : ce qui les attend",
+          "url": "https://www.causeur.fr/nicolas-sarkozy-carla-bruni-mimi-marchand-proces-affaire-takieddine-337958",
+          "publishedAt": "2026-11-24T18:03:37.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "259b4a4dbc85",
+          "outletId": "le-point",
+          "headline": "« Opération Sauver Sarko » : nouveau procès en vue pour l’ex-président et Carla Bruni",
+          "url": "https://www.lepoint.fr/societe/operation-sauver-sarko-nouveau-proces-en-vue-pour-lex-president-et-carla-bruni-X3DCUC6OUZGPLD6NDJIHOK5DUY/",
+          "publishedAt": "2026-11-24T16:46:09.000Z",
+          "imageUrl": "https://www.lepoint.fr/resizer/v2/EIAFSNKOW5D35J3GYD4HAG3Q7A.jpg?auth=8d7191a7564142f3d8d6bbb673c213e9460f95b515c3dc9500eba46d181c576e&smart=true&width=1200&height=900",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "2c1badcaf4fc",
+          "outletId": "le-point",
+          "headline": "Jade Dousselin : « La justice ne peut ni épargner Nicolas Sarkozy parce qu’il a exercé le pouvoir, ni le frapper davantage »",
+          "url": "https://www.lepoint.fr/societe/jade-dousselin-la-justice-ne-doit-pas-etre-un-spectacle-permanent-33MQXPWOOFD5JNKNR2FFOSUDMA/",
+          "publishedAt": "2026-11-24T15:00:00.000Z",
+          "imageUrl": "https://www.lepoint.fr/resizer/v2/2QCV6EJSL5NUDPPS2DUAYGNTZ4.jpg?auth=6c32b362d599820ba5da6952be532919955bea73b1145e71c2ecd60b7de3cdca&smart=true&width=1200&height=900",
+          "frontPage": false,
+          "kind": "news",
+          "section": "society"
+        },
+        {
+          "id": "1085a1b4bc9c",
+          "outletId": "lobs",
+          "headline": "Affaire Takieddine : Nicolas Sarkozy, Carla Bruni et Mimi Marchand seront jugés pour association de malfaiteurs",
+          "url": "https://www.nouvelobs.com/justice/20261124.OBS120405/affaire-takieddine-nicolas-sarkozy-carla-bruni-et-mimi-marchand-seront-juges-pour-association-de-malfaiteurs.html",
+          "publishedAt": "2026-11-24T13:22:02.000Z",
+          "imageUrl": "https://focus.nouvelobs.com/2026/11/24/122/1553/5295/3530/0/0/60/0/a54210f_upload-1-kg7mfut5pbal-000-d8fb463.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "60f33b8582b4",
+          "outletId": "le-parisien",
+          "headline": "Affaire Takieddine : Nicolas Sarkozy et Carla Bruni seront jugés pour « association de malfaiteurs », un procès prévu en 2027",
+          "url": "https://www.leparisien.fr/faits-divers/affaire-takieddine-nicolas-sarkozy-et-carla-bruni-seront-juges-pour-association-de-malfaiteurs-un-proces-prevu-en-2027-24-11-2026-MIRVLSS3Q5GO3EYQW4BWA37JFQ.php",
+          "publishedAt": "2026-11-24T13:01:34.085Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "dc73d5e09d18",
+          "outletId": "le-figaro",
+          "headline": "Fausse rétractation de Ziad Takieddine : Nicolas Sarkozy et Carla Bruni renvoyés en procès",
+          "url": "https://www.lefigaro.fr/actualite-france/fausse-retractation-de-ziad-takieddine-nicolas-sarkozy-et-carla-bruni-renvoyes-en-proces-apres-la-20261124",
+          "publishedAt": "2026-11-24T12:53:52.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/11/24/39c9cb24139a19bd09a320ae7895bf927d633d62e1c9cb89f28201ca07b0f091.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "92abadf2558a",
+          "outletId": "franceinfo",
+          "headline": "Nicolas Sarkozy et Carla Bruni renvoyés en procès dans l'affaire de la fausse rétractation de Ziad Takieddine, notamment pour association de malfaiteurs",
+          "url": "https://www.franceinfo.fr/societe/justice/nicolas-sarkozy-et-carla-bruni-sont-renvoyes-en-proces-dans-l-affaire-de-la-fausse-retractation-de-ziad-takieddine-notamment-pour-association-de-malfaiteurs_8297655.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-24T12:49:57.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/nAYSHWt8vioZUy73vpbR32hTsqg/0x39:1024x615/432x243/filters:format(jpg)/2026/11/24/6b058160d1a20817131527.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        },
+        {
+          "id": "792581ddd942",
+          "outletId": "bfmtv",
+          "headline": "Fausse rétractation de Ziad Takieddine: Nicolas Sarkozy renvoyé en procès avec Carla Bruni et Mimi Marchand",
+          "url": "https://www.bfmtv.com/police-justice/video-fausse-retractation-de-ziad-takieddine-nicolas-sarkozy-renvoye-en-proces-avec-carla-bruni-et-mimi-marchand_VN-202611240577.html",
+          "publishedAt": "2026-11-24T12:42:21.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/XiupsHegzikU_f6AX9fxLmV_tpY=/0x0:1280x720/800x0/images/Fausse-retractation-de-Ziad-Takieddine-Nicolas-Sarkozy-renvoye-en-proces-avec-Carla-Bruni-et-Mimi-Marchand-2389663.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "c6120c9996ec",
+          "outletId": "la-croix",
+          "headline": "Financement libyen : Nicolas Sarkozy sera jugé pour la rétractation de Ziad Takieddine",
+          "url": "https://www.la-croix.com/politique/financement-libyen-nicolas-sarkozy-sera-juge-pour-la-retractation-de-takieddine-20261124",
+          "publishedAt": "2026-11-24T12:41:15.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/11/24/2597544-l-ex-president-de-la-republique-nicolas-sarkozy-et.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "0f78b6afe5de",
+          "outletId": "liberation",
+          "headline": "Fausse rétractation de Takieddine : Nicolas Sarkozy et Carla Bruni renvoyés en procès en 2027",
+          "url": "https://www.liberation.fr/societe/police-justice/fausse-retractation-de-takieddine-nicolas-sarkozy-et-carla-bruni-renvoyes-en-proces-en-2027-20261124_MVCMLYLVGBGMHPN4YEIXMXLYEY/",
+          "publishedAt": "2026-11-24T12:30:38.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "72c1fbc463e5",
+          "outletId": "rfi",
+          "headline": "Fausse rétractation de Ziad Takieddine: l'ex-président Nicolas Sarkozy et son épouse Carla Bruni renvoyés en procès",
+          "url": "https://www.rfi.fr/fr/france/20261124-fausse-r%C3%A9tractation-de-ziad-takieddine-nicolas-sarkozy-et-carla-bruni-renvoy%C3%A9s-en-proc%C3%A8s",
+          "publishedAt": "2026-11-24T12:30:30.000Z",
+          "imageUrl": "https://s.rfi.fr/media/display/b988ac68-ae53-11f0-a93d-005056a97e36/w:1024/p:16x9/AP25294262834947.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "9076828b2413",
+          "outletId": "ouest-france",
+          "headline": "Rétractation de Ziad Takieddine : un procès ordonné contre Nicolas Sarkozy, Carla Bruni et Michèle Marchand",
+          "url": "https://www.ouest-france.fr/politique/nicolas-sarkozy/retractation-de-ziad-takieddine-un-proces-ordonne-contre-nicolas-sarkozy-carla-bruni-et-michele-marchand-efe1c5ce-e4e9-11f1-afa7-9a0bb82a33d1?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-24T12:29:04.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTAyNzEwNzViNzczYTE4ODhmN2M0ZDY5MTY2OGE4MDE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=00864328085128691a7bf408c520d9c4c0f8491ff62d59f40c98980aa961a11a",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "d33d6e8c3733",
+          "outletId": "20-minutes",
+          "headline": "Fausse rétractation de Takieddine : Nicolas Sarkozy et Carla Bruni renvoyés en procès",
+          "url": "https://www.20minutes.fr/justice/4265375-20261124-fausse-retractation-takieddine-nicolas-sarkozy-carla-bruni-renvoyes-proces?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-24T12:28:55.000Z",
+          "imageUrl": "https://img.20mn.fr/onUCPQvUSe2uRITdOyQOvCk/1200x768_carla-bruni-sarkozy-et-nicolas-sarkozy-funerailles-de-mathilde-favier-en-l-eglise-saint-sulpice-paris-france-31-08-2026-pariente-16510384-credit-jp-pariente-sipa-2608311512",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "628a86eaf4a3",
+          "outletId": "bfmtv",
+          "headline": "Fausse rétractation de Ziad Takieddine: Nicolas Sarkozy renvoyé en procès avec son épouse Carla Bruni",
+          "url": "https://www.bfmtv.com/police-justice/fausse-retractation-de-ziad-takieddine-nicolas-sarkozy-renvoye-en-proces-avec-son-epouse-carla-bruni_AN-202611240565.html",
+          "publishedAt": "2026-11-24T12:18:25.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Rbi9DlNfrZBSyvP-YEEJD_XzTSk=/0x0:2048x1152/800x0/images/Nicolas-Sarkozy-a-Paris-ce-mercredi-13-mai-2026-2285535.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "misc"
+        }
+      ],
+      "topicId": "c41e3deed4ad",
+      "titledArticleCount": 15,
+      "section": "politics",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1795507200000,
+          "end": 1795510800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795510800000,
+          "end": 1795514400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795514400000,
+          "end": 1795518000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795518000000,
+          "end": 1795521600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795521600000,
+          "end": 1795525200000,
+          "counts": {
+            "gauche": 3,
+            "centre": 5,
+            "droite": 1
+          },
+          "total": 9
+        },
+        {
+          "start": 1795525200000,
+          "end": 1795528800000,
+          "counts": {
+            "gauche": 1,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 2
+        },
+        {
+          "start": 1795528800000,
+          "end": 1795532400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795532400000,
+          "end": 1795536000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1795536000000,
+          "end": 1795539600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1795539600000,
+          "end": 1795543200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795543200000,
+          "end": 1795546800000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 2
+        },
+        {
+          "start": 1795546800000,
+          "end": 1795550400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795550400000,
+          "end": 1795554000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795554000000,
+          "end": 1795557600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795557600000,
+          "end": 1795561200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795561200000,
+          "end": 1795564800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795564800000,
+          "end": 1795568400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795568400000,
+          "end": 1795572000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795572000000,
+          "end": 1795575600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795575600000,
+          "end": 1795579200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795579200000,
+          "end": 1795582800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795582800000,
+          "end": 1795586400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795586400000,
+          "end": 1795590000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795590000000,
+          "end": 1795593600000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        }
+      ],
+      "summaries": {
+        "gauche": [
+          "Nicolas Sarkozy, Carla Bruni et Mimi Marchand devront répondre en 2027 d'une association de malfaiteurs dans l'affaire Takieddine.",
+          "Le dossier concerne la volte-face financièrement suspecte de l'intermédiaire libanais concernant le financement de la campagne de 2007."
+        ],
+        "centre": [
+          "Onze protagonistes sont renvoyés devant le tribunal correctionnel de Paris pour l'opération de la fausse rétractation de Ziad Takieddine.",
+          "Le procès de l'ancien chef de l'État, de son épouse et de la communicante est fixé du 3 novembre au 2 décembre 2027.",
+          "Les chefs d'accusation retenus incluent l'association de malfaiteurs en vue d'une escroquerie en bande organisée et le recel de subornation de témoin."
+        ],
+        "droite": [
+          "Le calendrier judiciaire de l'ancien président de la République s'alourdit subitement avec ce nouveau renvoi en correctionnelle.",
+          "Le couple Sarkozy et la figure médiatique Mimi Marchand devront faire face à la justice dans le dossier de la rétractation de Ziad Takieddine."
+        ]
+      },
+      "differences": [
+        "La gauche ancre explicitement le dossier dans la continuité directe des investigations sur le financement illégal de la campagne présidentielle de 2007.",
+        "Le centre détaille précisément le calendrier de l'audience fixée à l'automne 2027 ainsi que la liste exhaustive des chefs d'inculpation retenus contre les onze prévenus.",
+        "La droite qualifie le dossier d'alourdissement du calendrier judiciaire de l'ancien chef de l'État tout en rappelant qu'il conteste l'ensemble des accusations."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 15,
+      "summarizedAt": "2026-11-25T00:01:35.882Z"
+    },
+    {
       "id": "b3b284fed94a",
       "slug": "la-justice-ordonne-un-proces-pour-meurtre-contre-le-policier",
       "title": "La justice ordonne un procès pour meurtre contre le policier impliqué dans la mort de Nahel Merzouk",
@@ -18372,467 +18392,46 @@
       "summarizedAt": "2026-11-25T00:01:35.882Z"
     },
     {
-      "id": "c41e3deed4ad",
-      "slug": "nicolas-sarkozy-et-carla-bruni-sont-renvoyes-en-proces-pour-la",
-      "title": "Nicolas Sarkozy et Carla Bruni sont renvoyés en procès pour association de malfaiteurs dans l'affaire de la fausse rétractation de Ziad Takieddine",
-      "createdAt": "2026-11-24T13:01:34.085Z",
-      "storyDay": "2026-11-24",
-      "articles": [
-        {
-          "id": "7cfe44b8c27e",
-          "outletId": "mediapart",
-          "headline": "Un procès pour Nicolas Sarkozy, Carla Bruni et Michèle Marchand: la charge des juges dans l’affaire de la fausse rétractation de Ziad Takieddine",
-          "url": "https://www.mediapart.fr/journal/france/251126/un-proces-pour-nicolas-sarkozy-carla-bruni-et-michele-marchand-la-charge-des-juges-dans-l-affaire-de-la-fa",
-          "publishedAt": "2026-11-25T07:13:06.000Z",
-          "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/11/25/261125-img-un-proces-pour-nicolas-sarkozy-carla-bruni-et-michele-marchand-la-charge-des-juges-dans-l-affaire-de-la-fausse-retractation-1.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "29db457c9946",
-          "outletId": "franceinfo",
-          "headline": "Nicolas Sarkozy, Carla Bruni, Mimi Marchand… Qui sont les principaux protagonistes de l'affaire de la fausse rétractation de Ziad Takieddine ?",
-          "url": "https://www.franceinfo.fr/politique/affaire/financement-de-la-campagne-de-sarkozy/nicolas-sarkozy-carla-bruni-mimi-marchand-qui-sont-les-principaux-protagonistes-de-l-affaire-de-la-fausse-retractation-de-ziad-takieddine_8297730.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-24T18:10:39.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/xQt74EZ3mVX4ldir4h8m7GySMi8/0x18:1024x594/432x243/filters:format(jpg)/2026/11/24/6b058bd854448361721958.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "d1c83e363fa6",
-          "outletId": "causeur",
-          "headline": "Nicolas Sarkozy et Carla Bruni renvoyés en procès : ce qui les attend",
-          "url": "https://www.causeur.fr/nicolas-sarkozy-carla-bruni-mimi-marchand-proces-affaire-takieddine-337958",
-          "publishedAt": "2026-11-24T18:03:37.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "259b4a4dbc85",
-          "outletId": "le-point",
-          "headline": "« Opération Sauver Sarko » : nouveau procès en vue pour l’ex-président et Carla Bruni",
-          "url": "https://www.lepoint.fr/societe/operation-sauver-sarko-nouveau-proces-en-vue-pour-lex-president-et-carla-bruni-X3DCUC6OUZGPLD6NDJIHOK5DUY/",
-          "publishedAt": "2026-11-24T16:46:09.000Z",
-          "imageUrl": "https://www.lepoint.fr/resizer/v2/EIAFSNKOW5D35J3GYD4HAG3Q7A.jpg?auth=8d7191a7564142f3d8d6bbb673c213e9460f95b515c3dc9500eba46d181c576e&smart=true&width=1200&height=900",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "2c1badcaf4fc",
-          "outletId": "le-point",
-          "headline": "Jade Dousselin : « La justice ne peut ni épargner Nicolas Sarkozy parce qu’il a exercé le pouvoir, ni le frapper davantage »",
-          "url": "https://www.lepoint.fr/societe/jade-dousselin-la-justice-ne-doit-pas-etre-un-spectacle-permanent-33MQXPWOOFD5JNKNR2FFOSUDMA/",
-          "publishedAt": "2026-11-24T15:00:00.000Z",
-          "imageUrl": "https://www.lepoint.fr/resizer/v2/2QCV6EJSL5NUDPPS2DUAYGNTZ4.jpg?auth=6c32b362d599820ba5da6952be532919955bea73b1145e71c2ecd60b7de3cdca&smart=true&width=1200&height=900",
-          "frontPage": false,
-          "kind": "news",
-          "section": "society"
-        },
-        {
-          "id": "1085a1b4bc9c",
-          "outletId": "lobs",
-          "headline": "Affaire Takieddine : Nicolas Sarkozy, Carla Bruni et Mimi Marchand seront jugés pour association de malfaiteurs",
-          "url": "https://www.nouvelobs.com/justice/20261124.OBS120405/affaire-takieddine-nicolas-sarkozy-carla-bruni-et-mimi-marchand-seront-juges-pour-association-de-malfaiteurs.html",
-          "publishedAt": "2026-11-24T13:22:02.000Z",
-          "imageUrl": "https://focus.nouvelobs.com/2026/11/24/122/1553/5295/3530/0/0/60/0/a54210f_upload-1-kg7mfut5pbal-000-d8fb463.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "60f33b8582b4",
-          "outletId": "le-parisien",
-          "headline": "Affaire Takieddine : Nicolas Sarkozy et Carla Bruni seront jugés pour « association de malfaiteurs », un procès prévu en 2027",
-          "url": "https://www.leparisien.fr/faits-divers/affaire-takieddine-nicolas-sarkozy-et-carla-bruni-seront-juges-pour-association-de-malfaiteurs-un-proces-prevu-en-2027-24-11-2026-MIRVLSS3Q5GO3EYQW4BWA37JFQ.php",
-          "publishedAt": "2026-11-24T13:01:34.085Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "dc73d5e09d18",
-          "outletId": "le-figaro",
-          "headline": "Fausse rétractation de Ziad Takieddine : Nicolas Sarkozy et Carla Bruni renvoyés en procès",
-          "url": "https://www.lefigaro.fr/actualite-france/fausse-retractation-de-ziad-takieddine-nicolas-sarkozy-et-carla-bruni-renvoyes-en-proces-apres-la-20261124",
-          "publishedAt": "2026-11-24T12:53:52.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/11/24/39c9cb24139a19bd09a320ae7895bf927d633d62e1c9cb89f28201ca07b0f091.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "92abadf2558a",
-          "outletId": "franceinfo",
-          "headline": "Nicolas Sarkozy et Carla Bruni renvoyés en procès dans l'affaire de la fausse rétractation de Ziad Takieddine, notamment pour association de malfaiteurs",
-          "url": "https://www.franceinfo.fr/societe/justice/nicolas-sarkozy-et-carla-bruni-sont-renvoyes-en-proces-dans-l-affaire-de-la-fausse-retractation-de-ziad-takieddine-notamment-pour-association-de-malfaiteurs_8297655.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-24T12:49:57.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/nAYSHWt8vioZUy73vpbR32hTsqg/0x39:1024x615/432x243/filters:format(jpg)/2026/11/24/6b058160d1a20817131527.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        },
-        {
-          "id": "792581ddd942",
-          "outletId": "bfmtv",
-          "headline": "Fausse rétractation de Ziad Takieddine: Nicolas Sarkozy renvoyé en procès avec Carla Bruni et Mimi Marchand",
-          "url": "https://www.bfmtv.com/police-justice/video-fausse-retractation-de-ziad-takieddine-nicolas-sarkozy-renvoye-en-proces-avec-carla-bruni-et-mimi-marchand_VN-202611240577.html",
-          "publishedAt": "2026-11-24T12:42:21.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/XiupsHegzikU_f6AX9fxLmV_tpY=/0x0:1280x720/800x0/images/Fausse-retractation-de-Ziad-Takieddine-Nicolas-Sarkozy-renvoye-en-proces-avec-Carla-Bruni-et-Mimi-Marchand-2389663.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "c6120c9996ec",
-          "outletId": "la-croix",
-          "headline": "Financement libyen : Nicolas Sarkozy sera jugé pour la rétractation de Ziad Takieddine",
-          "url": "https://www.la-croix.com/politique/financement-libyen-nicolas-sarkozy-sera-juge-pour-la-retractation-de-takieddine-20261124",
-          "publishedAt": "2026-11-24T12:41:15.000Z",
-          "imageUrl": "https://i.la-croix.com/x/2026/11/24/2597544-l-ex-president-de-la-republique-nicolas-sarkozy-et.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "0f78b6afe5de",
-          "outletId": "liberation",
-          "headline": "Fausse rétractation de Takieddine : Nicolas Sarkozy et Carla Bruni renvoyés en procès en 2027",
-          "url": "https://www.liberation.fr/societe/police-justice/fausse-retractation-de-takieddine-nicolas-sarkozy-et-carla-bruni-renvoyes-en-proces-en-2027-20261124_MVCMLYLVGBGMHPN4YEIXMXLYEY/",
-          "publishedAt": "2026-11-24T12:30:38.000Z",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "72c1fbc463e5",
-          "outletId": "rfi",
-          "headline": "Fausse rétractation de Ziad Takieddine: l'ex-président Nicolas Sarkozy et son épouse Carla Bruni renvoyés en procès",
-          "url": "https://www.rfi.fr/fr/france/20261124-fausse-r%C3%A9tractation-de-ziad-takieddine-nicolas-sarkozy-et-carla-bruni-renvoy%C3%A9s-en-proc%C3%A8s",
-          "publishedAt": "2026-11-24T12:30:30.000Z",
-          "imageUrl": "https://s.rfi.fr/media/display/b988ac68-ae53-11f0-a93d-005056a97e36/w:1024/p:16x9/AP25294262834947.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "9076828b2413",
-          "outletId": "ouest-france",
-          "headline": "Rétractation de Ziad Takieddine : un procès ordonné contre Nicolas Sarkozy, Carla Bruni et Michèle Marchand",
-          "url": "https://www.ouest-france.fr/politique/nicolas-sarkozy/retractation-de-ziad-takieddine-un-proces-ordonne-contre-nicolas-sarkozy-carla-bruni-et-michele-marchand-efe1c5ce-e4e9-11f1-afa7-9a0bb82a33d1?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-24T12:29:04.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExOTAyNzEwNzViNzczYTE4ODhmN2M0ZDY5MTY2OGE4MDE?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=00864328085128691a7bf408c520d9c4c0f8491ff62d59f40c98980aa961a11a",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "d33d6e8c3733",
-          "outletId": "20-minutes",
-          "headline": "Fausse rétractation de Takieddine : Nicolas Sarkozy et Carla Bruni renvoyés en procès",
-          "url": "https://www.20minutes.fr/justice/4265375-20261124-fausse-retractation-takieddine-nicolas-sarkozy-carla-bruni-renvoyes-proces?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-24T12:28:55.000Z",
-          "imageUrl": "https://img.20mn.fr/onUCPQvUSe2uRITdOyQOvCk/1200x768_carla-bruni-sarkozy-et-nicolas-sarkozy-funerailles-de-mathilde-favier-en-l-eglise-saint-sulpice-paris-france-31-08-2026-pariente-16510384-credit-jp-pariente-sipa-2608311512",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        },
-        {
-          "id": "628a86eaf4a3",
-          "outletId": "bfmtv",
-          "headline": "Fausse rétractation de Ziad Takieddine: Nicolas Sarkozy renvoyé en procès avec son épouse Carla Bruni",
-          "url": "https://www.bfmtv.com/police-justice/fausse-retractation-de-ziad-takieddine-nicolas-sarkozy-renvoye-en-proces-avec-son-epouse-carla-bruni_AN-202611240565.html",
-          "publishedAt": "2026-11-24T12:18:25.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Rbi9DlNfrZBSyvP-YEEJD_XzTSk=/0x0:2048x1152/800x0/images/Nicolas-Sarkozy-a-Paris-ce-mercredi-13-mai-2026-2285535.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "misc"
-        }
-      ],
-      "topicId": "c41e3deed4ad",
-      "titledArticleCount": 15,
-      "section": "politics",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1795507200000,
-          "end": 1795510800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795510800000,
-          "end": 1795514400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795514400000,
-          "end": 1795518000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795518000000,
-          "end": 1795521600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795521600000,
-          "end": 1795525200000,
-          "counts": {
-            "gauche": 3,
-            "centre": 5,
-            "droite": 1
-          },
-          "total": 9
-        },
-        {
-          "start": 1795525200000,
-          "end": 1795528800000,
-          "counts": {
-            "gauche": 1,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 2
-        },
-        {
-          "start": 1795528800000,
-          "end": 1795532400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795532400000,
-          "end": 1795536000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795536000000,
-          "end": 1795539600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795539600000,
-          "end": 1795543200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795543200000,
-          "end": 1795546800000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 2
-        },
-        {
-          "start": 1795546800000,
-          "end": 1795550400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795550400000,
-          "end": 1795554000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795554000000,
-          "end": 1795557600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795557600000,
-          "end": 1795561200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795561200000,
-          "end": 1795564800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795564800000,
-          "end": 1795568400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795568400000,
-          "end": 1795572000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795572000000,
-          "end": 1795575600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795575600000,
-          "end": 1795579200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795579200000,
-          "end": 1795582800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795582800000,
-          "end": 1795586400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795586400000,
-          "end": 1795590000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795590000000,
-          "end": 1795593600000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Nicolas Sarkozy, Carla Bruni et Mimi Marchand devront répondre en 2027 d'une association de malfaiteurs dans l'affaire Takieddine.",
-          "Le dossier concerne la volte-face financièrement suspecte de l'intermédiaire libanais concernant le financement de la campagne de 2007."
-        ],
-        "centre": [
-          "Onze protagonistes sont renvoyés devant le tribunal correctionnel de Paris pour l'opération de la fausse rétractation de Ziad Takieddine.",
-          "Le procès de l'ancien chef de l'État, de son épouse et de la communicante est fixé du 3 novembre au 2 décembre 2027.",
-          "Les chefs d'accusation retenus incluent l'association de malfaiteurs en vue d'une escroquerie en bande organisée et le recel de subornation de témoin."
-        ],
-        "droite": [
-          "Le calendrier judiciaire de l'ancien président de la République s'alourdit subitement avec ce nouveau renvoi en correctionnelle.",
-          "Le couple Sarkozy et la figure médiatique Mimi Marchand devront faire face à la justice dans le dossier de la rétractation de Ziad Takieddine."
-        ]
-      },
-      "differences": [
-        "La gauche ancre explicitement le dossier dans la continuité directe des investigations sur le financement illégal de la campagne présidentielle de 2007.",
-        "Le centre détaille précisément le calendrier de l'audience fixée à l'automne 2027 ainsi que la liste exhaustive des chefs d'inculpation retenus contre les onze prévenus.",
-        "La droite qualifie le dossier d'alourdissement du calendrier judiciaire de l'ancien chef de l'État tout en rappelant qu'il conteste l'ensemble des accusations."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 15,
-      "summarizedAt": "2026-11-25T00:01:35.882Z"
-    },
-    {
       "id": "86aa73d1078c",
       "slug": "vingt-personnes-sont-retenues-en-otage-dans-un-supermarche-a",
-      "title": "Une prise d’otages est en cours dans un supermarché de Carthagène en Colombie",
+      "title": "Colombie : les otages retenus dans un supermarché à Carthagène ont été libérés par la police",
       "createdAt": "2026-11-25T02:01:31.806Z",
       "storyDay": "2026-11-24",
       "articles": [
+        {
+          "id": "4862e087d090",
+          "outletId": "bfmtv",
+          "headline": "Colombie: les otages libérés après un assaut de la police, un des preneurs d'otages tué",
+          "url": "https://www.bfmtv.com/international/amerique-latine/colombie/video-colombie-les-otages-liberes-apres-un-assaut-de-la-police-un-des-preneurs-d-otages-tue_VN-202611250388.html",
+          "publishedAt": "2026-11-25T08:49:40.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/konNTrPQalPab1NhOQr_oTZLLE8=/0x0:1280x720/800x0/images/Colombie-les-otages-liberes-apres-un-assaut-de-la-police-un-des-preneurs-d-otages-tue-2390241.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
+        {
+          "id": "75273dcf6099",
+          "outletId": "ouest-france",
+          "headline": "Prise d’otages en Colombie : toutes les personnes ont été libérées après un assaut mené par la police et l’armée",
+          "url": "https://www.ouest-france.fr/monde/colombie/prise-dotages-en-colombie-toujours-une-vingtaine-de-clients-retenus-le-president-sur-place-27feaeae-e882-11f1-9b33-2f81462d3339?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-25T08:48:30.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZjA2MDI3ZTY0MDcxOTUyYmEyYzE3NTgxMWExYThiMDU?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=61398ed483ca20f88417b2e608f17ae90dc1aba06dc48c065747ca7c7088f074",
+          "frontPage": true,
+          "kind": "news",
+          "section": "world",
+          "everFrontPage": true
+        },
+        {
+          "id": "317ebc8b129d",
+          "outletId": "cnews",
+          "headline": "Colombie : braquage raté, président sur place... Ce que l'on sait de la prise d'otages dans un supermarché",
+          "url": "https://www.cnews.fr/france/2026-11-25/colombie-braquage-rate-president-sur-place-ce-que-lon-sait-de-la-prise-dotages",
+          "publishedAt": "2026-11-25T08:14:51.000Z",
+          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-24t165936z_505671828_rc25uoaxizzj_rtrmadp_3_colombia-hostages-taille1200_6b0695fdb347f.jpg?itok=FK3J8FEx",
+          "frontPage": false,
+          "kind": "news",
+          "section": "world"
+        },
         {
           "id": "f948cb5afede",
           "outletId": "le-parisien",
@@ -18959,20 +18558,10 @@
         }
       ],
       "topicId": "86aa73d1078c",
-      "titledArticleCount": 11,
+      "titledArticleCount": 14,
       "section": "world",
       "everInEdition": true,
       "activity": [
-        {
-          "start": 1795507200000,
-          "end": 1795510800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
         {
           "start": 1795510800000,
           "end": 1795514400000,
@@ -19202,35 +18791,46 @@
             "droite": 0
           },
           "total": 1
+        },
+        {
+          "start": 1795593600000,
+          "end": 1795597200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 2,
+            "droite": 1
+          },
+          "total": 3
         }
       ],
       "summaries": {
         "gauche": [
-          "Une trentaine de clients d'un supermarché de Carthagène sont séquestrés depuis mardi par des malfaiteurs après l'échec du braquage d'un fourgon blindé.",
-          "Le chef de l'Etat Abelardo de la Espriella s'est rendu sur place et a affirmé que l'acte relève de la criminalité de droit commun, tout en écartant un lien avec des groupes armés récents.",
-          "Une quinzaine de personnes ont pu être libérées tandis que les forces de l'ordre maintiennent le bouclage du site.",
-          "Le journal Libération qualifie explicitement le président d'extrême droite, tandis que Le Monde rappelle la concomitance de l'événement avec l'anniversaire d'un accord de paix historique."
+          "Le président d'extrême droite Abelardo de la Espriella s'est rendu sur place à Carthagène pour superviser la libération partielle de dix otages sur trente.",
+          "La prise d'otages découle d'un braquage raté de fourgon blindé mené par des hommes armés dans un supermarché.",
+          "Le chef de l'État a explicitement écarté tout lien avec des groupes armés auteurs d'attentats récents, qualifiant l'acte de criminalité de droit commun.",
+          "Le journal Le Monde rappelle que l'attaque coïncide avec le dixième anniversaire des accords de paix avec la guérilla des Farc."
         ],
         "centre": [
-          "Une prise d'otages est en cours dans un supermarché de Carthagène en Colombie après un braquage raté.",
-          "Une vingtaine ou une trentaine de personnes sont retenues par des hommes armés, tandis que les forces de l'ordre et des tireurs d'élite encerclent le bâtiment.",
-          "Le président Abelardo de la Espriella est présent sur les lieux pour superviser les opérations de libération des otages.",
-          "Un premier bilan fait état d'une dizaine à une quinzaine de personnes libérées."
+          "Les otages retenus dans un supermarché à Carthagène ont tous été libérés à l'issue d'un assaut mené par la police et l'armée.",
+          "Le président Abelardo de la Espriella est intervenu sur les lieux des opérations pour superviser le déroulement de la crise.",
+          "L'opération s'est soldée par la mort d'un des preneurs d'otages, qualifiée par le chef de l'État d'intervention absolument impeccable.",
+          "La prise d'otages fait suite à une tentative de braquage ratée d'un véhicule blindé dans cette ville touristique colombienne."
         ],
         "droite": [
-          "Des hommes armés retranchés dans un supermarché de Carthagène retiennent entre quinze et vingt personnes à la suite d'un braquage raté.",
-          "Dix otages ont été libérés par les forces de l'ordre qui encerclent le magasin et y ont déployé des renforts militaires.",
-          "CNews précise que les assaillants réclament près de deux millions de dollars ainsi que des véhicules blindés."
+          "Une trentaine de personnes ont été prises en otage dans un supermarché de Carthagène à la suite d'un braquage raté.",
+          "Les forces de l'ordre ont donné l'assaut, permettant la libération des otages et la mort d'un des malfaiteurs.",
+          "Le président Abelardo de la Espriella s'est rendu sur place et a salué une opération policière impeccable.",
+          "Les assaillants avaient initialement réclamé près de deux millions de dollars et des véhicules blindés selon les autorités locales."
         ]
       },
       "differences": [
-        "La gauche insiste sur le profil politique du chef de l'Etat et replace l'événement dans le contexte des tensions sécuritaires et des commémorations nationales du pays.",
-        "Le centre livre un compte rendu factuel et centré sur le déroulement des opérations de secours et la présence de l'exécutif sur place.",
-        "La droite privilégie le récit haletant de l'événement en insistant sur la chronologie du braquage raté et les exigences financières des malfaiteurs."
+        "La gauche insiste sur le profil politique du président d'extrême droite et replace l'événement dans le contexte sécuritaire et historique du pays.",
+        "Le centre se concentre sur le déroulement factuel de l'assaut des forces de l'ordre et la libération complète des otages sous l'égide présidentielle.",
+        "La droite accorde une visibilité accrue aux détails spectaculaires du braquage et aux exigences financières des malfaiteurs."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 11,
-      "summarizedAt": "2026-11-25T07:01:25.762Z"
+      "summarizedArticleCount": 14,
+      "summarizedAt": "2026-11-25T09:01:32.670Z"
     },
     {
       "id": "b49396188b53",
@@ -20311,23 +19911,26 @@
       ],
       "summaries": {
         "gauche": [
-          "Le dirigeant américain Donald Trump est intervenu personnellement auprès des administrateurs pour imposer le retour de Jensen Huang.",
-          "Le conseil d'administration a cédé aux pressions politiques pour réintégrer le PDG malgré les révélations."
+          "Jensen Huang a fait son retour à la tête de Nvidia et s'est exprimé auprès des salariés au lendemain d'une baisse de l'action en Bourse.",
+          "Le dirigeant a contredit Donald Trump concernant l'implication du président dans sa réintégration, alors que Le Hufflink souligne les pressions exercées par la Maison-Blanche auprès du conseil d'administration."
+        ],
+        "centre": [
+          "Jensen Huang retrouve ses fonctions de PDG chez Nvidia après des allégations d'inconduite.",
+          "Le retour du dirigeant s'accompagne d'excuses publiques auprès des salariés, d'un suivi thérapeutique et de révélations sur les coulisses de sa réintégration."
         ],
         "droite": [
-          "Jensen Huang a fait amende honorable auprès de ses collaborateurs tout en reconnaissant suivre une thérapie.",
-          "Le chef d'entreprise revient aux commandes de Nvidia onze jours après son départ, porté par l'appui public de Donald Trump.",
-          "L'industriel de la tech doit encore faire face à des auditions parlementaires sur des accusations d'espionnage et d'adultère.",
-          "La chute boursière initiale de plus de 10 % met en lumière la fragilité de la gouvernance de l'entreprise face aux crises."
+          "Jensen Huang a présenté ses excuses aux salariés de Nvidia et suivi une thérapie suite à des manquements au code de conduite.",
+          "Malgré son retour soutenu par Donald Trump, le patron reste sous la menace d'une audition devant le Sénat américain et la commission des affaires bancaires dans le cadre d'une enquête pour espionnage."
         ]
       },
       "differences": [
-        "Le camp de gauche met en avant l'ingérence politique directe de Donald Trump dans les affaires internes de l'entreprise.",
-        "Le camp de droite insiste sur le parcours judiciaire et politique tourmenté du dirigeant tout en détaillant l'impact financier du scandale sur le cours boursier."
+        "La gauche met l'accent sur la confrontation entre Jensen Huang et Donald Trump concernant les ingérences politiques dans la gouvernance de Nvidia.",
+        "Le centre se concentre sur les aspects internes de la crise managériale, détaillant les excuses du PDG et les mesures thérapeutiques prises après les révélations du Parisien.",
+        "La droite insiste sur la fragilité de la position du patron malgré son retour, en mettant en avant les auditions parlementaires à venir et les soupçons d'espionnage."
       ],
       "promptVersion": "sum-7",
-      "summarizedArticleCount": 4,
-      "summarizedAt": "2026-11-25T06:01:42.166Z"
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-11-25T09:01:32.670Z"
     },
     {
       "id": "cc2edabb8108",
@@ -20354,9 +19957,10 @@
           "url": "https://www.lemonde.fr/societe/article/2026/11/25/procureur-present-lors-d-une-perquisition-au-rn-gerald-darmanin-annonce-saisir-l-inspection-generale-de-la-justice-pour-faire-toute-la-lumiere_6815060_3224.html",
           "publishedAt": "2026-11-25T07:55:22.000Z",
           "imageUrl": "https://img.lemde.fr/2026/11/25/473/0/5682/2841/644/322/60/0/2badbd9_upload-1-hhirgrvhqsj8-000-d3xq3mc.jpg",
-          "frontPage": false,
+          "frontPage": true,
           "kind": "news",
-          "section": "politics"
+          "section": "politics",
+          "everFrontPage": true
         },
         {
           "id": "a262ab0720e5",
@@ -20648,7 +20252,29 @@
           },
           "total": 1
         }
-      ]
+      ],
+      "summaries": {
+        "gauche": [
+          "Le ministre de la Justice Gérald Darmanin a saisi l'Inspection générale de la justice après la présence surprise du procureur adjoint Christian de Rocquigny au siège du Rassemblement national.",
+          "Le magistrat a été épinglé pour un « défaut de loyauté » après avoir omis d'avertir sa hiérarchie de sa rencontre avec un cadre du parti d'extrême droite lors d'une perquisition."
+        ],
+        "centre": [
+          "Gérald Darmanin a sollicité l'Inspection générale de la justice à la suite de la découverte du procureur Christian de Rocquigny dans les locaux du Rassemblement national pendant une perquisition.",
+          "Le magistrat du parquet de Paris effectuait une visite à un eurodéputé sans en avoir informé sa hiérarchie, provoquant l'intervention du garde des Sceaux."
+        ],
+        "droite": [
+          "Gérald Darmanin a saisi l'Inspection générale de la justice concernant la présence du procureur Christian de Rocquigny au siège du Rassemblement national.",
+          "Cette visite a eu lieu lors d'une perquisition menée dans le cadre d'une enquête judiciaire sur de présumées fuites d'informations provenant du ministère de l'Intérieur."
+        ]
+      },
+      "differences": [
+        "La gauche met l'accent sur le manquement déontologique qualifié de « défaut de loyauté » par le ministre et pointe explicitement l'absence d'information de la hiérarchie judiciaire.",
+        "Le centre adopte un angle purement factuel sur la saisine de l'Inspection générale de la justice en insistant sur la coïncidence de cette présence lors d'une perquisition.",
+        "La droite contextualise l'incident en rappelant l'information judiciaire en cours pour violation du secret professionnel concernant des fuites présumées du ministère de l'Intérieur."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 6,
+      "summarizedAt": "2026-11-25T09:01:32.670Z"
     },
     {
       "id": "1a1a90dff3a3",
@@ -22088,7 +21714,7 @@
           "url": "https://www.lefigaro.fr/elections/presidentielles/un-desaccord-manifeste-sur-la-ligne-politique-plutot-qu-une-primaire-edouard-philippe-propose-un-debat-a-david-lisnard-20261124",
           "publishedAt": "2026-11-24T21:22:13.000Z",
           "imageUrl": "https://i.f1g.fr/media/cms/1921x1040_crop/2026/11/24/15af42d9de1928b1469d64e7116f95ea3b3999a93b58cd70530a510d43715ef8.jpg",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
