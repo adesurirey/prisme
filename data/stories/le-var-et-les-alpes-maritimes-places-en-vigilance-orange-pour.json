@@ -1,10 +1,31 @@
 {
   "id": "9e11dea832df",
   "slug": "le-var-et-les-alpes-maritimes-places-en-vigilance-orange-pour",
-  "title": "Le Var et les Alpes-Maritimes placés en vigilance orange pour pluie, inondation et crues",
+  "title": "Le Var et les Alpes-Maritimes sont placés en vigilance orange après d'importantes précipitations",
   "createdAt": "2026-11-25T07:01:25.762Z",
   "storyDay": "2026-11-25",
   "articles": [
+    {
+      "id": "9017e540db19",
+      "outletId": "liberation",
+      "headline": "Le Var et les Alpes Maritimes placés en vigilance orange après un nouvel épisode méditerranéen",
+      "url": "https://www.liberation.fr/environnement/climat/le-var-et-les-alpes-maritimes-places-en-vigilance-orange-apres-un-nouvel-episode-mediterraneen-20261125_ILLDVPWP2NCYHKPL64XEHDLDZI/",
+      "publishedAt": "2026-11-25T07:25:13.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
+    {
+      "id": "46230d63e657",
+      "outletId": "europe-1",
+      "headline": "Pluie-inondation : le Var et les Alpes-Maritimes en vigilance orange, des crues sont en cours",
+      "url": "https://www.europe1.fr/meteo/pluie-inondation-le-var-et-les-alpes-maritimes-en-vigilance-orange-des-crues-sont-en-cours-1244356?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-25T07:16:44.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/2026_redaction/M%C3%A9t%C3%A9o/cr_dit_romain_gautier_hans_lucas_hans_lucas_via_afp_69959ae902128.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "science"
+    },
     {
       "id": "dbf61bba6b16",
       "outletId": "le-parisien",
@@ -51,7 +72,7 @@
     }
   ],
   "topicId": "9e11dea832df",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "science",
   "everInEdition": true,
   "activity": [
@@ -289,30 +310,34 @@
       "start": 1795590000000,
       "end": 1795593600000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 1,
-        "droite": 0
+        "droite": 1
       },
-      "total": 1
+      "total": 3
     }
   ],
   "summaries": {
     "gauche": [
-      "Le Var et les Alpes-Maritimes subissent une vigilance orange pour pluie, inondation et crues.",
-      "Météo-France envisage d'élargir l'alerte à d'autres secteurs comme les Bouches-du-Rhône, le Vaucluse, la Drôme ou les Alpes-de-Haute-Provence.",
-      "Les zones côtières varoises, la Sainte-Baume, l'Estérel, les Maures, les pré-Alpes de Grasse et la Côte d'Azur constituent les secteurs les plus menacés selon franceinfo."
+      "Le Var et les Alpes-Maritimes sont placés en vigilance orange par Météo France jusqu'à 22 heures ce mercredi 25 novembre en raison d'un épisode méditerranéen.",
+      "Météo-France n'exclut pas d'étendre l'alerte à d'autres territoires comme les Bouches-du-Rhône, le Vaucluse, la Drôme ou les Alpes-de-Haute-Provence.",
+      "Les secteurs les plus touchés se concentrent sur la bande littorale varoise de la Sainte-Baume à l'Estérel et les massifs des Maures, ainsi que sur les pré-Alpes de Grasse et la Côte d'Azur."
     ],
     "centre": [
-      "Le Var et les Alpes-Maritimes font l'objet d'une vigilance orange en raison de crues et de précipitations intenses prévoyant jusqu'à 200 millimètres d'eau localement.",
-      "Le département varois fait face à l'équivalent de plus d'un mois de pluie en quelques heures seulement.",
-      "La commune de Cogolin enregistre un record mensuel avec 155 millimètres cumulés sur 24 heures selon BFMTV."
+      "Le Var et les Alpes-Maritimes font l'objet d'une vigilance orange pour pluie, inondation et crues avec des cumuls prévus localement jusqu'à 200 mm.",
+      "Plus d'un mois de précipitations est tombé en quelques heures dans le Var, marquant un record mensuel à Cogolin avec 155 millimètres en 24 heures."
+    ],
+    "droite": [
+      "Un épisode méditerranéen de fortes pluies touche la région PACA depuis la nuit, plaçant le Var et les Alpes-Maritimes en vigilance orange pluie-inondation.",
+      "Les cumuls atteignent 156 millimètres autour du golfe de Saint-Tropez et une crue importante est constatée sur le Gapeau selon Météo-France."
     ]
   },
   "differences": [
-    "La gauche élargit la perspective en soulignant la menace potentielle sur les départements voisins et la cartographie précise des zones exposées.",
-    "Le centre resserre son angle sur l'intensité immédiate des cumuls pluviométriques et les records chiffrés enregistrés localement."
+    "La gauche insiste sur l'étendue potentielle de la vigilance à d'autres départements et localise précisément les zones côtières et pré-alpines exposées.",
+    "Le centre met l'accent sur le volume exceptionnel des précipitations en comparant les cumuls à plus d'un mois de pluie et en citant Cogolin.",
+    "La droite privilégie le suivi technique des données de Météo-France en soulignant les hauteurs d'eau relevées près du golfe de Saint-Tropez et la crue du Gapeau."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-25T07:01:25.762Z"
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-25T08:01:40.933Z"
 }

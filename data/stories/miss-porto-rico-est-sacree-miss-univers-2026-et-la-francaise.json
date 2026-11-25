@@ -1,10 +1,22 @@
 {
   "id": "073fa1bf447f",
   "slug": "miss-porto-rico-est-sacree-miss-univers-2026-et-la-francaise",
-  "title": "Miss Porto Rico sacrée Miss Univers 2026, la Française Garance Authié entre dans le top 12",
+  "title": "Miss Porto Rico est sacrée Miss Univers, la Française Garance Authié entre dans le top 12",
   "createdAt": "2026-11-25T06:01:42.166Z",
   "storyDay": "2026-11-25",
   "articles": [
+    {
+      "id": "d1ef4beea4a1",
+      "outletId": "20-minutes",
+      "headline": "Miss Univers : Jennifer Barreto et Porto Rico remportent la couronne à domicile, la France bien classée",
+      "url": "https://www.20minutes.fr/arts-stars/people/4265561-20261125-miss-univers-jennifer-barreto-porto-rico-remportent-couronne-domicile-france-bien-classee?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-25T07:47:36.000Z",
+      "imageUrl": "https://img.20mn.fr/5JLsfgTBTHuA4V46cJeOvSk/1200x768_jennifer-barreto-de-miss-porto-rico-a-gauche-est-couronnee-miss-univers-lors-du-75e-concours-de-miss-univers-a-san-juan-porto-rico-le-mardi-24-novembre-2026-ap-photo-alejandro-granadillo-xmc189-26329175048401-2611250553",
+      "frontPage": true,
+      "kind": "news",
+      "section": "culture",
+      "everFrontPage": true
+    },
     {
       "id": "0c0a7d2bf58f",
       "outletId": "le-parisien",
@@ -40,20 +52,10 @@
     }
   ],
   "topicId": "073fa1bf447f",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "culture",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795503600000,
-      "end": 1795507200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795507200000,
       "end": 1795510800000,
@@ -283,31 +285,40 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795590000000,
+      "end": 1795593600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Jennifer Barreto a été couronnée Miss Univers 2026 lors de la finale organisée à Porto Rico.",
-      "Elle succède à la tenante du titre Fátima Bosch, représentante du Mexique.",
-      "La candidate française Garance Authié s'est hissée dans le top 12 de cette 75e édition du concours."
+      "Jennifer Barreto a remporté le titre de Miss Univers 2026 lors d'une cérémonie organisée à Porto Rico.",
+      "La nouvelle reine de beauté succède à Fátima Bosch, représentant le Mexique.",
+      "La candidate française Garance Authié s'est hissée dans le top 12 de cette édition."
     ],
     "centre": [
-      "Jennifer Barreto, candidate de Porto Rico, a remporté le concours de Miss Univers 2026.",
-      "La Française Garance Authié a intégré le top 12 de cette 75e édition de la compétition internationale."
+      "Jennifer Barreto a été sacrée Miss Univers à domicile, offrant une sixième couronne à Porto Rico.",
+      "La candidate française Garance Authié a atteint le top 12 du concours international."
     ],
     "droite": [
-      "Jennifer Barreto a été sacrée Miss Univers 2026 à l'occasion de la 75e édition du concours qui se déroulait à San Juan.",
-      "La candidate portoricaine offre à son pays un sixième titre en s'imposant à domicile.",
-      "Elle devient la première femme mariée et mère de famille à remporter la couronne internationale.",
-      "La Française Garance Authié s'est qualifiée parmi les douze finalistes de la compétition."
+      "Jennifer Barreto, candidate de Porto Rico, a été couronnée Miss Univers 2026 au Coliseo de San Juan.",
+      "À 27 ans, elle devient la première femme mariée et mère de famille à remporter ce concours international.",
+      "La Française Garance Authié s'est qualifiée dans le top 12 de l'événement."
     ]
   },
   "differences": [
-    "La gauche livre un compte-rendu minimaliste et centré sur le résultat principal de l'élection sans s'attarder sur le profil de la gagnante.",
-    "Le centre se limite à une reprise factuelle et très brève du palmarès de la compétition.",
-    "La droite adopte un angle biographique très détaillé en insistant sur le parcours personnel de la lauréate et sur la dimension historique de sa victoire à domicile."
+    "La gauche livre un résumé très synthétique de l'événement en se concentrant sur le sacre de Miss Porto Rico et le classement de la France.",
+    "Le centre adopte un format factuel et direct, allant à l'essentiel du palmarès sans s'attarder sur le profil de la gagnante.",
+    "La droite fournit un article beaucoup plus détaillé, insistant sur le parcours personnel et professionnel de Jennifer Barreto ainsi que sur le lieu exact de la compétition."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-25T07:01:25.762Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-25T08:01:40.933Z"
 }
