@@ -6,6 +6,28 @@
   "storyDay": "2026-11-25",
   "articles": [
     {
+      "id": "14333af33f08",
+      "outletId": "franceinfo",
+      "headline": "Deux militaires libyens ont succombé à leurs blessures après l'attaque de navires russes en Libye",
+      "url": "https://www.franceinfo.fr/monde/afrique/libye/deux-militaires-libyens-ont-succombe-a-leurs-blessures-apres-l-attaque-de-navires-russes-en-libye_8298696.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-25T05:43:24.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/I9Yu9xH5kvfi396VIm2HTZI2dso/70x0:1481x794/432x243/filters:format(jpg)/2026/11/25/6b06750c90aca850060546.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "68997676f023",
+      "outletId": "le-monde",
+      "headline": "EN DIRECT, guerre en Ukraine : deux militaires libyens succombent à leurs blessures après les frappes revendiquées par Kiev contre des navires russes à Benghazi",
+      "url": "https://www.lemonde.fr/international/live/2026/11/25/en-direct-guerre-en-ukraine-deux-militaires-libyens-succombent-a-leurs-blessures-apres-les-frappes-revendiquees-par-kiev-contre-des-navires-russes-a-benghazi_6814183_3210.html",
+      "publishedAt": "2026-11-25T05:27:50.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/23/24/0/1492/746/644/322/60/0/68d0383_ftp-1-07xi9dvtsch0-afp-d8dq2g3.jpg",
+      "frontPage": false,
+      "kind": "live",
+      "section": "world"
+    },
+    {
       "id": "6af37baae5bb",
       "outletId": "rfi",
       "headline": "Libye: deux militaires libyens morts des suites des attaques ukrainiennes contre des navires russes à Benghazi",
@@ -40,30 +62,10 @@
     }
   ],
   "topicId": "f55109603553",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795492800000,
-      "end": 1795496400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795496400000,
-      "end": 1795500000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795500000000,
       "end": 1795503600000,
@@ -283,25 +285,53 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1795579200000,
+      "end": 1795582800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795582800000,
+      "end": 1795586400000,
+      "counts": {
+        "gauche": 2,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 2
     }
   ],
   "summaries": {
+    "gauche": [
+      "Le président Volodymyr Zelensky a affirmé la responsabilité de l'Ukraine dans les frappes du 22 novembre visant des bâtiments russes.",
+      "Deux militaires libyens sont décédés des suites de leurs blessures selon les informations officielles.",
+      "Saddam Haftar, haut responsable des forces armées dans la région, a qualifié l'opération ukrainienne de frappe criminelle.",
+      "Une corvette militaire a sombré et un navire de transport a subi des dégâts lors de ces actions au large de Benghazi."
+    ],
     "centre": [
-      "Les autorités de l'Est libyen ont annoncé la mort de deux militaires libyens des suites d'attaques survenues le 22 novembre à Benghazi.",
-      "Ces frappes visaient des navires russes présents dans le port libyen.",
-      "L'Ukraine a revendiqué la responsabilité de ces opérations."
+      "Les autorités administratives de la Libye orientale ont officialisé le décès de deux militaires libyens le 22 novembre.",
+      "L'exécutif ukrainien a assumé la paternité de ces opérations militaires dirigées contre des flottes russes.",
+      "Les incidents se sont déroulés à proximité immédiate de Benghazi.",
+      "Les dépêches soulignent l'implication directe de Kiev dans ces frappes maritimes."
     ],
     "droite": [
-      "Deux militaires libyens sont décédés des suites d'attaques menées le 22 novembre dans les eaux libyennes près de Benghazi.",
-      "Le président ukrainien Volodymyr Zelensky a revendiqué ces actions contre des bâtiments russes.",
-      "Kiev fait état d'une corvette coulée et d'un cargo touché lors de ces frappes."
+      "Volodymyr Zelensky a publiquement endossé la responsabilité des assauts menés le week-end dernier près de Benghazi.",
+      "Le bilan humain fait état de deux militaires libyens morts après avoir été blessés.",
+      "L'attaque a provoqué la perte d'une corvette ainsi que l'endommagement d'un cargo selon les données ukrainiennes."
     ]
   },
   "differences": [
-    "Le camp du centre se focalise sur l'annonce officielle des autorités est-libyennes concernant le bilan humain et la revendication ukrainienne.",
-    "Le camp de droite met directement en avant la responsabilité personnelle du président ukrainien Volodymyr Zelensky et précise les dégâts matériels subis par la flotte russe."
+    "Le camp de gauche détaille la condamnation prononcée par Saddam Haftar en qualifiant l'opération de criminelle tout en rapportant les bilans matériels.",
+    "Le camp du centre adopte une formulation neutre et institutionnelle en reprenant les communiqués officiels des autorités de l'Est libyen sur le décès des militaires.",
+    "Le camp de droite se focalise principalement sur les déclarations de Volodymyr Zelensky et sur les dégâts infligés aux navires russes."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-25T04:01:28.752Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-25T06:01:42.166Z"
 }

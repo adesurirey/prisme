@@ -1,7 +1,7 @@
 {
   "id": "dfbc33b4a336",
   "slug": "jensen-huang-retrouve-son-poste-de-pdg-de-nvidia",
-  "title": "Jensen Huang retrouve son poste de PDG de Nvidia",
+  "title": "Jensen Huang retrouve son poste de PDG de Nvidia malgré le scandale",
   "createdAt": "2026-11-25T01:01:25.244Z",
   "storyDay": "2026-11-24",
   "articles": [
@@ -29,6 +29,17 @@
       "section": "economy"
     },
     {
+      "id": "4f9eac5770ef",
+      "outletId": "huffpost",
+      "headline": "Les coulisses du retour inattendu de Jensen Huang à la tête de Nvidia, notamment poussé par Trump",
+      "url": "https://www.huffingtonpost.fr/international/video/les-coulisses-du-retour-inattendu-de-jensen-huang-a-la-tete-de-nvidia-notamment-pousse-par-trump_364191.html",
+      "publishedAt": "2026-11-24T16:55:07.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/11/24/107/0/852/479/0/0/60/0/f7e4ca6_upload-1-03ro6uptcwlw-afp-20250421-ar-20250421163459-kinq1-30b830a730f330b930-163501638-v4-midres-for.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "3006e9c058c8",
       "outletId": "atlantico",
       "headline": "Malgré le scandale, le patron de Nvidia, Jensen Huang, de Nvidia, retrouve son poste de PDG",
@@ -41,7 +52,7 @@
     }
   ],
   "topicId": "7903e946343e",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "economy",
   "everInEdition": true,
   "activity": [
@@ -219,11 +230,11 @@
       "start": 1795536000000,
       "end": 1795539600000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 0,
         "droite": 0
       },
-      "total": 0
+      "total": 1
     },
     {
       "start": 1795539600000,
@@ -287,16 +298,22 @@
     }
   ],
   "summaries": {
+    "gauche": [
+      "Le dirigeant américain Donald Trump est intervenu personnellement auprès des administrateurs pour imposer le retour de Jensen Huang.",
+      "Le conseil d'administration a cédé aux pressions politiques pour réintégrer le PDG malgré les révélations."
+    ],
     "droite": [
-      "Jensen Huang a présenté ses excuses aux salariés de Nvidia pour avoir enfreint le code de conduite interne et suit actuellement une thérapie.",
-      "Le dirigeant revient à la tête du géant des puces onze jours après sa démission, profitant du soutien affiché de Donald Trump.",
-      "Il reste sous le coup de soupçons d'une liaison avec une espionne chinoise et doit faire face à des auditions devant les parlementaires et le Sénat américains."
+      "Jensen Huang a fait amende honorable auprès de ses collaborateurs tout en reconnaissant suivre une thérapie.",
+      "Le chef d'entreprise revient aux commandes de Nvidia onze jours après son départ, porté par l'appui public de Donald Trump.",
+      "L'industriel de la tech doit encore faire face à des auditions parlementaires sur des accusations d'espionnage et d'adultère.",
+      "La chute boursière initiale de plus de 10 % met en lumière la fragilité de la gouvernance de l'entreprise face aux crises."
     ]
   },
   "differences": [
-    "Les médias de droite axent leur traitement sur le retour rapide de Jensen Huang à la tête de Nvidia, en soulignant le soutien de Donald Trump et la persistance des menaces judiciaires et politiques liées à l'affaire d'espionnage."
+    "Le camp de gauche met en avant l'ingérence politique directe de Donald Trump dans les affaires internes de l'entreprise.",
+    "Le camp de droite insiste sur le parcours judiciaire et politique tourmenté du dirigeant tout en détaillant l'impact financier du scandale sur le cours boursier."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 3,
-  "summarizedAt": "2026-11-25T01:01:25.244Z"
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-25T06:01:42.166Z"
 }
