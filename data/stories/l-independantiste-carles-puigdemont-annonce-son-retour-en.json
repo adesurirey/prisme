@@ -12,7 +12,7 @@
       "url": "https://www.ouest-france.fr/europe/espagne/lindependantiste-catalan-carles-puigdemont-annonce-quil-rentrera-en-espagne-le-12-decembre-43a9496c-e8bd-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-25T11:49:35.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMWEzOGVhZDA5MDZhNjVhMjc2YmNiMDM5MjIzZmM1NzI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=594d94e81f80a4aa741752a168d9484a755dc2a46650e7af04b3a9a197e22803",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -24,7 +24,7 @@
       "url": "https://www.lemonde.fr/international/article/2026/11/25/l-independantiste-catalan-carles-puigdemont-rentrera-en-espagne-le-12-decembre_6815086_3210.html",
       "publishedAt": "2026-11-25T11:21:58.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/25/0/0/6000/3000/644/322/60/0/4635b8d_ftp-1-fskvk0rij5xf-2026-11-25t103113z-2092645648-rc2yuoaj235b-rtrmadp-3-spain-politics-puigdemont.JPG",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -308,5 +308,23 @@
       },
       "total": 4
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le Tribunal suprême espagnol a définitivement blanchi Carles Puigdemont de toute poursuite liée aux événements de 2017.",
+      "L'homme politique prévoit de regagner le pays environ deux semaines après la tenue des élections législatives."
+    ],
+    "centre": [
+      "Carles Puigdemont a officialisé son intention de revenir au Parlement de Catalogne le 12 décembre.",
+      "Cette annonce intervient après neuf années passées en exil, principalement en Belgique.",
+      "La décision fait suite à son acquittement définitif par la justice espagnole pour la tentative de sécession de 2017."
+    ]
+  },
+  "differences": [
+    "La gauche met principalement l'accent sur la décision du Tribunal suprême ayant blanchi l'homme politique et sur son calendrier électoral.",
+    "Le centre insiste davantage sur la durée de son exil en Belgique et sur sa date précise de retour au Parlement de Catalogne."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-25T18:01:29.561Z"
 }
