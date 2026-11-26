@@ -6,6 +6,17 @@
   "storyDay": "2026-11-25",
   "articles": [
     {
+      "id": "dbb28c4e7762",
+      "outletId": "tf1-info",
+      "headline": "RER, métro, station Havre-Caumartin... D'importants travaux prévus sur le réseau de transports franciliens en 2027",
+      "url": "https://www.tf1info.fr/transports/rer-metro-station-havre-caumartin-d-importants-travaux-prevus-sur-le-reseau-de-transports-franciliens-en-2027-2478208.html",
+      "publishedAt": "2026-11-25T22:23:22.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/ratp-me-tros-climatise-s-et-gilets-rafrai-chissants-8009ec-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "other"
+    },
+    {
       "id": "d166c365e035",
       "outletId": "le-parisien",
       "headline": "RER et métros à l’arrêt : un nouvel été de galère attend les usagers des transports franciliens en 2027",
@@ -51,20 +62,10 @@
     }
   ],
   "topicId": "1504c8eaa0dc",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "other",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795557600000,
-      "end": 1795561200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795561200000,
       "end": 1795564800000,
@@ -294,24 +295,34 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1795644000000,
+      "end": 1795647600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "centre": [
-      "Le Parisien annonce un nouvel été de perturbations majeures en 2027 sur le réseau de transports en Île-de-France.",
-      "Le trafic sera totalement interrompu durant plusieurs semaines sur une portion de la ligne du RER A en raison de grands chantiers de modernisation."
+      "Le Parisien et TF1 Info annoncent d'importantes perturbations sur les lignes de RER A, B et C ainsi que sur plusieurs lignes de métro en Île-de-France pour l'année 2027.",
+      "Le Parisien précise qu'un nouvel été difficile attend les usagers du réseau francilien et détaille l'interruption du trafic prévue sur le RER A pendant plusieurs semaines.",
+      "TF1 Info ajoute que la station Havre-Caumartin fermera ses portes à partir du mois de mars pour une durée de deux ans en raison de ces chantiers."
     ],
     "droite": [
-      "Île-de-France Mobilités, la SNCF, la RATP et la Région Île-de-France dévoilent le calendrier détaillé des travaux prévus en 2027, avec un investissement global de 4 milliards d'euros.",
-      "Ces chantiers s'inscrivent dans un programme de modernisation visant à relier plus de 200 kilomètres de voies d'ici 2035, après 16 milliards d'euros investis depuis 2016.",
-      "Le Figaro et CNews recensent les perturbations ligne par ligne sur les métros, les RER, les trains Transilien et les tramways pour l'année prochaine."
+      "CNews et Le Figaro dressent le calendrier détaillé des chantiers prévus en 2027 sur les réseaux de transport franciliens, touchant le métro, le RER et les tramways.",
+      "CNews indique qu'un investissement de 4 milliards d'euros est prévu pour l'année prochaine afin de poursuivre la modernisation du réseau et de relier plus de 200 km de voies d'ici 2035."
     ]
   },
   "differences": [
-    "Le centre se focalise sur l'impact direct des interruptions estivales pour les usagers franciliens, en particulier sur le RER A.",
-    "La droite adopte une perspective institutionnelle et technique en détaillant les investissements financiers globaux et les calendriers ligne par ligne communiqués par les opérateurs."
+    "Le camp centre privilégie l'angle pratique des perturbations estivales et des fermetures de gares pour les usagers.",
+    "Le camp droite met en avant les aspects chiffrés des investissements massifs et la planification globale des chantiers de modernisation."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 4,
-  "summarizedAt": "2026-11-25T21:01:29.103Z"
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-26T00:01:39.644Z"
 }
