@@ -6,6 +6,17 @@
   "storyDay": "2026-11-26",
   "articles": [
     {
+      "id": "ecd5162dd690",
+      "outletId": "france-24",
+      "headline": "Donald Trump et Mark Rutte exhortent la Russie à ne pas \"étendre la guerre\" avec l'Ukraine",
+      "url": "https://www.france24.com/fr/europe/20261126-donald-trump-et-mark-rutte-exhortent-la-russie-%C3%A0-ne-pas-%C3%A9tendre-la-guerre-avec-l-ukraine",
+      "publishedAt": "2026-11-26T10:37:32.000Z",
+      "imageUrl": "https://s.france24.com/media/display/0790aff6-e94e-11f1-9858-77d069279b82/w:1024/p:16x9/AP26189376961541.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
       "id": "b6bda7488059",
       "outletId": "franceinfo",
       "headline": "Donald Trump et le secrétaire général de l'Otan, Mark Rutte, exhortent la Russie à ne pas \"étendre la guerre\" avec l'Ukraine",
@@ -85,30 +96,10 @@
     }
   ],
   "topicId": "e2d3468bc0ed",
-  "titledArticleCount": 6,
+  "titledArticleCount": 8,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795597200000,
-      "end": 1795600800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795600800000,
-      "end": 1795604400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795604400000,
       "end": 1795608000000,
@@ -328,31 +319,48 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795683600000,
+      "end": 1795687200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795687200000,
+      "end": 1795690800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Mark Rutte s'est rendu en visite le mercredi 25 novembre à Mar-a-Lago pour s'entretenir avec Donald Trump.",
-      "Les deux dirigeants ont discuté des conflits en cours en Ukraine et en Iran lors d'une rencontre à huis clos.",
-      "Libération souligne la nécessité d'éviter toute action susceptible d'aggraver la situation sur place."
+      "Donald Trump et Mark Rutte ont tenu une rencontre à Mar-a-Lago pour aborder les dossiers ukrainien et iranien.",
+      "La Maison-Blanche a souligné l'urgence d'obtenir une résolution pacifique du conflit ukrainien."
     ],
     "centre": [
-      "Donald Trump et Mark Rutte ont exhorté la Russie à ne pas étendre la guerre en Ukraine lors d'une rencontre en Floride.",
-      "La Maison Blanche a souligné l'importance d'obtenir une résolution pacifique du conflit dans les plus brefs délais.",
-      "France 24 rappelle que les dirigeants de l'Union européenne doivent débattre du futur budget et de l'aide à l'Ukraine."
+      "Donald Trump et le secrétaire général de l'Otan, Mark Rutte, ont publié une déclaration conjointe depuis la Floride.",
+      "Les deux dirigeants exhortent Moscou à éviter toute action susceptible d'étendre la guerre en Ukraine, de manière volontaire ou involontaire."
     ],
     "droite": [
-      "Donald Trump et le secrétaire général de l'Otan se sont réunis mercredi en Floride.",
-      "Les deux responsables ont demandé à Moscou de ne pas élargir le conflit avec Kiev.",
-      "Ils ont également plaidé pour une résolution rapide et pacifique du dossier ukrainien."
+      "Le président américain et le chef de l'Otan se sont réunis mercredi en Floride.",
+      "Ils ont conjointement appelé la Russie à ne pas élargir le conflit avec Kiev tout en plaidant pour un règlement pacifique rapide."
     ]
   },
   "differences": [
-    "La gauche met en avant le contexte diplomatique de la rencontre à Mar-a-Lago et mentionne le dossier iranien.",
-    "Le centre privilégie l'analyse de la déclaration conjointe et replace l'événement dans l'actualité institutionnelle européenne.",
-    "La droite adopte un angle centré sur la Floride et insiste sur l'appel conjoint pour une issue rapide au conflit."
+    "La gauche met en avant le contexte diplomatique élargi de la visite, en mentionnant l'Iran et le cadre précis de la résidence de Mar-a-Lago.",
+    "Le centre livre un compte rendu institutionnel centré sur la déclaration conjointe et les termes précis de la mise en garde de la Maison-Blanche.",
+    "La droite propose une synthèse ramassée sur l'appel à la retenue adressé à Moscou et la perspective d'une résolution rapide du conflit."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 6,
-  "summarizedAt": "2026-11-26T07:01:22.656Z"
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-26T12:01:22.465Z"
 }
