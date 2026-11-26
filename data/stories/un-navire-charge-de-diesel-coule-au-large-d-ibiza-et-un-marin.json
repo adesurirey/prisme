@@ -6,6 +6,28 @@
   "storyDay": "2026-11-26",
   "articles": [
     {
+      "id": "a9e658ff8988",
+      "outletId": "rfi",
+      "headline": "Naufrage d'un pétrolier au large d'Ibiza: l'Espagne se mobilise pour empêcher une marée noire",
+      "url": "https://www.rfi.fr/fr/europe/20261126-naufrage-d-un-p%C3%A9trolier-au-large-d-ibiza-l-espagne-se-mobilise-pour-emp%C3%AAcher-une-mar%C3%A9e-noire",
+      "publishedAt": "2026-11-26T12:55:35.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/f19245f8-3074-11f1-b550-005056a90284/w:1024/p:16x9/La-photo-montre-une-vue-d-ensemble-de-la-ville-d-Ibiza-le-12-juin-2023.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "25e6b17ce293",
+      "outletId": "le-figaro",
+      "headline": "119 mètres de long, pavillon maltais, jusqu’à 7000 tonnes de diesel à bord.… Ce que l’on sait du pétrolier qui a coulé au large d’Ibiza",
+      "url": "https://www.lefigaro.fr/conjoncture/119-metres-de-long-pavillon-maltais-jusqu-a-7000-tonnes-de-diesel-a-bord-ce-que-l-on-sait-du-petrolier-qui-a-coule-au-large-d-ibiza-20261126",
+      "publishedAt": "2026-11-26T11:45:57.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/1221x800_crop/2026/11/26/dff4f65bec5fee269c28dafc64d5d0c234738be9932cf6e2e91408f71536553a.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "cc0854ca48dc",
       "outletId": "bfmtv",
       "headline": "Après le naufrage d'un navire transportant du carburant au large d'Ibiza, l'Espagne se mobilise pour empêcher une marée noire",
@@ -157,16 +179,6 @@
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795608000000,
-      "end": 1795611600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795611600000,
       "end": 1795615200000,
@@ -393,36 +405,44 @@
       "counts": {
         "gauche": 0,
         "centre": 1,
-        "droite": 1
+        "droite": 2
       },
-      "total": 2
+      "total": 3
+    },
+    {
+      "start": 1795694400000,
+      "end": 1795698000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le pétrolier Med Emre a fait naufrage ce jeudi matin au large d'Ibiza lors d'un trajet entre Barcelone et Algésiras.",
-      "Un marin a péri dans l'accident et plusieurs membres de l'équipage ont été hospitalisés en raison d'une hypothermie.",
-      "Les autorités espagnoles ont enclenché un dispositif d'urgence pour contrer une éventuelle pollution marine.",
-      "Les causes exactes de ce naufrage demeurent pour l'instant indéterminées."
+      "Le navire Med Emre transportant 7 000 tonnes de diesel a fait naufrage jeudi au large d'Ibiza lors d'un trajet entre Barcelone et Algésiras.",
+      "Le drame a causé la mort d'un membre d'équipage et l'hospitalisation de plusieurs marins en raison d'une hypothermie, tandis que les causes de l'accident restent indéterminées.",
+      "Le plan national d'urgence contre la pollution maritime a été activé au niveau 2 par les autorités espagnoles, bien qu'aucun signe de pollution n'ait été constaté pour l'instant."
     ],
     "centre": [
-      "Un navire transportant jusqu'à 7 000 tonnes de diesel a sombré en Méditerranée au large de l'île d'Ibiza.",
-      "L'ensemble de l'équipage composé de 17 personnes a été récupéré par les secours, mais une victime est décédée à l'hôpital.",
-      "L'évaluation des impacts écologiques potentiels est actuellement en cours."
+      "Un pétrolier battant pavillon maltais et transportant des milliers de tonnes de carburant a sombré à proximité de l'île d'Ibiza.",
+      "L'équipage de 17 personnes a été secouru, mais l'un des marins est décédé à l'hôpital des suites de l'accident.",
+      "L'Espagne a immédiatement déployé des mesures préventives et des plans d'urgence pour évaluer les dommages environnementaux et parer à tout risque de marée noire."
     ],
     "droite": [
-      "Le navire battant pavillon maltais Med Emre a coulé à environ 25 milles nautiques au nord-est d'Ibiza.",
-      "Les secours ont repêché les 17 membres d'équipage, dont six blessés, et ont constaté un décès à l'hôpital.",
-      "Le plan d'urgence anti-pollution a été activé avec le déploiement immédiat d'un bâtiment spécialisé.",
-      "Europe 1 précise que le pétrolier acheminait des produits chimiques en plus du carburant."
+      "Le navire baptisé Med Emre a sombré jeudi à une quarantaine de kilomètres au nord-est d'Ibiza en transportant jusqu'à 7 000 tonnes de diesel et de produits chimiques.",
+      "Le bilan humain fait état d'un décès parmi les 17 membres d'équipage secourus, ainsi que de six marins blessés selon les précisions d'Europe 1.",
+      "Les autorités espagnoles ont réagi en activant un plan d'urgence contre la pollution marine et en envoyant des navires antipollution sur zone."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur le bilan humain dramatique, la prise en charge médicale des rescapés pour hypothermie et l'activation immédiate du plan antipollution par l'Espagne.",
-    "Le centre livre un compte-rendu synthétique et factuel en se focalisant sur la quantité de carburant transportée et l'incertitude quant aux dégâts environnementaux.",
-    "La droite insiste sur les caractéristiques techniques du navire battant pavillon maltais, le nombre précis de blessés et le déploiement opérationnel des secours maritimes."
+    "La gauche met l'accent sur l'activation du niveau 2 du plan d'urgence et s'attarde sur les conditions de sauvetage des marins hospitalisés pour hypothermie.",
+    "Le centre se focalise sur la menace environnementale immédiate en Méditerranée et détaille l'activation des dispositifs préventifs espagnols.",
+    "La droite insiste particulièrement sur les caractéristiques techniques du pétrolier Med Emre tout en détaillant l'intervention des équipes de secours."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 9,
-  "summarizedAt": "2026-11-26T10:01:28.791Z"
+  "summarizedArticleCount": 15,
+  "summarizedAt": "2026-11-26T13:01:31.766Z"
 }
