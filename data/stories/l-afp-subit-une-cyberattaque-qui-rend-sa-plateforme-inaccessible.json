@@ -1,10 +1,22 @@
 {
   "id": "308175a57e6e",
   "slug": "l-afp-subit-une-cyberattaque-qui-rend-sa-plateforme-inaccessible",
-  "title": "L'AFP subit une cyberattaque qui rend sa plateforme inaccessible",
+  "title": "L’Agence France-Presse subit une cyberattaque qui rend sa plateforme de photos et vidéos temporairement inaccessible",
   "createdAt": "2026-11-26T19:01:26.369Z",
   "storyDay": "2026-11-26",
   "articles": [
+    {
+      "id": "ac39ed945382",
+      "outletId": "le-monde",
+      "headline": "L’Agence France-Presse dit avoir été visée par une cyberattaque qui paralyse l’une de ses plateformes de mise à disposition des dépêches et des images",
+      "url": "https://www.lemonde.fr/actualite-medias/article/2026/11/26/l-afp-dit-avoir-ete-visee-par-une-cyberattaque-qui-paralyse-l-une-de-ses-plateformes-de-mise-a-disposition-des-depeches-et-des-images_6815596_3236.html",
+      "publishedAt": "2026-11-26T19:38:05.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/26/702/0/4596/2298/644/322/60/0/b2d3fff_upload-1-ndh5xgv3lpd6-2018-08-06t000000z-989305111-rc151674aea0-rtrmadp-3-france-afp.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "science",
+      "everFrontPage": true
+    },
     {
       "id": "540ba092e8d9",
       "outletId": "le-figaro",
@@ -12,7 +24,7 @@
       "url": "https://www.lefigaro.fr/secteur/high-tech/l-agence-france-presse-victime-d-une-cyberattaque-sa-plateforme-de-photos-et-videos-temporairement-inaccessible-20261126",
       "publishedAt": "2026-11-26T18:52:36.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/11/26/0d2bd20521f648ee84867298f9edd5fa86f19adcd08bc221844ea1bd368b3fe9.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "science",
       "everFrontPage": true
@@ -30,20 +42,10 @@
     }
   ],
   "topicId": "308175a57e6e",
-  "titledArticleCount": 2,
+  "titledArticleCount": 3,
   "section": "science",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795633200000,
-      "end": 1795636800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795636800000,
       "end": 1795640400000,
@@ -273,6 +275,16 @@
         "droite": 1
       },
       "total": 2
+    },
+    {
+      "start": 1795719600000,
+      "end": 1795723200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ]
 }
