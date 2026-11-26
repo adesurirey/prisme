@@ -6,6 +6,29 @@
   "storyDay": "2026-11-25",
   "articles": [
     {
+      "id": "e9972f8c911f",
+      "outletId": "20-minutes",
+      "headline": "PSG - AS Rome : Achraf Hakimi et Nuno Mendes sauveurs de l’attaque parisienne, un plan sur la durée ?",
+      "url": "https://www.20minutes.fr/sport/football/ligue_des_champions/4265866-20261126-psg-rome-achraf-hakimi-nuno-mendes-sauveurs-attaque-parisienne-plan-duree?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-26T09:34:54.000Z",
+      "imageUrl": "https://img.20mn.fr/Fpek_G5sRgqVInuHhE8sNyk/1200x768_261126-paris-26-novembre-2026-xinhua-achraf-hakimi-du-psg-reagit-lors-du-match-de-football-de-la-ligue-des-champions-de-l-uefa-entre-le-paris-saint-germain-et-la-roma-a-paris-en-france-le-25-novembre-2026-xinhua-wu-huiwo-wu-huiwo-chine-nouvelle-xxjp-bee000041-20261126-pepfn0a001-credit-chine-nouvelle-sipa-2611260806",
+      "frontPage": true,
+      "kind": "news",
+      "section": "sport",
+      "everFrontPage": true
+    },
+    {
+      "id": "a1f26c18c6dd",
+      "outletId": "france-24",
+      "headline": "Tenu en échec par la Roma, le PSG laisse filer ses premiers points de la saison",
+      "url": "https://www.france24.com/fr/%C3%A9missions/sports/20261126-tenu-en-%C3%A9chec-par-la-roma-le-psg-laisse-filer-ses-premiers-points-de-la-saison",
+      "publishedAt": "2026-11-26T08:45:59.000Z",
+      "imageUrl": "https://s.france24.com/media/display/204f7dde-e948-11f1-b29b-81bc2b1dcd65/w:1024/p:16x9/J24-PSG-6.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "ba50446e9272",
       "outletId": "le-figaro",
       "headline": "PSG-AS Rome : Doué et Kvaratskhelia, des absents si présents",
@@ -26,6 +49,18 @@
       "frontPage": false,
       "kind": "news",
       "section": "sport"
+    },
+    {
+      "id": "9c221aa8f5f1",
+      "outletId": "20-minutes",
+      "headline": "PSG - AS Rome : Sans les grands blessés, la force offensive des Parisiens en a vraiment pris un coup (et c'est logique)",
+      "url": "https://www.20minutes.fr/sport/football/ligue_des_champions/4265842-20261126-psg-rome-grands-blesses-force-offensive-parisiens-vraiment-pris-coup-logique?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-26T06:17:36.000Z",
+      "imageUrl": "https://img.20mn.fr/--HnwCvWQfKzRurSDI7IUik/1200x768_maghnes-akliouche-du-psg-a-gauche-est-plaque-par-mario-hermoso-de-la-roma-lors-du-match-de-football-de-la-phase-d-ouverture-de-la-ligue-des-champions-entre-le-paris-saint-germain-et-l-as-roma-a-paris-le-mercredi-25-novembre-2026-ap-photo-thibault-camus-has165-26329768327863-2611252222",
+      "frontPage": true,
+      "kind": "opinion",
+      "section": "sport",
+      "everFrontPage": true
     },
     {
       "id": "0f888d836c06",
@@ -80,7 +115,7 @@
       "url": "https://www.lemonde.fr/sport/article/2026/11/26/ligue-des-champions-le-psg-tenu-en-echec-par-l-as-roma-apres-une-prestation-poussive-qui-met-en-lumiere-l-absence-de-doue-et-de-kvara_6815333_3242.html",
       "publishedAt": "2026-11-26T02:08:03.000Z",
       "imageUrl": "https://img.lemde.fr/2026/11/25/116/0/5648/2824/644/322/60/0/9d89d1e_ftp-1-somb1gyxsqy0-afp-d8mq43d.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "sport",
       "everFrontPage": true
@@ -287,26 +322,6 @@
   "everInEdition": true,
   "activity": [
     {
-      "start": 1795593600000,
-      "end": 1795597200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795597200000,
-      "end": 1795600800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
       "start": 1795600800000,
       "end": 1795604400000,
       "counts": {
@@ -510,11 +525,11 @@
       "start": 1795672800000,
       "end": 1795676400000,
       "counts": {
-        "gauche": 0,
+        "gauche": 1,
         "centre": 2,
         "droite": 1
       },
-      "total": 3
+      "total": 4
     },
     {
       "start": 1795676400000,
@@ -523,6 +538,26 @@
         "gauche": 0,
         "centre": 0,
         "droite": 1
+      },
+      "total": 1
+    },
+    {
+      "start": 1795680000000,
+      "end": 1795683600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1795683600000,
+      "end": 1795687200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
       },
       "total": 1
     }

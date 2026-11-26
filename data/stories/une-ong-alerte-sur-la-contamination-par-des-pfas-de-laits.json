@@ -1,10 +1,21 @@
 {
   "id": "99d935058f75",
   "slug": "une-ong-alerte-sur-la-contamination-par-des-pfas-de-laits",
-  "title": "Une ONG alerte sur la contamination par des PFAS de laits infantiles vendus en France",
+  "title": "Une ONG alerte sur la contamination de laits infantiles vendus en France par des PFAS",
   "createdAt": "2026-11-26T09:01:31.452Z",
   "storyDay": "2026-11-26",
   "articles": [
+    {
+      "id": "719825e4827b",
+      "outletId": "huffpost",
+      "headline": "Les laits infantiles contaminés à leur tour par des PFAS interdits et cancérogènes",
+      "url": "https://www.huffingtonpost.fr/sante/article/les-laits-infantiles-contamines-a-leur-tour-par-des-pfas-interdits-et-cancerogenes_365247.html",
+      "publishedAt": "2026-11-26T09:43:17.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2022/07/23/312/0/6000/3375/0/0/60/0/dd779f0_1658619548161-61678a7c200000c53a8d0467.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
     {
       "id": "696f519b8071",
       "outletId": "franceinfo",
@@ -41,20 +52,10 @@
     }
   ],
   "topicId": "99d935058f75",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "science",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795597200000,
-      "end": 1795600800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795600800000,
       "end": 1795604400000,
@@ -284,6 +285,30 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1795683600000,
+      "end": 1795687200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "L'association Générations futures révèle que plus d'un quart des laits infantiles testés en France contiennent des PFAS interdits.",
+      "Sur 652 échantillons alimentaires analysés, 21 % présentent au moins un polluant éternel, selon une nouvelle étude.",
+      "Le Monde précise que les niveaux mesurés chez les nourrissons dépassent la dose hebdomadaire tolérable fixée par les autorités sanitaires.",
+      "Ces publications dénoncent l'inaction des pouvoirs publics et pointent des failles réglementaires face à cette contamination."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la gravité sanitaire des dépassements de seuils pour les nourrissons tout en ciblant l'inaction des pouvoirs publics et les failles réglementaires."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-26T10:01:28.791Z"
 }
