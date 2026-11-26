@@ -1,7 +1,7 @@
 {
   "id": "749866050dc4",
   "slug": "brad-pitt-et-angelina-jolie-terminent-leur-bataille-judiciaire",
-  "title": "Brad Pitt et Angelina Jolie terminent leur bataille judiciaire sur un domaine viticole français",
+  "title": "Brad Pitt et Angelina Jolie mettent fin à leur bataille judiciaire sur le domaine viticole de Miraval",
   "createdAt": "2026-11-26T04:01:27.624Z",
   "storyDay": "2026-11-26",
   "articles": [
@@ -13,6 +13,17 @@
       "publishedAt": "2026-11-26T07:01:22.656Z",
       "frontPage": false,
       "datedAtCollection": true,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
+      "id": "618153a5a793",
+      "outletId": "cnews",
+      "headline": "Brad Pitt et Angelina Jolie règlent enfin la bataille judiciaire autour de leur domaine viticole de Miraval",
+      "url": "https://www.cnews.fr/divertissement/2026-11-26/brad-pitt-et-angelina-jolie-reglent-enfin-la-bataille-judiciaire-autour",
+      "publishedAt": "2026-11-26T06:50:05.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-17t050339z_1744151273_rc2epoaed283_rtrmadp_3_film-cliff-booth-premiere-taille1200_6b07d04b8113c.jpg?itok=ib449WSV",
+      "frontPage": false,
       "kind": "news",
       "section": "culture"
     },
@@ -42,7 +53,7 @@
     }
   ],
   "topicId": "749866050dc4",
-  "titledArticleCount": 3,
+  "titledArticleCount": 4,
   "section": "culture",
   "everInEdition": true,
   "activity": [
@@ -272,9 +283,9 @@
       "counts": {
         "gauche": 0,
         "centre": 0,
-        "droite": 0
+        "droite": 1
       },
-      "total": 0
+      "total": 1
     },
     {
       "start": 1795676400000,
@@ -286,5 +297,28 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le couple a conclu un accord mettant un terme au litige concernant le château Miraval, situé dans le Var.",
+      "La propriété de ce domaine viticole constituait l'un des principaux désaccords dans leur procédure de divorce."
+    ],
+    "centre": [
+      "Brad Pitt et Angelina Jolie ont mis fin à dix années de confrontations judiciaires autour du domaine viticole de Miraval.",
+      "Un accord à l'amiable a été trouvé dans l'intérêt de leur famille, dont les termes précis restent confidentiels.",
+      "Les deux acteurs étaient en conflit ouvert depuis leur séparation intervenue en 2016 au sujet de cette propriété varoise."
+    ],
+    "droite": [
+      "Les représentants des deux stars ont officialisé la conclusion d'un accord à l'amiable et secret concernant le domaine de Miraval.",
+      "Cet accord met un terme définitif à des années de procédures judiciaires et de tensions autour de cette exploitation viticole."
+    ]
+  },
+  "differences": [
+    "Le camp gauche privilégie une approche synthétique en insistant sur le rôle central de ce litige patrimonial dans le cadre de leur divorce.",
+    "Le camp centre développe les détails chronologiques du conflit depuis 2016 et souligne le caractère confidentiel du règlement trouvé.",
+    "Le camp droite met en avant la fin des hostilités et reprend les déclarations officielles des représentants pour souligner la préservation des intérêts familiaux."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 4,
+  "summarizedAt": "2026-11-26T09:01:31.452Z"
 }
