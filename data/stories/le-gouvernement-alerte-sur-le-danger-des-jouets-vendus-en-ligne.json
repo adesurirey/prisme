@@ -1,10 +1,32 @@
 {
   "id": "84f4bc34bc46",
   "slug": "le-gouvernement-alerte-sur-le-danger-des-jouets-vendus-en-ligne",
-  "title": "Le gouvernement alerte sur le danger des jouets vendus en ligne avant les fêtes de fin d'année",
+  "title": "Les jouets vendus en ligne sont trop souvent dangereux, alerte le gouvernement avant les fêtes",
   "createdAt": "2026-11-26T14:01:31.393Z",
   "storyDay": "2026-11-26",
   "articles": [
+    {
+      "id": "12bbdc838269",
+      "outletId": "bfmtv",
+      "headline": "\"Méfiez-vous\": le gouvernement exhorte les Français à se détourner des plateformes de e-commerce pour acheter leurs jouets pour Noël",
+      "url": "https://www.bfmtv.com/economie/consommation/mefiez-vous-le-gouvernement-exhorte-les-francais-a-se-detourner-des-plateformes-de-e-commerce-pour-acheter-leurs-jouets-pour-noel_AV-202611260742.html",
+      "publishedAt": "2026-11-26T15:43:09.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/hWBIY5AX3f9CJEl_Pwlo8e9ynpk=/0x40:768x472/800x0/images/Un-client-dans-un-magasin-de-jouets-a-Besancon-le-19-novembre-2026-2388498.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "017e56ace216",
+      "outletId": "tf1-info",
+      "headline": "Les jouets vendus en ligne \"trop souvent dangereux\", alerte le gouvernement à l'approche des fêtes",
+      "url": "https://www.tf1info.fr/conso/les-jouets-vendus-en-ligne-trop-souvent-dangereux-alerte-le-gouvernement-a-l-approche-des-fetes-2478322.html",
+      "publishedAt": "2026-11-26T14:09:01.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/683/jouets-noel-2025-18d13e-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
     {
       "id": "4c58d10ddaf9",
       "outletId": "le-parisien",
@@ -40,20 +62,10 @@
     }
   ],
   "topicId": "84f4bc34bc46",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795618800000,
-      "end": 1795622400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795622400000,
       "end": 1795626000000,
@@ -280,9 +292,43 @@
       "counts": {
         "gauche": 0,
         "centre": 1,
+        "droite": 1
+      },
+      "total": 2
+    },
+    {
+      "start": 1795705200000,
+      "end": 1795708800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
         "droite": 0
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le ministre Serge Papin et la DGCCRF signalent que 40 % des jouets sur Internet sont dangereux et 77 % non conformes.",
+      "Ces chiffres proviennent de contrôles menés en 2025 par la répression des fraudes avant les fêtes de fin d'année."
+    ],
+    "centre": [
+      "Le gouvernement exhorte à éviter les plateformes de e-commerce pour les achats de Noël face aux risques sur les jouets.",
+      "La répression des fraudes indique que 77 % des 332 références testées sont non conformes et 40 % dangereuses.",
+      "Le ministre Serge Papin recommande de privilégier les commerces physiques de confiance pour ces acquisitions."
+    ],
+    "droite": [
+      "Le ministère du Commerce avertit la population à l'approche des fêtes concernant les dangers des jouets en ligne.",
+      "TF1 Info précise que l'évaluation porte sur 332 références analysées en 2025, affichant 77 % de non-conformité.",
+      "Le Figaro note que Serge Papin invite les citoyens à faire preuve de vigilance et à se tourner vers les boutiques physiques."
+    ]
+  },
+  "differences": [
+    "La gauche met principalement l'accent sur les statistiques alarmantes de la DGCCRF concernant la dangerosité des produits en ligne.",
+    "Le centre insiste globalement sur l'appel politique du gouvernement à bouder les plateformes numériques au profit des magasins traditionnels.",
+    "La droite, incluant le centre droit, adopte un angle préventif en soulignant la mise en garde ministérielle à l'approche de Noël et la nécessité de vigilance."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-26T16:01:27.846Z"
 }
