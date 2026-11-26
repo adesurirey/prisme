@@ -6,6 +6,28 @@
   "storyDay": "2026-11-26",
   "articles": [
     {
+      "id": "eb3b121a9026",
+      "outletId": "bfmtv",
+      "headline": "Reporters sans frontières demande la suspension de CNews auprès de l'Arcom, dénonçant un \"péril démocratique\"",
+      "url": "https://www.bfmtv.com/people/medias-tv/reporters-sans-frontieres-demande-la-suspension-de-c-news-aupres-de-l-arcom-denoncant-un-peril-democratique_AD-202611260261.html",
+      "publishedAt": "2026-11-26T06:42:58.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Lbe0EZCvq2AFcpbgfN1dSxp3ZmE=/0x106:2048x1258/800x0/images/Logo-de-Cnews-1805113.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "1da65555d4f0",
+      "outletId": "huffpost",
+      "headline": "Reporters sans frontières saisit l’Arcom pour obtenir la suspension de CNews pour un mois",
+      "url": "https://www.huffingtonpost.fr/medias/article/reporters-sans-frontieres-saisit-l-arcom-pour-obtenir-la-suspension-de-cnews-pour-un-mois_365114.html",
+      "publishedAt": "2026-11-26T06:37:26.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/02/07/625/0/6000/3375/0/0/60/0/643dbf8_upload-1-pnzjgsgxjv1q-afp-20240618-hl-jmbarrere-2428638-v1-highres-franceillustrationcnews.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
+    {
       "id": "c4d3905b13d6",
       "outletId": "le-parisien",
       "headline": "« Un péril démocratique » : Reporters sans frontières saisit l’Arcom pour demander de suspendre CNews pendant un mois",
@@ -23,7 +45,7 @@
       "url": "https://www.lefigaro.fr/medias/bourrage-de-crane-rsf-demande-la-suspension-de-cnews-au-nom-du-peril-democratique-que-representerait-la-chaine-20261126",
       "publishedAt": "2026-11-26T05:51:51.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/26/d259b21cd65dee221fb377560ae05d529b1d3f3db83169a10aa9478ca9cd1654.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -57,7 +79,7 @@
       "url": "https://programmetv.ouest-france.fr/chaines/programme-tv-cnews-226/rsf-demande-la-suspension-de-cnews-denoncant-un-peril-democratique-3165c1f4-e958-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-26T05:36:32.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExODY0ODkyMDY1NTBjOWExY2FiNDQxNzJjNTI5NzdlZWY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d9fa5bbe8625bebf5d479a455f37bf20fe53d6f8d542553268aa0e9e1c7beebb",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -357,11 +379,11 @@
       "start": 1795672800000,
       "end": 1795676400000,
       "counts": {
-        "gauche": 0,
-        "centre": 1,
+        "gauche": 1,
+        "centre": 2,
         "droite": 0
       },
-      "total": 1
+      "total": 3
     }
   ],
   "summaries": {
