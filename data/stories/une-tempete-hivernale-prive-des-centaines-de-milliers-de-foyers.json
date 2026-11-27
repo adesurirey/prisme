@@ -308,5 +308,27 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Plus de 900 000 foyers de la Côte est ont subi des coupures d'électricité le jour de Thanksgiving suite à des intempéries majeures.",
+      "Le journal 20 Minutes signale des milliers de vols annulés ou retardés en raison de pluies, de neige et de vents violents."
+    ],
+    "centre": [
+      "Les intempéries de Thanksgiving ont persisté pour laisser 830 000 foyers sans électricité selon Le Parisien.",
+      "TF1 Info précise que deux tempêtes ont frappé simultanément les deux côtes, provoquant des inondations et l'annulation d'environ 400 vols, tout en touchant un million de foyers."
+    ],
+    "droite": [
+      "Le Figaro rapporte que 840 000 foyers sont privés d'électricité depuis le 26 novembre dans le centre et l'est du pays.",
+      "La tempête a provoqué des chutes de 30 centimètres de neige et l'annulation de vols, perturbant les vacances de Thanksgiving."
+    ]
+  },
+  "differences": [
+    "La gauche insiste sur l'ampleur nationale du chaos en qualifiant l'événement d'enfer pour des millions d'Américains et en quantifiant précisément l'impact sur les transports aériens.",
+    "Le centre adopte un suivi au jour le jour du nombre exact de foyers encore touchés tout en documentant la double tempête côtière.",
+    "La droite met en avant l'aspect hivernal et pittoresque de la crise en détaillant l'épaisseur de la neige et l'impact sur les vacances."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-27T11:01:31.044Z"
 }
