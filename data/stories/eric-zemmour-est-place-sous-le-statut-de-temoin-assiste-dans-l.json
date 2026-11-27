@@ -34,7 +34,7 @@
       "url": "https://www.ouest-france.fr/politique/eric-zemmour/eric-zemmour-place-sous-le-statut-de-temoin-assiste-dans-lenquete-sur-des-prets-consentis-au-parti-reconquete-569b0752-ea6d-11f1-bb2d-c71dc7920c2a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-27T14:39:46.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNTlhNmM5OGJjNzdkMjRjYjYyNzQzMmM4NmVjM2Q1ZmY?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=5b66246607c56de74c6880073281879eadb138220b5d032c1f9090d751950947",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "politics",
       "everFrontPage": true
@@ -306,5 +306,30 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le dirigeant de Reconquête est visé par une enquête judiciaire ouverte en janvier 2025 suite à un signalement de la Commission des comptes de campagne.",
+      "La procédure concerne des prêts de particuliers octroyés au mouvement politique entre 2021 et 2023.",
+      "Le placement sous le statut de témoin assisté indique qu'aucune poursuite pénale n'est engagée contre lui à ce stade."
+    ],
+    "centre": [
+      "Le responsable politique a obtenu ce statut intermédiaire dans le cadre des investigations sur le financement de son parti.",
+      "L'affaire porte sur des avances financières fournies par des donateurs individuels sur une période de deux ans.",
+      "Le parti fondé par le candidat figure parmi les principales formations politiques bénéficiant de ce type de prêts de particuliers."
+    ],
+    "droite": [
+      "Le président de la formation politique s'est vu notifier ce statut particulier lors des investigations sur les prêts reçus.",
+      "Les prêts en question proviennent de donateurs privés et ont été accordés entre 2021 et 2023.",
+      "Un rapport de la Commission des comptes de campagne publié à l'été 2025 souligne l'importance des prêts de particuliers pour ce parti, juste derrière le Rassemblement national."
+    ]
+  },
+  "differences": [
+    "La gauche insiste sur l'absence de poursuites pénales immédiates inhérente au statut et rappelle l'origine institutionnelle de l'enquête.",
+    "Le centre livre un compte-rendu factuel et synthétique des investigations en cours sur le financement du parti.",
+    "La droite contextualise l'enquête en rappelant le classement du parti quant aux volumes de prêts de particuliers selon un rapport officiel récent."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-27T16:01:39.159Z"
 }
