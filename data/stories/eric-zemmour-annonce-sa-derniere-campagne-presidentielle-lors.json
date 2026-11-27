@@ -50,12 +50,34 @@
       "section": "politics"
     },
     {
+      "id": "19a4ac39f6b5",
+      "outletId": "europe-1",
+      "headline": "Objectif Élysée 2027 : Éric Zemmour veut mettre fin à la retraite par répartition au profit de la capitalisation",
+      "url": "https://www.europe1.fr/economie/objectif-elysee-2027-eric-zemmour-veut-mettre-fin-a-la-retraite-par-repartition-au-profit-de-la-capitalisation-1245697?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-26T21:36:40.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/26/22/untitled_13_1_6b08a3d29f3ad.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "31d678da573e",
       "outletId": "europe-1",
       "headline": "Objectif Élysée 2027 : «C'est ma dernière campagne», annonce Éric Zemmour",
       "url": "https://www.europe1.fr/politique/objectif-elysee-2027-cest-ma-derniere-campagne-annonce-eric-zemmour-1245688?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
       "publishedAt": "2026-11-26T20:52:14.000Z",
       "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/26/21/untitled_11_1_6b089b937125a.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "caa8ce6bbae4",
+      "outletId": "europe-1",
+      "headline": "Objectif Élysée 2027 : Éric Zemmour pense être «le seul à pouvoir rétablir la paix dans une France qui glisse vers la guerre civile»",
+      "url": "https://www.europe1.fr/politique/objectif-elysee-2027-eric-zemmour-pense-etre-le-seul-a-pouvoir-retablir-la-paix-dans-une-france-qui-glisse-vers-la-guerre-civile-1245679?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-26T20:13:39.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/26/21/untitled_9_1_6b0892960910d.jpg",
       "frontPage": false,
       "kind": "news",
       "section": "politics"
@@ -73,7 +95,7 @@
     }
   ],
   "topicId": "6030126ec4f8",
-  "titledArticleCount": 6,
+  "titledArticleCount": 8,
   "section": "politics",
   "everInEdition": true,
   "activity": [
@@ -273,9 +295,9 @@
       "counts": {
         "gauche": 0,
         "centre": 0,
-        "droite": 1
+        "droite": 2
       },
-      "total": 1
+      "total": 2
     },
     {
       "start": 1795726800000,
@@ -283,9 +305,9 @@
       "counts": {
         "gauche": 1,
         "centre": 0,
-        "droite": 0
+        "droite": 1
       },
-      "total": 1
+      "total": 2
     },
     {
       "start": 1795730400000,
@@ -317,5 +339,29 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le candidat de Reconquête Éric Zemmour a déclaré lors d'une émission télévisée que la présidentielle de 2027 constituera sa dernière campagne pour accéder à l'Élysée.",
+      "Les médias de centre gauche soulignent son score de 7,07 % des voix et sa quatrième place lors du scrutin de 2022, ainsi que sa chute dans les sondages actuels où il est crédité d'environ 3 % des intentions de vote.",
+      "La question de sa succession au sein du parti a été évoquée, notamment à travers l'hypothèse d'une candidature de Sarah Knafo en 2032, un scénario un temps écarté par l'entrée en lice d'Éric Zemmour."
+    ],
+    "centre": [
+      "Éric Zemmour a officialisé que la course à l'Élysée de 2027 sera sa « dernière campagne » politique.",
+      "Le fondateur du parti Reconquête a évoqué la possibilité que sa compagne et députée européenne Sarah Knafo se présente à sa suite pour l'élection présidentielle de 2032."
+    ],
+    "droite": [
+      "Invité de l'émission Objectif Élysée 2027, Éric Zemmour a annoncé qu'il ne se représenterait pas après le scrutin de 2027, tout en concédant ne pas encore disposer de la totalité des parrainages nécessaires.",
+      "Il a détaillé un projet de transformation du système de retraites prévoyant la sortie progressive du modèle par répartition au profit de la capitalisation sur une période de 20 à 30 ans.",
+      "Le président de Reconquête s'est présenté comme le seul capable de stopper la dérive de la France vers la « guerre civile » et d'extirper le socialisme du pays."
+    ]
+  },
+  "differences": [
+    "La gauche contextualise l'annonce par les faibles scores électoraux et les sondages défavorables du candidat d'extrême droite.",
+    "Le centre se focalise strictement sur l'annonce personnelle de sa retraite politique future et sur la transition potentielle de sa succession avec Sarah Knafo.",
+    "La droite privilégie une mise en avant programmatique et idéologique détaillée, en consacrant ses articles aux propositions économiques sur les retraites et aux thèmes régaliens du candidat."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 8,
+  "summarizedAt": "2026-11-27T01:01:25.249Z"
 }
