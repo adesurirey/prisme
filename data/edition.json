@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-27T01:01:25.249Z",
+  "builtAt": "2026-11-27T02:01:22.469Z",
   "latestStories": [
     {
       "id": "c0d849d6e7dc",
@@ -282,10 +282,21 @@
     {
       "id": "f5252f1332ac",
       "slug": "le-stade-rennais-s-incline-face-au-nec-nimegue-en-ligue-europa",
-      "title": "Le Stade Rennais s'incline face au NEC Nimègue en Ligue Europa",
+      "title": "Le Stade Rennais s'incline face au NEC Nimègue : la colère des supporters bretons",
       "createdAt": "2026-11-27T01:01:25.249Z",
       "storyDay": "2026-11-26",
       "articles": [
+        {
+          "id": "3cf9ce1bd466",
+          "outletId": "bfmtv",
+          "headline": "NEC Nimègue-Rennes: la colère des supporters bretons, qui jettent des gobelets contre leurs joueurs",
+          "url": "https://rmcsport.bfmtv.com/football/europa-league/nec-nimegue-rennes-la-colere-des-supporters-bretons-qui-jettent-des-gobelets-contre-leurs-joueurs_AV-202611261059.html",
+          "publishedAt": "2026-11-26T23:46:19.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/ZO4KYPfjYQhnSklMkxlDX6QAqRY=/163x460:1491x1207/800x0/images/Les-joueurs-de-Rennes-apres-le-match-de-Ligue-Europa-contre-NEC-Nimegue-le-26-11-2026-2391499.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
         {
           "id": "9e9edfa6f7d7",
           "outletId": "bfmtv",
@@ -310,19 +321,9 @@
         }
       ],
       "topicId": "f5252f1332ac",
-      "titledArticleCount": 2,
+      "titledArticleCount": 3,
       "section": "sport",
       "activity": [
-        {
-          "start": 1795647600000,
-          "end": 1795651200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
         {
           "start": 1795651200000,
           "end": 1795654800000,
@@ -552,8 +553,19 @@
             "droite": 1
           },
           "total": 2
+        },
+        {
+          "start": 1795734000000,
+          "end": 1795737600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
         }
-      ]
+      ],
+      "everInEdition": true
     },
     {
       "id": "eef0ff6cbd7d",
@@ -1130,6 +1142,18 @@
           "section": "politics"
         },
         {
+          "id": "4994f76ba66d",
+          "outletId": "le-figaro",
+          "headline": "Budget européen : Macron dénonce une «erreur stratégique» et trace ses lignes rouges",
+          "url": "https://www.lefigaro.fr/international/budget-europeen-macron-denonce-une-erreur-strategique-et-trace-ses-lignes-rouges-20261126",
+          "publishedAt": "2026-11-26T21:54:32.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x2074_crop/2026/11/26/735828e7e5ff4650592eb38a0761023a239be7ceed7a031c5e1a1bb9ca60a48d.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
           "id": "d9d2a05d1282",
           "outletId": "le-figaro",
           "headline": "Les coupes budgétaires de l’Union européenne sont «une erreur stratégique», avertit Emmanuel Macron",
@@ -1142,7 +1166,7 @@
         }
       ],
       "topicId": "0bc4d6e4bc1e",
-      "titledArticleCount": 2,
+      "titledArticleCount": 3,
       "section": "politics",
       "activity": [
         {
@@ -1381,9 +1405,9 @@
           "counts": {
             "gauche": 0,
             "centre": 0,
-            "droite": 1
+            "droite": 2
           },
-          "total": 1
+          "total": 2
         }
       ]
     },
@@ -3611,7 +3635,31 @@
           },
           "total": 1
         }
-      ]
+      ],
+      "summaries": {
+        "gauche": [
+          "L'Agence France-Presse a subi une cyberattaque dans la nuit de mercredi à jeudi.",
+          "La plateforme AFP Forum, qui regroupe les photos et les dépêches, a été paralysée.",
+          "L'agence ne dispose d'aucun élément sur l'identité des auteurs de cette intrusion."
+        ],
+        "centre": [
+          "L'Agence France-Presse a été visée par une cyberattaque touchant sa plateforme AFP Forum.",
+          "Le site est resté inaccessible ce jeudi soir suite à l'incident survenu dans la nuit.",
+          "La direction de l'agence indique qu'aucun élément n'est disponible sur l'identité des auteurs."
+        ],
+        "droite": [
+          "L'Agence France-Presse a fait l'objet d'une cyberattaque dans la nuit de mercredi à jeudi.",
+          "La plateforme AFP Forum, dédiée aux photos et aux vidéos, a dû être désactivée temporairement."
+        ]
+      },
+      "differences": [
+        "Le camp gauche insiste sur le volume des contenus touchés et qualifie l'outil de « plus grosse agence de presse française ».",
+        "Le camp centre adopte une tonalité neutre et synthétique en se focalisant sur l'inaccessibilité prolongée du site.",
+        "Le camp droite met en avant la nature technique de l'attaque en précisant la désactivation de la plateforme multimédia."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-11-27T02:01:22.469Z"
     },
     {
       "id": "008824d8e348",
@@ -3620,6 +3668,18 @@
       "createdAt": "2026-11-26T21:01:22.278Z",
       "storyDay": "2026-11-26",
       "articles": [
+        {
+          "id": "2230c3c74d4f",
+          "outletId": "20-minutes",
+          "headline": "Ligue Europa : « Inadmissible »… Colère de la présidente bulgare après les violences lors du match à Marseille",
+          "url": "https://www.20minutes.fr/sport/football/4266166-20261127-ligue-europa-inadmissible-colere-presidente-bulgare-apres-violences-lors-match-marseille?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-27T01:31:02.000Z",
+          "imageUrl": "https://img.20mn.fr/l6OhuyLBROa_ZMKCG9gVoCk/1200x768_marseille-france-le-26-novembre-2026-l-olympique-marseille-levski-sofia-s-affronte-dans-les-tribunes-du-stade-cepac-velodrome-des-supporters-bulgares-de-levski-sofia-auraient-ete-agresses-par-des-individus-masques-soupconnes-d-etre-des-supporters-de-marseille-avant-le-match-de-ligue-europa-au-stade-velodrome-des-escortes-policieres-et-des-mesures-de-securite-renforcees-ont-ete-organisees-neirda-prod-sipa-10199-credit-be-neirda-prod-sipa-2611261901",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
         {
           "id": "11f9b6ceb54c",
           "outletId": "ouest-france",
@@ -3741,26 +3801,6 @@
       "section": "sport",
       "everInEdition": true,
       "activity": [
-        {
-          "start": 1795651200000,
-          "end": 1795654800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795654800000,
-          "end": 1795658400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
         {
           "start": 1795658400000,
           "end": 1795662000000,
@@ -3977,6 +4017,26 @@
           "counts": {
             "gauche": 0,
             "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795737600000,
+          "end": 1795741200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795741200000,
+          "end": 1795744800000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
             "droite": 0
           },
           "total": 1
@@ -4989,7 +5049,7 @@
           "url": "https://www.20minutes.fr/societe/4266036-20261126-fin-devoir-conjugal-deputes-senateurs-accord-oter-obligation-sexuelle-mariage?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-26T16:08:55.000Z",
           "imageUrl": "https://img.20mn.fr/u7zF-7I5S3OO18qQljmnwCk/1200x768_debat-avec-louis-boyard-depute-nupes-lfi-marie-charlotte-garin-deputee-lors-des-journees-d-ete-europe-ecologie-les-verts-2022-le-26-aout-2022-a-l-universite-grenoble-alpes-a-gieres-gieres-france-26-08-2022-04harsin-debatseelvjde2022eelv011-2208262131-credit-isa-harsin-sipa-2208262151",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "politics",
           "everFrontPage": true
@@ -10960,6 +11020,29 @@
           "section": "politics"
         },
         {
+          "id": "07901b563af7",
+          "outletId": "20-minutes",
+          "headline": "Accusations d’antisémitisme : Bardella « envisage un complément de plainte » contre « Le Monde » et Mediapart",
+          "url": "https://www.20minutes.fr/politique/4266106-20261126-accusations-antisemitisme-bardella-envisage-complement-plainte-contre-monde-mediapart?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-26T18:41:41.000Z",
+          "imageUrl": "https://img.20mn.fr/UIDJ5haURM2Lf9bzQOQ6Tyk/1200x768_le-president-du-rassemblement-national-jordan-bardella-lors-de-sa-premiere-seance-de-dedicaces-pour-son-livre-gouverner-dans-le-bastion-de-marine-le-pen-a-henin-beaumont-le-5-novembre-2026-greuezfrancois-greuez0744-credit-francois-greuez-sipa-2611052235",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "233ce51f9a7c",
+          "outletId": "france-24",
+          "headline": "Bardella, Lavalette… la dédiabolisation du RN à l’épreuve des affaires d’antisémitisme",
+          "url": "https://www.france24.com/fr/france/20261126-france-jordan-bardella-laure-lavalette-dediabolisation-rassemblement-national-epreuve-affaires-antisemitisme",
+          "publishedAt": "2026-11-26T18:29:20.000Z",
+          "imageUrl": "https://s.france24.com/media/display/7bc86e7c-e9bc-11f1-bbaa-81bc2b1dcd65/w:1024/p:16x9/main-rn-antisemitisme.png",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
           "id": "2fd60fe25fe2",
           "outletId": "lopinion",
           "headline": "« Ça fait beaucoup » : au RN, la délicate riposte à l’affaire Bardella",
@@ -11843,11 +11926,11 @@
           "start": 1795716000000,
           "end": 1795719600000,
           "counts": {
-            "gauche": 1,
-            "centre": 0,
+            "gauche": 2,
+            "centre": 1,
             "droite": 1
           },
-          "total": 2
+          "total": 4
         },
         {
           "start": 1795719600000,
@@ -14012,640 +14095,6 @@
           "total": 1
         }
       ]
-    },
-    {
-      "id": "a52f5858960a",
-      "slug": "new-york-decale-le-grand-defile-de-thanksgiving-en-raison-d-une",
-      "title": "New York décale le grand défilé de Thanksgiving en raison d'une tempête",
-      "createdAt": "2026-11-26T02:01:19.536Z",
-      "storyDay": "2026-11-26",
-      "articles": [
-        {
-          "id": "c5112e402c5c",
-          "outletId": "le-figaro",
-          "headline": "New York : le traditionnel défilé de Thanksgiving reporté en raison des intempéries",
-          "url": "https://www.lefigaro.fr/flash-actu/new-york-le-traditionnel-defile-de-thanksgiving-reporte-en-raison-des-intemperies-20261126",
-          "publishedAt": "2026-11-26T07:42:04.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/26/88abe7c50a19bae28dcd33a7f3e43be0378574cce7a6127ad9496ecdb5232736.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "46c43b6e0330",
-          "outletId": "le-parisien",
-          "headline": "États-Unis : le grand défilé de Thanksgiving décalé à New York en raison des intempéries",
-          "url": "https://www.leparisien.fr/international/etats-unis/etats-unis-le-grand-defile-de-thanksgiving-decale-a-new-york-en-raison-des-intemperies-26-11-2026-GLA2TKPD4ZHQ7GML6AKSQEHKLA.php",
-          "publishedAt": "2026-11-26T02:01:19.536Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "world"
-        },
-        {
-          "id": "aab39843ef04",
-          "outletId": "20-minutes",
-          "headline": "Etats-Unis : La grande parade de Thanksgiving de New York décalée en raison d’une tempête",
-          "url": "https://www.20minutes.fr/monde/etats-unis/4265837-20261126-etats-unis-grande-parade-thanksgiving-new-york-decalee-raison-tempete?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-26T01:31:40.000Z",
-          "imageUrl": "https://img.20mn.fr/UH88KKs1ToacAuZDSToMqik/1200x768_defile-de-thanksgiving-de-macy-s-2025-a-new-york-avec-ballon-pac-man-by-bandai-namco-ou-new-york-new-york-etats-unis-quand-28-novembre-2025-credit-m10s-the-news2-cover-images-cover55298427-m10s-the-news2-cover-images-sipa-2511281153",
-          "frontPage": false,
-          "kind": "news",
-          "section": "world",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "a52f5858960a",
-      "titledArticleCount": 3,
-      "section": "world",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1795593600000,
-          "end": 1795597200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795597200000,
-          "end": 1795600800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795600800000,
-          "end": 1795604400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795604400000,
-          "end": 1795608000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795608000000,
-          "end": 1795611600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795611600000,
-          "end": 1795615200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795615200000,
-          "end": 1795618800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795618800000,
-          "end": 1795622400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795622400000,
-          "end": 1795626000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795626000000,
-          "end": 1795629600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795629600000,
-          "end": 1795633200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795633200000,
-          "end": 1795636800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795636800000,
-          "end": 1795640400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795640400000,
-          "end": 1795644000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795644000000,
-          "end": 1795647600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795647600000,
-          "end": 1795651200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795651200000,
-          "end": 1795654800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795654800000,
-          "end": 1795658400000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795658400000,
-          "end": 1795662000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795662000000,
-          "end": 1795665600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795665600000,
-          "end": 1795669200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795669200000,
-          "end": 1795672800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795672800000,
-          "end": 1795676400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795676400000,
-          "end": 1795680000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        }
-      ]
-    },
-    {
-      "id": "749866050dc4",
-      "slug": "brad-pitt-et-angelina-jolie-terminent-leur-bataille-judiciaire",
-      "title": "Brad Pitt et Angelina Jolie mettent fin à leur bataille judiciaire sur le domaine de Miraval après dix ans",
-      "createdAt": "2026-11-26T04:01:27.624Z",
-      "storyDay": "2026-11-26",
-      "articles": [
-        {
-          "id": "c94152996a61",
-          "outletId": "franceinfo",
-          "headline": "Château de Miraval : Angelina Jolie et Brad Pitt se sont enfin dit \"oui\" après une longue bataille judiciaire",
-          "url": "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/var/brignoles/chateau-de-miraval-brad-et-angelina-se-sont-enfin-dit-oui-apres-une-longue-bataille-judiciaire-3456275.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-26T12:44:54.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/Jo-SSSk24jQ_MhFZwkC7bdlPRMU/432x243/filters:format(jpg)/2026/11/26/6b0810604cc7d049749198.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "b660406f9369",
-          "outletId": "tf1-info",
-          "headline": "Dix ans après leur séparation, Brad Pitt et Angelina Jolie annoncent la fin de leur bataille judiciaire",
-          "url": "https://www.tf1info.fr/culture/dix-ans-apres-leur-separation-brad-pitt-et-angelina-jolie-annoncent-la-fin-de-leur-bataille-judiciaire-2478310.html",
-          "publishedAt": "2026-11-26T11:57:08.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/814/angelina-jolie-brad-pitt-1-29079b-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "7f1b366b9bd9",
-          "outletId": "le-parisien",
-          "headline": "Brad Pitt et Angelina Jolie parviennent à un accord sur le château Miraval, leur propriété du Var, après 10 ans de bataille judiciaire",
-          "url": "https://www.leparisien.fr/culture-loisirs/brad-pitt-et-angelina-jolie-parviennent-a-un-accord-sur-le-chateau-miraval-leur-propriete-du-var-apres-10-ans-de-bataille-judiciaire-26-11-2026-ABOLN3FGX5GNZOBV43MUGRUDRE.php",
-          "publishedAt": "2026-11-26T07:01:22.656Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "618153a5a793",
-          "outletId": "cnews",
-          "headline": "Brad Pitt et Angelina Jolie règlent enfin la bataille judiciaire autour de leur domaine viticole de Miraval",
-          "url": "https://www.cnews.fr/divertissement/2026-11-26/brad-pitt-et-angelina-jolie-reglent-enfin-la-bataille-judiciaire-autour",
-          "publishedAt": "2026-11-26T06:50:05.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-17t050339z_1744151273_rc2epoaed283_rtrmadp_3_film-cliff-booth-premiere-taille1200_6b07d04b8113c.jpg?itok=ib449WSV",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "ac78d7b7ea17",
-          "outletId": "ouest-france",
-          "headline": "Brad Pitt et Angelina Jolie mettent fin à leur âpre bataille judiciaire autour d’un domaine viticole français",
-          "url": "https://www.ouest-france.fr/culture/people/brad-pitt-et-angelina-jolie-mettent-fin-a-leur-apre-bataille-judiciaire-autour-dun-domaine-viticole-francais-93c9ed62-e92a-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-26T03:43:02.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZTcyYmNkNWU3OWY3YTYzNjI5MWNhZTEzNGI0MGFkZjk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=cdc8e79f4a60a411e7a6392288a131151c05b368c806900e53678f8e6de75093",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture",
-          "everFrontPage": true
-        },
-        {
-          "id": "c495fa59d76e",
-          "outletId": "20-minutes",
-          "headline": "Fin du combat judiciaire entre Brad Pitt et Angelina Jolie sur un domaine viticole français",
-          "url": "https://www.20minutes.fr/arts-stars/people/4265835-20261126-fin-combat-judiciaire-entre-brad-pitt-angelina-jolie-domaine-viticole-francais?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-26T01:26:04.000Z",
-          "imageUrl": "https://img.20mn.fr/sEHdIQiET3SSJgteTGt2uSk/1200x768_11-aout-2020-angelina-jolie-demande-la-destitution-d-un-juge-prive-dans-son-affaire-de-divorce-en-cours-contre-son-ancien-mari-brad-pitt-photo-d-archive-de-zz-jackson-lee-star-max-ipx-2006-12-11-06-angelina-jolie-et-brad-pitt-lors-de-la-premiere-de-the-good-shepherd-new-york-ipx-20225107509000-2008120501",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "749866050dc4",
-      "titledArticleCount": 6,
-      "section": "culture",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1795611600000,
-          "end": 1795615200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795615200000,
-          "end": 1795618800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795618800000,
-          "end": 1795622400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795622400000,
-          "end": 1795626000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795626000000,
-          "end": 1795629600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795629600000,
-          "end": 1795633200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795633200000,
-          "end": 1795636800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795636800000,
-          "end": 1795640400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795640400000,
-          "end": 1795644000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795644000000,
-          "end": 1795647600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795647600000,
-          "end": 1795651200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795651200000,
-          "end": 1795654800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795654800000,
-          "end": 1795658400000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795658400000,
-          "end": 1795662000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795662000000,
-          "end": 1795665600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795665600000,
-          "end": 1795669200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795669200000,
-          "end": 1795672800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795672800000,
-          "end": 1795676400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795676400000,
-          "end": 1795680000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795680000000,
-          "end": 1795683600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795683600000,
-          "end": 1795687200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795687200000,
-          "end": 1795690800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795690800000,
-          "end": 1795694400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795694400000,
-          "end": 1795698000000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Angelina Jolie et Brad Pitt ont annoncé la résolution de leur litige concernant la propriété du château de Miraval dans le Var.",
-          "Cette querelle autour de la possession du domaine constituait l'un des principaux sujets de tension de leur instance de divorce."
-        ],
-        "centre": [
-          "Brad Pitt et Angelina Jolie ont conclu un accord au terme d'une décennie de procédures judiciaires concernant le domaine varois de Miraval.",
-          "Le couple d'acteurs hollywoodiens met ainsi fin à une longue période de conflits juridiques liés à leur ancienne propriété viticole française."
-        ],
-        "droite": [
-          "Les deux acteurs ont trouvé un terrain d'entente confidentiel après des années de procédures judiciaires sur la gestion de leur domaine viticole du Var.",
-          "Un communiqué officiel indique que cet accord amiable a été conclu en prenant en compte l'intérêt de la famille."
-        ]
-      },
-      "differences": [
-        "La gauche met l'accent sur le rôle central de cette propriété varoise dans les tensions du divorce du couple.",
-        "Le centre dresse un bilan chronologique en insistant sur la durée totale de dix ans de cette procédure judiciaire.",
-        "La droite privilégie l'analyse des aspects confidentiels et familiaux de cet accord amiable conclu par les deux acteurs."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 6,
-      "summarizedAt": "2026-11-26T13:01:31.766Z"
     }
   ],
   "feedStories": [
@@ -15298,6 +14747,29 @@
           "url": "https://www.nouvelobs.com/politique/20261126.OBS120467/ecrits-antisemites-il-est-difficile-d-imaginer-une-autre-defense-pour-bardella-que-nier.html",
           "publishedAt": "2026-11-26T18:45:37.000Z",
           "imageUrl": "https://focus.nouvelobs.com/2026/11/26/0/0/5184/3456/0/0/60/0/310bc96_upload-1-sbo1lxeuh04q-afp-20261019-hl-bohier-3347090-v1-highres-francepoliticsrnpressconferenceparis.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "07901b563af7",
+          "outletId": "20-minutes",
+          "headline": "Accusations d’antisémitisme : Bardella « envisage un complément de plainte » contre « Le Monde » et Mediapart",
+          "url": "https://www.20minutes.fr/politique/4266106-20261126-accusations-antisemitisme-bardella-envisage-complement-plainte-contre-monde-mediapart?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-26T18:41:41.000Z",
+          "imageUrl": "https://img.20mn.fr/UIDJ5haURM2Lf9bzQOQ6Tyk/1200x768_le-president-du-rassemblement-national-jordan-bardella-lors-de-sa-premiere-seance-de-dedicaces-pour-son-livre-gouverner-dans-le-bastion-de-marine-le-pen-a-henin-beaumont-le-5-novembre-2026-greuezfrancois-greuez0744-credit-francois-greuez-sipa-2611052235",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "233ce51f9a7c",
+          "outletId": "france-24",
+          "headline": "Bardella, Lavalette… la dédiabolisation du RN à l’épreuve des affaires d’antisémitisme",
+          "url": "https://www.france24.com/fr/france/20261126-france-jordan-bardella-laure-lavalette-dediabolisation-rassemblement-national-epreuve-affaires-antisemitisme",
+          "publishedAt": "2026-11-26T18:29:20.000Z",
+          "imageUrl": "https://s.france24.com/media/display/7bc86e7c-e9bc-11f1-bbaa-81bc2b1dcd65/w:1024/p:16x9/main-rn-antisemitisme.png",
           "frontPage": false,
           "kind": "news",
           "section": "politics"
@@ -16186,11 +15658,11 @@
           "start": 1795716000000,
           "end": 1795719600000,
           "counts": {
-            "gauche": 1,
-            "centre": 0,
+            "gauche": 2,
+            "centre": 1,
             "droite": 1
           },
-          "total": 2
+          "total": 4
         },
         {
           "start": 1795719600000,
@@ -16238,6 +15710,412 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 59,
       "summarizedAt": "2026-11-26T18:01:24.887Z"
+    },
+    {
+      "id": "008824d8e348",
+      "slug": "l-om-et-le-levski-sofia-s-affrontent-lors-d-incidents-violents",
+      "title": "De violents incidents opposent des supporters de l'OM et du Levski Sofia au stade Vélodrome en Ligue Europa",
+      "createdAt": "2026-11-26T21:01:22.278Z",
+      "storyDay": "2026-11-26",
+      "articles": [
+        {
+          "id": "2230c3c74d4f",
+          "outletId": "20-minutes",
+          "headline": "Ligue Europa : « Inadmissible »… Colère de la présidente bulgare après les violences lors du match à Marseille",
+          "url": "https://www.20minutes.fr/sport/football/4266166-20261127-ligue-europa-inadmissible-colere-presidente-bulgare-apres-violences-lors-match-marseille?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-27T01:31:02.000Z",
+          "imageUrl": "https://img.20mn.fr/l6OhuyLBROa_ZMKCG9gVoCk/1200x768_marseille-france-le-26-novembre-2026-l-olympique-marseille-levski-sofia-s-affronte-dans-les-tribunes-du-stade-cepac-velodrome-des-supporters-bulgares-de-levski-sofia-auraient-ete-agresses-par-des-individus-masques-soupconnes-d-etre-des-supporters-de-marseille-avant-le-match-de-ligue-europa-au-stade-velodrome-des-escortes-policieres-et-des-mesures-de-securite-renforcees-ont-ete-organisees-neirda-prod-sipa-10199-credit-be-neirda-prod-sipa-2611261901",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "11f9b6ceb54c",
+          "outletId": "ouest-france",
+          "headline": "OM - Levski Sofia. La présidente de la Bulgarie regrette une violence « inadmissible » entre les supporters à Marseille",
+          "url": "https://www.ouest-france.fr/sport/football/olympique-de-marseille/om-levski-sofia-la-presidente-de-la-bulgarie-regrette-une-violence-inadmissible-entre-les-supporters-a-marseille-9d1de504-e9ec-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-26T23:01:12.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNTE0NzgwOWU0YmIyYzUwMzJmZjdkMmNmYzRhZWFlNzI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d6ff615a3901e15e0e827a7ef80387462b42e15050a743ab14688039042d0331",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "c7d5be0c8a21",
+          "outletId": "le-figaro",
+          "headline": "Ligue Europa : la présidente de la Bulgarie dénonce une violence «inadmissible» après les affrontements à Marseille",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-la-presidente-de-la-bulgarie-denonce-une-violence-inadmissible-apres-les-affrontements-a-marseille-20261126",
+          "publishedAt": "2026-11-26T22:58:37.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2992x1683_crop/2026/11/26/a3a3ccb2a50d8cc43f1a473af3682ef65bc6c013b3499a308bc56b9ad862c365.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "07f7887aeb21",
+          "outletId": "le-figaro",
+          "headline": "Ligue Europa : plusieurs supporters bulgares blessés et évacués à l’hôpital… Soirée chaotique à Marseille",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-plusieurs-supporters-bulgares-blesses-et-evacues-a-l-hopital-soiree-chaotique-a-marseille-20261126",
+          "publishedAt": "2026-11-26T22:49:52.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/1845x1207_crop/2026/11/26/cac44571cbb125e25fca860df02ba7ba4b639996b5209f02aefc96c0698df072.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "a4dd7850ae33",
+          "outletId": "bfmtv",
+          "headline": "\"Que plus aucun match de Coupe d’Europe ne soit disputé dans ce stade\": le Levski Sofia demande une lourde sanction contre l'OM après les incidents au Vélodrome",
+          "url": "https://rmcsport.bfmtv.com/football/europa-league/que-plus-aucun-match-de-coupe-d-europe-ne-soit-dispute-dans-ce-stade-le-levski-sofia-demande-une-lourde-sanction-contre-l-om-apres-les-incidents-au-velodrome_AV-202611261037.html",
+          "publishedAt": "2026-11-26T22:43:11.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/KH4yK3-e9T99TKrAvkT9vNwyBEc=/0x106:2048x1258/800x0/images/Le-match-de-la-5e-journee-de-Ligue-Europa-entre-l-OM-et-le-Levski-Sofia-1-0-a-ete-emaille-par-de-violents-incidents-entre-supporters-en-tribune-26-11-2026-2391485.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "220f6b443f1a",
+          "outletId": "tf1-info",
+          "headline": "Ligue Europa : incidents entre supporters marseillais et bulgares au stade Vélodrome",
+          "url": "https://www.tf1info.fr/justice-faits-divers/ligue-europa-incidents-entre-supporters-marseillais-et-bulgares-au-stade-velodrome-2478444.html",
+          "publishedAt": "2026-11-26T21:53:22.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/682/stade-velodrome-marseille-septembre-2025-e6eecc-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "c20f797afd64",
+          "outletId": "ouest-france",
+          "headline": "Ligue Europa. Mouvement de foule, jets de projectiles… Scènes de violence avant OM - Levski Sofia, des supporters bulgares à l’hôpital",
+          "url": "https://www.ouest-france.fr/sport/football/olympique-de-marseille/ligue-europa-mouvement-de-foule-jets-de-projectiles-scenes-de-violence-entre-supporters-de-lom-et-du-levski-sofia-254beb46-e9c6-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-26T21:24:10.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYzFjZWMzZDVlZjUxMGU3MTJiNzYyOGM3ODZjYzM2OTc?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=e15cf54806bcdc2fe03e79288e7ac50432cab64d84aa93f8cec2af1bcb943c06",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "693f20a765de",
+          "outletId": "ouest-france",
+          "headline": "OM. « On aurait mérité un match nul » assure l’entraîneur du Levski Sofia, qui regrette des incidents « inacceptables pour le football »",
+          "url": "https://www.ouest-france.fr/sport/football/olympique-de-marseille/om-on-aurait-merite-un-match-nul-assure-lentraineur-du-levski-sofia-qui-regrette-des-incidents-inacceptables-pour-le-football-5fa387ac-e9dc-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-26T21:12:11.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMzkyYzVhZTExYmE3ZGZiYmU0NjI5NjcyN2ZkZTQzZDA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9eb3c750b41e9ed1f938f1b71f3e422e3dab8cbbdf1570947e4ad7d13d5ba1ca",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "02679331b905",
+          "outletId": "le-parisien",
+          "headline": "OM-Levski Sofia : gros incidents entre les supporters des deux équipes au Vélodrome, des projectiles et des fumigènes lancés",
+          "url": "https://www.leparisien.fr/sports/football/om-levski-sofia-gros-incidents-entre-les-supporters-des-deux-equipes-au-velodrome-des-projectiles-et-des-fumigenes-lances-26-11-2026-YM4BRLNRVBCMRLSSLHLRWRIHAU.php",
+          "publishedAt": "2026-11-26T21:01:22.278Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "b1536588ce9d",
+          "outletId": "le-figaro",
+          "headline": "Ligue Europa : le coach du Levski Sofia déplore les incidents à Marseille «inacceptables»",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-le-coach-du-levski-sofia-deplore-les-incidents-a-marseille-inacceptables-20261126",
+          "publishedAt": "2026-11-26T20:52:38.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1999_crop/2026/11/26/58a25adad0574eb75620ac0c6c19a366d296f3093d16591d601896fd1a95f9aa.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "ae02fb62cb64",
+          "outletId": "franceinfo",
+          "headline": "Violents incidents entre supporters de l'OM et du Levski Sofia juste avant la rencontre de Ligue Europa",
+          "url": "https://www.franceinfo.fr/sports/foot/ligue-europa/violents-incidents-entre-supporters-de-l-om-et-du-levski-sofia-juste-avant-la-rencontre-de-ligue-europa_8301924.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-26T18:23:36.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/nki0rZvyHjNIFp7c3waZbmvNHvI/0x279:5315x3268/432x243/filters:format(jpg)/2026/11/26/6b087782917b2523779923.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        }
+      ],
+      "topicId": "dc9480cfbebc",
+      "titledArticleCount": 9,
+      "section": "sport",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1795658400000,
+          "end": 1795662000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795662000000,
+          "end": 1795665600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795665600000,
+          "end": 1795669200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795669200000,
+          "end": 1795672800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795672800000,
+          "end": 1795676400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795676400000,
+          "end": 1795680000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795680000000,
+          "end": 1795683600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795683600000,
+          "end": 1795687200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795687200000,
+          "end": 1795690800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795690800000,
+          "end": 1795694400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795694400000,
+          "end": 1795698000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795698000000,
+          "end": 1795701600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795701600000,
+          "end": 1795705200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795705200000,
+          "end": 1795708800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795708800000,
+          "end": 1795712400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795712400000,
+          "end": 1795716000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795716000000,
+          "end": 1795719600000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795719600000,
+          "end": 1795723200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795723200000,
+          "end": 1795726800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1795726800000,
+          "end": 1795730400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 3,
+            "droite": 1
+          },
+          "total": 4
+        },
+        {
+          "start": 1795730400000,
+          "end": 1795734000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 2
+          },
+          "total": 3
+        },
+        {
+          "start": 1795734000000,
+          "end": 1795737600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795737600000,
+          "end": 1795741200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795741200000,
+          "end": 1795744800000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        }
+      ],
+      "summaries": {
+        "gauche": [
+          "De violents affrontements ont éclaté entre les supporters de l'Olympique de Marseille et du Levski Sofia juste avant le coup d'envoi de la rencontre de Ligue Europa.",
+          "Des projectiles et des fumigènes ont été massivement envoyés dans les tribunes du stade Vélodrome à quelques minutes de la rencontre."
+        ],
+        "centre": [
+          "La présidente bulgare Iliana Iotova a qualifié d'inadmissible les violences survenues entre les supporters à Marseille.",
+          "Le Levski Sofia a exigé une sanction lourde contre l'OM, demandant que plus aucun match de Coupe d'Europe ne se dispute dans ce stade.",
+          "Onze supporters bulgares ont été blessés, dont cinq évacués à l'hôpital et six soignés sur place par les secours.",
+          "Le club marseillais s'est imposé sur le score d'un but à zéro face au Levski Sofia lors de cette cinquième journée de Ligue Europa."
+        ],
+        "droite": [
+          "Plusieurs supporters bulgares ont été blessés et évacués vers l'hôpital à la suite d'une soirée chaotique au stade Vélodrome.",
+          "L'entraîneur du Levski Sofia a publiquement déploré des incidents inacceptables pour le football avant le début de la rencontre."
+        ]
+      },
+      "differences": [
+        "La gauche se focalise strictement sur la description des affrontements armés de projectiles et de fumigènes dans les tribunes juste avant le coup d'envoi.",
+        "Le centre met en avant le bilan précis des blessés bulgares, l'indignation officielle de la présidence bulgare et la demande de lourdes sanctions formulée par le club adverse.",
+        "La droite privilégie une mise en récit dramatique de la soirée chaotique, en insistant sur l'évacuation hospitalière des supporters et les réactions du technicien adverse."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 9,
+      "summarizedAt": "2026-11-26T23:01:32.824Z"
     },
     {
       "id": "3395e4ccf7e6",
@@ -18419,400 +18297,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 9,
       "summarizedAt": "2026-11-26T22:01:26.268Z"
-    },
-    {
-      "id": "008824d8e348",
-      "slug": "l-om-et-le-levski-sofia-s-affrontent-lors-d-incidents-violents",
-      "title": "De violents incidents opposent des supporters de l'OM et du Levski Sofia au stade Vélodrome en Ligue Europa",
-      "createdAt": "2026-11-26T21:01:22.278Z",
-      "storyDay": "2026-11-26",
-      "articles": [
-        {
-          "id": "11f9b6ceb54c",
-          "outletId": "ouest-france",
-          "headline": "OM - Levski Sofia. La présidente de la Bulgarie regrette une violence « inadmissible » entre les supporters à Marseille",
-          "url": "https://www.ouest-france.fr/sport/football/olympique-de-marseille/om-levski-sofia-la-presidente-de-la-bulgarie-regrette-une-violence-inadmissible-entre-les-supporters-a-marseille-9d1de504-e9ec-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-26T23:01:12.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNTE0NzgwOWU0YmIyYzUwMzJmZjdkMmNmYzRhZWFlNzI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d6ff615a3901e15e0e827a7ef80387462b42e15050a743ab14688039042d0331",
-          "frontPage": true,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "c7d5be0c8a21",
-          "outletId": "le-figaro",
-          "headline": "Ligue Europa : la présidente de la Bulgarie dénonce une violence «inadmissible» après les affrontements à Marseille",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-la-presidente-de-la-bulgarie-denonce-une-violence-inadmissible-apres-les-affrontements-a-marseille-20261126",
-          "publishedAt": "2026-11-26T22:58:37.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2992x1683_crop/2026/11/26/a3a3ccb2a50d8cc43f1a473af3682ef65bc6c013b3499a308bc56b9ad862c365.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "07f7887aeb21",
-          "outletId": "le-figaro",
-          "headline": "Ligue Europa : plusieurs supporters bulgares blessés et évacués à l’hôpital… Soirée chaotique à Marseille",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-plusieurs-supporters-bulgares-blesses-et-evacues-a-l-hopital-soiree-chaotique-a-marseille-20261126",
-          "publishedAt": "2026-11-26T22:49:52.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/1845x1207_crop/2026/11/26/cac44571cbb125e25fca860df02ba7ba4b639996b5209f02aefc96c0698df072.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "a4dd7850ae33",
-          "outletId": "bfmtv",
-          "headline": "\"Que plus aucun match de Coupe d’Europe ne soit disputé dans ce stade\": le Levski Sofia demande une lourde sanction contre l'OM après les incidents au Vélodrome",
-          "url": "https://rmcsport.bfmtv.com/football/europa-league/que-plus-aucun-match-de-coupe-d-europe-ne-soit-dispute-dans-ce-stade-le-levski-sofia-demande-une-lourde-sanction-contre-l-om-apres-les-incidents-au-velodrome_AV-202611261037.html",
-          "publishedAt": "2026-11-26T22:43:11.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/KH4yK3-e9T99TKrAvkT9vNwyBEc=/0x106:2048x1258/800x0/images/Le-match-de-la-5e-journee-de-Ligue-Europa-entre-l-OM-et-le-Levski-Sofia-1-0-a-ete-emaille-par-de-violents-incidents-entre-supporters-en-tribune-26-11-2026-2391485.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "220f6b443f1a",
-          "outletId": "tf1-info",
-          "headline": "Ligue Europa : incidents entre supporters marseillais et bulgares au stade Vélodrome",
-          "url": "https://www.tf1info.fr/justice-faits-divers/ligue-europa-incidents-entre-supporters-marseillais-et-bulgares-au-stade-velodrome-2478444.html",
-          "publishedAt": "2026-11-26T21:53:22.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/stade-velodrome-marseille-septembre-2025-e6eecc-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "c20f797afd64",
-          "outletId": "ouest-france",
-          "headline": "Ligue Europa. Mouvement de foule, jets de projectiles… Scènes de violence avant OM - Levski Sofia, des supporters bulgares à l’hôpital",
-          "url": "https://www.ouest-france.fr/sport/football/olympique-de-marseille/ligue-europa-mouvement-de-foule-jets-de-projectiles-scenes-de-violence-entre-supporters-de-lom-et-du-levski-sofia-254beb46-e9c6-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-26T21:24:10.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYzFjZWMzZDVlZjUxMGU3MTJiNzYyOGM3ODZjYzM2OTc?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=e15cf54806bcdc2fe03e79288e7ac50432cab64d84aa93f8cec2af1bcb943c06",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "693f20a765de",
-          "outletId": "ouest-france",
-          "headline": "OM. « On aurait mérité un match nul » assure l’entraîneur du Levski Sofia, qui regrette des incidents « inacceptables pour le football »",
-          "url": "https://www.ouest-france.fr/sport/football/olympique-de-marseille/om-on-aurait-merite-un-match-nul-assure-lentraineur-du-levski-sofia-qui-regrette-des-incidents-inacceptables-pour-le-football-5fa387ac-e9dc-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-26T21:12:11.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMzkyYzVhZTExYmE3ZGZiYmU0NjI5NjcyN2ZkZTQzZDA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9eb3c750b41e9ed1f938f1b71f3e422e3dab8cbbdf1570947e4ad7d13d5ba1ca",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "02679331b905",
-          "outletId": "le-parisien",
-          "headline": "OM-Levski Sofia : gros incidents entre les supporters des deux équipes au Vélodrome, des projectiles et des fumigènes lancés",
-          "url": "https://www.leparisien.fr/sports/football/om-levski-sofia-gros-incidents-entre-les-supporters-des-deux-equipes-au-velodrome-des-projectiles-et-des-fumigenes-lances-26-11-2026-YM4BRLNRVBCMRLSSLHLRWRIHAU.php",
-          "publishedAt": "2026-11-26T21:01:22.278Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "b1536588ce9d",
-          "outletId": "le-figaro",
-          "headline": "Ligue Europa : le coach du Levski Sofia déplore les incidents à Marseille «inacceptables»",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-le-coach-du-levski-sofia-deplore-les-incidents-a-marseille-inacceptables-20261126",
-          "publishedAt": "2026-11-26T20:52:38.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1999_crop/2026/11/26/58a25adad0574eb75620ac0c6c19a366d296f3093d16591d601896fd1a95f9aa.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "ae02fb62cb64",
-          "outletId": "franceinfo",
-          "headline": "Violents incidents entre supporters de l'OM et du Levski Sofia juste avant la rencontre de Ligue Europa",
-          "url": "https://www.franceinfo.fr/sports/foot/ligue-europa/violents-incidents-entre-supporters-de-l-om-et-du-levski-sofia-juste-avant-la-rencontre-de-ligue-europa_8301924.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-26T18:23:36.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/nki0rZvyHjNIFp7c3waZbmvNHvI/0x279:5315x3268/432x243/filters:format(jpg)/2026/11/26/6b087782917b2523779923.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        }
-      ],
-      "topicId": "dc9480cfbebc",
-      "titledArticleCount": 9,
-      "section": "sport",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1795651200000,
-          "end": 1795654800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795654800000,
-          "end": 1795658400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795658400000,
-          "end": 1795662000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795662000000,
-          "end": 1795665600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795665600000,
-          "end": 1795669200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795669200000,
-          "end": 1795672800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795672800000,
-          "end": 1795676400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795676400000,
-          "end": 1795680000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795680000000,
-          "end": 1795683600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795683600000,
-          "end": 1795687200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795687200000,
-          "end": 1795690800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795690800000,
-          "end": 1795694400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795694400000,
-          "end": 1795698000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795698000000,
-          "end": 1795701600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795701600000,
-          "end": 1795705200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795705200000,
-          "end": 1795708800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795708800000,
-          "end": 1795712400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795712400000,
-          "end": 1795716000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795716000000,
-          "end": 1795719600000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795719600000,
-          "end": 1795723200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795723200000,
-          "end": 1795726800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795726800000,
-          "end": 1795730400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 3,
-            "droite": 1
-          },
-          "total": 4
-        },
-        {
-          "start": 1795730400000,
-          "end": 1795734000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 2
-          },
-          "total": 3
-        },
-        {
-          "start": 1795734000000,
-          "end": 1795737600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "De violents affrontements ont éclaté entre les supporters de l'Olympique de Marseille et du Levski Sofia juste avant le coup d'envoi de la rencontre de Ligue Europa.",
-          "Des projectiles et des fumigènes ont été massivement envoyés dans les tribunes du stade Vélodrome à quelques minutes de la rencontre."
-        ],
-        "centre": [
-          "La présidente bulgare Iliana Iotova a qualifié d'inadmissible les violences survenues entre les supporters à Marseille.",
-          "Le Levski Sofia a exigé une sanction lourde contre l'OM, demandant que plus aucun match de Coupe d'Europe ne se dispute dans ce stade.",
-          "Onze supporters bulgares ont été blessés, dont cinq évacués à l'hôpital et six soignés sur place par les secours.",
-          "Le club marseillais s'est imposé sur le score d'un but à zéro face au Levski Sofia lors de cette cinquième journée de Ligue Europa."
-        ],
-        "droite": [
-          "Plusieurs supporters bulgares ont été blessés et évacués vers l'hôpital à la suite d'une soirée chaotique au stade Vélodrome.",
-          "L'entraîneur du Levski Sofia a publiquement déploré des incidents inacceptables pour le football avant le début de la rencontre."
-        ]
-      },
-      "differences": [
-        "La gauche se focalise strictement sur la description des affrontements armés de projectiles et de fumigènes dans les tribunes juste avant le coup d'envoi.",
-        "Le centre met en avant le bilan précis des blessés bulgares, l'indignation officielle de la présidence bulgare et la demande de lourdes sanctions formulée par le club adverse.",
-        "La droite privilégie une mise en récit dramatique de la soirée chaotique, en insistant sur l'évacuation hospitalière des supporters et les réactions du technicien adverse."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 9,
-      "summarizedAt": "2026-11-26T23:01:32.824Z"
     },
     {
       "id": "dc9480cfbebc",
@@ -21050,7 +20534,31 @@
           },
           "total": 1
         }
-      ]
+      ],
+      "summaries": {
+        "gauche": [
+          "L'Agence France-Presse a subi une cyberattaque dans la nuit de mercredi à jeudi.",
+          "La plateforme AFP Forum, qui regroupe les photos et les dépêches, a été paralysée.",
+          "L'agence ne dispose d'aucun élément sur l'identité des auteurs de cette intrusion."
+        ],
+        "centre": [
+          "L'Agence France-Presse a été visée par une cyberattaque touchant sa plateforme AFP Forum.",
+          "Le site est resté inaccessible ce jeudi soir suite à l'incident survenu dans la nuit.",
+          "La direction de l'agence indique qu'aucun élément n'est disponible sur l'identité des auteurs."
+        ],
+        "droite": [
+          "L'Agence France-Presse a fait l'objet d'une cyberattaque dans la nuit de mercredi à jeudi.",
+          "La plateforme AFP Forum, dédiée aux photos et aux vidéos, a dû être désactivée temporairement."
+        ]
+      },
+      "differences": [
+        "Le camp gauche insiste sur le volume des contenus touchés et qualifie l'outil de « plus grosse agence de presse française ».",
+        "Le camp centre adopte une tonalité neutre et synthétique en se focalisant sur l'inaccessibilité prolongée du site.",
+        "Le camp droite met en avant la nature technique de l'attaque en précisant la désactivation de la plateforme multimédia."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-11-27T02:01:22.469Z"
     },
     {
       "id": "262b4138430a",
@@ -22047,7 +21555,7 @@
           "url": "https://www.20minutes.fr/politique/4265901-20261126-guerre-liens-entre-riner-athlete-russie-poutine-fan-judo?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-26T11:35:15.000Z",
           "imageUrl": "https://img.20mn.fr/Hs7MkEcJT9as9M5llezxKik/1200x768_teddy-riner-quintuple-champion-olympique-de-judo-et-candidat-declare-a-l-election-presidentielle-francaise-de-2027-s-est-pris-les-pieds-dans-le-tapis-sur-le-soutien-a-l-ukraine-lors-du-congres-des-maires",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -24284,6 +23792,294 @@
       "summarizedAt": "2026-11-26T18:01:24.887Z"
     },
     {
+      "id": "f5252f1332ac",
+      "slug": "le-stade-rennais-s-incline-face-au-nec-nimegue-en-ligue-europa",
+      "title": "Le Stade Rennais s'incline face au NEC Nimègue : la colère des supporters bretons",
+      "createdAt": "2026-11-27T01:01:25.249Z",
+      "storyDay": "2026-11-26",
+      "articles": [
+        {
+          "id": "3cf9ce1bd466",
+          "outletId": "bfmtv",
+          "headline": "NEC Nimègue-Rennes: la colère des supporters bretons, qui jettent des gobelets contre leurs joueurs",
+          "url": "https://rmcsport.bfmtv.com/football/europa-league/nec-nimegue-rennes-la-colere-des-supporters-bretons-qui-jettent-des-gobelets-contre-leurs-joueurs_AV-202611261059.html",
+          "publishedAt": "2026-11-26T23:46:19.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/ZO4KYPfjYQhnSklMkxlDX6QAqRY=/163x460:1491x1207/800x0/images/Les-joueurs-de-Rennes-apres-le-match-de-Ligue-Europa-contre-NEC-Nimegue-le-26-11-2026-2391499.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "9e9edfa6f7d7",
+          "outletId": "bfmtv",
+          "headline": "NEC 3 - 1 Rennes : \"Il y a un problème qui est plus profond dans ce club\"",
+          "url": "https://rmcsport.bfmtv.com/replay-emissions/after-foot/video-nec-3-1-rennes-il-y-a-un-probleme-qui-est-plus-profond-dans-ce-club_VN-202611261035.html",
+          "publishedAt": "2026-11-26T22:34:10.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/kTYKXdEhIax9NLrI7ZiYXiMCoBU=/0x0:1280x720/800x0/images/NEC-3-1-Rennes-Il-y-a-un-probleme-qui-est-plus-profond-dans-ce-club-2391486.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "d6a640d2181c",
+          "outletId": "le-figaro",
+          "headline": "Ligue Europa : soirée désastreuse pour le Stade Rennais aux Pays-Bas",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-soiree-desastreuse-pour-le-stade-rennais-aux-pays-bas-20261126",
+          "publishedAt": "2026-11-26T22:17:14.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1688_crop/2026/11/26/74b823a593a4004c52674589d4cfdd328833ebdfa1e17c72e63b950859bf7563.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        }
+      ],
+      "topicId": "f5252f1332ac",
+      "titledArticleCount": 3,
+      "section": "sport",
+      "activity": [
+        {
+          "start": 1795651200000,
+          "end": 1795654800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795654800000,
+          "end": 1795658400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795658400000,
+          "end": 1795662000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795662000000,
+          "end": 1795665600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795665600000,
+          "end": 1795669200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795669200000,
+          "end": 1795672800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795672800000,
+          "end": 1795676400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795676400000,
+          "end": 1795680000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795680000000,
+          "end": 1795683600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795683600000,
+          "end": 1795687200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795687200000,
+          "end": 1795690800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795690800000,
+          "end": 1795694400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795694400000,
+          "end": 1795698000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795698000000,
+          "end": 1795701600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795701600000,
+          "end": 1795705200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795705200000,
+          "end": 1795708800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795708800000,
+          "end": 1795712400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795712400000,
+          "end": 1795716000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795716000000,
+          "end": 1795719600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795719600000,
+          "end": 1795723200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795723200000,
+          "end": 1795726800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795726800000,
+          "end": 1795730400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795730400000,
+          "end": 1795734000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 1
+          },
+          "total": 2
+        },
+        {
+          "start": 1795734000000,
+          "end": 1795737600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        }
+      ],
+      "everInEdition": true
+    },
+    {
       "id": "dae0e9506955",
       "slug": "stellantis-et-joyson-safety-systems-france-font-l-objet-de",
       "title": "Stellantis et l'équipementier Joyson Safety Systems France font l'objet de perquisitions dans le cadre de l'affaire des airbags Takata",
@@ -25264,306 +25060,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 6,
       "summarizedAt": "2026-11-26T20:01:27.566Z"
-    },
-    {
-      "id": "313c688919f3",
-      "slug": "parlementaires-et-senateurs-s-entendent-pour-exclure-l",
-      "title": "Parlementaires et sénateurs s'entendent pour exclure l'obligation sexuelle du mariage",
-      "createdAt": "2026-11-26T19:01:26.369Z",
-      "storyDay": "2026-11-26",
-      "articles": [
-        {
-          "id": "39382b9f3363",
-          "outletId": "le-parisien",
-          "headline": "« Devoir conjugal » : les parlementaires s’entendent pour exclure toute obligation sexuelle du mariage",
-          "url": "https://www.leparisien.fr/societe/devoir-conjugal-les-parlementaires-sentendent-pour-exclure-toute-obligation-sexuelle-du-mariage-26-11-2026-ZAYAXOFMOFH4REO4I2AEYVJVNY.php",
-          "publishedAt": "2026-11-26T19:01:26.369Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "81d5d2fe6f54",
-          "outletId": "tf1-info",
-          "headline": "\"Devoir conjugal\" : les parlementaires trouvent un accord pour exclure toute obligation sexuelle du mariage",
-          "url": "https://www.tf1info.fr/societe/devoir-conjugal-les-parlementaires-trouvent-un-accord-pour-exclure-toute-obligation-sexuelle-du-mariage-2478407.html",
-          "publishedAt": "2026-11-26T18:28:36.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/683/lit-defait-draps-09a46c-2@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "33952fe16265",
-          "outletId": "franceinfo",
-          "headline": "Députés et sénateurs s'entendent pour mettre fin au \"devoir conjugal\" et exclure toute obligation sexuelle dans le mariage",
-          "url": "https://www.franceinfo.fr/societe/droits-des-femmes/deputes-et-senateurs-s-entendent-pour-mettre-fin-au-devoir-conjugal-et-exclure-toute-obligation-sexuelle-dans-le-mariage_8301603.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-26T16:37:48.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/Q2CoCkjANX9iztQniLI3exZbl68/0x0:5200x2925/432x243/filters:format(jpg)/2026/11/26/6b0854dc2a900327705307.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "politics"
-        },
-        {
-          "id": "57aaf7993cb8",
-          "outletId": "20-minutes",
-          "headline": "La fin du « devoir conjugal » ? Députés et sénateurs d’accord pour ôter l’obligation sexuelle du mariage",
-          "url": "https://www.20minutes.fr/societe/4266036-20261126-fin-devoir-conjugal-deputes-senateurs-accord-oter-obligation-sexuelle-mariage?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-26T16:08:55.000Z",
-          "imageUrl": "https://img.20mn.fr/u7zF-7I5S3OO18qQljmnwCk/1200x768_debat-avec-louis-boyard-depute-nupes-lfi-marie-charlotte-garin-deputee-lors-des-journees-d-ete-europe-ecologie-les-verts-2022-le-26-aout-2022-a-l-universite-grenoble-alpes-a-gieres-gieres-france-26-08-2022-04harsin-debatseelvjde2022eelv011-2208262131-credit-isa-harsin-sipa-2208262151",
-          "frontPage": true,
-          "kind": "news",
-          "section": "politics",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "313c688919f3",
-      "titledArticleCount": 4,
-      "section": "politics",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1795636800000,
-          "end": 1795640400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795640400000,
-          "end": 1795644000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795644000000,
-          "end": 1795647600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795647600000,
-          "end": 1795651200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795651200000,
-          "end": 1795654800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795654800000,
-          "end": 1795658400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795658400000,
-          "end": 1795662000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795662000000,
-          "end": 1795665600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795665600000,
-          "end": 1795669200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795669200000,
-          "end": 1795672800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795672800000,
-          "end": 1795676400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795676400000,
-          "end": 1795680000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795680000000,
-          "end": 1795683600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795683600000,
-          "end": 1795687200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795687200000,
-          "end": 1795690800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795690800000,
-          "end": 1795694400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795694400000,
-          "end": 1795698000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795698000000,
-          "end": 1795701600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795701600000,
-          "end": 1795705200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795705200000,
-          "end": 1795708800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795708800000,
-          "end": 1795712400000,
-          "counts": {
-            "gauche": 2,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 2
-        },
-        {
-          "start": 1795712400000,
-          "end": 1795716000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795716000000,
-          "end": 1795719600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795719600000,
-          "end": 1795723200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ]
     }
   ],
   "stories": [
@@ -25612,6 +25108,29 @@
           "url": "https://www.nouvelobs.com/politique/20261126.OBS120467/ecrits-antisemites-il-est-difficile-d-imaginer-une-autre-defense-pour-bardella-que-nier.html",
           "publishedAt": "2026-11-26T18:45:37.000Z",
           "imageUrl": "https://focus.nouvelobs.com/2026/11/26/0/0/5184/3456/0/0/60/0/310bc96_upload-1-sbo1lxeuh04q-afp-20261019-hl-bohier-3347090-v1-highres-francepoliticsrnpressconferenceparis.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "politics"
+        },
+        {
+          "id": "07901b563af7",
+          "outletId": "20-minutes",
+          "headline": "Accusations d’antisémitisme : Bardella « envisage un complément de plainte » contre « Le Monde » et Mediapart",
+          "url": "https://www.20minutes.fr/politique/4266106-20261126-accusations-antisemitisme-bardella-envisage-complement-plainte-contre-monde-mediapart?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-26T18:41:41.000Z",
+          "imageUrl": "https://img.20mn.fr/UIDJ5haURM2Lf9bzQOQ6Tyk/1200x768_le-president-du-rassemblement-national-jordan-bardella-lors-de-sa-premiere-seance-de-dedicaces-pour-son-livre-gouverner-dans-le-bastion-de-marine-le-pen-a-henin-beaumont-le-5-novembre-2026-greuezfrancois-greuez0744-credit-francois-greuez-sipa-2611052235",
+          "frontPage": true,
+          "kind": "news",
+          "section": "politics",
+          "everFrontPage": true
+        },
+        {
+          "id": "233ce51f9a7c",
+          "outletId": "france-24",
+          "headline": "Bardella, Lavalette… la dédiabolisation du RN à l’épreuve des affaires d’antisémitisme",
+          "url": "https://www.france24.com/fr/france/20261126-france-jordan-bardella-laure-lavalette-dediabolisation-rassemblement-national-epreuve-affaires-antisemitisme",
+          "publishedAt": "2026-11-26T18:29:20.000Z",
+          "imageUrl": "https://s.france24.com/media/display/7bc86e7c-e9bc-11f1-bbaa-81bc2b1dcd65/w:1024/p:16x9/main-rn-antisemitisme.png",
           "frontPage": false,
           "kind": "news",
           "section": "politics"
@@ -26500,11 +26019,11 @@
           "start": 1795716000000,
           "end": 1795719600000,
           "counts": {
-            "gauche": 1,
-            "centre": 0,
+            "gauche": 2,
+            "centre": 1,
             "droite": 1
           },
-          "total": 2
+          "total": 4
         },
         {
           "start": 1795719600000,
@@ -30416,7 +29935,7 @@
           "url": "https://www.20minutes.fr/politique/4265901-20261126-guerre-liens-entre-riner-athlete-russie-poutine-fan-judo?at_medium=display&at_campaign=149",
           "publishedAt": "2026-11-26T11:35:15.000Z",
           "imageUrl": "https://img.20mn.fr/Hs7MkEcJT9as9M5llezxKik/1200x768_teddy-riner-quintuple-champion-olympique-de-judo-et-candidat-declare-a-l-election-presidentielle-francaise-de-2027-s-est-pris-les-pieds-dans-le-tapis-sur-le-soutien-a-l-ukraine-lors-du-congres-des-maires",
-          "frontPage": true,
+          "frontPage": false,
           "kind": "news",
           "section": "sport",
           "everFrontPage": true
@@ -33884,6 +33403,412 @@
       "summarizedAt": "2026-11-26T10:01:28.791Z"
     },
     {
+      "id": "008824d8e348",
+      "slug": "l-om-et-le-levski-sofia-s-affrontent-lors-d-incidents-violents",
+      "title": "De violents incidents opposent des supporters de l'OM et du Levski Sofia au stade Vélodrome en Ligue Europa",
+      "createdAt": "2026-11-26T21:01:22.278Z",
+      "storyDay": "2026-11-26",
+      "articles": [
+        {
+          "id": "2230c3c74d4f",
+          "outletId": "20-minutes",
+          "headline": "Ligue Europa : « Inadmissible »… Colère de la présidente bulgare après les violences lors du match à Marseille",
+          "url": "https://www.20minutes.fr/sport/football/4266166-20261127-ligue-europa-inadmissible-colere-presidente-bulgare-apres-violences-lors-match-marseille?at_medium=display&at_campaign=149",
+          "publishedAt": "2026-11-27T01:31:02.000Z",
+          "imageUrl": "https://img.20mn.fr/l6OhuyLBROa_ZMKCG9gVoCk/1200x768_marseille-france-le-26-novembre-2026-l-olympique-marseille-levski-sofia-s-affronte-dans-les-tribunes-du-stade-cepac-velodrome-des-supporters-bulgares-de-levski-sofia-auraient-ete-agresses-par-des-individus-masques-soupconnes-d-etre-des-supporters-de-marseille-avant-le-match-de-ligue-europa-au-stade-velodrome-des-escortes-policieres-et-des-mesures-de-securite-renforcees-ont-ete-organisees-neirda-prod-sipa-10199-credit-be-neirda-prod-sipa-2611261901",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "11f9b6ceb54c",
+          "outletId": "ouest-france",
+          "headline": "OM - Levski Sofia. La présidente de la Bulgarie regrette une violence « inadmissible » entre les supporters à Marseille",
+          "url": "https://www.ouest-france.fr/sport/football/olympique-de-marseille/om-levski-sofia-la-presidente-de-la-bulgarie-regrette-une-violence-inadmissible-entre-les-supporters-a-marseille-9d1de504-e9ec-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-26T23:01:12.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNTE0NzgwOWU0YmIyYzUwMzJmZjdkMmNmYzRhZWFlNzI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d6ff615a3901e15e0e827a7ef80387462b42e15050a743ab14688039042d0331",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "c7d5be0c8a21",
+          "outletId": "le-figaro",
+          "headline": "Ligue Europa : la présidente de la Bulgarie dénonce une violence «inadmissible» après les affrontements à Marseille",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-la-presidente-de-la-bulgarie-denonce-une-violence-inadmissible-apres-les-affrontements-a-marseille-20261126",
+          "publishedAt": "2026-11-26T22:58:37.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/2992x1683_crop/2026/11/26/a3a3ccb2a50d8cc43f1a473af3682ef65bc6c013b3499a308bc56b9ad862c365.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "07f7887aeb21",
+          "outletId": "le-figaro",
+          "headline": "Ligue Europa : plusieurs supporters bulgares blessés et évacués à l’hôpital… Soirée chaotique à Marseille",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-plusieurs-supporters-bulgares-blesses-et-evacues-a-l-hopital-soiree-chaotique-a-marseille-20261126",
+          "publishedAt": "2026-11-26T22:49:52.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/1845x1207_crop/2026/11/26/cac44571cbb125e25fca860df02ba7ba4b639996b5209f02aefc96c0698df072.jpg",
+          "frontPage": true,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "a4dd7850ae33",
+          "outletId": "bfmtv",
+          "headline": "\"Que plus aucun match de Coupe d’Europe ne soit disputé dans ce stade\": le Levski Sofia demande une lourde sanction contre l'OM après les incidents au Vélodrome",
+          "url": "https://rmcsport.bfmtv.com/football/europa-league/que-plus-aucun-match-de-coupe-d-europe-ne-soit-dispute-dans-ce-stade-le-levski-sofia-demande-une-lourde-sanction-contre-l-om-apres-les-incidents-au-velodrome_AV-202611261037.html",
+          "publishedAt": "2026-11-26T22:43:11.000Z",
+          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/KH4yK3-e9T99TKrAvkT9vNwyBEc=/0x106:2048x1258/800x0/images/Le-match-de-la-5e-journee-de-Ligue-Europa-entre-l-OM-et-le-Levski-Sofia-1-0-a-ete-emaille-par-de-violents-incidents-entre-supporters-en-tribune-26-11-2026-2391485.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "220f6b443f1a",
+          "outletId": "tf1-info",
+          "headline": "Ligue Europa : incidents entre supporters marseillais et bulgares au stade Vélodrome",
+          "url": "https://www.tf1info.fr/justice-faits-divers/ligue-europa-incidents-entre-supporters-marseillais-et-bulgares-au-stade-velodrome-2478444.html",
+          "publishedAt": "2026-11-26T21:53:22.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/682/stade-velodrome-marseille-septembre-2025-e6eecc-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "c20f797afd64",
+          "outletId": "ouest-france",
+          "headline": "Ligue Europa. Mouvement de foule, jets de projectiles… Scènes de violence avant OM - Levski Sofia, des supporters bulgares à l’hôpital",
+          "url": "https://www.ouest-france.fr/sport/football/olympique-de-marseille/ligue-europa-mouvement-de-foule-jets-de-projectiles-scenes-de-violence-entre-supporters-de-lom-et-du-levski-sofia-254beb46-e9c6-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-26T21:24:10.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYzFjZWMzZDVlZjUxMGU3MTJiNzYyOGM3ODZjYzM2OTc?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=e15cf54806bcdc2fe03e79288e7ac50432cab64d84aa93f8cec2af1bcb943c06",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "693f20a765de",
+          "outletId": "ouest-france",
+          "headline": "OM. « On aurait mérité un match nul » assure l’entraîneur du Levski Sofia, qui regrette des incidents « inacceptables pour le football »",
+          "url": "https://www.ouest-france.fr/sport/football/olympique-de-marseille/om-on-aurait-merite-un-match-nul-assure-lentraineur-du-levski-sofia-qui-regrette-des-incidents-inacceptables-pour-le-football-5fa387ac-e9dc-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+          "publishedAt": "2026-11-26T21:12:11.000Z",
+          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMzkyYzVhZTExYmE3ZGZiYmU0NjI5NjcyN2ZkZTQzZDA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9eb3c750b41e9ed1f938f1b71f3e422e3dab8cbbdf1570947e4ad7d13d5ba1ca",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "02679331b905",
+          "outletId": "le-parisien",
+          "headline": "OM-Levski Sofia : gros incidents entre les supporters des deux équipes au Vélodrome, des projectiles et des fumigènes lancés",
+          "url": "https://www.leparisien.fr/sports/football/om-levski-sofia-gros-incidents-entre-les-supporters-des-deux-equipes-au-velodrome-des-projectiles-et-des-fumigenes-lances-26-11-2026-YM4BRLNRVBCMRLSSLHLRWRIHAU.php",
+          "publishedAt": "2026-11-26T21:01:22.278Z",
+          "frontPage": false,
+          "datedAtCollection": true,
+          "kind": "news",
+          "section": "sport"
+        },
+        {
+          "id": "b1536588ce9d",
+          "outletId": "le-figaro",
+          "headline": "Ligue Europa : le coach du Levski Sofia déplore les incidents à Marseille «inacceptables»",
+          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-le-coach-du-levski-sofia-deplore-les-incidents-a-marseille-inacceptables-20261126",
+          "publishedAt": "2026-11-26T20:52:38.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1999_crop/2026/11/26/58a25adad0574eb75620ac0c6c19a366d296f3093d16591d601896fd1a95f9aa.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport",
+          "everFrontPage": true
+        },
+        {
+          "id": "ae02fb62cb64",
+          "outletId": "franceinfo",
+          "headline": "Violents incidents entre supporters de l'OM et du Levski Sofia juste avant la rencontre de Ligue Europa",
+          "url": "https://www.franceinfo.fr/sports/foot/ligue-europa/violents-incidents-entre-supporters-de-l-om-et-du-levski-sofia-juste-avant-la-rencontre-de-ligue-europa_8301924.html#xtor=RSS-3-[lestitres]",
+          "publishedAt": "2026-11-26T18:23:36.000Z",
+          "imageUrl": "https://www.franceinfo.fr/pictures/nki0rZvyHjNIFp7c3waZbmvNHvI/0x279:5315x3268/432x243/filters:format(jpg)/2026/11/26/6b087782917b2523779923.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "sport"
+        }
+      ],
+      "topicId": "dc9480cfbebc",
+      "titledArticleCount": 9,
+      "section": "sport",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1795658400000,
+          "end": 1795662000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795662000000,
+          "end": 1795665600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795665600000,
+          "end": 1795669200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795669200000,
+          "end": 1795672800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795672800000,
+          "end": 1795676400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795676400000,
+          "end": 1795680000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795680000000,
+          "end": 1795683600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795683600000,
+          "end": 1795687200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795687200000,
+          "end": 1795690800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795690800000,
+          "end": 1795694400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795694400000,
+          "end": 1795698000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795698000000,
+          "end": 1795701600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795701600000,
+          "end": 1795705200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795705200000,
+          "end": 1795708800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795708800000,
+          "end": 1795712400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795712400000,
+          "end": 1795716000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795716000000,
+          "end": 1795719600000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795719600000,
+          "end": 1795723200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795723200000,
+          "end": 1795726800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        },
+        {
+          "start": 1795726800000,
+          "end": 1795730400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 3,
+            "droite": 1
+          },
+          "total": 4
+        },
+        {
+          "start": 1795730400000,
+          "end": 1795734000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 2
+          },
+          "total": 3
+        },
+        {
+          "start": 1795734000000,
+          "end": 1795737600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795737600000,
+          "end": 1795741200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795741200000,
+          "end": 1795744800000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        }
+      ],
+      "summaries": {
+        "gauche": [
+          "De violents affrontements ont éclaté entre les supporters de l'Olympique de Marseille et du Levski Sofia juste avant le coup d'envoi de la rencontre de Ligue Europa.",
+          "Des projectiles et des fumigènes ont été massivement envoyés dans les tribunes du stade Vélodrome à quelques minutes de la rencontre."
+        ],
+        "centre": [
+          "La présidente bulgare Iliana Iotova a qualifié d'inadmissible les violences survenues entre les supporters à Marseille.",
+          "Le Levski Sofia a exigé une sanction lourde contre l'OM, demandant que plus aucun match de Coupe d'Europe ne se dispute dans ce stade.",
+          "Onze supporters bulgares ont été blessés, dont cinq évacués à l'hôpital et six soignés sur place par les secours.",
+          "Le club marseillais s'est imposé sur le score d'un but à zéro face au Levski Sofia lors de cette cinquième journée de Ligue Europa."
+        ],
+        "droite": [
+          "Plusieurs supporters bulgares ont été blessés et évacués vers l'hôpital à la suite d'une soirée chaotique au stade Vélodrome.",
+          "L'entraîneur du Levski Sofia a publiquement déploré des incidents inacceptables pour le football avant le début de la rencontre."
+        ]
+      },
+      "differences": [
+        "La gauche se focalise strictement sur la description des affrontements armés de projectiles et de fumigènes dans les tribunes juste avant le coup d'envoi.",
+        "Le centre met en avant le bilan précis des blessés bulgares, l'indignation officielle de la présidence bulgare et la demande de lourdes sanctions formulée par le club adverse.",
+        "La droite privilégie une mise en récit dramatique de la soirée chaotique, en insistant sur l'évacuation hospitalière des supporters et les réactions du technicien adverse."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 9,
+      "summarizedAt": "2026-11-26T23:01:32.824Z"
+    },
+    {
       "id": "dc9480cfbebc",
       "slug": "l-om-s-impose-contre-le-levski-sofia-en-ligue-europa-grace-a",
       "title": "L'OM s'impose contre le Levski Sofia en Ligue Europa malgré un penalty raté d'Amine Gouiri",
@@ -34889,400 +34814,6 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 28,
       "summarizedAt": "2026-11-26T18:01:24.887Z"
-    },
-    {
-      "id": "008824d8e348",
-      "slug": "l-om-et-le-levski-sofia-s-affrontent-lors-d-incidents-violents",
-      "title": "De violents incidents opposent des supporters de l'OM et du Levski Sofia au stade Vélodrome en Ligue Europa",
-      "createdAt": "2026-11-26T21:01:22.278Z",
-      "storyDay": "2026-11-26",
-      "articles": [
-        {
-          "id": "11f9b6ceb54c",
-          "outletId": "ouest-france",
-          "headline": "OM - Levski Sofia. La présidente de la Bulgarie regrette une violence « inadmissible » entre les supporters à Marseille",
-          "url": "https://www.ouest-france.fr/sport/football/olympique-de-marseille/om-levski-sofia-la-presidente-de-la-bulgarie-regrette-une-violence-inadmissible-entre-les-supporters-a-marseille-9d1de504-e9ec-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-26T23:01:12.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNTE0NzgwOWU0YmIyYzUwMzJmZjdkMmNmYzRhZWFlNzI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=d6ff615a3901e15e0e827a7ef80387462b42e15050a743ab14688039042d0331",
-          "frontPage": true,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "c7d5be0c8a21",
-          "outletId": "le-figaro",
-          "headline": "Ligue Europa : la présidente de la Bulgarie dénonce une violence «inadmissible» après les affrontements à Marseille",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-la-presidente-de-la-bulgarie-denonce-une-violence-inadmissible-apres-les-affrontements-a-marseille-20261126",
-          "publishedAt": "2026-11-26T22:58:37.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/2992x1683_crop/2026/11/26/a3a3ccb2a50d8cc43f1a473af3682ef65bc6c013b3499a308bc56b9ad862c365.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "07f7887aeb21",
-          "outletId": "le-figaro",
-          "headline": "Ligue Europa : plusieurs supporters bulgares blessés et évacués à l’hôpital… Soirée chaotique à Marseille",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-plusieurs-supporters-bulgares-blesses-et-evacues-a-l-hopital-soiree-chaotique-a-marseille-20261126",
-          "publishedAt": "2026-11-26T22:49:52.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/1845x1207_crop/2026/11/26/cac44571cbb125e25fca860df02ba7ba4b639996b5209f02aefc96c0698df072.jpg",
-          "frontPage": true,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "a4dd7850ae33",
-          "outletId": "bfmtv",
-          "headline": "\"Que plus aucun match de Coupe d’Europe ne soit disputé dans ce stade\": le Levski Sofia demande une lourde sanction contre l'OM après les incidents au Vélodrome",
-          "url": "https://rmcsport.bfmtv.com/football/europa-league/que-plus-aucun-match-de-coupe-d-europe-ne-soit-dispute-dans-ce-stade-le-levski-sofia-demande-une-lourde-sanction-contre-l-om-apres-les-incidents-au-velodrome_AV-202611261037.html",
-          "publishedAt": "2026-11-26T22:43:11.000Z",
-          "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/KH4yK3-e9T99TKrAvkT9vNwyBEc=/0x106:2048x1258/800x0/images/Le-match-de-la-5e-journee-de-Ligue-Europa-entre-l-OM-et-le-Levski-Sofia-1-0-a-ete-emaille-par-de-violents-incidents-entre-supporters-en-tribune-26-11-2026-2391485.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "220f6b443f1a",
-          "outletId": "tf1-info",
-          "headline": "Ligue Europa : incidents entre supporters marseillais et bulgares au stade Vélodrome",
-          "url": "https://www.tf1info.fr/justice-faits-divers/ligue-europa-incidents-entre-supporters-marseillais-et-bulgares-au-stade-velodrome-2478444.html",
-          "publishedAt": "2026-11-26T21:53:22.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/682/stade-velodrome-marseille-septembre-2025-e6eecc-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "c20f797afd64",
-          "outletId": "ouest-france",
-          "headline": "Ligue Europa. Mouvement de foule, jets de projectiles… Scènes de violence avant OM - Levski Sofia, des supporters bulgares à l’hôpital",
-          "url": "https://www.ouest-france.fr/sport/football/olympique-de-marseille/ligue-europa-mouvement-de-foule-jets-de-projectiles-scenes-de-violence-entre-supporters-de-lom-et-du-levski-sofia-254beb46-e9c6-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-26T21:24:10.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExYzFjZWMzZDVlZjUxMGU3MTJiNzYyOGM3ODZjYzM2OTc?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=e15cf54806bcdc2fe03e79288e7ac50432cab64d84aa93f8cec2af1bcb943c06",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "693f20a765de",
-          "outletId": "ouest-france",
-          "headline": "OM. « On aurait mérité un match nul » assure l’entraîneur du Levski Sofia, qui regrette des incidents « inacceptables pour le football »",
-          "url": "https://www.ouest-france.fr/sport/football/olympique-de-marseille/om-on-aurait-merite-un-match-nul-assure-lentraineur-du-levski-sofia-qui-regrette-des-incidents-inacceptables-pour-le-football-5fa387ac-e9dc-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-26T21:12:11.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExMzkyYzVhZTExYmE3ZGZiYmU0NjI5NjcyN2ZkZTQzZDA?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=9eb3c750b41e9ed1f938f1b71f3e422e3dab8cbbdf1570947e4ad7d13d5ba1ca",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "02679331b905",
-          "outletId": "le-parisien",
-          "headline": "OM-Levski Sofia : gros incidents entre les supporters des deux équipes au Vélodrome, des projectiles et des fumigènes lancés",
-          "url": "https://www.leparisien.fr/sports/football/om-levski-sofia-gros-incidents-entre-les-supporters-des-deux-equipes-au-velodrome-des-projectiles-et-des-fumigenes-lances-26-11-2026-YM4BRLNRVBCMRLSSLHLRWRIHAU.php",
-          "publishedAt": "2026-11-26T21:01:22.278Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "sport"
-        },
-        {
-          "id": "b1536588ce9d",
-          "outletId": "le-figaro",
-          "headline": "Ligue Europa : le coach du Levski Sofia déplore les incidents à Marseille «inacceptables»",
-          "url": "https://www.lefigaro.fr/sports/football/ligue-europa/ligue-europa-le-coach-du-levski-sofia-deplore-les-incidents-a-marseille-inacceptables-20261126",
-          "publishedAt": "2026-11-26T20:52:38.000Z",
-          "imageUrl": "https://i.f1g.fr/media/cms/3000x1999_crop/2026/11/26/58a25adad0574eb75620ac0c6c19a366d296f3093d16591d601896fd1a95f9aa.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport",
-          "everFrontPage": true
-        },
-        {
-          "id": "ae02fb62cb64",
-          "outletId": "franceinfo",
-          "headline": "Violents incidents entre supporters de l'OM et du Levski Sofia juste avant la rencontre de Ligue Europa",
-          "url": "https://www.franceinfo.fr/sports/foot/ligue-europa/violents-incidents-entre-supporters-de-l-om-et-du-levski-sofia-juste-avant-la-rencontre-de-ligue-europa_8301924.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-26T18:23:36.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/nki0rZvyHjNIFp7c3waZbmvNHvI/0x279:5315x3268/432x243/filters:format(jpg)/2026/11/26/6b087782917b2523779923.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "sport"
-        }
-      ],
-      "topicId": "dc9480cfbebc",
-      "titledArticleCount": 9,
-      "section": "sport",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1795651200000,
-          "end": 1795654800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795654800000,
-          "end": 1795658400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795658400000,
-          "end": 1795662000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795662000000,
-          "end": 1795665600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795665600000,
-          "end": 1795669200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795669200000,
-          "end": 1795672800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795672800000,
-          "end": 1795676400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795676400000,
-          "end": 1795680000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795680000000,
-          "end": 1795683600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795683600000,
-          "end": 1795687200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795687200000,
-          "end": 1795690800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795690800000,
-          "end": 1795694400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795694400000,
-          "end": 1795698000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795698000000,
-          "end": 1795701600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795701600000,
-          "end": 1795705200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795705200000,
-          "end": 1795708800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795708800000,
-          "end": 1795712400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795712400000,
-          "end": 1795716000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795716000000,
-          "end": 1795719600000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795719600000,
-          "end": 1795723200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795723200000,
-          "end": 1795726800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795726800000,
-          "end": 1795730400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 3,
-            "droite": 1
-          },
-          "total": 4
-        },
-        {
-          "start": 1795730400000,
-          "end": 1795734000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 2
-          },
-          "total": 3
-        },
-        {
-          "start": 1795734000000,
-          "end": 1795737600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "De violents affrontements ont éclaté entre les supporters de l'Olympique de Marseille et du Levski Sofia juste avant le coup d'envoi de la rencontre de Ligue Europa.",
-          "Des projectiles et des fumigènes ont été massivement envoyés dans les tribunes du stade Vélodrome à quelques minutes de la rencontre."
-        ],
-        "centre": [
-          "La présidente bulgare Iliana Iotova a qualifié d'inadmissible les violences survenues entre les supporters à Marseille.",
-          "Le Levski Sofia a exigé une sanction lourde contre l'OM, demandant que plus aucun match de Coupe d'Europe ne se dispute dans ce stade.",
-          "Onze supporters bulgares ont été blessés, dont cinq évacués à l'hôpital et six soignés sur place par les secours.",
-          "Le club marseillais s'est imposé sur le score d'un but à zéro face au Levski Sofia lors de cette cinquième journée de Ligue Europa."
-        ],
-        "droite": [
-          "Plusieurs supporters bulgares ont été blessés et évacués vers l'hôpital à la suite d'une soirée chaotique au stade Vélodrome.",
-          "L'entraîneur du Levski Sofia a publiquement déploré des incidents inacceptables pour le football avant le début de la rencontre."
-        ]
-      },
-      "differences": [
-        "La gauche se focalise strictement sur la description des affrontements armés de projectiles et de fumigènes dans les tribunes juste avant le coup d'envoi.",
-        "Le centre met en avant le bilan précis des blessés bulgares, l'indignation officielle de la présidence bulgare et la demande de lourdes sanctions formulée par le club adverse.",
-        "La droite privilégie une mise en récit dramatique de la soirée chaotique, en insistant sur l'évacuation hospitalière des supporters et les réactions du technicien adverse."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 9,
-      "summarizedAt": "2026-11-26T23:01:32.824Z"
     },
     {
       "id": "99d935058f75",
@@ -36652,351 +36183,6 @@
       "summarizedAt": "2026-11-26T16:01:27.846Z"
     },
     {
-      "id": "749866050dc4",
-      "slug": "brad-pitt-et-angelina-jolie-terminent-leur-bataille-judiciaire",
-      "title": "Brad Pitt et Angelina Jolie mettent fin à leur bataille judiciaire sur le domaine de Miraval après dix ans",
-      "createdAt": "2026-11-26T04:01:27.624Z",
-      "storyDay": "2026-11-26",
-      "articles": [
-        {
-          "id": "c94152996a61",
-          "outletId": "franceinfo",
-          "headline": "Château de Miraval : Angelina Jolie et Brad Pitt se sont enfin dit \"oui\" après une longue bataille judiciaire",
-          "url": "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/var/brignoles/chateau-de-miraval-brad-et-angelina-se-sont-enfin-dit-oui-apres-une-longue-bataille-judiciaire-3456275.html#xtor=RSS-3-[lestitres]",
-          "publishedAt": "2026-11-26T12:44:54.000Z",
-          "imageUrl": "https://www.franceinfo.fr/pictures/Jo-SSSk24jQ_MhFZwkC7bdlPRMU/432x243/filters:format(jpg)/2026/11/26/6b0810604cc7d049749198.jpg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "b660406f9369",
-          "outletId": "tf1-info",
-          "headline": "Dix ans après leur séparation, Brad Pitt et Angelina Jolie annoncent la fin de leur bataille judiciaire",
-          "url": "https://www.tf1info.fr/culture/dix-ans-apres-leur-separation-brad-pitt-et-angelina-jolie-annoncent-la-fin-de-leur-bataille-judiciaire-2478310.html",
-          "publishedAt": "2026-11-26T11:57:08.000Z",
-          "imageUrl": "https://photos.tf1info.fr/images/1024/814/angelina-jolie-brad-pitt-1-29079b-0@1x.jpeg",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "7f1b366b9bd9",
-          "outletId": "le-parisien",
-          "headline": "Brad Pitt et Angelina Jolie parviennent à un accord sur le château Miraval, leur propriété du Var, après 10 ans de bataille judiciaire",
-          "url": "https://www.leparisien.fr/culture-loisirs/brad-pitt-et-angelina-jolie-parviennent-a-un-accord-sur-le-chateau-miraval-leur-propriete-du-var-apres-10-ans-de-bataille-judiciaire-26-11-2026-ABOLN3FGX5GNZOBV43MUGRUDRE.php",
-          "publishedAt": "2026-11-26T07:01:22.656Z",
-          "frontPage": false,
-          "datedAtCollection": true,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "618153a5a793",
-          "outletId": "cnews",
-          "headline": "Brad Pitt et Angelina Jolie règlent enfin la bataille judiciaire autour de leur domaine viticole de Miraval",
-          "url": "https://www.cnews.fr/divertissement/2026-11-26/brad-pitt-et-angelina-jolie-reglent-enfin-la-bataille-judiciaire-autour",
-          "publishedAt": "2026-11-26T06:50:05.000Z",
-          "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/2026-11-17t050339z_1744151273_rc2epoaed283_rtrmadp_3_film-cliff-booth-premiere-taille1200_6b07d04b8113c.jpg?itok=ib449WSV",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture"
-        },
-        {
-          "id": "ac78d7b7ea17",
-          "outletId": "ouest-france",
-          "headline": "Brad Pitt et Angelina Jolie mettent fin à leur âpre bataille judiciaire autour d’un domaine viticole français",
-          "url": "https://www.ouest-france.fr/culture/people/brad-pitt-et-angelina-jolie-mettent-fin-a-leur-apre-bataille-judiciaire-autour-dun-domaine-viticole-francais-93c9ed62-e92a-11f1-86c1-70195b4d2e52?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-          "publishedAt": "2026-11-26T03:43:02.000Z",
-          "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZTcyYmNkNWU3OWY3YTYzNjI5MWNhZTEzNGI0MGFkZjk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=cdc8e79f4a60a411e7a6392288a131151c05b368c806900e53678f8e6de75093",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture",
-          "everFrontPage": true
-        },
-        {
-          "id": "c495fa59d76e",
-          "outletId": "20-minutes",
-          "headline": "Fin du combat judiciaire entre Brad Pitt et Angelina Jolie sur un domaine viticole français",
-          "url": "https://www.20minutes.fr/arts-stars/people/4265835-20261126-fin-combat-judiciaire-entre-brad-pitt-angelina-jolie-domaine-viticole-francais?at_medium=display&at_campaign=149",
-          "publishedAt": "2026-11-26T01:26:04.000Z",
-          "imageUrl": "https://img.20mn.fr/sEHdIQiET3SSJgteTGt2uSk/1200x768_11-aout-2020-angelina-jolie-demande-la-destitution-d-un-juge-prive-dans-son-affaire-de-divorce-en-cours-contre-son-ancien-mari-brad-pitt-photo-d-archive-de-zz-jackson-lee-star-max-ipx-2006-12-11-06-angelina-jolie-et-brad-pitt-lors-de-la-premiere-de-the-good-shepherd-new-york-ipx-20225107509000-2008120501",
-          "frontPage": false,
-          "kind": "news",
-          "section": "culture",
-          "everFrontPage": true
-        }
-      ],
-      "topicId": "749866050dc4",
-      "titledArticleCount": 6,
-      "section": "culture",
-      "everInEdition": true,
-      "activity": [
-        {
-          "start": 1795611600000,
-          "end": 1795615200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795615200000,
-          "end": 1795618800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795618800000,
-          "end": 1795622400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795622400000,
-          "end": 1795626000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795626000000,
-          "end": 1795629600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795629600000,
-          "end": 1795633200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795633200000,
-          "end": 1795636800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795636800000,
-          "end": 1795640400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795640400000,
-          "end": 1795644000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795644000000,
-          "end": 1795647600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795647600000,
-          "end": 1795651200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795651200000,
-          "end": 1795654800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795654800000,
-          "end": 1795658400000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795658400000,
-          "end": 1795662000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795662000000,
-          "end": 1795665600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795665600000,
-          "end": 1795669200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795669200000,
-          "end": 1795672800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795672800000,
-          "end": 1795676400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795676400000,
-          "end": 1795680000000,
-          "counts": {
-            "gauche": 0,
-            "centre": 1,
-            "droite": 0
-          },
-          "total": 1
-        },
-        {
-          "start": 1795680000000,
-          "end": 1795683600000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795683600000,
-          "end": 1795687200000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795687200000,
-          "end": 1795690800000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 0
-        },
-        {
-          "start": 1795690800000,
-          "end": 1795694400000,
-          "counts": {
-            "gauche": 0,
-            "centre": 0,
-            "droite": 1
-          },
-          "total": 1
-        },
-        {
-          "start": 1795694400000,
-          "end": 1795698000000,
-          "counts": {
-            "gauche": 1,
-            "centre": 0,
-            "droite": 0
-          },
-          "total": 1
-        }
-      ],
-      "summaries": {
-        "gauche": [
-          "Angelina Jolie et Brad Pitt ont annoncé la résolution de leur litige concernant la propriété du château de Miraval dans le Var.",
-          "Cette querelle autour de la possession du domaine constituait l'un des principaux sujets de tension de leur instance de divorce."
-        ],
-        "centre": [
-          "Brad Pitt et Angelina Jolie ont conclu un accord au terme d'une décennie de procédures judiciaires concernant le domaine varois de Miraval.",
-          "Le couple d'acteurs hollywoodiens met ainsi fin à une longue période de conflits juridiques liés à leur ancienne propriété viticole française."
-        ],
-        "droite": [
-          "Les deux acteurs ont trouvé un terrain d'entente confidentiel après des années de procédures judiciaires sur la gestion de leur domaine viticole du Var.",
-          "Un communiqué officiel indique que cet accord amiable a été conclu en prenant en compte l'intérêt de la famille."
-        ]
-      },
-      "differences": [
-        "La gauche met l'accent sur le rôle central de cette propriété varoise dans les tensions du divorce du couple.",
-        "Le centre dresse un bilan chronologique en insistant sur la durée totale de dix ans de cette procédure judiciaire.",
-        "La droite privilégie l'analyse des aspects confidentiels et familiaux de cet accord amiable conclu par les deux acteurs."
-      ],
-      "promptVersion": "sum-7",
-      "summarizedArticleCount": 6,
-      "summarizedAt": "2026-11-26T13:01:31.766Z"
-    },
-    {
       "id": "42d2906b174b",
       "slug": "eric-zemmour-annonce-sa-derniere-campagne-presidentielle-lors",
       "title": "Éric Zemmour annonce sa dernière campagne présidentielle lors de l'émission Objectif Élysée 2027",
@@ -37362,6 +36548,341 @@
       "promptVersion": "sum-7",
       "summarizedArticleCount": 8,
       "summarizedAt": "2026-11-27T01:01:25.249Z"
+    },
+    {
+      "id": "308175a57e6e",
+      "slug": "l-afp-subit-une-cyberattaque-qui-rend-sa-plateforme-inaccessible",
+      "title": "L'Agence France-Presse subit une cyberattaque qui paralyse l'une de ses plateformes",
+      "createdAt": "2026-11-26T19:01:26.369Z",
+      "storyDay": "2026-11-26",
+      "articles": [
+        {
+          "id": "5786610c1931",
+          "outletId": "tf1-info",
+          "headline": "L'Agence France-Presse victime d'une cyberattaque, l'une de ses plateformes temporairement inaccessible",
+          "url": "https://www.tf1info.fr/justice-faits-divers/l-agence-france-presse-victime-d-une-cyberattaque-l-une-de-ses-plateformes-temporairement-inaccessible-2478443.html",
+          "publishedAt": "2026-11-26T22:14:59.000Z",
+          "imageUrl": "https://photos.tf1info.fr/images/1024/683/afp-logo-twitter-x-agence-france-presse-cbdb11-0@1x.jpeg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "16ffe79509e2",
+          "outletId": "liberation",
+          "headline": "L’Agence France Presse ciblée par une cyberattaque, l’une de ses plateformes temporairement inaccessible",
+          "url": "https://www.liberation.fr/economie/medias/lagence-france-presse-ciblee-par-une-cyberattaque-lune-de-ses-plateformes-temporairement-inaccessible-20261126_N6Z3CSEIZBDLRANBZAR7T6UELY/",
+          "publishedAt": "2026-11-26T20:49:49.000Z",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        },
+        {
+          "id": "ac39ed945382",
+          "outletId": "le-monde",
+          "headline": "L’Agence France-Presse dit avoir été visée par une cyberattaque qui paralyse l’une de ses plateformes de mise à disposition des dépêches et des images",
+          "url": "https://www.lemonde.fr/actualite-medias/article/2026/11/26/l-afp-dit-avoir-ete-visee-par-une-cyberattaque-qui-paralyse-l-une-de-ses-plateformes-de-mise-a-disposition-des-depeches-et-des-images_6815596_3236.html",
+          "publishedAt": "2026-11-26T19:38:05.000Z",
+          "imageUrl": "https://img.lemde.fr/2026/11/26/702/0/4596/2298/644/322/60/0/b2d3fff_upload-1-ndh5xgv3lpd6-2018-08-06t000000z-989305111-rc151674aea0-rtrmadp-3-france-afp.JPG",
+          "frontPage": true,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        },
+        {
+          "id": "540ba092e8d9",
+          "outletId": "le-figaro",
+          "headline": "L'Agence France-Presse victime d'une cyberattaque, sa plateforme de photos et vidéos temporairement inaccessible",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/l-agence-france-presse-victime-d-une-cyberattaque-sa-plateforme-de-photos-et-videos-temporairement-inaccessible-20261126",
+          "publishedAt": "2026-11-26T18:52:36.000Z",
+          "imageUrl": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/11/26/0d2bd20521f648ee84867298f9edd5fa86f19adcd08bc221844ea1bd368b3fe9.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science",
+          "everFrontPage": true
+        },
+        {
+          "id": "1f0d82883415",
+          "outletId": "la-croix",
+          "headline": "L’AFP victime d’une cyberattaque, l’une de ses plateformes temporairement inaccessible",
+          "url": "https://www.la-croix.com/societe/l-afp-victime-dune-cyberattaque-lune-de-ses-plateformes-temporairement-inaccessible-20261126",
+          "publishedAt": "2026-11-26T18:51:14.000Z",
+          "imageUrl": "https://i.la-croix.com/x/2026/11/26/2600047-l-agence-france-presse-a-ete-victime-dune-cyberatt.jpg",
+          "frontPage": false,
+          "kind": "news",
+          "section": "science"
+        }
+      ],
+      "topicId": "308175a57e6e",
+      "titledArticleCount": 5,
+      "section": "science",
+      "everInEdition": true,
+      "activity": [
+        {
+          "start": 1795647600000,
+          "end": 1795651200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795651200000,
+          "end": 1795654800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795654800000,
+          "end": 1795658400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795658400000,
+          "end": 1795662000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795662000000,
+          "end": 1795665600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795665600000,
+          "end": 1795669200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795669200000,
+          "end": 1795672800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795672800000,
+          "end": 1795676400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795676400000,
+          "end": 1795680000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795680000000,
+          "end": 1795683600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795683600000,
+          "end": 1795687200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795687200000,
+          "end": 1795690800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795690800000,
+          "end": 1795694400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795694400000,
+          "end": 1795698000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795698000000,
+          "end": 1795701600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795701600000,
+          "end": 1795705200000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795705200000,
+          "end": 1795708800000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795708800000,
+          "end": 1795712400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795712400000,
+          "end": 1795716000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795716000000,
+          "end": 1795719600000,
+          "counts": {
+            "gauche": 0,
+            "centre": 1,
+            "droite": 1
+          },
+          "total": 2
+        },
+        {
+          "start": 1795719600000,
+          "end": 1795723200000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795723200000,
+          "end": 1795726800000,
+          "counts": {
+            "gauche": 1,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 1
+        },
+        {
+          "start": 1795726800000,
+          "end": 1795730400000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 0
+          },
+          "total": 0
+        },
+        {
+          "start": 1795730400000,
+          "end": 1795734000000,
+          "counts": {
+            "gauche": 0,
+            "centre": 0,
+            "droite": 1
+          },
+          "total": 1
+        }
+      ],
+      "summaries": {
+        "gauche": [
+          "L'Agence France-Presse a subi une cyberattaque dans la nuit de mercredi à jeudi.",
+          "La plateforme AFP Forum, qui regroupe les photos et les dépêches, a été paralysée.",
+          "L'agence ne dispose d'aucun élément sur l'identité des auteurs de cette intrusion."
+        ],
+        "centre": [
+          "L'Agence France-Presse a été visée par une cyberattaque touchant sa plateforme AFP Forum.",
+          "Le site est resté inaccessible ce jeudi soir suite à l'incident survenu dans la nuit.",
+          "La direction de l'agence indique qu'aucun élément n'est disponible sur l'identité des auteurs."
+        ],
+        "droite": [
+          "L'Agence France-Presse a fait l'objet d'une cyberattaque dans la nuit de mercredi à jeudi.",
+          "La plateforme AFP Forum, dédiée aux photos et aux vidéos, a dû être désactivée temporairement."
+        ]
+      },
+      "differences": [
+        "Le camp gauche insiste sur le volume des contenus touchés et qualifie l'outil de « plus grosse agence de presse française ».",
+        "Le camp centre adopte une tonalité neutre et synthétique en se focalisant sur l'inaccessibilité prolongée du site.",
+        "Le camp droite met en avant la nature technique de l'attaque en précisant la désactivation de la plateforme multimédia."
+      ],
+      "promptVersion": "sum-7",
+      "summarizedArticleCount": 5,
+      "summarizedAt": "2026-11-27T02:01:22.469Z"
     }
   ]
 }

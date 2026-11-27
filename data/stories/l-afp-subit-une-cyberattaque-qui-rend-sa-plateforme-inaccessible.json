@@ -307,5 +307,29 @@
       },
       "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "L'Agence France-Presse a subi une cyberattaque dans la nuit de mercredi à jeudi.",
+      "La plateforme AFP Forum, qui regroupe les photos et les dépêches, a été paralysée.",
+      "L'agence ne dispose d'aucun élément sur l'identité des auteurs de cette intrusion."
+    ],
+    "centre": [
+      "L'Agence France-Presse a été visée par une cyberattaque touchant sa plateforme AFP Forum.",
+      "Le site est resté inaccessible ce jeudi soir suite à l'incident survenu dans la nuit.",
+      "La direction de l'agence indique qu'aucun élément n'est disponible sur l'identité des auteurs."
+    ],
+    "droite": [
+      "L'Agence France-Presse a fait l'objet d'une cyberattaque dans la nuit de mercredi à jeudi.",
+      "La plateforme AFP Forum, dédiée aux photos et aux vidéos, a dû être désactivée temporairement."
+    ]
+  },
+  "differences": [
+    "Le camp gauche insiste sur le volume des contenus touchés et qualifie l'outil de « plus grosse agence de presse française ».",
+    "Le camp centre adopte une tonalité neutre et synthétique en se focalisant sur l'inaccessibilité prolongée du site.",
+    "Le camp droite met en avant la nature technique de l'attaque en précisant la désactivation de la plateforme multimédia."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-27T02:01:22.469Z"
 }
