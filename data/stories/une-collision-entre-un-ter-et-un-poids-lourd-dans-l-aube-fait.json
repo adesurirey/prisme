@@ -6,16 +6,49 @@
   "storyDay": "2026-11-27",
   "articles": [
     {
+      "id": "80407e2f560e",
+      "outletId": "le-monde",
+      "headline": "Dans l’Aube, une collision entre un TER et un poids lourd fait treize blessés légers",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/27/dans-l-aube-une-collision-entre-un-ter-et-un-poids-lourd-fait-treize-blesses-legers_6815854_3224.html",
+      "publishedAt": "2026-11-27T11:39:40.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/27/153/0/623/311/644/322/60/0/d5899bd_upload-1-xwi6puukaedt-capture-d-ecran-du-2026-11-27-12-27-35.png",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
+      "id": "cc97b14090f6",
+      "outletId": "franceinfo",
+      "headline": "Un accident entre un train et un poids lourd fait 13 blessés légers près de Troyes",
+      "url": "https://www.franceinfo.fr/economie/transports/un-accident-entre-un-train-et-un-poids-lourd-fait-13-blesses-legers-pres-de-troyes_8302830.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-27T11:02:50.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/_rXWGX5uvt66TNbktYuUySu9HKo/0x258:4961x3048/432x243/filters:format(jpg)/2026/11/27/6b095b55688aa555538034.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
+    },
+    {
       "id": "796df3d21f66",
       "outletId": "ouest-france",
       "headline": "Une collision entre un TER et un poids lourd fait treize blessés légers près de Troyes",
       "url": "https://www.ouest-france.fr/faits-divers/accidents/une-collision-entre-un-ter-et-un-poids-lourd-fait-treize-blesses-legers-pres-de-troyes-8b16079c-ea4b-11f1-bb2d-c71dc7920c2a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-27T11:01:13.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExNzYzZjJkMWQyYzdmMjQxODMxYTIyYTEyY2QwNWUwZDQ?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=b68e0feec62144b895caf7fd525b48c2c97ef139a0107458e72d4f446dce6e97",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "misc",
       "everFrontPage": true
+    },
+    {
+      "id": "e9cbdc30ed4b",
+      "outletId": "europe-1",
+      "headline": "Aube : une collision entre un TER et un poids lourd fait 13 blessés légers",
+      "url": "https://www.europe1.fr/faits-divers/aube-une-collision-entre-un-ter-et-un-poids-lourd-fait-13-blesses-legers-1245967?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "publishedAt": "2026-11-27T10:59:00.000Z",
+      "imageUrl": "https://static.europe1.fr/var/europe1/storage/media/image/2026/11/27/11/afp_20260505_a9vp3k3_v1_highres_francetransportrailway_1_6b096282424ba.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "misc"
     },
     {
       "id": "9275e71dae68",
@@ -52,7 +85,7 @@
     }
   ],
   "topicId": "a81dd3fe2c4a",
-  "titledArticleCount": 4,
+  "titledArticleCount": 7,
   "section": "misc",
   "everInEdition": true,
   "activity": [
@@ -282,19 +315,43 @@
       "counts": {
         "gauche": 0,
         "centre": 1,
-        "droite": 2
+        "droite": 3
       },
-      "total": 3
+      "total": 4
     },
     {
       "start": 1795777200000,
       "end": 1795780800000,
       "counts": {
-        "gauche": 0,
+        "gauche": 2,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 3
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Treize personnes ont été légèrement blessées dans une collision survenue un vendredi matin sur une plateforme de travaux de la SNCF dans l'agglomération de Troyes.",
+      "L'accident s'est produit entre un train régional et un poids lourd, impliquant les conducteurs des deux véhicules qui figurent parmi les blessés."
+    ],
+    "centre": [
+      "Une collision entre un train régional et un poids lourd a fait treize blessés légers un vendredi matin sur une zone de travaux de la SNCF près de Troyes.",
+      "Les conducteurs du train et du camion ont tous deux été blessés, tandis que la SNCF a confirmé que la rame n'avait pas déraillé et que les victimes avaient été transportées à l'hôpital de Troyes."
+    ],
+    "droite": [
+      "Un TER à destination de Paris-Est et un poids lourd sont entrés en collision à Barberey-Saint-Sulpice, près de Troyes, sur une plateforme de travaux de la SNCF.",
+      "Le bilan s'élève à treize blessés légers, incluant le conducteur du train et celui du camion, sans que la rame ne déraille selon la SNCF.",
+      "L'événement a provoqué des perturbations sur la ligne vers Paris-Est toute la journée, allant jusqu'à une interruption du trafic jusqu'en soirée selon les précisions du Figaro.",
+      "TF1 Info précise que quatre-vingt-dix passagers se trouvaient à bord au moment où le train a heurté la remorque du poids lourd lors d'une manœuvre."
+    ]
+  },
+  "differences": [
+    "La gauche se focalise strictement sur le bilan humain immédiat de treize blessés légers et l'implication des deux conducteurs près de Troyes.",
+    "Le centre élargit le compte rendu aux précisions techniques de la SNCF concernant l'absence de déraillements et la prise en charge hospitalière des victimes.",
+    "La droite détaille plus amplement le contexte logistique et les conséquences sur le trafic, en mentionnant le nombre de passagers à bord, le lieu précis de Barberey-Saint-Sulpice et les perturbations prolongées sur la liaison vers Paris-Est."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-27T12:01:33.484Z"
 }
