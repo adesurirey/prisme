@@ -6,6 +6,51 @@
   "storyDay": "2026-11-27",
   "articles": [
     {
+      "id": "53ed544467f4",
+      "outletId": "le-monde",
+      "headline": "La France entre en récession après deux trimestres de recul du PIB",
+      "url": "https://www.lemonde.fr/economie/article/2026/11/27/la-france-entre-en-recession-apres-deux-trimestres-de-recul-du-pib_6815824_3234.html",
+      "publishedAt": "2026-11-27T09:25:50.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/09/07/256/0/3000/1500/644/322/60/0/e45ecc7_upload-1-tmd9evrzfub3-me-dia.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
+      "id": "4ecd686390ea",
+      "outletId": "lopinion",
+      "headline": "Le PIB recule plus que prévu, la France entre en récession",
+      "url": "https://www.lopinion.fr/economie/le-pib-recule-plus-que-prevu-la-france-entre-en-recession",
+      "publishedAt": "2026-11-27T09:16:22.000Z",
+      "imageUrl": "https://beymedias.brightspotcdn.com/a1/7a/f67a94724ba99296e8126a3d4de5/sipa-01269416-000031-1.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "2d3206265f5b",
+      "outletId": "la-croix",
+      "headline": "La France en récession : le PIB a de nouveau reculé au troisième trimestre de 0,2 %",
+      "url": "https://www.la-croix.com/france-le-pib-recule-de-02-au-troisieme-trimestre-apres-revision-a-la-baisse-20261127",
+      "publishedAt": "2026-11-27T09:07:44.000Z",
+      "imageUrl": "https://i.la-croix.com/x/2026/05/13/2434924-pour-la-premiere-fois-en-cinq-ans-le-taux-de-choma.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "2e1410b66bd2",
+      "outletId": "cnews",
+      "headline": "Recul du PIB : la France est en légère récession depuis le deuxième trimestre",
+      "url": "https://www.cnews.fr/france/2026-11-27/recul-du-pib-la-france-est-en-legere-recession-depuis-le-deuxieme-trimestre",
+      "publishedAt": "2026-11-27T08:47:13.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/insee_6b0944291a42b.jpg?itok=K84O5MWE",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "82443b60efcd",
       "outletId": "le-figaro",
       "headline": "La France est en récession depuis le deuxième trimestre, selon l’Insee",
@@ -41,20 +86,10 @@
     }
   ],
   "topicId": "5f307f58a6b4",
-  "titledArticleCount": 3,
+  "titledArticleCount": 7,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795683600000,
-      "end": 1795687200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795687200000,
       "end": 1795690800000,
@@ -281,9 +316,43 @@
       "counts": {
         "gauche": 0,
         "centre": 0,
-        "droite": 2
+        "droite": 3
       },
-      "total": 2
+      "total": 3
+    },
+    {
+      "start": 1795770000000,
+      "end": 1795773600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 1,
+        "droite": 1
+      },
+      "total": 3
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "L'Insee a révisé à la baisse le produit intérieur brut du troisième trimestre, qui recule de 0,2 %.",
+      "La France enregistre deux trimestres consécutifs de contraction, ce qui correspond à la définition technique d'une récession.",
+      "franceinfo ajoute que l'inflation a ralenti à 2,9 % sur un an en novembre."
+    ],
+    "centre": [
+      "La révision de l'Insee confirme que le produit intérieur brut a baissé de 0,2 % au troisième trimestre.",
+      "Cette contraction place l'économie française en situation de récession technique."
+    ],
+    "droite": [
+      "Le produit intérieur brut a diminué de 0,2 % au troisième trimestre selon l'Insee.",
+      "La France est en récession technique depuis le deuxième trimestre en raison de la révision des données.",
+      "L'acquis de croissance s'établit à 0,1 %, ce qui rend peu probable l'objectif gouvernemental de 0,5 % pour l'année."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la confirmation des deux trimestres consécutifs de recul et intègre les données sur le ralentissement de l'inflation.",
+    "Le centre livre un compte rendu neutre et strictement centré sur les chiffres de la révision de l'Insee.",
+    "La droite insiste particulièrement sur les conséquences budgétaires de l'acquis de croissance à 0,1 %, soulignant l'écart avec les prévisions du gouvernement."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-27T10:01:33.737Z"
 }

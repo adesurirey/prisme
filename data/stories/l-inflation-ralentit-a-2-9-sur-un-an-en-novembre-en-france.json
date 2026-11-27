@@ -6,13 +6,36 @@
   "storyDay": "2026-11-27",
   "articles": [
     {
+      "id": "5b3e44efbe01",
+      "outletId": "le-figaro",
+      "headline": "Ralentissement de l’inflation en France : visualisez l’évolution des prix sur un an",
+      "url": "https://www.lefigaro.fr/conjoncture/visualisez-l-inflation-en-france-sur-les-douze-derniers-mois-20261030",
+      "publishedAt": "2026-11-27T09:57:16.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/30/141de42334fc8cc4901a927768cf05c5cc53d2b32e98a22919aa8d551b9ff668.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
+      "id": "aa9784e23d90",
+      "outletId": "tf1-info",
+      "headline": "L'économie française en récession \"technique\" depuis le deuxième trimestre, l'inflation ralentit en novembre",
+      "url": "https://www.tf1info.fr/economie/l-economie-francaise-en-recession-technique-depuis-le-deuxieme-trimestre-l-inflation-ralentit-en-novembre-2478484.html",
+      "publishedAt": "2026-11-27T09:26:59.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/683/illustration-bercy-7c7be9-2@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "eb2eb6b9fa97",
       "outletId": "ouest-france",
       "headline": "L’inflation ralentit à 2,9 % sur un an en novembre, selon l’Insee",
       "url": "https://www.ouest-france.fr/economie/inflation/linflation-ralentit-a-2-9-pourcent-sur-un-an-en-novembre-selon-linsee-e3978588-ea2f-11f1-bb2d-c71dc7920c2a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-27T08:52:17.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZGFkNjNkNzU1NGJhNTc5NDBlNjRkODVmNzZlNmI5MGI?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=757172104e3142cfdf594a8344f78741971807e476c995fce6702181824a600b",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -64,20 +87,10 @@
     }
   ],
   "topicId": "54c4e7e3fd47",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795683600000,
-      "end": 1795687200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795687200000,
       "end": 1795690800000,
@@ -307,25 +320,37 @@
         "droite": 2
       },
       "total": 5
+    },
+    {
+      "start": 1795770000000,
+      "end": 1795773600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 2
+      },
+      "total": 2
     }
   ],
   "summaries": {
     "centre": [
-      "L'Insee annonce un ralentissement de l'inflation à 2,9 % sur un an en novembre.",
-      "La baisse de régime est principalement attribuée au ralentissement de la hausse des prix de l'énergie.",
-      "Les prix de l'alimentation continuent quant à eux d'augmenter malgré cette tendance générale."
+      "L'Insee annonce un ralentissement de l'inflation à 2,9 % sur un an en novembre, après 3,4 % en octobre.",
+      "La baisse des prix atteint 0,7 % sur un mois par rapport au mois d'octobre selon les données provisoires.",
+      "Le recul de l'inflation est principalement attribué à la modération du secteur de l'énergie et des services.",
+      "Les prix de l'alimentation résistent à la tendance générale au ralentissement selon La Croix."
     ],
     "droite": [
-      "Les données provisoires de l'Insee indiquent une baisse de l'inflation à 2,9 % en novembre contre 3,4 % le mois précédent.",
-      "Les prix ont reculé de 0,7 % sur un mois selon l'institut statistique.",
-      "Le secteur énergétique, notamment les produits pétroliers, ainsi que la modération des services expliquent cette décélération."
+      "Les chiffres provisoires de l'Insee indiquent une inflation de 2,9 % sur un an pour le mois de novembre.",
+      "Le repli mensuel des prix s'établit à 0,7 % par rapport au mois d'octobre.",
+      "Le ralentissement s'explique par la hausse moins soutenue des prix pétroliers et l'atténuation de la progression des services.",
+      "Le Figaro note que les tarifs du gaz ont poursuivi leur accélération malgré la tendance globale."
     ]
   },
   "differences": [
-    "Le centre livre une synthèse sobre de la baisse de l'indicateur en ciblant le rôle moteur de l'énergie face à l'alimentation.",
-    "La droite détaille précisément les évolutions mensuelles, la baisse de 0,7 % sur un mois et la décélération des postes de dépenses comme les services et les produits pétroliers."
+    "Le centre privilégie une restitution synthétique des indicateurs provisoires de l'Insee en mettant l'accent sur la baisse globale du coût de la vie et la résistance des denrées alimentaires.",
+    "La droite adopte une approche technique et détaillée en disséquant les variations mensuelles et annuelles par secteur, notamment l'évolution contrastée des produits pétroliers et du gaz."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-27T09:01:32.811Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-27T10:01:33.737Z"
 }
