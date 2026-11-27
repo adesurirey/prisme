@@ -1,10 +1,21 @@
 {
   "id": "f8e35f8fa3d8",
   "slug": "une-jatte-commandee-pour-marie-antoinette-a-ete-vendue-pres-de",
-  "title": "Une jatte-téton commandée pour Marie-Antoinette vendue près de 3 millions d'euros aux enchères à Paris",
+  "title": "Une jatte-téton commandée pour Marie-Antoinette est vendue près de 3 millions d'euros aux enchères à Paris",
   "createdAt": "2026-11-26T22:01:26.268Z",
   "storyDay": "2026-11-26",
   "articles": [
+    {
+      "id": "e2dc0bea94fa",
+      "outletId": "franceinfo",
+      "headline": "Une jatte-téton commandée pour Marie-Antoinette vendue près de 3 millions d'euros aux enchères à Paris",
+      "url": "https://www.franceinfo.fr/culture/patrimoine/une-jatte-teton-commandee-pour-marie-antoinette-vendue-pres-de-3-millions-d-euros-aux-encheres-a-paris_8302878.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-27T11:15:28.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/3EOyfb9JQ8XDjruutyjOrpUfiWA/0x1894:5622x5057/432x243/filters:format(jpg)/2026/11/27/6b095f14b80c2751008681.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "culture"
+    },
     {
       "id": "864021fc47e9",
       "outletId": "ouest-france",
@@ -76,20 +87,10 @@
     }
   ],
   "topicId": "f8e35f8fa3d8",
-  "titledArticleCount": 5,
+  "titledArticleCount": 7,
   "section": "culture",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795690800000,
-      "end": 1795694400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795694400000,
       "end": 1795698000000,
@@ -319,31 +320,41 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795777200000,
+      "end": 1795780800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Une jatte-téton ayant appartenu à Marie-Antoinette a été vendue aux enchères pour la somme de 2,9 millions d'euros à l'Hôtel Drouot.",
-      "L'objet, découvert par hasard au fond d'une caisse, établit un record mondial d'enchères pour une porcelaine de Sèvres.",
-      "Une partie des bénéfices de la vente sera reversée à l'association Ruban Rose pour lutter contre le cancer du sein."
+      "Une jatte-téton commandée pour Marie-Antoinette a été vendue pour 2,9 millions d'euros aux enchères à Paris.",
+      "L'objet avait disparu depuis deux siècles avant d'être retrouvé lors d'un inventaire.",
+      "Une partie des bénéfices de la vente sera reversée à la prévention du cancer du sein."
     ],
     "centre": [
-      "Un rare bol en porcelaine en forme de sein, commandé par Louis XVI pour la laiterie de Rambouillet, a été vendu aux enchères à Paris pour près de 3 millions d'euros.",
-      "La pièce était considérée comme le quatrième et dernier exemplaire connu de cette fabrication de la manufacture de Sèvres.",
-      "L'objet avait disparu pendant deux siècles avant d'être retrouvé lors de l'inventaire de la Galerie Meyer."
+      "Un bol en porcelaine de Sèvres en forme de sein ayant appartenu à Marie-Antoinette a été adjugé à Paris pour près de 3 millions d'euros.",
+      "L'objet historique, commandé par Louis XVI pour la laiterie de Rambouillet, était considéré comme le dernier exemplaire connu de cette série.",
+      "Une portion des recettes de la vente aux enchères financera la lutte contre le cancer du sein."
     ],
     "droite": [
-      "Un bol-sein ou jatte-téton, cadeau de Louis XVI à Marie-Antoinette, a atteint le prix record de 2,9 millions d'euros lors d'une vente aux enchères à Paris.",
-      "Redécouverte par hasard lors d'un inventaire après deux siècles d'oubli, la pièce en porcelaine de Sèvres est l'un des quatre seuls exemplaires existants.",
-      "L'acheteur est resté anonyme, mais les vendeurs ont choisi de reverser une partie des profits à l'association Ruban Rose."
+      "Une vente aux enchères à Paris a atteint le montant record de 2,9 millions d'euros pour une « jatte-téton » de Marie-Antoinette.",
+      "La pièce en porcelaine de Sèvres, cadeau de Louis XVI, n'existe qu'en quatre exemplaires et avait disparu pendant deux siècles.",
+      "L'hôtel Drouot a précisé qu'une partie des bénéfices irait à l'association Ruban Rose pour la recherche contre le cancer du sein."
     ]
   },
   "differences": [
-    "La gauche insiste sur le lieu de découverte de l'objet, extrait du fond d'une caisse, et met en avant l'engagement caritatif contre le cancer du sein.",
-    "Le centre privilégie une approche historique et patrimoniale en détaillant la provenance royale de l'objet et son origine à la manufacture de Sèvres.",
-    "La droite se focalise sur le record mondial des enchères et qualifie précisément la rareté de la pièce parmi les quatre exemplaires existants."
+    "La gauche insiste principalement sur la redécouverte de l'objet et sa vente historique à Paris.",
+    "Le centre met en avant l'origine royale de la pièce commandée par Louis XVI pour la laiterie de Rambouillet et sa rareté.",
+    "La droite insiste sur le record mondial battu pour cette vente et mentionne explicitement l'association Ruban Rose."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 5,
-  "summarizedAt": "2026-11-27T09:01:32.811Z"
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-27T13:01:25.483Z"
 }
