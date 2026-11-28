@@ -1,7 +1,7 @@
 {
   "id": "4e4058c4ae9e",
   "slug": "l-agence-standard-poor-s-maintient-la-note-de-la-france-a-a",
-  "title": "L'agence Standard & Poor's maintient la note de la France à A+ mais abaisse sa perspective de stable à négative",
+  "title": "Standard & Poor's maintient la note de la France à A+ mais abaisse sa perspective de stable à négative",
   "createdAt": "2026-11-27T22:01:25.823Z",
   "storyDay": "2026-11-27",
   "articles": [
@@ -24,6 +24,17 @@
       "publishedAt": "2026-11-27T22:01:25.823Z",
       "frontPage": false,
       "datedAtCollection": true,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
+      "id": "6fb0872eb697",
+      "outletId": "france-24",
+      "headline": "Après l'entrée de la France en récession, l'agence S&P menace de dégrader sa note souveraine",
+      "url": "https://www.france24.com/fr/%C3%A9co-tech/20261127-apr%C3%A8s-entr%C3%A9e-france-r%C3%A9cession-agence-standard-and-poor-s-menace-d%C3%A9grader-note-souveraine",
+      "publishedAt": "2026-11-27T21:57:18.000Z",
+      "imageUrl": "https://s.france24.com/media/display/c550db02-eaab-11f1-9bac-174dac1c1bf0/w:1024/p:16x9/AP16236824377278.jpg",
+      "frontPage": false,
       "kind": "news",
       "section": "economy"
     },
@@ -108,7 +119,7 @@
     }
   ],
   "topicId": "4e4058c4ae9e",
-  "titledArticleCount": 8,
+  "titledArticleCount": 10,
   "section": "economy",
   "everInEdition": true,
   "activity": [
@@ -337,10 +348,10 @@
       "end": 1795816800000,
       "counts": {
         "gauche": 3,
-        "centre": 1,
+        "centre": 2,
         "droite": 3
       },
-      "total": 7
+      "total": 8
     },
     {
       "start": 1795816800000,
@@ -355,27 +366,27 @@
   ],
   "summaries": {
     "gauche": [
-      "L'agence Standard & Poor's conserve la note de la dette publique à A+ mais abaisse sa perspective de stable à négative.",
-      "La décision est attribuée aux incertitudes budgétaires, à l'instabilité politique et aux perspectives de croissance en berne.",
-      "Libération souligne que l'économie française se trouve déjà en récession et évoque un mauvais signal supplémentaire."
+      "L'agence de notation S&P a abaissé la perspective de la dette publique française à «négative» tout en maintenant la note à A+.",
+      "Cette décision sanctionne les incertitudes politiques et budgétaires dans le pays, sur fond de prévisions de croissance en berne.",
+      "Libération et Le Monde soulignent que cette menace de dégradation survient alors que l'économie française est déjà en récession."
     ],
     "centre": [
-      "Standard & Poor's maintient la note souveraine de la France au niveau A+ mais menace d'une prochaine dégradation.",
-      "La perspective de la dette publique passe de stable à négative en raison du dérapage des finances publiques.",
-      "L'agence de notation sanctionne la persistance du déficit et l'instabilité politique."
+      "Standard & Poor’s a confirmé la note souveraine de la France à A+ le vendredi 27 novembre.",
+      "L'agence a toutefois abaissé la perspective de stable à négative, ouvrant la voie à une éventuelle dégradation à moyen terme.",
+      "Cette réévaluation est motivée par la persistance du déficit public, l'instabilité politique et la faiblesse de la croissance."
     ],
     "droite": [
-      "L'agence Standard & Poor's maintient la note française à A+ mais dégrade la perspective à négative.",
-      "Le Figaro et Le Point insistent sur la dégradation significative de l'état des finances publiques et du déficit.",
-      "TF1 Info rapporte l'appel du ministre de l'Économie à doter le pays d'un budget responsable."
+      "S&P Global a maintenu la note de la France à A+ mais a dégradé la perspective de stable à négative.",
+      "Cette sanction traduit les difficultés persistantes du pays à réduire son déficit et la dégradation de ses finances publiques.",
+      "Les médias de droite soulignent l'impact de la polarisation politique et la nécessité urgente de redresser le budget."
     ]
   },
   "differences": [
-    "La gauche insiste sur le contexte global de récession économique en qualifiant la décision de mauvais signal supplémentaire.",
-    "Le centre livre un compte-rendu strictement technique centré sur la menace de dégradation et le dérapage du déficit.",
-    "La droite met l'accent sur la gravité de la situation budgétaire et répercute les appels du gouvernement à la responsabilité financière."
+    "La gauche met l'accent sur l'entrée de la récession et l'accumulation des mauvais signaux économiques pour qualifier la situation.",
+    "Le centre adopte un ton strictement factuel et neutre en se concentrant sur les annonces techniques de l'agence de notation.",
+    "La droite insiste lourdement sur le dérapage des comptes publics et la responsabilité de la gestion budgétaire."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 8,
-  "summarizedAt": "2026-11-27T22:01:25.823Z"
+  "summarizedArticleCount": 10,
+  "summarizedAt": "2026-11-28T03:01:34.221Z"
 }

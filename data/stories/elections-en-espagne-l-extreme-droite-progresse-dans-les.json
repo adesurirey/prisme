@@ -1,10 +1,41 @@
 {
   "id": "e212319622e3",
   "slug": "elections-en-espagne-l-extreme-droite-progresse-dans-les",
-  "title": "Élections en Espagne : l'extrême droite progresse dans les sondages à la veille du scrutin et face à la gauche",
+  "title": "Législatives en Espagne : la gauche et la droite s'affrontent à la veille du scrutin",
   "createdAt": "2026-11-27T06:01:37.381Z",
   "storyDay": "2026-11-26",
   "articles": [
+    {
+      "id": "13375c21e084",
+      "outletId": "rfi",
+      "headline": "Législatives en Espagne: le vote des jeunes penche de plus en plus à droite",
+      "url": "https://www.rfi.fr/fr/podcasts/reportage-international/20261127-l%C3%A9gislatives-en-espagne-le-vote-des-jeunes-de-plus-en-plus-%C3%A0-droite",
+      "publishedAt": "2026-11-27T23:21:42.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/58f7545c-eaa8-11f1-9d04-1991d4929b54/w:1024/p:16x9/AP26318001173819.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "6f1213150e79",
+      "outletId": "liberation",
+      "headline": "Législatives en Espagne : à la veille du vote, la gauche veut encore y croire",
+      "url": "https://www.liberation.fr/international/europe/legislatives-en-espagne-a-la-veille-du-vote-la-gauche-veut-encore-y-croire-20261127_X6PG2EN5X5BLVHJVDYKJAC6GQE/",
+      "publishedAt": "2026-11-27T19:58:38.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "67ecf8b07230",
+      "outletId": "liberation",
+      "headline": "Législatives en Espagne : et si ça (re)passait pour la gauche ?",
+      "url": "https://www.liberation.fr/idees-et-debats/editorial/legislatives-en-espagne-et-si-ca-repassait-pour-la-gauche-20261127_QPUVKXMZMNDSFNUQKSZCY3H2IY/",
+      "publishedAt": "2026-11-27T19:56:49.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "77fd838f69c9",
       "outletId": "humanite",
@@ -161,7 +192,7 @@
     }
   ],
   "topicId": "1441655c2672",
-  "titledArticleCount": 12,
+  "titledArticleCount": 17,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -414,30 +445,91 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795802400000,
+      "end": 1795806000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795806000000,
+      "end": 1795809600000,
+      "counts": {
+        "gauche": 2,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 2
+    },
+    {
+      "start": 1795809600000,
+      "end": 1795813200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795813200000,
+      "end": 1795816800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795816800000,
+      "end": 1795820400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795820400000,
+      "end": 1795824000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "Le Premier ministre sortant Pedro Sánchez espère une « remontada » pour battre la droite et l'extrême droite lors des élections législatives anticipées du 29 novembre.",
-      "Le scrutin s'annonce extrêmement serré pour le Parti socialiste ouvrier espagnol, confronté à l'usure du pouvoir et à une baisse du soutien chez certains jeunes progressistes selon franceinfo.",
-      "Le parti d'extrême droite Vox cherche à élargir sa base électorale pour espérer intégrer pour la première fois un gouvernement de coalition avec la droite."
+      "Le Premier ministre sortant Pedro Sánchez espère une « remontada » pour défaire l'alliance de la droite et de l'extrême droite lors des législatives anticipées du 29 novembre 2026.",
+      "La prestation de l'ex-maire de Barcelone Ada Colau lors du dernier débat a ravivé l'optimisme des progressistes après une campagne difficile.",
+      "Le parti Vox cherche à élargir sa base électorale pour espérer intégrer un gouvernement de coalition, ce qui marquerait une première depuis le retour de la démocratie."
     ],
     "centre": [
-      "Les Espagnols sont appelés aux urnes le dimanche 29 novembre pour des élections législatives anticipées convoquées par Pedro Sánchez.",
-      "Les sondages placent le Parti populaire en tête et font état d'une progression de l'extrême droite, qui pourrait accéder au pouvoir par le biais d'une alliance.",
-      "Le scrutin se déroule dans un climat tendu marqué notamment par la question de la crise migratoire à Ceuta."
+      "Les élections législatives anticipées du 29 novembre 2026 en Espagne placent le Parti populaire en tête des intentions de vote devant le Parti socialiste de Pedro Sánchez.",
+      "Le parti d'extrême droite Vox recueille près de 20% des intentions de vote à l'échelle nationale et jusqu'à 30% auprès des jeunes électeurs.",
+      "Le scrutin fait suite à la décision de Pedro Sánchez de convoquer les électeurs après l'échec de décrets sur la crise du logement et sur fond de débats liés à l'immigration à Ceuta."
     ],
     "droite": [
-      "Les derniers sondages placent le Parti populaire en tête face au Parti socialiste de Pedro Sánchez à la veille du scrutin.",
-      "Près de 38,7 millions d'Espagnols doivent renouveler la quasi-totalité des membres du Parlement lors de ces élections législatives anticipées."
+      "Le Parti populaire aborde les législatives du 29 novembre 2026 en position de favori dans les enquêtes d'opinion pour renouveler le Parlement des Cortes Generales.",
+      "Le pari politique de Pedro Sánchez se trouve fragilisé par la crise du logement qui pèse sur le pouvoir d'achat des actifs ainsi que par les critiques sur l'immigration et la corruption.",
+      "L'Espagne entre dans son dernier jour de campagne avec près de 38,7 millions d'électeurs appelés aux urnes pour ce scrutin anticipé."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur le suspense de la campagne, l'enjeu crucial de faire barrage à l'extrême droite et les difficultés internes des socialistes.",
-    "Le centre privilégie l'analyse des rapports de force électoraux, des sondages et des thématiques sensibles comme l'immigration.",
-    "La droite se focalise principalement sur la domination du Parti populaire dans les enquêtes d'opinion à la veille du scrutin."
+    "La gauche insiste sur le scénario d'une mobilisation de dernière minute et redoute l'accession de l'extrême droite au pouvoir.",
+    "Le centre dresse un panorama factuel de la campagne en mettant en avant les dynamiques des sondages et les motifs institutionnels de la dissolution.",
+    "La droite centre son analyse sur la contestation du bilan de Pedro Sánchez et sur sa vulnérabilité face aux difficultés économiques et migratoires."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 12,
-  "summarizedAt": "2026-11-27T17:01:31.766Z"
+  "summarizedArticleCount": 17,
+  "summarizedAt": "2026-11-28T03:01:34.221Z"
 }
