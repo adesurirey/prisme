@@ -6,6 +6,28 @@
   "storyDay": "2026-11-28",
   "articles": [
     {
+      "id": "a839494ad181",
+      "outletId": "mediapart",
+      "headline": "L’affaire des fuites de Beauvau atteint le premier cercle de Marine Le Pen",
+      "url": "https://www.mediapart.fr/journal/france/281126/l-affaire-des-fuites-de-beauvau-atteint-le-premier-cercle-de-marine-le-pen",
+      "publishedAt": "2026-11-28T12:17:56.000Z",
+      "imageUrl": "https://static.mediapart.fr/etmagine/default/files/2026/11/28/photo-par-simon-wohlfahrt-afp.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "c03656e4f539",
+      "outletId": "lobs",
+      "headline": "Qui est Ambroise de Rancourt, ce proche de Marine Le Pen suspecté d’être au cœur des fuites au profit du RN ?",
+      "url": "https://www.nouvelobs.com/politique/20261128.OBS121409/qui-est-ambroise-de-rancourt-ce-proche-de-marine-le-pen-suspecte-d-etre-au-c-ur-des-fuites-au-profit-du-rn.html",
+      "publishedAt": "2026-11-28T10:50:03.000Z",
+      "imageUrl": "https://focus.nouvelobs.com/2026/11/28/0/0/1023/682/0/0/60/0/17558ea_ftp-1-apxlzyycfm3v-afp-d8vx7we-1024.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "politics"
+    },
+    {
       "id": "4b987ef9abff",
       "outletId": "liberation",
       "headline": "Fuite d’infos du ministère de l’Intérieur vers le RN : Ambroise de Rancourt, responsable du programme du parti, soupçonné d’être le principal destinataire",
@@ -13,6 +35,17 @@
       "publishedAt": "2026-11-28T10:39:45.000Z",
       "frontPage": false,
       "kind": "news",
+      "section": "politics"
+    },
+    {
+      "id": "c79e7db56547",
+      "outletId": "humanite",
+      "headline": "Un très proche de Marine Le Pen soupçonné d’être le destinataire des fuites du ministère de l’Intérieur",
+      "url": "https://www.humanite.fr/politique/extreme-droite/un-tres-proche-de-marine-le-pen-soupconne-detre-le-destinataire-des-fuites-du-ministere-de-linterieur",
+      "publishedAt": "2026-11-28T10:30:00.000Z",
+      "imageUrl": "https://www.humanite.fr/wp-content/uploads/2026/11/imago0842082543h.jpg?w=1200",
+      "frontPage": false,
+      "kind": "opinion",
       "section": "politics"
     },
     {
@@ -168,26 +201,6 @@
   "section": "politics",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795777200000,
-      "end": 1795780800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795780800000,
-      "end": 1795784400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795784400000,
       "end": 1795788000000,
@@ -402,11 +415,31 @@
       "start": 1795860000000,
       "end": 1795863600000,
       "counts": {
-        "gauche": 1,
+        "gauche": 3,
         "centre": 0,
         "droite": 1
       },
-      "total": 2
+      "total": 4
+    },
+    {
+      "start": 1795863600000,
+      "end": 1795867200000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795867200000,
+      "end": 1795870800000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
