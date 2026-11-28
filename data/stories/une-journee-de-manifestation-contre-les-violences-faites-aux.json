@@ -1,10 +1,32 @@
 {
   "id": "8e80a06372fb",
   "slug": "une-journee-de-manifestation-contre-les-violences-faites-aux",
-  "title": "Une journée de manifestation contre les violences faites aux femmes se déroule en France",
+  "title": "Une journée de mobilisation se déroule en France contre les violences faites aux femmes",
   "createdAt": "2026-11-28T10:01:37.790Z",
   "storyDay": "2026-11-28",
   "articles": [
+    {
+      "id": "b03734278b6f",
+      "outletId": "rfi",
+      "headline": "DIRECT - France: journée de mobilisation pour un acte VII rallié par la lutte contre les violences faites aux femmes",
+      "url": "https://www.rfi.fr/fr/france/20261128-direct-france-journ%C3%A9e-de-mobilisation-pour-un-acte-vii-ralli%C3%A9-par-la-lutte-contre-les-violences-faites-aux-femmes",
+      "publishedAt": "2026-11-28T10:53:43.000Z",
+      "imageUrl": "https://s.rfi.fr/media/display/bd3f0c8a-eb01-11f1-8131-1991d4929b54/w:1024/p:16x9/AP26325572482749.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
+    {
+      "id": "062700dee502",
+      "outletId": "france-24",
+      "headline": "France : nouvelle mobilisation contre les violences faites aux femmes",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261128-france-nouvelle-mobilisation-contre-les-violences-faites-aux-femmes",
+      "publishedAt": "2026-11-28T10:15:02.000Z",
+      "imageUrl": "https://s.france24.com/media/display/e1fc6db0-eb10-11f1-adf2-81bc2b1dcd65/w:1024/p:16x9/FR-20261128-100728-100843-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "society"
+    },
     {
       "id": "4f60db5a78f4",
       "outletId": "france-24",
@@ -50,30 +72,10 @@
     }
   ],
   "topicId": "8e80a06372fb",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "society",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795770000000,
-      "end": 1795773600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795773600000,
-      "end": 1795777200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795777200000,
       "end": 1795780800000,
@@ -293,6 +295,51 @@
         "droite": 0
       },
       "total": 3
+    },
+    {
+      "start": 1795856400000,
+      "end": 1795860000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795860000000,
+      "end": 1795863600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 2,
+        "droite": 0
+      },
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "De multiples rassemblements ont lieu dans une trentaine de villes françaises, trois jours après la journée internationale dédiée.",
+      "Les organisateurs appellent à provoquer un raz de marée féministe pour exiger la fin des violences sexistes et sexuelles.",
+      "franceinfo précise que ces cortèges sont prévus à Paris, Lille, Lyon et Marseille."
+    ],
+    "centre": [
+      "Des manifestations sont organisées partout sur le territoire national pour dénoncer les violences faites aux femmes.",
+      "Cette mobilisation s'inscrit dans le sillage de la journée internationale du 25 novembre et rassemble associations et syndicats.",
+      "France 24 rappelle qu'en 2025, plus d'une centaine de féminicides ont été recensés et des centaines de milliers de faits de violences ont été signalés.",
+      "RFI replace cet acte VII dans un contexte de mobilisation sociale tendue en pleine campagne pour l'élection présidentielle de 2027."
+    ],
+    "droite": [
+      "Une journée de mobilisation se déroule en France pour réclamer un raz-de-marée féministe contre les violences faites aux femmes.",
+      "Le Figaro souligne que ces rassemblements s'ajoutent à un contexte de protestations à répétition concernant les universités, le pouvoir d'achat et les services publics."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la dynamique militante et l'ampleur géographique des cortèges féministes prévus dans une trentaine de villes.",
+    "Le centre dresse un panorama institutionnel et statistique de la mobilisation, en rappelant le bilan des féminicides et en connectant l'événement au calendrier social et électoral.",
+    "La droite inscrit la mobilisation féministe dans un climat social global de contestations récurrentes portant sur les services publics et le pouvoir d'achat."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-28T11:01:36.699Z"
 }

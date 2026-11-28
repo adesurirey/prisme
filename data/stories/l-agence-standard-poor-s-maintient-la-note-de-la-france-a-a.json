@@ -6,6 +6,18 @@
   "storyDay": "2026-11-27",
   "articles": [
     {
+      "id": "9e1a4b3f2750",
+      "outletId": "le-figaro",
+      "headline": "«C’est un avertissement», réagit Roland Lescure à la perspective négative de S&P sur la dette française",
+      "url": "https://www.lefigaro.fr/conjoncture/c-est-un-avertissement-reagit-roland-lescure-a-la-perspective-negative-de-s-p-sur-la-dette-francaise-20261128",
+      "publishedAt": "2026-11-28T10:52:06.000Z",
+      "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/28/4af4b8d66e6a9e6292d1bc46b6c7e27613ba9bf87e4a783447c8a878e4ef0054.JPG",
+      "frontPage": true,
+      "kind": "news",
+      "section": "economy",
+      "everFrontPage": true
+    },
+    {
       "id": "3a70f30404ef",
       "outletId": "challenges",
       "headline": "« La dette publique continuera d’augmenter » : S&P maintient la note de la France mais abaisse la perspective de stable à négative",
@@ -132,7 +144,7 @@
       "url": "https://www.lefigaro.fr/conjoncture/dette-standard-poor-s-abaisse-la-perspective-de-la-note-francaise-a-negative-20261127",
       "publishedAt": "2026-11-27T21:26:10.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/orig/2026/11/27/0929f32faa4c926099086b007e5fc61f7d7c4ca7d62486f080a6cac49d5cdfc7.JPG",
-      "frontPage": false,
+      "frontPage": true,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -167,16 +179,6 @@
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795773600000,
-      "end": 1795777200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795777200000,
       "end": 1795780800000,
@@ -404,6 +406,16 @@
         "gauche": 0,
         "centre": 1,
         "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1795860000000,
+      "end": 1795863600000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
       },
       "total": 1
     }

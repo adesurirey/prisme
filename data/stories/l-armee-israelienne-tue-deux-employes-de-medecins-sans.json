@@ -1,10 +1,32 @@
 {
   "id": "30bc834c173b",
   "slug": "l-armee-israelienne-tue-deux-employes-de-medecins-sans",
-  "title": "Gaza : l’armée israélienne tue deux employés de Médecins sans frontières qu’elle qualifie de terroristes",
+  "title": "L'armée israélienne tue deux employés de Médecins sans frontières à Gaza",
   "createdAt": "2026-11-28T04:01:28.680Z",
   "storyDay": "2026-11-28",
   "articles": [
+    {
+      "id": "20f0255049fd",
+      "outletId": "france-24",
+      "headline": "Deux employés de MSF tués par une frappe israélienne à Gaza",
+      "url": "https://www.france24.com/fr/vid%C3%A9o/20261128-deux-employ%C3%A9s-de-msf-tu%C3%A9s-par-une-frappe-isra%C3%A9lienne-%C3%A0-gaza",
+      "publishedAt": "2026-11-28T10:05:27.000Z",
+      "imageUrl": "https://s.france24.com/media/display/7f878cfe-eb11-11f1-a1c2-81bc2b1dcd65/w:1024/p:16x9/FR-20261128-101131-101326-CS.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "ce716c066abb",
+      "outletId": "tf1-info",
+      "headline": "Deux employés de MSF tués par une frappe israélienne à Gaza",
+      "url": "https://www.tf1info.fr/international/deux-employes-de-msf-tues-par-une-frappe-israelienne-a-gaza-2478675.html",
+      "publishedAt": "2026-11-28T10:05:07.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/683/msf-gaza-illu-ad8c27-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "a6344755f5ba",
       "outletId": "humanite",
@@ -96,7 +118,7 @@
     }
   ],
   "topicId": "30bc834c173b",
-  "titledArticleCount": 8,
+  "titledArticleCount": 10,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -335,35 +357,38 @@
       "end": 1795863600000,
       "counts": {
         "gauche": 1,
-        "centre": 0,
-        "droite": 0
+        "centre": 1,
+        "droite": 1
       },
-      "total": 1
+      "total": 3
     }
   ],
   "summaries": {
     "gauche": [
-      "Deux gardiens d'une clinique de Médecins sans frontières ont péri dans un bombardement israélien dans la ville de Gaza.",
-      "L'organisation humanitaire a condamné ce meurtre et déploré la mort de 17 collaborateurs depuis le début du conflit.",
-      "L'armée israélienne qualifie les victimes de terroristes sans apporter de preuves et a retiré l'agrément de l'ONG."
+      "Deux gardiens d'une clinique de Médecins sans frontières ont été tués vendredi 27 novembre dans un bombardement israélien à Gaza.",
+      "L'ONG MSF s'est dite bouleversée et révoltée par le meurtre de ses deux collaborateurs.",
+      "L'armée israélienne a confirmé la frappe tout en qualifiant les victimes de terroristes du Hamas, sans fournir de preuves selon L'Humanité.",
+      "L'Humanité rappelle que 17 employés de MSF ont été tués par Israël en un peu plus de trois ans, et que l'agrément de l'ONG a été retiré dans la bande de Gaza."
     ],
     "centre": [
-      "Une frappe de l'armée israélienne a coûté la vie à deux employés de Médecins sans frontières dans la bande de Gaza.",
-      "L'ONG humanitaire et l'armée israélienne ont toutes deux confirmé l'événement survenu un vendredi.",
-      "L'état-major israélien accuse les deux victimes d'appartenir au mouvement Hamas."
+      "Une frappe de l'armée israélienne a tué deux employés de Médecins sans frontières vendredi 27 novembre dans la bande de Gaza.",
+      "L'organisation humanitaire et l'armée israélienne ont toutes deux confirmé le bilan de cette attaque.",
+      "Tsahal a justifié son opération en accusant les deux victimes d'appartenir au Hamas et d'être des terroristes.",
+      "Ouest-France a intégré cet événement dans une revue nocturne recensant plusieurs autres actualités régionales du Moyen-Orient."
     ],
     "droite": [
-      "L'armée israélienne annonce avoir abattu deux terroristes qui travaillaient pour Médecins sans frontières dans la bande de Gaza.",
-      "L'organisation humanitaire exprime son indignation face à cette frappe.",
-      "Le bilan macabre s'alourdit à 17 collaborateurs de l'ONG tués depuis le début des hostilités."
+      "L'armée israélienne affirme avoir abattu deux terroristes travaillant pour l'organisation Médecins sans frontières dans la bande de Gaza.",
+      "Le Figaro précise que l'ONG a exprimé son indignation face à cette frappe.",
+      "Le journal relève également que ce drame porte à 17 le nombre de collaborateurs de MSF tués depuis le début du conflit dans la région.",
+      "TF1 Info ajoute de son côté que l'acte a été condamné de toutes parts."
     ]
   },
   "differences": [
-    "La gauche insiste sur l'absence de preuves des accusations israéliennes et contextualise le drame par le lourd bilan des humanitaires tués et la perte de leur agrément.",
-    "Le centre adopte un ton strictement neutre et factuel en juxtaposant l'annonce de la frappe par l'ONG et l'accusation portée par l'armée israélienne.",
-    "La droite adopte le point de vue de l'armée israélienne en plaçant la qualification de terroristes dès le titre de l'article."
+    "La gauche met l'accent sur le lourd passif de l'armée israélienne contre MSF — recensant 17 morts en trois ans et le retrait des agréments — tout en qualifiant les accusations de Tsahal d'infondées.",
+    "Le centre adopte un traitement strictement factuel et neutre en juxtaposant l'annonce du drame par l'ONG et les accusations immédiates de terrorisme formulées par l'armée israélienne.",
+    "La droite privilégie dans ses titres la version de l'armée israélienne désignant les victimes comme des terroristes, tout en mentionnant l'indignation de l'ONG et le bilan global des collaborateurs tués."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 8,
-  "summarizedAt": "2026-11-28T10:01:37.790Z"
+  "summarizedArticleCount": 10,
+  "summarizedAt": "2026-11-28T11:01:36.699Z"
 }

@@ -6,6 +6,28 @@
   "storyDay": "2026-11-28",
   "articles": [
     {
+      "id": "6b8293ca1e87",
+      "outletId": "tf1-info",
+      "headline": "Le catcheur australien Bronson Reed, star de la WWE, est mort à 38 ans",
+      "url": "https://www.tf1info.fr/sport/le-catcheur-australien-bronson-reed-star-de-la-wwe-est-mort-a-38-ans-2478674.html",
+      "publishedAt": "2026-11-28T10:54:04.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/576/bronson-reed-catch-2025-58de76-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
+      "id": "712b315fa785",
+      "outletId": "huffpost",
+      "headline": "Mort de Bronson Reed à seulement 38 ans, le monde du catch en deuil",
+      "url": "https://www.huffingtonpost.fr/sport/article/mort-de-bronson-reed-a-seulement-38-ans-le-monde-du-catch-en-deuil_366271.html",
+      "publishedAt": "2026-11-28T10:47:06.000Z",
+      "imageUrl": "https://focus.huffingtonpost.fr/2026/11/28/234/147/676/380/0/0/60/0/354a595_upload-1-w7po659vnvuz-afp-20261128-d8vr8nr-v1-midres-prowrestlerbronsonreeddiesaged38.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "sport"
+    },
+    {
       "id": "3efd8ae4323b",
       "outletId": "le-figaro",
       "headline": "Star du catch professionnel, Bronson Reed trouve la mort à seulement 38 ans",
@@ -39,20 +61,10 @@
     }
   ],
   "topicId": "a73df3256503",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "sport",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795773600000,
-      "end": 1795777200000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795777200000,
       "end": 1795780800000,
@@ -282,6 +294,33 @@
         "droite": 1
       },
       "total": 1
+    },
+    {
+      "start": 1795860000000,
+      "end": 1795863600000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 2
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le catcheur Jermaine Haley, alias Bronson Reed, est décédé à l'âge de 38 ans.",
+      "La World Wrestling Entertainment a attribué cette mort à des complications médicales."
+    ],
+    "droite": [
+      "Le catcheur australien et vedette de la WWE Bronson Reed est mort à 38 ans.",
+      "Le décès fait suite à des complications médicales survenues après une violente chute hors du ring."
+    ]
+  },
+  "differences": [
+    "La gauche se focalise sur l'annonce du décès de l'athlète par son organisation tout en mentionnant les causes médicales avancées.",
+    "La droite insiste sur le contexte sportif en mentionnant la violente chute subie par le catcheur lors de son dernier combat quelques semaines auparavant."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-28T11:01:36.699Z"
 }
