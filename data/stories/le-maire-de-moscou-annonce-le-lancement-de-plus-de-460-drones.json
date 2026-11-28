@@ -1,10 +1,42 @@
 {
   "id": "0b8f4291560a",
   "slug": "le-maire-de-moscou-annonce-le-lancement-de-plus-de-460-drones",
-  "title": "Guerre en Ukraine : plus de 460 drones lancés vers Moscou selon son maire",
+  "title": "Guerre en Ukraine : la Russie annonce l'interception de plus de 1 200 drones ukrainiens sur son territoire",
   "createdAt": "2026-11-28T06:01:31.584Z",
   "storyDay": "2026-11-28",
   "articles": [
+    {
+      "id": "c53e7526effc",
+      "outletId": "franceinfo",
+      "headline": "La Russie annonce l'interception de plus de 1 200 drones ukrainiens sur son territoire",
+      "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/la-russie-annonce-l-interception-de-plus-de-1-200-drones-ukrainiens-sur-son-territoire_8304321.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-28T07:42:18.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/wmi_Lh8tC8sIRfwBJNH158Iok6Y/0x573:5510x3673/432x243/filters:format(jpg)/2026/11/28/6b0a858b1bd77947567394.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "d39ac56578c4",
+      "outletId": "liberation",
+      "headline": "La Russie annonce l’interception de plus de 1 200 drones ukrainiens",
+      "url": "https://www.liberation.fr/international/europe/la-russie-annonce-linterception-de-plus-de-1-200-drones-ukrainiens-20261128_QBLRYXCAGJBU7LMMNEUYS3LMI4/",
+      "publishedAt": "2026-11-28T07:34:18.000Z",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "c67559f5badf",
+      "outletId": "france-24",
+      "headline": "En direct : la Russie affirme avoir abattu 1 246 drones ukrainiens dans la nuit",
+      "url": "https://www.france24.com/fr/europe/20261128-en-direct-la-russie-annonce-l-interception-de-plus-de-1-200-drones-ukrainiens",
+      "publishedAt": "2026-11-28T07:24:32.000Z",
+      "imageUrl": "https://s.france24.com/media/display/2653445a-eafa-11f1-a4ee-174dac1c1bf0/w:1024/p:16x9/AP26327531590182.jpg",
+      "frontPage": false,
+      "kind": "live",
+      "section": "world"
+    },
     {
       "id": "8206c8c4ac28",
       "outletId": "le-parisien",
@@ -34,7 +66,7 @@
       "url": "https://www.lefigaro.fr/international/guerre-en-ukraine-plus-de-460-drones-ukrainiens-lances-en-direction-de-moscou-selon-son-maire-20261128",
       "publishedAt": "2026-11-28T05:18:55.000Z",
       "imageUrl": "https://i.f1g.fr/media/cms/2210x3000_crop/2026/11/28/513d897c36d2e76b2a31625b0fed95fadad6eefee6fb708e66e5eff9c2dc39b5.jpg",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "world",
       "everFrontPage": true
@@ -52,7 +84,7 @@
     }
   ],
   "topicId": "e2d3468bc0ed",
-  "titledArticleCount": 4,
+  "titledArticleCount": 7,
   "section": "world",
   "everInEdition": true,
   "activity": [
@@ -290,11 +322,33 @@
       "start": 1795849200000,
       "end": 1795852800000,
       "counts": {
-        "gauche": 0,
-        "centre": 1,
+        "gauche": 2,
+        "centre": 2,
         "droite": 0
       },
-      "total": 1
+      "total": 4
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "La Russie affirme avoir intercepté plus de 1 200 drones ukrainiens sur l'ensemble de son territoire.",
+      "Le maire de Moscou rapporte que plus de 450 engins visaient spécifiquement la capitale russe."
+    ],
+    "centre": [
+      "Moscou annonce avoir abattu 1 246 drones ukrainiens au cours de la nuit de vendredi à samedi.",
+      "Le maire de la capitale indique que 462 aéronefs ont été lancés vers la ville et que la plupart ont été neutralisés à distance."
+    ],
+    "droite": [
+      "Plus de 460 drones ukrainiens ont été lancés en direction de Moscou selon les déclarations du maire.",
+      "Aucun bilan humain ou matériel n'a été communiqué par les autorités à ce stade des opérations."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur l'ampleur nationale de l'attaque en relayant le bilan global des interceptions annoncé par Moscou tout en mentionnant les chiffres concernant la capitale.",
+    "Le centre privilégie un suivi en direct centré sur le volume précis des drones abattus sur l'ensemble du territoire russe et les détails fournis par la municipalité de Moscou.",
+    "La droite focalise son traitement sur l'attaque visant la capitale et précise l'absence de communication officielle concernant d'éventuels dégâts ou victimes."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 7,
+  "summarizedAt": "2026-11-28T08:01:29.122Z"
 }

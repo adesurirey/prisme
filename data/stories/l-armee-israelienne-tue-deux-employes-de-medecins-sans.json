@@ -1,10 +1,32 @@
 {
   "id": "30bc834c173b",
   "slug": "l-armee-israelienne-tue-deux-employes-de-medecins-sans",
-  "title": "L'armée israélienne tue deux employés de Médecins sans frontières à Gaza",
+  "title": "Gaza : l'armée israélienne tue deux employés de Médecins sans frontières qualifiés de terroristes",
   "createdAt": "2026-11-28T04:01:28.680Z",
   "storyDay": "2026-11-28",
   "articles": [
+    {
+      "id": "98d4ebaf6655",
+      "outletId": "bfmtv",
+      "headline": "Deux employés de Médecins sans frontières tués par une frappe israélienne à Gaza",
+      "url": "https://www.bfmtv.com/international/moyen-orient/palestine/deux-employes-de-medecins-sans-frontieres-tues-par-une-frappe-israelienne-a-gaza_AD-202611280196.html",
+      "publishedAt": "2026-11-28T07:53:57.000Z",
+      "imageUrl": "https://io-fsly-bfmtv.cdn.nextradiotv.com/Ltlt9lXXp2m2JjTaU7JeF6zKnzA=/0x0:2048x1152/800x0/images/Bombardements-Gaza-2348912.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
+    {
+      "id": "15f75025ca8a",
+      "outletId": "franceinfo",
+      "headline": "Deux employés de Médecins sans frontières tués par une frappe israélienne à Gaza",
+      "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/deux-employes-de-medecins-sans-frontieres-tues-par-une-frappe-israelienne-a-gaza_8304309.html#xtor=RSS-3-[lestitres]",
+      "publishedAt": "2026-11-28T06:58:04.000Z",
+      "imageUrl": "https://www.franceinfo.fr/pictures/sJHdBFRjMefioxsx8I9oxC7cyoI/0x305:6720x4085/432x243/filters:format(jpg)/2026/11/28/6b0a7b46382d6650596343.jpg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "0136e7ed6ed9",
       "outletId": "ouest-france",
@@ -53,30 +75,10 @@
     }
   ],
   "topicId": "30bc834c173b",
-  "titledArticleCount": 4,
+  "titledArticleCount": 6,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795759200000,
-      "end": 1795762800000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795762800000,
-      "end": 1795766400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795766400000,
       "end": 1795770000000,
@@ -296,6 +298,49 @@
         "droite": 0
       },
       "total": 2
+    },
+    {
+      "start": 1795845600000,
+      "end": 1795849200000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1795849200000,
+      "end": 1795852800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Deux employés de Médecins sans frontières ont péri dans une frappe israélienne sur une clinique de l'organisation dans la bande de Gaza.",
+      "L'armée israélienne a qualifié les victimes de terroristes du Hamas, tandis que l'ONG a exprimé son indignation face à ce meurtre."
+    ],
+    "centre": [
+      "Une frappe de l'armée israélienne a coûté la vie à deux collaborateurs de Médecins sans frontières dans l'enclave palestinienne.",
+      "Les forces armées ont justifié l'attaque en accusant les agents d'appartenir au Hamas.",
+      "Ouest-France relaye cette information au sein d'une synthèse plus large sur les développements de la nuit au Moyen-Orient."
+    ],
+    "droite": [
+      "L'armée israélienne affirme avoir abattu deux terroristes travaillant pour Médecins sans frontières dans la bande de Gaza.",
+      "Le Figaro souligne que l'ONG humanitaire déplore désormais la mort de 17 collaborateurs depuis le début du conflit."
+    ]
+  },
+  "differences": [
+    "Le camp de gauche met en avant l'émotion et la qualification de meurtre de l'ONG face au décès de ses employés dans une clinique ciblée.",
+    "Le camp du centre adopte un traitement factuel en reprenant les annonces conjointes des services humanitaires et militaires.",
+    "Le camp de droite met en exergue l'accusation de terrorisme formulée par l'armée israélienne et l'impact global sur les effectifs de l'ONG."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 6,
+  "summarizedAt": "2026-11-28T08:01:29.122Z"
 }
