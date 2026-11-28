@@ -1,10 +1,21 @@
 {
   "id": "4e4058c4ae9e",
   "slug": "l-agence-standard-poor-s-maintient-la-note-de-la-france-a-a",
-  "title": "Standard & Poor's maintient la note de la France à A+ mais abaisse sa perspective de stable à négative",
+  "title": "L'agence S&P maintient la note de la France à A+ mais abaisse sa perspective à négative alors que le pays entre en récession",
   "createdAt": "2026-11-27T22:01:25.823Z",
   "storyDay": "2026-11-27",
   "articles": [
+    {
+      "id": "701855566db9",
+      "outletId": "lexpress",
+      "headline": "Dette : l'agence S&P Global menace de dégrader encore la note de la France, entrée en récession technique",
+      "url": "https://www.lexpress.fr/economie/politique-economique/dette-lagence-sp-global-menace-de-degrader-encore-la-note-de-la-france-entree-en-recession-technique-7XWZZOELLFGKVLJSYI4NRPSP7I/",
+      "publishedAt": "2026-11-28T08:24:09.000Z",
+      "imageUrl": "https://www.lexpress.fr/resizer/v2/AVJC7M5KVVDBXCYDIOLZNORUZ4.JPG?auth=8af5327a33041b2a36c7e27f47c8a558d23cabb2d6072aa76d154cf632d42fdd&smart=true&width=7809&height=5206",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
     {
       "id": "48e901a7e992",
       "outletId": "lopinion",
@@ -141,20 +152,10 @@
     }
   ],
   "topicId": "4e4058c4ae9e",
-  "titledArticleCount": 10,
+  "titledArticleCount": 13,
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795766400000,
-      "end": 1795770000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795770000000,
       "end": 1795773600000,
@@ -384,31 +385,41 @@
         "droite": 2
       },
       "total": 2
+    },
+    {
+      "start": 1795852800000,
+      "end": 1795856400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 1,
+        "droite": 0
+      },
+      "total": 1
     }
   ],
   "summaries": {
     "gauche": [
-      "L'agence de notation S&P a abaissé la perspective de la dette publique française à «négative» tout en maintenant la note à A+.",
-      "Cette décision sanctionne les incertitudes politiques et budgétaires dans le pays, sur fond de prévisions de croissance en berne.",
-      "Libération et Le Monde soulignent que cette menace de dégradation survient alors que l'économie française est déjà en récession."
+      "L'agence Standard & Poor's a abaissé la perspective de la dette publique française à « négative », tout en confirmant la note à A+.",
+      "Cette décision sanctionne les incertitudes politiques et budgétaires, constituant un signal inquiétant pour une économie déjà en récession selon Libération et Le Monde."
     ],
     "centre": [
-      "Standard & Poor’s a confirmé la note souveraine de la France à A+ le vendredi 27 novembre.",
-      "L'agence a toutefois abaissé la perspective de stable à négative, ouvrant la voie à une éventuelle dégradation à moyen terme.",
-      "Cette réévaluation est motivée par la persistance du déficit public, l'instabilité politique et la faiblesse de la croissance."
+      "Standard & Poor's a maintenu la note souveraine de la France à A+ le vendredi 27 novembre 2026.",
+      "L'agence a toutefois abaissé la perspective de stable à négative, ouvrant la voie à une potentielle dégradation à moyen terme en raison de la situation budgétaire et de la croissance au ralenti.",
+      "Le ministre de l'Économie souligne la nécessité de doter le pays d'un « budget responsable », relayé par TF1 Info."
     ],
     "droite": [
-      "S&P Global a maintenu la note de la France à A+ mais a dégradé la perspective de stable à négative.",
-      "Cette sanction traduit les difficultés persistantes du pays à réduire son déficit et la dégradation de ses finances publiques.",
-      "Les médias de droite soulignent l'impact de la polarisation politique et la nécessité urgente de redresser le budget."
+      "S&P Global a maintenu le « A+ » de la dette française tout en rétrogradant sa perspective de stable à négative.",
+      "Les médias soulignent les difficultés de la France à réduire son déficit public, estimé à 5,3 % du PIB en 2027 par l'agence.",
+      "Europe 1 mentionne que la France reste mieux notée que l'Italie et cite l'économiste Anthony Morlet-Lavidalie (Rexecode) évoquant un avertissement sur la capacité du pays.",
+      "Le Figaro et CNews pointent la dégradation significative de l'état des finances publiques et l'instabilité politique."
     ]
   },
   "differences": [
-    "La gauche met l'accent sur l'entrée de la récession et l'accumulation des mauvais signaux économiques pour qualifier la situation.",
-    "Le centre adopte un ton strictement factuel et neutre en se concentrant sur les annonces techniques de l'agence de notation.",
-    "La droite insiste lourdement sur le dérapage des comptes publics et la responsabilité de la gestion budgétaire."
+    "La gauche insiste en premier lieu sur la sanction directe des incertitudes politiques et sur le signal négatif envoyé à une économie en récession.",
+    "Le centre livre un compte-rendu factuel et institutionnel centré sur la décision technique de S&P et les déclarations du gouvernement.",
+    "La droite accentue l'alerte sur la dérive des finances publiques et le dérapage du déficit, tout en situant la note française par rapport à ses voisins européens comme l'Italie."
   ],
   "promptVersion": "sum-7",
-  "summarizedArticleCount": 10,
-  "summarizedAt": "2026-11-28T03:01:34.221Z"
+  "summarizedArticleCount": 13,
+  "summarizedAt": "2026-11-28T09:01:28.971Z"
 }

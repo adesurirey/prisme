@@ -1,10 +1,21 @@
 {
   "id": "5cf986e80834",
   "slug": "le-pentagone-assure-que-ses-systemes-informatiques-sont",
-  "title": "Le Pentagone assure que ses systèmes informatiques sont sécurisés après une possible cyberattaque",
+  "title": "L'armée américaine subit une possible cyberattaque et le Pentagone assure que ses systèmes informatiques sont sécurisés",
   "createdAt": "2026-11-28T06:01:31.584Z",
   "storyDay": "2026-11-28",
   "articles": [
+    {
+      "id": "2250796a5a67",
+      "outletId": "tf1-info",
+      "headline": "\"Des informations militaires sensibles\" piratées ? L'armée américaine ne dément pas avoir subi une cyberattaque",
+      "url": "https://www.tf1info.fr/international/etats-unis-pentagone-des-informations-militaires-sensibles-piratees-l-armee-americaine-ne-dement-pas-avoir-subi-une-cyberattaque-2478667.html",
+      "publishedAt": "2026-11-28T08:54:22.000Z",
+      "imageUrl": "https://photos.tf1info.fr/images/1024/692/pentagone-washington-etats-unis-usa-86e690-0@1x.jpeg",
+      "frontPage": false,
+      "kind": "news",
+      "section": "world"
+    },
     {
       "id": "eb9780bd0a7f",
       "outletId": "le-figaro",
@@ -53,30 +64,10 @@
     }
   ],
   "topicId": "5cf986e80834",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "world",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795762800000,
-      "end": 1795766400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795766400000,
-      "end": 1795770000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795770000000,
       "end": 1795773600000,
@@ -296,6 +287,51 @@
         "droite": 1
       },
       "total": 1
+    },
+    {
+      "start": 1795849200000,
+      "end": 1795852800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795852800000,
+      "end": 1795856400000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Des articles de presse, relayés initialement par l'agence Reuters et NBC News, indiquent qu'un cloud de l'armée de l'air américaine aurait été piraté.",
+      "Le Pentagone a réagi en déclarant que ses installations informatiques demeuraient « sûrs et sécurisés », sans infirmer explicitement la violation.",
+      "Cette incursion numérique potentielle fait craindre la divulgation de données militaires jugées sensibles."
+    ],
+    "centre": [
+      "Plusieurs organes de presse ont rapporté qu'une possible cyberattaque a ciblé les infrastructures informatiques de l'armée américaine.",
+      "L'agence Reuters et NBC News précisent que le cloud de l'armée de l'air est potentiellement compromis, ce qui risquerait d'exposer des données militaires sensibles.",
+      "Face à ces révélations, les autorités militaires ont affirmé que leurs systèmes demeuraient « sûrs et sécurisés »."
+    ],
+    "droite": [
+      "Des publications de presse révèlent qu'une incursion informatique a potentiellement visé l'armée américaine.",
+      "Le média spécialisé Federal News Network appuie cette version en s'appuyant sur une source interne ayant connaissance des faits.",
+      "En réponse, le Pentagone assure que l'ensemble de ses réseaux informatiques demeurent protégés et sécurisés."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la crainte d'une fuite potentielle de données militaires sensibles suite au piratage du cloud de l'armée de l'air.",
+    "Le centre adopte un format factuel et synthétique en se concentrant sur les déclarations rassurantes du Pentagone face aux révélations de la presse.",
+    "La droite se distingue en citant précisément des sources spécialisées comme Federal News Network pour appuyer la réalité de l'incident."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-28T09:01:28.971Z"
 }
