@@ -1,10 +1,22 @@
 {
   "id": "022735ed0840",
   "slug": "les-prefectures-de-l-isere-et-du-rhone-interdisent-un-concert",
-  "title": "Les préfectures de l'Isère et du Rhône interdisent un concert de rock identitaire",
+  "title": "Les préfectures de l'Isère et du Rhône interdisent un concert de rock antiwokisme organisé par une mouvance identitaire",
   "createdAt": "2026-11-27T20:01:24.599Z",
   "storyDay": "2026-11-27",
   "articles": [
+    {
+      "id": "3d3f722b116c",
+      "outletId": "le-monde",
+      "headline": "Un concert de « Rock antiwokisme » organisé par une mouvance identitaire interdit dans le Rhône et l’Isère",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/27/un-concert-de-rock-antiwokisme-organise-par-une-mouvance-identitaire-interdit-dans-le-rhone-et-l-isere_6815938_823448.html",
+      "publishedAt": "2026-11-27T22:55:01.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/11/27/1193/0/7157/3578/644/322/60/0/2c9d531_upload-1-j8ruenomyyzf-afp-20240209-34j32qn-v1-highres-francepoliticsjudiciary.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "society",
+      "everFrontPage": true
+    },
     {
       "id": "5cd70eb8ccc7",
       "outletId": "le-parisien",
@@ -52,30 +64,10 @@
     }
   ],
   "topicId": "022735ed0840",
-  "titledArticleCount": 4,
+  "titledArticleCount": 5,
   "section": "society",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795726800000,
-      "end": 1795730400000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
-    {
-      "start": 1795730400000,
-      "end": 1795734000000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795734000000,
       "end": 1795737600000,
@@ -295,6 +287,49 @@
         "droite": 0
       },
       "total": 1
+    },
+    {
+      "start": 1795813200000,
+      "end": 1795816800000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 0
+    },
+    {
+      "start": 1795816800000,
+      "end": 1795820400000,
+      "counts": {
+        "gauche": 1,
+        "centre": 0,
+        "droite": 0
+      },
+      "total": 1
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Les autorités ont bloqué la tenue d'un rassemblement musical clandestine programmé dans le Rhône et en Isère par une figure de l'ultra-droite.",
+      "Le motif invoqué par l'administration repose sur la crainte de voir propager des messages haineux lors de ce spectacle aux accents identitaires et nationalistes."
+    ],
+    "centre": [
+      "Les services préfectoraux de l'Isère et du Rhône ont prononcé l'interdiction d'un événement musical classé comme « rock antiwokisme ».",
+      "L'organisateur désigné est un acteur majeur de la mouvance identitaire régionale, selon les précisions rapportées par plusieurs médias locaux.",
+      "Ouest-France indique, en s'appuyant sur des investigations menées par Mediapart et Rue89Lyon, que les promoteurs du projet affichent des accointances néonazies."
+    ],
+    "droite": [
+      "Les représentants de l'État dans le Rhône et l'Isère ont proscrit la représentation d'une formation musicale aux motivations identitaires et nationalistes.",
+      "Le Figaro précise que la préfecture de l'Isère motive sa décision par le risque de diffusion de propos xénophobes, antisémites, homophobes ou générateurs de violences, visant notamment la communauté juive."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur le caractère clandestin de la manifestation et le profil radical de l'organisateur issu de l'ultra-droite.",
+    "Le centre élargit son reportage aux connivences néonazies des promoteurs du concert en citant des enquêtes d'investigation régionales.",
+    "La droite focalise son analyse sur les risques précis de propagation de messages haineux, racistes et antisémites détaillés par les communiqués préfectoraux."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-28T00:01:27.087Z"
 }
