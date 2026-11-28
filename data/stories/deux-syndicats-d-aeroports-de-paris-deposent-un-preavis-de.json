@@ -6,13 +6,24 @@
   "storyDay": "2026-11-28",
   "articles": [
     {
+      "id": "c16c4f078505",
+      "outletId": "cnews",
+      "headline": "Les syndicats des aéroports de Paris appellent à une grève pour le premier week-end des vacances de Noël",
+      "url": "https://www.cnews.fr/france/2026-11-28/les-syndicats-des-aeroports-de-paris-appellent-une-greve-pour-le-premier-week-end",
+      "publishedAt": "2026-11-28T14:48:41.000Z",
+      "imageUrl": "https://static.cnews.fr/sites/default/files/styles/image_960_540/public/080_hl_smouchmouche_2847063-taille1200_6ac76d7b36772-taille1200_6b0abc978dc3a.jpg?itok=1RJemkb2",
+      "frontPage": false,
+      "kind": "news",
+      "section": "economy"
+    },
+    {
       "id": "23bef04fb976",
       "outletId": "ouest-france",
       "headline": "Vacances de Noël : un préavis de grève déposé par deux syndicats d’Aéroports de Paris pourrait perturber les vols du 17 au 20 décembre",
       "url": "https://www.ouest-france.fr/economie/greve/vacances-de-noel-un-preavis-de-greve-depose-par-deux-syndicats-daeroports-de-paris-pourrait-perturber-les-vols-du-17-au-20-decembre-86cfe224-eb28-11f1-8e4e-f44a9b15a834?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
       "publishedAt": "2026-11-28T13:07:46.000Z",
       "imageUrl": "https://media.ouest-france.fr/v1/pictures/MjAyNjExZjI4YWViODJlNmI5ZDFhMTc0ZDEzOTdlNWJiNzBlYTk?width=320&height=240&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=a832e1f74b7b3f6053121a5431a5422369d942202126275c93c32e26e9fb6e19",
-      "frontPage": true,
+      "frontPage": false,
       "kind": "news",
       "section": "economy",
       "everFrontPage": true
@@ -123,16 +134,6 @@
   "section": "economy",
   "everInEdition": true,
   "activity": [
-    {
-      "start": 1795788000000,
-      "end": 1795791600000,
-      "counts": {
-        "gauche": 0,
-        "centre": 0,
-        "droite": 0
-      },
-      "total": 0
-    },
     {
       "start": 1795791600000,
       "end": 1795795200000,
@@ -360,6 +361,16 @@
         "gauche": 0,
         "centre": 1,
         "droite": 0
+      },
+      "total": 1
+    },
+    {
+      "start": 1795874400000,
+      "end": 1795878000000,
+      "counts": {
+        "gauche": 0,
+        "centre": 0,
+        "droite": 1
       },
       "total": 1
     }

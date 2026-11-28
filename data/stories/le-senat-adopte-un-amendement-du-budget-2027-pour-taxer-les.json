@@ -1,10 +1,34 @@
 {
   "id": "c06ee08228c2",
   "slug": "le-senat-adopte-un-amendement-du-budget-2027-pour-taxer-les",
-  "title": "Le Sénat adopte un amendement du budget 2027 pour taxer les détenus travaillant ou disposant de ressources à hauteur de cinq euros par jour de prison",
+  "title": "Le Sénat adopte un amendement du budget 2027 pour taxer les détenus à hauteur de cinq euros par jour de prison",
   "createdAt": "2026-11-28T14:01:31.481Z",
   "storyDay": "2026-11-28",
   "articles": [
+    {
+      "id": "5e82e47b7e00",
+      "outletId": "20-minutes",
+      "headline": "Cinq euros par jour de prison… Le Sénat veut taxer les détenus",
+      "url": "https://www.20minutes.fr/societe/4266479-20261128-cinq-euros-jour-prison-senat-veut-taxer-detenus?at_medium=display&at_campaign=149",
+      "publishedAt": "2026-11-28T14:30:46.000Z",
+      "imageUrl": "https://img.20mn.fr/Uv6v4YE_S_Kubf6oJABe5Sk/1200x768_illustration-photographique-illustrant-les-etapes-d-une-enquete-criminelle-menee-par-la-police-judiciaire-notamment-l-interrogatoire-dans-un-poste-de-police-le-transfert-d-un-suspect-au-palais-de-justice-pour-etre-presente-devant-un-magistrat-et-le-juge-des-libertes-et-de-la-detention-suivi-d-un-mandat-de-depot-et-d-un-placement-dans-un-centre-de-detention-provisoire-sous-l-autorite-de-l-administration-penitentiaire-en-france-biau-christine-sipa-33081-credit-christine-biau-sipa-2603301620",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
+    {
+      "id": "bff438bf6ab9",
+      "outletId": "le-monde",
+      "headline": "Cinq euros par jour de prison : le Sénat vote en faveur d’une contribution pour les détenus",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/28/cinq-euros-par-jour-de-prison-le-senat-vote-en-faveur-d-une-contribution-pour-les-detenus_6816114_823448.html",
+      "publishedAt": "2026-11-28T14:19:01.000Z",
+      "imageUrl": "https://img.lemde.fr/2026/10/27/356/0/4272/2136/644/322/60/0/a7fffbe_ftp-1-drrucamhdozv-afp-d4l73gq.jpg",
+      "frontPage": true,
+      "kind": "news",
+      "section": "politics",
+      "everFrontPage": true
+    },
     {
       "id": "a168271c817b",
       "outletId": "le-parisien",
@@ -42,7 +66,7 @@
     }
   ],
   "topicId": "c06ee08228c2",
-  "titledArticleCount": 3,
+  "titledArticleCount": 5,
   "section": "politics",
   "everInEdition": true,
   "activity": [
@@ -280,11 +304,34 @@
       "start": 1795874400000,
       "end": 1795878000000,
       "counts": {
-        "gauche": 0,
+        "gauche": 2,
         "centre": 1,
         "droite": 0
       },
-      "total": 1
+      "total": 3
     }
-  ]
+  ],
+  "summaries": {
+    "gauche": [
+      "Le Sénat a validé un amendement budgétaire créant une contribution forfaitaire de cinq euros par jour pour les personnes incarcérées.",
+      "Cette mesure vise spécifiquement les prisonniers condamnés définitivement qui exercent une activité professionnelle ou possèdent des ressources suffisantes."
+    ],
+    "centre": [
+      "Les sénateurs ont adopté le 28 novembre un amendement au projet de budget 2027 instaurant une taxe de cinq euros quotidiens pour les détenus.",
+      "Le dispositif cible les individus condamnés de manière définitive disposant de revenus ou d'un emploi en prison, avec une adoption facilitée par l'absence d'opposition du gouvernement.",
+      "Le maintien de cette contribution forfaitaire dans la version définitive du texte budgétisé reste incertain selon Ouest-France."
+    ],
+    "droite": [
+      "Le Sénat a voté un amendement budgétaire proposé par Les Républicains pour taxer à hauteur de cinq euros par jour les détenus.",
+      "Le gouvernement n'a opposé aucun veto à cette mesure lors des discussions parlementaires sur le budget."
+    ]
+  },
+  "differences": [
+    "La gauche met l'accent sur la création de la contribution financière et les critères stricts d'application visant les détenus solvables ou actifs.",
+    "Le centre détaille le calendrier du vote sénatorial et s'interroge sur l'avenir de la mesure dans le texte final du budget de l'État.",
+    "La droite souligne l'origine de l'initiative portée par ses sénateurs et l'absence d'opposition de la part de l'exécutif."
+  ],
+  "promptVersion": "sum-7",
+  "summarizedArticleCount": 5,
+  "summarizedAt": "2026-11-28T15:01:37.061Z"
 }
